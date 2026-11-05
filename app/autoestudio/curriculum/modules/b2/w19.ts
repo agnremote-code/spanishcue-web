@@ -1,172 +1,427 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 19 · Autoestudio espejo de G163 (pronombres: redundancia, duplicación y foco) y
+ * G164 (registro: cortesía, distancia y mandato). Repaso autónomo con el tablado de carnaval ficticio de un
+ * club de barrio de Montevideo. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w19: Module = {
   "id": "b2-19",
   "level": "b2",
   "week": 19,
   "kind": "core",
-  "title": "Una maleta, varias formas de contarlo",
-  "subtitle": "Narrar con perspectiva y adaptarse a otras variedades.",
+  "title": "A los vecinos los avisamos y la música la cortamos a la una",
+  "subtitle": "Repaso de cuándo el pronombre es obligatorio, recomendable o imposible, y de cómo pedir y mandar con la distancia justa: de «baja la música» a «se ruega moderar el volumen»",
   "stop": {
     "place": "Montevideo",
     "country": "Uruguay"
   },
-  "minutes": 150,
+  "minutes": 120,
   "newObjectives": [
-    "b2.gram.tiempos-relato",
-    "b2.voc.descripcion-literaria",
-    "b2.pron.lectura-expresiva",
-    "b2.read.cuento",
-    "b2.wri.microrrelato",
-    "b2.gram.voseo",
-    "b2.gram.ustedes-vosotros",
-    "b2.voc.lexico-regional",
-    "b2.pron.sheismo-voseo",
-    "b2.fun.adaptarse-variedad",
-    "b2.lis.rioplatense"
+    "b2.gram.g163",
+    "b2.gram.g164",
+    "b2.voc.w19-tablado-barrio",
+    "b2.pron.w19-foco-y-tono",
+    "b2.lis.w19-llamada-vecina",
+    "b2.read.w19-columna-club",
+    "b2.wri.w19-aviso-dos-registros",
+    "b2.spk.w19-pedir-con-distancia",
+    "b2.fun.w19-pedir-mandar-registro",
+    "b2.disc.w19-adaptar-registro"
   ],
-  "reviewObjectives": [
-    "b2.voc.colocaciones",
-    "b2.voc.formacion-palabras",
-    "b2.gram.nominalizacion",
-    "b2.pron.acento-derivados",
-    "b2.wri.reescritura-precisa",
-    "b2.fun.definir",
-    "b2.disc.marcadores-conversacionales",
-    "b2.disc.reformuladores",
-    "b2.voc.expresiones-coloquiales",
-    "b2.pron.prosodia-marcadores",
-    "b2.fun.gestionar-conversacion",
-    "b2.spk.conversacion-natural"
-  ],
-  "prerequisites": [
-    "b2-18"
-  ],
+  reviewObjectives: ["b2.gram.g161","b2.gram.g162","b2.voc.w18-archivo-museo","b2.pron.w18-comas-relativas","b2.lis.w18-baul-archivo","b2.read.w18-ficha-exposicion","b2.wri.w18-cartela-y-consulta","b2.spk.w18-suponer-historia","b2.fun.w18-conjeturar-precisar","b2.disc.w18-texto-expositivo-preciso"],
+  prerequisites: ["b2-18"],
   "goal": {
-    "canDo": "Puedo narrar con perspectiva y adaptarse a otras variedades con razones, matices y condiciones claras.",
+    "canDo": "Puedo decidir cuándo repetir un pronombre («a los vecinos los avisamos», «me lo dijo a mí») y cuándo no («eso te dije yo»), y pedir o mandar con el grado de cortesía que pide cada persona y cada texto.",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: explicar decisiones narrativas sin borrar la variación.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa cuándo el pronombre átono es obligatorio, recomendable o imposible, y cómo se marca el foco.",
+      "Ordena las formas de pedir y mandar en una escala de distancia y elige el tratamiento adecuado.",
+      "Escucha una llamada entre la presidenta de un club y una vecina, y lee la columna del club en el periódico del barrio.",
+      "Escribe el mismo aviso en dos registros, revísalo y negocia oralmente con un vecino molesto."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: narrar con perspectiva y adaptarse a otras variedades. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase trabajaste estos temas con tu profesor. Aquí los repasas de otra manera: con un club de barrio de Montevideo que organiza un tablado de carnaval, tablas para consultar y los errores típicos de quien repite pronombres de más o pide algo con el tono equivocado.",
     "parts": [
       {
-        "heading": "Narrar con perspectiva y adaptarse a otras variedades",
+        "heading": "¿Pronombre obligatorio, recomendable o imposible?",
         "body": [
-          "El imperfecto construye fondo y hábitos; el indefinido hace avanzar hechos; el pluscuamperfecto sitúa antecedentes. El presente histórico acerca una escena pasada si el cambio es coherente. El perfecto y el indefinido varían por región y contexto: hoy he llegado y hoy llegué pueden ser opciones normales sin cambiar la cronología básica."
+          "Cuando pones al principio un complemento directo conocido, tienes que repetirlo con un pronombre: «el escenario ya lo armamos», no «el escenario ya armamos». También es obligatorio el pronombre átono cuando el complemento es un pronombre tónico: «me lo dijo a mí», nunca «lo dijo a mí». Con el complemento indirecto detrás del verbo, el pronombre es muy recomendable y es lo más natural: «le di las llaves a Martín». Con verbos como «gustar», «molestar» o «importar» es siempre necesario: «a la vecina le molesta el ruido».",
+          "En cambio, no hay pronombre cuando adelantas una palabra para destacarla como información nueva o sorprendente (foco): «ESO te dije yo», «algo sabrá Martín», «tres años llevamos con el tablado». Fíjate en que el sujeto suele ir detrás del verbo. Tampoco se repite un nombre sin artículo: «sillas no tenemos», «entradas ya no quedan»."
         ],
+        "table": {
+          "caption": "Tres casos con el complemento delante o detrás",
+          "head": [
+            "Caso",
+            "Pronombre",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Complemento directo conocido delante del verbo",
+              "obligatorio",
+              "Los parlantes los trajo Martín."
+            ],
+            [
+              "Complemento indirecto detrás del verbo",
+              "recomendable",
+              "Le mandé el programa a la vecina."
+            ],
+            [
+              "Foco: información nueva destacada",
+              "imposible",
+              "Cien sillas necesitamos, no cincuenta."
+            ],
+            [
+              "Nombre sin artículo delante",
+              "imposible",
+              "Luces no faltan."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Cuando volvió a la estación, el tren ya había salido.",
-            "note": "Anterioridad a otro pasado."
+            "es": "A la murga la contratamos en noviembre.",
+            "note": "Complemento directo de persona, conocido y delante: «la» obligatorio."
           },
           {
-            "es": "Vos tenés la maleta junto a la puerta.",
-            "note": "Voseo presente rioplatense."
+            "es": "Le pedí permiso al municipio.",
+            "note": "Indirecto detrás del verbo: «le» recomendable."
           },
           {
-            "es": "Imperativo de venir con vos: vení y mirá la etiqueta.",
-            "note": "Acento final del imperativo voseante."
+            "es": "Mucho trabajo nos costó, eso sí.",
+            "note": "Foco con inversión: sin pronombre de complemento directo."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Vos tienes la misma maleta, dijo el personaje voseante.",
-            "right": "Vos tenés la misma maleta, dijo el personaje voseante.",
-            "why": "En el voseo rioplatense trabajado aquí se usa tenés; otras regiones tienen paradigmas distintos."
+            "wrong": "Las entradas ya vendimos todas.",
+            "right": "Las entradas ya las vendimos todas.",
+            "why": "Complemento directo conocido delante del verbo: el pronombre es obligatorio."
+          },
+          {
+            "wrong": "Lo dijeron a nosotros primero.",
+            "right": "Nos lo dijeron a nosotros primero.",
+            "why": "Con un pronombre tónico como complemento, el átono no puede faltar."
+          }
+        ],
+        "tip": "Si el complemento va delante, pregúntate: ¿es algo ya conocido (va el pronombre) o es la novedad que quiero destacar (no va)?"
+      },
+      {
+        "heading": "Contraste, «a mí me» y variación",
+        "body": [
+          "Para contrastar dos temas, el pronombre aparece con el primero y el segundo se reduce: «a Olga la llamé ayer; a su hijo, no». «A mí me parece» no es una redundancia viciosa: «a mí» marca el contraste con otras personas y «me» es obligatorio. Por eso no se dice «yo me parece», porque «parecer» no tiene a «yo» como sujeto. Cuando «se» no deja claro de quién hablas, añade «a ella», «a usted» o «a ellos»: «se lo expliqué a ella».",
+          "En el habla de muchas zonas es frecuente «le» por «les» con un complemento plural («le dije a los vecinos»); la norma recomienda «les», sobre todo por escrito. También es muy común en buena parte de América «se los dije» para indicar que «ellos» o «ustedes» recibieron algo («se lo dije a ellos»); se oye mucho, pero en un texto formal conviene «se lo dije a ellos»."
+        ],
+        "examples": [
+          {
+            "es": "A mí no me parece tan grave; a Martín, sí.",
+            "note": "Contraste: «a mí me» y elipsis en el segundo tema."
+          },
+          {
+            "es": "Les explicamos el horario a los vecinos.",
+            "note": "Plural recomendado en un texto escrito."
+          },
+          {
+            "es": "Se lo comenté a usted por teléfono, ¿recuerda?",
+            "note": "«A usted» aclara a quién se refiere «se»."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Yo me parece que el tablado termina tarde.",
+            "right": "A mí me parece que el tablado termina tarde.",
+            "why": "«Parecer» se construye con complemento indirecto: «a mí me»."
+          },
+          {
+            "wrong": "Le avisamos por carta a todos los socios.",
+            "right": "Les avisamos por carta a todos los socios.",
+            "why": "En un texto escrito, la norma pide «les» con un plural."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "La escala de la cortesía: tres maneras de crear distancia",
         "body": [
-          "El voseo rioplatense utiliza formas como vos tenés, vení y decime; ustedes y vosotros seleccionan conjugaciones distintas. Auto/coche/carro, departamento/piso y celular/móvil son variantes léxicas. La sílaba tónica del voseo puede practicarse con síntesis, pero el sheísmo requiere una muestra real verificada en clase: una etiqueta de voz no demuestra una variedad."
+          "Una orden directa («baja la música») funciona entre personas de confianza. Para crear distancia tienes tres herramientas gramaticales. La primera es preguntar en lugar de mandar: «¿puedes bajar la música?». La segunda es alejar el verbo del presente: condicional («¿podrías…?»), imperfecto de cortesía («quería pedirle un favor») o «quisiera». La tercera es borrar a la persona: «se ruega moderar el volumen», «se agradece la puntualidad», o un infinitivo en un cartel: «no estacionar».",
+          "Observa la diferencia entre «¿te importaría + infinitivo?» (la otra persona hace algo: «¿te importaría cerrar la puerta?») y «¿le importaría que + imperfecto de subjuntivo?» (pides permiso o actúa otra persona: «¿le importaría que pusiéramos el escenario frente a su casa?»). Con «me gustaría que», «quisiera que» y «le agradecería que» también va el imperfecto de subjuntivo: «le agradecería que me informara antes del viernes»."
         ],
+        "table": {
+          "caption": "De la orden a la petición distante",
+          "head": [
+            "Grado",
+            "Recurso",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Directo",
+              "imperativo",
+              "Baja la música."
+            ],
+            [
+              "Suavizado",
+              "imperativo + atenuador",
+              "Baja la música, por favor, ¿eh?"
+            ],
+            [
+              "Pregunta",
+              "¿puedes / podrías + infinitivo?",
+              "¿Podrías bajar un poco la música?"
+            ],
+            [
+              "Distancia",
+              "le agradecería que + imperfecto de subjuntivo",
+              "Le agradecería que bajara la música después de las doce."
+            ],
+            [
+              "Impersonal",
+              "se ruega / se agradece + infinitivo",
+              "Se ruega moderar el volumen después de medianoche."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Cuando volvió a la estación, el tren ya había salido.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Quería pedirle un favor, señora Olga.",
+            "note": "Imperfecto de cortesía: no habla del pasado."
           },
           {
-            "es": "Imperativo de venir con vos: vení y mirá la etiqueta.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "¿Le importaría que dejáramos las sillas en su garaje?",
+            "note": "Pide permiso: «que» + imperfecto de subjuntivo."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Le agradecería que me informe antes del viernes.",
+            "right": "Le agradecería que me informara antes del viernes.",
+            "why": "Tras el condicional «agradecería», el subjuntivo va en imperfecto."
+          },
+          {
+            "wrong": "¿Le importaría que cierre usted la puerta?",
+            "right": "¿Le importaría cerrar la puerta?",
+            "why": "Si la acción la hace la misma persona a la que preguntas, basta el infinitivo."
           }
         ]
+      },
+      {
+        "heading": "Mandar sin imperativo y elegir el tratamiento",
+        "body": [
+          "No todas las órdenes usan el imperativo. El presente puede sonar tajante: «tú te quedas en la puerta». El infinitivo aparece en carteles e instrucciones generales («no fumar») y en exclamaciones familiares («¡a ensayar!»). «¡Que + subjuntivo!» insiste o repite una orden: «¡que bajes el volumen!». Y «haz el favor de + infinitivo» suena a reproche: «haz el favor de llegar puntual».",
+          "Elegir el tratamiento también es elegir la distancia. En América, «ustedes» es el único plural; en gran parte de España se distingue «vosotros» (confianza) de «ustedes» (distancia). En Costa Rica y en muchas familias de Colombia se usa «usted» incluso con la familia. En Uruguay y en Argentina mucha gente usa el voseo con confianza: oirás «cerrá», «vení», «pasame»; reconócelo, aunque tú puedas usar «tú». Con una vecina mayor a la que no conoces, «usted» es la opción segura."
+        ],
+        "table": {
+          "caption": "Una misma petición según el tratamiento",
+          "head": [
+            "Tratamiento",
+            "Dónde y con quién",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "tú",
+              "confianza; muy extendido",
+              "¿Me pasas el cable?"
+            ],
+            [
+              "vos",
+              "confianza en Uruguay, Argentina y otras zonas",
+              "¿Me pasás el cable?"
+            ],
+            [
+              "usted",
+              "distancia o respeto",
+              "¿Me pasa el cable, por favor?"
+            ],
+            [
+              "vosotros",
+              "plural de confianza en gran parte de España",
+              "¿Me pasáis el cable?"
+            ],
+            [
+              "ustedes",
+              "plural en América; plural de distancia en España",
+              "¿Me pasan el cable?"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Ustedes dos se encargan de las luces y yo del sonido.",
+            "note": "Presente con valor de orden, sin imperativo."
+          },
+          {
+            "es": "Prohibido subir al escenario sin autorización.",
+            "note": "Cartel impersonal."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Señora Olga, baja la música, porfa.",
+            "right": "Señora Olga, ¿podría bajar un poco la música, por favor?",
+            "why": "Con una vecina mayor y desconocida, el tuteo directo y el «porfa» suenan bruscos."
+          }
+        ],
+        "tip": "Antes de pedir algo, piensa en tres datos: cuánta confianza tienes, cuánto le cuesta a la otra persona y si es oral o escrito. Cuanto más alto sea cada uno, más distancia gramatical."
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero decide si el pronombre va o no va; después elige la forma de pedir que corresponde.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-19-g-clitico",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de una maleta, varias formas de contarlo; justifica el modo, la forma o la combinación.",
+        "prompt": "Completa con el pronombre átono si hace falta. Si no hace falta, escribe una raya (—).",
         "items": [
           {
-            "q": "Cuando volvió a la estación, el tren ya ___ salido.",
+            "q": "El escenario ___ armamos el viernes, entre seis personas.",
             "answers": [
               [
-                "había"
+                "lo"
               ]
             ],
-            "why": "Anterioridad a otro pasado."
+            "why": "Complemento directo conocido delante del verbo: obligatorio."
           },
           {
-            "q": "Vos ___ la maleta junto a la puerta.",
+            "q": "ESO ___ dije yo desde el principio, y nadie me escuchó. (pronombre de complemento directo)",
             "answers": [
               [
-                "tenés"
+                "—",
+                "-"
               ]
             ],
-            "why": "Voseo presente rioplatense."
+            "why": "Foco con inversión: no se repite el complemento directo."
           },
           {
-            "q": "Imperativo de venir con vos: ___ y mirá la etiqueta.",
+            "q": "A los músicos ___ encanta tocar en la calle.",
             "answers": [
               [
-                "vení"
+                "les"
               ]
             ],
-            "why": "Acento final del imperativo voseante."
+            "why": "Con «encantar», el indirecto siempre lleva pronombre."
+          },
+          {
+            "q": "Sillas no ___ tenemos suficientes; habrá que pedirlas al club vecino. (pronombre de complemento directo)",
+            "answers": [
+              [
+                "—",
+                "-"
+              ]
+            ],
+            "why": "Nombre sin artículo delante: no hay pronombre."
+          },
+          {
+            "q": "A Olga ___ visitamos el martes; a su vecino, todavía no.",
+            "answers": [
+              [
+                "la"
+              ]
+            ],
+            "why": "Tema de persona conocido delante del verbo: «la» obligatorio."
+          },
+          {
+            "q": "Nos ___ explicaron a nosotros, no al resto del barrio.",
+            "answers": [
+              [
+                "lo"
+              ]
+            ],
+            "why": "«Nos lo explicaron a nosotros»: con pronombre tónico, el átono es obligatorio."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-19-g-registro",
+        "type": "context",
+        "prompt": "Lee la situación y elige la forma más adecuada.",
         "items": [
           {
-            "prompt": "Texto de partida: «Tú tienes la maleta; ven y dime qué pasó.» Adapta al voseo rioplatense.",
-            "model": "Vos tenés la maleta; vení y decime qué pasó.",
+            "context": "Graciela escribe al municipio para pedir un permiso. No conoce a la persona que lo leerá.",
+            "q": "¿Qué frase es la más adecuada?",
+            "options": [
+              "Mandanos el permiso antes del viernes.",
+              "Le agradecería que nos enviara el permiso antes del viernes.",
+              "¡Que nos manden el permiso!"
+            ],
+            "answer": 1,
+            "why": "Texto formal a un desconocido: condicional + imperfecto de subjuntivo."
+          },
+          {
+            "context": "Martín quiere que su compañero de confianza le alcance un cable durante el montaje.",
+            "q": "¿Qué frase suena natural entre ellos?",
+            "options": [
+              "¿Me pasás el cable?",
+              "Se ruega pasar el cable.",
+              "Le rogaría que me pasara el cable."
+            ],
+            "answer": 0,
+            "why": "Confianza y situación práctica: pregunta directa con voseo, normal en Montevideo."
+          },
+          {
+            "context": "El club quiere colocar el escenario frente al garaje de la señora Olga y le pide permiso.",
+            "q": "¿Qué pregunta pide permiso para una acción del club?",
+            "options": [
+              "¿Le importaría colocar el escenario?",
+              "¿Le importa que colocamos el escenario?",
+              "¿Le importaría que colocáramos el escenario frente a su garaje?"
+            ],
+            "answer": 2,
+            "why": "Actúa otra persona (el club): «que» + imperfecto de subjuntivo."
+          },
+          {
+            "context": "En la entrada del club hay que poner un cartel sobre el consumo de tabaco.",
+            "q": "¿Qué texto es propio de un cartel?",
+            "options": [
+              "Por favor, ¿no fumas?",
+              "No fumar en el salón.",
+              "Quería pedirte que no fumaras."
+            ],
+            "answer": 1,
+            "why": "Cartel impersonal: infinitivo."
+          }
+        ]
+      },
+      {
+        "id": "b2-19-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida como se pide. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «Martín trajo los parlantes». Reescríbelo empezando por «los parlantes», como respuesta a «¿Y los parlantes?».",
+            "model": "Los parlantes los trajo Martín.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Repito el complemento directo con «los».",
+              "Pongo el sujeto detrás del verbo como información nueva.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Cuando volvió, el tren salió antes de su llegada.» Marca la anterioridad mediante pluscuamperfecto.",
-            "model": "Cuando volvió, el tren ya había salido.",
+            "prompt": "Texto de partida: «Bajá la música ya». Conviértelo en una petición escrita y distante a un vecino al que no conoces.",
+            "model": "Le agradeceríamos que bajara el volumen de la música a partir de las once de la noche.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «usted» y un verbo en condicional.",
+              "Uso el imperfecto de subjuntivo tras «agradecería(mos) que».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Vosotros podéis dejar vuestras maletas aquí.» Adapta al tratamiento plural con ustedes.",
-            "model": "Ustedes pueden dejar sus maletas aquí.",
+            "prompt": "Texto de partida: «Los vecinos deben dejar libre la vereda durante el tablado». Conviértelo en un cartel impersonal.",
+            "model": "Se ruega dejar libre la vereda durante el tablado.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Borro a la persona con «se ruega» o con un infinitivo.",
+              "Mantengo la información esencial.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «A mí me parece bien, y a Martín también le parece bien, pero a Graciela no le parece bien». Abrévialo con contraste y elipsis.",
+            "model": "A mí me parece bien, y a Martín también; a Graciela, no.",
+            "checklist": [
+              "Mantengo «a mí me» al principio.",
+              "Reduzco los temas siguientes sin repetir el verbo.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -174,282 +429,358 @@ export const b2w19: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para organizar una fiesta de barrio y para hablar con los vecinos. Fíjate en el registro de cada expresión.",
     "groups": [
       {
-        "title": "Narrar con perspectiva y adaptarse a otras variedades",
+        "title": "El tablado",
         "items": [
           {
-            "es": "guardar silencio",
-            "note": "permanecer sin hablar"
+            "es": "el tablado",
+            "note": "en Uruguay, escenario de barrio donde actúan los grupos de carnaval"
           },
           {
-            "es": "reconocer un gesto",
-            "note": "identificar una señal corporal"
+            "es": "la murga",
+            "note": "grupo de carnaval que canta y critica la actualidad con humor"
           },
           {
-            "es": "evocar un recuerdo",
-            "note": "traer una experiencia a la memoria"
+            "es": "armar el escenario",
+            "note": "montar la estructura"
           },
           {
-            "es": "dar un giro",
-            "note": "cambiar la dirección del relato"
+            "es": "los parlantes",
+            "note": "en gran parte de América, altavoces"
           },
           {
-            "es": "dejar entrever",
-            "note": "sugerir sin declarar"
+            "es": "la vereda",
+            "note": "en el Río de la Plata, acera"
+          }
+        ]
+      },
+      {
+        "title": "Convivir con los vecinos",
+        "items": [
+          {
+            "es": "moderar el volumen",
+            "note": "bajar el sonido; registro formal"
           },
           {
-            "es": "quedarse inmóvil",
-            "note": "no moverse tras una impresión"
+            "es": "presentar una queja",
+            "note": "reclamar formalmente"
           },
           {
-            "es": "deshacer la maleta",
-            "note": "sacar su contenido"
+            "es": "pedir disculpas por las molestias",
+            "note": "fórmula para reconocer un problema"
           },
           {
-            "es": "pedir precisión",
-            "note": "solicitar aclaración de una palabra"
+            "es": "llegar a un acuerdo",
+            "note": "decidir algo aceptable para las dos partes"
+          },
+          {
+            "es": "estar a disposición de alguien",
+            "note": "ofrecerse para ayudar o responder; formal"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-19-v-tablado",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para narrar con perspectiva y adaptarse a otras variedades con su significado.",
+        "prompt": "Relaciona cada expresión con la situación del club en la que encaja.",
         "pairs": [
           {
-            "left": "guardar silencio",
-            "right": "permanecer sin hablar"
+            "left": "armar el escenario",
+            "right": "Seis socios atornillan las tarimas en la esquina."
           },
           {
-            "left": "reconocer un gesto",
-            "right": "identificar una señal corporal"
+            "left": "presentar una queja",
+            "right": "Una vecina escribe al municipio por el ruido."
           },
           {
-            "left": "evocar un recuerdo",
-            "right": "traer una experiencia a la memoria"
+            "left": "moderar el volumen",
+            "right": "El técnico baja el sonido después de medianoche."
           },
           {
-            "left": "dar un giro",
-            "right": "cambiar la dirección del relato"
+            "left": "la murga",
+            "right": "Diecisiete cantantes maquillados critican al gobierno con humor."
           },
           {
-            "left": "dejar entrever",
-            "right": "sugerir sin declarar"
+            "left": "llegar a un acuerdo",
+            "right": "El club termina a la una y la vecina no se queja más."
           },
           {
-            "left": "quedarse inmóvil",
-            "right": "no moverse tras una impresión"
-          },
-          {
-            "left": "deshacer la maleta",
-            "right": "sacar su contenido"
-          },
-          {
-            "left": "pedir precisión",
-            "right": "solicitar aclaración de una palabra"
+            "left": "estar a disposición de alguien",
+            "right": "«Para cualquier duda, puede llamarnos al teléfono del club»."
           }
-        ]
+        ],
+        "why": "Cada expresión describe una acción o una persona concreta del tablado."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Contrasta tenés/tienes y vení/ven; cambia ritmo y voz al pasar de narración a diálogo. Estudia sheísmo solo con una muestra real identificada.",
+    "focus": "El foco se oye: acento fuerte en la palabra destacada y tono amable en las peticiones.",
     "explanation": [
-      "Contrasta tenés/tienes y vení/ven; cambia ritmo y voz al pasar de narración a diálogo. Estudia sheísmo solo con una muestra real identificada.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "Cuando adelantas una palabra como foco, esa palabra lleva el acento más fuerte de la frase y no hay pausa después: «ESO te dije yo», «CIEN sillas necesitamos». En cambio, cuando el complemento es un tema conocido, haces una pequeña pausa y el pronombre lo retoma: «el escenario | lo armamos el viernes».",
+      "En las peticiones, el tono importa tanto como la gramática. Una pregunta cortés sube suavemente al final y evita los golpes de voz: «¿podría bajar un poco la música?». Una orden con «¡que…!» baja con fuerza. Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "Cuando volvió a la estación, el tren ya había salido."
+        "es": "ESO te dije yo.",
+        "note": "Foco: fuerza en «eso», sin pausa."
       },
       {
-        "es": "Vos tenés la maleta junto a la puerta."
+        "es": "El escenario lo armamos el viernes.",
+        "note": "Tema: pausa breve después de «escenario»."
       },
       {
-        "es": "Imperativo de venir con vos: vení y mirá la etiqueta."
+        "es": "¿Podría bajar un poco la música?",
+        "note": "Petición: el tono sube suavemente al final."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-19-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y decide qué función tiene según la entonación y la forma.",
       "items": [
         {
-          "q": "En la muestra 1 de una maleta, varias formas de contarlo, ¿qué fragmento se oye?",
+          "q": "En la frase sobre las sillas, ¿qué se destaca?",
           "options": [
-            "ha",
-            "hubo",
-            "había"
-          ],
-          "answer": 2,
-          "why": "Anterioridad a otro pasado.",
-          "audio": "Cuando volvió a la estación, el tren ya había salido.",
-          "voice": "es-ES-f"
-        },
-        {
-          "q": "En la muestra 2 de una maleta, varias formas de contarlo, ¿qué fragmento se oye?",
-          "options": [
-            "tengas",
-            "tenés",
-            "tienes"
+            "Un tema ya conocido.",
+            "Una cantidad nueva y sorprendente."
           ],
           "answer": 1,
-          "why": "Voseo presente rioplatense.",
-          "audio": "Vos tenés la maleta junto a la puerta.",
-          "voice": "es-ES-f"
+          "audio": "Doscientas sillas pidió el municipio, no cien.",
+          "voice": "es-UY-f",
+          "why": "Foco con inversión del sujeto: información nueva."
+        },
+        {
+          "q": "En la frase sobre el escenario, ¿qué es «el escenario»?",
+          "options": [
+            "Un tema ya conocido.",
+            "Una corrección."
+          ],
+          "answer": 0,
+          "audio": "El escenario, lo desarmamos el domingo temprano.",
+          "voice": "es-UY-m",
+          "why": "Pausa y pronombre «lo»: tema conocido."
+        },
+        {
+          "q": "¿Cómo suena la frase sobre la música?",
+          "options": [
+            "Como una orden insistente.",
+            "Como una petición cortés."
+          ],
+          "answer": 1,
+          "audio": "¿Le molestaría que bajáramos la música a las doce?",
+          "voice": "es-UY-f",
+          "why": "Pregunta con condicional e imperfecto de subjuntivo: petición distante."
+        },
+        {
+          "q": "¿Cómo suena la frase sobre el volumen?",
+          "options": [
+            "Como una petición distante.",
+            "Como una orden repetida e insistente."
+          ],
+          "answer": 1,
+          "audio": "¡Que bajes el volumen, te dije!",
+          "voice": "es-UY-m",
+          "why": "«¡Que + subjuntivo!»: insiste en una orden."
         }
       ]
     },
     "produce": [
       {
-        "text": "Cuando volvió a la estación, el tren ya había salido.",
-        "tip": "Contrasta tenés/tienes y vení/ven; cambia ritmo y voz al pasar de narración a diálogo. Estudia sheísmo solo con una muestra real identificada.",
-        "voice": "es-ES-f"
+        "text": "A los vecinos los avisamos el lunes.",
+        "tip": "Pausa breve después de «vecinos»; el pronombre retoma el tema.",
+        "voice": "es-UY-f"
       },
       {
-        "text": "Vos tenés la maleta junto a la puerta.",
-        "tip": "Contrasta tenés/tienes y vení/ven; cambia ritmo y voz al pasar de narración a diálogo. Estudia sheísmo solo con una muestra real identificada.",
-        "voice": "es-ES-f"
+        "text": "TRES años llevamos con este tablado.",
+        "tip": "Toda la fuerza en «tres», sin pausa después.",
+        "voice": "es-UY-m"
       },
       {
-        "text": "Imperativo de venir con vos: vení y mirá la etiqueta.",
-        "tip": "Contrasta tenés/tienes y vení/ven; cambia ritmo y voz al pasar de narración a diálogo. Estudia sheísmo solo con una muestra real identificada.",
-        "voice": "es-ES-f"
+        "text": "Le agradecería que me respondiera antes del viernes.",
+        "tip": "Ritmo tranquilo, sin subir la voz.",
+        "voice": "es-UY-f"
+      },
+      {
+        "text": "¿Le importaría que dejáramos las sillas en su garaje?",
+        "tip": "Sube suavemente al final, como quien pide un favor.",
+        "voice": "es-UY-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Una maleta, varias formas de contarlo",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "Graciela llama a la señora Olga",
+    "context": "Graciela preside un club de barrio del Cordón, en Montevideo, que organiza un tablado de carnaval. Llama a la señora Olga, una vecina mayor que se quejó del ruido el año pasado. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Conductora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "gr",
+        "name": "Graciela",
+        "voice": "es-UY-f",
+        "role": "Presidenta del club de barrio"
       },
       {
-        "id": "s2",
-        "name": "Elena",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Editor",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ol",
+        "name": "Olga",
+        "voice": "es-UY-m",
+        "role": "Vecina mayor, vive frente al club"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Elena, en tu relato pasas del pasado al presente cuando suena el teléfono. ¿Querías indicar que había cambiado el momento de la historia o acercar al lector a una escena especialmente importante para la protagonista y su relación con el hermano?"
+        "speaker": "gr",
+        "text": "Buenas tardes, señora Olga. Habla Graciela, del club. Quería hacerle una consulta sobre el tablado de febrero, si tiene un minuto."
       },
       {
-        "speaker": "s2",
-        "text": "Quería acercarlo. El viaje ya había ocurrido, pero al decir entonces suena el celular recupero la impresión de sorpresa. Después vuelvo al pasado. También mantuve vení y vos tenés porque forman parte de la voz del personaje, aunque yo use otras formas en la narración."
+        "speaker": "ol",
+        "text": "Buenas tardes, Graciela. Un minuto tengo, sí. Ya me imagino de qué se trata. Mire, a mí la murga no me molesta; lo que me molesta es la música grabada hasta las tres de la mañana. Eso se lo dije a ustedes el año pasado."
       },
       {
-        "speaker": "s3",
-        "text": "Me parece coherente. Solo pediría aclarar salida del costado para lectores que no conocen la estación. No hace falta sustituir todo el vocabulario regional. Podemos entender auto por contexto y explicar una referencia espacial sin borrar la manera de hablar del hermano."
+        "speaker": "gr",
+        "text": "Tiene toda la razón, y por eso la llamo a usted primero. Este año queremos hacer las cosas bien. La música grabada la vamos a cortar a la una en punto. Y los parlantes los vamos a girar hacia la plaza, no hacia su casa."
       },
       {
-        "speaker": "s1",
-        "text": "Para quien escucha este ejercicio, recordamos que la reproducción es sintética y no acredita sheísmo ni una voz montevideana real. En clase pueden contrastar una muestra autorizada y fijarse en cómo suenan y y ll, además del acento de las formas voseantes."
+        "speaker": "ol",
+        "text": "Eso me parece bien. ¿Y los autos? Porque el año pasado me dejaron la entrada del garaje bloqueada toda la noche."
       },
       {
-        "speaker": "s2",
-        "text": "También me preguntaron por qué escribí hoy llegué y no hoy he llegado en otro fragmento. Las dos formas pueden aparecer según la variedad y la perspectiva temporal. No quería que una elección se presentara como error solo porque no coincide con el uso de otro país."
+        "speaker": "gr",
+        "text": "Vamos a poner carteles: «No estacionar frente a los garajes». Y dos socios van a estar en la vereda controlando. Otra cosa, señora Olga: ¿le importaría que guardáramos las sillas en su garaje el sábado de mañana? Se las devolvemos limpias antes del mediodía."
       },
       {
-        "speaker": "s3",
-        "text": "Lo esencial es mantener la coherencia de la escena y permitir aclaraciones. El final no afirma que se reconciliaran por completo. La maleta les da una conversación posible. Si el lector entiende esa diferencia, puede apreciar el giro sin convertirlo en una moraleja que el relato no sostiene."
+        "speaker": "ol",
+        "text": "Mire, el garaje se lo presto, pero con una condición: que me avisen a mí, no a mi hijo. A mi hijo le dicen las cosas y después se olvida."
+      },
+      {
+        "speaker": "gr",
+        "text": "Perfecto, se lo aviso a usted directamente. Y si en algún momento la música le resulta molesta, le agradecería que me llamara a mí antes de presentar una queja. Le dejo mi número en el buzón."
+      },
+      {
+        "speaker": "ol",
+        "text": "Trato hecho, Graciela. Y ya que estamos: entradas para el sábado, ¿me guardaría dos?"
+      },
+      {
+        "speaker": "gr",
+        "text": "¡Claro que sí! Las dos entradas se las llevo yo misma el viernes, y le reservamos una silla cerca de la puerta, que ahí se oye bien y se sale rápido. Muchas gracias por su paciencia, señora Olga."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la llamada entera. ¿Para qué llama Graciela y cómo termina la conversación?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-19-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Montevideo?",
+          "prompt": "Elige la respuesta que resume la llamada.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Una maleta, varias formas de contarlo?",
+              "q": "¿Cuál es el objetivo de la llamada?",
               "options": [
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas.",
-                "Explicar decisiones narrativas sin borrar la variación"
-              ],
-              "answer": 2,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
-            },
-            {
-              "q": "¿Qué relación predomina entre las voces en «Una maleta, varias formas de contarlo»?",
-              "options": [
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio."
+                "Invitar a la vecina a cantar en la murga.",
+                "Anticiparse a los problemas del año pasado y llegar a acuerdos.",
+                "Pedirle dinero para el tablado."
               ],
               "answer": 1,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "Graciela quiere evitar las quejas del año anterior."
+            },
+            {
+              "q": "¿Cómo termina la conversación?",
+              "options": [
+                "Con un acuerdo y buena relación.",
+                "Con una amenaza de denuncia.",
+                "Sin ninguna decisión."
+              ],
+              "answer": 0,
+              "why": "«Trato hecho»; Olga incluso pide entradas."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-19-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Una maleta, varias formas de contarlo».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Para qué se utiliza el presente histórico?",
+              "q": "¿Qué le molestó a Olga el año pasado?",
               "options": [
-                "Para negar que el viaje hubiera ocurrido.",
-                "Para acercar una escena sin cambiar la cronología.",
-                "Para trasladar toda la acción al futuro."
+                "La murga.",
+                "Las luces del escenario.",
+                "La música grabada hasta las tres y los autos frente al garaje."
               ],
-              "answer": 1,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
+              "answer": 2,
+              "why": "La murga no le molesta; la música y el garaje sí."
             },
             {
-              "q": "¿Qué frase aparece en la intervención inicial de «Una maleta, varias formas de contarlo»?",
+              "q": "¿Qué condición pone Olga para prestar el garaje?",
               "options": [
-                "Elena, en tu relato pasas del pasado al presente cuando suena el teléfono.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión."
+                "Que le paguen el alquiler.",
+                "Que le avisen a ella y no a su hijo.",
+                "Que no usen sillas."
+              ],
+              "answer": 1,
+              "why": "Su hijo se olvida de las cosas."
+            },
+            {
+              "q": "¿A qué hora cortarán la música grabada?",
+              "options": [
+                "A la una.",
+                "A las tres.",
+                "A medianoche."
               ],
               "answer": 0,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "«La música grabada la vamos a cortar a la una en punto»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-19-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento del diálogo según lo que hace.",
+          "categories": [
+            "Tema conocido retomado con pronombre",
+            "Petición con distancia",
+            "Foco o contraste sin pronombre repetido"
+          ],
           "items": [
             {
-              "prompt": "En «Una maleta, varias formas de contarlo», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Lo esencial es mantener la coherencia de la escena y permitir aclaraciones. El final no afirma que se reconciliaran por completo. La maleta les da una conversación posible. Si el lector entiende esa diferencia, puede apreciar el giro sin convertirlo en una moraleja que el relato no sostiene.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "La música grabada la vamos a cortar a la una",
+              "cat": 0,
+              "why": "Complemento directo conocido delante: «la»."
+            },
+            {
+              "text": "¿le importaría que guardáramos las sillas en su garaje?",
+              "cat": 1,
+              "why": "Permiso con «que» + imperfecto de subjuntivo."
+            },
+            {
+              "text": "Un minuto tengo, sí",
+              "cat": 2,
+              "why": "Nombre sin artículo delante: sin pronombre."
+            },
+            {
+              "text": "los parlantes los vamos a girar hacia la plaza",
+              "cat": 0,
+              "why": "Tema conocido retomado con «los»."
+            },
+            {
+              "text": "le agradecería que me llamara a mí",
+              "cat": 1,
+              "why": "Condicional + imperfecto de subjuntivo."
+            },
+            {
+              "text": "entradas para el sábado, ¿me guardaría dos?",
+              "cat": 2,
+              "why": "Nombre sin artículo como tema: no se repite con pronombre."
             }
           ]
         }
@@ -457,204 +788,252 @@ export const b2w19: Module = {
     ]
   },
   "reading": {
-    "title": "Una maleta, varias formas de contarlo: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Carnaval en el Cordón: lo que nos pidieron y lo que les pedimos",
+    "genre": "Columna del club en un periódico de barrio",
+    "frame": "Texto original de SpanishCue escrito como columna de un club de barrio ficticio en un periódico vecinal de Montevideo. Las personas y el club son inventados.",
     "text": [
-      "Cuando volvió a la estación, Elena llevaba veinte años sin ver a su hermano. Había viajado toda la noche y esperaba reconocerlo por la forma de caminar, porque las fotografías recientes le resultaban extrañas. En el andén había un hombre con una maleta azul, pero no era él. Elena miró el reloj y recordó la última discusión, aquella en la que ambos habían prometido no volver a pedirse nada. Se habían escrito después, mensajes breves que evitaban cuidadosamente el motivo de la despedida.",
-      "Entonces suena el celular. «¿Ya llegaste? Vení a la salida del costado; te estoy esperando en el auto». La voz no había cambiado tanto como ella temía. Elena se quedó inmóvil unos segundos antes de responder. En otra época habría corregido la expresión salida del costado, como si la manera de nombrar una puerta pudiera decir algo sobre la manera de vivir. Ahora preguntó simplemente a qué lado debía ir. El edificio había sido reformado y no quería convertir una duda práctica en otra pequeña batalla.",
-      "Su hermano estaba junto a un coche viejo. «Vos tenés la misma maleta», dijo, y sonrió sin acercarse todavía. Elena iba a responder que no, que aquella la había comprado hacía poco, cuando vio una marca en el asa. La maleta no era suya. Durante el viaje había tomado otra idéntica y no lo había advertido hasta ese momento. Los dos se miraron y comenzaron a reír, primero con sorpresa y después con una facilidad que ninguno había previsto.",
-      "Tuvieron que volver al mostrador, explicar el error y esperar noticias del equipaje correcto. No hablaron entonces de los años perdidos. Hablaron de etiquetas, teléfonos y horarios, y esa conversación ordinaria les permitió quedarse juntos sin exigir una reconciliación inmediata. Elena había imaginado un encuentro capaz de resolverlo todo. Al final, una maleta equivocada les ofreció algo más modesto: un asunto compartido del que sí sabían cómo empezar a hablar."
+      "Cada febrero, desde hace veintidós años, nuestro club arma un tablado en la esquina de la plaza. Este año lo vamos a hacer de nuevo, pero no de la misma manera. El año pasado recibimos tres quejas formales, y las tres las leímos con atención. A los vecinos que las firmaron los llamamos uno por uno; a la intendencia, en cambio, le respondimos por escrito. Esta columna resume lo que aprendimos y lo que nos comprometemos a cambiar, porque una fiesta de barrio solo tiene sentido si el barrio entero la siente como propia.",
+      "Lo primero: la murga no es el problema. Eso nos lo dijeron todos, incluso quienes más se quejaron. A la mayoría del barrio le encanta ver a los grupos ensayar en la calle. Lo que molesta es lo de después: la música grabada a todo volumen, los autos frente a los garajes y la basura del domingo. Mucho ruido hicimos, es verdad, y pocas soluciones dimos.",
+      "Por eso este año hemos cambiado varias cosas. La música grabada la cortaremos a la una. Los parlantes los orientaremos hacia la plaza. Habrá carteles con un mensaje claro: «No estacionar frente a los garajes». Y a cada vecino de la cuadra le dejaremos en el buzón el teléfono de una persona responsable, para que nos llame a nosotros antes de llamar a la policía. Los domingos a las nueve, un grupo de socios recorrerá la plaza para dejarla limpia.",
+      "También tenemos algo que pedirles a ustedes. Nos gustaría que los vecinos que tengan una queja nos la comunicaran directamente; les aseguramos que la vamos a escuchar. Les agradeceríamos, además, que dejaran libres las veredas durante el armado del escenario, el viernes por la tarde. Y si alguien quiere colaborar, se agradece cualquier ayuda: socios no nos sobran, y manos tampoco.",
+      "Sabemos que una fiesta en la calle siempre es un equilibrio difícil. A unos les parece poco y a otros, demasiado. A nosotros nos parece que vale la pena intentarlo, siempre que todos podamos dormir el domingo. Los esperamos el sábado 14 a partir de las ocho. Quienes vengan con hijos pequeños tendrán un sector reservado cerca de la entrada del club."
     ],
     "glossary": [
       {
-        "es": "guardar silencio",
-        "note": "permanecer sin hablar"
+        "es": "la cuadra",
+        "note": "en gran parte de América, el tramo de calle entre dos esquinas"
       },
       {
-        "es": "reconocer un gesto",
-        "note": "identificar una señal corporal"
+        "es": "la intendencia",
+        "note": "en Uruguay, el gobierno de un departamento, como Montevideo"
       },
       {
-        "es": "evocar un recuerdo",
-        "note": "traer una experiencia a la memoria"
+        "es": "el buzón",
+        "note": "caja donde se recibe la correspondencia"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-19-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la columna.",
         "items": [
           {
-            "q": "¿Qué permite el giro de la maleta?",
+            "q": "¿Cómo respondió el club a las quejas del año pasado?",
             "options": [
-              "Confirmar una reconciliación completa.",
-              "Demostrar que el hermano planeó el error.",
-              "Iniciar una conversación compartida sin resolver todo el pasado."
+              "Llamó a los vecinos y respondió por escrito a la intendencia.",
+              "Ignoró las quejas.",
+              "Canceló el tablado."
             ],
-            "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "answer": 0,
+            "why": "Primer párrafo."
           },
           {
-            "q": "¿Qué decisión defiende el editor sobre las variantes?",
+            "q": "Según el club, ¿qué no es el problema?",
             "options": [
-              "Imponer un único pasado correcto para hoy.",
-              "Conservarlas y aclarar referencias cuando sea necesario.",
-              "Eliminar toda palabra regional."
+              "La basura del domingo.",
+              "La murga.",
+              "Los autos frente a los garajes."
             ],
             "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«La murga no es el problema»."
+          },
+          {
+            "q": "¿Qué pide el club a los vecinos?",
+            "options": [
+              "Que paguen una entrada.",
+              "Que no vengan con hijos pequeños.",
+              "Que comuniquen sus quejas directamente al club."
+            ],
+            "answer": 2,
+            "why": "Cuarto párrafo."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-19-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «Una maleta, varias formas de contarlo», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Antes de salir, había ensayado varias disculpas. En la estación buscaba un rostro conocido cuando sonó el teléfono. «Vení a la entrada del costado», dijo mi hermano. Le pedí que precisara cuál, sin corregir su manera de decirlo. Entonces veo la etiqueta: llevaba otra maleta. Volvimos juntos al mostrador y empezamos a hablar de algo que podíamos resolver. No arreglamos veinte años; encontramos una primera conversación. Uso el presente histórico solo en el descubrimiento para destacar el giro.",
+            "prompt": "Explica en 60–80 palabras qué tono elige el club para hablar con sus vecinos y con qué recursos gramaticales lo consigue. Cita una frase del texto.",
+            "model": "El club elige un tono cercano pero respetuoso: reconoce sus errores y pide en lugar de exigir. Para pedir usa condicionales y subjuntivos, como en «Les agradeceríamos, además, que dejaran libres las veredas», y evita el imperativo. También destaca lo importante con el orden de las palabras, por ejemplo cuando admite «Mucho ruido hicimos». A mí me parece una buena estrategia para recuperar la confianza.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Describo el tono con dos adjetivos.",
+              "Cito una frase literal del texto.",
+              "Nombro al menos un recurso de cortesía y uno de foco o de pronombres."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la columna ordena la información y gradúa sus peticiones.",
       "items": [
         {
-          "quote": "Cuando volvió a la estación, Elena llevaba veinte años sin ver a su hermano.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "A los vecinos que las firmaron los llamamos uno por uno; a la intendencia, en cambio, le respondimos por escrito",
+          "note": "Dos temas en contraste, cada uno retomado con su pronombre: «los» y «le»."
         },
         {
-          "quote": "Al final, una maleta equivocada les ofreció algo más modesto: un asunto compartido del que sí sabían cómo empezar a hablar.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "Mucho ruido hicimos, es verdad, y pocas soluciones dimos",
+          "note": "Foco al principio sin pronombre: el club destaca su error y el sujeto queda detrás del verbo."
+        },
+        {
+          "quote": "Les agradeceríamos, además, que dejaran libres las veredas",
+          "note": "Petición distante: condicional + imperfecto de subjuntivo, y «les» para un plural."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Convierte el caso del invernadero en relato sin presentar conjeturas como hechos; adapta un diálogo a voseo y explica un marcador conversacional.",
+    "intro": "Combina las dos clases: decide qué destacas y con qué pronombre, y ajusta cada petición a quien la recibe.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-19-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Montevideo y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir frases del club.",
         "items": [
           {
             "words": [
-              "En",
-              "«Una maleta, varias formas de contarlo»,",
-              "Cuando",
-              "volvió",
+              "A",
+              "los",
+              "músicos",
+              "los",
+              "invitamos",
               "a",
-              "la",
-              "estación,",
-              "el",
-              "tren",
-              "ya",
-              "había",
-              "salido."
+              "cenar",
+              "después."
             ],
-            "why": "Anterioridad a otro pasado."
+            "why": "Tema conocido delante y retomado con «los»."
           },
           {
             "words": [
-              "En",
-              "«Una maleta, varias formas de contarlo»,",
-              "Imperativo",
-              "de",
-              "venir",
+              "Se",
+              "ruega",
+              "no",
+              "subir",
+              "al",
+              "escenario."
+            ],
+            "why": "Petición impersonal con «se ruega» + infinitivo."
+          },
+          {
+            "words": [
+              "¿Te",
+              "importaría",
+              "ayudarnos",
               "con",
-              "vos:",
-              "vení",
-              "y",
-              "mirá",
-              "la",
-              "etiqueta."
+              "las",
+              "sillas?"
             ],
-            "why": "Acento final del imperativo voseante."
+            "why": "«¿Te importaría + infinitivo?»: la otra persona actúa."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-19-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de una maleta, varias formas de contarlo; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "Vos tienes la misma maleta, dijo el personaje voseante.",
+            "sentence": "El cartel ya colgamos en la puerta del club.",
             "answers": [
-              "Vos tenés la misma maleta, dijo el personaje voseante."
+              "El cartel ya lo colgamos en la puerta del club."
             ],
-            "why": "En el voseo rioplatense trabajado aquí se usa tenés; otras regiones tienen paradigmas distintos."
+            "why": "Complemento directo conocido delante del verbo: el pronombre es obligatorio."
           },
           {
-            "sentence": "Ustedes podéis dejar la maleta aquí.",
+            "sentence": "¿Le importaría que nos preste su escalera?",
             "answers": [
-              "Ustedes pueden dejar la maleta aquí."
+              "¿Le importaría prestarnos su escalera?",
+              "¿Le importaría que nos prestara su escalera?"
             ],
-            "why": "Ustedes exige tercera persona plural."
+            "why": "Tras «importaría que» va el imperfecto de subjuntivo; si actúa la misma persona, mejor el infinitivo."
           },
           {
-            "sentence": "Cuando volvió, el tren ya había saliendo.",
+            "sentence": "Yo me molesta que la gente tire basura en la plaza.",
             "answers": [
-              "Cuando volvió, el tren ya había salido."
+              "A mí me molesta que la gente tire basura en la plaza."
             ],
-            "why": "Haber forma tiempos compuestos con participio."
+            "why": "«Molestar» se construye con «a mí me»."
+          },
+          {
+            "sentence": "Quisiera que me envíe el presupuesto esta semana.",
+            "answers": [
+              "Quisiera que me enviara el presupuesto esta semana."
+            ],
+            "why": "Con «quisiera que», el subjuntivo va en imperfecto."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-19-x-registro",
+        "type": "classify",
+        "prompt": "¿Para quién es cada frase? Clasifícala según el grado de distancia.",
+        "categories": [
+          "Confianza: amigos, familia, equipo",
+          "Distancia: desconocidos, instituciones, textos formales"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre narrar con perspectiva y adaptarse a otras variedades con una postura y una razón; adapta el destinatario.",
-            "model": "Antes de salir, había ensayado varias disculpas.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Pasame la cinta, dale.",
+            "cat": 0,
+            "why": "Imperativo con voseo y atenuador coloquial."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Una maleta, varias formas de contarlo» sin debilitarla, y responde con una condición verificable.",
-            "model": "Antes de salir, había ensayado varias disculpas. En la estación buscaba un rostro conocido cuando sonó el teléfono. «Vení a la entrada del costado», dijo mi hermano. Le pedí que precisara cuál, sin corregir su manera de decirlo. Entonces veo la etiqueta: llevaba otra maleta. Volvimos juntos al mostrador y empezamos a hablar de algo que podíamos resolver. No arreglamos veinte años; encontramos una primera conversación. Uso el presente histórico solo en el descubrimiento para destacar el giro.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Le agradeceríamos que confirmara su asistencia.",
+            "cat": 1,
+            "why": "Condicional + imperfecto de subjuntivo."
+          },
+          {
+            "text": "¡A ensayar, que se hace tarde!",
+            "cat": 0,
+            "why": "Infinitivo exclamativo familiar."
+          },
+          {
+            "text": "Se agradece la puntualidad.",
+            "cat": 1,
+            "why": "Fórmula impersonal escrita."
+          },
+          {
+            "text": "Haz el favor de traer las llaves esta vez.",
+            "cat": 0,
+            "why": "Reproche entre personas de confianza."
+          },
+          {
+            "text": "Quisiera solicitar una reunión con la comisión.",
+            "cat": 1,
+            "why": "«Quisiera» + vocabulario formal."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-19-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 16 sin abrir su explicación y aplica sus recursos a «Una maleta, varias formas de contarlo»: Colocaciones frecuentes; Formación de palabras; Nominalización; Acento en derivados; Reescribir con precisión; Definir y explicar conceptos. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo combinar palabras de forma natural: tomar una decisión, plantear un problema, sacar conclusiones. Puedo deducir y crear palabras con prefijos y sufijos frecuentes. Puedo transformar verbos en sustantivos para escribir con concisión. Puedo pronunciar carácter/caracteres, régimen/regímenes y adverbios en -mente con dos acentos. Puedo mejorar un texto sustituyendo verbos comodín y repeticiones. Puedo definir un concepto, dar un ejemplo y diferenciarlo de otro parecido.",
+            "prompt": "Pide lo mismo (que alguien te devuelva un libro) a un amigo, a tu jefa y en un cartel de una biblioteca.",
+            "model": "¿Me devuelves el libro esta semana? / Le agradecería que me devolviera el libro cuando pueda. / Se ruega devolver los libros en el plazo indicado.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Cambio el tratamiento y la forma verbal en cada caso.",
+              "Uso una fórmula impersonal en el cartel."
             ]
           },
           {
-            "prompt": "Recupera la semana 18 sin abrir su explicación y aplica sus recursos a «Una maleta, varias formas de contarlo»: Marcadores conversacionales; Reformuladores; Expresiones coloquiales frecuentes; Prosodia de los marcadores; Gestionar una conversación; Conversación espontánea. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar bueno, pues, vamos, a ver, la verdad es que y hombre/mujer según la intención. Puedo reformular con o sea, es decir, mejor dicho, en otras palabras y vamos. Puedo entender y usar expresiones frecuentes como dar igual, pasarse, quedar bien o mal. Puedo dar a bueno o pues valores distintos con la entonación. Puedo ganar tiempo, reformular, interrumpir con educación y retomar. Puedo mantener una conversación de tres minutos sin bloquearme.",
+            "prompt": "Responde a la pregunta «¿Y la comida y la bebida?» destacando quién trae cada cosa.",
+            "model": "La comida la trae Graciela; la bebida, Martín.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Retomo cada tema con su pronombre.",
+              "Uso la elipsis en el segundo tema."
+            ]
+          },
+          {
+            "prompt": "Escribe una frase en la que corrijas a alguien destacando la información nueva al principio.",
+            "model": "No, a las diez no empieza: A LAS NUEVE empieza la murga.",
+            "checklist": [
+              "Pongo el foco al principio y el sujeto detrás.",
+              "No repito el complemento con un pronombre."
             ]
           }
         ]
@@ -662,197 +1041,234 @@ export const b2w19: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe un relato de reencuentro con fondo, antecedente y giro final. Mantén una variedad coherente en el diálogo e incorpora una aclaración natural de léxico; añade una nota que explique una decisión narrativa.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Organizas una actividad en tu barrio (un tablado, una feria, una fiesta). Escribe el mismo aviso en dos versiones (200–260 palabras en total): una carta formal para los vecinos de la cuadra y un mensaje informal para el equipo de voluntarios. Las dos deben pedir algo y explicar quién se ocupa de cada cosa.",
+    "context": "La carta irá al buzón de personas que no conoces; el mensaje, al grupo de chat del equipo. El contenido es el mismo, pero la distancia cambia. Puedes usar los datos del club del Cordón o inventar otra actividad.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Haz una lista de lo que vas a pedir y de quién se encarga de cada tarea.",
+      "Escribe la carta con «usted» o «ustedes», condicionales, imperfecto de subjuntivo y al menos una fórmula impersonal.",
+      "Escribe el mensaje con tuteo o voseo, imperativos con atenuadores y temas retomados con pronombre («las sillas las trae…»).",
+      "Revisa cada pronombre (¿falta uno obligatorio?, ¿sobra uno con foco?) y corrige los subjuntivos que dependen de un condicional."
     ],
     "useLanguage": [
-      "El imperfecto construye fondo y hábitos; el indefinido hace avanzar hechos; el pluscuamperfecto sitúa antecedentes. El presente histórico acerca una escena pasada si el cambio es coherente. El perfecto y el indefinido varían por región y contexto: hoy he llegado y hoy llegué pueden ser opciones normales sin cambiar la cronología básica.",
-      "El voseo rioplatense utiliza formas como vos tenés, vení y decime; ustedes y vosotros seleccionan conjugaciones distintas. Auto/coche/carro, departamento/piso y celular/móvil son variantes léxicas. La sílaba tónica del voseo puede practicarse con síntesis, pero el sheísmo requiere una muestra real verificada en clase: una etiqueta de voz no demuestra una variedad.",
-      "Convierte el caso del invernadero en relato sin presentar conjeturas como hechos; adapta un diálogo a voseo y explica un marcador conversacional."
+      "les agradeceríamos que + imperfecto de subjuntivo",
+      "nos gustaría que…",
+      "se ruega / se agradece + infinitivo",
+      "¿te importaría + infinitivo?",
+      "las sillas las trae… / la música, …",
+      "a mí me parece…"
     ],
     "model": [
-      "Antes de salir, Elena había ensayado varias disculpas. Llevaba veinte años sin ver a su hermano y temía que una frase equivocada devolviera la conversación a la discusión con la que se habían separado. Durante el viaje miraba fotografías recientes, pero seguía buscando en ellas el rostro que recordaba de otra época.",
-      "En la estación sonó el celular. «Vení a la entrada del costado», dijo su hermano. Elena le pidió que precisara cuál: el edificio había cambiado y no reconocía las salidas. «La que da al estacionamiento; estoy junto al auto». Ella agradeció la explicación sin corregir ninguna palabra. Había pasado demasiado tiempo defendiendo maneras de decir cosas que ambos entendían.",
-      "Su hermano esperaba junto a un coche viejo. Miró el equipaje y sonrió: «Vos tenés la misma maleta». Elena iba a explicarle que era nueva cuando ve la etiqueta. No reconoce el nombre. Durante el viaje había tomado otra maleta idéntica. Los dos se quedaron en silencio unos segundos y después comenzaron a reír con una facilidad inesperada.",
-      "Volvieron al mostrador y explicaron el error. Mientras esperaban una respuesta, hablaron de horarios, teléfonos y etiquetas. No resolvieron veinte años de distancia; encontraron una primera conversación que podían sostener juntos. Las disculpas ensayadas quedaron para otro momento, sin desaparecer por ello.",
-      "Nota de revisión: utilizo el imperfecto para el fondo y el pluscuamperfecto para los antecedentes. Reservo el presente histórico para descubrir la etiqueta. Mantengo el voseo del hermano y aclaro una referencia espacial mediante diálogo, sin sustituir su variedad por otra."
+      "Carta a los vecinos. Estimados vecinos y vecinas: el sábado 14 de febrero el club organizará, como cada año, un tablado en la esquina de la plaza. Queremos pedirles disculpas de antemano por las molestias y contarles qué cambiaremos respecto del año pasado. La música grabada la cortaremos a la una, y los parlantes los orientaremos hacia la plaza.",
+      "Les agradeceríamos que no estacionaran frente a los garajes ese día y que nos comunicaran cualquier problema directamente, al teléfono que les dejamos al pie. Se ruega, además, dejar libre la vereda el viernes por la tarde, durante el armado del escenario. Quedamos a su disposición. Comisión directiva del club.",
+      "Mensaje al equipo. ¡Hola, gente! Ya está todo confirmado para el sábado 14. Repaso quién hace qué: el escenario lo arman Martín y los chicos el viernes a las cinco; las sillas las traemos Rosa y yo desde el garaje de la señora Olga; la música, Diego, que este año la corta a la una sí o sí.",
+      "Una cosa importante: a la señora Olga avísenle a ella directamente, no al hijo, que se olvida de todo. Y otra: ¿les importaría quedarse media hora más el domingo para juntar la basura? Las bolsas y los guantes los consigo yo. A mí me parece que si lo hacemos entre todos terminamos rápido. ¡Gracias, equipo!"
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Las dos versiones transmiten el mismo contenido con distinta distancia.",
+      "En la carta uso condicionales, imperfecto de subjuntivo y una fórmula impersonal.",
+      "En el mensaje retomo los temas con el pronombre correcto.",
+      "No repito pronombres cuando destaco información nueva.",
+      "Cada petición está adaptada a la persona que la recibe."
     ],
     "words": [
-      220,
-      280
+      200,
+      260
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Prepara palabras clave, no un texto para leer. Si te grabas, la grabación queda en tu dispositivo; la aplicación no evalúa tu pronunciación.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Una maleta, varias formas de contarlo» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Tres maneras de pedir lo mismo",
+        "prompt": "Habla durante unos dos minutos. Elige un favor grande (cuidar a tu perro una semana, prestarte el auto, cambiarte un turno) y pídeselo en voz alta a tres personas distintas: un amigo íntimo, una vecina mayor que apenas conoces y tu jefe. Después explica qué cambiaste en cada versión y por qué.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Prepara una forma directa, una con condicional y una con «le agradecería que…».",
+          "Piensa en un atenuador y en una fórmula para agradecer en cada caso."
         ],
-        "seconds": 180,
-        "model": "Antes de salir, había ensayado varias disculpas. En la estación buscaba un rostro conocido cuando sonó el teléfono. «Vení a la entrada del costado», dijo mi hermano. Le pedí que precisara cuál, sin corregir su manera de decirlo. Entonces veo la etiqueta: llevaba otra maleta. Volvimos juntos al mostrador y empezamos a hablar de algo que podíamos resolver. No arreglamos veinte años; encontramos una primera conversación. Uso el presente histórico solo en el descubrimiento para destacar el giro.",
+        "seconds": 150,
+        "model": "A mi amigo Nico le diría: «Che, ¿me cuidás al perro la semana que viene? Te dejo comida para todo el viaje». A mi vecina, en cambio, le hablaría de usted: «Disculpe, quería pedirle un favor. ¿Le importaría que dejara a mi perro en su patio unos días?». Y a mi jefe le escribiría: «Le agradecería que me permitiera trabajar desde casa esa semana». Cuanta menos confianza, más distancia pongo en el verbo.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Cambio el tratamiento y la forma verbal en cada versión.",
+          "Uso bien el imperfecto de subjuntivo después del condicional.",
+          "Explico mis decisiones con claridad."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de narrar con perspectiva y adaptarse a otras variedades. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "La vecina que se queja",
+        "prompt": "Tu docente es un vecino mayor que viene a quejarse del ruido de tu fiesta. Escucha su queja, reconoce lo que tenga razón, pregúntale qué le molesta exactamente, pídele algo con cortesía y lleguen a un acuerdo concreto.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara una frase para reconocer el problema sin discutir.",
+          "Prepara dos peticiones con distancia: «¿le importaría que…?», «le agradecería que…».",
+          "Piensa en una frase con foco para corregir un dato: «A las doce terminamos, no a las tres»."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Mantengo el «usted» durante toda la conversación.",
+          "Respondo a lo que dice mi interlocutor y no solo a lo que preparé.",
+          "Terminamos con un acuerdo concreto."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a la próxima clase lo que preparaste esta semana y úsalo con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Una maleta, varias formas de contarlo» en tres minutos y responde a una objeción inesperada.",
+        "move": "Pide",
+        "task": "Pide a tu profesor un favor relacionado con la clase (cambiar la hora, revisar un texto) con la forma más cortés que sepas.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "Quería pedirte…",
+          "¿Te importaría…?",
+          "Me gustaría que…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Montevideo; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Corrige",
+        "task": "Di tres datos falsos sobre ti y deja que tu profesor los corrija destacando la información nueva al principio.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "No, EN MAYO nací…",
+          "Eso no lo sabía."
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre narrar con perspectiva y adaptarse a otras variedades; identifica una condición que todavía necesita confirmación.",
+        "move": "Pregunta",
+        "task": "Pregunta a tu profesor qué tratamiento usaría en tres situaciones de su país o región (médico, suegros, vecino joven).",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Ahí se usa usted o tú?",
+          "¿Y el voseo, se oye?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tus dos versiones del aviso con los pronombres subrayados y una petición que no sepas si suena demasiado brusca."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Una maleta, varias formas de contarlo», ¿qué resume mejor el propósito?",
-        "options": [
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas.",
-          "Explicar decisiones narrativas sin borrar la variación"
+        "type": "gap",
+        "q": "Las fotos del tablado ___ subió Martín a la página del club.",
+        "answers": [
+          [
+            "las"
+          ]
         ],
-        "answer": 2,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Quería acercarlo. El viaje ya había ocurrido, pero al decir entonces suena el celular recupero la impresión de sorpresa. Después vuelvo al pasado. También mantuve vení y vos tenés porque forman parte de la voz del personaje, aunque yo use otras formas en la narración.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Elena en «Una maleta, varias formas de contarlo», ¿qué intervención reconoces?",
-        "options": [
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Quería acercarlo"
-        ],
-        "answer": 2,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "Complemento directo conocido delante: «las» obligatorio."
       },
       {
         "type": "gap",
-        "q": "Vos ___ venir mañana, según el voseo del diálogo.",
+        "q": "Le agradecería que me ___ (confirmar) la reserva por escrito.",
         "answers": [
           [
-            "podés"
+            "confirmara",
+            "confirmase"
           ]
         ],
-        "why": "Voseo rioplatense en presente."
+        "why": "Tras el condicional, imperfecto de subjuntivo."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «Tú vienes con el móvil y me cuentas qué ocurrió.» Adapta al voseo rioplatense usando celular.",
-        "model": "Vos venís con el celular y me contás qué ocurrió.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "A nosotros no ___ gustó nada la decisión del municipio.",
+        "answers": [
+          [
+            "nos"
+          ]
+        ],
+        "why": "Con «gustar», el pronombre del indirecto es obligatorio."
+      },
+      {
+        "type": "choice",
+        "q": "«Algo sabrá Martín, porque no deja de sonreír.» ¿Por qué no hay pronombre «lo»?",
+        "options": [
+          "Porque «algo» es un foco destacado delante del verbo.",
+          "Porque es un error de la frase.",
+          "Porque «saber» nunca lleva pronombre."
+        ],
+        "answer": 0,
+        "why": "Con foco al principio no se repite el complemento."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase pide permiso para que actúe otra persona?",
+        "options": [
+          "¿Le importaría cerrar la ventana?",
+          "¿Le importaría que abriéramos la ventana?",
+          "¿Podría abrir la ventana?"
+        ],
+        "answer": 1,
+        "why": "«Que» + imperfecto de subjuntivo: actúa otra persona."
+      },
+      {
+        "type": "listen",
+        "q": "Según el audio, ¿qué tipo de mensaje es?",
+        "audio": "Se ruega a los señores socios abonar la cuota antes del día diez. Muchas gracias.",
+        "voice": "es-UY-f",
+        "options": [
+          "Una orden entre amigos.",
+          "Un reproche familiar.",
+          "Un aviso formal e impersonal."
+        ],
+        "answer": 2,
+        "why": "«Se ruega» + infinitivo: fórmula impersonal."
       },
       {
         "type": "error",
-        "sentence": "Vení y dígame qué pasó, le dijo a su hermano usando vos.",
+        "sentence": "Yo me parece que deberíamos empezar más temprano.",
         "answers": [
-          "Vení y decime qué pasó, le dijo a su hermano usando vos."
+          "A mí me parece que deberíamos empezar más temprano."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "«Parecer» va con «a mí me»."
+      },
+      {
+        "type": "error",
+        "sentence": "Las bebidas ya pagamos con el dinero de las rifas.",
+        "answers": [
+          "Las bebidas ya las pagamos con el dinero de las rifas."
+        ],
+        "why": "Complemento directo conocido delante: falta «las»."
+      },
+      {
+        "type": "order",
+        "words": [
+          "¿Te",
+          "importaría",
+          "pasarme",
+          "el",
+          "programa",
+          "del",
+          "sábado?"
+        ],
+        "why": "«¿Te importaría + infinitivo?» para una petición amable."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Una maleta, varias formas de contarlo».",
-        "model": "Antes de salir, había ensayado varias disculpas. En la estación buscaba un rostro conocido cuando sonó el teléfono. «Vení a la entrada del costado», dijo mi hermano. Le pedí que precisara cuál, sin corregir su manera de decirlo. Entonces veo la etiqueta: llevaba otra maleta. Volvimos juntos al mostrador y empezamos a hablar de algo que podíamos resolver. No arreglamos veinte años; encontramos una primera conversación. Uso el presente histórico solo en el descubrimiento para destacar el giro.",
+        "prompt": "Escribe la misma petición (que alguien baje el volumen) para un compañero de piso y para un vecino desconocido.",
+        "model": "¿Puedes bajar un poco la música, que mañana madrugo? / Disculpe, le agradecería que bajara el volumen a partir de las once.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre narrar con perspectiva y adaptarse a otras variedades; concede una razón y conserva tu argumento.",
-        "model": "Antes de salir, había ensayado varias disculpas. En la estación buscaba un rostro conocido cuando sonó el teléfono. «Vení a la entrada del costado», dijo mi hermano. Le pedí que precisara cuál, sin corregir su manera de decirlo. Entonces veo la etiqueta: llevaba otra maleta. Volvimos juntos al mostrador y empezamos a hablar de algo que podíamos resolver. No arreglamos veinte años; encontramos una primera conversación. Uso el presente histórico solo en el descubrimiento para destacar el giro.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 19 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Cambio de tú a usted.",
+          "Uso condicional e imperfecto de subjuntivo en la versión distante."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo narrar con perspectiva y adaptarse a otras variedades.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo decidir cuándo el pronombre átono es obligatorio (tema conocido delante, pronombre tónico), recomendable (indirecto detrás) o imposible (foco, nombre sin artículo).",
+      "Puedo contrastar temas con elipsis, usar «a mí me» y reconocer variantes como «le» por «les» o «se los dije».",
+      "Puedo graduar una petición desde la orden directa hasta la fórmula impersonal y elegir el tratamiento adecuado."
     ],
     "review": [
-      "Convierte el caso del invernadero en relato sin presentar conjeturas como hechos; adapta un diálogo a voseo y explica un marcador conversacional.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, sin mirar las tablas, escribe tres frases con un tema conocido delante y tres con foco.",
+      "En tres días, busca un cartel o un aviso real y reescríbelo en un registro más cercano.",
+      "Antes de la semana 20, relee tus dos avisos y cambia una petición directa por una con «¿te importaría…?»."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/pronombres-redundancia-duplicacion-y-foco",
+      "label": "Clase: Pronombres: redundancia, duplicación y foco"
+    },
+    {
+      "path": "/gramatica/registro-cortesia-distancia-y-mandato",
+      "label": "Clase: Registro: cortesía, distancia y mandato"
+    }
+  ]
 };

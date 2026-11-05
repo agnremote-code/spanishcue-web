@@ -1,857 +1,597 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 2 · Autoestudio espejo de G088 (presente de subjuntivo:
+ * formación y usos esenciales) y G089 (deseos: querer que, esperar que,
+ * ojalá). Repaso autónomo con la apertura de una librería-café en Bogotá.
+ * Audio mediante síntesis.
+ */
 export const b1w02: Module = {
-  "id": "b1-02",
-  "level": "b1",
-  "week": 2,
-  "kind": "core",
-  "title": "La noticia y sus versiones",
-  "subtitle": "Distinguir contexto, hechos confirmados y consecuencias de un suceso.",
-  "stop": {
-    "place": "Bogotá",
-    "country": "Colombia"
-  },
-  "minutes": 95,
-  "newObjectives": [
-    "b1.gram.contraste-pasados",
-    "b1.voc.noticias-sucesos",
-    "b1.pron.habla-rapida",
-    "b1.fun.reaccionar-relato",
-    "b1.read.cronica",
-    "b1.pron.reducciones-preposiciones",
-    "b1.gram.referencia-nominal"
+  id: "b1-02",
+  level: "b1",
+  week: 2,
+  kind: "core",
+  title: "Ojalá salga bien: deseos para un comienzo",
+  subtitle: "Repaso de las formas del presente de subjuntivo y de cómo expresar deseos con querer que, esperar que, ojalá y ¡que…!",
+  stop: { place: "Bogotá", country: "Colombia" },
+  minutes: 95,
+  newObjectives: [
+    "b1.gram.g088",
+    "b1.gram.g089",
+    "b1.voc.w02-abrir-negocio",
+    "b1.pron.w02-vocal-modo",
+    "b1.lis.w02-preparar-apertura",
+    "b1.read.w02-noticia-barrio",
+    "b1.wri.w02-mensaje-deseos",
+    "b1.spk.w02-brindis",
+    "b1.fun.w02-expresar-deseos",
+    "b1.disc.w02-mensaje-ocasion",
   ],
-  "reviewObjectives": [
-    "b1.gram.pluscuamperfecto",
-    "b1.disc.marcadores-relato",
-    "b1.voc.viajes-imprevistos",
-    "b1.pron.entonacion-narrativa",
-    "b1.fun.narrar-viaje",
-    "b1.lis.anecdota-radio"
-  ],
-  "prerequisites": [
-    "b1-01"
-  ],
-  "goal": {
-    "canDo": "Puedo distinguir contexto, hechos confirmados y consecuencias de un suceso.",
-    "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
-    ]
-  },
-  "theory": {
-    "intro": "La misión de esta semana: Distinguir contexto, hechos confirmados y consecuencias de un suceso.",
-    "parts": [
-      {
-        "heading": "Forma y significado",
-        "body": [
-          "El indefinido delimita hechos terminados; el imperfecto describe circunstancias o hábitos; el pluscuamperfecto presenta antecedentes. El perfecto compuesto conecta una experiencia con un período abierto para quien habla. Su distribución varía entre regiones: no conviertas hoy en una regla automática."
-        ],
-        "examples": [
-          {
-            "es": "Ayer rescataron a dos excursionistas."
-          },
-          {
-            "es": "Llovía y el sendero estaba cerrado."
-          },
-          {
-            "es": "Los vecinos habían avisado antes."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Los equipos han llegados esta mañana.",
-            "right": "Los equipos han llegado esta mañana.",
-            "why": "El participio compuesto no concuerda con el sujeto."
-          }
-        ]
-      },
-      {
-        "heading": "Organizar la comunicación",
-        "body": [
-          "Una crónica distingue lo que ocurrió de lo que un testigo cree que ocurrió. Cita la fuente y reconoce lo que no sabes. Al escuchar relatos espontáneos puedes encontrar pa por para; es una reducción informal, no una forma que debas imitar ni escribir en una noticia."
-        ],
-        "examples": [
-          {
-            "es": "Esta semana hemos recibido tres avisos."
-          },
-          {
-            "es": "¡Qué susto! Menos mal que llegaron."
-          },
-          {
-            "es": "El testigo dijo que no había visto el inicio."
-          }
-        ]
-      },
-      {
-        "heading": "Género, número y referencia nominal",
-        "body": [
-          "El artículo permite presentar y recuperar un referente: una testigo contó lo ocurrido; la testigo volvió después. Persona y víctima son femeninos gramaticales aunque designen a un hombre; testigo admite el testigo y la testigo. Mantén la concordancia con el nombre y revisa plurales como ley → leyes."
-        ],
-        "examples": [
-          {
-            "es": "Una testigo llamó; la testigo esperó al equipo."
-          },
-          {
-            "es": "La víctima estaba tranquila: era un vecino del barrio."
-          },
-          {
-            "es": "Las leyes y los avisos tienen funciones diferentes."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "b1-02-forms",
-        "type": "gap",
-        "prompt": "Completa estas situaciones de «La noticia y sus versiones» con la forma que expresa la relación indicada.",
-        "items": [
-          {
-            "q": "Antes del rescate, los vecinos ya ___ a emergencias.",
-            "answers": [
-              [
-                "habían llamado"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
-          },
-          {
-            "q": "El martes el equipo ___ a los senderistas.",
-            "answers": [
-              [
-                "encontró"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
-          },
-          {
-            "q": "Cuando salieron, todavía ___ mucho viento.",
-            "answers": [
-              [
-                "hacía"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
-          }
-        ],
-        "bank": [
-          "habían llamado",
-          "encontró",
-          "hacía"
-        ]
-      },
-      {
-        "id": "b1-02-repair",
-        "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
-        "items": [
-          {
-            "sentence": "Los equipos han llegados esta mañana.",
-            "answers": [
-              "Los equipos han llegado esta mañana."
-            ],
-            "why": "El participio compuesto no concuerda con el sujeto."
-          },
-          {
-            "sentence": "Antes del aviso, ya han cerrado el camino el lunes anterior.",
-            "answers": [
-              "Antes del aviso, ya habían cerrado el camino el lunes anterior."
-            ],
-            "why": "El cierre es anterior a otro momento pasado."
-          },
-          {
-            "sentence": "Mientras buscaban, encontraron a los heridos mañana.",
-            "answers": [
-              "Mientras buscaban, encontraron a los heridos ayer."
-            ],
-            "why": "La referencia debe ser coherente con el relato pasado."
-          }
-        ]
-      },
-      {
-        "id": "b1-02-referencia-nominal",
-        "type": "gap",
-        "prompt": "Aplica género, número y referencia nominal a la misión de esta semana.",
-        "bank": [
-          "víctima",
-          "el",
-          "leyes"
-        ],
-        "items": [
-          {
-            "q": "La ___ estaba tranquila; era un hombre de cuarenta años.",
-            "answers": [
-              [
-                "víctima"
-              ]
-            ],
-            "why": "El artículo permite presentar y recuperar un referente: una testigo contó lo ocurrido; la testigo volvió después. Persona y víctima son femeninos gramaticales aunque designen a un hombre; testigo admite el testigo y la testigo. Mantén la concordancia con el nombre y revisa plurales como ley → leyes."
-          },
-          {
-            "q": "Un testigo llegó y después ___ testigo habló con el equipo.",
-            "answers": [
-              [
-                "el"
-              ]
-            ],
-            "why": "El artículo permite presentar y recuperar un referente: una testigo contó lo ocurrido; la testigo volvió después. Persona y víctima son femeninos gramaticales aunque designen a un hombre; testigo admite el testigo y la testigo. Mantén la concordancia con el nombre y revisa plurales como ley → leyes."
-          },
-          {
-            "q": "El plural de ley es ___.",
-            "answers": [
-              [
-                "leyes"
-              ]
-            ],
-            "why": "El artículo permite presentar y recuperar un referente: una testigo contó lo ocurrido; la testigo volvió después. Persona y víctima son femeninos gramaticales aunque designen a un hombre; testigo admite el testigo y la testigo. Mantén la concordancia con el nombre y revisa plurales como ley → leyes."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
-    "groups": [
-      {
-        "title": "La noticia y sus versiones · acciones y recursos",
-        "items": [
-          {
-            "es": "un testigo",
-            "note": "persona que presenció un hecho"
-          },
-          {
-            "es": "confirmar una versión",
-            "note": "comprobar un relato con datos"
-          },
-          {
-            "es": "resultar herido",
-            "note": "sufrir una lesión"
-          },
-          {
-            "es": "dar aviso",
-            "note": "comunicar una emergencia"
-          }
-        ]
-      },
-      {
-        "title": "Matices para esta misión",
-        "items": [
-          {
-            "es": "poner a salvo",
-            "note": "llevar fuera del peligro"
-          },
-          {
-            "es": "cortar el acceso",
-            "note": "impedir el paso"
-          },
-          {
-            "es": "según la fuente",
-            "note": "indicar de dónde viene la información"
-          },
-          {
-            "es": "menos mal",
-            "note": "expresar alivio por un resultado"
-          }
-        ]
-      }
+  reviewObjectives: ["b1.gram.g086","b1.gram.g087","b1.voc.w01-mudanza-piso","b1.pron.w01-acento-pasado","b1.lis.w01-dia-mudanza","b1.read.w01-blog-primer-mes","b1.wri.w01-correo-llegada","b1.spk.w01-dia-al-reves","b1.fun.w01-explicar-lo-ocurrido","b1.disc.w01-orden-relato"],
+  prerequisites: ["b1-01"],
+  goal: {
+    canDo: "Al final de esta semana puedes formar el presente de subjuntivo de verbos regulares e irregulares y expresar deseos para ti y para otras personas con querer, esperar, desear, ojalá y ¡que…!",
+    steps: [
+      "Repasa para qué sirve el subjuntivo: presentar algo que todavía no es un hecho.",
+      "Repasa las formas: la vocal que cambia, la raíz de _yo_ y los seis verbos especiales.",
+      "Decide entre infinitivo y _que_ + subjuntivo con querer, esperar y desear.",
+      "Escucha a Camila y a su hermano preparar la apertura de su librería-café en Bogotá y lee la noticia del barrio.",
+      "Escribe un mensaje de buenos deseos y graba un brindis.",
     ],
-    "exercises": [
-      {
-        "id": "b1-02-lexis",
-        "type": "match",
-        "prompt": "Relaciona expresiones de «La noticia y sus versiones» con su significado en este contexto.",
-        "pairs": [
-          {
-            "left": "un testigo",
-            "right": "persona que presenció un hecho"
-          },
-          {
-            "left": "confirmar una versión",
-            "right": "comprobar un relato con datos"
-          },
-          {
-            "left": "resultar herido",
-            "right": "sufrir una lesión"
-          },
-          {
-            "left": "dar aviso",
-            "right": "comunicar una emergencia"
-          },
-          {
-            "left": "poner a salvo",
-            "right": "llevar fuera del peligro"
-          },
-          {
-            "left": "cortar el acceso",
-            "right": "impedir el paso"
-          },
-          {
-            "left": "según la fuente",
-            "right": "indicar de dónde viene la información"
-          },
-          {
-            "left": "menos mal",
-            "right": "expresar alivio por un resultado"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Reconocer enlaces y reducciones sin exigir una variedad",
-    "explanation": [
-      "Escucha enlaces entre vocales y reconoce para frente a pa en una cita informal. Del y al son contracciones escritas normales; pa y pa’l no se exigen en tu producción formal.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
-    ],
-    "examples": [
+  theory: {
+    intro: "En tus dos últimas clases conociste el presente de subjuntivo y lo usaste para expresar deseos. Aquí lo repasas con otra situación: Camila abre una librería con café en el barrio de Chapinero, en Bogotá, y todo el mundo le desea suerte. Primero, la idea; después, las formas; al final, los deseos.",
+    parts: [
       {
-        "es": "Ayer rescataron a dos excursionistas."
+        heading: "Hecho o todavía no: la idea del subjuntivo",
+        body: [
+          "El **indicativo** presenta información como un hecho: algo que es, que pasa o que sabes. El **subjuntivo** presenta una acción que todavía **no es un hecho**: algo que deseas, que pides o que buscas para otra persona.",
+          "Compara: _Sé que abres el sábado_ (lo sé: es un hecho, indicativo) y _Espero que abras el sábado_ (lo deseo: no es seguro, subjuntivo). La acción es la misma; cambia cómo la miras.",
+          "Por eso el subjuntivo casi siempre aparece después de un verbo de deseo, de petición o de finalidad, y casi siempre detrás de **que**. Con **para que** expresas el objetivo para otra persona: _Te dejo la llave para que abras tú_.",
+        ],
+        examples: [
+          { es: "Sé que el local está en la calle 57.", note: "Información que se presenta como hecho: indicativo." },
+          { es: "Quiero que el local esté listo el viernes.", note: "Deseo sobre algo que todavía no es real: subjuntivo." },
+          { es: "Pongo música suave para que la gente se quede.", note: "Objetivo para otras personas: _para que_ + subjuntivo." },
+        ],
+        mistakes: [
+          { wrong: "Te doy mi número para que me llamas.", right: "Te doy mi número para que me llames.", why: "_Para que_ siempre va con **subjuntivo**." },
+        ],
       },
       {
-        "es": "Llovía y el sendero estaba cerrado."
-      },
-      {
-        "es": "Los vecinos habían avisado antes."
-      }
-    ],
-    "perceive": {
-      "id": "b1-02-perception",
-      "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
-      "items": [
-        {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «La noticia y sus versiones»?",
-          "options": [
-            "Se reduce para en habla informal",
-            "Se dice para con todas sus sílabas"
+        heading: "Formas regulares: la vocal cambia de equipo",
+        body: [
+          "Parte de la forma **yo** del presente de indicativo, quita la **-o** y cambia de vocal: los verbos en **-ar** pasan a **e**; los verbos en **-er** e **-ir** pasan a **a**. Es como si cada grupo usara la vocal del otro.",
+          "La forma de **yo** y la de **él, ella, usted** son iguales: _que yo hable, que ella hable_. Por el contexto sabes quién es.",
+        ],
+        table: {
+          caption: "Presente de subjuntivo regular",
+          head: ["Persona", "hablar", "comer", "vivir"],
+          rows: [
+            ["yo", "hable", "coma", "viva"],
+            ["tú", "hables", "comas", "vivas"],
+            ["él, ella, usted", "hable", "coma", "viva"],
+            ["nosotros, nosotras", "hablemos", "comamos", "vivamos"],
+            ["vosotros, vosotras", "habléis", "comáis", "viváis"],
+            ["ellos, ellas, ustedes", "hablen", "coman", "vivan"],
           ],
-          "answer": 0,
-          "audio": "Voy pa allá después.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
         },
-        {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «La noticia y sus versiones»?",
-          "options": [
-            "Se oyen a el y de el separados",
-            "Se oyen al y del"
+        examples: [
+          { es: "Ojalá vendamos todos los libros usados.", note: "_vender_ → _vend-o_ → _vend-a-mos_." },
+          { es: "Espero que los clientes lean sin prisa.", note: "_leer_ → _le-o_ → _le-an_." },
+        ],
+        mistakes: [
+          { wrong: "Espero que tú trabajas menos este año.", right: "Espero que tú trabajes menos este año.", why: "Después de _espero que_ con otro sujeto: subjuntivo. _-ar_ → **e**: _trabajes_." },
+        ],
+        tip: "Si ya sabes el imperativo negativo (_no hables, no comas_), ya conoces el subjuntivo de tú: son las mismas formas.",
+      },
+      {
+        heading: "Irregulares: la raíz de yo y los seis especiales",
+        body: [
+          "Muchos irregulares **conservan la irregularidad de yo** en todas las personas: _tengo_ → _tenga, tengas, tengamos_; _hago_ → _haga_; _conozco_ → _conozca_; _salgo_ → _salga_; _digo_ → _diga_; _pongo_ → _ponga_.",
+          "Los verbos con cambio de vocal (**e → ie**, **o → ue**) cambian en todas las personas menos en nosotros y vosotros: _quiera, quieras… queramos_; _pueda… podamos_. Los verbos en -ir como **pedir** cierran la vocal también en nosotros: _pida, pidamos_; **dormir** da _duerma, durmamos_.",
+          "Seis verbos no siguen la regla de yo y hay que memorizarlos: **ser** (sea), **estar** (esté), **ir** (vaya), **haber** (haya), **saber** (sepa) y **dar** (dé). Y cuidado con la ortografía: _buscar_ → _busque_, _llegar_ → _llegue_, _empezar_ → _empiece_.",
+        ],
+        table: {
+          caption: "Del presente (yo) al subjuntivo",
+          head: ["Infinitivo", "Presente (yo)", "Subjuntivo (yo, él, ella)", "Nosotros"],
+          rows: [
+            ["tener", "tengo", "tenga", "tengamos"],
+            ["conocer", "conozco", "conozca", "conozcamos"],
+            ["volver", "vuelvo", "vuelva", "volvamos"],
+            ["pedir", "pido", "pida", "pidamos"],
+            ["ser", "soy", "sea", "seamos"],
+            ["ir", "voy", "vaya", "vayamos"],
+            ["saber", "sé", "sepa", "sepamos"],
           ],
-          "answer": 1,
-          "audio": "Voy al centro y vuelvo del mercado.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
-        }
-      ]
+        },
+        examples: [
+          { es: "Quiero que conozcas a mi socia.", note: "_conozco_ → _conozca_ → _conozcas_." },
+          { es: "Ojalá haya sitio para todos.", note: "_haber_ es uno de los seis especiales: _haya_." },
+        ],
+        mistakes: [
+          { wrong: "Ojalá el sábado no llovea.", right: "Ojalá el sábado no llueva.", why: "_llover_ → _llueve_ → **llueva**: -er pasa a **a** y se mantiene _ue_." },
+          { wrong: "Espero que esta es la última caja.", right: "Espero que esta sea la última caja.", why: "_Ser_ es irregular: **sea**." },
+        ],
+      },
+      {
+        heading: "Querer, esperar, desear: ¿una persona o dos?",
+        body: [
+          "Mira quién desea y quién hace la acción. Si es **la misma persona**, usa el **infinitivo**: _Quiero abrir a las diez_ (yo quiero, yo abro). Si es **otra persona**, usa **que + subjuntivo**: _Quiero que abras tú_ (yo quiero, tú abres).",
+          "**Esperar** funciona igual: _Espero llegar a tiempo_ / _Espero que llegues a tiempo_. **Desear** es más formal o más intenso: aparece en tarjetas, discursos y mensajes escritos.",
+          "Después de **espero que** no va el futuro: _Espero que te guste_, no _espero que te gustará_.",
+        ],
+        table: {
+          caption: "Una persona o dos",
+          head: ["Mismo sujeto: infinitivo", "Otro sujeto: que + subjuntivo"],
+          rows: [
+            ["Quiero terminar las estanterías.", "Quiero que termines las estanterías."],
+            ["Esperamos vender cien libros.", "Esperamos que los vecinos compren libros."],
+            ["Deseo hacer un buen discurso.", "Deseo que todos se sientan bienvenidos."],
+          ],
+        },
+        mistakes: [
+          { wrong: "Quiero que yo aprenda a hacer café de filtro.", right: "Quiero aprender a hacer café de filtro.", why: "La misma persona quiere y aprende: **infinitivo**." },
+          { wrong: "Espero que el discurso te gustará.", right: "Espero que el discurso te guste.", why: "Después de _espero que_ va el **subjuntivo**, no el futuro." },
+        ],
+      },
+      {
+        heading: "Ojalá y ¡que…!: deseos cortos",
+        body: [
+          "**Ojalá** no es un verbo: no cambia y siempre va con **subjuntivo**, también cuando el deseo es para ti: _Ojalá aprenda rápido_. Puedes decir _ojalá_ o _ojalá que_. Sola, sirve como respuesta: _—¿Vendrá mucha gente? —¡Ojalá!_",
+          "Para despedirte o felicitar, el español usa frases cortas con **¡Que + subjuntivo!**: son la segunda mitad de _espero que…_ o _deseo que…_. Las más frecuentes: _¡Que te vaya bien!, ¡Que tengas suerte!, ¡Que lo pases bien!, ¡Que te mejores!, ¡Que disfrutes!_",
+        ],
+        examples: [
+          { es: "Ojalá que el letrero llegue antes del sábado.", note: "Deseo sobre una cosa: _ojalá que_ + subjuntivo." },
+          { es: "¡Que tengas un primer día tranquilo!", note: "Deseo de despedida: _¡Que_ + subjuntivo!" },
+          { es: "—¿Crees que te darán el préstamo? —¡Ojalá!", note: "_Ojalá_ como respuesta corta." },
+        ],
+        mistakes: [
+          { wrong: "Ojalá encontrar un buen local.", right: "Ojalá encuentre un buen local.", why: "_Ojalá_ nunca va con infinitivo." },
+          { wrong: "¡Que pasas un buen fin de semana!", right: "¡Que pases un buen fin de semana!", why: "Los deseos con _¡Que…!_ van en **subjuntivo**." },
+        ],
+        tip: "_Ojalá_ viene del árabe andalusí y significaba algo como «si Dios quiere». Hoy lo usan creyentes y no creyentes por igual.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero practicas las formas, regulares e irregulares; después eliges entre infinitivo y subjuntivo en deseos.",
+    exercises: [
+      {
+        id: "b1-02-g1",
+        type: "gap",
+        title: "Forma el subjuntivo",
+        prompt: "Completa con el presente de subjuntivo del verbo entre paréntesis.",
+        items: [
+          { q: "Espero que mis primos ___ a la inauguración. (venir)", answers: [["vengan"]], why: "_vengo_ → **vengan**." },
+          { q: "Quiero que tú ___ la caja registradora. (abrir)", answers: [["abras"]], why: "-ir pasa a **a**: _abras_." },
+          { q: "Ojalá ___ buen tiempo el sábado. (hacer)", answers: [["haga"]], why: "_hago_ → **haga**." },
+          { q: "Mamá quiere que nosotros ___ sus galletas en la vitrina. (poner)", answers: [["pongamos"]], why: "_pongo_ → **pongamos**." },
+          { q: "Espero que la gente ___ que puede quedarse sin pedir nada. (saber)", answers: [["sepa"]], why: "_Saber_ es especial: **sepa**." },
+          { q: "Ojalá que nosotros ___ dormir un poco antes de abrir. (poder)", answers: [["podamos"]], why: "En nosotros no hay cambio de vocal: **podamos**." },
+        ],
+      },
+      {
+        id: "b1-02-g2",
+        type: "choice",
+        title: "¿Infinitivo, indicativo o subjuntivo?",
+        prompt: "Elige la forma correcta según quién desea y quién hace la acción.",
+        items: [
+          { q: "Camila espera ___ todas las estanterías esta noche.", options: ["que termine", "terminar", "termina"], answer: 1, why: "Camila espera y Camila termina: mismo sujeto, **infinitivo**." },
+          { q: "Andrés quiere que su hermana ___ tranquila.", options: ["está", "estar", "esté"], answer: 2, why: "Andrés quiere, ella está: otro sujeto, **subjuntivo**. _Estar_ → _esté_, con tilde." },
+          { q: "Sé que el café ___ de una finca de Huila.", options: ["viene", "venga", "venir"], answer: 0, why: "_Sé que_ presenta un hecho: **indicativo**." },
+          { q: "Los vecinos desean que el negocio ___ muchos años.", options: ["dure", "dura", "durar"], answer: 0, why: "Ellos desean, el negocio dura: **subjuntivo**." },
+          { q: "Ojalá ___ suficientes tazas para todos.", options: ["hay", "haber", "haya"], answer: 2, why: "_Ojalá_ siempre con subjuntivo: **haya**." },
+        ],
+      },
+      {
+        id: "b1-02-g3",
+        type: "error",
+        title: "Corrige los mensajes",
+        prompt: "Cada mensaje del grupo de amigos tiene un error. Escríbelo corregido.",
+        items: [
+          { sentence: "Ojalá vendes muchos libros el primer día.", answers: ["Ojalá vendas muchos libros el primer día."], why: "_Ojalá_ + subjuntivo: _vender_ → **vendas**." },
+          { sentence: "Quiero que me guardas una mesa junto a la ventana.", answers: ["Quiero que me guardes una mesa junto a la ventana."], why: "Yo quiero, tú guardas: **subjuntivo**, _-ar_ → _e_." },
+          { sentence: "Espero que vamos todos juntos a la apertura.", answers: ["Espero que vayamos todos juntos a la apertura."], why: "_Ir_ es especial: **vayamos**." },
+          { sentence: "¡Que te va muy bien con el negocio!", answers: ["¡Que te vaya muy bien con el negocio!"], why: "Deseo con _¡Que…!_: **vaya**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Las palabras para abrir un negocio pequeño y para desear suerte en un comienzo. Algunas son muy colombianas; la nota lo indica.",
+    groups: [
+      {
+        title: "Abrir un negocio",
+        items: [
+          { es: "el local", note: "espacio comercial que alquilas o compras" },
+          { es: "la inauguración", note: "el día en que algo se abre por primera vez al público" },
+          { es: "el letrero", note: "cartel con el nombre del negocio" },
+          { es: "la vitrina", note: "mueble de cristal donde se muestran productos" },
+          { es: "el socio / la socia", note: "persona que comparte un negocio contigo" },
+          { es: "sacar adelante un proyecto", note: "conseguir que funcione a pesar de las dificultades" },
+        ],
+      },
+      {
+        title: "En un café de Bogotá",
+        items: [
+          { es: "un tinto", note: "en Colombia, un café negro pequeño" },
+          { es: "un aguacero", note: "lluvia fuerte y repentina" },
+          { es: "la carrera / la calle", note: "en Bogotá, las vías van numeradas: las carreras y las calles se cruzan" },
+          { es: "chévere", note: "muy bueno, agradable (Colombia, Venezuela)" },
+        ],
+      },
+      {
+        title: "Desear suerte",
+        items: [
+          { es: "¡Que te vaya bien!", note: "deseo general al despedirse" },
+          { es: "¡Mucha suerte!", note: "deseo antes de algo difícil" },
+          { es: "¡Que tengas éxito!", note: "deseo para un proyecto o un trabajo" },
+          { es: "¡Que lo disfrutes!", note: "deseo para algo agradable" },
+          { es: "brindar por algo", note: "levantar la copa o la taza por un deseo" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "b1-02-v1",
+        type: "match",
+        title: "¿Qué es?",
+        prompt: "Relaciona cada palabra con su definición.",
+        pairs: [
+          { left: "la vitrina", right: "donde se ven los pasteles detrás del cristal" },
+          { left: "el letrero", right: "lo que lees encima de la puerta: el nombre del sitio" },
+          { left: "un aguacero", right: "lluvia fuerte que empieza de repente" },
+          { left: "un tinto", right: "café negro pequeño en Colombia" },
+          { left: "la socia", right: "mujer que comparte el negocio contigo" },
+          { left: "brindar", right: "levantar la taza por un deseo" },
+        ],
+      },
+      {
+        id: "b1-02-v2",
+        type: "context",
+        title: "¿Qué deseo encaja?",
+        prompt: "Lee la situación y elige el deseo más adecuado.",
+        items: [
+          { context: "Tu vecina se va mañana de vacaciones a Cartagena.", q: "Le dices:", options: ["¡Que te mejores!", "¡Que lo pases muy bien!", "¡Que tengas éxito!"], answer: 1, why: "Para unas vacaciones: **¡Que lo pases bien!**" },
+          { context: "Un compañero tiene gripe y se va a casa.", q: "Le dices:", options: ["¡Que te mejores!", "¡Que lo disfrutes!", "¡Mucha suerte con el letrero!"], answer: 0, why: "A alguien enfermo: **¡Que te mejores!**" },
+          { context: "Tu amiga abre su negocio la semana que viene.", q: "Le escribes:", options: ["¡Que te vaya mal!", "¡Que tengas un buen viaje!", "¡Que tengas mucho éxito con el local!"], answer: 2, why: "Para un proyecto nuevo: **¡Que tengas éxito!**" },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La vocal final que cambia el modo: habla / hable",
+    explanation: [
+      "En el subjuntivo, muchas veces una sola vocal decide el significado: _Sé que Camila **habla** con los vecinos_ (un hecho) y _Quiero que Camila **hable** con los vecinos_ (un deseo). Si no pronuncias claro la última vocal, tu oyente no sabe qué quieres decir.",
+      "Las vocales españolas son cortas y tensas: no las alargues ni las conviertas en un sonido neutro al final de la palabra. Di **-e** con la boca algo abierta y los labios estirados; **-a**, con la boca bien abierta.",
+      "Cuidado también con **esté** (es-TÉ, subjuntivo de estar) y **este** (ES-te, demostrativo). La tilde marca el acento y cambia la palabra.",
+    ],
+    table: {
+      caption: "Indicativo frente a subjuntivo",
+      head: ["Indicativo (hecho)", "Subjuntivo (deseo)"],
+      rows: [
+        ["trabaja", "trabaje"],
+        ["come", "coma"],
+        ["abre", "abra"],
+        ["lleva", "lleve"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Ayer rescataron a dos excursionistas.",
-        "tip": "Escucha enlaces entre vocales y reconoce para frente a pa en una cita informal. Del y al son contracciones escritas normales; pa y pa’l no se exigen en tu producción formal.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Llovía y el sendero estaba cerrado.",
-        "tip": "Escucha enlaces entre vocales y reconoce para frente a pa en una cita informal. Del y al son contracciones escritas normales; pa y pa’l no se exigen en tu producción formal.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Los vecinos habían avisado antes.",
-        "tip": "Escucha enlaces entre vocales y reconoce para frente a pa en una cita informal. Del y al son contracciones escritas normales; pa y pa’l no se exigen en tu producción formal.",
-        "voice": "es-ES-f"
-      }
-    ]
+    perceive: {
+      id: "b1-02-p1",
+      type: "listen",
+      title: "¿Hecho o deseo?",
+      prompt: "Escucha la frase y elige la forma que oyes al final.",
+      items: [
+        { q: "¿Qué forma oyes?", audio: "Quiero que lleve el pastel.", voice: "es-CO-f", options: ["lleva", "lleve"], answer: 1, why: "_que lleve_: subjuntivo, deseo." },
+        { q: "¿Qué forma oyes?", audio: "Sé que abre a las diez.", voice: "es-CO-m", options: ["abre", "abra"], answer: 0, why: "_Sé que abre_: indicativo, un hecho." },
+        { q: "¿Qué forma oyes?", audio: "Ojalá que no coma tanto azúcar.", voice: "es-CO-f", options: ["come", "coma"], answer: 1, why: "_Ojalá que no coma_: subjuntivo." },
+        { q: "¿Qué palabra oyes?", audio: "Espero que esté abierto.", voice: "es-CO-m", options: ["este", "esté"], answer: 1, why: "Acento en la última sílaba: _es-TÉ_." },
+        { q: "¿Qué forma oyes?", audio: "Veo que trabaja mucho.", voice: "es-CO-f", options: ["trabaja", "trabaje"], answer: 0, why: "_Veo que_ presenta un hecho: _trabaja_." },
+      ],
+    },
+    produce: [
+      { text: "Sé que vendes café. Quiero que vendas libros.", tip: "Marca la diferencia entre _vendes_ y _vendas_.", voice: "es-CO-f" },
+      { text: "Ojalá que esté todo listo.", tip: "_es-TÉ_, con fuerza en la última sílaba.", voice: "es-CO-m" },
+      { text: "¡Que te vaya muy bien!", tip: "Entonación de deseo: sube en _vaya_ y baja al final.", voice: "es-CO-f" },
+      { text: "Espero que lleguen temprano.", tip: "_lleguen_: la _u_ no suena; se pronuncia _lle-guen_ como en _guerra_.", voice: "es-CO-m" },
+    ],
+    spelling: "Algunos verbos cambian de letra para conservar el sonido: _buscar_ → **busque**, _llegar_ → **llegue**, _empezar_ → **empiece**, _coger_ → **coja**.",
   },
-  "listening": {
-    "title": "La noticia y sus versiones · voces en conversación",
-    "context": "Una periodista contrasta una noticia con lo que observó una testigo. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Periodista",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Elena",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "Tres días antes de abrir",
+    context: "Camila va a abrir una librería-café en Chapinero, Bogotá. Su hermano Andrés pasa por el local para ayudarla. Hablan de lo que falta por hacer y de lo que esperan del sábado. Escucha primero sin leer la transcripción.",
+    speakers: [
+      { id: "camila", name: "Camila", voice: "es-CO-f", role: "dueña de la librería-café" },
+      { id: "andres", name: "Andrés", voice: "es-CO-m", role: "hermano de Camila" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Estamos con Elena, que vio llegar al equipo de rescate al parque. Elena, en algunas publicaciones se habla de cinco personas atrapadas. ¿Qué viste tú exactamente y a qué hora llegaste?"
-      },
-      {
-        "speaker": "b",
-        "text": "Llegué sobre las seis, cuando ya estaba allí la ambulancia. Vi salir a dos excursionistas con ayuda. No vi a cinco. Uno caminaba despacio y el otro llevaba una manta. Antes había llovido mucho, pero en ese momento ya no llovía."
-      },
-      {
-        "speaker": "a",
-        "text": "¿Sabes quién avisó? Nos han dicho que los excursionistas llevaban varias horas perdidos y que sus teléfonos no funcionaban. Queremos separar lo que está confirmado de lo que se está repitiendo."
-      },
-      {
-        "speaker": "b",
-        "text": "Un guarda me contó que un vecino había llamado desde el camino de abajo. Eso es lo que me dijo; yo no escuché la llamada. Los excursionistas parecían cansados, aunque no puedo decir si estaban heridos."
-      },
-      {
-        "speaker": "a",
-        "text": "Gracias por precisarlo. El servicio de emergencias acaba de confirmar que solo había dos personas y que ambas están bien. Esta tarde han vuelto a recordar que el sendero sigue cerrado por el barro."
-      },
-      {
-        "speaker": "b",
-        "text": "Menos mal que los encontraron. Yo iba para el mirador y cambié de camino al ver el aviso. A veces decimos «voy pa allá» sin pensar, pero esta vez convenía parar y comprobar si realmente se podía pasar. También hablé con una testigo que estaba junto a la entrada. La testigo me dijo que no quería aparecer en imágenes; respetamos su decisión."
-      }
+    script: [
+      { speaker: "camila", text: "Andrés, ¿tienes un momento? El sábado abrimos y todavía falta mucho. Quiero que me ayudes con la lista de cosas pendientes." },
+      { speaker: "andres", text: "Claro, para eso vine. A ver, ¿qué quieres que haga primero?" },
+      { speaker: "camila", text: "Necesito que recojas las tazas en la tienda de la carrera séptima antes de las cinco. Y quiero que llames al señor de los letreros: espero que ya tenga listo el nuestro." },
+      { speaker: "andres", text: "Listo. ¿Y tú qué vas a hacer mientras tanto?" },
+      { speaker: "camila", text: "Yo quiero terminar de ordenar los libros por temas. Espero acabar esta noche, pero no sé. Ah, y mamá quiere que pongamos sus galletas de avena en la vitrina." },
+      { speaker: "andres", text: "Ojalá no se acaben en una hora, como en el cumpleaños de la tía." },
+      { speaker: "camila", text: "¡Ojalá se acaben! Significa que a la gente le gustan. Lo que me preocupa es el clima. Ya sabes cómo es Bogotá: sol a las diez y aguacero a las tres." },
+      { speaker: "andres", text: "Pues ojalá haga sol el sábado. Si no, nadie va a querer sentarse en la terraza." },
+      { speaker: "camila", text: "Por eso quiero que pidamos unas sombrillas grandes. Sirven para el sol y para la lluvia." },
+      { speaker: "andres", text: "Buena idea. Oye, ¿y el discurso? Los vecinos esperan que digas unas palabras." },
+      { speaker: "camila", text: "Ay, no me lo recuerdes. Espero no ponerme nerviosa. Solo quiero que la gente se sienta como en casa y que vuelva." },
+      { speaker: "andres", text: "Vas a estar bien. Si te pones nerviosa, me miras y yo levanto una taza. ¡Que salga todo perfecto, hermanita!" },
+      { speaker: "camila", text: "Gracias. Ojalá tengas razón." },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
-        "exercise": {
-          "id": "b1-02-audio-0",
-          "type": "choice",
-          "prompt": "La noticia y sus versiones: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
-          "items": [
-            {
-              "q": "¿Para qué habla el periodista con Elena?",
-              "options": [
-                "Para vender una excursión",
-                "Para distinguir observaciones y rumores"
-              ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Por qué entrevistan a una testigo?",
-              "options": [
-                "Para precisar una noticia que circula",
-                "Para pedirle un diagnóstico médico"
-              ],
-              "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
-        "exercise": {
-          "id": "b1-02-audio-1",
-          "type": "choice",
-          "prompt": "La noticia y sus versiones: Vuelve a escuchar y anota el dato que cambia la decisión.",
-          "items": [
-            {
-              "q": "¿Qué observó Elena directamente?",
-              "options": [
-                "Dos personas saliendo con ayuda",
-                "Una llamada desde el camino"
-              ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Quién habría dado el aviso según el guarda?",
-              "options": [
-                "La propia entrevistadora",
-                "Un vecino"
-              ],
-              "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
-        "exercise": {
-          "id": "b1-02-audio-2",
-          "type": "choice",
-          "prompt": "La noticia y sus versiones: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
-          "items": [
-            {
-              "q": "¿Qué expresa «me contó»?",
-              "options": [
-                "Una observación directa de Elena",
-                "Información recibida de otra persona"
-              ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Por qué Elena dice que no escuchó la llamada?",
-              "options": [
-                "Limita lo que puede afirmar directamente",
-                "Niega que hubiera rescate"
-              ],
-              "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "La noticia y sus versiones · otra perspectiva",
-    "genre": "Crónica",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
-    "text": [
-      "El puente del barrio del Molino volvió a abrir ayer, después de permanecer cerrado durante una tarde. Un vecino había llamado al ayuntamiento porque una de las barandillas se movía. Al principio circuló por las redes la noticia de que el puente se había caído. Sin embargo, las fotografías que compartieron varios usuarios correspondían a una reparación del año anterior.",
-      "Cuando llegaron los técnicos, había bastante gente a ambos lados del río. Algunos vecinos necesitaban cruzar para volver a casa; otros se habían acercado por curiosidad. La policía cortó el acceso mientras el equipo revisaba la estructura. Una comerciante explicó que había oído un golpe, pero reconoció que no había visto ninguna caída. Los técnicos encontraron una pieza suelta en la barandilla y la sustituyeron. No hubo heridos ni daños en la parte central.",
-      "Una testigo que trabaja cerca del puente pidió no aparecer en las fotografías. La testigo aceptó explicar lo que había visto, pero distinguió cuidadosamente su relato de los comentarios de otras personas.",
-      "Esta semana la asociación vecinal ha recibido varias preguntas sobre la seguridad del recorrido. Su portavoz recomienda consultar los avisos municipales antes de compartir mensajes alarmantes. También propone colocar un cartel con la fecha de cada revisión. El incidente demuestra que una información puede parecer urgente sin ser exacta. La noticia importante no es solo que el puente volvió a abrir, sino que una llamada a tiempo permitió reparar un problema pequeño antes de que fuera mayor."
-    ],
-    "tasks": [
-      {
-        "id": "b1-02-read-evidence",
-        "type": "choice",
-        "prompt": "En la lectura «La noticia y sus versiones», elige la respuesta respaldada por el texto.",
-        "items": [
-          {
-            "q": "¿Qué era incorrecto en las redes?",
-            "options": [
-              "Las imágenes no correspondían al incidente actual",
-              "La existencia de un puente"
-            ],
-            "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-          },
-          {
-            "q": "¿Qué propone la asociación?",
-            "options": [
-              "Cerrar el barrio para siempre",
-              "Mostrar la fecha de las revisiones"
-            ],
-            "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-          }
-        ]
-      },
-      {
-        "id": "b1-02-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «La noticia y sus versiones».",
-        "items": [
-          {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «La noticia y sus versiones», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "El puente del barrio del Molino volvió a abrir ayer, después de permanecer cerrado durante una tarde.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
-      "items": [
-        {
-          "quote": "El puente del barrio del Molino volvió a abrir ayer, después de permanecer cerrado durante una tarde.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+        stage: "gist",
+        prompt: "Primera escucha: sin transcripción, quédate con la idea general.",
+        exercise: {
+          id: "b1-02-l1",
+          type: "choice",
+          prompt: "Responde con lo esencial.",
+          items: [
+            { q: "¿Para qué habla Camila con Andrés?", options: ["Para pedirle dinero", "Para repartir las tareas antes de abrir", "Para cancelar la inauguración"], answer: 1, why: "Camila dice: _Quiero que me ayudes con la lista de cosas pendientes_." },
+            { q: "¿Cómo se siente Camila?", options: ["Ilusionada, pero preocupada por algunas cosas", "Aburrida y sin ganas", "Totalmente tranquila"], answer: 0, why: "Le preocupan el clima y el discurso, pero quiere que todo salga bien." },
+          ],
         },
-        {
-          "quote": "La noticia importante no es solo que el puente volvió a abrir, sino que una llamada a tiempo permitió reparar un problema pequeño antes de que fuera mayor.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "exercises": [
+      },
       {
-        "id": "b1-02-order",
-        "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «La noticia y sus versiones» y léelos con grupos de sentido.",
-        "items": [
+        stage: "detail",
+        prompt: "Segunda escucha: atención a quién tiene que hacer cada cosa.",
+        exercise: {
+          id: "b1-02-l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta según el audio.",
+          items: [
+            { q: "¿Qué tiene que hacer Andrés antes de las cinco?", options: ["Llamar a su madre", "Ordenar los libros", "Recoger las tazas"], answer: 2, why: "_Necesito que recojas las tazas… antes de las cinco._" },
+            { q: "¿Qué quiere la madre?", options: ["Que pongan sus galletas en la vitrina", "Que abran el domingo", "Que no haya terraza"], answer: 0, why: "_Mamá quiere que pongamos sus galletas de avena en la vitrina._" },
+            { q: "¿Para qué quiere Camila las sombrillas?", options: ["Para decorar el letrero", "Para el sol y para la lluvia", "Para regalarlas a los vecinos"], answer: 1, why: "_Sirven para el sol y para la lluvia._" },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en quién desea y quién hace la acción. Después puedes leer la transcripción.",
+        exercise: {
+          id: "b1-02-l3",
+          type: "classify",
+          prompt: "Clasifica cada deseo del audio.",
+          categories: ["La misma persona: infinitivo", "Otra persona o cosa: que + subjuntivo", "Ojalá o ¡que…! + subjuntivo"],
+          items: [
+            { text: "Espero acabar esta noche.", cat: 0 },
+            { text: "Quiero que me ayudes con la lista.", cat: 1 },
+            { text: "Ojalá haga sol el sábado.", cat: 2 },
+            { text: "Espero no ponerme nerviosa.", cat: 0, why: "Camila espera y Camila se pone nerviosa: mismo sujeto." },
+            { text: "Los vecinos esperan que digas unas palabras.", cat: 1 },
+            { text: "¡Que salga todo perfecto!", cat: 2 },
+          ],
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Abre La Taza de Papel, una librería con café hecha a mano",
+    genre: "Noticia de un boletín de barrio",
+    frame: "Texto publicado en «Chapinero al día», el boletín digital que reciben los vecinos del barrio.",
+    text: [
+      "El próximo sábado abre sus puertas en la calle 57 La Taza de Papel, una librería con café que Camila Rojas, ingeniera de 34 años, ha preparado durante casi dos años. «Quiero que la gente venga a leer sin prisa y que nadie le diga que tiene que consumir algo para quedarse», explica mientras coloca novelas en una estantería de madera reciclada.",
+      "El local era antes una vieja papelería. Camila conservó el mostrador original y decoró las paredes con fotos antiguas del barrio que le prestaron los vecinos. «No espero hacerme rica», dice entre risas. «Espero que el negocio sea sostenible y que podamos organizar talleres de escritura para niños los sábados por la mañana.»",
+      "Los vecinos ya han dejado sus mensajes en un cuaderno junto a la puerta. Don Hernando, que vende frutas en la esquina desde hace treinta años, escribió: «Ojalá le vaya muy bien y ojalá venda muchos libros, pero que no suba el precio del tinto». Una estudiante firmó con un dibujo y una frase: «Que nunca falte el wifi». Y la dueña de la panadería de enfrente dejó una nota práctica: «Si quiere que le traiga pan fresco por las mañanas, me avisa».",
+      "La inauguración será a las diez, con música en vivo y una mesa de libros usados. Camila solo pide una cosa a los visitantes: que cada uno traiga un libro para intercambiar.",
+    ],
+    glossary: [
+      { es: "sostenible", note: "que puede mantenerse en el tiempo sin perder dinero" },
+      { es: "el mostrador", note: "mueble donde se atiende a los clientes" },
+      { es: "intercambiar", note: "dar una cosa y recibir otra" },
+    ],
+    tasks: [
+      {
+        id: "b1-02-r1",
+        type: "choice",
+        prompt: "Lee la noticia y elige la respuesta correcta.",
+        items: [
+          { q: "¿Qué quiere Camila que hagan los clientes?", options: ["Que compren al menos un café", "Que lean tranquilos sin obligación de consumir", "Que reserven mesa"], answer: 1, why: "_Quiero que la gente venga a leer sin prisa y que nadie le diga que tiene que consumir algo._" },
+          { q: "¿Qué espera Camila del negocio?", options: ["Hacerse rica pronto", "Abrir otro local en un año", "Que sea sostenible y tenga talleres para niños"], answer: 2, why: "_Espero que el negocio sea sostenible y que podamos organizar talleres._" },
+          { q: "¿Qué pide a quien visite la inauguración?", options: ["Que lleve un libro para intercambiar", "Que escriba en el cuaderno", "Que compre pan"], answer: 0, why: "_Que cada uno traiga un libro para intercambiar._" },
+        ],
+      },
+      {
+        id: "b1-02-r2",
+        type: "match",
+        title: "¿Quién lo desea?",
+        prompt: "Relaciona cada persona con su deseo o su oferta.",
+        pairs: [
+          { left: "Don Hernando", right: "que el café no suba de precio" },
+          { left: "la estudiante", right: "que siempre haya conexión a internet" },
+          { left: "la panadera", right: "llevar pan si Camila se lo pide" },
+          { left: "Camila", right: "talleres de escritura los sábados" },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Toca cada fragmento para ver qué forma hay dentro.",
+      items: [
+        { quote: "Quiero que la gente venga a leer sin prisa", note: "Camila quiere, la gente viene: **que + subjuntivo**. _vengo_ → _venga_." },
+        { quote: "No espero hacerme rica", note: "Ella espera y ella se hace rica: mismo sujeto, **infinitivo**." },
+        { quote: "Ojalá le vaya muy bien", note: "**Ojalá** + subjuntivo de _ir_: _vaya_." },
+        { quote: "Que nunca falte el wifi", note: "Deseo corto con **que** + subjuntivo, sin verbo principal." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Ahora mezclas las formas y los deseos. El último ejercicio te pide recuperar formas de A2 que ya eran subjuntivo sin que lo supieras.",
+    exercises: [
+      {
+        id: "b1-02-x1",
+        type: "order",
+        title: "Deseos en orden",
+        prompt: "Ordena las palabras para formar el deseo.",
+        items: [
+          { words: ["Ojalá", "que", "los", "vecinos", "traigan", "muchos", "libros."] },
+          { words: ["Quiero", "que", "pruebes", "el", "pastel", "de", "mamá."] },
+          { words: ["Esperamos", "abrir", "antes", "de", "las", "diez."] },
+        ],
+      },
+      {
+        id: "b1-02-x2",
+        type: "classify",
+        title: "¿Una persona o dos?",
+        prompt: "Clasifica cada frase según cuántas personas intervienen en el deseo.",
+        categories: ["Mismo sujeto (infinitivo)", "Dos sujetos (que + subjuntivo)"],
+        items: [
+          { text: "Prefiero empezar con poco dinero.", cat: 0 },
+          { text: "Prefiero que empieces con poco dinero.", cat: 1 },
+          { text: "Deseamos que vuelvan pronto.", cat: 1 },
+          { text: "Desean volver el mes que viene.", cat: 0 },
+          { text: "Espero que el letrero se vea desde la esquina.", cat: 1, why: "Yo espero; el letrero se ve: dos sujetos." },
+        ],
+      },
+      {
+        id: "b1-02-x3",
+        type: "context",
+        title: "¿Qué dices?",
+        prompt: "Lee la situación y elige la frase correcta y natural.",
+        items: [
+          { context: "Tu amigo tiene mañana una entrevista para un trabajo que le encanta.", q: "Le dices:", options: ["¡Ojalá te lo dan!", "¡Ojalá te lo den!", "¡Ojalá dártelo!"], answer: 1, why: "_Ojalá_ + subjuntivo de _dar_: **den**." },
+          { context: "Quieres que tu hermana te avise cuando llegue el pedido.", q: "Le escribes:", options: ["Quiero que me avisas.", "Quiero avisarme.", "Quiero que me avises."], answer: 2, why: "Tú quieres, ella avisa: **que + subjuntivo**." },
+          { context: "Tú misma quieres terminar el menú hoy.", q: "Dices:", options: ["Quiero terminar el menú hoy.", "Quiero que termine el menú hoy.", "Quiero que termino el menú hoy."], answer: 0, why: "Misma persona: **infinitivo**." },
+        ],
+      },
+      {
+        id: "b1-02-x4",
+        type: "open",
+        title: "Escribe tus deseos",
+        prompt: "Escribe cada parte de un mensaje para alguien que empieza algo nuevo. Después compara con el modelo.",
+        items: [
           {
-            "words": [
-              "Esta",
-              "semana",
-              "hemos",
-              "recibido",
-              "tres",
-              "avisos."
-            ]
+            prompt: "Escribe dos deseos para la persona con _espero que_ y _quiero que_.",
+            model: "Espero que tus compañeros te reciban con cariño. Quiero que me cuentes todo después de tu primer día.",
+            checklist: ["Hay dos sujetos en cada frase.", "Los verbos van en subjuntivo."],
           },
           {
-            "words": [
-              "¡Qué",
-              "susto!",
-              "Menos",
-              "mal",
-              "que",
-              "llegaron."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-02-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «La noticia y sus versiones».",
-        "categories": [
-          "Observación directa",
-          "Información atribuida"
-        ],
-        "items": [
-          {
-            "text": "Vi dos personas con una manta.",
-            "cat": 0
+            prompt: "Escribe un deseo para ti con infinitivo y uno con _ojalá_.",
+            model: "Espero visitarte en primavera. Ojalá encuentre vuelos baratos.",
+            checklist: ["Con el mismo sujeto uso infinitivo.", "Después de _ojalá_ uso subjuntivo, aunque el deseo sea para mí."],
           },
           {
-            "text": "Oí el anuncio en la estación.",
-            "cat": 0
+            prompt: "Cierra con un deseo corto con _¡Que…!_",
+            model: "¡Que disfrutes cada minuto de esta aventura!",
+            checklist: ["Empiezo con _Que_.", "El verbo va en subjuntivo."],
+          },
+        ],
+      },
+      {
+        id: "b1-02-retrieval",
+        type: "open",
+        title: "Recupera lo que ya sabías",
+        prompt: "Sin mirar la teoría, recupera formas de A2 y conéctalas con el subjuntivo. Escribe primero y compara después.",
+        items: [
+          {
+            prompt: "En A2 aprendiste el imperativo negativo. Escribe en negativo para tú: habla, come, sal, ven, haz, ve. ¿Qué tienen en común con el subjuntivo?",
+            model: "No hables, no comas, no salgas, no vengas, no hagas, no vayas. Son las mismas formas que el presente de subjuntivo de tú.",
+            checklist: ["Las seis formas negativas están bien escritas.", "Reconozco que coinciden con el subjuntivo."],
           },
           {
-            "text": "El guarda me contó que habían llamado.",
-            "cat": 1
+            prompt: "Escribe la forma de yo del presente de indicativo de conocer, traer, oír y caber. Después forma el subjuntivo de él o ella.",
+            model: "conozco → conozca; traigo → traiga; oigo → oiga; quepo → quepa.",
+            checklist: ["Parto de la forma de yo.", "Mantengo la irregularidad en el subjuntivo."],
           },
-          {
-            "text": "Según el aviso, el camino sigue cerrado.",
-            "cat": 1
-          }
-        ]
-      },
-      {
-        "id": "b1-02-draft",
-        "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
-        "items": [
-          {
-            "prompt": "La noticia y sus versiones: escribe una apertura de 35–45 palabras para la tarea «Redacta una crónica vecinal de 140–180 palabras que corrija un rumor sin acusar a nadie. Incluye una fuente, contexto y hechos confirmados.» sin copiar el modelo.",
-            "model": "Ayer por la tarde se interrumpió una actividad en la biblioteca del barrio.",
-            "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
-            ]
-          },
-          {
-            "prompt": "La noticia y sus versiones: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "Esta semana la biblioteca ha cambiado dos luces antiguas como medida de mantenimiento. La responsable pide que se consulte su tablón antes de compartir noticias. Por ahora, las actividades del próximo sábado mantienen su horario habitual.",
-            "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-02-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «La noticia y sus versiones», recupera la semana 1: Cuenta un viaje que habías preparado y que cambió por un aviso. Ordena antecedentes, imprevisto y solución; usa al cabo de y finalmente, y marca el desenlace con la voz.",
-            "model": "Cuando llegué, el tren ya había salido. Habíamos comprado los billetes el martes.",
-            "checklist": [
-              "Puedo situar una acción anterior a otra en el pasado: cuando llegué, el tren ya había salido.",
-              "Puedo organizar una historia con en aquel momento, al cabo de, mientras, en cuanto y finalmente.",
-              "Puedo contar retrasos, pérdidas, cambios de planes y soluciones.",
-              "Puedo crear suspense con pausas y tonos suspendidos, y cerrar una historia con un tono descendente.",
-              "Puedo contar un viaje que se complicó con antecedentes, hechos y resultado.",
-              "Puedo reconstruir el orden real de los hechos de un relato desordenado."
-            ]
-          },
-          {
-            "prompt": "Tras recuperar el caso anterior en «La noticia y sus versiones», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: Ayer rescataron a dos excursionistas.",
-            "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Redacta una crónica vecinal de 140–180 palabras que corrija un rumor sin acusar a nadie. Incluye una fuente, contexto y hechos confirmados.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
-    "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
-    ],
-    "useLanguage": [
-      "Ayer rescataron a dos excursionistas.",
-      "Llovía y el sendero estaba cerrado.",
-      "Los vecinos habían avisado antes.",
-      "Esta semana hemos recibido tres avisos.",
-      "Una testigo llamó; la testigo esperó al equipo.",
-      "La víctima estaba tranquila: era un vecino del barrio."
-    ],
-    "model": [
-      "Ayer por la tarde se interrumpió una actividad en la biblioteca del barrio. Algunas personas publicaron que el edificio había sufrido daños, pero esa información no era correcta.",
-      "Una participante que esperaba fuera explicó que el personal había comunicado el problema con tranquilidad. También aclaró que nadie había tenido que abandonar el jardín. Su testimonio coincide con el aviso publicado después, aunque no permite saber qué causó el fallo de la luz.",
-      "Según explicó la responsable, se había apagado una luz de emergencia y el equipo decidió revisar la instalación. Mientras llegaba el técnico, los participantes esperaron en el jardín. La revisión duró veinte minutos y después todos pudieron volver a entrar. No hubo heridos y los libros no sufrieron daños. Esta semana la biblioteca ha cambiado dos luces antiguas como medida de mantenimiento. La responsable pide que se consulte su tablón antes de compartir noticias. Por ahora, las actividades del próximo sábado mantienen su horario habitual."
-    ],
-    "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié.",
-      "Integro y compruebo este recurso: género, número y referencia nominal."
-    ],
-    "words": [
-      140,
-      180
-    ]
-  },
-  "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
-    "tasks": [
-      {
-        "title": "Intervención organizada",
-        "prompt": "Presenta la noticia del puente en dos minutos. Tu interlocutor pregunta si alguien resultó herido y aporta un rumor nuevo: responde con lo confirmado y pide la fuente.",
-        "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración.",
-          "Usa también: Una testigo llamó; la testigo esperó al equipo."
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
-        ]
       },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «La noticia y sus versiones», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
-        "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
-        ],
-        "seconds": 120,
-        "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Presenta la noticia del puente en dos minutos. Tu interlocutor pregunta si alguien resultó herido y aporta un rumor nuevo: responde con lo confirmado y pide la fuente."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «La noticia y sus versiones» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
-        "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «La noticia y sus versiones» para una tercera persona y comprueba si tu versión conserva las condiciones."
-      }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
   },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Qué propone la asociación? Relaciona tu respuesta con «La noticia y sus versiones».",
-        "options": [
-          "Cerrar el barrio para siempre",
-          "Mostrar la fecha de las revisiones"
-        ],
-        "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «La noticia y sus versiones»: ¿qué formulación se oye?",
-        "options": [
-          "Los vecinos habían avisado antes.",
-          "El testigo dijo que no había visto el inicio."
-        ],
-        "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "El testigo dijo que no había visto el inicio.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "Revisión breve de «La noticia y sus versiones». Antes del rescate, los vecinos ya ___ a emergencias.",
-        "answers": [
-          [
-            "habían llamado"
-          ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «La noticia y sus versiones». Texto de partida: La lluvia duró toda la búsqueda. A las ocho encontraron al grupo. Consigna: Une los hechos empezando con Mientras llovía. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "Mientras llovía, a las ocho encontraron al grupo.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Los equipos habían rescatando a todos antes de anochecer.",
-        "answers": [
-          "Los equipos habían rescatado a todos antes de anochecer."
-        ],
-        "why": "Se necesita participio, no gerundio."
-      },
-      {
-        "type": "order",
-        "words": [
-          "El",
-          "testigo",
-          "dijo",
-          "que",
-          "no",
-          "había",
-          "visto",
-          "el",
-          "inicio."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación escrita de «La noticia y sus versiones»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
-        "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «La noticia y sus versiones»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Distinguir contexto, hechos confirmados y consecuencias de un suceso.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+  writing: {
+    task: "Escribe un mensaje de 130–170 palabras para una persona que empieza algo nuevo (un negocio, un trabajo, unos estudios en otro país): recuerda un momento que compartiste con ella, expresa al menos cuatro deseos con formas distintas y despídete.",
+    context: "El mensaje va en una tarjeta o en un correo que esa persona va a leer el primer día. Escribe en tono cálido y personal.",
+    steps: [
+      "Elige a la persona y el comienzo: ¿qué empieza y dónde?",
+      "Recuerda en dos o tres frases un momento compartido.",
+      "Escribe cuatro deseos: uno con _quiero que_, uno con _espero que_ o _deseo que_, uno con _ojalá_ y uno con _¡Que…!_",
+      "Revisa cada deseo: ¿hay una persona o dos? Corrige el infinitivo o el subjuntivo según el caso.",
     ],
-    "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
-    ]
-  }
+    useLanguage: ["Espero que…", "Quiero que…", "Ojalá (que)…", "Deseo que…", "¡Que te vaya…!"],
+    model: [
+      "Querida Camila: todavía me acuerdo de la tarde en que me enseñaste aquel local vacío, lleno de polvo, y me dijiste que ahí iba a estar tu librería. Yo pensé que estabas loca. Hoy, al ver las estanterías llenas y el letrero en la puerta, sé que tenías razón.",
+      "Quiero que sepas que estoy muy orgullosa de ti. Espero que La Taza de Papel se llene de vecinos, de niños y de buenas historias, y que tengas tiempo para leer tú también. Ojalá que el aguacero de las tres no llegue el sábado y que la gente se quede hasta tarde en la terraza. Deseo que este proyecto te dé la tranquilidad que buscabas.",
+      "Yo voy a estar en la primera fila con mi libro para intercambiar. ¡Que disfrutes muchísimo este comienzo y que te vaya increíble! Un abrazo enorme, Lucía",
+    ],
+    checklist: [
+      "Escribo al menos cuatro deseos con formas distintas.",
+      "Uso infinitivo con el mismo sujeto y _que_ + subjuntivo con dos sujetos.",
+      "Después de _ojalá_ y en _¡Que…!_ uso siempre subjuntivo.",
+      "Reviso los irregulares: _sea, vaya, haya, sepa, tenga, haga_.",
+      "El mensaje tiene saludo, recuerdo, deseos y despedida.",
+    ],
+    words: [130, 170],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate en tu dispositivo. Prepara notas breves, no un texto para leer; el curso no puntúa tu pronunciación ni sube tu audio.",
+    tasks: [
+      {
+        title: "Un brindis por un comienzo",
+        prompt: "Imagina que estás en la inauguración de un negocio, en una despedida o en el primer día de trabajo de alguien querido. Haz un brindis de dos minutos: cuenta cómo conociste a la persona, di qué admiras de ella y expresa al menos cinco deseos con formas distintas.",
+        prep: ["Saludo al público: _Buenas tardes a todos…_", "Un recuerdo breve en pasado.", "Cinco deseos: _quiero que, espero que, deseo que, ojalá, ¡que…!_", "Cierre: _¡Brindemos por…!_"],
+        seconds: 120,
+        model: "Buenas tardes a todos. Conocí a Camila hace diez años en la universidad: siempre llegaba tarde, pero con un libro bajo el brazo. Hoy quiero que todos sepan lo valiente que es. Espero que este lugar sea su segunda casa. Deseo que nunca le falten clientes ni ganas. Ojalá que dentro de diez años estemos aquí otra vez. ¡Que te vaya increíble, Camila! ¡Brindemos por La Taza de Papel!",
+        selfCheck: ["Uso al menos cinco deseos diferentes.", "Distingo infinitivo y subjuntivo.", "Mi entonación sube en los deseos y baja al final."],
+      },
+      {
+        title: "Responde y negocia: ¿quién hace qué?",
+        prompt: "Mañana inauguras algo y un amigo te llama para ayudarte. Te pregunta qué quieres que haga. Responde con tres peticiones, aclara qué vas a hacer tú y negocia si él te propone otra cosa. Imagina sus respuestas en voz alta.",
+        prep: ["Pide: _Quiero que…, necesito que…_", "Aclara: _Yo prefiero encargarme de…_", "Negocia: _Bueno, si prefieres…, entonces quiero que…_"],
+        seconds: 90,
+        model: "Gracias por llamar. Necesito que vayas a buscar las sillas y quiero que me ayudes con la música. Yo prefiero encargarme de las flores. ¿Que no tienes coche? Bueno, entonces quiero que llames a la empresa para que las traigan ellos.",
+        selfCheck: ["Respondo a sus preguntas antes de seguir.", "Uso _que_ + subjuntivo para pedir.", "Llego a un acuerdo."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que has repasado y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Desea", task: "Empieza la clase con tres deseos para la semana: uno para ti, uno para tu profesor y uno para el mundo.", phrases: ["Espero…", "Espero que…", "Ojalá…"] },
+      { move: "Pide", task: "Pide a tu profesor dos cosas para la clase con _quiero que_ o _me gustaría que_.", phrases: ["Quiero que me expliques…", "Necesito que repitamos…"] },
+      { move: "Responde", task: "Tu profesor te cuenta un plan; reacciona con un deseo corto adecuado.", phrases: ["¡Que lo pases bien!", "¡Ojalá!"] },
+    ],
+    bring: "Tu mensaje de buenos deseos revisado y la lista de los seis verbos especiales escrita de memoria.",
+  },
+  quiz: {
+    items: [
+      { type: "choice", q: "Espero que mañana ___ menos tráfico en la séptima.", options: ["haya", "hay", "haber"], answer: 0, why: "_Espero que_ + subjuntivo de _haber_: **haya**." },
+      { type: "listen", q: "Escucha el deseo de Camila sobre el pastel: ¿qué forma oyes?", audio: "Quiero que lo pruebe.", voice: "es-CO-f", options: ["prueba", "pruebe", "probar"], answer: 1, why: "_que lo pruebe_: subjuntivo." },
+      { type: "gap", q: "Ojalá que mis padres ___ venir a la inauguración. (poder)", answers: [["puedan"]], why: "_poder_ → _puedo_ → **puedan**." },
+      { type: "gap", q: "Mi socia quiere ___ el local los domingos también. (abrir)", answers: [["abrir"]], why: "Ella quiere y ella abre: **infinitivo**." },
+      { type: "gap", q: "Te dejo mi tarjeta para que me ___ si necesitas algo. (llamar)", answers: [["llames"]], why: "_Para que_ + subjuntivo." },
+      { type: "error", sentence: "Ojalá que el sábado no hace frío.", answers: ["Ojalá que el sábado no haga frío."], why: "_Ojalá_ + subjuntivo: **haga**." },
+      { type: "error", sentence: "Espero que tú estás mejor de la gripe.", answers: ["Espero que tú estés mejor de la gripe."], why: "Después de _espero que_ con otro sujeto: **estés**." },
+      { type: "order", words: ["¡Que", "tengas", "mucha", "suerte", "en", "Montreal!"] },
+      {
+        type: "open",
+        prompt: "Reformulación. Texto de partida: «Mi deseo para tu primer día: tú encuentras aparcamiento y el jefe es amable contigo.» Escribe el mismo deseo en una frase que empiece por «Espero que…».",
+        model: "Espero que encuentres aparcamiento y que el jefe sea amable contigo en tu primer día.",
+        checklist: ["Uso subjuntivo en los dos verbos.", "_Ser_ pasa a _sea_.", "Conservo toda la información; acepto otra formulación equivalente."],
+      },
+      {
+        type: "open",
+        prompt: "Escribe tres deseos para un amigo que se muda a otra ciudad: uno con _quiero que_, uno con _ojalá_ y uno con _¡Que…!_",
+        model: "Quiero que me llames cuando llegues. Ojalá encuentres un piso con luz. ¡Que seas muy feliz allí!",
+        checklist: ["Tres formas distintas de deseo.", "Todos los verbos del deseo en subjuntivo."],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Explicar la diferencia entre presentar un hecho (indicativo) y algo que todavía no lo es (subjuntivo).",
+      "Formar el presente de subjuntivo regular y el de los irregulares más frecuentes, incluidos sea, esté, vaya, haya, sepa y dé.",
+      "Elegir entre infinitivo y que + subjuntivo con querer, esperar y desear.",
+      "Expresar deseos con ojalá y despedirte con ¡que + subjuntivo!",
+    ],
+    review: [
+      "-ar → e; -er / -ir → a; la raíz sale de _yo_.",
+      "Una persona: infinitivo. Dos personas: que + subjuntivo.",
+      "Ojalá + subjuntivo, siempre; nunca con infinitivo ni futuro.",
+    ],
+  },
+  related: [
+    { path: "/sistema-verbal/presente-de-subjuntivo", label: "Clase: Presente de subjuntivo: formación y usos esenciales" },
+    { path: "/gramatica/deseos-querer-que-esperar-que-ojala", label: "Clase: Deseos: querer que, esperar que, ojalá" },
+  ],
 };

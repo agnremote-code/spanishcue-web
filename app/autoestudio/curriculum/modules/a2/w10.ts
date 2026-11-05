@@ -1,881 +1,632 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w10: Module = {
-  "id": "a2-10",
-  "level": "a2",
-  "week": 10,
-  "kind": "checkpoint",
-  "title": "Checkpoint: una salida para el barrio",
-  "subtitle": "Combinar un relato, una comparación, un préstamo y unas instrucciones para organizar una salida.",
-  "stop": {
-    "place": "San Salvador",
-    "country": "El Salvador"
-  },
-  "minutes": 140,
-  "newObjectives": [
-    "a2.rev.checkpoint-2",
-    "a2.read.blog-viaje"
+  id: "a2-10",
+  level: "a2",
+  week: 10,
+  kind: "checkpoint",
+  title: "Checkpoint: ¿la lámpara? Te la llevo mañana",
+  subtitle: "Repaso de los dos pronombres juntos (se lo, me la) y de su posición con infinitivo e imperativo, integrado con el futuro, el imperativo, los reflexivos y gustar de las semanas 6 a 9.",
+  stop: { place: "San Salvador", country: "El Salvador" },
+  minutes: 140,
+  newObjectives: [
+    "a2.gram.g064",
+    "a2.gram.g065",
+    "a2.voc.w10-mudanza-objetos",
+    "a2.pron.w10-acento-pronombres-pegados",
+    "a2.lis.w10-dia-mudanza",
+    "a2.read.w10-mensaje-reparto",
+    "a2.wri.w10-mensaje-devolver",
+    "a2.spk.w10-organizar-mudanza",
+    "a2.fun.w10-prestar-devolver",
+    "a2.disc.w10-evitar-repetir",
+    "a2.rev.w10-repaso-semanas-6-9",
   ],
-  "reviewObjectives": [
-    "a2.gram.indefinido-imperfecto",
-    "a2.disc.secuenciar",
-    "a2.voc.anecdotas",
-    "a2.pron.grupos-fonicos",
-    "a2.fun.anecdota",
-    "a2.spk.anecdota",
-    "a2.gram.comparativos",
-    "a2.gram.superlativos",
-    "a2.voc.ciudades-campo",
-    "a2.pron.foco-contraste",
-    "a2.fun.comparar-elegir",
-    "a2.read.articulo-ciudades",
-    "a2.voc.vivienda-servicios",
-    "a2.gram.oi-pronombres",
-    "a2.gram.se-lo",
-    "a2.voc.regalos-prestamos",
-    "a2.pron.cliticos-acento",
-    "a2.fun.favores",
-    "a2.wri.mensaje-favor",
-    "a2.gram.imperativo-afirmativo",
-    "a2.gram.imperativo-pronombres",
-    "a2.voc.cocina-recetas",
-    "a2.pron.entonacion-imperativo",
-    "a2.fun.instrucciones",
-    "a2.lis.receta"
-  ],
-  "prerequisites": [
-    "a2-09"
-  ],
-  "goal": {
-    "canDo": "Puedo combinar un relato, una comparación, un préstamo y unas instrucciones para organizar una salida.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "Checkpoint: una salida para el barrio · formas que necesitas",
-        "body": [
-          "Una salida compartida reúne varias funciones: contar qué ocurrió en la visita anterior, comparar dos destinos, pedir material y explicar el plan. Recupera imperfecto para la escena e indefinido para el incidente; comparativos para elegir; pronombres para evitar repetir objetos; imperativos para los pasos."
-        ],
-        "support": [
-          "Combine what happened, what you prefer and what people must do. A useful group plan makes responsibilities and return dates explicit."
-        ],
-        "examples": [
-          {
-            "es": "La última vez llovía y perdimos el autobús."
-          },
-          {
-            "es": "El parque cuesta menos que el museo, pero está más lejos."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "El parque tiene tanto mesas como el museo.",
-            "right": "El parque tiene tantas mesas como el museo.",
-            "why": "Tantas concuerda con mesas, un nombre femenino plural."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Antes de escribir o hablar, separa información confirmada y decisiones pendientes. El destino más barato puede no ser el mejor para un grupo con necesidades diferentes. Justifica la elección con datos, acuerda quién lleva cada objeto y repite el horario final. Si faltan datos, formula preguntas en lugar de inventarlos."
-        ],
-        "examples": [
-          {
-            "es": "¿Nos prestas el altavoz? Te lo devolvemos al volver."
-          },
-          {
-            "es": "Primero recoge el mapa y después espera junto a la fuente."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "La última vez nosotros ___ tarde. (comer)",
-            "answers": [
-              [
-                "comimos"
-              ]
-            ]
-          },
-          {
-            "q": "El museo es más caro ___ el parque.",
-            "answers": [
-              [
-                "que"
-              ]
-            ]
-          },
-          {
-            "q": "La nevera es de Ana: ___ la devolvemos el domingo.",
-            "answers": [
-              [
-                "se"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "Lleva los mapas al centro.",
-            "instruction": "Sustituye los mapas por los y únelo al imperativo afirmativo; conserva al centro.",
-            "answers": [
-              "Llévalos al centro."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "El parque tiene veinte mesas. El museo tiene diez.",
-            "instruction": "Empieza con El parque tiene y compara usando más mesas que el museo; no repitas las cifras.",
-            "answers": [
-              "El parque tiene más mesas que el museo."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Llovía. Llegamos al lago.",
-            "instruction": "Mantén Llovía al principio y añade cuando seguido de la segunda oración.",
-            "answers": [
-              "Llovía cuando llegamos al lago."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "el punto de encuentro",
-            "en": "meeting point"
-          },
-          {
-            "es": "una entrada de grupo",
-            "en": "group ticket"
-          },
-          {
-            "es": "confirmar la asistencia",
-            "en": "confirm attendance"
-          },
-          {
-            "es": "llevar material compartido",
-            "en": "bring shared equipment"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "prever una alternativa",
-            "en": "prepare an alternative"
-          },
-          {
-            "es": "repartir las tareas",
-            "en": "share out tasks"
-          },
-          {
-            "es": "comprobar el horario",
-            "en": "check the schedule"
-          },
-          {
-            "es": "regresar juntos",
-            "en": "return together"
-          }
-        ]
-      }
+  reviewObjectives: ["a2.gram.g056","a2.gram.g057","a2.voc.w06-excursion-clima","a2.pron.w06-acento-final-futuro","a2.lis.w06-reunion-volcan","a2.read.w06-correo-agencia","a2.wri.w06-mensaje-visita","a2.spk.w06-planes-promesas","a2.fun.w06-prometer-ofrecer","a2.disc.w06-pasos-del-plan","a2.gram.g058","a2.gram.g059","a2.voc.w07-ciudad-transporte","a2.pron.w07-acento-tu-vos-usted","a2.lis.w07-camino-mercado","a2.read.w07-guia-ciudad","a2.wri.w07-instrucciones-llegada","a2.spk.w07-indicaciones","a2.fun.w07-indicar-camino","a2.disc.w07-instruccion-razon","a2.gram.g060","a2.gram.g061","a2.voc.w08-emociones-viaje","a2.pron.w08-enlace-pronombre","a2.lis.w08-lunes-fuentes","a2.read.w08-blog-familia","a2.wri.w08-dia-dificil","a2.spk.w08-reacciones","a2.fun.w08-contar-reacciones","a2.disc.w08-relato-reacciones","a2.gram.g062","a2.gram.g063","a2.voc.w09-artesania-cuerpo","a2.pron.w09-n-final-plural","a2.lis.w09-taller-anil","a2.read.w09-mensaje-familia","a2.wri.w09-correo-regalos","a2.spk.w09-gustos-regalos","a2.fun.w09-elegir-regalos","a2.disc.w09-reaccionar-gustos"],
+  prerequisites: ["a2-09"],
+  goal: {
+    canDo: "Al final de esta semana puedes decir quién da qué a quién sin repetir nada (se lo di, te la presto), colocar los pronombres con infinitivo, gerundio e imperativo (dámelo, no se lo des, voy a llevártela) y combinarlo con el futuro, el imperativo, los reflexivos y los verbos como gustar de las semanas anteriores.",
+    steps: [
+      "Repasa el orden de los dos pronombres: primero la persona, después la cosa (`me lo`, `te la`).",
+      "Cambia `le lo` por `se lo`: `Se lo di a Sofía`.",
+      "Coloca los pronombres: `dámelo`, `no me lo des`, `te lo voy a dar` = `voy a dártelo`.",
+      "Pon la tilde cuando la palabra crece: `cómpralo`, `dímelo`, `dártelo`.",
+      "Integra las semanas 6 a 9: futuro, imperativo, reflexivos, gustar y objeto indirecto.",
+      "Escucha un día de mudanza en San Salvador y escribe un mensaje para devolver cosas.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "el punto de encuentro",
-            "right": "meeting point"
-          },
-          {
-            "left": "una entrada de grupo",
-            "right": "group ticket"
-          },
-          {
-            "left": "confirmar la asistencia",
-            "right": "confirm attendance"
-          },
-          {
-            "left": "llevar material compartido",
-            "right": "bring shared equipment"
-          },
-          {
-            "left": "prever una alternativa",
-            "right": "prepare an alternative"
-          },
-          {
-            "left": "repartir las tareas",
-            "right": "share out tasks"
-          },
-          {
-            "left": "comprobar el horario",
-            "right": "check the schedule"
-          },
-          {
-            "left": "regresar juntos",
-            "right": "return together"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Que el grupo retenga el plan",
-    "explanation": [
-      "En una explicación larga, destaca el lugar, la hora y la acción de cada persona. Haz una pausa después de cada decisión. Al corregir un dato, repite el dato completo: delante de la biblioteca, no dentro. Después pide al oyente que resuma el plan."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "La recojo el jueves, no el viernes.",
-          "q": "¿Qué día es el definitivo?",
-          "options": [
-            "Jueves",
-            "Viernes"
+  theory: {
+    intro: "Esta semana es un **checkpoint**: repasas tus dos últimas clases, **dos pronombres juntos** (_se lo, me la_) y **dónde van los pronombres** con infinitivo e imperativo, y las unes con todo lo de las semanas 6 a 9. La situación: Sofía se muda de casa en San Salvador y reparte, presta y devuelve muchas cosas.",
+    parts: [
+      {
+        heading: "Dos pronombres: primero la persona, después la cosa",
+        body: [
+          "Cuando ya sabemos de qué cosa y de qué persona hablamos, podemos usar **dos pronombres** juntos: el de la persona que recibe (**me, te, nos, os**) y el de la cosa (**lo, la, los, las**). El orden es siempre **persona + cosa**: _¿El cargador? Te lo devuelvo hoy_.",
+          "**Lo, la, los, las** concuerdan con la **cosa**, no con la persona: _¿La mesa? Me la regaló mi tío_. _¿Los platos? Nos los prestó la vecina_.",
+          "Los dos van **delante del verbo conjugado**, juntos, y **no** va delante de los dos: _No te lo puedo explicar ahora_, _Ya me las han traído_.",
+        ],
+        support: [
+          "Two object pronouns together: the person first (_me, te, nos, os_), then the thing (_lo, la, los, las_). The second pronoun agrees with the thing. Both go before the conjugated verb, with _no_ in front.",
+        ],
+        table: {
+          caption: "Persona + cosa",
+          head: ["Persona", "+ lo", "+ la", "+ los / las"],
+          rows: [
+            ["me", "me lo", "me la", "me los / me las"],
+            ["te", "te lo", "te la", "te los / te las"],
+            ["nos", "nos lo", "nos la", "nos los / nos las"],
+            ["os", "os lo", "os la", "os los / os las"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Quedamos delante de la biblioteca.",
-          "q": "¿Dónde se reúnen?",
-          "options": [
-            "Fuera de la biblioteca",
-            "Dentro del museo"
+        examples: [
+          { es: "—¿Me prestas la escalera? —Sí, te la presto, pero devuélvemela el lunes.", en: "—Can you lend me the ladder? —Yes, I'll lend it to you, but give it back to me on Monday." },
+          { es: "—¿Quién os dio las llaves? —Nos las dio el portero.", en: "—Who gave you the keys? —The doorman gave them to us." },
+        ],
+        mistakes: [
+          { wrong: "¿El libro? Lo me dio Marta.", right: "¿El libro? Me lo dio Marta.", why: "Primero la persona (**me**), después la cosa (**lo**)." },
+          { wrong: "¿Las fotos? Te los mando ahora.", right: "¿Las fotos? Te las mando ahora.", why: "_Las fotos_ es femenino plural: **las**." },
+        ],
+      },
+      {
+        heading: "Le y les se convierten en se",
+        body: [
+          "**Le** o **les** no pueden ir delante de **lo, la, los, las**. En ese caso, _le_ y _les_ se convierten en **se**: _Le di el sofá a Carlos_ → _**Se lo** di_. _Les mandé las fotos a mis padres_ → _**Se las** mandé_.",
+          "**Se** no dice si es una persona o varias, un hombre o una mujer. Si no queda claro, añade **a + persona**: _Se lo di **a Carlos**_, _Se lo di **a ellas**_.",
+          "Recuerda: la cosa decide _lo_ o _la_. Si le das **el** sofá a una mujer, es _se **lo** di_, porque el sofá es masculino.",
+        ],
+        support: [
+          "_Le/les_ + _lo/la/los/las_ is impossible: _le_ and _les_ become _se_. _Se lo di_ = I gave it to him / her / you / them. Add _a + person_ if it isn't clear.",
+        ],
+        table: {
+          caption: "De le a se",
+          head: ["Frase completa", "Con dos pronombres"],
+          rows: [
+            ["Le presté la bicicleta a Ana.", "Se la presté."],
+            ["Le vendí el sofá a Carlos.", "Se lo vendí."],
+            ["Les regalé los libros a mis primos.", "Se los regalé."],
+            ["Les devolví las sillas a los vecinos.", "Se las devolví."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "—¿Y la lámpara de pie? —Se la regalé a mi hermana.", en: "—And the floor lamp? —I gave it to my sister." },
+          { es: "—¿Les explicaste el problema a los de la mudanza? —Sí, se lo expliqué ayer.", en: "—Did you explain the problem to the removal people? —Yes, I explained it to them yesterday." },
+        ],
+        mistakes: [
+          { wrong: "¿La guitarra? Le la di a mi primo.", right: "¿La guitarra? Se la di a mi primo.", why: "_Le_ + _la_ es imposible: **se la**." },
+          { wrong: "¿El espejo? Se la di a mi madre.", right: "¿El espejo? Se lo di a mi madre.", why: "La cosa decide: _el espejo_ → **lo**, aunque la persona sea una mujer." },
+        ],
+        tip: "Lee **se** como «a él, a ella, a ellos…» y mira la segunda palabra para saber qué cosa es.",
+      },
+      {
+        heading: "¿Delante o detrás? Infinitivo, gerundio e imperativo",
+        body: [
+          "Con el **imperativo afirmativo**, los pronombres van **detrás y pegados**, en el mismo orden: _dámelo, llévasela, pásamelos_. Con el **imperativo negativo** van **delante**: _no me lo des, no se la lleves_.",
+          "Con **ir a + infinitivo**, **tener que + infinitivo** o **estar + gerundio** tienes **dos posiciones**: delante del verbo conjugado o pegados al final. _Te la voy a llevar_ = _Voy a llevártela_; _Se lo estoy explicando_ = _Estoy explicándoselo_. Nunca en medio ni repetidos.",
+          "Con un infinitivo solo (después de _para, sin, antes de_…) van pegados: _Necesito una caja para guardarlos_. Con **usted** funciona igual: _Déjemelo aquí_, _No me lo deje en la puerta_.",
+        ],
+        support: [
+          "Affirmative commands: pronouns after and attached (_dámelo_). Negative commands: before (_no me lo des_). With _ir a_ / _tener que_ + infinitive or _estar_ + gerund: before the conjugated verb or attached to the end, never in between.",
+        ],
+        table: {
+          caption: "Posición de los pronombres",
+          head: ["Forma", "Posición", "Ejemplo"],
+          rows: [
+            ["verbo conjugado", "delante", "Te lo traigo."],
+            ["imperativo afirmativo", "detrás, pegado", "Tráemelo."],
+            ["imperativo negativo", "delante", "No me lo traigas."],
+            ["ir a / tener que + infinitivo", "delante o pegado", "Te lo voy a traer. / Voy a traértelo."],
+            ["estar + gerundio", "delante o pegado", "Te lo estoy trayendo. / Estoy trayéndotelo."],
+            ["infinitivo solo", "pegado", "Llámame antes de traérmelo."],
+          ],
+        },
+        examples: [
+          { es: "Pásame la cinta, por favor. No, no me la tires, dámela en la mano.", en: "Pass me the tape, please. No, don't throw it to me, give it to me in my hand." },
+          { es: "¿Las cajas de libros? Las tengo que subir hoy. / Tengo que subirlas hoy.", en: "The boxes of books? I have to take them up today." },
+        ],
+        mistakes: [
+          { wrong: "No dámelo ahora, estoy ocupada.", right: "No me lo des ahora, estoy ocupada.", why: "En negativo, los pronombres van **delante** y el verbo cambia: _no me lo des_." },
+          { wrong: "Voy a te lo dar mañana.", right: "Te lo voy a dar mañana. / Voy a dártelo mañana.", why: "Delante de _voy_ o pegados al infinitivo, nunca en medio." },
+          { wrong: "Lo voy a comprarlo esta tarde.", right: "Lo voy a comprar esta tarde. / Voy a comprarlo esta tarde.", why: "El pronombre va **una sola vez**." },
+        ],
+      },
+      {
+        heading: "La tilde cuando la palabra crece",
+        body: [
+          "Al pegar pronombres, la **fuerza de la voz no se mueve**: _COM-pra_ → _CÓM-pra-lo_. Pero la palabra es más larga, y muchas veces necesita **tilde** para marcar esa fuerza.",
+          "Con el imperativo: una sílaba + un pronombre, sin tilde (_dame, ponlo, dime_); con dos pronombres, tilde (_dámelo, pónmelo_). Dos sílabas + un pronombre, tilde (_cómpralo, llévala_).",
+          "Con el infinitivo + un pronombre, sin tilde (_comprarlo, dejarla_); + dos pronombres, tilde (_dártelo, llevárselas_). Con el gerundio, siempre tilde (_buscándolo, explicándoselo_).",
+        ],
+        support: [
+          "The stress doesn't move when you add pronouns, but the longer word often needs a written accent to show it: _compra → cómpralo_, _dar → dártelo_, _buscando → buscándolo_.",
+        ],
+        examples: [
+          { es: "Dime la dirección y apúntamela aquí.", en: "Tell me the address and write it down for me here." },
+          { es: "Estoy buscándolo por todas partes.", en: "I'm looking for it everywhere." },
+          { es: "Antes de dárselo, envuélvelo bien.", en: "Before giving it to him, wrap it up well." },
+        ],
+        mistakes: [
+          { wrong: "Dimelo ya, por favor.", right: "Dímelo ya, por favor.", why: "_Di_ + _me_ + _lo_ = tres sílabas con fuerza en la primera: **dímelo**." },
+          { wrong: "Estoy haciendolo ahora.", right: "Estoy haciéndolo ahora.", why: "Gerundio + pronombre: siempre tilde, **haciéndolo**." },
+        ],
+        tip: "Truco: di la palabra en voz alta. Si la fuerza cae tres sílabas o más antes del final (_CÓM-pra-lo_, _DÁ-me-lo_), lleva tilde.",
+      },
+      {
+        heading: "Checkpoint: lo que ya sabes de las semanas 6 a 9",
+        body: [
+          "En este checkpoint juntas todo. **Semana 6**: _ir a_ para planes (_voy a mudarme_) y el futuro para promesas (_te la devolveré_). **Semana 7**: imperativo afirmativo y negativo (_ven, no vayas_). **Semana 8**: reflexivos y verbos de cambio (_me puse nerviosa, me quedé sin cajas_). **Semana 9**: verbos como gustar y objeto indirecto (_le encanta, le di_).",
+          "Los pronombres de esta semana aparecen en todos esos lugares: con el futuro (_te lo traeré_), con el imperativo (_dámelo, no se lo digas_), con los reflexivos (_voy a ponérmela_) y con el objeto indirecto (_le regalé la mesa → se la regalé_).",
+          "Para el examen de la unidad, practica con frases completas y comprueba siempre tres cosas: el tiempo verbal, el orden de los pronombres y la tilde.",
+        ],
+        table: {
+          caption: "Semanas 6 a 9 con pronombres",
+          head: ["Semana", "Clase", "Con pronombres"],
+          rows: [
+            ["6", "ir a / futuro simple", "Voy a llevártela. Te la llevaré el sábado."],
+            ["7", "imperativo afirmativo y negativo", "Llévasela. No se la lleves."],
+            ["8", "reflexivos, ponerse, quedarse", "Me la puse. Voy a quedármela."],
+            ["9", "gustar, objeto indirecto", "Le encanta la lámpara: se la regalo."],
+          ],
+        },
+        mistakes: [
+          { wrong: "Si me la prestarás, te la devuelvo mañana.", right: "Si me la prestas, te la devolveré mañana.", why: "Semana 6: después de **si**, presente; la promesa, en futuro." },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero los dos pronombres juntos y el cambio a **se**; después su posición con infinitivo, gerundio e imperativo, y la tilde.",
+    exercises: [
+      {
+        id: "g1",
+        type: "gap",
+        title: "Persona + cosa",
+        prompt: "Completa la respuesta con **dos pronombres**.",
+        items: [
+          { q: "—¿Quién te regaló esas botas? —___ ___ regaló mi abuela.", answers: [["Me"], ["las"]], why: "A mí (**me**) + _las botas_ (**las**)." },
+          { q: "—¿Me guardas el sitio en la fila? —Sí, ___ ___ guardo.", answers: [["te"], ["lo"]], why: "A ti (**te**) + _el sitio_ (**lo**)." },
+          { q: "—¿Me dejas tus apuntes? —Claro, ___ ___ dejo.", answers: [["te"], ["los"]], why: "A ti (**te**) + _los apuntes_ (**los**)." },
+          { q: "—¿Os devolvieron la fianza? —No, todavía no ___ ___ han devuelto.", answers: [["nos"], ["la"]], why: "A nosotros (**nos**) + _la fianza_ (**la**)." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "transform",
+        title: "De le a se",
+        prompt: "Escribe la frase con **dos pronombres**. Cambia las palabras en negrita por pronombres.",
+        items: [
+          { source: "Le vendí **el sofá** **a mi vecino**.", answers: ["Se lo vendí."], why: "Le + lo → **se lo**." },
+          { source: "Les mandé **las fotos** **a mis padres**.", answers: ["Se las mandé."], why: "Les + las → **se las**." },
+          { source: "Le presté **la batidora** **a Teresa**.", answers: ["Se la presté."], why: "Le + la → **se la**." },
+          { source: "Les regalé **los cojines** **a las vecinas**.", answers: ["Se los regalé."], why: "_Los cojines_, masculino plural → **se los**." },
+          { source: "Le di **el espejo** **a mi madre**.", answers: ["Se lo di."], why: "La cosa decide: _el espejo_ → **lo**." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "choice",
+        title: "¿Dónde van?",
+        prompt: "Elige la frase correcta.",
+        items: [
+          { q: "Tu amigo tiene tu taladro. Se lo pides:", options: ["Devuélvemelo, por favor.", "Me lo devuelve, por favor.", "Devuelve me lo, por favor."], answer: 0, why: "Imperativo afirmativo: pegados, **devuélvemelo**." },
+          { q: "No quieres que tu hermano le cuente el secreto a mamá:", options: ["No cuéntaselo.", "No se lo cuentes.", "No le lo cuentes."], answer: 1, why: "Negativo: delante y con la vocal cambiada, **no se lo cuentes**." },
+          { q: "Hablas de las llaves que vas a dejar a la portera:", options: ["Voy a se las dejar.", "Voy a dejárlelas.", "Se las voy a dejar."], answer: 2, why: "Delante de _voy_ o pegados: _se las voy a dejar_ = _voy a dejárselas_." },
+          { q: "Estás buscando tu pasaporte:", options: ["Estoy buscandolo.", "Estoy buscándolo.", "Lo estoy buscándolo."], answer: 1, why: "Gerundio + pronombre, con tilde: **buscándolo**." },
+        ],
+      },
+      {
+        id: "g4",
+        type: "gap",
+        title: "Con la tilde en su sitio",
+        prompt: "Completa con el imperativo de **tú** y los pronombres pegados. Atención a la tilde.",
+        items: [
+          { q: "¿El cuadro? ___ a la pared del salón. (colgar + lo)", answers: [["Cuélgalo"]], why: "_Cuelga_ + _lo_ → **cuélgalo**, con tilde." },
+          { q: "¿La dirección nueva? ___, que la apunto. (decir + me + la)", answers: [["Dímela"]], why: "_Di_ + _me_ + _la_ → **dímela**." },
+          { q: "¿Las sillas? ___ en la cocina, por favor. (poner + las)", answers: [["Ponlas"]], why: "_Pon_ + _las_: dos sílabas, sin tilde, **ponlas**." },
+          { q: "¿Los platos? ___ a tu hermana, que no tiene. (dar + se + los)", answers: [["Dáselos"]], why: "_Da_ + _se_ + _los_ → **dáselos**." },
+          { q: "¿La lámpara? ___ tú, que tienes coche. (llevar + te + la)", answers: [["Llévatela"]], why: "_Lleva_ + _te_ + _la_ → **llévatela**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para una mudanza: los muebles, las cajas y lo que se presta, se regala y se devuelve.",
+    groups: [
+      {
+        title: "Muebles y objetos de casa",
+        items: [
+          { es: "el sofá", en: "the sofa" },
+          { es: "la lámpara de pie", en: "the floor lamp" },
+          { es: "el espejo", en: "the mirror" },
+          { es: "la estantería", en: "the bookcase / shelving" },
+          { es: "los cojines", en: "the cushions" },
+          { es: "la batidora", en: "the blender" },
+          { es: "el taladro", en: "the drill" },
+        ],
+      },
+      {
+        title: "La mudanza",
+        items: [
+          { es: "mudarse", en: "to move house" },
+          { es: "embalar", en: "to pack (for a move)" },
+          { es: "la caja de cartón", en: "the cardboard box" },
+          { es: "la cinta adhesiva", en: "the sticky tape" },
+          { es: "el camión de mudanza", en: "the removal van" },
+          { es: "la fianza", en: "the deposit (on a rented flat)" },
+        ],
+      },
+      {
+        title: "Prestar y devolver",
+        items: [
+          { es: "prestar / pedir prestado", en: "to lend / to borrow" },
+          { es: "devolver", en: "to give back" },
+          { es: "regalar", en: "to give (as a present)" },
+          { es: "quedarse con algo", en: "to keep something" },
+          { es: "¿Me lo prestas?", en: "Can you lend it to me?" },
+          { es: "Te lo devuelvo mañana.", en: "I'll give it back to you tomorrow." },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "¿Qué es?",
+        prompt: "Une cada frase con la cosa de la que habla.",
+        pairs: [
+          { left: "Se lo vendí a mi vecino: es grande y muy cómodo.", right: "el sofá" },
+          { left: "Me la prestó Óscar para hacer batidos.", right: "la batidora" },
+          { left: "Te los dejo para el sofá nuevo.", right: "los cojines" },
+          { left: "Cuélgalo en la entrada para mirarte antes de salir.", right: "el espejo" },
+          { left: "Pásamela, que tengo que cerrar las cajas.", right: "la cinta adhesiva" },
+        ],
+        why: "El pronombre te da la pista: **lo** (masculino), **la** (femenino), **los** (masculino plural).",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "Prestar, devolver, quedarse",
+        prompt: "Lee la situación y elige la frase correcta.",
+        items: [
+          { context: "Tu vecina necesita tu escalera una tarde.", q: "Le dices:", options: ["Te la presto, pero devuélvemela mañana.", "Te la pido prestada mañana.", "Me la quedo, gracias."], answer: 0, why: "Tú das la escalera: **te la presto**." },
+          { context: "Tu amigo te dejó un libro hace meses y te encanta.", q: "Le preguntas:", options: ["¿Te lo devuelvo ayer?", "¿Me lo puedo quedar?", "¿Me lo prestas ya?"], answer: 1, why: "Quieres guardarlo: **quedarse con algo**, _¿me lo puedo quedar?_" },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La fuerza no se mueve: dame, dámelo",
+    explanation: [
+      "Cuando pegas pronombres a un verbo, la sílaba fuerte **no cambia de lugar**: _LLE-va_, _LLÉ-va-la_, _LLÉ-va-te-la_. Por eso, al hablar, los pronombres suenan rápidos y suaves al final.",
+      "El error típico es mover la fuerza al pronombre: _da-ME-lo_. Lo natural es _DÁ-me-lo_, con un golpe al principio y el resto ligero.",
+      "Con el infinitivo la fuerza sigue en la sílaba del verbo: _lle-VAR-la_, _lle-VÁR-se-la_. Escucha cómo el final se hace más largo, pero la fuerza no cambia.",
+    ],
+    support: [
+      "Adding pronouns never moves the stress: _LLEva → LLÉvala → LLÉvatela_. Keep the strong beat on the verb and say the pronouns lightly.",
+    ],
+    table: {
+      caption: "Misma fuerza, palabra más larga",
+      head: ["Verbo", "+ un pronombre", "+ dos pronombres"],
+      rows: [
+        ["DA", "DA-me", "DÁ-me-lo"],
+        ["COM-pra", "CÓM-pra-lo", "CÓM-pra-se-lo"],
+        ["de-JAR", "de-JAR-la", "de-JÁR-te-la"],
+        ["bus-CAN-do", "bus-CÁN-do-lo", "bus-CÁN-do-se-lo"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Quedamos delante de la biblioteca / a las nueve.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Te la devolvemos el domingo / por la mañana.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Primero confirma tu asistencia / después prepara la mochila.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Cuántos pronombres?",
+      prompt: "Escucha la instrucción y elige la forma que oyes.",
+      items: [
+        { q: "¿Qué forma oyes?", audio: "Dámelo cuando puedas.", options: ["Dame", "Dámelo", "Dálo"], answer: 1 },
+        { q: "¿Qué forma oyes?", audio: "Llévala a la cocina.", options: ["Llévala", "Llévatela", "Lleva"], answer: 0 },
+        { q: "¿Qué forma oyes?", audio: "Voy a mandárselas hoy.", options: ["mandarlas", "mandárselas", "mandárselo"], answer: 1 },
+        { q: "¿Qué forma oyes?", audio: "Estoy subiéndolos ahora.", options: ["subiéndolos", "subiéndolo", "subiéndolas"], answer: 0 },
+        { q: "¿Qué forma oyes?", audio: "Pónmela en la mesa.", options: ["Ponla", "Pónmelo", "Pónmela"], answer: 2 },
+      ],
+    },
+    produce: [
+      { text: "Da, dame, dámelo.", tip: "El golpe siempre en _DA_; lo demás, ligero." },
+      { text: "Compra, cómpralo, cómpraselo.", tip: "_CÓM_ fuerte; _-pra-se-lo_ rápido." },
+      { text: "No me lo des, no se lo digas.", tip: "En negativo, los pronombres van delante y suenan cortos: _no-me-lo-DES_." },
+      { text: "Te lo voy a llevar. Voy a llevártelo.", tip: "Las dos posiciones con el mismo ritmo final." },
+      { text: "¿La lámpara? Se la regalé a mi hermana.", tip: "Pregunta con tono que sube; respuesta con tono que baja." },
+    ],
+    spelling: "Escribe la tilde cuando la palabra crece: **dámelo, cómpralo, dártelo, buscándolo**. Sin tilde: **dame, ponlo, comprarlo**.",
   },
-  "listening": {
-    "title": "Tres decisiones por teléfono",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "El día de la mudanza",
+    context: "Sofía se muda a un apartamento nuevo en la colonia Escalón de San Salvador. Su amigo Carlos la ayuda con las cajas y su madre, doña Elena, llama por teléfono.",
+    speakers: [
+      { id: "sofia", name: "Sofía", voice: "es-MX-f", role: "se muda de casa" },
+      { id: "carlos", name: "Carlos", voice: "es-VE-m", role: "amigo de Sofía" },
+      { id: "elena", name: "Doña Elena", voice: "es-CU-f", role: "madre de Sofía" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "He leído las propuestas. Prefiero el museo porque el sábado anuncian lluvia. Es más caro que el parque, pero tiene una sala donde podemos comer. ¿Cuántas personas han confirmado?"
-      },
-      {
-        "speaker": "b",
-        "text": "Diez. Todavía faltan dos. La última vez algunas personas llegaron tarde porque no entendieron el punto de encuentro. Esta vez vamos a quedar delante de la biblioteca, no en la parada."
-      },
-      {
-        "speaker": "a",
-        "text": "Perfecto. Tengo una nevera pequeña. Se la puedo prestar al grupo. ¿Quién la recoge? Yo entro a trabajar pronto el viernes y no puedo llevarla al centro."
-      },
-      {
-        "speaker": "b",
-        "text": "La recojo yo el jueves por la tarde. Te la devolvemos el domingo. Para el sábado, prepara solo tu botella y una chaqueta. Primero nos reunimos a las nueve y después caminamos juntos a la parada."
-      },
-      {
-        "speaker": "a",
-        "text": "¿Y qué hacemos con las dos personas que todavía no han confirmado? Si compramos diez entradas y después vienen doce, quizá no podamos entrar todos juntos. Prefiero comprobarlo antes de pagar."
-      },
-      {
-        "speaker": "b",
-        "text": "Les llamo esta tarde. Primero confirmaré el número y después compraré las entradas. También voy a preguntar si hay sitio para sentarse durante la visita. Mi padre camina bien, pero se cansa cuando pasa mucho tiempo de pie."
-      },
-      {
-        "speaker": "a",
-        "text": "Bien. Entonces no publico todavía el precio final. Esperamos tu mensaje y después enviamos una sola versión del plan para que nadie confunda los horarios."
-      }
+    script: [
+      { speaker: "carlos", text: "Sofía, ¿dónde pongo esta caja de libros? Pesa muchísimo." },
+      { speaker: "sofia", text: "Déjala en el suelo del salón, al lado de la ventana. No la pongas encima del sofá, que se rompe." },
+      { speaker: "carlos", text: "Vale. ¿Y la lámpara de pie? ¿Te la subo ahora?" },
+      { speaker: "sofia", text: "No, esa no viene. Se la regalé a mi hermana, porque le encanta y aquí no tengo espacio. Mañana voy a llevársela." },
+      { speaker: "carlos", text: "Oye, este taladro es mío, ¿no? Te lo presté en marzo." },
+      { speaker: "sofia", text: "¡Ay, sí! Perdona. Llévatelo hoy. Y gracias por todo, de verdad. El sábado te invitaré a cenar, te lo prometo." },
+      { speaker: "elena", text: "¿Aló, hija? ¿Cómo va la mudanza? ¿Ya te dieron las llaves del apartamento?" },
+      { speaker: "sofia", text: "Sí, mamá, me las dio el dueño esta mañana. Pero me puse nerviosa porque me quedé sin cinta para las cajas." },
+      { speaker: "elena", text: "Tranquila, yo tengo mucha. Te la llevo esta tarde. ¿Necesitas algo más?" },
+      { speaker: "sofia", text: "Sí, ¿me prestas tu batidora? La mía se rompió. Te la devolveré la semana que viene." },
+      { speaker: "elena", text: "Claro, pero no se la prestes a nadie, ¿eh? Era de tu abuela." },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «Tres decisiones por teléfono» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Qué hacen en la llamada?",
-              "options": [
-                "Cuentan solo una visita pasada",
-                "Compran un autobús",
-                "Concretan una salida de grupo"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Concretan una salida de grupo»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué función cumple la segunda persona?",
-              "options": [
-                "Describir solo el tiempo de ayer",
-                "Vender una nevera al grupo",
-                "Confirmar participantes y organizar detalles"
-              ],
-              "answer": 2,
-              "why": "Comprueba el contexto y los datos de la escena: Confirmar participantes y organizar detalles."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «Tres decisiones por teléfono».",
-          "items": [
-            {
-              "q": "¿Dónde van a reunirse?",
-              "options": [
-                "En la parada",
-                "Delante de la biblioteca",
-                "Dentro del museo"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «Delante de la biblioteca»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Cuándo recogen la nevera?",
-              "options": [
-                "El jueves por la tarde",
-                "El viernes por la mañana",
-                "El domingo"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «El jueves por la tarde»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «Tres decisiones por teléfono».",
-          "items": [
-            {
-              "q": "¿Qué justifica elegir el museo?",
-              "options": [
-                "Tiene una sala cubierta",
-                "Es gratuito",
-                "Está más lejos"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «Tiene una sala cubierta»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "En se la puedo prestar al grupo, la designa…",
-              "options": [
-                "La salida",
-                "La nevera",
-                "La biblioteca"
-              ],
-              "answer": 1,
-              "why": "Comprueba el contexto y los datos de la escena: La nevera."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Lo que aprendimos de la primera salida",
-    "genre": "Blog y propuestas para un grupo",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "En nuestra primera salida al lago todo parecía fácil. El día estaba nublado y llevábamos comida para doce personas. Cuando llegamos, descubrimos que las mesas estaban mojadas. Buscamos un sitio cubierto y encontramos uno, pero estaba lejos de la parada. Al final comimos tarde y dos personas perdieron el autobús de regreso. Lo pasamos bien, aunque aprendimos que un plan necesita más detalles.",
-      "Para este sábado proponemos dos opciones. El museo cuesta seis euros por persona y tiene una sala para comer. Está a veinte minutos en autobús. El parque es gratuito y tiene más espacio, pero no hay zona cubierta. El viaje dura cuarenta minutos. Ambos lugares abren a las diez.",
-      "Antes del jueves, escribe qué opción prefieres y por qué. Si puedes prestar una manta o una nevera pequeña, avísanos. El viernes enviaremos el plan definitivo. Lee el horario, guarda el teléfono del responsable y lleva agua. La comida y el material se repartirán entre varias personas.",
-      "La biblioteca nos deja usar su tablón para informar a quienes no están en el grupo del teléfono. Escribe allí solo la hora, el punto de encuentro y el nombre de la actividad. No publiques números personales. El responsable llevará una lista de participantes y preguntará por las necesidades de transporte. Si alguien no puede pagar la entrada al museo, puede hablar con él en privado: el grupo tiene dos entradas reservadas para ayudar."
-    ],
-    "glossary": [
-      {
-        "es": "el punto de encuentro",
-        "en": "meeting point"
-      },
-      {
-        "es": "una entrada de grupo",
-        "en": "group ticket"
-      },
-      {
-        "es": "confirmar la asistencia",
-        "en": "confirm attendance"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «Lo que aprendimos de la primera salida» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Qué problema hubo en la salida anterior?",
-            "options": [
-              "El lago estaba cerrado",
-              "No llevaron comida",
-              "Las mesas estaban mojadas"
-            ],
-            "answer": 2,
-            "why": "La información de la situación corresponde a «Las mesas estaban mojadas»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Qué opción protege mejor de la lluvia?",
-            "options": [
-              "Las dos por igual",
-              "El museo",
-              "El parque"
-            ],
-            "answer": 1,
-            "why": "La información de la situación corresponde a «El museo»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «Lo que aprendimos de la primera salida» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Combinar un relato, una comparación, un préstamo y unas instrucciones para organizar una salida. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "En nuestra primera salida al lago todo parecía fácil.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿Qué hace Sofía hoy?", options: ["Se muda a un apartamento nuevo.", "Vende su apartamento.", "Organiza una fiesta."], answer: 0 },
+            { q: "¿Quién la ayuda en casa?", options: ["su hermana", "su madre", "su amigo Carlos"], answer: 2 },
+            { q: "¿Para qué llama la madre?", options: ["para pedir dinero", "para saber cómo va y ofrecer ayuda", "para cancelar una visita"], answer: 1 },
+          ],
         },
-        {
-          "quote": "Para este sábado proponemos dos opciones.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
+      },
+      {
+        stage: "detail",
+        prompt: "Segunda escucha: atención a quién recibe cada cosa.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Dónde deja Carlos la caja de libros?", options: ["encima del sofá", "en el suelo, al lado de la ventana", "en la cocina"], answer: 1 },
+            { q: "¿Para quién es la lámpara de pie?", options: ["para la hermana de Sofía", "para Carlos", "para la madre"], answer: 0 },
+            { q: "¿Qué se lleva Carlos hoy?", options: ["la batidora", "la lámpara", "su taladro"], answer: 2 },
+            { q: "¿Qué le va a llevar la madre esta tarde?", options: ["las llaves", "cinta adhesiva", "una caja"], answer: 1 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en dónde van los pronombres.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Dónde van los pronombres en cada frase?",
+          categories: ["detrás y pegados", "delante del verbo"],
+          items: [
+            { text: "Déjala en el suelo del salón", cat: 0, why: "Imperativo afirmativo: **déjala**." },
+            { text: "No la pongas encima del sofá", cat: 1, why: "Imperativo negativo: **no la pongas**." },
+            { text: "Se la regalé a mi hermana", cat: 1, why: "Verbo conjugado: le + la → **se la** delante." },
+            { text: "Mañana voy a llevársela.", cat: 0, why: "Pegados al infinitivo; también _se la voy a llevar_." },
+            { text: "Llévatelo hoy.", cat: 0 },
+            { text: "no se la prestes a nadie", cat: 1 },
+          ],
+        },
+      },
+    ],
   },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
-      {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
-          {
-            "words": [
-              "La",
-              "última",
-              "vez",
-              "llovía",
-              "y",
-              "perdimos",
-              "el",
-              "autobús."
-            ]
-          },
-          {
-            "words": [
-              "¿Nos",
-              "prestas",
-              "el",
-              "altavoz?",
-              "Te",
-              "lo",
-              "devolvemos",
-              "al",
-              "volver."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "La nevera es de Ana y tiene ruedas.",
-              "Quedamos delante, a las nueve; después iremos a la parada.",
-              "El museo tiene una sala grande."
-            ],
-            "answer": 1,
-            "why": "Comprueba el contexto y los datos de la escena: Quedamos delante, a las nueve; después iremos a la parada..",
-            "context": "Una persona cree que la reunión es dentro de la biblioteca.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
-          },
-          {
-            "context": "Negocia con quien prefiere el parque por el precio. Reconoce su razón, ofrece una alternativa y confirma quién recoge y devuelve el material.",
-            "q": "En esta interacción de «Checkpoint: una salida para el barrio», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «Checkpoint: una salida para el barrio», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Hola, grupo.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
-          },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: Negocia con quien prefiere el parque por el precio. Reconoce su razón, ofrece una alternativa y confirma quién recoge y devuelve el material.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-06",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 6. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 10: Cuenta en un minuto una anécdota nueva con perder, olvidar o romper. Prepara el contexto en imperfecto y tres hechos en indefinido; usa primero, de repente y al final. Divide el relato en grupos fónicos. El oyente reacciona y pregunta ¿qué pasó después?; responde sin leer.",
-            "model": "Esperaba en una tienda y llevaba un paraguas. Primero pagué. De repente empezó a llover y descubrí que el paraguas estaba en casa. Al final una vecina me acompañó hasta el autobús.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 6→10: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Esperaba en una tienda y llevaba un paraguas. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-07",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 7. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 10: Compara dos viviendas inventadas: A cuesta 350 con agua y está a cinco minutos del trabajo; B cuesta 300 sin gastos y está a media hora. Usa más/menos que, tan como, tanto como, mejor/peor, mayor/menor y un superlativo. Describe clima o entorno y destaca con la voz el dato decisivo. Di qué información falta para calcular el coste completo.",
-            "model": "A es más cara al principio, pero está mejor comunicada. B es mayor y parece tranquilísima. No sabemos si tiene tantos gastos como A. Prefiero A por la distancia; necesito confirmar la electricidad.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 7→10: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: A es más cara al principio, pero está mejor comunicada. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-08",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 8. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 10: Pide una cámara prestada para otra actividad y escribe un mensaje de agradecimiento. Acuerda quién la recibe, cuándo se recoge y cuándo se devuelve. Usa le/les, se la y te lo; explica un referente ambiguo. Pronuncia dámelo y explícaselo sin cambiar el acento y ofrece una solución si el dueño la necesita antes.",
-            "model": "Le pido la cámara a mi prima. Ella se la presta a mi compañero y él me la trae. Te lo agradezco mucho; te la devolvemos el lunes. Si mi compañero no entiende el botón, explícaselo.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 8→10: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Le pido la cámara a mi prima. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-09",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 9. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 10: Explica una receta distinta en seis pasos, con cantidades, herramientas y dos pronombres unidos al imperativo. Da una instrucción en tú, usted, vosotros, ustedes y vos. Tu pareja altera el orden de dos pasos: escucha y corrige amablemente. Pide que repita la cantidad antes de continuar.",
-            "model": "Primero lava las frutas y córtalas. Mezcla el yogur y añádelo. Tú prueba la mezcla; usted pruébela; vosotros probadla; ustedes pruébenla; vos probala. ¿Puedes repetir cuántas cucharadas, por favor?",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 9→10: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Primero lava las frutas y córtalas. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Redacta el mensaje definitivo para una salida. Resume el problema anterior, compara las opciones, elige con dos razones y da instrucciones. Incluye un préstamo y su devolución.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
+  reading: {
+    title: "¿Quién se queda con qué?",
+    genre: "Mensaje en el grupo de amigos",
+    frame: "Antes de la mudanza, Sofía escribe en el grupo de sus amigos para repartir las cosas que no caben en su apartamento nuevo.",
+    text: [
+      "¡Hola a todos! Como saben, el sábado me mudo a la colonia Escalón. El apartamento nuevo me encanta, pero es pequeño y no me caben muchas cosas. Tiene una cocina bonita y mucha luz, pero solo hay un armario. Por eso voy a regalar algunas. Lean la lista y díganme qué quieren antes del jueves.",
+      "La estantería grande ya tiene dueño: me la pidió Raúl y se la voy a dejar el viernes. El sofá azul se lo vendí a una vecina, pero los cojines no los quiere, así que son para quien los pida. Marisa, a ti te encantan las plantas: ¿te las llevo o prefieres venir a buscarlas? Y la lámpara de pie se la regalé a mi hermana, que la quería desde hace años.",
+      "Ahora, lo importante: también tengo cosas de ustedes. Óscar, tu batidora está aquí desde diciembre; perdona, te la devolveré esta semana, te lo prometo. Y Carlos, no te preocupes por tu taladro: no se lo presté a nadie, dímelo y te lo llevo cuando quieras. Y Lucía, tus dos libros de cocina me gustaron mucho; te los mando por correo si no puedes venir.",
+      "Me pongo un poco triste cuando miro las paredes vacías, pero estoy muy contenta. Una última cosa: el sábado necesito ayuda con las cajas. Si pueden venir, tráiganme cinta adhesiva, pero no me traigan más cajas, que ya tengo demasiadas. Al final los invitaré a pupusas a todos. ¡Gracias!",
     ],
-    "useLanguage": [
-      "La última vez llovía y perdimos el autobús.",
-      "El parque cuesta menos que el museo, pero está más lejos.",
-      "¿Nos prestas el altavoz? Te lo devolvemos al volver.",
-      "Primero recoge el mapa y después espera junto a la fuente."
+    glossary: [
+      { es: "no me caben", en: "they don't fit (in my place)" },
+      { es: "tener dueño", en: "to have an owner / to be taken" },
+      { es: "para quien los pida", en: "for whoever asks for them" },
+      { es: "las pupusas", en: "pupusas (stuffed corn tortillas from El Salvador)" },
     ],
-    "model": [
-      "Hola, grupo. La última vez llovía y comimos demasiado tarde. Este sábado vamos al museo porque tiene una sala cubierta y está más cerca que el parque. Cuesta seis euros por persona. Quedamos a las nueve delante de la biblioteca. Primero comprobaremos que estamos todos y después iremos a la parada. Ana nos presta la nevera y se la devolveremos el domingo. Lleva agua y una chaqueta. Confirma antes del jueves si vienes. Si no entiendes algún dato, pregunta en el grupo. Todavía tenemos que repartir la comida entre los participantes. Escribe qué puedes llevar para evitar que todos traigamos lo mismo."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      100,
-      140
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
+    tasks: [
       {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Presenta tu propuesta al grupo: un problema aprendido, dos opciones, una elección y tres instrucciones.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el mensaje y responde.",
+        items: [
+          { q: "¿Por qué regala cosas Sofía?", options: ["porque se va del país", "porque el apartamento nuevo es pequeño", "porque no le gustan"], answer: 1 },
+          { q: "¿Qué pasa con el sofá azul?", options: ["Se lo vendió a una vecina.", "Se lo regaló a Raúl.", "Se lo queda Sofía."], answer: 0 },
+          { q: "¿Qué tiene Sofía de Óscar?", options: ["el taladro", "unas plantas", "la batidora"], answer: 2 },
+          { q: "¿Qué tienen que llevar los amigos el sábado?", options: ["cajas", "cinta adhesiva", "pupusas"], answer: 1 },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
       {
-        "title": "Interacción con un cambio",
-        "prompt": "Negocia con quien prefiere el parque por el precio. Reconoce su razón, ofrece una alternativa y confirma quién recoge y devuelve el material.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
+        id: "r2",
+        type: "classify",
+        prompt: "¿A qué cosa se refiere el pronombre en negrita de cada frase?",
+        categories: ["la estantería", "las plantas", "la batidora", "el taladro"],
+        items: [
+          { text: "me **la** pidió Raúl", cat: 0 },
+          { text: "¿te **las** llevo o prefieres venir a buscarlas?", cat: 1 },
+          { text: "te **la** devolveré esta semana", cat: 2 },
+          { text: "no se **lo** presté a nadie", cat: 3 },
+          { text: "se **la** voy a dejar el viernes", cat: 0 },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Presenta tu propuesta al grupo: un problema aprendido, dos opciones, una elección y tres instrucciones."
       },
-      {
-        "move": "Negocia",
-        "task": "Negocia con quien prefiere el parque por el precio. Reconoce su razón, ofrece una alternativa y confirma quién recoge y devuelve el material."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
+    noticing: {
+      prompt: "Toca cada frase del mensaje para ver qué gramática hay dentro.",
+      items: [
+        { quote: "me la pidió Raúl y se la voy a dejar el viernes", note: "Dos pronombres: _me la_ (a mí, la estantería); _se la_ = le + la, delante de _voy a_." },
+        { quote: "El sofá azul se lo vendí a una vecina", note: "**Se lo**: _lo_ concuerda con _el sofá_, no con _la vecina_." },
+        { quote: "te la devolveré esta semana, te lo prometo", note: "Semana 6: promesa en **futuro**, con dos pronombres delante." },
+        { quote: "dímelo y te lo llevo", note: "Imperativo con pronombres pegados y tilde: **dímelo**." },
+        { quote: "no me traigan más cajas", note: "Semana 7: imperativo negativo con ustedes; el pronombre va delante." },
+      ],
+    },
   },
-  "quiz": {
-    "items": [
+  practice: {
+    intro: "Checkpoint: mezcla esta semana con las semanas 6 a 9. Cada ejercicio integra varias clases.",
+    exercises: [
       {
-        "type": "gap",
-        "q": "Antes el grupo ___ cerca del lago. (comer, hábito)",
-        "answers": [
-          [
-            "comía"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "___ los horarios antes de salir. (comprobar, tú)",
-        "answers": [
-          [
-            "Comprueba"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "La sala es más mejor para la lluvia.",
-        "answers": [
-          "La sala es mejor para la lluvia."
+        id: "x1",
+        type: "gap",
+        title: "Todo junto",
+        prompt: "Completa con la forma correcta. Entre paréntesis tienes el verbo y la semana que repasas.",
+        items: [
+          { q: "Si el camión llega temprano, ___ todo antes de las doce. (terminar, nosotros · semana 6)", answers: [["terminaremos", "vamos a terminar"]], why: "Semana 6: _si_ + presente, consecuencia en **futuro** o con _ir a_." },
+          { q: "Carlos, no ___ la caja por la escalera, es muy pesada. (subir · semana 7)", answers: [["subas"]], why: "Semana 7: imperativo negativo de tú, **no subas**." },
+          { q: "Cuando vi el apartamento vacío, ___ un poco triste. (ponerse, yo · semana 8)", answers: [["me puse"]], why: "Semana 8: reacción rápida con **ponerse**." },
+          { q: "A mis vecinos ___ ___ mucho el ruido de las obras. (molestar · semana 9)", answers: [["les"], ["molesta"]], why: "Semana 9: _a mis vecinos_ → **les**; _el ruido_ → **molesta**." },
+          { q: "¿Las llaves? Mañana ___ ___ dejo a la portera. (semana 10)", answers: [["se"], ["las"]], why: "Le + las → **se las**." },
+          { q: "¿Los cojines? ___ tú, a mí no me gustan. (quedarse + los · semanas 8 y 10)", answers: [["Quédatelos"]], why: "Imperativo de _quedarse_ con dos pronombres pegados y tilde: **quédatelos**." },
         ],
-        "why": "Mejor ya expresa la comparación, sin más."
       },
       {
-        "type": "order",
-        "words": [
-          "Se",
-          "la",
-          "devolveremos",
-          "después",
-          "de",
-          "la",
-          "salida."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué dato sigue pendiente en el blog?",
-        "options": [
-          "La elección definitiva",
-          "La hora de apertura"
+        id: "x2",
+        type: "error",
+        title: "Corrige los mensajes",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "¿El libro de cocina? Se la presté a Ana.", answers: ["¿El libro de cocina? Se lo presté a Ana."], why: "_El libro_ → **lo**: la cosa decide." },
+          { sentence: "No dígaselo a nadie, por favor.", answers: ["No se lo diga a nadie, por favor."], why: "Negativo con usted: pronombres delante, **no se lo diga**." },
+          { sentence: "Voy a te la mandar por correo.", answers: ["Te la voy a mandar por correo.", "Voy a mandártela por correo."], why: "Delante de _voy_ o pegados al infinitivo." },
+          { sentence: "Si me la prestarás, te invitaré a cenar.", answers: ["Si me la prestas, te invitaré a cenar."], why: "Semana 6: después de **si**, presente." },
+          { sentence: "A mi hermana le encanta los cojines y se los di.", answers: ["A mi hermana le encantan los cojines y se los di."], why: "Semana 9: _los cojines_ → **encantan**." },
+          { sentence: "Estoy explicandoselo ahora mismo.", answers: ["Estoy explicándoselo ahora mismo."], why: "Gerundio + dos pronombres: tilde, **explicándoselo**." },
         ],
-        "answer": 0,
-        "why": "La opción elegida cumple la función comunicativa indicada."
       },
       {
-        "q": "¿Qué acción debe hacerse primero?",
-        "options": [
-          "Recoger el material",
-          "Esperar al grupo",
-          "Devolver el material"
+        id: "x3",
+        type: "order",
+        title: "Frases de mudanza",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["¿La", "estantería?", "Se", "la", "voy", "a", "dejar", "a", "Raúl."], alt: ["¿La estantería? Se la voy a dejar a Raúl."], en: "The bookcase? I'm going to leave it for Raúl." },
+          { words: ["No", "me", "lo", "devuelvas", "todavía,", "no", "lo", "necesito."], en: "Don't give it back to me yet, I don't need it." },
+          { words: ["Te", "la", "devolveré", "el", "lunes,", "te", "lo", "prometo."], en: "I'll give it back to you on Monday, I promise." },
         ],
-        "answer": 0,
-        "why": "Comprueba el contexto y los datos de la escena: Recoger el material.",
-        "type": "listen",
-        "audio": "Primero recoge el material y después espera al grupo."
       },
       {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 10: Presenta tu propuesta al grupo: un problema aprendido, dos opciones, una elección y tres instrucciones.",
-        "model": "Hola, grupo. La última vez llovía y comimos demasiado tarde. Este sábado vamos al museo porque tiene una sala cubierta y está más cerca que el parque. Cuesta seis euros por persona. Quedamos a las nueve delante de la biblioteca. Primero comprobaremos que estamos todos y después iremos a la parada. Ana nos presta la nevera y se la devolveremos el domingo. Lleva agua y una chaqueta. Confirma antes del jueves si vienes. Si no entiendes algún dato, pregunta en el grupo. Todavía tenemos que repartir la comida entre los participantes. Escribe qué puedes llevar para evitar que todos traigamos lo mismo.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
+        id: "x4",
+        type: "context",
+        title: "¿Qué dices?",
+        prompt: "Lee la situación y elige la mejor respuesta.",
+        items: [
+          { context: "Tu vecina pregunta si ya le diste las llaves al dueño.", q: "Respondes que sí:", options: ["Sí, ya le las di.", "Sí, ya se las di.", "Sí, ya se los di."], answer: 1, why: "Le + las → **se las**; _las llaves_ femenino plural." },
+          { context: "Un amigo quiere llevarse tu guitarra ahora, pero la necesitas esta noche.", q: "Le dices:", options: ["No te la lleves hoy, llévatela mañana.", "No llévatela hoy, te la llevas mañana.", "No te la llevas hoy."], answer: 0, why: "Negativo con pronombres delante; afirmativo con pronombres pegados." },
+          { context: "Tu madre pregunta qué hiciste con su paraguas.", q: "Respondes:", options: ["Se lo di a mi tía, que no tenía.", "Le lo di a mi tía, que no tenía.", "Se la di a mi tía, que no tenía."], answer: 0, why: "Le + lo → **se lo**; _el paraguas_ es masculino." },
+        ],
       },
       {
-        "type": "open",
-        "prompt": "Resolución final 10: Negocia con quien prefiere el parque por el precio. Reconoce su razón, ofrece una alternativa y confirma quién recoge y devuelve el material. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Combinar un relato, una comparación, un préstamo y unas instrucciones para organizar una salida.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+        id: "x5",
+        type: "open",
+        title: "Escribe tú: integra las semanas 6 a 10",
+        prompt: "Escribe frases completas. Después compara con el modelo.",
+        items: [
+          {
+            prompt: "Un amigo te pide tu bicicleta para el fin de semana. Respóndele: préstasela con una condición (si…) y dile cómo cuidarla con un imperativo afirmativo y uno negativo.",
+            model: "Claro, te la presto. Si llueve, no la dejes en la calle: guárdala en el portal. Y devuélvemela el domingo por la noche, por favor.",
+            checklist: ["Usas dos pronombres (_te la_)", "Imperativo afirmativo con pronombre pegado y tilde", "Imperativo negativo con pronombre delante", "Si + presente"],
+          },
+          {
+            prompt: "Cuenta a quién le diste tres cosas en tu última mudanza o limpieza de armarios. Usa se lo / se la / se los / se las y di por qué (le encanta, les gustan…).",
+            model: "Los libros de viajes se los di a mi sobrino, porque le encantan los mapas. La cafetera se la regalé a una compañera de trabajo. Y las camisetas viejas se las llevé a una tienda solidaria.",
+            checklist: ["Usas _se_ + lo/la/los/las según la cosa", "Usas un verbo como gustar con la concordancia correcta", "Hay al menos tres objetos distintos"],
+          },
+          {
+            prompt: "Prometes devolver dos cosas que te prestaron. Escribe las promesas con el futuro y dos pronombres, y cuenta cómo te sentiste cuando no las encontrabas.",
+            model: "Marta, tu cámara te la devolveré mañana sin falta. Ayer no la encontraba y me puse muy nerviosa, pero estaba en mi mochila. Y tus libros te los llevaré el sábado.",
+            checklist: ["Futuro para la promesa (semana 6)", "Dos pronombres delante del futuro", "Ponerse o quedarse para tu reacción (semana 8)"],
+          },
+        ],
+      },
     ],
-    "review": [
-      "En dos días, repite la misión «Checkpoint: una salida para el barrio» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+  },
+  writing: {
+    task: "Escribe un mensaje a un grupo de amigos para organizar qué cosas devuelves, prestas o regalas antes de una mudanza.",
+    context: "Te mudas a otra ciudad el mes que viene. Tienes cosas que te prestaron tus amigos y cosas tuyas que no puedes llevar. Escribe al grupo para organizarlo todo.",
+    steps: [
+      "Saluda y explica tu plan con **ir a** y por qué no puedes llevarte todo.",
+      "Di qué cosas ya tienen dueño con **se lo / se la** (a quién se las diste y por qué le gustan).",
+      "Promete devolver lo que te prestaron con el **futuro** y dos pronombres.",
+      "Pide ayuda con imperativos afirmativos y negativos (tráiganme…, no me traigan…).",
+      "Cuenta en una frase cómo te sientes con la mudanza (me pongo triste, me quedo tranquilo…).",
+      "Revisa: ¿el orden de los pronombres es persona + cosa? ¿Cambiaste _le_ por _se_? ¿Pusiste tilde en las formas pegadas?",
+    ],
+    useLanguage: ["Voy a mudarme…", "Se lo regalé a…, porque le encanta…", "Te la devolveré…", "Dímelo y te lo llevo.", "No me lo traigas.", "Me pongo triste / me quedo tranquila"],
+    model: [
+      "¡Hola, chicos! Como saben, el mes que viene voy a mudarme a Santa Ana y no puedo llevarme todo. La mesa del balcón ya tiene dueña: se la regalé a Lucía, porque le encantan las plantas y tiene terraza. Los discos de mi padre se los voy a dejar a Pedro. Andrés, tu tienda de campaña está aquí; te la devolveré el sábado, te lo prometo. Si alguien quiere mis cojines, díganmelo y se los llevo. El día de la mudanza tráiganme cajas, pero no me traigan comida, que mi madre va a cocinar. Me pongo un poco triste, pero estoy contenta. ¡Gracias!",
+    ],
+    checklist: [
+      "Usas dos pronombres en el orden persona + cosa, y **se** en lugar de _le / les_.",
+      "_Lo, la, los, las_ concuerdan con la cosa.",
+      "Los pronombres van pegados al imperativo afirmativo y delante del negativo.",
+      "Usas el futuro para promesas y _ir a_ para planes (semana 6).",
+      "Usas al menos un verbo como gustar o un verbo de cambio (semanas 8 y 9).",
+    ],
+    words: [80, 130],
+  },
+  speaking: {
+    intro: "Checkpoint oral: habla en voz alta y grábate. Repite cada tarea hasta que salga sin leer.",
+    tasks: [
+      {
+        title: "¿Quién se queda con qué?",
+        prompt: "Imagina que te mudas a un apartamento muy pequeño. Elige cinco cosas de tu casa y di a quién se las vas a dar y por qué.",
+        prep: ["El sofá se lo voy a dar a…, porque…", "La lámpara se la regalo a…", "A mi hermano le encantan…, así que se los…", "Me voy a quedar con…"],
+        seconds: 80,
+        model: "Mi sofá se lo voy a dar a mi primo, porque acaba de mudarse y no tiene muebles. La lámpara se la regalo a mi vecina, que siempre dice que le encanta. A mi hermano le gustan mucho los libros de historia, así que se los voy a llevar el domingo. Las plantas se las dejo a mi madre. Y me voy a quedar con el espejo, porque es de mi abuela.",
+        selfCheck: ["Uso _se_ + lo/la/los/las según la cosa.", "Uso verbos como gustar para explicar (semana 9)."],
+      },
+      {
+        title: "Instrucciones para la mudanza",
+        prompt: "Unos amigos te ayudan a mudarte. Dales instrucciones para cuatro cosas: dónde ponerlas, qué no hacer y qué traer.",
+        prep: ["La caja de los platos, déjenla…", "No la pongan…", "El espejo, súbanlo con cuidado…", "Tráiganme…"],
+        seconds: 60,
+        model: "La caja de los platos déjenla en la cocina, pero no la pongan en el suelo. El espejo súbanlo con cuidado por la escalera, no lo metan en el ascensor. Las sillas pónganlas en el balcón. Y por favor, tráiganme cinta adhesiva, que ya no me queda.",
+        selfCheck: ["Pronombres pegados al afirmativo, delante del negativo.", "Uso ustedes (semana 7)."],
+      },
+      {
+        title: "Un préstamo que salió mal",
+        prompt: "Cuenta una vez que alguien te prestó algo (o tú prestaste algo) y hubo un problema: qué pasó, cómo reaccionaron y qué prometiste.",
+        prep: ["Un amigo me prestó su…", "Lo rompí / lo perdí…", "Me puse… / se quedó…", "Le dije: te lo devolveré…"],
+        seconds: 60,
+        selfCheck: ["Uso el pasado y verbos de cambio (semana 8).", "Uso una promesa en futuro con dos pronombres (semanas 6 y 10)."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Checkpoint: lleva a tu próxima clase lo que repasaste en las semanas 6 a 10 y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Presta y pide", task: "Pide prestado algo de verdad en la clase (un bolígrafo, un libro) y promete devolverlo con dos pronombres.", phrases: ["¿Me lo prestas?", "Te lo devolveré al final de la clase."] },
+      { move: "Responde sin repetir", task: "Pide a tu profesor que te haga cinco preguntas con objetos (¿Le diste el regalo a tu madre?) y responde con dos pronombres.", phrases: ["Sí, se lo di.", "No, todavía no se lo he dado."] },
+      { move: "Da instrucciones", task: "Explica a tu profesor cómo preparar algo que te gusta, con imperativos y pronombres pegados.", phrases: ["Corta el tomate y ponlo…", "No lo dejes mucho tiempo…"] },
+      { move: "Repasa en voz alta", task: "Elige una frase de cada semana (6, 7, 8 y 9) y dila con un pronombre de objeto. Pide a tu profesor que te corrija.", phrases: ["Te la llevaré.", "No se lo digas.", "Me la puse.", "Se lo regalé."] },
+    ],
+    bring: "Trae una lista de cinco cosas que has prestado o te han prestado alguna vez, para contar en clase quién te las prestó y si ya las devolviste.",
+  },
+  quiz: {
+    items: [
+      { type: "gap", q: "—¿Quién os prestó el coche? —___ ___ prestó mi tío Ramón.", answers: [["Nos"], ["lo"]], why: "A nosotros (**nos**) + _el coche_ (**lo**)." },
+      { type: "transform", source: "Le devolví **la batidora** **a Óscar**.", instruction: "Cambia las palabras en negrita por dos pronombres.", answers: ["Se la devolví."], why: "Le + la → **se la**." },
+      { type: "choice", q: "Quieres que tu compañero te dé el informe ahora. Le dices:", options: ["Me lo das ahora, por favor.", "Dámelo ahora, por favor.", "Damelo ahora, por favor."], answer: 1, why: "Imperativo afirmativo con pronombres pegados y tilde: **dámelo**." },
+      { type: "error", sentence: "¿El regalo de Ana? Le lo voy a dar mañana.", answers: ["¿El regalo de Ana? Se lo voy a dar mañana.", "¿El regalo de Ana? Voy a dárselo mañana."], why: "Le + lo → **se lo**." },
+      { type: "error", sentence: "No tíralo, todavía funciona.", answers: ["No lo tires, todavía funciona."], why: "Negativo: pronombre delante, **no lo tires**." },
+      { type: "gap", q: "Si mañana ___ sol, ___ al lago con los niños. (hacer / ir, nosotros)", answers: [["hace"], ["iremos", "vamos a ir"]], why: "Semana 6: _si_ + presente (**hace**) y futuro (**iremos**)." },
+      { type: "gap", q: "Cuando leyó la carta, mi abuelo ___ sin palabras. (quedarse)", answers: [["se quedó"]], why: "Semana 8: el resultado, **se quedó** sin palabras." },
+      { type: "listen", q: "¿Qué forma oyes en la frase de la mesa?", audio: "Voy a dejártela en la mesa.", options: ["dejarla", "dejártela", "déjatela"], answer: 1 },
+      { type: "order", words: ["A", "Lucía", "le", "encantan", "las", "plantas:", "se", "las", "regalo."] },
+      { type: "choice", q: "¿Qué frase con el gerundio es correcta?", options: ["Estoy buscandotelo.", "Te lo estoy buscándolo.", "Estoy buscándotelo."], answer: 2, why: "Pegados al gerundio, una sola vez y con tilde." },
+      { type: "open", prompt: "Escribe cuatro frases, una por semana: un plan o promesa (6), una instrucción negativa (7), una reacción con ponerse (8) y algo que le diste a alguien con se lo / se la (9 y 10).", model: "Te devolveré el paraguas mañana. No me esperes para cenar. Ayer me puse muy contento con tu mensaje. ¿El libro? Se lo di a tu hermana.", checklist: ["Futuro o ir a correcto", "Imperativo negativo con la vocal cambiada", "Ponerse + adjetivo que concuerda", "Se + lo/la según la cosa"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Usar dos pronombres juntos en el orden persona + cosa: _me lo, te la, nos los_.",
+      "Cambiar _le / les_ por **se** delante de lo, la, los, las: _se lo di_.",
+      "Colocar los pronombres con imperativo, infinitivo y gerundio: _dámelo, no me lo des, voy a dártelo_.",
+      "Poner la tilde cuando la palabra crece: _cómpralo, dímelo, buscándolo_.",
+      "Combinar futuro, imperativo, reflexivos y verbos como gustar con pronombres de objeto.",
+      "Organizar por escrito y en voz alta qué prestas, regalas y devuelves.",
+    ],
+    review: ["Le di el libro → se lo di (nunca _le lo_).", "Dámelo / no me lo des / te lo voy a dar = voy a dártelo.", "Semanas 6-9: te la devolveré; no se la lleves; me la puse; le encanta → se la regalo."],
+  },
+  related: [
+    { path: "/gramatica/dos-pronombres-se-lo-me-lo", label: "Clase: Dos pronombres: se lo, me lo, te la" },
+    { path: "/gramatica/posicion-de-pronombres-con-infinitivo-e", label: "Clase: Posición de pronombres con infinitivo e imperativo" },
+  ],
 };

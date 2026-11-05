@@ -1,155 +1,401 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 1 · Autoestudio espejo de G128 (imperfecto de subjuntivo: formas -ra y -se) y
+ * G129 (subjuntivo tras verbos de influencia en pasado). Repaso autónomo con la reapertura
+ * ficticia de un café familiar de San Telmo. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w01: Module = {
   "id": "b2-01",
   "level": "b2",
   "week": 1,
   "kind": "core",
-  "title": "Coordinar sin imponer",
-  "subtitle": "Negociar responsabilidades en un equipo.",
+  "title": "Lo que la abuela quería que conserváramos",
+  "subtitle": "Repaso del imperfecto de subjuntivo (-ra y -se) y de las peticiones y deseos contados en pasado",
   "stop": {
     "place": "Buenos Aires",
     "country": "Argentina"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.gram.sustantivas-sistema",
-    "b2.gram.decir-doble-valor",
-    "b2.voc.trabajo-equipo",
-    "b2.pron.influencia-mitigada",
-    "b2.fun.pedir-exigir",
-    "b2.read.correo-equipo"
+    "b2.gram.g128",
+    "b2.gram.g129",
+    "b2.voc.w01-negocio-familiar",
+    "b2.pron.w01-acento-ra",
+    "b2.lis.w01-reunion-familiar",
+    "b2.read.w01-cronica-reapertura",
+    "b2.wri.w01-correo-decisiones",
+    "b2.spk.w01-relatar-encargos",
+    "b2.fun.w01-transmitir-peticiones",
+    "b2.disc.w01-relato-encargos"
   ],
-  "reviewObjectives": [
-    "b1.gram.influencia",
-    "b1.gram.valoracion"
-  ],
-  "prerequisites": [],
+  reviewObjectives: ["b1.gram.g126","b1.gram.g127","b1.voc.w20-teatro-decisiones","b1.pron.w20-enfasis-argumentar","b1.lis.w20-reunion-compania","b1.read.w20-columna-opinion","b1.wri.w20-propuesta-razonada","b1.spk.w20-defender-propuesta","b1.fun.w20-decidir-en-grupo","b1.disc.w20-argumento-completo","b1.rev.w20-semanas-16-20"],
+  prerequisites: ["b1-20"],
   "goal": {
-    "canDo": "Puedo negociar responsabilidades en un equipo con razones, matices y condiciones claras.",
+    "canDo": "Puedo formar el imperfecto de subjuntivo y contar con él lo que otras personas pidieron, quisieron o lamentaron, aclarando si el encargo ya se cumplió.",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: convertir una urgencia ambigua en tareas negociadas.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa cómo se forma el imperfecto de subjuntivo desde el pretérito y practica las formas irregulares.",
+      "Cuenta en pasado peticiones, deseos y emociones ajenas y decide cuándo basta un infinitivo.",
+      "Escucha a dos hermanos y lee una crónica sobre la reapertura de un café de San Telmo.",
+      "Escribe un correo con los encargos de una reunión familiar, revísalo y defiéndelo oralmente."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: negociar responsabilidades en un equipo. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase trabajaste estas formas con tu profesor. Aquí las repasas de otra manera: con la historia de un café de barrio que una familia reabre, tablas para consultar y los errores que más se repiten cuando alguien cuenta en pasado lo que otra persona quería.",
     "parts": [
       {
-        "heading": "Negociar responsabilidades en un equipo",
+        "heading": "Una forma que nace del pretérito",
         "body": [
-          "Las sustantivas presentan información o una acción sobre la que alguien influye. Afirmar, comprobar o percibir normalmente introducen indicativo; pedir, valorar o negar una afirmación suelen introducir subjuntivo. No basta buscar que: hay que interpretar qué hace el hablante con el mensaje."
+          "Para formar el imperfecto de subjuntivo no necesitas memorizar una lista nueva: parte de la tercera persona plural del pretérito indefinido, quita «-ron» y añade las terminaciones. Si el pretérito es irregular, la irregularidad pasa entera a la nueva forma: tuvieron → tuviera, pidieron → pidiera, durmieron → durmiera, leyeron → leyera.",
+          "Existen dos juegos de terminaciones, en -ra y en -se, y significan lo mismo. La forma en -ra es la más frecuente en la conversación de toda América y de España; la forma en -se aparece sobre todo en la escritura y en el habla cuidada. La persona «nosotros» lleva siempre tilde, porque la palabra pasa a ser esdrújula."
         ],
+        "table": {
+          "caption": "Imperfecto de subjuntivo de «conservar» y de «tener» (pretérito: conservaron, tuvieron)",
+          "head": [
+            "Persona",
+            "conservar (-ra)",
+            "conservar (-se)",
+            "tener (-ra)"
+          ],
+          "rows": [
+            [
+              "yo",
+              "conservara",
+              "conservase",
+              "tuviera"
+            ],
+            [
+              "tú",
+              "conservaras",
+              "conservases",
+              "tuvieras"
+            ],
+            [
+              "él / ella / usted",
+              "conservara",
+              "conservase",
+              "tuviera"
+            ],
+            [
+              "nosotros / nosotras",
+              "conserváramos",
+              "conservásemos",
+              "tuviéramos"
+            ],
+            [
+              "vosotros / vosotras",
+              "conservarais",
+              "conservaseis",
+              "tuvierais"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "conservaran",
+              "conservasen",
+              "tuvieran"
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Marta afirma que el equipo está preparado.",
-            "note": "Se presenta una afirmación."
+            "es": "Hicieron → hiciera: «Mi tío esperaba que hiciera las medialunas como antes».",
+            "note": "La raíz irregular «hic-» viene del pretérito."
           },
           {
-            "es": "Marta exige que el equipo entregue el informe.",
-            "note": "Exigir influye en otra persona."
+            "es": "Fueron → fuera: sirve para «ser» y para «ir», y el contexto decide.",
+            "note": "«Quería que fuera puntual» (ser) / «Quería que fuera al banco» (ir)."
           },
           {
-            "es": "Nos recuerda que asistamos mañana; es una convocatoria.",
-            "note": "Recordar transmite aquí una petición."
+            "es": "Dijeron → dijera, trajeron → trajera: sin «i» después de la «j».",
+            "note": "No existe «dijiera»."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Exijo que el equipo entrega el prototipo.",
-            "right": "Exijo que el equipo entregue el prototipo.",
-            "why": "Exigir selecciona subjuntivo al influir en otro sujeto."
+            "wrong": "Nos pidió que no tenieran miedo de cambiar la carta.",
+            "right": "Nos pidió que no tuvieran miedo de cambiar la carta.",
+            "why": "La raíz sale del pretérito («tuvieron»), no del infinitivo «tener»."
+          },
+          {
+            "wrong": "Quería que nosotros conservaramos las mesas.",
+            "right": "Quería que nosotros conserváramos las mesas.",
+            "why": "La forma de «nosotros» es esdrújula y lleva tilde."
+          }
+        ],
+        "tip": "Si dudas con un verbo, di primero «ellos» en pretérito en voz alta. Si esa forma te sale bien, el imperfecto de subjuntivo también."
+      },
+      {
+        "heading": "Usos sin «si»: deseos difíciles y cortesía",
+        "body": [
+          "Antes de contar peticiones ajenas, conviene recordar dos usos breves. Con «ojalá», el imperfecto de subjuntivo presenta un deseo que el hablante ve difícil o imposible en el presente: «ojalá abriera» suena más lejano que «ojalá abra». Y «quisiera» es una forma de cortesía muy frecuente en tiendas, oficinas y correos: suaviza una petición sin cambiar su contenido.",
+          "Aunque se llame «imperfecto», en estos usos la forma no habla del pasado: habla de ahora o de después, vistos desde la distancia o desde la cortesía."
+        ],
+        "examples": [
+          {
+            "es": "Ojalá el café tenga lugar para todos el sábado.",
+            "note": "Deseo posible: presente de subjuntivo."
+          },
+          {
+            "es": "Ojalá la abuela pudiera ver el salón lleno otra vez.",
+            "note": "Deseo que el hablante sabe imposible: imperfecto de subjuntivo."
+          },
+          {
+            "es": "Quisiera reservar la mesa del fondo para doce personas.",
+            "note": "Cortesía: más suave que «quiero»."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Ojalá la abuela podría ver el salón lleno.",
+            "right": "Ojalá la abuela pudiera ver el salón lleno.",
+            "why": "Detrás de «ojalá» no va el condicional."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Contar en pasado lo que alguien pidió, quiso o sintió",
         "body": [
-          "Decir, insistir y recordar admiten dos interpretaciones: comunica que la fecha es firme, pero dice que entreguemos el borrador. Con sujetos distintos aparece que y verbo conjugado; con el mismo sujeto, quiero revisar. Una petición indirecta sigue necesitando un responsable, un plazo y una posibilidad real de respuesta."
+          "Ya sabes que los verbos de influencia (pedir, aconsejar, exigir), de deseo (querer, esperar, preferir) y de emoción (alegrar, molestar, preocupar) llevan subjuntivo cuando la otra acción tiene otro sujeto. Lo nuevo es el tiempo: si ese verbo principal está en pretérito, imperfecto o pluscuamperfecto, el verbo que depende de él pasa al imperfecto de subjuntivo.",
+          "Si el sujeto es el mismo, no hay «que»: se usa el infinitivo. «Delia quería abrir temprano» (ella quería y ella abría); «Delia quería que abriéramos temprano» (ella quería, nosotros abríamos)."
+        ],
+        "table": {
+          "caption": "Tres familias de verbos con el principal en pasado",
+          "head": [
+            "Familia",
+            "Verbo principal",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Influencia",
+              "pidió, aconsejó, exigió, recomendaba",
+              "La abuela nos pidió que no cambiáramos el nombre."
+            ],
+            [
+              "Deseo",
+              "quería, esperaba, prefería",
+              "Esperaba que los mozos siguieran llevando chaleco."
+            ],
+            [
+              "Emoción",
+              "le alegró, le molestó, le preocupaba",
+              "Le molestaba que pusieran la música tan fuerte."
+            ],
+            [
+              "Finalidad",
+              "para que, sin que",
+              "Dejó las recetas escritas para que nadie las olvidara."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Mi hermana prefería quedarse en la cocina.",
+            "note": "Mismo sujeto: infinitivo."
+          },
+          {
+            "es": "Mi hermana prefería que yo atendiera las mesas.",
+            "note": "Otro sujeto: «que» + imperfecto de subjuntivo."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "La abuela nos pidió que no cambiemos el nombre del café en 1998.",
+            "right": "La abuela nos pidió que no cambiáramos el nombre del café en 1998.",
+            "why": "La petición y su contenido quedaron en el pasado: imperfecto de subjuntivo."
+          },
+          {
+            "wrong": "Joaquín quería que él abriera el local solo.",
+            "right": "Joaquín quería abrir el local solo.",
+            "why": "Si quien quiere y quien abre son la misma persona, va el infinitivo."
+          }
+        ]
+      },
+      {
+        "heading": "Dejar, hacer, prohibir; «decir» con dos valores; encargos pendientes",
+        "body": [
+          "Con «dejar», «hacer», «prohibir» y «permitir» hay dos construcciones correctas: con pronombre e infinitivo («no nos dejaba tocar el piano») o con «que» y subjuntivo («no dejaba que tocáramos el piano»). La primera es más frecuente en la conversación.",
+          "«Decir», «insistir en» y «escribir» informan o piden. Si informan, llevan indicativo: «insistió en que el piso era de pinotea». Si piden, subjuntivo: «insistió en que lo encerásemos cada mes». Y si alguien pidió algo en el pasado pero el encargo sigue pendiente hoy, también es posible el presente de subjuntivo: «me pidió que la llame el jueves» (el jueves todavía no llegó)."
         ],
         "examples": [
           {
-            "es": "Marta afirma que el equipo está preparado.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Nos escribió que el horno estaba roto.",
+            "note": "Informa: indicativo."
           },
           {
-            "es": "Nos recuerda que asistamos mañana; es una convocatoria.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Nos escribió que llamáramos al técnico.",
+            "note": "Pide: subjuntivo."
+          },
+          {
+            "es": "Ramón me pidió ayer que le mande las fotos esta noche.",
+            "note": "El encargo sigue pendiente: presente de subjuntivo posible."
           }
-        ]
+        ],
+        "mistakes": [
+          {
+            "wrong": "Insistió en que el piso fuera de pinotea, y lo comprobamos: lo era.",
+            "right": "Insistió en que el piso era de pinotea, y lo comprobamos: lo era.",
+            "why": "Aquí «insistir» informa sobre un hecho: indicativo."
+          }
+        ],
+        "tip": "Pregúntate: ¿la persona daba un dato o quería que alguien hiciera algo? La respuesta elige el modo."
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero las formas, después el contexto: decide quién quiere, quién actúa y cuándo.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-01-g-formas",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de coordinar sin imponer; justifica el modo, la forma o la combinación.",
+        "prompt": "Escribe el imperfecto de subjuntivo en -ra del verbo entre paréntesis. Piensa primero en «ellos» del pretérito.",
         "items": [
           {
-            "q": "Marta afirma que el equipo ___ preparado.",
+            "q": "El encargado quería que los mozos ___ (servir) el cortado en vaso de vidrio.",
             "answers": [
               [
-                "está"
+                "sirvieran"
               ]
             ],
-            "why": "Se presenta una afirmación."
+            "why": "sirvieron → sirvieran: la «i» del pretérito se mantiene."
           },
           {
-            "q": "Marta exige que el equipo ___ el informe.",
+            "q": "Nos pidió que ___ (traer) las sillas viejas del depósito.",
             "answers": [
               [
-                "entregue"
+                "trajéramos"
               ]
             ],
-            "why": "Exigir influye en otra persona."
+            "why": "trajeron → trajéramos, con tilde en «nosotros»."
           },
           {
-            "q": "Nos recuerda que ___ mañana; es una convocatoria.",
+            "q": "Le preocupaba que la clientela no ___ (saber) que habíamos reabierto.",
             "answers": [
               [
-                "asistamos"
+                "supiera"
               ]
             ],
-            "why": "Recordar transmite aquí una petición."
+            "why": "supieron → supiera."
+          },
+          {
+            "q": "Esperaban que el pianista ___ (poder) venir los viernes.",
+            "answers": [
+              [
+                "pudiera"
+              ]
+            ],
+            "why": "pudieron → pudiera."
+          },
+          {
+            "q": "Mi madre prefería que ustedes ___ (dormir) en la casa de arriba.",
+            "answers": [
+              [
+                "durmieran"
+              ]
+            ],
+            "why": "durmieron → durmieran: el cambio o → u viene del pretérito."
+          },
+          {
+            "q": "Era necesario que alguien ___ (leer) el contrato con calma.",
+            "answers": [
+              [
+                "leyera"
+              ]
+            ],
+            "why": "leyeron → leyera: la «y» se conserva."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-01-g-contexto",
+        "type": "context",
+        "prompt": "Lee la situación y elige la frase que la cuenta bien.",
         "items": [
           {
-            "prompt": "Texto de partida: «Marta: «El plazo no cambia».» Transmite la información con afirma que.",
-            "model": "Marta afirma que el plazo no cambia.",
+            "context": "En 2015, Delia, la dueña, les dijo a sus nietos: «Abran a las siete, como siempre».",
+            "q": "¿Cómo se cuenta hoy?",
+            "options": [
+              "Delia les dijo que abrían a las siete.",
+              "Delia les dijo que abrieran a las siete.",
+              "Delia les dijo que abrirían a las siete."
+            ],
+            "answer": 1,
+            "why": "Es una petición en el pasado: «decir que» + imperfecto de subjuntivo."
+          },
+          {
+            "context": "Joaquín recuerda: de chico, él deseaba aprender a hacer café de filtro.",
+            "q": "¿Qué frase es correcta?",
+            "options": [
+              "Joaquín quería que aprendiera a hacer café de filtro.",
+              "Joaquín quería que él aprendía a hacer café de filtro.",
+              "Joaquín quería aprender a hacer café de filtro."
+            ],
+            "answer": 2,
+            "why": "Mismo sujeto: infinitivo, sin «que»."
+          },
+          {
+            "context": "El lunes, Ramón le pidió a Martina las fotos de la reforma. Hoy es martes y todavía no se las mandó.",
+            "q": "¿Qué opción es posible porque el encargo sigue pendiente?",
+            "options": [
+              "Ramón me pidió que le mande las fotos.",
+              "Ramón me pidió que le mandaba las fotos.",
+              "Ramón me pidió que le mandaría las fotos."
+            ],
+            "answer": 0,
+            "why": "Con un encargo todavía vigente, el presente de subjuntivo es posible; el imperfecto («mandara») también lo sería."
+          },
+          {
+            "context": "La vecina contó que el edificio tenía cien años, y era verdad.",
+            "q": "¿Qué versión respeta que es una información?",
+            "options": [
+              "Insistió en que el edificio tuviera cien años.",
+              "Insistió en que el edificio tenía cien años.",
+              "Insistió en tener el edificio cien años."
+            ],
+            "answer": 1,
+            "why": "Informa sobre un hecho: indicativo."
+          }
+        ]
+      },
+      {
+        "id": "b2-01-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida en estilo indirecto, en pasado. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: Delia, en 2010, a sus hijos: «No vendan el piano aunque nadie lo toque». Empieza con «Delia les pidió…».",
+            "model": "Delia les pidió a sus hijos que no vendieran el piano aunque nadie lo tocara.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Conservo quién pide, quién hace la acción y cuándo ocurre.",
+              "Uso imperfecto de subjuntivo en los dos verbos que dependen de la petición.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Marta: «Entreguen solo el prototipo».» Transmite la instrucción con nos dice que.",
-            "model": "Marta nos dice que entreguemos solo el prototipo.",
+            "prompt": "Texto de partida: Ramón, el mozo más antiguo, el año pasado: «Me alegra mucho que ustedes sigan con el café». Empieza con «A Ramón le alegró…».",
+            "model": "A Ramón le alegró mucho que siguiéramos con el café.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Conservo quién pide, quién hace la acción y cuándo ocurre.",
+              "Cambio «ustedes» por «nosotros» porque ahora lo cuento yo.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Quiero revisar el calendario yo mismo.» Evita repetir el sujeto y conserva el deseo.",
-            "model": "Quiero revisar el calendario.",
+            "prompt": "Texto de partida: La inspectora, en marzo: «Tienen que instalar una salida de emergencia antes de abrir». Usa «exigir» o «pedir».",
+            "model": "En marzo la inspectora nos exigió que instaláramos una salida de emergencia antes de abrir.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Conservo quién pide, quién hace la acción y cuándo ocurre.",
+              "Transformo la obligación en un verbo de influencia + que + subjuntivo.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: Martina, hace un mes: «Quiero ocuparme yo de la contabilidad». Cuéntalo y decide si hace falta «que».",
+            "model": "Hace un mes Martina dijo que quería ocuparse ella de la contabilidad.",
+            "checklist": [
+              "Mantengo el infinitivo porque quien quiere y quien se ocupa son la misma persona.",
+              "Ajusto el pronombre: «ocuparme» pasa a «ocuparse».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -157,282 +403,342 @@ export const b2w01: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para hablar de un negocio que pasa de una generación a otra. Fíjate en las combinaciones: se aprenden mejor en bloque.",
     "groups": [
       {
-        "title": "Negociar responsabilidades en un equipo",
+        "title": "Heredar y reformar un local",
         "items": [
           {
-            "es": "coordinar tareas",
-            "note": "organizar responsabilidades"
+            "es": "hacerse cargo del local",
+            "note": "asumir la responsabilidad del negocio"
           },
           {
-            "es": "cumplir un plazo",
-            "note": "entregar en la fecha acordada"
+            "es": "conservar el mobiliario original",
+            "note": "no cambiar mesas, sillas ni barra"
           },
           {
-            "es": "delegar funciones",
-            "note": "encargar trabajo a otra persona"
+            "es": "reformar sin perder la esencia",
+            "note": "cambiar lo necesario y mantener el carácter"
           },
           {
-            "es": "rendir cuentas",
-            "note": "explicar los resultados"
+            "es": "la clientela de toda la vida",
+            "note": "las personas que vienen desde hace años"
           },
           {
-            "es": "asumir una carga",
-            "note": "aceptar trabajo adicional"
+            "es": "el mozo",
+            "note": "en Argentina y Uruguay, camarero de bar o restaurante"
+          }
+        ]
+      },
+      {
+        "title": "Decidir en familia",
+        "items": [
+          {
+            "es": "dar el visto bueno",
+            "note": "aprobar una decisión"
           },
           {
-            "es": "acordar prioridades",
-            "note": "decidir qué va primero"
+            "es": "dejar algo por escrito",
+            "note": "registrar un deseo o un acuerdo"
           },
           {
-            "es": "repartir recursos",
-            "note": "distribuir medios disponibles"
+            "es": "cumplir un encargo",
+            "note": "hacer lo que otra persona pidió"
           },
           {
-            "es": "dejar constancia",
-            "note": "registrar una decisión"
+            "es": "ponerse de acuerdo",
+            "note": "llegar a una decisión común"
+          },
+          {
+            "es": "tener la última palabra",
+            "note": "decidir cuando hay desacuerdo"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-01-v-relacion",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para negociar responsabilidades en un equipo con su significado.",
+        "prompt": "Relaciona cada expresión con la situación del café en la que encaja mejor.",
         "pairs": [
           {
-            "left": "coordinar tareas",
-            "right": "organizar responsabilidades"
+            "left": "hacerse cargo del local",
+            "right": "Martina firma el alquiler y organiza los turnos."
           },
           {
-            "left": "cumplir un plazo",
-            "right": "entregar en la fecha acordada"
+            "left": "conservar el mobiliario original",
+            "right": "Las mesas de mármol de 1952 siguen en el salón."
           },
           {
-            "left": "delegar funciones",
-            "right": "encargar trabajo a otra persona"
+            "left": "dar el visto bueno",
+            "right": "La familia aprueba el nuevo menú del mediodía."
           },
           {
-            "left": "rendir cuentas",
-            "right": "explicar los resultados"
+            "left": "cumplir un encargo",
+            "right": "Joaquín encera el piso como pedía la abuela."
           },
           {
-            "left": "asumir una carga",
-            "right": "aceptar trabajo adicional"
+            "left": "tener la última palabra",
+            "right": "Si los hermanos no coinciden, decide la madre."
           },
           {
-            "left": "acordar prioridades",
-            "right": "decidir qué va primero"
-          },
-          {
-            "left": "repartir recursos",
-            "right": "distribuir medios disponibles"
-          },
-          {
-            "left": "dejar constancia",
-            "right": "registrar una decisión"
+            "left": "la clientela de toda la vida",
+            "right": "Los jubilados que juegan al ajedrez desde 1980."
           }
-        ]
+        ],
+        "why": "Cada expresión describe una acción o un grupo concreto del caso."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Peticiones indirectas: agrupa la fórmula de cortesía y destaca la acción, sin acentuar cada palabra.",
+    "focus": "Imperfecto de subjuntivo y futuro: «conservara» no suena como «conservará».",
     "explanation": [
-      "Peticiones indirectas: agrupa la fórmula de cortesía y destaca la acción, sin acentuar cada palabra.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "En las formas en -ra, la sílaba fuerte es la que va antes de «-ra»: con-ser-VA-ra, tu-VIE-ra. En el futuro, la fuerza cae al final: con-ser-va-RÁ. Si cambias el acento, cambias el tiempo y el sentido de la frase.",
+      "En «nosotros» la fuerza se queda en la misma sílaba y por eso la palabra se vuelve esdrújula: con-ser-VÁ-ra-mos, tu-VIÉ-ra-mos. Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "Marta afirma que el equipo está preparado."
+        "es": "Quería que Martina conservara la barra.",
+        "note": "con-ser-VA-ra: imperfecto de subjuntivo."
       },
       {
-        "es": "Marta exige que el equipo entregue el informe."
+        "es": "Martina conservará la barra.",
+        "note": "con-ser-va-RÁ: futuro."
       },
       {
-        "es": "Nos recuerda que asistamos mañana; es una convocatoria."
+        "es": "Nos pidió que tuviéramos paciencia.",
+        "note": "tu-VIÉ-ra-mos: esdrújula."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-01-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y elige la forma que oyes. Concéntrate en dónde cae la fuerza.",
       "items": [
         {
-          "q": "En la muestra 1 de coordinar sin imponer, ¿qué fragmento se oye?",
+          "q": "¿Qué forma oyes en la frase sobre el horno?",
           "options": [
-            "esté",
-            "estaba",
-            "está"
-          ],
-          "answer": 2,
-          "why": "Se presenta una afirmación.",
-          "audio": "Marta afirma que el equipo está preparado.",
-          "voice": "es-ES-f"
-        },
-        {
-          "q": "En la muestra 2 de coordinar sin imponer, ¿qué fragmento se oye?",
-          "options": [
-            "entregó",
-            "entregue",
-            "entregaba"
+            "arreglará",
+            "arreglara"
           ],
           "answer": 1,
-          "why": "Exigir influye en otra persona.",
-          "audio": "Marta exige que el equipo entregue el informe.",
-          "voice": "es-ES-f"
+          "audio": "Ella esperaba que el técnico arreglara el horno antes del sábado.",
+          "voice": "es-AR-f",
+          "why": "Fuerza en «gla»: imperfecto de subjuntivo tras «esperaba que»."
+        },
+        {
+          "q": "¿Qué forma oyes en la frase sobre el cartel?",
+          "options": [
+            "pintará",
+            "pintara"
+          ],
+          "answer": 0,
+          "audio": "Mañana Joaquín pintará el cartel de la entrada.",
+          "voice": "es-AR-m",
+          "why": "Fuerza al final: futuro, con «mañana»."
+        },
+        {
+          "q": "¿Qué forma oyes en la frase sobre las recetas?",
+          "options": [
+            "copiará",
+            "copiara",
+            "copiáramos"
+          ],
+          "answer": 2,
+          "audio": "La abuela quería que copiáramos las recetas a mano.",
+          "voice": "es-AR-f",
+          "why": "Forma de «nosotros», esdrújula: co-PIÁ-ra-mos."
+        },
+        {
+          "q": "¿Qué forma oyes en la frase sobre la vidriera?",
+          "options": [
+            "limpiara",
+            "limpiará"
+          ],
+          "answer": 1,
+          "audio": "El encargado limpiará la vidriera antes de abrir.",
+          "voice": "es-AR-m",
+          "why": "Fuerza al final: futuro."
         }
       ]
     },
     "produce": [
       {
-        "text": "Marta afirma que el equipo está preparado.",
-        "tip": "Peticiones indirectas: agrupa la fórmula de cortesía y destaca la acción, sin acentuar cada palabra.",
-        "voice": "es-ES-f"
+        "text": "Nos pidió que conserváramos el nombre del café.",
+        "tip": "Marca la fuerza en «vá» y no la pierdas al final de la frase.",
+        "voice": "es-AR-f"
       },
       {
-        "text": "Marta exige que el equipo entregue el informe.",
-        "tip": "Peticiones indirectas: agrupa la fórmula de cortesía y destaca la acción, sin acentuar cada palabra.",
-        "voice": "es-ES-f"
+        "text": "Quería que los mozos siguieran llevando chaleco.",
+        "tip": "si-GUIE-ran: la fuerza va antes de «-ran».",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Nos recuerda que asistamos mañana; es una convocatoria.",
-        "tip": "Peticiones indirectas: agrupa la fórmula de cortesía y destaca la acción, sin acentuar cada palabra.",
-        "voice": "es-ES-f"
+        "text": "Ojalá la abuela pudiera ver el salón lleno.",
+        "tip": "Une «ojalá la» sin pausa y destaca «pu-DIE-ra».",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "Quisiera reservar la mesa del fondo, por favor.",
+        "tip": "Tono amable: la voz baja suavemente al final.",
+        "voice": "es-AR-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Coordinar sin imponer",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "La sobremesa de los hermanos Ferraro",
+    "context": "Martina y Joaquín Ferraro van a reabrir el café de su abuela Delia en San Telmo. Después de cenar repasan qué les pidió ella y qué falta hacer. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Clara",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ma",
+        "name": "Martina",
+        "voice": "es-AR-f",
+        "role": "Se hace cargo de la gestión del café"
       },
       {
-        "id": "s2",
-        "name": "Pablo",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Inés",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "jo",
+        "name": "Joaquín",
+        "voice": "es-AR-m",
+        "role": "Se ocupa de la cocina y de la reforma"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Gracias por conectarse. El cliente dice que quiere ver algo el viernes, pero no aclara si espera una demostración o un producto cerrado. Antes de repartir tareas, prefiero que resolvamos esa ambigüedad. ¿Quién habló con él por última vez?"
+        "speaker": "ma",
+        "text": "Bueno, hagamos la lista antes de que se nos olvide algo. La abuela nos pidió tres cosas concretas: que no cambiáramos el nombre, que conserváramos las mesas de mármol y que siguiéramos abriendo a las siete, aunque a esa hora vengan cuatro personas."
       },
       {
-        "speaker": "s2",
-        "text": "Yo. Me dijo que el presupuesto estaba aprobado y que le enviáramos una propuesta visual. No dijo que entregáramos la aplicación completa. Sin embargo, en el calendario alguien escribió lanzamiento. Eso ha creado una urgencia que quizá no exista."
+        "speaker": "jo",
+        "text": "Lo del nombre y las mesas ya está. Lo de las siete me cuesta más. Ella quería que el café fuera el primer lugar iluminado de la cuadra, eso lo entiendo, pero también me dijo que no me matara trabajando. Las dos cosas a la vez no son fáciles."
       },
       {
-        "speaker": "s3",
-        "text": "Me alegra que lo aclares. Yo puedo revisar el diseño, siempre que otra persona compruebe las cifras. Lo que no puedo hacer es asumir las dos cosas y seguir respondiendo los mensajes de soporte. Necesito que esa condición quede escrita."
+        "speaker": "ma",
+        "text": "Por eso propongo turnos. Además, recuerda lo que le molestaba: que la gente esperara de pie. Le daba mucha vergüenza que alguien se fuera sin sentarse. Si contratamos a una persona más para la mañana, cumplimos las dos cosas."
       },
       {
-        "speaker": "s1",
-        "text": "De acuerdo. Pablo, ¿te parecería encargarte de las cifras hasta el miércoles? No te estoy pidiendo que abandones el informe, sino que nos digas qué parte habría que aplazar. Podemos negociar el alcance, pero no podemos repartir el mismo tiempo dos veces."
+        "speaker": "jo",
+        "text": "Está bien. Otra cosa: Ramón me pidió el lunes que le mande el menú nuevo antes del viernes, porque quiere opinar. Todavía no se lo mandé. Y me insistió en que el piano estaba afinado, que lo había revisado él mismo."
       },
       {
-        "speaker": "s2",
-        "text": "Puedo hacerlo si el informe pasa al lunes. Agradezco que lo plantees así. Cuando escuché que todos debíamos hacer un esfuerzo, entendí que se esperaba que trabajáramos el fin de semana. Con esta distribución, no sería necesario."
+        "speaker": "ma",
+        "text": "¿Afinado? La abuela no dejaba que nadie lo tocara sin permiso, y ahora resulta que Ramón lo revisa solo. En fin. Ojalá ella pudiera ver cómo quedó el salón. Le gustaría ver que la lámpara es la misma de su época."
       },
       {
-        "speaker": "s3",
-        "text": "Entonces falta confirmar el cambio con el cliente. Propongo que Clara lo llame y después resuma por escrito lo acordado. Así evitamos que cada persona interprete de manera distinta la palabra entrega."
+        "speaker": "jo",
+        "text": "Seguro. Mándale tú el menú a Ramón esta noche, que a ti te escucha más. Y pídele que nos diga lo que piensa sin vueltas: la abuela siempre quería que las cosas se hablaran de frente."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la conversación entera. ¿De qué hablan y con qué intención?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-01-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Buenos Aires?",
+          "prompt": "Elige la respuesta que resume la conversación.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Coordinar sin imponer?",
+              "q": "¿Qué hacen Martina y Joaquín?",
               "options": [
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas.",
-                "Convertir una urgencia ambigua en tareas negociadas"
-              ],
-              "answer": 2,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
-            },
-            {
-              "q": "¿Qué relación predomina entre las voces en «Coordinar sin imponer»?",
-              "options": [
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio."
+                "Discuten si deben vender el café de la abuela.",
+                "Revisan los encargos de su abuela y organizan lo pendiente.",
+                "Preparan un discurso para la reapertura."
               ],
               "answer": 1,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "Hacen una lista de lo que ella pidió y deciden cómo cumplirlo."
+            },
+            {
+              "q": "¿Cuál es el principal problema práctico?",
+              "options": [
+                "Abrir a las siete sin agotar a Joaquín.",
+                "Encontrar mesas de mármol iguales.",
+                "Cambiar el nombre del café."
+              ],
+              "answer": 0,
+              "why": "Joaquín dice que abrir temprano y no matarse trabajando no es fácil a la vez."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-01-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Coordinar sin imponer».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Qué condición plantea Inés?",
+              "q": "¿Qué le daba vergüenza a la abuela?",
               "options": [
-                "Que el cliente trabaje el sábado.",
-                "Que otra persona compruebe las cifras.",
-                "Que se cancele el diseño."
+                "Que el piano estuviera desafinado.",
+                "Que los mozos llevaran chaleco.",
+                "Que un cliente se fuera sin sentarse."
               ],
-              "answer": 1,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
+              "answer": 2,
+              "why": "Martina recuerda que le molestaba que la gente esperara de pie."
             },
             {
-              "q": "¿Qué frase aparece en la intervención inicial de «Coordinar sin imponer»?",
+              "q": "¿Qué encargo de Ramón sigue pendiente?",
               "options": [
-                "Gracias por conectarse.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión."
+                "Enviarle el menú nuevo antes del viernes.",
+                "Afinar el piano.",
+                "Contratar a otra persona."
               ],
               "answer": 0,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "Joaquín dice que todavía no se lo mandó; por eso usa «que le mande»."
+            },
+            {
+              "q": "¿Qué solución propone Martina para abrir temprano?",
+              "options": [
+                "Abrir a las nueve.",
+                "Organizar turnos y contratar a alguien para la mañana.",
+                "Pedir ayuda a Ramón."
+              ],
+              "answer": 1,
+              "why": "Propone turnos y una persona más por la mañana."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-01-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento del diálogo según lo que hace el verbo «que…».",
+          "categories": [
+            "Petición o deseo ya situado en el pasado",
+            "Encargo todavía pendiente",
+            "Información, no petición"
+          ],
           "items": [
             {
-              "prompt": "En «Coordinar sin imponer», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Entonces falta confirmar el cambio con el cliente. Propongo que Clara lo llame y después resuma por escrito lo acordado. Así evitamos que cada persona interprete de manera distinta la palabra entrega.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "nos pidió que no cambiáramos el nombre",
+              "cat": 0,
+              "why": "Petición de la abuela, ya cumplida: imperfecto."
+            },
+            {
+              "text": "me pidió el lunes que le mande el menú",
+              "cat": 1,
+              "why": "El viernes todavía no llegó: presente de subjuntivo."
+            },
+            {
+              "text": "me insistió en que el piano estaba afinado",
+              "cat": 2,
+              "why": "Ramón da un dato: indicativo."
+            },
+            {
+              "text": "le molestaba que la gente esperara de pie",
+              "cat": 0,
+              "why": "Emoción en pasado: imperfecto de subjuntivo."
+            },
+            {
+              "text": "no dejaba que nadie lo tocara",
+              "cat": 0,
+              "why": "«Dejar que» + imperfecto de subjuntivo."
             }
           ]
         }
@@ -440,197 +746,259 @@ export const b2w01: Module = {
     ]
   },
   "reading": {
-    "title": "Coordinar sin imponer: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "El Café Delia vuelve a encender las luces",
+    "genre": "Crónica de una revista de barrio",
+    "frame": "Texto original de SpanishCue escrito como crónica de la revista ficticia «Vecinos de San Telmo». Las personas y el café son inventados.",
     "text": [
-      "Equipo: después de la reunión del lunes, quiero aclarar qué se decidió y qué sigue pendiente. El cliente confirma que la presentación será el viernes; no ha solicitado que terminemos todas las pruebas para entonces. Esa diferencia importa. Si prometemos una versión definitiva, el equipo técnico tendrá que trabajar de noche y, aun así, no podrá garantizar que funcione en todos los dispositivos. Propongo que mostremos un prototipo y expliquemos sus límites con claridad. No considero aceptable trasladar al cliente una seguridad que todavía no tenemos.",
-      "Lucía insiste en que dispone de dos personas para revisar los datos. Tomás, en cambio, insiste en que asignemos una tercera persona al diseño. Ambas afirmaciones parecen incompatibles únicamente si damos por hecho que todas las tareas deben realizarse a la vez. Sugiero que Lucía cierre primero las cifras y que Tomás reciba apoyo después. Necesito que cada responsable indique, antes del miércoles, qué puede entregar sin comprometer la calidad. Nadie tiene que justificar públicamente sus circunstancias personales; basta con señalar su disponibilidad y las dependencias de su trabajo.",
-      "También conviene revisar cómo pedimos ayuda. Durante la reunión se repitió que el equipo debía implicarse más, pero no se concretó quién haría qué. Una invitación tan general puede parecer amable y resultar poco útil. Prefiero una petición precisa que permita negociar a una exigencia disfrazada de entusiasmo. Por mi parte, asumiré la conversación con el cliente y comunicaré cualquier cambio de alcance. Les pido que no acepten tareas nuevas sin consultar primero su efecto sobre los plazos ya acordados.",
-      "El jueves comprobaremos el avance. Si aparece un bloqueo, lo registraremos junto con una alternativa, sin buscar culpables. El objetivo de este correo es repartir decisiones, además de trabajo: coordinar bien no consiste en estar disponible a toda hora, sino en saber qué espera cada persona y qué puede esperar de las demás."
+      "Durante sesenta años, la esquina de Defensa y Carlos Calvo tuvo un horario fijo: a las siete en punto, Delia Ferraro levantaba la persiana y encendía las lámparas del Café Delia. Cuando cerró, hace dos años, muchos pensamos que la esquina se convertiría en otra tienda de recuerdos. Nos equivocamos. El sábado, sus nietos Martina y Joaquín reabrieron el local, y lo hicieron con una lista de encargos que la propia Delia les dejó por escrito.",
+      "La lista no era larga, pero sí precisa. Delia pidió que no cambiaran el nombre, que conservaran las mesas de mármol y que los mozos siguieran llamando a los clientes por su nombre. También quería que la carta tuviera siempre un plato barato, «para que nadie se quedara afuera por no tener plata». Martina cuenta que al principio esa condición le pareció imposible con los precios actuales: «Le dije a mi hermano que necesitábamos ganar dinero, y él me recordó que la abuela nunca había querido hacerse rica con el café».",
+      "No todo fue obediencia. Joaquín reconoce que discutieron mucho por la música. A Delia le molestaba que los bares pusieran canciones a todo volumen, y prohibía que alguien tocara el piano sin su permiso. Los hermanos decidieron que el piano se tocaría solo los viernes, con un pianista invitado, y que el resto de la semana el ruido sería el de siempre: tazas, diarios y conversaciones. «No sé si ella estaría de acuerdo con todo», admite Joaquín, «pero creo que le alegraría que la gente volviera a quedarse horas».",
+      "Desde esta revista nos permitimos una opinión. Una lista de encargos puede convertirse en una jaula si se lee al pie de la letra, y el Café Delia lo ha evitado. Los nietos no copiaron a su abuela: le preguntaron, a través de sus papeles, qué quería que sobreviviera. Ojalá más negocios del barrio tuvieran esa suerte, o esa paciencia. Por ahora, la persiana vuelve a subir a las siete."
     ],
     "glossary": [
       {
-        "es": "coordinar tareas",
-        "note": "organizar responsabilidades"
+        "es": "la persiana",
+        "note": "cierre metálico de un local"
       },
       {
-        "es": "cumplir un plazo",
-        "note": "entregar en la fecha acordada"
+        "es": "la plata",
+        "note": "en el Río de la Plata y otras zonas, «dinero» en registro coloquial"
       },
       {
-        "es": "delegar funciones",
-        "note": "encargar trabajo a otra persona"
+        "es": "al pie de la letra",
+        "note": "de manera literal, sin interpretar"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-01-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la crónica.",
         "items": [
           {
-            "q": "¿Qué cuestiona el correo?",
+            "q": "¿Por qué quería Delia un plato barato en la carta?",
             "options": [
-              "Que el cliente haya aprobado el presupuesto.",
-              "Que el equipo tenga responsables.",
-              "Confundir disponibilidad ilimitada con coordinación."
-            ],
-            "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué se infiere de lanzamiento?",
-            "options": [
-              "El equipo terminó todas las pruebas.",
-              "Una etiqueta interna intensificó la urgencia.",
-              "El cliente confirmó una fecha definitiva."
+              "Para atraer turistas.",
+              "Para que nadie quedara excluido por falta de dinero.",
+              "Para competir con el bar de enfrente."
             ],
             "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "La cita dice «para que nadie se quedara afuera por no tener plata»."
+          },
+          {
+            "q": "¿Qué decisión tomaron los hermanos sobre el piano?",
+            "options": [
+              "Venderlo para pagar la reforma.",
+              "Prohibir que nadie lo tocara.",
+              "Que se toque solo los viernes con un pianista invitado."
+            ],
+            "answer": 2,
+            "why": "El tercer párrafo lo explica."
+          },
+          {
+            "q": "¿Qué opina la revista?",
+            "options": [
+              "Que los nietos interpretaron los encargos sin convertirlos en una jaula.",
+              "Que los nietos traicionaron a su abuela.",
+              "Que los encargos de Delia eran imposibles de cumplir."
+            ],
+            "answer": 0,
+            "why": "El último párrafo valora que no leyeran la lista al pie de la letra."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-01-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «Coordinar sin imponer», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Quisiera aclarar el alcance de la entrega. El cliente confirma que dispone del presupuesto, pero todavía no ha pedido una versión definitiva. Propongo que presentemos el prototipo y que dejemos las pruebas adicionales para la semana siguiente. Entiendo que esta modificación afecte al informe; por eso, sugiero trasladarlo al lunes. Les agradecería que confirmaran su disponibilidad antes del miércoles. Una vez recibidas sus respuestas, enviaré un calendario actualizado con responsables y límites explícitos.",
+            "prompt": "Explica en 60–80 palabras qué encargo de Delia cumplieron los nietos al pie de la letra y cuál adaptaron. Usa al menos dos verbos en imperfecto de subjuntivo y cita una frase del texto.",
+            "model": "Delia pidió que no cambiaran el nombre y que conservaran las mesas de mármol, y los nietos lo cumplieron exactamente. En cambio, adaptaron lo del piano: ella prohibía que alguien lo tocara sin permiso, y ellos decidieron que sonara los viernes con un invitado. Joaquín lo reconoce: «No sé si ella estaría de acuerdo con todo». Me parece una adaptación respetuosa, porque mantiene su deseo de que el café fuera tranquilo.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Distingo un encargo cumplido y uno adaptado.",
+              "Cito una frase literal del texto.",
+              "Separo lo que dice el texto de mi valoración."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la crónica atribuye cada deseo a su autor.",
       "items": [
         {
-          "quote": "Equipo: después de la reunión del lunes, quiero aclarar qué se decidió y qué sigue pendiente.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "Delia pidió que no cambiaran el nombre, que conservaran las mesas de mármol",
+          "note": "Un solo «pidió» introduce varias peticiones; cada una repite «que» + imperfecto de subjuntivo."
         },
         {
-          "quote": "El objetivo de este correo es repartir decisiones, además de trabajo: coordinar bien no consiste en estar disponible a toda hora, sino en saber qué espera cada persona y qué puede esperar de las demás.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "él me recordó que la abuela nunca había querido hacerse rica",
+          "note": "«Recordar» informa aquí sobre un hecho: indicativo. Compáralo con «me recordó que la llamara»."
+        },
+        {
+          "quote": "Ojalá más negocios del barrio tuvieran esa suerte",
+          "note": "Deseo que la autora ve difícil: imperfecto de subjuntivo con valor de presente."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Recupera de B1 una petición y una valoración: transforma «necesito ayuda» en una petición negociable y explica qué cambia frente a «me alegra recibir ayuda».",
+    "intro": "Combina las dos clases: forma bien el verbo y decide si la frase cuenta un dato, una petición o un deseo.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-01-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Buenos Aires y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir lo que contó Martina.",
         "items": [
           {
             "words": [
-              "En",
-              "«Coordinar sin imponer»,",
-              "Marta",
-              "afirma",
+              "La",
+              "abuela",
+              "no",
+              "dejaba",
               "que",
-              "el",
-              "equipo",
-              "está",
-              "preparado."
+              "usáramos",
+              "la",
+              "cafetera",
+              "nueva."
             ],
-            "why": "Se presenta una afirmación."
+            "why": "«Dejar que» + imperfecto de subjuntivo."
           },
           {
             "words": [
-              "En",
-              "«Coordinar sin imponer»,",
               "Nos",
-              "recuerda",
+              "hizo",
+              "prometer",
               "que",
-              "asistamos",
-              "mañana;",
-              "es",
-              "una",
-              "convocatoria."
+              "abriríamos",
+              "el",
+              "café",
+              "en",
+              "invierno."
             ],
-            "why": "Recordar transmite aquí una petición."
+            "why": "«Hacer» + infinitivo, sin «que» detrás de «hizo»."
+          },
+          {
+            "words": [
+              "Le",
+              "sorprendió",
+              "que",
+              "vinieran",
+              "tantos",
+              "vecinos",
+              "a",
+              "la",
+              "reapertura."
+            ],
+            "why": "Emoción en pasado + imperfecto de subjuntivo."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-01-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de coordinar sin imponer; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "Exijo que el equipo entrega el prototipo.",
+            "sentence": "Mi tía nos aconsejó que pidiéramos un préstamo y que lo devolvamos en dos años.",
             "answers": [
-              "Exijo que el equipo entregue el prototipo."
+              "Mi tía nos aconsejó que pidiéramos un préstamo y que lo devolviéramos en dos años."
             ],
-            "why": "Exigir selecciona subjuntivo al influir en otro sujeto."
+            "why": "Los dos verbos dependen de «aconsejó»: los dos en imperfecto."
           },
           {
-            "sentence": "Nos insiste que revisemos el plazo.",
+            "sentence": "El arquitecto quería que dijiéramos qué paredes podía tirar.",
             "answers": [
-              "Nos insiste en que revisemos el plazo."
+              "El arquitecto quería que dijéramos qué paredes podía tirar."
             ],
-            "why": "Insistir en conserva la preposición."
+            "why": "dijeron → dijéramos, sin «i»."
           },
           {
-            "sentence": "Quiero que revisar el informe yo.",
+            "sentence": "A la abuela le gustaba que los clientes se quedarían a charlar.",
             "answers": [
-              "Quiero revisar el informe yo."
+              "A la abuela le gustaba que los clientes se quedaran a charlar.",
+              "A la abuela le gustaba que los clientes se quedasen a charlar."
             ],
-            "why": "Con el mismo sujeto, el infinitivo evita una subordinada conjugada."
+            "why": "Después de un verbo de emoción no va el condicional."
+          },
+          {
+            "sentence": "Ojalá tendríamos más espacio para la cocina.",
+            "answers": [
+              "Ojalá tuviéramos más espacio para la cocina.",
+              "Ojalá tuviésemos más espacio para la cocina."
+            ],
+            "why": "«Ojalá» + imperfecto de subjuntivo para un deseo difícil."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-01-x-modo",
+        "type": "classify",
+        "prompt": "¿Informa o pide? Clasifica cada frase con «decir», «escribir» o «insistir».",
+        "categories": [
+          "Informa: indicativo",
+          "Pide: subjuntivo"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre negociar responsabilidades en un equipo con una postura y una razón; adapta el destinatario.",
-            "model": "Quisiera aclarar el alcance de la entrega.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Ramón dijo que el pianista llegaba a las nueve.",
+            "cat": 0,
+            "why": "Da un horario."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Coordinar sin imponer» sin debilitarla, y responde con una condición verificable.",
-            "model": "Quisiera aclarar el alcance de la entrega. El cliente confirma que dispone del presupuesto, pero todavía no ha pedido una versión definitiva. Propongo que presentemos el prototipo y que dejemos las pruebas adicionales para la semana siguiente. Entiendo que esta modificación afecte al informe; por eso, sugiero trasladarlo al lunes. Les agradecería que confirmaran su disponibilidad antes del miércoles. Una vez recibidas sus respuestas, enviaré un calendario actualizado con responsables y límites explícitos.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Ramón dijo que el pianista llegara a las nueve.",
+            "cat": 1,
+            "why": "Da una instrucción."
+          },
+          {
+            "text": "La vecina escribió que el ruido la despertaba.",
+            "cat": 0,
+            "why": "Describe un hecho."
+          },
+          {
+            "text": "La vecina escribió que bajáramos el volumen.",
+            "cat": 1,
+            "why": "Pide una acción."
+          },
+          {
+            "text": "Martina insistió en que contratáramos a alguien.",
+            "cat": 1,
+            "why": "Insiste para que se haga algo."
+          },
+          {
+            "text": "Joaquín insistió en que ya había pagado la luz.",
+            "cat": 0,
+            "why": "Afirma un dato."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-01-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera de B1 una petición y una valoración: transforma «necesito ayuda» en una petición negociable y explica qué cambia frente a «me alegra recibir ayuda».",
-            "model": "Necesito que revisemos el plazo; me alegra que podamos negociar. La primera intervención influye y la segunda valora.",
+            "prompt": "Cuenta en dos frases tres cosas que una persona mayor de tu familia quería que tú hicieras cuando eras chico o chica.",
+            "model": "Mi abuelo quería que aprendiera a nadar y que leyera el diario todos los días. Además, le preocupaba que pasara demasiado tiempo solo.",
             "checklist": [
-              "Distingo petición y valoración.",
-              "Explico la elección del subjuntivo."
+              "Uso al menos dos verbos distintos en imperfecto de subjuntivo.",
+              "Incluyo un verbo de emoción."
             ]
           },
           {
-            "prompt": "Recupera una valoración de B1 sobre el reparto de tareas y conviértela en una petición al equipo; explica cómo cambia la función.",
-            "model": "Es importante que repartamos la carga. Les pido que indiquen qué pueden asumir. La valoración presenta un criterio; la petición busca una acción.",
+            "prompt": "Cuenta un encargo que alguien te hizo la semana pasada y que todavía no cumpliste. Explica por qué usas presente o imperfecto.",
+            "model": "Mi jefa me pidió el jueves que le envíe el informe antes del lunes. Uso el presente porque el lunes todavía no llegó; «que le enviara» también sería correcto.",
             "checklist": [
-              "Conservo el subjuntivo cuando corresponde.",
-              "Distingo criterio y acción solicitada."
+              "Sitúo la petición en el pasado.",
+              "Justifico el tiempo según si el encargo sigue pendiente."
+            ]
+          },
+          {
+            "prompt": "Escribe un deseo difícil con «ojalá» y una petición cortés con «quisiera» relacionados con un lugar que te importa.",
+            "model": "Ojalá la librería de mi calle no tuviera que cerrar en enero. Quisiera hablar con el dueño para ofrecerle ayuda con las redes.",
+            "checklist": [
+              "Uso «ojalá» + imperfecto de subjuntivo.",
+              "Uso «quisiera» como fórmula de cortesía."
             ]
           }
         ]
@@ -638,196 +1006,239 @@ export const b2w01: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe a un equipo que ha confundido una demostración con una entrega definitiva. Distingue dos hechos de tres peticiones; negocia una redistribución e indica cómo confirmarás el acuerdo.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Tu prima vive en Madrid y no pudo venir a la reunión en la que tu familia decidió reabrir el café de la abuela. Escríbele un correo (200–260 palabras): cuéntale qué había pedido la abuela, qué quería cada persona en la reunión, qué se decidió y qué encargo queda pendiente para ella.",
+    "context": "El correo es familiar pero claro: tu prima tiene que poder opinar con la información que le das. Puedes usar los datos del café Delia o inventar tu propio negocio familiar.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Anota tres encargos de la abuela y dos deseos de personas de la reunión, con quién pidió qué.",
+      "Ordena el correo: saludo y motivo, lo que pidió la abuela, la reunión, el encargo para tu prima y despedida.",
+      "Escribe usando «pidió que», «quería que», «le molestaba que», «para que» y al menos un infinitivo con el mismo sujeto.",
+      "Revisa cada imperfecto de subjuntivo (raíz del pretérito, tilde en «nosotros») y corrige los verbos que informan y no piden."
     ],
     "useLanguage": [
-      "Las sustantivas presentan información o una acción sobre la que alguien influye. Afirmar, comprobar o percibir normalmente introducen indicativo; pedir, valorar o negar una afirmación suelen introducir subjuntivo. No basta buscar que: hay que interpretar qué hace el hablante con el mensaje.",
-      "Decir, insistir y recordar admiten dos interpretaciones: comunica que la fecha es firme, pero dice que entreguemos el borrador. Con sujetos distintos aparece que y verbo conjugado; con el mismo sujeto, quiero revisar. Una petición indirecta sigue necesitando un responsable, un plazo y una posibilidad real de respuesta.",
-      "Recupera de B1 una petición y una valoración: transforma «necesito ayuda» en una petición negociable y explica qué cambia frente a «me alegra recibir ayuda»."
+      "nos pidió que + imperfecto de subjuntivo",
+      "quería / esperaba / prefería que…",
+      "le molestaba / le alegró que…",
+      "para que + imperfecto de subjuntivo",
+      "no nos dejaba + infinitivo / no dejaba que…",
+      "me pidió que te pregunte… (encargo pendiente)"
     ],
     "model": [
-      "Equipo: quisiera aclarar el alcance de la entrega del viernes. El cliente confirma que dispone del presupuesto, pero todavía no ha pedido una versión definitiva de la aplicación. En la última conversación solicitó una propuesta visual. Por eso, propongo que presentemos el prototipo y expliquemos qué funciones siguen en pruebas. Prefiero acordar un objetivo realista a generar una expectativa que no podamos cumplir.",
-      "Les pido que revisen la siguiente distribución. Inés se encargaría del diseño y Pablo comprobaría las cifras antes del miércoles. Entiendo que esta tarea afecte al informe que Pablo prepara; por tanto, sugiero trasladar ese informe al lunes, previa confirmación de su destinatario. No considero viable que una persona asuma ambas entregas en el mismo plazo. Si alguien encuentra otra dependencia, agradecería que la indicara antes de aceptar una responsabilidad adicional.",
-      "Por mi parte, hablaré con el cliente y dejaré por escrito la diferencia entre demostración y lanzamiento. También necesito que cada responsable confirme qué puede entregar y qué información espera recibir de los demás. No hace falta explicar circunstancias personales: basta con precisar disponibilidad y límites. El jueves comprobaremos el avance y registraremos cualquier bloqueo junto con una alternativa.",
-      "Una vez recibidas sus respuestas, enviaré el calendario actualizado. Si el cliente exige funciones nuevas, revisaremos primero su efecto sobre el trabajo acordado. Gracias por ayudar a que la coordinación permita anticipar dificultades, en lugar de depender de esfuerzos extraordinarios a última hora."
+      "Querida Sofía: te escribo para contarte cómo fue la reunión del domingo, porque sé que querías estar y no pudiste. Al final decidimos reabrir el café, pero antes leímos la carta que la abuela dejó en el cajón de la caja. Nos pidió tres cosas: que no cambiáramos el nombre, que conserváramos las mesas de mármol y que siempre hubiera en la carta un plato barato para que nadie se quedara sin comer.",
+      "La reunión no fue fácil. Mamá quería vender el local y quedarse tranquila; le preocupaba que Joaquín y yo trabajáramos demasiado. Joaquín, en cambio, quería encargarse de la cocina y esperaba que yo llevara las cuentas. Tío Raúl insistió en que el alquiler era muy alto, y tenía razón, así que le pedimos que hablara con el dueño del edificio antes de firmar nada.",
+      "Al final llegamos a un acuerdo: abriremos en marzo, con horario reducido el primer mes. Ahora viene tu parte: Joaquín me pidió que te pregunte si puedes diseñar el cartel nuevo, porque nadie dibuja como tú. Le gustaría que mantuvieras la letra antigua de la abuela y que me mandaras un boceto antes de fin de mes, para que lo veamos todos juntos.",
+      "Contéstame cuando puedas y dime qué te parece todo. Ojalá pudieras venir para la inauguración. Un abrazo grande, Martina."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Atribuyo cada petición y cada deseo a la persona correcta.",
+      "Uso imperfecto de subjuntivo cuando el verbo principal está en pasado y el sujeto cambia.",
+      "Uso indicativo cuando alguien informa de un dato.",
+      "Explico con claridad qué encargo queda pendiente.",
+      "El registro es cercano pero ordenado, con párrafos claros."
     ],
     "words": [
-      220,
-      280
+      200,
+      260
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Prepara palabras clave, no un texto para leer. Si te grabas, la grabación queda en tu dispositivo; la aplicación no evalúa tu pronunciación.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Coordinar sin imponer» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Lo que esperaban de mí",
+        "prompt": "Habla durante unos dos minutos de una persona que influyó en ti (familiar, docente, entrenador). Cuenta qué te pedía, qué quería que hicieras, qué le molestaba o le alegraba y si cumpliste o no sus deseos.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Escribe cuatro verbos en imperfecto de subjuntivo que vas a usar.",
+          "Prepara un ejemplo con el mismo sujeto (infinitivo)."
         ],
-        "seconds": 180,
-        "model": "Quisiera aclarar el alcance de la entrega. El cliente confirma que dispone del presupuesto, pero todavía no ha pedido una versión definitiva. Propongo que presentemos el prototipo y que dejemos las pruebas adicionales para la semana siguiente. Entiendo que esta modificación afecte al informe; por eso, sugiero trasladarlo al lunes. Les agradecería que confirmaran su disponibilidad antes del miércoles. Una vez recibidas sus respuestas, enviaré un calendario actualizado con responsables y límites explícitos.",
+        "seconds": 150,
+        "model": "Mi profesora de piano, Elena, era muy exigente. Quería que practicara una hora cada día y no dejaba que tocara canciones de moda en clase. Le molestaba mucho que llegara tarde. Al principio yo solo quería terminar rápido, pero con los años entendí por qué nos pedía que escucháramos antes de tocar. Hoy le agradezco que fuera tan paciente.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Uso al menos cuatro formas distintas del imperfecto de subjuntivo.",
+          "Pronuncio la forma de «nosotros» con acento esdrújulo.",
+          "Termino con una valoración personal."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de negociar responsabilidades en un equipo. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "¿Qué quería realmente la abuela?",
+        "prompt": "Tu docente es un primo que quiere vender el piano del café. Tú le recuerdas lo que pidió la abuela. Escucha su argumento, hazle al menos dos preguntas, aclara qué dijo ella exactamente y negocia una solución.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara dos encargos de la abuela en imperfecto de subjuntivo.",
+          "Prepara una frase para conceder: «Entiendo que quieras…, pero ella nos pidió que…».",
+          "Piensa en una propuesta intermedia."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Hago preguntas reales y respondo a lo que dice mi interlocutor.",
+          "Distingo lo que la abuela pidió de lo que yo interpreto.",
+          "Propongo una solución concreta."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a la próxima clase lo que preparaste esta semana y úsalo con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Coordinar sin imponer» en tres minutos y responde a una objeción inesperada.",
+        "move": "Cuéntale",
+        "task": "Cuéntale a tu profesor tres cosas que alguien esperaba de ti cuando empezaste un trabajo o un curso.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "Me pidió que…",
+          "Esperaba que…",
+          "Le molestaba que…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Buenos Aires; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Pregúntale",
+        "task": "Pregúntale qué le pedían sus profesores cuando era estudiante y qué no le dejaban hacer.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "¿Qué te pedían que…?",
+          "¿Te dejaban…?"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre negociar responsabilidades en un equipo; identifica una condición que todavía necesita confirmación.",
+        "move": "Aclara",
+        "task": "Lee una frase con «dijo que» o «insistió en que» y pide a tu profesor que confirme si informa o pide.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Aquí es un dato o una petición?",
+          "Entonces, ¿iría en subjuntivo?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu correo para la prima con los imperfectos de subjuntivo subrayados y una duda sobre un verbo irregular."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Coordinar sin imponer», ¿qué resume mejor el propósito?",
-        "options": [
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas.",
-          "Convertir una urgencia ambigua en tareas negociadas"
+        "type": "gap",
+        "q": "Mis padres querían que yo ___ (estudiar) Derecho, pero elegí Cocina.",
+        "answers": [
+          [
+            "estudiara",
+            "estudiase"
+          ]
         ],
-        "answer": 2,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Yo. Me dijo que el presupuesto estaba aprobado y que le enviáramos una propuesta visual. No dijo que entregáramos la aplicación completa. Sin embargo, en el calendario alguien escribió lanzamiento. Eso ha creado una urgencia que quizá no exista.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Pablo en «Coordinar sin imponer», ¿qué intervención reconoces?",
-        "options": [
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Yo"
-        ],
-        "answer": 2,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "Verbo de deseo en pasado y otro sujeto."
       },
       {
         "type": "gap",
-        "q": "La coordinadora niega que ___ recursos suficientes.",
+        "q": "La directora nos prohibió que ___ (poner) carteles en la fachada.",
         "answers": [
           [
-            "haya"
+            "pusiéramos",
+            "pusiésemos"
           ]
         ],
-        "why": "Negar una afirmación selecciona subjuntivo."
+        "why": "pusieron → pusiéramos, con tilde."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «Eva informa: «La presentación empieza a las diez».» Transmite con Eva nos dice que.",
-        "model": "Eva nos dice que la presentación empieza a las diez.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "Les explicó todo despacio para que lo ___ (entender) bien.",
+        "answers": [
+          [
+            "entendieran",
+            "entendiesen"
+          ]
+        ],
+        "why": "«Para que» con acción principal pasada."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué forma es correcta? «El dueño quería ___ el local antes de diciembre».",
+        "options": [
+          "que vendiera",
+          "vender",
+          "que venda"
+        ],
+        "answer": 1,
+        "why": "El dueño quiere y el dueño vende: infinitivo."
+      },
+      {
+        "type": "choice",
+        "q": "«Nos dijo que el café cerraba los lunes.» ¿Qué hace «dijo» aquí?",
+        "options": [
+          "Da una orden.",
+          "Expresa un deseo difícil.",
+          "Informa de un dato."
+        ],
+        "answer": 2,
+        "why": "Indicativo: es una información."
+      },
+      {
+        "type": "listen",
+        "q": "¿Qué pidió la abuela, según el audio?",
+        "audio": "La abuela le pidió a Joaquín que nunca sirviera el café recalentado.",
+        "voice": "es-AR-f",
+        "options": [
+          "Que no sirviera café recalentado.",
+          "Que sirviera el café más caliente.",
+          "Que dejara de servir café."
+        ],
+        "answer": 0,
+        "why": "«Que nunca sirviera el café recalentado»."
       },
       {
         "type": "error",
-        "sentence": "Les pedimos que confirman el reparto por correo.",
+        "sentence": "Le pedí al electricista que venga ayer a las ocho.",
         "answers": [
-          "Les pedimos que confirmen el reparto por correo."
+          "Le pedí al electricista que viniera ayer a las ocho.",
+          "Le pedí al electricista que viniese ayer a las ocho."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "«Ayer» cierra el encargo en el pasado: imperfecto de subjuntivo."
+      },
+      {
+        "type": "error",
+        "sentence": "Nos sorprendió que el banco nos daba el préstamo tan rápido.",
+        "answers": [
+          "Nos sorprendió que el banco nos diera el préstamo tan rápido.",
+          "Nos sorprendió que el banco nos diese el préstamo tan rápido."
+        ],
+        "why": "Verbo de emoción + que + subjuntivo."
+      },
+      {
+        "type": "order",
+        "words": [
+          "Esperaba",
+          "que",
+          "sus",
+          "nietos",
+          "mantuvieran",
+          "viva",
+          "la",
+          "tradición."
+        ],
+        "why": "mantuvieron → mantuvieran."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Coordinar sin imponer».",
-        "model": "Quisiera aclarar el alcance de la entrega. El cliente confirma que dispone del presupuesto, pero todavía no ha pedido una versión definitiva. Propongo que presentemos el prototipo y que dejemos las pruebas adicionales para la semana siguiente. Entiendo que esta modificación afecte al informe; por eso, sugiero trasladarlo al lunes. Les agradecería que confirmaran su disponibilidad antes del miércoles. Una vez recibidas sus respuestas, enviaré un calendario actualizado con responsables y límites explícitos.",
+        "prompt": "Escribe dos frases sobre un lugar de tu barrio que cerró: qué querían los vecinos que pasara y un deseo difícil con «ojalá».",
+        "model": "Los vecinos querían que el cine se convirtiera en un centro cultural. Ojalá alguien lo comprara y lo abriera otra vez.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre negociar responsabilidades en un equipo; concede una razón y conserva tu argumento.",
-        "model": "Quisiera aclarar el alcance de la entrega. El cliente confirma que dispone del presupuesto, pero todavía no ha pedido una versión definitiva. Propongo que presentemos el prototipo y que dejemos las pruebas adicionales para la semana siguiente. Entiendo que esta modificación afecte al informe; por eso, sugiero trasladarlo al lunes. Les agradecería que confirmaran su disponibilidad antes del miércoles. Una vez recibidas sus respuestas, enviaré un calendario actualizado con responsables y límites explícitos.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 1 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Uso «querían que» + imperfecto de subjuntivo.",
+          "Uso «ojalá» + imperfecto de subjuntivo."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo negociar responsabilidades en un equipo.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo formar el imperfecto de subjuntivo en -ra y en -se desde el pretérito, también con verbos irregulares.",
+      "Puedo contar lo que alguien pidió, quiso o sintió en el pasado y usar el infinitivo cuando el sujeto es el mismo.",
+      "Puedo distinguir si «decir» o «insistir» informan o piden, y aclarar si un encargo sigue pendiente."
     ],
     "review": [
-      "Recupera de B1 una petición y una valoración: transforma «necesito ayuda» en una petición negociable y explica qué cambia frente a «me alegra recibir ayuda».",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, sin mirar la tabla, conjuga «decir», «poder» y «dormir» en imperfecto de subjuntivo para todas las personas.",
+      "En tres días, cuenta en voz alta cinco cosas que te pidieron esta semana; marca cuáles siguen pendientes.",
+      "Antes de la semana 2, relee tu correo y cambia dos verbos al presente para ver cómo cambia el marco temporal."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/sistema-verbal/preterito-imperfecto-subjuntivo",
+      "label": "Clase: Imperfecto de subjuntivo: formas -ra y -se"
+    },
+    {
+      "path": "/gramatica/subjuntivo-tras-verbos-de-influencia-en",
+      "label": "Clase: Subjuntivo tras verbos de influencia en pasado"
+    }
+  ]
 };

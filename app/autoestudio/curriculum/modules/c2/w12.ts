@@ -1,875 +1,951 @@
 import type { Module } from "../../types";
 
-/** Material original C2. Audio mediante síntesis; sin acreditación regional. */
+/**
+ * C2 · semana 12 · Autoestudio espejo de G223 (ironía, lítotes y negación
+ * pragmática). Repaso autónomo con la crítica gastronómica ficticia de un
+ * restaurante del barrio Laureles, en Medellín: un pódcast, una reseña, los
+ * comentarios de los lectores y la respuesta de la dueña. Audio mediante
+ * síntesis; sin acreditación regional.
+ */
 export const c2w12: Module = {
-  "id": "c2-12",
-  "level": "c2",
-  "week": 12,
-  "kind": "core",
-  "title": "Fuentes que no dicen lo mismo",
-  "subtitle": "Síntesis de fuentes contradictorias para públicos distintos",
-  "stop": {
-    "place": "Medellín",
-    "country": "Colombia"
+  id: "c2-12",
+  level: "c2",
+  week: 12,
+  kind: "core",
+  title: "No está nada mal: leer entre líneas una reseña",
+  subtitle: "Repaso de las lítotes, la negación que no niega, el alcance de la negación y la ironía verbal",
+  stop: {
+    place: "Medellín",
+    country: "Colombia",
   },
-  "minutes": 135,
-  "newObjectives": [
-    "c2.disc.mediacion",
-    "c2.voc.lexico-tecnico-divulgativo",
-    "c2.pron.claridad-mediacion",
-    "c2.wri.informe-mediacion",
-    "c2.lis.fuentes-contradictorias"
+  minutes: 135,
+  newObjectives: [
+    "c2.gram.g223",
+    "c2.voc.w12-mesa-y-critica",
+    "c2.pron.w12-tono-ironico",
+    "c2.lis.w12-podcast-resena",
+    "c2.read.w12-critica-gastronomica",
+    "c2.wri.w12-resena-equilibrada",
+    "c2.spk.w12-respuesta-propietaria",
+    "c2.fun.w12-leer-ironia",
+    "c2.disc.w12-alcance-negacion",
   ],
-  "reviewObjectives": [
-    "c2.voc.casi-sinonimos",
-    "c2.voc.refranes-intertextualidad",
-    "c2.pron.matiz-lexico-voz",
-    "c2.wri.precision-lexica",
-    "c2.read.columna-literaria",
-    "c2.disc.humor-juegos",
-    "c2.voc.expresiones-idiomaticas",
-    "c2.pron.ritmo-humor",
-    "c2.read.humor-escrito",
-    "c2.spk.anecdota-humor"
-  ],
-  "prerequisites": [
-    "c2-11"
-  ],
-  "goal": {
-    "canDo": "Puedo integrar fuentes parcialmente contradictorias y adaptarlas a decisiones de públicos distintos.",
-    "steps": [
-      "Lee las fuentes y distingue dato, inferencia y evaluación.",
-      "Escucha el intercambio antes de consultar su transcripción.",
-      "Aplica síntesis de fuentes contradictorias para públicos distintos a una decisión comunicativa concreta.",
-      "Produce el dossier escrito, revisa una elección y defiéndela oralmente."
-    ]
-  },
-  "theory": {
-    "intro": "Los casos, documentos y voces de esta semana son originales y ficticios. La dificultad está en controlar relaciones de significado, no en acumular palabras raras.",
-    "parts": [
-      {
-        "heading": "Síntesis de fuentes contradictorias para públicos distintos",
-        "body": [
-          "Sintetizar no equivale a promediar posturas. Dos fuentes pueden discrepar por medir fenómenos distintos, por usar periodos diferentes o por valorar de modo diferente el mismo dato. Según atribuye; presuntamente marca distancia pero no identifica por sí solo una fuente; se desprende que anuncia una inferencia del redactor. Mantén separadas evidencia, interpretación y propuesta, y selecciona el detalle que necesita cada destinatario para decidir.",
-          "En este caso, Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes. La formulación elegida debe permitir al destinatario reconstruir la diferencia relevante y reconocer qué no se ha demostrado."
-        ],
-        "examples": [
-          {
-            "es": "El informe mide tiempos medios; la asociación describe casos extremos."
-          },
-          {
-            "es": "Según el equipo técnico, disminuyó la espera registrada."
-          },
-          {
-            "es": "De esos datos no se desprende que todas las personas esperen menos."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "El informe propone de publicar la antigüedad de los casos.",
-            "right": "El informe propone publicar la antigüedad de los casos.",
-            "why": "Proponer seguido de infinitivo no exige de."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretar, atribuir y revisar en este caso",
-        "body": [
-          "Una síntesis equilibrada no necesita tratar como equivalentes evidencias de distinta naturaleza. Para defender esa lectura, identifica una formulación y el detalle que la sostiene. Prueba después una explicación rival y señala qué dato necesitarías para preferirla.",
-          "La versión para un público nuevo puede cambiar léxico, orden y longitud, pero debe conservar esta condición: El promedio publicado excluye expedientes todavía abiertos. Un cambio de registro que la elimina cambia también el contenido."
-        ],
-        "examples": [
-          {
-            "es": "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.",
-            "note": "Síntesis con alcance delimitado."
-          },
-          {
-            "es": "Una de las fuentes necesariamente miente.",
-            "note": "Lectura excesiva que el dossier no respalda."
-          }
-        ],
-        "tip": "La mascota te invita a conservar una duda productiva: llévala a clase junto con una prueba, no con una impresión aislada."
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Relaciona forma y efecto comunicativo en el expediente; la explicación importa tanto como la respuesta.",
-    "exercises": [
-      {
-        "id": "c2-12-gramatica-alcance",
-        "type": "choice",
-        "prompt": "Selecciona la interpretación defendible de Fuentes que no dicen lo mismo.",
-        "items": [
-          {
-            "q": "En el caso de Fuentes que no dicen lo mismo, ¿qué formulación preserva el alcance?",
-            "options": [
-              "Según el equipo técnico, disminuyó la espera registrada.",
-              "Seis testimonios permiten calcular la frecuencia general del problema."
-            ],
-            "answer": 0,
-            "why": "Sintetizar no equivale a promediar posturas. Dos fuentes pueden discrepar por medir fenómenos distintos, por usar periodos diferentes o por valorar de modo diferente el mismo dato. Según atribuye; presuntamente marca distancia pero no identifica por sí solo una fuente; se desprende que anuncia una inferencia del redactor. Mantén separadas evidencia, interpretación y propuesta, y selecciona el detalle que necesita cada destinatario para decidir."
-          },
-          {
-            "q": "¿Qué cautela lingüística resulta necesaria al explicar Fuentes que no dicen lo mismo?",
-            "options": [
-              "Una síntesis equilibrada no necesita tratar como equivalentes evidencias de distinta naturaleza.",
-              "Una de las fuentes necesariamente miente."
-            ],
-            "answer": 0,
-            "why": "Relaciona forma, contexto y efecto; evita ampliar una conclusión más allá de su base."
-          }
-        ]
-      },
-      {
-        "id": "c2-12-gramatica-forma",
-        "type": "gap",
-        "prompt": "Completa las relaciones gramaticales del caso Fuentes que no dicen lo mismo.",
-        "items": [
-          {
-            "q": "El promedio excluye los expedientes aún ___.",
-            "answers": [
-              [
-                "abiertos",
-                "pendientes"
-              ]
-            ],
-            "why": "Sintetizar no equivale a promediar posturas. Dos fuentes pueden discrepar por medir fenómenos distintos, por usar periodos diferentes o por valorar de modo diferente el mismo dato. Según atribuye; presuntamente marca distancia pero no identifica por sí solo una fuente; se desprende que anuncia una inferencia del redactor. Mantén separadas evidencia, interpretación y propuesta, y selecciona el detalle que necesita cada destinatario para decidir."
-          },
-          {
-            "q": "De los seis casos no se desprende ___ todos esperen más.",
-            "answers": [
-              [
-                "que"
-              ]
-            ],
-            "why": "Sintetizar no equivale a promediar posturas. Dos fuentes pueden discrepar por medir fenómenos distintos, por usar periodos diferentes o por valorar de modo diferente el mismo dato. Según atribuye; presuntamente marca distancia pero no identifica por sí solo una fuente; se desprende que anuncia una inferencia del redactor. Mantén separadas evidencia, interpretación y propuesta, y selecciona el detalle que necesita cada destinatario para decidir."
-          },
-          {
-            "q": "La mediadora distingue el dato ___ la propuesta.",
-            "answers": [
-              [
-                "de"
-              ]
-            ],
-            "why": "Sintetizar no equivale a promediar posturas. Dos fuentes pueden discrepar por medir fenómenos distintos, por usar periodos diferentes o por valorar de modo diferente el mismo dato. Según atribuye; presuntamente marca distancia pero no identifica por sí solo una fuente; se desprende que anuncia una inferencia del redactor. Mantén separadas evidencia, interpretación y propuesta, y selecciona el detalle que necesita cada destinatario para decidir."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Usa estas unidades para describir diferencias que el caso exige. La definición orienta el uso; contrástala con la frase completa.",
-    "groups": [
-      {
-        "title": "Precisión para Fuentes que no dicen lo mismo",
-        "items": [
-          {
-            "es": "compatibilizar",
-            "note": "hacer coexistir elementos sin borrar sus diferencias"
-          },
-          {
-            "es": "dato atípico",
-            "note": "observación alejada del patrón habitual"
-          },
-          {
-            "es": "promedio",
-            "note": "medida agregada que puede ocultar dispersión"
-          },
-          {
-            "es": "testimonio",
-            "note": "relato situado de una experiencia"
-          },
-          {
-            "es": "ponderar",
-            "note": "valorar el peso relativo de varios elementos"
-          },
-          {
-            "es": "trazabilidad",
-            "note": "posibilidad de reconstruir el origen de una afirmación"
-          },
-          {
-            "es": "síntesis crítica",
-            "note": "integración que examina acuerdos y límites"
-          },
-          {
-            "es": "destinatario",
-            "note": "persona o grupo para quien se adapta el mensaje"
-          }
-        ]
-      }
+  reviewObjectives: ["c2.gram.g221","c2.gram.g222","c2.voc.w11-oferta-local","c2.pron.w11-reserva-oido","c2.lis.w11-borradores-respuesta","c2.read.w11-columna-libreria","c2.wri.w11-carta-rechazo","c2.spk.w11-reunion-propietario","c2.fun.w11-rechazar-sin-romper","c2.disc.w11-hecho-sospecha-rumor"],
+  prerequisites: ["c2-11"],
+  goal: {
+    canDo: "Puedo interpretar y usar lítotes, negaciones expletivas, términos de polaridad negativa e ironía verbal, controlar el alcance de una negación y decidir cuándo la ironía funciona y cuándo conviene evitarla.",
+    steps: [
+      "Repasa en la teoría las lítotes y sus grados, la negación que no niega, el alcance de la negación y las marcas de la ironía.",
+      "Practica con frases de reseñas, comentarios de lectores y mensajes de la cocina de un restaurante de Medellín.",
+      "Escucha a Mariana y a Julián comentar en su pódcast la visita al restaurante y lee la crítica publicada en la revista.",
+      "Redacta una reseña equilibrada, revísala con la lista de control y responde en voz alta como si fueras la dueña del restaurante.",
     ],
-    "exercises": [
-      {
-        "id": "c2-12-lexico",
-        "type": "match",
-        "prompt": "Relaciona cada unidad con la distinción que aporta al expediente de Fuentes que no dicen lo mismo.",
-        "pairs": [
-          {
-            "left": "compatibilizar",
-            "right": "hacer coexistir elementos sin borrar sus diferencias"
-          },
-          {
-            "left": "dato atípico",
-            "right": "observación alejada del patrón habitual"
-          },
-          {
-            "left": "promedio",
-            "right": "medida agregada que puede ocultar dispersión"
-          },
-          {
-            "left": "testimonio",
-            "right": "relato situado de una experiencia"
-          },
-          {
-            "left": "ponderar",
-            "right": "valorar el peso relativo de varios elementos"
-          },
-          {
-            "left": "trazabilidad",
-            "right": "posibilidad de reconstruir el origen de una afirmación"
-          },
-          {
-            "left": "síntesis crítica",
-            "right": "integración que examina acuerdos y límites"
-          },
-          {
-            "left": "destinatario",
-            "right": "persona o grupo para quien se adapta el mensaje"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Jerarquía al mediar entre fuentes",
-    "explanation": [
-      "Distingue con pausa el promedio de consultas cerradas y los casos abiertos. No aceleres justo en la excepción, porque ahí reside la diferencia que explica el desacuerdo.",
-      "El audio utiliza síntesis disponible en el navegador: no certifica acento regional, ironía natural ni calidad de pronunciación. Escucha el contenido, ensaya contrastes y comprueba el efecto con una persona. El objetivo es inteligibilidad y control expresivo, no eliminar tu acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste con tu profesor cómo el español dice menos para decir más, niega sin negar o dice lo contrario de lo que piensa. Aquí lo repasas con el material de una crítica gastronómica en Medellín, un género donde casi todo se dice entre líneas. Cada parte trae ejemplos nuevos, una tabla o los errores que más se repiten.",
+    parts: [
       {
-        "es": "Las consultas cerradas tardan menos; las abiertas no entran en el promedio."
-      },
-      {
-        "es": "Todas las consultas tardan menos, incluidas las abiertas."
-      }
-    ],
-    "perceive": {
-      "id": "c2-12-percepcion",
-      "type": "listen",
-      "prompt": "Escucha el contraste antes de leer las opciones en «Fuentes que no dicen lo mismo».",
-      "items": [
-        {
-          "q": "Escucha la primera formulación sobre Fuentes que no dicen lo mismo. ¿Qué contenido permite recuperar?",
-          "options": [
-            "Todas las consultas tardan menos, incluidas las abiertas.",
-            "Las consultas cerradas tardan menos; las abiertas no entran en el promedio."
+        heading: "Lítotes: negar lo contrario para afirmar con matiz",
+        body: [
+          "La lítote afirma algo negando su contrario. «La bandeja no es pequeña» significa que es grande, pero lo dice con una reserva que puede ser modestia, elegancia o ironía. Con «nada» o «ningún» la lítote se intensifica: «el postre no está nada mal» es un elogio claro y «no es ningún secreto que el chef viene de Bogotá» presenta algo como sabido por todos.",
+          "Hay que distinguir dos construcciones que parecen simétricas. Negar un defecto («no es tonto») produce un elogio contenido: quiere decir que es listo. Negar una cualidad con «muy» («no es muy listo») produce una crítica atenuada: quiere decir que es más bien torpe. Lo mismo ocurre con «no está mal» frente a «no está muy bien». Si te equivocas de construcción, cambias el sentido del juicio.",
+          "Tres fórmulas convierten la lítote en ironía, porque subrayan que la cualidad falta del todo: «no es precisamente barato», «no es lo que se dice rápido» y «no es muy amable que digamos». Las tres se usan cuando la realidad está muy lejos de la cualidad que se niega.",
+        ],
+        table: {
+          caption: "Qué se entiende detrás de cada lítote",
+          head: ["Frase", "Qué se entiende", "Tono"],
+          rows: [
+            ["El servicio no es lento.", "es bastante rápido", "elogio contenido"],
+            ["El ajiaco no está nada mal.", "está muy bueno", "elogio claro"],
+            ["El servicio no es muy rápido.", "es más bien lento", "crítica atenuada"],
+            ["El local no es precisamente acogedor.", "es frío o incómodo", "crítica irónica"],
+            ["La carta no es lo que se dice breve.", "es larguísima", "crítica irónica"],
+            ["No es ningún secreto que…", "todo el mundo lo sabe", "presentación de lo sabido"],
           ],
-          "answer": 1,
-          "why": "La respuesta depende de las palabras y de su agrupación; no atribuyas a la síntesis una intención o variedad verificada.",
-          "audio": "Las consultas cerradas tardan menos; las abiertas no entran en el promedio.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "Escucha ahora el contraste de Fuentes que no dicen lo mismo. ¿Qué formulación aparece?",
-          "options": [
-            "Todas las consultas tardan menos, incluidas las abiertas.",
-            "Las consultas cerradas tardan menos; las abiertas no entran en el promedio."
+        mistakes: [
+          {
+            wrong: "«El mesero no es tonto» para decir que el mesero es torpe.",
+            right: "«El mesero no es muy espabilado» para decir que es torpe.",
+            why: "Negar el defecto elogia; para criticar con suavidad se niega la cualidad con «muy».",
+          },
+          {
+            wrong: "El arroz no está nada bien, ¡me encantó!",
+            right: "El arroz no está nada mal, ¡me encantó!",
+            why: "«No está nada bien» es una crítica fuerte; el elogio se hace negando el defecto: «nada mal».",
+          },
+        ],
+      },
+      {
+        heading: "La negación que no niega y la negación que sí",
+        body: [
+          "En algunos contextos aparece un «no» que no cambia el sentido de la frase: se llama negación expletiva. El caso más frecuente es «hasta que no + subjuntivo»: «no sirvas el postre hasta que (no) se enfríe la salsa». Las dos variantes son correctas y significan lo mismo; con «no» suena más natural cuando la oración principal también es negativa. Otro caso es la exclamación retórica de queja: «¡cuántas veces no te lo habré dicho!» equivale a «te lo he dicho muchísimas veces».",
+          "No hay que confundir esa negación vacía con la negación plena que aparece detrás de los verbos de temor. «Temo que no lleguen los proveedores» significa que tienes miedo de que falten; «temo que lleguen» significa que su llegada te preocupa. Aquí el «no» cambia por completo el sentido.",
+          "Con «por poco» el «no» también es opcional: «por poco (no) se quema el arroz» quiere decir que casi se quemó, pero no llegó a quemarse. Va normalmente en presente, aunque el hecho sea pasado.",
+        ],
+        examples: [
+          { es: "No abrimos la terraza hasta que no pase el aguacero.", note: "Negación expletiva: equivale a «hasta que pase»." },
+          { es: "¡Cuántas veces no le habrán pedido la receta!", note: "Exclamación de cantidad: se la han pedido muchísimas veces." },
+          { es: "Me temo que no alcance el pescado para todos.", note: "Negación plena: el temor es que falte." },
+          { es: "Por poco no llegamos a la reserva.", note: "Casi no llegamos, pero llegamos." },
+        ],
+        mistakes: [
+          {
+            wrong: "Temo que no llueva durante la cena en la terraza (queriendo decir que te preocupa la lluvia).",
+            right: "Temo que llueva durante la cena en la terraza.",
+            why: "Tras un verbo de temor el «no» es pleno: «temo que no llueva» expresa miedo a que falte la lluvia.",
+          },
+        ],
+        tip: "Para saber si un «no» es expletivo, quítalo: si la frase dice lo mismo, era expletivo; si cambia, era una negación real.",
+      },
+      {
+        heading: "Polaridad y alcance: qué niega exactamente la negación",
+        body: [
+          "Algunas expresiones solo funcionan en contextos negativos: «ni + sustantivo», «en absoluto», «lo más mínimo», «en mi vida», «para nada». Detrás del verbo necesitan un «no» delante («no me importa lo más mínimo»); delante del verbo, en cambio, lo sustituyen: «en mi vida he probado algo igual», «ni una queja recibimos». «Para nada» es muy frecuente en la conversación; en un texto formal se prefiere «en absoluto» o «de ningún modo».",
+          "El alcance de la negación decide qué se niega. «No todos los platos llegaron fríos» significa que algunos sí llegaron fríos; «todos los platos no llegaron fríos» es ambiguo y conviene evitarlo. «No siempre» niega la regularidad, no el hecho. Y con una causa, «no cerró porque estuviera cansado» niega solo la causa (cerró, pero por otro motivo), mientras que «no cerró porque estaba cansado» niega el cierre y da la razón.",
+          "La corrección tiene su propio conector. «No… sino» sustituye un elemento por otro («no es colombiana, sino venezolana»); delante de un verbo conjugado se usa «sino que» («no se disculpó, sino que subió el precio»). «No… pero» no corrige: añade un contraste compatible («no es barato, pero vale la pena»).",
+        ],
+        table: {
+          caption: "Mismas palabras, alcance distinto",
+          head: ["Frase", "Qué se niega", "Lo que queda afirmado"],
+          rows: [
+            ["No todos los meseros hablan inglés.", "la totalidad", "algunos sí lo hablan"],
+            ["No siempre hay mesa los sábados.", "la regularidad", "a veces sí hay mesa"],
+            ["No vino porque lo invitaran.", "la causa", "vino, por otro motivo"],
+            ["No vino porque no lo invitaron.", "la venida", "no vino; la causa es la falta de invitación"],
+            ["No es chef, sino panadero.", "un elemento, que se sustituye", "es panadero"],
+            ["No es chef, pero cocina de maravilla.", "nada se corrige", "no es chef y cocina muy bien"],
           ],
-          "answer": 0,
-          "why": "Compara después tus dos lecturas con una persona: una pausa puede favorecer una lectura sin demostrarla.",
-          "audio": "Todas las consultas tardan menos, incluidas las abiertas.",
-          "voice": "es-ES-m"
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "No pidió perdón, sino subió los precios.",
+            right: "No pidió perdón, sino que subió los precios.",
+            why: "Delante de un verbo conjugado, la corrección se hace con «sino que».",
+          },
+          {
+            wrong: "Me importa en absoluto lo que digan las reseñas.",
+            right: "No me importa en absoluto lo que digan las reseñas.",
+            why: "Detrás del verbo, «en absoluto» necesita un «no» delante.",
+          },
+        ],
+      },
+      {
+        heading: "Ironía verbal: cómo se reconoce y cuándo evitarla",
+        body: [
+          "La ironía dice lo contrario de lo que se piensa y confía en que el oyente lo note. Algunas expresiones casi siempre son irónicas en ciertos contextos: «¡qué bien!» o «muy bonito» ante algo malo, «encima» para sumar una queja a otra, «¡lo que faltaba!» ante un problema añadido. Las comillas irónicas, en la escritura, marcan que el autor no asume la palabra: un «menú de autor» entre comillas sugiere que no lo es tanto.",
+          "Para reconocer la ironía hay que mirar tres cosas: el contexto (¿encaja el elogio con lo que ha pasado?), la exageración (¿es desproporcionado?) y, en la oralidad, la entonación, que suele alargarse y subir de forma marcada. Si ninguna de las tres señales está presente, lee la frase en sentido literal.",
+          "En la escritura profesional la ironía es arriesgada: el lector no oye el tono, puede tomarla al pie de la letra o sentirse ridiculizado. En una reseña de opinión puede funcionar una vez y bien marcada; en un correo a un cliente, una respuesta pública o una reclamación, conviene sustituirla por un dato y una valoración explícita.",
+        ],
+        examples: [
+          { es: "Cuarenta minutos para traer la sopa, y encima tibia. ¡Muy bonito!", note: "«Encima» suma una queja; «muy bonito» invierte el elogio." },
+          { es: "Nos ofrecieron el «maridaje especial»: una cerveza nacional.", note: "Comillas irónicas: el autor no asume la etiqueta." },
+          { es: "Versión sin ironía: La sopa tardó cuarenta minutos y llegó tibia.", note: "Dato y valoración explícita, para un texto de reclamación." },
+        ],
+        tip: "Si una frase irónica perdería su sentido leída en voz alta por una voz sin expresión, no la uses en un correo profesional.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Antes de responder, pregúntate qué afirma de verdad la frase, qué niega y si el «no» cambia algo.",
+    exercises: [
+      {
+        id: "c2-12-gramatica-sentido",
+        type: "context",
+        prompt: "Lee el contexto y elige qué quiere decir de verdad quien habla.",
+        items: [
+          {
+            context: "Una comensal sale del restaurante y le dice a su amiga, sonriendo: «Pues la bandeja paisa no está nada mal, ¿eh?».",
+            q: "¿Qué opina de la bandeja?",
+            options: [
+              "Que es mediocre.",
+              "Que está muy buena.",
+              "Que no está buena en absoluto.",
+            ],
+            answer: 1,
+            why: "Negar el defecto con «nada» produce un elogio claro.",
+          },
+          {
+            context: "Después de esperar una hora y de pagar el doble de lo previsto, un cliente escribe: «El sitio no es precisamente barato».",
+            q: "¿Qué transmite la frase?",
+            options: [
+              "Que el precio es razonable.",
+              "Que el sitio es algo barato.",
+              "Que es carísimo, con un tono irónico.",
+            ],
+            answer: 2,
+            why: "«No es precisamente» marca que la cualidad falta del todo: lítote irónica.",
+          },
+          {
+            context: "La jefa de cocina dice a un ayudante: «Tu compañero nuevo no es muy rápido, la verdad».",
+            q: "¿Qué piensa del compañero nuevo?",
+            options: [
+              "Que es más bien lento, aunque lo dice con suavidad.",
+              "Que es rapidísimo.",
+              "Que nunca ha trabajado en una cocina.",
+            ],
+            answer: 0,
+            why: "Negar la cualidad con «muy» es una crítica atenuada.",
+          },
+          {
+            context: "El gerente comenta: «No contratamos a Sebastián porque fuera sobrino de la dueña».",
+            q: "¿Qué dice sobre Sebastián?",
+            options: [
+              "Que no lo contrataron.",
+              "Que lo contrataron, pero por otra razón.",
+              "Que no es sobrino de la dueña.",
+            ],
+            answer: 1,
+            why: "«No… porque + subjuntivo» niega solo la causa: lo contrataron por otro motivo.",
+          },
+        ],
+      },
+      {
+        id: "c2-12-gramatica-huecos",
+        type: "gap",
+        prompt: "Completa con la palabra o expresión que falta. Fíjate en el alcance y en la posición de la negación.",
+        items: [
+          { q: "No se quejó del precio, ___ pidió hablar con la dueña para felicitarla.", answers: [["sino que"]], why: "Corrección delante de verbo conjugado." },
+          { q: "La terraza no es grande, ___ tiene una vista preciosa sobre el barrio.", answers: [["pero"]], why: "Contraste compatible, sin corrección." },
+          { q: "___ una servilleta nos trajeron en toda la noche.", answers: [["Ni", "ni"]], why: "Término de polaridad negativa delante del verbo: no hace falta «no»." },
+          { q: "No me molesta ___ esperar si la comida vale la pena.", answers: [["lo más mínimo", "en absoluto", "para nada"]], why: "Detrás del verbo, con «no» delante." },
+          { q: "No sirvas el café hasta que ___ terminen el postre. [negación expletiva]", answers: [["no"]], why: "«Hasta que no + subjuntivo» con principal negativa." },
+          { q: "Por poco ___ se nos acaba el pan antes de las nueve. [negación opcional]", answers: [["no"]], why: "«Por poco (no)»: casi se acabó, pero no se acabó." },
+        ],
+      },
+      {
+        id: "c2-12-gramatica-clasificar",
+        type: "classify",
+        prompt: "¿El «no» de cada frase es expletivo (puede quitarse sin cambiar el sentido) o pleno (cambia el sentido)?",
+        categories: ["Expletivo: no cambia el sentido", "Pleno: niega de verdad"],
+        items: [
+          { text: "No pagamos hasta que no nos traigan la cuenta correcta.", cat: 0, why: "«Hasta que (no)»: mismo sentido con o sin «no»." },
+          { text: "Temo que no tengan mesa para ocho personas.", cat: 1, why: "Tras verbo de temor, el «no» cambia el contenido del miedo." },
+          { text: "¡Cuántas veces no habré comido en esa esquina!", cat: 0, why: "Exclamación de cantidad: muchísimas veces." },
+          { text: "No creo que abran el lunes festivo.", cat: 1, why: "Niega la creencia: el hablante piensa que no abrirán." },
+          { text: "Por poco no me tropiezo con el mesero.", cat: 0, why: "Igual que «por poco me tropiezo»." },
+          { text: "Me preocupa que no vuelva el cocinero de antes.", cat: 1, why: "El temor es que no vuelva." },
+        ],
+      },
+      {
+        id: "c2-12-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error de negación o de corrección. Corrígelo.",
+        items: [
+          {
+            sentence: "El restaurante no es una cafetería, sino tiene una carta de cocina tradicional.",
+            answers: ["El restaurante no es una cafetería, sino que tiene una carta de cocina tradicional."],
+            why: "Delante de verbo conjugado, «sino que».",
+          },
+          {
+            sentence: "Me gustó en absoluto el servicio, fue impecable.",
+            answers: ["Me gustó muchísimo el servicio, fue impecable.", "Me gustó mucho el servicio, fue impecable."],
+            why: "«En absoluto» es de polaridad negativa: no puede intensificar una afirmación.",
+          },
+          {
+            sentence: "En mi vida no he probado unas arepas tan buenas.",
+            answers: ["En mi vida he probado unas arepas tan buenas.", "No he probado en mi vida unas arepas tan buenas."],
+            why: "Delante del verbo, «en mi vida» sustituye al «no».",
+          },
+          {
+            sentence: "Todos los platos no estaban calientes, pero casi todos sí.",
+            answers: ["No todos los platos estaban calientes, pero casi todos sí."],
+            why: "Para negar la totalidad sin ambigüedad, «no todos».",
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para hablar de un restaurante, de la experiencia en la mesa y del género de la crítica.",
+    groups: [
+      {
+        title: "En la mesa",
+        items: [
+          { es: "la bandeja paisa", note: "plato típico de Antioquia con fríjoles, arroz, carne, chicharrón, huevo, plátano y arepa" },
+          { es: "el punto de la carne", note: "grado de cocción: jugoso, a punto, bien asado" },
+          { es: "la sazón", note: "gusto que una persona da a la comida; también, su habilidad para cocinar" },
+          { es: "la propina sugerida", note: "porcentaje que el local añade a la cuenta y que el cliente puede aceptar o no" },
+          { es: "el mesero", note: "persona que atiende las mesas; en España, camarero" },
+          { es: "la reserva", note: "mesa apartada a nombre de alguien para una hora concreta" },
+        ],
+      },
+      {
+        title: "La crítica y sus lectores",
+        items: [
+          { es: "la reseña", note: "texto breve que describe y valora un local, un libro o un espectáculo" },
+          { es: "la relación calidad-precio", note: "equilibrio entre lo que se paga y lo que se recibe" },
+          { es: "poner por las nubes", note: "elogiar muchísimo" },
+          { es: "dejar mucho que desear", note: "ser claramente insuficiente" },
+          { es: "leer entre líneas", note: "entender lo que un texto sugiere sin decirlo" },
+          { es: "tomar al pie de la letra", note: "interpretar algo en su sentido literal" },
+          { es: "el derecho de réplica", note: "posibilidad de responder públicamente a una crítica" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c2-12-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "la sazón", right: "gusto que una persona da a la comida" },
+          { left: "la relación calidad-precio", right: "equilibrio entre lo que se paga y lo que se recibe" },
+          { left: "poner por las nubes", right: "elogiar muchísimo" },
+          { left: "dejar mucho que desear", right: "ser claramente insuficiente" },
+          { left: "tomar al pie de la letra", right: "interpretar algo en su sentido literal" },
+          { left: "el derecho de réplica", right: "posibilidad de responder públicamente a una crítica" },
+        ],
+      },
+      {
+        id: "c2-12-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del vocabulario.",
+        bank: ["leer entre líneas", "punto de la carne", "propina sugerida", "deja mucho que desear"],
+        items: [
+          { q: "La comida es excelente, pero el servicio ___: nadie nos trajo la carta en veinte minutos.", answers: [["deja mucho que desear"]] },
+          { q: "Pedí el lomo jugoso y el ___ fue perfecto.", answers: [["punto de la carne"]] },
+          { q: "En la cuenta venía incluida una ___ del diez por ciento.", answers: [["propina sugerida"]] },
+          { q: "La reseña parece amable, pero si sabes ___ ves que el crítico salió decepcionado.", answers: [["leer entre líneas"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Lítotes que se oyen: elogio contenido, crítica atenuada e ironía",
+    explanation: [
+      "Cuando escuchas una lítote, la palabra que decide el sentido suele ser pequeña: «nada», «muy», «precisamente», «que digamos». «No está nada mal» y «no está muy bien» se parecen mucho al oído, pero la primera elogia y la segunda critica. Acostúmbrate a escuchar la palabra que va entre el «no» y el adjetivo.",
+      "La ironía oral suele ir acompañada de una entonación marcada: las vocales tónicas se alargan, el tono sube más de lo normal y el ritmo se hace más lento, como en «¡qué bieeen!». Esa entonación no es obligatoria, y la ironía seca, sin cambios de voz, también existe; por eso el contexto sigue siendo la señal más fiable.",
+      "El audio utiliza la síntesis disponible en el navegador, que no reproduce bien la entonación irónica. Úsalo para distinguir las palabras de las lítotes y ensaya la entonación con una persona.",
+    ],
+    table: {
+      caption: "La palabra que decide el sentido",
+      head: ["Frase", "Palabra clave", "Sentido"],
+      rows: [
+        ["No está nada mal.", "nada", "elogio"],
+        ["No está muy bien.", "muy", "crítica suave"],
+        ["No es precisamente barato.", "precisamente", "crítica irónica"],
+        ["No es muy generoso que digamos.", "que digamos", "crítica irónica"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Las consultas cerradas tardan menos; las abiertas no entran en el promedio.",
-        "tip": "Marca grupos fónicos y explica qué interpretación favoreces.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Todas las consultas tardan menos, incluidas las abiertas.",
-        "tip": "Cambia el foco sin cambiar las palabras; pide una interpretación a tu interlocutor.",
-        "voice": "es-ES-m"
-      },
-      {
-        "text": "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.",
-        "tip": "Lee a velocidad cómoda, conserva la reserva y compara tu grabación local con tu intención.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Mesa de trabajo: Fuentes que no dicen lo mismo",
-    "context": "Dos participantes preparan una intervención sobre el caso. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Julia",
-        "voice": "es-ES-f",
-        "role": "Primera perspectiva"
-      },
-      {
-        "id": "b",
-        "name": "Óscar",
-        "voice": "es-ES-m",
-        "role": "Contraste y reformulación"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Me han pedido un resumen equilibrado, pero no quiero escribir que ambas partes tienen un poco de razón y dejarlo ahí. El promedio de consultas cerradas no mide la espera de expedientes abiertos. No son dos opiniones simétricas sobre el mismo dato. Primero hay que explicar la diferencia y luego valorar qué indicador falta."
-      },
-      {
-        "speaker": "b",
-        "text": "Y los seis testimonios no son una encuesta, aunque muestran un problema que existe. Yo evitaría decir que demuestran un empeoramiento general. Para la asociación, el informe debe reconocer la espera y proponer una forma de obtener información. Para la dirección, debe precisar qué se cuenta y qué queda fuera del cálculo actual."
-      },
-      {
-        "speaker": "a",
-        "text": "En la versión pública voy a usar una comparación con dos filas: una avanza deprisa y la otra no aparece en el reloj que se anuncia. Después aclararé que es una analogía, porque las solicitudes no forman literalmente dos colas separadas. Puede ayudar a entender la exclusión del indicador, pero no debe inventar cómo funciona el servicio."
-      },
-      {
-        "speaker": "b",
-        "text": "Me parece bien si el cierre no promete una fecha de resolución que todavía no existe. El aviso a los quince días puede comunicar el estado y el próximo paso. También tendremos que decir qué ocurrirá si ese paso cambia. Una mediación útil no elimina todas las incertidumbres: permite que las personas sepan cuáles son, de dónde vienen y qué pueden hacer mientras siguen abiertas. Esa es la diferencia entre tranquilizar con una frase y devolver capacidad de decisión. Conservar esa distinción nos permite evaluar la medida sin prometer un efecto automático."
-      },
-      {
-        "speaker": "a",
-        "text": "La mediana tampoco cuenta por sí sola toda la historia. Añadiremos tramos y expedientes abiertos, sin publicar detalles que identifiquen a las personas. Además, no todas las esperas son incumplimientos de un plazo anunciado. Necesitamos distinguir plazo incumplido, espera prolongada e incertidumbre. Las tres pueden causar problemas, pero no describen exactamente la misma relación con el servicio."
-      },
-      {
-        "speaker": "b",
-        "text": "Y debemos reconocer que esas categorías las propone nuestro informe. No estaban ordenadas así en las fuentes. La mediación puede aportar una estructura, siempre que explique su criterio y permita discutirlo. Para la asociación, esa distinción debe conducir a respuestas concretas, no a tres maneras técnicas de decir que siga esperando. Cada categoría necesita una acción, un responsable y una forma de seguimiento. Para el cierre, conservaré esta distinción: Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha el intercambio completo sin abrir la transcripción. Reconstruye el desacuerdo central.",
-        "exercise": {
-          "id": "c2-12-escucha-gist",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Fuentes que no dicen lo mismo",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la conversación de Fuentes que no dicen lo mismo?",
-              "options": [
-                "Una de las fuentes necesariamente miente.",
-                "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes."
-              ],
-              "answer": 1,
-              "why": "Reconstruye el propósito común antes de buscar detalles."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Fuentes que no dicen lo mismo?",
-              "options": [
-                "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.",
-                "Seis testimonios permiten calcular la frecuencia general del problema."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota afirmación, condición y fuente. No copies frases todavía.",
-        "exercise": {
-          "id": "c2-12-escucha-detail",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Fuentes que no dicen lo mismo",
-          "items": [
-            {
-              "q": "¿Qué límite deben conservar los interlocutores de Fuentes que no dicen lo mismo?",
-              "options": [
-                "El promedio publicado excluye expedientes todavía abiertos.",
-                "El promedio incluye todos los expedientes pendientes."
-              ],
-              "answer": 0,
-              "why": "La conversación vuelve sobre el límite que evita una promesa o inferencia excesiva."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Fuentes que no dicen lo mismo?",
-              "options": [
-                "El promedio publicado excluye expedientes todavía abiertos.",
-                "Seis testimonios permiten calcular la frecuencia general del problema."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Localiza una reformulación y explica qué inferencia repara. Consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "c2-12-escucha-notice",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Fuentes que no dicen lo mismo",
-          "items": [
-            {
-              "q": "¿Qué inferencia pragmática permite el diálogo de Fuentes que no dicen lo mismo?",
-              "options": [
-                "Una síntesis equilibrada no necesita tratar como equivalentes evidencias de distinta naturaleza.",
-                "Seis testimonios permiten calcular la frecuencia general del problema."
-              ],
-              "answer": 0,
-              "why": "La inferencia se apoya en una reformulación y su contexto; no es una lectura literal de una palabra."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Fuentes que no dicen lo mismo?",
-              "options": [
-                "Una síntesis equilibrada no necesita tratar como equivalentes evidencias de distinta naturaleza.",
-                "Seis testimonios permiten calcular la frecuencia general del problema."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Fuentes que no dicen lo mismo · expediente de lectura",
-    "genre": "Dossier original: texto principal y documento de contraste",
-    "frame": "Situación ficticia para lectura crítica y mediación. Identifica qué voz afirma cada cosa antes de integrar las fuentes.",
-    "text": [
-      "El servicio de atención cultural anunció que el tiempo medio de respuesta había bajado de doce a ocho días. Una asociación publicó el mismo día una carta titulada «Esperamos más que nunca». Los comentarios se dividieron entre quienes acusaban al servicio de manipular y quienes acusaban a la asociación de ignorar los datos. La oposición parecía nítida porque nadie había preguntado todavía qué estaba midiendo cada documento. La cifra incluía todas las consultas cerradas; la carta describía solicitudes complejas aún abiertas.",
-      "El equipo técnico explicó que las consultas sencillas se resolvían más deprisa gracias a una clasificación inicial. La mejora era real para esas consultas. También reconoció que el indicador excluía expedientes pendientes y no desglosaba complejidad. La asociación aportó seis casos con más de un mes de espera. Los testimonios no permitían estimar por sí solos la frecuencia del problema, pero mostraban un tipo de experiencia que el promedio publicado no representaba. Su valor no dependía de convertir seis casos en una muestra estadística.",
-      "Una mediadora preparó dos versiones del balance. Para la dirección, distinguió tiempos por tipo de solicitud y propuso incluir la antigüedad de los expedientes abiertos. Para las personas usuarias, explicó qué información recibirían al registrar una consulta y cómo pedir una actualización. No ocultó la complejidad, pero la distribuyó de acuerdo con las decisiones que cada grupo debía tomar. La adaptación no consistía en dar menos verdad a un público y más a otro.",
-      "La dificultad mayor apareció al redactar el titular. «El servicio mejora, aunque quedan retrasos» subordinaba las experiencias de espera a una narrativa de éxito. «Los retrasos desmienten la mejora» borraba las consultas que sí se resolvían antes. La mediadora eligió «Respuestas más rápidas en consultas sencillas; esperas sin medir en casos complejos». El resultado era menos elegante, pero hacía visible la diferencia que permitía comprender ambas fuentes sin obligarlas a decir lo mismo.",
-      "Acta de seguimiento. La dirección aceptó publicar la mediana y la distribución por tramos, además del promedio, siempre que el volumen de casos permitiera hacerlo sin identificar personas. La asociación pidió un aviso automático a los quince días, pero el sistema no podía prometer una fecha de resolución para todos los expedientes. Se acordó informar del estado y del siguiente paso previsto. Ese compromiso reducía incertidumbre sin convertir una comunicación periódica en garantía de respuesta favorable. El informe final debía conservar también este límite. La siguiente reunión revisaría si el aviso reducía la incertidumbre, además de medir si cambiaban los tiempos efectivos. Eran resultados distintos y ambos importaban.",
-      "Observación de una analista. Publicar la mediana mejoraría el cuadro, pero tampoco haría visibles automáticamente las esperas extremas. La dirección propuso acompañarla con tramos de duración y número de expedientes abiertos. La asociación pidió conocer casos concretos; la mediadora distinguió la necesidad de comprender patrones de la exposición innecesaria de personas. Podían describirse situaciones típicas, anonimizadas con cuidado, sin convertir cada testimonio en un expediente público. La transparencia no obliga a distribuir toda la información disponible del mismo modo.",
-      "La discusión llevó a revisar el término retraso. Algunas solicitudes excedían un plazo anunciado; otras no tenían plazo definido y sufrían una espera que resultaba difícil de valorar. Llamarlas a todas incumplimientos habría supuesto una obligación idéntica que las fuentes no establecían. Llamarlas simples percepciones habría ignorado su coste real. El informe distinguió incumplimiento de plazo, espera prolongada e incertidumbre sobre el siguiente paso. Esa precisión permitió proponer respuestas diferentes. La síntesis no solo reunió información: produjo categorías de trabajo que podían ser discutidas por ambas partes. Su legitimidad dependía de explicar de dónde salían esas categorías y de no presentarlas como si hubieran aparecido intactas en los documentos originales."
-    ],
-    "tasks": [
-      {
-        "id": "c2-12-lectura",
-        "type": "choice",
-        "prompt": "Reconstruye la tesis y su límite en Fuentes que no dicen lo mismo.",
-        "items": [
-          {
-            "q": "¿Qué tesis sostiene el dossier «Fuentes que no dicen lo mismo»?",
-            "options": [
-              "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.",
-              "Una de las fuentes necesariamente miente."
-            ],
-            "answer": 0,
-            "why": "La tesis integra el contraste entre las fuentes, no solo una frase aislada."
-          },
-          {
-            "q": "¿Qué detalle limita la interpretación en «Fuentes que no dicen lo mismo»?",
-            "options": [
-              "El promedio publicado excluye expedientes todavía abiertos.",
-              "El promedio incluye todos los expedientes pendientes."
-            ],
-            "answer": 0,
-            "why": "El documento complementario delimita qué está confirmado."
-          }
-        ]
-      },
-      {
-        "id": "c2-12-lectura-evidencia",
-        "type": "open",
-        "prompt": "Defiende una interpretación de Fuentes que no dicen lo mismo con pruebas y contraejemplos.",
-        "items": [
-          {
-            "prompt": "Contrasta «Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.» con «Una de las fuentes necesariamente miente.». Cita dos fragmentos breves, atribuye sus voces y explica qué detalle impide sostener la segunda lectura.",
-            "model": "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes. El promedio publicado excluye expedientes todavía abiertos.",
-            "checklist": [
-              "Distingo cita e interpretación.",
-              "Incluyo una lectura rival y un límite."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas del expediente distribuyen certeza, responsabilidad y voz.",
-      "items": [
+    perceive: {
+      id: "c2-12-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase antes de leer las opciones y decide si quien habla elogia o critica.",
+      items: [
         {
-          "quote": "El servicio de atención cultural anunció que el tiempo medio de respuesta había bajado de doce a ocho días.",
-          "note": "Examina el encuadre inicial y qué información necesitarás para revisarlo."
+          q: "¿Elogia o critica?",
+          options: ["Elogia el plato.", "Critica el plato."],
+          answer: 0,
+          why: "«No está nada mal» niega el defecto con intensidad: elogio.",
+          audio: "El sancocho de la casa no está nada mal.",
+          voice: "es-CO-f",
         },
         {
-          "quote": "Acta de seguimiento.",
-          "note": "El documento final introduce otra perspectiva; identifica qué interpretación limita y qué deja abierto."
-        }
-      ]
-    }
+          q: "¿Elogia o critica?",
+          options: ["Elogia el plato.", "Critica el plato."],
+          answer: 1,
+          why: "«No está muy bien» niega la cualidad con «muy»: crítica atenuada.",
+          audio: "El sancocho de la casa no está muy bien hoy.",
+          voice: "es-CO-m",
+        },
+        {
+          q: "¿Qué palabra marca la ironía?",
+          options: ["lo que se dice", "precisamente", "que digamos"],
+          answer: 2,
+          why: "La frase termina con «que digamos», que marca la lítote irónica.",
+          audio: "El mesero no fue muy simpático que digamos.",
+          voice: "es-CO-f",
+        },
+        {
+          q: "¿Qué opina sobre la espera?",
+          options: ["Que fue cortísima.", "Que fue larguísima."],
+          answer: 1,
+          why: "«No fue lo que se dice corta» es una lítote irónica: fue muy larga.",
+          audio: "La espera no fue lo que se dice corta.",
+          voice: "es-AR-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "La arepa de chócolo no está nada mal.", tip: "Acentúa «nada» y termina con un descenso tranquilo: elogio contenido.", voice: "es-CO-f" },
+      { text: "La música no estaba muy baja que digamos.", tip: "Alarga ligeramente «baja» y deja caer «que digamos» en tono bajo.", voice: "es-CO-m" },
+      { text: "¡Una hora esperando y encima nos cobran el agua! ¡Lo que faltaba!", tip: "Sube el tono en «encima» y en «faltaba»: queja acumulada.", voice: "es-CO-f" },
+      { text: "No pidió disculpas, sino que nos cobró el postre.", tip: "Marca una pausa breve antes de «sino que».", voice: "es-CO-m" },
+    ],
+    spelling: "En la escritura, la ironía se marca a veces con comillas («menú de autor») o con signos de exclamación. No uses la cursiva para lo mismo en un texto que ya usa la cursiva para títulos o extranjerismos.",
   },
-  "practice": {
-    "intro": "Combina orden, clasificación, producción y recuperación espaciada. Las respuestas abiertas se contrastan con criterios y con tu docente.",
-    "exercises": [
+  listening: {
+    title: "Pódcast: la noche en el Fogón de Laureles",
+    context: "Mariana y Julián presentan un pódcast de gastronomía en Medellín. En este episodio comentan la cena en un restaurante nuevo del barrio Laureles y leen algunos comentarios de sus oyentes. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "m", name: "Mariana", voice: "es-CO-f", role: "Presentadora y crítica" },
+      { id: "j", name: "Julián", voice: "es-CO-m", role: "Copresentador" },
+    ],
+    script: [
+      { speaker: "m", text: "Bueno, Julián, empecemos por lo bueno, que lo hay. La bandeja del Fogón de Laureles no está nada mal. Los fríjoles tenían una sazón de casa y el chicharrón, crocante sin estar seco. No es ningún secreto que doña Gloria cocinó treinta años en Envigado antes de abrir aquí." },
+      { speaker: "j", text: "Totalmente. Ahora, el servicio no fue lo que se dice rápido. Nos sentamos a las ocho y la sopa llegó a las ocho y cuarenta. Y encima, tibia. Yo, cuando la vi, solo dije: ¡qué maravilla!, y el mesero se lo tomó al pie de la letra y me dio las gracias." },
+      { speaker: "m", text: "Ese es el problema de la ironía, que no todo el mundo la capta. Pero seamos justos: no todos los platos llegaron tarde. Las empanadas salieron enseguida, y el jugo de lulo estaba buenísimo." },
+      { speaker: "j", text: "Es verdad. Y el precio no es precisamente de barrio, pero tampoco es de los restaurantes de El Poblado. Diría que la relación calidad-precio es razonable, siempre que no tengas prisa." },
+      { speaker: "m", text: "Leamos algunos comentarios. Andrés escribe: «Fui el sábado y en mi vida he comido un chicharrón igual». Eso no deja lugar a dudas. Y Camila dice: «La atención no fue muy cálida que digamos; no volvimos porque nos atendieran mal, sino porque mi mamá quería repetir el postre»." },
+      { speaker: "j", text: "Ojo con esa frase, que tiene truco. Camila sí volvió. Lo que niega es la razón: no volvió por la atención, sino por el postre de su mamá." },
+      { speaker: "m", text: "Exacto. Ahora, la pregunta que nos hacen varios oyentes: ¿vamos a escribir la reseña con este tono? Yo creo que no. En el pódcast nos oyen la voz y saben cuándo bromeamos. En la revista, un «¡qué maravilla!» sobre una sopa tibia lo puede leer cualquiera como un elogio, o peor, como una burla a los meseros." },
+      { speaker: "j", text: "Estoy de acuerdo. En la reseña, la sopa tardó cuarenta minutos y llegó tibia, y punto. Una lítote, tal vez: el servicio todavía no está a la altura de la cocina. Pero nada de comillas burlonas." },
+      { speaker: "m", text: "Y no publicamos nada hasta que no hablemos con doña Gloria. Me temo que no sepa que la cocina va tan lenta los viernes. Merece la oportunidad de explicarlo." },
+      { speaker: "j", text: "Por poco no se me olvida: el postre de natas. Eso sí, ni una palabra mala. Y la próxima vez vamos un martes, a ver si la cocina va más tranquila." },
+    ],
+    stages: [
       {
-        "id": "c2-12-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos relaciones centrales del caso Fuentes que no dicen lo mismo.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha el episodio completo sin abrir la transcripción. ¿Cuál es la valoración general y qué deciden sobre la reseña escrita?",
+        exercise: {
+          id: "c2-12-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la valoración y la decisión principal.",
+          items: [
+            {
+              q: "¿Cuál es la valoración general del restaurante?",
+              options: [
+                "Comida muy buena y servicio lento.",
+                "Comida mediocre y servicio excelente.",
+                "Todo malo, salvo el postre.",
+              ],
+              answer: 0,
+              why: "Elogian la sazón y critican la espera y la sopa tibia.",
+            },
+            {
+              q: "¿Qué deciden sobre el tono de la reseña escrita?",
+              options: [
+                "Mantener las bromas del pódcast para que sea divertida.",
+                "No publicar ninguna crítica negativa.",
+                "Evitar la ironía y dar los datos con una valoración explícita.",
+              ],
+              answer: 2,
+              why: "Mariana explica que en la revista la ironía puede malinterpretarse.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y fíjate en los detalles. Responde sin mirar la transcripción.",
+        exercise: {
+          id: "c2-12-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles del episodio.",
+          items: [
+            {
+              q: "¿Qué pasó cuando Julián dijo «¡qué maravilla!»?",
+              options: [
+                "El mesero se disculpó por la sopa.",
+                "El mesero lo entendió como un elogio y le dio las gracias.",
+                "El mesero le cambió la sopa.",
+              ],
+              answer: 1,
+              why: "Se lo tomó al pie de la letra: no captó la ironía.",
+            },
+            {
+              q: "¿Qué dice en realidad el comentario de Camila?",
+              options: [
+                "Que no volvió al restaurante.",
+                "Que volvió porque la atendieron muy bien.",
+                "Que volvió, pero por el postre y no por la atención.",
+              ],
+              answer: 2,
+              why: "«No volvimos porque…, sino porque…» niega la causa, no la vuelta.",
+            },
+            {
+              q: "¿Por qué quieren hablar con doña Gloria antes de publicar?",
+              options: [
+                "Porque temen que no sepa que la cocina va lenta los viernes.",
+                "Porque quieren pedirle una invitación.",
+                "Porque doña Gloria les pidió revisar el texto.",
+              ],
+              answer: 0,
+              why: "Mariana usa «me temo que no sepa»: negación plena tras verbo de temor.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en cómo funcionan las negaciones del episodio. Relaciona y consulta la transcripción solo después de responder.",
+        exercise: {
+          id: "c2-12-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada fragmento con lo que hace la negación.",
+          pairs: [
+            { left: "no está nada mal", right: "lítote de elogio" },
+            { left: "no fue lo que se dice rápido", right: "lítote irónica de crítica" },
+            { left: "no todos los platos llegaron tarde", right: "niega la totalidad: algunos sí" },
+            { left: "hasta que no hablemos con doña Gloria", right: "negación expletiva" },
+            { left: "en mi vida he comido", right: "término negativo delante del verbo, sin «no»" },
+          ],
+          why: "Cada negación hace un trabajo distinto: elogiar, criticar, acotar, no negar nada o sustituir al «no».",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Fogón de Laureles: la sazón no espera, la cocina sí",
+    genre: "Crítica gastronómica en una revista de la ciudad",
+    frame: "Reseña de Mariana Restrepo para una revista cultural de Medellín, publicada después del episodio del pódcast. Restaurante, personas y precios son ficticios.",
+    text: [
+      "No es ningún secreto que en Laureles abren y cierran restaurantes al ritmo de las lluvias de abril. Por eso, cuando un local nuevo se presenta sin cartel luminoso, sin mesas de diseño y con una carta escrita a mano, la tentación es pasar de largo. Sería un error. El Fogón de Laureles, que doña Gloria Zapata abrió en marzo después de treinta años cocinando en Envigado, no es un sitio para hacerse fotos, sino para comer bien, y en eso cumple con creces.",
+      "Empecemos por la cocina, que es lo que importa. La bandeja paisa no está nada mal, y lo digo con la prudencia de quien ha probado cientos. Los fríjoles tienen la textura espesa de las ollas que se dejan al fuego toda la mañana, el chicharrón cruje sin estar seco y la arepa, pequeña y tostada, no es un simple acompañamiento. Las empanadas llegan enseguida y calientes, con un ají que no pica lo más mínimo, para quien lo prefiera así, y un jugo de lulo que no necesita azúcar añadido. En mi vida he probado un postre de natas tan equilibrado: dulce sin empalagar y con la corteza justa.",
+      "El servicio, en cambio, no está todavía a la altura de la cocina. En nuestra visita, un viernes por la noche, la sopa del día tardó cuarenta minutos y llegó tibia. No todos los platos se retrasaron, y el personal fue amable en todo momento, pero la espera entre el primero y el segundo resultó demasiado larga para un local de dieciocho mesas. No creo que el problema sea de actitud. Todo apunta, más bien, a una cocina pequeña que no da abasto cuando el comedor se llena, algo que doña Gloria nos confirmó después por teléfono y que, según nos dijo, piensa resolver con un segundo ayudante antes de fin de mes.",
+      "Los precios no son de barrio, pero tampoco de los restaurantes de moda del sur de la ciudad. Una bandeja cuesta algo más de lo que costaría en un corrientazo, y la diferencia se justifica en el plato. La propina sugerida, del diez por ciento, aparece en la cuenta, y el mesero preguntó si queríamos incluirla, algo que no siempre ocurre y que conviene destacar.",
+      "Una palabra sobre el ambiente. El comedor no es grande ni especialmente luminoso, sino más bien una sala de casa con paredes de ladrillo y fotos de familia. Habrá a quien le parezca poco sofisticado; a mí me pareció honesto. No es un lugar para una cena de negocios ni para impresionar a nadie, pero tampoco lo pretende. Quien busque música en vivo o una carta de vinos extensa no la encontrará: hay tres tintos y una cerveza artesanal de Rionegro.",
+      "Mis oyentes me preguntan a menudo si conviene escribir las críticas con ironía. En el pódcast, donde se oye la voz, una broma sobre una sopa tibia se entiende como broma. En una página impresa, la misma frase puede leerse como elogio, como burla o como desprecio hacia quien trabaja en la sala, y ninguna de esas lecturas me interesa. Por eso en esta reseña los datos van sin adornos: cuarenta minutos, sopa tibia, dieciocho mesas, un solo ayudante. Que cada lector saque sus conclusiones.",
+      "La mía es sencilla. No volvería al Fogón de Laureles porque sea barato ni porque esté de moda, sino porque pocas cocinas de la ciudad tienen esta sazón. Volvería, eso sí, un martes o un miércoles, sin prisa y con hambre, y no pediría la cuenta hasta que no hubiera probado el postre de natas. Le pongo un ocho a la cocina y un cinco al servicio, con la esperanza de que en la próxima visita esa distancia se haya acortado.",
+    ],
+    glossary: [
+      { es: "corrientazo", note: "menú del día barato en Colombia, con sopa, plato principal y bebida" },
+      { es: "no dar abasto", note: "no ser suficiente para atender todo lo que se necesita" },
+      { es: "lulo", note: "fruta ácida muy usada en jugos en Colombia" },
+    ],
+    tasks: [
+      {
+        id: "c2-12-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la valoración de la crítica.",
+        items: [
           {
-            "words": [
-              "Los",
-              "testimonios",
-              "muestran",
-              "una",
-              "experiencia",
-              "omitida."
+            q: "¿Qué dice la autora sobre el problema del servicio?",
+            options: [
+              "Que los meseros son antipáticos.",
+              "Que parece un problema de capacidad de la cocina, no de actitud.",
+              "Que doña Gloria no sabe organizar el comedor.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
+            answer: 1,
+            why: "El tercer párrafo lo atribuye a una cocina pequeña que no da abasto.",
           },
           {
-            "words": [
-              "El",
-              "aviso",
-              "no",
-              "garantiza",
-              "una",
-              "resolución",
-              "favorable."
+            q: "¿Por qué decidió no usar la ironía en la reseña escrita?",
+            options: [
+              "Porque en el papel la ironía puede leerse como elogio, burla o desprecio.",
+              "Porque la revista prohíbe las bromas.",
+              "Porque doña Gloria se lo pidió.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
-          }
-        ]
-      },
-      {
-        "id": "c2-12-estatuto",
-        "type": "classify",
-        "prompt": "Clasifica el estatuto de estas formulaciones en «Fuentes que no dicen lo mismo».",
-        "categories": [
-          "Conclusión respaldada o delimitada",
-          "Generalización no autorizada"
+            answer: 0,
+            why: "El sexto párrafo explica que sin la voz la ironía se malinterpreta.",
+          },
+          {
+            q: "¿Qué afirma la frase «No volvería porque sea barato ni porque esté de moda, sino porque…»?",
+            options: [
+              "Que no volvería al restaurante.",
+              "Que el restaurante es barato y está de moda.",
+              "Que volvería, y que la razón es la sazón.",
+            ],
+            answer: 2,
+            why: "Niega dos causas posibles y las corrige con «sino porque»: la vuelta se mantiene.",
+          },
         ],
-        "items": [
-          {
-            "text": "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.",
-            "cat": 0,
-            "why": "Resume el razonamiento con sus límites."
-          },
-          {
-            "text": "Una de las fuentes necesariamente miente.",
-            "cat": 1,
-            "why": "Amplía o invierte el alcance de las fuentes."
-          },
-          {
-            "text": "El promedio publicado excluye expedientes todavía abiertos.",
-            "cat": 0,
-            "why": "Conserva un detalle explícito del expediente."
-          },
-          {
-            "text": "El promedio incluye todos los expedientes pendientes.",
-            "cat": 1,
-            "why": "Contradice la condición documentada."
-          }
-        ]
       },
       {
-        "id": "c2-12-microescritura",
-        "type": "open",
-        "prompt": "Produce dos versiones breves antes del dossier de Fuentes que no dicen lo mismo.",
-        "items": [
-          {
-            "prompt": "Redacta una apertura de 80–100 palabras para el destinatario de «Fuentes que no dicen lo mismo». Conserva la tesis y una reserva.",
-            "model": "Las consultas cerradas se responden antes, mientras que varias solicitudes complejas siguen abiertas durante más de un mes. Ambas afirmaciones pueden ser ciertas porque el promedio publicado excluye expedientes pendientes. Los seis testimonios muestran experiencias relevantes, aunque no permiten estimar su frecuencia. La dirección necesita indicadores desagregados y las personas usuarias necesitan saber el estado y el próximo paso de su caso. Proponemos un aviso periódico que no prometa una resolución favorable ni una fecha inexistente. El equilibrio del informe consiste en conservar diferencias entre fuentes, no en repartirles la misma autoridad sobre cualquier pregunta.",
-            "checklist": [
-              "Identifico quién necesita decidir y con qué información.",
-              "Separo afirmación, atribución e inferencia."
-            ]
-          },
-          {
-            "prompt": "Reformula para una persona ajena al debate de «Fuentes que no dicen lo mismo» la condición que más fácilmente se perdería al resumir. Explica el coste de omitirla.",
-            "model": "El promedio publicado excluye expedientes todavía abiertos. Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.",
-            "checklist": [
-              "No convierto la condición en un dato accesorio.",
-              "Mantengo el alcance aunque simplifique el léxico."
-            ]
-          }
-        ]
+        id: "c2-12-lectura-negacion",
+        type: "match",
+        prompt: "Relaciona cada fragmento de la reseña con lo que hace la negación.",
+        pairs: [
+          { left: "no es un sitio para hacerse fotos, sino para comer bien", right: "corrige un elemento por otro" },
+          { left: "un ají que no pica lo más mínimo", right: "término de polaridad negativa tras el verbo" },
+          { left: "no está todavía a la altura de la cocina", right: "crítica atenuada sin ironía" },
+          { left: "no pediría la cuenta hasta que no hubiera probado el postre", right: "negación expletiva" },
+          { left: "No es ningún secreto que en Laureles", right: "presenta algo como sabido por todos" },
+        ],
       },
       {
-        "id": "c2-12-recuperacion",
-        "type": "open",
-        "prompt": "Recupera recursos con materiales suministrados de semanas anteriores. No busques rasgos ausentes en el dossier actual. Contrasta después qué recurso sería pertinente transferir al nuevo caso.",
-        "items": [
+        id: "c2-12-lectura-evaluacion",
+        type: "open",
+        prompt: "Evalúa una decisión de la reseña con argumentos propios.",
+        items: [
           {
-            "prompt": "Recuperación c2.voc.casi-sinonimos. Recupera la semana 8, «La palabra que inclina la balanza». Unidades disponibles: perseverante (persistente con valoración favorable); obstinado (persistente pese a razones para cambiar); austero (sobrio en recursos o adornos); precario (insuficiente o inestable); admitir (reconocer algo que puede resultar incómodo); sostener (defender una afirmación); conceder (aceptar una premisa de manera delimitada); cundir (extenderse o producir rendimiento según el contexto). Pasaje: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nRecupera «Casi sinónimos y connotación»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En este contraste, «perseverante» nombra persistente con valoración favorable; «obstinado», persistente pese a razones para cambiar. La elección debe conservar esa diferencia. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
+            prompt: "La autora dice que en la reseña los datos van «sin adornos» para que cada lector saque sus conclusiones. Explica en 70–90 palabras si esa decisión es realmente neutral o si los datos elegidos también transmiten una opinión.",
+            model: "La decisión parece neutral, pero no lo es del todo. Elegir qué datos se dan ya es una forma de opinar: «cuarenta minutos» y «sopa tibia» orientan al lector hacia una crítica del servicio, aunque no haya adjetivos. Aun así, la autora es más justa que con la ironía, porque el lector puede comprobar los datos y no tiene que adivinar el tono. Además, compensa la crítica con la explicación de la dueña.",
+            checklist: [
+              "Tomo posición sobre la neutralidad de los datos.",
+              "Explico que la selección también comunica.",
+              "Comparo la estrategia con la ironía.",
+            ],
           },
-          {
-            "prompt": "Recuperación c2.voc.refranes-intertextualidad. Recupera la semana 8, «La palabra que inclina la balanza». Unidades disponibles: perseverante (persistente con valoración favorable); obstinado (persistente pese a razones para cambiar); austero (sobrio en recursos o adornos); precario (insuficiente o inestable); admitir (reconocer algo que puede resultar incómodo); sostener (defender una afirmación); conceder (aceptar una premisa de manera delimitada); cundir (extenderse o producir rendimiento según el contexto). Pasaje: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nRecupera «Refranes, citas e intertextualidad»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En este contraste, «perseverante» nombra persistente con valoración favorable; «obstinado», persistente pese a razones para cambiar. La elección debe conservar esa diferencia. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.matiz-lexico-voz. Recupera la semana 8, «La palabra que inclina la balanza». Textos para ensayo oral: «El resultado es concluyente sobre esa franja.» / «El resultado parece prometedor para nuevas pruebas.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Matiz léxico y voz» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Resalta sobre esa franja al decir concluyente. Contrasta el adjetivo aislado y el adjetivo delimitado; una voz enfática no vuelve más amplia la evidencia disponible. Un ensayo defendible conserva esta distinción del caso: La precisión consiste en controlar las inferencias de la elección léxica. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.precision-lexica. Recupera la semana 8, «La palabra que inclina la balanza». Modelo parcial que puedes transformar: El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener.\n\nRecupera «Precisión léxica» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: La precisión consiste en controlar las inferencias de la elección léxica. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.columna-literaria. Recupera la semana 8, «La palabra que inclina la balanza». Pasajes que debes contrastar: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nLa columnista decidió conservar la palabra obstinación en una cita atribuida al propio restaurador y retirarla de la voz narrativa. El cambio no declaraba falsa la valoración; cambiaba quién asumía su responsabilidad. Después revisó prometedor y concluyente en el cierre. La primera palabra proyectaba una posibilidad; la segunda cerraba una cuestión delimitada. Podían coexistir si se referían a objetos distintos: conclusión sobre la presencia de pigmento y promesa de nuevas preguntas de conservación. El ejercicio léxico culmina así en una decisión de arquitectura textual. No basta escoger la palabra exacta en una oración aislada; hay que mantener estable aquello sobre lo que se predica y evitar que el lector traslade una certeza local a una conclusión general.\n\nRelee estos pasajes y recupera «Leer una columna literaria». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.disc.humor-juegos. Microdiálogo original: «Di amante», indicó la directora a la actriz. «¿Diamante?», respondió ella, mirando al joyero que esperaba junto al escenario. Contraste del museo: «El presupuesto está en el aire», seguido de una mirada al techo abierto.\n\nDistingue resegmentación sonora y literalización de una locución. Explica qué información prepara cada giro y adapta uno para una persona que desconoce la expresión, sin afirmar que la síntesis garantiza el efecto humorístico. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Di amante/diamante aproxima dos segmentaciones mediante enlace vocálico; presupuesto en el aire activa una locución y después una lectura espacial. El joyero prepara la segunda interpretación del primer juego; el techo prepara la imagen del segundo. Una adaptación puede explicar antes que en el aire significa pendiente, aceptando que así cambia la sorpresa. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.expresiones-idiomaticas. Recupera la semana 11, «La risa y su destinatario». Unidades disponibles: remate (giro final que reorganiza lo anterior); doble sentido (activación de dos interpretaciones); calambur (resegmentación sonora que cambia el sentido); anticlímax (descenso inesperado de intensidad); tirar la casa por la ventana (gastar de forma extraordinaria); quedarse de piedra (sorprenderse mucho); tomar el pelo (burlarse mediante engaño ligero); dar en el clavo (acertar en el punto decisivo). Pasaje: El museo del oficio anunció una exposición titulada «Manos a la obra». La primera sala contenía fotografías de manos; la segunda, una explicación de por qué la obra no había terminado. La guía aseguró que la coherencia conceptual era impecable. El grupo rio, pero no por unanimidad. Un albañil jubilado preguntó si la broma era sobre el museo, sobre quienes trabajaban allí o sobre quienes habían dejado de cobrar durante la reforma. La pregunta parecía arruinar el chiste; en realidad, obligaba a precisar su blanco.\n\nRecupera «Expresiones idiomáticas con matiz»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La guía anunció que el presupuesto estaba en el aire. Un visitante levantó la cabeza hacia el techo abierto y asintió con una seriedad casi profesional. No había dejado de entender la locución: acababa de entenderla demasiado bien. La escena permite criticar la distancia entre discurso y obra sin convertir al visitante en torpe. El remate pierde fuerza si se explica antes, pero tampoco merece conservarse cuando impide responder a una queja. Si el grupo necesita una devolución, la versión literal tiene prioridad: la visita no ofreció las condiciones anunciadas y requiere una solución concreta. En este contraste, «remate» nombra giro final que reorganiza lo anterior; «doble sentido», activación de dos interpretaciones. La elección debe conservar esa diferencia. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.ritmo-humor. Recupera la semana 11, «La risa y su destinatario». Textos para ensayo oral: «El presupuesto está en el aire; mire el techo.» / «El presupuesto está pendiente; falta aprobarlo.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Ritmo del humor» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Prueba una pausa antes y después del remate. Compara si anticipas demasiado la broma. La síntesis permite oír las palabras; la eficacia humorística se contrasta con oyentes reales, sin evaluación automática. Un ensayo defendible conserva esta distinción del caso: El mecanismo humorístico cambia de efecto según quién controla el doble sentido. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.humor-escrito. Recupera la semana 11, «La risa y su destinatario». Pasajes que debes contrastar: El museo del oficio anunció una exposición titulada «Manos a la obra». La primera sala contenía fotografías de manos; la segunda, una explicación de por qué la obra no había terminado. La guía aseguró que la coherencia conceptual era impecable. El grupo rio, pero no por unanimidad. Un albañil jubilado preguntó si la broma era sobre el museo, sobre quienes trabajaban allí o sobre quienes habían dejado de cobrar durante la reforma. La pregunta parecía arruinar el chiste; en realidad, obligaba a precisar su blanco.\n\nEl taller comparó además dos blancos posibles. Si el personaje que mira el techo es una autoridad que acaba de defender la obra, el gesto puede parecer una toma de conciencia involuntaria. Si es un visitante que replica, puede funcionar como crítica deliberada. Las mismas palabras organizan relaciones de poder distintas. Por eso la edición del humor no termina al comprobar que existe un doble sentido. Debe preguntarse quién sabe qué, quién puede responder y qué coste tiene la broma para cada participante. El remate no queda prohibido por tener consecuencias, pero su autor necesita poder explicarlas. Cuando la explicación revela que la risa depende de humillar a alguien que no puede contestar, aparece una decisión ética y retórica que ninguna regla de ritmo puede resolver por sí sola.\n\nRelee estos pasajes y recupera «Leer humor escrito». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La guía anunció que el presupuesto estaba en el aire. Un visitante levantó la cabeza hacia el techo abierto y asintió con una seriedad casi profesional. No había dejado de entender la locución: acababa de entenderla demasiado bien. La escena permite criticar la distancia entre discurso y obra sin convertir al visitante en torpe. El remate pierde fuerza si se explica antes, pero tampoco merece conservarse cuando impide responder a una queja. Si el grupo necesita una devolución, la versión literal tiene prioridad: la visita no ofreció las condiciones anunciadas y requiere una solución concreta. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.spk.anecdota-humor. Recupera la semana 11, «La risa y su destinatario». Situación para retomar: Cuenta la anécdota dos veces con diferente distribución de pausas. Explica el mecanismo a una persona que no conoce la locución y abandona el humor si plantea una queja concreta. Objeción suministrada: La broma funciona igual ante cualquier grupo.\n\nRecupera «Anécdota con humor». Haz una intervención de dos minutos con tesis y reserva; responde durante un minuto a la objeción. Pide una reformulación de tu idea al interlocutor antes de evaluar si fuiste claro. Contraste nuevo suministrado de «Fuentes que no dicen lo mismo»: «Según el equipo técnico, disminuyó la espera registrada.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La guía anunció que el presupuesto estaba en el aire. Un visitante levantó la cabeza hacia el techo abierto y asintió con una seriedad casi profesional. No había dejado de entender la locución: acababa de entenderla demasiado bien. La escena permite criticar la distancia entre discurso y obra sin convertir al visitante en torpe. El remate pierde fuerza si se explica antes, pero tampoco merece conservarse cuando impide responder a una queja. Si el grupo necesita una devolución, la versión literal tiene prioridad: la visita no ofreció las condiciones anunciadas y requiere una solución concreta. En el nuevo contraste, «Según el equipo técnico, disminuyó la espera registrada.» debe interpretarse dentro de esta cuestión: Síntesis de fuentes contradictorias para públicos distintos. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la autora gradúa el elogio y la crítica sin recurrir a la ironía.",
+      items: [
+        { quote: "La bandeja paisa no está nada mal, y lo digo con la prudencia de quien ha probado cientos.", note: "Lítote de elogio, justificada para que no parezca tibia." },
+        { quote: "No todos los platos se retrasaron, y el personal fue amable en todo momento", note: "El alcance de la negación limita la crítica: no todos." },
+        { quote: "No creo que el problema sea de actitud.", note: "Negación de la creencia con subjuntivo, para proteger a los meseros." },
+        { quote: "El comedor no es grande ni especialmente luminoso, sino más bien una sala de casa", note: "«No… ni…, sino» corrige la expectativa con una descripción positiva." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Escribe un dossier de mediación de 550–650 palabras con una nota técnica para dirección y una explicación pública. Atribuye cada cifra y testimonio, evita falsas equivalencias y formula un compromiso que no prometa resultados imposibles.",
-    "context": "Entrega un texto independiente y conserva una segunda versión con cambios comentados. El modelo muestra una apertura posible; no sustituye el dossier completo.",
-    "steps": [
-      "Traza un mapa de fuentes: afirmación, prueba, límite y destinatario.",
-      "Decide el orden según la acción que necesita realizar tu lector; reserva espacio para una objeción fuerte.",
-      "Redacta sin copiar el modelo. Integra al menos dos fuentes y atribuye sus diferencias.",
-      "Revisa el alcance de tres formulaciones, lee un párrafo en voz alta y explica dos cambios de estilo."
+  practice: {
+    intro: "Combina orden, interpretación en contexto, reformulación y escritura breve. Termina recuperando clases anteriores que preparan esta semana.",
+    exercises: [
+      {
+        id: "c2-12-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases con negación pragmática.",
+        items: [
+          {
+            words: ["El", "ajiaco", "no", "estaba", "muy", "caliente", "que", "digamos."],
+            why: "Lítote irónica con «que digamos» al final.",
+          },
+          {
+            words: ["No", "es", "un", "bar,", "sino", "una", "fonda", "familiar."],
+            why: "Corrección con «no… sino».",
+          },
+          {
+            words: ["Ni", "un", "solo", "plato", "volvió", "a", "la", "cocina."],
+            why: "«Ni» delante del verbo sustituye al «no».",
+          },
+        ],
+      },
+      {
+        id: "c2-12-ironia-contexto",
+        type: "context",
+        prompt: "Decide si la frase es literal o irónica según el contexto.",
+        items: [
+          {
+            context: "El mesero tira un vaso de jugo sobre la camisa blanca de un cliente, que ya llevaba media hora esperando. El cliente dice: «¡Perfecto, lo que me faltaba!».",
+            q: "¿Cómo se interpreta?",
+            options: [
+              "Literal: está satisfecho.",
+              "Irónica: el accidente se suma a la espera.",
+              "Literal: le faltaba un jugo.",
+            ],
+            answer: 1,
+            why: "«Lo que faltaba» ante un problema añadido es casi siempre irónico.",
+          },
+          {
+            context: "Una pareja celebra su aniversario. Les sirven a tiempo, la comida es excelente y la dueña les regala el postre. Ella dice: «¡Qué bien nos han tratado!».",
+            q: "¿Cómo se interpreta?",
+            options: [
+              "Literal: el trato fue bueno.",
+              "Irónica: el trato fue malo.",
+              "Irónica: el postre era malo.",
+            ],
+            answer: 0,
+            why: "Ni el contexto ni la exageración señalan ironía: lectura literal.",
+          },
+          {
+            context: "En un correo a la dirección, un cliente escribe: «Su “servicio exprés” tardó cincuenta minutos en traer dos cafés».",
+            q: "¿Qué hacen las comillas alrededor de «servicio exprés»?",
+            options: [
+              "Citan con respeto el nombre oficial del servicio.",
+              "Indican que el cliente no conoce la expresión.",
+              "Marcan que el cliente no asume la etiqueta porque no corresponde a la realidad.",
+            ],
+            answer: 2,
+            why: "Comillas irónicas: la etiqueta contradice los cincuenta minutos.",
+          },
+        ],
+      },
+      {
+        id: "c2-12-reformular",
+        type: "transform",
+        prompt: "Reformula cada frase según la instrucción, sin cambiar lo que se quiere decir.",
+        items: [
+          {
+            source: "El postre es muy bueno.",
+            instruction: "Exprésalo con una lítote de elogio que use «nada».",
+            answers: ["El postre no está nada mal.", "El postre no es nada malo."],
+            why: "Negar el defecto con «nada» produce un elogio claro.",
+          },
+          {
+            source: "¡Qué servicio tan rápido! (dicho después de una hora de espera)",
+            instruction: "Quita la ironía y escribe el dato con una valoración explícita, para un correo de reclamación.",
+            answers: ["El servicio fue muy lento: esperamos una hora.", "Esperamos una hora: el servicio fue muy lento."],
+            why: "En un texto profesional, dato y valoración explícita sustituyen a la ironía.",
+          },
+          {
+            source: "El restaurante es carísimo.",
+            instruction: "Exprésalo con una lítote irónica con «precisamente».",
+            answers: ["El restaurante no es precisamente barato."],
+            why: "«No es precisamente + cualidad contraria» marca que la cualidad falta del todo.",
+          },
+        ],
+      },
+      {
+        id: "c2-12-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Escribe tres frases (40–60 palabras en total) sobre una cafetería que conozcas: una con lítote de elogio, otra con lítote de crítica atenuada y otra con «no… sino que». Indica entre paréntesis qué hace cada una.",
+            model: "El café de especialidad no está nada mal (elogio contenido). Las sillas no son muy cómodas, la verdad (crítica atenuada). Cuando se equivocaron con mi pedido, el barista no se limitó a disculparse, sino que me invitó a otro café (corrección con «sino que» ante verbo conjugado).",
+            checklist: [
+              "Diferencio la lítote de elogio de la de crítica.",
+              "Uso «sino que» delante de un verbo conjugado.",
+              "Explico qué hace cada frase.",
+            ],
+          },
+          {
+            prompt: "Un cliente escribió en una plataforma: «Excelente experiencia: solo tardaron una hora en tomarnos el pedido. Volveremos… dentro de diez años». Escribe en 50–70 palabras la respuesta de la dueña, sin ironía, reconociendo el problema.",
+            model: "Gracias por contarnos su experiencia, y lamentamos de verdad la espera. Una hora para tomar el pedido no es aceptable. Ese viernes nos faltó una persona en la sala y no supimos reorganizarnos a tiempo. Ya hemos incorporado a un nuevo mesero para los fines de semana. Si nos da otra oportunidad, nos encantaría invitarle al postre.",
+            checklist: [
+              "No respondo con ironía a la ironía.",
+              "Reconozco el dato concreto y explico la causa.",
+              "Propongo una solución y dejo la puerta abierta.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c2-12-recuperacion",
+        type: "open",
+        prompt: "Recupera clases anteriores que preparan esta semana con los estímulos que se te dan. No hace falta volver a esas lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de la clase G072 (doble negación, A2). Estímulo: «Nadie no vino a la inauguración» y «No vino nadie a la inauguración». Di cuál es correcta y reescribe la incorrecta de dos maneras.",
+            model: "La correcta es «No vino nadie a la inauguración». La otra es incorrecta porque «nadie» delante del verbo ya niega y no admite «no». Se puede decir «Nadie vino a la inauguración» o «No vino nadie a la inauguración».",
+            checklist: [
+              "Identifico la frase incorrecta.",
+              "Explico la regla de posición de «nadie».",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G191 (atenuación, C1). Estímulo: «La reseña es injusta». Atenúa la crítica con una lítote y con un limitador de alcance, para decírsela a la autora.",
+            model: "Con lítote: «La reseña no es del todo justa con el servicio». Con limitador de alcance: «Hasta cierto punto, la reseña es injusta con los meseros». La lítote rebaja la fuerza y el limitador acota la crítica a una parte.",
+            checklist: [
+              "Uso una lítote de crítica atenuada.",
+              "Uso un limitador como «hasta cierto punto» o «en parte».",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G196 (interrogativas retóricas, C1). Estímulo: «¿Quién va a esperar cuarenta minutos por una sopa?». Explica qué afirma en realidad la pregunta y reescríbela como afirmación para la reseña.",
+            model: "La pregunta no busca respuesta: afirma que nadie debería esperar cuarenta minutos por una sopa. Como afirmación para la reseña: «Cuarenta minutos de espera por una sopa son demasiados para cualquier cliente».",
+            checklist: [
+              "Explico el valor afirmativo de la pregunta.",
+              "La afirmación conserva la crítica sin la pregunta.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G218 (perífrasis de ironía, semana 9). Estímulo: «Se puso a cocinar para cuarenta y acabó sirviendo sopa fría a todos». Explica qué aporta «acabó sirviendo» y si lo usarías en la reseña.",
+            model: "«Acabar + gerundio» presenta el resultado como el desenlace inesperado y algo lamentable de un proceso. Aporta un matiz crítico y algo irónico. En la reseña no lo usaría: preferiría el dato, «la sopa llegó tibia», para no burlarme de la cocina.",
+            checklist: [
+              "Explico el valor de desenlace de la perífrasis.",
+              "Decido sobre su uso en un texto público y lo justifico.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G221 (modalización sutil, semana 11). Estímulo: «La cocina es lenta porque la dueña no quiere contratar a nadie». Reformúlala ajustando el compromiso a lo que se sabe: solo consta que hay un ayudante.",
+            model: "«Consta que la cocina tiene un solo ayudante, y todo indica que eso explica la espera. Nada indica, en cambio, que la dueña no quiera contratar a nadie». Separo el dato, la inferencia y lo que no tiene base.",
+            checklist: [
+              "Distingo dato e inferencia con fórmulas distintas.",
+              "Uso subjuntivo tras «nada indica que».",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "El informe mide tiempos medios; la asociación describe casos extremos.",
-      "Según el equipo técnico, disminuyó la espera registrada.",
-      "De esos datos no se desprende que todas las personas esperen menos.",
-      "compatibilizar",
-      "dato atípico",
-      "promedio"
-    ],
-    "model": [
-      "Modelo parcial de apertura (no es una entrega completa): Las consultas cerradas se responden antes, mientras que varias solicitudes complejas siguen abiertas durante más de un mes. Ambas afirmaciones pueden ser ciertas porque el promedio publicado excluye expedientes pendientes. Los seis testimonios muestran experiencias relevantes, aunque no permiten estimar su frecuencia. La dirección necesita indicadores desagregados y las personas usuarias necesitan saber el estado y el próximo paso de su caso. Proponemos un aviso periódico que no prometa una resolución favorable ni una fecha inexistente. El equilibrio del informe consiste en conservar diferencias entre fuentes, no en repartirles la misma autoridad sobre cualquier pregunta."
-    ],
-    "checklist": [
-      "La tesis tiene alcance preciso y pruebas identificables.",
-      "No convierto una propuesta en decisión ni una inferencia en dato.",
-      "El registro responde al destinatario y no borra condiciones.",
-      "La cohesión conserva referentes y voces sin repeticiones inútiles.",
-      "La revisión explica qué cambia para quien lee."
-    ],
-    "words": [
-      550,
-      650
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no un guion leído. La grabación, si la usas, permanece local; el navegador no califica pronunciación ni calidad oral.",
-    "tasks": [
-      {
-        "title": "Exposición situada",
-        "prompt": "Explica la discrepancia a una asociación y después al equipo técnico. Negocia un titular compartido y responde a quien exige elegir cuál de las dos fuentes miente.",
-        "prep": [
-          "Anota tesis, dos pruebas, una objeción y una reserva.",
-          "Marca dos focos prosódicos y un punto donde cambiarás de registro."
-        ],
-        "seconds": 240,
-        "model": "Las consultas cerradas se responden antes, mientras que varias solicitudes complejas siguen abiertas durante más de un mes. Ambas afirmaciones pueden ser ciertas porque el promedio publicado excluye expedientes pendientes. Los seis testimonios muestran experiencias relevantes, aunque no permiten estimar su frecuencia. La dirección necesita indicadores desagregados y las personas usuarias necesitan saber el estado y el próximo paso de su caso. Proponemos un aviso periódico que no prometa una resolución favorable ni una fecha inexistente. El equilibrio del informe consiste en conservar diferencias entre fuentes, no en repartirles la misma autoridad sobre cualquier pregunta.",
-        "selfCheck": [
-          "La condición principal se oye con claridad.",
-          "Distingo mi interpretación de las voces citadas.",
-          "Puedo reparar una frase sin abandonar el argumento."
-        ]
-      },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "Tu interlocutor sostiene: «Una de las fuentes necesariamente miente.». Responde sin caricaturizarlo, formula dos preguntas de seguimiento y pide que reformule tu condición principal. Después resume para una persona que no conoce el expediente de Fuentes que no dicen lo mismo.",
-        "prep": [
-          "Prepara una concesión real y una corrección de alcance.",
-          "Anticipa qué término deberás explicar sin jerga."
-        ],
-        "seconds": 240,
-        "model": "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes. El promedio publicado excluye expedientes todavía abiertos.",
-        "selfCheck": [
-          "La respuesta atiende la preocupación, no solo corrige la forma.",
-          "La versión breve conserva el límite decisivo.",
-          "Adapto el ritmo después de la interrupción."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te espera con una tarjeta de contraste: lleva tu dossier y una decisión lingüística que quieras poner a prueba con tu docente.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu decisión más discutible sobre Fuentes que no dicen lo mismo y pide un contraejemplo que la ponga a prueba.",
-        "phrases": [
-          "Mi lectura se apoya en…",
-          "Cambiaría de interpretación si…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica el límite «El promedio publicado excluye expedientes todavía abiertos.» a otro público sin rebajar su importancia.",
-        "phrases": [
-          "En otros términos…",
-          "Esta versión conserva…"
-        ]
-      },
-      {
-        "move": "Negocia",
-        "task": "Responde a la objeción «Seis testimonios permiten calcular la frecuencia general del problema.» y acuerda una formulación que ambos puedan defender.",
-        "phrases": [
-          "Reconozco ese punto; mi reserva es…",
-          "Podemos dejar constancia de…"
-        ]
-      }
+  writing: {
+    task: "Redacta una reseña equilibrada de un restaurante, real o imaginado, para una revista de tu ciudad (400–520 palabras). Debe valorar la comida, el servicio, los precios y el ambiente, graduar elogios y críticas con lítotes bien elegidas, controlar el alcance de cada negación y usar la ironía como mucho una vez y bien marcada.",
+    context: "La revista la leen personas que quieren decidir dónde comer y también los dueños de los locales, que tienen derecho de réplica. Cada crítica debe apoyarse en un dato; cada elogio, en algo concreto. Puedes basarte en el Fogón de Laureles o en otro lugar.",
+    steps: [
+      "Haz dos listas: lo que elogiarás y lo que criticarás, cada cosa con un dato concreto.",
+      "Decide qué lítotes usarás para graduar cada valoración y dónde una negación con «no todos» o «no siempre» hará la crítica más justa.",
+      "Redacta sin copiar el modelo. Incluye al menos una lítote de elogio, una de crítica atenuada, una corrección con «no… sino (que)» y un término de polaridad negativa.",
+      "Revisa la reseña con la lista de control: corrige cualquier lítote que diga lo contrario de lo que quieres, comprueba el alcance de las negaciones y elimina la ironía que no se entienda sin la voz.",
     ],
-    "bring": "El dossier, una versión revisada, notas de escucha y una grabación local opcional; no se necesita subir audio."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Balance de Fuentes que no dicen lo mismo: ¿qué conclusión conserva el alcance?",
-        "options": [
-          "Una de las fuentes necesariamente miente.",
-          "Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes."
-        ],
-        "answer": 1,
-        "why": "Relaciona el texto principal con el documento complementario."
-      },
-      {
-        "type": "choice",
-        "q": "En una revisión final de Fuentes que no dicen lo mismo, ¿qué afirmación debe rechazarse?",
-        "options": [
-          "El promedio incluye todos los expedientes pendientes.",
-          "El promedio publicado excluye expedientes todavía abiertos."
-        ],
-        "answer": 0,
-        "why": "La primera opción contradice la condición explícita."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha esta síntesis de Fuentes que no dicen lo mismo. ¿Qué interpretación mantiene?",
-        "options": [
-          "Una síntesis equilibrada no necesita tratar como equivalentes evidencias de distinta naturaleza.",
-          "Seis testimonios permiten calcular la frecuencia general del problema."
-        ],
-        "answer": 0,
-        "why": "La relación expresada limita una generalización.",
-        "audio": "Una síntesis equilibrada no necesita tratar como equivalentes evidencias de distinta naturaleza.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "En «Fuentes que no dicen lo mismo», ¿qué unidad expresa «hacer coexistir elementos sin borrar sus diferencias»? ___ .",
-        "answers": [
-          [
-            "compatibilizar"
-          ]
-        ],
-        "hint": "hacer coexistir elementos sin borrar sus diferencias",
-        "why": "Recupera la unidad a partir de su función, no de una traducción."
-      },
-      {
-        "type": "gap",
-        "q": "Para nombrar «observación alejada del patrón habitual» en este expediente usamos ___ .",
-        "answers": [
-          [
-            "dato atípico"
-          ]
-        ],
-        "why": "La distinción léxica debe conservarse al mediar."
-      },
-      {
-        "type": "error",
-        "sentence": "El informe propone de publicar la antigüedad de los casos.",
-        "answers": [
-          "El informe propone publicar la antigüedad de los casos."
-        ],
-        "why": "Proponer seguido de infinitivo no exige de."
-      },
-      {
-        "type": "transform",
-        "source": "Las consultas cerradas tardan menos. No sabemos cuánto tardan las que siguen abiertas.",
-        "instruction": "Une con punto y coma y «en cambio» en la segunda proposición.",
-        "answers": [
-          "Las consultas cerradas tardan menos; en cambio, no sabemos cuánto tardan las que siguen abiertas."
-        ],
-        "why": "Conservar dos poblaciones: conserva la relación solicitada y compara qué se hace explícito."
-      },
-      {
-        "type": "open",
-        "prompt": "Cierre de «Fuentes que no dicen lo mismo»: escribe 90–120 palabras para una audiencia nueva. Incluye tesis, condición y una pregunta pendiente; justifica una elección de registro.",
-        "model": "Las consultas cerradas se responden antes, mientras que varias solicitudes complejas siguen abiertas durante más de un mes. Ambas afirmaciones pueden ser ciertas porque el promedio publicado excluye expedientes pendientes. Los seis testimonios muestran experiencias relevantes, aunque no permiten estimar su frecuencia. La dirección necesita indicadores desagregados y las personas usuarias necesitan saber el estado y el próximo paso de su caso. Proponemos un aviso periódico que no prometa una resolución favorable ni una fecha inexistente. El equilibrio del informe consiste en conservar diferencias entre fuentes, no en repartirles la misma autoridad sobre cualquier pregunta.",
-        "checklist": [
-          "Conservo la reserva decisiva.",
-          "Atribuyo una fuente y delimito mi inferencia.",
-          "El destinatario puede identificar el siguiente paso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Interpreto síntesis de fuentes contradictorias para públicos distintos en fuentes originales.",
-      "Puedo explicar por qué «Una de las fuentes necesariamente miente.» excede la evidencia.",
-      "Defiendo y reviso un dossier escrito y oral con destinatario concreto."
+    useLanguage: [
+      "no está nada mal / no es ningún secreto que",
+      "no es muy… / no está todavía a la altura de…",
+      "no todos / no siempre",
+      "no es…, sino… / no se limitó a…, sino que…",
+      "en mi vida he… / no… lo más mínimo",
+      "no volvería porque…, sino porque…",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye sin mirar el límite: El promedio publicado excluye expedientes todavía abiertos.",
-      "Dentro de una semana, reescribe el cierre para otro público y contrástalo con tu versión inicial.",
-      "En clase, pide una objeción a «Las fuentes son parcialmente compatibles porque describen poblaciones y medidas diferentes.» y registra qué cambiarías."
-    ]
-  }
+    model: [
+      "Modelo parcial de apertura (no es una entrega completa): No es ningún secreto que en el centro de la ciudad es difícil comer bien por poco dinero. La Cuchara de Ana, una fonda de doce mesas junto al mercado, no pretende cambiar esa regla, sino demostrar que tiene excepciones. Su menú del día no está nada mal: una sopa de verduras con el punto justo de sal, un guiso de res que se deshace con el tenedor y un postre casero que cambia cada semana. No todo es igual de redondo, pero lo que falla, como se verá, no es la cocina.",
+    ],
+    checklist: [
+      "Cada lítote dice lo que quiero: elogio o crítica, sin confusión.",
+      "Cada crítica se apoya en un dato concreto.",
+      "Las negaciones tienen el alcance que pretendo («no todos», «no siempre», «no… porque»).",
+      "Uso «sino» y «sino que» correctamente.",
+      "La ironía aparece como mucho una vez y se entiende sin la voz.",
+    ],
+    words: [400, 520],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un guion leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "La llamada de doña Gloria",
+        prompt: "Eres doña Gloria, la dueña del restaurante. Llamas a la crítica después de leer la reseña. Agradece lo que valoró, reconoce el problema del servicio sin ironía, explica qué vas a cambiar y aclara un dato que te parece injusto. Habla al menos cuatro minutos, como si respondieras a sus preguntas.",
+        prep: [
+          "Prepara una apertura que agradezca sin exagerar.",
+          "Decide qué dato quieres matizar y con qué negación lo harás («no todos», «no siempre»).",
+          "Ten pensada una propuesta concreta para que vuelva.",
+        ],
+        seconds: 240,
+        model: "Mariana, buenas tardes, le habla Gloria Zapata, del Fogón. Primero quería darle las gracias, porque lo de la sazón me llegó al alma. Y tiene razón con la espera: ese viernes no dimos abasto. Ahora, una cosita: no es que los meseros fueran lentos, sino que la cocina no les sacaba los platos. No siempre pasa, pero los viernes sí. Ya contratamos a un segundo ayudante…",
+        selfCheck: [
+          "Reconozco el problema sin ironía.",
+          "Matizo con una negación de alcance preciso.",
+          "Propongo algo concreto.",
+        ],
+      },
+      {
+        title: "Explicar una lítote a un amigo",
+        prompt: "Un amigo extranjero lee la reseña y entiende que «el servicio no está todavía a la altura de la cocina» es un elogio. Explícale qué significa, compáralo con «no está nada mal» y dale dos ejemplos de cada tipo.",
+        prep: [
+          "Prepara la diferencia entre negar un defecto y negar una cualidad.",
+          "Elige ejemplos de tu propia experiencia.",
+        ],
+        seconds: 150,
+        model: "Mira, aquí no te está elogiando el servicio. Cuando dices que algo no está a la altura, niegas una cualidad: o sea, el servicio es peor que la cocina. En cambio, «no está nada mal» niega un defecto, y eso es un elogio. Por ejemplo…",
+        selfCheck: [
+          "Explico la diferencia entre los dos tipos de lítote.",
+          "Doy ejemplos claros de cada uno.",
+        ],
+      },
+      {
+        title: "Del pódcast a la reunión",
+        prompt: "Cuenta en voz alta tu última comida fuera dos veces: primero como en un pódcast entre amigos, con alguna ironía bien entonada, y después como si informaras a la responsable de un local, sin ironía.",
+        prep: [
+          "Marca dónde pondrás la ironía en la primera versión.",
+          "Busca el dato que la sustituye en la segunda.",
+        ],
+        seconds: 120,
+        selfCheck: [
+          "La ironía de la primera versión se reconoce por el contexto y la entonación.",
+          "La segunda versión da el mismo contenido con datos y valoración explícita.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu reseña y una lista de lítotes que hayas encontrado. Estas tarjetas te ayudan a aprovechar el tiempo con tu profesor.",
+    cards: [
+      {
+        move: "Interpreta",
+        task: "Lee a tu profesor cuatro lítotes de tu reseña sin decir si son elogio o crítica y comprueba si las interpreta como querías.",
+        phrases: ["¿Lo has entendido como elogio o como crítica?", "¿Suena demasiado suave?"],
+      },
+      {
+        move: "Detecta",
+        task: "Pídele a tu profesor que te diga tres frases, algunas irónicas y otras literales, y explica qué señal te ha permitido distinguirlas.",
+        phrases: ["Me ha parecido irónica por el contexto…", "Por la entonación diría que…"],
+      },
+      {
+        move: "Corrige",
+        task: "Lleva dos frases con «no… porque» y pide a tu profesor que diga qué niega cada una: el hecho o la causa.",
+        phrases: ["¿Aquí niego que lo hiciera o solo el motivo?"],
+      },
+      {
+        move: "Debate",
+        task: "Defiende o critica la decisión de la autora de no usar ironía en la reseña escrita.",
+        phrases: ["No digo que la ironía sobre, sino que…", "En un texto impreso, no siempre…"],
+      },
+    ],
+    bring: "Tu reseña revisada, tu lista de lítotes con su sentido y, si quieres, la grabación de la llamada de doña Gloria.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "¿Qué frase es un elogio?",
+        options: [
+          "El pescado no estaba muy fresco.",
+          "El pescado no estaba precisamente fresco.",
+          "El pescado no estaba nada mal.",
+        ],
+        answer: 2,
+        why: "«No estaba nada mal» niega el defecto con intensidad.",
+      },
+      {
+        type: "choice",
+        q: "«No todos los clientes dejaron propina». ¿Qué se deduce?",
+        options: [
+          "Que algunos clientes sí dejaron propina.",
+          "Que ningún cliente dejó propina.",
+          "Que todos los clientes dejaron propina.",
+        ],
+        answer: 0,
+        why: "«No todos» niega la totalidad: algunos sí.",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase. ¿Qué dice sobre el cocinero?",
+        options: [
+          "Que no lo contrataron.",
+          "Que lo contrataron por otra razón.",
+          "Que era famoso.",
+        ],
+        answer: 1,
+        why: "«No… porque + subjuntivo» niega solo la causa.",
+        audio: "No contratamos al cocinero porque fuera famoso, sino porque su sazón nos convenció.",
+        voice: "es-CO-m",
+      },
+      {
+        type: "gap",
+        q: "El local no es un restaurante de lujo, ___ cuida cada detalle de la mesa.",
+        answers: [["pero"]],
+        hint: "No se corrige nada: se añade un contraste compatible con lo anterior.",
+        why: "«No… pero» introduce un contraste sin sustituir.",
+      },
+      {
+        type: "gap",
+        q: "No se limitaron a cambiar el plato, ___ nos invitaron a la cena.",
+        answers: [["sino que"]],
+        hint: "Corrección delante de un verbo conjugado.",
+        why: "«Sino que» antes de verbo conjugado.",
+      },
+      {
+        type: "transform",
+        source: "Nos atendió una mesera muy antipática.",
+        instruction: "Exprésalo con una lítote irónica que termine en «que digamos».",
+        answers: ["La mesera que nos atendió no fue muy simpática que digamos.", "La mesera no fue muy simpática que digamos."],
+        why: "Lítote irónica: se niega la cualidad contraria y se subraya con «que digamos».",
+      },
+      {
+        type: "error",
+        sentence: "En mi vida no he visto una cocina tan limpia.",
+        answers: ["En mi vida he visto una cocina tan limpia.", "No he visto en mi vida una cocina tan limpia."],
+        why: "Delante del verbo, «en mi vida» ya niega.",
+      },
+      {
+        type: "error",
+        sentence: "No nos sirvieron vino, sino nos ofrecieron un jugo de lulo.",
+        answers: ["No nos sirvieron vino, sino que nos ofrecieron un jugo de lulo."],
+        why: "Delante de verbo conjugado, «sino que».",
+      },
+      {
+        type: "order",
+        words: ["No", "pidas", "el", "postre", "hasta", "que", "no", "termine", "la", "música."],
+        why: "Negación expletiva con «hasta que no + subjuntivo».",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 80–100 palabras a un compañero la diferencia entre «temo que no venga el proveedor» y «no saldremos hasta que no venga el proveedor». Di en cuál puede quitarse el «no» y qué cambiaría en la otra.",
+        model: "En «no saldremos hasta que no venga el proveedor», el segundo «no» es expletivo: si lo quitamos, la frase dice lo mismo, porque esperaremos a que llegue. En cambio, en «temo que no venga el proveedor» el «no» es pleno: el miedo es que falte. Si lo quitamos, «temo que venga el proveedor», cambia por completo el sentido, porque lo que preocupa es su llegada. Para saberlo, basta con quitar el «no» y comprobar si cambia el significado.",
+        checklist: [
+          "Identifico la negación expletiva y la plena.",
+          "Explico qué cambia al quitar el «no» en cada caso.",
+          "Propongo una prueba para distinguirlas.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Interpreto y uso lítotes de elogio, de crítica atenuada e irónicas sin confundir su sentido.",
+      "Distingo la negación expletiva de la plena y uso «hasta que no» y «por poco» con naturalidad.",
+      "Controlo el alcance de la negación con «no todos», «no siempre» y «no… porque», y uso «sino», «sino que» y «pero».",
+      "Reconozco la ironía por el contexto, la exageración y la entonación, y la evito en textos donde puede malinterpretarse.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna central de la tabla de lítotes y reconstruye qué se entiende detrás de cada frase.",
+      "Dentro de una semana, busca tres reseñas reales en línea y subraya cada lítote y cada ironía.",
+      "En la próxima clase, lee tu reseña en voz alta y pide a tu profesor que marque cualquier negación ambigua.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/ironia-litotes-y-negacion-pragmatica", label: "Clase: Ironía, litotes y negación pragmática" },
+  ],
 };

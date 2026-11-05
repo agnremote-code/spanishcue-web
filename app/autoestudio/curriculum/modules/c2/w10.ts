@@ -1,967 +1,998 @@
 import type { Module } from "../../types";
 
-/** Material original C2. Audio mediante síntesis; sin acreditación regional. */
+/**
+ * C2 · semana 10 · Integración. Autoestudio espejo de G219 (foco,
+ * presuposición y estructura informativa) y G220 (tema, rema y orden marcado
+ * en textos complejos), que además integra G213–G218 (semanas 6 a 9).
+ * Repaso autónomo con la audiencia pública y los textos ficticios sobre una
+ * huaca de Lima. Audio mediante síntesis; sin acreditación regional.
+ */
 export const c2w10: Module = {
-  "id": "c2-10",
-  "level": "c2",
-  "week": 10,
-  "kind": "checkpoint",
-  "title": "Checkpoint: qué demuestra un éxito",
-  "subtitle": "Integrar retórica, densidad, matiz y variación",
-  "stop": {
-    "place": "Lima",
-    "country": "Perú"
+  id: "c2-10",
+  level: "c2",
+  week: 10,
+  kind: "checkpoint",
+  title: "Lo que se dice, lo que se da por hecho y en qué orden",
+  subtitle: "Repaso de presuposiciones, foco y progresión temática, integrado con ambigüedad, norma, trato, variación del pasado, pronombres e ironía",
+  stop: {
+    place: "Lima",
+    country: "Perú",
   },
-  "minutes": 150,
-  "newObjectives": [
-    "c2.rev.checkpoint-2",
-    "c2.lis.mesa-redonda"
+  minutes: 150,
+  newObjectives: [
+    "c2.gram.g219",
+    "c2.gram.g220",
+    "c2.voc.w10-patrimonio-debate",
+    "c2.pron.w10-foco-contrastivo",
+    "c2.lis.w10-entrevista-radio",
+    "c2.read.w10-articulo-huaca",
+    "c2.wri.w10-articulo-opinion",
+    "c2.spk.w10-intervencion-audiencia",
+    "c2.fun.w10-desmontar-presuposicion",
+    "c2.disc.w10-progresion-tematica",
+    "c2.rev.w10-integracion-semanas-6-9",
   ],
-  "reviewObjectives": [
-    "c2.disc.recursos-retoricos",
-    "c2.voc.lexico-persuasivo",
-    "c2.pron.oratoria",
-    "c2.lis.discurso-politico",
-    "c2.spk.discurso-breve",
-    "c2.read.prosa-densa",
-    "c2.gram.sintaxis-compleja",
-    "c2.voc.conectores-cultos",
-    "c2.pron.lectura-densa",
-    "c2.wri.abstract",
-    "c2.voc.casi-sinonimos",
-    "c2.voc.refranes-intertextualidad",
-    "c2.pron.matiz-lexico-voz",
-    "c2.wri.precision-lexica",
-    "c2.read.columna-literaria",
-    "c2.pron.variacion-avanzada",
-    "c2.voc.variacion-lexica-pragmatica",
-    "c2.gram.variacion-gramatical",
-    "c2.lis.voces-mundo",
-    "c2.fun.mediacion-variedades"
-  ],
-  "prerequisites": [
-    "c2-09"
-  ],
-  "goal": {
-    "canDo": "Puedo contrastar indicadores y discursos públicos para redactar un balance preciso del acceso.",
-    "steps": [
-      "Lee las fuentes y distingue dato, inferencia y evaluación.",
-      "Escucha el intercambio antes de consultar su transcripción.",
-      "Aplica integrar retórica, densidad, matiz y variación a una decisión comunicativa concreta.",
-      "Produce el dossier escrito, revisa una elección y defiéndela oralmente."
-    ]
-  },
-  "theory": {
-    "intro": "Los casos, documentos y voces de esta semana son originales y ficticios. La dificultad está en controlar relaciones de significado, no en acumular palabras raras.",
-    "parts": [
-      {
-        "heading": "Integrar retórica, densidad, matiz y variación",
-        "body": [
-          "Una conclusión puede ser verdadera con un alcance reducido y engañosa al ampliarlo. La rectificación antes bien invierte la orientación; con todo preserva la primera proposición y le añade un límite. En la síntesis, los verbos de atribución y los complementos de alcance permiten comparar fuentes sin fundirlas. Recupera la concesión táctica, la distinción causal, los casi sinónimos y la aclaración intercultural de plazos.",
-          "En este caso, El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera. La formulación elegida debe permitir al destinatario reconstruir la diferencia relevante y reconocer qué no se ha demostrado."
-        ],
-        "examples": [
-          {
-            "es": "El programa amplió el acceso; con todo, no llegó a todos los barrios."
-          },
-          {
-            "es": "El dato no cierra la discusión; antes bien, obliga a precisar la muestra."
-          },
-          {
-            "es": "La coordinadora calificó de prometedor el resultado entre quienes respondieron."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La asociación pidió de que se midieran los abandonos.",
-            "right": "La asociación pidió que se midieran los abandonos.",
-            "why": "Pedir introduce complemento directo sin de."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretar, atribuir y revisar en este caso",
-        "body": [
-          "Corregir el encuadre de una fuente no obliga a descartar todas sus observaciones. Para defender esa lectura, identifica una formulación y el detalle que la sostiene. Prueba después una explicación rival y señala qué dato necesitarías para preferirla.",
-          "La versión para un público nuevo puede cambiar léxico, orden y longitud, pero debe conservar esta condición: La asistencia presencial era una recomendación sin presupuesto aprobado. Un cambio de registro que la elimina cambia también el contenido."
-        ],
-        "examples": [
-          {
-            "es": "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.",
-            "note": "Síntesis con alcance delimitado."
-          },
-          {
-            "es": "La satisfacción prueba accesibilidad universal.",
-            "note": "Lectura excesiva que el dossier no respalda."
-          }
-        ],
-        "tip": "La mascota te invita a conservar una duda productiva: llévala a clase junto con una prueba, no con una impresión aislada."
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Relaciona forma y efecto comunicativo en el expediente; la explicación importa tanto como la respuesta.",
-    "exercises": [
-      {
-        "id": "c2-10-gramatica-alcance",
-        "type": "choice",
-        "prompt": "Selecciona la interpretación defendible de Checkpoint: qué demuestra un éxito.",
-        "items": [
-          {
-            "q": "En el caso de Checkpoint: qué demuestra un éxito, ¿qué formulación preserva el alcance?",
-            "options": [
-              "El dato no cierra la discusión; antes bien, obliga a precisar la muestra.",
-              "Un error de encuadre invalida cualquier observación de la fuente."
-            ],
-            "answer": 0,
-            "why": "Una conclusión puede ser verdadera con un alcance reducido y engañosa al ampliarlo. La rectificación antes bien invierte la orientación; con todo preserva la primera proposición y le añade un límite. En la síntesis, los verbos de atribución y los complementos de alcance permiten comparar fuentes sin fundirlas. Recupera la concesión táctica, la distinción causal, los casi sinónimos y la aclaración intercultural de plazos."
-          },
-          {
-            "q": "¿Qué cautela lingüística resulta necesaria al explicar Checkpoint: qué demuestra un éxito?",
-            "options": [
-              "Corregir el encuadre de una fuente no obliga a descartar todas sus observaciones.",
-              "La satisfacción prueba accesibilidad universal."
-            ],
-            "answer": 0,
-            "why": "Relaciona forma, contexto y efecto; evita ampliar una conclusión más allá de su base."
-          }
-        ]
-      },
-      {
-        "id": "c2-10-gramatica-forma",
-        "type": "gap",
-        "prompt": "Completa las relaciones gramaticales del caso Checkpoint: qué demuestra un éxito.",
-        "items": [
-          {
-            "q": "El dato no cierra el debate; antes ___, lo precisa.",
-            "answers": [
-              [
-                "bien"
-              ]
-            ],
-            "why": "Una conclusión puede ser verdadera con un alcance reducido y engañosa al ampliarlo. La rectificación antes bien invierte la orientación; con todo preserva la primera proposición y le añade un límite. En la síntesis, los verbos de atribución y los complementos de alcance permiten comparar fuentes sin fundirlas. Recupera la concesión táctica, la distinción causal, los casi sinónimos y la aclaración intercultural de plazos."
-          },
-          {
-            "q": "El cuestionario se dirigió ___ quienes completaron el trámite.",
-            "answers": [
-              [
-                "a"
-              ]
-            ],
-            "why": "Una conclusión puede ser verdadera con un alcance reducido y engañosa al ampliarlo. La rectificación antes bien invierte la orientación; con todo preserva la primera proposición y le añade un límite. En la síntesis, los verbos de atribución y los complementos de alcance permiten comparar fuentes sin fundirlas. Recupera la concesión táctica, la distinción causal, los casi sinónimos y la aclaración intercultural de plazos."
-          },
-          {
-            "q": "La reforma era una recomendación, no una decisión ya ___.",
-            "answers": [
-              [
-                "aprobada"
-              ]
-            ],
-            "why": "Una conclusión puede ser verdadera con un alcance reducido y engañosa al ampliarlo. La rectificación antes bien invierte la orientación; con todo preserva la primera proposición y le añade un límite. En la síntesis, los verbos de atribución y los complementos de alcance permiten comparar fuentes sin fundirlas. Recupera la concesión táctica, la distinción causal, los casi sinónimos y la aclaración intercultural de plazos."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Usa estas unidades para describir diferencias que el caso exige. La definición orienta el uso; contrástala con la frase completa.",
-    "groups": [
-      {
-        "title": "Precisión para Checkpoint: qué demuestra un éxito",
-        "items": [
-          {
-            "es": "balance provisional",
-            "note": "evaluación sujeta a nuevos datos"
-          },
-          {
-            "es": "denominador",
-            "note": "total respecto al que se calcula una proporción"
-          },
-          {
-            "es": "extrapolar",
-            "note": "extender una conclusión fuera de la base observada"
-          },
-          {
-            "es": "triangulación",
-            "note": "contraste entre fuentes diferentes"
-          },
-          {
-            "es": "cobertura",
-            "note": "alcance efectivo de una intervención"
-          },
-          {
-            "es": "disenso razonado",
-            "note": "desacuerdo apoyado en argumentos"
-          },
-          {
-            "es": "cifra agregada",
-            "note": "dato que reúne categorías distintas"
-          },
-          {
-            "es": "cautela",
-            "note": "limitación explícita de una afirmación"
-          }
-        ]
-      }
+  reviewObjectives: ["c2.gram.g213","c2.gram.g214","c2.voc.w06-revision-textos","c2.pron.w06-pausa-desambigua","c2.lis.w06-reunion-biblioteca","c2.read.w06-columna-boletin","c2.wri.w06-informe-revision","c2.spk.w06-defender-criterio","c2.fun.w06-justificar-correccion","c2.disc.w06-voz-ajena-voz-propia","c2.gram.g215","c2.voc.w07-trato-cortesia","c2.pron.w07-agudas-voseo","c2.lis.w07-llamada-cambio-trato","c2.read.w07-guia-trato","c2.wri.w07-protocolo-mensajes","c2.spk.w07-negociar-trato","c2.fun.w07-proponer-rechazar-tuteo","c2.disc.w07-coherencia-trato","c2.gram.g216","c2.gram.g217","c2.voc.w08-camino-correspondencia","c2.pron.w08-s-final-pronombres","c2.lis.w08-reunion-antologia","c2.read.w08-presentacion-antologia","c2.wri.w08-guia-correspondencia","c2.spk.w08-explicar-variedades","c2.fun.w08-adaptar-sin-borrar","c2.disc.w08-cita-y-norma","c2.gram.g218","c2.voc.w09-critica-teatral","c2.pron.w09-acento-ironico","c2.lis.w09-columna-y-nota","c2.read.w09-critica-reapertura","c2.wri.w09-cronica-ironica","c2.spk.w09-anecdota-valorada","c2.fun.w09-quitar-poner-valoracion","c2.disc.w09-ironia-sin-mentir"],
+  prerequisites: ["c2-09"],
+  goal: {
+    canDo: "Puedo detectar y desmontar lo que un enunciado da por hecho, corregir un foco con los recursos adecuados y ordenar un texto complejo para que avance de lo conocido a lo nuevo, integrando lo repasado sobre ambigüedad, norma, trato, variación regional e ironía.",
+    steps: [
+      "Repasa en la teoría la presuposición y sus activadores, el foco, la progresión temática y los órdenes marcados, y la síntesis de las semanas 6 a 9.",
+      "Practica con las declaraciones y los textos sobre la huaca Mirasol, en Lima.",
+      "Escucha la entrevista radial y lee el artículo de opinión de la arqueóloga.",
+      "Redacta tu propio artículo de opinión completo, revísalo con la lista de control y prepara tu intervención en la audiencia pública.",
     ],
-    "exercises": [
-      {
-        "id": "c2-10-lexico",
-        "type": "match",
-        "prompt": "Relaciona cada unidad con la distinción que aporta al expediente de Checkpoint: qué demuestra un éxito.",
-        "pairs": [
-          {
-            "left": "balance provisional",
-            "right": "evaluación sujeta a nuevos datos"
-          },
-          {
-            "left": "denominador",
-            "right": "total respecto al que se calcula una proporción"
-          },
-          {
-            "left": "extrapolar",
-            "right": "extender una conclusión fuera de la base observada"
-          },
-          {
-            "left": "triangulación",
-            "right": "contraste entre fuentes diferentes"
-          },
-          {
-            "left": "cobertura",
-            "right": "alcance efectivo de una intervención"
-          },
-          {
-            "left": "disenso razonado",
-            "right": "desacuerdo apoyado en argumentos"
-          },
-          {
-            "left": "cifra agregada",
-            "right": "dato que reúne categorías distintas"
-          },
-          {
-            "left": "cautela",
-            "right": "limitación explícita de una afirmación"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Cifras, contraste y reserva",
-    "explanation": [
-      "Mantén un grupo claro para el porcentaje y otro para su población de referencia. El límite de la muestra merece igual audibilidad que la cifra; no lo conviertas en un añadido apresurado.",
-      "El audio utiliza síntesis disponible en el navegador: no certifica acento regional, ironía natural ni calidad de pronunciación. Escucha el contenido, ensaya contrastes y comprueba el efecto con una persona. El objetivo es inteligibilidad y control expresivo, no eliminar tu acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste estos temas con tu profesor. Aquí los repasas con una situación nueva: en un barrio de Lima, una inmobiliaria quiere construir un estacionamiento junto a la huaca Mirasol, un sitio arqueológico de adobe. Hay una entrevista en la radio, una audiencia pública y un artículo de opinión. Al final del bloque de teoría encontrarás una síntesis de las semanas 6 a 9 para usarla en la práctica de integración.",
+    parts: [
       {
-        "es": "El ochenta por ciento de quienes respondieron está satisfecho."
-      },
-      {
-        "es": "El ochenta por ciento de toda la ciudad está satisfecho."
-      }
-    ],
-    "perceive": {
-      "id": "c2-10-percepcion",
-      "type": "listen",
-      "prompt": "Escucha el contraste antes de leer las opciones en «Checkpoint: qué demuestra un éxito».",
-      "items": [
-        {
-          "q": "Escucha la primera formulación sobre Checkpoint: qué demuestra un éxito. ¿Qué contenido permite recuperar?",
-          "options": [
-            "El ochenta por ciento de toda la ciudad está satisfecho.",
-            "El ochenta por ciento de quienes respondieron está satisfecho."
+        heading: "Lo que se afirma y lo que se da por hecho",
+        body: [
+          "Un enunciado comunica dos clases de información. Lo afirmado es lo que se pone sobre la mesa y puede discutirse. Lo presupuesto es lo que se da por sabido y llega al oyente sin que lo note. La prueba más rápida es negar la frase o convertirla en pregunta: lo afirmado cambia, lo presupuesto sobrevive. «La asociación dejó de oponerse al proyecto» afirma que ya no se opone; presupone que antes se oponía. «La asociación no dejó de oponerse» y «¿Dejó de oponerse la asociación?» mantienen la misma presuposición.",
+          "Ciertas palabras activan presuposiciones. Los verbos factivos («lamentar», «sentir», «alegrarse de» con subjuntivo; «saber», «darse cuenta de», «olvidar» con indicativo) presentan su complemento como verdadero; los no factivos («creer», «decir», «afirmar») no. Los verbos de cambio y repetición («dejar de», «seguir», «seguir sin», «volver a», «empezar a») y los adverbios «ya no» y «todavía» presuponen un estado anterior. Las descripciones definidas y las nominalizaciones («el fracaso del plan de protección») dan por existente lo que nombran. Y las preguntas parciales presuponen que algo ocurrió: «¿Cuándo van a dejar de frenar el progreso?» da por hecho que alguien lo frena.",
+        ],
+        table: {
+          caption: "Activadores de presuposición",
+          head: ["Activador", "Ejemplo", "Lo que da por hecho"],
+          rows: [
+            ["verbo factivo", "La alcaldesa lamenta que se haya dañado el muro.", "se dañó el muro"],
+            ["verbo no factivo", "La inmobiliaria afirma que el muro ya estaba dañado.", "nada: es una afirmación atribuida"],
+            ["cambio de estado", "Los vecinos volvieron a protestar.", "ya habían protestado antes"],
+            ["«todavía», «ya no»", "La huaca todavía no tiene cerco.", "se espera que lo tenga"],
+            ["nominalización", "El abandono de la huaca es evidente.", "la huaca está abandonada"],
+            ["pregunta cargada", "¿Por qué se oponen al desarrollo del barrio?", "se oponen al desarrollo"],
           ],
-          "answer": 1,
-          "why": "La respuesta depende de las palabras y de su agrupación; no atribuyas a la síntesis una intención o variedad verificada.",
-          "audio": "El ochenta por ciento de quienes respondieron está satisfecho.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "Escucha ahora el contraste de Checkpoint: qué demuestra un éxito. ¿Qué formulación aparece?",
-          "options": [
-            "El ochenta por ciento de toda la ciudad está satisfecho.",
-            "El ochenta por ciento de quienes respondieron está satisfecho."
+        tip: "Ante una pregunta cargada, no respondas al contenido: primero rechaza lo que da por hecho. «No nos oponemos al desarrollo; nos oponemos a este proyecto».",
+      },
+      {
+        heading: "Partículas de foco, escindidas y foco correctivo",
+        body: [
+          "Las partículas de foco afirman algo y presuponen algo más. «También los arqueólogos firmaron» presupone que otros firmaron; «incluso» o «hasta» presentan el elemento como el menos esperable; «ni siquiera» lo niega situándolo en el extremo («ni siquiera la municipalidad respondió»; con el verbo delante, «no respondió ni siquiera la municipalidad»); «solo» excluye a los demás.",
+          "Las oraciones escindidas separan el foco y presuponen el resto: «Fue la concejala quien pidió el informe» presupone que alguien lo pidió. Esa presuposición sobrevive a la negación: «No fue la concejala quien pidió el informe» sigue dando por hecho que alguien lo hizo. Para corregir un foco hay cuatro recursos: el acento contrastivo en su sitio («Lo pidió la CONCEJALA»), la anteposición («A LA CONCEJALA se lo enviamos, no al alcalde»), la escindida y la estructura «no…, sino…».",
+          "En cuanto a la norma, «Es por eso que» es la variante más extendida y aceptada, sobre todo en América; en el uso europeo cuidado se prefieren «Por eso es por lo que» o «Es por eso por lo que». Para otros focos se recomiendan «Fue entonces cuando» y «Fue allí donde».",
+        ],
+        examples: [
+          { es: "No fue la inmobiliaria sino la municipalidad la que autorizó el estudio.", note: "Corrección de foco con «no…, sino…»; se presupone que alguien lo autorizó." },
+          { es: "Ni siquiera el ministerio respondió a la carta.", note: "El ministerio era el que más obligación tenía de responder." },
+          { es: "Fue en 2019 cuando apareció el primer muro.", note: "Escindida de tiempo con «cuando»." },
+          { es: "Es por eso que pedimos un estudio independiente.", note: "Variante más extendida, aceptada; en el uso europeo cuidado, «Por eso es por lo que…»." },
+        ],
+        mistakes: [
+          {
+            wrong: "No fue el alcalde quien aprobó el proyecto. (Para decir que nadie lo aprobó.)",
+            right: "Nadie ha aprobado el proyecto.",
+            why: "La escindida negada sigue presuponiendo que alguien lo aprobó.",
+          },
+          {
+            wrong: "La inmobiliaria sabe que la huaca no tiene valor. (En la voz neutra de una periodista.)",
+            right: "La inmobiliaria afirma que la huaca no tiene valor.",
+            why: "«Saber» es factivo: hace que la periodista asuma como verdadero lo que solo es la opinión de una parte.",
+          },
+        ],
+      },
+      {
+        heading: "Tema, rema y progresión temática",
+        body: [
+          "En un texto bien construido, cada oración parte de algo conocido (el tema) y aporta algo nuevo (el rema). Los párrafos avanzan con tres patrones: tema constante (varias oraciones sobre el mismo referente), progresión lineal (el rema de una oración se convierte en tema de la siguiente) y temas derivados de un hipertema (un tema general que se reparte en subtemas).",
+          "Para que lo conocido vaya delante, el español tiene recursos. El sujeto pospuesto introduce referentes nuevos: «En 2019 aparecieron los primeros restos de muros». La pasiva y la construcción con «se» mantienen como sujeto el tema: «La huaca fue declarada patrimonio en 1998». Y el peso final deja para el cierre lo largo y lo nuevo: «Sorprende que nadie haya consultado a los arqueólogos», «Se proponen tres medidas: cercar el sitio, señalizarlo y abrir un centro de visitantes».",
+        ],
+        table: {
+          caption: "Tres patrones de progresión",
+          head: ["Patrón", "Esquema", "Ejemplo breve"],
+          rows: [
+            ["tema constante", "A → B; A → C; A → D", "La huaca tiene mil años. Fue un centro ceremonial. Hoy está rodeada de edificios."],
+            ["lineal", "A → B; B → C; C → D", "La huaca ocupa una manzana. Esa manzana está junto a un colegio. El colegio la usa para clases de historia."],
+            ["hipertema", "H → H1, H2, H3", "El proyecto tiene tres problemas. El primero es legal. El segundo, técnico. El tercero, social."],
           ],
-          "answer": 0,
-          "why": "Compara después tus dos lecturas con una persona: una pausa puede favorecer una lectura sin demostrarla.",
-          "audio": "El ochenta por ciento de toda la ciudad está satisfecho.",
-          "voice": "es-ES-m"
-        }
-      ]
+        },
+      },
+      {
+        heading: "Órdenes marcados y cambios de tema",
+        body: [
+          "El ensayo y la prensa usan órdenes marcados para enlazar o destacar. El atributo antepuesto con inversión subraya una valoración: «Graves son las consecuencias», «Distinto es el caso de la huaca del parque», «Cierto es que el sitio necesita mantenimiento». La anteposición anafórica retoma lo anterior al comienzo: «De ello se deduce que…», «A ello se suma…», «Prueba de ello es que…». Y el tema retomado con pronombre lo presenta como punto de partida: «Ese informe, nadie lo ha leído completo».",
+          "Para cambiar de tema existen marcadores: «en cuanto a», «por lo que respecta a», «respecto de», «en lo que concierne a», «por su parte». Úsalos solo donde el hilo se rompe de verdad. Si los pones en cada párrafo, el texto parece una lista y el lector pierde la sensación de avance.",
+        ],
+        examples: [
+          { es: "Prueba de ello es que el colegio vecino ya organiza visitas a la huaca.", note: "Anteposición anafórica: «ello» retoma lo dicho." },
+          { es: "El informe técnico, la inmobiliaria no lo ha publicado.", note: "Tema dislocado y retomado con «lo»." },
+          { es: "Por lo que respecta al tráfico, el estudio no aporta datos.", note: "Cambio de tema justificado: se abre un asunto nuevo." },
+        ],
+        mistakes: [
+          {
+            wrong: "La huaca fue un centro ceremonial. En cuanto a la huaca, tiene mil años. En cuanto a su estado, es malo.",
+            right: "La huaca, que fue un centro ceremonial, tiene mil años. Su estado, sin embargo, es malo.",
+            why: "«En cuanto a» no debe marcar el mismo tema ni un subtema que avanza solo.",
+          },
+          {
+            wrong: "Un estudio independiente fue encargado por la asociación en 2024. (Primera mención del estudio.)",
+            right: "En 2024, la asociación encargó un estudio independiente.",
+            why: "La información nueva («un estudio independiente») va mejor al final; la pasiva aquí la pone como tema.",
+          },
+        ],
+      },
+      {
+        heading: "Integración: lo que repasaste en las semanas 6 a 9",
+        body: [
+          "Esta semana cierra un bloque. En la semana 6 (G213 y G214) aprendiste a distinguir la ambigüedad accidental del doble sentido buscado y a separar gramaticalidad, aceptabilidad, norma y variación. En la semana 7 (G215), a elegir y mantener el trato y a interpretar sus cambios. En la semana 8 (G216 y G217), el reparto regional entre «he llegado» y «llegué», el pluscuamperfecto andino de sorpresa y la escala de la norma para «le», «lo» y «les». En la semana 9 (G218), las perífrasis de ironía y distanciamiento.",
+          "Todo eso se cruza con la presuposición y el orden de la información. Una pregunta cargada puede ser también ambigua; una crónica irónica se apoya en lo que da por hecho; un cambio al usted en una audiencia pública comunica tanto como un foco contrastivo. En Lima, además, lo ocurrido hoy se cuenta normalmente con el indefinido y el pluscuamperfecto puede expresar sorpresa: si citas a vecinos limeños, respeta su voz.",
+        ],
+        table: {
+          caption: "Síntesis del bloque",
+          head: ["Semana y clase", "Pregunta que te haces", "Ejemplo de esta semana"],
+          rows: [
+            ["6 · G213", "¿Dos lecturas sin querer o a propósito?", "Todos los vecinos no apoyan el proyecto. → No todos los vecinos…"],
+            ["6 · G214", "¿Agramatical, no normativa o variación?", "Habían cien personas en la audiencia (voz del vecino; en el acta, «había»)."],
+            ["7 · G215", "¿Qué trato y qué comunica el cambio?", "—Mire usted, señor gerente… (tras haberlo tuteado: distancia)."],
+            ["8 · G216", "¿Qué variedad y qué voz?", "Hoy llegaron los arqueólogos. / ¡La huaca había sido enorme!"],
+            ["8 · G217", "¿Qué pronombre pide la norma escrita?", "A los vecinos les enviamos el informe; se lo enviamos ayer."],
+            ["9 · G218", "¿Qué actitud añade la perífrasis?", "El estacionamiento iba a ser provisional, según la inmobiliaria."],
+          ],
+        },
+      },
+    ],
+  },
+  grammar: {
+    intro: "Identifica primero qué se afirma y qué se da por hecho; después decide qué recurso de foco u orden conviene.",
+    exercises: [
+      {
+        id: "c2-10-gramatica-presuposicion",
+        type: "context",
+        prompt: "Lee cada declaración y elige lo que da por hecho.",
+        items: [
+          {
+            context: "El gerente de la inmobiliaria, en la radio: «Los vecinos siguen sin entender que el estacionamiento beneficia al barrio».",
+            q: "¿Qué presupone la frase?",
+            options: [
+              "Que el estacionamiento beneficia al barrio y que los vecinos ya antes no lo entendían.",
+              "Que los vecinos han cambiado de opinión.",
+              "Que el estacionamiento todavía no está aprobado.",
+            ],
+            answer: 0,
+            why: "«Entender que» es factivo (da por cierto el beneficio) y «seguir sin» presupone un estado anterior.",
+          },
+          {
+            context: "Una vecina, en la audiencia: «¿Cuándo va a dejar la municipalidad de ignorar nuestras cartas?».",
+            q: "¿Qué da por hecho la pregunta?",
+            options: [
+              "Que la municipalidad respondió a las cartas.",
+              "Que la municipalidad ignora las cartas de los vecinos.",
+              "Que los vecinos no enviaron cartas.",
+            ],
+            answer: 1,
+            why: "Pregunta parcial con «dejar de»: presupone que la ignora.",
+          },
+          {
+            context: "Comunicado municipal: «No fue la municipalidad quien otorgó el permiso de obra».",
+            q: "¿Qué sigue dando por hecho el comunicado?",
+            options: [
+              "Que nadie otorgó el permiso.",
+              "Que la municipalidad otorgó el permiso.",
+              "Que alguien otorgó el permiso.",
+            ],
+            answer: 2,
+            why: "La escindida negada mantiene la presuposición de la relativa.",
+          },
+          {
+            context: "Arqueóloga: «Ni siquiera el estudio de la propia inmobiliaria descarta daños en el muro norte».",
+            q: "¿Qué añade «ni siquiera»?",
+            options: [
+              "Que ese estudio era el que menos motivos tenía para admitir daños.",
+              "Que el estudio no existe.",
+              "Que el muro norte no está dañado.",
+            ],
+            answer: 0,
+            why: "«Ni siquiera» sitúa el elemento en el extremo de la escala de lo esperable.",
+          },
+        ],
+      },
+      {
+        id: "c2-10-gramatica-foco",
+        type: "gap",
+        prompt: "Completa con la palabra que construye el foco indicado.",
+        items: [
+          { q: "Fue en 2019 ___ aparecieron los primeros muros de adobe.", answers: [["cuando"]], why: "Escindida de tiempo: «Fue entonces cuando», «Fue en 2019 cuando»." },
+          { q: "Fue en el sector sur ___ se encontraron las vasijas.", answers: [["donde"]], why: "Escindida de lugar: «Fue allí donde»." },
+          { q: "No lo pidió la inmobiliaria, ___ la asociación de vecinos.", answers: [["sino"]], why: "Foco correctivo con «no…, sino…»." },
+          { q: "Fueron los vecinos ___ avisaron a los arqueólogos.", answers: [["quienes", "los que"]], why: "Escindida de sujeto con relativo concordado." },
+          { q: "Por eso es por ___ que pedimos un estudio independiente.", answers: [["lo"]], why: "Variante preferida en el uso europeo cuidado: «Por eso es por lo que»." },
+        ],
+      },
+      {
+        id: "c2-10-gramatica-orden",
+        type: "classify",
+        prompt: "Clasifica cada recurso según lo que hace en el texto.",
+        categories: ["Introduce información nueva al final", "Retoma lo anterior al comienzo", "Destaca una valoración", "Marca un cambio de tema"],
+        items: [
+          { text: "En 2019 aparecieron restos de un muro ceremonial.", cat: 0, why: "Sujeto pospuesto: referente nuevo al final." },
+          { text: "De ello se deduce que el sitio es más grande de lo que se pensaba.", cat: 1, why: "Anteposición anafórica." },
+          { text: "Graves son los daños en el sector norte.", cat: 2, why: "Atributo antepuesto con inversión." },
+          { text: "Por lo que respecta al tráfico, el estudio no aporta datos.", cat: 3, why: "Marcador de cambio de tema." },
+          { text: "Se proponen tres medidas: cercar, señalizar y abrir un centro de visitantes.", cat: 0, why: "Peso final con la enumeración." },
+          { text: "A ello se suma la falta de iluminación nocturna.", cat: 1, why: "Anteposición anafórica con «a ello»." },
+          { text: "Distinto es el caso de la huaca del parque, que sí está protegida.", cat: 2, why: "Atributo antepuesto: destaca el contraste." },
+          { text: "En cuanto a la inmobiliaria, no ha respondido.", cat: 3, why: "Cambio de tema." },
+        ],
+      },
+      {
+        id: "c2-10-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un problema de presuposición, foco u orden. Corrígela.",
+        items: [
+          {
+            sentence: "Nota periodística neutra: «La inmobiliaria se dio cuenta de que la huaca no tiene valor arqueológico».",
+            answers: ["Nota periodística neutra: «La inmobiliaria sostiene que la huaca no tiene valor arqueológico».", "Nota periodística neutra: «La inmobiliaria afirma que la huaca no tiene valor arqueológico»."],
+            why: "«Darse cuenta de» es factivo y hace que la periodista asuma la afirmación de una parte.",
+          },
+          {
+            sentence: "Fue entonces que la municipalidad suspendió la obra.",
+            answers: ["Fue entonces cuando la municipalidad suspendió la obra."],
+            why: "Con foco temporal se recomienda «Fue entonces cuando».",
+          },
+          {
+            sentence: "Los vecinos, que estaban en la audiencia, votaron. En cuanto a los vecinos, estaban preocupados.",
+            answers: ["Los vecinos, que estaban en la audiencia, votaron. Estaban preocupados.", "Los vecinos que estaban en la audiencia votaron, preocupados."],
+            why: "«En cuanto a» no debe marcar un tema que no cambia.",
+          },
+          {
+            sentence: "Ni siquiera el alcalde no respondió a la carta.",
+            answers: ["Ni siquiera el alcalde respondió a la carta.", "No respondió a la carta ni siquiera el alcalde."],
+            why: "Con «ni siquiera» antepuesto no se añade «no»; con el verbo delante, sí: «no respondió ni siquiera…».",
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico para hablar de patrimonio, urbanismo y debate público.",
+    groups: [
+      {
+        title: "Patrimonio y urbanismo",
+        items: [
+          { es: "la huaca", note: "en Perú, sitio arqueológico prehispánico, a menudo una pirámide de adobe" },
+          { es: "el adobe", note: "ladrillo de barro secado al sol" },
+          { es: "la zona intangible", note: "área protegida en la que no se puede construir" },
+          { es: "el estudio de impacto", note: "informe que evalúa los efectos de una obra" },
+          { es: "el cerco perimétrico", note: "muro o valla que rodea un terreno" },
+          { es: "la puesta en valor", note: "conjunto de acciones para conservar y mostrar un bien patrimonial" },
+        ],
+      },
+      {
+        title: "Debate público",
+        items: [
+          { es: "la audiencia pública", note: "reunión abierta en la que la autoridad escucha a la ciudadanía" },
+          { es: "la pregunta capciosa", note: "pregunta formulada para obligar a aceptar algo no dicho" },
+          { es: "dar por sentado", note: "considerar algo como cierto sin discutirlo" },
+          { es: "matizar", note: "precisar una afirmación para que no sea absoluta" },
+          { es: "el hilo argumental", note: "línea que conecta las ideas de un texto o una intervención" },
+          { es: "rebatir", note: "contradecir con argumentos" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c2-10-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su significado.",
+        pairs: [
+          { left: "la zona intangible", right: "área protegida en la que no se puede construir" },
+          { left: "la puesta en valor", right: "conjunto de acciones para conservar y mostrar un bien patrimonial" },
+          { left: "la pregunta capciosa", right: "pregunta formulada para obligar a aceptar algo no dicho" },
+          { left: "dar por sentado", right: "considerar algo como cierto sin discutirlo" },
+          { left: "el hilo argumental", right: "línea que conecta las ideas de un texto o una intervención" },
+          { left: "el cerco perimétrico", right: "muro o valla que rodea un terreno" },
+        ],
+      },
+      {
+        id: "c2-10-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del vocabulario.",
+        bank: ["audiencia pública", "matizar", "estudio de impacto", "rebatir"],
+        items: [
+          { q: "La municipalidad convocó una ___ para escuchar a los vecinos antes de decidir.", answers: [["audiencia pública"]] },
+          { q: "El ___ presentado por la inmobiliaria no menciona la huaca ni una vez.", answers: [["estudio de impacto"]] },
+          { q: "La arqueóloga pidió la palabra para ___ los datos del gerente con cifras del ministerio.", answers: [["rebatir"]] },
+          { q: "Antes de responder, conviene ___ la pregunta: no todos los vecinos se oponen.", answers: [["matizar"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "El acento contrastivo y la entonación de la escindida",
+    explanation: [
+      "Para corregir un foco sin cambiar el orden de la frase basta con el acento contrastivo: la palabra corregida se pronuncia más fuerte, más larga y con un tono más alto, y lo que sigue baja. «Lo pidió la ASOCIACIÓN» corrige a quien creía que lo pidió otro. Si mueves el acento, cambias lo que se corrige: «LO pidió la asociación» discute qué se pidió.",
+      "En la escindida, el foco forma un grupo con «fue» y la relativa presupuesta se dice en tono más bajo y más rápido: «Fue la ASOCIACIÓN | quien pidió el estudio». Con «no…, sino…», hay una pausa breve antes de «sino» y el segundo foco recibe el acento principal.",
+      "El audio utiliza la síntesis disponible en el navegador: no siempre marca el acento contrastivo ni certifica un acento regional. Úsalo para el orden y las pausas, y practica el énfasis con una persona.",
+    ],
+    table: {
+      caption: "Dónde cae el acento cuando se corrige",
+      head: ["Corrección", "Frase con el foco marcado"],
+      rows: [
+        ["quién lo pidió", "Lo pidió la ASOCIACIÓN, no la municipalidad."],
+        ["qué se pidió", "La asociación pidió un ESTUDIO, no una obra."],
+        ["cuándo", "Fue en DOS MIL DIECINUEVE cuando aparecieron los muros."],
+        ["a quién", "A la CONCEJALA se lo enviamos, no al alcalde."],
+      ],
     },
-    "produce": [
-      {
-        "text": "El ochenta por ciento de quienes respondieron está satisfecho.",
-        "tip": "Marca grupos fónicos y explica qué interpretación favoreces.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "El ochenta por ciento de toda la ciudad está satisfecho.",
-        "tip": "Cambia el foco sin cambiar las palabras; pide una interpretación a tu interlocutor.",
-        "voice": "es-ES-m"
-      },
-      {
-        "text": "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.",
-        "tip": "Lee a velocidad cómoda, conserva la reserva y compara tu grabación local con tu intención.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Mesa de trabajo: Checkpoint: qué demuestra un éxito",
-    "context": "Dos participantes preparan una intervención sobre el caso. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Teresa",
-        "voice": "es-ES-f",
-        "role": "Primera perspectiva"
-      },
-      {
-        "id": "b",
-        "name": "Gabriel",
-        "voice": "es-ES-m",
-        "role": "Contraste y reformulación"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Si abrimos la mesa diciendo que el ochenta por ciento es falso, perderemos precisión. Es una cifra del cuestionario, pero responde a una población limitada. Yo diría que no permite afirmar que el sistema sea accesible para toda la ciudad. El problema es el salto entre el dato y el lema, no necesariamente el cálculo."
-      },
-      {
-        "speaker": "b",
-        "text": "También debemos distinguir la reforma recomendada de la aprobada. El comunicado prometió asistencia presencial y las bibliotecarias recibieron preguntas que no podían contestar. Llamarlas obstinadas agrava el problema porque desplaza la responsabilidad hacia quienes atienden. Podemos criticar una respuesta poco clara sin suponer que expresa una voluntad de bloquear el acceso."
-      },
-      {
-        "speaker": "a",
-        "text": "Para la audiencia propondría una tabla con tres verbos: consultar, solicitar y recibir. Así se entiende por qué aumentó una cifra y bajó otra. Después preguntaría qué necesita una persona que no sabe el nombre de la serie documental. No hace falta empezar con todos los términos técnicos, pero sí conservar la diferencia que esos términos describen."
-      },
-      {
-        "speaker": "b",
-        "text": "Y cerremos con un compromiso realista: publicar el diseño de la prueba de simplificación y la fecha de decisión presupuestaria. No prometamos que la prueba resolverá todos los abandonos. Si alguien pregunta si la memoria ya es de todos, responderé que hay un avance importante y una desigualdad pendiente. Puedo reconocer el valor de un lema sin repetirlo como diagnóstico. La pausa entre ambas ideas debe permitir oír el límite, no presentarlo como una disculpa por haber apoyado el programa. La claridad del cierre depende de que ninguna de esas dos ideas desaparezca."
-      },
-      {
-        "speaker": "a",
-        "text": "La próxima encuesta podría mostrar menos satisfacción si incluye por primera vez a personas que encontraron barreras. No sería automáticamente una prueba de empeoramiento. Debemos explicar que cambia la población escuchada. Tampoco usaremos esa reserva para desestimar cualquier descenso: habrá que mirar los obstáculos concretos y qué respuesta recibieron antes de interpretar la cifra."
-      },
-      {
-        "speaker": "b",
-        "text": "Esa es una buena pregunta para la mesa: qué indicador aceptaríamos publicar aunque no favoreciera el relato institucional. Si solo medimos lo que puede subir, la evaluación se convierte en promoción. En la síntesis final conservaré el avance digital, la limitación del cuestionario y la nueva prueba con usuarios diversos. La coherencia no exige que todos los datos apunten hacia una celebración o hacia una denuncia. Para el cierre, conservaré esta distinción: El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha el intercambio completo sin abrir la transcripción. Reconstruye el desacuerdo central.",
-        "exercise": {
-          "id": "c2-10-escucha-gist",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Checkpoint: qué demuestra un éxito",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la conversación de Checkpoint: qué demuestra un éxito?",
-              "options": [
-                "La satisfacción prueba accesibilidad universal.",
-                "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera."
-              ],
-              "answer": 1,
-              "why": "Reconstruye el propósito común antes de buscar detalles."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Checkpoint: qué demuestra un éxito?",
-              "options": [
-                "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.",
-                "Un error de encuadre invalida cualquier observación de la fuente."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota afirmación, condición y fuente. No copies frases todavía.",
-        "exercise": {
-          "id": "c2-10-escucha-detail",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Checkpoint: qué demuestra un éxito",
-          "items": [
-            {
-              "q": "¿Qué límite deben conservar los interlocutores de Checkpoint: qué demuestra un éxito?",
-              "options": [
-                "La asistencia presencial era una recomendación sin presupuesto aprobado.",
-                "La asistencia presencial ya tiene presupuesto y fecha."
-              ],
-              "answer": 0,
-              "why": "La conversación vuelve sobre el límite que evita una promesa o inferencia excesiva."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Checkpoint: qué demuestra un éxito?",
-              "options": [
-                "La asistencia presencial era una recomendación sin presupuesto aprobado.",
-                "Un error de encuadre invalida cualquier observación de la fuente."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Localiza una reformulación y explica qué inferencia repara. Consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "c2-10-escucha-notice",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Checkpoint: qué demuestra un éxito",
-          "items": [
-            {
-              "q": "¿Qué inferencia pragmática permite el diálogo de Checkpoint: qué demuestra un éxito?",
-              "options": [
-                "Corregir el encuadre de una fuente no obliga a descartar todas sus observaciones.",
-                "Un error de encuadre invalida cualquier observación de la fuente."
-              ],
-              "answer": 0,
-              "why": "La inferencia se apoya en una reformulación y su contexto; no es una lectura literal de una palabra."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Checkpoint: qué demuestra un éxito?",
-              "options": [
-                "Corregir el encuadre de una fuente no obliga a descartar todas sus observaciones.",
-                "Un error de encuadre invalida cualquier observación de la fuente."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Checkpoint: qué demuestra un éxito · expediente de lectura",
-    "genre": "Dossier original: texto principal y documento de contraste",
-    "frame": "Situación ficticia para lectura crítica y mediación. Identifica qué voz afirma cada cosa antes de integrar las fuentes.",
-    "text": [
-      "El programa de archivos abiertos celebró su primer año con una cifra: un ochenta por ciento de satisfacción. El cartel añadía «La memoria ya es de todos». El lema presentaba el acceso como una conquista cumplida; la cifra parecía certificarla. Sin embargo, el cuestionario se había enviado únicamente a quienes completaron una solicitud digital. No incluía a quienes abandonaron el formulario, no tenían conexión o acudieron a una oficina sin poder terminar el trámite. La satisfacción de los usuarios atendidos y la accesibilidad del sistema eran preguntas relacionadas, pero diferentes.",
-      "La crónica de una periodista describía a las bibliotecarias como obstinadas defensoras del procedimiento. Una entrevista posterior mostraba que habían pedido simplificarlo meses antes. La palabra atribuía resistencia al cambio a quienes quizá estaban sosteniendo un servicio con herramientas insuficientes. La periodista aceptó revisar el adjetivo, aunque defendió su descripción de las colas. No todo error de encuadre invalida todas las observaciones de una fuente; tampoco la exactitud de una observación rescata el resto de sus inferencias.",
-      "El informe técnico registraba más consultas y menos solicitudes completas. Una digitalización masiva había atraído visitas al catálogo, mientras que el nuevo formulario exigía identificar una serie documental que muchas personas desconocían. La aparente contradicción desaparecía al separar consulta y solicitud. El informe recomendaba una prueba con lenguaje claro y asistencia presencial. El comunicado convirtió esa recomendación en un anuncio de reforma aprobada, pese a que no existía todavía presupuesto ni fecha.",
-      "Durante la presentación pública, una usuaria preguntó cuándo podría pedir ayuda. La respuesta «ya la estamos acompañando» pretendía transmitir disponibilidad, pero ella entendió que alguien había empezado a revisar su caso. Nadie lo había hecho. La mediadora pidió acordar una acción concreta, un responsable y un momento de contacto. Atribuir el malentendido a la variedad lingüística de la usuaria habría añadido una explicación cómoda y no demostrada a un fallo de coordinación bastante visible.",
-      "Documento de la asociación. El colectivo reconoce el valor de la digitalización, pero solicita tres indicadores separados: personas que encuentran información, personas que completan una solicitud y personas que reciben una respuesta utilizable. Propone registrar abandonos sin recoger identidades innecesarias. También pide que la próxima encuesta incluya un canal presencial. No exige suspender el programa; exige que su éxito no se defina de una manera que haga desaparecer a quienes todavía no consiguen usarlo. El reto del balance es conservar el avance y la exclusión en la misma descripción, sin que uno sirva para negar la otra. La comisión decidió conservar las series anteriores para poder comparar los cambios. Modificar un indicador sin explicar la ruptura habría creado una mejora aparente adicional.",
-      "Análisis de una evaluadora externa. El nuevo formulario se había probado con personas habituadas al archivo, que resolvieron sin dificultad el campo serie documental. El equipo interpretó el resultado como validación general. La evaluadora no rechazó la prueba: explicó que servía para un perfil de uso y dejaba otro sin observar. Propuso incluir a personas con distintos grados de familiaridad y registrar dónde pedían ayuda. La tarea no era demostrar que un grupo tenía menor capacidad, sino descubrir qué conocimiento estaba dando por supuesto la interfaz.",
-      "El informe final incorporó una reserva sobre la comparación futura. Si se ampliaban los canales de respuesta, la siguiente encuesta podría mostrar una satisfacción menor aunque el servicio atendiera mejor a públicos antes excluidos. Celebrar únicamente la subida del porcentaje crearía un incentivo para no escuchar nuevas quejas. La comisión decidió valorar también la diversidad de situaciones representadas y la resolución de obstáculos detectados. Esta decisión cambia el significado del éxito: un indicador incómodo puede acompañar una mejora real de acceso. La síntesis avanzada debe poder explicar esa aparente paradoja sin refugiarse en una fórmula abstracta. Necesita mostrar qué cambió en la población observada y por qué una comparación numérica directa podría inducir una lectura injustificada del programa."
-    ],
-    "tasks": [
-      {
-        "id": "c2-10-lectura",
-        "type": "choice",
-        "prompt": "Reconstruye la tesis y su límite en Checkpoint: qué demuestra un éxito.",
-        "items": [
-          {
-            "q": "¿Qué tesis sostiene el dossier «Checkpoint: qué demuestra un éxito»?",
-            "options": [
-              "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.",
-              "La satisfacción prueba accesibilidad universal."
-            ],
-            "answer": 0,
-            "why": "La tesis integra el contraste entre las fuentes, no solo una frase aislada."
-          },
-          {
-            "q": "¿Qué detalle limita la interpretación en «Checkpoint: qué demuestra un éxito»?",
-            "options": [
-              "La asistencia presencial era una recomendación sin presupuesto aprobado.",
-              "La asistencia presencial ya tiene presupuesto y fecha."
-            ],
-            "answer": 0,
-            "why": "El documento complementario delimita qué está confirmado."
-          }
-        ]
-      },
-      {
-        "id": "c2-10-lectura-evidencia",
-        "type": "open",
-        "prompt": "Defiende una interpretación de Checkpoint: qué demuestra un éxito con pruebas y contraejemplos.",
-        "items": [
-          {
-            "prompt": "Contrasta «El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.» con «La satisfacción prueba accesibilidad universal.». Cita dos fragmentos breves, atribuye sus voces y explica qué detalle impide sostener la segunda lectura.",
-            "model": "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera. La asistencia presencial era una recomendación sin presupuesto aprobado.",
-            "checklist": [
-              "Distingo cita e interpretación.",
-              "Incluyo una lectura rival y un límite."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas del expediente distribuyen certeza, responsabilidad y voz.",
-      "items": [
+    perceive: {
+      id: "c2-10-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide qué se está corrigiendo o qué se da por hecho.",
+      items: [
         {
-          "quote": "El programa de archivos abiertos celebró su primer año con una cifra: un ochenta por ciento de satisfacción.",
-          "note": "Examina el encuadre inicial y qué información necesitarás para revisarlo."
+          q: "¿Qué da por hecho la frase?",
+          options: ["Que alguien pidió el estudio.", "Que nadie pidió el estudio.", "Que el estudio no existe."],
+          answer: 0,
+          why: "La escindida presupone que alguien lo pidió; solo discute quién.",
+          audio: "No fue la inmobiliaria quien pidió el estudio, sino la asociación de vecinos.",
+          voice: "es-PE-f",
         },
         {
-          "quote": "Documento de la asociación.",
-          "note": "El documento final introduce otra perspectiva; identifica qué interpretación limita y qué deja abierto."
-        }
-      ]
-    }
+          q: "¿Qué se corrige?",
+          options: ["Quién envió el informe.", "A quién se envió el informe.", "Cuándo se envió el informe."],
+          answer: 1,
+          why: "El complemento indirecto antepuesto y «no al alcalde» marcan el destinatario.",
+          audio: "A la concejala se lo enviamos, no al alcalde.",
+          voice: "es-PE-m",
+        },
+        {
+          q: "¿Qué presupone «volvieron a»?",
+          options: ["Que nunca habían protestado.", "Que protestaron por primera vez.", "Que ya habían protestado antes."],
+          answer: 2,
+          why: "«Volver a» es un activador de repetición.",
+          audio: "Los vecinos volvieron a reunirse frente a la huaca el domingo.",
+          voice: "es-MX-f",
+        },
+        {
+          q: "¿Qué recurso usa la frase para destacar la valoración?",
+          options: ["El atributo antepuesto con inversión.", "Una pregunta cargada.", "Un cambio de tema."],
+          answer: 0,
+          why: "«Graves son los daños»: atributo delante del verbo.",
+          audio: "Graves son los daños que sufrió el muro norte durante las excavaciones.",
+          voice: "es-ES-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "No nos oponemos al desarrollo; nos oponemos a ESTE proyecto.", tip: "Acento contrastivo en «este» y pausa en el punto y coma.", voice: "es-PE-f" },
+      { text: "Fue la asociación quien pidió el estudio, no la inmobiliaria.", tip: "Sube en «asociación» y baja en la relativa.", voice: "es-PE-m" },
+      { text: "Graves son las consecuencias de construir junto al muro.", tip: "Énfasis en «graves» y tono descendente al final.", voice: "es-CO-f" },
+      { text: "Es por eso que pedimos un estudio independiente.", tip: "Agrupa «es por eso que» y acentúa «independiente».", voice: "es-PE-f" },
+    ],
+    spelling: "En la escritura, el acento contrastivo no se ve. Si el foco puede malinterpretarse, usa una escindida, una anteposición o «no…, sino…» para que el lector no dependa de la entonación.",
   },
-  "practice": {
-    "intro": "Combina orden, clasificación, producción y recuperación espaciada. Las respuestas abiertas se contrastan con criterios y con tu docente.",
-    "exercises": [
+  listening: {
+    title: "Entrevista en la radio: ¿estacionamiento o huaca?",
+    context: "Un programa matinal de una radio limeña entrevista a la arqueóloga Rocío Huamán, que asesora a la asociación de vecinos, y al gerente de la inmobiliaria, Sebastián Ugarte. Conduce el periodista Diego Salazar. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "d", name: "Diego", voice: "es-PE-m", role: "Periodista y conductor" },
+      { id: "r", name: "Rocío", voice: "es-PE-f", role: "Arqueóloga, asesora de los vecinos" },
+      { id: "s", name: "Sebastián", voice: "es-CO-m", role: "Gerente de la inmobiliaria" },
+    ],
+    script: [
+      { speaker: "d", text: "Buenos días. Seguimos con el tema que más mensajes nos ha traído esta semana: el estacionamiento que se quiere construir junto a la huaca Mirasol. Tenemos con nosotros a Rocío Huamán, arqueóloga, y a Sebastián Ugarte, gerente de la inmobiliaria. Señor Ugarte, empiezo con usted. ¿Por qué los vecinos siguen bloqueando un proyecto que el barrio necesita?" },
+      { speaker: "s", text: "Gracias, Diego. Mira, los vecinos se han dado cuenta de que no hay espacio para estacionar, eso lo sabemos todos. El problema es que una parte de la asociación no hace más que poner obstáculos. Nosotros hemos presentado un estudio de impacto completo, y el estacionamiento iba a ser algo provisional, mientras se busca otra solución." },
+      { speaker: "r", text: "Perdona, Diego, pero antes de responder quiero corregir la pregunta. Los vecinos no bloquean nada: presentaron una petición formal, que es su derecho. Y tampoco está demostrado que el barrio necesite este estacionamiento. Esa es justamente la discusión." },
+      { speaker: "d", text: "Es justo. Rocío, ¿qué dice exactamente el estudio de impacto?" },
+      { speaker: "r", text: "Ese estudio, nadie lo ha visto completo. Lo que se publicó es un resumen de tres páginas en el que la huaca no aparece ni una sola vez. Ni siquiera el plano incluye el muro norte, que está a seis metros del terreno. Graves son los riesgos de mover maquinaria pesada a esa distancia de un muro de adobe de mil años. Y no lo digo yo: lo dice la norma del ministerio, que fija una zona de protección." },
+      { speaker: "s", text: "Bueno, el muro ya estaba dañado antes de que llegáramos nosotros." },
+      { speaker: "r", text: "Eso es cierto en parte. El muro tiene daños por las lluvias del 2017. Pero fue precisamente por eso que el ministerio pidió un cerco, y fue la municipalidad, no los vecinos, quien no lo instaló. De ello se deduce que el muro necesita protección, no maquinaria al lado." },
+      { speaker: "d", text: "Señor Ugarte, usted dijo que el estacionamiento iba a ser provisional. ¿Provisional por cuánto tiempo?" },
+      { speaker: "s", text: "Mire usted, eso dependerá de la municipalidad, no de nosotros. Nosotros cumplimos con todo lo que se nos ha pedido." },
+      { speaker: "d", text: "Noto que ahora me trata de usted, cuando hace un minuto me tuteaba. Pero vamos al fondo: en el contrato que conocimos ayer figura un plazo de concesión de veinte años. ¿Eso es provisional?" },
+      { speaker: "s", text: "Es un plazo máximo, no significa que vaya a durar tanto." },
+      { speaker: "r", text: "Si me permites, Diego, una cosa más. Nosotros no nos oponemos al desarrollo del barrio. Nos oponemos a este proyecto, en este lugar. Hay una alternativa: el terreno de la antigua fábrica, a dos cuadras, que la propia municipalidad ofreció en 2023. Es por eso que pedimos que se estudie antes de decidir." },
+      { speaker: "d", text: "Muy bien. La audiencia pública es el jueves a las seis de la tarde en el local comunal. Gracias a los dos. Hoy escuchamos a las dos partes; el jueves escucharemos a los vecinos." },
+    ],
+    stages: [
       {
-        "id": "c2-10-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos relaciones centrales del caso Checkpoint: qué demuestra un éxito.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la entrevista completa sin abrir la transcripción. ¿Cuál es el conflicto y qué propone cada parte?",
+        exercise: {
+          id: "c2-10-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación general.",
+          items: [
+            {
+              q: "¿Cuál es el conflicto?",
+              options: [
+                "Un estacionamiento junto a un sitio arqueológico frágil.",
+                "La venta de la huaca a una empresa privada.",
+                "El cierre de un colegio del barrio.",
+              ],
+              answer: 0,
+              why: "La inmobiliaria quiere construir junto a la huaca Mirasol.",
+            },
+            {
+              q: "¿Qué propone la arqueóloga?",
+              options: [
+                "Construir el estacionamiento bajo tierra.",
+                "Trasladar la huaca a otro lugar.",
+                "Estudiar el terreno de la antigua fábrica como alternativa.",
+              ],
+              answer: 2,
+              why: "Lo menciona al final de la entrevista.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y fíjate en cómo cada uno presenta la información. Responde sin mirar la transcripción.",
+        exercise: {
+          id: "c2-10-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Por qué Rocío corrige la primera pregunta del periodista?",
+              options: [
+                "Porque la pregunta era demasiado larga.",
+                "Porque da por hecho que los vecinos bloquean el proyecto y que el barrio lo necesita.",
+                "Porque no le tocaba hablar.",
+              ],
+              answer: 1,
+              why: "Rechaza las presuposiciones antes de responder.",
+            },
+            {
+              q: "¿Qué dato contradice que el estacionamiento sea «provisional»?",
+              options: [
+                "Un plazo de concesión de veinte años en el contrato.",
+                "Un informe del ministerio.",
+                "Una declaración del alcalde.",
+              ],
+              answer: 0,
+              why: "El periodista lo menciona tras la respuesta evasiva del gerente.",
+            },
+            {
+              q: "¿Qué señala el periodista sobre el trato del gerente?",
+              options: [
+                "Que siempre lo trata de usted.",
+                "Que lo tutea por primera vez.",
+                "Que ha pasado del tú al usted.",
+              ],
+              answer: 2,
+              why: "El cambio al usted marca distancia en un momento incómodo.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en los recursos de presuposición, foco y orden de la entrevista. Relaciona y consulta la transcripción solo después de responder.",
+        exercise: {
+          id: "c2-10-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada fragmento con el recurso que usa.",
+          pairs: [
+            { left: "¿Por qué los vecinos siguen bloqueando…?", right: "pregunta cargada con «seguir»" },
+            { left: "los vecinos se han dado cuenta de que no hay espacio", right: "verbo factivo" },
+            { left: "Ese estudio, nadie lo ha visto completo.", right: "tema retomado con pronombre" },
+            { left: "Graves son los riesgos", right: "atributo antepuesto" },
+            { left: "fue la municipalidad, no los vecinos, quien no lo instaló", right: "escindida con foco correctivo" },
+            { left: "el estacionamiento iba a ser algo provisional", right: "plan no cumplido con «iba a»" },
+          ],
+          why: "Cada recurso decide qué se discute y qué se da por hecho.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Lo que la pregunta da por hecho",
+    genre: "Artículo de opinión en un diario",
+    frame: "Artículo de Rocío Huamán, arqueóloga, publicado en un diario de Lima antes de la audiencia pública sobre la huaca Mirasol. Personas, empresa, huaca y datos son ficticios.",
+    text: [
+      "«¿Por qué los vecinos siguen bloqueando un proyecto que el barrio necesita?» Con esa pregunta empezó la entrevista radial de esta semana sobre la huaca Mirasol, y con ella quiero empezar este artículo, porque en sus quince palabras está casi todo el problema. La pregunta no pide información: la da por sentada. Presupone que hay un bloqueo, que los vecinos lo mantienen desde hace tiempo y que el barrio necesita el proyecto. Si uno responde directamente al «por qué», acepta las tres cosas sin haberlas discutido.",
+      "Conviene, por tanto, separar lo que se afirma de lo que se da por hecho. Los vecinos no bloquean nada: presentaron una petición formal ante la municipalidad, que es un derecho y no un obstáculo. Tampoco está demostrado que el barrio necesite un estacionamiento de doscientas plazas junto a un sitio arqueológico. Esa es precisamente la cuestión que debe decidirse el jueves en la audiencia pública, y no puede llegar decidida de antemano en la forma de una pregunta.",
+      "La huaca Mirasol es una pirámide de adobe de unos mil años de antigüedad, construida en varias fases por la población que habitó este valle antes de los incas. Durante décadas quedó escondida entre talleres y casas, y fue en 2019 cuando los vecinos, al limpiar un terreno, encontraron los primeros restos de un muro ceremonial. Aquel hallazgo cambió la relación del barrio con su huaca. El colegio vecino empezó a organizar visitas, la asociación consiguió una señalización provisional y el ministerio la incluyó en su registro.",
+      "Distinto es el caso del muro norte, que es el que más preocupa. Las lluvias de 2017 lo dañaron, y la inmobiliaria lo ha recordado varias veces para sugerir que ya no hay mucho que proteger. Cierto es que el muro está dañado. De ello, sin embargo, no se deduce que pueda soportar maquinaria pesada a seis metros de distancia; se deduce exactamente lo contrario. Fue por esos daños que el ministerio pidió en 2020 un cerco perimétrico, y fue la municipalidad, no los vecinos, la que no llegó a instalarlo.",
+      "El estudio de impacto que la empresa menciona en cada entrevista merece un comentario aparte. Ese estudio, nadie lo ha visto completo. Lo que se publicó es un resumen de tres páginas en el que la huaca no aparece ni una vez. Ni siquiera el plano adjunto incluye el muro norte. Cuando un periodista preguntó por el documento completo, la respuesta fue que «se presentará en su momento». No deja de ser curioso que el momento no haya llegado antes de la audiencia.",
+      "Tampoco ayuda el lenguaje con que se presenta el proyecto. Se nos ha dicho que el estacionamiento iba a ser provisional, mientras se busca otra solución. Pero en el contrato de concesión figura un plazo de veinte años. Un plazo así puede ser legal, no lo discuto; lo que no es, en ningún sentido habitual de la palabra, es provisional. Y cuando la empresa afirma que los vecinos «se han dado cuenta» de que falta espacio, presenta como un hecho reconocido lo que no es más que su propia opinión.",
+      "Por lo que respecta a la alternativa, existe y está documentada. A dos cuadras de la huaca se encuentra el terreno de la antigua fábrica textil, que la propia municipalidad ofreció en 2023 para un uso semejante. Está vacío, tiene acceso directo a la avenida y no colinda con ningún bien patrimonial. Es por eso que la asociación pide algo muy sencillo: que se estudie esa opción antes de decidir. No pedimos que se detenga el desarrollo del barrio. Pedimos que no se haga a costa de lo único que el barrio tiene y que ninguna obra podrá reponer.",
+      "Graves son las consecuencias de equivocarse en este tipo de decisiones, porque un muro de adobe, una vez caído, no se reconstruye. Por eso quiero terminar con una invitación y no con una pregunta. El jueves, en el local comunal, escuchemos los argumentos de todos, revisemos los documentos completos y decidamos sin que nadie nos haya decidido antes la respuesta. Lo que está en juego no es un estacionamiento. Es si este barrio quiere seguir teniendo historia.",
+    ],
+    glossary: [
+      { es: "colindar", note: "estar junto a otro terreno, compartir límite" },
+      { es: "de antemano", note: "antes de tiempo, por anticipado" },
+      { es: "reponer", note: "volver a poner lo que se ha perdido" },
+    ],
+    tasks: [
+      {
+        id: "c2-10-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido el artículo.",
+        items: [
           {
-            "words": [
-              "El",
-              "indicador",
-              "excluye",
-              "a",
-              "quienes",
-              "abandonaron."
+            q: "¿Por qué la autora empieza con la pregunta de la entrevista?",
+            options: [
+              "Porque quiere responder al «por qué» con datos.",
+              "Porque la pregunta da por sentadas tres cosas que deben discutirse.",
+              "Porque el periodista es su amigo.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
+            answer: 1,
+            why: "Analiza sus presuposiciones antes de discutir el fondo.",
           },
           {
-            "words": [
-              "La",
-              "asistencia",
-              "presencial",
-              "requiere",
-              "un",
-              "presupuesto."
+            q: "¿Qué deduce la autora de los daños del muro norte?",
+            options: [
+              "Que ya no merece protección.",
+              "Que hay que repararlo con maquinaria.",
+              "Que necesita más protección, no maquinaria al lado.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
-          }
-        ]
-      },
-      {
-        "id": "c2-10-estatuto",
-        "type": "classify",
-        "prompt": "Clasifica el estatuto de estas formulaciones en «Checkpoint: qué demuestra un éxito».",
-        "categories": [
-          "Conclusión respaldada o delimitada",
-          "Generalización no autorizada"
+            answer: 2,
+            why: "«De ello… se deduce exactamente lo contrario».",
+          },
+          {
+            q: "¿Qué critica la autora en la expresión «se han dado cuenta»?",
+            options: [
+              "Que presenta como hecho reconocido la opinión de la empresa.",
+              "Que es una forma no normativa.",
+              "Que es demasiado coloquial para la radio.",
+            ],
+            answer: 0,
+            why: "«Darse cuenta de» es factivo.",
+          },
         ],
-        "items": [
-          {
-            "text": "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.",
-            "cat": 0,
-            "why": "Resume el razonamiento con sus límites."
-          },
-          {
-            "text": "La satisfacción prueba accesibilidad universal.",
-            "cat": 1,
-            "why": "Amplía o invierte el alcance de las fuentes."
-          },
-          {
-            "text": "La asistencia presencial era una recomendación sin presupuesto aprobado.",
-            "cat": 0,
-            "why": "Conserva un detalle explícito del expediente."
-          },
-          {
-            "text": "La asistencia presencial ya tiene presupuesto y fecha.",
-            "cat": 1,
-            "why": "Contradice la condición documentada."
-          }
-        ]
       },
       {
-        "id": "c2-10-microescritura",
-        "type": "open",
-        "prompt": "Produce dos versiones breves antes del dossier de Checkpoint: qué demuestra un éxito.",
-        "items": [
-          {
-            "prompt": "Redacta una apertura de 80–100 palabras para el destinatario de «Checkpoint: qué demuestra un éxito». Conserva la tesis y una reserva.",
-            "model": "El programa ha ampliado las consultas, pero el indicador de satisfacción solo describe a quienes completaron el trámite y respondieron. No permite evaluar a quienes abandonaron o quedaron fuera. Proponemos separar encontrar información, completar una solicitud y recibir una respuesta utilizable. La reforma de asistencia presencial sigue siendo una recomendación sin financiación aprobada. El comunicado debe corregir esa diferencia y evitar trasladar a las bibliotecarias la responsabilidad de una promesa institucional. Reconocer el avance no exige declarar universal el acceso; medir la exclusión no exige negar que la digitalización haya producido beneficios.",
-            "checklist": [
-              "Identifico quién necesita decidir y con qué información.",
-              "Separo afirmación, atribución e inferencia."
-            ]
-          },
-          {
-            "prompt": "Reformula para una persona ajena al debate de «Checkpoint: qué demuestra un éxito» la condición que más fácilmente se perdería al resumir. Explica el coste de omitirla.",
-            "model": "La asistencia presencial era una recomendación sin presupuesto aprobado. El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.",
-            "checklist": [
-              "No convierto la condición en un dato accesorio.",
-              "Mantengo el alcance aunque simplifique el léxico."
-            ]
-          }
-        ]
+        id: "c2-10-lectura-recursos",
+        type: "match",
+        prompt: "Relaciona cada fragmento del artículo con el recurso que usa.",
+        pairs: [
+          { left: "fue en 2019 cuando los vecinos… encontraron", right: "escindida de tiempo" },
+          { left: "Cierto es que el muro está dañado.", right: "atributo antepuesto que concede" },
+          { left: "De ello, sin embargo, no se deduce", right: "anteposición anafórica" },
+          { left: "Ese estudio, nadie lo ha visto completo.", right: "tema retomado con pronombre" },
+          { left: "Por lo que respecta a la alternativa", right: "cambio de tema" },
+          { left: "No deja de ser curioso", right: "valoración irónica atenuada" },
+        ],
       },
       {
-        "id": "c2-10-recuperacion",
-        "type": "open",
-        "prompt": "Recupera recursos con materiales suministrados de semanas anteriores. No busques rasgos ausentes en el dossier actual. Contrasta después qué recurso sería pertinente transferir al nuevo caso.",
-        "items": [
+        id: "c2-10-lectura-evaluacion",
+        type: "open",
+        prompt: "Evalúa la estrategia argumentativa del artículo.",
+        items: [
           {
-            "prompt": "Recuperación c2.disc.recursos-retoricos. Recupera la semana 6, «Convencer sin esconder el coste». Material de contraste: La propuesta de renovar la biblioteca se presentó bajo un lema difícil de rechazar: «Abrir puertas». Quienes preguntaron por el presupuesto quedaron, durante unos minutos, en el papel incómodo de quienes preferían cerrarlas. El discurso no había refutado sus objeciones; había elegido una imagen en la que resultaba ingrato formularlas. Esa eficacia explica tanto el valor de la retórica como la necesidad de examinarla. Ninguna decisión pública cabe entera en la oposición entre apertura y cierre. Formulación de trabajo: Es una inversión costosa; de ahí no se sigue que sea prescindible.\n\nRecupera «Recursos retóricos» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
+            prompt: "Explica en 90–110 palabras cómo usa la autora la presuposición para argumentar, y si su propio texto también da por hecho algo discutible. Cita al menos una frase.",
+            model: "La autora empieza desmontando las presuposiciones de la pregunta radial: que hay un bloqueo, que los vecinos lo mantienen y que el barrio necesita el proyecto. Al separarlas de lo afirmado, recupera para la audiencia lo que estaba decidido de antemano. Su texto, sin embargo, también presupone cosas. En la frase final, «Es si este barrio quiere seguir teniendo historia», «seguir teniendo» da por hecho que el proyecto acabaría con esa historia, cuando la empresa podría discutirlo. Es un cierre eficaz, pero tan cargado como la pregunta que critica.",
+            checklist: [
+              "Explico cómo desmonta la autora las presuposiciones.",
+              "Identifico una presuposición en su propio texto.",
+              "Cito al menos una frase.",
+            ],
           },
-          {
-            "prompt": "Recuperación c2.voc.lexico-persuasivo. Recupera la semana 6, «Convencer sin esconder el coste». Unidades disponibles: concesión táctica (reconocimiento limitado de una objeción); encuadre (perspectiva que organiza un problema); carga valorativa (evaluación asociada a una expresión); contrapartida (coste o compromiso a cambio de otro); eufemismo (expresión que suaviza un contenido); disfemismo (expresión que lo presenta de forma peyorativa); gradación (orden de intensidad creciente); apelación (llamada a una creencia o valor compartido). Pasaje: La propuesta de renovar la biblioteca se presentó bajo un lema difícil de rechazar: «Abrir puertas». Quienes preguntaron por el presupuesto quedaron, durante unos minutos, en el papel incómodo de quienes preferían cerrarlas. El discurso no había refutado sus objeciones; había elegido una imagen en la que resultaba ingrato formularlas. Esa eficacia explica tanto el valor de la retórica como la necesidad de examinarla. Ninguna decisión pública cabe entera en la oposición entre apertura y cierre.\n\nRecupera «Léxico persuasivo»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. En este contraste, «concesión táctica» nombra reconocimiento limitado de una objeción; «encuadre», perspectiva que organiza un problema. La elección debe conservar esa diferencia. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.oratoria. Recupera la semana 6, «Convencer sin esconder el coste». Textos para ensayo oral: «Queremos estudiar, encontrarnos y abrir oportunidades.» / «Queremos renovar; durante las obras faltarán puestos.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Oratoria» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Distribuye tres grupos paralelos con un foco distinto en cada uno. La concesión posterior necesita espacio propio: bajar demasiado el volumen podría ocultar el coste reconocido. Un ensayo defendible conserva esta distinción del caso: La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.lis.discurso-politico. Recupera la semana 6, «Convencer sin esconder el coste». Recuperación del contenido escuchado: vuelve al audio de esa semana sin abrir su transcripción. Como pista de contraste, conserva estas dos posiciones: La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas. / Los horarios ampliados ya están financiados.\n\nToma notas de quién sostiene cada posición y de una reserva expresada. Después contrasta tus notas con la transcripción. No deduzcas rasgos regionales ni solapamientos que el audio sintético no acredita. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. La primera posición sintetiza el límite defendido; la segunda es la conclusión excesiva que el diálogo obliga a rechazar. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.spk.discurso-breve. Recupera la semana 6, «Convencer sin esconder el coste». Situación para retomar: Pronuncia el discurso ante usuarios y personal. Recibe una objeción sobre los horarios, responde sin falso dilema y reformula el cierre como pregunta deliberativa. Objeción suministrada: Los horarios ampliados ya están financiados.\n\nRecupera «Discurso persuasivo». Haz una intervención de dos minutos con tesis y reserva; responde durante un minuto a la objeción. Pide una reformulación de tu idea al interlocutor antes de evaluar si fuiste claro. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.prosa-densa. Recupera la semana 7, «Descomprimir una idea». Pasajes que debes contrastar: La evaluación de la ampliación de los horarios del archivo municipal concluye que aumentaron las consultas durante el primer semestre. La formulación parece transparente hasta que se pregunta qué se contó como consulta. El informe agrupa visitas presenciales, solicitudes de reproducción y accesos al catálogo digital. Que el total crezca no implica que cada modalidad lo haga, ni que el incremento pueda atribuirse a la ampliación horaria. La unidad de medida es parte del argumento, aunque figure en una nota metodológica.\n\nEsta reserva añadía complejidad al resumen, pero no obligaba a enumerar todos los problemas con idéntico peso. Para una decisión sobre horarios, la comparabilidad de visitas presenciales resultaba especialmente pertinente. Para una decisión sobre el catálogo, importaba distinguir consultas, descargas y personas usuarias sin identificarlas innecesariamente. El mismo informe podía sostener varias preguntas, siempre que no se supusiera que una cifra agregada respondía a todas. La bibliotecaria reformuló el cierre: disponemos de señales de mayor actividad y necesitamos medidas compatibles para valorar qué cambió. Esa frase conserva información positiva y una limitación metodológica sin convertir ninguna de las dos en el comentario secundario de la otra. La densidad no se resuelve eliminando relaciones, sino haciendo visibles las que organizan la interpretación.\n\nRelee estos pasajes y recupera «Prosa académica y ensayística densa». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.gram.sintaxis-compleja. Recupera la semana 7, «Descomprimir una idea». Contrastes suministrados: La mejora observada no permite atribuir el cambio al programa. / Aunque la muestra sea pequeña, el contraste aporta información. / La evaluación de la aplicación exige identificar quién aplicó cada medida.\n\nExplica la estructura y el cambio de interpretación pertinentes para «Sintaxis compleja». Produce una cuarta formulación y señala expresamente qué referente, condición o perspectiva temporal conserva. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Una nominalización condensa un proceso, pero puede ocultar agente, tiempo o modalidad. La evaluación de la aplicación del programa exige reconstruir quién evalúa qué y con qué criterio. Las subordinadas encajadas necesitan referentes estables; al reformular, no conviertas una condición metodológica en conclusión. Con todo marca un límite argumentativo; no en vano aporta una justificación que el hablante considera pertinente. Un resumen académico conserva alcance y reservas, no solo resultados. Aplicación al caso: El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.conectores-cultos. Pasaje: «A la sazón no había catálogo. El archivo recibía consultas; empero, carecía de un registro comparable. Así las cosas, el equipo decidió separar modalidades. No en vano habían cambiado las unidades de medida».\n\nExplica la función temporal, adversativa, comentadora y justificativa de las expresiones destacadas por su posición. Reescribe para un boletín claro sin convertir a la sazón en causa ni empero en consecuencia. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "A la sazón equivale aquí a en aquel momento; empero introduce contraste; así las cosas permite avanzar una decisión a partir de la situación; no en vano aporta justificación. Versión clara: entonces no había catálogo. Se recibían consultas, pero no existía un registro comparable. Por ello se separaron modalidades, porque las unidades habían cambiado. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.lectura-densa. Recupera la semana 7, «Descomprimir una idea». Textos para ensayo oral: «Aumentaron las consultas, aunque no sabemos qué cambio explica cuánto.» / «Aumentaron las consultas porque el horario lo explica todo.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Leer prosa densa en voz alta» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Localiza el verbo principal antes de leer. Reduce la velocidad en un inciso técnico y recupera después la curva principal; no acumules pausas que separen un nombre de su complemento. Un ensayo defendible conserva esta distinción del caso: El informe describe un aumento sin demostrar que el horario sea su causa exclusiva. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.abstract. Recupera la semana 7, «Descomprimir una idea». Modelo parcial que puedes transformar: El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas.\n\nRecupera «Resumen académico» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: El informe describe un aumento sin demostrar que el horario sea su causa exclusiva. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.casi-sinonimos. Recupera la semana 8, «La palabra que inclina la balanza». Unidades disponibles: perseverante (persistente con valoración favorable); obstinado (persistente pese a razones para cambiar); austero (sobrio en recursos o adornos); precario (insuficiente o inestable); admitir (reconocer algo que puede resultar incómodo); sostener (defender una afirmación); conceder (aceptar una premisa de manera delimitada); cundir (extenderse o producir rendimiento según el contexto). Pasaje: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nRecupera «Casi sinónimos y connotación»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En este contraste, «perseverante» nombra persistente con valoración favorable; «obstinado», persistente pese a razones para cambiar. La elección debe conservar esa diferencia. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.refranes-intertextualidad. Recupera la semana 8, «La palabra que inclina la balanza». Unidades disponibles: perseverante (persistente con valoración favorable); obstinado (persistente pese a razones para cambiar); austero (sobrio en recursos o adornos); precario (insuficiente o inestable); admitir (reconocer algo que puede resultar incómodo); sostener (defender una afirmación); conceder (aceptar una premisa de manera delimitada); cundir (extenderse o producir rendimiento según el contexto). Pasaje: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nRecupera «Refranes, citas e intertextualidad»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En este contraste, «perseverante» nombra persistente con valoración favorable; «obstinado», persistente pese a razones para cambiar. La elección debe conservar esa diferencia. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.matiz-lexico-voz. Recupera la semana 8, «La palabra que inclina la balanza». Textos para ensayo oral: «El resultado es concluyente sobre esa franja.» / «El resultado parece prometedor para nuevas pruebas.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Matiz léxico y voz» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Resalta sobre esa franja al decir concluyente. Contrasta el adjetivo aislado y el adjetivo delimitado; una voz enfática no vuelve más amplia la evidencia disponible. Un ensayo defendible conserva esta distinción del caso: La precisión consiste en controlar las inferencias de la elección léxica. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.precision-lexica. Recupera la semana 8, «La palabra que inclina la balanza». Modelo parcial que puedes transformar: El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener.\n\nRecupera «Precisión léxica» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: La precisión consiste en controlar las inferencias de la elección léxica. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.columna-literaria. Recupera la semana 8, «La palabra que inclina la balanza». Pasajes que debes contrastar: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nLa columnista decidió conservar la palabra obstinación en una cita atribuida al propio restaurador y retirarla de la voz narrativa. El cambio no declaraba falsa la valoración; cambiaba quién asumía su responsabilidad. Después revisó prometedor y concluyente en el cierre. La primera palabra proyectaba una posibilidad; la segunda cerraba una cuestión delimitada. Podían coexistir si se referían a objetos distintos: conclusión sobre la presencia de pigmento y promesa de nuevas preguntas de conservación. El ejercicio léxico culmina así en una decisión de arquitectura textual. No basta escoger la palabra exacta en una oración aislada; hay que mantener estable aquello sobre lo que se predica y evitar que el lector traslade una certeza local a una conclusión general.\n\nRelee estos pasajes y recupera «Leer una columna literaria». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.variacion-avanzada. Notación esquemática para análisis, no grabación: /s/ en final de sílaba → [h] (aspiración) o ausencia de realización (elisión); una rótica → [l] (lateralización); una rótica con fricción sibilante (asibilación). Estas etiquetas describen fenómenos, no países completos.\n\nExplica qué cambia en cada esquema y por qué leerlo no demuestra reconocerlo de oído. Selecciona con tu docente una muestra real autorizada, identifica el segmento y compara al menos dos escuchas. Si no hay muestra, registra la tarea perceptiva como pendiente y completa solo el análisis conceptual y el plan de contraste. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La aspiración conserva una realización audible [h], mientras que la elisión omite la consonante en ese contexto. La lateralización cambia una rótica por una lateral; la asibilación añade fricción sibilante. Ningún esquema permite atribuir origen ni competencia al hablante. La notación permite explicar el fenómeno; para acreditar percepción hacen falta segmentos de audio reales y verificables. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.variacion-lexica-pragmatica. Intercambio escrito: agente A, «Ya lo revisamos: terminamos esta mañana»; agente B, «Ya lo revisamos: lo haremos antes de las cuatro». Tratamientos disponibles: «Vos podés avisarme» / «Usted me avisa cuando tenga la copia».\n\nExplica las dos lecturas temporales con una paráfrasis inequívoca. Propón un tratamiento coherente con una relación concreta sin declarar uno universalmente más cortés. Formula una pregunta que compruebe la interpretación y evita generalizar a una región a partir de este intercambio. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "A informa de una tarea terminada; B anuncia una tarea próxima. Para un compromiso operativo, B puede decir lo revisaremos antes de las cuatro. La elección entre vos y usted depende de relación y uso; ninguna forma garantiza por sí sola cercanía o distancia. Una comprobación útil sería: ¿queda entonces pendiente la revisión hasta esta tarde? En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.gram.variacion-gramatical. Contrastes escritos suministrados: «Vos tenés la copia» / «Tú tienes la copia»; «A Juan lo vi ayer» / «A Juan le vi ayer»; «Me di cuenta de que faltaba una página» / «Me di cuenta que faltaba una página»; «Hoy he enviado el escrito» / «Hoy envié el escrito».\n\nIdentifica voseo, tuteo, leísmo de persona masculino singular y omisión de la preposición exigida por darse cuenta de. Explica por qué los dos tiempos del último par pueden responder a usos distintos y por qué no basta una frase para asignar un país al hablante. Edita el ejemplo de darse cuenta para una nota formal. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Vos tenés presenta voseo y tú tienes, tuteo. Le vi con Juan ilustra leísmo de persona masculino singular admitido en determinados usos; no autoriza cualquier sustitución de lo por le. En la nota formal se escribe me di cuenta de que. He enviado y envié pueden organizar de modo distinto la relación con hoy según el uso y el contexto; ninguna forma aislada determina una procedencia. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.lis.voces-mundo. Recupera la semana 9, «Entender sin uniformar». Recuperación del contenido escuchado: vuelve al audio de esa semana sin abrir su transcripción. Como pista de contraste, conserva estas dos posiciones: La comunicación compartida requiere precisión contextual y respeto por la variación. / La síntesis reproduce de forma verificada seis variedades.\n\nToma notas de quién sostiene cada posición y de una reserva expresada. Después contrasta tus notas con la transcripción. No deduzcas rasgos regionales ni solapamientos que el audio sintético no acredita. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El manual compartido debe asegurar compromisos comprensibles sin imponer una voz supuestamente neutra. Mantendremos tratamientos coherentes con la relación y explicitaremos fechas cuando una expresión temporal pueda orientar expectativas distintas. Ante un malentendido, pediremos una paráfrasis y confirmaremos la acción acordada. No atribuiremos un uso a una región a partir de un solo intercambio. Para trabajar percepción fonética, seleccionaremos muestras reales autorizadas y verificables; las voces sintéticas disponibles sirven para seguir el contenido, pero no certifican variedad regional. La diversidad deja de parecer un problema cuando distinguimos identidad lingüística e información operativa. La primera posición sintetiza el límite defendido; la segunda es la conclusión excesiva que el diálogo obliga a rechazar. En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.fun.mediacion-variedades. Intercambio escrito: agente A, «Ya lo revisamos: terminamos esta mañana»; agente B, «Ya lo revisamos: lo haremos antes de las cuatro». Tratamientos disponibles: «Vos podés avisarme» / «Usted me avisa cuando tenga la copia».\n\nExplica las dos lecturas temporales con una paráfrasis inequívoca. Propón un tratamiento coherente con una relación concreta sin declarar uno universalmente más cortés. Formula una pregunta que compruebe la interpretación y evita generalizar a una región a partir de este intercambio. Contraste nuevo suministrado de «Checkpoint: qué demuestra un éxito»: «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "A informa de una tarea terminada; B anuncia una tarea próxima. Para un compromiso operativo, B puede decir lo revisaremos antes de las cuatro. La elección entre vos y usted depende de relación y uso; ninguna forma garantiza por sí sola cercanía o distancia. Una comprobación útil sería: ¿queda entonces pendiente la revisión hasta esta tarde? En el nuevo contraste, «El dato no cierra la discusión; antes bien, obliga a precisar la muestra.» debe interpretarse dentro de esta cuestión: Integrar retórica, densidad, matiz y variación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo el artículo separa lo afirmado de lo presupuesto y cómo ordena la información.",
+      items: [
+        { quote: "La pregunta no pide información: la da por sentada.", note: "La autora nombra la presuposición antes de discutir el fondo." },
+        { quote: "Cierto es que el muro está dañado.", note: "Atributo antepuesto que concede para después rebatir." },
+        { quote: "Ese estudio, nadie lo ha visto completo.", note: "Tema dislocado: lo conocido delante, la crítica al final." },
+        { quote: "Es por eso que la asociación pide algo muy sencillo", note: "Variante de la escindida más extendida en América." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Produce un balance de 550–700 palabras para una comisión ciudadana. Integra los tres indicadores, corrige el alcance de la cifra y propone un anuncio público que distinga logros, límites y decisiones pendientes.",
-    "context": "Modelo completo de una respuesta posible. Contrasta su organización y sus reservas; tu entrega debe desarrollar una voz propia, no reproducirlo.",
-    "steps": [
-      "Traza un mapa de fuentes: afirmación, prueba, límite y destinatario.",
-      "Decide el orden según la acción que necesita realizar tu lector; reserva espacio para una objeción fuerte.",
-      "Redacta sin copiar el modelo. Integra al menos dos fuentes y atribuye sus diferencias.",
-      "Revisa el alcance de tres formulaciones, lee un párrafo en voz alta y explica dos cambios de estilo."
+  practice: {
+    intro: "Combina orden, elección del recurso, reescritura y escritura breve. Termina con la recuperación de las semanas 6 a 9 y de clases anteriores.",
+    exercises: [
+      {
+        id: "c2-10-orden",
+        type: "order",
+        prompt: "Ordena las palabras para obtener frases con el foco o el orden indicado.",
+        items: [
+          {
+            words: ["Fue", "la", "asociación", "quien", "pidió", "el", "estudio", "independiente."],
+            why: "Escindida de sujeto: el foco es «la asociación».",
+          },
+          {
+            words: ["A", "ello", "se", "suma", "la", "falta", "de", "iluminación."],
+            why: "Anteposición anafórica con «a ello».",
+          },
+          {
+            words: ["En", "2019", "aparecieron", "los", "primeros", "restos", "del", "muro."],
+            why: "Sujeto pospuesto para introducir un referente nuevo.",
+          },
+        ],
+      },
+      {
+        id: "c2-10-respuesta",
+        type: "context",
+        prompt: "Elige la mejor respuesta o versión para cada situación.",
+        items: [
+          {
+            context: "En la audiencia, el gerente pregunta a una vecina: «¿Por qué ustedes prefieren una huaca abandonada a un barrio ordenado?».",
+            q: "¿Qué respuesta desmonta mejor la pregunta?",
+            options: [
+              "Porque la huaca es más importante que el orden.",
+              "Nadie prefiere una huaca abandonada: pedimos que se proteja, y el orden del barrio no depende de este estacionamiento.",
+              "Preferimos la huaca porque somos vecinos de toda la vida.",
+            ],
+            answer: 1,
+            why: "Rechaza las dos presuposiciones antes de dar su posición.",
+          },
+          {
+            context: "Nota informativa neutra sobre la entrevista.",
+            q: "¿Qué versión respeta la neutralidad?",
+            options: [
+              "El gerente reconoció que el estacionamiento iba a ser provisional.",
+              "El gerente se dio cuenta de que el plazo era de veinte años.",
+              "El gerente afirmó que el estacionamiento sería provisional; el contrato fija un plazo máximo de veinte años.",
+            ],
+            answer: 2,
+            why: "Verbo no factivo y dato verificable, sin ironía.",
+          },
+          {
+            context: "Párrafo de un informe técnico que ya habla del muro norte.",
+            q: "¿Qué frase continúa mejor el párrafo?",
+            options: [
+              "Las lluvias de 2017 dañaron ese muro.",
+              "En cuanto al muro norte, fue dañado.",
+              "Hubo lluvias en 2017.",
+            ],
+            answer: 0,
+            why: "Progresión lineal: «ese muro» retoma lo conocido y el rema aporta lo nuevo.",
+          },
+        ],
+      },
+      {
+        id: "c2-10-reescritura",
+        type: "transform",
+        prompt: "Reescribe cada frase según la instrucción sin cambiar su contenido.",
+        items: [
+          {
+            source: "La municipalidad no instaló el cerco.",
+            instruction: "Conviértela en escindida para corregir a quien culpa a los vecinos, empezando por «Fue la municipalidad».",
+            answers: ["Fue la municipalidad, no los vecinos, la que no instaló el cerco.", "Fue la municipalidad, no los vecinos, quien no instaló el cerco."],
+            why: "La escindida con «no…» intercalado corrige el foco.",
+          },
+          {
+            source: "Las consecuencias de construir junto al muro son graves.",
+            instruction: "Antepón el atributo con inversión.",
+            answers: ["Graves son las consecuencias de construir junto al muro."],
+            why: "Atributo antepuesto: destaca la valoración.",
+          },
+          {
+            source: "Nadie ha leído completo el estudio de impacto.",
+            instruction: "Pon «el estudio de impacto» al comienzo como tema y retómalo con un pronombre.",
+            answers: ["El estudio de impacto, nadie lo ha leído completo."],
+            why: "Tema dislocado retomado con «lo».",
+          },
+        ],
+      },
+      {
+        id: "c2-10-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Escribe tres preguntas cargadas que podría hacer alguien de la inmobiliaria en la audiencia y, para cada una, una respuesta de una o dos frases que rechace primero lo que da por hecho (60–90 palabras en total).",
+            model: "1. «¿Cuándo van a dejar de frenar el progreso?» — No frenamos el progreso: pedimos que se estudie otra ubicación. 2. «¿Por qué no aceptan un proyecto que ya está aprobado?» — El proyecto no está aprobado; por eso hay audiencia. 3. «¿Quién va a pagar la vigilancia de la huaca?» — Antes de hablar de quién paga, hablemos de quién no instaló el cerco que pidió el ministerio.",
+            checklist: [
+              "Cada pregunta contiene una presuposición discutible.",
+              "Cada respuesta rechaza la presuposición antes de responder.",
+              "Las respuestas son breves y concretas.",
+            ],
+          },
+          {
+            prompt: "Reescribe este párrafo para que avance de lo conocido a lo nuevo (60–80 palabras): «Un cerco fue pedido por el ministerio en 2020. Las lluvias de 2017 dañaron el muro norte. En cuanto al cerco, no fue instalado. En cuanto a la municipalidad, era la responsable».",
+            model: "Las lluvias de 2017 dañaron el muro norte de la huaca. Por esos daños, el ministerio pidió en 2020 un cerco perimétrico. Ese cerco, sin embargo, nunca se instaló, y la responsable de hacerlo era la municipalidad. De ello se deduce que el muro lleva seis años sin la protección que se consideró necesaria.",
+            checklist: [
+              "El orden de los hechos sigue una progresión lineal.",
+              "Elimino los «en cuanto a» innecesarios.",
+              "Uso al menos un recurso anafórico.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c2-10-recuperacion",
+        type: "open",
+        prompt: "Recupera las clases de las semanas 6 a 9 y algunas anteriores con los estímulos que se te dan. No hace falta volver a esas lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de la clase G213 (ambigüedad accidental). Estímulo, cartel de la asociación: «Todos los vecinos no apoyan el estacionamiento». La asociación quiere decir que ninguno lo apoya. Explica el problema y reescribe el cartel.",
+            model: "«Todos… no» admite dos lecturas: que ningún vecino lo apoya o que no todos lo apoyan. Si la asociación quiere decir lo primero, debe escribir «Ningún vecino apoya el estacionamiento». Pero, como seguramente algunos vecinos sí lo apoyan, lo más honesto sería «La mayoría de los vecinos no apoya el estacionamiento».",
+            checklist: [
+              "Identifico las dos lecturas de «todos… no».",
+              "La reescritura deja una sola lectura.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G214 (gramaticalidad y norma). Estímulo, transcripción de la audiencia: un vecino dice «Habían más de cien personas en la marcha». El acta oficial lo resume. Escribe la frase del acta y explica qué juicio merece la forma del vecino.",
+            model: "Acta: «El vecino señaló que en la marcha había más de cien personas». La forma «habían» es real y muy extendida, pero no normativa: no es agramatical. En la transcripción literal se respeta como voz del vecino; en el acta, que es voz institucional, se usa «había».",
+            checklist: [
+              "Uso «había» en la voz institucional.",
+              "Califico «habían» como no normativa, no agramatical.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G215 (cambios de trato). Estímulo de la entrevista: el gerente tutea al periodista y, ante la pregunta sobre el plazo, dice «Mire usted, eso dependerá de la municipalidad». Explica qué comunica el cambio y cómo lo aprovecha el periodista.",
+            model: "El paso del tú al usted marca distancia en el momento más incómodo de la entrevista: el gerente se protege de una pregunta que no quiere responder. El periodista lo hace explícito («noto que ahora me trata de usted») y, sin acusarlo, deja al oyente interpretar ese cambio antes de presentar el dato del contrato.",
+            checklist: [
+              "Interpreto el cambio frente al trato anterior.",
+              "Explico el efecto en la entrevista.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G216 (variación regional del pasado). Estímulo, mensaje de una vecina limeña: «¡La huaca había sido enorme! Hoy subí con los chicos del colegio». Explica las dos formas verbales y di si las cambiarías al citarla en un periódico de Madrid.",
+            model: "«Había sido enorme» expresa la sorpresa de quien descubre algo en ese momento, un uso descrito en zonas andinas. «Hoy subí» usa el indefinido para un hecho de hoy, lo normal en gran parte de América. No cambiaría ninguna: es una cita. Si el periódico lo necesita, añadiría una aclaración en la voz del periodista.",
+            checklist: [
+              "Explico el pluscuamperfecto de sorpresa.",
+              "Explico el indefinido de hoy.",
+              "Respeto la cita.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G217 (pronombres en la norma culta). Estímulo, borrador del correo de la asociación: «A los vecinos le enviamos el informe; se los enviamos el lunes. La informamos que la audiencia es el jueves». Corrige el correo y explica cada cambio.",
+            model: "«A los vecinos les enviamos el informe; se lo enviamos el lunes. La informamos de que la audiencia es el jueves». «Les», porque el indirecto es plural; «se lo», porque «el informe» es singular y el plural del destinatario no se marca; «la informamos de que», porque con la persona como complemento directo «informar» lleva «de».",
+            checklist: [
+              "Corrijo los tres pronombres o construcciones.",
+              "Explico cada cambio con la norma escrita.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G218 (perífrasis de ironía). Estímulo: «La inmobiliaria anda diciendo que el estacionamiento iba a ser provisional». Explica qué actitud transmite la frase y escribe una versión neutra para una nota informativa.",
+            model: "«Anda diciendo» añade repetición y desaprobación; «iba a ser» sugiere que el plan no se cumplirá y, atribuido a la empresa, suena irónico. Versión neutra: «La inmobiliaria ha afirmado que el estacionamiento será provisional. El contrato fija un plazo máximo de veinte años».",
+            checklist: [
+              "Explico la actitud de las dos perífrasis.",
+              "La versión neutra solo contiene datos verificables y atribuidos.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G212 (elipsis compleja). Estímulo: «La municipalidad apoya el proyecto más que los vecinos». Explica las dos lecturas y escribe una versión para cada una.",
+            model: "Puede significar que la municipalidad apoya el proyecto más de lo que lo apoyan los vecinos, o que la municipalidad apoya el proyecto más de lo que apoya a los vecinos. Versiones: «La municipalidad apoya el proyecto más de lo que lo apoyan los vecinos» y «La municipalidad apoya más al proyecto que a los vecinos».",
+            checklist: [
+              "Identifico el material omitido.",
+              "Escribo una versión explícita para cada lectura.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G210 (subordinación múltiple). Estímulo: «La arqueóloga dijo que el informe que la empresa que ganó la licitación que convocó la municipalidad presentó no menciona la huaca». Reescribe la frase para que se lea sin esfuerzo.",
+            model: "«La municipalidad convocó una licitación y la ganó una empresa. Según la arqueóloga, el informe que presentó esa empresa no menciona la huaca». Al dividir la frase y ordenar los hechos, cada referente aparece antes de que se hable de él y desaparecen las relativas encajadas.",
+            checklist: [
+              "Reduzco las relativas encajadas.",
+              "Cada referente queda claro.",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "El programa amplió el acceso; con todo, no llegó a todos los barrios.",
-      "El dato no cierra la discusión; antes bien, obliga a precisar la muestra.",
-      "La coordinadora calificó de prometedor el resultado entre quienes respondieron.",
-      "balance provisional",
-      "denominador",
-      "extrapolar"
-    ],
-    "model": [
-      "Balance del programa de archivos abiertos",
-      "El programa ha ampliado la posibilidad de consultar materiales digitalizados, pero la documentación disponible no permite equiparar ese avance con un acceso universal. La cifra de satisfacción procede de quienes completaron una solicitud y respondieron al cuestionario. Por tanto, informa sobre una experiencia delimitada y deja fuera otras: abandonar un formulario, no disponer de conexión o no conseguir terminar un trámite presencial. La corrección principal del balance consiste en distinguir satisfacción entre personas atendidas y accesibilidad del sistema.",
-      "La aparente contradicción entre más consultas y menos solicitudes completas se aclara al separar actividades. Visitar un catálogo no implica identificar la serie documental exigida por el formulario. La digitalización puede atraer más búsquedas y, al mismo tiempo, el procedimiento puede impedir que algunas lleguen a convertirse en solicitudes. Ninguna cifra debe utilizarse para borrar la otra. El informe técnico recomienda lenguaje claro y asistencia presencial; el comunicado, sin embargo, presentó esa recomendación como una reforma ya aprobada. Es necesario corregir la diferencia porque todavía no hay presupuesto ni fecha confirmados.",
-      "La crónica aporta observaciones sobre las colas, pero su adjetivo obstinadas atribuye a las bibliotecarias una resistencia que las entrevistas no respaldan. Ellas habían solicitado simplificaciones. Retirar esa valoración no obliga a negar las esperas descritas. Conviene evaluar cada afirmación según su base, evitando tanto la aceptación completa de una fuente como su descalificación total por un error de encuadre. Esta lectura permite localizar responsabilidades sin convertir al personal de atención en explicación automática de un problema de diseño.",
-      "Proponemos tres indicadores separados: encontrar información, completar una solicitud y recibir una respuesta utilizable. Deben definirse de manera estable y documentar cualquier cambio de medición. También conviene observar dónde se solicita ayuda y dónde se abandona, sin recoger identidades innecesarias. La prueba del formulario debe incorporar personas con distintos grados de familiaridad. Que los usuarios habituales comprendan serie documental demuestra algo sobre ese perfil; no demuestra que la exigencia sea transparente para cualquier visitante.",
-      "La siguiente encuesta puede registrar menos satisfacción si permite responder a personas antes excluidas. Ese resultado no sería por sí solo una prueba de deterioro. Tampoco debe utilizarse la ampliación de la muestra para desestimar cualquier crítica nueva. Habrá que examinar obstáculos, respuestas y poblaciones comparadas. Un indicador incómodo puede acompañar una mejora de la escucha institucional; interpretar esa situación requiere explicar qué cambió y no limitarse a celebrar porcentajes ascendentes.",
-      "En cuanto a la comunicación, la expresión ya la estamos acompañando no debe sustituir una acción identificable. Si una solicitud aún no se ha revisado, corresponde decirlo y precisar quién contactará, cuándo y para qué. Atribuir el malentendido a una variedad lingüística de la usuaria añadiría una generalización no demostrada a un fallo operativo. La reparación útil consiste en confirmar el siguiente paso.",
-      "Anuncio público propuesto: el archivo ha ampliado sus materiales digitales y revisará las barreras del procedimiento de solicitud. Publicará el diseño de una prueba con perfiles diversos y la fecha de decisión sobre asistencia presencial. Esta asistencia todavía no está aprobada. Los resultados distinguirán consultas, solicitudes y respuestas útiles. El objetivo es conservar los avances y hacer visibles las dificultades que las cifras actuales no muestran. La institución deberá publicar también resultados que cuestionen su relato de éxito, porque una evaluación sirve para revisar decisiones y no únicamente para respaldar las ya tomadas."
-    ],
-    "checklist": [
-      "La tesis tiene alcance preciso y pruebas identificables.",
-      "No convierto una propuesta en decisión ni una inferencia en dato.",
-      "El registro responde al destinatario y no borra condiciones.",
-      "La cohesión conserva referentes y voces sin repeticiones inútiles.",
-      "La revisión explica qué cambia para quien lee."
-    ],
-    "words": [
-      550,
-      700
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no un guion leído. La grabación, si la usas, permanece local; el navegador no califica pronunciación ni calidad oral.",
-    "tasks": [
-      {
-        "title": "Exposición situada",
-        "prompt": "Modera una mesa de evaluación: explica la aparente contradicción estadística, responde a una defensa retórica del programa y acuerda tres indicadores con responsabilidades claras.",
-        "prep": [
-          "Anota tesis, dos pruebas, una objeción y una reserva.",
-          "Marca dos focos prosódicos y un punto donde cambiarás de registro."
-        ],
-        "seconds": 240,
-        "model": "El programa ha ampliado las consultas, pero el indicador de satisfacción solo describe a quienes completaron el trámite y respondieron. No permite evaluar a quienes abandonaron o quedaron fuera. Proponemos separar encontrar información, completar una solicitud y recibir una respuesta utilizable. La reforma de asistencia presencial sigue siendo una recomendación sin financiación aprobada. El comunicado debe corregir esa diferencia y evitar trasladar a las bibliotecarias la responsabilidad de una promesa institucional. Reconocer el avance no exige declarar universal el acceso; medir la exclusión no exige negar que la digitalización haya producido beneficios.",
-        "selfCheck": [
-          "La condición principal se oye con claridad.",
-          "Distingo mi interpretación de las voces citadas.",
-          "Puedo reparar una frase sin abandonar el argumento."
-        ]
-      },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "Tu interlocutor sostiene: «La satisfacción prueba accesibilidad universal.». Responde sin caricaturizarlo, formula dos preguntas de seguimiento y pide que reformule tu condición principal. Después resume para una persona que no conoce el expediente de Checkpoint: qué demuestra un éxito.",
-        "prep": [
-          "Prepara una concesión real y una corrección de alcance.",
-          "Anticipa qué término deberás explicar sin jerga."
-        ],
-        "seconds": 240,
-        "model": "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera. La asistencia presencial era una recomendación sin presupuesto aprobado.",
-        "selfCheck": [
-          "La respuesta atiende la preocupación, no solo corrige la forma.",
-          "La versión breve conserva el límite decisivo.",
-          "Adapto el ritmo después de la interrupción."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te espera con una tarjeta de contraste: lleva tu dossier y una decisión lingüística que quieras poner a prueba con tu docente.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu decisión más discutible sobre Checkpoint: qué demuestra un éxito y pide un contraejemplo que la ponga a prueba.",
-        "phrases": [
-          "Mi lectura se apoya en…",
-          "Cambiaría de interpretación si…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica el límite «La asistencia presencial era una recomendación sin presupuesto aprobado.» a otro público sin rebajar su importancia.",
-        "phrases": [
-          "En otros términos…",
-          "Esta versión conserva…"
-        ]
-      },
-      {
-        "move": "Negocia",
-        "task": "Responde a la objeción «Un error de encuadre invalida cualquier observación de la fuente.» y acuerda una formulación que ambos puedan defender.",
-        "phrases": [
-          "Reconozco ese punto; mi reserva es…",
-          "Podemos dejar constancia de…"
-        ]
-      }
+  writing: {
+    task: "Redacta un artículo de opinión completo (420–540 palabras) para un diario sobre un conflicto entre patrimonio y desarrollo urbano, real o inventado. Desmonta al menos una pregunta o afirmación cargada, ordena los párrafos con progresión temática, usa al menos tres órdenes marcados y un foco correctivo, y cita a alguien respetando su variedad.",
+    context: "El artículo se publicará antes de una audiencia pública. Los lectores son vecinos, autoridades y periodistas. Puedes usar el caso de la huaca Mirasol o inventar otro con la misma lógica. Integra lo repasado en el bloque: evita ambigüedades accidentales, usa la norma culta en tu voz y, si usas ironía, apóyala en hechos.",
+    steps: [
+      "Anota la pregunta o afirmación cargada que vas a desmontar y lo que da por hecho.",
+      "Decide la progresión: hecho conocido, antecedentes, problema principal, alternativa y cierre. Marca dónde usarás un cambio de tema y dónde no hace falta.",
+      "Redacta sin copiar el modelo. Usa al menos un atributo antepuesto, una anteposición anafórica, un tema retomado con pronombre y una escindida o «no…, sino…».",
+      "Revisa el artículo con la lista de control: corrige cualquier verbo factivo que asuma la opinión de otra parte, cualquier «en cuanto a» innecesario y cualquier doble lectura accidental.",
     ],
-    "bring": "El dossier, una versión revisada, notas de escucha y una grabación local opcional; no se necesita subir audio."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Balance de Checkpoint: qué demuestra un éxito: ¿qué conclusión conserva el alcance?",
-        "options": [
-          "La satisfacción prueba accesibilidad universal.",
-          "El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera."
-        ],
-        "answer": 1,
-        "why": "Relaciona el texto principal con el documento complementario."
-      },
-      {
-        "type": "choice",
-        "q": "En una revisión final de Checkpoint: qué demuestra un éxito, ¿qué afirmación debe rechazarse?",
-        "options": [
-          "La asistencia presencial ya tiene presupuesto y fecha.",
-          "La asistencia presencial era una recomendación sin presupuesto aprobado."
-        ],
-        "answer": 0,
-        "why": "La primera opción contradice la condición explícita."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha esta síntesis de Checkpoint: qué demuestra un éxito. ¿Qué interpretación mantiene?",
-        "options": [
-          "Corregir el encuadre de una fuente no obliga a descartar todas sus observaciones.",
-          "Un error de encuadre invalida cualquier observación de la fuente."
-        ],
-        "answer": 0,
-        "why": "La relación expresada limita una generalización.",
-        "audio": "Corregir el encuadre de una fuente no obliga a descartar todas sus observaciones.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "En «Checkpoint: qué demuestra un éxito», ¿qué unidad expresa «evaluación sujeta a nuevos datos»? ___ .",
-        "answers": [
-          [
-            "balance provisional"
-          ]
-        ],
-        "hint": "evaluación sujeta a nuevos datos",
-        "why": "Recupera la unidad a partir de su función, no de una traducción."
-      },
-      {
-        "type": "gap",
-        "q": "Para nombrar «total respecto al que se calcula una proporción» en este expediente usamos ___ .",
-        "answers": [
-          [
-            "denominador"
-          ]
-        ],
-        "why": "La distinción léxica debe conservarse al mediar."
-      },
-      {
-        "type": "error",
-        "sentence": "La asociación pidió de que se midieran los abandonos.",
-        "answers": [
-          "La asociación pidió que se midieran los abandonos."
-        ],
-        "why": "Pedir introduce complemento directo sin de."
-      },
-      {
-        "type": "transform",
-        "source": "El ochenta por ciento está satisfecho. Solo se encuestó a quienes completaron el trámite.",
-        "instruction": "Delimita el porcentaje con «de quienes completaron el trámite».",
-        "answers": [
-          "El ochenta por ciento de quienes completaron el trámite está satisfecho."
-        ],
-        "why": "Nombrar la población: conserva la relación solicitada y compara qué se hace explícito."
-      },
-      {
-        "type": "open",
-        "prompt": "Cierre de «Checkpoint: qué demuestra un éxito»: escribe 90–120 palabras para una audiencia nueva. Incluye tesis, condición y una pregunta pendiente; justifica una elección de registro.",
-        "model": "El programa ha ampliado las consultas, pero el indicador de satisfacción solo describe a quienes completaron el trámite y respondieron. No permite evaluar a quienes abandonaron o quedaron fuera. Proponemos separar encontrar información, completar una solicitud y recibir una respuesta utilizable. La reforma de asistencia presencial sigue siendo una recomendación sin financiación aprobada. El comunicado debe corregir esa diferencia y evitar trasladar a las bibliotecarias la responsabilidad de una promesa institucional. Reconocer el avance no exige declarar universal el acceso; medir la exclusión no exige negar que la digitalización haya producido beneficios.",
-        "checklist": [
-          "Conservo la reserva decisiva.",
-          "Atribuyo una fuente y delimito mi inferencia.",
-          "El destinatario puede identificar el siguiente paso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Interpreto integrar retórica, densidad, matiz y variación en fuentes originales.",
-      "Puedo explicar por qué «La satisfacción prueba accesibilidad universal.» excede la evidencia.",
-      "Defiendo y reviso un dossier escrito y oral con destinatario concreto."
+    useLanguage: [
+      "La pregunta da por sentado que…",
+      "No fue…, sino… / Fue… quien…",
+      "Graves son… / Cierto es que… / Distinto es el caso de…",
+      "De ello se deduce que… / A ello se suma…",
+      "Ese informe, nadie lo ha…",
+      "Por lo que respecta a… (solo si cambia el tema)",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye sin mirar el límite: La asistencia presencial era una recomendación sin presupuesto aprobado.",
-      "Dentro de una semana, reescribe el cierre para otro público y contrástalo con tu versión inicial.",
-      "En clase, pide una objeción a «El balance debe separar satisfacción de usuarios atendidos y acceso de quienes quedan fuera.» y registra qué cambiarías."
-    ]
-  }
+    model: [
+      "«¿Hasta cuándo va a impedir el mercado viejo que el distrito se modernice?» La pregunta apareció la semana pasada en un cartel de la empresa que quiere demoler el mercado de la calle Junín para levantar un centro comercial. Es una buena pregunta para empezar, porque en pocas palabras da por sentadas dos cosas que nadie ha demostrado: que el mercado impide algo y que modernizar el distrito consiste en demolerlo.",
+      "El mercado de Junín tiene noventa años. Lo construyeron los propios comerciantes en 1935, con una estructura de madera y hierro que todavía sostiene la cubierta. Esa estructura, la municipalidad la declaró de interés histórico en 2010, y desde entonces no se ha reparado ni una sola viga. Cierto es que el edificio necesita una reforma profunda. De ello, sin embargo, no se deduce que haya que derribarlo, sino que alguien debería haber cumplido con su mantenimiento.",
+      "Graves son los problemas que hoy tiene el mercado: goteras, cables a la vista, un solo baño para ciento veinte puestos. Pero conviene preguntarse quién los ha causado. No fueron los comerciantes, que pagan su alquiler cada mes, sino la administración, que lleva quince años sin destinar un sol al edificio. A ello se suma que el proyecto de la empresa, según el resumen publicado, no incluye ningún espacio para los comerciantes actuales.",
+      "Doña Eulalia Quispe vende hierbas en el puesto cuarenta desde 1982. Cuando le pregunté qué pensaba del proyecto, me respondió: «Hoy vinieron otra vez los de la empresa. ¡Había sido que ya tenían los planos hechos!». Su sorpresa resume bien lo que sienten muchos vecinos: la decisión parece tomada antes de cualquier consulta.",
+      "Por lo que respecta a la alternativa, existe. Varios mercados de la ciudad se han rehabilitado manteniendo su estructura y a sus comerciantes, y hoy atraen más público que antes. En algunos de esos casos, los comerciantes participaron en el diseño, siguieron vendiendo durante las obras en módulos provisionales y regresaron a puestos renovados al cabo de un año. Una reforma así costaría menos que la demolición y no obligaría a nadie a abandonar su puesto. Es por eso que la asociación de comerciantes pide que se encargue un estudio de rehabilitación independiente antes de la audiencia.",
+      "No se trata de oponerse a la modernización. Se trata de entender que un distrito moderno no es el que borra lo que tiene, sino el que sabe cuidarlo. La pregunta del cartel merece, por tanto, otra pregunta: ¿por qué nadie ha intentado todavía arreglar el mercado antes de proponer su demolición? Mientras esa pregunta no tenga respuesta, cualquier decisión será prematura. Los vecinos merecemos esa respuesta antes del jueves.",
+    ],
+    checklist: [
+      "Desmonto al menos una pregunta o afirmación cargada.",
+      "Los párrafos avanzan de lo conocido a lo nuevo y solo marco los cambios de tema reales.",
+      "Uso al menos tres órdenes marcados y un foco correctivo.",
+      "Uso verbos no factivos para las opiniones de otras partes.",
+      "Cito a alguien respetando su variedad y escribo mi propia voz según la norma culta.",
+      "No hay dobles lecturas accidentales ni pronombres mal concordados.",
+    ],
+    words: [420, 540],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un guion leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Intervención en la audiencia pública",
+        prompt: "Eres vecino o vecina del barrio. Tienes cuatro minutos en la audiencia pública. Presenta tu posición sobre el estacionamiento: desmonta una pregunta cargada, corrige un foco con «no…, sino…» o una escindida y propón una alternativa. Ordena la intervención para que avance de lo conocido a lo nuevo.",
+        prep: [
+          "Elige la pregunta cargada que vas a desmontar.",
+          "Anota tres datos y el orden en que los presentarás.",
+          "Prepara una frase final con foco contrastivo.",
+        ],
+        seconds: 240,
+        model: "Buenas tardes. Me llamo Carmen y vivo frente a la huaca desde hace treinta años. Antes de empezar quiero responder a una pregunta que he oído mucho: «¿por qué los vecinos se oponen al progreso?». No nos oponemos al progreso. Nos oponemos a este proyecto, en este lugar. Fue la municipalidad, no los vecinos, la que no instaló el cerco que pidió el ministerio…",
+        selfCheck: [
+          "Rechazo la presuposición antes de responder.",
+          "Marco el foco contrastivo con la voz.",
+          "La intervención avanza de lo conocido a lo nuevo.",
+        ],
+      },
+      {
+        title: "Responder a una pregunta capciosa en directo",
+        prompt: "El gerente te pregunta delante de todos: «¿Usted prefiere que los coches sigan estacionando en la vereda?». Responde sin aceptar la presuposición, hazle una pregunta que lo obligue a dar un dato y mantén un trato coherente aunque él cambie del tú al usted.",
+        prep: [
+          "Identifica lo que da por hecho la pregunta.",
+          "Prepara una contrapregunta con un dato verificable.",
+        ],
+        seconds: 180,
+        model: "Nadie aquí prefiere que los coches estacionen en la vereda. Lo que preferimos es que se estudie el terreno de la fábrica, que la municipalidad ofreció en 2023. Y ya que hablamos de preferencias, ¿podría decirnos por qué el contrato fija veinte años para un estacionamiento que usted llama provisional?",
+        selfCheck: [
+          "No acepto la presuposición de la pregunta.",
+          "Hago una contrapregunta concreta.",
+          "Mantengo el trato de forma coherente.",
+        ],
+      },
+      {
+        title: "Leer y reordenar en voz alta",
+        prompt: "Lee en voz alta un párrafo de tu artículo. Después reformúlalo oralmente con otro orden: cambia un atributo antepuesto por el orden neutro y una escindida por un acento contrastivo. Explica en una frase qué se gana o se pierde.",
+        prep: [
+          "Marca en el párrafo los órdenes marcados.",
+          "Decide qué palabra recibirá el acento contrastivo.",
+        ],
+        seconds: 120,
+        selfCheck: [
+          "El acento contrastivo cae en la palabra corregida.",
+          "Explico el efecto del cambio de orden.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu artículo y una lista de dudas del bloque de las semanas 6 a 10. Estas tarjetas te ayudan a aprovechar el tiempo con tu profesor.",
+    cards: [
+      {
+        move: "Desmonta",
+        task: "Lleva una pregunta cargada de una entrevista o un debate real y pide a tu profesor que encuentre lo que da por hecho antes de que se lo digas.",
+        phrases: ["Esta pregunta da por sentado que…", "Si la niegas, sigue suponiendo que…"],
+      },
+      {
+        move: "Corrige",
+        task: "Pide a tu profesor que diga una frase con un error de foco; corrígela en voz alta con el acento, con una escindida y con «no…, sino…».",
+        phrases: ["No fue…, sino…", "Fue… quien…"],
+      },
+      {
+        move: "Integra",
+        task: "Elige un fenómeno de cada semana del bloque (ambigüedad, norma, trato, pasado, pronombres, ironía) y pide a tu profesor que te ponga un ejemplo nuevo para que lo analices.",
+        phrases: ["Esto es de la semana…", "Aquí lo que pasa es que…"],
+      },
+      {
+        move: "Ordena",
+        task: "Lee un párrafo de tu artículo y pide a tu profesor que señale si hay algún cambio de tema mal marcado.",
+        phrases: ["¿Aquí hace falta «en cuanto a»?", "¿El párrafo avanza o se repite?"],
+      },
+    ],
+    bring: "Tu artículo de opinión revisado, tu lista de preguntas cargadas y, si quieres, la grabación de tu intervención en la audiencia.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "«El alcalde volvió a prometer el cerco.» ¿Qué presupone la frase?",
+        options: [
+          "Que el alcalde ya había prometido el cerco antes.",
+          "Que el cerco ya está instalado.",
+          "Que el alcalde nunca prometió nada.",
+        ],
+        answer: 0,
+        why: "«Volver a» es un activador de repetición.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué frase mantiene la presuposición de que alguien autorizó la obra?",
+        options: [
+          "Nadie autorizó la obra.",
+          "No fue el ministerio quien autorizó la obra.",
+          "¿Alguien autorizó la obra?",
+        ],
+        answer: 1,
+        why: "La escindida negada mantiene la presuposición de su relativa.",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase. ¿Qué recurso usa para retomar lo anterior?",
+        options: [
+          "Un cambio de tema con «en cuanto a».",
+          "Un atributo antepuesto.",
+          "Una anteposición anafórica.",
+        ],
+        answer: 2,
+        why: "«Prueba de ello» retoma lo dicho al comienzo de la oración.",
+        audio: "Prueba de ello es que el colegio organiza visitas a la huaca cada semana.",
+        voice: "es-PE-m",
+      },
+      {
+        type: "gap",
+        q: "Fue en el sector norte ___ aparecieron las vasijas más antiguas.",
+        answers: [["donde"]],
+        hint: "Escindida de lugar: la forma recomendada es la de «Fue allí…».",
+        why: "Con foco de lugar se recomienda «donde».",
+      },
+      {
+        type: "gap",
+        q: "No lo dijo la arqueóloga, ___ el gerente de la inmobiliaria.",
+        answers: [["sino"]],
+        hint: "Conjunción que introduce el foco correcto tras una negación.",
+        why: "Foco correctivo con «no…, sino…».",
+      },
+      {
+        type: "transform",
+        source: "La inmobiliaria no ha publicado el informe técnico.",
+        instruction: "Pon «el informe técnico» al principio como tema y retómalo con un pronombre átono.",
+        answers: ["El informe técnico, la inmobiliaria no lo ha publicado."],
+        why: "Tema dislocado retomado con «lo».",
+      },
+      {
+        type: "error",
+        sentence: "Nota neutra: «El gerente sabe que los vecinos exageran los daños».",
+        answers: ["Nota neutra: «El gerente afirma que los vecinos exageran los daños».", "Nota neutra: «El gerente cree que los vecinos exageran los daños»."],
+        why: "«Saber» es factivo: la nota asumiría como verdad la opinión del gerente.",
+      },
+      {
+        type: "error",
+        sentence: "A los vecinos le enviamos el acta y en cuanto a los vecinos, la recibieron el lunes.",
+        answers: ["A los vecinos les enviamos el acta y la recibieron el lunes."],
+        why: "«Les» para el plural y sin «en cuanto a» cuando el tema no cambia.",
+      },
+      {
+        type: "order",
+        words: ["Graves", "son", "los", "riesgos", "de", "construir", "junto", "al", "muro."],
+        why: "Atributo antepuesto con inversión.",
+      },
+      {
+        type: "open",
+        prompt: "Escribe en 90–110 palabras la respuesta que darías en la radio a esta pregunta: «¿Por qué la asociación insiste en frenar un proyecto que generará empleo?». Rechaza lo que da por hecho, corrige un foco y añade un dato.",
+        model: "Antes de responder, permítame corregir la pregunta. La asociación no insiste en frenar nada: presentó una petición formal para que se estudie otra ubicación. Y tampoco está demostrado que este proyecto genere empleo; el resumen publicado no da ninguna cifra. No es el desarrollo lo que discutimos, sino el lugar. Fue la propia municipalidad la que ofreció en 2023 el terreno de la antigua fábrica, a dos cuadras de la huaca. Pedimos solo eso: que se compare esa opción antes de decidir, con los documentos completos sobre la mesa.",
+        checklist: [
+          "Rechazo las presuposiciones de la pregunta.",
+          "Uso una escindida o «no…, sino…».",
+          "Aporto un dato verificable.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Separo lo afirmado de lo presupuesto y reconozco los activadores: factivos, cambio de estado, nominalizaciones, preguntas cargadas y partículas de foco.",
+      "Corrijo un foco con acento contrastivo, anteposición, escindida o «no…, sino…», y uso «Fue entonces cuando» o «Es por eso que» según la norma.",
+      "Ordeno un texto con progresión temática, sujetos pospuestos, peso final y órdenes marcados, y marco solo los cambios de tema reales.",
+      "Integro lo repasado en las semanas 6 a 9: ambigüedad, norma, trato, variación del pasado, pronombres e ironía.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna derecha de la tabla «Activadores de presuposición» y reconstruye lo que da por hecho cada ejemplo.",
+      "Dentro de una semana, escucha una entrevista política y anota dos preguntas cargadas y cómo responderías tú.",
+      "En la próxima clase, lee tu artículo completo y pide a tu profesor que discuta la progresión de un párrafo.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/foco-presuposicion-y-estructura-informativa", label: "Clase: Foco, presuposición y estructura informativa" },
+    { path: "/gramatica/tema-rema-y-orden-marcado-en", label: "Clase: Tema, rema y orden marcado en textos complejos" },
+  ],
 };

@@ -7,6 +7,7 @@
  * class mapping in ./catalog.ts.
  */
 import type { SectionKey } from "../curriculum/types";
+import { classSlugs } from "../curriculum/class-slugs";
 
 export type CategoryId =
   | "ser-estar" | "por-para" | "desde-hace" | "pasados" | "pluscuamperfecto" | "subjuntivo"
@@ -131,7 +132,8 @@ function fromForms(correct: string[]): CategoryId | null {
 function fromObjectives(objectives: string[]): CategoryId | null {
   for (const id of objectives) {
     if (!/\.gram\./.test(id)) continue;
-    const slug = id.split(".").pop() ?? "";
+    const last = id.split(".").pop() ?? "";
+    const slug = classSlugs[last] ?? last;
     const match = fromWording(slug.replace(/-/g, " "));
     if (match) return match;
     if (/pasad|indefinido|imperfecto|perfecto/.test(slug)) return "pasados";

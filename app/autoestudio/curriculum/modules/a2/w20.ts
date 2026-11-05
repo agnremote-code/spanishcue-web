@@ -1,897 +1,592 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w20: Module = {
-  "id": "a2-20",
-  "level": "a2",
-  "week": 20,
-  "kind": "checkpoint",
-  "title": "Checkpoint final: una semana en común",
-  "subtitle": "Organizar una actividad realista integrando experiencias, decisiones, gestiones y opiniones.",
-  "stop": {
-    "place": "San José",
-    "country": "Costa Rica"
-  },
-  "minutes": 140,
-  "newObjectives": [
-    "a2.rev.checkpoint-final",
-    "a2.wri.texto-a2"
+  id: "a2-20",
+  level: "a2",
+  week: 20,
+  kind: "checkpoint",
+  title: "Checkpoint final: trabajé tres años allí, pero ayer llegué tarde",
+  subtitle: "Repaso de la duración y la frecuencia en pasado y del relato con mensajes prácticos que cierra A2, integrado con todo lo de las semanas 16 a 19.",
+  stop: { place: "San José", country: "Costa Rica" },
+  minutes: 140,
+  newObjectives: [
+    "a2.gram.g084",
+    "a2.gram.g085",
+    "a2.voc.w20-radio-experiencia",
+    "a2.pron.w20-tilde-final-pasado",
+    "a2.lis.w20-entrevista-radio",
+    "a2.read.w20-correo-primer-mes",
+    "a2.wri.w20-relato-y-mensaje",
+    "a2.spk.w20-contar-experiencia",
+    "a2.fun.w20-presentar-experiencia",
+    "a2.disc.w20-relato-mensaje",
+    "a2.rev.w20-semanas-16-20",
   ],
-  "reviewObjectives": [
-    "a2.disc.conectores-causa-consecuencia",
-    "a2.gram.antes-despues-inf",
-    "a2.voc.estudio-trabajo",
-    "a2.pron.conectores-entonacion",
-    "a2.fun.explicar-decisiones",
-    "a2.wri.historia-conectada",
-    "a2.gram.por-para",
-    "a2.voc.compras-online",
-    "a2.pron.palabras-largas",
-    "a2.fun.finalidad",
-    "a2.lis.atencion-cliente",
-    "a2.gram.indefinidos",
-    "a2.gram.relativo-que",
-    "a2.voc.objetos-perdidos",
-    "a2.pron.diptongos-verbales",
-    "a2.fun.describir-objeto",
-    "a2.read.objetos-perdidos",
-    "a2.gram.opinion-indicativo",
-    "a2.fun.acuerdo-desacuerdo",
-    "a2.voc.temas-sociales",
-    "a2.pron.entonacion-duda",
-    "a2.disc.turnos",
-    "a2.spk.opinion-breve",
-    "a2.gram.posesivos-tonicos"
-  ],
-  "prerequisites": [
-    "a2-19"
-  ],
-  "goal": {
-    "canDo": "Puedo organizar una actividad realista integrando experiencias, decisiones, gestiones y opiniones.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "Checkpoint final: una semana en común · formas que necesitas",
-        "body": [
-          "El proyecto final reúne información de varias fuentes. Recupera pasado para explicar una experiencia y su consecuencia; comparaciones para elegir; por y para para justificar; relativos para describir; pronombres para coordinar material; condiciones y cortesía para resolver cambios. El objetivo es que otra persona pueda actuar con tu mensaje."
-        ],
-        "support": [
-          "Use both sources, distinguish what is confirmed and ask for missing facts. Your final message should allow another person to act on the plan."
-        ],
-        "examples": [
-          {
-            "es": "El año pasado llegamos tarde; por eso cambiaremos el punto de encuentro."
-          },
-          {
-            "es": "Buscamos la sala que tiene acceso sin escaleras."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "No vino nadie porque por eso cancelamos la charla.",
-            "right": "No vino nadie; por eso cancelamos la charla.",
-            "why": "Por eso ya presenta la consecuencia; no se combina aquí con porque."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Trabaja en tres momentos: lee y escucha sin producir todavía, selecciona los datos que necesita tu interlocutor y prepara tu propuesta. Después revisa si cada decisión tiene una razón y si queda algún dato pendiente. No inventes una confirmación. Puedes decir todavía no lo sabemos y formular la pregunta necesaria."
-        ],
-        "examples": [
-          {
-            "es": "Le pedí el proyector a Ana y me lo prestó para la actividad."
-          },
-          {
-            "es": "Si el grupo crece, preguntaremos por otra sala."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Ana presta las cajas: nos ___ presta.",
-            "answers": [
-              [
-                "las"
-              ]
-            ]
-          },
-          {
-            "q": "Elegimos la biblioteca ___ tener un espacio cubierto. (finalidad)",
-            "answers": [
-              [
-                "para"
-              ]
-            ]
-          },
-          {
-            "q": "Si confirmamos hoy, ___ el cartel mañana. (imprimir, yo, futuro)",
-            "answers": [
-              [
-                "imprimiré"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "La sala es pequeña. No caben treinta personas.",
-            "instruction": "Conserva las dos oraciones en el orden original y enlázalas con por eso después de punto o punto y coma.",
-            "answers": [
-              "La sala es pequeña; por eso no caben treinta personas."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Elegimos la sala A. La sala A tiene acceso sin escaleras.",
-            "instruction": "Conserva Elegimos la sala A y sustituye la segunda mención de la sala A por que, después de una coma; mantén el resto.",
-            "answers": [
-              "Elegimos la sala A, que tiene acceso sin escaleras."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Quiero confirmar el precio.",
-            "instruction": "Empieza con ¿Podría y conserva confirmar el precio; no añadas sujeto ni otra fórmula de cortesía.",
-            "answers": [
-              "¿Podría confirmar el precio?"
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "una propuesta final",
-            "en": "a final proposal"
-          },
-          {
-            "es": "un dato confirmado",
-            "en": "a confirmed detail"
-          },
-          {
-            "es": "una pregunta pendiente",
-            "en": "an outstanding question"
-          },
-          {
-            "es": "un acuerdo de grupo",
-            "en": "a group agreement"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "una experiencia útil",
-            "en": "a useful experience"
-          },
-          {
-            "es": "adaptar el plan",
-            "en": "adapt the plan"
-          },
-          {
-            "es": "comunicar un cambio",
-            "en": "communicate a change"
-          },
-          {
-            "es": "revisar el resultado",
-            "en": "review the outcome"
-          }
-        ]
-      }
+  reviewObjectives: ["a2.gram.g076","a2.gram.g077","a2.voc.w16-cocina-receta","a2.pron.w16-pausa-conectores","a2.lis.w16-taller-gallo-pinto","a2.read.w16-blog-curso-cocina","a2.wri.w16-receta-con-historia","a2.spk.w16-explicar-receta","a2.fun.w16-dar-instrucciones","a2.disc.w16-ordenar-explicar","a2.gram.g078","a2.gram.g079","a2.voc.w17-excursion-favores","a2.pron.w17-entonacion-peticion","a2.lis.w17-mensaje-vecina","a2.read.w17-plan-irazu","a2.wri.w17-mensaje-favores","a2.spk.w17-planes-favores","a2.fun.w17-pedir-favores","a2.disc.w17-aceptar-rechazar","a2.gram.g080","a2.gram.g081","a2.voc.w18-finca-cafe","a2.pron.w18-pregunta-alternativa","a2.lis.w18-bienvenida-finca","a2.read.w18-correo-voluntarios","a2.wri.w18-normas-voluntariado","a2.spk.w18-explicar-normas","a2.fun.w18-normas-consejos","a2.disc.w18-ordenar-informacion","a2.gram.g082","a2.gram.g083","a2.voc.w19-muelle-ferry","a2.pron.w19-tilde-interrogativos","a2.lis.w19-muelle-paquera","a2.read.w19-mensaje-ferry","a2.wri.w19-correo-informacion","a2.spk.w19-pedir-informacion","a2.fun.w19-preguntar-cortes","a2.disc.w19-estado-proceso"],
+  prerequisites: ["a2-19"],
+  goal: {
+    canDo: "Al final de esta semana, y de A2, puedes contar tu experiencia (cuánto tiempo, cuántas veces, qué hacías normalmente, hace cuánto), narrar un día que salió mal con escena, hechos y causas, y escribir mensajes prácticos que piden, organizan y agradecen, usando todo lo de las semanas 16 a 19.",
+    steps: [
+      "Repasa la duración cerrada con el indefinido: `estuve tres años`, `viví de 2019 a 2023`.",
+      "Distingue `fui tres veces` (total) de `iba cada sábado` (costumbre).",
+      "Di cuándo pasó algo con `hace` + tiempo: `volví hace dos meses`.",
+      "Cuenta un día complicado: escena en imperfecto, hechos en indefinido, conectores.",
+      "Escribe mensajes prácticos: `¿podrías…?`, `envíamelas`, `gracias por…`, `para el viernes`.",
+      "Integra las semanas 16 a 19 en una entrevista en una radio de San José y en un correo largo.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "una propuesta final",
-            "right": "a final proposal"
-          },
-          {
-            "left": "un dato confirmado",
-            "right": "a confirmed detail"
-          },
-          {
-            "left": "una pregunta pendiente",
-            "right": "an outstanding question"
-          },
-          {
-            "left": "un acuerdo de grupo",
-            "right": "a group agreement"
-          },
-          {
-            "left": "una experiencia útil",
-            "right": "a useful experience"
-          },
-          {
-            "left": "adaptar el plan",
-            "right": "adapt the plan"
-          },
-          {
-            "left": "comunicar un cambio",
-            "right": "communicate a change"
-          },
-          {
-            "left": "revisar el resultado",
-            "right": "review the outcome"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Un plan claro de principio a fin",
-    "explanation": [
-      "Organiza la presentación en bloques: experiencia anterior, decisión, instrucciones y preguntas. Pronuncia despacio los horarios y destaca los cambios. Si el oyente pide repetición, reformula una parte concreta. Valora tu inteligibilidad con una persona; la grabación local no es una nota automática de pronunciación."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "La sala todavía no está reservada.",
-          "q": "¿La reserva está confirmada?",
-          "options": [
-            "No",
-            "Sí"
+  theory: {
+    intro: "Este es el **checkpoint final de A2**. Repasas tus dos últimas clases, **duración y frecuencia en pasado** (_trabajé tres años, iba cada sábado, hace dos meses_) y la **revisión narrativa con mensajes prácticos**, y las unes con las semanas 16 a 19. La situación: Tomás quiere presentar un programa en una radio comunitaria de San José. Primero cuenta su experiencia en una entrevista; después, su primer mes allí.",
+    parts: [
+      {
+        heading: "¿Cuánto tiempo? ¿Cuántas veces? El indefinido cierra",
+        body: [
+          "Cuando una etapa **terminó** y dices **cuánto duró**, usas el **indefinido**: _trabajé tres años en una emisora_, _estuve dos meses en Limón_, _viví en Cartago de 2018 a 2021_. Con _durante_, _toda la tarde_, _de… a…_, _desde… hasta…_ también.",
+          "Cuando **cuentas el total** de veces, también indefinido: _fui cuatro veces a Tortuguero_, _llamé tres veces y nadie contestó_.",
+          "Aunque la etapa fue larga, si la mides y está cerrada, **no** uses el imperfecto: _estuve tres años_, no _estaba tres años_.",
+        ],
+        support: [
+          "A finished, measured period → preterite: _trabajé tres años, viví de 2018 a 2021_. A counted total → preterite: _fui cuatro veces_. Not the imperfect, even for long periods.",
+        ],
+        table: {
+          caption: "Duración y total",
+          head: ["Lo que dices", "Forma", "Ejemplo"],
+          rows: [
+            ["cuánto duró (cerrado)", "indefinido", "Estuve seis meses en una radio de Heredia."],
+            ["de una fecha a otra", "indefinido + de… a… / desde… hasta…", "Trabajé allí de 2019 a 2022."],
+            ["cuántas veces en total", "indefinido", "Presenté el programa veinte veces."],
+            ["todo un periodo", "indefinido + toda la / durante", "Ensayamos toda la tarde."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Se las devolvemos el lunes.",
-          "q": "¿Qué dato debes anotar?",
-          "options": [
-            "El día de devolución",
-            "El precio de compra"
+        examples: [
+          { es: "Hice prácticas en un periódico durante un verano.", en: "I did an internship at a newspaper for one summer." },
+          { es: "Ese año fuimos tres veces a la playa.", en: "That year we went to the beach three times." },
+        ],
+        mistakes: [
+          { wrong: "Estaba tres años en Alajuela.", right: "Estuve tres años en Alajuela.", why: "Periodo medido y terminado: **indefinido**." },
+          { wrong: "Viví en Liberia de 2019 hasta 2021.", right: "Viví en Liberia de 2019 a 2021.", why: "**De… a…** o **desde… hasta…**: no los mezcles." },
+        ],
+      },
+      {
+        heading: "Costumbres de una época y hace + tiempo",
+        body: [
+          "Si hablas de lo que hacías **con frecuencia** en una etapa, sin contar el total, usas el **imperfecto**: _cada sábado iba al mercado_, _siempre ponía música latina_, _dos veces por semana hacíamos entrevistas_.",
+          "Compara: _iba a la radio todos los domingos_ (costumbre) y _fui a la radio tres domingos_ (total contado).",
+          "**Hace + tiempo** dice cuánto tiempo pasó desde un momento hasta hoy (= _ago_), con el verbo en pasado: _volví a San José hace dos meses_, _hace cinco años vivía en Limón_. **Hace** va delante del tiempo: _hace dos días_, nunca _dos días hace_. Y no lo mezcles con _desde hace_, que es para algo que continúa (semana 5).",
+        ],
+        support: [
+          "Habits of a period (_siempre, cada sábado, dos veces por semana_) → imperfect. _Hace_ + time = ago, with a past verb: _volví hace dos meses_. Don't mix it with _desde hace_ (still going on).",
+        ],
+        table: {
+          caption: "Total o costumbre",
+          head: ["Total (indefinido)", "Costumbre (imperfecto)"],
+          rows: [
+            ["Fui al estadio cinco veces.", "Iba al estadio cada domingo."],
+            ["Ese mes leí tres novelas.", "Leía mucho por las noches."],
+            ["Lo llamé dos veces ayer.", "Lo llamaba casi todos los días."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "Hace un año no sabía nada de radio.", en: "A year ago I knew nothing about radio." },
+          { es: "En la universidad trabajaba los fines de semana en una cafetería.", en: "At university I used to work weekends in a café." },
+        ],
+        mistakes: [
+          { wrong: "Iba tres veces a Puntarenas el año pasado.", right: "Fui tres veces a Puntarenas el año pasado.", why: "Total contado: **fui**." },
+          { wrong: "Llegué a Costa Rica desde hace un año.", right: "Llegué a Costa Rica hace un año.", why: "Un momento en el pasado: **hace** + tiempo." },
+        ],
+        tip: "Pregúntate: ¿lo cuento o lo mido (cuántas veces, cuánto tiempo)? → indefinido. ¿Era lo normal en esa época? → imperfecto.",
+      },
+      {
+        heading: "Contar bien y luego pedir: el cierre de A2",
+        body: [
+          "Para un **relato**: la **escena** y las causas en **imperfecto** (_llovía, había tráfico, no tenía batería_), los **hechos** en **indefinido** (_salí, perdí el bus, llegué_), y **hoy** con el **perfecto** donde es lo habitual (_hoy he hablado con Rebeca_; en gran parte de América se dice también _hoy hablé_). _Ayer_ va siempre con indefinido: _ayer llegué_, no _ayer he llegado_. Une todo con conectores: _primero, de repente, como, por eso, así que, al final_.",
+          "Para un **mensaje práctico**: pide con _¿puedes / podrías + infinitivo?_ (_¿podrías enviarme el guion?_), da instrucciones con el imperativo y los pronombres pegados (_envíamelas, llámame, dáselas a Rebeca_) o delante del verbo conjugado (_te las envío_). Agradece con **gracias por** (_gracias por tu ayuda_) y pon un plazo con **para** (_para el viernes_).",
+          "Errores que hay que evitar al final de A2: _era mucho tráfico_ (→ _había_), _solía a ir_ (→ _solía ir_), _¿puedes me enviar?_ (→ _¿me puedes enviar?_ o _¿puedes enviarme?_), _gracias para_ (→ _gracias por_), _le las doy_ (→ _se las doy_).",
+        ],
+        support: [
+          "Story: scene and causes in the imperfect, events in the preterite, today with the present perfect where usual; _ayer_ + preterite. Messages: _¿podrías…?_, imperative with attached pronouns, _gracias por_, _para_ + deadline.",
+        ],
+        examples: [
+          { es: "Como había un choque en la avenida, el bus estuvo parado veinte minutos.", en: "As there was a crash on the avenue, the bus was stopped for twenty minutes." },
+          { es: "¿Podrías mandarme las preguntas para el jueves? Gracias por todo.", en: "Could you send me the questions by Thursday? Thanks for everything." },
+          { es: "Las llaves del estudio, dáselas a Rebeca, por favor.", en: "The studio keys, give them to Rebeca, please." },
+        ],
+        mistakes: [
+          { wrong: "Ayer he llegado tarde a la reunión.", right: "Ayer llegué tarde a la reunión.", why: "Con **ayer**, indefinido." },
+          { wrong: "Gracias para el mensaje.", right: "Gracias por el mensaje.", why: "Agradecer: **gracias por**." },
+          { wrong: "¿Puedes me enviar el audio?", right: "¿Puedes enviarme el audio?", why: "El pronombre va pegado al infinitivo o delante de _puedes_." },
+        ],
+      },
+      {
+        heading: "Checkpoint: lo que ya sabes de las semanas 16 a 19",
+        body: [
+          "En este checkpoint juntas todo. **Semana 16**: se impersonal (_aquí se graba en silencio_) y conectores (_como, por eso, al final_). **Semana 17**: si + presente (_si hay tráfico, salgo antes_) y peticiones amables (_¿te importaría…?_). **Semana 18**: obligación (_hay que, tienes que, no debes_) y orden de la frase (_el lunes, en el estudio, …_). **Semana 19**: infinitivo, gerundio y participio (_acabo de llegar, sigue sonando, está apagado_) y preguntas indirectas (_no sé si…, ¿sabe dónde…?_).",
+          "Todas esas formas aparecen cuando cuentas una experiencia y escribes mensajes: las normas de un trabajo, lo que hay que hacer, lo que no sabes, lo que acaba de pasar y lo que pides a otros.",
+          "Antes de entregar un texto largo, comprueba cinco cosas: los pasados (duración, total, costumbre), los conectores, la concordancia de _se_ y de los participios, la tilde de las preguntas indirectas y el tú o usted de las peticiones.",
+        ],
+        table: {
+          caption: "Semanas 16 a 19 en una radio",
+          head: ["Semana", "Clase", "En la radio"],
+          rows: [
+            ["16", "se impersonal / conectores", "En el estudio no se puede comer. Como no había luz, grabamos en el patio."],
+            ["17", "si + presente / pedir sin imponer", "Si el invitado llega tarde, ponemos música. ¿Podrías llamarlo?"],
+            ["18", "obligación / orden de la frase", "Hay que llegar a las seis. El sábado, en el estudio, ensayamos."],
+            ["19", "infinitivo, gerundio, participio / preguntas indirectas", "Acabo de terminar. El micrófono está apagado. No sé si nos oyen."],
+          ],
+        },
+        mistakes: [
+          { wrong: "No sé que si el programa sale hoy.", right: "No sé si el programa sale hoy.", why: "Semana 19: solo **si**." },
+          { wrong: "Si el invitado no vendrá, ponemos una canción.", right: "Si el invitado no viene, ponemos una canción.", why: "Semana 17: después de **si**, presente." },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero la duración, el total y la costumbre en pasado con hace; después el relato y los mensajes prácticos.",
+    exercises: [
+      {
+        id: "g1",
+        type: "gap",
+        title: "La experiencia de Tomás",
+        prompt: "Completa con el **indefinido** o el **imperfecto**.",
+        items: [
+          { q: "Tomás ___ cuatro años en una emisora de Limón. (trabajar)", answers: [["trabajó"]], why: "Periodo medido y cerrado: **trabajó**." },
+          { q: "Allí ___ las noticias todas las mañanas a las seis. (leer)", answers: [["leía"]], why: "Costumbre de esa época: **leía**." },
+          { q: "En 2022 ___ dos veces a un congreso de radio en Panamá. (ir)", answers: [["fue"]], why: "Total contado: **fue**." },
+          { q: "Los domingos ___ un programa de música caribeña. (presentar)", answers: [["presentaba"]], why: "Cada domingo, costumbre: **presentaba**." },
+          { q: "Después ___ un año y medio en Canadá. (vivir)", answers: [["vivió"]], why: "Duración cerrada: **vivió**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "choice",
+        title: "¿Hace, desde hace o durante?",
+        prompt: "Elige la expresión correcta.",
+        items: [
+          { q: "Volví a Costa Rica ___ dos meses.", options: ["desde hace", "hace", "durante"], answer: 1, why: "Un momento pasado: **hace** dos meses." },
+          { q: "Trabajé en la cafetería ___ todo el verano.", options: ["durante", "hace", "desde hace"], answer: 0, why: "Duración del periodo: **durante**." },
+          { q: "Vivo en este barrio ___ seis años y me encanta.", options: ["hace", "durante", "desde hace"], answer: 2, why: "Algo que continúa (vivo): **desde hace**." },
+          { q: "La conocí ___ mucho tiempo, en el colegio.", options: ["hace", "desde hace", "durante"], answer: 0, why: "Momento pasado: **hace**." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "gap",
+        title: "Un mal día",
+        prompt: "Completa el relato con el pasado adecuado: **imperfecto** para la escena e **indefinido** para los hechos.",
+        items: [
+          { q: "El lunes ___ mucho y las calles estaban inundadas. (llover)", answers: [["llovía"]], why: "Escena: **llovía**." },
+          { q: "Como no ___ batería en el celular, no pude avisar. (tener, yo)", answers: [["tenía"]], why: "Causa, situación: **tenía**." },
+          { q: "De repente el bus se ___ en medio de la avenida. (parar)", answers: [["paró"]], why: "Hecho puntual: **paró**." },
+          { q: "Al final ___ al estudio a las nueve y cuarto. (llegar, yo)", answers: [["llegué"]], why: "Hecho: **llegué**." },
+        ],
+      },
+      {
+        id: "g4",
+        type: "transform",
+        title: "Mensajes más claros",
+        prompt: "Reescribe la frase como se indica.",
+        items: [
+          { source: "Envíame las fotos. (las fotos → las)", instruction: "Cambia _las fotos_ por un pronombre pegado.", answers: ["Envíamelas."], why: "Imperativo + me + las, con tilde: **envíamelas**." },
+          { source: "Da las llaves a Rebeca.", instruction: "Usa dos pronombres pegados al imperativo.", answers: ["Dáselas."], why: "Le + las → **se las**: **dáselas**." },
+          { source: "Necesito el guion. Mándalo antes del viernes.", instruction: "Haz una petición con **¿Podrías…?** y **para el viernes**.", answers: ["¿Podrías mandarme el guion para el viernes?", "¿Podrías mandármelo para el viernes?"], why: "Petición suave + **para** + plazo." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para trabajar en una radio comunitaria y hablar de tu experiencia.",
+    groups: [
+      {
+        title: "En la radio",
+        items: [
+          { es: "la emisora", en: "the radio station" },
+          { es: "el estudio de grabación", en: "the recording studio" },
+          { es: "el guion", en: "the script" },
+          { es: "el locutor / la locutora", en: "the presenter / announcer" },
+          { es: "estar al aire", en: "to be on air" },
+          { es: "la audiencia", en: "the audience" },
+          { es: "el invitado / la invitada", en: "the guest" },
+        ],
+      },
+      {
+        title: "Experiencia",
+        items: [
+          { es: "hacer prácticas", en: "to do an internship" },
+          { es: "el puesto", en: "the position" },
+          { es: "la jefa anterior", en: "the former boss" },
+          { es: "una carta de recomendación", en: "a reference letter" },
+          { es: "trabajar por turnos", en: "to work shifts" },
+        ],
+      },
+      {
+        title: "Frecuencia y tiempo",
+        items: [
+          { es: "a menudo", en: "often" },
+          { es: "de vez en cuando", en: "from time to time" },
+          { es: "dos veces por semana", en: "twice a week" },
+          { es: "durante una temporada", en: "for a while" },
+          { es: "hace poco", en: "recently / not long ago" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "¿Qué hace cada uno?",
+        prompt: "Une cada palabra con su definición.",
+        pairs: [
+          { left: "el locutor", right: "habla en la radio y presenta el programa" },
+          { left: "el guion", right: "el texto que se prepara antes del programa" },
+          { left: "la invitada", right: "la persona a quien se entrevista" },
+          { left: "la audiencia", right: "las personas que escuchan" },
+        ],
+        why: "Son las personas y las cosas de una radio: el locutor, el guion, la invitada, la audiencia.",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "¿Con qué frecuencia?",
+        prompt: "Lee la situación y elige la expresión correcta.",
+        items: [
+          { context: "Tomás grababa un programa los martes y los viernes.", q: "Lo grababa…", options: ["de vez en cuando", "dos veces por semana", "hace poco"], answer: 1, why: "Martes y viernes: **dos veces por semana**." },
+          { context: "Su hermana empezó a trabajar en la radio el mes pasado.", q: "Empezó…", options: ["hace poco", "a menudo", "durante una temporada"], answer: 0, why: "Un momento reciente: **hace poco**." },
+          { context: "Su jefa en Limón le escribió una carta para el nuevo trabajo.", q: "Le escribió…", options: ["un guion", "un puesto", "una carta de recomendación"], answer: 2, why: "**Una carta de recomendación**." },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Trabajo, trabajó, trabajé: la fuerza cambia el tiempo",
+    explanation: [
+      "En el indefinido regular, la fuerza cae en la **última sílaba** de _yo_ y de _él / ella / usted_: _traba**JÉ**_, _traba**JÓ**_. En el presente, cae antes: _tra**BA**jo_. Si no marcas la fuerza, dices otro tiempo o otra persona.",
+      "En el imperfecto la fuerza va en la sílaba de **-aba / -ía**: _traba**JA**ba_, _le**Í**a_. Comparar _hablaba_ y _habló_ te ayuda a oír si es costumbre o hecho.",
+      "En los irregulares fuertes (_estuve, fui, hice_) no hay tilde y la fuerza va en la penúltima: _es**TU**ve_, _**HI**ce_.",
+    ],
+    support: [
+      "Regular preterite stresses the last syllable (_trabajé, trabajó_); the present stresses earlier (_trabajo_). Imperfect stresses _-aba / -ía_. Strong irregulars (_estuve, hice_) have no accent.",
+    ],
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Qué forma oyes?",
+      prompt: "Escucha y elige la forma del verbo.",
+      items: [
+        { q: "¿Qué forma oyes?", audio: "Presentó el programa.", options: ["presento (yo, hoy)", "presentó (él, ayer)"], answer: 1 },
+        { q: "¿Qué forma oyes?", audio: "Trabajo los sábados.", options: ["trabajo (yo, hoy)", "trabajó (él, ayer)"], answer: 0 },
+        { q: "¿Qué forma oyes?", audio: "Hablaba con la audiencia.", options: ["hablaba (costumbre)", "habló (un hecho)"], answer: 0 },
+        { q: "¿Qué forma oyes?", audio: "Grabé dos entrevistas.", options: ["grabe", "grabé"], answer: 1 },
+      ],
     },
-    "produce": [
-      {
-        "text": "La sala se mantiene / pero todavía no está reservada.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Confirmaremos hoy / antes de las doce.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Las cajas se devuelven el lunes / en el centro.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    produce: [
+      { text: "Trabajé tres años en Limón.", tip: "Fuerza en _JÉ_." },
+      { text: "Cada domingo presentaba un programa.", tip: "_pre-sen-TA-ba_." },
+      { text: "Estuve dos meses y volví hace poco.", tip: "_es-TU-ve_ sin tilde; _vol-VÍ_ con fuerza al final." },
+      { text: "¿Podrías enviármelas para el viernes?", tip: "_en-VIÁR-me-las_: la tilde se queda en la a." },
+    ],
+    spelling: "El indefinido regular lleva tilde en _yo_ y _él_: **trabajé, trabajó, leí, leyó**. Los irregulares fuertes no: **estuve, hice, fui, dijo**. Si pegas pronombres al infinitivo y la fuerza queda lejos, pon tilde: **enviármelas**.",
   },
-  "listening": {
-    "title": "La última información antes de decidir",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "Entrevista en Radio Barrio",
+    context: "En una radio comunitaria de San José, la coordinadora, Rebeca Solís, entrevista a Tomás Brenes, que quiere presentar el programa de los sábados. Rebeca trata a Tomás de usted.",
+    speakers: [
+      { id: "rebeca", name: "Rebeca Solís", voice: "es-MX-f", role: "coordinadora de la radio" },
+      { id: "tomas", name: "Tomás Brenes", voice: "es-CO-m", role: "candidato" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "He preguntado en el grupo. Dieciocho personas pueden venir el jueves. Cuatro solo pueden el sábado. La mayoría prefiere la biblioteca porque no depende del tiempo y tiene proyector."
-      },
-      {
-        "speaker": "b",
-        "text": "Yo también la prefiero, pero no quiero dejar fuera a las otras cuatro personas. ¿Podemos preparar un resumen y llevar algunos libros al centro el sábado? Sería una actividad más pequeña."
-      },
-      {
-        "speaker": "a",
-        "text": "Buena idea. Ana nos presta dos cajas para transportar los libros. Se las devolvemos el lunes. Acabo de hablar con la biblioteca: mantienen la sala hasta mañana a las doce, pero todavía no está reservada."
-      },
-      {
-        "speaker": "b",
-        "text": "Entonces tenemos que confirmar hoy. Antes de hacerlo, preguntemos si podemos colocar un cartel en la entrada. El año pasado algunas personas no vieron el aviso. También necesitamos explicar el horario de devolución."
-      },
-      {
-        "speaker": "a",
-        "text": "Me encargo del cartel. Si confirmamos esta tarde, lo imprimiré mañana y pasaré por el mercado para dejar otra copia."
-      },
-      {
-        "speaker": "b",
-        "text": "Antes de terminar, hay un detalle de la sala. La responsable me ha dicho que veinte sillas es el máximo. Ahora somos dieciocho, pero si vienen más personas no podemos añadir sillas junto a la puerta. Tendremos que ofrecerles la actividad del sábado."
-      },
-      {
-        "speaker": "a",
-        "text": "Entonces el cartel debe decir que hay que confirmar la asistencia. Podemos pedir que hablen con recepción. No hace falta publicar teléfonos personales ni una lista con nombres. Y quiero comprobar el proyector el miércoles, porque no conozco el ordenador del centro."
-      },
-      {
-        "speaker": "b",
-        "text": "Yo puedo acompañarte a probarlo. Llevaré una presentación corta y veremos si las imágenes se abren bien. Si no funciona, imprimiremos algunas fotografías con el dinero que queda. La conversación sobre los libros puede hacerse sin pantalla."
-      },
-      {
-        "speaker": "a",
-        "text": "Perfecto. Después de las dos actividades, reuniremos las opiniones de los participantes. Me interesa saber si recibieron el aviso a tiempo y si entendieron cuándo devolver los libros. Así tendremos información concreta para mejorar la próxima edición."
-      }
+    script: [
+      { speaker: "rebeca", text: "Buenas tardes, Tomás. Gracias por venir. Cuénteme un poco su experiencia. ¿Cuánto tiempo trabajó en radio?" },
+      { speaker: "tomas", text: "Trabajé cuatro años en una emisora pequeña de Limón, de 2018 a 2022. Al principio hacía de todo: contestaba el teléfono, preparaba los guiones y ponía la música." },
+      { speaker: "rebeca", text: "¿Y presentaba algún programa?" },
+      { speaker: "tomas", text: "Sí, los dos últimos años presentaba un programa de música caribeña todos los domingos. Además, dos veces por semana leía las noticias de la mañana." },
+      { speaker: "rebeca", text: "Muy bien. Aquí dice que después vivió en Canadá." },
+      { speaker: "tomas", text: "Sí, estuve un año y medio en Toronto. Allí trabajé en un restaurante, pero de vez en cuando colaboraba con una radio latina. Fui unas diez veces como invitado." },
+      { speaker: "rebeca", text: "¿Y cuándo volvió a Costa Rica?" },
+      { speaker: "tomas", text: "Volví hace dos meses. Desde entonces busco algo en radio, porque es lo que más me gusta." },
+      { speaker: "rebeca", text: "Entiendo. ¿Y por qué dejó la emisora de Limón?" },
+      { speaker: "tomas", text: "Porque mi pareja consiguió un trabajo en Toronto, así que nos fuimos juntos. Fue una decisión difícil." },
+      { speaker: "rebeca", text: "Le explico cómo funciona esto. Aquí se trabaja con voluntarios, así que hay que ser muy puntual. Los sábados tiene que estar en el estudio a las siete, y en el estudio no se puede comer. Si un invitado no llega, se pone música y se le llama." },
+      { speaker: "tomas", text: "Perfecto. ¿Me puede decir si hay que preparar el guion antes?" },
+      { speaker: "rebeca", text: "Sí, ¿podría mandármelo cada jueves? Y otra cosa: ¿podría enviarme una carta de su jefa anterior para el lunes?" },
+      { speaker: "tomas", text: "Claro, se la envío mañana mismo. Muchas gracias por la oportunidad." },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «La última información antes de decidir» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Cuál es la propuesta principal?",
-              "options": [
-                "Cancelar por falta de interés",
-                "Biblioteca el jueves y una actividad pequeña el sábado",
-                "Patio todos los días"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «Biblioteca el jueves y una actividad pequeña el sábado»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué intenta hacer la propuesta del sábado?",
-              "options": [
-                "Devolver las cajas antes de usarlas",
-                "Incluir a quienes no pueden asistir el jueves",
-                "Sustituir toda la actividad de la biblioteca"
-              ],
-              "answer": 1,
-              "why": "Comprueba el contexto y los datos de la escena: Incluir a quienes no pueden asistir el jueves."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «La última información antes de decidir».",
-          "items": [
-            {
-              "q": "¿Cuántas personas pueden venir el jueves?",
-              "options": [
-                "Dieciocho",
-                "Veinte",
-                "Cuatro"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «Dieciocho»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Está reservada la sala?",
-              "options": [
-                "Sí, ya está pagada",
-                "No está disponible",
-                "No, falta confirmar"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «No, falta confirmar»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «La última información antes de decidir».",
-          "items": [
-            {
-              "q": "¿Qué problema anterior intenta resolver el cartel?",
-              "options": [
-                "La falta de libros",
-                "El precio de las cajas",
-                "La falta de información fuera de redes"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «La falta de información fuera de redes»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué diferencia hay entre mantienen la sala y está reservada?",
-              "options": [
-                "La mantienen provisionalmente, pero falta confirmación",
-                "Ambas expresiones aseguran que está pagada",
-                "La sala ya no puede usarse"
-              ],
-              "answer": 0,
-              "why": "Comprueba el contexto y los datos de la escena: La mantienen provisionalmente, pero falta confirmación."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "La próxima semana del barrio",
-    "genre": "Dossier de organización",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "El año pasado organizamos una tarde de intercambio de libros. Había mucho interés, pero la sala era pequeña y algunas personas no encontraron sitio. Además, el aviso solo estaba en redes y varios vecinos se enteraron después. Este año queremos mejorar la organización sin gastar más de sesenta euros.",
-      "Opción A: sala de la biblioteca, cuarenta euros por tres horas, veinte sillas, proyector incluido. Está cerca de dos paradas de autobús y tiene acceso sin escaleras. Solo está disponible el jueves de cinco a ocho. Opción B: patio del centro cultural, gratuito, treinta sillas, sin proyector. Puede usarse el sábado por la mañana, pero no hay espacio cubierto si llueve.",
-      "Podemos pedir libros prestados a varias familias. Cada objeto debe tener una tarjeta con un alias y la fecha de devolución; no hacen falta datos de contacto públicos. La actividad debe incluir una presentación breve, tiempo para conversar y una recogida organizada. Antes de confirmar, necesitamos conocer cuántas personas pueden venir el jueves y quién puede prestar material si elegimos el patio.",
-      "La responsable de la biblioteca explica que las veinte sillas son el límite de la sala. No se puede añadir otra fila junto a la puerta porque debe quedar libre. El proyector funciona con el ordenador del centro; antes de la actividad conviene enviar una presentación en un formato sencillo y probarla allí. No hace falta llevar una pantalla ni comprar material nuevo. Si usamos esta opción, podemos dedicar los veinte euros que quedan del presupuesto a imprimir carteles y tarjetas.",
-      "Una vecina propone añadir una mesa de recomendaciones: cada participante escribe dos frases sobre un libro que ha leído y explica a quién puede gustarle. Quien todavía no ha terminado su libro puede contar de qué trata y qué espera encontrar después. No se valorará hablar sin ningún error; interesa que la otra persona comprenda la recomendación y pueda hacer una pregunta.",
-      "Para revisar el resultado, el equipo guardará solo el número de asistentes y una lista de mejoras para la próxima vez. Al final preguntaremos si el horario fue cómodo, si los avisos llegaron a tiempo y si se entendieron las instrucciones para devolver los libros. No necesitamos una lista pública con datos personales. Después compararemos las respuestas del jueves con las del grupo pequeño del sábado. La siguiente actividad se decidirá a partir de esas dos experiencias, no solo de la opinión de quienes hablaron más en la reunión."
-    ],
-    "glossary": [
-      {
-        "es": "una propuesta final",
-        "en": "a final proposal"
-      },
-      {
-        "es": "un dato confirmado",
-        "en": "a confirmed detail"
-      },
-      {
-        "es": "una pregunta pendiente",
-        "en": "an outstanding question"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «La próxima semana del barrio» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Qué opción garantiza un proyector?",
-            "options": [
-              "Ninguna",
-              "La biblioteca",
-              "El patio"
-            ],
-            "answer": 1,
-            "why": "La información de la situación corresponde a «La biblioteca»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Qué dato falta antes de elegir la biblioteca?",
-            "options": [
-              "Cuántas personas pueden asistir el jueves",
-              "El precio de la sala",
-              "El número de sillas"
-            ],
-            "answer": 0,
-            "why": "La información de la situación corresponde a «Cuántas personas pueden asistir el jueves»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «La próxima semana del barrio» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Organizar una actividad realista integrando experiencias, decisiones, gestiones y opiniones. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "El año pasado organizamos una tarde de intercambio de libros.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿Para qué está Tomás en la radio?", options: ["para una entrevista de trabajo", "para presentar las noticias", "para dejar un paquete"], answer: 0 },
+            { q: "¿De qué habla Tomás sobre todo?", options: ["de su familia", "de su experiencia en radio", "de sus vacaciones en Canadá"], answer: 1 },
+            { q: "¿Cómo termina la conversación?", options: ["Tomás rechaza el puesto.", "Rebeca no le explica nada.", "Rebeca le pide un guion y una carta."], answer: 2 },
+          ],
         },
-        {
-          "quote": "Opción A: sala de la biblioteca, cuarenta euros por tres horas, veinte sillas, proyector incluido.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
+      },
+      {
+        stage: "detail",
+        prompt: "Segunda escucha: atención a las duraciones, las frecuencias y las fechas.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Cuánto tiempo trabajó Tomás en Limón?", options: ["un año y medio", "cuatro años", "dos años"], answer: 1 },
+            { q: "¿Con qué frecuencia leía las noticias?", options: ["todos los domingos", "dos veces por semana", "una vez al mes"], answer: 1 },
+            { q: "¿Cuántas veces fue como invitado a la radio latina?", options: ["unas diez veces", "dos veces", "nunca"], answer: 0 },
+            { q: "¿Cuándo volvió a Costa Rica?", options: ["hace un año y medio", "en 2022", "hace dos meses"], answer: 2 },
+            { q: "¿Qué tiene que mandar Tomás cada jueves?", options: ["la carta de su jefa", "el guion", "la lista de canciones"], answer: 1 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en los pasados y en las formas de las semanas 16 a 19.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Qué hay en cada frase?",
+          categories: ["duración, total o fecha (indefinido)", "costumbre (imperfecto)", "forma de las semanas 16 a 19"],
+          items: [
+            { text: "Trabajé cuatro años en una emisora pequeña", cat: 0, why: "Periodo medido y cerrado." },
+            { text: "dos veces por semana leía las noticias", cat: 1 },
+            { text: "Fui unas diez veces como invitado.", cat: 0, why: "Total contado: **fui**." },
+            { text: "contestaba el teléfono, preparaba los guiones", cat: 1 },
+            { text: "en el estudio no se puede comer", cat: 2, why: "Semana 16: se impersonal." },
+            { text: "¿Me puede decir si hay que preparar el guion antes?", cat: 2, why: "Semanas 18 y 19: pregunta indirecta con **si** y **hay que**." },
+            { text: "Volví hace dos meses.", cat: 0 },
+          ],
+        },
+      },
+    ],
   },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
-      {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
-          {
-            "words": [
-              "El",
-              "año",
-              "pasado",
-              "llegamos",
-              "tarde;",
-              "por",
-              "eso",
-              "cambiaremos",
-              "el",
-              "punto",
-              "de",
-              "encuentro."
-            ]
-          },
-          {
-            "words": [
-              "Le",
-              "pedí",
-              "el",
-              "proyector",
-              "a",
-              "Ana",
-              "y",
-              "me",
-              "lo",
-              "prestó",
-              "para",
-              "la",
-              "actividad."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "La mantienen hasta mañana, pero todavía debemos confirmar.",
-              "Sí, ya hemos pagado aunque no aparece ese dato.",
-              "No podemos usar ninguna sala nunca."
-            ],
-            "answer": 0,
-            "why": "Comprueba el contexto y los datos de la escena: La mantienen hasta mañana, pero todavía debemos confirmar..",
-            "context": "El grupo cree que mantener la sala significa reserva confirmada.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
-          },
-          {
-            "context": "El profesor introduce un cambio: cinco asistentes más o un proyector averiado. Pide información, negocia una solución y comunica al grupo el acuerdo revisado.",
-            "q": "En esta interacción de «Checkpoint final: una semana en común», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «Checkpoint final: una semana en común», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "El año pasado la sala era demasiado pequeña y algunos vecinos no vieron el aviso.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
-          },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: El profesor introduce un cambio: cinco asistentes más o un proyector averiado. Pide información, negocia una solución y comunica al grupo el acuerdo revisado.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-16",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 16. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 20: Escribe y cuenta una decisión nueva de estudio o trabajo. Da causas con porque y como, consecuencias con por eso y así que, y pasos con antes de, después de, al + infinitivo y cuando + pasado. Incluye una entrevista o prácticas y marca con pausas las relaciones entre ideas.",
-            "model": "Como quería cambiar de empleo, preparé una entrevista. Antes de enviar el formulario, lo revisé. Después de hablar con la encargada, acepté las prácticas. Cuando llegué, saludé al equipo. Aprendí mucho; por eso seguí allí.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 16→20: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Como quería cambiar de empleo, preparé una entrevista. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-17",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 17. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 20: Un envío de un regalo está retrasado: explica para quién es, para qué lo compraste, para cuándo lo necesitas, por qué reclamas, por qué medio contactas y por dónde pasó el paquete. Escucha tres opciones que inventa tu pareja y elige la adecuada. Pronuncia seguimiento y devolución sin perder sílabas.",
-            "model": "Compré una caja para mi abuelo, para guardar sus fotos. La necesito para el domingo. Reclamo por el retraso y envío el recibo por correo. El paquete pasó por otra ciudad. Quiero consultar el seguimiento antes de pedir la devolución.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 17→20: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Compré una caja para mi abuelo, para guardar sus fotos. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-18",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 18. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 20: Describe un objeto sin nombrarlo: material, forma, uso y dos detalles con que. Sitúa el lugar con donde. Usa alguien, nadie, algo, nada, algún y ningún dentro de una búsqueda; comprueba coincidencias con dos avisos inventados. Alterna puedo/podemos y quiero/queremos al pedir ayuda. Identifica la propiedad con mío, tuyo y suyo; aclara suyo con de él o de ella.",
-            "model": "Busco algo de metal que sirve para abrir botellas. Lo dejé donde esperamos el tren. ¿Alguien lo ha visto? No hay ningún nombre. Nadie sabe nada. ¿Tienen algún objeto parecido? Yo puedo describirlo y podemos comprobar los detalles. Esta funda es mía; aquella es tuya. La de la mesa es suya, de Elena.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 18→20: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Busco algo de metal que sirve para abrir botellas. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-19",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 19. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 20: Da una opinión de dos minutos sobre transporte o redes con creo que, pienso que o me parece que. Aporta dos razones y un ejemplo. Pide turno, reconoce una razón contraria, discrepa con respeto y devuelve la palabra. Expresa una duda con depende y una pregunta de seguimiento; vuelve al tema si te desvías.",
-            "model": "Creo que el aviso necesita un cartel porque no todos usan redes. Por ejemplo, mi vecina pregunta en la biblioteca. Entiendo tu razón, pero prefiero usar los dos medios. ¿Puedo añadir algo? Depende del horario. ¿Tú qué piensas?",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 19→20: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Creo que el aviso necesita un cartel porque no todos usan redes. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Redacta un informe de 120–150 palabras para el equipo: experiencia anterior y consecuencia, opción elegida con dos razones, material prestado, instrucciones y una pregunta pendiente. Usa solo datos confirmados y señala lo provisional.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
+  reading: {
+    title: "Mi primer mes en Radio Barrio",
+    genre: "Correo personal",
+    frame: "Tomás escribe a su hermana Lucía, que vive en Guadalajara, después de su primer mes como locutor voluntario.",
+    text: [
+      "Querida Lucía: perdona por no escribirte antes, pero este mes ha sido increíble y muy intenso. Como sabes, volví a San José hace tres meses, después de un año y medio en Toronto. Estuve varias semanas buscando trabajo en radio y al final me llamaron de Radio Barrio, una emisora comunitaria del barrio Amón. Ya llevo un mes presentando el programa de los sábados.",
+      "En la radio hay reglas claras. Hay que llegar una hora antes, en el estudio no se puede comer y los micrófonos se apagan siempre al terminar. Rebeca, la coordinadora, dice que no debemos hablar más de tres minutos sin poner música. Al principio me parecía exagerado, pero tiene razón: la audiencia se aburre rápido.",
+      "Te cuento mi peor día. Fue el segundo sábado. Llovía muchísimo, había un tráfico terrible y, para empeorar todo, mi celular no tenía batería. Salí de casa a las seis, pero el bus estuvo parado veinte minutos porque había un choque en la avenida segunda. Entonces bajé y caminé corriendo bajo la lluvia. Llegué al estudio a las siete y diez, empapado. Como el programa empezaba a las siete, Rebeca puso música y empezó la entrevista con nuestra invitada, una señora que vende flores en el mercado desde hace cuarenta años. Al final todo salió bien, y la invitada me dijo que en sus cuarenta años en el mercado nunca vio a un locutor tan mojado.",
+      "Ahora salgo de casa a las cinco y media, por si acaso. Los sábados son largos, pero me encantan. Durante la semana voy dos veces al estudio para preparar el guion, y de vez en cuando grabo entrevistas en la calle.",
+      "También aprendí muchas cosas. Antes, en Limón, preparaba los guiones solo; aquí hay que trabajar en equipo y las decisiones se toman entre todos. Si un invitado cancela, no hay problema: siempre tenemos una lista de canciones preparada. La semana pasada entrevisté a un músico que tocó durante treinta años en la orquesta nacional. Me contó que de joven ensayaba seis horas al día y que fue dos veces de gira por Europa.",
+      "Te pido dos favores. ¿Podrías mandarme las fotos de la boda de Andrés? Las necesito para un programa sobre bodas, así que envíamelas para el jueves, si puedes. Y si hablas con mamá, dile que estoy bien; no sé si recibió mi último mensaje. Gracias por todo, hermanita. Un abrazo grande, Tomás.",
     ],
-    "useLanguage": [
-      "El año pasado llegamos tarde; por eso cambiaremos el punto de encuentro.",
-      "Buscamos la sala que tiene acceso sin escaleras.",
-      "Le pedí el proyector a Ana y me lo prestó para la actividad.",
-      "Si el grupo crece, preguntaremos por otra sala."
+    glossary: [
+      { es: "intenso", en: "intense, busy" },
+      { es: "empapado", en: "soaked" },
+      { es: "por si acaso", en: "just in case" },
+      { es: "para empeorar todo", en: "to make everything worse" },
     ],
-    "model": [
-      "El año pasado la sala era demasiado pequeña y algunos vecinos no vieron el aviso. Por eso este año propongo la biblioteca el jueves de cinco a ocho. Cuesta cuarenta euros, tiene proyector y está bien comunicada. Dieciocho personas pueden asistir. Para las cuatro que solo pueden el sábado, prepararemos un resumen y llevaremos algunos libros al centro. Ana nos presta dos cajas y se las devolveremos el lunes. Antes de empezar, coloca una tarjeta en cada libro y comprueba la fecha de devolución. Todavía tenemos que confirmar la sala y preguntar si podemos poner un cartel en la entrada. Si confirmamos hoy, imprimiremos el aviso mañana. Creo que este plan permite participar a más personas sin superar el presupuesto."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      120,
-      150
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
+    tasks: [
       {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Presenta en dos minutos el proyecto final con dos fuentes: dossier y llamada. Explica una experiencia pasada, compara opciones y justifica tu decisión.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el correo y responde.",
+        items: [
+          { q: "¿Cuánto tiempo estuvo Tomás en Toronto?", options: ["tres meses", "un año y medio", "un mes"], answer: 1 },
+          { q: "¿Qué dice Rebeca sobre hablar en el programa?", options: ["que no deben hablar más de tres minutos sin música", "que hay que hablar siempre en inglés", "que no se puede poner música"], answer: 0 },
+          { q: "¿Por qué estuvo parado el bus?", options: ["porque llovía", "porque se quedó sin gasolina", "porque había un choque en la avenida"], answer: 2 },
+          { q: "¿Qué hizo Rebeca cuando Tomás no llegaba?", options: ["Lo llamó por teléfono.", "Puso música y empezó la entrevista.", "Canceló el programa."], answer: 1 },
+          { q: "¿Para cuándo necesita Tomás las fotos?", options: ["para el jueves", "para el sábado", "para mañana"], answer: 0 },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
       {
-        "title": "Interacción con un cambio",
-        "prompt": "El profesor introduce un cambio: cinco asistentes más o un proyector averiado. Pide información, negocia una solución y comunica al grupo el acuerdo revisado.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
+        id: "r2",
+        type: "classify",
+        prompt: "¿Qué función tiene cada frase en el correo?",
+        categories: ["duración, total o fecha", "costumbre o escena", "norma o petición"],
+        items: [
+          { text: "volví a San José hace tres meses", cat: 0 },
+          { text: "Estuve varias semanas buscando trabajo en radio", cat: 0 },
+          { text: "Llovía muchísimo, había un tráfico terrible", cat: 1, why: "Escena del relato: **imperfecto**." },
+          { text: "voy dos veces al estudio para preparar el guion", cat: 1 },
+          { text: "en el estudio no se puede comer", cat: 2 },
+          { text: "¿Podrías mandarme las fotos de la boda de Andrés?", cat: 2 },
+          { text: "envíamelas para el jueves", cat: 2, why: "Imperativo con pronombres pegados y **para** + plazo." },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Presenta en dos minutos el proyecto final con dos fuentes: dossier y llamada. Explica una experiencia pasada, compara opciones y justifica tu decisión."
       },
-      {
-        "move": "Negocia",
-        "task": "El profesor introduce un cambio: cinco asistentes más o un proyector averiado. Pide información, negocia una solución y comunica al grupo el acuerdo revisado."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
+    noticing: {
+      prompt: "Toca cada frase del correo para ver qué gramática hay dentro.",
+      items: [
+        { quote: "volví a San José hace tres meses", note: "**Hace** + tiempo con el verbo en indefinido: cuándo pasó." },
+        { quote: "el bus estuvo parado veinte minutos porque había un choque", note: "Duración cerrada (**estuvo** veinte minutos) y causa en imperfecto (**había**)." },
+        { quote: "los micrófonos se apagan siempre al terminar", note: "Semanas 16 y 19: se impersonal en plural y **al** + infinitivo." },
+        { quote: "Como el programa empezaba a las siete, Rebeca puso música", note: "Semana 16: **como** + causa al principio; el hecho en indefinido." },
+        { quote: "no sé si recibió mi último mensaje", note: "Semana 19: pregunta indirecta de sí o no con **si**." },
+        { quote: "envíamelas para el jueves", note: "Mensaje práctico: imperativo + me + las y **para** + plazo." },
+      ],
+    },
   },
-  "quiz": {
-    "items": [
+  practice: {
+    intro: "Checkpoint: mezcla esta semana con las semanas 16 a 19. Cada ejercicio integra varias clases.",
+    exercises: [
       {
-        "type": "gap",
-        "q": "El aviso es ___ las personas que no usan redes.",
-        "answers": [
-          [
-            "para"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "No hay ___ confirmado todavía. (ningún objeto o dato)",
-        "answers": [
-          [
-            "nada"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Le las devolveremos el lunes.",
-        "answers": [
-          "Se las devolveremos el lunes."
+        id: "x1",
+        type: "gap",
+        title: "Todo junto",
+        prompt: "Completa con la forma correcta. Entre paréntesis tienes el verbo o la pista y la semana que repasas.",
+        items: [
+          { q: "En la radio los guiones ___ ___ el jueves por la tarde. (revisar · semana 16)", answers: [["se"], ["revisan"]], why: "Semana 16: _los guiones_ → **se revisan**." },
+          { q: "Si el invitado ___ tarde, ponemos una canción. (llegar · semana 17)", answers: [["llega"]], why: "Semana 17: _si_ + presente." },
+          { q: "Los voluntarios ___ ___ llegar una hora antes del programa. (obligación personal · semana 18)", answers: [["tienen"], ["que"]], why: "Semana 18: **tienen que**." },
+          { q: "La puerta del estudio ya está ___ y no tengo llave. (cerrar · semana 19)", answers: [["cerrada"]], why: "Semana 19: _estar_ + participio que concuerda." },
+          { q: "Tomás ___ cuatro años en Limón antes de irse a Canadá. (trabajar · semana 20)", answers: [["trabajó"]], why: "Semana 20: periodo cerrado y medido." },
+          { q: "¿Me puede decir ___ empieza el programa? (la hora · semana 19)", answers: [["a qué hora", "cuándo"]], why: "Semana 19: pregunta indirecta con tilde." },
         ],
-        "why": "Le pasa a se cuando aparece delante de las."
       },
       {
-        "type": "order",
-        "words": [
-          "Como",
-          "faltaba",
-          "espacio,",
-          "cambiamos",
-          "de",
-          "sala."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué información no puedes presentar como confirmada?",
-        "options": [
-          "La reserva de la biblioteca",
-          "El precio de cuarenta euros"
+        id: "x2",
+        type: "error",
+        title: "Corrige los mensajes",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "Viví tres años en Heredia y iba dos veces a Tortuguero en total.", answers: ["Viví tres años en Heredia y fui dos veces a Tortuguero en total."], why: "Total contado: **fui**." },
+          { sentence: "Ayer he llegado tarde porque era mucho tráfico.", answers: ["Ayer llegué tarde porque había mucho tráfico."], why: "_Ayer_ + indefinido y **había** mucho tráfico." },
+          { sentence: "¿Te importaría a grabar la entrevista mañana?", answers: ["¿Te importaría grabar la entrevista mañana?"], why: "Semana 17: _importaría_ + infinitivo, sin _a_." },
+          { sentence: "Debes que apagar el micrófono al salir.", answers: ["Debes apagar el micrófono al salir."], why: "Semana 18: _deber_ sin **que**." },
+          { sentence: "Las fotos, le las doy a Lucía mañana.", answers: ["Las fotos, se las doy a Lucía mañana."], why: "Le + las → **se las**." },
+          { sentence: "Gracias para tu ayuda con el guion.", answers: ["Gracias por tu ayuda con el guion."], why: "Agradecer: **gracias por**." },
         ],
-        "answer": 0,
-        "why": "La opción elegida cumple la función comunicativa indicada."
       },
       {
-        "q": "¿Qué harán si aumenta el grupo?",
-        "options": [
-          "Cerrar la actividad inmediatamente",
-          "Quitar todas las sillas",
-          "Preguntar por otra sala"
+        id: "x3",
+        type: "order",
+        title: "Frases de la radio",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["Volví", "a", "San", "José", "hace", "dos", "meses."], en: "I came back to San José two months ago." },
+          { words: ["Como", "llovía,", "el", "bus", "estuvo", "parado", "veinte", "minutos."], en: "As it was raining, the bus was stopped for twenty minutes." },
+          { words: ["¿Podrías", "enviarme", "el", "guion", "para", "el", "jueves?"], alt: ["¿Podrías enviarme para el jueves el guion?"], en: "Could you send me the script by Thursday?" },
         ],
-        "answer": 2,
-        "why": "Comprueba el contexto y los datos de la escena: Preguntar por otra sala.",
-        "type": "listen",
-        "audio": "Si vienen más personas, preguntaremos por otra sala."
       },
       {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 20: Presenta en dos minutos el proyecto final con dos fuentes: dossier y llamada. Explica una experiencia pasada, compara opciones y justifica tu decisión.",
-        "model": "El año pasado la sala era demasiado pequeña y algunos vecinos no vieron el aviso. Por eso este año propongo la biblioteca el jueves de cinco a ocho. Cuesta cuarenta euros, tiene proyector y está bien comunicada. Dieciocho personas pueden asistir. Para las cuatro que solo pueden el sábado, prepararemos un resumen y llevaremos algunos libros al centro. Ana nos presta dos cajas y se las devolveremos el lunes. Antes de empezar, coloca una tarjeta en cada libro y comprueba la fecha de devolución. Todavía tenemos que confirmar la sala y preguntar si podemos poner un cartel en la entrada. Si confirmamos hoy, imprimiremos el aviso mañana. Creo que este plan permite participar a más personas sin superar el presupuesto.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
+        id: "x4",
+        type: "context",
+        title: "¿Qué dices?",
+        prompt: "Lee la situación y elige la mejor frase.",
+        items: [
+          { context: "En una entrevista te preguntan por tu trabajo en un hotel, de 2020 a 2023.", q: "Respondes:", options: ["Trabajaba allí tres años.", "Trabajé allí tres años.", "Trabajo allí desde hace tres años."], answer: 1, why: "Periodo cerrado y medido: **trabajé**." },
+          { context: "Cuentas qué hacías cada verano de niño.", q: "Dices:", options: ["Cada verano iba al campo con mis abuelos.", "Cada verano fui al campo con mis abuelos.", "Cada verano he ido al campo con mis abuelos."], answer: 0, why: "Costumbre de una época: **iba**." },
+          { context: "Escribes a una compañera para que te mande unos audios antes del lunes.", q: "Escribes:", options: ["¿Puedes me mandar los audios para el lunes?", "¿Me puedes mandar los audios para el lunes?", "¿Puedes mandar me los audios por el lunes?"], answer: 1, why: "Pronombre delante de _puedes_ y **para** + plazo." },
+        ],
       },
       {
-        "type": "open",
-        "prompt": "Resolución final 20: El profesor introduce un cambio: cinco asistentes más o un proyector averiado. Pide información, negocia una solución y comunica al grupo el acuerdo revisado. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Organizar una actividad realista integrando experiencias, decisiones, gestiones y opiniones.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+        id: "x5",
+        type: "open",
+        title: "Escribe tú: integra las semanas 16 a 20",
+        prompt: "Escribe frases completas. Después compara con el modelo.",
+        items: [
+          {
+            prompt: "Presenta tu experiencia en un trabajo o estudio: cuánto tiempo, qué hacías normalmente, cuántas veces pasó algo especial y hace cuánto lo dejaste.",
+            model: "Estudié diseño tres años en Alajuela. Casi todos los días trabajaba en el taller hasta tarde y dos veces por semana daba clases a niños. Gané dos concursos de carteles. Terminé hace un año.",
+            checklist: ["Duración cerrada en indefinido", "Costumbre en imperfecto", "Un total contado y **hace** + tiempo"],
+          },
+          {
+            prompt: "Cuenta un día en que llegaste tarde: la escena, lo que pasó y cómo terminó. Usa como, por eso o así que.",
+            model: "El martes llovía y no había taxis. Como mi celular no tenía batería, no pude avisar a mi jefe, así que entré a la reunión veinte minutos tarde. Al final nadie se enfadó, porque el proyector tampoco funcionaba.",
+            checklist: ["Escena en imperfecto", "Hechos en indefinido", "**Como** y **así que** o **por eso** (semana 16)"],
+          },
+          {
+            prompt: "Escribe un mensaje a un compañero nuevo con dos normas (hay que, no se puede), una condición con si, una petición amable y una pregunta indirecta.",
+            model: "Hola, Diego: en la oficina hay que fichar al entrar y en la sala de reuniones no se puede comer. Si llegas antes de las ocho, la puerta está cerrada; llama al timbre. ¿Te importaría traer tu portátil el lunes? Y dime si necesitas una llave.",
+            checklist: ["**Hay que** y **no se puede** (semanas 16 y 18)", "**Si** + presente y **te importaría** (semana 17)", "Pregunta indirecta con **si** (semana 19)"],
+          },
+        ],
+      },
     ],
-    "review": [
-      "En dos días, repite la misión «Checkpoint final: una semana en común» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+  },
+  writing: {
+    task: "Escribe un mensaje a un compañero de trabajo o de estudio: cuéntale un día en que llegaste tarde y pídele ayuda para organizar la semana.",
+    context: "Ayer tenías una reunión importante y llegaste tarde. Un compañero empezó sin ti. Hoy le escribes para contarle qué pasó, darle las gracias y pedirle dos cosas.",
+    steps: [
+      "Saluda y agradece con **gracias por** lo que hizo tu compañero.",
+      "Cuenta qué pasó: escena y causas en **imperfecto**, hechos en **indefinido**, con conectores (como, de repente, por eso, al final).",
+      "Añade una duración o una frecuencia (estuve…, hace…, normalmente…) para explicar la situación.",
+      "Pide dos cosas con **¿podrías…?** o un imperativo con pronombres, con un plazo con **para**.",
+      "Revisa: ¿_ayer_ va con indefinido? ¿Distinguiste total y costumbre? ¿Escribiste **gracias por** y **se las / se lo** donde hace falta?",
+    ],
+    useLanguage: ["Gracias por…", "Como…, …", "De repente…", "Estuve… minutos…", "¿Podrías…?", "Envíamelo para…"],
+    model: [
+      "¡Hola, Marcos! Muchas gracias por empezar la reunión sin mí ayer. Te cuento qué pasó. Normalmente voy en bicicleta, pero desde hace dos semanas está en el taller, así que tomé el bus. Llovía mucho y había un tráfico horrible. De repente el bus se paró: había un accidente y estuvimos parados veinticinco minutos. Como no tenía batería, no pude avisar a nadie. Al final llegué a las diez menos veinte, empapada. ¿Podrías enviarme tus notas de la reunión? Envíamelas para el jueves, si puedes. Y las fotos del cliente, ¿se las mandas tú a Ramón? ¡Mil gracias!",
+    ],
+    checklist: [
+      "Usas imperfecto para la escena y la causa, e indefinido para los hechos.",
+      "Incluyes una duración cerrada o un total en indefinido.",
+      "Usas al menos dos conectores de la semana 16.",
+      "Pides con **podrías** o un imperativo con pronombres y pones un plazo con **para**.",
+      "Agradeces con **gracias por**.",
+    ],
+    words: [80, 130],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate. Es el último checkpoint de A2: combina todo lo que sabes.",
+    tasks: [
+      {
+        title: "Mi experiencia",
+        prompt: "Estás en una entrevista. Presenta tu experiencia: dónde estuviste, cuánto tiempo, qué hacías normalmente, cuántas veces pasó algo especial y hace cuánto lo dejaste.",
+        prep: ["Trabajé / estudié… años en…", "Normalmente…", "Dos veces…", "Lo dejé hace…"],
+        seconds: 80,
+        model: "Trabajé cinco años en una librería del centro, de 2017 a 2022. Normalmente abría la tienda a las nueve, atendía a los clientes y los viernes preparaba el escaparate. Organicé tres presentaciones de libros con autores famosos. Lo dejé hace dos años, porque me fui a estudiar a Guadalajara, pero sigo leyendo muchísimo.",
+        selfCheck: ["Uso el indefinido para la duración y el total.", "Uso el imperfecto para lo que hacía normalmente."],
+      },
+      {
+        title: "El peor día",
+        prompt: "Cuenta un día en que todo salió mal. Describe la escena, cuenta los hechos en orden y explica las causas.",
+        prep: ["Ese día llovía / hacía…", "Primero…", "Como…, …", "De repente…", "Al final…"],
+        seconds: 75,
+        selfCheck: ["La escena va en imperfecto y los hechos en indefinido.", "Uso como, por eso o así que."],
+      },
+      {
+        title: "Un mensaje de voz",
+        prompt: "Deja un mensaje de voz a un compañero: agradece algo, explica una norma o una condición (si…) y pídele dos cosas con un plazo.",
+        prep: ["Gracias por…", "Si…, …", "Hay que…", "¿Podrías…?", "… para el viernes."],
+        seconds: 60,
+        selfCheck: ["Mis peticiones suben al final.", "Uso **para** + plazo y **gracias por**."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu última clase de A2 lo que repasaste esta semana y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Presenta tu experiencia", task: "Cuenta a tu profesor tu experiencia de trabajo o de estudio con duraciones y costumbres.", phrases: ["Trabajé… años en…", "Normalmente…", "Hace… que…"] },
+      { move: "Cuenta un mal día", task: "Narra un día que salió mal en dos minutos, con escena, hechos y final.", phrases: ["Ese día llovía…", "De repente…", "Al final…"] },
+      { move: "Pide con plazo", task: "Pide a tu profesor dos materiales para estudiar en B1, con un plazo.", phrases: ["¿Podrías enviarme…?", "… para el lunes"] },
+      { move: "Agradece el curso", task: "Despídete de A2 agradeciendo algo concreto del curso.", phrases: ["Gracias por…", "Me gustaría seguir…"] },
+    ],
+    bring: "Trae una lista de tres lugares donde trabajaste, estudiaste o viviste, con las fechas, y prepárate para contar qué hacías normalmente en cada uno.",
+  },
+  quiz: {
+    items: [
+      { type: "gap", q: "Mi abuela ___ veinte años en una fábrica de café de Heredia. (trabajar)", answers: [["trabajó"]], why: "Periodo cerrado y medido: **trabajó**." },
+      { type: "choice", q: "¿Qué frase cuenta una costumbre de una época pasada?", options: ["Fui al cine tres veces en julio.", "De niña iba al cine todos los domingos.", "Estuve en el cine toda la tarde."], answer: 1, why: "Todos los domingos: **iba**." },
+      { type: "gap", q: "Conocí a mi mejor amiga ___ quince años, en el colegio.", answers: [["hace"]], why: "Momento pasado: **hace** + tiempo." },
+      { type: "transform", source: "Da el guion a la locutora.", instruction: "Usa dos pronombres pegados al imperativo.", answers: ["Dáselo."], why: "Le + lo → **se lo**: **dáselo**." },
+      { type: "error", sentence: "El año pasado iba cuatro veces a Monteverde.", answers: ["El año pasado fui cuatro veces a Monteverde."], why: "Total contado: **fui**." },
+      { type: "error", sentence: "Solía a desayunar en la soda de la esquina.", answers: ["Solía desayunar en la soda de la esquina."], why: "_Soler_ + infinitivo, sin **a**." },
+      { type: "listen", q: "¿Qué forma oyes en la frase sobre el programa del sábado?", audio: "Grabó el programa del sábado.", options: ["grabo (yo, presente)", "grabó (él, pasado)"], answer: 1 },
+      { type: "order", words: ["Como", "no", "había", "luz,", "grabamos", "la", "entrevista", "en", "el", "patio."] },
+      { type: "choice", q: "Al final de un mensaje a tu compañera, ¿qué frase está bien?", options: ["Gracias para todo y envíamelo para el lunes.", "Gracias por todo y envíamelo para el lunes.", "Gracias por todo y envíame lo por el lunes."], answer: 1, why: "**Gracias por** y **envíamelo** pegado; plazo con **para**." },
+      { type: "gap", q: "En la biblioteca no ___ ___ hablar por teléfono. (poder · semana 16)", answers: [["se"], ["puede"]], why: "Se impersonal con infinitivo: **no se puede**." },
+      { type: "open", prompt: "Escribe cuatro frases: una duración cerrada, una costumbre del pasado, algo que pasó hace poco y una petición con plazo.", model: "Viví dos años en Puntarenas. Allí nadaba casi todas las mañanas. Hace un mes cambié de trabajo. ¿Podrías mandarme tu dirección para el sábado?", checklist: ["Indefinido para la duración", "Imperfecto para la costumbre", "Hace + tiempo", "Podrías + infinitivo + para"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Contar cuánto duró algo y cuántas veces pasó con el **indefinido**.",
+      "Contar lo que hacías con frecuencia en una época con el **imperfecto**.",
+      "Decir cuándo pasó algo con **hace** + tiempo y no confundirlo con _desde hace_.",
+      "Narrar un día con escena, hechos, causas y final, usando los pasados de A2 y los conectores.",
+      "Escribir mensajes prácticos que piden, dan instrucciones, ponen plazos y agradecen.",
+      "Integrar el se impersonal, si + presente, las peticiones amables, la obligación, el orden de la frase, las perífrasis y las preguntas indirectas de las semanas 16 a 19.",
+    ],
+    review: ["Trabajé tres años (duración) / fui tres veces (total) / iba cada sábado (costumbre).", "Volví hace dos meses (no _desde hace_).", "Ayer llegué tarde porque había tráfico. ¿Podrías enviármelo para el lunes? Gracias por todo."],
+  },
+  related: [
+    { path: "/gramatica/expresar-duracion-y-frecuencia-en-pasado", label: "Clase: Expresar duración y frecuencia en pasado" },
+    { path: "/gramatica/revision-narrativa-a2-y-mensajes-practicos", label: "Clase: Revisión narrativa A2 y mensajes prácticos" },
+  ],
 };

@@ -106,7 +106,7 @@ async function learner(level,alias,owner='teacher-a'){
 }
 const answer=(l,body)=>call(api.recordAnswer,req({passId:l.pass.id,revision:1,...body},{cookie:l.cookie}));
 let walker;
-const wrong={moduleId:'a1-01',section:'grammar',exerciseId:'g1',itemIndex:0,given:'eres',verdict:'wrong',attempt:1};
+const wrong={moduleId:'a1-01',section:'grammar',exerciseId:'g1',itemIndex:0,given:'estoy',verdict:'wrong',attempt:1};
 
 test('a wrong answer is stored with the server-resolved question, correct answer, explanation and category',async()=>{
   walker=await learner('a1','Walker');
@@ -114,17 +114,17 @@ test('a wrong answer is stored with the server-resolved question, correct answer
   assert.equal(r.status,201);const body=await r.json();assert.equal(body.category,'ser-estar');
   const row=db.prepare('SELECT * FROM homework_errors').get();
   assert.equal(row.learner_id,walker.pass.learnerId);assert.equal(row.owner_id,'teacher-a');assert.equal(row.level,'a1');
-  assert.equal(row.question,'Hola, ___ Carlos.');assert.equal(row.answer_given,'eres');assert.equal(row.answer_correct,'soy');
-  assert.match(row.explanation,/yo soy/);assert.equal(row.category,'ser-estar');assert.equal(row.attempt,1);assert.equal(row.corrected_at,null);
+  assert.equal(row.question,'Hola, ___ Amara. Soy de Nigeria.');assert.equal(row.answer_given,'estoy');assert.equal(row.answer_correct,'soy');
+  assert.match(row.explanation,/soy/);assert.equal(row.category,'ser-estar');assert.equal(row.attempt,1);assert.equal(row.corrected_at,null);
 });
 
 test('a later correct answer marks the original error as corrected without rewriting it; new mistakes append',async()=>{
   const ok=await answer(walker,{...wrong,given:'soy',verdict:'correct',attempt:2});
   assert.equal(ok.status,200);assert.equal((await ok.json()).corrected,1);
   const row=db.prepare('SELECT * FROM homework_errors').get();
-  assert.equal(row.answer_given,'eres');assert.ok(row.corrected_at);
+  assert.equal(row.answer_given,'estoy');assert.ok(row.corrected_at);
   assert.equal((await answer(walker,{...wrong,given:'es',attempt:3})).status,201);
-  assert.equal((await answer(walker,{moduleId:'a1-01',section:'grammar',exerciseId:'g2',itemIndex:0,given:'se',verdict:'wrong',attempt:1})).status,201);
+  assert.equal((await answer(walker,{moduleId:'a1-01',section:'grammar',exerciseId:'g3',itemIndex:0,given:'la (femenino)',verdict:'wrong',attempt:1})).status,201);
   assert.equal(db.prepare('SELECT COUNT(*) n FROM homework_errors').get().n,3);
   assert.equal(db.prepare('SELECT COUNT(*) n FROM homework_errors WHERE corrected_at IS NULL').get().n,2);
 });
@@ -147,11 +147,11 @@ test('teacher reads errors grouped by topic, week and activity, recurrent and co
   assert.equal(data.learner.alias,'Walker');assert.equal(data.level,'a1');assert.equal(data.errors.length,4);
   const ser=data.categories.find(c=>c.category==='ser-estar');
   assert.equal(ser.errors,3);assert.equal(ser.corrected,1);assert.equal(ser.recurrent,0);
-  assert.equal(data.categories.find(c=>c.category==='pronombres').errors,1);
+  const other=data.categories.filter(c=>c.category!=='ser-estar');assert.equal(other.length,1);assert.equal(other[0].errors,1);
   assert.deepEqual(data.weeks.map(w=>[w.moduleId,w.errors]),[['a1-01',4]]);
   assert.equal(data.activities.length,2);
   assert.match(data.plan.summary,/Walker presenta dificultades con SER \/ ESTAR \(3 errores, 1 corregido después\)/);
-  assert.ok(data.plan.priorities[0].exercises.some(x=>x.prompt.includes('Hola, eres Carlos.')||x.prompt.includes('«eres»')));
+  assert.ok(data.plan.priorities[0].exercises.some(x=>x.prompt.includes('Hola, estoy Amara.')||x.prompt.includes('«estoy»')));
   const reco=data.recommendations.find(x=>x.category==='ser-estar');
   assert.equal(reco.classes[0].path,'/la-ciudad-de-los-motores');assert.equal(reco.opened,false);
 });

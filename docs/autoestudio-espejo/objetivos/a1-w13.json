@@ -1,0 +1,12 @@
+[
+  [13, "gram", "g027", "Preposiciones básicas a, de, en, con, sin", "Puedo decir a dónde voy, dónde estoy, de dónde vengo, de quién es algo, con quién voy y qué no llevo con a, en, de, con y sin.", ["a1.gram.g013"], { "related": ["/gramatica/preposiciones-basicas"] }],
+  [13, "gram", "g028", "Contracciones al y del", "Puedo unir a + el en al y de + el en del, explicar un recorrido con del… al… y no unir con la, los, las, otras preposiciones o el pronombre él.", ["a1.gram.g004", "a1.gram.g027"], { "related": ["/gramatica/contracciones-al-y-del"] }],
+  [13, "gram", "g029", "Adverbios de lugar, tiempo y modo", "Puedo decir dónde, cuándo y cómo con aquí, allí, hoy, primero, después, bien o despacio, y elegir entre muy y mucho.", ["a1.gram.g008"], { "related": ["/la-torre-de-las-coordenadas"] }],
+  [13, "voc", "w13-paseo-ciudad", "Lugares y transportes de una ciudad", "Puedo nombrar lugares de una ciudad y medios de transporte, y usar palabras para explicar un camino.", ["a1.gram.g027"]],
+  [13, "pron", "w13-al-del-d-suave", "Al y del en una sílaba y la d suave", "Puedo oír la diferencia entre al y a la, del y de la, y pronunciar la d suave entre vocales.", []],
+  [13, "lis", "w13-llamada-encuentro", "Escuchar una llamada para encontrarse", "Puedo entender dónde está una persona, con quién, adónde van y en qué orden en una llamada breve.", ["a1.gram.g027", "a1.gram.g028", "a1.gram.g029"]],
+  [13, "read", "w13-indicaciones-anfitrion", "Leer indicaciones para llegar a una casa", "Puedo seguir en un correo breve el camino desde una estación hasta una casa y encontrar los datos prácticos.", ["a1.gram.g027", "a1.gram.g028", "a1.gram.g029"]],
+  [13, "wri", "w13-indicaciones-amigo", "Escribir indicaciones a un amigo", "Puedo escribir un mensaje breve que explica el camino de la estación a mi casa y propone un plan.", ["a1.gram.g027", "a1.gram.g028", "a1.gram.g029", "a1.voc.w13-paseo-ciudad"]],
+  [13, "spk", "w13-explicar-recorrido", "Explicar un recorrido en voz alta", "Puedo explicar durante unos 45 segundos un paseo por mi ciudad y dar indicaciones breves a una turista.", ["a1.fun.w13-dar-indicaciones"]],
+  [13, "fun", "w13-dar-indicaciones", "Dar indicaciones y explicar recorridos", "Puedo explicar de dónde salgo, adónde voy, en qué orden, cómo y con quién.", ["a1.gram.g027", "a1.gram.g028", "a1.gram.g029"]]
+]

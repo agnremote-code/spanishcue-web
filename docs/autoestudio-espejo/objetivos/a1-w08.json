@@ -1,0 +1,12 @@
+[
+  [8, "gram", "g016", "Modo y tiempo verbal: orientarse antes de conjugar", "Puedo encontrar en un verbo conjugado su infinitivo, su persona y su momento, y reconocer si la frase informa, pide o desea.", ["a1.gram.g010"], { "related": ["/modo-vs-tiempo-verbal"] }],
+  [8, "gram", "g017", "Presente regular: -ar, -er, -ir", "Puedo conjugar en presente verbos regulares en -ar, -er e -ir con las seis personas para hablar de rutinas y de lo que hago ahora, y negar con no.", ["a1.gram.g016"], { "related": ["/sistema-verbal/presente-de-indicativo"] }],
+  [8, "gram", "g018", "Presente irregular: ser, estar, ir, tener", "Puedo usar ser, estar, ir y tener en presente, decir adónde voy con ir a / al y distinguirlo de estoy en.", ["a1.gram.g011", "a1.gram.g012", "a1.gram.g014"], { "related": ["/gramatica/presente-irregular-ser-estar-ir-tener"] }],
+  [8, "voc", "w08-trabajo-semana", "Trabajo, verbos regulares frecuentes y destinos", "Puedo nombrar actividades y momentos de una semana de trabajo y decir adónde voy.", ["a1.gram.g017", "a1.gram.g018"]],
+  [8, "pron", "w08-silaba-presente", "La sílaba fuerte en el presente", "Puedo pronunciar el presente con la fuerza en la raíz (yo, tú, él, ellos) o en la terminación (nosotros, vosotros).", []],
+  [8, "lis", "w08-primer-dia-radio", "Escuchar el primer día en un trabajo", "Puedo entender quién hace qué, dónde vive alguien y adónde va el equipo cada día en una conversación de trabajo.", ["a1.gram.g017", "a1.gram.g018"]],
+  [8, "read", "w08-perfil-locutora", "Leer una entrevista breve de un boletín", "Puedo entender una entrevista breve sobre la identidad, la semana y los planes de una persona.", ["a1.gram.g016", "a1.gram.g017", "a1.gram.g018"]],
+  [8, "wri", "w08-mi-semana", "Escribir mi presentación y mi semana", "Puedo escribir un texto breve que presenta quién soy y cuenta mi semana con verbos regulares, ir a y estar en.", ["a1.gram.g017", "a1.gram.g018", "a1.voc.w08-trabajo-semana"]],
+  [8, "spk", "w08-agenda-semanal", "Contar mi semana y entrevistar a un compañero", "Puedo contar mi semana durante unos 45 segundos y hacer y responder preguntas sobre la rutina.", ["a1.fun.w08-hablar-rutina-trabajo"]],
+  [8, "fun", "w08-hablar-rutina-trabajo", "Hablar de la rutina de trabajo o de estudio", "Puedo preguntar y decir qué hace alguien, dónde está y adónde va en distintos días de la semana.", ["a1.gram.g017", "a1.gram.g018"]]
+]

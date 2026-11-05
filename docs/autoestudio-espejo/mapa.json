@@ -1,0 +1,2294 @@
+{
+ "a1": [
+  {
+   "week": 1,
+   "classes": [
+    {
+     "code": "G001",
+     "catalogId": 239,
+     "title": "Tu primer «hola» y presentarte",
+     "path": "/gramatica/clase-inicial",
+     "lesson": "app/grammar-classroom/live/lessons/g239.ts"
+    },
+    {
+     "code": "G002",
+     "catalogId": 40,
+     "title": "Sustantivos: nombrar personas, lugares y cosas",
+     "path": "/la-fabrica-de-los-nombres",
+     "lesson": "app/grammar-classroom/live/lessons/g40.ts"
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "classes": [
+    {
+     "code": "G003",
+     "catalogId": 303,
+     "title": "Género de sustantivos y terminaciones frecuentes",
+     "path": "/gramatica/genero-de-sustantivos",
+     "lesson": "app/grammar-classroom/live/lessons/g303.ts"
+    },
+    {
+     "code": "G004",
+     "catalogId": 42,
+     "title": "Artículos definidos e indefinidos",
+     "path": "/la-galeria-de-los-articulos",
+     "lesson": "app/grammar-classroom/live/lessons/g42.ts"
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "classes": [
+    {
+     "code": "G005",
+     "catalogId": 305,
+     "title": "Plural de sustantivos y concordancia básica",
+     "path": "/gramatica/plural-y-concordancia",
+     "lesson": "app/grammar-classroom/live/lessons/g305.ts"
+    },
+    {
+     "code": "G006",
+     "catalogId": 41,
+     "title": "Adjetivos calificativos y concordancia",
+     "path": "/el-atelier-de-la-concordancia",
+     "lesson": "app/grammar-classroom/live/lessons/g41.ts"
+    },
+    {
+     "code": "G007",
+     "catalogId": 307,
+     "title": "Posición habitual del adjetivo y sentido básico",
+     "path": "/gramatica/posicion-del-adjetivo",
+     "lesson": "app/grammar-classroom/live/lessons/g307.ts"
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "classes": [
+    {
+     "code": "G008",
+     "catalogId": 43,
+     "title": "Demostrativos: este, ese, aquel",
+     "path": "/el-observatorio-de-las-distancias",
+     "lesson": "app/grammar-classroom/live/lessons/g43.ts"
+    },
+    {
+     "code": "G009",
+     "catalogId": 44,
+     "title": "Posesivos: mi, tu, su, nuestro",
+     "path": "/la-casa-de-las-pertenencias",
+     "lesson": "app/grammar-classroom/live/lessons/g44.ts"
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "classes": [
+    {
+     "code": "G010",
+     "catalogId": 46,
+     "title": "Pronombres sujeto y omisión del sujeto",
+     "path": "/la-central-de-las-identidades",
+     "lesson": "app/grammar-classroom/live/lessons/g46.ts"
+    },
+    {
+     "code": "G011",
+     "catalogId": 311,
+     "title": "Ser para identidad, profesión y procedencia",
+     "path": "/gramatica/ser-identidad-y-origen",
+     "lesson": "app/grammar-classroom/live/lessons/g311.ts"
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "classes": [
+    {
+     "code": "G012",
+     "catalogId": 312,
+     "title": "Estar para estados y lugares",
+     "path": "/gramatica/estar-estados-y-lugares",
+     "lesson": "app/grammar-classroom/live/lessons/g312.ts"
+    },
+    {
+     "code": "G013",
+     "catalogId": 48,
+     "title": "Hay frente a estar: existencia y ubicación",
+     "path": "/la-ciudad-de-los-motores",
+     "lesson": "app/grammar-classroom/live/lessons/g48.ts"
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "classes": [
+    {
+     "code": "G014",
+     "catalogId": 314,
+     "title": "Tener y tener + edad / sensaciones",
+     "path": "/gramatica/tener-edad-y-sensaciones",
+     "lesson": "app/grammar-classroom/live/lessons/g314.ts"
+    },
+    {
+     "code": "G015",
+     "catalogId": 110,
+     "title": "Concordancia dentro del grupo nominal",
+     "path": "/grupos-de-palabras-con-sentido",
+     "lesson": "app/grammar-classroom/live/lessons/g110.ts"
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "classes": [
+    {
+     "code": "G016",
+     "catalogId": 107,
+     "title": "Modo y tiempo verbal: orientarse antes de conjugar",
+     "path": "/modo-vs-tiempo-verbal",
+     "lesson": "app/grammar-classroom/live/lessons/g107.ts"
+    },
+    {
+     "code": "G017",
+     "catalogId": 140,
+     "title": "Presente regular: -ar, -er, -ir",
+     "path": "/sistema-verbal/presente-de-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g140.ts"
+    },
+    {
+     "code": "G018",
+     "catalogId": 318,
+     "title": "Presente irregular: ser, estar, ir, tener",
+     "path": "/gramatica/presente-irregular-ser-estar-ir-tener",
+     "lesson": "app/grammar-classroom/live/lessons/g318.ts"
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "classes": [
+    {
+     "code": "G019",
+     "catalogId": 319,
+     "title": "Presente irregular: hacer, poner, salir, venir",
+     "path": "/gramatica/presente-irregular-hacer-poner-salir-venir",
+     "lesson": "app/grammar-classroom/live/lessons/g319.ts"
+    },
+    {
+     "code": "G020",
+     "catalogId": 320,
+     "title": "Presente con cambio vocálico: querer, poder, pedir",
+     "path": "/gramatica/presente-con-cambio-vocalico",
+     "lesson": "app/grammar-classroom/live/lessons/g320.ts"
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "classes": [
+    {
+     "code": "G021",
+     "catalogId": 3,
+     "title": "Variantes tú, vos, usted, ustedes y vosotros",
+     "path": "/clase/3",
+     "lesson": "app/grammar-classroom/live/lessons/g3.ts"
+    },
+    {
+     "code": "G022",
+     "catalogId": 111,
+     "title": "Preguntas sí/no y signos de interrogación",
+     "path": "/de-palabras-a-oraciones-completas",
+     "lesson": "app/grammar-classroom/live/lessons/g111.ts"
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "classes": [
+    {
+     "code": "G023",
+     "catalogId": 323,
+     "title": "Interrogativos con tilde: qué, quién, cuál, cuánto",
+     "path": "/gramatica/interrogativos-con-tilde",
+     "lesson": "app/grammar-classroom/live/lessons/g323.ts"
+    },
+    {
+     "code": "G024",
+     "catalogId": 324,
+     "title": "Oraciones negativas y posición de no",
+     "path": "/gramatica/oraciones-negativas",
+     "lesson": "app/grammar-classroom/live/lessons/g324.ts"
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "classes": [
+    {
+     "code": "G025",
+     "catalogId": 211,
+     "title": "Conectores elementales: y, e, o, u, pero, ni",
+     "path": "/conecta-la-frase",
+     "lesson": "app/grammar-classroom/live/lessons/g211.ts"
+    },
+    {
+     "code": "G026",
+     "catalogId": 212,
+     "title": "Porque y para + infinitivo: causa y finalidad",
+     "path": "/ideas-dentro-de-ideas",
+     "lesson": "app/grammar-classroom/live/lessons/g212.ts"
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "classes": [
+    {
+     "code": "G027",
+     "catalogId": 327,
+     "title": "Preposiciones básicas a, de, en, con, sin",
+     "path": "/gramatica/preposiciones-basicas",
+     "lesson": "app/grammar-classroom/live/lessons/g327.ts"
+    },
+    {
+     "code": "G028",
+     "catalogId": 328,
+     "title": "Contracciones al y del",
+     "path": "/gramatica/contracciones-al-y-del",
+     "lesson": "app/grammar-classroom/live/lessons/g328.ts"
+    },
+    {
+     "code": "G029",
+     "catalogId": 47,
+     "title": "Adverbios de lugar, tiempo y modo",
+     "path": "/la-torre-de-las-coordenadas",
+     "lesson": "app/grammar-classroom/live/lessons/g47.ts"
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "classes": [
+    {
+     "code": "G030",
+     "catalogId": 330,
+     "title": "Expresiones de frecuencia y hábito",
+     "path": "/gramatica/frecuencia-y-habitos",
+     "lesson": "app/grammar-classroom/live/lessons/g330.ts"
+    },
+    {
+     "code": "G031",
+     "catalogId": 331,
+     "title": "Verbos reflexivos cotidianos",
+     "path": "/gramatica/verbos-reflexivos-cotidianos",
+     "lesson": "app/grammar-classroom/live/lessons/g331.ts"
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "classes": [
+    {
+     "code": "G032",
+     "catalogId": 332,
+     "title": "Gustar y encantar + nombre / infinitivo",
+     "path": "/gramatica/gustar-y-encantar",
+     "lesson": "app/grammar-classroom/live/lessons/g332.ts"
+    },
+    {
+     "code": "G033",
+     "catalogId": 333,
+     "title": "Pronombres tónicos tras preposición",
+     "path": "/gramatica/pronombres-tras-preposicion",
+     "lesson": "app/grammar-classroom/live/lessons/g333.ts"
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "classes": [
+    {
+     "code": "G034",
+     "catalogId": 45,
+     "title": "Números, cantidades y cuantificadores básicos",
+     "path": "/el-mercado-de-las-cantidades",
+     "lesson": "app/grammar-classroom/live/lessons/g45.ts"
+    },
+    {
+     "code": "G035",
+     "catalogId": 335,
+     "title": "Artículos con partes del cuerpo y ropa",
+     "path": "/gramatica/articulos-cuerpo-y-ropa",
+     "lesson": "app/grammar-classroom/live/lessons/g335.ts"
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "classes": [
+    {
+     "code": "G036",
+     "catalogId": 336,
+     "title": "Identificar y describir un objeto con varias pistas",
+     "path": "/gramatica/describir-un-objeto",
+     "lesson": "app/grammar-classroom/live/lessons/g336.ts"
+    },
+    {
+     "code": "G037",
+     "catalogId": 337,
+     "title": "Comparativos regulares: más, menos, tan ... como",
+     "path": "/gramatica/comparativos-regulares",
+     "lesson": "app/grammar-classroom/live/lessons/g337.ts"
+    }
+   ]
+  },
+  {
+   "week": 18,
+   "classes": [
+    {
+     "code": "G038",
+     "catalogId": 338,
+     "title": "La hora, el día y la fecha",
+     "path": "/gramatica/la-hora-el-dia-y-la-fecha",
+     "lesson": "app/grammar-classroom/live/lessons/g338.ts"
+    },
+    {
+     "code": "G039",
+     "catalogId": 339,
+     "title": "Ir a + infinitivo: planes próximos",
+     "path": "/gramatica/ir-a-infinitivo",
+     "lesson": "app/grammar-classroom/live/lessons/g339.ts"
+    },
+    {
+     "code": "G040",
+     "catalogId": 340,
+     "title": "Querer, poder y tener que + infinitivo",
+     "path": "/gramatica/querer-poder-tener-que",
+     "lesson": "app/grammar-classroom/live/lessons/g340.ts"
+    }
+   ]
+  },
+  {
+   "week": 19,
+   "classes": [
+    {
+     "code": "G041",
+     "catalogId": 341,
+     "title": "Estar + gerundio: acción en desarrollo",
+     "path": "/gramatica/estar-gerundio",
+     "lesson": "app/grammar-classroom/live/lessons/g341.ts"
+    },
+    {
+     "code": "G042",
+     "catalogId": 106,
+     "title": "Objeto directo básico: lo, la, los, las",
+     "path": "/la-estacion-de-los-dos-destinos",
+     "lesson": "app/grammar-classroom/live/lessons/g106.ts"
+    }
+   ]
+  },
+  {
+   "week": 20,
+   "classes": [
+    {
+     "code": "G043",
+     "catalogId": 343,
+     "title": "Oraciones simples: orden, afirmación y pregunta",
+     "path": "/gramatica/oraciones-simples-orden",
+     "lesson": "app/grammar-classroom/live/lessons/g343.ts"
+    },
+    {
+     "code": "G044",
+     "catalogId": 344,
+     "title": "Microproducción A1: describir y pedir información",
+     "path": "/gramatica/microproduccion-a1",
+     "lesson": "app/grammar-classroom/live/lessons/g344.ts"
+    }
+   ]
+  }
+ ],
+ "a2": [
+  {
+   "week": 1,
+   "classes": [
+    {
+     "code": "G045",
+     "catalogId": 141,
+     "title": "Pretérito perfecto compuesto: experiencias",
+     "path": "/sistema-verbal/preterito-perfecto-compuesto-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g141.ts"
+    },
+    {
+     "code": "G046",
+     "catalogId": 346,
+     "title": "Participios regulares e irregulares frecuentes",
+     "path": "/gramatica/participios-frecuentes",
+     "lesson": "app/grammar-classroom/live/lessons/g346.ts"
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "classes": [
+    {
+     "code": "G047",
+     "catalogId": 142,
+     "title": "Pretérito indefinido regular",
+     "path": "/sistema-verbal/preterito-perfecto-simple-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g142.ts"
+    },
+    {
+     "code": "G048",
+     "catalogId": 348,
+     "title": "Pretérito indefinido irregular de alta frecuencia",
+     "path": "/gramatica/indefinido-irregular",
+     "lesson": "app/grammar-classroom/live/lessons/g348.ts"
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "classes": [
+    {
+     "code": "G049",
+     "catalogId": 143,
+     "title": "Imperfecto: hábitos y descripciones del pasado",
+     "path": "/sistema-verbal/preterito-imperfecto-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g143.ts"
+    },
+    {
+     "code": "G050",
+     "catalogId": 350,
+     "title": "Indefinido e imperfecto: evento y contexto",
+     "path": "/gramatica/indefinido-e-imperfecto",
+     "lesson": "app/grammar-classroom/live/lessons/g350.ts"
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "classes": [
+    {
+     "code": "G051",
+     "catalogId": 351,
+     "title": "Perfecto e indefinido: variación regional",
+     "path": "/gramatica/perfecto-e-indefinido-variacion",
+     "lesson": "app/grammar-classroom/live/lessons/g351.ts"
+    },
+    {
+     "code": "G052",
+     "catalogId": 352,
+     "title": "Solía + infinitivo y costumbres antiguas",
+     "path": "/gramatica/solia-infinitivo-y-costumbres-antiguas",
+     "lesson": "app/grammar-classroom/live/lessons/g352.ts"
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "classes": [
+    {
+     "code": "G053",
+     "catalogId": 353,
+     "title": "Marcadores temporales: ayer, antes, ya, todavía",
+     "path": "/gramatica/marcadores-temporales-ayer-antes-ya-todavia",
+     "lesson": "app/grammar-classroom/live/lessons/g353.ts"
+    },
+    {
+     "code": "G054",
+     "catalogId": 213,
+     "title": "Antes de, después de y cuando + indicativo",
+     "path": "/antes-despues-cuando",
+     "lesson": "app/grammar-classroom/live/lessons/g213.ts"
+    },
+    {
+     "code": "G055",
+     "catalogId": 230,
+     "title": "Desde, desde hace, hace y llevar + gerundio",
+     "path": "/gramatica/desde-hace-duracion",
+     "lesson": "app/grammar-classroom/live/lessons/desde-hace.ts"
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "classes": [
+    {
+     "code": "G056",
+     "catalogId": 356,
+     "title": "Ir a + infinitivo frente al futuro simple",
+     "path": "/gramatica/ir-a-infinitivo-frente-al-futuro",
+     "lesson": "app/grammar-classroom/live/lessons/g356.ts"
+    },
+    {
+     "code": "G057",
+     "catalogId": 144,
+     "title": "Futuro simple: planes, promesas y predicciones",
+     "path": "/sistema-verbal/futuro-simple-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g144.ts"
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "classes": [
+    {
+     "code": "G058",
+     "catalogId": 358,
+     "title": "Imperativo afirmativo: tú, vos, usted",
+     "path": "/gramatica/imperativo-afirmativo-tu-vos-usted",
+     "lesson": "app/grammar-classroom/live/lessons/g358.ts"
+    },
+    {
+     "code": "G059",
+     "catalogId": 145,
+     "title": "Imperativo negativo con subjuntivo de forma guiada",
+     "path": "/sistema-verbal/imperativo",
+     "lesson": "app/grammar-classroom/live/lessons/g145.ts"
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "classes": [
+    {
+     "code": "G060",
+     "catalogId": 360,
+     "title": "Pronombres reflexivos: rutinas y cambios de estado",
+     "path": "/gramatica/pronombres-reflexivos-rutinas-y-cambios-de",
+     "lesson": "app/grammar-classroom/live/lessons/g360.ts"
+    },
+    {
+     "code": "G061",
+     "catalogId": 361,
+     "title": "Verbos de cambio básicos: ponerse, quedarse",
+     "path": "/gramatica/verbos-de-cambio-basicos-ponerse-quedarse",
+     "lesson": "app/grammar-classroom/live/lessons/g361.ts"
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "classes": [
+    {
+     "code": "G062",
+     "catalogId": 362,
+     "title": "Gustar, interesar, doler, faltar: concordancia",
+     "path": "/gramatica/gustar-interesar-doler-faltar-concordancia",
+     "lesson": "app/grammar-classroom/live/lessons/g362.ts"
+    },
+    {
+     "code": "G063",
+     "catalogId": 363,
+     "title": "Objeto indirecto: le, les, me, te, nos",
+     "path": "/gramatica/objeto-indirecto-le-les-me-te",
+     "lesson": "app/grammar-classroom/live/lessons/g363.ts"
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "classes": [
+    {
+     "code": "G064",
+     "catalogId": 364,
+     "title": "Dos pronombres: se lo, me lo, te la",
+     "path": "/gramatica/dos-pronombres-se-lo-me-lo",
+     "lesson": "app/grammar-classroom/live/lessons/g364.ts"
+    },
+    {
+     "code": "G065",
+     "catalogId": 365,
+     "title": "Posición de pronombres con infinitivo e imperativo",
+     "path": "/gramatica/posicion-de-pronombres-con-infinitivo-e",
+     "lesson": "app/grammar-classroom/live/lessons/g365.ts"
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "classes": [
+    {
+     "code": "G066",
+     "catalogId": 366,
+     "title": "Relativas especificativas con que",
+     "path": "/gramatica/relativas-especificativas-con-que",
+     "lesson": "app/grammar-classroom/live/lessons/g366.ts"
+    },
+    {
+     "code": "G067",
+     "catalogId": 367,
+     "title": "Relativas con donde, cuando y lo que",
+     "path": "/gramatica/relativas-con-donde-cuando-y-lo",
+     "lesson": "app/grammar-classroom/live/lessons/g367.ts"
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "classes": [
+    {
+     "code": "G068",
+     "catalogId": 112,
+     "title": "Comparaciones: mejor, peor, mayor, menor",
+     "path": "/expandir-y-precisar-descripciones",
+     "lesson": "app/grammar-classroom/live/lessons/g112.ts"
+    },
+    {
+     "code": "G069",
+     "catalogId": 369,
+     "title": "Superlativos relativos y absolutos frecuentes",
+     "path": "/gramatica/superlativos-relativos-y-absolutos-frecuentes",
+     "lesson": "app/grammar-classroom/live/lessons/g369.ts"
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "classes": [
+    {
+     "code": "G240",
+     "catalogId": 540,
+     "title": "Diminutivos, aumentativos y valor afectivo",
+     "path": "/gramatica/diminutivos-aumentativos-y-valor-afectivo",
+     "lesson": "app/grammar-classroom/live/lessons/g540.ts"
+    },
+    {
+     "code": "G070",
+     "catalogId": 370,
+     "title": "Cuantificadores algo, nada, alguien, nadie",
+     "path": "/gramatica/cuantificadores-algo-nada-alguien-nadie",
+     "lesson": "app/grammar-classroom/live/lessons/g370.ts"
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "classes": [
+    {
+     "code": "G071",
+     "catalogId": 371,
+     "title": "Alguno, ninguno, mucho, poco, demasiado",
+     "path": "/gramatica/alguno-ninguno-mucho-poco-demasiado",
+     "lesson": "app/grammar-classroom/live/lessons/g371.ts"
+    },
+    {
+     "code": "G072",
+     "catalogId": 372,
+     "title": "Doble negación: nadie, nada, nunca",
+     "path": "/gramatica/doble-negacion-nadie-nada-nunca",
+     "lesson": "app/grammar-classroom/live/lessons/g372.ts"
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "classes": [
+    {
+     "code": "G073",
+     "catalogId": 373,
+     "title": "Preposiciones de movimiento y ubicación",
+     "path": "/gramatica/preposiciones-de-movimiento-y-ubicacion",
+     "lesson": "app/grammar-classroom/live/lessons/g373.ts"
+    },
+    {
+     "code": "G074",
+     "catalogId": 374,
+     "title": "Por y para: motivo y destino inicial",
+     "path": "/gramatica/por-y-para-motivo-y-destino",
+     "lesson": "app/grammar-classroom/live/lessons/g374.ts"
+    },
+    {
+     "code": "G075",
+     "catalogId": 375,
+     "title": "Ser, estar y llevar para descripciones cambiantes",
+     "path": "/gramatica/ser-estar-y-llevar-para-descripciones",
+     "lesson": "app/grammar-classroom/live/lessons/g375.ts"
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "classes": [
+    {
+     "code": "G076",
+     "catalogId": 376,
+     "title": "Se impersonal introductorio: instrucciones",
+     "path": "/gramatica/se-impersonal-introductorio-instrucciones",
+     "lesson": "app/grammar-classroom/live/lessons/g376.ts"
+    },
+    {
+     "code": "G077",
+     "catalogId": 377,
+     "title": "Conectores de secuencia y explicación",
+     "path": "/gramatica/conectores-de-secuencia-y-explicacion",
+     "lesson": "app/grammar-classroom/live/lessons/g377.ts"
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "classes": [
+    {
+     "code": "G078",
+     "catalogId": 214,
+     "title": "Si + presente: condiciones reales",
+     "path": "/si-pasa-esto",
+     "lesson": "app/grammar-classroom/live/lessons/g214.ts"
+    },
+    {
+     "code": "G079",
+     "catalogId": 379,
+     "title": "Preguntar sin imponer: podrías, te importaría",
+     "path": "/gramatica/preguntar-sin-imponer-podrias-te-importaria",
+     "lesson": "app/grammar-classroom/live/lessons/g379.ts"
+    }
+   ]
+  },
+  {
+   "week": 18,
+   "classes": [
+    {
+     "code": "G080",
+     "catalogId": 380,
+     "title": "Formas de obligación: hay que, deber, tener que",
+     "path": "/gramatica/formas-de-obligacion-hay-que-deber",
+     "lesson": "app/grammar-classroom/live/lessons/g380.ts"
+    },
+    {
+     "code": "G081",
+     "catalogId": 113,
+     "title": "Orden de la frase y focalización sencilla",
+     "path": "/una-oracion-puede-moverse",
+     "lesson": "app/grammar-classroom/live/lessons/g113.ts"
+    }
+   ]
+  },
+  {
+   "week": 19,
+   "classes": [
+    {
+     "code": "G082",
+     "catalogId": 382,
+     "title": "Construcciones con infinitivo, gerundio y participio",
+     "path": "/gramatica/construcciones-con-infinitivo-gerundio-y-participio",
+     "lesson": "app/grammar-classroom/live/lessons/g382.ts"
+    },
+    {
+     "code": "G083",
+     "catalogId": 383,
+     "title": "Preguntas indirectas iniciales: no sé dónde",
+     "path": "/gramatica/preguntas-indirectas-iniciales-no-se-donde",
+     "lesson": "app/grammar-classroom/live/lessons/g383.ts"
+    }
+   ]
+  },
+  {
+   "week": 20,
+   "classes": [
+    {
+     "code": "G084",
+     "catalogId": 384,
+     "title": "Expresar duración y frecuencia en pasado",
+     "path": "/gramatica/expresar-duracion-y-frecuencia-en-pasado",
+     "lesson": "app/grammar-classroom/live/lessons/g384.ts"
+    },
+    {
+     "code": "G085",
+     "catalogId": 385,
+     "title": "Revisión narrativa A2 y mensajes prácticos",
+     "path": "/gramatica/revision-narrativa-a2-y-mensajes-practicos",
+     "lesson": "app/grammar-classroom/live/lessons/g385.ts"
+    }
+   ]
+  }
+ ],
+ "b1": [
+  {
+   "week": 1,
+   "classes": [
+    {
+     "code": "G086",
+     "catalogId": 18,
+     "title": "Revisión de pasados: contar y describir con intención",
+     "path": "/past-b1",
+     "lesson": "app/grammar-classroom/live/lessons/g18.ts"
+    },
+    {
+     "code": "G087",
+     "catalogId": 147,
+     "title": "Pluscuamperfecto: hechos anteriores a otro pasado",
+     "path": "/sistema-verbal/preterito-pluscuamperfecto-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g147.ts"
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "classes": [
+    {
+     "code": "G088",
+     "catalogId": 148,
+     "title": "Presente de subjuntivo: formación y usos esenciales",
+     "path": "/sistema-verbal/presente-de-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g148.ts"
+    },
+    {
+     "code": "G089",
+     "catalogId": 389,
+     "title": "Deseos: querer que, esperar que, ojalá",
+     "path": "/gramatica/deseos-querer-que-esperar-que-ojala",
+     "lesson": "app/grammar-classroom/live/lessons/g389.ts"
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "classes": [
+    {
+     "code": "G090",
+     "catalogId": 390,
+     "title": "Recomendaciones: sugerir que, aconsejar que",
+     "path": "/gramatica/recomendaciones-sugerir-que-aconsejar-que",
+     "lesson": "app/grammar-classroom/live/lessons/g390.ts"
+    },
+    {
+     "code": "G091",
+     "catalogId": 391,
+     "title": "Valoraciones: es importante que, es bueno que",
+     "path": "/gramatica/valoraciones-es-importante-que-es-bueno",
+     "lesson": "app/grammar-classroom/live/lessons/g391.ts"
+    },
+    {
+     "code": "G092",
+     "catalogId": 392,
+     "title": "Emociones y reacciones con que + subjuntivo",
+     "path": "/gramatica/emociones-y-reacciones-con-que-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g392.ts"
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "classes": [
+    {
+     "code": "G093",
+     "catalogId": 393,
+     "title": "Opinión afirmativa frente a opinión negada",
+     "path": "/gramatica/opinion-afirmativa-frente-a-opinion-negada",
+     "lesson": "app/grammar-classroom/live/lessons/g393.ts"
+    },
+    {
+     "code": "G094",
+     "catalogId": 394,
+     "title": "Duda, posibilidad y certeza en enunciados",
+     "path": "/gramatica/duda-posibilidad-y-certeza-en-enunciados",
+     "lesson": "app/grammar-classroom/live/lessons/g394.ts"
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "classes": [
+    {
+     "code": "G095",
+     "catalogId": 395,
+     "title": "Infinitivo o que + subjuntivo: mismo sujeto / otro",
+     "path": "/gramatica/infinitivo-o-que-subjuntivo-mismo-sujeto",
+     "lesson": "app/grammar-classroom/live/lessons/g395.ts"
+    },
+    {
+     "code": "G096",
+     "catalogId": 396,
+     "title": "Imperativo y peticiones indirectas con subjuntivo",
+     "path": "/gramatica/imperativo-y-peticiones-indirectas-con-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g396.ts"
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "classes": [
+    {
+     "code": "G097",
+     "catalogId": 149,
+     "title": "Perfecto de subjuntivo: pasado valorado desde ahora",
+     "path": "/sistema-verbal/preterito-perfecto-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g149.ts"
+    },
+    {
+     "code": "G098",
+     "catalogId": 398,
+     "title": "Temporales futuras: cuando, en cuanto, hasta que",
+     "path": "/gramatica/temporales-futuras-cuando-en-cuanto-hasta",
+     "lesson": "app/grammar-classroom/live/lessons/g398.ts"
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "classes": [
+    {
+     "code": "G099",
+     "catalogId": 399,
+     "title": "Finales: para que, a fin de que",
+     "path": "/gramatica/finales-para-que-a-fin-de",
+     "lesson": "app/grammar-classroom/live/lessons/g399.ts"
+    },
+    {
+     "code": "G100",
+     "catalogId": 218,
+     "title": "Relativas con antecedente conocido o buscado",
+     "path": "/la-persona-que-tengo-en-mente",
+     "lesson": "app/grammar-classroom/live/lessons/g218.ts"
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "classes": [
+    {
+     "code": "G101",
+     "catalogId": 401,
+     "title": "Concesivas iniciales: aunque + indicativo",
+     "path": "/gramatica/concesivas-iniciales-aunque-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g401.ts"
+    },
+    {
+     "code": "G102",
+     "catalogId": 402,
+     "title": "Condiciones reales: si + presente y futuro",
+     "path": "/gramatica/condiciones-reales-si-presente-y-futuro",
+     "lesson": "app/grammar-classroom/live/lessons/g402.ts"
+    },
+    {
+     "code": "G103",
+     "catalogId": 146,
+     "title": "Condicional simple: consejos, cortesía e hipótesis",
+     "path": "/sistema-verbal/condicional-simple-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g146.ts"
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "classes": [
+    {
+     "code": "G104",
+     "catalogId": 31,
+     "title": "Condiciones y consejos en situaciones reales",
+     "path": "/condicionales-b1",
+     "lesson": "app/grammar-classroom/live/lessons/g31.ts"
+    },
+    {
+     "code": "G105",
+     "catalogId": 231,
+     "title": "Por y para: causa, propósito, plazo, destinatario",
+     "path": "/gramatica/por-para-razones-objetivos",
+     "lesson": "app/grammar-classroom/live/lessons/g231.ts"
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "classes": [
+    {
+     "code": "G106",
+     "catalogId": 406,
+     "title": "Perífrasis incoativas: empezar a, ponerse a",
+     "path": "/gramatica/perifrasis-incoativas-empezar-a-ponerse-a",
+     "lesson": "app/grammar-classroom/live/lessons/g406.ts"
+    },
+    {
+     "code": "G107",
+     "catalogId": 115,
+     "title": "Perífrasis durativas: seguir + gerundio",
+     "path": "/empezar-seguir-repetir-dejar-de-hacer",
+     "lesson": "app/grammar-classroom/live/lessons/g115.ts"
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "classes": [
+    {
+     "code": "G108",
+     "catalogId": 408,
+     "title": "Perífrasis terminativas: acabar de, dejar de",
+     "path": "/gramatica/perifrasis-terminativas-acabar-de-dejar-de",
+     "lesson": "app/grammar-classroom/live/lessons/g408.ts"
+    },
+    {
+     "code": "G109",
+     "catalogId": 409,
+     "title": "Volver a + infinitivo y repetición",
+     "path": "/gramatica/volver-a-infinitivo-y-repeticion",
+     "lesson": "app/grammar-classroom/live/lessons/g409.ts"
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "classes": [
+    {
+     "code": "G110",
+     "catalogId": 410,
+     "title": "Acostumbrarse a, tratar de, pensar en",
+     "path": "/gramatica/acostumbrarse-a-tratar-de-pensar-en",
+     "lesson": "app/grammar-classroom/live/lessons/g410.ts"
+    },
+    {
+     "code": "G238",
+     "catalogId": 538,
+     "title": "Verbos de cambio: hacerse, volverse, convertirse en, llegar a ser",
+     "path": "/gramatica/verbos-de-cambio-hacerse-volverse-convertirse-en",
+     "lesson": "app/grammar-classroom/live/lessons/g538.ts"
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "classes": [
+    {
+     "code": "G111",
+     "catalogId": 411,
+     "title": "Pronombres personales y doble mención temática",
+     "path": "/gramatica/pronombres-personales-y-doble-mencion-tematica",
+     "lesson": "app/grammar-classroom/live/lessons/g411.ts"
+    },
+    {
+     "code": "G112",
+     "catalogId": 412,
+     "title": "Relativos quien, el que, el cual introductorio",
+     "path": "/gramatica/relativos-quien-el-que-el-cual",
+     "lesson": "app/grammar-classroom/live/lessons/g412.ts"
+    },
+    {
+     "code": "G113",
+     "catalogId": 413,
+     "title": "Lo que y lo de: referencias a ideas",
+     "path": "/gramatica/lo-que-y-lo-de-referencias",
+     "lesson": "app/grammar-classroom/live/lessons/g413.ts"
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "classes": [
+    {
+     "code": "G114",
+     "catalogId": 217,
+     "title": "Conectores de contraste: ni… ni, aunque, sin embargo",
+     "path": "/pero-hay-un-matiz",
+     "lesson": "app/grammar-classroom/live/lessons/g217.ts"
+    },
+    {
+     "code": "G115",
+     "catalogId": 415,
+     "title": "Causales: ya que, puesto que, como",
+     "path": "/gramatica/causales-ya-que-puesto-que-como",
+     "lesson": "app/grammar-classroom/live/lessons/g415.ts"
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "classes": [
+    {
+     "code": "G116",
+     "catalogId": 416,
+     "title": "Consecutivas: así que, por eso, de modo que",
+     "path": "/gramatica/consecutivas-asi-que-por-eso-de",
+     "lesson": "app/grammar-classroom/live/lessons/g416.ts"
+    },
+    {
+     "code": "G117",
+     "catalogId": 417,
+     "title": "Conectores argumentativos: además, incluso, en cambio",
+     "path": "/gramatica/conectores-argumentativos-ademas-incluso-en-cambio",
+     "lesson": "app/grammar-classroom/live/lessons/g417.ts"
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "classes": [
+    {
+     "code": "G118",
+     "catalogId": 418,
+     "title": "Discurso referido introductorio: dijo que / pidió que",
+     "path": "/gramatica/discurso-referido-introductorio-dijo-que-pidio",
+     "lesson": "app/grammar-classroom/live/lessons/g418.ts"
+    },
+    {
+     "code": "G119",
+     "catalogId": 419,
+     "title": "Se pasivo y se impersonal introductorio",
+     "path": "/gramatica/se-pasivo-y-se-impersonal-introductorio",
+     "lesson": "app/grammar-classroom/live/lessons/g419.ts"
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "classes": [
+    {
+     "code": "G120",
+     "catalogId": 420,
+     "title": "Estar + participio para estados resultantes",
+     "path": "/gramatica/estar-participio-para-estados-resultantes",
+     "lesson": "app/grammar-classroom/live/lessons/g420.ts"
+    },
+    {
+     "code": "G121",
+     "catalogId": 421,
+     "title": "Diferencia entre ser + participio y estar + participio",
+     "path": "/gramatica/diferencia-entre-ser-participio-y-estar",
+     "lesson": "app/grammar-classroom/live/lessons/g421.ts"
+    }
+   ]
+  },
+  {
+   "week": 18,
+   "classes": [
+    {
+     "code": "G237",
+     "catalogId": 537,
+     "title": "Ser y estar con adjetivos que cambian de significado",
+     "path": "/gramatica/ser-y-estar-con-adjetivos-que-cambian-de-significado",
+     "lesson": "app/grammar-classroom/live/lessons/g537.ts"
+    },
+    {
+     "code": "G122",
+     "catalogId": 422,
+     "title": "Orden de pronombres y clíticos más complejo",
+     "path": "/gramatica/orden-de-pronombres-y-cliticos-mas",
+     "lesson": "app/grammar-classroom/live/lessons/g422.ts"
+    },
+    {
+     "code": "G123",
+     "catalogId": 423,
+     "title": "Concordancia compleja con colectivos y cantidades",
+     "path": "/gramatica/concordancia-compleja-con-colectivos-y-cantidades",
+     "lesson": "app/grammar-classroom/live/lessons/g423.ts"
+    }
+   ]
+  },
+  {
+   "week": 19,
+   "classes": [
+    {
+     "code": "G124",
+     "catalogId": 114,
+     "title": "Elipsis y reformulación: evitar repeticiones",
+     "path": "/decir-mas-sin-repetir",
+     "lesson": "app/grammar-classroom/live/lessons/g114.ts"
+    },
+    {
+     "code": "G125",
+     "catalogId": 425,
+     "title": "Narración de anécdotas con marcadores",
+     "path": "/gramatica/narracion-de-anecdotas-con-marcadores",
+     "lesson": "app/grammar-classroom/live/lessons/g425.ts"
+    }
+   ]
+  },
+  {
+   "week": 20,
+   "classes": [
+    {
+     "code": "G126",
+     "catalogId": 426,
+     "title": "Comparar hipótesis y posibilidades",
+     "path": "/gramatica/comparar-hipotesis-y-posibilidades",
+     "lesson": "app/grammar-classroom/live/lessons/g426.ts"
+    },
+    {
+     "code": "G127",
+     "catalogId": 427,
+     "title": "Argumentación y toma de decisiones B1",
+     "path": "/gramatica/argumentacion-y-toma-de-decisiones-b1",
+     "lesson": "app/grammar-classroom/live/lessons/g427.ts"
+    }
+   ]
+  }
+ ],
+ "b2": [
+  {
+   "week": 1,
+   "classes": [
+    {
+     "code": "G128",
+     "catalogId": 150,
+     "title": "Imperfecto de subjuntivo: formas -ra y -se",
+     "path": "/sistema-verbal/preterito-imperfecto-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g150.ts"
+    },
+    {
+     "code": "G129",
+     "catalogId": 429,
+     "title": "Subjuntivo tras verbos de influencia en pasado",
+     "path": "/gramatica/subjuntivo-tras-verbos-de-influencia-en",
+     "lesson": "app/grammar-classroom/live/lessons/g429.ts"
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "classes": [
+    {
+     "code": "G130",
+     "catalogId": 430,
+     "title": "Correlación temporal: presente, pasado y futuro",
+     "path": "/gramatica/correlacion-temporal-presente-pasado-y-futuro",
+     "lesson": "app/grammar-classroom/live/lessons/g430.ts"
+    },
+    {
+     "code": "G131",
+     "catalogId": 219,
+     "title": "Si + imperfecto de subjuntivo + condicional",
+     "path": "/si-fuera-distinto",
+     "lesson": "app/grammar-classroom/live/lessons/g219.ts"
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "classes": [
+    {
+     "code": "G132",
+     "catalogId": 23,
+     "title": "Condiciones del pasado y resultados alternativos",
+     "path": "/condicionales",
+     "lesson": "app/grammar-classroom/live/lessons/g23.ts"
+    },
+    {
+     "code": "G133",
+     "catalogId": 151,
+     "title": "Pluscuamperfecto de subjuntivo: pasado no realizado",
+     "path": "/sistema-verbal/preterito-pluscuamperfecto-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g151.ts"
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "classes": [
+    {
+     "code": "G134",
+     "catalogId": 152,
+     "title": "Condicional compuesto: hipótesis y reproches",
+     "path": "/sistema-verbal/condicional-compuesto-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g152.ts"
+    },
+    {
+     "code": "G135",
+     "catalogId": 435,
+     "title": "Condicionales mixtas: pasado y consecuencia presente",
+     "path": "/gramatica/condicionales-mixtas-pasado-y-consecuencia-presente",
+     "lesson": "app/grammar-classroom/live/lessons/g435.ts"
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "classes": [
+    {
+     "code": "G239",
+     "catalogId": 539,
+     "title": "Condiciones con otros nexos",
+     "path": "/gramatica/condiciones-con-otros-nexos",
+     "lesson": "app/grammar-classroom/live/lessons/g539.ts"
+    },
+    {
+     "code": "G136",
+     "catalogId": 436,
+     "title": "Como si + imperfecto / pluscuamperfecto subjuntivo",
+     "path": "/gramatica/como-si-imperfecto-pluscuamperfecto-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g436.ts"
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "classes": [
+    {
+     "code": "G137",
+     "catalogId": 220,
+     "title": "Concesión: aunque + indicativo / subjuntivo",
+     "path": "/aunque-cambie-el-dato",
+     "lesson": "app/grammar-classroom/live/lessons/g220.ts"
+    },
+    {
+     "code": "G138",
+     "catalogId": 438,
+     "title": "A pesar de que, por mucho que, por más que",
+     "path": "/gramatica/a-pesar-de-que-por-mucho",
+     "lesson": "app/grammar-classroom/live/lessons/g438.ts"
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "classes": [
+    {
+     "code": "G139",
+     "catalogId": 439,
+     "title": "Temporales con subjuntivo para futuro incierto",
+     "path": "/gramatica/temporales-con-subjuntivo-para-futuro-incierto",
+     "lesson": "app/grammar-classroom/live/lessons/g439.ts"
+    },
+    {
+     "code": "G140",
+     "catalogId": 440,
+     "title": "Finales con subjuntivo: con el fin de que, sin que",
+     "path": "/gramatica/finales-con-subjuntivo-con-el-fin",
+     "lesson": "app/grammar-classroom/live/lessons/g440.ts"
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "classes": [
+    {
+     "code": "G141",
+     "catalogId": 441,
+     "title": "Subordinadas modales y comparativas irreales",
+     "path": "/gramatica/subordinadas-modales-y-comparativas-irreales",
+     "lesson": "app/grammar-classroom/live/lessons/g441.ts"
+    },
+    {
+     "code": "G142",
+     "catalogId": 234,
+     "title": "Relativos con preposición: de quien, a quien, con el que",
+     "path": "/gramatica/relativos-con-preposicion",
+     "lesson": "app/grammar-classroom/live/lessons/g234.ts"
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "classes": [
+    {
+     "code": "G143",
+     "catalogId": 443,
+     "title": "Cuyo/a/os/as y relativos de posesión",
+     "path": "/gramatica/cuyo-a-os-as-y-relativos",
+     "lesson": "app/grammar-classroom/live/lessons/g443.ts"
+    },
+    {
+     "code": "G144",
+     "catalogId": 444,
+     "title": "Referentes abstractos: lo cual, lo que, aquello que",
+     "path": "/gramatica/referentes-abstractos-lo-cual-lo-que",
+     "lesson": "app/grammar-classroom/live/lessons/g444.ts"
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "classes": [
+    {
+     "code": "G145",
+     "catalogId": 445,
+     "title": "Antecedentes desconocidos: dondequiera que, cualquiera que",
+     "path": "/gramatica/antecedentes-desconocidos-dondequiera-que-cualquiera-que",
+     "lesson": "app/grammar-classroom/live/lessons/g445.ts"
+    },
+    {
+     "code": "G146",
+     "catalogId": 233,
+     "title": "Estilo indirecto: afirmaciones, preguntas, mandatos",
+     "path": "/gramatica/estilo-indirecto-transmitir",
+     "lesson": "app/grammar-classroom/live/lessons/g233.ts"
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "classes": [
+    {
+     "code": "G147",
+     "catalogId": 447,
+     "title": "Cambio de deícticos: aquí/allí, hoy/ese día",
+     "path": "/gramatica/cambio-de-deicticos-aqui-alli-hoy",
+     "lesson": "app/grammar-classroom/live/lessons/g447.ts"
+    },
+    {
+     "code": "G148",
+     "catalogId": 232,
+     "title": "Pasiva perifrástica: ser + participio",
+     "path": "/gramatica/pasiva-impersonal-informar",
+     "lesson": "app/grammar-classroom/live/lessons/g232.ts"
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "classes": [
+    {
+     "code": "G149",
+     "catalogId": 449,
+     "title": "Se pasivo, se impersonal y activo contrastados",
+     "path": "/gramatica/se-pasivo-se-impersonal-y-activo",
+     "lesson": "app/grammar-classroom/live/lessons/g449.ts"
+    },
+    {
+     "code": "G150",
+     "catalogId": 450,
+     "title": "Se accidental y responsabilidad atenuada",
+     "path": "/gramatica/se-accidental-y-responsabilidad-atenuada",
+     "lesson": "app/grammar-classroom/live/lessons/g450.ts"
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "classes": [
+    {
+     "code": "G151",
+     "catalogId": 117,
+     "title": "Verbos que rigen preposición: confiar en, depender de",
+     "path": "/verbos-que-piden-una-estructura",
+     "lesson": "app/grammar-classroom/live/lessons/g117.ts"
+    },
+    {
+     "code": "G152",
+     "catalogId": 452,
+     "title": "Oraciones sustantivas complejas: el hecho de que",
+     "path": "/gramatica/oraciones-sustantivas-complejas-el-hecho-de",
+     "lesson": "app/grammar-classroom/live/lessons/g452.ts"
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "classes": [
+    {
+     "code": "G153",
+     "catalogId": 453,
+     "title": "Oraciones causales avanzadas: no porque + subjuntivo",
+     "path": "/gramatica/oraciones-causales-avanzadas-no-porque-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g453.ts"
+    },
+    {
+     "code": "G154",
+     "catalogId": 235,
+     "title": "Consecutivas de intensidad: tan, tanto, tal… que",
+     "path": "/gramatica/consecuencias-tan-tanto",
+     "lesson": "app/grammar-classroom/live/lessons/g235.ts"
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "classes": [
+    {
+     "code": "G155",
+     "catalogId": 455,
+     "title": "Comparativas proporcionales: cuanto más, más",
+     "path": "/gramatica/comparativas-proporcionales-cuanto-mas-mas",
+     "lesson": "app/grammar-classroom/live/lessons/g455.ts"
+    },
+    {
+     "code": "G156",
+     "catalogId": 456,
+     "title": "Conectores de concesión y objeción",
+     "path": "/gramatica/conectores-de-concesion-y-objecion",
+     "lesson": "app/grammar-classroom/live/lessons/g456.ts"
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "classes": [
+    {
+     "code": "G157",
+     "catalogId": 457,
+     "title": "Participios y adjetivos resultativos",
+     "path": "/gramatica/participios-y-adjetivos-resultativos",
+     "lesson": "app/grammar-classroom/live/lessons/g457.ts"
+    },
+    {
+     "code": "G158",
+     "catalogId": 458,
+     "title": "Perífrasis de obligación e inferencia",
+     "path": "/gramatica/perifrasis-de-obligacion-e-inferencia",
+     "lesson": "app/grammar-classroom/live/lessons/g458.ts"
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "classes": [
+    {
+     "code": "G159",
+     "catalogId": 459,
+     "title": "Perífrasis aspectuales avanzadas",
+     "path": "/gramatica/perifrasis-aspectuales-avanzadas",
+     "lesson": "app/grammar-classroom/live/lessons/g459.ts"
+    },
+    {
+     "code": "G160",
+     "catalogId": 153,
+     "title": "Futuro compuesto: anterioridad y conjetura",
+     "path": "/sistema-verbal/futuro-compuesto-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g153.ts"
+    }
+   ]
+  },
+  {
+   "week": 18,
+   "classes": [
+    {
+     "code": "G161",
+     "catalogId": 461,
+     "title": "Futuro y condicional de probabilidad",
+     "path": "/gramatica/futuro-y-condicional-de-probabilidad",
+     "lesson": "app/grammar-classroom/live/lessons/g461.ts"
+    },
+    {
+     "code": "G162",
+     "catalogId": 116,
+     "title": "Nominalización y grupos nominales complejos",
+     "path": "/precision-grupo-nominal-adjetival",
+     "lesson": "app/grammar-classroom/live/lessons/g116.ts"
+    }
+   ]
+  },
+  {
+   "week": 19,
+   "classes": [
+    {
+     "code": "G163",
+     "catalogId": 463,
+     "title": "Pronombres: redundancia, duplicación y foco",
+     "path": "/gramatica/pronombres-redundancia-duplicacion-y-foco",
+     "lesson": "app/grammar-classroom/live/lessons/g463.ts"
+    },
+    {
+     "code": "G164",
+     "catalogId": 464,
+     "title": "Registro: cortesía, distancia y mandato",
+     "path": "/gramatica/registro-cortesia-distancia-y-mandato",
+     "lesson": "app/grammar-classroom/live/lessons/g464.ts"
+    }
+   ]
+  },
+  {
+   "week": 20,
+   "classes": [
+    {
+     "code": "G165",
+     "catalogId": 465,
+     "title": "Conectores para exposición y refutación",
+     "path": "/gramatica/conectores-para-exposicion-y-refutacion",
+     "lesson": "app/grammar-classroom/live/lessons/g465.ts"
+    },
+    {
+     "code": "G166",
+     "catalogId": 466,
+     "title": "Síntesis B2: debate, explicación y texto formal",
+     "path": "/gramatica/sintesis-b2-debate-explicacion-y-texto",
+     "lesson": "app/grammar-classroom/live/lessons/g466.ts"
+    }
+   ]
+  }
+ ],
+ "c1": [
+  {
+   "week": 1,
+   "classes": [
+    {
+     "code": "G167",
+     "catalogId": 37,
+     "title": "Concordancia temporal del subjuntivo en contextos complejos",
+     "path": "/subjuntivo-pais-maravillas",
+     "lesson": "app/grammar-classroom/live/lessons/g37.ts"
+    },
+    {
+     "code": "G168",
+     "catalogId": 468,
+     "title": "Alternancia de indicativo y subjuntivo según postura",
+     "path": "/gramatica/alternancia-de-indicativo-y-subjuntivo-segun",
+     "lesson": "app/grammar-classroom/live/lessons/g468.ts"
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "classes": [
+    {
+     "code": "G169",
+     "catalogId": 469,
+     "title": "Subjuntivo en relativas no específicas y genéricas",
+     "path": "/gramatica/subjuntivo-en-relativas-no-especificas-y",
+     "lesson": "app/grammar-classroom/live/lessons/g469.ts"
+    },
+    {
+     "code": "G170",
+     "catalogId": 470,
+     "title": "Alternancias en concesivas con valor pragmático",
+     "path": "/gramatica/alternancias-en-concesivas-con-valor-pragmatico",
+     "lesson": "app/grammar-classroom/live/lessons/g470.ts"
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "classes": [
+    {
+     "code": "G171",
+     "catalogId": 471,
+     "title": "Hipótesis remotas y contrafactualidad retórica",
+     "path": "/gramatica/hipotesis-remotas-y-contrafactualidad-retorica",
+     "lesson": "app/grammar-classroom/live/lessons/g471.ts"
+    },
+    {
+     "code": "G172",
+     "catalogId": 472,
+     "title": "Condicionales elípticas: de + infinitivo / gerundio",
+     "path": "/gramatica/condicionales-elipticas-de-infinitivo-gerundio",
+     "lesson": "app/grammar-classroom/live/lessons/g472.ts"
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "classes": [
+    {
+     "code": "G173",
+     "catalogId": 473,
+     "title": "Modalidad epistémica: evidencialidad y grados de certeza",
+     "path": "/gramatica/modalidad-epistemica-evidencialidad-y-grados-de",
+     "lesson": "app/grammar-classroom/live/lessons/g473.ts"
+    },
+    {
+     "code": "G174",
+     "catalogId": 474,
+     "title": "Probabilidad retrospectiva y condicional compuesto",
+     "path": "/gramatica/probabilidad-retrospectiva-y-condicional-compuesto",
+     "lesson": "app/grammar-classroom/live/lessons/g474.ts"
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "classes": [
+    {
+     "code": "G175",
+     "catalogId": 119,
+     "title": "Aspecto y perífrasis: duración, fase, reiteración",
+     "path": "/la-accion-vista-desde-dentro",
+     "lesson": "app/grammar-classroom/live/lessons/g119.ts"
+    },
+    {
+     "code": "G176",
+     "catalogId": 476,
+     "title": "Valores interpretativos del gerundio y participio",
+     "path": "/gramatica/valores-interpretativos-del-gerundio-y-participio",
+     "lesson": "app/grammar-classroom/live/lessons/g476.ts"
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "classes": [
+    {
+     "code": "G177",
+     "catalogId": 477,
+     "title": "Absolutas de participio y reducción de subordinadas",
+     "path": "/gramatica/absolutas-de-participio-y-reduccion-de",
+     "lesson": "app/grammar-classroom/live/lessons/g477.ts"
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "classes": [
+    {
+     "code": "G178",
+     "catalogId": 478,
+     "title": "Infinitivos dependientes y sujetos implícitos",
+     "path": "/gramatica/infinitivos-dependientes-y-sujetos-implicitos",
+     "lesson": "app/grammar-classroom/live/lessons/g478.ts"
+    },
+    {
+     "code": "G179",
+     "catalogId": 479,
+     "title": "Relativas complejas: cuyo, el cual, lo cual",
+     "path": "/gramatica/relativas-complejas-cuyo-el-cual-lo",
+     "lesson": "app/grammar-classroom/live/lessons/g479.ts"
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "classes": [
+    {
+     "code": "G180",
+     "catalogId": 480,
+     "title": "Queísmo y dequeísmo: régimen y norma",
+     "path": "/gramatica/queismo-y-dequeismo-regimen-y-norma",
+     "lesson": "app/grammar-classroom/live/lessons/g480.ts"
+    },
+    {
+     "code": "G181",
+     "catalogId": 481,
+     "title": "Pronombres átonos: leísmo, laísmo, loísmo y variedades",
+     "path": "/gramatica/pronombres-atonos-leismo-laismo-loismo-y",
+     "lesson": "app/grammar-classroom/live/lessons/g481.ts"
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "classes": [
+    {
+     "code": "G182",
+     "catalogId": 482,
+     "title": "Se medio, se reflexivo, se dativo ético",
+     "path": "/gramatica/se-medio-se-reflexivo-se-dativo",
+     "lesson": "app/grammar-classroom/live/lessons/g482.ts"
+    },
+    {
+     "code": "G183",
+     "catalogId": 483,
+     "title": "Pasiva y estructuras impersonales con foco discursivo",
+     "path": "/gramatica/pasiva-y-estructuras-impersonales-con-foco",
+     "lesson": "app/grammar-classroom/live/lessons/g483.ts"
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "classes": [
+    {
+     "code": "G184",
+     "catalogId": 484,
+     "title": "Cambios de orden y focalización: tema/rema",
+     "path": "/gramatica/cambios-de-orden-y-focalizacion-tema",
+     "lesson": "app/grammar-classroom/live/lessons/g484.ts"
+    },
+    {
+     "code": "G185",
+     "catalogId": 485,
+     "title": "Anteposición, dislocación y clíticos duplicados",
+     "path": "/gramatica/anteposicion-dislocacion-y-cliticos-duplicados",
+     "lesson": "app/grammar-classroom/live/lessons/g485.ts"
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "classes": [
+    {
+     "code": "G186",
+     "catalogId": 118,
+     "title": "Ambigüedad sintáctica y dos interpretaciones",
+     "path": "/cuando-una-frase-puede-significar-dos-cosas",
+     "lesson": "app/grammar-classroom/live/lessons/g118.ts"
+    },
+    {
+     "code": "G187",
+     "catalogId": 487,
+     "title": "Elipsis verbal, nominal y anafórica avanzadas",
+     "path": "/gramatica/elipsis-verbal-nominal-y-anaforica-avanzadas",
+     "lesson": "app/grammar-classroom/live/lessons/g487.ts"
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "classes": [
+    {
+     "code": "G188",
+     "catalogId": 488,
+     "title": "Nominalizaciones evaluativas y densidad informativa",
+     "path": "/gramatica/nominalizaciones-evaluativas-y-densidad-informativa",
+     "lesson": "app/grammar-classroom/live/lessons/g488.ts"
+    },
+    {
+     "code": "G189",
+     "catalogId": 489,
+     "title": "Conectores de reformulación: es decir, a saber, mejor dicho",
+     "path": "/gramatica/conectores-de-reformulacion-es-decir-a",
+     "lesson": "app/grammar-classroom/live/lessons/g489.ts"
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "classes": [
+    {
+     "code": "G190",
+     "catalogId": 490,
+     "title": "Conectores contraargumentativos y restrictivos",
+     "path": "/gramatica/conectores-contraargumentativos-y-restrictivos",
+     "lesson": "app/grammar-classroom/live/lessons/g490.ts"
+    },
+    {
+     "code": "G191",
+     "catalogId": 491,
+     "title": "Atenuación: en cierto modo, hasta cierto punto",
+     "path": "/gramatica/atenuacion-en-cierto-modo-hasta-cierto",
+     "lesson": "app/grammar-classroom/live/lessons/g491.ts"
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "classes": [
+    {
+     "code": "G192",
+     "catalogId": 492,
+     "title": "Intensificación y énfasis: ni siquiera, incluso, vaya si",
+     "path": "/gramatica/intensificacion-y-enfasis-ni-siquiera-incluso",
+     "lesson": "app/grammar-classroom/live/lessons/g492.ts"
+    },
+    {
+     "code": "G193",
+     "catalogId": 493,
+     "title": "Polifonía y atribución: según, supuestamente, se dice",
+     "path": "/gramatica/polifonia-y-atribucion-segun-supuestamente-se",
+     "lesson": "app/grammar-classroom/live/lessons/g493.ts"
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "classes": [
+    {
+     "code": "G194",
+     "catalogId": 494,
+     "title": "Citas indirectas y distanciamiento en textos",
+     "path": "/gramatica/citas-indirectas-y-distanciamiento-en-textos",
+     "lesson": "app/grammar-classroom/live/lessons/g494.ts"
+    },
+    {
+     "code": "G195",
+     "catalogId": 495,
+     "title": "Concordancia especial y sujetos pospuestos",
+     "path": "/gramatica/concordancia-especial-y-sujetos-pospuestos",
+     "lesson": "app/grammar-classroom/live/lessons/g495.ts"
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "classes": [
+    {
+     "code": "G196",
+     "catalogId": 496,
+     "title": "Interrogativas retóricas y exclamativas complejas",
+     "path": "/gramatica/interrogativas-retoricas-y-exclamativas-complejas",
+     "lesson": "app/grammar-classroom/live/lessons/g496.ts"
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "classes": [
+    {
+     "code": "G197",
+     "catalogId": 497,
+     "title": "Puntuación de incisos, aclaraciones y conectores",
+     "path": "/gramatica/puntuacion-de-incisos-aclaraciones-y-conectores",
+     "lesson": "app/grammar-classroom/live/lessons/g497.ts"
+    },
+    {
+     "code": "G198",
+     "catalogId": 498,
+     "title": "Estilo formal: impersonalidad, cortesía y precisión",
+     "path": "/gramatica/estilo-formal-impersonalidad-cortesia-y-precision",
+     "lesson": "app/grammar-classroom/live/lessons/g498.ts"
+    }
+   ]
+  },
+  {
+   "week": 18,
+   "classes": [
+    {
+     "code": "G199",
+     "catalogId": 499,
+     "title": "Estilo coloquial: estructuras expresivas y suspensión",
+     "path": "/gramatica/estilo-coloquial-estructuras-expresivas-y-suspension",
+     "lesson": "app/grammar-classroom/live/lessons/g499.ts"
+    },
+    {
+     "code": "G200",
+     "catalogId": 500,
+     "title": "Uso no literal de tiempos verbales",
+     "path": "/gramatica/uso-no-literal-de-tiempos-verbales",
+     "lesson": "app/grammar-classroom/live/lessons/g500.ts"
+    }
+   ]
+  },
+  {
+   "week": 19,
+   "classes": [
+    {
+     "code": "G201",
+     "catalogId": 154,
+     "title": "Pretérito anterior: reconocimiento en textos literarios",
+     "path": "/sistema-verbal/preterito-anterior-indicativo",
+     "lesson": "app/grammar-classroom/live/lessons/g154.ts"
+    },
+    {
+     "code": "G202",
+     "catalogId": 155,
+     "title": "Futuro de subjuntivo: uso jurídico e histórico receptivo",
+     "path": "/sistema-verbal/futuro-simple-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g155.ts"
+    }
+   ]
+  },
+  {
+   "week": 20,
+   "classes": [
+    {
+     "code": "G203",
+     "catalogId": 503,
+     "title": "Oraciones restrictivas, explicativas y puntuación",
+     "path": "/gramatica/oraciones-restrictivas-explicativas-y-puntuacion",
+     "lesson": "app/grammar-classroom/live/lessons/g503.ts"
+    },
+    {
+     "code": "G204",
+     "catalogId": 504,
+     "title": "Revisión argumentativa C1: coherencia, cohesión y matiz",
+     "path": "/gramatica/revision-argumentativa-c1-coherencia-cohesion-y",
+     "lesson": "app/grammar-classroom/live/lessons/g504.ts"
+    }
+   ]
+  }
+ ],
+ "c2": [
+  {
+   "week": 1,
+   "classes": [
+    {
+     "code": "G205",
+     "catalogId": 156,
+     "title": "Futuro perfecto de subjuntivo: reconocimiento histórico",
+     "path": "/sistema-verbal/futuro-perfecto-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g156.ts"
+    },
+    {
+     "code": "G206",
+     "catalogId": 506,
+     "title": "Reformulación moderna de tiempos históricos",
+     "path": "/gramatica/reformulacion-moderna-de-tiempos-historicos",
+     "lesson": "app/grammar-classroom/live/lessons/g506.ts"
+    }
+   ]
+  },
+  {
+   "week": 2,
+   "classes": [
+    {
+     "code": "G207",
+     "catalogId": 507,
+     "title": "Selección fina de indicativo y subjuntivo según perspectiva",
+     "path": "/gramatica/seleccion-fina-de-indicativo-y-subjuntivo",
+     "lesson": "app/grammar-classroom/live/lessons/g507.ts"
+    }
+   ]
+  },
+  {
+   "week": 3,
+   "classes": [
+    {
+     "code": "G208",
+     "catalogId": 508,
+     "title": "Valores discursivos del condicional de rumor",
+     "path": "/gramatica/valores-discursivos-del-condicional-de-rumor",
+     "lesson": "app/grammar-classroom/live/lessons/g508.ts"
+    },
+    {
+     "code": "G209",
+     "catalogId": 509,
+     "title": "Correlaciones temporales complejas y cambios de plano",
+     "path": "/gramatica/correlaciones-temporales-complejas-y-cambios-de",
+     "lesson": "app/grammar-classroom/live/lessons/g509.ts"
+    }
+   ]
+  },
+  {
+   "week": 4,
+   "classes": [
+    {
+     "code": "G210",
+     "catalogId": 510,
+     "title": "Subordinación múltiple sin pérdida de referentes",
+     "path": "/gramatica/subordinacion-multiple-sin-perdida-de-referentes",
+     "lesson": "app/grammar-classroom/live/lessons/g510.ts"
+    }
+   ]
+  },
+  {
+   "week": 5,
+   "classes": [
+    {
+     "code": "G211",
+     "catalogId": 511,
+     "title": "Construcciones parentéticas y anacolutos controlados",
+     "path": "/gramatica/construcciones-parenteticas-y-anacolutos-controlados",
+     "lesson": "app/grammar-classroom/live/lessons/g511.ts"
+    },
+    {
+     "code": "G212",
+     "catalogId": 512,
+     "title": "Elipsis compleja y recuperación inferencial",
+     "path": "/gramatica/elipsis-compleja-y-recuperacion-inferencial",
+     "lesson": "app/grammar-classroom/live/lessons/g512.ts"
+    }
+   ]
+  },
+  {
+   "week": 6,
+   "classes": [
+    {
+     "code": "G213",
+     "catalogId": 513,
+     "title": "Ambigüedad intencional y ambigüedad accidental",
+     "path": "/gramatica/ambiguedad-intencional-y-ambiguedad-accidental",
+     "lesson": "app/grammar-classroom/live/lessons/g513.ts"
+    },
+    {
+     "code": "G214",
+     "catalogId": 514,
+     "title": "Gramaticalidad, aceptabilidad y variación real",
+     "path": "/gramatica/gramaticalidad-aceptabilidad-y-variacion-real",
+     "lesson": "app/grammar-classroom/live/lessons/g514.ts"
+    }
+   ]
+  },
+  {
+   "week": 7,
+   "classes": [
+    {
+     "code": "G215",
+     "catalogId": 515,
+     "title": "Voseo, tuteo y ustedeo: cambios pragmáticos de registro",
+     "path": "/gramatica/voseo-tuteo-y-ustedeo-cambios-pragmaticos",
+     "lesson": "app/grammar-classroom/live/lessons/g515.ts"
+    }
+   ]
+  },
+  {
+   "week": 8,
+   "classes": [
+    {
+     "code": "G216",
+     "catalogId": 516,
+     "title": "Variación regional del pasado perfecto y evidencialidad",
+     "path": "/gramatica/variacion-regional-del-pasado-perfecto-y",
+     "lesson": "app/grammar-classroom/live/lessons/g516.ts"
+    },
+    {
+     "code": "G217",
+     "catalogId": 517,
+     "title": "Leísmo y régimen pronominal en variedades cultas",
+     "path": "/gramatica/leismo-y-regimen-pronominal-en-variedades",
+     "lesson": "app/grammar-classroom/live/lessons/g517.ts"
+    }
+   ]
+  },
+  {
+   "week": 9,
+   "classes": [
+    {
+     "code": "G218",
+     "catalogId": 518,
+     "title": "Perífrasis discursivas de ironía y distanciamiento",
+     "path": "/gramatica/perifrasis-discursivas-de-ironia-y-distanciamiento",
+     "lesson": "app/grammar-classroom/live/lessons/g518.ts"
+    }
+   ]
+  },
+  {
+   "week": 10,
+   "classes": [
+    {
+     "code": "G219",
+     "catalogId": 519,
+     "title": "Foco, presuposición y estructura informativa",
+     "path": "/gramatica/foco-presuposicion-y-estructura-informativa",
+     "lesson": "app/grammar-classroom/live/lessons/g519.ts"
+    },
+    {
+     "code": "G220",
+     "catalogId": 520,
+     "title": "Tema, rema y orden marcado en textos complejos",
+     "path": "/gramatica/tema-rema-y-orden-marcado-en",
+     "lesson": "app/grammar-classroom/live/lessons/g520.ts"
+    }
+   ]
+  },
+  {
+   "week": 11,
+   "classes": [
+    {
+     "code": "G221",
+     "catalogId": 521,
+     "title": "Modalización sutil: certeza, reserva e insinuación",
+     "path": "/gramatica/modalizacion-sutil-certeza-reserva-e-insinuacion",
+     "lesson": "app/grammar-classroom/live/lessons/g521.ts"
+    },
+    {
+     "code": "G222",
+     "catalogId": 522,
+     "title": "Cortesía estratégica y amenaza a la imagen",
+     "path": "/gramatica/cortesia-estrategica-y-amenaza-a-la",
+     "lesson": "app/grammar-classroom/live/lessons/g522.ts"
+    }
+   ]
+  },
+  {
+   "week": 12,
+   "classes": [
+    {
+     "code": "G223",
+     "catalogId": 523,
+     "title": "Ironía, litotes y negación pragmática",
+     "path": "/gramatica/ironia-litotes-y-negacion-pragmatica",
+     "lesson": "app/grammar-classroom/live/lessons/g523.ts"
+    }
+   ]
+  },
+  {
+   "week": 13,
+   "classes": [
+    {
+     "code": "G224",
+     "catalogId": 524,
+     "title": "Marcadores conversacionales de negociación fina",
+     "path": "/gramatica/marcadores-conversacionales-de-negociacion-fina",
+     "lesson": "app/grammar-classroom/live/lessons/g524.ts"
+    },
+    {
+     "code": "G225",
+     "catalogId": 525,
+     "title": "Discursos académicos: cautela metodológica",
+     "path": "/gramatica/discursos-academicos-cautela-metodologica",
+     "lesson": "app/grammar-classroom/live/lessons/g525.ts"
+    }
+   ]
+  },
+  {
+   "week": 14,
+   "classes": [
+    {
+     "code": "G226",
+     "catalogId": 526,
+     "title": "Discursos jurídicos y administrativos: sintaxis densa",
+     "path": "/gramatica/discursos-juridicos-y-administrativos-sintaxis-densa",
+     "lesson": "app/grammar-classroom/live/lessons/g526.ts"
+    }
+   ]
+  },
+  {
+   "week": 15,
+   "classes": [
+    {
+     "code": "G227",
+     "catalogId": 527,
+     "title": "Discursos periodísticos: atribución y precisión",
+     "path": "/gramatica/discursos-periodisticos-atribucion-y-precision",
+     "lesson": "app/grammar-classroom/live/lessons/g527.ts"
+    },
+    {
+     "code": "G228",
+     "catalogId": 528,
+     "title": "Reformulación entre registro técnico y cotidiano",
+     "path": "/gramatica/reformulacion-entre-registro-tecnico-y-cotidiano",
+     "lesson": "app/grammar-classroom/live/lessons/g528.ts"
+    }
+   ]
+  },
+  {
+   "week": 16,
+   "classes": [
+    {
+     "code": "G229",
+     "catalogId": 529,
+     "title": "Paráfrasis avanzada preservando compromiso epistémico",
+     "path": "/gramatica/parafrasis-avanzada-preservando-compromiso-epistemico",
+     "lesson": "app/grammar-classroom/live/lessons/g529.ts"
+    },
+    {
+     "code": "G230",
+     "catalogId": 530,
+     "title": "Conectores raros y valores específicos",
+     "path": "/gramatica/conectores-raros-y-valores-especificos",
+     "lesson": "app/grammar-classroom/live/lessons/g530.ts"
+    }
+   ]
+  },
+  {
+   "week": 17,
+   "classes": [
+    {
+     "code": "G231",
+     "catalogId": 531,
+     "title": "Puntuación avanzada: punto y coma, dos puntos e incisos",
+     "path": "/gramatica/puntuacion-avanzada-punto-y-coma-dos",
+     "lesson": "app/grammar-classroom/live/lessons/g531.ts"
+    }
+   ]
+  },
+  {
+   "week": 18,
+   "classes": [
+    {
+     "code": "G232",
+     "catalogId": 532,
+     "title": "Ortografía académica y variación admisible",
+     "path": "/gramatica/ortografia-academica-y-variacion-admisible",
+     "lesson": "app/grammar-classroom/live/lessons/g532.ts"
+    },
+    {
+     "code": "G233",
+     "catalogId": 533,
+     "title": "Sintaxis textual: cohesión anafórica de largo alcance",
+     "path": "/gramatica/sintaxis-textual-cohesion-anaforica-de-largo",
+     "lesson": "app/grammar-classroom/live/lessons/g533.ts"
+    }
+   ]
+  },
+  {
+   "week": 19,
+   "classes": [
+    {
+     "code": "G234",
+     "catalogId": 534,
+     "title": "Análisis crítico de sesgos sintácticos y presuposiciones",
+     "path": "/gramatica/analisis-critico-de-sesgos-sintacticos-y",
+     "lesson": "app/grammar-classroom/live/lessons/g534.ts"
+    }
+   ]
+  },
+  {
+   "week": 20,
+   "classes": [
+    {
+     "code": "G235",
+     "catalogId": 535,
+     "title": "Producción y revisión de ensayo argumentativo C2",
+     "path": "/gramatica/produccion-y-revision-de-ensayo-argumentativo",
+     "lesson": "app/grammar-classroom/live/lessons/g535.ts"
+    },
+    {
+     "code": "G236",
+     "catalogId": 536,
+     "title": "Proyecto C2: mediación, síntesis y defensa de posturas",
+     "path": "/gramatica/proyecto-c2-mediacion-sintesis-y-defensa",
+     "lesson": "app/grammar-classroom/live/lessons/g536.ts"
+    }
+   ]
+  }
+ ]
+}

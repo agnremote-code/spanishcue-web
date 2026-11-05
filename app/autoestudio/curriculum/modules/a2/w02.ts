@@ -1,809 +1,597 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w02: Module = {
-  "id": "a2-02",
-  "level": "a2",
-  "week": 2,
-  "kind": "core",
-  "title": "El sábado cambió de plan",
-  "subtitle": "Contar un día terminado en orden y distinguir lo que hiciste de lo que haces habitualmente.",
-  "stop": {
-    "place": "Alajuela",
-    "country": "Costa Rica"
-  },
-  "minutes": 105,
-  "newObjectives": [
-    "a2.gram.indefinido-regular",
-    "a2.gram.marcadores-pasado",
-    "a2.voc.fin-de-semana",
-    "a2.pron.acento-tiempos",
-    "a2.fun.contar-ayer",
-    "a2.lis.relato-breve",
-    "a2.gram.indefinido-ortografia"
+  id: "a2-02",
+  level: "a2",
+  week: 2,
+  kind: "core",
+  title: "Un sábado que salió distinto",
+  subtitle: "Repaso del pretérito indefinido: formas regulares, cambios de letra y los irregulares más frecuentes (fui, hice, tuve, pidió, durmió).",
+  stop: { place: "Alajuela", country: "Costa Rica" },
+  minutes: 105,
+  newObjectives: [
+    "a2.gram.g047",
+    "a2.gram.g048",
+    "a2.voc.w02-excursion-volcan",
+    "a2.pron.w02-tilde-presente-pasado",
+    "a2.lis.w02-lunes-oficina",
+    "a2.read.w02-blog-poas",
+    "a2.wri.w02-relato-excursion",
+    "a2.spk.w02-contar-fin-de-semana",
+    "a2.fun.w02-contar-hechos-pasados",
+    "a2.disc.w02-ordenar-relato",
   ],
-  "reviewObjectives": [
-    "a2.gram.perfecto-compuesto",
-    "a2.gram.participios-irregulares",
-    "a2.gram.ya-todavia",
-    "a2.voc.experiencias-viaje",
-    "a2.pron.sinalefa-compuestos",
-    "a2.fun.experiencias",
-    "a2.spk.nunca-he"
-  ],
-  "prerequisites": [
-    "a2-01"
-  ],
-  "goal": {
-    "canDo": "Puedo contar un día terminado en orden y distinguir lo que hiciste de lo que haces habitualmente.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "El sábado cambió de plan · formas que necesitas",
-        "body": [
-          "El indefinido presenta acciones terminadas: ayer, el sábado pasado, en 2022 o hace dos días. Verbos en -ar: visité, visitaste, visitó, visitamos, visitasteis, visitaron. En -er/-ir: comí, comiste, comió, comimos, comisteis, comieron; salí, saliste, salió, salimos, salisteis, salieron.",
-          "En la primera persona cambian algunas letras para conservar el sonido: buscar → busqué, llegar → llegué, empezar → empecé. Son cambios ortográficos; el resto de las terminaciones sigue el patrón regular."
-        ],
-        "support": [
-          "Use the preterite to report completed events in a finished time period. Stress distinguishes hablo from habló."
-        ],
-        "examples": [
-          {
-            "es": "Ayer preparé una mochila y salí temprano."
-          },
-          {
-            "es": "El domingo comimos junto al río."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Ayer yo camino al centro.",
-            "right": "Ayer yo caminé al centro.",
-            "why": "Ayer sitúa una acción acabada; caminé lleva el acento en la última sílaba."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Primero sitúa el día; después organiza las acciones con por la mañana, después, por la tarde y al final. No traduzcas automáticamente esta mañana como perfecto: según la región y cómo se presenta el periodo, puedes oír he desayunado o desayuné. Para contar este sábado terminado practicaremos el indefinido con marcadores claros."
-        ],
-        "examples": [
-          {
-            "es": "Hace dos días recibí una invitación."
-          },
-          {
-            "es": "Esta semana he descansado; el lunes terminé el trabajo."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Ayer Julia ___ tarde. (llegar)",
-            "answers": [
-              [
-                "llegó"
-              ]
-            ]
-          },
-          {
-            "q": "Nosotros ___ junto al puente. (comer)",
-            "answers": [
-              [
-                "comimos"
-              ]
-            ]
-          },
-          {
-            "q": "El domingo yo ___ un mapa. (comprar)",
-            "answers": [
-              [
-                "compré"
-              ]
-            ]
-          },
-          {
-            "q": "Ayer yo ___ la dirección. (buscar)",
-            "answers": [
-              [
-                "busqué"
-              ]
-            ],
-            "why": "c cambia a qu ante é para mantener el sonido de buscar."
-          },
-          {
-            "q": "El sábado yo ___ temprano. (llegar)",
-            "answers": [
-              [
-                "llegué"
-              ]
-            ],
-            "why": "g cambia a gu ante é."
-          },
-          {
-            "q": "Ayer yo ___ a leer el diario. (empezar)",
-            "answers": [
-              [
-                "empecé"
-              ]
-            ],
-            "why": "z cambia a c ante é."
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "Camino hasta la estación.",
-            "instruction": "Pon Ayer al principio y cambia camino al indefinido; conserva el resto sin añadir sujeto.",
-            "answers": [
-              "Ayer caminé hasta la estación."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Recibimos una carta.",
-            "instruction": "Cambia recibimos a primera persona singular del indefinido. Puedes escribir Yo o dejar el sujeto implícito.",
-            "answers": [
-              "Recibí una carta.",
-              "Yo recibí una carta."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Preparaste una sopa.",
-            "instruction": "Cambia el verbo a tercera persona plural del indefinido. Puedes escribir Ellas o dejar el sujeto implícito.",
-            "answers": [
-              "Ellas prepararon una sopa.",
-              "Prepararon una sopa."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "pasear por el centro",
-            "en": "walk around the centre"
-          },
-          {
-            "es": "quedar con amigos",
-            "en": "meet friends"
-          },
-          {
-            "es": "preparar una mochila",
-            "en": "pack a backpack"
-          },
-          {
-            "es": "recibir una invitación",
-            "en": "receive an invitation"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "pasar la tarde",
-            "en": "spend the afternoon"
-          },
-          {
-            "es": "descansar un rato",
-            "en": "rest for a while"
-          },
-          {
-            "es": "volver temprano",
-            "en": "return early"
-          },
-          {
-            "es": "al final del día",
-            "en": "at the end of the day"
-          }
-        ]
-      }
+  reviewObjectives: ["a2.gram.g045","a2.gram.g046","a2.voc.w01-feria-voluntariado","a2.pron.w01-he-ha-han-enlazados","a2.lis.w01-manana-feria","a2.read.w01-ficha-voluntaria","a2.wri.w01-correo-voluntariado","a2.spk.w01-balance-experiencias","a2.fun.w01-novedades-experiencias","a2.disc.w01-sumar-experiencias"],
+  prerequisites: ["a2-01"],
+  goal: {
+    canDo: "Al final de esta semana puedes contar qué pasó en un día terminado (ayer, el sábado, el año pasado), en orden y con los verbos irregulares más frecuentes.",
+    steps: [
+      "Repasa las terminaciones regulares del indefinido y la tilde de `habló`, `comió`.",
+      "Repasa los cambios de letra con yo: `busqué`, `llegué`, `empecé`.",
+      "Repasa los irregulares `fui`, `hice`, `tuve`, `estuve`, `pude`, `dije`, `puse` y los cambios `pidió`, `durmió`.",
+      "Distingue de oído `llego` y `llegó`.",
+      "Escucha a dos compañeros contar su fin de semana en Alajuela y lee un blog de viaje.",
+      "Escribe y graba el relato de una excursión.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "pasear por el centro",
-            "right": "walk around the centre"
-          },
-          {
-            "left": "quedar con amigos",
-            "right": "meet friends"
-          },
-          {
-            "left": "preparar una mochila",
-            "right": "pack a backpack"
-          },
-          {
-            "left": "recibir una invitación",
-            "right": "receive an invitation"
-          },
-          {
-            "left": "pasar la tarde",
-            "right": "spend the afternoon"
-          },
-          {
-            "left": "descansar un rato",
-            "right": "rest for a while"
-          },
-          {
-            "left": "volver temprano",
-            "right": "return early"
-          },
-          {
-            "left": "al final del día",
-            "right": "at the end of the day"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "La sílaba fuerte cuenta el tiempo",
-    "explanation": [
-      "Hablo y habló tienen las mismas letras, pero el acento cambia el tiempo y la persona. Mantén las vocales claras y da más fuerza a la sílaba final de habló, compré y llegó. Compara tu grabación con un presente antes de repetir el relato."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "Ayer habló Marta.",
-          "q": "¿Qué forma escuchas?",
-          "options": [
-            "habló",
-            "hablo"
+  theory: {
+    intro: "Esta semana repasas dos clases sobre el pretérito indefinido: las formas regulares y los irregulares de alta frecuencia. Lo ves con otros ejemplos, en orden y con trucos para recordar las formas.",
+    parts: [
+      {
+        heading: "Hablé, comí, salí: las formas regulares",
+        body: [
+          "El indefinido cuenta acciones **terminadas** en un tiempo que ya se cerró. Los verbos en **-er** y en **-ir** comparten terminaciones: _comí_ y _salí_, _comió_ y _salió_.",
+          "La **tilde** es parte de la forma: _yo hablé_, _él habló_. Sin tilde, _hablo_ es presente. Lee siempre la última sílaba con fuerza: ha-**blé**, ha-**bló**.",
+          "Con **nosotros**, los verbos en -ar y en -ir son iguales que en presente: _hablamos_, _salimos_. El contexto decide: _Ayer salimos tarde_ (pasado) / _Siempre salimos tarde_ (presente).",
+        ],
+        support: [
+          "Simple past (_indefinido_): finished actions in a finished time. Watch the written accent: _hablo_ = I speak, _habló_ = he spoke.",
+        ],
+        table: {
+          caption: "Indefinido regular",
+          head: ["Persona", "hablar", "comer", "salir"],
+          rows: [
+            ["yo", "hablé", "comí", "salí"],
+            ["tú", "hablaste", "comiste", "saliste"],
+            ["él, ella, usted", "habló", "comió", "salió"],
+            ["nosotros, nosotras", "hablamos", "comimos", "salimos"],
+            ["vosotros, vosotras", "hablasteis", "comisteis", "salisteis"],
+            ["ellos, ellas, ustedes", "hablaron", "comieron", "salieron"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Ahora trabajo en casa.",
-          "q": "¿Dónde recae la fuerza en trabajo?",
-          "options": [
-            "En tra",
-            "En jó"
+        examples: [
+          { es: "El sábado visité a mi tía en Grecia.", en: "On Saturday I visited my aunt in Grecia." },
+          { es: "¿A qué hora volviste anoche?", en: "What time did you come back last night?" },
+          { es: "Mis vecinos vendieron el coche el mes pasado.", en: "My neighbours sold their car last month." },
+        ],
+        mistakes: [
+          { wrong: "Ayer mi hermano llego tarde a la cena.", right: "Ayer mi hermano llegó tarde a la cena.", why: "Sin tilde, _llego_ es presente de yo. Para él en pasado: **llegó**." },
+          { wrong: "Tú hablastes con el guía.", right: "Tú hablaste con el guía.", why: "La forma de tú en indefinido no lleva **-s** final: **hablaste**." },
+        ],
+      },
+      {
+        heading: "Hechos en orden y cambios de letra con yo",
+        body: [
+          "El indefinido va con marcadores de tiempo cerrado: **ayer**, **anoche**, **anteayer**, **el sábado pasado**, **la semana pasada**, **en 2021**. Si el tiempo todavía no ha terminado (hoy, esta semana), recuerda que repasaste el perfecto.",
+          "Para contar una secuencia, une los hechos con **primero**, **luego**, **después** y **al final**: _Primero desayunamos, luego subimos al bus y al final llegamos al parque._",
+          "Tres verbos cambian una letra solo con **yo**, para conservar el sonido: **-car → -qué** (_buscar → busqué_), **-gar → -gué** (_llegar → llegué_), **-zar → -cé** (_empezar → empecé_). Las demás personas son regulares: _buscó_, _llegaste_, _empezaron_.",
+        ],
+        support: [
+          "Use the simple past with finished time words: _ayer_, _anoche_, _el sábado pasado_. Verbs in _-car_, _-gar_, _-zar_ change spelling only in the _yo_ form.",
+        ],
+        table: {
+          caption: "Cambios de letra con yo",
+          head: ["Infinitivo", "yo", "él, ella"],
+          rows: [
+            ["sacar", "saqué", "sacó"],
+            ["pagar", "pagué", "pagó"],
+            ["almorzar", "almorcé", "almorzó"],
+            ["tocar", "toqué", "tocó"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "Anoche pagué la cena con tarjeta.", en: "Last night I paid for dinner by card." },
+          { es: "Primero saqué las entradas y después almorcé.", en: "First I got the tickets and then I had lunch." },
+        ],
+        mistakes: [
+          { wrong: "El domingo llegé a las once.", right: "El domingo llegué a las once.", why: "Con yo, _-gar_ se escribe **-gué** para mantener el sonido de la g." },
+          { wrong: "Empezé el curso en marzo.", right: "Empecé el curso en marzo.", why: "Delante de e, la z se escribe **c**: **empecé**." },
+        ],
+        tip: "Fíjate solo en la forma de yo: si el verbo termina en -car, -gar o -zar, la última letra cambia. Es una regla de escritura, no de pronunciación.",
+      },
+      {
+        heading: "Raíz nueva y sin tilde: fui, hice, tuve…",
+        body: [
+          "Los verbos más frecuentes tienen una **raíz nueva** en el indefinido y terminaciones **sin tilde**: _tuv-e_, _tuv-o_. Compara: _llegué_ y _llegó_ llevan tilde, pero _tuve_ y _tuvo_ no.",
+          "**Ir** y **ser** tienen las mismas formas: _fui_, _fue_, _fueron_. El contexto decide: _Fui a Alajuela_ (ir, con **a** + lugar) / _Fue un día largo_ (ser, una valoración).",
+          "**Hacer** cambia la c por z con él y ella: _hizo_, para conservar el sonido. Y **decir** pierde la i con ellos: _dijeron_, no _dijieron_.",
+        ],
+        support: [
+          "Irregular stems take endings with no written accent: _tuve_, _tuvo_. _Fui_ / _fue_ can mean _I went / he went_ or _I was / it was_.",
+        ],
+        table: {
+          caption: "Irregulares de alta frecuencia",
+          head: ["Infinitivo", "yo", "tú", "él, ella, usted", "nosotros", "vosotros", "ellos, ustedes"],
+          rows: [
+            ["ir / ser", "fui", "fuiste", "fue", "fuimos", "fuisteis", "fueron"],
+            ["hacer", "hice", "hiciste", "hizo", "hicimos", "hicisteis", "hicieron"],
+            ["tener", "tuve", "tuviste", "tuvo", "tuvimos", "tuvisteis", "tuvieron"],
+            ["estar", "estuve", "estuviste", "estuvo", "estuvimos", "estuvisteis", "estuvieron"],
+            ["poder", "pude", "pudiste", "pudo", "pudimos", "pudisteis", "pudieron"],
+            ["poner", "puse", "pusiste", "puso", "pusimos", "pusisteis", "pusieron"],
+            ["decir", "dije", "dijiste", "dijo", "dijimos", "dijisteis", "dijeron"],
+          ],
+        },
+        examples: [
+          { es: "El año pasado tuvimos una avería en la carretera.", en: "Last year we had a breakdown on the road." },
+          { es: "No pude dormir en el avión.", en: "I couldn't sleep on the plane." },
+          { es: "¿Qué te dijo el recepcionista?", en: "What did the receptionist tell you?" },
+        ],
+        mistakes: [
+          { wrong: "Mi madre hició una sopa de verduras.", right: "Mi madre hizo una sopa de verduras.", why: "_Hacer_ con ella: **hizo**, con z y sin tilde." },
+          { wrong: "Ayer estuvé en el mercado.", right: "Ayer estuve en el mercado.", why: "Los irregulares de raíz nueva no llevan tilde: **estuve**." },
+        ],
+      },
+      {
+        heading: "Pidió, durmió: el cambio en tercera persona",
+        body: [
+          "Algunos verbos en **-ir** que cambian la raíz en presente (_pido_, _duermo_) tienen otro cambio en el indefinido, pero **solo con él, ella, usted y ellos, ellas, ustedes**: la **e** pasa a **i** y la **o** pasa a **u**.",
+          "**e → i**: _pedir → pidió, pidieron_; también _servir_, _repetir_, _preferir_, _sentir_, _seguir_. **o → u**: _dormir → durmió, durmieron_; también _morir → murió_.",
+          "Con yo, tú, nosotros y vosotros no cambia nada: _pedí_, _dormiste_, _servimos_. Si dudas, pregúntate: ¿hablo de otra persona? Entonces revisa la vocal.",
+        ],
+        support: [
+          "Stem-changing _-ir_ verbs change _e → i_ and _o → u_ only in the third person (singular and plural) of the simple past.",
+        ],
+        examples: [
+          { es: "El camarero nos sirvió un café de la zona.", en: "The waiter served us a local coffee." },
+          { es: "Los niños durmieron todo el viaje.", en: "The children slept the whole journey." },
+          { es: "Yo pedí fresas y ella prefirió un helado.", en: "I ordered strawberries and she preferred an ice cream." },
+        ],
+        mistakes: [
+          { wrong: "Mi compañera pedió la cuenta.", right: "Mi compañera pidió la cuenta.", why: "Con ella, la e de _pedir_ pasa a **i**: **pidió**." },
+          { wrong: "Anoche yo durmí muy mal.", right: "Anoche yo dormí muy mal.", why: "Con **yo** no hay cambio: **dormí**. El cambio o → u es solo para él y ellos." },
+        ],
+        tip: "Recuerda la frase _Él pidió y ellos durmieron_: tiene los dos cambios y las dos personas donde ocurren.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero practicas las formas regulares y los cambios de letra; después, los irregulares y el cambio en tercera persona.",
+    exercises: [
+      {
+        id: "g1",
+        type: "gap",
+        title: "Formas regulares",
+        prompt: "Completa con el indefinido del verbo entre paréntesis.",
+        items: [
+          { q: "El martes pasado nosotros ___ (cenar) en una soda del centro.", answers: [["cenamos"]], why: "Nosotros en -ar: **cenamos**, igual que el presente." },
+          { q: "¿Tú ___ (escribir) a la agencia de viajes?", answers: [["escribiste"]], why: "Tú en -ir: **escribiste**, sin -s final." },
+          { q: "Mis padres ___ (vivir) cinco años en Heredia.", answers: [["vivieron"]], why: "Ellos en -ir: **vivieron**." },
+          { q: "Anoche yo ___ (buscar) mis gafas por toda la casa.", answers: [["busqué"]], why: "Yo + -car: **busqué**." },
+          { q: "El guía ___ (explicar) la historia del volcán.", answers: [["explicó"]], why: "Él en -ar: **explicó**, con tilde." },
+          { q: "Ayer yo ___ (empezar) a leer una novela de Carmen Naranjo.", answers: [["empecé"]], why: "Yo + -zar: **empecé**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "choice",
+        title: "Irregulares frecuentes",
+        prompt: "Elige la forma correcta.",
+        items: [
+          { q: "El viernes mis amigos ___ una fiesta sorpresa.", options: ["hicieron", "hacieron", "hizo"], answer: 0, why: "Ellos: **hicieron**." },
+          { q: "Yo no ___ ir a la reunión porque estaba enferma.", options: ["podí", "pudo", "pude"], answer: 2, why: "Yo: **pude**, sin tilde." },
+          { q: "¿Dónde ___ tú las llaves del coche?", options: ["pusiste", "ponió", "pusistes"], answer: 0, why: "Tú: **pusiste**." },
+          { q: "Ellas me ___ que el museo estaba cerrado.", options: ["dijieron", "dicieron", "dijeron"], answer: 2, why: "Con ellos, decir pierde la i: **dijeron**." },
+          { q: "La semana pasada mi jefe ___ en Panamá por trabajo.", options: ["estuvo", "estuvó", "estaba"], answer: 0, why: "Él: **estuvo**, sin tilde." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "classify",
+        title: "¿Ir o ser?",
+        prompt: "Decide qué verbo es cada forma.",
+        categories: ["ir (moverse a un lugar)", "ser (identificar o valorar)"],
+        items: [
+          { text: "Fuimos al mercado de Alajuela temprano.", cat: 0, why: "**a** + lugar: es _ir_." },
+          { text: "La excursión fue muy divertida.", cat: 1, why: "Valora la excursión: es _ser_." },
+          { text: "¿Fuiste a la playa en vacaciones?", cat: 0 },
+          { text: "Mi abuelo fue profesor de música.", cat: 1, why: "Profesión: es _ser_." },
+          { text: "Los chicos fueron en tren hasta Heredia.", cat: 0 },
+          { text: "Fue un error salir sin paraguas.", cat: 1 },
+        ],
+      },
+      {
+        id: "g4",
+        type: "transform",
+        title: "De hoy a ayer",
+        prompt: "Escribe la frase en indefinido. Mantén la persona.",
+        items: [
+          { source: "Hoy pido una ensalada.", instruction: "Cambia «hoy» por «ayer» y cuenta lo que hizo Marta.", answers: ["Ayer Marta pidió una ensalada.", "Ayer pidió una ensalada Marta."], why: "Ella: e → i, **pidió**." },
+          { source: "Siempre duermen la siesta.", instruction: "Empieza con «El domingo».", answers: ["El domingo durmieron la siesta."], why: "Ellos: o → u, **durmieron**." },
+          { source: "Tengo una entrevista importante.", instruction: "Empieza con «El lunes».", answers: ["El lunes tuve una entrevista importante."], why: "Yo: **tuve**, sin tilde." },
+          { source: "Vamos al cine en bicicleta.", instruction: "Empieza con «Anoche».", answers: ["Anoche fuimos al cine en bicicleta."], why: "Nosotros: **fuimos**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "El tema de la semana es una excursión de un día desde Alajuela: el transporte, el volcán y lo que puede salir mal.",
+    groups: [
+      {
+        title: "El viaje",
+        items: [
+          { es: "tomar el bus", en: "to take the bus" },
+          { es: "perder el bus", en: "to miss the bus" },
+          { es: "hacer fila", en: "to queue" },
+          { es: "sacar las entradas", en: "to get the tickets" },
+          { es: "reservar con antelación", en: "to book in advance" },
+          { es: "el sendero", en: "the trail" },
+          { es: "el mirador", en: "the viewpoint" },
+        ],
+      },
+      {
+        title: "En el volcán",
+        items: [
+          { es: "el cráter", en: "the crater" },
+          { es: "la niebla", en: "the fog" },
+          { es: "el guía / la guía", en: "the guide" },
+          { es: "la cafetería del parque", en: "the park café" },
+          { es: "las fresas con nata", en: "strawberries and cream" },
+        ],
+      },
+      {
+        title: "Para ordenar el relato",
+        items: [
+          { es: "primero", en: "first" },
+          { es: "luego / después", en: "then / afterwards" },
+          { es: "al final", en: "in the end" },
+          { es: "por suerte", en: "luckily" },
+          { es: "por desgracia", en: "unfortunately" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "Problemas y soluciones",
+        prompt: "Une cada problema con lo que hicieron los viajeros.",
+        pairs: [
+          { left: "Perdieron el bus de las siete.", right: "Tomaron un taxi hasta la terminal." },
+          { left: "No reservaron las entradas.", right: "Hicieron fila media hora en la entrada." },
+          { left: "Había mucha niebla en el cráter.", right: "Esperaron en el mirador veinte minutos." },
+          { left: "Tuvieron hambre a mediodía.", right: "Comieron fresas en la cafetería del parque." },
+        ],
+        why: "Las acciones están en indefinido porque son hechos terminados de un día concreto.",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "¿Qué dices?",
+        prompt: "Lee la situación y elige la frase natural.",
+        items: [
+          { context: "Llegaste a la parada a las siete y cinco y el bus ya no estaba.", q: "Le escribes a tu amiga:", options: ["Hice fila el bus.", "Perdí el bus por cinco minutos.", "Saqué el bus temprano."], answer: 1, why: "**Perder el bus**: no llegar a tiempo." },
+          { context: "En el volcán no se veía nada, pero después de un rato salió el sol.", q: "Cuentas:", options: ["Por desgracia, vimos el cráter.", "Al final no fuimos.", "Por suerte, al final vimos el cráter."], answer: 2, why: "**Por suerte** presenta algo bueno; **al final** cierra la secuencia." },
+          { context: "Un compañero quiere saber cómo empezó tu día de excursión.", q: "Respondes:", options: ["Primero desayunamos en la terminal.", "Al final desayunamos en la terminal.", "Por desgracia desayunamos primero."], answer: 0 },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La tilde que cambia el tiempo: llego / llegó",
+    explanation: [
+      "En los verbos en -ar, la diferencia entre el presente de yo y el pasado de él está solo en el **acento**: _llego_ (LLE-go, presente) y _llegó_ (lle-GÓ, pasado). Si pones la fuerza en la sílaba equivocada, cambias el tiempo y la persona.",
+      "Lo mismo pasa con _compro / compró_, _paso / pasó_, _tomo / tomó_. Cuando hables del pasado, apoya la voz en la **última** sílaba y alárgala un poco.",
+      "Con yo en pasado también la fuerza va al final: _llegué_, _compré_. Las formas irregulares (_tuve_, _hice_) llevan el acento en la penúltima, como casi todas las palabras.",
+    ],
+    support: [
+      "_LLE-go_ = I arrive; _lle-GÓ_ = he arrived. Stress the last syllable for the regular past.",
+    ],
+    table: {
+      caption: "Presente de yo o pasado de él",
+      head: ["Presente (yo)", "Pasado (él, ella)"],
+      rows: [
+        ["LLE-go", "lle-GÓ"],
+        ["COM-pro", "com-PRÓ"],
+        ["TO-mo", "to-MÓ"],
+        ["ES-tu-dio", "es-tu-DIÓ"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Hoy trabajo; ayer trabajó mi hermana.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Yo compro pan; él compró arroz.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Primero caminé y después descansé.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Presente o pasado?",
+      prompt: "Escucha y decide qué forma oyes.",
+      items: [
+        { q: "¿Qué oyes?", audio: "Llegó a las nueve.", options: ["llego (yo, ahora)", "llegó (él, pasado)"], answer: 1 },
+        { q: "¿Qué oyes?", audio: "Compro pan en la esquina.", options: ["compro (yo, ahora)", "compró (él, pasado)"], answer: 0 },
+        { q: "¿Qué oyes?", audio: "Tomó el bus de las seis.", options: ["tomo (yo, ahora)", "tomó (él, pasado)"], answer: 1 },
+        { q: "¿Qué oyes?", audio: "Paso por el parque.", options: ["paso (yo, ahora)", "pasó (él, pasado)"], answer: 0 },
+        { q: "¿Qué oyes?", audio: "Estudió en Alajuela.", options: ["estudio (yo, ahora)", "estudió (él, pasado)"], answer: 1 },
+      ],
+    },
+    produce: [
+      { text: "Llego tarde todos los días. Ayer mi jefe llegó antes.", tip: "Primero la fuerza en _LLE_, después en _GÓ_." },
+      { text: "Compré las entradas y Ana compró el almuerzo.", tip: "Las dos formas pasadas llevan la fuerza al final." },
+      { text: "Tuve un problema, pero lo hice todo.", tip: "Irregulares: _TU-ve_, _HI-ce_, sin tilde." },
+      { text: "El guía habló y nosotros escuchamos.", tip: "_Ha-BLÓ_ con fuerza; _es-cu-CHA-mos_ como en presente." },
+      { text: "¿Quién pagó la cena? Yo no pagué.", tip: "Grábate y comprueba que se oyen las dos tildes." },
+    ],
+    spelling: "Escribe siempre la tilde en _-é_ y _-ó_ de los regulares: sin ella, otra persona lee un presente. Los irregulares de raíz nueva (_tuve_, _pudo_, _hizo_) nunca la llevan.",
   },
-  "listening": {
-    "title": "El paseo que duró poco",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "El lunes en la oficina",
+    context: "Es lunes por la mañana en una oficina de Alajuela. Daniela le cuenta a su compañero Óscar su excursión del sábado al volcán Poás.",
+    speakers: [
+      { id: "oscar", name: "Óscar", voice: "es-PE-m", role: "compañero de trabajo" },
+      { id: "daniela", name: "Daniela", voice: "es-MX-f", role: "compañera de trabajo" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "¿Qué hiciste ayer? Yo esperé tu mensaje para salir a caminar, pero no recibí nada. Al final limpié la cocina y terminé un libro que empecé hace un mes."
-      },
-      {
-        "speaker": "b",
-        "text": "Perdona. Dejé el móvil en casa. Salí a las nueve, caminé hasta el río y esperé a Julia delante del puente. Ella llegó tarde porque perdió el autobús."
-      },
-      {
-        "speaker": "a",
-        "text": "¿Y caminaron mucho? Por la tarde llovió en mi barrio. Cerré todas las ventanas y preparé chocolate caliente. Pensé que ustedes regresaron completamente mojados."
-      },
-      {
-        "speaker": "b",
-        "text": "No. Primero paseamos media hora y después comimos cerca de la estación. A las dos empezó la lluvia. Entramos en una librería y compramos un mapa. Regresamos en autobús antes de las cuatro."
-      }
+    script: [
+      { speaker: "oscar", text: "¡Hola, Daniela! ¿Qué tal el fin de semana? ¿Fuiste al Poás, al final?" },
+      { speaker: "daniela", text: "Sí, fui con mi prima Sofía. Pero el día empezó fatal: perdimos el bus de las siete." },
+      { speaker: "oscar", text: "¡No! ¿Y qué hicieron?" },
+      { speaker: "daniela", text: "Tomamos un taxi hasta la terminal y allí salimos en el bus de las ocho. Llegamos al parque a las diez." },
+      { speaker: "oscar", text: "¿Y pudieron ver el cráter?" },
+      { speaker: "daniela", text: "Al principio no. Había una niebla increíble. Estuvimos casi media hora en el mirador sin ver nada. Sofía dijo: «Vámonos, es imposible»." },
+      { speaker: "oscar", text: "Típico del Poás." },
+      { speaker: "daniela", text: "Pero yo le pedí diez minutos más y, por suerte, de repente salió el sol. ¡Vimos el agua verde del cráter! Hice como cien fotos." },
+      { speaker: "oscar", text: "¡Qué bien! ¿Y después?" },
+      { speaker: "daniela", text: "Después bajamos a una finca de fresas. Sofía pidió fresas con nata y yo probé un batido. Al final volvimos en el bus de las cuatro y Sofía durmió todo el viaje." },
+      { speaker: "oscar", text: "¿Y tú?" },
+      { speaker: "daniela", text: "Yo no pude dormir: ¡revisé las fotos una por una!" },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «El paseo que duró poco» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿De qué trata la conversación?",
-              "options": [
-                "De un curso de cocina",
-                "De las actividades de ayer",
-                "De un plan para mañana"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «De las actividades de ayer»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Cómo reaccionan ante la falta de mensaje?",
-              "options": [
-                "Preparan un viaje para la semana siguiente",
-                "Aclaran qué ocurrió el día anterior",
-                "Deciden cancelar la amistad"
-              ],
-              "answer": 1,
-              "why": "Comprueba el contexto y los datos de la escena: Aclaran qué ocurrió el día anterior."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «El paseo que duró poco».",
-          "items": [
-            {
-              "q": "¿Por qué no llegó el mensaje?",
-              "options": [
-                "El móvil quedó en casa",
-                "No había internet en la librería",
-                "Julia tenía el móvil"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «El móvil quedó en casa»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué hicieron después de comer?",
-              "options": [
-                "Cruzaron el puente por primera vez",
-                "Prepararon chocolate",
-                "Entraron en una librería"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Entraron en una librería»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «El paseo que duró poco».",
-          "items": [
-            {
-              "q": "¿Qué sitúa una acción terminada?",
-              "options": [
-                "Ustedes regresan temprano",
-                "Yo camino cada día",
-                "A las dos empezó la lluvia"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «A las dos empezó la lluvia»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué expresión introduce el resultado del primer día relatado?",
-              "options": [
-                "Al final",
-                "Siempre",
-                "Cada día"
-              ],
-              "answer": 0,
-              "why": "Comprueba el contexto y los datos de la escena: Al final."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Un sábado sin pantalla",
-    "genre": "Entrada de diario",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "El sábado pasado apagué el teléfono durante seis horas. Primero desayuné en casa y preparé una mochila con agua y un libro. Caminé hasta el parque y esperé a mi amiga Elisa junto a la fuente. Ella llegó diez minutos después. Hablamos de nuestros trabajos, pero no miramos ningún mensaje. Después visitamos una pequeña exposición de fotografías de la ciudad. La entrada costó muy poco y la visita duró una hora.",
-      "A mediodía comimos en un restaurante del barrio. Elisa pidió una sopa y yo probé un plato de verduras. Por la tarde regresamos al parque y leímos nuestros libros en silencio. A las cinco encendí el móvil. Recibí varios mensajes, pero ninguno era urgente. Al final del día escribí una nota para recordar la experiencia. Descansé mejor que otros sábados y decidí repetir el plan una vez al mes."
-    ],
-    "glossary": [
-      {
-        "es": "pasear por el centro",
-        "en": "walk around the centre"
-      },
-      {
-        "es": "quedar con amigos",
-        "en": "meet friends"
-      },
-      {
-        "es": "preparar una mochila",
-        "en": "pack a backpack"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «Un sábado sin pantalla» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Dónde esperó la narradora a Elisa?",
-            "options": [
-              "En su casa",
-              "Junto a una fuente",
-              "Dentro del restaurante"
-            ],
-            "answer": 1,
-            "why": "La información de la situación corresponde a «Junto a una fuente»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Qué decidió después de la experiencia?",
-            "options": [
-              "Repetirla una vez al mes",
-              "Apagar el móvil todos los días",
-              "Dejar de leer en el parque"
-            ],
-            "answer": 0,
-            "why": "La información de la situación corresponde a «Repetirla una vez al mes»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «Un sábado sin pantalla» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Contar un día terminado en orden y distinguir lo que hiciste de lo que haces habitualmente. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "El sábado pasado apagué el teléfono durante seis horas.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo y quédate con la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿De qué hablan Óscar y Daniela?", options: ["de un problema en la oficina", "de un viaje que van a hacer", "de una excursión del fin de semana"], answer: 2 },
+            { q: "¿Cómo fue el día de Daniela?", options: ["Todo salió perfecto desde el principio.", "Empezó mal, pero terminó bien.", "Fue un desastre de principio a fin."], answer: 1, why: "Perdieron el bus y hubo niebla, pero al final vieron el cráter." },
+            { q: "¿Con quién fue Daniela?", options: ["con Óscar", "con un guía", "con su prima"], answer: 2 },
+          ],
         },
-        {
-          "quote": "A mediodía comimos en un restaurante del barrio.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
+      },
       {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
+        stage: "detail",
+        prompt: "Segunda escucha: atención a las horas y a quién hizo cada cosa.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Qué bus tomaron para ir al parque?", options: ["el de las siete", "el de las ocho", "el de las diez"], answer: 1 },
+            { q: "¿Cuánto tiempo esperaron en el mirador?", options: ["diez minutos", "una hora", "casi media hora"], answer: 2 },
+            { q: "¿Qué pidió Sofía en la finca?", options: ["fresas con nata", "un batido", "un café"], answer: 0 },
+            { q: "¿Qué hizo Daniela en el viaje de vuelta?", options: ["Durmió.", "Revisó las fotos.", "Habló con el conductor."], answer: 1 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en los verbos en pasado.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿La forma que oyes es regular o irregular?",
+          categories: ["regular", "irregular o con cambio de vocal"],
+          items: [
+            { text: "perdimos", cat: 0 },
+            { text: "pudieron", cat: 1, why: "_Poder_ → raíz **pud-**." },
+            { text: "estuvimos", cat: 1 },
+            { text: "dijo", cat: 1 },
+            { text: "salió", cat: 0 },
+            { text: "pidió", cat: 1, why: "Cambio e → i en tercera persona." },
+            { text: "probé", cat: 0 },
+          ],
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Poás: lo que salió mal y lo que salió muy bien",
+    genre: "Entrada de blog de viajes",
+    frame: "Kenji, un estudiante japonés de intercambio en Alajuela, escribe en su blog sobre su primera excursión en Costa Rica.",
+    text: [
+      "El sábado pasado hice mi primera excursión en Costa Rica: el volcán Poás. Lo preparé todo el viernes por la noche. Busqué la ruta en internet, puse una chaqueta en la mochila y me acosté temprano. Pero cometí un error: no reservé la entrada.",
+      "Primero tomé el bus en la terminal de Alajuela. El viaje duró una hora y media y la carretera tiene unas curvas terribles. Cuando llegué, el guardia me dijo que sin reserva no podía entrar. Por suerte, una familia canadiense tuvo un problema con su hijo pequeño y no pudo subir. Me vendieron su entrada.",
+      "Luego caminé por el sendero hasta el mirador. Estuve allí cuarenta minutos y no vi nada: solo niebla. Al final, una señora de Heredia me explicó un truco: «Hay que esperar con paciencia». Esperé y, de repente, el viento abrió un hueco en la niebla. Vi el cráter dos minutos. Dos minutos perfectos.",
+      "Después almorcé en una soda del camino. Pedí casado con pescado y la dueña me sirvió también un jugo de mora gratis. Volví a casa cansado y feliz. Mi consejo: reserven la entrada y lleven paciencia.",
+    ],
+    glossary: [
+      { es: "una soda", en: "a small, cheap local restaurant (Costa Rica)" },
+      { es: "un casado", en: "a typical Costa Rican plate: rice, beans, salad and meat or fish" },
+      { es: "un hueco", en: "a gap" },
+      { es: "la mora", en: "blackberry" },
+    ],
+    tasks: [
+      {
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el blog y responde.",
+        items: [
+          { q: "¿Qué error cometió Kenji?", options: ["Perdió el bus.", "No reservó la entrada.", "No llevó chaqueta."], answer: 1 },
+          { q: "¿Cómo consiguió la entrada?", options: ["Se la vendió una familia canadiense.", "La compró en la terminal.", "Se la regaló el guardia."], answer: 0 },
+          { q: "¿Cuánto tiempo vio el cráter?", options: ["cuarenta minutos", "una hora y media", "dos minutos"], answer: 2 },
+        ],
+      },
+      {
+        id: "r2",
+        type: "classify",
+        prompt: "¿Es verdadero o falso según el blog?",
+        categories: ["verdadero", "falso"],
+        items: [
+          { text: "Kenji preparó la excursión el viernes.", cat: 0 },
+          { text: "El viaje en bus fue corto y tranquilo.", cat: 1, why: "Duró una hora y media, con curvas terribles." },
+          { text: "Una señora le dio un consejo.", cat: 0 },
+          { text: "Kenji pagó el jugo de mora.", cat: 1, why: "La dueña se lo sirvió **gratis**." },
+          { text: "Kenji volvió cansado pero contento.", cat: 0 },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Toca cada frase del blog para ver qué gramática hay dentro.",
+      items: [
+        { quote: "Busqué la ruta en internet", note: "Yo + -car: **busqué**, con qu." },
+        { quote: "puse una chaqueta en la mochila", note: "Irregular de _poner_: **puse**, sin tilde." },
+        { quote: "tuvo un problema con su hijo pequeño", note: "Irregular de _tener_ con ella (la familia): **tuvo**." },
+        { quote: "Primero tomé el bus", note: "**Primero** abre la secuencia; después vienen _luego_, _al final_ y _después_." },
+        { quote: "la dueña me sirvió también un jugo", note: "_Servir_ con ella: e → i, **sirvió**." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Ahora mezclas las dos clases: formas regulares, cambios de letra e irregulares en un mismo relato.",
+    exercises: [
+      {
+        id: "x1",
+        type: "order",
+        title: "El relato en orden",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["Primero", "sacamos", "las", "entradas", "y", "luego", "subimos", "al", "mirador."], en: "First we got the tickets and then we went up to the viewpoint." },
+          { words: ["Al", "final", "no", "pudimos", "ver", "el", "cráter."], en: "In the end we couldn't see the crater." },
+          { words: ["¿Qué", "te", "dijo", "la", "guía", "del", "parque?"], en: "What did the park guide tell you?" },
+        ],
+      },
+      {
+        id: "x2",
+        type: "error",
+        title: "Corrige el diario de viaje",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "El jueves yo tocé la guitarra en una fiesta.", answers: ["El jueves yo toqué la guitarra en una fiesta."], why: "Yo + -car: **toqué**." },
+          { sentence: "Mi hermano se sintió mal y no hició la maleta.", answers: ["Mi hermano se sintió mal y no hizo la maleta."], why: "_Hacer_ con él: **hizo**, con z. _Sintió_ está bien: e → i en tercera persona." },
+          { sentence: "Los turistas dormieron en un hotel de Alajuela.", answers: ["Los turistas durmieron en un hotel de Alajuela."], why: "Ellos: o → u, **durmieron**." },
+          { sentence: "Nosotros tuvimos que esperar y luego pudímos entrar.", answers: ["Nosotros tuvimos que esperar y luego pudimos entrar."], why: "Los irregulares no llevan tilde: **pudimos**." },
+        ],
+      },
+      {
+        id: "x3",
+        type: "context",
+        title: "¿Qué frase encaja?",
+        prompt: "Lee la situación y elige la mejor frase.",
+        items: [
+          { context: "Tu jefa te pregunta por qué no estuviste en la reunión del jueves.", q: "Respondes:", options: ["Tengo una cita con el médico el jueves pasado.", "Tuvé una cita con el médico.", "Tuve una cita con el médico."], answer: 2 },
+          { context: "Una amiga quiere saber qué comió tu familia en el restaurante.", q: "Le cuentas:", options: ["Mi padre pedió pescado y nosotros pedimos arroz.", "Mi padre pidió pescado y nosotros pedimos arroz.", "Mi padre pidió pescado y nosotros pidimos arroz."], answer: 1, why: "Él: **pidió**; nosotros sin cambio: **pedimos**." },
+          { context: "Te preguntan cómo fue tu fiesta de cumpleaños.", q: "Dices:", options: ["Fui genial: vino mucha gente.", "Fue genial: vinieron todos mis amigos.", "Era genial ayer: vino todos."], answer: 1, why: "Valoración con _ser_ en tercera persona: **fue**." },
+        ],
+      },
+      {
+        id: "x4",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe frases en indefinido y compáralas con el modelo.",
+        items: [
           {
-            "words": [
-              "Ayer",
-              "preparé",
-              "una",
-              "mochila",
-              "y",
-              "salí",
-              "temprano."
-            ]
+            prompt: "Cuenta en tres frases qué hiciste ayer por la tarde, en orden.",
+            model: "Primero fui al supermercado. Luego hice la cena para mis compañeros de piso. Al final vi una serie y me acosté a las once.",
+            checklist: ["Usas **primero**, **luego** y **al final**", "Hay al menos dos irregulares", "Las formas regulares llevan tilde"],
           },
           {
-            "words": [
-              "Hace",
-              "dos",
-              "días",
-              "recibí",
-              "una",
-              "invitación."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "Primero visitamos la exposición; después comimos.",
-              "Sí, todas las semanas como allí.",
-              "La exposición es interesante y tiene fotos."
-            ],
-            "answer": 0,
-            "why": "Comprueba el contexto y los datos de la escena: Primero visitamos la exposición; después comimos..",
-            "context": "Un amigo cree que comiste antes de visitar la exposición.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
+            prompt: "Cuenta qué pidieron y qué hicieron otras personas en una comida especial.",
+            model: "En mi cumpleaños, mi madre pidió una paella y mis primos prefirieron pizza. Después todos durmieron la siesta menos yo.",
+            checklist: ["Usas verbos con cambio e → i u o → u en tercera persona", "Con yo no hay cambio de vocal", "Hay un marcador de tiempo cerrado"],
           },
           {
-            "context": "Pregunta a un compañero por su fin de semana. Pide una hora, un lugar y una aclaración: ¿antes o después de comer?",
-            "q": "En esta interacción de «El sábado cambió de plan», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «El sábado cambió de plan», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Hola, Berta.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
+            prompt: "Escribe dos frases con «fui» o «fue»: una con ir y otra con ser.",
+            model: "El verano pasado fui a Nicaragua con mi novia. Fue el mejor viaje de mi vida.",
+            checklist: ["Una frase con _ir_ + **a** + lugar", "Una frase con _ser_ para valorar"],
           },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: Pregunta a un compañero por su fin de semana. Pide una hora, un lugar y una aclaración: ¿antes o después de comer?",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-01",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 1. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 2: En un intercambio de experiencias, pregunta por una actividad hecha alguna vez y reacciona. Cuenta tres experiencias reales y una inventada con ya, todavía no y nunca; utiliza hecho, dicho, visto, escrito, puesto, vuelto, abierto y roto entre tus ejemplos. Enlaza he estado y lo he visto sin borrar el auxiliar. Tu pareja debe adivinar la experiencia inventada.",
-            "model": "Ya he hecho una ruta nocturna y he visto el amanecer. Nunca he roto una mochila. Todavía no he escrito la reseña. He puesto las fotos en una carpeta, he abierto el mapa y he vuelto al pueblo. Mi amiga ha dicho que la ruta es fácil.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 1→2: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Ya he hecho una ruta nocturna y he visto el amanecer. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Escribe un mensaje a alguien que no vino contigo el sábado. Cuenta cinco acciones en orden, indica una hora y explica qué actividad te gustó más.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
-    ],
-    "useLanguage": [
-      "Ayer preparé una mochila y salí temprano.",
-      "El domingo comimos junto al río.",
-      "Hace dos días recibí una invitación.",
-      "Esta semana he descansado; el lunes terminé el trabajo."
-    ],
-    "model": [
-      "Hola, Berta. El sábado llegué al centro a las diez y esperé a Raúl junto al teatro. Primero visitamos el mercado y compramos fruta. Después caminamos por el parque. A la una comimos en una terraza y hablamos de nuestras vacaciones. Por la tarde regresé a casa y descansé un rato. Me gustó mucho el paseo porque hablamos sin prisa. La próxima vez puedes venir con nosotros."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      60,
-      100
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
-      {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Reconstruye tu último día libre con cinco acciones. Tu oyente necesita saber qué ocurrió primero y a qué hora terminó el plan.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
         ],
-        "seconds": 90,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
-      {
-        "title": "Interacción con un cambio",
-        "prompt": "Pregunta a un compañero por su fin de semana. Pide una hora, un lugar y una aclaración: ¿antes o después de comer?",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
-        ],
-        "seconds": 90,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Reconstruye tu último día libre con cinco acciones. Tu oyente necesita saber qué ocurrió primero y a qué hora terminó el plan."
-      },
-      {
-        "move": "Negocia",
-        "task": "Pregunta a un compañero por su fin de semana. Pide una hora, un lugar y una aclaración: ¿antes o después de comer?"
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
   },
-  "quiz": {
-    "items": [
-      {
-        "type": "gap",
-        "q": "Ayer ellas ___ el museo. (visitar)",
-        "answers": [
-          [
-            "visitaron"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "Hace un mes yo ___ el curso. (terminar)",
-        "answers": [
-          [
-            "terminé"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Ayer trabajé en casa y cenar temprano.",
-        "answers": [
-          "Ayer trabajé en casa y cené temprano."
-        ],
-        "why": "Las dos acciones terminadas requieren formas conjugadas: trabajé y cené."
-      },
-      {
-        "type": "order",
-        "words": [
-          "Después",
-          "comí",
-          "con",
-          "mi",
-          "familia."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué marcador indica un periodo terminado?",
-        "options": [
-          "El año pasado",
-          "Normalmente"
-        ],
-        "answer": 0,
-        "why": "La opción elegida cumple la función comunicativa indicada."
-      },
-      {
-        "q": "¿Qué hizo antes de salir?",
-        "options": [
-          "Comer en el parque",
-          "Llamar a una amiga",
-          "Limpiar la casa"
-        ],
-        "answer": 2,
-        "why": "Comprueba el contexto y los datos de la escena: Limpiar la casa.",
-        "type": "listen",
-        "audio": "El domingo limpié la casa antes de salir."
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 2: Reconstruye tu último día libre con cinco acciones. Tu oyente necesita saber qué ocurrió primero y a qué hora terminó el plan.",
-        "model": "Hola, Berta. El sábado llegué al centro a las diez y esperé a Raúl junto al teatro. Primero visitamos el mercado y compramos fruta. Después caminamos por el parque. A la una comimos en una terraza y hablamos de nuestras vacaciones. Por la tarde regresé a casa y descansé un rato. Me gustó mucho el paseo porque hablamos sin prisa. La próxima vez puedes venir con nosotros.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Resolución final 2: Pregunta a un compañero por su fin de semana. Pide una hora, un lugar y una aclaración: ¿antes o después de comer? Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Contar un día terminado en orden y distinguir lo que hiciste de lo que haces habitualmente.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+  writing: {
+    task: "Escribe una entrada de blog sobre una excursión o un día especial que ya terminó.",
+    context: "Un blog de estudiantes de español publica relatos cortos con el título «Un día que salió distinto». Cuenta un día real o inventado en el que algo salió mal y algo salió bien.",
+    steps: [
+      "Di cuándo fue y adónde fuiste (el sábado pasado, en julio…).",
+      "Cuenta qué preparaste y qué pasó primero.",
+      "Cuenta el problema y cómo lo resolviste, con al menos tres irregulares.",
+      "Ordena el relato con _primero_, _luego_, _después_ y _al final_, y termina con un consejo.",
+      "Revisa las tildes de los regulares (_llegó_, _compré_) y corrige los irregulares, que no llevan tilde.",
     ],
-    "review": [
-      "En dos días, repite la misión «El sábado cambió de plan» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+    useLanguage: ["El sábado pasado fui a…", "Primero… luego… al final…", "Tuve un problema: …", "Por suerte… / Por desgracia…", "Mi consejo: …"],
+    model: [
+      "El domingo pasado fui con dos amigos a Sarchí, un pueblo famoso por sus carretas pintadas. Primero tomamos el bus en Alajuela, pero el conductor se equivocó de camino y llegamos una hora tarde. Por suerte, el taller de carretas estuvo abierto todo el día. Luego almorzamos en una soda y mi amigo Pablo pidió un casado enorme. Al final compré una carreta pequeña para mi madre. Mi consejo: salgan temprano.",
+    ],
+    checklist: [
+      "Todos los hechos están en indefinido.",
+      "Las formas regulares de yo y él llevan tilde.",
+      "Los irregulares (fui, tuve, hice…) no llevan tilde.",
+      "El relato tiene orden: primero, luego, al final.",
+    ],
+    words: [60, 110],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate. Prepara unas notas, pero habla sin leer.",
+    tasks: [
+      {
+        title: "Mi último fin de semana",
+        prompt: "Un compañero te pregunta el lunes: «¿Qué hiciste el fin de semana?». Cuenta el sábado y el domingo en orden, con al menos cinco verbos distintos.",
+        prep: ["El sábado por la mañana…", "Luego…", "El domingo…", "Al final…"],
+        seconds: 80,
+        model: "El sábado por la mañana fui al mercado y compré fruta. Luego hice limpieza en casa y por la tarde estuve con mi hermana en el parque. El domingo me levanté tarde, almorcé con mis padres y después vi una película. Al final me acosté temprano porque el lunes empecé un curso nuevo.",
+        selfCheck: ["Uso marcadores para ordenar.", "Pongo la fuerza en la última sílaba de los regulares.", "Digo al menos dos irregulares."],
+      },
+      {
+        title: "Lo que pasó en el restaurante",
+        prompt: "Cuenta una comida en un restaurante con amigos o familia: quién pidió qué, quién no pudo terminar y qué dijo el camarero.",
+        prep: ["Yo pedí… y mi amiga pidió…", "Mi padre no pudo…", "El camarero nos dijo…"],
+        seconds: 60,
+        model: "Fuimos a un restaurante peruano. Yo pedí ceviche y mi amiga pidió arroz con mariscos. Mi padre no pudo terminar su plato porque era enorme. El camarero nos dijo que el postre era gratis.",
+        selfCheck: ["Uso _pedí_ con yo y _pidió_ con otra persona.", "Uso **dijo** y **pudo** sin tilde."],
+      },
+      {
+        title: "Mi primer viaje",
+        prompt: "Cuenta tu primer viaje sin tu familia: adónde fuiste, cuándo, con quién y una cosa que salió mal.",
+        prep: ["En… fui a…", "Fue…", "Tuve un problema:…"],
+        seconds: 45,
+        selfCheck: ["Distingo _fui_ (ir) y _fue_ (ser).", "Uso un marcador de tiempo cerrado."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que repasaste esta semana y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Cuéntale", task: "Cuenta a tu profesor tu fin de semana en un minuto, sin parar, con primero, luego y al final.", phrases: ["Primero fui…", "Luego…", "Al final…"] },
+      { move: "Pregúntale", task: "Pregunta a tu profesor qué hizo el sábado pasado y haz dos preguntas más sobre lo que te cuenta.", phrases: ["¿Qué hiciste el sábado?", "¿Y qué pasó después?"] },
+      { move: "Comprueba", task: "Di las formas de yo y de él de cinco irregulares y pide que te corrijan.", phrases: ["tuve, tuvo", "hice, hizo"] },
+      { move: "Distingue", task: "Pide a tu profesor que diga «llego» o «llegó» y adivina cuál dice.", phrases: ["¿Es presente o pasado?"] },
+    ],
+    bring: "Trae tres fotos de un viaje o un día especial y prepara una frase en indefinido para cada una.",
+  },
+  quiz: {
+    items: [
+      { type: "choice", q: "Anoche mis compañeros de piso ___ una película de terror.", options: ["vieran", "han vieron", "vieron"], answer: 2, why: "Ellos en indefinido: **vieron**." },
+      { type: "listen", q: "¿Quién compró el pan?", audio: "Compró el pan en la esquina.", options: ["yo, ahora", "otra persona, en el pasado"], answer: 1, why: "La fuerza está en la última sílaba: **compró**." },
+      { type: "gap", q: "El lunes pasado yo ___ (llegar) tarde y ___ (pagar) una multa.", answers: [["llegué"], ["pagué"]], why: "Yo + -gar: **llegué**, **pagué**." },
+      { type: "gap", q: "En la fiesta Lucía ___ (servir) el pastel y los niños ___ (dormir) en el sofá.", answers: [["sirvió"], ["durmieron"]], why: "Tercera persona: e → i y o → u." },
+      { type: "transform", source: "Estoy en Liberia dos días.", instruction: "Cuéntalo en indefinido y empieza con «El mes pasado».", answers: ["El mes pasado estuve en Liberia dos días.", "El mes pasado estuve dos días en Liberia."], why: "_Estar_ con yo: **estuve**, sin tilde." },
+      { type: "order", words: ["Después", "pusimos", "la", "tienda", "de", "campaña", "cerca", "del", "río."] },
+      { type: "error", sentence: "Mis tíos me dijieron que el hotel era muy caro.", answers: ["Mis tíos me dijeron que el hotel era muy caro."], why: "Con ellos, decir pierde la i: **dijeron**." },
+      { type: "error", sentence: "El año pasado mi hija hació un curso de cocina.", answers: ["El año pasado mi hija hizo un curso de cocina."], why: "_Hacer_ con ella: **hizo**." },
+      { type: "choice", q: "¿En qué frase «fue» es del verbo ir?", options: ["Fue una noche tranquila.", "Mi abuela fue enfermera.", "Ella fue a Cartago en tren."], answer: 2, why: "**a** + lugar: es _ir_." },
+      { type: "open", prompt: "Escribe tres frases sobre tu último viaje: adónde fuiste, un problema que tuviste y qué hiciste al final.", model: "En agosto fui a Panamá. Tuve un problema con la maleta en el aeropuerto. Al final compré ropa nueva y disfruté mucho.", checklist: ["fui + a + lugar", "tuve + problema", "al final + indefinido"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Conjugar los verbos regulares en indefinido con las seis personas y su tilde.",
+      "Escribir bien la forma de yo de los verbos en -car, -gar y -zar.",
+      "Usar fui, hice, tuve, estuve, pude, puse y dije y distinguir ir de ser.",
+      "Aplicar el cambio e → i y o → u en tercera persona: pidió, durmieron.",
+      "Contar un día terminado en orden con primero, luego y al final.",
+      "Oír la diferencia entre llego y llegó.",
+    ],
+    review: ["-é, -aste, -ó, -amos, -asteis, -aron · -í, -iste, -ió, -imos, -isteis, -ieron", "busqué, llegué, empecé (solo yo)", "fui, hice, tuve, estuve, pude, puse, dije: sin tilde", "pidió, sirvió, durmió (solo él y ellos)"],
+  },
+  related: [
+    { path: "/sistema-verbal/preterito-perfecto-simple-indicativo", label: "Clase: Pretérito indefinido regular" },
+    { path: "/gramatica/indefinido-irregular", label: "Clase: Pretérito indefinido irregular de alta frecuencia" },
+  ],
 };

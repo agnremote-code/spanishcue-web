@@ -1,0 +1,11 @@
+[
+  [14, "gram", "g030", "Expresiones de frecuencia y hábito", "Puedo decir con qué frecuencia hago algo con siempre, a veces o nunca y con todos los días, dos veces por semana o los lunes, y colocar nunca bien.", ["a1.gram.g017", "a1.gram.g024"], { "related": ["/gramatica/frecuencia-y-habitos"] }],
+  [14, "gram", "g031", "Verbos reflexivos cotidianos", "Puedo contar mi rutina con verbos reflexivos y su pronombre delante, también en negativo y con cambio de raíz, y distinguir me lavo de lavo el coche.", ["a1.gram.g017", "a1.gram.g020"], { "related": ["/gramatica/verbos-reflexivos-cotidianos"] }],
+  [14, "voc", "w14-rutina-diaria", "Verbos y momentos de la rutina diaria", "Puedo nombrar las acciones de la rutina de la mañana y de la noche y preguntar con qué frecuencia hace algo una persona.", ["a1.gram.g031"]],
+  [14, "pron", "w14-pronombre-verbo", "El pronombre unido al verbo", "Puedo pronunciar me, te, se y nos unidos al verbo y reconocer la persona por el pronombre al escuchar.", []],
+  [14, "lis", "w14-turnos-bano", "Escuchar una conversación sobre rutinas", "Puedo entender horarios, hábitos y frecuencias en una conversación breve entre compañeras de piso.", ["a1.gram.g030", "a1.gram.g031"]],
+  [14, "read", "w14-dia-panadera", "Leer la rutina de una persona", "Puedo entender un artículo breve que cuenta el día y los hábitos de una persona y distinguir lo que hace siempre, a veces o nunca.", ["a1.gram.g030", "a1.gram.g031"]],
+  [14, "wri", "w14-semana-intercambio", "Escribir sobre mi semana", "Puedo escribir un mensaje breve que cuenta mi rutina de la semana con verbos reflexivos y frecuencias, y propone un momento para hablar.", ["a1.gram.g030", "a1.gram.g031", "a1.voc.w14-rutina-diaria"]],
+  [14, "spk", "w14-contar-rutina", "Contar mi día en voz alta", "Puedo contar durante unos 50 segundos mi día de la mañana a la noche y entrevistar a alguien sobre sus hábitos.", ["a1.fun.w14-hablar-habitos"]],
+  [14, "fun", "w14-hablar-habitos", "Hablar de rutinas y hábitos", "Puedo contar mi rutina, preguntar por la de otra persona y decir con qué frecuencia hacemos las cosas.", ["a1.gram.g030", "a1.gram.g031"]]
+]

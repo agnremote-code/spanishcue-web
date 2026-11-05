@@ -1,462 +1,954 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 10 (checkpoint) · Autoestudio espejo de G106 (empezar a, ponerse a)
+ * y G107 (seguir + gerundio; soler), integrando las clases de las semanas 6 a 9
+ * (G097–G105). Repaso autónomo con una librería-café de barrio en Rosario.
+ */
 export const b1w10: Module = {
   "id": "b1-10",
   "level": "b1",
   "week": 10,
   "kind": "checkpoint",
-  "title": "Checkpoint: decidir en comunidad",
-  "subtitle": "Integrar opiniones, emociones, requisitos y propuestas en una decisión compartida.",
+  "title": "Un año de librería en Rosario: cómo empezó y qué sigue",
+  "subtitle": "Repaso de «empezar a», «ponerse a» y «seguir + gerundio», y control de las semanas 6 a 9: perfecto de subjuntivo, temporales, finalidad, relativas, «aunque», condiciones, condicional y «por / para».",
   "stop": {
     "place": "Rosario",
     "country": "Argentina"
   },
   "minutes": 110,
   "newObjectives": [
-    "b1.rev.checkpoint-2",
-    "b1.wri.foro"
+    "b1.gram.g106",
+    "b1.gram.g107",
+    "b1.voc.w10-emprender-barrio",
+    "b1.pron.w10-gerundio-vocal",
+    "b1.lis.w10-podcast-libreria",
+    "b1.read.w10-perfil-diario",
+    "b1.wri.w10-correo-un-ano-despues",
+    "b1.spk.w10-contar-proyecto",
+    "b1.fun.w10-contar-trayectoria",
+    "b1.disc.w10-linea-temporal",
+    "b1.rev.w10-repaso-semanas-6-9"
   ],
-  "reviewObjectives": [
-    "b1.gram.opinion-subjuntivo",
-    "b1.gram.valoracion",
-    "b1.voc.medios-redes",
-    "b1.pron.duda-certeza",
-    "b1.fun.opinar-matizar",
-    "b1.read.articulo-opinion",
-    "b1.gram.emociones-subjuntivo",
-    "b1.gram.mismo-sujeto",
-    "b1.voc.sentimientos",
-    "b1.pron.entonacion-emocion",
-    "b1.fun.expresar-sentimientos",
-    "b1.wri.correo-personal",
-    "b1.gram.relativas-modo",
-    "b1.gram.relativos-quien-donde",
-    "b1.voc.vivienda-convivencia",
-    "b1.pron.pausas-relativas",
-    "b1.fun.describir-ideal",
-    "b1.lis.anuncios-busco",
-    "b1.gram.condicional-simple",
-    "b1.voc.trabajo-entrevistas",
-    "b1.pron.modalidad-cortesia",
-    "b1.fun.entrevista-trabajo",
-    "b1.spk.entrevista-simulada",
-    "b1.gram.probabilidad",
-    "b1.voc.misterios",
-    "b1.pron.entonacion-hipotesis",
-    "b1.fun.suponer",
-    "b1.read.relato-misterio",
-    "b1.voc.relaciones",
-    "b1.fun.hablar-relaciones",
-    "b1.gram.demostrativos-discurso",
-    "b1.gram.posesivos-relacion",
-    "b1.gram.cuantificacion-busqueda"
-  ],
-  "prerequisites": [
-    "b1-09"
-  ],
+  reviewObjectives: ["b1.gram.g097","b1.gram.g098","b1.voc.w06-teatro-estreno","b1.pron.w06-h-muda-enlace","b1.lis.w06-ensayo-general","b1.read.w06-bitacora-compania","b1.wri.w06-mensaje-elenco","b1.spk.w06-arenga-preguntas","b1.fun.w06-valorar-coordinar","b1.disc.w06-secuencia-pasos","b1.gram.g099","b1.gram.g100","b1.voc.w07-vivienda-alquiler","b1.pron.w07-pausa-relativa","b1.lis.w07-llamada-inmobiliaria","b1.read.w07-foro-recien-llegados","b1.wri.w07-anuncio-busqueda","b1.spk.w07-describir-busqueda","b1.fun.w07-pedir-requisitos","b1.disc.w07-requisito-finalidad","b1.gram.g101","b1.gram.g102","b1.gram.g103","b1.voc.w08-correr-entrenar","b1.pron.w08-ria-ia","b1.lis.w08-consejos-entrenadora","b1.read.w08-guia-primera-carrera","b1.wri.w08-correo-consejos","b1.spk.w08-plan-negociado","b1.fun.w08-animar-aconsejar","b1.disc.w08-obstaculo-decision","b1.gram.g104","b1.gram.g105","b1.voc.w09-naturaleza-voluntariado","b1.pron.w09-por-para-rapido","b1.lis.w09-reunion-voluntarios","b1.read.w09-normas-proyecto","b1.wri.w09-plan-alternativas","b1.spk.w09-resolver-problema","b1.fun.w09-resolver-imprevistos","b1.disc.w09-plan-alternativo"],
+  prerequisites: ["b1-09"],
   "goal": {
-    "canDo": "Puedo integrar opiniones, emociones, requisitos y propuestas en una decisión compartida.",
+    "canDo": "Al final de esta semana puedes contar cómo empezaste algo («empecé a…», «me puse a…»), qué sigues haciendo («sigo trabajando…») y combinarlo con todo lo que repasaste desde la semana 6 para valorar, planear, pedir y aconsejar.",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa las perífrasis que marcan el inicio de una acción: «empezar a», «ponerse a», «echarse a».",
+      "Repasa «seguir + gerundio», «seguir sin + infinitivo» y «soler + infinitivo».",
+      "Repasa en una tabla las clases de las semanas 6 a 9 y haz la práctica integrada.",
+      "Escucha la entrevista de radio a Paula y lee su perfil en el diario de Rosario.",
+      "Escribe un correo sobre algo que empezaste hace un año, revísalo y cuéntalo en voz alta."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Integrar opiniones, emociones, requisitos y propuestas en una decisión compartida.",
+    "intro": "Esta es una semana de control. Repasas dos clases nuevas, sobre cómo empieza y cómo continúa una acción, y además vuelves a las nueve clases de las semanas 6 a 9 para comprobar que las puedes usar juntas. Te acompaña Paula, una profesora de Rosario que hace un año abrió una pequeña librería-café en el barrio Pichincha.",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "Empezar a, ponerse a, echarse a: tres maneras de empezar",
         "body": [
-          "En una decisión colectiva se combinan afirmaciones, valoraciones y búsquedas: sabemos que el local cierra temprano; nos preocupa que falte espacio; buscamos uno que abra más tarde. Antes de seleccionar el modo, identifica la intención que expresa cada construcción."
+          "«Empezar a» (o «comenzar a», más formal) + infinitivo marca el inicio de una acción, un estado o un proceso, sin más matices: «Empecé a trabajar en la librería en marzo», «Empieza a hacer frío». «Ponerse a» + infinitivo indica que alguien decide empezar o empieza de repente una actividad: «Llegué a casa y me puse a escribir». No se usa con estados: no decimos «se puso a saber».",
+          "«Echarse a» se usa casi solo con reír, llorar, correr y temblar, para un inicio brusco e incontrolado: «Cuando vio el cartel, se echó a llorar». Y si la acción todavía no ha empezado, pero va a empezar ya, dices «estar a punto de» + infinitivo. Los pronombres van delante del verbo conjugado o pegados al infinitivo, nunca en medio: «me puse a ordenarlos» o «los empecé a ordenar»."
         ],
-        "examples": [
-          {
-            "es": "Creo que el centro actual ofrece buenas mesas."
-          },
-          {
-            "es": "No creo que el horario sirva a todos."
-          },
-          {
-            "es": "Nos preocupa que algunas personas queden fuera."
-          }
-        ],
+        "table": {
+          "caption": "¿Cómo empieza la acción?",
+          "head": [
+            "Perífrasis",
+            "Matiz",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "empezar / comenzar a",
+              "inicio neutro; también estados",
+              "Empecé a vender libros usados en 2024."
+            ],
+            [
+              "ponerse a",
+              "inicio decidido o repentino de una actividad",
+              "Cerré la puerta y me puse a pintar las paredes."
+            ],
+            [
+              "echarse a",
+              "inicio brusco: reír, llorar, correr, temblar",
+              "El niño se echó a reír con el cuento."
+            ],
+            [
+              "estar a punto de",
+              "la acción va a empezar ya",
+              "Estábamos a punto de abrir cuando se cortó la luz."
+            ]
+          ]
+        },
         "mistakes": [
           {
-            "wrong": "No creo que todos pueden llegar a las seis.",
-            "right": "No creo que todos puedan llegar a las seis.",
-            "why": "Se niega la afirmación con no creo que."
+            "wrong": "Empecé trabajar en la librería en marzo.",
+            "right": "Empecé a trabajar en la librería en marzo.",
+            "why": "Con «empezar», «ponerse» y «echarse» la preposición «a» es obligatoria."
+          },
+          {
+            "wrong": "De repente se puso a estar triste.",
+            "right": "De repente se puso triste.",
+            "why": "«Ponerse a» va con actividades; para un cambio de estado se usa «ponerse» + adjetivo."
           }
         ]
       },
       {
-        "heading": "Organizar la comunicación",
+        "heading": "Seguir + gerundio y soler + infinitivo",
         "body": [
-          "Una propuesta no gana fuerza por eliminar todas las dudas. Compara requisitos, explica una emoción sin atacar y formula preguntas corteses. Al resumir la discusión, distingue acuerdos, cuestiones pendientes y conjeturas: el grupo debe reconocer su postura en tu resumen."
+          "«Seguir» (o «continuar») + gerundio dice que una acción que empezó antes no se ha interrumpido: «Sigo dando clases por las mañanas». Lo contrario, que algo que esperabas todavía no ha empezado, se dice con «seguir sin» + infinitivo: «Seguimos sin tener calefacción». Ojo: «seguir» cambia la «e» en «i» (sigo, sigues, siguió) y nunca va con infinitivo: no se dice «sigo trabajar».",
+          "«Soler» + infinitivo habla de lo que haces normalmente: «Suelo abrir a las cuatro». Solo se usa en presente («suelo») y en imperfecto («solía»), y siempre con infinitivo. El gerundio se forma con -ando (-ar) e -iendo (-er, -ir); algunos verbos cambian la vocal (durmiendo, pidiendo, diciendo) o usan «y» (leyendo, oyendo, yendo)."
         ],
-        "examples": [
+        "table": {
+          "caption": "Presente de «seguir» y «soler»",
+          "head": [
+            "Persona",
+            "seguir + gerundio",
+            "soler + infinitivo"
+          ],
+          "rows": [
+            [
+              "yo",
+              "sigo leyendo",
+              "suelo leer"
+            ],
+            [
+              "tú",
+              "sigues leyendo",
+              "sueles leer"
+            ],
+            [
+              "él / ella / usted",
+              "sigue leyendo",
+              "suele leer"
+            ],
+            [
+              "nosotros / nosotras",
+              "seguimos leyendo",
+              "solemos leer"
+            ],
+            [
+              "vosotros / vosotras",
+              "seguís leyendo",
+              "soléis leer"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "siguen leyendo",
+              "suelen leer"
+            ]
+          ]
+        },
+        "mistakes": [
           {
-            "es": "Buscamos un espacio que sea accesible."
+            "wrong": "Sigo trabajar en la escuela por las mañanas.",
+            "right": "Sigo trabajando en la escuela por las mañanas.",
+            "why": "«Seguir» va con gerundio, no con infinitivo."
           },
           {
-            "es": "¿Podríamos probar otra sede durante un mes?"
+            "wrong": "Ahora sigo no teniendo tiempo para leer.",
+            "right": "Ahora sigo sin tener tiempo para leer.",
+            "why": "Para lo que todavía no ocurre, se dice «seguir sin» + infinitivo."
           },
           {
-            "es": "A lo mejor el ruido viene de la obra cercana."
+            "wrong": "El año pasado solí cerrar a las ocho.",
+            "right": "El año pasado solía cerrar a las ocho.",
+            "why": "«Soler» no tiene pretérito indefinido: en pasado se usa «solía»."
+          }
+        ],
+        "tip": "Si en tu lengua dices «still + -ing», piensa en «seguir + gerundio»; si dices «still not», piensa en «seguir sin»."
+      },
+      {
+        "heading": "Control de las semanas 6 y 7: mirar atrás, mirar adelante, buscar y explicar para qué",
+        "body": [
+          "Semana 6: reaccionas ahora a algo que ya pasó con «haya + participio» («Me alegra que hayan venido tantos vecinos»), y hablas del futuro con «cuando», «en cuanto», «hasta que» y «antes de que» + subjuntivo («Cuando tengamos más espacio, haremos talleres»).",
+          "Semana 7: explicas la finalidad con «para» + infinitivo (mismo sujeto) o «para que» + subjuntivo (otro sujeto), y describes con relativas: indicativo si lo conoces («una vecina que hace tortas»), subjuntivo si lo buscas («alguien que sepa de café»), y «, quien…,» para añadir un dato."
+        ],
+        "table": {
+          "caption": "Semanas 6 y 7 en la librería de Paula",
+          "head": [
+            "Clase",
+            "Regla clave",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "G097",
+              "reacción ahora + hecho anterior → haya + participio",
+              "Qué bien que hayas traído tus libros viejos."
+            ],
+            [
+              "G098",
+              "acción futura tras cuando / en cuanto / hasta que → subjuntivo",
+              "En cuanto lleguen las sillas, abrimos el patio."
+            ],
+            [
+              "G099",
+              "otro sujeto → para que + subjuntivo",
+              "Pusimos un sofá para que la gente lea tranquila."
+            ],
+            [
+              "G100",
+              "antecedente buscado → subjuntivo; conocido → indicativo",
+              "Busco un ilustrador que dé talleres."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Cuando tendremos más espacio, haremos talleres.",
+            "right": "Cuando tengamos más espacio, haremos talleres.",
+            "why": "Semana 6: detrás de «cuando» con valor futuro, subjuntivo."
+          },
+          {
+            "wrong": "Busco a alguien que sabe preparar café.",
+            "right": "Busco a alguien que sepa preparar café.",
+            "why": "Semana 7: antecedente buscado, subjuntivo."
           }
         ]
+      },
+      {
+        "heading": "Control de las semanas 8 y 9: obstáculos, condiciones, consejos, por y para",
+        "body": [
+          "Semana 8: aceptas un obstáculo real con «aunque» + indicativo, sin añadir «pero» («Aunque gano menos, estoy feliz»); planteas condiciones con «si» + presente («Si las ventas siguen así, abriremos los domingos»), y usas el condicional para pedir, aconsejar e imaginar («Yo que tú, empezaría con poco»).",
+          "Semana 9: organizas planes con alternativa («si llueve, la presentación es adentro; si no, en la vereda») y aconsejas con «yo + condicional». Y eliges «por» para la causa, el recorrido, el medio y el precio, y «para» para el objetivo, el destinatario, el destino y el plazo."
+        ],
+        "table": {
+          "caption": "Semanas 8 y 9 en la librería de Paula",
+          "head": [
+            "Clase",
+            "Regla clave",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "G101",
+              "aunque + indicativo, sin «pero»",
+              "Aunque el local es pequeño, entra mucha luz."
+            ],
+            [
+              "G102",
+              "si + presente, nunca futuro",
+              "Si vendemos cien libros, invitamos a un autor."
+            ],
+            [
+              "G103",
+              "condicional: cortesía, consejo, hipótesis",
+              "¿Podrías dejarme un cartel en tu negocio?"
+            ],
+            [
+              "G104",
+              "plan B con «si no»; consejo con «yo + condicional»",
+              "Yo haría la feria en el patio; si no, en la vereda."
+            ],
+            [
+              "G105",
+              "por = causa, recorrido, precio; para = objetivo, destinatario, plazo",
+              "Vendo cada libro usado por tres mil pesos para pagar el alquiler."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Aunque llovía, pero vinieron veinte personas.",
+            "right": "Aunque llovía, vinieron veinte personas.",
+            "why": "Semana 8: «aunque» y «pero» no van juntos."
+          },
+          {
+            "wrong": "Gracias para venir a la presentación.",
+            "right": "Gracias por venir a la presentación.",
+            "why": "Semana 9: se agradece «por» algo."
+          }
+        ],
+        "tip": "Antes de escribir, repasa estas dos tablas: el control de esta semana mezcla todas las reglas en los mismos textos."
       }
     ]
   },
   "grammar": {
+    "intro": "Primero las dos clases nuevas; después, una mezcla con las semanas 6 a 9.",
     "exercises": [
       {
-        "id": "b1-10-forms",
-        "type": "gap",
-        "prompt": "Completa estas situaciones de «Checkpoint: decidir en comunidad» con la forma que expresa la relación indicada.",
+        "id": "b1-10-gramatica-inicio",
+        "type": "context",
+        "title": "¿Cómo empezó?",
+        "prompt": "Lee la situación y elige la perífrasis más adecuada.",
         "items": [
           {
-            "q": "Nos alegra que el grupo ___ creciendo.",
-            "answers": [
-              [
-                "siga"
-              ]
+            "context": "Paula no planeaba nada. Un domingo vio un local vacío y, al llegar a casa, decidió hacer números sin esperar más.",
+            "q": "Al llegar a casa, ___ calcular cuánto costaría.",
+            "options": [
+              "se echó a",
+              "se puso a",
+              "estaba a punto de"
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "answer": 1,
+            "why": "Decide empezar una actividad en ese momento: «ponerse a»."
           },
           {
-            "q": "Necesitamos una sala que ___ después de las ocho.",
-            "answers": [
-              [
-                "abra"
-              ]
+            "context": "Durante la inauguración, una señora mayor encontró un libro que había perdido en su infancia.",
+            "q": "Emocionada, ___ llorar.",
+            "options": [
+              "se echó a",
+              "empezó",
+              "siguió"
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "answer": 0,
+            "why": "Inicio brusco e incontrolado con «llorar»: «echarse a»."
           },
           {
-            "q": "¿___ probar el cambio antes de decidir?",
-            "answers": [
-              [
-                "Podríamos"
-              ]
+            "context": "En otoño, poco a poco, más vecinos se acercaban a la librería.",
+            "q": "En otoño la clientela ___ crecer.",
+            "options": [
+              "se puso a",
+              "se echó a",
+              "empezó a"
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "answer": 2,
+            "why": "Proceso gradual: «empezar a»."
+          },
+          {
+            "context": "Faltaban dos minutos para abrir la puerta por primera vez.",
+            "q": "Paula ___ abrir cuando llamó su madre.",
+            "options": [
+              "empezó a",
+              "estaba a punto de",
+              "se echó a"
+            ],
+            "answer": 1,
+            "why": "La acción va a empezar ya: «estar a punto de»."
           }
-        ],
-        "bank": [
-          "siga",
-          "abra",
-          "Podríamos"
         ]
       },
       {
-        "id": "b1-10-repair",
-        "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "id": "b1-10-gramatica-seguir-soler",
+        "type": "gap",
+        "title": "Lo que sigue igual",
+        "prompt": "Completa con «seguir» + gerundio, «seguir sin» + infinitivo o «soler» + infinitivo.",
         "items": [
           {
-            "sentence": "No creo que todos pueden llegar a las seis.",
+            "q": "Aunque tiene la librería, Paula ___ ___ clases de literatura por la mañana. (dar)",
             "answers": [
-              "No creo que todos puedan llegar a las seis."
+              [
+                "sigue"
+              ],
+              [
+                "dando"
+              ]
             ],
-            "why": "Se niega la afirmación con no creo que."
+            "why": "Una acción que no se ha interrumpido: «sigue dando»."
           },
           {
-            "sentence": "Me preocupa que la sala es pequeña.",
+            "q": "Los sábados (nosotros) ___ ___ a las diez, pero en enero cerramos. (abrir)",
             "answers": [
-              "Me preocupa que la sala sea pequeña."
+              [
+                "solemos"
+              ],
+              [
+                "abrir"
+              ]
             ],
-            "why": "La reacción usa subjuntivo aunque el tamaño sea conocido."
+            "why": "Costumbre: «soler» + infinitivo."
           },
           {
-            "sentence": "Buscamos alguien donde pueda organizar el grupo.",
+            "q": "Llevamos un año y ___ ___ ___ cartel en la puerta. (tener, nosotros)",
             "answers": [
-              "Buscamos alguien que pueda organizar el grupo."
+              [
+                "seguimos"
+              ],
+              [
+                "sin"
+              ],
+              [
+                "tener"
+              ]
             ],
-            "why": "La relativa modifica una persona, no un lugar."
+            "why": "Algo esperado que todavía no ocurre: «seguir sin» + infinitivo."
+          },
+          {
+            "q": "Mi gato ___ ___ en el escaparate aunque lo saco cada mañana. (dormir)",
+            "answers": [
+              [
+                "sigue"
+              ],
+              [
+                "durmiendo"
+              ]
+            ],
+            "why": "Gerundio con cambio vocálico: «durmiendo»."
+          },
+          {
+            "q": "De joven, Paula ___ ___ en el tren de camino a la facultad. (leer)",
+            "answers": [
+              [
+                "solía"
+              ],
+              [
+                "leer"
+              ]
+            ],
+            "why": "Costumbre del pasado: «solía» + infinitivo."
+          }
+        ]
+      },
+      {
+        "id": "b1-10-gramatica-mezcla-6-9",
+        "type": "choice",
+        "title": "Control de las semanas 6 a 9",
+        "prompt": "Elige la forma correcta. Cada frase repasa una clase anterior.",
+        "items": [
+          {
+            "q": "G097 · Me sorprende que tantos estudiantes ___ a la presentación.",
+            "options": [
+              "han venido",
+              "hayan venido",
+              "vendrán"
+            ],
+            "answer": 1,
+            "why": "Reacción ahora a un hecho anterior: «hayan venido»."
+          },
+          {
+            "q": "G098 · No cierres la caja hasta que ___ el último cliente.",
+            "options": [
+              "se va",
+              "se irá",
+              "se vaya"
+            ],
+            "answer": 2,
+            "why": "«Hasta que» + acción futura: subjuntivo."
+          },
+          {
+            "q": "G099 · Pusimos música suave para que los clientes ___ cómodos.",
+            "options": [
+              "se sientan",
+              "se sienten",
+              "sentirse"
+            ],
+            "answer": 0,
+            "why": "Otro sujeto: «para que» + subjuntivo."
+          },
+          {
+            "q": "G101 · ___ el café es caro, lo seguimos sirviendo en taza de cerámica.",
+            "options": [
+              "Si",
+              "Aunque",
+              "Para que"
+            ],
+            "answer": 1,
+            "why": "Obstáculo real que no impide la acción: «aunque» + indicativo."
+          },
+          {
+            "q": "G105 · Compré la estantería ___ quince mil pesos.",
+            "options": [
+              "para",
+              "por"
+            ],
+            "answer": 1,
+            "why": "Precio: «por»."
+          }
+        ]
+      },
+      {
+        "id": "b1-10-gramatica-errores",
+        "type": "error",
+        "title": "Corrige el error",
+        "prompt": "Cada frase tiene un error. Escríbela bien.",
+        "items": [
+          {
+            "sentence": "Cuando cerré la tienda, me puse leer en el sofá.",
+            "answers": [
+              "Cuando cerré la tienda, me puse a leer en el sofá."
+            ],
+            "why": "«Ponerse a» necesita la preposición «a»."
+          },
+          {
+            "sentence": "Seguimos esperar la licencia del ayuntamiento.",
+            "answers": [
+              "Seguimos esperando la licencia del ayuntamiento."
+            ],
+            "why": "«Seguir» + gerundio."
+          },
+          {
+            "sentence": "Si tendré dinero en verano, pintaré la fachada.",
+            "answers": [
+              "Si tengo dinero en verano, pintaré la fachada."
+            ],
+            "why": "Semana 8: detrás de «si», presente."
+          },
+          {
+            "sentence": "Yo que tú, contrataré a alguien para los sábados.",
+            "answers": [
+              "Yo que tú, contrataría a alguien para los sábados."
+            ],
+            "why": "Semanas 8 y 9: el consejo con «yo que tú» va en condicional."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para contar cómo nace y crece un pequeño negocio de barrio. Algunas son muy rioplatenses: te lo indicamos.",
     "groups": [
       {
-        "title": "Checkpoint: decidir en comunidad · acciones y recursos",
+        "title": "Abrir el negocio",
         "items": [
           {
-            "es": "una propuesta provisional",
-            "note": "idea que se probará antes de fijarla"
+            "es": "el local"
           },
           {
-            "es": "recoger opiniones",
-            "note": "preguntar y reunir perspectivas"
+            "es": "alquilar un local"
           },
           {
-            "es": "quedar fuera",
-            "note": "no poder participar"
+            "es": "el socio, la socia"
           },
           {
-            "es": "una limitación",
-            "note": "condición que reduce las opciones"
+            "es": "los ahorros"
+          },
+          {
+            "es": "el trámite"
+          },
+          {
+            "es": "la habilitación",
+            "note": "En Argentina, el permiso municipal para abrir un comercio."
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "El día a día",
         "items": [
           {
-            "es": "valorar alternativas",
-            "note": "comparar soluciones posibles"
+            "es": "la clientela"
           },
           {
-            "es": "una prueba piloto",
-            "note": "ensayo reducido de una propuesta"
+            "es": "el escaparate",
+            "note": "En Argentina se dice mucho «la vidriera»."
           },
           {
-            "es": "dejar constancia",
-            "note": "registrar lo que se ha dicho"
+            "es": "la caja"
           },
           {
-            "es": "una decisión compartida",
-            "note": "elección elaborada con otras personas"
+            "es": "facturar"
+          },
+          {
+            "es": "la vereda",
+            "note": "En España, «la acera»."
+          },
+          {
+            "es": "la presentación de un libro"
+          }
+        ]
+      },
+      {
+        "title": "Salir adelante",
+        "items": [
+          {
+            "es": "sacar adelante un proyecto"
+          },
+          {
+            "es": "salir a flote"
+          },
+          {
+            "es": "llegar a fin de mes"
+          },
+          {
+            "es": "correr la voz"
+          },
+          {
+            "es": "arriesgarse"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-10-lexis",
+        "id": "b1-10-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «Checkpoint: decidir en comunidad» con su significado en este contexto.",
+        "title": "Cada expresión con su significado",
+        "prompt": "Une cada expresión con su explicación.",
         "pairs": [
           {
-            "left": "una propuesta provisional",
-            "right": "idea que se probará antes de fijarla"
+            "left": "salir a flote",
+            "right": "superar una época difícil sin cerrar"
           },
           {
-            "left": "recoger opiniones",
-            "right": "preguntar y reunir perspectivas"
+            "left": "correr la voz",
+            "right": "contar algo a muchas personas para que se sepa"
           },
           {
-            "left": "quedar fuera",
-            "right": "no poder participar"
+            "left": "llegar a fin de mes",
+            "right": "tener dinero suficiente hasta el próximo sueldo"
           },
           {
-            "left": "una limitación",
-            "right": "condición que reduce las opciones"
+            "left": "la clientela",
+            "right": "el conjunto de personas que compran en un negocio"
           },
           {
-            "left": "valorar alternativas",
-            "right": "comparar soluciones posibles"
+            "left": "la habilitación",
+            "right": "el permiso oficial para abrir un comercio"
+          }
+        ],
+        "why": "Varias son expresiones fijas: apréndelas enteras."
+      },
+      {
+        "id": "b1-10-vocabulario-huecos",
+        "type": "gap",
+        "title": "Un año en Pichincha",
+        "prompt": "Completa con una palabra o expresión del banco.",
+        "bank": [
+          "ahorros",
+          "vereda",
+          "escaparate",
+          "trámites",
+          "arriesgarse"
+        ],
+        "items": [
+          {
+            "q": "Paula invirtió todos sus ___ en la librería.",
+            "answers": [
+              [
+                "ahorros"
+              ]
+            ],
+            "why": "El dinero que tenía guardado."
           },
           {
-            "left": "una prueba piloto",
-            "right": "ensayo reducido de una propuesta"
+            "q": "Los ___ para abrir tardaron cuatro meses.",
+            "answers": [
+              [
+                "trámites"
+              ]
+            ],
+            "why": "Los papeles y permisos."
           },
           {
-            "left": "dejar constancia",
-            "right": "registrar lo que se ha dicho"
+            "q": "Cada semana cambia los libros del ___ para que la gente se pare a mirar.",
+            "answers": [
+              [
+                "escaparate"
+              ]
+            ],
+            "why": "En Argentina, también «vidriera»."
           },
           {
-            "left": "una decisión compartida",
-            "right": "elección elaborada con otras personas"
+            "q": "En verano pone dos mesas en la ___.",
+            "answers": [
+              [
+                "vereda"
+              ]
+            ],
+            "why": "La acera, en el Río de la Plata."
+          },
+          {
+            "q": "Dice que, aunque da miedo, a veces hay que ___.",
+            "answers": [
+              [
+                "arriesgarse"
+              ]
+            ],
+            "why": "Asumir un riesgo."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "Marcar acuerdo parcial y propuesta",
+    "focus": "El gerundio: -ando, -iendo, -yendo y la vocal que cambia",
     "explanation": [
-      "Marca una pausa después de entiendo tu postura. Continúa con el requisito que falta, sin acelerar ni dar por cerrado el turno de la otra persona.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "El gerundio lleva siempre el acento en la sílaba «-an-» o «-ien-»: tra-ba-JAN-do, a-pren-DIEN-do. En los verbos en -ir que cambian la vocal en presente, la «e» pasa a «i» y la «o» pasa a «u»: pidiendo, sintiendo, diciendo, siguiendo, durmiendo, muriendo. Esa vocal se oye con claridad y es fácil confundirla si no la esperas.",
+      "Cuando la raíz termina en vocal, la «i» de «-iendo» se convierte en «y»: leyendo, oyendo, cayendo, construyendo; y el gerundio de «ir» es «yendo». Pronuncia esa «y» como una consonante suave, igual que en «haya» de la semana 6."
     ],
-    "examples": [
-      {
-        "es": "Creo que el centro actual ofrece buenas mesas."
-      },
-      {
-        "es": "No creo que el horario sirva a todos."
-      },
-      {
-        "es": "Nos preocupa que algunas personas queden fuera."
-      }
-    ],
+    "table": {
+      "caption": "Gerundios que hay que mirar dos veces",
+      "head": [
+        "Infinitivo",
+        "Gerundio",
+        "Qué cambia"
+      ],
+      "rows": [
+        [
+          "pedir",
+          "pidiendo",
+          "e → i"
+        ],
+        [
+          "decir",
+          "diciendo",
+          "e → i"
+        ],
+        [
+          "seguir",
+          "siguiendo",
+          "e → i"
+        ],
+        [
+          "dormir",
+          "durmiendo",
+          "o → u"
+        ],
+        [
+          "leer",
+          "leyendo",
+          "i → y"
+        ],
+        [
+          "ir",
+          "yendo",
+          "forma especial"
+        ]
+      ]
+    },
     "perceive": {
-      "id": "b1-10-perception",
+      "id": "b1-10-pronunciacion-gerundio",
       "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "title": "¿Qué gerundio oyes?",
+      "prompt": "Escucha cada frase y elige la forma que oyes.",
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «Checkpoint: decidir en comunidad»?",
+          "q": "¿Qué forma oyes?",
           "options": [
-            "Se separa el reconocimiento del requisito",
-            "Solo se pronuncia una negación"
-          ],
-          "answer": 0,
-          "audio": "Entiendo tu postura; necesitamos otra hora.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
-        },
-        {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «Checkpoint: decidir en comunidad»?",
-          "options": [
-            "Se oye podremos con acento en dre",
-            "Se oye podríamos con acento en rí"
+            "dormiendo",
+            "durmiendo"
           ],
           "answer": 1,
-          "audio": "Podríamos probar durante un mes.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "«Dormir» cambia la «o» en «u»: «durmiendo».",
+          "audio": "Mi socio sigue durmiendo en la trastienda.",
+          "voice": "es-AR-m"
+        },
+        {
+          "q": "¿Y aquí?",
+          "options": [
+            "pidiendo",
+            "pediendo"
+          ],
+          "answer": 0,
+          "why": "«Pedir» → «pidiendo».",
+          "audio": "Los chicos siguen pidiendo cuentos de piratas.",
+          "voice": "es-AR-f"
+        },
+        {
+          "q": "¿Qué forma oyes?",
+          "options": [
+            "leiendo",
+            "leyendo"
+          ],
+          "answer": 1,
+          "why": "La raíz termina en vocal: «leyendo», con «y».",
+          "audio": "Una clienta se quedó leyendo hasta el cierre.",
+          "voice": "es-UY-f"
+        },
+        {
+          "q": "¿Qué forma oyes?",
+          "options": [
+            "diciendo",
+            "deciendo"
+          ],
+          "answer": 0,
+          "why": "«Decir» → «diciendo».",
+          "audio": "Seguimos diciendo que el barrio necesita más cultura.",
+          "voice": "es-ES-m"
         }
       ]
     },
     "produce": [
       {
-        "text": "Creo que el centro actual ofrece buenas mesas.",
-        "tip": "Marca una pausa después de entiendo tu postura. Continúa con el requisito que falta, sin acelerar ni dar por cerrado el turno de la otra persona.",
-        "voice": "es-ES-f"
+        "text": "Sigo durmiendo poco, pero sigo sonriendo.",
+        "tip": "Marca la «u» de «dur-» y el acento en «-MIEN-».",
+        "voice": "es-AR-f"
       },
       {
-        "text": "No creo que el horario sirva a todos.",
-        "tip": "Marca una pausa después de entiendo tu postura. Continúa con el requisito que falta, sin acelerar ni dar por cerrado el turno de la otra persona.",
-        "voice": "es-ES-f"
+        "text": "La gente sigue pidiendo libros de cocina.",
+        "tip": "«Pi-DIEN-do»: la primera vocal es «i».",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Nos preocupa que algunas personas queden fuera.",
-        "tip": "Marca una pausa después de entiendo tu postura. Continúa con el requisito que falta, sin acelerar ni dar por cerrado el turno de la otra persona.",
-        "voice": "es-ES-f"
+        "text": "Estábamos leyendo cuando empezó a llover.",
+        "tip": "Pronuncia la «y» de «leyendo» como en «haya».",
+        "voice": "es-UY-f"
       }
-    ]
+    ],
+    "spelling": "Escribe «-yendo» cuando la raíz termina en vocal (leyendo, oyendo, construyendo) y nunca «-iiendo»."
   },
   "listening": {
-    "title": "Checkpoint: decidir en comunidad · voces en conversación",
-    "context": "Un grupo intenta elegir lugar y horario para sus reuniones. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "Un año de La Hoja Suelta",
+    "context": "Paula abrió hace un año la librería-café La Hoja Suelta en el barrio Pichincha de Rosario. Hoy la entrevista Lucas, locutor de una radio local, en un programa sobre proyectos de barrio. Como muchos rosarinos, usan el voseo: «contanos» equivale a «cuéntanos» y «yo que vos», a «yo que tú».",
     "speakers": [
       {
-        "id": "a",
-        "name": "Coordinadora",
-        "voice": "es-ES-f"
+        "id": "luc",
+        "name": "Lucas",
+        "voice": "es-AR-m",
+        "role": "locutor de radio"
       },
       {
-        "id": "b",
-        "name": "Participante",
-        "voice": "es-ES-m"
+        "id": "pau",
+        "name": "Paula",
+        "voice": "es-AR-f",
+        "role": "dueña de la librería"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Antes de votar sobre el lugar, quiero comprobar que he entendido las propuestas. Ana prefiere la cafetería porque es cercana; Luis necesita un espacio donde se oiga bien. ¿Falta algún requisito importante para alguien?"
+        "speaker": "luc",
+        "text": "Paula, bienvenida. Contanos, ¿cómo empezó todo?"
       },
       {
-        "speaker": "b",
-        "text": "Sí. A mí me preocupa llegar tarde si empezamos a las seis. Salgo del trabajo a esa hora y tardo casi cuarenta minutos. No creo que cambiar de local resuelva el problema si mantenemos el mismo horario."
+        "speaker": "pau",
+        "text": "Gracias por invitarme. Empecé a pensar en la librería durante la pandemia, cuando me puse a ordenar los libros de mi abuelo. Eran más de dos mil. Un día vi este local vacío y casi me echo a llorar: era perfecto."
       },
       {
-        "speaker": "a",
-        "text": "Gracias por decirlo. Podríamos empezar a las siete, pero entonces la sala municipal nos deja solo una hora. A lo mejor la asociación del barrio permite quedarse más tiempo; todavía no he preguntado."
+        "speaker": "luc",
+        "text": "¿Y dejaste la escuela?"
       },
       {
-        "speaker": "b",
-        "text": "Conozco esa sala y tiene buena iluminación. Lo que no sé es si cobran por usarla. Buscamos un lugar que sea barato, porque no quiero que una cuota nueva impida participar a quienes vienen ahora."
+        "speaker": "pau",
+        "text": "No, sigo dando clases por la mañana. Aunque cansa, necesito ese sueldo para llegar a fin de mes. Suelo abrir la librería a las cuatro, y los sábados todo el día."
       },
       {
-        "speaker": "a",
-        "text": "Entonces tenemos dos preguntas pendientes: precio y horario. Propongo que las confirmemos antes del viernes y que hagamos una prueba de cuatro reuniones. Me alegra que estemos buscando opciones sin descartar las necesidades de nadie."
+        "speaker": "luc",
+        "text": "¿Qué es lo que más te ha sorprendido en este año?"
       },
       {
-        "speaker": "b",
-        "text": "Estoy de acuerdo con la prueba. Después deberíamos preguntar también a quienes no hayan podido venir. Si solo escuchamos a los presentes, quizá pensemos que todo ha funcionado y no veamos a las personas que se han quedado fuera."
+        "speaker": "pau",
+        "text": "Me sorprende que tantos chicos hayan empezado a venir solos, después del colegio. Por eso armamos un rincón con almohadones, para que puedan leer sin comprar nada."
+      },
+      {
+        "speaker": "luc",
+        "text": "¿Y los problemas?"
+      },
+      {
+        "speaker": "pau",
+        "text": "Seguimos sin tener calefacción, y en julio fue durísimo. Si este invierno las ventas van bien, instalaremos una estufa. También busco a alguien que sepa preparar buen café, porque yo no tengo tiempo."
+      },
+      {
+        "speaker": "luc",
+        "text": "¿Qué le dirías a alguien que quiere abrir un negocio así?"
+      },
+      {
+        "speaker": "pau",
+        "text": "Yo que vos, empezaría de a poco y seguiría trabajando en otra cosa hasta que el negocio camine solo. Y le pediría ayuda al barrio: acá todo funciona por el boca a boca."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿De qué habla Paula?",
         "exercise": {
-          "id": "b1-10-audio-0",
+          "id": "b1-10-escucha-global",
           "type": "choice",
-          "prompt": "Checkpoint: decidir en comunidad: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Qué intenta hacer la coordinadora?",
+              "q": "¿Cuál es el tema principal de la entrevista?",
               "options": [
-                "Cerrar el grupo por falta de dinero",
-                "Resumir necesidades antes de decidir"
+                "Por qué Paula va a cerrar la librería.",
+                "Cómo nació la librería y cómo sigue un año después.",
+                "Los libros favoritos de Paula."
               ],
               "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Paula cuenta el inicio, el presente y los planes de la librería."
             },
             {
-              "q": "¿Por qué no votan directamente?",
+              "q": "¿Cómo valora Paula su primer año?",
               "options": [
-                "Primero necesitan aclarar requisitos",
-                "Nadie quiere reunirse de nuevo"
+                "De forma positiva, aunque reconoce dificultades.",
+                "Como un fracaso.",
+                "No da ninguna opinión."
               ],
               "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Está contenta, pero habla del frío y de la falta de tiempo."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y fíjate en los detalles.",
         "exercise": {
-          "id": "b1-10-audio-1",
+          "id": "b1-10-escucha-detalle",
           "type": "choice",
-          "prompt": "Checkpoint: decidir en comunidad: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según la entrevista.",
           "items": [
             {
-              "q": "¿Qué falta confirmar?",
+              "q": "¿Cuándo empezó Paula a pensar en la librería?",
               "options": [
-                "Precio y horario de la asociación",
-                "El título del próximo libro"
+                "Cuando terminó la universidad.",
+                "Cuando se jubiló su abuelo.",
+                "Durante la pandemia, al ordenar los libros de su abuelo."
               ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "answer": 2,
+              "why": "«Empecé a pensar en la librería durante la pandemia, cuando me puse a ordenar los libros de mi abuelo.»"
             },
             {
-              "q": "¿A qué hora sale de trabajar una participante?",
+              "q": "¿Para qué armaron el rincón con almohadones?",
               "options": [
-                "A las ocho",
-                "A las seis"
+                "Para que los chicos puedan leer sin comprar.",
+                "Para vender café.",
+                "Para hacer presentaciones de libros."
+              ],
+              "answer": 0,
+              "why": "«Para que puedan leer sin comprar nada.»"
+            },
+            {
+              "q": "¿Qué harán si las ventas van bien este invierno?",
+              "options": [
+                "Abrirán por las mañanas.",
+                "Instalarán una estufa.",
+                "Contratarán a un locutor."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Si este invierno las ventas van bien, instalaremos una estufa.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Fíjate en la gramática. Completa lo que dice Paula exactamente.",
         "exercise": {
-          "id": "b1-10-audio-2",
-          "type": "choice",
-          "prompt": "Checkpoint: decidir en comunidad: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-10-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la forma que usa.",
           "items": [
             {
-              "q": "¿Por qué preguntar a los ausentes?",
-              "options": [
-                "Siempre tienen la misma opinión",
-                "Su ausencia puede mostrar una dificultad"
+              "q": "No, ___ ___ clases por la mañana.",
+              "answers": [
+                [
+                  "sigo"
+                ],
+                [
+                  "dando"
+                ]
               ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Continuidad: «seguir» + gerundio."
             },
             {
-              "q": "¿Qué significa «todavía no he preguntado»?",
-              "options": [
-                "La posibilidad de quedarse más tarde no está confirmada",
-                "La sala ya está reservada"
+              "q": "Me sorprende que tantos chicos ___ ___ a venir solos.",
+              "answers": [
+                [
+                  "hayan"
+                ],
+                [
+                  "empezado"
+                ]
               ],
-              "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Semana 6 + semana 10: «haya + participio» de «empezar a»."
+            },
+            {
+              "q": "Busco a alguien que ___ preparar buen café.",
+              "answers": [
+                [
+                  "sepa"
+                ]
+              ],
+              "why": "Semana 7: antecedente buscado, subjuntivo."
+            },
+            {
+              "q": "Seguiría trabajando en otra cosa hasta que el negocio ___ solo.",
+              "answers": [
+                [
+                  "camine"
+                ]
+              ],
+              "why": "Semana 6: «hasta que» + subjuntivo."
             }
           ]
         }
@@ -464,232 +956,340 @@ export const b1w10: Module = {
     ]
   },
   "reading": {
-    "title": "Checkpoint: decidir en comunidad · otra perspectiva",
-    "genre": "Dossier de decisión",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "La Hoja Suelta: libros, café y un barrio que se pone a leer",
+    "genre": "Perfil en un diario local",
+    "frame": "La sección «Gente de Rosario» del diario de la ciudad publica este perfil por el primer aniversario de la librería.",
     "text": [
-      "El club de lectura tiene un problema que al principio parecía una buena noticia: cada mes llegan más participantes. La cafetería donde se reunían ya no dispone de suficientes mesas y el ruido dificulta escuchar a quienes hablan bajo. Algunas personas proponen trasladarse a una sala municipal; otras temen perder el ambiente informal que hizo atractivo el grupo.",
-      "En el foro, Laura escribió que le alegraba el crecimiento, pero que le preocupaba que la solución excluyera a quienes salen tarde del trabajo. La sala municipal cierra a las ocho. Iván defendió la cafetería porque conoce a sus responsables y cree que podrían reservar una zona más tranquila. No sabe si aceptarían hacerlo todas las semanas. Una tercera propuesta consiste en alternar encuentros presenciales y conversaciones en línea, aunque varios miembros no tienen un lugar silencioso desde el que conectarse.",
-      "La coordinadora pidió que cada persona indicara un requisito imprescindible y una preferencia. Después resumió los puntos comunes: quieren escucharse, llegar sin prisa y mantener un coste bajo. Todavía no hay una opción perfecta. Por eso acordaron probar durante un mes una sala de una asociación que abre hasta las nueve. Al terminar la prueba preguntarán quién pudo participar y qué dificultades surgieron. La decisión final dependerá de esa experiencia, no solamente de quién defendió su idea con más entusiasmo."
+      "Hace un año, en una esquina de Pichincha que llevaba tiempo vacía, Paula Ferraro colgó un cartel escrito a mano: «Libros usados, café y charla». Nadie esperaba gran cosa de un local tan pequeño. Sin embargo, en pocas semanas los vecinos empezaron a pasar a curiosear, y muchos se quedaron.",
+      "Paula, que es profesora de literatura, sigue trabajando en una escuela secundaria por las mañanas. «Aunque termino agotada, no quiero dejar las clases», explica. Por las tardes suele atender sola, aunque los sábados la ayuda su hermano Tomás, quien se encarga de las presentaciones de libros. La más concurrida fue la de una poeta del barrio: cuando terminó de leer, el público se puso a aplaudir de pie y ella se echó a reír de los nervios.",
+      "No todo fue fácil. Los trámites de la habilitación tardaron cuatro meses y el local sigue sin calefacción. «En julio dábamos los talleres con guantes», recuerda entre risas. Para salir a flote, Paula vende café y tortas caseras de una vecina, y cada mes organiza una feria de canje en la vereda: si traes dos libros, te llevas uno.",
+      "El proyecto sigue creciendo. Paula está buscando una persona que pueda dar talleres de escritura para adolescentes, y quiere abrir los domingos cuando tenga a alguien de confianza en la caja. «Me alegra que el barrio haya hecho suya la librería», dice. ¿Su consejo para quien quiera arriesgarse? «Yo empezaría con poco y escucharía mucho a la gente.»"
+    ],
+    "glossary": [
+      {
+        "es": "curiosear"
+      },
+      {
+        "es": "concurrido"
+      },
+      {
+        "es": "hacer suyo algo"
+      }
     ],
     "tasks": [
       {
-        "id": "b1-10-read-evidence",
+        "id": "b1-10-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «Checkpoint: decidir en comunidad», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según el perfil.",
         "items": [
           {
-            "q": "¿Por qué la sala municipal no resuelve todo?",
+            "q": "¿Qué pasó en las primeras semanas?",
             "options": [
-              "Cierra demasiado pronto para algunos",
-              "No tiene mesas"
+              "El local siguió vacío.",
+              "Paula decidió cerrar.",
+              "Los vecinos empezaron a pasar y muchos se quedaron."
             ],
-            "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "answer": 2,
+            "why": "«Los vecinos empezaron a pasar a curiosear, y muchos se quedaron.»"
           },
           {
-            "q": "¿Cómo evaluarán la prueba?",
+            "q": "¿Quién es Tomás?",
             "options": [
-              "Solo con una votación inicial",
-              "Con la participación y las dificultades observadas"
+              "El hermano de Paula, que organiza las presentaciones.",
+              "Un poeta del barrio.",
+              "El dueño del local."
+            ],
+            "answer": 0,
+            "why": "«Su hermano Tomás, quien se encarga de las presentaciones de libros.»"
+          },
+          {
+            "q": "¿Cuándo abrirá los domingos?",
+            "options": [
+              "Cuando termine el invierno.",
+              "Cuando tenga a alguien de confianza en la caja.",
+              "Cuando deje la escuela."
             ],
             "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Quiere abrir los domingos cuando tenga a alguien de confianza en la caja.»"
           }
         ]
       },
       {
-        "id": "b1-10-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «Checkpoint: decidir en comunidad».",
+        "id": "b1-10-lectura-linea-temporal",
+        "type": "classify",
+        "title": "¿Empezó, sigue o vendrá?",
+        "prompt": "Clasifica cada hecho según la línea temporal del perfil.",
+        "categories": [
+          "Cómo empezó",
+          "Lo que sigue",
+          "Lo que vendrá"
+        ],
         "items": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «Checkpoint: decidir en comunidad», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "El club de lectura tiene un problema que al principio parecía una buena noticia: cada mes llegan más participantes.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "text": "Colgar un cartel escrito a mano",
+            "cat": 0
+          },
+          {
+            "text": "Trabajar en la escuela por las mañanas",
+            "cat": 1
+          },
+          {
+            "text": "Abrir los domingos",
+            "cat": 2
+          },
+          {
+            "text": "Los primeros vecinos que entraban a curiosear",
+            "cat": 0
+          },
+          {
+            "text": "Atender sola por las tardes",
+            "cat": 1
+          },
+          {
+            "text": "Talleres de escritura para adolescentes",
+            "cat": 2
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Fíjate en las perífrasis y en las clases de las semanas 6 a 9 que aparecen en el texto.",
       "items": [
         {
-          "quote": "El club de lectura tiene un problema que al principio parecía una buena noticia: cada mes llegan más participantes.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "los vecinos empezaron a pasar a curiosear",
+          "note": "«Empezar a»: inicio gradual de una costumbre."
         },
         {
-          "quote": "La decisión final dependerá de esa experiencia, no solamente de quién defendió su idea con más entusiasmo.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "el público se puso a aplaudir de pie y ella se echó a reír",
+          "note": "«Ponerse a» (inicio decidido) y «echarse a» (inicio brusco)."
+        },
+        {
+          "quote": "sigue trabajando en una escuela secundaria",
+          "note": "«Seguir + gerundio»: la acción no se ha interrumpido."
+        },
+        {
+          "quote": "Me alegra que el barrio haya hecho suya la librería",
+          "note": "Semana 6: reacción actual con «haya + participio»."
+        },
+        {
+          "quote": "está buscando una persona que pueda dar talleres",
+          "note": "Semana 7: antecedente buscado, subjuntivo."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Práctica integrada: las dos clases nuevas y las nueve clases de las semanas 6 a 9.",
     "exercises": [
       {
-        "id": "b1-10-order",
+        "id": "b1-10-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «Checkpoint: decidir en comunidad» y léelos con grupos de sentido.",
+        "title": "Frases de Paula",
+        "prompt": "Ordena las palabras para formar frases completas.",
         "items": [
           {
             "words": [
-              "Buscamos",
-              "un",
-              "espacio",
-              "que",
-              "sea",
-              "accesible."
+              "Me",
+              "puse",
+              "a",
+              "ordenar",
+              "los",
+              "libros",
+              "por",
+              "colores."
             ]
           },
           {
             "words": [
-              "¿Podríamos",
-              "probar",
-              "otra",
-              "sede",
-              "durante",
-              "un",
-              "mes?"
+              "Seguimos",
+              "sin",
+              "tener",
+              "cartel",
+              "en",
+              "la",
+              "puerta."
+            ]
+          },
+          {
+            "words": [
+              "Suelo",
+              "cerrar",
+              "la",
+              "caja",
+              "a",
+              "las",
+              "nueve."
+            ]
+          },
+          {
+            "words": [
+              "Los",
+              "empecé",
+              "a",
+              "clasificar",
+              "el",
+              "lunes."
             ]
           }
         ]
       },
       {
-        "id": "b1-10-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «Checkpoint: decidir en comunidad».",
-        "categories": [
-          "Requisito",
-          "Propuesta de proceso"
-        ],
+        "id": "b1-10-practica-retrieval",
+        "type": "gap",
+        "title": "Recuperación integrada: semanas 6 a 9",
+        "prompt": "Recuperación: completa cada frase con la forma correcta. La etiqueta indica la clase que repasas.",
         "items": [
           {
-            "text": "Necesito llegar después del trabajo.",
-            "cat": 0
+            "q": "G097 · Qué pena que no ___ (poder, tú) venir al aniversario.",
+            "answers": [
+              [
+                "hayas podido"
+              ]
+            ],
+            "why": "Reacción a algo que ya pasó: «hayas podido»."
           },
           {
-            "text": "Buscamos un espacio que sea barato.",
-            "cat": 0
+            "q": "G098 · En cuanto ___ (llegar) los libros nuevos, te aviso.",
+            "answers": [
+              [
+                "lleguen"
+              ]
+            ],
+            "why": "Acción futura tras «en cuanto»: subjuntivo."
           },
           {
-            "text": "Podríamos probarlo durante un mes.",
-            "cat": 1
+            "q": "G099 · Bajo los precios para que los estudiantes ___ (comprar) más.",
+            "answers": [
+              [
+                "compren"
+              ]
+            ],
+            "why": "Otro sujeto: «para que» + subjuntivo."
           },
           {
-            "text": "Preguntemos también a quienes no vengan.",
-            "cat": 1
+            "q": "G100 · Necesito un estante que ___ (caber) en ese rincón.",
+            "answers": [
+              [
+                "quepa"
+              ]
+            ],
+            "why": "Antecedente buscado: subjuntivo; «caber» → «quepa»."
+          },
+          {
+            "q": "G101 · ___ el local es pequeño, organizamos conciertos.",
+            "answers": [
+              [
+                "Aunque",
+                "aunque"
+              ]
+            ],
+            "why": "Obstáculo real: «aunque» + indicativo."
+          },
+          {
+            "q": "G102 · Si ___ (vender, nosotros) cien libros este mes, invitamos a un autor.",
+            "answers": [
+              [
+                "vendemos"
+              ]
+            ],
+            "why": "«Si» + presente."
+          },
+          {
+            "q": "G103 · ¿___ (poder, usted) dejarme un folleto en su negocio?",
+            "answers": [
+              [
+                "Podría"
+              ]
+            ],
+            "why": "Cortesía con el condicional."
+          },
+          {
+            "q": "G104 · Si llueve, la feria es adentro; ___, es en la vereda.",
+            "answers": [
+              [
+                "si no"
+              ]
+            ],
+            "why": "Plan B con «si no»."
+          },
+          {
+            "q": "G105 · Este cuento es ___ los chicos del rincón de lectura.",
+            "answers": [
+              [
+                "para"
+              ]
+            ],
+            "why": "Destinatario: «para»."
           }
         ]
       },
       {
-        "id": "b1-10-draft",
+        "id": "b1-10-practica-errores-integrados",
+        "type": "error",
+        "title": "Un mensaje con errores",
+        "prompt": "Tomás escribió estas frases para el grupo de la librería. Cada una tiene un error de las semanas 6 a 10. Corrígelas.",
+        "items": [
+          {
+            "sentence": "Me alegra que habéis venido tantos a la presentación.",
+            "answers": [
+              "Me alegra que hayáis venido tantos a la presentación.",
+              "Me alegra que hayan venido tantos a la presentación."
+            ],
+            "why": "Semana 6: después de «me alegra que», perfecto de subjuntivo."
+          },
+          {
+            "sentence": "Buscamos un voluntario que tiene coche para traer las cajas.",
+            "answers": [
+              "Buscamos un voluntario que tenga coche para traer las cajas."
+            ],
+            "why": "Semana 7: antecedente buscado, subjuntivo."
+          },
+          {
+            "sentence": "Seguimos recibir donaciones de libros.",
+            "answers": [
+              "Seguimos recibiendo donaciones de libros."
+            ],
+            "why": "Semana 10: «seguir» + gerundio."
+          },
+          {
+            "sentence": "Gracias para todo vuestro apoyo este año.",
+            "answers": [
+              "Gracias por todo vuestro apoyo este año.",
+              "Gracias por todo su apoyo este año."
+            ],
+            "why": "Semana 9: «gracias por»."
+          }
+        ]
+      },
+      {
+        "id": "b1-10-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Respuestas para el diario",
+        "prompt": "Imagina que el diario te entrevista sobre una actividad que empezaste. Responde cada pregunta en dos o tres frases.",
         "items": [
           {
-            "prompt": "Checkpoint: decidir en comunidad: escribe una apertura de 35–45 palabras para la tarea «Escribe para una persona ausente un resumen de foro de 160–190 palabras: presenta dos posturas, necesidades comunes, acuerdo provisional y preguntas pendientes. No atribuyas consenso donde no lo hay.» sin copiar el modelo.",
-            "model": "Hola, Sofía: te resumo la conversación sobre nuestras reuniones.",
+            "prompt": "¿Cómo empezaste y qué sigues haciendo igual que al principio?",
+            "model": "Empecé a tocar la guitarra hace dos años, cuando me regalaron una vieja. Una noche me puse a buscar tutoriales y no paré. Sigo practicando media hora cada día, aunque tengo poco tiempo.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "Usas «empezar a» o «ponerse a» para el inicio.",
+              "Usas «seguir + gerundio» para lo que continúa."
             ]
           },
           {
-            "prompt": "Checkpoint: decidir en comunidad: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "Después recogeremos opiniones, también de quienes no puedan asistir. Creo que así tendremos más información antes de decidir. ¿Hay algún requisito tuyo que no hayamos considerado? Nos gustaría incluirlo en la comparación para que la prueba tenga sentido para todo el grupo.",
+            "prompt": "¿Qué te alegra de este tiempo y qué planes tienes?",
+            "model": "Me alegra que mis amigos hayan empezado a pedirme canciones. Cuando sepa diez canciones enteras, tocaré en el cumpleaños de mi hermana, para que lo celebre con música en vivo.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-10-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «Checkpoint: decidir en comunidad», recupera la semana 6: Responde a una noticia sin fecha: separa hecho y opinión, expresa una duda y una valoración, y justifica qué comprobarías antes de compartirla. Haz audible el grado de certeza. Fuente suministrada: Aviso recibido: «El parque cierra todos los domingos». El vídeo no tiene fecha ni autor visible. Un cartel del fondo solo anuncia obras en una zona. Nadie ha confirmado el horario del parque al que quiere ir el grupo.",
-            "model": "Creo que la noticia necesita una fecha. No creo que esa imagen sea reciente.",
-            "checklist": [
-              "Puedo usar creo que + indicativo y no creo que + subjuntivo.",
-              "Puedo distinguir afirmar (es verdad que + indicativo) de valorar o dudar (es posible que + subjuntivo).",
-              "Puedo hablar de noticias falsas, algoritmos, influencia y privacidad.",
-              "Puedo sonar seguro o dudoso con la misma frase.",
-              "Puedo dar una opinión, matizarla y mostrar duda.",
-              "Puedo separar hechos de opiniones y detectar la postura del autor.",
-              "Conservo los hechos y señalo lo pendiente; no invento decisiones de la fuente."
+              "Hay una reacción con «haya + participio».",
+              "Hay un plan con «cuando» + subjuntivo y una finalidad con «para que»."
             ]
           },
           {
-            "prompt": "En el contexto de «Checkpoint: decidir en comunidad», recupera la semana 7: Escribe a un amigo tras un malentendido: expresa alivio, preocupación y una molestia sin acusar; alterna infinitivo y que, explica qué relación deseas cuidar y propone hacer las paces.",
-            "model": "Me alegra que hayas encontrado apoyo. Me preocupa que no tengas tiempo libre.",
+            "prompt": "¿Qué consejo le darías a alguien que quiere empezar lo mismo?",
+            "model": "Yo que tú, buscaría a alguien que te enseñe lo básico. Si practicas un poco cada día, avanzarás rápido, aunque al principio duelen los dedos.",
             "checklist": [
-              "Puedo reaccionar con me alegra que, me molesta que, me preocupa que + subjuntivo.",
-              "Puedo usar me alegra verte y me alegra que vengas sin confundir quién experimenta la emoción con el sujeto gramatical.",
-              "Puedo nombrar emociones con precisión: agobio, alivio, orgullo, decepción.",
-              "Puedo reconocer y producir alegría, fastidio o sorpresa en la entonación.",
-              "Puedo explicar cómo me siento ante una situación y por qué.",
-              "Puedo escribir un correo personal que reacciona a noticias.",
-              "Puedo hablar de amistad, pareja, conflictos y reconciliación.",
-              "Puedo describir una relación, un conflicto y cómo se resolvió."
-            ]
-          },
-          {
-            "prompt": "En el contexto de «Checkpoint: decidir en comunidad», recupera la semana 8: Compara un piso conocido con el que buscas: usa relativas de modo distinto, donde y lo que. Negocia fianza, visitas y silencio; lee una relativa con y sin información añadida.",
-            "model": "Buscamos un piso que tenga dos mesas. Conozco uno que tiene un patio pequeño.",
-            "checklist": [
-              "Puedo distinguir tengo un piso que tiene… de busco un piso que tenga….",
-              "Puedo usar el que, la que, quien, donde y lo que.",
-              "Puedo hablar de compartir piso, normas y problemas de convivencia.",
-              "Puedo marcar la diferencia oral entre relativas con y sin comas.",
-              "Puedo describir a la persona o el lugar ideal que busco.",
-              "Puedo identificar requisitos en anuncios de piso o de trabajo."
-            ]
-          },
-          {
-            "prompt": "En el contexto de «Checkpoint: decidir en comunidad», recupera la semana 9: Responde a cinco preguntas de entrevista con un ejemplo de experiencia. Pregunta por turnos y salario con cortesía; ante una respuesta pendiente, distingue pistas, hechos y conjeturas presentes o pasadas.",
-            "model": "¿Podría explicar cómo se organizan los turnos? Me gustaría trabajar con atención al público.",
-            "checklist": [
-              "Puedo aconsejar (yo que tú, yo en tu lugar), pedir con cortesía y expresar deseos con el condicional.",
-              "Puedo hablar de puestos, requisitos, salarios, horarios y condiciones.",
-              "Puedo suavizar una petición con condicional y entonación descendente amable.",
-              "Puedo presentar mi experiencia y responder preguntas en una entrevista.",
-              "Puedo responder a cinco preguntas de entrevista con ejemplos concretos.",
-              "Puedo hacer hipótesis con el futuro y el condicional de probabilidad y con a lo mejor, quizás y tal vez.",
-              "Puedo explicar fenómenos raros: desaparecer, sospechar, una pista, una explicación lógica.",
-              "Puedo expresar suposición con tono suspendido y voz menos asertiva.",
-              "Puedo especular sobre causas y reaccionar a las hipótesis de otros.",
-              "Puedo usar pistas del texto para inferir lo que pasó."
-            ]
-          },
-          {
-            "prompt": "Aplicación diferida en «Checkpoint: decidir en comunidad»: Escribe una corrección de noticia con eso para recuperar una idea completa y estos otros para contrastar avisos. Después sustituye un demostrativo ambiguo por su referente explícito.",
-            "model": "El vídeo no tiene fecha; eso limita su utilidad. Esto es lo que sabemos: el cartel menciona obras.",
-            "checklist": [
-              "Puedo usar esto, eso y aquello para recuperar una idea y evitar referencias ambiguas.",
-              "Explico cómo cambia el sentido si sustituyo una forma."
-            ]
-          },
-          {
-            "prompt": "Aplicación diferida en «Checkpoint: decidir en comunidad»: Cuenta un malentendido entre una amiga tuya y un amigo suyo. Contrasta mi mensaje y el tuyo sin perder el referente y usa dos posesivos posnominales con concordancia.",
-            "model": "Una amiga mía también tuvo ese malentendido. Tu mensaje fue breve; el mío explicaba los cambios.",
-            "checklist": [
-              "Puedo distinguir un amigo mío, mi amigo y el mío, aclarando de quién hablo.",
-              "Explico cómo cambia el sentido si sustituyo una forma."
-            ]
-          },
-          {
-            "prompt": "Aplicación diferida en «Checkpoint: decidir en comunidad»: Redacta requisitos para una vivienda con algún, ningún y cualquier. Explica qué hay en cantidad suficiente y qué resulta demasiado caro; comprueba negación y concordancia.",
-            "model": "No conocemos ningún piso que reúna todo. Cualquier persona puede preguntar por los gastos.",
-            "checklist": [
-              "Puedo expresar requisitos con algún, ningún, cualquiera, bastante y demasiado, manteniendo la concordancia.",
-              "Explico cómo cambia el sentido si sustituyo una forma."
+              "El consejo va en condicional.",
+              "Hay una condición con «si» + presente o un obstáculo con «aunque» + indicativo."
             ]
           }
         ]
@@ -697,183 +1297,262 @@ export const b1w10: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe para una persona ausente un resumen de foro de 160–190 palabras: presenta dos posturas, necesidades comunes, acuerdo provisional y preguntas pendientes. No atribuyas consenso donde no lo hay.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Hace un año empezaste algo nuevo (un negocio, un deporte, un instrumento, un voluntariado, un idioma). Escribe un correo a una amiga que vive lejos: cuéntale cómo empezaste, qué sigues haciendo, qué te ha alegrado o sorprendido, qué planes tienes y qué le aconsejarías si quisiera hacer lo mismo.",
+    "context": "Es el texto de control de las semanas 6 a 10: intenta usar al menos una estructura de cada semana.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Haz una línea temporal con tres partes: cómo empezó, qué sigue igual y qué vendrá.",
+      "Primer párrafo: el inicio con «empezar a», «ponerse a» o «echarse a», y una reacción con «haya + participio».",
+      "Segundo párrafo: lo que sigues haciendo («seguir + gerundio», «soler»), un obstáculo con «aunque», un plan con «cuando» o «si» y una finalidad con «para que».",
+      "Cierra con un consejo en condicional y revisa el texto con la lista: modo después de cada conector, «por / para» y la preposición «a» de las perífrasis."
     ],
     "useLanguage": [
-      "Creo que el centro actual ofrece buenas mesas.",
-      "No creo que el horario sirva a todos.",
-      "Nos preocupa que algunas personas queden fuera.",
-      "Buscamos un espacio que sea accesible."
+      "empezar a / ponerse a / echarse a + infinitivo",
+      "seguir + gerundio / seguir sin + infinitivo / soler + infinitivo",
+      "me alegra que + haya + participio",
+      "cuando / en cuanto + subjuntivo; si + presente",
+      "para que + subjuntivo; busco… que + subjuntivo",
+      "aunque + indicativo; yo que tú + condicional; por / para"
     ],
     "model": [
-      "Hola, Sofía: te resumo la conversación sobre nuestras reuniones. Una parte del grupo quiere seguir en la cafetería porque está cerca y tiene un ambiente agradable.",
-      "Iván cree que la cafetería podría reservar una zona más tranquila, pero todavía no ha hablado con sus responsables. Laura, en cambio, teme que la sala municipal cierre demasiado pronto. Ambas ideas siguen abiertas; ninguna se ha descartado sin comprobar antes sus condiciones.",
-      "Otras personas prefieren una sala donde se escuche mejor. Además, nos preocupa que empezar a las seis deje fuera a quienes trabajan hasta tarde. Todavía no hemos elegido una sede definitiva. La propuesta que aceptamos es preguntar a la asociación del barrio por el precio y el horario. Si las condiciones encajan, haremos allí cuatro reuniones de prueba. Después recogeremos opiniones, también de quienes no puedan asistir. Creo que así tendremos más información antes de decidir. ¿Hay algún requisito tuyo que no hayamos considerado? Nos gustaría incluirlo en la comparación para que la prueba tenga sentido para todo el grupo."
+      "Querida Inés: ¿te acuerdas de que hace un año empecé a ir a un club de remo? Todo empezó por casualidad: un domingo pasé por el río, vi a un grupo entrenando y me puse a hablar con la entrenadora. La primera vez que subí al bote me eché a reír de los nervios. Me alegra mucho que el grupo me haya recibido tan bien, porque al principio no conocía a nadie.",
+      "Sigo entrenando tres veces por semana y los sábados solemos salir temprano, cuando el río está tranquilo. Aunque me duelen los brazos, no pienso dejarlo. Cuando termine la temporada, quiero competir en la regata de otoño, y estoy buscando un compañero que reme a mi ritmo. Si vienes a Rosario en verano, te llevo al club para que pruebes. Yo que tú, empezaría con clases cortas; por cinco mil pesos tienes un mes entero. ¡Escríbeme pronto!"
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié."
+      "Hay al menos dos perífrasis de inicio y una de continuidad, con sus preposiciones.",
+      "Uso subjuntivo después de «me alegra que», «cuando» (futuro), «para que» y en las relativas de algo buscado.",
+      "Uso «aunque» + indicativo sin «pero» y «si» + presente.",
+      "El consejo va en condicional y «por / para» están bien elegidos.",
+      "El correo tiene dos párrafos organizados en el tiempo."
     ],
     "words": [
-      160,
-      190
+      140,
+      200
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas. Es la producción oral del control: intenta usar una estructura de cada semana de la 6 a la 10.",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Dirige una reunión de dos minutos sobre un lugar de estudio. Tu interlocutor añade una necesidad incompatible con tu primera propuesta: pregunta, reformula ambas posturas y negocia una prueba con fecha de revisión.",
+        "title": "Mi proyecto, un año después",
+        "prompt": "Habla durante dos minutos y medio sobre algo que empezaste en el último año: cómo empezó, qué sigues haciendo, qué te ha alegrado, qué dificultades tienes, qué planes tienes y qué le aconsejarías a alguien que quiere empezar lo mismo.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración."
+          "Inicio: «empecé a», «me puse a», «me eché a».",
+          "Continuidad y costumbre: «sigo + gerundio», «sigo sin», «suelo».",
+          "Semanas 6 a 9: una reacción, un plan con «cuando», una finalidad, un «aunque», un «si» y un consejo."
         ],
-        "seconds": 180,
+        "seconds": 150,
+        "model": "Hace un año empecé a estudiar portugués. Todo empezó cuando me puse a ver una serie brasileña y no entendía nada. Sigo yendo a clase dos veces por semana y suelo repasar en el colectivo. Me alegra que mi profesora haya sido tan paciente. Aunque la pronunciación me cuesta, no pienso dejarlo. Cuando tenga vacaciones, viajaré a Florianópolis para practicar…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos y medio?",
+          "¿He usado bien «empezar a», «ponerse a» y «seguir + gerundio»?",
+          "¿He incluido al menos cuatro estructuras de las semanas 6 a 9?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «Checkpoint: decidir en comunidad», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "La entrevista de radio",
+        "prompt": "Ahora eres tú quien responde en la radio. Un interlocutor te pregunta: «¿Qué sigues haciendo igual que al principio? ¿Qué te sorprendió? ¿Qué harías distinto?». Responde a cada pregunta, aclara lo que no se entienda y termina con una pregunta para el locutor. Practica con un compañero o graba las dos voces.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Prepara una respuesta con «sigo + gerundio» y otra con «me sorprendió que» o «me sorprende que haya…».",
+          "Para «qué harías distinto», usa el condicional."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "Sigo entrenando con el mismo grupo del primer día. Me sorprende que nadie haya abandonado. ¿Qué haría distinto? Empezaría antes, la verdad. Y usted, ¿alguna vez se puso a aprender algo de grande?",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He respondido a las tres preguntas?",
+          "¿He terminado con una pregunta para el interlocutor?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Es semana de control. Lleva tu correo y estas tarjetas a la próxima clase: tu profesor podrá ver qué dominas ya y qué conviene repasar.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Dirige una reunión de dos minutos sobre un lugar de estudio. Tu interlocutor añade una necesidad incompatible con tu primera propuesta: pregunta, reformula ambas posturas y negocia una prueba con fecha de revisión."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «Checkpoint: decidir en comunidad» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "move": "Cuenta",
+        "task": "Cuéntale a tu profesor cómo empezaste a estudiar español y qué sigues haciendo igual desde entonces.",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "Empecé a… cuando…",
+          "Sigo…",
+          "Suelo…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «Checkpoint: decidir en comunidad» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Pregunta",
+        "task": "Pregúntale a tu profesor qué le hizo echarse a reír o a llorar la última vez, y reacciona con «qué bien que…» o «qué pena que…».",
+        "phrases": [
+          "¿Cuándo fue la última vez que te echaste a…?"
+        ]
+      },
+      {
+        "move": "Revisa",
+        "task": "Elige con tu profesor las dos clases de las semanas 6 a 9 que más te cuestan y pídele un ejercicio oral rápido de cada una.",
+        "phrases": [
+          "Me cuesta elegir entre…",
+          "¿Podríamos repasar…?"
+        ]
+      },
+      {
+        "move": "Planifica",
+        "task": "Explica qué vas a hacer con tu español cuando termines el nivel B1 y para qué lo necesitas.",
+        "phrases": [
+          "Cuando termine el B1, …",
+          "Lo necesito para…"
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu correo revisado, la grabación de tu proyecto y una lista con tus dudas de las semanas 6 a 10."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Cómo evaluarán la prueba? Relaciona tu respuesta con «Checkpoint: decidir en comunidad».",
+        "q": "Cuando vio el precio, el cliente ___ reír.",
         "options": [
-          "Solo con una votación inicial",
-          "Con la participación y las dificultades observadas"
+          "se echó a",
+          "siguió",
+          "solía"
         ],
         "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "why": "Inicio brusco con «reír»: «echarse a»."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase dice que algo todavía no ha ocurrido?",
+        "options": [
+          "Sigo esperando el permiso.",
+          "Sigo sin tener el permiso.",
+          "Suelo tener el permiso."
+        ],
+        "answer": 1,
+        "why": "«Seguir sin» + infinitivo: lo esperado aún no ocurre."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «Checkpoint: decidir en comunidad»: ¿qué formulación se oye?",
+        "q": "Escucha a Paula. ¿Qué expresa?",
         "options": [
-          "Nos preocupa que algunas personas queden fuera.",
-          "A lo mejor el ruido viene de la obra cercana."
+          "Una duda sobre el futuro.",
+          "Un consejo para los vecinos.",
+          "Alegría por algo que ya ha empezado a ocurrir."
         ],
-        "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "A lo mejor el ruido viene de la obra cercana.",
-        "voice": "es-ES-f"
+        "answer": 2,
+        "why": "«Me alegra que hayan empezado»: reacción actual a un cambio ya iniciado.",
+        "audio": "Me alegra que hayan empezado a venir familias enteras los sábados.",
+        "voice": "es-AR-f"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «Checkpoint: decidir en comunidad». Nos alegra que el grupo ___ creciendo.",
+        "q": "Después del accidente, Marta ___ ___ conduciendo, pero con más cuidado. (seguir)",
         "answers": [
           [
-            "siga"
+            "siguió"
+          ],
+          [
+            "conduciendo"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «Checkpoint: decidir en comunidad». Texto de partida: La sala no permite llegar tarde y eso nos preocupa. Consigna: Empieza con Nos preocupa que y adapta el verbo. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "Nos preocupa que la sala no permita llegar tarde.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Buscamos una sala donde podemos reunirnos, pero no conocemos ninguna.",
-        "answers": [
-          "Buscamos una sala donde podamos reunirnos, pero no conocemos ninguna."
         ],
-        "why": "La búsqueda no afirma la existencia del referente."
+        "why": "«Seguir» en indefinido: «siguió» + gerundio."
+      },
+      {
+        "type": "gap",
+        "q": "Cuando ___ (abrir, nosotros) la cafetería, contrataremos a un ayudante.",
+        "answers": [
+          [
+            "abramos"
+          ]
+        ],
+        "why": "Semana 6: «cuando» + subjuntivo para el futuro."
+      },
+      {
+        "type": "gap",
+        "q": "Si ___ (necesitar, tú) ayuda con la mudanza, llámame.",
+        "answers": [
+          [
+            "necesitas"
+          ]
+        ],
+        "why": "Semana 8: «si» + presente."
+      },
+      {
+        "type": "gap",
+        "q": "Dejo la llave en la portería ___ que el técnico pueda entrar, porque seguimos sin calefacción.",
+        "answers": [
+          [
+            "para"
+          ]
+        ],
+        "why": "Semana 7: finalidad con otro sujeto («para que»)."
       },
       {
         "type": "order",
         "words": [
-          "A",
-          "lo",
-          "mejor",
-          "el",
-          "ruido",
-          "viene",
-          "de",
+          "Aunque",
+          "llovía,",
           "la",
-          "obra",
-          "cercana."
-        ]
+          "gente",
+          "se",
+          "puso",
+          "a",
+          "bailar."
+        ],
+        "why": "«Aunque» + indicativo y «ponerse a» + infinitivo."
+      },
+      {
+        "type": "error",
+        "sentence": "Los sábados suelemos desayunar en el bar de la esquina.",
+        "answers": [
+          "Los sábados solemos desayunar en el bar de la esquina."
+        ],
+        "why": "«Soler» en «nosotros» no diptonga: «solemos»."
+      },
+      {
+        "type": "error",
+        "sentence": "Busco un socio que tiene experiencia en librerías.",
+        "answers": [
+          "Busco un socio que tenga experiencia en librerías."
+        ],
+        "why": "Semana 7: antecedente buscado, subjuntivo."
+      },
+      {
+        "type": "error",
+        "sentence": "Yo que tú, empezaré con un local más pequeño.",
+        "answers": [
+          "Yo que tú, empezaría con un local más pequeño."
+        ],
+        "why": "Semana 8: el consejo con «yo que tú» va en condicional."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «Checkpoint: decidir en comunidad»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: cuenta la misma historia en una o dos frases con «empezar a», «seguir + gerundio» y una estructura de las semanas 6 a 9. «Paula abrió la librería hace un año. Todavía da clases. Quiere contratar a alguien. Esa persona tiene que saber de café.»",
+        "model": "Paula empezó a atender la librería hace un año, aunque sigue dando clases, y ahora busca a alguien que sepa de café.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «Checkpoint: decidir en comunidad»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "Usas «empezar a» + infinitivo para el inicio.",
+          "Usas «seguir + gerundio» para «todavía da clases».",
+          "La persona buscada va en una relativa con subjuntivo («que sepa»)."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Integrar opiniones, emociones, requisitos y propuestas en una decisión compartida.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Contar cómo empezó una acción con «empezar a», «ponerse a», «echarse a» y «estar a punto de».",
+      "Decir que algo continúa con «seguir + gerundio» o que aún no ocurre con «seguir sin».",
+      "Hablar de costumbres presentes y pasadas con «suelo» y «solía».",
+      "Combinar en un mismo texto las clases de las semanas 6 a 9: valorar, planear, buscar, explicar para qué, conceder, poner condiciones, aconsejar y elegir «por / para»."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "Si dudaste en el control de las semanas 6 y 7, vuelve a las tablas de «haya + participio», de los conectores temporales y de las relativas.",
+      "Si dudaste en las semanas 8 y 9, repasa «aunque» sin «pero», «si» + presente y los usos de «por» y «para».",
+      "Los gerundios con cambio de vocal: durmiendo, pidiendo, diciendo, siguiendo."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/perifrasis-incoativas-empezar-a-ponerse-a",
+      "label": "Clase: Perífrasis incoativas: empezar a, ponerse a"
+    },
+    {
+      "path": "/empezar-seguir-repetir-dejar-de-hacer",
+      "label": "Clase: Perífrasis durativas: seguir + gerundio"
+    }
+  ]
 };

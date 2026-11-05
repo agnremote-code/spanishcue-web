@@ -1,906 +1,944 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 10 · checkpoint. Autoestudio espejo de G145 (antecedentes
+ * desconocidos: cualquiera que, dondequiera que) y G146 (estilo indirecto),
+ * integrando las clases G137–G144 de las semanas 6 a 9. Repaso autónomo con un
+ * voluntariado de limpieza de playas en Mar del Plata.
+ * Personas y organización son ficticias. Audio mediante síntesis.
+ */
 export const b2w10: Module = {
-  "id": "b2-10",
-  "level": "b2",
-  "week": 10,
-  "kind": "checkpoint",
-  "title": "Checkpoint: informar después de la polémica",
-  "subtitle": "Sintetizar declaraciones y negociar una recomendación.",
-  "stop": {
-    "place": "Mar del Plata",
-    "country": "Argentina"
-  },
-  "minutes": 150,
-  "newObjectives": [
-    "b2.gram.estilo-indirecto-avanzado",
-    "b2.voc.verbos-lengua",
-    "b2.pron.cita-ironia",
-    "b2.fun.resumir-declaraciones",
-    "b2.lis.rueda-prensa",
-    "b2.rev.checkpoint-2",
-    "b2.wri.informe-breve"
+  id: "b2-10",
+  level: "b2",
+  week: 10,
+  kind: "checkpoint",
+  title: "Punto de control: dijo que, pasara lo que pasara, cualquiera podía ayudar",
+  subtitle: "Repaso de los antecedentes desconocidos y del estilo indirecto, integrados con la concesión, las temporales y finales, las comparativas, los relativos y los referentes neutros de las semanas 6 a 9",
+  stop: { place: "Mar del Plata", country: "Argentina" },
+  minutes: 150,
+  newObjectives: [
+    "b2.gram.g145",
+    "b2.gram.g146",
+    "b2.voc.w10-playa-voluntariado",
+    "b2.pron.w10-voz-cita",
+    "b2.lis.w10-llamada-reunion",
+    "b2.read.w10-cronica-temporada",
+    "b2.wri.w10-acta-reunion",
+    "b2.spk.w10-transmitir-negociar",
+    "b2.fun.w10-transmitir-mensajes",
+    "b2.disc.w10-transmitir-con-precision",
+    "b2.rev.w10-integracion",
   ],
-  "reviewObjectives": [
-    "b2.gram.concesivas",
-    "b2.voc.tecnologia-etica",
-    "b2.pron.concesion",
-    "b2.fun.conceder-objetar",
-    "b2.read.columna",
-    "b2.gram.relativas-avanzadas",
-    "b2.gram.explicativas-especificativas",
-    "b2.voc.arte-cultura",
-    "b2.pron.jerarquia-pausas",
-    "b2.fun.describir-precision",
-    "b2.wri.resena-exposicion",
-    "b2.gram.condicionales-conectores",
-    "b2.gram.consecutivas",
-    "b2.voc.acuerdos-contratos",
-    "b2.pron.foco-solo-si",
-    "b2.fun.negociar-condiciones",
-    "b2.spk.negociacion",
-    "b2.gram.pasiva-impersonalidad",
-    "b2.voc.prensa",
-    "b2.pron.lectura-noticias",
-    "b2.fun.informar-objetivamente",
-    "b2.read.noticia",
-    "b2.gram.sustantivas-sistema"
-  ],
-  "prerequisites": [
-    "b2-09"
-  ],
-  "goal": {
-    "canDo": "Puedo sintetizar declaraciones y negociar una recomendación con razones, matices y condiciones claras.",
-    "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: rectificar garantías y negociar una apertura por fases.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
-    ]
-  },
-  "theory": {
-    "intro": "La mascota te propone una misión: sintetizar declaraciones y negociar una recomendación. Decide qué quieres comunicar antes de elegir una forma.",
-    "parts": [
-      {
-        "heading": "Sintetizar declaraciones y negociar una recomendación",
-        "body": [
-          "El estilo indirecto adapta persona, tiempo y referencias al punto desde el que informas: ayer dijo «vendré mañana» se convierte en dijo que vendría hoy. Los cambios dependen de si la información sigue vigente; no son una sustitución automática. Aseguró que introduce una afirmación; negó que y sugirió que suelen seleccionar subjuntivo."
-        ],
-        "examples": [
-          {
-            "es": "La directora negó que el museo fuera a cerrar.",
-            "note": "Negación de una afirmación en pasado."
-          },
-          {
-            "es": "Ayer prometió: «Mañana publicaré el acuerdo». Hoy explicó que lo publicaría hoy.",
-            "note": "Futuro desde un punto pasado."
-          },
-          {
-            "es": "Sugirió que las asociaciones revisaran el borrador.",
-            "note": "Propuesta dirigida a otras personas."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La directora sugirió que revisamos el informe al día siguiente.",
-            "right": "La directora sugirió que revisáramos el informe al día siguiente.",
-            "why": "Sugerencia pasada con imperfecto de subjuntivo."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretación, registro y efecto",
-        "body": [
-          "En una síntesis, afirmar, admitir, advertir, desmentir e insinuar no son intercambiables: atribuyen actos distintos. Integra concesiones, relativas, condiciones y pasivas de las semanas anteriores. Una recomendación debe apoyarse en datos y conservar las reservas de cada fuente, incluso si complican una conclusión breve."
-        ],
-        "examples": [
-          {
-            "es": "La directora negó que el museo fuera a cerrar.",
-            "note": "Explica qué información afirma y cuál deja abierta."
-          },
-          {
-            "es": "Sugirió que las asociaciones revisaran el borrador.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
-    "exercises": [
-      {
-        "id": "g-contexto",
-        "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de checkpoint: informar después de la polémica; justifica el modo, la forma o la combinación.",
-        "items": [
-          {
-            "q": "La directora negó que el museo ___ a cerrar.",
-            "answers": [
-              [
-                "fuera"
-              ]
-            ],
-            "why": "Negación de una afirmación en pasado."
-          },
-          {
-            "q": "Ayer prometió: «Mañana publicaré el acuerdo». Hoy explicó que lo ___ hoy.",
-            "answers": [
-              [
-                "publicaría"
-              ]
-            ],
-            "why": "Futuro desde un punto pasado."
-          },
-          {
-            "q": "Sugirió que las asociaciones ___ el borrador.",
-            "answers": [
-              [
-                "revisaran"
-              ]
-            ],
-            "why": "Propuesta dirigida a otras personas."
-          }
-        ]
-      },
-      {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
-        "items": [
-          {
-            "prompt": "Texto de partida: «Ayer dijo: «Mañana publicaré las opciones».» Informa hoy con dijo que y ajusta la referencia temporal.",
-            "model": "Ayer dijo que publicaría las opciones hoy.",
-            "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-            ]
-          },
-          {
-            "prompt": "Texto de partida: «La portavoz: «No hemos aceptado ese local».» Transmite con negó que, sujeto ellos.",
-            "model": "La portavoz negó que hubieran aceptado ese local.",
-            "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-            ]
-          },
-          {
-            "prompt": "Texto de partida: «La directora: «Revisen el presupuesto».» Transmite una sugerencia pasada.",
-            "model": "La directora sugirió que revisaran el presupuesto.",
-            "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
-    "groups": [
-      {
-        "title": "Sintetizar declaraciones y negociar una recomendación",
-        "items": [
-          {
-            "es": "asegurar un hecho",
-            "note": "afirmarlo con firmeza"
-          },
-          {
-            "es": "admitir un error",
-            "note": "reconocer una falta"
-          },
-          {
-            "es": "desmentir un rumor",
-            "note": "negar una información circulante"
-          },
-          {
-            "es": "advertir de un riesgo",
-            "note": "señalar una posible dificultad"
-          },
-          {
-            "es": "insinuar una crítica",
-            "note": "expresarla indirectamente"
-          },
-          {
-            "es": "prometer una medida",
-            "note": "comprometerse a una acción"
-          },
-          {
-            "es": "matizar una declaración",
-            "note": "limitar su alcance"
-          },
-          {
-            "es": "sintetizar posturas",
-            "note": "reunir posiciones sin confundirlas"
-          }
-        ]
-      }
+  reviewObjectives: ["b2.gram.g137","b2.gram.g138","b2.voc.w06-agua-vinedo","b2.pron.w06-modo-al-oido","b2.lis.w06-reunion-finca","b2.read.w06-columna-agua","b2.wri.w06-carta-asamblea","b2.spk.w06-sostener-postura","b2.fun.w06-conceder-mantener","b2.disc.w06-orden-registro","b2.gram.g139","b2.gram.g140","b2.voc.w07-sismo-simulacro","b2.pron.w07-bloques-conectores","b2.lis.w07-reunion-simulacro","b2.read.w07-boletin-escuela","b2.wri.w07-correo-familias","b2.spk.w07-explicar-protocolo","b2.fun.w07-planificar-prevenir","b2.disc.w07-secuencia-finalidad","b2.gram.g141","b2.gram.g142","b2.voc.w08-telar-oficio","b2.pron.w08-grupo-relativo","b2.lis.w08-taller-telar","b2.read.w08-reportaje-tejedoras","b2.wri.w08-quienes-somos","b2.spk.w08-presentar-oficio","b2.fun.w08-describir-proceso","b2.disc.w08-precisar-referentes","b2.gram.g143","b2.gram.g144","b2.voc.w09-patrimonio-urbano","b2.pron.w09-pausa-comentario","b2.lis.w09-grabacion-audioguia","b2.read.w09-guion-recorrido","b2.wri.w09-ficha-patrimonio","b2.spk.w09-guiar-recorrido","b2.fun.w09-presentar-comentar","b2.disc.w09-encadenar-comentarios"],
+  prerequisites: ["b2-09"],
+  goal: {
+    canDo: "Puedo transmitir lo que otras personas dijeron, preguntaron o pidieron, hablar de personas y lugares sin identificar y combinar en un mismo texto todas las estructuras de las semanas 6 a 10.",
+    steps: [
+      "Repasa en la teoría «cualquiera que», «dondequiera que», «pase lo que pase» y el modo en las relativas.",
+      "Repasa el estilo indirecto: tiempos, preguntas, peticiones y referencias, y la tabla de integración de las semanas 6 a 9.",
+      "Escucha a Lucía contar la reunión de voluntarios y lee la crónica del fin de temporada.",
+      "Escribe el resumen de una reunión, revísalo y transmite oralmente lo acordado.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones útiles para sintetizar declaraciones y negociar una recomendación con su significado.",
-        "pairs": [
-          {
-            "left": "asegurar un hecho",
-            "right": "afirmarlo con firmeza"
-          },
-          {
-            "left": "admitir un error",
-            "right": "reconocer una falta"
-          },
-          {
-            "left": "desmentir un rumor",
-            "right": "negar una información circulante"
-          },
-          {
-            "left": "advertir de un riesgo",
-            "right": "señalar una posible dificultad"
-          },
-          {
-            "left": "insinuar una crítica",
-            "right": "expresarla indirectamente"
-          },
-          {
-            "left": "prometer una medida",
-            "right": "comprometerse a una acción"
-          },
-          {
-            "left": "matizar una declaración",
-            "right": "limitar su alcance"
-          },
-          {
-            "left": "sintetizar posturas",
-            "right": "reunir posiciones sin confundirlas"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Distingue la voz de la fuente y tu comentario mediante pausas; la ironía no debe usarse para atribuir una intención que no consta.",
-    "explanation": [
-      "Distingue la voz de la fuente y tu comentario mediante pausas; la ironía no debe usarse para atribuir una intención que no consta.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
-    ],
-    "examples": [
+  theory: {
+    intro: "Este es el segundo punto de control de B2. En clase viste cómo hablar de personas y lugares que no identificas y cómo transmitir lo que dijo otra persona. Aquí lo repasas en Mar del Plata, donde un grupo de voluntarios limpia las playas durante el verano, y lo combinas con lo que repasaste en las semanas 6 a 9: la concesión (G137, G138), las temporales y finales (G139, G140), las modales y comparativas (G141), los relativos con preposición (G142), «cuyo» (G143) y los referentes neutros (G144).",
+    parts: [
       {
-        "es": "La directora negó que el museo fuera a cerrar."
-      },
-      {
-        "es": "Ayer prometió: «Mañana publicaré el acuerdo». Hoy explicó que lo publicaría hoy."
-      },
-      {
-        "es": "Sugirió que las asociaciones revisaran el borrador."
-      }
-    ],
-    "perceive": {
-      "id": "p-percepcion",
-      "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
-      "items": [
-        {
-          "q": "En la muestra 1 de checkpoint: informar después de la polémica, ¿qué fragmento se oye?",
-          "options": [
-            "era",
-            "fue",
-            "fuera"
+        heading: "Cualquiera que, dondequiera que: cuando no sabes quién ni dónde",
+        body: [
+          "Cuando hablas de una persona, un lugar o una cosa que no identificas, porque puede ser cualquiera, usas «cualquiera que», «quienquiera que», «dondequiera que», «comoquiera que» o «cualquier + sustantivo + que», siempre con subjuntivo: «Cualquiera que encuentre un animal herido debe avisar a la coordinadora».",
+          "«Cualquiera» va solo cuando funciona como pronombre y pierde la «a» delante de un sustantivo: «cualquier bolsa», «cualquier persona». El plural, «cualesquiera», es formal y poco frecuente. En la conversación se prefieren «el que», «quien» o «donde» + subjuntivo, con el mismo valor: «El que llegue primero abre el depósito», «Plantamos donde diga el guardaparques».",
+        ],
+        table: {
+          caption: "Formas y registro",
+          head: ["Forma", "Uso", "Ejemplo"],
+          rows: [
+            ["cualquiera que + subjuntivo", "cualquier persona", "Cualquiera que quiera sumarse puede venir el sábado."],
+            ["cualquier + sustantivo + que", "cualquier cosa de ese tipo", "Cualquier residuo que encuentren va a la bolsa roja."],
+            ["dondequiera que + subjuntivo", "en cualquier lugar (formal)", "Dondequiera que acampen, deben llevarse su basura."],
+            ["quienquiera que + subjuntivo", "cualquier persona (formal)", "Quienquiera que haya dejado esto, que lo retire."],
+            ["el que / quien / donde + subjuntivo", "lo mismo, más oral", "El que vea la bandera roja no se mete al agua."],
           ],
-          "answer": 2,
-          "why": "Negación de una afirmación en pasado.",
-          "audio": "La directora negó que el museo fuera a cerrar.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "En la muestra 2 de checkpoint: informar después de la polémica, ¿qué fragmento se oye?",
-          "options": [
-            "publicará",
-            "publicaría",
-            "publicó"
+        examples: [
+          { es: "Cualquier voluntario que tenga guantes de sobra puede prestárselos a los nuevos.", note: "«Cualquier» sin «a» delante del sustantivo." },
+          { es: "Llevamos la bolsa dondequiera que vayamos, incluso a la rambla.", note: "Lugar indeterminado: subjuntivo." },
+        ],
+        mistakes: [
+          {
+            wrong: "Cualquiera persona que venga recibe una camiseta.",
+            right: "Cualquier persona que venga recibe una camiseta.",
+            why: "Delante de un sustantivo, «cualquiera» pierde la «a».",
+          },
+          {
+            wrong: "Cualquiera que viene sin gorra se insola.",
+            right: "Cualquiera que venga sin gorra se insola.",
+            why: "Con un antecedente indeterminado, la relativa va en subjuntivo.",
+          },
+        ],
+      },
+      {
+        heading: "«Pase lo que pase», «sea cual sea» y el modo en las relativas",
+        body: [
+          "Las fórmulas reduplicadas dicen que la decisión no cambia, ocurra lo que ocurra: «pase lo que pase», «digan lo que digan», «vayas donde vayas», «hagas lo que hagas». Con «cual» hay concordancia: «sea cual sea el resultado», «sean cuales sean los resultados». Con dos opciones: «llueva o no llueva», «quieras o no».",
+          "En cualquier relativa, el modo depende del antecedente. Si es conocido y existe, indicativo: «Busco a Lidia, que tiene la llave». Si es buscado o no sabes si existe, subjuntivo: «Busco a alguien que tenga la llave». Si se niega su existencia, también subjuntivo: «No hay nadie que tenga la llave».",
+        ],
+        table: {
+          caption: "El mismo relativo, dos modos",
+          head: ["Antecedente", "Modo", "Ejemplo"],
+          rows: [
+            ["conocido, existe", "indicativo", "Hablé con el guardavidas que trabaja en la playa Varese."],
+            ["buscado, no sé si existe", "subjuntivo", "Necesitamos un guardavidas que trabaje los domingos."],
+            ["negado", "subjuntivo", "No hay ningún guardavidas que trabaje los domingos."],
           ],
-          "answer": 1,
-          "why": "Futuro desde un punto pasado.",
-          "audio": "Ayer prometió: «Mañana publicaré el acuerdo». Hoy explicó que lo publicaría hoy.",
-          "voice": "es-ES-f"
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "Sea cual sean los resultados, seguiremos limpiando.",
+            right: "Sean cuales sean los resultados, seguiremos limpiando.",
+            why: "Con un sustantivo en plural, «sean cuales sean» concuerda en número.",
+          },
+          {
+            wrong: "No conozco a nadie que sabe nadar tan bien como Ana.",
+            right: "No conozco a nadie que sepa nadar tan bien como Ana.",
+            why: "Antecedente negado: subjuntivo.",
+          },
+        ],
+        tip: "Pregúntate: ¿puedo señalar a esa persona o ese lugar? Si no puedo, subjuntivo.",
+      },
+      {
+        heading: "Estilo indirecto: afirmar, preguntar, pedir",
+        body: [
+          "Antes de pensar en los tiempos, decide qué hizo la otra persona. Si afirmó algo: «dijo que», «explicó que», «aclaró que». Si preguntó: «preguntó si» (pregunta de sí o no) o «preguntó qué, dónde, cuándo». Si pidió u ordenó: «pidió que», «nos dijo que» + subjuntivo.",
+          "Cuando el verbo que introduce el mensaje está en pasado, los tiempos se desplazan hacia atrás: el presente pasa a imperfecto, el pretérito perfecto o el indefinido a pluscuamperfecto, el futuro a condicional y el imperativo a imperfecto de subjuntivo. Si lo que se dijo sigue siendo verdad cuando lo cuentas, puedes mantener el presente: «Dijo que la reunión es los lunes».",
+        ],
+        table: {
+          caption: "Lo que dijo la coordinadora → lo que cuentas después",
+          head: ["Palabras originales", "Estilo indirecto"],
+          rows: [
+            ["«El turno empieza a las siete.»", "Dijo que el turno empezaba a las siete."],
+            ["«Hemos juntado dos toneladas.»", "Contó que habían juntado dos toneladas."],
+            ["«Mañana traeré los guantes.»", "Prometió que al día siguiente llevaría los guantes."],
+            ["«¿Alguien tiene auto?»", "Preguntó si alguien tenía auto."],
+            ["«No se metan al agua.»", "Nos pidió que no nos metiéramos al agua."],
+          ],
+        },
+        mistakes: [
+          {
+            wrong: "Nos pidió que no dejamos bolsas en la arena.",
+            right: "Nos pidió que no dejáramos bolsas en la arena.",
+            why: "Una petición transmitida va en subjuntivo; con «pidió», imperfecto de subjuntivo.",
+          },
+          {
+            wrong: "Me preguntó que si yo vendré el sábado.",
+            right: "Me preguntó si yo iría el sábado.",
+            why: "Pregunta de sí o no: «preguntó si»; el futuro pasa a condicional y «venir» a «ir» si cambia el lugar.",
+          },
+        ],
+      },
+      {
+        heading: "Referencias que cambian y verbos que precisan",
+        body: [
+          "Al contar un mensaje en otro momento o en otro lugar, cambian también las referencias: «hoy» puede pasar a «ese día», «mañana» a «al día siguiente», «ayer» a «el día anterior», «aquí» a «allí», «este» a «ese», «venir» a «ir» y «traer» a «llevar». Piensa siempre desde dónde y cuándo hablas tú.",
+          "«Decir» sirve para todo, pero otros verbos transmiten mejor la intención: «aclaró», «advirtió», «insistió en que», «recordó», «recomendó», «prometió», «propuso». Con los verbos de influencia (recomendar, proponer, insistir en que con valor de pedir) el mensaje va en subjuntivo.",
+        ],
+        examples: [
+          { es: "El martes, la coordinadora advirtió que esa noche habría tormenta y nos recomendó que no fuéramos a la escollera.", note: "«Esta noche» → «esa noche»; recomendación en subjuntivo." },
+          { es: "Martín insistió en que la reunión siguiente fuera en la playa y no en la sede.", note: "«Insistir en que» con valor de petición: subjuntivo." },
+        ],
+        mistakes: [
+          {
+            wrong: "El lunes me dijo: «Ven aquí mañana». → Me dijo que venga aquí mañana.",
+            right: "Me dijo que fuera allí al día siguiente.",
+            why: "Hay que cambiar el tiempo y las referencias de lugar y de tiempo.",
+          },
+        ],
+      },
+      {
+        heading: "Integración: las semanas 6 a 9 en una misma historia",
+        body: [
+          "En un punto de control conviene recuperar todo lo anterior. La tabla resume, con ejemplos de la playa, las clases de las semanas 6 a 9. Fíjate en que casi todas comparten una pregunta: ¿el hecho es conocido y real (indicativo) o abierto, futuro o irreal (subjuntivo)?",
+          "Cuando transmites lo que dijo alguien, estas estructuras también se desplazan: «Aunque llueva, vamos» se cuenta como «Dijo que, aunque lloviera, íbamos»; «En cuanto lleguen, empezamos» pasa a «Dijo que en cuanto llegaran empezaríamos».",
+        ],
+        table: {
+          caption: "Repaso de las semanas 6 a 9",
+          head: ["Semana y clase", "Clave", "Ejemplo en la playa"],
+          rows: [
+            ["6 · G137 aunque", "dato nuevo (ind.) / conocido o posible (subj.)", "Aunque haga viento, limpiamos la escollera."],
+            ["6 · G138 por mucho que, si bien", "intensidad indiferente: subj.; «si bien» + ind.", "Por mucho que barramos, siempre aparecen colillas."],
+            ["7 · G139 temporales", "futuro: subj.; desde el pasado: imperf. de subj.", "En cuanto baje la marea, empezamos."],
+            ["7 · G140 finales", "sujeto distinto: subj.; mismo sujeto: infinitivo", "Ponemos carteles para que nadie tire plásticos."],
+            ["8 · G141 modales y comparativas", "manera conocida/abierta; «de lo que»; «como si»", "Juntamos más basura de la que esperábamos."],
+            ["8 · G142 relativos con preposición", "la preposición va delante", "Es la playa en la que hay más residuos."],
+            ["9 · G143 cuyo", "concuerda con lo poseído", "Es una ONG cuyos voluntarios vienen de todo el país."],
+            ["9 · G144 lo cual, por lo que", "comentario o consecuencia de un hecho", "Llovió, por lo que suspendimos el turno."],
+          ],
+        },
+        mistakes: [
+          {
+            wrong: "Dijo que en cuanto llegarán los camiones cargaríamos las bolsas.",
+            right: "Dijo que en cuanto llegaran los camiones cargaríamos las bolsas.",
+            why: "Futuro visto desde el pasado tras «en cuanto»: imperfecto de subjuntivo (semana 7).",
+          },
+        ],
+        tip: "Antes del cuestionario, tapa la columna «Ejemplo en la playa» y escribe un ejemplo propio para cada fila.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero, el antecedente: ¿lo conoces o puede ser cualquiera? Después, el mensaje: ¿afirma, pregunta o pide, y desde cuándo lo cuentas? Al final, reformula con libertad.",
+    exercises: [
+      {
+        id: "b2-10-gramatica-antecedente",
+        type: "context",
+        prompt: "Lee la situación y elige la frase adecuada.",
+        items: [
+          {
+            context: "La coordinadora no sabe quién vendrá el sábado y quiere dejar clara una norma.",
+            q: "¿Qué escribe en el grupo?",
+            options: [
+              "Cualquiera que viene el sábado tiene que firmar la planilla.",
+              "Cualquiera que venga el sábado tiene que firmar la planilla.",
+              "Cualquier que venga el sábado tiene que firmar la planilla.",
+            ],
+            answer: 1,
+            why: "Persona indeterminada: «cualquiera que» + subjuntivo.",
+          },
+          {
+            context: "Buscan un voluntario con carné de conducir, pero no saben si hay alguno.",
+            q: "¿Cómo lo preguntan?",
+            options: [
+              "¿Hay alguien que tenga carné para manejar la camioneta?",
+              "¿Hay alguien que tiene carné para manejar la camioneta?",
+              "¿Hay alguien quien tenga carné para manejar la camioneta?",
+            ],
+            answer: 0,
+            why: "Antecedente buscado: subjuntivo; «quien» no se usa así tras «alguien» en especificativa.",
+          },
+          {
+            context: "El pronóstico es dudoso, pero la jornada se mantiene.",
+            q: "¿Qué dice Martín?",
+            options: [
+              "Pasa lo que pasa, empezamos a las ocho.",
+              "Pasará lo que pasará, empezamos a las ocho.",
+              "Pase lo que pase, empezamos a las ocho.",
+            ],
+            answer: 2,
+            why: "Fórmula reduplicada: presente de subjuntivo.",
+          },
+          {
+            context: "Lucía conoce a una guardavidas concreta que habla tres idiomas.",
+            q: "¿Qué frase es la adecuada?",
+            options: [
+              "Te presento a Sofía, que habla inglés, portugués e italiano.",
+              "Te presento a Sofía, que hable inglés, portugués e italiano.",
+              "Te presento a Sofía, cualquiera que habla inglés, portugués e italiano.",
+            ],
+            answer: 0,
+            why: "Antecedente conocido: indicativo.",
+          },
+        ],
+      },
+      {
+        id: "b2-10-gramatica-indirecto",
+        type: "gap",
+        prompt: "Transmite el mensaje el lunes siguiente. Completa con la forma adecuada.",
+        items: [
+          { q: "La coordinadora dijo: «Hoy terminamos a las doce». → Dijo que ese día ___ a las doce.", answers: [["terminábamos", "terminaríamos"]], why: "Presente con valor de futuro → imperfecto (o condicional)." },
+          { q: "Martín preguntó: «¿Quién ha traído las pinzas?». → Preguntó quién ___ las pinzas.", answers: [["había llevado", "había traído"]], why: "Pretérito perfecto → pluscuamperfecto; «traer» puede pasar a «llevar»." },
+          { q: "Nos pidió: «Separen el vidrio del plástico». → Nos pidió que ___ el vidrio del plástico.", answers: [["separáramos", "separásemos"]], why: "Imperativo → imperfecto de subjuntivo." },
+          { q: "Ana dijo: «Mañana iré a la escollera». → Dijo que al día siguiente ___ a la escollera.", answers: [["iría"]], why: "Futuro → condicional." },
+          { q: "Un turista preguntó: «¿Puedo ayudar?». → Preguntó ___ podía ayudar.", answers: [["si"]], why: "Pregunta de sí o no: «preguntó si»." },
+          { q: "La guardavidas advirtió: «Cualquiera que entre al agua con bandera roja será retirado». → Advirtió que cualquiera que ___ al agua con bandera roja sería retirado.", answers: [["entrara", "entrase"]], why: "Desde el pasado, el subjuntivo presente pasa a imperfecto." },
+        ],
+      },
+      {
+        id: "b2-10-gramatica-modo",
+        type: "classify",
+        prompt: "Clasifica cada relativa según el antecedente.",
+        categories: ["Conocido: indicativo", "Buscado, negado o indeterminado: subjuntivo"],
+        items: [
+          { text: "Hablé con el pescador que encontró la red.", cat: 0, why: "Persona concreta que existe." },
+          { text: "No hay nadie que conozca esta playa como Ramón.", cat: 1, why: "Antecedente negado." },
+          { text: "Buscamos un local donde guardar las herramientas.", cat: 1, why: "Lugar buscado, todavía sin identificar." },
+          { text: "Es la playa donde aparecieron más tapitas.", cat: 0, why: "Lugar conocido." },
+          { text: "Quienquiera que haya dejado la sombrilla, que pase a buscarla.", cat: 1, why: "Persona indeterminada." },
+          { text: "Te presento a Tomás, que coordina el turno de tarde.", cat: 0, why: "Persona concreta y conocida." },
+        ],
+      },
+      {
+        id: "b2-10-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error de las semanas 6 a 10. Corrígelo.",
+        items: [
+          {
+            sentence: "La coordinadora nos pidió que llevamos agua y gorra.",
+            answers: ["La coordinadora nos pidió que lleváramos agua y gorra.", "La coordinadora nos pidió que llevásemos agua y gorra."],
+            why: "Petición transmitida: imperfecto de subjuntivo.",
+          },
+          {
+            sentence: "Cualquier que quiera venir es bienvenido.",
+            answers: ["Cualquiera que quiera venir es bienvenido."],
+            why: "Como pronombre, «cualquiera» conserva la «a».",
+          },
+          {
+            sentence: "Es una asociación que sus voluntarios son muy jóvenes.",
+            answers: ["Es una asociación cuyos voluntarios son muy jóvenes."],
+            why: "«Que su» no es normativo: «cuyos» (semana 9).",
+          },
+          {
+            sentence: "Juntamos más plástico de lo que esperábamos.",
+            answers: ["Juntamos más plástico del que esperábamos."],
+            why: "Con un sustantivo masculino: «del que» (semana 8).",
+          },
+          {
+            sentence: "Llegó tarde la camioneta, que tuvimos que cargar las bolsas a mano.",
+            answers: ["Llegó tarde la camioneta, por lo que tuvimos que cargar las bolsas a mano.", "Llegó tarde la camioneta, con lo cual tuvimos que cargar las bolsas a mano."],
+            why: "Consecuencia de un hecho entero: «por lo que» o «con lo cual» (semana 9).",
+          },
+        ],
+      },
+      {
+        id: "b2-10-gramatica-reformular",
+        type: "open",
+        prompt: "Reformula cada texto. Compara con el modelo y revisa la lista: puede haber otras soluciones correctas.",
+        items: [
+          {
+            prompt: "Texto de partida: la coordinadora dijo el viernes: «Aunque llueva mañana, vengan igual. En cuanto llegue la camioneta, empezamos». Transmítelo el lunes a alguien que no estuvo.",
+            model: "El viernes la coordinadora nos dijo que, aunque lloviera al día siguiente, fuéramos igual, y que en cuanto llegara la camioneta empezaríamos.",
+            checklist: [
+              "Los subjuntivos pasan a imperfecto de subjuntivo y el presente con valor de futuro a condicional.",
+              "«Mañana» pasa a «al día siguiente» o «el sábado».",
+              "Puedo usar otros verbos introductores, como «insistió en que»: no es una respuesta única.",
+            ],
+          },
+          {
+            prompt: "Texto de partida: «No sabemos quién va a venir. Esa persona tendrá que registrarse. Da igual lo que pase con el tiempo.» Reformúlalo en una o dos frases con «cualquiera que» y una fórmula reduplicada.",
+            model: "Cualquiera que venga tendrá que registrarse, haga el tiempo que haga.",
+            checklist: [
+              "«Cualquiera que» va con subjuntivo.",
+              "Uso una fórmula reduplicada en subjuntivo («haga el tiempo que haga», «pase lo que pase»).",
+              "Otra combinación también vale: no es una respuesta única.",
+            ],
+          },
+          {
+            prompt: "Texto de partida: Martín preguntó: «¿Dónde dejamos las bolsas? ¿Hay alguien que tenga un carro?». Transmite las dos preguntas en pasado.",
+            model: "Martín preguntó dónde dejábamos las bolsas y si había alguien que tuviera un carro.",
+            checklist: [
+              "Uso «preguntó dónde» para la primera y «preguntó si» para la segunda.",
+              "El subjuntivo de la relativa pasa a imperfecto: «tuviera».",
+              "Puedo ordenar o unir las preguntas de otra manera: no es una respuesta única.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para hablar de la temporada de playa, de su seguridad y de un voluntariado ambiental.",
+    groups: [
+      {
+        title: "Mar y seguridad",
+        items: [
+          { es: "el guardavidas", note: "persona que vigila a los bañistas (en España, «socorrista»)" },
+          { es: "la bandera roja", note: "señal de que está prohibido bañarse" },
+          { es: "la resaca", note: "corriente que arrastra hacia mar adentro" },
+          { es: "la marea alta / baja", note: "subida y bajada periódica del nivel del mar" },
+          { es: "la escollera", note: "muro de piedras que protege la costa o el puerto" },
+          { es: "el balneario", note: "en Argentina, zona de playa con servicios y carpas" },
+          { es: "insolarse", note: "sufrir los efectos de demasiado sol" },
+        ],
+      },
+      {
+        title: "Voluntariado y residuos",
+        items: [
+          { es: "la jornada de limpieza", note: "día organizado para recoger residuos" },
+          { es: "los residuos", note: "restos y basura que hay que retirar" },
+          { es: "las colillas", note: "restos de cigarrillos" },
+          { es: "las tapitas", note: "tapones de plástico de las botellas (uso rioplatense)" },
+          { es: "la planilla", note: "hoja donde se anotan datos o asistentes" },
+          { es: "sumarse", note: "unirse a una actividad o a un grupo" },
+          { es: "el turno", note: "horario en que le toca trabajar a cada grupo" },
+          { es: "hacer un balance", note: "valorar los resultados de un periodo" },
+        ],
+      },
+      {
+        title: "Verbos para transmitir",
+        items: [
+          { es: "aclarar", note: "explicar algo para evitar confusiones" },
+          { es: "advertir", note: "avisar de un riesgo" },
+          { es: "insistir en que", note: "repetir una idea o una petición con firmeza" },
+          { es: "recordar", note: "hacer que alguien tenga presente algo" },
+          { es: "proponer", note: "presentar una idea para que otros la consideren" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "b2-10-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada palabra con su definición.",
+        pairs: [
+          { left: "la resaca", right: "corriente que arrastra hacia mar adentro" },
+          { left: "la escollera", right: "muro de piedras que protege la costa" },
+          { left: "sumarse", right: "unirse a una actividad" },
+          { left: "advertir", right: "avisar de un riesgo" },
+          { left: "hacer un balance", right: "valorar los resultados de un periodo" },
+          { left: "la planilla", right: "hoja donde se anotan los asistentes" },
+        ],
+      },
+      {
+        id: "b2-10-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la palabra adecuada.",
+        bank: ["bandera roja", "colillas", "insistió en que", "guardavidas"],
+        items: [
+          { q: "Con ___ nadie se mete al agua, por muy calmado que parezca el mar.", answers: [["bandera roja"]] },
+          { q: "El ___ nos explicó dónde se forma la resaca.", answers: [["guardavidas"]] },
+          { q: "Juntamos más de tres mil ___ en una sola mañana.", answers: [["colillas"]] },
+          { q: "La coordinadora ___ todos usáramos guantes.", answers: [["insistió en que"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Cambiar de voz entre el relato y la cita",
+    explanation: [
+      "Cuando cuentas lo que dijo otra persona en estilo directo, la voz cambia: haces una pausa breve después de «dijo» y la cita suena con otro tono, a veces imitando la intención («¡No se metan al agua!»). En estilo indirecto, en cambio, todo va en tu voz, sin pausa después de «que»: «dijo que no nos metiéramos al agua».",
+      "Las fórmulas reduplicadas («pase lo que pase», «sea cual sea», «digan lo que digan») se pronuncian como un solo bloque, con el acento fuerte en el primer verbo y una pausa después: «PA-se-lo-que-pa-se | empezamos».",
+      "El audio usa la síntesis del navegador: sirve para percibir el contraste, no certifica un acento regional ni evalúa tu pronunciación.",
+    ],
+    table: {
+      caption: "Directo e indirecto al oído",
+      head: ["Estilo directo (pausa y cambio de voz)", "Estilo indirecto (una sola voz)"],
+      rows: [
+        ["Dijo: | «Vengan temprano».", "Dijo que fuéramos temprano."],
+        ["Preguntó: | «¿Quién tiene auto?».", "Preguntó quién tenía auto."],
+      ],
     },
-    "produce": [
-      {
-        "text": "La directora negó que el museo fuera a cerrar.",
-        "tip": "Distingue la voz de la fuente y tu comentario mediante pausas; la ironía no debe usarse para atribuir una intención que no consta.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Ayer prometió: «Mañana publicaré el acuerdo». Hoy explicó que lo publicaría hoy.",
-        "tip": "Distingue la voz de la fuente y tu comentario mediante pausas; la ironía no debe usarse para atribuir una intención que no consta.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Sugirió que las asociaciones revisaran el borrador.",
-        "tip": "Distingue la voz de la fuente y tu comentario mediante pausas; la ironía no debe usarse para atribuir una intención que no consta.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: Checkpoint: informar después de la polémica",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
-    "speakers": [
-      {
-        "id": "s1",
-        "name": "Periodista",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s2",
-        "name": "Directora",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Portavoz",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "s1",
-        "text": "Directora, el lunes aseguró que abrirían en septiembre. Ayer se publicó un documento que condiciona la fecha a una inspección. ¿Mantiene aquella afirmación o considera que debería haber explicado la condición desde el principio de la comparecencia?"
-      },
-      {
-        "speaker": "s2",
-        "text": "Debería haberla explicado. No pretendía presentar una garantía absoluta. La empresa nos había comunicado que esperaba terminar en agosto y yo transmití ese calendario. Ahora sugiero que preparemos una apertura por fases, siempre que cada sala cuente con la autorización técnica."
-      },
-      {
-        "speaker": "s3",
-        "text": "Reconocemos que la ampliación será útil, pero el local provisional no permite nuestros talleres. Cuando aceptamos el traslado, se nos prometió un espacio equivalente. No basta con que tenga la misma superficie: necesitamos condiciones acústicas similares y horarios compatibles con las actividades."
-      },
-      {
-        "speaker": "s2",
-        "text": "Admito que esa equivalencia se interpretó de manera demasiado estrecha. Pediré que se revise el local alternativo. No puedo prometer hoy una solución concreta, aunque sí puedo comprometerme a publicar el viernes las opciones y sus costes."
-      },
-      {
-        "speaker": "s1",
-        "text": "La empresa también ha desmentido que exista un fallo estructural confirmado. ¿Podemos aclarar qué se sabe? Algunas noticias citan una advertencia como si fuera un diagnóstico y otras presentan la falta de diagnóstico como prueba de que no hay ningún problema."
-      },
-      {
-        "speaker": "s3",
-        "text": "Precisamente necesitamos esa distinción. Aceptaríamos la apertura parcial si se verifican las salas y se garantiza un espacio temporal adecuado. Mientras tanto, pedimos que el acta recoja tanto el compromiso del viernes como los asuntos que siguen pendientes, sin convertir otra previsión en promesa."
-      },
-      {
-        "speaker": "s1",
-        "text": "Las cifras publicadas tampoco parecen comparables. En la apertura parcial se incluye personal adicional, mientras que en el aplazamiento solo aparece alquiler. ¿Se compromete a presentar ambos escenarios con los mismos conceptos? Sin esa información, la recomendación podría depender de cómo se organiza la tabla."
-      },
-      {
-        "speaker": "s2",
-        "text": "Sí, incorporaremos personal, alquiler y señalización en los dos casos, además de un margen para imprevistos. También prepararemos una versión para quienes organizan talleres. No quiero que simplificar el lenguaje signifique borrar las condiciones técnicas. Podremos explicar con claridad qué salas están autorizadas y qué fechas siguen siendo previsiones."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Mar del Plata?",
-          "items": [
-            {
-              "q": "¿Cuál es el propósito global de esta conversación: Checkpoint: informar después de la polémica?",
-              "options": [
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas.",
-                "Rectificar garantías y negociar una apertura por fases"
-              ],
-              "answer": 2,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
-            },
-            {
-              "q": "¿Qué relación predomina entre las voces en «Checkpoint: informar después de la polémica»?",
-              "options": [
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio."
-              ],
-              "answer": 1,
-              "why": "Identifica un turno que responda al anterior."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Checkpoint: informar después de la polémica».",
-          "items": [
-            {
-              "q": "¿Qué promete ahora la directora?",
-              "options": [
-                "Ofrecer hoy un local definitivo.",
-                "Publicar opciones y costes el viernes.",
-                "Abrir todas las salas sin inspección."
-              ],
-              "answer": 1,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
-            },
-            {
-              "q": "¿Qué frase aparece en la intervención inicial de «Checkpoint: informar después de la polémica»?",
-              "options": [
-                "Directora, el lunes aseguró que abrirían en septiembre.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión."
-              ],
-              "answer": 0,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
-          "items": [
-            {
-              "prompt": "En «Checkpoint: informar después de la polémica», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Precisamente necesitamos esa distinción. Aceptaríamos la apertura parcial si se verifican las salas y se garantiza un espacio temporal adecuado. Mientras tanto, pedimos que el acta recoja tanto el compromiso del viernes como los asuntos que siguen pendientes, sin convertir otra previsión en promesa.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Checkpoint: informar después de la polémica: texto para interpretar",
-    "genre": "Dossier argumentativo",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
-    "text": [
-      "La ampliación del museo municipal se anunció como un acuerdo cerrado. En la rueda de prensa del lunes, la directora aseguró que las asociaciones dispondrían de nuevas salas a partir de septiembre. El documento publicado al día siguiente, sin embargo, establecía que la apertura dependería de una revisión técnica. El contraste no demuestra que el proyecto vaya a fracasar, pero sí obliga a distinguir un calendario previsto de una fecha garantizada.",
-      "Una asociación cultural, cuyas actividades se habían trasladado a un local provisional, pidió explicaciones. Su portavoz admitió que las obras mejorarían la accesibilidad, aunque objetó que no se hubiera consultado a los usuarios sobre los horarios. También recordó una condición incluida en la negociación: aceptarían el traslado siempre que dispusieran de un espacio equivalente durante todo el periodo. El local actual carece de aislamiento acústico, lo cual impide celebrar algunos talleres. La asociación no exige paralizar la reforma; solicita una alternativa concreta.",
-      "La empresa responsable desmintió que hubiera abandonado las obras. Atribuyó la demora a una instalación que no figuraba en los planos y advirtió de que todavía debía comprobarse su estado. Esa explicación fue reproducida en varias redes como si se hubiera confirmado un fallo grave del edificio. El informe disponible no utiliza esa expresión. Se limita a recomendar una inspección antes de continuar una parte del trabajo. Transformar una precaución en un diagnóstico puede provocar tanta confusión como ocultar una dificultad real.",
-      "El pleno recibirá tres propuestas: mantener la fecha anunciada, aplazar toda la apertura o inaugurar por fases las salas ya verificadas. La última opción parece conciliadora, pero también requiere personal adicional y señalización clara. Antes de elegir, conviene pedir una estimación de costes y definir quién comprobará cada condición. Un informe útil no debe premiar a quien habló con más seguridad, sino mostrar qué compromisos pueden sostenerse con la información actual y cuáles necesitan todavía una confirmación.",
-      "Anexo presupuestario. Abrir solo las dos salas verificadas permitiría comenzar antes, pero exigiría contratar señalización y apoyo adicional para evitar que el público accediera a zonas de obra. Aplazar toda la apertura ahorraría ese gasto inmediato y prolongaría el alquiler del espacio provisional. El documento no ofrece una estimación comparable para ambas opciones: una cifra incluye personal y la otra solo alquiler. Presentarlas como si midieran el mismo coste favorecería artificialmente una alternativa.",
-      "El consejo propone pedir un cuadro con los mismos conceptos y un margen de incertidumbre para cada escenario. También solicita una versión del informe destinada a las asociaciones, sin tecnicismos innecesarios y con las condiciones prácticas al principio. Esa adaptación no debería eliminar la distinción entre autorización, previsión y compromiso. El lector que solo necesita saber cuándo podrá celebrar su taller merece una respuesta clara, pero no una seguridad mayor que la que permite el informe técnico."
-    ],
-    "glossary": [
-      {
-        "es": "asegurar un hecho",
-        "note": "afirmarlo con firmeza"
-      },
-      {
-        "es": "admitir un error",
-        "note": "reconocer una falta"
-      },
-      {
-        "es": "desmentir un rumor",
-        "note": "negar una información circulante"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "r-comprender",
-        "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
-        "items": [
-          {
-            "q": "¿Cuál es la decisión pendiente?",
-            "options": [
-              "Cerrar para siempre todas las salas.",
-              "Aceptar que ya existe un fallo grave confirmado.",
-              "Elegir un calendario con condiciones verificables y costes conocidos."
-            ],
-            "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué cambia al citar con admitió?",
-            "options": [
-              "Se elimina la autoría de la fuente.",
-              "Se presenta la declaración como reconocimiento de algo problemático.",
-              "Se convierte automáticamente en mentira."
-            ],
-            "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          }
-        ]
-      },
-      {
-        "id": "r-evidencia",
-        "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
-        "items": [
-          {
-            "prompt": "En «Checkpoint: informar después de la polémica», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "La directora admitió que no había explicitado la condición técnica del calendario. La asociación reconoció las ventajas de la reforma, pero recordó que el traslado dependía de disponer de un espacio equivalente. La empresa desmintió un diagnóstico que el informe no contiene. Recomiendo estudiar la apertura por fases siempre que se documenten la autorización de cada sala y el coste del personal adicional. Esta opción no sustituye la obligación de ofrecer un local temporal adecuado.",
-            "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
-            ]
-          },
-          {
-            "prompt": "Compara el anexo del checkpoint 10 con las primeras fuentes: identifica una limitación de los datos y una consecuencia práctica para la recomendación. Explica qué detalle conservarías al mediar para otra persona.",
-            "model": "Una cifra o una experiencia orienta la decisión solo dentro de su alcance. La recomendación debe conservar qué se midió, qué falta y qué condición se propone verificar.",
-            "checklist": [
-              "Identifico un dato concreto del anexo.",
-              "No generalizo fuera de la muestra o del caso.",
-              "Adapto el mensaje sin perder una condición."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
-      "items": [
+    perceive: {
+      id: "b2-10-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide qué forma oyes.",
+      items: [
         {
-          "quote": "La ampliación del museo municipal se anunció como un acuerdo cerrado.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          q: "¿Estilo directo o indirecto?",
+          options: ["directo: cita las palabras", "indirecto: las transmite"],
+          answer: 1,
+          why: "No hay cita: «nos pidió que lleváramos…», todo en la voz de quien cuenta.",
+          audio: "La coordinadora nos pidió que lleváramos guantes y agua.",
+          voice: "es-AR-f",
         },
         {
-          "quote": "Un informe útil no debe premiar a quien habló con más seguridad, sino mostrar qué compromisos pueden sostenerse con la información actual y cuáles necesitan todavía una confirmación.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
-        }
-      ]
-    }
+          q: "¿Qué forma oyes después de «que»?",
+          options: ["llevamos", "lleváramos"],
+          answer: 1,
+          why: "Se oye «lleváramos», esdrújula: imperfecto de subjuntivo.",
+          audio: "Nos dijo que lleváramos las bolsas a la escollera.",
+          voice: "es-AR-m",
+        },
+        {
+          q: "¿Qué fórmula oyes?",
+          options: ["sea cual sea", "sean cuales sean"],
+          answer: 0,
+          why: "Singular: «sea cual sea el resultado».",
+          audio: "Sea cual sea el resultado, el sábado volvemos.",
+          voice: "es-UY-f",
+        },
+        {
+          q: "¿Qué oyes en la relativa?",
+          options: ["alguien que tiene", "alguien que tenga"],
+          answer: 1,
+          why: "«Tenga»: antecedente buscado, subjuntivo.",
+          audio: "Buscamos a alguien que tenga una camioneta grande.",
+          voice: "es-AR-f",
+        },
+      ],
+    },
+    produce: [
+      { text: "Pase lo que pase, el sábado empezamos a las ocho.", tip: "«Pase lo que pase» en un solo bloque y pausa antes de «el sábado».", voice: "es-AR-f" },
+      { text: "Nos dijo: «Cualquiera que vea a un animal herido, que me llame».", tip: "Pausa después de «dijo» y cambia de voz en la cita.", voice: "es-AR-m" },
+      { text: "Nos dijo que cualquiera que viera a un animal herido la llamara.", tip: "Ahora todo en tu voz, sin pausa después de «que».", voice: "es-AR-m" },
+      { text: "Sean cuales sean las condiciones, volveremos el mes que viene.", tip: "Acentúa «SEAN» y deja el resto ligado.", voice: "es-UY-f" },
+    ],
+    spelling: "En estilo directo, la cita va entre comillas y precedida de dos puntos; en estilo indirecto no hay comillas ni dos puntos, y las preguntas pierden los signos de interrogación: «Preguntó si había lugar».",
   },
-  "practice": {
-    "intro": "Recupera la aplicación, la exposición, el local y la noticia: integra concesión, descripción precisa, condición y fuente en el informe del museo.",
-    "exercises": [
+  listening: {
+    title: "Te cuento lo que se dijo en la reunión",
+    context: "Lucía, voluntaria de una red de limpieza de playas de Mar del Plata, llama a Tomás, que no pudo ir a la reunión de fin de temporada. También interviene Valeria, una voluntaria uruguaya que estaba con Lucía. Escucha primero sin transcripción. Las voces son sintéticas.",
+    speakers: [
+      { id: "l", name: "Lucía", voice: "es-AR-f", role: "Voluntaria, estuvo en la reunión" },
+      { id: "t", name: "Tomás", voice: "es-AR-m", role: "Voluntario, no pudo ir" },
+      { id: "v", name: "Valeria", voice: "es-UY-f", role: "Voluntaria de Montevideo" },
+    ],
+    script: [
+      { speaker: "t", text: "Hola, Lucía. Perdón por no ir ayer, tuve guardia en el hospital. ¿Qué dijeron?" },
+      { speaker: "l", text: "Muchas cosas. Primero, Graciela hizo un balance: dijo que este verano habíamos juntado casi cuatro toneladas de residuos, mucho más de lo que esperaban en diciembre. Y aclaró que la mitad eran colillas y tapitas." },
+      { speaker: "t", text: "¿Cuatro toneladas? Es increíble. ¿Y hablaron del año que viene?" },
+      { speaker: "l", text: "Sí. Propuso que el año que viene trabajáramos también en las playas del sur, cuyos accesos son más difíciles, por lo que hará falta una camioneta. Preguntó si había alguien que tuviera carné profesional." },
+      { speaker: "t", text: "Yo tengo. ¿Le aviso?" },
+      { speaker: "l", text: "Sí, porque nadie levantó la mano, lo cual la preocupó bastante. Ah, y nos pidió que cualquiera que conociera a una empresa dispuesta a donar guantes se lo dijera, porque el presupuesto no alcanza." },
+      { speaker: "v", text: "Hola, Tomás, soy Valeria. Una cosa que no puede olvidarse: el guardavidas jefe insistió en que nadie se metiera al agua para sacar residuos, pasara lo que pasara. Contó que en febrero un chico se metió con bandera roja para buscar una red y casi se lo lleva la resaca." },
+      { speaker: "t", text: "Qué susto. ¿Y qué dijo de los turnos?" },
+      { speaker: "l", text: "Que aunque el año pasado algunos se quejaron de madrugar, el turno de las siete se mantiene, porque es cuando la marea está baja. Dijo que en cuanto tuviera el calendario nos lo mandaría, para que cada uno eligiera sus días." },
+      { speaker: "v", text: "Y Martín preguntó si podíamos hacer la reunión de marzo en la playa y no en la sede, a lo que Graciela respondió que sí, siempre que no lloviera." },
+      { speaker: "t", text: "Perfecto. Entonces le escribo hoy mismo a Graciela por lo de la camioneta. ¿Algo más?" },
+      { speaker: "v", text: "Sí, una advertencia de la coordinadora: dijo que, sea cual sea el clima, cada voluntario tiene que traer agua, gorra y protector solar, y que quien no los trajera no podría quedarse en la playa. También preguntó quién se animaba a explicar las normas a los grupos nuevos." },
+      { speaker: "l", text: "Una última cosa: nos agradeció como si hubiéramos salvado el océano entero. Fue muy emotivo, la verdad." },
+    ],
+    stages: [
       {
-        "id": "x-orden",
-        "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Mar del Plata y conserva sus relaciones.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la llamada completa sin transcripción. ¿Qué temas se trataron en la reunión?",
+        exercise: {
+          id: "b2-10-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye el sentido general.",
+          items: [
+            {
+              q: "¿Para qué llama Lucía a Tomás?",
+              options: [
+                "Para pedirle que coordine la red el año que viene.",
+                "Para contarle lo que se dijo en una reunión a la que él no fue.",
+                "Para invitarlo a una jornada de limpieza el día siguiente.",
+              ],
+              answer: 1,
+              why: "Tomás no pudo ir por una guardia y Lucía le transmite lo que se dijo.",
+            },
+            {
+              q: "¿Qué temas se trataron?",
+              options: [
+                "El balance del verano, los planes, la seguridad y los turnos.",
+                "Solo el presupuesto de la red.",
+                "Una denuncia contra una empresa contaminante.",
+              ],
+              answer: 0,
+              why: "Hablan de las cuatro toneladas, las playas del sur, la seguridad en el agua y el turno de las siete.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y responde sin mirar la transcripción.",
+        exercise: {
+          id: "b2-10-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Por qué hará falta una camioneta?",
+              options: [
+                "Porque el presupuesto aumentó.",
+                "Porque las playas del sur tienen accesos más difíciles.",
+                "Porque la sede cambió de lugar.",
+              ],
+              answer: 1,
+              why: "«…las playas del sur, cuyos accesos son más difíciles, por lo que hará falta una camioneta».",
+            },
+            {
+              q: "¿En qué insistió el guardavidas jefe?",
+              options: [
+                "En que todos aprendieran a nadar.",
+                "En que la reunión se hiciera en la playa.",
+                "En que nadie se metiera al agua a sacar residuos.",
+              ],
+              answer: 2,
+              why: "«…insistió en que nadie se metiera al agua para sacar residuos, pasara lo que pasara».",
+            },
+            {
+              q: "¿Por qué se mantiene el turno de las siete?",
+              options: [
+                "Porque a esa hora la marea está baja.",
+                "Porque nadie se quejó.",
+                "Porque los guardavidas llegan a esa hora.",
+              ],
+              answer: 0,
+              why: "«…es cuando la marea está baja».",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en cómo se transmite cada mensaje y en las estructuras de las semanas anteriores. Relaciona y consulta la transcripción solo después.",
+        exercise: {
+          id: "b2-10-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada fragmento con lo que muestra.",
+          pairs: [
+            { left: "dijo que este verano habíamos juntado casi cuatro toneladas", right: "afirmación transmitida con pluscuamperfecto" },
+            { left: "preguntó si había alguien que tuviera carné profesional", right: "pregunta de sí o no con antecedente buscado" },
+            { left: "nos pidió que cualquiera que conociera a una empresa se lo dijera", right: "petición transmitida con antecedente indeterminado" },
+            { left: "en cuanto tuviera el calendario nos lo mandaría", right: "temporal desde el pasado (semana 7)" },
+            { left: "las playas del sur, cuyos accesos son más difíciles", right: "relativo de posesión (semana 9)" },
+            { left: "como si hubiéramos salvado el océano entero", right: "comparación irreal (semana 8)" },
+          ],
+          why: "En el estilo indirecto los tiempos se desplazan, y las estructuras de las semanas 6 a 9 siguen la misma lógica.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Cuatro toneladas y una camioneta prestada",
+    genre: "Crónica periodística",
+    frame: "Crónica publicada en la sección local de un diario de Mar del Plata al terminar la temporada de verano. Personas y organización son ficticias.",
+    text: [
+      "El domingo, cuando los últimos turistas cargaban las valijas en los autos, unos cuarenta voluntarios se reunieron en la sede de la red Costa Limpia, en el barrio del puerto, para hacer el balance de la temporada. Su coordinadora, Graciela Ibarra, una bióloga cuyas campañas empezaron hace seis años con apenas cinco amigos, abrió la reunión con una cifra: entre diciembre y marzo, la red retiró de las playas casi cuatro toneladas de residuos, bastante más de lo que nadie había calculado.",
+      "Ibarra explicó que la mitad de lo recogido eran colillas y tapitas de plástico, lo cual, según dijo, «demuestra que el problema no son solo los grandes basurales, sino los pequeños gestos de cada día». Aclaró que, aunque la cifra parezca un éxito, no lo es del todo: «Si juntamos tanto, es porque se tiró mucho». Por mucho que la red crezca, insistió, sin un cambio de hábitos el trabajo no tiene fin.",
+      "No todo fueron cifras. El guardavidas jefe de la zona sur, Ramón Etcheverry, recordó a los voluntarios que nadie debía entrar al agua para recoger residuos, pasara lo que pasara. Contó que en febrero un joven se había metido con bandera roja para rescatar una red de pesca y que la resaca casi se lo lleva. «Cualquiera que vea algo flotando, que avise a un guardavidas», pidió. «Para eso estamos».",
+      "Luego llegó el turno de los planes. Ibarra propuso que el año próximo la red trabajara también en las playas del sur, en las que el acceso es más difícil y la basura se acumula durante semanas sin que nadie la retire. Para hacerlo, dijo, hace falta una camioneta y alguien que la maneje. Preguntó si había entre los presentes alguien con carné profesional, a lo que siguió un silencio incómodo. Dos días después, según confirmó la propia coordinadora a este diario, un voluntario que no había podido asistir se ofreció a conducir, y un comerciante del puerto, cuyo nombre prefirió no dar, prestó la camioneta.",
+      "Hubo también discrepancias. Algunos voluntarios se quejaron de que el turno empezara a las siete de la mañana. Ibarra respondió que, si bien entendía el cansancio, era la única hora en que la marea estaba baja y la playa vacía, de manera que no pensaba cambiarlo. Prometió, eso sí, que en cuanto tuviera el calendario lo enviaría para que cada voluntario eligiera sus días con tiempo.",
+      "Al terminar, la coordinadora agradeció a todos como si hubieran salvado el océano entero, y más de uno se emocionó. Dondequiera que se mire, el trabajo de esta red es pequeño frente al tamaño del problema. Pero quien haya caminado esta mañana por la playa Varese, sin una sola colilla a la vista, sabe que la diferencia existe.",
+    ],
+    glossary: [
+      { es: "el basural", note: "lugar donde se acumula mucha basura (uso del Cono Sur)" },
+      { es: "las valijas", note: "maletas (uso rioplatense)" },
+      { es: "un silencio incómodo", note: "momento en que nadie habla y todos se sienten tensos" },
+    ],
+    tasks: [
+      {
+        id: "b2-10-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la crónica.",
+        items: [
           {
-            "words": [
-              "En",
-              "«Checkpoint: informar después de la polémica»,",
-              "La",
-              "directora",
-              "negó",
-              "que",
-              "el",
-              "museo",
-              "fuera",
-              "a",
-              "cerrar."
+            q: "¿Por qué la coordinadora no considera la cifra un éxito completo?",
+            options: [
+              "Porque esperaban juntar más residuos.",
+              "Porque tanta basura indica que se tira mucho.",
+              "Porque faltaron voluntarios en febrero.",
             ],
-            "why": "Negación de una afirmación en pasado."
+            answer: 1,
+            why: "Segundo párrafo: «Si juntamos tanto, es porque se tiró mucho».",
           },
           {
-            "words": [
-              "En",
-              "«Checkpoint: informar después de la polémica»,",
-              "Sugirió",
-              "que",
-              "las",
-              "asociaciones",
-              "revisaran",
-              "el",
-              "borrador."
+            q: "¿Qué pasó después de la reunión con la camioneta?",
+            options: [
+              "Un voluntario se ofreció a manejarla y un comerciante la prestó.",
+              "La red la compró con el presupuesto del año.",
+              "Nadie se ofreció y el proyecto se suspendió.",
             ],
-            "why": "Propuesta dirigida a otras personas."
-          }
-        ]
-      },
-      {
-        "id": "x-edicion",
-        "type": "error",
-        "prompt": "Revisa tres borradores de checkpoint: informar después de la polémica; cada uno tiene un único error deliberado.",
-        "items": [
+            answer: 0,
+            why: "Cuarto párrafo.",
+          },
           {
-            "sentence": "La directora sugirió que revisamos el informe al día siguiente.",
-            "answers": [
-              "La directora sugirió que revisáramos el informe al día siguiente."
+            q: "¿Por qué se mantiene el turno de las siete?",
+            options: [
+              "Porque lo votaron los voluntarios.",
+              "Porque los guardavidas no trabajan más tarde.",
+              "Porque a esa hora la marea está baja y la playa vacía.",
             ],
-            "why": "Sugerencia pasada con imperfecto de subjuntivo."
+            answer: 2,
+            why: "Quinto párrafo.",
           },
+        ],
+      },
+      {
+        id: "b2-10-lectura-voces",
+        type: "classify",
+        prompt: "¿Quién es responsable de cada idea: una persona citada o el autor de la crónica?",
+        categories: ["Una persona citada en la crónica", "El autor de la crónica"],
+        items: [
+          { text: "La mitad de lo recogido eran colillas y tapitas.", cat: 0, why: "Lo explicó Ibarra." },
+          { text: "Nadie debía entrar al agua para recoger residuos.", cat: 0, why: "Lo recordó el guardavidas jefe." },
+          { text: "El trabajo de esta red es pequeño frente al tamaño del problema.", cat: 1, why: "Es una valoración del cronista." },
+          { text: "El turno era la única hora en que la marea estaba baja.", cat: 0, why: "Es la respuesta de Ibarra." },
+          { text: "Quien camine por la playa Varese sabe que la diferencia existe.", cat: 1, why: "Es la conclusión del autor." },
+        ],
+      },
+      {
+        id: "b2-10-lectura-interpretacion",
+        type: "open",
+        prompt: "Interpreta y transmite.",
+        items: [
           {
-            "sentence": "La portavoz negó que habían firmado ya.",
-            "answers": [
-              "La portavoz negó que hubieran firmado ya."
+            prompt: "Resume para un amigo, en 80–100 palabras y en estilo indirecto, lo que dijeron la coordinadora y el guardavidas. Después añade una frase con tu opinión, separada claramente de lo que dijeron ellos.",
+            model: "La coordinadora explicó que habían juntado casi cuatro toneladas de residuos, pero aclaró que eso no era un éxito, porque significaba que se tiraba mucho. Propuso que el año siguiente trabajaran en las playas del sur y preguntó si alguien tenía carné profesional. El guardavidas recordó que nadie debía meterse al agua, pasara lo que pasara, y pidió que cualquiera que viera algo flotando avisara. En mi opinión, la idea más importante es la del cambio de hábitos.",
+            checklist: [
+              "Uso al menos tres verbos introductores distintos.",
+              "Desplazo los tiempos correctamente.",
+              "Separo mi opinión de lo que dijeron las personas citadas.",
             ],
-            "why": "Negación de una afirmación con subjuntivo compuesto."
           },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la crónica transmite palabras ajenas y combina las estructuras de las semanas 6 a 10.",
+      items: [
+        { quote: "una bióloga cuyas campañas empezaron hace seis años", note: "«Cuyas» concuerda con «campañas» (semana 9)." },
+        { quote: "aunque la cifra parezca un éxito, no lo es del todo", note: "«Aunque» + subjuntivo: deja a un lado un dato conocido (semana 6)." },
+        { quote: "nadie debía entrar al agua para recoger residuos, pasara lo que pasara", note: "Estilo indirecto con fórmula reduplicada desplazada al pasado." },
+        { quote: "Preguntó si había entre los presentes alguien con carné profesional", note: "Pregunta de sí o no transmitida con «preguntó si»." },
+        { quote: "en cuanto tuviera el calendario lo enviaría para que cada voluntario eligiera sus días", note: "Temporal y final desde el pasado: imperfecto de subjuntivo (semana 7)." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Este punto de control mezcla todas las clases de las semanas 6 a 10. Combina orden, elección, una recuperación amplia y escritura breve.",
+    exercises: [
+      {
+        id: "b2-10-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar la frase completa.",
+        items: [
+          { words: ["Nos", "preguntó", "si", "había", "alguien", "que", "supiera", "primeros", "auxilios."], why: "«Preguntó si» + antecedente buscado en subjuntivo." },
+          { words: ["Vayas", "donde", "vayas,", "lleva", "siempre", "una", "bolsa."], why: "Fórmula reduplicada: «vayas donde vayas»." },
+          { words: ["Dijo", "que", "volveríamos", "en", "cuanto", "bajara", "la", "marea."], why: "Futuro desde el pasado: condicional y «en cuanto» + imperfecto de subjuntivo." },
+        ],
+      },
+      {
+        id: "b2-10-integracion",
+        type: "choice",
+        prompt: "Recupera las semanas 6 a 9: elige la opción correcta en cada frase.",
+        items: [
+          { q: "Aunque ___ frío, el sábado limpiamos igual. (no sabemos qué tiempo hará)", options: ["hará", "haga", "haría"], answer: 1, why: "Semana 6 · G137: posibilidad futura con «aunque»: subjuntivo." },
+          { q: "Si bien la red ___ crecido, todavía faltan voluntarios.", options: ["ha", "haya", "habría"], answer: 0, why: "Semana 6 · G138: «si bien» + indicativo." },
+          { q: "Ponemos contenedores en la rambla para que la gente no ___ basura en la arena.", options: ["deja", "dejar", "deje"], answer: 2, why: "Semana 7 · G140: finalidad con sujeto distinto: subjuntivo." },
+          { q: "Hicimos el recorrido tal como ___ el guardavidas.", options: ["nos indicó", "nos indicara", "nos indicaría"], answer: 0, why: "Semana 8 · G141: manera conocida: indicativo." },
+          { q: "Es la playa ___ encontramos la red de pesca.", options: ["que", "en la que", "la que"], answer: 1, why: "Semana 8 · G142: «encontrar algo en la playa»." },
+          { q: "La marea subió de golpe, ___ tuvimos que retirarnos.", options: ["que", "cuyo", "por lo que"], answer: 2, why: "Semana 9 · G144: consecuencia de un hecho entero." },
+        ],
+      },
+      {
+        id: "b2-10-recuperacion",
+        type: "gap",
+        prompt: "Recupera las clases de las semanas 6 a 9 transmitiendo lo que se dijo.",
+        items: [
+          { q: "Graciela dijo: «Por mucho que nos cueste, seguiremos». → Dijo que, por mucho que nos ___, seguiríamos.", answers: [["costara", "costase"]], why: "Semana 6 · G138 desde el pasado: imperfecto de subjuntivo." },
+          { q: "Ramón dijo: «Avisen antes de que suba la marea». → Pidió que avisáramos antes de que ___ la marea.", answers: [["subiera", "subiese"]], why: "Semana 7 · G139: «antes de que» desde el pasado." },
+          { q: "Lucía comentó: «Juntamos más vidrio del que imaginaba». → Comentó que habían juntado más vidrio ___ imaginaba.", answers: [["del que"]], why: "Semana 8 · G141: «del que» concuerda con «vidrio»." },
+          { q: "Martín explicó: «Es la ONG cuyas camisetas son verdes». → Explicó que era la ONG ___ camisetas eran verdes.", answers: [["cuyas"]], why: "Semana 9 · G143: «cuyas» concuerda con «camisetas»." },
+        ],
+      },
+      {
+        id: "b2-10-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
           {
-            "sentence": "Nos advirtió de la inspección y sugirió que esperamos.",
-            "answers": [
-              "Nos advirtió de la inspección y sugirió que esperáramos."
+            prompt: "Transmite en 50–70 palabras un mensaje de voz que recibiste ayer de tu jefe o de un amigo: una afirmación, una pregunta y una petición. Cambia los tiempos y las referencias.",
+            model: "Ayer mi jefa me dejó un mensaje. Me dijo que la reunión del día siguiente se había pasado a las diez y que el cliente llegaría con su abogado. Me preguntó si podía preparar el informe esa misma noche y me pidió que, cualquiera que fuera el resultado, no firmara nada sin hablar antes con ella.",
+            checklist: [
+              "Transmito una afirmación, una pregunta y una petición.",
+              "Desplazo tiempos y referencias («mañana» → «el día siguiente»).",
+              "Uso al menos dos verbos introductores distintos.",
             ],
-            "why": "Sugerencia pasada con imperfecto de subjuntivo."
-          }
-        ]
-      },
-      {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
-        "items": [
-          {
-            "prompt": "Abre tu respuesta sobre sintetizar declaraciones y negociar una recomendación con una postura y una razón; adapta el destinatario.",
-            "model": "La directora admitió que no había explicitado la condición técnica del calendario.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Checkpoint: informar después de la polémica» sin debilitarla, y responde con una condición verificable.",
-            "model": "La directora admitió que no había explicitado la condición técnica del calendario. La asociación reconoció las ventajas de la reforma, pero recordó que el traslado dependía de disponer de un espacio equivalente. La empresa desmintió un diagnóstico que el informe no contiene. Recomiendo estudiar la apertura por fases siempre que se documenten la autorización de cada sala y el coste del personal adicional. Esta opción no sustituye la obligación de ofrecer un local temporal adecuado.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "x-recuperacion",
-        "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
-        "items": [
-          {
-            "prompt": "Recupera la semana 1 sin abrir su explicación y aplica sus recursos a «Checkpoint: informar después de la polémica»: Subjuntivo en oraciones sustantivas. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo elegir el modo según el verbo principal: influencia, valoración, emoción, percepción o comunicación.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
+            prompt: "Escribe en 50–70 palabras tres normas para los voluntarios de una actividad que conozcas. Usa «cualquiera que», una fórmula reduplicada y una relativa con antecedente negado.",
+            model: "Cualquiera que llegue después de las ocho debe avisar en el grupo. Haga el tiempo que haga, la actividad se mantiene, salvo con tormenta eléctrica. Y como no hay nadie que conozca todos los senderos, cada grupo irá siempre con un guía y nunca se separará de él.",
+            checklist: [
+              "«Cualquiera que» va con subjuntivo.",
+              "La fórmula reduplicada está en subjuntivo.",
+              "La relativa con antecedente negado está en subjuntivo.",
+            ],
           },
-          {
-            "prompt": "Recupera la semana 6 sin abrir su explicación y aplica sus recursos a «Checkpoint: informar después de la polémica»: Oraciones concesivas; Tecnología y ética; Prosodia de la concesión; Conceder y objetar; Leer una columna de opinión. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar aunque + indicativo o subjuntivo según la información, a pesar de (que), por mucho que y si bien. Puedo hablar de inteligencia artificial, privacidad, vigilancia y responsabilidad. Puedo marcar con la voz la parte concedida y la parte que defiendo. Puedo conceder una parte del argumento contrario y mantener mi postura. Puedo identificar concesiones, objeciones y la tesis del autor.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 7 sin abrir su explicación y aplica sus recursos a «Checkpoint: informar después de la polémica»: Relativas con preposición, cuyo y lo cual; Especificativas y explicativas; Arte, museos y patrimonio; Pausas y jerarquía en oraciones largas; Describir con precisión; Reseña de una exposición. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar el que, la cual, cuyo y lo cual, con preposición cuando hace falta. Puedo distinguir los alumnos que viven lejos de los alumnos, que viven lejos. Puedo describir obras, estilos, autores y patrimonio. Puedo leer oraciones con varias subordinadas sin perder el hilo. Puedo describir una obra, un lugar o una persona con detalles encadenados. Puedo escribir una reseña con descripción y valoración.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 8 sin abrir su explicación y aplica sus recursos a «Checkpoint: informar después de la polémica»: Conectores condicionales; Oraciones consecutivas; Acuerdos, contratos y condiciones; Foco en la condición; Negociar condiciones; Negociación breve. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar siempre que, con tal de que, a no ser que, en caso de que y salvo que. Puedo expresar consecuencia con tan… que, tanto que, de modo que y así que. Puedo negociar cláusulas, plazos, garantías y penalizaciones. Puedo poner el foco en la condición: SOLO si firmamos hoy. Puedo proponer, aceptar con condiciones y rechazar una propuesta. Puedo negociar un acuerdo de alquiler o de trabajo con condiciones claras.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 9 sin abrir su explicación y aplica sus recursos a «Checkpoint: informar después de la polémica»: Pasiva e impersonalidad; Prensa y actualidad; Leer noticias en voz alta; Informar con distancia; Leer una noticia completa. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar ser + participio, se pasiva, tercera plural impersonal y uno/una. Puedo entender titulares, secciones y vocabulario periodístico. Puedo leer una noticia con el ritmo y las pausas de un presentador. Puedo presentar hechos sin implicarme y atribuir información a fuentes. Puedo distinguir titular, entradilla, hechos, fuentes y contexto.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
   },
-  "writing": {
-    "task": "Elabora un informe para el pleno. Resume el dossier y la rueda de prensa, compara tres opciones, atribuye compromisos con verbos precisos y recomienda una salida condicionada a dos verificaciones.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
-    "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+  writing: {
+    task: "Escribe un resumen de una reunión para alguien que no pudo asistir (200–280 palabras). Transmite lo que se afirmó, se preguntó y se pidió, incluye las condiciones y las objeciones, y combina las estructuras de las semanas 6 a 10.",
+    context: "Puede ser la reunión de esta semana (la red Costa Limpia) u otra que conozcas: vecinos, trabajo, club, asociación. Quien lo lea necesita saber qué se decidió y qué tiene que hacer, sin confundir lo que dijeron otros con tu opinión.",
+    steps: [
+      "Anota quién dijo qué y clasifícalo: afirmaciones, preguntas, peticiones.",
+      "Organiza el resumen en tres párrafos: balance o noticias, propuestas y discusiones, lo que tiene que hacer el lector.",
+      "Incluye al menos una concesión, una temporal o final desde el pasado, una comparación, un relativo con preposición o «cuyo», un referente neutro y un antecedente indeterminado.",
+      "Revisa el resumen: corrige los tiempos que no se hayan desplazado, comprueba las referencias de tiempo y lugar, y separa tu opinión del resto.",
     ],
-    "useLanguage": [
-      "El estilo indirecto adapta persona, tiempo y referencias al punto desde el que informas: ayer dijo «vendré mañana» se convierte en dijo que vendría hoy. Los cambios dependen de si la información sigue vigente; no son una sustitución automática. Aseguró que introduce una afirmación; negó que y sugirió que suelen seleccionar subjuntivo.",
-      "En una síntesis, afirmar, admitir, advertir, desmentir e insinuar no son intercambiables: atribuyen actos distintos. Integra concesiones, relativas, condiciones y pasivas de las semanas anteriores. Una recomendación debe apoyarse en datos y conservar las reservas de cada fuente, incluso si complican una conclusión breve.",
-      "Recupera la aplicación, la exposición, el local y la noticia: integra concesión, descripción precisa, condición y fuente en el informe del museo."
+    useLanguage: [
+      "dijo / explicó / aclaró que + indicativo desplazado",
+      "preguntó si / preguntó qué, dónde, cuándo",
+      "pidió / propuso / insistió en que + imperfecto de subjuntivo",
+      "cualquiera que, pasara lo que pasara, sea cual sea",
+      "aunque, si bien, en cuanto, para que, de lo que, cuyo, lo cual, por lo que",
+      "al día siguiente, ese día, allí",
     ],
-    "model": [
-      "El museo dispone de tres opciones: mantener la fecha anunciada, aplazar toda la apertura o inaugurar por fases las salas verificadas. Recomiendo estudiar la tercera, pero todavía faltan datos para presentarla como una decisión definitiva. La directora admitió que no había explicitado la condición técnica del calendario, por lo que conviene evitar una nueva promesa sin respaldo suficiente.",
-      "La apertura completa ofrece continuidad, aunque no puede justificarse mientras existan espacios pendientes de inspección. El aplazamiento reduce algunos gastos inmediatos, pero prolonga el alquiler provisional y las dificultades de las asociaciones. La apertura parcial permitiría recuperar actividades antes, siempre que se documenten la autorización de cada sala y las medidas que separan al público de las obras.",
-      "También debe revisarse la comparación presupuestaria. Una cifra incluye personal y señalización, mientras que la otra solo contempla alquiler. Propongo pedir estimaciones con los mismos conceptos y un margen para imprevistos. La directora se comprometió a publicar opciones y costes el viernes; ese compromiso debe distinguirse de la previsión sobre cuándo podrá abrir cada espacio.",
-      "La asociación reconoció las ventajas de la reforma, pero recordó que el traslado dependía de disponer de un local equivalente. Igual superficie no garantiza condiciones acústicas adecuadas. Recomiendo comprobar ese punto con sus responsables y preparar una explicación accesible para quienes organizan talleres. Por último, la empresa desmintió un fallo grave confirmado: el informe disponible exige una inspección, no contiene ese diagnóstico. La recomendación final debe conservar esta diferencia y señalar qué condiciones siguen pendientes antes de autorizar la apertura."
+    model: [
+      "Hola, Tomás: como no pudiste venir el domingo, te resumo la reunión. Graciela hizo el balance de la temporada y dijo que habíamos juntado casi cuatro toneladas de residuos, bastante más de lo que se había calculado. Aclaró, sin embargo, que aunque la cifra pareciera buena, no era una victoria, porque indicaba que se seguía tirando mucha basura.",
+      "Después propuso que el año próximo trabajáramos también en las playas del sur, en las que el acceso es complicado, por lo que hace falta una camioneta. Preguntó si había alguien que tuviera carné profesional, y nadie contestó, lo cual la preocupó. Ramón, el guardavidas jefe, insistió en que nadie se metiera al agua para recoger residuos, pasara lo que pasara, y pidió que cualquiera que viera algo flotando avisara a un guardavidas. Algunos se quejaron del turno de las siete; Graciela respondió que, si bien lo entendía, era la única hora con marea baja.",
+      "Lo que te toca a ti: escribirle a Graciela por lo de la camioneta, ya que eres el único con carné que conozco. Ella prometió que en cuanto tuviera el calendario lo mandaría para que cada uno eligiera sus días. Mi opinión, por si te interesa: fue la mejor reunión del año.",
     ],
-    "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+    checklist: [
+      "Transmito al menos una afirmación, una pregunta y una petición con los tiempos desplazados.",
+      "Uso verbos introductores variados y precisos.",
+      "Incluyo un antecedente indeterminado o una fórmula reduplicada.",
+      "Combino al menos cuatro estructuras de las semanas 6 a 9.",
+      "Separo claramente mi opinión de lo que dijeron otros.",
     ],
-    "words": [
-      220,
-      280
-    ]
+    words: [200, 280],
   },
-  "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
-    "tasks": [
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un texto leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Checkpoint: informar después de la polémica» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
-        "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+        title: "Transmitir la reunión a un grupo nuevo",
+        prompt: "Llegan cinco voluntarios nuevos que no estuvieron en la reunión. Cuéntales lo que se dijo: el balance, las normas de seguridad, los turnos y lo que se les pide. Usa estilo indirecto y al menos dos estructuras de las semanas 6 a 9.",
+        prep: [
+          "Anota tres cosas que se afirmaron, una que se preguntó y dos que se pidieron.",
+          "Prepara una frase con «cualquiera que» y otra con «pasara lo que pasara».",
         ],
-        "seconds": 180,
-        "model": "La directora admitió que no había explicitado la condición técnica del calendario. La asociación reconoció las ventajas de la reforma, pero recordó que el traslado dependía de disponer de un espacio equivalente. La empresa desmintió un diagnóstico que el informe no contiene. Recomiendo estudiar la apertura por fases siempre que se documenten la autorización de cada sala y el coste del personal adicional. Esta opción no sustituye la obligación de ofrecer un local temporal adecuado.",
-        "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
-        ]
-      },
-      {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de sintetizar declaraciones y negociar una recomendación. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
-        "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+        seconds: 180,
+        model: "Bienvenidos. Les cuento lo que se habló el domingo. Graciela dijo que habíamos juntado cuatro toneladas, más de lo que esperábamos. El guardavidas insistió en que nadie se metiera al agua, pasara lo que pasara, y pidió que cualquiera que viera algo flotando lo avisara. Los turnos empiezan a las siete, aunque cueste madrugar.",
+        selfCheck: [
+          "Desplazo los tiempos al transmitir.",
+          "Marco con la voz la diferencia entre mi relato y las citas directas.",
+          "Uso al menos dos estructuras de las semanas 6 a 9.",
         ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Checkpoint: informar después de la polémica» en tres minutos y responde a una objeción inesperada.",
-        "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
-        ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Mar del Plata; pídele a tu docente que compruebe si has conservado el matiz.",
-        "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
-        ]
+        title: "Negociar una norma con un voluntario que no está de acuerdo",
+        prompt: "Un voluntario te dice que la norma de no entrar al agua es exagerada y que él nada muy bien. Pregúntale por qué piensa así, transmítele lo que contó el guardavidas sobre febrero, concede lo razonable y mantén la norma.",
+        prep: [
+          "Prepara una pregunta abierta y una concesión con «aunque» o «por muy… que».",
+          "Ten a mano el relato del guardavidas en estilo indirecto.",
+        ],
+        seconds: 180,
+        model: "¿Por qué te parece exagerada? Entiendo que nades bien, pero por muy bien que nades, la resaca no avisa. Ramón contó que en febrero un chico se había metido con bandera roja y que casi se lo lleva el mar. Así que, aunque te parezca excesivo, la norma vale para cualquiera que esté en la jornada.",
+        selfCheck: [
+          "Hago al menos una pregunta real.",
+          "Concedo con «aunque» o «por muy… que» y mantengo la norma.",
+          "Transmito el relato del guardavidas con los tiempos desplazados.",
+        ],
       },
-      {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre sintetizar declaraciones y negociar una recomendación; identifica una condición que todavía necesita confirmación.",
-        "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
-        ]
-      }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
   },
-  "quiz": {
-    "items": [
+  useInClass: {
+    intro: "Lleva estas tarjetas a la próxima clase para comprobar con tu profesor lo que ya dominas de las semanas 6 a 10.",
+    cards: [
       {
-        "q": "En la evaluación final de «Checkpoint: informar después de la polémica», ¿qué resume mejor el propósito?",
-        "options": [
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas.",
-          "Rectificar garantías y negociar una apertura por fases"
-        ],
-        "answer": 2,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
+        move: "Transmite",
+        task: "Cuéntale a tu profesor una conversación reciente: lo que te dijeron, lo que te preguntaron y lo que te pidieron. Pídele que te corrija los tiempos.",
+        phrases: ["Me dijo que…", "Me preguntó si…", "Me pidió que…"],
       },
       {
-        "type": "listen",
-        "audio": "Debería haberla explicado. No pretendía presentar una garantía absoluta. La empresa nos había comunicado que esperaba terminar en agosto y yo transmití ese calendario. Ahora sugiero que preparemos una apertura por fases, siempre que cada sala cuente con la autorización técnica.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Directora en «Checkpoint: informar después de la polémica», ¿qué intervención reconoces?",
-        "options": [
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Debería haberla explicado"
-        ],
-        "answer": 2,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        move: "Pregúntale",
+        task: "Pregúntale si conoce a alguien que haga un voluntariado y qué norma de ese voluntariado le parece más importante.",
+        phrases: ["¿Conoces a alguien que…?", "¿Qué norma te parece…?"],
       },
       {
-        "type": "gap",
-        "q": "El portavoz negó que la asociación ___ recibido una garantía.",
-        "answers": [
-          [
-            "hubiera"
-          ]
-        ],
-        "why": "Negación de una afirmación anterior."
+        move: "Integra",
+        task: "Cuenta una historia de dos minutos que incluya, al menos, «aunque», «en cuanto», «para que», «de lo que», «cuyo» y «lo cual». Tu profesor marca cada estructura cuando la oye.",
+        phrases: ["Aunque…", "…, lo cual…"],
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «El martes dijo: «Publicaré el informe el jueves».» Cuenta la promesa desde el viernes.",
-        "model": "El martes dijo que publicaría el informe el jueves.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        move: "Defiende",
+        task: "Defiende una norma que te parezca justa «pase lo que pase» y responde a las objeciones de tu profesor.",
+        phrases: ["Pase lo que pase…", "Por mucho que…"],
       },
-      {
-        "type": "error",
-        "sentence": "Aconsejó que las asociaciones mantienen sus reservas.",
-        "answers": [
-          "Aconsejó que las asociaciones mantuvieran sus reservas."
-        ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
-      },
-      {
-        "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Checkpoint: informar después de la polémica».",
-        "model": "La directora admitió que no había explicitado la condición técnica del calendario. La asociación reconoció las ventajas de la reforma, pero recordó que el traslado dependía de disponer de un espacio equivalente. La empresa desmintió un diagnóstico que el informe no contiene. Recomiendo estudiar la apertura por fases siempre que se documenten la autorización de cada sala y el coste del personal adicional. Esta opción no sustituye la obligación de ofrecer un local temporal adecuado.",
-        "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre sintetizar declaraciones y negociar una recomendación; concede una razón y conserva tu argumento.",
-        "model": "La directora admitió que no había explicitado la condición técnica del calendario. La asociación reconoció las ventajas de la reforma, pero recordó que el traslado dependía de disponer de un espacio equivalente. La empresa desmintió un diagnóstico que el informe no contiene. Recomiendo estudiar la apertura por fases siempre que se documenten la autorización de cada sala y el coste del personal adicional. Esta opción no sustituye la obligación de ofrecer un local temporal adecuado.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 10 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo sintetizar declaraciones y negociar una recomendación.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
     ],
-    "review": [
-      "Recupera la aplicación, la exposición, el local y la noticia: integra concesión, descripción precisa, condición y fuente en el informe del museo.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
-    ]
-  }
+    bring: "Tu resumen de la reunión revisado y una lista de las tres estructuras de las semanas 6 a 10 que todavía te cuestan.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "Transmite en pasado: «Mañana traeré las pinzas».",
+        options: [
+          "Dijo que mañana traerá las pinzas.",
+          "Dijo que al día siguiente llevaría las pinzas.",
+          "Dijo que al día siguiente lleve las pinzas.",
+        ],
+        answer: 1,
+        why: "Futuro → condicional; «mañana» → «al día siguiente»; «traer» → «llevar» si cambia el lugar.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué frase sobre los guantes está bien formada?",
+        options: [
+          "Cualquiera persona que venga recibe guantes.",
+          "Cualquier que venga recibe guantes.",
+          "Cualquier persona que venga recibe guantes.",
+        ],
+        answer: 2,
+        why: "«Cualquier» delante del sustantivo; relativa en subjuntivo.",
+      },
+      {
+        type: "listen",
+        q: "Escucha. ¿Qué hizo la coordinadora?",
+        options: [
+          "Hizo una petición.",
+          "Hizo una pregunta.",
+          "Hizo una afirmación sobre el pasado.",
+        ],
+        answer: 1,
+        why: "«Preguntó si…»: pregunta de sí o no transmitida.",
+        audio: "La coordinadora preguntó si alguien podía quedarse hasta el mediodía.",
+        voice: "es-AR-f",
+      },
+      {
+        type: "gap",
+        q: "Nos pidió que ___ (separar) las tapitas del resto del plástico.",
+        answers: [["separáramos", "separásemos"]],
+        hint: "Petición transmitida en pasado",
+        why: "«Pidió que» + imperfecto de subjuntivo.",
+      },
+      {
+        type: "gap",
+        q: "No hay nadie en la red que ___ (conocer) la costa como Ramón.",
+        answers: [["conozca"]],
+        hint: "Antecedente negado",
+        why: "Antecedente inexistente: subjuntivo.",
+      },
+      {
+        type: "gap",
+        q: "Dijo que en cuanto ___ (llegar) el camión cargaríamos las bolsas.",
+        answers: [["llegara", "llegase"]],
+        hint: "Temporal desde el pasado (semana 7)",
+        why: "Futuro visto desde el pasado: imperfecto de subjuntivo.",
+      },
+      {
+        type: "error",
+        sentence: "Me preguntó que si vendré el sábado a la playa.",
+        answers: ["Me preguntó si iría el sábado a la playa.", "Me preguntó si vendría el sábado a la playa."],
+        why: "«Preguntó si» sin «que»; el futuro pasa a condicional.",
+      },
+      {
+        type: "error",
+        sentence: "Sea cual sean las condiciones, volveremos en marzo.",
+        answers: ["Sean cuales sean las condiciones, volveremos en marzo."],
+        why: "Concordancia con el plural «condiciones».",
+      },
+      {
+        type: "error",
+        sentence: "Es la playa que encontramos la red, lo que fue una sorpresa.",
+        answers: ["Es la playa en la que encontramos la red, lo que fue una sorpresa.", "Es la playa donde encontramos la red, lo que fue una sorpresa."],
+        why: "Falta la preposición que pide el verbo: «en la que» (semana 8).",
+      },
+      {
+        type: "order",
+        words: ["Pasara", "lo", "que", "pasara,", "nadie", "debía", "entrar", "al", "agua."],
+        why: "Fórmula reduplicada desplazada al pasado en estilo indirecto.",
+      },
+      {
+        type: "open",
+        prompt: "Transmite en 80–100 palabras este mensaje de la coordinadora a alguien que no estuvo: «Aunque llueva, el sábado salimos. Cualquiera que tenga auto, que me escriba. ¿Quién puede traer agua? En cuanto sepa el número de voluntarios, les mando los turnos para que se organicen».",
+        model: "La coordinadora nos dijo que, aunque lloviera, el sábado saldríamos. Pidió que cualquiera que tuviera auto le escribiera y preguntó quién podía llevar agua. También prometió que en cuanto supiera el número de voluntarios nos mandaría los turnos para que nos organizáramos. Así que, si tienes auto, escríbele, y si puedes, lleva un bidón de agua. Yo voy a ir pase lo que pase, porque la última vez juntamos más basura de la que esperábamos.",
+        checklist: [
+          "Desplazo todos los subjuntivos a imperfecto y el presente con valor de futuro a condicional.",
+          "Transmito la pregunta con «preguntó quién».",
+          "Uso al menos dos verbos introductores distintos.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Hablo de personas, lugares y cosas sin identificar con «cualquiera que», «dondequiera que», «cualquier… que» y fórmulas como «pase lo que pase».",
+      "Elijo indicativo o subjuntivo en la relativa según el antecedente sea conocido, buscado o negado.",
+      "Transmito afirmaciones, preguntas y peticiones desplazando tiempos y referencias, con verbos precisos.",
+      "Combino en un texto la concesión, las temporales y finales, las comparaciones, los relativos con preposición, «cuyo» y los referentes neutros de las semanas 6 a 9.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna «Estilo indirecto» de la tabla de la teoría y reconstrúyela.",
+      "Dentro de una semana, rehaz la tabla «Repaso de las semanas 6 a 9» con ejemplos de tu vida.",
+      "En la próxima clase, lee tu resumen y pide a tu profesor que marque la estructura que más te cuesta para trabajarla en la semana 11.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/antecedentes-desconocidos-dondequiera-que-cualquiera-que", label: "Clase: Antecedentes desconocidos: dondequiera que, cualquiera que" },
+    { path: "/gramatica/estilo-indirecto-transmitir", label: "Clase: Estilo indirecto: afirmaciones, preguntas, mandatos" },
+  ],
 };

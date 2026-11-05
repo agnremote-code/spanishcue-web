@@ -1,166 +1,394 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 4 · Autoestudio espejo de G134 (condicional compuesto: hipótesis y reproches) y
+ * G135 (condicionales mixtas: pasado y consecuencia presente). Repaso autónomo con una familia ficticia
+ * que vuelve a Paraná y reforma una casa vieja. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w04: Module = {
   "id": "b2-04",
   "level": "b2",
   "week": 4,
   "kind": "core",
-  "title": "Decisiones que habrían cambiado todo",
-  "subtitle": "Explorar alternativas sin convertirlas en reproches.",
+  "title": "Si no hubiéramos vuelto, hoy no tendríamos esta casa",
+  "subtitle": "Repaso del condicional compuesto (resultados, plazos y reproches) y de las condicionales mixtas",
   "stop": {
     "place": "Paraná",
     "country": "Argentina"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.gram.condicionales-irreales",
-    "b2.gram.condicional-compuesto",
-    "b2.voc.decisiones-consecuencias",
-    "b2.pron.reproche",
-    "b2.fun.lamentar-reprochar",
-    "b2.spk.historia-alternativa"
+    "b2.gram.g134",
+    "b2.gram.g135",
+    "b2.voc.w04-mudanza-obra",
+    "b2.pron.w04-reproche-suave",
+    "b2.lis.w04-podcast-decisiones",
+    "b2.read.w04-blog-regreso",
+    "b2.wri.w04-reclamo-cortes",
+    "b2.spk.w04-otra-vida",
+    "b2.fun.w04-reprochar-atenuar",
+    "b2.disc.w04-pasado-presente"
   ],
-  "reviewObjectives": [
-    "b2.gram.sustantivas-sistema",
-    "b2.gram.decir-doble-valor",
-    "b2.voc.trabajo-equipo",
-    "b2.pron.influencia-mitigada",
-    "b2.fun.pedir-exigir",
-    "b2.read.correo-equipo",
-    "b2.gram.subjuntivo-compuestos",
-    "b2.voc.logros-fracasos",
-    "b2.pron.compuestos-largos",
-    "b2.fun.valorar-hechos",
-    "b2.wri.carta-felicitacion"
-  ],
-  "prerequisites": [
-    "b2-03"
-  ],
+  reviewObjectives: ["b2.gram.g132","b2.gram.g133","b2.voc.w03-competicion-remo","b2.pron.w03-habia-habria","b2.lis.w03-analisis-regata","b2.read.w03-carta-entrenadora","b2.wri.w03-informe-lecciones","b2.spk.w03-revisar-decision","b2.fun.w03-analizar-decisiones","b2.disc.w03-hecho-alternativa"],
+  prerequisites: ["b2-03"],
   "goal": {
-    "canDo": "Puedo explorar alternativas sin convertirlas en reproches con razones, matices y condiciones claras.",
+    "canDo": "Puedo usar el condicional compuesto para resultados no ocurridos, plazos vistos desde el pasado y reproches suaves, y relacionar decisiones pasadas con mi presente.",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: separar una omisión comprobada de escenarios imaginarios.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa los tres usos del condicional compuesto y no lo confundas con «había + participio».",
+      "Compara las hipótesis puras con las dos condicionales mixtas.",
+      "Escucha un podcast sobre decisiones de vida y lee el blog de una mujer que volvió a Paraná.",
+      "Escribe un reclamo cortés, revísalo y practica cómo reprochar y responder sin tensión."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: explorar alternativas sin convertirlas en reproches. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase viste con tu profesor la forma «habría + participio» y las condicionales que mezclan tiempos. Aquí las repasas con la historia de Inés y Federico, que volvieron de Buenos Aires a Paraná y se metieron en la reforma de una casa vieja. La semana pasada el resultado imaginado se quedaba en el pasado; esta semana también llega al presente.",
     "parts": [
       {
-        "heading": "Explorar alternativas sin convertirlas en reproches",
+        "heading": "La forma y su primer uso: lo que no llegó a pasar",
         "body": [
-          "Para imaginar un pasado distinto, combina si hubiera ocurrido con habría cambiado. La condición no se cumplió y la consecuencia se presenta como hipotética. También se admite hubiera en la consecuencia en muchos contextos. Para una condición presente irreal usa si tuviera, tendría; evita si tendría en este patrón."
+          "El condicional compuesto se forma con el condicional de «haber» y el participio: habría, habrías, habría, habríamos, habríais, habrían + terminado. Su uso más conocido es presentar una consecuencia pasada que no se produjo. La condición puede ir con «si + hubiera», pero también con un complemento: «con un buen arquitecto», «sin la lluvia», «en tu lugar».",
+          "No lo confundas con el pluscuamperfecto de indicativo: «la obra había terminado» cuenta un hecho real anterior; «la obra habría terminado» imagina o calcula algo que no se comprobó."
         ],
+        "table": {
+          "caption": "Condicional compuesto de «terminar»",
+          "head": [
+            "Persona",
+            "Forma",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "yo",
+              "habría terminado",
+              "Con más ayuda, habría terminado el techo en mayo."
+            ],
+            [
+              "tú",
+              "habrías terminado",
+              "En tu lugar, habrías terminado antes."
+            ],
+            [
+              "él / ella / usted",
+              "habría terminado",
+              "Sin la lluvia, el albañil habría terminado."
+            ],
+            [
+              "nosotros / nosotras",
+              "habríamos terminado",
+              "Con otro presupuesto, habríamos terminado."
+            ],
+            [
+              "vosotros / vosotras",
+              "habríais terminado",
+              "Con dos semanas más, habríais terminado."
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "habrían terminado",
+              "Con materiales a tiempo, habrían terminado."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Si hubiéramos reservado, habríamos conseguido sitio.",
-            "note": "Consecuencia irreal pasada."
+            "es": "Sin la tormenta de abril, el techo habría resistido.",
+            "note": "Condición expresada con «sin»."
           },
           {
-            "es": "Si hubiera aceptado aquel empleo, ahora viviría en otra ciudad.",
-            "note": "Condición pasada y resultado presente."
-          },
-          {
-            "es": "Si yo tuviera más tiempo hoy, revisaría el presupuesto.",
-            "note": "Condición irreal presente."
+            "es": "En su lugar, yo habría pedido tres presupuestos.",
+            "note": "Condición expresada con «en su lugar»."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Si tendría más recursos, ampliaría el almacén.",
-            "right": "Si tuviera más recursos, ampliaría el almacén.",
-            "why": "La condición irreal con si lleva imperfecto de subjuntivo."
+            "wrong": "Con un arquitecto, la obra había salido más barata.",
+            "right": "Con un arquitecto, la obra habría salido más barata.",
+            "why": "Es un resultado imaginado, no un hecho anterior: condicional compuesto."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Plazos vistos desde el pasado y reproches suaves",
         "body": [
-          "Las condicionales mixtas conectan tiempos diferentes: si hubiéramos invertido entonces, ahora tendríamos recursos. Habrías podido puede expresar una alternativa o un reproche según contexto y prosodia. Para negociar una reparación, separa el análisis de lo ocurrido de la atribución de culpa y reconoce la información disponible entonces."
+          "El condicional compuesto también traslada al pasado el futuro compuesto. Si en marzo el constructor dijo «para junio habremos terminado», hoy lo contamos así: «dijo que para junio habrían terminado». Busca la fecha límite: «para», «antes de», «a fin de mes».",
+          "Además, sirve para reprochar con suavidad: en lugar de una orden imposible sobre el pasado, describe la alternativa esperable que no se hizo. «Habrías podido avisarme» o «habrías debido consultar» señalan un fallo sin atacar. «Tendrías que haber…» y «podrías haber…» tienen el mismo valor."
+        ],
+        "table": {
+          "caption": "Del más directo al más suave",
+          "head": [
+            "Tono",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Directo",
+              "No me avisaste del retraso."
+            ],
+            [
+              "Atenuado",
+              "Habrías podido avisarme del retraso."
+            ],
+            [
+              "Más suave",
+              "Quizás habría sido mejor avisar del retraso, ¿no?"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "El electricista prometió que antes de Navidad habría cambiado todos los cables.",
+            "note": "Futuro terminado visto desde un pasado."
+          },
+          {
+            "es": "Habrían debido decirnos que faltaban materiales.",
+            "note": "Reproche atenuado."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Nos dijo que para junio habrá terminado la cocina.",
+            "right": "Nos dijo que para junio habría terminado la cocina.",
+            "why": "Al contar en pasado una previsión, el futuro compuesto pasa a condicional compuesto."
+          }
+        ],
+        "tip": "Como referencia: también oirás el condicional compuesto para hacer conjeturas sobre el pasado, como en «cuando llegó el camión, habrían sido las diez»."
+      },
+      {
+        "heading": "Condicional mixta 1: una decisión pasada, una vida presente",
+        "body": [
+          "Hasta ahora, las hipótesis eran puras: presente con presente («si viviera aquí, sería feliz») o pasado con pasado («si me hubiera quedado, habría sido feliz»). En la condicional mixta, la condición es un hecho pasado imaginado al revés y el resultado es una situación actual que sería distinta: «si no hubiéramos vuelto a Paraná, hoy viviríamos en un departamento de dos ambientes».",
+          "Los marcadores de presente son la pista: «ahora», «hoy», «todavía», «ya no». Si los quitas y el resultado se queda en el pasado, vuelves a la hipótesis pura de la semana 3."
+        ],
+        "table": {
+          "caption": "Tres combinaciones",
+          "head": [
+            "Tipo",
+            "Condición",
+            "Resultado"
+          ],
+          "rows": [
+            [
+              "Presente → presente",
+              "Si tuviéramos jardín,",
+              "plantaríamos un limonero."
+            ],
+            [
+              "Pasado → pasado",
+              "Si hubiéramos comprado otra casa,",
+              "no habríamos gastado tanto en la obra."
+            ],
+            [
+              "Pasado → presente (mixta 1)",
+              "Si hubiéramos comprado otra casa,",
+              "hoy no tendríamos este patio."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Si Federico no hubiera aceptado el trabajo en la universidad, todavía estaríamos en Buenos Aires.",
+            "note": "Decisión pasada → situación actual."
+          },
+          {
+            "es": "Si hubiera estudiado arquitectura, ahora sabría arreglar este techo.",
+            "note": "«Ahora» ancla el resultado."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Si no hubiéramos vuelto, hoy habríamos vivido en un departamento.",
+            "right": "Si no hubiéramos vuelto, hoy viviríamos en un departamento.",
+            "why": "Con «hoy», el resultado es actual: condicional simple."
+          }
+        ]
+      },
+      {
+        "heading": "Condicional mixta 2: cómo eres explica lo que pasó",
+        "body": [
+          "En la segunda mezcla, la condición no es un momento del pasado sino un rasgo estable o una situación que dura: cómo eres, qué sabes, dónde vives. Va en imperfecto de subjuntivo. El resultado es un hecho pasado que habría sido distinto: «si fuera más paciente, no habría discutido con el albañil».",
+          "Compara «si fuera más organizado» (un rasgo: lo soy o no lo soy en general) con «si hubiera sido más organizado» (un momento concreto: aquel día). Las dos son correctas, pero dicen cosas distintas. En la consecuencia pasada también oirás «hubiera + participio»; en un texto formal, «habría» es más claro."
         ],
         "examples": [
           {
-            "es": "Si hubiéramos reservado, habríamos conseguido sitio.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Si supiera algo de electricidad, no habría pagado tanto por esa reparación.",
+            "note": "Rasgo actual → hecho pasado."
           },
           {
-            "es": "Si yo tuviera más tiempo hoy, revisaría el presupuesto.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Si no viviéramos tan lejos del centro, habríamos ido al concierto del sábado.",
+            "note": "Situación que dura → hecho pasado."
+          },
+          {
+            "es": "De haberlo sabido, habríamos comprado la casa de al lado.",
+            "note": "«De + haber + participio» equivale a «si lo hubiéramos sabido»; frecuente en registro cuidado."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Si sería más organizado, no habría perdido las llaves de la obra.",
+            "right": "Si fuera más organizado, no habría perdido las llaves de la obra.",
+            "why": "Después de «si», nunca condicional: imperfecto de subjuntivo."
           }
         ]
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Pregúntate cuándo es la condición y cuándo el resultado. Después elige la forma.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-04-g-formas",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de decisiones que habrían cambiado todo; justifica el modo, la forma o la combinación.",
+        "prompt": "Completa con la forma adecuada del verbo entre paréntesis: condicional simple, condicional compuesto, imperfecto o pluscuamperfecto de subjuntivo.",
         "items": [
           {
-            "q": "Si hubiéramos reservado, ___ conseguido sitio.",
+            "q": "El pintor aseguró que antes del viernes ___ (terminar) las paredes.",
             "answers": [
               [
-                "habríamos"
+                "habría terminado"
               ]
             ],
-            "why": "Consecuencia irreal pasada."
+            "why": "Futuro terminado visto desde el pasado."
           },
           {
-            "q": "Si hubiera aceptado aquel empleo, ahora ___ en otra ciudad.",
+            "q": "Si no ___ (vender) el auto, ahora no podríamos pagar la obra.",
             "answers": [
               [
-                "viviría"
+                "hubiéramos vendido",
+                "hubiésemos vendido"
               ]
             ],
-            "why": "Condición pasada y resultado presente."
+            "why": "Mixta 1: decisión pasada → presente."
           },
           {
-            "q": "Si yo ___ más tiempo hoy, revisaría el presupuesto.",
+            "q": "Si Inés no ___ (ser) tan perfeccionista, habría aceptado el primer diseño.",
             "answers": [
               [
-                "tuviera"
+                "fuera",
+                "fuese"
               ]
             ],
-            "why": "Condición irreal presente."
+            "why": "Mixta 2: rasgo estable → hecho pasado."
+          },
+          {
+            "q": "Si hubiéramos comprado la casa en 2019, hoy ___ (tener) más ahorros.",
+            "answers": [
+              [
+                "tendríamos"
+              ]
+            ],
+            "why": "«Hoy»: resultado actual."
+          },
+          {
+            "q": "Con un plano bien hecho, nos ___ (ahorrar) muchas discusiones.",
+            "answers": [
+              [
+                "habríamos ahorrado"
+              ]
+            ],
+            "why": "Resultado pasado no ocurrido; la condición va en «con…»."
+          },
+          {
+            "q": "Usted ___ (poder) avisarnos de que faltaban las ventanas.",
+            "answers": [
+              [
+                "habría podido",
+                "hubiera podido"
+              ]
+            ],
+            "why": "Reproche atenuado."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-04-g-tipo",
+        "type": "context",
+        "prompt": "Lee la situación y elige la frase que la expresa.",
         "items": [
           {
-            "prompt": "Texto de partida: «No alquilamos el almacén y no tuvimos espacio.» Imagina el pasado contrario con si.",
-            "model": "Si hubiéramos alquilado el almacén, habríamos tenido espacio.",
+            "context": "Inés rechazó un trabajo en Rosario hace tres años. Hoy no vive en Rosario.",
+            "q": "¿Qué frase relaciona bien pasado y presente?",
+            "options": [
+              "Si hubiera aceptado el trabajo, viviría en Rosario.",
+              "Si aceptara el trabajo, habría vivido en Rosario.",
+              "Si aceptaba el trabajo, vivía en Rosario."
+            ],
+            "answer": 0,
+            "why": "Decisión pasada → situación actual: mixta 1."
+          },
+          {
+            "context": "Federico es muy distraído. Ayer se olvidó de cerrar el agua y se inundó el baño.",
+            "q": "¿Qué frase atribuye el problema a su forma de ser?",
+            "options": [
+              "Si hubiera estado atento ayer, el baño no se habría inundado.",
+              "Si no fuera tan distraído, no se habría inundado el baño.",
+              "Si no es tan distraído, no se inunda el baño."
+            ],
+            "answer": 1,
+            "why": "Rasgo estable («fuera») → hecho pasado."
+          },
+          {
+            "context": "El constructor no avisó del retraso. Inés quiere señalarlo sin pelearse.",
+            "q": "¿Qué dice Inés?",
+            "options": [
+              "¡No nos avisó!",
+              "Nos habrá avisado.",
+              "Habría sido bueno que nos avisara, ¿no le parece?"
+            ],
+            "answer": 2,
+            "why": "Reproche atenuado con condicional compuesto y pregunta final."
+          },
+          {
+            "context": "En la ficha de la obra pone: «La puerta había llegado rota». Federico lo comprobó al abrir la caja.",
+            "q": "¿Qué expresa «había llegado»?",
+            "options": [
+              "Un hecho real anterior a otro.",
+              "Un resultado imaginado.",
+              "Un reproche."
+            ],
+            "answer": 0,
+            "why": "Pluscuamperfecto de indicativo: hecho real."
+          }
+        ]
+      },
+      {
+        "id": "b2-04-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida según la consigna. Después compara con el modelo: puede haber otras versiones correctas.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «No aprendí a cocinar de joven; por eso ahora gasto tanto en comida hecha». Escribe una condicional mixta.",
+            "model": "Si hubiera aprendido a cocinar de joven, ahora no gastaría tanto en comida hecha.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "La condición va en pluscuamperfecto de subjuntivo.",
+              "El resultado, actual, va en condicional simple con «ahora».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «No invertimos entonces y ahora faltan recursos.» Construye una condicional mixta con tener.",
-            "model": "Si hubiéramos invertido entonces, ahora tendríamos recursos.",
+            "prompt": "Texto de partida: «Mi vecino es desconfiado y no dejó entrar al técnico la semana pasada». Escribe una condicional mixta del tipo rasgo → pasado.",
+            "model": "Si mi vecino no fuera tan desconfiado, habría dejado entrar al técnico la semana pasada.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "El rasgo va en imperfecto de subjuntivo.",
+              "El hecho pasado va en condicional compuesto.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Podías haber respondido a Julia, pero no lo hiciste.» Expresa el reproche con condicional compuesto.",
-            "model": "Habrías podido responder a Julia.",
+            "prompt": "Texto de partida: el constructor, en enero: «Para abril habremos cambiado el techo». Cuéntalo hoy, cuando ya es mayo y no lo cambiaron.",
+            "model": "En enero el constructor nos dijo que para abril habrían cambiado el techo, pero estamos en mayo y sigue igual.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Paso el futuro compuesto a condicional compuesto.",
+              "Dejo claro que el plazo no se cumplió.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «¡No me consultaste antes de comprar los azulejos!». Conviértelo en un reproche atenuado.",
+            "model": "Habrías podido consultarme antes de comprar los azulejos.",
+            "checklist": [
+              "Uso «habrías podido» o «habrías debido» + infinitivo.",
+              "El mensaje conserva la crítica, pero sin acusar.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -168,282 +396,341 @@ export const b2w04: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Léxico para hablar de mudanzas, reformas y decisiones que cambian la vida.",
     "groups": [
       {
-        "title": "Explorar alternativas sin convertirlas en reproches",
+        "title": "La obra",
         "items": [
           {
-            "es": "asumir un riesgo",
-            "note": "aceptar una posible pérdida"
+            "es": "la constructora",
+            "note": "empresa que hace la obra"
           },
           {
-            "es": "sopesar alternativas",
-            "note": "comparar opciones"
+            "es": "el plazo de entrega",
+            "note": "fecha en la que debe terminarse"
           },
           {
-            "es": "tener en cuenta",
-            "note": "considerar un factor"
+            "es": "cumplir lo prometido",
+            "note": "hacer lo que se había asegurado"
           },
           {
-            "es": "perder una oportunidad",
-            "note": "no aprovechar una posibilidad"
+            "es": "los imprevistos",
+            "note": "problemas que nadie había previsto"
           },
           {
-            "es": "hacer balance",
-            "note": "evaluar resultados"
+            "es": "el departamento de dos ambientes",
+            "note": "en Argentina, piso con sala y un dormitorio"
+          }
+        ]
+      },
+      {
+        "title": "Decisiones de vida",
+        "items": [
+          {
+            "es": "echar raíces",
+            "note": "quedarse a vivir en un lugar"
           },
           {
-            "es": "atribuir una culpa",
-            "note": "señalar responsabilidad"
+            "es": "el ritmo de vida",
+            "note": "velocidad y presión de la vida diaria"
           },
           {
-            "es": "contar con información",
-            "note": "disponer de datos"
+            "es": "valer la pena",
+            "note": "compensar el esfuerzo"
           },
           {
-            "es": "reparar un daño",
-            "note": "compensar un perjuicio"
+            "es": "dar un giro",
+            "note": "cambiar de dirección de forma importante"
+          },
+          {
+            "es": "arrepentirse de algo",
+            "note": "lamentar una decisión propia"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-04-v-uso",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para explorar alternativas sin convertirlas en reproches con su significado.",
+        "prompt": "Relaciona cada expresión con la situación de Inés y Federico.",
         "pairs": [
           {
-            "left": "asumir un riesgo",
-            "right": "aceptar una posible pérdida"
+            "left": "echar raíces",
+            "right": "Compran la casa y deciden quedarse en Paraná."
           },
           {
-            "left": "sopesar alternativas",
-            "right": "comparar opciones"
+            "left": "el plazo de entrega",
+            "right": "La constructora prometió terminar el 30 de junio."
           },
           {
-            "left": "tener en cuenta",
-            "right": "considerar un factor"
+            "left": "los imprevistos",
+            "right": "Al abrir la pared aparece un caño roto."
           },
           {
-            "left": "perder una oportunidad",
-            "right": "no aprovechar una posibilidad"
+            "left": "dar un giro",
+            "right": "Dejan Buenos Aires después de doce años."
           },
           {
-            "left": "hacer balance",
-            "right": "evaluar resultados"
+            "left": "valer la pena",
+            "right": "Pese al cansancio, sienten que el cambio compensó."
           },
           {
-            "left": "atribuir una culpa",
-            "right": "señalar responsabilidad"
-          },
-          {
-            "left": "contar con información",
-            "right": "disponer de datos"
-          },
-          {
-            "left": "reparar un daño",
-            "right": "compensar un perjuicio"
+            "left": "el ritmo de vida",
+            "right": "En Paraná ya no viajan dos horas al día."
           }
-        ]
+        ],
+        "why": "Cada expresión nombra un aspecto distinto de la mudanza o de la obra."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Compara habrías podido preguntar como hipótesis y como reproche; conserva las palabras y modifica foco y curva final con tu docente.",
+    "focus": "La entonación del reproche atenuado.",
     "explanation": [
-      "Compara habrías podido preguntar como hipótesis y como reproche; conserva las palabras y modifica foco y curva final con tu docente.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "La frase «habrías podido avisar» puede ser una hipótesis neutra o un reproche. La diferencia está en la voz: en el reproche, la fuerza recae sobre «podido» o «avisar», el tono es más lento y la frase termina bajando. Si además añades «¿no?» con subida final, el reproche se suaviza todavía más.",
+      "Para no sonar agresivo, evita gritar la primera palabra y no hagas pausas largas entre «habrías» y «podido». Escucha los modelos, repite y grábate en tu dispositivo; la voz sintética sirve de referencia, no de evaluación."
     ],
     "examples": [
       {
-        "es": "Si hubiéramos reservado, habríamos conseguido sitio."
+        "es": "Habrías podido avisarme del retraso.",
+        "note": "Reproche: fuerza en «avisarme», final descendente."
       },
       {
-        "es": "Si hubiera aceptado aquel empleo, ahora viviría en otra ciudad."
+        "es": "Habrías podido avisarme del retraso, ¿no?",
+        "note": "Más suave: subida en «¿no?»."
       },
       {
-        "es": "Si yo tuviera más tiempo hoy, revisaría el presupuesto."
+        "es": "Con un teléfono, habrías podido avisarme.",
+        "note": "Hipótesis: tono neutro, sin énfasis."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-04-p-intencion",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y decide qué hace el condicional compuesto.",
       "items": [
         {
-          "q": "En la muestra 1 de decisiones que habrían cambiado todo, ¿qué fragmento se oye?",
+          "q": "¿Qué expresa la frase sobre las ventanas?",
           "options": [
-            "habíamos",
-            "hubiéramos",
-            "habríamos"
-          ],
-          "answer": 2,
-          "why": "Consecuencia irreal pasada.",
-          "audio": "Si hubiéramos reservado, habríamos conseguido sitio.",
-          "voice": "es-ES-f"
-        },
-        {
-          "q": "En la muestra 2 de decisiones que habrían cambiado todo, ¿qué fragmento se oye?",
-          "options": [
-            "viviré",
-            "viviría",
-            "vivía"
+            "Un plazo visto desde el pasado.",
+            "Un reproche atenuado.",
+            "Un resultado imaginado."
           ],
           "answer": 1,
-          "why": "Condición pasada y resultado presente.",
-          "audio": "Si hubiera aceptado aquel empleo, ahora viviría en otra ciudad.",
-          "voice": "es-ES-f"
+          "audio": "Ustedes habrían debido decirnos que las ventanas no llegaban.",
+          "voice": "es-AR-f",
+          "why": "«Habrían debido decirnos» señala lo que se esperaba y no se hizo."
+        },
+        {
+          "q": "¿Qué expresa la frase sobre el baño?",
+          "options": [
+            "Un plazo visto desde el pasado.",
+            "Un reproche atenuado.",
+            "Un resultado imaginado."
+          ],
+          "answer": 0,
+          "audio": "El plomero dijo que para el lunes habría terminado el baño.",
+          "voice": "es-AR-m",
+          "why": "«Para el lunes»: fecha límite vista desde el pasado."
+        },
+        {
+          "q": "¿Qué expresa la frase sobre el techo?",
+          "options": [
+            "Un plazo visto desde el pasado.",
+            "Un reproche atenuado.",
+            "Un resultado imaginado."
+          ],
+          "answer": 2,
+          "audio": "Con chapas nuevas, no habría entrado agua por el techo.",
+          "voice": "es-AR-f",
+          "why": "«Con chapas nuevas» es la condición de un resultado que no ocurrió."
         }
       ]
     },
     "produce": [
       {
-        "text": "Si hubiéramos reservado, habríamos conseguido sitio.",
-        "tip": "Compara habrías podido preguntar como hipótesis y como reproche; conserva las palabras y modifica foco y curva final con tu docente.",
-        "voice": "es-ES-f"
+        "text": "Habría sido mejor consultarnos antes, ¿no le parece?",
+        "tip": "Voz tranquila y subida suave en «¿no le parece?».",
+        "voice": "es-AR-f"
       },
       {
-        "text": "Si hubiera aceptado aquel empleo, ahora viviría en otra ciudad.",
-        "tip": "Compara habrías podido preguntar como hipótesis y como reproche; conserva las palabras y modifica foco y curva final con tu docente.",
-        "voice": "es-ES-f"
+        "text": "Si no hubiéramos vuelto, hoy viviríamos en un departamento.",
+        "tip": "Sube antes de la coma y destaca «hoy».",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Si yo tuviera más tiempo hoy, revisaría el presupuesto.",
-        "tip": "Compara habrías podido preguntar como hipótesis y como reproche; conserva las palabras y modifica foco y curva final con tu docente.",
-        "voice": "es-ES-f"
+        "text": "Si fuera más paciente, no habría discutido con el albañil.",
+        "tip": "Enlaza «no_habría» y baja al final.",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "Nos aseguraron que para junio habrían terminado.",
+        "tip": "Destaca «para junio»: es la fecha que no se cumplió.",
+        "voice": "es-AR-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Decisiones que habrían cambiado todo",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "Podcast «Otra vida»: volver a Paraná",
+    "context": "En el podcast «Otra vida», que entrevista a personas que cambiaron de ciudad, el conductor Martín habla con Inés Ortiz, que volvió de Buenos Aires a Paraná con su pareja. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Moderador",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "mt",
+        "name": "Martín",
+        "voice": "es-AR-m",
+        "role": "Conductor del podcast"
       },
       {
-        "id": "s2",
-        "name": "Julia",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Diego",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "in",
+        "name": "Inés",
+        "voice": "es-AR-f",
+        "role": "Diseñadora gráfica que volvió a Paraná"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Vamos a separar dos asuntos: qué habría ocurrido con otro almacén y qué podemos corregir ahora. Julia, tú defendías alquilar el local. ¿Qué ventaja crees que habríamos tenido y qué coste estás dispuesta a reconocer?"
+        "speaker": "mt",
+        "text": "Inés, hace dos años dejaron Buenos Aires. Si no hubieran tomado esa decisión, ¿dónde estarías hoy?"
       },
       {
-        "speaker": "s2",
-        "text": "Habríamos evitado trasladar cajas todos los días. Si lo hubiéramos alquilado, ahora trabajaríamos con menos tensión. Admito que el contrato era largo, pero habríamos podido negociar. Lo que me molesta es que nadie respondiera a mi propuesta de compartir el espacio."
+        "speaker": "in",
+        "text": "Seguramente en el mismo departamento de dos ambientes, viajando dos horas por día y trabajando hasta tarde. Si no hubiéramos vuelto, hoy no tendríamos esta casa con patio, eso seguro. Y probablemente tampoco tendríamos perro, que era el sueño de Federico."
       },
       {
-        "speaker": "s3",
-        "text": "Tienes razón en eso. Deberíamos haberte contestado. Sin embargo, no sabemos si el propietario habría aceptado un contrato distinto. En aquel momento solo teníamos pedidos para tres meses. Si hubiéramos comprometido todos los ahorros, quizá no habríamos podido contratar a las dos personas nuevas."
+        "speaker": "mt",
+        "text": "Pero sé que la reforma de la casa no fue fácil."
       },
       {
-        "speaker": "s1",
-        "text": "Entonces hay una falta concreta de respuesta y una hipótesis económica que sigue abierta. Julia, ¿te serviría que el acta recogiera ambas cosas? Así no damos por demostrado un resultado que no podemos comprobar, pero tampoco borramos tu reclamación."
+        "speaker": "in",
+        "text": "Fue una pesadilla, la verdad. La constructora nos aseguró en febrero que para junio habría terminado todo. En junio no tenían ni las ventanas. Lo que más me molestó no fue el retraso, porque los imprevistos existen, sino que nadie nos avisara. Habrían podido llamarnos una vez, aunque fuera para decir que no sabían cuándo."
       },
       {
-        "speaker": "s2",
-        "text": "Sí. No necesito que todos admitan que mi opción era perfecta. Necesito que las propuestas se estudien. Si hoy tuviera que votar otra vez con los mismos datos, quizá elegiría lo mismo, pero pediría una revisión al cabo de tres meses."
+        "speaker": "mt",
+        "text": "¿Y ustedes hicieron algo mal?"
       },
       {
-        "speaker": "s3",
-        "text": "Acordemos eso para la próxima inversión. Y sobre el presente, puedo contactar con dos cooperativas que tienen espacio libre. No resolverá todo de inmediato, aunque nos permitirá comparar una alternativa real con la situación actual."
+        "speaker": "in",
+        "text": "Sí, claro. Si yo fuera menos impaciente, no habría discutido a los gritos con el albañil el día que se rompió el caño. Él no tenía la culpa. Y si hubiéramos pedido un contrato con fechas y multas, ahora no estaríamos todavía pagando arreglos."
+      },
+      {
+        "speaker": "mt",
+        "text": "Última pregunta: ¿valió la pena?"
+      },
+      {
+        "speaker": "in",
+        "text": "Sí. Si Federico no hubiera conseguido el puesto en la universidad, quizá no nos habríamos animado, y hoy tendríamos la misma vida de antes, pero más cansados. A quien esté pensando en mudarse, le diría: pidan todo por escrito y no se peleen con el albañil."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la entrevista completa.",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-04-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Paraná?",
+          "prompt": "Elige la respuesta que resume la entrevista.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Decisiones que habrían cambiado todo?",
+              "q": "¿Cómo valora Inés su regreso a Paraná?",
               "options": [
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas.",
-                "Separar una omisión comprobada de escenarios imaginarios"
-              ],
-              "answer": 2,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
-            },
-            {
-              "q": "¿Qué relación predomina entre las voces en «Decisiones que habrían cambiado todo»?",
-              "options": [
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio."
+                "Se arrepiente y quiere volver a Buenos Aires.",
+                "Cree que valió la pena, aunque la reforma fue difícil.",
+                "No tiene una opinión clara."
               ],
               "answer": 1,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "Dice «sí» a «¿valió la pena?» y explica los problemas de la obra."
+            },
+            {
+              "q": "¿Qué consejo da al final?",
+              "options": [
+                "Pedir todo por escrito y no pelearse con el albañil.",
+                "No reformar nunca una casa vieja.",
+                "Quedarse siempre en la ciudad grande."
+              ],
+              "answer": 0,
+              "why": "Lo dice en su última intervención."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y busca datos precisos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-04-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Decisiones que habrían cambiado todo».",
+          "prompt": "Responde con la información del audio.",
           "items": [
             {
-              "q": "¿Qué reconoce Diego?",
+              "q": "¿Qué había prometido la constructora?",
               "options": [
-                "Que sobraban todos los ahorros.",
-                "Que debieron responder a la propuesta.",
-                "Que el propietario aceptó negociar."
+                "Que en febrero empezaría la obra.",
+                "Que llamaría cada semana.",
+                "Que para junio habría terminado."
               ],
-              "answer": 1,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
+              "answer": 2,
+              "why": "«Nos aseguró en febrero que para junio habría terminado todo»."
             },
             {
-              "q": "¿Qué frase aparece en la intervención inicial de «Decisiones que habrían cambiado todo»?",
+              "q": "¿Qué le molestó más a Inés?",
               "options": [
-                "Vamos a separar dos asuntos: qué habría ocurrido con otro almacén y qué podemos corregir ahora.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión."
+                "Que nadie les avisara del retraso.",
+                "El retraso en sí.",
+                "El precio de las ventanas."
               ],
               "answer": 0,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "Dice que los imprevistos existen, pero que nadie les avisó."
+            },
+            {
+              "q": "¿Por qué discutió con el albañil?",
+              "options": [
+                "Porque él llegó tarde.",
+                "Porque ella es impaciente y se rompió un caño.",
+                "Porque él rompió una ventana."
+              ],
+              "answer": 1,
+              "why": "«Si yo fuera menos impaciente, no habría discutido… el día que se rompió el caño»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Fíjate en cuándo es cada condición y cada resultado. Lee la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-04-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento de Inés.",
+          "categories": [
+            "Pasado → presente (mixta 1)",
+            "Rasgo actual → pasado (mixta 2)",
+            "Reproche o plazo con «habría»"
+          ],
           "items": [
             {
-              "prompt": "En «Decisiones que habrían cambiado todo», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Acordemos eso para la próxima inversión. Y sobre el presente, puedo contactar con dos cooperativas que tienen espacio libre. No resolverá todo de inmediato, aunque nos permitirá comparar una alternativa real con la situación actual.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "si no hubiéramos vuelto, hoy no tendríamos esta casa",
+              "cat": 0,
+              "why": "Decisión pasada, resultado actual."
+            },
+            {
+              "text": "si yo fuera menos impaciente, no habría discutido",
+              "cat": 1,
+              "why": "Rasgo de carácter → hecho pasado."
+            },
+            {
+              "text": "habrían podido llamarnos una vez",
+              "cat": 2,
+              "why": "Reproche atenuado."
+            },
+            {
+              "text": "para junio habría terminado todo",
+              "cat": 2,
+              "why": "Plazo visto desde el pasado."
+            },
+            {
+              "text": "si hubiéramos pedido un contrato, ahora no estaríamos pagando",
+              "cat": 0,
+              "why": "«Ahora»: consecuencia actual."
             }
           ]
         }
@@ -451,199 +738,258 @@ export const b2w04: Module = {
     ]
   },
   "reading": {
-    "title": "Decisiones que habrían cambiado todo: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Un año en la casa de calle Urquiza",
+    "genre": "Entrada de un blog personal",
+    "frame": "Texto original de SpanishCue escrito como entrada del blog ficticio de Inés Ortiz. Las personas, la casa y la empresa son inventadas.",
     "text": [
-      "La cooperativa de reparto decidió comprar tres vehículos pequeños en lugar de alquilar un local. Un año después, la demanda había crecido y el equipo necesitaba un lugar donde guardar los pedidos. En la asamblea, alguien resumió el problema con una frase rotunda: «Si hubiéramos alquilado el almacén, ahora no estaríamos improvisando». La afirmación era plausible, pero omitía que el contrato ofrecido entonces exigía una permanencia de cinco años y una garantía que la cooperativa apenas podía reunir.",
-      "La tesorera reconstruyó la decisión utilizando los datos disponibles en aquel momento. Si hubieran firmado, habrían dispuesto de más espacio, pero también habrían reducido el dinero destinado a contratar personal. No era posible saber si los nuevos clientes habrían llegado igual sin esa contratación. Comparar lo que ocurrió con una alternativa imaginaria resulta útil para aprender, siempre que no tratemos esa alternativa como una historia que conocemos con certeza. El resultado de una decisión no demuestra por sí solo que el razonamiento fuera malo.",
-      "Eso no significaba que nadie tuviera que rendir cuentas. El equipo había descartado una propuesta de alquiler compartido sin estudiar sus condiciones. Una repartidora recordó que había pedido información y no había recibido respuesta. «Habrían podido contestarme», dijo. Su intervención no reclamaba que el pasado cambiara; exigía que se reconociera una omisión concreta. La presidencia aceptó esa responsabilidad y propuso un procedimiento para que ninguna alternativa presentada por una persona socia quedara sin una respuesta documentada.",
-      "La asamblea terminó con dos acuerdos: buscar un almacén compartido durante seis meses y revisar las decisiones importantes mediante escenarios, no mediante culpables imaginarios. Si hoy dispusieran de recursos ilimitados, podrían elegir cualquier solución; como no los tienen, necesitan explicar qué sacrifican con cada opción. La historia alternativa dejó de funcionar como reproche general y se convirtió en una herramienta para tomar la siguiente decisión con mejores preguntas."
+      "Hoy hace un año que dormimos por primera vez en la casa de calle Urquiza. Ese día no había agua caliente, el techo de la cocina goteaba y las ventanas del frente eran dos plásticos atados con cinta. Si alguien me hubiera mostrado una foto de esa noche cuando vivíamos en Buenos Aires, probablemente no estaríamos aquí. Por suerte, nadie la sacó.",
+      "La reforma nos enseñó mucho, casi siempre a la fuerza. La constructora nos había prometido que en cuatro meses habrían terminado; tardaron nueve. Entiendo que una casa de 1940 esconde sorpresas, pero habrían podido explicarnos desde el principio que el presupuesto era optimista. Nosotros, por nuestra parte, habríamos debido pedir un contrato con fechas. Si lo hubiéramos firmado, hoy no seguiríamos discutiendo quién paga el caño que se rompió en agosto.",
+      "También aprendí cosas sobre mí. Si yo fuera una persona más tranquila, no me habría pasado las noches de abril mirando fotos de cocinas que no podíamos pagar. Federico, en cambio, es paciente por naturaleza; si no lo fuera, creo que el albañil habría abandonado la obra en mayo. Nos repartimos los papeles sin decirlo: yo me preocupaba y él negociaba.",
+      "Los vecinos fueron otra sorpresa. Doña Rosa, la de la casa de enfrente, nos prestó su baño durante tres semanas sin que se lo pidiéramos. Si no la hubiéramos conocido, no sé cómo habríamos sobrevivido a septiembre. Hoy nos invita a tomar mate los domingos y nos cuenta cómo era la calle cuando no estaba asfaltada. Si viviéramos todavía en un edificio de doce pisos, probablemente no sabríamos ni el nombre del vecino de al lado.",
+      "¿Qué habría pasado si nos hubiéramos quedado? No lo sé. Quizá habría conseguido un ascenso, quizá no. Lo que sí sé es que hoy desayuno en el patio, que voy al trabajo en bicicleta y que el domingo vemos el río desde la costanera. Si no hubiéramos dado ese giro, todavía estaría esperando el momento perfecto para cambiar de vida. Y ese momento, ahora lo sé, no llega nunca solo."
     ],
     "glossary": [
       {
-        "es": "asumir un riesgo",
-        "note": "aceptar una posible pérdida"
+        "es": "gotear",
+        "note": "caer agua gota a gota"
       },
       {
-        "es": "sopesar alternativas",
-        "note": "comparar opciones"
+        "es": "a la fuerza",
+        "note": "de manera obligada, sin elegirlo"
       },
       {
-        "es": "tener en cuenta",
-        "note": "considerar un factor"
+        "es": "el caño",
+        "note": "en Argentina y otras zonas, tubería"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-04-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la entrada del blog.",
         "items": [
           {
-            "q": "¿Qué critica el artículo?",
+            "q": "¿Cuánto tardó la obra?",
             "options": [
-              "Analizar los costes económicos.",
-              "Buscar un espacio compartido.",
-              "Juzgar una decisión pasada como si se conocieran todas sus alternativas."
+              "Cuatro meses, como se había prometido.",
+              "Un año entero.",
+              "Nueve meses."
             ],
             "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«Nos había prometido… cuatro meses…; tardaron nueve»."
           },
           {
-            "q": "¿Qué combina ahora trabajaríamos?",
+            "q": "¿Qué reconoce Inés como error propio?",
             "options": [
-              "Una obligación legal futura.",
-              "Una condición pasada y una consecuencia presente.",
-              "Dos hechos comprobados del pasado."
+              "No haber pedido un contrato con fechas.",
+              "Haber comprado una casa de 1940.",
+              "Haber elegido mal el barrio."
+            ],
+            "answer": 0,
+            "why": "«Nosotros… habríamos debido pedir un contrato con fechas»."
+          },
+          {
+            "q": "¿Qué papel tuvo Federico en la obra?",
+            "options": [
+              "Se preocupaba por todo.",
+              "Negociaba con paciencia.",
+              "Abandonó la obra en mayo."
             ],
             "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«Yo me preocupaba y él negociaba»."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-04-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto y justifica con citas.",
         "items": [
           {
-            "prompt": "En «Decisiones que habrían cambiado todo», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Si hubiéramos estudiado el alquiler compartido, hoy contaríamos con una comparación más sólida. No podemos afirmar que esa opción hubiera resultado más barata, porque desconocemos las condiciones que habría aceptado el propietario. Sí sabemos que una propuesta quedó sin respuesta. Considero necesario reconocer esa omisión y establecer un plazo para contestar futuras iniciativas. El objetivo del balance debería ser mejorar el procedimiento, además de valorar el resultado.",
+            "prompt": "En 60–80 palabras, explica cómo relaciona Inés su pasado con su presente. Cita una condicional mixta de cada tipo y comenta la última frase del texto.",
+            "model": "Inés usa las condicionales mixtas para mostrar que sus decisiones siguen teniendo efecto. Del tipo pasado → presente: «si no hubiéramos dado ese giro, todavía estaría esperando». Del tipo rasgo → pasado: «si yo fuera una persona más tranquila, no me habría pasado las noches…». La última frase transforma la experiencia en una lección: el momento ideal para cambiar no aparece solo, hay que decidirlo.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Cito un ejemplo de cada tipo de condicional mixta.",
+              "Explico la relación entre pasado y presente.",
+              "Interpreto la última frase con mis palabras."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo cada forma sitúa la condición y el resultado.",
       "items": [
         {
-          "quote": "La cooperativa de reparto decidió comprar tres vehículos pequeños en lugar de alquilar un local.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "La constructora nos había prometido que en cuatro meses habrían terminado",
+          "note": "«Había prometido»: hecho real; «habrían terminado»: plazo visto desde ese pasado."
         },
         {
-          "quote": "La historia alternativa dejó de funcionar como reproche general y se convirtió en una herramienta para tomar la siguiente decisión con mejores preguntas.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "habrían podido explicarnos desde el principio que el presupuesto era optimista",
+          "note": "Reproche atenuado: describe la alternativa esperable."
+        },
+        {
+          "quote": "Si lo hubiéramos firmado, hoy no seguiríamos discutiendo",
+          "note": "Mixta 1: el «hoy» lleva el resultado al presente."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Vuelve al correo de coordinación: imagina qué habría ocurrido con otra distribución y formula el reproche como petición concreta.",
+    "intro": "Integra las dos clases: el condicional compuesto con sus tres usos y las dos mezclas de tiempos.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-04-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Paraná y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para formar frases de la historia.",
         "items": [
           {
             "words": [
-              "En",
-              "«Decisiones que habrían cambiado todo»,",
               "Si",
               "hubiéramos",
-              "reservado,",
-              "habríamos",
-              "conseguido",
-              "sitio."
+              "comprado",
+              "el",
+              "terreno,",
+              "ahora",
+              "tendríamos",
+              "una",
+              "huerta."
             ],
-            "why": "Consecuencia irreal pasada."
+            "why": "Mixta 1 con «ahora».",
+            "alt": [
+              "Ahora tendríamos una huerta si hubiéramos comprado el terreno."
+            ]
           },
           {
             "words": [
-              "En",
-              "«Decisiones que habrían cambiado todo»,",
-              "Si",
-              "yo",
-              "tuviera",
-              "más",
-              "tiempo",
-              "hoy,",
-              "revisaría",
+              "Habrías",
+              "debido",
+              "revisar",
               "el",
-              "presupuesto."
+              "contrato",
+              "antes",
+              "de",
+              "firmarlo."
             ],
-            "why": "Condición irreal presente."
+            "why": "Reproche atenuado con «habrías debido»."
+          },
+          {
+            "words": [
+              "Si",
+              "no",
+              "fuera",
+              "tan",
+              "tímido,",
+              "habría",
+              "hablado",
+              "con",
+              "los",
+              "vecinos."
+            ],
+            "why": "Mixta 2: rasgo → pasado."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-04-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de decisiones que habrían cambiado todo; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error de tiempo o de forma. Corrígela.",
         "items": [
           {
-            "sentence": "Si tendría más recursos, ampliaría el almacén.",
+            "sentence": "Si hubiera aceptado aquella beca, hoy habría hablado alemán.",
             "answers": [
-              "Si tuviera más recursos, ampliaría el almacén."
+              "Si hubiera aceptado aquella beca, hoy hablaría alemán.",
+              "Si hubiese aceptado aquella beca, hoy hablaría alemán."
             ],
-            "why": "La condición irreal con si lleva imperfecto de subjuntivo."
+            "why": "Con «hoy», resultado actual: condicional simple."
           },
           {
-            "sentence": "Si habríamos firmado, pagaríamos más ahora.",
+            "sentence": "Si sería más ordenado, no habría perdido la factura.",
             "answers": [
-              "Si hubiéramos firmado, pagaríamos más ahora."
+              "Si fuera más ordenado, no habría perdido la factura.",
+              "Si fuese más ordenado, no habría perdido la factura."
             ],
-            "why": "La condición irreal pasada exige pluscuamperfecto de subjuntivo."
+            "why": "Después de «si», imperfecto de subjuntivo."
           },
           {
-            "sentence": "Habríamos pudido negociar otro plazo.",
+            "sentence": "El arquitecto prometió que para julio habrá entregado los planos.",
             "answers": [
-              "Habríamos podido negociar otro plazo."
+              "El arquitecto prometió que para julio habría entregado los planos."
             ],
-            "why": "Participio de poder: podido."
+            "why": "Previsión contada en pasado: condicional compuesto."
+          },
+          {
+            "sentence": "Con un poco más de cuidado, el vidrio no se había roto.",
+            "answers": [
+              "Con un poco más de cuidado, el vidrio no se habría roto.",
+              "Con un poco más de cuidado, el vidrio no se hubiera roto."
+            ],
+            "why": "Resultado imaginado: condicional compuesto, no pluscuamperfecto."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-04-x-mapa",
+        "type": "classify",
+        "prompt": "¿Qué combinación es cada frase?",
+        "categories": [
+          "Presente → presente",
+          "Pasado → pasado",
+          "Pasado → presente",
+          "Rasgo actual → pasado"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre explorar alternativas sin convertirlas en reproches con una postura y una razón; adapta el destinatario.",
-            "model": "Si hubiéramos estudiado el alquiler compartido, hoy contaríamos con una comparación más sólida.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Si tuviera más tiempo, leería todas las noches.",
+            "cat": 0,
+            "why": "Hipótesis sobre el presente."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Decisiones que habrían cambiado todo» sin debilitarla, y responde con una condición verificable.",
-            "model": "Si hubiéramos estudiado el alquiler compartido, hoy contaríamos con una comparación más sólida. No podemos afirmar que esa opción hubiera resultado más barata, porque desconocemos las condiciones que habría aceptado el propietario. Sí sabemos que una propuesta quedó sin respuesta. Considero necesario reconocer esa omisión y establecer un plazo para contestar futuras iniciativas. El objetivo del balance debería ser mejorar el procedimiento, además de valorar el resultado.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Si hubiéramos salido antes, habríamos visto el atardecer.",
+            "cat": 1,
+            "why": "Todo en el pasado."
+          },
+          {
+            "text": "Si me hubiera mudado a Córdoba, ahora estudiaría allí.",
+            "cat": 2,
+            "why": "«Ahora»: resultado actual."
+          },
+          {
+            "text": "Si fuera más prudente, no habría firmado sin leer.",
+            "cat": 3,
+            "why": "Rasgo → hecho pasado."
+          },
+          {
+            "text": "Si no hubiera llovido, la fiesta habría sido en el patio.",
+            "cat": 1,
+            "why": "Condición y resultado pasados."
+          },
+          {
+            "text": "Si supiera inglés, habría aceptado ese puesto.",
+            "cat": 3,
+            "why": "Saber inglés es una situación que dura."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-04-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes del reclamo. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 1 sin abrir su explicación y aplica sus recursos a «Decisiones que habrían cambiado todo»: Subjuntivo en oraciones sustantivas; Decir, insistir, recordar: informar o pedir; Trabajo en equipo y liderazgo; Entonación de peticiones indirectas; Pedir, exigir y negociar tareas; Leer un correo de coordinación. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo elegir el modo según el verbo principal: influencia, valoración, emoción, percepción o comunicación. Puedo distinguir me dice que viene (información) de me dice que venga (orden). Puedo hablar de delegar, coordinar, exigir, plazos y responsabilidades. Puedo pedir algo de forma indirecta sin sonar autoritario. Puedo transmitir peticiones y negociar responsabilidades en un equipo. Puedo distinguir información, peticiones y obligaciones en un correo de trabajo.",
+            "prompt": "Piensa en un servicio que no cumplió un plazo (una entrega, un arreglo, un trámite). Cuenta qué te habían prometido y añade un reproche atenuado.",
+            "model": "La tienda me aseguró que para el sábado habrían instalado la heladera. Habrían podido avisarme de que el camión no salía.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso el condicional compuesto para el plazo.",
+              "El reproche es claro pero no agresivo."
             ]
           },
           {
-            "prompt": "Recupera la semana 3 sin abrir su explicación y aplica sus recursos a «Decisiones que habrían cambiado todo»: Perfecto y pluscuamperfecto de subjuntivo; Logros, fracasos y aprendizajes; Ritmo en formas compuestas largas; Valorar hechos pasados; Carta de felicitación o pésame. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo valorar hechos terminados: me alegra que hayas llegado, me sorprendió que no hubiera llamado. Puedo hablar de esfuerzo, constancia, frustración, superar y lograr. Puedo decir hubiera estado o habría podido sin cortar el grupo verbal. Puedo valorar algo que ha pasado o había pasado y reaccionar con matices. Puedo escribir un mensaje formal o cercano que valora un hecho.",
+            "prompt": "Escribe dos condicionales mixtas sobre ti: una con una decisión pasada que cambia tu presente y otra con un rasgo tuyo que cambió algo pasado.",
+            "model": "Si no hubiera estudiado español, hoy no trabajaría en esta empresa. Si fuera más puntual, no habría perdido el tren de las ocho la semana pasada.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "La primera frase va de pasado a presente.",
+              "La segunda va de rasgo actual a hecho pasado."
             ]
           }
         ]
@@ -651,196 +997,235 @@ export const b2w04: Module = {
     ]
   },
   "writing": {
-    "task": "Redacta un balance de una decisión colectiva. Formula una alternativa pasada, una consecuencia presente y un límite de tu razonamiento. Reconoce una omisión concreta y propone una reparación.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Escribe un reclamo formal (200–260 palabras) a una empresa que no cumplió un plazo: una constructora, una tienda de muebles o una mudanza. Recuerda lo que prometió, señala con cortesía lo que habría podido hacer, explica cómo el retraso afecta hoy tu situación y pide una solución concreta.",
+    "context": "Escribes a la persona responsable de atención al cliente. Quieres resolver el problema, no pelearte: el tono es firme pero cortés.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Anota la promesa original, la fecha real y las consecuencias del retraso.",
+      "Organiza el texto: motivo, lo que se prometió, lo que habría sido razonable, consecuencias actuales y petición.",
+      "Redacta con al menos un plazo en condicional compuesto, un reproche atenuado y una condicional mixta.",
+      "Revisa el tono y corrige cualquier frase que suene a acusación directa."
     ],
     "useLanguage": [
-      "Para imaginar un pasado distinto, combina si hubiera ocurrido con habría cambiado. La condición no se cumplió y la consecuencia se presenta como hipotética. También se admite hubiera en la consecuencia en muchos contextos. Para una condición presente irreal usa si tuviera, tendría; evita si tendría en este patrón.",
-      "Las condicionales mixtas conectan tiempos diferentes: si hubiéramos invertido entonces, ahora tendríamos recursos. Habrías podido puede expresar una alternativa o un reproche según contexto y prosodia. Para negociar una reparación, separa el análisis de lo ocurrido de la atribución de culpa y reconoce la información disponible entonces.",
-      "Vuelve al correo de coordinación: imagina qué habría ocurrido con otra distribución y formula el reproche como petición concreta."
+      "Nos aseguraron que para… habrían…",
+      "Habrían podido / habrían debido…",
+      "Si nos hubieran avisado, hoy no…",
+      "Les agradecería que…"
     ],
     "model": [
-      "La compra de vehículos permitió ampliar el reparto, pero dejó pendiente la necesidad de un almacén. Al evaluar aquella decisión, conviene separar dos preguntas: si elegimos la mejor opción disponible y si estudiamos adecuadamente las alternativas. El crecimiento posterior de la demanda no responde por sí solo a ninguna de las dos.",
-      "Si hubiéramos alquilado el local entonces, ahora trabajaríamos con más espacio. Sin embargo, habríamos comprometido buena parte de los ahorros y quizá no habríamos podido contratar personal. No sabemos si los nuevos clientes habrían llegado en esas condiciones. Por eso, sería injusto comparar la situación real, con todas sus dificultades, con una alternativa imaginaria a la que atribuimos únicamente ventajas.",
-      "Sí hay una omisión comprobable: la propuesta de alquiler compartido quedó sin respuesta. Habríamos podido pedir sus condiciones y conservarlas para una revisión posterior. Reconocer esa falta no exige afirmar que la propuesta era perfecta. Recomiendo que la presidencia responda ahora a Julia, explique por qué no se estudió su iniciativa y asuma el compromiso de documentar futuras decisiones.",
-      "Para resolver el problema actual, propongo comparar dos espacios compartidos durante las próximas semanas y fijar un límite de gasto. Cada opción debería incluir duración, transporte y tareas de mantenimiento. Si ninguna resulta viable, tendremos que revisar el alcance del reparto antes de aceptar más pedidos. El balance será útil si mejora nuestra próxima decisión; si solo sirve para repartir culpas con información que nadie tenía entonces, repetiremos el conflicto sin aprender de él."
+      "Estimada señora Gómez: le escribo en relación con la reforma de nuestra cocina en calle Urquiza 1520, presupuesto número 348. Cuando firmamos el acuerdo en febrero, su equipo nos aseguró que para el 30 de junio habría terminado la instalación de los muebles y del gas.",
+      "Hoy es 2 de septiembre y la cocina sigue sin gas. Entiendo que en una casa antigua aparecen imprevistos, y no es eso lo que me preocupa. Sin embargo, habrían podido informarnos del retraso en cuanto lo supieron. Habría sido razonable, además, que nos ofrecieran una fecha nueva por escrito, porque durante julio llamamos cuatro veces sin obtener respuesta. Su encargado nos dijo en agosto que para mediados de mes habría conseguido la pieza que faltaba, pero tampoco volvimos a saber de él.",
+      "El retraso tiene consecuencias concretas. Si nos hubieran avisado a tiempo, hoy no estaríamos pagando comidas fuera de casa ni el alquiler de un anafe eléctrico. Tampoco habríamos tenido que cancelar la visita de mis suegros, que venían desde Mendoza y ya habían comprado los pasajes.",
+      "Por todo ello, les agradecería que me confirmaran por escrito, antes del viernes, una fecha definitiva de finalización y que descontaran del saldo pendiente los gastos que les adjunto. Quedo a la espera de su respuesta. Atentamente, Inés Ortiz."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Recuerdo la promesa con el condicional compuesto de plazo.",
+      "Los reproches son claros y atenuados.",
+      "Relaciono el retraso con mi situación actual mediante una condicional mixta.",
+      "Termino con una petición concreta y un plazo.",
+      "El registro es formal y coherente de principio a fin."
     ],
     "words": [
-      220,
-      280
+      200,
+      260
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Habla con notas breves. Si te grabas, la grabación queda en tu dispositivo; nadie la evalúa automáticamente.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Decisiones que habrían cambiado todo» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Mi otra vida",
+        "prompt": "Elige una decisión importante de tu pasado (estudios, ciudad, trabajo, pareja, idioma). Explica durante dos o tres minutos cómo sería hoy tu vida si hubieras elegido otra cosa, y qué rasgo tuyo explica algunas de tus decisiones.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Anota tres consecuencias actuales con «hoy», «ahora» o «todavía».",
+          "Prepara una condicional del tipo «si fuera…, habría…»."
         ],
         "seconds": 180,
-        "model": "Si hubiéramos estudiado el alquiler compartido, hoy contaríamos con una comparación más sólida. No podemos afirmar que esa opción hubiera resultado más barata, porque desconocemos las condiciones que habría aceptado el propietario. Sí sabemos que una propuesta quedó sin respuesta. Considero necesario reconocer esa omisión y establecer un plazo para contestar futuras iniciativas. El objetivo del balance debería ser mejorar el procedimiento, además de valorar el resultado.",
+        "model": "Hace diez años tuve que elegir entre Medicina y Diseño. Elegí Diseño. Si hubiera estudiado Medicina, hoy trabajaría en un hospital, tendría turnos de noche y probablemente viviría en otra ciudad. Pero, si fuera una persona más metódica, quizá no habría abandonado aquel primer año de Medicina. Hoy no me arrepiento: si no hubiera cambiado, no tendría mi estudio ni a mis clientes.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Uso las dos condicionales mixtas.",
+          "Anclo el presente con marcadores temporales.",
+          "Termino con una valoración personal."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de explorar alternativas sin convertirlas en reproches. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "Un reproche entre vecinos",
+        "prompt": "Tu docente es un vecino que hizo una obra ruidosa sin avisar. Plantéale el problema con reproches atenuados, escucha su explicación, pregúntale qué habría podido hacer de otra manera y acuerden cómo avisarán en el futuro.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara dos reproches suaves con «habría podido» y «habría sido mejor».",
+          "Prepara una frase para aceptar una disculpa.",
+          "Piensa una propuesta concreta para la próxima vez."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Mi tono es firme pero amable.",
+          "Pregunto y escucho antes de proponer.",
+          "Terminamos con un acuerdo."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva lo que preparaste a tu próxima clase y conviértelo en conversación.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Decisiones que habrían cambiado todo» en tres minutos y responde a una objeción inesperada.",
+        "move": "Imagina",
+        "task": "Cuéntale a tu profesor cómo sería hoy tu vida si no hubieras empezado a estudiar español.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "Si no hubiera…, hoy…",
+          "Probablemente ahora…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Paraná; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Pregúntale",
+        "task": "Pregúntale qué rasgo suyo cambió alguna decisión importante de su vida.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "Si fueras más…, ¿habrías…?",
+          "¿Y te arrepientes?"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre explorar alternativas sin convertirlas en reproches; identifica una condición que todavía necesita confirmación.",
+        "move": "Suaviza",
+        "task": "Lee en voz alta un reproche de tu reclamo y pide a tu profesor que te diga si suena firme, cortés o agresivo.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Suena demasiado directo?",
+          "¿Cómo lo suavizarías?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu reclamo con los condicionales compuestos marcados según su uso: resultado, plazo o reproche."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Decisiones que habrían cambiado todo», ¿qué resume mejor el propósito?",
-        "options": [
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas.",
-          "Separar una omisión comprobada de escenarios imaginarios"
+        "type": "gap",
+        "q": "Si no ___ (perder) el pasaporte en 2020, ahora tendría la ciudadanía.",
+        "answers": [
+          [
+            "hubiera perdido",
+            "hubiese perdido"
+          ]
         ],
-        "answer": 2,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Habríamos evitado trasladar cajas todos los días. Si lo hubiéramos alquilado, ahora trabajaríamos con menos tensión. Admito que el contrato era largo, pero habríamos podido negociar. Lo que me molesta es que nadie respondiera a mi propuesta de compartir el espacio.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Julia en «Decisiones que habrían cambiado todo», ¿qué intervención reconoces?",
-        "options": [
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Habríamos evitado trasladar cajas todos los días"
-        ],
-        "answer": 2,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "Mixta 1: pasado → presente."
       },
       {
         "type": "gap",
-        "q": "Si hubieran comparado presupuestos, ahora ___ menos gastos.",
+        "q": "Si mi jefe fuera más flexible, me ___ (dejar) salir antes el viernes pasado.",
         "answers": [
           [
-            "tendrían"
+            "habría dejado",
+            "hubiera dejado"
           ]
         ],
-        "why": "Contrafactual mixta."
+        "why": "Mixta 2: rasgo → hecho pasado."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «No recibimos el aviso y por eso no cancelamos el pedido.» Formula el pasado alternativo con si.",
-        "model": "Si hubiéramos recibido el aviso, habríamos cancelado el pedido.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "La agencia nos dijo que antes del martes ___ (enviar) las entradas.",
+        "answers": [
+          [
+            "habrían enviado"
+          ]
+        ],
+        "why": "Plazo visto desde el pasado."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase es un reproche atenuado?",
+        "options": [
+          "Habías llegado tarde.",
+          "Habrás llegado tarde.",
+          "Habrías podido llegar a tiempo."
+        ],
+        "answer": 2,
+        "why": "«Habrías podido» describe la alternativa esperable."
+      },
+      {
+        "type": "choice",
+        "q": "«Si hubiera dormido más, ___ más concentrada.» Hablas de cómo te sientes ahora.",
+        "options": [
+          "estaría",
+          "habría estado",
+          "estaré"
+        ],
+        "answer": 0,
+        "why": "Resultado actual: condicional simple."
+      },
+      {
+        "type": "listen",
+        "q": "¿Qué situación describe la frase?",
+        "audio": "Si no viviera tan lejos, habría llegado a la reunión.",
+        "voice": "es-AR-m",
+        "options": [
+          "Vive lejos y no llegó a la reunión.",
+          "Vive cerca y llegó a la reunión.",
+          "Se va a mudar para llegar a las reuniones."
+        ],
+        "answer": 0,
+        "why": "La condicional mixta invierte una situación actual y un hecho pasado."
       },
       {
         "type": "error",
-        "sentence": "Si habrían escuchado a Julia, conocerían otra opción.",
+        "sentence": "Si hubiéramos ahorrado más, hoy habríamos tenido nuestra propia casa.",
         "answers": [
-          "Si hubieran escuchado a Julia, conocerían otra opción."
+          "Si hubiéramos ahorrado más, hoy tendríamos nuestra propia casa.",
+          "Si hubiésemos ahorrado más, hoy tendríamos nuestra propia casa."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "«Hoy»: resultado actual."
+      },
+      {
+        "type": "error",
+        "sentence": "Con más ensayos, la obra de teatro había salido mejor.",
+        "answers": [
+          "Con más ensayos, la obra de teatro habría salido mejor.",
+          "Con más ensayos, la obra de teatro hubiera salido mejor."
+        ],
+        "why": "Resultado imaginado: condicional compuesto."
+      },
+      {
+        "type": "order",
+        "words": [
+          "Habría",
+          "sido",
+          "mejor",
+          "que",
+          "nos",
+          "avisaran",
+          "con",
+          "tiempo."
+        ],
+        "why": "Reproche suave con condicional compuesto + imperfecto de subjuntivo."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Decisiones que habrían cambiado todo».",
-        "model": "Si hubiéramos estudiado el alquiler compartido, hoy contaríamos con una comparación más sólida. No podemos afirmar que esa opción hubiera resultado más barata, porque desconocemos las condiciones que habría aceptado el propietario. Sí sabemos que una propuesta quedó sin respuesta. Considero necesario reconocer esa omisión y establecer un plazo para contestar futuras iniciativas. El objetivo del balance debería ser mejorar el procedimiento, además de valorar el resultado.",
+        "prompt": "Escribe dos frases sobre una decisión de tu familia: cómo sería hoy tu vida con otra decisión y un reproche suave a alguien que no avisó de algo.",
+        "model": "Si mis padres no hubieran emigrado, hoy yo viviría en Bolivia. Mi tío habría podido avisarnos de que vendía la casa del pueblo.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre explorar alternativas sin convertirlas en reproches; concede una razón y conserva tu argumento.",
-        "model": "Si hubiéramos estudiado el alquiler compartido, hoy contaríamos con una comparación más sólida. No podemos afirmar que esa opción hubiera resultado más barata, porque desconocemos las condiciones que habría aceptado el propietario. Sí sabemos que una propuesta quedó sin respuesta. Considero necesario reconocer esa omisión y establecer un plazo para contestar futuras iniciativas. El objetivo del balance debería ser mejorar el procedimiento, además de valorar el resultado.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 4 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Uso una condicional mixta pasado → presente.",
+          "Uso «habría podido» para el reproche."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo explorar alternativas sin convertirlas en reproches.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo usar «habría + participio» para resultados no ocurridos, plazos vistos desde el pasado y reproches suaves.",
+      "Puedo explicar cómo una decisión pasada cambia mi presente con una condicional mixta.",
+      "Puedo explicar cómo un rasgo actual cambió un hecho pasado."
     ],
     "review": [
-      "Vuelve al correo de coordinación: imagina qué habría ocurrido con otra distribución y formula el reproche como petición concreta.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, escribe tres frases con «habría + participio», una para cada uso, sin mirar la teoría.",
+      "En tres días, cuenta en voz alta dos «otras vidas» posibles: una por una decisión y otra por un rasgo tuyo.",
+      "Antes de la semana 5, repasa las semanas 1 a 4: el checkpoint integra todas las formas del subjuntivo y del condicional que viste."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/sistema-verbal/condicional-compuesto-indicativo",
+      "label": "Clase: Condicional compuesto: hipótesis y reproches"
+    },
+    {
+      "path": "/gramatica/condicionales-mixtas-pasado-y-consecuencia-presente",
+      "label": "Clase: Condicionales mixtas: pasado y consecuencia presente"
+    }
+  ]
 };

@@ -1,778 +1,610 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w01: Module = {
-  "id": "a2-01",
-  "level": "a2",
-  "week": 1,
-  "kind": "core",
-  "title": "Lo que ya he vivido",
-  "subtitle": "Intercambiar experiencias y decidir una actividad nueva para el fin de semana.",
-  "stop": {
-    "place": "San José",
-    "country": "Costa Rica"
-  },
-  "minutes": 105,
-  "newObjectives": [
-    "a2.gram.perfecto-compuesto",
-    "a2.gram.participios-irregulares",
-    "a2.gram.ya-todavia",
-    "a2.voc.experiencias-viaje",
-    "a2.pron.sinalefa-compuestos",
-    "a2.fun.experiencias",
-    "a2.spk.nunca-he"
+  id: "a2-01",
+  level: "a2",
+  week: 1,
+  kind: "core",
+  title: "Lo que he hecho y lo que he vivido",
+  subtitle: "Repaso del pretérito perfecto para contar novedades, experiencias y resultados, y de los participios regulares e irregulares.",
+  stop: { place: "San José", country: "Costa Rica" },
+  minutes: 105,
+  newObjectives: [
+    "a2.gram.g045",
+    "a2.gram.g046",
+    "a2.voc.w01-feria-voluntariado",
+    "a2.pron.w01-he-ha-han-enlazados",
+    "a2.lis.w01-manana-feria",
+    "a2.read.w01-ficha-voluntaria",
+    "a2.wri.w01-correo-voluntariado",
+    "a2.spk.w01-balance-experiencias",
+    "a2.fun.w01-novedades-experiencias",
+    "a2.disc.w01-sumar-experiencias",
   ],
-  "reviewObjectives": [
-    "a1.gram.ir-a-inf",
-    "a1.gram.gustar"
-  ],
-  "prerequisites": [
-    "a1-20"
-  ],
-  "goal": {
-    "canDo": "Puedo intercambiar experiencias y decidir una actividad nueva para el fin de semana.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "Lo que ya he vivido · formas que necesitas",
-        "body": [
-          "El perfecto conecta una experiencia con el presente. Forma: he, has, ha, hemos, habéis, han + participio. En -ar usamos -ado; en -er e -ir, -ido. El participio no cambia con la persona: ellas han viajado. No se separan el auxiliar y el participio con un pronombre: lo he visto."
-        ],
-        "support": [
-          "The perfect uses a present form of haber plus an unchanged participle. Ya means it has happened; todavía no means it remains pending."
-        ],
-        "examples": [
-          {
-            "es": "Esta semana he probado una sopa nueva."
-          },
-          {
-            "es": "¿Has hecho alguna vez una excursión de noche?"
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Hemos escribido una carta.",
-            "right": "Hemos escrito una carta.",
-            "why": "Escribir tiene el participio irregular escrito; el auxiliar indica la persona."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Pregunta con alguna vez sin exigir una fecha. Ya indica que algo está hecho; todavía no deja abierta una posibilidad; nunca niega una experiencia. Los participios hecho, dicho, visto, escrito, puesto, vuelto, abierto y roto son irregulares. Para una fecha terminada aparecerá el indefinido en la próxima semana. El uso del perfecto varía entre regiones."
-        ],
-        "examples": [
-          {
-            "es": "Ya hemos vuelto, pero todavía no hemos escrito la reseña."
-          },
-          {
-            "es": "Nunca he visto un volcán de cerca."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Nosotros ___ probado el café local.",
-            "answers": [
-              [
-                "hemos"
-              ]
-            ]
-          },
-          {
-            "q": "¿Tú has ___ la exposición? (ver)",
-            "answers": [
-              [
-                "visto"
-              ]
-            ]
-          },
-          {
-            "q": "Ella todavía no ha ___ el mensaje. (escribir)",
-            "answers": [
-              [
-                "escrito"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "Yo he abierto la puerta.",
-            "instruction": "Sustituye Yo por Nosotros y ajusta solo el auxiliar; conserva el resto.",
-            "answers": [
-              "Nosotros hemos abierto la puerta."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "He visitado ese museo.",
-            "instruction": "Añade Nunca al principio, sin añadir otro sujeto; conserva el resto.",
-            "answers": [
-              "Nunca he visitado ese museo."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "¿Haces senderismo?",
-            "instruction": "Pregunta en pretérito perfecto. Conserva senderismo y coloca alguna vez al final; no añadas sujeto.",
-            "answers": [
-              "¿Has hecho senderismo alguna vez?"
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "probar un plato",
-            "en": "taste a dish"
-          },
-          {
-            "es": "hacer una excursión",
-            "en": "go on an excursion"
-          },
-          {
-            "es": "visitar un mercado",
-            "en": "visit a market"
-          },
-          {
-            "es": "subir a un mirador",
-            "en": "go up to a viewpoint"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "reservar una plaza",
-            "en": "book a place"
-          },
-          {
-            "es": "quedarse sin entradas",
-            "en": "find there are no tickets left"
-          },
-          {
-            "es": "volver de un viaje",
-            "en": "return from a trip"
-          },
-          {
-            "es": "tener ganas de conocer",
-            "en": "feel like discovering"
-          }
-        ]
-      }
+  reviewObjectives: ["a1.gram.g043","a1.gram.g044","a1.rev.w20-semanas-16-20","a1.voc.w20-canal-informacion","a1.pron.w20-tres-tipos-de-frase","a1.lis.w20-centro-visitantes","a1.read.w20-guia-miraflores","a1.wri.w20-correo-presentacion","a1.spk.w20-describir-preguntar","a1.fun.w20-describir-pedir-informacion"],
+  prerequisites: ["a1-20"],
+  goal: {
+    canDo: "Al final de esta semana puedes contar qué has hecho hoy o esta semana, hablar de lo que has vivido (o nunca has vivido) y formar los participios más frecuentes sin dudar.",
+    steps: [
+      "Repasa el presente de **haber** y cuándo eliges el perfecto: hoy, esta semana, alguna vez, nunca.",
+      "Repasa los participios en `-ado` e `-ido` y los ocho irregulares más frecuentes.",
+      "Oye **he**, **ha** y **han** unidos al participio en la frase hablada.",
+      "Escucha una mañana de preparativos en una feria de barrio en San José.",
+      "Lee la ficha de una voluntaria y escribe tu propio correo para ofrecer ayuda.",
+      "Graba un balance de tu semana y de tus experiencias.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "probar un plato",
-            "right": "taste a dish"
-          },
-          {
-            "left": "hacer una excursión",
-            "right": "go on an excursion"
-          },
-          {
-            "left": "visitar un mercado",
-            "right": "visit a market"
-          },
-          {
-            "left": "subir a un mirador",
-            "right": "go up to a viewpoint"
-          },
-          {
-            "left": "reservar una plaza",
-            "right": "book a place"
-          },
-          {
-            "left": "quedarse sin entradas",
-            "right": "find there are no tickets left"
-          },
-          {
-            "left": "volver de un viaje",
-            "right": "return from a trip"
-          },
-          {
-            "left": "tener ganas de conocer",
-            "right": "feel like discovering"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Enlazar sin perder el auxiliar",
-    "explanation": [
-      "La h no suena. En he estado o lo he visto, enlaza las vocales sin borrar el auxiliar: el oyente necesita entender quién ha hecho la acción. Escucha primero y repite a velocidad cómoda; no hace falta copiar un acento regional."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "He estado allí.",
-          "q": "¿Qué auxiliar oyes?",
-          "options": [
-            "he",
-            "ha"
+  theory: {
+    intro: "Esta semana repasas dos clases: para qué sirve el pretérito perfecto (**he trabajado**, **has visto**) y cómo se forman sus participios. Aquí lo ves con otros ejemplos y en pasos cortos, para estudiar solo.",
+    parts: [
+      {
+        heading: "Un pasado que todavía toca el presente",
+        body: [
+          "El perfecto tiene dos piezas: el presente de **haber** (he, has, ha, hemos, habéis, han) y un **participio** (_trabajado_, _comido_). Solo cambia haber; el participio queda igual con todas las personas.",
+          "Lo usas cuando miras el pasado **desde hoy**: con un tiempo que todavía no ha terminado (**hoy**, **esta mañana**, **esta semana**, **este año**) o sin decir cuándo pasó.",
+          "Las dos piezas van siempre juntas: el _no_ y los pronombres van delante de haber. **No lo he visto**, nunca _he no visto_ ni _he lo visto_.",
+        ],
+        support: [
+          "Perfect = present of _haber_ + participle. Use it for a period that includes now (today, this week) or when you don't say when.",
+          "In much of Latin America you will also hear the simple past here (_hoy trabajé_). Week 4 looks at this variation.",
+        ],
+        table: {
+          caption: "Presente de haber + participio",
+          head: ["Persona", "haber", "trabajar", "aprender", "salir"],
+          rows: [
+            ["yo", "he", "he trabajado", "he aprendido", "he salido"],
+            ["tú", "has", "has trabajado", "has aprendido", "has salido"],
+            ["él, ella, usted", "ha", "ha trabajado", "ha aprendido", "ha salido"],
+            ["nosotros, nosotras", "hemos", "hemos trabajado", "hemos aprendido", "hemos salido"],
+            ["vosotros, vosotras", "habéis", "habéis trabajado", "habéis aprendido", "habéis salido"],
+            ["ellos, ellas, ustedes", "han", "han trabajado", "han aprendido", "han salido"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Ha ido al parque.",
-          "q": "¿Qué auxiliar aparece?",
-          "options": [
-            "ha",
-            "han"
+        examples: [
+          { es: "Esta mañana he ido al mercado central.", en: "This morning I went to the central market." },
+          { es: "¿Ustedes han terminado el informe esta semana?", en: "Have you finished the report this week?" },
+          { es: "Este año mi hermana ha cambiado de trabajo.", en: "This year my sister has changed jobs." },
+        ],
+        mistakes: [
+          { wrong: "Las vecinas han llegadas temprano.", right: "Las vecinas han llegado temprano.", why: "El participio del perfecto no cambia con la persona: siempre **llegado**." },
+          { wrong: "Hemos no terminado la lista.", right: "No hemos terminado la lista.", why: "El **no** va delante de haber; haber y el participio no se separan." },
+        ],
+      },
+      {
+        heading: "Novedades, experiencias y resultados",
+        body: [
+          "**Novedades**: cuentas lo que ha pasado en un tiempo que sigue abierto. _Hoy he hablado con el jefe._",
+          "**Experiencias**: hablas de tu vida hasta ahora, sin fecha. Preguntas con **alguna vez** y respondes con **nunca**, **una vez**, **dos veces**, **muchas veces**. _¿Has dormido alguna vez en una hamaca? — Nunca._",
+          "**Resultados**: algo pasó y lo ves ahora mismo. _Se ha ido la luz_ (no hay luz). _Me he cortado_ (mira el dedo).",
+          "Si dices **cuándo** pasó en un tiempo ya cerrado (_ayer_, _en 2019_, _el lunes pasado_), el perfecto no encaja: eso lo repasas la semana que viene.",
+        ],
+        support: [
+          "_Alguna vez_ = ever. _Nunca_ = never; after the verb you need a second negative: _no he visto nunca_ / _nunca he visto nada_.",
+        ],
+        examples: [
+          { es: "¿Has probado alguna vez el gallo pinto?", en: "Have you ever tried gallo pinto?" },
+          { es: "Nunca he subido a un volcán.", en: "I have never climbed a volcano." },
+          { es: "He perdido las llaves: no puedo entrar.", en: "I've lost my keys: I can't get in." },
+          { es: "Hemos visitado Limón tres veces.", en: "We have visited Limón three times." },
+        ],
+        mistakes: [
+          { wrong: "Ayer he visitado a mis abuelos.", right: "Hoy he visitado a mis abuelos.", why: "**Ayer** es un tiempo cerrado. Con el perfecto usa un tiempo abierto, como **hoy**." },
+          { wrong: "¿Has visitado nunca San José?", right: "¿Has visitado alguna vez San José?", why: "En la pregunta de experiencia se usa **alguna vez**; **nunca** es para la respuesta negativa." },
+        ],
+        tip: "Haz la prueba del reloj: si puedes añadir _hasta ahora_ o _en mi vida_, el perfecto funciona.",
+      },
+      {
+        heading: "Participios regulares: -ado e -ido",
+        body: [
+          "Quita la terminación del infinitivo. Los verbos en **-ar** toman **-ado** (_cantar → cantado_). Los verbos en **-er** y en **-ir** toman los dos **-ido** (_beber → bebido_, _subir → subido_).",
+          "Cuando la raíz termina en vocal fuerte (a, e, o), la i lleva tilde: _leer → leído_, _traer → traído_, _oír → oído_, _caer → caído_.",
+          "Con haber, el participio no cambia. Pero si lo usas como adjetivo (con **estar** o junto a un nombre), sí concuerda: _He cerrado la tienda_ / _La tienda está cerrada_.",
+        ],
+        support: [
+          "_-ar_ → _-ado_; _-er_ and _-ir_ → _-ido_. After _a, e, o_ write _-ído_ with an accent.",
+        ],
+        table: {
+          caption: "De infinitivo a participio",
+          head: ["Infinitivo", "Participio", "Regla"],
+          rows: [
+            ["preparar", "preparado", "-ar → -ado"],
+            ["vender", "vendido", "-er → -ido"],
+            ["repartir", "repartido", "-ir → -ido"],
+            ["leer", "leído", "vocal + -ído"],
+            ["traer", "traído", "vocal + -ído"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "¿Has traído el cargador?", en: "Have you brought the charger?" },
+          { es: "Los niños han dormido toda la tarde.", en: "The children have slept all afternoon." },
+        ],
+        mistakes: [
+          { wrong: "Hemos vendo todas las camisetas.", right: "Hemos vendido todas las camisetas.", why: "Después de haber va el participio: vend**ido**, no el presente." },
+          { wrong: "¿Has leido el mensaje?", right: "¿Has leído el mensaje?", why: "Después de la **e** de _le-_, la i lleva tilde: **leído**." },
+        ],
+      },
+      {
+        heading: "Los irregulares que más vas a usar",
+        body: [
+          "Ocho verbos muy frecuentes no siguen la regla. Apréndelos como una familia: **abierto**, **escrito**, **puesto**, **visto**, **vuelto**, **roto**, **dicho** y **hecho**.",
+          "Los verbos que nacen de ellos copian la forma: _describir → descrito_, _devolver → devuelto_, _deshacer → deshecho_, _proponer → propuesto_, _descubrir → descubierto_.",
+          "Truco para memorizar: cinco terminan en **-to** después de consonante (abier**to**, escri**to**, pues**to**, vis**to**, vuel**to**), uno en **-to** después de vocal (ro**to**) y dos en **-cho** (di**cho**, he**cho**).",
+        ],
+        support: [
+          "Learn the eight irregular participles as a group. Verbs built on them (_devolver_, _describir_…) are irregular in the same way.",
+        ],
+        table: {
+          caption: "Los ocho irregulares",
+          head: ["Infinitivo", "Participio", "Ejemplo"],
+          rows: [
+            ["abrir", "abierto", "Han abierto una panadería nueva."],
+            ["escribir", "escrito", "¿Has escrito a tu madre?"],
+            ["poner", "puesto", "He puesto el café en la mesa."],
+            ["ver", "visto", "Nunca hemos visto un perezoso."],
+            ["volver", "vuelto", "Mi primo ha vuelto de Panamá."],
+            ["romper", "roto", "El perro ha roto mi zapato."],
+            ["decir", "dicho", "¿Qué te ha dicho el médico?"],
+            ["hacer", "hecho", "Ya he hecho la compra."],
+          ],
+        },
+        examples: [
+          { es: "Me han devuelto el dinero del billete.", en: "They have given me back the money for the ticket." },
+          { es: "La profesora ha propuesto un examen oral.", en: "The teacher has suggested an oral exam." },
+        ],
+        mistakes: [
+          { wrong: "¿Quién ha abrido la ventana?", right: "¿Quién ha abierto la ventana?", why: "_Abrir_ es irregular: **abierto**." },
+          { wrong: "Todavía no han volvido de la playa.", right: "Todavía no han vuelto de la playa.", why: "_Volver_ es irregular: **vuelto**." },
+        ],
+        tip: "Escribe los ocho participios en una tarjeta y léela cada mañana esta semana. Después tapa la columna derecha y dilos de memoria.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero eliges la forma de haber y el uso del perfecto; después practicas los participios, regulares e irregulares.",
+    exercises: [
+      {
+        id: "g1",
+        type: "choice",
+        title: "La forma de haber",
+        prompt: "Elige la forma correcta del perfecto.",
+        items: [
+          { q: "Esta semana mis compañeros y yo ___ mucho en el taller.", options: ["han trabajado", "hemos trabajado", "he trabajado"], answer: 1, why: "Mis compañeros y yo = **nosotros**: hemos trabajado." },
+          { q: "¿Tú ___ alguna vez en un tren nocturno?", options: ["has viajado", "ha viajado", "habéis viajado"], answer: 0, why: "Con **tú**: has + participio." },
+          { q: "Doña Carmen ___ el puesto de frutas a las seis.", options: ["he abierto", "han abierto", "ha abierto"], answer: 2, why: "Una persona (ella): **ha** abierto." },
+          { q: "Vosotras nunca ___ un plato tan picante, ¿verdad?", options: ["habéis comido", "han comidas", "hemos comido"], answer: 0, why: "Vosotras: **habéis** comido; el participio no cambia." },
+          { q: "Los turistas ___ temprano del parque nacional.", options: ["ha salido", "han salidos", "han salido"], answer: 2, why: "Ellos: **han** salido, con el participio invariable." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "classify",
+        title: "¿Para qué se usa el perfecto?",
+        prompt: "Decide qué cuenta cada frase.",
+        categories: ["una novedad de hoy o de esta semana", "una experiencia de la vida", "un resultado que se ve ahora"],
+        items: [
+          { text: "Esta mañana he desayunado con mi jefa.", cat: 0 },
+          { text: "¿Has bailado salsa alguna vez?", cat: 1, why: "**Alguna vez** pregunta por la experiencia, sin fecha." },
+          { text: "Se ha roto el vaso: hay cristales en el suelo.", cat: 2, why: "El resultado está delante: hay cristales." },
+          { text: "Nunca he visto la nieve.", cat: 1 },
+          { text: "Este mes hemos ahorrado bastante dinero.", cat: 0, why: "**Este mes** todavía no ha terminado." },
+          { text: "Me he quemado la mano con la sartén y me duele.", cat: 2 },
+          { text: "Mis padres han estado dos veces en Guatemala.", cat: 1, why: "**Dos veces** cuenta experiencias." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "gap",
+        title: "Participios, regulares o no",
+        prompt: "Completa con el participio del verbo entre paréntesis.",
+        items: [
+          { q: "¿Has ___ (leer) el correo de la coordinadora?", answers: [["leído"]], why: "Le- + **ído**, con tilde." },
+          { q: "Hemos ___ (poner) las sillas en el patio.", answers: [["puesto"]], why: "_Poner_ → **puesto**." },
+          { q: "Mi abuelo nunca ha ___ (escribir) un mensaje de texto.", answers: [["escrito"]], why: "_Escribir_ → **escrito**." },
+          { q: "Ya han ___ (repartir) los folletos en el barrio.", answers: [["repartido"]], why: "Verbo en -ir regular: **repartido**." },
+          { q: "¿Quién ha ___ (decir) eso? No es verdad.", answers: [["dicho"]], why: "_Decir_ → **dicho**." },
+          { q: "Hoy no he ___ (hacer) nada especial.", answers: [["hecho"]], why: "_Hacer_ → **hecho**." },
+        ],
+      },
+      {
+        id: "g4",
+        type: "transform",
+        title: "Ya está hecho",
+        prompt: "Cuenta que la acción ya ha pasado hoy. Usa el perfecto con la misma persona.",
+        items: [
+          { source: "Abro las ventanas de la oficina.", instruction: "Empieza con «Hoy».", answers: ["Hoy he abierto las ventanas de la oficina."], why: "Yo: **he abierto** (irregular)." },
+          { source: "Mi hija devuelve los libros a la biblioteca.", instruction: "Empieza con «Esta mañana».", answers: ["Esta mañana mi hija ha devuelto los libros a la biblioteca."], why: "_Devolver_ copia a _volver_: **devuelto**." },
+          { source: "Vemos una película coreana.", instruction: "Empieza con «Esta semana».", answers: ["Esta semana hemos visto una película coreana."], why: "Nosotros: **hemos visto**." },
+          { source: "Los vecinos rompen la piñata.", instruction: "Empieza con «Hoy».", answers: ["Hoy los vecinos han roto la piñata."], why: "_Romper_ → **roto**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "El tema de la semana es una feria de barrio en San José: las tareas para prepararla y las experiencias que buscan en un voluntario.",
+    groups: [
+      {
+        title: "Preparar la feria",
+        items: [
+          { es: "montar los puestos", en: "to set up the stalls" },
+          { es: "colgar los carteles", en: "to hang the posters" },
+          { es: "repartir folletos", en: "to hand out leaflets" },
+          { es: "poner las mesas", en: "to set out the tables" },
+          { es: "recoger la basura", en: "to pick up the rubbish" },
+          { es: "abrir la caja", en: "to open the cash box" },
+          { es: "el puesto de comida", en: "the food stall" },
+        ],
+      },
+      {
+        title: "Experiencias útiles",
+        items: [
+          { es: "trabajar con niños", en: "to work with children" },
+          { es: "organizar un evento", en: "to organise an event" },
+          { es: "hablar en público", en: "to speak in public" },
+          { es: "cocinar para mucha gente", en: "to cook for lots of people" },
+          { es: "atender a los clientes", en: "to serve customers" },
+          { es: "hacer un curso de primeros auxilios", en: "to do a first-aid course" },
+        ],
+      },
+      {
+        title: "¿Cuántas veces?",
+        items: [
+          { es: "alguna vez", en: "ever" },
+          { es: "nunca", en: "never" },
+          { es: "una vez / dos veces", en: "once / twice" },
+          { es: "muchas veces", en: "many times" },
+          { es: "todavía no", en: "not yet" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "Tareas y objetos",
+        prompt: "Une cada tarea con lo que necesitas para hacerla.",
+        pairs: [
+          { left: "colgar los carteles", right: "cinta adhesiva y una escalera" },
+          { left: "montar los puestos", right: "palos, lonas y mucha paciencia" },
+          { left: "repartir folletos", right: "papeles impresos y buenos zapatos" },
+          { left: "recoger la basura", right: "bolsas grandes y guantes" },
+          { left: "abrir la caja", right: "la llave pequeña de metal" },
+        ],
+        why: "Son las tareas típicas antes de abrir una feria.",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "¿Qué respondes?",
+        prompt: "Lee la situación y elige la respuesta natural.",
+        items: [
+          { context: "La coordinadora te pregunta si sabes hablar delante de un grupo.", q: "Respondes:", options: ["Sí, he hablado en público muchas veces.", "Sí, hablo en público ayer.", "Sí, he hablada en público."], answer: 0, why: "Experiencia + frecuencia: **he hablado** muchas veces." },
+          { context: "Te preguntan si los carteles están en la plaza. Están en tu mochila.", q: "Dices:", options: ["Ya los he colgado.", "Nunca he colgado carteles.", "Todavía no los he colgado."], answer: 2, why: "La tarea está pendiente: **todavía no**." },
+          { context: "Un voluntario nuevo quiere saber si tienes experiencia con niños.", q: "Le dices:", options: ["He trabajado con niños dos veces.", "Trabajo con niños nunca.", "He trabajo con niños."], answer: 0, why: "Perfecto + **dos veces**." },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "He, ha y han unidos al participio",
+    explanation: [
+      "En la frase hablada, **he**, **ha** y **han** son palabras cortas que se pegan al participio: _he-hecho_ suena casi como una sola palabra, porque la **h** no suena: [eécho].",
+      "Si el participio empieza por vocal, las dos vocales se unen: _ha abierto_ suena [abierto] con una a un poco larga; _he estado_ suena [estado] con una e larga. Por eso es fácil confundir _he_ y _ha_: escucha la vocal con atención.",
+      "**Han** se distingue bien gracias a la **n** final, que se une a la vocal siguiente: _han ido_ suena [a-ni-do].",
+    ],
+    support: [
+      "The _h_ is silent, so _he_, _ha_ and _han_ blend with the participle. Listen for the vowel and for the final _n_.",
+    ],
+    table: {
+      caption: "Cómo suenan unidas",
+      head: ["Se escribe", "Suena más o menos"],
+      rows: [
+        ["he hecho", "[e-é-cho]"],
+        ["ha abierto", "[a-bier-to]"],
+        ["han ido", "[a-ni-do]"],
+        ["lo he visto", "[lo-e-vis-to]"],
+      ],
     },
-    "produce": [
-      {
-        "text": "He estado en el puerto.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Lo he visto desde aquí.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Ha ido con su prima.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Quién lo ha hecho?",
+      prompt: "Escucha la frase y elige lo que oyes.",
+      items: [
+        { q: "¿Qué frase oyes?", audio: "Ya ha abierto la caja.", options: ["Ya he abierto la caja.", "Ya ha abierto la caja.", "Ya han abierto la caja."], answer: 1 },
+        { q: "¿Qué frase oyes?", audio: "Todavía no han ido al mercado.", options: ["Todavía no ha ido al mercado.", "Todavía no he ido al mercado.", "Todavía no han ido al mercado."], answer: 2 },
+        { q: "¿Qué frase oyes?", audio: "Lo he escrito esta mañana.", options: ["Lo he escrito esta mañana.", "Lo ha escrito esta mañana.", "Lo han escrito esta mañana."], answer: 0 },
+        { q: "¿Qué frase oyes?", audio: "Hemos hecho la lista.", options: ["He hecho la lista.", "Hemos hecho la lista.", "Han hecho la lista."], answer: 1 },
+        { q: "¿Qué frase oyes?", audio: "¿Has estado en Cartago?", options: ["¿Ha estado en Cartago?", "¿Han estado en Cartago?", "¿Has estado en Cartago?"], answer: 2 },
+      ],
+    },
+    produce: [
+      { text: "He hecho la compra y he abierto la tienda.", tip: "La **h** no suena: une _he_ con el participio sin pausa." },
+      { text: "¿Has estado alguna vez en Puntarenas?", tip: "La **s** de _has_ se une a la e: [a-ses-ta-do]." },
+      { text: "Ellos han ido y han vuelto en un día.", tip: "La **n** de _han_ pasa a la vocal siguiente: [a-ni-do]." },
+      { text: "Nunca lo he visto tan contento.", tip: "_Lo he_ suena casi como una sílaba: [loe]." },
+      { text: "Esta semana hemos aprendido mucho.", tip: "Grábate y compara: ¿se oye **hemos** completo?" },
+    ],
+    spelling: "Aunque no suene, la **h** de haber siempre se escribe: _he_, _ha_, _han_. Sin h, _a_ es una preposición (_voy a casa_) y _e_ es una conjunción (_padre e hijo_).",
   },
-  "listening": {
-    "title": "Una actividad para los dos",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "Una mañana en la feria",
+    context: "Es sábado temprano en el barrio Escalante, en San José. Andrea coordina la feria del barrio y revisa por teléfono qué tareas están hechas. Tomás y Lucía, una voluntaria nueva, ya están en la plaza.",
+    speakers: [
+      { id: "andrea", name: "Andrea", voice: "es-MX-f", role: "coordinadora de la feria" },
+      { id: "tomas", name: "Tomás", voice: "es-CL-m", role: "voluntario" },
+      { id: "lucia", name: "Lucía", voice: "es-CO-f", role: "voluntaria nueva" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "¿Has hecho alguna vez una visita al vivero del barrio? Este mes han organizado un taller para aprender a cuidar plantas. Yo he visto el anuncio, pero todavía no he reservado."
-      },
-      {
-        "speaker": "b",
-        "text": "Sí, ya he estado allí con mi hermano. Hemos comprado unas plantas pequeñas y la encargada nos ha explicado cómo cuidarlas. Nunca he hecho el taller. ¿Es necesario llevar algo?"
-      },
-      {
-        "speaker": "a",
-        "text": "He escrito un mensaje y ya me han contestado. Hay que llevar un recipiente vacío. Ellos ponen la tierra. Todavía no han dicho cuánto cuesta; lo publican mañana."
-      },
-      {
-        "speaker": "b",
-        "text": "Entonces esperamos hasta mañana. Yo ya he puesto un recordatorio en el móvil. Si el precio nos parece bien, reservamos dos plazas. ¡Nunca he cultivado una planta desde una semilla!"
-      }
+    script: [
+      { speaker: "andrea", text: "Buenos días, Tomás. ¿Ya has llegado a la plaza?" },
+      { speaker: "tomas", text: "Sí, ya estoy aquí. He venido en bicicleta porque hoy hay mucho tráfico." },
+      { speaker: "andrea", text: "Perfecto. Vamos con la lista. ¿Han montado los puestos?" },
+      { speaker: "tomas", text: "Sí, los hemos montado todos. Lucía y yo hemos puesto las mesas y hemos colgado los carteles." },
+      { speaker: "andrea", text: "¡Qué rápidos! ¿Y la caja del dinero? ¿La has abierto?" },
+      { speaker: "tomas", text: "Todavía no. No he encontrado la llave. Creo que la ha guardado don Rafael." },
+      { speaker: "andrea", text: "Es verdad, lo llamo ahora. ¿Y los folletos?" },
+      { speaker: "tomas", text: "Lucía ha repartido unos cien en la entrada del mercado. Pero se ha roto una mesa: tiene una pata rota." },
+      { speaker: "andrea", text: "No pasa nada, hay otra en la bodega. Lucía, tú eres nueva, ¿verdad? ¿Has trabajado alguna vez en una feria?" },
+      { speaker: "lucia", text: "En una feria, nunca. Pero he organizado dos conciertos en mi universidad y he vendido comida muchas veces." },
+      { speaker: "andrea", text: "¡Genial! Entonces ya has hecho lo más difícil: hablar con la gente." },
+      { speaker: "lucia", text: "Eso sí. Esta semana he hablado con veinte vecinos para invitarlos." },
+      { speaker: "andrea", text: "Muy bien. Yo he escrito el mensaje para el grupo del barrio, pero todavía no lo he enviado. ¿Me he olvidado de algo?" },
+      { speaker: "tomas", text: "Creo que no. Ah, sí: ¡todavía no hemos desayunado!" },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «Una actividad para los dos» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Qué quieren hacer?",
-              "options": [
-                "Vender plantas",
-                "Visitar a un hermano",
-                "Participar en un taller"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Participar en un taller»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué tienen en común las dos personas?",
-              "options": [
-                "Experiencia dirigiendo el taller",
-                "Necesidad de vender un recipiente",
-                "Interés por una actividad con plantas"
-              ],
-              "answer": 2,
-              "why": "Comprueba el contexto y los datos de la escena: Interés por una actividad con plantas."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «Una actividad para los dos».",
-          "items": [
-            {
-              "q": "¿Qué información falta?",
-              "options": [
-                "El material que deben llevar",
-                "El precio",
-                "El lugar"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «El precio»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Quién ha visitado ya el vivero?",
-              "options": [
-                "La segunda persona",
-                "Ninguna persona",
-                "Solo la primera persona"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «La segunda persona»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «Una actividad para los dos».",
-          "items": [
-            {
-              "q": "¿Qué significa todavía no he reservado?",
-              "options": [
-                "La reserva sigue pendiente",
-                "La reserva está cancelada",
-                "La reserva está pagada"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «La reserva sigue pendiente»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué marca ya me han contestado?",
-              "options": [
-                "Una respuesta imposible",
-                "Una respuesta recibida",
-                "Una respuesta pendiente"
-              ],
-              "answer": 1,
-              "why": "Comprueba el contexto y los datos de la escena: Una respuesta recibida."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "El tablón de las primeras veces",
-    "genre": "Mensajes de un grupo de ocio",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "Soy Mar y busco compañía para una actividad diferente. Este mes he visitado el mercado central y he probado dos platos que no conocía. También he hecho un recorrido por mi barrio con una guía. Ha sido interesante: he visto edificios por los que paso todos los días y he descubierto sus historias. Todavía no he subido al mirador porque ha llovido mucho esta semana. ¿Alguien tiene ganas de ir el sábado?",
-      "Hola, Mar. Soy Iván. Ya he estado en el mirador, pero nunca he ido al jardín de mariposas. He escrito al centro y todavía no han abierto las reservas para el domingo. Mi hermana ha dicho que las abren mañana. Podemos mirar juntos los horarios. He puesto un aviso en el grupo; si no hay plazas, elegimos el mirador. No he comprado entradas para ninguna de las dos actividades."
-    ],
-    "glossary": [
-      {
-        "es": "probar un plato",
-        "en": "taste a dish"
-      },
-      {
-        "es": "hacer una excursión",
-        "en": "go on an excursion"
-      },
-      {
-        "es": "visitar un mercado",
-        "en": "visit a market"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «El tablón de las primeras veces» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Qué actividad sigue pendiente para Mar?",
-            "options": [
-              "Visitar el mercado",
-              "Hacer el recorrido del barrio",
-              "Subir al mirador"
-            ],
-            "answer": 2,
-            "why": "La información de la situación corresponde a «Subir al mirador»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Por qué Iván no tiene una reserva?",
-            "options": [
-              "No quiere ir con Mar",
-              "Todavía no han abierto las reservas",
-              "Ha perdido la entrada"
-            ],
-            "answer": 1,
-            "why": "La información de la situación corresponde a «Todavía no han abierto las reservas»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «El tablón de las primeras veces» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Intercambiar experiencias y decidir una actividad nueva para el fin de semana. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "Soy Mar y busco compañía para una actividad diferente.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿Para qué llama Andrea a Tomás?", options: ["para revisar las tareas de la feria", "para invitarlo a un concierto", "para pedirle dinero"], answer: 0, why: "Andrea dice: _Vamos con la lista_." },
+            { q: "¿Cómo va la preparación?", options: ["Está todo hecho.", "Casi todo está hecho, pero quedan cosas.", "No han empezado."], answer: 1, why: "Han montado los puestos, pero la caja todavía no está abierta." },
+            { q: "¿Qué sabemos de Lucía?", options: ["Trabaja en el mercado.", "Ha organizado muchas ferias.", "Es nueva en la feria, pero tiene experiencia con la gente."], answer: 2 },
+          ],
         },
-        {
-          "quote": "Hola, Mar.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
+      },
       {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
+        stage: "detail",
+        prompt: "Segunda escucha: atención a quién ha hecho cada cosa.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Cómo ha llegado Tomás a la plaza?", options: ["en autobús", "a pie", "en bicicleta"], answer: 2 },
+            { q: "¿Por qué no han abierto la caja?", options: ["Porque no tienen la llave.", "Porque la caja está rota.", "Porque es muy temprano."], answer: 0 },
+            { q: "¿Cuántos folletos ha repartido Lucía?", options: ["unos veinte", "unos cien", "unos doscientos"], answer: 1 },
+            { q: "¿Qué ha hecho Andrea con el mensaje para el grupo?", options: ["Lo ha enviado.", "Lo ha borrado.", "Lo ha escrito, pero no lo ha enviado."], answer: 2 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en los participios.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿El participio que oyes es regular o irregular?",
+          categories: ["regular (-ado, -ido)", "irregular"],
+          items: [
+            { text: "hemos montado", cat: 0 },
+            { text: "hemos puesto", cat: 1, why: "_Poner_ → **puesto**." },
+            { text: "ha guardado", cat: 0 },
+            { text: "se ha roto", cat: 1, why: "_Romper_ → **roto**." },
+            { text: "ha repartido", cat: 0 },
+            { text: "he escrito", cat: 1 },
+            { text: "has hecho", cat: 1 },
+          ],
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Ficha de voluntaria: Mariela Solano",
+    genre: "Ficha de inscripción",
+    frame: "Mariela completa la ficha en la página web de la feria del barrio. La pregunta es: «¿Por qué quieres ayudar y qué experiencia tienes?».",
+    text: [
+      "Me llamo Mariela Solano, tengo veintiocho años y vivo en Heredia, muy cerca de San José. Soy enfermera y trabajo por las mañanas en una clínica. Este año he cambiado de turno y ahora tengo las tardes libres. Por eso quiero ayudar en la feria del barrio.",
+      "¿Qué experiencia tengo? He trabajado muchas veces con personas mayores y he hecho dos cursos de primeros auxilios. También he cocinado para mucha gente: en mi familia somos treinta primos. Además, he escrito y dibujado los carteles de la fiesta de mi calle tres años seguidos.",
+      "¿Qué no he hecho nunca? Nunca he vendido nada en un puesto y nunca he hablado por micrófono delante de un grupo grande. Me da un poco de miedo, pero quiero probar.",
+      "Esta semana he leído las normas de la feria y he visto el mapa de los puestos. Todavía no he conocido al equipo, ¡pero tengo muchas ganas!",
+    ],
+    glossary: [
+      { es: "el turno", en: "the shift" },
+      { es: "primeros auxilios", en: "first aid" },
+      { es: "tres años seguidos", en: "three years in a row" },
+      { es: "me da miedo", en: "it scares me" },
+    ],
+    tasks: [
+      {
+        id: "r1",
+        type: "choice",
+        prompt: "Lee la ficha y responde.",
+        items: [
+          { q: "¿Por qué puede ayudar Mariela ahora?", options: ["Porque ha dejado su trabajo.", "Porque ha cambiado de turno y tiene las tardes libres.", "Porque vive en la plaza."], answer: 1 },
+          { q: "¿Qué experiencia útil tiene?", options: ["Ha vendido en muchos puestos.", "Ha hablado por micrófono muchas veces.", "Ha hecho cursos de primeros auxilios."], answer: 2 },
+          { q: "¿Qué ha hecho Mariela esta semana?", options: ["Ha leído las normas y ha visto el mapa.", "Ha conocido al equipo.", "Ha cocinado para sus primos."], answer: 0 },
+        ],
+      },
+      {
+        id: "r2",
+        type: "classify",
+        prompt: "Según la ficha, ¿qué ha hecho Mariela y qué no ha hecho nunca o todavía?",
+        categories: ["ya lo ha hecho", "nunca o todavía no"],
+        items: [
+          { text: "trabajar con personas mayores", cat: 0 },
+          { text: "vender en un puesto", cat: 1 },
+          { text: "dibujar carteles", cat: 0 },
+          { text: "hablar por micrófono a un grupo grande", cat: 1 },
+          { text: "conocer al equipo de la feria", cat: 1, why: "_Todavía no he conocido al equipo._" },
+          { text: "cocinar para mucha gente", cat: 0 },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Toca cada frase de la ficha para ver qué gramática hay dentro.",
+      items: [
+        { quote: "Este año he cambiado de turno", note: "**Este año** no ha terminado: por eso el perfecto." },
+        { quote: "he hecho dos cursos", note: "Participio irregular de _hacer_: **hecho**." },
+        { quote: "Nunca he vendido nada", note: "Experiencia negativa: **nunca** delante del verbo, y **nada** después." },
+        { quote: "he leído las normas", note: "Le- + **ído**: la i lleva tilde." },
+        { quote: "Además, he escrito y dibujado", note: "**Además** suma otra experiencia. Con dos participios, haber se dice una sola vez." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Ahora mezclas las dos clases: el uso del perfecto y la forma de los participios.",
+    exercises: [
+      {
+        id: "x1",
+        type: "order",
+        title: "Frases de experiencia",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["¿Has", "dormido", "alguna", "vez", "en", "una", "tienda", "de", "campaña?"], en: "Have you ever slept in a tent?" },
+          { words: ["Nunca", "hemos", "visto", "un", "volcán", "activo."], en: "We have never seen an active volcano." },
+          { words: ["Todavía", "no", "le", "he", "dicho", "nada", "a", "Paula."], en: "I haven't told Paula anything yet." },
+        ],
+      },
+      {
+        id: "x2",
+        type: "error",
+        title: "Corrige el chat del equipo",
+        prompt: "Cada mensaje tiene un error. Escríbelo bien.",
+        items: [
+          { sentence: "Chicos, ya he ponido las bebidas en la nevera.", answers: ["Chicos, ya he puesto las bebidas en la nevera."], why: "_Poner_ → **puesto**." },
+          { sentence: "Marta y Joaquín han traídos las sillas.", answers: ["Marta y Joaquín han traído las sillas."], why: "Con haber, el participio no cambia: **traído**." },
+          { sentence: "¿Alguien ha visto mis gafas? Las he perdidas.", answers: ["¿Alguien ha visto mis gafas? Las he perdido."], why: "El participio no concuerda con _las_: **perdido**." },
+          { sentence: "Yo he lo escrito en la pizarra.", answers: ["Yo lo he escrito en la pizarra."], why: "El pronombre va delante de haber: **lo he escrito**." },
+        ],
+      },
+      {
+        id: "x3",
+        type: "context",
+        title: "¿Qué frase encaja?",
+        prompt: "Lee la situación y elige la mejor frase.",
+        items: [
+          { context: "Tu amiga ve que tienes la camiseta mojada.", q: "Explicas:", options: ["Se me cae el café.", "Se me ha caído el café encima.", "Se me ha caído el café encima ayer."], answer: 1, why: "Resultado visible ahora: **se me ha caído**." },
+          { context: "En una entrevista te preguntan por tu experiencia con turistas.", q: "Respondes:", options: ["He atendido a turistas muchas veces en un hotel.", "Atiendo a turistas nunca.", "He atendida a turistas muchas veces."], answer: 0 },
+          { context: "Son las ocho de la noche y tu compañero de piso pregunta por tu día.", q: "Le cuentas:", options: ["Hoy he tenido un día largo: he hecho tres entrevistas.", "Hoy tuve un día largo el año pasado.", "Hoy he tenido un día largo: hacido tres entrevistas."], answer: 0, why: "Hoy + perfecto, con **hecho** irregular." },
+        ],
+      },
+      {
+        id: "x4",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe frases sobre ti y compáralas con el modelo.",
+        items: [
           {
-            "words": [
-              "Esta",
-              "semana",
-              "he",
-              "probado",
-              "una",
-              "sopa",
-              "nueva."
-            ]
+            prompt: "Cuenta tres cosas que has hecho hoy y una que todavía no has hecho.",
+            model: "Hoy he ido al gimnasio, he escrito dos correos y he comido con mi hermano. Todavía no he hecho la cena.",
+            checklist: ["Usas **hoy** con el perfecto", "Hay al menos un participio irregular", "Usas **todavía no** delante de haber"],
           },
           {
-            "words": [
-              "Ya",
-              "hemos",
-              "vuelto,",
-              "pero",
-              "todavía",
-              "no",
-              "hemos",
-              "escrito",
-              "la",
-              "reseña."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "He estado en el mirador, así que no te pregunto nada.",
-              "Nunca he ido al vivero; ¿te apetece conocerlo?",
-              "Voy al mirador todos los días; ya he ido."
-            ],
-            "answer": 1,
-            "why": "Comprueba el contexto y los datos de la escena: Nunca he ido al vivero; ¿te apetece conocerlo?.",
-            "context": "Ya has estado en el mirador y quieres proponer algo nuevo.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
+            prompt: "Escribe dos experiencias que has tenido muchas veces y una que no has tenido nunca.",
+            model: "He viajado en autobús de noche muchas veces y he cocinado para veinte personas dos veces. Nunca he visto una ballena.",
+            checklist: ["Usas expresiones de frecuencia: _muchas veces_, _dos veces_", "Usas **nunca** delante del verbo", "El participio no cambia con la persona"],
           },
           {
-            "context": "Tu compañero ya conoce el museo que propones. Pregúntale por otra experiencia, reacciona con interés y acuerda una actividad nueva.",
-            "q": "En esta interacción de «Lo que ya he vivido», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «Lo que ya he vivido», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Hola, grupo.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
+            prompt: "Haz dos preguntas con «alguna vez» para una persona que quieres conocer mejor.",
+            model: "¿Has vivido alguna vez en otro país? ¿Has hecho alguna vez un trabajo de voluntario?",
+            checklist: ["Empiezas con **has** + participio", "Usas **alguna vez**", "Escribes los signos ¿ ?"],
           },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: Tu compañero ya conoce el museo que propones. Pregúntale por otra experiencia, reacciona con interés y acuerda una actividad nueva.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "bridge-a1",
-        "type": "open",
-        "prompt": "Recupera dos recursos de A1 antes de contar experiencias.",
-        "items": [
-          {
-            "prompt": "Para el grupo de ocio, di qué actividad te gusta y qué vas a hacer el próximo domingo. Distingue el gusto de la intención.",
-            "model": "Me gusta caminar junto al río. El domingo voy a hacer una ruta con mi hermana.",
-            "checklist": [
-              "Usas me gusta + infinitivo.",
-              "Usas ir a + infinitivo para un plan."
-            ]
-          },
-          {
-            "prompt": "Pregunta a otra persona por sus gustos y propón un plan que tenga sentido con su respuesta.",
-            "model": "¿Te gusta cocinar? Podemos ir al taller; voy a preguntar si quedan plazas.",
-            "checklist": [
-              "Preguntas antes de proponer.",
-              "Tu plan responde a la preferencia."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Escribe al grupo de ocio: cuenta dos experiencias de este mes, una actividad que nunca has hecho y una propuesta. Pregunta por la experiencia de otra persona.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
-    ],
-    "useLanguage": [
-      "Esta semana he probado una sopa nueva.",
-      "¿Has hecho alguna vez una excursión de noche?",
-      "Ya hemos vuelto, pero todavía no hemos escrito la reseña.",
-      "Nunca he visto un volcán de cerca."
-    ],
-    "model": [
-      "Hola, grupo. Este mes he visitado un mercado nuevo y he probado un plato de maíz. Nunca he hecho una ruta en bicicleta por la ciudad. Todavía no he comprado una bicicleta, pero puedo alquilarla. Ya he visto que hay una ruta corta cerca del río. ¿Alguien la ha hecho alguna vez? Me gustaría ir el domingo por la mañana. Si les interesa, podemos mirar el precio juntos."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      60,
-      100
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
-      {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Cuenta tres experiencias reales y una inventada; no digas cuál es falsa. Después responde cuándo, dónde y con quién ocurrió una de ellas.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
         ],
-        "seconds": 90,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
-      {
-        "title": "Interacción con un cambio",
-        "prompt": "Tu compañero ya conoce el museo que propones. Pregúntale por otra experiencia, reacciona con interés y acuerda una actividad nueva.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
-        ],
-        "seconds": 90,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Cuenta tres experiencias reales y una inventada; no digas cuál es falsa. Después responde cuándo, dónde y con quién ocurrió una de ellas."
-      },
-      {
-        "move": "Negocia",
-        "task": "Tu compañero ya conoce el museo que propones. Pregúntale por otra experiencia, reacciona con interés y acuerda una actividad nueva."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
   },
-  "quiz": {
-    "items": [
-      {
-        "type": "gap",
-        "q": "Yo ___ hecho la reserva.",
-        "answers": [
-          [
-            "he"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "Mi amiga ha ___ de su viaje. (volver)",
-        "answers": [
-          [
-            "vuelto"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Hemos ponido la mesa.",
-        "answers": [
-          "Hemos puesto la mesa."
-        ],
-        "why": "Escrito es el participio irregular de escribir."
-      },
-      {
-        "type": "order",
-        "words": [
-          "Ya",
-          "he",
-          "abierto",
-          "la",
-          "ventana."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué pregunta invita a contar una experiencia?",
-        "options": [
-          "¿A qué hora abre la tienda?",
-          "¿Has dormido alguna vez en una tienda de campaña?"
-        ],
-        "answer": 1,
-        "why": "La opción elegida cumple la función comunicativa indicada."
-      },
-      {
-        "q": "¿Qué experiencia niega la persona?",
-        "options": [
-          "Haber probado el postre",
-          "Haber visitado una tienda",
-          "Haber cocinado hoy"
-        ],
-        "answer": 0,
-        "why": "Comprueba el contexto y los datos de la escena: Haber probado el postre.",
-        "type": "listen",
-        "audio": "Nunca he probado ese postre. ¿Y tú?"
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 1: Cuenta tres experiencias reales y una inventada; no digas cuál es falsa. Después responde cuándo, dónde y con quién ocurrió una de ellas.",
-        "model": "Hola, grupo. Este mes he visitado un mercado nuevo y he probado un plato de maíz. Nunca he hecho una ruta en bicicleta por la ciudad. Todavía no he comprado una bicicleta, pero puedo alquilarla. Ya he visto que hay una ruta corta cerca del río. ¿Alguien la ha hecho alguna vez? Me gustaría ir el domingo por la mañana. Si les interesa, podemos mirar el precio juntos.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Resolución final 1: Tu compañero ya conoce el museo que propones. Pregúntale por otra experiencia, reacciona con interés y acuerda una actividad nueva. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Intercambiar experiencias y decidir una actividad nueva para el fin de semana.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+  writing: {
+    task: "Escribe un correo a la coordinadora de la feria para ofrecerte como voluntario o voluntaria.",
+    context: "La feria del barrio Escalante busca voluntarios para el próximo sábado. Andrea, la coordinadora, quiere saber qué experiencia tienes y qué has hecho ya para prepararte.",
+    steps: [
+      "Saluda y di quién eres y por qué escribes.",
+      "Cuenta dos o tres experiencias útiles con _muchas veces_, _una vez_ o _nunca_.",
+      "Explica qué has hecho esta semana para prepararte y qué todavía no has hecho.",
+      "Suma ideas con _también_, _además_ y _pero_, y despídete.",
+      "Revisa cada participio: ¿-ado, -ido o uno de los ocho irregulares?",
     ],
-    "review": [
-      "En dos días, repite la misión «Lo que ya he vivido» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+    useLanguage: ["He trabajado… muchas veces", "Nunca he…", "Además, he…", "Esta semana he leído / he visto…", "Todavía no he…"],
+    model: [
+      "Hola, Andrea:",
+      "Me llamo Iván y vivo en el barrio desde niño. Quiero ayudar en la feria del sábado. He trabajado muchas veces en la cocina de un restaurante y he atendido a clientes en una tienda de ropa. Además, he hecho un curso de primeros auxilios. Nunca he montado un puesto, pero aprendo rápido. Esta semana he leído las normas y he visto el mapa. Todavía no he conocido al equipo.",
+      "Un saludo, Iván",
+    ],
+    checklist: [
+      "Usas el perfecto para experiencias y para lo que has hecho esta semana.",
+      "Los participios irregulares están bien: hecho, visto, escrito, puesto…",
+      "El participio no cambia con la persona.",
+      "Unes las ideas con también, además o pero.",
+    ],
+    words: [60, 110],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate. Prepara dos minutos, habla sin leer y escucha tu grabación.",
+    tasks: [
+      {
+        title: "El balance de tu semana",
+        prompt: "Un amigo te llama el domingo y te pregunta qué tal la semana. Cuéntale cinco cosas que has hecho y dos que todavía no has hecho.",
+        prep: ["Esta semana he…", "También he…", "Además, he…", "Todavía no he…"],
+        seconds: 75,
+        model: "Esta semana ha sido intensa. He trabajado mucho, he ido dos veces al cine y he hecho una tarta para mi madre. También he escrito a mi profesora de guitarra y he puesto orden en mi armario. Todavía no he llamado a mi abuela y todavía no he devuelto los libros de la biblioteca.",
+        selfCheck: ["Uso el perfecto con **esta semana**.", "Digo al menos tres participios irregulares.", "Uno **he** con el participio sin pausa."],
+      },
+      {
+        title: "Entrevista de voluntariado",
+        prompt: "Responde en voz alta a estas preguntas de la coordinadora: «¿Has trabajado alguna vez con niños?», «¿Has organizado algún evento?», «¿Qué no has hecho nunca y quieres probar?».",
+        prep: ["Sí, he… muchas veces / una vez.", "No, nunca he…, pero…", "Nunca he… y quiero probar."],
+        seconds: 70,
+        model: "Sí, he trabajado con niños muchas veces: he dado clases de natación en verano. He organizado una fiesta de cumpleaños para cincuenta personas. Nunca he hablado en la radio y quiero probar.",
+        selfCheck: ["Respondo cada pregunta con una experiencia.", "Uso _nunca_, _una vez_ o _muchas veces_."],
+      },
+      {
+        title: "Lo que ves ahora",
+        prompt: "Mira a tu alrededor y di cuatro resultados que ves: algo abierto, algo roto, algo que alguien ha puesto en un lugar, algo que ha cambiado hoy.",
+        prep: ["Alguien ha abierto…", "Se ha roto…", "He puesto… en…"],
+        seconds: 45,
+        selfCheck: ["Explico cada resultado con el perfecto.", "Uso **abierto**, **roto** y **puesto** sin dudar."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que repasaste esta semana y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Cuenta", task: "Empieza la clase con tres novedades de tu semana en perfecto.", phrases: ["Esta semana he…", "Hoy he…"] },
+      { move: "Pregunta", task: "Haz tres preguntas con «alguna vez» a tu profesor y apunta sus respuestas.", phrases: ["¿Has… alguna vez?", "¿Cuántas veces has…?"] },
+      { move: "Comprueba", task: "Di los ocho participios irregulares de memoria y pide que te corrijan.", phrases: ["abierto, escrito, puesto…", "¿Está bien así?"] },
+      { move: "Compara", task: "Encuentra una experiencia que tienen los dos y una que ninguno ha vivido.", phrases: ["Los dos hemos…", "Ninguno de los dos ha…"] },
+    ],
+    bring: "Trae una lista de cinco cosas que nunca has hecho y que quieres hacer este año.",
+  },
+  quiz: {
+    items: [
+      { type: "choice", q: "¿Qué frase cuenta una experiencia de vida?", options: ["Esta mañana he desayunado fruta.", "Se ha ido la luz en la cocina.", "He estado en Nicaragua tres veces."], answer: 2, why: "**Tres veces**, sin fecha: experiencia." },
+      { type: "listen", q: "¿Quién ha terminado la tarea?", audio: "Ya han terminado la tarea.", options: ["yo", "ellos", "ella"], answer: 1, why: "Se oye la **n**: _han_ = ellos." },
+      { type: "gap", q: "Mis padres nunca ___ (ver) el mar Caribe.", answers: [["han visto"]], why: "Ellos: **han** + **visto** (irregular)." },
+      { type: "gap", q: "¿Ya ___ (tú, escribir) a la dueña del piso?", answers: [["has escrito"]], why: "Tú: **has** + **escrito**." },
+      { type: "transform", source: "Pongo la mesa para la cena.", instruction: "Cuéntalo en perfecto y empieza con «Ya».", answers: ["Ya he puesto la mesa para la cena."], why: "_Poner_ → **puesto**." },
+      { type: "order", words: ["Este", "año", "hemos", "vuelto", "dos", "veces", "a", "Costa", "Rica."] },
+      { type: "error", sentence: "La semana pasada he empezado un curso de cerámica.", answers: ["Esta semana he empezado un curso de cerámica."], why: "**La semana pasada** está cerrada; con el perfecto, un tiempo abierto: **esta semana**." },
+      { type: "error", sentence: "Los niños han rompido la ventana con la pelota.", answers: ["Los niños han roto la ventana con la pelota."], why: "_Romper_ → **roto**." },
+      { type: "choice", q: "¿Cuál es el participio de «traer»?", options: ["traido", "traído", "traerado"], answer: 1, why: "Tra- + **ído**, con tilde." },
+      { type: "open", prompt: "Escribe tres frases: una novedad de hoy, una experiencia que has tenido varias veces y algo que nunca has hecho.", model: "Hoy he cocinado arroz con pollo. He viajado en avión muchas veces. Nunca he subido a una montaña.", checklist: ["Hoy + perfecto", "Experiencia con una expresión de frecuencia", "Nunca + perfecto"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Conjugar haber en presente con las seis personas y formar el perfecto.",
+      "Contar novedades de hoy, de esta semana o de este año.",
+      "Preguntar por experiencias con **alguna vez** y responder con **nunca** o **muchas veces**.",
+      "Explicar un resultado que se ve ahora.",
+      "Formar participios en -ado e -ido, también con tilde (leído, traído).",
+      "Usar sin dudar abierto, escrito, puesto, visto, vuelto, roto, dicho y hecho.",
+    ],
+    review: ["he, has, ha, hemos, habéis, han + participio que no cambia", "hoy / esta semana / alguna vez / nunca → perfecto", "abierto · escrito · puesto · visto · vuelto · roto · dicho · hecho"],
+  },
+  related: [
+    { path: "/sistema-verbal/preterito-perfecto-compuesto-indicativo", label: "Clase: Pretérito perfecto compuesto: experiencias" },
+    { path: "/gramatica/participios-frecuentes", label: "Clase: Participios regulares e irregulares frecuentes" },
+  ],
 };

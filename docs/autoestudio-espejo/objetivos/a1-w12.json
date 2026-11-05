@@ -1,0 +1,11 @@
+[
+  [12, "gram", "g025", "Conectores elementales: y, e, o, u, pero, ni", "Puedo unir ideas con y, o, pero y ni para sumar, elegir, contrastar o negar dos cosas, y cambiar y por e y o por u cuando hace falta.", ["a1.gram.g024"], { "related": ["/conecta-la-frase"] }],
+  [12, "gram", "g026", "Porque y para + infinitivo: causa y finalidad", "Puedo preguntar con por qué, dar una razón con porque + verbo conjugado, decir un objetivo con para + infinitivo y dar una opinión con creo que.", ["a1.gram.g023", "a1.gram.g017"], { "related": ["/ideas-dentro-de-ideas"] }],
+  [12, "voc", "w12-voluntariado", "Tareas y cualidades en un voluntariado", "Puedo nombrar tareas de un proyecto de voluntariado y cualidades de una persona, y decir para qué sirve cada cosa.", ["a1.gram.g026"]],
+  [12, "pron", "w12-porque-por-que", "La fuerza de por qué y porque", "Puedo distinguir y pronunciar por qué, con fuerza en qué, y porque, con fuerza en por, y unir y, e, o, u con las palabras de al lado.", []],
+  [12, "lis", "w12-entrevista-biblioteca", "Escuchar una entrevista de voluntariado", "Puedo entender las razones, las opciones, los contrastes y el horario en una entrevista breve para un voluntariado.", ["a1.gram.g025", "a1.gram.g026"]],
+  [12, "read", "w12-perfiles-voluntarios", "Leer perfiles de voluntarios", "Puedo entender en una página web breve qué hace cada voluntario, por qué y para qué.", ["a1.gram.g025", "a1.gram.g026"]],
+  [12, "wri", "w12-solicitud-voluntario", "Escribir una solicitud de voluntariado", "Puedo escribir una solicitud breve con mis razones, mis objetivos, lo que sé hacer y lo que no.", ["a1.gram.g025", "a1.gram.g026", "a1.voc.w12-voluntariado"]],
+  [12, "spk", "w12-razones-objetivos", "Explicar en voz alta mis razones", "Puedo explicar durante unos 45 segundos por qué estudio español, para qué lo uso y qué me resulta fácil o difícil.", ["a1.fun.w12-explicar-razones"]],
+  [12, "fun", "w12-explicar-razones", "Explicar razones, objetivos y preferencias", "Puedo explicar por qué y para qué hago algo, elegir entre opciones y presentar un contraste.", ["a1.gram.g025", "a1.gram.g026"]]
+]

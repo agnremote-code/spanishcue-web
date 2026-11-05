@@ -1,168 +1,384 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 11 · Autoestudio espejo de G147 (cambio de deícticos: aquí/allí, hoy/ese día) y
+ * G148 (pasiva perifrástica: ser + participio). Repaso autónomo con la reapertura ficticia de un
+ * galpón ferroviario de Ingeniero White, en Bahía Blanca. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w11: Module = {
   "id": "b2-11",
   "level": "b2",
   "week": 11,
   "kind": "core",
-  "title": "Una ciudad que se pueda habitar",
-  "subtitle": "Defender una propuesta con argumentos y límites.",
+  "title": "Dijo que allá, al día siguiente, el galpón sería reabierto",
+  "subtitle": "Repaso de los deícticos al transmitir un mensaje y de la pasiva con «ser + participio»",
   "stop": {
     "place": "Bahía Blanca",
     "country": "Argentina"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.disc.argumentacion",
-    "b2.disc.posicionamiento",
-    "b2.voc.ciudad-sostenible",
-    "b2.pron.exposicion-oral",
-    "b2.wri.ensayo-argumentativo",
-    "b2.spk.exposicion"
+    "b2.gram.g147",
+    "b2.gram.g148",
+    "b2.voc.w11-patrimonio-ferroviario",
+    "b2.pron.w11-terminaciones-participio",
+    "b2.lis.w11-redaccion-reconstruye",
+    "b2.read.w11-noticia-reapertura",
+    "b2.wri.w11-nota-boletin",
+    "b2.spk.w11-transmitir-mensaje",
+    "b2.fun.w11-aclarar-referencias",
+    "b2.disc.w11-situar-declaraciones"
   ],
-  "reviewObjectives": [
-    "b2.gram.condicionales-conectores",
-    "b2.gram.consecutivas",
-    "b2.voc.acuerdos-contratos",
-    "b2.pron.foco-solo-si",
-    "b2.fun.negociar-condiciones",
-    "b2.spk.negociacion",
-    "b2.gram.estilo-indirecto-avanzado",
-    "b2.voc.verbos-lengua",
-    "b2.pron.cita-ironia",
-    "b2.fun.resumir-declaraciones",
-    "b2.lis.rueda-prensa",
-    "b2.rev.checkpoint-2",
-    "b2.wri.informe-breve"
-  ],
-  "prerequisites": [
-    "b2-10"
-  ],
+  reviewObjectives: ["b2.gram.g145","b2.gram.g146","b2.voc.w10-playa-voluntariado","b2.pron.w10-voz-cita","b2.lis.w10-llamada-reunion","b2.read.w10-cronica-temporada","b2.wri.w10-acta-reunion","b2.spk.w10-transmitir-negociar","b2.fun.w10-transmitir-mensajes","b2.disc.w10-transmitir-con-precision","b2.rev.w10-integracion"],
+  prerequisites: ["b2-10"],
   "goal": {
-    "canDo": "Puedo defender una propuesta con argumentos y límites con razones, matices y condiciones claras.",
+    "canDo": "Puedo transmitir lo que alguien dijo en otro día y en otro lugar recalculando hoy, aquí, este, venir y traer, y contar en un registro informativo qué fue hecho y por quién con la pasiva con «ser».",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: comparar propuestas urbanas con datos limitados.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa cómo cambian las palabras de tiempo, lugar, persona y movimiento según desde dónde y cuándo cuentas.",
+      "Repasa la pasiva con «ser»: tiempos, concordancia del participio y agente con «por».",
+      "Escucha a dos periodistas de Bahía Blanca y lee la noticia de la reapertura de un galpón ferroviario.",
+      "Escribe una nota para un boletín, revísala y transmite oralmente un mensaje de otro día."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: defender una propuesta con argumentos y límites. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase viste con tu profesor cómo se trasladan las palabras de otra persona y cómo se construye la pasiva con «ser». Aquí lo repasas solo, con una redacción de Bahía Blanca que tiene que contar una reapertura días después y desde otro lugar.",
     "parts": [
       {
-        "heading": "Defender una propuesta con argumentos y límites",
+        "heading": "Recalcular el tiempo desde tu propio día",
         "body": [
-          "Una argumentación desarrolla tesis, razones, ejemplos o datos, objeción y conclusión. Por consiguiente expresa una consecuencia; en cambio contrapone; ahora bien introduce una reserva; en definitiva cierra una síntesis. Un conector no demuestra la relación: comprueba que el razonamiento la sostenga."
+          "Palabras como «hoy», «mañana», «ayer», «ahora» o «esta semana» no tienen un valor fijo: señalan un día a partir del momento en que alguien habla. Cuando cuentas lo que otra persona dijo, no las copies ni las cambies de forma mecánica. Pregúntate qué día concreto señalaban y cómo se llama ese día desde tu momento.",
+          "Si cuentas el mensaje poco después, a veces la palabra sigue igual o cambia por otra cercana («mañana» puede volverse «hoy» o «ayer»). Si ha pasado mucho tiempo, usa expresiones que miran al día de entonces: «ese día», «al día siguiente», «el día anterior», «en ese momento». Y si hay riesgo de confusión, nombra el día: «el martes»."
         ],
+        "table": {
+          "caption": "Lucas, el lunes en el puerto: «Mañana abren el galpón». ¿Cómo lo cuentas?",
+          "head": [
+            "Cuándo lo cuentas",
+            "Cómo queda",
+            "Por qué"
+          ],
+          "rows": [
+            [
+              "el mismo lunes",
+              "Dijo que mañana abren / abrían el galpón.",
+              "El martes todavía es «mañana»."
+            ],
+            [
+              "el martes",
+              "Dijo que hoy abrían el galpón.",
+              "El día anunciado es el tuyo."
+            ],
+            [
+              "el jueves",
+              "Dijo que el martes abrían el galpón.",
+              "«Ayer» o «anteayer» confunden: nombra el día."
+            ],
+            [
+              "un año después",
+              "Dijo que al día siguiente abrían el galpón.",
+              "La referencia mira al lunes de entonces."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "No está tan claro que ampliar la avenida reduzca el tráfico.",
-            "note": "Se cuestiona la afirmación."
+            "es": "La guía, en marzo: «Ahora no hay luz en el taller». → En agosto: La guía nos contó que en ese momento no había luz en el taller.",
+            "note": "«Ahora» ya no es tu ahora: «en ese momento» o «entonces»."
           },
           {
-            "es": "Es indudable que el barrio tiene más habitantes.",
-            "note": "Afirmación de certeza."
-          },
-          {
-            "es": "Hay más buses; por consiguiente, aumenta la capacidad del servicio.",
-            "note": "Consecuencia explícita."
+            "es": "El fotógrafo, el viernes: «Esta semana no puedo». → El viernes siguiente: Dijo que esa semana no podía.",
+            "note": "«Esta semana» pasa a «esa semana» cuando ya terminó."
           }
         ],
         "mistakes": [
           {
-            "wrong": "No está claro que la avenida necesita más coches.",
-            "right": "No está claro que la avenida necesite más coches.",
-            "why": "La afirmación cuestionada selecciona subjuntivo."
+            "wrong": "El lunes Lucas dijo que mañana abrían el galpón (lo cuentas el jueves).",
+            "right": "El lunes Lucas dijo que el martes abrían el galpón.",
+            "why": "El jueves, «mañana» señala el viernes: nombra el día que él quería decir."
+          },
+          {
+            "wrong": "Siempre que hay estilo indirecto, «hoy» se cambia por «aquel día».",
+            "right": "Si lo cuentas el mismo día, «hoy» se queda como está.",
+            "why": "No es una tabla de traducción: el cambio depende de cuándo cuentas."
+          }
+        ],
+        "tip": "Antes de transmitir un mensaje, escribe en el margen dos fechas: el día en que se dijo y el día en que lo cuentas. Con esas dos fechas, cada «mañana» se resuelve solo."
+      },
+      {
+        "heading": "Lugar, personas y movimiento: ¿dónde estás tú?",
+        "body": [
+          "«Aquí» y «acá» señalan el lugar de quien habla; «este» señala algo cercano a quien habla. Si tú cuentas desde otro sitio, ese lugar está lejos de ti: «allí» o «allá», «ese» o «aquel». «Aquel» suma distancia, en el espacio o en el tiempo, y por eso aparece mucho en los recuerdos. En el Río de la Plata y en gran parte de América se prefieren «acá» y «allá» en la conversación.",
+          "Los pronombres y los posesivos se ajustan a la nueva conversación: el «mi» de otra persona es «su» para ti, y el «te» que te dijeron a ti pasa a «me». Con «venir/ir» y «traer/llevar» decide desde tu posición actual: si estás en el destino, «venir» y «traer»; si no estás, «ir» y «llevar». Y si el lugar y el día coinciden con los tuyos, no cambies nada."
+        ],
+        "examples": [
+          {
+            "es": "Lucas, en el puerto: «Vení acá y traé el grabador». → Tomás, en la redacción: Me pidió que fuera allá y que le llevara el grabador.",
+            "note": "Tomás no está en el puerto: «ir» y «llevar». Lucas usa el voseo rioplatense; al transmitirlo, el verbo pasa a imperfecto de subjuntivo."
+          },
+          {
+            "es": "La guía, en el galpón: «Esta fosa la cavó mi abuelo». → Tomás, en la redacción: Dijo que esa fosa la había cavado su abuelo.",
+            "note": "«Esta» pasa a «esa» y «mi» a «su». Si «su» es ambiguo, aclara: «el abuelo de ella»."
+          },
+          {
+            "es": "Carla, en la redacción, a Tomás que está en el puerto: «Tráeme las fotos acá». → Tomás, que vuelve a la redacción: Ya te las traigo.",
+            "note": "Tomás va hacia donde está Carla, que es quien recibe: «traer» es natural porque la perspectiva es la del destino."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Desde Buenos Aires: La guía me dijo que viniera aquí el viernes (ella está en Bahía Blanca).",
+            "right": "Desde Buenos Aires: La guía me dijo que fuera allá el viernes.",
+            "why": "Tú no estás en Bahía Blanca: el destino es «allá» y el movimiento, «ir»."
+          }
+        ],
+        "tip": "Haz la prueba del mapa: marca dónde estaba quien habló y dónde estás tú. Si los dos puntos coinciden, «aquí» y «venir» se quedan; si no, cambian."
+      },
+      {
+        "heading": "Ser + participio: lo que recibe la acción va primero",
+        "body": [
+          "La pasiva con «ser» convierte en sujeto lo que recibe la acción. «La intendenta inauguró la muestra» pone en primer plano a la intendenta; «La muestra fue inaugurada por la intendenta» pone en primer plano la muestra. El verbo «ser» lleva el tiempo y concuerda en número; el participio concuerda en género y número con el sujeto.",
+          "El agente aparece con «por» solo si aporta información. Si es evidente, desconocido o no interesa, se omite: «El techo fue reparado en 2022» basta. La pasiva admite todos los tiempos, y también la forma continua «está siendo + participio», útil para procesos que siguen abiertos."
+        ],
+        "table": {
+          "caption": "La misma pasiva en distintos tiempos",
+          "head": [
+            "Tiempo de «ser»",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "pretérito",
+              "El galpón fue construido en 1907."
+            ],
+            [
+              "pretérito perfecto",
+              "Las vías han sido retiradas."
+            ],
+            [
+              "pluscuamperfecto",
+              "La grúa ya había sido vendida."
+            ],
+            [
+              "futuro",
+              "Los horarios serán anunciados a fin de mes."
+            ],
+            [
+              "presente continuo",
+              "La lista está siendo revisada por las familias."
+            ],
+            [
+              "infinitivo",
+              "Las fosas deben ser protegidas."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Los portones fueron desmontados por herreros del barrio.",
+            "note": "Agente útil: dice quién hizo el trabajo."
+          },
+          {
+            "es": "La muestra será inaugurada el martes.",
+            "note": "Sin agente: lo importante es la fecha."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Las fosas fueron conservado por los vecinos.",
+            "right": "Las fosas fueron conservadas por los vecinos.",
+            "why": "El participio concuerda con «las fosas»: femenino plural."
+          },
+          {
+            "wrong": "El galpón fue restaurado de los vecinos.",
+            "right": "El galpón fue restaurado por los vecinos.",
+            "why": "El agente de la pasiva se introduce con «por»."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Cuándo conviene la pasiva y cuándo pesa",
         "body": [
-          "El grado de certeza modifica el modo: es indudable que existe, no está tan claro que exista. Cabe pensar que introduce una inferencia prudente con indicativo. Distingue correlación y causalidad, identifica de dónde proceden los datos y explica qué cambiaría tu postura: una tesis matizada puede ser firme sin presentarse como irrefutable."
+          "La pasiva con «ser» es propia de la prensa, la historia, los informes y los documentos oficiales. En la conversación suena rígida: entre amigos se dice «abrieron el galpón» o «lo abrió la intendenta». Si el agente es importante y conocido, la activa suele ser más directa. La semana que viene comparas estas formas con la pasiva con «se».",
+          "Recuerda también la diferencia con «estar + participio»: «ser» presenta la acción («La puerta fue pintada ayer»), y «estar» presenta el resultado que se ve ahora («La puerta está pintada»). Y no construyas pasivas con la persona que recibe algo: con «dar», «regalar» o «preguntar» la persona no puede ser sujeto de la pasiva."
         ],
         "examples": [
           {
-            "es": "No está tan claro que ampliar la avenida reduzca el tráfico.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Noticia: El reloj de la estación fue reparado por un relojero jubilado.",
+            "note": "Registro informativo: la pasiva encaja."
           },
           {
-            "es": "Hay más buses; por consiguiente, aumenta la capacidad del servicio.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Conversación: ¿Viste? Arreglaron el reloj de la estación.",
+            "note": "Entre amigos: activa con sujeto general."
+          },
+          {
+            "es": "El reloj ya está arreglado: da la hora exacta.",
+            "note": "«Estar» describe el estado que resulta."
           }
-        ]
+        ],
+        "mistakes": [
+          {
+            "wrong": "Los ferroviarios fueron dados una medalla.",
+            "right": "Los ferroviarios recibieron una medalla. / A los ferroviarios les dieron una medalla.",
+            "why": "Quien recibe algo con «dar» no puede ser sujeto de la pasiva en español."
+          }
+        ],
+        "tip": "Pregúntate quién lee el texto. Si es un informe o una noticia, la pasiva da orden; si es un mensaje a un amigo, cámbiala por la activa."
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero decide desde dónde y cuándo cuentas; después elige qué va en primer plano.",
     "exercises": [
       {
-        "id": "g-contexto",
-        "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de una ciudad que se pueda habitar; justifica el modo, la forma o la combinación.",
+        "id": "b2-11-g-referencias",
+        "type": "context",
+        "prompt": "Lee quién habló, dónde y cuándo, y elige cómo lo cuenta la persona indicada.",
         "items": [
           {
-            "q": "No está tan claro que ampliar la avenida ___ el tráfico.",
-            "answers": [
-              [
-                "reduzca"
-              ]
+            "context": "Miércoles, en el puerto, la guía a Lucas: «Mañana te espero acá con la lista». Lucas lo cuenta el jueves por la mañana, en la redacción.",
+            "q": "¿Qué dice Lucas?",
+            "options": [
+              "Me dijo que mañana me esperaba acá con la lista.",
+              "Me dijo que me esperaba allá hoy con la lista.",
+              "Me dijo que me esperaba allá el día anterior con la lista."
             ],
-            "why": "Se cuestiona la afirmación."
+            "answer": 1,
+            "why": "El «mañana» del miércoles es el jueves, es decir, hoy; y Lucas ya no está en el puerto: «allá»."
           },
           {
-            "q": "Es indudable que el barrio ___ más habitantes.",
-            "answers": [
-              [
-                "tiene"
-              ]
+            "context": "Hace diez años, en Bahía Blanca, tu abuela: «Este galpón lo levantaron ingleses». Hoy lo cuentas en Córdoba.",
+            "q": "¿Qué versión respeta la distancia en el tiempo y en el espacio?",
+            "options": [
+              "Mi abuela decía que este galpón lo habían levantado ingleses.",
+              "Mi abuela decía que aquel galpón lo habían levantado ingleses.",
+              "Mi abuela decía que ese galpón lo levantarán ingleses."
             ],
-            "why": "Afirmación de certeza."
+            "answer": 1,
+            "why": "«Aquel» marca lejanía en el espacio y en el recuerdo."
           },
           {
-            "q": "Hay más buses; por ___, aumenta la capacidad del servicio.",
-            "answers": [
-              [
-                "consiguiente"
-              ]
+            "context": "Carla, en la redacción, llama a Tomás, que está en el puerto: «Tráeme las fotos antes de las seis». Tomás se lo cuenta a la guía, en el puerto.",
+            "q": "¿Qué dice Tomás?",
+            "options": [
+              "Carla me pidió que le llevara las fotos antes de las seis.",
+              "Carla me pidió que le trajera las fotos antes de las seis.",
+              "Carla me pidió que me trajera las fotos antes de las seis."
             ],
-            "why": "Consecuencia explícita."
+            "answer": 0,
+            "why": "Tomás no está en la redacción: el movimiento va hacia otro lugar, «llevar»."
+          },
+          {
+            "context": "Hoy a las nueve, en la redacción, el jefe: «Hoy cerramos a las ocho». A las once, en la misma redacción, se lo cuentas a una compañera.",
+            "q": "¿Qué haces con «hoy»?",
+            "options": [
+              "Lo cambio por «ese día».",
+              "Lo cambio por «al día siguiente».",
+              "Lo dejo igual: es el mismo día."
+            ],
+            "answer": 2,
+            "why": "Mismo día y mismo lugar: no hay nada que recalcular."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-11-g-pasiva",
+        "type": "gap",
+        "prompt": "Completa con la pasiva con «ser» en el tiempo indicado. Haz concordar el participio.",
         "items": [
           {
-            "prompt": "Texto de partida: «Quizá ampliar la vía no reduzca el tráfico.» Cuestiona expresamente la conclusión con no está tan claro que.",
-            "model": "No está tan claro que ampliar la vía reduzca el tráfico.",
+            "q": "Las locomotoras ___ (vender, pretérito) como chatarra en 1993.",
+            "answers": [
+              [
+                "fueron vendidas"
+              ]
+            ],
+            "why": "Sujeto femenino plural: «fueron vendidas»."
+          },
+          {
+            "q": "El nuevo horario ___ (publicar, futuro) en la web del centro.",
+            "answers": [
+              [
+                "será publicado"
+              ]
+            ],
+            "why": "Futuro de «ser» + participio masculino singular."
+          },
+          {
+            "q": "Hasta ahora, la muestra ___ (visitar, pretérito perfecto) por dos mil personas.",
+            "answers": [
+              [
+                "ha sido visitada"
+              ]
+            ],
+            "why": "«Hasta ahora» pide el perfecto: «ha sido visitada»."
+          },
+          {
+            "q": "Cuando llegamos, los planos originales ya ___ (encontrar, pluscuamperfecto) en un archivo de Rosario.",
+            "answers": [
+              [
+                "habían sido encontrados"
+              ]
+            ],
+            "why": "Acción anterior a otra pasada, sujeto masculino plural."
+          },
+          {
+            "q": "En este momento, las fotos antiguas ___ (digitalizar, presente continuo) por un equipo de la universidad.",
+            "answers": [
+              [
+                "están siendo digitalizadas"
+              ]
+            ],
+            "why": "Proceso abierto: «están siendo» + participio femenino plural."
+          },
+          {
+            "q": "Según el reglamento, los objetos de la vitrina no pueden ___ (tocar) por el público.",
+            "answers": [
+              [
+                "ser tocados"
+              ]
+            ],
+            "why": "Infinitivo pasivo después de «poder»: «ser tocados»."
+          }
+        ]
+      },
+      {
+        "id": "b2-11-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida según la consigna. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: Lunes, en Ingeniero White, la guía a Lucas: «Mañana vengan acá temprano y traigan linternas, porque este galpón no tiene luz». Cuéntalo el viernes desde la redacción del centro.",
+            "model": "El lunes la guía le pidió a Lucas que el martes fueran allá temprano y que llevaran linternas, porque ese galpón no tenía luz.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Cambio «mañana» por el día concreto y «acá» por «allá».",
+              "Uso «ir» y «llevar» porque no estoy en el galpón.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «La medida tiene costes. Aun así, la defiendo como prueba.» Usa una concesión afirmada.",
-            "model": "Aunque la medida tiene costes, la defiendo como prueba.",
+            "prompt": "Texto de partida: Hace un año, la arquitecta, en la obra: «Ahora mi equipo está midiendo estas paredes». Cuéntalo hoy en una entrevista en otra ciudad.",
+            "model": "La arquitecta contó que en aquel momento su equipo estaba midiendo aquellas paredes.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Ajusto «ahora», «mi» y «estas» a mi momento y a mi lugar.",
+              "Mantengo el sentido de acción en curso.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «La encuesta es limitada. Por eso, debemos ampliar la observación.» Sustituye por eso por un conector formal equivalente.",
-            "model": "La encuesta es limitada; por consiguiente, debemos ampliar la observación.",
+            "prompt": "Texto de partida: «Una cooperativa de herreros restauró los portones en 2023». Escríbelo para la placa del edificio, con la pasiva con «ser» y el agente.",
+            "model": "Estos portones fueron restaurados en 2023 por una cooperativa de herreros.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Pongo «los portones» como sujeto y hago concordar el participio.",
+              "Introduzco el agente con «por».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «Van a anunciar los horarios de invierno a fin de mes; de momento, unos voluntarios revisan la lista de ferroviarios». Pásalo a un comunicado formal sin nombrar a quién anuncia.",
+            "model": "Los horarios de invierno serán anunciados a fin de mes. Mientras tanto, la lista de ferroviarios está siendo revisada por un grupo de voluntarios.",
+            "checklist": [
+              "Uso el futuro pasivo sin agente para el anuncio.",
+              "Uso «está siendo + participio» para el proceso abierto.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -170,282 +386,355 @@ export const b2w11: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para hablar de un edificio que recupera su vida y de cómo lo cuenta la prensa. Apréndelas en bloque.",
     "groups": [
       {
-        "title": "Defender una propuesta con argumentos y límites",
+        "title": "Recuperar un edificio",
         "items": [
           {
-            "es": "redistribuir el espacio",
-            "note": "cambiar el reparto de una superficie"
+            "es": "poner en valor un edificio",
+            "note": "recuperarlo y darle un uso que muestre su importancia"
           },
           {
-            "es": "reducir desplazamientos",
-            "note": "disminuir viajes necesarios"
+            "es": "el galpón",
+            "note": "en el Cono Sur, edificio amplio de techo alto para talleres o depósitos"
           },
           {
-            "es": "priorizar peatones",
-            "note": "dar preferencia a quien camina"
+            "es": "estar a cargo de la obra",
+            "note": "dirigir los trabajos de reforma"
           },
           {
-            "es": "contener los alquileres",
-            "note": "limitar su aumento"
+            "es": "el patrimonio industrial",
+            "note": "fábricas, talleres y máquinas con valor histórico"
           },
           {
-            "es": "mejorar la conectividad",
-            "note": "facilitar conexiones entre lugares"
+            "es": "desmontar y volver a colocar",
+            "note": "quitar una pieza, arreglarla y ponerla otra vez"
+          }
+        ]
+      },
+      {
+        "title": "Contarlo en la prensa",
+        "items": [
+          {
+            "es": "el acto de reapertura",
+            "note": "la ceremonia con la que un lugar vuelve a abrir"
           },
           {
-            "es": "sostener una tesis",
-            "note": "defender una idea central"
+            "es": "citar textualmente",
+            "note": "reproducir las palabras exactas, entre comillas"
           },
           {
-            "es": "rebatir una objeción",
-            "note": "responder a una crítica"
+            "es": "según fuentes de la obra",
+            "note": "fórmula para atribuir una información"
           },
           {
-            "es": "ponderar efectos",
-            "note": "comparar consecuencias distintas"
+            "es": "el comunicado de prensa",
+            "note": "texto oficial que una institución envía a los medios"
+          },
+          {
+            "es": "cerrar la nota",
+            "note": "en la jerga periodística, terminarla para publicarla"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-11-v-relacion",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para defender una propuesta con argumentos y límites con su significado.",
+        "prompt": "Relaciona cada expresión con la situación de la redacción o de la obra en la que encaja.",
         "pairs": [
           {
-            "left": "redistribuir el espacio",
-            "right": "cambiar el reparto de una superficie"
+            "left": "estar a cargo de la obra",
+            "right": "Paula Rivas firma los planos y decide los materiales."
           },
           {
-            "left": "reducir desplazamientos",
-            "right": "disminuir viajes necesarios"
+            "left": "citar textualmente",
+            "right": "Carla pone entre comillas la frase exacta de la guía."
           },
           {
-            "left": "priorizar peatones",
-            "right": "dar preferencia a quien camina"
+            "left": "el comunicado de prensa",
+            "right": "El municipio envía a los diarios el anuncio de la inauguración."
           },
           {
-            "left": "contener los alquileres",
-            "right": "limitar su aumento"
+            "left": "desmontar y volver a colocar",
+            "right": "Los herreros quitan los portones, los limpian y los cuelgan otra vez."
           },
           {
-            "left": "mejorar la conectividad",
-            "right": "facilitar conexiones entre lugares"
+            "left": "cerrar la nota",
+            "right": "A las diez de la noche el texto tiene que estar listo para publicar."
           },
           {
-            "left": "sostener una tesis",
-            "right": "defender una idea central"
-          },
-          {
-            "left": "rebatir una objeción",
-            "right": "responder a una crítica"
-          },
-          {
-            "left": "ponderar efectos",
-            "right": "comparar consecuencias distintas"
+            "left": "poner en valor un edificio",
+            "right": "El viejo taller se convierte en un centro cultural que cuenta su historia."
           }
-        ]
+        ],
+        "why": "Cada expresión corresponde a una acción concreta de la obra o de la redacción."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Organiza una exposición con pausas antes de la tesis, la objeción y la conclusión; usa énfasis selectivo, sin subir el volumen continuamente.",
+    "focus": "Oír el género y el número del participio y unir «ser» con el participio sin pausa.",
     "explanation": [
-      "Organiza una exposición con pausas antes de la tesis, la objeción y la conclusión; usa énfasis selectivo, sin subir el volumen continuamente.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "En la pasiva, la información clave está al final del participio: «restaurado», «restaurada», «restaurados», «restauradas». Si no pronuncias con claridad la vocal final y la «-s», tu oyente no sabe a qué se refiere el verbo. En la lectura de noticias la «-d-» de «-ado» se pronuncia suave pero se oye; en la conversación rápida de muchas zonas se debilita.",
+      "Entre «fue», «ha sido» o «será» y un participio que empieza por vocal hay sinalefa: las dos vocales se unen en una sílaba, «fueinaugurada», «hasidoabierto». No hagas pausa en el medio. Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "No está tan claro que ampliar la avenida reduzca el tráfico."
+        "es": "La muestra fue inaugurada el martes.",
+        "note": "fue_i-nau-gu-RA-da: sinalefa y final en «-a»."
       },
       {
-        "es": "Es indudable que el barrio tiene más habitantes."
+        "es": "Los portones fueron restaurados.",
+        "note": "res-tau-RA-dos: la «-s» final marca el plural."
       },
       {
-        "es": "Hay más buses; por consiguiente, aumenta la capacidad del servicio."
+        "es": "El archivo ha sido abierto al público.",
+        "note": "ha-si-do_a-BIER-to: sin pausa entre «sido» y «abierto»."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-11-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y elige la forma del participio que oyes. Fíjate en la vocal final y en la «-s».",
       "items": [
         {
-          "q": "En la muestra 1 de una ciudad que se pueda habitar, ¿qué fragmento se oye?",
+          "q": "¿Qué forma oyes en la frase sobre la grúa?",
           "options": [
-            "redujo",
-            "reduzca",
-            "reduce"
+            "reparado",
+            "reparada",
+            "reparadas"
           ],
           "answer": 1,
-          "why": "Se cuestiona la afirmación.",
-          "audio": "No está tan claro que ampliar la avenida reduzca el tráfico.",
-          "voice": "es-ES-f"
+          "audio": "La grúa del muelle fue reparada el año pasado.",
+          "voice": "es-AR-f",
+          "why": "«La grúa»: femenino singular."
         },
         {
-          "q": "En la muestra 2 de una ciudad que se pueda habitar, ¿qué fragmento se oye?",
+          "q": "¿Qué forma oyes en la frase sobre los vagones?",
           "options": [
-            "tiene",
-            "tenga",
-            "tenía"
+            "pintado",
+            "pintados",
+            "pintadas"
+          ],
+          "answer": 1,
+          "audio": "Los vagones serán pintados con los colores originales.",
+          "voice": "es-AR-m",
+          "why": "«Los vagones»: masculino plural."
+        },
+        {
+          "q": "¿Qué forma oyes en la frase sobre las fotos?",
+          "options": [
+            "donada",
+            "donado",
+            "donadas"
+          ],
+          "answer": 2,
+          "audio": "Las fotos fueron donadas por la familia de un maquinista.",
+          "voice": "es-AR-f",
+          "why": "«Las fotos»: femenino plural, aunque la palabra termina en «-o»."
+        },
+        {
+          "q": "¿Qué forma oyes en la frase sobre el reloj?",
+          "options": [
+            "instalado",
+            "instalada"
           ],
           "answer": 0,
-          "why": "Afirmación de certeza.",
-          "audio": "Es indudable que el barrio tiene más habitantes.",
-          "voice": "es-ES-f"
+          "audio": "El reloj ha sido instalado otra vez en la fachada.",
+          "voice": "es-AR-m",
+          "why": "«El reloj»: masculino singular."
         }
       ]
     },
     "produce": [
       {
-        "text": "No está tan claro que ampliar la avenida reduzca el tráfico.",
-        "tip": "Organiza una exposición con pausas antes de la tesis, la objeción y la conclusión; usa énfasis selectivo, sin subir el volumen continuamente.",
-        "voice": "es-ES-f"
+        "text": "La muestra fue inaugurada por la intendenta.",
+        "tip": "Une «fue» e «inaugurada» en un solo impulso.",
+        "voice": "es-AR-f"
       },
       {
-        "text": "Es indudable que el barrio tiene más habitantes.",
-        "tip": "Organiza una exposición con pausas antes de la tesis, la objeción y la conclusión; usa énfasis selectivo, sin subir el volumen continuamente.",
-        "voice": "es-ES-f"
+        "text": "Las fosas fueron conservadas por los vecinos.",
+        "tip": "Marca bien la «-as» final de «conservadas».",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Hay más buses; por consiguiente, aumenta la capacidad del servicio.",
-        "tip": "Organiza una exposición con pausas antes de la tesis, la objeción y la conclusión; usa énfasis selectivo, sin subir el volumen continuamente.",
-        "voice": "es-ES-f"
+        "text": "Dijo que fuéramos allá al día siguiente.",
+        "tip": "Fuerza en «fué» y en «llá»; «al día siguiente» va seguido, sin pausa.",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "El archivo ha sido abierto al público.",
+        "tip": "Sinalefa entre «sido» y «abierto».",
+        "voice": "es-AR-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Una ciudad que se pueda habitar",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "Cerrar la nota sin el cronista",
+    "context": "Es jueves en la redacción de un diario digital de Bahía Blanca. Lucas, el cronista, está enfermo, y Carla, la editora, y Tomás, el fotógrafo, tienen que terminar la nota sobre la reapertura de un galpón ferroviario en Ingeniero White, el barrio del puerto. Reconstruyen lo que Lucas dijo el lunes. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Moderadora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ca",
+        "name": "Carla",
+        "voice": "es-AR-f",
+        "role": "Editora del diario"
       },
       {
-        "id": "s2",
-        "name": "Comerciante",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Urbanista",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "to",
+        "name": "Tomás",
+        "voice": "es-AR-m",
+        "role": "Fotógrafo, habló con Lucas el lunes"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Tenemos tres propuestas para la avenida: mantenerla como está, reservar un carril para autobuses o cerrar el tráfico los fines de semana. Cada participante debe explicar qué problema resuelve su opción y qué dificultad reconoce, sin limitarse a defender su interés inmediato."
+        "speaker": "ca",
+        "text": "Tomás, Lucas sigue con fiebre y la nota del galpón sale el sábado, así que la cerramos nosotros. El lunes él te llamó desde el puerto, ¿no? ¿Qué te dijo exactamente?"
       },
       {
-        "speaker": "s2",
-        "text": "Prefiero empezar por los fines de semana. Me preocupa la carga de mercancías y no está tan claro que un carril permanente mejore las ventas. Aun así, reconozco que las aceras actuales resultan estrechas y que muchas personas evitan caminar por aquí."
+        "speaker": "to",
+        "text": "Me llamó desde White a eso de las once. Me dijo que en ese momento estaba dentro del galpón con la guía y que allí todavía olía a grasa de locomotora. Me pidió que fuera para allá al día siguiente con la cámara grande y que le llevara el grabador, porque se lo había olvidado acá."
       },
       {
-        "speaker": "s3",
-        "text": "Yo defiendo el carril permanente con una prueba de seis meses. El autobús pierde tiempo precisamente cuando más gente viaja. Si solo cambiamos los fines de semana, no comprobaremos ese efecto. Ahora bien, habría que reservar zonas de carga y medir el acceso desde otros barrios."
+        "speaker": "ca",
+        "text": "O sea que fuiste el martes. ¿Y qué contó él del edificio?"
       },
       {
-        "speaker": "s1",
-        "text": "Disponemos de una encuesta ficticia de cien respuestas: cuarenta personas llegan andando, treinta en autobús, veinte en coche y diez de otra forma. Se recogió en la avenida un sábado. ¿Hasta dónde podemos utilizar estos datos para decidir sobre los días laborables?"
+        "speaker": "to",
+        "text": "Que el galpón fue construido en 1907 por una compañía británica y que fue cerrado a principios de los noventa. La guía le explicó que las vías del patio fueron levantadas antes de la privatización, pero que las fosas de reparación fueron conservadas por los propios vecinos, que las limpiaban cada primavera."
       },
       {
-        "speaker": "s2",
-        "text": "Sirven para formular preguntas, no para describir toda la semana. Quizá el sábado vengan más familias caminando. Pediría repetir la observación en varios horarios y hablar con negocios que reciben paquetes grandes. No quiero convertir una impresión mía en una regla general."
+        "speaker": "ca",
+        "text": "Eso es oro. ¿Y lo de la inauguración? En el comunicado dice «mañana», pero el comunicado es del lunes."
       },
       {
-        "speaker": "s3",
-        "text": "Coincido. Podemos mantener mi propuesta como hipótesis de trabajo y acordar indicadores antes de probarla. Lo decisivo es que la evaluación no cambie de criterio según nos gusten o no los resultados. Si falla una conexión, habrá que corregirla, no ocultarla."
+        "speaker": "to",
+        "text": "Claro, cuidado con eso. Aquel «mañana» era el martes, o sea, anteayer. La muestra fue inaugurada el martes a la tarde por la intendenta; yo estaba ahí y saqué las fotos. Lo que todavía no fue decidido es el horario de invierno."
+      },
+      {
+        "speaker": "ca",
+        "text": "Perfecto. Entonces no escribimos «hoy se inaugura», escribimos «fue inaugurada el martes». ¿Algo más que haya dicho Lucas?"
+      },
+      {
+        "speaker": "to",
+        "text": "Sí. Dijo que la guía le había prometido una lista de los ferroviarios que trabajaron en aquel taller, y que le había pedido que volviera allá el viernes a buscarla."
+      },
+      {
+        "speaker": "ca",
+        "text": "El viernes es mañana. Si Lucas no puede, vas tú y la traes acá. Y la frase de la guía, cítala textual, entre comillas, con el día en que la dijo."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la conversación entera. ¿Qué tienen que hacer Carla y Tomás y por qué?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-11-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Bahía Blanca?",
+          "prompt": "Elige la respuesta que resume la conversación.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Una ciudad que se pueda habitar?",
+              "q": "¿Cuál es la situación?",
               "options": [
-                "Contar una única versión sin permitir preguntas.",
-                "Comparar propuestas urbanas con datos limitados",
-                "Leer una lista de instrucciones sin responder a nadie."
+                "Preparan juntos una visita guiada al puerto.",
+                "Discuten si vale la pena publicar la nota.",
+                "Terminan una nota sin el cronista y reconstruyen lo que él contó."
               ],
-              "answer": 1,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
+              "answer": 2,
+              "why": "Lucas está enfermo y ellos cierran la nota con lo que él dijo el lunes."
             },
             {
-              "q": "¿Qué relación predomina entre las voces en «Una ciudad que se pueda habitar»?",
+              "q": "¿Qué problema detecta Carla en el comunicado?",
               "options": [
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio.",
-                "Ninguna intervención tiene relación con la anterior."
+                "Que su «mañana» ya no sirve para la nota.",
+                "Que el nombre de la intendenta está mal escrito.",
+                "Que la inauguración fue suspendida."
               ],
               "answer": 0,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "El comunicado es del lunes; su «mañana» era el martes."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-11-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Una ciudad que se pueda habitar».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Qué limita la encuesta del audio?",
+              "q": "¿Qué le pidió Lucas a Tomás el lunes?",
               "options": [
-                "Se recogió un sábado en un único lugar.",
-                "Tiene respuestas exclusivamente de conductores.",
-                "No permite formular ninguna pregunta."
+                "Que fuera al puerto el martes y le llevara el grabador.",
+                "Que le mandara las fotos de la inauguración.",
+                "Que hablara con la intendenta."
               ],
               "answer": 0,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
+              "why": "«Me pidió que fuera para allá al día siguiente… y que le llevara el grabador»."
             },
             {
-              "q": "¿Qué frase aparece en la intervención inicial de «Una ciudad que se pueda habitar»?",
+              "q": "¿Quiénes conservaron las fosas de reparación?",
               "options": [
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión.",
-                "Tenemos tres propuestas para la avenida: mantenerla como está, reservar un carril para autobuses o cerrar el tráfico los fines de semana."
+                "La compañía británica.",
+                "Los vecinos del barrio.",
+                "El municipio."
+              ],
+              "answer": 1,
+              "why": "«Fueron conservadas por los propios vecinos»."
+            },
+            {
+              "q": "¿Qué tiene que hacer alguien el viernes?",
+              "options": [
+                "Publicar la nota.",
+                "Fotografiar el horario de invierno.",
+                "Ir a buscar la lista de ferroviarios."
               ],
               "answer": 2,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "La guía pidió que Lucas volviera el viernes a buscar la lista."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-11-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento según lo que muestra.",
+          "categories": [
+            "Referencia recalculada desde otro día o lugar",
+            "Pasiva con «ser»"
+          ],
           "items": [
             {
-              "prompt": "En «Una ciudad que se pueda habitar», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Coincido. Podemos mantener mi propuesta como hipótesis de trabajo y acordar indicadores antes de probarla. Lo decisivo es que la evaluación no cambie de criterio según nos gusten o no los resultados. Si falla una conexión, habrá que corregirla, no ocultarla.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "me pidió que fuera para allá al día siguiente",
+              "cat": 0,
+              "why": "«Acá» del puerto pasa a «allá» y «mañana» a «al día siguiente»."
+            },
+            {
+              "text": "el galpón fue construido en 1907",
+              "cat": 1,
+              "why": "«Ser» en pretérito + participio que concuerda con «el galpón»."
+            },
+            {
+              "text": "Aquel «mañana» era el martes",
+              "cat": 0,
+              "why": "Tomás recalcula el día desde el jueves."
+            },
+            {
+              "text": "las fosas de reparación fueron conservadas por los propios vecinos",
+              "cat": 1,
+              "why": "Pasiva con agente introducido por «por»."
+            },
+            {
+              "text": "vas tú y la traes acá",
+              "cat": 0,
+              "why": "Carla está en la redacción, el destino: «traer» y «acá»."
             }
           ]
         }
@@ -453,205 +742,259 @@ export const b2w11: Module = {
     ]
   },
   "reading": {
-    "title": "Una ciudad que se pueda habitar: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "El galpón de locomotoras de White vuelve a abrir sus portones",
+    "genre": "Noticia de un diario digital regional",
+    "frame": "Texto original de SpanishCue escrito como noticia del diario ficticio «La Ría Digital». El edificio y las personas son inventados.",
     "text": [
-      "Convertir una avenida en un corredor con más autobuses y menos aparcamiento ha dividido al barrio. El comercio teme perder clientes; las asociaciones peatonales esperan ganar espacio; quienes viven lejos preguntan cómo llegarán si no mejora la frecuencia del transporte. La discusión suele reducirse a elegir entre coches y personas, una fórmula eficaz para un cartel, pero insuficiente para diseñar una política. Dentro de cada grupo hay necesidades distintas, y una misma persona puede caminar, conducir y utilizar el autobús en días diferentes.",
-      "Mi propuesta es reservar un carril para el transporte colectivo y ampliar las aceras mediante una prueba de seis meses. La medida debería acompañarse de zonas de carga con horarios claros y de una evaluación del acceso desde los barrios periféricos. Es indudable que el espacio es limitado; no está tan claro que conservar todas las plazas actuales sea la forma más equitativa de repartirlo. Un vehículo estacionado durante ocho horas ocupa un recurso público que otras personas solo necesitan unos minutos para desplazarse.",
-      "La objeción comercial merece atención. Algunos negocios dependen de entregas frecuentes o de clientes con movilidad reducida. Ahora bien, de ahí no se deduce que cualquier reducción de aparcamiento disminuya necesariamente las ventas. Habría que comparar datos anteriores y posteriores, distinguir tipos de comercio y observar si cambian los horarios de compra. Una encuesta voluntaria en redes puede aportar experiencias, pero no representa por sí sola a todas las personas usuarias de la avenida.",
-      "La prueba debería poder modificarse. Si aumenta de forma sostenida el tiempo de acceso desde la periferia, habría que reforzar las conexiones antes de ampliar el proyecto. Si las ventas bajan, sería necesario estudiar causas y no atribuir todo cambio al carril. En definitiva, defender una ciudad más habitable exige algo más que una intención compartida: requiere criterios públicos para valorar resultados y disposición a corregir una decisión sin convertir cada ajuste en una derrota política."
+      "El galpón de locomotoras de Ingeniero White, construido en 1907 y cerrado durante casi treinta años, fue reabierto el martes como centro cultural. La muestra inaugural, dedicada a los ferroviarios del puerto, fue presentada por la intendenta ante unas cuatrocientas personas, muchas de ellas hijos y nietos de quienes trabajaron en aquel taller.",
+      "La recuperación no fue rápida. El techo fue reparado en 2022 con fondos provinciales; los portones de hierro fueron desmontados, limpiados y vueltos a colocar por una cooperativa de herreros de la zona; y las fosas donde se revisaban las máquinas fueron cubiertas solo en parte, para que el público pudiera ver cómo eran. Según la arquitecta a cargo de la obra, Paula Rivas, cada decisión fue discutida con la asociación de vecinos, que durante años había cuidado el edificio por su cuenta.",
+      "Durante el acto, Rivas recordó que la primera vez que entró al edificio, en 2019, allí no había luz ni agua y aquel techo dejaba pasar la lluvia. «Ese día pensé que no se podía salvar», admitió. Néstor Salas, uno de los herreros, contó que su padre había empezado a trabajar en ese mismo galpón a los quince años y que esa tarde, por primera vez, había sentido que la historia de su familia estaba en un museo y no en un cajón.",
+      "La guía del centro, Mirta Ojeda, anunció el martes que al día siguiente comenzarían las visitas escolares y que la semana siguiente sería publicada en la web una lista con los nombres de los ferroviarios del taller. El listado todavía no fue publicado: según explicó ayer a este diario, está siendo revisado por las familias, que pidieron corregir algunos apellidos antes de que salga.",
+      "Las visitas son gratuitas. Los horarios de invierno serán anunciados a fin de mes; hasta entonces, el centro abre de miércoles a domingo, de 14 a 19. Quien tenga fotos o documentos del taller puede llevarlos a la entrada: serán digitalizados y devueltos a sus dueños en el día. Según Ojeda, el objetivo es que la muestra no quede cerrada, sino que crezca cada mes con lo que traigan los vecinos, porque «este galpón fue levantado por ellos, y ellos tienen que seguir contándolo»."
     ],
     "glossary": [
       {
-        "es": "redistribuir el espacio",
-        "note": "cambiar el reparto de una superficie"
+        "es": "la fosa",
+        "note": "hueco en el suelo de un taller para trabajar debajo de un vehículo"
       },
       {
-        "es": "reducir desplazamientos",
-        "note": "disminuir viajes necesarios"
+        "es": "la intendenta",
+        "note": "en Argentina, la persona que gobierna un municipio"
       },
       {
-        "es": "priorizar peatones",
-        "note": "dar preferencia a quien camina"
+        "es": "por su cuenta",
+        "note": "sin ayuda de otros"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-11-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la noticia.",
         "items": [
           {
-            "q": "¿Qué distingue la tesis del artículo?",
+            "q": "¿Quién volvió a colocar los portones?",
             "options": [
-              "Equipara encuesta voluntaria y población completa.",
-              "Defiende una prueba con criterios de revisión explícitos.",
-              "Niega cualquier perjuicio posible."
+              "La intendenta.",
+              "Una cooperativa de herreros de la zona.",
+              "La asociación de vecinos."
             ],
             "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«Fueron desmontados, limpiados y vueltos a colocar por una cooperativa de herreros»."
           },
           {
-            "q": "¿Qué significa ahora bien en el argumento?",
+            "q": "¿Por qué las fosas no fueron cubiertas del todo?",
             "options": [
-              "Introduce una reserva que limita la conclusión anterior.",
-              "Añade una fecha exacta.",
-              "Cierra definitivamente la discusión."
+              "Para que el público viera cómo eran.",
+              "Porque no había fondos suficientes.",
+              "Porque los vecinos se opusieron."
             ],
             "answer": 0,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«Para que el público pudiera ver cómo eran»."
+          },
+          {
+            "q": "¿Qué pasó con la lista de ferroviarios?",
+            "options": [
+              "Fue publicada el miércoles.",
+              "Fue perdida durante la obra.",
+              "Todavía no fue publicada porque la revisan las familias."
+            ],
+            "answer": 2,
+            "why": "«Todavía no fue publicado… está siendo revisado por las familias»."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-11-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «Una ciudad que se pueda habitar», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Propongo reservar un carril para autobuses durante seis meses. La medida permitiría evaluar si aumenta la capacidad de desplazamiento sin ampliar la avenida. Reconozco que algunos comercios necesitan acceso para cargas; por ello, el ensayo debería incluir zonas y horarios específicos. No está tan claro que conservar cada plaza de aparcamiento beneficie al conjunto del barrio. En definitiva, apoyaría la prueba siempre que se publiquen sus resultados y se corrijan las dificultades de conexión que aparezcan.",
+            "prompt": "La noticia se publica el jueves. Explica en 60–80 palabras qué días concretos señalan «al día siguiente» y «la semana siguiente» del cuarto párrafo, y por qué el diario no escribe «mañana». Comenta también qué aporta el agente en una de las pasivas del segundo párrafo.",
+            "model": "La guía habló el martes, así que «al día siguiente» es el miércoles y «la semana siguiente», la semana próxima a ese martes. El diario no usa «mañana» porque desde el jueves señalaría el viernes. En «fueron vueltos a colocar por una cooperativa de herreros», el agente importa: reconoce el trabajo de personas del barrio, y Néstor Salas, uno de ellos, aparece después en la noticia.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Calculo los días desde el martes y desde el jueves.",
+              "Explico por qué el agente aporta información.",
+              "Cito una frase literal del texto."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la noticia separa los hechos de las declaraciones y sitúa cada una en su día.",
       "items": [
         {
-          "quote": "Convertir una avenida en un corredor con más autobuses y menos aparcamiento ha dividido al barrio.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "los portones de hierro fueron desmontados, limpiados y vueltos a colocar por una cooperativa de herreros",
+          "note": "Tres participios en serie comparten el mismo «fueron» y concuerdan con «los portones»."
         },
         {
-          "quote": "En definitiva, defender una ciudad más habitable exige algo más que una intención compartida: requiere criterios públicos para valorar resultados y disposición a corregir una decisión sin convertir cada ajuste en una derrota política.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "allí no había luz ni agua y aquel techo dejaba pasar la lluvia",
+          "note": "La arquitecta habla en el galpón, pero recuerda 2019: «aquel» marca distancia en el tiempo."
+        },
+        {
+          "quote": "está siendo revisado por las familias",
+          "note": "Pasiva continua: el proceso sigue abierto cuando se publica la noticia."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Defiende una medida de movilidad usando la concesión de la semana 6 y el alcance de las pruebas de la noticia de la 9.",
+    "intro": "Combina las dos clases: recalcula las referencias y elige la pasiva cuando el texto lo pide.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-11-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Bahía Blanca y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir las frases de la nota.",
         "items": [
           {
             "words": [
-              "En",
-              "«Una ciudad que se pueda habitar»,",
-              "No",
-              "está",
-              "tan",
-              "claro",
+              "La",
+              "guía",
+              "nos",
+              "pidió",
               "que",
-              "ampliar",
-              "la",
-              "avenida",
-              "reduzca",
-              "el",
-              "tráfico."
+              "lleváramos",
+              "linternas",
+              "al",
+              "galpón."
             ],
-            "why": "Se cuestiona la afirmación."
+            "why": "«Llevar»: quien cuenta no está en el galpón."
           },
           {
             "words": [
-              "En",
-              "«Una ciudad que se pueda habitar»,",
-              "Hay",
-              "más",
-              "buses;",
-              "por",
-              "consiguiente,",
-              "aumenta",
+              "Las",
+              "fotos",
+              "antiguas",
+              "serán",
+              "devueltas",
+              "a",
+              "sus",
+              "dueños",
+              "en",
+              "el",
+              "día."
+            ],
+            "why": "Pasiva en futuro con participio femenino plural."
+          },
+          {
+            "words": [
+              "Dijo",
+              "que",
+              "aquella",
+              "tarde",
+              "había",
+              "sido",
               "la",
-              "capacidad",
-              "del",
-              "servicio."
+              "más",
+              "larga",
+              "de",
+              "su",
+              "vida."
             ],
-            "why": "Consecuencia explícita."
+            "why": "«Esta tarde» pasa a «aquella tarde» en el recuerdo."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-11-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de una ciudad que se pueda habitar; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "No está claro que la avenida necesita más coches.",
+            "sentence": "Las vías del patio fueron levantados en 1991.",
             "answers": [
-              "No está claro que la avenida necesite más coches."
+              "Las vías del patio fueron levantadas en 1991."
             ],
-            "why": "La afirmación cuestionada selecciona subjuntivo."
+            "why": "El participio concuerda con «las vías»: femenino plural."
           },
           {
-            "sentence": "Es indudable que la avenida tenga poco espacio.",
+            "sentence": "Hace dos años, en el puerto, me dijo que este galpón era de su abuelo.",
             "answers": [
-              "Es indudable que la avenida tiene poco espacio."
+              "Hace dos años, en el puerto, me dijo que ese galpón era de su abuelo.",
+              "Hace dos años, en el puerto, me dijo que aquel galpón era de su abuelo."
             ],
-            "why": "La afirmación de certeza selecciona indicativo."
+            "why": "Lo cuentas lejos en el tiempo: «este» pasa a «ese» o «aquel»."
           },
           {
-            "sentence": "Por consiguiente de, debemos ampliar la muestra.",
+            "sentence": "El techo fue reparado de una empresa de Neuquén.",
             "answers": [
-              "Por consiguiente, debemos ampliar la muestra."
+              "El techo fue reparado por una empresa de Neuquén."
             ],
-            "why": "El conector no lleva de."
+            "why": "El agente de la pasiva va con «por»."
+          },
+          {
+            "sentence": "Desde la redacción: Lucas me pidió que viniera al puerto y le trajera el grabador.",
+            "answers": [
+              "Desde la redacción: Lucas me pidió que fuera al puerto y le llevara el grabador."
+            ],
+            "why": "Quien cuenta está en la redacción, no en el puerto: «ir» y «llevar»."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-11-x-registro",
+        "type": "classify",
+        "prompt": "¿Dónde encaja mejor cada frase? Clasifícala según el texto en que la escribirías.",
+        "categories": [
+          "Noticia o informe",
+          "Mensaje a un amigo"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre defender una propuesta con argumentos y límites con una postura y una razón; adapta el destinatario.",
-            "model": "Propongo reservar un carril para autobuses durante seis meses.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "El edificio fue declarado patrimonio municipal en 2015.",
+            "cat": 0,
+            "why": "Pasiva con «ser» y dato formal."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Una ciudad que se pueda habitar» sin debilitarla, y responde con una condición verificable.",
-            "model": "Propongo reservar un carril para autobuses durante seis meses. La medida permitiría evaluar si aumenta la capacidad de desplazamiento sin ampliar la avenida. Reconozco que algunos comercios necesitan acceso para cargas; por ello, el ensayo debería incluir zonas y horarios específicos. No está tan claro que conservar cada plaza de aparcamiento beneficie al conjunto del barrio. En definitiva, apoyaría la prueba siempre que se publiquen sus resultados y se corrijan las dificultades de conexión que aparezcan.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "¿Viste que al final abrieron el galpón?",
+            "cat": 1,
+            "why": "Activa con sujeto general, tono de conversación."
+          },
+          {
+            "text": "Las obras fueron financiadas por el gobierno provincial.",
+            "cat": 0,
+            "why": "El agente aporta información: estilo de informe."
+          },
+          {
+            "text": "Me encantó cómo dejaron los portones.",
+            "cat": 1,
+            "why": "Valoración personal con activa."
+          },
+          {
+            "text": "La lista será publicada cuando las familias la aprueben.",
+            "cat": 0,
+            "why": "Anuncio formal en pasiva."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-11-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 8 sin abrir su explicación y aplica sus recursos a «Una ciudad que se pueda habitar»: Conectores condicionales; Oraciones consecutivas; Acuerdos, contratos y condiciones; Foco en la condición; Negociar condiciones; Negociación breve. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar siempre que, con tal de que, a no ser que, en caso de que y salvo que. Puedo expresar consecuencia con tan… que, tanto que, de modo que y así que. Puedo negociar cláusulas, plazos, garantías y penalizaciones. Puedo poner el foco en la condición: SOLO si firmamos hoy. Puedo proponer, aceptar con condiciones y rechazar una propuesta. Puedo negociar un acuerdo de alquiler o de trabajo con condiciones claras.",
+            "prompt": "Alguien te dejó un mensaje la semana pasada desde otra ciudad con «mañana», «aquí» y «venir». Escribe el mensaje original y cómo lo cuentas hoy.",
+            "model": "Mi hermana, el sábado pasado desde Mendoza: «Ven aquí mañana, que hacemos asado». Hoy lo cuento así: Mi hermana me pidió que fuera allá el domingo porque hacían asado.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Cambio el día, el lugar y el verbo de movimiento.",
+              "Paso la orden a imperfecto de subjuntivo."
             ]
           },
           {
-            "prompt": "Recupera la semana 10 sin abrir su explicación y aplica sus recursos a «Una ciudad que se pueda habitar»: Estilo indirecto avanzado; Verbos para citar; Citar con ironía; Resumir declaraciones; Escuchar una rueda de prensa; Checkpoint 2: conceder, describir e informar; Informe breve. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo transmitir enunciados con todos los cambios temporales y verbos como asegurar, negar, admitir, sugerir y advertir. Puedo elegir entre afirmar, reconocer, insinuar, desmentir, reprochar y prometer. Puedo reconocer cuándo alguien cita con ironía o distancia. Puedo resumir lo que dijeron varias personas y marcar mi distancia. Puedo identificar promesas, negaciones y evasivas. Puedo conceder y objetar, describir con precisión, negociar condiciones e informar con distancia. Puedo escribir un informe breve que presenta datos, declaraciones y una recomendación.",
+            "prompt": "Describe en dos frases un edificio de tu ciudad con la pasiva con «ser»: cuándo fue construido y qué le pasó después.",
+            "model": "El mercado central fue construido en 1928 por un arquitecto italiano. En 2010 fue restaurado y hoy alberga una feria de productores.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso al menos dos pasivas con concordancia correcta.",
+              "Incluyo el agente solo si aporta información."
+            ]
+          },
+          {
+            "prompt": "Escribe un aviso breve para la entrada de un centro cultural con un proceso todavía abierto («está siendo + participio») y un anuncio futuro.",
+            "model": "La sala de fotografías está siendo reorganizada. Las nuevas vitrinas serán presentadas el sábado 14 a las 17.",
+            "checklist": [
+              "Uso «está siendo + participio» para el proceso.",
+              "Uso el futuro pasivo para el anuncio."
             ]
           }
         ]
@@ -659,196 +1002,235 @@ export const b2w11: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe un ensayo de opinión para un periódico local sobre una prueba de movilidad. Desarrolla una tesis, dos argumentos, un contraargumento atendido y criterios para revisar tu propuesta.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Escribe una nota informativa (220–300 palabras) para el boletín de tu barrio, de tu trabajo o de tu escuela sobre la inauguración o reapertura de un lugar. La publicas tres días después del acto y no la escribes en ese lugar. Cuenta qué fue hecho y por quién, y transmite lo que dijeron al menos dos personas, con las referencias de tiempo y lugar ajustadas.",
+    "context": "El boletín lo leen vecinos que no fueron al acto. Necesitan datos claros (qué, cuándo, quién) y saber exactamente qué día y dónde pasará lo que se anunció. Puedes usar el galpón de White o un lugar real o inventado de tu ciudad.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Anota los hechos principales y decide en cuáles importa el agente.",
+      "Anota dos declaraciones con su día y su lugar originales y recalcula cada «hoy», «mañana», «aquí» y «este».",
+      "Escribe tres o cuatro párrafos: el hecho, la historia del lugar, las declaraciones y la información práctica.",
+      "Revisa la concordancia de cada participio y corrige las referencias de tiempo que todavía miran al día del acto."
     ],
     "useLanguage": [
-      "Una argumentación desarrolla tesis, razones, ejemplos o datos, objeción y conclusión. Por consiguiente expresa una consecuencia; en cambio contrapone; ahora bien introduce una reserva; en definitiva cierra una síntesis. Un conector no demuestra la relación: comprueba que el razonamiento la sostenga.",
-      "El grado de certeza modifica el modo: es indudable que existe, no está tan claro que exista. Cabe pensar que introduce una inferencia prudente con indicativo. Distingue correlación y causalidad, identifica de dónde proceden los datos y explica qué cambiaría tu postura: una tesis matizada puede ser firme sin presentarse como irrefutable.",
-      "Defiende una medida de movilidad usando la concesión de la semana 6 y el alcance de las pruebas de la noticia de la 9."
+      "fue inaugurado / fueron restaurados por…",
+      "ha sido / será / está siendo + participio",
+      "dijo que ese día / al día siguiente…",
+      "anunció que la semana siguiente…",
+      "pidió que fuéramos allá / que lleváramos…",
+      "aquel taller, ese mismo lugar"
     ],
     "model": [
-      "Propongo reservar un carril para autobuses durante seis meses y ampliar provisionalmente las aceras. La avenida dispone de un espacio limitado y necesita facilitar desplazamientos, además de estacionamientos. No está tan claro que conservar cada plaza actual sea la forma más equitativa de atender a quienes trabajan, compran o viven en la zona.",
-      "La primera razón es la capacidad del transporte colectivo. Si los autobuses pierden menos tiempo en las horas de mayor demanda, pueden ofrecer una conexión más fiable sin ampliar la avenida. La segunda es el acceso peatonal: unas aceras más amplias facilitarían pasar, detenerse y llegar a los comercios. Ambas ventajas deben medirse, porque una intención razonable no garantiza un resultado favorable en todos los horarios.",
-      "La objeción comercial merece una respuesta concreta. Algunos negocios dependen de entregas voluminosas y de clientes con movilidad reducida. Por ello, la prueba debería incluir zonas de carga y accesos específicos. Ahora bien, de esa necesidad no se deduce que toda reducción de aparcamiento provoque necesariamente una caída de ventas. Habría que observar distintos tipos de comercio y comparar periodos equivalentes.",
-      "La encuesta realizada un sábado sirve para formular preguntas, pero no representa automáticamente los días laborables. Propongo ampliar la observación antes del cambio y publicar indicadores de tiempo de viaje, accesibilidad y actividad comercial. Si empeoran las conexiones con la periferia, deberán reforzarse antes de extender la medida. Defiendo una prueba revisable: modificarla a partir de resultados sería una señal de responsabilidad, no una derrota del proyecto."
+      "El sábado 5 fue reabierta la biblioteca popular del barrio Villa Mitre, después de dos años de obras. El acto fue presentado por la directora, Silvia Ponce, y reunió a más de doscientas personas, entre ellas varios socios fundadores. La sala de lectura fue ampliada, las estanterías de madera fueron restauradas por estudiantes de una escuela técnica y el patio ha sido convertido en un espacio para talleres al aire libre.",
+      "La biblioteca fue fundada en 1934 por un grupo de ferroviarios que querían que sus hijos tuvieran libros cerca de casa. Durante el acto, Ponce recordó que el día en que asumió la dirección allí llovía más adentro que afuera, y que aquel invierno los socios habían tapado el techo con lonas.",
+      "También habló Ramiro Gómez, uno de los estudiantes. Contó que al principio no sabían cómo tratar una madera tan vieja y que su profesor les pidió que fueran a la biblioteca cada tarde a estudiarla antes de tocarla. Esa misma tarde, Ponce anunció que al día siguiente empezaría el préstamo de libros y que el lunes siguiente serían abiertas las inscripciones a los talleres.",
+      "Por lo tanto, el préstamo ya funciona desde el domingo y las inscripciones abren este lunes 7. Los horarios de los talleres serán publicados en la cartelera de la entrada. Quienes tengan libros para donar pueden llevarlos de martes a sábado, de 15 a 19; serán revisados por los voluntarios antes de pasar a las estanterías."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Uso la pasiva con «ser» cuando el resultado importa más que quien actuó.",
+      "Cada participio concuerda con su sujeto.",
+      "Atribuyo cada declaración a su autor y la sitúo en su día.",
+      "Recalculo «hoy», «mañana», «aquí», «este», «venir» y «traer» desde el día en que publico.",
+      "La información práctica dice fechas concretas."
     ],
     "words": [
       220,
-      280
+      300
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Prepara palabras clave y un pequeño mapa de días y lugares, no un texto para leer. Si te grabas, la grabación queda en tu dispositivo; la aplicación no evalúa tu pronunciación.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Una ciudad que se pueda habitar» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "El mensaje que me dejaron",
+        "prompt": "Habla durante unos dos minutos de un mensaje importante que alguien te dio en otro lugar y en otro momento (un viaje, una mudanza, una despedida). Cuenta qué te dijo, qué te pidió y qué anunció, ajustando cada referencia a hoy y a donde estás ahora. Termina con lo que pasó después.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Escribe la fecha y el lugar del mensaje y los de hoy.",
+          "Prepara tres frases originales con «hoy», «aquí» o «ven» y su versión transmitida."
         ],
-        "seconds": 180,
-        "model": "Propongo reservar un carril para autobuses durante seis meses. La medida permitiría evaluar si aumenta la capacidad de desplazamiento sin ampliar la avenida. Reconozco que algunos comercios necesitan acceso para cargas; por ello, el ensayo debería incluir zonas y horarios específicos. No está tan claro que conservar cada plaza de aparcamiento beneficie al conjunto del barrio. En definitiva, apoyaría la prueba siempre que se publiquen sus resultados y se corrijan las dificultades de conexión que aparezcan.",
+        "seconds": 150,
+        "model": "Hace tres años, en el aeropuerto de Ezeiza, mi abuelo me dijo que aquel día era el más triste de su vida, pero que estaba orgulloso. Me pidió que lo llamara al llegar y que le llevara una foto de la casa donde iba a vivir. También me anunció que el verano siguiente vendría a visitarme. Lo cumplió: vino en enero y se quedó un mes.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Recalculo cada referencia de tiempo y de lugar.",
+          "Uso «ir/venir» y «llevar/traer» desde donde estoy ahora.",
+          "Distingo lo que me dijo, lo que me pidió y lo que anunció."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de defender una propuesta con argumentos y límites. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "¿Qué «mañana» era ese?",
+        "prompt": "Tu interlocutor hace de periodista que va a publicar una noticia sobre un lugar que tú visitaste la semana pasada. Tú le transmites lo que te dijo allí la persona responsable. Él te pregunta qué día y qué lugar quería decir cada vez; tú aclaras, corriges y le das los hechos en pasiva para que pueda copiarlos en la nota.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara tres declaraciones de la persona responsable con «hoy», «mañana» o «aquí».",
+          "Prepara dos hechos en pasiva con «ser»: qué fue construido, restaurado o anunciado.",
+          "Prepara fórmulas para aclarar: «Cuando dijo \"mañana\" se refería a…»."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Respondo a las preguntas de mi interlocutor y aclaro cada referencia.",
+          "Separo las palabras de la otra persona de los hechos.",
+          "Uso al menos dos pasivas con «ser» al dar los datos."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a la próxima clase lo que preparaste esta semana y úsalo con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Una ciudad que se pueda habitar» en tres minutos y responde a una objeción inesperada.",
+        "move": "Transmite",
+        "task": "Cuéntale a tu profesor un mensaje que recibiste hace tiempo en otro lugar y pídele que detecte si alguna referencia quedó sin recalcular.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "Aquel día me dijo que…",
+          "Me pidió que fuera allá…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Bahía Blanca; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Pregúntale",
+        "task": "Pregúntale por un edificio histórico de su ciudad: cuándo fue construido, por quién y qué le pasó después.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "¿Cuándo fue construido?",
+          "¿Por quién fue restaurado?"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre defender una propuesta con argumentos y límites; identifica una condición que todavía necesita confirmación.",
+        "move": "Aclara",
+        "task": "Lee una frase de tu nota con «al día siguiente» o «la semana siguiente» y pide a tu profesor que confirme que el día queda claro para el lector.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Se entiende qué día es?",
+          "¿Sería mejor nombrar el día?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu nota con las pasivas subrayadas y las referencias de tiempo y lugar marcadas en otro color."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Una ciudad que se pueda habitar», ¿qué resume mejor el propósito?",
-        "options": [
-          "Evitar cualquier intercambio entre personas.",
-          "Comparar propuestas urbanas con datos limitados",
-          "Sustituir toda evidencia por una opinión rotunda."
+        "type": "gap",
+        "q": "La estación de Bahía Blanca ___ (inaugurar, pretérito) en 1884.",
+        "answers": [
+          [
+            "fue inaugurada"
+          ]
         ],
-        "answer": 1,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Prefiero empezar por los fines de semana. Me preocupa la carga de mercancías y no está tan claro que un carril permanente mejore las ventas. Aun así, reconozco que las aceras actuales resultan estrechas y que muchas personas evitan caminar por aquí.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Comerciante en «Una ciudad que se pueda habitar», ¿qué intervención reconoces?",
-        "options": [
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Prefiero empezar por los fines de semana",
-          "No hay ninguna condición pendiente y todas las partes aceptaron."
-        ],
-        "answer": 1,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "«La estación»: femenino singular."
       },
       {
         "type": "gap",
-        "q": "No parece evidente que el cambio ___ a todos.",
+        "q": "Los resultados del concurso ___ (comunicar, futuro) por correo electrónico.",
         "answers": [
           [
-            "beneficie"
+            "serán comunicados"
           ]
         ],
-        "why": "Se cuestiona el alcance del beneficio."
+        "why": "Futuro de «ser» en plural y participio masculino plural."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «La muestra solo recoge sábados, así que debemos observar otros días.» Reformula con por consiguiente.",
-        "model": "La muestra solo recoge sábados; por consiguiente, debemos observar otros días.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "El lunes, en Neuquén, mi primo me dijo: «Ven mañana». Hoy es jueves y estoy en Bahía Blanca: Me pidió que ___ allá el martes.",
+        "answers": [
+          [
+            "fuera",
+            "fuese"
+          ]
+        ],
+        "why": "No estoy en Neuquén: «venir» pasa a «ir»."
+      },
+      {
+        "type": "choice",
+        "q": "Hace un año, en su casa, Ana: «Esta casa la diseñó mi madre». ¿Cómo lo cuentas hoy en otra ciudad?",
+        "options": [
+          "Ana dijo que esta casa la había diseñado mi madre.",
+          "Ana dijo que esa casa la diseñará su madre.",
+          "Ana dijo que aquella casa la había diseñado su madre."
+        ],
+        "answer": 2,
+        "why": "«Esta» pasa a «aquella» y «mi» a «su»."
+      },
+      {
+        "type": "choice",
+        "q": "¿En qué texto suena más natural «El puente fue reparado por el municipio»?",
+        "options": [
+          "En un informe sobre obras públicas.",
+          "En un audio a tu mejor amiga.",
+          "En una conversación en el colectivo."
+        ],
+        "answer": 0,
+        "why": "La pasiva con «ser» es propia de textos informativos y formales."
+      },
+      {
+        "type": "listen",
+        "q": "Según el audio, ¿cuándo empiezan las visitas?",
+        "audio": "La guía anunció el lunes que al día siguiente comenzarían las visitas para escuelas.",
+        "voice": "es-AR-f",
+        "options": [
+          "El lunes.",
+          "El martes.",
+          "El domingo."
+        ],
+        "answer": 1,
+        "why": "El día siguiente al lunes es el martes."
       },
       {
         "type": "error",
-        "sentence": "Es seguro que el espacio sea limitado.",
+        "sentence": "Las paredes del taller fueron pintado por voluntarios.",
         "answers": [
-          "Es seguro que el espacio es limitado."
+          "Las paredes del taller fueron pintadas por voluntarios."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "El participio concuerda con «las paredes»."
+      },
+      {
+        "type": "error",
+        "sentence": "Hace cinco años mi jefe me dijo que hoy era mi último día.",
+        "answers": [
+          "Hace cinco años mi jefe me dijo que ese día era mi último día.",
+          "Hace cinco años mi jefe me dijo que aquel día era mi último día."
+        ],
+        "why": "El «hoy» de hace cinco años ya no es el tuyo: «ese día» o «aquel día»."
+      },
+      {
+        "type": "order",
+        "words": [
+          "El",
+          "archivo",
+          "está",
+          "siendo",
+          "ordenado",
+          "por",
+          "dos",
+          "historiadoras."
+        ],
+        "why": "Pasiva continua con agente."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Una ciudad que se pueda habitar».",
-        "model": "Propongo reservar un carril para autobuses durante seis meses. La medida permitiría evaluar si aumenta la capacidad de desplazamiento sin ampliar la avenida. Reconozco que algunos comercios necesitan acceso para cargas; por ello, el ensayo debería incluir zonas y horarios específicos. No está tan claro que conservar cada plaza de aparcamiento beneficie al conjunto del barrio. En definitiva, apoyaría la prueba siempre que se publiquen sus resultados y se corrijan las dificultades de conexión que aparezcan.",
+        "prompt": "Escribe dos frases: un hecho histórico de tu ciudad en pasiva con «ser» y algo que te dijo alguien allí hace tiempo, con las referencias ajustadas.",
+        "model": "El teatro municipal fue inaugurado en 1913. Cuando lo visité de chica, la acomodadora me dijo que aquella noche cantaba una soprano famosa.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre defender una propuesta con argumentos y límites; concede una razón y conserva tu argumento.",
-        "model": "Propongo reservar un carril para autobuses durante seis meses. La medida permitiría evaluar si aumenta la capacidad de desplazamiento sin ampliar la avenida. Reconozco que algunos comercios necesitan acceso para cargas; por ello, el ensayo debería incluir zonas y horarios específicos. No está tan claro que conservar cada plaza de aparcamiento beneficie al conjunto del barrio. En definitiva, apoyaría la prueba siempre que se publiquen sus resultados y se corrijan las dificultades de conexión que aparezcan.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 11 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "La pasiva concuerda con su sujeto.",
+          "Ajusto la referencia de tiempo al momento en que lo cuento."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo defender una propuesta con argumentos y límites.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo recalcular «hoy», «mañana», «ahora» y «esta semana» desde el día en que transmito un mensaje, y nombrar el día cuando hay riesgo de confusión.",
+      "Puedo ajustar «aquí», «este», los posesivos y los verbos «venir/ir» y «traer/llevar» a mi lugar.",
+      "Puedo usar la pasiva con «ser» en distintos tiempos, con concordancia y con agente cuando aporta información."
     ],
     "review": [
-      "Defiende una medida de movilidad usando la concesión de la semana 6 y el alcance de las pruebas de la noticia de la 9.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, toma un mensaje de voz que recibiste hace días y transmítelo por escrito con las referencias ajustadas.",
+      "En tres días, lee una noticia y subraya cinco pasivas con «ser»; decide en cuáles el agente es necesario.",
+      "Antes de la semana 12, reescribe dos frases de tu nota como si se las contaras a un amigo, sin pasiva."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/cambio-de-deicticos-aqui-alli-hoy",
+      "label": "Clase: Cambio de deícticos: aquí/allí, hoy/ese día"
+    },
+    {
+      "path": "/gramatica/pasiva-impersonal-informar",
+      "label": "Clase: Pasiva perifrástica: ser + participio"
+    }
+  ]
 };

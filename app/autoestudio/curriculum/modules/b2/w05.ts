@@ -1,175 +1,413 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 5 (checkpoint) · Autoestudio espejo de G239 (condiciones con otros nexos) y G136
+ * (como si + imperfecto / pluscuamperfecto de subjuntivo), integrando G128–G135 de las semanas 1 a 4.
+ * Repaso autónomo con la convivencia en un departamento de estudiantes ficticio de Córdoba.
+ * Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w05: Module = {
   "id": "b2-05",
   "level": "b2",
   "week": 5,
   "kind": "checkpoint",
-  "title": "Checkpoint: una cooperativa en crisis",
-  "subtitle": "Mediar entre expectativas, valoraciones y alternativas.",
+  "title": "Siempre que paguen a tiempo: convivir en Córdoba",
+  "subtitle": "Checkpoint: condiciones con otros nexos, «como si» y repaso del subjuntivo y las hipótesis de las semanas 1 a 4",
   "stop": {
     "place": "Córdoba",
     "country": "Argentina"
   },
   "minutes": 150,
   "newObjectives": [
-    "b2.fun.mediacion-fuentes",
-    "b2.rev.checkpoint-1",
-    "b2.lis.debate-radio"
+    "b2.gram.g239",
+    "b2.gram.g136",
+    "b2.voc.w05-alquiler-convivencia",
+    "b2.pron.w05-nexos-pausa",
+    "b2.lis.w05-reunion-convivencia",
+    "b2.read.w05-guia-convivencia",
+    "b2.wri.w05-acuerdo-convivencia",
+    "b2.spk.w05-negociar-condiciones",
+    "b2.fun.w05-poner-condiciones",
+    "b2.disc.w05-normas-condiciones",
+    "b2.rev.w05-integrar-semanas-1-4"
   ],
-  "reviewObjectives": [
-    "b2.gram.sustantivas-sistema",
-    "b2.gram.decir-doble-valor",
-    "b2.voc.trabajo-equipo",
-    "b2.pron.influencia-mitigada",
-    "b2.fun.pedir-exigir",
-    "b2.read.correo-equipo",
-    "b2.gram.subjuntivo-imperfecto-usos",
-    "b2.gram.como-si",
-    "b2.voc.familia-generaciones",
-    "b2.pron.acento-ra-ra",
-    "b2.fun.recordar-expectativas",
-    "b2.lis.entrevista-generaciones",
-    "b2.gram.subjuntivo-compuestos",
-    "b2.voc.logros-fracasos",
-    "b2.pron.compuestos-largos",
-    "b2.fun.valorar-hechos",
-    "b2.wri.carta-felicitacion",
-    "b2.gram.condicionales-irreales",
-    "b2.gram.condicional-compuesto",
-    "b2.voc.decisiones-consecuencias",
-    "b2.pron.reproche",
-    "b2.fun.lamentar-reprochar",
-    "b2.spk.historia-alternativa"
-  ],
-  "prerequisites": [
-    "b2-04"
-  ],
+  reviewObjectives: ["b2.gram.g128","b2.gram.g129","b2.voc.w01-negocio-familiar","b2.pron.w01-acento-ra","b2.lis.w01-reunion-familiar","b2.read.w01-cronica-reapertura","b2.wri.w01-correo-decisiones","b2.spk.w01-relatar-encargos","b2.fun.w01-transmitir-peticiones","b2.disc.w01-relato-encargos","b2.gram.g130","b2.gram.g131","b2.voc.w02-participacion-vecinal","b2.pron.w02-presente-imperfecto-subj","b2.lis.w02-entrevista-radio","b2.read.w02-boletin-vecinal","b2.wri.w02-propuesta-municipio","b2.spk.w02-defender-proyecto","b2.fun.w02-plantear-hipotesis","b2.disc.w02-marco-temporal","b2.gram.g132","b2.gram.g133","b2.voc.w03-competicion-remo","b2.pron.w03-habia-habria","b2.lis.w03-analisis-regata","b2.read.w03-carta-entrenadora","b2.wri.w03-informe-lecciones","b2.spk.w03-revisar-decision","b2.fun.w03-analizar-decisiones","b2.disc.w03-hecho-alternativa","b2.gram.g134","b2.gram.g135","b2.voc.w04-mudanza-obra","b2.pron.w04-reproche-suave","b2.lis.w04-podcast-decisiones","b2.read.w04-blog-regreso","b2.wri.w04-reclamo-cortes","b2.spk.w04-otra-vida","b2.fun.w04-reprochar-atenuar","b2.disc.w04-pasado-presente"],
+  prerequisites: ["b2-04"],
   "goal": {
-    "canDo": "Puedo mediar entre expectativas, valoraciones y alternativas con razones, matices y condiciones claras.",
+    "canDo": "Puedo poner condiciones con distintos nexos, describir comportamientos con «como si» y combinar todas las formas de subjuntivo y de hipótesis de las semanas 1 a 4 en una negociación real.",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: acordar reparación y reservas provisionales para un comedor.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa los nexos de condición, excepción y caso previsto, y la estructura «como si».",
+      "Recupera las clases de las semanas 1 a 4 con una tabla de integración y ejercicios mixtos.",
+      "Escucha una reunión de compañeros de departamento y lee una guía universitaria de convivencia.",
+      "Escribe una propuesta de acuerdo de convivencia, revísala y negocia un alquiler en voz alta."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: mediar entre expectativas, valoraciones y alternativas. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "Este checkpoint repasa las dos clases de la semana y recupera las ocho de las semanas 1 a 4. El escenario es un departamento de estudiantes en Córdoba: un dueño que pone condiciones, un compañero que actúa como si fuera el jefe y un semestre que podría haber salido de otra manera.",
     "parts": [
       {
-        "heading": "Mediar entre expectativas, valoraciones y alternativas",
+        "heading": "Más allá de «si»: la condición necesaria",
         "body": [
-          "Integra cuatro decisiones: distingue información de influencia, sitúa la expectativa en su momento, expresa anterioridad y construye una alternativa irreal. En una mediación no basta transformar verbos: debes conservar quién dijo qué, qué se confirmó y qué sigue siendo una propuesta."
+          "«Siempre que», «siempre y cuando», «con tal de que» y «a condición de que» presentan una condición imprescindible: equivalen a «solo si». Con este valor llevan siempre subjuntivo. «A condición de que» es el más formal; «con tal de que» es frecuente en la conversación. Si el sujeto es el mismo, puedes usar «con tal de» o «a condición de» + infinitivo.",
+          "Cuidado con «siempre que»: con indicativo significa «cada vez que» y no pone ninguna condición. «Siempre que llueve, se moja el pasillo» describe una costumbre; «les dejo la terraza siempre que la limpien» pone una condición. La concordancia sigue la regla de la semana 2: con un verbo principal en pasado o en condicional, el nexo pide imperfecto de subjuntivo."
         ],
+        "table": {
+          "caption": "Condición necesaria (= solo si)",
+          "head": [
+            "Nexo",
+            "Registro",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "siempre que",
+              "general",
+              "Pueden tener una mascota siempre que sea pequeña."
+            ],
+            [
+              "siempre y cuando",
+              "general, enfático",
+              "Bajo el precio siempre y cuando firmen por dos años."
+            ],
+            [
+              "con tal de que",
+              "coloquial",
+              "Te presto mi bici con tal de que me la devuelvas el lunes."
+            ],
+            [
+              "a condición de que",
+              "formal",
+              "El contrato se renueva a condición de que no haya deudas."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "La asamblea pide que la dirección publique las cuentas.",
-            "note": "Petición actual."
+            "es": "El dueño dijo que nos dejaría pintar siempre que eligiéramos colores claros.",
+            "note": "Marco pasado: imperfecto de subjuntivo."
           },
           {
-            "es": "La técnica esperaba que el sistema funcionara antes de junio.",
-            "note": "Expectativa pasada, no resultado confirmado."
-          },
-          {
-            "es": "Si hubieran avisado antes, habríamos aplazado la apertura.",
-            "note": "Alternativa pasada irreal."
+            "es": "Siempre que viene mi hermana, dormimos en el living.",
+            "note": "«Cada vez que»: indicativo."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Lamentamos que ustedes han esperado tanto.",
-            "right": "Lamentamos que ustedes hayan esperado tanto.",
-            "why": "La valoración lamentar selecciona subjuntivo."
+            "wrong": "Te dejo mi cuarto el finde con tal de que lo dejas ordenado.",
+            "right": "Te dejo mi cuarto el finde con tal de que lo dejes ordenado.",
+            "why": "Como condición necesaria, «con tal de que» lleva siempre subjuntivo."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Excepciones, casos previstos y avisos",
         "body": [
-          "Un informe de crisis necesita una cronología breve, posiciones atribuidas y una recomendación viable. Evita presentar una hipótesis como prueba de culpa. Recupera el contraste dice que viene / dice que venga y las formas esperaba que, me alegra que haya y si hubiera para reconstruir el desacuerdo sin deformarlo."
+          "«A no ser que», «a menos que», «salvo que» y «excepto que» introducen la única excepción: equivalen a «si no». También llevan subjuntivo. «Salvo que» con indicativo, en cambio, significa «excepto el hecho de que» y presenta un dato real: «el departamento es perfecto, salvo que el ascensor se rompe cada semana».",
+          "«En caso de que» + subjuntivo prevé una posibilidad y dice qué hacer si llega; «por si» + indicativo explica una precaución que se toma ya. Por último, «como» + subjuntivo al principio de la frase es un aviso o una amenaza coloquial, a menudo en broma; con indicativo, «como» es causal."
+        ],
+        "table": {
+          "caption": "Tres maneras de pensar en lo que puede pasar",
+          "head": [
+            "Estructura",
+            "Qué hace",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "a no ser que + subjuntivo",
+              "única excepción",
+              "Pagamos el día cinco, a no ser que caiga en domingo."
+            ],
+            [
+              "en caso de que + subjuntivo",
+              "caso previsto",
+              "En caso de que se corte el agua, llamen a la administración."
+            ],
+            [
+              "por si + indicativo",
+              "precaución actual",
+              "Dejo una llave en la portería por si pierden la suya."
+            ],
+            [
+              "como + subjuntivo",
+              "aviso coloquial",
+              "Como vuelvas a dejar los platos sucios, te los pongo en la cama."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "No subiremos el alquiler, salvo que suban las expensas.",
+            "note": "Excepción: subjuntivo."
+          },
+          {
+            "es": "Como llegaste tarde, ya no quedaba pizza.",
+            "note": "«Como» causal: indicativo."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Llevo paraguas por si llueva.",
+            "right": "Llevo paraguas por si llueve.",
+            "why": "«Por si» va con indicativo."
+          },
+          {
+            "wrong": "En caso de que pierdes la llave, avísame.",
+            "right": "En caso de que pierdas la llave, avísame.",
+            "why": "«En caso de que» va con subjuntivo."
+          }
+        ],
+        "tip": "En un texto formal, evita «como» + subjuntivo: suena a amenaza. Usa «en caso de que» o «si»."
+      },
+      {
+        "heading": "«Como si»: comparar con algo imaginado",
+        "body": [
+          "«Como si» compara lo que ves con una situación irreal o no comprobada. Solo admite dos tiempos: imperfecto de subjuntivo si lo imaginado ocurre al mismo tiempo («Nico habla como si fuera el dueño») y pluscuamperfecto si es anterior («entró como si no hubiera pasado nada»). El tiempo del verbo principal no cambia esta elección: habla, habló o hablará «como si fuera el dueño».",
+          "Después de «como si» nunca va presente de subjuntivo, indicativo ni condicional. Para una manera real y conocida se usa «como» + indicativo («hazlo como te expliqué»). Y para protestar en tono coloquial existe «¡ni que…!»: «¡Ni que fuera tu empleada!» significa «te comportas como si lo fuera, pero no lo soy»."
         ],
         "examples": [
           {
-            "es": "La asamblea pide que la dirección publique las cuentas.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Camila limpia la cocina como si viniera la inspección.",
+            "note": "Imaginado y simultáneo: imperfecto."
           },
           {
-            "es": "Si hubieran avisado antes, habríamos aplazado la apertura.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Nos miró como si hubiéramos roto algo.",
+            "note": "Causa imaginada anterior: pluscuamperfecto."
+          },
+          {
+            "es": "¡Ni que hubieras pagado tú el sillón!",
+            "note": "Protesta coloquial."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Habla como si sea el dueño del departamento.",
+            "right": "Habla como si fuera el dueño del departamento.",
+            "why": "Después de «como si», nunca presente de subjuntivo."
+          }
+        ]
+      },
+      {
+        "heading": "Integración: las clases de las semanas 1 a 4 en el mismo departamento",
+        "body": [
+          "Las condiciones y las comparaciones de esta semana se apoyan en todo lo anterior. En la semana 1 formaste el imperfecto de subjuntivo y contaste peticiones en pasado; en la semana 2, la correlación de tiempos y las hipótesis con «si»; en la semana 3, las condiciones irreales del pasado y el pluscuamperfecto de subjuntivo; en la semana 4, el condicional compuesto y las condicionales mixtas.",
+          "En una negociación real se mezclan: «el dueño nos pidió que pagáramos el depósito (semana 1); si lo hubiéramos leído antes (semana 3), hoy no estaríamos discutiendo (semana 4); por eso, aceptamos siempre que nos dé un recibo (semana 5)». Usa la tabla para comprobar que reconoces cada clase."
+        ],
+        "table": {
+          "caption": "Las ocho clases anteriores en el caso de Córdoba",
+          "head": [
+            "Semana y clase",
+            "Ejemplo en el departamento"
+          ],
+          "rows": [
+            [
+              "1 · G128 Imperfecto de subjuntivo",
+              "Ojalá el departamento tuviera balcón."
+            ],
+            [
+              "1 · G129 Influencia en pasado",
+              "La dueña nos pidió que no colgáramos nada en las paredes."
+            ],
+            [
+              "2 · G130 Correlación temporal",
+              "Quiere que paguemos el día cinco / quería que pagáramos el día cinco."
+            ],
+            [
+              "2 · G131 Si + imperfecto de subjuntivo",
+              "Si tuviéramos lavarropas, no iríamos al lavadero."
+            ],
+            [
+              "3 · G132 Condiciones del pasado",
+              "Si hubiéramos revisado la calefacción, no habríamos pasado frío en junio."
+            ],
+            [
+              "3 · G133 Pluscuamperfecto de subjuntivo",
+              "Nos molestó que nadie hubiera pagado la luz."
+            ],
+            [
+              "4 · G134 Condicional compuesto",
+              "Habrías podido avisar que venían tus primos."
+            ],
+            [
+              "4 · G135 Condicionales mixtas",
+              "Si no hubiéramos firmado por un año, ahora viviríamos más cerca de la facultad."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "La dueña aceptó que traigamos un gato siempre que lo castremos.",
+            "right": "La dueña aceptó que trajéramos un gato siempre que lo castráramos.",
+            "why": "Con «aceptó» (pasado), los dos subjuntivos van en imperfecto: correlación de la semana 2."
           }
         ]
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero decide qué tipo de relación hay (requisito, excepción, previsión, comparación imaginada). Después elige el modo y el tiempo.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-05-g-nexos",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de checkpoint: una cooperativa en crisis; justifica el modo, la forma o la combinación.",
+        "prompt": "Completa con la forma correcta del verbo entre paréntesis.",
         "items": [
           {
-            "q": "La asamblea pide que la dirección ___ las cuentas.",
+            "q": "Les renuevo el contrato siempre y cuando ___ (pagar) las expensas a tiempo.",
             "answers": [
               [
-                "publique"
+                "paguen"
               ]
             ],
-            "why": "Petición actual."
+            "why": "Condición necesaria: subjuntivo."
           },
           {
-            "q": "La técnica esperaba que el sistema ___ antes de junio.",
+            "q": "Siempre que ___ (llover), se moja la ropa del balcón.",
             "answers": [
               [
-                "funcionara"
+                "llueve"
               ]
             ],
-            "why": "Expectativa pasada, no resultado confirmado."
+            "why": "«Siempre que» = cada vez que: indicativo."
           },
           {
-            "q": "Si hubieran avisado antes, ___ aplazado la apertura.",
+            "q": "Dejé comida en la heladera por si ___ (llegar) con hambre.",
             "answers": [
               [
-                "habríamos"
+                "llegas",
+                "llegaban",
+                "llegabas"
               ]
             ],
-            "why": "Alternativa pasada irreal."
+            "why": "«Por si» + indicativo."
+          },
+          {
+            "q": "El dueño prometió que no subiría el precio, a menos que ___ (aumentar) los impuestos.",
+            "answers": [
+              [
+                "aumentaran",
+                "aumentasen"
+              ]
+            ],
+            "why": "Excepción en un marco pasado: imperfecto de subjuntivo."
+          },
+          {
+            "q": "Nico entra a mi cuarto como si ___ (ser) suyo.",
+            "answers": [
+              [
+                "fuera",
+                "fuese"
+              ]
+            ],
+            "why": "«Como si» + imperfecto: imaginado y simultáneo."
+          },
+          {
+            "q": "Al día siguiente nos saludó como si no ___ (discutir) la noche anterior.",
+            "answers": [
+              [
+                "hubiéramos discutido",
+                "hubiésemos discutido"
+              ]
+            ],
+            "why": "«Como si» + pluscuamperfecto: anterior."
+          },
+          {
+            "q": "En caso de que el portero no ___ (estar), dejen el paquete en el kiosco.",
+            "answers": [
+              [
+                "esté"
+              ]
+            ],
+            "why": "«En caso de que» + subjuntivo."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-05-g-sentido",
+        "type": "choice",
+        "prompt": "Elige la opción que expresa lo que se indica.",
         "items": [
           {
-            "prompt": "Texto de partida: «El sistema no se probó y aparecieron fallos en la apertura.» Formula una alternativa pasada prudente con quizá.",
-            "model": "Si se hubiera probado el sistema, quizá se habrían detectado los fallos antes.",
+            "q": "Quieres decir «solo si nos dejan usar la terraza».",
+            "options": [
+              "Firmamos, por si nos dejan usar la terraza.",
+              "Firmamos con tal de que nos dejen usar la terraza.",
+              "Firmamos, como nos dejan usar la terraza."
+            ],
+            "answer": 1,
+            "why": "«Con tal de que» = solo si."
+          },
+          {
+            "q": "Quieres advertir en broma a un compañero.",
+            "options": [
+              "Como te comas mi yogur otra vez, te cambio la clave del wifi.",
+              "En caso de que te comas mi yogur, te cambio la clave del wifi.",
+              "Por si te comes mi yogur, te cambio la clave del wifi."
+            ],
+            "answer": 0,
+            "why": "«Como» + subjuntivo: aviso coloquial."
+          },
+          {
+            "q": "Describes cómo llegó tu compañera: estaba agotada, pero no sabes por qué.",
+            "options": [
+              "Llegó como si corría una maratón.",
+              "Llegó como si correría una maratón.",
+              "Llegó como si hubiera corrido una maratón."
+            ],
+            "answer": 2,
+            "why": "Causa imaginada anterior: pluscuamperfecto."
+          },
+          {
+            "q": "Quieres decir que el departamento es bueno, pero hay un problema real.",
+            "options": [
+              "Es luminoso, salvo que la cocina es diminuta.",
+              "Es luminoso, salvo que la cocina sea diminuta.",
+              "Es luminoso, a no ser que la cocina sea diminuta."
+            ],
+            "answer": 0,
+            "why": "«Salvo que» + indicativo = excepto el hecho de que."
+          }
+        ]
+      },
+      {
+        "id": "b2-05-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida según la consigna. Después compara con el modelo: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «Pueden traer invitados, pero solo si avisan antes». Reformúlalo con un nexo de condición necesaria formal.",
+            "model": "Pueden traer invitados a condición de que avisen antes.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «a condición de que» o «siempre y cuando» con subjuntivo.",
+              "Conservo el sentido de «solo si».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «El técnico: «Reduzcan las funciones temporalmente».» Transmite la solicitud con pide que.",
-            "model": "El técnico pide que reduzcan las funciones temporalmente.",
+            "prompt": "Texto de partida: «Pagaremos el día diez; si hay feriado, no». Reformúlalo con un nexo de excepción.",
+            "model": "Pagaremos el día diez, a no ser que sea feriado.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «a no ser que», «a menos que» o «salvo que» + subjuntivo.",
+              "La excepción equivale a «si no».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «El equipo mantuvo abierto el comedor y lo agradezco.» Valora ahora ese hecho con agradezco que.",
-            "model": "Agradezco que el equipo haya mantenido abierto el comedor.",
+            "prompt": "Texto de partida: «Nico da órdenes. No es el dueño». Une las ideas con «como si».",
+            "model": "Nico da órdenes como si fuera el dueño.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «como si» + imperfecto de subjuntivo.",
+              "La comparación es imaginada y simultánea.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: la dueña, en marzo: «Les dejo tener una planta grande si la riegan en el balcón». Cuéntalo hoy con «La dueña nos dijo…» y un nexo de condición necesaria (integración de las semanas 1 y 5).",
+            "model": "La dueña nos dijo que nos dejaba tener una planta grande siempre que la regáramos en el balcón.",
+            "checklist": [
+              "Paso la condición al marco pasado: imperfecto de subjuntivo.",
+              "Uso un nexo de condición necesaria en lugar de «si».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -177,290 +415,370 @@ export const b2w05: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Léxico para alquilar y compartir vivienda. Muchas expresiones aparecen en contratos y en mensajes del grupo de la casa.",
     "groups": [
       {
-        "title": "Mediar entre expectativas, valoraciones y alternativas",
+        "title": "El contrato",
         "items": [
           {
-            "es": "convocar una asamblea",
-            "note": "reunir a las personas socias"
+            "es": "el depósito",
+            "note": "dinero que se deja como garantía al alquilar"
           },
           {
-            "es": "aclarar el alcance",
-            "note": "precisar qué incluye algo"
+            "es": "las expensas",
+            "note": "en Argentina, gastos comunes del edificio"
           },
           {
-            "es": "reconstruir los hechos",
-            "note": "ordenar lo ocurrido"
+            "es": "el garante",
+            "note": "persona que responde si el inquilino no paga"
           },
           {
-            "es": "escuchar a las partes",
-            "note": "recoger versiones distintas"
+            "es": "rescindir el contrato",
+            "note": "terminarlo antes de tiempo"
           },
           {
-            "es": "admitir una omisión",
-            "note": "reconocer algo no hecho"
+            "es": "dar aviso con un mes de anticipación",
+            "note": "avisar treinta días antes"
+          }
+        ]
+      },
+      {
+        "title": "La convivencia",
+        "items": [
+          {
+            "es": "repartir los gastos",
+            "note": "dividir lo que se paga entre todos"
           },
           {
-            "es": "proponer una salida",
-            "note": "ofrecer una solución"
+            "es": "hacerse cargo de la limpieza",
+            "note": "asumir esa tarea"
           },
           {
-            "es": "fijar un compromiso",
-            "note": "concretar una obligación"
+            "es": "el cronograma de tareas",
+            "note": "calendario de quién hace qué"
           },
           {
-            "es": "revisar el procedimiento",
-            "note": "mejorar la forma de actuar"
+            "es": "respetar el descanso",
+            "note": "no hacer ruido en horas de sueño"
+          },
+          {
+            "es": "los espacios comunes",
+            "note": "cocina, living, baño compartido"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-05-v-casa",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para mediar entre expectativas, valoraciones y alternativas con su significado.",
+        "prompt": "Relaciona cada expresión con un mensaje del grupo de la casa.",
         "pairs": [
           {
-            "left": "convocar una asamblea",
-            "right": "reunir a las personas socias"
+            "left": "repartir los gastos",
+            "right": "La luz salió 30.000; son 10.000 por cabeza."
           },
           {
-            "left": "aclarar el alcance",
-            "right": "precisar qué incluye algo"
+            "left": "respetar el descanso",
+            "right": "Por favor, nada de música después de las doce."
           },
           {
-            "left": "reconstruir los hechos",
-            "right": "ordenar lo ocurrido"
+            "left": "dar aviso con un mes de anticipación",
+            "right": "Me voy en diciembre; se lo digo hoy al dueño."
           },
           {
-            "left": "escuchar a las partes",
-            "right": "recoger versiones distintas"
+            "left": "el cronograma de tareas",
+            "right": "Esta semana te toca a ti sacar la basura, Cami."
           },
           {
-            "left": "admitir una omisión",
-            "right": "reconocer algo no hecho"
+            "left": "el depósito",
+            "right": "Nos devuelven los dos meses que pagamos al entrar."
           },
           {
-            "left": "proponer una salida",
-            "right": "ofrecer una solución"
-          },
-          {
-            "left": "fijar un compromiso",
-            "right": "concretar una obligación"
-          },
-          {
-            "left": "revisar el procedimiento",
-            "right": "mejorar la forma de actuar"
+            "left": "las expensas",
+            "right": "Subieron los gastos del edificio por el ascensor nuevo."
           }
-        ]
+        ],
+        "why": "Cada mensaje ilustra una parte del alquiler o de la convivencia."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Recupera acento verbal, grupos compuestos y petición mitigada para que la síntesis no suene como una acusación.",
+    "focus": "Nexos largos como un solo bloque y pausa antes del nexo.",
     "explanation": [
-      "Recupera acento verbal, grupos compuestos y petición mitigada para que la síntesis no suene como una acusación.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "Los nexos de varias palabras se pronuncian sin cortes internos: «siempre_y_cuando», «a_no_ser_que», «con_tal_de_que», «como_si». Si haces una pausa en el medio, el oyente pierde la relación. La pausa natural va antes del nexo, cuando la condición sigue a la idea principal: «les bajo el precio | siempre y cuando firmen por dos años».",
+      "En «como si», la fuerza recae en «co» y en el verbo que sigue: «CO-mo si FUE-ra el dueño». En «¡ni que…!», la voz sube con sorpresa. Escucha, repite y grábate en tu dispositivo; la voz sintética es solo una referencia."
     ],
     "examples": [
       {
-        "es": "La asamblea pide que la dirección publique las cuentas."
+        "es": "Les bajo el precio | siempre y cuando firmen por dos años.",
+        "note": "Pausa antes del nexo, nexo sin cortes."
       },
       {
-        "es": "La técnica esperaba que el sistema funcionara antes de junio."
+        "es": "Entró como si no hubiera pasado nada.",
+        "note": "«como_si» enlazado."
       },
       {
-        "es": "Si hubieran avisado antes, habríamos aplazado la apertura."
+        "es": "¡Ni que fuera tu secretaria!",
+        "note": "Subida de sorpresa."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-05-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y elige el nexo que oyes.",
       "items": [
         {
-          "q": "En la muestra 1 de checkpoint: una cooperativa en crisis, ¿qué fragmento se oye?",
+          "q": "¿Qué nexo oyes en la frase sobre la mascota?",
           "options": [
-            "publicaba",
-            "publique",
-            "publica"
+            "siempre que",
+            "a no ser que",
+            "por si"
           ],
           "answer": 1,
-          "why": "Petición actual.",
-          "audio": "La asamblea pide que la dirección publique las cuentas.",
-          "voice": "es-ES-f"
+          "audio": "Pueden tener un perro, a no ser que el consorcio lo prohíba.",
+          "voice": "es-AR-m",
+          "why": "«A no ser que» introduce la excepción."
         },
         {
-          "q": "En la muestra 2 de checkpoint: una cooperativa en crisis, ¿qué fragmento se oye?",
+          "q": "¿Qué nexo oyes en la frase sobre la llave?",
           "options": [
-            "funcionara",
-            "funcionará",
-            "funciona"
+            "en caso de que",
+            "con tal de que",
+            "por si"
+          ],
+          "answer": 2,
+          "audio": "Dejo una copia de la llave en el kiosco, por si alguien se queda afuera.",
+          "voice": "es-AR-f",
+          "why": "«Por si» + indicativo: precaución."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre el compañero?",
+          "options": [
+            "como si fuera",
+            "como era",
+            "como si sea"
           ],
           "answer": 0,
-          "why": "Expectativa pasada, no resultado confirmado.",
-          "audio": "La técnica esperaba que el sistema funcionara antes de junio.",
-          "voice": "es-ES-f"
+          "audio": "Organiza la heladera como si fuera el jefe de la casa.",
+          "voice": "es-AR-m",
+          "why": "«Como si» + imperfecto de subjuntivo."
+        },
+        {
+          "q": "¿Qué nexo oyes en la frase sobre el contrato?",
+          "options": [
+            "a menos que",
+            "siempre y cuando",
+            "salvo que"
+          ],
+          "answer": 1,
+          "audio": "Les renuevo el contrato siempre y cuando no haya quejas de los vecinos.",
+          "voice": "es-AR-f",
+          "why": "«Siempre y cuando» = solo si."
         }
       ]
     },
     "produce": [
       {
-        "text": "La asamblea pide que la dirección publique las cuentas.",
-        "tip": "Recupera acento verbal, grupos compuestos y petición mitigada para que la síntesis no suene como una acusación.",
-        "voice": "es-ES-f"
+        "text": "Aceptamos el aumento siempre y cuando arreglen la calefacción.",
+        "tip": "Di «siempre_y_cuando» de un tirón.",
+        "voice": "es-AR-f"
       },
       {
-        "text": "La técnica esperaba que el sistema funcionara antes de junio.",
-        "tip": "Recupera acento verbal, grupos compuestos y petición mitigada para que la síntesis no suene como una acusación.",
-        "voice": "es-ES-f"
+        "text": "Firmamos hoy, a no ser que encuentren otro problema.",
+        "tip": "Pausa breve después de «hoy».",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Si hubieran avisado antes, habríamos aplazado la apertura.",
-        "tip": "Recupera acento verbal, grupos compuestos y petición mitigada para que la síntesis no suene como una acusación.",
-        "voice": "es-ES-f"
+        "text": "Nos miró como si hubiéramos roto la ventana.",
+        "tip": "Enlaza «como_si_hubiéramos».",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "¡Ni que fuéramos tus empleados!",
+        "tip": "Sube la voz en «fuéramos».",
+        "voice": "es-AR-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Checkpoint: una cooperativa en crisis",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "Reunión de domingo en el departamento de Nueva Córdoba",
+    "context": "Valentina, Camila y Nicolás comparten un departamento en el barrio de estudiantes de Córdoba. El dueño quiere renovarles el contrato con condiciones nuevas, y además hay tensiones por la convivencia. Se reúnen en la cocina para decidir. Escucha primero sin leer. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Presidenta",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "va",
+        "name": "Valentina",
+        "voice": "es-AR-f",
+        "role": "Estudiante de Arquitectura, habló con el dueño"
       },
       {
-        "id": "s2",
-        "name": "Técnico",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ni",
+        "name": "Nicolás",
+        "voice": "es-AR-m",
+        "role": "Estudiante de Derecho"
       },
       {
-        "id": "s3",
-        "name": "Responsable",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ca",
+        "name": "Camila",
+        "voice": "es-CL-f",
+        "role": "Estudiante de intercambio de Chile"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Gracias por venir. Me alegra que hayamos mantenido el comedor abierto, pero sabemos que hubo esperas inaceptables. Hoy necesito que acordemos una solución provisional y un mensaje para las personas afectadas, sin esperar a que termine la revisión del contrato."
+        "speaker": "va",
+        "text": "Bueno, les cuento lo que dijo el dueño. Nos renueva el contrato por un año siempre y cuando aceptemos un aumento del quince por ciento. También nos pidió que pagáramos las expensas directamente al administrador. Y dijo que no subiría más el precio, a no ser que aumenten los impuestos municipales."
       },
       {
-        "speaker": "s2",
-        "text": "En abril dije que calculábamos terminar en junio. No aseguré que todas las funciones estuvieran listas para la inauguración. Admito que habría debido explicar mejor la incertidumbre. Si hubiéramos limitado el programa a las reservas individuales, habríamos podido probarlo antes."
+        "speaker": "ni",
+        "text": "¿Quince por ciento? Si hubiéramos negociado en marzo, cuando se fue el vecino de arriba, habríamos conseguido algo mejor. Ahora sabe que estamos cómodos. Yo aceptaría con tal de que arregle de una vez la calefacción. El invierno pasado estudiamos con campera como si viviéramos en la Antártida."
       },
       {
-        "speaker": "s3",
-        "text": "Yo esperaba que alguien nos avisara de ese límite. El personal interpretó la circular como una garantía. Ahora podemos atender reservas por teléfono, siempre que haya una persona dedicada a esa tarea. No quiero que la buena voluntad vuelva a sustituir una distribución realista del trabajo."
+        "speaker": "ca",
+        "text": "Estoy de acuerdo con lo de la calefacción. Pero antes de firmar, quiero hablar de otra cosa. Nico, no te enojes, pero a veces organizas la casa como si fueras el dueño. La semana pasada cambiaste el cronograma de limpieza sin preguntarnos, y al día siguiente nos hablaste como si no hubiera pasado nada."
       },
       {
-        "speaker": "s1",
-        "text": "Entiendo. Contrataremos apoyo durante dos semanas y revisaremos después la carga. Sobre la compensación, propongo devolver una parte del importe a los grupos que esperaron. No me parece suficiente decir que sentimos las molestias sin ofrecer una reparación concreta."
+        "speaker": "ni",
+        "text": "Tienes razón, habría podido consultarles. Lo cambié porque Valentina tenía exámenes y pensé que la ayudaba. Si fuera menos impulsivo, se lo habría preguntado primero. Perdón."
       },
       {
-        "speaker": "s2",
-        "text": "Puedo enviar mañana un calendario con funciones confirmadas y funciones previstas por separado. Necesito que una persona de sala participe en la prueba. No les estoy pidiendo que validen el sistema entero, sino que comprueben tres situaciones frecuentes."
+        "speaker": "va",
+        "text": "Gracias por decirlo. Propongo esto: firmamos, siempre que el dueño ponga por escrito lo de la calefacción. En caso de que no la arregle antes de mayo, le pedimos que nos descuente ese mes. Y el cronograma solo se cambia si estamos los tres de acuerdo."
       },
       {
-        "speaker": "s3",
-        "text": "Participaré si esa hora queda dentro de mi turno. También pediría que el mensaje a los clientes explique qué hemos cambiado. Agradezco que reconozcamos el error; ahora hace falta demostrar que hemos aprendido algo de él."
+        "speaker": "ca",
+        "text": "Me parece bien. Una cosa más: en mi país los contratos de estudiantes suelen ser por semestre. Si me hubieran explicado aquí que eran anuales, habría buscado otra opción. Pero ahora estoy contenta, así que firmo, a menos que mi universidad me pida volver antes. Por si acaso, quiero que el contrato diga que puedo irme dando aviso con un mes de anticipación."
       },
       {
-        "speaker": "s1",
-        "text": "Quisiera añadir los datos de la encuesta. Respondieron dieciséis grupos, pero algunos valoraron bien la comida y mal la reserva en la misma respuesta. No podemos dividirlos simplemente en satisfechos e insatisfechos. ¿Cómo comunicaríamos esa información sin exagerar ni ocultar las dificultades?"
+        "speaker": "ni",
+        "text": "Perfecto. Y como alguien vuelva a dejar la sartén sucia en la pileta toda la noche, le toca lavar los platos una semana entera. Lo digo en broma… más o menos."
       },
       {
-        "speaker": "s3",
-        "text": "Diría que la comida recibió valoraciones positivas y que la reserva sigue siendo un problema, aclarando cuántas personas respondieron. Sobre el presupuesto, priorizaría el apoyo telefónico. Si atraemos más clientes antes de controlar las reservas, quizá repitamos el fallo. Revisemos las cifras al terminar la primera semana antes de lanzar una campaña."
+        "speaker": "va",
+        "text": "¡Ni que fueras el dueño, Nico! Bueno, lo anoto igual. Mañana le escribo al dueño con nuestras condiciones y les reenvío su respuesta, por si quieren cambiar algo antes de firmar."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la reunión completa. ¿Qué deciden?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-05-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Córdoba?",
+          "prompt": "Elige la respuesta que mejor resume la reunión.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Checkpoint: una cooperativa en crisis?",
+              "q": "¿Cuál es el resultado de la reunión?",
               "options": [
-                "Contar una única versión sin permitir preguntas.",
-                "Acordar reparación y reservas provisionales para un comedor",
-                "Leer una lista de instrucciones sin responder a nadie."
+                "Deciden mudarse a otro departamento.",
+                "Rechazan el aumento y rompen el contrato.",
+                "Aceptan renovar con condiciones y acuerdan reglas de convivencia."
               ],
-              "answer": 1,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
+              "answer": 2,
+              "why": "Firman con condiciones y cambian la regla del cronograma."
             },
             {
-              "q": "¿Qué relación predomina entre las voces en «Checkpoint: una cooperativa en crisis»?",
+              "q": "¿Qué tono predomina?",
               "options": [
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio.",
-                "Ninguna intervención tiene relación con la anterior."
+                "Tenso al principio, pero conciliador.",
+                "Agresivo de principio a fin.",
+                "Indiferente."
               ],
               "answer": 0,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "Camila plantea una queja, Nicolás se disculpa y llegan a un acuerdo."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y anota cada condición.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-05-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Checkpoint: una cooperativa en crisis».",
+          "prompt": "Responde con los datos del audio.",
           "items": [
             {
-              "q": "¿Qué acuerdo concreto se plantea en el audio?",
+              "q": "¿Con qué condición aceptaría Nicolás el aumento?",
               "options": [
-                "Apoyo contratado durante dos semanas.",
-                "Cerrar definitivamente el comedor.",
-                "Exigir trabajo fuera de turno."
+                "Que el dueño baje las expensas.",
+                "Que el dueño arregle la calefacción.",
+                "Que el contrato sea por semestre."
               ],
-              "answer": 0,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
+              "answer": 1,
+              "why": "«Aceptaría con tal de que arregle de una vez la calefacción»."
             },
             {
-              "q": "¿Qué frase aparece en la intervención inicial de «Checkpoint: una cooperativa en crisis»?",
+              "q": "¿Qué harán si la calefacción no está arreglada en mayo?",
               "options": [
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión.",
-                "Gracias por venir."
+                "Pedir que les descuente ese mes.",
+                "Irse del departamento.",
+                "Comprar una estufa entre todos."
+              ],
+              "answer": 0,
+              "why": "«En caso de que no la arregle antes de mayo, le pedimos que nos descuente ese mes»."
+            },
+            {
+              "q": "¿Qué quiere Camila que diga el contrato?",
+              "options": [
+                "Que puede traer invitados.",
+                "Que el precio no subirá nunca.",
+                "Que puede irse avisando con un mes de anticipación."
               ],
               "answer": 2,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "Lo pide «por si acaso»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Fíjate en cómo combinan las clases de este checkpoint. Lee la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-05-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento según la clase que repasa.",
+          "categories": [
+            "Nexos de condición (semana 5)",
+            "«Como si» (semana 5)",
+            "Semanas 1 y 2: peticiones e hipótesis",
+            "Semanas 3 y 4: pasado irreal y mixtas"
+          ],
           "items": [
             {
-              "prompt": "En «Checkpoint: una cooperativa en crisis», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Participaré si esa hora queda dentro de mi turno. También pediría que el mensaje a los clientes explique qué hemos cambiado. Agradezco que reconozcamos el error; ahora hace falta demostrar que hemos aprendido algo de él.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "siempre y cuando aceptemos un aumento",
+              "cat": 0,
+              "why": "Condición necesaria."
+            },
+            {
+              "text": "como si viviéramos en la Antártida",
+              "cat": 1,
+              "why": "Comparación imaginada simultánea."
+            },
+            {
+              "text": "nos pidió que pagáramos las expensas",
+              "cat": 2,
+              "why": "Petición en pasado (semana 1)."
+            },
+            {
+              "text": "si hubiéramos negociado en marzo, habríamos conseguido algo mejor",
+              "cat": 3,
+              "why": "Condición irreal del pasado (semana 3)."
+            },
+            {
+              "text": "si fuera menos impulsivo, se lo habría preguntado",
+              "cat": 3,
+              "why": "Condicional mixta: rasgo → pasado (semana 4)."
+            },
+            {
+              "text": "como si no hubiera pasado nada",
+              "cat": 1,
+              "why": "Comparación imaginada anterior."
+            },
+            {
+              "text": "a menos que mi universidad me pida volver antes",
+              "cat": 0,
+              "why": "Excepción."
             }
           ]
         }
@@ -468,230 +786,354 @@ export const b2w05: Module = {
     ]
   },
   "reading": {
-    "title": "Checkpoint: una cooperativa en crisis: texto para interpretar",
-    "genre": "Dossier argumentativo",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Compartir vivienda sin perder amigos: guía para estudiantes",
+    "genre": "Guía informativa de una oficina universitaria",
+    "frame": "Texto original de SpanishCue escrito como guía de la oficina de alojamiento de una universidad ficticia de Córdoba. Los casos y los nombres son inventados; no es asesoramiento legal.",
     "text": [
-      "Documento A. La cooperativa Horizonte abrió su comedor antes de que estuviera listo el sistema de reservas. En el acta de abril consta que la dirección esperaba que el programa funcionara a principios de junio. En una circular posterior, esa expectativa se convirtió en la afirmación de que funcionaría para la inauguración. No existe, sin embargo, un mensaje de la empresa técnica que garantice ese plazo. Durante la primera semana se duplicaron varias reservas y tres grupos tuvieron que esperar más de una hora.",
-      "Documento B. La responsable de sala escribió a las personas socias: «Lamento que hayan tenido que esperar y agradezco que el equipo haya encontrado mesas alternativas». Añadió que, si la dirección hubiera anunciado una apertura de prueba, se habrían aceptado menos reservas. Su correo recibió críticas porque algunas personas lo interpretaron como una acusación contra quienes habían trabajado para inaugurar a tiempo. Ella aclaró que no cuestionaba su esfuerzo, sino la transformación de una previsión en una promesa pública.",
-      "Documento C. La presidencia reconoce que habría podido pedir una confirmación por escrito, aunque recuerda que el proveedor también conocía la fecha de apertura. Propone ofrecer una compensación a los grupos afectados y mantener abierto el comedor con reservas telefónicas. La empresa técnica solicita que se reduzcan temporalmente las funciones del programa para poder terminar la parte esencial. El personal de sala acepta ese sistema provisional siempre que no tenga que atender simultáneamente el teléfono y las mesas.",
-      "La próxima asamblea deberá decidir qué se comunica a los clientes y cómo se distribuye el trabajo adicional. Una explicación que solo busque culpables dejaría sin resolver las necesidades inmediatas. Pero un mensaje que se limite a celebrar la capacidad de reacción tampoco respondería a las preguntas pendientes. La mediación consiste en conservar esa doble exigencia: reconocer el esfuerzo y pedir cuentas, sin inventar garantías que nadie puede ofrecer todavía.",
-      "Anexo de atención. En una encuesta interna respondieron dieciséis de los veinticuatro grupos atendidos esa semana. Nueve valoraron positivamente la comida; siete señalaron dificultades con la reserva. Algunas respuestas incluían ambas observaciones, por lo que no deben sumarse como categorías excluyentes. La encuesta se envió después de ofrecer una compensación y no permite saber cómo habrían respondido quienes no contestaron. El equipo propone utilizarla para detectar aspectos que revisar, sin presentarla como una medida definitiva de satisfacción.",
-      "La comisión dispone de un presupuesto limitado: puede contratar apoyo telefónico durante dos semanas o financiar una campaña para recuperar clientes, pero no ambas medidas al mismo tiempo. La primera opción responde al problema operativo; la segunda podría aumentar la demanda antes de resolverlo. Quienes defienden la campaña argumentan que sin ingresos tampoco podrá mantenerse el apoyo. La recomendación final debe explicar esa tensión y prever qué se hará si el número de reservas supera la capacidad del sistema provisional."
+      "Cada marzo, miles de estudiantes llegan a Córdoba y comparten departamento por primera vez. La experiencia suele ser buena, siempre que se cumplan algunas reglas básicas desde el principio. Esta guía reúne las consultas más frecuentes que recibimos el año pasado y algunos casos reales, con los nombres cambiados.",
+      "Antes de firmar, lean el contrato completo. Muchos propietarios aceptan estudiantes sin garante a condición de que paguen un depósito de dos meses. No firmen, a menos que el contrato indique cuándo y cómo se devolverá ese dinero. En caso de que el departamento tenga daños previos, sáquenles fotos el primer día y envíenlas al propietario por escrito. Lucas, estudiante de Medicina, nos escribió en noviembre: «Si hubiera sacado fotos de la mancha del techo, no me habrían descontado medio depósito». Por si alguna vez lo necesitan, guarden también todos los recibos.",
+      "La convivencia exige acuerdos explícitos. Recomendamos que, durante la primera semana, cada grupo escriba un cronograma de tareas y decida cómo repartirá los gastos. Las reglas funcionan mejor si nadie las impone: cuando una persona organiza la casa como si fuera la propietaria, los demás dejan de sentir que las normas son suyas. Una estudiante de intercambio nos contó que su compañero actuaba como si hubiera vivido allí toda la vida y ella acabara de llegar de visita. Se sintió una invitada en su propia casa.",
+      "El dinero merece un apartado propio. Lo más justo es repartir los gastos fijos en partes iguales, a no ser que alguien ocupe una habitación mucho más grande; en ese caso, puede pagar un poco más. Abran una cuenta común o una planilla compartida en la primera semana, por si surgen dudas más adelante. Una estudiante de Jujuy nos contó que, durante meses, su compañera pagaba la luz con retraso como si las facturas llegaran solas. «Ojalá le hubiera dicho algo en abril», nos escribió. «Si lo hubiera hecho, no nos habrían cortado el servicio en pleno invierno».",
+      "Los conflictos más comunes tienen que ver con el ruido, la limpieza y las visitas. Siempre que hay un problema, conviene hablarlo en persona y pronto. Un grupo de tercer año nos explicó su método: cualquiera puede invitar a alguien a dormir, con tal de que avise con un día de anticipación y no sea más de dos veces por semana. «Si lo hubiéramos acordado desde marzo», reconoció una de ellas, «hoy no estaríamos tan cansados de discutir».",
+      "Por último, piensen en la salida desde la entrada. Si un estudiante tiene que irse antes de terminar el contrato, normalmente puede hacerlo dando aviso con un mes de anticipación, salvo que el contrato diga otra cosa. Nuestra oficina revisa contratos de manera gratuita: si nos los hubieran traído antes, muchos de los casos de esta guía no habrían existido. Pidan turno; no hace falta esperar a que haya un problema."
     ],
     "glossary": [
       {
-        "es": "convocar una asamblea",
-        "note": "reunir a las personas socias"
+        "es": "el propietario",
+        "note": "dueño de la vivienda"
       },
       {
-        "es": "aclarar el alcance",
-        "note": "precisar qué incluye algo"
+        "es": "descontar",
+        "note": "restar una cantidad de un pago"
       },
       {
-        "es": "reconstruir los hechos",
-        "note": "ordenar lo ocurrido"
+        "es": "pedir turno",
+        "note": "en Argentina, reservar una cita"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-05-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la guía.",
         "items": [
           {
-            "q": "¿Qué contradicción reúne el dossier?",
+            "q": "¿Cuándo recomienda la guía no firmar un contrato?",
             "options": [
-              "Nadie conocía la inauguración.",
-              "Una expectativa interna terminó comunicándose como garantía.",
-              "La empresa confirmó todas las funciones."
+              "Cuando el propietario pide un depósito.",
+              "Cuando no dice cómo se devolverá el depósito.",
+              "Cuando no hay garante."
             ],
             "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«No firmen, a menos que el contrato indique cuándo y cómo se devolverá ese dinero»."
           },
           {
-            "q": "¿Qué exige una mediación fiel?",
+            "q": "¿Qué error cometió Lucas?",
             "options": [
-              "Reconocer el esfuerzo y mantener las responsabilidades.",
-              "Eliminar cualquier crítica a la presidencia.",
-              "Presentar la hipótesis del técnico como hecho."
+              "No sacó fotos de un daño previo.",
+              "No pagó el depósito.",
+              "Se fue sin avisar."
             ],
             "answer": 0,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«Si hubiera sacado fotos de la mancha del techo…»."
+          },
+          {
+            "q": "¿Qué regla de visitas usa el grupo de tercer año?",
+            "options": [
+              "No se permiten visitas.",
+              "Las visitas solo los fines de semana.",
+              "Visitas con un día de aviso y como máximo dos veces por semana."
+            ],
+            "answer": 2,
+            "why": "Cuarto párrafo."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-05-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta la guía y relaciona sus formas con las clases del checkpoint.",
         "items": [
           {
-            "prompt": "En «Checkpoint: una cooperativa en crisis», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "El problema no se reduce a una avería: una previsión técnica se presentó como un compromiso firme. La empresa admite que no explicó bien la incertidumbre y la presidencia reconoce que no solicitó confirmación escrita. El equipo de sala acepta colaborar si se reserva tiempo dentro de su turno. Recomiendo comunicar estas responsabilidades sin personalizar el conflicto y confirmar por escrito el apoyo temporal. Si se hubiera realizado una apertura de prueba, quizá se habrían detectado antes los fallos; esa posibilidad debe orientar las próximas decisiones.",
+            "prompt": "En 80–100 palabras, explica por qué la guía usa tantas condiciones irreales del pasado en las citas de estudiantes y qué aporta «como si» en el tercer párrafo. Cita dos ejemplos.",
+            "model": "Las citas de estudiantes usan condiciones irreales del pasado porque muestran errores ya cometidos y sus consecuencias: «si hubiera sacado fotos…, no me habrían descontado medio depósito». Así la guía no da solo órdenes, sino que convence con experiencias reales. «Como si», en cambio, describe un comportamiento que molesta sin acusar directamente: el compañero actuaba «como si hubiera vivido allí toda la vida». La comparación imaginada hace visible el problema: una persona se adueña de un espacio que es de todos.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
-            ]
-          },
-          {
-            "prompt": "Compara el anexo del checkpoint 5 con las primeras fuentes: identifica una limitación de los datos y una consecuencia práctica para la recomendación. Explica qué detalle conservarías al mediar para otra persona.",
-            "model": "Una cifra o una experiencia orienta la decisión solo dentro de su alcance. La recomendación debe conservar qué se midió, qué falta y qué condición se propone verificar.",
-            "checklist": [
-              "Identifico un dato concreto del anexo.",
-              "No generalizo fuera de la muestra o del caso.",
-              "Adapto el mensaje sin perder una condición."
+              "Explico la función de las condiciones irreales en las citas.",
+              "Explico qué aporta «como si».",
+              "Cito dos ejemplos literales."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la guía combina nexos, «como si» y formas de las semanas anteriores.",
       "items": [
         {
-          "quote": "Documento A.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "Muchos propietarios aceptan estudiantes sin garante a condición de que paguen un depósito de dos meses.",
+          "note": "Nexo formal de condición necesaria + presente de subjuntivo."
         },
         {
-          "quote": "La mediación consiste en conservar esa doble exigencia: reconocer el esfuerzo y pedir cuentas, sin inventar garantías que nadie puede ofrecer todavía.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "Siempre que hay un problema, conviene hablarlo en persona y pronto.",
+          "note": "Aquí «siempre que» lleva indicativo: significa «cada vez que»."
+        },
+        {
+          "quote": "su compañero actuaba como si hubiera vivido allí toda la vida y ella acabara de llegar de visita",
+          "note": "Dos «como si» en una frase: uno anterior (pluscuamperfecto) y otro simultáneo (imperfecto)."
+        },
+        {
+          "quote": "si nos los hubieran traído antes, muchos de los casos de esta guía no habrían existido",
+          "note": "Repaso de la semana 3: condición y resultado irreales en el pasado."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Cruza el comedor con coordinación, expectativas, reconocimientos e hipótesis: recupera un recurso de cada semana y explica por qué lo eliges.",
+    "intro": "Este bloque integra las semanas 1 a 5. Cada ejercicio indica qué clases recupera.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-05-x-integracion",
+        "type": "gap",
+        "prompt": "Integración de las semanas 1 a 4 (G128–G135): completa con la forma adecuada del verbo entre paréntesis.",
+        "items": [
+          {
+            "q": "Semana 1 · La dueña nos prohibió que ___ (hacer) fiestas entre semana.",
+            "answers": [
+              [
+                "hiciéramos",
+                "hiciésemos"
+              ]
+            ],
+            "why": "Influencia en pasado + imperfecto de subjuntivo; hicieron → hiciéramos."
+          },
+          {
+            "q": "Semana 2 · El administrador nos ha pedido que ___ (dejar) libre la cochera el sábado.",
+            "answers": [
+              [
+                "dejemos"
+              ]
+            ],
+            "why": "Pretérito perfecto: marco presente."
+          },
+          {
+            "q": "Semana 2 · Si el departamento ___ (tener) lavarropas, ahorraríamos mucho tiempo.",
+            "answers": [
+              [
+                "tuviera",
+                "tuviese"
+              ]
+            ],
+            "why": "Hipótesis sobre el presente."
+          },
+          {
+            "q": "Semana 3 · Me extrañó que nadie ___ (cerrar) la puerta del balcón antes de la tormenta.",
+            "answers": [
+              [
+                "hubiera cerrado",
+                "hubiese cerrado"
+              ]
+            ],
+            "why": "Reacción pasada a algo anterior."
+          },
+          {
+            "q": "Semana 4 · Si hubiéramos alquilado más cerca de la facultad, ahora ___ (dormir) una hora más.",
+            "answers": [
+              [
+                "dormiríamos"
+              ]
+            ],
+            "why": "Mixta: pasado → presente."
+          },
+          {
+            "q": "Semana 4 · Nico ___ (poder) avisar que traía a cinco amigos a cenar.",
+            "answers": [
+              [
+                "habría podido",
+                "hubiera podido"
+              ]
+            ],
+            "why": "Reproche atenuado."
+          }
+        ]
+      },
+      {
+        "id": "b2-05-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Córdoba y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para formar frases de la convivencia.",
         "items": [
           {
             "words": [
-              "En",
-              "«Checkpoint: una cooperativa en crisis»,",
-              "La",
-              "asamblea",
-              "pide",
+              "Pueden",
+              "usar",
+              "la",
+              "terraza",
+              "con",
+              "tal",
+              "de",
               "que",
               "la",
-              "dirección",
-              "publique",
-              "las",
-              "cuentas."
+              "dejen",
+              "limpia."
             ],
-            "why": "Petición actual."
+            "why": "Condición necesaria coloquial + subjuntivo."
           },
           {
             "words": [
-              "En",
-              "«Checkpoint: una cooperativa en crisis»,",
+              "Camila",
+              "nos",
+              "miró",
+              "como",
+              "si",
+              "hubiéramos",
+              "dicho",
+              "algo",
+              "terrible."
+            ],
+            "why": "«Como si» + pluscuamperfecto: anterior."
+          },
+          {
+            "words": [
               "Si",
-              "hubieran",
-              "avisado",
-              "antes,",
-              "habríamos",
-              "aplazado",
-              "la",
-              "apertura."
+              "el",
+              "dueño",
+              "nos",
+              "bajara",
+              "el",
+              "precio,",
+              "firmaríamos",
+              "por",
+              "dos",
+              "años."
             ],
-            "why": "Alternativa pasada irreal."
+            "why": "Semana 2: «si + imperfecto de subjuntivo» + condicional."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-05-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de checkpoint: una cooperativa en crisis; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error de alguna clase de las semanas 1 a 5. Corrígelo.",
         "items": [
           {
-            "sentence": "Lamentamos que ustedes han esperado tanto.",
+            "sentence": "Te presto el cargador siempre que me lo devuelves hoy.",
             "answers": [
-              "Lamentamos que ustedes hayan esperado tanto."
+              "Te presto el cargador siempre que me lo devuelvas hoy."
             ],
-            "why": "La valoración lamentar selecciona subjuntivo."
+            "why": "Semana 5: «siempre que» condicional lleva subjuntivo."
           },
           {
-            "sentence": "El equipo esperaba que el programa funciona en junio.",
+            "sentence": "Se comporta como si no le importe nada.",
             "answers": [
-              "El equipo esperaba que el programa funcionara en junio."
+              "Se comporta como si no le importara nada.",
+              "Se comporta como si no le importase nada."
             ],
-            "why": "Expectativa desde el pasado."
+            "why": "Semana 5: «como si» + imperfecto de subjuntivo."
           },
           {
-            "sentence": "Si lo habrían probado, habrían detectado fallos.",
+            "sentence": "Mis padres querían que yo viva en una residencia universitaria.",
             "answers": [
-              "Si lo hubieran probado, habrían detectado fallos."
+              "Mis padres querían que yo viviera en una residencia universitaria.",
+              "Mis padres querían que yo viviese en una residencia universitaria."
             ],
-            "why": "Contrafactual pasada en la condición."
+            "why": "Semanas 1 y 2: verbo principal en pasado → imperfecto de subjuntivo."
+          },
+          {
+            "sentence": "Si habríamos leído la cláusula, no habríamos pagado la multa.",
+            "answers": [
+              "Si hubiéramos leído la cláusula, no habríamos pagado la multa.",
+              "Si hubiésemos leído la cláusula, no habríamos pagado la multa."
+            ],
+            "why": "Semana 3: después de «si», pluscuamperfecto de subjuntivo."
+          },
+          {
+            "sentence": "Lleva el paraguas por si llueva a la salida.",
+            "answers": [
+              "Lleva el paraguas por si llueve a la salida."
+            ],
+            "why": "Semana 5: «por si» va con indicativo."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-05-x-nexo",
+        "type": "classify",
+        "prompt": "¿Qué expresa cada frase?",
+        "categories": [
+          "Condición necesaria (solo si)",
+          "Excepción (si no)",
+          "Precaución o caso previsto",
+          "Comparación imaginada"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre mediar entre expectativas, valoraciones y alternativas con una postura y una razón; adapta el destinatario.",
-            "model": "El problema no se reduce a una avería: una previsión técnica se presentó como un compromiso firme.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Te dejo mi auto siempre y cuando le pongas nafta.",
+            "cat": 0,
+            "why": "«Siempre y cuando» = solo si."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Checkpoint: una cooperativa en crisis» sin debilitarla, y responde con una condición verificable.",
-            "model": "El problema no se reduce a una avería: una previsión técnica se presentó como un compromiso firme. La empresa admite que no explicó bien la incertidumbre y la presidencia reconoce que no solicitó confirmación escrita. El equipo de sala acepta colaborar si se reserva tiempo dentro de su turno. Recomiendo comunicar estas responsabilidades sin personalizar el conflicto y confirmar por escrito el apoyo temporal. Si se hubiera realizado una apertura de prueba, quizá se habrían detectado antes los fallos; esa posibilidad debe orientar las próximas decisiones.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Vamos al río el domingo, salvo que haga frío.",
+            "cat": 1,
+            "why": "«Salvo que» + subjuntivo = si no."
+          },
+          {
+            "text": "Compré pan de más por si vienen tus amigos.",
+            "cat": 2,
+            "why": "«Por si»: precaución."
+          },
+          {
+            "text": "Grita como si estuviéramos en otro barrio.",
+            "cat": 3,
+            "why": "«Como si» + imperfecto."
+          },
+          {
+            "text": "En caso de que falte agua, usen la cisterna.",
+            "cat": 2,
+            "why": "Caso previsto."
+          },
+          {
+            "text": "Firmo a condición de que me den factura.",
+            "cat": 0,
+            "why": "Condición formal."
+          },
+          {
+            "text": "No salgo esta noche, a menos que me llames.",
+            "cat": 1,
+            "why": "Excepción."
+          },
+          {
+            "text": "Habla del alquiler como si lo hubiera pagado él solo.",
+            "cat": 3,
+            "why": "«Como si» + pluscuamperfecto."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-05-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Producción guiada de integración (semanas 1 a 5). El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 1 sin abrir su explicación y aplica sus recursos a «Checkpoint: una cooperativa en crisis»: Subjuntivo en oraciones sustantivas; Decir, insistir, recordar: informar o pedir; Trabajo en equipo y liderazgo; Entonación de peticiones indirectas; Pedir, exigir y negociar tareas; Leer un correo de coordinación. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo elegir el modo según el verbo principal: influencia, valoración, emoción, percepción o comunicación. Puedo distinguir me dice que viene (información) de me dice que venga (orden). Puedo hablar de delegar, coordinar, exigir, plazos y responsabilidades. Puedo pedir algo de forma indirecta sin sonar autoritario. Puedo transmitir peticiones y negociar responsabilidades en un equipo. Puedo distinguir información, peticiones y obligaciones en un correo de trabajo.",
+            "prompt": "Cuenta qué te pidieron cuando alquilaste o compartiste vivienda por primera vez (semana 1) y con qué condición aceptaste (semana 5).",
+            "model": "La dueña me pidió que pagara tres meses por adelantado. Acepté con la condición de que me dejara pintar mi cuarto y me diera recibo de cada pago.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso «pidió que» + imperfecto de subjuntivo.",
+              "Uso un nexo de condición con el tiempo correcto."
             ]
           },
           {
-            "prompt": "Recupera la semana 2 sin abrir su explicación y aplica sus recursos a «Checkpoint: una cooperativa en crisis»: Imperfecto de subjuntivo y correlación; Como si + imperfecto de subjuntivo; Generaciones y educación familiar; Hablara frente a hablará; Recordar lo que se esperaba de mí; Escuchar una entrevista sobre generaciones. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo aplicar la correlación temporal: me pidió que lo hiciera, me alegró que vinieras. Puedo comparar con situaciones irreales: habla como si lo supiera todo. Puedo hablar de normas, expectativas y conflictos entre generaciones. Puedo distinguir y producir hablara, hablará y hablaría. Puedo contar qué esperaban, pedían o prohibían otras personas en el pasado. Puedo identificar la postura de cada generación en una conversación.",
+            "prompt": "Describe a un compañero o compañera con «como si» y añade cómo sería hoy la convivencia si se hubiera comportado de otra manera (semanas 4 y 5).",
+            "model": "Mi antiguo compañero usaba la cocina como si viviera solo. Si hubiera respetado los turnos desde el principio, hoy seguiríamos siendo amigos.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso «como si» con el tiempo adecuado.",
+              "Uso una condicional mixta pasado → presente."
             ]
           },
           {
-            "prompt": "Recupera la semana 3 sin abrir su explicación y aplica sus recursos a «Checkpoint: una cooperativa en crisis»: Perfecto y pluscuamperfecto de subjuntivo; Logros, fracasos y aprendizajes; Ritmo en formas compuestas largas; Valorar hechos pasados; Carta de felicitación o pésame. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo valorar hechos terminados: me alegra que hayas llegado, me sorprendió que no hubiera llamado. Puedo hablar de esfuerzo, constancia, frustración, superar y lograr. Puedo decir hubiera estado o habría podido sin cortar el grupo verbal. Puedo valorar algo que ha pasado o había pasado y reaccionar con matices. Puedo escribir un mensaje formal o cercano que valora un hecho.",
+            "prompt": "Imagina una regla nueva para tu casa o tu trabajo (semana 2) y explica qué habría pasado el mes pasado si ya hubiera existido (semana 3).",
+            "model": "Si tuviéramos una regla de silencio después de las once, todos dormiríamos mejor. Si la hubiéramos tenido el mes pasado, no habríamos discutido por la música del sábado.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 4 sin abrir su explicación y aplica sus recursos a «Checkpoint: una cooperativa en crisis»: Condicionales irreales y mixtas; Condicional compuesto; Decisiones y consecuencias; Entonación del reproche; Lamentar y reprochar; Historia alternativa. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo expresar condiciones irreales en presente, en pasado y mixtas. Puedo hablar de lo que habría pasado y reprochar con habrías podido. Puedo hablar de arrepentimiento, oportunidades perdidas y alternativas. Puedo distinguir un reproche de una hipótesis neutra por la entonación. Puedo expresar arrepentimiento, reprochar con tacto y responder a un reproche. Puedo contar cómo habría sido mi vida si una decisión hubiera sido distinta.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso «si + imperfecto de subjuntivo» + condicional.",
+              "Uso «si + pluscuamperfecto» + condicional compuesto."
             ]
           }
         ]
@@ -699,196 +1141,259 @@ export const b2w05: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe un informe de mediación para la asamblea. Cruza los tres documentos con la reunión, distingue acuerdos de propuestas y recomienda dos medidas con responsables. Recupera explícitamente las cuatro semanas anteriores.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Escribe a tus compañeros de vivienda (o de oficina) una propuesta de acuerdo de convivencia (220–300 palabras). Recuerda qué pasó el semestre pasado y qué les pidió el dueño, explica qué habría sido distinto con reglas claras y propón normas con condiciones, excepciones y casos previstos. Puedes describir con «como si» algún comportamiento que quieres evitar.",
+    "context": "El texto va a un grupo de personas con las que convives: tono cordial, pero las normas deben quedar claras. Este checkpoint evalúa también las clases de las semanas 1 a 4.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Haz una lista de tres problemas del semestre pasado y una petición del dueño o de la administración.",
+      "Planifica: introducción, lo que pasó y lo que habría sido distinto, normas propuestas y cierre.",
+      "Redacta con al menos tres nexos distintos, un «como si» y una forma de cada semana anterior.",
+      "Revisa el modo después de cada nexo, corrige la correlación de tiempos y comprueba que no haya condicional después de «si»."
     ],
     "useLanguage": [
-      "Integra cuatro decisiones: distingue información de influencia, sitúa la expectativa en su momento, expresa anterioridad y construye una alternativa irreal. En una mediación no basta transformar verbos: debes conservar quién dijo qué, qué se confirmó y qué sigue siendo una propuesta.",
-      "Un informe de crisis necesita una cronología breve, posiciones atribuidas y una recomendación viable. Evita presentar una hipótesis como prueba de culpa. Recupera el contraste dice que viene / dice que venga y las formas esperaba que, me alegra que haya y si hubiera para reconstruir el desacuerdo sin deformarlo.",
-      "Cruza el comedor con coordinación, expectativas, reconocimientos e hipótesis: recupera un recurso de cada semana y explica por qué lo eliges."
+      "El dueño nos pidió que…",
+      "Si hubiéramos acordado…, no habríamos…",
+      "siempre y cuando / con tal de que / a condición de que + subjuntivo",
+      "a no ser que / salvo que + subjuntivo",
+      "en caso de que + subjuntivo / por si + indicativo",
+      "como si + imperfecto / pluscuamperfecto de subjuntivo"
     ],
     "model": [
-      "El conflicto del comedor procede de una diferencia entre previsión y compromiso. La empresa técnica calculaba terminar en junio, mientras que la circular de apertura presentó ese calendario como garantía. El personal de sala esperaba que el sistema funcionara y organizó las reservas sobre esa base. Durante la reunión, la presidencia reconoció que debería haber solicitado una confirmación escrita.",
-      "Agradecemos que el equipo haya mantenido el servicio, pero ese esfuerzo no elimina las esperas sufridas por algunos grupos. Si se hubiera realizado una apertura de prueba, quizá se habrían detectado antes las duplicaciones. Esta hipótesis debe orientar futuras decisiones, sin convertirse en una certeza sobre todo lo que habría ocurrido. El problema inmediato exige una reparación y una distribución sostenible del trabajo adicional.",
-      "Recomiendo priorizar el apoyo telefónico durante dos semanas y aplazar la campaña comercial. Aumentar la demanda antes de controlar las reservas podría agravar el fallo. La presidencia debe confirmar la contratación y la responsable de sala, acordar un turno específico para probar las funciones esenciales. La empresa enviará un calendario que distinga funciones confirmadas de funciones previstas. Estas responsabilidades deberían quedar registradas en un documento común.",
-      "También propongo comunicar una compensación concreta a los grupos afectados. La encuesta interna ayuda a identificar dificultades, pero sus respuestas no representan a todas las personas atendidas ni forman categorías excluyentes. Revisaremos capacidad y resultados al terminar la primera semana. Solo después convendría decidir si hay condiciones suficientes para promover nuevas reservas sin volver a prometer un servicio que todavía no podemos garantizar."
+      "Hola, chicos: antes de firmar la renovación, quiero proponerles un acuerdo de convivencia. El semestre pasado tuvimos varios roces que, en el fondo, venían de no haber hablado a tiempo. Si hubiéramos escrito unas normas en marzo, no habríamos discutido tanto por la limpieza ni por las visitas.",
+      "Recuerden también lo que nos pidió el dueño: que pagáramos las expensas antes del día diez y que no hiciéramos ruido después de medianoche. Nos dijo que renovaría el contrato siempre que no hubiera quejas de los vecinos. Si no lo hubiéramos olvidado en junio, hoy no tendríamos esa advertencia por escrito.",
+      "Propongo estas normas. Cada uno se hará cargo de la limpieza una semana, a no ser que tenga exámenes; en ese caso, cambiamos turnos con un día de aviso. Se pueden traer invitados a dormir con tal de que avisemos al grupo y no sea más de dos veces por semana. En caso de que alguien rompa algo de los espacios comunes, lo repone en un mes. Y dejo una copia de la llave en el kiosco de la esquina por si alguien se queda afuera.",
+      "Por último, una cosa que me importa: que nadie organice la casa como si fuera solo suya. Ojalá podamos votar esto el domingo. Si les parece bien, lo imprimimos y lo pegamos en la heladera. Y si alguna norma no funciona, la revisamos en julio, sin dramas. Un abrazo, Valentina."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Uso al menos tres nexos de condición, excepción o caso previsto con el modo correcto.",
+      "Uso «como si» con imperfecto o pluscuamperfecto de subjuntivo.",
+      "Recupero las semanas 1 a 4: petición en pasado, correlación, condición irreal pasada y condicional mixta.",
+      "Las normas son claras y cada una tiene su condición o su excepción.",
+      "El tono es cordial y el texto está organizado en párrafos con funciones claras."
     ],
     "words": [
       220,
-      280
+      300
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Este checkpoint tiene dos tareas orales que integran las cinco semanas. Habla con notas, sin leer. Si te grabas, la grabación queda en tu dispositivo y no se evalúa automáticamente.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Checkpoint: una cooperativa en crisis» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Negociar con el dueño",
+        "prompt": "Tu docente es el dueño de un departamento que te quiere renovar el contrato con un aumento. Escucha sus condiciones, pregunta qué incluye, acepta solo bajo condiciones claras, propón una excepción y un caso previsto, y recuérdale con suavidad algo que habría podido hacer el año pasado.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
-        ],
-        "seconds": 180,
-        "model": "El problema no se reduce a una avería: una previsión técnica se presentó como un compromiso firme. La empresa admite que no explicó bien la incertidumbre y la presidencia reconoce que no solicitó confirmación escrita. El equipo de sala acepta colaborar si se reserva tiempo dentro de su turno. Recomiendo comunicar estas responsabilidades sin personalizar el conflicto y confirmar por escrito el apoyo temporal. Si se hubiera realizado una apertura de prueba, quizá se habrían detectado antes los fallos; esa posibilidad debe orientar las próximas decisiones.",
-        "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
-        ]
-      },
-      {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de mediar entre expectativas, valoraciones y alternativas. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
-        "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara tres nexos distintos: «siempre y cuando», «a no ser que», «en caso de que».",
+          "Prepara un reproche atenuado con «habría podido» (semana 4).",
+          "Ten pensada una hipótesis con «si + imperfecto de subjuntivo» (semana 2)."
         ],
         "seconds": 240,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Pregunto, escucho y respondo a las condiciones reales del dueño.",
+          "Uso nexos variados con el modo correcto.",
+          "Cierro con un acuerdo concreto o explico por qué no acepto."
+        ]
+      },
+      {
+        "title": "Balance de un semestre compartido",
+        "prompt": "Habla durante unos tres minutos de una experiencia de convivencia (casa, residencia, viaje, oficina). Cuenta qué te pidieron, describe a alguien con «como si», explica qué habría pasado con otras reglas y cómo sería hoy la situación si hubieras tomado otra decisión.",
+        "prep": [
+          "Anota una forma de cada semana (1 a 5).",
+          "Ordena tus ideas: situación, problema, alternativas, presente."
+        ],
+        "seconds": 180,
+        "model": "En mi primer año viví en una residencia con otras cinco chicas. La directora nos pidió que no cocináramos después de las diez. Una compañera, Lara, se movía por la cocina como si fuera la encargada. Si hubiéramos hablado con ella al principio, no habríamos acumulado tanta tensión. Al final me mudé; si me hubiera quedado, hoy seguiría compartiendo baño con cinco personas. Ahora acepto convivir siempre que haya reglas claras desde el primer día.",
+        "selfCheck": [
+          "Uso al menos una forma de cada semana.",
+          "Pronuncio los nexos largos sin cortes.",
+          "Mi relato tiene principio, desarrollo y valoración final."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a clase tu trabajo del checkpoint y úsalo para comprobar con tu profesor qué dominas y qué necesitas repasar.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Checkpoint: una cooperativa en crisis» en tres minutos y responde a una objeción inesperada.",
-        "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Córdoba; pídele a tu docente que compruebe si has conservado el matiz.",
-        "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
-        ]
-      },
-      {
         "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre mediar entre expectativas, valoraciones y alternativas; identifica una condición que todavía necesita confirmación.",
+        "task": "Pide algo a tu profesor (cambiar la hora de clase, más tarea, un descanso) y acepta su respuesta solo bajo una condición.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "Vale, siempre que…",
+          "De acuerdo, a no ser que…"
+        ]
+      },
+      {
+        "move": "Describe",
+        "task": "Describe a un personaje famoso o a alguien que conoces con «como si» y deja que tu profesor adivine quién es.",
+        "phrases": [
+          "Habla como si…",
+          "Se viste como si…"
+        ]
+      },
+      {
+        "move": "Repasa",
+        "task": "Elige la clase de las semanas 1 a 5 que te parece más difícil y pide a tu profesor tres frases para practicarla.",
+        "phrases": [
+          "Todavía me cuesta…",
+          "¿Me das un ejemplo con…?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu propuesta de convivencia con los nexos marcados y una lista de las dos formas de las semanas 1 a 4 que más errores te dieron."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Checkpoint: una cooperativa en crisis», ¿qué resume mejor el propósito?",
-        "options": [
-          "Evitar cualquier intercambio entre personas.",
-          "Acordar reparación y reservas provisionales para un comedor",
-          "Sustituir toda evidencia por una opinión rotunda."
+        "type": "gap",
+        "q": "Te acompaño al aeropuerto con tal de que me ___ (invitar) a un café.",
+        "answers": [
+          [
+            "invites"
+          ]
         ],
-        "answer": 1,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "En abril dije que calculábamos terminar en junio. No aseguré que todas las funciones estuvieran listas para la inauguración. Admito que habría debido explicar mejor la incertidumbre. Si hubiéramos limitado el programa a las reservas individuales, habríamos podido probarlo antes.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Técnico en «Checkpoint: una cooperativa en crisis», ¿qué intervención reconoces?",
-        "options": [
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "En abril dije que calculábamos terminar en junio",
-          "No hay ninguna condición pendiente y todas las partes aceptaron."
-        ],
-        "answer": 1,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "Condición necesaria: subjuntivo."
       },
       {
         "type": "gap",
-        "q": "El personal agradece que la dirección ___ reconocido el fallo.",
+        "q": "Mi abuela me trata como si todavía ___ (tener) diez años.",
         "answers": [
           [
-            "haya"
+            "tuviera",
+            "tuviese"
           ]
         ],
-        "why": "Valoración presente y hecho anterior."
+        "why": "«Como si» + imperfecto de subjuntivo."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «La responsable: «Que nadie acepte más reservas».» Transmite con pide que.",
-        "model": "La responsable pide que nadie acepte más reservas.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "Semana 1 · El profesor nos aconsejó que ___ (leer) el capítulo antes del examen.",
+        "answers": [
+          [
+            "leyéramos",
+            "leyésemos"
+          ]
+        ],
+        "why": "Influencia en pasado; leyeron → leyéramos."
+      },
+      {
+        "type": "gap",
+        "q": "Semana 3 · Si ___ (salir) antes de casa, no habríamos perdido el colectivo.",
+        "answers": [
+          [
+            "hubiéramos salido",
+            "hubiésemos salido"
+          ]
+        ],
+        "why": "Condición irreal del pasado."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase pone una condición y no habla de costumbre?",
+        "options": [
+          "Siempre que viajo, pierdo algo.",
+          "Siempre que llamo, está ocupado.",
+          "Te llevo siempre que estés listo a las ocho."
+        ],
+        "answer": 2,
+        "why": "«Siempre que» + subjuntivo = solo si."
+      },
+      {
+        "type": "choice",
+        "q": "Semana 4 · «Si hubiera aprendido a nadar de chica, ahora ___ en el río sin miedo.»",
+        "options": [
+          "habría nadado",
+          "nadaría",
+          "nadara"
+        ],
+        "answer": 1,
+        "why": "Mixta pasado → presente: condicional simple."
+      },
+      {
+        "type": "listen",
+        "q": "¿Qué hace la hablante?",
+        "audio": "Como vuelvas a usar mi toalla, te la cobro.",
+        "voice": "es-AR-f",
+        "options": [
+          "Explica una causa.",
+          "Advierte en tono coloquial.",
+          "Expresa un deseo."
+        ],
+        "answer": 1,
+        "why": "«Como» + subjuntivo: aviso coloquial."
       },
       {
         "type": "error",
-        "sentence": "Esperábamos que ustedes pueden explicar la demora.",
+        "sentence": "En caso de que no puedes venir, mándame un mensaje.",
         "answers": [
-          "Esperábamos que ustedes pudieran explicar la demora."
+          "En caso de que no puedas venir, mándame un mensaje."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "«En caso de que» + subjuntivo."
+      },
+      {
+        "type": "error",
+        "sentence": "Me miró como si yo habría dicho una tontería.",
+        "answers": [
+          "Me miró como si yo hubiera dicho una tontería.",
+          "Me miró como si yo hubiese dicho una tontería."
+        ],
+        "why": "«Como si» + pluscuamperfecto, nunca condicional."
+      },
+      {
+        "type": "error",
+        "sentence": "Me gustaría que mis compañeros limpien la cocina más seguido.",
+        "answers": [
+          "Me gustaría que mis compañeros limpiaran la cocina más seguido.",
+          "Me gustaría que mis compañeros limpiasen la cocina más seguido."
+        ],
+        "why": "Semana 2: condicional en el verbo principal → imperfecto de subjuntivo."
+      },
+      {
+        "type": "order",
+        "words": [
+          "No",
+          "firmaremos",
+          "el",
+          "contrato",
+          "a",
+          "menos",
+          "que",
+          "incluya",
+          "la",
+          "calefacción."
+        ],
+        "why": "Excepción con subjuntivo."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Checkpoint: una cooperativa en crisis».",
-        "model": "El problema no se reduce a una avería: una previsión técnica se presentó como un compromiso firme. La empresa admite que no explicó bien la incertidumbre y la presidencia reconoce que no solicitó confirmación escrita. El equipo de sala acepta colaborar si se reserva tiempo dentro de su turno. Recomiendo comunicar estas responsabilidades sin personalizar el conflicto y confirmar por escrito el apoyo temporal. Si se hubiera realizado una apertura de prueba, quizá se habrían detectado antes los fallos; esa posibilidad debe orientar las próximas decisiones.",
+        "prompt": "Escribe tres frases para un compañero de casa nuevo: una condición, una excepción y una comparación con «como si». Añade una petición que te hizo el dueño (semana 1).",
+        "model": "Puedes usar mi escritorio siempre que lo dejes ordenado. Los domingos limpiamos juntos, salvo que alguien viaje. No hace falta que trabajes como si estuvieras en una oficina. Ah, y el dueño nos pidió que no tendiéramos ropa en el balcón.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre mediar entre expectativas, valoraciones y alternativas; concede una razón y conserva tu argumento.",
-        "model": "El problema no se reduce a una avería: una previsión técnica se presentó como un compromiso firme. La empresa admite que no explicó bien la incertidumbre y la presidencia reconoce que no solicitó confirmación escrita. El equipo de sala acepta colaborar si se reserva tiempo dentro de su turno. Recomiendo comunicar estas responsabilidades sin personalizar el conflicto y confirmar por escrito el apoyo temporal. Si se hubiera realizado una apertura de prueba, quizá se habrían detectado antes los fallos; esa posibilidad debe orientar las próximas decisiones.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 5 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Uso un nexo de condición y uno de excepción con subjuntivo.",
+          "Uso «como si» + imperfecto de subjuntivo.",
+          "Incluyo una petición en pasado."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo mediar entre expectativas, valoraciones y alternativas.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo poner condiciones, excepciones y casos previstos con distintos nexos y el modo correcto.",
+      "Puedo describir comportamientos con «como si» y protestar con «¡ni que…!».",
+      "Puedo combinar en una negociación las formas de subjuntivo y de hipótesis de las semanas 1 a 4."
     ],
     "review": [
-      "Cruza el comedor con coordinación, expectativas, reconocimientos e hipótesis: recupera un recurso de cada semana y explica por qué lo eliges.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, escribe cinco normas para tu casa o tu trabajo, cada una con un nexo distinto.",
+      "En tres días, rehace sin mirar el ejercicio de integración y anota qué semana te dio más errores.",
+      "Antes de la semana 6, repasa la clase de la semana 1 a 4 que anotaste y prepara dos ejemplos nuevos para tu profesor."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/condiciones-con-otros-nexos",
+      "label": "Clase: Condiciones con otros nexos"
+    },
+    {
+      "path": "/gramatica/como-si-imperfecto-pluscuamperfecto-subjuntivo",
+      "label": "Clase: Como si + imperfecto / pluscuamperfecto subjuntivo"
+    }
+  ]
 };

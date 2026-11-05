@@ -1,440 +1,869 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 13 · Autoestudio espejo de G111 (pronombres y doble mención temática),
+ * G112 (relativos quien, el que, el cual) y G113 (lo que y lo de). Repaso autónomo con Rosa,
+ * cocinera de una cevichería de Barranco que prepara su puesto para una feria gastronómica en Lima.
+ */
 export const b1w13: Module = {
   "id": "b1-13",
   "level": "b1",
   "week": 13,
   "kind": "core",
-  "title": "Lo que nos dijeron",
-  "subtitle": "Transmitir información y preguntas sin cambiar su sentido.",
+  "title": "Cocina abierta en Lima: el tema delante, quien, el que y lo de",
+  "subtitle": "Repaso de cómo poner el tema delante y retomarlo con un pronombre, de los relativos quien, el que y el cual, y de «lo que», «lo de» y «lo + adjetivo» para hablar de ideas.",
   "stop": {
     "place": "Lima",
     "country": "Perú"
   },
   "minutes": 95,
   "newObjectives": [
-    "b1.gram.estilo-indirecto",
-    "b1.gram.preguntas-indirectas",
-    "b1.voc.verbos-comunicacion",
-    "b1.pron.voz-citas",
-    "b1.fun.transmitir",
-    "b1.wri.resumen-conversacion"
+    "b1.gram.g111",
+    "b1.gram.g112",
+    "b1.gram.g113",
+    "b1.voc.w13-cocina-feria",
+    "b1.pron.w13-comas-pausas",
+    "b1.lis.w13-reunion-cocina",
+    "b1.read.w13-cronica-feria",
+    "b1.wri.w13-informe-equipo",
+    "b1.spk.w13-poner-al-dia-oral",
+    "b1.fun.w13-poner-al-dia",
+    "b1.disc.w13-temas-ordenados"
   ],
-  "reviewObjectives": [
-    "b1.gram.finales",
-    "b1.disc.causales",
-    "b1.voc.medio-ambiente",
-    "b1.pron.enfasis-contraste",
-    "b1.fun.justificar",
-    "b1.read.campana",
-    "b1.gram.por-para-ampliacion"
-  ],
-  "prerequisites": [
-    "b1-12"
-  ],
+  reviewObjectives: ["b1.gram.g110","b1.gram.g238","b1.voc.w12-artesania-cambio-vida","b1.pron.w12-preposicion-enlazada","b1.lis.w12-visita-taller","b1.read.w12-perfil-revista","b1.wri.w12-cambio-persona-lugar","b1.spk.w12-mi-cambio","b1.fun.w12-describir-cambios","b1.disc.w12-antes-ahora"],
+  prerequisites: ["b1-12"],
   "goal": {
-    "canDo": "Puedo transmitir información y preguntas sin cambiar su sentido.",
+    "canDo": "Al final de esta semana puedes poner al día a un equipo: decir qué está hecho («Los pedidos los confirmé ayer»), quién se encarga («La que lleva las cuentas es Rosa») y qué te preocupa («Lo que me preocupa es lo del transporte»).",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa cómo poner delante el tema y retomarlo con lo, la, los, las, le o les.",
+      "Repasa quien, el que, la que y el cual, y el papel de las comas en las relativas.",
+      "Repasa «lo que», «lo de» y «lo + adjetivo» para hablar de ideas y temas.",
+      "Escucha a una cocinera y a su ayudante, y lee una crónica sobre una feria gastronómica en Lima.",
+      "Escribe un mensaje de puesta al día, revísalo y explica en voz alta cómo va un proyecto."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Transmitir información y preguntas sin cambiar su sentido.",
+    "intro": "Esta semana repasas tres clases que te ayudan a organizar la información cuando hablas de muchas cosas a la vez: el tema delante con su pronombre, los relativos para identificar personas y cosas, y «lo» para hablar de ideas sin nombrarlas. Te acompaña Rosa, cocinera de una cevichería de Barranco que prepara su puesto para una gran feria gastronómica en Lima.",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "El tema delante: «El pescado lo compré yo»",
         "body": [
-          "En estilo indirecto adaptamos personas y referencias al nuevo contexto. Ana dice «estoy aquí» puede pasar a Ana dice que está allí. Con un verbo pasado son frecuentes dijo que estaba y explicó que había terminado. No cambies todo automáticamente: la vigencia y el momento de transmisión importan."
+          "En español puedes empezar la frase por aquello de lo que hablas, sobre todo cuando lo contrastas con otra cosa: «El pescado lo compré yo; los limones, Diego». Si el complemento directo va delante del verbo, hay que retomarlo con «lo, la, los, las». No es una repetición inútil: es obligatorio. Si va detrás, no se repite: «Compré el pescado».",
+          "El pronombre concuerda con el tema: «La salsa la preparamos el viernes», «Los platos los lavó Ana», «Las mesas las trae el ayuntamiento». Detrás del tema puedes hacer una pausa breve al hablar; al escribir, a veces se marca con una coma."
+        ],
+        "table": {
+          "caption": "Complemento directo detrás y delante",
+          "head": [
+            "Orden normal",
+            "Tema delante",
+            "Qué cambia"
+          ],
+          "rows": [
+            [
+              "Confirmé el pedido.",
+              "El pedido lo confirmé yo.",
+              "Se destaca de qué hablamos."
+            ],
+            [
+              "Ya limpiamos la cocina.",
+              "La cocina ya la limpiamos.",
+              "«la» retoma «la cocina»."
+            ],
+            [
+              "Diego trae los cuchillos.",
+              "Los cuchillos los trae Diego.",
+              "«los» retoma «los cuchillos»."
+            ],
+            [
+              "Imprimí las cartas.",
+              "Las cartas las imprimí anoche.",
+              "«las» retoma «las cartas»."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Las entradas compré por internet.",
+            "right": "Las entradas las compré por internet.",
+            "why": "Si el complemento directo va delante, el pronombre es obligatorio."
+          },
+          {
+            "wrong": "Lo confirmé el pedido ayer.",
+            "right": "Confirmé el pedido ayer. / El pedido lo confirmé ayer.",
+            "why": "Con el complemento detrás del verbo, no se duplica con «lo»."
+          }
+        ]
+      },
+      {
+        "heading": "Le y les delante, «a mí me» y «lo es»",
+        "body": [
+          "Con el complemento indirecto pasa algo parecido. Delante del verbo necesita «le» o «les»: «A los proveedores les escribí ayer», «A Diego le encanta el ají». Detrás del verbo, la repetición es opcional pero muy frecuente: «Le di la receta a Rosa». Con los verbos como «gustar», el pronombre siempre aparece. Usa «les» cuando la persona es plural.",
+          "Los pronombres tónicos (a mí, a ti, a ella…) siempre van acompañados del pronombre átono: «A mí me lo contó Diego», «La vi a ella en el mercado». Y para retomar un adjetivo o un nombre con «ser», «estar» o «parecer», usa «lo», que no cambia: «¿Es caro el puesto? — Sí, lo es», «Parece fácil, pero no lo es»."
         ],
         "examples": [
           {
-            "es": "La coordinadora dice que mañana abrirán más tarde."
+            "es": "A la jefa de sala le mandé el menú esta mañana.",
+            "note": "Indirecto delante: «le» obligatorio."
           },
           {
-            "es": "Ayer explicó que aquel día no había servicio."
+            "es": "A nosotros nos tocó el puesto del fondo.",
+            "note": "Tónico + átono."
           },
           {
-            "es": "Me preguntó si podía volver el lunes."
+            "es": "Les pagué a los camareros el sábado.",
+            "note": "Indirecto detrás: «les» opcional pero natural, en plural."
+          },
+          {
+            "es": "¿Están listos los postres? — Sí, lo están.",
+            "note": "«Lo» invariable retoma «listos»."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Me preguntó que si dónde vivía.",
-            "right": "Me preguntó dónde vivía.",
-            "why": "Se conserva el interrogativo sin esa cadena innecesaria."
+            "wrong": "A los clientes le encantó el ceviche.",
+            "right": "A los clientes les encantó el ceviche.",
+            "why": "El pronombre concuerda en plural con «los clientes»."
+          },
+          {
+            "wrong": "¿Es cocinera? — Sí, la es.",
+            "right": "¿Es cocinera? — Sí, lo es.",
+            "why": "Con «ser», «estar» y «parecer» se usa siempre «lo», invariable."
+          }
+        ],
+        "tip": "Antes de escribir un tema delante, pregúntate: ¿es directo (lo, la, los, las) o indirecto (le, les)?"
+      },
+      {
+        "heading": "Quien, el que y el cual",
+        "body": [
+          "«Quien» y «quienes» solo se refieren a personas. Los usas sin nombre delante («Quien prepara las salsas es Diego», «Busco a quien organizó el puesto»), después de una preposición («la proveedora con quien hablé») o entre comas («Rosa, quien abrió el local en 2015, …»). No se usan sin preposición para identificar: «el cocinero que vino», no «el cocinero quien vino».",
+          "«El que, la que, los que, las que» sirven para personas y cosas, después de preposición («el mercado al que vamos», «la mesa en la que trabajo») y sin nombre delante («La que lleva las cuentas es Rosa»). «El cual, la cual» aparece sobre todo en textos formales («el local, en el cual se celebró la feria»): basta con reconocerlo."
+        ],
+        "table": {
+          "caption": "Qué relativo elegir",
+          "head": [
+            "Situación",
+            "Relativo",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Persona, sin nombre delante",
+              "quien / el que, la que",
+              "Quien llegue primero abre la cocina."
+            ],
+            [
+              "Después de preposición",
+              "con quien / con el que, con la que",
+              "El chef con el que trabajé es de Arequipa."
+            ],
+            [
+              "Cosa después de preposición",
+              "el que, la que (el cual, formal)",
+              "Este es el cuchillo con el que corto el pescado."
+            ],
+            [
+              "Solo algunos (sin comas)",
+              "que",
+              "Los platos que salieron fríos volvieron a la cocina."
+            ],
+            [
+              "Todos (con comas)",
+              "que / quien",
+              "Los platos, que salieron fríos, volvieron a la cocina."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "La proveedora quien nos vende el pescado es de Chorrillos.",
+            "right": "La proveedora que nos vende el pescado es de Chorrillos.",
+            "why": "Sin preposición y sin comas, para identificar se usa «que»."
+          },
+          {
+            "wrong": "Es la sartén con que la que cocino.",
+            "right": "Es la sartén con la que cocino.",
+            "why": "Después de preposición, «el que / la que» concuerda con la cosa."
           }
         ]
       },
       {
-        "heading": "Organizar la comunicación",
+        "heading": "Lo que, lo de y lo + adjetivo",
         "body": [
-          "Las preguntas indirectas conservan qué, cómo, dónde o cuándo; las de sí o no usan si. Preguntó dónde estaba la oficina; preguntó si abrían. No llevan los signos propios de una pregunta directa cuando forman parte de una afirmación. Al mediar, conserva condiciones, dudas y responsables."
+          "«Lo» sin nombre detrás habla de ideas o de temas, no de cosas concretas. «Lo que» significa «la cosa que»: «Lo que me preocupa es el transporte», «Haz todo lo que puedas». Con «lo que + verbo + es / son» destacas un elemento: «Lo que necesitamos son más manos».",
+          "«Lo de» + nombre, infinitivo o adverbio resume un tema conocido por los dos: «lo del pedido», «lo de abrir los lunes», «lo de ayer». Y «lo + adjetivo» presenta un aspecto de la situación: «Lo bueno es que hay mucha gente; lo malo, que no tenemos sombra». No confundas «lo que» (una idea) con «el que / la que» (una persona o cosa concreta)."
         ],
         "examples": [
           {
-            "es": "Quiso saber dónde estaba la entrada."
+            "es": "Lo que más me gustó fue el postre de lúcuma.",
+            "note": "«Lo que» destaca un elemento."
           },
           {
-            "es": "Nos avisaron de que el plazo había cambiado."
+            "es": "¿Sabes algo de lo del permiso municipal?",
+            "note": "«Lo de» resume un tema conocido."
           },
           {
-            "es": "Le pedí que confirmara el dato por escrito."
+            "es": "Lo mejor de la feria es que todo es fresco.",
+            "note": "«Lo + adjetivo» + «es que»."
+          },
+          {
+            "es": "La que hizo el postre fue Lucía.",
+            "note": "Una persona concreta: «la que»."
           }
-        ]
+        ],
+        "mistakes": [
+          {
+            "wrong": "El que me preocupa es que no llegue el pescado.",
+            "right": "Lo que me preocupa es que no llegue el pescado.",
+            "why": "Se habla de una idea, no de una persona ni de una cosa concreta: «lo que»."
+          }
+        ],
+        "tip": "Si puedes decir «la cosa que» o «el asunto de», usa «lo que» o «lo de»."
       }
     ]
   },
   "grammar": {
+    "intro": "Practicas las tres clases por orden: el tema delante, los relativos y «lo».",
     "exercises": [
       {
-        "id": "b1-13-forms",
+        "id": "b1-13-gramatica-tema",
         "type": "gap",
-        "prompt": "Completa estas situaciones de «Lo que nos dijeron» con la forma que expresa la relación indicada.",
+        "title": "El tema delante",
+        "prompt": "Completa con el pronombre que retoma el tema (lo, la, los, las, le, les).",
         "items": [
           {
-            "q": "Preguntó ___ la oficina abría el sábado.",
+            "q": "Los limones ___ compré esta mañana en el mercado de Surquillo.",
             "answers": [
               [
-                "si"
+                "los"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "Directo masculino plural delante del verbo."
           },
           {
-            "q": "Dijo: «Estoy cansada». Dijo que ___ cansada.",
+            "q": "A la nueva ayudante ___ expliqué cómo cortar el pescado.",
             "answers": [
               [
-                "estaba"
+                "le"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "Indirecto singular delante: «le»."
           },
           {
-            "q": "Preguntó: «¿Dónde está la sala?». Preguntó ___ estaba la sala.",
+            "q": "La carta de postres ___ diseñó una amiga de Rosa.",
             "answers": [
               [
-                "dónde"
+                "la"
               ]
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "why": "Directo femenino singular."
+          },
+          {
+            "q": "A los vecinos del puesto ___ prestamos dos sillas.",
+            "answers": [
+              [
+                "les"
+              ]
+            ],
+            "why": "Indirecto plural: «les»."
+          },
+          {
+            "q": "¿Es difícil hacer un buen ceviche? — Parece fácil, pero no ___ es.",
+            "answers": [
+              [
+                "lo"
+              ]
+            ],
+            "why": "«Lo» invariable con «ser»."
           }
-        ],
-        "bank": [
-          "si",
-          "estaba",
-          "dónde"
         ]
       },
       {
-        "id": "b1-13-repair",
-        "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "id": "b1-13-gramatica-relativos",
+        "type": "choice",
+        "title": "¿Quién o cuál?",
+        "prompt": "Elige el relativo correcto.",
         "items": [
           {
-            "sentence": "Me preguntó que si dónde vivía.",
-            "answers": [
-              "Me preguntó dónde vivía."
+            "q": "___ quiera probar el ají, que levante la mano.",
+            "options": [
+              "Quien",
+              "Que",
+              "El cual"
             ],
-            "why": "Se conserva el interrogativo sin esa cadena innecesaria."
+            "answer": 0,
+            "why": "Persona sin nombre delante: «quien»."
           },
           {
-            "sentence": "Ana dijo que yo estaba cansada, hablando de sí misma.",
-            "answers": [
-              "Ana dijo que ella estaba cansada, hablando de sí misma."
+            "q": "La cocinera con ___ aprendí a hacer causa vive en Trujillo.",
+            "options": [
+              "que",
+              "quien",
+              "cual"
             ],
-            "why": "La persona se adapta a quien se atribuye el estado."
+            "answer": 1,
+            "why": "Persona después de preposición: «con quien» (o «con la que»)."
           },
           {
-            "sentence": "Me explicó si el curso empezaba el lunes, afirmándolo.",
-            "answers": [
-              "Me explicó que el curso empezaba el lunes, afirmándolo."
+            "q": "Este es el mercado ___ compramos el pescado cada día.",
+            "options": [
+              "que",
+              "el que",
+              "en el que"
             ],
-            "why": "Una información afirmada se transmite con que."
+            "answer": 2,
+            "why": "«Comprar en un mercado»: la preposición va delante del relativo."
+          },
+          {
+            "q": "De todos los camareros, ___ habla inglés es Javier.",
+            "options": [
+              "el cual",
+              "el que",
+              "quien que"
+            ],
+            "answer": 1,
+            "why": "Sin nombre delante, identificando entre varios: «el que»."
+          },
+          {
+            "q": "Los clientes ___ pidieron el menú del día esperaron poco.",
+            "options": [
+              "que",
+              "quienes",
+              "los cuales"
+            ],
+            "answer": 0,
+            "why": "Solo algunos clientes, sin comas ni preposición: «que»."
+          },
+          {
+            "q": "Se firmó un acuerdo, ___ entrará en vigor en enero.",
+            "options": [
+              "el que cual",
+              "el cual",
+              "lo cual que"
+            ],
+            "answer": 1,
+            "why": "Texto formal, explicativa: «el cual»."
+          }
+        ]
+      },
+      {
+        "id": "b1-13-gramatica-lo",
+        "type": "gap",
+        "title": "Lo que, lo de y lo + adjetivo",
+        "prompt": "Completa con «lo que», «lo de», «lo del» o «lo» + adjetivo.",
+        "items": [
+          {
+            "q": "___ más me preocupa es la lluvia del domingo.",
+            "answers": [
+              [
+                "Lo que",
+                "lo que"
+              ]
+            ],
+            "why": "Una idea: «lo que»."
+          },
+          {
+            "q": "¿Ya resolviste ___ permiso municipal?",
+            "answers": [
+              [
+                "lo del"
+              ]
+            ],
+            "why": "«Lo de» + el = «lo del»: un tema conocido."
+          },
+          {
+            "q": "___ (bueno) es que el puesto está junto a la entrada.",
+            "answers": [
+              [
+                "Lo bueno",
+                "lo bueno"
+              ]
+            ],
+            "why": "«Lo + adjetivo»: un aspecto positivo."
+          },
+          {
+            "q": "No me gustó nada ___ cobrar por el agua.",
+            "answers": [
+              [
+                "lo de"
+              ]
+            ],
+            "why": "«Lo de» + infinitivo: el asunto de cobrar."
+          },
+          {
+            "q": "Haz ___ puedas, no te preocupes por el resto.",
+            "answers": [
+              [
+                "lo que"
+              ]
+            ],
+            "why": "«Lo que» = la cosa que."
+          }
+        ]
+      },
+      {
+        "id": "b1-13-gramatica-errores",
+        "type": "error",
+        "title": "Corrige el error",
+        "prompt": "Cada frase tiene un error de las tres clases. Escríbela bien.",
+        "items": [
+          {
+            "sentence": "El postre preparó Lucía y las salsas, Diego.",
+            "answers": [
+              "El postre lo preparó Lucía y las salsas, Diego."
+            ],
+            "why": "Directo delante del verbo: hace falta «lo»."
+          },
+          {
+            "sentence": "A mis padres le gustó mucho el restaurante.",
+            "answers": [
+              "A mis padres les gustó mucho el restaurante."
+            ],
+            "why": "Indirecto plural: «les»."
+          },
+          {
+            "sentence": "El cocinero quien ganó el concurso es amigo mío.",
+            "answers": [
+              "El cocinero que ganó el concurso es amigo mío."
+            ],
+            "why": "Sin preposición ni comas se usa «que»."
+          },
+          {
+            "sentence": "El que más me gusta de Lima es el clima de la mañana.",
+            "answers": [
+              "Lo que más me gusta de Lima es el clima de la mañana."
+            ],
+            "why": "Se habla de una idea: «lo que»."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para hablar de una cocina profesional y de una feria gastronómica. Algunas son muy de Perú: te lo indicamos.",
     "groups": [
       {
-        "title": "Lo que nos dijeron · acciones y recursos",
+        "title": "En la cocina",
         "items": [
           {
-            "es": "transmitir un recado",
-            "note": "hacer llegar un mensaje ajeno"
+            "es": "la brigada",
+            "note": "El equipo de cocineros."
           },
           {
-            "es": "pedir una aclaración",
-            "note": "solicitar una explicación más precisa"
+            "es": "el pedido"
           },
           {
-            "es": "dejar un aviso",
-            "note": "registrar información para alguien"
+            "es": "el proveedor, la proveedora"
           },
           {
-            "es": "confirmar por escrito",
-            "note": "documentar una información"
+            "es": "la mise en place",
+            "note": "Tenerlo todo cortado y preparado antes del servicio."
+          },
+          {
+            "es": "el emplatado"
+          },
+          {
+            "es": "el servicio"
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "En la feria",
         "items": [
           {
-            "es": "un destinatario",
-            "note": "persona a quien va un mensaje"
+            "es": "el puesto"
           },
           {
-            "es": "mantener el sentido",
-            "note": "conservar la intención del original"
+            "es": "la cola"
           },
           {
-            "es": "resumir lo esencial",
-            "note": "seleccionar la información necesaria"
+            "es": "agotar existencias"
           },
           {
-            "es": "atribuir una opinión",
-            "note": "indicar quién sostiene una idea"
+            "es": "el permiso municipal"
+          },
+          {
+            "es": "la degustación"
+          }
+        ]
+      },
+      {
+        "title": "Comida y expresiones",
+        "items": [
+          {
+            "es": "el ají",
+            "note": "Chile o pimiento picante; muy usado en Perú."
+          },
+          {
+            "es": "la leche de tigre",
+            "note": "El jugo del ceviche."
+          },
+          {
+            "es": "la chamba",
+            "note": "En Perú, coloquial: el trabajo."
+          },
+          {
+            "es": "estar a full",
+            "note": "Coloquial: estar muy ocupado o muy lleno."
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-13-lexis",
+        "id": "b1-13-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «Lo que nos dijeron» con su significado en este contexto.",
+        "title": "Cada palabra con su definición",
+        "prompt": "Une cada palabra con su explicación.",
         "pairs": [
           {
-            "left": "transmitir un recado",
-            "right": "hacer llegar un mensaje ajeno"
+            "left": "la brigada",
+            "right": "el equipo de personas que cocinan juntas"
           },
           {
-            "left": "pedir una aclaración",
-            "right": "solicitar una explicación más precisa"
+            "left": "el emplatado",
+            "right": "la forma de presentar la comida en el plato"
           },
           {
-            "left": "dejar un aviso",
-            "right": "registrar información para alguien"
+            "left": "agotar existencias",
+            "right": "vender todo lo que había"
           },
           {
-            "left": "confirmar por escrito",
-            "right": "documentar una información"
+            "left": "la degustación",
+            "right": "una pequeña porción para probar"
           },
           {
-            "left": "un destinatario",
-            "right": "persona a quien va un mensaje"
+            "left": "la mise en place",
+            "right": "la preparación de ingredientes antes del servicio"
+          }
+        ],
+        "why": "Fíjate en si la palabra nombra personas, una acción, una porción o un momento del trabajo."
+      },
+      {
+        "id": "b1-13-vocabulario-huecos",
+        "type": "gap",
+        "title": "La pizarra de la cocina",
+        "prompt": "Completa con una palabra del banco.",
+        "bank": [
+          "pedido",
+          "cola",
+          "puesto",
+          "chamba",
+          "servicio"
+        ],
+        "items": [
+          {
+            "q": "El ___ de pescado llega a las seis: alguien tiene que recibirlo.",
+            "answers": [
+              [
+                "pedido"
+              ]
+            ],
+            "why": "La mercancía que encargamos."
           },
           {
-            "left": "mantener el sentido",
-            "right": "conservar la intención del original"
+            "q": "Ayer había una ___ de cuarenta personas delante del puesto.",
+            "answers": [
+              [
+                "cola"
+              ]
+            ],
+            "why": "Personas esperando una detrás de otra."
           },
           {
-            "left": "resumir lo esencial",
-            "right": "seleccionar la información necesaria"
+            "q": "Nuestro ___ es el número 12, al lado de los dulces.",
+            "answers": [
+              [
+                "puesto"
+              ]
+            ],
+            "why": "El espacio de venta en la feria."
           },
           {
-            "left": "atribuir una opinión",
-            "right": "indicar quién sostiene una idea"
+            "q": "Durante el ___ nadie usa el móvil en la cocina.",
+            "answers": [
+              [
+                "servicio"
+              ]
+            ],
+            "why": "Las horas en que se sirve a los clientes."
+          },
+          {
+            "q": "Mucha ___ esta semana, pero vale la pena.",
+            "answers": [
+              [
+                "chamba"
+              ]
+            ],
+            "why": "En Perú, «trabajo», coloquial."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "Separar la voz propia de una cita",
+    "focus": "Pausas que cambian el sentido: las comas de las relativas y el tema delante",
     "explanation": [
-      "Anuncia una cita con dijo y una pausa breve. Al reformular con tus palabras, recupera tu ritmo normal; no necesitas imitar la voz de la persona citada.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "Una relativa entre comas (explicativa) se dice con una pausa antes y después, y con un tono un poco más bajo, como un comentario: «Los cocineros, que estaban cansados, se fueron a casa» (todos estaban cansados y todos se fueron). Sin pausas, la relativa elige solo a algunos: «Los cocineros que estaban cansados se fueron a casa» (los demás se quedaron).",
+      "Cuando pones el tema delante, también es normal hacer una pausa breve y subir un poco el tono al final del tema: «El pescado… lo compré yo». Esa pausa avisa al oyente de que va a oír algo sobre ese tema."
     ],
     "examples": [
       {
-        "es": "La coordinadora dice que mañana abrirán más tarde."
+        "es": "Los camareros, que hablan inglés, atienden a los turistas.",
+        "note": "Con pausas: todos hablan inglés."
       },
       {
-        "es": "Ayer explicó que aquel día no había servicio."
-      },
-      {
-        "es": "Me preguntó si podía volver el lunes."
+        "es": "Los camareros que hablan inglés atienden a los turistas.",
+        "note": "Sin pausas: solo esos camareros."
       }
     ],
     "perceive": {
-      "id": "b1-13-perception",
+      "id": "b1-13-pronunciacion-pausas",
       "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "title": "¿Algunos o todos?",
+      "prompt": "Escucha cada frase y fíjate en las pausas.",
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «Lo que nos dijeron»?",
+          "q": "¿Cuántos postres se vendieron?",
           "options": [
-            "Toda la frase se presenta sin fuente",
-            "Se anuncia una cita después de dijo"
+            "Solo algunos, los de chocolate.",
+            "Todos; además eran de chocolate."
           ],
           "answer": 1,
-          "audio": "Ana dijo: «La sala está lista».",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Hay pausas alrededor de «que eran de chocolate»: es un comentario sobre todos.",
+          "audio": "Los postres, que eran de chocolate, se vendieron en una hora.",
+          "voice": "es-PE-f"
         },
         {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «Lo que nos dijeron»?",
+          "q": "¿Y aquí?",
           "options": [
-            "Se oye si sin una pregunta directa independiente",
-            "Se oye sí como respuesta afirmativa"
+            "Solo los que vinieron temprano.",
+            "Todos los voluntarios."
           ],
           "answer": 0,
-          "audio": "Me preguntó si podía volver.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Sin pausas: la relativa elige a algunos.",
+          "audio": "Los voluntarios que vinieron temprano montaron las mesas.",
+          "voice": "es-PE-m"
+        },
+        {
+          "q": "¿Quién compró el pescado?",
+          "options": [
+            "Diego.",
+            "La persona que habla."
+          ],
+          "answer": 1,
+          "why": "Tema delante con pausa: «El pescado… lo compré yo».",
+          "audio": "El pescado, lo compré yo; los limones, Diego.",
+          "voice": "es-CO-f"
+        },
+        {
+          "q": "¿Cuántas mesas estaban rotas?",
+          "options": [
+            "Todas.",
+            "Solo algunas."
+          ],
+          "answer": 1,
+          "why": "Sin pausas: solo las que estaban rotas volvieron al almacén.",
+          "audio": "Las mesas que estaban rotas volvieron al almacén.",
+          "voice": "es-MX-m"
         }
       ]
     },
     "produce": [
       {
-        "text": "La coordinadora dice que mañana abrirán más tarde.",
-        "tip": "Anuncia una cita con dijo y una pausa breve. Al reformular con tus palabras, recupera tu ritmo normal; no necesitas imitar la voz de la persona citada.",
-        "voice": "es-ES-f"
+        "text": "Mi hermana, que vive en Cusco, viene a la feria.",
+        "tip": "Pausa antes de «que» y después de «Cusco».",
+        "voice": "es-PE-f"
       },
       {
-        "text": "Ayer explicó que aquel día no había servicio.",
-        "tip": "Anuncia una cita con dijo y una pausa breve. Al reformular con tus palabras, recupera tu ritmo normal; no necesitas imitar la voz de la persona citada.",
-        "voice": "es-ES-f"
+        "text": "Los platos que salieron fríos volvieron a la cocina.",
+        "tip": "Sin pausas: solo algunos platos.",
+        "voice": "es-PE-m"
       },
       {
-        "text": "Me preguntó si podía volver el lunes.",
-        "tip": "Anuncia una cita con dijo y una pausa breve. Al reformular con tus palabras, recupera tu ritmo normal; no necesitas imitar la voz de la persona citada.",
-        "voice": "es-ES-f"
+        "text": "Las cartas… las imprimimos anoche.",
+        "tip": "Sube un poco el tono en «cartas» y haz una pausa breve.",
+        "voice": "es-CO-f"
       }
-    ]
+    ],
+    "spelling": "Al escribir, las pausas de la relativa explicativa se marcan con dos comas: una antes del relativo y otra al final. Si olvidas la segunda coma, la frase queda confusa."
   },
   "listening": {
-    "title": "Lo que nos dijeron · voces en conversación",
-    "context": "Una persona transmite lo que oyó en una reunión y la otra comprueba detalles. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "Dos días antes de la feria",
+    "context": "Es jueves por la noche en la cevichería de Rosa, en Barranco. Rosa vuelve de un viaje de cuatro días a Piura y Diego, su ayudante, la pone al día sobre la preparación del puesto para la feria del fin de semana.",
     "speakers": [
       {
-        "id": "a",
-        "name": "Representante",
-        "voice": "es-ES-f"
+        "id": "ros",
+        "name": "Rosa",
+        "voice": "es-PE-f",
+        "role": "cocinera y dueña de la cevichería"
       },
       {
-        "id": "b",
-        "name": "Compañera",
-        "voice": "es-ES-m"
+        "id": "die",
+        "name": "Diego",
+        "voice": "es-PE-m",
+        "role": "ayudante de cocina"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Acabo de salir de la reunión del centro. La responsable dijo que el taller empezaría el martes, pero que todavía estaban revisando la lista de participantes. Me pidió que no enviáramos una confirmación definitiva hasta mañana."
+        "speaker": "ros",
+        "text": "Diego, perdona que llegue tan tarde. A ver, cuéntame cómo va todo. ¿El permiso de la municipalidad?"
       },
       {
-        "speaker": "b",
-        "text": "¿Dijo martes de esta semana o de la próxima? Te lo pregunto porque en el primer correo figuraba otra fecha y necesito organizar el transporte. También quisiera saber si sigue siendo en la sala de arriba."
+        "speaker": "die",
+        "text": "El permiso lo recogí el martes, ya está pegado en la puerta. Y a los de la organización les mandé la lista de platos, como querías."
       },
       {
-        "speaker": "a",
-        "text": "Se refería al martes de la próxima semana. Pregunté dónde sería y explicó que usaríamos la sala de abajo porque una participante necesita una entrada sin escaleras. Eso sí está confirmado y podemos comunicarlo ya."
+        "speaker": "ros",
+        "text": "Perfecto. ¿Y los pedidos? Lo que más me preocupa es el pescado."
       },
       {
-        "speaker": "b",
-        "text": "Bien. ¿Y qué debemos decir a quienes preguntan por las plazas? No quiero que interpreten el silencio como una cancelación, pero tampoco prometer algo que aún están revisando."
+        "speaker": "die",
+        "text": "Los pedidos los confirmé todos. El pescado lo trae el sábado a las cinco la señora Marta, la proveedora con la que trabajábamos antes. Lo bueno es que nos hace el mismo precio."
       },
       {
-        "speaker": "a",
-        "text": "La responsable propuso que escribiéramos que la solicitud estaba recibida y que mañana mandarían la respuesta. También preguntó si alguien necesitaba material prestado. Le dije que lo consultaría y le enviaría una lista sin información que no fuera necesaria."
+        "speaker": "ros",
+        "text": "¿Marta? ¿La que tiene el puesto en el terminal de Chorrillos? Qué bien. ¿Y quién va a estar en la caja?"
       },
       {
-        "speaker": "b",
-        "text": "Entonces preparo un aviso breve: fecha de la próxima semana, sala de abajo y confirmación de plaza pendiente para mañana. Te lo paso antes de enviarlo para comprobar que no he convertido ninguna propuesta en una decisión definitiva."
+        "speaker": "die",
+        "text": "Quien se encarga de la caja es Lucía, la sobrina de don Pepe, que estudió administración. Ah, y lo de las sillas está resuelto: nos las presta el restaurante de al lado."
+      },
+      {
+        "speaker": "ros",
+        "text": "Genial. ¿Hay algo que no hayas podido hacer?"
+      },
+      {
+        "speaker": "die",
+        "text": "Sí, lo del cartel. La imprenta a la que fuimos el mes pasado cerró. Mañana busco otra. Ah, y a mí me tocó probar todas las salsas, así que hoy no ceno."
+      },
+      {
+        "speaker": "ros",
+        "text": "Ja, ja. Oye, Diego, ¿estás cansado? Pareces agotado."
+      },
+      {
+        "speaker": "die",
+        "text": "Lo estoy, no te voy a mentir. Pero lo importante es que el sábado estemos listos."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿De qué hablan?",
         "exercise": {
-          "id": "b1-13-audio-0",
+          "id": "b1-13-escucha-global",
           "type": "choice",
-          "prompt": "Lo que nos dijeron: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Qué información está confirmada?",
+              "q": "¿Para qué hablan Rosa y Diego?",
               "options": [
-                "La sala de abajo",
-                "Todas las plazas individuales"
-              ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Qué riesgo quieren evitar al reenviar el mensaje?",
-              "options": [
-                "Que la sala resulte accesible",
-                "Confundir información provisional con definitiva"
+                "Para despedir a un empleado.",
+                "Para repasar las tareas antes de la feria.",
+                "Para elegir el menú de la semana."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Diego pone al día a Rosa sobre permiso, pedidos, caja, sillas y cartel."
+            },
+            {
+              "q": "¿Cómo va la preparación, en general?",
+              "options": [
+                "Casi todo está hecho; queda un problema.",
+                "No han hecho nada.",
+                "Todo está listo y sin problemas."
+              ],
+              "answer": 0,
+              "why": "Solo falta resolver «lo del cartel»."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y anota los detalles.",
         "exercise": {
-          "id": "b1-13-audio-1",
+          "id": "b1-13-escucha-detalle",
           "type": "choice",
-          "prompt": "Lo que nos dijeron: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según la conversación.",
           "items": [
             {
-              "q": "¿Cuándo responderán sobre las plazas?",
+              "q": "¿Quién trae el pescado?",
               "options": [
-                "Dentro de un mes",
-                "Mañana"
+                "Lucía.",
+                "Don Pepe.",
+                "Marta, una proveedora conocida."
               ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "answer": 2,
+              "why": "«El pescado lo trae el sábado… la señora Marta.»"
             },
             {
-              "q": "¿Para qué se eligió la sala de abajo?",
+              "q": "¿Quién estará en la caja?",
               "options": [
-                "Para permitir una entrada sin escaleras",
-                "Para eliminar el préstamo de material"
+                "La sobrina de don Pepe.",
+                "Diego.",
+                "Rosa."
               ],
               "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Quien se encarga de la caja es Lucía, la sobrina de don Pepe.»"
+            },
+            {
+              "q": "¿Qué problema queda?",
+              "options": [
+                "Las sillas.",
+                "El cartel, porque la imprenta cerró.",
+                "El permiso."
+              ],
+              "answer": 1,
+              "why": "«Lo del cartel. La imprenta a la que fuimos… cerró.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Fíjate en la gramática. Completa lo que dicen exactamente.",
         "exercise": {
-          "id": "b1-13-audio-2",
-          "type": "choice",
-          "prompt": "Lo que nos dijeron: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-13-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la palabra o las palabras que usan.",
           "items": [
             {
-              "q": "¿Qué evita la última comprobación?",
-              "options": [
-                "Convertir propuestas en decisiones",
-                "Que el aviso sea demasiado cortés"
+              "q": "El permiso ___ recogí el martes.",
+              "answers": [
+                [
+                  "lo"
+                ]
               ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Tema delante retomado con «lo»."
             },
             {
-              "q": "¿Por qué repite la segunda persona las tareas?",
-              "options": [
-                "Intenta cambiar la fecha sin permiso",
-                "Comprueba que entendió qué puede comunicar"
+              "q": "___ más me preocupa es el pescado.",
+              "answers": [
+                [
+                  "Lo que",
+                  "lo que"
+                ]
               ],
-              "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Lo que» presenta una idea."
+            },
+            {
+              "q": "La proveedora con ___ trabajábamos antes.",
+              "answers": [
+                [
+                  "la que"
+                ]
+              ],
+              "why": "Preposición + «la que»."
+            },
+            {
+              "q": "¿Estás cansado? — ___ estoy, no te voy a mentir.",
+              "answers": [
+                [
+                  "Lo",
+                  "lo"
+                ]
+              ],
+              "why": "«Lo» retoma el adjetivo «cansado»."
             }
           ]
         }
@@ -442,175 +871,294 @@ export const b1w13: Module = {
     ]
   },
   "reading": {
-    "title": "Lo que nos dijeron · otra perspectiva",
-    "genre": "Artículo y experiencia de comunidad",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "Sabores del Pacífico: lo que dejó la feria",
+    "genre": "Crónica en un diario",
+    "frame": "Un diario de Lima publica el lunes una crónica sobre la feria gastronómica del fin de semana en el parque de la Exposición.",
     "text": [
-      "Cuando Paula volvió de la reunión del edificio, tres vecinos le pidieron un resumen. Uno quería saber si subiría la cuota; otra necesitaba confirmar cuándo empezarían las reparaciones. Paula había tomado notas, pero descubrió que algunas frases eran demasiado breves. «Obras lunes» no indicaba si se trataba de una fecha aprobada o de una propuesta de la empresa.",
-      "Antes de enviar el mensaje, llamó a la administradora. Esta le explicó que las obras podrían empezar el lunes siguiente si llegaba el material. También aclaró que todavía no se había aprobado un aumento de la cuota: primero debían comparar dos presupuestos. Paula corrigió sus notas y distinguió en el resumen lo decidido de lo pendiente. Escribió quién había dado cada información para que los vecinos supieran a quién dirigir nuevas preguntas.",
-      "Al día siguiente, un vecino agradeció la precisión. Había entendido que el ascensor no funcionaría durante toda la semana, pero el aviso decía que se cerrarían únicamente algunas horas y que los horarios se comunicarían después. Paula comprendió que resumir no consiste en quitar palabras al azar. Hay que conservar las condiciones que cambian lo que una persona puede hacer con la información. Desde entonces, al tomar notas, marca con un signo las dudas que necesita confirmar antes de convertirse en mensajera del grupo."
+      "Quien pasó el sábado por el parque de la Exposición ya sabe lo que es esperar cuarenta minutos por un ceviche. La feria Sabores del Pacífico, que reunió a sesenta puestos de todo el país, recibió a más de veinte mil visitantes. Lo bueno, según los organizadores, es que la mayoría de los cocineros eran pequeños negocios familiares; lo malo, que muchos agotaron existencias antes de las cuatro.",
+      "El puesto que más colas tuvo fue el de una cevichería de Barranco, a la que llegaban clientes incluso desde Callao. Su dueña, Rosa Quispe, quien abrió el local hace diez años con un préstamo de su hermano, no esperaba tanto éxito. «Los pedidos los calculamos para mil platos y vendimos mil seiscientos», contaba el domingo. «A mi ayudante, Diego, le debo la mitad de esto».",
+      "No todo fue perfecto. Lo del transporte fue un problema serio: los autobuses en los que llegaba el público iban llenos, y los vecinos se quejaron del ruido. A los organizadores les queda trabajo para la próxima edición, en la cual, prometen, habrá más sombra y más baños.",
+      "Lo que nadie discute es el ambiente. Los visitantes con los que hablamos repetían lo mismo: comer bien y barato en Lima es posible. ¿Es esta la mejor feria del año? Muchos creen que lo es."
+    ],
+    "glossary": [
+      {
+        "es": "reunir"
+      },
+      {
+        "es": "el préstamo"
+      },
+      {
+        "es": "la edición"
+      }
     ],
     "tasks": [
       {
-        "id": "b1-13-read-evidence",
+        "id": "b1-13-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «Lo que nos dijeron», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según la crónica.",
         "items": [
           {
-            "q": "¿Por qué llamó Paula a la administradora?",
+            "q": "¿Qué fue lo malo de la feria, según los organizadores?",
             "options": [
-              "Había perdido todas las notas",
-              "Sus notas no distinguían propuesta y decisión"
-            ],
-            "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-          },
-          {
-            "q": "¿Qué debe conservar un resumen?",
-            "options": [
-              "Todas las palabras exactas",
-              "Las condiciones que afectan a la acción"
+              "Que muchos puestos se quedaron sin comida temprano.",
+              "Que vinieron pocos visitantes.",
+              "Que los precios eran altos."
             ],
             "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Lo malo, que muchos agotaron existencias antes de las cuatro.»"
+          },
+          {
+            "q": "¿Quién ayudó a Rosa a abrir el local?",
+            "options": [
+              "Diego.",
+              "Su hermano, con un préstamo.",
+              "Los organizadores."
+            ],
+            "answer": 1,
+            "why": "«Abrió el local hace diez años con un préstamo de su hermano.»"
+          },
+          {
+            "q": "¿Qué mejoras prometen para la próxima edición?",
+            "options": [
+              "Más puestos y más música.",
+              "Entradas más baratas.",
+              "Más sombra y más baños."
+            ],
+            "answer": 2,
+            "why": "«Habrá más sombra y más baños.»"
           }
         ]
       },
       {
-        "id": "b1-13-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «Lo que nos dijeron».",
-        "items": [
+        "id": "b1-13-lectura-quien-que",
+        "type": "match",
+        "title": "¿Quién o qué?",
+        "prompt": "Une cada descripción con la persona o la cosa a la que se refiere en la crónica.",
+        "pairs": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «Lo que nos dijeron», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "Cuando Paula volvió de la reunión del edificio, tres vecinos le pidieron un resumen.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "left": "la persona a la que Rosa le debe la mitad del éxito",
+            "right": "Diego"
+          },
+          {
+            "left": "el puesto que más colas tuvo",
+            "right": "la cevichería de Barranco"
+          },
+          {
+            "left": "quien abrió el local con un préstamo",
+            "right": "Rosa Quispe"
+          },
+          {
+            "left": "lo que fue un problema serio",
+            "right": "el transporte"
+          },
+          {
+            "left": "los que se quejaron del ruido",
+            "right": "los vecinos"
           }
-        ]
+        ],
+        "why": "Busca en el texto el relativo o el «lo» que introduce cada dato."
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Fíjate en cómo la crónica identifica personas y presenta ideas.",
       "items": [
         {
-          "quote": "Cuando Paula volvió de la reunión del edificio, tres vecinos le pidieron un resumen.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "Quien pasó el sábado por el parque de la Exposición",
+          "note": "«Quien» sin nombre delante: cualquier persona que pasó."
         },
         {
-          "quote": "Desde entonces, al tomar notas, marca con un signo las dudas que necesita confirmar antes de convertirse en mensajera del grupo.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "Rosa Quispe, quien abrió el local hace diez años",
+          "note": "Relativa explicativa entre comas con «quien»."
+        },
+        {
+          "quote": "Los pedidos los calculamos para mil platos",
+          "note": "Tema delante retomado con «los»."
+        },
+        {
+          "quote": "la próxima edición, en la cual, prometen, habrá más sombra",
+          "note": "«En la cual»: relativo formal típico de la prensa."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Combinas las tres clases y recuperas lo de las semanas 11 y 12.",
     "exercises": [
       {
-        "id": "b1-13-order",
+        "id": "b1-13-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «Lo que nos dijeron» y léelos con grupos de sentido.",
+        "title": "Frases de la cocina",
+        "prompt": "Ordena las palabras para formar frases completas.",
         "items": [
           {
             "words": [
-              "Quiso",
-              "saber",
-              "dónde",
-              "estaba",
-              "la",
-              "entrada."
-            ]
-          },
-          {
-            "words": [
-              "Nos",
-              "avisaron",
-              "de",
-              "que",
+              "Las",
+              "salsas",
+              "las",
+              "preparamos",
               "el",
-              "plazo",
-              "había",
-              "cambiado."
+              "viernes",
+              "por",
+              "la",
+              "noche."
+            ]
+          },
+          {
+            "words": [
+              "Lo",
+              "que",
+              "más",
+              "vendimos",
+              "fue",
+              "el",
+              "ceviche",
+              "de",
+              "corvina."
+            ]
+          },
+          {
+            "words": [
+              "La",
+              "chica",
+              "con",
+              "la",
+              "que",
+              "hablaste",
+              "es",
+              "la",
+              "nueva",
+              "cajera."
+            ]
+          },
+          {
+            "words": [
+              "A",
+              "los",
+              "clientes",
+              "del",
+              "puesto",
+              "les",
+              "regalamos",
+              "una",
+              "bebida."
             ]
           }
         ]
       },
       {
-        "id": "b1-13-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «Lo que nos dijeron».",
-        "categories": [
-          "Información transmitida",
-          "Pregunta transmitida"
-        ],
+        "id": "b1-13-practica-retrieval",
+        "type": "context",
+        "title": "Recuperación: semanas 11 y 12",
+        "prompt": "Recuperación de semanas anteriores en el contexto de la feria. Elige la forma correcta.",
         "items": [
           {
-            "text": "Dijo que usarían la sala baja.",
-            "cat": 0
+            "context": "Semana 11, no volver a. Diego se cortó un dedo por usar un cuchillo sin afilar. Rosa le advierte.",
+            "q": "¿Qué le dice?",
+            "options": [
+              "No dejas de usar ese cuchillo.",
+              "No vuelvas a usar ese cuchillo sin afilarlo.",
+              "No vuelves a usar ese cuchillo."
+            ],
+            "answer": 1,
+            "why": "Advertencia: «no vuelvas a» + infinitivo."
           },
           {
-            "text": "Explicó que la lista seguía pendiente.",
-            "cat": 0
+            "context": "Semana 11, llegar a. La cola fue enorme el sábado.",
+            "q": "«La cola ___ medir cien metros.»",
+            "options": [
+              "llegó a",
+              "acabó de",
+              "dejó de"
+            ],
+            "answer": 0,
+            "why": "«Llegar a»: el punto máximo."
           },
           {
-            "text": "Preguntó si necesitábamos material.",
-            "cat": 1
+            "context": "Semana 12, preposición fija. Rosa habla de la ayuda de su equipo.",
+            "q": "«Siempre puedo contar ___ Diego.»",
+            "options": [
+              "de",
+              "en",
+              "con"
+            ],
+            "answer": 2,
+            "why": "«Contar con»."
           },
           {
-            "text": "Quiso saber dónde sería la actividad.",
-            "cat": 1
+            "context": "Semana 12, verbos de cambio. La cevichería empezó como un carrito en la calle.",
+            "q": "¿Cómo lo cuentas?",
+            "options": [
+              "El carrito se volvió en un restaurante.",
+              "El carrito se convirtió en un restaurante.",
+              "El carrito se hizo restaurante famoso en."
+            ],
+            "answer": 1,
+            "why": "Transformación: «convertirse en»."
           }
         ]
       },
       {
-        "id": "b1-13-draft",
+        "id": "b1-13-practica-transformar",
+        "type": "transform",
+        "title": "Pon el tema delante",
+        "prompt": "Reescribe cada frase empezando por el elemento indicado y retómalo con un pronombre.",
+        "items": [
+          {
+            "source": "Diego compró los limones.",
+            "instruction": "Empieza por «Los limones…».",
+            "answers": [
+              "Los limones los compró Diego."
+            ],
+            "why": "Directo delante: «los»."
+          },
+          {
+            "source": "Rosa le pagó a la proveedora el sábado.",
+            "instruction": "Empieza por «A la proveedora…».",
+            "answers": [
+              "A la proveedora le pagó Rosa el sábado.",
+              "A la proveedora Rosa le pagó el sábado."
+            ],
+            "why": "Indirecto delante: «le»."
+          },
+          {
+            "source": "Lucía preparó la mesa de postres.",
+            "instruction": "Empieza por «La mesa de postres…».",
+            "answers": [
+              "La mesa de postres la preparó Lucía."
+            ],
+            "why": "Directo femenino delante: «la»."
+          }
+        ]
+      },
+      {
+        "id": "b1-13-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Mensajes del equipo",
+        "prompt": "Escribe cada mensaje en dos o tres frases.",
         "items": [
           {
-            "prompt": "Lo que nos dijeron: escribe una apertura de 35–45 palabras para la tarea «Escribe 150–180 palabras para una persona ausente de la reunión del audio. Atribuye la información, distingue lo confirmado y transmite las preguntas pendientes.» sin copiar el modelo.",
-            "model": "Hola, Raquel: te resumo lo que nos explicó la responsable del taller.",
+            "prompt": "Tu jefa vuelve de vacaciones. Escríbele qué tareas están hechas, con el tema delante.",
+            "model": "Las facturas las pagué el lunes y a los clientes nuevos les mandé el presupuesto. El informe lo termino mañana.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "Pones al menos dos temas delante y los retomas con un pronombre.",
+              "Usas «le» o «les» con un complemento indirecto."
             ]
           },
           {
-            "prompt": "Lo que nos dijeron: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "¿Podrías decirme si tú necesitas algo? Le transmitiré únicamente lo necesario para organizarlo. Entiendo que debes preparar el transporte; por eso he separado la fecha y el lugar, que ya conocemos, de la plaza, que sigue pendiente. Si recibo un cambio, te avisaré con su fuente y la nueva información para evitar que circulen versiones diferentes.",
+            "prompt": "Explica a un compañero nuevo quién es quién en tu trabajo.",
+            "model": "La que lleva las cuentas es Marta. El chico con el que comes hoy es Andrés, quien entró en marzo.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-13-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «Lo que nos dijeron», recupera la semana 12: Propón una campaña de ahorro: explica causa con como o ya que y finalidad con para y para que. Añade una previsión con por si acaso, un responsable y una forma de medir el resultado.",
-            "model": "Instalamos recipientes para separar los residuos. Ponemos carteles para que nadie confunda los envases.",
-            "checklist": [
-              "Puedo expresar finalidad con el mismo sujeto o con sujetos distintos.",
-              "Puedo elegir el conector causal según la posición y la intención.",
-              "Puedo hablar de reciclaje, consumo, energía y cambio climático.",
-              "Puedo marcar el contraste: no lo hago POR ti, lo hago PARA ti.",
-              "Puedo justificar una propuesta con causa y finalidad.",
-              "Puedo identificar el objetivo y los argumentos de una campaña.",
-              "Puedo usar por y para en expresiones como por fin, para nada, por si acaso y estar por."
+              "Usas «el que» o «la que» sin nombre delante.",
+              "Usas una preposición + relativo («con el que», «con quien»)."
             ]
           },
           {
-            "prompt": "Tras recuperar el caso anterior en «Lo que nos dijeron», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: La coordinadora dice que mañana abrirán más tarde.",
+            "prompt": "Escribe lo bueno y lo malo de tu semana y lo que te preocupa.",
+            "model": "Lo bueno es que terminé el proyecto a tiempo; lo malo, que no dormí nada. Lo que me preocupa es lo del viaje del lunes.",
             "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
+              "Usas «lo bueno» y «lo malo».",
+              "Usas «lo que» y «lo de»."
             ]
           }
         ]
@@ -618,181 +1166,249 @@ export const b1w13: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe 150–180 palabras para una persona ausente de la reunión del audio. Atribuye la información, distingue lo confirmado y transmite las preguntas pendientes.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Has estado unos días a cargo de un proyecto (una fiesta, un viaje en grupo, un evento del trabajo). Escribe un mensaje al equipo para ponerlo al día: qué está hecho, quién se encarga de qué, lo que preocupa y lo bueno de la situación.",
+    "context": "El mensaje va al grupo del proyecto. Hay personas nuevas que no conocen a todo el equipo.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Haz una lista de temas: tareas hechas, personas responsables, un problema y una buena noticia.",
+      "Primer párrafo: las tareas hechas, con el tema delante («Las invitaciones las mandé…», «A los proveedores les…»).",
+      "Segundo párrafo: quién se encarga de qué (quien, el que, la que), lo que preocupa, lo de algún tema pendiente y lo bueno.",
+      "Revisa cada tema que pusiste delante: ¿lleva su pronombre y concuerda? Corrige también «quien» sin preposición en una relativa especificativa."
     ],
     "useLanguage": [
-      "La coordinadora dice que mañana abrirán más tarde.",
-      "Ayer explicó que aquel día no había servicio.",
-      "Me preguntó si podía volver el lunes.",
-      "Quiso saber dónde estaba la entrada."
+      "el tema delante + lo, la, los, las",
+      "a + persona + le, les",
+      "quien, el que, la que",
+      "con quien, con el que, en la que",
+      "lo que, lo de",
+      "lo bueno / lo malo / lo importante es que"
     ],
     "model": [
-      "Hola, Raquel: te resumo lo que nos explicó la responsable del taller. Dijo que empezaríamos el martes de la próxima semana y confirmó que usaríamos la sala de abajo para facilitar el acceso.",
-      "La responsable insistió en que el cambio de sala no significa que se haya cancelado el taller. También pidió que distinguiéramos la recepción de una solicitud de la confirmación de una plaza. Voy a mantener esa diferencia en los mensajes que envíe al grupo.",
-      "La lista de participantes todavía está en revisión, así que pidió que no enviáramos una confirmación de plaza hoy. Mañana nos darán la respuesta definitiva. También preguntó si alguien necesita material prestado. ¿Podrías decirme si tú necesitas algo? Le transmitiré únicamente lo necesario para organizarlo. Entiendo que debes preparar el transporte; por eso he separado la fecha y el lugar, que ya conocemos, de la plaza, que sigue pendiente. Si recibo un cambio, te avisaré con su fuente y la nueva información para evitar que circulen versiones diferentes."
+      "Hola a todos. Os pongo al día sobre la cena de fin de curso. El restaurante lo reservé el lunes para treinta personas, y a la dueña le mandé ayer la lista de alergias. Las invitaciones las enviamos Pablo y yo el martes; casi todos han contestado. La música la traerá el hermano de Clara, que tiene un equipo de sonido.",
+      "Para los nuevos: quien se encarga del dinero es Marta, la profesora de francés, y la persona con la que tenéis que hablar si queréis llevar a alguien es Pablo. Lo que me preocupa es lo del transporte de vuelta, porque el último autobús sale a las once. Lo bueno es que el restaurante está cerca del centro, así que podemos compartir taxis. Lo importante ahora es que confirméis antes del viernes."
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié."
+      "Pongo al menos tres temas delante y los retomo con el pronombre correcto.",
+      "Identifico a las personas con quien, el que o la que, también después de preposición.",
+      "Uso «lo que», «lo de» y «lo + adjetivo».",
+      "El mensaje tiene dos párrafos: lo hecho y lo que queda."
     ],
     "words": [
-      150,
+      130,
       180
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas y escúchate: comprueba las pausas cuando pones un tema delante y en las relativas entre comas.",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Transmite durante dos minutos un recado a alguien que no estuvo en la reunión. Tu interlocutor pregunta si una propuesta ya está aprobada: aclara la fuente, reconoce la duda y formula una pregunta para confirmarla.",
+        "title": "Cómo va el proyecto",
+        "prompt": "Habla durante dos minutos para poner al día a un compañero sobre un proyecto que conoces bien (un evento, una mudanza, un viaje): qué está hecho, quién se encarga de qué, lo que te preocupa y lo bueno.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración."
+          "Tres temas delante retomados con un pronombre.",
+          "Dos personas identificadas con «el que», «la que» o «quien».",
+          "Lo que te preocupa y lo bueno."
         ],
         "seconds": 120,
+        "model": "Bueno, te cuento. Los billetes de tren los compré la semana pasada y el hotel lo reservó Laura. A los padres de los niños les mandamos un correo con todo el programa. Quien lleva el botiquín es Andrés, que es enfermero. Lo que me preocupa es lo del tiempo: dicen que va a llover. Lo bueno es que…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos?",
+          "¿He retomado cada tema con su pronombre?",
+          "¿He usado «lo que» y «lo de»?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «Lo que nos dijeron», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "Preguntas al volver",
+        "prompt": "Un interlocutor vuelve después de unos días fuera y te pregunta por tareas concretas: ¿y lo del presupuesto?, ¿quién habló con el cliente?, ¿las facturas? Responde a cada pregunta con el tema delante y aclara lo que no entienda. Practica con alguien o graba las dos voces.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Responde con el tema delante: «El presupuesto lo…».",
+          "Aclara quién es quién con «la que…» o «el que…»."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "¿Lo del presupuesto? Lo mandé ayer, no te preocupes. Al cliente lo llamó Sara, la que trabaja en ventas, no la de diseño. Y las facturas… las facturas todavía no las he pagado, lo hago mañana.",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He respondido a todas sus preguntas?",
+          "¿He aclarado quién es quién?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Lleva tu mensaje de puesta al día y estas tarjetas a la próxima clase con tu profesor.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Transmite durante dos minutos un recado a alguien que no estuvo en la reunión. Tu interlocutor pregunta si una propuesta ya está aprobada: aclara la fuente, reconoce la duda y formula una pregunta para confirmarla."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «Lo que nos dijeron» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "move": "Informa",
+        "task": "Cuéntale a tu profesor qué deberes hiciste y cuáles no, poniendo cada tarea delante («Los ejercicios los hice el lunes…»).",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "… los hice…",
+          "… todavía no lo he…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «Lo que nos dijeron» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Identifica",
+        "task": "Describe a tres personas importantes de tu vida a tu profesor sin decir su nombre al principio («La que me enseñó a cocinar…») y que adivine quién es.",
+        "phrases": [
+          "La que…",
+          "El que…",
+          "Con quien…"
+        ]
+      },
+      {
+        "move": "Valora",
+        "task": "Habla con tu profesor de lo bueno, lo malo y lo más difícil de aprender español.",
+        "phrases": [
+          "Lo bueno es que…",
+          "Lo más difícil es…"
+        ]
+      },
+      {
+        "move": "Contrasta",
+        "task": "Lee en voz alta a tu profesor dos frases que solo cambian por las comas y pídele que diga si se refieren a todos o solo a algunos.",
+        "phrases": [
+          "Los… que…",
+          "Los…, que…,"
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu mensaje de puesta al día revisado y la grabación sobre tu proyecto."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Qué debe conservar un resumen? Relaciona tu respuesta con «Lo que nos dijeron».",
+        "q": "«Las facturas ___ pagué ayer por la tarde.»",
         "options": [
-          "Todas las palabras exactas",
-          "Las condiciones que afectan a la acción"
+          "las",
+          "les",
+          "lo"
+        ],
+        "answer": 0,
+        "why": "Directo femenino plural delante: «las»."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase dice que TODOS los alumnos aprobaron?",
+        "options": [
+          "Los alumnos que estudiaron aprobaron.",
+          "Los alumnos, que estudiaron, aprobaron.",
+          "Los alumnos quienes estudiaron aprobaron."
         ],
         "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "why": "Con comas, la relativa es explicativa: habla de todos."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «Lo que nos dijeron»: ¿qué formulación se oye?",
+        "q": "Escucha. ¿Qué le preocupa a la persona?",
         "options": [
-          "Le pedí que confirmara el dato por escrito.",
-          "Me preguntó si podía volver el lunes."
+          "La lluvia.",
+          "El precio del alquiler.",
+          "El permiso del local."
         ],
-        "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "Le pedí que confirmara el dato por escrito.",
-        "voice": "es-ES-f"
+        "answer": 2,
+        "why": "«Lo que me preocupa es lo del permiso.»",
+        "audio": "Lo de la lluvia no me preocupa; lo que me preocupa es lo del permiso del local.",
+        "voice": "es-PE-f"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «Lo que nos dijeron». Preguntó ___ la oficina abría el sábado.",
+        "q": "A mi abuela ___ regalamos un viaje a Cusco por su cumpleaños.",
         "answers": [
           [
-            "si"
+            "le"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «Lo que nos dijeron». Texto de partida: La responsable preguntó: «¿Necesitáis material?». Consigna: Transmite la pregunta desde nosotros. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "La responsable preguntó si necesitábamos material.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "La coordinadora preguntó dónde es la reunión del día anterior.",
-        "answers": [
-          "La coordinadora preguntó dónde era la reunión del día anterior."
         ],
-        "why": "La referencia pasada requiere adaptar el tiempo en este contexto."
+        "why": "Indirecto singular delante: «le»."
+      },
+      {
+        "type": "gap",
+        "q": "El amigo con ___ viajé a Bolivia ahora vive en Lima.",
+        "answers": [
+          [
+            "quien",
+            "el que"
+          ]
+        ],
+        "why": "Persona después de preposición: «con quien» o «con el que»."
+      },
+      {
+        "type": "gap",
+        "q": "___ mejor del viaje fue la comida.",
+        "answers": [
+          [
+            "Lo",
+            "lo"
+          ]
+        ],
+        "why": "«Lo + adjetivo»: un aspecto."
       },
       {
         "type": "order",
         "words": [
-          "Le",
-          "pedí",
-          "que",
-          "confirmara",
-          "el",
-          "dato",
-          "por",
-          "escrito."
-        ]
+          "El",
+          "pastel",
+          "lo",
+          "hizo",
+          "mi",
+          "tía",
+          "para",
+          "la",
+          "fiesta."
+        ],
+        "why": "Tema delante retomado con «lo»."
+      },
+      {
+        "type": "error",
+        "sentence": "Los platos fríos devolvimos a la cocina.",
+        "answers": [
+          "Los platos fríos los devolvimos a la cocina."
+        ],
+        "why": "Directo delante: hace falta «los»."
+      },
+      {
+        "type": "error",
+        "sentence": "El que más me gustó del concierto fue el ambiente.",
+        "answers": [
+          "Lo que más me gustó del concierto fue el ambiente."
+        ],
+        "why": "Se habla de una idea: «lo que»."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «Lo que nos dijeron»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: une estas notas en dos frases con el tema delante, un relativo y «lo de». «Pedido de pan: confirmado por mí. Persona responsable de la caja: Lucía (sobrina de Pepe). Problema pendiente: el cartel.»",
+        "model": "El pedido de pan lo confirmé yo, y quien se encarga de la caja es Lucía, la sobrina de Pepe. Lo único pendiente es lo del cartel.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «Lo que nos dijeron»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "Pones «el pedido» delante y lo retomas con «lo».",
+          "Identificas a la responsable con «quien» o «la que».",
+          "Presentas el problema con «lo de» o «lo del»."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Transmitir información y preguntas sin cambiar su sentido.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Poner delante el tema y retomarlo con lo, la, los, las, le o les.",
+      "Destacar con «a mí me», «a ella le» y responder «lo es» o «lo está».",
+      "Identificar personas y cosas con quien, el que, la que, también después de preposición, y reconocer «el cual».",
+      "Distinguir con comas «solo algunos» de «todos».",
+      "Presentar ideas con «lo que», «lo de» y «lo + adjetivo»."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "El orden de dos pronombres (se lo, me la) de A2.",
+      "Las relativas con antecedente buscado (subjuntivo) de la semana 7.",
+      "Los verbos con preposición de la semana 12, que también pasan delante del relativo («la persona con la que cuento»)."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/pronombres-personales-y-doble-mencion-tematica",
+      "label": "Clase: Pronombres personales y doble mención temática"
+    },
+    {
+      "path": "/gramatica/relativos-quien-el-que-el-cual",
+      "label": "Clase: Relativos quien, el que, el cual introductorio"
+    },
+    {
+      "path": "/gramatica/lo-que-y-lo-de-referencias",
+      "label": "Clase: Lo que y lo de: referencias a ideas"
+    }
+  ]
 };

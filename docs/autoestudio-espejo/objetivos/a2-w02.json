@@ -1,0 +1,12 @@
+[
+  [2, "gram", "g047", "Pretérito indefinido regular", "Puedo contar acciones terminadas en un tiempo cerrado con las formas regulares del indefinido, su tilde y los cambios de letra de yo (busqué, llegué, empecé).", ["a2.gram.g045"], { "related": ["/sistema-verbal/preterito-perfecto-simple-indicativo"] }],
+  [2, "gram", "g048", "Pretérito indefinido irregular de alta frecuencia", "Puedo usar fui, hice, tuve, estuve, pude, puse y dije, distinguir ir de ser y aplicar el cambio de pidió y durmió en tercera persona.", ["a2.gram.g047"], { "related": ["/gramatica/indefinido-irregular"] }],
+  [2, "voc", "w02-excursion-volcan", "Excursiones de un día y sus imprevistos", "Puedo hablar del transporte, de una visita a un parque natural y de los problemas típicos de una excursión.", ["a2.gram.g047"]],
+  [2, "pron", "w02-tilde-presente-pasado", "La tilde que distingue llego y llegó", "Puedo oír y pronunciar la diferencia entre el presente de yo y el indefinido de él en los verbos en -ar.", ["a2.gram.g047"]],
+  [2, "lis", "w02-lunes-oficina", "Escuchar el relato de un fin de semana", "Puedo entender en una conversación qué pasó en una excursión, en qué orden y quién hizo cada cosa.", ["a2.gram.g047", "a2.gram.g048"]],
+  [2, "read", "w02-blog-poas", "Leer una entrada de blog de viajes", "Puedo entender un relato de viaje en pasado, con un problema, su solución y un consejo final.", ["a2.gram.g047", "a2.gram.g048"]],
+  [2, "wri", "w02-relato-excursion", "Escribir el relato de un día especial", "Puedo escribir un relato breve y ordenado de un día terminado, con un problema y un consejo.", ["a2.gram.g047", "a2.gram.g048", "a2.disc.w02-ordenar-relato"]],
+  [2, "spk", "w02-contar-fin-de-semana", "Contar mi fin de semana y otras experiencias pasadas", "Puedo contar en voz alta durante más de un minuto lo que hice el fin de semana, en orden.", ["a2.fun.w02-contar-hechos-pasados"]],
+  [2, "fun", "w02-contar-hechos-pasados", "Contar y preguntar qué pasó", "Puedo contar hechos pasados de un día concreto y preguntar a otra persona qué hizo y qué pasó después.", ["a2.gram.g047"]],
+  [2, "disc", "w02-ordenar-relato", "Ordenar un relato con primero, luego, después y al final", "Puedo ordenar los hechos de un relato con primero, luego, después y al final, y valorar con por suerte y por desgracia.", ["a2.gram.g047"]]
+]

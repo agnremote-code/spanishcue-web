@@ -1,820 +1,920 @@
 import type { Module } from "../../types";
 
+/**
+ * C1 · semana 11 · Autoestudio espejo de G186 (ambigüedad sintáctica y dos
+ * interpretaciones) y G187 (elipsis verbal, nominal y anafórica avanzadas).
+ * Repaso autónomo con el reglamento de una liga vecinal de fútbol sala de
+ * Zaragoza que una frase ambigua dejó con dos campeones. La liga, sus equipos
+ * y sus personas son ficticios. Audio mediante síntesis; sin acreditación regional.
+ */
 export const c1w11: Module = {
-  "id": "c1-11",
-  "level": "c1",
-  "week": 11,
-  "kind": "core",
-  "title": "Conceder sin abandonar la tesis",
-  "subtitle": "Contraargumentación y fuerza de la postura",
-  "stop": {
-    "place": "Zaragoza",
-    "country": "España"
+  id: "c1-11",
+  level: "c1",
+  week: 11,
+  kind: "core",
+  title: "Dos campeones y una sola frase",
+  subtitle: "Repaso de cómo detectar y deshacer una ambigüedad sintáctica, y de cómo omitir o retomar sin que el lector dude",
+  stop: {
+    place: "Zaragoza",
+    country: "España",
   },
-  "minutes": 120,
-  "newObjectives": [
-    "c1.disc.contraargumentacion",
-    "c1.disc.atenuar-intensificar",
-    "c1.voc.politica-debate",
-    "c1.pron.debate-prosodia",
-    "c1.spk.debate"
+  minutes: 135,
+  newObjectives: [
+    "c1.gram.g186",
+    "c1.gram.g187",
+    "c1.voc.w11-reglamento-liga",
+    "c1.pron.w11-pausa-desambigua",
+    "c1.lis.w11-comite-competicion",
+    "c1.read.w11-columna-reglamento",
+    "c1.wri.w11-propuesta-reforma",
+    "c1.spk.w11-explicar-norma",
+    "c1.fun.w11-aclarar-lectura",
+    "c1.disc.w11-retomar-sin-dudas",
   ],
-  "reviewObjectives": [
-    "c1.rev.checkpoint-2",
-    "c1.read.ensayo"
-  ],
-  "prerequisites": [
-    "c1-10"
-  ],
-  "goal": {
-    "canDo": "Puedo escribir una tribuna que defienda horarios diferenciados, conceda dos razones del ajuste y refute una inferencia excesiva; establece qué dato te haría modificar la propuesta.",
-    "steps": [
-      "Examina contraargumentación y fuerza de la postura en un caso con intereses distintos.",
-      "Escucha antes de leer la transcripción y distingue tesis, reservas y compromisos.",
-      "Contrasta la lectura y el audio; prepara una producción independiente y revísala.",
-      "Lleva a clase una objeción y una reformulación justificadas."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja con material original. Las situaciones y los datos del dossier son ficticios y se utilizan para analizar decisiones comunicativas.",
-    "parts": [
-      {
-        "heading": "Contraargumentación y fuerza de la postura",
-        "body": [
-          "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión.",
-          "En «Conceder sin abandonar la tesis», observa la diferencia entre estas formulaciones: Es razonable revisar horarios; no se sigue que deban reducirse igual. / Cabe señalar que contar entradas no mide dependencia. Explica qué relación cambia y qué decisión permite tomar al destinatario."
-        ],
-        "examples": [
-          {
-            "es": "Es razonable revisar horarios; no se sigue que deban reducirse igual."
-          },
-          {
-            "es": "Cabe señalar que contar entradas no mide dependencia."
-          },
-          {
-            "es": "La inversión digital no sustituye, ni mucho menos, todas las funciones."
-          },
-          {
-            "es": "Conviene matizar la promesa de ahorro."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "No se sigue que todos los centros deben cerrar.",
-            "right": "No se sigue que todos los centros deban cerrar.",
-            "why": "Se rechaza la inferencia mediante subjuntivo."
-          }
-        ]
-      },
-      {
-        "heading": "Del análisis a la intervención",
-        "body": [
-          "El argumento no concluye que toda biblioteca deba permanecer siempre abierta. Sostiene algo más limitado y defendible: un servicio público no puede evaluarse únicamente mediante la frecuencia de uso sin examinar su función y la distribución de sus beneficios. La precisión de esa tesis permite conceder hechos incómodos sin perder coherencia. Contraargumentar no consiste en negar cada afirmación del adversario, sino en mostrar qué conclusión no se sigue de ella y qué información permitiría decidir mejor.",
-          "La producción de esta semana exige una elección concreta: Escribe una tribuna que defienda horarios diferenciados, conceda dos razones del ajuste y refute una inferencia excesiva; establece qué dato te haría modificar la propuesta. Antes de escribir, separa la información atribuible a las fuentes de tu propuesta; después comprueba que la forma elegida conserva esa distinción."
-        ],
-        "examples": [
-          {
-            "es": "Es razonable revisar horarios; no se sigue que deban reducirse igual.",
-            "note": "Une concesión y refutación con no se sigue que."
-          },
-          {
-            "es": "El acceso digital no reemplaza, ni mucho menos, todas las funciones.",
-            "note": "Intensifica la negación con ni mucho menos."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión.",
-    "exercises": [
-      {
-        "id": "g-lagunas",
-        "type": "gap",
-        "prompt": "Completa formas decisivas en «Conceder sin abandonar la tesis»; explica qué relación mantienen. Utiliza únicamente el banco; una forma puede reutilizarse.",
-        "items": [
-          {
-            "q": "Es razonable revisar horarios; no se ___ que deban reducirse igual.",
-            "answers": [
-              [
-                "sigue"
-              ]
-            ],
-            "why": "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión."
-          },
-          {
-            "q": "Cabe ___ que contar entradas no mide dependencia.",
-            "answers": [
-              [
-                "señalar"
-              ]
-            ],
-            "why": "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión."
-          },
-          {
-            "q": "La inversión digital no sustituye, ni mucho ___, todas las funciones.",
-            "answers": [
-              [
-                "menos"
-              ]
-            ],
-            "why": "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión."
-          }
-        ],
-        "bank": [
-          "sigue",
-          "señalar",
-          "menos"
-        ]
-      },
-      {
-        "id": "g-transformacion",
-        "type": "open",
-        "prompt": "Reformula sin perder alcance: Contraargumentación y fuerza de la postura. Esta reformulación se revisa por sentido y forma, no por coincidencia literal con el modelo.",
-        "items": [
-          {
-            "prompt": "Une concesión y refutación con no se sigue que. Texto de partida: «Es razonable revisar horarios. Reducirlos igual no es obligatorio.»",
-            "model": "Es razonable revisar horarios; no se sigue que deban reducirse igual.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Introduce una reserva formal con cabe señalar. Texto de partida: «El contador no mide dependencia.»",
-            "model": "Cabe señalar que el contador no mide dependencia.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Intensifica la negación con ni mucho menos. Texto de partida: «El acceso digital no reemplaza todas las funciones.»",
-            "model": "El acceso digital no reemplaza, ni mucho menos, todas las funciones.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones y connotaciones; reutiliza al menos cuatro en tu producción sin forzarlas.",
-    "groups": [
-      {
-        "title": "Contraargumentación y fuerza de la postura",
-        "items": [
-          {
-            "es": "concesión estratégica",
-            "note": "aceptación parcial que prepara respuesta"
-          },
-          {
-            "es": "premisa discutible",
-            "note": "afirmación de partida que exige examen"
-          },
-          {
-            "es": "conclusión excesiva",
-            "note": "resultado que excede las razones"
-          },
-          {
-            "es": "necesidad no atendida",
-            "note": "demanda relevante sin respuesta"
-          },
-          {
-            "es": "distribución de beneficios",
-            "note": "reparto de ventajas entre grupos"
-          },
-          {
-            "es": "ensayo acotado",
-            "note": "prueba con límites y duración"
-          },
-          {
-            "es": "criterio de evaluación",
-            "note": "regla para valorar resultados"
-          },
-          {
-            "es": "alternativa accesible",
-            "note": "opción que puede utilizarse realmente"
-          },
-          {
-            "es": "responsabilidad presupuestaria",
-            "note": "gestión justificada de recursos"
-          },
-          {
-            "es": "refutación pertinente",
-            "note": "respuesta dirigida a la inferencia real"
-          }
-        ]
-      }
+  reviewObjectives: ["c1.gram.g184","c1.gram.g185","c1.voc.w10-casona-cultura","c1.pron.w10-foco-dislocacion","c1.lis.w10-guion-podcast","c1.read.w10-cronica-casona","c1.wri.w10-cronica-inauguracion","c1.spk.w10-visita-casona","c1.fun.w10-destacar-contrastar","c1.disc.w10-progresion-tematica","c1.rev.w10-repaso-semanas-6-10"],
+  prerequisites: ["c1-10"],
+  goal: {
+    canDo: "Puedo reconocer cuándo una frase admite dos lecturas plausibles, reformularla para que solo quede la que quiero, y omitir o retomar elementos con elipsis, proformas y anáforas sin perder al lector.",
+    steps: [
+      "Repasa en la teoría las cinco fuentes habituales de ambigüedad, las maneras de deshacerla y las formas que cambian cuando omites un nombre o un verbo.",
+      "Practica con frases del reglamento de una liga vecinal de fútbol sala de Zaragoza.",
+      "Escucha la reunión del comité de competición y lee la columna que cuenta cómo una frase dio dos campeones.",
+      "Redacta una propuesta de reforma de una norma, revísala con la lista de control y explícala en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones de «Conceder sin abandonar la tesis» con su sentido contextual.",
-        "pairs": [
-          {
-            "left": "concesión estratégica",
-            "right": "aceptación parcial que prepara respuesta"
-          },
-          {
-            "left": "premisa discutible",
-            "right": "afirmación de partida que exige examen"
-          },
-          {
-            "left": "conclusión excesiva",
-            "right": "resultado que excede las razones"
-          },
-          {
-            "left": "necesidad no atendida",
-            "right": "demanda relevante sin respuesta"
-          },
-          {
-            "left": "distribución de beneficios",
-            "right": "reparto de ventajas entre grupos"
-          },
-          {
-            "left": "ensayo acotado",
-            "right": "prueba con límites y duración"
-          },
-          {
-            "left": "criterio de evaluación",
-            "right": "regla para valorar resultados"
-          },
-          {
-            "left": "alternativa accesible",
-            "right": "opción que puede utilizarse realmente"
-          },
-          {
-            "left": "responsabilidad presupuestaria",
-            "right": "gestión justificada de recursos"
-          },
-          {
-            "left": "refutación pertinente",
-            "right": "respuesta dirigida a la inferencia real"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Tomar el turno sin escalar el conflicto",
-    "explanation": [
-      "Empieza la concesión con tono estable, separa la objeción mediante una pausa y concentra el énfasis en el criterio discutido. Evita acentuar cada negación: la fuerza argumentativa procede de la relación entre ideas.",
-      "La reproducción disponible utiliza síntesis de voz. La percepción combina forma y contexto; compara tu grabación por inteligibilidad y efecto comunicativo, sin esperar una calificación automática del acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "Esta semana repasas dos clases que se complementan. La primera te enseña a sospechar de una frase correcta que el lector puede entender de dos maneras. La segunda te da las herramientas para no repetir: omitir un nombre o un verbo, sustituirlo por «lo» o «hacerlo», o retomarlo con «este último» o «respectivamente». Cuanto más omites, más tienes que vigilar que solo quede una lectura posible. El escenario es el reglamento de una liga vecinal de fútbol sala en Zaragoza.",
+    parts: [
       {
-        "es": "Acepto revisar horarios; cuestiono que contar entradas sea suficiente."
-      }
-    ],
-    "perceive": {
-      "id": "f-percepcion",
-      "type": "listen",
-      "prompt": "Escucha la formulación exacta en tomar el turno sin escalar el conflicto; identifica qué relación conserva antes de ensayar otra lectura.",
-      "items": [
-        {
-          "audio": "Es razonable revisar horarios; no se sigue que deban reducirse igual.",
-          "voice": "es-ES-f",
-          "q": "¿Qué formulación abre el contraste oral de «Conceder sin abandonar la tesis»?",
-          "options": [
-            "La inversión digital no sustituye, ni mucho menos, todas las funciones.",
-            "Es razonable revisar horarios; no se sigue que deban reducirse igual.",
-            "Cabe señalar que contar entradas no mide dependencia."
+        heading: "Dónde se esconde la segunda lectura",
+        body: [
+          "Una frase es ambigua cuando, en su contexto, admite dos interpretaciones plausibles y ambas importan al lector. No basta con que una segunda lectura sea posible en teoría: «el entrenador vio al portero con prismáticos» casi nunca se entiende como que el portero llevaba prismáticos, pero en un acta disciplinaria sí podría importar quién los llevaba. Por eso la pregunta útil no es «¿esto se puede leer de otra forma?», sino «¿un lector razonable podría leerlo de otra forma aquí?».",
+          "En los textos formales hay cinco fuentes frecuentes. Un nombre que viene de un verbo seguido de «de» no dice si lo que sigue hace o recibe la acción («la denuncia del árbitro»). Un adjetivo o un complemento detrás de dos nombres puede afectar a uno o a los dos («jugadores y entrenadores sancionados»). Un complemento puede depender de dos verbos o de dos nombres («prohibió jugar el partido en el pabellón»). Un posesivo «su» o un pronombre puede tener dos antecedentes. Y un infinitivo no nombra a su sujeto, como repasaste en la semana 7 (G178): «el miedo a perder» no dice quién teme perder.",
+        ],
+        table: {
+          caption: "Cinco fuentes de ambigüedad en un reglamento",
+          head: ["Fuente", "Frase", "Lectura A", "Lectura B"],
+          rows: [
+            ["nombre + de", "la denuncia del árbitro", "el árbitro denunció", "alguien denunció al árbitro"],
+            ["alcance del modificador", "jugadores y entrenadores sancionados", "solo los entrenadores sancionados", "jugadores y entrenadores, todos sancionados"],
+            ["complemento con dos anclajes", "el delegado habló con el capitán del equipo visitante", "el capitán es del visitante", "el delegado es del visitante"],
+            ["posesivo con dos antecedentes", "Ana avisó a Lucía de que su ficha caducaba", "la ficha de Ana", "la ficha de Lucía"],
+            ["infinitivo sin sujeto", "la obligación de presentar el acta", "la presenta el árbitro", "la presenta el delegado"],
           ],
-          "answer": 1,
-          "why": "Es razonable revisar horarios; no se sigue que deban reducirse igual."
         },
-        {
-          "audio": "Conviene matizar la promesa de ahorro.",
-          "voice": "es-MX-m",
-          "q": "¿Qué formulación cierra el contraste oral de «Conceder sin abandonar la tesis»?",
-          "options": [
-            "Conviene matizar la promesa de ahorro.",
-            "Es razonable revisar horarios; no se sigue que deban reducirse igual.",
-            "Cabe señalar que contar entradas no mide dependencia."
+        examples: [
+          { es: "La crítica del presidente del Delicias sorprendió a todos.", note: "¿El presidente criticó o lo criticaron? Sin contexto, las dos lecturas son plausibles." },
+          { es: "Se sancionará a los equipos y a los delegados reincidentes.", note: "¿Reinciden solo los delegados o también los equipos?" },
+        ],
+      },
+      {
+        heading: "Cómo dejar una sola lectura",
+        body: [
+          "Para deshacer una ambigüedad no hace falta reescribirlo todo: basta con añadir la marca que falta o mover una pieza. Con los nombres de acción, «de» queda para un participante y «a» o «por parte de» para el otro: «la denuncia del árbitro al delegado», «la denuncia al árbitro por parte del delegado». Si el modificador debe afectar a los dos nombres, repítelo o ponlo delante de ambos («los jugadores sancionados y los entrenadores sancionados», «todos los jugadores y entrenadores con sanción»); si solo afecta al segundo, cambia el orden («los entrenadores sancionados y los jugadores»).",
+          "Con un posesivo dudoso, sustituye «su» por «de + nombre» o por «la suya», y con un infinitivo sin dueño, pasa a «que + verbo conjugado» con el sujeto explícito: «la obligación de que el árbitro presente el acta». En la lengua hablada la entonación y las pausas resuelven muchas dudas; en el texto escrito solo tienes las palabras y la puntuación, así que relee como si fueras alguien que quiere aprovechar la otra lectura.",
+        ],
+        table: {
+          caption: "De la frase dudosa a la versión con una sola lectura",
+          head: ["Frase dudosa", "Recurso", "Versión clara"],
+          rows: [
+            ["la queja del capitán", "de + agente, a + paciente", "la queja del capitán al comité"],
+            ["equipos y delegados reincidentes", "repetir o reordenar", "los delegados reincidentes y todos los equipos"],
+            ["Ana avisó a Lucía de que su ficha caducaba", "de + nombre", "Ana avisó a Lucía de que la ficha de Lucía caducaba"],
+            ["el temor a descender", "que + subjuntivo con sujeto", "el temor de la directiva a que el equipo descienda"],
+            ["Prohibió jugar el partido en el pabellón.", "mover el complemento", "En el pabellón, prohibió jugar el partido."],
           ],
-          "answer": 0,
-          "why": "Conviene matizar la promesa de ahorro."
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "Los equipos deberán presentar la alineación de sus jugadores y suplentes inscritos.",
+            right: "Los equipos deberán presentar la alineación de sus jugadores inscritos y de sus suplentes inscritos.",
+            why: "Si «inscritos» debe afectar a los dos grupos, repítelo; si no, el lector puede aplicarlo solo a los suplentes.",
+          },
+          {
+            wrong: "El temor a que pierden la categoría paraliza al club.",
+            right: "El temor a que pierdan la categoría paraliza al club.",
+            why: "La oración explícita detrás de «temor a que» va en subjuntivo.",
+          },
+        ],
+        tip: "Antes de entregar un texto normativo, relee cada «de», cada «su» y cada infinitivo preguntándote: ¿quién hace aquí la acción? Si dudas un segundo, el lector dudará más.",
+      },
+      {
+        heading: "Omitir un nombre o un verbo sin perder la frase",
+        body: [
+          "Cuando omites un nombre ya mencionado, algunas palabras cambian de forma: «un», «algún» y «ningún» pasan a «uno», «alguno», «ninguno» («¿hay algún balón? —No queda ninguno»); «primer» y «tercer» pasan a «primero» y «tercero» («el primer partido y el tercero»); el posesivo breve pasa a la forma larga con artículo («mi ficha y la tuya»). Y el «el» que se usa delante de «agua», «área» o «acta» vuelve a ser «la» cuando el nombre desaparece: «el área de penalti y la de banquillos».",
+          "Cuando dos oraciones comparten el verbo, la segunda puede quedarse en el sujeto y una palabra de polaridad: «también» coincide con un sí, «tampoco» con un no, «sí» y «no» contrastan. Si quedan dos elementos, una coma marca el hueco del verbo: «el Delicias ganó en casa y el Torrero, fuera». Para recuperar una oración entera tras verbos de opinión, deseo o lengua, se usa «que sí» o «que no»: «—¿Se repetirá el partido? —Pilar cree que no». Con «gustar», «interesar» o «convencer», la respuesta lleva «a»: «A mí tampoco».",
+        ],
+        table: {
+          caption: "Lo que cambia cuando el nombre o el verbo desaparecen",
+          head: ["Con el nombre o el verbo", "Sin él", "Comentario"],
+          rows: [
+            ["algún árbitro", "alguno", "un, algún, ningún → uno, alguno, ninguno"],
+            ["el tercer partido", "el tercero", "primer, tercer → primero, tercero"],
+            ["mi ficha y tu ficha", "mi ficha y la tuya", "posesivo largo con artículo"],
+            ["el acta del sábado y el acta del domingo", "el acta del sábado y la del domingo", "vuelve el artículo femenino"],
+            ["El Delicias ganó en casa y el Torrero ganó fuera.", "El Delicias ganó en casa y el Torrero, fuera.", "la coma marca el verbo omitido"],
+            ["Creo que se repetirá el partido.", "Creo que sí.", "que sí / que no resumen la oración"],
+          ],
+        },
+        examples: [
+          { es: "—¿Te convence la nueva norma? —A mí no, pero a Pilar sí.", note: "Con «convencer», la respuesta corta lleva «a» y contrasta con «no» y «sí»." },
+          { es: "No hay ningún pabellón libre el domingo, ni uno solo.", note: "Sin el nombre, «ningún» y «un» recuperan la vocal final." },
+        ],
+      },
+      {
+        heading: "Retomar con «lo», «hacerlo» y las anáforas del texto",
+        body: [
+          "«Lo» puede sustituir al atributo de «ser», «estar» y «parecer», y es invariable aunque el atributo sea femenino o plural: «—¿Las fichas están validadas? —Ya lo están». «Hacerlo» retoma una acción ya mencionada, con sus complementos, y no sirve para estados: «quien quiera recurrir puede hacerlo antes del jueves», pero no «Ana sabe el reglamento y Jorge lo hace también». En una respuesta corta, el español prefiere repetir el verbo («—¿Enviaste la queja? —Sí, la envié ayer»).",
+          "En un texto, «este» señala lo último mencionado y «aquel» lo anterior; «el primero», «el segundo» y «este último» son más claros si hay varios candidatos. «Respectivamente» reparte dos listas en el mismo orden. «Dicho» y «tal» delante de un nombre son propios de textos administrativos. Evita «el mismo» como simple pronombre («se aprobó la norma y la publicación de la misma»): usa «su publicación» o «publicarla». Y recuerda la regla de la semana: si una elipsis o una anáfora deja dos candidatos, repite el nombre.",
+        ],
+        table: {
+          caption: "Cómo retomar según lo que quieres recuperar",
+          head: ["Quieres recuperar", "Forma", "Ejemplo"],
+          rows: [
+            ["una cualidad o un estado", "lo + ser, estar, parecer", "Parecía un error de redacción y lo era."],
+            ["una acción ya mencionada", "hacerlo", "Si el club no ha pagado la fianza, deberá hacerlo antes del lunes."],
+            ["lo último mencionado", "este, este último", "Hablaron el árbitro y el delegado; este último pidió la palabra."],
+            ["dos listas en el mismo orden", "respectivamente", "Pilar y Jorge presiden y redactan, respectivamente."],
+            ["un elemento en un texto formal", "dicho, tal + nombre", "Dicha cláusula se aplicará desde enero."],
+          ],
+        },
+        mistakes: [
+          {
+            wrong: "—¿Estáis preparadas para la final? —Sí, las estamos.",
+            right: "—¿Estáis preparadas para la final? —Sí, lo estamos.",
+            why: "El atributo se sustituye por «lo», invariable aunque se hable de mujeres.",
+          },
+          {
+            wrong: "El comité revisó la cláusula y la redacción de la misma.",
+            right: "El comité revisó la cláusula y su redacción.",
+            why: "«El mismo» como sustituto de un posesivo se desaconseja en la lengua cuidada.",
+          },
+          {
+            wrong: "Jorge conoce bien el reglamento y Pilar lo hace también.",
+            right: "Jorge conoce bien el reglamento y Pilar también.",
+            why: "«Conocer» es un estado: no se retoma con «hacerlo», basta la elipsis con «también».",
+          },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero decide si hay ambigüedad y de dónde viene; después elige la forma que omite o retoma sin crear una nueva.",
+    exercises: [
+      {
+        id: "c1-11-gramatica-lecturas",
+        type: "context",
+        prompt: "Lee la situación y elige la versión que deja una sola lectura, la que quiere quien escribe.",
+        items: [
+          {
+            context: "El comité quiere decir que fueron los vecinos quienes protestaron contra el árbitro.",
+            q: "¿Qué frase lo dice sin ambigüedad?",
+            options: [
+              "La protesta del árbitro fue atendida.",
+              "La protesta de los vecinos contra el árbitro fue atendida.",
+              "La protesta del árbitro de los vecinos fue atendida.",
+            ],
+            answer: 1,
+            why: "«De» marca a quien protesta y «contra» a quien recibe la protesta.",
+          },
+          {
+            context: "Solo los delegados que ya han sido sancionados antes recibirán una multa doble; los equipos, no.",
+            q: "¿Qué redacción conviene?",
+            options: [
+              "Recibirán una multa doble los equipos y delegados reincidentes.",
+              "Recibirán una multa doble los delegados y equipos reincidentes.",
+              "Recibirán una multa doble los delegados reincidentes, pero no los equipos.",
+            ],
+            answer: 2,
+            why: "Las dos primeras dejan dudoso el alcance de «reincidentes»; la tercera lo limita y lo dice.",
+          },
+          {
+            context: "Marta, delegada del Torrero, avisó a Susana, del Delicias, de que la ficha de Susana estaba caducada.",
+            q: "¿Qué frase evita la doble lectura?",
+            options: [
+              "Marta avisó a Susana de que su ficha estaba caducada.",
+              "Marta avisó a Susana de que la ficha de esta estaba caducada.",
+              "Marta avisó a Susana de que la misma ficha estaba caducada.",
+            ],
+            answer: 1,
+            why: "«Esta» señala a la última mencionada, Susana; «su» admite las dos lecturas.",
+          },
+          {
+            context: "La norma quiere que sea el árbitro, y no el delegado, quien firme el acta.",
+            q: "¿Qué frase es precisa?",
+            options: [
+              "Es obligatorio que el árbitro firme el acta al acabar el partido.",
+              "Existe la obligación de firmar el acta al acabar el partido.",
+              "Firmar el acta al acabar el partido será obligación del mismo.",
+            ],
+            answer: 0,
+            why: "«Que + subjuntivo» nombra al sujeto; el infinitivo solo no dice quién firma.",
+          },
+        ],
+      },
+      {
+        id: "c1-11-gramatica-elipsis",
+        type: "gap",
+        prompt: "Completa con la forma que corresponde al nombre, al verbo o a la oración que se omite.",
+        items: [
+          { q: "Pedimos tres balones nuevos, pero no ha llegado ___.", answers: [["ninguno"]], why: "Sin el nombre, «ningún» pasa a «ninguno»." },
+          { q: "El área de la portería está bien pintada; ___ del banquillo, no.", answers: [["la"]], why: "Sin el nombre, vuelve el artículo femenino." },
+          { q: "—¿Las fichas ya están firmadas? —Sí, ya ___ están.", answers: [["lo"]], why: "«Lo» sustituye al atributo y no concuerda." },
+          { q: "—¿Repetirán el partido? —El presidente me ha dicho que ___.", answers: [["sí", "no"]], why: "«Que sí» o «que no» resumen la oración tras «decir»." },
+          { q: "A Jorge no le gusta la norma nueva y a mí ___.", answers: [["tampoco"]], why: "Coincidencia con una negación: «tampoco»." },
+          { q: "Ganamos el primer partido y perdimos el ___.", answers: [["tercero", "segundo"]], why: "Sin el nombre, «tercer» pasa a «tercero»; «segundo» no cambia." },
+        ],
+      },
+      {
+        id: "c1-11-gramatica-recursos",
+        type: "classify",
+        prompt: "Clasifica cada frase según el recurso que usa para no repetir.",
+        categories: ["Elipsis nominal", "Elipsis verbal o de oración", "Proforma: lo o hacerlo", "Anáfora textual"],
+        items: [
+          { text: "Prefiero tu propuesta a la de Jorge.", cat: 0, why: "«La de Jorge» omite «propuesta»." },
+          { text: "—¿Vendrá el árbitro titular? —Espero que sí.", cat: 1, why: "«Que sí» recupera toda la oración." },
+          { text: "Quien no haya pagado la cuota deberá hacerlo antes del viernes.", cat: 2, why: "«Hacerlo» retoma la acción de pagar la cuota." },
+          { text: "El Delicias y el Oliver quedaron primero y segundo, respectivamente.", cat: 3, why: "«Respectivamente» reparte las dos listas en orden." },
+          { text: "No queda ninguna pista libre, ni una.", cat: 0, why: "«Una» omite «pista»." },
+          { text: "Parecía una sanción excesiva, y lo era.", cat: 2, why: "«Lo» retoma el atributo «una sanción excesiva»." },
+          { text: "Pilar no estaba de acuerdo; Jorge, tampoco.", cat: 1, why: "Se omite el verbo y queda la polaridad." },
+          { text: "Hablaron la presidenta y el árbitro; este último pidió calma.", cat: 3, why: "«Este último» señala al más cercano: el árbitro." },
+        ],
+      },
+      {
+        id: "c1-11-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un problema de ambigüedad, de elipsis o de anáfora. Corrígela cambiando solo lo necesario.",
+        items: [
+          {
+            sentence: "Revisamos el reglamento y aprobamos la modificación del mismo.",
+            answers: ["Revisamos el reglamento y aprobamos su modificación.", "Revisamos el reglamento y aprobamos modificarlo."],
+            why: "«El mismo» como pronombre se desaconseja: usa el posesivo o un clítico.",
+          },
+          {
+            sentence: "—¿Están las capitanas listas? —Sí, las están.",
+            answers: ["—¿Están las capitanas listas? —Sí, lo están."],
+            why: "El atributo se retoma con «lo» invariable.",
+          },
+          {
+            sentence: "Hay dos vestuarios, pero no está libre ningún.",
+            answers: ["Hay dos vestuarios, pero no está libre ninguno."],
+            why: "Sin el nombre, la forma es «ninguno».",
+          },
+          {
+            sentence: "A Pilar le interesa la propuesta y yo también.",
+            answers: ["A Pilar le interesa la propuesta y a mí también."],
+            why: "Con «interesar», la elipsis conserva la «a»: «a mí también».",
+          },
+        ],
+      },
+      {
+        id: "c1-11-gramatica-reformular",
+        type: "open",
+        prompt: "Reescribe cada borrador según la instrucción. Hay varias respuestas posibles: compara con el modelo y con la lista.",
+        items: [
+          {
+            prompt: "Borrador del comité: «La sanción del entrenador del Oliver fue revisada después de la queja del delegado». Quien escribe quiere decir que el entrenador fue sancionado y que el delegado se quejó al comité. Reescríbelo con una sola lectura posible.",
+            model: "La sanción impuesta al entrenador del Oliver se revisó después de que el delegado presentara una queja ante el comité.",
+            checklist: [
+              "Marco con «al» o con un participio quién recibe la sanción.",
+              "Nombro a quién se dirige la queja.",
+              "Releo la frase buscando otro «de» dudoso.",
+            ],
+          },
+          {
+            prompt: "Borrador del acta: «Jorge propuso cambiar la hora del partido. Pilar propuso cambiar la hora del partido. Marta no propuso cambiar la hora del partido, propuso cambiar el pabellón. El cambio de pabellón es caro; el cambio de pabellón es necesario». Redúcelo a dos frases con elipsis verbal, una proforma y una anáfora.",
+            model: "Jorge propuso cambiar la hora del partido y Pilar también; Marta no, ella prefería cambiar el pabellón. Esta última opción es cara, pero lo es menos que perder la temporada.",
+            checklist: [
+              "Uso «también» y «no» para no repetir el verbo.",
+              "Retomo una opción con una anáfora que no deja dos candidatos.",
+              "Uso «lo» o «hacerlo» correctamente.",
+            ],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para hablar de un reglamento deportivo y de las discusiones sobre cómo interpretarlo.",
+    groups: [
+      {
+        title: "La liga y su reglamento",
+        items: [
+          { es: "el comité de competición", note: "órgano que aplica el reglamento y resuelve los conflictos" },
+          { es: "la cláusula", note: "cada una de las disposiciones de un reglamento o un contrato" },
+          { es: "la alineación indebida", note: "hacer jugar a alguien que no tenía derecho a jugar" },
+          { es: "la ficha", note: "documento que inscribe a una persona en un equipo" },
+          { es: "el desempate", note: "criterio para ordenar a dos equipos con los mismos puntos" },
+          { es: "el gol average", note: "diferencia entre goles marcados y recibidos" },
+          { es: "recurrir una decisión", note: "pedir formalmente que se revise" },
+          { es: "dar por bueno", note: "aceptar algo como válido" },
+        ],
+      },
+      {
+        title: "Interpretar un texto",
+        items: [
+          { es: "prestarse a confusión", note: "permitir que alguien entienda otra cosa" },
+          { es: "la redacción", note: "forma concreta en que está escrito un texto" },
+          { es: "el espíritu de la norma", note: "la intención con la que se escribió" },
+          { es: "la letra de la norma", note: "lo que dice literalmente" },
+          { es: "agarrarse a una palabra", note: "aprovechar una palabra para defender una lectura interesada" },
+          { es: "zanjar una cuestión", note: "resolverla de forma definitiva" },
+          { es: "un vacío normativo", note: "situación que el reglamento no prevé" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c1-11-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "la alineación indebida", right: "hacer jugar a alguien que no tenía derecho a jugar" },
+          { left: "el espíritu de la norma", right: "la intención con la que se escribió" },
+          { left: "agarrarse a una palabra", right: "aprovechar una palabra para defender una lectura interesada" },
+          { left: "zanjar una cuestión", right: "resolverla de forma definitiva" },
+          { left: "un vacío normativo", right: "situación que el reglamento no prevé" },
+          { left: "el desempate", right: "criterio para ordenar a dos equipos con los mismos puntos" },
+          { left: "recurrir una decisión", right: "pedir formalmente que se revise" },
+        ],
+      },
+      {
+        id: "c1-11-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del banco.",
+        bank: ["se presta a confusión", "la letra", "fichas", "dio por bueno", "redacción"],
+        items: [
+          { q: "La cláusula sobre los suplentes ___: cada delegado la lee a su manera.", answers: [["se presta a confusión"]] },
+          { q: "Según ___ del reglamento, el gol en propia puerta no cuenta para el desempate.", answers: [["la letra"]] },
+          { q: "Antes del primer partido hay que entregar las ___ de todas las jugadoras.", answers: [["fichas"]] },
+          { q: "El árbitro ___ el gol aunque el balón había tocado el techo.", answers: [["dio por bueno"]] },
+          { q: "La nueva ___ del artículo cinco cabe en dos líneas y no admite dudas.", answers: [["redacción"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La pausa que deshace una ambigüedad y la coma de la elipsis",
+    explanation: [
+      "En la lengua hablada, la pausa y la entonación separan lecturas que en la escritura pueden confundirse. «Jugadores y entrenadores | sancionados», con pausa antes del adjetivo, sugiere que todos están sancionados; «jugadores | y entrenadores sancionados», con la pausa antes, aplica el adjetivo solo a los entrenadores. Del mismo modo, «No, | quiero que lo revises» (rechazo y petición) no es «No quiero que lo revises».",
+      "La elipsis verbal también se oye: donde falta el verbo hay una pausa breve y la voz se mantiene suspendida antes del complemento: «El Delicias ganó en casa, y el Torrero | fuera». En las respuestas cortas, «sí» y «también» llevan acento fuerte y cierran el grupo: «Yo SÍ», «A mí TAMBIÉN».",
+      "El audio utiliza la síntesis disponible en el navegador: no certifica un acento regional ni evalúa tu pronunciación. Úsalo para percibir las pausas y compara tu grabación con la de una persona.",
+    ],
+    table: {
+      caption: "Misma secuencia de palabras, distinta pausa",
+      head: ["Pausa", "Lectura"],
+      rows: [
+        ["No, | quiero que lo firmes.", "rechazo algo y te pido que firmes"],
+        ["No quiero que lo firmes.", "no deseo que firmes"],
+        ["Las jugadoras y las delegadas | nuevas", "todas son nuevas"],
+        ["Las jugadoras | y las delegadas nuevas", "solo las delegadas son nuevas"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Acepto revisar horarios; cuestiono que contar entradas sea suficiente.",
-        "tip": "Empieza la concesión con tono estable, separa la objeción mediante una pausa y concentra el énfasis en el criterio discutido. Evita acentuar cada negación: la fuerza argumentativa procede de la relación entre ideas."
-      },
-      {
-        "text": "Es razonable revisar horarios; no se sigue que deban reducirse igual.",
-        "tip": "Graba dos versiones cambiando foco o pausas; explica qué interpretación favorece cada una."
-      },
-      {
-        "text": "Conviene matizar la promesa de ahorro.",
-        "tip": "Integra esta formulación en una respuesta espontánea de treinta segundos, sin leer el resto."
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: Conceder sin abandonar la tesis",
-    "context": "Escucha sin abrir la transcripción. La situación es una intervención o reunión original vinculada al dossier. Las etiquetas de voz orientan la síntesis y no acreditan muestras dialectales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Intervención 1",
-        "voice": "es-ES-f",
-        "role": "presentación del problema"
-      },
-      {
-        "id": "b",
-        "name": "Intervención 2",
-        "voice": "es-MX-m",
-        "role": "contraste o desarrollo"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Empiezo por una concesión: es razonable revisar horarios cuando los presupuestos son limitados. No defenderé que cualquier franja de apertura esté justificada por el mero hecho de existir. Mi objeción se refiere al criterio utilizado. Si contamos solo entradas, dejamos fuera la dependencia del servicio. Diez personas sin alternativa pueden necesitar más esa franja que cincuenta que disponen de otros espacios. Habrá que comprobarlo, desde luego, pero no podemos descartarlo antes de medirlo."
-      },
-      {
-        "speaker": "b",
-        "text": "Comparto que la biblioteca cumple varias funciones. Aun así, mantener un edificio abierto para un grupo pequeño implica personal, energía y seguridad. Ese dinero podría ampliar actividades con mucha más demanda. No me parece suficiente afirmar que todo beneficio minoritario debe preservarse. ¿Dónde pondrías el límite? Si cada colectivo puede exigir una excepción, terminaremos sin capacidad para reorganizar nada y el presupuesto seguirá siendo el mismo."
-      },
-      {
-        "speaker": "a",
-        "text": "La objeción es pertinente, pero mi propuesta no concede un derecho ilimitado a cualquier horario. Pide comparar alternativas y costes reales. Quizá podamos concentrar el servicio nocturno en un centro bien comunicado, siempre que el desplazamiento no excluya a quienes lo necesitan. También podríamos modificar días en vez de suprimir toda la franja. Lo que rechazo es presentar una reducción uniforme como si fuera la única respuesta compatible con la responsabilidad presupuestaria."
-      },
-      {
-        "speaker": "b",
-        "text": "Entonces coincidimos en la necesidad de evaluar y discrepamos sobre qué debe entrar en el cálculo. Propongo un ensayo de tres meses con horarios diferenciados, información previa y registro de necesidades no atendidas. No prometo que todas las franjas se mantengan. Sí que la decisión se apoye en algo más que un promedio de entradas. Para cerrar, formularía la pregunta de otra manera: qué combinación de horarios y centros preserva las funciones esenciales con los recursos disponibles. Esa pregunta permite negociar; la alternativa entre cerrar por eficiencia o abrir por principio nos deja atrapados en posiciones demasiado simples."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha una vez sin abrir la transcripción. Identifica el problema y el propósito general; no intentes copiar todas las palabras.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "Primera escucha: Conceder sin abandonar la tesis.",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la intervención de «Conceder sin abandonar la tesis»?",
-              "options": [
-                "Evaluar horarios exige considerar funciones y dependencia además del volumen de entradas.",
-                "Toda biblioteca debe abrir a cualquier hora.",
-                "Los presupuestos carecen de importancia cultural."
-              ],
-              "answer": 0,
-              "why": "Evaluar horarios exige considerar funciones y dependencia además del volumen de entradas."
-            },
-            {
-              "q": "¿Qué lectura del cierre de «Conceder sin abandonar la tesis» conservaría sus reservas?",
-              "options": [
-                "Concentrar el servicio en un centro accesible o modificar días.",
-                "Dejar de evaluar cualquier horario.",
-                "Una solución total e inmediata sin condiciones."
-              ],
-              "answer": 0,
-              "why": "Concentrar el servicio en un centro accesible o modificar días."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha de nuevo y toma notas de compromisos, límites y correcciones. Comprueba quién aporta cada dato.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "open",
-          "prompt": "Reconstruye lo que se dijo sobre concesión estratégica.",
-          "items": [
-            {
-              "prompt": "¿Qué alternativa se considera además de suprimir una franja?",
-              "model": "Concentrar el servicio en un centro accesible o modificar días.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "En el audio de «Conceder sin abandonar la tesis», identifica una corrección o una reserva y explica qué interpretación evita.",
-              "model": "Entonces coincidimos en la necesidad de evaluar y discrepamos sobre qué debe entrar en el cálculo. Propongo un ensayo de tres meses con horarios diferenciados, información previa y registro de necesidades no atendidas. No prometo que todas las franjas se mantengan. Sí que la decisión se apoye en algo más que un promedio de entradas. Para cerrar, formularía la pregunta de otra manera: qué combinación de horarios y centros preserva las funciones esenciales con los recursos disponibles. Esa pregunta permite negociar; la alternativa entre cerrar por eficiencia o abrir por principio nos deja atrapados en posiciones demasiado simples.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Antes de consultar la transcripción, explica una intención y justifícala con un marcador o una oposición que hayas oído.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Escucha la organización y la postura en Conceder sin abandonar la tesis.",
-          "items": [
-            {
-              "prompt": "¿Qué diferencia perdería un resumen del audio de «Conceder sin abandonar la tesis» que eliminara sus condiciones?",
-              "model": "Concentrar el servicio en un centro accesible o modificar días.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "Reformula el cierre de «Conceder sin abandonar la tesis» para una persona que no asistió; conserva una reserva y un compromiso.",
-              "model": "Revisar horarios es razonable, pero contar entradas no basta para valorar una biblioteca. El uso minoritario puede responder a una dependencia sin alternativa; esa posibilidad debe comprobarse, no asumirse ni descartarse. Propongo un ensayo de horarios diferenciados que registre necesidades no atendidas y costes reales. La inversión digital puede complementar funciones, aunque no sustituye espacio, conexión o apoyo en todos los casos. Si una franja resulta poco necesaria y existen alternativas accesibles, modificarla sería compatible con defender el servicio público.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "La biblioteca no cabe en su contador",
-    "genre": "Tribuna argumentativa",
-    "frame": "Texto original situado en Zaragoza; léelo después de la primera escucha y contrasta sus decisiones discursivas.",
-    "text": [
-      "Quienes proponen reducir el horario de las bibliotecas suelen presentar un argumento atendible: los recursos públicos son limitados y deben distribuirse según el uso efectivo. Si una sala registra pocas entradas durante una franja, mantenerla abierta tiene un coste que merece examinarse. Descalificar esa observación como desprecio a la cultura evita discutir el problema real. Ahora bien, aceptar la necesidad de evaluar no obliga a aceptar que el número de accesos sea el único criterio pertinente. La controversia empieza precisamente al decidir qué entendemos por uso y qué función atribuimos al servicio.",
-      "Un contador registra entradas, no necesidades. Dos horas con poca afluencia pueden ser esenciales para trabajadores que terminan tarde, estudiantes sin espacio doméstico o personas que utilizan equipos accesibles. Su presencia escasa no demuestra una utilidad escasa. Tampoco basta con invocar esos casos para justificar cualquier horario: habría que comprobar cuántas personas dependen de él, qué alternativas tienen y qué coste supondría ofrecer otra solución. La defensa del servicio gana fuerza cuando acepta someter sus razones a contraste, en lugar de declararlas inmunes a la evaluación.",
-      "Cabe conceder, además, que algunas bibliotecas mantienen horarios heredados que ya no responden a la demanda. Esa concesión no refuta la tesis de que los recortes uniformes resultan inadecuados. Más bien la refuerza: si los usos varían entre barrios, la respuesta debería diferenciarse. Una reducción idéntica puede ahorrar una cantidad fácil de anunciar y producir perjuicios muy distintos. Conviene matizar la promesa de eficiencia cuando el cálculo no incluye los desplazamientos adicionales, la saturación de otros centros o la desaparición de una alternativa gratuita.",
-      "Los defensores del ajuste alegan que los servicios digitales compensan el cierre físico. La afirmación solo sería suficiente si acceso digital y presencial fueran intercambiables para todos los usuarios y todas las tareas. No lo son. Consultar un catálogo desde casa no sustituye disponer de conexión, recibir ayuda o encontrar silencio. Esto no significa que la inversión digital sea inútil; significa que debe evaluarse como complemento o sustituto según funciones concretas. Refutar una equivalencia excesiva no requiere oponerse a la tecnología ni idealizar el edificio.",
-      "Una propuesta viable sería ensayar horarios diferentes durante un periodo acotado, informar con antelación y recoger tanto datos de acceso como necesidades no atendidas. Los usuarios deberían conocer qué criterios decidirán la continuidad del ensayo. La administración, por su parte, necesitaría margen para modificar turnos sin presentar cada ajuste como derrota. Si el experimento revela que una franja apenas se utiliza y existen alternativas accesibles, reducirla podría ser razonable. Si demuestra dependencia de un grupo pequeño sin alternativa, mantenerla podría estar igualmente justificado.",
-      "El argumento no concluye que toda biblioteca deba permanecer siempre abierta. Sostiene algo más limitado y defendible: un servicio público no puede evaluarse únicamente mediante la frecuencia de uso sin examinar su función y la distribución de sus beneficios. La precisión de esa tesis permite conceder hechos incómodos sin perder coherencia. Contraargumentar no consiste en negar cada afirmación del adversario, sino en mostrar qué conclusión no se sigue de ella y qué información permitiría decidir mejor."
-    ],
-    "tasks": [
-      {
-        "id": "r-inferencia",
-        "type": "choice",
-        "prompt": "Interpreta la postura de «La biblioteca no cabe en su contador» sin atribuir intenciones que el texto no demuestra.",
-        "items": [
-          {
-            "q": "¿Qué tesis defiende el artículo?",
-            "options": [
-              "Evaluar horarios exige considerar funciones y dependencia además del volumen de entradas.",
-              "Toda biblioteca debe abrir a cualquier hora.",
-              "Los presupuestos carecen de importancia cultural."
-            ],
-            "answer": 0,
-            "why": "Evaluar horarios exige considerar funciones y dependencia además del volumen de entradas."
-          },
-          {
-            "q": "¿Qué conclusión excede lo que permite afirmar «La biblioteca no cabe en su contador»?",
-            "options": [
-              "Toda biblioteca debe abrir a cualquier hora.",
-              "Evaluar horarios exige considerar funciones y dependencia además del volumen de entradas.",
-              "La decisión exige conservar límites y atribuir las voces."
-            ],
-            "answer": 0,
-            "why": "Toda biblioteca debe abrir a cualquier hora."
-          }
-        ]
-      },
-      {
-        "id": "r-argumento",
-        "type": "open",
-        "prompt": "Reconstruye cómo avanza «La biblioteca no cabe en su contador».",
-        "items": [
-          {
-            "prompt": "Localiza una transición decisiva en «La biblioteca no cabe en su contador» y explica qué interpretación modifica.",
-            "model": "El argumento no concluye que toda biblioteca deba permanecer siempre abierta. Sostiene algo más limitado y defendible: un servicio público no puede evaluarse únicamente mediante la frecuencia de uso sin examinar su función y la distribución de sus beneficios. La precisión de esa tesis permite conceder hechos incómodos sin perder coherencia. Contraargumentar no consiste en negar cada afirmación del adversario, sino en mostrar qué conclusión no se sigue de ella y qué información permitiría decidir mejor.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Compara el problema central de «La biblioteca no cabe en su contador» con el audio: identifica una coincidencia y una aportación que no deba confundirse.",
-            "model": "Revisar horarios es razonable, pero contar entradas no basta para valorar una biblioteca. El uso minoritario puede responder a una dependencia sin alternativa; esa posibilidad debe comprobarse, no asumirse ni descartarse. Propongo un ensayo de horarios diferenciados que registre necesidades no atendidas y costes reales. La inversión digital puede complementar funciones, aunque no sustituye espacio, conexión o apoyo en todos los casos. Si una franja resulta poco necesaria y existen alternativas accesibles, modificarla sería compatible con defender el servicio público.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas elegidas construyen el argumento; justifica qué cambiaría con otra redacción.",
-      "items": [
+    perceive: {
+      id: "c1-11-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase sin leer las opciones y decide qué lectura transmite la pausa.",
+      items: [
         {
-          "quote": "Ahora bien, aceptar la necesidad de evaluar no obliga a aceptar que el número de accesos sea el único criterio pertinente.",
-          "note": "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión."
+          q: "¿Qué quiere decir quien habla?",
+          options: ["Rechaza algo y pide que se firme el acta.", "No desea que se firme el acta."],
+          answer: 0,
+          why: "Hay pausa después de «no»: rechazo y luego petición.",
+          audio: "No, quiero que firmes el acta hoy.",
+          voice: "es-ES-f",
         },
         {
-          "quote": "Esa concesión no refuta la tesis de que los recortes uniformes resultan inadecuados.",
-          "note": "Empieza la concesión con tono estable, separa la objeción mediante una pausa y concentra el énfasis en el criterio discutido. Evita acentuar cada negación: la fuerza argumentativa procede de la relación entre ideas."
-        }
-      ]
-    }
+          q: "¿A quién afecta «nuevas»?",
+          options: ["Solo a las delegadas.", "A las jugadoras y a las delegadas."],
+          answer: 1,
+          why: "La pausa va justo antes de «nuevas», que se aplica al conjunto.",
+          audio: "Hoy se presentan las jugadoras y las delegadas, nuevas.",
+          voice: "es-ES-m",
+        },
+        {
+          q: "¿Qué palabra recibe el acento fuerte en la respuesta?",
+          options: ["mí", "también", "a"],
+          answer: 1,
+          why: "En la respuesta corta, la palabra de polaridad cierra el grupo con fuerza.",
+          audio: "A mí también me pareció un error de redacción.",
+          voice: "es-CO-f",
+        },
+        {
+          q: "¿Dónde se oye el hueco del verbo omitido?",
+          options: ["Después de «Torrero»", "Después de «ganó»", "No hay hueco"],
+          answer: 0,
+          why: "La voz queda suspendida tras «Torrero», donde falta «ganó».",
+          audio: "El Delicias ganó en casa y el Torrero, fuera.",
+          voice: "es-ES-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "Los jugadores y los entrenadores sancionados no podrán entrar al banquillo.", tip: "Léelo dos veces: con pausa antes de «sancionados» y con pausa antes de «y los entrenadores». Nota cómo cambia la lectura.", voice: "es-ES-m" },
+      { text: "Pilar votó a favor; Jorge, en contra.", tip: "Deja la voz suspendida tras «Jorge» y baja el tono al final.", voice: "es-ES-f" },
+      { text: "—¿Recurrirá el club? —Creo que sí.", tip: "«Sí» con acento fuerte, cerrando el grupo.", voice: "es-CO-f" },
+      { text: "Parecía un simple error y lo era.", tip: "Sin pausa entre «lo» y «era»: el pronombre es átono.", voice: "es-ES-m" },
+    ],
+    spelling: "La coma marca el verbo omitido en la elipsis («el Torrero, fuera»), pero nunca separa el sujeto del verbo cuando el verbo está presente.",
   },
-  "practice": {
-    "exercises": [
+  listening: {
+    title: "Un artículo, dos lecturas",
+    context: "En un local municipal del barrio de Delicias, el comité de competición de una liga vecinal de fútbol sala se reúne para resolver el empate de la temporada. Pilar preside, Jorge redacta las actas y Daniela, delegada colombiana de un equipo, defiende una de las dos lecturas del reglamento. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "p", name: "Pilar", voice: "es-ES-f", role: "Presidenta del comité" },
+      { id: "j", name: "Jorge", voice: "es-ES-m", role: "Secretario, redacta las actas" },
+      { id: "d", name: "Daniela", voice: "es-CO-f", role: "Delegada del Torrero" },
+    ],
+    script: [
+      { speaker: "p", text: "Empezamos. El Delicias y el Torrero han terminado con los mismos puntos y cada uno dice que es campeón. Jorge, lee el artículo doce, por favor." },
+      { speaker: "j", text: "«En caso de empate, se tendrán en cuenta los goles marcados en los partidos entre ambos equipos y los disputados fuera de casa.» Eso es todo lo que dice." },
+      { speaker: "d", text: "Pues para nosotros está clarísimo: cuentan los goles de los partidos entre los dos equipos y, además, los de todos los partidos fuera de casa. Ahí el Torrero gana de lejos." },
+      { speaker: "j", text: "El Delicias lo lee al revés: entiende que «los disputados fuera de casa» son solo los partidos entre ambos equipos jugados fuera. Con esa lectura, ganan ellos por un gol." },
+      { speaker: "p", text: "O sea, que el problema no es el resultado, es la frase. ¿Alguien recuerda quién la redactó?" },
+      { speaker: "j", text: "La redactó la junta anterior, y la revisó un abogado del barrio. Él dijo que estaba bien; la junta, también. Nadie vio el problema hasta que hizo falta aplicarla." },
+      { speaker: "d", text: "Yo no digo que la frase sea perfecta. No lo es. Pero el espíritu de la norma era premiar a quien gana fuera, y eso lo sabe todo el mundo." },
+      { speaker: "p", text: "Que lo sepa todo el mundo no lo convierte en reglamento. Mira, Daniela, si el texto admite dos lecturas plausibles, no podemos agarrarnos a una solo porque nos conviene. A mí tampoco me gusta, pero es así." },
+      { speaker: "d", text: "¿Entonces qué proponen? ¿Un partido de desempate? Las jugadoras del Torrero no querrán jugarlo; las del Delicias, quizá sí." },
+      { speaker: "j", text: "Hay dos opciones: compartir el título o jugar un partido en campo neutral. La primera es más barata; la segunda, más justa. Yo prefiero esta última." },
+      { speaker: "p", text: "Yo también. Pero, sea cual sea la decisión, el artículo doce hay que reescribirlo antes de septiembre. Jorge, ¿puedes hacerlo tú?" },
+      { speaker: "j", text: "Puedo, siempre que alguien lo revise antes de la asamblea. Y esta vez lo revisará una persona que no haya estado en la junta, para que lea el texto con ojos nuevos." },
+      { speaker: "d", text: "Me parece bien. Y que diga «respectivamente» si hace falta, aunque suene a notaría." },
+    ],
+    stages: [
       {
-        "id": "p-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos decisiones lingüísticas de «Conceder sin abandonar la tesis»; léelas después con una pausa justificada. Recupera el orden de las formulaciones de los ejemplos; la paráfrasis libre se trabaja en las actividades abiertas.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la reunión completa sin abrir la transcripción. ¿Cuál es el problema y qué deciden?",
+        exercise: {
+          id: "c1-11-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación general.",
+          items: [
+            {
+              q: "¿Por qué hay dos equipos que se dicen campeones?",
+              options: [
+                "Porque el árbitro anuló un gol decisivo.",
+                "Porque una alineación indebida cambió la clasificación.",
+                "Porque el artículo del desempate admite dos lecturas.",
+              ],
+              answer: 2,
+              why: "Los dos equipos aplican de manera distinta la misma frase del artículo doce.",
+            },
+            {
+              q: "¿En qué están de acuerdo al final?",
+              options: [
+                "En que el artículo hay que reescribirlo y revisarlo con ojos nuevos.",
+                "En que el Torrero tiene razón según el espíritu de la norma.",
+                "En que no hay que cambiar nada hasta la próxima temporada.",
+              ],
+              answer: 0,
+              why: "Pilar pide reescribirlo antes de septiembre y Jorge acepta si alguien externo lo revisa.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota cómo lee cada equipo el artículo y qué opciones hay.",
+        exercise: {
+          id: "c1-11-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Cómo lee el Torrero «los disputados fuera de casa»?",
+              options: [
+                "Como todos los partidos fuera de casa de la temporada.",
+                "Como los partidos entre ambos jugados fuera.",
+                "Como los partidos aplazados.",
+              ],
+              answer: 0,
+              why: "Daniela suma los goles de todos los partidos fuera de casa.",
+            },
+            {
+              q: "¿Qué opción prefiere Jorge?",
+              options: ["Compartir el título.", "Jugar un partido en campo neutral.", "Recurrir a la federación."],
+              answer: 1,
+              why: "«La segunda, más justa. Yo prefiero esta última.»",
+            },
+            {
+              q: "¿Qué condición pone Jorge para reescribir el artículo?",
+              options: [
+                "Que lo apruebe el abogado del barrio.",
+                "Que la junta anterior lo firme.",
+                "Que lo revise alguien que no haya estado en la junta.",
+              ],
+              answer: 2,
+              why: "Quiere una lectura «con ojos nuevos».",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en qué recurso usa cada frase. Relaciona y consulta la transcripción solo después.",
+        exercise: {
+          id: "c1-11-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada frase de la reunión con el recurso que pone en juego.",
+          pairs: [
+            { left: "los goles marcados en los partidos entre ambos equipos y los disputados fuera de casa", right: "complemento con dos anclajes posibles" },
+            { left: "Él dijo que estaba bien; la junta, también.", right: "elipsis verbal con coma y polaridad" },
+            { left: "No digo que la frase sea perfecta. No lo es.", right: "«lo» que retoma un atributo" },
+            { left: "La primera es más barata; la segunda, más justa. Yo prefiero esta última.", right: "anáfora ordinal y demostrativa" },
+            { left: "¿Puedes hacerlo tú?", right: "proforma que retoma una acción" },
+            { left: "las del Delicias, quizá sí", right: "elipsis nominal y de oración" },
+          ],
+          why: "La reunión gira en torno a una ambigüedad y la discute con elipsis, proformas y anáforas.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "El artículo doce o cómo tener dos campeones",
+    genre: "Columna de opinión en una revista de barrio",
+    frame: "Columna publicada en una revista vecinal de Zaragoza. La liga, los equipos y las personas son ficticios.",
+    text: [
+      "Cada junio, la liga vecinal de fútbol sala de Delicias cierra la temporada con una cena en el local de la asociación y una copa que pasa de un equipo a otro. Este año hubo cena, pero no hubo copa. El Delicias y el Torrero empataron a puntos, y los dos se proclamaron campeones con el reglamento en la mano. Ninguno mentía. El problema estaba en una sola frase del artículo doce, una frase que llevaba seis años en el reglamento sin que nadie la hubiera leído con atención.",
+      "La frase decía que, en caso de empate, se tendrían en cuenta «los goles marcados en los partidos entre ambos equipos y los disputados fuera de casa». El Torrero la leyó así: cuentan los goles de los enfrentamientos directos y, además, los de todos los partidos jugados fuera. El Delicias, de otra manera: «los disputados fuera de casa» serían solo los enfrentamientos directos jugados fuera. Las dos lecturas son gramaticalmente posibles y, lo que es peor, las dos son plausibles. La elipsis de «partidos» dejaba dos candidatos a la vista, y cada equipo eligió el que le daba el título.",
+      "Lo curioso es que la frase había pasado por tres controles. La redactó la junta de entonces, la revisó un abogado del barrio y la aprobó la asamblea. El abogado dijo que estaba bien; la asamblea, también. Nadie mentía tampoco entonces: quien escribe una norma conoce su intención y la lee siempre con ella, de modo que la segunda lectura le resulta invisible. Por eso los correctores profesionales recomiendan que revise el texto alguien que no haya participado en su redacción.",
+      "Durante dos semanas, el barrio discutió con un entusiasmo que no se veía desde la final de 2019. En el bar de la plaza se repartían fotocopias del artículo subrayadas con dos colores. Unos invocaban el espíritu de la norma, que, según ellos, quería premiar a quien gana fuera; otros se agarraban a la letra, que no decía tal cosa. Daniela Ruiz, delegada del Torrero, lo resumió en el local de la asociación: «No digo que la frase sea perfecta. No lo es. Pero todo el mundo sabía lo que quería decir». La presidenta del comité, Pilar Lasheras, le contestó con una frase que ya circula por el barrio: «Que lo sepa todo el mundo no lo convierte en reglamento».",
+      "Al final, el comité hizo lo único razonable: reconoció la ambigüedad, propuso un partido de desempate en campo neutral y encargó al secretario, Jorge Abadía, la nueva redacción. Este la presentará en la asamblea de septiembre, y esta vez la revisará una vecina que no ha jugado nunca en la liga. El borrador que circula es menos elegante, pero no deja dudas: «se tendrán en cuenta, por este orden, los goles marcados en los partidos entre los dos equipos empatados y, en segundo lugar, los goles marcados por cada uno de ellos en todos sus partidos fuera de casa».",
+      "La historia tiene una moraleja que va más allá del fútbol sala. Omitir una palabra, retomar un nombre con un pronombre o dejar un adjetivo detrás de dos sustantivos son recursos útiles: hacen los textos más ligeros y más agradables de leer. Pero cada omisión es una pequeña apuesta a que el lector recuperará lo mismo que tú. En una carta a un amigo, perder esa apuesta cuesta una aclaración. En un reglamento, en un contrato o en un acta, puede costar una copa, una indemnización o una amistad. Ante la duda, repite el nombre: la claridad va antes que la elegancia. El partido de desempate, por cierto, lo ganó el Torrero. El Delicias recurrió. La copa, de momento, sigue en el armario de la asociación.",
+    ],
+    glossary: [
+      { es: "enfrentamiento directo", note: "partido entre los dos equipos que se comparan" },
+      { es: "campo neutral", note: "instalación que no es la de ninguno de los dos equipos" },
+      { es: "moraleja", note: "enseñanza que se saca de una historia" },
+    ],
+    tasks: [
+      {
+        id: "c1-11-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la columna.",
+        items: [
           {
-            "words": [
-              "La",
-              "inversión",
-              "digital",
-              "no",
-              "sustituye,",
-              "ni",
-              "mucho",
-              "menos,",
-              "todas",
-              "las",
-              "funciones."
+            q: "¿Por qué nadie vio el problema durante seis años?",
+            options: [
+              "Porque hasta ahora nunca había habido un empate que obligara a aplicar la frase.",
+              "Porque el artículo se había añadido ese mismo año.",
+              "Porque el abogado había ocultado el error.",
             ],
-            "why": "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión."
+            answer: 0,
+            why: "La columna dice que la frase llevaba seis años sin que nadie la leyera con atención.",
           },
           {
-            "words": [
-              "Conviene",
-              "matizar",
-              "la",
-              "promesa",
-              "de",
-              "ahorro."
+            q: "Según la columnista, ¿por qué quien redacta no ve la segunda lectura?",
+            options: [
+              "Porque no conoce bien la gramática.",
+              "Porque lee el texto con su intención en la cabeza.",
+              "Porque escribe demasiado deprisa.",
             ],
-            "why": "Conceder reconoce una parte válida del argumento ajeno; refutar muestra que su conclusión no se deriva necesariamente de ella. Cabe señalar y conviene matizar calibran la fuerza; ni mucho menos rechaza una inferencia fuerte. Representa fielmente la postura contraria antes de responder y formula condiciones que podrían cambiar tu propia conclusión."
-          }
-        ]
-      },
-      {
-        "id": "p-contexto",
-        "type": "context",
-        "prompt": "Elige intervenciones fieles al caso de Zaragoza.",
-        "items": [
-          {
-            "context": "Debes explicar concesión estratégica a alguien que no leyó el dossier.",
-            "q": "¿Qué definición de concesión estratégica conserva el sentido del caso?",
-            "options": [
-              "afirmación de partida que exige examen",
-              "resultado que excede las razones",
-              "aceptación parcial que prepara respuesta"
-            ],
-            "answer": 2,
-            "why": "aceptación parcial que prepara respuesta"
+            answer: 1,
+            why: "«Quien escribe una norma conoce su intención y la lee siempre con ella.»",
           },
           {
-            "context": "Un interlocutor propone eliminar del resumen la principal reserva para hacerlo más convincente.",
-            "q": "¿Qué respuesta mantiene la fidelidad en «Conceder sin abandonar la tesis»?",
-            "options": [
-              "Toda biblioteca debe abrir a cualquier hora.",
-              "Concentrar el servicio en un centro accesible o modificar días.",
-              "Dejar de evaluar cualquier horario."
+            q: "¿Cómo termina la historia?",
+            options: [
+              "El Delicias acepta la derrota y entrega la copa.",
+              "Los dos equipos comparten la copa.",
+              "El Torrero gana el desempate, pero la copa sigue sin entregarse.",
             ],
-            "answer": 1,
-            "why": "Concentrar el servicio en un centro accesible o modificar días."
-          }
-        ]
+            answer: 2,
+            why: "El Delicias recurrió y la copa sigue en el armario.",
+          },
+        ],
       },
       {
-        "id": "p-redaccion",
-        "type": "open",
-        "prompt": "Ensaya dos movimientos antes de redactar tu texto sobre «Conceder sin abandonar la tesis».",
-        "items": [
+        id: "c1-11-lectura-recursos",
+        type: "match",
+        prompt: "Relaciona cada fragmento de la columna con el recurso que usa.",
+        pairs: [
+          { left: "Ninguno mentía.", right: "elipsis nominal con forma plena de «ningún»" },
+          { left: "El abogado dijo que estaba bien; la asamblea, también.", right: "elipsis verbal marcada con coma" },
+          { left: "El Delicias, de otra manera", right: "verbo omitido que se recupera de la frase anterior" },
+          { left: "Este la presentará en la asamblea de septiembre", right: "demostrativo que retoma al último mencionado" },
+          { left: "No lo es.", right: "proforma de atributo" },
+        ],
+      },
+      {
+        id: "c1-11-lectura-evaluacion",
+        type: "open",
+        prompt: "Analiza la columna como texto.",
+        items: [
           {
-            "prompt": "Escribe una apertura de 60–80 palabras para esta tarea: Escribe una tribuna que defienda horarios diferenciados, conceda dos razones del ajuste y refute una inferencia excesiva; establece qué dato te haría modificar la propuesta.",
-            "model": "Revisar horarios es razonable, pero contar entradas no basta para valorar una biblioteca. El uso minoritario puede responder a una dependencia sin alternativa; esa posibilidad debe comprobarse, no asumirse ni descartarse. Propongo un ensayo de horarios diferenciados que registre necesidades no atendidas y costes reales. La inversión digital puede complementar funciones, aunque no sustituye espacio, conexión o apoyo en todos los casos. Si una franja resulta poco necesaria y existen alternativas accesibles, modificarla sería compatible con defender el servicio público.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
+            prompt: "Compara la frase original del artículo doce con el borrador nuevo del quinto párrafo. Explica en 80–100 palabras qué recursos usa el borrador para eliminar la ambigüedad y qué se pierde a cambio.",
+            model: "El borrador repite el nombre «goles marcados» en lugar de omitirlo, de modo que el lector ya no tiene que recuperar un núcleo con dos candidatos. Además, «por este orden» y «en segundo lugar» convierten la suma ambigua en una secuencia de criterios, y «por cada uno de ellos en todos sus partidos fuera de casa» explicita el alcance que antes quedaba abierto. A cambio, la frase es más larga y menos elegante, pero en un reglamento esa pérdida importa menos que la seguridad de una sola lectura.",
+            checklist: [
+              "Identifico al menos dos recursos concretos del borrador.",
+              "Explico qué ambigüedad elimina cada uno.",
+              "Valoro qué se pierde a cambio.",
+            ],
+          },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la columna describe una ambigüedad y, a la vez, omite y retoma sin crear otras.",
+      items: [
+        { quote: "los goles marcados en los partidos entre ambos equipos y los disputados fuera de casa", note: "Elipsis de «partidos» con dos anclajes posibles: el origen del conflicto." },
+        { quote: "La elipsis de «partidos» dejaba dos candidatos a la vista", note: "La columnista nombra el problema: más de un núcleo compatible." },
+        { quote: "El abogado dijo que estaba bien; la asamblea, también.", note: "Elipsis verbal con coma y «también»: aquí no hay duda posible." },
+        { quote: "No digo que la frase sea perfecta. No lo es.", note: "«Lo» retoma el atributo «perfecta», sin concordar." },
+        { quote: "Que lo sepa todo el mundo no lo convierte en reglamento", note: "Dos «lo» que retoman una oración entera: lo que todos saben." },
+        { quote: "Ante la duda, repite el nombre: la claridad va antes que la elegancia.", note: "La regla práctica de la semana, formulada como consejo." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Combina orden, elección según la intención, relación de formas y escritura guiada sobre las dos clases de la semana.",
+    exercises: [
+      {
+        id: "c1-11-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases del acta del comité.",
+        items: [
+          {
+            words: ["El", "Torrero", "votó", "a", "favor", "y", "el", "Delicias,", "en", "contra."],
+            why: "Elipsis verbal: la coma marca el verbo omitido.",
           },
           {
-            "prompt": "Formula una objeción razonable a la propuesta de «Conceder sin abandonar la tesis» y respóndela sin atribuir intenciones no demostradas. Basa la objeción en una limitación expresada en la lectura o en el audio; no añadas cifras, hechos ni intenciones no documentados.",
-            "model": "Una reserva que debe conservarse: Concentrar el servicio en un centro accesible o modificar días. La respuesta debe delimitar el compromiso: Conviene matizar la promesa de ahorro.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "p-recuperacion",
-        "type": "open",
-        "prompt": "Recupera sin consultar: compara los casos y comprueba después tus decisiones. En el balance final, reparte esta recuperación entre dos sesiones.",
-        "items": [
-          {
-            "prompt": "Recuperación de la semana 10 · Checkpoint 2: implícitos y reformulación. Recupera la decisión del balance y contrástala con el problema nuevo, indicando una condición que ya no sea transferible. Contrasta el caso «Balance 2: un desacuerdo bajo la cortesía» con «Conceder sin abandonar la tesis».",
-            "model": "Punto de contraste: Venían solicitando una reunión sobre accesibilidad. En el caso actual: Es razonable revisar horarios; no se sigue que deban reducirse igual. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
+            words: ["La", "queja", "del", "delegado", "al", "árbitro", "llegó", "tarde."],
+            why: "«De» para quien se queja y «a» para quien recibe la queja.",
           },
           {
-            "prompt": "Recuperación de la semana 10 · Leer un ensayo. Recupera la estrategia de lectura y localiza una inferencia apoyada y otra excesiva. Contrasta el caso «Balance 2: un desacuerdo bajo la cortesía» con «Conceder sin abandonar la tesis».",
-            "model": "Punto de contraste: Venían solicitando una reunión sobre accesibilidad. En el caso actual: Es razonable revisar horarios; no se sigue que deban reducirse igual. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          }
-        ]
-      }
-    ]
+            words: ["Quien", "quiera", "recurrir", "podrá", "hacerlo", "hasta", "el", "lunes."],
+            why: "«Hacerlo» retoma la acción de recurrir.",
+          },
+        ],
+      },
+      {
+        id: "c1-11-intencion",
+        type: "context",
+        prompt: "Elige la frase que corresponde a la intención descrita.",
+        items: [
+          {
+            context: "Quieres responder que estás de acuerdo con una compañera que dice: «No me convence compartir el título».",
+            q: "¿Qué respondes?",
+            options: ["Yo también.", "A mí tampoco.", "A mí también."],
+            answer: 1,
+            why: "Con «convencer» se usa «a mí», y se coincide con una negación: «tampoco».",
+          },
+          {
+            context: "En un acta tienes que decir que Pilar y Jorge firmaron como presidenta y como secretario, en ese orden.",
+            q: "¿Qué frase eliges?",
+            options: [
+              "Firmaron Pilar y Jorge, como presidenta y secretario, respectivamente.",
+              "Firmaron Pilar y Jorge como la misma y el mismo.",
+              "Firmaron Pilar y Jorge, este último como presidenta.",
+            ],
+            answer: 0,
+            why: "«Respectivamente» reparte las dos listas en orden.",
+          },
+          {
+            context: "Te preguntan si las fichas están revisadas. Lo están.",
+            q: "¿Qué respuesta es correcta y natural?",
+            options: ["Sí, las están.", "Sí, lo hacen.", "Sí, ya lo están."],
+            answer: 2,
+            why: "«Lo» invariable retoma el atributo «revisadas».",
+          },
+          {
+            context: "Quieres decir que fue la presidenta quien recibió críticas de los socios.",
+            q: "¿Qué frase no deja dudas?",
+            options: [
+              "Las críticas de la presidenta fueron duras.",
+              "Las críticas de los socios a la presidenta fueron duras.",
+              "Las críticas de la presidenta de los socios fueron duras.",
+            ],
+            answer: 1,
+            why: "«De» marca a quien critica y «a» a quien recibe la crítica.",
+          },
+        ],
+      },
+      {
+        id: "c1-11-formas",
+        type: "match",
+        prompt: "Relaciona cada forma con lo que recupera.",
+        pairs: [
+          { left: "ninguno", right: "un nombre masculino omitido tras una negación" },
+          { left: "que sí", right: "una oración entera tras un verbo de opinión o de lengua" },
+          { left: "lo es", right: "un atributo de «ser»" },
+          { left: "hacerlo", right: "una acción ya mencionada con sus complementos" },
+          { left: "este último", right: "el candidato más cercano en el texto" },
+          { left: "respectivamente", right: "el reparto en orden de dos listas" },
+        ],
+      },
+      {
+        id: "c1-11-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Busca en tu memoria una norma de tu trabajo, tu edificio o tu club que alguien entendió de otra manera. Escribe 60–80 palabras: cita la frase, explica las dos lecturas y propone una versión con una sola.",
+            model: "En mi edificio, el aviso decía: «Las bicicletas y los carritos de niños plegados pueden dejarse en el portal». Unos vecinos entendieron que solo los carritos tenían que estar plegados; otros, que también las bicicletas, lo cual es imposible. Yo propondría: «Pueden dejarse en el portal las bicicletas y, si están plegados, los carritos de niños». Así el adjetivo afecta solo a lo que puede plegarse.",
+            checklist: [
+              "Cito la frase original y explico las dos lecturas.",
+              "Identifico la fuente de la ambigüedad.",
+              "Mi versión deja una sola lectura.",
+            ],
+          },
+          {
+            prompt: "Escribe un resumen de 50–70 palabras de una reunión en la que tres personas opinaron sobre algo. Usa al menos una elipsis verbal con coma, un «que sí» o «que no», un «lo» de atributo y «respectivamente» o «este último».",
+            model: "Ana propuso cambiar el horario de la reunión y Luis, el lugar. Marta no tenía preferencia, aunque cree que sí habrá que cambiar algo. El horario actual parece incómodo, y lo es para quien trabaja por la tarde. Al final, Ana y Luis se encargarán de la encuesta y del local, respectivamente.",
+            checklist: [
+              "Uso los cuatro recursos pedidos.",
+              "Ninguna omisión deja dos candidatos.",
+              "El resumen se entiende sin haber estado en la reunión.",
+            ],
+          },
+        ],
+      },
+    ],
   },
-  "writing": {
-    "task": "Escribe una tribuna que defienda horarios diferenciados, conceda dos razones del ajuste y refute una inferencia excesiva; establece qué dato te haría modificar la propuesta.",
-    "context": "Produce primero tu versión sin consultar el modelo. Después compara organización, atribución, registro y alcance; el modelo ofrece una realización posible, no la única respuesta válida.",
-    "steps": [
-      "Selecciona las afirmaciones que cada fuente permite sostener y anota sus límites.",
-      "Organiza por problemas y decisiones; redacta sin copiar frases extensas del dossier.",
-      "Revisa atribución, registro, cohesión y alcance de los compromisos; justifica dos cambios."
+  writing: {
+    task: "Redacta una propuesta de reforma (230–320 palabras) de una norma que conozcas y que se preste a confusión: un reglamento de comunidad, las bases de un concurso, una política de empresa o las normas de un club. Cita la redacción actual, explica las dos lecturas y sus consecuencias, y propón una nueva redacción que solo admita una.",
+    context: "La propuesta se presentará por escrito en la próxima asamblea o reunión del grupo que aprueba la norma. Quienes la lean conocen la norma, pero no han pensado en su ambigüedad, y algunos defienden una de las dos lecturas porque les conviene.",
+    steps: [
+      "Copia la frase actual y subraya la palabra o la omisión que produce la doble lectura (un «de», un adjetivo, un «su», un infinitivo, una elipsis).",
+      "Escribe las dos lecturas con palabras propias y una consecuencia práctica de cada una.",
+      "Redacta la propuesta en tres párrafos: el problema, las dos lecturas y la nueva redacción con su justificación.",
+      "Revisa el texto con la lista de control y pide a alguien que no conozca la norma que lea tu nueva redacción.",
     ],
-    "useLanguage": [
-      "Contraargumentación y fuerza de la postura",
-      "concesión estratégica",
-      "premisa discutible",
-      "conclusión excesiva",
-      "necesidad no atendida"
+    useLanguage: [
+      "la redacción actual se presta a confusión",
+      "admite dos lecturas: según la primera…; según la segunda…",
+      "de + agente, a / por parte de + paciente",
+      "que + subjuntivo con sujeto explícito",
+      "elipsis con coma, también, tampoco, que sí, que no",
+      "lo es, hacerlo, este último, respectivamente, dicho artículo",
     ],
-    "model": [
-      "Revisar horarios es razonable, pero contar entradas no basta para valorar una biblioteca. El uso minoritario puede responder a una dependencia sin alternativa; esa posibilidad debe comprobarse, no asumirse ni descartarse. Propongo un ensayo de horarios diferenciados que registre necesidades no atendidas y costes reales. La inversión digital puede complementar funciones, aunque no sustituye espacio, conexión o apoyo en todos los casos. Si una franja resulta poco necesaria y existen alternativas accesibles, modificarla sería compatible con defender el servicio público.",
-      "Una primera objeción señala que sostener edificios abiertos implica personal, energía y seguridad, y que esos recursos podrían dedicarse a actividades más demandadas. La razón merece atención. No propongo proteger cualquier franja por principio, sino comparar su función, el coste y las opciones disponibles. Una segunda objeción advierte que las excepciones pueden impedir toda reorganización. Para evitarlo, los criterios deben ser públicos y aplicables a casos comparables. La necesidad de un grupo no constituye por sí sola una autorización ilimitada, pero tampoco deja de ser relevante porque ese grupo sea pequeño.",
-      "La concentración de servicios nocturnos en un centro bien comunicado podría ser una solución, siempre que no trasladara el ahorro municipal a desplazamientos inaccesibles para los usuarios. Por eso el ensayo debe registrar también qué demandas quedan sin respuesta y por qué. Mi postura cambiaría si los datos mostraran escasa dependencia de una franja y alternativas realmente utilizables por quienes la necesitan. En sentido contrario, mantendría un horario poco concurrido cuando su eliminación suprimiera una función esencial sin sustitución razonable. Evaluar así no enfrenta cultura y eficiencia: permite decidir qué combinación de recursos sostiene mejor el servicio."
+    model: [
+      "Propongo a la asamblea de vecinos que modifiquemos el punto cuatro de las normas del jardín comunitario, cuya redacción actual se presta a confusión. Dice así: «Los vecinos y los invitados menores de doce años deberán estar acompañados en la zona de huertos». Durante el verano, esta frase ha provocado al menos tres discusiones, y no por mala fe: simplemente admite dos lecturas plausibles.",
+      "Según la primera, la condición de ser menor de doce años afecta solo a los invitados, de modo que cualquier vecino, tenga la edad que tenga, puede entrar solo en los huertos. Según la segunda, afecta a vecinos e invitados por igual, y lo que la norma pretende es que ningún menor esté sin un adulto. La primera lectura deja sin protección a los niños del edificio; la segunda, que es la que defendía la junta cuando la aprobó, los incluye. Algunos vecinos se agarran a la primera porque les permite mandar a sus hijos solos a regar; otros, a la segunda. Ninguno se equivoca leyendo: el problema es la frase.",
+      "Propongo, por tanto, la siguiente redacción: «Todas las personas menores de doce años, sean vecinas o invitadas, deberán estar acompañadas por un adulto en la zona de huertos». La nueva versión repite el nombre en lugar de omitirlo, pone el límite de edad delante y nombra a quien acompaña. Es algo más larga, pero lo es por una buena razón: solo admite una lectura. Pido que la nueva redacción la revise, antes de votarla, alguien que no haya participado en la junta anterior.",
     ],
-    "checklist": [
-      "Cumplo el género, la finalidad y el destinatario de la consigna.",
-      "Integro lectura y escucha con atribución clara, sin yuxtaponer resúmenes.",
-      "Conservo condiciones e incertidumbres y distingo mi propuesta de las fuentes.",
-      "Uso léxico preciso y estructuras complejas con control.",
-      "Reviso cohesión, puntuación y adecuación antes de la versión final."
+    checklist: [
+      "Cito la redacción actual y señalo exactamente dónde está la ambigüedad.",
+      "Explico las dos lecturas y una consecuencia práctica de cada una.",
+      "Mi nueva redacción solo admite una lectura y la justifico.",
+      "Uso elipsis, «lo», «hacerlo» o anáforas sin dejar dos candidatos.",
+      "El texto tiene al menos tres párrafos y un registro adecuado para una asamblea.",
     ],
-    "words": [
-      240,
-      320
-    ]
+    words: [230, 320],
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, graba una primera versión y escucha dónde pierdes precisión. La calidad oral se revisa mediante autoevaluación y trabajo con tu docente.",
-    "tasks": [
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un texto leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
       {
-        "title": "Exposición razonada",
-        "prompt": "Defiende tu tesis durante cuatro minutos y responde a dos objeciones del audio sin caricaturizarlas; cierra con una condición de revisión.",
-        "prep": [
-          "Formula una tesis, dos apoyos y una reserva.",
-          "Decide qué detalle del audio añadirás sin leer la transcripción.",
-          "Prepara una pregunta que permita comprobar comprensión."
+        title: "Explicar una norma ambigua ante una asamblea",
+        prompt: "Presenta durante cuatro minutos, ante una asamblea, una norma que se presta a confusión (la del artículo doce o una tuya). Lee la frase, explica las dos lecturas sin tomar partido al principio, cuenta qué consecuencias tiene cada una y propone una nueva redacción. Usa pausas para que se oigan las dos lecturas.",
+        prep: [
+          "Escribe la frase en una tarjeta y marca con una barra dónde harías la pausa para cada lectura.",
+          "Prepara dos frases con «según la primera lectura…» y «según la segunda…».",
+          "Anota tu nueva redacción y una razón para preferirla.",
         ],
-        "seconds": 240,
-        "model": "Revisar horarios es razonable, pero contar entradas no basta para valorar una biblioteca. El uso minoritario puede responder a una dependencia sin alternativa; esa posibilidad debe comprobarse, no asumirse ni descartarse. Propongo un ensayo de horarios diferenciados que registre necesidades no atendidas y costes reales. La inversión digital puede complementar funciones, aunque no sustituye espacio, conexión o apoyo en todos los casos. Si una franja resulta poco necesaria y existen alternativas accesibles, modificarla sería compatible con defender el servicio público.",
-        "selfCheck": [
-          "Mantengo un hilo claro sin leer un texto completo.",
-          "Diferencio voces y calibro certeza.",
-          "Las pausas y el foco ayudan a comprender."
-        ]
-      },
-      {
-        "title": "Interacción y reparación",
-        "prompt": "Tu interlocutor sostiene: «Toda biblioteca debe abrir a cualquier hora.» Pídele que precise su razón, concede lo defendible y responde con evidencia del dossier. Después cambia de papel y plantea esta reserva: «Dejar de evaluar cualquier horario.»; corrígela sin humillar y negocia una formulación común.",
-        "prep": [
-          "Prepara una reformulación fiel de la postura ajena.",
-          "Decide qué condición no puedes aceptar y qué alternativa ofrecerás."
+        seconds: 240,
+        model: "Buenas tardes. Quiero hablar del artículo doce. Dice: «los goles marcados en los partidos entre ambos equipos y los disputados fuera de casa». Si hago la pausa aquí, «y los disputados fuera de casa», parece que cuentan todos los partidos fuera; si la hago antes, parece que solo cuentan los directos jugados fuera. Las dos lecturas son plausibles, y cada equipo ha elegido la suya. No digo que alguien mienta; no lo hace. Propongo repetir el nombre y ordenar los criterios: primero, los goles de los partidos entre los dos; después, los de cada uno fuera de casa.",
+        selfCheck: [
+          "Presento las dos lecturas con claridad y sin tomar partido al principio.",
+          "Uso la pausa para que se oiga cada lectura.",
+          "Propongo una redacción con una sola lectura y la justifico.",
         ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real y pido aclaración cuando hace falta.",
-          "Reformulo una interpretación excesiva.",
-          "Cierro con acuerdo o desacuerdo delimitado."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "Lleva tu texto y tu grabación sobre «Conceder sin abandonar la tesis». Pide que se examine una decisión lingüística concreta, no solo errores aislados.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Defiende tu tesis durante cuatro minutos y responde a dos objeciones del audio sin caricaturizarlas; cierra con una condición de revisión.",
-        "phrases": [
-          "Es razonable revisar horarios; no se sigue que deban reducirse igual.",
-          "Conviene matizar la promesa de ahorro."
-        ]
       },
       {
-        "move": "Contrasta",
-        "task": "Compara con tu docente estas dos interpretaciones: Evaluar horarios exige considerar funciones y dependencia además del volumen de entradas. / Toda biblioteca debe abrir a cualquier hora. Señala un indicio y una condición que podrían cambiar tu lectura."
+        title: "Aclarar un malentendido",
+        prompt: "Un compañero te escribe enfadado: «Me dijiste que la reunión con el cliente y la cena eran el jueves, y la cena era el viernes». Llámalo, pregúntale qué entendió exactamente, reconoce la frase ambigua y aclara qué querías decir. Termina proponiendo cómo evitarlo la próxima vez.",
+        prep: [
+          "Prepara dos preguntas para entender qué oyó tu compañero.",
+          "Ten a mano «yo quería decir que…», «lo entiendo, la frase lo permitía» y «la próxima vez lo pondré por separado».",
+        ],
+        seconds: 150,
+        model: "Oye, perdona por lo de la cena. ¿Qué te dije exactamente? ¿Que las dos cosas eran el jueves? Lo entiendo, la frase lo permitía. Yo quería decir que la reunión era el jueves y la cena, el viernes, pero me comí el segundo día. ¿Te causó algún problema con el hotel? La próxima vez lo pondré por separado y con la fecha de cada cosa, para que no haya dudas.",
+        selfCheck: [
+          "Hago al menos dos preguntas reales.",
+          "Reconozco la ambigüedad sin culpar al otro.",
+          "Reformulo con una sola lectura usando una elipsis bien marcada.",
+        ],
       },
-      {
-        "move": "Reformula",
-        "task": "Tu docente cambia el destinatario de tu texto sobre concesión estratégica. Reorganiza oralmente el mensaje y explica qué términos mantienes, cuáles aclaras y qué reservas no puedes omitir."
-      }
     ],
-    "bring": "Borrador y versión revisada, esquema oral y una pregunta sobre alcance o registro."
   },
-  "quiz": {
-    "items": [
+  useInClass: {
+    intro: "Lleva a la próxima clase una frase ambigua que hayas encontrado esta semana y tu propuesta de reforma.",
+    cards: [
       {
-        "type": "choice",
-        "q": "En una explicación de «Conceder sin abandonar la tesis», ¿qué significa distribución de beneficios?",
-        "options": [
-          "reparto de ventajas entre grupos",
-          "prueba con límites y duración",
-          "regla para valorar resultados"
-        ],
-        "answer": 0,
-        "why": "reparto de ventajas entre grupos"
+        move: "Detecta",
+        task: "Lee a tu profesor una frase de un titular, un correo o un cartel que admita dos lecturas y pídele que descubra la segunda antes de explicarla.",
+        phrases: ["¿Cómo la entiendes tú?", "Yo la leí de otra manera."],
       },
       {
-        "type": "listen",
-        "audio": "Entonces coincidimos en la necesidad de evaluar y discrepamos sobre qué debe entrar en el cálculo. Propongo un ensayo de tres meses con horarios diferenciados, información previa y registro de necesidades no atendidas. No prometo que todas las franjas se mantengan. Sí que la decisión se apoye en algo más que un promedio de entradas. Para cerrar, formularía la pregunta de otra manera: qué combinación de horarios y centros preserva las funciones esenciales con los recursos disponibles. Esa pregunta permite negociar; la alternativa entre cerrar por eficiencia o abrir por principio nos deja atrapados en posiciones demasiado simples.",
-        "voice": "es-ES-f",
-        "q": "Escucha el cierre otra vez: ¿qué límite debes conservar al transmitir «Conceder sin abandonar la tesis»?",
-        "options": [
-          "Concentrar el servicio en un centro accesible o modificar días.",
-          "Dejar de evaluar cualquier horario.",
-          "Los presupuestos carecen de importancia cultural."
-        ],
-        "answer": 0,
-        "why": "Concentrar el servicio en un centro accesible o modificar días."
+        move: "Reformula",
+        task: "Pide a tu profesor que te dicte tres frases ambiguas y reescríbelas en voz alta con una sola lectura.",
+        phrases: ["Si quiero decir que…, repito el nombre.", "Mejor con «a» que con «de»."],
       },
       {
-        "type": "gap",
-        "q": "No se sigue que todos los centros ___ cerrar.",
-        "answers": [
-          [
-            "deban"
-          ]
-        ],
-        "hint": "Conjuga deber en presente de subjuntivo, tercera persona plural.",
-        "why": "Se rechaza la inferencia mediante subjuntivo."
+        move: "Resume",
+        task: "Resume en un minuto una conversación reciente usando elipsis verbal, «que sí» o «que no» y «respectivamente».",
+        phrases: ["Ella, que sí; él, que no.", "…respectivamente."],
       },
       {
-        "type": "open",
-        "prompt": "Introduce una reserva formal con cabe señalar. Escribe solo la reformulación. En una intervención sobre «Conceder sin abandonar la tesis» lees: «El contador no mide dependencia.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
-        "model": "Cabe señalar que el contador no mide dependencia.",
-        "checklist": [
-          "Cumplo el recurso solicitado y conservo el sentido relevante.",
-          "Acepto alternativas naturales que mantengan tiempo, referencia y alcance."
-        ]
+        move: "Pregunta",
+        task: "Pregúntale a tu profesor si «el mismo» como pronombre le suena normal en la prensa de su país y qué usaría en su lugar.",
+        phrases: ["¿Te suena bien «la publicación del mismo»?", "¿Qué pondrías tú?"],
       },
-      {
-        "type": "error",
-        "sentence": "No se sigue que todos los centros deben cerrar.",
-        "answers": [
-          "No se sigue que todos los centros deban cerrar."
-        ],
-        "why": "Se rechaza la inferencia mediante subjuntivo."
-      },
-      {
-        "type": "open",
-        "prompt": "Prueba de transferencia de «Conceder sin abandonar la tesis»: explica en 80–100 palabras por qué esta conclusión requiere matices: Toda biblioteca debe abrir a cualquier hora.",
-        "model": "Revisar horarios es razonable, pero contar entradas no basta para valorar una biblioteca. El uso minoritario puede responder a una dependencia sin alternativa; esa posibilidad debe comprobarse, no asumirse ni descartarse. Propongo un ensayo de horarios diferenciados que registre necesidades no atendidas y costes reales. La inversión digital puede complementar funciones, aunque no sustituye espacio, conexión o apoyo en todos los casos. Si una franja resulta poco necesaria y existen alternativas accesibles, modificarla sería compatible con defender el servicio público.",
-        "checklist": [
-          "Identifico el exceso de la afirmación.",
-          "Cito una evidencia y conservo una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Graba una respuesta de 90 segundos a esta demanda sobre «Conceder sin abandonar la tesis»: «Dinos una solución definitiva y sin condiciones». Justifica por qué tu respuesta necesita límites.",
-        "model": "La conclusión debe conservar este límite: Concentrar el servicio en un centro accesible o modificar días.",
-        "checklist": [
-          "Respondo de manera directa.",
-          "Distingo decisión, condición e incertidumbre."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Audita tu producción de «Conceder sin abandonar la tesis»: señala una elección de contraargumentación y fuerza de la postura y reescribe un pasaje para otro destinatario.",
-        "model": "Decisión que puedes explicar: Es razonable revisar horarios; no se sigue que deban reducirse igual. Reformulación para contrastar: Cabe señalar que contar entradas no mide dependencia.",
-        "checklist": [
-          "Explico un cambio de sentido o registro.",
-          "Conservo hechos y atribuciones."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo usar contraargumentación y fuerza de la postura para intervenir con precisión.",
-      "Puedo explicar el caso de Zaragoza integrando fuentes y reservas.",
-      "Puedo sostener una exposición y responder a objeciones sin perder el hilo."
     ],
-    "review": [
-      "Dentro de dos días, reconstruye de memoria la diferencia central: Concentrar el servicio en un centro accesible o modificar días.",
-      "Dentro de una semana, reutiliza concesión estratégica y distribución de beneficios en otro caso; comprueba su colocación.",
-      "Reescucha tu grabación y revisa este recurso: Tomar el turno sin escalar el conflicto."
-    ]
-  }
+    bring: "Tu frase ambigua, la propuesta de reforma revisada y, si quieres, la grabación de la asamblea.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "«La denuncia del jugador se archivó.» ¿Por qué puede ser ambigua?",
+        options: [
+          "Porque no se sabe si el jugador denunció o fue denunciado.",
+          "Porque «archivar» no admite sujeto.",
+          "Porque falta el artículo delante de «jugador».",
+        ],
+        answer: 0,
+        why: "Con un nombre de acción, «de» puede introducir al agente o al paciente.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué respuesta es correcta a «¿Están satisfechas las socias?»?",
+        options: ["Sí, las están.", "Sí, lo hacen.", "Sí, lo están."],
+        answer: 2,
+        why: "«Lo» invariable sustituye al atributo de «estar».",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase. ¿A quién afecta el adjetivo final?",
+        options: [
+          "Solo a los entrenadores.",
+          "A los árbitros y a los entrenadores.",
+          "A nadie: es un error.",
+        ],
+        answer: 1,
+        why: "La pausa antes de «veteranos» lo aplica a los dos grupos.",
+        audio: "Asistirán al curso los árbitros y los entrenadores, veteranos.",
+        voice: "es-ES-m",
+      },
+      {
+        type: "gap",
+        q: "Quedan dos plazas en el torneo, pero no tengo ___ equipo; ¿tú tienes ___?",
+        answers: [["ningún"], ["uno", "alguno"]],
+        hint: "Delante del nombre la forma es breve; sin el nombre, recupera la vocal final.",
+        why: "«Ningún equipo» con nombre; «uno» o «alguno» sin él.",
+      },
+      {
+        type: "gap",
+        q: "Si todavía no has enviado la ficha, tendrás que ___ antes del viernes.",
+        answers: [["hacerlo", "enviarla"]],
+        hint: "Retoma la acción de enviar la ficha con una proforma o con el verbo y un clítico.",
+        why: "«Hacerlo» retoma una acción ya mencionada; «enviarla» repite el verbo.",
+      },
+      {
+        type: "error",
+        sentence: "El club aprobó el presupuesto y la publicación del mismo.",
+        answers: ["El club aprobó el presupuesto y su publicación.", "El club aprobó el presupuesto y publicarlo."],
+        why: "«El mismo» no debe usarse como simple sustituto del posesivo.",
+      },
+      {
+        type: "error",
+        sentence: "A Jorge le convence la propuesta y yo también.",
+        answers: ["A Jorge le convence la propuesta y a mí también."],
+        why: "Con «convencer», la elipsis mantiene la «a»: «a mí también».",
+      },
+      {
+        type: "order",
+        words: ["Marta", "eligió", "el", "pabellón", "y", "Pilar,", "la", "hora."],
+        why: "Elipsis verbal: la coma marca el «eligió» omitido.",
+      },
+      {
+        type: "open",
+        prompt: "Reescribe en una sola frase clara: «El temor a perder el local preocupa a la asociación». Quien escribe quiere decir que la asociación teme que el ayuntamiento le quite el local. Después, explica en una línea qué cambiaste.",
+        model: "A la asociación le preocupa que el ayuntamiento le retire el local. He sustituido el infinitivo sin sujeto por «que + subjuntivo» y he nombrado a quien haría la acción.",
+        checklist: [
+          "Nombro a quien quitaría el local.",
+          "Uso «que + subjuntivo» con sujeto explícito.",
+          "Explico el cambio con mis palabras.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Detecto cuándo una frase admite dos lecturas plausibles y de dónde viene la ambigüedad.",
+      "Dejo una sola lectura con «de» y «a», con el orden, repitiendo el nombre o pasando a «que + subjuntivo».",
+      "Omito nombres y verbos con las formas correctas: uno, ninguno, la de, el tercero, también, tampoco, que sí.",
+      "Retomo atributos, acciones y elementos del texto con lo, hacerlo, este último y respectivamente, sin usar «el mismo» como pronombre.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la tabla «Cinco fuentes de ambigüedad» y escribe un ejemplo tuyo de cada fuente.",
+      "Dentro de una semana, busca en la prensa un titular con «nombre + de» y decide si es ambiguo en su contexto.",
+      "En la próxima clase, lee tu propuesta de reforma y pide a tu profesor que intente defender la lectura que querías eliminar.",
+    ],
+  },
+  related: [
+    { path: "/cuando-una-frase-puede-significar-dos-cosas", label: "Clase: Ambigüedad sintáctica y dos interpretaciones" },
+    { path: "/gramatica/elipsis-verbal-nominal-y-anaforica-avanzadas", label: "Clase: Elipsis verbal, nominal y anafórica avanzadas" },
+  ],
 };

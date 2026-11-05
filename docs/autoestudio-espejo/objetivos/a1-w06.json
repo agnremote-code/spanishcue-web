@@ -1,0 +1,11 @@
+[
+  [6, "gram", "g012", "Estar para estados y lugares", "Puedo decir cómo estamos yo y otras personas con estar y un adjetivo que concuerda, y decir dónde está alguien o algo con estar en, aquí, ahí, allí, cerca de y lejos de.", ["a1.gram.g011"], { "related": ["/gramatica/estar-estados-y-lugares"] }],
+  [6, "gram", "g013", "Hay frente a estar: existencia y ubicación", "Puedo presentar algo nuevo con hay + un, una o número y situar algo conocido con el, la, mi + está o están.", ["a1.gram.g004"], { "related": ["/la-ciudad-de-los-motores"] }],
+  [6, "voc", "w06-estados-centro", "Estados de ánimo, lugares del centro y palabras de lugar", "Puedo nombrar cómo me siento, los servicios del centro de una ciudad y dónde están.", ["a1.gram.g012"]],
+  [6, "pron", "w06-hay-ahi-esta", "Hay, ahí, está y esta", "Puedo distinguir y pronunciar hay (una sílaba), ahí (a-í), está (es-TÁ) y esta (ES-ta).", []],
+  [6, "lis", "w06-hostal-videollamada", "Escuchar preguntas en un hostal y una videollamada", "Puedo entender dónde están lugares y personas y cómo se sienten en dos conversaciones breves.", ["a1.gram.g012", "a1.gram.g013"]],
+  [6, "read", "w06-guia-hostal", "Leer la hoja de información de un hostal", "Puedo entender una hoja breve que presenta los servicios de un hostal y dice dónde están.", ["a1.gram.g013"]],
+  [6, "wri", "w06-mensaje-viaje", "Escribir un mensaje desde un viaje", "Puedo escribir un mensaje breve a mi familia sobre dónde estoy, cómo estoy y qué hay en el lugar.", ["a1.gram.g012", "a1.gram.g013", "a1.voc.w06-estados-centro"]],
+  [6, "spk", "w06-donde-estoy", "Decir dónde estoy y qué hay a mi alrededor", "Puedo contar en voz alta durante unos 45 segundos dónde estoy, cómo estoy y qué hay cerca.", ["a1.fun.w06-preguntar-servicios"]],
+  [6, "fun", "w06-preguntar-servicios", "Preguntar si hay un servicio y dónde está", "Puedo preguntar «¿hay un… cerca?» y «¿dónde está el…?» en un hotel o en la calle y entender la respuesta.", ["a1.gram.g013"]]
+]

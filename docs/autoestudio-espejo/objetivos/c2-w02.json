@@ -1,0 +1,11 @@
+[
+  [2, "gram", "g207", "Selección fina de indicativo y subjuntivo según perspectiva", "Puedo elegir entre indicativo y subjuntivo cuando los dos son gramaticales para mostrar si afirmo un contenido como información nueva o lo doy por sabido, lo valoro, lo imagino o lo pido.", ["c1.gram.g168", "c1.gram.g169", "c1.gram.g170"], { "related": ["/gramatica/seleccion-fina-de-indicativo-y-subjuntivo"] }],
+  [2, "voc", "w02-cooperativa-asamblea", "Cooperativa de vivienda y asamblea", "Puedo usar con precisión el léxico de una cooperativa de vivienda: quórum, constar en acta, ayuda mutua, fondo de reserva, cuota extraordinaria, recargo.", ["c2.gram.g207"]],
+  [2, "pron", "w02-vocal-modo", "La vocal que distingue el modo", "Puedo oír y pronunciar con claridad la vocal que separa indicativo y subjuntivo en parejas como «pagan / paguen» o «está / esté» al leer un acta en voz alta.", ["c2.gram.g207"]],
+  [2, "lis", "w02-revision-acta", "Revisión oral de un acta", "Puedo seguir una conversación en la que dos personas revisan un acta y reconstruir qué perspectiva atribuye cada versión a cada hablante.", ["c2.gram.g207"]],
+  [2, "read", "w02-boletin-cooperativa", "Columna de boletín vecinal", "Puedo leer una columna que explica malentendidos causados por la elección de modo y relacionar cada forma con la intención que el autor le atribuye.", ["c2.gram.g207"]],
+  [2, "wri", "w02-comunicado-comision", "Comunicado de una comisión directiva", "Puedo redactar un comunicado de más de 400 palabras que distinga datos nuevos, temas conocidos, exigencias y decisiones abiertas mediante la elección de modo.", ["c2.gram.g207", "c2.disc.w02-fondo-novedad"]],
+  [2, "spk", "w02-asamblea-mediacion", "Presentación en asamblea y mediación", "Puedo presentar un asunto en una asamblea distinguiendo lo sabido de lo abierto, y mediar con alguien que se siente mal citado.", ["c2.fun.w02-matizar-postura"]],
+  [2, "fun", "w02-matizar-postura", "Matizar el propio compromiso", "Puedo graduar mi compromiso con «no digo que…», «no es que…, es que…», «entiendo que…» y adverbios de duda según su modo y posición.", ["c2.gram.g207"]],
+  [2, "disc", "w02-fondo-novedad", "Tema conocido e información nueva", "Puedo organizar un párrafo que presente primero un dato conocido como tema, con «que» o «el hecho de que», y después la información nueva que aporto.", ["c2.gram.g207"]]
+]

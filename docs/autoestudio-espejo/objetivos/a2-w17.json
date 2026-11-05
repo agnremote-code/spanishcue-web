@@ -1,0 +1,12 @@
+[
+  [17, "gram", "g078", "Si + presente: condiciones reales", "Puedo hacer planes con alternativas y acordar qué hacer en cada caso con si + presente y una consecuencia en presente o imperativo, sin futuro después de si, y distinguir si de sí.", ["a2.gram.g057"], { "related": ["/si-pasa-esto"] }],
+  [17, "gram", "g079", "Preguntar sin imponer: podrías, te importaría", "Puedo pedir favores con suavidad a amigos y a desconocidos con ¿podrías…?, ¿le importaría…?, ¿me harías el favor de…?, me gustaría y quería pedirte, y responder o rechazar con cortesía.", ["a2.gram.g058", "a2.gram.g062"], { "related": ["/gramatica/preguntar-sin-imponer-podrias-te-importaria"] }],
+  [17, "voc", "w17-excursion-favores", "Excursiones, tiempo y favores entre vecinos", "Puedo nombrar lo que hace falta para una excursión, hablar del tiempo que puede cambiar un plan y nombrar favores frecuentes entre vecinos.", ["a2.gram.g078"]],
+  [17, "pron", "w17-entonacion-peticion", "La entonación de una petición amable", "Puedo pedir algo con una entonación suave que sube al final y distinguir al oído si sin acento de sí con fuerza.", []],
+  [17, "lis", "w17-mensaje-vecina", "Escuchar un mensaje con favores y planes alternativos", "Puedo entender en un mensaje de voz qué favores pide una persona, a quién y qué pasa en cada caso si el plan cambia.", ["a2.gram.g078", "a2.gram.g079"]],
+  [17, "read", "w17-plan-irazu", "Leer el mensaje de un club de excursiones", "Puedo entender un mensaje de grupo con un plan A y un plan B y saber qué pide el organizador a cada persona.", ["a2.gram.g078", "a2.gram.g079"]],
+  [17, "wri", "w17-mensaje-favores", "Escribir un mensaje para pedir favores antes de un viaje", "Puedo escribir un mensaje de 60 a 110 palabras que pide dos o tres favores con cortesía y explica qué hacer en cada caso.", ["a2.gram.g078", "a2.gram.g079", "a2.disc.w17-aceptar-rechazar"]],
+  [17, "spk", "w17-planes-favores", "Negociar un plan y pedir favores en voz alta", "Puedo proponer un plan con alternativas, pedir favores a un amigo y a una persona mayor y rechazar uno con una excusa durante unos tres minutos en total.", ["a2.fun.w17-pedir-favores"]],
+  [17, "fun", "w17-pedir-favores", "Pedir favores sin imponer", "Puedo elegir la forma de pedir según la persona (tú o usted) y el tamaño del favor.", ["a2.gram.g079"]],
+  [17, "disc", "w17-aceptar-rechazar", "Aceptar y rechazar peticiones con cortesía", "Puedo aceptar una petición con claro o no, claro que no, y rechazarla con lo siento, es que… y una alternativa con si.", ["a2.gram.g078", "a2.gram.g079"]]
+]

@@ -1,0 +1,12 @@
+[
+  [4, "gram", "g051", "Perfecto e indefinido: variación regional", "Puedo reconocer y usar las dos maneras de contar lo que pasó hoy (he hablado / hablé), distinguir una variedad regional de un error y usar el indefinido con tiempos cerrados.", ["a2.gram.g045", "a2.gram.g047"], { "related": ["/gramatica/perfecto-e-indefinido-variacion"] }],
+  [4, "gram", "g052", "Solía + infinitivo y costumbres antiguas", "Puedo contar costumbres de otra época con solía + infinitivo y distinguirlas de lo que pasó una sola vez y de lo que hago ahora.", ["a2.gram.g049"], { "related": ["/gramatica/solia-infinitivo-y-costumbres-antiguas"] }],
+  [4, "voc", "w04-vida-universitaria", "La vida universitaria antes y ahora", "Puedo hablar de cómo se estudiaba y se comunicaba la gente antes y de cómo se hace hoy.", ["a2.gram.g052"]],
+  [4, "pron", "w04-entonacion-preguntas", "La entonación de las preguntas sobre el pasado", "Puedo distinguir de oído una pregunta de sí o no de una afirmación y dar la melodía adecuada a mis preguntas.", ["a2.gram.g051"]],
+  [4, "lis", "w04-sala-profesores", "Escuchar a hablantes de dos variedades", "Puedo entender una conversación entre hablantes de dos regiones que cuentan su día y recuerdan costumbres de otra época.", ["a2.gram.g051", "a2.gram.g052"]],
+  [4, "read", "w04-exposicion-fotos", "Leer los pies de foto de una exposición", "Puedo entender textos breves que describen costumbres de otra época y algún suceso concreto.", ["a2.gram.g052"]],
+  [4, "wri", "w04-mensaje-antes-ahora", "Escribir un mensaje sobre mi vida antes y ahora", "Puedo escribir un mensaje que cuenta mi día con una variedad coherente y compara mis costumbres de antes con las de ahora.", ["a2.gram.g051", "a2.gram.g052", "a2.disc.w04-contraste-antes-ahora"]],
+  [4, "spk", "w04-costumbres-de-otra-epoca", "Hablar de las costumbres de otra época", "Puedo hablar más de un minuto sobre mis costumbres de otra época y hacer preguntas a una persona mayor sobre su juventud.", ["a2.fun.w04-comparar-epocas"]],
+  [4, "fun", "w04-comparar-epocas", "Comparar épocas y adaptarme a la variedad del interlocutor", "Puedo comparar costumbres de antes y de ahora y entender sin corregir a quien usa otra variedad.", ["a2.gram.g052"]],
+  [4, "disc", "w04-contraste-antes-ahora", "Contrastar antes y ahora con pero y en cambio", "Puedo unir dos épocas en un mismo texto con antes, ahora, pero y en cambio.", ["a2.gram.g052"]]
+]

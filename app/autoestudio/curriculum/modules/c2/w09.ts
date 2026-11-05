@@ -1,848 +1,932 @@
 import type { Module } from "../../types";
 
-/** Material original C2. Audio mediante síntesis; sin acreditación regional. */
+/**
+ * C2 · semana 9 · Autoestudio espejo de G218 (perífrasis discursivas de ironía
+ * y distanciamiento). Repaso autónomo con la crítica teatral ficticia de una
+ * revista cultural de San José sobre la reapertura de un teatro.
+ * Audio mediante síntesis; sin acreditación regional.
+ */
 export const c2w09: Module = {
-  "id": "c2-09",
-  "level": "c2",
-  "week": 9,
-  "kind": "core",
-  "title": "Entender sin uniformar",
-  "subtitle": "Variación, tratamiento y acomodación responsable",
-  "stop": {
-    "place": "San José",
-    "country": "Costa Rica"
+  id: "c2-09",
+  level: "c2",
+  week: 9,
+  kind: "core",
+  title: "Iba a durar seis meses: decir con ironía, contar con distancia",
+  subtitle: "Repaso de las perífrasis que cuentan con sorpresa, critican con insistencia, toman distancia o ironizan con el tiempo y el modo",
+  stop: {
+    place: "San José",
+    country: "Costa Rica",
   },
-  "minutes": 135,
-  "newObjectives": [
-    "c2.pron.variacion-avanzada",
-    "c2.voc.variacion-lexica-pragmatica",
-    "c2.gram.variacion-gramatical",
-    "c2.lis.voces-mundo",
-    "c2.fun.mediacion-variedades"
+  minutes: 135,
+  newObjectives: [
+    "c2.gram.g218",
+    "c2.voc.w09-critica-teatral",
+    "c2.pron.w09-acento-ironico",
+    "c2.lis.w09-columna-y-nota",
+    "c2.read.w09-critica-reapertura",
+    "c2.wri.w09-cronica-ironica",
+    "c2.spk.w09-anecdota-valorada",
+    "c2.fun.w09-quitar-poner-valoracion",
+    "c2.disc.w09-ironia-sin-mentir",
   ],
-  "reviewObjectives": [
-    "c2.rev.checkpoint-1",
-    "c2.read.contrato-cronica",
-    "c2.voc.casi-sinonimos",
-    "c2.voc.refranes-intertextualidad",
-    "c2.pron.matiz-lexico-voz",
-    "c2.wri.precision-lexica",
-    "c2.read.columna-literaria"
-  ],
-  "prerequisites": [
-    "c2-08"
-  ],
-  "goal": {
-    "canDo": "Puedo reparar malentendidos entre usos diversos sin imponer una variedad como neutral.",
-    "steps": [
-      "Lee las fuentes y distingue dato, inferencia y evaluación.",
-      "Escucha el intercambio antes de consultar su transcripción.",
-      "Aplica variación, tratamiento y acomodación responsable a una decisión comunicativa concreta.",
-      "Produce el dossier escrito, revisa una elección y defiéndela oralmente."
-    ]
-  },
-  "theory": {
-    "intro": "Los casos, documentos y voces de esta semana son originales y ficticios. La dificultad está en controlar relaciones de significado, no en acumular palabras raras.",
-    "parts": [
-      {
-        "heading": "Variación, tratamiento y acomodación responsable",
-        "body": [
-          "El voseo combina formas de pronombre y verbo de manera variable: vos tenés y vos tienes no autorizan a deducir por sí solos una identidad nacional. El leísmo de persona masculino singular admitido en ciertos usos no convierte cualquier le por lo en equivalente general. La omisión de una preposición exigida en me di cuenta de que puede aparecer en usos coloquiales; al editar se distingue descripción de la variedad y norma del género. Comprender no exige imitar ni corregir el acento ajeno.",
-          "En este caso, La comunicación compartida requiere precisión contextual y respeto por la variación. La formulación elegida debe permitir al destinatario reconstruir la diferencia relevante y reconocer qué no se ha demostrado.",
-          "La aspiración puede realizar una /s/ como sonido aspirado; el debilitamiento puede reducir o eliminar una consonante en ciertos contextos. La lateralización realiza una consonante rótica como lateral en determinados usos; la asibilación añade fricción sibilante a una realización rótica. Estos fenómenos no describen por igual a todas las personas de una región. El contraste entre he enviado y envié también cambia según usos y contexto: pregunta por la referencia temporal antes de atribuir un error."
-        ],
-        "examples": [
-          {
-            "es": "Vos tenés la copia; ¿podés revisarla?"
-          },
-          {
-            "es": "Usted me avisa cuando tenga el documento."
-          },
-          {
-            "es": "Me di cuenta de que faltaba una página."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La supervisora insistió que todos usaran un único tratamiento.",
-            "right": "La supervisora insistió en que todos usaran un único tratamiento.",
-            "why": "Insistir exige en ante una subordinada sustantiva."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretar, atribuir y revisar en este caso",
-        "body": [
-          "Una sola interacción no basta para atribuir un uso a toda una región. Para defender esa lectura, identifica una formulación y el detalle que la sostiene. Prueba después una explicación rival y señala qué dato necesitarías para preferirla.",
-          "La versión para un público nuevo puede cambiar léxico, orden y longitud, pero debe conservar esta condición: El equipo decide fijar horas o fechas en compromisos de entrega. Un cambio de registro que la elimina cambia también el contenido."
-        ],
-        "examples": [
-          {
-            "es": "La comunicación compartida requiere precisión contextual y respeto por la variación.",
-            "note": "Síntesis con alcance delimitado."
-          },
-          {
-            "es": "Un tratamiento único resuelve todos los malentendidos.",
-            "note": "Lectura excesiva que el dossier no respalda."
-          }
-        ],
-        "tip": "La mascota te invita a conservar una duda productiva: llévala a clase junto con una prueba, no con una impresión aislada."
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Relaciona forma y efecto comunicativo en el expediente; la explicación importa tanto como la respuesta.",
-    "exercises": [
-      {
-        "id": "c2-09-gramatica-alcance",
-        "type": "choice",
-        "prompt": "Selecciona la interpretación defendible de Entender sin uniformar.",
-        "items": [
-          {
-            "q": "En el caso de Entender sin uniformar, ¿qué formulación preserva el alcance?",
-            "options": [
-              "Un solo intercambio permite clasificar el habla de un país.",
-              "Usted me avisa cuando tenga el documento."
-            ],
-            "answer": 1,
-            "why": "El voseo combina formas de pronombre y verbo de manera variable: vos tenés y vos tienes no autorizan a deducir por sí solos una identidad nacional. El leísmo de persona masculino singular admitido en ciertos usos no convierte cualquier le por lo en equivalente general. La omisión de una preposición exigida en me di cuenta de que puede aparecer en usos coloquiales; al editar se distingue descripción de la variedad y norma del género. Comprender no exige imitar ni corregir el acento ajeno."
-          },
-          {
-            "q": "¿Qué cautela lingüística resulta necesaria al explicar Entender sin uniformar?",
-            "options": [
-              "Un tratamiento único resuelve todos los malentendidos.",
-              "Una sola interacción no basta para atribuir un uso a toda una región."
-            ],
-            "answer": 1,
-            "why": "Relaciona forma, contexto y efecto; evita ampliar una conclusión más allá de su base."
-          }
-        ]
-      },
-      {
-        "id": "c2-09-gramatica-forma",
-        "type": "gap",
-        "prompt": "Completa las relaciones gramaticales del caso Entender sin uniformar.",
-        "items": [
-          {
-            "q": "Vos ___ la copia, según el ejemplo rioplatense.",
-            "answers": [
-              [
-                "tenés"
-              ]
-            ],
-            "why": "El voseo combina formas de pronombre y verbo de manera variable: vos tenés y vos tienes no autorizan a deducir por sí solos una identidad nacional. El leísmo de persona masculino singular admitido en ciertos usos no convierte cualquier le por lo en equivalente general. La omisión de una preposición exigida en me di cuenta de que puede aparecer en usos coloquiales; al editar se distingue descripción de la variedad y norma del género. Comprender no exige imitar ni corregir el acento ajeno."
-          },
-          {
-            "q": "Me di cuenta ___ que faltaba una página.",
-            "answers": [
-              [
-                "de"
-              ]
-            ],
-            "why": "El voseo combina formas de pronombre y verbo de manera variable: vos tenés y vos tienes no autorizan a deducir por sí solos una identidad nacional. El leísmo de persona masculino singular admitido en ciertos usos no convierte cualquier le por lo en equivalente general. La omisión de una preposición exigida en me di cuenta de que puede aparecer en usos coloquiales; al editar se distingue descripción de la variedad y norma del género. Comprender no exige imitar ni corregir el acento ajeno."
-          },
-          {
-            "q": "El plazo se aclaró ___ indicar una hora.",
-            "answers": [
-              [
-                "al"
-              ]
-            ],
-            "why": "El voseo combina formas de pronombre y verbo de manera variable: vos tenés y vos tienes no autorizan a deducir por sí solos una identidad nacional. El leísmo de persona masculino singular admitido en ciertos usos no convierte cualquier le por lo en equivalente general. La omisión de una preposición exigida en me di cuenta de que puede aparecer en usos coloquiales; al editar se distingue descripción de la variedad y norma del género. Comprender no exige imitar ni corregir el acento ajeno."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Usa estas unidades para describir diferencias que el caso exige. La definición orienta el uso; contrástala con la frase completa.",
-    "groups": [
-      {
-        "title": "Precisión para Entender sin uniformar",
-        "items": [
-          {
-            "es": "acomodación",
-            "note": "ajuste al interlocutor sin borrar la voz propia"
-          },
-          {
-            "es": "tratamiento",
-            "note": "forma de dirigirse a una persona"
-          },
-          {
-            "es": "voseo",
-            "note": "uso de vos y sus combinaciones verbales"
-          },
-          {
-            "es": "leísmo",
-            "note": "empleo de le en ciertas funciones de objeto directo"
-          },
-          {
-            "es": "queísmo",
-            "note": "omisión de una preposición ante que"
-          },
-          {
-            "es": "variación",
-            "note": "diversidad sistemática de usos"
-          },
-          {
-            "es": "estigmatizar",
-            "note": "atribuir inferioridad a un rasgo social"
-          },
-          {
-            "es": "paráfrasis puente",
-            "note": "explicación que facilita comprensión entre usos"
-          }
-        ]
-      }
+  reviewObjectives: ["c2.gram.g216","c2.gram.g217","c2.voc.w08-camino-correspondencia","c2.pron.w08-s-final-pronombres","c2.lis.w08-reunion-antologia","c2.read.w08-presentacion-antologia","c2.wri.w08-guia-correspondencia","c2.spk.w08-explicar-variedades","c2.fun.w08-adaptar-sin-borrar","c2.disc.w08-cita-y-norma"],
+  prerequisites: ["c2-08"],
+  goal: {
+    canDo: "Puedo interpretar y usar perífrasis que expresan sorpresa, insistencia crítica, distancia o ironía (ir y + verbo, llegar a, no hacer más que, andar + gerundio, venir a decir, hacer como que, iba a, será… pero) y pasar un texto valorativo a uno neutro, y al revés.",
+    steps: [
+      "Repasa en la teoría las cuatro familias de perífrasis y los errores de forma y de interpretación más frecuentes.",
+      "Practica con la crítica teatral y la nota de agenda de una revista cultural de San José.",
+      "Escucha a la crítica y al editor discutir qué valoraciones se quedan y lee la crítica completa.",
+      "Redacta una crónica con ironía, revísala con la lista de control y cuenta una anécdota con valoración en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "c2-09-lexico",
-        "type": "match",
-        "prompt": "Relaciona cada unidad con la distinción que aporta al expediente de Entender sin uniformar.",
-        "pairs": [
-          {
-            "left": "acomodación",
-            "right": "ajuste al interlocutor sin borrar la voz propia"
-          },
-          {
-            "left": "tratamiento",
-            "right": "forma de dirigirse a una persona"
-          },
-          {
-            "left": "voseo",
-            "right": "uso de vos y sus combinaciones verbales"
-          },
-          {
-            "left": "leísmo",
-            "right": "empleo de le en ciertas funciones de objeto directo"
-          },
-          {
-            "left": "queísmo",
-            "right": "omisión de una preposición ante que"
-          },
-          {
-            "left": "variación",
-            "right": "diversidad sistemática de usos"
-          },
-          {
-            "left": "estigmatizar",
-            "right": "atribuir inferioridad a un rasgo social"
-          },
-          {
-            "left": "paráfrasis puente",
-            "right": "explicación que facilita comprensión entre usos"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Flexibilidad auditiva sin imitación",
-    "explanation": [
-      "En muestras reales pueden aparecer aspiración, debilitamiento, lateralización o asibilación. No deduzcas región ni calidad de habla de un rasgo aislado. Aquí practica grupos y confirmación; contrasta muestras autorizadas con tu docente.",
-      "El audio utiliza síntesis disponible en el navegador: no certifica acento regional, ironía natural ni calidad de pronunciación. Escucha el contenido, ensaya contrastes y comprueba el efecto con una persona. El objetivo es inteligibilidad y control expresivo, no eliminar tu acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste estas perífrasis con tu profesor. Aquí las repasas con otra situación: la reapertura del Teatro del Parque, en San José, cuya renovación iba a durar seis meses y duró tres años. Una crítica teatral escribe una columna llena de ironía; su editor necesita, además, una nota de agenda neutra. Entre los dos textos verás qué hace cada perífrasis: no cambia los hechos, cambia la actitud de quien los cuenta.",
+    parts: [
       {
-        "es": "Ya lo revisamos: terminamos esta mañana."
-      },
-      {
-        "es": "Ya lo revisamos: lo haremos antes de las cuatro."
-      }
-    ],
-    "perceive": {
-      "id": "c2-09-percepcion",
-      "type": "listen",
-      "prompt": "Escucha el contraste antes de leer las opciones en «Entender sin uniformar».",
-      "items": [
-        {
-          "q": "Escucha la primera formulación sobre Entender sin uniformar. ¿Qué contenido permite recuperar?",
-          "options": [
-            "Ya lo revisamos: terminamos esta mañana.",
-            "Ya lo revisamos: lo haremos antes de las cuatro."
+        heading: "Sorpresa y desenlace: «ir y», «agarrar y», «llegar a», «acabar + gerundio»",
+        body: [
+          "«Ir y + verbo» presenta una acción como inesperada o atrevida: «El día del estreno va y se va la luz». Los dos verbos van en el mismo tiempo y la misma persona: «fue y dijo», «va y dice», «iba y decía». «Coger y» tiene el mismo valor y es frecuente sobre todo en España; en gran parte de América se dice «agarrar y» («agarró y se fue»), y «coger» se evita por su sentido sexual en varias zonas. Son perífrasis coloquiales: dan viveza a una anécdota, pero no van en una nota informativa.",
+          "«Llegar a + infinitivo» sitúa un hecho en el extremo de una escala: es lo máximo, lo que nadie esperaba. «El contratista llegó a anunciar la reapertura cuatro veces». «Acabar + gerundio» presenta el desenlace de un proceso, a menudo contrario a lo previsto: «Acabaron inaugurando el teatro sin el telón nuevo».",
+        ],
+        table: {
+          caption: "Sorpresa y desenlace",
+          head: ["Perífrasis", "Qué añade", "Ejemplo"],
+          rows: [
+            ["ir y + verbo (mismo tiempo)", "acción inesperada o atrevida", "En pleno ensayo, el director fue y despidió al iluminador."],
+            ["agarrar y / coger y + verbo", "lo mismo, más coloquial; uso regional", "Agarró y se marchó sin pagar la entrada."],
+            ["llegar a + infinitivo", "extremo de una escala", "Llegaron a vender entradas para una función que no existía."],
+            ["acabar + gerundio", "desenlace, a menudo inesperado", "Acabamos viendo la obra desde el pasillo."],
           ],
-          "answer": 0,
-          "why": "La respuesta depende de las palabras y de su agrupación; no atribuyas a la síntesis una intención o variedad verificada.",
-          "audio": "Ya lo revisamos: terminamos esta mañana.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "Escucha ahora el contraste de Entender sin uniformar. ¿Qué formulación aparece?",
-          "options": [
-            "Ya lo revisamos: terminamos esta mañana.",
-            "Ya lo revisamos: lo haremos antes de las cuatro."
+        tip: "Comprueba siempre el tiempo de los dos verbos de «ir y»: si no coinciden, la frase se rompe.",
+      },
+      {
+        heading: "Insistencia y crítica: «no hacer más que», «no dejar de», «andar + gerundio», «tener dicho»",
+        body: [
+          "«No hacer más que + infinitivo» suele significar «hacer algo constantemente», casi siempre con crítica: «El ministerio no hace más que prometer fechas». Atención: también puede significar «solo hacer eso» («no hice más que preguntar») o «acabar de hacer algo» («no hizo más que entrar y se apagaron las luces»); el contexto decide. «No dejar de + infinitivo» indica continuidad o insistencia («los vecinos no dejaron de protestar»), y en la fórmula «no deja de ser + adjetivo» introduce una valoración atenuada pero clara: «No deja de ser curioso que el teatro se inaugure dos veces» (es curioso, y lo digo con ironía).",
+          "«Andar + gerundio» añade a la acción repetida un matiz de desaprobación o de dispersión: «El contratista anda diciendo que todo fue culpa de la lluvia». «Tener dicho» («te tengo dicho que…») convierte una advertencia repetida en reproche.",
+        ],
+        examples: [
+          { es: "La empresa no hace más que pedir prórrogas.", note: "Constantemente, y con crítica." },
+          { es: "No hice más que sentarme y empezó la función.", note: "Lectura de inmediatez: acababa de sentarme." },
+          { es: "No deja de ser llamativo que nadie haya pedido disculpas.", note: "Valoración irónica con apariencia moderada." },
+          { es: "El concejal anda contando que el teatro estaba en ruinas.", note: "Repetición con desaprobación." },
+        ],
+      },
+      {
+        heading: "Distancia y reformulación: «venir a decir», «dar por», «hacer como que», «resulta que»",
+        body: [
+          "«Venir a + infinitivo» con verbos de lengua («venir a decir», «venir a reconocer») presenta una reformulación aproximada: lo que alguien dijo, interpretado por quien lo cuenta. «El comunicado viene a reconocer que las obras se paralizaron un año». Es útil para resumir sin citar, pero también permite deslizar la propia interpretación.",
+          "«Dar por + participio» presenta algo como cerrado o asumido: «La dirección dio por terminada la rueda de prensa», «Todos daban por hecho que habría retrasos». «Hacer como que + indicativo» describe una simulación: «El portavoz hizo como que no oía la pregunta». «Resulta que» introduce un dato inesperado que cambia la historia, y «a decir verdad» prepara una afirmación que matiza o contradice lo anterior.",
+        ],
+        examples: [
+          { es: "Hizo como que no veía las goteras.", note: "«Hacer como que» va con indicativo: simula, no desea." },
+          { es: "Resulta que el telón nuevo nunca llegó a encargarse.", note: "Dato inesperado + «llegar a» como extremo." },
+          { es: "El informe viene a decir que nadie supervisó la obra.", note: "Reformulación aproximada: interpretación de quien lo cuenta." },
+        ],
+        mistakes: [
+          {
+            wrong: "El portavoz hizo como que no oyera la pregunta.",
+            right: "El portavoz hizo como que no oía la pregunta.",
+            why: "«Hacer como que» describe una simulación de un hecho y lleva indicativo.",
+          },
+          {
+            wrong: "En el estreno fue y se lo dice a todo el mundo.",
+            right: "En el estreno fue y se lo dijo a todo el mundo. / En el estreno va y se lo dice a todo el mundo.",
+            why: "En «ir y + verbo» los dos verbos van en el mismo tiempo y la misma persona.",
+          },
+        ],
+      },
+      {
+        heading: "Ironía con tiempo y modo: «iba a», «será… pero», «no vaya a ser que»",
+        body: [
+          "«Iba a + infinitivo» presenta un plan del pasado que no se cumplió. Si se atribuye a otro («según él», «nos dijeron»), se vuelve irónico: «El teatro iba a reabrir en seis meses, según la constructora». El futuro y el condicional concesivos admiten algo para restarle importancia: «Será muy moderno, pero no se oye nada desde la fila veinte»; «Sería muy barato, pero acabó costando el triple». «No vaya a ser que» expresa precaución («Lleva paraguas, no vaya a ser que llueva»), pero en tono irónico critica un exceso de cautela: «No dieron ninguna fecha, no vaya a ser que alguien la recuerde».",
+          "Ninguna de estas formas cambia los hechos: cambian la actitud de quien habla. Por eso, en un texto informativo neutro, se sustituyen por formulaciones que solo afirman lo comprobable: «La reapertura estaba prevista para marzo de 2023 y se produjo en marzo de 2026».",
+        ],
+        table: {
+          caption: "De la crónica irónica a la nota neutra",
+          head: ["Con ironía o valoración", "Neutra"],
+          rows: [
+            ["La obra iba a durar seis meses, según la constructora.", "La constructora estimó una duración de seis meses."],
+            ["Será muy moderno, pero no se oye nada.", "El sistema de sonido presenta problemas en las últimas filas."],
+            ["No dieron fechas, no vaya a ser que alguien las recuerde.", "La dirección no ha dado fechas."],
+            ["Va y se va la luz en pleno estreno.", "Hubo un corte de luz durante el estreno."],
+            ["El ministerio no hace más que prometer.", "El ministerio ha anunciado varias fechas."],
           ],
-          "answer": 1,
-          "why": "Compara después tus dos lecturas con una persona: una pausa puede favorecer una lectura sin demostrarla.",
-          "audio": "Ya lo revisamos: lo haremos antes de las cuatro.",
-          "voice": "es-ES-m"
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "Nota de agenda: «El teatro, que iba a reabrir hace tres años, por fin abre sus puertas».",
+            right: "Nota de agenda: «El teatro reabre sus puertas tras tres años de obras».",
+            why: "«Iba a» introduce ironía en un texto que debe ser neutro.",
+          },
+          {
+            wrong: "Interpretación: «“No deja de ser curioso” significa que no es curioso».",
+            right: "Interpretación: «“No deja de ser curioso” afirma que es curioso, con un matiz irónico».",
+            why: "La doble negación no anula la valoración: la presenta atenuada.",
+          },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Interpreta primero qué actitud transmite cada forma; después úsala o elimínala según el texto.",
+    exercises: [
+      {
+        id: "c2-09-gramatica-actitud",
+        type: "context",
+        prompt: "Lee el fragmento y elige qué transmite la perífrasis.",
+        items: [
+          {
+            context: "Crítica: «El director llegó a ensayar con los actores en el estacionamiento».",
+            q: "¿Qué expresa «llegó a ensayar»?",
+            options: [
+              "Que el director llegó al estacionamiento para ensayar.",
+              "Que ensayar en el estacionamiento fue el extremo al que llevaron las circunstancias.",
+              "Que el ensayo fue breve.",
+            ],
+            answer: 1,
+            why: "«Llegar a» sitúa el hecho en el extremo de una escala.",
+          },
+          {
+            context: "Crítica: «La constructora anda diciendo que la culpa fue de la lluvia».",
+            q: "¿Qué añade «anda diciendo»?",
+            options: [
+              "Que lo repite por ahí, con un matiz de desaprobación de quien escribe.",
+              "Que lo dijo una sola vez en una rueda de prensa.",
+              "Que la constructora camina mientras habla.",
+            ],
+            answer: 0,
+            why: "«Andar + gerundio» indica repetición dispersa y desaprobación.",
+          },
+          {
+            context: "Crítica: «No hice más que ocupar mi butaca y se fue el sonido».",
+            q: "¿Qué lectura tiene aquí «no hacer más que»?",
+            options: [
+              "Constantemente ocupaba la butaca.",
+              "Solo ocupé la butaca y no hice nada más en toda la noche.",
+              "Acababa de ocupar la butaca cuando se fue el sonido.",
+            ],
+            answer: 2,
+            why: "Seguido de «y» + otro hecho, «no hacer más que» marca inmediatez.",
+          },
+          {
+            context: "Crítica: «El nuevo telón será precioso, pero tarda diez minutos en subir».",
+            q: "¿Qué hace el futuro «será»?",
+            options: [
+              "Predice que el telón será precioso en el futuro.",
+              "Concede algo para restarle importancia frente a la crítica que sigue.",
+              "Expresa una duda sobre el color del telón.",
+            ],
+            answer: 1,
+            why: "Futuro concesivo: «será… pero».",
+          },
+        ],
+      },
+      {
+        id: "c2-09-gramatica-formas",
+        type: "gap",
+        prompt: "Completa con la forma adecuada del verbo entre corchetes.",
+        items: [
+          { q: "En plena función, el actor va y ___ a hablar con el público. [ponerse]", answers: [["se pone"]], why: "«Ir y»: los dos verbos en el mismo tiempo y persona (presente)." },
+          { q: "La ministra hizo como que no ___ los abucheos. [oír]", answers: [["oía", "oyó"]], why: "«Hacer como que» + indicativo." },
+          { q: "Después de tres horas de espera, acabamos ___ la obra de pie. [ver]", answers: [["viendo"]], why: "«Acabar + gerundio»: desenlace." },
+          { q: "La dirección dio por ___ la polémica con un comunicado de dos líneas. [cerrar]", answers: [["cerrada"]], why: "«Dar por + participio», que concuerda con el complemento: «la polémica… cerrada»." },
+          { q: "El teatro ___ a reabrir en marzo de 2023, según el contrato. [ir]", answers: [["iba"]], why: "«Iba a»: plan pasado que no se cumplió." },
+          { q: "No publicaron el presupuesto final, no ___ a ser que alguien lo compare con el inicial. [ir]", answers: [["vaya"]], why: "«No vaya a ser que», aquí con valor irónico." },
+        ],
+      },
+      {
+        id: "c2-09-gramatica-familias",
+        type: "classify",
+        prompt: "Clasifica cada fragmento según la función principal de su perífrasis.",
+        categories: ["Sorpresa o desenlace", "Insistencia o crítica", "Distancia o reformulación", "Ironía con tiempo o modo"],
+        items: [
+          { text: "Agarró y se fue en el intermedio.", cat: 0, why: "Acción inesperada." },
+          { text: "No dejan de llegar quejas por el aire acondicionado.", cat: 1, why: "Continuidad insistente." },
+          { text: "El comunicado viene a reconocer el retraso.", cat: 2, why: "Reformulación aproximada." },
+          { text: "Sería muy barata la entrada, pero el estacionamiento costaba el doble.", cat: 3, why: "Condicional concesivo." },
+          { text: "Acabaron pidiendo disculpas en la radio.", cat: 0, why: "Desenlace inesperado." },
+          { text: "Te tengo dicho que no compres entradas por internet.", cat: 1, why: "Reproche por advertencia repetida." },
+          { text: "Dieron por hecho que nadie leería el informe.", cat: 2, why: "Asunción presentada como cerrada." },
+          { text: "Iba a ser una obra rapidísima, según el ministro.", cat: 3, why: "Plan fallido atribuido: ironía." },
+        ],
+      },
+      {
+        id: "c2-09-gramatica-errores",
+        type: "error",
+        prompt: "Corrige el error de forma en cada frase.",
+        items: [
+          {
+            sentence: "En el ensayo general, la actriz fue y se cae del escenario.",
+            answers: ["En el ensayo general, la actriz fue y se cayó del escenario.", "En el ensayo general, la actriz va y se cae del escenario."],
+            why: "Los dos verbos de «ir y» deben coincidir en tiempo.",
+          },
+          {
+            sentence: "El acomodador hizo como que no nos viera.",
+            answers: ["El acomodador hizo como que no nos veía.", "El acomodador hizo como que no nos vio."],
+            why: "«Hacer como que» lleva indicativo.",
+          },
+          {
+            sentence: "La compañía dio por terminado la gira.",
+            answers: ["La compañía dio por terminada la gira."],
+            why: "El participio concuerda con el complemento: «la gira… terminada».",
+          },
+          {
+            sentence: "Nota de agenda neutra: «El teatro, que iba a abrir en 2023 según el ministerio, abre el viernes».",
+            answers: ["Nota de agenda neutra: «El teatro abre el viernes tras tres años de obras».", "Nota de agenda neutra: «El teatro, cuya reapertura estaba prevista para 2023, abre el viernes»."],
+            why: "En un texto neutro, «iba a… según» introduce una ironía que hay que eliminar.",
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico de la crítica teatral y de las obras públicas, para contar la reapertura con o sin ironía.",
+    groups: [
+      {
+        title: "Teatro y crítica",
+        items: [
+          { es: "la butaca", note: "asiento de la platea de un teatro" },
+          { es: "el estreno / la reapertura", note: "primera función de una obra / vuelta a abrir un local" },
+          { es: "el telón", note: "cortina grande que separa el escenario de la sala" },
+          { es: "la acústica", note: "calidad con que se oye el sonido en un lugar" },
+          { es: "la reseña", note: "texto breve que informa y valora una obra" },
+          { es: "el tono mordaz", note: "estilo crítico con ironía punzante" },
+        ],
+      },
+      {
+        title: "Obras y promesas",
+        items: [
+          { es: "la prórroga", note: "ampliación de un plazo" },
+          { es: "el sobrecosto", note: "dinero que se gasta por encima de lo presupuestado (en España, «sobrecoste»)" },
+          { es: "la fecha de entrega", note: "día en que una obra debe terminarse" },
+          { es: "echar balones fuera", note: "eludir la responsabilidad" },
+          { es: "por fin", note: "después de una larga espera (puede sonar irónico)" },
+          { es: "el corte de cinta", note: "acto simbólico de inauguración" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c2-09-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su significado.",
+        pairs: [
+          { left: "la prórroga", right: "ampliación de un plazo" },
+          { left: "el sobrecosto", right: "dinero que se gasta por encima de lo presupuestado (en España, «sobrecoste»)" },
+          { left: "echar balones fuera", right: "eludir la responsabilidad" },
+          { left: "el tono mordaz", right: "estilo crítico con ironía punzante" },
+          { left: "la acústica", right: "calidad con que se oye el sonido en un lugar" },
+          { left: "el corte de cinta", right: "acto simbólico de inauguración" },
+        ],
+      },
+      {
+        id: "c2-09-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del vocabulario.",
+        bank: ["prórrogas", "echó balones fuera", "reseña", "acústica"],
+        items: [
+          { q: "La obra tuvo cinco ___ y ninguna explicación pública.", answers: [["prórrogas"]] },
+          { q: "Cuando le preguntaron por el retraso, el gerente ___ y culpó a los proveedores.", answers: [["echó balones fuera"]] },
+          { q: "La nueva ___ de la sala es excelente en la platea, pero no en el anfiteatro.", answers: [["acústica"]] },
+          { q: "El editor pidió una ___ breve para la agenda, sin opiniones.", answers: [["reseña"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "El acento enfático y la suspensión en la ironía",
+    explanation: [
+      "La ironía oral se apoya en la entonación. En «iba a + infinitivo» irónico, el acento enfático cae sobre «iba» o sobre la palabra que exagera: «IBA a durar seis meses», «iba a ser faci-LÍ-si-mo». En el futuro concesivo, la primera parte termina con un tono suspendido, ni subiendo ni bajando del todo, que anuncia el «pero»: «Será muy moderno… | pero no se oye nada».",
+      "Las perífrasis forman un solo grupo fónico con el verbo principal: no hagas pausa entre «fue y» y «dijo», ni entre «no hace más que» y el infinitivo. Una pausa en medio rompe el valor de bloque y suena a dos acciones separadas.",
+      "El audio utiliza la síntesis disponible en el navegador: no reproduce bien la ironía ni certifica un acento regional. Úsalo para el ritmo y el agrupamiento; la entonación irónica practícala con una persona.",
+    ],
+    table: {
+      caption: "Agrupar sin pausas",
+      head: ["Perífrasis", "Un solo grupo fónico"],
+      rows: [
+        ["ir y + verbo", "y va y se pone a llover"],
+        ["no hacer más que", "no hace más que quejarse"],
+        ["hacer como que", "hizo como que no oía"],
+        ["llegar a", "llegó a cobrar el doble"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Ya lo revisamos: terminamos esta mañana.",
-        "tip": "Marca grupos fónicos y explica qué interpretación favoreces.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Ya lo revisamos: lo haremos antes de las cuatro.",
-        "tip": "Cambia el foco sin cambiar las palabras; pide una interpretación a tu interlocutor.",
-        "voice": "es-ES-m"
-      },
-      {
-        "text": "La comunicación compartida requiere precisión contextual y respeto por la variación.",
-        "tip": "Lee a velocidad cómoda, conserva la reserva y compara tu grabación local con tu intención.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Mesa de trabajo: Entender sin uniformar",
-    "context": "Dos participantes preparan una intervención sobre el caso. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Carolina",
-        "voice": "es-ES-f",
-        "role": "Primera perspectiva"
-      },
-      {
-        "id": "b",
-        "name": "Esteban",
-        "voice": "es-ES-m",
-        "role": "Contraste y reformulación"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Nos han pedido hablar neutro, y yo necesito que me expliquen qué problema intentan resolver. Si un cliente no entiende una palabra, la reformulo. Pero cambiar vos por tú no aclara automáticamente un plazo ni convierte una respuesta en más respetuosa. En mi oficina, el tratamiento habitual depende de la relación, no de una escala universal de formalidad."
-      },
-      {
-        "speaker": "b",
-        "text": "Ayer hubo una confusión con ya lo revisamos. El cliente creyó que habíamos terminado. No sé si es una diferencia regional, un uso individual o simplemente una respuesta apresurada. Prefiero decir antes de las cuatro y confirmar que se entendió. Eso resuelve el compromiso sin convertir una conversación aislada en una lección sobre millones de hablantes."
-      },
-      {
-        "speaker": "a",
-        "text": "Para el manual incluiría variantes reconocibles y una pauta: conserva tu tratamiento si es coherente; explicita lo que afecta a una decisión. También evitaría escribir pronunciaciones caricaturizadas para enseñar la aspiración. Podemos estudiar el fenómeno, pero para reconocerlo de oído necesitamos una muestra real cuya procedencia y contenido podamos comprobar. Las voces sintéticas del navegador no garantizan ese trabajo."
-      },
-      {
-        "speaker": "b",
-        "text": "En clase pediré a la profesora que aporte una grabación autorizada y que comparemos segmentos concretos, no países enteros. Mientras tanto, estos audios nos sirven para seguir argumentos, reparar malentendidos y practicar la claridad de los grupos fónicos. No hace falta fingir que cada voz representa una región. Podemos aprender a preguntar cómo se usa una expresión en ese contexto y aceptar que la respuesta sea más compleja que una etiqueta del mapa. La curiosidad lingüística ayuda cuando empieza por escuchar y no por clasificar."
-      },
-      {
-        "speaker": "a",
-        "text": "Quiero añadir una pauta para cuando no entendemos: decir qué parte sí entendimos y preguntar por la parte incierta. Repetir la misma frase más fuerte no garantiza nada. Tampoco debemos registrar el cliente no entiende el español estándar. Es más útil anotar que hubo dos lecturas del plazo y que se confirmó una fecha concreta."
-      },
-      {
-        "speaker": "b",
-        "text": "Así el registro permite revisar la interacción sin etiquetar a quien participó. En la formación podemos estudiar rasgos de pronunciación y usos gramaticales, pero manteniendo separados reconocimiento y juicio social. Si una muestra real presenta aspiración, describiremos ese segmento y su contexto. No deduciremos por él el origen exacto, la educación ni la actitud del hablante. Esa prudencia también es una destreza lingüística. Para el cierre, conservaré esta distinción: La comunicación compartida requiere precisión contextual y respeto por la variación."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha el intercambio completo sin abrir la transcripción. Reconstruye el desacuerdo central.",
-        "exercise": {
-          "id": "c2-09-escucha-gist",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Entender sin uniformar",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la conversación de Entender sin uniformar?",
-              "options": [
-                "La comunicación compartida requiere precisión contextual y respeto por la variación.",
-                "Un tratamiento único resuelve todos los malentendidos."
-              ],
-              "answer": 0,
-              "why": "Reconstruye el propósito común antes de buscar detalles."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Entender sin uniformar?",
-              "options": [
-                "Un solo intercambio permite clasificar el habla de un país.",
-                "La comunicación compartida requiere precisión contextual y respeto por la variación."
-              ],
-              "answer": 0,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota afirmación, condición y fuente. No copies frases todavía.",
-        "exercise": {
-          "id": "c2-09-escucha-detail",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Entender sin uniformar",
-          "items": [
-            {
-              "q": "¿Qué límite deben conservar los interlocutores de Entender sin uniformar?",
-              "options": [
-                "La síntesis reproduce de forma verificada seis variedades.",
-                "El equipo decide fijar horas o fechas en compromisos de entrega."
-              ],
-              "answer": 1,
-              "why": "La conversación vuelve sobre el límite que evita una promesa o inferencia excesiva."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Entender sin uniformar?",
-              "options": [
-                "Un solo intercambio permite clasificar el habla de un país.",
-                "El equipo decide fijar horas o fechas en compromisos de entrega."
-              ],
-              "answer": 0,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Localiza una reformulación y explica qué inferencia repara. Consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "c2-09-escucha-notice",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Entender sin uniformar",
-          "items": [
-            {
-              "q": "¿Qué inferencia pragmática permite el diálogo de Entender sin uniformar?",
-              "options": [
-                "Un solo intercambio permite clasificar el habla de un país.",
-                "Una sola interacción no basta para atribuir un uso a toda una región."
-              ],
-              "answer": 1,
-              "why": "La inferencia se apoya en una reformulación y su contexto; no es una lectura literal de una palabra."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Entender sin uniformar?",
-              "options": [
-                "Un solo intercambio permite clasificar el habla de un país.",
-                "Una sola interacción no basta para atribuir un uso a toda una región."
-              ],
-              "answer": 0,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Entender sin uniformar · expediente de lectura",
-    "genre": "Dossier original: texto principal y documento de contraste",
-    "frame": "Situación ficticia para lectura crítica y mediación. Identifica qué voz afirma cada cosa antes de integrar las fuentes.",
-    "text": [
-      "La cooperativa abrió un servicio de atención compartido entre tres oficinas. El primer manual exigía emplear un español neutro, pero no definía qué entendía por neutro. Una supervisora tachó vos en un correo; otra pidió sustituir tú por usted para mantener la cercanía habitual de su equipo. Las dos justificaban la corrección por razones opuestas. La aparente solución universal escondía preferencias locales que adquirían autoridad al escribirse en un manual.",
-      "Un análisis de los mensajes mostró que los problemas más frecuentes no procedían de los pronombres, sino de referencias incompletas. Ahorita podía orientar expectativas temporales distintas según el contexto, pero enseguida tampoco garantizaba un plazo verificable. El equipo decidió indicar una hora o una fecha cuando hubiera un compromiso de entrega. No prohibió las expresiones habituales en conversaciones informales; distinguió el valor relacional de una fórmula y la información operativa que debía acompañarla.",
-      "La formación incluyó una advertencia sobre la escucha. La aspiración o el debilitamiento de ciertas consonantes pueden dificultar el reconocimiento inicial de palabras para quien no esté familiarizado con ellos. Eso no significa que el hablante articule peor ni que una grafía informal reproduzca fielmente su pronunciación. Un programa de síntesis puede leer un texto con una voz seleccionada y, aun así, no ofrecer una muestra representativa de la variedad indicada en sus ajustes. Evaluar flexibilidad auditiva exige materiales y observaciones verificables.",
-      "En la revisión de correos se acordó mantener las formas de tratamiento coherentes con cada relación, salvo que generaran una confusión concreta. Para un documento público común, se explicitarían las instrucciones y se evitarían localismos poco transparentes cuando hubiera una alternativa natural. La política no pretendía que nadie dejara de hablar como hablaba, sino que pudiera reconocer una dificultad, preguntar sin descalificar y reformular sin presentar su propia variedad como ausencia de variedad.",
-      "Incidente de formación. Un cliente interpretó ya lo revisamos como una tarea terminada; la agente lo había usado para anunciar la revisión inmediata. La llamada posterior resolvió el malentendido al precisar lo revisaremos antes de las cuatro. El coordinador quiso atribuirlo a un país entero, pero solo disponía de ese intercambio. La formadora pidió describir la lectura concreta y comprobarla con la hablante. Una competencia avanzada también consiste en saber cuándo una generalización cultural resulta tentadora y cuándo la evidencia no la sostiene. La versión final del manual incluyó un procedimiento de consulta: pedir una paráfrasis, confirmar la interpretación y anotar la decisión operativa. La anotación debía describir el intercambio, no etiquetar a la persona por una procedencia supuesta.",
-      "Propuesta de una agente. El manual debería distinguir la comprensión inicial de la reparación posterior. Una persona puede no reconocer una expresión y resolverlo mediante una pregunta breve sin que el servicio haya fallado. El problema aparece cuando la pregunta recibe una corrección despectiva o una repetición idéntica, cada vez más fuerte. La formación incorporó secuencias de confirmación: expresar lo entendido, localizar la parte incierta y pedir una alternativa. Ese procedimiento permite aprender del uso ajeno sin convertir la conversación en una evaluación de legitimidad lingüística.",
-      "También se debatió qué registrar tras un incidente. Anotar el cliente no entiende el español estándar atribuía la dificultad a la persona y daba por resuelta la norma. Anotar hubo dos lecturas del plazo; se confirmó la entrega para el jueves describía una interacción y su reparación. La diferencia tenía consecuencias para la formación futura: el segundo registro permitía revisar mensajes y procedimientos; el primero acumulaba etiquetas sobre clientes. La competencia avanzada combina conocimiento de rasgos variables con prudencia al generalizar. Reconocer una realización no autoriza a deducir educación, identidad o intención, del mismo modo que conocer una norma escrita no convierte toda desviación oral en un obstáculo comunicativo que deba corregirse en ese momento."
-    ],
-    "tasks": [
-      {
-        "id": "c2-09-lectura",
-        "type": "choice",
-        "prompt": "Reconstruye la tesis y su límite en Entender sin uniformar.",
-        "items": [
-          {
-            "q": "¿Qué tesis sostiene el dossier «Entender sin uniformar»?",
-            "options": [
-              "Un tratamiento único resuelve todos los malentendidos.",
-              "La comunicación compartida requiere precisión contextual y respeto por la variación."
-            ],
-            "answer": 1,
-            "why": "La tesis integra el contraste entre las fuentes, no solo una frase aislada."
-          },
-          {
-            "q": "¿Qué detalle limita la interpretación en «Entender sin uniformar»?",
-            "options": [
-              "La síntesis reproduce de forma verificada seis variedades.",
-              "El equipo decide fijar horas o fechas en compromisos de entrega."
-            ],
-            "answer": 1,
-            "why": "El documento complementario delimita qué está confirmado."
-          }
-        ]
-      },
-      {
-        "id": "c2-09-lectura-evidencia",
-        "type": "open",
-        "prompt": "Defiende una interpretación de Entender sin uniformar con pruebas y contraejemplos.",
-        "items": [
-          {
-            "prompt": "Contrasta «La comunicación compartida requiere precisión contextual y respeto por la variación.» con «Un tratamiento único resuelve todos los malentendidos.». Cita dos fragmentos breves, atribuye sus voces y explica qué detalle impide sostener la segunda lectura.",
-            "model": "La comunicación compartida requiere precisión contextual y respeto por la variación. El equipo decide fijar horas o fechas en compromisos de entrega.",
-            "checklist": [
-              "Distingo cita e interpretación.",
-              "Incluyo una lectura rival y un límite."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas del expediente distribuyen certeza, responsabilidad y voz.",
-      "items": [
+    perceive: {
+      id: "c2-09-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide qué valor tiene la perífrasis que oyes.",
+      items: [
         {
-          "quote": "La cooperativa abrió un servicio de atención compartido entre tres oficinas.",
-          "note": "Examina el encuadre inicial y qué información necesitarás para revisarlo."
+          q: "¿Qué valor tiene la perífrasis?",
+          options: ["Una acción inesperada.", "Un desplazamiento real a otro lugar."],
+          answer: 0,
+          why: "«Fue y apagó» forma un bloque: no hubo desplazamiento, sino sorpresa.",
+          audio: "Y en mitad del monólogo, el técnico fue y apagó los focos.",
+          voice: "es-CO-f",
         },
         {
-          "quote": "Incidente de formación.",
-          "note": "El documento final introduce otra perspectiva; identifica qué interpretación limita y qué deja abierto."
-        }
-      ]
-    }
+          q: "¿Qué valor tiene «no hace más que»?",
+          options: ["Solo hace eso una vez.", "Lo hace constantemente, y quien habla lo critica.", "Acaba de hacerlo."],
+          answer: 1,
+          why: "Sin otro hecho que siga, «no hace más que» indica repetición crítica.",
+          audio: "Este señor no hace más que prometer fechas que nunca cumple.",
+          voice: "es-MX-m",
+        },
+        {
+          q: "¿Qué hace quien habla con «será muy elegante»?",
+          options: ["Predice que lo será.", "Lo duda.", "Lo concede para criticar algo después."],
+          answer: 2,
+          why: "Futuro concesivo: el «pero» trae la crítica.",
+          audio: "El vestíbulo será muy elegante, pero no hay ni un baño en la segunda planta.",
+          voice: "es-ES-f",
+        },
+        {
+          q: "¿Qué expresa «iba a costar»?",
+          options: ["Un plan que no se cumplió.", "Un precio exacto ya pagado.", "Un deseo para el futuro."],
+          answer: 0,
+          why: "«Iba a» + «y acabó costando»: plan fallido.",
+          audio: "La reforma iba a costar dos millones y acabó costando seis.",
+          voice: "es-CO-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "Iba a durar seis meses, según la constructora.", tip: "Acento enfático en «iba» y tono descendente en «según la constructora».", voice: "es-CO-f" },
+      { text: "Será muy moderno, pero desde la fila veinte no se oye nada.", tip: "Suspende el tono en «moderno» antes del «pero».", voice: "es-ES-m" },
+      { text: "Y en pleno estreno, va y se va la luz.", tip: "«Va y se va» sin pausa interna.", voice: "es-MX-f" },
+      { text: "No dieron ninguna fecha, no vaya a ser que alguien la recuerde.", tip: "Tono irónico, más lento en la segunda parte.", voice: "es-AR-f" },
+    ],
+    spelling: "En la escritura, la ironía no tiene signo propio. Si temes que no se entienda, apóyala en el contexto (una atribución como «según la constructora», un contraste con «pero») y no en comillas ni signos de admiración repetidos.",
   },
-  "practice": {
-    "intro": "Combina orden, clasificación, producción y recuperación espaciada. Las respuestas abiertas se contrastan con criterios y con tu docente.",
-    "exercises": [
+  listening: {
+    title: "La crónica y la nota de agenda",
+    context: "Mariela, crítica teatral de una revista cultural de San José, y Esteban, su editor, revisan dos textos sobre la reapertura del Teatro del Parque: la crónica irónica de Mariela y la nota neutra para la agenda. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "m", name: "Mariela", voice: "es-CO-f", role: "Crítica teatral" },
+      { id: "e", name: "Esteban", voice: "es-MX-m", role: "Editor de la revista" },
+    ],
+    script: [
+      { speaker: "e", text: "Mariela, leí tu crónica anoche y me reí muchísimo. Pero antes de publicarla quiero repasar contigo un par de cosas, y además necesito que me prepares la nota para la agenda del fin de semana, que es otro tipo de texto." },
+      { speaker: "m", text: "Claro. ¿Qué te preocupa de la crónica?" },
+      { speaker: "e", text: "Nada grave. Empiezas con «el teatro iba a reabrir en seis meses, según la constructora». Eso me encanta, porque no dices que mintieran: dices lo que ellos anunciaron y dejas que el lector saque la conclusión. El problema es el párrafo del estreno. Escribiste «en pleno primer acto, va y se fue la luz». Ahí se te mezclaron los tiempos." },
+      { speaker: "m", text: "Tienes razón, qué descuido. O «va y se va la luz», que es más vivo, o «fue y se fue», que suena raro con dos «fue». Me quedo con el presente: «va y se va la luz»." },
+      { speaker: "e", text: "Perfecto. Otra cosa: escribes que el ministro «no hizo más que sonreír durante la rueda de prensa». ¿Quieres decir que sonreía todo el tiempo o que solo sonrió y no respondió nada?" },
+      { speaker: "m", text: "Las dos cosas, la verdad, pero entiendo que no queda claro. Mejor «no dejó de sonreír en toda la rueda de prensa, y no respondió ni una pregunta». Así cada idea va por su lado." },
+      { speaker: "e", text: "Me gusta. Y lo de «no deja de ser curioso que el teatro se haya inaugurado dos veces», eso lo dejaría tal cual. Es la frase más elegante de la crónica." },
+      { speaker: "m", text: "Sí, la primera inauguración fue con corte de cinta y sin butacas, y la segunda, tres años después. Ahí no hace falta añadir nada: el lector entiende la ironía solo." },
+      { speaker: "e", text: "Bien. Ahora la nota de agenda. Ahí no puede quedar ni una de estas formas. Ni «iba a», ni «por fin», ni «será muy bonito, pero». La gente quiere saber qué obra hay, a qué hora y cuánto cuesta la entrada." },
+      { speaker: "m", text: "Ya lo sé, aunque me cuesta. Te propongo algo así: «El Teatro del Parque reabre el viernes tras tres años de obras con el estreno de “La casa de las lluvias”. Funciones de jueves a domingo a las ocho de la noche. Entradas desde cuatro mil colones». ¿Y lo del sonido de las últimas filas?" },
+      { speaker: "e", text: "Eso sí es información útil, pero en neutro: «la dirección recomienda las butacas de platea por las condiciones acústicas del anfiteatro». Nada de «será muy moderno, pero no se oye». Si lo cuentas así, la nota informa y la crónica opina, y cada texto hace su trabajo." },
+      { speaker: "m", text: "Hecho. Y en la crónica añado un final: «La constructora anda diciendo que la culpa fue de la lluvia. Habrá llovido mucho, pero en San José llueve todos los años»." },
+      { speaker: "e", text: "Eso es muy tuyo. Publícalo." },
+    ],
+    stages: [
       {
-        "id": "c2-09-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos relaciones centrales del caso Entender sin uniformar.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la conversación completa sin abrir la transcripción. ¿Qué dos textos revisan y qué diferencia establecen entre ellos?",
+        exercise: {
+          id: "c2-09-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación y la idea principal.",
+          items: [
+            {
+              q: "¿Qué revisan Mariela y Esteban?",
+              options: [
+                "Una entrevista con el ministro y una carta de queja.",
+                "Una crónica irónica y una nota de agenda neutra sobre la reapertura de un teatro.",
+                "El guion de una obra de teatro.",
+              ],
+              answer: 1,
+              why: "Hablan de la crónica de Mariela y de la nota para la agenda.",
+            },
+            {
+              q: "¿Qué diferencia establece Esteban entre los dos textos?",
+              options: [
+                "La crónica opina y la nota informa.",
+                "La crónica es para adultos y la nota para niños.",
+                "Los dos deben ser igual de irónicos.",
+              ],
+              answer: 0,
+              why: "Al final dice que «la nota informa y la crónica opina».",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota cada corrección. Responde sin mirar la transcripción.",
+        exercise: {
+          id: "c2-09-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Qué error de forma encuentra Esteban en la crónica?",
+              options: [
+                "Un «hacer como que» con subjuntivo.",
+                "Un participio sin concordancia.",
+                "Un «ir y» con los dos verbos en tiempos distintos.",
+              ],
+              answer: 2,
+              why: "«Va y se fue la luz»: presente y pasado mezclados.",
+            },
+            {
+              q: "¿Por qué cambia Mariela «no hizo más que sonreír»?",
+              options: [
+                "Porque la frase admitía dos lecturas.",
+                "Porque el ministro no sonrió.",
+                "Porque es demasiado coloquial.",
+              ],
+              answer: 0,
+              why: "Podía significar «sonreía todo el tiempo» o «solo sonrió».",
+            },
+            {
+              q: "¿Cómo debe aparecer el problema del sonido en la nota de agenda?",
+              options: [
+                "Con un futuro concesivo.",
+                "Eliminado por completo.",
+                "Como recomendación neutra sobre las butacas de platea.",
+              ],
+              answer: 2,
+              why: "La información útil se conserva, sin valoración.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en lo que hace cada forma en la conversación. Relaciona y consulta la transcripción solo después de responder.",
+        exercise: {
+          id: "c2-09-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada fragmento con su función.",
+          pairs: [
+            { left: "iba a reabrir en seis meses, según la constructora", right: "ironía por plan fallido atribuido" },
+            { left: "va y se va la luz", right: "sorpresa en una anécdota" },
+            { left: "no dejó de sonreír", right: "continuidad sin ambigüedad" },
+            { left: "no deja de ser curioso", right: "valoración irónica atenuada" },
+            { left: "anda diciendo que la culpa fue de la lluvia", right: "repetición con desaprobación" },
+          ],
+          why: "Cada perífrasis añade una actitud; la nota de agenda las elimina todas.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "El teatro que se inauguró dos veces",
+    genre: "Crónica cultural con tono irónico",
+    frame: "Crónica de Mariela Solano para una revista cultural de San José sobre la reapertura del Teatro del Parque. Personas, empresa, teatro y obra son ficticios.",
+    text: [
+      "El Teatro del Parque iba a reabrir en seis meses. Lo dijo la constructora en marzo de 2023, lo repitió el ministerio en una nota de prensa con fotos del arquitecto sonriente y lo creímos, con la ingenuidad de quien todavía tiene entradas guardadas de la última función. Tres años después, el viernes pasado, el telón volvió a subir. Tardó diez minutos en hacerlo, pero de eso hablaré más tarde.",
+      "Conviene recordar cómo llegamos hasta aquí. En el verano de 2023 se desmontaron las butacas y se levantó el suelo de la platea. En diciembre, la constructora pidió la primera prórroga, alegando problemas con la madera importada. En 2024 llegó la segunda, luego la tercera, y en algún momento de ese año, nadie sabe muy bien cuándo, la obra se detuvo por completo. El ministerio no hacía más que anunciar fechas: abril, luego septiembre, luego «antes de que termine el año». Llegó a convocar a la prensa para un corte de cinta en un teatro sin butacas. No deja de ser curioso que el Teatro del Parque sea, que yo sepa, el único edificio del país que se ha inaugurado dos veces.",
+      "Durante esos meses, los responsables desarrollaron una notable habilidad para no responder. En una rueda de prensa de 2025, cuando un colega preguntó por el sobrecosto, el viceministro hizo como que no oía la pregunta y pasó a hablar del nuevo vestíbulo. La constructora, por su parte, anda diciendo desde entonces que la culpa fue de la lluvia. Habrá llovido mucho, no lo dudo, pero en San José llueve todos los años, más o menos en las mismas fechas, y eso suele saberse antes de firmar un contrato.",
+      "El informe de la Contraloría que se publicó en enero viene a reconocer lo que todos sospechábamos: nadie supervisó la obra durante casi un año. No lo dice con esas palabras, claro; habla de «debilidades en el seguimiento contractual». Pero el sentido es el mismo. Resulta que el telón nuevo, que figuraba en todos los anuncios, ni siquiera llegó a encargarse hasta el otoño pasado. El que sube con tanta calma es, en realidad, un telón prestado por el teatro de Heredia.",
+      "Y llegamos al viernes. El público, entre el que había bastantes abonados con canas, entró con una mezcla de cariño y desconfianza. El vestíbulo será muy elegante, eso nadie lo discute, con su piso de madera clara y sus lámparas nuevas; pero no hay ni un baño en la segunda planta, y en el intermedio la fila llegaba a la escalera. La sala, en cambio, recupera la belleza de siempre. La platea se ve y se oye de maravilla. El anfiteatro es otra historia: desde la fila veinte, los diálogos llegan como si los actores hablaran desde la calle.",
+      "La obra elegida para la reapertura, «La casa de las lluvias», es una comedia sobre una familia que lleva años esperando que alguien les arregle el techo. No sé si fue una decisión irónica de la dirección o una casualidad, pero el público lo entendió perfectamente y aplaudió con ganas cada vez que un personaje decía «la semana que viene vienen a arreglarlo». En pleno primer acto, va y se va la luz. Fueron apenas tres minutos, y los actores, que son excelentes, siguieron improvisando a oscuras. Acabamos aplaudiendo también al apagón.",
+      "Sería injusto terminar esta crónica sin reconocer lo que sí se ha hecho bien. La restauración de la fachada es impecable, las butacas de la platea son cómodas y la programación anunciada para el semestre es la más ambiciosa que ha tenido el teatro en una década. La directora artística, que llegó cuando la obra ya estaba atrasada y que no tuvo nada que ver con los contratos, ha sabido convertir el regreso en una celebración. A ella y a su equipo, todo el mérito.",
+      "Al resto, una sugerencia modesta. La próxima vez que anuncien una obra pública, den una fecha y cúmplanla, o den una fecha honesta. O, si prefieren, no den ninguna, no vaya a ser que alguien la apunte. Mientras tanto, el público de San José ha recuperado su teatro, y eso, después de todo, es lo único que importa. Compren entradas de platea.",
+    ],
+    glossary: [
+      { es: "la Contraloría", note: "organismo público que controla el uso del dinero del Estado" },
+      { es: "con canas", note: "con el pelo blanco; personas mayores" },
+      { es: "el anfiteatro", note: "parte alta de la sala de un teatro" },
+    ],
+    tasks: [
+      {
+        id: "c2-09-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la crónica.",
+        items: [
           {
-            "words": [
-              "La",
-              "variedad",
-              "propia",
-              "también",
-              "es",
-              "una",
-              "variedad."
+            q: "¿Qué ironiza la autora con «iba a reabrir en seis meses»?",
+            options: [
+              "Que el teatro reabrió antes de lo previsto.",
+              "Que el plan anunciado no se cumplió, y lo atribuye a quienes lo anunciaron.",
+              "Que la autora no sabía cuándo reabriría.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
+            answer: 1,
+            why: "«Iba a» marca un plan fallido; la atribución a la constructora y al ministerio lo vuelve irónico.",
           },
           {
-            "words": [
-              "Una",
-              "fecha",
-              "concreta",
-              "evita",
-              "ese",
-              "malentendido."
+            q: "¿Qué reconoce, según la autora, el informe de la Contraloría?",
+            options: [
+              "Que la lluvia fue la causa del retraso.",
+              "Que la obra costó menos de lo previsto.",
+              "Que nadie supervisó la obra durante casi un año.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
-          }
-        ]
-      },
-      {
-        "id": "c2-09-estatuto",
-        "type": "classify",
-        "prompt": "Clasifica el estatuto de estas formulaciones en «Entender sin uniformar».",
-        "categories": [
-          "Conclusión respaldada o delimitada",
-          "Generalización no autorizada"
+            answer: 2,
+            why: "«Viene a reconocer» reformula lo que el informe dice con otras palabras.",
+          },
+          {
+            q: "¿Cuál es la actitud de la autora hacia la directora artística?",
+            options: [
+              "Elogiosa y sin ironía.",
+              "Irónica, como con el resto.",
+              "Indiferente.",
+            ],
+            answer: 0,
+            why: "En el séptimo párrafo le atribuye «todo el mérito» sin ninguna perífrasis irónica.",
+          },
         ],
-        "items": [
-          {
-            "text": "La comunicación compartida requiere precisión contextual y respeto por la variación.",
-            "cat": 0,
-            "why": "Resume el razonamiento con sus límites."
-          },
-          {
-            "text": "Un tratamiento único resuelve todos los malentendidos.",
-            "cat": 1,
-            "why": "Amplía o invierte el alcance de las fuentes."
-          },
-          {
-            "text": "El equipo decide fijar horas o fechas en compromisos de entrega.",
-            "cat": 0,
-            "why": "Conserva un detalle explícito del expediente."
-          },
-          {
-            "text": "La síntesis reproduce de forma verificada seis variedades.",
-            "cat": 1,
-            "why": "Contradice la condición documentada."
-          }
-        ]
       },
       {
-        "id": "c2-09-microescritura",
-        "type": "open",
-        "prompt": "Produce dos versiones breves antes del dossier de Entender sin uniformar.",
-        "items": [
-          {
-            "prompt": "Redacta una apertura de 80–100 palabras para el destinatario de «Entender sin uniformar». Conserva la tesis y una reserva.",
-            "model": "El manual compartido debe asegurar compromisos comprensibles sin imponer una voz supuestamente neutra. Mantendremos tratamientos coherentes con la relación y explicitaremos fechas cuando una expresión temporal pueda orientar expectativas distintas. Ante un malentendido, pediremos una paráfrasis y confirmaremos la acción acordada. No atribuiremos un uso a una región a partir de un solo intercambio. Para trabajar percepción fonética, seleccionaremos muestras reales autorizadas y verificables; las voces sintéticas disponibles sirven para seguir el contenido, pero no certifican variedad regional. La diversidad deja de parecer un problema cuando distinguimos identidad lingüística e información operativa.",
-            "checklist": [
-              "Identifico quién necesita decidir y con qué información.",
-              "Separo afirmación, atribución e inferencia."
-            ]
-          },
-          {
-            "prompt": "Reformula para una persona ajena al debate de «Entender sin uniformar» la condición que más fácilmente se perdería al resumir. Explica el coste de omitirla.",
-            "model": "El equipo decide fijar horas o fechas en compromisos de entrega. La comunicación compartida requiere precisión contextual y respeto por la variación.",
-            "checklist": [
-              "No convierto la condición en un dato accesorio.",
-              "Mantengo el alcance aunque simplifique el léxico."
-            ]
-          }
-        ]
+        id: "c2-09-lectura-funciones",
+        type: "match",
+        prompt: "Relaciona cada fragmento de la crónica con lo que hace la perífrasis.",
+        pairs: [
+          { left: "Llegó a convocar a la prensa para un corte de cinta", right: "extremo de una escala" },
+          { left: "hizo como que no oía la pregunta", right: "simulación" },
+          { left: "viene a reconocer lo que todos sospechábamos", right: "reformulación interpretada" },
+          { left: "El vestíbulo será muy elegante", right: "concesión antes de una crítica" },
+          { left: "no vaya a ser que alguien la apunte", right: "precaución irónica" },
+        ],
       },
       {
-        "id": "c2-09-recuperacion",
-        "type": "open",
-        "prompt": "Recupera recursos con materiales suministrados de semanas anteriores. No busques rasgos ausentes en el dossier actual. Contrasta después qué recurso sería pertinente transferir al nuevo caso.",
-        "items": [
+        id: "c2-09-lectura-evaluacion",
+        type: "open",
+        prompt: "Evalúa la crónica con argumentos propios.",
+        items: [
           {
-            "prompt": "Recuperación c2.rev.checkpoint-1. Recupera la semana 5, «Checkpoint: una plaza, tres versiones». Material de contraste: El acta del consejo de barrio anunciaba que «se mantendrán las terrazas de los locales que permitan el paso accesible». La asociación de comerciantes leyó una condición que podía cumplir reorganizando las mesas. La asociación vecinal entendió que se retirarían las terrazas de todos los locales que hoy obstaculizaban el paso, sin posibilidad de adaptación. La diferencia no se resolvía mirando una fotografía: afectaba al momento en que debía comprobarse la condición y al procedimiento para subsanar un incumplimiento. Formulación de trabajo: Aunque sea útil limitar el tráfico, falta explicar el reparto.\n\nRecupera «Checkpoint 1: alcance, ironía, registro y subtexto» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Entender sin uniformar»: «Usted me avisa cuando tenga el documento.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Existe acuerdo sobre mantener un paso accesible, pero no sobre su aplicación ni sobre los horarios de carga. La crónica interpreta el silencio comercial como entusiasmo; el acta no permite esa atribución. El plano requiere todavía una comprobación de acceso de emergencias y no constituye una solución aprobada. Proponemos publicar el criterio de adaptación, el responsable de comprobarlo y un mecanismo de respuesta a las observaciones. La consulta ganará credibilidad si explica cómo puede modificar la propuesta. La ironía sobre una plaza donde caben todos expresa una crítica pertinente, pero no sustituye la discusión de una distribución concreta. En el nuevo contraste, «Usted me avisa cuando tenga el documento.» debe interpretarse dentro de esta cuestión: Variación, tratamiento y acomodación responsable. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
+            prompt: "Algunos lectores dicen que la crónica es injusta con el ministerio. Explica en 80–100 palabras si la ironía de la autora se apoya en hechos o solo en opiniones, con dos ejemplos del texto, y si te parece legítima.",
+            model: "La ironía se apoya en hechos comprobables. Cuando escribe que el teatro «iba a reabrir en seis meses», cita un anuncio real y lo contrasta con los tres años que duró la obra. Cuando dice que «llegó a convocar a la prensa para un corte de cinta en un teatro sin butacas», describe un acto que ocurrió. La autora no inventa: elige cómo presentar lo que pasó. Me parece legítima, porque además reconoce lo bien hecho y separa a la directora de los responsables del retraso.",
+            checklist: [
+              "Doy dos ejemplos del texto.",
+              "Distingo hecho y valoración.",
+              "Tomo posición y la justifico.",
+            ],
           },
-          {
-            "prompt": "Recuperación c2.read.contrato-cronica. Recupera la semana 5, «Checkpoint: una plaza, tres versiones». Pasajes que debes contrastar: El acta del consejo de barrio anunciaba que «se mantendrán las terrazas de los locales que permitan el paso accesible». La asociación de comerciantes leyó una condición que podía cumplir reorganizando las mesas. La asociación vecinal entendió que se retirarían las terrazas de todos los locales que hoy obstaculizaban el paso, sin posibilidad de adaptación. La diferencia no se resolvía mirando una fotografía: afectaba al momento en que debía comprobarse la condición y al procedimiento para subsanar un incumplimiento.\n\nLa mediadora incorporó esta objeción al informe sin convertirla en una solución técnica. No podía certificar anchuras ni maniobras; podía explicar qué información debía producir el equipo competente y cómo afectaría a la decisión. También corrigió el título provisional, La plaza alcanza un acuerdo, por uno que identificaba el alcance real: Acuerdo sobre accesibilidad y consulta sobre distribución. El cambio renunciaba a una noticia más redonda, pero impedía que la presentación del proceso redujera el espacio para discrepar. La integración final exige aquí una doble fidelidad: a lo que las fuentes permiten afirmar y a lo que las personas todavía tienen derecho a discutir sin aparecer como incumplidoras de un consenso que no existe.\n\nRelee estos pasajes y recupera «Leer textos de registros opuestos». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «Entender sin uniformar»: «Usted me avisa cuando tenga el documento.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Existe acuerdo sobre mantener un paso accesible, pero no sobre su aplicación ni sobre los horarios de carga. La crónica interpreta el silencio comercial como entusiasmo; el acta no permite esa atribución. El plano requiere todavía una comprobación de acceso de emergencias y no constituye una solución aprobada. Proponemos publicar el criterio de adaptación, el responsable de comprobarlo y un mecanismo de respuesta a las observaciones. La consulta ganará credibilidad si explica cómo puede modificar la propuesta. La ironía sobre una plaza donde caben todos expresa una crítica pertinente, pero no sustituye la discusión de una distribución concreta. En el nuevo contraste, «Usted me avisa cuando tenga el documento.» debe interpretarse dentro de esta cuestión: Variación, tratamiento y acomodación responsable. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.casi-sinonimos. Recupera la semana 8, «La palabra que inclina la balanza». Unidades disponibles: perseverante (persistente con valoración favorable); obstinado (persistente pese a razones para cambiar); austero (sobrio en recursos o adornos); precario (insuficiente o inestable); admitir (reconocer algo que puede resultar incómodo); sostener (defender una afirmación); conceder (aceptar una premisa de manera delimitada); cundir (extenderse o producir rendimiento según el contexto). Pasaje: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nRecupera «Casi sinónimos y connotación»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Entender sin uniformar»: «Usted me avisa cuando tenga el documento.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En este contraste, «perseverante» nombra persistente con valoración favorable; «obstinado», persistente pese a razones para cambiar. La elección debe conservar esa diferencia. En el nuevo contraste, «Usted me avisa cuando tenga el documento.» debe interpretarse dentro de esta cuestión: Variación, tratamiento y acomodación responsable. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.refranes-intertextualidad. Recupera la semana 8, «La palabra que inclina la balanza». Unidades disponibles: perseverante (persistente con valoración favorable); obstinado (persistente pese a razones para cambiar); austero (sobrio en recursos o adornos); precario (insuficiente o inestable); admitir (reconocer algo que puede resultar incómodo); sostener (defender una afirmación); conceder (aceptar una premisa de manera delimitada); cundir (extenderse o producir rendimiento según el contexto). Pasaje: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nRecupera «Refranes, citas e intertextualidad»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Entender sin uniformar»: «Usted me avisa cuando tenga el documento.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En este contraste, «perseverante» nombra persistente con valoración favorable; «obstinado», persistente pese a razones para cambiar. La elección debe conservar esa diferencia. En el nuevo contraste, «Usted me avisa cuando tenga el documento.» debe interpretarse dentro de esta cuestión: Variación, tratamiento y acomodación responsable. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.matiz-lexico-voz. Recupera la semana 8, «La palabra que inclina la balanza». Textos para ensayo oral: «El resultado es concluyente sobre esa franja.» / «El resultado parece prometedor para nuevas pruebas.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Matiz léxico y voz» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Entender sin uniformar»: «Usted me avisa cuando tenga el documento.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Resalta sobre esa franja al decir concluyente. Contrasta el adjetivo aislado y el adjetivo delimitado; una voz enfática no vuelve más amplia la evidencia disponible. Un ensayo defendible conserva esta distinción del caso: La precisión consiste en controlar las inferencias de la elección léxica. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Usted me avisa cuando tenga el documento.» debe interpretarse dentro de esta cuestión: Variación, tratamiento y acomodación responsable. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.precision-lexica. Recupera la semana 8, «La palabra que inclina la balanza». Modelo parcial que puedes transformar: El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener.\n\nRecupera «Precisión léxica» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «Entender sin uniformar»: «Usted me avisa cuando tenga el documento.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: La precisión consiste en controlar las inferencias de la elección léxica. En el nuevo contraste, «Usted me avisa cuando tenga el documento.» debe interpretarse dentro de esta cuestión: Variación, tratamiento y acomodación responsable. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.read.columna-literaria. Recupera la semana 8, «La palabra que inclina la balanza». Pasajes que debes contrastar: El perfil del restaurador empezó con un adjetivo: obstinado. Durante quince años había defendido que el mural del vestíbulo conservaba una capa original bajo tres repintes. El artículo narraba sus intentos fallidos, sus cartas y la paciencia del equipo que trabajó con él. Al final, cuando una prueba confirmó parte de su hipótesis, el mismo comportamiento recibió otro nombre: perseverancia. El hallazgo parecía haber cambiado retrospectivamente el valor moral de los años anteriores.\n\nLa columnista decidió conservar la palabra obstinación en una cita atribuida al propio restaurador y retirarla de la voz narrativa. El cambio no declaraba falsa la valoración; cambiaba quién asumía su responsabilidad. Después revisó prometedor y concluyente en el cierre. La primera palabra proyectaba una posibilidad; la segunda cerraba una cuestión delimitada. Podían coexistir si se referían a objetos distintos: conclusión sobre la presencia de pigmento y promesa de nuevas preguntas de conservación. El ejercicio léxico culmina así en una decisión de arquitectura textual. No basta escoger la palabra exacta en una oración aislada; hay que mantener estable aquello sobre lo que se predica y evitar que el lector traslade una certeza local a una conclusión general.\n\nRelee estos pasajes y recupera «Leer una columna literaria». Formula una interpretación, un detalle que la apoye y una lectura rival. Señala qué dato del expediente completo necesitarías para reforzar o limitar tu conclusión. Contraste nuevo suministrado de «Entender sin uniformar»: «Usted me avisa cuando tenga el documento.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El hallazgo confirma restos originales en una franja del mural. Es concluyente respecto a esa presencia, no respecto a la conveniencia de restaurar toda la obra. La perseverancia del restaurador merece describirse mediante sus decisiones ante pruebas contrarias, no deducirse retrospectivamente del éxito. La dirección sostuvo que faltaba financiación; escribir admitió habría introducido una resistencia que las actas no documentan. El refrán sobre el pigmento puede defender el tiempo necesario del oficio, siempre que no absuelva años de demora evitable. La precisión no apaga el entusiasmo: le asigna un objeto que puede sostener. En el nuevo contraste, «Usted me avisa cuando tenga el documento.» debe interpretarse dentro de esta cuestión: Variación, tratamiento y acomodación responsable. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la crónica construye la ironía sin afirmar nada que no sea comprobable.",
+      items: [
+        { quote: "El Teatro del Parque iba a reabrir en seis meses.", note: "Plan fallido: la ironía nace del contraste con lo que vino después." },
+        { quote: "No deja de ser curioso que el Teatro del Parque sea, que yo sepa, el único edificio del país que se ha inaugurado dos veces.", note: "Valoración atenuada en la forma y clara en el fondo." },
+        { quote: "Habrá llovido mucho, no lo dudo, pero en San José llueve todos los años", note: "Futuro concesivo: se concede para desmontar el argumento." },
+        { quote: "En pleno primer acto, va y se va la luz.", note: "«Ir y» con los dos verbos en presente: sorpresa narrativa." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Redacta una política de atención de 450–600 palabras con variantes de tratamiento, dos reparaciones de malentendidos y criterios para seleccionar muestras de escucha. Distingue norma editorial, variación y estigma.",
-    "context": "Entrega un texto independiente y conserva una segunda versión con cambios comentados. El modelo muestra una apertura posible; no sustituye el dossier completo.",
-    "steps": [
-      "Traza un mapa de fuentes: afirmación, prueba, límite y destinatario.",
-      "Decide el orden según la acción que necesita realizar tu lector; reserva espacio para una objeción fuerte.",
-      "Redacta sin copiar el modelo. Integra al menos dos fuentes y atribuye sus diferencias.",
-      "Revisa el alcance de tres formulaciones, lee un párrafo en voz alta y explica dos cambios de estilo."
+  practice: {
+    intro: "Combina orden, elección del registro, paso de lo valorativo a lo neutro y escritura breve. Termina recuperando las clases de las semanas anteriores de C2.",
+    exercises: [
+      {
+        id: "c2-09-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases con la perífrasis bien construida.",
+        items: [
+          {
+            words: ["El", "acomodador", "hizo", "como", "que", "no", "veía", "la", "fila."],
+            why: "«Hacer como que» + indicativo.",
+          },
+          {
+            words: ["Llegaron", "a", "vender", "entradas", "para", "una", "sala", "sin", "techo."],
+            why: "«Llegar a»: extremo de una escala.",
+          },
+          {
+            words: ["La", "dirección", "dio", "por", "cerradas", "las", "inscripciones."],
+            why: "«Dar por + participio» concordado con «las inscripciones».",
+          },
+        ],
+      },
+      {
+        id: "c2-09-registro",
+        type: "context",
+        prompt: "Elige la versión adecuada para cada texto.",
+        items: [
+          {
+            context: "Nota de agenda de la revista: información práctica, sin opinión.",
+            q: "¿Qué versión eliges?",
+            options: [
+              "Por fin, y tras mil prórrogas, el teatro abre el viernes.",
+              "El teatro, que iba a abrir hace años, abre el viernes.",
+              "El teatro reabre el viernes, tras tres años de obras.",
+            ],
+            answer: 2,
+            why: "Solo afirma lo comprobable, sin «por fin» ni «iba a».",
+          },
+          {
+            context: "Mensaje de Mariela a una amiga, contándole el estreno.",
+            q: "¿Qué versión suena más natural en ese registro?",
+            options: [
+              "Durante el primer acto se produjo una interrupción del suministro eléctrico.",
+              "Y en pleno primer acto, va y se va la luz.",
+              "Se registró un corte de luz durante el primer acto.",
+            ],
+            answer: 1,
+            why: "«Ir y» da viveza a la anécdota en un registro coloquial.",
+          },
+          {
+            context: "Crónica cultural con tono mordaz, para lectores de toda América.",
+            q: "¿Qué versión es más adecuada para ese público?",
+            options: [
+              "El viceministro cogió y se fue de la rueda de prensa.",
+              "El viceministro agarró y se fue de la rueda de prensa.",
+              "El viceministro abandonó la sala por motivos desconocidos.",
+            ],
+            answer: 1,
+            why: "«Agarrar y» mantiene la sorpresa y evita «coger», que en varias zonas de América tiene sentido sexual.",
+          },
+        ],
+      },
+      {
+        id: "c2-09-neutralizar",
+        type: "transform",
+        prompt: "Quita la valoración de cada frase y deja solo la información comprobable.",
+        items: [
+          {
+            source: "El ministerio no hacía más que anunciar fechas que nunca cumplía.",
+            instruction: "Reescríbela como dato neutro, empezando por «El ministerio anunció».",
+            answers: ["El ministerio anunció varias fechas que no se cumplieron.", "El ministerio anunció varias fechas de reapertura que no se cumplieron."],
+            why: "Sin «no hacer más que», la frase informa sin criticar.",
+          },
+          {
+            source: "La constructora anda diciendo que la culpa fue de la lluvia.",
+            instruction: "Reescríbela como dato neutro con el verbo «atribuir».",
+            answers: ["La constructora atribuye el retraso a la lluvia.", "La constructora ha atribuido el retraso a la lluvia."],
+            why: "«Andar diciendo» se sustituye por un verbo de atribución neutro.",
+          },
+          {
+            source: "El vestíbulo será muy elegante, pero no hay baños en la segunda planta.",
+            instruction: "Reescríbela como dato neutro sin futuro concesivo.",
+            answers: ["El vestíbulo ha sido renovado y la segunda planta no tiene baños.", "La segunda planta no tiene baños."],
+            why: "Se elimina la concesión irónica y se mantiene el dato útil.",
+          },
+        ],
+      },
+      {
+        id: "c2-09-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Cuenta en 50–70 palabras, con tono irónico, la historia de una obra pública de tu ciudad (real o inventada). Usa al menos tres perífrasis distintas de esta semana y no afirmes nada que no sea comprobable.",
+            model: "El puente peatonal de mi barrio iba a estar listo para la Navidad de 2024, según el alcalde. Llegaron a poner una placa con su nombre antes de colocar las barandillas. Durante un año, la empresa no hizo más que pedir paciencia. Y en enero, va y se descubre que el puente no llega a la otra acera. Acabamos cruzando por el semáforo, como siempre.",
+            checklist: [
+              "Uso al menos tres perífrasis distintas.",
+              "La ironía se apoya en hechos.",
+              "Los verbos de «ir y» coinciden en tiempo.",
+            ],
+          },
+          {
+            prompt: "Reescribe tu texto anterior como nota informativa neutra de 40–60 palabras para el periódico del barrio.",
+            model: "El puente peatonal de la avenida Central, cuya apertura estaba prevista para diciembre de 2024, sigue cerrado. La empresa constructora ha solicitado dos prórrogas. Según la inspección municipal de enero, el tramo final no coincide con la acera opuesta y deberá modificarse. El ayuntamiento no ha dado una nueva fecha.",
+            checklist: [
+              "No queda ninguna perífrasis valorativa.",
+              "Mantengo los datos comprobables.",
+              "Atribuyo la información a una fuente.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c2-09-recuperacion",
+        type: "open",
+        prompt: "Recupera lo que viste en las semanas anteriores de C2 con los estímulos que se te dan. No hace falta volver a esas lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de la clase G208 (condicional de rumor). Estímulo: «La constructora habría cobrado el doble de lo pactado» frente a «La constructora llegó a cobrar el doble de lo pactado». Explica qué responsabilidad asume quien escribe en cada versión.",
+            model: "En la primera, el condicional de rumor presenta el dato como no confirmado: quien escribe lo transmite sin hacerse responsable de su verdad. En la segunda, «llegó a cobrar» afirma el hecho como cierto y además lo valora como un extremo. La segunda exige tener pruebas; la primera, solo una fuente que lo afirme.",
+            checklist: [
+              "Explico el distanciamiento del condicional.",
+              "Explico que «llegar a» afirma y valora.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G213 (ambigüedad accidental). Estímulo: «El director no hizo más que hablar con los actores». Explica las lecturas posibles y escribe una versión para cada una.",
+            model: "Puede significar que hablaba con ellos constantemente, que solo habló con ellos y no hizo nada más, o, si sigue otro hecho, que acababa de hablar con ellos. Versiones: «El director no dejó de hablar con los actores»; «El director se limitó a hablar con los actores»; «El director acababa de hablar con los actores cuando…».",
+            checklist: [
+              "Identifico al menos dos lecturas.",
+              "Escribo una versión explícita para cada una.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G215 (cambios de trato). Estímulo: el viceministro tutea a todos los periodistas y, ante una pregunta incómoda, responde: «Mire usted, señora, eso no viene al caso». Explica qué comunica el cambio y si refuerza o no la ironía de una crónica que lo cite.",
+            model: "Pasar del tú habitual al usted marca distancia y cierto enfado: el viceministro se protege de la pregunta. En una crónica, citar ese cambio sin comentarlo refuerza la ironía, porque el lector percibe la incomodidad sin que la autora tenga que afirmarla. Es un recurso que se apoya en un hecho verificable.",
+            checklist: [
+              "Interpreto el cambio frente al trato habitual.",
+              "Relaciono el cambio con el efecto irónico.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G216 (variación regional del pasado). Estímulo: titular de la revista para lectores costarricenses: «Hoy ha reabierto el Teatro del Parque». Explica si conviene cambiarlo y propón una versión.",
+            model: "En Costa Rica, como en gran parte de América, lo ocurrido hoy se cuenta normalmente con el indefinido. Para lectores costarricenses sonaría más natural «Hoy reabrió el Teatro del Parque» o, en un titular, «Reabre el Teatro del Parque». No es que la forma compuesta sea incorrecta, sino que no es la habitual en esa variedad.",
+            checklist: [
+              "Relaciono la elección con la variedad del público.",
+              "No presento la forma compuesta como error.",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "Vos tenés la copia; ¿podés revisarla?",
-      "Usted me avisa cuando tenga el documento.",
-      "Me di cuenta de que faltaba una página.",
-      "acomodación",
-      "tratamiento",
-      "voseo"
-    ],
-    "model": [
-      "Modelo parcial de apertura (no es una entrega completa): El manual compartido debe asegurar compromisos comprensibles sin imponer una voz supuestamente neutra. Mantendremos tratamientos coherentes con la relación y explicitaremos fechas cuando una expresión temporal pueda orientar expectativas distintas. Ante un malentendido, pediremos una paráfrasis y confirmaremos la acción acordada. No atribuiremos un uso a una región a partir de un solo intercambio. Para trabajar percepción fonética, seleccionaremos muestras reales autorizadas y verificables; las voces sintéticas disponibles sirven para seguir el contenido, pero no certifican variedad regional. La diversidad deja de parecer un problema cuando distinguimos identidad lingüística e información operativa."
-    ],
-    "checklist": [
-      "La tesis tiene alcance preciso y pruebas identificables.",
-      "No convierto una propuesta en decisión ni una inferencia en dato.",
-      "El registro responde al destinatario y no borra condiciones.",
-      "La cohesión conserva referentes y voces sin repeticiones inútiles.",
-      "La revisión explica qué cambia para quien lee."
-    ],
-    "words": [
-      450,
-      600
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no un guion leído. La grabación, si la usas, permanece local; el navegador no califica pronunciación ni calidad oral.",
-    "tasks": [
-      {
-        "title": "Exposición situada",
-        "prompt": "Media entre una supervisora que exige neutralidad y una agente que se siente corregida por su origen. Propón una pauta comprobable y reformula un plazo sin imitar ningún acento.",
-        "prep": [
-          "Anota tesis, dos pruebas, una objeción y una reserva.",
-          "Marca dos focos prosódicos y un punto donde cambiarás de registro."
-        ],
-        "seconds": 240,
-        "model": "El manual compartido debe asegurar compromisos comprensibles sin imponer una voz supuestamente neutra. Mantendremos tratamientos coherentes con la relación y explicitaremos fechas cuando una expresión temporal pueda orientar expectativas distintas. Ante un malentendido, pediremos una paráfrasis y confirmaremos la acción acordada. No atribuiremos un uso a una región a partir de un solo intercambio. Para trabajar percepción fonética, seleccionaremos muestras reales autorizadas y verificables; las voces sintéticas disponibles sirven para seguir el contenido, pero no certifican variedad regional. La diversidad deja de parecer un problema cuando distinguimos identidad lingüística e información operativa.",
-        "selfCheck": [
-          "La condición principal se oye con claridad.",
-          "Distingo mi interpretación de las voces citadas.",
-          "Puedo reparar una frase sin abandonar el argumento."
-        ]
-      },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "Tu interlocutor sostiene: «Un tratamiento único resuelve todos los malentendidos.». Responde sin caricaturizarlo, formula dos preguntas de seguimiento y pide que reformule tu condición principal. Después resume para una persona que no conoce el expediente de Entender sin uniformar.",
-        "prep": [
-          "Prepara una concesión real y una corrección de alcance.",
-          "Anticipa qué término deberás explicar sin jerga."
-        ],
-        "seconds": 240,
-        "model": "La comunicación compartida requiere precisión contextual y respeto por la variación. El equipo decide fijar horas o fechas en compromisos de entrega.",
-        "selfCheck": [
-          "La respuesta atiende la preocupación, no solo corrige la forma.",
-          "La versión breve conserva el límite decisivo.",
-          "Adapto el ritmo después de la interrupción."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te espera con una tarjeta de contraste: lleva tu dossier y una decisión lingüística que quieras poner a prueba con tu docente.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu decisión más discutible sobre Entender sin uniformar y pide un contraejemplo que la ponga a prueba.",
-        "phrases": [
-          "Mi lectura se apoya en…",
-          "Cambiaría de interpretación si…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica el límite «El equipo decide fijar horas o fechas en compromisos de entrega.» a otro público sin rebajar su importancia.",
-        "phrases": [
-          "En otros términos…",
-          "Esta versión conserva…"
-        ]
-      },
-      {
-        "move": "Negocia",
-        "task": "Responde a la objeción «Un solo intercambio permite clasificar el habla de un país.» y acuerda una formulación que ambos puedan defender.",
-        "phrases": [
-          "Reconozco ese punto; mi reserva es…",
-          "Podemos dejar constancia de…"
-        ]
-      }
+  writing: {
+    task: "Redacta una crónica con tono irónico para la revista cultural (400–520 palabras) sobre una promesa pública que no se cumplió: una obra, un servicio, un festival. Debe contar los hechos con perífrasis de sorpresa, insistencia, distancia e ironía, reconocer al menos algo positivo y terminar con un párrafo neutro de información práctica.",
+    context: "Los lectores de la revista aprecian el humor, pero también comprueban los datos. La ironía tiene que apoyarse en hechos verificables y no puede convertirse en insulto. Puedes usar el caso del teatro o inventar otro con la misma lógica.",
+    steps: [
+      "Haz una lista de hechos comprobables (fechas, anuncios, cifras) y decide qué perífrasis usarás para presentar cada uno.",
+      "Decide el orden: promesa inicial, cómo se incumplió, momento culminante, reconocimiento de lo positivo e información práctica final.",
+      "Redacta sin copiar el modelo. Usa al menos seis perífrasis distintas de las cuatro familias.",
+      "Revisa la crónica con la lista de control: corrige los tiempos de «ir y», el modo de «hacer como que» y la concordancia de «dar por», y comprueba que el último párrafo es neutro.",
     ],
-    "bring": "El dossier, una versión revisada, notas de escucha y una grabación local opcional; no se necesita subir audio."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Balance de Entender sin uniformar: ¿qué conclusión conserva el alcance?",
-        "options": [
-          "La comunicación compartida requiere precisión contextual y respeto por la variación.",
-          "Un tratamiento único resuelve todos los malentendidos."
-        ],
-        "answer": 0,
-        "why": "Relaciona el texto principal con el documento complementario."
-      },
-      {
-        "type": "choice",
-        "q": "En una revisión final de Entender sin uniformar, ¿qué afirmación debe rechazarse?",
-        "options": [
-          "El equipo decide fijar horas o fechas en compromisos de entrega.",
-          "La síntesis reproduce de forma verificada seis variedades."
-        ],
-        "answer": 1,
-        "why": "La primera opción contradice la condición explícita."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha esta síntesis de Entender sin uniformar. ¿Qué interpretación mantiene?",
-        "options": [
-          "Un solo intercambio permite clasificar el habla de un país.",
-          "Una sola interacción no basta para atribuir un uso a toda una región."
-        ],
-        "answer": 1,
-        "why": "La relación expresada limita una generalización.",
-        "audio": "Una sola interacción no basta para atribuir un uso a toda una región.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "En «Entender sin uniformar», ¿qué unidad expresa «ajuste al interlocutor sin borrar la voz propia»? ___ .",
-        "answers": [
-          [
-            "acomodación"
-          ]
-        ],
-        "hint": "ajuste al interlocutor sin borrar la voz propia",
-        "why": "Recupera la unidad a partir de su función, no de una traducción."
-      },
-      {
-        "type": "gap",
-        "q": "Para nombrar «forma de dirigirse a una persona» en este expediente usamos ___ .",
-        "answers": [
-          [
-            "tratamiento"
-          ]
-        ],
-        "why": "La distinción léxica debe conservarse al mediar."
-      },
-      {
-        "type": "error",
-        "sentence": "La supervisora insistió que todos usaran un único tratamiento.",
-        "answers": [
-          "La supervisora insistió en que todos usaran un único tratamiento."
-        ],
-        "why": "Insistir exige en ante una subordinada sustantiva."
-      },
-      {
-        "type": "transform",
-        "source": "Ya lo revisamos. La revisión empezará mañana a las nueve.",
-        "instruction": "Escribe una sola frase que elimine la lectura de tarea terminada; empieza «Lo revisaremos…».",
-        "answers": [
-          "Lo revisaremos mañana a las nueve."
-        ],
-        "why": "Reparar un compromiso temporal: conserva la relación solicitada y compara qué se hace explícito."
-      },
-      {
-        "type": "open",
-        "prompt": "Cierre de «Entender sin uniformar»: escribe 90–120 palabras para una audiencia nueva. Incluye tesis, condición y una pregunta pendiente; justifica una elección de registro.",
-        "model": "El manual compartido debe asegurar compromisos comprensibles sin imponer una voz supuestamente neutra. Mantendremos tratamientos coherentes con la relación y explicitaremos fechas cuando una expresión temporal pueda orientar expectativas distintas. Ante un malentendido, pediremos una paráfrasis y confirmaremos la acción acordada. No atribuiremos un uso a una región a partir de un solo intercambio. Para trabajar percepción fonética, seleccionaremos muestras reales autorizadas y verificables; las voces sintéticas disponibles sirven para seguir el contenido, pero no certifican variedad regional. La diversidad deja de parecer un problema cuando distinguimos identidad lingüística e información operativa.",
-        "checklist": [
-          "Conservo la reserva decisiva.",
-          "Atribuyo una fuente y delimito mi inferencia.",
-          "El destinatario puede identificar el siguiente paso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Interpreto variación, tratamiento y acomodación responsable en fuentes originales.",
-      "Puedo explicar por qué «Un tratamiento único resuelve todos los malentendidos.» excede la evidencia.",
-      "Defiendo y reviso un dossier escrito y oral con destinatario concreto."
+    useLanguage: [
+      "iba a + infinitivo, según…",
+      "llegó a + infinitivo; acabó + gerundio",
+      "no hacía más que…; no deja de ser curioso que…",
+      "anda diciendo que…; hizo como que…",
+      "viene a reconocer que…; resulta que…",
+      "será / sería…, pero…; no vaya a ser que…",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye sin mirar el límite: El equipo decide fijar horas o fechas en compromisos de entrega.",
-      "Dentro de una semana, reescribe el cierre para otro público y contrástalo con tu versión inicial.",
-      "En clase, pide una objeción a «La comunicación compartida requiere precisión contextual y respeto por la variación.» y registra qué cambiarías."
-    ]
-  }
+    model: [
+      "Modelo parcial de apertura (no es una entrega completa): El tren ligero entre San José y Cartago iba a funcionar «a finales de 2024», según la presentación oficial, que incluía un video con música épica y vagones relucientes. Llegamos a ver los vagones, eso sí: estuvieron dos años aparcados en un patio de Pavas, cubiertos con una lona azul. Mientras tanto, la empresa adjudicataria no hacía más que pedir prórrogas y el ministerio, cada vez que alguien preguntaba, hacía como que la pregunta era sobre otro proyecto.",
+    ],
+    checklist: [
+      "Uso al menos seis perífrasis de las cuatro familias.",
+      "Los dos verbos de «ir y» coinciden en tiempo y persona.",
+      "«Hacer como que» va con indicativo y «dar por» concuerda.",
+      "Cada ironía se apoya en un hecho comprobable.",
+      "Reconozco algo positivo y el párrafo final es neutro.",
+    ],
+    words: [400, 520],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un guion leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Contar una anécdota con valoración",
+        prompt: "Cuenta en unos cuatro minutos una anécdota real o inventada en la que algo salió muy distinto de lo previsto (un viaje, una mudanza, un trámite). Usa perífrasis de sorpresa, insistencia, distancia e ironía y termina con una valoración.",
+        prep: [
+          "Anota los hechos en orden y marca dónde irá cada perífrasis.",
+          "Prepara un final con un futuro concesivo.",
+        ],
+        seconds: 240,
+        model: "La mudanza iba a ser rapidísima, según mi hermano. Él lo tenía todo calculado: un camión, dos amigos y tres horas. Pues bien, el sábado a las ocho de la mañana, va y llama el del camión para decir que se le había roto el motor. Acabamos llevando el sofá entre cuatro por la calle…",
+        selfCheck: [
+          "Uso al menos cinco perífrasis distintas.",
+          "No hago pausa dentro de «va y» ni de «no hacía más que».",
+          "La entonación marca la ironía en «iba a».",
+        ],
+      },
+      {
+        title: "Debatir con el editor",
+        prompt: "El editor te pide que quites de tu crónica la frase «El viceministro hizo como que no oía la pregunta», porque «parece una acusación». Defiende tu frase o propón una alternativa: hazle dos preguntas, explica en qué hecho se apoya y negocia una solución.",
+        prep: [
+          "Piensa qué pruebas tienes del hecho (grabación, testigos).",
+          "Prepara una alternativa menos marcada por si no lo convences.",
+        ],
+        seconds: 150,
+        model: "Entiendo la preocupación. ¿Te preocupa que parezca que le leo la mente? ¿O que el ministerio se queje? La frase se apoya en la grabación: le preguntaron por el sobrecosto y empezó a hablar del vestíbulo. Si prefieres, puedo escribir «no respondió a la pregunta y pasó a hablar del vestíbulo». Pierde algo de gracia, pero dice lo mismo.",
+        selfCheck: [
+          "Hago al menos dos preguntas.",
+          "Distingo el hecho de mi interpretación.",
+          "Propongo una alternativa concreta.",
+        ],
+      },
+      {
+        title: "De la crónica a la radio",
+        prompt: "Lee en voz alta el primer párrafo de tu crónica y después conviértelo oralmente en una noticia neutra de treinta segundos para la radio.",
+        prep: [
+          "Marca las perífrasis que vas a eliminar en la versión de radio.",
+          "Prepara un verbo neutro para cada una.",
+        ],
+        seconds: 100,
+        selfCheck: [
+          "En la lectura marco la ironía con la entonación.",
+          "En la versión de radio no queda ninguna valoración.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu crónica y una duda concreta. Estas tarjetas te ayudan a aprovechar el tiempo con tu profesor.",
+    cards: [
+      {
+        move: "Cuenta",
+        task: "Cuenta a tu profesor una anécdota breve con «ir y», «llegar a» y «acabar + gerundio», y pídele que te diga si el tono es el adecuado.",
+        phrases: ["Y va y…", "Llegó a…", "Acabamos…"],
+      },
+      {
+        move: "Pregunta",
+        task: "Pregúntale si en su variedad se dice «coger y», «agarrar y» o solo «ir y», y en qué situaciones.",
+        phrases: ["¿Tú dirías «agarró y se fue»?", "¿Te suena coloquial o vulgar?"],
+      },
+      {
+        move: "Neutraliza",
+        task: "Lee una frase irónica de tu crónica y pide a tu profesor que la convierta en neutra; después compara su versión con la tuya.",
+        phrases: ["En neutro, yo diría…", "¿Se pierde algún dato?"],
+      },
+      {
+        move: "Interpreta",
+        task: "Lleva un titular o un tuit real con ironía y explica qué perífrasis o qué tiempo verbal la produce.",
+        phrases: ["La ironía está en…", "Si quitamos…, queda…"],
+      },
+    ],
+    bring: "Tu crónica revisada, la versión neutra del primer párrafo y, si quieres, la grabación de tu anécdota.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "«El presentador llegó a confundir el nombre de la obra.» ¿Qué expresa «llegó a confundir»?",
+        options: [
+          "Que el presentador llegó tarde.",
+          "Que confundirlo fue el extremo de una serie de errores.",
+          "Que estuvo a punto de confundirlo, pero no lo hizo.",
+        ],
+        answer: 1,
+        why: "«Llegar a» sitúa el hecho en el extremo de una escala.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué frase está bien construida?",
+        options: [
+          "En el ensayo, la directora fue y se enfada con todos.",
+          "La directora hizo como que no estuviera enfadada.",
+          "La directora dio por concluida la reunión.",
+        ],
+        answer: 2,
+        why: "Las otras mezclan tiempos en «ir y» o usan subjuntivo con «hacer como que».",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase. ¿Qué actitud transmite quien habla?",
+        options: [
+          "Crítica irónica hacia un plan que no se cumplió.",
+          "Admiración por la rapidez del proyecto.",
+          "Duda sobre si el proyecto existe.",
+        ],
+        answer: 0,
+        why: "«Iba a estar listo» atribuido a otro y contrastado con la realidad: ironía.",
+        audio: "El auditorio iba a estar listo en un año, según el gobernador. Llevamos cuatro.",
+        voice: "es-MX-f",
+      },
+      {
+        type: "gap",
+        q: "Cuando preguntaron por el presupuesto, el gerente hizo como que no ___ nada. [saber]",
+        answers: [["sabía"]],
+        hint: "«Hacer como que» describe una simulación: va con indicativo.",
+        why: "Indicativo: «hizo como que no sabía».",
+      },
+      {
+        type: "gap",
+        q: "En la última función, el actor principal va y ___ el texto en mitad del monólogo. [olvidar]",
+        answers: [["olvida"]],
+        hint: "El segundo verbo coincide en tiempo y persona con «va».",
+        why: "«Va y olvida»: los dos en presente.",
+      },
+      {
+        type: "transform",
+        source: "El nuevo sistema de venta de entradas será muy moderno, pero se cae cada viernes.",
+        instruction: "Convierte la frase en información neutra, sin futuro concesivo ni valoración, manteniendo el dato del fallo.",
+        answers: ["El sistema de venta de entradas presenta fallos los viernes.", "El nuevo sistema de venta de entradas falla los viernes."],
+        why: "Se elimina la concesión irónica y queda el dato.",
+      },
+      {
+        type: "error",
+        sentence: "La compañía dio por terminado la temporada en noviembre.",
+        answers: ["La compañía dio por terminada la temporada en noviembre."],
+        why: "El participio concuerda con «la temporada».",
+      },
+      {
+        type: "error",
+        sentence: "Nota de agenda: «Por fin, y tras mil promesas, reabre la Sala Garbo».",
+        answers: ["Nota de agenda: «Reabre la Sala Garbo tras dos años de obras».", "Nota de agenda: «La Sala Garbo reabre tras dos años de obras»."],
+        why: "En una nota neutra no caben «por fin» ni «tras mil promesas».",
+      },
+      {
+        type: "order",
+        words: ["No", "deja", "de", "ser", "curioso", "que", "nadie", "haya", "dimitido."],
+        why: "Valoración irónica atenuada con «no deja de ser».",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 80–100 palabras a un compañero de clase la diferencia entre «iba a abrir en marzo» dicho por el propio responsable del proyecto y la misma frase en una crónica, seguida de «según el ministerio». Incluye un ejemplo de cada uso.",
+        model: "Dicha por el responsable, «iba a abrir en marzo» suele ser una explicación: reconoce un plan que no se cumplió. «Iba a abrir en marzo, pero tuvimos un problema con los permisos». En una crónica, seguida de «según el ministerio», la misma forma se vuelve irónica: quien escribe atribuye el plan a otro y deja que el lector compare con lo que ocurrió. «El teatro iba a abrir en marzo, según el ministerio. Abrió tres años después». La ironía nace de la atribución y del contraste.",
+        checklist: [
+          "Explico el valor de plan no cumplido.",
+          "Explico cómo la atribución crea ironía.",
+          "Doy un ejemplo de cada uso.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Interpreto y uso perífrasis de sorpresa y desenlace: ir y / agarrar y + verbo, llegar a, acabar + gerundio.",
+      "Interpreto y uso perífrasis de insistencia y crítica: no hacer más que, no dejar de, andar + gerundio, tener dicho.",
+      "Uso venir a decir, dar por + participio, hacer como que + indicativo y resulta que para tomar distancia o reformular.",
+      "Construyo ironía con «iba a», el futuro y el condicional concesivos y «no vaya a ser que», y paso un texto valorativo a uno neutro.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna derecha de la tabla «De la crónica irónica a la nota neutra» y reescribe cada frase.",
+      "Dentro de una semana, busca una columna de opinión real y subraya tres perífrasis de esta semana.",
+      "En la próxima clase, lee tu crónica y pide a tu profesor que señale dónde la ironía funciona y dónde no.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/perifrasis-discursivas-de-ironia-y-distanciamiento", label: "Clase: Perífrasis discursivas de ironía y distanciamiento" },
+  ],
 };

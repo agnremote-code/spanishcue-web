@@ -14,28 +14,19 @@ function sources(dir){return readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.
 test('Autoestudio operational Spanish uses tú across all UI and progress/share surfaces',()=>{
  for(const file of sources('app/autoestudio')) assert.equal(readFileSync(file,'utf8').match(voseo),null,file);
 });
-test('120 modules retain international main paradigms and intentional regional contrasts',()=>{
+test('120 modules keep tú separate from regional voseo and full paradigms list vosotros and ustedes',()=>{
  assert.equal(all.length,120);
  for(const mod of all) for(const part of mod.theory.parts){
   const table=part.table;
-  if(table) assert.ok(!JSON.stringify(table).includes('tú / vos'),`${mod.id}: separate tú from regional voseo`);
+  if(!table) continue;
+  assert.ok(!JSON.stringify(table).includes('tú / vos'),`${mod.id}: separate tú from regional voseo`);
+  const head=table.head.join(' | ');
+  if(/\byo\b/.test(head)&&/\btú\b/.test(head)&&/nosotros/.test(head)) assert.match(head,/vosotros/,`${mod.id}: full international paradigm`);
  }
- const table=modulesByLevel.a1[13].theory.parts[2].table;
- assert.deepEqual(table.head,['Infinitivo','yo','tú','él, ella, usted','nosotros, nosotras','vosotros, vosotras','ellos, ellas, ustedes']);
- assert.deepEqual(table.rows.map(row=>row[5]),['hacéis','ponéis','traéis','salís','conocéis','sabéis']);
- assert.ok(JSON.stringify(modulesByLevel.a1[10]).includes('Vos querés, vos podés: el voseo en Centroamérica'));
- assert.ok(JSON.stringify(modulesByLevel.b2[18]).includes('Vos tenés la maleta'));
 });
-test('ordinary synthetic dialogues and their quiz clips share corrected text',()=>{
- for(const [level,week,phrases] of [['b2',18,['sigue con tu idea']],['c1',6,['Mira, yo no digo','déjame aclarar']],['c1',8,['Tienes razón en ese punto']]]){
-  const mod=modulesByLevel[level][week-1];
-  for(const phrase of phrases){
-   const line=mod.listening.script.find(line=>line.text.includes(phrase));
-   assert.ok(line,`${mod.id}: ${phrase}`);
-   assert.ok(moduleClips(mod).some(clip=>clip.text===line.text),`${mod.id}: exact synthesized transcript`);
-  }
+test('every synthetic dialogue line is synthesized with exactly the transcript text',()=>{
+ for(const mod of all){
+  const clips=new Set(moduleClips(mod).map(clip=>clip.text));
+  for(const line of mod.listening.script) assert.ok(clips.has(line.text),`${mod.id}: ${line.text.slice(0,40)}`);
  }
- const mod=modulesByLevel.b2[17];
- const script=mod.listening.script.find(line=>line.text.includes('sigue con tu idea')).text;
- assert.ok(mod.quiz.items.some(item=>item.audio===script));
 });

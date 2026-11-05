@@ -1,1029 +1,860 @@
 import type { Module } from "../../types";
 
+/**
+ * C1 · semana 20 · Checkpoint. Autoestudio espejo de G203 (oraciones
+ * restrictivas, explicativas y puntuación) y G204 (revisión argumentativa C1:
+ * coherencia, cohesión y matiz), con integración de las semanas 16 a 19.
+ * Repaso autónomo con la columna de un estudiante sobre el horario de una
+ * biblioteca universitaria ficticia de Córdoba. Audio mediante síntesis; sin
+ * acreditación regional.
+ */
 export const c1w20: Module = {
-  "id": "c1-20",
-  "level": "c1",
-  "week": 20,
-  "kind": "checkpoint",
-  "title": "Balance final: una decisión defendible",
-  "subtitle": "Integración final: precisión, voz y responsabilidad",
-  "stop": {
-    "place": "Córdoba",
-    "country": "Argentina"
+  id: "c1-20",
+  level: "c1",
+  week: 20,
+  kind: "checkpoint",
+  title: "Los estudiantes, que trabajan, estudian de noche",
+  subtitle: "Repaso de las relativas especificativas y explicativas con su puntuación, revisión de un texto argumentativo completo e integración de las semanas 16 a 19",
+  stop: {
+    place: "Córdoba",
+    country: "Argentina",
   },
-  "minutes": 150,
-  "newObjectives": [
-    "c1.rev.checkpoint-final",
-    "c1.spk.ponencia-final"
+  minutes: 150,
+  newObjectives: [
+    "c1.gram.g203",
+    "c1.gram.g204",
+    "c1.voc.w20-biblioteca-universidad",
+    "c1.pron.w20-relativa-pausa",
+    "c1.lis.w20-revision-columna",
+    "c1.read.w20-columna-biblioteca",
+    "c1.wri.w20-columna-revisada",
+    "c1.spk.w20-debate-radio",
+    "c1.fun.w20-defender-con-matiz",
+    "c1.disc.w20-cohesion-referencial",
+    "c1.rev.w20-semanas-16-20",
   ],
-  "reviewObjectives": [
-    "c1.gram.sustantivas-matices",
-    "c1.disc.estructura-informativa",
-    "c1.gram.conectores-matices",
-    "c1.disc.implicaturas",
-    "c1.gram.atenuacion-gramatical",
-    "c1.disc.sintesis",
-    "c1.disc.contraargumentacion",
-    "c1.voc.registro-lexico",
-    "c1.gram.regimen-preposicional",
-    "c1.lis.notas-jerarquia",
-    "c1.gram.orden-palabras",
-    "c1.voc.medios-digitales",
-    "c1.pron.dislocacion-prosodia",
-    "c1.read.reportaje-largo",
-    "c1.fun.destacar-retomar",
-    "c1.gram.tiempos-literarios",
-    "c1.voc.literatura",
-    "c1.pron.lectura-literaria",
-    "c1.read.fragmento-novela",
-    "c1.wri.relato-estilo",
-    "c1.fun.mediacion-conflicto",
-    "c1.disc.necesidades-condiciones",
-    "c1.pron.confirmacion-mediadora",
-    "c1.wri.doble-audiencia",
-    "c1.disc.coherencia-editorial"
-  ],
-  "prerequisites": [
-    "c1-19"
-  ],
-  "goal": {
-    "canDo": "Puedo elaborar un informe final de 320–400 palabras que integre expediente y reunión, justifique una decisión, responda a dos objeciones y añada un mensaje vecinal de 100 palabras con los mismos límites.",
-    "steps": [
-      "Examina integración final: precisión, voz y responsabilidad en un caso con intereses distintos.",
-      "Escucha antes de leer la transcripción y distingue tesis, reservas y compromisos.",
-      "Contrasta la lectura y el audio; prepara una producción independiente y revísala.",
-      "Lleva a clase una objeción y una reformulación justificadas."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja con material original. Las situaciones y los datos del dossier son ficticios y se utilizan para analizar decisiones comunicativas.",
-    "parts": [
-      {
-        "heading": "Integración final: precisión, voz y responsabilidad",
-        "body": [
-          "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo.",
-          "En «Balance final: una decisión defendible», observa la diferencia entre estas formulaciones: El archivo, lo construiremos por etapas. / Comprendemos que las familias quieran participar en la descripción. Explica qué relación cambia y qué decisión permite tomar al destinatario."
-        ],
-        "examples": [
-          {
-            "es": "El archivo, lo construiremos por etapas."
-          },
-          {
-            "es": "Comprendemos que las familias quieran participar en la descripción."
-          },
-          {
-            "es": "La digitalización amplía el acceso, pero no sustituye toda conservación."
-          },
-          {
-            "es": "De aprobarse la siguiente fase, se publicarán costes y responsables."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "De aprobarse las fases, se publicará los costes.",
-            "right": "De aprobarse las fases, se publicarán los costes.",
-            "why": "En la pasiva refleja el verbo concuerda con costes."
-          }
-        ]
-      },
-      {
-        "heading": "Del análisis a la intervención",
-        "body": [
-          "La competencia que este expediente pone a prueba consiste en sostener varias operaciones a la vez. Hay que inferir una postura sin inventar intenciones, reformular términos técnicos sin modificar su alcance, conceder una objeción sin abandonar una tesis razonada y adaptar el registro a públicos diferentes. También hay que escuchar lo que una pausa o un cambio de foco vuelve relevante. La decisión final no será perfecta ni definitiva. Será defendible si sus razones, límites y condiciones de revisión quedan disponibles para quienes deberán vivir con sus efectos y para quienes, más adelante, continúen escribiendo la historia del lugar.",
-          "La producción de esta semana exige una elección concreta: Elabora un informe final de 320–400 palabras que integre expediente y reunión, justifique una decisión, responda a dos objeciones y añada un mensaje vecinal de 100 palabras con los mismos límites. Antes de escribir, separa la información atribuible a las fuentes de tu propuesta; después comprueba que la forma elegida conserva esa distinción."
-        ],
-        "examples": [
-          {
-            "es": "El archivo, lo construiremos por etapas.",
-            "note": "Tematiza el archivo y recupéralo con clítico."
-          },
-          {
-            "es": "Comprendemos que las familias quieran participar.",
-            "note": "Expresa aceptación valorativa con comprender."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo.",
-    "exercises": [
-      {
-        "id": "g-lagunas",
-        "type": "gap",
-        "prompt": "Completa formas decisivas en «Balance final: una decisión defendible»; explica qué relación mantienen. Utiliza únicamente el banco; una forma puede reutilizarse.",
-        "items": [
-          {
-            "q": "El archivo, ___ construiremos por etapas.",
-            "answers": [
-              [
-                "lo"
-              ]
-            ],
-            "why": "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo."
-          },
-          {
-            "q": "Comprendemos que las familias ___ participar en la descripción.",
-            "answers": [
-              [
-                "quieran"
-              ]
-            ],
-            "why": "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo."
-          },
-          {
-            "q": "La digitalización amplía el acceso, pero no ___ toda conservación.",
-            "answers": [
-              [
-                "sustituye"
-              ]
-            ],
-            "why": "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo."
-          }
-        ],
-        "bank": [
-          "lo",
-          "quieran",
-          "sustituye"
-        ]
-      },
-      {
-        "id": "g-transformacion",
-        "type": "open",
-        "prompt": "Reformula sin perder alcance: Integración final: precisión, voz y responsabilidad. Esta reformulación se revisa por sentido y forma, no por coincidencia literal con el modelo.",
-        "items": [
-          {
-            "prompt": "Tematiza el archivo y recupéralo con clítico. Texto de partida: «Construiremos el archivo por etapas.»",
-            "model": "El archivo, lo construiremos por etapas.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Usa una condición formal con de. Texto de partida: «Si se aprueba la fase, se publicarán los costes.»",
-            "model": "De aprobarse la fase, se publicarán los costes.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Expresa aceptación valorativa con comprender. Texto de partida: «Las familias quieren participar y lo comprendemos.»",
-            "model": "Comprendemos que las familias quieran participar.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones y connotaciones; reutiliza al menos cuatro en tu producción sin forzarlas.",
-    "groups": [
-      {
-        "title": "Integración final: precisión, voz y responsabilidad",
-        "items": [
-          {
-            "es": "conservación por fases",
-            "note": "protección organizada por etapas"
-          },
-          {
-            "es": "descripción participativa",
-            "note": "registro que admite voces implicadas"
-          },
-          {
-            "es": "autorización diferenciada",
-            "note": "permiso distinto para cada uso"
-          },
-          {
-            "es": "memoria situada",
-            "note": "recuerdo vinculado con una experiencia"
-          },
-          {
-            "es": "consulta acompañada",
-            "note": "acceso con apoyo especializado"
-          },
-          {
-            "es": "mantenimiento digital",
-            "note": "cuidado continuado de copias y sistemas"
-          },
-          {
-            "es": "representación suficiente",
-            "note": "presencia adecuada de grupos relevantes"
-          },
-          {
-            "es": "decisión defendible",
-            "note": "elección con razones examinables"
-          },
-          {
-            "es": "revisión anual",
-            "note": "comprobación periódica de un año"
-          },
-          {
-            "es": "atribución responsable",
-            "note": "identificación fiel de voces y afirmaciones"
-          }
-        ]
-      }
+  reviewObjectives: ["c1.gram.g196","c1.voc.w16-mercado-barrio","c1.pron.w16-melodia-retorica","c1.lis.w16-radio-comunitaria","c1.read.w16-columna-mercado","c1.wri.w16-columna-vecinal","c1.spk.w16-alegato-asamblea","c1.fun.w16-persuadir-preguntando","c1.disc.w16-cierre-retorico","c1.gram.g197","c1.gram.g198","c1.voc.w17-proyecto-cultural","c1.pron.w17-inciso-tono-bajo","c1.lis.w17-revision-memoria","c1.read.w17-memoria-escuela","c1.wri.w17-solicitud-sala","c1.spk.w17-presentacion-comite","c1.fun.w17-solicitar-con-cortesia","c1.disc.w17-voz-institucional","c1.gram.g199","c1.gram.g200","c1.voc.w18-cuadrilla-txoko","c1.pron.w18-frase-suspendida","c1.lis.w18-anecdota-cena","c1.read.w18-relato-sobremesa","c1.wri.w18-blog-anecdota","c1.spk.w18-contar-anecdota","c1.fun.w18-contar-y-reaccionar","c1.disc.w18-ritmo-narrativo","c1.gram.g201","c1.gram.g202","c1.voc.w19-archivo-sociedad","c1.pron.w19-acento-re-ra","c1.lis.w19-archiveras","c1.read.w19-papeles-camelia","c1.wri.w19-panel-exposicion","c1.spk.w19-visita-archivo","c1.fun.w19-explicar-fuente","c1.disc.w19-citar-y-glosar"],
+  prerequisites: ["c1-19"],
+  goal: {
+    canDo: "Puedo puntuar y elegir el relativo de un texto cuidado sin ambigüedad, revisar un texto argumentativo completo para que tenga tesis clara, cohesión y afirmaciones bien medidas, e integrar en él lo repasado en las semanas 16 a 19.",
+    steps: [
+      "Repasa en la teoría la diferencia entre relativas especificativas y explicativas, las herramientas de revisión argumentativa y el mapa de las semanas 16 a 19.",
+      "Practica la puntuación de las relativas, la elección del relativo, la cohesión y el matiz, y recupera cada clase del bloque.",
+      "Escucha a una editora revisar con un estudiante su columna y lee la versión publicada.",
+      "Revisa y reescribe una columna argumentativa con la lista de control y defiende tu postura en un debate de radio.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones de «Balance final: una decisión defendible» con su sentido contextual.",
-        "pairs": [
-          {
-            "left": "conservación por fases",
-            "right": "protección organizada por etapas"
-          },
-          {
-            "left": "descripción participativa",
-            "right": "registro que admite voces implicadas"
-          },
-          {
-            "left": "autorización diferenciada",
-            "right": "permiso distinto para cada uso"
-          },
-          {
-            "left": "memoria situada",
-            "right": "recuerdo vinculado con una experiencia"
-          },
-          {
-            "left": "consulta acompañada",
-            "right": "acceso con apoyo especializado"
-          },
-          {
-            "left": "mantenimiento digital",
-            "right": "cuidado continuado de copias y sistemas"
-          },
-          {
-            "left": "representación suficiente",
-            "right": "presencia adecuada de grupos relevantes"
-          },
-          {
-            "left": "decisión defendible",
-            "right": "elección con razones examinables"
-          },
-          {
-            "left": "revisión anual",
-            "right": "comprobación periódica de un año"
-          },
-          {
-            "left": "atribución responsable",
-            "right": "identificación fiel de voces y afirmaciones"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Prosodia de una ponencia con reservas",
-    "explanation": [
-      "Jerarquiza tesis, objeciones y conclusión mediante ritmo y pausas. Señala con claridad las condiciones pendientes y evita un cierre triunfal que contradiga el carácter provisional del acuerdo.",
-      "La reproducción disponible utiliza síntesis de voz. La percepción combina forma y contexto; compara tu grabación por inteligibilidad y efecto comunicativo, sin esperar una calificación automática del acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "Esta semana cierra el cuarto bloque de C1 y el nivel. Las dos clases nuevas son de escritura cuidada: cómo una coma decide a quién te refieres en una relativa y cómo se revisa un texto argumentativo entero. La segunda no trae estructuras nuevas, sino que reúne las que ya tienes; por eso encontrarás al final un mapa de las clases de las semanas 16 a 19. El escenario es Córdoba, ciudad universitaria, y una columna que pide abrir de noche la biblioteca de una facultad.",
+    parts: [
       {
-        "es": "El acuerdo es parcial, pero sus razones y límites pueden explicarse."
-      }
-    ],
-    "perceive": {
-      "id": "f-percepcion",
-      "type": "listen",
-      "prompt": "Escucha la formulación exacta en prosodia de una ponencia con reservas; identifica qué relación conserva antes de ensayar otra lectura.",
-      "items": [
-        {
-          "audio": "El archivo, lo construiremos por etapas.",
-          "voice": "es-ES-f",
-          "q": "¿Qué formulación abre el contraste oral de «Balance final: una decisión defendible»?",
-          "options": [
-            "La digitalización amplía el acceso, pero no sustituye toda conservación.",
-            "El archivo, lo construiremos por etapas.",
-            "Comprendemos que las familias quieran participar en la descripción."
+        heading: "Especificativas y explicativas: la coma decide a quién te refieres",
+        body: [
+          "Una relativa especificativa, sin comas, restringe el antecedente: «Los estudiantes que trabajan estudian de noche» habla solo de una parte de los estudiantes, los que trabajan. Una explicativa, entre comas, añade un dato sobre todo el antecedente: «Los estudiantes, que trabajan, estudian de noche» afirma que todos trabajan. La explicativa lleva dos comas, y la segunda es la que más se olvida.",
+          "Si el antecedente es único o es un nombre propio, la relativa suele ser explicativa: «La Biblioteca Mayor, que abrió en 1613, …». Escribir «Mi hermana que vive en Rosario» sin comas implica que tienes más de una hermana.",
+          "Cada tipo admite relativos distintos. «Quien» y «el cual» sin preposición solo aparecen en explicativas: «la bibliotecaria, quien / la cual nos atendió, …», pero no «*la bibliotecaria quien nos atendió». El subjuntivo aparece normalmente en especificativas, cuando el antecedente no está identificado: «Buscamos una sala que abra de noche». Para retomar toda una oración se usa «lo que» o «lo cual», siempre tras coma: «La sala cierra a las ocho, lo cual obliga a muchos a estudiar en bares».",
+          "En la escritura cuidada, la preposición que exige el verbo va delante del relativo, con artículo: «la sala en la que estudio», «la beca a la que me presenté», «la profesora con la que hablé». Omitirla («*la sala que estudio») es frecuente al hablar, pero se evita al escribir. Después de una preposición larga o de una locución se prefiere «el cual»: «el reglamento según el cual…», «un permiso sin el cual…», «a raíz de lo cual». «Cuyo» concuerda con lo poseído, no con el poseedor: «la facultad, cuyas salas cierran a las ocho». Con lugar, tiempo y modo: «la sala donde / en la que», «el año en que» (no «*el año donde»), «la manera en que / como». Tras un superlativo o «el único que», indicativo y subjuntivo son correctos: «la mejor sala que hay / haya en la ciudad».",
+        ],
+        table: {
+          caption: "Con comas o sin comas",
+          head: ["Frase", "Tipo", "Qué se entiende"],
+          rows: [
+            ["Las salas que tienen enchufes se llenan primero.", "especificativa", "solo algunas salas tienen enchufes"],
+            ["Las salas, que tienen enchufes, se llenan primero.", "explicativa", "todas las salas tienen enchufes"],
+            ["La directora, que asumió en marzo, apoya la idea.", "explicativa", "hay una sola directora"],
+            ["Buscamos un lugar que esté abierto a medianoche.", "especificativa con subjuntivo", "no sabemos si existe"],
+            ["Cierran a las ocho, lo cual perjudica a quienes trabajan.", "relativo neutro", "«lo cual» retoma toda la oración"],
           ],
-          "answer": 1,
-          "why": "El archivo, lo construiremos por etapas."
         },
-        {
-          "audio": "De aprobarse la siguiente fase, se publicarán costes y responsables.",
-          "voice": "es-MX-m",
-          "q": "¿Qué formulación cierra el contraste oral de «Balance final: una decisión defendible»?",
-          "options": [
-            "De aprobarse la siguiente fase, se publicarán costes y responsables.",
-            "El archivo, lo construiremos por etapas.",
-            "Comprendemos que las familias quieran participar en la descripción."
+        examples: [
+          { es: "El edificio en el que funciona la biblioteca es de 1938.", note: "Preposición + artículo + «que» en la escritura cuidada." },
+          { es: "La facultad, cuyas aulas quedan vacías de noche, podría abrirlas.", note: "«Cuyas» concuerda con «aulas»." },
+          { es: "Es la mejor biblioteca que conozco / que conozca.", note: "Tras superlativo, los dos modos son correctos." },
+        ],
+        mistakes: [
+          {
+            wrong: "La biblioteca, que abre los sábados está en el pabellón Argentina.",
+            right: "La biblioteca, que abre los sábados, está en el pabellón Argentina.",
+            why: "La explicativa se abre y se cierra: falta la segunda coma.",
+          },
+          {
+            wrong: "Es la sala que estudio todas las tardes.",
+            right: "Es la sala en la que estudio todas las tardes.",
+            why: "«Estudiar en» una sala: la preposición va delante del relativo.",
+          },
+          {
+            wrong: "El profesor quien dirige la cátedra firmó la nota.",
+            right: "El profesor que dirige la cátedra firmó la nota.",
+            why: "«Quien» sin preposición no aparece en especificativas.",
+          },
+        ],
+        tip: "Pregúntate: ¿me refiero a todos o solo a algunos? Si es a todos, comas; si es a algunos, sin comas. Después lee la frase sin la relativa: si sigue diciendo lo que quieres, era explicativa.",
+      },
+      {
+        heading: "Revisar un texto argumentativo: tesis, cohesión y matiz",
+        body: [
+          "Revisar no es corregir faltas, sino comprobar que el texto convence. Empieza por la estructura: ¿se entiende la tesis en el primer párrafo? ¿Cada párrafo tiene una sola idea, anunciada en su primera frase? ¿Hay al menos una concesión al otro lado («Es cierto que…; aun así, …», «Concedo que…, pero…») y un cierre que retoma la tesis con algo nuevo («En definitiva», «Dicho de otro modo»)?",
+          "Después, la cohesión. Para no repetir, usa sinónimos, hiperónimos («la biblioteca» → «el edificio», «el servicio»), encapsuladores que resumen lo dicho («esta medida», «dicho problema», «esta propuesta»), «ello» y la elipsis. Evita «el mismo» como pronombre («*abrir la sala y limpiar la misma»): la RAE lo desaconseja; di «limpiarla». No abuses de los conectores: si cada frase empieza con «además», «asimismo» o «por otro lado», el texto parece una lista. Elige el conector por su matiz: «sin embargo» contrapone, «es más» refuerza, «de ahí que» introduce una consecuencia con subjuntivo.",
+          "Por último, el matiz. Afirma con indicativo lo que está comprobado («Es evidente que la sala se llena») y con subjuntivo lo que pones en duda («No está demostrado que abrir de noche cueste tanto»). Atribuye los datos («según la encuesta del centro de estudiantes», «al parecer»). Ni exageres («todos los estudiantes», «siempre», «la única solución») ni te escondas detrás de demasiados atenuadores («quizá podría tal vez ser posible»): un «en cierta medida» bien colocado vale más que cinco. Y mantén el registro: nada de «o sea», «un montón» ni «tú» genérico en una columna formal.",
+        ],
+        table: {
+          caption: "Tres pasadas de revisión",
+          head: ["Pasada", "Qué buscas", "Ejemplo de cambio"],
+          rows: [
+            ["estructura", "tesis clara, una idea por párrafo, concesión", "añadir «Es cierto que el costo aumentaría; aun así, …»"],
+            ["cohesión", "repeticiones, «el mismo», exceso de conectores", "«la biblioteca… la biblioteca» → «la biblioteca… el edificio»"],
+            ["matiz y registro", "exageraciones, dudas sin subjuntivo, rasgos orales", "«todos estudian de noche» → «buena parte estudia de noche»"],
           ],
-          "answer": 0,
-          "why": "De aprobarse la siguiente fase, se publicarán costes y responsables."
-        }
-      ]
+        },
+        examples: [
+          { es: "Es cierto que abrir de noche tiene un costo; aun así, esta medida beneficiaría a cientos de estudiantes.", note: "Concesión + contraargumento + encapsulador." },
+          { es: "No está demostrado que la seguridad empeore de noche, de ahí que convenga probarlo un cuatrimestre.", note: "Subjuntivo para lo dudoso y para «de ahí que»." },
+        ],
+        mistakes: [
+          {
+            wrong: "Habría que abrir la sala y vigilar la misma con un guardia.",
+            right: "Habría que abrir la sala y vigilarla con un guardia.",
+            why: "«El mismo» como pronombre se desaconseja en la escritura cuidada: usa el pronombre átono.",
+          },
+          {
+            wrong: "O sea, todos los estudiantes estudian de noche, siempre.",
+            right: "Buena parte de los estudiantes estudia de noche, sobre todo en época de exámenes.",
+            why: "Registro oral y generalización excesiva: se matiza y se elimina «o sea».",
+          },
+        ],
+      },
+      {
+        heading: "Integración: lo que repasaste en las semanas 16 a 19",
+        body: [
+          "Una columna bien revisada usa a la vez casi todo lo del bloque. En la semana 16 (G196) viste que una pregunta retórica bien colocada lleva al lector a la conclusión: «¿Quién no ha estudiado alguna vez en un bar por falta de sitio?». En la semana 17 repasaste la puntuación de incisos y conectores (G197: «La biblioteca, sin embargo, cierra a las ocho») y el estilo formal (G198: «Se recomienda que la facultad evalúe…», con usted coherente y léxico preciso).",
+          "En la semana 18 trabajaste la cara opuesta: lo coloquial (G199), que en una columna formal solo cabe dentro de una cita, y los tiempos fuera de su tiempo (G200), como el condicional que atenúa («Yo diría que…») o el imperfecto de cortesía de una carta («Quería solicitarle…»). En la semana 19 aprendiste a leer el pretérito anterior (G201) y el futuro de subjuntivo (G202), que pueden aparecer si citas un estatuto antiguo de la universidad: «El alumno que acreditare…» → «El alumno que acredite…».",
+        ],
+        table: {
+          caption: "Mapa del bloque: una herramienta de cada clase",
+          head: ["Clase", "Herramienta", "Ejemplo en la columna"],
+          rows: [
+            ["G196 · semana 16", "pregunta retórica", "¿Para qué sirve una biblioteca cerrada cuando más se necesita?"],
+            ["G197 · semana 17", "incisos y conectores puntuados", "La sala, sin embargo, cierra a las ocho."],
+            ["G198 · semana 17", "impersonal con el modo adecuado", "Conviene que la facultad pruebe el horario un cuatrimestre."],
+            ["G199 · semana 18", "lo coloquial solo en citas", "Como dice una estudiante: «Con lo caro que está el café…»."],
+            ["G200 · semana 18", "condicional de atenuación", "Yo diría que el costo es asumible."],
+            ["G201 · semana 19", "pretérito anterior (lectura)", "«Apenas hubo abierto la sala, se llenó» → apenas abrió…"],
+            ["G202 · semana 19", "futuro de subjuntivo (lectura)", "«El alumno que lo solicitare» → que lo solicite"],
+            ["G203 · semana 20", "relativas con su puntuación", "los estudiantes que trabajan / los estudiantes, que trabajan,"],
+            ["G204 · semana 20", "concesión, encapsulador, matiz", "Es cierto que…; aun así, esta medida…"],
+          ],
+        },
+        mistakes: [
+          {
+            wrong: "¿Quién quiere estudiar en un bar? Los estudiantes que trabajan, que son muchos estudian allí, o sea, no les queda otra.",
+            right: "¿Quién quiere estudiar en un bar? Sin embargo, muchos estudiantes que trabajan, que son una cuarta parte del total, no tienen otro lugar donde hacerlo.",
+            why: "Tres fallos de tres semanas: falta la coma de cierre del inciso (G197, G203), «o sea» es coloquial en una columna (G198, G199) y la idea no se conecta con la pregunta retórica (G196, G204).",
+          },
+        ],
+        tip: "Al revisar un texto largo, haz una pasada por cada tipo de herramienta: relativas y comas, conectores, modo, registro y matiz. Una sola lectura general deja escapar errores.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Trabaja primero la puntuación y el tipo de relativa, después la elección del relativo y termina con la revisión de frases de la columna.",
+    exercises: [
+      {
+        id: "c1-20-gramatica-alcance",
+        type: "context",
+        prompt: "Lee cada frase del borrador de la columna y decide qué afirma.",
+        items: [
+          {
+            context: "«Los estudiantes de primer año, que no conocen la ciudad, estudian en sus pensiones.»",
+            q: "¿A quiénes se refiere la frase sobre los estudiantes de primer año?",
+            options: ["Solo a los de primer año que no conocen la ciudad.", "A todos los de primer año, y dice que ninguno conoce la ciudad.", "A los estudiantes de todos los años."],
+            answer: 1,
+            why: "Explicativa entre comas: se aplica a todo el antecedente.",
+          },
+          {
+            context: "«Las salas que tienen calefacción cierran a las ocho.»",
+            q: "¿Qué se deduce de la frase sobre las salas con calefacción?",
+            options: ["Que hay salas sin calefacción.", "Que todas las salas tienen calefacción.", "Que ninguna sala cierra antes de las ocho."],
+            answer: 0,
+            why: "Especificativa: distingue unas salas de otras.",
+          },
+          {
+            context: "«La directora de la biblioteca, que asumió en marzo, se mostró abierta a la propuesta.»",
+            q: "¿Por qué la relativa sobre la directora lleva comas?",
+            options: ["Porque hay varias directoras.", "Porque el verbo está en pasado.", "Porque el antecedente es único y la relativa solo añade un dato."],
+            answer: 2,
+            why: "Antecedente único: explicativa.",
+          },
+          {
+            context: "«Necesitamos un espacio que esté abierto hasta la medianoche.»",
+            q: "¿Por qué va en subjuntivo «esté» en la frase del espacio?",
+            options: ["Porque el espacio no está identificado: no se sabe si existe.", "Porque la relativa es explicativa.", "Porque el verbo principal está en presente."],
+            answer: 0,
+            why: "Especificativa con antecedente no identificado: subjuntivo.",
+          },
+        ],
+      },
+      {
+        id: "c1-20-gramatica-relativos",
+        type: "gap",
+        prompt: "Completa con el relativo adecuado para un texto cuidado (con preposición y artículo si hace falta).",
+        items: [
+          { q: "Es el pabellón ___ funcionaba antes la imprenta universitaria. [en + relativo]", answers: [["en el que", "en el cual", "donde"]], why: "«Funcionar en» un lugar: preposición + artículo + relativo." },
+          { q: "La beca ___ me presenté exige un promedio de siete. [a + relativo]", answers: [["a la que", "a la cual"]], why: "«Presentarse a» una beca." },
+          { q: "Es un reglamento antiguo, según ___ la biblioteca no podía abrir los domingos.", answers: [["el cual"]], why: "Tras una preposición larga se prefiere «el cual»." },
+          { q: "La facultad, ___ aulas quedan vacías de noche, tiene presupuesto para un guardia.", answers: [["cuyas"]], why: "«Cuyo» concuerda con lo poseído: «aulas»." },
+          { q: "La sala cierra a las ocho, ___ obliga a muchos a estudiar en bares.", answers: [["lo cual", "lo que"]], why: "Relativo neutro que retoma toda la oración, tras coma." },
+          { q: "Recuerdo el año ___ abrieron la sala de lectura nocturna.", answers: [["en que", "en el que", "cuando"]], why: "Con tiempo: «en que», no «donde»." },
+        ],
+      },
+      {
+        id: "c1-20-gramatica-tipo",
+        type: "classify",
+        prompt: "Decide si cada relativa es correcta en un texto cuidado.",
+        categories: ["Correcta", "Incorrecta en la escritura cuidada"],
+        items: [
+          { text: "La bibliotecaria, la cual nos atendió con paciencia, nos dio una llave.", cat: 0, why: "«La cual» sin preposición, en explicativa." },
+          { text: "El becario quien abre la sala llega a las siete.", cat: 1, why: "«Quien» sin preposición no va en especificativas." },
+          { text: "Es la mejor biblioteca que haya visitado.", cat: 0, why: "Tras superlativo, el subjuntivo es correcto." },
+          { text: "El año donde cerraron la sala, protestamos.", cat: 1, why: "Con tiempo: «el año en que»." },
+          { text: "Hay un permiso sin el cual no se puede entrar después de hora.", cat: 0, why: "Preposición + «el cual»." },
+          { text: "Es el profesor que te hablé.", cat: 1, why: "Falta la preposición: «del que te hablé»." },
+        ],
+      },
+      {
+        id: "c1-20-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error de cohesión, de relativo o de matiz. Corrígela.",
+        items: [
+          {
+            sentence: "Proponemos abrir la sala de noche y contratar un guardia para la misma.",
+            answers: ["Proponemos abrir la sala de noche y contratar un guardia para ella.", "Proponemos abrir la sala de noche y contratar un guardia para vigilarla."],
+            why: "«El mismo» como pronombre se desaconseja.",
+          },
+          {
+            sentence: "No está demostrado que el horario nocturno aumenta los robos.",
+            answers: ["No está demostrado que el horario nocturno aumente los robos."],
+            why: "«No está demostrado que» pone en duda: subjuntivo.",
+          },
+          {
+            sentence: "La facultad cuyo aulas están vacías podría abrirlas.",
+            answers: ["La facultad cuyas aulas están vacías podría abrirlas."],
+            why: "«Cuyo» concuerda con «aulas»: cuyas.",
+          },
+          {
+            sentence: "Abrir de noche es sin duda alguna la única solución posible para todos los estudiantes.",
+            answers: ["Abrir de noche es una solución posible para muchos estudiantes.", "Abrir de noche sería una buena solución para muchos estudiantes."],
+            why: "Exageración: «sin duda alguna», «la única» y «todos» debilitan el argumento.",
+          },
+        ],
+      },
+      {
+        id: "c1-20-gramatica-revision",
+        type: "open",
+        prompt: "Revisa cada fragmento del borrador. Compara después con el modelo y revisa con la lista.",
+        items: [
+          {
+            prompt: "Revisa este párrafo para que tenga cohesión sin repeticiones: «La biblioteca cierra a las ocho. La biblioteca tiene mucho espacio. La biblioteca podría abrir más horas y la biblioteca sería más útil».",
+            model: "La biblioteca cierra a las ocho, aunque dispone de espacio de sobra. Si ampliara su horario, el edificio sería mucho más útil para quienes estudian de noche.",
+            checklist: ["Elimino las repeticiones con sinónimos o elipsis.", "Uso al menos un conector con su matiz.", "Las ideas quedan conectadas, no en lista."],
+          },
+          {
+            prompt: "Añade una concesión y un contraargumento a esta afirmación: «Hay que abrir la biblioteca hasta medianoche».",
+            model: "Es cierto que abrir hasta medianoche supondría un gasto en personal y seguridad; aun así, esta medida permitiría estudiar en condiciones a cientos de estudiantes que hoy no tienen dónde hacerlo.",
+            checklist: ["Reconozco un argumento contrario concreto.", "Uso un conector contraargumentativo puntuado correctamente.", "Retomo la idea con un encapsulador."],
+          },
+          {
+            prompt: "Escribe dos versiones de una frase sobre los estudiantes que viven lejos del campus: una que se refiera a todos y otra solo a algunos. Explica la diferencia.",
+            model: "«Los estudiantes, que viven lejos del campus, llegan cansados» (todos viven lejos). «Los estudiantes que viven lejos del campus llegan cansados» (solo los que viven lejos). Las comas convierten la relativa en un dato sobre todos.",
+            checklist: ["Una versión con comas y otra sin ellas.", "Explico qué cambia en el sentido."],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico de la vida universitaria en Córdoba y de la argumentación escrita. Algunas palabras son propias de Argentina; se indica cuando conviene.",
+    groups: [
+      {
+        title: "La universidad",
+        items: [
+          { es: "la facultad", note: "cada una de las grandes divisiones académicas de una universidad" },
+          { es: "el cuatrimestre", note: "período lectivo de cuatro meses" },
+          { es: "la cátedra", note: "en Argentina, equipo docente responsable de una materia" },
+          { es: "rendir un final", note: "en Argentina, presentarse al examen final de una materia" },
+          { es: "el centro de estudiantes", note: "organización elegida que representa al alumnado" },
+          { es: "la pensión", note: "casa donde se alquila una habitación, a menudo con comidas" },
+          { es: "la sala de lectura", note: "espacio de una biblioteca para estudiar en silencio" },
+        ],
+      },
+      {
+        title: "Argumentar por escrito",
+        items: [
+          { es: "la tesis", note: "idea principal que defiende un texto argumentativo" },
+          { es: "la concesión", note: "reconocimiento parcial del argumento contrario" },
+          { es: "el encapsulador", note: "expresión que resume lo dicho antes: «esta medida»" },
+          { es: "sostener que", note: "afirmar y defender una idea" },
+          { es: "rebatir", note: "contradecir un argumento con razones" },
+          { es: "asumible", note: "que se puede afrontar o aceptar" },
+          { es: "a título de prueba", note: "de forma provisional, para comprobar el resultado" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c1-20-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "rendir un final", right: "presentarse al examen final de una materia" },
+          { left: "la concesión", right: "reconocimiento parcial del argumento contrario" },
+          { left: "el encapsulador", right: "expresión que resume lo dicho antes" },
+          { left: "rebatir", right: "contradecir un argumento con razones" },
+          { left: "a título de prueba", right: "de forma provisional, para comprobar el resultado" },
+          { left: "la cátedra", right: "equipo docente responsable de una materia" },
+        ],
+      },
+      {
+        id: "c1-20-lexico-uso",
+        type: "gap",
+        prompt: "Completa la carta del centro de estudiantes con la expresión adecuada.",
+        bank: ["cuatrimestre", "asumible", "sostenemos", "sala de lectura"],
+        items: [
+          { q: "___ que el horario actual perjudica a quienes trabajan.", answers: [["Sostenemos", "sostenemos"]] },
+          { q: "Proponemos abrir la ___ hasta medianoche en época de finales.", answers: [["sala de lectura"]] },
+          { q: "El costo estimado, unos dos millones de pesos, nos parece ___.", answers: [["asumible"]] },
+          { q: "La medida podría probarse durante un ___ y evaluarse después.", answers: [["cuatrimestre"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La pausa que distingue una relativa explicativa de una especificativa",
+    explanation: [
+      "Al leer en voz alta, la relativa explicativa forma su propio grupo fónico: hay una pausa antes, el tono baja un poco, como en cualquier inciso, y hay otra pausa al terminar. La especificativa, en cambio, se pronuncia unida a su antecedente, sin pausa: «los estudiantes que trabajan» suena como un solo bloque.",
+      "Por eso, en la radio o en una exposición oral, la pausa es tu única coma. Si dices «Los estudiantes | que trabajan | estudian de noche» con pausas, el oyente entenderá que hablas de todos. Si quieres hablar solo de algunos, no hagas pausa.",
+      "En el habla de Córdoba es característico un alargamiento de la sílaba anterior a la tónica, la famosa tonada cordobesa. El audio es sintético: sirve para percibir el contraste, no certifica un acento regional ni evalúa tu pronunciación.",
+    ],
+    table: {
+      caption: "La pausa como coma",
+      head: ["Lectura", "Tipo", "Sentido"],
+      rows: [
+        ["Los becarios | que viven lejos | llegan tarde.", "explicativa", "todos viven lejos"],
+        ["Los becarios que viven lejos llegan tarde.", "especificativa", "solo los que viven lejos"],
+      ],
     },
-    "produce": [
-      {
-        "text": "El acuerdo es parcial, pero sus razones y límites pueden explicarse.",
-        "tip": "Jerarquiza tesis, objeciones y conclusión mediante ritmo y pausas. Señala con claridad las condiciones pendientes y evita un cierre triunfal que contradiga el carácter provisional del acuerdo."
-      },
-      {
-        "text": "El archivo, lo construiremos por etapas.",
-        "tip": "Graba dos versiones cambiando foco o pausas; explica qué interpretación favorece cada una."
-      },
-      {
-        "text": "De aprobarse la siguiente fase, se publicarán costes y responsables.",
-        "tip": "Integra esta formulación en una respuesta espontánea de treinta segundos, sin leer el resto."
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: Balance final: una decisión defendible",
-    "context": "Escucha sin abrir la transcripción. La situación es una intervención o reunión original vinculada al dossier. Las etiquetas de voz orientan la síntesis y no acreditan muestras dialectales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Intervención 1",
-        "voice": "es-ES-f",
-        "role": "presentación del problema"
-      },
-      {
-        "id": "b",
-        "name": "Intervención 2",
-        "voice": "es-MX-m",
-        "role": "contraste o desarrollo"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Como responsable técnica, defiendo digitalizar primero los documentos más frágiles. Quisiera evitar una interpretación frecuente: digitalizar no significa que podamos olvidarnos de los originales ni que el mantenimiento posterior sea gratuito. La copia amplía posibilidades de consulta, pero necesita descripción y conservación tecnológica. Propongo una primera fase limitada, con presupuesto explícito y revisión anual. Lo que no puedo respaldar es un anuncio que presente el archivo como completamente accesible desde el primer día."
-      },
-      {
-        "speaker": "b",
-        "text": "Desde la asociación compartimos la conservación urgente, pero nos preocupa quién decide cómo se describen los materiales. Una fotografía puede tener un significado para el archivo y otro para la familia que la aporta. Venimos pidiendo que las personas puedan explicar ese contexto. No pretendemos sustituir criterios profesionales por cualquier recuerdo. Queremos que la descripción admita información situada y que donar algo no se interprete como renunciar a toda participación en su relato público."
-      },
-      {
-        "speaker": "a",
-        "text": "Yo trabajé en la estación y añadiría una reserva sobre la programación. Cuando leo que recuperaremos un pasado común, me pregunto cuál. Para algunos fue un lugar de oportunidades; para otros, de separación. No hace falta elegir una sola versión para abrir el edificio. Podríamos organizar encuentros donde esas diferencias aparezcan. También necesitamos actividades actuales. Si el espacio solo sirve para recordar, parte del barrio sentirá que entra como visitante en una historia que otros ya han terminado de contar."
-      },
-      {
-        "speaker": "b",
-        "text": "Recojo una base de acuerdo: conservación por fases, descripción con participación y programación que conecte memoria y usos presentes. Quedan pendientes el horario y el mantenimiento digital; no los presentaremos como resueltos. En las autorizaciones distinguiremos consulta, digitalización y difusión, con explicaciones que puedan comprender personas sin formación técnica. El próximo encuentro revisará costes y responsables. Para comunicarlo, propongo dos mensajes coordinados: uno institucional con criterios y plazos, y otro vecinal con formas concretas de participar. Ambos deben conservar los mismos límites. Un proyecto puede ser ambicioso sin prometer que ya ha resuelto todas las preguntas que lo hacen necesario."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha una vez sin abrir la transcripción. Identifica el problema y el propósito general; no intentes copiar todas las palabras.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "Primera escucha: Balance final: una decisión defendible.",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la intervención de «Balance final: una decisión defendible»?",
-              "options": [
-                "Expone razones, límites y condiciones de revisión sin anunciar como resuelto lo pendiente.",
-                "Impone una memoria única para evitar desacuerdos.",
-                "Equipara digitalización, consulta y difusión sin distinciones."
-              ],
-              "answer": 0,
-              "why": "Expone razones, límites y condiciones de revisión sin anunciar como resuelto lo pendiente."
-            },
-            {
-              "q": "¿Qué lectura del cierre de «Balance final: una decisión defendible» conservaría sus reservas?",
-              "options": [
-                "Consulta, digitalización y difusión son permisos diferentes.",
-                "Aportar un documento autoriza automáticamente cualquier exposición.",
-                "Una solución total e inmediata sin condiciones."
-              ],
-              "answer": 0,
-              "why": "Consulta, digitalización y difusión son permisos diferentes."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha de nuevo y toma notas de compromisos, límites y correcciones. Comprueba quién aporta cada dato.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "open",
-          "prompt": "Reconstruye lo que se dijo sobre conservación por fases.",
-          "items": [
-            {
-              "prompt": "¿Qué distinción debe conservar la autorización del archivo?",
-              "model": "Consulta, digitalización y difusión son permisos diferentes.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "En el audio de «Balance final: una decisión defendible», identifica una corrección o una reserva y explica qué interpretación evita.",
-              "model": "Recojo una base de acuerdo: conservación por fases, descripción con participación y programación que conecte memoria y usos presentes. Quedan pendientes el horario y el mantenimiento digital; no los presentaremos como resueltos. En las autorizaciones distinguiremos consulta, digitalización y difusión, con explicaciones que puedan comprender personas sin formación técnica. El próximo encuentro revisará costes y responsables. Para comunicarlo, propongo dos mensajes coordinados: uno institucional con criterios y plazos, y otro vecinal con formas concretas de participar. Ambos deben conservar los mismos límites. Un proyecto puede ser ambicioso sin prometer que ya ha resuelto todas las preguntas que lo hacen necesario.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Antes de consultar la transcripción, explica una intención y justifícala con un marcador o una oposición que hayas oído.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Escucha la organización y la postura en Balance final: una decisión defendible.",
-          "items": [
-            {
-              "prompt": "¿Qué diferencia perdería un resumen del audio de «Balance final: una decisión defendible» que eliminara sus condiciones?",
-              "model": "Consulta, digitalización y difusión son permisos diferentes.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "Reformula el cierre de «Balance final: una decisión defendible» para una persona que no asistió; conserva una reserva y un compromiso.",
-              "model": "El proyecto por fases combina conservación urgente, descripción participativa y usos actuales. La digitalización amplía la consulta, pero requiere mantenimiento y no sustituye todas las propiedades del original. Propongo autorizaciones diferenciadas y explicaciones accesibles para que aportar materiales no se confunda con permitir cualquier difusión. El horario nocturno y el presupuesto digital siguen pendientes. La comunicación vecinal debe ofrecer formas concretas de participar sin anunciar una apertura completa. El acuerdo es defendible porque conserva razones, límites y una revisión de responsabilidades.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "El archivo que todavía se está escribiendo",
-    "genre": "Expediente integrado y ensayo de cierre",
-    "frame": "Texto original situado en Córdoba; léelo después de la primera escucha y contrasta sus decisiones discursivas.",
-    "text": [
-      "Una antigua estación ferroviaria va a convertirse en archivo ciudadano y espacio de actividades. El proyecto reúne a investigadores, asociaciones vecinales, personal municipal y antiguos trabajadores del ferrocarril. Todos valoran la recuperación del edificio, pero no coinciden en qué debe conservarse ni en quién podrá decidir sobre los materiales. El expediente final contiene una memoria técnica, testimonios, condiciones de uso y una propuesta de programación. Su lectura exige algo más que reunir información: obliga a reconocer cómo cada género distribuye autoridad y qué preguntas quedan fuera de su campo.",
-      "La memoria técnica recomienda digitalizar documentos frágiles y limitar la manipulación de originales. Advierte que una copia facilita consulta, pero no conserva por sí sola todos los rasgos materiales del objeto. El presupuesto permite intervenir por fases. Presentar la digitalización como solución total ocultaría costes de mantenimiento, descripción y acceso. Por otra parte, rechazarla para proteger la experiencia del original dejaría sin consulta a personas que no pueden desplazarse. La decisión necesita comparar funciones y destinatarios, no enfrentar tecnología y memoria como valores incompatibles.",
-      "Los testimonios aportan otra clase de conocimiento. Una antigua trabajadora recuerda la estación como lugar de independencia; otro vecino la asocia con despedidas que nunca pudo explicar en su familia. El narrador de una crónica mezcla esas voces con su propia nostalgia y termina afirmando que todos desean recuperar lo perdido. La frase resulta emotiva, pero no se sostiene sin reservas. Algunos quieren conservar pruebas, otros contar experiencias y otros utilizar el edificio para actividades actuales. La memoria no exige que esas finalidades se fundan en una emoción compartida.",
-      "Las condiciones de uso establecen que cada donante debe conocer cómo se describirá y consultará su material. Una autorización para digitalizar no equivale automáticamente a permiso para difundir cualquier documento en una exposición. El comité propone procedimientos diferenciados y explicaciones accesibles. La asociación vecinal teme que tanta formalidad desanime a quienes conservan pequeñas colecciones domésticas. La objeción merece respuesta, aunque no justifica sustituir información clara por una firma apresurada. Simplificar el procedimiento debe facilitar una decisión consciente, no borrar sus consecuencias.",
-      "En la reunión final, los participantes acuerdan un proyecto por etapas. La primera combinará conservación urgente, consulta acompañada y actividades que permitan a la comunidad discutir las descripciones del archivo. Se evaluará quién participa y quién queda fuera, sin confundir un número alto de visitas con representación suficiente. Quedan pendientes el horario nocturno y el presupuesto de mantenimiento digital. La presidencia acepta no anunciar una apertura completa hasta que esas condiciones se resuelvan. El acuerdo es parcial, pero puede explicarse sin exagerar lo conseguido ni ocultar lo que falta.",
-      "La competencia que este expediente pone a prueba consiste en sostener varias operaciones a la vez. Hay que inferir una postura sin inventar intenciones, reformular términos técnicos sin modificar su alcance, conceder una objeción sin abandonar una tesis razonada y adaptar el registro a públicos diferentes. También hay que escuchar lo que una pausa o un cambio de foco vuelve relevante. La decisión final no será perfecta ni definitiva. Será defendible si sus razones, límites y condiciones de revisión quedan disponibles para quienes deberán vivir con sus efectos y para quienes, más adelante, continúen escribiendo la historia del lugar."
-    ],
-    "tasks": [
-      {
-        "id": "r-inferencia",
-        "type": "choice",
-        "prompt": "Interpreta la postura de «El archivo que todavía se está escribiendo» sin atribuir intenciones que el texto no demuestra.",
-        "items": [
-          {
-            "q": "¿Qué hace defendible el acuerdo final?",
-            "options": [
-              "Impone una memoria única para evitar desacuerdos.",
-              "Equipara digitalización, consulta y difusión sin distinciones.",
-              "Expone razones, límites y condiciones de revisión sin anunciar como resuelto lo pendiente."
-            ],
-            "answer": 2,
-            "why": "Expone razones, límites y condiciones de revisión sin anunciar como resuelto lo pendiente."
-          },
-          {
-            "q": "¿Qué conclusión excede lo que permite afirmar «El archivo que todavía se está escribiendo»?",
-            "options": [
-              "Impone una memoria única para evitar desacuerdos.",
-              "Expone razones, límites y condiciones de revisión sin anunciar como resuelto lo pendiente.",
-              "La decisión exige conservar límites y atribuir las voces."
-            ],
-            "answer": 0,
-            "why": "Impone una memoria única para evitar desacuerdos."
-          }
-        ]
-      },
-      {
-        "id": "r-argumento",
-        "type": "open",
-        "prompt": "Reconstruye cómo avanza «El archivo que todavía se está escribiendo».",
-        "items": [
-          {
-            "prompt": "Localiza una transición decisiva en «El archivo que todavía se está escribiendo» y explica qué interpretación modifica.",
-            "model": "La competencia que este expediente pone a prueba consiste en sostener varias operaciones a la vez. Hay que inferir una postura sin inventar intenciones, reformular términos técnicos sin modificar su alcance, conceder una objeción sin abandonar una tesis razonada y adaptar el registro a públicos diferentes. También hay que escuchar lo que una pausa o un cambio de foco vuelve relevante. La decisión final no será perfecta ni definitiva. Será defendible si sus razones, límites y condiciones de revisión quedan disponibles para quienes deberán vivir con sus efectos y para quienes, más adelante, continúen escribiendo la historia del lugar.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Compara el problema central de «El archivo que todavía se está escribiendo» con el audio: identifica una coincidencia y una aportación que no deba confundirse.",
-            "model": "El proyecto por fases combina conservación urgente, descripción participativa y usos actuales. La digitalización amplía la consulta, pero requiere mantenimiento y no sustituye todas las propiedades del original. Propongo autorizaciones diferenciadas y explicaciones accesibles para que aportar materiales no se confunda con permitir cualquier difusión. El horario nocturno y el presupuesto digital siguen pendientes. La comunicación vecinal debe ofrecer formas concretas de participar sin anunciar una apertura completa. El acuerdo es defendible porque conserva razones, límites y una revisión de responsabilidades.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas elegidas construyen el argumento; justifica qué cambiaría con otra redacción.",
-      "items": [
+    perceive: {
+      id: "c1-20-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide a quiénes se refiere por las pausas.",
+      items: [
         {
-          "quote": "Una autorización para digitalizar no equivale automáticamente a permiso para difundir cualquier documento en una exposición.",
-          "note": "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo."
+          q: "Según cómo se lee, ¿qué alumnos usan la sala de noche?",
+          options: ["Todos los alumnos de Medicina.", "Solo los de Medicina que hacen guardias."],
+          answer: 1,
+          why: "Sin pausas: la relativa especifica.",
+          audio: "Los alumnos de Medicina que hacen guardias usan la sala de noche.",
+          voice: "es-AR-f",
         },
         {
-          "quote": "El acuerdo es parcial, pero puede explicarse sin exagerar lo conseguido ni ocultar lo que falta.",
-          "note": "Jerarquiza tesis, objeciones y conclusión mediante ritmo y pausas. Señala con claridad las condiciones pendientes y evita un cierre triunfal que contradiga el carácter provisional del acuerdo."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "exercises": [
-      {
-        "id": "p-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos decisiones lingüísticas de «Balance final: una decisión defendible»; léelas después con una pausa justificada. Recupera el orden de las formulaciones de los ejemplos; la paráfrasis libre se trabaja en las actividades abiertas.",
-        "items": [
-          {
-            "words": [
-              "La",
-              "digitalización",
-              "amplía",
-              "el",
-              "acceso,",
-              "pero",
-              "no",
-              "sustituye",
-              "toda",
-              "conservación."
-            ],
-            "why": "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo."
-          },
-          {
-            "words": [
-              "De",
-              "aprobarse",
-              "la",
-              "siguiente",
-              "fase,",
-              "se",
-              "publicarán",
-              "costes",
-              "y",
-              "responsables."
-            ],
-            "why": "Antes de cerrar una síntesis, audita cinco relaciones: afirmación y evidencia, voz y atribución, condición y compromiso, registro y destinatario, prosodia y foco. Una formulación defendible conserva incertidumbres pertinentes y ofrece criterios de revisión. La revisión final recupera las decisiones lingüísticas de todo el nivel dentro de un problema nuevo."
-          }
-        ]
-      },
-      {
-        "id": "p-contexto",
-        "type": "context",
-        "prompt": "Elige intervenciones fieles al caso de Córdoba.",
-        "items": [
-          {
-            "context": "Debes explicar conservación por fases a alguien que no leyó el dossier.",
-            "q": "¿Qué definición de conservación por fases conserva el sentido del caso?",
-            "options": [
-              "permiso distinto para cada uso",
-              "protección organizada por etapas",
-              "registro que admite voces implicadas"
-            ],
-            "answer": 1,
-            "why": "protección organizada por etapas"
-          },
-          {
-            "context": "Un interlocutor propone eliminar del resumen la principal reserva para hacerlo más convincente.",
-            "q": "¿Qué respuesta mantiene la fidelidad en «Balance final: una decisión defendible»?",
-            "options": [
-              "Impone una memoria única para evitar desacuerdos.",
-              "Consulta, digitalización y difusión son permisos diferentes.",
-              "Aportar un documento autoriza automáticamente cualquier exposición."
-            ],
-            "answer": 1,
-            "why": "Consulta, digitalización y difusión son permisos diferentes."
-          }
-        ]
-      },
-      {
-        "id": "p-redaccion",
-        "type": "open",
-        "prompt": "Ensaya dos movimientos antes de redactar tu texto sobre «Balance final: una decisión defendible».",
-        "items": [
-          {
-            "prompt": "Escribe una apertura de 60–80 palabras para esta tarea: Elabora un informe final de 320–400 palabras que integre expediente y reunión, justifique una decisión, responda a dos objeciones y añada un mensaje vecinal de 100 palabras con los mismos límites.",
-            "model": "El proyecto por fases combina conservación urgente, descripción participativa y usos actuales. La digitalización amplía la consulta, pero requiere mantenimiento y no sustituye todas las propiedades del original. Propongo autorizaciones diferenciadas y explicaciones accesibles para que aportar materiales no se confunda con permitir cualquier difusión. El horario nocturno y el presupuesto digital siguen pendientes. La comunicación vecinal debe ofrecer formas concretas de participar sin anunciar una apertura completa. El acuerdo es defendible porque conserva razones, límites y una revisión de responsabilidades.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Formula una objeción razonable a la propuesta de «Balance final: una decisión defendible» y respóndela sin atribuir intenciones no demostradas. Basa la objeción en una limitación expresada en la lectura o en el audio; no añadas cifras, hechos ni intenciones no documentados.",
-            "model": "Una reserva que debe conservarse: Consulta, digitalización y difusión son permisos diferentes. La respuesta debe delimitar el compromiso: De aprobarse la siguiente fase, se publicarán costes y responsables.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "p-recuperacion",
-        "type": "open",
-        "prompt": "Recupera sin consultar: compara los casos y comprueba después tus decisiones. En el balance final, reparte esta recuperación entre dos sesiones.",
-        "items": [
-          {
-            "prompt": "Recuperación de la semana 1 · Modo en sustantivas: matices. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Lo que permite afirmar un hallazgo» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Siento que el titular exagera el hallazgo. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 3 · Tema y foco. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Lo que un titular pone en primer plano» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Fue la bibliotecaria quien cuestionó el marco. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 4 · Conectores con matices. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Las condiciones de una excepción» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Aun cuando la actividad sea gratuita, necesita cobertura. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 7 · Implicaturas y sobreentendidos. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Una cortesía demasiado perfecta» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Qué previsores: falta una carpeta. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 8 · Atenuación gramatical. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «La crítica que permite continuar» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Quería comentarte los dos últimos cierres. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 9 · Sintetizar varias fuentes. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Tres fuentes, una explicación responsable» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: La reparación terminaría a las seis; la presión se recuperará gradualmente. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 11 · Contraargumentación. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Conceder sin abandonar la tesis» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Es razonable revisar horarios; no se sigue que deban reducirse igual. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 12 · Léxico según el registro. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «La palabra que cambia la responsabilidad» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: El equipo formuló una propuesta; la dirección la aprobó. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 13 · Régimen preposicional avanzado. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «Leer la letra de una convocatoria» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Confío en que la carta sea suficiente. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 14 · Tomar notas de un discurso largo. Recupera la estrategia de escucha y reconstruye una reserva sin mirar la transcripción. Contrasta el caso «La memoria tiene varias voces» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: En primer término, distingamos edificio y prácticas. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 16 · Orden de palabras y dislocación. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «El tema que vuelve al centro» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Las normas, la mayoría no las había leído. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 16 · Ecosistema digital. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «El tema que vuelve al centro» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Las normas, la mayoría no las había leído. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 16 · Prosodia de la dislocación. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «El tema que vuelve al centro» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Las normas, la mayoría no las había leído. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 16 · Leer un reportaje largo. Recupera la estrategia de lectura y localiza una inferencia apoyada y otra excesiva. Contrasta el caso «El tema que vuelve al centro» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Las normas, la mayoría no las había leído. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 16 · Destacar y retomar temas. Recupera el movimiento comunicativo y úsalo ante una objeción concreta. Contrasta el caso «El tema que vuelve al centro» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Las normas, la mayoría no las había leído. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 17 · Tiempos literarios y restringidos. Recupera una construcción y explica su efecto antes de emplearla en dos frases. Contrasta el caso «La voz que se cuela en el relato» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Apenas hubo cerrado, buscó la llave. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 17 · Literatura y crítica. Recupera dos expresiones, explica su combinación habitual y utilízalas en una comparación. Contrasta el caso «La voz que se cuela en el relato» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Apenas hubo cerrado, buscó la llave. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 17 · Lectura literaria. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «La voz que se cuela en el relato» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Apenas hubo cerrado, buscó la llave. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 17 · Leer un fragmento de novela. Recupera la estrategia de lectura y localiza una inferencia apoyada y otra excesiva. Contrasta el caso «La voz que se cuela en el relato» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Apenas hubo cerrado, buscó la llave. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 17 · Relato con estilo indirecto libre. Recupera el criterio de revisión y aplícalo a un párrafo propio. Contrasta el caso «La voz que se cuela en el relato» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Apenas hubo cerrado, buscó la llave. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 18 · Mediar en un conflicto. Recupera el movimiento comunicativo y úsalo ante una objeción concreta. Contrasta el caso «Mediar sin borrar el conflicto» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Si te entiendo bien, necesitas continuidad, no un día inamovible. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 18 · Necesidades, condiciones y preferencias. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Mediar sin borrar el conflicto» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Si te entiendo bien, necesitas continuidad, no un día inamovible. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 18 · Prosodia de la comprobación. Recupera el patrón de pausas o foco, graba dos versiones y justifica la más clara. Contrasta el caso «Mediar sin borrar el conflicto» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: Si te entiendo bien, necesitas continuidad, no un día inamovible. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 19 · Síntesis para dos públicos. Recupera el criterio de revisión y aplícalo a un párrafo propio. Contrasta el caso «Editar una controversia para dos públicos» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: La prueba sugiere utilidad para consultas frecuentes, no comprensión integral. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          },
-          {
-            "prompt": "Recuperación de la semana 19 · Coherencia entre versiones. Recupera el recurso discursivo y explica cómo cambia la interpretación. Contrasta el caso «Editar una controversia para dos públicos» con «Balance final: una decisión defendible».",
-            "model": "Punto de contraste: La prueba sugiere utilidad para consultas frecuentes, no comprensión integral. En el caso actual: El archivo, lo construiremos por etapas. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Elabora un informe final de 320–400 palabras que integre expediente y reunión, justifique una decisión, responda a dos objeciones y añada un mensaje vecinal de 100 palabras con los mismos límites.",
-    "context": "Produce primero tu versión sin consultar el modelo. Después compara organización, atribución, registro y alcance; el modelo ofrece una realización posible, no la única respuesta válida. El contador suma el informe de 320–400 palabras y el mensaje vecinal de unas 100; extensión total: 420–500 palabras.",
-    "steps": [
-      "Selecciona las afirmaciones que cada fuente permite sostener y anota sus límites.",
-      "Organiza por problemas y decisiones; redacta sin copiar frases extensas del dossier.",
-      "Revisa atribución, registro, cohesión y alcance de los compromisos; justifica dos cambios."
+          q: "Según cómo se lee, ¿cuántos alumnos de intercambio hablan portugués?",
+          options: ["Todos.", "Solo algunos."],
+          answer: 0,
+          why: "Con pausas: la relativa explica algo de todos.",
+          audio: "Los alumnos de intercambio, que hablan portugués, se sientan juntos.",
+          voice: "es-AR-m",
+        },
+        {
+          q: "¿Qué retoma «lo cual» en la frase sobre la sala?",
+          options: ["Solo la palabra «sala».", "Toda la oración anterior: que la sala cierre temprano."],
+          answer: 1,
+          why: "El relativo neutro retoma toda la oración.",
+          audio: "La sala cierra a las ocho, lo cual perjudica a quienes trabajan.",
+          voice: "es-AR-f",
+        },
+        {
+          q: "¿Cuántas hermanas tiene quien habla, según la lectura?",
+          options: ["Una sola.", "Más de una."],
+          answer: 1,
+          why: "Sin pausa: «mi hermana que estudia en Córdoba» la distingue de otras.",
+          audio: "Mi hermana que estudia en Córdoba vuelve a casa los viernes.",
+          voice: "es-AR-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "La Biblioteca Mayor, que funciona desde el siglo diecisiete, es la más antigua del país.", tip: "Pausa y tono bajo en la relativa: el antecedente es único.", voice: "es-AR-f" },
+      { text: "Los estudiantes que trabajan de día necesitan un lugar para estudiar de noche.", tip: "Ninguna pausa entre «estudiantes» y «trabajan».", voice: "es-AR-m" },
+      { text: "Es cierto que el costo aumentaría; aun así, esta medida vale la pena.", tip: "Pausa larga antes de «aun así» y tono suspendido después.", voice: "es-AR-f" },
+      { text: "¿Para qué sirve una biblioteca cerrada justo cuando más se la necesita?", tip: "Pregunta retórica: final descendente.", voice: "es-AR-m" },
     ],
-    "useLanguage": [
-      "Integración final: precisión, voz y responsabilidad",
-      "conservación por fases",
-      "descripción participativa",
-      "autorización diferenciada",
-      "memoria situada"
-    ],
-    "model": [
-      "El proyecto por fases combina conservación urgente, descripción participativa y usos actuales. La digitalización amplía la consulta, pero requiere mantenimiento y no sustituye todas las propiedades del original. Propongo autorizaciones diferenciadas y explicaciones accesibles para que aportar materiales no se confunda con permitir cualquier difusión. El horario nocturno y el presupuesto digital siguen pendientes. La comunicación vecinal debe ofrecer formas concretas de participar sin anunciar una apertura completa. El acuerdo es defendible porque conserva razones, límites y una revisión de responsabilidades.",
-      "La primera objeción plantea que limitar la manipulación de originales reduce la experiencia directa del objeto. La reserva es atendible, pero no obliga a rechazar copias que permiten consultar a distancia. Conviene distinguir funciones: proteger materiales frágiles, conservar rasgos físicos y ampliar acceso requieren medidas complementarias. La memoria técnica tampoco autoriza a presentar las copias como una solución sin costes posteriores. Por eso la siguiente fase debe depender de un presupuesto explícito y de una revisión periódica, no de una promesa general de accesibilidad completa desde la apertura.",
-      "La segunda objeción advierte que los procedimientos pueden desanimar a quienes conservan colecciones domésticas. La respuesta debería simplificar la explicación y facilitar consulta acompañada, sin borrar la diferencia entre digitalizar y difundir. También es necesario incorporar el contexto que las familias aportan a las descripciones, manteniendo criterios profesionales. Los testimonios muestran que la estación no representa una emoción única: independencia, despedida y usos actuales pueden coexistir. La programación debe abrir espacio a esas diferencias en vez de anunciar la recuperación de un pasado que todos supuestamente comparten.",
-      "La evaluación examinará participación y exclusiones, además del número de visitas. Una afluencia alta no bastaría para demostrar representación suficiente. Recomiendo comunicar responsables, etapas y asuntos pendientes antes de presentar el acuerdo como una apertura completa; así podrán revisarse tanto los resultados como las condiciones que hacen viable la continuidad del archivo. Esta secuencia permitirá actuar sobre necesidades urgentes mientras la comunidad y el equipo técnico continúan negociando decisiones que todavía requieren información, recursos y responsabilidades claramente identificadas.",
-      "Mensaje vecinal: La estación se recuperará por etapas como archivo y espacio de actividades. Podrás aportar materiales y explicar su contexto antes de decidir qué usos autorizas. Consultar, digitalizar y difundir no son lo mismo: cada permiso deberá explicarse con claridad. El proyecto combinará conservación urgente y encuentros sobre las distintas experiencias del lugar. El horario nocturno y el mantenimiento digital siguen pendientes, por lo que todavía no se anuncia una apertura completa. Se comunicarán las formas de participación y los próximos acuerdos. Tu testimonio puede ampliar la descripción del archivo sin tener que coincidir con una memoria única del barrio."
-    ],
-    "checklist": [
-      "Cumplo el género, la finalidad y el destinatario de la consigna.",
-      "Integro lectura y escucha con atribución clara, sin yuxtaponer resúmenes.",
-      "Conservo condiciones e incertidumbres y distingo mi propuesta de las fuentes.",
-      "Uso léxico preciso y estructuras complejas con control.",
-      "Reviso cohesión, puntuación y adecuación antes de la versión final."
-    ],
-    "words": [
-      420,
-      500
-    ]
+    spelling: "Una relativa explicativa lleva siempre dos comas, salvo que termine la oración: «La sala, que tiene cuarenta puestos, se llena». «Lo cual» y «lo que» con valor de oración entera van siempre tras coma.",
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, graba una primera versión y escucha dónde pierdes precisión. La calidad oral se revisa mediante autoevaluación y trabajo con tu docente.",
-    "tasks": [
-      {
-        "title": "Exposición razonada",
-        "prompt": "Presenta una ponencia de cinco minutos y responde a preguntas sobre conservación, participación y presupuesto; media después en una discrepancia sobre la descripción de un testimonio.",
-        "prep": [
-          "Formula una tesis, dos apoyos y una reserva.",
-          "Decide qué detalle del audio añadirás sin leer la transcripción.",
-          "Prepara una pregunta que permita comprobar comprensión."
-        ],
-        "seconds": 300,
-        "model": "El proyecto por fases combina conservación urgente, descripción participativa y usos actuales. La digitalización amplía la consulta, pero requiere mantenimiento y no sustituye todas las propiedades del original. Propongo autorizaciones diferenciadas y explicaciones accesibles para que aportar materiales no se confunda con permitir cualquier difusión. El horario nocturno y el presupuesto digital siguen pendientes. La comunicación vecinal debe ofrecer formas concretas de participar sin anunciar una apertura completa. El acuerdo es defendible porque conserva razones, límites y una revisión de responsabilidades.",
-        "selfCheck": [
-          "Mantengo un hilo claro sin leer un texto completo.",
-          "Diferencio voces y calibro certeza.",
-          "Las pausas y el foco ayudan a comprender."
-        ]
-      },
-      {
-        "title": "Interacción y reparación",
-        "prompt": "Tu interlocutor sostiene: «Impone una memoria única para evitar desacuerdos.» Pídele que precise su razón, concede lo defendible y responde con evidencia del dossier. Después cambia de papel y plantea esta reserva: «Aportar un documento autoriza automáticamente cualquier exposición.»; corrígela sin humillar y negocia una formulación común.",
-        "prep": [
-          "Prepara una reformulación fiel de la postura ajena.",
-          "Decide qué condición no puedes aceptar y qué alternativa ofrecerás."
-        ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real y pido aclaración cuando hace falta.",
-          "Reformulo una interpretación excesiva.",
-          "Cierro con acuerdo o desacuerdo delimitado."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "Lleva tu texto y tu grabación sobre «Balance final: una decisión defendible». Pide que se examine una decisión lingüística concreta, no solo errores aislados.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta una ponencia de cinco minutos y responde a preguntas sobre conservación, participación y presupuesto; media después en una discrepancia sobre la descripción de un testimonio.",
-        "phrases": [
-          "El archivo, lo construiremos por etapas.",
-          "De aprobarse la siguiente fase, se publicarán costes y responsables."
-        ]
-      },
-      {
-        "move": "Contrasta",
-        "task": "Compara con tu docente estas dos interpretaciones: Expone razones, límites y condiciones de revisión sin anunciar como resuelto lo pendiente. / Impone una memoria única para evitar desacuerdos. Señala un indicio y una condición que podrían cambiar tu lectura."
-      },
-      {
-        "move": "Reformula",
-        "task": "Tu docente cambia el destinatario de tu texto sobre conservación por fases. Reorganiza oralmente el mensaje y explica qué términos mantienes, cuáles aclaras y qué reservas no puedes omitir."
-      }
+  listening: {
+    title: "Segundo borrador",
+    context: "En la redacción de un diario de Córdoba, Carolina, editora de la sección de opinión, revisa con Facundo, estudiante de Ingeniería, el segundo borrador de su columna sobre el horario de la biblioteca de la facultad. Escucha primero sin transcripción. La facultad, el diario y las personas son ficticios. Carolina y Facundo usan el voseo, propio de su variedad («fijate», «tenés»). Las voces son sintéticas y no se presentan como una variedad regional verificada.",
+    speakers: [
+      { id: "c", name: "Carolina", voice: "es-AR-f", role: "Editora de la sección de opinión" },
+      { id: "f", name: "Facundo", voice: "es-AR-m", role: "Estudiante de Ingeniería, autor de la columna" },
     ],
-    "bring": "Borrador y versión revisada, esquema oral y una pregunta sobre alcance o registro."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "En una explicación de «Balance final: una decisión defendible», ¿qué significa consulta acompañada?",
-        "options": [
-          "cuidado continuado de copias y sistemas",
-          "presencia adecuada de grupos relevantes",
-          "acceso con apoyo especializado"
-        ],
-        "answer": 2,
-        "why": "acceso con apoyo especializado"
-      },
-      {
-        "type": "listen",
-        "audio": "Recojo una base de acuerdo: conservación por fases, descripción con participación y programación que conecte memoria y usos presentes. Quedan pendientes el horario y el mantenimiento digital; no los presentaremos como resueltos. En las autorizaciones distinguiremos consulta, digitalización y difusión, con explicaciones que puedan comprender personas sin formación técnica. El próximo encuentro revisará costes y responsables. Para comunicarlo, propongo dos mensajes coordinados: uno institucional con criterios y plazos, y otro vecinal con formas concretas de participar. Ambos deben conservar los mismos límites. Un proyecto puede ser ambicioso sin prometer que ya ha resuelto todas las preguntas que lo hacen necesario.",
-        "voice": "es-ES-f",
-        "q": "Escucha el cierre otra vez: ¿qué límite debes conservar al transmitir «Balance final: una decisión defendible»?",
-        "options": [
-          "Consulta, digitalización y difusión son permisos diferentes.",
-          "Aportar un documento autoriza automáticamente cualquier exposición.",
-          "Equipara digitalización, consulta y difusión sin distinciones."
-        ],
-        "answer": 0,
-        "why": "Consulta, digitalización y difusión son permisos diferentes."
-      },
-      {
-        "type": "gap",
-        "q": "De aprobarse las fases, se ___ los costes.",
-        "answers": [
-          [
-            "publicarán"
-          ]
-        ],
-        "hint": "Conjuga publicar en futuro simple de indicativo, tercera persona plural.",
-        "why": "En la pasiva refleja el verbo concuerda con costes."
-      },
-      {
-        "type": "open",
-        "prompt": "Usa una condición formal con de. Escribe solo la reformulación. En una intervención sobre «Balance final: una decisión defendible» lees: «Si se aprueba la fase, se publicarán los costes.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
-        "model": "De aprobarse la fase, se publicarán los costes.",
-        "checklist": [
-          "Cumplo el recurso solicitado y conservo el sentido relevante.",
-          "Acepto alternativas naturales que mantengan tiempo, referencia y alcance."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "De aprobarse las fases, se publicará los costes.",
-        "answers": [
-          "De aprobarse las fases, se publicarán los costes."
-        ],
-        "why": "En la pasiva refleja el verbo concuerda con costes."
-      },
-      {
-        "type": "open",
-        "prompt": "Prueba de transferencia de «Balance final: una decisión defendible»: explica en 80–100 palabras por qué esta conclusión requiere matices: Impone una memoria única para evitar desacuerdos.",
-        "model": "El proyecto por fases combina conservación urgente, descripción participativa y usos actuales. La digitalización amplía la consulta, pero requiere mantenimiento y no sustituye todas las propiedades del original. Propongo autorizaciones diferenciadas y explicaciones accesibles para que aportar materiales no se confunda con permitir cualquier difusión. El horario nocturno y el presupuesto digital siguen pendientes. La comunicación vecinal debe ofrecer formas concretas de participar sin anunciar una apertura completa. El acuerdo es defendible porque conserva razones, límites y una revisión de responsabilidades.",
-        "checklist": [
-          "Identifico el exceso de la afirmación.",
-          "Cito una evidencia y conservo una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Graba una respuesta de 90 segundos a esta demanda sobre «Balance final: una decisión defendible»: «Dinos una solución definitiva y sin condiciones». Justifica por qué tu respuesta necesita límites.",
-        "model": "La conclusión debe conservar este límite: Consulta, digitalización y difusión son permisos diferentes.",
-        "checklist": [
-          "Respondo de manera directa.",
-          "Distingo decisión, condición e incertidumbre."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Audita tu producción de «Balance final: una decisión defendible»: señala una elección de integración final: precisión, voz y responsabilidad y reescribe un pasaje para otro destinatario.",
-        "model": "Decisión que puedes explicar: El archivo, lo construiremos por etapas. Reformulación para contrastar: Comprendemos que las familias quieran participar en la descripción.",
-        "checklist": [
-          "Explico un cambio de sentido o registro.",
-          "Conservo hechos y atribuciones."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo usar integración final: precisión, voz y responsabilidad para intervenir con precisión.",
-      "Puedo explicar el caso de Córdoba integrando fuentes y reservas.",
-      "Puedo sostener una exposición y responder a objeciones sin perder el hilo."
+    script: [
+      { speaker: "c", text: "Facundo, el segundo borrador está mucho mejor. La tesis ya aparece en el primer párrafo y la pregunta del título funciona. Pero tengo tres o cuatro cosas, y la primera es grave. Escribiste: los estudiantes, que trabajan, estudian de noche. ¿Todos los estudiantes trabajan?" },
+      { speaker: "f", text: "No, claro, más o menos uno de cada cuatro, según la encuesta del centro de estudiantes." },
+      { speaker: "c", text: "Entonces sacá las comas. Con comas estás diciendo que trabajan todos, y cualquier lector de la facultad te va a desautorizar en la primera línea. Sin comas, hablás solo de los que trabajan, que es lo que querés decir." },
+      { speaker: "f", text: "Uy, qué diferencia. ¿Y lo de la sala? Puse: es la única sala que se puede estudiar en silencio." },
+      { speaker: "c", text: "Ahí falta la preposición: la única sala en la que se puede estudiar en silencio. Hablando se escucha mucho lo otro, pero en una columna no. Y fijate en el párrafo tres. Repetís biblioteca cinco veces y al final ponés abrir la sala y limpiar la misma. Usá el edificio, el servicio, esta medida; y en vez de limpiar la misma, limpiarla." },
+      { speaker: "f", text: "Bueno. ¿Y el tono? Mi compañera dice que suena muy enojado." },
+      { speaker: "c", text: "Un poco. Decís que es sin duda la única solución y que todos los estudiantes la apoyan. No es verdad, y además no hace falta. Mejor: es una solución razonable que, según la encuesta, apoya el setenta por ciento. Y te falta la concesión. Reconocé que cuesta plata: es cierto que supondría un gasto en seguridad; aun así, esta medida…" },
+      { speaker: "f", text: "Ah, y metí una cita del estatuto viejo de la universidad: el alumno que acreditare trabajo podrá solicitar horarios especiales. ¿La dejo?" },
+      { speaker: "c", text: "Dejala, que queda muy bien, pero explicala: acreditare es futuro de subjuntivo, o sea, cualquier alumno que demuestre que trabaja. Si no lo aclarás, alguien va a pensar que es una errata. Y otra cosa: cerrás con un o sea, la facultad no nos escucha. Sacá el o sea; en el diario no va." },
+      { speaker: "f", text: "Me matás con el o sea. Lo saco. Entonces quedaría: en definitiva, abrir la sala por la noche no es un capricho, sino una forma de que la universidad llegue a quienes hoy no puede atender." },
     ],
-    "review": [
-      "Dentro de dos días, reconstruye de memoria la diferencia central: Consulta, digitalización y difusión son permisos diferentes.",
-      "Dentro de una semana, reutiliza conservación por fases y consulta acompañada en otro caso; comprueba su colocación.",
-      "Reescucha tu grabación y revisa este recurso: Prosodia de una ponencia con reservas."
-    ]
-  }
+    stages: [
+      {
+        stage: "gist",
+        prompt: "Escucha la revisión completa sin abrir la transcripción. ¿Qué tipo de cambios propone Carolina?",
+        exercise: {
+          id: "c1-20-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación general.",
+          items: [
+            {
+              q: "¿Qué hacen Carolina y Facundo en la redacción del diario?",
+              options: ["Escriben juntos una noticia sobre la biblioteca.", "Revisan el segundo borrador de la columna de Facundo.", "Entrevistan a la directora de la biblioteca."],
+              answer: 1,
+              why: "Carolina es la editora y comenta el borrador de Facundo.",
+            },
+            {
+              q: "¿Qué valoración general hace Carolina del segundo borrador?",
+              options: ["Que está mejor, pero necesita cambios de puntuación, cohesión, matiz y registro.", "Que hay que reescribirlo desde cero.", "Que está listo para publicarse sin cambios."],
+              answer: 0,
+              why: "Empieza diciendo que está mucho mejor y luego enumera los cambios.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y responde sin mirar la transcripción.",
+        exercise: {
+          id: "c1-20-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles de cada corrección.",
+          items: [
+            {
+              q: "¿Por qué Carolina dice que el error de las comas es grave?",
+              options: ["Porque afirma que todos los estudiantes trabajan, y eso es falso.", "Porque la frase queda demasiado larga.", "Porque el diario no acepta comas en el primer párrafo."],
+              answer: 0,
+              why: "Solo uno de cada cuatro trabaja; con comas se afirma que todos.",
+            },
+            {
+              q: "¿Qué propone Carolina para el tono de la columna?",
+              options: ["Hacerlo más enojado para llamar la atención.", "Quitar todas las cifras.", "Sustituir las exageraciones por un dato atribuido y añadir una concesión."],
+              answer: 2,
+              why: "«Según la encuesta, apoya el setenta por ciento» y «es cierto que…; aun así».",
+            },
+            {
+              q: "¿Qué hace Carolina con la cita del estatuto antiguo?",
+              options: ["Pide eliminarla porque está mal escrita.", "Pide conservarla y explicar la forma «acreditare».", "Pide modernizarla dentro de las comillas."],
+              answer: 1,
+              why: "«Dejala…, pero explicala».",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en cómo cada frase del borrador cambia. Responde y luego consulta la transcripción.",
+        exercise: {
+          id: "c1-20-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada frase del borrador con su versión revisada.",
+          pairs: [
+            { left: "los estudiantes, que trabajan, estudian de noche", right: "los estudiantes que trabajan estudian de noche" },
+            { left: "la única sala que se puede estudiar en silencio", right: "la única sala en la que se puede estudiar en silencio" },
+            { left: "abrir la sala y limpiar la misma", right: "abrir la sala y limpiarla" },
+            { left: "es sin duda la única solución", right: "es una solución razonable que apoya el setenta por ciento" },
+            { left: "o sea, la facultad no nos escucha", right: "en definitiva, abrir la sala por la noche no es un capricho" },
+          ],
+          why: "Cada cambio responde a una pasada: relativas, cohesión, matiz o registro.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "¿Para qué sirve una biblioteca cerrada?",
+    genre: "Columna de opinión en un diario regional",
+    frame: "Versión publicada de la columna de Facundo Ledesma, estudiante de Ingeniería, en la sección de opinión de un diario de Córdoba. La facultad, la encuesta y las personas son ficticias.",
+    text: [
+      "Son las ocho y cinco de un martes de junio, en plena época de finales, y la sala de lectura de la Facultad de Ingeniería acaba de cerrar. Afuera, en la vereda, una docena de estudiantes guarda apuntes y calculadoras en la mochila y se dispersa por los bares de Nueva Córdoba, donde por el precio de un café podrán seguir estudiando un par de horas, con música de fondo y sin enchufes. ¿Para qué sirve una biblioteca cerrada justo cuando más se la necesita?",
+      "Sostengo que la facultad debería abrir su sala de lectura hasta la medianoche, al menos durante los períodos de exámenes. No se trata de un capricho. Según la encuesta que el centro de estudiantes realizó en abril, uno de cada cuatro alumnos trabaja durante el día, y la mayoría de ellos no tiene en su pensión o en su casa un lugar en el que pueda estudiar en silencio. Los estudiantes que trabajan, precisamente los que más dificultades tienen para terminar la carrera, son también los que menos acceso tienen a la biblioteca.",
+      "Es cierto que abrir de noche tendría un costo. Habría que contratar personal, reforzar la seguridad y pagar más electricidad, lo cual no es poco en un presupuesto universitario que ya está ajustado. Aun así, conviene poner las cifras en perspectiva. La propia facultad estima que el horario extendido costaría unos dos millones de pesos por cuatrimestre, una cantidad que, sin ser menor, resulta asumible si se compara con lo que se pierde cada vez que un estudiante abandona la carrera por no poder sostener el ritmo.",
+      "La idea, además, no es nueva. El viejo estatuto de la universidad, cuyas páginas pueden consultarse en el archivo histórico, ya establecía que «el alumno que acreditare trabajo podrá solicitar horarios especiales». La forma «acreditare» es un futuro de subjuntivo, habitual en los textos normativos de la época, y significa sencillamente que cualquier alumno que demuestre que trabaja tiene derecho a pedir un trato distinto. Si nuestros antecesores lo vieron hace casi un siglo, ¿por qué nos cuesta tanto aplicarlo hoy?",
+      "No está demostrado que el horario nocturno aumente los problemas de seguridad; tampoco lo contrario. De ahí que la propuesta más sensata sea probar esta medida a título de prueba durante un cuatrimestre y evaluarla después con datos: cuántas personas usan la sala, a qué horas y con qué resultados en sus exámenes. Yo diría que los números hablarán por sí solos, pero, si no lo hacen, la facultad tendrá argumentos para volver al horario actual.",
+      "En definitiva, abrir la sala por la noche no es un lujo, sino una forma de que la universidad llegue a quienes hoy no puede atender. La directora de la biblioteca, que asumió el cargo en marzo, se ha mostrado abierta a estudiarlo. Ahora le toca al consejo directivo, que se reúne el mes próximo, decidir si la sala de lectura seguirá apagando las luces a las ocho o si, por fin, se quedará encendida para quienes estudian cuando terminan de trabajar.",
+    ],
+    glossary: [
+      { es: "la vereda", note: "en Argentina, la acera" },
+      { es: "ajustado", note: "dicho de un presupuesto, sin margen para gastos nuevos" },
+      { es: "el consejo directivo", note: "órgano de gobierno de una facultad" },
+    ],
+    tasks: [
+      {
+        id: "c1-20-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la columna.",
+        items: [
+          {
+            q: "¿Qué propone exactamente el autor de la columna?",
+            options: ["Abrir la sala de lectura las veinticuatro horas todo el año.", "Abrir la sala hasta la medianoche al menos en época de exámenes, a título de prueba.", "Trasladar la sala de lectura a un bar de Nueva Córdoba."],
+            answer: 1,
+            why: "Segundo y quinto párrafos.",
+          },
+          {
+            q: "¿Cómo trata el autor el argumento del costo?",
+            options: ["Lo niega.", "Lo ignora.", "Lo reconoce y lo pone en perspectiva con el abandono de la carrera."],
+            answer: 2,
+            why: "Tercer párrafo: concesión y contraargumento.",
+          },
+          {
+            q: "¿Para qué cita el autor el estatuto antiguo?",
+            options: ["Para mostrar que la idea de atender a quienes trabajan ya existía.", "Para criticar el lenguaje anticuado de la universidad.", "Para demostrar que la sala siempre abrió de noche."],
+            answer: 0,
+            why: "«La idea, además, no es nueva».",
+          },
+        ],
+      },
+      {
+        id: "c1-20-lectura-herramientas",
+        type: "classify",
+        prompt: "Clasifica cada fragmento de la columna según la herramienta del bloque que ilustra.",
+        categories: ["Relativa o puntuación (G197, G203)", "Argumentación y matiz (G196, G204)", "Lectura de formas antiguas o tiempos no literales (G200, G202)"],
+        items: [
+          { text: "Los estudiantes que trabajan, precisamente los que más dificultades tienen", cat: 0, why: "Especificativa sin comas: solo los que trabajan." },
+          { text: "Es cierto que abrir de noche tendría un costo.", cat: 1, why: "Concesión antes del contraargumento." },
+          { text: "el alumno que acreditare trabajo podrá solicitar horarios especiales", cat: 2, why: "Futuro de subjuntivo citado y explicado." },
+          { text: "La directora de la biblioteca, que asumió el cargo en marzo, se ha mostrado abierta", cat: 0, why: "Explicativa con antecedente único y dos comas." },
+          { text: "¿Para qué sirve una biblioteca cerrada justo cuando más se la necesita?", cat: 1, why: "Pregunta retórica que lleva a la tesis." },
+          { text: "Yo diría que los números hablarán por sí solos", cat: 2, why: "Condicional de atenuación." },
+        ],
+      },
+      {
+        id: "c1-20-lectura-evaluacion",
+        type: "open",
+        prompt: "Valora la columna con argumentos propios.",
+        items: [
+          {
+            prompt: "En 80–100 palabras, di si la columna te convence y señala su argumento más fuerte y su punto más débil. Usa al menos una concesión.",
+            model: "La columna me convence en buena medida. Su argumento más fuerte es la propuesta de probar la medida un cuatrimestre y evaluarla con datos, porque desactiva la objeción del costo sin exigir un compromiso permanente. Es cierto que la cita del estatuto le da un toque de autoridad histórica; aun así, me parece el punto más débil, ya que un texto de hace un siglo no demuestra que la medida funcione hoy. Habría preferido un ejemplo de otra universidad que ya abra de noche.",
+            checklist: ["Doy una valoración matizada.", "Identifico un argumento fuerte y uno débil con razones.", "Incluyo una concesión puntuada correctamente."],
+          },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la columna combina relativas bien puntuadas, cohesión y matiz.",
+      items: [
+        { quote: "un lugar en el que pueda estudiar en silencio", note: "Preposición + artículo + relativo, con subjuntivo porque el lugar no está identificado." },
+        { quote: "lo cual no es poco en un presupuesto universitario que ya está ajustado", note: "«Lo cual» retoma toda la oración anterior, tras coma." },
+        { quote: "cuyas páginas pueden consultarse en el archivo histórico", note: "«Cuyas» concuerda con «páginas», lo poseído." },
+        { quote: "De ahí que la propuesta más sensata sea probar esta medida", note: "Consecuencia con subjuntivo y encapsulador «esta medida»." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Esta práctica integra las clases de esta semana con las de las semanas 16 a 19: preguntas retóricas, puntuación, estilo formal, lo coloquial, tiempos no literales y formas antiguas.",
+    exercises: [
+      {
+        id: "c1-20-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar frases de una columna bien revisada.",
+        items: [
+          { words: ["La", "sala,", "cuyas", "mesas", "tienen", "enchufes,", "se", "llena", "a", "las", "seis."], why: "Explicativa con «cuyas» concordado con «mesas»." },
+          { words: ["Es", "cierto", "que", "cuesta", "dinero;", "aun", "así,", "conviene", "probarlo."], why: "Concesión, punto y coma y conector con coma." },
+          { words: ["No", "está", "demostrado", "que", "la", "medida", "sea", "cara."], why: "Duda: subjuntivo." },
+        ],
+      },
+      {
+        id: "c1-20-integracion",
+        type: "context",
+        prompt: "Elige la versión que integra correctamente lo repasado en el bloque.",
+        items: [
+          {
+            context: "Columna: el autor quiere cerrar un párrafo afirmando que nadie elige estudiar en un bar por gusto.",
+            q: "¿Qué pregunta retórica cumple esa intención (semana 16)?",
+            options: ["¿Quién no elige estudiar en un bar por gusto?", "¿Quién elige estudiar en un bar ruidoso por gusto?", "¿Acaso no elige nadie estudiar en un bar?"],
+            answer: 1,
+            why: "Pregunta afirmativa: afirma «nadie».",
+          },
+          {
+            context: "Correo formal del centro de estudiantes a la directora de la biblioteca (semanas 17 y 18).",
+            q: "¿Qué apertura es adecuada para el correo a la directora?",
+            options: ["Estimada directora: Quería solicitarle una reunión para presentarle nuestra propuesta.", "Hola, directora, ¿te podemos ver un toque?", "Estimada directora, o sea, queremos hablar del tema de la sala."],
+            answer: 0,
+            why: "Saludo con dos puntos, usted coherente e imperfecto de cortesía.",
+          },
+          {
+            context: "El autor cita un acta antigua: «Apenas hubo abierto la sala nocturna en 1962, se llenó de estudiantes» (semana 19).",
+            q: "¿Qué explicación del acta de 1962 conserva el sentido?",
+            options: ["Mientras se abría la sala, se llenaba de estudiantes.", "La sala se llenó años después de abrirse.", "En cuanto se abrió la sala, se llenó de estudiantes."],
+            answer: 2,
+            why: "El pretérito anterior expresa inmediatez: «en cuanto».",
+          },
+          {
+            context: "El autor quiere citar lo que le dijo una estudiante en la vereda, sin cambiar su registro (semana 18).",
+            q: "¿Cómo integra mejor la voz de la estudiante?",
+            options: ["Con lo caro que está el café, o sea, es imposible estudiar en un bar.", "Como resume una estudiante de segundo año: «Con lo caro que está el café, no puedo estudiar en un bar todas las noches».", "Una estudiante sostiene que procede la reducción del consumo de café."],
+            answer: 1,
+            why: "Lo coloquial queda dentro de la cita; el texto del autor mantiene el registro formal.",
+          },
+        ],
+      },
+      {
+        id: "c1-20-mapa",
+        type: "match",
+        prompt: "Relaciona cada clase del bloque con la herramienta que aporta a una columna.",
+        pairs: [
+          { left: "G196 · interrogativas retóricas", right: "llevar al lector a la conclusión sin afirmarla" },
+          { left: "G197 · puntuación de incisos", right: "abrir y cerrar cada inciso y aislar los conectores" },
+          { left: "G198 · estilo formal", right: "valorar con impersonales en el modo adecuado" },
+          { left: "G199 · estilo coloquial", right: "reconocer lo que solo cabe dentro de una cita" },
+          { left: "G200 · tiempos no literales", right: "atenuar una opinión con el condicional" },
+          { left: "G202 · futuro de subjuntivo", right: "explicar una norma antigua sin convertirla en un hecho" },
+        ],
+      },
+      {
+        id: "c1-20-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Escribe en 50–70 palabras el párrafo de concesión de una columna sobre ampliar el horario del comedor universitario. Incluye una relativa explicativa, una especificativa y un encapsulador.",
+            model: "Es cierto que ampliar el horario del comedor, que hoy cierra a las tres, obligaría a contratar más personal. Aun así, esta medida beneficiaría a los estudiantes que cursan de tarde, quienes ahora tienen que elegir entre comer y llegar a clase. Un horario hasta las cinco, probado durante un cuatrimestre, permitiría medir la demanda real.",
+            checklist: ["La explicativa lleva dos comas.", "La especificativa va sin comas.", "Uso un encapsulador como «esta medida»."],
+          },
+          {
+            prompt: "Revisa este cierre en 40–60 palabras para que sea formal, matizado y cohesionado: «O sea, es obvio que todos queremos el comedor abierto, y el comedor es lo único que importa, y la facultad tiene que hacerlo ya».",
+            model: "En definitiva, ampliar el horario del comedor no resolverá todos los problemas de los estudiantes, pero sí uno muy concreto: el de quienes no pueden comer entre clase y clase. Conviene que la facultad lo pruebe el próximo cuatrimestre y evalúe después los resultados.",
+            checklist: ["Elimino «o sea» y las generalizaciones.", "Uso una impersonal con subjuntivo.", "Cierro con una propuesta concreta."],
+          },
+        ],
+      },
+      {
+        id: "c1-20-recuperacion",
+        type: "open",
+        prompt: "Recupera las clases de las semanas 16 a 19 con estos estímulos. No vuelvas a las lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de G196 (semana 16). Estímulo: «Todos hemos estudiado alguna vez de madrugada antes de un final». Conviértelo en pregunta retórica y añade una exclamativa de grado.",
+            model: "¿Quién no ha estudiado alguna vez de madrugada antes de un final? ¡Cuántas noches hemos pasado con un apunte y un mate frío!",
+            checklist: ["La pregunta es negativa porque afirma «todos».", "La exclamativa concuerda («cuántas noches») y lleva tilde."],
+          },
+          {
+            prompt: "Recuperación de G197 y G198 (semana 17). Estímulo: «La biblioteca que es de 1938 sin embargo no tiene calefacción y en base a eso te pedimos que hagas algo con el tema».",
+            model: "La biblioteca, que es de 1938, no tiene calefacción; por ello, le solicitamos que estudie la instalación de un sistema de calefacción en la sala de lectura.",
+            checklist: ["Puntúo el inciso y el conector.", "Uso usted coherente y léxico preciso, sin «en base a» ni «el tema»."],
+          },
+          {
+            prompt: "Recuperación de G199 y G200 (semana 18). Estímulo, mensaje a un amigo: «Ayer estaba en la sala y llegó la bibliotecaria y nos echó a las ocho en punto». Cuéntalo con presente histórico, «ir y + verbo» y una frase suspendida.",
+            model: "Ayer estoy en la sala, a punto de terminar un ejercicio, y va la bibliotecaria y nos echa a las ocho en punto. Con lo que me faltaba…",
+            checklist: ["Mantengo el presente histórico.", "«Va… y nos echa» en el mismo tiempo.", "La frase suspendida se entiende por el contexto."],
+          },
+          {
+            prompt: "Recuperación de G201 y G202 (semana 19). Estímulo, reglamento antiguo de la biblioteca: «El lector que extraviare un libro abonará su valor. No bien hubo sonado la campana, se cerraban las puertas». Explica ambas frases en español actual.",
+            model: "La primera significa que cualquier lector que pierda un libro tendrá que pagar lo que vale: «extraviare» es futuro de subjuntivo y habla de un caso eventual. La segunda dice que, en cuanto sonaba la campana, se cerraban las puertas: «hubo sonado» indica que una acción terminó justo antes de la otra.",
+            checklist: ["Conservo lo eventual de la norma.", "Conservo la sucesión inmediata.", "No uso formas antiguas en mi explicación."],
+          },
+        ],
+      },
+    ],
+  },
+  writing: {
+    task: "Revisa y reescribe una columna de opinión (250–330 palabras) para un diario regional sobre un servicio universitario o municipal que debería ampliarse o cambiar: el horario de una biblioteca, el comedor, el transporte nocturno, las residencias.",
+    context: "La columna se publicará con tu nombre y la leerán estudiantes, docentes y autoridades, algunas de ellas contrarias a tu propuesta. Debe tener una tesis clara, una concesión, datos atribuidos y un cierre con propuesta. Integra al menos una pregunta retórica, relativas bien puntuadas y una cita (de una persona o de un documento antiguo) bien explicada.",
+    steps: [
+      "Escribe tu tesis en una frase y anota el argumento contrario más fuerte con un dato.",
+      "Planifica cuatro o cinco párrafos con una idea cada uno: situación, tesis, concesión, propuesta y cierre.",
+      "Redacta la columna integrando una pregunta retórica, una cita explicada y al menos dos relativas de distinto tipo.",
+      "Revisa en tres pasadas (estructura, cohesión y matiz y registro), corrige cada relativa y cada coma de inciso y elimina «el mismo», las generalizaciones y los rasgos orales.",
+    ],
+    useLanguage: [
+      "Sostengo que…",
+      "Es cierto que…; aun así, …",
+      "No está demostrado que… / De ahí que…",
+      "…, lo cual… / …, cuyo/a… / en el / la que…",
+      "Según…, / Al parecer, …",
+      "En definitiva, … no es…, sino…",
+    ],
+    model: [
+      "Cada noche, a partir de las once, decenas de estudiantes esperan en la parada de la Ciudad Universitaria un colectivo que pasa cada cuarenta minutos. ¿Quién puede concentrarse en un final después de esperar casi una hora a la intemperie? La línea que conecta el campus con el centro, que es la única que funciona a esas horas, debería reforzarse durante los períodos de exámenes.",
+      "Según el centro de estudiantes, uno de cada tres alumnos cursa materias que terminan después de las diez. Los estudiantes que viven en barrios alejados, precisamente los que tienen menos alternativas, son quienes más sufren esta situación, lo cual se refleja en la deserción de los primeros años.",
+      "Es cierto que reforzar el servicio tendría un costo para la empresa y para el municipio. Aun así, esta medida podría limitarse a seis semanas por cuatrimestre y financiarse en parte con el fondo de bienestar estudiantil, cuyo presupuesto no se ejecuta por completo desde hace dos años. No está demostrado que la demanda sea tan baja como afirma la empresa; de ahí que convenga medirla con datos reales.",
+      "La propuesta, además, tiene antecedentes. Un viejo reglamento municipal establecía que «el servicio que se prestare en horario nocturno atenderá preferentemente a estudiantes y trabajadores». La forma «prestare» es un futuro de subjuntivo de la época y significa, sencillamente, que cualquier servicio nocturno debía pensar primero en ellos.",
+      "En definitiva, reforzar el colectivo nocturno no es un privilegio, sino una condición para que la universidad pública sea realmente accesible. Yo diría que el municipio tiene ahora una buena oportunidad para demostrarlo.",
+    ],
+    checklist: [
+      "La tesis aparece en el primer párrafo y cada párrafo tiene una idea.",
+      "Incluyo una concesión con su contraargumento, bien puntuados.",
+      "Cada relativa explicativa lleva sus dos comas y cada especificativa va sin ellas.",
+      "No repito sustantivos ni uso «el mismo»; retomo con encapsuladores.",
+      "Los datos están atribuidos, no exagero y no apilo atenuadores.",
+      "No hay rasgos coloquiales fuera de las citas.",
+    ],
+    words: [250, 330],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Debate en la radio universitaria",
+        prompt: "La radio de la universidad te invita a defender tu columna durante cuatro minutos frente a un consejero que se opone por el costo. Presenta tu tesis, aporta datos atribuidos, haz una concesión, usa una pregunta retórica y una cita explicada, y cierra con una propuesta concreta. Cuida las pausas de las relativas: en la radio, la pausa es tu coma.",
+        prep: [
+          "Anota tu tesis, dos datos con su fuente y el argumento del consejero.",
+          "Prepara una relativa especificativa y otra explicativa y ensaya sus pausas.",
+          "Elige una pregunta retórica para el final de tu primera intervención.",
+        ],
+        seconds: 240,
+        model: "Gracias por la invitación. Sostengo que la sala de lectura debería abrir hasta la medianoche en época de finales. Según la encuesta del centro de estudiantes, uno de cada cuatro alumnos trabaja de día. Los estudiantes que trabajan no tienen otro lugar donde estudiar en silencio. Es cierto que la medida cuesta dinero; aun así, ¿cuánto nos cuesta que esos estudiantes abandonen?…",
+        selfCheck: [
+          "No hago pausa en las especificativas y sí en las explicativas.",
+          "Hago una concesión antes de responder al costo.",
+          "Mantengo un registro formal y atribuyo los datos.",
+        ],
+      },
+      {
+        title: "Negociar con la directora de la biblioteca",
+        prompt: "La directora de la biblioteca está dispuesta a escuchar, pero duda de que haya personal. Pídele con cortesía una prueba de un cuatrimestre, pregúntale qué necesitaría para aceptarla y negocia una condición (voluntarios, horario más corto, informe de uso).",
+        prep: [
+          "Prepara la apertura con un imperfecto de cortesía.",
+          "Ten dos preguntas reales y una propuesta intermedia.",
+        ],
+        seconds: 150,
+        model: "Buenas tardes, directora. Venía a proponerle una prueba durante el próximo cuatrimestre. ¿Qué necesitaría la biblioteca para abrir hasta las doce? Nosotros podríamos organizar un grupo de estudiantes voluntarios…",
+        selfCheck: [
+          "Uso usted de forma coherente.",
+          "Pregunto antes de proponer.",
+        ],
+      },
+      {
+        title: "Leer el cierre de la columna",
+        prompt: "Lee en voz alta el último párrafo de tu columna marcando las pausas de las relativas explicativas y el tono de la pregunta retórica.",
+        prep: ["Marca con barras las pausas del párrafo."],
+        seconds: 60,
+        selfCheck: ["Cada explicativa tiene su pausa de cierre.", "La pregunta retórica termina en descenso."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu columna revisada, el primer borrador y una tarjeta con una herramienta de cada clase del bloque (G196 a G204).",
+    cards: [
+      {
+        move: "Compara",
+        task: "Enseña a tu profesor el primer borrador y la versión revisada, y explica tres cambios: uno de relativas, uno de cohesión y uno de matiz.",
+        phrases: ["Aquí quité las comas porque solo me refiero a…", "Cambié «el mismo» por…"],
+      },
+      {
+        move: "Pregunta",
+        task: "Pregunta a tu profesor si tu concesión es suficientemente fuerte o si parece hecha solo por cumplir.",
+        phrases: ["¿Reconozco de verdad el otro argumento?", "¿Debería dar un dato?"],
+      },
+      {
+        move: "Debate",
+        task: "Pide a tu profesor que haga de consejero contrario a tu propuesta y responde con una concesión, un dato y una pregunta retórica.",
+        phrases: ["Es cierto que…; aun así, …", "¿Quién no…?"],
+      },
+      {
+        move: "Repasa",
+        task: "Muestra tu tarjeta del bloque y pide a tu profesor que elija dos clases al azar para que las uses en una frase oral sobre tu ciudad.",
+        phrases: ["De la semana 17 uso…", "Esto lo tomo de la clase G202…"],
+      },
+    ],
+    bring: "Tu columna revisada con el primer borrador, la tarjeta del bloque y, si quieres, la grabación del debate.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "¿Qué afirma «Los becarios, que viven en el campus, llegan puntuales»?",
+        options: ["Que todos los becarios viven en el campus y llegan puntuales.", "Que solo los becarios que viven en el campus llegan puntuales.", "Que ningún becario vive en el campus."],
+        answer: 0,
+        why: "Explicativa entre comas: se aplica a todos.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué relativo corresponde a «el reglamento ___ la sala cierra a las ocho» en un texto cuidado?",
+        options: ["que", "según el cual", "donde"],
+        answer: 1,
+        why: "Tras una preposición larga, «el cual».",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase del consejero. Por las pausas, ¿a quiénes se refiere?",
+        options: ["A todos los docentes.", "Solo a los docentes que firmaron la nota.", "A ningún docente."],
+        answer: 1,
+        why: "Sin pausas: la relativa especifica.",
+        audio: "Los docentes que firmaron la nota apoyan la apertura nocturna.",
+        voice: "es-AR-m",
+      },
+      {
+        type: "gap",
+        q: "Es la única facultad ___ biblioteca abre los domingos.",
+        answers: [["cuya"]],
+        hint: "Relativo posesivo que concuerda con lo poseído, «biblioteca» (femenino singular).",
+        why: "«Cuya» concuerda con «biblioteca».",
+      },
+      {
+        type: "gap",
+        q: "No está demostrado que la sala nocturna ___ más gastos de los previstos. [generar]",
+        answers: [["genere"]],
+        hint: "«No está demostrado que» pone en duda el contenido, así que pide subjuntivo.",
+        why: "Duda: presente de subjuntivo.",
+      },
+      {
+        type: "error",
+        sentence: "La profesora que hablamos ayer nos prometió apoyar la propuesta.",
+        answers: ["La profesora con la que hablamos ayer nos prometió apoyar la propuesta.", "La profesora con quien hablamos ayer nos prometió apoyar la propuesta.", "La profesora con la cual hablamos ayer nos prometió apoyar la propuesta."],
+        why: "«Hablar con» alguien: la preposición va delante del relativo en la escritura cuidada.",
+      },
+      {
+        type: "error",
+        sentence: "Proponemos ampliar el horario y evaluar el mismo al final del cuatrimestre.",
+        answers: ["Proponemos ampliar el horario y evaluarlo al final del cuatrimestre."],
+        why: "«El mismo» como pronombre se sustituye por el pronombre átono.",
+      },
+      {
+        type: "order",
+        words: ["Es", "cierto", "que", "supone", "un", "gasto;", "aun", "así,", "esta", "medida", "beneficia", "a", "muchos."],
+        why: "Concesión, contraargumento puntuado y encapsulador.",
+      },
+      {
+        type: "choice",
+        q: "En una columna, ¿qué frase sobre el apoyo estudiantil está mejor matizada?",
+        options: ["Todos los estudiantes, sin excepción, apoyan la propuesta.", "Quizá tal vez podría ser que algunos apoyaran posiblemente la propuesta.", "Según la encuesta, la mayoría de los estudiantes apoya la propuesta."],
+        answer: 2,
+        why: "Dato atribuido, sin exagerar ni apilar atenuadores.",
+      },
+      {
+        type: "open",
+        prompt: "Revisa en 80–100 palabras este párrafo y explica tus cambios: «O sea, la biblioteca que es la más antigua de la ciudad cierra temprano, y la biblioteca debería abrir más, y es sin duda lo único que pedimos todos».",
+        model: "Versión revisada: «La biblioteca, que es la más antigua de la ciudad, cierra a las ocho. Ampliar su horario sería, según la encuesta, la principal demanda de los estudiantes». Cambios: elimino «o sea», que es oral; pongo comas a la relativa porque la biblioteca es única; sustituyo la repetición de «biblioteca» por un posesivo; y cambio «sin duda lo único que pedimos todos» por un dato atribuido, porque la generalización debilita el argumento.",
+        checklist: ["Puntúo la relativa explicativa.", "Elimino la repetición y el rasgo oral.", "Matizo la generalización con un dato."],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Distingo y puntúo relativas especificativas y explicativas, y elijo el relativo adecuado para un texto cuidado.",
+      "Reviso un texto argumentativo en tres pasadas: estructura, cohesión y matiz y registro.",
+      "Retomo información con encapsuladores, sinónimos y pronombres sin repetir ni usar «el mismo».",
+      "Integro en un mismo texto preguntas retóricas, incisos bien puntuados, estilo formal, citas coloquiales o antiguas bien explicadas y tiempos que atenúan.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la tabla «Con comas o sin comas» y escribe una frase nueva para cada fila.",
+      "Dentro de una semana, revisa en tres pasadas un texto argumentativo que hayas escrito antes de este bloque.",
+      "En la próxima clase, lee tu columna y pide a tu profesor que señale una herramienta de cada semana del bloque.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/oraciones-restrictivas-explicativas-y-puntuacion", label: "Clase: Oraciones restrictivas, explicativas y puntuación" },
+    { path: "/gramatica/revision-argumentativa-c1-coherencia-cohesion-y", label: "Clase: Revisión argumentativa C1: coherencia, cohesión y matiz" },
+  ],
 };

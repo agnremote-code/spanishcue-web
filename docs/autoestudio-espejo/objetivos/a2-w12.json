@@ -1,0 +1,12 @@
+[
+  [12, "gram", "g068", "Comparaciones: mejor, peor, mayor, menor", "Puedo comparar dos cosas con más / menos… que y tan… como, usar mejor, peor, mayor y menor sin más, describir el estado con estar + participio y hablar de grupos como la gente en singular.", ["a1.gram.g037"], { "related": ["/expandir-y-precisar-descripciones"] }],
+  [12, "gram", "g069", "Superlativos relativos y absolutos frecuentes", "Puedo destacar uno de un grupo (el más barato de los tres, la mejor vista de la ciudad, uno de los más…), intensificar con -ísimo con su ortografía y reaccionar con ¡qué…!", ["a2.gram.g068"], { "related": ["/gramatica/superlativos-relativos-y-absolutos-frecuentes"] }],
+  [12, "voc", "w12-vivienda-alquiler", "Buscar vivienda y adjetivos para comparar", "Puedo hablar de alquiler, muebles, servicios y seguridad, y usar adjetivos y fórmulas para comparar viviendas y decidir.", ["a2.gram.g068"]],
+  [12, "pron", "w12-isimo-exclamaciones", "La fuerza de -ísimo y el tono de ¡qué…!", "Puedo pronunciar -ísimo con la fuerza en la í y decir exclamaciones con ¡qué…! que empiezan altas y bajan al final.", []],
+  [12, "lis", "w12-visita-apartamento", "Escuchar la visita a un apartamento", "Puedo entender en una visita qué ventajas y desventajas tiene un apartamento frente a otro y qué decide la persona.", ["a2.gram.g068", "a2.gram.g069"]],
+  [12, "read", "w12-mensaje-eleccion", "Leer un mensaje que compara opciones", "Puedo entender un mensaje que compara tres viviendas y saber qué características tiene cada una y por qué se elige una.", ["a2.gram.g068", "a2.gram.g069"]],
+  [12, "wri", "w12-comparar-opciones", "Escribir para recomendar una opción", "Puedo escribir un mensaje de 60 a 110 palabras que compara dos o tres opciones, destaca la mejor y justifica la recomendación.", ["a2.gram.g068", "a2.gram.g069", "a2.disc.w12-justificar-eleccion"]],
+  [12, "spk", "w12-comparar-elegir", "Comparar, destacar y reaccionar en voz alta", "Puedo comparar dos lugares, presentar lo mejor de mi país y reaccionar a lo que veo durante unos tres minutos en total.", ["a2.fun.w12-elegir-entre-opciones"]],
+  [12, "fun", "w12-elegir-entre-opciones", "Comparar opciones y elegir", "Puedo comparar ventajas y desventajas de varias opciones y decir cuál prefiero.", ["a2.gram.g068"]],
+  [12, "disc", "w12-justificar-eleccion", "Justificar una elección", "Puedo ordenar razones a favor y en contra con además, pero, lo único malo es y por eso para justificar una elección.", ["a2.gram.g069"]]
+]

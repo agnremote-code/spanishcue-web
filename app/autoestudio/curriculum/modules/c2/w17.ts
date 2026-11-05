@@ -1,872 +1,892 @@
 import type { Module } from "../../types";
 
-/** Material original C2. Audio mediante síntesis; sin acreditación regional. */
+/**
+ * C2 · semana 17 · Autoestudio espejo de G231 (puntuación avanzada: punto y
+ * coma, dos puntos e incisos). Repaso autónomo con el catálogo ficticio de una
+ * exposición sobre el puerto de Asunción y el comercio fluvial.
+ * Audio mediante síntesis; sin acreditación regional.
+ */
 export const c2w17: Module = {
-  "id": "c2-17",
-  "level": "c2",
-  "week": 17,
-  "kind": "core",
-  "title": "Pedir disculpas y reparar",
-  "subtitle": "Responsabilidad, presuposiciones y actos de reparación",
-  "stop": {
-    "place": "Asunción",
-    "country": "Paraguay"
+  id: "c2-17",
+  level: "c2",
+  week: 17,
+  kind: "core",
+  title: "Fronteras dentro de la frase: el río también se puntúa",
+  subtitle: "Repaso del punto y coma, los dos puntos, los incisos anidados, las comillas en tres niveles y los puntos suspensivos según la Ortografía académica",
+  stop: {
+    place: "Asunción",
+    country: "Paraguay",
   },
-  "minutes": 135,
-  "newObjectives": [
-    "c2.gram.agencia-reparacion",
-    "c2.fun.disculpa-reparacion",
-    "c2.pron.serenidad-no-condescendiente",
-    "c2.wri.comunicado-reparacion"
+  minutes: 135,
+  newObjectives: [
+    "c2.gram.g231",
+    "c2.voc.w17-puerto-catalogo",
+    "c2.pron.w17-leer-signos",
+    "c2.lis.w17-revision-catalogo",
+    "c2.read.w17-ensayo-puerto",
+    "c2.wri.w17-texto-presentacion",
+    "c2.spk.w17-justificar-signos",
+    "c2.fun.w17-negociar-correccion",
+    "c2.disc.w17-jerarquia-fronteras",
   ],
-  "reviewObjectives": [
-    "c2.disc.control-estilistico",
-    "c2.gram.recursos-cohesion",
-    "c2.voc.estilo-lexico",
-    "c2.pron.ritmo-prosa",
-    "c2.wri.edicion-estilo",
-    "c2.gram.modalidad-evidencial",
-    "c2.disc.responsabilidad-fuentes",
-    "c2.voc.certeza-documental",
-    "c2.pron.reserva-epistemica",
-    "c2.wri.rectificacion"
-  ],
-  "prerequisites": [
-    "c2-16"
-  ],
-  "goal": {
-    "canDo": "Puedo formular una disculpa directa y una reparación verificable sin exigir absolución al destinatario.",
-    "steps": [
-      "Lee las fuentes y distingue dato, inferencia y evaluación.",
-      "Escucha el intercambio antes de consultar su transcripción.",
-      "Aplica responsabilidad, presuposiciones y actos de reparación a una decisión comunicativa concreta.",
-      "Produce el dossier escrito, revisa una elección y defiéndela oralmente."
-    ]
-  },
-  "theory": {
-    "intro": "Los casos, documentos y voces de esta semana son originales y ficticios. La dificultad está en controlar relaciones de significado, no en acumular palabras raras.",
-    "parts": [
-      {
-        "heading": "Responsabilidad, presuposiciones y actos de reparación",
-        "body": [
-          "Sentimos que se haya sentido excluida desplaza el objeto de la disculpa hacia la reacción del destinatario. Lamentamos haber omitido la información identifica una actuación propia. Una pasiva refleja como se cometieron errores puede ser pertinente si el agente es desconocido, pero también ocultarlo cuando sí se conoce. La reparación combina reconocimiento, explicación sin excusa, acción y seguimiento; no exige que la persona afectada conceda perdón para recibir una solución.",
-          "En este caso, Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes. La formulación elegida debe permitir al destinatario reconstruir la diferencia relevante y reconocer qué no se ha demostrado."
-        ],
-        "examples": [
-          {
-            "es": "Lamentamos haber publicado una información incompleta."
-          },
-          {
-            "es": "Se omitió el aviso; la coordinación asume esa omisión."
-          },
-          {
-            "es": "Si alguien se sintió excluido, lo sentimos: la condición debilita el reconocimiento."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "La institución lamenta de haber omitido el aviso.",
-            "right": "La institución lamenta haber omitido el aviso.",
-            "why": "Lamentar seguido de infinitivo compuesto no exige de."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretar, atribuir y revisar en este caso",
-        "body": [
-          "Pedir comprensión puede desplazar hacia los afectados el trabajo de tranquilizar a la institución. Para defender esa lectura, identifica una formulación y el detalle que la sostiene. Prueba después una explicación rival y señala qué dato necesitarías para preferirla.",
-          "La versión para un público nuevo puede cambiar léxico, orden y longitud, pero debe conservar esta condición: La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario. Un cambio de registro que la elimina cambia también el contenido."
-        ],
-        "examples": [
-          {
-            "es": "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.",
-            "note": "Síntesis con alcance delimitado."
-          },
-          {
-            "es": "La disculpa depende de que se pruebe una reacción emocional.",
-            "note": "Lectura excesiva que el dossier no respalda."
-          }
-        ],
-        "tip": "La mascota te invita a conservar una duda productiva: llévala a clase junto con una prueba, no con una impresión aislada."
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Relaciona forma y efecto comunicativo en el expediente; la explicación importa tanto como la respuesta.",
-    "exercises": [
-      {
-        "id": "c2-17-gramatica-alcance",
-        "type": "choice",
-        "prompt": "Selecciona la interpretación defendible de Pedir disculpas y reparar.",
-        "items": [
-          {
-            "q": "En el caso de Pedir disculpas y reparar, ¿qué formulación preserva el alcance?",
-            "options": [
-              "Explicar la buena intención equivale a reparar toda consecuencia.",
-              "Se omitió el aviso; la coordinación asume esa omisión."
-            ],
-            "answer": 1,
-            "why": "Sentimos que se haya sentido excluida desplaza el objeto de la disculpa hacia la reacción del destinatario. Lamentamos haber omitido la información identifica una actuación propia. Una pasiva refleja como se cometieron errores puede ser pertinente si el agente es desconocido, pero también ocultarlo cuando sí se conoce. La reparación combina reconocimiento, explicación sin excusa, acción y seguimiento; no exige que la persona afectada conceda perdón para recibir una solución."
-          },
-          {
-            "q": "¿Qué cautela lingüística resulta necesaria al explicar Pedir disculpas y reparar?",
-            "options": [
-              "La disculpa depende de que se pruebe una reacción emocional.",
-              "Pedir comprensión puede desplazar hacia los afectados el trabajo de tranquilizar a la institución."
-            ],
-            "answer": 1,
-            "why": "Relaciona forma, contexto y efecto; evita ampliar una conclusión más allá de su base."
-          }
-        ]
-      },
-      {
-        "id": "c2-17-gramatica-forma",
-        "type": "gap",
-        "prompt": "Completa las relaciones gramaticales del caso Pedir disculpas y reparar.",
-        "items": [
-          {
-            "q": "Lamentamos ___ omitido el requisito.",
-            "answers": [
-              [
-                "haber"
-              ]
-            ],
-            "why": "Sentimos que se haya sentido excluida desplaza el objeto de la disculpa hacia la reacción del destinatario. Lamentamos haber omitido la información identifica una actuación propia. Una pasiva refleja como se cometieron errores puede ser pertinente si el agente es desconocido, pero también ocultarlo cuando sí se conoce. La reparación combina reconocimiento, explicación sin excusa, acción y seguimiento; no exige que la persona afectada conceda perdón para recibir una solución."
-          },
-          {
-            "q": "La reapertura no exige que la persona ___ la disculpa.",
-            "answers": [
-              [
-                "acepte"
-              ]
-            ],
-            "why": "Sentimos que se haya sentido excluida desplaza el objeto de la disculpa hacia la reacción del destinatario. Lamentamos haber omitido la información identifica una actuación propia. Una pasiva refleja como se cometieron errores puede ser pertinente si el agente es desconocido, pero también ocultarlo cuando sí se conoce. La reparación combina reconocimiento, explicación sin excusa, acción y seguimiento; no exige que la persona afectada conceda perdón para recibir una solución."
-          },
-          {
-            "q": "El informe asigna la omisión ___ la coordinación.",
-            "answers": [
-              [
-                "a"
-              ]
-            ],
-            "why": "Sentimos que se haya sentido excluida desplaza el objeto de la disculpa hacia la reacción del destinatario. Lamentamos haber omitido la información identifica una actuación propia. Una pasiva refleja como se cometieron errores puede ser pertinente si el agente es desconocido, pero también ocultarlo cuando sí se conoce. La reparación combina reconocimiento, explicación sin excusa, acción y seguimiento; no exige que la persona afectada conceda perdón para recibir una solución."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Usa estas unidades para describir diferencias que el caso exige. La definición orienta el uso; contrástala con la frase completa.",
-    "groups": [
-      {
-        "title": "Precisión para Pedir disculpas y reparar",
-        "items": [
-          {
-            "es": "reconocimiento",
-            "note": "aceptación explícita de un hecho o responsabilidad"
-          },
-          {
-            "es": "reparación",
-            "note": "acción que responde al daño o fallo"
-          },
-          {
-            "es": "excusa",
-            "note": "razón usada para reducir responsabilidad"
-          },
-          {
-            "es": "explicación",
-            "note": "descripción causal que no elimina responsabilidad"
-          },
-          {
-            "es": "restituir",
-            "note": "devolver una posibilidad o condición perdida"
-          },
-          {
-            "es": "seguimiento",
-            "note": "comprobación posterior del cumplimiento"
-          },
-          {
-            "es": "agravio",
-            "note": "ofensa o perjuicio percibido o sufrido"
-          },
-          {
-            "es": "compromiso verificable",
-            "note": "acción cuyo cumplimiento puede comprobarse"
-          }
-        ]
-      }
+  reviewObjectives: ["c2.gram.g229","c2.gram.g230","c2.voc.w16-ciencia-agua","c2.pron.w16-incisos-cautela","c2.lis.w16-resumen-boletin","c2.read.w16-columna-titulares","c2.wri.w16-resena-divulgativa","c2.spk.w16-explicar-estudio","c2.fun.w16-corregir-exageracion","c2.disc.w16-registro-conectores"],
+  prerequisites: ["c2-16"],
+  goal: {
+    canDo: "Puedo puntuar textos complejos según la Ortografía académica: decidir entre coma, punto y coma y punto, usar los dos puntos con cada una de sus funciones, anidar incisos y citas sin confundir al lector y leer en voz alta haciendo oír esa puntuación.",
+    steps: [
+      "Repasa en la teoría la jerarquía de fronteras, los usos del punto y coma y de los dos puntos, los incisos anidados y las comillas, y los errores más frecuentes.",
+      "Practica con los textos del catálogo de una exposición sobre el puerto de Asunción.",
+      "Escucha la revisión de la editora y el historiador y lee el ensayo central del catálogo.",
+      "Redacta el texto de presentación de una exposición, revísalo signo por signo y defiende en voz alta tus decisiones de puntuación.",
     ],
-    "exercises": [
-      {
-        "id": "c2-17-lexico",
-        "type": "match",
-        "prompt": "Relaciona cada unidad con la distinción que aporta al expediente de Pedir disculpas y reparar.",
-        "pairs": [
-          {
-            "left": "reconocimiento",
-            "right": "aceptación explícita de un hecho o responsabilidad"
-          },
-          {
-            "left": "reparación",
-            "right": "acción que responde al daño o fallo"
-          },
-          {
-            "left": "excusa",
-            "right": "razón usada para reducir responsabilidad"
-          },
-          {
-            "left": "explicación",
-            "right": "descripción causal que no elimina responsabilidad"
-          },
-          {
-            "left": "restituir",
-            "right": "devolver una posibilidad o condición perdida"
-          },
-          {
-            "left": "seguimiento",
-            "right": "comprobación posterior del cumplimiento"
-          },
-          {
-            "left": "agravio",
-            "right": "ofensa o perjuicio percibido o sufrido"
-          },
-          {
-            "left": "compromiso verificable",
-            "right": "acción cuyo cumplimiento puede comprobarse"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Disculpa directa sin condescendencia",
-    "explanation": [
-      "Ensaya una primera persona clara y evita enfatizar vosotros como si el problema fuera la reacción ajena. Deja una pausa para la respuesta: no uses un cierre melódico para impedir que continúe la queja.",
-      "El audio utiliza síntesis disponible en el navegador: no certifica acento regional, ironía natural ni calidad de pronunciación. Escucha el contenido, ensaya contrastes y comprueba el efecto con una persona. El objetivo es inteligibilidad y control expresivo, no eliminar tu acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste estos signos con tu profesor. Aquí los repasas en Asunción, donde un archivo municipal prepara una exposición sobre el viejo puerto y el comercio por el río Paraguay. La editora del catálogo revisa los textos del historiador que lo escribe: cartelas, pies de foto y un ensayo central lleno de enumeraciones, citas de cronistas y aclaraciones dentro de aclaraciones. La pregunta que guía toda la semana es siempre la misma: ¿dónde está la frontera principal de este enunciado, y qué signo le corresponde?",
+    parts: [
       {
-        "es": "Lamentamos haber omitido el requisito."
-      },
-      {
-        "es": "Lamentamos que se hayan sentido desinformados."
-      }
-    ],
-    "perceive": {
-      "id": "c2-17-percepcion",
-      "type": "listen",
-      "prompt": "Escucha el contraste antes de leer las opciones en «Pedir disculpas y reparar».",
-      "items": [
-        {
-          "q": "Escucha la primera formulación sobre Pedir disculpas y reparar. ¿Qué contenido permite recuperar?",
-          "options": [
-            "Lamentamos haber omitido el requisito.",
-            "Lamentamos que se hayan sentido desinformados."
+        heading: "El punto y coma: una frontera intermedia",
+        body: [
+          "El punto y coma marca una pausa mayor que la coma y menor que el punto. Tiene tres usos principales. Primero, separa oraciones independientes que el sentido mantiene muy unidas: «El muelle norte se usaba para la yerba; el del sur, para la madera». Segundo, separa los elementos de una enumeración compleja cuando cada uno ya contiene comas; delante del último elemento, introducido por «y», lo habitual es la coma. Tercero, va delante de conectores como «sin embargo», «no obstante», «por tanto» o «en cambio» cuando las oraciones tienen cierta longitud; si son muy largas, es preferible el punto. También puede preceder a «pero» cuando los dos miembros son largos y llevan comas.",
+          "Detrás del punto y coma siempre se escribe minúscula. Y hay un uso que no le corresponde: después de una subordinada antepuesta («Cuando bajaba el río, los vapores esperaban en la bahía») va coma, nunca punto y coma.",
+        ],
+        table: {
+          caption: "Los tres usos del punto y coma",
+          head: ["Uso", "Ejemplo del catálogo"],
+          rows: [
+            ["oraciones relacionadas sin nexo", "La aduana cerraba a las seis; los estibadores seguían cargando a la luz de los faroles."],
+            ["enumeración compleja", "Llegaban cueros, de Concepción; yerba, del norte; tabaco, de Villarrica, y madera, del Chaco."],
+            ["ante conector con oraciones de cierta longitud", "El puerto había crecido durante tres décadas sin ningún plan; sin embargo, nadie se atrevía a reformarlo."],
           ],
-          "answer": 0,
-          "why": "La respuesta depende de las palabras y de su agrupación; no atribuyas a la síntesis una intención o variedad verificada.",
-          "audio": "Lamentamos haber omitido el requisito.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "Escucha ahora el contraste de Pedir disculpas y reparar. ¿Qué formulación aparece?",
-          "options": [
-            "Lamentamos haber omitido el requisito.",
-            "Lamentamos que se hayan sentido desinformados."
+        mistakes: [
+          {
+            wrong: "Cuando llegaban los vapores del sur; la ciudad entera bajaba al puerto.",
+            right: "Cuando llegaban los vapores del sur, la ciudad entera bajaba al puerto.",
+            why: "Tras una subordinada antepuesta va coma; el punto y coma separa oraciones del mismo nivel.",
+          },
+        ],
+      },
+      {
+        heading: "Los dos puntos: anunciar, cerrar, explicar, citar y saludar",
+        body: [
+          "Los dos puntos detienen el discurso para llamar la atención sobre lo que sigue. Anuncian una enumeración cuando antes hay un elemento que la anticipa («tres», «los siguientes», «estos»): «El puerto exportaba tres productos: yerba, cueros y madera». Cierran una enumeración antes de la palabra que la resume: «Yerba, cueros y madera: eso era el puerto». Unen sin nexo dos oraciones cuando la segunda es causa, consecuencia, conclusión o explicación de la primera: «Los vapores no llegaron: el río había bajado dos metros». Introducen las citas en estilo directo y siguen al saludo de una carta: «Estimada Sra. Benítez:».",
+          "Después de los dos puntos se escribe minúscula en el texto corrido; mayúscula, solo si sigue una cita o en las cartas, tras el saludo. Hay tres usos incorrectos frecuentes: poner dos puntos entre un verbo o una preposición y su complemento («*Los productos eran: yerba…»); ponerlos antes del estilo indirecto («*El capitán dijo: que no zarparía»), y encadenar dos pares de dos puntos en la misma oración, que la norma desaconseja por estilo.",
+        ],
+        examples: [
+          { es: "Las causas del declive fueron dos: la llegada del ferrocarril y la crisis de los años treinta.", note: "Anuncio tras un elemento anticipador («dos»)." },
+          { es: "La bahía se llenaba de arena cada invierno: había que dragarla dos veces al año.", note: "Consecuencia sin nexo." },
+          { es: "El cronista lo resumió así: «Asunción mira al río y le da la espalda al mismo tiempo».", note: "Cita en estilo directo: mayúscula tras los dos puntos." },
+          { es: "Los productos eran yerba, cueros y madera.", note: "Sin dos puntos entre el verbo y su complemento." },
+        ],
+        mistakes: [
+          {
+            wrong: "El capitán declaró: que no zarparía hasta que subiera el río.",
+            right: "El capitán declaró que no zarparía hasta que subiera el río. / El capitán declaró: «No zarparé hasta que suba el río».",
+            why: "Los dos puntos introducen el estilo directo; el indirecto, con «que», no los admite.",
+          },
+        ],
+      },
+      {
+        heading: "Incisos dentro de incisos: paréntesis, rayas y corchetes",
+        body: [
+          "Un inciso es una aclaración que interrumpe la oración. Cuando dentro de un inciso hace falta otro, se cambia de signo para que el lector sepa dónde se abre y dónde se cierra cada uno. Si el inciso exterior va entre rayas, el interior va entre paréntesis; si el exterior va entre paréntesis, el interior va entre rayas o, en un tercer nivel, entre corchetes. Los corchetes sirven además para las interpolaciones del editor dentro de una cita («El cronista escribió que “ella [la ciudad] vivía del río”») y, con puntos suspensivos dentro, para marcar que se ha omitido un fragmento: […].",
+          "La raya de cierre no se omite aunque el inciso termine justo antes de un punto: «La aduana —construida con piedra traída en balsas— sigue en pie». Y si después del inciso la oración necesita una coma o un punto, ese signo va detrás de la raya o del paréntesis de cierre, nunca delante.",
+        ],
+        table: {
+          caption: "Anidar sin perder al lector",
+          head: ["Nivel exterior", "Nivel interior", "Ejemplo"],
+          rows: [
+            ["rayas", "paréntesis", "El edificio —que diseñó un arquitecto italiano (cuyo nombre no consta en el acta)— se terminó tarde."],
+            ["paréntesis", "rayas", "La jangada (una balsa de troncos —a veces de cien metros— que bajaba con la corriente) traía la madera."],
+            ["paréntesis", "corchetes", "El inventario (fechado en el archivo [legajo 14] como «sin año») enumera doce barcos."],
+            ["cita", "corchetes", "«Ellos [los estibadores] cobraban por bulto, no por hora»."],
           ],
-          "answer": 1,
-          "why": "Compara después tus dos lecturas con una persona: una pausa puede favorecer una lectura sin demostrarla.",
-          "audio": "Lamentamos que se hayan sentido desinformados.",
-          "voice": "es-ES-m"
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "El catálogo (que se imprimirá en Asunción (en la imprenta municipal)) tendrá doscientas páginas.",
+            right: "El catálogo (que se imprimirá en Asunción [en la imprenta municipal]) tendrá doscientas páginas. / El catálogo (que se imprimirá en Asunción —en la imprenta municipal—) tendrá doscientas páginas.",
+            why: "Dos pares de paréntesis anidados confunden; el inciso interior cambia de signo.",
+          },
+        ],
+      },
+      {
+        heading: "Comillas en tres niveles, puntos suspensivos y preguntas en serie",
+        body: [
+          "En español se usan primero las comillas angulares, después las inglesas y, en un tercer nivel, las simples: «El cronista anotó: “Los marineros llamaban al muelle ‘el purgatorio’ por el calor”». El punto de la oración va siempre detrás de las comillas de cierre, aunque la cita termine con signo de interrogación o de exclamación: «¿Quién paga la descarga?».",
+          "Los puntos suspensivos son siempre tres, nunca cuatro, y no se escriben después de «etc.», porque significan lo mismo. Pueden ir seguidos de coma, de punto y coma o de dos puntos: «Yerba, cueros, tabaco…, todo pasaba por la aduana». Los signos de interrogación y exclamación se abren donde empieza la pregunta, aunque no coincida con el principio de la oración («El puerto, ¿quién lo administraba?»), y en una serie de preguntas breves pueden separarse con coma y continuar en minúscula: «¿Quién cargaba?, ¿quién cobraba?, ¿quién llevaba las cuentas?».",
+        ],
+        examples: [
+          { es: "La placa decía: «Aquí desembarcó el vapor “Libertad” en su primer viaje».", note: "Comillas inglesas dentro de las angulares." },
+          { es: "En la aduana se registraban yerba, cueros, madera, etc.", note: "Nunca «etc.…»: el «etc.» ya indica que la lista sigue." },
+          { es: "Y la aduana, ¿cuándo dejó de funcionar?", note: "El signo se abre donde empieza la pregunta." },
+        ],
+        tip: "Antes de revisar los signos de un párrafo largo, localiza su frontera principal y márcala con el signo más fuerte que el sentido permita; después baja a las fronteras menores.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero identifica qué signo corresponde a cada frontera; después clasifica sus funciones y corrige los incisos anidados.",
+    exercises: [
+      {
+        id: "c2-17-gramatica-signo",
+        type: "context",
+        prompt: "Lee el fragmento del catálogo y elige el signo que corresponde en la posición marcada con [ ].",
+        items: [
+          {
+            context: "Cartela: «El puerto exportaba tres productos[ ] yerba, cueros y madera».",
+            q: "¿Qué signo va en [ ]?",
+            options: ["punto y coma", "dos puntos", "coma"],
+            answer: 1,
+            why: "«Tres» anticipa la enumeración: dos puntos.",
+          },
+          {
+            context: "Ensayo: «El muelle norte era de los comerciantes de yerba[ ] el del sur, de los madereros».",
+            q: "¿Qué signo va en [ ]?",
+            options: ["dos puntos", "raya", "punto y coma"],
+            answer: 2,
+            why: "Dos oraciones independientes muy relacionadas; en la segunda se omite el verbo.",
+          },
+          {
+            context: "Ensayo: «Cuando el río bajaba más de dos metros[ ] los vapores grandes no podían atracar».",
+            q: "¿Qué signo va en [ ]?",
+            options: ["coma", "punto y coma", "dos puntos", "ningún signo"],
+            answer: 0,
+            why: "Tras una subordinada antepuesta va coma.",
+          },
+          {
+            context: "Pie de foto: «Los productos que se embarcaban eran[ ] yerba, cueros y madera».",
+            q: "¿Qué signo va en [ ]?",
+            options: ["dos puntos", "ningún signo", "punto y coma"],
+            answer: 1,
+            why: "No se separa el verbo de su complemento.",
+          },
+        ],
+      },
+      {
+        id: "c2-17-gramatica-anticipadores",
+        type: "gap",
+        prompt: "Completa con la palabra que hace correcta la puntuación del fragmento.",
+        items: [
+          { q: "Las causas del cierre de la aduana fueron ___: el ferrocarril, la crisis y el cambio de cauce. [número]", answers: [["tres"]], why: "Un elemento anticipador justifica los dos puntos." },
+          { q: "Yerba, cueros, tabaco y madera: ___ pasaba por el muelle. [palabra que resume la enumeración]", answers: [["todo"]], why: "Los dos puntos cierran la enumeración antes de la palabra que la resume." },
+          { q: "El puerto había crecido sin ningún plan durante treinta años; ___, nadie se atrevía a reformarlo. [conector de contraste]", answers: [["sin embargo", "no obstante"]], why: "Punto y coma ante un conector cuando las oraciones tienen cierta longitud." },
+          { q: "El funcionario ___ que no había registros de aquel año. [verbo de lengua en estilo indirecto, sin dos puntos]", answers: [["afirmó", "dijo", "declaró", "aseguró", "explicó"]], why: "En estilo indirecto no hay dos puntos." },
+          { q: "La aduana registraba yerba, cueros, madera, ___ [abreviatura que cierra la lista, con su punto]", answers: [["etc."]], why: "Tras «etc.» no se añaden puntos suspensivos." },
+        ],
+      },
+      {
+        id: "c2-17-gramatica-funciones",
+        type: "classify",
+        prompt: "Clasifica cada fragmento según la función de sus dos puntos.",
+        categories: ["Anuncia una enumeración", "Une causa, consecuencia o explicación", "Introduce una cita", "Sigue al saludo de una carta"],
+        items: [
+          { text: "Los vapores traían tres cosas: pasajeros, correo y noticias.", cat: 0, why: "«Tres cosas» anticipa la lista." },
+          { text: "La descarga se retrasó: no había estibadores suficientes.", cat: 1, why: "La segunda oración es la causa." },
+          { text: "El práctico advirtió: «Con este nivel, no pasamos el banco de arena».", cat: 2, why: "Estilo directo." },
+          { text: "Estimado Sr. Ayala:", cat: 3, why: "Saludo de carta." },
+          { text: "El muelle se hundió en 1905: hubo que reconstruirlo entero.", cat: 1, why: "Consecuencia." },
+          { text: "Necesitamos lo siguiente: planos, fotografías y el inventario.", cat: 0, why: "«Lo siguiente» anticipa." },
+          { text: "La capitana del barco lo dijo claro: «Aquí no descarga nadie sin pagar».", cat: 2, why: "Cita textual." },
+          { text: "Querida Graciela:", cat: 3, why: "Saludo de carta informal." },
+        ],
+      },
+      {
+        id: "c2-17-gramatica-errores",
+        type: "error",
+        prompt: "Corrige los incisos y las citas anidadas de cada frase.",
+        items: [
+          {
+            sentence: "La aduana (inaugurada en tiempos de López (padre)) tenía tres pisos.",
+            answers: ["La aduana (inaugurada en tiempos de López [padre]) tenía tres pisos.", "La aduana (inaugurada en tiempos de López —padre—) tenía tres pisos."],
+            why: "El inciso interior no puede usar los mismos paréntesis que el exterior.",
+          },
+          {
+            sentence: "El diario escribió: «Los marineros llaman al muelle ‘el purgatorio’».",
+            answers: ["El diario escribió: «Los marineros llaman al muelle “el purgatorio”»."],
+            why: "Según la jerarquía recomendada, dentro de las angulares van las inglesas; las simples quedan para el tercer nivel.",
+          },
+          {
+            sentence: "El cronista anotó: «La gente decía “el barco ‘Tacuarí’ trae “buena suerte””».",
+            answers: ["El cronista anotó: «La gente decía “el barco ‘Tacuarí’ trae ‘buena suerte’”»."],
+            why: "El tercer nivel de comillas son las simples, también para la segunda cita interior.",
+          },
+          {
+            sentence: "«Los estibadores (...) cobraban por bulto, no por hora», escribe el cronista.",
+            answers: ["«Los estibadores […] cobraban por bulto, no por hora», escribe el cronista."],
+            why: "Una omisión dentro de una cita se marca con corchetes y puntos suspensivos.",
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico del comercio por el río Paraguay y de la edición de un catálogo de exposición.",
+    groups: [
+      {
+        title: "El puerto y el río",
+        items: [
+          { es: "el muelle", note: "construcción junto al agua donde atracan los barcos" },
+          { es: "la aduana", note: "oficina pública que controla y cobra impuestos a las mercancías" },
+          { es: "el vapor", note: "barco movido por una máquina de vapor" },
+          { es: "el estibador", note: "persona que carga y descarga los barcos" },
+          { es: "la jangada", note: "en la cuenca del Paraná y del Paraguay, balsa grande de troncos que se lleva río abajo" },
+          { es: "atracar", note: "arrimar un barco al muelle para amarrarlo" },
+        ],
+      },
+      {
+        title: "La edición del catálogo",
+        items: [
+          { es: "la cartela", note: "texto breve que acompaña una pieza en una exposición" },
+          { es: "el pie de foto", note: "texto que explica una imagen, debajo de ella" },
+          { es: "las galeradas", note: "pruebas de imprenta que se corrigen antes de la edición final" },
+          { es: "la errata", note: "error de escritura o de imprenta" },
+          { es: "la interpolación", note: "palabra que el editor añade dentro de una cita, entre corchetes" },
+          { es: "el legajo", note: "conjunto de documentos atados que se guarda en un archivo" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c2-17-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada término con su definición.",
+        pairs: [
+          { left: "la jangada", right: "en la cuenca del Paraná y del Paraguay, balsa grande de troncos que se lleva río abajo" },
+          { left: "el estibador", right: "persona que carga y descarga los barcos" },
+          { left: "la cartela", right: "texto breve que acompaña una pieza en una exposición" },
+          { left: "las galeradas", right: "pruebas de imprenta que se corrigen antes de la edición final" },
+          { left: "la interpolación", right: "palabra que el editor añade dentro de una cita, entre corchetes" },
+          { left: "atracar", right: "arrimar un barco al muelle para amarrarlo" },
+        ],
+      },
+      {
+        id: "c2-17-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la palabra adecuada del vocabulario.",
+        bank: ["errata", "legajo", "pie de foto", "aduana"],
+        items: [
+          { q: "La lista de barcos de 1898 apareció en un ___ mal clasificado del archivo.", answers: [["legajo"]] },
+          { q: "En el ___ de la imagen del muelle falta el año.", answers: [["pie de foto"]] },
+          { q: "La editora encontró una ___ en la fecha de fundación: ponía 1573 en lugar de 1537.", answers: [["errata"]] },
+          { q: "Los comerciantes pagaban en la ___ un impuesto por cada fardo de yerba.", answers: [["aduana"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Hacer oír la puntuación al leer en voz alta",
+    explanation: [
+      "La puntuación también se oye. La coma pide una pausa breve y, si la frase continúa, un tono que no baja del todo; el punto y coma, una pausa algo más larga, con un descenso de tono más claro; el punto, un descenso completo y una pausa larga. Si lees igual una coma y un punto y coma, el oyente no sabe dónde está la frontera principal de la enumeración.",
+      "Antes de los dos puntos la voz queda suspendida, como anunciando algo. Los incisos (entre comas, rayas o paréntesis) se leen con un tono más bajo y un poco más rápido, y la voz vuelve a su altura normal al cerrarlos. En una cita, un leve cambio de voz o una pausa antes y después ayudan a distinguir las palabras ajenas; y los puntos suspensivos se leen con el tono en el aire, sin cerrar.",
+      "El audio utiliza la síntesis disponible en el navegador: reproduce pausas según los signos, pero no siempre con naturalidad ni con un acento regional verificado. Úsalo como referencia para las pausas y practica la entonación con una persona.",
+    ],
+    table: {
+      caption: "Signo y voz",
+      head: ["Signo", "Cómo se oye"],
+      rows: [
+        ["coma", "pausa breve; tono que no termina de bajar"],
+        ["punto y coma", "pausa media; descenso de tono más claro"],
+        ["dos puntos", "voz suspendida que anuncia lo que sigue"],
+        ["inciso", "tono más bajo y algo más rápido"],
+        ["puntos suspensivos", "tono en el aire, sin cierre"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Lamentamos haber omitido el requisito.",
-        "tip": "Marca grupos fónicos y explica qué interpretación favoreces.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Lamentamos que se hayan sentido desinformados.",
-        "tip": "Cambia el foco sin cambiar las palabras; pide una interpretación a tu interlocutor.",
-        "voice": "es-ES-m"
-      },
-      {
-        "text": "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.",
-        "tip": "Lee a velocidad cómoda, conserva la reserva y compara tu grabación local con tu intención.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Mesa de trabajo: Pedir disculpas y reparar",
-    "context": "Dos participantes preparan una intervención sobre el caso. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Sara",
-        "voice": "es-ES-f",
-        "role": "Primera perspectiva"
-      },
-      {
-        "id": "b",
-        "name": "Nicolás",
-        "voice": "es-ES-m",
-        "role": "Contraste y reformulación"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "La frase sentimos que se hayan sentido desinformados me parece insuficiente porque el anuncio omitió un requisito. Podemos reconocer ese hecho sin afirmar que todas las consecuencias están medidas. Yo escribiría omitimos la información y explicaría después el alcance de la reapertura. No quiero que la disculpa dependa de si cada persona demuestra haberse sentido mal."
-      },
-      {
-        "speaker": "b",
-        "text": "También debemos revisar a quién incluimos. Reabrir solo para quienes completaron el formulario deja fuera a quien desistió cuando encontró la exigencia presencial. No tenemos un registro de esas personas y no deberíamos inventarlo. Podemos abrir a quienes cumplan las condiciones originales y conservar las solicitudes ya presentadas, con una explicación clara de que no parten de cero."
-      },
-      {
-        "speaker": "a",
-        "text": "Sobre los gastos de envío, no puedo prometer un reembolso aprobado. Sí puedo comprometer un canal de reclamación y una fecha de respuesta motivada. Me preocupa que suene burocrático después de una disculpa directa. La alternativa no es prometer más de lo que podemos hacer, sino explicar quién decidirá y cómo se comunicará la decisión."
-      },
-      {
-        "speaker": "b",
-        "text": "Y no terminemos con esperamos que esto cierre el incidente. El cierre no nos corresponde unilateralmente. Podemos decir qué acciones se han completado y cuáles siguen abiertas. En la reunión, si alguien sigue enfadado después de oír la disculpa, no le pediré que reconozca nuestro esfuerzo antes de hablar de su caso. Mantener un tono sereno también significa soportar una respuesta que no nos absuelve y continuar ofreciendo información útil sin convertir la calma en condescendencia. Esa respuesta exige escuchar antes de repetir una fórmula de cierre."
-      },
-      {
-        "speaker": "a",
-        "text": "En el informe interno no diré que una cadena de correos cometió el error. La coordinación publicó sin cotejar dos documentos, dentro de un procedimiento insuficiente. Tenemos que reconocer ambas cosas. También revisaré beneficiarias de la reapertura: quienes recuperan una oportunidad perdida no reciben necesariamente un favor por el que deban agradecernos antes de discutir si la medida alcanza."
-      },
-      {
-        "speaker": "b",
-        "text": "El plazo de reapertura tampoco será neutral para todo el mundo. Expliquemos el criterio y el mecanismo para pedir una ampliación justificada. Una reparación puede necesitar revisión sin quedar por eso invalidada desde el principio. En la reunión, preguntaría qué obstáculo persiste y qué cambio sería viable. Así la disculpa conduce a una conversación sobre medidas, no a una exigencia de que todos valoren del mismo modo nuestra respuesta."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha el intercambio completo sin abrir la transcripción. Reconstruye el desacuerdo central.",
-        "exercise": {
-          "id": "c2-17-escucha-gist",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Pedir disculpas y reparar",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la conversación de Pedir disculpas y reparar?",
-              "options": [
-                "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.",
-                "La disculpa depende de que se pruebe una reacción emocional."
-              ],
-              "answer": 0,
-              "why": "Reconstruye el propósito común antes de buscar detalles."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Pedir disculpas y reparar?",
-              "options": [
-                "Explicar la buena intención equivale a reparar toda consecuencia.",
-                "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes."
-              ],
-              "answer": 0,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota afirmación, condición y fuente. No copies frases todavía.",
-        "exercise": {
-          "id": "c2-17-escucha-detail",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Pedir disculpas y reparar",
-          "items": [
-            {
-              "q": "¿Qué límite deben conservar los interlocutores de Pedir disculpas y reparar?",
-              "options": [
-                "La primera reapertura incluía a quienes habían desistido.",
-                "La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario."
-              ],
-              "answer": 1,
-              "why": "La conversación vuelve sobre el límite que evita una promesa o inferencia excesiva."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Pedir disculpas y reparar?",
-              "options": [
-                "Explicar la buena intención equivale a reparar toda consecuencia.",
-                "La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario."
-              ],
-              "answer": 0,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Localiza una reformulación y explica qué inferencia repara. Consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "c2-17-escucha-notice",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Pedir disculpas y reparar",
-          "items": [
-            {
-              "q": "¿Qué inferencia pragmática permite el diálogo de Pedir disculpas y reparar?",
-              "options": [
-                "Explicar la buena intención equivale a reparar toda consecuencia.",
-                "Pedir comprensión puede desplazar hacia los afectados el trabajo de tranquilizar a la institución."
-              ],
-              "answer": 1,
-              "why": "La inferencia se apoya en una reformulación y su contexto; no es una lectura literal de una palabra."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Pedir disculpas y reparar?",
-              "options": [
-                "Explicar la buena intención equivale a reparar toda consecuencia.",
-                "Pedir comprensión puede desplazar hacia los afectados el trabajo de tranquilizar a la institución."
-              ],
-              "answer": 0,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Pedir disculpas y reparar · expediente de lectura",
-    "genre": "Dossier original: texto principal y documento de contraste",
-    "frame": "Situación ficticia para lectura crítica y mediación. Identifica qué voz afirma cada cosa antes de integrar las fuentes.",
-    "text": [
-      "La convocatoria de una beca exigía entregar una carpeta presencialmente, aunque el anuncio principal solo mencionaba el formulario digital. Varias personas quedaron fuera por no cumplir un requisito que descubrieron después del cierre. La institución publicó una disculpa: «Sentimos que algunas personas se hayan sentido desinformadas». El texto no reconocía todavía la omisión. Presentaba como experiencia subjetiva lo que podía comprobarse comparando dos versiones de las bases.",
-      "Una segunda comunicación explicó que el equipo había trabajado con plazos muy ajustados y que nunca había querido excluir a nadie. La información contextual podía ser verdadera, pero respondía a una pregunta diferente. Las personas solicitantes no habían pedido demostrar una intención hostil; habían pedido recuperar una oportunidad perdida. Convertir la discusión en un juicio sobre la bondad del equipo exigía a los afectados tranquilizar a la institución antes de recibir una solución.",
-      "La responsable de la convocatoria propuso una tercera versión: «Omitimos en el anuncio principal un requisito que figuraba en las bases completas. Esa diferencia impidió que varias personas prepararan la entrega. Reabriremos el plazo para quienes completaron el formulario digital antes del cierre». La propuesta identificaba una acción y un grupo, pero dejaba fuera a quienes habían abandonado el proceso al descubrir la entrega presencial. La precisión del reconocimiento no garantizaba todavía la suficiencia de la reparación.",
-      "La conversación pública permitió revisar el criterio. Se acordó abrir un plazo breve para todas las personas que cumplieran las condiciones originales, conservar las solicitudes ya recibidas y publicar una comparación de los requisitos. El equipo explicaría el error de coordinación en un informe posterior. La explicación dejaba de competir con la solución y pasaba a servir a la prevención. El comunicado no pedía dar el asunto por cerrado ni agradecía por adelantado una comprensión que podía no existir.",
-      "Respuesta de una solicitante. Aprecio que se reabra el plazo, escribió, pero ya pagué un envío urgente para una carpeta que luego no fue admitida. La institución no tenía previsto reembolsar esos gastos y debía responder sin inventar una facultad presupuestaria. Ofreció registrar las reclamaciones y publicar la decisión motivada en una fecha concreta. Era una respuesta limitada. Presentarla como reparación completa habría repetido, con mejores palabras, el intento de clausurar una experiencia que la institución todavía no había atendido del todo. El informe interno asignó responsables a cada medida y evitó recoger detalles personales innecesarios de las reclamaciones. Su publicación debía permitir comprobar acciones sin convertir la reparación en una nueva exposición de quienes habían sufrido el error.",
-      "Acta de revisión interna. El equipo propuso atribuir la omisión a una cadena de correos confusa. La coordinadora pidió identificar también la decisión de publicar sin cotejar el anuncio y las bases. Describir un sistema no obliga a borrar a quienes tomaron decisiones dentro de él. Al mismo tiempo, señalar una responsable no bastaba para prevenir la repetición si el procedimiento seguía dependiendo de una revisión informal. El informe debía articular agencia individual y condiciones de trabajo sin convertir una en excusa para ignorar la otra.",
-      "Las solicitantes discutieron después el calendario de reapertura. Un plazo muy breve favorecía a quienes ya tenían documentación preparada; uno excesivamente largo retrasaría la adjudicación para todas. No había una duración neutral que eliminara ese conflicto. La institución explicó el criterio elegido y habilitó una solicitud de ampliación por causas justificadas, sin garantizar que cualquier petición se aceptara. La reparación se volvió así objeto de deliberación, no un gesto cuya bondad debiera reconocerse de inmediato. El comunicado final dejó de usar beneficiarias de la reapertura para designar a quienes recuperaban una oportunidad perdida. Ese cambio léxico evitaba presentar la solución como favor discrecional y permitía hablar de su suficiencia sin exigir gratitud como condición de participación."
-    ],
-    "tasks": [
-      {
-        "id": "c2-17-lectura",
-        "type": "choice",
-        "prompt": "Reconstruye la tesis y su límite en Pedir disculpas y reparar.",
-        "items": [
-          {
-            "q": "¿Qué tesis sostiene el dossier «Pedir disculpas y reparar»?",
-            "options": [
-              "La disculpa depende de que se pruebe una reacción emocional.",
-              "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes."
-            ],
-            "answer": 1,
-            "why": "La tesis integra el contraste entre las fuentes, no solo una frase aislada."
-          },
-          {
-            "q": "¿Qué detalle limita la interpretación en «Pedir disculpas y reparar»?",
-            "options": [
-              "La primera reapertura incluía a quienes habían desistido.",
-              "La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario."
-            ],
-            "answer": 1,
-            "why": "El documento complementario delimita qué está confirmado."
-          }
-        ]
-      },
-      {
-        "id": "c2-17-lectura-evidencia",
-        "type": "open",
-        "prompt": "Defiende una interpretación de Pedir disculpas y reparar con pruebas y contraejemplos.",
-        "items": [
-          {
-            "prompt": "Contrasta «Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.» con «La disculpa depende de que se pruebe una reacción emocional.». Cita dos fragmentos breves, atribuye sus voces y explica qué detalle impide sostener la segunda lectura.",
-            "model": "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes. La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario.",
-            "checklist": [
-              "Distingo cita e interpretación.",
-              "Incluyo una lectura rival y un límite."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas del expediente distribuyen certeza, responsabilidad y voz.",
-      "items": [
+    perceive: {
+      id: "c2-17-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y responde según lo que oyes.",
+      items: [
         {
-          "quote": "La convocatoria de una beca exigía entregar una carpeta presencialmente, aunque el anuncio principal solo mencionaba el formulario digital.",
-          "note": "Examina el encuadre inicial y qué información necesitarás para revisarlo."
+          q: "¿Qué parte de la frase se lee como inciso, con tono más bajo?",
+          options: ["la aduana", "construida con piedra del río", "sigue en pie"],
+          answer: 1,
+          why: "Es la aclaración intercalada.",
+          audio: "La aduana, construida con piedra del río, sigue en pie.",
+          voice: "es-AR-f",
         },
         {
-          "quote": "Respuesta de una solicitante.",
-          "note": "El documento final introduce otra perspectiva; identifica qué interpretación limita y qué deja abierto."
-        }
-      ]
-    }
+          q: "¿Cuántos grupos principales tiene la enumeración que oyes?",
+          options: ["Dos.", "Tres.", "Seis."],
+          answer: 1,
+          why: "Tres grupos producto-origen, separados por pausas mayores.",
+          audio: "Llegaban cueros, de Concepción; yerba, del norte; y madera, del Chaco.",
+          voice: "es-UY-m",
+        },
+        {
+          q: "¿Qué relación hay entre las dos partes de la frase?",
+          options: ["La segunda es la causa de la primera.", "La segunda contradice la primera.", "No tienen relación."],
+          answer: 0,
+          why: "La voz suspendida anuncia una explicación: el río había bajado.",
+          audio: "Los vapores no llegaron aquel mes: el río había bajado casi tres metros.",
+          voice: "es-UY-f",
+        },
+        {
+          q: "¿Qué indica el final de la frase?",
+          options: ["Que la lista está completa.", "Que es una pregunta.", "Que la enumeración queda abierta."],
+          answer: 2,
+          why: "Los puntos suspensivos dejan el tono en el aire.",
+          audio: "Yerba, tabaco, cueros, naranjas…",
+          voice: "es-AR-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "El muelle norte era de los yerbateros; el del sur, de los madereros.", tip: "Pausa media en el punto y coma, más breve en la coma que sustituye al verbo.", voice: "es-AR-m" },
+      { text: "Las causas fueron dos: el ferrocarril y la crisis.", tip: "Suspende la voz en «dos» antes de la enumeración.", voice: "es-UY-f" },
+      { text: "La jangada —una balsa de troncos que bajaba con la corriente— tardaba semanas en llegar.", tip: "Tono más bajo en el inciso y vuelta a la altura normal en «tardaba».", voice: "es-AR-f" },
+      { text: "¿Quién cargaba?, ¿quién cobraba?, ¿quién llevaba las cuentas?", tip: "Tres preguntas seguidas: entonación de pregunta en cada una, pausa breve entre ellas.", voice: "es-UY-m" },
+    ],
+    spelling: "Las comillas angulares van primero; dentro, las inglesas; dentro de estas, las simples. El punto de la oración va siempre después de las comillas de cierre. Los puntos suspensivos son tres y no se añaden después de «etc.».",
   },
-  "practice": {
-    "intro": "Combina orden, clasificación, producción y recuperación espaciada. Las respuestas abiertas se contrastan con criterios y con tu docente.",
-    "exercises": [
+  listening: {
+    title: "Las galeradas del catálogo",
+    context: "Graciela, editora del catálogo de la exposición del archivo municipal de Asunción, y Rodrigo, el historiador que escribió los textos, revisan juntos las galeradas por teléfono. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "g", name: "Graciela", voice: "es-AR-f", role: "Editora del catálogo" },
+      { id: "r", name: "Rodrigo", voice: "es-UY-m", role: "Historiador y autor de los textos" },
+    ],
+    script: [
+      { speaker: "g", text: "Rodrigo, tengo delante las galeradas y antes de devolverlas a la imprenta quiero repasar contigo la puntuación del ensayo central. No son erratas graves, pero son muchas, y en un catálogo se nota todo." },
+      { speaker: "r", text: "Adelante. Ya sé que con los signos soy un desastre." },
+      { speaker: "g", text: "No tanto. Empiezo por la enumeración de la página cuatro. Escribiste «llegaban cueros de Concepción, yerba del norte, tabaco de Villarrica y madera del Chaco», todo con comas. Pero en la versión larga añadiste la fecha de cada producto, y ahora cada elemento tiene su propia coma. Así no se sabe dónde termina uno y empieza el otro. Te propongo punto y coma entre los elementos y coma antes del último, el de la madera." },
+      { speaker: "r", text: "¿Antes de la «y» no iba punto y coma también?" },
+      { speaker: "g", text: "Se ve a veces, pero lo habitual, y lo que muestran los ejemplos de la Ortografía, es la coma. Lo importante es que la frontera principal sea el punto y coma. Segundo punto: en la página seis pones «los productos que salían del puerto eran: yerba, cueros y madera». Esos dos puntos sobran, porque separan el verbo de su complemento." },
+      { speaker: "r", text: "Pero quiero que se note que viene una lista." },
+      { speaker: "g", text: "Entonces añade un elemento que la anuncie: «los productos que salían del puerto eran tres: yerba, cueros y madera». Con «tres», los dos puntos sí funcionan. Lo mismo pasa con la declaración del capitán: escribiste «el capitán dijo: que no zarparía». O quitas los dos puntos, o lo pasas a estilo directo, con comillas." },
+      { speaker: "r", text: "Prefiero el estilo directo, que es más vivo: «El capitán dijo: “No zarpo hasta que suba el río”». Bueno, con comillas angulares fuera, ¿no?" },
+      { speaker: "g", text: "Exacto. Y eso me lleva a la cita del cronista, que tiene tres niveles: el cronista cita a un marinero, y el marinero repite el apodo del muelle. Angulares, luego inglesas y el apodo, «el purgatorio», entre comillas simples. Y el punto final, después de todas las comillas." },
+      { speaker: "r", text: "Me parece bien. ¿Algo más?" },
+      { speaker: "g", text: "Un inciso dentro de otro. En la página nueve, el paréntesis sobre la aduana tiene otro paréntesis dentro, con el número del legajo. Te propongo corchetes para el número. Y en la cita del inventario, donde cortaste un fragmento, pusiste puntos suspensivos entre paréntesis. En una cita la omisión va entre corchetes." },
+      { speaker: "r", text: "Perfecto, cámbialo todo. Solo te pido una cosa: la serie de preguntas del final, «¿quién cargaba?, ¿quién cobraba?, ¿quién llevaba las cuentas?», déjala con minúscula, que me gusta cómo suena." },
+      { speaker: "g", text: "Está bien así: es una serie de preguntas breves separadas por comas, y la minúscula es correcta. Esa la dejamos tal cual." },
+    ],
+    stages: [
       {
-        "id": "c2-17-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos relaciones centrales del caso Pedir disculpas y reparar.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la conversación completa sin abrir la transcripción. ¿Qué hacen Graciela y Rodrigo y con qué criterio?",
+        exercise: {
+          id: "c2-17-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación y la idea principal.",
+          items: [
+            {
+              q: "¿Qué están haciendo?",
+              options: [
+                "Elegir las fotografías del catálogo.",
+                "Revisar la puntuación del ensayo central en las galeradas.",
+                "Discutir el presupuesto de la exposición.",
+              ],
+              answer: 1,
+              why: "Graciela quiere repasar la puntuación antes de devolver las galeradas.",
+            },
+            {
+              q: "¿En qué se apoya Graciela para proponer los cambios?",
+              options: [
+                "En la norma de la Ortografía y en la claridad para el lector.",
+                "En sus gustos personales.",
+                "En lo que pide la imprenta por razones de espacio.",
+              ],
+              answer: 0,
+              why: "Cita la Ortografía y explica cada cambio por la claridad.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota cada corrección. Responde sin mirar la transcripción.",
+        exercise: {
+          id: "c2-17-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Por qué hay que cambiar la puntuación de la enumeración de la página cuatro?",
+              options: [
+                "Porque es demasiado corta.",
+                "Porque los productos no están en orden alfabético.",
+                "Porque cada elemento tiene ahora comas propias.",
+              ],
+              answer: 2,
+              why: "Al añadir las fechas, los elementos llevan comas internas.",
+            },
+            {
+              q: "¿Qué hace que los dos puntos de la página seis sean correctos?",
+              options: [
+                "Añadir «tres» antes de la enumeración.",
+                "Poner la enumeración en mayúscula.",
+                "Quitar el verbo «eran».",
+              ],
+              answer: 0,
+              why: "Un elemento anticipador justifica los dos puntos.",
+            },
+            {
+              q: "¿Qué decide Graciela sobre la serie de preguntas del final?",
+              options: [
+                "Cambiar las comas por puntos.",
+                "Dejarla igual, porque es correcta.",
+                "Poner mayúscula en cada pregunta.",
+              ],
+              answer: 1,
+              why: "Una serie de preguntas breves puede separarse con comas y seguir en minúscula.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en la solución que se da a cada problema. Relaciona y consulta la transcripción solo después de responder.",
+        exercise: {
+          id: "c2-17-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada problema con su solución.",
+          pairs: [
+            { left: "enumeración con comas internas", right: "punto y coma entre los elementos" },
+            { left: "dos puntos entre «eran» y la lista", right: "añadir «tres» o quitar los dos puntos" },
+            { left: "«dijo: que no zarparía»", right: "estilo directo con comillas o indirecto sin dos puntos" },
+            { left: "apodo dentro de una cita dentro de otra", right: "comillas simples en el tercer nivel" },
+            { left: "paréntesis dentro de paréntesis", right: "corchetes para el inciso interior" },
+          ],
+          why: "Cada solución marca con claridad dónde empieza y termina cada unidad.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Una ciudad que mira al río",
+    genre: "Ensayo central de un catálogo de exposición",
+    frame: "Texto de Rodrigo Ayala para el catálogo de una exposición del archivo municipal de Asunción, ya corregido por la editora. El archivo, los cronistas, los barcos con nombre propio y los documentos citados son ficticios; el marco histórico es general.",
+    text: [
+      "Asunción nació mirando al río. Desde su fundación, en 1537, la ciudad dependió de la bahía para casi todo: para recibir noticias, para enviar sus productos y, durante siglos, para comunicarse con el resto del mundo. Esta exposición reúne ciento veinte piezas del archivo municipal (fotografías, cartas, libros de registro, planos y algunos objetos donados por familias de antiguos estibadores) para contar una historia que suele quedar en segundo plano: la del puerto como corazón económico y social de la ciudad.",
+      "Conviene empezar por lo que llegaba y salía. En los libros de la aduana conservados en el archivo aparecen, una y otra vez, los mismos productos: cueros, de las estancias del norte; yerba, de los montes del este; tabaco, de los alrededores de Villarrica, y madera, del Chaco, que bajaba en jangadas de troncos atados. Cada producto tenía su muelle, su gremio y, con frecuencia, sus propias costumbres; los yerbateros, por ejemplo, no descargaban nunca en domingo, mientras que los madereros trabajaban cualquier día en que el río lo permitiera.",
+      "El río, en efecto, decidía. Cuando bajaba más de dos metros, los vapores grandes no podían atracar y debían esperar en la bahía, a veces durante semanas; cuando crecía, inundaba los depósitos más próximos a la orilla. Un libro de registro de 1905 lo resume con una sola anotación, escrita a mano en el margen: «Sin movimiento. Río bajo». No hace falta más: esas cuatro palabras explican el humor de toda una ciudad.",
+      "Los testimonios de la época dan cuenta de la vida que rodeaba al puerto. El cronista Teodoro Garay —que escribió durante veinte años una columna semanal en un diario local (hoy perdido, aunque el archivo conserva recortes de casi todas sus entregas [legajo 31])— describe el muelle sur como un lugar «donde se oyen más lenguas que en una embajada». En otra columna recoge el testimonio de un marinero que le explica el apodo del muelle principal: «Le decimos “el purgatorio”, porque ahí se espera; ‘el cielo’ es cuando te pagan». Garay, que tenía buen oído, añade una frase que podría servir de lema a esta exposición: «Asunción mira al río y le da la espalda al mismo tiempo».",
+      "¿Qué quería decir con eso? Probablemente, que la ciudad vivía del puerto, pero no quería verlo. Las familias acomodadas construían sus casas lejos de la orilla; las autoridades, en cambio, levantaban junto a ella los edificios que debían impresionar a quien llegaba por agua: la aduana, la capitanía, algún palacio. El puerto era, a la vez, la puerta de entrada y el patio trasero. Esa doble condición explica muchas decisiones posteriores, y también algunos olvidos.",
+      "Las preguntas que guiaron esta investigación fueron sencillas, aunque las respuestas no lo son: ¿quién cargaba?, ¿quién cobraba?, ¿quién llevaba las cuentas? El inventario de una casa comercial, fechado en 1912, ofrece una pista: «Los estibadores […] cobran por bulto, no por hora, y el capataz se queda con la décima parte». Otra pista está en las fotografías. En casi todas aparecen los mismos personajes: capitanes de uniforme, comerciantes con sombrero, funcionarios de aduana con sus libros… Los estibadores, que hacían el trabajo, casi nunca miran a la cámara; están de espaldas, cargando.",
+      "El declive llegó por varias vías a la vez. El ferrocarril, primero, ofreció otra salida para algunas mercancías; la crisis económica de los años treinta redujo el comercio; los cambios en la navegación, por último, exigieron muelles más profundos que la vieja bahía no podía ofrecer sin obras costosísimas. Ninguna de estas causas, por sí sola, habría bastado; todas juntas transformaron el puerto en pocas décadas. La aduana dejó de ser el centro de la vida económica: se convirtió en una oficina más.",
+      "Esta exposición no pretende idealizar aquel mundo; tampoco quiere juzgarlo. Su propósito es más modesto: devolver la mirada al río, siquiera por unas semanas, y escuchar a quienes trabajaron en él. Por eso la última sala está dedicada a los nombres que aparecen en los libros de jornales (Ramón, Eusebio, Florentina, Cayo, Asunción…), muchos de ellos sin apellido. No sabemos casi nada de esas personas; sabemos, eso sí, que sin ellas no habría habido puerto, ni ciudad, ni esta exposición.",
+    ],
+    glossary: [
+      { es: "el gremio", note: "conjunto de personas del mismo oficio" },
+      { es: "la capitanía", note: "oficina que controla la navegación y los barcos de un puerto" },
+      { es: "el libro de jornales", note: "registro de lo que se pagaba a cada trabajador por día" },
+    ],
+    tasks: [
+      {
+        id: "c2-17-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido el ensayo.",
+        items: [
           {
-            "words": [
-              "La",
-              "explicación",
-              "no",
-              "elimina",
-              "la",
-              "responsabilidad."
+            q: "¿Qué quiere decir, según el autor, que la ciudad «mira al río y le da la espalda»?",
+            options: [
+              "Que la ciudad vivía del puerto, pero no quería verlo.",
+              "Que la ciudad se construyó de espaldas al río por las inundaciones.",
+              "Que nadie usaba el puerto.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
+            answer: 0,
+            why: "Lo explica en el quinto párrafo: vivía del puerto, pero no quería verlo.",
           },
           {
-            "words": [
-              "La",
-              "reparación",
-              "no",
-              "exige",
-              "conceder",
-              "perdón."
+            q: "¿Qué muestran las fotografías sobre los estibadores?",
+            options: [
+              "Que eran los protagonistas de la vida del puerto.",
+              "Que cobraban más que los capataces.",
+              "Que casi nunca miran a la cámara y aparecen trabajando de espaldas.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
-          }
-        ]
-      },
-      {
-        "id": "c2-17-estatuto",
-        "type": "classify",
-        "prompt": "Clasifica el estatuto de estas formulaciones en «Pedir disculpas y reparar».",
-        "categories": [
-          "Conclusión respaldada o delimitada",
-          "Generalización no autorizada"
+            answer: 2,
+            why: "Sexto párrafo.",
+          },
+          {
+            q: "¿Cuál es el propósito de la exposición, según el último párrafo?",
+            options: [
+              "Demostrar que el puerto era mejor que el ferrocarril.",
+              "Devolver la mirada al río y escuchar a quienes trabajaron en él.",
+              "Juzgar a las autoridades de la época.",
+            ],
+            answer: 1,
+            why: "El autor lo llama un propósito «más modesto».",
+          },
         ],
-        "items": [
-          {
-            "text": "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.",
-            "cat": 0,
-            "why": "Resume el razonamiento con sus límites."
-          },
-          {
-            "text": "La disculpa depende de que se pruebe una reacción emocional.",
-            "cat": 1,
-            "why": "Amplía o invierte el alcance de las fuentes."
-          },
-          {
-            "text": "La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario.",
-            "cat": 0,
-            "why": "Conserva un detalle explícito del expediente."
-          },
-          {
-            "text": "La primera reapertura incluía a quienes habían desistido.",
-            "cat": 1,
-            "why": "Contradice la condición documentada."
-          }
-        ]
       },
       {
-        "id": "c2-17-microescritura",
-        "type": "open",
-        "prompt": "Produce dos versiones breves antes del dossier de Pedir disculpas y reparar.",
-        "items": [
-          {
-            "prompt": "Redacta una apertura de 80–100 palabras para el destinatario de «Pedir disculpas y reparar». Conserva la tesis y una reserva.",
-            "model": "Omitimos en el anuncio principal un requisito de entrega que figuraba en las bases completas. Esa diferencia afectó a la preparación de las solicitudes. Reabriremos el plazo para quienes cumplan las condiciones originales y conservaremos las candidaturas ya presentadas. La explicación del fallo de coordinación se publicará con medidas preventivas; no sustituye la reparación. Los gastos de envío podrán reclamarse por el canal indicado y recibirán una respuesta motivada en la fecha anunciada, sin que hoy podamos garantizar su reembolso. Esta comunicación no exige que las personas afectadas den el asunto por cerrado.",
-            "checklist": [
-              "Identifico quién necesita decidir y con qué información.",
-              "Separo afirmación, atribución e inferencia."
-            ]
-          },
-          {
-            "prompt": "Reformula para una persona ajena al debate de «Pedir disculpas y reparar» la condición que más fácilmente se perdería al resumir. Explica el coste de omitirla.",
-            "model": "La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario. Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.",
-            "checklist": [
-              "No convierto la condición en un dato accesorio.",
-              "Mantengo el alcance aunque simplifique el léxico."
-            ]
-          }
-        ]
+        id: "c2-17-lectura-signos",
+        type: "match",
+        prompt: "Relaciona cada fragmento del ensayo con la función de su puntuación.",
+        pairs: [
+          { left: "cueros, de las estancias del norte; yerba, de los montes del este", right: "punto y coma en una enumeración compleja" },
+          { left: "«Sin movimiento. Río bajo». No hace falta más", right: "punto final después de las comillas de cierre" },
+          { left: "Le decimos “el purgatorio”, porque ahí se espera", right: "cita dentro de una cita" },
+          { left: "(hoy perdido, aunque el archivo conserva recortes de casi todas sus entregas [legajo 31])", right: "inciso dentro de otro inciso" },
+          { left: "«Los estibadores […] cobran por bulto", right: "omisión dentro de una cita" },
+          { left: "se convirtió en una oficina más", right: "consecuencia introducida por dos puntos" },
+        ],
       },
       {
-        "id": "c2-17-recuperacion",
-        "type": "open",
-        "prompt": "Recupera recursos con materiales suministrados de semanas anteriores. No busques rasgos ausentes en el dossier actual. Contrasta después qué recurso sería pertinente transferir al nuevo caso.",
-        "items": [
+        id: "c2-17-lectura-evaluacion",
+        type: "open",
+        prompt: "Evalúa la puntuación del ensayo con argumentos propios.",
+        items: [
           {
-            "prompt": "Recuperación c2.disc.control-estilistico. Recupera la semana 13, «Editar sin borrar una voz». Material de contraste: La editora recibió una crónica sobre el cierre de un pequeño cine. El texto repetía sala doce veces y empezaba tres párrafos con la misma expresión: aquella noche. Su primera reacción fue repartir sinónimos y variar los comienzos. La segunda fue leerlo en voz alta. Descubrió que las repeticiones construían una insistencia que la autora no había explicado en su nota: el edificio cambiaba de nombre en los anuncios inmobiliarios, pero para el narrador seguía siendo la sala. Formulación de trabajo: La restauradora pidió tiempo; el comité, resultados.\n\nRecupera «Control estilístico» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Aquella noche, Irene abrió la sala como siempre y dejó sobre la mesa una caja para las llaves. Era propietaria, programadora y, desde hacía años, la persona que cambiaba las bombillas. Mantener su nombre evita convertir esas funciones en personajes distintos. La frase larga de la entrada acompaña el recorrido de un espectador; se puede aclarar su sujeto sin romper el movimiento. El cierre conservará la oposición entre pantalla y conversación, pero añadirá la pregunta sobre dónde reunirse después. El ritmo no debe ofrecer una solución simbólica tan cómoda que vuelva invisible la pérdida del lugar. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
+            prompt: "El párrafo cuarto anida rayas, paréntesis y corchetes en una sola oración. Explica en 80–100 palabras si te parece una buena decisión para un catálogo de exposición y propón, si lo crees necesario, una alternativa más legible.",
+            model: "La puntuación es correcta: cada nivel cambia de signo, de modo que el lector puede saber dónde se abre y se cierra cada inciso. Sin embargo, para un catálogo que se lee de pie en una sala, tres niveles en una oración son muchos. Yo sacaría la información del diario y del legajo a una oración independiente: «El cronista Teodoro Garay escribió durante veinte años una columna semanal en un diario local. Ese diario se ha perdido, pero el archivo conserva recortes de casi todas sus entregas (legajo 31)». Así se gana claridad sin perder datos.",
+            checklist: [
+              "Reconozco que la puntuación es correcta.",
+              "Valoro la legibilidad para el público.",
+              "Propongo una alternativa concreta.",
+            ],
           },
-          {
-            "prompt": "Recuperación c2.gram.recursos-cohesion. Recupera la semana 13, «Editar sin borrar una voz». Contrastes suministrados: Esto le preocupaba: que el archivo cerrara sin dejar constancia. / La restauradora pidió tiempo; el comité, resultados. / El informe era breve. Sus consecuencias, no.\n\nExplica la estructura y el cambio de interpretación pertinentes para «Recursos de cohesión». Produce una cuarta formulación y señala expresamente qué referente, condición o perspectiva temporal conserva. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La cohesión puede mantener referentes mediante repetición, proformas, elipsis y sustitución léxica. Evitar toda repetición crea a veces ambigüedad: la autora, la investigadora y la especialista pueden parecer personas distintas. Una catáfora anticipa una explicación posterior; necesita una resolución reconocible. Alternar frases largas y breves organiza el ritmo, pero una frase breve no es automáticamente clara ni una larga automáticamente defectuosa. Editar exige justificar el efecto, no imponer un gusto. Aplicación al caso: Aquella noche, Irene abrió la sala como siempre y dejó sobre la mesa una caja para las llaves. Era propietaria, programadora y, desde hacía años, la persona que cambiaba las bombillas. Mantener su nombre evita convertir esas funciones en personajes distintos. La frase larga de la entrada acompaña el recorrido de un espectador; se puede aclarar su sujeto sin romper el movimiento. El cierre conservará la oposición entre pantalla y conversación, pero añadirá la pregunta sobre dónde reunirse después. El ritmo no debe ofrecer una solución simbólica tan cómoda que vuelva invisible la pérdida del lugar. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.estilo-lexico. Contrastes editoriales: «La casa cerró sus puertas» / «La morada cerró sus puertas»; «Irene empezó la sesión» / «Irene inició la sesión»; «La sala estaba llena» / «El recinto estaba lleno».\n\nExplica qué asociaciones y registro cambia cada elección. Elige una versión para la crónica del cine y otra para una nota administrativa; justifica por qué el término más culto no es necesariamente más preciso. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Morada introduce una resonancia literaria frente a casa; iniciar puede resultar más formal que empezar; recinto distancia respecto de una sala vivida. En la crónica conservaría sala para mantener el vínculo con espectadores; en una nota técnica podría usar recinto si importan límites físicos. La elección depende de función y voz, no de una jerarquía universal de palabras. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.ritmo-prosa. Recupera la semana 13, «Editar sin borrar una voz». Textos para ensayo oral: «Se apagó la pantalla. No la conversación.» / «Se apagó la pantalla y también la conversación.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «El ritmo de la prosa» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Lee la frase extensa sosteniendo su verbo principal. En el cierre elíptico, deja que el oyente recupere el verbo sin convertir la pausa en una solución emocional que el texto no ofrece. Un ensayo defendible conserva esta distinción del caso: La edición debe evaluar la función de cada recurso y preservar una voz discutible, no intocable. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.edicion-estilo. Recupera la semana 13, «Editar sin borrar una voz». Modelo parcial que puedes transformar: Aquella noche, Irene abrió la sala como siempre y dejó sobre la mesa una caja para las llaves. Era propietaria, programadora y, desde hacía años, la persona que cambiaba las bombillas. Mantener su nombre evita convertir esas funciones en personajes distintos. La frase larga de la entrada acompaña el recorrido de un espectador; se puede aclarar su sujeto sin romper el movimiento. El cierre conservará la oposición entre pantalla y conversación, pero añadirá la pregunta sobre dónde reunirse después. El ritmo no debe ofrecer una solución simbólica tan cómoda que vuelva invisible la pérdida del lugar.\n\nRecupera «Editar un texto» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Aquella noche, Irene abrió la sala como siempre y dejó sobre la mesa una caja para las llaves. Era propietaria, programadora y, desde hacía años, la persona que cambiaba las bombillas. Mantener su nombre evita convertir esas funciones en personajes distintos. La frase larga de la entrada acompaña el recorrido de un espectador; se puede aclarar su sujeto sin romper el movimiento. El cierre conservará la oposición entre pantalla y conversación, pero añadirá la pregunta sobre dónde reunirse después. El ritmo no debe ofrecer una solución simbólica tan cómoda que vuelva invisible la pérdida del lugar. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: La edición debe evaluar la función de cada recurso y preservar una voz discutible, no intocable. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.gram.modalidad-evidencial. Recupera la semana 16, «Lo probable no es lo probado». Contrastes suministrados: La dirección habría recibido el informe, según una fuente no identificada. / El registro confirma la recepción, pero no quién leyó el documento. / Debe de haber una copia; es una inferencia, no una comprobación.\n\nExplica la estructura y el cambio de interpretación pertinentes para «Modalidad y fuente». Produce una cuarta formulación y señala expresamente qué referente, condición o perspectiva temporal conserva. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "El condicional de información no confirmada, habría recibido, distancia al redactor del hecho, pero no sustituye la identificación de una fuente. Debe de expresar una inferencia no equivale a debe con obligación, aunque el uso real presenta variación. Al parecer y según una fuente anónima sitúan de forma distinta la base del enunciado. La precisión exige indicar qué está documentado, qué se infiere y qué permanece sin confirmar; acumular cautelas no neutraliza una acusación. Aplicación al caso: La primera noticia atribuyó a la dirección un conocimiento que la evidencia entonces disponible no demostraba. El registro confirmaba la recepción de un envío; el correo incorporado después confirma que la oficina disponía del informe adjunto. Sigue pendiente establecer quién accedió a él y cómo se distribuyó. Rectificamos el alcance del titular y mantenemos la investigación sobre el procedimiento interno. La cautela del condicional no sustituía esa distinción. Publicar la cronología de las pruebas permite comprender tanto el avance de la investigación como el error de la formulación inicial sin borrar ninguno de los dos. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.disc.responsabilidad-fuentes. Recupera la semana 16, «Lo probable no es lo probado». Material de contraste: La noticia afirmaba que la dirección del teatro habría recibido una advertencia sobre el deterioro del escenario. El condicional ocupaba un lugar estratégico: permitía publicar una acusación relevante sin presentarla como confirmada. Sin embargo, el titular omitía la fuente y el cuerpo del texto solo mencionaba personas conocedoras del asunto. El lector podía recordar el contenido de la acusación y olvidar la cautela verbal. La distancia gramatical no garantiza una distancia equivalente en la memoria pública. Formulación de trabajo: El registro confirma la recepción, pero no quién leyó el documento.\n\nRecupera «Responsabilidad de atribución» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La primera noticia atribuyó a la dirección un conocimiento que la evidencia entonces disponible no demostraba. El registro confirmaba la recepción de un envío; el correo incorporado después confirma que la oficina disponía del informe adjunto. Sigue pendiente establecer quién accedió a él y cómo se distribuyó. Rectificamos el alcance del titular y mantenemos la investigación sobre el procedimiento interno. La cautela del condicional no sustituía esa distinción. Publicar la cronología de las pruebas permite comprender tanto el avance de la investigación como el error de la formulación inicial sin borrar ninguno de los dos. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.certeza-documental. Recupera la semana 16, «Lo probable no es lo probado». Unidades disponibles: evidencialidad (marca de la base informativa de un enunciado); corroborar (confirmar con evidencia adicional); conjetura (explicación provisional no demostrada); atribución anónima (referencia a una fuente no identificada públicamente); desmentir (negar o refutar una afirmación); rectificación (corrección pública de información); grado de certeza (intensidad del compromiso con una afirmación); indicio convergente (señal que coincide con otras hacia una hipótesis). Pasaje: La noticia afirmaba que la dirección del teatro habría recibido una advertencia sobre el deterioro del escenario. El condicional ocupaba un lugar estratégico: permitía publicar una acusación relevante sin presentarla como confirmada. Sin embargo, el titular omitía la fuente y el cuerpo del texto solo mencionaba personas conocedoras del asunto. El lector podía recordar el contenido de la acusación y olvidar la cautela verbal. La distancia gramatical no garantiza una distancia equivalente en la memoria pública.\n\nRecupera «Léxico de la prueba»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La primera noticia atribuyó a la dirección un conocimiento que la evidencia entonces disponible no demostraba. El registro confirmaba la recepción de un envío; el correo incorporado después confirma que la oficina disponía del informe adjunto. Sigue pendiente establecer quién accedió a él y cómo se distribuyó. Rectificamos el alcance del titular y mantenemos la investigación sobre el procedimiento interno. La cautela del condicional no sustituía esa distinción. Publicar la cronología de las pruebas permite comprender tanto el avance de la investigación como el error de la formulación inicial sin borrar ninguno de los dos. En este contraste, «evidencialidad» nombra marca de la base informativa de un enunciado; «corroborar», confirmar con evidencia adicional. La elección debe conservar esa diferencia. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.reserva-epistemica. Recupera la semana 16, «Lo probable no es lo probado». Textos para ensayo oral: «La oficina habría recibido el informe, según una fuente anónima.» / «El registro confirma la recepción de un envío.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Prosodia de la reserva» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Atribuye la fuente antes de la afirmación y conserva la reserva en un grupo propio. No susurres según una fuente anónima mientras enfatizas una acusación todavía no corroborada. Un ensayo defendible conserva esta distinción del caso: La modalidad de cautela no sustituye la identificación de la evidencia y su alcance. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.rectificacion. Recupera la semana 16, «Lo probable no es lo probado». Modelo parcial que puedes transformar: La primera noticia atribuyó a la dirección un conocimiento que la evidencia entonces disponible no demostraba. El registro confirmaba la recepción de un envío; el correo incorporado después confirma que la oficina disponía del informe adjunto. Sigue pendiente establecer quién accedió a él y cómo se distribuyó. Rectificamos el alcance del titular y mantenemos la investigación sobre el procedimiento interno. La cautela del condicional no sustituía esa distinción. Publicar la cronología de las pruebas permite comprender tanto el avance de la investigación como el error de la formulación inicial sin borrar ninguno de los dos.\n\nRecupera «Rectificación periodística» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «Pedir disculpas y reparar»: «Se omitió el aviso; la coordinación asume esa omisión.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La primera noticia atribuyó a la dirección un conocimiento que la evidencia entonces disponible no demostraba. El registro confirmaba la recepción de un envío; el correo incorporado después confirma que la oficina disponía del informe adjunto. Sigue pendiente establecer quién accedió a él y cómo se distribuyó. Rectificamos el alcance del titular y mantenemos la investigación sobre el procedimiento interno. La cautela del condicional no sustituía esa distinción. Publicar la cronología de las pruebas permite comprender tanto el avance de la investigación como el error de la formulación inicial sin borrar ninguno de los dos. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: La modalidad de cautela no sustituye la identificación de la evidencia y su alcance. En el nuevo contraste, «Se omitió el aviso; la coordinación asume esa omisión.» debe interpretarse dentro de esta cuestión: Responsabilidad, presuposiciones y actos de reparación. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la puntuación del ensayo marca la frontera principal y las secundarias.",
+      items: [
+        { quote: "tabaco, de los alrededores de Villarrica, y madera, del Chaco", note: "Último elemento de una enumeración compleja: coma delante de la «y»." },
+        { quote: "Cuando bajaba más de dos metros, los vapores grandes no podían atracar", note: "Coma tras la subordinada antepuesta; el punto y coma separa después las dos situaciones." },
+        { quote: "¿quién cargaba?, ¿quién cobraba?, ¿quién llevaba las cuentas?", note: "Serie de preguntas breves separadas por comas, en minúscula." },
+        { quote: "funcionarios de aduana con sus libros…", note: "Puntos suspensivos: la enumeración queda abierta." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Escribe una disculpa institucional y un plan de reparación de 500–650 palabras. Identifica agente, omisión y efectos; diferencia medidas aprobadas, reclamaciones y prevención. Añade una respuesta a quien considera insuficiente la reapertura.",
-    "context": "Entrega un texto independiente y conserva una segunda versión con cambios comentados. El modelo muestra una apertura posible; no sustituye el dossier completo.",
-    "steps": [
-      "Traza un mapa de fuentes: afirmación, prueba, límite y destinatario.",
-      "Decide el orden según la acción que necesita realizar tu lector; reserva espacio para una objeción fuerte.",
-      "Redacta sin copiar el modelo. Integra al menos dos fuentes y atribuye sus diferencias.",
-      "Revisa el alcance de tres formulaciones, lee un párrafo en voz alta y explica dos cambios de estilo."
+  practice: {
+    intro: "Ordena, elige entre versiones, reformula con otro signo y escribe piezas breves. Termina recuperando clases de las semanas anteriores de C2.",
+    exercises: [
+      {
+        id: "c2-17-orden",
+        type: "order",
+        prompt: "Ordena los fragmentos para formar oraciones bien puntuadas.",
+        items: [
+          {
+            words: ["Las", "causas", "fueron", "dos:", "el", "ferrocarril", "y", "la", "crisis."],
+            why: "Los dos puntos siguen al elemento anticipador «dos».",
+          },
+          {
+            words: ["El", "muelle", "norte", "era", "de", "los", "yerbateros;", "el", "del", "sur,", "de", "los", "madereros."],
+            why: "Punto y coma entre oraciones relacionadas; coma por el verbo omitido.",
+          },
+          {
+            words: ["Y", "la", "aduana,", "¿cuándo", "dejó", "de", "funcionar?"],
+            why: "El signo de interrogación se abre donde empieza la pregunta.",
+          },
+        ],
+      },
+      {
+        id: "c2-17-decision",
+        type: "context",
+        prompt: "Elige la mejor decisión de puntuación para cada caso.",
+        items: [
+          {
+            context: "Dos oraciones muy largas, cada una con varias comas, unidas por «sin embargo».",
+            q: "¿Qué frontera conviene antes de «sin embargo»?",
+            options: ["Una coma.", "Un punto.", "Dos puntos."],
+            answer: 1,
+            why: "Si las oraciones son muy largas, es preferible el punto al punto y coma.",
+          },
+          {
+            context: "Pie de foto: el texto termina con una cita que es una pregunta del capitán.",
+            q: "¿Dónde va el punto final?",
+            options: ["Dentro de las comillas, antes del cierre de interrogación.", "No hace falta punto final.", "Detrás de las comillas de cierre."],
+            answer: 2,
+            why: "El punto de la oración va siempre después de las comillas de cierre.",
+          },
+          {
+            context: "Una lista de productos que termina con «etc.».",
+            q: "¿Qué se escribe después de «etc.»?",
+            options: ["Nada más que su punto.", "Puntos suspensivos.", "Dos puntos."],
+            answer: 0,
+            why: "«Etc.» y los puntos suspensivos significan lo mismo: no se combinan.",
+          },
+        ],
+      },
+      {
+        id: "c2-17-reformular",
+        type: "transform",
+        prompt: "Reformula cada frase sustituyendo el nexo por el signo que se indica.",
+        items: [
+          {
+            source: "Los vapores no llegaron porque el río había bajado dos metros.",
+            instruction: "Sustituye «porque» por dos puntos.",
+            answers: ["Los vapores no llegaron: el río había bajado dos metros."],
+            why: "Los dos puntos pueden unir una oración con su causa.",
+          },
+          {
+            source: "El muelle norte era de los yerbateros, mientras que el del sur era de los madereros.",
+            instruction: "Sustituye «mientras que» por punto y coma y omite el segundo verbo.",
+            answers: ["El muelle norte era de los yerbateros; el del sur, de los madereros."],
+            why: "Punto y coma entre oraciones relacionadas y coma por el verbo omitido.",
+          },
+          {
+            source: "El capitán dijo que no zarparía hasta que subiera el río.",
+            instruction: "Pasa la frase a estilo directo, con dos puntos y comillas.",
+            answers: ["El capitán dijo: «No zarparé hasta que suba el río».", "El capitán dijo: «No zarpo hasta que suba el río»."],
+            why: "El estilo directo sí lleva dos puntos.",
+          },
+        ],
+      },
+      {
+        id: "c2-17-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Escribe en 50–70 palabras una cartela para una pieza de museo (un objeto de tu ciudad o de tu familia) con una enumeración compleja separada por punto y coma y unos dos puntos que expliquen algo.",
+            model: "Baúl de viaje, hacia 1920. Lo usó la familia Ortiz en tres mudanzas: de Encarnación a Asunción, en 1921; de Asunción a Buenos Aires, en 1934, y de vuelta a Asunción, en 1950. Contenía ropa, libros y una vajilla de loza. Su estado es frágil: la madera se agrietó con la humedad del río.",
+            checklist: [
+              "La enumeración compleja usa punto y coma y coma antes de «y».",
+              "Los dos puntos anuncian o explican.",
+              "El texto es breve y legible.",
+            ],
+          },
+          {
+            prompt: "Escribe en 40–60 palabras un pie de foto que incluya una cita de un testigo con otra cita dentro y un inciso entre rayas.",
+            model: "Muelle sur, hacia 1910. Un estibador —su nombre no consta en el archivo— carga fardos de yerba. Su nieta recordaba: «Mi abuelo decía que el capataz siempre gritaba “¡más rápido!”, aunque nadie le hiciera caso».",
+            checklist: [
+              "Las comillas siguen la jerarquía angulares, inglesas.",
+              "El inciso entre rayas tiene raya de cierre.",
+              "El punto va detrás de las comillas de cierre.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c2-17-recuperacion",
+        type: "open",
+        prompt: "Recupera lo que viste en las semanas anteriores de C2 con los estímulos que se te dan. No hace falta volver a esas lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de la clase G226 (sintaxis densa jurídica y administrativa). Estímulo, cláusula de un convenio: «El archivo, que cederá las piezas, y la imprenta, que imprimirá el catálogo, el cual se distribuirá gratuitamente, se comprometen a respetar los plazos». Reorganízala con la puntuación adecuada para que se lea sin esfuerzo, sin perder ninguna obligación.",
+            model: "«El archivo cederá las piezas y la imprenta imprimirá el catálogo, que se distribuirá gratuitamente. Ambas partes se comprometen a respetar los plazos». Separar las obligaciones en dos oraciones y dejar una sola relativa aclara quién hace qué, sin eliminar ningún compromiso.",
+            checklist: [
+              "Conservo todas las obligaciones.",
+              "Reduzco los incisos encadenados.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G227 (atribución periodística). Estímulo: «El director del archivo: el catálogo saldrá en marzo». Explica qué problema tiene este titular y reescríbelo como frase atribuida con verbo de lengua y comillas.",
+            model: "Los dos puntos del titular atribuyen la frase de forma abreviada, pero no dejan claro si es una cita literal ni con qué grado de compromiso habla el director. En el cuerpo de la noticia sería mejor: «El director del archivo aseguró que el catálogo “saldrá en marzo”», o, si no es literal, «El director del archivo prevé que el catálogo salga en marzo».",
+            checklist: [
+              "Explico la ambigüedad del titular.",
+              "Uso un verbo de atribución y comillas solo para lo literal.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G229 (paráfrasis fiel). Estímulo, cita del cronista: «Quizá el puerto haya sido la verdadera plaza mayor de la ciudad». Parafraséala en estilo indirecto sin cambiar su grado de certeza y explica por qué no lleva dos puntos.",
+            model: "«El cronista sugiere que es posible que el puerto haya sido la verdadera plaza mayor de la ciudad». Conservo la posibilidad con «es posible que» y un verbo de atribución prudente. En estilo indirecto no hay dos puntos, porque la cita se integra con «que» en la oración.",
+            checklist: [
+              "Conservo el grado de certeza.",
+              "Explico por qué no hay dos puntos.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G230 (conectores raros). Estímulo: «El catálogo empero tiene erratas toda vez que se imprimió deprisa». Puntúa los conectores como corresponde y explica el valor de cada uno.",
+            model: "«El catálogo, empero, tiene erratas, toda vez que se imprimió deprisa». «Empero» equivale a «sin embargo» y va intercalado entre comas; «toda vez que» es causal («dado que») y se separa con coma porque introduce una explicación de lo anterior.",
+            checklist: [
+              "Coloco las comas del conector intercalado.",
+              "Explico el valor causal de «toda vez que».",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "Lamentamos haber publicado una información incompleta.",
-      "Se omitió el aviso; la coordinación asume esa omisión.",
-      "Si alguien se sintió excluido, lo sentimos: la condición debilita el reconocimiento.",
-      "reconocimiento",
-      "reparación",
-      "excusa"
-    ],
-    "model": [
-      "Modelo parcial de apertura (no es una entrega completa): Omitimos en el anuncio principal un requisito de entrega que figuraba en las bases completas. Esa diferencia afectó a la preparación de las solicitudes. Reabriremos el plazo para quienes cumplan las condiciones originales y conservaremos las candidaturas ya presentadas. La explicación del fallo de coordinación se publicará con medidas preventivas; no sustituye la reparación. Los gastos de envío podrán reclamarse por el canal indicado y recibirán una respuesta motivada en la fecha anunciada, sin que hoy podamos garantizar su reembolso. Esta comunicación no exige que las personas afectadas den el asunto por cerrado."
-    ],
-    "checklist": [
-      "La tesis tiene alcance preciso y pruebas identificables.",
-      "No convierto una propuesta en decisión ni una inferencia en dato.",
-      "El registro responde al destinatario y no borra condiciones.",
-      "La cohesión conserva referentes y voces sin repeticiones inútiles.",
-      "La revisión explica qué cambia para quien lee."
-    ],
-    "words": [
-      500,
-      650
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no un guion leído. La grabación, si la usas, permanece local; el navegador no califica pronunciación ni calidad oral.",
-    "tasks": [
-      {
-        "title": "Exposición situada",
-        "prompt": "Representa a la institución en una reunión con solicitantes. Reconoce la omisión, explica los límites presupuestarios sin usarlos como excusa y escucha una objeción sin exigir perdón.",
-        "prep": [
-          "Anota tesis, dos pruebas, una objeción y una reserva.",
-          "Marca dos focos prosódicos y un punto donde cambiarás de registro."
-        ],
-        "seconds": 240,
-        "model": "Omitimos en el anuncio principal un requisito de entrega que figuraba en las bases completas. Esa diferencia afectó a la preparación de las solicitudes. Reabriremos el plazo para quienes cumplan las condiciones originales y conservaremos las candidaturas ya presentadas. La explicación del fallo de coordinación se publicará con medidas preventivas; no sustituye la reparación. Los gastos de envío podrán reclamarse por el canal indicado y recibirán una respuesta motivada en la fecha anunciada, sin que hoy podamos garantizar su reembolso. Esta comunicación no exige que las personas afectadas den el asunto por cerrado.",
-        "selfCheck": [
-          "La condición principal se oye con claridad.",
-          "Distingo mi interpretación de las voces citadas.",
-          "Puedo reparar una frase sin abandonar el argumento."
-        ]
-      },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "Tu interlocutor sostiene: «La disculpa depende de que se pruebe una reacción emocional.». Responde sin caricaturizarlo, formula dos preguntas de seguimiento y pide que reformule tu condición principal. Después resume para una persona que no conoce el expediente de Pedir disculpas y reparar.",
-        "prep": [
-          "Prepara una concesión real y una corrección de alcance.",
-          "Anticipa qué término deberás explicar sin jerga."
-        ],
-        "seconds": 240,
-        "model": "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes. La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario.",
-        "selfCheck": [
-          "La respuesta atiende la preocupación, no solo corrige la forma.",
-          "La versión breve conserva el límite decisivo.",
-          "Adapto el ritmo después de la interrupción."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te espera con una tarjeta de contraste: lleva tu dossier y una decisión lingüística que quieras poner a prueba con tu docente.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu decisión más discutible sobre Pedir disculpas y reparar y pide un contraejemplo que la ponga a prueba.",
-        "phrases": [
-          "Mi lectura se apoya en…",
-          "Cambiaría de interpretación si…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica el límite «La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario.» a otro público sin rebajar su importancia.",
-        "phrases": [
-          "En otros términos…",
-          "Esta versión conserva…"
-        ]
-      },
-      {
-        "move": "Negocia",
-        "task": "Responde a la objeción «Explicar la buena intención equivale a reparar toda consecuencia.» y acuerda una formulación que ambos puedan defender.",
-        "phrases": [
-          "Reconozco ese punto; mi reserva es…",
-          "Podemos dejar constancia de…"
-        ]
-      }
+  writing: {
+    task: "Redacta el texto de presentación (400–520 palabras) de una exposición sobre un lugar de trabajo del pasado en tu ciudad: un puerto, una estación, un mercado, una fábrica. Incluye al menos una enumeración compleja con punto y coma, dos puntos con tres funciones distintas, un inciso dentro de otro inciso, una cita con otra cita dentro y una serie de preguntas.",
+    context: "El texto abrirá el catálogo y también se colgará en la primera sala. Lo leerán visitantes de todas las edades, de pie y con poco tiempo, así que la puntuación compleja debe ayudar a leer, no obstaculizar. Puedes usar el caso del puerto de Asunción o inventar otro lugar con la misma lógica.",
+    steps: [
+      "Reúne los datos: qué se hacía en el lugar, quién trabajaba, qué cambió y qué queda hoy. Busca o inventa una cita de un testigo.",
+      "Decide el orden de los párrafos y, en cada uno, cuál es la frontera principal.",
+      "Redacta sin copiar el modelo. Usa cada recurso de puntuación donde haga falta, no para exhibirlo.",
+      "Revisa el texto signo por signo con la lista de control: corrige los dos puntos entre verbo y complemento, las comillas mal anidadas y cualquier punto y coma tras una subordinada antepuesta.",
     ],
-    "bring": "El dossier, una versión revisada, notas de escucha y una grabación local opcional; no se necesita subir audio."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Balance de Pedir disculpas y reparar: ¿qué conclusión conserva el alcance?",
-        "options": [
-          "Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.",
-          "La disculpa depende de que se pruebe una reacción emocional."
-        ],
-        "answer": 0,
-        "why": "Relaciona el texto principal con el documento complementario."
-      },
-      {
-        "type": "choice",
-        "q": "En una revisión final de Pedir disculpas y reparar, ¿qué afirmación debe rechazarse?",
-        "options": [
-          "La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario.",
-          "La primera reapertura incluía a quienes habían desistido."
-        ],
-        "answer": 1,
-        "why": "La primera opción contradice la condición explícita."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha esta síntesis de Pedir disculpas y reparar. ¿Qué interpretación mantiene?",
-        "options": [
-          "Explicar la buena intención equivale a reparar toda consecuencia.",
-          "Pedir comprensión puede desplazar hacia los afectados el trabajo de tranquilizar a la institución."
-        ],
-        "answer": 1,
-        "why": "La relación expresada limita una generalización.",
-        "audio": "Pedir comprensión puede desplazar hacia los afectados el trabajo de tranquilizar a la institución.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "En «Pedir disculpas y reparar», ¿qué unidad expresa «aceptación explícita de un hecho o responsabilidad»? ___ .",
-        "answers": [
-          [
-            "reconocimiento"
-          ]
-        ],
-        "hint": "aceptación explícita de un hecho o responsabilidad",
-        "why": "Recupera la unidad a partir de su función, no de una traducción."
-      },
-      {
-        "type": "gap",
-        "q": "Para nombrar «acción que responde al daño o fallo» en este expediente usamos ___ .",
-        "answers": [
-          [
-            "reparación"
-          ]
-        ],
-        "why": "La distinción léxica debe conservarse al mediar."
-      },
-      {
-        "type": "error",
-        "sentence": "La institución lamenta de haber omitido el aviso.",
-        "answers": [
-          "La institución lamenta haber omitido el aviso."
-        ],
-        "why": "Lamentar seguido de infinitivo compuesto no exige de."
-      },
-      {
-        "type": "transform",
-        "source": "Se omitió un requisito en el anuncio. La coordinación fue responsable.",
-        "instruction": "Usa «La coordinación» como sujeto y «omitió» como verbo, conservando el resto del contenido.",
-        "answers": [
-          "La coordinación omitió un requisito en el anuncio."
-        ],
-        "why": "Hacer visible al agente: conserva la relación solicitada y compara qué se hace explícito."
-      },
-      {
-        "type": "open",
-        "prompt": "Cierre de «Pedir disculpas y reparar»: escribe 90–120 palabras para una audiencia nueva. Incluye tesis, condición y una pregunta pendiente; justifica una elección de registro.",
-        "model": "Omitimos en el anuncio principal un requisito de entrega que figuraba en las bases completas. Esa diferencia afectó a la preparación de las solicitudes. Reabriremos el plazo para quienes cumplan las condiciones originales y conservaremos las candidaturas ya presentadas. La explicación del fallo de coordinación se publicará con medidas preventivas; no sustituye la reparación. Los gastos de envío podrán reclamarse por el canal indicado y recibirán una respuesta motivada en la fecha anunciada, sin que hoy podamos garantizar su reembolso. Esta comunicación no exige que las personas afectadas den el asunto por cerrado.",
-        "checklist": [
-          "Conservo la reserva decisiva.",
-          "Atribuyo una fuente y delimito mi inferencia.",
-          "El destinatario puede identificar el siguiente paso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Interpreto responsabilidad, presuposiciones y actos de reparación en fuentes originales.",
-      "Puedo explicar por qué «La disculpa depende de que se pruebe una reacción emocional.» excede la evidencia.",
-      "Defiendo y reviso un dossier escrito y oral con destinatario concreto."
+    useLanguage: [
+      "A, dato; B, dato, y C, dato",
+      "… fueron tres: …",
+      "oración: causa o consecuencia",
+      "Fulano —que… (…)— …",
+      "«… “… ‘…’ …” …».",
+      "¿…?, ¿…?, ¿…?",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye sin mirar el límite: La primera propuesta de reapertura excluía a quienes abandonaron antes de enviar el formulario.",
-      "Dentro de una semana, reescribe el cierre para otro público y contrástalo con tu versión inicial.",
-      "En clase, pide una objeción a «Una disculpa responsable reconoce la actuación y separa reparación, explicación y asuntos pendientes.» y registra qué cambiarías."
-    ]
-  }
+    model: [
+      "Modelo parcial de apertura (no es una entrega completa): Durante casi un siglo, la estación de San Francisco fue el lugar donde Asunción se despedía y se reencontraba. Por sus andenes pasaron soldados, de camino al frente; comerciantes, con sus muestras de tela, y estudiantes, que volvían cada diciembre con la maleta llena de libros. Esta exposición quiere contar esa historia con las voces de quienes la vivieron: los maquinistas, los vendedores de chipa y los empleados de la boletería, cuyos nombres —casi siempre ausentes de los libros (aunque no de los registros de pago)— recuperamos aquí.",
+    ],
+    checklist: [
+      "Uso al menos una enumeración compleja con punto y coma.",
+      "Los dos puntos cumplen tres funciones distintas y nunca separan un verbo de su complemento.",
+      "Los incisos anidados cambian de signo en cada nivel.",
+      "Las comillas siguen la jerarquía angulares, inglesas, simples, y el punto va detrás.",
+      "No hay punto y coma tras una subordinada antepuesta ni puntos suspensivos tras «etc.».",
+    ],
+    words: [400, 520],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un guion leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Leer el texto de sala en voz alta",
+        prompt: "Vas a grabar la audioguía de la exposición. Lee en voz alta tu texto de presentación completo, o los párrafos segundo y cuarto del ensayo de Rodrigo, de modo que el oyente perciba la enumeración compleja, los incisos y las citas sin ver el texto. Después explica en un minuto qué hiciste con la voz en cada signo.",
+        prep: [
+          "Marca con colores las pausas de coma, punto y coma y punto.",
+          "Subraya los incisos que leerás con tono más bajo.",
+          "Decide cómo distinguirás la voz de la cita.",
+        ],
+        seconds: 240,
+        selfCheck: [
+          "La pausa del punto y coma es más larga que la de la coma.",
+          "Los incisos suenan más bajos y la voz vuelve después.",
+          "Las citas se distinguen de la voz del narrador.",
+        ],
+      },
+      {
+        title: "Defender una corrección ante el autor",
+        prompt: "El historiador se resiste a quitar los dos puntos de «los productos eran: yerba, cueros y madera», porque dice que «así se ve que viene una lista». Explícale por qué la norma no los admite, propón dos soluciones y distingue lo que es obligatorio de lo que es cuestión de estilo.",
+        prep: [
+          "Prepara la regla con tus propias palabras.",
+          "Ten dos alternativas: quitar los dos puntos o añadir un anticipador.",
+        ],
+        seconds: 150,
+        model: "Entiendo lo que buscas, y la idea es buena: que el lector sepa que viene una lista. Pero los dos puntos no pueden separar el verbo de lo que dice el verbo. Tienes dos opciones: quitar los dos puntos, y la lista se entiende igual, o añadir una palabra que anuncie la lista, por ejemplo «tres»: «los productos eran tres: yerba, cueros y madera». Lo primero es una norma; lo segundo, una decisión de estilo que puedes tomar tú.",
+        selfCheck: [
+          "Explico la regla sin tecnicismos innecesarios.",
+          "Propongo dos soluciones.",
+          "Distingo norma y estilo.",
+        ],
+      },
+      {
+        title: "Dictar un párrafo con su puntuación",
+        prompt: "Dicta a un compañero o graba para ti mismo un párrafo breve con una enumeración compleja y una cita, diciendo en voz alta cada signo («punto y coma», «abre comillas», «cierra raya»). Después léelo sin nombrar los signos, solo con la voz.",
+        prep: [
+          "Escribe primero el párrafo y revisa sus signos.",
+          "Practica los nombres de los signos: raya, corchete, comillas angulares.",
+        ],
+        seconds: 100,
+        selfCheck: [
+          "Nombro cada signo correctamente.",
+          "En la segunda lectura la voz hace oír los mismos signos.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tu texto de presentación y un párrafo de un libro o periódico con puntuación compleja. Estas tarjetas te ayudan a aprovechar el tiempo con tu profesor.",
+    cards: [
+      {
+        move: "Lee",
+        task: "Lee en voz alta un párrafo de tu texto sin enseñárselo a tu profesor; él o ella intenta adivinar dónde pusiste punto y coma y dónde coma.",
+        phrases: ["¿Dónde has oído la frontera principal?", "¿Ahí había punto y coma o coma?"],
+      },
+      {
+        move: "Justifica",
+        task: "Elige tres signos de tu texto y justifica cada uno con una regla; pide a tu profesor que te diga si la justificación es exacta.",
+        phrases: ["Aquí van dos puntos porque…", "Uso corchetes porque…"],
+      },
+      {
+        move: "Compara",
+        task: "Lleva un párrafo periodístico real y comprueba con tu profesor si su puntuación sigue la Ortografía o el libro de estilo del periódico.",
+        phrases: ["¿Es una norma o una opción de estilo?", "¿Tú lo puntuarías igual?"],
+      },
+      {
+        move: "Pregunta",
+        task: "Pregúntale qué signo le cuesta más a él o ella y cómo decide entre punto y coma y punto cuando las oraciones son largas.",
+        phrases: ["¿Cuándo prefieres el punto?", "¿Cuántas comas aguanta una oración?"],
+      },
+    ],
+    bring: "Tu texto de presentación revisado, el párrafo real que hayas encontrado y, si quieres, la grabación de tu lectura.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "En «Cuando bajaba el río[ ] los barcos esperaban en la bahía», ¿qué signo va en [ ]?",
+        options: ["punto y coma", "coma", "dos puntos"],
+        answer: 1,
+        why: "Tras una subordinada antepuesta va coma.",
+      },
+      {
+        type: "choice",
+        q: "¿Qué orden de comillas propone la Ortografía para tres niveles de cita?",
+        options: ["inglesas, angulares, simples", "simples, inglesas, angulares", "angulares, inglesas, simples"],
+        answer: 2,
+        why: "Primero « », después “ ” y, por último, ‘ ’.",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase. ¿Qué función cumple la pausa suspendida que oyes en el medio?",
+        options: [
+          "Anuncia una explicación de lo anterior.",
+          "Cierra la oración.",
+          "Separa un sujeto de su verbo.",
+        ],
+        answer: 0,
+        why: "Los dos puntos unen la decisión con su causa.",
+        audio: "La exposición se aplazó un mes: las piezas del archivo necesitaban restauración.",
+        voice: "es-AR-f",
+      },
+      {
+        type: "gap",
+        q: "Los visitantes podrán ver ___: fotografías, planos y cartas. [elemento que anticipa la enumeración]",
+        answers: [["lo siguiente", "tres tipos de documentos", "tres cosas"]],
+        hint: "Sin una palabra que anuncie la lista, los dos puntos separarían el verbo de su complemento.",
+        why: "Los dos puntos necesitan aquí un elemento anticipador.",
+      },
+      {
+        type: "gap",
+        q: "Fotografías, planos y cartas: ___ se exhibe en la primera sala. [palabra que resume]",
+        answers: [["todo", "todo eso", "eso"]],
+        hint: "Tras una enumeración, los dos puntos pueden preceder a la palabra que la resume.",
+        why: "Los dos puntos cierran la enumeración.",
+      },
+      {
+        type: "transform",
+        source: "La aduana cerró en 1940 porque el comercio se había trasladado al nuevo puerto.",
+        instruction: "Une las dos oraciones con dos puntos en lugar de «porque», sin cambiar el sentido.",
+        answers: ["La aduana cerró en 1940: el comercio se había trasladado al nuevo puerto."],
+        why: "Los dos puntos expresan aquí la causa.",
+      },
+      {
+        type: "error",
+        sentence: "El plano (firmado por el ingeniero Ruiz (según el inventario)) es de 1890.",
+        answers: ["El plano (firmado por el ingeniero Ruiz [según el inventario]) es de 1890.", "El plano (firmado por el ingeniero Ruiz —según el inventario—) es de 1890."],
+        why: "El inciso interior debe cambiar de signo.",
+      },
+      {
+        type: "error",
+        sentence: "«El capataz gritaba (...) que el río no esperaba a nadie», recuerda un testigo.",
+        answers: ["«El capataz gritaba […] que el río no esperaba a nadie», recuerda un testigo."],
+        why: "La omisión dentro de una cita se marca con puntos suspensivos entre corchetes.",
+      },
+      {
+        type: "order",
+        words: ["Llegaban", "cueros,", "del", "norte;", "yerba,", "del", "este,", "y", "madera,", "del", "Chaco."],
+        why: "Enumeración compleja: punto y coma entre elementos y coma ante la «y» final.",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 80–100 palabras a un compañero de clase cuándo usar punto y coma y cuándo punto entre dos oraciones unidas por «sin embargo». Incluye un ejemplo de cada caso.",
+        model: "Las dos opciones separan oraciones del mismo nivel, pero el punto marca una frontera mayor. Si las oraciones son de longitud media, el punto y coma mantiene la unión de sentido: «La exposición se inauguró en marzo; sin embargo, la última sala no se abrió hasta mayo». Si son muy largas y tienen comas internas, es mejor el punto, para que el lector respire: «La exposición, que reunió piezas de tres archivos, se inauguró en marzo con gran asistencia. Sin embargo, la última sala, dedicada a los estibadores, no se abrió hasta mayo».",
+        checklist: [
+          "Explico el criterio de la longitud.",
+          "Doy un ejemplo con punto y coma y otro con punto.",
+          "Pongo coma después de «sin embargo».",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Uso el punto y coma entre oraciones relacionadas, en enumeraciones complejas y ante conectores, y sé cuándo es mejor el punto.",
+      "Uso los dos puntos para anunciar, cerrar, explicar, citar y saludar, y evito ponerlos entre un verbo y su complemento o ante el estilo indirecto.",
+      "Anido incisos cambiando de signo en cada nivel y uso los corchetes para interpolaciones y omisiones.",
+      "Jerarquizo las comillas en tres niveles, coloco el punto detrás de ellas y uso los puntos suspensivos y las preguntas en serie según la norma.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la columna derecha de la tabla «Signo y voz» y lee en voz alta un párrafo de prensa haciendo oír cada signo.",
+      "Dentro de una semana, busca un texto con una enumeración compleja y comprueba si usa punto y coma y coma ante la «y» final.",
+      "En la próxima clase, pide a tu profesor que te dicte un párrafo sin decir los signos y puntúalo tú.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/puntuacion-avanzada-punto-y-coma-dos", label: "Clase: Puntuación avanzada: punto y coma, dos puntos e incisos" },
+  ],
 };

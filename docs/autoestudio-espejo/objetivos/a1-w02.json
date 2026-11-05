@@ -1,0 +1,11 @@
+[
+  [2, "gram", "g003", "Género de sustantivos y terminaciones frecuentes", "Puedo elegir el artículo por la terminación (-o, -or, -a, -ción, -sión, -dad, -tad), recordar las palabras trampa y usar el agua o el aula.", ["a1.gram.g002"], { "related": ["/gramatica/genero-de-sustantivos"] }],
+  [2, "gram", "g004", "Artículos definidos e indefinidos", "Puedo presentar algo nuevo con un, una, unos, unas o con hay, y volver a algo conocido o único con el, la, los, las.", ["a1.gram.g002"], { "related": ["/la-galeria-de-los-articulos"] }],
+  [2, "voc", "w02-barrio-mercado", "Lugares del barrio y cosas del mercado", "Puedo nombrar lugares de un barrio y productos de un mercado con su artículo.", ["a1.gram.g003"]],
+  [2, "pron", "w02-silaba-fuerte", "La sílaba fuerte", "Puedo reconocer y pronunciar la sílaba tónica de una palabra y relacionarla con la tilde.", []],
+  [2, "lis", "w02-preguntar-mercado", "Escuchar preguntas por lugares en un mercado", "Puedo entender dónde está un lugar o una cosa en un diálogo breve en un mercado.", ["a1.gram.g004"]],
+  [2, "read", "w02-mensaje-anfitriona", "Leer un mensaje de bienvenida", "Puedo entender un mensaje breve que describe un apartamento y los lugares de su calle.", ["a1.gram.g003", "a1.gram.g004"]],
+  [2, "wri", "w02-describir-calle", "Describir mi calle por escrito", "Puedo escribir un mensaje breve que presenta los lugares de mi calle y vuelve a ellos con el artículo correcto.", ["a1.gram.g004", "a1.voc.w02-barrio-mercado"]],
+  [2, "spk", "w02-mi-barrio", "Describir mi barrio y preguntar por lugares", "Puedo describir mi calle en voz alta y preguntar por un lugar cualquiera o por un lugar concreto.", ["a1.fun.w02-preguntar-hay"]],
+  [2, "fun", "w02-preguntar-hay", "Preguntar si hay un lugar y dónde está", "Puedo preguntar «¿hay un…?» y «¿dónde está el…?» y entender la respuesta.", ["a1.gram.g004"]]
+]

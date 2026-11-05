@@ -1,444 +1,866 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 9 · Autoestudio espejo de G104 (condiciones y consejos en situaciones
+ * reales) y G105 (por y para). Repaso autónomo con un grupo de voluntarios que viaja
+ * de San José a un proyecto de tortugas marinas en Tortuguero.
+ */
 export const b1w09: Module = {
   "id": "b1-09",
   "level": "b1",
   "week": 9,
   "kind": "core",
-  "title": "Una entrevista, varias posibilidades",
-  "subtitle": "Presentar experiencia, pedir condiciones con cortesía y distinguir hipótesis de datos.",
+  "title": "Rumbo a Tortuguero: plan A, plan B, por y para",
+  "subtitle": "Repaso de cómo usar condiciones y consejos para resolver situaciones reales, y de cuándo elegir «por» y cuándo «para».",
   "stop": {
     "place": "San José",
     "country": "Costa Rica"
   },
   "minutes": 95,
   "newObjectives": [
-    "b1.gram.condicional-simple",
-    "b1.voc.trabajo-entrevistas",
-    "b1.pron.modalidad-cortesia",
-    "b1.fun.entrevista-trabajo",
-    "b1.spk.entrevista-simulada",
-    "b1.gram.probabilidad",
-    "b1.voc.misterios",
-    "b1.pron.entonacion-hipotesis",
-    "b1.fun.suponer",
-    "b1.read.relato-misterio"
+    "b1.gram.g104",
+    "b1.gram.g105",
+    "b1.voc.w09-naturaleza-voluntariado",
+    "b1.pron.w09-por-para-rapido",
+    "b1.lis.w09-reunion-voluntarios",
+    "b1.read.w09-normas-proyecto",
+    "b1.wri.w09-plan-alternativas",
+    "b1.spk.w09-resolver-problema",
+    "b1.fun.w09-resolver-imprevistos",
+    "b1.disc.w09-plan-alternativo"
   ],
-  "reviewObjectives": [
-    "b1.gram.relativas-modo",
-    "b1.gram.relativos-quien-donde",
-    "b1.voc.vivienda-convivencia",
-    "b1.pron.pausas-relativas",
-    "b1.fun.describir-ideal",
-    "b1.lis.anuncios-busco",
-    "b1.gram.cuantificacion-busqueda"
-  ],
-  "prerequisites": [
-    "b1-08"
-  ],
+  reviewObjectives: ["b1.gram.g101","b1.gram.g102","b1.gram.g103","b1.voc.w08-correr-entrenar","b1.pron.w08-ria-ia","b1.lis.w08-consejos-entrenadora","b1.read.w08-guia-primera-carrera","b1.wri.w08-correo-consejos","b1.spk.w08-plan-negociado","b1.fun.w08-animar-aconsejar","b1.disc.w08-obstaculo-decision"],
+  prerequisites: ["b1-08"],
   "goal": {
-    "canDo": "Puedo presentar experiencia, pedir condiciones con cortesía y distinguir hipótesis de datos.",
+    "canDo": "Al final de esta semana puedes organizar un viaje o un proyecto con alternativas («si llueve, salimos por la tarde; si no, a las seis»), aconsejar sin dar órdenes («yo llevaría botas») y elegir bien entre «por» y «para».",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa cómo se distinguen una condición, un plan acordado y una regla, y cómo se aconseja diciendo lo que tú harías.",
+      "Repasa los usos de «por» (mirar atrás o por el camino) y de «para» (mirar hacia delante).",
+      "Escucha la reunión de salida de un grupo de voluntarios en San José.",
+      "Lee las normas y consejos del proyecto de tortugas en Tortuguero.",
+      "Escribe un plan con alternativas, revísalo y explica en voz alta cómo resolverías un imprevisto."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Presentar experiencia, pedir condiciones con cortesía y distinguir hipótesis de datos.",
+    "intro": "Esta semana repasas dos clases muy prácticas. La primera te sirve para resolver problemas: prever qué pasará, decidir planes alternativos y dar consejos. La segunda, para no dudar entre «por» y «para». Te acompaña Daniela, que coordina en San José a un grupo de voluntarios que va a pasar dos semanas protegiendo nidos de tortuga en la costa del Caribe.",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "Condición, plan acordado o regla",
         "body": [
-          "El condicional simple se forma con infinitivo y terminaciones ía, ías, ía, íamos, íais, ían; hay raíces como tendría, podría, haría y diría. Sirve para pedir con cortesía y aconsejar: ¿podría aclararlo?, yo en tu lugar preguntaría. No expresa siempre una condición."
+          "Ya sabes que detrás de «si» va el presente. En situaciones reales, la consecuencia te dice qué tipo de frase es. Con futuro, haces una previsión o tomas una decisión ahora: «Si el río está alto, tomaremos otra lancha». Con presente, presentas un plan ya acordado: «Si llueve, salimos a las diez» (el grupo ya lo ha decidido).",
+          "Cuando las dos partes van en presente y la situación se repite, es una regla o una costumbre: «Si encuentras un nido, avisas al guardaparques». Para el plan B, usa «si no» (sin pausa entre «si» y «no») o «en ese caso»: «Si el autobús llega a tiempo, comemos en Cariari; si no, comemos en la lancha»."
         ],
-        "examples": [
-          {
-            "es": "¿Podría explicar cómo se organizan los turnos?"
-          },
-          {
-            "es": "Me gustaría trabajar con atención al público."
-          },
-          {
-            "es": "Yo en tu lugar prepararía un ejemplo concreto."
-          }
-        ],
+        "table": {
+          "caption": "Tres tipos de frase con «si»",
+          "head": [
+            "Tipo",
+            "Estructura",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Previsión o decisión",
+              "si + presente, futuro",
+              "Si hay tormenta, cancelaremos la patrulla."
+            ],
+            [
+              "Plan acordado",
+              "si + presente, presente",
+              "Si hay tormenta, la patrulla empieza a medianoche."
+            ],
+            [
+              "Regla o costumbre",
+              "si + presente, presente",
+              "Si una tortuga sale del mar, apagamos las linternas."
+            ],
+            [
+              "Plan B",
+              "si no, + presente / futuro",
+              "Si no hay tormenta, salimos a las nueve."
+            ]
+          ]
+        },
         "mistakes": [
           {
-            "wrong": "Me gustará trabajar aquí si pudiera elegir ahora.",
-            "right": "Me gustaría trabajar aquí si pudiera elegir ahora.",
-            "why": "Se expresa un deseo hipotético actual."
+            "wrong": "Si el río estará alto, tomamos otra ruta.",
+            "right": "Si el río está alto, tomamos otra ruta.",
+            "why": "Aunque hables del futuro, detrás de «si» va el presente."
+          },
+          {
+            "wrong": "Si llueve vamos en lancha, sino vamos caminando.",
+            "right": "Si llueve, vamos en lancha; si no, vamos caminando.",
+            "why": "Para el plan B se escribe «si no», en dos palabras. «Sino» significa «al contrario»."
           }
         ]
       },
       {
-        "heading": "Organizar la comunicación",
+        "heading": "Aconsejar sin dar órdenes: «yo + condicional»",
         "body": [
-          "El futuro puede expresar una conjetura presente: estará en una reunión. El condicional permite una conjetura sobre un momento pasado: serían las cinco. A lo mejor suele llevar indicativo; quizás y tal vez permiten presentar diferentes grados de compromiso. Señala siempre qué sabes y qué supones."
+          "Una forma muy natural de aconsejar es decir lo que harías tú: «Yo llevaría botas de goma», «Yo no dejaría la mochila en la playa». La otra persona decide; tú solo propones. Suena más suave que el imperativo («Lleva botas») y menos directo que «tienes que».",
+          "Puedes combinarlo con una condición real para hacer una sugerencia amable: «Si tienes tiempo, podrías ayudarnos con los nidos», «Si vas al mercado, yo compraría frutas para el viaje». Para la regla obligatoria, en cambio, usa presente, «tener que» o el imperativo."
         ],
         "examples": [
           {
-            "es": "No contesta: estará en una entrevista."
+            "es": "Yo saldría de San José antes de las seis por el tráfico.",
+            "note": "Consejo: lo que haría yo."
           },
           {
-            "es": "Cuando llamó, serían las nueve."
+            "es": "Si te mareas en la lancha, yo me sentaría delante.",
+            "note": "Condición real + consejo."
           },
           {
-            "es": "A lo mejor han cambiado el horario."
+            "es": "Si ves una tortuga, no le haces fotos con flash.",
+            "note": "Regla del proyecto."
+          },
+          {
+            "es": "Si tienes un rato, ¿podrías revisar la lista de material?",
+            "note": "Petición amable."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Si vas a la playa de noche, yo llevaré repelente.",
+            "right": "Si vas a la playa de noche, yo llevaría repelente.",
+            "why": "Para aconsejar con «yo», usa el condicional; el futuro sonaría a tu propio plan."
+          }
+        ],
+        "tip": "Pregúntate: ¿quién decide? Si decide la otra persona, aconseja con «yo + condicional»; si es una norma, usa presente o imperativo."
+      },
+      {
+        "heading": "«Por» mira hacia atrás o por el camino",
+        "body": [
+          "«Por» expresa la causa, lo que hay detrás de una acción: «Cerraron la playa por la tormenta», «Gracias por venir», «Lo hago por las tortugas». También el recorrido o el lugar por donde pasas («Fuimos por la Ruta 32», «Paseamos por el pueblo») y un momento aproximado («por la mañana», «por diciembre»).",
+          "Además, «por» marca el medio («Te aviso por mensaje»), el intercambio y el precio («Pagamos quince mil colones por la excursión», «Cambié mis botas por unas sandalias») y la cantidad por unidad («dos litros de agua por persona»)."
+        ],
+        "examples": [
+          {
+            "es": "El vuelo se retrasó por la lluvia.",
+            "note": "Causa."
+          },
+          {
+            "es": "La lancha pasa por los canales durante tres horas.",
+            "note": "Recorrido."
+          },
+          {
+            "es": "Te mando las fotos por correo.",
+            "note": "Medio."
+          },
+          {
+            "es": "Pagamos veinte dólares por persona.",
+            "note": "Precio y cantidad por unidad."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Gracias para tu ayuda con los nidos.",
+            "right": "Gracias por tu ayuda con los nidos.",
+            "why": "Agradeces algo que ya ha pasado: es la causa del agradecimiento."
+          }
+        ]
+      },
+      {
+        "heading": "«Para» mira hacia delante",
+        "body": [
+          "«Para» señala el objetivo («Vinimos para cuidar los nidos», «para que las crías lleguen al mar», como viste en la semana 7), el destinatario («Este informe es para la bióloga»), el destino de un movimiento («Salimos para Limón a las seis») y el plazo o momento límite («Necesito la lista para el viernes»).",
+          "También sirve para dar una opinión («Para mí, es el mejor viaje») y para comparar con lo esperado («Para ser julio, llueve poco»). Un truco: si puedes preguntar «¿para qué?», «¿para quién?» o «¿para cuándo?», la respuesta suele llevar «para»."
+        ],
+        "table": {
+          "caption": "Por y para en la misma historia",
+          "head": [
+            "Pregunta",
+            "Preposición",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "¿Por qué?",
+              "por",
+              "Me hice voluntaria por mi abuela, que amaba el mar."
+            ],
+            [
+              "¿Para qué?",
+              "para",
+              "Me hice voluntaria para proteger a las tortugas."
+            ],
+            [
+              "¿Por dónde?",
+              "por",
+              "Llegamos por el río."
+            ],
+            [
+              "¿Hacia dónde?",
+              "para",
+              "Salimos para la costa."
+            ],
+            [
+              "¿Para quién?",
+              "para",
+              "Las fotos son para el museo."
+            ],
+            [
+              "¿Para cuándo?",
+              "para",
+              "El informe es para el lunes."
+            ],
+            [
+              "¿Por cuánto?",
+              "por",
+              "Alquilamos las botas por cinco dólares."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Estudio biología por trabajar en un parque nacional.",
+            "right": "Estudio biología para trabajar en un parque nacional.",
+            "why": "Es un objetivo, algo que miras hacia delante: «para»."
+          },
+          {
+            "wrong": "El trabajo es por el martes.",
+            "right": "El trabajo es para el martes.",
+            "why": "Un plazo se expresa con «para»."
           }
         ]
       }
     ]
   },
   "grammar": {
+    "intro": "Primero practicas condiciones y consejos; después, «por» y «para».",
     "exercises": [
       {
-        "id": "b1-09-forms",
-        "type": "gap",
-        "prompt": "Completa estas situaciones de «Una entrevista, varias posibilidades» con la forma que expresa la relación indicada.",
+        "id": "b1-09-gramatica-tipo-si",
+        "type": "classify",
+        "title": "¿Previsión, plan, regla o consejo?",
+        "prompt": "Clasifica cada frase de la coordinadora según lo que expresa.",
+        "categories": [
+          "Previsión o decisión",
+          "Plan acordado o regla",
+          "Consejo"
+        ],
         "items": [
           {
-            "q": "¿___ usted repetir la última pregunta?",
-            "answers": [
-              [
-                "Podría"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "text": "Si el puente está cortado, tendremos que dormir en Cariari.",
+            "cat": 0
           },
           {
-            "q": "Yo en tu lugar ___ por la formación inicial.",
-            "answers": [
-              [
-                "preguntaría"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "text": "Si encuentras un nido, marcas el lugar con una estaca.",
+            "cat": 1
           },
           {
-            "q": "No veo a Julia; ___ en la reunión, supongo.",
-            "answers": [
-              [
-                "estará"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "text": "Yo no llevaría ropa blanca a la playa de noche.",
+            "cat": 2
+          },
+          {
+            "text": "Si sube la marea, los nidos se trasladarán al vivero.",
+            "cat": 0
+          },
+          {
+            "text": "Si alguien se siente mal, avisa a Daniela.",
+            "cat": 1
+          },
+          {
+            "text": "Si te pican los mosquitos, yo me pondría manga larga.",
+            "cat": 2
           }
-        ],
-        "bank": [
-          "Podría",
-          "preguntaría",
-          "estará"
         ]
       },
       {
-        "id": "b1-09-repair",
-        "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "id": "b1-09-gramatica-plan-b",
+        "type": "gap",
+        "title": "Plan A y plan B",
+        "prompt": "Completa con la forma correcta o con «si no».",
         "items": [
           {
-            "sentence": "Me gustará trabajar aquí si pudiera elegir ahora.",
+            "q": "Si la lancha ___ (llegar) a las dos, comemos en el muelle; ___, comemos en el pueblo.",
             "answers": [
-              "Me gustaría trabajar aquí si pudiera elegir ahora."
+              [
+                "llega"
+              ],
+              [
+                "si no"
+              ]
             ],
-            "why": "Se expresa un deseo hipotético actual."
+            "why": "Plan acordado en presente y alternativa con «si no»."
           },
           {
-            "sentence": "Yo que tú pediré una aclaración.",
+            "q": "Si mañana ___ (hacer) buen tiempo, ___ (ir, nosotros) al canal en kayak.",
             "answers": [
-              "Yo que tú pediría una aclaración."
+              [
+                "hace"
+              ],
+              [
+                "iremos",
+                "vamos",
+                "vamos a ir"
+              ]
             ],
-            "why": "El consejo con yo que tú usa condicional."
+            "why": "«Si» + presente; decisión en futuro, presente o «ir a»."
           },
           {
-            "sentence": "A lo mejor esté ocupada ahora.",
+            "q": "Yo que ella, no ___ (salir) sola de noche por la playa.",
             "answers": [
-              "A lo mejor está ocupada ahora."
+              [
+                "saldría"
+              ]
             ],
-            "why": "La locución a lo mejor selecciona normalmente indicativo."
+            "why": "Consejo: condicional irregular de «salir»."
+          },
+          {
+            "q": "Si ___ (tener, tú) un minuto, ¿___ (poder) ayudarme con las cajas?",
+            "answers": [
+              [
+                "tienes"
+              ],
+              [
+                "podrías"
+              ]
+            ],
+            "why": "Condición real + petición cortés en condicional."
+          },
+          {
+            "q": "Si un turista ___ (tocar) una tortuga, el guía le ___ (explicar) por qué no debe hacerlo.",
+            "answers": [
+              [
+                "toca"
+              ],
+              [
+                "explica"
+              ]
+            ],
+            "why": "Regla que se repite: presente en las dos partes."
+          }
+        ]
+      },
+      {
+        "id": "b1-09-gramatica-por-para",
+        "type": "choice",
+        "title": "¿Por o para?",
+        "prompt": "Elige la preposición correcta.",
+        "items": [
+          {
+            "q": "Salimos ___ Tortuguero mañana muy temprano.",
+            "options": [
+              "por",
+              "para"
+            ],
+            "answer": 1,
+            "why": "Destino de un movimiento: «salir para»."
+          },
+          {
+            "q": "Cancelaron la excursión ___ el mal tiempo.",
+            "options": [
+              "para",
+              "por"
+            ],
+            "answer": 1,
+            "why": "Causa: «por el mal tiempo»."
+          },
+          {
+            "q": "Este regalo es ___ la familia que nos alojó.",
+            "options": [
+              "para",
+              "por"
+            ],
+            "answer": 0,
+            "why": "Destinatario: «para la familia»."
+          },
+          {
+            "q": "Te llamo ___ teléfono cuando llegue.",
+            "options": [
+              "para",
+              "por"
+            ],
+            "answer": 1,
+            "why": "Medio: «por teléfono»."
+          },
+          {
+            "q": "Tienes que entregar el informe ___ el día 15.",
+            "options": [
+              "por",
+              "para"
+            ],
+            "answer": 1,
+            "why": "Plazo: «para el día 15»."
+          },
+          {
+            "q": "Pasamos ___ un puente colgante muy largo.",
+            "options": [
+              "para",
+              "por"
+            ],
+            "answer": 1,
+            "why": "Recorrido: «pasar por»."
+          }
+        ]
+      },
+      {
+        "id": "b1-09-gramatica-errores",
+        "type": "error",
+        "title": "Corrige el error",
+        "prompt": "Cada frase tiene un error de las dos clases. Escríbela bien.",
+        "items": [
+          {
+            "sentence": "Muchas gracias para la cena de anoche.",
+            "answers": [
+              "Muchas gracias por la cena de anoche."
+            ],
+            "why": "Se agradece «por» algo: es la causa."
+          },
+          {
+            "sentence": "Compré este sombrero para diez dólares en el mercado.",
+            "answers": [
+              "Compré este sombrero por diez dólares en el mercado."
+            ],
+            "why": "Precio: «por»."
+          },
+          {
+            "sentence": "Si habrá plazas libres, iremos al volcán el domingo.",
+            "answers": [
+              "Si hay plazas libres, iremos al volcán el domingo."
+            ],
+            "why": "Detrás de «si» va el presente."
+          },
+          {
+            "sentence": "Llevamos repelente por que no nos piquen los mosquitos.",
+            "answers": [
+              "Llevamos repelente para que no nos piquen los mosquitos."
+            ],
+            "why": "Objetivo con otro sujeto: «para que» + subjuntivo."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para hablar de un voluntariado en la naturaleza. Algunas son muy de Costa Rica: te lo indicamos.",
     "groups": [
       {
-        "title": "Una entrevista, varias posibilidades · acciones y recursos",
+        "title": "El proyecto",
         "items": [
           {
-            "es": "un puesto vacante",
-            "note": "trabajo que todavía no está ocupado"
+            "es": "el voluntariado"
           },
           {
-            "es": "cumplir un requisito",
-            "note": "tener una condición solicitada"
+            "es": "el guardaparques"
           },
           {
-            "es": "un turno",
-            "note": "franja de trabajo"
+            "es": "la playa de anidación"
           },
           {
-            "es": "incorporarse",
-            "note": "empezar a trabajar con un equipo"
+            "es": "el desove"
+          },
+          {
+            "es": "el nido"
+          },
+          {
+            "es": "las crías"
+          },
+          {
+            "es": "el vivero",
+            "note": "Zona protegida donde se trasladan los huevos."
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "El viaje",
         "items": [
           {
-            "es": "un salario",
-            "note": "pago recibido por el trabajo"
+            "es": "la temporada de lluvias"
           },
           {
-            "es": "formación inicial",
-            "note": "aprendizaje al empezar"
+            "es": "la lancha"
           },
           {
-            "es": "una pista",
-            "note": "dato que orienta una explicación"
+            "es": "el muelle"
           },
           {
-            "es": "una suposición",
-            "note": "idea posible todavía no confirmada"
+            "es": "las botas de hule",
+            "note": "En Costa Rica, «hule» es la goma."
+          },
+          {
+            "es": "el repelente"
+          },
+          {
+            "es": "la linterna de luz roja"
+          }
+        ]
+      },
+      {
+        "title": "Expresiones útiles",
+        "items": [
+          {
+            "es": "¡Pura vida!",
+            "note": "Saludo y respuesta muy típicos de Costa Rica."
+          },
+          {
+            "es": "dejar huella"
+          },
+          {
+            "es": "la huella ecológica"
+          },
+          {
+            "es": "estar de turno"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-09-lexis",
+        "id": "b1-09-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «Una entrevista, varias posibilidades» con su significado en este contexto.",
+        "title": "Cada palabra con su definición",
+        "prompt": "Une cada palabra con su explicación.",
         "pairs": [
           {
-            "left": "un puesto vacante",
-            "right": "trabajo que todavía no está ocupado"
+            "left": "el desove",
+            "right": "el momento en que la tortuga pone los huevos"
           },
           {
-            "left": "cumplir un requisito",
-            "right": "tener una condición solicitada"
+            "left": "el vivero",
+            "right": "la zona protegida donde se guardan los huevos"
           },
           {
-            "left": "un turno",
-            "right": "franja de trabajo"
+            "left": "el guardaparques",
+            "right": "la persona que cuida y vigila un parque nacional"
           },
           {
-            "left": "incorporarse",
-            "right": "empezar a trabajar con un equipo"
+            "left": "las crías",
+            "right": "las tortugas recién nacidas"
           },
           {
-            "left": "un salario",
-            "right": "pago recibido por el trabajo"
+            "left": "el muelle",
+            "right": "el lugar donde suben y bajan los pasajeros de la lancha"
+          }
+        ],
+        "why": "Fíjate en si la palabra nombra una persona, un lugar, un animal o un momento."
+      },
+      {
+        "id": "b1-09-vocabulario-huecos",
+        "type": "gap",
+        "title": "La lista de Daniela",
+        "prompt": "Completa con una palabra del banco.",
+        "bank": [
+          "hule",
+          "repelente",
+          "linterna",
+          "lancha",
+          "turno"
+        ],
+        "items": [
+          {
+            "q": "En la playa hay mucho barro: traigan botas de ___.",
+            "answers": [
+              [
+                "hule"
+              ]
+            ],
+            "why": "Botas de goma."
           },
           {
-            "left": "formación inicial",
-            "right": "aprendizaje al empezar"
+            "q": "Por la noche solo se usa una ___ de luz roja.",
+            "answers": [
+              [
+                "linterna"
+              ]
+            ],
+            "why": "La luz blanca asusta a las tortugas."
           },
           {
-            "left": "una pista",
-            "right": "dato que orienta una explicación"
+            "q": "Para llegar al pueblo hay que tomar una ___ desde La Pavona.",
+            "answers": [
+              [
+                "lancha"
+              ]
+            ],
+            "why": "No hay carretera: se llega por el canal."
           },
           {
-            "left": "una suposición",
-            "right": "idea posible todavía no confirmada"
+            "q": "Si no quieres picaduras, ponte ___ cada tres horas.",
+            "answers": [
+              [
+                "repelente"
+              ]
+            ],
+            "why": "Protege de los mosquitos."
+          },
+          {
+            "q": "Esta noche estoy de ___ de diez a dos.",
+            "answers": [
+              [
+                "turno"
+              ]
+            ],
+            "why": "Trabajar en un horario asignado."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "Petición cortés y conjetura claramente marcada",
+    "focus": "«Por», «para» y «pa’»: preposiciones pequeñas en el habla rápida",
     "explanation": [
-      "Agrupa podría usted y deja clara la palabra que necesitas confirmar. En una suposición destaca quizá o supongo para que la cortesía no se confunda con falta de información.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "«Por» y «para» son palabras átonas: no llevan acento y se pegan a la palabra siguiente («porla mañana», «parael lunes»). Por eso es fácil no oírlas. Fíjate en la vocal: «por» tiene una sola sílaba con «o»; «para» tiene dos sílabas con «a».",
+      "En el habla informal de muchos países, también en Costa Rica, «para» se reduce a «pa’»: «pa’ la playa», «pa’ que veas». Es normal en una conversación entre amigos, pero no se escribe así en un texto formal. Al hablar tú, pronuncia «para» completo y marca la erre suave final de «por»."
     ],
     "examples": [
       {
-        "es": "¿Podría explicar cómo se organizan los turnos?"
+        "es": "Vamos pa’ la playa. = Vamos para la playa.",
+        "note": "Forma coloquial y forma estándar."
       },
       {
-        "es": "Me gustaría trabajar con atención al público."
-      },
-      {
-        "es": "Yo en tu lugar prepararía un ejemplo concreto."
+        "es": "Paso por la playa. / Voy para la playa.",
+        "note": "Una sílaba con «o» / dos sílabas con «a»."
       }
     ],
     "perceive": {
-      "id": "b1-09-perception",
+      "id": "b1-09-pronunciacion-por-para",
       "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "title": "¿Qué preposición oyes?",
+      "prompt": "Escucha cada frase y elige la preposición que oyes.",
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «Una entrevista, varias posibilidades»?",
+          "q": "¿Qué oyes antes de «el muelle»?",
           "options": [
-            "Se oye podrá, sin la sílaba rí",
-            "Se oye po-drí-a, con tres sílabas y la fuerza en drí"
+            "por",
+            "para"
           ],
           "answer": 1,
-          "audio": "¿Podría usted confirmar el turno?",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Dos sílabas con «a»: «para» (destino).",
+          "audio": "Salimos para el muelle a las seis.",
+          "voice": "es-CO-f"
         },
         {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «Una entrevista, varias posibilidades»?",
+          "q": "¿Y aquí?",
           "options": [
-            "Se oye supongo como marca de conjetura",
-            "Se oye lo he comprobado"
+            "por",
+            "para"
           ],
           "answer": 0,
-          "audio": "Estará en una reunión, supongo.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Una sílaba con «o»: «por» (recorrido).",
+          "audio": "Caminamos por el muelle hasta el pueblo.",
+          "voice": "es-CO-m"
+        },
+        {
+          "q": "¿Qué preposición dice, en su forma completa?",
+          "options": [
+            "para",
+            "por"
+          ],
+          "answer": 0,
+          "why": "«Pa’» es la forma coloquial de «para».",
+          "audio": "Vamos pa’ la playa, que ya empieza el desove.",
+          "voice": "es-MX-m"
+        },
+        {
+          "q": "¿Qué oyes antes de «la lluvia»?",
+          "options": [
+            "para",
+            "por"
+          ],
+          "answer": 1,
+          "why": "«Por»: causa.",
+          "audio": "Me quedé en el campamento por la lluvia.",
+          "voice": "es-ES-f"
         }
       ]
     },
     "produce": [
       {
-        "text": "¿Podría explicar cómo se organizan los turnos?",
-        "tip": "Agrupa podría usted y deja clara la palabra que necesitas confirmar. En una suposición destaca quizá o supongo para que la cortesía no se confunda con falta de información.",
-        "voice": "es-ES-f"
+        "text": "Lo hago por las tortugas y para mis hijos.",
+        "tip": "Contrasta «por» (una sílaba) y «para» (dos).",
+        "voice": "es-CO-f"
       },
       {
-        "text": "Me gustaría trabajar con atención al público.",
-        "tip": "Agrupa podría usted y deja clara la palabra que necesitas confirmar. En una suposición destaca quizá o supongo para que la cortesía no se confunda con falta de información.",
-        "voice": "es-ES-f"
+        "text": "Salimos para Limón por la Ruta 32.",
+        "tip": "Liga «porla» y «paraLimón» sin pausa.",
+        "voice": "es-MX-m"
       },
       {
-        "text": "Yo en tu lugar prepararía un ejemplo concreto.",
-        "tip": "Agrupa podría usted y deja clara la palabra que necesitas confirmar. En una suposición destaca quizá o supongo para que la cortesía no se confunda con falta de información.",
-        "voice": "es-ES-f"
+        "text": "Si no llueve, vamos por la playa; si no, por el bosque.",
+        "tip": "Haz una pausa breve después de «si no».",
+        "voice": "es-CO-m"
       }
-    ]
+    ],
+    "spelling": "La forma «pa’» es oral. En los textos escribe siempre «para», y recuerda que «si no» (condición) se escribe separado y «sino» (al contrario) junto."
   },
   "listening": {
-    "title": "Una entrevista, varias posibilidades · voces en conversación",
-    "context": "Un candidato explica experiencia y pregunta por las condiciones del puesto. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "La reunión de salida",
+    "context": "Es domingo por la tarde en un albergue de San José. Daniela, coordinadora del proyecto, reúne a los voluntarios antes de salir para Tortuguero. Habla con Martín, un voluntario argentino, y con Yuki, una voluntaria japonesa que vive en Madrid.",
     "speakers": [
       {
-        "id": "a",
-        "name": "Entrevistadora",
-        "voice": "es-ES-f"
+        "id": "dan",
+        "name": "Daniela",
+        "voice": "es-CO-f",
+        "role": "coordinadora del proyecto"
       },
       {
-        "id": "b",
-        "name": "Pablo",
-        "voice": "es-ES-m"
+        "id": "mar",
+        "name": "Martín",
+        "voice": "es-AR-m",
+        "role": "voluntario"
+      },
+      {
+        "id": "yuk",
+        "name": "Yuki",
+        "voice": "es-ES-f",
+        "role": "voluntaria"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Gracias por venir, Pablo. En tu solicitud dices que trabajaste en una biblioteca. ¿Podrías contar una situación en la que tuviste que resolver un problema con una persona que necesitaba ayuda?"
+        "speaker": "dan",
+        "text": "Bueno, gente, ¡pura vida! Mañana salimos para Tortuguero a las cinco y media. Vamos en buseta por la Ruta 32 hasta La Pavona, y allí tomamos la lancha."
       },
       {
-        "speaker": "b",
-        "text": "Claro. Una usuaria había reservado un libro para un curso y el ejemplar no aparecía. Mientras mi compañera revisaba el depósito, busqué otra edición. Le expliqué la diferencia y pudimos prestársela ese mismo día."
+        "speaker": "mar",
+        "text": "¿Y si llueve mucho? Leí que en esta época a veces cierran la carretera."
       },
       {
-        "speaker": "a",
-        "text": "Me interesa que explicaras las opciones. En este puesto atendemos preguntas parecidas, aunque también hay turnos de fin de semana. ¿Tendrías disponibilidad dos sábados al mes? La distribución se confirma con antelación."
+        "speaker": "dan",
+        "text": "Sí, por los derrumbes. Si la cierran, salimos por Siquirres, que es más largo pero más seguro. Si no, seguimos el plan normal. Lo decidimos a las cinco, cuando nos llame el conductor."
       },
       {
-        "speaker": "b",
-        "text": "En principio sí. Me gustaría saber con cuánto tiempo se publican los horarios y si hay formación durante las primeras semanas. No he utilizado su programa de reservas, pero aprendo con facilidad cuando puedo practicar."
+        "speaker": "yuk",
+        "text": "¿Hay que llevar algo especial para las patrullas de noche?"
       },
       {
-        "speaker": "a",
-        "text": "Los turnos se publican tres semanas antes y tendrás cinco jornadas con una compañera. La persona responsable de formación no ha llegado; estará atendiendo otra consulta. No quiero asegurártelo sin comprobarlo, así que te mandaré su contacto más tarde."
+        "speaker": "dan",
+        "text": "Las normas son claras: si están de turno en la playa, usan solo la linterna roja y no hacen fotos. Si ven una tortuga, se quedan detrás de ella y en silencio. Y yo llevaría una camiseta de manga larga, por los mosquitos."
       },
       {
-        "speaker": "b",
-        "text": "Perfecto. ¿Podría enviarme también un resumen de las funciones? Así puedo revisar si falta alguna información sobre mi experiencia. Agradezco que hayan explicado las condiciones; prefiero preguntar ahora que interpretar algo de forma incorrecta después."
+        "speaker": "mar",
+        "text": "Yo traje unas botas de montaña. ¿Sirven?"
+      },
+      {
+        "speaker": "dan",
+        "text": "Yo, en tu lugar, las cambiaría por unas de hule. En el pueblo las alquilan por tres mil colones la semana. Con barro, las de montaña no se secan nunca."
+      },
+      {
+        "speaker": "yuk",
+        "text": "Una última pregunta: el diario de campo, ¿para cuándo es?"
+      },
+      {
+        "speaker": "dan",
+        "text": "Para el último día. Es para la bióloga del parque, así que escríbanlo con datos claros. Gracias por venir, de verdad: sin ustedes, muchos nidos no sobrevivirían."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿De qué trata la reunión?",
         "exercise": {
-          "id": "b1-09-audio-0",
+          "id": "b1-09-escucha-global",
           "type": "choice",
-          "prompt": "Una entrevista, varias posibilidades: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Qué demuestra Pablo con su ejemplo?",
+              "q": "¿Para qué se reúnen?",
               "options": [
-                "Cómo ofreció una alternativa a una usuaria",
-                "Que conocía ya el programa nuevo"
+                "Para organizar el viaje y explicar las normas del proyecto.",
+                "Para despedirse al final del voluntariado.",
+                "Para elegir otro destino."
               ],
               "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Daniela explica el viaje del día siguiente, el plan B y las normas."
             },
             {
-              "q": "¿Qué relación une a los interlocutores?",
+              "q": "¿Cómo es el tono de Daniela?",
               "options": [
-                "Dos turistas comparando hoteles",
-                "Candidatura y entrevista laboral"
+                "Enfadado y autoritario.",
+                "Práctico, cercano y agradecido.",
+                "Inseguro: no sabe qué hacer."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Da instrucciones claras, aconseja y agradece la ayuda."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y anota los detalles.",
         "exercise": {
-          "id": "b1-09-audio-1",
+          "id": "b1-09-escucha-detalle",
           "type": "choice",
-          "prompt": "Una entrevista, varias posibilidades: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según la reunión.",
           "items": [
             {
-              "q": "¿Cuándo se publican los turnos?",
+              "q": "¿Qué harán si cierran la Ruta 32?",
               "options": [
-                "La misma mañana",
-                "Tres semanas antes"
+                "Esperarán un día en San José.",
+                "Irán por Siquirres.",
+                "Irán en avioneta."
               ],
               "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "«Si la cierran, salimos por Siquirres.»"
             },
             {
-              "q": "¿Cuántas jornadas de acompañamiento tendrá?",
+              "q": "¿Qué aconseja Daniela a Martín sobre las botas?",
               "options": [
-                "Cinco",
-                "Tres semanas enteras"
+                "Que las seque cada noche.",
+                "Que compre unas nuevas en San José.",
+                "Que las cambie por unas de hule."
+              ],
+              "answer": 2,
+              "why": "«Yo, en tu lugar, las cambiaría por unas de hule.»"
+            },
+            {
+              "q": "¿Para quién es el diario de campo?",
+              "options": [
+                "Para la bióloga del parque.",
+                "Para el conductor.",
+                "Para los turistas."
               ],
               "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Es para la bióloga del parque.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Fíjate en la gramática. Completa lo que dicen exactamente.",
         "exercise": {
-          "id": "b1-09-audio-2",
-          "type": "choice",
-          "prompt": "Una entrevista, varias posibilidades: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-09-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la palabra o forma que usan.",
           "items": [
             {
-              "q": "¿Qué significa «estará atendiendo»?",
-              "options": [
-                "Una conjetura sobre el presente",
-                "Un horario confirmado para mañana"
+              "q": "Sí, ___ los derrumbes.",
+              "answers": [
+                [
+                  "por"
+                ]
               ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Causa: «por»."
             },
             {
-              "q": "¿Qué comunica «prefiero preguntar ahora»?",
-              "options": [
-                "Rechazo de cualquier condición",
-                "Interés por evitar malentendidos posteriores"
+              "q": "Si la cierran, salimos por Siquirres. ___, seguimos el plan normal.",
+              "answers": [
+                [
+                  "Si no",
+                  "si no"
+                ]
               ],
-              "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Plan B con «si no»."
+            },
+            {
+              "q": "Y yo ___ una camiseta de manga larga.",
+              "answers": [
+                [
+                  "llevaría"
+                ]
+              ],
+              "why": "Consejo con «yo + condicional»."
+            },
+            {
+              "q": "En el pueblo las alquilan ___ tres mil colones la semana.",
+              "answers": [
+                [
+                  "por"
+                ]
+              ],
+              "why": "Precio: «por»."
             }
           ]
         }
@@ -446,179 +868,295 @@ export const b1w09: Module = {
     ]
   },
   "reading": {
-    "title": "Una entrevista, varias posibilidades · otra perspectiva",
-    "genre": "Artículo y experiencia de comunidad",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "Bienvenida al proyecto Arena Viva",
+    "genre": "Documento de bienvenida para voluntarios",
+    "frame": "Todos los voluntarios reciben este texto al llegar a la estación biológica de Tortuguero.",
     "text": [
-      "Al terminar una entrevista, Alicia estaba convencida de que no la contratarían. La conversación había durado menos de lo que esperaba y la responsable no había explicado cuándo tomarían la decisión. Mientras volvía a casa, recordó cada respuesta y empezó a imaginar errores. «A lo mejor necesitaban a alguien con más experiencia», pensó. Sin embargo, no tenía ningún dato que confirmara esa explicación.",
-      "Su hermano le propuso revisar la conversación separando hechos e hipótesis. Alicia había descrito un problema que resolvió en su empleo anterior y había preguntado por los turnos. La responsable había tomado notas y le había pedido disponibilidad para una segunda reunión. Esos eran hechos. Que pareciera seria o mirara el reloj admitía varias interpretaciones: quizá tenía otra cita o estaba siguiendo un horario ajustado. No permitía saber el resultado.",
-      "Alicia decidió escribir un mensaje breve para agradecer la entrevista y preguntar cuándo recibiría noticias. No quiso exigir una respuesta inmediata ni disculparse por errores imaginados. Dos días después recibió una invitación para conocer al equipo. Descubrió entonces que la responsable había tenido que salir antes por una reunión. La experiencia le enseñó a preparar ejemplos claros, preguntar con cortesía y evitar convertir una impresión en una certeza antes de tener información suficiente."
+      "Te damos la bienvenida a Arena Viva. Gracias por elegirnos para tus vacaciones: tu trabajo de estas semanas es muy importante para las tortugas verdes, que llegan a esta playa entre julio y octubre para desovar. Lee estas normas con atención, porque algunas son obligatorias y otras son solo consejos de quienes ya han pasado por aquí.",
+      "Lo obligatorio: si estás de turno, llegas a la caseta diez minutos antes y firmas la hoja de asistencia. Si encuentras un nido en una zona peligrosa, no lo tocas: avisas por radio al guardaparques, que decide si los huevos se trasladan al vivero. Si una tortuga está desovando, nadie se acerca a menos de tres metros. Las fotos con flash están prohibidas por razones evidentes.",
+      "Los consejos: nosotros dormiríamos la siesta los días de patrulla, porque las noches son largas. Tampoco gastaríamos mucho en el pueblo el primer día: hay cosas por la mitad de precio en el mercado del jueves. Y si te sobra tiempo, podrías ayudar en la escuela local, que siempre busca voluntarios para las clases de inglés.",
+      "Si tienes cualquier duda, pregunta. Y si un día estás cansado, recuerda para qué viniste."
+    ],
+    "glossary": [
+      {
+        "es": "la caseta"
+      },
+      {
+        "es": "la hoja de asistencia"
+      },
+      {
+        "es": "trasladar"
+      }
     ],
     "tasks": [
       {
-        "id": "b1-09-read-evidence",
+        "id": "b1-09-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «Una entrevista, varias posibilidades», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según el documento.",
         "items": [
           {
-            "q": "¿Qué dato contradice una conclusión negativa segura?",
+            "q": "¿Por qué llegan las tortugas a esta playa?",
             "options": [
-              "La responsable sonrió todo el tiempo",
-              "Le pidieron disponibilidad para otra reunión"
-            ],
-            "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-          },
-          {
-            "q": "¿Qué aprende Alicia?",
-            "options": [
-              "Evitar toda pregunta en entrevistas",
-              "Separar hechos de interpretaciones"
+              "Para desovar.",
+              "Por la comida de los turistas.",
+              "Para huir de los mosquitos."
             ],
             "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Llegan a esta playa entre julio y octubre para desovar.»"
+          },
+          {
+            "q": "¿Qué haces si encuentras un nido en una zona peligrosa?",
+            "options": [
+              "Lo trasladas tú al vivero.",
+              "Le haces una foto.",
+              "Avisas por radio al guardaparques."
+            ],
+            "answer": 2,
+            "why": "«No lo tocas: avisas por radio al guardaparques.»"
+          },
+          {
+            "q": "¿Por qué conviene esperar al jueves para comprar?",
+            "options": [
+              "Porque el pueblo cierra los otros días.",
+              "Porque en el mercado hay cosas por la mitad de precio.",
+              "Porque es el día libre de los voluntarios."
+            ],
+            "answer": 1,
+            "why": "«Hay cosas por la mitad de precio en el mercado del jueves.»"
           }
         ]
       },
       {
-        "id": "b1-09-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «Una entrevista, varias posibilidades».",
+        "id": "b1-09-lectura-norma-consejo",
+        "type": "classify",
+        "title": "¿Norma o consejo?",
+        "prompt": "Clasifica cada idea según el documento.",
+        "categories": [
+          "Es obligatorio",
+          "Es un consejo"
+        ],
         "items": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «Una entrevista, varias posibilidades», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "Al terminar una entrevista, Alicia estaba convencida de que no la contratarían.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "text": "Firmar la hoja de asistencia al llegar al turno",
+            "cat": 0
+          },
+          {
+            "text": "Dormir la siesta los días de patrulla",
+            "cat": 1
+          },
+          {
+            "text": "No acercarse a menos de tres metros de una tortuga",
+            "cat": 0
+          },
+          {
+            "text": "Ayudar en la escuela local",
+            "cat": 1
+          },
+          {
+            "text": "No hacer fotos con flash",
+            "cat": 0
+          },
+          {
+            "text": "No gastar mucho el primer día",
+            "cat": 1
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Fíjate en cómo el texto separa normas y consejos, y en «por» y «para».",
       "items": [
         {
-          "quote": "Al terminar una entrevista, Alicia estaba convencida de que no la contratarían.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "si estás de turno, llegas a la caseta diez minutos antes",
+          "note": "Regla: «si» + presente y presente."
         },
         {
-          "quote": "La experiencia le enseñó a preparar ejemplos claros, preguntar con cortesía y evitar convertir una impresión en una certeza antes de tener información suficiente.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "nosotros dormiríamos la siesta los días de patrulla",
+          "note": "Consejo: lo que «nosotros» haríamos, en condicional."
+        },
+        {
+          "quote": "Gracias por elegirnos para tus vacaciones",
+          "note": "«Por» con la causa del agradecimiento y «para» con el destino o el objetivo."
+        },
+        {
+          "quote": "recuerda para qué viniste",
+          "note": "Pregunta indirecta por el objetivo: «para qué» + indicativo."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Combinas las dos clases y recuperas lo de las semanas 7 y 8.",
     "exercises": [
       {
-        "id": "b1-09-order",
+        "id": "b1-09-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «Una entrevista, varias posibilidades» y léelos con grupos de sentido.",
+        "title": "Frases del viaje",
+        "prompt": "Ordena las palabras para formar frases completas.",
         "items": [
           {
             "words": [
-              "No",
-              "contesta:",
-              "estará",
+              "Si",
+              "no",
+              "hay",
+              "lancha,",
+              "dormimos",
               "en",
-              "una",
-              "entrevista."
+              "La",
+              "Pavona."
             ]
           },
           {
             "words": [
-              "Cuando",
-              "llamó,",
-              "serían",
-              "las",
-              "nueve."
+              "Yo",
+              "llevaría",
+              "dos",
+              "litros",
+              "de",
+              "agua",
+              "por",
+              "persona."
+            ]
+          },
+          {
+            "words": [
+              "Este",
+              "mapa",
+              "es",
+              "para",
+              "los",
+              "voluntarios",
+              "nuevos."
+            ]
+          },
+          {
+            "words": [
+              "Llegamos",
+              "tarde",
+              "por",
+              "un",
+              "árbol",
+              "caído",
+              "en",
+              "la",
+              "carretera."
             ]
           }
         ]
       },
       {
-        "id": "b1-09-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «Una entrevista, varias posibilidades».",
-        "categories": [
-          "Dato confirmado",
-          "Conjetura"
-        ],
+        "id": "b1-09-practica-retrieval",
+        "type": "context",
+        "title": "Recuperación: semanas 7 y 8",
+        "prompt": "Recuperación de semanas anteriores en el contexto del voluntariado. Elige la forma correcta.",
         "items": [
           {
-            "text": "La formación dura cinco jornadas.",
-            "cat": 0
+            "context": "Semana 7, relativas. Daniela necesita a alguien para la cocina, pero todavía no sabe quién.",
+            "q": "«Busco a alguien que ___ cocinar para veinte personas.»",
+            "options": [
+              "sabe",
+              "sabrá",
+              "sepa"
+            ],
+            "answer": 2,
+            "why": "Antecedente buscado: subjuntivo."
           },
           {
-            "text": "Los turnos se publican tres semanas antes.",
-            "cat": 0
+            "context": "Semana 7, finalidad. La bióloga explica por qué usan luz roja.",
+            "q": "«Usamos luz roja para que las tortugas no ___.»",
+            "options": [
+              "se asusten",
+              "se asustan",
+              "asustarse"
+            ],
+            "answer": 0,
+            "why": "Dos sujetos: «para que» + subjuntivo."
           },
           {
-            "text": "Estará atendiendo otra consulta.",
-            "cat": 1
+            "context": "Semana 8, concesión. Llovió toda la noche, pero el grupo salió a patrullar.",
+            "q": "¿Cómo lo cuentas?",
+            "options": [
+              "Aunque llovía toda la noche, pero salimos.",
+              "Aunque llovió toda la noche, salimos a patrullar.",
+              "Si llovió toda la noche, salimos a patrullar."
+            ],
+            "answer": 1,
+            "why": "«Aunque» + indicativo, sin «pero»."
           },
           {
-            "text": "A lo mejor han cambiado la reunión.",
-            "cat": 1
+            "context": "Semana 8, cortesía. Necesitas que el guardaparques repita una instrucción.",
+            "q": "¿Qué le dices?",
+            "options": [
+              "¿Repetirá eso?",
+              "Repita eso.",
+              "¿Podría repetirlo, por favor?"
+            ],
+            "answer": 2,
+            "why": "Petición cortés con el condicional de «poder»."
           }
         ]
       },
       {
-        "id": "b1-09-draft",
+        "id": "b1-09-practica-transformar",
+        "type": "transform",
+        "title": "De orden a consejo",
+        "prompt": "Convierte cada orden en un consejo con «yo + condicional».",
+        "items": [
+          {
+            "source": "Lleva una chaqueta para la lluvia.",
+            "instruction": "Empieza con «Yo…».",
+            "answers": [
+              "Yo llevaría una chaqueta para la lluvia."
+            ],
+            "why": "«Llevar» → «llevaría»."
+          },
+          {
+            "source": "No salgas sola por la noche.",
+            "instruction": "Empieza con «Yo no…».",
+            "answers": [
+              "Yo no saldría sola por la noche."
+            ],
+            "why": "«Salir» → «saldría», irregular."
+          },
+          {
+            "source": "Haz una copia del pasaporte.",
+            "instruction": "Empieza con «Yo…».",
+            "answers": [
+              "Yo haría una copia del pasaporte."
+            ],
+            "why": "«Hacer» → «haría», irregular."
+          }
+        ]
+      },
+      {
+        "id": "b1-09-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Mensajes prácticos",
+        "prompt": "Escribe cada mensaje en dos o tres frases.",
         "items": [
           {
-            "prompt": "Una entrevista, varias posibilidades: escribe una apertura de 35–45 palabras para la tarea «Escribe 150–180 palabras para agradecer una entrevista y pedir dos aclaraciones sobre el puesto. Resume una experiencia pertinente y evita presentar tus suposiciones como hechos.» sin copiar el modelo.",
-            "model": "Estimada señora Torres: gracias por la conversación de esta mañana.",
+            "prompt": "Escribe al grupo qué harán el sábado si llueve y si no llueve.",
+            "model": "Si el sábado llueve, vamos al museo del jade por la mañana y comemos en el centro. Si no, salimos para el volcán Irazú a las siete.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "Hay un plan A con «si» + presente y un plan B con «si no».",
+              "Usas «por» o «para» al menos una vez."
             ]
           },
           {
-            "prompt": "Una entrevista, varias posibilidades: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "También puedo enviar un ejemplo del procedimiento que seguíamos para registrar incidencias, sin incluir datos de usuarios. Quedo pendiente de sus noticias y agradezco el tiempo dedicado a explicar el puesto. Un saludo cordial.",
+            "prompt": "Un amigo va a viajar a Costa Rica en temporada de lluvias. Dale dos consejos sin darle órdenes.",
+            "model": "Yo llevaría ropa que se seque rápido y un buen impermeable. También haría las excursiones por la mañana, porque por la tarde suele llover.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-09-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «Una entrevista, varias posibilidades», recupera la semana 8: Compara un piso conocido con el que buscas: usa relativas de modo distinto, donde y lo que. Negocia fianza, visitas y silencio; lee una relativa con y sin información añadida.",
-            "model": "Buscamos un piso que tenga dos mesas. Conozco uno que tiene un patio pequeño.",
-            "checklist": [
-              "Puedo distinguir tengo un piso que tiene… de busco un piso que tenga….",
-              "Puedo usar el que, la que, quien, donde y lo que.",
-              "Puedo hablar de compartir piso, normas y problemas de convivencia.",
-              "Puedo marcar la diferencia oral entre relativas con y sin comas.",
-              "Puedo describir a la persona o el lugar ideal que busco.",
-              "Puedo identificar requisitos en anuncios de piso o de trabajo."
+              "Usas «yo + condicional» para aconsejar.",
+              "Explicas al menos una razón con «porque» o «por»."
             ]
           },
           {
-            "prompt": "Tras recuperar el caso anterior en «Una entrevista, varias posibilidades», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: ¿Podría explicar cómo se organizan los turnos?",
+            "prompt": "Escribe una nota para acompañar un regalo de despedida a la familia que te alojó.",
+            "model": "Este pequeño regalo es para ustedes, por todo lo que hicieron por mí estas dos semanas. Gracias por la paciencia con mi español y por las mejores comidas del viaje.",
             "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
-            ]
-          },
-          {
-            "prompt": "Aplicación diferida en «Una entrevista, varias posibilidades»: Redacta requisitos para una vivienda con algún, ningún y cualquier. Explica qué hay en cantidad suficiente y qué resulta demasiado caro; comprueba negación y concordancia.",
-            "model": "No conocemos ningún piso que reúna todo. Cualquier persona puede preguntar por los gastos.",
-            "checklist": [
-              "Puedo expresar requisitos con algún, ningún, cualquiera, bastante y demasiado, manteniendo la concordancia.",
-              "Explico cómo cambia el sentido si sustituyo una forma."
+              "Usas «para» con el destinatario.",
+              "Usas «por» con la causa del agradecimiento."
             ]
           }
         ]
@@ -626,180 +1164,242 @@ export const b1w09: Module = {
     ]
   },
   "writing": {
-    "task": "Escribe 150–180 palabras para agradecer una entrevista y pedir dos aclaraciones sobre el puesto. Resume una experiencia pertinente y evita presentar tus suposiciones como hechos.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Organizas una excursión de un día para un grupo (de clase, de trabajo o de amigos). Escribe un mensaje con el plan principal, qué harán si surge un problema, las normas que todos deben cumplir y tus consejos.",
+    "context": "El grupo es de unas doce personas. Algunas no se conocen y otras nunca han hecho una excursión de este tipo.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Decide el destino, el recorrido y la hora de salida, y piensa en dos posibles problemas.",
+      "Primer párrafo: el plan principal y el plan B, con «si» + presente y «si no».",
+      "Segundo párrafo: dos normas en presente o imperativo y dos consejos con «yo + condicional».",
+      "Revisa cada «por» y «para»: pregúntate si mira hacia atrás o por el camino (por) o hacia delante (para). Corrige también «sino» si debía ser «si no»."
     ],
     "useLanguage": [
-      "¿Podría explicar cómo se organizan los turnos?",
-      "Me gustaría trabajar con atención al público.",
-      "Yo en tu lugar prepararía un ejemplo concreto.",
-      "No contesta: estará en una entrevista."
+      "si + presente, presente / futuro",
+      "si no, …",
+      "yo + condicional",
+      "por (causa, recorrido, precio, medio)",
+      "para (destino, objetivo, destinatario, plazo)"
     ],
     "model": [
-      "Estimada señora Torres: gracias por la conversación de esta mañana. Me resultó útil conocer las tareas de atención y la organización del equipo.",
-      "Durante aquella experiencia aprendí que una explicación clara evita repetir gestiones y reduce la frustración de quien espera. Cuando no conocía una respuesta, la comprobaba con una compañera y después volvía a contactar con la persona interesada, sin dejar su consulta sin seguimiento.",
-      "Como comenté, en mi trabajo anterior resolvía dudas sobre reservas y buscaba alternativas cuando faltaba algún material. Me gustaría aportar esa experiencia y aprender a utilizar su sistema. Quisiera confirmar dos detalles antes de la próxima reunión: ¿podría indicarme cuándo empezaría la formación y con cuánto tiempo se publican los turnos? Entendí que habría algunos sábados de trabajo, pero prefiero comprobar la frecuencia. También puedo enviar un ejemplo del procedimiento que seguíamos para registrar incidencias, sin incluir datos de usuarios. Quedo pendiente de sus noticias y agradezco el tiempo dedicado a explicar el puesto. Un saludo cordial."
+      "¡Hola a todos! El sábado salimos para el volcán Poás a las siete en punto desde la Plaza de la Cultura. Iremos en buseta por la carretera de Alajuela y, si el cráter está despejado, haremos el sendero de la laguna. Si hay mucha neblina, no subimos al mirador: en ese caso, visitamos una finca de café que está a veinte minutos. Si no, comemos en el parque a la una y volvemos a San José por la tarde, antes de que oscurezca.",
+      "Dos normas: si alguien se separa del grupo, llama por teléfono a Carlos, y nadie sale del sendero por ningún motivo. La entrada cuesta quince dólares por persona; páguenla por adelantado para ahorrar tiempo. Yo llevaría ropa de abrigo, porque arriba hace frío, y no olvidaría el impermeable. Gracias por apuntarse, ¡nos vemos el sábado!"
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié."
+      "Hay un plan principal y un plan B con «si» + presente y «si no» o «en ese caso».",
+      "Las normas van en presente o imperativo; los consejos, con «yo + condicional».",
+      "Uso «por» al menos tres veces y «para» al menos dos, con usos distintos.",
+      "El mensaje tiene dos párrafos y un cierre amable."
     ],
     "words": [
-      150,
+      130,
       180
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas y escúchate: comprueba que no usas futuro detrás de «si» y que pronuncias «para» completo.",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Responde a cinco preguntas de entrevista: experiencia, logro, dificultad, disponibilidad y formación. Después pregunta dos condiciones; si el interlocutor evita una respuesta, aclara qué es dato y qué es suposición.",
+        "title": "Un imprevisto en el viaje",
+        "prompt": "Coordinas un viaje en grupo y el día de la salida hay un problema (una huelga de transporte, una tormenta, una persona enferma). Habla durante dos minutos: explica qué pasará en cada caso, qué normas se mantienen y qué consejos das al grupo.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración."
+          "Dos condiciones con plan A y plan B.",
+          "Una regla en presente y dos consejos con «yo + condicional».",
+          "Al menos cuatro usos distintos de «por» y «para»."
         ],
         "seconds": 120,
+        "model": "Bueno, tenemos un problema: hay huelga de autobuses por la subida de precios. Si mañana sigue la huelga, salimos para la costa en dos taxis, por la autopista. Si no, mantenemos el plan. La regla es la de siempre: si alguien se retrasa, avisa por el grupo. Y yo llevaría comida para todo el día, porque…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos?",
+          "¿He distinguido plan, regla y consejo?",
+          "¿He usado «por» y «para» con usos distintos?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «Una entrevista, varias posibilidades», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "Dos soluciones para un problema",
+        "prompt": "Un compañero de viaje propone otra solución al imprevisto. Responde a sus preguntas, aclara por qué prefieres tu plan y negocia una solución intermedia. Practica con alguien que haga de interlocutor o graba las dos voces.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Prepara dos preguntas con «¿y si…?».",
+          "Usa «yo, en tu lugar,…» y «si te parece, …»."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "Entiendo tu idea, pero yo no iría en coche por esa carretera con lluvia. ¿Y si salimos más tarde? Si te parece, esperamos hasta las diez; si para de llover, vamos por la costa, y si no, nos quedamos en la ciudad.",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He respondido a sus preguntas y aclarado mis razones?",
+          "¿He propuesto una solución intermedia?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Lleva tu plan de excursión y estas tarjetas a la próxima clase con tu profesor.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Responde a cinco preguntas de entrevista: experiencia, logro, dificultad, disponibilidad y formación. Después pregunta dos condiciones; si el interlocutor evita una respuesta, aclara qué es dato y qué es suposición."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «Una entrevista, varias posibilidades» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "move": "Plantea",
+        "task": "Plantea a tu profesor un problema real de esta semana y pídele dos soluciones: un plan A y un plan B.",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "¿Qué harías si…?",
+          "Si no funciona, …"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «Una entrevista, varias posibilidades» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Aconseja",
+        "task": "Dale a tu profesor tres consejos para visitar tu ciudad usando «yo + condicional».",
+        "phrases": [
+          "Yo iría por…",
+          "Yo no comería en…"
+        ]
+      },
+      {
+        "move": "Agradece",
+        "task": "Agradece algo concreto a tu profesor o a un compañero con «gracias por…» y explica para qué te ha servido.",
+        "phrases": [
+          "Gracias por…",
+          "Me ha servido para…"
+        ]
+      },
+      {
+        "move": "Contrasta",
+        "task": "Inventa con tu profesor parejas de frases que solo cambian por «por» o «para» y explicad la diferencia («lo hice por ti / lo hice para ti»).",
+        "phrases": [
+          "Lo hice por…",
+          "Lo hice para…"
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu plan de excursión revisado y la grabación del imprevisto."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Qué aprende Alicia? Relaciona tu respuesta con «Una entrevista, varias posibilidades».",
+        "q": "¿Qué frase es una regla del grupo?",
         "options": [
-          "Evitar toda pregunta en entrevistas",
-          "Separar hechos de interpretaciones"
+          "Si llegas tarde, esperas en recepción.",
+          "Si llegas tarde, te esperaremos.",
+          "Yo no llegaría tarde."
+        ],
+        "answer": 0,
+        "why": "Presente en las dos partes: regla."
+      },
+      {
+        "type": "choice",
+        "q": "«Me quedé en casa ___ el resfriado.»",
+        "options": [
+          "para",
+          "por"
         ],
         "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "why": "Causa: «por»."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «Una entrevista, varias posibilidades»: ¿qué formulación se oye?",
+        "q": "Escucha la recomendación. ¿Qué intención tiene?",
         "options": [
-          "A lo mejor han cambiado el horario.",
-          "Yo en tu lugar prepararía un ejemplo concreto."
+          "Da una orden.",
+          "Explica una norma.",
+          "Aconseja una ruta."
         ],
-        "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "A lo mejor han cambiado el horario.",
-        "voice": "es-ES-f"
+        "answer": 2,
+        "why": "«Yo, en tu lugar» + condicional y «por» + recorrido.",
+        "audio": "Yo, en tu lugar, iría por la costa, que es más bonito.",
+        "voice": "es-CO-m"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «Una entrevista, varias posibilidades». ¿___ usted repetir la última pregunta?",
+        "q": "Necesito estas fotocopias ___ mañana a primera hora.",
         "answers": [
           [
-            "Podría"
+            "para"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «Una entrevista, varias posibilidades». Texto de partida: Explique los turnos, por favor. Consigna: Convierte la orden en una pregunta cortés con podría usted. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "¿Podría usted explicar los turnos?",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Yo en tu lugar preguntarás por la formación.",
-        "answers": [
-          "Yo en tu lugar preguntaría por la formación."
         ],
-        "why": "El consejo hipotético se formula en condicional."
+        "why": "Plazo: «para»."
+      },
+      {
+        "type": "gap",
+        "q": "Si ___ (estar) cerrado el museo, vamos al mercado; ___, entramos a las diez.",
+        "answers": [
+          [
+            "está"
+          ],
+          [
+            "si no"
+          ]
+        ],
+        "why": "«Si» + presente y plan B con «si no»."
+      },
+      {
+        "type": "gap",
+        "q": "Yo no ___ (poner) tanta sal en la sopa.",
+        "answers": [
+          [
+            "pondría"
+          ]
+        ],
+        "why": "Consejo con «yo + condicional»; «poner» → «pondría»."
       },
       {
         "type": "order",
         "words": [
-          "A",
-          "lo",
-          "mejor",
-          "han",
-          "cambiado",
-          "el",
-          "horario."
-        ]
+          "Cambié",
+          "mi",
+          "asiento",
+          "por",
+          "uno",
+          "junto",
+          "a",
+          "la",
+          "ventana."
+        ],
+        "why": "Intercambio: «cambiar algo por algo»."
+      },
+      {
+        "type": "error",
+        "sentence": "Estas flores son por mi madre, que cumple años.",
+        "answers": [
+          "Estas flores son para mi madre, que cumple años."
+        ],
+        "why": "Destinatario: «para»."
+      },
+      {
+        "type": "error",
+        "sentence": "Si mañana hará sol, iremos a la playa.",
+        "answers": [
+          "Si mañana hace sol, iremos a la playa."
+        ],
+        "why": "Detrás de «si» va el presente."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «Una entrevista, varias posibilidades»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: convierte estas instrucciones en un plan con alternativa y un consejo. «Salida a las ocho. Lluvia: salida a las diez. Recomendación: botas.»",
+        "model": "Si llueve, salimos a las diez; si no, salimos a las ocho. Yo llevaría botas.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «Una entrevista, varias posibilidades»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "Usas «si» + presente para la condición.",
+          "La alternativa va con «si no», en dos palabras.",
+          "El consejo va con «yo + condicional»."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Presentar experiencia, pedir condiciones con cortesía y distinguir hipótesis de datos.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Distinguir una previsión, un plan acordado y una regla con «si» + presente.",
+      "Proponer un plan B con «si no» o «en ese caso».",
+      "Aconsejar sin dar órdenes con «yo + condicional».",
+      "Elegir «por» para causa, recorrido, medio y precio, y «para» para objetivo, destinatario, destino y plazo."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "«Si no» (condición) frente a «sino» (al contrario).",
+      "El condicional irregular de la semana 8: saldría, haría, pondría, tendría.",
+      "«Para que» + subjuntivo de la semana 7."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/condicionales-b1",
+      "label": "Clase: Condiciones y consejos en situaciones reales"
+    },
+    {
+      "path": "/gramatica/por-para-razones-objetivos",
+      "label": "Clase: Por y para: causa, propósito, plazo, destinatario"
+    }
+  ]
 };

@@ -2,7 +2,7 @@
   "sources": {
     "app/hablar-sin-cortar/content.mjs": "610e7b3f2a83833777d7547b4cd098cde68d34344ea448b10bada3130f3ca2d1",
     "app/noche-abierta/page.tsx": "832255c5de753f2c049176914eef7e708be3d2c77947c8adcc8825d02b834e37",
-    "app/autoestudio/curriculum/modules/a1/w01.ts": "c60d270ab335e650ab164f2f191ad0aa0c4c305170f376685e79a49d21ea296e",
+    "app/autoestudio/curriculum/modules/a1/w01.ts": "036149d984f0d9b0b276e0a0719a730653d05a3050a6f7ff38111bc9ba15d784",
     "app/phonetics/PhoneticsLesson.tsx": "e0fdc126d78adde227f20fcd6b3574bba4df79bc834927f7e27ec4d6c67ccddc",
     "app/phonetics/data.ts": "e65f85340ad6424fa1ad48c152eb8d3bd7469827a8a9157b0ea7bc1b71cf262a",
     "app/phonetics/audio-manifest.json": "2401e8132cdd9f994f8b3f2036e8655b4d4ac26d9dba305ac9fc8cf808e2f5f0"

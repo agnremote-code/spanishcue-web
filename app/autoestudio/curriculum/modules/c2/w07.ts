@@ -1,876 +1,920 @@
 import type { Module } from "../../types";
 
-/** Material original C2. Audio mediante síntesis; sin acreditación regional. */
+/**
+ * C2 · semana 7 · Autoestudio espejo de G215 (voseo, tuteo y ustedeo: cambios
+ * pragmáticos de registro). Repaso autónomo con los mensajes y llamadas
+ * ficticios del servicio de envíos de una cooperativa de Quito.
+ * Audio mediante síntesis; sin acreditación regional.
+ */
 export const c2w07: Module = {
-  "id": "c2-07",
-  "level": "c2",
-  "week": 7,
-  "kind": "core",
-  "title": "Descomprimir una idea",
-  "subtitle": "Sintaxis compleja, nominalización y jerarquía informativa",
-  "stop": {
-    "place": "Quito",
-    "country": "Ecuador"
+  id: "c2-07",
+  level: "c2",
+  week: 7,
+  kind: "core",
+  title: "Tú, vos, usted: el trato también dice cosas",
+  subtitle: "Repaso de las formas del voseo, del usted de distancia y de cariño, del plural «ustedes» y de lo que comunica un cambio de trato",
+  stop: {
+    place: "Quito",
+    country: "Ecuador",
   },
-  "minutes": 135,
-  "newObjectives": [
-    "c2.read.prosa-densa",
-    "c2.gram.sintaxis-compleja",
-    "c2.voc.conectores-cultos",
-    "c2.pron.lectura-densa",
-    "c2.wri.abstract"
+  minutes: 135,
+  newObjectives: [
+    "c2.gram.g215",
+    "c2.voc.w07-trato-cortesia",
+    "c2.pron.w07-agudas-voseo",
+    "c2.lis.w07-llamada-cambio-trato",
+    "c2.read.w07-guia-trato",
+    "c2.wri.w07-protocolo-mensajes",
+    "c2.spk.w07-negociar-trato",
+    "c2.fun.w07-proponer-rechazar-tuteo",
+    "c2.disc.w07-coherencia-trato",
   ],
-  "reviewObjectives": [
-    "c2.disc.cambio-registro",
-    "c2.voc.lenguaje-juridico",
-    "c2.gram.futuro-subjuntivo-juridico",
-    "c2.pron.registro-voz",
-    "c2.wri.traduccion-registro",
-    "c2.disc.recursos-retoricos",
-    "c2.voc.lexico-persuasivo",
-    "c2.pron.oratoria",
-    "c2.lis.discurso-politico",
-    "c2.spk.discurso-breve"
-  ],
-  "prerequisites": [
-    "c2-06"
-  ],
-  "goal": {
-    "canDo": "Puedo descomprimir prosa metodológica sin convertir correlación en causalidad ni cautela en inutilidad.",
-    "steps": [
-      "Lee las fuentes y distingue dato, inferencia y evaluación.",
-      "Escucha el intercambio antes de consultar su transcripción.",
-      "Aplica sintaxis compleja, nominalización y jerarquía informativa a una decisión comunicativa concreta.",
-      "Produce el dossier escrito, revisa una elección y defiéndela oralmente."
-    ]
-  },
-  "theory": {
-    "intro": "Los casos, documentos y voces de esta semana son originales y ficticios. La dificultad está en controlar relaciones de significado, no en acumular palabras raras.",
-    "parts": [
-      {
-        "heading": "Sintaxis compleja, nominalización y jerarquía informativa",
-        "body": [
-          "Una nominalización condensa un proceso, pero puede ocultar agente, tiempo o modalidad. La evaluación de la aplicación del programa exige reconstruir quién evalúa qué y con qué criterio. Las subordinadas encajadas necesitan referentes estables; al reformular, no conviertas una condición metodológica en conclusión. Con todo marca un límite argumentativo; no en vano aporta una justificación que el hablante considera pertinente. Un resumen académico conserva alcance y reservas, no solo resultados.",
-          "En este caso, El informe describe un aumento sin demostrar que el horario sea su causa exclusiva. La formulación elegida debe permitir al destinatario reconstruir la diferencia relevante y reconocer qué no se ha demostrado.",
-          "Empero marca contraste en un registro formal o literario y no resulta necesario cuando pero cumple la función. A la sazón sitúa un hecho en el tiempo del relato, no introduce una consecuencia. Así las cosas comenta la situación para avanzar una decisión. No en vano ofrece una justificación. Prueba: «A la sazón no había catálogo; así las cosas, cada consulta exigía una búsqueda manual». La precisión exige distinguir función y efecto de registro."
-        ],
-        "examples": [
-          {
-            "es": "La mejora observada no permite atribuir el cambio al programa."
-          },
-          {
-            "es": "Aunque la muestra sea pequeña, el contraste aporta información."
-          },
-          {
-            "es": "La evaluación de la aplicación exige identificar quién aplicó cada medida."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Los datos permiten de concluir que hubo más consultas.",
-            "right": "Los datos permiten concluir que hubo más consultas.",
-            "why": "Permitir seguido de infinitivo no lleva la preposición de."
-          }
-        ]
-      },
-      {
-        "heading": "Interpretar, atribuir y revisar en este caso",
-        "body": [
-          "Una cautela metodológica no equivale a una recomendación de retirar el servicio. Para defender esa lectura, identifica una formulación y el detalle que la sostiene. Prueba después una explicación rival y señala qué dato necesitarías para preferirla.",
-          "La versión para un público nuevo puede cambiar léxico, orden y longitud, pero debe conservar esta condición: Respondieron sesenta de las doscientas personas invitadas. Un cambio de registro que la elimina cambia también el contenido."
-        ],
-        "examples": [
-          {
-            "es": "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.",
-            "note": "Síntesis con alcance delimitado."
-          },
-          {
-            "es": "El nuevo horario explica por sí solo todo el aumento.",
-            "note": "Lectura excesiva que el dossier no respalda."
-          }
-        ],
-        "tip": "La mascota te invita a conservar una duda productiva: llévala a clase junto con una prueba, no con una impresión aislada."
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Relaciona forma y efecto comunicativo en el expediente; la explicación importa tanto como la respuesta.",
-    "exercises": [
-      {
-        "id": "c2-07-gramatica-alcance",
-        "type": "choice",
-        "prompt": "Selecciona la interpretación defendible de Descomprimir una idea.",
-        "items": [
-          {
-            "q": "En el caso de Descomprimir una idea, ¿qué formulación preserva el alcance?",
-            "options": [
-              "Aunque la muestra sea pequeña, el contraste aporta información.",
-              "La falta de causalidad probada demuestra que el programa no sirve."
-            ],
-            "answer": 0,
-            "why": "Una nominalización condensa un proceso, pero puede ocultar agente, tiempo o modalidad. La evaluación de la aplicación del programa exige reconstruir quién evalúa qué y con qué criterio. Las subordinadas encajadas necesitan referentes estables; al reformular, no conviertas una condición metodológica en conclusión. Con todo marca un límite argumentativo; no en vano aporta una justificación que el hablante considera pertinente. Un resumen académico conserva alcance y reservas, no solo resultados."
-          },
-          {
-            "q": "¿Qué cautela lingüística resulta necesaria al explicar Descomprimir una idea?",
-            "options": [
-              "Una cautela metodológica no equivale a una recomendación de retirar el servicio.",
-              "El nuevo horario explica por sí solo todo el aumento."
-            ],
-            "answer": 0,
-            "why": "Relaciona forma, contexto y efecto; evita ampliar una conclusión más allá de su base."
-          }
-        ]
-      },
-      {
-        "id": "c2-07-gramatica-forma",
-        "type": "gap",
-        "prompt": "Completa las relaciones gramaticales del caso Descomprimir una idea.",
-        "items": [
-          {
-            "q": "El aumento no demuestra ___ sí solo una causa.",
-            "answers": [
-              [
-                "por"
-              ]
-            ],
-            "why": "Una nominalización condensa un proceso, pero puede ocultar agente, tiempo o modalidad. La evaluación de la aplicación del programa exige reconstruir quién evalúa qué y con qué criterio. Las subordinadas encajadas necesitan referentes estables; al reformular, no conviertas una condición metodológica en conclusión. Con todo marca un límite argumentativo; no en vano aporta una justificación que el hablante considera pertinente. Un resumen académico conserva alcance y reservas, no solo resultados."
-          },
-          {
-            "q": "La evaluación depende ___ cómo se definan las consultas.",
-            "answers": [
-              [
-                "de"
-              ]
-            ],
-            "why": "Una nominalización condensa un proceso, pero puede ocultar agente, tiempo o modalidad. La evaluación de la aplicación del programa exige reconstruir quién evalúa qué y con qué criterio. Las subordinadas encajadas necesitan referentes estables; al reformular, no conviertas una condición metodológica en conclusión. Con todo marca un límite argumentativo; no en vano aporta una justificación que el hablante considera pertinente. Un resumen académico conserva alcance y reservas, no solo resultados."
-          },
-          {
-            "q": "Con ___, la muestra aporta información descriptiva.",
-            "answers": [
-              [
-                "todo"
-              ]
-            ],
-            "why": "Una nominalización condensa un proceso, pero puede ocultar agente, tiempo o modalidad. La evaluación de la aplicación del programa exige reconstruir quién evalúa qué y con qué criterio. Las subordinadas encajadas necesitan referentes estables; al reformular, no conviertas una condición metodológica en conclusión. Con todo marca un límite argumentativo; no en vano aporta una justificación que el hablante considera pertinente. Un resumen académico conserva alcance y reservas, no solo resultados."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Usa estas unidades para describir diferencias que el caso exige. La definición orienta el uso; contrástala con la frase completa.",
-    "groups": [
-      {
-        "title": "Precisión para Descomprimir una idea",
-        "items": [
-          {
-            "es": "atribución causal",
-            "note": "explicación de un efecto por una causa"
-          },
-          {
-            "es": "sesgo de selección",
-            "note": "diferencia producida por cómo se elige la muestra"
-          },
-          {
-            "es": "correlación",
-            "note": "variación conjunta sin causalidad demostrada"
-          },
-          {
-            "es": "alcance explicativo",
-            "note": "lo que una conclusión permite explicar"
-          },
-          {
-            "es": "variable de confusión",
-            "note": "factor alternativo que altera la interpretación"
-          },
-          {
-            "es": "robustez",
-            "note": "estabilidad ante cambios razonables del análisis"
-          },
-          {
-            "es": "no en vano",
-            "note": "justificación de lo recién afirmado"
-          },
-          {
-            "es": "con todo",
-            "note": "reserva que limita la conclusión anterior"
-          }
-        ]
-      }
+  reviewObjectives: ["c2.gram.g213","c2.gram.g214","c2.voc.w06-revision-textos","c2.pron.w06-pausa-desambigua","c2.lis.w06-reunion-biblioteca","c2.read.w06-columna-boletin","c2.wri.w06-informe-revision","c2.spk.w06-defender-criterio","c2.fun.w06-justificar-correccion","c2.disc.w06-voz-ajena-voz-propia"],
+  prerequisites: ["c2-06"],
+  goal: {
+    canDo: "Puedo reconocer y usar con coherencia las formas del voseo, elegir entre tú, vos, usted, ustedes y vosotros según la zona y la relación, e interpretar qué comunica un cambio de trato dentro de una conversación.",
+    steps: [
+      "Repasa en la teoría las formas del voseo rioplatense, el mapa de los sistemas de trato y los valores del usted.",
+      "Practica adaptando mensajes de un servicio de envíos para clientes de Ecuador, Argentina y España.",
+      "Escucha la videollamada sobre una llamada en la que un cliente cambia de trato y lee la guía interna de la cooperativa.",
+      "Redacta un protocolo de mensajes, revísalo con la lista de control y negocia el trato en voz alta.",
     ],
-    "exercises": [
-      {
-        "id": "c2-07-lexico",
-        "type": "match",
-        "prompt": "Relaciona cada unidad con la distinción que aporta al expediente de Descomprimir una idea.",
-        "pairs": [
-          {
-            "left": "atribución causal",
-            "right": "explicación de un efecto por una causa"
-          },
-          {
-            "left": "sesgo de selección",
-            "right": "diferencia producida por cómo se elige la muestra"
-          },
-          {
-            "left": "correlación",
-            "right": "variación conjunta sin causalidad demostrada"
-          },
-          {
-            "left": "alcance explicativo",
-            "right": "lo que una conclusión permite explicar"
-          },
-          {
-            "left": "variable de confusión",
-            "right": "factor alternativo que altera la interpretación"
-          },
-          {
-            "left": "robustez",
-            "right": "estabilidad ante cambios razonables del análisis"
-          },
-          {
-            "left": "no en vano",
-            "right": "justificación de lo recién afirmado"
-          },
-          {
-            "left": "con todo",
-            "right": "reserva que limita la conclusión anterior"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Lectura oral de una subordinación densa",
-    "explanation": [
-      "Localiza el verbo principal antes de leer. Reduce la velocidad en un inciso técnico y recupera después la curva principal; no acumules pausas que separen un nombre de su complemento.",
-      "El audio utiliza síntesis disponible en el navegador: no certifica acento regional, ironía natural ni calidad de pronunciación. Escucha el contenido, ensaya contrastes y comprueba el efecto con una persona. El objetivo es inteligibilidad y control expresivo, no eliminar tu acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste estos sistemas con tu profesor. Aquí los repasas con otra situación: el servicio de envíos de dinero de una cooperativa de Quito, que escribe a familias en Ecuador, a migrantes en Argentina y en España, y atiende llamadas de todos ellos. Las instrucciones de este módulo usan «tú»; el voseo aparece como variedad que hay que conocer y respetar.",
+    parts: [
       {
-        "es": "Aumentaron las consultas, aunque no sabemos qué cambio explica cuánto."
-      },
-      {
-        "es": "Aumentaron las consultas porque el horario lo explica todo."
-      }
-    ],
-    "perceive": {
-      "id": "c2-07-percepcion",
-      "type": "listen",
-      "prompt": "Escucha el contraste antes de leer las opciones en «Descomprimir una idea».",
-      "items": [
-        {
-          "q": "Escucha la primera formulación sobre Descomprimir una idea. ¿Qué contenido permite recuperar?",
-          "options": [
-            "Aumentaron las consultas porque el horario lo explica todo.",
-            "Aumentaron las consultas, aunque no sabemos qué cambio explica cuánto."
+        heading: "El voseo es un sistema con sus propias formas",
+        body: [
+          "En el Río de la Plata (Argentina y Uruguay), en Paraguay y en gran parte de Centroamérica, «vos» es la forma de confianza de la norma culta, no un descuido. Tiene formas verbales propias en el presente de indicativo y en el imperativo, casi siempre agudas: vos tenés, sos, podés, venís, hablás; tené, vení, decí, poné, hablá. Para «ir», el imperativo habitual es «andá».",
+          "En el pretérito, la forma normativa es la misma que la de tú: vos dijiste, vos llegaste. «Dijistes», con -s final, es una forma oral no normativa. Los pronombres y posesivos son los de tú: «te», «tu», «tuyo»; tras preposición, «con vos», «para vos». Nunca «os» ni «vuestro». En el imperativo negativo y en el subjuntivo lo más frecuente es usar las formas de tú (no te preocupes, que vengas); las formas agudas (no te preocupés) también se documentan.",
+        ],
+        table: {
+          caption: "Presente de «tener» con el voseo en fila propia",
+          head: ["Persona", "Presente", "Imperativo"],
+          rows: [
+            ["yo", "tengo", "—"],
+            ["tú", "tienes", "ten"],
+            ["vos", "tenés", "tené"],
+            ["él / ella / usted", "tiene", "tenga (usted)"],
+            ["nosotros / nosotras", "tenemos", "tengamos"],
+            ["vosotros / vosotras", "tenéis", "tened"],
+            ["ellos / ellas / ustedes", "tienen", "tengan (ustedes)"],
           ],
-          "answer": 1,
-          "why": "La respuesta depende de las palabras y de su agrupación; no atribuyas a la síntesis una intención o variedad verificada.",
-          "audio": "Aumentaron las consultas, aunque no sabemos qué cambio explica cuánto.",
-          "voice": "es-ES-f"
         },
-        {
-          "q": "Escucha ahora el contraste de Descomprimir una idea. ¿Qué formulación aparece?",
-          "options": [
-            "Aumentaron las consultas porque el horario lo explica todo.",
-            "Aumentaron las consultas, aunque no sabemos qué cambio explica cuánto."
+        tip: "Si escribes en voseo, revisa la frase entera: verbo, pronombre átono, posesivo y término de preposición tienen que pertenecer al mismo sistema.",
+      },
+      {
+        heading: "Dónde se usa cada sistema y qué plural lleva",
+        body: [
+          "El tuteo es el sistema de confianza más extendido. Con él conviven otras opciones: el voseo es general en el Río de la Plata, Paraguay y gran parte de Centroamérica, y alterna con el tuteo en zonas de Colombia, Venezuela, Ecuador, Bolivia y Chile. En Chile existe además un voseo verbal coloquial con el pronombre «tú» (tú sabís, tú querís), que no se usa en textos formales.",
+          "Para el plural, la frontera es otra: en toda América y en Canarias, «ustedes» es el único plural, tanto de confianza como de respeto. En la mayor parte de España, «vosotros» es el plural de confianza y «ustedes» el de respeto. Por eso «ustedes» con «vuestro» es incoherente en un texto americano: el posesivo es «su» o «de ustedes».",
+          "Para un público internacional, la opción menos marcada es «tú» en singular y «ustedes» en plural. No es la única correcta, pero se entiende en todas partes sin sonar local.",
+        ],
+        examples: [
+          { es: "Rosario: «¿Vos ya recibiste el código? Avisame cuando lo tengas».", note: "Voseo rioplatense: «recibiste» (no «recibistes») y «avisame», aguda con pronombre y sin tilde." },
+          { es: "Madrid: «¿Habéis recibido el código? Avisadnos cuando lo tengáis».", note: "Plural de confianza peninsular." },
+          { es: "Quito: «¿Ya recibieron el código? Avísennos cuando lo tengan».", note: "«Ustedes» como único plural, también entre familiares." },
+          { es: "Aplicación internacional: «Recibiste un código. Si son varias personas, avísennos cuando lo tengan».", note: "Opción neutra: tú + ustedes." },
+        ],
+      },
+      {
+        heading: "El usted no siempre es distancia",
+        body: [
+          "El valor más conocido de «usted» es el de respeto o distancia: con desconocidos, superiores, clientes o personas mayores. Pero en algunas zonas, como partes de Colombia y Costa Rica, «usted» también es el trato de la intimidad: entre hermanos, de madre a hijo o en la pareja. En esas comunidades, «usted» puede sonar cariñoso y «tú» puede sonar más formal o ajeno.",
+          "Por eso un mismo «usted» no se interpreta igual en todas partes. Antes de deducir que alguien es frío o distante, pregúntate cuál es su trato habitual. En partes de Colombia también se oye «sumercé», un tratamiento tradicional que combina respeto y afecto.",
+        ],
+        examples: [
+          { es: "Madre a su hijo, en una zona de usted afectivo: «Mijo, ¿usted ya comió?».", note: "No es frialdad: es el trato familiar de esa comunidad." },
+          { es: "Agente a un cliente desconocido en Quito: «Buenos días, ¿en qué puedo ayudarle?».", note: "Usted de respeto, el esperado en atención al cliente." },
+        ],
+      },
+      {
+        heading: "Cambiar de trato también comunica",
+        body: [
+          "El trato no es fijo dentro de una conversación. Pasar de usted a tú o a vos suele señalar acercamiento: «¿Nos tuteamos?», «Tratame de vos, por favor». Volver al usted después de haber tuteado suele indicar enfado, reproche, ironía o la necesidad de marcar distancia delante de otras personas. Lo que comunica el cambio solo se interpreta comparándolo con el trato habitual de esa persona.",
+          "Proponer el tuteo o el voseo es un acto de cortesía que conviene hacer de forma explícita, y rechazarlo también: «Si no le importa, prefiero seguir tratándola de usted; es la costumbre de la cooperativa». En un texto o en una escena, una vez elegido el trato, hay que mantenerlo coherente hasta que haya un motivo para cambiarlo.",
+        ],
+        table: {
+          caption: "Cambios de trato y su lectura habitual",
+          head: ["Cambio", "Lectura frecuente", "Ejemplo"],
+          rows: [
+            ["usted → trato de confianza", "acercamiento, confianza ganada", "—Ya que somos vecinos, ¿nos tuteamos?"],
+            ["trato de confianza → usted", "enfado, reproche o ironía", "—Mire, señorita, usted me prometió el envío para el lunes."],
+            ["confianza → usted ante otros", "distancia profesional en público", "—Licenciada, ¿me firma usted el informe? (a una amiga, en una reunión)"],
+            ["usted → usted", "ningún cambio: es el trato habitual", "—Mamá, ¿usted cómo amaneció? (zona de usted afectivo)"],
           ],
-          "answer": 0,
-          "why": "Compara después tus dos lecturas con una persona: una pausa puede favorecer una lectura sin demostrarla.",
-          "audio": "Aumentaron las consultas porque el horario lo explica todo.",
-          "voice": "es-ES-m"
-        }
-      ]
+        },
+        mistakes: [
+          {
+            wrong: "Vos sabes que podés llamarme.",
+            right: "Vos sabés que podés llamarme.",
+            why: "En el voseo rioplatense el presente es agudo: «sabés», igual que «podés».",
+          },
+          {
+            wrong: "Señores clientes: os recordamos que vuestro envío está listo. (Mensaje para Ecuador)",
+            right: "Señores clientes: les recordamos que su envío está listo.",
+            why: "En América el plural es «ustedes», con «les» y «su».",
+          },
+          {
+            wrong: "Vos llegastes tarde y no te esperé.",
+            right: "Vos llegaste tarde y no te esperé.",
+            why: "La forma normativa del pretérito con vos es la misma que con tú; «llegastes» es oral y no normativa.",
+          },
+          {
+            wrong: "Interpretación: «El cliente dijo “usted” a la agente; estaba enfadado».",
+            right: "Interpretación: «El cliente siempre usa “usted”; su trato no indica enfado».",
+            why: "Un usted solo comunica algo si rompe el trato habitual de esa persona.",
+          },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero identifica el sistema, después comprueba la coherencia y al final interpreta lo que comunica el cambio.",
+    exercises: [
+      {
+        id: "c2-07-gramatica-sistema",
+        type: "classify",
+        prompt: "Clasifica cada mensaje según el sistema de trato que usa.",
+        categories: ["Tuteo", "Voseo", "Usted o ustedes", "Vosotros"],
+        items: [
+          { text: "Pasá por la oficina cuando puedas y traé la cédula.", cat: 1, why: "«Pasá», «traé»: imperativos agudos de vos." },
+          { text: "¿Ya revisaste tu correo? Te mandamos el comprobante.", cat: 0, why: "«Revisaste», «tu», «te»: compatible con tú." },
+          { text: "Acérquese a ventanilla con su documento, por favor.", cat: 2, why: "«Acérquese», «su»: usted." },
+          { text: "Si queréis cambiar la fecha, escribidnos antes del jueves.", cat: 3, why: "«Queréis», «escribidnos»: vosotros peninsular." },
+          { text: "¿Vos tenés el número de giro a mano?", cat: 1, why: "«Vos tenés»." },
+          { text: "Recuerden traer sus documentos el lunes.", cat: 2, why: "«Recuerden», «sus»: ustedes." },
+          { text: "Si quieres, te llamo mañana y lo vemos juntos.", cat: 0, why: "«Quieres»: presente de tú." },
+          { text: "Os esperamos en la sucursal de Lavapiés.", cat: 3, why: "«Os»: pronombre de vosotros." },
+        ],
+      },
+      {
+        id: "c2-07-gramatica-formas",
+        type: "gap",
+        prompt: "Completa los mensajes de la sucursal de Buenos Aires con la forma de vos. Entre corchetes tienes el infinitivo.",
+        items: [
+          { q: "Si ya ___ el código, ingresalo en la aplicación. [tener]", answers: [["tenés"]], why: "Presente de vos: agudo, con tilde." },
+          { q: "___ tranquilo: el dinero llega en dos horas. [quedarse, imperativo]", answers: [["Quedate", "quedate"]], why: "Imperativo de vos con pronombre: «quedate», llana sin tilde." },
+          { q: "¿___ vos quien hizo el envío del martes? [ser]", answers: [["Sos", "sos"]], why: "«Ser» con vos: «sos»." },
+          { q: "Ayer vos ___ la transferencia dos veces, por eso se bloqueó. [hacer]", answers: [["hiciste"]], why: "Pretérito normativo con vos: igual que con tú, sin -s final." },
+          { q: "Si no ___ venir, mandá a alguien con autorización. [poder]", answers: [["podés"]], why: "Presente agudo: «podés»." },
+          { q: "El comprobante es para ___, guardalo bien. [vos, tras preposición]", answers: [["vos"]], why: "Tras preposición se usa «vos», no «ti»." },
+        ],
+      },
+      {
+        id: "c2-07-gramatica-coherencia",
+        type: "error",
+        prompt: "Cada mensaje mezcla dos sistemas. Corrígelo para que sea coherente con el sistema indicado.",
+        items: [
+          {
+            sentence: "(Voseo) Vos podés retirar el dinero, pero tienes que traer tu cédula.",
+            answers: ["Vos podés retirar el dinero, pero tenés que traer tu cédula."],
+            why: "Con vos, el presente es agudo en todos los verbos: «tenés». El posesivo «tu» sí es correcto.",
+          },
+          {
+            sentence: "(Ustedes, Ecuador) Estimados clientes, vuestro envío ya está disponible.",
+            answers: ["Estimados clientes, su envío ya está disponible.", "Estimados clientes, el envío de ustedes ya está disponible."],
+            why: "En América «ustedes» lleva «su» o «de ustedes», no «vuestro».",
+          },
+          {
+            sentence: "(Voseo) Si querés, el lunes vamos contigo a la sucursal.",
+            answers: ["Si querés, el lunes vamos con vos a la sucursal."],
+            why: "Tras preposición, el voseo usa «con vos», no «contigo».",
+          },
+          {
+            sentence: "(Tú) Si tú quieres, mañana te llamo, pero avisame antes.",
+            answers: ["Si tú quieres, mañana te llamo, pero avísame antes."],
+            why: "«Avisame» es imperativo de vos; con tú es «avísame».",
+          },
+        ],
+      },
+      {
+        id: "c2-07-gramatica-cambio",
+        type: "context",
+        prompt: "Interpreta el cambio de trato en cada situación.",
+        items: [
+          {
+            context: "Llamada grabada. La clienta, que lleva diez minutos tuteando a la agente («mira, Paola, tú me dijiste…»), dice de pronto: «Mire, señorita, usted me aseguró que el giro llegaba hoy».",
+            q: "¿Qué comunica el paso a «usted»?",
+            options: [
+              "Que la clienta se ha calmado.",
+              "Que la clienta ha olvidado el nombre de la agente.",
+              "Enfado y reproche: marca distancia con la agente.",
+            ],
+            answer: 2,
+            why: "Volver al usted tras tutear rompe el trato habitual y suele expresar enfado.",
+          },
+          {
+            context: "Un cliente de San José (Costa Rica), que trata de usted a todo el mundo, incluida su madre, dice a la agente: «Usted siempre me atiende bien, muchas gracias».",
+            q: "¿Cómo interpretas el «usted»?",
+            options: [
+              "Como su trato habitual, sin frialdad ni enfado.",
+              "Como una señal de enfado.",
+              "Como un error de concordancia.",
+            ],
+            answer: 0,
+            why: "En su comunidad el usted también es afectivo: no hay cambio que interpretar.",
+          },
+          {
+            context: "Dos compañeras de la cooperativa se tutean siempre. En una reunión con el gerente, una dice a la otra: «Licenciada Andrade, ¿podría usted presentar las cifras?».",
+            q: "¿Qué comunica el cambio?",
+            options: [
+              "Que están enfadadas.",
+              "Distancia profesional ante un tercero, no un conflicto.",
+              "Que acaban de conocerse.",
+            ],
+            answer: 1,
+            why: "El usted ante otros puede marcar formalidad pública sin implicar tensión.",
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico para hablar del trato, de la cortesía y de cómo se negocian las relaciones al hablar.",
+    groups: [
+      {
+        title: "Tratamientos",
+        items: [
+          { es: "tratar de usted / de tú / de vos", note: "dirigirse a alguien con ese pronombre y sus formas" },
+          { es: "tutear / vosear / ustedear", note: "usar habitualmente tú, vos o usted con alguien" },
+          { es: "el trato de confianza", note: "el que se usa con personas cercanas" },
+          { es: "el usted afectivo", note: "usted usado con cariño entre familiares o amigos en algunas zonas" },
+          { es: "sumercé", note: "tratamiento tradicional de respeto y afecto en partes de Colombia" },
+          { es: "romper el trato", note: "cambiar de pronombre de forma inesperada" },
+        ],
+      },
+      {
+        title: "Negociar la relación",
+        items: [
+          { es: "¿Nos tuteamos?", note: "propuesta explícita de pasar a tú" },
+          { es: "tratame de vos", note: "invitación al voseo en zonas voseantes" },
+          { es: "marcar distancia", note: "mostrar con el lenguaje que la relación es menos cercana" },
+          { es: "tomarse confianzas", note: "tratar a alguien con más cercanía de la que corresponde" },
+          { es: "declinar con cortesía", note: "rechazar una propuesta sin ofender" },
+          { es: "ser de trato fácil", note: "ser una persona cercana y accesible" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c2-07-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su significado.",
+        pairs: [
+          { left: "el usted afectivo", right: "usted usado con cariño entre familiares o amigos en algunas zonas" },
+          { left: "romper el trato", right: "cambiar de pronombre de forma inesperada" },
+          { left: "marcar distancia", right: "mostrar con el lenguaje que la relación es menos cercana" },
+          { left: "tomarse confianzas", right: "tratar a alguien con más cercanía de la que corresponde" },
+          { left: "declinar con cortesía", right: "rechazar una propuesta sin ofender" },
+          { left: "sumercé", right: "tratamiento tradicional de respeto y afecto en partes de Colombia" },
+        ],
+      },
+      {
+        id: "c2-07-lexico-uso",
+        type: "gap",
+        prompt: "Completa con la expresión adecuada del vocabulario.",
+        bank: ["nos tuteamos", "marcar distancia", "se tomó confianzas", "trato de confianza"],
+        items: [
+          { q: "Después de tres años trabajando juntos, el gerente me dijo: «Oiga, ¿y si ___?».", answers: [["nos tuteamos"]] },
+          { q: "La clienta volvió al usted para ___ cuando el agente le habló con demasiada familiaridad.", answers: [["marcar distancia"]] },
+          { q: "Al nuevo agente lo reprendieron porque ___ con una clienta mayor y la llamó «mi reina».", answers: [["se tomó confianzas"]] },
+          { q: "Con mis primos de Rosario el ___ es el vos; con mis tíos de Quito, muchas veces el usted.", answers: [["trato de confianza"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "Las formas agudas del voseo y el acento con pronombres",
+    explanation: [
+      "Casi todas las formas propias del voseo son agudas: te-NÉS, po-DÉS, ve-NÍS, ha-BLÁS; te-NÉ, ve-NÍ, de-CÍ. Por eso llevan tilde cuando terminan en vocal o en -s. El oído las distingue de las de tú por la posición del acento: TIE-nes frente a te-NÉS, VEN frente a ve-NÍ.",
+      "Cuando el imperativo de vos lleva un pronombre detrás, el acento no se mueve, pero la palabra pasa a ser llana y pierde la tilde: decí → de-CI-me, contá → con-TA-me, avisá → a-vi-SA-me. Con tú, el acento recae en otra sílaba y la tilde aparece: DI-me, CUÉN-ta-me, a-VÍ-sa-me.",
+      "El audio utiliza la síntesis disponible en el navegador: no certifica un acento regional ni evalúa tu pronunciación. Úsalo para percibir el contraste de acento, no como modelo de una variedad.",
+    ],
+    table: {
+      caption: "Mismo verbo, distinto acento",
+      head: ["Tú", "Vos"],
+      rows: [
+        ["tienes (TIE-nes)", "tenés (te-NÉS)"],
+        ["cuéntame (CUÉN-ta-me)", "contame (con-TA-me)"],
+        ["avísame (a-VÍ-sa-me)", "avisame (a-vi-SA-me)"],
+        ["siéntate (SIÉN-ta-te)", "sentate (sen-TA-te)"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Aumentaron las consultas, aunque no sabemos qué cambio explica cuánto.",
-        "tip": "Marca grupos fónicos y explica qué interpretación favoreces.",
-        "voice": "es-ES-f"
-      },
-      {
-        "text": "Aumentaron las consultas porque el horario lo explica todo.",
-        "tip": "Cambia el foco sin cambiar las palabras; pide una interpretación a tu interlocutor.",
-        "voice": "es-ES-m"
-      },
-      {
-        "text": "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.",
-        "tip": "Lee a velocidad cómoda, conserva la reserva y compara tu grabación local con tu intención.",
-        "voice": "es-ES-f"
-      }
-    ]
-  },
-  "listening": {
-    "title": "Mesa de trabajo: Descomprimir una idea",
-    "context": "Dos participantes preparan una intervención sobre el caso. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Eva",
-        "voice": "es-ES-f",
-        "role": "Primera perspectiva"
-      },
-      {
-        "id": "b",
-        "name": "Andrés",
-        "voice": "es-ES-m",
-        "role": "Contraste y reformulación"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "En el borrador del resumen puse que el nuevo horario había duplicado las consultas. Después vi que el informe hablaba del total y que incluía accesos digitales. Tendré que cambiar la frase. No basta añadir probablemente, porque el problema no es solo el grado de seguridad: también es qué fenómeno estoy atribuyendo a qué intervención."
-      },
-      {
-        "speaker": "b",
-        "text": "Exacto. El catálogo nuevo y la exposición ocurrieron a la vez. Podemos afirmar que el uso registrado aumentó después de varios cambios, y especificar cuáles. Si queremos hablar de la satisfacción, debemos explicar que respondieron sesenta personas de las doscientas invitadas. No sabemos si quienes no respondieron estaban más o menos satisfechos."
-      },
-      {
-        "speaker": "a",
-        "text": "Para la asociación vecinal usaría la imagen de abrir una puerta y mover los libros. Para el resumen académico mantendría sesgo de selección y atribución causal, pero explicaría su papel. Me preocupa que tantos límites hagan parecer que el estudio no sirve. Sirve para describir y para mejorar la siguiente evaluación, aunque no resuelva por sí solo la decisión presupuestaria."
-      },
-      {
-        "speaker": "b",
-        "text": "Esa distinción debería ir en el cierre. Tampoco presentemos otro semestre de observación como garantía de que entonces sabremos todo. Aportará una comparación más útil, sobre todo si se separan las modalidades. En la presentación oral dejaría una pausa después de aumentaron las consultas y antes de eso no demuestra una causa única. La pausa ayuda a conservar las dos proposiciones; no debe hacer que la segunda suene como una rectificación que borra la primera. Separar ambas ideas exige también no perder la primera al explicar la segunda."
-      },
-      {
-        "speaker": "a",
-        "text": "La revisión de pares añade que también cambió la unidad de registro: antes una solicitud podía reunir varias reproducciones y ahora cada descarga cuenta como acceso. Tendré que separar aumento de actividad y cambio de medición. No quiero amontonar reservas sin jerarquía. Para la decisión sobre horarios priorizaré la serie de visitas presenciales, siempre que sea comparable entre periodos."
-      },
-      {
-        "speaker": "b",
-        "text": "Y explica que comparable no significa idéntica en todos sus detalles. Necesitamos saber qué diferencias afectan a la pregunta concreta. Una exposición puede reservar el procedimiento técnico para un anexo y conservar en el cuerpo la consecuencia interpretativa. Si el resumen permite entender qué decisión se apoya en qué medida, habrá descomprimido el informe sin fingir que la complejidad desapareció por completo. Para el cierre, conservaré esta distinción: El informe describe un aumento sin demostrar que el horario sea su causa exclusiva."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha el intercambio completo sin abrir la transcripción. Reconstruye el desacuerdo central.",
-        "exercise": {
-          "id": "c2-07-escucha-gist",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Descomprimir una idea",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la conversación de Descomprimir una idea?",
-              "options": [
-                "El nuevo horario explica por sí solo todo el aumento.",
-                "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva."
-              ],
-              "answer": 1,
-              "why": "Reconstruye el propósito común antes de buscar detalles."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Descomprimir una idea?",
-              "options": [
-                "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.",
-                "La falta de causalidad probada demuestra que el programa no sirve."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha otra vez y anota afirmación, condición y fuente. No copies frases todavía.",
-        "exercise": {
-          "id": "c2-07-escucha-detail",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Descomprimir una idea",
-          "items": [
-            {
-              "q": "¿Qué límite deben conservar los interlocutores de Descomprimir una idea?",
-              "options": [
-                "Respondieron sesenta de las doscientas personas invitadas.",
-                "Respondieron todas las personas invitadas."
-              ],
-              "answer": 0,
-              "why": "La conversación vuelve sobre el límite que evita una promesa o inferencia excesiva."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Descomprimir una idea?",
-              "options": [
-                "Respondieron sesenta de las doscientas personas invitadas.",
-                "La falta de causalidad probada demuestra que el programa no sirve."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Localiza una reformulación y explica qué inferencia repara. Consulta la transcripción solo después de responder.",
-        "exercise": {
-          "id": "c2-07-escucha-notice",
-          "type": "choice",
-          "prompt": "Interpreta el diálogo: Descomprimir una idea",
-          "items": [
-            {
-              "q": "¿Qué inferencia pragmática permite el diálogo de Descomprimir una idea?",
-              "options": [
-                "Una cautela metodológica no equivale a una recomendación de retirar el servicio.",
-                "La falta de causalidad probada demuestra que el programa no sirve."
-              ],
-              "answer": 0,
-              "why": "La inferencia se apoya en una reformulación y su contexto; no es una lectura literal de una palabra."
-            },
-            {
-              "q": "En esta fase, ¿qué conclusión sería excesiva sobre Descomprimir una idea?",
-              "options": [
-                "Una cautela metodológica no equivale a una recomendación de retirar el servicio.",
-                "La falta de causalidad probada demuestra que el programa no sirve."
-              ],
-              "answer": 1,
-              "why": "La primera opción amplía o deforma lo que permite el intercambio."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Descomprimir una idea · expediente de lectura",
-    "genre": "Dossier original: texto principal y documento de contraste",
-    "frame": "Situación ficticia para lectura crítica y mediación. Identifica qué voz afirma cada cosa antes de integrar las fuentes.",
-    "text": [
-      "La evaluación de la ampliación de los horarios del archivo municipal concluye que aumentaron las consultas durante el primer semestre. La formulación parece transparente hasta que se pregunta qué se contó como consulta. El informe agrupa visitas presenciales, solicitudes de reproducción y accesos al catálogo digital. Que el total crezca no implica que cada modalidad lo haga, ni que el incremento pueda atribuirse a la ampliación horaria. La unidad de medida es parte del argumento, aunque figure en una nota metodológica.",
-      "Los autores comparan el semestre posterior a la reforma con el anterior. Durante ese mismo periodo se digitalizó una colección muy solicitada y se organizó una exposición que enlazaba al catálogo. El documento reconoce ambas circunstancias y evita atribuir causalidad exclusiva al horario. El resumen de prensa, en cambio, afirma que abrir dos tardes más duplicó el uso del archivo. La simplificación elimina justo la cautela que permitía interpretar el resultado sin convertir una coincidencia temporal en una explicación suficiente.",
-      "El párrafo más difícil del informe dice que «la estabilización de la demanda, condicionada por la desigual incorporación de las series documentales al sistema de consulta, impide la extrapolación lineal del crecimiento observado». Descomprimirlo exige identificar tres relaciones. La incorporación de documentos fue desigual; esa desigualdad afecta a la demanda; por ello, no cabe proyectar el ritmo inicial como si fuera constante. No se afirma que la demanda haya dejado de crecer, aunque una lectura apresurada de estabilización podría sugerirlo.",
-      "La bibliotecaria encargada de divulgar los resultados propuso una analogía: abrir una puerta y trasladar libros a una sala visible al mismo tiempo dificulta saber cuánto explica cada cambio. La analogía hacía accesible el problema, pero no debía sustituir los datos ni insinuar que ambas intervenciones tenían idéntico peso. Una explicación lograda conserva una zona de resistencia: permite entender por qué no sabemos todavía algo, en lugar de ofrecer una certeza más agradable que la evidencia.",
-      "Apéndice metodológico. De doscientas personas invitadas a responder una encuesta, contestaron sesenta, mayoritariamente usuarias frecuentes del catálogo digital. El porcentaje de satisfacción corresponde a esas respuestas, no a todas las personas invitadas ni a la población de la ciudad. El equipo recomienda comparar otro semestre y separar tipos de consulta. No propone retirar la ampliación horaria mientras tanto. Distinguir insuficiencia para probar una causa de prueba de ineficacia es decisivo: la incertidumbre metodológica no autoriza por sí sola ninguna de esas dos conclusiones políticas. La bibliotecaria anotó en el margen una última precaución: explicar un límite no obliga a recitar toda la metodología, pero sí a conservar el límite que modifica la decisión.",
-      "Revisión de pares. Una investigadora observó que separar consultas digitales y presenciales tampoco bastaría si las categorías cambiaban entre semestres. Antes de digitalizar, una persona podía pedir varias reproducciones mediante una sola solicitud; después, cada descarga quedaba registrada como acceso. Comparar totales sin explicar esa modificación podía confundir un cambio en el uso con un cambio en la manera de contar. El equipo aceptó reconstruir una serie compatible allí donde fuera posible y marcar los tramos que no admitían comparación directa.",
-      "Esta reserva añadía complejidad al resumen, pero no obligaba a enumerar todos los problemas con idéntico peso. Para una decisión sobre horarios, la comparabilidad de visitas presenciales resultaba especialmente pertinente. Para una decisión sobre el catálogo, importaba distinguir consultas, descargas y personas usuarias sin identificarlas innecesariamente. El mismo informe podía sostener varias preguntas, siempre que no se supusiera que una cifra agregada respondía a todas. La bibliotecaria reformuló el cierre: disponemos de señales de mayor actividad y necesitamos medidas compatibles para valorar qué cambió. Esa frase conserva información positiva y una limitación metodológica sin convertir ninguna de las dos en el comentario secundario de la otra. La densidad no se resuelve eliminando relaciones, sino haciendo visibles las que organizan la interpretación."
-    ],
-    "tasks": [
-      {
-        "id": "c2-07-lectura",
-        "type": "choice",
-        "prompt": "Reconstruye la tesis y su límite en Descomprimir una idea.",
-        "items": [
-          {
-            "q": "¿Qué tesis sostiene el dossier «Descomprimir una idea»?",
-            "options": [
-              "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.",
-              "El nuevo horario explica por sí solo todo el aumento."
-            ],
-            "answer": 0,
-            "why": "La tesis integra el contraste entre las fuentes, no solo una frase aislada."
-          },
-          {
-            "q": "¿Qué detalle limita la interpretación en «Descomprimir una idea»?",
-            "options": [
-              "Respondieron sesenta de las doscientas personas invitadas.",
-              "Respondieron todas las personas invitadas."
-            ],
-            "answer": 0,
-            "why": "El documento complementario delimita qué está confirmado."
-          }
-        ]
-      },
-      {
-        "id": "c2-07-lectura-evidencia",
-        "type": "open",
-        "prompt": "Defiende una interpretación de Descomprimir una idea con pruebas y contraejemplos.",
-        "items": [
-          {
-            "prompt": "Contrasta «El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.» con «El nuevo horario explica por sí solo todo el aumento.». Cita dos fragmentos breves, atribuye sus voces y explica qué detalle impide sostener la segunda lectura.",
-            "model": "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva. Respondieron sesenta de las doscientas personas invitadas.",
-            "checklist": [
-              "Distingo cita e interpretación.",
-              "Incluyo una lectura rival y un límite."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas del expediente distribuyen certeza, responsabilidad y voz.",
-      "items": [
+    perceive: {
+      id: "c2-07-percepcion",
+      type: "listen",
+      prompt: "Escucha cada mensaje y decide qué sistema de trato usa por la posición del acento.",
+      items: [
         {
-          "quote": "La evaluación de la ampliación de los horarios del archivo municipal concluye que aumentaron las consultas durante el primer semestre.",
-          "note": "Examina el encuadre inicial y qué información necesitarás para revisarlo."
+          q: "¿Qué sistema oyes?",
+          options: ["tuteo", "voseo"],
+          answer: 1,
+          why: "a-vi-SA-me: acento en la penúltima, propio del imperativo de vos con pronombre.",
+          audio: "Avisame cuando llegue el dinero, por favor.",
+          voice: "es-AR-f",
         },
         {
-          "quote": "Apéndice metodológico.",
-          "note": "El documento final introduce otra perspectiva; identifica qué interpretación limita y qué deja abierto."
-        }
-      ]
-    }
+          q: "¿Qué sistema oyes?",
+          options: ["tuteo", "voseo"],
+          answer: 0,
+          why: "a-VÍ-sa-me: acento en la antepenúltima, imperativo de tú.",
+          audio: "Avísame cuando llegue el dinero, por favor.",
+          voice: "es-ES-f",
+        },
+        {
+          q: "¿Qué forma verbal oyes?",
+          options: ["tienes", "tenés", "tiene"],
+          answer: 1,
+          why: "te-NÉS: aguda.",
+          audio: "Si tenés dudas, llamanos al número de siempre.",
+          voice: "es-UY-m",
+        },
+        {
+          q: "¿Qué forma oyes al principio?",
+          options: ["cuéntame", "contame"],
+          answer: 0,
+          why: "CUÉN-ta-me: diptongo y acento en la primera sílaba, propio de tú.",
+          audio: "Cuéntame qué pasó con el giro de tu hermana.",
+          voice: "es-CO-f",
+        },
+      ],
+    },
+    produce: [
+      { text: "Vos tenés el código; ingresalo y avisame.", tip: "Acento en te-NÉS, in-gre-SA-lo y a-vi-SA-me.", voice: "es-AR-m" },
+      { text: "Tú tienes el código; ingrésalo y avísame.", tip: "Ahora el acento sube: TIE-nes, in-GRÉ-sa-lo, a-VÍ-sa-me.", voice: "es-ES-m" },
+      { text: "Si no le molesta, prefiero seguir tratándola de usted.", tip: "Tono amable y descendente al final: estás declinando con cortesía.", voice: "es-CO-m" },
+      { text: "Sentate, contame tranquila qué pasó.", tip: "Dos imperativos de vos con pronombre: sen-TA-te, con-TA-me.", voice: "es-UY-f" },
+    ],
+    spelling: "Con pronombre detrás, el imperativo de vos se escribe sin tilde (contame, decime, avisame) porque pasa a ser llano. Si escribes «contáme», añades una tilde que la norma no pide.",
   },
-  "practice": {
-    "intro": "Combina orden, clasificación, producción y recuperación espaciada. Las respuestas abiertas se contrastan con criterios y con tu docente.",
-    "exercises": [
+  listening: {
+    title: "Videollamada: la grabación de la clienta Morales",
+    context: "Gabriela coordina en Quito el servicio de envíos de una cooperativa. Por videollamada revisa con Facundo, agente de la sucursal de Córdoba (Argentina), y con Nerea, agente de la sucursal de Madrid, una llamada grabada y los mensajes automáticos de la aplicación. Escucha primero sin transcripción. Las voces son sintéticas y no se presentan como variedades regionales verificadas.",
+    speakers: [
+      { id: "g", name: "Gabriela", voice: "es-CO-f", role: "Coordinadora del servicio en Quito" },
+      { id: "f", name: "Facundo", voice: "es-AR-m", role: "Agente en Córdoba" },
+      { id: "n", name: "Nerea", voice: "es-ES-f", role: "Agente en Madrid" },
+    ],
+    script: [
+      { speaker: "g", text: "Buenos días a los dos. Quería empezar por la llamada de la señora Morales, la que se quejó la semana pasada. ¿La pudieron escuchar? Me interesa sobre todo el minuto seis." },
+      { speaker: "n", text: "Sí, la escuché anoche. Al principio todo va bien: ella tutea a Paola, la llama por su nombre, le cuenta que el dinero es para la operación de su madre. Y de repente, cuando Paola le dice que el giro llegará el lunes y no el viernes, cambia: «Mire, señorita, usted me aseguró otra cosa»." },
+      { speaker: "f", text: "Y ahí está todo. No hace falta que levante la voz: con ese «usted» ya te está diciendo que está enojada. Paola no lo notó y siguió tuteándola como si nada, y eso la molestó más." },
+      { speaker: "g", text: "Exacto. Y ojo, que no siempre es así. Aquí en Quito tenemos clientes mayores que usan usted con todo el mundo, hasta con los nietos. Si uno de ellos dice usted, no hay que leer nada. Lo que comunica algo es el cambio, no el usted en sí." },
+      { speaker: "n", text: "Pues entonces la recomendación para los agentes sería algo así: si el cliente vuelve al usted después de haber tuteado, tú también vuelves al usted, reconoces el problema y ofreces una solución concreta." },
+      { speaker: "g", text: "Me parece bien. Pasemos a los mensajes automáticos. Facundo, tú me dijiste que los de la aplicación suenan raros en Argentina." },
+      { speaker: "f", text: "Muy raros. Dicen «tú tienes un envío pendiente, revísalo». Acá nadie habla así; suena a doblaje de película. Para Argentina yo pondría «tenés un envío pendiente, revisalo». Y en el mensaje de bienvenida, «contanos qué necesitás»." },
+      { speaker: "n", text: "En España pasa lo contrario con el plural. El mensaje para familias dice «ustedes pueden ver el estado del envío», y para un grupo de amigos que se mandan dinero suena a carta del banco. Aquí, entre conocidos, diríamos «podéis ver el estado del envío»." },
+      { speaker: "g", text: "El problema es que la aplicación es una sola y no siempre sabemos desde dónde la abren. ¿Qué hacemos con los textos generales, los que ven todos?" },
+      { speaker: "f", text: "Para esos, tú y ustedes. A un argentino el tú le suena un poco ajeno, pero lo entiende y no le molesta en un texto escrito. Lo que no haría nunca es poner vos en un texto para todos: en algunos lugares puede sonar demasiado familiar, incluso poco respetuoso." },
+      { speaker: "n", text: "Y vosotros tampoco, claro, porque en América nadie lo usa. Pero cuando sepamos que el cliente está en España, el mensaje personalizado puede ir con vosotros." },
+      { speaker: "g", text: "Entonces queda así: textos generales con tú y ustedes; mensajes personalizados según el país, con voseo para Argentina y Uruguay y vosotros para España; y en las llamadas, atención al trato del cliente. Si cambia, cambiamos con él. Y una cosa más: el que escriba en voseo, que revise todo, verbo, pronombre y posesivo, porque los mensajes mezclados son lo que peor suena." },
+    ],
+    stages: [
       {
-        "id": "c2-07-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos relaciones centrales del caso Descomprimir una idea.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha la videollamada completa sin abrir la transcripción. ¿Qué dos asuntos tratan y a qué acuerdo llegan?",
+        exercise: {
+          id: "c2-07-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación y el acuerdo general.",
+          items: [
+            {
+              q: "¿Qué dos asuntos revisan?",
+              options: [
+                "Una llamada con un cambio de trato y los mensajes automáticos de la aplicación.",
+                "Las comisiones de los envíos y el horario de las sucursales.",
+                "La contratación de nuevos agentes y su formación.",
+              ],
+              answer: 0,
+              why: "Empiezan por la grabación de la señora Morales y siguen con los textos de la aplicación.",
+            },
+            {
+              q: "¿Cuál es el acuerdo final sobre los textos?",
+              options: [
+                "Escribir todo en voseo para sonar más cercanos.",
+                "Usar tú y ustedes en los textos generales y adaptar los personalizados al país.",
+                "Usar siempre usted para no ofender a nadie.",
+              ],
+              answer: 1,
+              why: "Gabriela resume: textos generales neutros y mensajes personalizados según el país.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y anota cada argumento. Responde sin mirar la transcripción.",
+        exercise: {
+          id: "c2-07-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles.",
+          items: [
+            {
+              q: "¿Qué error cometió Paola, según Facundo?",
+              options: [
+                "Tratar de usted a la clienta desde el principio.",
+                "Seguir tuteando a la clienta cuando esta volvió al usted.",
+                "Colgar antes de tiempo.",
+              ],
+              answer: 1,
+              why: "No percibió que el usted señalaba enfado.",
+            },
+            {
+              q: "¿Por qué advierte Gabriela que no siempre hay que interpretar el usted?",
+              options: [
+                "Porque en Quito nadie usa usted.",
+                "Porque la señora Morales no estaba enfadada.",
+                "Porque hay clientes que lo usan siempre, incluso con la familia.",
+              ],
+              answer: 2,
+              why: "Lo significativo es el cambio respecto del trato habitual.",
+            },
+            {
+              q: "¿Por qué no usaría Facundo el voseo en un texto para todos los países?",
+              options: [
+                "Porque fuera de las zonas voseantes puede sonar demasiado familiar.",
+                "Porque es incorrecto en la norma culta.",
+                "Porque la aplicación no admite tildes.",
+              ],
+              answer: 0,
+              why: "El voseo es norma culta en su zona, pero fuera de ella puede chocar.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en las formas que se citan en la videollamada. Relaciona y consulta la transcripción solo después de responder.",
+        exercise: {
+          id: "c2-07-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada fragmento con el sistema o el valor que tiene.",
+          pairs: [
+            { left: "Mire, señorita, usted me aseguró otra cosa", right: "vuelta al usted: enfado" },
+            { left: "tenés un envío pendiente, revisalo", right: "voseo para Argentina" },
+            { left: "podéis ver el estado del envío", right: "plural de confianza en España" },
+            { left: "tú y ustedes", right: "opción para textos generales" },
+            { left: "usted con todo el mundo, hasta con los nietos", right: "trato habitual que no comunica cambio" },
+          ],
+          why: "Cada forma se interpreta según la zona, el destinatario y el trato habitual.",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Un solo servicio, muchas maneras de hablarle a la gente",
+    genre: "Guía interna de estilo",
+    frame: "Texto de Gabriela Andrade para la guía interna del servicio de envíos de una cooperativa de ahorro de Quito. Personas, entidad y casos son ficticios.",
+    text: [
+      "Cuando empezamos a enviar dinero desde Quito a las familias que tienen parientes en Madrid, en Córdoba o en Guayaquil, pensábamos que el reto sería técnico: tipos de cambio, plazos, comisiones. Muy pronto descubrimos que una parte importante de las quejas no tenía que ver con el dinero, sino con la manera de hablarle a la gente. Un mensaje correcto podía sonar frío en un país y demasiado familiar en otro. Esta guía recoge lo que hemos aprendido para que cada agente, y cada mensaje automático, trate a las personas como ellas esperan ser tratadas.",
+      "Lo primero es aceptar que no existe un trato correcto para todo el mundo hispanohablante. Hay sistemas distintos, y todos son legítimos. En la mayor parte de España, el singular de confianza es tú y el plural de confianza es vosotros. En toda América, en cambio, el único plural es ustedes, tanto para la familia como para desconocidos. En Argentina, Uruguay, Paraguay y gran parte de Centroamérica, la forma de confianza en singular es vos, con sus propios verbos: vos tenés, vos podés, vení, decime. Ese voseo es la norma culta de esas zonas; se usa en la prensa, en la universidad y en la publicidad, y no es un descuido que haya que corregir.",
+      "Quien escriba en voseo debe hacerlo con coherencia. Hemos recibido mensajes de agentes bienintencionados que mezclaban sistemas: «vos podés retirar el dinero, pero tienes que traer tu cédula». A un cliente de Córdoba esa frase le suena a alguien que imita el acento sin conocerlo. En el voseo, todos los verbos en presente son agudos (podés, tenés), el pronombre es te y el posesivo es tu, y detrás de preposición se dice con vos o para vos. En pasado, la forma cuidada es vos recibiste, sin la ese final que a veces se oye. Si un agente no domina el sistema, es preferible que use tú: se entiende y no suena a imitación.",
+      "El usted merece capítulo aparte. Para la mayoría de nuestros clientes es la forma de respeto y la que esperan de una entidad financiera, al menos en el primer contacto. Pero no debe interpretarse siempre como distancia. Aquí en la Sierra, como en partes de Colombia y de Costa Rica, muchas personas usan usted con sus hijos, con sus parejas, con sus amigos de toda la vida. Una señora que dice «mijo, ¿usted ya almorzó?» está siendo cariñosa, no fría. Por eso pedimos a los agentes que no saquen conclusiones del usted aislado y que se fijen, más bien, en los cambios.",
+      "Porque el trato no es fijo dentro de una conversación, y esos cambios dicen mucho. Si un cliente que empezó tratándonos de usted pasa al tú o al vos, normalmente está señalando confianza; podemos acompañarlo, salvo que el protocolo lo impida, y en ese caso conviene decirlo con amabilidad. Si, al revés, alguien que nos tuteaba vuelve de pronto al usted, casi siempre está molesto o quiere marcar distancia. La grabación que usamos en la formación lo muestra con claridad: una clienta que llevaba diez minutos tuteando a la agente dijo «mire, señorita, usted me aseguró otra cosa», y la agente siguió tuteándola como si nada hubiera pasado. La queja que recibimos después no hablaba del retraso, sino de que «no la escucharon».",
+      "Proponer un cambio de trato también es un acto de cortesía. Cuando un cliente pregunta «¿nos tuteamos?», el agente puede aceptar o declinar, pero no debe ignorar la pregunta. Una fórmula que funciona es: «Con mucho gusto, aunque por costumbre de la cooperativa le seguiré tratando de usted, si no le molesta». En Argentina, donde la propuesta suele ser «tratame de vos», la respuesta equivalente es igual de válida. Lo importante es que la decisión sea explícita y que, una vez tomada, se mantenga.",
+      "Para los mensajes automáticos hemos adoptado dos niveles. Los textos que ve cualquier usuario de la aplicación, sin saber desde dónde la abre, usan tú en singular y ustedes en plural. No es la única opción correcta, pero es la que se entiende en todas partes sin sonar local. Evitamos el vos en esos textos generales porque fuera de las zonas voseantes puede resultar demasiado familiar, y evitamos el vosotros porque en América no se usa. Los mensajes personalizados, en cambio, se adaptan al país del destinatario: voseo para Argentina y Uruguay, vosotros para los grupos de confianza en España, usted para el primer contacto en Ecuador.",
+      "Ninguna de estas reglas sustituye la atención. Un buen agente escucha cómo le hablan y responde en consecuencia, igual que hace cualquier persona educada en una conversación. Lo que esta guía pretende es que esa atención no dependa solo del instinto de cada uno, sino de un conocimiento compartido: que el voseo es una norma y no un error, que el usted puede ser cariño y no frialdad, que ustedes es el único plural de medio mundo y que un cambio de pronombre, a veces, dice más que cualquier queja por escrito.",
+    ],
+    glossary: [
+      { es: "la Sierra", note: "región andina del Ecuador, donde está Quito" },
+      { es: "bienintencionado", note: "que actúa con buena intención" },
+      { es: "almorzar", note: "comer al mediodía" },
+    ],
+    tasks: [
+      {
+        id: "c2-07-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la guía.",
+        items: [
           {
-            "words": [
-              "La",
-              "muestra",
-              "no",
-              "representa",
-              "a",
-              "toda",
-              "la",
-              "ciudad."
+            q: "¿Qué recomienda la guía a un agente que no domina el voseo?",
+            options: [
+              "Que use usted con todos los clientes argentinos.",
+              "Que use tú, porque se entiende y no suena a imitación.",
+              "Que pida a un compañero que escriba por él.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
+            answer: 1,
+            why: "El tercer párrafo prefiere tú a un voseo mal construido.",
           },
           {
-            "words": [
-              "Separar",
-              "modalidades",
-              "permite",
-              "interpretar",
-              "el",
-              "aumento."
+            q: "¿Qué debe hacer un agente cuando un cliente propone tutearse y el protocolo no lo permite?",
+            options: [
+              "Ignorar la propuesta y seguir con usted.",
+              "Aceptar siempre para no ofender.",
+              "Declinar de forma explícita y amable.",
             ],
-            "why": "La secuencia mantiene el alcance y las relaciones del caso."
-          }
-        ]
-      },
-      {
-        "id": "c2-07-estatuto",
-        "type": "classify",
-        "prompt": "Clasifica el estatuto de estas formulaciones en «Descomprimir una idea».",
-        "categories": [
-          "Conclusión respaldada o delimitada",
-          "Generalización no autorizada"
+            answer: 2,
+            why: "La guía propone una fórmula de rechazo cortés.",
+          },
+          {
+            q: "¿Por qué la queja de la clienta hablaba de que «no la escucharon»?",
+            options: [
+              "Porque la agente no reaccionó a su vuelta al usted.",
+              "Porque la llamada se cortó.",
+              "Porque el giro llegó a otra persona.",
+            ],
+            answer: 0,
+            why: "La clienta había señalado su enfado con el cambio de trato.",
+          },
         ],
-        "items": [
-          {
-            "text": "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.",
-            "cat": 0,
-            "why": "Resume el razonamiento con sus límites."
-          },
-          {
-            "text": "El nuevo horario explica por sí solo todo el aumento.",
-            "cat": 1,
-            "why": "Amplía o invierte el alcance de las fuentes."
-          },
-          {
-            "text": "Respondieron sesenta de las doscientas personas invitadas.",
-            "cat": 0,
-            "why": "Conserva un detalle explícito del expediente."
-          },
-          {
-            "text": "Respondieron todas las personas invitadas.",
-            "cat": 1,
-            "why": "Contradice la condición documentada."
-          }
-        ]
       },
       {
-        "id": "c2-07-microescritura",
-        "type": "open",
-        "prompt": "Produce dos versiones breves antes del dossier de Descomprimir una idea.",
-        "items": [
-          {
-            "prompt": "Redacta una apertura de 80–100 palabras para el destinatario de «Descomprimir una idea». Conserva la tesis y una reserva.",
-            "model": "El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas.",
-            "checklist": [
-              "Identifico quién necesita decidir y con qué información.",
-              "Separo afirmación, atribución e inferencia."
-            ]
-          },
-          {
-            "prompt": "Reformula para una persona ajena al debate de «Descomprimir una idea» la condición que más fácilmente se perdería al resumir. Explica el coste de omitirla.",
-            "model": "Respondieron sesenta de las doscientas personas invitadas. El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.",
-            "checklist": [
-              "No convierto la condición en un dato accesorio.",
-              "Mantengo el alcance aunque simplifique el léxico."
-            ]
-          }
-        ]
+        id: "c2-07-lectura-niveles",
+        type: "match",
+        prompt: "Relaciona cada destinatario con el trato que recomienda la guía.",
+        pairs: [
+          { left: "usuario desconocido de la aplicación", right: "tú en singular y ustedes en plural" },
+          { left: "cliente de Córdoba en un mensaje personalizado", right: "voseo coherente" },
+          { left: "grupo de amigos en Madrid", right: "vosotros" },
+          { left: "primer contacto con un cliente en Ecuador", right: "usted" },
+        ],
       },
       {
-        "id": "c2-07-recuperacion",
-        "type": "open",
-        "prompt": "Recupera recursos con materiales suministrados de semanas anteriores. No busques rasgos ausentes en el dossier actual. Contrasta después qué recurso sería pertinente transferir al nuevo caso.",
-        "items": [
+        id: "c2-07-lectura-evaluacion",
+        type: "open",
+        prompt: "Evalúa una decisión de la guía con argumentos propios.",
+        items: [
           {
-            "prompt": "Recuperación c2.disc.cambio-registro. Recupera la semana 3, «Lo que la cláusula permite». Material de contraste: El reglamento de la residencia artística ocupaba nueve páginas. La mayoría de las personas admitidas había leído sobre todo una frase: «La estancia podrá prorrogarse hasta treinta días, siempre que exista disponibilidad, sin perjuicio de la revisión de las condiciones económicas». En el grupo de participantes, la frase se convirtió en «tenemos un mes más por el mismo precio». Nadie había mentido de manera deliberada. Al circular, la posibilidad pasó a ser certeza y la reserva económica desapareció por parecer un detalle secundario. Formulación de trabajo: Si alguien incumple el plazo, deberá justificar el retraso.\n\nRecupera «Alternancia de registros» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La ampliación de la estancia puede solicitarse por un periodo de hasta treinta días. No está garantizada: depende de que haya plazas y de las condiciones que se comuniquen. La cláusula permite revisar el precio, pero no establece un plazo de aviso. Los cinco días solicitados por los residentes siguen siendo una propuesta. Por tanto, esta guía distingue lo vigente de lo negociado y recomienda esperar una confirmación antes de reservar un viaje adicional. Explicar la incertidumbre no la resuelve; evita que la claridad de la redacción se confunda con una garantía que el reglamento no contiene. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
+            prompt: "La guía evita el vos en los textos generales de la aplicación. Explica en 70–90 palabras por qué lo hace, si estás de acuerdo y qué alternativa propondrías para un público mayoritariamente argentino.",
+            model: "La guía evita el vos porque, fuera de las zonas voseantes, puede sonar demasiado familiar y porque el tú se entiende en todas partes. Estoy de acuerdo para un público mezclado. Pero si la mayoría de usuarios fuera argentina, el tú sonaría ajeno en cada pantalla. En ese caso propondría detectar el país al instalar la aplicación y mostrar los textos en voseo coherente, reservando tú y ustedes solo para quien no indique país.",
+            checklist: [
+              "Explico el motivo de la guía.",
+              "Tomo posición y la justifico.",
+              "Mi alternativa respeta la coherencia del voseo.",
+            ],
           },
-          {
-            "prompt": "Recuperación c2.voc.lenguaje-juridico. Recupera la semana 3, «Lo que la cláusula permite». Unidades disponibles: sin perjuicio de (sin eliminar otra facultad); a tenor de (según el contenido de una disposición); subsanar (corregir un defecto documental); de pleno derecho (por efecto directo de la norma invocada); incumpliere (incumple, en una condición de estilo jurídico); prórroga (ampliación de un plazo); fehaciente (que permite acreditar un hecho); facultad (posibilidad de actuación reconocida). Pasaje: El reglamento de la residencia artística ocupaba nueve páginas. La mayoría de las personas admitidas había leído sobre todo una frase: «La estancia podrá prorrogarse hasta treinta días, siempre que exista disponibilidad, sin perjuicio de la revisión de las condiciones económicas». En el grupo de participantes, la frase se convirtió en «tenemos un mes más por el mismo precio». Nadie había mentido de manera deliberada. Al circular, la posibilidad pasó a ser certeza y la reserva económica desapareció por parecer un detalle secundario.\n\nRecupera «Lenguaje jurídico-administrativo»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La ampliación de la estancia puede solicitarse por un periodo de hasta treinta días. No está garantizada: depende de que haya plazas y de las condiciones que se comuniquen. La cláusula permite revisar el precio, pero no establece un plazo de aviso. Los cinco días solicitados por los residentes siguen siendo una propuesta. Por tanto, esta guía distingue lo vigente de lo negociado y recomienda esperar una confirmación antes de reservar un viaje adicional. Explicar la incertidumbre no la resuelve; evita que la claridad de la redacción se confunda con una garantía que el reglamento no contiene. En este contraste, «sin perjuicio de» nombra sin eliminar otra facultad; «a tenor de», según el contenido de una disposición. La elección debe conservar esa diferencia. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.gram.futuro-subjuntivo-juridico. Recupera la semana 3, «Lo que la cláusula permite». Contrastes suministrados: Quien incumpliere el plazo deberá justificar la demora. / Si alguien incumple el plazo, deberá justificar el retraso. / La revisión se efectuará sin perjuicio del derecho a reclamar.\n\nExplica la estructura y el cambio de interpretación pertinentes para «Futuro de subjuntivo y fórmulas arcaizantes». Produce una cuarta formulación y señala expresamente qué referente, condición o perspectiva temporal conserva. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "En las cláusulas, sin perjuicio de preserva otra facultad; no significa a pesar de que todo quede anulado. Siempre que introduce condición y salvo que una excepción. El futuro de subjuntivo sobreviva en fórmulas como quien incumpliere no obliga a reproducirlo al explicar: si alguien incumple conserva la condición. Una versión clara debe mantener sujeto obligado, acción, plazo, excepción y consecuencia; simplificar no permite ampliar derechos. Aplicación al caso: La ampliación de la estancia puede solicitarse por un periodo de hasta treinta días. No está garantizada: depende de que haya plazas y de las condiciones que se comuniquen. La cláusula permite revisar el precio, pero no establece un plazo de aviso. Los cinco días solicitados por los residentes siguen siendo una propuesta. Por tanto, esta guía distingue lo vigente de lo negociado y recomienda esperar una confirmación antes de reservar un viaje adicional. Explicar la incertidumbre no la resuelve; evita que la claridad de la redacción se confunda con una garantía que el reglamento no contiene. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.registro-voz. Recupera la semana 3, «Lo que la cláusula permite». Textos para ensayo oral: «La estancia puede ampliarse, siempre que haya plazas.» / «La estancia se amplía; hay plazas confirmadas.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Registro y voz» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Separa facultad, condición y reserva con pausas breves. No relegues sin perjuicio de al final con menor volumen si esa reserva cambia la decisión del oyente. Un ensayo defendible conserva esta distinción del caso: Una mediación clara conserva condiciones y señala los vacíos sin inventar garantías. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.wri.traduccion-registro. Recupera la semana 3, «Lo que la cláusula permite». Modelo parcial que puedes transformar: La ampliación de la estancia puede solicitarse por un periodo de hasta treinta días. No está garantizada: depende de que haya plazas y de las condiciones que se comuniquen. La cláusula permite revisar el precio, pero no establece un plazo de aviso. Los cinco días solicitados por los residentes siguen siendo una propuesta. Por tanto, esta guía distingue lo vigente de lo negociado y recomienda esperar una confirmación antes de reservar un viaje adicional. Explicar la incertidumbre no la resuelve; evita que la claridad de la redacción se confunda con una garantía que el reglamento no contiene.\n\nRecupera «Traducción intralingüística» mediante una nueva versión de 120–160 palabras de este fragmento para otro destinatario. Mantén la reserva principal, cambia el orden de la información y justifica dos decisiones. Si el objetivo exige un texto completo, retoma además tu entrega original de esa semana y revisa su conjunto. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "La ampliación de la estancia puede solicitarse por un periodo de hasta treinta días. No está garantizada: depende de que haya plazas y de las condiciones que se comuniquen. La cláusula permite revisar el precio, pero no establece un plazo de aviso. Los cinco días solicitados por los residentes siguen siendo una propuesta. Por tanto, esta guía distingue lo vigente de lo negociado y recomienda esperar una confirmación antes de reservar un viaje adicional. Explicar la incertidumbre no la resuelve; evita que la claridad de la redacción se confunda con una garantía que el reglamento no contiene. Para una persona ajena al expediente, la información decisiva que debe seguir visible es: Una mediación clara conserva condiciones y señala los vacíos sin inventar garantías. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.disc.recursos-retoricos. Recupera la semana 6, «Convencer sin esconder el coste». Material de contraste: La propuesta de renovar la biblioteca se presentó bajo un lema difícil de rechazar: «Abrir puertas». Quienes preguntaron por el presupuesto quedaron, durante unos minutos, en el papel incómodo de quienes preferían cerrarlas. El discurso no había refutado sus objeciones; había elegido una imagen en la que resultaba ingrato formularlas. Esa eficacia explica tanto el valor de la retórica como la necesidad de examinarla. Ninguna decisión pública cabe entera en la oposición entre apertura y cierre. Formulación de trabajo: Es una inversión costosa; de ahí no se sigue que sea prescindible.\n\nRecupera «Recursos retóricos» a partir del material suministrado. Produce una versión de 80–100 palabras que haga visible una relación implícita, mantenga una reserva y responda a una objeción. Explica cuál es tu aportación y cuál procede de la fuente. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.voc.lexico-persuasivo. Recupera la semana 6, «Convencer sin esconder el coste». Unidades disponibles: concesión táctica (reconocimiento limitado de una objeción); encuadre (perspectiva que organiza un problema); carga valorativa (evaluación asociada a una expresión); contrapartida (coste o compromiso a cambio de otro); eufemismo (expresión que suaviza un contenido); disfemismo (expresión que lo presenta de forma peyorativa); gradación (orden de intensidad creciente); apelación (llamada a una creencia o valor compartido). Pasaje: La propuesta de renovar la biblioteca se presentó bajo un lema difícil de rechazar: «Abrir puertas». Quienes preguntaron por el presupuesto quedaron, durante unos minutos, en el papel incómodo de quienes preferían cerrarlas. El discurso no había refutado sus objeciones; había elegido una imagen en la que resultaba ingrato formularlas. Esa eficacia explica tanto el valor de la retórica como la necesidad de examinarla. Ninguna decisión pública cabe entera en la oposición entre apertura y cierre.\n\nRecupera «Léxico persuasivo»: selecciona dos unidades del material, explica por qué no son intercambiables y redacta una frase sobre el caso con cada una. Contrasta una elección precisa con otra que introduciría una evaluación o un alcance distintos. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. En este contraste, «concesión táctica» nombra reconocimiento limitado de una objeción; «encuadre», perspectiva que organiza un problema. La elección debe conservar esa diferencia. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.pron.oratoria. Recupera la semana 6, «Convencer sin esconder el coste». Textos para ensayo oral: «Queremos estudiar, encontrarnos y abrir oportunidades.» / «Queremos renovar; durante las obras faltarán puestos.».\n\nMarca grupos fónicos, un foco y una pausa en cada texto. Produce dos lecturas propias y pide a tu interlocutor que explique el efecto. Recupera «Oratoria» sin atribuir una intención segura ni una variedad a la síntesis. Si trabajas a solas, describe la intención y deja su comprobación perceptiva para clase. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Distribuye tres grupos paralelos con un foco distinto en cada uno. La concesión posterior necesita espacio propio: bajar demasiado el volumen podría ocultar el coste reconocido. Un ensayo defendible conserva esta distinción del caso: La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas. El resultado perceptivo debe contrastarse con un oyente; no queda acreditado por escribir una marca de pausa. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.lis.discurso-politico. Recupera la semana 6, «Convencer sin esconder el coste». Recuperación del contenido escuchado: vuelve al audio de esa semana sin abrir su transcripción. Como pista de contraste, conserva estas dos posiciones: La retórica resulta más responsable cuando explicita costes y admite respuestas no previstas. / Los horarios ampliados ya están financiados.\n\nToma notas de quién sostiene cada posición y de una reserva expresada. Después contrasta tus notas con la transcripción. No deduzcas rasgos regionales ni solapamientos que el audio sintético no acredita. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. La primera posición sintetiza el límite defendido; la segunda es la conclusión excesiva que el diálogo obliga a rechazar. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          },
-          {
-            "prompt": "Recuperación c2.spk.discurso-breve. Recupera la semana 6, «Convencer sin esconder el coste». Situación para retomar: Pronuncia el discurso ante usuarios y personal. Recibe una objeción sobre los horarios, responde sin falso dilema y reformula el cierre como pregunta deliberativa. Objeción suministrada: Los horarios ampliados ya están financiados.\n\nRecupera «Discurso persuasivo». Haz una intervención de dos minutos con tesis y reserva; responde durante un minuto a la objeción. Pide una reformulación de tu idea al interlocutor antes de evaluar si fuiste claro. Contraste nuevo suministrado de «Descomprimir una idea»: «Aunque la muestra sea pequeña, el contraste aporta información.». Explica qué relación de significado comparte con el material anterior y qué no puedes trasladar sin añadir evidencia.",
-            "model": "Queremos una biblioteca para estudiar, para encontrarnos y para quienes no disponen de otro lugar. Ese propósito no elimina el coste de cerrar ocho meses. La alternativa provisional ofrece menos puestos y sus horarios ampliados todavía necesitan financiación. Por eso defendemos la renovación junto con un convenio de espacios, una medición pública de la demanda y una decisión presupuestaria explícita. Reconocer esas condiciones no equivale a renunciar al proyecto. Permite que quienes discrepan del calendario participen sin ser presentados como enemigos del acceso. La pregunta final debe abrir opciones reales, no repartir certificados de compromiso cultural. En el nuevo contraste, «Aunque la muestra sea pequeña, el contraste aporta información.» debe interpretarse dentro de esta cuestión: Sintaxis compleja, nominalización y jerarquía informativa. La semejanza de función no convierte ambos casos en hechos equivalentes.",
-            "checklist": [
-              "Mi respuesta se apoya en el estímulo suministrado o en el audio anterior identificado.",
-              "Distingo observación, interpretación y límite de lo que este material permite comprobar."
-            ]
-          }
-        ]
-      }
-    ]
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa cómo la guía presenta el voseo y el usted como sistemas legítimos y no como errores.",
+      items: [
+        { quote: "Ese voseo es la norma culta de esas zonas", note: "El voseo se describe como norma, no como desviación." },
+        { quote: "Si un agente no domina el sistema, es preferible que use tú", note: "La coherencia importa más que la imitación." },
+        { quote: "Una señora que dice «mijo, ¿usted ya almorzó?» está siendo cariñosa, no fría.", note: "El usted afectivo se interpreta en su comunidad." },
+        { quote: "un cambio de pronombre, a veces, dice más que cualquier queja por escrito", note: "El cambio de trato como mensaje pragmático." },
+      ],
+    },
   },
-  "writing": {
-    "task": "Redacta un dossier de 450–600 palabras: resumen académico de 150, explicación divulgativa de 200 y comentario de las diferencias. Conserva unidad de medida, selección de participantes y límites causales.",
-    "context": "Entrega un texto independiente y conserva una segunda versión con cambios comentados. El modelo muestra una apertura posible; no sustituye el dossier completo.",
-    "steps": [
-      "Traza un mapa de fuentes: afirmación, prueba, límite y destinatario.",
-      "Decide el orden según la acción que necesita realizar tu lector; reserva espacio para una objeción fuerte.",
-      "Redacta sin copiar el modelo. Integra al menos dos fuentes y atribuye sus diferencias.",
-      "Revisa el alcance de tres formulaciones, lee un párrafo en voz alta y explica dos cambios de estilo."
+  practice: {
+    intro: "Combina orden, adaptación al destinatario, reescritura y escritura breve. Termina recuperando las clases de las semanas anteriores de C2.",
+    exercises: [
+      {
+        id: "c2-07-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar mensajes coherentes con el sistema indicado.",
+        items: [
+          {
+            words: ["Si", "querés,", "pasá", "mañana", "y", "traé", "tu", "documento."],
+            why: "Voseo coherente: «querés», «pasá», «traé», «tu».",
+          },
+          {
+            words: ["Si", "lo", "prefieren,", "pueden", "retirar", "su", "envío", "mañana."],
+            why: "Ustedes con «su»: plural americano.",
+          },
+          {
+            words: ["Si", "os", "viene", "mejor,", "venid", "el", "lunes."],
+            why: "Vosotros peninsular: «os», «venid».",
+          },
+        ],
+      },
+      {
+        id: "c2-07-destinatario",
+        type: "context",
+        prompt: "Elige el mensaje más adecuado para cada destinatario.",
+        items: [
+          {
+            context: "Mensaje personalizado para un cliente joven de Montevideo que siempre escribe en voseo.",
+            q: "¿Qué versión eliges?",
+            options: [
+              "Tu envío ya llegó; si tienes dudas, llámanos.",
+              "Su envío ya llegó; si tiene dudas, llámenos.",
+              "Tu envío ya llegó; si tenés dudas, llamanos.",
+            ],
+            answer: 2,
+            why: "Voseo coherente: «tenés», «llamanos», con el posesivo «tu».",
+          },
+          {
+            context: "Correo para un grupo de cinco hermanos ecuatorianos que comparten el envío para su madre.",
+            q: "¿Qué versión eliges?",
+            options: [
+              "Queridos hermanos: ya podéis ver el estado de vuestro envío.",
+              "Estimados hermanos: ya pueden ver el estado de su envío.",
+              "Hermanos: ya podés ver el estado de tu envío.",
+            ],
+            answer: 1,
+            why: "En América el plural es «ustedes», con «su».",
+          },
+          {
+            context: "Pantalla de inicio de la aplicación, vista en todos los países.",
+            q: "¿Qué versión eliges?",
+            options: [
+              "Hola. Revisa tus envíos y, si viajan juntos, compartan el código.",
+              "Hola. Revisá tus envíos y, si viajáis juntos, compartid el código.",
+              "Hola. Revise sus envíos y, si viajáis juntos, compartid el código.",
+            ],
+            answer: 0,
+            why: "Tú + ustedes: la opción neutra para un público internacional.",
+          },
+        ],
+      },
+      {
+        id: "c2-07-adaptar",
+        type: "transform",
+        prompt: "Adapta cada mensaje al sistema indicado sin cambiar el contenido.",
+        items: [
+          {
+            source: "Tienes un envío pendiente. Revísalo y confírmanos los datos.",
+            instruction: "Pásalo a voseo rioplatense.",
+            answers: ["Tenés un envío pendiente. Revisalo y confirmanos los datos."],
+            why: "Presente agudo y imperativos de vos con pronombre, sin tilde.",
+          },
+          {
+            source: "Si queréis cambiar el destinatario, escribidnos antes del viernes.",
+            instruction: "Pásalo a ustedes para un público americano.",
+            answers: ["Si quieren cambiar el destinatario, escríbannos antes del viernes."],
+            why: "Plural americano: «quieren», «escríbannos».",
+          },
+          {
+            source: "Vos sabés que podés contar con nosotros; decinos qué necesitás.",
+            instruction: "Pásalo a usted para un primer contacto formal.",
+            answers: ["Usted sabe que puede contar con nosotros; díganos qué necesita."],
+            why: "Usted: tercera persona en verbos e imperativo «díganos».",
+          },
+        ],
+      },
+      {
+        id: "c2-07-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Un cliente quiteño de setenta años escribe: «Mijita, ¿nos tratamos de tú? Usted ya es como de la familia». El protocolo pide usted. Escribe una respuesta de 40–60 palabras que decline con cariño y mantenga la relación.",
+            model: "Qué amable, don Rodrigo, muchas gracias. Para mí también es un gusto atenderle. Si no le molesta, le seguiré tratando de usted, que es la costumbre de la cooperativa, pero eso no cambia nada: aquí estoy para lo que necesite. Su envío para Madrid ya está confirmado y llegará el jueves.",
+            checklist: [
+              "Agradezco la propuesta.",
+              "Declino de forma explícita y cortés.",
+              "Mantengo el usted de forma coherente.",
+            ],
+          },
+          {
+            prompt: "Escribe la nota para el equipo (40–60 palabras) que explique a los agentes nuevos qué hacer cuando un cliente que tuteaba vuelve al usted.",
+            model: "Si un cliente que nos tuteaba vuelve al usted, casi siempre está molesto o quiere marcar distancia. No sigas tuteándolo: vuelve tú también al usted, reconoce el problema con una frase concreta y ofrece una solución con plazo. Ojo: si el cliente usó usted desde el principio, no hay cambio que interpretar.",
+            checklist: [
+              "Explico qué suele comunicar el cambio.",
+              "Doy una instrucción concreta.",
+              "Distingo el cambio del trato habitual.",
+            ],
+          },
+        ],
+      },
+      {
+        id: "c2-07-recuperacion",
+        type: "open",
+        prompt: "Recupera lo que viste en las semanas anteriores de C2 con los estímulos que se te dan. No hace falta volver a esas lecciones: trabaja con el material de cada ítem.",
+        items: [
+          {
+            prompt: "Recuperación de la clase G213 (ambigüedad accidental). Estímulo, mensaje de un agente a un cliente sobre su hija: «Le confirmamos que su cuenta ya está activa». Explica por qué «su» puede ser ambiguo cuando se trata de usted y reescribe el mensaje con una sola lectura.",
+            model: "Con usted, «su» puede remitir al cliente o a una tercera persona mencionada antes, en este caso la hija. Si la cuenta es de la hija: «Le confirmamos que la cuenta de su hija ya está activa». Si es del cliente: «Le confirmamos que su cuenta, la de usted, ya está activa», o mejor, «que la cuenta a su nombre ya está activa».",
+            checklist: [
+              "Identifico los dos poseedores posibles.",
+              "La reescritura explicita el referente.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G214 (gramaticalidad y norma). Estímulo, transcripción de una llamada: «¿Y vos por qué no me avisastes?». Di qué juicio merece «avisastes», qué harías en la transcripción de la llamada y qué escribirías en un mensaje oficial.",
+            model: "«Avisastes» es una forma real y frecuente en la lengua oral, pero no normativa: la forma cuidada con vos es «avisaste». En la transcripción de la llamada la mantendría, porque es la voz del cliente. En un mensaje oficial de la cooperativa escribiría «¿Por qué no nos avisaste?» o, en tuteo, lo mismo.",
+            checklist: [
+              "Califico la forma como no normativa, no agramatical.",
+              "Distingo la transcripción del mensaje oficial.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G211 (construcciones parentéticas). Estímulo: «El agente, que —según dijo la clienta— la había tratado de tú desde el principio, pidió disculpas». Explica qué aporta el paréntesis y qué pasa si lo eliminas.",
+            model: "El inciso «según dijo la clienta» atribuye la información a otra persona: el texto no garantiza que el agente la tuteara desde el principio, solo informa de lo que ella afirmó. Si lo eliminamos, el narrador asume ese dato como cierto. El paréntesis, por tanto, protege a quien escribe y matiza la responsabilidad.",
+            checklist: [
+              "Explico la función de atribución del inciso.",
+              "Señalo qué cambia si se elimina.",
+            ],
+          },
+          {
+            prompt: "Recuperación de la clase G207 (indicativo y subjuntivo según perspectiva). Estímulo: «Entiendo que esté molesta» frente a «Entiendo que está molesta». Explica qué hace el agente con cada versión y cuál usarías para calmar a una clienta.",
+            model: "Con subjuntivo, «entiendo que esté molesta» valora su enfado como comprensible: es empatía. Con indicativo, «entiendo que está molesta» significa «deduzco que está molesta»: es una constatación. Para calmar a la clienta usaría la primera, porque reconoce su reacción como razonable.",
+            checklist: [
+              "Distingo valoración y constatación.",
+              "Elijo y justifico la versión empática.",
+            ],
+          },
+        ],
+      },
     ],
-    "useLanguage": [
-      "La mejora observada no permite atribuir el cambio al programa.",
-      "Aunque la muestra sea pequeña, el contraste aporta información.",
-      "La evaluación de la aplicación exige identificar quién aplicó cada medida.",
-      "atribución causal",
-      "sesgo de selección",
-      "correlación"
-    ],
-    "model": [
-      "Modelo parcial de apertura (no es una entrega completa): El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas."
-    ],
-    "checklist": [
-      "La tesis tiene alcance preciso y pruebas identificables.",
-      "No convierto una propuesta en decisión ni una inferencia en dato.",
-      "El registro responde al destinatario y no borra condiciones.",
-      "La cohesión conserva referentes y voces sin repeticiones inútiles.",
-      "La revisión explica qué cambia para quien lee."
-    ],
-    "words": [
-      450,
-      600
-    ]
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no un guion leído. La grabación, si la usas, permanece local; el navegador no califica pronunciación ni calidad oral.",
-    "tasks": [
-      {
-        "title": "Exposición situada",
-        "prompt": "Expón los resultados primero al equipo investigador y después a una asociación vecinal. Responde a quien afirma que si no hay causalidad probada, el estudio no vale nada.",
-        "prep": [
-          "Anota tesis, dos pruebas, una objeción y una reserva.",
-          "Marca dos focos prosódicos y un punto donde cambiarás de registro."
-        ],
-        "seconds": 240,
-        "model": "El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas.",
-        "selfCheck": [
-          "La condición principal se oye con claridad.",
-          "Distingo mi interpretación de las voces citadas.",
-          "Puedo reparar una frase sin abandonar el argumento."
-        ]
-      },
-      {
-        "title": "Interacción y reformulación",
-        "prompt": "Tu interlocutor sostiene: «El nuevo horario explica por sí solo todo el aumento.». Responde sin caricaturizarlo, formula dos preguntas de seguimiento y pide que reformule tu condición principal. Después resume para una persona que no conoce el expediente de Descomprimir una idea.",
-        "prep": [
-          "Prepara una concesión real y una corrección de alcance.",
-          "Anticipa qué término deberás explicar sin jerga."
-        ],
-        "seconds": 240,
-        "model": "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva. Respondieron sesenta de las doscientas personas invitadas.",
-        "selfCheck": [
-          "La respuesta atiende la preocupación, no solo corrige la forma.",
-          "La versión breve conserva el límite decisivo.",
-          "Adapto el ritmo después de la interrupción."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La mascota te espera con una tarjeta de contraste: lleva tu dossier y una decisión lingüística que quieras poner a prueba con tu docente.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Presenta tu decisión más discutible sobre Descomprimir una idea y pide un contraejemplo que la ponga a prueba.",
-        "phrases": [
-          "Mi lectura se apoya en…",
-          "Cambiaría de interpretación si…"
-        ]
-      },
-      {
-        "move": "Reformula",
-        "task": "Explica el límite «Respondieron sesenta de las doscientas personas invitadas.» a otro público sin rebajar su importancia.",
-        "phrases": [
-          "En otros términos…",
-          "Esta versión conserva…"
-        ]
-      },
-      {
-        "move": "Negocia",
-        "task": "Responde a la objeción «La falta de causalidad probada demuestra que el programa no sirve.» y acuerda una formulación que ambos puedan defender.",
-        "phrases": [
-          "Reconozco ese punto; mi reserva es…",
-          "Podemos dejar constancia de…"
-        ]
-      }
+  writing: {
+    task: "Redacta el protocolo de trato del servicio de envíos (400–520 palabras). Explica a los agentes qué trato usar en los textos generales, en los mensajes personalizados para Ecuador, Argentina y España y en las llamadas; cómo interpretar los cambios de trato y cómo aceptar o declinar un tuteo.",
+    context: "El protocolo lo leerán agentes de tres países que conocen su propio sistema, pero no siempre los de los demás. Usa ejemplos breves de mensajes reales o inventados. El protocolo se escribe con tú, porque se dirige a cada agente.",
+    steps: [
+      "Haz una tabla con tres columnas: situación, trato recomendado y ejemplo. Incluye textos generales, un mensaje en voseo, uno con vosotros, uno con ustedes y una llamada con cambio de trato.",
+      "Decide el orden: principio general, textos de la aplicación, mensajes por país, llamadas y propuestas de tuteo.",
+      "Redacta sin copiar el modelo. Cada ejemplo de mensaje tiene que ser coherente en verbos, pronombres y posesivos.",
+      "Revisa el protocolo con la lista de control: corrige cualquier mezcla de sistemas y comprueba las tildes de los imperativos de vos con pronombre.",
     ],
-    "bring": "El dossier, una versión revisada, notas de escucha y una grabación local opcional; no se necesita subir audio."
-  },
-  "quiz": {
-    "items": [
-      {
-        "type": "choice",
-        "q": "Balance de Descomprimir una idea: ¿qué conclusión conserva el alcance?",
-        "options": [
-          "El nuevo horario explica por sí solo todo el aumento.",
-          "El informe describe un aumento sin demostrar que el horario sea su causa exclusiva."
-        ],
-        "answer": 1,
-        "why": "Relaciona el texto principal con el documento complementario."
-      },
-      {
-        "type": "choice",
-        "q": "En una revisión final de Descomprimir una idea, ¿qué afirmación debe rechazarse?",
-        "options": [
-          "Respondieron todas las personas invitadas.",
-          "Respondieron sesenta de las doscientas personas invitadas."
-        ],
-        "answer": 0,
-        "why": "La primera opción contradice la condición explícita."
-      },
-      {
-        "type": "listen",
-        "q": "Escucha esta síntesis de Descomprimir una idea. ¿Qué interpretación mantiene?",
-        "options": [
-          "Una cautela metodológica no equivale a una recomendación de retirar el servicio.",
-          "La falta de causalidad probada demuestra que el programa no sirve."
-        ],
-        "answer": 0,
-        "why": "La relación expresada limita una generalización.",
-        "audio": "Una cautela metodológica no equivale a una recomendación de retirar el servicio.",
-        "voice": "es-ES-f"
-      },
-      {
-        "type": "gap",
-        "q": "En «Descomprimir una idea», ¿qué unidad expresa «explicación de un efecto por una causa»? ___ .",
-        "answers": [
-          [
-            "atribución causal"
-          ]
-        ],
-        "hint": "explicación de un efecto por una causa",
-        "why": "Recupera la unidad a partir de su función, no de una traducción."
-      },
-      {
-        "type": "gap",
-        "q": "Para nombrar «diferencia producida por cómo se elige la muestra» en este expediente usamos ___ .",
-        "answers": [
-          [
-            "sesgo de selección"
-          ]
-        ],
-        "why": "La distinción léxica debe conservarse al mediar."
-      },
-      {
-        "type": "error",
-        "sentence": "Los datos permiten de concluir que hubo más consultas.",
-        "answers": [
-          "Los datos permiten concluir que hubo más consultas."
-        ],
-        "why": "Permitir seguido de infinitivo no lleva la preposición de."
-      },
-      {
-        "type": "transform",
-        "source": "La digitalización de la colección por el archivo facilitó su consulta.",
-        "instruction": "Sustituye la nominalización inicial por «El archivo digitalizó…» y enlaza con «y así».",
-        "answers": [
-          "El archivo digitalizó la colección y así facilitó su consulta."
-        ],
-        "why": "Reconstruir el agente: conserva la relación solicitada y compara qué se hace explícito."
-      },
-      {
-        "type": "open",
-        "prompt": "Cierre de «Descomprimir una idea»: escribe 90–120 palabras para una audiencia nueva. Incluye tesis, condición y una pregunta pendiente; justifica una elección de registro.",
-        "model": "El uso registrado del archivo aumentó después de la ampliación horaria, la digitalización y una exposición vinculada al catálogo. El diseño no permite aislar el efecto de cada intervención. Además, el indicador agrega modalidades distintas y la encuesta recoge sesenta respuestas de doscientas invitaciones. Estos límites no vuelven inútil el estudio: orientan una evaluación posterior más precisa. Para el público general, conviene explicar que abrir una puerta y hacer visible una colección al mismo tiempo dificulta atribuir el cambio a una sola causa. La analogía aclara el problema, pero no sustituye la definición de las medidas.",
-        "checklist": [
-          "Conservo la reserva decisiva.",
-          "Atribuyo una fuente y delimito mi inferencia.",
-          "El destinatario puede identificar el siguiente paso."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Interpreto sintaxis compleja, nominalización y jerarquía informativa en fuentes originales.",
-      "Puedo explicar por qué «El nuevo horario explica por sí solo todo el aumento.» excede la evidencia.",
-      "Defiendo y reviso un dossier escrito y oral con destinatario concreto."
+    useLanguage: [
+      "vos tenés / podés; contame, avisame",
+      "ustedes + su / les en América; vosotros + os / vuestro en España",
+      "volver al usted suele indicar…",
+      "el usted afectivo de algunas zonas",
+      "Si no le molesta, prefiero seguir tratándole de usted.",
+      "tú + ustedes como opción neutra",
     ],
-    "review": [
-      "Dentro de dos días, reconstruye sin mirar el límite: Respondieron sesenta de las doscientas personas invitadas.",
-      "Dentro de una semana, reescribe el cierre para otro público y contrástalo con tu versión inicial.",
-      "En clase, pide una objeción a «El informe describe un aumento sin demostrar que el horario sea su causa exclusiva.» y registra qué cambiarías."
-    ]
-  }
+    model: [
+      "Modelo parcial de apertura (no es una entrega completa): Este protocolo existe porque nuestros clientes no hablan todos igual, y ninguno de ellos habla mal. Una familia de Quito, un estudiante de Córdoba y un grupo de amigos de Madrid esperan cosas distintas cuando reciben un mensaje nuestro. Tu tarea es tratarlos como ellos esperan, sin imitar lo que no dominas. El principio es sencillo: en los textos que ve todo el mundo, usa tú en singular y ustedes en plural; en los mensajes personalizados, adapta el trato al país del cliente; y en las llamadas, escucha cómo te hablan, porque un cambio de pronombre puede ser la primera señal de un problema.",
+    ],
+    checklist: [
+      "Cada ejemplo es coherente en verbos, pronombres y posesivos.",
+      "Explico el plural americano y el peninsular sin presentar uno como el correcto.",
+      "Presento el voseo como norma de su zona.",
+      "Explico qué comunica volver al usted y en qué casos no comunica nada.",
+      "Incluyo una fórmula para aceptar y otra para declinar el tuteo.",
+    ],
+    words: [400, 520],
+  },
+  speaking: {
+    intro: "Prepárate con palabras clave, no con un guion leído. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
+      {
+        title: "Formación para agentes nuevos",
+        prompt: "Eres Gabriela. Explica en unos cuatro minutos a un grupo de agentes nuevos los sistemas de trato que van a encontrar: tuteo, voseo, usted de distancia y de cariño, ustedes y vosotros. Usa al menos un ejemplo de cada uno y termina con la regla sobre los cambios de trato.",
+        prep: [
+          "Anota un ejemplo breve para cada sistema.",
+          "Prepara una frase que resuma la regla sobre los cambios.",
+        ],
+        seconds: 240,
+        model: "Bienvenidos. Lo primero que tienen que saber es que no hay una sola forma correcta de tratar a un cliente. En Argentina les van a decir «vos tenés razón», y eso es norma culta allí, no un error. Aquí en la Sierra, una señora puede tratar de usted a su nieto, y eso es cariño. En España, un grupo de amigos espera «podéis»…",
+        selfCheck: [
+          "Pronuncio las formas de vos con acento agudo.",
+          "Doy un ejemplo de cada sistema.",
+          "No presento ninguna variedad como incorrecta.",
+        ],
+      },
+      {
+        title: "Atender a una clienta que vuelve al usted",
+        prompt: "Eres agente. La clienta llevaba la llamada tuteándote y dice: «Mire, joven, usted me dijo que el dinero llegaba hoy y mi madre lo necesita». Responde: vuelve al usted, reconoce el problema, hazle dos preguntas para resolverlo y ofrece una solución con plazo.",
+        prep: [
+          "Prepara una frase de reconocimiento sin excusas.",
+          "Piensa dos preguntas útiles (número de giro, ciudad de destino).",
+        ],
+        seconds: 150,
+        model: "Tiene usted toda la razón, señora, y le pido disculpas: le dije que llegaba hoy y no ha sido así. ¿Me confirma el número de giro, por favor? ¿Su madre lo retira en Guayaquil o en Quito? Voy a pedir que se libere hoy antes de las cinco y la llamo yo misma para confirmárselo.",
+        selfCheck: [
+          "Vuelvo al usted de forma coherente.",
+          "Hago dos preguntas reales.",
+          "Ofrezco una solución con plazo.",
+        ],
+      },
+      {
+        title: "Negociar el trato con un colega",
+        prompt: "Un colega nuevo de Rosario te dice: «Che, tratame de vos, que acá somos todos compañeros». Tú eres de Quito y estás más cómodo con el usted entre colegas. Negocia el trato: acepta, propón una alternativa o declina, y explica tus motivos con naturalidad.",
+        prep: [
+          "Decide si aceptas, propones tú o declinas.",
+          "Prepara una frase que muestre que tu decisión no es frialdad.",
+        ],
+        seconds: 120,
+        selfCheck: [
+          "Respondo de forma explícita a la propuesta.",
+          "Mantengo la coherencia del trato que elijo.",
+        ],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a la próxima clase tus ejemplos de mensajes y una duda concreta. Estas tarjetas te ayudan a aprovechar el tiempo con tu profesor.",
+    cards: [
+      {
+        move: "Pregunta",
+        task: "Pregúntale a tu profesor qué trato usa con su familia, con sus colegas y con desconocidos, y si alguna vez cambió de trato con alguien y por qué.",
+        phrases: ["¿Con quién usas usted?", "¿Te ha pasado que alguien volviera al usted contigo?"],
+      },
+      {
+        move: "Adapta",
+        task: "Lleva un mensaje corto y pide a tu profesor que te lo dicte; reescríbelo en voseo, en vosotros y en ustedes, y comprobad juntos la coherencia.",
+        phrases: ["En voseo quedaría…", "¿Aquí va «su» o «vuestro»?"],
+      },
+      {
+        move: "Interpreta",
+        task: "Describe una escena de una serie o una película en la que un personaje cambie de trato y explica qué comunica ese cambio.",
+        phrases: ["Hasta ese momento la tuteaba…", "Cuando vuelve al usted, lo que quiere decir es…"],
+      },
+      {
+        move: "Negocia",
+        task: "Representa con tu profesor la propuesta «¿nos tuteamos?» y practica aceptarla y declinarla con cortesía.",
+        phrases: ["Con mucho gusto.", "Si no te importa, prefiero…"],
+      },
+    ],
+    bring: "Tu protocolo revisado, la tabla de situaciones y, si quieres, la grabación de la formación para agentes.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "¿Qué frase es coherente con el voseo rioplatense?",
+        options: [
+          "Vos sabes que podés venir cuando quieras.",
+          "Vos sabés que podés venir cuando quieras.",
+          "Vos sabéis que podéis venir cuando queráis.",
+        ],
+        answer: 1,
+        why: "Presente agudo en los dos verbos («sabés», «podés»); en el subjuntivo lo más frecuente es la forma de tú, «quieras».",
+      },
+      {
+        type: "choice",
+        q: "Una clienta que tutea a la agente desde el principio dice de pronto: «Usted no me está escuchando». ¿Qué comunica el cambio?",
+        options: [
+          "Enfado o distancia.",
+          "Mayor confianza.",
+          "Nada: es su trato habitual.",
+        ],
+        answer: 0,
+        why: "Volver al usted tras tutear suele indicar enfado o reproche.",
+      },
+      {
+        type: "listen",
+        q: "Escucha el mensaje. ¿A quién se dirige con más probabilidad?",
+        options: [
+          "A un grupo de clientes en Ecuador.",
+          "A un cliente en Uruguay.",
+          "A un grupo de amigos en Madrid.",
+        ],
+        answer: 2,
+        why: "«Podéis» y «vuestros» son formas de vosotros, propias del plural de confianza en España.",
+        audio: "Ya podéis consultar vuestros envíos desde la aplicación.",
+        voice: "es-ES-m",
+      },
+      {
+        type: "gap",
+        q: "Mensaje para Buenos Aires: Si ___ algún problema con el código, escribinos. [tener]",
+        answers: [["tenés"]],
+        hint: "Presente de vos, agudo y con tilde.",
+        why: "«Tenés»: presente de indicativo de vos.",
+      },
+      {
+        type: "gap",
+        q: "Mensaje para Quito: Estimados clientes, ___ envío llegará el lunes.",
+        answers: [["su"]],
+        hint: "Posesivo de «ustedes» en América.",
+        why: "En América, «ustedes» lleva el posesivo «su».",
+      },
+      {
+        type: "transform",
+        source: "Contame qué pasó y decime cómo te puedo ayudar.",
+        instruction: "Reformula el mensaje para un cliente al que tratas de usted, sin cambiar el contenido.",
+        answers: ["Cuénteme qué pasó y dígame cómo le puedo ayudar.", "Cuénteme qué pasó y dígame cómo lo puedo ayudar.", "Cuénteme qué pasó y dígame cómo la puedo ayudar."],
+        why: "Imperativos de usted («cuénteme», «dígame») y pronombre de tercera persona.",
+      },
+      {
+        type: "error",
+        sentence: "Mensaje para Lima: Queridos clientes, os esperamos en nuestra nueva oficina.",
+        answers: ["Mensaje para Lima: Queridos clientes, los esperamos en nuestra nueva oficina.", "Mensaje para Lima: Queridos clientes, les esperamos en nuestra nueva oficina."],
+        why: "En América el plural es «ustedes»: «los» (o «les») esperamos.",
+      },
+      {
+        type: "error",
+        sentence: "Vos tenés razón; mañana te llamo y hablamos contigo.",
+        answers: ["Vos tenés razón; mañana te llamo y hablamos con vos."],
+        why: "Tras preposición, el voseo usa «con vos».",
+      },
+      {
+        type: "order",
+        words: ["Si", "no", "le", "molesta,", "prefiero", "seguir", "tratándolo", "de", "usted."],
+        why: "Fórmula cortés para declinar un tuteo.",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 80–100 palabras a un colega de Madrid por qué un cliente de Bogotá puede tratar de usted a su propia madre y por qué eso no significa frialdad. Añade qué debe hacer el colega si ese cliente, en una llamada, pasa al tú.",
+        model: "En algunas zonas de Colombia, como en partes de Costa Rica, el usted no solo marca respeto: también es el trato de la intimidad, entre padres e hijos o en la pareja. Por eso un bogotano puede decirle «mamá, ¿usted cómo está?» con todo el cariño. No hay que leerlo como distancia. Si ese cliente pasa al tú en una llamada, el cambio sí puede comunicar algo, pero tampoco hay que suponer: lo mejor es mantener el usted propio del servicio y escuchar el tono.",
+        checklist: [
+          "Explico el usted afectivo con un ejemplo.",
+          "Relaciono la interpretación con el trato habitual.",
+          "Doy una recomendación prudente sobre el cambio.",
+        ],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Reconozco y uso con coherencia las formas del voseo rioplatense: presente e imperativo agudos, «te», «tu», «con vos».",
+      "Elijo entre tú, vos, usted, ustedes y vosotros según la zona y la relación, y uso tú + ustedes para un público internacional.",
+      "Interpreto el usted de distancia y el usted afectivo según el trato habitual de cada persona.",
+      "Interpreto qué comunica un cambio de trato y propongo, acepto o declino un tuteo con cortesía.",
+    ],
+    review: [
+      "Dentro de dos días, conjuga de memoria «poder», «venir» y «decir» con vos en presente e imperativo, y comprueba las tildes.",
+      "Dentro de una semana, observa en una serie o en una conversación real un cambio de trato y escribe qué comunicó.",
+      "En la próxima clase, pide a tu profesor que revise la coherencia de los mensajes de tu protocolo.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/voseo-tuteo-y-ustedeo-cambios-pragmaticos", label: "Clase: Voseo, tuteo y ustedeo: cambios pragmáticos de registro" },
+  ],
 };

@@ -1,0 +1,11 @@
+[
+  [1, "gram", "g001", "Primer hola: personas, ser y estar", "Puedo decir quién soy, de dónde soy, cómo estoy y dónde estoy, y reconocer yo, tú, usted, nosotros, vosotros, ellos y ustedes.", [], { "related": ["/gramatica/clase-inicial"] }],
+  [1, "gram", "g002", "Sustantivos: género y plural", "Puedo nombrar personas, lugares y cosas con su artículo, reconocer su género y pasarlas al plural.", [], { "related": ["/la-fabrica-de-los-nombres"] }],
+  [1, "voc", "w01-objetos-habitacion", "Objetos de la mochila y la habitación", "Puedo nombrar las cosas de mi mochila y de mi habitación con su artículo.", ["a1.gram.g002"]],
+  [1, "pron", "w01-deletrear", "Deletrear con los nombres de las letras", "Puedo deletrear mi nombre y entender una palabra deletreada.", []],
+  [1, "lis", "w01-llegada-residencia", "Escuchar una llegada a una residencia", "Puedo entender nombres, números de habitación, origen y estado en un registro breve.", ["a1.gram.g001"]],
+  [1, "read", "w01-nota-presentacion", "Leer una nota de presentación", "Puedo entender una nota breve en la que alguien se presenta, describe su habitación y pide algo.", ["a1.gram.g001", "a1.gram.g002"]],
+  [1, "wri", "w01-mensaje-grupo", "Escribir una nota para los vecinos", "Puedo escribir una nota breve para presentarme, describir mi habitación y pedir una cosa.", ["a1.gram.g001", "a1.gram.g002", "a1.voc.w01-objetos-habitacion"]],
+  [1, "spk", "w01-presentacion-cosas", "Presentarme y nombrar mis cosas", "Puedo presentarme en voz alta durante unos 40 segundos y nombrar tres cosas que tengo.", ["a1.fun.w01-presentarse-pedir"]],
+  [1, "fun", "w01-presentarse-pedir", "Presentarse en un lugar nuevo y pedir algo", "Puedo presentarme a vecinos o en una recepción, decir cómo estoy y pedir un objeto que necesito.", ["a1.gram.g001"]]
+]

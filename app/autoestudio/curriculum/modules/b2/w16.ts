@@ -1,163 +1,402 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 16 · Autoestudio espejo de G157 (participios y adjetivos resultativos) y
+ * G158 (perífrasis de obligación e inferencia). Repaso autónomo con la mudanza ficticia de una
+ * biblioteca comunitaria de Temuco. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w16: Module = {
   "id": "b2-16",
   "level": "b2",
   "week": 16,
   "kind": "core",
-  "title": "La precisión también facilita el acceso",
-  "subtitle": "Reformular conceptos y revisar colocaciones.",
+  "title": "Tenemos embaladas trescientas cajas y alguna debe de faltar",
+  "subtitle": "Repaso de tener, llevar, dejar y quedar + participio, y de las perífrasis para obligar y para deducir: deber, deber de, tener que, haber de, hay que y venir a",
   "stop": {
     "place": "Temuco",
     "country": "Chile"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.voc.colocaciones",
-    "b2.voc.formacion-palabras",
-    "b2.gram.nominalizacion",
-    "b2.pron.acento-derivados",
-    "b2.wri.reescritura-precisa",
-    "b2.fun.definir"
+    "b2.gram.g157",
+    "b2.gram.g158",
+    "b2.voc.w16-mudanza-biblioteca",
+    "b2.pron.w16-terminaciones-y-de",
+    "b2.lis.w16-dia-de-mudanza",
+    "b2.read.w16-diario-mudanza",
+    "b2.wri.w16-informe-estado",
+    "b2.spk.w16-balance-y-deduccion",
+    "b2.fun.w16-balance-obligacion-deduccion",
+    "b2.disc.w16-informe-hecho-pendiente"
   ],
-  "reviewObjectives": [
-    "b2.gram.verbos-cambio-sistema",
-    "b2.gram.ser-estar-matices",
-    "b2.voc.personalidad",
-    "b2.pron.chile",
-    "b2.fun.describir-transformacion",
-    "b2.lis.voces-chile",
-    "b2.rev.checkpoint-3",
-    "b2.read.dossier"
-  ],
-  "prerequisites": [
-    "b2-15"
-  ],
+  reviewObjectives: ["b2.gram.g155","b2.gram.g156","b2.voc.w15-ciudad-rio","b2.pron.w15-conectores-entonacion","b2.lis.w15-debate-radio","b2.read.w15-reportaje-costanera","b2.wri.w15-observacion-consulta","b2.spk.w15-debatir-propuesta","b2.fun.w15-conceder-matizar","b2.disc.w15-conceder-objetar","b2.rev.w15-semanas-11-15"],
+  prerequisites: ["b2-15"],
   "goal": {
-    "canDo": "Puedo reformular conceptos y revisar colocaciones con razones, matices y condiciones claras.",
+    "canDo": "Puedo presentar el estado de un proyecto con participios que concuerdan (tengo revisadas, llevamos embaladas, quedó cerrada), decir qué hay que hacer y deducir lo que no veo distinguiendo «debe» de «debe de».",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: hacer comprensible un servicio sin prometer resultados ajenos.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa qué verbos presentan un resultado con participio y con qué palabra concuerda ese participio.",
+      "Separa la obligación de la deducción: deber, deber de, tener que, haber de, hay que y venir a.",
+      "Escucha a dos voluntarios el día de la mudanza y lee el diario de la biblioteca.",
+      "Escribe un informe para la junta de vecinos, revísalo y defiéndelo oralmente."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: reformular conceptos y revisar colocaciones. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase trabajaste estas construcciones con tu profesor. Aquí las repasas de otra manera: con la mudanza de una biblioteca de barrio en Temuco, tablas para consultar y los errores que más aparecen cuando alguien hace balance o intenta adivinar qué pasó.",
     "parts": [
       {
-        "heading": "Reformular conceptos y revisar colocaciones",
+        "heading": "El resultado en tus manos: tener, llevar y dejar + participio",
         "body": [
-          "Las colocaciones son combinaciones habituales: plantear un problema, adoptar una medida, sacar conclusiones. No se deducen siempre de sinónimos aislados. Los prefijos y sufijos ayudan a inferir significados, pero deben comprobarse en contexto: reutilización indica nuevo uso; inutilizable niega la posibilidad de utilizar."
+          "Con «haber» cuentas una acción hecha y el participio no cambia nunca: «hemos revisado las fichas». Con «tener», «llevar» y «dejar» presentas el resultado de esa acción, y entonces el participio se comporta como un adjetivo del objeto directo: concuerda con él en género y número. «Tengo revisadas las fichas», «llevamos embaladas doscientas cajas», «dejé cerrada la bodega».",
+          "Cada verbo añade un matiz. «Tener» presenta algo listo, disponible. «Llevar» suma lo hecho hasta ahora y deja la tarea abierta, por eso suele ir con una cantidad. «Dejar» habla de cómo quedó algo cuando te fuiste o lo soltaste. Hay además formas fijas que no concuerdan porque no tienen un objeto visible: «tengo entendido que…», «tengo pensado mudarme», «te tengo dicho que no…»."
         ],
+        "table": {
+          "caption": "Un mismo participio con cuatro verbos (la caja / las cajas)",
+          "head": [
+            "Verbo",
+            "Qué presenta",
+            "Ejemplo",
+            "Concuerda con"
+          ],
+          "rows": [
+            [
+              "haber",
+              "la acción realizada",
+              "Hemos etiquetado las cajas.",
+              "nada: forma fija"
+            ],
+            [
+              "tener",
+              "el resultado disponible",
+              "Tenemos etiquetadas las cajas.",
+              "el objeto: las cajas"
+            ],
+            [
+              "llevar",
+              "lo hecho hasta ahora, con la tarea abierta",
+              "Llevamos etiquetadas ochenta cajas.",
+              "el objeto: ochenta cajas"
+            ],
+            [
+              "dejar",
+              "cómo quedó algo al irte",
+              "Dejamos etiquetada la última caja.",
+              "el objeto: la última caja"
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "La comisión decidió adoptar una medida provisional.",
-            "note": "Colocación habitual con medida."
+            "es": "Javiera tiene impresas las etiquetas desde el lunes.",
+            "note": "El sujeto no tiene que ser quien imprimió: basta con que tenga el resultado."
           },
           {
-            "es": "Revisar el contrato: la revisión del contrato.",
-            "note": "Nominalización de revisar."
+            "es": "Llevo leídos tres informes; me falta el cuarto.",
+            "note": "«Llevar» + cantidad: la tarea continúa."
           },
           {
-            "es": "Un envase que puede usarse otra vez es reutilizable.",
-            "note": "Prefijo re- y sufijo -ble."
+            "es": "Lo dejé dicho en la reunión: nadie mueve los mapas antiguos.",
+            "note": "«Dejar dicho» fija una instrucción para después."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Debemos hacer una conclusión basada en el folleto.",
-            "right": "Debemos sacar una conclusión basada en el folleto.",
-            "why": "Sacar una conclusión es la colocación idiomática."
+            "wrong": "Tenemos revisado todas las estanterías.",
+            "right": "Tenemos revisadas todas las estanterías.",
+            "why": "Con «tener», el participio concuerda con el objeto: estanterías → revisadas."
+          },
+          {
+            "wrong": "Hemos embaladas cuarenta cajas.",
+            "right": "Hemos embalado cuarenta cajas.",
+            "why": "Después de «haber», el participio nunca concuerda."
+          }
+        ],
+        "tip": "Antes de escribir el participio, subraya el objeto directo. Si el verbo auxiliar es «tener», «llevar» o «dejar», copia su género y su número."
+      },
+      {
+        "heading": "Cómo terminó todo: quedar, quedarse, ir y andar + participio",
+        "body": [
+          "Con «quedar» y «quedarse» el participio concuerda con el sujeto. «Quedar» se usa sobre todo con cosas y situaciones, muchas veces sin que nadie lo haya querido: «la puerta quedó abierta toda la noche». «Quedarse» aparece más con personas y suele expresar algo involuntario: «me quedé dormida en el bus». «Ir» y «andar» describen cómo está alguien o algo mientras se mueve o en una etapa: «el seguro va incluido», «anda preocupado desde el lunes».",
+          "Algunos verbos tienen dos participios. Con «haber» valen los dos («han imprimido» y «han impreso», «ha freído» y «ha frito»), pero como adjetivo se prefiere el irregular: «los folletos impresos». Otros adjetivos parecen participios y no lo son: se dice «estoy despierto» pero «me he despertado». Y varios participios ganaron un sentido nuevo como adjetivos: una persona «leída» ha leído mucho, una persona «atrevida» se arriesga y alguien «agradecido» siente gratitud."
+        ],
+        "examples": [
+          {
+            "es": "Después de la lluvia, el patio quedó inundado.",
+            "note": "Resultado de una situación: concuerda con «el patio»."
+          },
+          {
+            "es": "Las voluntarias se quedaron sorprendidas con la donación.",
+            "note": "Personas, reacción no buscada: concuerda con «las voluntarias»."
+          },
+          {
+            "es": "Matías anda cansado con tanta caja.",
+            "note": "«Andar» + participio: un estado que dura unos días."
+          },
+          {
+            "es": "Don Hernán es muy leído: conoce todos los autores de la sección de historia.",
+            "note": "Participio con sentido activo: «que ha leído mucho»."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Han imprimidos los carnés nuevos.",
+            "right": "Han imprimido (o impreso) los carnés nuevos.",
+            "why": "Tras «haber», ni siquiera el participio regular concuerda."
+          },
+          {
+            "wrong": "El niño está despertado desde las seis.",
+            "right": "El niño está despierto desde las seis.",
+            "why": "Como adjetivo de estado se usa «despierto»; «despertado» va con «haber»."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Obligación o deducción: deber, deber de y tener que",
         "body": [
-          "La nominalización convierte una acción en un nombre: se revisó el acuerdo, la revisión del acuerdo. Puede condensar y enlazar ideas, pero varias nominalizaciones seguidas ocultan agentes y dificultan la lectura. Define un concepto con categoría, rasgo distintivo y ejemplo; después comprueba qué relación se perdió al resumir."
+          "«Deber + infinitivo» expresa una obligación o un consejo firme: «debes devolver el libro el viernes». «Deber de + infinitivo» expresa una deducción: no sabes algo con seguridad, pero lo supones a partir de lo que ves. «Debe de ser el camión: ya son las nueve». Las gramáticas aceptan también «deber» sin «de» para deducir, pero desaconsejan usar «deber de» para obligar.",
+          "La deducción puede mirar al pasado: «debía de ser muy tarde», «debió de olvidarse», «debe de haber llovido toda la noche». Cuando la deducción es casi segura, se usa «tener que»: «tiene que haber una gotera en el techo, el suelo está mojado». Así puedes ordenar tu grado de seguridad: «tiene que» (casi seguro), «debe de» (probable), «a lo mejor» o «quizás» (posible)."
+        ],
+        "table": {
+          "caption": "Misma forma, dos funciones",
+          "head": [
+            "Forma",
+            "Obligación",
+            "Deducción"
+          ],
+          "rows": [
+            [
+              "deber + infinitivo",
+              "Debes firmar el registro.",
+              "aceptado, menos claro: Debe estar cerrado."
+            ],
+            [
+              "deber de + infinitivo",
+              "se desaconseja",
+              "Debe de estar cerrado."
+            ],
+            [
+              "tener que + infinitivo",
+              "Tienes que firmar el registro.",
+              "Tiene que estar cerrado (casi seguro)."
+            ],
+            [
+              "deber de haber + participio",
+              "—",
+              "Debe de haber llegado ya."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Los voluntarios deben llegar a las ocho.",
+            "note": "Obligación del horario."
+          },
+          {
+            "es": "El camión debe de estar en la autopista; salió hace una hora.",
+            "note": "Deducción a partir de un dato."
+          },
+          {
+            "es": "Tenía que ser Matías: nadie más deja así los cordones.",
+            "note": "Deducción segura en pasado."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Los socios deben de pagar la cuota antes de marzo.",
+            "right": "Los socios deben pagar la cuota antes de marzo.",
+            "why": "Es una obligación: sin «de»."
+          }
+        ],
+        "tip": "Pregúntate si alguien manda o si alguien supone. Si supone, pon «de» y la frase queda clara para cualquier lector."
+      },
+      {
+        "heading": "Haber de, hay que en todos los tiempos y venir a",
+        "body": [
+          "«Haber de + infinitivo» es una obligación propia de textos formales o escritos: «los libros han de devolverse en buen estado». En el habla de México y de otras zonas también sirve para suponer: «ha de estar en la oficina». «Haber que» es impersonal y se conjuga en todos los tiempos, siempre en singular: «hubo que», «había que», «habrá que», «habría que», «aunque haya que». También es singular «debe de haber» cuando «haber» significa existir: «debe de haber cien cajas», nunca «deben de haber».",
+          "«Venir a + infinitivo» sirve para aproximar una cifra («la mudanza viene a costar trescientos mil pesos») o para resumir una equivalencia («lo que propone viene a ser cerrar un mes»). Y si quieres suavizar una obligación, pasa el verbo al condicional: «deberías», «tendrías que», «habría que»."
         ],
         "examples": [
           {
-            "es": "La comisión decidió adoptar una medida provisional.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "El sábado hubo que cargar las estanterías entre seis personas.",
+            "note": "«Haber que» en pretérito, impersonal."
           },
           {
-            "es": "Un envase que puede usarse otra vez es reutilizable.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "En el local nuevo debe de haber unos doce enchufes.",
+            "note": "«Haber» impersonal: singular."
+          },
+          {
+            "es": "Habría que avisar a los lectores con una semana de anticipación.",
+            "note": "Obligación suavizada."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Deben de haber muchas goteras en ese techo.",
+            "right": "Debe de haber muchas goteras en ese techo.",
+            "why": "«Haber» de existencia no tiene plural, tampoco dentro de una perífrasis."
+          },
+          {
+            "wrong": "Habrán que pintar las paredes.",
+            "right": "Habrá que pintar las paredes.",
+            "why": "«Haber que» es impersonal: siempre en tercera persona singular."
           }
         ]
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero el participio que concuerda; después la decisión entre obligar y deducir.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-16-g-participio",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de la precisión también facilita el acceso; justifica el modo, la forma o la combinación.",
+        "prompt": "Escribe el participio del verbo entre paréntesis con la forma correcta. Fíjate en el verbo que lo acompaña.",
         "items": [
           {
-            "q": "La comisión decidió ___ una medida provisional.",
+            "q": "Ya tenemos ___ (numerar) las cajas de la sección infantil.",
             "answers": [
               [
-                "adoptar"
+                "numeradas"
               ]
             ],
-            "why": "Colocación habitual con medida."
+            "why": "«Tener» + participio concuerda con «las cajas»."
           },
           {
-            "q": "Revisar el contrato: la ___ del contrato.",
+            "q": "Hasta ahora llevo ___ (escribir) veinte fichas nuevas.",
             "answers": [
               [
-                "revisión"
+                "escritas"
               ]
             ],
-            "why": "Nominalización de revisar."
+            "why": "Participio irregular de «escribir», concordado con «fichas»."
           },
           {
-            "q": "Un envase que puede usarse otra vez es ___.",
+            "q": "Los voluntarios han ___ (envolver) los mapas en papel.",
             "answers": [
               [
-                "reutilizable"
+                "envuelto"
               ]
             ],
-            "why": "Prefijo re- y sufijo -ble."
+            "why": "Con «haber» no hay concordancia: «envuelto»."
+          },
+          {
+            "q": "Con el viento, la ventana del depósito quedó ___ (romper).",
+            "answers": [
+              [
+                "rota"
+              ]
+            ],
+            "why": "«Quedar» concuerda con el sujeto: la ventana → rota."
+          },
+          {
+            "q": "Antes de irse, Matías dejó ___ (abrir) las cortinas para que se secara la pintura.",
+            "answers": [
+              [
+                "abiertas"
+              ]
+            ],
+            "why": "«Dejar» concuerda con el objeto: las cortinas → abiertas."
+          },
+          {
+            "q": "Las empanadas para los voluntarios ya están ___ (freír).",
+            "answers": [
+              [
+                "fritas"
+              ]
+            ],
+            "why": "Como adjetivo se prefiere el participio irregular: fritas."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-16-g-funcion",
+        "type": "context",
+        "prompt": "Lee la situación y elige la frase que corresponde.",
         "items": [
           {
-            "prompt": "Texto de partida: «La oficina revisó el formulario y eso evitó errores.» Nominaliza revisar sin perder el efecto.",
-            "model": "La revisión del formulario evitó errores.",
+            "context": "Javiera ve el suelo mojado debajo de la ventana y supone la causa.",
+            "q": "¿Qué dice para expresar una deducción?",
+            "options": [
+              "Debe haber cerrado la ventana.",
+              "Debe de haber entrado agua por la ventana.",
+              "Deben de haber goteras por la ventana."
+            ],
+            "answer": 1,
+            "why": "Deducción sobre el pasado: «debe de haber + participio»."
+          },
+          {
+            "context": "El reglamento de la biblioteca establece el plazo de devolución.",
+            "q": "¿Qué frase es propia de un reglamento?",
+            "options": [
+              "Los libros han de devolverse en un plazo de quince días.",
+              "Los libros deben de devolverse en quince días.",
+              "Los libros vendrán a devolverse en quince días."
+            ],
+            "answer": 0,
+            "why": "«Haber de» expresa obligación en un texto formal; «deber de» sería deducción."
+          },
+          {
+            "context": "Nadie sabe el precio exacto del flete, pero alguien calcula.",
+            "q": "¿Qué frase aproxima la cifra?",
+            "options": [
+              "El flete ha de costar doscientos mil pesos.",
+              "Hay que costar doscientos mil pesos.",
+              "El flete viene a costar doscientos mil pesos."
+            ],
+            "answer": 2,
+            "why": "«Venir a + infinitivo» aproxima una cantidad."
+          },
+          {
+            "context": "Matías está seguro de que la llave está en la mochila: la guardó él mismo hace un minuto.",
+            "q": "¿Qué frase transmite casi certeza?",
+            "options": [
+              "A lo mejor está en la mochila.",
+              "Quizás esté en la mochila.",
+              "Tiene que estar en la mochila."
+            ],
+            "answer": 2,
+            "why": "«Tener que» expresa una deducción muy segura."
+          }
+        ]
+      },
+      {
+        "id": "b2-16-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida con la estructura que se pide. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «Hemos catalogado seiscientos libros y todavía faltan muchos». Reescríbelo con «llevar» + participio.",
+            "model": "Llevamos catalogados seiscientos libros y todavía nos faltan muchos.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Hago concordar el participio con «libros».",
+              "Mantengo la idea de tarea abierta.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Hicimos una medida para aclarar la inscripción.» Sustituye el verbo comodín por una colocación adecuada.",
-            "model": "Adoptamos una medida para aclarar la inscripción.",
+            "prompt": "Texto de partida: «Supongo que el camión se atrasó por la lluvia». Exprésalo con una perífrasis de deducción.",
+            "model": "El camión debe de haberse atrasado por la lluvia.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «deber de» y no «deber» solo para que se entienda como deducción.",
+              "Uso «haber + participio» porque la deducción es sobre el pasado.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «El envase puede utilizarse otra vez.» Condensa con un adjetivo formado por prefijo y sufijo.",
-            "model": "El envase es reutilizable.",
+            "prompt": "Texto de partida: «Alguien olvidó la puerta abierta y entró el perro». Cuenta el resultado con «quedar» o «dejar».",
+            "model": "Alguien dejó abierta la puerta y entró el perro.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Hago concordar el participio con «la puerta».",
+              "Elijo «dejar» si hay responsable o «quedar» si cuento solo el resultado.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «Tienen que pintar el local antes de abrir». Suaviza la obligación y hazla impersonal.",
+            "model": "Habría que pintar el local antes de abrir.",
+            "checklist": [
+              "Uso «haber que» en singular.",
+              "Paso el verbo al condicional para suavizar.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -165,282 +404,355 @@ export const b2w16: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para organizar una mudanza y describir un local. Apréndelas en bloque: el verbo y su complemento van juntos.",
     "groups": [
       {
-        "title": "Reformular conceptos y revisar colocaciones",
+        "title": "La mudanza",
         "items": [
           {
-            "es": "plantear un problema",
-            "note": "formular una dificultad"
+            "es": "embalar los libros",
+            "note": "meterlos en cajas protegidos"
           },
           {
-            "es": "adoptar medidas",
-            "note": "decidir acciones concretas"
+            "es": "rotular las cajas",
+            "note": "escribir en cada caja qué contiene"
           },
           {
-            "es": "sacar conclusiones",
-            "note": "deducir resultados"
+            "es": "el flete",
+            "note": "en Chile y otros países, el transporte de carga y su precio"
           },
           {
-            "es": "prestar atención",
-            "note": "concentrarse en algo"
+            "es": "desarmar las estanterías",
+            "note": "separarlas en piezas para moverlas"
           },
           {
-            "es": "llevar a cabo",
-            "note": "realizar una acción"
+            "es": "hacer un inventario",
+            "note": "contar y registrar todo lo que hay"
+          }
+        ]
+      },
+      {
+        "title": "El local nuevo",
+        "items": [
+          {
+            "es": "una gotera",
+            "note": "agujero del techo por el que entra agua"
           },
           {
-            "es": "dar por concluido",
-            "note": "considerar terminado"
+            "es": "la humedad",
+            "note": "agua acumulada en paredes o suelo"
           },
           {
-            "es": "poner de manifiesto",
-            "note": "hacer evidente"
+            "es": "estar en buen estado",
+            "note": "funcionar bien, no necesitar arreglos"
           },
           {
-            "es": "tomar una decisión",
-            "note": "elegir entre alternativas"
+            "es": "entregar las llaves",
+            "note": "dar oficialmente el local a otra persona"
+          },
+          {
+            "es": "la junta de vecinos",
+            "note": "en Chile, la organización de vecinos de un barrio"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-16-v-mudanza",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para reformular conceptos y revisar colocaciones con su significado.",
+        "prompt": "Relaciona cada expresión con la situación de la mudanza en la que encaja mejor.",
         "pairs": [
           {
-            "left": "plantear un problema",
-            "right": "formular una dificultad"
+            "left": "rotular las cajas",
+            "right": "Escribir «Poesía A–F» con plumón en cada caja."
           },
           {
-            "left": "adoptar medidas",
-            "right": "decidir acciones concretas"
+            "left": "desarmar las estanterías",
+            "right": "Sacar los tornillos y apilar las tablas en el pasillo."
           },
           {
-            "left": "sacar conclusiones",
-            "right": "deducir resultados"
+            "left": "una gotera",
+            "right": "Un balde en el suelo recoge el agua que cae del techo."
           },
           {
-            "left": "prestar atención",
-            "right": "concentrarse en algo"
+            "left": "hacer un inventario",
+            "right": "Contar cuántos libros hay en cada sección."
           },
           {
-            "left": "llevar a cabo",
-            "right": "realizar una acción"
+            "left": "entregar las llaves",
+            "right": "El párroco recibe el manojo y firma un papel."
           },
           {
-            "left": "dar por concluido",
-            "right": "considerar terminado"
-          },
-          {
-            "left": "poner de manifiesto",
-            "right": "hacer evidente"
-          },
-          {
-            "left": "tomar una decisión",
-            "right": "elegir entre alternativas"
+            "left": "el flete",
+            "right": "El camión cobra por kilómetro y por hora de carga."
           }
-        ]
+        ],
+        "why": "Cada expresión nombra una acción o un objeto concreto de la mudanza."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Practica carácter/caracteres, régimen/regímenes y claramente: en -mente conserva la prominencia de la base y evita mover todos los acentos por analogía.",
+    "focus": "Las partes pequeñas que cambian el sentido: la terminación del participio y el «de» de «debe de».",
     "explanation": [
-      "Practica carácter/caracteres, régimen/regímenes y claramente: en -mente conserva la prominencia de la base y evita mover todos los acentos por analogía.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "En «tengo revisadas las fichas», la terminación «-as» del participio dice de qué hablas aunque no oigas el resto de la frase. Pronuncia esa sílaba final completa, sin comértela: re-vi-SA-das. En el habla rápida de muchas zonas la «d» entre vocales se suaviza, pero la vocal y la «s» deben oírse.",
+      "En «debe de estar», las dos sílabas «be» y «de» se unen y suenan casi seguidas: de-be-de-es-TAR. Si omites el «de», la frase puede oírse como obligación. Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "La comisión decidió adoptar una medida provisional."
+        "es": "Tengo revisadas las fichas.",
+        "note": "re-vi-SA-das: la terminación femenina plural se oye entera."
       },
       {
-        "es": "Revisar el contrato: la revisión del contrato."
+        "es": "Debe de estar en la bodega.",
+        "note": "Deducción: «debe de» se une sin pausa."
       },
       {
-        "es": "Un envase que puede usarse otra vez es reutilizable."
+        "es": "Debe estar en la bodega a las ocho.",
+        "note": "Obligación con horario: sin «de»."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-16-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y elige lo que oyes. Concéntrate en las terminaciones y en el «de».",
       "items": [
         {
-          "q": "En la muestra 1 de la precisión también facilita el acceso, ¿qué fragmento se oye?",
+          "q": "¿Qué forma oyes en la frase sobre las sillas?",
           "options": [
-            "hacer",
-            "prestar",
-            "adoptar"
-          ],
-          "answer": 2,
-          "why": "Colocación habitual con medida.",
-          "audio": "La comisión decidió adoptar una medida provisional.",
-          "voice": "es-ES-f"
-        },
-        {
-          "q": "En la muestra 2 de la precisión también facilita el acceso, ¿qué fragmento se oye?",
-          "options": [
-            "revisor",
-            "revisión",
-            "revisado"
+            "dejó apilado",
+            "dejó apiladas"
           ],
           "answer": 1,
-          "why": "Nominalización de revisar.",
-          "audio": "Revisar el contrato: la revisión del contrato.",
-          "voice": "es-ES-f"
+          "audio": "El conserje dejó apiladas las sillas junto a la puerta.",
+          "voice": "es-CL-m",
+          "why": "Concuerda con «las sillas»: apiladas."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre el camión?",
+          "options": [
+            "debe de llegar",
+            "debe llegar"
+          ],
+          "answer": 0,
+          "audio": "Con este tráfico, el camión debe de llegar tarde.",
+          "voice": "es-CL-f",
+          "why": "Se oye «de»: deducción."
+        },
+        {
+          "q": "¿Qué oyes en la frase sobre el horario de los voluntarios?",
+          "options": [
+            "deben de llegar",
+            "deben llegar"
+          ],
+          "answer": 1,
+          "audio": "Los voluntarios deben llegar a las ocho en punto.",
+          "voice": "es-CL-m",
+          "why": "Sin «de»: obligación de horario."
+        },
+        {
+          "q": "¿Qué forma oyes en la frase sobre los folletos?",
+          "options": [
+            "llevamos repartido",
+            "llevamos repartidas",
+            "llevamos repartidos"
+          ],
+          "answer": 2,
+          "audio": "Llevamos repartidos cuarenta folletos en la feria.",
+          "voice": "es-CL-f",
+          "why": "Concuerda con «folletos»: masculino plural."
         }
       ]
     },
     "produce": [
       {
-        "text": "La comisión decidió adoptar una medida provisional.",
-        "tip": "Practica carácter/caracteres, régimen/regímenes y claramente: en -mente conserva la prominencia de la base y evita mover todos los acentos por analogía.",
-        "voice": "es-ES-f"
+        "text": "Tenemos embaladas trescientas cajas.",
+        "tip": "Haz que se oiga «-das» antes de «trescientas».",
+        "voice": "es-CL-f"
       },
       {
-        "text": "Revisar el contrato: la revisión del contrato.",
-        "tip": "Practica carácter/caracteres, régimen/regímenes y claramente: en -mente conserva la prominencia de la base y evita mover todos los acentos por analogía.",
-        "voice": "es-ES-f"
+        "text": "Debe de haber alguna gotera en el techo.",
+        "tip": "Une «debe de haber» en un solo bloque, sin pausa.",
+        "voice": "es-CL-m"
       },
       {
-        "text": "Un envase que puede usarse otra vez es reutilizable.",
-        "tip": "Practica carácter/caracteres, régimen/regímenes y claramente: en -mente conserva la prominencia de la base y evita mover todos los acentos por analogía.",
-        "voice": "es-ES-f"
+        "text": "La puerta quedó abierta toda la noche.",
+        "tip": "Acentúa «a-BIER-ta» y baja la voz al final.",
+        "voice": "es-CL-f"
+      },
+      {
+        "text": "Habría que avisar a los lectores esta semana.",
+        "tip": "Ritmo tranquilo: es una propuesta, no una orden.",
+        "voice": "es-CL-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: La precisión también facilita el acceso",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "Sábado de mudanza en la Biblioteca Rayen",
+    "context": "Javiera coordina la biblioteca comunitaria Rayen, que se muda a una casa nueva en el mismo barrio de Temuco. Matías, voluntario, la llama desde el local nuevo. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Orientadora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ja",
+        "name": "Javiera",
+        "voice": "es-CL-f",
+        "role": "Coordina la biblioteca y la mudanza"
       },
       {
-        "id": "s2",
-        "name": "Redactor",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Usuaria",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ma",
+        "name": "Matías",
+        "voice": "es-CL-m",
+        "role": "Voluntario encargado del local nuevo"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Tenemos que revisar la frase sobre la optimización de la intermediación. Quienes participaron en la prueba no pudieron decir qué debían hacer después de leerla. ¿Podemos explicar el servicio con un verbo y una persona responsable sin perder información importante?"
+        "speaker": "ma",
+        "text": "Javiera, te llamo desde la casa nueva. Buenas noticias primero: llevamos descargadas ciento veinte cajas y las estanterías grandes quedaron armadas en la sala del fondo. Los niños del taller dejaron pegados sus dibujos en la entrada; quedó precioso."
       },
       {
-        "speaker": "s2",
-        "text": "Propongo: una orientadora revisará tu experiencia y te ayudará a contactar con empresas. Después podemos definir intermediación en un recuadro. Me preocupa que eliminar todos los términos técnicos dificulte reconocerlos cuando aparezcan en formularios de otras instituciones."
+        "speaker": "ja",
+        "text": "Qué bueno. Yo tengo rotuladas las cajas que faltan, unas ochenta, y el flete viene a costar lo mismo que la vez pasada. ¿Y la mala noticia? Porque por tu voz debe de haber una."
       },
       {
-        "speaker": "s3",
-        "text": "A mí me sirve que la palabra esté si se explica. Lo que me confundió fue inscripción. Pensé que, al inscribirme, ya estaba seleccionada para el curso. Necesitaba un ejemplo de las dos etapas y una indicación clara de cuándo recibiría una respuesta."
+        "speaker": "ma",
+        "text": "Hay una mancha de humedad enorme en la pared de la cocina. Tiene que haber una gotera justo encima, porque esta mañana el suelo estaba mojado y anoche no llovió aquí abajo, solo en el cerro."
       },
       {
-        "speaker": "s1",
-        "text": "Entonces añadiremos que inscribirse permite participar en el proceso, pero no garantiza una plaza. También debemos corregir la promesa de mejorar el futuro. Podemos comprometernos a revisar una candidatura; no podemos decidir por una empresa ni asegurar un resultado laboral."
+        "speaker": "ja",
+        "text": "Mmm. O el vecino de al lado debe de haber regado el jardín contra esa pared. Don Hernán me dijo que lo hace todos los viernes. Antes de culpar al techo, habría que preguntarle."
       },
       {
-        "speaker": "s2",
-        "text": "Hay otra frase: hacer conclusiones después de la entrevista. La combinación habitual sería sacar conclusiones, aunque quizá convenga precisar cuáles. Podríamos decir que identificaremos dos aspectos que mejorar y un siguiente paso. Así evitamos una fórmula correcta pero demasiado general."
+        "speaker": "ma",
+        "text": "Puede ser. De todas formas, hubo que mover las cajas de poesía a otra sala, por si acaso. Y otra cosa: la dueña anterior dejó cerrado con candado el cuarto del patio y nadie tiene la llave."
       },
       {
-        "speaker": "s3",
-        "text": "Eso me ayuda más. No necesito que el folleto suene informal ni que me trate como si no entendiera nada. Necesito saber qué ofrece, qué espera de mí y qué decisiones dependen de otras personas. Si conserva esos límites, puedo organizarme con más autonomía."
+        "speaker": "ja",
+        "text": "Tengo entendido que la llave la tiene el administrador. Lo llamo yo. Tú no debes abrir ese cuarto sin él: está en el contrato. Oye, ¿cómo andan los voluntarios?"
+      },
+      {
+        "speaker": "ma",
+        "text": "Cansados, pero contentos. La señora Rosa se quedó dormida en el sofá de la entrada. Habrá que comprar más pan, eso sí: las empanadas se acabaron en media hora."
+      },
+      {
+        "speaker": "ja",
+        "text": "Anotado. Entonces mañana tengo dos tareas: llamar al administrador y hablar con don Hernán. Tú deja apagadas las estufas y cerradas las ventanas antes de salir, que esta noche debe de llover fuerte también en el barrio."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la conversación entera. ¿Qué tipo de llamada es y cómo termina?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-16-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Temuco?",
+          "prompt": "Elige la respuesta que resume la conversación.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: La precisión también facilita el acceso?",
+              "q": "¿Para qué llama Matías a Javiera?",
               "options": [
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas.",
-                "Hacer comprensible un servicio sin prometer resultados ajenos"
+                "Para cancelar la mudanza por la lluvia.",
+                "Para pedirle dinero para el flete.",
+                "Para hacer balance del día y consultar un problema del local."
               ],
               "answer": 2,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
+              "why": "Cuenta lo hecho y explica la mancha de humedad."
             },
             {
-              "q": "¿Qué relación predomina entre las voces en «La precisión también facilita el acceso»?",
+              "q": "¿Qué actitud tienen ante el problema de la humedad?",
               "options": [
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio."
+                "Plantean dos explicaciones posibles y deciden comprobar antes de actuar.",
+                "Deciden denunciar al vecino.",
+                "Aceptan que el techo está roto y llaman a un técnico."
               ],
-              "answer": 1,
-              "why": "Identifica un turno que responda al anterior."
+              "answer": 0,
+              "why": "Matías supone una gotera; Javiera, el riego del vecino; quieren preguntar primero."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-16-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «La precisión también facilita el acceso».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Qué confusión tuvo la usuaria?",
+              "q": "¿Cuántas cajas han descargado ya en el local nuevo?",
               "options": [
-                "No sabía que trabajaban orientadoras.",
-                "Equiparó inscripción y selección.",
-                "Pensó que no existía un curso."
+                "Ochenta.",
+                "Ciento veinte.",
+                "Trescientas."
               ],
               "answer": 1,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
+              "why": "«Llevamos descargadas ciento veinte cajas»; las ochenta son las que faltan."
             },
             {
-              "q": "¿Qué frase aparece en la intervención inicial de «La precisión también facilita el acceso»?",
+              "q": "¿Por qué no pueden entrar en el cuarto del patio?",
               "options": [
-                "Tenemos que revisar la frase sobre la optimización de la intermediación.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión."
+                "Porque está inundado.",
+                "Porque guardan allí la poesía.",
+                "Porque la dueña anterior lo dejó cerrado con candado."
+              ],
+              "answer": 2,
+              "why": "Nadie tiene la llave; la tiene el administrador."
+            },
+            {
+              "q": "¿Qué hay que comprar, según Matías?",
+              "options": [
+                "Más pan.",
+                "Un candado.",
+                "Más cajas."
               ],
               "answer": 0,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "«Habrá que comprar más pan»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-16-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento del diálogo según lo que expresa.",
+          "categories": [
+            "Resultado con participio",
+            "Obligación o necesidad",
+            "Deducción o suposición"
+          ],
           "items": [
             {
-              "prompt": "En «La precisión también facilita el acceso», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Eso me ayuda más. No necesito que el folleto suene informal ni que me trate como si no entendiera nada. Necesito saber qué ofrece, qué espera de mí y qué decisiones dependen de otras personas. Si conserva esos límites, puedo organizarme con más autonomía.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "las estanterías grandes quedaron armadas",
+              "cat": 0,
+              "why": "«Quedar» + participio concordado con el sujeto."
+            },
+            {
+              "text": "tiene que haber una gotera justo encima",
+              "cat": 2,
+              "why": "Deducción segura a partir del suelo mojado."
+            },
+            {
+              "text": "habría que preguntarle",
+              "cat": 1,
+              "why": "Necesidad impersonal y suavizada."
+            },
+            {
+              "text": "debe de haber regado el jardín",
+              "cat": 2,
+              "why": "«Deber de» + infinitivo compuesto: suposición sobre el pasado."
+            },
+            {
+              "text": "tú no debes abrir ese cuarto",
+              "cat": 1,
+              "why": "«Deber» sin «de»: prohibición."
+            },
+            {
+              "text": "dejó cerrado con candado el cuarto",
+              "cat": 0,
+              "why": "«Dejar» + participio concordado con «el cuarto»."
             }
           ]
         }
@@ -448,200 +760,257 @@ export const b2w16: Module = {
     ]
   },
   "reading": {
-    "title": "La precisión también facilita el acceso: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Diario de una mudanza: la Rayen cambia de casa",
+    "genre": "Entrada del boletín de una biblioteca comunitaria",
+    "frame": "Texto original de SpanishCue escrito como boletín de la biblioteca ficticia Rayen, de Temuco. Las personas y los lugares son inventados.",
     "text": [
-      "El folleto de la oficina de empleo anunciaba «la implementación de mecanismos de optimización de la intermediación». Varias personas lo leyeron sin poder explicar qué servicio se ofrecía. La oficina no había inventado palabras ni cometido errores gramaticales. Había acumulado nombres abstractos hasta ocultar la acción principal: ayudar a que quienes buscan trabajo contacten con empresas. La precisión administrativa no siempre coincide con la claridad para la persona que necesita utilizar un servicio.",
-      "Un equipo revisó el texto con usuarios del centro. Sustituyó algunas nominalizaciones por verbos e identificó agentes: «Una orientadora revisará tu experiencia y te ayudará a preparar una candidatura». No eliminó todos los términos técnicos. Conservó intermediación en un apartado donde se definía y se diferenciaba de formación. Aprender una palabra nueva puede ser útil si el contexto permite comprenderla; cambiarla por una expresión vaga no mejora necesariamente el texto. El objetivo era reducir obstáculos, no empobrecer el contenido.",
-      "La revisión también detectó colocaciones poco naturales, como «hacer una conclusión», y promesas imprecisas, como «garantizamos mejorar tu futuro». La primera se cambió por sacar una conclusión; la segunda se reformuló para describir acciones que la oficina sí podía cumplir. Un servicio puede revisar un currículo y ofrecer información, pero no asegurar que una empresa contrate a cada participante. La elección de palabras influye en las expectativas y, por tanto, en la confianza que una institución puede sostener.",
-      "La nueva versión fue más breve, aunque no en todos sus apartados. Explicar la diferencia entre inscripción y selección exigió añadir un ejemplo. Esa ampliación evitó que las personas interpretaran su registro como aceptación automática en un programa. La claridad no se mide únicamente contando palabras: también importa cuántas inferencias se exige hacer al lector. Un texto preciso permite actuar, distingue conceptos cercanos y hace visibles los límites de lo que promete."
+      "Durante doce años, la Biblioteca Rayen funcionó en el salón parroquial del barrio. Cuando la parroquia nos avisó que necesitaba el espacio, muchos pensamos que habría que cerrar. No fue así: la junta de vecinos nos ofreció una casa de madera a tres cuadras, con patio y una sala grande que antes había sido taller de costura. El contrato quedó firmado en septiembre y desde entonces no hemos parado.",
+      "Hoy podemos hacer un primer balance. Tenemos inventariados casi cuatro mil libros y llevamos embaladas trescientas cajas, cada una rotulada por sección. Las estanterías metálicas quedaron desarmadas en el pasillo, y las de madera, que eran demasiado pesadas, las dejamos instaladas en la parroquia como donación para el catecismo. Los voluntarios del taller de carpintería tienen pensado construir muebles nuevos con tablas recuperadas.",
+      "No todo ha salido bien. La primera semana descubrimos una mancha de humedad en la cocina de la casa nueva. Durante días discutimos la causa: unos decían que tenía que haber una gotera; otros, que el vecino debía de regar contra la pared. Al final subió un maestro al techo y encontró una plancha de zinc suelta. Hubo que cambiarla antes de entrar con los libros, porque el papel mojado no se recupera. El arreglo vino a costar lo mismo que dos meses de luz.",
+      "También aprendimos algo sobre nosotros. Un proyecto así ha de tener reglas claras, pero no puede depender de una sola persona. Por eso cada sábado alguien deja anotado en la pizarra qué cajas se movieron y qué falta. Nadie debe llevarse llaves a casa, y todas las noches el último en salir deja apagadas las estufas. Parece obvio, pero un viernes la puerta del patio quedó abierta y entró un perro que se durmió sobre la sección infantil.",
+      "Si todo va bien, abriremos la casa nueva el primer sábado de diciembre. Habrá que pintar la fachada y terminar las estanterías, y debe de haber todavía unas cien cajas en la parroquia. Si tienes una tarde libre, te esperamos: no hace falta saber de libros, basta con traer ganas y, si puedes, un termo de té."
     ],
     "glossary": [
       {
-        "es": "plantear un problema",
-        "note": "formular una dificultad"
+        "es": "el salón parroquial",
+        "note": "sala que pertenece a una iglesia del barrio"
       },
       {
-        "es": "adoptar medidas",
-        "note": "decidir acciones concretas"
+        "es": "la plancha de zinc",
+        "note": "lámina metálica que cubre muchos techos en el sur de Chile"
       },
       {
-        "es": "sacar conclusiones",
-        "note": "deducir resultados"
+        "es": "el maestro",
+        "note": "en Chile y otros países, trabajador de la construcción o de oficios"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-16-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según el boletín.",
         "items": [
           {
-            "q": "¿Cómo define la claridad el artículo?",
+            "q": "¿Qué hicieron con las estanterías de madera?",
             "options": [
-              "Por eliminar todo término técnico.",
-              "Por utilizar únicamente nombres abstractos.",
-              "Por la posibilidad de comprender y actuar, no solo por la brevedad."
+              "Las dejaron en la parroquia como donación.",
+              "Las desarmaron para llevarlas a la casa nueva.",
+              "Las vendieron para pagar el flete."
             ],
-            "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "answer": 0,
+            "why": "Eran demasiado pesadas y quedaron instaladas en la parroquia."
           },
           {
-            "q": "¿Por qué cambia la promesa sobre el futuro?",
+            "q": "¿Cuál fue la causa real de la humedad?",
             "options": [
-              "No contenía ninguna nominalización.",
-              "Describía un resultado que la oficina no podía garantizar.",
-              "Era demasiado corta para un folleto."
+              "El vecino regaba contra la pared.",
+              "Una plancha de zinc suelta en el techo.",
+              "Una cañería rota en la cocina."
             ],
             "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "El maestro encontró la plancha suelta; las otras eran suposiciones."
+          },
+          {
+            "q": "¿Qué norma tienen para evitar depender de una sola persona?",
+            "options": [
+              "Que solo la coordinadora tenga llaves.",
+              "Que los voluntarios trabajen de noche.",
+              "Que alguien deje anotado cada sábado lo que se movió y lo que falta."
+            ],
+            "answer": 2,
+            "why": "La pizarra permite que cualquiera sepa el estado de la mudanza."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-16-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «La precisión también facilita el acceso», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "La inscripción permite participar en la selección, pero no garantiza una plaza. Una orientadora revisará tu experiencia y te ayudará a preparar la candidatura. Esta intermediación facilita el contacto con empresas; la decisión de contratar corresponde a cada empresa. He sustituido dos nominalizaciones por acciones con responsable y he añadido un ejemplo de las etapas. Conservo el término técnico porque será útil en otros documentos, pero lo explico antes de pedir al lector que actúe.",
+            "prompt": "Explica en 60–80 palabras qué aprendieron los voluntarios con el problema de la humedad. Usa al menos una perífrasis de deducción y un participio con «quedar», «tener» o «dejar», y cita una frase del texto.",
+            "model": "Con la humedad aprendieron que una suposición no es un dato: unos decían que «tenía que haber una gotera» y otros culpaban al vecino, pero solo el maestro encontró la causa. Debieron de perder varios días discutiendo. Creo que ahora tienen más claras sus reglas: dejan anotado cada cambio y comprueban antes de mover los libros, porque el papel mojado no se recupera.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Distingo lo que suponían de lo que comprobaron.",
+              "Cito una frase literal del texto.",
+              "Uso una perífrasis de deducción y un participio concordado."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo el boletín separa lo que está hecho, lo que hay que hacer y lo que solo se supone.",
       "items": [
         {
-          "quote": "El folleto de la oficina de empleo anunciaba «la implementación de mecanismos de optimización de la intermediación».",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "Tenemos inventariados casi cuatro mil libros y llevamos embaladas trescientas cajas",
+          "note": "Dos verbos de balance: «tener» presenta lo terminado; «llevar», lo hecho hasta ahora en una tarea abierta. Los dos participios concuerdan con su objeto."
         },
         {
-          "quote": "Un texto preciso permite actuar, distingue conceptos cercanos y hace visibles los límites de lo que promete.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "unos decían que tenía que haber una gotera; otros, que el vecino debía de regar contra la pared",
+          "note": "Dos grados de seguridad en una deducción contada en pasado: «tenía que» (más seguro) y «debía de» (probable)."
+        },
+        {
+          "quote": "Un proyecto así ha de tener reglas claras",
+          "note": "«Haber de» da a la frase un tono de principio general, más formal que «tiene que»."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Reescribe un párrafo del informe de la plaza: mejora colocaciones, atribuye agentes y conserva el grado de certeza y la condición.",
+    "intro": "Combina las dos clases: haz balance con participios que concuerdan y separa lo obligatorio de lo que solo supones.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-16-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Temuco y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir lo que anotaron en la pizarra.",
         "items": [
           {
             "words": [
-              "En",
-              "«La precisión también facilita el acceso»,",
-              "La",
-              "comisión",
-              "decidió",
-              "adoptar",
-              "una",
-              "medida",
-              "provisional."
+              "Dejamos",
+              "guardados",
+              "los",
+              "mapas",
+              "en",
+              "el",
+              "armario",
+              "del",
+              "patio."
             ],
-            "why": "Colocación habitual con medida."
+            "why": "«Dejar» + participio concordado con «los mapas»."
           },
           {
             "words": [
-              "En",
-              "«La precisión también facilita el acceso»,",
-              "Un",
-              "envase",
+              "Debe",
+              "de",
+              "haber",
+              "unas",
+              "cien",
+              "cajas",
+              "en",
+              "la",
+              "parroquia."
+            ],
+            "why": "«Debe de haber» en singular, con valor de existencia."
+          },
+          {
+            "words": [
+              "Hubo",
               "que",
-              "puede",
-              "usarse",
-              "otra",
-              "vez",
-              "es",
-              "reutilizable."
+              "cambiar",
+              "una",
+              "plancha",
+              "del",
+              "techo."
             ],
-            "why": "Prefijo re- y sufijo -ble."
+            "why": "«Haber que» impersonal en pretérito."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-16-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de la precisión también facilita el acceso; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "Debemos hacer una conclusión basada en el folleto.",
+            "sentence": "Llevamos pintado tres paredes de la sala grande.",
             "answers": [
-              "Debemos sacar una conclusión basada en el folleto."
+              "Llevamos pintadas tres paredes de la sala grande."
             ],
-            "why": "Sacar una conclusión es la colocación idiomática."
+            "why": "Con «llevar», el participio concuerda con «tres paredes»."
           },
           {
-            "sentence": "Debemos prestar de atención a las instrucciones.",
+            "sentence": "Los lectores deben de devolver los libros antes del traslado.",
             "answers": [
-              "Debemos prestar atención a las instrucciones."
+              "Los lectores deben devolver los libros antes del traslado.",
+              "Los lectores tienen que devolver los libros antes del traslado."
             ],
-            "why": "La colocación no lleva de."
+            "why": "Es una obligación: «deber» sin «de»."
           },
           {
-            "sentence": "La revisión el formulario evitó la confusión.",
+            "sentence": "Habían que mover las cajas antes de que llegara el camión.",
             "answers": [
-              "La revisión del formulario evitó la confusión."
+              "Había que mover las cajas antes de que llegara el camión."
             ],
-            "why": "La nominalización revisión introduce su complemento mediante de."
+            "why": "«Haber que» es impersonal: singular."
+          },
+          {
+            "sentence": "La voluntaria nueva se quedó sorprendido con el tamaño del local.",
+            "answers": [
+              "La voluntaria nueva se quedó sorprendida con el tamaño del local."
+            ],
+            "why": "Con «quedarse», el participio concuerda con el sujeto femenino."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-16-x-funcion",
+        "type": "classify",
+        "prompt": "¿Obliga o deduce? Clasifica cada frase.",
+        "categories": [
+          "Obligación o necesidad",
+          "Deducción"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre reformular conceptos y revisar colocaciones con una postura y una razón; adapta el destinatario.",
-            "model": "La inscripción permite participar en la selección, pero no garantiza una plaza.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Ha de presentarse el carné para retirar libros.",
+            "cat": 0,
+            "why": "Norma formal con «haber de»."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «La precisión también facilita el acceso» sin debilitarla, y responde con una condición verificable.",
-            "model": "La inscripción permite participar en la selección, pero no garantiza una plaza. Una orientadora revisará tu experiencia y te ayudará a preparar la candidatura. Esta intermediación facilita el contacto con empresas; la decisión de contratar corresponde a cada empresa. He sustituido dos nominalizaciones por acciones con responsable y he añadido un ejemplo de las etapas. Conservo el término técnico porque será útil en otros documentos, pero lo explico antes de pedir al lector que actúe.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Ya deben de estar cerrando la parroquia.",
+            "cat": 1,
+            "why": "«Deber de»: suposición sobre lo que pasa ahora."
+          },
+          {
+            "text": "Tienes que firmar el contrato antes del lunes.",
+            "cat": 0,
+            "why": "Obligación con plazo."
+          },
+          {
+            "text": "Tiene que haber sido el viento: el cartel está en el suelo.",
+            "cat": 1,
+            "why": "Deducción segura sobre el pasado."
+          },
+          {
+            "text": "Habrá que contratar otro flete.",
+            "cat": 0,
+            "why": "Necesidad impersonal en futuro."
+          },
+          {
+            "text": "El maestro debió de terminar temprano, porque ya no está.",
+            "cat": 1,
+            "why": "«Debió de»: deducción sobre un hecho pasado."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-16-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 13 sin abrir su explicación y aplica sus recursos a «La precisión también facilita el acceso»: El sistema de los verbos de cambio; Ser y estar: matices de percepción; Personalidad y transformaciones; Rasgos del español de Chile; Describir una transformación; Comprender una conversación sobre cambio y variación chilena. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo elegir entre ponerse, volverse, hacerse, convertirse en, llegar a ser y quedarse. Puedo usar estar para percepciones y cambios: está muy joven, está carísimo. Puedo describir rasgos de carácter con matices. Puedo describir rasgos variables del habla chilena y contrastarlos con una muestra real en clase, sin atribuirlos a una voz sintética. Puedo contar cómo cambió una persona o un lugar y valorarlo. Puedo seguir posiciones sobre cambios sociales y explicar marcadores locales; contrasto la fonética chilena con una muestra real en clase.",
+            "prompt": "Haz balance de un proyecto tuyo (estudio, casa, trabajo) en dos frases: algo que tienes terminado y algo que llevas a medias, con cantidades.",
+            "model": "Tengo traducidos los dos primeros capítulos de la tesis. Llevo leídos quince artículos de los treinta que me recomendó la directora.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso «tener» + participio y «llevar» + participio + cantidad.",
+              "Los participios concuerdan con su objeto."
             ]
           },
           {
-            "prompt": "Recupera la semana 15 sin abrir su explicación y aplica sus recursos a «La precisión también facilita el acceso»: Checkpoint 3: argumentar y especular; Leer un dossier. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo argumentar, especular sobre el pasado, describir cambios y asumir responsabilidad. Puedo comparar posturas en varios textos breves sobre un mismo tema.",
+            "prompt": "Describe algo que viste esta semana y que no puedes explicar con certeza. Da dos explicaciones con distinto grado de seguridad.",
+            "model": "En la esquina de mi casa hay una fila larguísima desde las siete. Tiene que haber una oferta en la panadería, aunque también deben de estar repartiendo algo gratis.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso «tener que» para lo más seguro y «deber de» para lo probable.",
+              "Explico de qué dato parto."
+            ]
+          },
+          {
+            "prompt": "Escribe una norma formal para un espacio compartido y la misma norma dicha con suavidad a un amigo.",
+            "model": "Las bicicletas han de guardarse en el patio. / Oye, deberías dejar la bici en el patio, que en el pasillo molesta.",
+            "checklist": [
+              "Uso «haber de» en la norma formal.",
+              "Uso el condicional para suavizar la versión oral."
             ]
           }
         ]
@@ -649,196 +1018,235 @@ export const b2w16: Module = {
     ]
   },
   "writing": {
-    "task": "Reescribe un folleto institucional para personas nuevas en el servicio. Define dos conceptos cercanos, sustituye verbos vagos por colocaciones precisas y justifica tres decisiones de revisión en una nota final.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Eres voluntario o voluntaria de la Biblioteca Rayen. Escribe un informe (200–260 palabras) para la junta de vecinos: qué está hecho, qué llevan avanzado, qué problema apareció en la casa nueva y qué creen que lo causa, y qué hay que hacer antes de abrir.",
+    "context": "El informe se leerá en la asamblea del barrio. Tiene que ser claro y ordenado y separar lo comprobado de lo que solo se supone. Puedes usar los datos de la Rayen o inventar otro proyecto comunitario.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Haz tres listas: hecho (tener, dejar, quedar + participio), en curso (llevar + participio + cantidad) y pendiente (hay que, habrá que, ha de).",
+      "Elige un problema y escribe dos explicaciones con distinto grado de seguridad.",
+      "Ordena el informe: situación, balance, problema, tareas pendientes y petición final.",
+      "Revisa cada participio (¿concuerda con su objeto o su sujeto?) y corrige cada «deber de» que en realidad sea una obligación."
     ],
     "useLanguage": [
-      "Las colocaciones son combinaciones habituales: plantear un problema, adoptar una medida, sacar conclusiones. No se deducen siempre de sinónimos aislados. Los prefijos y sufijos ayudan a inferir significados, pero deben comprobarse en contexto: reutilización indica nuevo uso; inutilizable niega la posibilidad de utilizar.",
-      "La nominalización convierte una acción en un nombre: se revisó el acuerdo, la revisión del acuerdo. Puede condensar y enlazar ideas, pero varias nominalizaciones seguidas ocultan agentes y dificultan la lectura. Define un concepto con categoría, rasgo distintivo y ejemplo; después comprueba qué relación se perdió al resumir.",
-      "Reescribe un párrafo del informe de la plaza: mejora colocaciones, atribuye agentes y conserva el grado de certeza y la condición."
+      "tenemos + participio concordado",
+      "llevamos + participio + cantidad",
+      "quedó / quedaron + participio",
+      "debe de / tiene que + infinitivo (deducción)",
+      "hay que / habrá que / ha de + infinitivo",
+      "viene a costar…"
     ],
     "model": [
-      "La oficina te ayuda a preparar una candidatura y a conocer ofertas de empleo. Una orientadora revisará tu experiencia, identificará contigo aspectos que puedes mejorar y acordará un siguiente paso. Este servicio se llama intermediación: facilita el contacto entre personas que buscan trabajo y empresas. No equivale a formación, aunque la orientadora puede informarte sobre cursos si necesitas desarrollar una competencia.",
-      "Para participar en un curso, primero debes inscribirte. La inscripción permite entrar en el proceso de selección, pero no garantiza una plaza. Por ejemplo, puedes registrar tu solicitud hoy y recibir después una petición de documentación. Solo cuando termine la selección sabrás si has sido admitido. La oficina indicará el plazo de respuesta y el canal por el que te comunicará el resultado.",
-      "Tampoco podemos prometer que una empresa te contrate. Sí podemos comprometernos a revisar tu candidatura y explicarte las condiciones conocidas de una oferta. La decisión final corresponde a cada empresa. Si una condición no está clara, pide una aclaración antes de enviar información adicional. Nuestro objetivo es que puedas tomar una decisión con datos suficientes, no crear expectativas sobre resultados que otras personas controlan.",
-      "Nota de revisión: he sustituido dos nominalizaciones por verbos con una persona responsable para hacer visible quién actúa. Conservo intermediación porque aparecerá en otros documentos, pero la defino y la diferencio de formación. Finalmente, añado un ejemplo que separa inscripción y selección. El texto crece en ese punto, aunque reduce una confusión que podría llevar a interpretar una solicitud como una aceptación definitiva."
+      "Informe para la junta de vecinos sobre la mudanza de la Biblioteca Rayen, a 15 de noviembre. Este informe resume el estado del traslado a la casa de la calle Los Aromos y propone las tareas de las próximas tres semanas.",
+      "En primer lugar, el balance. Tenemos inventariados todos los libros de la sala principal y llevamos trasladadas doscientas cuarenta cajas de las trescientas previstas. Las estanterías metálicas quedaron montadas en la sala grande, y la sección infantil ya tiene colocados sus cojines y su alfombra. El flete viene a costar unos ochenta mil pesos por viaje.",
+      "En segundo lugar, un problema. El martes apareció una mancha de humedad en la pared norte. No sabemos todavía la causa y no queremos adelantar conclusiones. Tiene que haber agua acumulada en algún punto, porque la mancha crece cada día; creemos que debe de tratarse de la canaleta del techo, que está doblada. El viernes un maestro la revisará y dejaremos anotado el resultado en la pizarra de la entrada, para que cualquier voluntario lo pueda consultar.",
+      "Por último, lo pendiente. Habrá que pintar la fachada y cambiar la cerradura del patio, y antes de abrir han de estar instalados los extintores. Por eso pedimos a la junta dos cosas: que apruebe un gasto de cien mil pesos y que nos preste la escalera grande. Quedamos atentos a sus comentarios. Equipo de voluntarios de la Biblioteca Rayen."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Separo lo hecho, lo que está en curso y lo pendiente.",
+      "Los participios concuerdan con el objeto (tener, llevar, dejar) o con el sujeto (quedar).",
+      "Distingo lo comprobado de lo que deduzco, con «tener que» o «deber de».",
+      "Uso «hay que» o «habrá que» en singular.",
+      "El informe tiene un registro formal y una petición final concreta."
     ],
     "words": [
-      220,
-      280
+      200,
+      260
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Prepara palabras clave, no un texto para leer. Si te grabas, la grabación queda en tu dispositivo; la aplicación no evalúa tu pronunciación.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «La precisión también facilita el acceso» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Balance de un proyecto largo",
+        "prompt": "Habla durante unos dos minutos y medio de un proyecto en el que estás metido o metida (una mudanza, una reforma, un curso, un trabajo). Explica qué tienes ya hecho, cuánto llevas avanzado, cómo quedó algo que salió mal y qué hay que hacer todavía.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Anota tres participios que vas a hacer concordar con «tener», «llevar» y «quedar».",
+          "Prepara una cifra aproximada con «viene a costar» o «viene a ser»."
         ],
-        "seconds": 180,
-        "model": "La inscripción permite participar en la selección, pero no garantiza una plaza. Una orientadora revisará tu experiencia y te ayudará a preparar la candidatura. Esta intermediación facilita el contacto con empresas; la decisión de contratar corresponde a cada empresa. He sustituido dos nominalizaciones por acciones con responsable y he añadido un ejemplo de las etapas. Conservo el término técnico porque será útil en otros documentos, pero lo explico antes de pedir al lector que actúe.",
+        "seconds": 150,
+        "model": "Desde agosto estoy reformando el baño de mi departamento. Tengo cambiadas las cañerías y llevo puestas la mitad de las baldosas. La ducha, en cambio, quedó torcida la primera vez y hubo que desmontarla. En total, la reforma viene a costar el doble de lo que pensaba. Ahora habrá que pintar el techo, y tengo pensado pedirle ayuda a mi hermano, que es muy mañoso.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Los participios concuerdan con lo que describo.",
+          "Uso al menos dos formas de «haber que» o de «tener que».",
+          "Termino con lo que falta y un plan concreto."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de reformular conceptos y revisar colocaciones. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "¿Qué habrá pasado en el local?",
+        "prompt": "Tu docente es el administrador del local nuevo. Tú llegas y encuentras un problema (una puerta forzada, agua en el suelo o la luz cortada). Describe lo que ves, plantea dos explicaciones con distinto grado de seguridad, pregúntale qué sabe él y negocien quién tiene que hacer qué.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara una deducción con «tiene que» y otra con «debe de».",
+          "Prepara una obligación suavizada: «habría que…», «usted debería…».",
+          "Piensa qué condición pones para hacerte cargo de una tarea."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Hago preguntas reales y respondo a lo que dice mi interlocutor.",
+          "Separo lo que veo de lo que deduzco.",
+          "Llegamos a un reparto concreto de tareas."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a la próxima clase lo que preparaste esta semana y úsalo con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «La precisión también facilita el acceso» en tres minutos y responde a una objeción inesperada.",
+        "move": "Haz balance",
+        "task": "Cuéntale a tu profesor cómo va tu aprendizaje del español este año: qué tienes dominado, cuántas cosas llevas aprendidas y qué te queda pendiente.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "Tengo bastante dominado…",
+          "Llevo aprendidos…",
+          "Todavía hay que…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Temuco; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Deduce",
+        "task": "Muéstrale una foto de un lugar sin contexto y pídele que deduzca dónde está y qué acaba de pasar.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "¿Dónde crees que debe de estar?",
+          "¿Qué tiene que haber pasado?"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre reformular conceptos y revisar colocaciones; identifica una condición que todavía necesita confirmación.",
+        "move": "Comprueba",
+        "task": "Lee dos frases tuyas con «deber» y «deber de» y pide a tu profesor que confirme si obligan o deducen.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Aquí se entiende como obligación?",
+          "¿Quedaría más claro con «de»?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu informe para la junta con los participios subrayados y una duda sobre «deber» y «deber de»."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «La precisión también facilita el acceso», ¿qué resume mejor el propósito?",
-        "options": [
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas.",
-          "Hacer comprensible un servicio sin prometer resultados ajenos"
+        "type": "gap",
+        "q": "Mi hermana tiene ___ (hacer) las maletas desde anoche.",
+        "answers": [
+          [
+            "hechas"
+          ]
         ],
-        "answer": 2,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Propongo: una orientadora revisará tu experiencia y te ayudará a contactar con empresas. Después podemos definir intermediación en un recuadro. Me preocupa que eliminar todos los términos técnicos dificulte reconocerlos cuando aparezcan en formularios de otras instituciones.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Redactor en «La precisión también facilita el acceso», ¿qué intervención reconoces?",
-        "options": [
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Propongo: una orientadora revisará tu experiencia y te ayudará a contactar con empresas"
-        ],
-        "answer": 2,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "«Tener» + participio irregular concordado con «las maletas»."
       },
       {
         "type": "gap",
-        "q": "El comité acordó ___ a cabo una revisión.",
+        "q": "Por el temporal, varias calles de Temuco quedaron ___ (cortar).",
         "answers": [
           [
-            "llevar"
+            "cortadas"
           ]
         ],
-        "why": "Colocación llevar a cabo."
+        "why": "«Quedar» concuerda con el sujeto: varias calles → cortadas."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «El equipo mejoró las instrucciones y eso facilitó el acceso.» Nominaliza mejorar.",
-        "model": "La mejora de las instrucciones facilitó el acceso.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "Cuando llegó el inspector, ya ___ que desalojar el edificio. (haber, imperfecto)",
+        "answers": [
+          [
+            "había"
+          ]
+        ],
+        "why": "«Haber que» impersonal: «había que»."
+      },
+      {
+        "type": "choice",
+        "q": "«Ya debe de estar en casa: su auto está en el garaje.» ¿Qué expresa «debe de»?",
+        "options": [
+          "Una obligación.",
+          "Una deducción.",
+          "Un consejo."
+        ],
+        "answer": 1,
+        "why": "Supone algo a partir de un dato: el auto."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase presenta un balance con la tarea todavía abierta?",
+        "options": [
+          "He corregido doce exámenes.",
+          "Tengo corregidos todos los exámenes.",
+          "Llevo corregidos doce exámenes."
+        ],
+        "answer": 2,
+        "why": "«Llevar» + participio + cantidad: la tarea sigue."
+      },
+      {
+        "type": "listen",
+        "q": "Según el audio, ¿qué tiene que hacer el vecino?",
+        "audio": "Según el reglamento, el vecino ha de retirar la leña del pasillo antes del viernes.",
+        "voice": "es-CL-m",
+        "options": [
+          "Retirar la leña del pasillo.",
+          "Comprar leña antes del viernes.",
+          "Revisar el reglamento."
+        ],
+        "answer": 0,
+        "why": "«Ha de retirar»: obligación formal."
       },
       {
         "type": "error",
-        "sentence": "Hay que tomar atención a las condiciones de selección.",
+        "sentence": "Deben de haber unas veinte personas esperando en la puerta.",
         "answers": [
-          "Hay que prestar atención a las condiciones de selección."
+          "Debe de haber unas veinte personas esperando en la puerta."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "«Haber» de existencia va en singular, también en la perífrasis."
+      },
+      {
+        "type": "error",
+        "sentence": "La empresa ha imprimidos los catálogos con un error.",
+        "answers": [
+          "La empresa ha imprimido los catálogos con un error.",
+          "La empresa ha impreso los catálogos con un error."
+        ],
+        "why": "Con «haber», el participio no concuerda."
+      },
+      {
+        "type": "order",
+        "words": [
+          "Lo",
+          "dejé",
+          "dicho",
+          "antes",
+          "de",
+          "irme",
+          "de",
+          "vacaciones."
+        ],
+        "why": "«Dejar dicho»: fijar una instrucción para después."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «La precisión también facilita el acceso».",
-        "model": "La inscripción permite participar en la selección, pero no garantiza una plaza. Una orientadora revisará tu experiencia y te ayudará a preparar la candidatura. Esta intermediación facilita el contacto con empresas; la decisión de contratar corresponde a cada empresa. He sustituido dos nominalizaciones por acciones con responsable y he añadido un ejemplo de las etapas. Conservo el término técnico porque será útil en otros documentos, pero lo explico antes de pedir al lector que actúe.",
+        "prompt": "Escribe dos frases sobre una casa o un edificio que conoces bien: una con un resultado («quedó…», «dejaron…») y una deducción sobre su pasado con «debe de haber» + participio.",
+        "model": "Después de la última reforma, la fachada de mi colegio quedó pintada de amarillo. Debe de haber sido una casa particular, porque todavía tiene chimeneas en cada sala.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre reformular conceptos y revisar colocaciones; concede una razón y conserva tu argumento.",
-        "model": "La inscripción permite participar en la selección, pero no garantiza una plaza. Una orientadora revisará tu experiencia y te ayudará a preparar la candidatura. Esta intermediación facilita el contacto con empresas; la decisión de contratar corresponde a cada empresa. He sustituido dos nominalizaciones por acciones con responsable y he añadido un ejemplo de las etapas. Conservo el término técnico porque será útil en otros documentos, pero lo explico antes de pedir al lector que actúe.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 16 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "El participio concuerda con su sujeto o su objeto.",
+          "Uso «debe de haber» + participio para deducir sobre el pasado."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo reformular conceptos y revisar colocaciones.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo hacer balance con tener, llevar y dejar + participio, concordando con el objeto, y contar resultados con quedar, quedarse, ir y andar.",
+      "Puedo elegir entre los participios dobles y reconocer adjetivos con sentido nuevo como «leído» o «atrevido».",
+      "Puedo distinguir obligación y deducción con deber, deber de, tener que y haber de, y usar «hay que» y «venir a» en todos sus tiempos."
     ],
     "review": [
-      "Reescribe un párrafo del informe de la plaza: mejora colocaciones, atribuye agentes y conserva el grado de certeza y la condición.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, sin mirar la tabla, escribe cinco frases sobre tu casa con «tener», «llevar», «dejar», «quedar» y «haber» + el mismo participio.",
+      "En tres días, mira por la ventana y di en voz alta tres deducciones con distinto grado de seguridad.",
+      "Antes de la semana 17, relee tu informe y cambia una obligación directa por una suavizada con el condicional."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/participios-y-adjetivos-resultativos",
+      "label": "Clase: Participios y adjetivos resultativos"
+    },
+    {
+      "path": "/gramatica/perifrasis-de-obligacion-e-inferencia",
+      "label": "Clase: Perífrasis de obligación e inferencia"
+    }
+  ]
 };

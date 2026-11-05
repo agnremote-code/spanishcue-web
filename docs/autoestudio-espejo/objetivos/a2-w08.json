@@ -1,0 +1,12 @@
+[
+  [8, "gram", "g060", "Pronombres reflexivos: rutinas y cambios de estado", "Puedo contar rutinas y un día en pasado con verbos reflexivos, colocar el pronombre con infinitivo, gerundio e imperativo y usar verbos de emoción con se (me preocupé, se tranquilizó).", ["a2.gram.g047", "a2.gram.g049"], { "related": ["/gramatica/pronombres-reflexivos-rutinas-y-cambios-de"] }],
+  [8, "gram", "g061", "Verbos de cambio básicos: ponerse, quedarse", "Puedo contar reacciones con ponerse + adjetivo y resultados con quedarse (dormido, sin batería, en casa), y distinguirlos de estar.", ["a2.gram.g060"], { "related": ["/gramatica/verbos-de-cambio-basicos-ponerse-quedarse"] }],
+  [8, "voc", "w08-emociones-viaje", "Rutina, emociones y reacciones de un día de viaje", "Puedo nombrar acciones de la rutina, emociones con se y reacciones del cuerpo como marearse o ponerse pálido.", ["a2.gram.g060"]],
+  [8, "pron", "w08-enlace-pronombre", "Unir el pronombre con el verbo", "Puedo oír y pronunciar la unión de me, te, se con un verbo que empieza por vocal (se_asustó) y notar si hay pronombre.", []],
+  [8, "lis", "w08-lunes-fuentes", "Escuchar una anécdota de excursión", "Puedo entender en una conversación qué le pasó a cada persona en una excursión y cómo reaccionó.", ["a2.gram.g060", "a2.gram.g061"]],
+  [8, "read", "w08-blog-familia", "Leer una entrada de blog sobre una estancia", "Puedo entender un blog que cuenta una rutina en el pasado y un día difícil con sus emociones.", ["a2.gram.g060", "a2.gram.g061"]],
+  [8, "wri", "w08-dia-dificil", "Escribir sobre un día que empezó mal", "Puedo escribir un mensaje de 60 a 110 palabras sobre un día complicado con reflexivos, emociones y verbos de cambio.", ["a2.gram.g060", "a2.gram.g061", "a2.disc.w08-relato-reacciones"]],
+  [8, "spk", "w08-reacciones", "Contar reacciones en voz alta", "Puedo contar una mañana difícil, las reacciones de otras personas y mi rutina de antes y de ahora durante unos tres minutos en total.", ["a2.fun.w08-contar-reacciones"]],
+  [8, "fun", "w08-contar-reacciones", "Contar y preguntar cómo se sintió alguien", "Puedo contar cómo me sentí, preguntar a otra persona cómo reaccionó y animarla con no te preocupes o tranquilízate.", ["a2.gram.g061"]],
+  [8, "disc", "w08-relato-reacciones", "Una anécdota con problema, reacción y final", "Puedo ordenar una anécdota con primero, de repente y al final, y cerrar con el resultado.", ["a2.gram.g061"]]
+]

@@ -29,6 +29,8 @@ export function checkFeria() {
     const src = readFileSync(`app/autoestudio/curriculum/objectives/${level}.ts`, 'utf8');
     for (const m of src.matchAll(/\[\s*\d+,\s*"(\w+)",\s*"([\w-]+)"/g)) ids.add(`${level}.${m[1]}.${m[2]}`);
   }
+  // The Feria was tagged against the pre-mirror Autoestudio map (2026-11-05 rewrite).
+  for (const id of JSON.parse(readFileSync('docs/autoestudio-espejo/objetivos-previos-a1-a2.json', 'utf8')).ids) ids.add(id);
   ok(ids.size > 50, `could not read the objective files (${ids.size} ids)`);
 
   const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));

@@ -1,499 +1,864 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 8 · Autoestudio espejo de G101 (aunque + indicativo), G102 (si +
+ * presente y futuro) y G103 (condicional simple). Repaso autónomo con una corredora
+ * principiante que prepara su primera media maratón en Málaga.
+ */
 export const b1w08: Module = {
   "id": "b1-08",
   "level": "b1",
   "week": 8,
   "kind": "core",
-  "title": "El lugar que estamos buscando",
-  "subtitle": "Describir requisitos y negociar qué condiciones son imprescindibles.",
+  "title": "Mi primera media maratón: aunque cueste, si entreno, yo que tú…",
+  "subtitle": "Repaso de «aunque» + indicativo para aceptar un obstáculo real, de «si» + presente para condiciones posibles y del condicional para pedir, aconsejar e imaginar.",
   "stop": {
     "place": "Málaga",
     "country": "España"
   },
   "minutes": 95,
   "newObjectives": [
-    "b1.gram.relativas-modo",
-    "b1.gram.relativos-quien-donde",
-    "b1.voc.vivienda-convivencia",
-    "b1.pron.pausas-relativas",
-    "b1.fun.describir-ideal",
-    "b1.lis.anuncios-busco",
-    "b1.gram.cuantificacion-busqueda"
+    "b1.gram.g101",
+    "b1.gram.g102",
+    "b1.gram.g103",
+    "b1.voc.w08-correr-entrenar",
+    "b1.pron.w08-ria-ia",
+    "b1.lis.w08-consejos-entrenadora",
+    "b1.read.w08-guia-primera-carrera",
+    "b1.wri.w08-correo-consejos",
+    "b1.spk.w08-plan-negociado",
+    "b1.fun.w08-animar-aconsejar",
+    "b1.disc.w08-obstaculo-decision"
   ],
-  "reviewObjectives": [
-    "b1.gram.emociones-subjuntivo",
-    "b1.gram.mismo-sujeto",
-    "b1.voc.sentimientos",
-    "b1.pron.entonacion-emocion",
-    "b1.fun.expresar-sentimientos",
-    "b1.wri.correo-personal",
-    "b1.voc.relaciones",
-    "b1.fun.hablar-relaciones",
-    "b1.gram.posesivos-relacion"
-  ],
-  "prerequisites": [
-    "b1-07"
-  ],
+  reviewObjectives: ["b1.gram.g099","b1.gram.g100","b1.voc.w07-vivienda-alquiler","b1.pron.w07-pausa-relativa","b1.lis.w07-llamada-inmobiliaria","b1.read.w07-foro-recien-llegados","b1.wri.w07-anuncio-busqueda","b1.spk.w07-describir-busqueda","b1.fun.w07-pedir-requisitos","b1.disc.w07-requisito-finalidad"],
+  prerequisites: ["b1-07"],
   "goal": {
-    "canDo": "Puedo describir requisitos y negociar qué condiciones son imprescindibles.",
+    "canDo": "Al final de esta semana puedes reconocer las dificultades de un reto («aunque no tengo experiencia…»), plantear qué pasará en cada caso («si llueve, correremos igual») y dar consejos con cortesía («yo que tú, empezaría despacio»).",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa «aunque» + indicativo y sus compañeros: «pero», «sin embargo», «aun así», «a pesar de».",
+      "Repasa «si» + presente y las cinco consecuencias posibles.",
+      "Repasa la forma del condicional y sus usos: cortesía, consejo, hipótesis y futuro desde el pasado.",
+      "Escucha a una entrenadora de Málaga y lee la guía de su club para principiantes.",
+      "Escribe un correo de ánimo y consejos, revísalo y graba tus consejos en voz alta."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Describir requisitos y negociar qué condiciones son imprescindibles.",
+    "intro": "Esta semana repasas tres clases que suelen aparecer juntas cuando alguien duda ante un reto: aceptas un obstáculo («aunque…»), piensas qué pasará en cada caso («si…») y das o pides consejo («yo que tú…»). Te acompaña Nuria, que se ha apuntado a la media maratón de Málaga sin haber corrido nunca más de cinco kilómetros.",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "«Aunque» + indicativo: acepto el obstáculo y sigo adelante",
         "body": [
-          "Una relativa con indicativo describe un referente conocido: tengo una habitación que recibe luz. Con subjuntivo presentamos una característica buscada sin afirmar que exista ese referente: busco una habitación que reciba luz. La diferencia es de perspectiva, no de tamaño ni de importancia."
+          "Con «aunque» + indicativo presentas un obstáculo como un hecho real y dices que no impide la idea principal: «Aunque tengo poco tiempo, entreno cuatro días». Puede ir delante, con coma, o detrás, como una reserva final: «Me encanta correr, aunque me cuesta madrugar». También funciona en pasado: «Aunque llovía, salimos a correr».",
+          "El obstáculo va con «aunque»; el resultado puede ir con «pero», «sin embargo» (más formal, tras punto o punto y coma) o «aun así». No combines «aunque» y «pero» en la misma frase. «A pesar de» lleva un nombre o un infinitivo (mismo sujeto), y «a pesar de que», indicativo."
+        ],
+        "table": {
+          "caption": "Un obstáculo, cinco maneras de decirlo",
+          "head": [
+            "Estructura",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "aunque + indicativo, …",
+              "Aunque hace calor, voy a correr a mediodía."
+            ],
+            [
+              "…, aunque + indicativo",
+              "Voy a correr a mediodía, aunque hace calor."
+            ],
+            [
+              "… . Sin embargo, …",
+              "Hace calor. Sin embargo, voy a correr a mediodía."
+            ],
+            [
+              "…, pero aun así …",
+              "Hace calor, pero aun así voy a correr a mediodía."
+            ],
+            [
+              "a pesar de + nombre / infinitivo",
+              "A pesar del calor, voy a correr a mediodía."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Aunque estoy cansada, pero termino la carrera.",
+            "right": "Aunque estoy cansada, termino la carrera.",
+            "why": "«Aunque» ya introduce el contraste; «pero» sobra."
+          },
+          {
+            "wrong": "A pesar de que no entrené, pero llegué a la meta.",
+            "right": "A pesar de que no entrené, llegué a la meta.",
+            "why": "Igual que con «aunque», no se añade «pero»."
+          }
+        ],
+        "tip": "Esta semana usas «aunque» con indicativo porque el obstáculo es un hecho que conoces. Si no sabes si es verdad, más adelante verás que se puede usar el subjuntivo."
+      },
+      {
+        "heading": "«Si» + presente: condiciones posibles",
+        "body": [
+          "En una condición real o posible, detrás de «si» va siempre el presente de indicativo. Lo que cambia es la consecuencia, según tu intención: una verdad general o una costumbre (presente), una predicción o una promesa (futuro o «ir a»), una instrucción (imperativo), un permiso o una obligación («poder», «tener que»).",
+          "Nunca uses futuro ni presente de subjuntivo detrás de este «si». Distingue también «si» de «cuando»: «si llueve» deja abierta la posibilidad; «cuando llueva» da por hecho que lloverá (y lleva subjuntivo, como viste en la semana 6). Cuando «si» significa «whether» («no sé si…»), sí admite el futuro: «No sé si llegaré a la meta»."
+        ],
+        "table": {
+          "caption": "«Si» + presente y cinco consecuencias",
+          "head": [
+            "Intención",
+            "Consecuencia",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Verdad general",
+              "presente",
+              "Si no bebes agua, te cansas antes."
+            ],
+            [
+              "Predicción o promesa",
+              "futuro / ir a",
+              "Si entrenas tres días por semana, llegarás a la meta."
+            ],
+            [
+              "Instrucción",
+              "imperativo",
+              "Si te duele la rodilla, para y camina."
+            ],
+            [
+              "Permiso",
+              "poder + infinitivo",
+              "Si llegas tarde, puedes recoger el dorsal el domingo."
+            ],
+            [
+              "Obligación",
+              "tener que + infinitivo",
+              "Si quieres correr, tienes que inscribirte antes del día 20."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Si lloverá el domingo, correremos con chubasquero.",
+            "right": "Si llueve el domingo, correremos con chubasquero.",
+            "why": "Detrás del «si» condicional no se usa el futuro."
+          },
+          {
+            "wrong": "Si tengas dudas, pregunta a la entrenadora.",
+            "right": "Si tienes dudas, pregunta a la entrenadora.",
+            "why": "Detrás de «si» no va presente de subjuntivo."
+          }
+        ]
+      },
+      {
+        "heading": "El condicional: una forma fácil y doce irregulares",
+        "body": [
+          "El condicional se forma con el infinitivo completo más las terminaciones -ía, -ías, -ía, -íamos, -íais, -ían, iguales para los tres grupos de verbos. Los verbos irregulares tienen la misma raíz que en el futuro: tendr-, saldr-, podr-, pondr-, vendr-, sabr-, querr-, habr-, dir-, har-, cabr-, valdr-.",
+          "Todas las formas llevan tilde en la «í». Atención: el pretérito imperfecto de los verbos en -er e -ir tiene las mismas terminaciones, pero sin la «r» del infinitivo: «corría» (imperfecto) frente a «correría» (condicional)."
+        ],
+        "table": {
+          "caption": "Condicional de tres verbos",
+          "head": [
+            "Persona",
+            "entrenar",
+            "correr",
+            "tener (irregular)"
+          ],
+          "rows": [
+            [
+              "yo",
+              "entrenaría",
+              "correría",
+              "tendría"
+            ],
+            [
+              "tú",
+              "entrenarías",
+              "correrías",
+              "tendrías"
+            ],
+            [
+              "él / ella / usted",
+              "entrenaría",
+              "correría",
+              "tendría"
+            ],
+            [
+              "nosotros / nosotras",
+              "entrenaríamos",
+              "correríamos",
+              "tendríamos"
+            ],
+            [
+              "vosotros / vosotras",
+              "entrenaríais",
+              "correríais",
+              "tendríais"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "entrenarían",
+              "correrían",
+              "tendrían"
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Yo que tú, poneria la alarma a las seis.",
+            "right": "Yo que tú, pondría la alarma a las seis.",
+            "why": "«Poner» es irregular: «pondría», con tilde en la «í»."
+          },
+          {
+            "wrong": "¿Me deciría a qué hora sale el tren?",
+            "right": "¿Me diría a qué hora sale el tren?",
+            "why": "La raíz de «decir» en condicional es «dir-»."
+          }
+        ]
+      },
+      {
+        "heading": "Para qué sirve el condicional",
+        "body": [
+          "Pedir con cortesía: «¿Podrías apuntarme a la carrera?», «Me gustaría hablar con la entrenadora», «¿Le importaría guardarme la mochila?». Aconsejar: «Deberías descansar», «Yo que tú / Yo en tu lugar, compraría otras zapatillas», «Sería buena idea estirar después».",
+          "Imaginar una situación que no es la real: «Con más tiempo, entrenaría todos los días». Y contar un futuro visto desde el pasado, sobre todo después de «dijo que», «prometió que», «pensaba que»: «La entrenadora dijo que el recorrido sería llano»."
         ],
         "examples": [
           {
-            "es": "Buscamos un piso que tenga dos mesas."
+            "es": "¿Podría decirme dónde recojo el dorsal?",
+            "note": "Cortesía con «usted»."
           },
           {
-            "es": "Conozco uno que tiene un patio pequeño."
+            "es": "Yo en tu lugar, no estrenaría zapatillas el día de la carrera.",
+            "note": "Consejo."
           },
           {
-            "es": "La que vive junto al parque es mi compañera."
+            "es": "En un mundo ideal, correríamos siempre junto al mar.",
+            "note": "Hipótesis."
+          },
+          {
+            "es": "Nuria pensaba que la carrera empezaría a las diez.",
+            "note": "Futuro visto desde el pasado."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Busco un piso que tiene ascensor, pero no conozco ninguno.",
-            "right": "Busco un piso que tenga ascensor, pero no conozco ninguno.",
-            "why": "El referente buscado no está identificado."
-          }
-        ]
-      },
-      {
-        "heading": "Organizar la comunicación",
-        "body": [
-          "Quien puede referirse a personas, donde a lugares y lo que a un contenido: lo que necesito es silencio. El que y la que permiten recuperar un nombre conocido. Las comas y pausas delimitan información adicional; sin ellas una relativa puede seleccionar solo una parte del grupo."
-        ],
-        "examples": [
-          {
-            "es": "Quien llegue primero recoge las llaves."
-          },
-          {
-            "es": "Este es el barrio donde trabajo."
-          },
-          {
-            "es": "Lo que me preocupa es el ruido nocturno."
-          }
-        ]
-      },
-      {
-        "heading": "Cuantificadores y negación en búsquedas",
-        "body": [
-          "Alguno y ninguno se acortan ante nombre masculino singular: algún piso, ningún requisito. Cualquiera pasa a cualquier ante nombre singular: cualquier persona. Después del verbo, nadie y ninguno suelen necesitar no: no conozco ninguno. Bastante y demasiado concuerdan cuando cuantifican nombres; demasiado no cambia si modifica un adjetivo."
-        ],
-        "examples": [
-          {
-            "es": "No conocemos ningún piso que reúna todo."
-          },
-          {
-            "es": "Cualquier persona puede preguntar por los gastos."
-          },
-          {
-            "es": "Hay bastantes anuncios, pero algunos son demasiado caros."
+            "wrong": "Yo que tú, iré al médico mañana.",
+            "right": "Yo que tú, iría al médico mañana.",
+            "why": "«Yo que tú» y «yo en tu lugar» imaginan otra situación: van siempre con condicional."
           }
         ]
       }
     ]
   },
   "grammar": {
+    "intro": "Practicas cada clase por separado y después las combinas.",
     "exercises": [
       {
-        "id": "b1-08-forms",
-        "type": "gap",
-        "prompt": "Completa estas situaciones de «El lugar que estamos buscando» con la forma que expresa la relación indicada.",
+        "id": "b1-08-gramatica-aunque",
+        "type": "choice",
+        "title": "Obstáculo y resultado",
+        "prompt": "Elige la opción correcta.",
         "items": [
           {
-            "q": "Necesito un alojamiento que ___ conexión estable.",
-            "answers": [
-              [
-                "tenga"
-              ]
+            "q": "___ me duelen las piernas, mañana vuelvo a entrenar.",
+            "options": [
+              "Pero",
+              "Aunque",
+              "Sin embargo"
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "answer": 1,
+            "why": "El obstáculo va delante con «aunque» y coma."
           },
           {
-            "q": "Vivo en una casa que ___ un patio.",
-            "answers": [
-              [
-                "tiene"
-              ]
+            "q": "No había entrenado mucho. ___, terminé en dos horas.",
+            "options": [
+              "Aunque",
+              "A pesar de",
+              "Aun así"
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "answer": 2,
+            "why": "Tras punto, el resultado inesperado va con «aun así» (o «sin embargo»)."
           },
           {
-            "q": "El barrio ___ estudié ha cambiado.",
-            "answers": [
-              [
-                "donde"
-              ]
+            "q": "A pesar ___ viento, batí mi récord.",
+            "options": [
+              "del",
+              "de que el",
+              "que el"
             ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "answer": 0,
+            "why": "«A pesar de» + nombre: «a pesar del viento»."
+          },
+          {
+            "q": "Sigo corriendo, ___ ya no tengo veinte años.",
+            "options": [
+              "a pesar de",
+              "aunque",
+              "pero aun así"
+            ],
+            "answer": 1,
+            "why": "Reserva final con «aunque» + indicativo."
           }
-        ],
-        "bank": [
-          "tenga",
-          "tiene",
-          "donde"
         ]
       },
       {
-        "id": "b1-08-repair",
+        "id": "b1-08-gramatica-si-presente",
+        "type": "gap",
+        "title": "Condiciones posibles",
+        "prompt": "Completa con la forma correcta del verbo entre paréntesis.",
+        "items": [
+          {
+            "q": "Si ___ temprano, encontraremos sitio en el aparcamiento. (salir, nosotros)",
+            "answers": [
+              [
+                "salimos"
+              ]
+            ],
+            "why": "«Si» + presente de indicativo."
+          },
+          {
+            "q": "Si te ___ un calambre, ___ y estira el músculo. (dar / parar, tú)",
+            "answers": [
+              [
+                "da"
+              ],
+              [
+                "para"
+              ]
+            ],
+            "why": "Condición en presente; instrucción en imperativo."
+          },
+          {
+            "q": "Si no ___ antes del viernes, no ___ correr. (inscribirse / poder, tú)",
+            "answers": [
+              [
+                "te inscribes"
+              ],
+              [
+                "podrás",
+                "puedes"
+              ]
+            ],
+            "why": "Condición en presente; consecuencia con «poder»."
+          },
+          {
+            "q": "No sé si ___ mañana: la previsión dice que sí. (llover)",
+            "answers": [
+              [
+                "lloverá",
+                "va a llover"
+              ]
+            ],
+            "why": "Aquí «si» significa «whether»: admite futuro."
+          },
+          {
+            "q": "Si ___ agua cada veinte minutos, no te deshidratas. (beber, tú)",
+            "answers": [
+              [
+                "bebes"
+              ]
+            ],
+            "why": "Verdad general: presente en las dos partes."
+          }
+        ]
+      },
+      {
+        "id": "b1-08-gramatica-condicional-uso",
+        "type": "classify",
+        "title": "¿Para qué usa el condicional?",
+        "prompt": "Clasifica cada frase según el uso del condicional.",
+        "categories": [
+          "Cortesía",
+          "Consejo",
+          "Hipótesis o futuro desde el pasado"
+        ],
+        "items": [
+          {
+            "text": "¿Te importaría correr a mi lado los primeros kilómetros?",
+            "cat": 0
+          },
+          {
+            "text": "Yo que tú, cenaría pasta la noche anterior.",
+            "cat": 1
+          },
+          {
+            "text": "Me dijeron que habría fruta en el kilómetro quince.",
+            "cat": 2
+          },
+          {
+            "text": "Deberías dormir ocho horas antes de la carrera.",
+            "cat": 1
+          },
+          {
+            "text": "Con unas zapatillas mejores, iría más rápido.",
+            "cat": 2
+          },
+          {
+            "text": "¿Podría decirme dónde está la salida?",
+            "cat": 0
+          }
+        ]
+      },
+      {
+        "id": "b1-08-gramatica-errores",
         "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "title": "Corrige el error",
+        "prompt": "Cada frase tiene un error de las tres clases. Escríbela bien.",
         "items": [
           {
-            "sentence": "Busco un piso que tiene ascensor, pero no conozco ninguno.",
+            "sentence": "Si querrás mejorar, tienes que descansar también.",
             "answers": [
-              "Busco un piso que tenga ascensor, pero no conozco ninguno."
+              "Si quieres mejorar, tienes que descansar también."
             ],
-            "why": "El referente buscado no está identificado."
+            "why": "Detrás de «si» condicional va el presente."
           },
           {
-            "sentence": "La persona donde me ayudó vive aquí.",
+            "sentence": "Aunque llovía mucho, pero salimos a correr.",
             "answers": [
-              "La persona que me ayudó vive aquí."
+              "Aunque llovía mucho, salimos a correr.",
+              "Llovía mucho, pero salimos a correr."
             ],
-            "why": "Donde se refiere a lugares."
+            "why": "No se combinan «aunque» y «pero»."
           },
           {
-            "sentence": "Lo que necesito son que haya silencio.",
+            "sentence": "Yo en tu lugar, haría estiramientos y bebería más agua, y salería antes.",
             "answers": [
-              "Lo que necesito es que haya silencio."
+              "Yo en tu lugar, haría estiramientos y bebería más agua, y saldría antes."
             ],
-            "why": "Aquí la estructura identificativa usa es ante una oración."
-          }
-        ]
-      },
-      {
-        "id": "b1-08-cuantificacion-busqueda",
-        "type": "gap",
-        "prompt": "Aplica cuantificadores y negación en búsquedas a la misión de esta semana.",
-        "bank": [
-          "algún",
-          "ningún",
-          "bastantes"
-        ],
-        "items": [
-          {
-            "q": "¿Conoces ___ piso cerca del centro?",
-            "answers": [
-              [
-                "algún"
-              ]
-            ],
-            "why": "Alguno y ninguno se acortan ante nombre masculino singular: algún piso, ningún requisito. Cualquiera pasa a cualquier ante nombre singular: cualquier persona. Después del verbo, nadie y ninguno suelen necesitar no: no conozco ninguno. Bastante y demasiado concuerdan cuando cuantifican nombres; demasiado no cambia si modifica un adjetivo."
+            "why": "El condicional de «salir» es irregular: «saldría»."
           },
           {
-            "q": "No encontramos ___ anuncio con todos los datos.",
+            "sentence": "Pensaba que la carrera será más fácil, pero fue durísima.",
             "answers": [
-              [
-                "ningún"
-              ]
+              "Pensaba que la carrera sería más fácil, pero fue durísima."
             ],
-            "why": "Alguno y ninguno se acortan ante nombre masculino singular: algún piso, ningún requisito. Cualquiera pasa a cualquier ante nombre singular: cualquier persona. Después del verbo, nadie y ninguno suelen necesitar no: no conozco ninguno. Bastante y demasiado concuerdan cuando cuantifican nombres; demasiado no cambia si modifica un adjetivo."
-          },
-          {
-            "q": "Hay ___ habitaciones para tres personas.",
-            "answers": [
-              [
-                "bastantes"
-              ]
-            ],
-            "why": "Alguno y ninguno se acortan ante nombre masculino singular: algún piso, ningún requisito. Cualquiera pasa a cualquier ante nombre singular: cualquier persona. Después del verbo, nadie y ninguno suelen necesitar no: no conozco ninguno. Bastante y demasiado concuerdan cuando cuantifican nombres; demasiado no cambia si modifica un adjetivo."
+            "why": "Futuro visto desde un pasado («pensaba»): condicional."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para hablar de un plan de entrenamiento y del día de la carrera.",
     "groups": [
       {
-        "title": "El lugar que estamos buscando · acciones y recursos",
+        "title": "Prepararse",
         "items": [
           {
-            "es": "compartir los gastos",
-            "note": "pagar entre varias personas"
+            "es": "inscribirse en una carrera"
           },
           {
-            "es": "una fianza",
-            "note": "cantidad entregada como garantía"
+            "es": "el plan de entrenamiento"
           },
           {
-            "es": "respetar los turnos",
-            "note": "seguir el orden acordado"
+            "es": "la tirada larga",
+            "note": "La sesión semanal de más kilómetros."
           },
           {
-            "es": "una zona común",
-            "note": "espacio usado por todos"
+            "es": "el ritmo"
+          },
+          {
+            "es": "estirar"
+          },
+          {
+            "es": "las agujetas",
+            "note": "El dolor muscular del día siguiente."
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "El día de la carrera",
         "items": [
           {
-            "es": "tener buena conexión",
-            "note": "disponer de acceso digital estable"
+            "es": "recoger el dorsal"
           },
           {
-            "es": "ceder en algo",
-            "note": "aceptar cambiar una exigencia"
+            "es": "la salida"
           },
           {
-            "es": "una condición imprescindible",
-            "note": "requisito que no se puede abandonar"
+            "es": "el avituallamiento"
           },
           {
-            "es": "llegar a un acuerdo",
-            "note": "decidir una solución aceptada"
+            "es": "el recorrido"
+          },
+          {
+            "es": "cruzar la meta"
+          },
+          {
+            "es": "la medalla de finalista"
+          }
+        ]
+      },
+      {
+        "title": "Cómo te sientes",
+        "items": [
+          {
+            "es": "estar en forma"
+          },
+          {
+            "es": "quedarse sin fuerzas"
+          },
+          {
+            "es": "darlo todo"
+          },
+          {
+            "es": "ir a tu aire"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-08-lexis",
+        "id": "b1-08-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «El lugar que estamos buscando» con su significado en este contexto.",
+        "title": "Cada expresión con su significado",
+        "prompt": "Une cada expresión con su explicación.",
         "pairs": [
           {
-            "left": "compartir los gastos",
-            "right": "pagar entre varias personas"
+            "left": "el dorsal",
+            "right": "el número que llevas en la camiseta"
           },
           {
-            "left": "una fianza",
-            "right": "cantidad entregada como garantía"
+            "left": "el avituallamiento",
+            "right": "el punto donde dan agua y fruta durante la carrera"
           },
           {
-            "left": "respetar los turnos",
-            "right": "seguir el orden acordado"
+            "left": "las agujetas",
+            "right": "el dolor muscular después de un esfuerzo"
           },
           {
-            "left": "una zona común",
-            "right": "espacio usado por todos"
+            "left": "ir a tu aire",
+            "right": "correr a tu ritmo, sin presión"
           },
           {
-            "left": "tener buena conexión",
-            "right": "disponer de acceso digital estable"
+            "left": "la tirada larga",
+            "right": "el entrenamiento semanal con más kilómetros"
+          }
+        ],
+        "why": "Piensa en qué momento del entrenamiento o de la carrera aparece cada cosa."
+      },
+      {
+        "id": "b1-08-vocabulario-huecos",
+        "type": "gap",
+        "title": "El mensaje de Nuria",
+        "prompt": "Completa con una palabra o expresión del banco.",
+        "bank": [
+          "meta",
+          "en forma",
+          "recorrido",
+          "inscribirme",
+          "sin fuerzas"
+        ],
+        "items": [
+          {
+            "q": "Por fin me he decidido a ___ en la media maratón.",
+            "answers": [
+              [
+                "inscribirme"
+              ]
+            ],
+            "why": "Apuntarse oficialmente a una carrera."
           },
           {
-            "left": "ceder en algo",
-            "right": "aceptar cambiar una exigencia"
+            "q": "Todavía no estoy ___, pero tengo tres meses.",
+            "answers": [
+              [
+                "en forma"
+              ]
+            ],
+            "why": "Estar en buena condición física."
           },
           {
-            "left": "una condición imprescindible",
-            "right": "requisito que no se puede abandonar"
+            "q": "El ___ pasa por el puerto y por el centro histórico.",
+            "answers": [
+              [
+                "recorrido"
+              ]
+            ],
+            "why": "El camino de la carrera."
           },
           {
-            "left": "llegar a un acuerdo",
-            "right": "decidir una solución aceptada"
+            "q": "Mi miedo es quedarme ___ en el kilómetro dieciocho.",
+            "answers": [
+              [
+                "sin fuerzas"
+              ]
+            ],
+            "why": "No tener energía para seguir."
+          },
+          {
+            "q": "Si cruzo la ___, lo celebraremos con un espeto de sardinas.",
+            "answers": [
+              [
+                "meta"
+              ]
+            ],
+            "why": "El final de la carrera."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "Pausas en información añadida",
+    "focus": "«Correría» o «corría»: la «r» que separa el condicional del imperfecto",
     "explanation": [
-      "Compara los compañeros que estudian salen tarde con los compañeros, que estudian, salen tarde. La pausa puede presentar información adicional; el contexto aclara a quiénes incluyes.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "En los verbos en -er e -ir, el condicional y el imperfecto se parecen mucho: «corría / correría», «salía / saldría», «tenía / tendría». La diferencia está en la sílaba «-rí-» del condicional, que conserva la «r» del infinitivo o de la raíz irregular. Escucha si aparece esa sílaba antes de la «-ía» final.",
+      "En las dos formas la «í» es tónica y forma hiato con la «a»: co-rre-RÍ-a, co-RRÍ-a. No la conviertas en diptongo («correrya»); pronuncia dos sílabas claras al final. En «-ríamos» el acento sigue en la «í»: co-rre-RÍ-a-mos."
     ],
     "examples": [
       {
-        "es": "Buscamos un piso que tenga dos mesas."
+        "es": "De niña corría por la playa. / Yo que tú, correría por la playa.",
+        "note": "Imperfecto (costumbre) frente a condicional (consejo)."
       },
       {
-        "es": "Conozco uno que tiene un patio pequeño."
-      },
-      {
-        "es": "La que vive junto al parque es mi compañera."
+        "es": "Antes salía a las siete. / Yo saldría a las siete.",
+        "note": "Sa-LÍ-a / sal-DRÍ-a."
       }
     ],
     "perceive": {
-      "id": "b1-08-perception",
+      "id": "b1-08-pronunciacion-ria-ia",
       "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "title": "¿Condicional o imperfecto?",
+      "prompt": "Escucha y elige la forma que oyes.",
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «El lugar que estamos buscando»?",
+          "q": "¿Qué forma oyes?",
           "options": [
-            "La relativa queda entre pausas",
-            "No se separa ninguna información añadida"
-          ],
-          "answer": 0,
-          "audio": "Los vecinos, que ya habían llegado, esperaron fuera.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
-        },
-        {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «El lugar que estamos buscando»?",
-          "options": [
-            "Se oye la que como grupo inicial",
-            "Se oye lo que como grupo inicial"
+            "corría",
+            "correría"
           ],
           "answer": 1,
-          "audio": "Lo que necesito es silencio.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Oyes «-rrería»: condicional de hipótesis.",
+          "audio": "Con más tiempo, correría todos los días.",
+          "voice": "es-ES-f"
+        },
+        {
+          "q": "¿Y aquí?",
+          "options": [
+            "salía",
+            "saldría"
+          ],
+          "answer": 0,
+          "why": "Sin «dr»: imperfecto de costumbre.",
+          "audio": "Cuando vivía en Málaga, salía a correr al amanecer.",
+          "voice": "es-ES-m"
+        },
+        {
+          "q": "¿Qué forma oyes?",
+          "options": [
+            "tenía",
+            "tendría"
+          ],
+          "answer": 1,
+          "why": "«Ten-DRÍ-a»: condicional de consejo.",
+          "audio": "Yo en tu lugar, tendría paciencia.",
+          "voice": "es-MX-f"
+        },
+        {
+          "q": "¿Y en esta frase?",
+          "options": [
+            "diría",
+            "decía"
+          ],
+          "answer": 1,
+          "why": "«De-CÍ-a»: imperfecto.",
+          "audio": "Mi abuela decía que el mar lo curaba todo.",
+          "voice": "es-AR-f"
         }
       ]
     },
     "produce": [
       {
-        "text": "Buscamos un piso que tenga dos mesas.",
-        "tip": "Compara los compañeros que estudian salen tarde con los compañeros, que estudian, salen tarde. La pausa puede presentar información adicional; el contexto aclara a quiénes incluyes.",
+        "text": "Yo que tú, correría más despacio.",
+        "tip": "Marca bien la «í»: co-rre-RÍ-a.",
         "voice": "es-ES-f"
       },
       {
-        "text": "Conozco uno que tiene un patio pequeño.",
-        "tip": "Compara los compañeros que estudian salen tarde con los compañeros, que estudian, salen tarde. La pausa puede presentar información adicional; el contexto aclara a quiénes incluyes.",
-        "voice": "es-ES-f"
+        "text": "Antes corría sola; ahora correría con un grupo.",
+        "tip": "Contrasta las dos formas en la misma frase.",
+        "voice": "es-ES-m"
       },
       {
-        "text": "La que vive junto al parque es mi compañera.",
-        "tip": "Compara los compañeros que estudian salen tarde con los compañeros, que estudian, salen tarde. La pausa puede presentar información adicional; el contexto aclara a quiénes incluyes.",
-        "voice": "es-ES-f"
+        "text": "¿Podríamos salir un poco antes?",
+        "tip": "Mantén el acento en la «í»: po-DRÍ-a-mos.",
+        "voice": "es-MX-m"
       }
-    ]
+    ],
+    "spelling": "Todas las formas del condicional llevan tilde en la «í» porque rompe el diptongo: entrenaría, tendríamos, saldrían."
   },
   "listening": {
-    "title": "El lugar que estamos buscando · voces en conversación",
-    "context": "Una llamada permite preguntar por una habitación antes de visitarla. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "La primera sesión con la entrenadora",
+    "context": "Nuria se ha apuntado a la media maratón de Málaga, que es en diciembre. En el paseo marítimo de la Malagueta se encuentra con Rocío, entrenadora de un club de corredores, para hablar de su plan.",
     "speakers": [
       {
-        "id": "a",
-        "name": "Persona interesada",
-        "voice": "es-ES-f"
+        "id": "roc",
+        "name": "Rocío",
+        "voice": "es-ES-f",
+        "role": "entrenadora"
       },
       {
-        "id": "b",
-        "name": "Responsable del piso",
-        "voice": "es-ES-m"
+        "id": "nur",
+        "name": "Nuria",
+        "voice": "es-MX-f",
+        "role": "corredora principiante"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Llamo por el anuncio de la habitación. Busco un lugar que permita estudiar por la tarde y que tenga una mesa dentro del cuarto. En las fotografías no se ve bien el espacio junto a la ventana."
+        "speaker": "nur",
+        "text": "Te lo confieso: aunque ya pagué la inscripción, no sé si voy a ser capaz. Nunca he corrido más de cinco kilómetros."
       },
       {
-        "speaker": "b",
-        "text": "La habitación tiene una mesa pequeña y una estantería. La que aparece junto al salón ya está ocupada; la disponible da al patio. Es más tranquila, aunque recibe menos luz directa durante la mañana."
+        "speaker": "roc",
+        "text": "Tranquila. Aunque te parece mucho, tenemos doce semanas, y eso es tiempo suficiente. Si entrenas cuatro días por semana, llegarás a la meta sin problema."
       },
       {
-        "speaker": "a",
-        "text": "Eso podría servirme. Lo que más me preocupa es el ruido por la noche. ¿Cuántas personas viven allí y cómo organizan las visitas? No necesito silencio absoluto, pero tengo clases temprano varios días."
+        "speaker": "nur",
+        "text": "¿Y qué hago si un día no puedo? Trabajo por turnos y algunas semanas es imposible."
       },
       {
-        "speaker": "b",
-        "text": "Ahora viven dos personas que trabajan de día. Suelen recibir amigos los fines de semana y avisan antes en un grupo. No hay una norma escrita, así que sería bueno hablarlo durante la visita y comprobar que todos están de acuerdo."
+        "speaker": "roc",
+        "text": "Si pierdes un entrenamiento, no intentes recuperarlo al día siguiente: sigue con el plan. Lo que no te puedes saltar es la tirada larga del domingo."
       },
       {
-        "speaker": "a",
-        "text": "Me parece razonable. También quisiera saber si los gastos están incluidos. Conozco un piso que anuncia un precio bajo y luego añade varias cantidades. Prefiero calcular el total antes de decidir."
+        "speaker": "nur",
+        "text": "Vale. Otra cosa: ¿te importaría mirar mis zapatillas? Me las compré hace tres años."
       },
       {
-        "speaker": "b",
-        "text": "El alquiler incluye internet, pero la electricidad se divide entre quienes viven allí. Podemos enseñarte las últimas facturas sin datos personales para que veas una cantidad aproximada. Si te interesa, ven el jueves y así preguntas directamente a tus posibles compañeros. He visto bastantes anuncios, pero no conozco ningún piso que reúna todo. Puedo ceder en la luz; no puedo aceptar cualquier nivel de ruido durante la noche."
+        "speaker": "roc",
+        "text": "Uy, yo que tú, me compraría otras ya, porque están muy gastadas por el talón. Eso sí, no las estrenes el día de la carrera: deberías usarlas al menos un mes antes."
+      },
+      {
+        "speaker": "nur",
+        "text": "Me dijeron que el recorrido sería muy llano. ¿Es verdad?"
+      },
+      {
+        "speaker": "roc",
+        "text": "Sí, es casi todo llano, aunque hay un tramo con viento en el puerto. Si sopla de levante, ponte detrás de otros corredores. Y si te sientes bien en el kilómetro quince, puedes acelerar un poco."
+      },
+      {
+        "speaker": "nur",
+        "text": "Me encantaría terminar en menos de dos horas y media."
+      },
+      {
+        "speaker": "roc",
+        "text": "Es un objetivo muy razonable. Empezamos el lunes."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿Cuál es la idea general?",
         "exercise": {
-          "id": "b1-08-audio-0",
+          "id": "b1-08-escucha-global",
           "type": "choice",
-          "prompt": "El lugar que estamos buscando: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Cuál es la prioridad de quien llama?",
+              "q": "¿Cómo se siente Nuria al principio?",
               "options": [
-                "Tener la habitación más luminosa de la ciudad",
-                "Poder estudiar y descansar"
+                "Muy segura de terminar.",
+                "Insegura, aunque ya se ha inscrito.",
+                "Enfadada con la entrenadora."
               ],
               "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "«Aunque ya pagué la inscripción, no sé si voy a ser capaz.»"
             },
             {
-              "q": "¿Para qué se propone una visita?",
+              "q": "¿Qué hace Rocío durante la conversación?",
               "options": [
-                "Para conocer el espacio y negociar convivencia",
-                "Para firmar sin preguntar"
+                "La convence de no correr.",
+                "Le vende unas zapatillas.",
+                "La tranquiliza y le da consejos prácticos."
               ],
-              "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "answer": 2,
+              "why": "Le explica el plan y le da consejos sobre entrenamiento y material."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y fíjate en los detalles.",
         "exercise": {
-          "id": "b1-08-audio-1",
+          "id": "b1-08-escucha-detalle",
           "type": "choice",
-          "prompt": "El lugar que estamos buscando: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según la conversación.",
           "items": [
             {
-              "q": "¿Qué gasto se paga aparte?",
+              "q": "Si Nuria pierde un entrenamiento, ¿qué tiene que hacer?",
               "options": [
-                "La electricidad",
-                "Internet"
+                "Seguir con el plan normalmente.",
+                "Recuperarlo al día siguiente.",
+                "Correr el doble el domingo."
               ],
               "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "«No intentes recuperarlo al día siguiente: sigue con el plan.»"
             },
             {
-              "q": "¿Qué habitación está disponible?",
+              "q": "¿Qué le aconseja Rocío sobre las zapatillas?",
               "options": [
-                "La que está junto al salón",
-                "La que da al patio"
+                "Que las arregle.",
+                "Que compre otras y las use un mes antes de la carrera.",
+                "Que las estrene el día de la carrera."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Yo que tú, me compraría otras ya… deberías usarlas al menos un mes antes.»"
+            },
+            {
+              "q": "¿Qué dificultad tiene el recorrido?",
+              "options": [
+                "Una subida muy larga.",
+                "Mucho tráfico.",
+                "Un tramo con viento en el puerto."
+              ],
+              "answer": 2,
+              "why": "«Hay un tramo con viento en el puerto.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Fíjate en la gramática. Completa lo que dicen exactamente.",
         "exercise": {
-          "id": "b1-08-audio-2",
-          "type": "choice",
-          "prompt": "El lugar que estamos buscando: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-08-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la forma que usan.",
           "items": [
             {
-              "q": "¿Qué diferencia «busco» y «conozco» en sus relativas?",
-              "options": [
-                "Pasado frente a futuro obligatorio",
-                "Requisito no identificado frente a referente conocido"
+              "q": "Si ___ cuatro días por semana, llegarás a la meta.",
+              "answers": [
+                [
+                  "entrenas"
+                ]
               ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "«Si» + presente; consecuencia en futuro."
             },
             {
-              "q": "¿Por qué piden calcular el total?",
-              "options": [
-                "Para evitar decidir solo por el precio anunciado",
-                "Para ocultar gastos a los compañeros"
+              "q": "Yo que tú, me ___ otras ya.",
+              "answers": [
+                [
+                  "compraría"
+                ]
               ],
-              "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Consejo con «yo que tú» + condicional."
+            },
+            {
+              "q": "Me dijeron que el recorrido ___ muy llano.",
+              "answers": [
+                [
+                  "sería"
+                ]
+              ],
+              "why": "Futuro visto desde el pasado: condicional."
+            },
+            {
+              "q": "Es casi todo llano, ___ hay un tramo con viento.",
+              "answers": [
+                [
+                  "aunque"
+                ]
+              ],
+              "why": "Reserva final con «aunque» + indicativo."
             }
           ]
         }
@@ -501,183 +866,281 @@ export const b1w08: Module = {
     ]
   },
   "reading": {
-    "title": "El lugar que estamos buscando · otra perspectiva",
-    "genre": "Artículo y experiencia de comunidad",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "Tu primera media: guía para no rendirse",
+    "genre": "Guía de un club de corredores",
+    "frame": "El club Corredores de la Malagueta reparte esta guía a las personas que van a correr su primera media maratón.",
     "text": [
-      "Tres estudiantes buscan piso para el próximo curso y han preparado una lista que ocupa casi una página. Quieren un lugar que esté cerca del centro, que tenga habitaciones grandes y que no sea caro. Cuando empiezan a comparar anuncios, descubren que ninguna opción reúne todas las condiciones. La discusión no consiste solo en elegir un edificio; también necesitan decidir cómo quieren convivir.",
-      "A Julia le importa disponer de una mesa donde pueda estudiar por la noche. Omar trabaja algunos días desde casa y necesita una conexión estable. A Teresa le preocupa el trayecto, porque sale temprano para sus prácticas. El piso que vieron el martes tiene buenas habitaciones, pero está lejos del transporte. El que visitaron el jueves es más pequeño y cuesta un poco más, aunque permite que cada uno llegue a sus actividades sin depender de los demás.",
-      "No descartan cualquier piso por un detalle menor, pero tampoco aceptan cualquier condición. Hay bastantes anuncios incompletos y algunos precios son demasiado altos para su presupuesto. Preguntarán antes de pagar ninguna señal.",
-      "En lugar de votar enseguida, separan las condiciones imprescindibles de las preferencias. Descubren que el patio, que al principio parecía fundamental, importa menos que el silencio y la comunicación con el propietario. También redactan tres normas sobre limpieza, visitas y gastos. Todavía no han firmado el contrato: quieren preguntar por la fianza y comprobar el estado de la instalación. Buscar un piso ideal les ha servido para reconocer que una convivencia posible necesita acuerdos más concretos que una fotografía bonita."
+      "Correr 21 kilómetros parece una locura cuando empiezas. Sin embargo, cada año cientos de principiantes cruzan la meta en el paseo del Parque, y la mayoría no son atletas. Aunque no tienes que sufrir para mejorar, sí necesitas constancia: si sales a correr cuatro veces por semana durante tres meses, tu cuerpo se adaptará.",
+      "Las dudas más frecuentes tienen respuestas sencillas. Si te duele algo durante más de dos días, deja de correr y consulta a un fisioterapeuta. Si hace mucho calor, entrena temprano o al atardecer. Si un día te sientes sin fuerzas, puedes caminar un rato: caminar no es fracasar. Y si te aburres de correr siempre sola, únete a nuestras salidas de los miércoles por la tarde, que empiezan junto al faro.",
+      "¿Y nuestros consejos para el gran día? Nosotros, en tu lugar, cenaríamos algo ligero la noche anterior y llegaríamos a la salida con cuarenta minutos de margen. Tampoco cambiaríamos nada: ni el desayuno, ni la ropa, ni las zapatillas. Muchos corredores nos dicen después que, en una segunda carrera, irían más despacio al principio.",
+      "Por último, una petición: ¿podrías avisarnos si dejas el plan? Aunque lo entendemos perfectamente, nos gustaría saberlo para guardar tu plaza a otra persona."
+    ],
+    "glossary": [
+      {
+        "es": "la constancia"
+      },
+      {
+        "es": "el fisioterapeuta"
+      },
+      {
+        "es": "con margen"
+      }
     ],
     "tasks": [
       {
-        "id": "b1-08-read-evidence",
+        "id": "b1-08-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «El lugar que estamos buscando», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según la guía.",
         "items": [
           {
-            "q": "¿Por qué no votan inmediatamente?",
+            "q": "Según la guía, ¿qué hace falta para terminar una media maratón?",
             "options": [
-              "Deben distinguir necesidades y preferencias",
-              "Ya han firmado dos contratos"
+              "Ser atleta.",
+              "Sufrir en cada entrenamiento.",
+              "Constancia durante unos tres meses."
             ],
-            "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "answer": 2,
+            "why": "«Sí necesitas constancia… durante tres meses.»"
           },
           {
-            "q": "¿Qué pierde importancia al comparar?",
+            "q": "¿Qué recomienda si te sientes sin fuerzas un día?",
             "options": [
-              "El silencio",
-              "El patio"
+              "Caminar un rato.",
+              "Abandonar el plan.",
+              "Entrenar el doble al día siguiente."
+            ],
+            "answer": 0,
+            "why": "«Puedes caminar un rato: caminar no es fracasar.»"
+          },
+          {
+            "q": "¿Qué dicen muchos corredores después de su primera media?",
+            "options": [
+              "Que la cena fue demasiado ligera.",
+              "Que en otra carrera empezarían más despacio.",
+              "Que llegarían más tarde a la salida."
             ],
             "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«En una segunda carrera, irían más despacio al principio.»"
           }
         ]
       },
       {
-        "id": "b1-08-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «El lugar que estamos buscando».",
-        "items": [
+        "id": "b1-08-lectura-condiciones",
+        "type": "match",
+        "title": "Cada situación con su respuesta",
+        "prompt": "Une cada situación con lo que recomienda la guía.",
+        "pairs": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «El lugar que estamos buscando», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "Tres estudiantes buscan piso para el próximo curso y han preparado una lista que ocupa casi una página.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "left": "Te duele algo más de dos días.",
+            "right": "Deja de correr y consulta a un fisioterapeuta."
+          },
+          {
+            "left": "Hace mucho calor.",
+            "right": "Entrena temprano o al atardecer."
+          },
+          {
+            "left": "Un día te sientes sin fuerzas.",
+            "right": "Camina un rato."
+          },
+          {
+            "left": "Decides dejar el plan.",
+            "right": "Avisa al club para que guarde tu plaza a otra persona."
           }
-        ]
+        ],
+        "why": "La guía usa «si» + presente y, en la consecuencia, imperativo o «poder»."
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Fíjate en cómo la guía combina las tres clases de la semana.",
       "items": [
         {
-          "quote": "Tres estudiantes buscan piso para el próximo curso y han preparado una lista que ocupa casi una página.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "Aunque no tienes que sufrir para mejorar, sí necesitas constancia",
+          "note": "«Aunque» + indicativo concede un hecho y lo contrasta con otro."
         },
         {
-          "quote": "Buscar un piso ideal les ha servido para reconocer que una convivencia posible necesita acuerdos más concretos que una fotografía bonita.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "si sales a correr cuatro veces por semana durante tres meses, tu cuerpo se adaptará",
+          "note": "«Si» + presente y consecuencia en futuro: una predicción."
+        },
+        {
+          "quote": "Nosotros, en tu lugar, cenaríamos algo ligero",
+          "note": "Consejo con «en tu lugar» + condicional."
+        },
+        {
+          "quote": "¿podrías avisarnos si dejas el plan?",
+          "note": "Petición cortés con condicional y una condición con «si» + presente."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Combinas las tres clases y recuperas lo de las semanas 6 y 7.",
     "exercises": [
       {
-        "id": "b1-08-order",
+        "id": "b1-08-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «El lugar que estamos buscando» y léelos con grupos de sentido.",
+        "title": "Frases de ánimo",
+        "prompt": "Ordena las palabras para formar frases completas.",
         "items": [
           {
             "words": [
-              "Quien",
-              "llegue",
-              "primero",
-              "recoge",
-              "las",
-              "llaves."
+              "Aunque",
+              "no",
+              "eres",
+              "rápida,",
+              "eres",
+              "muy",
+              "constante."
             ]
           },
           {
             "words": [
-              "Este",
-              "es",
+              "Si",
+              "te",
+              "cansas,",
+              "baja",
               "el",
-              "barrio",
-              "donde",
-              "trabajo."
+              "ritmo",
+              "y",
+              "respira."
+            ]
+          },
+          {
+            "words": [
+              "Yo",
+              "que",
+              "tú,",
+              "dormiría",
+              "la",
+              "siesta",
+              "hoy."
+            ]
+          },
+          {
+            "words": [
+              "¿Te",
+              "importaría",
+              "esperarme",
+              "en",
+              "la",
+              "meta?"
             ]
           }
         ]
       },
       {
-        "id": "b1-08-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «El lugar que estamos buscando».",
-        "categories": [
-          "Referente identificado",
-          "Característica buscada"
-        ],
+        "id": "b1-08-practica-retrieval",
+        "type": "gap",
+        "title": "Recuperación: semanas 6 y 7",
+        "prompt": "Recuperación de semanas anteriores. Completa con la forma correcta del verbo entre paréntesis.",
         "items": [
           {
-            "text": "Conozco un piso que tiene patio.",
-            "cat": 0
+            "q": "Semana 6: Qué bien que por fin te ___ a correr con el club. (animarse)",
+            "answers": [
+              [
+                "hayas animado"
+              ]
+            ],
+            "why": "Reacción a algo ya ocurrido: perfecto de subjuntivo."
           },
           {
-            "text": "La habitación que da al jardín está ocupada.",
-            "cat": 0
+            "q": "Semana 6: No te quites la chaqueta hasta que ___ la carrera. (empezar)",
+            "answers": [
+              [
+                "empiece"
+              ]
+            ],
+            "why": "«Hasta que» + acción futura: subjuntivo."
           },
           {
-            "text": "Busco una casa que tenga luz.",
-            "cat": 1
+            "q": "Semana 7: Busco unas zapatillas que ___ ligeras y baratas. (ser)",
+            "answers": [
+              [
+                "sean"
+              ]
+            ],
+            "why": "Antecedente buscado: subjuntivo."
           },
           {
-            "text": "Necesito a alguien que respete los turnos.",
-            "cat": 1
+            "q": "Semana 7: Te paso el plan para que lo ___ con calma. (leer)",
+            "answers": [
+              [
+                "leas"
+              ]
+            ],
+            "why": "Dos sujetos: «para que» + subjuntivo."
           }
         ]
       },
       {
-        "id": "b1-08-draft",
+        "id": "b1-08-practica-contexto",
+        "type": "context",
+        "title": "¿Qué dirías?",
+        "prompt": "Lee la situación y elige la reacción más adecuada.",
+        "items": [
+          {
+            "context": "Un compañero quiere correr la carrera aunque lleva una semana con fiebre.",
+            "q": "¿Qué le dices?",
+            "options": [
+              "Si tienes fiebre, correrás mejor.",
+              "Yo que tú, no correría este año.",
+              "Aunque tengas fiebre, pero corre."
+            ],
+            "answer": 1,
+            "why": "Consejo con «yo que tú» + condicional."
+          },
+          {
+            "context": "En la recepción del hotel, quieres que te despierten a las seis.",
+            "q": "¿Cómo lo pides?",
+            "options": [
+              "¿Podrían despertarme a las seis, por favor?",
+              "Despiértenme a las seis.",
+              "Si me despiertan a las seis."
+            ],
+            "answer": 0,
+            "why": "Petición cortés con «podrían»."
+          },
+          {
+            "context": "Hace mucho viento, pero tu amiga ha decidido salir a correr igualmente.",
+            "q": "¿Cómo lo cuentas?",
+            "options": [
+              "Si hace viento, ha salido a correr.",
+              "Aunque hace mucho viento, ha salido a correr.",
+              "Aunque haga mucho viento, pero ha salido."
+            ],
+            "answer": 1,
+            "why": "El viento es un hecho real: «aunque» + indicativo."
+          }
+        ]
+      },
+      {
+        "id": "b1-08-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Respuestas breves",
+        "prompt": "Escribe cada respuesta en dos o tres frases.",
         "items": [
           {
-            "prompt": "El lugar que estamos buscando: escribe una apertura de 35–45 palabras para la tarea «Redacta un anuncio de 150–180 palabras para buscar compañeros de piso: describe el lugar que tienes, la persona que buscas y tres normas negociables o imprescindibles.» sin copiar el modelo.",
-            "model": "Buscamos una persona que quiera compartir nuestro piso a partir de noviembre.",
+            "prompt": "Un amigo te escribe: «Quiero aprender a nadar, pero tengo cuarenta años y me da vergüenza». Anímalo y dale un consejo.",
+            "model": "Aunque te da vergüenza, muchos adultos aprenden a nadar a tu edad. Yo que tú, me apuntaría a un curso para principiantes; si vas dos veces por semana, en un mes nadarás sin miedo.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "Reconoces el obstáculo con «aunque» + indicativo.",
+              "Das un consejo en condicional y una condición con «si» + presente."
             ]
           },
           {
-            "prompt": "El lugar que estamos buscando: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "Podemos negociar los días, aunque es importante que todos participemos. Antes de decidir, proponemos una visita para conocer el espacio y responder preguntas. También mostraremos el contrato y las condiciones de la fianza para evitar malentendidos.",
+            "prompt": "Escribe a la organización de una carrera para pedir con cortesía que te cambien la talla de la camiseta.",
+            "model": "Buenos días: me inscribí con una talla M, pero me quedaría mejor una L. ¿Podrían cambiármela? Si no es posible, lo entiendo perfectamente.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-08-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «El lugar que estamos buscando», recupera la semana 7: Escribe a un amigo tras un malentendido: expresa alivio, preocupación y una molestia sin acusar; alterna infinitivo y que, explica qué relación deseas cuidar y propone hacer las paces.",
-            "model": "Me alegra que hayas encontrado apoyo. Me preocupa que no tengas tiempo libre.",
-            "checklist": [
-              "Puedo reaccionar con me alegra que, me molesta que, me preocupa que + subjuntivo.",
-              "Puedo usar me alegra verte y me alegra que vengas sin confundir quién experimenta la emoción con el sujeto gramatical.",
-              "Puedo nombrar emociones con precisión: agobio, alivio, orgullo, decepción.",
-              "Puedo reconocer y producir alegría, fastidio o sorpresa en la entonación.",
-              "Puedo explicar cómo me siento ante una situación y por qué.",
-              "Puedo escribir un correo personal que reacciona a noticias.",
-              "Puedo hablar de amistad, pareja, conflictos y reconciliación.",
-              "Puedo describir una relación, un conflicto y cómo se resolvió."
+              "Usas «podrían» o «me gustaría» para pedir.",
+              "Hay una condición con «si» + presente."
             ]
           },
           {
-            "prompt": "Tras recuperar el caso anterior en «El lugar que estamos buscando», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: Buscamos un piso que tenga dos mesas.",
+            "prompt": "Cuenta qué te prometió alguien una vez y si lo cumplió.",
+            "model": "Mi hermano me prometió que vendría a verme correr en mi primera carrera. Aunque llovía muchísimo, estaba en la meta con un paraguas y una pancarta.",
             "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
-            ]
-          },
-          {
-            "prompt": "Aplicación diferida en «El lugar que estamos buscando»: Cuenta un malentendido entre una amiga tuya y un amigo suyo. Contrasta mi mensaje y el tuyo sin perder el referente y usa dos posesivos posnominales con concordancia.",
-            "model": "Una amiga mía también tuvo ese malentendido. Tu mensaje fue breve; el mío explicaba los cambios.",
-            "checklist": [
-              "Puedo distinguir un amigo mío, mi amigo y el mío, aclarando de quién hablo.",
-              "Explico cómo cambia el sentido si sustituyo una forma."
+              "Usas el condicional después de «prometió que» o «dijo que».",
+              "Hay un «aunque» + indicativo en pasado."
             ]
           }
         ]
@@ -685,185 +1148,246 @@ export const b1w08: Module = {
     ]
   },
   "writing": {
-    "task": "Redacta un anuncio de 150–180 palabras para buscar compañeros de piso: describe el lugar que tienes, la persona que buscas y tres normas negociables o imprescindibles.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Una amiga te escribe que quiere apuntarse a un reto (una carrera, un curso intensivo, un viaje en bicicleta), pero tiene muchas dudas. Escríbele un correo para animarla: reconoce sus dificultades, explícale qué pasará si se prepara bien y dale consejos concretos.",
+    "context": "Tu amiga tiene poco tiempo y cree que es demasiado tarde para empezar. Tú ya has hecho un reto parecido.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Anota sus tres dudas principales y una experiencia tuya parecida.",
+      "Primer párrafo: reconoce sus dificultades con «aunque» o «a pesar de» y cuéntale tu experiencia.",
+      "Segundo párrafo: plantea condiciones con «si» + presente y dale al menos tres consejos en condicional.",
+      "Revisa el correo: busca cada «si» y comprueba que no va seguido de futuro ni de subjuntivo; corrige también las tildes del condicional."
     ],
     "useLanguage": [
-      "Buscamos un piso que tenga dos mesas.",
-      "Conozco uno que tiene un patio pequeño.",
-      "La que vive junto al parque es mi compañera.",
-      "Quien llegue primero recoge las llaves.",
-      "No conocemos ningún piso que reúna todo.",
-      "Cualquier persona puede preguntar por los gastos."
+      "aunque + indicativo",
+      "a pesar de + nombre / infinitivo",
+      "si + presente, futuro / imperativo / poder",
+      "yo que tú / yo en tu lugar + condicional",
+      "deberías / sería buena idea + infinitivo"
     ],
     "model": [
-      "Buscamos una persona que quiera compartir nuestro piso a partir de noviembre. Está cerca de una biblioteca y tiene una cocina donde cabemos los tres para cenar.",
-      "Una de las personas trabaja algunos días desde casa y otra estudia por la tarde. Por eso intentamos mantener tranquilos los espacios comunes en esas horas. Las visitas son bienvenidas, siempre que avisemos y podamos acordar una organización que permita descansar.",
-      "La habitación que queda libre es pequeña, pero recibe luz por la mañana. Nos gustaría encontrar a alguien que respete el descanso y que avise cuando vaya a recibir visitas. No buscamos una persona que tenga exactamente nuestros horarios; lo que necesitamos es poder hablar de los cambios. Los gastos de electricidad se reparten y la limpieza se organiza por turnos. Podemos negociar los días, aunque es importante que todos participemos. Antes de decidir, proponemos una visita para conocer el espacio y responder preguntas. También mostraremos el contrato y las condiciones de la fianza para evitar malentendidos."
+      "¡Hola, Marta! Me alegra mucho tu mensaje. Ya sé que tienes poco tiempo y que nunca has hecho deporte en serio, pero eso no significa que sea tarde. Yo empecé a correr con treinta y ocho años y, aunque los primeros días me costaba subir las escaleras, a los tres meses terminé mi primera media maratón. A pesar de las agujetas, fue una de las mejores experiencias de mi vida.",
+      "Si entrenas tres o cuatro días por semana, llegarás a la meta, de verdad. Yo que tú, buscaría un grupo, porque se corre mejor acompañada. También compraría unas zapatillas buenas desde el principio y no haría más kilómetros de los que dice el plan. Si un día estás muy cansada, descansa sin sentirte culpable. ¿Te gustaría salir a correr conmigo el sábado? Si quieres, te espero a las nueve en la puerta del parque y vamos a tu ritmo. ¡Ánimo!"
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié.",
-      "Integro y compruebo este recurso: cuantificadores y negación en búsquedas."
+      "Reconozco al menos dos dificultades con «aunque» o «a pesar de», sin añadir «pero».",
+      "Cada «si» de condición va seguido de presente de indicativo.",
+      "Doy al menos tres consejos en condicional, con tilde en la «í».",
+      "El correo tiene saludo, dos párrafos y una propuesta final."
     ],
     "words": [
-      150,
+      130,
       180
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas y escúchate: comprueba que pronuncias bien el condicional («-ría») y que no usas futuro detrás de «si».",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Negocia un piso con una persona que prioriza el precio y tú el transporte. Presenta requisitos durante dos minutos, pregunta cuáles son flexibles y responde con una propuesta común.",
+        "title": "Consejos para un reto",
+        "prompt": "Un amigo quiere hacer algo difícil (correr una carrera, aprender un idioma en un año, cambiar de trabajo). Habla durante dos minutos: reconoce las dificultades, explica qué pasará en distintos casos y dale consejos.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración.",
-          "Usa también: No conocemos ningún piso que reúna todo."
+          "Dos obstáculos con «aunque» y uno con «a pesar de».",
+          "Tres condiciones con «si» + presente y consecuencias diferentes.",
+          "Tres consejos con «yo que tú», «deberías» y «sería buena idea»."
         ],
         "seconds": 120,
+        "model": "Mira, aunque cambiar de trabajo a los cincuenta da miedo, no es imposible. A pesar de la crisis, hay empresas que buscan experiencia. Si actualizas tu currículum esta semana, podrás enviarlo a varias empresas antes de fin de mes. Si te llaman para una entrevista, prepárala con alguien. Yo que tú, hablaría con antiguos compañeros…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos?",
+          "¿He usado presente detrás de cada «si»?",
+          "¿He pronunciado la «í» del condicional?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «El lugar que estamos buscando», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "Negocia el plan de entrenamiento",
+        "prompt": "Tu entrenador quiere que entrenes cinco días por semana, pero tú solo puedes tres. Negocia con cortesía: responde a sus objeciones, pide cambios con el condicional y propone condiciones («si entreno tres días, ¿podría…?»). Practica con un compañero que haga de interlocutor.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Usa «¿podríamos…?», «me gustaría…» y «¿te importaría…?».",
+          "Acepta una objeción con «aunque» antes de proponer otra cosa."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "Aunque entiendo que cinco días es lo ideal, con mi horario es imposible. ¿Podríamos hacer tres sesiones más largas? Si entreno martes, jueves y domingo, ¿me darías ejercicios de fuerza para hacer en casa?",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He respondido a las objeciones con cortesía?",
+          "¿He propuesto al menos una condición con «si»?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Lleva tu correo y estas tarjetas a la próxima clase con tu profesor.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Negocia un piso con una persona que prioriza el precio y tú el transporte. Presenta requisitos durante dos minutos, pregunta cuáles son flexibles y responde con una propuesta común."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «El lugar que estamos buscando» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "move": "Pide",
+        "task": "Pídele a tu profesor un consejo sobre un problema real de tu vida y reacciona a su respuesta.",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "¿Tú qué harías en mi lugar?",
+          "¿Me aconsejarías…?"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «El lugar que estamos buscando» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Aconseja",
+        "task": "Escucha un problema de tu profesor y dale dos consejos con «yo que tú» y «deberías».",
+        "phrases": [
+          "Yo que tú…",
+          "Deberías…"
+        ]
+      },
+      {
+        "move": "Reconoce",
+        "task": "Habla de algo que haces aunque no te gusta, y de algo que harás si se cumple una condición este mes.",
+        "phrases": [
+          "Aunque no me gusta, …",
+          "Si este mes…, …"
+        ]
+      },
+      {
+        "move": "Imagina",
+        "task": "Imagina con tu profesor cómo sería tu vida en otra ciudad, solo con el condicional.",
+        "phrases": [
+          "Viviría…",
+          "Trabajaría…"
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu correo revisado y la grabación de tus consejos."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Qué pierde importancia al comparar? Relaciona tu respuesta con «El lugar que estamos buscando».",
+        "q": "«___ estaba cansado, terminó el trabajo.»",
         "options": [
-          "El silencio",
-          "El patio"
+          "Si",
+          "Aunque",
+          "Pero"
         ],
-        "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "answer": 1,
+        "why": "Obstáculo real que no impide el resultado: «aunque» + indicativo."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase es correcta?",
+        "options": [
+          "Si tendré tiempo, te llamaré.",
+          "Si tenga tiempo, te llamaré.",
+          "Si tengo tiempo, te llamaré."
+        ],
+        "answer": 2,
+        "why": "«Si» + presente de indicativo."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «El lugar que estamos buscando»: ¿qué formulación se oye?",
+        "q": "Escucha. ¿Qué hace el hablante?",
         "options": [
-          "La que vive junto al parque es mi compañera.",
-          "Lo que me preocupa es el ruido nocturno."
+          "Recuerda una costumbre del pasado.",
+          "Da un consejo.",
+          "Pide un favor."
         ],
         "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "Lo que me preocupa es el ruido nocturno.",
-        "voice": "es-ES-f"
+        "why": "«Yo que tú» + condicional: consejo.",
+        "audio": "Yo que tú, saldría un poco antes para evitar el tráfico.",
+        "voice": "es-ES-m"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «El lugar que estamos buscando». Necesito un alojamiento que ___ conexión estable.",
+        "q": "¿___ (poder, tú) ayudarme a mover la mesa?",
         "answers": [
           [
-            "tenga"
+            "Podrías"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «El lugar que estamos buscando». Texto de partida: Necesito encontrar una sala. Debe tener una entrada amplia. Consigna: Une con busco una sala que sin afirmar que conoces una. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "Busco una sala que tenga una entrada amplia.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "No conozco ningún piso que tiene todas esas condiciones.",
-        "answers": [
-          "No conozco ningún piso que tenga todas esas condiciones."
         ],
-        "why": "El referente no identificado aparece en una relativa con subjuntivo."
+        "why": "Petición cortés con el condicional de «poder»."
+      },
+      {
+        "type": "gap",
+        "q": "Si ___ (llegar, tú) antes que yo, espérame en la puerta.",
+        "answers": [
+          [
+            "llegas"
+          ]
+        ],
+        "why": "«Si» + presente; instrucción en imperativo."
+      },
+      {
+        "type": "gap",
+        "q": "El médico dijo que el resultado ___ (estar) listo el lunes.",
+        "answers": [
+          [
+            "estaría"
+          ]
+        ],
+        "why": "Futuro visto desde el pasado: condicional."
       },
       {
         "type": "order",
         "words": [
-          "Lo",
-          "que",
-          "me",
-          "preocupa",
-          "es",
+          "A",
+          "pesar",
+          "de",
+          "la",
+          "lluvia,",
           "el",
-          "ruido",
-          "nocturno."
-        ]
+          "concierto",
+          "fue",
+          "un",
+          "éxito."
+        ],
+        "why": "«A pesar de» + nombre."
+      },
+      {
+        "type": "error",
+        "sentence": "Aunque es caro, pero me lo compro.",
+        "answers": [
+          "Aunque es caro, me lo compro.",
+          "Es caro, pero me lo compro."
+        ],
+        "why": "No se usan «aunque» y «pero» en la misma frase."
+      },
+      {
+        "type": "error",
+        "sentence": "Con más dinero, viajaremos por todo el mundo.",
+        "answers": [
+          "Con más dinero, viajaríamos por todo el mundo."
+        ],
+        "why": "Situación imaginada: condicional."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «El lugar que estamos buscando»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: di lo mismo en una sola frase con «aunque» y un consejo en condicional. «El hotel es caro. Está al lado de la playa. Te recomiendo reservarlo.»",
+        "model": "Aunque el hotel es caro, está al lado de la playa; yo que tú, lo reservaría.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «El lugar que estamos buscando»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "Usas «aunque» + indicativo para el obstáculo.",
+          "No añades «pero» después de «aunque».",
+          "El consejo va en condicional («reservaría», «deberías reservarlo»)."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Describir requisitos y negociar qué condiciones son imprescindibles.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Aceptar un obstáculo real con «aunque» + indicativo y presentar el resultado con «sin embargo» o «aun así».",
+      "Plantear condiciones posibles con «si» + presente y elegir la consecuencia según tu intención.",
+      "Formar el condicional regular e irregular.",
+      "Pedir con cortesía, aconsejar e imaginar con el condicional."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "Las raíces irregulares del futuro, que son las mismas del condicional.",
+      "«Si llueve» frente a «cuando llueva» (semana 6).",
+      "La diferencia de sonido entre «-ría» y «-ía»."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/concesivas-iniciales-aunque-indicativo",
+      "label": "Clase: Concesivas iniciales: aunque + indicativo"
+    },
+    {
+      "path": "/gramatica/condiciones-reales-si-presente-y-futuro",
+      "label": "Clase: Condiciones reales: si + presente y futuro"
+    },
+    {
+      "path": "/sistema-verbal/condicional-simple-indicativo",
+      "label": "Clase: Condicional simple: consejos, cortesía e hipótesis"
+    }
+  ]
 };

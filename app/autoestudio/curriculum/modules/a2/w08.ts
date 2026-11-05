@@ -1,783 +1,591 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w08: Module = {
-  "id": "a2-08",
-  "level": "a2",
-  "week": 8,
-  "kind": "core",
-  "title": "Te lo devuelvo mañana",
-  "subtitle": "Pedir un favor, identificar quién recibe un objeto y acordar su devolución.",
-  "stop": {
-    "place": "Quetzaltenango",
-    "country": "Guatemala"
-  },
-  "minutes": 105,
-  "newObjectives": [
-    "a2.gram.oi-pronombres",
-    "a2.gram.se-lo",
-    "a2.voc.regalos-prestamos",
-    "a2.pron.cliticos-acento",
-    "a2.fun.favores",
-    "a2.wri.mensaje-favor"
+  id: "a2-08",
+  level: "a2",
+  week: 8,
+  kind: "core",
+  title: "Me desperté tarde y me puse nervioso",
+  subtitle: "Repaso de los verbos reflexivos en pasado, de los verbos de emoción con se y de los verbos de cambio ponerse y quedarse.",
+  stop: { place: "Quetzaltenango", country: "Guatemala" },
+  minutes: 105,
+  newObjectives: [
+    "a2.gram.g060",
+    "a2.gram.g061",
+    "a2.voc.w08-emociones-viaje",
+    "a2.pron.w08-enlace-pronombre",
+    "a2.lis.w08-lunes-fuentes",
+    "a2.read.w08-blog-familia",
+    "a2.wri.w08-dia-dificil",
+    "a2.spk.w08-reacciones",
+    "a2.fun.w08-contar-reacciones",
+    "a2.disc.w08-relato-reacciones",
   ],
-  "reviewObjectives": [
-    "a2.gram.indefinido-imperfecto",
-    "a2.disc.secuenciar",
-    "a2.voc.anecdotas",
-    "a2.pron.grupos-fonicos",
-    "a2.fun.anecdota",
-    "a2.spk.anecdota"
-  ],
-  "prerequisites": [
-    "a2-07"
-  ],
-  "goal": {
-    "canDo": "Puedo pedir un favor, identificar quién recibe un objeto y acordar su devolución.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "Te lo devuelvo mañana · formas que necesitas",
-        "body": [
-          "El objeto directo responde qué: el libro → lo, la cámara → la, los billetes → los, las llaves → las. El indirecto indica a quién: me, te, le, nos, os, les. Se antepone al directo: me lo, te la, nos los. Le y les cambian a se delante de lo, la, los, las: se lo presto."
-        ],
-        "support": [
-          "The receiver pronoun comes before the object pronoun. Le and les become se before lo, la, los or las."
-        ],
-        "examples": [
-          {
-            "es": "Le presto la cámara a Ana; se la presto hasta el viernes."
-          },
-          {
-            "es": "¿Me dejas tu cargador? Te lo devuelvo mañana."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Le lo doy a Paula.",
-            "right": "Se lo doy a Paula.",
-            "why": "Le se convierte en se delante de lo."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Con verbo conjugado, los pronombres van delante: te lo devuelvo. Con infinitivo pueden ir unidos: voy a devolvértelo; también te lo voy a devolver. Dámelo y explícaselo son fórmulas útiles que estudiarás como instrucciones la semana siguiente. Si se es ambiguo, añade a Marta o a mis vecinos."
-        ],
-        "examples": [
-          {
-            "es": "Voy a enviárselo a mis padres."
-          },
-          {
-            "es": "¿Puedes explicárselo? Ellos no entienden el mensaje."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Le envío el paquete a Eva: ___ lo envío.",
-            "answers": [
-              [
-                "se"
-              ]
-            ]
-          },
-          {
-            "q": "¿Me prestas la bolsa? Sí, te ___ presto.",
-            "answers": [
-              [
-                "la"
-              ]
-            ]
-          },
-          {
-            "q": "Nos das las llaves: nos ___ das.",
-            "answers": [
-              [
-                "las"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "Le doy el libro a Mario.",
-            "instruction": "Sustituye el libro por lo, cambia le según corresponda y conserva a Mario al final.",
-            "answers": [
-              "Se lo doy a Mario."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Voy a devolver la cámara a ti.",
-            "instruction": "Sustituye la cámara y a ti por los dos pronombres y colócalos antes de voy. No repitas los complementos.",
-            "answers": [
-              "Te la voy a devolver."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Envío los documentos a mis padres.",
-            "instruction": "Sustituye los documentos y a mis padres por dos pronombres antes de envío. No repitas los complementos ni añadas sujeto.",
-            "answers": [
-              "Se los envío."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "pedir prestado",
-            "en": "borrow"
-          },
-          {
-            "es": "prestar una cámara",
-            "en": "lend a camera"
-          },
-          {
-            "es": "devolver a tiempo",
-            "en": "return on time"
-          },
-          {
-            "es": "hacer un favor",
-            "en": "do a favour"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "dejar algo a alguien",
-            "en": "lend something to someone"
-          },
-          {
-            "es": "quedarse sin batería",
-            "en": "run out of battery"
-          },
-          {
-            "es": "enviar un paquete",
-            "en": "send a parcel"
-          },
-          {
-            "es": "agradecer la ayuda",
-            "en": "thank someone for help"
-          }
-        ]
-      }
+  reviewObjectives: ["a2.gram.g058","a2.gram.g059","a2.voc.w07-ciudad-transporte","a2.pron.w07-acento-tu-vos-usted","a2.lis.w07-camino-mercado","a2.read.w07-guia-ciudad","a2.wri.w07-instrucciones-llegada","a2.spk.w07-indicaciones","a2.fun.w07-indicar-camino","a2.disc.w07-instruccion-razon"],
+  prerequisites: ["a2-07"],
+  goal: {
+    canDo: "Al final de esta semana puedes contar tu rutina y un día difícil en pasado con verbos reflexivos (me desperté, me vestía), decir cómo te sentiste (me preocupé, me tranquilicé) y cómo reaccionó la gente con ponerse y quedarse.",
+    steps: [
+      "Repasa el pronombre delante del verbo en pasado: `me levanté`, `se duchaba`, `nos hemos acostado`.",
+      "Pega el pronombre al infinitivo, al gerundio y al imperativo: `voy a ducharme`, `levántate`.",
+      "Usa los verbos de emoción con se: `me preocupé`, `se aburrió`.",
+      "Elige entre `estar`, `ponerse` y `quedarse`.",
+      "Escucha a dos compañeros de una escuela de español de Xela.",
+      "Escribe y graba la historia de un día que salió mal.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "pedir prestado",
-            "right": "borrow"
-          },
-          {
-            "left": "prestar una cámara",
-            "right": "lend a camera"
-          },
-          {
-            "left": "devolver a tiempo",
-            "right": "return on time"
-          },
-          {
-            "left": "hacer un favor",
-            "right": "do a favour"
-          },
-          {
-            "left": "dejar algo a alguien",
-            "right": "lend something to someone"
-          },
-          {
-            "left": "quedarse sin batería",
-            "right": "run out of battery"
-          },
-          {
-            "left": "enviar un paquete",
-            "right": "send a parcel"
-          },
-          {
-            "left": "agradecer la ayuda",
-            "right": "thank someone for help"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Unir pronombres conservando el acento",
-    "explanation": [
-      "Al añadir pronombres, conserva la sílaba fuerte del verbo: DA-me-lo, ex-PLÍ-ca-se-lo. Algunas palabras necesitan tilde para mantener ese acento por escrito. Pronuncia el grupo unido, pero deja claro cada pronombre: cambia quién recibe la ayuda o qué objeto se devuelve."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "Te lo devuelvo el martes.",
-          "q": "¿Qué combinación oyes?",
-          "options": [
-            "te lo",
-            "se la"
+  theory: {
+    intro: "Esta semana repasas dos clases muy unidas: los **pronombres reflexivos** en las rutinas y en los cambios de estado, y los **verbos de cambio** _ponerse_ y _quedarse_. Aquí los ves en Quetzaltenango (Xela), con estudiantes de español, familias de acogida y una excursión a las aguas termales.",
+    parts: [
+      {
+        heading: "La rutina en pasado: el pronombre va delante",
+        body: [
+          "Un verbo reflexivo dice que la acción vuelve a la misma persona: _me ducho_ (me ducho a mí). En pasado, el pronombre **me, te, se, nos, os, se** va **delante** del verbo conjugado, en cualquier tiempo: _me levanté_ (indefinido), _me levantaba_ (imperfecto), _me he levantado_ (perfecto).",
+          "En el perfecto, el pronombre va delante de **haber**, nunca en medio: _se ha despertado_, no _ha se despertado_.",
+          "Los verbos que cambian la vocal en presente (_me despierto, me acuesto, me visto_) no la cambian en el indefinido con yo: _me desperté, me acosté_. Solo los verbos en -ir cambian con él y ellos: _se vistió, se vistieron_; _se durmió_.",
+        ],
+        support: [
+          "Reflexive pronouns go before the conjugated verb in every past tense: _me levanté, me levantaba, me he levantado_. With _haber_, the pronoun goes before _he/has/ha_.",
+        ],
+        table: {
+          caption: "Despertarse en tres pasados",
+          head: ["Persona", "indefinido", "imperfecto", "perfecto"],
+          rows: [
+            ["yo", "me desperté", "me despertaba", "me he despertado"],
+            ["tú", "te despertaste", "te despertabas", "te has despertado"],
+            ["él, ella, usted", "se despertó", "se despertaba", "se ha despertado"],
+            ["nosotros, nosotras", "nos despertamos", "nos despertábamos", "nos hemos despertado"],
+            ["vosotros, vosotras", "os despertasteis", "os despertabais", "os habéis despertado"],
+            ["ellos, ellas, ustedes", "se despertaron", "se despertaban", "se han despertado"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Se las envío mañana.",
-          "q": "¿El objeto es singular o plural?",
-          "options": [
-            "Plural femenino",
-            "Singular masculino"
+        examples: [
+          { es: "En Xela me levantaba a las seis porque las clases empezaban a las siete.", en: "In Xela I used to get up at six because classes started at seven." },
+          { es: "Ayer mi compañera de cuarto se durmió en el bus.", en: "Yesterday my roommate fell asleep on the bus." },
+          { es: "¿Ya te has bañado? El agua caliente se acaba pronto.", en: "Have you had your bath yet? The hot water runs out soon." },
+        ],
+        mistakes: [
+          { wrong: "Esta mañana he me duchado con agua fría.", right: "Esta mañana me he duchado con agua fría.", why: "El pronombre va delante de **haber**: _me he duchado_." },
+          { wrong: "Ayer me despierté a las cinco.", right: "Ayer me desperté a las cinco.", why: "El cambio _ie_ es solo del presente. En indefinido: **me desperté**." },
+        ],
+      },
+      {
+        heading: "Con infinitivo, gerundio e imperativo: el pronombre se pega",
+        body: [
+          "Con un **infinitivo** o un **gerundio**, tienes dos opciones: el pronombre delante del verbo conjugado o pegado al final: _me voy a acostar_ = _voy a acostarme_; _me estoy vistiendo_ = _estoy vistiéndome_.",
+          "El pronombre siempre cambia con la persona, también cuando está pegado: _vamos a acostarnos_, _¿vas a ducharte?_, _ellos van a quedarse_.",
+          "Con el **imperativo afirmativo** va pegado: _levántate, vístete, tranquilízate_. Con el **negativo** va delante: _no te levantes, no te preocupes_.",
+        ],
+        support: [
+          "With an infinitive or a gerund, the pronoun goes either before the conjugated verb or attached to the end. Keep the right person: _vamos a acostarnos_. Affirmative commands attach it: _levántate_; negative ones put it in front: _no te levantes_.",
+        ],
+        examples: [
+          { es: "Mañana hay excursión: voy a acostarme temprano.", en: "There's a trip tomorrow: I'm going to go to bed early." },
+          { es: "Espera un momento, me estoy peinando.", en: "Wait a moment, I'm doing my hair." },
+          { es: "Tranquilízate, no te preocupes: el bus todavía no ha salido.", en: "Calm down, don't worry: the bus hasn't left yet." },
+        ],
+        mistakes: [
+          { wrong: "Voy a me duchar antes de cenar.", right: "Voy a ducharme antes de cenar. / Me voy a duchar antes de cenar.", why: "El pronombre va delante de _voy_ o pegado al infinitivo, nunca entre los dos." },
+          { wrong: "Nosotros vamos a quedarse en casa.", right: "Nosotros vamos a quedarnos en casa.", why: "Con nosotros, **nos**: _quedarnos_." },
+        ],
+        tip: "Cuando pegas el pronombre al gerundio o al imperativo, a veces necesitas tilde: _vistiéndome, levántate_.",
+      },
+      {
+        heading: "Verbos de emoción: con se, la persona cambia por dentro",
+        body: [
+          "Muchos verbos de emociones llevan pronombre cuando dicen que **una persona cambia de estado**: _preocuparse, tranquilizarse, enojarse_ (en España también _enfadarse_), _aburrirse, cansarse, asustarse, relajarse_.",
+          "Sin pronombre, el verbo dice que **otra cosa o persona** causa la emoción: _El ruido asustó al perro_ (el ruido hizo algo al perro), pero _El perro se asustó_ (el perro cambió).",
+          "Igual con _dormir_ y _dormirse_: _Dormí ocho horas_ (la acción de dormir) / _Me dormí en la clase_ (empecé a dormir, sin querer).",
+        ],
+        support: [
+          "With the pronoun, the subject changes emotional state: _me preocupé_ (I got worried). Without it, someone or something causes the emotion in another person: _la noticia preocupó a mi madre_.",
+        ],
+        table: {
+          caption: "Con se y sin se",
+          head: ["Con se: la persona cambia", "Sin se: algo causa el cambio"],
+          rows: [
+            ["Me aburrí en el museo.", "El museo aburrió a los niños."],
+            ["Mi madre se preocupó.", "La noticia preocupó a mi madre."],
+            ["Los turistas se asustaron.", "La tormenta asustó a los turistas."],
+            ["Me dormí a las diez.", "Dormí diez horas."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "Al principio me cansaba mucho, pero después me acostumbré a la altura.", en: "At first I used to get very tired, but then I got used to the altitude." },
+          { es: "El profesor se enojó porque nadie hizo la tarea.", en: "The teacher got angry because nobody did the homework." },
+        ],
+        mistakes: [
+          { wrong: "Mi padre preocupó mucho cuando no llamé.", right: "Mi padre se preocupó mucho cuando no llamé.", why: "Tu padre cambia de estado: **se preocupó**." },
+        ],
+      },
+      {
+        heading: "Estar, ponerse, quedarse",
+        body: [
+          "**Estar** describe un estado: _estaba nerviosa_. **Ponerse** cuenta un **cambio rápido**, una reacción: _se puso nerviosa cuando la llamaron_. **Quedarse** cuenta **el resultado**, cómo terminó alguien después de algo: _se quedó callada_.",
+          "Con **ponerse** van adjetivos de reacciones y de salud: _ponerse rojo, pálido, nervioso, triste, contento, enfermo_. Con **quedarse** van adjetivos y participios (_quedarse sorprendido, dormido, callado_) y **sin + sustantivo**: _quedarse sin batería, sin dinero, sin palabras_.",
+          "**Quedarse** + lugar o tiempo significa **no irse**: _me quedé en el hotel_, _nos quedamos hasta las once_. El adjetivo siempre concuerda: _se puso rojo_, _se puso roja_, _se pusieron rojos_.",
+        ],
+        support: [
+          "_Estar_ = a state. _Ponerse_ = a quick change, a reaction (get nervous, go red). _Quedarse_ = the result, how someone ends up (be left speechless, fall asleep), or to stay somewhere.",
+        ],
+        table: {
+          caption: "Ponerse en indefinido (irregular) y quedarse (regular)",
+          head: ["Persona", "ponerse", "quedarse"],
+          rows: [
+            ["yo", "me puse", "me quedé"],
+            ["tú", "te pusiste", "te quedaste"],
+            ["él, ella, usted", "se puso", "se quedó"],
+            ["nosotros, nosotras", "nos pusimos", "nos quedamos"],
+            ["vosotros, vosotras", "os pusisteis", "os quedasteis"],
+            ["ellos, ellas, ustedes", "se pusieron", "se quedaron"],
+          ],
+        },
+        examples: [
+          { es: "Cuando vio el volcán desde la ventana, se quedó sin palabras.", en: "When he saw the volcano from the window, he was left speechless." },
+          { es: "Me puse roja cuando el profesor leyó mi redacción.", en: "I went red when the teacher read out my essay." },
+          { es: "Llovía tanto que nos quedamos en casa toda la tarde.", en: "It was raining so much that we stayed at home all afternoon." },
+        ],
+        mistakes: [
+          { wrong: "Cuando vi la nota, me quedé muy contento de repente.", right: "Cuando vi la nota, me puse muy contento.", why: "Una reacción rápida, en el momento: **ponerse**." },
+          { wrong: "Me estaba nerviosa antes del examen.", right: "Estaba nerviosa antes del examen.", why: "**Estar** no lleva pronombre: describe el estado." },
+          { wrong: "Mi celular se puso sin batería.", right: "Mi celular se quedó sin batería.", why: "_Sin + sustantivo_ va con **quedarse**." },
+        ],
+        tip: "Una película en tres fotos: _estaba tranquilo_ → _se puso nervioso_ → _se quedó sin palabras_.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero los reflexivos en pasado y su posición; después los verbos de emoción y la elección entre estar, ponerse y quedarse.",
+    exercises: [
+      {
+        id: "g1",
+        type: "gap",
+        title: "La mañana de Hanna",
+        prompt: "Completa con el **indefinido** del verbo reflexivo.",
+        items: [
+          { q: "Ayer Hanna ___ a las cinco y media. (despertarse)", answers: [["se despertó"]], why: "Ella: **se despertó**, sin _ie_ en el indefinido." },
+          { q: "Yo ___ con agua fría porque no había gas. (ducharse)", answers: [["me duché"]], why: "Yo: **me duché**." },
+          { q: "Tú ___ muy rápido y saliste sin desayunar. (vestirse)", answers: [["te vestiste"]], why: "Tú: **te vestiste**." },
+          { q: "Mis compañeros de clase ___ en el bus de vuelta. (dormirse)", answers: [["se durmieron"]], why: "Ellos: **se durmieron** (o → u en el indefinido)." },
+          { q: "Nosotras ___ tarde porque la fiesta terminó a la una. (acostarse)", answers: [["nos acostamos"]], why: "Nosotras: **nos acostamos**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "transform",
+        title: "La otra posición",
+        prompt: "Escribe la frase con el pronombre en la **otra posición** posible.",
+        items: [
+          { source: "Me voy a bañar en el lago.", answers: ["Voy a bañarme en el lago."], why: "Pegado al infinitivo: **bañarme**." },
+          { source: "Estamos preparándonos para el examen.", answers: ["Nos estamos preparando para el examen."], why: "Delante del verbo conjugado: **nos estamos**." },
+          { source: "¿Te vas a quedar en Xela todo el mes?", answers: ["¿Vas a quedarte en Xela todo el mes?"], why: "Pegado: **quedarte**, misma persona." },
+          { source: "Ellos se están poniendo las botas.", answers: ["Ellos están poniéndose las botas.", "Están poniéndose las botas."], why: "Pegado al gerundio, con tilde: **poniéndose**." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "choice",
+        title: "¿Con se o sin se?",
+        prompt: "Elige la forma correcta.",
+        items: [
+          { q: "La película era muy lenta y yo ___.", options: ["aburrí", "me aburrí", "aburría a mí"], answer: 1, why: "Yo cambio de estado: **me aburrí**." },
+          { q: "El trueno ___ a los niños.", options: ["se asustó", "asustaron", "asustó"], answer: 2, why: "El trueno causa el miedo a otros: **asustó a**." },
+          { q: "Mi abuela ___ cuando por fin la llamé.", options: ["se tranquilizó", "tranquilizó", "se tranquilizaron"], answer: 0, why: "Ella cambia de estado: **se tranquilizó**." },
+          { q: "Anoche ___ nueve horas seguidas.", options: ["me dormí", "dormí", "me dormía"], answer: 1, why: "La acción de dormir durante un tiempo: **dormí**." },
+          { q: "Mi jefe ___ porque llegué tarde otra vez.", options: ["enojó", "se enojé", "se enojó"], answer: 2, why: "Él cambia de estado: **se enojó**." },
+        ],
+      },
+      {
+        id: "g4",
+        type: "gap",
+        title: "Estar, ponerse o quedarse",
+        prompt: "Completa con **estar**, **ponerse** o **quedarse** en pasado.",
+        items: [
+          { q: "Cuando me dieron el premio, ___ rojo como un tomate.", answers: [["me puse"]], why: "Una reacción rápida: **me puse**." },
+          { q: "Después del viaje mi hermano ___ dormido en el sofá.", answers: [["se quedó"]], why: "El resultado: **se quedó dormido**." },
+          { q: "Toda la semana ___ muy cansada por el trabajo.", answers: [["estuve", "estaba"]], why: "Un estado, sin cambio: **estuve** o **estaba**." },
+          { q: "En la excursión nosotros ___ sin agua a mitad del camino.", answers: [["nos quedamos"]], why: "_Sin + sustantivo_: **quedarse sin**." },
+          { q: "Los niños ___ muy contentos cuando vieron la nieve.", answers: [["se pusieron"]], why: "Una reacción: **se pusieron contentos**." },
+          { q: "Llovía mucho, así que ___ en el hotel hasta la tarde.", answers: [["me quedé", "nos quedamos", "se quedaron", "se quedó", "te quedaste"]], why: "_Quedarse_ + lugar = no irse." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para contar un día de viaje o de estudio: la rutina, las emociones y lo que pasa con el cuerpo y las cosas.",
+    groups: [
+      {
+        title: "La rutina con se",
+        items: [
+          { es: "despertarse / levantarse", en: "to wake up / to get up" },
+          { es: "bañarse / ducharse", en: "to have a bath / a shower" },
+          { es: "vestirse", en: "to get dressed" },
+          { es: "peinarse", en: "to do one's hair" },
+          { es: "acostarse / dormirse", en: "to go to bed / to fall asleep" },
+          { es: "acostumbrarse a", en: "to get used to" },
+        ],
+      },
+      {
+        title: "Emociones con se",
+        items: [
+          { es: "preocuparse", en: "to get worried" },
+          { es: "tranquilizarse / calmarse", en: "to calm down" },
+          { es: "enojarse (América) / enfadarse (España)", en: "to get angry" },
+          { es: "asustarse", en: "to get scared" },
+          { es: "aburrirse", en: "to get bored" },
+          { es: "relajarse", en: "to relax" },
+        ],
+      },
+      {
+        title: "Ponerse y quedarse",
+        items: [
+          { es: "ponerse pálido / rojo", en: "to go pale / red" },
+          { es: "ponerse enfermo", en: "to get ill" },
+          { es: "marearse", en: "to get dizzy / carsick" },
+          { es: "quedarse sin batería", en: "to run out of battery" },
+          { es: "quedarse dormido", en: "to fall asleep / to oversleep" },
+          { es: "quedarse sin palabras", en: "to be left speechless" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "Causa y reacción",
+        prompt: "Une cada situación con la reacción más lógica.",
+        pairs: [
+          { left: "El bus subía por curvas durante dos horas.", right: "Me mareé y me puse pálida." },
+          { left: "No sonó la alarma.", right: "Me quedé dormido." },
+          { left: "Olvidé el cargador en el hotel.", right: "El celular se quedó sin batería." },
+          { left: "El agua de las termas estaba muy caliente.", right: "Nos relajamos mucho." },
+          { left: "Un perro grande corrió hacia nosotros.", right: "Los niños se asustaron." },
+        ],
+        why: "Fíjate en el pronombre: _me mareé, me quedé, se quedó, nos relajamos, se asustaron_.",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "¿Qué dices?",
+        prompt: "Lee la situación y elige la reacción natural.",
+        items: [
+          { context: "Tu amiga te cuenta que perdió el pasaporte en el aeropuerto.", q: "Le preguntas:", options: ["¿Y no te preocupaste?", "¿Y no preocupaste?", "¿Y no te preocupabas mañana?"], answer: 0, why: "Ella cambió de estado: **te preocupaste**." },
+          { context: "Tu compañero está muy enojado por un examen.", q: "Le dices:", options: ["No tranquilízate, no es grave.", "Tranquilízate, no es grave.", "Te tranquilizas ayer, no es grave."], answer: 1, why: "Imperativo afirmativo con el pronombre pegado: **tranquilízate**." },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "El pronombre que se une: me_enojé, se_asustó",
+    explanation: [
+      "Cuando el pronombre termina en vocal (**me, te, se**) y el verbo empieza también por vocal, las dos vocales se unen en una sola sílaba: _me_a-bu-rrí_ suena _mea-bu-rrí_; _se_a-sus-tó_ suena _sea-sus-tó_.",
+      "Por eso a veces el pronombre casi no se oye. Escucha bien: _se asustó_ (él se asustó) y _asustó_ (asustó a otra persona) dicen cosas distintas.",
+      "Para practicar, di la frase despacio, sin pausa entre el pronombre y el verbo, y después a velocidad normal.",
+    ],
+    support: [
+      "When _me, te, se_ meet a verb starting with a vowel, both vowels join into one syllable: _se_asustó_. Listen carefully: the pronoun is short but it changes the meaning.",
+    ],
+    examples: [
+      { es: "Me_enojé con mi hermano.", en: "I got angry with my brother." },
+      { es: "¿Te_acostaste tarde?", en: "Did you go to bed late?" },
+    ],
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Hay pronombre?",
+      prompt: "Escucha y elige la frase que oyes.",
+      items: [
+        { q: "¿Qué frase oyes?", audio: "Se asustó con el ruido.", options: ["Asustó con el ruido.", "Se asustó con el ruido."], answer: 1 },
+        { q: "¿Qué frase oyes?", audio: "Aburrió a todos con su historia.", options: ["Aburrió a todos con su historia.", "Se aburrió a todos con su historia."], answer: 0 },
+        { q: "¿Qué frase oyes?", audio: "Me acosté muy tarde.", options: ["Acosté muy tarde.", "Me acosté muy tarde."], answer: 1 },
+        { q: "¿Qué frase oyes?", audio: "Te enojaste conmigo.", options: ["Te enojaste conmigo.", "Enojaste conmigo."], answer: 0 },
+        { q: "¿Qué frase oyes?", audio: "Despertó a su hija a las seis.", options: ["Se despertó a su hija a las seis.", "Despertó a su hija a las seis."], answer: 1 },
+      ],
     },
-    "produce": [
-      {
-        "text": "Dámelo cuando termines.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Explícaselo a tu hermana.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Voy a devolvértela el domingo.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    produce: [
+      { text: "Me_aburrí, te_aburriste, se_aburrió.", tip: "Una sola sílaba para _mea-_, _tea-_, _sea-_." },
+      { text: "Nos_acostamos a las once.", tip: "Aquí la s se une a la vocal: _no-sa-cos-ta-mos_." },
+      { text: "Se_enojó y después se tranquilizó.", tip: "_se_e-no-jó_: las dos e se unen en una sola sílaba." },
+      { text: "Me puse nerviosa y me quedé callada.", tip: "Dos verbos de cambio: marca bien _puse_ y _quedé_." },
+      { text: "No te preocupes, tranquilízate.", tip: "Negativo con el pronombre delante; afirmativo con el pronombre al final." },
+    ],
+    spelling: "Al pegar el pronombre, muchas formas necesitan tilde: **levántate, quédate, poniéndose, vistiéndome**. Sin el pronombre no la llevan: _levanta, queda, poniendo_.",
   },
-  "listening": {
-    "title": "Un favor con condiciones",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "El lunes en la escuela",
+    context: "Es lunes en una escuela de español de Xela. Antes de clase, Nadia, una estudiante italiana, pregunta a su compañero Kevin, de Estados Unidos, por la excursión del sábado a las aguas termales de Fuentes Georginas.",
+    speakers: [
+      { id: "nadia", name: "Nadia", voice: "es-ES-f", role: "estudiante" },
+      { id: "kevin", name: "Kevin", voice: "es-US-m", role: "estudiante" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Oye, ¿me prestas tu cámara para la excursión del sábado? La mía se ha roto y quiero hacer fotos para mi abuela. Ella no puede venir con nosotros."
-      },
-      {
-        "speaker": "b",
-        "text": "Sí, te la presto, pero la necesito el lunes por la mañana. Tengo una presentación y voy a llevarla al trabajo. ¿Puedes devolvérmela el domingo antes de cenar?"
-      },
-      {
-        "speaker": "a",
-        "text": "Claro. Te la llevo a casa a las seis. ¿Tienes una bolsa para guardarla? Voy a pedirle una a mi hermano si no tienes. No quiero llevarla suelta en la mochila."
-      },
-      {
-        "speaker": "b",
-        "text": "Tengo una. Te la doy con la cámara. El cargador está dentro. Si no sabes usar algún botón, mándame una foto y te lo explico. Y enséñale las fotos a tu abuela de mi parte."
-      }
+    script: [
+      { speaker: "nadia", text: "¡Kevin! ¿Qué tal la excursión? Yo no fui porque me puse enferma el viernes." },
+      { speaker: "kevin", text: "¡Uf, qué día! Primero, me quedé dormido. No sonó la alarma y me desperté a las seis y diez. El bus salía a las seis y media." },
+      { speaker: "nadia", text: "¡No! ¿Y qué hiciste?" },
+      { speaker: "kevin", text: "Me vestí en dos minutos, no me duché y salí corriendo. Llegué justo a tiempo, pero el guía se enojó un poco." },
+      { speaker: "nadia", text: "¿Y el camino? Dicen que tiene muchas curvas." },
+      { speaker: "kevin", text: "Sí, muchísimas. Sophie se mareó y se puso pálida. Paramos diez minutos y se tranquilizó. Después, en el agua caliente, todos nos relajamos muchísimo." },
+      { speaker: "nadia", text: "¡Qué envidia! ¿Hiciste fotos?" },
+      { speaker: "kevin", text: "Pocas, porque mi celular se quedó sin batería. Pero cuando salió el sol entre la niebla, nos quedamos sin palabras. Nos quedamos en el agua casi tres horas." },
+      { speaker: "nadia", text: "La próxima vez voy contigo. Y tú, acuéstate temprano la noche antes, ¿eh?" },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «Un favor con condiciones» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Qué acuerdan?",
-              "options": [
-                "Un viaje con la abuela",
-                "El préstamo de una cámara",
-                "La compra de un móvil"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «El préstamo de una cámara»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Por qué se habla del lunes?",
-              "options": [
-                "La abuela llega el lunes",
-                "La dueña necesitará la cámara para trabajar",
-                "La excursión empieza ese día"
-              ],
-              "answer": 1,
-              "why": "Comprueba el contexto y los datos de la escena: La dueña necesitará la cámara para trabajar."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «Un favor con condiciones».",
-          "items": [
-            {
-              "q": "¿Cuándo devolverá la cámara?",
-              "options": [
-                "El domingo a las seis",
-                "El lunes por la noche",
-                "El sábado al salir"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «El domingo a las seis»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Dónde está el cargador?",
-              "options": [
-                "En el trabajo",
-                "En casa del hermano",
-                "Dentro de la bolsa"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Dentro de la bolsa»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «Un favor con condiciones».",
-          "items": [
-            {
-              "q": "En te la presto, la se refiere a…",
-              "options": [
-                "La excursión",
-                "La abuela",
-                "La cámara"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «La cámara»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "En te la doy con la cámara, la se refiere a…",
-              "options": [
-                "La bolsa",
-                "La excursión",
-                "La presentación"
-              ],
-              "answer": 0,
-              "why": "Comprueba el contexto y los datos de la escena: La bolsa."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "El proyector del centro",
-    "genre": "Cadena de mensajes",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "Nora: Hola, equipo. El sábado presentamos las fotos del barrio y mi proyector no funciona. ¿Alguien puede prestarme uno? Lo necesito solo de seis a ocho de la tarde. Puedo recogerlo el viernes y devolverlo el domingo por la mañana. Prometo llevarlo en una bolsa y cuidarlo bien.",
-      "Beto: El centro tiene uno. Normalmente se lo prestamos a los grupos del barrio. Esta semana lo tiene Lucía, pero nos lo devuelve el jueves. Te lo puedo dejar el viernes a partir de las cinco. El cable está en una caja separada; recuérdame que te lo dé también.",
-      "Nora: Muchas gracias. Mi compañero irá a buscarlo porque yo trabajo hasta tarde. Se llama Tomás. ¿Puedes dárselo a él? Le voy a explicar cómo llegar. El domingo te lo devolveré yo. Si prefieres, puedo dejarlo en recepción. Beto: Mejor en recepción, gracias. Allí registran las devoluciones y comprueban que estén los dos cables."
-    ],
-    "glossary": [
-      {
-        "es": "pedir prestado",
-        "en": "borrow"
-      },
-      {
-        "es": "prestar una cámara",
-        "en": "lend a camera"
-      },
-      {
-        "es": "devolver a tiempo",
-        "en": "return on time"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «El proyector del centro» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Quién recogerá el proyector?",
-            "options": [
-              "Lucía",
-              "Tomás",
-              "Nora"
-            ],
-            "answer": 1,
-            "why": "La información de la situación corresponde a «Tomás»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Por qué conviene devolverlo en recepción?",
-            "options": [
-              "Comprueban el material y registran la devolución",
-              "Beto no conoce a Nora",
-              "Abren solo el domingo"
-            ],
-            "answer": 0,
-            "why": "La información de la situación corresponde a «Comprueban el material y registran la devolución»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «El proyector del centro» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Pedir un favor, identificar quién recibe un objeto y acordar su devolución. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "Nora: Hola, equipo.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿De qué hablan Nadia y Kevin?", options: ["de un examen", "de la excursión del sábado", "de una fiesta"], answer: 1 },
+            { q: "En general, ¿cómo fue el día de Kevin?", options: ["Empezó mal, pero terminó muy bien.", "Fue aburrido.", "Fue un desastre de principio a fin."], answer: 0 },
+            { q: "¿Por qué no fue Nadia?", options: ["Se quedó dormida.", "Se mareó en el bus.", "Se puso enferma."], answer: 2 },
+          ],
         },
-        {
-          "quote": "Beto: El centro tiene uno.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
+      },
       {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
+        stage: "detail",
+        prompt: "Segunda escucha: atención a las horas y a lo que le pasó a cada persona.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿A qué hora se despertó Kevin?", options: ["a las seis y media", "a las seis y diez", "a las cinco y media"], answer: 1 },
+            { q: "¿Qué no hizo Kevin antes de salir?", options: ["vestirse", "ducharse", "despertarse"], answer: 1 },
+            { q: "¿Qué le pasó a Sophie?", options: ["Se mareó y se puso pálida.", "Se quedó dormida.", "Se enojó con el guía."], answer: 0 },
+            { q: "¿Cuánto tiempo se quedaron en el agua?", options: ["una hora", "diez minutos", "casi tres horas"], answer: 2 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en ponerse y quedarse.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Qué cuenta cada frase?",
+          categories: ["una reacción o cambio rápido (ponerse)", "un resultado o no irse (quedarse)"],
+          items: [
+            { text: "me puse enferma el viernes", cat: 0 },
+            { text: "me quedé dormido", cat: 1, why: "El resultado: Kevin no se despertó a tiempo." },
+            { text: "se puso pálida", cat: 0 },
+            { text: "mi celular se quedó sin batería", cat: 1, why: "_Sin + sustantivo_: **quedarse sin**." },
+            { text: "nos quedamos sin palabras", cat: 1 },
+            { text: "Nos quedamos en el agua casi tres horas.", cat: 1, why: "_Quedarse_ + lugar y tiempo: no irse." },
+          ],
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Mi mes con la familia Xicará",
+    genre: "Entrada de blog",
+    frame: "Emma, una estudiante holandesa, escribe en su blog de viaje sobre su mes en Quetzaltenango.",
+    text: [
+      "Durante cuatro semanas viví con la familia Xicará en Xela. Mi rutina era siempre igual: me levantaba a las seis, me bañaba rápido porque el agua caliente duraba poco y desayunaba frijoles con doña Marta. Al principio me cansaba mucho por la altura, pero poco a poco me acostumbré.",
+      "La segunda semana tuve un día terrible. Me quedé dormida, me vestí en cinco minutos y llegué tarde a mi examen oral. Me puse tan nerviosa que me quedé en blanco. Mi profesora no se enojó: me dijo «tranquilízate» y me dio diez minutos más. Me tranquilicé y al final todo salió bien.",
+      "El último domingo la familia me preparó una cena sorpresa. Cuando vi el pastel con mi nombre, me puse roja y me quedé sin palabras. Me voy a acordar de ellos toda mi vida.",
+    ],
+    glossary: [
+      { es: "quedarse en blanco", en: "for your mind to go blank" },
+      { es: "la altura", en: "the altitude" },
+      { es: "los frijoles", en: "beans (Latin America)" },
+      { es: "acordarse de", en: "to remember" },
+    ],
+    tasks: [
+      {
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el blog y responde.",
+        items: [
+          { q: "¿Por qué Emma se bañaba rápido?", options: ["porque llegaba tarde", "porque el agua caliente duraba poco", "porque no le gustaba el agua"], answer: 1 },
+          { q: "¿Qué le pasó en el examen?", options: ["Se quedó en blanco por los nervios.", "Se durmió en la clase.", "Se enojó con la profesora."], answer: 0 },
+          { q: "¿Cómo reaccionó la profesora?", options: ["Se puso furiosa.", "Le dio una mala nota.", "Le dio más tiempo."], answer: 2 },
+          { q: "¿Cómo reaccionó Emma ante la cena sorpresa?", options: ["Se quedó dormida.", "Se puso roja y no pudo hablar.", "Se aburrió."], answer: 1 },
+        ],
+      },
+      {
+        id: "r2",
+        type: "classify",
+        prompt: "¿Qué tiempo de pasado usa Emma en cada frase?",
+        categories: ["rutina repetida (imperfecto)", "hecho de un día concreto (indefinido)"],
+        items: [
+          { text: "me levantaba a las seis", cat: 0 },
+          { text: "me bañaba rápido", cat: 0 },
+          { text: "Me quedé dormida", cat: 1 },
+          { text: "me cansaba mucho por la altura", cat: 0, why: "Algo que pasaba muchas veces al principio: imperfecto." },
+          { text: "Me tranquilicé", cat: 1 },
+          { text: "me puse roja", cat: 1 },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Toca cada frase del blog para ver qué gramática hay dentro.",
+      items: [
+        { quote: "me levantaba a las seis", note: "Rutina en imperfecto: el pronombre **me** va delante." },
+        { quote: "poco a poco me acostumbré", note: "**Acostumbrarse**: un cambio que termina, en indefinido." },
+        { quote: "Me puse tan nerviosa que me quedé en blanco", note: "**Ponerse** (la reacción) y **quedarse** (el resultado) en la misma frase." },
+        { quote: "me dijo «tranquilízate»", note: "Imperativo con el pronombre pegado y tilde: **tranquilízate**." },
+        { quote: "Me voy a acordar de ellos", note: "Pronombre delante de _voy a_; también es correcto _voy a acordarme_." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Mezcla las dos clases: rutina, emociones y cambios. Cada ejercicio funciona de otra manera.",
+    exercises: [
+      {
+        id: "x1",
+        type: "order",
+        title: "Frases de un día largo",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["Anoche", "me", "acosté", "tarde", "y", "hoy", "me", "quedé", "dormido."], en: "Last night I went to bed late and today I overslept." },
+          { words: ["Cuando", "vio", "la", "factura,", "se", "puso", "pálido."], en: "When he saw the bill, he went pale." },
+          { words: ["Vamos", "a", "relajarnos", "en", "las", "aguas", "termales."], en: "We're going to relax in the hot springs." },
+        ],
+      },
+      {
+        id: "x2",
+        type: "error",
+        title: "Corrige el diario",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "Hoy he me levantado a las siete.", answers: ["Hoy me he levantado a las siete."], why: "El pronombre va delante de **haber**." },
+          { sentence: "Los niños aburrieron mucho en la reunión de los adultos.", answers: ["Los niños se aburrieron mucho en la reunión de los adultos."], why: "Los niños cambian de estado: **se aburrieron**." },
+          { sentence: "Mi hermana se quedó nerviosa cuando sonó el teléfono.", answers: ["Mi hermana se puso nerviosa cuando sonó el teléfono."], why: "Una reacción rápida: **se puso**." },
+          { sentence: "No preocupes, todo va a salir bien.", answers: ["No te preocupes, todo va a salir bien."], why: "_Preocuparse_ lleva pronombre: **no te preocupes**." },
+          { sentence: "Ayer nos despiertamos con el ruido de la calle.", answers: ["Ayer nos despertamos con el ruido de la calle."], why: "Sin _ie_ con nosotros: **nos despertamos**." },
+        ],
+      },
+      {
+        id: "x3",
+        type: "classify",
+        title: "Estado, cambio o resultado",
+        prompt: "Clasifica cada frase.",
+        categories: ["estado (estar)", "cambio rápido (ponerse)", "resultado (quedarse)"],
+        items: [
+          { text: "Estaba muy tranquila en la playa.", cat: 0 },
+          { text: "Se puso triste al leer la carta.", cat: 1 },
+          { text: "Se quedó sorprendido con la noticia.", cat: 2 },
+          { text: "Me puse enfermo después de la cena.", cat: 1 },
+          { text: "Nos quedamos sin gasolina en la carretera.", cat: 2 },
+          { text: "Estábamos cansados después del partido.", cat: 0 },
+        ],
+      },
+      {
+        id: "x4",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe frases sobre ti. Después compara con el modelo.",
+        items: [
           {
-            "words": [
-              "Le",
-              "presto",
-              "la",
-              "cámara",
-              "a",
-              "Ana;",
-              "se",
-              "la",
-              "presto",
-              "hasta",
-              "el",
-              "viernes."
-            ]
+            prompt: "Cuenta tu rutina de cuando eras estudiante: tres verbos reflexivos en imperfecto.",
+            model: "Cuando estudiaba en la universidad, me levantaba a las siete, me duchaba en dos minutos y me acostaba muy tarde.",
+            checklist: ["Usas tres verbos reflexivos", "Están en imperfecto (-aba, -ía)", "El pronombre va delante del verbo"],
           },
           {
-            "words": [
-              "Voy",
-              "a",
-              "enviárselo",
-              "a",
-              "mis",
-              "padres."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "Te la llevo el sábado por la noche; ¿te sirve?",
-              "La usaré más días sin avisarte.",
-              "Te la presto yo, aunque es tuya."
-            ],
-            "answer": 0,
-            "why": "Comprueba el contexto y los datos de la escena: Te la llevo el sábado por la noche; ¿te sirve?.",
-            "context": "La dueña necesita la cámara antes de lo acordado.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
+            prompt: "Cuenta un momento en que te pusiste nervioso o nerviosa y cómo te tranquilizaste.",
+            model: "El día de mi boda me puse muy nervioso y no encontraba los anillos. Mi hermano me dio un vaso de agua y me tranquilicé.",
+            checklist: ["Usas _ponerse_ + adjetivo", "Usas _tranquilizarse_ con pronombre", "El adjetivo concuerda contigo"],
           },
           {
-            "context": "Tu compañero necesita el objeto antes de lo previsto. Ofrece una solución, comprueba quién lo recoge y resume el acuerdo con dos pronombres.",
-            "q": "En esta interacción de «Te lo devuelvo mañana», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «Te lo devuelvo mañana», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Hola, Leo.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
+            prompt: "Escribe dos frases con quedarse: una con sin + sustantivo y otra con un lugar.",
+            model: "El mes pasado me quedé sin dinero antes de terminar el viaje. Por eso me quedé en casa de una amiga tres días.",
+            checklist: ["_Quedarse sin_ + sustantivo", "_Quedarse_ + lugar = no irse", "Formas del indefinido correctas"],
           },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: Tu compañero necesita el objeto antes de lo previsto. Ofrece una solución, comprueba quién lo recoge y resume el acuerdo con dos pronombres.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-06",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 6. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 8: Cuenta en un minuto una anécdota nueva con perder, olvidar o romper. Prepara el contexto en imperfecto y tres hechos en indefinido; usa primero, de repente y al final. Divide el relato en grupos fónicos. El oyente reacciona y pregunta ¿qué pasó después?; responde sin leer.",
-            "model": "Esperaba en una tienda y llevaba un paraguas. Primero pagué. De repente empezó a llover y descubrí que el paraguas estaba en casa. Al final una vecina me acompañó hasta el autobús.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 6→8: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Esperaba en una tienda y llevaba un paraguas. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Pide prestado un objeto para una actividad concreta. Explica por qué lo necesitas, cuándo lo recogerás, cómo lo cuidarás y cuándo lo devolverás. Agradece y permite que la otra persona diga que no.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
-    ],
-    "useLanguage": [
-      "Le presto la cámara a Ana; se la presto hasta el viernes.",
-      "¿Me dejas tu cargador? Te lo devuelvo mañana.",
-      "Voy a enviárselo a mis padres.",
-      "¿Puedes explicárselo? Ellos no entienden el mensaje."
-    ],
-    "model": [
-      "Hola, Leo. ¿Me puedes prestar tu altavoz para la reunión del domingo? El mío se ha roto y queremos escuchar unas entrevistas del barrio. Puedo recogerlo el sábado después de comer. Lo usaré dentro del centro y lo guardaré en su caja. Te lo devolveré el domingo a las ocho. Si lo necesitas ese día, no te preocupes: puedo pedir otro al centro. Muchas gracias por la ayuda. Si prefieres otra hora para la devolución, dímelo y organizamos el encuentro antes de tu trabajo."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      80,
-      120
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
-      {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Pide un objeto prestado sin decir su nombre al principio: descríbelo y explica su uso. Después acuerda recogida y devolución.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
         ],
-        "seconds": 90,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
-      {
-        "title": "Interacción con un cambio",
-        "prompt": "Tu compañero necesita el objeto antes de lo previsto. Ofrece una solución, comprueba quién lo recoge y resume el acuerdo con dos pronombres.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
-        ],
-        "seconds": 90,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Pide un objeto prestado sin decir su nombre al principio: descríbelo y explica su uso. Después acuerda recogida y devolución."
-      },
-      {
-        "move": "Negocia",
-        "task": "Tu compañero necesita el objeto antes de lo previsto. Ofrece una solución, comprueba quién lo recoge y resume el acuerdo con dos pronombres."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
   },
-  "quiz": {
-    "items": [
-      {
-        "type": "gap",
-        "q": "Le entrego la llave a Luis: ___ la entrego.",
-        "answers": [
-          [
-            "se"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "Te devuelvo los libros: te ___ devuelvo.",
-        "answers": [
-          [
-            "los"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Les los envío esta tarde.",
-        "answers": [
-          "Se los envío esta tarde."
-        ],
-        "why": "Le o les se convierte en se antes de lo, la, los o las."
-      },
-      {
-        "type": "order",
-        "words": [
-          "Voy",
-          "a",
-          "devolvértelo",
-          "el",
-          "viernes."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué confirma mejor un préstamo?",
-        "options": [
-          "¿Te lo llevo el domingo a las seis?",
-          "¿Te gustan las cámaras?"
-        ],
-        "answer": 0,
-        "why": "La opción elegida cumple la función comunicativa indicada."
-      },
-      {
-        "q": "¿Cuándo recibe Julia el objeto?",
-        "options": [
-          "Mañana",
-          "El lunes",
-          "Hoy"
-        ],
-        "answer": 2,
-        "why": "Comprueba el contexto y los datos de la escena: Hoy.",
-        "type": "listen",
-        "audio": "A Julia se la doy hoy; a ti te la doy mañana."
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 8: Pide un objeto prestado sin decir su nombre al principio: descríbelo y explica su uso. Después acuerda recogida y devolución.",
-        "model": "Hola, Leo. ¿Me puedes prestar tu altavoz para la reunión del domingo? El mío se ha roto y queremos escuchar unas entrevistas del barrio. Puedo recogerlo el sábado después de comer. Lo usaré dentro del centro y lo guardaré en su caja. Te lo devolveré el domingo a las ocho. Si lo necesitas ese día, no te preocupes: puedo pedir otro al centro. Muchas gracias por la ayuda. Si prefieres otra hora para la devolución, dímelo y organizamos el encuentro antes de tu trabajo.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Resolución final 8: Tu compañero necesita el objeto antes de lo previsto. Ofrece una solución, comprueba quién lo recoge y resume el acuerdo con dos pronombres. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Pedir un favor, identificar quién recibe un objeto y acordar su devolución.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+  writing: {
+    task: "Escribe un mensaje a un amigo para contarle un día que empezó mal.",
+    context: "Ayer tuviste un día complicado: algo salió mal por la mañana, te pusiste nervioso o nerviosa, pero al final la situación mejoró. Se lo cuentas a un amigo por mensaje.",
+    steps: [
+      "Cuenta cómo empezó el día con dos o tres verbos reflexivos (me desperté, me vestí…).",
+      "Explica el problema y cómo te sentiste (me preocupé, me puse…).",
+      "Cuenta qué hicieron otras personas y cómo reaccionaron.",
+      "Termina con el resultado: cómo te quedaste o qué pasó al final.",
+      "Ordena la historia con _primero, de repente, al final_.",
+      "Revisa: ¿el pronombre está delante del verbo conjugado? ¿Elegiste bien entre estar, ponerse y quedarse?",
     ],
-    "review": [
-      "En dos días, repite la misión «Te lo devuelvo mañana» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+    useLanguage: ["Primero me desperté…", "De repente…", "Me puse nervioso / nerviosa", "Me preocupé / me tranquilicé", "Me quedé sin…", "Al final…"],
+    model: [
+      "¡Hola, Leo! Ayer fue un día de locos. Primero me quedé dormida porque mi celular se quedó sin batería. Me levanté a las ocho, me vestí rapidísimo y salí sin desayunar. En el metro me di cuenta de que no tenía mi tarjeta del trabajo y me puse muy nerviosa. De repente me llamó mi jefa. Me preocupé, pero ella estaba tranquila: la reunión era a las once. Al final llegué a tiempo y me quedé más tranquila. ¡Hoy me voy a acostar temprano!",
+    ],
+    checklist: [
+      "Usas al menos tres verbos reflexivos en pasado con el pronombre bien colocado.",
+      "Usas un verbo de emoción con se (_me preocupé, me tranquilicé_…).",
+      "Usas **ponerse** para una reacción y **quedarse** para un resultado.",
+      "La historia tiene principio, problema y final.",
+    ],
+    words: [60, 110],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate. Repite cada tarea hasta que salga sin leer.",
+    tasks: [
+      {
+        title: "Una mañana desastrosa",
+        prompt: "Cuenta una mañana en la que todo salió mal: a qué hora te despertaste, qué hiciste y cómo te sentiste.",
+        prep: ["Ese día me desperté…", "No me duché porque…", "Me puse…", "Al final me tranquilicé…"],
+        seconds: 75,
+        model: "El lunes pasado me desperté a las ocho y media, pero entraba a trabajar a las nueve. Me puse muy nervioso. No me duché, me vestí en tres minutos y salí corriendo. En el bus me di cuenta de que llevaba un zapato negro y uno marrón. Primero me enojé conmigo mismo, pero después me reí y me tranquilicé.",
+        selfCheck: ["El pronombre va delante del verbo en pasado.", "Uso _ponerse_ y un verbo de emoción con se."],
+      },
+      {
+        title: "¿Cómo reaccionaron?",
+        prompt: "Piensa en una noticia importante que diste a tu familia o a tus amigos (un viaje, un trabajo nuevo, una mudanza). Cuenta cómo reaccionó cada persona.",
+        prep: ["Mi madre se puso…", "Mi padre se quedó…", "Mi hermano se preocupó…", "Mis amigos se pusieron contentos…"],
+        seconds: 60,
+        selfCheck: ["Uso _ponerse_ para la reacción y _quedarse_ para el resultado.", "El adjetivo concuerda con cada persona."],
+      },
+      {
+        title: "Tu rutina de antes y de ahora",
+        prompt: "Compara tu rutina de hace cinco años con tu rutina de esta semana. Usa verbos reflexivos.",
+        prep: ["Antes me levantaba…", "Ahora me levanto…", "Esta semana me he acostado…"],
+        seconds: 50,
+        selfCheck: ["Uso imperfecto para la rutina de antes.", "Uso el pronombre correcto con cada persona."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que repasaste esta semana y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Cuenta tu mañana", task: "Empieza la clase contando tu mañana con tres verbos reflexivos.", phrases: ["Hoy me he levantado…", "Me he duchado…"] },
+      { move: "Reacciona", task: "Cuando tu profesor cuente algo, reacciona y pregunta cómo se sintió.", phrases: ["¿Y te pusiste nervioso?", "¿Te quedaste sin palabras?"] },
+      { move: "Compara", task: "Pide a tu profesor la diferencia entre _dormir_ y _dormirse_, o entre _aburrir_ y _aburrirse_, con un ejemplo suyo.", phrases: ["¿Qué diferencia hay entre…?"] },
+      { move: "Anima", task: "Si tu compañero o tu profesor está preocupado por algo, anímalo con un imperativo.", phrases: ["Tranquilízate.", "No te preocupes."] },
+    ],
+    bring: "Trae una foto de un momento especial y prepárate para contar cómo reaccionó cada persona de la foto.",
+  },
+  quiz: {
+    items: [
+      { type: "gap", q: "El sábado yo ___ a las diez porque no tenía clase. (levantarse)", answers: [["me levanté"]], why: "Yo, indefinido: **me levanté**." },
+      { type: "choice", q: "¿Qué frase sobre acostarse temprano es correcta?", options: ["Vamos a acostarse temprano.", "Vamos a nos acostar temprano.", "Vamos a acostarnos temprano."], answer: 2, why: "Con nosotros, **nos**, pegado al infinitivo." },
+      { type: "gap", q: "Cuando el bebé vio al perro, ___ muy contento, pero su abuela ___ pálida. (ponerse / ponerse)", answers: [["se puso"], ["se puso"]], why: "Dos reacciones rápidas: **se puso** contento, **se puso** pálida." },
+      { type: "transform", source: "Me estoy vistiendo.", instruction: "Escribe la frase con el pronombre pegado al gerundio.", answers: ["Estoy vistiéndome."], why: "Pegado al gerundio y con tilde: **vistiéndome**." },
+      { type: "listen", q: "¿Qué frase oyes sobre la tormenta?", audio: "Se asustaron con la tormenta.", options: ["Asustaron con la tormenta.", "Se asustaron con la tormenta."], answer: 1 },
+      { type: "error", sentence: "Mi compañero ha se ido a dormir.", answers: ["Mi compañero se ha ido a dormir."], why: "El pronombre va delante de **haber**: _se ha ido_." },
+      { type: "error", sentence: "En el examen me puse en blanco.", answers: ["En el examen me quedé en blanco."], why: "La expresión es **quedarse en blanco**: el resultado." },
+      { type: "order", words: ["Mi", "tableta", "se", "quedó", "sin", "batería."] },
+      { type: "choice", q: "«La noticia preocupó a todos» significa que…", options: ["todos se preocuparon por la noticia.", "la noticia se preocupó.", "todos preocuparon a la noticia."], answer: 0, why: "Sin _se_: la noticia causa la preocupación en otros." },
+      { type: "open", prompt: "Escribe tres frases sobre ayer: una rutina con un reflexivo, una reacción con ponerse y un resultado con quedarse.", model: "Ayer me duché por la noche. En el partido me puse muy contento. Después de cenar me quedé dormido en el sofá.", checklist: ["Reflexivo en pasado bien colocado", "Ponerse + adjetivo", "Quedarse + adjetivo, participio o sin"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Contar tu rutina y tu día en pasado con verbos reflexivos: _me desperté, me vestía, me he duchado_.",
+      "Colocar el pronombre con infinitivo, gerundio e imperativo: _voy a acostarme, levántate, no te preocupes_.",
+      "Decir cómo cambió tu estado de ánimo: _me preocupé, me aburrí, se tranquilizó_.",
+      "Distinguir _se asustó_ de _asustó a_.",
+      "Elegir entre estar, ponerse y quedarse para estados, reacciones y resultados.",
+      "Contar una anécdota con reacciones y un final.",
+    ],
+    review: ["Me he levantado (nunca _he me levantado_).", "Ponerse = reacción; quedarse = resultado o no irse.", "Me quedé sin batería; me quedé en casa."],
+  },
+  related: [
+    { path: "/gramatica/pronombres-reflexivos-rutinas-y-cambios-de", label: "Clase: Pronombres reflexivos: rutinas y cambios de estado" },
+    { path: "/gramatica/verbos-de-cambio-basicos-ponerse-quedarse", label: "Clase: Verbos de cambio básicos: ponerse, quedarse" },
+  ],
 };

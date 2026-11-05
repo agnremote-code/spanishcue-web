@@ -1,0 +1,12 @@
+[
+  [3, "gram", "g005", "Plural de sustantivos y concordancia básica", "Puedo pasar al plural un grupo completo (artículo o número, sustantivo y adjetivo) y recordar reuniones o los lunes.", ["a1.gram.g002"], { "related": ["/gramatica/plural-y-concordancia"] }],
+  [3, "gram", "g006", "Adjetivos calificativos y concordancia", "Puedo hacer concordar adjetivos de cuatro o de dos formas, también las nacionalidades, con el sustantivo que describen.", ["a1.gram.g003"], { "related": ["/el-atelier-de-la-concordancia"] }],
+  [3, "gram", "g007", "Posición habitual del adjetivo y sentido básico", "Puedo poner el adjetivo después para describir, antes para opinar con buen, mal o gran, y entender viejo, nuevo, grande y único según su lugar.", ["a1.gram.g006"], { "related": ["/gramatica/posicion-del-adjetivo"] }],
+  [3, "voc", "w03-colores-artesania", "Colores, tamaños y artesanías", "Puedo nombrar colores, tamaños y objetos de un mercado de artesanías con la forma correcta.", ["a1.gram.g006"]],
+  [3, "pron", "w03-r-suave-fuerte", "La r suave y la r fuerte", "Puedo distinguir y pronunciar la r suave y la r fuerte en pares como caro y carro.", []],
+  [3, "lis", "w03-puesto-artesanias", "Escuchar una compra en un puesto de artesanías", "Puedo entender colores, cantidades, precios y opiniones en una compra breve en un mercado.", ["a1.gram.g005", "a1.gram.g007"]],
+  [3, "read", "w03-blog-regalos", "Leer una entrada de blog sobre regalos", "Puedo entender una entrada de blog breve que describe objetos con color, tamaño y opinión.", ["a1.gram.g006", "a1.gram.g007"]],
+  [3, "wri", "w03-describir-regalos", "Describir regalos en un mensaje", "Puedo escribir un mensaje breve que describe tres regalos con adjetivos que concuerdan y una opinión.", ["a1.gram.g005", "a1.gram.g006", "a1.voc.w03-colores-artesania"]],
+  [3, "spk", "w03-describir-objetos", "Describir objetos en voz alta", "Puedo describir en voz alta durante unos 40 segundos tres cosas de mi casa con su número, su color y mi opinión.", ["a1.fun.w03-describir-opinar"]],
+  [3, "fun", "w03-describir-opinar", "Describir cosas y dar una opinión", "Puedo describir objetos y lugares y dar una opinión breve con buen, mal o gran.", ["a1.gram.g007"]]
+]
