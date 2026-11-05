@@ -248,7 +248,7 @@ export const a2w17: Module = {
       {
         id: "v2",
         type: "context",
-        title: "¿Qué favor pides?",
+        title: "Pedir un favor con cortesía",
         prompt: "Lee la situación y elige la petición adecuada.",
         items: [
           { context: "Te vas tres días y tienes macetas en el balcón.", q: "Le dices a tu vecina:", options: ["¿Te importaría regarme las plantas?", "¿Te importaría sacar la basura?", "¿Podrías echar el termo?"], answer: 0, why: "Macetas → **regar las plantas**." },
