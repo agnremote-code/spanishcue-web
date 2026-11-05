@@ -8,6 +8,7 @@ import {
   readConsent,
   updateGoogleConsent,
 } from "../privacy/consent";
+import { installOpenAIPixel, revokeOpenAIPixelConsent } from "./openaiPixel";
 
 const scriptId = "spanishcue-google-tag";
 const measurementId = (() => { try { return process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || ""; } catch { return ""; } })();
@@ -75,7 +76,10 @@ export default function GoogleAnalytics() {
     initialiseGoogleConsent();
     installGoogleTag();
     const sync = () => {
-      updateGoogleConsent(readConsent());
+      const consent = readConsent();
+      updateGoogleConsent(consent);
+      if (consent?.marketing) installOpenAIPixel();
+      else revokeOpenAIPixelConsent();
       sendPageView();
     };
     sync();
