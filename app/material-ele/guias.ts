@@ -873,6 +873,144 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["preguntas-de-conversacion", "ser-y-estar", "subjuntivo", "comprension-auditiva", "a1", "b1"],
   },
+  {
+    slug: "como-ensenar-el-subjuntivo",
+    path: `${GUIAS_PATH}/como-ensenar-el-subjuntivo`,
+    title: "Cómo enseñar el subjuntivo en ELE: secuencia de B1 a C2 con clases",
+    description:
+      "Cómo enseñar el subjuntivo en clase de ELE paso a paso: qué va primero, cómo explicarlo sin listas eternas, errores típicos y clases y fichas gratis por nivel.",
+    h1: "Cómo enseñar el subjuntivo en ELE: una secuencia que funciona de B1 a C2",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "El subjuntivo es el tema que más miedo da a los alumnos y el que más tiempo nos hace dudar a los profesores: ¿por dónde empiezo?, ¿le doy la lista de verbos?, ¿cuándo paso al imperfecto? Esta guía propone una secuencia concreta, nivel por nivel, con una forma de explicarlo que no depende de memorizar listas, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE que puedes usar en cada paso, muchos de ellos gratis y sin registro.",
+    keywords: ["cómo enseñar el subjuntivo", "enseñar subjuntivo ELE", "subjuntivo para extranjeros", "actividades de subjuntivo", "subjuntivo B1", "presente de subjuntivo ejercicios", "secuencia didáctica subjuntivo"],
+    published: "2026-11-05",
+    lessonIds: [389, 390, 148, 393, 439, 468],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: el subjuntivo no informa, reacciona",
+        blocks: [
+          { type: "p", text: "Antes de cualquier tabla, el alumno necesita una idea que pueda aplicar en el momento de hablar. La más útil en clase es esta: **con el indicativo informo de algo; con el subjuntivo no lo presento como información, sino que reacciono ante ello, lo deseo, lo valoro, lo pido o lo pongo en duda**. «Sé que viene» informa; «quiero que venga», «me alegra que venga» o «no creo que venga» no informan de su llegada, la desean, la valoran o la niegan." },
+          { type: "p", text: "Esta idea no explica cada caso del sistema, pero explica los suficientes para que el alumno deje de verlo como una lista arbitraria. Cuando aparezca un caso que no encaja, como las temporales de futuro, se presenta como un uso con su propia lógica: lo que todavía no ha pasado no se puede afirmar como hecho." },
+          { type: "p", text: "Si quieres una explicación del tema lista para proyectar, la página de [subjuntivo](/material-ele/subjuntivo) de Material ELE resume los usos con ejemplos por nivel, y la guía [materiales para enseñar español](/material-ele/guia/materiales-para-ensenar-espanol) sitúa el tema dentro del resto del programa." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es querer enseñar todo el subjuntivo en una semana. Funciona mejor repartirlo en etapas cortas, cada una con una función comunicativa clara y una sola forma nueva. Esta es la secuencia que siguen las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "A2: el primer contacto, sin nombrarlo",
+            blocks: [
+              { type: "p", text: "En A2 el alumno ya usa formas de subjuntivo sin saberlo: el [imperativo negativo](/material-ele/imperativo) («no hables», «no vengas») se forma con el presente de subjuntivo. No hace falta llamarlo así todavía; basta con que la forma le suene cuando llegue a B1." },
+            ],
+          },
+          {
+            title: "B1: presente de subjuntivo con funciones concretas",
+            blocks: [
+              { type: "p", text: "B1 es el nivel del presente de subjuntivo. El orden que mejor funciona es este:" },
+              { type: "ol", items: [
+                "**La forma**, con los verbos regulares primero y los irregulares después: [ficha de presente de subjuntivo](/material-ele/ficha/presente-de-subjuntivo).",
+                "**Deseos**, porque es el uso más fácil de sentir: [querer que, esperar que, ojalá](/gramatica/deseos-querer-que-esperar-que-ojala).",
+                "**Consejos y recomendaciones**, muy útiles en la vida real: [sugerir que, aconsejar que](/gramatica/recomendaciones-sugerir-que-aconsejar-que).",
+                "**Valoraciones y emociones**: [es importante que](/material-ele/ficha/valoraciones-es-importante-que-es-bueno) y [me alegra que](/material-ele/ficha/emociones-y-reacciones-con-que-subjuntivo).",
+                "**Opinión afirmada y negada**, el contraste clave del nivel: [creo que / no creo que](/material-ele/ficha/opinion-afirmativa-frente-a-opinion-negada).",
+                "**Mismo sujeto u otro sujeto**: [quiero ir / quiero que vayas](/material-ele/ficha/infinitivo-o-que-subjuntivo-mismo-sujeto).",
+              ] },
+              { type: "p", text: "Al final del nivel entra el [perfecto de subjuntivo](/material-ele/ficha/preterito-perfecto-subjuntivo) para valorar algo que ya pasó: «me alegra que hayas venido»." },
+            ],
+          },
+          {
+            title: "B2: el imperfecto y las oraciones complejas",
+            blocks: [
+              { type: "p", text: "En B2 aparece el [imperfecto de subjuntivo](/material-ele/ficha/preterito-imperfecto-subjuntivo) y, con él, la concordancia en pasado: «me pidió que lo llamara». Después vienen las [temporales con subjuntivo](/gramatica/temporales-con-subjuntivo-para-futuro-incierto) («cuando llegues»), las condicionales irreales con [si + imperfecto de subjuntivo](/material-ele/ficha/si-fuera-distinto), las concesivas con [aunque](/material-ele/ficha/aunque-cambie-el-dato) y [como si](/gramatica/como-si-imperfecto-pluscuamperfecto-subjuntivo)." },
+            ],
+          },
+          {
+            title: "C1 y C2: elegir según la intención",
+            blocks: [
+              { type: "p", text: "En los niveles superiores ya no se enseñan formas nuevas sino elecciones: la [alternancia de indicativo y subjuntivo según la postura](/gramatica/alternancia-de-indicativo-y-subjuntivo-segun) del hablante, el subjuntivo en [relativas no específicas](/material-ele/ficha/subjuntivo-en-relativas-no-especificas-y), la [concordancia temporal en contextos complejos](/material-ele/ficha/subjuntivo-pais-maravillas) y, en C2, la [selección fina según la perspectiva](/gramatica/seleccion-fina-de-indicativo-y-subjuntivo)." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicarlo en clase sin listas eternas",
+        blocks: [
+          { type: "p", text: "Las listas de verbos que «llevan subjuntivo» tienen un problema: el alumno las memoriza para el examen y las olvida al hablar. Tres técnicas que funcionan mejor:" },
+          { type: "ol", items: [
+            "**Contrastar pares mínimos.** Pon en la pantalla «Creo que viene» y «No creo que venga», o «Sé que está» y «Espero que esté». Pregunta qué cambia en la intención, no en la forma. El alumno descubre la regla y la recuerda mejor.",
+            "**Partir de una situación real.** Un amigo se muda a otro país: ¿qué le aconsejas?, ¿qué esperas?, ¿qué te preocupa? Las frases salen solas con subjuntivo y el alumno ve para qué sirve.",
+            "**Una función por clase.** Deseos un día, consejos otro, valoraciones otro. Mezclarlo todo el primer día es la receta para que el alumno sienta que «el subjuntivo es imposible».",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: primero la teoría en pantalla, después ejemplos con contraste, práctica guiada, audio y una producción final. El formato completo está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación. Los más frecuentes:" },
+          { type: "ul", items: [
+            "**«Quiero que voy».** El alumno conoce la regla pero no tiene la forma automatizada. Solución: práctica corta y frecuente de la forma antes de la función, por ejemplo con el [ejercicio de subjuntivo](/material-ele/ejercicio/subjuntivo).",
+            "**«Creo que venga».** Generaliza el subjuntivo a toda oración con «que». Solución: el contraste afirmado/negado con pares mínimos.",
+            "**«Quiero que yo vaya».** No distingue mismo sujeto y otro sujeto. Solución: dibujar dos personas en la pizarra y preguntar quién hace la acción.",
+            "**«Cuando llegaré».** Traslada el futuro de su lengua a las temporales. Solución: presentar «cuando + subjuntivo» como la forma normal de hablar de un futuro que todavía no es un hecho.",
+            "**«Me pidió que lo llame».** Concordancia en pasado en B2. Solución: trabajar la concordancia con historias contadas en pasado, no con frases sueltas.",
+          ] },
+          { type: "p", text: "La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregir estos errores en clase sin que el alumno se bloquee." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar el subjuntivo",
+        blocks: [
+          { type: "p", text: "La práctica controlada es necesaria, pero el subjuntivo se fija cuando el alumno lo necesita para decir algo. Algunas actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**Consultorio sentimental.** Cada alumno escribe un problema; el otro responde con tres consejos («te recomiendo que…», «es mejor que…»).",
+            "**Deseos para el año.** Cinco deseos personales con «ojalá» y «espero que», y una pregunta de seguimiento para cada uno.",
+            "**Debate con «no creo que».** Una afirmación polémica y la obligación de responder con opinión negada antes de dar la propia.",
+            "**Instrucciones para el futuro.** «Cuando llegues a casa…», «antes de que te vayas…»: el alumno prepara instrucciones para alguien que va a cuidar su casa.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades) y preguntas listas para B1 en [preguntas de conversación](/material-ele/preguntas-de-conversacion). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (B1, deseos)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de subjuntivo en B1, esta secuencia deja al alumno usando la forma en una conversación real:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** «¿Qué quieres hacer este año?». Respuestas con infinitivo, sin corregir nada.",
+            "**Contraste (5 minutos):** «Quiero viajar» frente a «Quiero que mi hermano viaje conmigo». ¿Qué cambia?",
+            "**Clase (25 minutos):** la clase gratis de [deseos con querer que, esperar que y ojalá](/gramatica/deseos-querer-que-esperar-que-ojala), con el modo profesor en pantalla compartida.",
+            "**Producción (10 minutos):** cinco deseos para alguien importante, con una pregunta de seguimiento para cada uno.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de subjuntivo es gratis",
+        blocks: [
+          { type: "p", text: "Se abren gratis y sin registro las clases de [deseos](/gramatica/deseos-querer-que-esperar-que-ojala) y [recomendaciones](/gramatica/recomendaciones-sugerir-que-aconsejar-que) de B1, las de [temporales con subjuntivo](/gramatica/temporales-con-subjuntivo-para-futuro-incierto) y [como si](/gramatica/como-si-imperfecto-pluscuamperfecto-subjuntivo) de B2, la de alternancia de C1 y la de selección fina de C2. También son gratis todas las fichas, ejercicios y preguntas. El resto de clases de subjuntivo forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene una ficha de muestra gratis." },
+          { type: "p", text: "Para ver todo lo gratuito ordenado por tipo y nivel, consulta la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña el subjuntivo?", answer: "El presente de subjuntivo se enseña en B1, con funciones como deseos, consejos, valoraciones y opinión negada. El imperfecto y las oraciones complejas llegan en B2, y en C1 y C2 se trabaja la elección entre indicativo y subjuntivo según la intención." },
+      { question: "¿Cuál es la mejor forma de explicar el subjuntivo?", answer: "Partir de una idea general (el indicativo informa; el subjuntivo desea, valora, pide o duda) y contrastar pares mínimos como «creo que viene» y «no creo que venga», enseñando una función por clase en lugar de una lista de verbos." },
+      { question: "¿Qué se enseña primero, la forma o el uso?", answer: "La forma regular del presente de subjuntivo va primero, en una sesión corta, y enseguida se aplica a una función concreta como los deseos. Los irregulares se incorporan poco a poco en las clases siguientes." },
+      { question: "¿Hay clases de subjuntivo gratis?", answer: "Sí. En Material ELE de SpanishCue hay clases gratis de subjuntivo en B1, B2, C1 y C2, además de fichas, ejercicios con soluciones y preguntas de conversación, todo sin registro." },
+    ],
+    related: ["subjuntivo", "b1", "b2", "c1"],
+  },
 ];
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
