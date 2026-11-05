@@ -1,0 +1,11 @@
+[
+  [4, "gram", "g008", "Demostrativos: este, ese, aquel", "Puedo señalar cosas cerca, a media distancia y lejos con este, ese y aquel en sus doce formas, y preguntar por algo desconocido con esto, eso o aquello.", ["a1.gram.g004"], { "related": ["/el-observatorio-de-las-distancias"] }],
+  [4, "gram", "g009", "Posesivos: mi, tu, su, nuestro", "Puedo decir de quién es algo con mi, tu, su, nuestro y sus plurales, y aclarar el dueño de su con de + persona.", ["a1.gram.g005"], { "related": ["/la-casa-de-las-pertenencias"] }],
+  [4, "voc", "w04-mudanza-casa", "Muebles y cosas de una mudanza", "Puedo nombrar muebles y objetos de la casa y preguntar dónde pongo algo o de quién es.", ["a1.gram.g009"]],
+  [4, "pron", "w04-enlace-s", "El enlace de la s final con la vocal", "Puedo unir la s final con la vocal siguiente y oír si un grupo está en singular o en plural.", []],
+  [4, "lis", "w04-dia-mudanza", "Escuchar una conversación de mudanza", "Puedo entender qué es cada cosa, de quién es y dónde va en una conversación breve entre hermanos y una vecina.", ["a1.gram.g008", "a1.gram.g009"]],
+  [4, "read", "w04-objetos-perdidos", "Leer un mensaje sobre objetos perdidos", "Puedo entender un mensaje breve de un grupo de vecinos que describe objetos y pregunta por sus dueños.", ["a1.gram.g008", "a1.gram.g009"]],
+  [4, "wri", "w04-mensaje-vecinos", "Escribir un mensaje a los vecinos", "Puedo escribir un mensaje breve para preguntar de quién son unas cosas y describir una cosa mía que busco.", ["a1.gram.g008", "a1.gram.g009", "a1.voc.w04-mudanza-casa"]],
+  [4, "spk", "w04-senalar-cosas", "Mostrar mi cuarto y decir de quién son las cosas", "Puedo mostrar en voz alta durante unos 45 segundos cosas a distintas distancias y decir de quién es cada una.", ["a1.fun.w04-senalar-pertenencia"]],
+  [4, "fun", "w04-senalar-pertenencia", "Señalar cosas y preguntar por su dueño", "Puedo señalar una cosa, preguntar qué es y preguntar o decir de quién es.", ["a1.gram.g008", "a1.gram.g009"]]
+]

@@ -1,0 +1,12 @@
+[
+  [5, "gram", "g010", "Pronombres sujeto y omisión del sujeto", "Puedo usar todos los pronombres sujeto, elegir entre tú y usted y decir el pronombre solo para contrastar, aclarar o responder a ¿quién?", ["a1.gram.g001"], { "related": ["/la-central-de-las-identidades"] }],
+  [5, "gram", "g011", "Ser para identidad, profesión y procedencia", "Puedo conjugar ser en todas las personas para decir nombre, profesión sin artículo, origen, nacionalidad que concuerda y carácter.", ["a1.gram.g001", "a1.gram.g006"], { "related": ["/gramatica/ser-identidad-y-origen"] }],
+  [5, "voc", "w05-profesiones-nacionalidades", "Profesiones, nacionalidades y carácter", "Puedo nombrar profesiones, nacionalidades y adjetivos de carácter en masculino y femenino.", ["a1.gram.g011"]],
+  [5, "pron", "w05-jota-ge", "La jota y la ge de garganta", "Puedo distinguir y pronunciar el sonido de garganta de j, ge y gi frente a la g suave.", []],
+  [5, "lis", "w05-taller-cocina", "Escuchar presentaciones en un grupo", "Puedo entender nombres, profesiones, origen y relaciones en las presentaciones breves de un grupo.", ["a1.gram.g010", "a1.gram.g011"]],
+  [5, "read", "w05-equipo-hostal", "Leer la presentación de un equipo", "Puedo entender una página web breve que presenta a las personas de un equipo: profesión, origen y carácter.", ["a1.gram.g011", "a1.gram.g008", "a1.gram.g009"]],
+  [5, "wri", "w05-ficha-equipo", "Escribir una ficha de presentación", "Puedo escribir una presentación breve de mí y de un compañero para la página de un equipo.", ["a1.gram.g010", "a1.gram.g011", "a1.voc.w05-profesiones-nacionalidades"]],
+  [5, "spk", "w05-presentar-otros", "Presentarme y presentar a otras personas", "Puedo presentarme durante un minuto y presentar a otras personas contrastando su profesión, su origen o su carácter.", ["a1.fun.w05-presentar-personas"]],
+  [5, "fun", "w05-presentar-personas", "Presentar a otras personas", "Puedo presentar a una persona con este o esta, decir quién es, qué hace y de dónde es, y contrastarla con otra.", ["a1.gram.g010", "a1.gram.g011"]],
+  [5, "rev", "w05-semanas-1-4", "Checkpoint 1: semanas 1 a 5", "Puedo presentar a un grupo de personas usando ser y estar, sustantivos con su género y su artículo, plurales, adjetivos en su lugar, demostrativos y posesivos.", ["a1.gram.g001", "a1.gram.g002", "a1.gram.g003", "a1.gram.g004", "a1.gram.g005", "a1.gram.g006", "a1.gram.g007", "a1.gram.g008", "a1.gram.g009", "a1.gram.g010", "a1.gram.g011"]]
+]
