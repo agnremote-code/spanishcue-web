@@ -1,830 +1,600 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w07: Module = {
-  "id": "a2-07",
-  "level": "a2",
-  "week": 7,
-  "kind": "core",
-  "title": "¿En qué barrio vivir?",
-  "subtitle": "Comparar viviendas y barrios y elegir según necesidades y presupuesto.",
-  "stop": {
-    "place": "Ciudad de Guatemala",
-    "country": "Guatemala"
-  },
-  "minutes": 105,
-  "newObjectives": [
-    "a2.gram.comparativos",
-    "a2.gram.superlativos",
-    "a2.voc.ciudades-campo",
-    "a2.pron.foco-contraste",
-    "a2.fun.comparar-elegir",
-    "a2.read.articulo-ciudades",
-    "a2.voc.vivienda-servicios"
+  id: "a2-07",
+  level: "a2",
+  week: 7,
+  kind: "core",
+  title: "Cruza aquí, no cruces allá",
+  subtitle: "Repaso del imperativo afirmativo con tú y usted (y cómo reconocer el de vos) y del imperativo negativo: no cruces, no pagues, no vayas.",
+  stop: { place: "Ciudad de Guatemala", country: "Guatemala" },
+  minutes: 105,
+  newObjectives: [
+    "a2.gram.g058",
+    "a2.gram.g059",
+    "a2.voc.w07-ciudad-transporte",
+    "a2.pron.w07-acento-tu-vos-usted",
+    "a2.lis.w07-camino-mercado",
+    "a2.read.w07-guia-ciudad",
+    "a2.wri.w07-instrucciones-llegada",
+    "a2.spk.w07-indicaciones",
+    "a2.fun.w07-indicar-camino",
+    "a2.disc.w07-instruccion-razon",
   ],
-  "reviewObjectives": [
-    "a2.rev.checkpoint-1",
-    "a2.lis.podcast-recuerdos"
-  ],
-  "prerequisites": [
-    "a2-06"
-  ],
-  "goal": {
-    "canDo": "Puedo comparar viviendas y barrios y elegir según necesidades y presupuesto.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "¿En qué barrio vivir? · formas que necesitas",
-        "body": [
-          "Compara cualidades con más o menos + adjetivo + que y tan + adjetivo + como. Para cantidades, tanto concuerda: tantas tiendas como, tanto ruido como. Para acciones: trabajo tanto como tú. Mejor, peor, mayor y menor suelen aparecer sin más cuando son comparativos."
-        ],
-        "support": [
-          "Tan compares qualities; tanto agrees with the quantity being compared. Better and worse already express comparison, so do not add más."
-        ],
-        "examples": [
-          {
-            "es": "Este piso es menos caro que el del centro."
-          },
-          {
-            "es": "Hay tantas tiendas como en mi barrio."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "El autobús es más mejor aquí.",
-            "right": "El autobús es mejor aquí.",
-            "why": "Mejor ya expresa comparación."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "El más tranquilo de los barrios es un superlativo relativo: necesita un grupo de comparación. Tranquilísimo intensifica una cualidad sin comparar. En anuncios distingue hechos (precio, metros, transporte) y valoraciones (precioso, comodísimo). Tu elección debe relacionar un dato con una necesidad; no basta con decir que algo es mejor.",
-          "Para comparar ciudad y campo, piensa también en el clima y los servicios: una zona rural puede ser más tranquila, pero tener menos transporte; en la costa suele hacer más calor que en las montañas. Evita presentar una preferencia personal como una regla para todas las personas."
-        ],
-        "examples": [
-          {
-            "es": "Es la casa más luminosa de las tres."
-          },
-          {
-            "es": "El dormitorio es pequeñísimo, pero el transporte es mejor."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Este piso tiene ___ luz como el otro. (igual cantidad)",
-            "answers": [
-              [
-                "tanta"
-              ]
-            ]
-          },
-          {
-            "q": "La cocina es más grande ___ la mía.",
-            "answers": [
-              [
-                "que"
-              ]
-            ]
-          },
-          {
-            "q": "Es la habitación más tranquila ___ la casa.",
-            "answers": [
-              [
-                "de"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "La casa A cuesta 400. La casa B cuesta 500.",
-            "instruction": "Empieza con La casa A es y usa menos cara que para compararla con la casa B; no repitas las cifras.",
-            "answers": [
-              "La casa A es menos cara que la casa B."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Los dos barrios tienen diez tiendas.",
-            "instruction": "Empieza con Un barrio tiene y usa tantas tiendas como el otro; no repitas la cifra.",
-            "answers": [
-              "Un barrio tiene tantas tiendas como el otro."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "La habitación es muy pequeña.",
-            "instruction": "Sustituye muy pequeña por una sola palabra con el sufijo -ísima; conserva el resto.",
-            "answers": [
-              "La habitación es pequeñísima."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "el alquiler mensual",
-            "en": "monthly rent"
-          },
-          {
-            "es": "los gastos incluidos",
-            "en": "bills included"
-          },
-          {
-            "es": "una zona peatonal",
-            "en": "a pedestrian area"
-          },
-          {
-            "es": "estar bien comunicado",
-            "en": "have good transport links"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "un piso luminoso",
-            "en": "a bright flat"
-          },
-          {
-            "es": "el ruido del tráfico",
-            "en": "traffic noise"
-          },
-          {
-            "es": "un dormitorio exterior",
-            "en": "an outward-facing bedroom"
-          },
-          {
-            "es": "compartir los gastos",
-            "en": "share expenses"
-          }
-        ]
-      },
-      {
-        "title": "El entorno y el clima",
-        "items": [
-          {
-            "es": "un barrio urbano",
-            "en": "an urban neighbourhood"
-          },
-          {
-            "es": "una zona rural",
-            "en": "a rural area"
-          },
-          {
-            "es": "un clima húmedo",
-            "en": "a humid climate"
-          },
-          {
-            "es": "hace más frío que en la costa",
-            "en": "it is colder than on the coast"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Al final de esta semana puedes dar indicaciones e instrucciones con tú y con usted, decir lo que alguien no debe hacer con el imperativo negativo y entender el imperativo de vos cuando lo oyes en Guatemala o en Argentina.",
+    steps: [
+      "Repasa el imperativo de tú: `camina`, `pide` y los ocho irregulares (`di, haz, ve, pon, sal, sé, ten, ven`).",
+      "Pasa al trato de usted: `camine`, `haga`, `vaya`.",
+      "Reconoce el imperativo de vos: `caminá`, `vení`.",
+      "Forma el negativo: `no camines`, `no hagas`, `no vayas`.",
+      "Escucha a Tomás, que busca el camino al Mercado Central.",
+      "Escribe y graba instrucciones para alguien que llega a tu ciudad.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "el alquiler mensual",
-            "right": "monthly rent"
-          },
-          {
-            "left": "los gastos incluidos",
-            "right": "bills included"
-          },
-          {
-            "left": "una zona peatonal",
-            "right": "a pedestrian area"
-          },
-          {
-            "left": "estar bien comunicado",
-            "right": "have good transport links"
-          },
-          {
-            "left": "un piso luminoso",
-            "right": "a bright flat"
-          },
-          {
-            "left": "el ruido del tráfico",
-            "right": "traffic noise"
-          },
-          {
-            "left": "un dormitorio exterior",
-            "right": "an outward-facing bedroom"
-          },
-          {
-            "left": "compartir los gastos",
-            "right": "share expenses"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Destacar el dato que cambia la elección",
-    "explanation": [
-      "La palabra destacada ayuda a corregir un dato: más barata puede contrastar con más grande. Escucha la frase completa y localiza qué cambia. Al hablar, alarga ligeramente la sílaba tónica del dato importante, sin elevar todo el volumen."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "Es menos caro, pero está más lejos.",
-          "q": "¿Qué ventaja menciona primero?",
-          "options": [
-            "El precio",
-            "La distancia"
+  theory: {
+    intro: "Esta semana repasas las dos clases del imperativo: el **afirmativo** (con tú, con usted y, para reconocer, con vos) y el **negativo**, que usa otra forma. Aquí lo practicas en la calle: cómo moverte por la Ciudad de Guatemala y cómo explicar el camino a otras personas.",
+    parts: [
+      {
+        heading: "Con tú: el presente sin la -s",
+        body: [
+          "Para dar una instrucción a una persona que tratas de **tú**, toma el presente de tú y quita la **-s** final: _caminas → camina_, _bebes → bebe_, _subes → sube_. Si el verbo cambia la vocal en presente, el imperativo también: _cierras → cierra_, _vuelves → vuelve_, _pides → pide_.",
+          "Ocho verbos muy frecuentes tienen una forma corta e irregular: **di** (decir), **haz** (hacer), **ve** (ir), **pon** (poner), **sal** (salir), **sé** (ser), **ten** (tener), **ven** (venir).",
+          "El imperativo suena más amable con **por favor**, con el nombre de la persona o con una razón: _Ana, sube por esta escalera, por favor; es más rápido_.",
+        ],
+        support: [
+          "For _tú_ commands, drop the final _-s_ of the present: _caminas → camina_. Eight common verbs have a short irregular form: _di, haz, ve, pon, sal, sé, ten, ven_.",
+        ],
+        table: {
+          caption: "Imperativo afirmativo de tú",
+          head: ["Infinitivo", "Presente (tú)", "Imperativo (tú)"],
+          rows: [
+            ["cruzar", "cruzas", "cruza"],
+            ["leer", "lees", "lee"],
+            ["seguir", "sigues", "sigue"],
+            ["volver", "vuelves", "vuelve"],
+            ["tener", "tienes", "ten (irregular)"],
+            ["salir", "sales", "sal (irregular)"],
+            ["ir", "vas", "ve (irregular)"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Tiene más luz, no más espacio.",
-          "q": "¿Qué cualidad se compara positivamente?",
-          "options": [
-            "La luminosidad",
-            "El tamaño"
+        examples: [
+          { es: "Sigue recto dos cuadras y gira a la izquierda.", en: "Go straight on for two blocks and turn left." },
+          { es: "Ten cuidado con las motos en esta esquina.", en: "Be careful with the motorbikes on this corner." },
+          { es: "Sal por la puerta de atrás, es más rápido.", en: "Go out through the back door, it's quicker." },
+        ],
+        mistakes: [
+          { wrong: "Marcos, vienes aquí un momento.", right: "Marcos, ven aquí un momento.", why: "_Vienes_ es presente: describe. Para pedir, el imperativo irregular: **ven**." },
+          { wrong: "Haces la reserva hoy, por favor.", right: "Haz la reserva hoy, por favor.", why: "El imperativo de _hacer_ con tú es **haz**." },
+        ],
+        tip: "Los ocho irregulares caben en una frase: _Di, haz, ve, pon, sal, sé, ten, ven_. Dila en voz alta como un ritmo.",
+      },
+      {
+        heading: "Con usted: la vocal contraria",
+        body: [
+          "Con una persona mayor, un cliente o alguien que no conoces, usas **usted**. Parte de la forma de **yo** en presente, quita la **-o** y pon la vocal contraria: los verbos en -ar toman **-e** (_camino → camine_); los verbos en -er y en -ir toman **-a** (_bebo → beba_, _subo → suba_).",
+          "Como partes de **yo**, los irregulares de yo pasan al imperativo: _hago → haga_, _pongo → ponga_, _salgo → salga_, _tengo → tenga_, _vengo → venga_, _digo → diga_. Dos son especiales: **ir → vaya** y **ser → sea**.",
+          "Para un grupo (**ustedes**) añades **-n**: _caminen, suban, vayan_. En España, con amigos, se usa **vosotros** (_caminad, subid_), pero solo necesitas reconocerlo.",
+        ],
+        support: [
+          "For _usted_, start from the _yo_ form, drop _-o_ and use the 'opposite' vowel: _-ar → -e_, _-er/-ir → -a_. Add _-n_ for _ustedes_. Special forms: _vaya_, _sea_.",
+        ],
+        table: {
+          caption: "De yo a usted",
+          head: ["Infinitivo", "yo", "usted", "ustedes"],
+          rows: [
+            ["doblar", "doblo", "doble", "doblen"],
+            ["subir", "subo", "suba", "suban"],
+            ["seguir", "sigo", "siga", "sigan"],
+            ["hacer", "hago", "haga", "hagan"],
+            ["poner", "pongo", "ponga", "pongan"],
+            ["ir", "voy", "vaya", "vayan"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "Señora, siga por esta avenida hasta el semáforo.", en: "Madam, carry on along this avenue to the traffic light." },
+          { es: "Ponga su tarjeta aquí, por favor.", en: "Put your card here, please." },
+          { es: "Vayan a la parada de enfrente.", en: "Go to the stop opposite. (to a group)" },
+        ],
+        mistakes: [
+          { wrong: "Don Julio, pasa por aquí.", right: "Don Julio, pase por aquí.", why: "Con **usted** la vocal cambia: pas**e**. _Pasa_ es para tú." },
+          { wrong: "Señora, vienga mañana.", right: "Señora, venga mañana.", why: "Parte de _yo vengo_: **venga**, sin i." },
+        ],
+      },
+      {
+        heading: "Para reconocer: el imperativo de vos",
+        body: [
+          "En Guatemala, en otros países de Centroamérica, en Argentina y en Uruguay mucha gente dice **vos** en lugar de tú. Es una forma correcta y normal; tú no necesitas usarla, pero te conviene reconocerla.",
+          "El imperativo de vos se parece al infinitivo sin la **-r**, con la fuerza al final: _caminá, comé, subí_. No cambia la vocal: _cerrá, volvé, pedí_. Casi no tiene irregulares: _vení, decí, hacé, poné, salí_. Para **ir** se dice **andá**.",
+          "Si alguien te dice _Vení, sentate_, entiende _Ven, siéntate_.",
+        ],
+        support: [
+          "In Guatemala, Central America, Argentina and Uruguay many people use _vos_ instead of _tú_. _Vos_ commands sound like the infinitive without _-r_, stressed at the end: _caminá, vení_. Learn to recognise them; keep using _tú_ yourself.",
+        ],
+        table: {
+          caption: "La misma instrucción, tres tratos",
+          head: ["Infinitivo", "tú", "vos (Guatemala, Río de la Plata)", "usted"],
+          rows: [
+            ["esperar", "espera", "esperá", "espere"],
+            ["volver", "vuelve", "volvé", "vuelva"],
+            ["pedir", "pide", "pedí", "pida"],
+            ["venir", "ven", "vení", "venga"],
+            ["ir", "ve", "andá", "vaya"],
+          ],
+        },
+        examples: [
+          { es: "Esperá en la esquina, ya llego.", en: "Wait on the corner, I'm almost there. (vos)" },
+          { es: "Pedí la cuenta, que ya nos vamos.", en: "Ask for the bill, we're leaving. (vos)" },
+        ],
+      },
+      {
+        heading: "El negativo: no + otra vocal",
+        body: [
+          "Para decir lo que alguien **no** debe hacer, no basta con poner _no_ delante del afirmativo. El negativo usa la vocal contraria, como usted, más la **-s** de tú: _cruza → no cruces_, _bebe → no bebas_, _sube → no subas_.",
+          "Parte también de la forma de **yo**: _hago → no hagas_, _salgo → no salgas_, _digo → no digas_, _tengo → no tengas_. Y otra vez dos especiales: **no vayas** (ir) y **no seas** (ser). Con **usted**, el negativo es igual que el afirmativo con _no_: _no cruce, no vaya_.",
+          "Cuidado con la ortografía para mantener el sonido: _llegar → no llegues_, _buscar → no busques_, _cruzar → no cruces_. Una razón al lado suaviza la prohibición: _No pagues en efectivo: con la tarjeta es más barato_.",
+        ],
+        support: [
+          "Negative _tú_ commands use the 'opposite' vowel plus _-s_: _no cruces, no bebas_. Start from the _yo_ form: _no hagas, no salgas_. For _usted_, just add _no_ to the usted form: _no cruce_.",
+        ],
+        table: {
+          caption: "Afirmativo y negativo",
+          head: ["Infinitivo", "tú (sí)", "tú (no)", "usted (no)"],
+          rows: [
+            ["cruzar", "cruza", "no cruces", "no cruce"],
+            ["comer", "come", "no comas", "no coma"],
+            ["abrir", "abre", "no abras", "no abra"],
+            ["poner", "pon", "no pongas", "no ponga"],
+            ["llegar", "llega", "no llegues", "no llegue"],
+            ["ir", "ve", "no vayas", "no vaya"],
+          ],
+        },
+        examples: [
+          { es: "No dejes la mochila en el asiento.", en: "Don't leave your backpack on the seat." },
+          { es: "No salgas sin paraguas, va a llover.", en: "Don't go out without an umbrella, it's going to rain." },
+          { es: "Señor, no se preocupe, yo le ayudo.", en: "Sir, don't worry, I'll help you." },
+        ],
+        mistakes: [
+          { wrong: "No toca la puerta, está recién pintada.", right: "No toques la puerta, está recién pintada.", why: "El negativo cambia la vocal: no to**ques** (c → qu)." },
+          { wrong: "No vas por esa calle de noche.", right: "No vayas por esa calle de noche.", why: "_No vas_ describe. Para prohibir: **no vayas**." },
+          { wrong: "No hace ruido, el bebé duerme.", right: "No hagas ruido, el bebé duerme.", why: "De _yo hago_: **no hagas**." },
+        ],
+        tip: "Truco: el negativo de tú es la forma de usted + **s**: _no cruce → no cruces_, _no vaya → no vayas_.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero el afirmativo con tú y con usted; después reconoces el vos y formas el negativo.",
+    exercises: [
+      {
+        id: "g1",
+        type: "gap",
+        title: "Instrucciones con tú",
+        prompt: "Completa con el imperativo afirmativo de **tú**.",
+        items: [
+          { q: "___ la línea verde y baja en la tercera parada. (tomar)", answers: [["Toma"]], why: "Tomas − s = **toma**." },
+          { q: "___ el mapa en la aplicación antes de salir. (abrir)", answers: [["Abre"]], why: "Abres − s = **abre**." },
+          { q: "Si te pierdes, ___ ayuda en una tienda. (pedir)", answers: [["pide"]], why: "Pides − s = **pide**; el cambio e → i se mantiene." },
+          { q: "___ temprano: a las siete hay mucho tráfico. (salir)", answers: [["Sal"]], why: "Salir es irregular: **sal**." },
+          { q: "___ paciencia, el bus siempre llega lleno. (tener)", answers: [["Ten"]], why: "Tener es irregular: **ten**." },
+          { q: "___ a mi casa el sábado y ___ tu guitarra. (venir / traer)", answers: [["Ven"], ["trae"]], why: "**Ven** es irregular; traes − s = **trae**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "transform",
+        title: "De tú a usted",
+        prompt: "Escribe la misma instrucción con **usted**.",
+        items: [
+          { source: "Dobla en la próxima esquina.", answers: ["Doble en la próxima esquina."], why: "-ar → **-e**: doble." },
+          { source: "Escribe tu nombre en esta hoja.", answers: ["Escriba su nombre en esta hoja."], why: "-ir → **-a**: escriba; y _tu_ pasa a **su**." },
+          { source: "Pon la maleta debajo del asiento.", answers: ["Ponga la maleta debajo del asiento."], why: "De _yo pongo_: **ponga**." },
+          { source: "Ve a la ventanilla número dos.", answers: ["Vaya a la ventanilla número dos."], why: "Ir es especial: **vaya**." },
+          { source: "Di tu dirección completa.", answers: ["Diga su dirección completa."], why: "De _yo digo_: **diga**; _tu_ → **su**." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "match",
+        title: "¿Qué dice en tú?",
+        prompt: "Une cada instrucción con vos con la misma instrucción con tú.",
+        pairs: [
+          { left: "Cerrá la ventana.", right: "Cierra la ventana." },
+          { left: "Vení a las ocho.", right: "Ven a las ocho." },
+          { left: "Andá a la farmacia.", right: "Ve a la farmacia." },
+          { left: "Decí la verdad.", right: "Di la verdad." },
+          { left: "Volvé pronto.", right: "Vuelve pronto." },
+        ],
+        why: "El vos lleva la fuerza al final y no cambia la vocal: _cerrá_ / _cierra_. Ir con vos es **andá**.",
+      },
+      {
+        id: "g4",
+        type: "gap",
+        title: "Lo que no debes hacer",
+        prompt: "Completa con el imperativo **negativo** de tú.",
+        items: [
+          { q: "No ___ en efectivo, usa la tarjeta. (pagar)", answers: [["pagues"]], why: "Pagar → no pa**gues**: se añade u para mantener el sonido." },
+          { q: "No ___ la calle aquí, hay un paso de cebra allá. (cruzar)", answers: [["cruces"]], why: "Cruzar → no cru**ces** (z → c)." },
+          { q: "No ___ agua del grifo en el hostal. (beber)", answers: [["bebas"]], why: "-er → **-as**: no bebas." },
+          { q: "No ___ tarde a la cita con el médico. (llegar)", answers: [["llegues"]], why: "Llegar → no lle**gues**." },
+          { q: "No ___ solo por el parque de noche. (ir)", answers: [["vayas"]], why: "Ir es especial: **no vayas**." },
+          { q: "No ___ el número de tu tarjeta a nadie. (decir)", answers: [["digas"]], why: "De _yo digo_: **no digas**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para moverte por una ciudad grande y explicar el camino. Las vas a oír en el diálogo y leer en la guía de esta semana.",
+    groups: [
+      {
+        title: "Indicar el camino",
+        items: [
+          { es: "seguir recto", en: "to go straight on" },
+          { es: "girar / doblar a la derecha", en: "to turn right" },
+          { es: "cruzar la calle", en: "to cross the street" },
+          { es: "la cuadra", en: "the block (Latin America)" },
+          { es: "la esquina", en: "the corner" },
+          { es: "el semáforo", en: "the traffic light" },
+          { es: "el paso de cebra", en: "the zebra crossing" },
+          { es: "enfrente de", en: "opposite" },
+        ],
+      },
+      {
+        title: "En el transporte",
+        items: [
+          { es: "la parada", en: "the stop" },
+          { es: "la estación", en: "the station" },
+          { es: "recargar la tarjeta", en: "to top up the card" },
+          { es: "subir al bus", en: "to get on the bus" },
+          { es: "bajar en la parada", en: "to get off at the stop" },
+          { es: "la hora pico", en: "rush hour (Latin America)" },
+          { es: "el efectivo", en: "cash" },
+        ],
+      },
+      {
+        title: "Pedir y ofrecer ayuda",
+        items: [
+          { es: "Disculpe, ¿me puede ayudar?", en: "Excuse me, can you help me? (usted)" },
+          { es: "¿Cómo llego a…?", en: "How do I get to…?" },
+          { es: "Está a dos cuadras.", en: "It's two blocks away." },
+          { es: "No tiene pérdida.", en: "You can't miss it." },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "context",
+        title: "En la calle",
+        prompt: "Lee la situación y elige la frase correcta.",
+        items: [
+          { context: "Un turista te pregunta por el museo. Está muy cerca.", q: "Respondes:", options: ["Está a dos cuadras. Siga recto y no tiene pérdida.", "Está a dos cuadras. Sigue recta y no tienes pérdido.", "Está a dos esquinas. Seguir recto y nada."], answer: 0, why: "Con usted: **siga**; y la fórmula es _no tiene pérdida_." },
+          { context: "Tu amiga va a tomar el bus por primera vez.", q: "Le dices:", options: ["No recargues la tarjeta, es gratis.", "Recarga la tarjeta antes de subir.", "Recargas la tarjeta después de bajar."], answer: 1, why: "Una instrucción útil con tú: **recarga**." },
+          { context: "Son las seis de la tarde y el metro va lleno.", q: "Piensas:", options: ["Es la hora pico.", "Es la hora punta del semáforo.", "Es la parada de cebra."], answer: 0, why: "En América se dice **hora pico** para las horas con más tráfico." },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "¿Tú, vos o usted? La fuerza de la palabra",
+    explanation: [
+      "Con **tú**, el imperativo lleva la fuerza en la penúltima sílaba: _es-PE-ra, CRU-za, SI-gue_.",
+      "Con **vos**, la fuerza salta al **final** y por eso lleva tilde: _es-pe-RÁ, cru-ZÁ, se-GUÍ_. Es la pista más clara para reconocerlo.",
+      "Con **usted**, la fuerza está en el mismo lugar que con tú, pero cambia la **última vocal**: _CRU-ce, SI-ga, es-PE-re_. Escucha bien el final.",
+    ],
+    support: [
+      "_Tú_: stress on the second-to-last syllable (_CRUza_). _Vos_: stress at the end (_cruZÁ_). _Usted_: same stress as _tú_ but a different last vowel (_CRUce_).",
+    ],
+    table: {
+      caption: "Tres formas de cruzar",
+      head: ["Trato", "Forma", "Fuerza y final"],
+      rows: [
+        ["tú", "cruza", "CRU- · termina en -a"],
+        ["vos", "cruzá", "-ZÁ · fuerza al final"],
+        ["usted", "cruce", "CRU- · termina en -e"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Es más BARATA, pero no es más grande.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "La parada está más CERCA.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Tiene TANTAS ventanas como la otra.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿A quién le habla?",
+      prompt: "Escucha la instrucción y elige el trato.",
+      items: [
+        { q: "¿Qué trato oyes?", audio: "Esperá en la parada.", options: ["tú", "vos", "usted"], answer: 1 },
+        { q: "¿Qué trato oyes?", audio: "Doble en la esquina.", options: ["tú", "vos", "usted"], answer: 2 },
+        { q: "¿Qué trato oyes?", audio: "Sigue por esta calle.", options: ["tú", "vos", "usted"], answer: 0 },
+        { q: "¿Qué trato oyes?", audio: "Subí por la escalera.", options: ["tú", "vos", "usted"], answer: 1 },
+        { q: "¿Qué trato oyes?", audio: "Baje en la próxima.", options: ["tú", "vos", "usted"], answer: 2 },
+      ],
+    },
+    produce: [
+      { text: "Cruza, cruce.", tip: "Misma fuerza, CRU-; cambia solo la última vocal." },
+      { text: "Sigue recto. Siga recto.", tip: "Primero a una amiga, después a un señor mayor." },
+      { text: "No cruces aquí, cruza en el semáforo.", tip: "Negativo y afirmativo seguidos: _no CRU-ces_, _CRU-za_." },
+      { text: "Ven, pon la mochila aquí y ten cuidado.", tip: "Tres irregulares de una sílaba: dilos claros y cortos." },
+      { text: "Señora, no se preocupe, vaya despacio.", tip: "Tono tranquilo y amable para usted." },
+    ],
+    spelling: "Para mantener el sonido en el negativo y con usted: **c → qu** (_busque, no busques_), **g → gu** (_llegue, no llegues_), **z → c** (_cruce, no cruces_).",
   },
-  "listening": {
-    "title": "Una visita al piso",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "El camino al Mercado Central",
+    context: "Tomás, un estudiante chileno, acaba de llegar a la Ciudad de Guatemala. Pregunta a un señor en un quiosco cómo llegar al Mercado Central y después llama a su amiga guatemalteca Ingrid, que habla de vos.",
+    speakers: [
+      { id: "tomas", name: "Tomás", voice: "es-CL-m", role: "estudiante recién llegado" },
+      { id: "senor", name: "Don Rigoberto", voice: "es-MX-m", role: "señor del quiosco" },
+      { id: "ingrid", name: "Ingrid", voice: "es-MX-f", role: "amiga guatemalteca" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "La habitación tiene buena luz. Es más pequeña que la que vi ayer, pero la ventana es más grande. ¿Hay tanto ruido por la noche como durante el día?"
-      },
-      {
-        "speaker": "b",
-        "text": "No. La calle es bastante tranquila después de las ocho. La cocina es la zona más ruidosa de la casa porque todos cenamos a la misma hora. Compartimos los gastos de electricidad."
-      },
-      {
-        "speaker": "a",
-        "text": "Trabajo desde casa dos días por semana. Necesito internet y un lugar para estudiar. ¿La conexión es buena? En mi piso anterior era peor por la tarde."
-      },
-      {
-        "speaker": "b",
-        "text": "Funciona bien. Puedes probarla ahora. El escritorio es pequeño, pero hay una mesa mayor en el salón. Esta habitación cuesta treinta euros menos que la del balcón. Si quieres, vemos las dos antes de decidir."
-      }
+    script: [
+      { speaker: "tomas", text: "Disculpe, señor, ¿me puede ayudar? ¿Cómo llego al Mercado Central?" },
+      { speaker: "senor", text: "Claro, joven. Tome el Transmetro en la estación de enfrente, la línea doce. Baje en la parada de la Plaza de la Constitución. El mercado está detrás de la catedral." },
+      { speaker: "tomas", text: "¿Puedo pagar en efectivo?" },
+      { speaker: "senor", text: "No, no lleve efectivo para el bus. Compre una tarjeta aquí mismo y recargue veinte quetzales. Y no suba en la hora pico, que va muy lleno." },
+      { speaker: "tomas", text: "Muchas gracias, muy amable." },
+      { speaker: "ingrid", text: "¿Aló, Tomás? ¿Ya estás en la plaza? Vení al mercado por la entrada de la Novena Avenida. Esperá en la puerta de las flores." },
+      { speaker: "tomas", text: "Perfecto. ¿Qué compro para la cena?" },
+      { speaker: "ingrid", text: "Comprá aguacates y tortillas. Pero no comprés nada en la entrada, que es más caro. Andá al segundo piso, ahí está la señora Carmen. Preguntá por ella y decí que sos amigo mío." },
+      { speaker: "tomas", text: "Está bien. Y no te preocupes, no voy a llegar tarde." },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «Una visita al piso» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Qué está haciendo la primera persona?",
-              "options": [
-                "Vendiendo un escritorio",
-                "Buscando una biblioteca",
-                "Comparando una habitación para alquilar"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Comparando una habitación para alquilar»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué prioridad expresa quien visita el piso?",
-              "options": [
-                "Tener el balcón más grande",
-                "Compartir piso solo los fines de semana",
-                "Poder trabajar y estudiar allí"
-              ],
-              "answer": 2,
-              "why": "Comprueba el contexto y los datos de la escena: Poder trabajar y estudiar allí."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «Una visita al piso».",
-          "items": [
-            {
-              "q": "¿Qué zona tiene más ruido al cenar?",
-              "options": [
-                "La calle",
-                "La cocina",
-                "El balcón"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «La cocina»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué puede probar durante la visita?",
-              "options": [
-                "La conexión a internet",
-                "El autobús",
-                "La calefacción de otro piso"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «La conexión a internet»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «Una visita al piso».",
-          "items": [
-            {
-              "q": "Treinta euros menos indica…",
-              "options": [
-                "Una diferencia de precio",
-                "El precio total",
-                "Los gastos de internet"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «Una diferencia de precio»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué comparación favorece la habitación que visitan?",
-              "options": [
-                "No tiene gastos compartidos",
-                "La ventana es más grande",
-                "Es la habitación de mayor tamaño"
-              ],
-              "answer": 1,
-              "why": "Comprueba el contexto y los datos de la escena: La ventana es más grande."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Dos habitaciones, dos formas de vivir",
-    "genre": "Anuncios y comentario de una visitante",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "Habitación A: 340 euros al mes, agua incluida. Piso compartido con dos personas en el centro. La habitación tiene una ventana a una calle peatonal. La cocina es pequeña, pero está equipada. Hay una biblioteca a cinco minutos andando y varios autobuses cerca. No hay ascensor. La habitación está en la cuarta planta.",
-      "Habitación B: 290 euros al mes, más agua y electricidad. Casa compartida con cuatro personas junto al parque. La habitación es más grande y tiene un escritorio. Hay jardín, pero la parada de autobús está a quince minutos. El último autobús del centro sale a las diez de la noche.",
-      "Nota de Irene después de las visitas: trabajo hasta las nueve y media y estudio los sábados. La casa B es tranquilísima y más barata al principio, pero los gastos no están incluidos. La habitación A es menor, aunque la biblioteca y el transporte son mejores para mí. Antes de decidir, voy a preguntar cuánto pagan normalmente de electricidad en la casa B."
-    ],
-    "glossary": [
-      {
-        "es": "el alquiler mensual",
-        "en": "monthly rent"
-      },
-      {
-        "es": "los gastos incluidos",
-        "en": "bills included"
-      },
-      {
-        "es": "una zona peatonal",
-        "en": "a pedestrian area"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «Dos habitaciones, dos formas de vivir» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Qué ventaja tiene A para Irene?",
-            "options": [
-              "Un jardín grande",
-              "Menos escaleras",
-              "Transporte y biblioteca cercanos"
-            ],
-            "answer": 2,
-            "why": "La información de la situación corresponde a «Transporte y biblioteca cercanos»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Qué precio total todavía no conoce?",
-            "options": [
-              "El de una biblioteca",
-              "El de B con los gastos",
-              "El alquiler de A"
-            ],
-            "answer": 1,
-            "why": "La información de la situación corresponde a «El de B con los gastos»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «Dos habitaciones, dos formas de vivir» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Comparar viviendas y barrios y elegir según necesidades y presupuesto. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "reading-housing-classify",
-        "type": "classify",
-        "prompt": "Compara los anuncios sin confundir precio base y coste total. Clasifica los datos que identifican cada habitación.",
-        "categories": [
-          "Habitación A",
-          "Habitación B"
-        ],
-        "items": [
-          {
-            "text": "Agua incluida en el alquiler de 340 euros.",
-            "cat": 0
-          },
-          {
-            "text": "Jardín y cuatro personas con quienes compartir.",
-            "cat": 1
-          },
-          {
-            "text": "Cuarta planta sin ascensor.",
-            "cat": 0
-          },
-          {
-            "text": "La parada queda a quince minutos.",
-            "cat": 1
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "Habitación A: 340 euros al mes, agua incluida.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿Qué busca Tomás?", options: ["el camino al Mercado Central", "una farmacia", "su hotel"], answer: 0 },
+            { q: "¿Con quién habla primero?", options: ["con Ingrid", "con un conductor del bus", "con un señor en un quiosco"], answer: 2 },
+            { q: "¿Para qué llama Ingrid?", options: ["para cancelar la cena", "para quedar en el mercado y pedirle compras", "para pedir dinero"], answer: 1 },
+          ],
         },
-        {
-          "quote": "Habitación B: 290 euros al mes, más agua y electricidad.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
+      },
       {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
+        stage: "detail",
+        prompt: "Segunda escucha: atención a los números, los lugares y las compras.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Qué línea del Transmetro debe tomar?", options: ["la dos", "la doce", "la nueve"], answer: 1 },
+            { q: "¿Con cuánto dinero recarga la tarjeta?", options: ["diez quetzales", "doce quetzales", "veinte quetzales"], answer: 2 },
+            { q: "¿Dónde lo espera Ingrid?", options: ["en la puerta de las flores", "en la catedral", "en el segundo piso"], answer: 0 },
+            { q: "¿Qué tiene que comprar Tomás?", options: ["flores y pan", "aguacates y tortillas", "fruta y café"], answer: 1 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en el trato de cada instrucción.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Qué trato usa cada instrucción?",
+          categories: ["usted (don Rigoberto)", "vos (Ingrid)"],
+          items: [
+            { text: "Tome el Transmetro", cat: 0, why: "Tomar → **tome**: vocal contraria, trato de usted." },
+            { text: "Baje en la parada", cat: 0 },
+            { text: "no suba en la hora pico", cat: 0, why: "Negativo con usted: **no suba**." },
+            { text: "Vení al mercado", cat: 1, why: "Fuerza al final: **vení** = ven." },
+            { text: "Comprá aguacates y tortillas", cat: 1, why: "**Comprá** = compra (tú)." },
+            { text: "Andá al segundo piso", cat: 1, why: "Ir con vos: **andá** = ve." },
+          ],
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Tu primera semana en la capital",
+    genre: "Guía de un hostal",
+    frame: "Esta hoja está en la puerta de cada habitación del hostal Casa Ceiba, en la zona 1 de la Ciudad de Guatemala.",
+    text: [
+      "¡Bienvenido a Casa Ceiba! Aquí tienes unos consejos para moverte por la ciudad. Primero, compra una tarjeta del Transmetro en la estación de la Plaza Barrios y recarga saldo en cualquier tienda. No pagues el taxi en la calle sin preguntar el precio antes: pide un taxi por la aplicación o en recepción.",
+      "Para ir al centro histórico, sal del hostal, gira a la derecha y sigue recto cuatro cuadras por la Sexta Avenida. Los domingos la avenida es peatonal: ve con calma y prueba los elotes de los puestos.",
+      "Por la noche, no camines solo por calles vacías y no dejes el celular sobre la mesa en los restaurantes. Si vas a volver tarde, ten siempre el número del hostal. Y si necesitas algo, ven a la recepción: estamos aquí las veinticuatro horas.",
+    ],
+    glossary: [
+      { es: "peatonal", en: "pedestrian (no cars)" },
+      { es: "el elote", en: "corn on the cob (Central America and Mexico)" },
+      { es: "el puesto", en: "the stall" },
+      { es: "vacío, vacía", en: "empty" },
+    ],
+    tasks: [
+      {
+        id: "r1",
+        type: "choice",
+        prompt: "Lee la guía y responde.",
+        items: [
+          { q: "¿Dónde puedes recargar la tarjeta?", options: ["solo en la estación", "en cualquier tienda", "en la recepción"], answer: 1 },
+          { q: "¿Qué recomienda la guía para el taxi?", options: ["pedirlo por la aplicación o en recepción", "pagar siempre en efectivo", "tomarlo en la calle"], answer: 0 },
+          { q: "¿Cómo llegas al centro histórico?", options: ["a la izquierda y seis cuadras", "en taxi por la Plaza Barrios", "a la derecha y cuatro cuadras recto"], answer: 2 },
+          { q: "¿Qué pasa los domingos en la Sexta Avenida?", options: ["No pasan coches.", "Hay mucho tráfico.", "Las tiendas cierran."], answer: 0 },
+        ],
+      },
+      {
+        id: "r2",
+        type: "classify",
+        prompt: "¿Qué recomienda la guía y qué prohíbe?",
+        categories: ["la guía lo recomienda", "la guía lo prohíbe"],
+        items: [
+          { text: "comprar la tarjeta en la estación", cat: 0 },
+          { text: "pagar un taxi sin preguntar el precio", cat: 1 },
+          { text: "probar los elotes", cat: 0 },
+          { text: "caminar solo por calles vacías de noche", cat: 1 },
+          { text: "dejar el celular sobre la mesa", cat: 1 },
+          { text: "tener el número del hostal", cat: 0 },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Toca cada frase de la guía para ver qué gramática hay dentro.",
+      items: [
+        { quote: "sal del hostal", note: "**Sal**: uno de los ocho imperativos irregulares de tú (salir)." },
+        { quote: "No pagues el taxi", note: "Negativo de _pagar_: **no pagues**, con u para mantener el sonido de la g." },
+        { quote: "ve con calma", note: "**Ve** es el imperativo de _ir_ con tú." },
+        { quote: "no camines solo", note: "-ar → **-es** en el negativo: no camin**es**." },
+        { quote: "ten siempre el número del hostal", note: "**Ten**, imperativo irregular de _tener_." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Mezcla las dos clases: afirmativo y negativo, tú y usted, y una mirada al vos.",
+    exercises: [
+      {
+        id: "x1",
+        type: "error",
+        title: "Corrige las instrucciones",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "No olvidas tu pasaporte en el hotel.", answers: ["No olvides tu pasaporte en el hotel."], why: "Para prohibir: **no olvides** (-ar → -es)." },
+          { sentence: "Señor, espera aquí, por favor.", answers: ["Señor, espere aquí, por favor."], why: "Con un señor, usted: **espere**." },
+          { sentence: "Pone las llaves en la mesa.", answers: ["Pon las llaves en la mesa."], why: "Imperativo irregular de _poner_ con tú: **pon**." },
+          { sentence: "No sales sin chaqueta, hace frío.", answers: ["No salgas sin chaqueta, hace frío."], why: "De _yo salgo_: **no salgas**." },
+          { sentence: "Señora, no busca el número en la guía, está en la puerta.", answers: ["Señora, no busque el número en la guía, está en la puerta."], why: "Usted: **no busque** (c → qu)." },
+        ],
+      },
+      {
+        id: "x2",
+        type: "transform",
+        title: "Del sí al no",
+        prompt: "Escribe el contrario: pasa la instrucción al negativo con tú.",
+        items: [
+          { source: "Abre la ventana del bus.", answers: ["No abras la ventana del bus."], why: "-ir → **-as**: no abras." },
+          { source: "Ven en coche.", answers: ["No vengas en coche."], why: "De _yo vengo_: **no vengas**." },
+          { source: "Haz la reserva por teléfono.", answers: ["No hagas la reserva por teléfono."], why: "De _yo hago_: **no hagas**." },
+          { source: "Sé tímido.", answers: ["No seas tímido."], why: "Ser es especial: **no seas**." },
+        ],
+      },
+      {
+        id: "x3",
+        type: "classify",
+        title: "¿Tú, vos o usted?",
+        prompt: "Clasifica cada instrucción según el trato.",
+        categories: ["tú", "vos", "usted"],
+        items: [
+          { text: "Esperá aquí.", cat: 1, why: "Fuerza al final: **esperá** (vos) = espera (tú)." },
+          { text: "Firme aquí, por favor.", cat: 2 },
+          { text: "Pide otra servilleta.", cat: 0 },
+          { text: "Contá hasta diez.", cat: 1, why: "Sin cambio de vocal y con fuerza al final: **contá** = cuenta." },
+          { text: "No cierre la puerta.", cat: 2 },
+          { text: "Pon música.", cat: 0 },
+        ],
+      },
+      {
+        id: "x4",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe instrucciones breves. Después compara con el modelo.",
+        items: [
           {
-            "words": [
-              "Este",
-              "piso",
-              "es",
-              "menos",
-              "caro",
-              "que",
-              "el",
-              "del",
-              "centro."
-            ]
+            prompt: "Una amiga va a tu casa por primera vez desde la estación. Escríbele tres instrucciones con tú.",
+            model: "Sal de la estación por la puerta norte. Cruza la plaza y sigue recto tres cuadras. Mi casa es la azul: toca el timbre dos veces.",
+            checklist: ["Usas el imperativo de tú", "Hay al menos un irregular (_sal, ve, ten_…)", "Ordenas los pasos"],
           },
           {
-            "words": [
-              "Es",
-              "la",
-              "casa",
-              "más",
-              "luminosa",
-              "de",
-              "las",
-              "tres."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "¿Qué color tiene el jardín?",
-              "¿Cuánto pagan normalmente de agua y electricidad?",
-              "La elijo sin conocer ningún gasto."
-            ],
-            "answer": 1,
-            "why": "Comprueba el contexto y los datos de la escena: ¿Cuánto pagan normalmente de agua y electricidad?.",
-            "context": "B parece barata, pero no incluye los gastos.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
+            prompt: "Un señor mayor pregunta por la farmacia. Explícale el camino con usted.",
+            model: "Siga por esta avenida hasta el semáforo. Allí doble a la izquierda. La farmacia está enfrente del banco; no cruce la calle.",
+            checklist: ["Usas la vocal contraria (_siga, doble_)", "Hay un negativo con usted", "Usas palabras de dirección"],
           },
           {
-            "context": "Negocia la elección con tu compañero: él prefiere espacio y tú transporte. Pregunta por su prioridad y busca una condición aceptable para ambos.",
-            "q": "En esta interacción de «¿En qué barrio vivir?», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «¿En qué barrio vivir?», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Hola, Celia.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
+            prompt: "Escribe tres cosas que un turista no debe hacer en tu ciudad, cada una con una razón.",
+            model: "No tomes taxis en la calle, porque son caros. No vayas al centro en coche: no hay aparcamiento. No dejes la mochila sola en la playa.",
+            checklist: ["Usas _no_ + la vocal contraria + s", "Cada prohibición tiene una razón", "Hay un irregular (_no vayas, no hagas_…)"],
           },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: Negocia la elección con tu compañero: él prefiere espacio y tú transporte. Pregunta por su prioridad y busca una condición aceptable para ambos.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-05",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 5. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 7: Crea una nueva cartela para un objeto familiar. Cuenta cómo lo has encontrado, un hecho con fecha y una costumbre de su dueño. Tu pareja lee la cartela en voz alta y tú identificas qué era habitual y qué ocurrió una sola vez. Corrige después un tiempo que no encaje.",
-            "model": "Esta semana he encontrado una taza. Mi tío la compró en 1998. Antes la usaba todos los domingos cuando desayunaba con sus vecinos.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 5→7: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Esta semana he encontrado una taza. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Escribe a una futura compañera de piso. Compara los dos anuncios, explica tu elección provisional y formula dos preguntas antes de reservar. No inventes gastos que los anuncios no indican.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
-    ],
-    "useLanguage": [
-      "Este piso es menos caro que el del centro.",
-      "Hay tantas tiendas como en mi barrio.",
-      "Es la casa más luminosa de las tres.",
-      "El dormitorio es pequeñísimo, pero el transporte es mejor."
-    ],
-    "model": [
-      "Hola, Celia. He visitado las dos habitaciones. La del centro es más pequeña que la del parque, pero está mejor comunicada. Cuesta cincuenta euros más, aunque incluye el agua. Creo que es más cómoda para nuestro horario porque volvemos tarde del trabajo. Todavía quiero preguntar si la electricidad está incluida y si podemos usar la mesa del salón para estudiar. La casa del parque tiene más espacio, pero el último autobús sale demasiado pronto. También podemos preguntar a las personas que viven allí cómo es el ruido por la noche."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      80,
-      120
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
-      {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Recomienda una de las habitaciones a una persona que trabaja por la noche y otra a quien necesita jardín. Justifica cada recomendación con dos datos.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
         ],
-        "seconds": 90,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
-      {
-        "title": "Interacción con un cambio",
-        "prompt": "Negocia la elección con tu compañero: él prefiere espacio y tú transporte. Pregunta por su prioridad y busca una condición aceptable para ambos.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
-        ],
-        "seconds": 90,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Recomienda una de las habitaciones a una persona que trabaja por la noche y otra a quien necesita jardín. Justifica cada recomendación con dos datos."
-      },
-      {
-        "move": "Negocia",
-        "task": "Negocia la elección con tu compañero: él prefiere espacio y tú transporte. Pregunta por su prioridad y busca una condición aceptable para ambos."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
   },
-  "quiz": {
-    "items": [
-      {
-        "type": "gap",
-        "q": "La habitación azul es tan luminosa ___ la verde.",
-        "answers": [
-          [
-            "como"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "Esta casa tiene ___ ventanas como la tuya. (igual número)",
-        "answers": [
-          [
-            "tantas"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Este barrio es más peor que el otro.",
-        "answers": [
-          "Este barrio es peor que el otro."
-        ],
-        "why": "Peor ya es comparativo; no necesita más."
-      },
-      {
-        "type": "order",
-        "words": [
-          "Es",
-          "el",
-          "piso",
-          "más",
-          "barato",
-          "del",
-          "edificio."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué dato necesitas para comparar el coste completo?",
-        "options": [
-          "El color del escritorio",
-          "Los gastos de electricidad"
-        ],
-        "answer": 1,
-        "why": "La opción elegida cumple la función comunicativa indicada."
-      },
-      {
-        "q": "¿Qué inconveniente tiene la habitación de arriba?",
-        "options": [
-          "Cuesta más",
-          "Es menor",
-          "No tiene ventanas"
-        ],
-        "answer": 0,
-        "why": "Comprueba el contexto y los datos de la escena: Cuesta más.",
-        "type": "listen",
-        "audio": "La habitación de arriba es mayor, pero cuesta más."
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 7: Recomienda una de las habitaciones a una persona que trabaja por la noche y otra a quien necesita jardín. Justifica cada recomendación con dos datos.",
-        "model": "Hola, Celia. He visitado las dos habitaciones. La del centro es más pequeña que la del parque, pero está mejor comunicada. Cuesta cincuenta euros más, aunque incluye el agua. Creo que es más cómoda para nuestro horario porque volvemos tarde del trabajo. Todavía quiero preguntar si la electricidad está incluida y si podemos usar la mesa del salón para estudiar. La casa del parque tiene más espacio, pero el último autobús sale demasiado pronto. También podemos preguntar a las personas que viven allí cómo es el ruido por la noche.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Resolución final 7: Negocia la elección con tu compañero: él prefiere espacio y tú transporte. Pregunta por su prioridad y busca una condición aceptable para ambos. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Comparar viviendas y barrios y elegir según necesidades y presupuesto.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+  writing: {
+    task: "Escribe un mensaje con instrucciones para un amigo que llega a tu ciudad y va solo del aeropuerto o la estación a tu casa.",
+    context: "Tú estás trabajando cuando tu amigo llega. Tiene que llegar solo a tu casa y entrar con una llave que le dejas. Dale pasos claros, lo que debe hacer y lo que no.",
+    steps: [
+      "Saluda y explica que no puedes ir a buscarlo.",
+      "Da tres o cuatro pasos con el imperativo de tú: el transporte, el camino, la llave.",
+      "Añade dos o tres cosas que **no** debe hacer, con una razón.",
+      "Termina con una frase amable para la llegada.",
+      "Revisa el mensaje: ¿el afirmativo y el negativo tienen la forma correcta? ¿Las razones explican cada prohibición?",
     ],
-    "review": [
-      "En dos días, repite la misión «¿En qué barrio vivir?» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+    useLanguage: ["Toma… / Baja en…", "Sal por… / Sigue recto…", "No tomes… porque…", "No vayas…", "Ten cuidado con…", "Ven… / Pon…"],
+    model: [
+      "¡Hola, Iván! Lo siento, hoy trabajo hasta las seis. Al salir del aeropuerto, toma el bus azul hasta la Plaza Central. No tomes un taxi en la puerta, porque son muy caros. Baja en la plaza, cruza en el semáforo y sigue recto dos cuadras. Mi edificio está enfrente de una panadería. La llave está con la vecina del primer piso: toca el timbre y di tu nombre. No hagas ruido, porque su bebé duerme por la tarde. ¡Descansa un poco y nos vemos a las siete!",
+    ],
+    checklist: [
+      "Usas el imperativo afirmativo de tú (también irregulares: _sal, di, ten_…).",
+      "Usas el negativo con la vocal contraria (_no tomes, no hagas_).",
+      "Cada prohibición tiene una razón.",
+      "Los pasos siguen un orden claro.",
+    ],
+    words: [60, 100],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate. Repite cada tarea hasta que salga sin leer.",
+    tasks: [
+      {
+        title: "Del metro a mi casa",
+        prompt: "Explica a un amigo, con tú, cómo llegar a tu casa desde la parada de bus o metro más cercana.",
+        prep: ["Baja en…", "Sal por…", "Sigue recto… / Gira a…", "Mi casa está enfrente de…"],
+        seconds: 70,
+        model: "Baja en la parada del hospital. Sal por la salida de la derecha y cruza la avenida en el semáforo. Sigue recto dos cuadras y gira a la izquierda en la panadería. Mi casa es la tercera, la de la puerta verde. Toca el timbre del segundo piso.",
+        selfCheck: ["Uso el imperativo de tú, no el presente.", "Uso palabras de dirección: _recto, a la izquierda, enfrente de_."],
+      },
+      {
+        title: "Con un señor mayor",
+        prompt: "Un señor mayor quiere ir a la oficina de correos. Explícale el camino con usted y dile una cosa que no debe hacer.",
+        prep: ["Mire, siga por…", "Doble en…", "No cruce…", "Está a… cuadras."],
+        seconds: 60,
+        model: "Mire, siga por esta calle hasta la iglesia. Allí doble a la derecha. No cruce por el medio, que pasan muchos coches; cruce en la esquina. Correos está a dos cuadras, enfrente del parque.",
+        selfCheck: ["Cambio la vocal para usted: _siga, doble, cruce_.", "Hablo despacio y con tono amable."],
+      },
+      {
+        title: "Las reglas de mi casa",
+        prompt: "Un amigo se queda en tu casa una semana. Dile tres cosas que puede hacer y tres que no debe hacer, con razones.",
+        prep: ["Usa…", "Come lo que quieras de…", "No abras…, porque…", "No dejes…"],
+        seconds: 60,
+        selfCheck: ["Alterno afirmativo y negativo correctamente.", "Doy una razón para cada _no_."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que repasaste esta semana y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Guía a tu profe", task: "Explica a tu profesor cómo llegar desde tu casa a un lugar que te gusta. Usa tú o usted, según el trato que usan en clase.", phrases: ["Sal de…", "Sigue recto…", "Gira a…"] },
+      { move: "Prohíbe con razón", task: "Di dos cosas que no se deben hacer en tu ciudad y explica por qué.", phrases: ["No vayas a… porque…", "No tomes…"] },
+      { move: "Pide un cambio", task: "Pide a tu profesor que repita o escriba algo, con un imperativo amable.", phrases: ["Repite eso, por favor.", "Escríbelo en la pizarra, por favor."] },
+      { move: "Pregunta por el vos", task: "Pregunta a tu profesor si conoce el vos y cómo dice _ven_ y _ve_ alguien que usa vos.", phrases: ["¿Cómo se dice «ven» con vos?", "¿Dónde se usa el vos?"] },
+    ],
+    bring: "Trae un mapa (en papel o en tu celular) de tu barrio con una ruta marcada para explicarla en clase.",
+  },
+  quiz: {
+    items: [
+      { type: "gap", q: "Lucía, ___ aquí un momento y ___ la puerta, por favor. (venir / cerrar)", answers: [["ven"], ["cierra"]], why: "**Ven** es irregular; cierras − s = **cierra**." },
+      { type: "choice", q: "Hablas con una clienta en una tienda. Le dices:", options: ["Pasa y mira lo que quieras.", "Pase y mire lo que quiera.", "Pasá y mirá lo que quieras."], answer: 1, why: "Con una clienta, usted: **pase, mire**." },
+      { type: "gap", q: "No ___ el bus 15, que va al otro lado. (tomar)", answers: [["tomes"]], why: "Negativo de tú: **no tomes**." },
+      { type: "transform", source: "Pon el abrigo en la silla.", instruction: "Escribe la misma instrucción en negativo con tú.", answers: ["No pongas el abrigo en la silla."], why: "De _yo pongo_: **no pongas**." },
+      { type: "listen", q: "¿Qué trato oyes en la invitación al café?", audio: "Tomá un café, que hace frío.", options: ["tú", "usted", "vos"], answer: 2 },
+      { type: "error", sentence: "No vas sola al mercado por la noche.", answers: ["No vayas sola al mercado por la noche."], why: "Para prohibir: **no vayas**." },
+      { type: "error", sentence: "Señora, vienga por aquí, por favor.", answers: ["Señora, venga por aquí, por favor."], why: "De _yo vengo_: **venga**." },
+      { type: "order", words: ["No", "cruces", "aquí:", "cruza", "en", "el", "semáforo."] },
+      { type: "choice", q: "¿Qué significa «Andá a la farmacia»?", options: ["Ve a la farmacia.", "Ven de la farmacia.", "Anda por la farmacia."], answer: 0, why: "Con vos, ir es **andá** = ve." },
+      { type: "open", prompt: "Escribe dos instrucciones para un compañero nuevo en tu trabajo o tu escuela: una positiva y una negativa, con una razón.", model: "Llega diez minutos antes a la reunión del lunes. No uses la impresora del segundo piso, porque no funciona.", checklist: ["Afirmativo de tú correcto", "Negativo con la vocal contraria + s", "Hay una razón"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Dar instrucciones con el imperativo afirmativo de **tú**, también con los ocho irregulares.",
+      "Dar instrucciones amables con **usted** y **ustedes**: _siga, doble, vaya, vayan_.",
+      "Reconocer el imperativo de **vos**: _vení, comprá, andá_.",
+      "Decir lo que no se debe hacer: _no cruces, no hagas, no vayas_.",
+      "Explicar el camino en una ciudad con palabras de dirección.",
+      "Acompañar una prohibición con una razón.",
+    ],
+    review: ["Tú: presente − s (cruza); irregulares: di, haz, ve, pon, sal, sé, ten, ven.", "Usted: yo − o + vocal contraria (cruce, haga, vaya).", "Negativo: no cruces, no hagas, no vayas, no seas."],
+  },
+  related: [
+    { path: "/gramatica/imperativo-afirmativo-tu-vos-usted", label: "Clase: Imperativo afirmativo: tú, vos, usted" },
+    { path: "/sistema-verbal/imperativo", label: "Clase: Imperativo negativo con subjuntivo de forma guiada" },
+  ],
 };

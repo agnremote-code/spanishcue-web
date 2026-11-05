@@ -1,0 +1,12 @@
+[
+  [9, "gram", "g062", "Gustar, interesar, doler, faltar: concordancia", "Puedo decir qué me gusta, me interesa, me duele, me falta o me molesta con el verbo en singular o plural según la cosa, también en pasado, y aclarar con a + persona.", ["a2.gram.g047"], { "related": ["/gramatica/gustar-interesar-doler-faltar-concordancia"] }],
+  [9, "gram", "g063", "Objeto indirecto: le, les, me, te, nos", "Puedo decir a quién doy, mando, digo o explico algo con me, te, le, nos, les, repetir la persona con a cuando hace falta y distinguir le de lo y la.", ["a2.gram.g062"], { "related": ["/gramatica/objeto-indirecto-le-les-me-te"] }],
+  [9, "voc", "w09-artesania-cuerpo", "Artesanía, regalos y partes del cuerpo", "Puedo nombrar objetos de artesanía para regalar y partes del cuerpo para decir qué me duele.", ["a2.gram.g062"]],
+  [9, "pron", "w09-n-final-plural", "La -n final del verbo plural", "Puedo oír y pronunciar la diferencia entre duele y duelen, gusta y gustan, uniendo la n con la vocal siguiente.", []],
+  [9, "lis", "w09-taller-anil", "Escuchar una compra en un taller de artesanía", "Puedo entender en una conversación qué le gusta a cada persona, qué le duele y para quién es cada regalo.", ["a2.gram.g062", "a2.gram.g063"]],
+  [9, "read", "w09-mensaje-familia", "Leer un mensaje de viaje a la familia", "Puedo entender un mensaje de viaje con gustos, dolores, regalos y los pronombres de cada persona.", ["a2.gram.g062", "a2.gram.g063"]],
+  [9, "wri", "w09-correo-regalos", "Escribir desde un viaje sobre gustos y regalos", "Puedo escribir un mensaje de 60 a 110 palabras sobre lo que me gusta de un lugar, cómo me siento y qué regalo le llevo a cada persona.", ["a2.gram.g062", "a2.gram.g063", "a2.disc.w09-reaccionar-gustos"]],
+  [9, "spk", "w09-gustos-regalos", "Hablar de gustos, dolores y regalos", "Puedo hablar de los gustos de mi familia, explicar en una farmacia qué me duele y decir qué regalos traigo durante unos tres minutos en total.", ["a2.fun.w09-elegir-regalos"]],
+  [9, "fun", "w09-elegir-regalos", "Elegir regalos según los gustos", "Puedo elegir y justificar un regalo para otra persona a partir de lo que le gusta o le interesa.", ["a2.gram.g063"]],
+  [9, "disc", "w09-reaccionar-gustos", "Reaccionar y contrastar gustos", "Puedo reaccionar a los gustos de otra persona con a mí también, a mí tampoco, a mí sí y a mí no, y contrastar con pero.", ["a2.gram.g062"]]
+]

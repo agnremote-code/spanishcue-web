@@ -1,0 +1,12 @@
+[
+  [6, "gram", "g056", "Ir a + infinitivo frente al futuro simple", "Puedo elegir ir a + infinitivo para planes ya decididos y señales de ahora, y el futuro simple para promesas, ofertas, pronósticos y anuncios.", ["a2.gram.g053"], { "related": ["/gramatica/ir-a-infinitivo-frente-al-futuro"] }],
+  [6, "gram", "g057", "Futuro simple: formas regulares e irregulares", "Puedo formar el futuro regular con su tilde, usar las raíces irregulares (tendr-, saldr-, har-, dir-…) y decir condiciones reales con si + presente.", ["a2.gram.g056"], { "related": ["/sistema-verbal/futuro-simple-indicativo"] }],
+  [6, "voc", "w06-excursion-clima", "Excursiones y pronóstico del tiempo", "Puedo nombrar lo que necesito para una excursión y decir qué tiempo hará con hará, estará y habrá.", ["a2.gram.g057"]],
+  [6, "pron", "w06-acento-final-futuro", "La sílaba fuerte del futuro", "Puedo oír y pronunciar el golpe final del futuro (llegará) y distinguirlo del presente y del imperfecto.", []],
+  [6, "lis", "w06-reunion-volcan", "Escuchar la reunión antes de una excursión", "Puedo entender horarios, pronóstico y reparto de tareas en una reunión breve antes de una excursión.", ["a2.gram.g056", "a2.gram.g057"]],
+  [6, "read", "w06-correo-agencia", "Leer un correo de una agencia y una nota personal", "Puedo entender un correo formal con anuncios en futuro y distinguirlo de una nota con planes y promesas personales.", ["a2.gram.g056", "a2.gram.g057"]],
+  [6, "wri", "w06-mensaje-visita", "Escribir un mensaje con planes y promesas", "Puedo escribir un mensaje de 60 a 100 palabras con planes decididos, promesas y una condición con si.", ["a2.gram.g056", "a2.gram.g057", "a2.disc.w06-pasos-del-plan"]],
+  [6, "spk", "w06-planes-promesas", "Contar planes y prometer en voz alta", "Puedo contar mis planes, prometer ayuda y dar un pronóstico del tiempo durante unos tres minutos en total.", ["a2.fun.w06-prometer-ofrecer"]],
+  [6, "fun", "w06-prometer-ofrecer", "Prometer y ofrecer ayuda", "Puedo tranquilizar a alguien, ofrecer ayuda y prometer algo con el futuro y fórmulas como te lo prometo.", ["a2.gram.g057"]],
+  [6, "disc", "w06-pasos-del-plan", "Ordenar un plan en pasos", "Puedo ordenar un plan con primero, después y al final, y añadir una alternativa con si.", ["a2.gram.g056"]]
+]

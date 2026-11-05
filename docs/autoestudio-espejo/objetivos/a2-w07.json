@@ -1,0 +1,12 @@
+[
+  [7, "gram", "g058", "Imperativo afirmativo: tú, vos, usted", "Puedo dar instrucciones con el imperativo afirmativo de tú (también di, haz, ve, pon, sal, sé, ten, ven) y de usted, y reconocer el imperativo de vos.", ["a2.gram.g056"], { "related": ["/gramatica/imperativo-afirmativo-tu-vos-usted"] }],
+  [7, "gram", "g059", "Imperativo negativo", "Puedo decir lo que alguien no debe hacer con el imperativo negativo de tú y de usted: no cruces, no hagas, no vayas, no cruce.", ["a2.gram.g058"], { "related": ["/sistema-verbal/imperativo"] }],
+  [7, "voc", "w07-ciudad-transporte", "Direcciones y transporte urbano", "Puedo usar palabras para indicar el camino y moverme en transporte público: cuadra, esquina, semáforo, parada, recargar la tarjeta.", ["a2.gram.g058"]],
+  [7, "pron", "w07-acento-tu-vos-usted", "La fuerza en el imperativo de tú, vos y usted", "Puedo distinguir al oído cruza, cruzá y cruce por la sílaba fuerte y la última vocal.", []],
+  [7, "lis", "w07-camino-mercado", "Escuchar indicaciones en la calle y por teléfono", "Puedo entender indicaciones con usted y con vos para llegar a un lugar y hacer unas compras.", ["a2.gram.g058", "a2.gram.g059"]],
+  [7, "read", "w07-guia-ciudad", "Leer una guía con consejos para la ciudad", "Puedo entender una guía breve con instrucciones y prohibiciones para moverme por una ciudad.", ["a2.gram.g058", "a2.gram.g059"]],
+  [7, "wri", "w07-instrucciones-llegada", "Escribir instrucciones de llegada", "Puedo escribir un mensaje de 60 a 100 palabras con pasos para llegar a mi casa y cosas que no hay que hacer, con razones.", ["a2.gram.g058", "a2.gram.g059", "a2.disc.w07-instruccion-razon"]],
+  [7, "spk", "w07-indicaciones", "Dar indicaciones en voz alta", "Puedo explicar un camino con tú y con usted y dar normas de casa durante unos tres minutos en total.", ["a2.fun.w07-indicar-camino"]],
+  [7, "fun", "w07-indicar-camino", "Pedir y dar indicaciones", "Puedo pedir ayuda para llegar a un lugar y explicar el camino adaptando el trato a la persona.", ["a2.gram.g058"]],
+  [7, "disc", "w07-instruccion-razon", "Acompañar una instrucción con una razón", "Puedo suavizar una instrucción o una prohibición con por favor, porque o que + razón.", ["a2.gram.g059"]]
+]

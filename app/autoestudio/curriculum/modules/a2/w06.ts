@@ -1,784 +1,605 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w06: Module = {
-  "id": "a2-06",
-  "level": "a2",
-  "week": 6,
-  "kind": "core",
-  "title": "La mochila equivocada",
-  "subtitle": "Contar un imprevisto con contexto, hechos y una solución fácil de seguir.",
-  "stop": {
-    "place": "Antigua",
-    "country": "Guatemala"
-  },
-  "minutes": 105,
-  "newObjectives": [
-    "a2.gram.indefinido-imperfecto",
-    "a2.disc.secuenciar",
-    "a2.voc.anecdotas",
-    "a2.pron.grupos-fonicos",
-    "a2.fun.anecdota",
-    "a2.spk.anecdota"
+  id: "a2-06",
+  level: "a2",
+  week: 6,
+  kind: "core",
+  title: "Lo que voy a hacer y lo que haré",
+  subtitle: "Repaso de ir a + infinitivo frente al futuro simple, y de las formas regulares e irregulares del futuro para planes, promesas y pronósticos.",
+  stop: { place: "Antigua", country: "Guatemala" },
+  minutes: 105,
+  newObjectives: [
+    "a2.gram.g056",
+    "a2.gram.g057",
+    "a2.voc.w06-excursion-clima",
+    "a2.pron.w06-acento-final-futuro",
+    "a2.lis.w06-reunion-volcan",
+    "a2.read.w06-correo-agencia",
+    "a2.wri.w06-mensaje-visita",
+    "a2.spk.w06-planes-promesas",
+    "a2.fun.w06-prometer-ofrecer",
+    "a2.disc.w06-pasos-del-plan",
   ],
-  "reviewObjectives": [
-    "a2.gram.imperfecto",
-    "a2.gram.soler",
-    "a2.voc.infancia",
-    "a2.pron.s-aspirada",
-    "a2.fun.comparar-antes",
-    "a2.wri.recuerdo"
-  ],
-  "prerequisites": [
-    "a2-05"
-  ],
-  "goal": {
-    "canDo": "Puedo contar un imprevisto con contexto, hechos y una solución fácil de seguir.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "La mochila equivocada · formas que necesitas",
-        "body": [
-          "El imperfecto prepara la escena: hacía calor, esperábamos, la estación estaba llena. El indefinido presenta lo que ocurrió: llegó el autobús, perdí la mochila, una mujer me ayudó. Una misma historia necesita ambos. No decidas solo por la duración: trabajó allí veinte años puede presentar una etapa terminada."
-        ],
-        "support": [
-          "The imperfect sets the scene; the preterite moves the story forward. A long event can still be presented as completed."
-        ],
-        "examples": [
-          {
-            "es": "Esperábamos en la estación cuando llegó otro autobús."
-          },
-          {
-            "es": "Hacía calor y yo llevaba una mochila azul."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Mientras esperaba, perdía la mochila una vez.",
-            "right": "Mientras esperaba, perdí la mochila.",
-            "why": "La pérdida se presenta como un hecho concreto dentro de una escena."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Primero y después ordenan; mientras introduce dos acciones simultáneas o un fondo; de repente destaca una sorpresa; al final anuncia el resultado. Una reacción breve muestra interés: ¡qué susto!, ¿y qué pasó después? Para reparar una historia poco clara, repite quién hizo la acción y dónde ocurrió."
-        ],
-        "examples": [
-          {
-            "es": "De repente, una mujer gritó mi nombre."
-          },
-          {
-            "es": "Al final encontramos mi bolsa debajo del asiento."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Cuando salí, ___ mucho. (llover, contexto)",
-            "answers": [
-              [
-                "llovía"
-              ]
-            ]
-          },
-          {
-            "q": "De repente la puerta se ___. (cerrar)",
-            "answers": [
-              [
-                "cerró"
-              ]
-            ]
-          },
-          {
-            "q": "Mientras esperaba, mi vecina ___ la copia. (encontrar)",
-            "answers": [
-              [
-                "encontró"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "La estación estaba llena. Perdí el billete.",
-            "instruction": "Mantén primero la descripción La estación estaba llena y enlaza después el hecho con cuando. No añadas otras palabras.",
-            "answers": [
-              "La estación estaba llena cuando perdí el billete."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Busqué en la mochila. Encontré la llave.",
-            "instruction": "Empieza con Primero busqué y une la segunda acción mediante y después; conserva los complementos.",
-            "answers": [
-              "Primero busqué en la mochila y después encontré la llave."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Yo esperaba a mi amiga. Ella llegó.",
-            "instruction": "Empieza con Mientras y conserva las dos acciones y sus pronombres en el mismo orden. Usa una coma entre las partes.",
-            "answers": [
-              "Mientras yo esperaba a mi amiga, ella llegó."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "perder una mochila",
-            "en": "lose a backpack"
-          },
-          {
-            "es": "olvidar un documento",
-            "en": "forget a document"
-          },
-          {
-            "es": "confundirse de puerta",
-            "en": "go to the wrong gate"
-          },
-          {
-            "es": "encontrarse con alguien",
-            "en": "run into someone"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "darse cuenta",
-            "en": "realise"
-          },
-          {
-            "es": "romperse una rueda",
-            "en": "have a wheel break"
-          },
-          {
-            "es": "pedir ayuda",
-            "en": "ask for help"
-          },
-          {
-            "es": "llevarse un susto",
-            "en": "get a fright"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Al final de esta semana puedes contar planes ya decididos con ir a + infinitivo, y prometer, ofrecer ayuda o hacer pronósticos con el futuro simple, también con verbos irregulares como tendré, saldré o habrá.",
+    steps: [
+      "Repasa cuándo eliges `voy a salir` y cuándo `saldré`.",
+      "Construye el futuro regular: infinitivo + `-é, -ás, -á, -emos, -éis, -án`.",
+      "Memoriza las raíces irregulares: `tendr-`, `saldr-`, `har-`, `dir-`…",
+      "Practica la frase con **si**: `Si llueve, nos quedaremos`.",
+      "Escucha una reunión antes de subir a un volcán cerca de Antigua.",
+      "Escribe y graba un mensaje con tus planes y tus promesas.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "perder una mochila",
-            "right": "lose a backpack"
-          },
-          {
-            "left": "olvidar un documento",
-            "right": "forget a document"
-          },
-          {
-            "left": "confundirse de puerta",
-            "right": "go to the wrong gate"
-          },
-          {
-            "left": "encontrarse con alguien",
-            "right": "run into someone"
-          },
-          {
-            "left": "darse cuenta",
-            "right": "realise"
-          },
-          {
-            "left": "romperse una rueda",
-            "right": "have a wheel break"
-          },
-          {
-            "left": "pedir ayuda",
-            "right": "ask for help"
-          },
-          {
-            "left": "llevarse un susto",
-            "right": "get a fright"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Pausas que ordenan una historia",
-    "explanation": [
-      "No pares después de cada palabra. Agrupa el contexto, el acontecimiento y el resultado en unidades de sentido. Una pausa breve después de de repente prepara al oyente, pero no separes el auxiliar de su verbo ni un artículo de su nombre."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "Primero busqué la llave. Después llamé a Ana.",
-          "q": "¿Qué ocurrió primero?",
-          "options": [
-            "Buscar la llave",
-            "Llamar a Ana"
+  theory: {
+    intro: "Esta semana repasas dos clases sobre el futuro: cómo elegir entre **ir a + infinitivo** y el **futuro simple**, y cómo se forma el futuro, con sus raíces irregulares. Aquí lo ves con otra situación: un fin de semana en Antigua, con un volcán, una agencia y mucha lluvia.",
+    parts: [
+      {
+        heading: "¿Plan decidido o promesa de este momento?",
+        body: [
+          "Con **ir a + infinitivo** hablas de algo que ya decidiste antes de hablar: está en tu agenda. _Este sábado voy a subir al volcán Pacaya_. También lo usas cuando ves una señal ahora: _Mira el cielo: va a llover_.",
+          "Con el **futuro simple** haces una promesa o una oferta en el momento (_Tranquila, te mandaré las fotos_), una predicción sin una señal delante (_Algún día viviré en Guatemala_) o un anuncio formal, como en un correo o en la radio (_El autobús saldrá a las seis_).",
+          "Muchas veces las dos formas son posibles. En la conversación, sobre todo en gran parte de América, **ir a** es la más frecuente. El futuro suena más a promesa, a texto escrito o a sueño lejano.",
+        ],
+        support: [
+          "_Ir a + infinitive_ ≈ _going to_: a plan you already made, or something you can see coming. Simple future ≈ _will_: a promise or offer made now, a prediction, a formal announcement.",
+        ],
+        table: {
+          caption: "Dos futuros, dos miradas",
+          head: ["Situación", "Forma típica", "Ejemplo"],
+          rows: [
+            ["plan ya decidido", "ir a + infinitivo", "El domingo vamos a visitar Chichicastenango."],
+            ["señal que ves ahora", "ir a + infinitivo", "¡Cuidado, el vaso se va a caer!"],
+            ["promesa u oferta", "futuro simple", "Yo te ayudaré con la maleta."],
+            ["pronóstico, sueño", "futuro simple", "Mañana hará sol en la costa."],
+            ["anuncio formal", "futuro simple", "La visita empezará en la plaza central."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Mientras esperaba, empezó a llover.",
-          "q": "¿Qué acción ya estaba en curso?",
-          "options": [
-            "Esperar",
-            "Empezar a llover"
+        examples: [
+          { es: "Ya tengo los boletos: voy a viajar a Flores en marzo.", en: "I already have the tickets: I'm going to travel to Flores in March." },
+          { es: "—No tengo cargador. —No pasa nada, te prestaré el mío.", en: "—I don't have a charger. —No problem, I'll lend you mine." },
+          { es: "Esas nubes están muy negras: va a caer una tormenta.", en: "Those clouds are very dark: a storm is going to hit." },
+        ],
+        mistakes: [
+          { wrong: "Voy a llamaré a la agencia.", right: "Voy a llamar a la agencia. / Llamaré a la agencia.", why: "Después de **voy a** va el infinitivo. O una forma o la otra, nunca las dos juntas." },
+          { wrong: "Va llover esta tarde.", right: "Va a llover esta tarde.", why: "Son tres piezas: **ir + a + infinitivo**. No olvides la **a**." },
+        ],
+        tip: "Pregúntate: ¿lo decidí antes o lo prometo ahora? Antes → **voy a**. Ahora, a otra persona → **futuro**.",
+      },
+      {
+        heading: "El futuro regular: el infinitivo completo + una terminación",
+        body: [
+          "El futuro es fácil de formar: no quitas nada. Tomas el **infinitivo entero** (_visitar, volver, subir_) y añades la terminación. Las terminaciones son **las mismas** para -ar, -er e -ir.",
+          "Todas las personas llevan tilde menos **nosotros**: _visitaré, volverás, subirá, subiréis, visitarán_, pero _volveremos_. La fuerza de la voz está al final de la palabra.",
+          "Sin tilde, la palabra cambia: _visitara_ o _llamara_ no son futuro. Escribe siempre la tilde en _visitará_, _llamaré_.",
+        ],
+        support: [
+          "Keep the whole infinitive and add _-é, -ás, -á, -emos, -éis, -án_. Same endings for all three verb groups. Every form has a written accent except _nosotros_.",
+        ],
+        table: {
+          caption: "Futuro regular",
+          head: ["Persona", "visitar", "volver", "subir"],
+          rows: [
+            ["yo", "visitaré", "volveré", "subiré"],
+            ["tú", "visitarás", "volverás", "subirás"],
+            ["él, ella, usted", "visitará", "volverá", "subirá"],
+            ["nosotros, nosotras", "visitaremos", "volveremos", "subiremos"],
+            ["vosotros, vosotras", "visitaréis", "volveréis", "subiréis"],
+            ["ellos, ellas, ustedes", "visitarán", "volverán", "subirán"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "Te escribiré esta noche desde el hotel.", en: "I'll write to you tonight from the hotel." },
+          { es: "Los guías hablarán en español y en inglés.", en: "The guides will speak in Spanish and in English." },
+          { es: "Nosotros pagaremos la entrada del museo.", en: "We'll pay for the museum ticket." },
+        ],
+        mistakes: [
+          { wrong: "Mañana subirémos temprano.", right: "Mañana subiremos temprano.", why: "**Nosotros** es la única persona del futuro sin tilde." },
+          { wrong: "Mañana te ayudé con la mochila.", right: "Mañana te ayudaré con la mochila.", why: "_Ayudé_ es pasado. Con **mañana** necesitas el futuro: ayud**aré**." },
+        ],
+      },
+      {
+        heading: "Diez verbos con la raíz cambiada",
+        body: [
+          "Un grupo pequeño de verbos muy frecuentes cambia la **raíz**, pero las terminaciones no cambian: _tendré, tendrás, tendrá…_",
+          "Hay tres familias. Algunos pierden la vocal y ponen una **d**: _tener → tendr-_, _salir → saldr-_, _venir → vendr-_, _poner → pondr-_. Otros solo pierden la vocal: _poder → podr-_, _saber → sabr-_, _haber → habr-_, _querer → querr-_. Y dos son muy cortos: _hacer → har-_, _decir → dir-_.",
+          "**Habrá** es el futuro de **hay**. Por eso siempre va en singular: _habrá muchas personas_, nunca _habrán_.",
+        ],
+        support: [
+          "The endings stay the same; only the stem changes. Learn the stems in families: _-dr-_ verbs, verbs that lose a vowel, and the short ones _har-_ and _dir-_.",
+        ],
+        table: {
+          caption: "Raíces irregulares del futuro",
+          head: ["Familia", "Infinitivo → raíz", "Ejemplo"],
+          rows: [
+            ["pierde la vocal + d", "tener → tendr-, salir → saldr-", "Saldremos a las cinco."],
+            ["pierde la vocal + d", "venir → vendr-, poner → pondr-", "¿Vendrás con nosotros?"],
+            ["pierde la vocal", "poder → podr-, saber → sabr-", "Desde arriba podrás ver el lago."],
+            ["pierde la vocal", "haber → habr-, querer → querr-", "Habrá café en la recepción."],
+            ["muy cortos", "hacer → har-, decir → dir-", "El guía te dirá la hora exacta."],
+          ],
+        },
+        examples: [
+          { es: "En el volcán hará frío por la noche.", en: "It will be cold on the volcano at night." },
+          { es: "No sé si tendremos tiempo para el mercado.", en: "I don't know if we'll have time for the market." },
+          { es: "¿Sabrás llegar sola a la estación?", en: "Will you know how to get to the station on your own?" },
+        ],
+        mistakes: [
+          { wrong: "El sábado haceré una lista de cosas.", right: "El sábado haré una lista de cosas.", why: "_Hacer_ tiene raíz corta: **har**-é." },
+          { wrong: "Habrán muchas personas en el mirador.", right: "Habrá muchas personas en el mirador.", why: "_Habrá_ es como _hay_: siempre singular." },
+          { wrong: "No teneré señal en la montaña.", right: "No tendré señal en la montaña.", why: "_Tener_ → **tendr**-é." },
+        ],
+        tip: "Escribe las diez raíces en una tarjeta y léela en voz alta tres veces: _tendr-, saldr-, vendr-, pondr-, podr-, sabr-, habr-, querr-, har-, dir-_.",
+      },
+      {
+        heading: "Si + presente, y el futuro después",
+        body: [
+          "Para una condición real del futuro, después de **si** va el **presente**, no el futuro: _Si llueve, nos quedaremos en el hostal_. La consecuencia puede ir en futuro o con **ir a**: _Si llueve, vamos a quedarnos_.",
+          "El orden puede cambiar sin problema: _Nos quedaremos en el hostal si llueve_. Cuando la frase empieza con **si**, pon una coma.",
+          "Para reconocer: a veces el futuro no habla del futuro, sino de una **suposición** sobre ahora: _—¿Dónde está Sergio? —Estará en el mercado_ (= probablemente está en el mercado).",
+        ],
+        support: [
+          "After _si_ (if), use the present tense, not the future: _Si llueve…_ (If it rains…). The future can also show a guess about now: _Estará en casa_ = He's probably at home.",
+        ],
+        examples: [
+          { es: "Si sales temprano, verás el amanecer desde arriba.", en: "If you leave early, you'll see the sunrise from the top." },
+          { es: "Si no hay buses, tomaremos un taxi.", en: "If there are no buses, we'll take a taxi." },
+          { es: "No contesta. Estará en la ducha.", en: "She isn't answering. She's probably in the shower." },
+        ],
+        mistakes: [
+          { wrong: "Si lloverá, no subiremos.", right: "Si llueve, no subiremos.", why: "Después de **si** va el presente: _si llueve_." },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero eliges entre los dos futuros; después formas el futuro regular, las raíces irregulares y la frase con **si**.",
+    exercises: [
+      {
+        id: "g1",
+        type: "context",
+        title: "¿Voy a… o futuro?",
+        prompt: "Lee la situación y elige la frase más natural.",
+        items: [
+          { context: "Hace un mes compraste un boleto para Tikal.", q: "Le cuentas a una amiga:", options: ["En abril visité Tikal.", "En abril voy a visitar Tikal.", "En abril visitaba Tikal."], answer: 1, why: "Es un plan ya decidido, con boleto: **voy a visitar**." },
+          { context: "Tu compañero de cuarto no encuentra su toalla. Tú tienes dos.", q: "Le dices:", options: ["Te prestaré una, tranquilo.", "Te prestaba una, tranquilo.", "Te prestas una, tranquilo."], answer: 0, why: "Una oferta que haces en este momento: futuro, **te prestaré**." },
+          { context: "Ves que el niño corre con un vaso lleno de jugo.", q: "Gritas:", options: ["¡Cuidado, lo tiraba!", "¡Cuidado, lo tiraste!", "¡Cuidado, lo vas a tirar!"], answer: 2, why: "Ves la señal ahora: **lo vas a tirar**." },
+          { context: "Es un cartel oficial del Museo del Jade.", q: "El cartel dice:", options: ["El museo abrirá a las nueve.", "El museo va a abrió a las nueve.", "El museo abría a las nueve mañana."], answer: 0, why: "Un anuncio formal: el futuro, **abrirá**." },
+          { context: "Hablas de tus sueños para dentro de diez años.", q: "Dices:", options: ["Tuve una casa con jardín.", "Tenía una casa con jardín.", "Algún día tendré una casa con jardín."], answer: 2, why: "Un sueño lejano, sin plan concreto: **tendré**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "gap",
+        title: "El futuro regular",
+        prompt: "Completa con el futuro del verbo entre paréntesis.",
+        items: [
+          { q: "Mañana yo ___ el desayuno para todos. (preparar)", answers: [["prepararé"]], why: "Yo: infinitivo + **-é**." },
+          { q: "¿Tú ___ con nosotros en el autobús de las ocho? (ir)", answers: [["irás"]], why: "_Ir_ es regular en futuro: ir + **-ás**." },
+          { q: "La guía nos ___ la historia de la catedral. (explicar)", answers: [["explicará"]], why: "Ella: explicar + **-á**." },
+          { q: "Nosotras ___ a Antigua el próximo verano. (volver)", answers: [["volveremos"]], why: "Nosotros/nosotras sin tilde: **volveremos**." },
+          { q: "Vosotros ___ en la casa de mi tía. (dormir)", answers: [["dormiréis"]], why: "Vosotros: dormir + **-éis**." },
+          { q: "Los vecinos ___ las calles con flores para la fiesta. (decorar)", answers: [["decorarán"]], why: "Ellos: decorar + **-án**." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "gap",
+        title: "Raíces irregulares",
+        prompt: "Completa con el futuro. Atención a la raíz.",
+        bank: ["tendremos", "saldrá", "habrá", "harás", "podrán", "dirá", "pondré"],
+        items: [
+          { q: "El tren ___ con retraso por la lluvia. (salir)", answers: [["saldrá"]], why: "Salir → **saldr**-á." },
+          { q: "Mañana ___ mucha gente en el mercado. (haber)", answers: [["habrá"]], why: "Futuro de _hay_: **habrá**, en singular." },
+          { q: "¿Qué ___ tú el domingo por la tarde? (hacer)", answers: [["harás"]], why: "Hacer → **har**-ás." },
+          { q: "Si llegamos a las cinco, no ___ problemas para entrar. (tener)", answers: [["tendremos"]], why: "Tener → **tendr**-emos." },
+          { q: "Desde la terraza ustedes ___ ver los tres volcanes. (poder)", answers: [["podrán"]], why: "Poder → **podr**-án." },
+          { q: "Yo ___ la ropa mojada al sol. (poner)", answers: [["pondré"]], why: "Poner → **pondr**-é." },
+        ],
+      },
+      {
+        id: "g4",
+        type: "transform",
+        title: "De la condición a la consecuencia",
+        prompt: "Une las dos ideas con **si**. Empieza con _Si_ y usa el presente después de _si_ y el futuro en la consecuencia.",
+        items: [
+          { source: "hace buen tiempo / (nosotros) comer en el jardín", answers: ["Si hace buen tiempo, comeremos en el jardín."], why: "_Si_ + presente (**hace**), futuro en la consecuencia (**comeremos**)." },
+          { source: "tienes hambre / (yo) comprar unas tortillas", answers: ["Si tienes hambre, compraré unas tortillas."], why: "_Si tienes_ (presente) → _compraré_ (futuro)." },
+          { source: "el guía llega tarde / (nosotros) salir sin él", answers: ["Si el guía llega tarde, saldremos sin él."], why: "Salir es irregular: **saldremos**." },
+          { source: "no encuentras la dirección / (yo) venir a buscarte", answers: ["Si no encuentras la dirección, vendré a buscarte.", "Si no encuentras la dirección, te vendré a buscar."], why: "Venir → **vendr**-é. El pronombre puede ir al final o delante." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para planear una excursión y hablar del tiempo que hará. Muchas aparecen en el diálogo y en el correo de esta semana.",
+    groups: [
+      {
+        title: "Preparar la excursión",
+        items: [
+          { es: "reservar una plaza", en: "to book a place" },
+          { es: "el punto de encuentro", en: "the meeting point" },
+          { es: "madrugar", en: "to get up very early" },
+          { es: "la linterna", en: "the torch / flashlight" },
+          { es: "el saco de dormir", en: "the sleeping bag" },
+          { es: "el impermeable", en: "the raincoat" },
+          { es: "el sendero", en: "the trail" },
+          { es: "la cima", en: "the summit" },
+        ],
+      },
+      {
+        title: "El tiempo que hará",
+        items: [
+          { es: "el pronóstico del tiempo", en: "the weather forecast" },
+          { es: "estará nublado", en: "it will be cloudy" },
+          { es: "estará despejado", en: "it will be clear" },
+          { es: "hará frío / hará calor", en: "it will be cold / hot" },
+          { es: "habrá niebla", en: "there will be fog" },
+          { es: "lloverá a ratos", en: "it will rain on and off" },
+        ],
+      },
+      {
+        title: "Prometer y ofrecer",
+        items: [
+          { es: "Te lo prometo.", en: "I promise." },
+          { es: "No te preocupes, yo me encargo.", en: "Don't worry, I'll take care of it." },
+          { es: "Te avisaré.", en: "I'll let you know." },
+          { es: "Sin falta.", en: "Without fail." },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "¿Qué necesitas?",
+        prompt: "Une cada situación con lo que vas a necesitar.",
+        pairs: [
+          { left: "Saldremos a las cuatro de la mañana.", right: "la linterna" },
+          { left: "Lloverá a ratos todo el día.", right: "el impermeable" },
+          { left: "Dormiremos en una tienda de campaña.", right: "el saco de dormir" },
+          { left: "Nos veremos todos en la fuente del parque.", right: "el punto de encuentro" },
+          { left: "Solo quedan dos lugares en el grupo.", right: "reservar una plaza" },
+        ],
+        why: "Cada frase anuncia algo del futuro: _saldremos, lloverá, dormiremos, nos veremos_.",
+      },
+      {
+        id: "v2",
+        type: "choice",
+        title: "El pronóstico",
+        prompt: "Elige la palabra que completa la frase.",
+        items: [
+          { q: "No se ve nada desde la ventana. Mañana también ___ niebla.", options: ["hará", "habrá", "estará"], answer: 1, why: "_Hay niebla_ → **habrá** niebla." },
+          { q: "Lleva una chaqueta: en la cima ___ mucho frío.", options: ["hará", "estará", "habrá"], answer: 0, why: "El frío y el calor van con **hacer**: hará frío." },
+          { q: "Por la tarde el cielo ___ despejado y veremos las estrellas.", options: ["hará", "habrá", "estará"], answer: 2, why: "_Despejado_ y _nublado_ van con **estar**." },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "El golpe final del futuro",
+    explanation: [
+      "En el futuro, la sílaba fuerte está **al final**: _vi-si-ta-RÉ, vol-ve-RÁS, su-bi-RÁN_. Por eso casi todas las formas llevan tilde.",
+      "Solo **nosotros** tiene la fuerza en la penúltima sílaba: _vi-si-ta-RE-mos_. Por eso no lleva tilde.",
+      "Este golpe final te ayuda a distinguir tiempos que se parecen: _llegará_ (futuro, fuerza al final), _llegaba_ (pasado, fuerza en -GA-) y _llega_ (presente).",
+    ],
+    support: [
+      "Future forms are stressed on the last syllable (_llegaRÁ_), except _nosotros_ (_llegaREmos_). Listen for that final stress to tell the future from other tenses.",
+    ],
+    table: {
+      caption: "Dónde está la fuerza",
+      head: ["Forma", "Tiempo", "Sílaba fuerte"],
+      rows: [
+        ["llegará", "futuro", "-RÁ"],
+        ["llegaba", "imperfecto", "-GA-"],
+        ["llega", "presente", "LLE-"],
+        ["llegaremos", "futuro (nosotros)", "-RE-"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Hacía mucho calor / y esperábamos en la plaza.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "De repente / llegó un autobús vacío.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Al final / todo quedó en una anécdota.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Futuro o no?",
+      prompt: "Escucha la frase y elige la forma que oyes.",
+      items: [
+        { q: "¿Qué forma oyes?", audio: "Mi hermana llegará el lunes.", options: ["llegaba", "llegará", "llega"], answer: 1 },
+        { q: "¿Qué forma oyes?", audio: "Ellos trabajaban en el hotel.", options: ["trabajaban", "trabajarán", "trabajan"], answer: 0 },
+        { q: "¿Qué forma oyes?", audio: "El grupo cenará en la plaza.", options: ["cena", "cenaba", "cenará"], answer: 2 },
+        { q: "¿Qué forma oyes?", audio: "Nosotros caminaremos despacio.", options: ["caminábamos", "caminaremos", "caminamos"], answer: 1 },
+        { q: "¿Qué forma oyes?", audio: "Tú subes muy rápido.", options: ["subes", "subirás", "subías"], answer: 0 },
+      ],
+    },
+    produce: [
+      { text: "Visitaré, visitarás, visitará.", tip: "Golpe claro al final, como si la palabra terminara en un salto." },
+      { text: "Visitaremos, visitaréis, visitarán.", tip: "En _visitaremos_ la fuerza se va a **-re-**." },
+      { text: "Mañana saldremos temprano y volveremos de noche.", tip: "Dos formas de nosotros: sin golpe final." },
+      { text: "Te llamaré esta noche, te lo prometo.", tip: "Una promesa: _llamaré_ con fuerza al final, tono seguro." },
+      { text: "Si llueve, nos quedaremos aquí.", tip: "Sube un poco la voz en _llueve_, haz una pausa y baja al final." },
+    ],
+    spelling: "La tilde del futuro marca la fuerza al final: **llamaré, comerás, vivirán**. Sin tilde, _llamare_ o _llamara_ son otras formas. Nosotros nunca la lleva: **llamaremos**.",
   },
-  "listening": {
-    "title": "La llave estaba dentro",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "La noche antes del volcán",
+    context: "En el patio de un hostal de Antigua, Óscar, guía de montaña, se reúne con dos viajeros que mañana van a subir al volcán Acatenango: Laura, de Bogotá, y Daniel, de Madrid.",
+    speakers: [
+      { id: "oscar", name: "Óscar", voice: "es-MX-m", role: "guía de montaña" },
+      { id: "laura", name: "Laura", voice: "es-CO-f", role: "viajera" },
+      { id: "daniel", name: "Daniel", voice: "es-ES-m", role: "viajero" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Ayer me pasó algo bastante tonto. Salí de casa para bajar la basura. Llevaba una bolsa en cada mano y la puerta se cerró detrás de mí. La llave estaba dentro."
-      },
-      {
-        "speaker": "b",
-        "text": "¡Qué problema! ¿Tenías el teléfono? Yo siempre lo llevo, pero a veces dejo las llaves sobre la mesa. ¿Pudiste llamar a alguien de tu familia?"
-      },
-      {
-        "speaker": "a",
-        "text": "No tenía nada. Primero llamé a la puerta de mi vecina. Ella estaba cocinando y me prestó su móvil. Llamé a mi hermano, pero trabajaba lejos y no podía venir."
-      },
-      {
-        "speaker": "b",
-        "text": "¿Y cómo entraste? Espera, creo que tu vecina tenía otra llave, ¿no? Una vez me dijiste que se la diste cuando saliste de viaje."
-      },
-      {
-        "speaker": "a",
-        "text": "Exacto. Mientras hablábamos, ella lo recordó. Buscó en un cajón y encontró la llave. Al final solo esperé diez minutos. Hoy he preparado una copia para llevar en la mochila."
-      }
+    script: [
+      { speaker: "oscar", text: "Buenas noches a los dos. Les explico el plan de mañana. Saldremos del hostal a las cinco en punto y a las seis empezaremos a caminar." },
+      { speaker: "laura", text: "¿A las cinco? Uf, voy a poner tres alarmas." },
+      { speaker: "oscar", text: "Buena idea. La subida durará unas seis horas. Habrá dos paradas para comer y descansar. Por la noche dormiremos en un campamento cerca de la cima." },
+      { speaker: "daniel", text: "¿Y qué dice el pronóstico? Esta tarde llovió muchísimo." },
+      { speaker: "oscar", text: "Por la mañana estará despejado, pero por la tarde lloverá a ratos. Arriba hará mucho frío: tendrán que llevar impermeable y ropa de abrigo." },
+      { speaker: "daniel", text: "Yo no tengo saco de dormir. Lo voy a alquilar en la tienda de la esquina." },
+      { speaker: "laura", text: "No hace falta, Daniel. Yo tengo dos. Te prestaré uno, te lo prometo." },
+      { speaker: "daniel", text: "¡Gracias! Entonces yo llevaré el café y las galletas para los tres." },
+      { speaker: "oscar", text: "Perfecto. Si alguien se siente mal, me avisará enseguida y bajaremos juntos. Y si todo sale bien, el domingo veremos el amanecer desde arriba." },
+      { speaker: "laura", text: "¡Qué emoción! Mira, ya se ven nubes otra vez. Creo que va a llover esta noche." },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «La llave estaba dentro» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Cuál fue el problema?",
-              "options": [
-                "La persona se quedó fuera de casa",
-                "Se perdió la basura",
-                "El hermano olvidó el teléfono"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «La persona se quedó fuera de casa»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué tipo de relato escucha la segunda persona?",
-              "options": [
-                "Un problema cotidiano resuelto",
-                "Una descripción de todas las habitaciones",
-                "Unas instrucciones para fabricar una llave"
-              ],
-              "answer": 0,
-              "why": "Comprueba el contexto y los datos de la escena: Un problema cotidiano resuelto."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «La llave estaba dentro».",
-          "items": [
-            {
-              "q": "¿Qué hacía la vecina?",
-              "options": [
-                "Trabajaba lejos",
-                "Buscaba un autobús",
-                "Cocinaba"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Cocinaba»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Quién tenía una copia?",
-              "options": [
-                "El hermano en su oficina",
-                "La vecina",
-                "El conductor"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «La vecina»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «La llave estaba dentro».",
-          "items": [
-            {
-              "q": "Mientras hablábamos introduce…",
-              "options": [
-                "Un plan de mañana",
-                "El contexto en que recordó la llave",
-                "El resultado final"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «El contexto en que recordó la llave»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué expresión muestra que la solución llegó?",
-              "options": [
-                "Primero llamé a la puerta",
-                "No tenía nada",
-                "Al final solo esperé diez minutos"
-              ],
-              "answer": 2,
-              "why": "Comprueba el contexto y los datos de la escena: Al final solo esperé diez minutos."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "No era mi bolsa",
-    "genre": "Anécdota de viaje",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "El autobús estaba lleno y llovía mucho. Yo viajaba a casa de una amiga y llevaba una bolsa gris con un regalo. Cuando llegamos a la parada, una familia bajó antes que yo. Tenían muchas maletas y el conductor les ayudó. Después bajé, recogí mi bolsa y caminé hasta una cafetería para esperar a mi amiga.",
-      "Mientras esperaba, abrí la bolsa para buscar el regalo. Dentro había unos zapatos enormes y un abrigo. No era mi bolsa. Primero llamé a la empresa de autobuses, pero nadie contestó. Después volví a la parada. Allí estaba un hombre con otra bolsa gris. Parecía preocupado y miraba su teléfono. Le pregunté si buscaba unos zapatos. Él se rio y me mostró mi regalo. Al final cambiamos las bolsas y tomamos un café. Desde ese día pongo una cinta de color en mi equipaje."
-    ],
-    "glossary": [
-      {
-        "es": "perder una mochila",
-        "en": "lose a backpack"
-      },
-      {
-        "es": "olvidar un documento",
-        "en": "forget a document"
-      },
-      {
-        "es": "confundirse de puerta",
-        "en": "go to the wrong gate"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «No era mi bolsa» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Cuándo descubrió el error el narrador?",
-            "options": [
-              "Al abrir la bolsa en la cafetería",
-              "Antes de bajar del autobús",
-              "Al llegar a casa de su amiga"
-            ],
-            "answer": 0,
-            "why": "La información de la situación corresponde a «Al abrir la bolsa en la cafetería»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Qué hizo después de llamar a la empresa?",
-            "options": [
-              "Compró zapatos",
-              "Esperó a la familia",
-              "Volvió a la parada"
-            ],
-            "answer": 2,
-            "why": "La información de la situación corresponde a «Volvió a la parada»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «No era mi bolsa» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Contar un imprevisto con contexto, hechos y una solución fácil de seguir. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "El autobús estaba lleno y llovía mucho.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿De qué hablan?", options: ["de un viaje que ya terminó", "del plan para subir al volcán", "de un problema en el hostal"], answer: 1, why: "Óscar dice: _Les explico el plan de mañana_." },
+            { q: "¿Cuántos días dura la excursión?", options: ["dos días, con una noche arriba", "una mañana", "una semana"], answer: 0, why: "Dormirán cerca de la cima y verán el amanecer el domingo." },
+            { q: "¿Cómo termina la conversación?", options: ["Daniel decide no ir.", "Óscar cambia la hora.", "Laura cree que va a llover."], answer: 2 },
+          ],
         },
-        {
-          "quote": "Mientras esperaba, abrí la bolsa para buscar el regalo.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
+      },
       {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
+        stage: "detail",
+        prompt: "Segunda escucha: atención a las horas, al tiempo y a quién hace qué.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿A qué hora empezarán a caminar?", options: ["a las cinco", "a las seis", "a las cuatro"], answer: 1 },
+            { q: "¿Cuántas paradas habrá en la subida?", options: ["una", "tres", "dos"], answer: 2 },
+            { q: "¿Qué tiempo hará por la tarde?", options: ["Lloverá a ratos.", "Estará despejado.", "Hará calor."], answer: 0 },
+            { q: "¿Qué llevará Daniel para los tres?", options: ["un saco de dormir", "el café y las galletas", "una linterna"], answer: 1 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en las dos formas del futuro.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Qué expresa cada frase?",
+          categories: ["plan decidido o señal de ahora (ir a)", "anuncio, promesa o pronóstico (futuro)"],
+          items: [
+            { text: "Voy a poner tres alarmas.", cat: 0, why: "Laura decide su plan: **voy a poner**." },
+            { text: "Saldremos del hostal a las cinco en punto.", cat: 1, why: "El guía anuncia el horario: **saldremos**." },
+            { text: "Te prestaré uno, te lo prometo.", cat: 1, why: "Una promesa en el momento: **prestaré**." },
+            { text: "Lo voy a alquilar en la tienda de la esquina.", cat: 0 },
+            { text: "Por la tarde lloverá a ratos.", cat: 1, why: "Un pronóstico: **lloverá**." },
+            { text: "Creo que va a llover esta noche.", cat: 0, why: "Laura ve las nubes: señal de ahora, **va a llover**." },
+          ],
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Su excursión a Pacaya",
+    genre: "Correo de una agencia y respuesta",
+    frame: "Mariana reservó una excursión con una agencia de Antigua. Recibe este correo y lo reenvía a su amiga Tere con una nota.",
+    text: [
+      "Estimada Mariana: gracias por su reserva. El sábado un microbús la recogerá en su hotel a las seis y media. El viaje hasta el volcán Pacaya durará una hora. Allí la guía, Rosa, le dará un bastón y le explicará las normas del parque.",
+      "La caminata será de unas tres horas. Habrá un descanso en el mirador, donde podrá comprar agua y tostar malvaviscos con el calor del volcán. Según el pronóstico, estará nublado por la mañana, así que le recomendamos llevar una chaqueta. Volverán a Antigua hacia la una. Atentamente, Viajes Cerro Verde.",
+      "Tere, mira esto. ¡Al final voy a ir! Ya pagué y tengo mi plaza. ¿Vienes conmigo? Si quieres, mañana llamaré a la agencia y preguntaré si hay otra plaza. Te prometo que no será muy difícil. Y después de la excursión vamos a comer en el mercado, ¿sí?",
+    ],
+    glossary: [
+      { es: "recoger a alguien", en: "to pick someone up" },
+      { es: "el bastón", en: "the walking stick" },
+      { es: "tostar malvaviscos", en: "to toast marshmallows" },
+      { es: "hacia la una", en: "around one o'clock" },
+    ],
+    tasks: [
+      {
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el correo y la nota. Responde.",
+        items: [
+          { q: "¿Cómo llegará Mariana al volcán?", options: ["en un microbús desde su hotel", "a pie desde Antigua", "en el coche de Tere"], answer: 0 },
+          { q: "¿Qué hará la guía al principio?", options: ["Vender agua en el mirador.", "Dar bastones y explicar las normas.", "Recoger a Mariana en el hotel."], answer: 1 },
+          { q: "¿Por qué recomienda la agencia una chaqueta?", options: ["porque lloverá mucho", "porque hará calor", "porque estará nublado"], answer: 2 },
+          { q: "¿Qué ofrece Mariana a Tere?", options: ["pagar su plaza", "llamar a la agencia", "prestarle una chaqueta"], answer: 1 },
+        ],
+      },
+      {
+        id: "r2",
+        type: "classify",
+        prompt: "¿Quién escribe cada frase: la agencia o Mariana?",
+        categories: ["la agencia (anuncio formal)", "Mariana (plan o promesa personal)"],
+        items: [
+          { text: "un microbús la recogerá en su hotel", cat: 0, why: "Un anuncio formal con _usted_ (la): futuro." },
+          { text: "¡Al final voy a ir!", cat: 1, why: "Un plan ya decidido: **voy a ir**." },
+          { text: "La caminata será de unas tres horas.", cat: 0 },
+          { text: "mañana llamaré a la agencia", cat: 1, why: "Una oferta a su amiga: **llamaré**." },
+          { text: "Volverán a Antigua hacia la una.", cat: 0 },
+          { text: "vamos a comer en el mercado", cat: 1 },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Toca cada frase para ver qué gramática hay dentro.",
+      items: [
+        { quote: "un microbús la recogerá en su hotel", note: "Futuro regular en un texto formal: recoger + **-á**." },
+        { quote: "Habrá un descanso en el mirador", note: "**Habrá**, futuro de _hay_, en singular." },
+        { quote: "donde podrá comprar agua", note: "Raíz irregular: poder → **podr**-á." },
+        { quote: "¡Al final voy a ir!", note: "Ir a + infinitivo: un plan que Mariana ya decidió (ya pagó)." },
+        { quote: "Si quieres, mañana llamaré a la agencia", note: "**Si** + presente (_quieres_) y una oferta en futuro (_llamaré_)." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Mezcla las dos clases: elige la forma, corrige errores y escribe tus propios planes y promesas.",
+    exercises: [
+      {
+        id: "x1",
+        type: "order",
+        title: "Frases de futuro",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["El", "próximo", "año", "voy", "a", "estudiar", "en", "Quetzaltenango."], en: "Next year I'm going to study in Quetzaltenango." },
+          { words: ["Si", "tienes", "frío,", "te", "daré", "mi", "chaqueta."], en: "If you're cold, I'll give you my jacket." },
+          { words: ["Mañana", "habrá", "un", "concierto", "en", "la", "plaza."], en: "Tomorrow there will be a concert in the square." },
+        ],
+      },
+      {
+        id: "x2",
+        type: "error",
+        title: "Corrige el mensaje",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "El domingo vamos a visitaremos el lago Atitlán.", answers: ["El domingo vamos a visitar el lago Atitlán.", "El domingo visitaremos el lago Atitlán."], why: "Después de **vamos a**, infinitivo: _visitar_." },
+          { sentence: "Si hará sol, iremos a la playa.", answers: ["Si hace sol, iremos a la playa."], why: "Después de **si**, presente: _si hace sol_." },
+          { sentence: "Mi hermano venirá a buscarnos.", answers: ["Mi hermano vendrá a buscarnos."], why: "Venir → **vendr**-á." },
+          { sentence: "Nosotros cocinarémos esta noche.", answers: ["Nosotros cocinaremos esta noche."], why: "Nosotros no lleva tilde: **cocinaremos**." },
+          { sentence: "Te diceré la verdad mañana.", answers: ["Te diré la verdad mañana."], why: "Decir tiene raíz corta: **dir**-é." },
+        ],
+      },
+      {
+        id: "x3",
+        type: "classify",
+        title: "¿Plan o promesa?",
+        prompt: "Clasifica cada frase según lo que expresa.",
+        categories: ["plan ya decidido", "promesa u oferta de ahora", "pronóstico o sueño"],
+        items: [
+          { text: "Ya reservé el hotel: vamos a dormir dos noches en Flores.", cat: 0 },
+          { text: "No te preocupes, yo pagaré la cena.", cat: 1 },
+          { text: "En el futuro los coches no tendrán conductor.", cat: 2 },
+          { text: "Tranquila, te avisaré desde el aeropuerto.", cat: 1 },
+          { text: "Este verano voy a aprender a nadar; ya tengo las clases.", cat: 0 },
+          { text: "Seguro que serás una gran médica.", cat: 2, why: "Una predicción sobre otra persona: **serás**." },
+        ],
+      },
+      {
+        id: "x4",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe frases sobre ti. Después compara con el modelo.",
+        items: [
           {
-            "words": [
-              "Esperábamos",
-              "en",
-              "la",
-              "estación",
-              "cuando",
-              "llegó",
-              "otro",
-              "autobús."
-            ]
+            prompt: "Escribe dos planes que ya decidiste para el próximo mes. Usa ir a + infinitivo.",
+            model: "El próximo mes voy a empezar un curso de cocina. También voy a visitar a mis abuelos en el campo.",
+            checklist: ["Usas _voy a_ + infinitivo", "Son planes ya decididos", "Hay una expresión de tiempo (_el próximo mes_…)"],
           },
           {
-            "words": [
-              "De",
-              "repente,",
-              "una",
-              "mujer",
-              "gritó",
-              "mi",
-              "nombre."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "Estaba lloviendo y hacía frío.",
-              "Sí, al final y primero y después.",
-              "El hombre que esperaba en la parada tenía mi bolsa."
-            ],
-            "answer": 2,
-            "why": "Comprueba el contexto y los datos de la escena: El hombre que esperaba en la parada tenía mi bolsa..",
-            "context": "El oyente no sabe quién encontró la bolsa.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
+            prompt: "Un amigo tiene un problema con su mudanza. Ofrécele dos ayudas con el futuro.",
+            model: "No te preocupes: el sábado iré a tu casa y te ayudaré con las cajas. Además, te prestaré el coche de mi padre.",
+            checklist: ["Usas el futuro para ofrecer (_ayudaré, prestaré_)", "Las formas llevan tilde, menos nosotros", "Suenas amable: _no te preocupes_…"],
           },
           {
-            "context": "Tu compañero interrumpe con ¿quién estaba allí? y ¿qué pasó después? Responde sin reiniciar toda la historia y termina con la solución.",
-            "q": "En esta interacción de «La mochila equivocada», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «La mochila equivocada», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "El martes llovía y yo esperaba el autobús para ir a clase.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
+            prompt: "Escribe una frase con si sobre el tiempo de este fin de semana y otra sobre un sueño para dentro de diez años.",
+            model: "Si llueve el sábado, veré una película en casa. Dentro de diez años hablaré español muy bien y tendré una casa cerca del mar.",
+            checklist: ["Después de _si_ usas presente", "Usas al menos una raíz irregular (_tendré, haré, podré_…)", "La consecuencia está en futuro"],
           },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: Tu compañero interrumpe con ¿quién estaba allí? y ¿qué pasó después? Responde sin reiniciar toda la historia y termina con la solución.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-04",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 4. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 6: Describe un colegio de antes y compáralo con uno actual. Usa era, iba, veía, solía y suelo; incluye juegos, habitación o patio y dos costumbres. Escribe un recuerdo de cuatro frases. Al oír una palabra poco clara, confirma singular o plural por el contexto y pide repetición; explica por qué un audio sintético no prueba una s regional.",
-            "model": "Mi colegio era pequeño. Iba andando y veía a mis amigos en la plaza. Solíamos jugar en el patio. Ahora suelo leer en una biblioteca. ¿Has dicho los patios o el patio?",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 4→6: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Mi colegio era pequeño. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Cuenta un pequeño imprevisto a una persona que no estaba allí. Da el contexto, explica tres acciones y termina con la solución. Puedes inventar el problema.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
-    ],
-    "useLanguage": [
-      "Esperábamos en la estación cuando llegó otro autobús.",
-      "Hacía calor y yo llevaba una mochila azul.",
-      "De repente, una mujer gritó mi nombre.",
-      "Al final encontramos mi bolsa debajo del asiento."
-    ],
-    "model": [
-      "El martes llovía y yo esperaba el autobús para ir a clase. Llevaba una carpeta con mis apuntes. Cuando llegó el autobús, subí muy rápido y dejé la carpeta en el banco. Me di cuenta dos paradas después. Primero llamé a una compañera que vivía cerca. Ella fue a la parada y encontró la carpeta debajo de un periódico. Al final llegué tarde a clase, pero recuperé todos mis apuntes. Ahora siempre compruebo el banco antes de subir. Fue un problema pequeño, pero aprendí a salir con menos prisa."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      80,
-      120
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
-      {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Cuenta en un minuto un imprevisto. Amplía después treinta segundos con el contexto y una reacción de otra persona.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
         ],
-        "seconds": 90,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
-      {
-        "title": "Interacción con un cambio",
-        "prompt": "Tu compañero interrumpe con ¿quién estaba allí? y ¿qué pasó después? Responde sin reiniciar toda la historia y termina con la solución.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
-        ],
-        "seconds": 90,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Cuenta en un minuto un imprevisto. Amplía después treinta segundos con el contexto y una reacción de otra persona."
-      },
-      {
-        "move": "Negocia",
-        "task": "Tu compañero interrumpe con ¿quién estaba allí? y ¿qué pasó después? Responde sin reiniciar toda la historia y termina con la solución."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
   },
-  "quiz": {
-    "items": [
-      {
-        "type": "gap",
-        "q": "Mientras yo ___, sonó el teléfono. (dormir)",
-        "answers": [
-          [
-            "dormía"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "Al final Ana ___ la dirección. (encontrar)",
-        "answers": [
-          [
-            "encontró"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "De repente, el conductor abría la puerta y bajé.",
-        "answers": [
-          "De repente, el conductor abrió la puerta y bajé."
-        ],
-        "why": "De repente presenta aquí el hecho que hace avanzar la historia: abrió."
-      },
-      {
-        "type": "order",
-        "words": [
-          "La",
-          "calle",
-          "estaba",
-          "vacía",
-          "cuando",
-          "llegamos."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué expresión presenta el resultado?",
-        "options": [
-          "Al final",
-          "Mientras tanto"
-        ],
-        "answer": 0,
-        "why": "La opción elegida cumple la función comunicativa indicada."
-      },
-      {
-        "q": "¿Dónde estaban cuando empezó a llover?",
-        "options": [
-          "En una tienda",
-          "Bajo un árbol",
-          "Dentro de un autobús"
-        ],
-        "answer": 1,
-        "why": "Comprueba el contexto y los datos de la escena: Bajo un árbol.",
-        "type": "listen",
-        "audio": "Esperábamos bajo un árbol cuando empezó la tormenta."
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 6: Cuenta en un minuto un imprevisto. Amplía después treinta segundos con el contexto y una reacción de otra persona.",
-        "model": "El martes llovía y yo esperaba el autobús para ir a clase. Llevaba una carpeta con mis apuntes. Cuando llegó el autobús, subí muy rápido y dejé la carpeta en el banco. Me di cuenta dos paradas después. Primero llamé a una compañera que vivía cerca. Ella fue a la parada y encontró la carpeta debajo de un periódico. Al final llegué tarde a clase, pero recuperé todos mis apuntes. Ahora siempre compruebo el banco antes de subir. Fue un problema pequeño, pero aprendí a salir con menos prisa.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Resolución final 6: Tu compañero interrumpe con ¿quién estaba allí? y ¿qué pasó después? Responde sin reiniciar toda la historia y termina con la solución. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Contar un imprevisto con contexto, hechos y una solución fácil de seguir.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+  writing: {
+    task: "Escribe un mensaje a una amiga que viene a visitarte el próximo fin de semana.",
+    context: "Tu amiga Julia llega el viernes a tu ciudad. Ya tienes algunos planes decididos. Ella está un poco nerviosa por el viaje, así que también le haces promesas y le ofreces ayuda.",
+    steps: [
+      "Saluda y di que estás contento o contenta por su visita.",
+      "Cuenta dos o tres planes ya decididos con **voy a / vamos a**.",
+      "Haz una o dos promesas u ofertas con el **futuro** (te esperaré, te prestaré…).",
+      "Añade una frase con **si** sobre el tiempo o un problema posible.",
+      "Ordena tu plan con _primero, después, al final_ y despídete.",
+      "Revisa las formas: ¿hay tilde en el futuro (menos nosotros)? ¿Las raíces irregulares están bien?",
     ],
-    "review": [
-      "En dos días, repite la misión «La mochila equivocada» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+    useLanguage: ["Vamos a… / Voy a…", "Te esperaré en…", "Te prestaré…", "Si llueve, …", "Primero… después… al final…", "habrá, tendremos, podrás"],
+    model: [
+      "¡Hola, Julia! ¡Qué alegría tu visita! Ya tengo el plan. El viernes te esperaré en la estación, no te preocupes. Primero vamos a dejar tu maleta en casa y después vamos a cenar en un restaurante pequeño del centro. El sábado por la mañana habrá un mercado en la plaza. Si hace sol, al final iremos al río en bicicleta. Te prestaré mi bici azul. ¡Te prometo que será un fin de semana genial! Un abrazo.",
+    ],
+    checklist: [
+      "Usas **ir a + infinitivo** para los planes ya decididos.",
+      "Usas el **futuro** para promesas y ofertas.",
+      "Después de **si** usas el presente.",
+      "Las raíces irregulares están bien (_habrá, tendremos, saldremos_…).",
+      "El futuro lleva tilde, menos con nosotros.",
+    ],
+    words: [60, 100],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate. Repite cada tarea hasta que salga sin leer.",
+    tasks: [
+      {
+        title: "Mi próximo fin de semana",
+        prompt: "Cuenta tus planes ya decididos para el próximo fin de semana y una cosa que harás si hace mal tiempo.",
+        prep: ["El sábado voy a…", "Después vamos a…", "Si llueve, …", "Al final…"],
+        seconds: 75,
+        model: "El sábado por la mañana voy a limpiar mi casa y después voy a ir al mercado con mi hermano. Por la tarde vamos a ver un partido de fútbol. Si llueve el domingo, me quedaré en casa y cocinaré una sopa. Al final, el domingo por la noche, voy a preparar mi semana.",
+        selfCheck: ["Uso _voy a_ + infinitivo para los planes.", "Después de _si_ uso presente.", "Ordeno las ideas con _después, al final_."],
+      },
+      {
+        title: "Te lo prometo",
+        prompt: "Tu compañero de trabajo está preocupado: mañana tiene una presentación importante. Ofrécele ayuda y hazle tres promesas.",
+        prep: ["No te preocupes…", "Esta noche te mandaré…", "Mañana llegaré temprano y…", "Te lo prometo."],
+        seconds: 60,
+        model: "No te preocupes, todo saldrá bien. Esta noche te mandaré mis notas. Mañana llegaré temprano y te ayudaré con el proyector. Y después de la presentación te invitaré a un café. Te lo prometo.",
+        selfCheck: ["Uso el futuro para prometer.", "Pronuncio la fuerza al final: _mandaré, llegaré_."],
+      },
+      {
+        title: "El pronóstico",
+        prompt: "Eres presentador o presentadora de radio. Da el pronóstico del tiempo de mañana para tu ciudad: mañana, tarde y noche.",
+        prep: ["Mañana por la mañana estará…", "Por la tarde hará…", "Habrá…", "Por la noche lloverá…"],
+        seconds: 50,
+        selfCheck: ["Uso _hará, estará, habrá_ con el sustantivo correcto.", "Hablo con tono de anuncio, claro y seguro."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que repasaste esta semana y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Cuenta un plan", task: "Empieza la clase con un plan que ya decidiste para esta semana.", phrases: ["Esta semana voy a…", "Ya tengo…"] },
+      { move: "Promete", task: "Al final de la clase, promete dos cosas que harás antes de la próxima clase.", phrases: ["Repasaré…", "Escribiré…", "Te lo prometo."] },
+      { move: "Predice", task: "Haz una predicción sobre la ciudad o el país dentro de veinte años y pide la opinión de tu profesor.", phrases: ["Dentro de veinte años habrá…", "¿Tú qué crees?"] },
+      { move: "Pregunta", task: "Pregunta a tu profesor si una frase suena mejor con _voy a_ o con el futuro.", phrases: ["¿Aquí es mejor «voy a llamar» o «llamaré»?"] },
+    ],
+    bring: "Trae una lista con las diez raíces irregulares y una frase tuya con cada una de cuatro de ellas.",
+  },
+  quiz: {
+    items: [
+      { type: "choice", q: "Ya compré los boletos. El jueves ___ a Panajachel.", options: ["viajé", "viajaba", "voy a viajar"], answer: 2, why: "Plan decidido, con boletos: **voy a viajar**." },
+      { type: "gap", q: "Tranquilo, yo te ___ con las maletas. (ayudar)", answers: [["ayudaré"]], why: "Una oferta en el momento: **ayudaré**." },
+      { type: "gap", q: "Mañana ___ una reunión a las diez y todos ___ que venir. (haber / tener)", answers: [["habrá"], ["tendrán"]], why: "**Habrá** (singular) y tener → **tendr**-án." },
+      { type: "listen", q: "¿Qué forma oyes en la frase del barco?", audio: "Ustedes comerán en el barco.", options: ["comían", "comen", "comerán"], answer: 2 },
+      { type: "transform", source: "llueve / (nosotros) visitar el museo", instruction: "Une las ideas con si: presente después de si y futuro en la consecuencia.", answers: ["Si llueve, visitaremos el museo."], why: "_Si llueve_ (presente) → _visitaremos_ (futuro, sin tilde)." },
+      { type: "order", words: ["El", "cielo", "está", "gris:", "va", "a", "llover."] },
+      { type: "error", sentence: "El autobús salirá a las siete.", answers: ["El autobús saldrá a las siete."], why: "Salir → **saldr**-á." },
+      { type: "error", sentence: "La semana que viene voy a compraré un mapa.", answers: ["La semana que viene voy a comprar un mapa.", "La semana que viene compraré un mapa."], why: "Después de **voy a**, infinitivo." },
+      { type: "choice", q: "¿Qué condición con si es correcta?", options: ["Si tendrás tiempo, me llamas.", "Si tienes tiempo, me llamarás.", "Si tendrás tiempo, me llamarás."], answer: 1, why: "Después de **si**, presente: _si tienes_." },
+      { type: "open", prompt: "Escribe tres frases: un plan decidido, una promesa a un amigo y un pronóstico del tiempo para mañana.", model: "Esta tarde voy a correr en el parque. Te devolveré tu libro el lunes. Mañana hará calor y estará despejado.", checklist: ["Ir a + infinitivo para el plan", "Futuro para la promesa", "hará / estará / habrá en el pronóstico"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Contar planes ya decididos y señales de ahora con **ir a + infinitivo**.",
+      "Prometer, ofrecer ayuda y hacer pronósticos con el **futuro simple**.",
+      "Formar el futuro regular con todas las personas y su tilde.",
+      "Usar las raíces irregulares: tendr-, saldr-, vendr-, pondr-, podr-, sabr-, habr-, querr-, har-, dir-.",
+      "Decir condiciones reales con **si + presente** y la consecuencia en futuro.",
+      "Ordenar un plan con primero, después y al final.",
+    ],
+    review: ["Voy a llamar (plan) / te llamaré (promesa).", "Habrá: siempre singular.", "Si llueve, nos quedaremos (nunca _si lloverá_)."],
+  },
+  related: [
+    { path: "/gramatica/ir-a-infinitivo-frente-al-futuro", label: "Clase: Ir a + infinitivo frente al futuro simple" },
+    { path: "/sistema-verbal/futuro-simple-indicativo", label: "Clase: Futuro simple: planes, promesas y predicciones" },
+  ],
 };

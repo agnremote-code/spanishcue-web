@@ -1,783 +1,596 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w09: Module = {
-  "id": "a2-09",
-  "level": "a2",
-  "week": 9,
-  "kind": "core",
-  "title": "Una receta que sí se entiende",
-  "subtitle": "Seguir instrucciones de cocina y explicarlas a otra persona adaptando el trato.",
-  "stop": {
-    "place": "Suchitoto",
-    "country": "El Salvador"
-  },
-  "minutes": 105,
-  "newObjectives": [
-    "a2.gram.imperativo-afirmativo",
-    "a2.gram.imperativo-pronombres",
-    "a2.voc.cocina-recetas",
-    "a2.pron.entonacion-imperativo",
-    "a2.fun.instrucciones",
-    "a2.lis.receta"
+  id: "a2-09",
+  level: "a2",
+  week: 9,
+  kind: "core",
+  title: "Me duelen los pies, pero le compré un regalo",
+  subtitle: "Repaso de gustar, interesar, doler, faltar y molestar con su concordancia, y del objeto indirecto con me, te, le, nos, les.",
+  stop: { place: "Suchitoto", country: "El Salvador" },
+  minutes: 105,
+  newObjectives: [
+    "a2.gram.g062",
+    "a2.gram.g063",
+    "a2.voc.w09-artesania-cuerpo",
+    "a2.pron.w09-n-final-plural",
+    "a2.lis.w09-taller-anil",
+    "a2.read.w09-mensaje-familia",
+    "a2.wri.w09-correo-regalos",
+    "a2.spk.w09-gustos-regalos",
+    "a2.fun.w09-elegir-regalos",
+    "a2.disc.w09-reaccionar-gustos",
   ],
-  "reviewObjectives": [
-    "a2.gram.comparativos",
-    "a2.gram.superlativos",
-    "a2.voc.ciudades-campo",
-    "a2.pron.foco-contraste",
-    "a2.fun.comparar-elegir",
-    "a2.read.articulo-ciudades",
-    "a2.voc.vivienda-servicios"
-  ],
-  "prerequisites": [
-    "a2-08"
-  ],
-  "goal": {
-    "canDo": "Puedo seguir instrucciones de cocina y explicarlas a otra persona adaptando el trato.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "Una receta que sí se entiende · formas que necesitas",
-        "body": [
-          "Para instrucciones afirmativas con tú usa corta, come, abre; hay formas irregulares como haz, pon, ten, ven, di, sal, sé y ve. Usted usa corte, coma, abra; ustedes corten, coman, abran. Vosotros: cortad, comed, abrid. En variedades con vos puedes oír cortá, comé, abrí. Elige una forma coherente con tu interlocutor."
-        ],
-        "support": [
-          "Attach pronouns to affirmative commands. Keep the same form of address throughout instructions and check the stress when pronouns are added."
-        ],
-        "examples": [
-          {
-            "es": "Corta los tomates y ponlos en un plato."
-          },
-          {
-            "es": "Lave las verduras y añada un poco de sal."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Lo corta, por favor. (instrucción con tú)",
-            "right": "Córtalo, por favor.",
-            "why": "En el imperativo afirmativo el pronombre va detrás del verbo."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "El pronombre se une al imperativo afirmativo: corta el tomate → córtalo; dé el plato → déselo. En una receta, empieza por materiales y cantidades; después ordena los pasos con primero, luego y al final. Por favor y un tono amable ayudan en una petición. No confundas una instrucción con una prohibición: aquí practicamos solo afirmativas."
-        ],
-        "examples": [
-          {
-            "es": "Mezclad los ingredientes y probad la salsa."
-          },
-          {
-            "es": "Cortá el pan; después ponelo en la mesa."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "___ el tomate en trozos. (cortar, tú)",
-            "answers": [
-              [
-                "Corta"
-              ]
-            ]
-          },
-          {
-            "q": "___ las manos antes de cocinar. (lavarse, usted)",
-            "answers": [
-              [
-                "Lávese"
-              ]
-            ]
-          },
-          {
-            "q": "___ la salsa, por favor. (probar, ustedes)",
-            "answers": [
-              [
-                "Prueben"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "Pon la cuchara en la mesa.",
-            "instruction": "Sustituye la cuchara por la y únelo al imperativo afirmativo; conserva en la mesa.",
-            "answers": [
-              "Ponla en la mesa."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Mezcla los ingredientes.",
-            "instruction": "Cambia solo el imperativo a usted, sin escribir el pronombre usted; conserva los ingredientes.",
-            "answers": [
-              "Mezcle los ingredientes."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Corta el pan.",
-            "instruction": "Cambia solo el imperativo a vos, sin escribir el pronombre vos; conserva el pan.",
-            "answers": [
-              "Cortá el pan."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "lavar las verduras",
-            "en": "wash vegetables"
-          },
-          {
-            "es": "cortar en trozos",
-            "en": "cut into pieces"
-          },
-          {
-            "es": "añadir una cucharada",
-            "en": "add a tablespoon"
-          },
-          {
-            "es": "mezclar bien",
-            "en": "mix well"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "calentar a fuego lento",
-            "en": "heat gently"
-          },
-          {
-            "es": "probar la salsa",
-            "en": "taste the sauce"
-          },
-          {
-            "es": "repartir en platos",
-            "en": "divide between plates"
-          },
-          {
-            "es": "dejar enfriar",
-            "en": "leave to cool"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Al final de esta semana puedes decir qué te gusta, te interesa, te duele o te falta con la concordancia correcta, hablar de los gustos de otras personas y decir a quién das, mandas o explicas algo con me, te, le, nos y les.",
+    steps: [
+      "Repasa por qué decimos `me gusta el café` pero `me gustan los mercados`.",
+      "Usa `doler`, `faltar` y `molestar` como `gustar`: `me duelen los pies`.",
+      "Aclara o insiste con `a mí`, `a Laura le`, `a ellos les`.",
+      "Di a quién das o dices algo: `le regalé`, `les mandé`, `nos explicó`.",
+      "Escucha una visita a un taller de añil en Suchitoto.",
+      "Escribe y graba un mensaje sobre regalos para tu familia.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "lavar las verduras",
-            "right": "wash vegetables"
-          },
-          {
-            "left": "cortar en trozos",
-            "right": "cut into pieces"
-          },
-          {
-            "left": "añadir una cucharada",
-            "right": "add a tablespoon"
-          },
-          {
-            "left": "mezclar bien",
-            "right": "mix well"
-          },
-          {
-            "left": "calentar a fuego lento",
-            "right": "heat gently"
-          },
-          {
-            "left": "probar la salsa",
-            "right": "taste the sauce"
-          },
-          {
-            "left": "repartir en platos",
-            "right": "divide between plates"
-          },
-          {
-            "left": "dejar enfriar",
-            "right": "leave to cool"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Instrucciones firmes y amables",
-    "explanation": [
-      "Una instrucción útil deja tiempo para actuar. Divide la secuencia en pasos y baja suavemente al terminar cada uno. Añade por favor cuando pides una acción personal. La voz sintética sirve para practicar palabras y orden; comprueba la intención y el tono con una persona."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "Lave el tomate y córtelo.",
-          "q": "¿A quién se dirige esta forma?",
-          "options": [
-            "A usted",
-            "A tú"
+  theory: {
+    intro: "Esta semana repasas dos clases que comparten pronombres: los verbos como **gustar** (_interesar, doler, faltar, molestar_), donde el verbo concuerda con la cosa, y el **objeto indirecto** (_me, te, le, nos, les_) con verbos como _dar, mandar, decir_. Aquí los usas de compras por Suchitoto, entre talleres de añil y dolores de pies.",
+    parts: [
+      {
+        heading: "Gustar al revés: el verbo mira a la cosa",
+        body: [
+          "Con **gustar**, la persona no es el sujeto. El sujeto es **lo que gusta**, y el verbo concuerda con eso: _me gusta **el mercado**_ (una cosa), _me gustan **los mercados**_ (varias cosas). La persona aparece con un pronombre: **me, te, le, nos, os, les**.",
+          "Van en **singular** (_gusta_): una cosa, algo que no se cuenta (_el café, la música_) y los infinitivos, uno o varios (_me gusta caminar y nadar_). Van en **plural** (_gustan_): un sustantivo plural o dos cosas juntas (_me gustan el café y el chocolate_).",
+          "**Interesar**, **encantar** y **molestar** funcionan igual: _nos interesa la historia_, _les encantan las hamacas_, _me molesta el ruido_.",
+        ],
+        support: [
+          "With _gustar_ the thing you like is the subject, so the verb agrees with it: _gusta_ for one thing or infinitives, _gustan_ for plural things. The person appears as _me, te, le, nos, os, les_.",
+        ],
+        table: {
+          caption: "Gustar e interesar",
+          head: ["(A quién)", "Pronombre", "Verbo", "Lo que gusta"],
+          rows: [
+            ["(a mí)", "me", "gusta", "la cerámica / pasear"],
+            ["(a ti)", "te", "gustan", "los collares"],
+            ["(a él, a ella, a usted)", "le", "interesa", "el arte"],
+            ["(a nosotros, a nosotras)", "nos", "interesan", "los museos"],
+            ["(a vosotros, a vosotras)", "os", "encanta", "bailar"],
+            ["(a ellos, a ellas, a ustedes)", "les", "encantan", "las hamacas"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Corta el pan, por favor.",
-          "q": "¿Qué palabras suavizan la petición?",
-          "options": [
-            "Por favor",
-            "El pan"
+        examples: [
+          { es: "Me gustan las calles empedradas de este pueblo.", en: "I like the cobbled streets of this town." },
+          { es: "¿Te interesa ver cómo hacen el tinte?", en: "Are you interested in seeing how they make the dye?" },
+          { es: "A mis padres les encanta tomar café en la plaza.", en: "My parents love having coffee in the square." },
+        ],
+        mistakes: [
+          { wrong: "Yo gusto mucho los mercados.", right: "Me gustan mucho los mercados.", why: "La persona va con pronombre (**me**) y el verbo concuerda con _los mercados_: **gustan**." },
+          { wrong: "Me gustan bailar y cantar.", right: "Me gusta bailar y cantar.", why: "Con infinitivos, siempre **gusta**, aunque sean dos." },
+        ],
+      },
+      {
+        heading: "Doler, faltar, molestar: el mismo esquema",
+        body: [
+          "**Doler** sigue el esquema de gustar: _me duele **la cabeza**_, _me duelen **los pies**_. Con las partes del cuerpo usas el artículo (**la** cabeza), no el posesivo: _me duele la espalda_, no _mi espalda_.",
+          "**Faltar** dice que algo no está o no es suficiente: _me falta **dinero**_, _nos faltan **dos boletos**_. También se usa sin persona para lo que queda: _faltan **cuatro horas** para el bus_. Compara: _necesito tiempo_ (yo soy el sujeto) y _me falta tiempo_ (el tiempo es el sujeto).",
+          "En pasado la concordancia no cambia: _me dolió la rodilla_, _me dolieron las piernas_; _nos gustó el taller_, _nos gustaron las tazas_.",
+        ],
+        support: [
+          "_Doler_ (to hurt), _faltar_ (to be missing / to lack) and _molestar_ (to bother) work like _gustar_. Use _el/la_ with body parts, not _mi_. In the past: _me dolió / me dolieron_.",
+        ],
+        table: {
+          caption: "Una cosa o varias",
+          head: ["Verbo", "una cosa", "varias cosas"],
+          rows: [
+            ["doler", "me duele la garganta", "me duelen las rodillas"],
+            ["faltar", "nos falta un vaso", "nos faltan dos sillas"],
+            ["molestar", "le molesta el humo", "le molestan los mosquitos"],
+            ["gustar (pasado)", "les gustó la visita", "les gustaron los murales"],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "Después de subir al mirador, me dolían las piernas.", en: "After climbing up to the viewpoint, my legs hurt." },
+          { es: "Faltan veinte minutos para el último bus a San Salvador.", en: "There are twenty minutes to go before the last bus to San Salvador." },
+          { es: "A Rodrigo le molesta el calor del mediodía.", en: "The midday heat bothers Rodrigo." },
+        ],
+        mistakes: [
+          { wrong: "Me duele los pies de tanto caminar.", right: "Me duelen los pies de tanto caminar.", why: "_Los pies_ es plural: **duelen**." },
+          { wrong: "Me duele mi cabeza.", right: "Me duele la cabeza.", why: "Con el cuerpo, artículo: **la** cabeza. El _me_ ya dice de quién es." },
+          { wrong: "Me falto dinero para el regalo.", right: "Me faltó dinero para el regalo.", why: "El sujeto es _dinero_: **faltó** (él), no _falto_ (yo)." },
+        ],
+        tip: "Antes de conjugar, pregúntate: ¿qué gusta, qué duele, qué falta? Esa palabra decide si el verbo va en singular o en plural.",
+      },
+      {
+        heading: "A mí, a ti, a Laura: aclarar e insistir",
+        body: [
+          "Puedes añadir **a + persona** para aclarar quién es (_le gusta_ puede ser él, ella o usted: **a Laura** le gusta) o para insistir, sobre todo al comparar: _A mí me encanta el picante, pero a mi hermano no_.",
+          "Aunque digas _a Laura_ o _a mí_, el pronombre **no desaparece**: _A Laura le gusta_, nunca _A Laura gusta_.",
+          "Para reaccionar a un gusto de otra persona: **a mí también** (yo igual, con sí), **a mí tampoco** (yo igual, con no), **a mí sí** y **a mí no** (yo diferente).",
+        ],
+        support: [
+          "Add _a + person_ to clarify or to contrast, but keep the pronoun: _A Laura le gusta_. React with _a mí también / a mí tampoco / a mí sí / a mí no_.",
+        ],
+        examples: [
+          { es: "—No me gustan los mosquitos. —A mí tampoco.", en: "—I don't like mosquitoes. —Me neither." },
+          { es: "A ustedes les interesa el arte, ¿verdad?", en: "You're interested in art, aren't you?" },
+          { es: "A mi abuela le duelen las manos cuando hace frío.", en: "My grandmother's hands hurt when it's cold." },
+        ],
+        mistakes: [
+          { wrong: "A mis primos encantan los volcanes.", right: "A mis primos les encantan los volcanes.", why: "Con _a mis primos_ también necesitas **les**." },
+          { wrong: "—Me gusta el pan dulce. —A mí tampoco.", right: "—Me gusta el pan dulce. —A mí también.", why: "Frase positiva → **también**; negativa → **tampoco**." },
+        ],
+      },
+      {
+        heading: "¿A quién? Me, te, le, nos, les con dar, mandar, decir",
+        body: [
+          "El **objeto indirecto** dice **a quién** o **para quién** es una acción: _le regalé un pañuelo_ (a mi madre). Lo usas con verbos de dar y de comunicar: _dar, regalar, prestar, traer, mandar, escribir, decir, preguntar, contestar, explicar_.",
+          "Va delante del verbo conjugado: _te mando las fotos_, _nos explicó el proceso_. Con **le** y **les** es muy frecuente repetir la persona después: _Le di las gracias **a la artesana**_. Si la persona va delante, o si dices _a mí, a ti, a él…_, el pronombre es obligatorio: _A la artesana le di las gracias_.",
+          "No lo confundas con **lo, la, los, las**, que responden a _¿qué?_ o _¿a quién?_ con verbos como _ver, llamar, invitar_: _la llamé_ (a Marta), pero _le dije la hora_ (a Marta). Para reconocer: en partes de España algunos dicen _le vi_ para un hombre; es una variante que la RAE acepta.",
+        ],
+        support: [
+          "Indirect object pronouns say _to whom_ or _for whom_: _me, te, le, nos, os, les_. They go before the conjugated verb. With _le/les_, Spanish often repeats the person: _le di las gracias a la artesana_.",
+        ],
+        table: {
+          caption: "El objeto indirecto",
+          head: ["A quién", "Pronombre", "Ejemplo"],
+          rows: [
+            ["a mí", "me", "Mi tía me trajo un collar."],
+            ["a ti", "te", "¿Te mandé la dirección?"],
+            ["a él, a ella, a usted", "le", "Le pregunté el precio al vendedor."],
+            ["a nosotros, a nosotras", "nos", "La guía nos explicó la historia."],
+            ["a vosotros, a vosotras", "os", "Os escribo desde Suchitoto."],
+            ["a ellos, a ellas, a ustedes", "les", "Les compré dulces a mis sobrinos."],
+          ],
+        },
+        examples: [
+          { es: "Le presté mi paraguas a una señora en la parada.", en: "I lent my umbrella to a lady at the stop." },
+          { es: "¿Nos puedes decir dónde está el lago?", en: "Can you tell us where the lake is?" },
+        ],
+        mistakes: [
+          { wrong: "A mi madre compré una hamaca.", right: "A mi madre le compré una hamaca.", why: "La persona va delante: el pronombre **le** es obligatorio." },
+          { wrong: "Les escribí una carta a mi hermano.", right: "Le escribí una carta a mi hermano.", why: "Una persona: **le**. _Les_ es para varias." },
+          { wrong: "La dije que llegaba tarde.", right: "Le dije que llegaba tarde.", why: "Con _decir_, la persona es objeto indirecto: **le**." },
+        ],
+        tip: "Haz la pregunta: ¿**a quién** le doy, digo o mando algo? Si la respuesta es una persona que recibe, usa **le / les**.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero la concordancia de gustar y sus compañeros; después a + persona y el objeto indirecto con verbos de dar y comunicar.",
+    exercises: [
+      {
+        id: "g1",
+        type: "gap",
+        title: "¿Singular o plural?",
+        prompt: "Completa con el pronombre y el verbo en **presente**.",
+        items: [
+          { q: "A mí ___ ___ mucho los dulces de coco. (gustar)", answers: [["me"], ["gustan"]], why: "_Los dulces_ es plural: **me gustan**." },
+          { q: "¿A ti ___ ___ la historia de la ciudad? (interesar)", answers: [["te"], ["interesa"]], why: "Una cosa: **te interesa**." },
+          { q: "A mi padre ___ ___ la espalda por las mañanas. (doler)", answers: [["le"], ["duele"]], why: "_La espalda_, una: **le duele**." },
+          { q: "A nosotros ___ ___ nadar en el lago y tomar el sol. (encantar)", answers: [["nos"], ["encanta"]], why: "Infinitivos: siempre singular, **encanta**." },
+          { q: "A los turistas ___ ___ los mosquitos de la tarde. (molestar)", answers: [["les"], ["molestan"]], why: "_Los mosquitos_: **les molestan**." },
+          { q: "Para la receta ___ ___ tres huevos y un poco de azúcar. (faltar, a mí)", answers: [["me"], ["faltan"]], why: "Dos cosas: **me faltan**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "choice",
+        title: "En pasado",
+        prompt: "Elige la forma correcta.",
+        items: [
+          { q: "Ayer ___ las piernas después de la caminata.", options: ["me dolió", "me dolían", "me dolieron"], answer: 2, why: "_Las piernas_, plural, un hecho de ayer: **me dolieron**." },
+          { q: "¿Les ___ el concierto del sábado?", options: ["gustó", "gustaron", "gustaste"], answer: 0, why: "_El concierto_, singular: **gustó**." },
+          { q: "En el viaje nos ___ dinero para el último hotel.", options: ["faltamos", "faltó", "faltaron"], answer: 1, why: "_Dinero_ no se cuenta: singular, **faltó**." },
+          { q: "A mi hermana le ___ mucho los murales del centro.", options: ["interesaron", "interesó", "interesé"], answer: 0, why: "_Los murales_, plural: **interesaron**." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "gap",
+        title: "¿A quién?",
+        prompt: "Completa con **me, te, le, nos** o **les**.",
+        items: [
+          { q: "Ayer ___ mandé una postal a mis abuelos.", answers: [["les"]], why: "_A mis abuelos_, varios: **les**." },
+          { q: "¿___ puedes prestar tu cargador? El mío no funciona.", answers: [["Me"]], why: "Para mí: **me**." },
+          { q: "La artesana ___ explicó a nosotros cómo se tiñe la tela.", answers: [["nos"]], why: "_A nosotros_: **nos**." },
+          { q: "___ pregunté a la recepcionista si había agua caliente.", answers: [["Le"]], why: "_A la recepcionista_, una: **le**." },
+          { q: "Mañana ___ escribo, que ahora no tengo señal.", answers: [["te"]], why: "A ti: **te**." },
+        ],
+      },
+      {
+        id: "g4",
+        type: "transform",
+        title: "La persona delante",
+        prompt: "Empieza la frase con la persona en negrita y añade el pronombre que falta.",
+        items: [
+          { source: "Compré una taza de cerámica **a Julia**.", answers: ["A Julia le compré una taza de cerámica."], why: "La persona delante → **le** obligatorio." },
+          { source: "Encantan las pupusas **a mis amigos**.", answers: ["A mis amigos les encantan las pupusas."], why: "_A mis amigos_ + **les** + encantan (plural)." },
+          { source: "Duele la garganta **a mí**.", answers: ["A mí me duele la garganta."], why: "_A mí_ + **me** + duele (singular)." },
+          { source: "Di las gracias **a los guías**.", answers: ["A los guías les di las gracias."], why: "Varios: **les**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Palabras para ir de compras a un pueblo de artesanos y para decir qué te duele después de un día largo.",
+    groups: [
+      {
+        title: "Artesanía y regalos",
+        items: [
+          { es: "el añil", en: "indigo" },
+          { es: "el pañuelo", en: "the scarf / headscarf" },
+          { es: "la hamaca", en: "the hammock" },
+          { es: "la taza de cerámica", en: "the ceramic mug" },
+          { es: "el collar", en: "the necklace" },
+          { es: "teñir la tela", en: "to dye the fabric" },
+          { es: "hecho a mano", en: "handmade" },
+          { es: "el recuerdo", en: "the souvenir" },
+        ],
+      },
+      {
+        title: "El cuerpo cansado",
+        items: [
+          { es: "la espalda", en: "the back" },
+          { es: "las rodillas", en: "the knees" },
+          { es: "la garganta", en: "the throat" },
+          { es: "los pies", en: "the feet" },
+          { es: "las manos", en: "the hands" },
+          { es: "tener una ampolla", en: "to have a blister" },
+        ],
+      },
+      {
+        title: "Reaccionar a gustos",
+        items: [
+          { es: "A mí también.", en: "Me too." },
+          { es: "A mí tampoco.", en: "Me neither." },
+          { es: "A mí sí.", en: "I do." },
+          { es: "A mí no.", en: "I don't." },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "Un regalo para cada uno",
+        prompt: "Une cada gusto con el regalo ideal.",
+        pairs: [
+          { left: "A mi madre le encanta el café.", right: "una taza de cerámica" },
+          { left: "A mi hermano le duele la espalda en la silla.", right: "una hamaca para descansar" },
+          { left: "A mi abuela le gusta la ropa de colores.", right: "un pañuelo teñido con añil" },
+          { left: "A mi sobrina le interesan las joyas.", right: "un collar hecho a mano" },
+          { left: "A mi jefe le gustan los dulces.", right: "una caja de dulces de leche" },
+        ],
+        why: "Cada frase usa **le** y el verbo concuerda con la cosa: _le encanta el café, le interesan las joyas_.",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "¿Qué respondes?",
+        prompt: "Lee lo que dice tu amigo y elige la reacción correcta.",
+        items: [
+          { context: "Tu amigo dice: «No me gusta madrugar».", q: "Tú tampoco quieres madrugar. Respondes:", options: ["A mí también.", "A mí tampoco.", "A mí sí."], answer: 1, why: "Frase negativa y estás de acuerdo: **a mí tampoco**." },
+          { context: "Tu amiga dice: «Me encantan los mercados».", q: "A ti no te gustan. Respondes:", options: ["A mí no.", "A mí tampoco.", "A mí también."], answer: 0, why: "Frase positiva y piensas diferente: **a mí no**." },
+          { context: "Tu compañero dice: «No me interesan los museos».", q: "A ti sí te interesan. Respondes:", options: ["A mí no.", "A mí también.", "Pues a mí sí."], answer: 2, why: "Frase negativa y piensas diferente: **a mí sí**." },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La -n que cambia todo: duele / duelen",
+    explanation: [
+      "Entre _me duele el pie_ y _me duelen los pies_ la diferencia está en una **n** al final del verbo. Es pequeña, pero cambia la concordancia.",
+      "Cuando la palabra siguiente empieza por vocal, la **n** se une a ella y se oye mejor: _me gustan_estas tazas_ suena _gus-ta-nes-tas_. Cuando sigue una consonante, tienes que marcarla un poco: _me gustan los collares_.",
+      "Otra pista: el artículo. _El, la_ y _este_ van con **-a/-e**; _los, las_ y _estos_ van con **-an/-en**.",
+    ],
+    support: [
+      "The final _-n_ tells you the verb is plural: _duele / duelen, gusta / gustan_. It links to a following vowel (_gustan_estas_); before a consonant, say it clearly. The article (_el/los_) is a second clue.",
+    ],
+    table: {
+      caption: "Escucha el final",
+      head: ["Singular", "Plural"],
+      rows: [
+        ["me gusta esta taza", "me gustan estas tazas"],
+        ["le duele la rodilla", "le duelen las rodillas"],
+        ["nos falta un plato", "nos faltan unos platos"],
+      ],
     },
-    "produce": [
-      {
-        "text": "Primero lava las verduras.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Pásame la cuchara, por favor.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Después mézclalo todo con cuidado.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Una o varias?",
+      prompt: "Escucha y elige la forma del verbo que oyes.",
+      items: [
+        { q: "¿Qué verbo oyes?", audio: "Me duelen un poco.", options: ["duele", "duelen"], answer: 1 },
+        { q: "¿Qué verbo oyes?", audio: "Le interesa mucho.", options: ["interesa", "interesan"], answer: 0 },
+        { q: "¿Qué verbo oyes?", audio: "Nos faltan ahora.", options: ["falta", "faltan"], answer: 1 },
+        { q: "¿Qué verbo oyes?", audio: "Te molesta a veces.", options: ["molestan", "molesta"], answer: 1 },
+        { q: "¿Qué verbo oyes?", audio: "Les encantan estas.", options: ["encantan", "encanta"], answer: 0 },
+      ],
+    },
+    produce: [
+      { text: "Me gusta esta, me gustan estas.", tip: "Une la n con la vocal: _gus-ta-nes-tas_." },
+      { text: "Me duele la espalda y me duelen los pies.", tip: "Marca la n antes de _los_." },
+      { text: "Nos faltan dos horas.", tip: "_Fal-tan-dos_: la n antes de d se oye clara." },
+      { text: "A mí me encanta, a mí también, a mí tampoco.", tip: "Acento fuerte en _mí_: lleva tilde." },
+      { text: "Le regalé un pañuelo a mi abuela.", tip: "_Le_ es corto y sin fuerza; la fuerza va en _re-ga-LÉ_." },
+    ],
+    spelling: "**Mí** con tilde es el pronombre (_a mí me gusta_); **mi** sin tilde es el posesivo (_mi madre_). Lo mismo con **tú** (_¿y tú?_) y **tu** (_tu regalo_).",
   },
-  "listening": {
-    "title": "El orden cambia el resultado",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "En el taller de añil",
+    context: "Mariela y su amigo Andrés visitan un taller de añil en Suchitoto. Doña Ester, la artesana, les enseña el taller. Después hablan de regalos para sus familias.",
+    speakers: [
+      { id: "ester", name: "Doña Ester", voice: "es-MX-f", role: "artesana" },
+      { id: "mariela", name: "Mariela", voice: "es-CO-f", role: "visitante" },
+      { id: "andres", name: "Andrés", voice: "es-PE-m", role: "visitante" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Vamos a preparar una crema de verduras. Ya he lavado las zanahorias y las patatas. ¿Las corto ahora? Nunca he usado esta olla y prefiero que me expliques los pasos despacio."
-      },
-      {
-        "speaker": "b",
-        "text": "Sí. Primero córtalas en trozos parecidos. Pon un poco de aceite en la olla y añade la cebolla. Cocina la cebolla unos minutos. Después incorpora las otras verduras y el agua."
-      },
-      {
-        "speaker": "a",
-        "text": "Espera: ¿pongo el agua antes de las patatas o después? He preparado un litro, pero no sé si hace falta todo. Y todavía no he añadido sal."
-      },
-      {
-        "speaker": "b",
-        "text": "Después de las patatas. Añade agua hasta cubrir las verduras; quizá no necesitas el litro entero. Pon poca sal y prueba al final. Cuando estén blandas, apaga el fuego y deja enfriar un poco antes de triturar."
-      }
+    script: [
+      { speaker: "ester", text: "Bienvenidos. ¿Les interesa ver cómo teñimos la tela? Pasen, pasen." },
+      { speaker: "mariela", text: "¡Sí, nos encanta! Ayer una guía nos explicó que el añil es una planta." },
+      { speaker: "ester", text: "Así es. De las hojas sale este azul tan bonito. Miren, estos pañuelos los hice yo esta semana." },
+      { speaker: "andres", text: "Perdone, ¿me puedo sentar un momento? Me duelen los pies. Ayer caminamos mucho." },
+      { speaker: "ester", text: "Claro, joven, siéntese aquí. ¿Y la señorita qué busca?" },
+      { speaker: "mariela", text: "Un regalo para mi madre. A ella le gustan los colores fuertes. Le voy a comprar este pañuelo. ¿Cuánto cuesta?" },
+      { speaker: "ester", text: "Doce dólares. Y si le gusta la cerámica, también tengo tazas." },
+      { speaker: "andres", text: "A mí me gustan mucho esas tazas. A mis hermanos les encanta el café. Les voy a llevar dos." },
+      { speaker: "mariela", text: "Andrés, cuidado, nos falta dinero para el bus. Faltan dos horas para la salida y no hay cajero aquí." },
+      { speaker: "andres", text: "Tranquila, me quedan veinte dólares. Doña Ester, ¿nos da una bolsa, por favor? Y muchas gracias por todo." },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «El orden cambia el resultado» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Qué pide la primera persona?",
-              "options": [
-                "Instrucciones claras para una receta",
-                "Una reserva en un restaurante",
-                "El precio de una olla"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «Instrucciones claras para una receta»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué necesita quien aprende la receta?",
-              "options": [
-                "El orden y las cantidades",
-                "Una lista de restaurantes",
-                "Una explicación del precio de la olla"
-              ],
-              "answer": 0,
-              "why": "Comprueba el contexto y los datos de la escena: El orden y las cantidades."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «El orden cambia el resultado».",
-          "items": [
-            {
-              "q": "¿Qué se cocina primero?",
-              "options": [
-                "Las patatas en agua",
-                "La crema terminada",
-                "La cebolla"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «La cebolla»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Cuánta agua se añade?",
-              "options": [
-                "Solo una cucharada",
-                "Hasta cubrir las verduras",
-                "Siempre dos litros"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «Hasta cubrir las verduras»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «El orden cambia el resultado».",
-          "items": [
-            {
-              "q": "¿Qué hace la pregunta antes o después?",
-              "options": [
-                "Pide otro ingrediente",
-                "Comprueba el orden",
-                "Rechaza la receta"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «Comprueba el orden»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué significa prueba al final en esta receta?",
-              "options": [
-                "Prueba todos los ingredientes antes de lavar",
-                "Prueba la olla sin agua",
-                "Comprueba el sabor cuando esté preparada"
-              ],
-              "answer": 2,
-              "why": "Comprueba el contexto y los datos de la escena: Comprueba el sabor cuando esté preparada."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Ensalada para una mesa compartida",
-    "genre": "Receta y nota de organización",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "Para cuatro personas necesitas dos tazas de arroz ya cocido, un tomate grande, medio pepino, una zanahoria, dos cucharadas de aceite y el zumo de un limón. Esta receta se prepara con el arroz frío. Antes de empezar, comprueba que tienes un recipiente grande, un cuchillo y cuatro platos. Si cocinas para otras personas, pregunta primero si pueden comer todos los ingredientes.",
-      "Primero lava el tomate, el pepino y la zanahoria. Corta el tomate y el pepino en trozos pequeños. Ralla la zanahoria. Pon el arroz en el recipiente y añade las verduras. Después mezcla el aceite con el limón en un vaso y échalo sobre la ensalada. Remueve todo con una cuchara. Al final prueba una pequeña cantidad y añade sal si hace falta. Reparte la ensalada en los platos.",
-      "Para la comida del centro, lleva la ensalada en un recipiente cerrado. Escribe los ingredientes en una tarjeta y colócala junto al plato. Así cada persona puede elegir con información."
-    ],
-    "glossary": [
-      {
-        "es": "lavar las verduras",
-        "en": "wash vegetables"
-      },
-      {
-        "es": "cortar en trozos",
-        "en": "cut into pieces"
-      },
-      {
-        "es": "añadir una cucharada",
-        "en": "add a tablespoon"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «Ensalada para una mesa compartida» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Cómo debe estar el arroz?",
-            "options": [
-              "Cocido y frío",
-              "Crudo",
-              "Muy caliente"
-            ],
-            "answer": 0,
-            "why": "La información de la situación corresponde a «Cocido y frío»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Para qué sirve la tarjeta?",
-            "options": [
-              "Para cobrar la comida",
-              "Para reservar una mesa",
-              "Para informar de los ingredientes"
-            ],
-            "answer": 2,
-            "why": "La información de la situación corresponde a «Para informar de los ingredientes»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «Ensalada para una mesa compartida» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Seguir instrucciones de cocina y explicarlas a otra persona adaptando el trato. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "Para cuatro personas necesitas dos tazas de arroz ya cocido, un tomate grande, medio pepino, una zanahoria, dos cucharadas de aceite y el zumo de un limón.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo una vez y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿Dónde están Mariela y Andrés?", options: ["en un restaurante", "en un taller de añil", "en una estación de bus"], answer: 1 },
+            { q: "¿Qué hacen al final?", options: ["Compran regalos.", "Toman un café.", "Se van sin comprar nada."], answer: 0 },
+            { q: "¿Qué problema tiene Andrés?", options: ["No tiene dinero.", "No le gustan los pañuelos.", "Le duelen los pies."], answer: 2 },
+          ],
         },
-        {
-          "quote": "Primero lava el tomate, el pepino y la zanahoria.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
-  },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
+      },
       {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
+        stage: "detail",
+        prompt: "Segunda escucha: atención a los precios, los regalos y para quién son.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Para quién es el pañuelo?", options: ["para la hermana de Mariela", "para la madre de Mariela", "para doña Ester"], answer: 1 },
+            { q: "¿Cuánto cuesta el pañuelo?", options: ["doce dólares", "veinte dólares", "dos dólares"], answer: 0 },
+            { q: "¿Por qué Andrés compra tazas?", options: ["porque le duelen los pies", "porque a él le interesa la cerámica", "porque a sus hermanos les encanta el café"], answer: 2 },
+            { q: "¿Cuánto tiempo falta para el bus?", options: ["veinte minutos", "dos horas", "una hora"], answer: 1 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en los pronombres y en la concordancia.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Qué tipo de frase es?",
+          categories: ["verbo como gustar (concuerda con la cosa)", "objeto indirecto con dar, explicar, llevar…"],
+          items: [
+            { text: "¿Les interesa ver cómo teñimos la tela?", cat: 0, why: "Infinitivo: **interesa**, en singular." },
+            { text: "una guía nos explicó que el añil es una planta", cat: 1, why: "¿A quién explicó? **A nosotros**: nos." },
+            { text: "Me duelen los pies.", cat: 0 },
+            { text: "Le voy a comprar este pañuelo.", cat: 1, why: "¿Para quién? **Para su madre**: le." },
+            { text: "Les voy a llevar dos.", cat: 1 },
+            { text: "nos falta dinero para el bus", cat: 0, why: "_Dinero_, singular: **falta**." },
+          ],
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Saludos desde Suchitoto",
+    genre: "Mensaje al grupo familiar",
+    frame: "Mariela escribe en el grupo de su familia la noche después de la visita al taller.",
+    text: [
+      "¡Hola, familia! Les mando unas fotos de Suchitoto. Es un pueblo precioso: me encantan las calles de piedra y las casas de colores. Hoy visitamos un taller de añil y la artesana nos explicó todo el proceso. A Andrés le interesó tanto que quiere volver mañana.",
+      "Mamá, te compré un regalo, pero no te voy a decir qué es. Solo una pista: es azul. Papá, a ti te traigo café salvadoreño, porque sé que te gusta mucho el de la zona.",
+      "Estoy muy cansada: me duelen las piernas y me falta un poco de sueño, pero estoy feliz. Nos faltan dos días de viaje. A Andrés y a mí nos gustaría visitar el lago antes de volver. ¿Qué les parece? ¡Los quiero mucho!",
+    ],
+    glossary: [
+      { es: "el proceso", en: "the process" },
+      { es: "una pista", en: "a clue" },
+      { es: "¿Qué les parece?", en: "What do you think? (to a group)" },
+      { es: "Los quiero mucho.", en: "I love you all." },
+    ],
+    tasks: [
+      {
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el mensaje y responde.",
+        items: [
+          { q: "¿Qué le gusta a Mariela de Suchitoto?", options: ["las calles de piedra y las casas de colores", "el lago y los volcanes", "los restaurantes"], answer: 0 },
+          { q: "¿Qué le pasó a Andrés en el taller?", options: ["Se aburrió.", "Le interesó mucho.", "Le dolió la cabeza."], answer: 1 },
+          { q: "¿Qué regalo lleva Mariela a su padre?", options: ["un pañuelo azul", "una taza", "café de la zona"], answer: 2 },
+          { q: "¿Cuántos días de viaje les quedan?", options: ["dos", "uno", "tres"], answer: 0 },
+        ],
+      },
+      {
+        id: "r2",
+        type: "classify",
+        prompt: "¿A quién se refiere cada pronombre?",
+        categories: ["a Mariela (me)", "a la familia o a un grupo (les, nos)", "a la madre o al padre (te)"],
+        items: [
+          { text: "Les mando unas fotos", cat: 1 },
+          { text: "me encantan las calles de piedra", cat: 0 },
+          { text: "nos explicó todo el proceso", cat: 1, why: "_Nos_ = a Mariela y a Andrés." },
+          { text: "te compré un regalo", cat: 2, why: "Mariela habla con su madre: **te**." },
+          { text: "me duelen las piernas", cat: 0 },
+          { text: "a ti te traigo café salvadoreño", cat: 2 },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Toca cada frase del mensaje para ver qué gramática hay dentro.",
+      items: [
+        { quote: "me encantan las calles de piedra", note: "_Las calles_ es plural: **encantan**." },
+        { quote: "la artesana nos explicó todo el proceso", note: "Objeto indirecto: ¿a quién explicó? A nosotros, **nos**." },
+        { quote: "A Andrés le interesó tanto", note: "_A Andrés_ + **le**: el pronombre no desaparece." },
+        { quote: "me duelen las piernas", note: "_Las piernas_: **duelen**; con el cuerpo, artículo _las_." },
+        { quote: "me falta un poco de sueño", note: "_Un poco de sueño_ no se cuenta: **falta**, singular." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Mezcla las dos clases: concordancia de gustar y objeto indirecto.",
+    exercises: [
+      {
+        id: "x1",
+        type: "error",
+        title: "Corrige el mensaje",
+        prompt: "Cada frase tiene un error. Escríbela bien.",
+        items: [
+          { sentence: "Me interesan aprender a cocinar pupusas.", answers: ["Me interesa aprender a cocinar pupusas."], why: "Con infinitivo, singular: **interesa**." },
+          { sentence: "A mi abuelo gustan las novelas de misterio.", answers: ["A mi abuelo le gustan las novelas de misterio."], why: "Falta **le**: _a mi abuelo le gustan_." },
+          { sentence: "Ayer me dolió los oídos en el avión.", answers: ["Ayer me dolieron los oídos en el avión."], why: "_Los oídos_, plural: **dolieron**." },
+          { sentence: "Les di el dinero a mi vecina.", answers: ["Le di el dinero a mi vecina."], why: "Una persona: **le**." },
+          { sentence: "A nosotros nos falta tres sillas para la cena.", answers: ["A nosotros nos faltan tres sillas para la cena."], why: "_Tres sillas_: **faltan**." },
+        ],
+      },
+      {
+        id: "x2",
+        type: "order",
+        title: "Frases de compras",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["A", "mi", "hermana", "le", "encantan", "los", "collares."], en: "My sister loves necklaces." },
+          { words: ["El", "vendedor", "nos", "explicó", "cómo", "hacen", "las", "hamacas."], en: "The seller explained to us how they make the hammocks." },
+          { words: ["¿Te", "duele", "mucho", "la", "rodilla?"], en: "Does your knee hurt a lot?" },
+        ],
+      },
+      {
+        id: "x3",
+        type: "context",
+        title: "¿Qué dices?",
+        prompt: "Lee la situación y elige la mejor frase.",
+        items: [
+          { context: "Quieres saber si tu amiga recibió tu mensaje.", q: "Le preguntas:", options: ["¿La mandé el mensaje?", "¿Te llegó mi mensaje?", "¿Te llegaron mi mensaje?"], answer: 1, why: "_Mi mensaje_, singular: **te llegó**." },
+          { context: "Estás en la farmacia con dolor de cabeza y de garganta.", q: "Dices:", options: ["Me duelen mi cabeza y mi garganta.", "Me duelo la cabeza y la garganta.", "Me duelen la cabeza y la garganta."], answer: 2, why: "Dos cosas juntas: **duelen**, y con el cuerpo, artículo: _la cabeza_." },
+          { context: "Cuentas qué hiciste por tus vecinos mayores.", q: "Dices:", options: ["Les llevé la compra a casa.", "Los llevé la compra a casa.", "Le llevé la compra a casa a ellos."], answer: 0, why: "¿A quién llevé la compra? A ellos: **les**." },
+        ],
+      },
+      {
+        id: "x4",
+        type: "open",
+        title: "Escribe tú",
+        prompt: "Escribe frases sobre ti y tu gente. Después compara con el modelo.",
+        items: [
           {
-            "words": [
-              "Corta",
-              "los",
-              "tomates",
-              "y",
-              "ponlos",
-              "en",
-              "un",
-              "plato."
-            ]
+            prompt: "Compara tus gustos con los de una persona de tu familia: dos cosas en común y una diferente.",
+            model: "A mi hermano y a mí nos gustan los perros y nos encanta la playa. Pero a él le interesa el fútbol y a mí no.",
+            checklist: ["Usas _a + persona_ con su pronombre", "El verbo concuerda con la cosa", "Hay un contraste (_a mí no_, _pero_)"],
           },
           {
-            "words": [
-              "Mezclad",
-              "los",
-              "ingredientes",
-              "y",
-              "probad",
-              "la",
-              "salsa."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "Añade todo ahora, aunque no siga la receta.",
-              "Da igual el orden de todos los pasos.",
-              "Primero cocina la cebolla; el agua va después de las patatas."
-            ],
-            "answer": 2,
-            "why": "Comprueba el contexto y los datos de la escena: Primero cocina la cebolla; el agua va después de las patatas..",
-            "context": "Quien cocina pone el agua antes de cocinar la cebolla.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
+            prompt: "Di qué te duele o qué te molesta después de un día de trabajo o de estudio.",
+            model: "Después de ocho horas con el ordenador me duelen los ojos y me molesta la espalda. Además, me falta tiempo para hacer deporte.",
+            checklist: ["Usas _doler_ con el artículo del cuerpo", "Singular o plural según la cosa", "Usas _faltar_ o _molestar_"],
           },
           {
-            "context": "El profesor interpreta a una persona que confunde dos pasos. Corrige con amabilidad, repite solo la parte necesaria y comprueba que la entendió.",
-            "q": "En esta interacción de «Una receta que sí se entiende», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «Una receta que sí se entiende», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Para preparar estas tostadas necesitas cuatro rebanadas de pan, dos tomates y un poco de aceite.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
+            prompt: "Cuenta qué regalos diste en tu último cumpleaños familiar y a quién.",
+            model: "Para el cumpleaños de mi madre le regalé un libro de cocina. A mis sobrinos les compré unos juegos y a mi padre le mandé flores.",
+            checklist: ["Usas _le_ para una persona y _les_ para varias", "Usas verbos de dar: _regalar, comprar, mandar_", "Si la persona va delante, pones el pronombre"],
           },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: El profesor interpreta a una persona que confunde dos pasos. Corrige con amabilidad, repite solo la parte necesaria y comprueba que la entendió.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-07",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 7. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 9: Compara dos viviendas inventadas: A cuesta 350 con agua y está a cinco minutos del trabajo; B cuesta 300 sin gastos y está a media hora. Usa más/menos que, tan como, tanto como, mejor/peor, mayor/menor y un superlativo. Describe clima o entorno y destaca con la voz el dato decisivo. Di qué información falta para calcular el coste completo.",
-            "model": "A es más cara al principio, pero está mejor comunicada. B es mayor y parece tranquilísima. No sabemos si tiene tantos gastos como A. Prefiero A por la distancia; necesito confirmar la electricidad.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 7→9: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: A es más cara al principio, pero está mejor comunicada. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Escribe una receta para el tablón de una cocina compartida: ingredientes, cantidades, seis pasos y una nota para quien tiene una restricción alimentaria. Mantén tú o usted en todas las instrucciones.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
-    ],
-    "useLanguage": [
-      "Corta los tomates y ponlos en un plato.",
-      "Lave las verduras y añada un poco de sal.",
-      "Mezclad los ingredientes y probad la salsa.",
-      "Cortá el pan; después ponelo en la mesa."
-    ],
-    "model": [
-      "Para preparar estas tostadas necesitas cuatro rebanadas de pan, dos tomates y un poco de aceite. Primero lava los tomates. Después córtalos en trozos pequeños y ponlos en un recipiente. Añade una cucharada de aceite y mezcla bien. Tuesta el pan y coloca el tomate encima. Reparte las tostadas en un plato grande. Sírvelas al momento. Antes de compartirlas, pregunta si alguien necesita otro tipo de pan y escribe los ingredientes en una tarjeta. Si alguien no puede comer tomate, prepara una tostada distinta y mantenla en otro plato."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      80,
-      120
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
-      {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Explica una receta sin leer. Tu oyente debe poder preparar materiales y seguir al menos cinco pasos.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
         ],
-        "seconds": 90,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
-      {
-        "title": "Interacción con un cambio",
-        "prompt": "El profesor interpreta a una persona que confunde dos pasos. Corrige con amabilidad, repite solo la parte necesaria y comprueba que la entendió.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
-        ],
-        "seconds": 90,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Explica una receta sin leer. Tu oyente debe poder preparar materiales y seguir al menos cinco pasos."
-      },
-      {
-        "move": "Negocia",
-        "task": "El profesor interpreta a una persona que confunde dos pasos. Corrige con amabilidad, repite solo la parte necesaria y comprueba que la entendió."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
   },
-  "quiz": {
-    "items": [
-      {
-        "type": "gap",
-        "q": "___ la puerta, por favor. (abrir, usted)",
-        "answers": [
-          [
-            "Abra"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "___ los platos aquí. (poner, tú)",
-        "answers": [
-          [
-            "Pon"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Da me el vaso, por favor.",
-        "answers": [
-          "Dame el vaso, por favor."
-        ],
-        "why": "El pronombre se une al imperativo afirmativo: dame."
-      },
-      {
-        "type": "order",
-        "words": [
-          "Después",
-          "añada",
-          "el",
-          "agua",
-          "poco",
-          "a",
-          "poco."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué instrucción permite comprobar la cantidad?",
-        "options": [
-          "Añade toda el agua siempre",
-          "Añade agua hasta cubrir las verduras"
-        ],
-        "answer": 1,
-        "why": "La opción elegida cumple la función comunicativa indicada."
-      },
-      {
-        "q": "¿Qué se hace después de cortar?",
-        "options": [
-          "Guardarlo en una bolsa",
-          "Ponerlo en un plato",
-          "Añadir agua"
-        ],
-        "answer": 1,
-        "why": "Comprueba el contexto y los datos de la escena: Ponerlo en un plato.",
-        "type": "listen",
-        "audio": "Córtalo en trozos y ponlo en el plato."
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 9: Explica una receta sin leer. Tu oyente debe poder preparar materiales y seguir al menos cinco pasos.",
-        "model": "Para preparar estas tostadas necesitas cuatro rebanadas de pan, dos tomates y un poco de aceite. Primero lava los tomates. Después córtalos en trozos pequeños y ponlos en un recipiente. Añade una cucharada de aceite y mezcla bien. Tuesta el pan y coloca el tomate encima. Reparte las tostadas en un plato grande. Sírvelas al momento. Antes de compartirlas, pregunta si alguien necesita otro tipo de pan y escribe los ingredientes en una tarjeta. Si alguien no puede comer tomate, prepara una tostada distinta y mantenla en otro plato.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Resolución final 9: El profesor interpreta a una persona que confunde dos pasos. Corrige con amabilidad, repite solo la parte necesaria y comprueba que la entendió. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Seguir instrucciones de cocina y explicarlas a otra persona adaptando el trato.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+  writing: {
+    task: "Escribe un mensaje a tu familia o a tus amigos desde un viaje para contar qué te gusta del lugar y qué regalos les llevas.",
+    context: "Estás de viaje en un pueblo con artesanía. Escribes al grupo de tu familia o de tus amigos: cómo es el lugar, cómo te sientes y qué le compraste a cada persona.",
+    steps: [
+      "Saluda y di qué te gusta o te encanta del lugar (cosas en singular y en plural).",
+      "Cuenta qué te duele o qué te falta después de tantos días de viaje.",
+      "Di qué regalo le compraste a cada persona y por qué (a mi madre le…, a mis primos les…).",
+      "Pregunta algo al grupo y despídete.",
+      "Revisa: ¿cada verbo como gustar concuerda con la cosa? ¿Usas **le** para una persona y **les** para varias?",
     ],
-    "review": [
-      "En dos días, repite la misión «Una receta que sí se entiende» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+    useLanguage: ["Me encanta… / Me encantan…", "Me duelen…", "Nos falta…", "A mi madre le compré…", "A mis primos les…", "Les mando…"],
+    model: [
+      "¡Hola a todos! Les escribo desde Granada, en Nicaragua. Me encanta este lugar: me gustan mucho las iglesias y el lago es enorme. Estoy un poco cansado: me duelen los hombros por la mochila y me falta dormir. Ya tengo los regalos. A la abuela le compré una hamaca, porque le encanta descansar en el patio. A mis primos les llevo unas camisetas y a ti, Lucía, te compré un collar. ¿Les gustan las fotos que les mandé? ¡Un abrazo!",
+    ],
+    checklist: [
+      "Usas verbos como gustar con la concordancia correcta (singular / plural).",
+      "Usas **doler** o **faltar** al menos una vez.",
+      "Usas **le** y **les** para decir para quién es cada regalo.",
+      "Si escribes _a + persona_ delante, añades el pronombre.",
+    ],
+    words: [60, 110],
+  },
+  speaking: {
+    intro: "Habla en voz alta y grábate. Repite cada tarea hasta que salga sin leer.",
+    tasks: [
+      {
+        title: "Gustos de mi familia",
+        prompt: "Habla de los gustos de tres personas de tu familia o de tus amigos: qué les gusta, qué les interesa y qué les molesta.",
+        prep: ["A mi madre le encanta…", "A mi hermano le interesan…", "A mis amigos les molesta…", "A mí, en cambio…"],
+        seconds: 70,
+        model: "A mi madre le encanta cocinar y le gustan mucho las plantas. A mi hermano le interesan los coches y los videojuegos, pero le molesta levantarse temprano. A mis amigas les encanta bailar salsa. A mí, en cambio, no me gusta bailar: me gusta más escuchar música en casa.",
+        selfCheck: ["Uso el pronombre con cada persona (_le, les_).", "El verbo concuerda con la cosa, no con la persona."],
+      },
+      {
+        title: "En la farmacia",
+        prompt: "Después de un viaje largo no te sientes bien. Explica al farmacéutico qué te duele, desde cuándo y qué te molesta.",
+        prep: ["Buenas tardes. Me duele…", "También me duelen…", "Me molesta…", "¿Qué me recomienda?"],
+        seconds: 55,
+        model: "Buenas tardes. Desde ayer me duele mucho la garganta y también me duelen un poco los oídos. Me molesta la luz y me falta energía. ¿Qué me recomienda?",
+        selfCheck: ["Uso el artículo con el cuerpo (_la garganta_).", "Duele / duelen según la parte del cuerpo."],
+      },
+      {
+        title: "La lista de regalos",
+        prompt: "Vuelves de un viaje con regalos. Di qué le traes a cada persona y por qué.",
+        prep: ["A mi padre le traigo…, porque le gusta…", "A mis sobrinos les traigo…", "A ti te traigo…"],
+        seconds: 55,
+        selfCheck: ["Uso _le_ para una persona y _les_ para varias.", "Explico cada regalo con un gusto."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que repasaste esta semana y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Compara gustos", task: "Di tres cosas que te gustan y pide a tu profesor que reaccione.", phrases: ["Me encantan…", "¿A ti también?", "A mí tampoco."] },
+      { move: "Cuenta un regalo", task: "Cuenta el mejor regalo que le diste a alguien y por qué.", phrases: ["A mi… le regalé…", "Porque le encanta…"] },
+      { move: "Di cómo estás", task: "Si algo te duele o te molesta hoy, explícale a tu profesor qué te pasa al empezar.", phrases: ["Hoy me duele…", "Me molesta…"] },
+      { move: "Pide algo", task: "Pide a tu profesor que te explique, te mande o te preste algo.", phrases: ["¿Me puedes explicar…?", "¿Me mandas el enlace?"] },
+    ],
+    bring: "Trae una foto de un regalo que te hicieron y prepárate para contar quién te hizo ese regalo y por qué te gusta.",
+  },
+  quiz: {
+    items: [
+      { type: "gap", q: "A mis padres ___ ___ las películas antiguas. (encantar)", answers: [["les"], ["encantan"]], why: "_A mis padres_ → **les**; _las películas_ → **encantan**." },
+      { type: "choice", q: "Después del partido, a Rocío ___ las rodillas.", options: ["le dolían", "le dolía", "les dolía"], answer: 0, why: "Una persona (**le**) y _las rodillas_, plural (**dolían**)." },
+      { type: "gap", q: "___ para el concierto solo quince minutos. (faltar)", answers: [["Faltan"]], why: "Sin persona, _quince minutos_ plural: **faltan**." },
+      { type: "transform", source: "Regalé un libro **a mi profesora**.", instruction: "Empieza con la persona en negrita y añade el pronombre.", answers: ["A mi profesora le regalé un libro."], why: "Persona delante → **le** obligatorio." },
+      { type: "listen", q: "¿Qué verbo oyes en la frase de las tazas?", audio: "Nos gustan estas tazas.", options: ["gusta", "gustan"], answer: 1 },
+      { type: "error", sentence: "Mi hija le gusta dibujar animales.", answers: ["A mi hija le gusta dibujar animales."], why: "Falta la **a**: _a mi hija le gusta_." },
+      { type: "error", sentence: "Ayer la pregunté a Marta su dirección.", answers: ["Ayer le pregunté a Marta su dirección."], why: "_Preguntar_ algo a alguien: **le** pregunté." },
+      { type: "order", words: ["¿Nos", "puedes", "mandar", "las", "fotos", "del", "viaje?"] },
+      { type: "choice", q: "Tu amigo dice: «Me gusta el picante». Tú piensas igual. Respondes:", options: ["A mí tampoco.", "A mí también.", "A mí no."], answer: 1, why: "Frase positiva y piensas igual: **a mí también**." },
+      { type: "open", prompt: "Escribe tres frases: algo que te encanta, algo que te duele hoy y un regalo que le diste a alguien.", model: "Me encantan los mercados de frutas. Hoy me duele un poco la cabeza. A mi hermana le regalé un reloj por su cumpleaños.", checklist: ["Encantar / doler con la concordancia correcta", "Artículo con la parte del cuerpo", "Le / les + verbo de dar"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Usar **gustar, interesar, encantar, molestar** con el verbo en singular o plural según la cosa.",
+      "Decir qué te duele y qué te falta: _me duelen los pies, faltan dos horas_.",
+      "Aclarar o contrastar con _a mí, a mi madre, a ellos_ sin perder el pronombre.",
+      "Reaccionar a gustos con _a mí también, a mí tampoco, a mí sí, a mí no_.",
+      "Decir a quién das, mandas, dices o explicas algo con **me, te, le, nos, les**.",
+      "Distinguir _la llamé_ de _le dije_.",
+    ],
+    review: ["Me gusta el mercado / me gustan los mercados / me gusta pasear.", "A Laura le gusta (nunca _a Laura gusta_).", "Le di (a una persona) / les di (a varias)."],
+  },
+  related: [
+    { path: "/gramatica/gustar-interesar-doler-faltar-concordancia", label: "Clase: Gustar, interesar, doler, faltar: concordancia" },
+    { path: "/gramatica/objeto-indirecto-le-les-me-te", label: "Clase: Objeto indirecto: le, les, me, te, nos" },
+  ],
 };

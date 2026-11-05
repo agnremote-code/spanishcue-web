@@ -149,3 +149,4 @@ operaciones de git.
   lectura 5: 150–200, 10: 220–290, 15: 300–360, 20: 380–460 palabras;
   escucha 5: 120–150, 10: 160–190, 15: 195–220, 20: 230–280 palabras.
 - C2 checkpoint: `…-recuperacion` con ≥ 8 ítems; C2 normal: con ≥ 4.
+- Preguntas del quiz siempre específicas (el control de duplicados compara solo `q`; «¿Cuál es correcta?» choca con otras semanas).
