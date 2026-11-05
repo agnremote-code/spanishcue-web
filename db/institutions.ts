@@ -108,40 +108,39 @@ export async function requireAdmin(db: D1Database, userId: string): Promise<Memb
 
 /**
  * Recomputes institutional grants from scratch: the first `seat_limit` members
- * (by join date) hold a seat, the rest do not. Idempotent and deterministic,
- * so concurrent joins converge on the same allocation.
+ * (by join date) hold a seat, the rest do not. Idempotent and deterministic.
+ * The ranking and the limit are evaluated inside SQL when the batch runs, never
+ * from values read earlier, so a sync that started before a seat reduction (or a
+ * join) cannot re-grant seats from that stale snapshot: every batch converges on
+ * the allocation of the database state it executes against.
  */
 export async function syncSeats(db: D1Database, institutionId: string): Promise<void> {
-  const institution = await db.prepare("SELECT seat_limit FROM institutions WHERE id = ?").bind(institutionId).first<{ seat_limit: number }>();
-  const members = await db
-    .prepare("SELECT user_id FROM institution_members WHERE institution_id = ? ORDER BY created_at, user_id")
-    .bind(institutionId)
-    .all<{ user_id: string }>();
-  const limit = institution?.seat_limit ?? 0;
   const now = nowSeconds();
-  const statements = members.results.map(({ user_id }, index) =>
-    index < limit
-      ? db
-          .prepare(
-            `INSERT INTO access_grants (
-              user_id, product_code, access_level, source, source_reference,
-              plan_code, status, starts_at, expires_at, created_at, updated_at
-            ) VALUES (?, ?, 'full', 'institution', ?, 'institution', 'active', ?, NULL, ?, ?)
-            ON CONFLICT(user_id, product_code, source) DO UPDATE SET
-              access_level = 'full', status = 'active', source_reference = excluded.source_reference,
-              expires_at = NULL, updated_at = excluded.updated_at`,
-          )
-          .bind(user_id, TEACHER_LIBRARY_PRODUCT, institutionId, now, now, now)
-      : db
-          .prepare(
-            `UPDATE access_grants SET status = 'revoked', updated_at = ?
-             WHERE user_id = ? AND product_code = ? AND source = 'institution' AND status != 'revoked'`,
-          )
-          .bind(now, user_id, TEACHER_LIBRARY_PRODUCT),
-  );
-  // A grant from this academy held by someone who is no longer a member (e.g. a
-  // removal interrupted before its revoke) is revoked here, so every sync heals it.
-  statements.push(
+  const ranked = "SELECT user_id, ROW_NUMBER() OVER (ORDER BY created_at, user_id) AS position FROM institution_members WHERE institution_id = ?";
+  const limit = "COALESCE((SELECT seat_limit FROM institutions WHERE id = ?), 0)";
+  await db.batch([
+    db
+      .prepare(
+        `INSERT INTO access_grants (
+          user_id, product_code, access_level, source, source_reference,
+          plan_code, status, starts_at, expires_at, created_at, updated_at
+        )
+        SELECT user_id, ?, 'full', 'institution', ?, 'institution', 'active', ?, NULL, ?, ?
+        FROM (${ranked}) WHERE position <= ${limit}
+        ON CONFLICT(user_id, product_code, source) DO UPDATE SET
+          access_level = 'full', status = 'active', source_reference = excluded.source_reference,
+          expires_at = NULL, updated_at = excluded.updated_at`,
+      )
+      .bind(TEACHER_LIBRARY_PRODUCT, institutionId, now, now, now, institutionId, institutionId),
+    db
+      .prepare(
+        `UPDATE access_grants SET status = 'revoked', updated_at = ?
+         WHERE product_code = ? AND source = 'institution' AND status != 'revoked'
+           AND user_id IN (SELECT user_id FROM (${ranked}) WHERE position > ${limit})`,
+      )
+      .bind(now, TEACHER_LIBRARY_PRODUCT, institutionId, institutionId),
+    // A grant from this academy held by someone who is no longer a member (e.g. a
+    // removal interrupted before its revoke) is revoked here, so every sync heals it.
     db
       .prepare(
         `UPDATE access_grants SET status = 'revoked', updated_at = ?
@@ -149,8 +148,7 @@ export async function syncSeats(db: D1Database, institutionId: string): Promise<
            AND user_id NOT IN (SELECT user_id FROM institution_members WHERE institution_id = ?)`,
       )
       .bind(now, TEACHER_LIBRARY_PRODUCT, institutionId, institutionId),
-  );
-  await db.batch(statements);
+  ]);
 }
 
 function revokeInstitutionGrant(db: D1Database, userId: string, institutionId: string) {
@@ -289,16 +287,31 @@ export async function acceptInvitation(db: D1Database, userId: string, userEmail
     if (existing.institution.id === row.institution_id) return existing;
     throw new InstitutionError("Tu cuenta ya pertenece a otra academia.", 409);
   }
-  // Claiming the invitation first makes a second use of the same link fail.
-  const claimed = await db
-    .prepare("UPDATE institution_invitations SET accepted_at = ?, accepted_by = ? WHERE id = ? AND accepted_at IS NULL AND revoked_at IS NULL")
-    .bind(now, userId, row.id)
-    .run();
-  if (!claimed.meta.changes) throw new InstitutionError("La invitación ya se usó.", 410);
-  await db
-    .prepare("INSERT INTO institution_members (institution_id, user_id, role, created_at) VALUES (?, ?, ?, ?) ON CONFLICT DO NOTHING")
-    .bind(row.institution_id, userId, row.role === "admin" ? "admin" : "teacher", now)
-    .run();
+  // One batch: the membership is inserted only while the invitation is still open, and the
+  // invitation is claimed only if that membership exists. A join to another academy that
+  // lands in between (members are unique per account) leaves the link unused, never burnt.
+  const [, claimed] = await db.batch([
+    db
+      .prepare(
+        `INSERT INTO institution_members (institution_id, user_id, role, created_at)
+         SELECT institution_id, ?, ?, ? FROM institution_invitations
+         WHERE id = ? AND accepted_at IS NULL AND revoked_at IS NULL AND expires_at > ?
+         ON CONFLICT DO NOTHING`,
+      )
+      .bind(userId, row.role === "admin" ? "admin" : "teacher", now, row.id, now),
+    db
+      .prepare(
+        `UPDATE institution_invitations SET accepted_at = ?, accepted_by = ?
+         WHERE id = ? AND accepted_at IS NULL AND revoked_at IS NULL
+           AND EXISTS (SELECT 1 FROM institution_members WHERE institution_id = ? AND user_id = ?)`,
+      )
+      .bind(now, userId, row.id, row.institution_id, userId),
+  ]);
+  if (!claimed?.meta.changes) {
+    const other = await getMembership(db, userId);
+    if (other && other.institution.id !== row.institution_id) throw new InstitutionError("Tu cuenta ya pertenece a otra academia.", 409);
+    throw new InstitutionError("La invitación ya se usó.", 410);
+  }
   await syncSeats(db, row.institution_id);
   const membership = await getMembership(db, userId);
   if (!membership) throw new InstitutionError("No pudimos unirte a la academia.", 503);
