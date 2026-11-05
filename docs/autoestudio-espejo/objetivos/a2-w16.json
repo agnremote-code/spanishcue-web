@@ -1,0 +1,12 @@
+[
+  [16, "gram", "g076", "Se impersonal introductorio: instrucciones", "Puedo dar instrucciones, explicar recetas y leer normas sin decir quién lo hace con se + verbo en tercera persona, en singular o plural según la cosa, y con no se puede + infinitivo.", ["a2.gram.g058"], { "related": ["/gramatica/se-impersonal-introductorio-instrucciones"] }],
+  [16, "gram", "g077", "Conectores de secuencia y explicación", "Puedo contar en orden lo que pasó con primero, luego, entonces, al final y por último, explicar la causa con porque y como, la consecuencia con por eso y así que, y aclarar con es decir.", ["a2.gram.g047", "a2.gram.g050"], { "related": ["/gramatica/conectores-de-secuencia-y-explicacion"] }],
+  [16, "voc", "w16-cocina-receta", "Cocina, ingredientes y pasos de una receta", "Puedo nombrar ingredientes, utensilios y acciones de cocina para explicar cómo se prepara un plato.", ["a2.gram.g076"]],
+  [16, "pron", "w16-pausa-conectores", "La pausa después del conector", "Puedo hacer una pequeña pausa y subir el tono después de un conector (primero, como, así que) para que se oiga el orden de mi historia.", []],
+  [16, "lis", "w16-taller-gallo-pinto", "Escuchar una clase de cocina", "Puedo entender en una clase de cocina los pasos de una receta, las normas de la cocina y por qué algo salió mal.", ["a2.gram.g076", "a2.gram.g077"]],
+  [16, "read", "w16-blog-curso-cocina", "Leer un blog sobre un curso de cocina", "Puedo seguir el orden de los hechos y las causas en una entrada de blog sobre un primer día de curso con una receta dentro.", ["a2.gram.g076", "a2.gram.g077"]],
+  [16, "wri", "w16-receta-con-historia", "Escribir una receta con su historia", "Puedo escribir un texto de 60 a 110 palabras que explica cómo se prepara un plato y cuenta en orden una vez que lo cociné.", ["a2.gram.g076", "a2.gram.g077", "a2.disc.w16-ordenar-explicar"]],
+  [16, "spk", "w16-explicar-receta", "Explicar una receta y contar un día de cocina", "Puedo explicar en voz alta cómo se hace un plato, cuáles son las normas de una cocina y qué pasó un día que cociné, durante unos tres minutos en total.", ["a2.fun.w16-dar-instrucciones"]],
+  [16, "fun", "w16-dar-instrucciones", "Dar instrucciones generales y normas", "Puedo explicar a cualquier persona cómo se hace algo y qué no se puede hacer en un lugar.", ["a2.gram.g076"]],
+  [16, "disc", "w16-ordenar-explicar", "Ordenar una historia y explicar causas", "Puedo unir frases sueltas en una historia ordenada que explica por qué pasó cada cosa y qué consecuencia tuvo.", ["a2.gram.g077"]]
+]

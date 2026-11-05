@@ -1,0 +1,12 @@
+[
+  [11, "gram", "g066", "Relativas especificativas con que", "Puedo decir de qué persona, cosa o lugar hablo con que + dato (la vecina que vive enfrente, el pan que compro), sin repetir lo o la y con el verbo concordado con el nombre.", ["a1.gram.g023"], { "related": ["/gramatica/relativas-especificativas-con-que"] }],
+  [11, "gram", "g067", "Relativas con donde, cuando y lo que", "Puedo usar donde después de un lugar, cuando o el día que para un momento y lo que para una idea sin nombre (lo que más me gusta es…).", ["a2.gram.g066"], { "related": ["/gramatica/relativas-con-donde-cuando-y-lo"] }],
+  [11, "voc", "w11-barrio-vecinos", "Lugares y gente del barrio", "Puedo nombrar lugares y personas de un barrio y usar fórmulas para describir algo cuando no sé su nombre.", ["a2.gram.g066"]],
+  [11, "pron", "w11-que-sin-fuerza", "Que sin fuerza y qué con fuerza", "Puedo oír y pronunciar la diferencia entre el que relativo, sin fuerza y pegado al verbo, y el qué de las preguntas, con fuerza y tilde.", []],
+  [11, "lis", "w11-paseo-barrio", "Escuchar una presentación del barrio", "Puedo entender en un paseo quién es cada persona, dónde está cada lugar y qué consejo práctico me dan.", ["a2.gram.g066", "a2.gram.g067"]],
+  [11, "read", "w11-correo-barrio", "Leer un correo sobre una ciudad nueva", "Puedo entender un correo personal que describe personas, lugares y momentos de una ciudad nueva y saber a qué se refiere cada relativo.", ["a2.gram.g066", "a2.gram.g067"]],
+  [11, "wri", "w11-guia-barrio", "Escribir una guía breve del barrio", "Puedo escribir un mensaje de 60 a 110 palabras que presenta mi barrio a alguien que llega, con que, donde, cuando y lo que.", ["a2.gram.g066", "a2.gram.g067", "a2.disc.w11-unir-ideas"]],
+  [11, "spk", "w11-presentar-barrio", "Presentar el barrio y adivinar palabras", "Puedo presentar mi barrio, definir cosas sin decir su nombre y hablar de un lugar y un momento importantes durante unos tres minutos en total.", ["a2.fun.w11-definir-sin-palabra"]],
+  [11, "fun", "w11-definir-sin-palabra", "Definir algo sin saber la palabra", "Puedo describir una cosa, un lugar o una persona cuyo nombre no recuerdo con es una cosa que…, es un lugar donde…", ["a2.gram.g066", "a2.gram.g067"]],
+  [11, "disc", "w11-unir-ideas", "Unir ideas sin repetir el nombre", "Puedo convertir dos frases que repiten un nombre en una sola con que o donde para escribir de forma más fluida.", ["a2.gram.g066"]]
+]

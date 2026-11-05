@@ -1,491 +1,864 @@
 import type { Module } from "../../types";
 
+/**
+ * B1 · semana 11 · Autoestudio espejo de G108 (perífrasis terminativas: acabar de, dejar de)
+ * y G109 (volver a + infinitivo). Repaso autónomo con Nuria, una profesora de Granada que
+ * acaba de terminar un reto de treinta días sin redes sociales.
+ */
 export const b1w11: Module = {
   "id": "b1-11",
   "level": "b1",
   "week": 11,
   "kind": "core",
-  "title": "Cuando tengamos la respuesta",
-  "subtitle": "Organizar proyectos sujetos a plazos y acontecimientos futuros.",
+  "title": "Treinta días sin redes en Granada: acabar, dejar y volver a empezar",
+  "subtitle": "Repaso de las perífrasis que cuentan el final de una acción (acabar de, terminar de, dejar de, llegar a) y de «volver a» para repetir o retomar.",
   "stop": {
     "place": "Granada",
     "country": "España"
   },
   "minutes": 95,
   "newObjectives": [
-    "b1.gram.temporales-subjuntivo",
-    "b1.voc.proyectos-metas",
-    "b1.pron.enlaces-rapidos",
-    "b1.fun.planificar-condiciones",
-    "b1.lis.mensaje-planes",
-    "b1.gram.cliticos-combinados"
+    "b1.gram.g108",
+    "b1.gram.g109",
+    "b1.voc.w11-habitos-digitales",
+    "b1.pron.w11-acento-presente-pasado",
+    "b1.lis.w11-charla-teteria",
+    "b1.read.w11-blog-dia-31",
+    "b1.wri.w11-balance-cambio",
+    "b1.spk.w11-contar-reto",
+    "b1.fun.w11-contar-cambios",
+    "b1.disc.w11-antes-despues"
   ],
-  "reviewObjectives": [
-    "b1.rev.checkpoint-2",
-    "b1.wri.foro"
-  ],
-  "prerequisites": [
-    "b1-10"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo organizar proyectos sujetos a plazos y acontecimientos futuros.",
+    "canDo": "Al final de esta semana puedes contar un cambio de hábito: lo que acabas de conseguir («acabo de cumplir un mes»), lo que dejaste de hacer, lo que volviste a hacer y lo que no quieres volver a hacer.",
     "steps": [
-      "Reconstruye la situación a partir del audio y la lectura.",
-      "Relaciona las formas con una intención y comprueba tus elecciones.",
-      "Prepara un texto revisado y una intervención con preguntas.",
-      "Lleva a clase una propuesta propia y una duda concreta."
+      "Repasa la diferencia entre «acabo de» (hace un momento) y «acabé de» (terminé), y entre «terminar de» y «dejar de».",
+      "Repasa «volver a + infinitivo» en presente, pasado y futuro, con los pronombres bien colocados.",
+      "Escucha a dos amigos que hablan en una tetería del Albaicín sobre un mes sin redes sociales.",
+      "Lee la entrada de blog que Nuria publica el día 31 de su reto.",
+      "Escribe el balance de un cambio de hábito, revísalo y cuéntalo en voz alta."
     ]
   },
   "theory": {
-    "intro": "La misión de esta semana: Organizar proyectos sujetos a plazos y acontecimientos futuros.",
+    "intro": "Esta semana repasas dos clases que sirven para hablar de cambios en tu vida. La primera te ayuda a contar cómo termina una acción: si acaba de pasar, si la completas, si la abandonas o hasta dónde llega. La segunda, a contar lo que se repite o lo que retomas después de una pausa. Te acompaña Nuria, una profesora de Granada que acaba de terminar un reto: treinta días sin redes sociales.",
     "parts": [
       {
-        "heading": "Forma y significado",
+        "heading": "«Acabar de»: hace un momento o ya terminado",
         "body": [
-          "Cuando, en cuanto y hasta que llevan indicativo si presentan hábitos o hechos: cuando llego, llamo. Para un acontecimiento futuro pendiente usan subjuntivo: cuando llegue, llamaré. Antes de que introduce subjuntivo; antes de salir utiliza infinitivo cuando no necesitas otra oración."
+          "En presente, «acabar de + infinitivo» sitúa una acción en un pasado muy reciente: «Acabo de apagar el móvil» (hace un minuto). En un relato en pasado, el imperfecto hace lo mismo: «Acababa de salir de clase cuando me llamó mi hermana».",
+          "En indefinido, perfecto o futuro, en cambio, «acabar de» significa lo mismo que «terminar de»: completar algo que ya estaba en marcha. «Ayer acabé de leer la novela» quiere decir que leí las últimas páginas, no que la leí hace un momento."
+        ],
+        "table": {
+          "caption": "Una perífrasis, dos sentidos",
+          "head": [
+            "Forma",
+            "Qué significa",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "acabo de + infinitivo",
+              "hace muy poco",
+              "Acabo de borrar la aplicación."
+            ],
+            [
+              "acababa de + infinitivo",
+              "hacía muy poco (en un relato)",
+              "Acababa de cenar cuando sonó el timbre."
+            ],
+            [
+              "acabé de + infinitivo",
+              "terminé lo que estaba haciendo",
+              "Acabé de pintar la habitación a las nueve."
+            ],
+            [
+              "acabaré de + infinitivo",
+              "terminaré",
+              "Acabaré de corregir los exámenes el lunes."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Acabé de llegar a casa, ¿te llamo luego?",
+            "right": "Acabo de llegar a casa, ¿te llamo luego?",
+            "why": "Para decir que algo pasó hace un momento, usa el presente «acabo de»."
+          },
+          {
+            "wrong": "Acabo de terminar el libro hace dos años.",
+            "right": "Terminé el libro hace dos años.",
+            "why": "«Acabo de» es un pasado reciente: no combina con un tiempo lejano como «hace dos años»."
+          }
+        ]
+      },
+      {
+        "heading": "Terminar de, dejar de, llegar a y acabar + gerundio",
+        "body": [
+          "«Terminar de» completa una tarea: «Termino de fregar y salgo». «Dejar de» interrumpe o abandona una actividad o un hábito, aunque no esté terminado: «Dejé de mirar el móvil en la cama». Con «no» delante, «no dejar de» significa seguir sin parar («No deja de llover»), y en imperativo es una invitación amable: «No dejes de visitar el Albaicín».",
+          "Para el final de una historia tienes dos herramientas más. «Llegar a + infinitivo» marca el punto máximo, a veces sorprendente: «Llegué a pasar seis horas al día con el móvil». «Acabar + gerundio» (o «acabar por + infinitivo») cuenta el resultado final después de un proceso: «Al final acabé apagándolo todo»."
         ],
         "examples": [
           {
-            "es": "Cuando recibamos la respuesta, reservaremos la sala."
+            "es": "Cuando termine de cenar, te escribo.",
+            "note": "Completar una tarea."
           },
           {
-            "es": "Cuando recibimos una solicitud, enviamos un aviso."
+            "es": "Mi padre dejó de fumar a los cuarenta.",
+            "note": "Abandonar un hábito."
           },
           {
-            "es": "En cuanto termine el diseño, te lo mando."
+            "es": "Si pasas por Granada, no dejes de subir al mirador.",
+            "note": "Invitación: no te lo pierdas."
+          },
+          {
+            "es": "No llegó a terminar la carrera.",
+            "note": "«No llegar a»: nunca alcanzó ese punto."
+          },
+          {
+            "es": "Empezamos discutiendo y acabamos riéndonos.",
+            "note": "Resultado final de un proceso."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Cuando recibiré la respuesta, llamaré.",
-            "right": "Cuando reciba la respuesta, llamaré.",
-            "why": "La temporal futura usa presente de subjuntivo."
+            "wrong": "Dejé fumar hace tres años.",
+            "right": "Dejé de fumar hace tres años.",
+            "why": "Para abandonar un hábito hace falta «de». Sin «de», «dejar + infinitivo» significa «permitir»."
+          },
+          {
+            "wrong": "No dejas de probar el café de esa tienda.",
+            "right": "No dejes de probar el café de esa tienda.",
+            "why": "Para recomendar algo se usa el imperativo negativo: «no dejes de»."
+          }
+        ],
+        "tip": "Pregúntate: ¿la acción se completó (terminar de) o se cortó antes de terminar (dejar de)?"
+      },
+      {
+        "heading": "«Volver a + infinitivo»: otra vez, en cualquier tiempo",
+        "body": [
+          "«Volver a + infinitivo» significa «otra vez»: una acción se repite o se retoma después de una pausa. Solo se conjuga «volver»; el infinitivo no cambia: «vuelvo a leer», «volví a leer», «he vuelto a leer», «volveré a leer», «espero que vuelvas a leer».",
+          "Los pronombres van delante de «volver» o pegados al infinitivo, nunca en los dos sitios: «Lo volví a instalar» o «Volví a instalarlo». Con verbos pronominales pasa lo mismo: «Se volvió a caer la red» o «Volvió a caerse la red»."
+        ],
+        "table": {
+          "caption": "Volver a en los tiempos que ya conoces",
+          "head": [
+            "Tiempo",
+            "Forma",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Presente",
+              "vuelvo, vuelves, vuelve, volvemos, volvéis, vuelven + a",
+              "Este año vuelvo a estudiar alemán."
+            ],
+            [
+              "Indefinido",
+              "volví, volviste, volvió, volvimos, volvisteis, volvieron + a",
+              "Volvimos a vernos después de diez años."
+            ],
+            [
+              "Perfecto",
+              "he vuelto, has vuelto, ha vuelto… + a",
+              "Ha vuelto a subir el precio del alquiler."
+            ],
+            [
+              "Futuro",
+              "volveré, volverás, volverá… + a",
+              "Volverás a tocar la guitarra, ya verás."
+            ],
+            [
+              "Imperativo negativo",
+              "no vuelvas, no vuelva, no volváis, no vuelvan + a",
+              "No vuelvas a dejar la puerta abierta."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Lo volví a instalarlo.",
+            "right": "Lo volví a instalar. / Volví a instalarlo.",
+            "why": "El pronombre va en un solo sitio: delante de «volver» o detrás del infinitivo."
+          },
+          {
+            "wrong": "Volví a leí el mensaje.",
+            "right": "Volví a leer el mensaje.",
+            "why": "Detrás de «volver a» el verbo va siempre en infinitivo."
           }
         ]
       },
       {
-        "heading": "Organizar la comunicación",
+        "heading": "No volver a, otra vez, repetir y el prefijo re-",
         "body": [
-          "Un plan útil diferencia fecha fija, condición temporal y responsable. No confundas cuando llegue la autorización con si llega: la primera organiza el momento; la segunda plantea una condición. Resume dependencias para que otra persona sepa qué puede hacer ya y qué debe esperar."
+          "En negativo, «no volver a» significa «nunca más»: sirve para prometer («No volverá a pasar»), advertir («No vuelvas a contestar ese correo») o contar algo que no se repitió («Nunca volví a verla»). No lo confundas con «dejar de»: «dejé de ir al gimnasio» cuenta que un hábito se terminó; «no volví a ir al gimnasio» cuenta que, después de una vez, ya no fui nunca.",
+          "Para repetir también tienes «otra vez» y «de nuevo» («Lo leí otra vez»), «repetir» + nombre («Repetí el examen»; nunca «repetí a hacer») y el prefijo «re-» en algunos verbos (releer, rehacer, reenviar). Cuidado: «volver a + un lugar» es regresar: «Volví a Granada en 2020»."
         ],
         "examples": [
           {
-            "es": "Esperaremos hasta que abra la oficina."
+            "es": "Te prometo que no vuelvo a llegar tarde.",
+            "note": "Promesa en presente."
           },
           {
-            "es": "Antes de que lleguen los invitados, revisa las sillas."
+            "es": "Releí el contrato dos veces antes de firmarlo.",
+            "note": "Prefijo «re-»."
           },
           {
-            "es": "Voy a ir a comprobar la entrada."
+            "es": "Volví al pueblo y volví a ver a mis primos.",
+            "note": "Regresar a un lugar / ver otra vez."
+          },
+          {
+            "es": "Ojalá no vuelva a fallar la conexión.",
+            "note": "Deseo con subjuntivo."
           }
-        ]
-      },
-      {
-        "heading": "Pronombres de objeto en planes y recados",
-        "body": [
-          "Los pronombres de OI preceden a los de OD: te lo envío. Le o les pasan a se delante de lo, la, los, las: se lo mando a Ana. Con muchas perífrasis el grupo puede ir antes del verbo o unido al infinitivo: se lo voy a enviar / voy a enviárselo. No separes el grupo; revisa la tilde al unirlo."
         ],
-        "examples": [
+        "mistakes": [
           {
-            "es": "La lista se la enviaré a la coordinadora."
-          },
-          {
-            "es": "Voy a mandárselo / se lo voy a mandar."
-          },
-          {
-            "es": "Envíamelo cuando esté listo; no me lo envíes antes."
+            "wrong": "El técnico repitió a revisar la caldera.",
+            "right": "El técnico volvió a revisar la caldera.",
+            "why": "«Repetir» no forma perífrasis con «a + infinitivo»: para «otra vez» usa «volver a»."
           }
-        ]
+        ],
+        "tip": "Si puedes añadir «otra vez» al final de la frase sin cambiar el sentido, «volver a» es la opción natural."
       }
     ]
   },
   "grammar": {
+    "intro": "Primero practicas cómo termina una acción; después, cómo se repite.",
     "exercises": [
       {
-        "id": "b1-11-forms",
-        "type": "gap",
-        "prompt": "Completa estas situaciones de «Cuando tengamos la respuesta» con la forma que expresa la relación indicada.",
+        "id": "b1-11-gramatica-final",
+        "type": "classify",
+        "title": "¿Cómo termina la acción?",
+        "prompt": "Clasifica cada frase de Nuria según lo que expresa la perífrasis.",
+        "categories": [
+          "Acaba de pasar",
+          "Se completa",
+          "Se interrumpe o se abandona",
+          "Punto máximo o resultado final"
+        ],
         "items": [
           {
-            "q": "Cuando mañana ___ el permiso, avisaré.",
-            "answers": [
-              [
-                "llegue"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "text": "Acabo de enviarte la foto del mirador.",
+            "cat": 0
           },
           {
-            "q": "Todos los lunes, cuando ___ el correo, respondo.",
-            "answers": [
-              [
-                "leo"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "text": "Ya terminé de ordenar los apuntes del curso.",
+            "cat": 1
           },
           {
-            "q": "No imprimiremos nada hasta que ___ el cartel.",
-            "answers": [
-              [
-                "confirmen"
-              ]
-            ],
-            "why": "Relaciona la forma con la intención y el contexto temporal de la oración."
+            "text": "En marzo dejé de seguir a cuentas que me ponían de mal humor.",
+            "cat": 2
+          },
+          {
+            "text": "Llegué a mirar el móvil más de cien veces al día.",
+            "cat": 3
+          },
+          {
+            "text": "Mi compañera acababa de entrar cuando se fue la luz.",
+            "cat": 0
+          },
+          {
+            "text": "El viernes acabé de leer la novela que me regalaste.",
+            "cat": 1
+          },
+          {
+            "text": "Paré de contestar mensajes después de las diez.",
+            "cat": 2
+          },
+          {
+            "text": "Al final acabé borrando la aplicación.",
+            "cat": 3
           }
-        ],
-        "bank": [
-          "llegue",
-          "leo",
-          "confirmen"
         ]
       },
       {
-        "id": "b1-11-repair",
+        "id": "b1-11-gramatica-perifrasis",
+        "type": "gap",
+        "title": "Acabar, terminar, dejar o llegar",
+        "prompt": "Completa con la perífrasis adecuada en la forma correcta.",
+        "items": [
+          {
+            "q": "¿Me llamas en cinco minutos? ___ (acabar, yo) de entrar en la ducha.",
+            "answers": [
+              [
+                "Acabo",
+                "acabo"
+              ]
+            ],
+            "why": "Pasado muy reciente: presente de «acabar de»."
+          },
+          {
+            "q": "Hasta que no ___ (terminar, tú) de comer, no te levantes de la mesa.",
+            "answers": [
+              [
+                "termines"
+              ]
+            ],
+            "why": "«Hasta que» con futuro lleva subjuntivo; «terminar de» completa la tarea."
+          },
+          {
+            "q": "Mi abuela ___ (dejar) de conducir a los ochenta años.",
+            "answers": [
+              [
+                "dejó"
+              ]
+            ],
+            "why": "Abandono de una actividad en un momento cerrado del pasado."
+          },
+          {
+            "q": "Si vas a Sevilla, no ___ (dejar, tú) de ver la catedral.",
+            "answers": [
+              [
+                "dejes"
+              ]
+            ],
+            "why": "Recomendación: imperativo negativo «no dejes de»."
+          },
+          {
+            "q": "Con la crisis, la tienda ___ (llegar) a cerrar dos meses.",
+            "answers": [
+              [
+                "llegó"
+              ]
+            ],
+            "why": "«Llegar a» marca un punto extremo."
+          }
+        ]
+      },
+      {
+        "id": "b1-11-gramatica-volver-a",
+        "type": "choice",
+        "title": "Volver a en su sitio",
+        "prompt": "Elige la forma correcta.",
+        "items": [
+          {
+            "q": "Se cayó la wifi a las ocho y ___ a las nueve.",
+            "options": [
+              "se volvió a caer",
+              "volvió a cayó",
+              "se volvió a caerse"
+            ],
+            "answer": 0,
+            "why": "El pronombre «se» va en un solo sitio y el segundo verbo, en infinitivo."
+          },
+          {
+            "q": "El mensaje no llegó, así que ___.",
+            "options": [
+              "volví a enviarlo de nuevo",
+              "lo volví a enviar",
+              "lo volví a enviarlo"
+            ],
+            "answer": 1,
+            "why": "Pronombre delante de «volver» y nada repetido."
+          },
+          {
+            "q": "Te lo prometo: ___ a olvidar tu cumpleaños.",
+            "options": [
+              "no vuelvo",
+              "no repito",
+              "no dejo"
+            ],
+            "answer": 0,
+            "why": "Promesa de «nunca más»: «no volver a»."
+          },
+          {
+            "q": "Después de la operación, mi tío ___ correr maratones.",
+            "options": [
+              "volvió a",
+              "volvió",
+              "repitió a"
+            ],
+            "answer": 0,
+            "why": "Retoma una actividad: «volver a + infinitivo»."
+          },
+          {
+            "q": "Espero que el técnico no ___ a cobrarnos la visita.",
+            "options": [
+              "vuelve",
+              "volverá",
+              "vuelva"
+            ],
+            "answer": 2,
+            "why": "«Esperar que» lleva subjuntivo: «vuelva»."
+          },
+          {
+            "q": "Ana ___ a Granada en verano para ver a su familia.",
+            "options": [
+              "volvió a ir",
+              "volvió",
+              "volvió a volver"
+            ],
+            "answer": 1,
+            "why": "«Volver a + lugar» = regresar; no hace falta otro verbo."
+          }
+        ]
+      },
+      {
+        "id": "b1-11-gramatica-errores",
         "type": "error",
-        "prompt": "Revisa la coherencia y la forma en estas frases del caso de la semana.",
+        "title": "Corrige el error",
+        "prompt": "Cada frase tiene un error de las dos clases. Escríbela bien.",
         "items": [
           {
-            "sentence": "Cuando recibiré la respuesta, llamaré.",
+            "sentence": "Ayer dejé ver series hasta tarde porque estaba agotada.",
             "answers": [
-              "Cuando reciba la respuesta, llamaré."
+              "Ayer dejé de ver series hasta tarde porque estaba agotada."
             ],
-            "why": "La temporal futura usa presente de subjuntivo."
+            "why": "Sin «de», «dejar + infinitivo» significa «permitir»."
           },
           {
-            "sentence": "Antes de que llegan los demás, prepara la mesa.",
+            "sentence": "Lo volví a leerlo y por fin lo entendí.",
             "answers": [
-              "Antes de que lleguen los demás, prepara la mesa."
+              "Lo volví a leer y por fin lo entendí.",
+              "Volví a leerlo y por fin lo entendí."
             ],
-            "why": "Antes de que introduce subjuntivo."
+            "why": "El pronombre va en un solo lugar."
           },
           {
-            "sentence": "En cuanto terminamos mañana, saldremos.",
+            "sentence": "Acabé de hablar con tu madre hace un minuto.",
             "answers": [
-              "En cuanto terminemos mañana, saldremos."
+              "Acabo de hablar con tu madre hace un minuto."
             ],
-            "why": "Se trata de un acontecimiento pendiente."
-          }
-        ]
-      },
-      {
-        "id": "b1-11-cliticos-combinados",
-        "type": "gap",
-        "prompt": "Aplica pronombres de objeto en planes y recados a la misión de esta semana.",
-        "bank": [
-          "se",
-          "enviársela",
-          "me"
-        ],
-        "items": [
-          {
-            "q": "Le mando el plano: ___ lo mando.",
-            "answers": [
-              [
-                "se"
-              ]
-            ],
-            "why": "Los pronombres de OI preceden a los de OD: te lo envío. Le o les pasan a se delante de lo, la, los, las: se lo mando a Ana. Con muchas perífrasis el grupo puede ir antes del verbo o unido al infinitivo: se lo voy a enviar / voy a enviárselo. No separes el grupo; revisa la tilde al unirlo."
+            "why": "Pasado reciente: «acabo de», en presente."
           },
           {
-            "q": "Voy a enviar la lista a Ana: voy a ___.",
+            "sentence": "Mi hermano repitió a suspender el examen de conducir.",
             "answers": [
-              [
-                "enviársela"
-              ]
+              "Mi hermano volvió a suspender el examen de conducir."
             ],
-            "why": "Los pronombres de OI preceden a los de OD: te lo envío. Le o les pasan a se delante de lo, la, los, las: se lo mando a Ana. Con muchas perífrasis el grupo puede ir antes del verbo o unido al infinitivo: se lo voy a enviar / voy a enviárselo. No separes el grupo; revisa la tilde al unirlo."
-          },
-          {
-            "q": "No ___ lo envíes todavía; lo necesito aquí.",
-            "answers": [
-              [
-                "me"
-              ]
-            ],
-            "why": "Los pronombres de OI preceden a los de OD: te lo envío. Le o les pasan a se delante de lo, la, los, las: se lo mando a Ana. Con muchas perífrasis el grupo puede ir antes del verbo o unido al infinitivo: se lo voy a enviar / voy a enviárselo. No separes el grupo; revisa la tilde al unirlo."
+            "why": "Para «otra vez» se usa «volver a», no «repetir a»."
           }
         ]
       }
     ]
   },
   "vocabulary": {
-    "intro": "Aprende cada expresión junto a su situación de uso; reutiliza al menos cuatro en tu producción.",
+    "intro": "Palabras para hablar de tu relación con el móvil, las redes y los hábitos que quieres cambiar.",
     "groups": [
       {
-        "title": "Cuando tengamos la respuesta · acciones y recursos",
+        "title": "El móvil y las redes",
         "items": [
           {
-            "es": "cumplir un plazo",
-            "note": "terminar dentro del tiempo acordado"
+            "es": "la pantalla"
           },
           {
-            "es": "aplazar una entrega",
-            "note": "pasarla a una fecha posterior"
+            "es": "las notificaciones"
           },
           {
-            "es": "dar el visto bueno",
-            "note": "aprobar una propuesta"
+            "es": "el tiempo de uso",
+            "note": "Las horas que pasas con el móvil."
           },
           {
-            "es": "repartir responsabilidades",
-            "note": "decidir quién hace cada parte"
+            "es": "deslizar el dedo"
+          },
+          {
+            "es": "estar enganchado a algo"
+          },
+          {
+            "es": "desinstalar una aplicación"
           }
         ]
       },
       {
-        "title": "Matices para esta misión",
+        "title": "Cambiar un hábito",
         "items": [
           {
-            "es": "tener algo pendiente",
-            "note": "no haberlo completado aún"
+            "es": "el reto"
           },
           {
-            "es": "alcanzar una meta",
-            "note": "lograr un objetivo"
+            "es": "desconectar"
           },
           {
-            "es": "prever un margen",
-            "note": "dejar tiempo para imprevistos"
+            "es": "quitarse un hábito"
           },
           {
-            "es": "confirmar una reserva",
-            "note": "comprobar que un espacio está asignado"
+            "es": "la recaída",
+            "note": "Volver a un hábito que habías dejado."
+          },
+          {
+            "es": "retomar una afición"
+          },
+          {
+            "es": "cumplir un mes"
+          }
+        ]
+      },
+      {
+        "title": "Expresiones útiles",
+        "items": [
+          {
+            "es": "echar un vistazo"
+          },
+          {
+            "es": "el modo avión"
+          },
+          {
+            "es": "estar pendiente del móvil"
+          },
+          {
+            "es": "merecer la pena"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "b1-11-lexis",
+        "id": "b1-11-vocabulario-definiciones",
         "type": "match",
-        "prompt": "Relaciona expresiones de «Cuando tengamos la respuesta» con su significado en este contexto.",
+        "title": "Cada expresión con su definición",
+        "prompt": "Une cada expresión con su explicación.",
         "pairs": [
           {
-            "left": "cumplir un plazo",
-            "right": "terminar dentro del tiempo acordado"
+            "left": "la recaída",
+            "right": "el momento en que vuelves a un hábito que habías dejado"
           },
           {
-            "left": "aplazar una entrega",
-            "right": "pasarla a una fecha posterior"
+            "left": "estar enganchado",
+            "right": "no poder dejar algo aunque quieras"
           },
           {
-            "left": "dar el visto bueno",
-            "right": "aprobar una propuesta"
+            "left": "el modo avión",
+            "right": "la función que corta llamadas, datos y wifi"
           },
           {
-            "left": "repartir responsabilidades",
-            "right": "decidir quién hace cada parte"
+            "left": "retomar una afición",
+            "right": "volver a practicar algo que te gustaba"
           },
           {
-            "left": "tener algo pendiente",
-            "right": "no haberlo completado aún"
+            "left": "el tiempo de uso",
+            "right": "las horas diarias que pasas mirando la pantalla"
+          }
+        ],
+        "why": "Fíjate en si la expresión nombra un momento, un estado, una función, una acción o una medida."
+      },
+      {
+        "id": "b1-11-vocabulario-huecos",
+        "type": "gap",
+        "title": "Las notas del reto",
+        "prompt": "Completa con una palabra del banco.",
+        "bank": [
+          "notificaciones",
+          "vistazo",
+          "reto",
+          "pendiente",
+          "pena"
+        ],
+        "items": [
+          {
+            "q": "El primer paso del ___ fue borrar Instagram del móvil.",
+            "answers": [
+              [
+                "reto"
+              ]
+            ],
+            "why": "Un desafío personal."
           },
           {
-            "left": "alcanzar una meta",
-            "right": "lograr un objetivo"
+            "q": "Desactivé todas las ___ menos las de mi familia.",
+            "answers": [
+              [
+                "notificaciones"
+              ]
+            ],
+            "why": "Los avisos que aparecen en la pantalla."
           },
           {
-            "left": "prever un margen",
-            "right": "dejar tiempo para imprevistos"
+            "q": "Antes estaba siempre ___ del móvil, incluso en el cine.",
+            "answers": [
+              [
+                "pendiente"
+              ]
+            ],
+            "why": "Atento todo el tiempo."
           },
           {
-            "left": "confirmar una reserva",
-            "right": "comprobar que un espacio está asignado"
+            "q": "Ahora solo le echo un ___ al correo dos veces al día.",
+            "answers": [
+              [
+                "vistazo"
+              ]
+            ],
+            "why": "Mirar algo rápidamente."
+          },
+          {
+            "q": "Fue difícil, pero mereció la ___.",
+            "answers": [
+              [
+                "pena"
+              ]
+            ],
+            "why": "«Merecer la pena»: valer el esfuerzo."
           }
         ]
       }
     ]
   },
   "pronunciation": {
-    "focus": "Enlaces en voy a ir y lo he hecho",
+    "focus": "Acabo / acabó, dejo / dejó: la sílaba tónica cambia el tiempo",
     "explanation": [
-      "Escucha voy a ir y lo he hecho como secuencias enlazadas. Conserva las vocales reconocibles aunque no haya una pausa entre cada palabra; luego aumenta el ritmo gradualmente.",
-      "Escucha la síntesis como apoyo para percibir palabras y grupos. Compara después tu producción con la comprensión de otra persona; no hay evaluación automática ni demostración regional verificada."
+      "En los verbos de esta semana, una sola sílaba fuerte separa el presente del pasado. «Acabo de» (a-CA-bo) habla de ti ahora mismo; «acabó de» (a-ca-BÓ) cuenta que otra persona terminó algo. Lo mismo pasa con «dejo / dejó» y «termino / terminó». Si cambias el acento, cambias el tiempo y la persona.",
+      "Con «volver» la diferencia está también en la vocal: «vuelvo» y «vuelve» tienen «ue» en la sílaba fuerte, pero «volví» y «volvió» tienen «o» porque el acento se va al final. Además, «a» se une a la vocal siguiente sin pausa: «vuelvo‿a‿hacerlo», «acaba‿de‿empezar»."
     ],
     "examples": [
       {
-        "es": "Cuando recibamos la respuesta, reservaremos la sala."
+        "es": "Acabo de llamarla. / Acabó de llamarla.",
+        "note": "Yo, hace un momento / él o ella, terminó."
       },
       {
-        "es": "Cuando recibimos una solicitud, enviamos un aviso."
-      },
-      {
-        "es": "En cuanto termine el diseño, te lo mando."
+        "es": "Dejo de trabajar a las tres. / Dejó de trabajar a las tres.",
+        "note": "Costumbre en presente / hecho pasado."
       }
     ],
     "perceive": {
-      "id": "b1-11-perception",
+      "id": "b1-11-pronunciacion-acento",
       "type": "listen",
-      "prompt": "Escucha antes de elegir qué secuencia reconoces; después repítela agrupando el sentido.",
+      "title": "¿Presente o pasado?",
+      "prompt": "Escucha cada frase y elige la forma que oyes.",
       "items": [
         {
-          "q": "Percepción 1: ¿qué reconoces al escuchar el fragmento de «Cuando tengamos la respuesta»?",
+          "q": "¿Qué forma oyes?",
           "options": [
-            "La secuencia dice voy a abrir la imprenta",
-            "Se reconocen voy, a e ir en una secuencia enlazada"
+            "acabo",
+            "acabó"
           ],
           "answer": 1,
-          "audio": "Voy a ir a la imprenta.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Acento al final, a-ca-BÓ: pasado, tercera persona.",
+          "audio": "Lucía acabó de pintar el salón anoche.",
+          "voice": "es-ES-f"
         },
         {
-          "q": "Percepción 2: ¿qué reconoces al escuchar el fragmento de «Cuando tengamos la respuesta»?",
+          "q": "¿Y aquí?",
           "options": [
-            "Se conserva he dentro del grupo lo he hecho",
-            "La frase dice lo echo cada mañana"
+            "dejo",
+            "dejó"
           ],
           "answer": 0,
-          "audio": "Lo he hecho esta mañana.",
-          "voice": "es-ES-f",
-          "why": "Escucha la secuencia completa y compara el grupo indicado. La síntesis sirve como apoyo, no como evaluación de acento."
+          "why": "Acento en la primera sílaba, DE-jo: presente, primera persona.",
+          "audio": "Los viernes dejo de trabajar a las tres.",
+          "voice": "es-MX-m"
+        },
+        {
+          "q": "¿Qué forma de «volver» oyes?",
+          "options": [
+            "volvió",
+            "vuelve"
+          ],
+          "answer": 0,
+          "why": "Vocal «o» y acento al final: «volvió».",
+          "audio": "Mi vecino volvió a dejar la bici en el portal.",
+          "voice": "es-ES-m"
+        },
+        {
+          "q": "¿Qué oyes antes de «de revisar»?",
+          "options": [
+            "termino",
+            "terminó"
+          ],
+          "answer": 0,
+          "why": "Acento en «-MI-»: presente, primera persona.",
+          "audio": "Termino de revisar esto y te llamo.",
+          "voice": "es-CO-f"
         }
       ]
     },
     "produce": [
       {
-        "text": "Cuando recibamos la respuesta, reservaremos la sala.",
-        "tip": "Escucha voy a ir y lo he hecho como secuencias enlazadas. Conserva las vocales reconocibles aunque no haya una pausa entre cada palabra; luego aumenta el ritmo gradualmente.",
+        "text": "Acabo de llegar, pero ella acabó de cenar hace una hora.",
+        "tip": "Marca a-CA-bo y a-ca-BÓ.",
         "voice": "es-ES-f"
       },
       {
-        "text": "Cuando recibimos una solicitud, enviamos un aviso.",
-        "tip": "Escucha voy a ir y lo he hecho como secuencias enlazadas. Conserva las vocales reconocibles aunque no haya una pausa entre cada palabra; luego aumenta el ritmo gradualmente.",
-        "voice": "es-ES-f"
+        "text": "Vuelvo a intentarlo mañana; ayer volví a fallar.",
+        "tip": "Une «vuelvo‿a‿intentarlo» sin pausa.",
+        "voice": "es-MX-m"
       },
       {
-        "text": "En cuanto termine el diseño, te lo mando.",
-        "tip": "Escucha voy a ir y lo he hecho como secuencias enlazadas. Conserva las vocales reconocibles aunque no haya una pausa entre cada palabra; luego aumenta el ritmo gradualmente.",
-        "voice": "es-ES-f"
+        "text": "Dejó de llover y por fin salimos.",
+        "tip": "Acento fuerte en «-JÓ».",
+        "voice": "es-ES-m"
       }
-    ]
+    ],
+    "spelling": "La tilde marca la diferencia por escrito: «acabo / acabó», «dejo / dejó», «termino / terminó». Si la olvidas en un mensaje, cambias el tiempo y la persona del verbo."
   },
   "listening": {
-    "title": "Cuando tengamos la respuesta · voces en conversación",
-    "context": "Dos organizadores reparten tareas mientras esperan una confirmación. Escucha primero sin transcripción. Las voces son sintéticas; no se presentan como modelos regionales verificados. Anota quién necesita qué y qué queda por confirmar.",
+    "title": "Un té en la Calderería",
+    "context": "Es sábado por la tarde en una tetería de la calle Calderería Nueva, en Granada. Nuria acaba de terminar su reto de treinta días sin redes sociales y se lo cuenta a Tomás, un amigo mexicano que vive en la ciudad.",
     "speakers": [
       {
-        "id": "a",
-        "name": "Coordinadora",
-        "voice": "es-ES-f"
+        "id": "nur",
+        "name": "Nuria",
+        "voice": "es-ES-f",
+        "role": "profesora de instituto"
       },
       {
-        "id": "b",
-        "name": "Voluntario",
-        "voice": "es-ES-m"
+        "id": "tom",
+        "name": "Tomás",
+        "voice": "es-MX-m",
+        "role": "amigo de Nuria"
       }
     ],
     "script": [
       {
-        "speaker": "a",
-        "text": "Te mando el plan del encuentro para que sepas qué puedes empezar. La biblioteca todavía no ha confirmado la sala grande. Cuando tengamos su respuesta, publicaremos el lugar definitivo. Por ahora podemos preparar el formulario, pero no quiero anunciar una capacidad que después no podamos ofrecer."
+        "speaker": "tom",
+        "text": "¡Nuria! Por fin. Te escribí tres veces el martes y no me contestaste. Pensé que te había pasado algo."
       },
       {
-        "speaker": "b",
-        "text": "De acuerdo. Yo puedo redactar las preguntas esta tarde. En cuanto termine, te envío el documento. ¿Quieres revisarlo antes de que lo compartamos con el resto del equipo o prefieres que todos comenten a la vez?"
+        "speaker": "nur",
+        "text": "Perdona, es que estaba en el reto. Acabo de terminarlo, esta misma mañana: treinta días sin Instagram y sin TikTok."
       },
       {
-        "speaker": "a",
-        "text": "Revísalo primero conmigo para comprobar que pedimos solo la información necesaria. Después lo pasamos al grupo. También necesitamos un cartel, aunque no conviene imprimirlo hasta que estén confirmados el lugar y la hora."
+        "speaker": "tom",
+        "text": "¿En serio? ¿Y cómo te fue? Yo no aguanto ni un fin de semana."
       },
       {
-        "speaker": "b",
-        "text": "Entonces haré un diseño con esos espacios pendientes. Cuando preparo carteles, suelo dejar margen para corregir una fecha. Esta vez voy a ir a la imprenta para preguntar cuánto tardan, sin encargar todavía las copias."
+        "speaker": "nur",
+        "text": "La primera semana fue durísima. Llegué a coger el móvil sin darme cuenta, solo por costumbre, y a buscar la aplicación que ya había borrado."
       },
       {
-        "speaker": "a",
-        "text": "Perfecto. Antes de que cierre la oficina el viernes, llamaré si no hemos recibido respuesta. Si la sala grande no está libre, preguntaremos por dos sesiones pequeñas. No queremos aceptar más personas de las que caben cómodamente."
+        "speaker": "tom",
+        "text": "¿Y no volviste a instalarla ni una vez?"
       },
       {
-        "speaker": "b",
-        "text": "Te resumo mis tareas: preparo el formulario, te lo envío y consulto el plazo de impresión. No publico ni imprimo hasta recibir tu confirmación. Así avanzamos con lo que depende de nosotros sin convertir una posibilidad en una reserva segura. Cuando tenga el documento, se lo enviaré a la coordinadora. Puedo mandárselo esta tarde, pero no quiero que lo publique antes de revisar las fechas."
+        "speaker": "nur",
+        "text": "Una vez, el día doce. La volví a instalar para ver unas fotos de mi prima, pero a la media hora la borré otra vez. Esa fue mi única recaída."
+      },
+      {
+        "speaker": "tom",
+        "text": "¿Y qué hacías con todo ese tiempo libre?"
+      },
+      {
+        "speaker": "nur",
+        "text": "Pues he vuelto a leer por las noches, como cuando era adolescente. Acabé de leer dos novelas enteras. Y dejé de dormir con el móvil en la mesilla: ahora se queda cargando en la cocina."
+      },
+      {
+        "speaker": "tom",
+        "text": "Oye, eso me interesa. ¿Y ahora qué? ¿Vuelves a las redes?"
+      },
+      {
+        "speaker": "nur",
+        "text": "Solo a una, y con reglas. No voy a volver a perder tres horas al día deslizando el dedo. Tú deberías probarlo, de verdad. Y no dejes de pasarte por la biblioteca del barrio: tienen un club de lectura los jueves."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+        "prompt": "Escucha una vez sin leer. ¿De qué hablan?",
         "exercise": {
-          "id": "b1-11-audio-0",
+          "id": "b1-11-escucha-global",
           "type": "choice",
-          "prompt": "Cuando tengamos la respuesta: Escucha sin abrir el texto. Identifica la situación y la intención principal.",
+          "prompt": "Elige la mejor respuesta.",
           "items": [
             {
-              "q": "¿Qué se mantiene pendiente?",
+              "q": "¿Qué le cuenta Nuria a Tomás?",
               "options": [
-                "La confirmación de la sala grande",
-                "La existencia de la biblioteca"
-              ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
-            },
-            {
-              "q": "¿Qué principio organiza el plan?",
-              "options": [
-                "Esperar sin hacer ninguna tarea",
-                "Avanzar sin anunciar datos pendientes como seguros"
+                "Que ha cambiado de trabajo.",
+                "Cómo le fue un mes sin redes sociales.",
+                "Que ha perdido el móvil."
               ],
               "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "Nuria acaba de terminar un reto de treinta días sin redes."
+            },
+            {
+              "q": "¿Cómo valora Nuria la experiencia?",
+              "options": [
+                "Difícil al principio, pero positiva.",
+                "Inútil: no cambió nada.",
+                "Fácil desde el primer día."
+              ],
+              "answer": 0,
+              "why": "La primera semana fue «durísima», pero ahora lee más y tiene reglas nuevas."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Vuelve a escuchar y anota el dato que cambia la decisión.",
+        "prompt": "Escucha otra vez y anota los detalles.",
         "exercise": {
-          "id": "b1-11-audio-1",
+          "id": "b1-11-escucha-detalle",
           "type": "choice",
-          "prompt": "Cuando tengamos la respuesta: Vuelve a escuchar y anota el dato que cambia la decisión.",
+          "prompt": "Responde según la conversación.",
           "items": [
             {
-              "q": "¿Qué hará la segunda persona en la imprenta?",
+              "q": "¿Cuándo terminó Nuria el reto?",
               "options": [
-                "Pagar todas las copias",
-                "Consultar el plazo sin encargar"
+                "El martes.",
+                "El día doce.",
+                "Esa misma mañana."
               ],
-              "answer": 1,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "answer": 2,
+              "why": "«Acabo de terminarlo, esta misma mañana.»"
             },
             {
-              "q": "¿Quién revisará primero el formulario?",
+              "q": "¿Por qué volvió a instalar la aplicación?",
               "options": [
-                "La persona que coordina con quien lo redacta",
-                "Todos los visitantes futuros"
+                "Para ver unas fotos de su prima.",
+                "Para contestar a Tomás.",
+                "Para trabajar."
               ],
               "answer": 0,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«La volví a instalar para ver unas fotos de mi prima.»"
+            },
+            {
+              "q": "¿Qué hábito nuevo tiene por la noche?",
+              "options": [
+                "Ve series en la cocina.",
+                "Deja el móvil cargando en la cocina.",
+                "Escucha la radio."
+              ],
+              "answer": 1,
+              "why": "«Dejé de dormir con el móvil en la mesilla: ahora se queda cargando en la cocina.»"
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+        "prompt": "Fíjate en la gramática. Completa lo que dicen exactamente.",
         "exercise": {
-          "id": "b1-11-audio-2",
-          "type": "choice",
-          "prompt": "Cuando tengamos la respuesta: Escucha una tercera vez: relaciona la formulación con su función. Después puedes consultar la transcripción.",
+          "id": "b1-11-escucha-formas",
+          "type": "gap",
+          "prompt": "Escribe la forma que usan.",
           "items": [
             {
-              "q": "¿Qué expresa «cuando preparo carteles»?",
-              "options": [
-                "Un hábito",
-                "Una única acción futura pendiente"
+              "q": "Perdona, es que estaba en el reto. ___ de terminarlo, esta misma mañana.",
+              "answers": [
+                [
+                  "Acabo",
+                  "acabo"
+                ]
               ],
-              "answer": 0,
-              "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+              "why": "Pasado reciente: «acabo de»."
             },
             {
-              "q": "¿Qué distingue «no publico ni imprimo»?",
-              "options": [
-                "Una cancelación definitiva del encuentro",
-                "Un límite de acción hasta recibir confirmación"
+              "q": "___ a coger el móvil sin darme cuenta.",
+              "answers": [
+                [
+                  "Llegué",
+                  "llegué"
+                ]
               ],
-              "answer": 1,
-              "why": "Comprueba la información concreta del fragmento antes de elegir."
+              "why": "«Llegar a»: el punto extremo."
+            },
+            {
+              "q": "La ___ a instalar para ver unas fotos de mi prima.",
+              "answers": [
+                [
+                  "volví"
+                ]
+              ],
+              "why": "Pronombre delante de «volver»."
+            },
+            {
+              "q": "Y no ___ de pasarte por la biblioteca del barrio.",
+              "answers": [
+                [
+                  "dejes"
+                ]
+              ],
+              "why": "Recomendación con «no dejes de»."
             }
           ]
         }
@@ -493,173 +866,299 @@ export const b1w11: Module = {
     ]
   },
   "reading": {
-    "title": "Cuando tengamos la respuesta · otra perspectiva",
-    "genre": "Artículo y experiencia de comunidad",
-    "frame": "Texto original de SpanishCue. Lee para comprender la experiencia y la decisión; después vuelve a los detalles.",
+    "title": "Día 31: lo que dejé y lo que recuperé",
+    "genre": "Entrada de blog personal",
+    "frame": "Nuria escribe un blog sobre la vida en Granada. Esta es la entrada que publicó al día siguiente de terminar su reto.",
     "text": [
-      "La asociación juvenil prepara una exposición de fotografías del barrio. La fecha de apertura está anunciada para el día veinte, pero todavía faltan dos decisiones. El centro cultural debe confirmar la sala y las personas retratadas tienen que autorizar el uso de sus imágenes. El equipo quiere avanzar sin dar por resuelto lo que depende de otros.",
-      "Cuando reciban la confirmación de la sala, medirán las paredes y decidirán cuántas fotografías pueden colocar. Mientras tanto, pueden seleccionar imágenes y escribir los textos. No imprimirán los retratos hasta que tengan los permisos correspondientes. Antes de que llegue el material, dos voluntarias revisarán la iluminación y el recorrido. En cuanto termine esa revisión, enviarán una lista de necesidades a la coordinadora. Cada paso tiene una persona responsable, para evitar que todos crean que otra persona se está ocupando.",
-      "La lista de tareas se la enviarán a cada responsable. La coordinadora quiere revisársela al equipo antes de difundirla, para comprobar que nadie recibe una versión antigua del calendario.",
-      "El plan incluye un margen de tres días para resolver dificultades. Si la sala no está disponible, usarán una selección más pequeña en el vestíbulo de la biblioteca. No es su opción preferida, pero permite mantener el encuentro con los vecinos. La coordinadora recuerda que un calendario no elimina los imprevistos: ayuda a reconocer qué cambia cuando aparece uno. El objetivo no es cumplir cada detalle del primer dibujo, sino abrir una exposición comprensible, respetuosa y posible con los recursos que realmente tienen."
+      "Hoy es el día 31 y acabo de abrir el portátil para escribir esto, no para mirar las redes. Hace un mes decidí hacer un experimento: treinta días sin Instagram ni TikTok. Mi tiempo de uso había llegado a cinco horas diarias, y lo peor no eran las horas, sino la sensación de no terminar nunca nada.",
+      "Lo primero que dejé de hacer fue mirar el móvil nada más despertarme. Los primeros días lo cogía igual, por pura costumbre, y me quedaba mirando una pantalla sin nada que ver. Tuve una recaída el día doce: volví a instalar una aplicación «solo un momento» y acabé pasando una hora entera deslizando el dedo. Esa noche la borré otra vez y no volví a caer.",
+      "Lo que he recuperado me ha sorprendido. He vuelto a leer antes de dormir, he vuelto a llamar por teléfono a mis amigas en lugar de mandarles un corazón, y el domingo volví a subir andando al Sacromonte, algo que no hacía desde la universidad. También terminé de ordenar las fotos de mi viaje a Marruecos, que llevaban dos años esperando.",
+      "¿Y ahora? No pienso volver a la vida de antes. Mantendré una sola red y la miraré por la tarde. Si estás pensando en hacer algo parecido, no dejes de intentarlo: la primera semana cuesta, pero merece la pena."
+    ],
+    "glossary": [
+      {
+        "es": "nada más despertarme"
+      },
+      {
+        "es": "por pura costumbre"
+      },
+      {
+        "es": "mandar un corazón"
+      }
     ],
     "tasks": [
       {
-        "id": "b1-11-read-evidence",
+        "id": "b1-11-lectura-comprension",
         "type": "choice",
-        "prompt": "En la lectura «Cuando tengamos la respuesta», elige la respuesta respaldada por el texto.",
+        "title": "Comprensión",
+        "prompt": "Responde según el blog.",
         "items": [
           {
-            "q": "¿Qué pueden hacer sin confirmar la sala?",
+            "q": "¿Qué le molestaba más a Nuria antes del reto?",
             "options": [
-              "Imprimir todos los retratos sin permiso",
-              "Seleccionar imágenes y escribir textos"
+              "Gastar mucho dinero en el móvil.",
+              "Sentir que no terminaba nada.",
+              "Recibir demasiadas llamadas."
             ],
             "answer": 1,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Lo peor no eran las horas, sino la sensación de no terminar nunca nada.»"
           },
           {
-            "q": "¿Para qué sirve el margen?",
+            "q": "¿Qué pasó el día doce?",
             "options": [
-              "Para cancelar la apertura",
-              "Para resolver dificultades"
+              "Instaló una aplicación y estuvo una hora con ella.",
+              "Subió al Sacromonte.",
+              "Terminó el reto antes de tiempo."
             ],
             "answer": 0,
-            "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+            "why": "«Volví a instalar una aplicación… y acabé pasando una hora entera.»"
+          },
+          {
+            "q": "¿Qué terminó de hacer durante el mes?",
+            "options": [
+              "Una novela propia.",
+              "Un curso de fotografía.",
+              "Ordenar las fotos de un viaje."
+            ],
+            "answer": 2,
+            "why": "«Terminé de ordenar las fotos de mi viaje a Marruecos.»"
           }
         ]
       },
       {
-        "id": "b1-11-read-mediation",
-        "type": "open",
-        "prompt": "Reformula para una persona que no ha leído «Cuando tengamos la respuesta».",
+        "id": "b1-11-lectura-dejar-volver",
+        "type": "classify",
+        "title": "¿Lo dejó o lo recuperó?",
+        "prompt": "Clasifica cada hábito según el blog.",
+        "categories": [
+          "Lo dejó de hacer",
+          "Lo volvió a hacer"
+        ],
         "items": [
           {
-            "prompt": "Explica en 50–70 palabras qué problema aparece en «Cuando tengamos la respuesta», qué cambia y qué dato no debe perder quien recibe tu resumen. Cita un detalle del texto.",
-            "model": "La asociación juvenil prepara una exposición de fotografías del barrio.",
-            "checklist": [
-              "Distingo información e interpretación.",
-              "Adapto el resumen a alguien sin contexto."
-            ]
+            "text": "Mirar el móvil al despertarse",
+            "cat": 0
+          },
+          {
+            "text": "Leer antes de dormir",
+            "cat": 1
+          },
+          {
+            "text": "Mandar corazones en lugar de llamar",
+            "cat": 0
+          },
+          {
+            "text": "Subir andando al Sacromonte",
+            "cat": 1
+          },
+          {
+            "text": "Pasar cinco horas al día en las redes",
+            "cat": 0
+          },
+          {
+            "text": "Llamar por teléfono a sus amigas",
+            "cat": 1
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Busca dos expresiones del texto y explica cómo ayudan a seguir la información.",
+      "prompt": "Fíjate en cómo el texto cuenta el final y la repetición de las acciones.",
       "items": [
         {
-          "quote": "La asociación juvenil prepara una exposición de fotografías del barrio.",
-          "note": "Localiza quién actúa y qué perspectiva temporal o comunicativa establece esta apertura."
+          "quote": "acabo de abrir el portátil",
+          "note": "Pasado muy reciente: «acabo de» en presente."
         },
         {
-          "quote": "El objetivo no es cumplir cada detalle del primer dibujo, sino abrir una exposición comprensible, respetuosa y posible con los recursos que realmente tienen.",
-          "note": "Explica qué aporta el cierre al propósito del texto; compáralo con la apertura."
+          "quote": "Mi tiempo de uso había llegado a cinco horas diarias",
+          "note": "«Llegar a» marca el punto máximo de un proceso."
+        },
+        {
+          "quote": "acabé pasando una hora entera deslizando el dedo",
+          "note": "«Acabar + gerundio»: el resultado final, no deseado."
+        },
+        {
+          "quote": "no volví a caer",
+          "note": "«No volver a» = nunca más."
         }
       ]
     }
   },
   "practice": {
+    "intro": "Combinas las dos clases y recuperas lo de las semanas 9 y 10.",
     "exercises": [
       {
-        "id": "b1-11-order",
+        "id": "b1-11-practica-orden",
         "type": "order",
-        "prompt": "Reconstruye dos mensajes útiles para «Cuando tengamos la respuesta» y léelos con grupos de sentido.",
+        "title": "Frases del reto",
+        "prompt": "Ordena las palabras para formar frases completas.",
         "items": [
           {
             "words": [
-              "Esperaremos",
-              "hasta",
-              "que",
-              "abra",
-              "la",
-              "oficina."
-            ]
-          },
-          {
-            "words": [
-              "Antes",
+              "Acabo",
               "de",
-              "que",
-              "lleguen",
-              "los",
-              "invitados,",
-              "revisa",
+              "apagar",
+              "todas",
               "las",
-              "sillas."
+              "notificaciones",
+              "del",
+              "móvil."
+            ]
+          },
+          {
+            "words": [
+              "Nunca",
+              "volví",
+              "a",
+              "dormir",
+              "con",
+              "el",
+              "teléfono",
+              "en",
+              "la",
+              "mesilla."
+            ]
+          },
+          {
+            "words": [
+              "Al",
+              "final",
+              "acabamos",
+              "cenando",
+              "en",
+              "la",
+              "terraza",
+              "del",
+              "vecino."
+            ]
+          },
+          {
+            "words": [
+              "No",
+              "dejes",
+              "de",
+              "probar",
+              "los",
+              "churros",
+              "de",
+              "esa",
+              "plaza."
             ]
           }
         ]
       },
       {
-        "id": "b1-11-classify",
-        "type": "classify",
-        "prompt": "Clasifica estas formulaciones según su función en «Cuando tengamos la respuesta».",
-        "categories": [
-          "Hábito",
-          "Acontecimiento futuro pendiente"
-        ],
+        "id": "b1-11-practica-retrieval",
+        "type": "context",
+        "title": "Recuperación: semanas 9 y 10",
+        "prompt": "Recuperación de semanas anteriores en el contexto del reto. Elige la forma correcta.",
         "items": [
           {
-            "text": "Cuando preparo carteles, dejo margen.",
-            "cat": 0
+            "context": "Semana 10, inicio repentino. Nuria vio un vídeo muy triste en el móvil de su hermana.",
+            "q": "¿Cómo lo cuentas?",
+            "options": [
+              "Se echó a llorar.",
+              "Se puso llorar.",
+              "Empezó llorando."
+            ],
+            "answer": 0,
+            "why": "«Echarse a» + llorar, reír o correr: inicio repentino."
           },
           {
-            "text": "Cuando recibimos consultas, las registramos.",
-            "cat": 0
+            "context": "Semana 10, continuidad. Después del reto, Nuria todavía lee cada noche.",
+            "q": "«Nuria ___ leyendo cada noche.»",
+            "options": [
+              "sigue",
+              "suele",
+              "deja"
+            ],
+            "answer": 0,
+            "why": "«Seguir + gerundio»: la acción continúa."
           },
           {
-            "text": "Cuando confirmen la sala, publicaremos.",
-            "cat": 1
+            "context": "Semana 9, por y para. Nuria explica el objetivo del reto.",
+            "q": "«Lo hice ___ recuperar mi tiempo.»",
+            "options": [
+              "por",
+              "para",
+              "a"
+            ],
+            "answer": 1,
+            "why": "Objetivo: «para» + infinitivo."
           },
           {
-            "text": "En cuanto termine, te lo enviaré.",
-            "cat": 1
+            "context": "Semana 9, plan B. Tomás quiere probar el reto, pero no está seguro.",
+            "q": "¿Qué frase organiza bien su plan?",
+            "options": [
+              "Si aguanto una semana, sigo; sino, lo dejo.",
+              "Si aguantaré una semana, sigo.",
+              "Si aguanto una semana, sigo; si no, lo dejo."
+            ],
+            "answer": 2,
+            "why": "«Si» + presente y «si no» en dos palabras."
           }
         ]
       },
       {
-        "id": "b1-11-draft",
+        "id": "b1-11-practica-transformar",
+        "type": "transform",
+        "title": "Dilo con una perífrasis",
+        "prompt": "Reescribe cada frase con la perífrasis indicada.",
+        "items": [
+          {
+            "source": "Leí otra vez la carta de mi abuelo.",
+            "instruction": "Usa «volver a».",
+            "answers": [
+              "Volví a leer la carta de mi abuelo."
+            ],
+            "why": "«Otra vez» → «volver a + infinitivo»."
+          },
+          {
+            "source": "Hace un momento he hablado con el casero.",
+            "instruction": "Usa «acabar de».",
+            "answers": [
+              "Acabo de hablar con el casero."
+            ],
+            "why": "Pasado muy reciente → «acabo de»."
+          },
+          {
+            "source": "Ya no como carne desde enero.",
+            "instruction": "Usa «dejar de» en indefinido.",
+            "answers": [
+              "Dejé de comer carne en enero."
+            ],
+            "why": "Abandono de un hábito en un momento del pasado."
+          }
+        ]
+      },
+      {
+        "id": "b1-11-practica-escritura-guiada",
         "type": "open",
-        "prompt": "Ensaya partes de tu texto antes de producirlo completo.",
+        "title": "Mensajes sobre cambios",
+        "prompt": "Escribe cada mensaje en dos o tres frases.",
         "items": [
           {
-            "prompt": "Cuando tengamos la respuesta: escribe una apertura de 35–45 palabras para la tarea «Redacta un plan de 150–180 palabras para quienes organizan una actividad: fija tres dependencias temporales, responsables y una alternativa si falla el espacio previsto.» sin copiar el modelo.",
-            "model": "El encuentro de intercambio de libros será el sábado por la tarde, si podemos confirmar el espacio esta semana.",
+            "prompt": "Escribe a un amigo que acabas de terminar algo importante y qué vas a hacer ahora.",
+            "model": "Acabo de entregar el proyecto de fin de curso. Ahora voy a volver a dormir ocho horas y a ver a mis amigos el fin de semana.",
             "checklist": [
-              "Presento destinatario y propósito.",
-              "Incluyo un dato pertinente del caso."
+              "Usas «acabo de» para algo muy reciente.",
+              "Usas «volver a» para algo que retomas."
             ]
           },
           {
-            "prompt": "Cuando tengamos la respuesta: redacta un cierre de 30–40 palabras que permita al destinatario responder o actuar.",
-            "model": "Si no conseguimos la sala, proponemos realizar dos turnos en el patio cubierto. Cada responsable avisará al grupo cuando termine su tarea y señalará cualquier dificultad. Así podremos ajustar el plan sin esperar al último momento ni prometer algo que todavía no está confirmado.",
+            "prompt": "Cuenta un hábito que dejaste y qué pasó al final.",
+            "model": "Hace dos años dejé de tomar café por la tarde. Al principio me costó, pero acabé durmiendo mucho mejor.",
             "checklist": [
-              "El cierre corresponde a esta situación.",
-              "La acción siguiente se entiende sin adivinar."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "b1-11-retrieval",
-        "type": "open",
-        "prompt": "Recupera los recursos lingüísticos sin consultar la explicación. Para los casos con fuentes, usa los datos suministrados y comprueba después los criterios.",
-        "items": [
-          {
-            "prompt": "En el contexto de «Cuando tengamos la respuesta», recupera la semana 10: Resume una discusión de foro para quien no estuvo: identifica dos posturas, una emoción, un requisito y una hipótesis. Formula una propuesta cortés que no invente consenso. Fuente suministrada: Mensajes del foro: Laura: «Me alegra que crezca el club, pero salgo del trabajo a las seis y me preocupa quedarme fuera». Iván: «Prefiero la cafetería; quizá puedan reservar una zona tranquila, aunque no he preguntado». Coordinación: «Necesitamos escucharnos y mantener un coste bajo. Consultaremos precio y horario de la asociación antes de decidir».",
-            "model": "Creo que el centro actual ofrece buenas mesas. No creo que el horario sirva a todos.",
-            "checklist": [
-              "Puedo opinar, reaccionar con emociones, describir lo que busco y especular.",
-              "Puedo escribir una intervención de foro que opina y responde a otros.",
-              "Conservo los hechos y señalo lo pendiente; no invento decisiones de la fuente."
+              "Usas «dejar de» con un hábito.",
+              "Cuentas el resultado con «acabar + gerundio» o «al final»."
             ]
           },
           {
-            "prompt": "Tras recuperar el caso anterior en «Cuando tengamos la respuesta», escribe 40–60 palabras para explicar qué elección lingüística fue más difícil y ofrece dos versiones que cambien la intención o el tiempo. Comprueba tus ejemplos con la teoría de la semana recuperada.",
-            "model": "Antes presenté un hecho como seguro. Ahora lo reformulo como una duda: Cuando recibamos la respuesta, reservaremos la sala.",
+            "prompt": "Un compañero de piso ha dejado la puerta abierta otra vez. Escríbele una advertencia amable.",
+            "model": "Ayer volviste a dejar la puerta abierta y entró el gato del vecino. Por favor, no vuelvas a olvidarlo, que me asusté mucho.",
             "checklist": [
-              "Comparo dos formulaciones concretas.",
-              "Explico el cambio de intención o referencia."
+              "Usas «volver a» para la repetición.",
+              "Usas «no vuelvas a» para la advertencia."
             ]
           }
         ]
@@ -667,184 +1166,240 @@ export const b1w11: Module = {
     ]
   },
   "writing": {
-    "task": "Redacta un plan de 150–180 palabras para quienes organizan una actividad: fija tres dependencias temporales, responsables y una alternativa si falla el espacio previsto.",
-    "context": "Destinatario, propósito y datos deben mantenerse claros. El modelo muestra una posibilidad, no una respuesta que debas copiar.",
+    "task": "Escribe el balance de un cambio de hábito que hayas hecho o que te gustaría hacer: qué hacías antes, qué dejaste de hacer, qué volviste a hacer, cómo acabó y qué no quieres volver a hacer.",
+    "context": "Lo publicarás en el foro de tu grupo de español, donde otros estudiantes comparten sus retos personales.",
     "steps": [
-      "Planifica destinatario, dos ideas centrales y un dato de apoyo de esta semana.",
-      "Escribe una primera versión sin consultar el modelo.",
-      "Compara después organización y lenguaje; cambia al menos una frase para mejorar claridad."
+      "Elige el hábito y anota tres momentos: antes, durante el cambio y ahora.",
+      "Primer párrafo: la situación de partida y lo que dejaste de hacer, con «llegar a» para el punto máximo.",
+      "Segundo párrafo: lo que volviste a hacer, cómo acabó el proceso y una promesa con «no volver a».",
+      "Revisa cada «acabar de»: ¿es algo de hace un momento (acabo de) o algo que terminaste (acabé de)? Corrige también la posición de los pronombres con «volver a»."
     ],
     "useLanguage": [
-      "Cuando recibamos la respuesta, reservaremos la sala.",
-      "Cuando recibimos una solicitud, enviamos un aviso.",
-      "En cuanto termine el diseño, te lo mando.",
-      "Esperaremos hasta que abra la oficina.",
-      "La lista se la enviaré a la coordinadora.",
-      "Voy a mandárselo / se lo voy a mandar."
+      "acabo de + infinitivo",
+      "dejar de / no dejar de",
+      "llegar a + infinitivo",
+      "acabar + gerundio",
+      "volver a + infinitivo",
+      "no volver a"
     ],
     "model": [
-      "El encuentro de intercambio de libros será el sábado por la tarde, si podemos confirmar el espacio esta semana. Cuando la biblioteca responda, Ana enviará el aviso con la dirección.",
-      "También dejaremos un margen para resolver cambios de última hora. Cada tarea tendrá una persona responsable y otra que conozca su estado. Si alguien no puede terminar a tiempo, avisará antes del plazo para que podamos reorganizarnos sin duplicar el trabajo.",
-      "Mientras tanto, Luis preparará una lista de categorías y yo revisaré las mesas disponibles. En cuanto terminemos esa revisión, sabremos cuántos libros podemos aceptar. No publicaremos el formulario hasta que esté claro el límite de participantes. Antes de que lleguen los visitantes, colocaremos carteles para explicar el recorrido. Si no conseguimos la sala, proponemos realizar dos turnos en el patio cubierto. Cada responsable avisará al grupo cuando termine su tarea y señalará cualquier dificultad. Así podremos ajustar el plan sin esperar al último momento ni prometer algo que todavía no está confirmado."
+      "Hace un año trabajaba en una oficina y comía cada día delante del ordenador. Llegué a pasar semanas enteras sin salir a la calle a la hora de comer. En septiembre decidí cambiarlo: dejé de comer en la mesa de trabajo y empecé a bajar al parque con un táper. Las primeras semanas me sentía culpable y volvía a mirar el correo en el móvil cada diez minutos, pero poco a poco lo dejé en la oficina.",
+      "Ahora he vuelto a hablar con mis compañeros, que antes eran casi desconocidos, y he vuelto a leer novelas durante la pausa. Acabo de terminar la tercera del año. Al final acabé disfrutando de esa hora más que de cualquier otra del día. Me he prometido una cosa: no voy a volver a comer delante de una pantalla. Si a ti te pasa lo mismo, no dejes de probarlo."
     ],
     "checklist": [
-      "Cumplo el propósito y el registro de la consigna.",
-      "Organizo el texto en partes conectadas y doy razones o detalles.",
-      "Reutilizo cuatro expresiones de vocabulario de la semana.",
-      "Compruebo tiempos, referencias, concordancia y lo que está confirmado.",
-      "Reviso una frase y puedo explicar por qué la cambié.",
-      "Integro y compruebo este recurso: pronombres de objeto en planes y recados."
+      "Uso «dejar de» para lo que abandoné y «volver a» para lo que retomé.",
+      "Distingo «acabo de» (muy reciente) de «acabé de» (terminé).",
+      "Hay un punto máximo con «llegar a» y un resultado con «acabar + gerundio».",
+      "El texto tiene dos párrafos: antes y después."
     ],
     "words": [
-      150,
+      130,
       180
     ]
   },
   "speaking": {
-    "intro": "Prepara ideas, no un guion completo. Puedes grabarte localmente; el curso no puntúa tu pronunciación ni sube tu audio.",
+    "intro": "Graba tus respuestas y escúchate: comprueba que pronuncias bien «acabo» y «acabó», y que no repites el pronombre con «volver a».",
     "tasks": [
       {
-        "title": "Intervención organizada",
-        "prompt": "Explica durante dos minutos un proyecto con tres pasos dependientes. Tu interlocutor anuncia que un permiso llegará tarde: pregunta qué cambia y reorganiza el calendario sin inventar una fecha segura.",
+        "title": "Mi reto personal",
+        "prompt": "Habla durante dos minutos de un reto o de un cambio de hábito: cómo era tu rutina, qué dejaste de hacer, qué volviste a hacer, hasta dónde llegaste y cómo acabó.",
         "prep": [
-          "Anota una apertura, dos detalles y una conclusión.",
-          "Elige una expresión para pedir o dar aclaración.",
-          "Usa también: La lista se la enviaré a la coordinadora."
+          "Un punto máximo con «llegar a».",
+          "Dos cosas que dejaste de hacer y dos que volviste a hacer.",
+          "Un final con «acabar + gerundio» y una promesa con «no volver a»."
         ],
         "seconds": 120,
+        "model": "El año pasado me propuse dejar de usar el coche para ir al trabajo. Antes lo usaba para todo: llegué a cogerlo para ir a la panadería de la esquina. Primero dejé de usarlo entre semana y volví a montar en bici, como cuando era joven. Hubo días de lluvia en que volví a sacarlo, claro, pero al final acabé vendiéndolo…",
         "selfCheck": [
-          "El oyente puede reconstruir mi idea.",
-          "Doy razones o ejemplos y marco pausas útiles."
+          "¿He hablado al menos dos minutos?",
+          "¿He distinguido «dejar de» de «volver a»?",
+          "¿He contado cómo acabó el cambio?"
         ]
       },
       {
-        "title": "Interacción y reformulación",
-        "prompt": "En la situación «Cuando tengamos la respuesta», tu interlocutor no comparte tu primera interpretación. Pregunta qué ha entendido, responde a su objeción y reformula tu idea con un ejemplo distinto; confirma qué acordáis y qué queda pendiente.",
+        "title": "Preguntas sobre tu reto",
+        "prompt": "Un amigo duda de tu reto y te hace preguntas: ¿no volviste a caer nunca?, ¿qué fue lo más difícil?, ¿lo recomendarías? Responde, aclara lo que no entienda y anímalo a probarlo. Practica con alguien que haga de interlocutor o graba las dos voces.",
         "prep": [
-          "Reserva una pregunta abierta.",
-          "Piensa una alternativa que puedas aceptar."
+          "Responde con una recaída concreta: «Volví a… una vez».",
+          "Anima con «no dejes de…»."
         ],
-        "seconds": 120,
+        "seconds": 90,
+        "model": "Sí, volví a caer una vez, no te voy a mentir: un día de mucho estrés volví a abrir la aplicación. Pero acabo de cumplir dos meses y no la he vuelto a instalar. Lo más difícil fue dejar de mirar el móvil en el metro. Tú no dejes de intentarlo, aunque sea una semana.",
         "selfCheck": [
-          "Escucho antes de responder.",
-          "Adapto mi respuesta a la información nueva."
+          "¿He respondido a todas sus preguntas?",
+          "¿He usado «volver a» y «no dejes de» con naturalidad?"
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "Lleva tu texto revisado y una intervención breve: tu profe continuará la situación con un cambio que no conoces.",
+    "intro": "Lleva tu balance y estas tarjetas a la próxima clase con tu profesor.",
     "cards": [
       {
-        "move": "Presenta",
-        "task": "Explica durante dos minutos un proyecto con tres pasos dependientes. Tu interlocutor anuncia que un permiso llegará tarde: pregunta qué cambia y reorganiza el calendario sin inventar una fecha segura."
-      },
-      {
-        "move": "Pregunta",
-        "task": "Pide a tu profe un dato adicional sobre «Cuando tengamos la respuesta» que pueda cambiar tu propuesta; explica por qué lo necesitas.",
+        "move": "Cuenta",
+        "task": "Cuéntale a tu profesor algo que acabas de hacer antes de la clase y algo que terminaste ayer, y pídele que compruebe si usas bien «acabo de» y «acabé de».",
         "phrases": [
-          "¿He entendido bien que…?",
-          "¿Qué cambiaría si…?"
+          "Acabo de…",
+          "Ayer acabé de…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Resume la postura de tu profe sobre «Cuando tengamos la respuesta» para una tercera persona y comprueba si tu versión conserva las condiciones."
+        "move": "Compara",
+        "task": "Pregúntale a tu profesor qué hábito dejó de tener y cuál volvió a retomar en los últimos años.",
+        "phrases": [
+          "¿Qué dejaste de…?",
+          "¿Has vuelto a…?"
+        ]
+      },
+      {
+        "move": "Recomienda",
+        "task": "Recomiéndale a tu profesor tres cosas de tu ciudad con «no dejes de».",
+        "phrases": [
+          "No dejes de…",
+          "Si vas a…, no dejes de…"
+        ]
+      },
+      {
+        "move": "Promete",
+        "task": "Haz una promesa sobre un error que siempre cometes en español y pide a tu profesor que te avise si vuelves a cometerlo.",
+        "phrases": [
+          "No voy a volver a…",
+          "Si vuelvo a…, avísame."
+        ]
       }
     ],
-    "bring": "Tu borrador y versión revisada, una grabación local si la hiciste y una pregunta sobre una elección lingüística."
+    "bring": "Tu balance de cambio de hábito revisado y la grabación de tu reto."
   },
   "quiz": {
     "items": [
       {
         "type": "choice",
-        "q": "Tras trabajar ambas fuentes: ¿Para qué sirve el margen? Relaciona tu respuesta con «Cuando tengamos la respuesta».",
+        "q": "Te llaman y respondes: «Estoy mojado: ___ salir de la piscina».",
         "options": [
-          "Para cancelar la apertura",
-          "Para resolver dificultades"
+          "acabé de",
+          "acabo de",
+          "terminé de"
         ],
         "answer": 1,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia."
+        "why": "Pasado muy reciente: «acabo de»."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase cuenta que un hábito se terminó?",
+        "options": [
+          "No volví a verlo.",
+          "Volví a correr.",
+          "Dejé de correr por las mañanas."
+        ],
+        "answer": 2,
+        "why": "«Dejar de» abandona un hábito."
       },
       {
         "type": "listen",
-        "q": "Escucha el fragmento final de evaluación de «Cuando tengamos la respuesta»: ¿qué formulación se oye?",
+        "q": "Escucha. ¿Qué cuenta la persona?",
         "options": [
-          "Voy a ir a comprobar la entrada.",
-          "En cuanto termine el diseño, te lo mando."
+          "Que repitió una mudanza.",
+          "Que regresó a su ciudad.",
+          "Que nunca vivió en el extranjero."
         ],
-        "answer": 0,
-        "why": "La respuesta se apoya en la información y la intención del texto; vuelve a localizar la evidencia.",
-        "audio": "Voy a ir a comprobar la entrada.",
-        "voice": "es-ES-f"
+        "answer": 1,
+        "why": "«Volver a + lugar» es regresar.",
+        "audio": "Después de seis años en Londres, volví a Granada en marzo.",
+        "voice": "es-ES-m"
       },
       {
         "type": "gap",
-        "q": "Revisión breve de «Cuando tengamos la respuesta». Cuando mañana ___ el permiso, avisaré.",
+        "q": "Mi hermano ___ (dejar) de estudiar medicina en segundo año.",
         "answers": [
           [
-            "llegue"
+            "dejó"
           ]
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Reformulación de «Cuando tengamos la respuesta». Texto de partida: Voy a enviar el plano a Laura. Consigna: Sustituye ambos complementos por pronombres unidos al infinitivo. Compara el sentido y la forma con el modelo; puede haber más de una respuesta válida.",
-        "model": "Voy a enviárselo.",
-        "checklist": [
-          "Mantengo los datos y la intención del texto de partida.",
-          "Uso la estructura pedida con concordancia y referencias coherentes.",
-          "Acepto otro orden o una formulación equivalente si conserva el sentido; consulto la duda en clase."
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Le voy a enviarlo cuando confirme la fecha.",
-        "answers": [
-          "Se lo voy a enviar cuando confirme la fecha."
         ],
-        "why": "OI y OD van juntos, y le pasa a se ante lo."
+        "why": "Abandono en un momento cerrado del pasado."
+      },
+      {
+        "type": "gap",
+        "q": "El ordenador se ___ a apagar solo en mitad de la reunión.",
+        "answers": [
+          [
+            "volvió"
+          ]
+        ],
+        "why": "Pronombre delante y «volver a» en indefinido."
+      },
+      {
+        "type": "gap",
+        "q": "Si vas a Córdoba, no ___ (dejar, tú) de entrar en la Mezquita.",
+        "answers": [
+          [
+            "dejes"
+          ]
+        ],
+        "why": "Recomendación: «no dejes de»."
       },
       {
         "type": "order",
         "words": [
-          "Voy",
-          "a",
-          "ir",
-          "a",
-          "comprobar",
-          "la",
-          "entrada."
-        ]
+          "Al",
+          "final",
+          "acabó",
+          "estudiando",
+          "música",
+          "en",
+          "el",
+          "conservatorio."
+        ],
+        "why": "«Acabar + gerundio»: resultado final."
+      },
+      {
+        "type": "error",
+        "sentence": "Volví a perdí las llaves del coche.",
+        "answers": [
+          "Volví a perder las llaves del coche."
+        ],
+        "why": "Detrás de «volver a», infinitivo."
+      },
+      {
+        "type": "error",
+        "sentence": "Ya acabo de lavar los platos el lunes pasado.",
+        "answers": [
+          "Acabé de lavar los platos el lunes pasado."
+        ],
+        "why": "Con un momento terminado del pasado, «acabé de» = terminé."
       },
       {
         "type": "open",
-        "prompt": "Evaluación escrita de «Cuando tengamos la respuesta»: responde en 50–70 palabras a una persona que ha entendido solo la mitad de tu propuesta. Conserva el dato decisivo y solicita confirmación.",
+        "prompt": "Reformulación: cuenta esta historia con perífrasis. «Hace una hora he enviado el currículum. Lo mandé otra vez porque el primero tenía un error. Nunca más envío nada sin revisarlo.»",
+        "model": "Acabo de enviar el currículum. Lo volví a mandar porque el primero tenía un error. No voy a volver a enviar nada sin revisarlo.",
         "checklist": [
-          "Reformulo en lugar de copiar.",
-          "Mantengo la intención y los datos."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Evaluación oral de «Cuando tengamos la respuesta»: durante un minuto explica qué cambiarías tras recibir una objeción y por qué; añade una pregunta para continuar.",
-        "checklist": [
-          "Justifico el cambio.",
-          "Abro un turno real para el interlocutor."
+          "Usas «acabo de» para lo que pasó hace muy poco.",
+          "Usas «volver a» para la repetición, con el pronombre en un solo sitio.",
+          "Haces la promesa con «no volver a»."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Organizar proyectos sujetos a plazos y acontecimientos futuros.",
-      "Puedo producir y revisar un texto conectado para esta situación.",
-      "Puedo explicar mi propuesta, pedir aclaración y responder a una objeción."
+      "Distinguir «acabo de» (hace un momento) de «acabé de» (terminé).",
+      "Elegir entre «terminar de» (completar) y «dejar de» (interrumpir o abandonar), y recomendar con «no dejes de».",
+      "Contar un punto máximo con «llegar a» y un resultado con «acabar + gerundio».",
+      "Usar «volver a + infinitivo» en cualquier tiempo y prometer o advertir con «no volver a»."
     ],
     "review": [
-      "Mañana recupera tres expresiones sin mirar y úsalas en otro contexto.",
-      "Dentro de una semana vuelve a contar el caso con un dato cambiado y compara tu nueva respuesta.",
-      "Revisa con tu profe los criterios de recuperación; un cuestionario no evalúa por sí solo tu nivel oral."
+      "«Dejar de» (abandonar) frente a «dejar + infinitivo» (permitir).",
+      "La posición de los pronombres con perífrasis: «lo volví a leer» o «volví a leerlo».",
+      "«Seguir + gerundio» y «soler» de la semana 10."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/perifrasis-terminativas-acabar-de-dejar-de",
+      "label": "Clase: Perífrasis terminativas: acabar de, dejar de"
+    },
+    {
+      "path": "/gramatica/volver-a-infinitivo-y-repeticion",
+      "label": "Clase: Volver a + infinitivo y repetición"
+    }
+  ]
 };

@@ -1,818 +1,833 @@
 import type { Module } from "../../types";
 
+/**
+ * C1 · semana 16 · Autoestudio espejo de G196 (interrogativas retóricas y
+ * exclamativas complejas). Repaso autónomo con el debate vecinal sobre el
+ * futuro de un mercado ficticio de la Ciudad de México. Audio mediante
+ * síntesis; sin acreditación regional.
+ */
 export const c1w16: Module = {
-  "id": "c1-16",
-  "level": "c1",
-  "week": 16,
-  "kind": "core",
-  "title": "El tema que vuelve al centro",
-  "subtitle": "Dislocación, clíticos y continuidad temática",
-  "stop": {
-    "place": "Ciudad de México",
-    "country": "México"
+  id: "c1-16",
+  level: "c1",
+  week: 16,
+  kind: "core",
+  title: "¿Quién no ha comprado aquí alguna vez?",
+  subtitle: "Repaso de las preguntas que afirman sin preguntar y de las exclamaciones que valoran, desean o se sorprenden, con su ortografía y su entonación",
+  stop: {
+    place: "Ciudad de México",
+    country: "México",
   },
-  "minutes": 120,
-  "newObjectives": [
-    "c1.gram.orden-palabras",
-    "c1.voc.medios-digitales",
-    "c1.pron.dislocacion-prosodia",
-    "c1.read.reportaje-largo",
-    "c1.fun.destacar-retomar"
+  minutes: 120,
+  newObjectives: [
+    "c1.gram.g196",
+    "c1.voc.w16-mercado-barrio",
+    "c1.pron.w16-melodia-retorica",
+    "c1.lis.w16-radio-comunitaria",
+    "c1.read.w16-columna-mercado",
+    "c1.wri.w16-columna-vecinal",
+    "c1.spk.w16-alegato-asamblea",
+    "c1.fun.w16-persuadir-preguntando",
+    "c1.disc.w16-cierre-retorico",
   ],
-  "reviewObjectives": [
-    "c1.rev.checkpoint-3",
-    "c1.wri.articulo-opinion"
-  ],
-  "prerequisites": [
-    "c1-15"
-  ],
-  "goal": {
-    "canDo": "Puedo redactar un reportaje breve que integre las voces del conflicto, distinga prueba e inferencia y organice tres temas retomados; termina con una pregunta de rendición de cuentas.",
-    "steps": [
-      "Examina dislocación, clíticos y continuidad temática en un caso con intereses distintos.",
-      "Escucha antes de leer la transcripción y distingue tesis, reservas y compromisos.",
-      "Contrasta la lectura y el audio; prepara una producción independiente y revísala.",
-      "Lleva a clase una objeción y una reformulación justificadas."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja con material original. Las situaciones y los datos del dossier son ficticios y se utilizan para analizar decisiones comunicativas.",
-    "parts": [
-      {
-        "heading": "Dislocación, clíticos y continuidad temática",
-        "body": [
-          "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido.",
-          "En «El tema que vuelve al centro», observa la diferencia entre estas formulaciones: Las normas, la mayoría no las había leído. / A los administradores les preocupaban las ofertas encubiertas. Explica qué relación cambia y qué decisión permite tomar al destinatario."
-        ],
-        "examples": [
-          {
-            "es": "Las normas, la mayoría no las había leído."
-          },
-          {
-            "es": "A los administradores les preocupaban las ofertas encubiertas."
-          },
-          {
-            "es": "La apelación, esa sí era difícil de encontrar."
-          },
-          {
-            "es": "Ese punto lo revisaremos antes de publicar."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "A las usuarias lo respondimos ayer.",
-            "right": "A las usuarias les respondimos ayer.",
-            "why": "El complemento indirecto plural se recupera con les."
-          }
-        ]
-      },
-      {
-        "heading": "Del análisis a la intervención",
-        "body": [
-          "La línea editorial del reportaje se reconoce en la selección de su pregunta final. En vez de preguntar si la plataforma es buena o mala, examina si sus procedimientos permiten comprender y cuestionar decisiones. Esa elección privilegia la rendición de cuentas sobre el enfrentamiento entre identidades. El orden de palabras contribuye a sostenerla: retoma las normas, los administradores y la apelación como temas sucesivos, y coloca la información nueva después. Organizar un texto no consiste solo en enlazar frases; consiste en decidir qué asunto permanece disponible para que el lector pueda seguir examinándolo.",
-          "La producción de esta semana exige una elección concreta: Redacta un reportaje breve que integre las voces del conflicto, distinga prueba e inferencia y organice tres temas retomados; termina con una pregunta de rendición de cuentas. Antes de escribir, separa la información atribuible a las fuentes de tu propuesta; después comprueba que la forma elegida conserva esa distinción."
-        ],
-        "examples": [
-          {
-            "es": "El anuncio, ya lo revisamos.",
-            "note": "Tematiza el objeto al inicio y recupéralo con clítico."
-          },
-          {
-            "es": "Ese punto lo podemos corregir.",
-            "note": "Retoma ese punto al principio."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "intro": "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido.",
-    "exercises": [
-      {
-        "id": "g-lagunas",
-        "type": "gap",
-        "prompt": "Completa formas decisivas en «El tema que vuelve al centro»; explica qué relación mantienen. Utiliza únicamente el banco; una forma puede reutilizarse.",
-        "items": [
-          {
-            "q": "Las normas, la mayoría no ___ había leído.",
-            "answers": [
-              [
-                "las"
-              ]
-            ],
-            "why": "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido."
-          },
-          {
-            "q": "A los administradores ___ preocupaban las ofertas encubiertas.",
-            "answers": [
-              [
-                "les"
-              ]
-            ],
-            "why": "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido."
-          },
-          {
-            "q": "La apelación, esa ___ era difícil de encontrar.",
-            "answers": [
-              [
-                "sí"
-              ]
-            ],
-            "why": "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido."
-          }
-        ],
-        "bank": [
-          "las",
-          "les",
-          "sí"
-        ]
-      },
-      {
-        "id": "g-transformacion",
-        "type": "open",
-        "prompt": "Reformula sin perder alcance: Dislocación, clíticos y continuidad temática. Esta reformulación se revisa por sentido y forma, no por coincidencia literal con el modelo.",
-        "items": [
-          {
-            "prompt": "Tematiza el objeto al inicio y recupéralo con clítico. Texto de partida: «Ya revisamos el anuncio.»",
-            "model": "El anuncio, ya lo revisamos.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Tematiza el complemento indirecto. Texto de partida: «Respondimos a las usuarias.»",
-            "model": "A las usuarias les respondimos.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          },
-          {
-            "prompt": "Retoma ese punto al principio. Texto de partida: «Podemos corregir ese punto.»",
-            "model": "Ese punto lo podemos corregir.",
-            "checklist": [
-              "Cumplo la construcción o el movimiento comunicativo solicitado.",
-              "Conservo el alcance, las personas y la relación temporal pertinentes.",
-              "Comparo mi versión con el modelo: una variante natural no es un error por tener otras palabras."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende combinaciones y connotaciones; reutiliza al menos cuatro en tu producción sin forzarlas.",
-    "groups": [
-      {
-        "title": "Dislocación, clíticos y continuidad temática",
-        "items": [
-          {
-            "es": "moderación automática",
-            "note": "clasificación o retirada mediante sistema"
-          },
-          {
-            "es": "aplicación inconsistente",
-            "note": "trato diferente de casos comparables"
-          },
-          {
-            "es": "caso fronterizo",
-            "note": "ejemplo entre categorías poco claras"
-          },
-          {
-            "es": "vía de apelación",
-            "note": "procedimiento para pedir revisión"
-          },
-          {
-            "es": "rendición de cuentas",
-            "note": "explicación pública de decisiones"
-          },
-          {
-            "es": "regla aplicada",
-            "note": "criterio utilizado en un caso"
-          },
-          {
-            "es": "oferta encubierta",
-            "note": "actividad comercial presentada como otra cosa"
-          },
-          {
-            "es": "clasificación inicial",
-            "note": "primera asignación a una categoría"
-          },
-          {
-            "es": "decisión revocada",
-            "note": "resolución dejada sin efecto"
-          },
-          {
-            "es": "línea editorial",
-            "note": "pregunta o perspectiva que organiza un medio"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Puedo usar preguntas retóricas para afirmar lo contrario de lo que preguntan, distinguirlas de las preguntas reales y expresar asombro, deseo o valoración con exclamativas complejas bien acentuadas y bien puntuadas.",
+    steps: [
+      "Repasa en la teoría qué afirma cada tipo de pregunta retórica y cómo se construyen las exclamativas de grado, de deseo y de sorpresa.",
+      "Practica la polaridad, la elección entre pregunta real y retórica, la concordancia de «cuánto» y la tilde de los exclamativos con frases de un mercado de barrio.",
+      "Escucha un programa de radio comunitaria sobre el futuro del mercado y lee la columna de una vecina que defiende el edificio.",
+      "Escribe tu propia columna, revísala con la lista de control y defiende tu postura en voz alta ante la asamblea.",
     ],
-    "exercises": [
-      {
-        "id": "v-relaciones",
-        "type": "match",
-        "prompt": "Relaciona las expresiones de «El tema que vuelve al centro» con su sentido contextual.",
-        "pairs": [
-          {
-            "left": "moderación automática",
-            "right": "clasificación o retirada mediante sistema"
-          },
-          {
-            "left": "aplicación inconsistente",
-            "right": "trato diferente de casos comparables"
-          },
-          {
-            "left": "caso fronterizo",
-            "right": "ejemplo entre categorías poco claras"
-          },
-          {
-            "left": "vía de apelación",
-            "right": "procedimiento para pedir revisión"
-          },
-          {
-            "left": "rendición de cuentas",
-            "right": "explicación pública de decisiones"
-          },
-          {
-            "left": "regla aplicada",
-            "right": "criterio utilizado en un caso"
-          },
-          {
-            "left": "oferta encubierta",
-            "right": "actividad comercial presentada como otra cosa"
-          },
-          {
-            "left": "clasificación inicial",
-            "right": "primera asignación a una categoría"
-          },
-          {
-            "left": "decisión revocada",
-            "right": "resolución dejada sin efecto"
-          },
-          {
-            "left": "línea editorial",
-            "right": "pregunta o perspectiva que organiza un medio"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Tema dislocado y comentario",
-    "explanation": [
-      "Marca una frontera breve después del tema dislocado y mantén el clítico que lo recupera cuando corresponde. En el foco contrastivo, destaca la alternativa relevante sin convertir toda la oración en énfasis.",
-      "La reproducción disponible utiliza síntesis de voz. La percepción combina forma y contexto; compara tu grabación por inteligibilidad y efecto comunicativo, sin esperar una calificación automática del acento."
-    ],
-    "examples": [
+  theory: {
+    intro: "En clase viste que hay preguntas que no esperan respuesta y exclamaciones que dicen mucho más que una afirmación. Aquí las repasas en otro escenario: la discusión de una colonia de la Ciudad de México sobre el futuro de su mercado. Las formas de intensificación que ya repasaste en la semana 14 («¡vaya si…!», «ni siquiera») no se repiten: el foco está en lo que una pregunta afirma, en las exclamativas que desean o se sorprenden y en cómo se escriben y se pronuncian.",
+    parts: [
       {
-        "es": "La apelación, esa sí debemos hacerla visible."
-      }
-    ],
-    "perceive": {
-      "id": "f-percepcion",
-      "type": "listen",
-      "prompt": "Escucha la formulación exacta en tema dislocado y comentario; identifica qué relación conserva antes de ensayar otra lectura.",
-      "items": [
-        {
-          "audio": "Las normas, la mayoría no las había leído.",
-          "voice": "es-ES-f",
-          "q": "¿Qué formulación abre el contraste oral de «El tema que vuelve al centro»?",
-          "options": [
-            "La apelación, esa sí era difícil de encontrar.",
-            "Las normas, la mayoría no las había leído.",
-            "A los administradores les preocupaban las ofertas encubiertas."
+        heading: "La pregunta retórica afirma lo contrario de lo que pregunta",
+        body: [
+          "Una pregunta retórica tiene forma de pregunta, pero funciona como una afirmación: quien la hace ya conoce la respuesta y espera que el oyente la ponga por su cuenta. La clave es la polaridad invertida. Si la pregunta es afirmativa, afirma algo negativo: «¿Quién va a cruzar media ciudad para comprar cilantro?» significa «nadie». Si la pregunta es negativa, afirma algo positivo: «¿Quién no ha desayunado alguna vez en estas fondas?» significa «todos».",
+          "Algunas fórmulas tienen una respuesta casi fija. «¿Acaso…?» orienta hacia el no («¿Acaso los coches compran fruta?» = no la compran). «¿Para qué…?» niega la utilidad («¿Para qué queremos otro estacionamiento?» = no lo necesitamos). «¿Qué más da?», «¿Y qué?» y «¿A quién le importa?» restan importancia. «¿Cómo no voy a…?» equivale a «claro que sí» y «¿Cómo voy a…?», a «no puedo»: «¿Cómo no voy a defender el mercado, si aquí crecí?» frente a «¿Cómo voy a pagar ese alquiler?».",
+          "En una pregunta retórica caben palabras que normalmente solo aparecen en frases negativas, como «nada», «nunca», «en mi vida» o «ni un»: «¿Acaso ha dicho alguien nada del drenaje?», «¿Has visto en tu vida un mole como el de doña Chayo?». Su presencia es una pista de que la pregunta no busca respuesta.",
+        ],
+        table: {
+          caption: "Qué afirma cada pregunta",
+          head: ["Pregunta", "Polaridad", "Lo que se afirma"],
+          rows: [
+            ["¿Quién quiere un mercado vacío?", "afirmativa", "Nadie lo quiere."],
+            ["¿Quién no conoce el puesto de jugos de la entrada?", "negativa", "Todo el mundo lo conoce."],
+            ["¿Acaso cobran menos en el supermercado?", "orientada al no", "No cobran menos."],
+            ["¿Para qué pintar si el techo gotea?", "utilidad negada", "No sirve de nada pintar."],
+            ["¿Cómo no vamos a ir a la asamblea?", "negativa con «cómo»", "Claro que iremos."],
           ],
-          "answer": 1,
-          "why": "Las normas, la mayoría no las había leído."
         },
-        {
-          "audio": "Ese punto lo revisaremos antes de publicar.",
-          "voice": "es-MX-m",
-          "q": "¿Qué formulación cierra el contraste oral de «El tema que vuelve al centro»?",
-          "options": [
-            "Ese punto lo revisaremos antes de publicar.",
-            "Las normas, la mayoría no las había leído.",
-            "A los administradores les preocupaban las ofertas encubiertas."
+        examples: [
+          { es: "¿Quién se va a creer que la remodelación costará solo dos millones?", note: "Afirmativa: nadie se lo cree." },
+          { es: "¿Y qué si el edificio es viejo? También lo es la catedral.", note: "«¿Y qué?» quita fuerza al argumento contrario." },
+          { es: "¿Acaso alguien ha preguntado nunca a los locatarios?", note: "«Nunca» refuerza la respuesta negativa esperada." },
+        ],
+        mistakes: [
+          {
+            wrong: "¿Quién no quiere un mercado limpio? → Nadie lo quiere limpio.",
+            right: "¿Quién no quiere un mercado limpio? → Todos lo queremos limpio.",
+            why: "La pregunta negativa afirma en positivo: «¿quién no…?» equivale a «todos».",
+          },
+          {
+            wrong: "¿Cómo no voy a pagar el alquiler nuevo? Es imposible con lo que vendo.",
+            right: "¿Cómo voy a pagar el alquiler nuevo? Es imposible con lo que vendo.",
+            why: "Con «no», la pregunta afirma que sí; para decir que no se puede, la pregunta va sin negación.",
+          },
+        ],
+        tip: "Para comprobar si entendiste una pregunta retórica, respóndela tú en voz baja con la palabra contraria: «¿quién?» → «nadie»; «¿quién no?» → «todos»; «¿acaso?» → «no».",
+      },
+      {
+        heading: "Pregunta real, coletilla y pregunta eco",
+        body: [
+          "No toda pregunta en un discurso es retórica. Las coletillas «¿no?» y «¿verdad?» al final de una afirmación piden confirmación de verdad y admiten respuesta: «El mercado abre a las siete, ¿verdad?». La pregunta retórica, en cambio, se dice como un cierre y el hablante sigue sin esperar: si alguien contesta, rompe el juego o lo hace a propósito para ironizar.",
+          "La pregunta eco con «¿Cómo que…?» repite lo que otro acaba de decir para mostrar sorpresa o rechazo: «—Van a cerrar el mercado en diciembre. —¿Cómo que lo van a cerrar?». No pide información nueva; pide que el otro se explique o se retracte. Es muy frecuente en la conversación y conviene reservarla para registros orales.",
+          "En un texto argumentativo, una o dos preguntas retóricas bien colocadas dan fuerza; diez seguidas cansan y parecen un truco. Colócalas donde quieres que el lector saque la conclusión por sí mismo: al final de un párrafo o justo antes de la tesis.",
+        ],
+        table: {
+          caption: "Tres preguntas que se parecen",
+          head: ["Tipo", "Ejemplo", "¿Espera respuesta?"],
+          rows: [
+            ["coletilla de confirmación", "La asamblea es el jueves, ¿no?", "Sí: «sí» o «no»."],
+            ["pregunta retórica", "¿A quién le conviene un estacionamiento más?", "No: afirma «a nadie»."],
+            ["pregunta eco", "¿Cómo que no hay permiso?", "Sí: pide una explicación, con sorpresa o enojo."],
           ],
-          "answer": 0,
-          "why": "Ese punto lo revisaremos antes de publicar."
-        }
-      ]
+        },
+        examples: [
+          { es: "Usted vende aquí desde 1990, ¿verdad?", note: "Coletilla: pide confirmación de un dato." },
+          { es: "¿Cómo que el puesto ya no es mío? Tengo los papeles.", note: "Eco: rechaza lo que acaba de oír." },
+        ],
+        mistakes: [
+          {
+            wrong: "¿Acaso la asamblea es el jueves? (para confirmar la fecha)",
+            right: "La asamblea es el jueves, ¿verdad?",
+            why: "«¿Acaso…?» anticipa una respuesta negativa y suena a reproche; para confirmar un dato se usa una coletilla.",
+          },
+        ],
+      },
+      {
+        heading: "Exclamativas que valoran, desean y se sorprenden",
+        body: [
+          "Las exclamativas de grado expresan que algo sobrepasa lo esperado. Además de las que ya conoces con «qué» + adjetivo, el sistema incluye «¡Cómo + verbo!» para la intensidad de una acción («¡Cómo ha subido el precio del jitomate!»), «¡Cuánto/a/os/as + sustantivo!» para la cantidad, con concordancia («¡Cuánta gente vino!», «¡Cuántos puestos cerrados!») y «¡Lo + adjetivo o adverbio + que…!», donde el adjetivo concuerda con el sustantivo aunque «lo» no cambie («¡Lo baratas que estaban las tortillas!»).",
+          "«¡Quién + imperfecto de subjuntivo!» expresa un deseo difícil o imposible para uno mismo: «¡Quién tuviera la energía de don Rubén!» (ojalá yo la tuviera). «¡Quién + pluscuamperfecto de subjuntivo!» expresa sorpresa ante algo que nadie habría previsto: «¡Quién lo hubiera dicho! El mercado lleno un martes». No confundas «quién» exclamativo con «quien» relativo: el primero lleva tilde.",
+          "Hay exclamativas coloquiales que conviene reconocer aunque no siempre uses: «¡Qué de…!» (¡Qué de gente!) para la cantidad, «¡Menudo/a…!» (¡Menudo lío!), sobre todo en España, y «¡Si será…!» para un reproche cariñoso. En México es más frecuente «¡Qué tanto…!» o «¡Cuánta…!» que «¡menudo!».",
+          "Ortografía: «qué», «cuánto», «cómo», «quién» llevan tilde cuando son exclamativos o interrogativos, también en estilo indirecto («No sabes cuánto lo siento»). Los signos de apertura ¡ ¿ van donde empieza la exclamación o la pregunta, no siempre al principio de la oración: «Y usted, ¿qué propone?». Si una frase es pregunta y exclamación a la vez, puede escribirse ¡¿…?!.",
+        ],
+        table: {
+          caption: "Exclamativas complejas",
+          head: ["Estructura", "Ejemplo", "Valor"],
+          rows: [
+            ["¡Cómo + verbo!", "¡Cómo ha cambiado la colonia!", "intensidad de la acción"],
+            ["¡Cuánto/a/os/as + sustantivo!", "¡Cuántas veces vinimos de niños!", "cantidad, con concordancia"],
+            ["¡Lo + adjetivo + que…!", "¡Lo amables que eran las marchantas!", "grado; el adjetivo concuerda"],
+            ["¡Quién + imperfecto de subjuntivo!", "¡Quién pudiera volver a 1985!", "deseo irrealizable"],
+            ["¡Quién + pluscuamperfecto de subjuntivo!", "¡Quién lo hubiera imaginado!", "sorpresa ante lo inesperado"],
+          ],
+        },
+        examples: [
+          { es: "¡Lo caros que se han puesto los chiles secos!", note: "«caros» concuerda con «chiles», aunque «lo» sea neutro." },
+          { es: "¡Quién supiera cocinar como la señora de las quesadillas!", note: "Deseo para uno mismo: imperfecto de subjuntivo." },
+          { es: "Y tú, ¿cuánto pagas por el local?", note: "Los signos abren donde empieza la pregunta." },
+        ],
+        mistakes: [
+          {
+            wrong: "¡Cuánto gente había en la feria del mole!",
+            right: "¡Cuánta gente había en la feria del mole!",
+            why: "«Cuánto» concuerda con el sustantivo: «gente» es femenino singular.",
+          },
+          {
+            wrong: "¡Lo barato que estaban las flores!",
+            right: "¡Lo baratas que estaban las flores!",
+            why: "El adjetivo concuerda con «las flores»; solo «lo» queda invariable.",
+          },
+          {
+            wrong: "¡Quien pudiera dormir hasta tarde!",
+            right: "¡Quién pudiera dormir hasta tarde!",
+            why: "En la exclamativa de deseo, «quién» es tónico y lleva tilde.",
+          },
+        ],
+        tip: "Para decidir la tilde, lee en voz alta: si la palabra se pronuncia con fuerza y encabeza una pregunta o una exclamación, aunque sea indirecta, lleva tilde.",
+      },
+    ],
+  },
+  grammar: {
+    intro: "Empieza por lo que afirma cada pregunta, sigue con la elección entre pregunta real y retórica y termina con las exclamativas y su ortografía.",
+    exercises: [
+      {
+        id: "c1-16-gramatica-polaridad",
+        type: "context",
+        prompt: "Lee lo que dice cada persona en la asamblea del mercado y decide qué afirma realmente.",
+        items: [
+          {
+            context: "Una locataria, ante la propuesta de cerrar los domingos: «¿Quién no ha venido aquí un domingo por barbacoa?».",
+            q: "¿Qué afirma la locataria?",
+            options: ["Que pocas personas vienen los domingos.", "Que casi todo el mundo ha venido un domingo por barbacoa.", "Que no sabe quién viene los domingos."],
+            answer: 1,
+            why: "Pregunta negativa con «quién no»: afirma «todos».",
+          },
+          {
+            context: "Un vecino joven, sobre la plaza comercial que proponen construir: «¿Acaso esa plaza va a vender quelites y huitlacoche?».",
+            q: "¿Qué da a entender el vecino?",
+            options: ["Que la plaza no venderá esos productos.", "Que duda si la plaza venderá esos productos.", "Que la plaza venderá esos productos más baratos."],
+            answer: 0,
+            why: "«¿Acaso…?» orienta la respuesta hacia el no.",
+          },
+          {
+            context: "El administrador, cuando le reclaman que la pintura nueva es de otro color: «¿Y qué más da el color, si ya no gotea?».",
+            q: "¿Qué función tiene la pregunta?",
+            options: ["Pide la opinión de los vecinos sobre el color.", "Pregunta qué color prefieren.", "Le resta importancia al reclamo."],
+            answer: 2,
+            why: "«¿Qué más da…?» niega la importancia de lo que se discute.",
+          },
+          {
+            context: "Una vendedora de flores, a quien le preguntan si se mudará al nuevo local: «¿Cómo me voy a ir, si mis clientas me buscan aquí?».",
+            q: "¿Qué responde en realidad?",
+            options: ["Que se irá en cuanto pueda.", "Que no piensa irse.", "Que todavía no lo ha decidido."],
+            answer: 1,
+            why: "«¿Cómo voy a…?» sin negación afirma que no es posible o no tiene sentido.",
+          },
+        ],
+      },
+      {
+        id: "c1-16-gramatica-tipo",
+        type: "classify",
+        prompt: "Clasifica cada pregunta según su función en la conversación.",
+        categories: ["Pregunta real o coletilla", "Pregunta retórica", "Pregunta eco"],
+        items: [
+          { text: "La reunión con la alcaldía es a las seis, ¿no?", cat: 0, why: "Coletilla que pide confirmar un dato." },
+          { text: "¿Para qué queremos cajones de estacionamiento si todos llegamos a pie?", cat: 1, why: "Niega la utilidad: no los necesitamos." },
+          { text: "¿Cómo que la licencia vence este mes?", cat: 2, why: "Repite lo oído con sorpresa y pide explicación." },
+          { text: "¿A qué hora llega el camión de la fruta los lunes?", cat: 0, why: "Pide información nueva." },
+          { text: "¿Has probado en tu vida un pan de elote como este?", cat: 1, why: "«En tu vida» delata la pregunta retórica: afirma que no hay otro igual." },
+          { text: "¿Cómo que no hay presupuesto para el techo?", cat: 2, why: "Eco de lo que alguien acaba de decir, con rechazo." },
+        ],
+      },
+      {
+        id: "c1-16-gramatica-exclamativas",
+        type: "gap",
+        prompt: "Completa cada exclamativa con la forma adecuada. Fíjate en la tilde y en la concordancia.",
+        items: [
+          { q: "¡___ veces nos han prometido arreglar el drenaje y seguimos igual! [cuánto]", answers: [["Cuántas", "cuántas"]], why: "Femenino plural, como «veces», y con tilde." },
+          { q: "¡Lo ___ que estaban las tunas este año! [dulce]", answers: [["dulces"]], why: "El adjetivo concuerda con «las tunas»." },
+          { q: "¡Quién ___ tener un puesto en este pasillo! [poder]", answers: [["pudiera", "pudiese"]], why: "Deseo para uno mismo: imperfecto de subjuntivo." },
+          { q: "¡Quién lo ___ pensado: la alcaldía nos dio la razón! [haber]", answers: [["hubiera", "hubiese"]], why: "Sorpresa ante lo inesperado: pluscuamperfecto de subjuntivo." },
+          { q: "¡___ ha crecido el hijo de la señora del atole! [cómo]", answers: [["Cómo", "cómo"]], why: "«Cómo» + verbo: intensidad de un cambio; lleva tilde." },
+          { q: "¡___ gente vino a firmar la carta! [cuánto]", answers: [["Cuánta", "cuánta"]], why: "Femenino singular, como «gente»." },
+        ],
+      },
+      {
+        id: "c1-16-gramatica-errores",
+        type: "error",
+        prompt: "Cada frase tiene un error de forma, de tilde o de sentido. Corrígela.",
+        items: [
+          {
+            sentence: "¿Cómo no voy a cerrar el puesto? Me encanta y no pienso cerrarlo.",
+            answers: ["¿Cómo voy a cerrar el puesto? Me encanta y no pienso cerrarlo."],
+            why: "Para afirmar que no lo cerrará, la pregunta va sin negación: «¿Cómo voy a…?».",
+          },
+          {
+            sentence: "¡Lo bonito que han quedado las lámparas nuevas!",
+            answers: ["¡Lo bonitas que han quedado las lámparas nuevas!"],
+            why: "El adjetivo concuerda con «las lámparas»: bonitas.",
+          },
+          {
+            sentence: "¿Para qué no necesitamos más cajones si nadie viene en coche?",
+            answers: ["¿Para qué necesitamos más cajones si nadie viene en coche?"],
+            why: "«¿Para qué…?» ya niega la utilidad; con «no» la pregunta pierde el sentido que se busca.",
+          },
+          {
+            sentence: "¡Quien hubiera dicho que el mercado cumpliría setenta años!",
+            answers: ["¡Quién hubiera dicho que el mercado cumpliría setenta años!", "¡Quién lo hubiera dicho! El mercado cumple setenta años."],
+            why: "«Quién» exclamativo es tónico y lleva tilde.",
+          },
+        ],
+      },
+      {
+        id: "c1-16-gramatica-reformular",
+        type: "open",
+        prompt: "Reformula según se te pide. Compara después con el modelo y revisa con la lista.",
+        items: [
+          {
+            prompt: "Convierte esta afirmación en una pregunta retórica sin cambiar lo que afirma: «Nadie quiere que el mercado se convierta en estacionamiento».",
+            model: "¿Quién quiere que el mercado se convierta en estacionamiento? / ¿Acaso alguien quiere que el mercado se convierta en estacionamiento?",
+            checklist: ["La pregunta es afirmativa, porque afirma algo negativo.", "Conservo el subjuntivo de «que se convierta».", "Uso bien los signos de apertura y cierre."],
+          },
+          {
+            prompt: "Convierte en pregunta retórica: «Todos hemos comprado alguna vez flores en este mercado para el Día de Muertos».",
+            model: "¿Quién no ha comprado alguna vez flores en este mercado para el Día de Muertos?",
+            checklist: ["La pregunta es negativa, porque afirma algo positivo.", "Paso de «todos» a «quién no»."],
+          },
+          {
+            prompt: "Expresa con dos exclamativas distintas (una de deseo y otra de sorpresa) lo que siente un locatario jubilado al ver el mercado lleno de jóvenes.",
+            model: "¡Quién tuviera veinte años para empezar otra vez aquí! ¡Quién me hubiera dicho que vería el mercado lleno de jóvenes!",
+            checklist: ["Uso imperfecto de subjuntivo para el deseo.", "Uso pluscuamperfecto de subjuntivo para la sorpresa.", "«Quién» lleva tilde en las dos."],
+          },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "Léxico de un mercado público de la Ciudad de México y de la discusión vecinal sobre su futuro. Algunas palabras son propias de México; se indica cuando conviene.",
+    groups: [
+      {
+        title: "El mercado por dentro",
+        items: [
+          { es: "el locatario", note: "persona que tiene un local o puesto fijo en un mercado público" },
+          { es: "el puesto", note: "espacio donde se vende dentro del mercado" },
+          { es: "la fonda", note: "pequeño restaurante popular, a menudo dentro del mercado" },
+          { es: "la marchanta", note: "en México, clienta habitual de un puesto; también la vendedora que la atiende" },
+          { es: "el pasillo de comidas", note: "zona del mercado donde se concentran las fondas" },
+          { es: "el tianguis", note: "en México, mercado callejero que se instala ciertos días" },
+          { es: "surtir el puesto", note: "abastecerlo de mercancía" },
+          { es: "a granel", note: "sin envase, por peso o por medida" },
+        ],
+      },
+      {
+        title: "La discusión vecinal",
+        items: [
+          { es: "la remodelación", note: "obra para renovar un edificio sin cambiar su uso" },
+          { es: "la plaza comercial", note: "en México, centro comercial" },
+          { es: "la alcaldía", note: "en la Ciudad de México, gobierno de cada demarcación territorial" },
+          { es: "el uso de suelo", note: "destino legal de un terreno: habitacional, comercial, etc." },
+          { es: "recabar firmas", note: "reunir firmas para apoyar una petición" },
+          { es: "echar abajo", note: "derribar un edificio; también rechazar una propuesta" },
+          { es: "el arraigo", note: "vínculo profundo con un lugar" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "c1-16-lexico-relacion",
+        type: "match",
+        prompt: "Relaciona cada expresión con su definición.",
+        pairs: [
+          { left: "el locatario", right: "persona que tiene un puesto fijo en un mercado público" },
+          { left: "el tianguis", right: "mercado callejero que se instala ciertos días" },
+          { left: "a granel", right: "sin envase, por peso o por medida" },
+          { left: "el uso de suelo", right: "destino legal de un terreno" },
+          { left: "recabar firmas", right: "reunir apoyos por escrito para una petición" },
+          { left: "el arraigo", right: "vínculo profundo con un lugar" },
+        ],
+      },
+      {
+        id: "c1-16-lexico-uso",
+        type: "gap",
+        prompt: "Completa el cartel de la asociación de locatarios con la expresión adecuada.",
+        bank: ["remodelación", "echar abajo", "surtir", "alcaldía"],
+        items: [
+          { q: "¿Quién quiere ___ un edificio que da de comer a toda la colonia?", answers: [["echar abajo"]] },
+          { q: "Pedimos a la ___ una reunión pública antes de firmar cualquier contrato.", answers: [["alcaldía"]] },
+          { q: "Sí a la ___ del techo y de los baños; no a la plaza comercial.", answers: [["remodelación"]] },
+          { q: "Durante la obra, ¿cómo vamos a ___ los puestos sin acceso para los camiones?", answers: [["surtir"]] },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La melodía de la pregunta retórica, de la pregunta real y de la exclamativa",
+    explanation: [
+      "Una pregunta total real (de sí o no) suele terminar con un ascenso claro: «¿Abren el domingo?↑». La pregunta retórica, aunque tenga la misma forma, se pronuncia muchas veces con un final descendente o apenas suspendido, como una afirmación, porque el hablante no deja hueco para responder: «¿Acaso los coches compran fruta?↓».",
+      "Las preguntas con interrogativo («quién», «para qué») descienden en ambos casos; lo que distingue la retórica es el énfasis sobre la palabra clave y una pausa breve después, para que el oyente complete la respuesta en su cabeza. La coletilla «¿no?» o «¿verdad?» forma su propio grupo y sube.",
+      "En la exclamativa, la palabra exclamativa («cómo», «cuánto», «quién») recibe un acento muy marcado y la curva cae al final con fuerza. En el habla de la Ciudad de México es frecuente un alargamiento de la sílaba tónica final en la exclamación. El audio es sintético: sirve para percibir el contraste, no certifica un acento regional ni evalúa tu pronunciación.",
+    ],
+    table: {
+      caption: "Tres melodías",
+      head: ["Tipo", "Ejemplo", "Final"],
+      rows: [
+        ["pregunta real", "¿Ya llegó el camión del pescado?", "ascendente"],
+        ["pregunta retórica", "¿Acaso alguien nos preguntó?", "descendente, como una afirmación"],
+        ["exclamativa", "¡Cómo ha llovido esta semana!", "acento fuerte en «cómo» y caída final"],
+      ],
     },
-    "produce": [
-      {
-        "text": "La apelación, esa sí debemos hacerla visible.",
-        "tip": "Marca una frontera breve después del tema dislocado y mantén el clítico que lo recupera cuando corresponde. En el foco contrastivo, destaca la alternativa relevante sin convertir toda la oración en énfasis."
-      },
-      {
-        "text": "Las normas, la mayoría no las había leído.",
-        "tip": "Graba dos versiones cambiando foco o pausas; explica qué interpretación favorece cada una."
-      },
-      {
-        "text": "Ese punto lo revisaremos antes de publicar.",
-        "tip": "Integra esta formulación en una respuesta espontánea de treinta segundos, sin leer el resto."
-      }
-    ]
-  },
-  "listening": {
-    "title": "Voces y decisiones: El tema que vuelve al centro",
-    "context": "Escucha sin abrir la transcripción. La situación es una intervención o reunión original vinculada al dossier. Las etiquetas de voz orientan la síntesis y no acreditan muestras dialectales verificadas.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Intervención 1",
-        "voice": "es-ES-f",
-        "role": "presentación del problema"
-      },
-      {
-        "id": "b",
-        "name": "Intervención 2",
-        "voice": "es-MX-m",
-        "role": "contraste o desarrollo"
-      }
-    ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Las retiradas, las empezamos a revisar manualmente cuando aumentaron las reclamaciones. Al principio confiábamos demasiado en la clasificación automática. No digo que todas fueran erróneas: varias publicaciones sí ofrecían servicios profesionales sin identificarlos. Pero la explicación enviada era tan general que nadie podía saber qué parte del anuncio había activado la regla. Eso volvió muy difícil corregir un mensaje de buena fe o presentar una apelación concreta."
-      },
-      {
-        "speaker": "b",
-        "text": "A mí lo que me preocupa es la comparación. Mi anuncio desapareció y otro prácticamente igual siguió visible durante una semana. No puedo demostrar por qué ocurrió, pero sí puedo mostrar la diferencia. Cuando lo señalé, recibí un enlace a las normas, como si no las hubiera leído. Las normas ya las conozco; lo que necesito es saber cómo se aplicaron a estos dos casos. Si hubo un error, prefiero que lo reconozcan a que repitan una explicación abstracta."
-      },
-      {
-        "speaker": "a",
-        "text": "Ese punto lo acepto. La diferencia puede deberse al orden de revisión o a una clasificación incorrecta, pero tenemos que comprobarlo. Las denuncias de usuarios, además, hacen que ciertos mensajes lleguen antes al equipo. No deberíamos presentar ese mecanismo como neutral por definición. Propongo responder con la regla concreta, permitir adjuntar comparaciones y registrar cuándo una decisión se revoca. Así podremos detectar patrones, no solo resolver la queja más visible de cada día."
-      },
-      {
-        "speaker": "b",
-        "text": "Retomo la apelación, porque ahí parece haber un acuerdo posible. Nadie está pidiendo que desaparezca toda moderación ni que el equipo responda en segundos. Se pide un procedimiento comprensible, un plazo orientativo y una explicación que permita actuar. Para el reportaje distinguiré la inconsistencia documentada de la intención que algunos atribuyen. También señalaré que publicar normas no basta si sus cambios pasan inadvertidos. El tema central será la posibilidad de revisar decisiones, y las declaraciones se ordenarán según lo que aporten a esa pregunta, no según quién haya hablado más fuerte."
-      }
-    ],
-    "stages": [
-      {
-        "stage": "gist",
-        "prompt": "Escucha una vez sin abrir la transcripción. Identifica el problema y el propósito general; no intentes copiar todas las palabras.",
-        "exercise": {
-          "id": "l-global",
-          "type": "choice",
-          "prompt": "Primera escucha: El tema que vuelve al centro.",
-          "items": [
-            {
-              "q": "¿Qué problema organiza la intervención de «El tema que vuelve al centro»?",
-              "options": [
-                "Si el procedimiento permite comprender y cuestionar decisiones.",
-                "Si cualquier retirada constituye necesariamente censura.",
-                "Si una diferencia demuestra por sí sola intención discriminatoria."
-              ],
-              "answer": 0,
-              "why": "Si el procedimiento permite comprender y cuestionar decisiones."
-            },
-            {
-              "q": "¿Qué lectura del cierre de «El tema que vuelve al centro» conservaría sus reservas?",
-              "options": [
-                "La actividad de usuarios que presentan denuncias.",
-                "Un examen idéntico y simultáneo de todos los mensajes.",
-                "Una solución total e inmediata sin condiciones."
-              ],
-              "answer": 0,
-              "why": "La actividad de usuarios que presentan denuncias."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Escucha de nuevo y toma notas de compromisos, límites y correcciones. Comprueba quién aporta cada dato.",
-        "exercise": {
-          "id": "l-detalle",
-          "type": "open",
-          "prompt": "Reconstruye lo que se dijo sobre moderación automática.",
-          "items": [
-            {
-              "prompt": "¿Qué puede influir en el orden de revisión de anuncios?",
-              "model": "La actividad de usuarios que presentan denuncias.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "En el audio de «El tema que vuelve al centro», identifica una corrección o una reserva y explica qué interpretación evita.",
-              "model": "Retomo la apelación, porque ahí parece haber un acuerdo posible. Nadie está pidiendo que desaparezca toda moderación ni que el equipo responda en segundos. Se pide un procedimiento comprensible, un plazo orientativo y una explicación que permita actuar. Para el reportaje distinguiré la inconsistencia documentada de la intención que algunos atribuyen. También señalaré que publicar normas no basta si sus cambios pasan inadvertidos. El tema central será la posibilidad de revisar decisiones, y las declaraciones se ordenarán según lo que aporten a esa pregunta, no según quién haya hablado más fuerte.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Antes de consultar la transcripción, explica una intención y justifícala con un marcador o una oposición que hayas oído.",
-        "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Escucha la organización y la postura en El tema que vuelve al centro.",
-          "items": [
-            {
-              "prompt": "¿Qué diferencia perdería un resumen del audio de «El tema que vuelve al centro» que eliminara sus condiciones?",
-              "model": "La actividad de usuarios que presentan denuncias.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            },
-            {
-              "prompt": "Reformula el cierre de «El tema que vuelve al centro» para una persona que no asistió; conserva una reserva y un compromiso.",
-              "model": "La retirada desigual de dos anuncios está documentada; la intención discriminatoria que algunos atribuyen requiere evidencia adicional. Los administradores reconocen límites de la clasificación y del orden de revisión, influido por denuncias. La apelación, hoy difícil de encontrar, debería permitir adjuntar comparaciones y recibir una explicación concreta. Publicar normas es necesario, pero no suficiente si sus cambios pasan inadvertidos. El reportaje examina qué mecanismos hacen revisable una decisión y qué información permite distinguir error, inconsistencia y trato deliberado.",
-              "checklist": [
-                "Conservo el alcance y la atribución de la información.",
-                "Justifico la decisión con un indicio concreto."
-              ]
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "La moderación, ¿quién la explica?",
-    "genre": "Reportaje de varias voces",
-    "frame": "Texto original situado en Ciudad de México; léelo después de la primera escucha y contrasta sus decisiones discursivas.",
-    "text": [
-      "Cuando una plataforma vecinal retiró varios anuncios de alquiler, el debate se concentró en la libertad de expresión. Los administradores respondieron que no censuraban opiniones, sino publicaciones que incumplían una regla sobre intermediación comercial. Los anunciantes alegaron que la regla era ambigua y que otros mensajes semejantes seguían visibles. El reportaje reconstruye el conflicto a partir de esas voces, pero su cuestión central es otra: cómo se justifica una decisión cuando quienes la reciben no pueden observar el procedimiento que la produjo.",
-      "Las normas, la mayoría de usuarios no las había leído. La frase pone en primer plano un tema que podría perderse dentro de una explicación larga. No afirma que las normas fueran inexistentes ni que la falta de lectura disculpara cualquier incumplimiento. Señala un problema de diseño: el enlace estaba al final de una página extensa y las modificaciones no se anunciaban. La plataforma consideraba suficiente haber publicado condiciones; los usuarios esperaban que los cambios relevantes se comunicaran de manera visible. Ambas expectativas podían coexistir hasta que una retirada las volvía incompatibles.",
-      "A los administradores les preocupaba la proliferación de ofertas profesionales presentadas como intercambios entre vecinos. Ese complemento inicial destaca a quienes experimentan la preocupación y prepara el motivo de la intervención. El equipo había empezado a retirar anuncios mediante una clasificación automática y revisión posterior. No todos los casos recibían la misma atención. Los mensajes que acumulaban denuncias se revisaban antes, de modo que grupos muy activos podían influir en qué conflictos llegaban a los moderadores. La herramienta no inventaba la desigualdad de participación, pero podía amplificarla.",
-      "Una anunciante mostró dos publicaciones casi idénticas: la suya había desaparecido; la otra seguía activa. Los administradores reconocieron que la comparación revelaba una aplicación inconsistente, aunque negaron que demostrara trato deliberadamente discriminatorio. La diferencia era importante. Un resultado desigual exige explicación y corrección; atribuir intención requiere evidencia adicional. El reportaje no resolvía esa cuestión mediante una falsa simetría entre versiones. Contrastaba fechas, respuestas y capturas, y distinguía lo documentado de lo que cada parte infería.",
-      "La apelación, esa sí resultaba difícil de encontrar. Solo podía presentarse mediante un formulario que no permitía adjuntar el anuncio comparado. El equipo propuso ampliar sus campos y enviar una explicación concreta de la regla aplicada. También aceptó publicar ejemplos de casos fronterizos. Los anunciantes, por su parte, reconocieron que una comunidad pequeña no podía revisar de inmediato cada mensaje. El acuerdo no eliminó la moderación automática; introdujo límites y vías de corrección para que una decisión inicial no se convirtiera en una sanción opaca e irreversible.",
-      "La línea editorial del reportaje se reconoce en la selección de su pregunta final. En vez de preguntar si la plataforma es buena o mala, examina si sus procedimientos permiten comprender y cuestionar decisiones. Esa elección privilegia la rendición de cuentas sobre el enfrentamiento entre identidades. El orden de palabras contribuye a sostenerla: retoma las normas, los administradores y la apelación como temas sucesivos, y coloca la información nueva después. Organizar un texto no consiste solo en enlazar frases; consiste en decidir qué asunto permanece disponible para que el lector pueda seguir examinándolo."
-    ],
-    "tasks": [
-      {
-        "id": "r-inferencia",
-        "type": "choice",
-        "prompt": "Interpreta la postura de «La moderación, ¿quién la explica?» sin atribuir intenciones que el texto no demuestra.",
-        "items": [
-          {
-            "q": "¿Cuál es la pregunta editorial del reportaje?",
-            "options": [
-              "Si cualquier retirada constituye necesariamente censura.",
-              "Si una diferencia demuestra por sí sola intención discriminatoria.",
-              "Si el procedimiento permite comprender y cuestionar decisiones."
-            ],
-            "answer": 2,
-            "why": "Si el procedimiento permite comprender y cuestionar decisiones."
-          },
-          {
-            "q": "¿Qué conclusión excede lo que permite afirmar «La moderación, ¿quién la explica?»?",
-            "options": [
-              "Si cualquier retirada constituye necesariamente censura.",
-              "Si el procedimiento permite comprender y cuestionar decisiones.",
-              "La decisión exige conservar límites y atribuir las voces."
-            ],
-            "answer": 0,
-            "why": "Si cualquier retirada constituye necesariamente censura."
-          }
-        ]
-      },
-      {
-        "id": "r-argumento",
-        "type": "open",
-        "prompt": "Reconstruye cómo avanza «La moderación, ¿quién la explica?».",
-        "items": [
-          {
-            "prompt": "Localiza una transición decisiva en «La moderación, ¿quién la explica?» y explica qué interpretación modifica.",
-            "model": "La línea editorial del reportaje se reconoce en la selección de su pregunta final. En vez de preguntar si la plataforma es buena o mala, examina si sus procedimientos permiten comprender y cuestionar decisiones. Esa elección privilegia la rendición de cuentas sobre el enfrentamiento entre identidades. El orden de palabras contribuye a sostenerla: retoma las normas, los administradores y la apelación como temas sucesivos, y coloca la información nueva después. Organizar un texto no consiste solo en enlazar frases; consiste en decidir qué asunto permanece disponible para que el lector pueda seguir examinándolo.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          },
-          {
-            "prompt": "Compara el problema central de «La moderación, ¿quién la explica?» con el audio: identifica una coincidencia y una aportación que no deba confundirse.",
-            "model": "La retirada desigual de dos anuncios está documentada; la intención discriminatoria que algunos atribuyen requiere evidencia adicional. Los administradores reconocen límites de la clasificación y del orden de revisión, influido por denuncias. La apelación, hoy difícil de encontrar, debería permitir adjuntar comparaciones y recibir una explicación concreta. Publicar normas es necesario, pero no suficiente si sus cambios pasan inadvertidos. El reportaje examina qué mecanismos hacen revisable una decisión y qué información permite distinguir error, inconsistencia y trato deliberado.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Observa cómo las formas elegidas construyen el argumento; justifica qué cambiaría con otra redacción.",
-      "items": [
+    perceive: {
+      id: "c1-16-percepcion",
+      type: "listen",
+      prompt: "Escucha cada frase y decide qué tipo de enunciado es por su melodía y su contenido.",
+      items: [
         {
-          "quote": "Las normas, la mayoría de usuarios no las había leído.",
-          "note": "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido."
+          q: "¿Qué tipo de pregunta es la que oyes sobre los domingos?",
+          options: ["Una pregunta retórica que afirma algo.", "Una pregunta real que pide un dato."],
+          answer: 1,
+          why: "El final sube y la pregunta pide información: si abren o no.",
+          audio: "¿El mercado abre los domingos en diciembre?",
+          voice: "es-MX-f",
         },
         {
-          "quote": "La apelación, esa sí resultaba difícil de encontrar.",
-          "note": "Marca una frontera breve después del tema dislocado y mantén el clítico que lo recupera cuando corresponde. En el foco contrastivo, destaca la alternativa relevante sin convertir toda la oración en énfasis."
-        }
-      ]
-    }
+          q: "¿Qué tipo de pregunta es la que oyes sobre la plaza comercial?",
+          options: ["Una pregunta real que pide un dato.", "Una pregunta retórica que afirma algo."],
+          answer: 1,
+          why: "Final descendente y «acaso»: afirma que nadie la pidió.",
+          audio: "¿Acaso alguien pidió una plaza comercial en esta esquina?",
+          voice: "es-MX-m",
+        },
+        {
+          q: "¿Qué parte de la frase sobre la asamblea sube al final?",
+          options: ["La palabra «jueves».", "La coletilla «verdad»."],
+          answer: 1,
+          why: "La coletilla forma su propio grupo y sube para pedir confirmación.",
+          audio: "La asamblea es el jueves a las siete, ¿verdad?",
+          voice: "es-MX-f",
+        },
+        {
+          q: "¿Qué expresa la exclamación sobre la energía de don Rubén?",
+          options: ["Un deseo para quien habla.", "Una sorpresa ante algo pasado.", "Una pregunta sobre quién tiene energía."],
+          answer: 0,
+          why: "«¡Quién tuviera…!» con imperfecto de subjuntivo: deseo.",
+          audio: "¡Quién tuviera la energía de don Rubén a sus ochenta años!",
+          voice: "es-MX-m",
+        },
+      ],
+    },
+    produce: [
+      { text: "¿Quién no ha comido alguna vez en estas fondas?", tip: "Acento fuerte en «no» y final descendente: no esperas respuesta.", voice: "es-MX-f" },
+      { text: "Usted es locatario desde hace treinta años, ¿no?", tip: "Pausa antes de la coletilla y subida en «no».", voice: "es-MX-m" },
+      { text: "¡Cuánta gente ha pasado por estos pasillos!", tip: "Marca «cuánta» y deja caer la voz al final.", voice: "es-MX-f" },
+      { text: "¡Quién lo hubiera dicho: setenta años y sigue de pie!", tip: "Primera exclamación con caída fuerte, breve pausa y segunda parte más rápida.", voice: "es-MX-m" },
+    ],
+    spelling: "Los signos ¡ y ¿ se abren donde empieza la exclamación o la pregunta, aunque haya algo antes: «Y tú, ¿qué harías?». «Qué», «cuánto», «cómo» y «quién» llevan tilde también cuando dependen de otro verbo: «No te imaginas cuánto trabajamos».",
   },
-  "practice": {
-    "exercises": [
+  listening: {
+    title: "El mercado al aire",
+    context: "Programa de una radio comunitaria de la colonia Portales, en la Ciudad de México. Marisol, la conductora, entrevista a Rubén, locatario del mercado desde hace cuarenta años, y a Ximena, urbanista que asesora a la alcaldía. Escucha primero sin transcripción. El mercado, el proyecto y las personas son ficticios; las voces son sintéticas y no se presentan como una variedad regional verificada.",
+    speakers: [
+      { id: "m", name: "Marisol", voice: "es-MX-f", role: "Conductora del programa" },
+      { id: "r", name: "Rubén", voice: "es-MX-m", role: "Locatario de un puesto de semillas y chiles secos" },
+      { id: "x", name: "Ximena", voice: "es-MX-f", role: "Urbanista asesora de la alcaldía" },
+    ],
+    script: [
+      { speaker: "m", text: "Buenas tardes, Portales. Hoy hablamos del mercado La Paloma, que cumple setenta años con el techo lleno de goteras y con un proyecto que propone convertir la planta alta en estacionamiento. Don Rubén, usted vende ahí desde 1984, ¿verdad?" },
+      { speaker: "r", text: "Desde el ochenta y cuatro, sí. Y mire, yo les pregunto a los de la alcaldía: ¿quién viene al mercado en coche? La señora que compra medio kilo de frijol viene caminando con su bolsa. ¿Para qué queremos ochenta cajones de estacionamiento, si lo que nos falta es un techo que no se caiga?" },
+      { speaker: "x", text: "Entiendo el enojo, don Rubén, pero el estacionamiento no sale de la nada. Los proveedores llegan de madrugada y se paran en doble fila; los vecinos de la calle Odesa llevan años quejándose. Con la planta alta resolveríamos la carga y la descarga." },
+      { speaker: "r", text: "¿Cómo que la carga y la descarga? Eso nunca lo dijeron en la junta. Nos hablaron de clientes, de una plaza con cafeterías. ¿Acaso nos han enseñado algún plano? Ni uno, señorita, ni uno." },
+      { speaker: "m", text: "Ximena, ¿existe ese plano? Porque es lo que más preguntan nuestros radioescuchas." },
+      { speaker: "x", text: "Existe un anteproyecto, y tiene razón don Rubén en que no se ha presentado como se debía. Lo voy a decir claro: el uso principal de la planta alta todavía no está decidido. Por eso hacemos la consulta. ¿Qué sentido tendría consultar si ya estuviera todo firmado?" },
+      { speaker: "r", text: "Pues ojalá sea así. Yo lo único que digo es que este mercado ha dado de comer a tres generaciones. ¡Cuántas familias han salido adelante con un puesto de cuatro metros! ¡Y lo poco que nos han ayudado en todos estos años!" },
+      { speaker: "m", text: "Tenemos una llamada. Dice doña Chayo, de la fonda del pasillo de comidas: ¡Quién me hubiera dicho que la alcaldía iba a venir a preguntarnos algo! Y añade: ¡quién tuviera veinte años para pelear como antes!" },
+      { speaker: "x", text: "Pues que venga doña Chayo a la consulta del sábado, que su voz cuenta igual que la mía. Y una cosa más: ¿alguien cree de verdad que vamos a echar abajo un edificio que es patrimonio del barrio? Nadie en la alcaldía lo propone." },
+      { speaker: "r", text: "Eso lo vamos a ver el sábado. ¡Cómo ha cambiado el discurso desde que recabamos las firmas! Pero bueno, allí estaremos, ¿cómo no vamos a estar?" },
+    ],
+    stages: [
       {
-        "id": "p-orden",
-        "type": "order",
-        "prompt": "Reconstruye dos decisiones lingüísticas de «El tema que vuelve al centro»; léelas después con una pausa justificada. Recupera el orden de las formulaciones de los ejemplos; la paráfrasis libre se trabaja en las actividades abiertas.",
-        "items": [
+        stage: "gist",
+        prompt: "Escucha el programa completo sin abrir la transcripción. ¿De qué se discute y en qué termina?",
+        exercise: {
+          id: "c1-16-escucha-gist",
+          type: "choice",
+          prompt: "Reconstruye la situación general.",
+          items: [
+            {
+              q: "¿Cuál es el tema central del programa sobre La Paloma?",
+              options: ["La venta del mercado a una empresa privada.", "El uso que se dará a la planta alta del mercado y el estado del edificio.", "La subida de los alquileres de los puestos."],
+              answer: 1,
+              why: "Se discute el estacionamiento propuesto para la planta alta y las goteras del techo.",
+            },
+            {
+              q: "¿Cómo termina la conversación entre Rubén y Ximena?",
+              options: ["Ambos aceptan verse en la consulta del sábado.", "Rubén se niega a participar en la consulta.", "Ximena retira el proyecto del estacionamiento."],
+              answer: 0,
+              why: "Ximena invita a la consulta y Rubén responde «¿cómo no vamos a estar?», es decir, que sí irán.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "detail",
+        prompt: "Escucha otra vez y responde sin mirar la transcripción.",
+        exercise: {
+          id: "c1-16-escucha-detail",
+          type: "choice",
+          prompt: "Comprueba los detalles y lo que afirma cada pregunta.",
+          items: [
+            {
+              q: "¿Qué quiere decir Rubén con «¿Quién viene al mercado en coche?»?",
+              options: ["Que no sabe cuántos clientes vienen en coche.", "Que casi nadie viene en coche.", "Que muchos clientes vienen en coche."],
+              answer: 1,
+              why: "Pregunta retórica afirmativa: afirma «casi nadie».",
+            },
+            {
+              q: "¿Qué argumento nuevo aporta Ximena a favor del estacionamiento?",
+              options: ["La carga y descarga de los proveedores.", "La llegada de más clientes de otras colonias.", "Los ingresos que daría a la alcaldía."],
+              answer: 0,
+              why: "Habla de los proveedores en doble fila y de las quejas de la calle Odesa.",
+            },
+            {
+              q: "¿Qué reconoce Ximena?",
+              options: ["Que el plano definitivo ya está firmado.", "Que el edificio se va a derribar.", "Que el anteproyecto no se presentó como se debía."],
+              answer: 2,
+              why: "Admite que don Rubén tiene razón en ese punto.",
+            },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Fíjate en las preguntas y exclamaciones del programa. Responde y luego consulta la transcripción.",
+        exercise: {
+          id: "c1-16-escucha-notice",
+          type: "match",
+          prompt: "Relaciona cada enunciado del programa con lo que expresa.",
+          pairs: [
+            { left: "usted vende ahí desde 1984, ¿verdad?", right: "pide confirmar un dato" },
+            { left: "¿Cómo que la carga y la descarga?", right: "repite lo oído con sorpresa y rechazo" },
+            { left: "¿Qué sentido tendría consultar si ya estuviera todo firmado?", right: "afirma que la consulta no está decidida de antemano" },
+            { left: "¡Quién tuviera veinte años para pelear como antes!", right: "expresa un deseo irrealizable" },
+            { left: "¿cómo no vamos a estar?", right: "afirma que claro que irán" },
+          ],
+          why: "Cada forma tiene su función: coletilla, eco, retórica, deseo y afirmación con «cómo no».",
+        },
+      },
+    ],
+  },
+  reading: {
+    title: "Setenta años bajo el mismo techo",
+    genre: "Columna de opinión en un periódico de barrio",
+    frame: "Columna de Leticia Arroyo, vecina de la colonia Portales, para el periódico vecinal «La Voz de Portales». El mercado, el proyecto y las personas son ficticios.",
+    text: [
+      "¿Quién no tiene un recuerdo en el mercado La Paloma? Yo tengo varios, y casi todos huelen a algo: a la canela del puesto de doña Inés, a las tortillas recién hechas de la entrada, al mole que doña Chayo prepara los jueves desde antes de que yo naciera. Por eso, cuando leí en el boletín de la alcaldía que la planta alta podría convertirse en estacionamiento, me pregunté lo mismo que muchos de ustedes: ¿de verdad alguien ha pensado en lo que significa este edificio para la colonia?",
+      "No escribo contra la remodelación. ¿Cómo voy a oponerme a que arreglen un techo que gotea sobre los jitomates cada vez que llueve? Lo que pido es que se discuta para qué sirve el mercado y para quién. Las cifras que da la propia alcaldía son elocuentes: siete de cada diez compradores llegan a pie, y el resto, en transporte público o en bicicleta. ¿Para qué necesitamos, entonces, ochenta cajones de estacionamiento? ¿Acaso esos coches van a comprar epazote?",
+      "Sé que hay otro argumento, más serio, y conviene escucharlo. Los proveedores que surten los puestos llegan de madrugada y bloquean la calle Odesa, y los vecinos de esa cuadra tienen motivos para quejarse. Pero un problema de carga y descarga no se resuelve con una plaza comercial de dos pisos; se resuelve con un horario, una bahía de descarga y alguien que haga cumplir las reglas. ¿Hace falta transformar un edificio entero para lograrlo?",
+      "¡Cuánto ha cambiado la colonia en los últimos años! Han llegado cafeterías de especialidad, departamentos nuevos y vecinos jóvenes que trabajan desde casa. Algunos dicen que el mercado debe adaptarse a ellos, y tienen parte de razón. ¡Lo bien que le vendría al pasillo de comidas abrir por la noche, o a los puestos aceptar pagos con tarjeta! Pero adaptarse no es dejar de ser lo que uno es. Los jóvenes que se mudaron a Portales no vinieron buscando otra plaza comercial; vinieron, entre otras cosas, por lugares como este.",
+      "La semana pasada, mientras recababa firmas en la entrada, una señora me dijo: «¡Quién me hubiera dicho que a mis años iba a firmar para salvar el mercado donde me compraban los zapatos de la escuela!». Y un muchacho que no tendría más de veinte añadió, medio en broma: «¡Quién tuviera la paciencia de estos señores para estar aquí desde las seis!». Las dos frases dicen lo mismo con palabras distintas: el mercado no es solo un lugar para comprar, sino una forma de vivir el barrio.",
+      "El sábado habrá una consulta en el patio del mercado. La alcaldía asegura que nada está decidido, y quiero creerle. Pero una consulta solo tiene sentido si se presentan los planos, los costos y las alternativas. ¿Qué podemos opinar si no sabemos qué se propone? Por eso invito a todos a ir, a preguntar y a exigir respuestas claras. Y si alguien piensa que una sola voz no cambia nada, que se acuerde de cómo empezó este mercado: con un grupo de vendedores que en 1955 se negaron a seguir vendiendo en la banqueta.",
+    ],
+    glossary: [
+      { es: "elocuente", note: "que muestra algo con mucha claridad" },
+      { es: "la bahía de descarga", note: "espacio reservado junto a la acera para que los vehículos descarguen" },
+      { es: "la banqueta", note: "en México, la acera" },
+    ],
+    tasks: [
+      {
+        id: "c1-16-lectura-comprension",
+        type: "choice",
+        prompt: "Comprueba que has entendido la columna.",
+        items: [
           {
-            "words": [
-              "La",
-              "apelación,",
-              "esa",
-              "sí",
-              "era",
-              "difícil",
-              "de",
-              "encontrar."
-            ],
-            "why": "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido."
+            q: "¿Qué postura defiende la autora sobre la remodelación del mercado?",
+            options: ["Se opone a cualquier obra en el edificio.", "Acepta el estacionamiento si se arregla el techo.", "Apoya arreglar el edificio, pero rechaza transformarlo en plaza con estacionamiento."],
+            answer: 2,
+            why: "Dice que no escribe contra la remodelación y que pide discutir para qué sirve el mercado.",
           },
           {
-            "words": [
-              "Ese",
-              "punto",
-              "lo",
-              "revisaremos",
-              "antes",
-              "de",
-              "publicar."
-            ],
-            "why": "Un tema desplazado puede recuperarse mediante clítico: el anuncio, ya lo revisamos; a las usuarias, les respondimos. La pausa ayuda a separar tema y comentario. Distingue la tematización de un foco contrastivo: la apelación, esa sí faltaba. El orden marcado debe facilitar una relación discursiva, no convertirse en adorno repetido."
-          }
-        ]
-      },
-      {
-        "id": "p-contexto",
-        "type": "context",
-        "prompt": "Elige intervenciones fieles al caso de Ciudad de México.",
-        "items": [
-          {
-            "context": "Debes explicar moderación automática a alguien que no leyó el dossier.",
-            "q": "¿Qué definición de moderación automática conserva el sentido del caso?",
-            "options": [
-              "ejemplo entre categorías poco claras",
-              "clasificación o retirada mediante sistema",
-              "trato diferente de casos comparables"
-            ],
-            "answer": 1,
-            "why": "clasificación o retirada mediante sistema"
+            q: "¿Cómo trata la autora el argumento de los proveedores?",
+            options: ["Lo reconoce como serio y propone otra solución.", "Lo considera una excusa sin fundamento.", "Lo ignora por completo."],
+            answer: 0,
+            why: "Admite que los vecinos tienen motivos y propone horario y bahía de descarga.",
           },
           {
-            "context": "Un interlocutor propone eliminar del resumen la principal reserva para hacerlo más convincente.",
-            "q": "¿Qué respuesta mantiene la fidelidad en «El tema que vuelve al centro»?",
-            "options": [
-              "Si cualquier retirada constituye necesariamente censura.",
-              "La actividad de usuarios que presentan denuncias.",
-              "Un examen idéntico y simultáneo de todos los mensajes."
-            ],
-            "answer": 1,
-            "why": "La actividad de usuarios que presentan denuncias."
-          }
-        ]
+            q: "¿Para qué cuenta la anécdota de 1955?",
+            options: ["Para mostrar que el mercado siempre tuvo problemas.", "Para animar a participar: una acción colectiva creó el mercado.", "Para explicar por qué el edificio es tan viejo."],
+            answer: 1,
+            why: "La usa para responder a quien cree que una voz no cambia nada.",
+          },
+        ],
       },
       {
-        "id": "p-redaccion",
-        "type": "open",
-        "prompt": "Ensaya dos movimientos antes de redactar tu texto sobre «El tema que vuelve al centro».",
-        "items": [
+        id: "c1-16-lectura-clasificar",
+        type: "classify",
+        prompt: "Clasifica cada enunciado de la columna según lo que hace.",
+        categories: ["Pregunta retórica que afirma algo", "Exclamativa de grado", "Exclamativa de deseo o de sorpresa"],
+        items: [
+          { text: "¿Acaso esos coches van a comprar epazote?", cat: 0, why: "Orientada al no: los coches no compran." },
+          { text: "¡Cuánto ha cambiado la colonia en los últimos años!", cat: 1, why: "Intensidad de un cambio." },
+          { text: "¡Quién tuviera la paciencia de estos señores…!", cat: 2, why: "Deseo con imperfecto de subjuntivo." },
+          { text: "¿Cómo voy a oponerme a que arreglen un techo que gotea…?", cat: 0, why: "Sin negación: afirma que no se opone." },
+          { text: "¡Lo bien que le vendría al pasillo de comidas abrir por la noche…!", cat: 1, why: "«Lo» + adverbio + que: grado." },
+          { text: "¡Quién me hubiera dicho que a mis años iba a firmar…!", cat: 2, why: "Sorpresa con pluscuamperfecto de subjuntivo." },
+        ],
+      },
+      {
+        id: "c1-16-lectura-evaluacion",
+        type: "open",
+        prompt: "Valora la estrategia de la columna con argumentos propios.",
+        items: [
           {
-            "prompt": "Escribe una apertura de 60–80 palabras para esta tarea: Redacta un reportaje breve que integre las voces del conflicto, distinga prueba e inferencia y organice tres temas retomados; termina con una pregunta de rendición de cuentas.",
-            "model": "La retirada desigual de dos anuncios está documentada; la intención discriminatoria que algunos atribuyen requiere evidencia adicional. Los administradores reconocen límites de la clasificación y del orden de revisión, influido por denuncias. La apelación, hoy difícil de encontrar, debería permitir adjuntar comparaciones y recibir una explicación concreta. Publicar normas es necesario, pero no suficiente si sus cambios pasan inadvertidos. El reportaje examina qué mecanismos hacen revisable una decisión y qué información permite distinguir error, inconsistencia y trato deliberado.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
+            prompt: "La columna usa muchas preguntas retóricas. En 70–90 palabras, explica si te parecen eficaces o excesivas y qué pregunta eliminarías o cambiarías por una afirmación.",
+            model: "En general me parecen eficaces, porque obligan al lector a sacar la conclusión y casi siempre van al final de un párrafo. Sin embargo, el segundo párrafo acumula tres y la última, «¿Acaso esos coches van a comprar epazote?», suena burlona. La cambiaría por un dato: «Ninguno de esos coches comprará en los puestos». Así la columna mantendría la fuerza sin dar la impresión de ridiculizar a quien piensa distinto.",
+            checklist: ["Doy una valoración clara.", "Cito una pregunta concreta de la columna.", "Propongo una alternativa y explico qué gana el texto."],
+          },
+        ],
+      },
+    ],
+    noticing: {
+      prompt: "Observa dónde coloca la autora sus preguntas y exclamaciones y qué consigue con cada una.",
+      items: [
+        { quote: "¿Quién no tiene un recuerdo en el mercado La Paloma?", note: "Abre con una pregunta negativa que afirma «todos»: incluye al lector desde la primera línea." },
+        { quote: "¿Cómo voy a oponerme a que arreglen un techo que gotea sobre los jitomates cada vez que llueve?", note: "«¿Cómo voy a…?» sin negación: afirma que no se opone y desactiva una acusación previsible." },
+        { quote: "¿Hace falta transformar un edificio entero para lograrlo?", note: "Cierra el párrafo de la concesión con una pregunta que el lector responde con un «no»." },
+        { quote: "¡Quién me hubiera dicho que a mis años iba a firmar para salvar el mercado", note: "Sorpresa con pluscuamperfecto de subjuntivo, dentro de una cita." },
+      ],
+    },
+  },
+  practice: {
+    intro: "Combina orden, elección según la intención, puntuación y escritura breve sobre la discusión del mercado.",
+    exercises: [
+      {
+        id: "c1-16-orden",
+        type: "order",
+        prompt: "Ordena las palabras para formar preguntas y exclamaciones del debate.",
+        items: [
+          { words: ["¿Quién", "no", "ha", "comprado", "aquí", "su", "primer", "uniforme?"], why: "Pregunta negativa: afirma que casi todos lo han hecho." },
+          { words: ["¡Lo", "contentas", "que", "están", "las", "locatarias", "con", "el", "techo", "nuevo!"], why: "«Lo» + adjetivo concordado + que + verbo." },
+          { words: ["¿Para", "qué", "pintar", "la", "fachada", "si", "llueve", "dentro?"], why: "«¿Para qué…?» niega la utilidad." },
+        ],
+      },
+      {
+        id: "c1-16-intencion",
+        type: "context",
+        prompt: "Elige el enunciado que mejor cumple la intención indicada.",
+        items: [
+          {
+            context: "En la consulta, una vecina quiere comprobar que la alcaldía publicará los planos antes del sábado.",
+            q: "¿Qué dice si quiere una respuesta real y no un enfrentamiento?",
+            options: ["¿Acaso van a publicar los planos?", "Van a publicar los planos antes del sábado, ¿verdad?", "¿Cómo que van a publicar los planos?"],
+            answer: 1,
+            why: "La coletilla pide confirmación; «acaso» y «cómo que» suenan a desconfianza o reproche.",
           },
           {
-            "prompt": "Formula una objeción razonable a la propuesta de «El tema que vuelve al centro» y respóndela sin atribuir intenciones no demostradas. Basa la objeción en una limitación expresada en la lectura o en el audio; no añadas cifras, hechos ni intenciones no documentados.",
-            "model": "Una reserva que debe conservarse: La actividad de usuarios que presentan denuncias. La respuesta debe delimitar el compromiso: Ese punto lo revisaremos antes de publicar.",
-            "checklist": [
-              "Conservo el alcance y la atribución de la información.",
-              "Justifico la decisión con un indicio concreto."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "p-recuperacion",
-        "type": "open",
-        "prompt": "Recupera sin consultar: compara los casos y comprueba después tus decisiones. En el balance final, reparte esta recuperación entre dos sesiones.",
-        "items": [
-          {
-            "prompt": "Recuperación de la semana 15 · Checkpoint 3: debatir con precisión. Recupera la decisión del balance y contrástala con el problema nuevo, indicando una condición que ya no sea transferible. Contrasta el caso «Balance 3: la precisión en público» con «El tema que vuelve al centro».",
-            "model": "Punto de contraste: Reconocemos el valor de la experiencia, pero cuestionamos su uso exclusivo. En el caso actual: Las normas, la mayoría no las había leído. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
+            context: "Un locatario quiere afirmar con fuerza, ante el público, que nadie de la colonia pidió un estacionamiento.",
+            q: "¿Qué enunciado lo afirma como pregunta retórica?",
+            options: ["¿Alguien de la colonia pidió un estacionamiento, por favor?", "¿Quién de la colonia no pidió un estacionamiento?", "¿Quién de esta colonia pidió un estacionamiento?"],
+            answer: 2,
+            why: "Pregunta afirmativa: afirma «nadie». Con «no» afirmaría «todos».",
           },
           {
-            "prompt": "Recuperación de la semana 15 · Artículo de opinión. Recupera el criterio de revisión y aplícalo a un párrafo propio. Contrasta el caso «Balance 3: la precisión en público» con «El tema que vuelve al centro».",
-            "model": "Punto de contraste: Reconocemos el valor de la experiencia, pero cuestionamos su uso exclusivo. En el caso actual: Las normas, la mayoría no las había leído. La transferencia debe conservar el sentido pertinente y justificar cualquier cambio de registro.",
-            "checklist": [
-              "Recupero el recurso antes de consultar la semana anterior.",
-              "Distingo lo que puede transferirse de lo que cambia por el contexto."
-            ]
-          }
-        ]
-      }
-    ]
+            context: "Una fondera de setenta años ve a su nieta atender el puesto con soltura y quiere expresar que ella ya no tiene esa agilidad.",
+            q: "¿Qué exclamación expresa su deseo?",
+            options: ["¡Quién tuviera tus manos, mija!", "¡Quién hubiera tenido tus manos!", "¡Cuántas manos tienes, mija!"],
+            answer: 0,
+            why: "Deseo presente para una misma: imperfecto de subjuntivo.",
+          },
+        ],
+      },
+      {
+        id: "c1-16-signos",
+        type: "error",
+        prompt: "Corrige la ortografía de cada frase: signos de apertura y tildes.",
+        items: [
+          {
+            sentence: "Y la alcaldía ¿cuando piensa arreglar los baños?",
+            answers: ["Y la alcaldía, ¿cuándo piensa arreglar los baños?"],
+            why: "«Cuándo» interrogativo lleva tilde, y el tema que va delante se separa con coma antes del signo de apertura.",
+          },
+          {
+            sentence: "No te imaginas cuanto ha costado reunir las firmas.",
+            answers: ["No te imaginas cuánto ha costado reunir las firmas."],
+            why: "Exclamativo indirecto: «cuánto» lleva tilde aunque no haya signos.",
+          },
+          {
+            sentence: "¡Como han subido los precios del aguacate este mes!",
+            answers: ["¡Cómo han subido los precios del aguacate este mes!"],
+            why: "«Cómo» exclamativo + verbo lleva tilde.",
+          },
+        ],
+      },
+      {
+        id: "c1-16-microescritura",
+        type: "open",
+        prompt: "Escribe dos piezas breves antes de la tarea de escritura.",
+        items: [
+          {
+            prompt: "Escribe en 40–60 palabras el cierre de un discurso a favor de conservar el pasillo de comidas. Incluye una pregunta retórica negativa y una exclamativa de grado.",
+            model: "Nos dicen que el pasillo de comidas es poco rentable. ¿Quién no ha resuelto aquí una comida rápida y barata entre semana? ¡Cuántos estudiantes, oficinistas y albañiles se sientan cada día en estas bancas! Cerrarlo sería cerrar el comedor de media colonia, y eso no aparece en ninguna hoja de cálculo.",
+            checklist: ["La pregunta es negativa y afirma «todos».", "La exclamativa concuerda («cuántos estudiantes»).", "El cierre deja una idea clara."],
+          },
+          {
+            prompt: "Reescribe en 40–60 palabras, sin preguntas retóricas ni exclamaciones, este mensaje para enviarlo a la alcaldía: «¿Acaso alguien nos preguntó? ¡Cuánto desprecio por los locatarios! ¿Para qué consultar si ya está todo decidido?».",
+            model: "Los locatarios no fuimos consultados antes de elaborar el anteproyecto, y eso nos ha causado un profundo malestar. Consideramos que una consulta solo tiene sentido si el proyecto no está decidido. Por ello solicitamos que se presenten los planos y los costos antes de la reunión del sábado.",
+            checklist: ["Convierto cada pregunta en una afirmación con el mismo sentido.", "Uso un registro formal y respetuoso.", "Cierro con una petición concreta."],
+          },
+        ],
+      },
+    ],
   },
-  "writing": {
-    "task": "Redacta un reportaje breve que integre las voces del conflicto, distinga prueba e inferencia y organice tres temas retomados; termina con una pregunta de rendición de cuentas.",
-    "context": "Produce primero tu versión sin consultar el modelo. Después compara organización, atribución, registro y alcance; el modelo ofrece una realización posible, no la única respuesta válida.",
-    "steps": [
-      "Selecciona las afirmaciones que cada fuente permite sostener y anota sus límites.",
-      "Organiza por problemas y decisiones; redacta sin copiar frases extensas del dossier.",
-      "Revisa atribución, registro, cohesión y alcance de los compromisos; justifica dos cambios."
+  writing: {
+    task: "Escribe una columna de opinión (240–320 palabras) para el periódico vecinal sobre un espacio de tu barrio o ciudad que esté en riesgo de desaparecer o de cambiar de uso: un mercado, una plaza, un cine, una biblioteca.",
+    context: "La columna se publicará con tu nombre y la leerán vecinos de todas las edades, también quienes apoyan el cambio. Puedes usar los datos del mercado La Paloma o tu propia experiencia. Usa preguntas retóricas y exclamativas con medida, para que el lector saque conclusiones, no para ridiculizar al otro bando.",
+    steps: [
+      "Escribe en una línea tu tesis y anota el argumento más fuerte del otro lado.",
+      "Decide dónde irán dos o tres preguntas retóricas (al final de un párrafo o antes de la tesis) y una o dos exclamativas.",
+      "Redacta la columna en cuatro párrafos: recuerdo o situación, tesis, concesión al otro lado y llamada a la acción.",
+      "Revisa la polaridad de cada pregunta, la tilde de los exclamativos y la posición de los signos de apertura, y corrige cualquier pregunta que suene burlona.",
     ],
-    "useLanguage": [
-      "Dislocación, clíticos y continuidad temática",
-      "moderación automática",
-      "aplicación inconsistente",
-      "caso fronterizo",
-      "vía de apelación"
+    useLanguage: [
+      "¿Quién no ha… alguna vez?",
+      "¿Acaso…? / ¿Para qué…?",
+      "¿Cómo vamos a…, si…?",
+      "¡Cuánto/a/os/as…! / ¡Cómo ha…!",
+      "¡Lo + adjetivo + que…!",
+      "¡Quién hubiera dicho que…!",
     ],
-    "model": [
-      "La retirada desigual de dos anuncios está documentada; la intención discriminatoria que algunos atribuyen requiere evidencia adicional. Los administradores reconocen límites de la clasificación y del orden de revisión, influido por denuncias. La apelación, hoy difícil de encontrar, debería permitir adjuntar comparaciones y recibir una explicación concreta. Publicar normas es necesario, pero no suficiente si sus cambios pasan inadvertidos. El reportaje examina qué mecanismos hacen revisable una decisión y qué información permite distinguir error, inconsistencia y trato deliberado.",
-      "La anunciante describe una experiencia verificable: su publicación desapareció mientras otra semejante siguió visible. La respuesta general mediante un enlace no le permitió saber qué debía corregir. El equipo admite que la revisión posterior no alcanza todos los casos al mismo tiempo y propone registrar revocaciones. Ese registro ayudaría a observar patrones sin depender únicamente de la reclamación más visible. Ninguna de estas declaraciones demuestra que todas las retiradas fueran erróneas; varias ofertas profesionales podían incumplir efectivamente una regla cuya aplicación necesitaba, aun así, mejores explicaciones y vías de corrección.",
-      "Las normas, los usuarios esperaban conocer sus modificaciones de manera visible. La plataforma consideraba suficiente haberlas publicado al final de una página extensa. Este desacuerdo sobre comunicación antecede al conflicto concreto y ayuda a comprenderlo sin resolverlo mediante acusaciones globales. El acuerdo mantiene la moderación y propone ampliar el formulario, admitir comparaciones y explicar qué regla se ha aplicado. La pregunta pendiente es cómo se comprobará que esas medidas funcionan. Un procedimiento revisable no exige respuesta instantánea ni ausencia de errores: exige que el afectado pueda entender la decisión y solicitar una corrección con información pertinente."
+    model: [
+      "¿Quién no ha pasado una tarde en el cine Lido? Durante cincuenta años fue la única sala de la colonia donde una entrada costaba menos que una pizza, y donde los domingos se juntaban abuelos, parejas y estudiantes. Ahora el edificio está en venta y el rumor es que se convertirá en una tienda de conveniencia. ¿De verdad necesita el barrio la quinta tienda de este tipo en tres cuadras?",
+      "No defiendo el cine por nostalgia. ¡Cuánto ha cambiado la forma de ver películas desde que abrió! Hoy casi todos tenemos plataformas en casa, y entiendo que el negocio ya no se sostenga como antes. Los dueños tienen derecho a vender, y sería injusto pedirles que pierdan dinero para que los demás conservemos un recuerdo.",
+      "Pero entre mantenerlo como estaba y derribarlo hay muchas opciones. Una cooperativa vecinal podría alquilar la sala para cineclubes, obras de teatro escolar o asambleas. Otras colonias lo han hecho con éxito, y nadie diría que viven peor por ello. ¿Para qué demoler un espacio que podría reunir a gente que hoy no tiene dónde encontrarse? ¡Lo poco que costaría intentarlo antes de firmar la venta!",
+      "Por eso propongo una reunión abierta el próximo jueves en la parroquia para formar esa cooperativa y presentar una oferta a los dueños. Si no funciona, al menos lo habremos intentado. ¡Quién nos hubiera dicho, cuando íbamos de niños a la matiné, que algún día tendríamos que salvar el Lido! Ese día ha llegado, y no podemos faltar.",
     ],
-    "checklist": [
-      "Cumplo el género, la finalidad y el destinatario de la consigna.",
-      "Integro lectura y escucha con atribución clara, sin yuxtaponer resúmenes.",
-      "Conservo condiciones e incertidumbres y distingo mi propuesta de las fuentes.",
-      "Uso léxico preciso y estructuras complejas con control.",
-      "Reviso cohesión, puntuación y adecuación antes de la versión final."
+    checklist: [
+      "Cada pregunta retórica afirma lo que quiero afirmar (comprobé su polaridad).",
+      "No uso más de una pregunta retórica por párrafo.",
+      "Los exclamativos llevan tilde y los signos de apertura están en su sitio.",
+      "Reconozco el argumento contrario antes de responderlo.",
+      "El último párrafo propone algo concreto.",
     ],
-    "words": [
-      240,
-      320
-    ]
+    words: [240, 320],
   },
-  "speaking": {
-    "intro": "Planifica con palabras clave, graba una primera versión y escucha dónde pierdes precisión. La calidad oral se revisa mediante autoevaluación y trabajo con tu docente.",
-    "tasks": [
+  speaking: {
+    intro: "Prepárate con palabras clave. Si te grabas, la grabación queda en tu dispositivo; el navegador no evalúa tu pronunciación.",
+    tasks: [
       {
-        "title": "Exposición razonada",
-        "prompt": "Expón el conflicto y retoma dos temas tras interrupciones de tu interlocutor; reformula una acusación de intención como una pregunta verificable sobre el procedimiento.",
-        "prep": [
-          "Formula una tesis, dos apoyos y una reserva.",
-          "Decide qué detalle del audio añadirás sin leer la transcripción.",
-          "Prepara una pregunta que permita comprobar comprensión."
+        title: "Alegato en la consulta del sábado",
+        prompt: "Tienes cuatro minutos en la consulta pública del mercado. Defiende tu postura sobre el uso de la planta alta (estacionamiento, comedor comunitario, talleres u otra idea). Usa al menos tres preguntas retóricas con polaridad distinta, dos exclamativas y una concesión al argumento de la carga y descarga.",
+        prep: [
+          "Escribe tu propuesta en una frase.",
+          "Prepara una pregunta con «¿quién no…?», otra con «¿para qué…?» y otra con «¿acaso…?».",
+          "Piensa en una exclamativa de grado y otra de deseo o sorpresa para el cierre.",
         ],
-        "seconds": 240,
-        "model": "La retirada desigual de dos anuncios está documentada; la intención discriminatoria que algunos atribuyen requiere evidencia adicional. Los administradores reconocen límites de la clasificación y del orden de revisión, influido por denuncias. La apelación, hoy difícil de encontrar, debería permitir adjuntar comparaciones y recibir una explicación concreta. Publicar normas es necesario, pero no suficiente si sus cambios pasan inadvertidos. El reportaje examina qué mecanismos hacen revisable una decisión y qué información permite distinguir error, inconsistencia y trato deliberado.",
-        "selfCheck": [
-          "Mantengo un hilo claro sin leer un texto completo.",
-          "Diferencio voces y calibro certeza.",
-          "Las pausas y el foco ayudan a comprender."
-        ]
-      },
-      {
-        "title": "Interacción y reparación",
-        "prompt": "Tu interlocutor sostiene: «Si cualquier retirada constituye necesariamente censura.» Pídele que precise su razón, concede lo defendible y responde con evidencia del dossier. Después cambia de papel y plantea esta reserva: «Un examen idéntico y simultáneo de todos los mensajes.»; corrígela sin humillar y negocia una formulación común.",
-        "prep": [
-          "Prepara una reformulación fiel de la postura ajena.",
-          "Decide qué condición no puedes aceptar y qué alternativa ofrecerás."
+        seconds: 240,
+        model: "Buenas tardes. Vengo a defender un comedor comunitario en la planta alta. ¿Quién no conoce a algún vecino que come solo todos los días? Los proveedores necesitan descargar, es verdad, y eso se resuelve con un horario y una bahía en la calle. Pero ¿para qué usar un piso entero en coches que llegan dos horas al día? ¡Cuántas comidas podríamos servir en ese espacio!…",
+        selfCheck: [
+          "Mis preguntas retóricas tienen final descendente y no dejo hueco para responder.",
+          "Hago al menos una concesión antes de responder.",
+          "Cierro con una exclamativa y una propuesta.",
         ],
-        "seconds": 240,
-        "selfCheck": [
-          "Respondo a la objeción real y pido aclaración cuando hace falta.",
-          "Reformulo una interpretación excesiva.",
-          "Cierro con acuerdo o desacuerdo delimitado."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "Lleva tu texto y tu grabación sobre «El tema que vuelve al centro». Pide que se examine una decisión lingüística concreta, no solo errores aislados.",
-    "cards": [
-      {
-        "move": "Defiende",
-        "task": "Expón el conflicto y retoma dos temas tras interrupciones de tu interlocutor; reformula una acusación de intención como una pregunta verificable sobre el procedimiento.",
-        "phrases": [
-          "Las normas, la mayoría no las había leído.",
-          "Ese punto lo revisaremos antes de publicar."
-        ]
       },
       {
-        "move": "Contrasta",
-        "task": "Compara con tu docente estas dos interpretaciones: Si el procedimiento permite comprender y cuestionar decisiones. / Si cualquier retirada constituye necesariamente censura. Señala un indicio y una condición que podrían cambiar tu lectura."
+        title: "Aclarar con la urbanista",
+        prompt: "Después de la consulta hablas con Ximena, la urbanista. Necesitas datos reales: pregúntale por el costo del techo, por las fechas y por quién decidirá. Usa preguntas reales y coletillas para confirmar lo que entiendes, y una sola pregunta eco si algo te sorprende.",
+        prep: [
+          "Escribe tres preguntas reales con interrogativo.",
+          "Prepara dos coletillas para confirmar datos («…, ¿verdad?»).",
+        ],
+        seconds: 150,
+        model: "Ximena, ¿cuánto costaría cambiar solo el techo? Y la obra empezaría en marzo, ¿verdad? ¿Cómo que no depende de la alcaldía? Entonces, ¿quién firma la decisión final?",
+        selfCheck: [
+          "Mis preguntas reales suben al final cuando son de sí o no.",
+          "No uso «¿acaso?» cuando solo quiero confirmar un dato.",
+        ],
       },
       {
-        "move": "Reformula",
-        "task": "Tu docente cambia el destinatario de tu texto sobre moderación automática. Reorganiza oralmente el mensaje y explica qué términos mantienes, cuáles aclaras y qué reservas no puedes omitir."
-      }
+        title: "Mensaje de voz a una amiga",
+        prompt: "Cuéntale a una amiga que vive en otra ciudad cómo fue la consulta, con tres exclamaciones naturales (sorpresa, grado y deseo).",
+        prep: ["Elige el momento más sorprendente de la consulta."],
+        seconds: 75,
+        selfCheck: ["Acentúo con fuerza la palabra exclamativa.", "Mezclo exclamaciones con frases informativas."],
+      },
     ],
-    "bring": "Borrador y versión revisada, esquema oral y una pregunta sobre alcance o registro."
   },
-  "quiz": {
-    "items": [
+  useInClass: {
+    intro: "Lleva a la próxima clase tu columna y dos preguntas retóricas que hayas encontrado en discursos, columnas o anuncios reales.",
+    cards: [
       {
-        "type": "choice",
-        "q": "En una explicación de «El tema que vuelve al centro», ¿qué significa rendición de cuentas?",
-        "options": [
-          "criterio utilizado en un caso",
-          "actividad comercial presentada como otra cosa",
-          "explicación pública de decisiones"
-        ],
-        "answer": 2,
-        "why": "explicación pública de decisiones"
+        move: "Explica",
+        task: "Explica a tu profesor qué afirma cada una de las preguntas retóricas que trajiste y cómo lo sabes.",
+        phrases: ["Esta pregunta afirma que…", "Es negativa, así que afirma en positivo."],
       },
       {
-        "type": "listen",
-        "audio": "Retomo la apelación, porque ahí parece haber un acuerdo posible. Nadie está pidiendo que desaparezca toda moderación ni que el equipo responda en segundos. Se pide un procedimiento comprensible, un plazo orientativo y una explicación que permita actuar. Para el reportaje distinguiré la inconsistencia documentada de la intención que algunos atribuyen. También señalaré que publicar normas no basta si sus cambios pasan inadvertidos. El tema central será la posibilidad de revisar decisiones, y las declaraciones se ordenarán según lo que aporten a esa pregunta, no según quién haya hablado más fuerte.",
-        "voice": "es-ES-f",
-        "q": "Escucha el cierre otra vez: ¿qué límite debes conservar al transmitir «El tema que vuelve al centro»?",
-        "options": [
-          "La actividad de usuarios que presentan denuncias.",
-          "Un examen idéntico y simultáneo de todos los mensajes.",
-          "Si una diferencia demuestra por sí sola intención discriminatoria."
-        ],
-        "answer": 0,
-        "why": "La actividad de usuarios que presentan denuncias."
+        move: "Pregunta",
+        task: "Pregunta si una pregunta de tu columna suena persuasiva o burlona en ese contexto.",
+        phrases: ["¿Suena demasiado agresiva aquí?", "¿Quedaría mejor como afirmación?"],
       },
       {
-        "type": "gap",
-        "q": "A las usuarias ___ respondimos ayer.",
-        "answers": [
-          [
-            "les"
-          ]
-        ],
-        "hint": "Usa el clítico de complemento indirecto plural.",
-        "why": "El complemento indirecto plural se recupera con les."
+        move: "Debate",
+        task: "Pide a tu profesor que defienda el estacionamiento y responde con dos preguntas retóricas y una concesión.",
+        phrases: ["Tiene razón en que…, pero ¿para qué…?", "¿Quién no…?"],
       },
       {
-        "type": "open",
-        "prompt": "Tematiza el complemento indirecto. Escribe solo la reformulación. En una intervención sobre «El tema que vuelve al centro» lees: «Respondimos a las usuarias.» Se evalúa el sentido y el recurso solicitado, no la coincidencia literal.",
-        "model": "A las usuarias les respondimos.",
-        "checklist": [
-          "Cumplo el recurso solicitado y conservo el sentido relevante.",
-          "Acepto alternativas naturales que mantengan tiempo, referencia y alcance."
-        ]
+        move: "Lee",
+        task: "Lee en voz alta tres frases (una pregunta real, una retórica y una exclamativa) y pide a tu profesor que identifique cada una por la melodía.",
+        phrases: ["¿Se nota la diferencia?", "¿Dónde debería bajar la voz?"],
       },
-      {
-        "type": "error",
-        "sentence": "A las usuarias lo respondimos ayer.",
-        "answers": [
-          "A las usuarias les respondimos ayer."
-        ],
-        "why": "El complemento indirecto plural se recupera con les."
-      },
-      {
-        "type": "open",
-        "prompt": "Prueba de transferencia de «El tema que vuelve al centro»: explica en 80–100 palabras por qué esta conclusión requiere matices: Si cualquier retirada constituye necesariamente censura.",
-        "model": "La retirada desigual de dos anuncios está documentada; la intención discriminatoria que algunos atribuyen requiere evidencia adicional. Los administradores reconocen límites de la clasificación y del orden de revisión, influido por denuncias. La apelación, hoy difícil de encontrar, debería permitir adjuntar comparaciones y recibir una explicación concreta. Publicar normas es necesario, pero no suficiente si sus cambios pasan inadvertidos. El reportaje examina qué mecanismos hacen revisable una decisión y qué información permite distinguir error, inconsistencia y trato deliberado.",
-        "checklist": [
-          "Identifico el exceso de la afirmación.",
-          "Cito una evidencia y conservo una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Graba una respuesta de 90 segundos a esta demanda sobre «El tema que vuelve al centro»: «Dinos una solución definitiva y sin condiciones». Justifica por qué tu respuesta necesita límites.",
-        "model": "La conclusión debe conservar este límite: La actividad de usuarios que presentan denuncias.",
-        "checklist": [
-          "Respondo de manera directa.",
-          "Distingo decisión, condición e incertidumbre."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Audita tu producción de «El tema que vuelve al centro»: señala una elección de dislocación, clíticos y continuidad temática y reescribe un pasaje para otro destinatario.",
-        "model": "Decisión que puedes explicar: Las normas, la mayoría no las había leído. Reformulación para contrastar: A los administradores les preocupaban las ofertas encubiertas.",
-        "checklist": [
-          "Explico un cambio de sentido o registro.",
-          "Conservo hechos y atribuciones."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Puedo usar dislocación, clíticos y continuidad temática para intervenir con precisión.",
-      "Puedo explicar el caso de Ciudad de México integrando fuentes y reservas.",
-      "Puedo sostener una exposición y responder a objeciones sin perder el hilo."
     ],
-    "review": [
-      "Dentro de dos días, reconstruye de memoria la diferencia central: La actividad de usuarios que presentan denuncias.",
-      "Dentro de una semana, reutiliza moderación automática y rendición de cuentas en otro caso; comprueba su colocación.",
-      "Reescucha tu grabación y revisa este recurso: Tema dislocado y comentario."
-    ]
-  }
+    bring: "Tu columna revisada, las dos preguntas retóricas reales y, si quieres, la grabación del alegato.",
+  },
+  quiz: {
+    items: [
+      {
+        type: "choice",
+        q: "¿Qué afirma la pregunta «¿Quién no ha esperado alguna vez el camión del gas en la esquina?»?",
+        options: ["Que nadie lo ha esperado.", "Que solo algunos lo han esperado.", "Que casi todos lo han esperado."],
+        answer: 2,
+        why: "Pregunta negativa: afirma en positivo, «todos».",
+      },
+      {
+        type: "choice",
+        q: "¿Qué enunciado sirve para confirmar de verdad que el tianguis se instala los martes?",
+        options: ["El tianguis se pone los martes, ¿no?", "¿Acaso el tianguis se pone los martes?", "¿Cómo que el tianguis se pone los martes?"],
+        answer: 0,
+        why: "La coletilla pide confirmación; las otras expresan duda, reproche o sorpresa.",
+      },
+      {
+        type: "listen",
+        q: "Escucha la frase del locatario. ¿Qué afirma en realidad?",
+        options: ["Que no puede cerrar el puesto ahora.", "Que piensa cerrar el puesto pronto.", "Que no sabe si cerrará el puesto."],
+        answer: 0,
+        why: "«¿Cómo voy a…?» sin negación afirma que no es posible.",
+        audio: "¿Cómo voy a cerrar el puesto ahora, con tres hijos estudiando?",
+        voice: "es-MX-m",
+      },
+      {
+        type: "gap",
+        q: "¡___ horas pasaba mi abuela en este pasillo eligiendo chiles!",
+        answers: [["Cuántas", "cuántas"]],
+        hint: "Exclamativo de cantidad con tilde, concordado con «horas» (femenino plural).",
+        why: "«Cuántas» concuerda con «horas».",
+      },
+      {
+        type: "gap",
+        q: "¡Quién ___ el tiempo de antes para venir al mercado cada mañana! [tener]",
+        answers: [["tuviera", "tuviese"]],
+        hint: "Exclamativa de deseo irrealizable: «quién» + imperfecto de subjuntivo.",
+        why: "Deseo para uno mismo en el presente: tuviera o tuviese.",
+      },
+      {
+        type: "error",
+        sentence: "¡Lo fresco que llegan los mariscos los viernes!",
+        answers: ["¡Lo frescos que llegan los mariscos los viernes!"],
+        why: "El adjetivo concuerda con «los mariscos»; solo «lo» es invariable.",
+      },
+      {
+        type: "error",
+        sentence: "Y usted ¿por que no vino a la consulta?",
+        answers: ["Y usted, ¿por qué no vino a la consulta?"],
+        why: "Coma antes del signo de apertura tras el elemento inicial y tilde en «qué» interrogativo.",
+      },
+      {
+        type: "order",
+        words: ["¿Acaso", "alguien", "ha", "visto", "nunca", "un", "plano", "del", "proyecto?"],
+        why: "«Acaso» y «nunca» refuerzan la respuesta negativa: nadie lo ha visto.",
+      },
+      {
+        type: "choice",
+        q: "En «¡Quién lo hubiera imaginado: el mercado lleno de jóvenes un lunes!», ¿qué expresa la exclamativa?",
+        options: ["Un deseo para el futuro.", "Sorpresa ante algo que nadie habría previsto.", "Una pregunta sobre quién lo imaginó."],
+        answer: 1,
+        why: "«Quién» + pluscuamperfecto de subjuntivo: sorpresa ante lo inesperado.",
+      },
+      {
+        type: "open",
+        prompt: "Explica en 70–90 palabras a un compañero por qué «¿Quién quiere un mercado sin goteras?» no sirve para defender la remodelación y propón una versión que sí funcione.",
+        model: "La pregunta es afirmativa, así que afirma algo negativo: «nadie quiere un mercado sin goteras», justo lo contrario de lo que se quiere decir. Para afirmar que todos queremos arreglar el techo, la pregunta tiene que ser negativa: «¿Quién no quiere un mercado sin goteras?». Otra opción es cambiar el objeto: «¿Quién quiere seguir comprando bajo las goteras?», que afirma que nadie lo quiere y defiende igualmente la obra.",
+        checklist: ["Explico la inversión de polaridad.", "Propongo al menos una versión correcta.", "Mis signos y tildes son correctos."],
+      },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Interpreto qué afirma una pregunta retórica según su polaridad y sus fórmulas («¿acaso…?», «¿para qué…?», «¿cómo no voy a…?»).",
+      "Distingo una pregunta retórica de una coletilla de confirmación y de una pregunta eco.",
+      "Formo exclamativas de grado, de deseo y de sorpresa con la concordancia correcta.",
+      "Escribo y pronuncio preguntas y exclamaciones con su tilde, sus signos y su melodía.",
+    ],
+    review: [
+      "Dentro de dos días, tapa la tabla «Qué afirma cada pregunta» y escribe tú la afirmación que corresponde a cada pregunta.",
+      "Dentro de una semana, escucha un debate o una tertulia y apunta dos preguntas retóricas con lo que afirman.",
+      "En la próxima clase, lee tu columna en voz alta y pide a tu profesor que marque la pregunta más eficaz y la menos necesaria.",
+    ],
+  },
+  related: [
+    { path: "/gramatica/interrogativas-retoricas-y-exclamativas-complejas", label: "Clase: Interrogativas retóricas y exclamativas complejas" },
+  ],
 };

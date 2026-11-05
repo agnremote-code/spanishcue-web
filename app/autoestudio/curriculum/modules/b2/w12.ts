@@ -1,165 +1,390 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 12 · Autoestudio espejo de G149 (se pasivo, se impersonal y activo contrastados) y
+ * G150 (se accidental y responsabilidad atenuada). Repaso autónomo con una excursión escolar ficticia
+ * a un museo paleontológico de Neuquén. Audio mediante síntesis; sin acreditación regional.
+ */
 export const b2w12: Module = {
   "id": "b2-12",
   "level": "b2",
   "week": 12,
   "kind": "core",
-  "title": "Lo que permiten concluir los indicios",
-  "subtitle": "Formular y descartar hipótesis sobre el pasado.",
+  "title": "Se nos pinchó una rueda, pero el informe se entregó a tiempo",
+  "subtitle": "Repaso de la activa, el «se» pasivo y el «se» impersonal, y del «se» accidental para contar percances",
   "stop": {
     "place": "Neuquén",
     "country": "Argentina"
   },
   "minutes": 120,
   "newObjectives": [
-    "b2.gram.probabilidad-pasado",
-    "b2.voc.investigacion",
-    "b2.pron.conjetura",
-    "b2.fun.especular-pasado",
-    "b2.read.caso"
+    "b2.gram.g149",
+    "b2.gram.g150",
+    "b2.voc.w12-excursion-yacimiento",
+    "b2.pron.w12-clitico-agrupado",
+    "b2.lis.w12-informe-excursion",
+    "b2.read.w12-diario-campana",
+    "b2.wri.w12-correo-disculpa",
+    "b2.spk.w12-explicar-percances",
+    "b2.fun.w12-disculparse-matizando",
+    "b2.disc.w12-informar-y-asumir"
   ],
-  "reviewObjectives": [
-    "b2.gram.pasiva-impersonalidad",
-    "b2.voc.prensa",
-    "b2.pron.lectura-noticias",
-    "b2.fun.informar-objetivamente",
-    "b2.read.noticia",
-    "b2.disc.argumentacion",
-    "b2.disc.posicionamiento",
-    "b2.voc.ciudad-sostenible",
-    "b2.pron.exposicion-oral",
-    "b2.wri.ensayo-argumentativo",
-    "b2.spk.exposicion"
-  ],
-  "prerequisites": [
-    "b2-11"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo formular y descartar hipótesis sobre el pasado con razones, matices y condiciones claras.",
+    "canDo": "Puedo elegir entre activa, pasiva con «ser», «se» pasivo y «se» impersonal según el texto, y contar percances con el «se» accidental sin esconder la responsabilidad cuando es mía.",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: rectificar una acusación y mantener hipótesis abiertas.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa las cuatro maneras de contar un hecho y cuándo concuerda o no el verbo con «se».",
+      "Repasa el «se» accidental: concordancia, pronombre de persona y grados de responsabilidad.",
+      "Escucha a dos docentes que repasan una excursión y lee la columna de una técnica de campo.",
+      "Escribe un correo de balance y disculpa, revísalo y responde oralmente a una queja."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: formular y descartar hipótesis sobre el pasado. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "En clase comparaste con tu profesor varias maneras de contar un mismo hecho y viste cómo el «se» puede presentar un percance como involuntario. Aquí lo repasas con una excursión escolar a un museo de dinosaurios de Neuquén: avisos, informes y algún que otro accidente.",
     "parts": [
       {
-        "heading": "Formular y descartar hipótesis sobre el pasado",
+        "heading": "Un hecho, cuatro maneras de contarlo",
         "body": [
-          "El futuro compuesto puede expresar conjetura sobre un hecho anterior al presente: habrá salido. El condicional compuesto puede conjeturar desde un momento pasado: habría salido antes de nuestra llegada. Debió de salir presenta una inferencia pasada. El contexto distingue estas lecturas de un futuro terminado o una consecuencia condicional."
+          "El mismo hecho puede contarse poniendo en primer plano a quien actúa o a lo que recibe la acción. La activa nombra al agente; la pasiva con «ser», que repasaste la semana pasada, lo deja en segundo plano; el «se» pasivo y el «se» impersonal lo eliminan. La pregunta clave es: ¿importa quién lo hizo?",
+          "Cada forma tiene su texto típico. La activa es la normal en la conversación y cuando el agente es noticia. La pasiva con «ser» es de prensa e informes. El «se» es la forma de los avisos, las recetas, las normas y las descripciones de procesos, porque lo que interesa es la acción misma."
         ],
+        "table": {
+          "caption": "El hallazgo del museo contado de cuatro maneras",
+          "head": [
+            "Forma",
+            "Ejemplo",
+            "Dónde la encuentras"
+          ],
+          "rows": [
+            [
+              "activa",
+              "El equipo de la doctora Funes encontró una vértebra.",
+              "conversación, noticia centrada en las personas"
+            ],
+            [
+              "ser + participio",
+              "Una vértebra fue encontrada por el equipo de Funes.",
+              "prensa, informes, historia"
+            ],
+            [
+              "se pasivo",
+              "Se encontraron tres vértebras en el sector norte.",
+              "informes de campo, avisos, procesos"
+            ],
+            [
+              "se impersonal",
+              "En el yacimiento se trabaja de madrugada.",
+              "normas, costumbres, descripciones generales"
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "La puerta está cerrada; el encargado habrá salido.",
-            "note": "Conjetura sobre un hecho reciente."
+            "es": "Conversación: ¿Viste? Encontraron otra vértebra.",
+            "note": "Activa con sujeto general: muy natural entre amigos."
           },
           {
-            "es": "Cuando llegamos ya no había nadie; habrían terminado antes.",
-            "note": "Conjetura desde un punto pasado; ellos."
-          },
-          {
-            "es": "Puede que la alarma se haya activado por el viento.",
-            "note": "Posibilidad sobre un hecho anterior."
+            "es": "Ficha técnica: Se extrajeron doce fragmentos.",
+            "note": "Informe de campo: lo que importa es qué y cuánto."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Puede que alguien ha movido las bandejas.",
-            "right": "Puede que alguien haya movido las bandejas.",
-            "why": "Puede que selecciona subjuntivo."
+            "wrong": "Se encontraron tres vértebras por el equipo de Funes.",
+            "right": "El equipo de Funes encontró tres vértebras.",
+            "why": "El «se» pasivo no admite agente con «por» en el uso habitual: si quieres nombrarlo, usa la activa o la pasiva con «ser»."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "¿Concuerda o no? Se pasivo frente a se impersonal",
         "body": [
-          "Un indicio hace compatible una explicación, pero no la demuestra por sí solo. Debe de sugiere probabilidad; puede que más subjuntivo abre una posibilidad. Para descartar una hipótesis, indica qué dato contradice su condición necesaria; la ausencia de una prueba no demuestra automáticamente la hipótesis opuesta."
+          "Con el «se» pasivo, la cosa es el sujeto y el verbo concuerda con ella: «se vende una entrada», «se venden entradas». Con el «se» impersonal no hay sujeto, y el verbo va siempre en singular: «se vive tranquilo en Neuquén», «se trabaja con guantes», «se recomienda llevar agua». Las personas concretas llevan «a» y, por eso, el verbo tampoco concuerda: «se entrevistó a los voluntarios», «se busca a dos padres acompañantes».",
+          "En carteles de muchas zonas se ve «se alquila departamentos», pero la norma académica recomienda la concordancia: «se alquilan departamentos». Cuando hay una perífrasis, el verbo auxiliar también concuerda: «se pueden reservar visitas». Y si necesitas hablar de algo general con un verbo que ya lleva «se» («quejarse», «levantarse»), usa «uno» o «la gente»: «uno se levanta temprano»."
         ],
         "examples": [
           {
-            "es": "La puerta está cerrada; el encargado habrá salido.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Se necesitan guías con experiencia en grupos escolares.",
+            "note": "«Guías» sin «a» funciona como sujeto: plural."
           },
           {
-            "es": "Puede que la alarma se haya activado por el viento.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "Se necesita a los guías del turno tarde en la entrada.",
+            "note": "Personas concretas con «a»: singular."
+          },
+          {
+            "es": "En el campamento uno se acuesta a las nueve.",
+            "note": "«Acostarse» ya lleva «se»: se recurre a «uno»."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Se entrevistaron a los voluntarios.",
+            "right": "Se entrevistó a los voluntarios.",
+            "why": "Con «a» + personas no hay sujeto: el verbo va en singular."
+          },
+          {
+            "wrong": "Se puede reservar visitas guiadas por teléfono.",
+            "right": "Se pueden reservar visitas guiadas por teléfono.",
+            "why": "«Visitas» es el sujeto: el auxiliar también concuerda."
+          }
+        ],
+        "tip": "Haz la prueba de la «a»: si delante de las personas aparece «a», el verbo con «se» se queda en singular."
+      },
+      {
+        "heading": "Se me rompió: la cosa manda en el verbo",
+        "body": [
+          "Para contar algo que pasó sin querer, el español usa «se» + pronombre de la persona afectada + verbo. Funciona como «gustar»: la persona va en el pronombre (me, te, le, nos, os, les) y el verbo concuerda con la cosa. «Se me cayó el casco», «se me cayeron los guantes». Con un infinitivo, singular: «se nos olvidó avisar».",
+          "Si nombras a la persona, el pronombre sigue siendo obligatorio: «a Mateo se le cayó el celular». La posesión ya está en el pronombre, así que lo normal es el artículo: «se le rajó la pantalla», no «su pantalla». El orden es siempre «se» primero: «se me», nunca «me se»."
+        ],
+        "table": {
+          "caption": "Quién sufre el percance y qué se pierde",
+          "head": [
+            "Persona",
+            "Una cosa",
+            "Varias cosas"
+          ],
+          "rows": [
+            [
+              "yo",
+              "se me perdió la entrada",
+              "se me perdieron las entradas"
+            ],
+            [
+              "tú",
+              "se te perdió la entrada",
+              "se te perdieron las entradas"
+            ],
+            [
+              "él / ella / usted",
+              "se le perdió la entrada",
+              "se le perdieron las entradas"
+            ],
+            [
+              "nosotros / nosotras",
+              "se nos perdió la entrada",
+              "se nos perdieron las entradas"
+            ],
+            [
+              "vosotros / vosotras",
+              "se os perdió la entrada",
+              "se os perdieron las entradas"
+            ],
+            [
+              "ellos / ellas / ustedes",
+              "se les perdió la entrada",
+              "se les perdieron las entradas"
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "A la guía se le acabaron los folletos antes del mediodía.",
+            "note": "El verbo concuerda con «los folletos»; «le» es la guía."
+          },
+          {
+            "es": "Se me ocurrió llevar sombreros para todos.",
+            "note": "«Ocurrírsele» presenta una idea que llega sola."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Se me olvidó las autorizaciones.",
+            "right": "Se me olvidaron las autorizaciones.",
+            "why": "El verbo concuerda con la cosa olvidada: plural."
+          },
+          {
+            "wrong": "A Juli se rompió el martillo.",
+            "right": "A Juli se le rompió el martillo.",
+            "why": "Si nombras a la persona, el pronombre «le» es obligatorio."
           }
         ]
+      },
+      {
+        "heading": "Rompí, se me rompió, se rompió: ¿cuánta culpa asumes?",
+        "body": [
+          "Hay tres maneras de contar el mismo daño. «Rompí el molde» asume la acción. «Se me rompió el molde» la presenta como involuntaria, pero me incluye como afectado. «Se rompió el molde» no menciona a nadie. Con «olvidar» pasa algo parecido: «olvidé» y «me olvidé de» son personales; «se me olvidó» suaviza.",
+          "El «se» accidental es muy útil en excusas y disculpas, pero no borra la responsabilidad. Si el problema fue una decisión tuya, o si otra persona sufrió las consecuencias, suena evasivo: en ese caso, primera persona. Además, solo funciona con verbos que describen algo que puede ocurrir solo (caerse, perderse, romperse, acabarse, quedarse, borrarse); con verbos que exigen alguien que actúa, no: «escribí mal la dirección», nunca «se me escribió»."
+        ],
+        "examples": [
+          {
+            "es": "Perdón, se me quedó la carpeta en la escuela.",
+            "note": "Disculpa por un descuido: el «se» suaviza sin negar nada."
+          },
+          {
+            "es": "Decidí no cargar la batería extra y me quedé sin cámara: fue culpa mía.",
+            "note": "Hubo una decisión: primera persona."
+          },
+          {
+            "es": "Para un aparato: se me descompuso, se me dañó, se me malogró o se me estropeó, según la zona.",
+            "note": "Distintos verbos regionales, la misma estructura."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "Se me eligió mal el horario del micro.",
+            "right": "Elegí mal el horario del micro.",
+            "why": "«Elegir» exige alguien que decide: no puede ser accidental."
+          }
+        ],
+        "tip": "Pregúntate: ¿lo hice queriendo, me pasó o pasó sin mí? Esa respuesta elige entre «rompí», «se me rompió» y «se rompió»."
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero elige el foco según el texto; después cuenta los percances con la responsabilidad justa.",
     "exercises": [
       {
-        "id": "g-contexto",
-        "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de lo que permiten concluir los indicios; justifica el modo, la forma o la combinación.",
+        "id": "b2-12-g-foco",
+        "type": "context",
+        "prompt": "Lee para qué texto es cada frase y elige la versión más adecuada.",
         "items": [
           {
-            "q": "La puerta está cerrada; el encargado ___ salido.",
-            "answers": [
-              [
-                "habrá"
-              ]
+            "context": "Cartel en la puerta del museo, para todo el público.",
+            "q": "¿Qué versión pondrías?",
+            "options": [
+              "Las mochilas grandes son dejadas por los visitantes en el guardarropa.",
+              "Se dejan las mochilas grandes en el guardarropa.",
+              "Los visitantes dejaron las mochilas grandes en el guardarropa."
             ],
-            "why": "Conjetura sobre un hecho reciente."
+            "answer": 1,
+            "why": "En un aviso interesa la acción, no el agente: «se» pasivo."
           },
           {
-            "q": "Cuando llegamos ya no había nadie; ___ terminado antes.",
-            "answers": [
-              [
-                "habrían"
-              ]
+            "context": "Noticia del diario local: lo importante es que la autora del hallazgo es una estudiante de 17 años.",
+            "q": "¿Qué versión respeta ese foco?",
+            "options": [
+              "Se halló un diente de dinosaurio en El Chocón.",
+              "En El Chocón se trabaja con mucho cuidado.",
+              "Una estudiante de 17 años halló un diente de dinosaurio en El Chocón."
             ],
-            "why": "Conjetura desde un punto pasado; ellos."
+            "answer": 2,
+            "why": "El agente es la noticia: activa."
           },
           {
-            "q": "Puede que la alarma se ___ activado por el viento.",
-            "answers": [
-              [
-                "haya"
-              ]
+            "context": "Reglamento del campamento: una norma general para cualquiera.",
+            "q": "¿Qué frase es correcta?",
+            "options": [
+              "En el yacimiento se camina solo por los senderos marcados.",
+              "En el yacimiento se caminan solo por los senderos marcados.",
+              "En el yacimiento son caminados solo los senderos marcados."
             ],
-            "why": "Posibilidad sobre un hecho anterior."
+            "answer": 0,
+            "why": "«Caminar» sin objeto: «se» impersonal, singular."
+          },
+          {
+            "context": "Informe de la coordinadora: hablaron con todas las familias el lunes.",
+            "q": "¿Qué frase es correcta?",
+            "options": [
+              "El lunes se llamaron a todas las familias.",
+              "El lunes se llamó a todas las familias.",
+              "El lunes se llamó todas las familias."
+            ],
+            "answer": 1,
+            "why": "Personas con «a»: «se» impersonal en singular."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-12-g-formas",
+        "type": "gap",
+        "prompt": "Completa con la forma correcta del verbo entre paréntesis. Decide si concuerda o no.",
         "items": [
           {
-            "prompt": "Texto de partida: «Probablemente alguien ha movido las bandejas.» Expresa conjetura con futuro compuesto.",
-            "model": "Alguien habrá movido las bandejas.",
+            "q": "En la tienda del museo se ___ (vender, presente) réplicas de huevos de dinosaurio.",
+            "answers": [
+              [
+                "venden"
+              ]
+            ],
+            "why": "«Réplicas» es el sujeto: plural."
+          },
+          {
+            "q": "Durante la visita se ___ (escuchar, pretérito) con atención a la paleontóloga.",
+            "answers": [
+              [
+                "escuchó"
+              ]
+            ],
+            "why": "Persona con «a»: singular."
+          },
+          {
+            "q": "A los chicos se les ___ (acabar, pretérito) las galletitas antes de llegar.",
+            "answers": [
+              [
+                "acabaron"
+              ]
+            ],
+            "why": "Concuerda con «las galletitas»; «les» son los chicos."
+          },
+          {
+            "q": "Perdón, se me ___ (olvidar, pretérito) traer el protector solar.",
+            "answers": [
+              [
+                "olvidó"
+              ]
+            ],
+            "why": "Con un infinitivo, el verbo va en singular."
+          },
+          {
+            "q": "A la profesora se le ___ (quedar, pretérito) las llaves del micro en el museo.",
+            "answers": [
+              [
+                "quedaron"
+              ]
+            ],
+            "why": "«Las llaves»: plural."
+          },
+          {
+            "q": "Desde el mirador se ___ (poder, presente) ver las huellas del lago.",
+            "answers": [
+              [
+                "pueden"
+              ]
+            ],
+            "why": "El auxiliar concuerda con «las huellas»."
+          }
+        ]
+      },
+      {
+        "id": "b2-12-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida según la consigna. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «Los técnicos limpian los huesos con pinceles finos y después los envuelven en yeso». Escríbelo para el panel que explica el proceso, sin nombrar a los técnicos.",
+            "model": "Los huesos se limpian con pinceles finos y después se envuelven en yeso.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «se» pasivo con el verbo en plural, de acuerdo con «los huesos».",
+              "Elimino el agente porque el panel describe un proceso.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Era posible que el cierre hubiera fallado antes.» Formula la hipótesis desde ahora con puede que.",
-            "model": "Puede que el cierre haya fallado antes.",
+            "prompt": "Texto de partida: «Las autoridades del museo piden a los visitantes que no toquen las vitrinas». Conviértelo en un cartel breve.",
+            "model": "Se ruega no tocar las vitrinas.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «se» impersonal + infinitivo, en singular.",
+              "El cartel es breve y sin agente.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «Quizá habían terminado cuando llegamos.» Usa condicional compuesto de conjetura.",
-            "model": "Habrían terminado cuando llegamos.",
+            "prompt": "Texto de partida: Mateo: «Rompí la pantalla del celular». Fue sin querer: se le resbaló de la mano. Reformula su frase para que suene a percance y cuéntalo tú en tercera persona.",
+            "model": "A Mateo se le cayó el celular y se le rajó la pantalla.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso «se le» + verbo que concuerda con la cosa.",
+              "Uso el artículo «la pantalla», no «su pantalla».",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: La coordinadora, en un correo a la directora: «Se nos perdió tiempo porque se nos fue el micro». En realidad, ella decidió salir media hora tarde del museo. Reescribe la frase asumiendo la responsabilidad.",
+            "model": "Perdimos tiempo porque decidí salir del museo media hora más tarde de lo previsto, y el micro ya se había ido.",
+            "checklist": [
+              "Uso la primera persona para la decisión.",
+              "Mantengo los hechos sin exagerar ni esconder nada.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -167,282 +392,370 @@ export const b2w12: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para organizar una salida educativa y para contar el trabajo en un yacimiento. Fíjate en las combinaciones.",
     "groups": [
       {
-        "title": "Formular y descartar hipótesis sobre el pasado",
+        "title": "Organizar la salida",
         "items": [
           {
-            "es": "reunir indicios",
-            "note": "recoger señales relevantes"
+            "es": "la autorización firmada",
+            "note": "permiso de la familia para que un menor salga con la escuela"
           },
           {
-            "es": "contrastar versiones",
-            "note": "comparar explicaciones"
+            "es": "el micro",
+            "note": "en Argentina, autobús de larga distancia o contratado"
           },
           {
-            "es": "descartar una hipótesis",
-            "note": "rechazar una explicación incompatible"
+            "es": "los padres acompañantes",
+            "note": "familiares que ayudan a cuidar al grupo"
           },
           {
-            "es": "establecer una secuencia",
-            "note": "ordenar acontecimientos"
+            "es": "sufrir un percance",
+            "note": "tener un pequeño accidente o contratiempo"
           },
           {
-            "es": "comprobar un registro",
-            "note": "examinar datos guardados"
+            "es": "hacerse cargo de un error",
+            "note": "reconocerlo y responder por él"
+          }
+        ]
+      },
+      {
+        "title": "El trabajo de campo",
+        "items": [
+          {
+            "es": "el yacimiento",
+            "note": "lugar donde hay restos fósiles o arqueológicos"
           },
           {
-            "es": "extraer una conclusión",
-            "note": "deducir un resultado"
+            "es": "la campaña de excavación",
+            "note": "período de trabajo en el campo"
           },
           {
-            "es": "dejar margen",
-            "note": "admitir incertidumbre"
+            "es": "la cuadrícula",
+            "note": "cada sector marcado con cuerdas para excavar con orden"
           },
           {
-            "es": "corroborar un dato",
-            "note": "confirmarlo con otra fuente"
+            "es": "quedar a la vista",
+            "note": "aparecer en la superficie"
+          },
+          {
+            "es": "la ficha de registro",
+            "note": "documento con los datos de cada pieza"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-12-v-relacion",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para formular y descartar hipótesis sobre el pasado con su significado.",
+        "prompt": "Relaciona cada expresión con la situación de la excursión o del yacimiento.",
         "pairs": [
           {
-            "left": "reunir indicios",
-            "right": "recoger señales relevantes"
+            "left": "la autorización firmada",
+            "right": "Sin ese papel, un alumno no puede subir al micro."
           },
           {
-            "left": "contrastar versiones",
-            "right": "comparar explicaciones"
+            "left": "los padres acompañantes",
+            "right": "Dos madres y un abuelo ayudan a cuidar al grupo en el museo."
           },
           {
-            "left": "descartar una hipótesis",
-            "right": "rechazar una explicación incompatible"
+            "left": "hacerse cargo de un error",
+            "right": "La coordinadora escribe «fue un descuido mío» en el informe."
           },
           {
-            "left": "establecer una secuencia",
-            "right": "ordenar acontecimientos"
+            "left": "la cuadrícula",
+            "right": "Un sector de un metro por un metro marcado con hilo."
           },
           {
-            "left": "comprobar un registro",
-            "right": "examinar datos guardados"
+            "left": "quedar a la vista",
+            "right": "Después de la tormenta asoma un hueso en la ladera."
           },
           {
-            "left": "extraer una conclusión",
-            "right": "deducir un resultado"
-          },
-          {
-            "left": "dejar margen",
-            "right": "admitir incertidumbre"
-          },
-          {
-            "left": "corroborar un dato",
-            "right": "confirmarlo con otra fuente"
+            "left": "la ficha de registro",
+            "right": "Cada fragmento lleva su número, su profundidad y su foto."
           }
-        ]
+        ],
+        "why": "Cada expresión describe un objeto o una acción concreta del caso."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Pronuncia conjeturas con una conclusión no tajante; compara habrá salido con ha salido y explica qué aporta el tiempo verbal además de la voz.",
+    "focus": "«Se me», «se le», «se nos»: pronombres átonos que se apoyan en el verbo.",
     "explanation": [
-      "Pronuncia conjeturas con una conclusión no tajante; compara habrá salido con ha salido y explica qué aporta el tiempo verbal además de la voz.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "En «se me cayó» solo hay una sílaba fuerte: la del verbo. Los pronombres «se» y «me» son átonos y se pronuncian pegados, como si fueran el principio de la palabra: «semecayó». Si los separas o los acentúas, la frase suena entrecortada.",
+      "Como los pronombres son breves, hay que oírlos bien: «se me», «se te», «se le», «se nos» y «se les» cambian a quién le pasó el percance. Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "La puerta está cerrada; el encargado habrá salido."
+        "es": "Se nos pinchó una rueda.",
+        "note": "se-nos-pin-CHÓ: un solo grupo, fuerza en «chó»."
       },
       {
-        "es": "Cuando llegamos ya no había nadie; habrían terminado antes."
+        "es": "A Juli se le rompió el martillo.",
+        "note": "se-le-rrom-PIÓ: no separes «se» y «le»."
       },
       {
-        "es": "Puede que la alarma se haya activado por el viento."
+        "es": "Se les olvidaron las gorras.",
+        "note": "se-le-sol-vi-DA-ron: la «s» de «les» se une a la vocal siguiente."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-12-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y elige a quién le pasó el percance. Atención a los pronombres breves.",
       "items": [
         {
-          "q": "En la muestra 1 de lo que permiten concluir los indicios, ¿qué fragmento se oye?",
+          "q": "¿A quién se le perdió la entrada?",
           "options": [
-            "habrá",
-            "había",
-            "haya"
-          ],
-          "answer": 0,
-          "why": "Conjetura sobre un hecho reciente.",
-          "audio": "La puerta está cerrada; el encargado habrá salido.",
-          "voice": "es-ES-f"
-        },
-        {
-          "q": "En la muestra 2 de lo que permiten concluir los indicios, ¿qué fragmento se oye?",
-          "options": [
-            "habían",
-            "hubieron",
-            "habrían"
+            "a mí",
+            "a nosotros",
+            "a ella"
           ],
           "answer": 2,
-          "why": "Conjetura desde un punto pasado; ellos.",
-          "audio": "Cuando llegamos ya no había nadie; habrían terminado antes.",
-          "voice": "es-ES-f"
+          "audio": "En la puerta del museo se le perdió la entrada.",
+          "voice": "es-AR-f",
+          "why": "«Se le»: a él, a ella o a usted."
+        },
+        {
+          "q": "¿A quién se le acabó la batería?",
+          "options": [
+            "a nosotros",
+            "a ti",
+            "a ellos"
+          ],
+          "answer": 0,
+          "audio": "A mitad del sendero se nos acabó la batería de la cámara.",
+          "voice": "es-AR-m",
+          "why": "«Se nos»: a nosotros."
+        },
+        {
+          "q": "¿A quién se le quedaron los guantes?",
+          "options": [
+            "a ella",
+            "a mí",
+            "a ellos"
+          ],
+          "answer": 1,
+          "audio": "Se me quedaron los guantes en el micro.",
+          "voice": "es-AR-f",
+          "why": "«Se me»: a mí."
+        },
+        {
+          "q": "¿A quién se le cayeron los mapas?",
+          "options": [
+            "a ti",
+            "a ellos",
+            "a nosotros"
+          ],
+          "answer": 1,
+          "audio": "Con el viento se les cayeron los mapas al barranco.",
+          "voice": "es-AR-m",
+          "why": "«Se les»: a ellos, a ellas o a ustedes."
         }
       ]
     },
     "produce": [
       {
-        "text": "La puerta está cerrada; el encargado habrá salido.",
-        "tip": "Pronuncia conjeturas con una conclusión no tajante; compara habrá salido con ha salido y explica qué aporta el tiempo verbal además de la voz.",
-        "voice": "es-ES-f"
+        "text": "Perdón, se me olvidaron las autorizaciones.",
+        "tip": "Una sola fuerza fuerte en «da»; los pronombres, pegados.",
+        "voice": "es-AR-f"
       },
       {
-        "text": "Cuando llegamos ya no había nadie; habrían terminado antes.",
-        "tip": "Pronuncia conjeturas con una conclusión no tajante; compara habrá salido con ha salido y explica qué aporta el tiempo verbal además de la voz.",
-        "voice": "es-ES-f"
+        "text": "A Mateo se le cayó el celular.",
+        "tip": "«A Mateo» con una pausa mínima; después, «selecayó» en un impulso.",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Puede que la alarma se haya activado por el viento.",
-        "tip": "Pronuncia conjeturas con una conclusión no tajante; compara habrá salido con ha salido y explica qué aporta el tiempo verbal además de la voz.",
-        "voice": "es-ES-f"
+        "text": "Se ruega no tocar las vitrinas.",
+        "tip": "Tono neutro de aviso: la voz baja al final.",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "No se me rompió: lo rompí yo.",
+        "tip": "Contraste: destaca «rompí» y sobre todo «yo».",
+        "voice": "es-AR-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Lo que permiten concluir los indicios",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "El informe de la excursión",
+    "context": "Es lunes en una escuela secundaria de Neuquén. Valeria, la profesora que coordinó la excursión del sábado al museo de dinosaurios de Villa El Chocón, repasa con Gustavo, el preceptor, todo lo que pasó, porque tiene que mandar un informe a la directora y un aviso a las familias. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Coordinadora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "va",
+        "name": "Valeria",
+        "voice": "es-AR-f",
+        "role": "Profesora y coordinadora de la excursión"
       },
       {
-        "id": "s2",
-        "name": "Voluntario",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
-      },
-      {
-        "id": "s3",
-        "name": "Técnica",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "gu",
+        "name": "Gustavo",
+        "voice": "es-AR-m",
+        "role": "Preceptor que acompañó al grupo"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Antes de escribir otro mensaje, repasemos lo comprobado. La tarjeta de mantenimiento abrió la puerta a las nueve. Las bandejas cambiaron de sitio y las etiquetas aparecieron debajo de una caja. No faltan herramientas. ¿Qué hipótesis siguen siendo compatibles con esos datos?"
+        "speaker": "va",
+        "text": "Gustavo, tengo que mandarle el informe a la directora antes del mediodía y quiero que esté todo. Repasemos el sábado desde el principio."
       },
       {
-        "speaker": "s2",
-        "text": "Yo pensé que alguien habría entrado a llevarse material. Ahora parece menos probable. Puede que la persona de mantenimiento haya movido las bandejas y olvidado cerrar bien. El golpe que oyó la vecina podría haber sido la puerta, aunque no sabemos de dónde vino."
+        "speaker": "gu",
+        "text": "Bueno. Salimos a las siete y media, y a la altura de Senillosa se nos pinchó una rueda. Eso no fue culpa de nadie: el chofer la cambió en veinte minutos."
       },
       {
-        "speaker": "s3",
-        "text": "Ayer probé el mecanismo y no se cerró a la primera. Habrá fallado otras veces, pero eso tampoco puedo afirmarlo sin revisar. Cuando llegó mantenimiento, el cierre ya habría estado desajustado. Esa es una posibilidad que conviene comprobar antes de hablar de negligencia."
+        "speaker": "va",
+        "text": "Bien. Después, en el museo, a Mateo se le cayó el celular dentro de la vitrina de las huellas… ¿Cómo pasó eso?"
       },
       {
-        "speaker": "s1",
-        "text": "¿Qué dato nos ayudaría a distinguir un olvido de una avería? No podemos reconstruir cada segundo de la noche, pero sí podemos comprobar si el mecanismo funciona correctamente con viento y si el problema se repite después del ajuste."
+        "speaker": "gu",
+        "text": "No, no fue dentro: se le cayó al lado, y se le rajó la pantalla. El vidrio de la vitrina no se rompió; lo comprobó la guía."
       },
       {
-        "speaker": "s2",
-        "text": "Retiraré del grupo mi afirmación de que hubo un robo. No basta con añadir quizá al final, porque ya lo presenté como un hecho. Explicaré que faltaban datos y que el inventario no confirma ninguna pérdida. También pediré que no se compartan nombres."
+        "speaker": "va",
+        "text": "Menos mal. Lo mío lo voy a escribir claro. Iba a poner «se me olvidaron las autorizaciones», pero no: me olvidé de guardarlas en la carpeta. Fue un descuido mío y lo voy a decir así."
       },
       {
-        "speaker": "s3",
-        "text": "Me parece bien. Dejemos la conclusión abierta sobre el origen exacto y tomemos una medida útil en ambos casos: revisar el cierre y registrar los traslados. Una solución preventiva no necesita fingir que conocemos con certeza todo lo ocurrido."
+        "speaker": "gu",
+        "text": "Me parece bien. Igual se resolvió rápido: las familias las mandaron por foto. ¿Y lo del agua?"
+      },
+      {
+        "speaker": "va",
+        "text": "Ah, sí: se nos acabó el agua a las tres, con casi cuarenta grados. En el aviso para las familias pongo: «Se recomienda llevar dos botellas por estudiante» y «Se ruega no dejar mochilas en el micro»."
+      },
+      {
+        "speaker": "gu",
+        "text": "Añade también que las autorizaciones originales se devuelven el lunes que viene y que se busca a dos padres que puedan acompañar la próxima salida."
+      },
+      {
+        "speaker": "va",
+        "text": "Buena idea. Y en el informe, lo del museo lo cuento con datos: se visitaron dos salas, se entrevistó a la técnica de campo y se tomaron más de trescientas fotos. Por cierto, ¿a quién se le rompió el martillo de la guía?"
+      },
+      {
+        "speaker": "gu",
+        "text": "A Juli. Pero no «se le rompió»: lo usó para golpear una piedra del estacionamiento. Que lo cuente ella y que pida disculpas."
+      },
+      {
+        "speaker": "va",
+        "text": "De acuerdo. Ahí no hay accidente: hay una decisión, y hay que hacerse cargo."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha la conversación entera. ¿Para qué repasan la excursión?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-12-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Neuquén?",
+          "prompt": "Elige la respuesta que resume la conversación.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Lo que permiten concluir los indicios?",
+              "q": "¿Qué preparan Valeria y Gustavo?",
               "options": [
-                "Rectificar una acusación y mantener hipótesis abiertas",
-                "Leer una lista de instrucciones sin responder a nadie.",
-                "Contar una única versión sin permitir preguntas."
-              ],
-              "answer": 0,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
-            },
-            {
-              "q": "¿Qué relación predomina entre las voces en «Lo que permiten concluir los indicios»?",
-              "options": [
-                "Todas repiten exactamente la misma opinión desde el inicio.",
-                "Ninguna intervención tiene relación con la anterior.",
-                "Las personas aclaran interpretaciones y conservan algunos límites."
+                "Una nueva excursión al museo.",
+                "Una queja contra la empresa de micros.",
+                "Un informe para la directora y un aviso para las familias."
               ],
               "answer": 2,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "Valeria lo dice al principio y redacta el aviso durante la conversación."
+            },
+            {
+              "q": "¿Qué criterio sigue Valeria al escribir?",
+              "options": [
+                "Separa los accidentes de los errores que alguien tiene que asumir.",
+                "Atribuye todos los problemas a la mala suerte.",
+                "Evita mencionar cualquier problema."
+              ],
+              "answer": 0,
+              "why": "Asume su descuido y pide que Juli asuma el suyo."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-12-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Lo que permiten concluir los indicios».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Qué rectificará el voluntario?",
+              "q": "¿Qué le pasó a Mateo?",
               "options": [
-                "El horario de apertura de la tarjeta.",
-                "La existencia de un cierre defectuoso comprobado históricamente.",
-                "Su afirmación de que hubo un robo."
-              ],
-              "answer": 2,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
-            },
-            {
-              "q": "¿Qué frase aparece en la intervención inicial de «Lo que permiten concluir los indicios»?",
-              "options": [
-                "No hay información que podamos discutir en esta reunión.",
-                "Antes de escribir otro mensaje, repasemos lo comprobado.",
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte."
+                "Rompió el vidrio de una vitrina.",
+                "Se le cayó el celular y se le rajó la pantalla.",
+                "Se le perdió la entrada."
               ],
               "answer": 1,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "Gustavo corrige: se le cayó al lado de la vitrina."
+            },
+            {
+              "q": "¿Cómo se resolvió lo de las autorizaciones?",
+              "options": [
+                "La directora las firmó.",
+                "Valeria volvió a buscarlas.",
+                "Las familias las mandaron por foto."
+              ],
+              "answer": 2,
+              "why": "«Las familias las mandaron por foto»."
+            },
+            {
+              "q": "¿Qué se pide en el aviso para la próxima salida?",
+              "options": [
+                "Dos padres acompañantes.",
+                "Un chofer nuevo.",
+                "Dinero para el agua."
+              ],
+              "answer": 0,
+              "why": "«Se busca a dos padres que puedan acompañar»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-12-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento del diálogo según el tipo de «se».",
+          "categories": [
+            "Se pasivo (concuerda con la cosa)",
+            "Se impersonal (singular, sin sujeto)",
+            "Se accidental (le pasa a alguien)"
+          ],
           "items": [
             {
-              "prompt": "En «Lo que permiten concluir los indicios», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Me parece bien. Dejemos la conclusión abierta sobre el origen exacto y tomemos una medida útil en ambos casos: revisar el cierre y registrar los traslados. Una solución preventiva no necesita fingir que conocemos con certeza todo lo ocurrido.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "se tomaron más de trescientas fotos",
+              "cat": 0,
+              "why": "Concuerda con «fotos»."
+            },
+            {
+              "text": "se entrevistó a la técnica de campo",
+              "cat": 1,
+              "why": "Persona con «a»: singular."
+            },
+            {
+              "text": "se nos acabó el agua a las tres",
+              "cat": 2,
+              "why": "Percance que les pasó a ellos."
+            },
+            {
+              "text": "Se recomienda llevar dos botellas",
+              "cat": 1,
+              "why": "«Se» + verbo + infinitivo: siempre singular."
+            },
+            {
+              "text": "se le rajó la pantalla",
+              "cat": 2,
+              "why": "«Le» es Mateo; el verbo concuerda con «la pantalla»."
+            },
+            {
+              "text": "se visitaron dos salas",
+              "cat": 0,
+              "why": "Concuerda con «dos salas»."
             }
           ]
         }
@@ -450,202 +763,257 @@ export const b2w12: Module = {
     ]
   },
   "reading": {
-    "title": "Lo que permiten concluir los indicios: texto para interpretar",
-    "genre": "Artículo, correspondencia o relato original",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "Diario de campaña: lo que se rompe y lo que rompemos",
+    "genre": "Columna en la revista de un museo paleontológico",
+    "frame": "Texto original de SpanishCue escrito como columna de una técnica de campo en la revista ficticia «Huellas del Comahue». Las personas y el yacimiento son inventados.",
     "text": [
-      "El invernadero comunitario amaneció con varias bandejas de plantas fuera de su lugar. La primera explicación circuló en el grupo de mensajes antes de que llegara la coordinadora: alguien habría entrado durante la noche y se habría llevado parte de los materiales. La puerta lateral estaba entreabierta y faltaban dos etiquetas. Esos datos hacían posible la hipótesis de una entrada no autorizada, pero todavía no permitían distinguirla de un traslado realizado por una persona del equipo.",
-      "El registro de acceso mostraba una apertura a las nueve de la noche con la tarjeta de mantenimiento. Su titular explicó que había ido a cerrar una ventana porque se anunciaba viento. Una fotografía enviada a las ocho y media mostraba las bandejas junto a esa misma ventana. A las nueve y diez, una vecina oyó un golpe. Nadie sabía si provenía del invernadero o de un contenedor cercano. Incorporar ese sonido a la historia como prueba de un robo habría requerido más información de la que realmente existía.",
-      "La revisión de inventario reveló que no faltaban herramientas. Las plantas estaban en otra mesa y las etiquetas aparecieron debajo de una caja. La persona de mantenimiento recordó entonces que había movido algunas bandejas para alcanzar el cierre, aunque no pudo asegurar que hubiera recolocado todas. La puerta habrá quedado mal cerrada, sugirió la coordinadora. Era una explicación plausible, no una certeza: el mecanismo también podía haberse abierto por una avería. Decidieron comprobarlo antes de atribuir el problema a un descuido individual.",
-      "El caso terminó sin una conclusión espectacular. Se ajustó el cierre y se creó un registro sencillo para anotar movimientos de material. Algunas personas consideraron que se había perdido tiempo investigando un incidente menor. Otras señalaron que la investigación había evitado una acusación injustificada. A veces la utilidad de reunir pruebas consiste precisamente en renunciar a una historia atractiva y sustituirla por una explicación más limitada, cuya incertidumbre se reconoce en lugar de disimularse."
+      "En una campaña de excavación se trabaja de madrugada, cuando el sol de la meseta todavía no quema. Se llega al yacimiento en camioneta, se reparten las cuadrículas y, durante horas, se habla poco. Desde afuera parece un trabajo lento, y lo es: la temporada pasada se extrajeron doscientos catorce fragmentos de un saurópodo, y cada uno fue registrado con fotografía, coordenadas y una ficha escrita a mano.",
+      "Los visitantes suelen preguntar quién encuentra los huesos. La respuesta honesta es que los encuentra el viento. Después, el equipo de la doctora Laura Funes termina de descubrirlos, los consolida y los envuelve en vendas de yeso. En los informes oficiales escribimos que «se hallaron restos en el sector norte»; en la cocina del campamento decimos que el viento nos los dejó a la vista.",
+      "En el campo también hay percances, y con los años aprendí a contarlos bien. A todos se nos cae alguna vez un pincel dentro de la cuadrícula, se nos acaba el yeso antes de tiempo o se nos olvida anotar la profundidad de una pieza. Nadie los busca. Una vez, a un estudiante se le partió en dos una vértebra mientras la levantaba. Estuvo media hora sin hablar; la vértebra ya venía fisurada y se habría partido igual en manos de cualquiera.",
+      "Pero hay otra clase de errores. El verano pasado decidí retirar un bloque sin esperar a que se secara el yeso, porque quería terminar antes del viento de la tarde. El bloque se abrió. Durante días, en las conversaciones, dije que «se nos había roto el bloque». Era mentira, o casi: lo rompí yo, por apurada. Cuando por fin lo dije así, la directora no me reprochó nada; solo me pidió que lo anotara en la ficha para que nadie repitiera la decisión.",
+      "Desde entonces les digo a los voluntarios lo mismo el primer día: «se me rompió» sirve para lo que de verdad se escapa de nuestras manos; para lo que elegimos, mejor la primera persona. En un museo se exhiben huesos, pero detrás de cada vitrina hay fichas, y una buena ficha dice qué se encontró, dónde se encontró y, cuando hace falta, quién se equivocó y por qué."
     ],
     "glossary": [
       {
-        "es": "reunir indicios",
-        "note": "recoger señales relevantes"
+        "es": "la meseta",
+        "note": "llanura elevada, como la de la Patagonia"
       },
       {
-        "es": "contrastar versiones",
-        "note": "comparar explicaciones"
+        "es": "consolidar un hueso",
+        "note": "endurecerlo con un producto para que no se deshaga"
       },
       {
-        "es": "descartar una hipótesis",
-        "note": "rechazar una explicación incompatible"
+        "es": "por apurada",
+        "note": "por tener prisa; «apurado» es frecuente en América"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-12-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la columna.",
         "items": [
           {
-            "q": "¿Qué permite concluir el inventario?",
+            "q": "Según la autora, ¿quién encuentra los huesos?",
             "options": [
-              "No confirma la pérdida inicialmente supuesta.",
-              "Identifica sin duda a una persona culpable.",
-              "Demuestra que nunca entró nadie."
-            ],
-            "answer": 0,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué valor tiene habrá fallado en boca de la técnica?",
-            "options": [
-              "Promesa de reparación futura.",
-              "Consecuencia de una condición explícita.",
-              "Conjetura sobre posibles fallos anteriores."
+              "La doctora Funes.",
+              "Los voluntarios.",
+              "El viento, que los deja a la vista."
             ],
             "answer": 2,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "«La respuesta honesta es que los encuentra el viento»."
+          },
+          {
+            "q": "¿Por qué la autora no culpa al estudiante de la vértebra partida?",
+            "options": [
+              "Porque la vértebra ya estaba fisurada.",
+              "Porque el estudiante era nuevo.",
+              "Porque la directora se lo prohibió."
+            ],
+            "answer": 0,
+            "why": "«La vértebra ya venía fisurada»."
+          },
+          {
+            "q": "¿Qué le pidió la directora a la autora?",
+            "options": [
+              "Que pidiera disculpas a los voluntarios.",
+              "Que anotara el error en la ficha.",
+              "Que dejara de retirar bloques."
+            ],
+            "answer": 1,
+            "why": "«Me pidió que lo anotara en la ficha»."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-12-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «Lo que permiten concluir los indicios», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "El registro confirma una entrada a las nueve, pero no una sustracción. Las bandejas habrán sido trasladadas para alcanzar la ventana, según la explicación de mantenimiento. También es posible que el cierre hubiera fallado antes de esa visita. La aparición de las etiquetas y el inventario debilitan la hipótesis del robo. Recomiendo comprobar el mecanismo y registrar futuros movimientos. Hasta entonces, conviene mantener abierta la causa exacta de la puerta entreabierta y rectificar cualquier acusación presentada como certeza.",
+            "prompt": "Explica en 60–80 palabras por qué la autora dice que su frase «se nos había roto el bloque» era «mentira, o casi». Compárala con el caso de la vértebra y cita el texto.",
+            "model": "Con «se nos había roto» presentaba el daño como un accidente compartido, pero en realidad ella decidió retirar el bloque antes de que se secara el yeso: «lo rompí yo, por apurada». En el caso de la vértebra, el «se le partió» es justo, porque el estudiante no tomó ninguna decisión equivocada y la pieza ya estaba fisurada. La diferencia está en si hubo una elección.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
+              "Explico la diferencia entre percance y decisión.",
+              "Cito una frase literal del texto.",
+              "Comparo los dos casos con mis palabras."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la columna cambia de forma según lo que quiere decir.",
       "items": [
         {
-          "quote": "El invernadero comunitario amaneció con varias bandejas de plantas fuera de su lugar.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "se llega al yacimiento en camioneta, se reparten las cuadrículas",
+          "note": "Dos «se» seguidos: «se llega» es impersonal (singular, sin sujeto) y «se reparten» es pasivo (concuerda con «las cuadrículas»)."
         },
         {
-          "quote": "A veces la utilidad de reunir pruebas consiste precisamente en renunciar a una historia atractiva y sustituirla por una explicación más limitada, cuya incertidumbre se reconoce en lugar de disimularse.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "a un estudiante se le partió en dos una vértebra",
+          "note": "«Se» accidental con persona nombrada: el pronombre «le» sigue siendo necesario."
+        },
+        {
+          "quote": "lo rompí yo, por apurada",
+          "note": "Activa en primera persona, con «yo» al final para destacar la responsabilidad."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Revisa las hipótesis del almacén de la semana 4 y el titular de la 9: separa alternativa contrafactual, conjetura y hecho confirmado.",
+    "intro": "Combina las dos clases: elige el «se» adecuado y gradúa la responsabilidad en cada percance.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-12-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Neuquén y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir frases del informe y del aviso.",
         "items": [
           {
             "words": [
-              "En",
-              "«Lo que permiten concluir los indicios»,",
-              "La",
-              "puerta",
-              "está",
-              "cerrada;",
-              "el",
-              "encargado",
-              "habrá",
-              "salido."
-            ],
-            "why": "Conjetura sobre un hecho reciente."
-          },
-          {
-            "words": [
-              "En",
-              "«Lo que permiten concluir los indicios»,",
-              "Puede",
-              "que",
+              "A",
               "la",
-              "alarma",
+              "guía",
               "se",
-              "haya",
-              "activado",
-              "por",
+              "le",
+              "rompió",
+              "la",
+              "lupa",
+              "grande."
+            ],
+            "why": "Persona nombrada + «se le» + verbo en singular."
+          },
+          {
+            "words": [
+              "Se",
+              "ruega",
+              "a",
+              "las",
+              "familias",
+              "confirmar",
+              "la",
+              "asistencia."
+            ],
+            "why": "«Se» impersonal con «a» + personas: singular."
+          },
+          {
+            "words": [
+              "En",
               "el",
-              "viento."
+              "museo",
+              "se",
+              "exhiben",
+              "huevos",
+              "de",
+              "titanosaurio."
             ],
-            "why": "Posibilidad sobre un hecho anterior."
+            "why": "«Se» pasivo que concuerda con «huevos»."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-12-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de lo que permiten concluir los indicios; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "Puede que alguien ha movido las bandejas.",
+            "sentence": "Se necesita voluntarios para la campaña de verano.",
             "answers": [
-              "Puede que alguien haya movido las bandejas."
+              "Se necesitan voluntarios para la campaña de verano."
             ],
-            "why": "Puede que selecciona subjuntivo."
+            "why": "Sin «a», «voluntarios» es el sujeto: plural."
           },
           {
-            "sentence": "Probablemente habrá abrido la ventana.",
+            "sentence": "Me se cayó el pincel dentro de la cuadrícula.",
             "answers": [
-              "Probablemente habrá abierto la ventana."
+              "Se me cayó el pincel dentro de la cuadrícula."
             ],
-            "why": "Abrir tiene participio irregular."
+            "why": "El orden es «se me», nunca «me se»."
           },
           {
-            "sentence": "Puede de que el cierre haya fallado.",
+            "sentence": "A Lucía se le perdió su mochila en el micro.",
             "answers": [
-              "Puede que el cierre haya fallado."
+              "A Lucía se le perdió la mochila en el micro."
             ],
-            "why": "La construcción puede que no lleva de."
+            "why": "La posesión ya está en «le»: artículo, no posesivo."
+          },
+          {
+            "sentence": "Se avisaron a los padres por correo.",
+            "answers": [
+              "Se avisó a los padres por correo."
+            ],
+            "why": "Con «a» + personas, el verbo va en singular."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-12-x-responsabilidad",
+        "type": "classify",
+        "prompt": "¿Cómo cuenta cada frase la responsabilidad? Clasifícala.",
+        "categories": [
+          "Asume la acción",
+          "Percance que le pasa a alguien",
+          "Sin ninguna persona"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre formular y descartar hipótesis sobre el pasado con una postura y una razón; adapta el destinatario.",
-            "model": "El registro confirma una entrada a las nueve, pero no una sustracción.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "Olvidé confirmar la reserva del almuerzo.",
+            "cat": 0,
+            "why": "Primera persona activa."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Lo que permiten concluir los indicios» sin debilitarla, y responde con una condición verificable.",
-            "model": "El registro confirma una entrada a las nueve, pero no una sustracción. Las bandejas habrán sido trasladadas para alcanzar la ventana, según la explicación de mantenimiento. También es posible que el cierre hubiera fallado antes de esa visita. La aparición de las etiquetas y el inventario debilitan la hipótesis del robo. Recomiendo comprobar el mecanismo y registrar futuros movimientos. Hasta entonces, conviene mantener abierta la causa exacta de la puerta entreabierta y rectificar cualquier acusación presentada como certeza.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "Se me olvidó confirmar la reserva del almuerzo.",
+            "cat": 1,
+            "why": "«Se me»: involuntario, pero me incluye."
+          },
+          {
+            "text": "Se rompió una de las réplicas de la sala.",
+            "cat": 2,
+            "why": "No aparece ninguna persona."
+          },
+          {
+            "text": "Decidimos salir más tarde y perdimos el turno de la visita.",
+            "cat": 0,
+            "why": "Decisión asumida en primera persona."
+          },
+          {
+            "text": "A los chicos se les acabó el agua.",
+            "cat": 1,
+            "why": "Percance que afectó a los chicos."
+          },
+          {
+            "text": "Se cortó la luz en la sala de proyecciones.",
+            "cat": 2,
+            "why": "Hecho sin persona afectada mencionada."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-12-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 9 sin abrir su explicación y aplica sus recursos a «Lo que permiten concluir los indicios»: Pasiva e impersonalidad; Prensa y actualidad; Leer noticias en voz alta; Informar con distancia; Leer una noticia completa. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar ser + participio, se pasiva, tercera plural impersonal y uno/una. Puedo entender titulares, secciones y vocabulario periodístico. Puedo leer una noticia con el ritmo y las pausas de un presentador. Puedo presentar hechos sin implicarme y atribuir información a fuentes. Puedo distinguir titular, entradilla, hechos, fuentes y contexto.",
+            "prompt": "Escribe tres normas para un lugar que conoces (biblioteca, gimnasio, club): una con «se» pasivo, una con «se» impersonal + infinitivo y una con «a» + personas.",
+            "model": "En el club se prestan raquetas a los socios. Se ruega devolverlas limpias. Se atiende a los nuevos socios los martes por la tarde.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "El «se» pasivo concuerda con la cosa.",
+              "Con «a» + personas, el verbo va en singular."
             ]
           },
           {
-            "prompt": "Recupera la semana 11 sin abrir su explicación y aplica sus recursos a «Lo que permiten concluir los indicios»: Estructura argumentativa; Marcar la postura; Urbanismo y movilidad; Ritmo de una exposición oral; Ensayo argumentativo; Exposición de dos minutos. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo organizar tesis, argumentos, contraargumentos y conclusión con conectores variados. Puedo marcar mi postura y el grado de certeza: es indudable que, cabe pensar que, no está tan claro que. Puedo debatir sobre transporte, vivienda, gentrificación y espacio público. Puedo usar pausas estratégicas y énfasis para hacer clara una exposición. Puedo escribir un ensayo de 220 palabras con contraargumento. Puedo defender una propuesta en dos minutos con estructura clara.",
+            "prompt": "Cuenta un percance reciente de tres maneras: asumiéndolo, como algo que te pasó y sin ninguna persona. Después di cuál es la más honesta en tu caso.",
+            "model": "Quemé el arroz. Se me quemó el arroz. Se quemó el arroz. La más honesta es la segunda: me distraje con una llamada, pero no lo hice a propósito.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso las tres estructuras con concordancia correcta.",
+              "Justifico mi elección con un dato."
+            ]
+          },
+          {
+            "prompt": "Escribe una disculpa breve a un compañero por algo que olvidaste y otra por algo que decidiste mal.",
+            "model": "Perdona, se me olvidó mandarte el archivo; te lo envío ahora. Y lo de la reunión fue culpa mía: elegí un horario en que tú no podías.",
+            "checklist": [
+              "Uso el «se» accidental solo para el olvido.",
+              "Asumo la decisión en primera persona."
             ]
           }
         ]
@@ -653,196 +1021,233 @@ export const b2w12: Module = {
     ]
   },
   "writing": {
-    "task": "Redacta una reconstrucción del incidente con una cronología, dos hipótesis, una explicación descartada y una conclusión proporcional a la evidencia. Propón una comprobación adicional.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Eres la persona que coordinó una visita de un grupo a un museo, una empresa o una reserva natural. Escribe un correo formal (220–300 palabras) a la persona responsable del lugar: informa sobre la visita con «se» pasivo e impersonal, cuenta los percances que hubo graduando la responsabilidad, discúlpate por lo que fue culpa del grupo y propone cómo repararlo.",
+    "context": "La persona que lee el correo fue amable con tu grupo y no estuvo presente en todo momento. Necesita datos claros, una disculpa sincera y una propuesta concreta. Puedes usar la excursión a El Chocón o una salida real.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Haz una lista de lo que se hizo durante la visita y de los percances, y marca cuáles fueron accidentes y cuáles decisiones.",
+      "Organiza el correo: saludo y agradecimiento, balance de la visita, percances, disculpa y propuesta, despedida.",
+      "Escribe usando «se» para el balance, «se me/se le…» para los percances involuntarios y la primera persona para lo que asumes.",
+      "Revisa la concordancia de cada «se» y corrige cualquier «se me…» que esconda una decisión."
     ],
     "useLanguage": [
-      "El futuro compuesto puede expresar conjetura sobre un hecho anterior al presente: habrá salido. El condicional compuesto puede conjeturar desde un momento pasado: habría salido antes de nuestra llegada. Debió de salir presenta una inferencia pasada. El contexto distingue estas lecturas de un futuro terminado o una consecuencia condicional.",
-      "Un indicio hace compatible una explicación, pero no la demuestra por sí solo. Debe de sugiere probabilidad; puede que más subjuntivo abre una posibilidad. Para descartar una hipótesis, indica qué dato contradice su condición necesaria; la ausencia de una prueba no demuestra automáticamente la hipótesis opuesta.",
-      "Revisa las hipótesis del almacén de la semana 4 y el titular de la 9: separa alternativa contrafactual, conjetura y hecho confirmado."
+      "se visitaron / se realizaron…",
+      "se atendió a / se entrevistó a…",
+      "se recomienda / se ruega + infinitivo",
+      "a uno de los alumnos se le cayó…",
+      "se nos acabó / se nos olvidó…",
+      "fue un error mío / asumo que…"
     ],
     "model": [
-      "El registro del invernadero confirma una entrada con la tarjeta de mantenimiento a las nueve de la noche. Antes de esa hora, una fotografía mostraba las bandejas junto a la ventana. Por la mañana estaban en otra mesa, la puerta lateral permanecía entreabierta y faltaban dos etiquetas. Estos hechos originaron la hipótesis de un robo, pero todavía no la demostraban.",
-      "La revisión posterior debilita esa explicación. No faltaban herramientas y las etiquetas aparecieron debajo de una caja. La persona de mantenimiento explicó que había movido algunas bandejas para alcanzar el cierre de la ventana. Habrá quedado alguna fuera de su lugar, aunque no puede reconstruir todos los movimientos. Su versión es compatible con el inventario, sin que eso permita confirmar cada detalle de la noche.",
-      "Existen al menos dos hipótesis para la puerta: pudo quedar mal cerrada por un descuido o abrirse debido a un fallo del mecanismo. La técnica observó que no cerraba a la primera, por lo que quizá ya hubiera estado desajustado antes de la visita. El golpe que oyó una vecina no permite elegir entre ambas explicaciones, porque no se identificó su procedencia.",
-      "Recomiendo retirar la afirmación pública de que hubo un robo y explicar qué información la contradice. También conviene comprobar el cierre con viento, ajustarlo y registrar futuros traslados de material. Estas medidas serán útiles cualquiera que sea el origen exacto del incidente. La conclusión más prudente reconoce una incertidumbre concreta; no necesita completar los huecos con una historia que resulte convincente solo porque parece posible."
+      "Estimada doctora Funes: le escribo para agradecerle la visita del sábado y para darle un breve balance, como quedamos. En total se recorrieron tres salas, se realizó el taller de réplicas y se respondieron todas las preguntas que los estudiantes habían preparado en clase. Además, se entrevistó a la técnica de campo para el periódico escolar, que saldrá a fin de mes.",
+      "Durante la jornada hubo algunos percances. A uno de los alumnos se le cayó el celular junto a la vitrina de las huellas; por suerte, el vidrio no sufrió daños. Por la tarde se nos acabó el agua y tuvimos que pedirles botellas a sus empleados, que nos atendieron con mucha paciencia.",
+      "Sin embargo, hay un hecho que no fue un accidente y por el que quiero disculparme. Una alumna usó el martillo de la guía para golpear una piedra del estacionamiento y le rompió la punta. Fue también un error mío, porque no vigilé ese momento. La alumna le escribirá una carta y la escuela se hará cargo del martillo nuevo.",
+      "Para la próxima visita le propongo dos cambios: que se reparta a cada estudiante una hoja con las normas del museo antes de entrar y que se asigne un adulto a cada grupo de seis. Si le parece bien, se los enviaré por escrito la semana que viene. Le agradezco de nuevo su generosidad y la paciencia de todo su equipo. Esperamos volver en primavera con otro curso. Un cordial saludo, Valeria Sosa."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Uso «se» pasivo con concordancia y «se» impersonal en singular con «a» + personas.",
+      "Uso el «se» accidental solo para hechos involuntarios.",
+      "Asumo en primera persona lo que fue una decisión o un descuido del grupo.",
+      "La disculpa va acompañada de una propuesta concreta.",
+      "El registro es formal y cordial, con «usted»."
     ],
     "words": [
       220,
-      280
+      300
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Prepara palabras clave, no un texto para leer. Si te grabas, la grabación queda en tu dispositivo; la aplicación no evalúa tu pronunciación.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Lo que permiten concluir los indicios» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "El día en que todo salió al revés",
+        "prompt": "Habla durante unos dos minutos y medio de un día en que te pasaron varios percances (un viaje, una mudanza, un evento). Cuenta qué se te olvidó, qué se te rompió o se te perdió, y distingue con claridad al menos una cosa que fue culpa tuya. Termina con lo que aprendiste.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
+          "Anota cuatro percances con el verbo que vas a usar («se me…»).",
+          "Elige uno que fue una decisión tuya y prepáralo en primera persona."
         ],
-        "seconds": 180,
-        "model": "El registro confirma una entrada a las nueve, pero no una sustracción. Las bandejas habrán sido trasladadas para alcanzar la ventana, según la explicación de mantenimiento. También es posible que el cierre hubiera fallado antes de esa visita. La aparición de las etiquetas y el inventario debilitan la hipótesis del robo. Recomiendo comprobar el mecanismo y registrar futuros movimientos. Hasta entonces, conviene mantener abierta la causa exacta de la puerta entreabierta y rectificar cualquier acusación presentada como certeza.",
+        "seconds": 150,
+        "model": "El día de mi mudanza fue un desastre. Por la mañana se me quedaron las llaves del departamento nuevo en la casa de mi madre, así que perdimos una hora. Después, en la escalera, se nos cayó una caja de platos y se rompieron casi todos. Eso fue un accidente. Pero lo peor fue culpa mía: decidí no contratar un flete para ahorrar dinero, y terminamos haciendo seis viajes en el auto de mi hermano. Aprendí que ahorrar en lo importante sale caro.",
         "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
+          "Uso al menos tres veces el «se» accidental con concordancia correcta.",
+          "Asumo una decisión en primera persona.",
+          "Pronuncio «se me» y «se nos» pegados al verbo."
         ]
       },
       {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de formular y descartar hipótesis sobre el pasado. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
+        "title": "Una llamada incómoda",
+        "prompt": "Tu interlocutor es la persona responsable del museo que visitó tu grupo y está molesta por lo que pasó con el martillo de la guía y por el ruido en una sala. Escucha su queja, hazle preguntas para entender qué vio exactamente, explica los hechos graduando la responsabilidad, discúlpate sin evadir y negocia una forma de reparar el daño.",
         "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara dos preguntas para aclarar la queja.",
+          "Prepara una disculpa con «fue culpa nuestra» y una explicación con «se le…».",
+          "Piensa en dos propuestas de reparación."
         ],
-        "seconds": 240,
+        "seconds": 180,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Hago preguntas reales y respondo a lo que dice mi interlocutor.",
+          "No uso el «se» accidental para esconder una decisión.",
+          "Cierro con un acuerdo concreto."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a la próxima clase lo que preparaste esta semana y úsalo con tu profesor.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Lo que permiten concluir los indicios» en tres minutos y responde a una objeción inesperada.",
+        "move": "Cuéntale",
+        "task": "Cuéntale a tu profesor tres percances de tu semana con «se me…» y deja que él pregunte si alguno fue en realidad una decisión.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "Se me olvidó…",
+          "Bueno, en realidad decidí…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Neuquén; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Pregúntale",
+        "task": "Pregúntale qué normas hay en su lugar de trabajo o en su barrio y cómo se escriben en los carteles.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "¿Qué se prohíbe en…?",
+          "¿Se puede…?"
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre formular y descartar hipótesis sobre el pasado; identifica una condición que todavía necesita confirmación.",
+        "move": "Comprueba",
+        "task": "Lee dos frases de tu correo con «se» y pídele que confirme si el verbo concuerda o no.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "¿Aquí va en plural?",
+          "¿Es pasivo o impersonal?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu correo con los «se» pasivos, impersonales y accidentales marcados en tres colores."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Lo que permiten concluir los indicios», ¿qué resume mejor el propósito?",
-        "options": [
-          "Rectificar una acusación y mantener hipótesis abiertas",
-          "Sustituir toda evidencia por una opinión rotunda.",
-          "Evitar cualquier intercambio entre personas."
+        "type": "gap",
+        "q": "En esta tienda se ___ (aceptar, presente) tarjetas de crédito.",
+        "answers": [
+          [
+            "aceptan"
+          ]
         ],
-        "answer": 0,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Yo pensé que alguien habría entrado a llevarse material. Ahora parece menos probable. Puede que la persona de mantenimiento haya movido las bandejas y olvidado cerrar bien. El golpe que oyó la vecina podría haber sido la puerta, aunque no sabemos de dónde vino.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Voluntario en «Lo que permiten concluir los indicios», ¿qué intervención reconoces?",
-        "options": [
-          "Yo pensé que alguien habría entrado a llevarse material",
-          "No hay ninguna condición pendiente y todas las partes aceptaron.",
-          "Me niego a explicar mi punto de vista sobre este asunto."
-        ],
-        "answer": 0,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "«Tarjetas» es el sujeto: plural."
       },
       {
         "type": "gap",
-        "q": "Los papeles no están; alguien los ___ guardado en otro cajón.",
+        "q": "Ayer se ___ (despedir, pretérito) a los dos guías más antiguos.",
         "answers": [
           [
-            "habrá"
+            "despidió"
           ]
         ],
-        "why": "Conjetura sobre un hecho anterior."
+        "why": "Personas con «a»: singular."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «Probablemente ya habían cerrado cuando llegó la vecina.» Usa condicional compuesto de conjetura.",
-        "model": "Ya habrían cerrado cuando llegó la vecina.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "A mi abuelo se le ___ (olvidar, pretérito) las pastillas en el hotel.",
+        "answers": [
+          [
+            "olvidaron"
+          ]
+        ],
+        "why": "Concuerda con «las pastillas»."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase asume con claridad la responsabilidad?",
+        "options": [
+          "Se me borró el archivo con las notas.",
+          "Borré el archivo porque pensé que había otra copia.",
+          "Se borró el archivo con las notas."
+        ],
+        "answer": 1,
+        "why": "Primera persona y explicación de la decisión."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase es correcta para un cartel?",
+        "options": [
+          "Se arreglan bicicletas en el acto.",
+          "Se arregla bicicletas en el acto.",
+          "Bicicletas son arregladas en el acto por nosotros."
+        ],
+        "answer": 0,
+        "why": "«Se» pasivo con concordancia, como recomienda la norma."
+      },
+      {
+        "type": "listen",
+        "q": "Según el audio, ¿qué le pasó a la guía?",
+        "audio": "Con las prisas, a la guía se le quedaron las llaves de la sala dentro del coche.",
+        "voice": "es-AR-f",
+        "options": [
+          "Perdió el coche.",
+          "Dejó las llaves de la sala dentro del coche sin querer.",
+          "Cerró la sala a propósito."
+        ],
+        "answer": 1,
+        "why": "«Se le quedaron»: las dejó sin querer."
       },
       {
         "type": "error",
-        "sentence": "Puede que las etiquetas habían caído detrás de la caja.",
+        "sentence": "Se le cayeron el vaso al camarero.",
         "answers": [
-          "Puede que las etiquetas hayan caído detrás de la caja."
+          "Se le cayó el vaso al camarero."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "«El vaso» es singular: «se le cayó»."
+      },
+      {
+        "type": "error",
+        "sentence": "Se me escribió mal tu apellido en la lista.",
+        "answers": [
+          "Escribí mal tu apellido en la lista."
+        ],
+        "why": "«Escribir» exige alguien que actúa: no admite el «se» accidental."
+      },
+      {
+        "type": "order",
+        "words": [
+          "Se",
+          "busca",
+          "a",
+          "una",
+          "persona",
+          "que",
+          "hable",
+          "mapuzungun."
+        ],
+        "why": "Persona concreta buscada con «a»: singular."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Lo que permiten concluir los indicios».",
-        "model": "El registro confirma una entrada a las nueve, pero no una sustracción. Las bandejas habrán sido trasladadas para alcanzar la ventana, según la explicación de mantenimiento. También es posible que el cierre hubiera fallado antes de esa visita. La aparición de las etiquetas y el inventario debilitan la hipótesis del robo. Recomiendo comprobar el mecanismo y registrar futuros movimientos. Hasta entonces, conviene mantener abierta la causa exacta de la puerta entreabierta y rectificar cualquier acusación presentada como certeza.",
+        "prompt": "Escribe dos frases: un aviso con «se» para tu edificio y un percance reciente contado con «se me…».",
+        "model": "Se ruega cerrar la puerta del garaje después de las diez. Ayer se me olvidó cerrarla y el portero tuvo que bajar.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre formular y descartar hipótesis sobre el pasado; concede una razón y conserva tu argumento.",
-        "model": "El registro confirma una entrada a las nueve, pero no una sustracción. Las bandejas habrán sido trasladadas para alcanzar la ventana, según la explicación de mantenimiento. También es posible que el cierre hubiera fallado antes de esa visita. La aparición de las etiquetas y el inventario debilitan la hipótesis del robo. Recomiendo comprobar el mecanismo y registrar futuros movimientos. Hasta entonces, conviene mantener abierta la causa exacta de la puerta entreabierta y rectificar cualquier acusación presentada como certeza.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 12 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "El aviso usa «se» con la concordancia correcta.",
+          "El percance usa «se» + pronombre + verbo."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo formular y descartar hipótesis sobre el pasado.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo contar un hecho en activa, con «ser + participio», con «se» pasivo o con «se» impersonal según el texto.",
+      "Puedo decidir si el verbo con «se» concuerda o va en singular, también con «a» + personas y con perífrasis.",
+      "Puedo contar percances con el «se» accidental y asumir en primera persona lo que fue una decisión."
     ],
     "review": [
-      "Revisa las hipótesis del almacén de la semana 4 y el titular de la 9: separa alternativa contrafactual, conjetura y hecho confirmado.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, busca cinco carteles en tu calle o en internet y clasifícalos en «se» pasivo o impersonal.",
+      "En tres días, cuenta en voz alta tres percances de tu semana y, para cada uno, di si fue accidente o decisión.",
+      "Antes de la semana 13, reescribe el primer párrafo de tu correo en activa y compara el efecto."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/se-pasivo-se-impersonal-y-activo",
+      "label": "Clase: Se pasivo, se impersonal y activo contrastados"
+    },
+    {
+      "path": "/gramatica/se-accidental-y-responsabilidad-atenuada",
+      "label": "Clase: Se accidental y responsabilidad atenuada"
+    }
+  ]
 };
