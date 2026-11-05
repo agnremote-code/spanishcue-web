@@ -617,6 +617,10 @@ export const b2w14: Module = {
         "text": "Descansar, que buena falta nos hace. Como el sábado es el día de los vecinos, vamos a abrir más temprano, a las nueve, así que podrás venir antes de que suban los grupos."
       },
       {
+        "speaker": "ma",
+        "text": "Y los domingos, si alguien necesita un libro con urgencia, puede escribirnos. No es que vayamos a abrir, pero se lo dejamos guardado para el sábado."
+      },
+      {
         "speaker": "an",
         "text": "Me parece muy bien. Y voy a desmentir lo de la panadería, porque ya lo sabe medio cerro."
       }
@@ -791,10 +795,10 @@ export const b2w14: Module = {
             "q": "¿Qué hace la panadería?",
             "options": [
               "Cierra los domingos.",
-              "Abre a las seis para los vecinos.",
-              "Solo vende a los grupos."
+              "Solo vende a los grupos.",
+              "Abre a las seis para los vecinos."
             ],
-            "answer": 1,
+            "answer": 2,
             "why": "«Abre a las seis para atender a los vecinos»."
           }
         ]
@@ -1020,7 +1024,7 @@ export const b2w14: Module = {
       "Queridos vecinos del cerro Alegre: les escribo porque en las últimas semanas me han preguntado muchas veces si la librería está a punto de cerrar. Quiero aclararlo: desde el próximo mes no abriremos los domingos, pero no porque nos vaya mal, sino porque mi hijo y yo necesitamos un día de descanso.",
       "No es que nos molesten los visitantes; muchos compran y nos recomiendan. El problema es que los domingos sube tanta gente que no podemos atender a nadie con calma. El último domingo de enero hubo tal cola en la caja que varios vecinos se fueron sin comprar, y otros ni siquiera pudieron entrar. Como trabajamos siete días por semana desde diciembre, llegamos al lunes tan cansados que ya no disfrutábamos de lo que más nos gusta: conversar sobre libros.",
       "Dado que el sábado es el día en que más nos visitan ustedes, desde el 1 de marzo abriremos a las nueve, así que podrán venir antes de que lleguen los grupos. Además, seguiremos guardando pedidos para quien no pueda venir el fin de semana.",
-      "Gracias por preocuparse y por seguir eligiendo el comercio del barrio. Nos vemos el sábado. Rosa Lagos."
+      "Sé que algunos se preocuparon de verdad, y se lo agradezco: no es que me moleste que pregunten, al contrario. Prefiero mil veces una pregunta directa a un rumor que circula de panadería en panadería. Gracias por seguir eligiendo el comercio del barrio. Nos vemos el sábado. Rosa Lagos."
     ],
     "checklist": [
       "Desmiento la interpretación con «no porque» + subjuntivo o «no es que» + subjuntivo.",
@@ -1160,11 +1164,11 @@ export const b2w14: Module = {
         "audio": "Cancelaron el paseo en lancha, pero no porque hubiera poca gente, sino porque el mar estaba muy picado.",
         "voice": "es-CL-f",
         "options": [
-          "Porque había poca gente.",
           "Porque el mar estaba muy picado.",
+          "Porque había poca gente.",
           "Porque la lancha se rompió."
         ],
-        "answer": 1,
+        "answer": 0,
         "why": "La causa de «poca gente» se rechaza."
       },
       {
