@@ -1,184 +1,471 @@
 import type { Module } from "../../types";
 
-/** Original B2 material; see docs/autoestudio/b2-audit.md. */
+/**
+ * B2 · semana 20 · checkpoint final · Autoestudio espejo de G165 (conectores para exposición y
+ * refutación) y G166 (síntesis B2: debate, explicación y texto formal), con integración de las semanas
+ * 16 a 19 (G157–G164). Repaso autónomo con un debate vecinal ficticio sobre peatonalizar una calle de
+ * Almagro, en Buenos Aires. Audio mediante síntesis; sin acreditación regional. Cierra el nivel B2.
+ */
 export const b2w20: Module = {
   "id": "b2-20",
   "level": "b2",
   "week": 20,
   "kind": "checkpoint",
-  "title": "Checkpoint final: un acuerdo que pueda sostenerse",
-  "subtitle": "Integrar argumento, mediación, registro y variedad.",
+  "title": "Lejos de cerrar el barrio: el debate sobre la calle del mercado",
+  "subtitle": "Checkpoint final de B2: exponer y refutar con conectores precisos, elegir la estructura B2 adecuada en cada momento e integrar lo repasado en las semanas 16 a 19",
   "stop": {
     "place": "Buenos Aires",
     "country": "Argentina"
   },
   "minutes": 150,
   "newObjectives": [
-    "b2.rev.checkpoint-final",
-    "b2.wri.texto-final-b2"
+    "b2.gram.g165",
+    "b2.gram.g166",
+    "b2.voc.w20-ciudad-debate",
+    "b2.pron.w20-conectores-pausas",
+    "b2.lis.w20-debate-radio",
+    "b2.read.w20-columna-opinion",
+    "b2.wri.w20-carta-lectores",
+    "b2.spk.w20-debate-vecinal",
+    "b2.fun.w20-exponer-refutar",
+    "b2.disc.w20-argumentacion-completa",
+    "b2.rev.w20-semanas-16-20"
   ],
-  "reviewObjectives": [
-    "b2.voc.colocaciones",
-    "b2.voc.formacion-palabras",
-    "b2.gram.nominalizacion",
-    "b2.pron.acento-derivados",
-    "b2.wri.reescritura-precisa",
-    "b2.fun.definir",
-    "b2.fun.mitigacion",
-    "b2.gram.importar-que",
-    "b2.voc.correspondencia-formal",
-    "b2.pron.mitigacion-prosodia",
-    "b2.wri.correo-delicado",
-    "b2.lis.reunion",
-    "b2.disc.marcadores-conversacionales",
-    "b2.disc.reformuladores",
-    "b2.voc.expresiones-coloquiales",
-    "b2.pron.prosodia-marcadores",
-    "b2.fun.gestionar-conversacion",
-    "b2.spk.conversacion-natural",
-    "b2.gram.tiempos-relato",
-    "b2.voc.descripcion-literaria",
-    "b2.pron.lectura-expresiva",
-    "b2.read.cuento",
-    "b2.wri.microrrelato",
-    "b2.gram.voseo",
-    "b2.gram.ustedes-vosotros",
-    "b2.voc.lexico-regional",
-    "b2.pron.sheismo-voseo",
-    "b2.fun.adaptarse-variedad",
-    "b2.lis.rioplatense",
-    "b2.gram.sustantivas-sistema",
-    "b2.gram.concesivas",
-    "b2.gram.pasiva-impersonalidad",
-    "b2.gram.probabilidad-pasado"
-  ],
-  "prerequisites": [
-    "b2-19"
-  ],
+  "reviewObjectives": [],
+  "prerequisites": [],
   "goal": {
-    "canDo": "Puedo integrar argumento, mediación, registro y variedad con razones, matices y condiciones claras.",
+    "canDo": "Puedo exponer una postura de forma ordenada, refutar la contraria con conectores precisos y elegir en cada momento la estructura B2 que necesito: conceder, imaginar, citar, suponer, hacer balance o pedir con la distancia justa.",
     "steps": [
-      "Recupera decisiones lingüísticas anteriores y contrástalas con este caso.",
-      "Escucha sin transcripción y reconstruye las posiciones: confirmar condiciones antes de publicar un acuerdo compartido.",
-      "Lee las fuentes, identifica límites de la evidencia y prepara tu respuesta.",
-      "Escribe, revisa y ensaya una interacción que continuarás con tu docente."
+      "Repasa los conectores para ordenar, añadir, ejemplificar, reformular, concluir, refutar y atribuir.",
+      "Elige entre las herramientas de todo el nivel B2 y combina las clases de las semanas 16 a 19.",
+      "Escucha un debate de radio de tres voces y lee una columna de opinión larga.",
+      "Escribe una carta de lectores con refutación, revísala y defiéndela en un debate oral."
     ]
   },
   "theory": {
-    "intro": "La mascota te propone una misión: integrar argumento, mediación, registro y variedad. Decide qué quieres comunicar antes de elegir una forma.",
+    "intro": "Esta es la última semana de B2. En clase trabajaste los conectores de exposición y refutación y una síntesis de todo el nivel. Aquí los repasas de otra manera: con un debate vecinal en Almagro, tablas para elegir rápido y una integración de las semanas 16 a 19.",
     "parts": [
       {
-        "heading": "Integrar argumento, mediación, registro y variedad",
+        "heading": "Ordenar, añadir, ejemplificar y reformular",
         "body": [
-          "La tarea final combina recepción de fuentes, atribución precisa, negociación de condiciones y producción para dos públicos. Revisa modo, tiempo, referentes y conexiones lógicas después de planificar el mensaje. Una síntesis fiel mantiene diferencias de postura y grados de certeza, aunque elimine repeticiones."
+          "Una exposición se sigue mejor cuando el oyente sabe dónde está. Para ordenar, usa «en primer lugar… en segundo lugar… por último», «para empezar» o «a continuación»; para presentar dos caras, «por un lado… por otro (lado)» o «por una parte… por otra». Para añadir, «además» y «asimismo» (más formal); «es más» e «incluso» suben la fuerza del argumento; «encima» también suma, pero es coloquial y suele sonar a queja.",
+          "Para ejemplificar, «por ejemplo», «es el caso de» o «pongamos por caso». Para reformular, «es decir», «o sea» (más oral) y «en otras palabras»; «mejor dicho» corrige lo que acabas de decir: «son trescientos comercios, mejor dicho, doscientos ochenta». En la escritura, estos conectores suelen ir entre comas o después de punto y coma."
         ],
+        "table": {
+          "caption": "Conectores para construir la exposición",
+          "head": [
+            "Función",
+            "Conectores",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "Ordenar",
+              "en primer lugar, a continuación, por último",
+              "En primer lugar, la calle tiene veredas muy estrechas."
+            ],
+            [
+              "Dos caras",
+              "por un lado… por otro",
+              "Por un lado, ganamos espacio; por otro, perdemos estacionamiento."
+            ],
+            [
+              "Añadir con fuerza",
+              "además, asimismo, es más, incluso",
+              "Es más, los comercios de Defensa venden más desde que se peatonalizó."
+            ],
+            [
+              "Ejemplificar",
+              "por ejemplo, es el caso de, pongamos por caso",
+              "Es el caso de la calle Florida, peatonal desde hace décadas."
+            ],
+            [
+              "Reformular o corregir",
+              "es decir, o sea, en otras palabras, mejor dicho",
+              "Se cerraría al tránsito, es decir, solo pasarían bicicletas."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Aceptaremos el programa siempre que se publiquen los gastos.",
-            "note": "Condición y concordancia plural."
+            "es": "Pongamos por caso que llueve un sábado: ¿quién compra en una calle sin techo?",
+            "note": "«Pongamos por caso» introduce un ejemplo hipotético."
           },
           {
-            "es": "La portavoz negó que ya hubieran firmado el acuerdo.",
-            "note": "Acción anterior a la negación, ellos."
-          },
-          {
-            "es": "Si hubiéramos aclarado el aforo, ahora tendríamos menos dudas.",
-            "note": "Condicional mixta."
+            "es": "Encima de cortar la calle, nos suben los impuestos.",
+            "note": "«Encima»: coloquial y con tono de queja."
           }
         ],
         "mistakes": [
           {
-            "wrong": "Aceptaremos siempre que se publica los gastos.",
-            "right": "Aceptaremos siempre que se publiquen los gastos.",
-            "why": "Condición con subjuntivo y concordancia plural."
+            "wrong": "En primer lugar, la calle es estrecha. En segundo lugar, hay mucho ruido. Encima, la propuesta mejora la seguridad.",
+            "right": "En primer lugar, la calle es estrecha. En segundo lugar, hay mucho ruido. Por último, la propuesta mejora la seguridad.",
+            "why": "«Encima» suma una queja; para cerrar una enumeración neutra se usa «por último»."
+          }
+        ],
+        "tip": "Antes de escribir, numera tus argumentos en un papel. Después elige un conector por cada salto y no repitas el mismo dos veces seguidas."
+      },
+      {
+        "heading": "Concluir, refutar y atribuir",
+        "body": [
+          "Para sacar consecuencias, «por (lo) tanto», «por consiguiente» y «así que»; «de ahí que» lleva subjuntivo: «el tránsito se duplicó; de ahí que los vecinos pidan cambios». Para cerrar, «en resumen», «en definitiva» o «en conclusión»; «total, que…» es coloquial. Para refutar, recuerda el modo: «no es cierto que + subjuntivo» niega, y «es cierto que + indicativo» concede antes de oponerse. «Al contrario» va después de una idea negada; «no…, sino (más bien)…» sustituye una idea por otra; «lejos de + infinitivo» presenta lo contrario de lo esperado; «en absoluto» es un «no» rotundo; «nada más lejos de la realidad» desmiente con énfasis.",
+          "Para atribuir una idea a otra persona, «según + nombre» (o «según tú»), «de acuerdo con» y «como señala…». Atribuir bien es parte de refutar bien: primero dices con justicia lo que piensa el otro y después lo discutes."
+        ],
+        "table": {
+          "caption": "Refutar con precisión",
+          "head": [
+            "Conector",
+            "Modo o construcción",
+            "Ejemplo"
+          ],
+          "rows": [
+            [
+              "no es cierto que",
+              "subjuntivo",
+              "No es cierto que los comercios vayan a cerrar."
+            ],
+            [
+              "es cierto que…, pero",
+              "indicativo",
+              "Es cierto que perderemos estacionamiento, pero ganaremos clientes."
+            ],
+            [
+              "al contrario",
+              "después de una negación",
+              "No bajarán las ventas; al contrario, subirán."
+            ],
+            [
+              "lejos de + infinitivo",
+              "infinitivo",
+              "Lejos de vaciar el barrio, la peatonal lo llenaría."
+            ],
+            [
+              "de ahí que",
+              "subjuntivo",
+              "Hay muchos accidentes; de ahí que pidamos un cambio."
+            ]
+          ]
+        },
+        "examples": [
+          {
+            "es": "Según el informe municipal, el 40 % de los clientes llega a pie.",
+            "note": "Atribución: el dato es del informe."
+          },
+          {
+            "es": "¿Que el proyecto es caro? Nada más lejos de la realidad.",
+            "note": "Desmentido enfático."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "No es cierto que la calle está vacía los domingos.",
+            "right": "No es cierto que la calle esté vacía los domingos.",
+            "why": "«No es cierto que» niega y lleva subjuntivo."
+          },
+          {
+            "wrong": "La propuesta no busca cerrar la calle, pero abrirla a la gente.",
+            "right": "La propuesta no busca cerrar la calle, sino abrirla a la gente.",
+            "why": "Para sustituir una idea negada se usa «sino», no «pero»."
           }
         ]
       },
       {
-        "heading": "Interpretación, registro y efecto",
+        "heading": "Síntesis B2: elegir la herramienta adecuada",
         "body": [
-          "Adapta registro y variedad sin alterar compromisos: un informe institucional y un mensaje cercano pueden expresar el mismo acuerdo con recursos distintos. Recupera colocaciones, nominalización útil, mitigación, reformulación y narración. Comprueba autonomía, claridad, alcance de la evidencia y capacidad de responder a una objeción inesperada."
+          "En un debate real no piensas en clases de gramática, sino en lo que necesitas hacer. Para opinar y negar opiniones: «creo que + indicativo», «no creo que + subjuntivo», «no es que… sino que…». Para conceder: «aunque + indicativo» (lo acepto como hecho) o «aunque + subjuntivo» (no importa si es así), «a pesar de que», «por mucho que». Para imaginar: «si + imperfecto de subjuntivo + condicional», y las mixtas: «si lo hubieran consultado, hoy no habría tanta oposición».",
+          "Para informar con distancia, la pasiva y «se»: «la propuesta fue presentada en marzo», «se cortarán dos cuadras». Para precisar, relativos como «cuyo» y «lo cual». Para citar, el estilo indirecto: «el concejal dijo que se haría una consulta». Y para suponer, el futuro y el condicional de probabilidad: «serán unos doscientos comercios»."
         ],
+        "table": {
+          "caption": "Qué necesito hacer y qué estructura elijo",
+          "head": [
+            "Necesito…",
+            "Estructura B2",
+            "Ejemplo en el debate"
+          ],
+          "rows": [
+            [
+              "negar una opinión",
+              "no creo que + subjuntivo",
+              "No creo que la peatonal espante a los clientes."
+            ],
+            [
+              "corregir una interpretación",
+              "no es que… sino que + subjuntivo",
+              "No es que estemos en contra, sino que queremos garantías."
+            ],
+            [
+              "conceder",
+              "por mucho que + subjuntivo",
+              "Por mucho que insistan, sin datos no hay proyecto."
+            ],
+            [
+              "imaginar el pasado y su efecto",
+              "si + pluscuamperfecto de subjuntivo, condicional",
+              "Si nos hubieran preguntado, hoy estaríamos de acuerdo."
+            ],
+            [
+              "informar sin agente",
+              "se / ser + participio",
+              "El proyecto fue aprobado en primera lectura."
+            ],
+            [
+              "precisar",
+              "cuyo, lo cual",
+              "Los comercios cuyas vidrieras dan a la calle saldrían ganando."
+            ],
+            [
+              "citar",
+              "estilo indirecto",
+              "La concejala aseguró que habría una consulta."
+            ],
+            [
+              "suponer",
+              "futuro / condicional de probabilidad",
+              "Habría unas cien personas en la reunión."
+            ]
+          ]
+        },
         "examples": [
           {
-            "es": "Aceptaremos el programa siempre que se publiquen los gastos.",
-            "note": "Explica qué información afirma y cuál deja abierta."
+            "es": "Aunque la propuesta sea buena, hay que discutirla con los comerciantes.",
+            "note": "«Aunque» + subjuntivo: no discuto si es buena."
           },
           {
-            "es": "Si hubiéramos aclarado el aforo, ahora tendríamos menos dudas.",
-            "note": "Reformula sin cambiar participantes ni tiempo."
+            "es": "La concejala dijo que la obra empezaría en abril.",
+            "note": "Estilo indirecto con condicional."
+          }
+        ],
+        "mistakes": [
+          {
+            "wrong": "No creo que la peatonal es una mala idea.",
+            "right": "No creo que la peatonal sea una mala idea.",
+            "why": "Opinión negada: subjuntivo."
+          }
+        ]
+      },
+      {
+        "heading": "Integración: las clases de las semanas 16 a 19 en el mismo debate",
+        "body": [
+          "En la semana 16 repasaste los participios resultativos y las perífrasis de obligación e inferencia; en la 17, las perífrasis aspectuales y el futuro compuesto; en la 18, el futuro y el condicional de probabilidad y los grupos nominales precisos; en la 19, los pronombres de foco y el registro. En un debate aparecen todas: «llevamos dos años pidiendo una solución (17); el informe lo tenemos leído (16 y 19); debe de haber otra salida (16); para diciembre se habrá decidido (17); le agradeceríamos que nos escuchara (19)».",
+          "Usa la tabla para comprobar que reconoces cada clase. Si alguna te cuesta, vuelve a esa semana antes de seguir con el checkpoint."
+        ],
+        "table": {
+          "caption": "Las ocho clases de las semanas 16 a 19 en el debate de Almagro",
+          "head": [
+            "Semana y clase",
+            "Ejemplo en el debate"
+          ],
+          "rows": [
+            [
+              "16 · G157 Participios resultativos",
+              "Tenemos firmadas ochocientas adhesiones."
+            ],
+            [
+              "16 · G158 Obligación e inferencia",
+              "Debe de haber unos trescientos comercios en la zona."
+            ],
+            [
+              "17 · G159 Perífrasis aspectuales",
+              "La asociación viene reclamando más verde desde 2019."
+            ],
+            [
+              "17 · G160 Futuro compuesto",
+              "Para marzo, el municipio habrá publicado el estudio de tránsito."
+            ],
+            [
+              "18 · G161 Futuro y condicional de probabilidad",
+              "Serían las diez cuando terminó la asamblea."
+            ],
+            [
+              "18 · G162 Grupos nominales complejos",
+              "El informe elaborado por la universidad, no el del municipio."
+            ],
+            [
+              "19 · G163 Pronombres y foco",
+              "A los comerciantes los escuchamos; a los vecinos, todavía no."
+            ],
+            [
+              "19 · G164 Registro y cortesía",
+              "Le agradeceríamos que publicara los datos completos."
+            ]
+          ]
+        },
+        "mistakes": [
+          {
+            "wrong": "Llevamos dos años pidiendo una solución y el informe ya leímos.",
+            "right": "Llevamos dos años pidiendo una solución y el informe ya lo leímos.",
+            "why": "Complemento directo conocido delante del verbo: el pronombre es obligatorio (semana 19)."
+          },
+          {
+            "wrong": "Para diciembre ya decidirán, y deben de haber muchas propuestas.",
+            "right": "Para diciembre ya habrán decidido, y debe de haber muchas propuestas.",
+            "why": "Anterioridad a un punto futuro (semana 17) y «haber» impersonal en singular (semana 16)."
           }
         ]
       }
     ]
   },
   "grammar": {
-    "intro": "Elige formas por su función y por el momento desde el que se habla.",
+    "intro": "Primero elige el conector según la función; después decide el modo y la estructura que lo acompañan.",
     "exercises": [
       {
-        "id": "g-contexto",
+        "id": "b2-20-g-conectores",
         "type": "gap",
-        "prompt": "Completa estas decisiones lingüísticas de checkpoint final: un acuerdo que pueda sostenerse; justifica el modo, la forma o la combinación.",
+        "prompt": "Completa con un conector adecuado. Las opciones posibles aparecen en la clave.",
         "items": [
           {
-            "q": "Aceptaremos el programa siempre que se ___ los gastos.",
+            "q": "La calle no se volvería más peligrosa; ___, habría menos accidentes.",
             "answers": [
               [
-                "publiquen"
+                "al contrario",
+                "todo lo contrario"
               ]
             ],
-            "why": "Condición y concordancia plural."
+            "why": "Después de una idea negada, «al contrario» presenta la opuesta."
           },
           {
-            "q": "La portavoz negó que ya ___ firmado el acuerdo.",
+            "q": "El tránsito creció un 30 % en cinco años; ___ que los vecinos pidan cambios.",
             "answers": [
               [
-                "hubieran"
+                "de ahí"
               ]
             ],
-            "why": "Acción anterior a la negación, ellos."
+            "why": "«De ahí que» + subjuntivo: consecuencia."
           },
           {
-            "q": "Si hubiéramos aclarado el aforo, ahora ___ menos dudas.",
+            "q": "___ de perjudicar a los comercios, la peatonal les traería más clientes.",
             "answers": [
               [
-                "tendríamos"
+                "Lejos",
+                "lejos"
               ]
             ],
-            "why": "Condicional mixta."
+            "why": "«Lejos de» + infinitivo: lo contrario de lo esperado."
+          },
+          {
+            "q": "La propuesta afecta a dos cuadras, ___, unos ciento cincuenta metros.",
+            "answers": [
+              [
+                "es decir",
+                "o sea",
+                "en otras palabras"
+              ]
+            ],
+            "why": "Reformulación que aclara el dato."
+          },
+          {
+            "q": "Son cuarenta comercios, ___ dicho, treinta y ocho, porque dos cerraron.",
+            "answers": [
+              [
+                "mejor"
+              ]
+            ],
+            "why": "«Mejor dicho» corrige lo que se acaba de decir."
+          },
+          {
+            "q": "___ el informe de la universidad, el 40 % de los clientes llega caminando.",
+            "answers": [
+              [
+                "Según",
+                "según",
+                "De acuerdo con",
+                "de acuerdo con"
+              ]
+            ],
+            "why": "Atribución del dato a una fuente."
           }
         ]
       },
       {
-        "id": "g-reconstruir",
-        "type": "open",
-        "prompt": "Reformula con autonomía. Lee el texto de partida y la consigna de cada ítem; después contrasta tu respuesta con el modelo orientativo y la lista de revisión. Otras soluciones pueden ser válidas.",
+        "id": "b2-20-g-eleccion",
+        "type": "context",
+        "prompt": "Lee la situación y elige la estructura que cumple esa función.",
         "items": [
           {
-            "prompt": "Texto de partida: «Aceptaremos, pero antes deben publicar los gastos.» Formula la condición con siempre que.",
-            "model": "Aceptaremos siempre que publiquen los gastos.",
+            "context": "Ricardo, comerciante, cree que la peatonal no es mala idea, pero exige garantías. Quiere corregir a quien lo acusa de oponerse.",
+            "q": "¿Qué frase corrige la interpretación?",
+            "options": [
+              "No es que esté en contra, sino que quiero garantías.",
+              "No es que estoy en contra, pero quiero garantías.",
+              "Estoy en contra, es decir, quiero garantías."
+            ],
+            "answer": 0,
+            "why": "«No es que + subjuntivo, sino que…» corrige una interpretación."
+          },
+          {
+            "context": "Paula quiere conceder un punto al rival sin discutir si es verdad.",
+            "q": "¿Qué frase concede sin entrar en el dato?",
+            "options": [
+              "Aunque las obras son caras, merecen la pena.",
+              "Aunque las obras sean caras, merecen la pena.",
+              "Como las obras son caras, merecen la pena."
+            ],
+            "answer": 1,
+            "why": "«Aunque» + subjuntivo: no importa si es así o no."
+          },
+          {
+            "context": "La moderadora informa de una decisión sin mencionar quién la tomó.",
+            "q": "¿Qué frase es adecuada para un texto informativo?",
+            "options": [
+              "Decidieron que se haga una consulta.",
+              "Ellos lo decidieron, la consulta.",
+              "Se decidió hacer una consulta vecinal en mayo."
+            ],
+            "answer": 2,
+            "why": "«Se» impersonal: información sin agente."
+          },
+          {
+            "context": "Un vecino supone cuánta gente fue a la asamblea de ayer; nadie la contó.",
+            "q": "¿Qué frase es una suposición sobre el pasado?",
+            "options": [
+              "Habrá unas cien personas.",
+              "Habría unas cien personas.",
+              "Hubo unas cien personas, seguro."
+            ],
+            "answer": 1,
+            "why": "Suposición sobre un hecho pasado: condicional (semana 18)."
+          }
+        ]
+      },
+      {
+        "id": "b2-20-g-reformular",
+        "type": "open",
+        "prompt": "Reformula cada texto de partida como se pide. Después compara con el modelo y la lista: hay más de una versión correcta.",
+        "items": [
+          {
+            "prompt": "Texto de partida: «Dicen que la peatonal vaciará el barrio. Es falso: lo llenará». Refútalo con «lejos de» o con «no es cierto que».",
+            "model": "No es cierto que la peatonal vaya a vaciar el barrio; lejos de vaciarlo, lo llenará de gente.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso subjuntivo después de «no es cierto que».",
+              "Presento la idea contraria con un conector de refutación.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «La portavoz: «No habíamos firmado el acuerdo».» Atribuye la negación con negó que y sujeto ellos.",
-            "model": "La portavoz negó que hubieran firmado el acuerdo.",
+            "prompt": "Texto de partida: «El municipio no consultó a los vecinos. Por eso hoy hay tanta oposición». Exprésalo con una condicional mixta.",
+            "model": "Si el municipio hubiera consultado a los vecinos, hoy no habría tanta oposición.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Uso pluscuamperfecto de subjuntivo en la condición pasada.",
+              "Uso condicional simple para la consecuencia presente.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           },
           {
-            "prompt": "Texto de partida: «No aclaramos el aforo y ahora tenemos dudas.» Formula una condición pasada con resultado presente.",
-            "model": "Si hubiéramos aclarado el aforo, ahora tendríamos menos dudas.",
+            "prompt": "Texto de partida: «El concejal: “Haremos una consulta antes de aprobar el proyecto”». Cuéntalo en estilo indirecto en un acta.",
+            "model": "El concejal aseguró que se haría una consulta antes de aprobar el proyecto.",
             "checklist": [
-              "Conservo participantes, referencia temporal y contenido pertinente.",
-              "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-              "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
+              "Elijo un verbo introductor preciso.",
+              "Paso el futuro a condicional.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
+            ]
+          },
+          {
+            "prompt": "Texto de partida: «La calle tiene veredas estrechas. Hay mucho tránsito. Hubo tres accidentes este año». Únelo en una exposición ordenada con conectores y una consecuencia.",
+            "model": "En primer lugar, la calle tiene veredas estrechas; además, soporta mucho tránsito. Por consiguiente, no sorprende que este año haya habido tres accidentes.",
+            "checklist": [
+              "Ordeno los datos con conectores distintos.",
+              "Cierro con una consecuencia clara.",
+              "Comparo con el modelo orientativo: no es una respuesta única y otras formulaciones correctas también valen."
             ]
           }
         ]
@@ -186,290 +473,373 @@ export const b2w20: Module = {
     ]
   },
   "vocabulary": {
-    "intro": "Aprende combinaciones en contexto y comprueba qué matiz aportan al caso.",
+    "intro": "Palabras para debatir sobre la ciudad. Muchas son colocaciones formales que aparecen en actas, columnas y debates de radio.",
     "groups": [
       {
-        "title": "Integrar argumento, mediación, registro y variedad",
+        "title": "La calle y la ciudad",
         "items": [
           {
-            "es": "sostener un compromiso",
-            "note": "cumplir una promesa viable"
+            "es": "peatonalizar una calle",
+            "note": "cerrarla al tránsito de autos para uso de peatones"
           },
           {
-            "es": "integrar perspectivas",
-            "note": "considerar miradas distintas"
+            "es": "el tránsito",
+            "note": "en Argentina y otros países, circulación de vehículos"
           },
           {
-            "es": "delimitar responsabilidades",
-            "note": "precisar obligaciones de cada parte"
+            "es": "el comercio de cercanía",
+            "note": "tiendas pequeñas del barrio"
           },
           {
-            "es": "mediar en un desacuerdo",
-            "note": "facilitar comprensión entre partes"
+            "es": "el espacio público",
+            "note": "calles, plazas y veredas de uso común"
           },
           {
-            "es": "justificar una recomendación",
-            "note": "apoyar una propuesta con razones"
+            "es": "la carga y descarga",
+            "note": "entrega de mercadería a los comercios"
+          }
+        ]
+      },
+      {
+        "title": "Debatir en público",
+        "items": [
+          {
+            "es": "someter a consulta",
+            "note": "preguntar formalmente la opinión de los vecinos"
           },
           {
-            "es": "adaptar el registro",
-            "note": "ajustar la expresión al público"
+            "es": "tomar la palabra",
+            "note": "empezar a hablar en una reunión"
           },
           {
-            "es": "revisar un supuesto",
-            "note": "comprobar una idea no demostrada"
+            "es": "rebatir un argumento",
+            "note": "demostrar que no es válido"
           },
           {
-            "es": "cerrar un acuerdo",
-            "note": "confirmar condiciones compartidas"
+            "es": "dar por sentado",
+            "note": "considerar algo seguro sin comprobarlo"
+          },
+          {
+            "es": "llegar a un consenso",
+            "note": "acordar algo que acepta la mayoría"
+          },
+          {
+            "es": "a favor / en contra",
+            "note": "posturas en un debate"
           }
         ]
       }
     ],
     "exercises": [
       {
-        "id": "v-relaciones",
+        "id": "b2-20-v-debate",
         "type": "match",
-        "prompt": "Relaciona las expresiones útiles para integrar argumento, mediación, registro y variedad con su significado.",
+        "prompt": "Relaciona cada expresión con la situación del debate de Almagro en la que encaja.",
         "pairs": [
           {
-            "left": "sostener un compromiso",
-            "right": "cumplir una promesa viable"
+            "left": "someter a consulta",
+            "right": "El municipio reparte una encuesta en todos los buzones de la zona."
           },
           {
-            "left": "integrar perspectivas",
-            "right": "considerar miradas distintas"
+            "left": "tomar la palabra",
+            "right": "La comerciante levanta la mano y la moderadora le cede el micrófono."
           },
           {
-            "left": "delimitar responsabilidades",
-            "right": "precisar obligaciones de cada parte"
+            "left": "rebatir un argumento",
+            "right": "Paula muestra datos que contradicen lo que dijo Ricardo."
           },
           {
-            "left": "mediar en un desacuerdo",
-            "right": "facilitar comprensión entre partes"
+            "left": "dar por sentado",
+            "right": "Alguien afirma que las ventas bajarán sin mirar ningún estudio."
           },
           {
-            "left": "justificar una recomendación",
-            "right": "apoyar una propuesta con razones"
+            "left": "la carga y descarga",
+            "right": "Los camiones del mercado podrían entrar de seis a nueve."
           },
           {
-            "left": "adaptar el registro",
-            "right": "ajustar la expresión al público"
-          },
-          {
-            "left": "revisar un supuesto",
-            "right": "comprobar una idea no demostrada"
-          },
-          {
-            "left": "cerrar un acuerdo",
-            "right": "confirmar condiciones compartidas"
+            "left": "llegar a un consenso",
+            "right": "Al final, las dos partes aceptan una prueba de seis meses."
           }
-        ]
+        ],
+        "why": "Cada expresión nombra una acción o una situación concreta del debate."
       }
     ]
   },
   "pronunciation": {
-    "focus": "Integra énfasis argumentativo, concesión, cita y cierre; graba una síntesis comprensible y revisa con tu docente qué matices transmite realmente tu voz.",
+    "focus": "Los conectores ordenan también la voz: pausa, tono y énfasis en una exposición.",
     "explanation": [
-      "Integra énfasis argumentativo, concesión, cita y cierre; graba una síntesis comprensible y revisa con tu docente qué matices transmite realmente tu voz.",
-      "Escucha primero la secuencia verbal. Después lee la misma frase con una intención distinta, grábate localmente y compara con tu docente. La voz sintética es apoyo de escucha: no certifica variedad regional, ironía ni evaluación automática de tu pronunciación."
+      "Un conector al principio de la frase suele formar su propio grupo de voz: «En primer lugar | la calle es estrecha». Haz una pausa breve después y mantén el tono suspendido, como quien anuncia que sigue algo. «Es decir» y «o sea» van entre dos pausas, con un tono algo más bajo, porque aclaran lo anterior.",
+      "Los conectores de refutación llevan énfasis: «al CONtrario», «en ABsoluto», «NAda más lejos de la realidad». En un debate, ese énfasis ayuda a tu oyente a seguir el giro del argumento. Escucha, repite y grábate en tu dispositivo; la voz sintética es un apoyo y no evalúa tu pronunciación."
     ],
     "examples": [
       {
-        "es": "Aceptaremos el programa siempre que se publiquen los gastos."
+        "es": "En primer lugar, la calle es estrecha.",
+        "note": "Pausa breve después del conector."
       },
       {
-        "es": "La portavoz negó que ya hubieran firmado el acuerdo."
+        "es": "No bajarán las ventas; al contrario, subirán.",
+        "note": "Énfasis en «contrario»."
       },
       {
-        "es": "Si hubiéramos aclarado el aforo, ahora tendríamos menos dudas."
+        "es": "Son dos cuadras, es decir, ciento cincuenta metros.",
+        "note": "«Es decir» entre pausas, con tono más bajo."
       }
     ],
     "perceive": {
-      "id": "p-percepcion",
+      "id": "b2-20-p-oido",
       "type": "listen",
-      "prompt": "Escucha sin leer el ejemplo previo si quieres comprobar tu percepción; identifica el fragmento verbal y después marca su sílaba tónica.",
+      "prompt": "Escucha cada frase y decide qué hace el conector que oyes.",
       "items": [
         {
-          "q": "En la muestra 1 de checkpoint final: un acuerdo que pueda sostenerse, ¿qué fragmento se oye?",
+          "q": "En la frase sobre las ventas, ¿qué hace el conector?",
           "options": [
-            "publicó",
-            "publiquen",
-            "publican"
+            "Añade un ejemplo.",
+            "Presenta la idea opuesta a una negada."
           ],
           "answer": 1,
-          "why": "Condición y concordancia plural.",
-          "audio": "Aceptaremos el programa siempre que se publiquen los gastos.",
-          "voice": "es-ES-f"
+          "audio": "Las ventas no bajarán; al contrario, crecerán los fines de semana.",
+          "voice": "es-AR-f",
+          "why": "«Al contrario» tras una negación."
         },
         {
-          "q": "En la muestra 2 de checkpoint final: un acuerdo que pueda sostenerse, ¿qué fragmento se oye?",
+          "q": "En la frase sobre los comercios, ¿qué hace el conector?",
           "options": [
-            "hubieran",
-            "habían",
-            "hubieron"
+            "Corrige un dato.",
+            "Concluye el debate."
           ],
           "answer": 0,
-          "why": "Acción anterior a la negación, ellos.",
-          "audio": "La portavoz negó que ya hubieran firmado el acuerdo.",
-          "voice": "es-ES-f"
+          "audio": "Son cuarenta comercios, mejor dicho, treinta y ocho.",
+          "voice": "es-AR-m",
+          "why": "«Mejor dicho»: autocorrección."
+        },
+        {
+          "q": "En la frase sobre la propuesta, ¿qué hace el conector?",
+          "options": [
+            "Atribuye una idea a una fuente.",
+            "Desmiente con énfasis."
+          ],
+          "answer": 1,
+          "audio": "¿Que la propuesta es improvisada? Nada más lejos de la realidad.",
+          "voice": "es-AR-f",
+          "why": "Desmentido enfático."
+        },
+        {
+          "q": "En la frase sobre el informe, ¿qué hace el conector?",
+          "options": [
+            "Atribuye el dato a una fuente.",
+            "Reformula lo anterior."
+          ],
+          "answer": 0,
+          "audio": "Según el informe de la universidad, la mitad de los clientes viene caminando.",
+          "voice": "es-AR-m",
+          "why": "«Según» + fuente."
         }
       ]
     },
     "produce": [
       {
-        "text": "Aceptaremos el programa siempre que se publiquen los gastos.",
-        "tip": "Integra énfasis argumentativo, concesión, cita y cierre; graba una síntesis comprensible y revisa con tu docente qué matices transmite realmente tu voz.",
-        "voice": "es-ES-f"
+        "text": "En primer lugar, la calle tiene veredas muy estrechas.",
+        "tip": "Pausa breve después de «lugar», tono suspendido.",
+        "voice": "es-AR-f"
       },
       {
-        "text": "La portavoz negó que ya hubieran firmado el acuerdo.",
-        "tip": "Integra énfasis argumentativo, concesión, cita y cierre; graba una síntesis comprensible y revisa con tu docente qué matices transmite realmente tu voz.",
-        "voice": "es-ES-f"
+        "text": "No es cierto que vayan a cerrar los comercios; al contrario.",
+        "tip": "Énfasis en «cierto» y en «contrario».",
+        "voice": "es-AR-m"
       },
       {
-        "text": "Si hubiéramos aclarado el aforo, ahora tendríamos menos dudas.",
-        "tip": "Integra énfasis argumentativo, concesión, cita y cierre; graba una síntesis comprensible y revisa con tu docente qué matices transmite realmente tu voz.",
-        "voice": "es-ES-f"
+        "text": "Lejos de vaciar el barrio, la peatonal lo llenaría de vida.",
+        "tip": "Sube en «barrio» y baja al final.",
+        "voice": "es-AR-f"
+      },
+      {
+        "text": "En definitiva, proponemos una prueba de seis meses.",
+        "tip": "Tono de cierre: baja con firmeza en «meses».",
+        "voice": "es-AR-m"
       }
     ]
   },
   "listening": {
-    "title": "Voces y decisiones: Checkpoint final: un acuerdo que pueda sostenerse",
-    "context": "Guion original de interacción. Primera escucha sin transcripción: identifica propósito y posiciones; segunda: datos y condiciones; tercera: inferencias. Reproducción sintética, sin verificación de acento regional.",
+    "title": "«La calle es de todos»: debate en la radio del barrio",
+    "context": "Una radio comunitaria de Almagro, en Buenos Aires, organiza un debate sobre la propuesta de peatonalizar los fines de semana la calle del mercado. Inés modera; Paula, docente, está a favor; Ricardo, dueño de una ferretería, tiene dudas. Escucha primero sin transcripción. Las voces son sintéticas y no representan una variedad regional verificada.",
     "speakers": [
       {
-        "id": "s1",
-        "name": "Coordinadora",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "in",
+        "name": "Inés",
+        "voice": "es-AR-f",
+        "role": "Moderadora del programa"
       },
       {
-        "id": "s2",
-        "name": "Portavoz",
-        "voice": "es-MX-m",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "pa",
+        "name": "Paula",
+        "voice": "es-AR-f",
+        "role": "Docente, integrante de la asociación vecinal"
       },
       {
-        "id": "s3",
-        "name": "Transportista",
-        "voice": "es-ES-f",
-        "role": "Interlocutor del guion original; voz sintética disponible"
+        "id": "ri",
+        "name": "Ricardo",
+        "voice": "es-AR-m",
+        "role": "Dueño de una ferretería en la calle del mercado"
       }
     ],
     "script": [
       {
-        "speaker": "s1",
-        "text": "Propongo mantener tres días en las dos salas autorizadas y dejar el patio fuera hasta la inspección. Reconozco que comunicamos fechas distintas y que interpretamos demasiado rápido algunas respuestas. Quiero que hoy confirmemos responsables y condiciones antes de publicar una nueva versión."
+        "speaker": "in",
+        "text": "Buenas tardes. Hoy debatimos una propuesta que viene generando mucha discusión: cerrar al tránsito la calle del mercado los sábados y domingos. Paula, usted la defiende. Tiene la palabra."
       },
       {
-        "speaker": "s2",
-        "text": "Agradezco la rectificación. Mi equipo podría gestionar inscripciones siempre que solo se pidan los datos necesarios para organizar el aforo y se explique su uso. No aceptamos asumir todo el sistema actual. Cuando dije bueno, podemos verlo, estaba abriendo una conversación, no cerrando un compromiso."
+        "speaker": "pa",
+        "text": "Gracias, Inés. En primer lugar, quiero aclarar algo: no es que queramos cerrar el barrio, sino abrir la calle a la gente. Llevamos dos años pidiendo una solución para las veredas, que son estrechísimas. Además, según el informe de la universidad, casi la mitad de los clientes del mercado llega caminando. Por consiguiente, la calle ya es, en la práctica, de los peatones."
       },
       {
-        "speaker": "s3",
-        "text": "Podemos ofrecer dos viajes de regreso cada tarde. Eso reduciría el presupuesto de actividades, pero atendería una necesidad que aparece en la encuesta. Ahora bien, no sabemos cuántas personas que no siguen las redes necesitarían el servicio. Conviene reservar plazas y comprobar la demanda durante el primer día."
+        "speaker": "ri",
+        "text": "Es cierto que las veredas son estrechas, pero no creo que la solución sea cortar la calle. Mi ferretería vende materiales pesados, y los clientes vienen en auto. Si nadie puede estacionar, ¿quién va a llevarse una bolsa de cemento caminando? Encima, nadie nos consultó."
       },
       {
-        "speaker": "s1",
-        "text": "Entonces reformulo: mantenemos tres días con menos actividades, dos salas y transporte provisional. El patio no se anunciará como disponible. La inscripción quedaría pendiente de que revisemos los campos y la información que reciben los asistentes. ¿Esta síntesis conserva las condiciones de cada parte?"
+        "speaker": "pa",
+        "text": "Entiendo la preocupación, Ricardo, pero lejos de perjudicar a los comercios, la peatonal suele atraer más público. Es el caso de varias calles del centro. Y la carga y descarga se mantendría por la mañana, de seis a diez."
       },
       {
-        "speaker": "s2",
-        "text": "Sí, con una precisión: aceptaremos gestionar el sistema después de ver la versión reducida, no antes. Vos tenés nuestro contacto; mandanos el borrador y lo revisamos mañana. Si alguna expresión regional resulta poco clara para las otras asociaciones, la aclaramos sin cambiar el compromiso."
+        "speaker": "ri",
+        "text": "Las calles del centro las conozco, y no se parecen en nada a la nuestra. Mire, yo no estoy en contra en absoluto. Lo que pido es una prueba con datos. Si el municipio hubiera hecho un estudio antes, hoy no estaríamos discutiendo a ciegas."
       },
       {
-        "speaker": "s3",
-        "text": "Por mi parte, enviaré horarios y capacidad por escrito. Si la demanda supera las plazas, necesitaremos decidir qué actividad se reduce para financiar otro viaje. Prefiero que ese límite figure ahora. Un acuerdo parcial pero comprensible será más útil que una promesa amplia que después nadie pueda cumplir."
+        "speaker": "in",
+        "text": "Hay un mensaje de una oyente, la señora Marta, que dice que vive en la calle desde hace cuarenta años y que los sábados ya no puede abrir la ventana por el ruido de los autos. Paula, ¿aceptaría la prueba que propone Ricardo?"
       },
       {
-        "speaker": "s2",
-        "text": "Quisiera recuperar una experiencia del voluntariado. En otro encuentro se cambió un horario en un grupo de mensajes y el silencio se interpretó como acuerdo. Algunas personas no habían leído nada. Propongo que los cambios importantes tengan una confirmación de recepción, sin exigir respuestas públicas sobre circunstancias personales."
+        "speaker": "pa",
+        "text": "Por supuesto. De hecho, tenemos firmadas más de ochocientas adhesiones que piden justamente eso: seis meses de prueba y una consulta al final. Para marzo, el municipio habrá publicado el estudio de tránsito, y debe de haber tiempo para organizar la prueba en otoño."
       },
       {
-        "speaker": "s1",
-        "text": "Lo incorporamos como procedimiento. La ficha común tendrá horarios confirmados y propuestas pendientes en apartados distintos, y una persona responsable de resolver dudas. Cada asociación puede adaptar el tratamiento a su manera de hablar, siempre que conserve las condiciones. Para cerrar, pediré a cada parte que explique con sus palabras lo que asume; así detectaremos diferencias antes de publicar."
+        "speaker": "ri",
+        "text": "Bueno, en eso coincidimos. Total, que los dos queremos lo mismo: decidir con información. Ahora, le agradecería que la asociación nos invitara a las reuniones, porque a los comerciantes nos enteramos de todo por los diarios. Y otra cosa: los domingos a la mañana, mejor dicho, hasta el mediodía, mi local está abierto. Eso también tendría que contemplarse."
+      },
+      {
+        "speaker": "in",
+        "text": "En resumen: acuerdo en las veredas, dudas sobre el estacionamiento y una propuesta común de prueba. Gracias a los dos. Los oyentes pueden dejar su opinión en nuestro contestador."
       }
     ],
     "stages": [
       {
         "stage": "gist",
-        "prompt": "Escucha la conversación completa; identifica el problema y la intención antes de buscar palabras aisladas.",
+        "prompt": "Escucha el debate entero. ¿Cómo evoluciona la discusión?",
         "exercise": {
-          "id": "l-global",
+          "id": "b2-20-l-global",
           "type": "choice",
-          "prompt": "¿Qué organiza la conversación situada en Buenos Aires?",
+          "prompt": "Elige la respuesta que resume el debate.",
           "items": [
             {
-              "q": "¿Cuál es el propósito global de esta conversación: Checkpoint final: un acuerdo que pueda sostenerse?",
+              "q": "¿Cómo termina el debate?",
               "options": [
-                "Contar una única versión sin permitir preguntas.",
-                "Confirmar condiciones antes de publicar un acuerdo compartido",
-                "Leer una lista de instrucciones sin responder a nadie."
+                "Sin ningún punto de acuerdo.",
+                "Con un acuerdo sobre una prueba y una consulta.",
+                "Con la retirada de la propuesta."
               ],
               "answer": 1,
-              "why": "Las intervenciones se responden y matizan sus posiciones."
+              "why": "Los dos aceptan seis meses de prueba y decidir con datos."
             },
             {
-              "q": "¿Qué relación predomina entre las voces en «Checkpoint final: un acuerdo que pueda sostenerse»?",
+              "q": "¿Cuál es la postura de Ricardo?",
               "options": [
-                "Las personas aclaran interpretaciones y conservan algunos límites.",
-                "Todas repiten exactamente la misma opinión desde el inicio.",
-                "Ninguna intervención tiene relación con la anterior."
+                "Tiene dudas y pide datos, pero no se opone del todo.",
+                "Se opone totalmente a cualquier cambio.",
+                "Apoya la peatonal sin condiciones."
               ],
               "answer": 0,
-              "why": "Identifica un turno que responda al anterior."
+              "why": "«No estoy en contra en absoluto. Lo que pido es una prueba con datos»."
             }
           ]
         }
       },
       {
         "stage": "detail",
-        "prompt": "Escucha otra vez y anota quién sostiene cada afirmación.",
+        "prompt": "Escucha otra vez y localiza los datos concretos.",
         "exercise": {
-          "id": "l-detalle",
+          "id": "b2-20-l-detalle",
           "type": "choice",
-          "prompt": "Localiza una intervención concreta en «Checkpoint final: un acuerdo que pueda sostenerse».",
+          "prompt": "Responde con la información exacta del audio.",
           "items": [
             {
-              "q": "¿Qué condición conserva el portavoz en el audio?",
+              "q": "Según el informe citado por Paula, ¿cómo llegan los clientes al mercado?",
               "options": [
-                "Revisar el sistema reducido antes de asumirlo.",
-                "Gestionar cualquier cantidad de datos.",
-                "Aceptar el acta anterior sin cambios."
-              ],
-              "answer": 0,
-              "why": "La respuesta conserva la condición o información expresada por esa persona."
-            },
-            {
-              "q": "¿Qué frase aparece en la intervención inicial de «Checkpoint final: un acuerdo que pueda sostenerse»?",
-              "options": [
-                "Ya está todo decidido y no necesitamos escuchar a ninguna parte.",
-                "No hay información que podamos discutir en esta reunión.",
-                "Propongo mantener tres días en las dos salas autorizadas y dejar el patio fuera hasta la inspección."
+                "Casi todos en auto.",
+                "La mayoría en colectivo.",
+                "Casi la mitad caminando."
               ],
               "answer": 2,
-              "why": "Vuelve al inicio y comprueba la formulación exacta."
+              "why": "«Casi la mitad de los clientes del mercado llega caminando»."
+            },
+            {
+              "q": "¿Por qué le preocupa la propuesta a Ricardo?",
+              "options": [
+                "Porque sus clientes compran materiales pesados y vienen en auto.",
+                "Porque perdería su vereda.",
+                "Porque cerraría su ferretería los domingos."
+              ],
+              "answer": 0,
+              "why": "Habla de bolsas de cemento y estacionamiento."
+            },
+            {
+              "q": "¿Qué pide Ricardo al final?",
+              "options": [
+                "Que se cancele la consulta.",
+                "Que la asociación invite a los comerciantes a las reuniones.",
+                "Que se amplíe el horario de carga."
+              ],
+              "answer": 1,
+              "why": "«Le agradecería que la asociación nos invitara a las reuniones»."
             }
           ]
         }
       },
       {
         "stage": "notice",
-        "prompt": "Distingue lo dicho de lo inferido; consulta la transcripción solo después de responder.",
+        "prompt": "Ahora fíjate en la forma. Puedes leer la transcripción después de responder.",
         "exercise": {
-          "id": "l-inferencia",
-          "type": "open",
-          "prompt": "Interpreta postura, reserva y efecto sobre la otra persona.",
+          "id": "b2-20-l-forma",
+          "type": "classify",
+          "prompt": "Clasifica cada fragmento según su función en el debate.",
+          "categories": [
+            "Ordenar, añadir o concluir",
+            "Refutar, conceder o corregir",
+            "Estructura repasada en las semanas 16 a 19"
+          ],
           "items": [
             {
-              "prompt": "En «Checkpoint final: un acuerdo que pueda sostenerse», cita una reserva o una reformulación del diálogo, explica qué interpretación evita y qué quedaría sin resolver si se omitiera.",
-              "model": "Por mi parte, enviaré horarios y capacidad por escrito. Si la demanda supera las plazas, necesitaremos decidir qué actividad se reduce para financiar otro viaje. Prefiero que ese límite figure ahora. Un acuerdo parcial pero comprensible será más útil que una promesa amplia que después nadie pueda cumplir.",
-              "checklist": [
-                "Atribuyo la intervención a su hablante.",
-                "Distingo palabras explícitas e inferencia.",
-                "Conservo una condición o un límite de la conversación."
-              ]
+              "text": "En primer lugar, quiero aclarar algo",
+              "cat": 0,
+              "why": "Conector de orden."
+            },
+            {
+              "text": "no es que queramos cerrar el barrio, sino abrir la calle",
+              "cat": 1,
+              "why": "Corrige una interpretación."
+            },
+            {
+              "text": "lejos de perjudicar a los comercios",
+              "cat": 1,
+              "why": "Refutación con «lejos de»."
+            },
+            {
+              "text": "tenemos firmadas más de ochocientas adhesiones",
+              "cat": 2,
+              "why": "«Tener» + participio concordado (semana 16)."
+            },
+            {
+              "text": "Para marzo, el municipio habrá publicado el estudio",
+              "cat": 2,
+              "why": "Futuro compuesto con punto de referencia (semana 17)."
+            },
+            {
+              "text": "En resumen: acuerdo en las veredas",
+              "cat": 0,
+              "why": "Conector de conclusión."
+            },
+            {
+              "text": "Las calles del centro las conozco",
+              "cat": 2,
+              "why": "Tema conocido retomado con pronombre (semana 19)."
             }
           ]
         }
@@ -477,267 +847,346 @@ export const b2w20: Module = {
     ]
   },
   "reading": {
-    "title": "Checkpoint final: un acuerdo que pueda sostenerse: texto para interpretar",
-    "genre": "Dossier argumentativo",
-    "frame": "Material original de SpanishCue; las situaciones y los datos son didácticos, no noticias reales ni textos oficiales de examen.",
+    "title": "La calle del mercado: menos ruido y más datos",
+    "genre": "Columna de opinión en un periódico de barrio",
+    "frame": "Texto original de SpanishCue escrito como columna de opinión de un periódico ficticio de Almagro, en Buenos Aires. Las personas, los datos y el informe son inventados.",
     "text": [
-      "El encuentro cultural del río reunirá asociaciones de varias ciudades. La organización propone un programa de tres días en un antiguo mercado cuya restauración todavía no ha concluido. El informe técnico autoriza dos salas y exige una inspección adicional para el patio. La coordinadora considera viable inaugurar por fases. Algunas asociaciones temen que aceptar ahora una participación parcial se interprete después como apoyo a todo el programa, incluido un sistema de inscripción que solicita más datos de los que consideran necesarios.",
-      "La encuesta de interés recibió doscientas respuestas a través de las redes de la organización. El sesenta por ciento prefiere actividades vespertinas y el cuarenta por ciento declara necesitar transporte de regreso. Los datos orientan la planificación, pero no representan automáticamente al conjunto de habitantes de la zona. Un grupo propone reservar parte del presupuesto para un servicio de traslado; otro prefiere ampliar la programación. Ambos coinciden en que no tendría sentido anunciar actividades a las que una parte del público no pudiera llegar o de las que no pudiera volver.",
-      "En una reunión previa, un portavoz dijo «bueno, podemos verlo» y el acta lo registró como aceptación de asumir las inscripciones. El portavoz pide corregirla: estaba dispuesto a estudiar la tarea, no a comprometer a su equipo. También señala que se les habían enviado documentos con fechas diferentes. La coordinación reconoce el error y ofrece publicar una versión única, con responsables y asuntos pendientes separados. Explica que habría podido comprobar antes la interpretación de cada intervención y propone hacerlo al cerrar el nuevo acuerdo.",
-      "El comité debe elegir entre reducir el encuentro a un día, mantener tres días con apertura parcial o aplazarlo. Ninguna alternativa carece de costes. Una recomendación convincente tendrá que justificar prioridades, conservar las condiciones técnicas, responder al problema de transporte y definir el tratamiento mínimo de datos. El éxito no consistirá en que todas las personas utilicen las mismas palabras, sino en que puedan explicar el mismo compromiso y reconocer qué límites no han desaparecido por el hecho de firmarlo.",
-      "Nota del voluntariado. Las asociaciones visitantes necesitan una explicación breve y coherente del acuerdo. Algunas utilizan ustedes y otras vosotros; en conversaciones informales también aparece vos. La coordinación no exige uniformar esas formas, pero sí evitar que diferentes versiones del programa indiquen condiciones distintas. Se propone una ficha común con salas disponibles, horarios confirmados, transporte y persona responsable de resolver dudas. Las adaptaciones lingüísticas deben conservar esos cuatro elementos.",
-      "Una voluntaria relata que en otro encuentro se cambió la hora de regreso sin actualizar todos los mensajes. Varias personas interpretaron el silencio del grupo como aceptación, aunque algunas ni siquiera habían leído la modificación. El relato sirve como advertencia, no como prueba de que aquí ocurrirá lo mismo. El comité pide diseñar una comprobación de recepción para los cambios importantes y una forma de señalar que una propuesta sigue pendiente. La entrega final deberá incluir esa medida y una explicación accesible para alguien que no haya participado en las reuniones."
+      "Pocas propuestas han dividido tanto al barrio como la de peatonalizar los fines de semana la calle del mercado. Desde que la asociación vecinal la presentó en marzo, las reuniones se llenan, los grupos de mensajes arden y, en la puerta del mercado, se discute más que se compra. Esta columna no pretende cerrar el debate, sino ordenarlo: separar lo que sabemos de lo que suponemos y responder a los argumentos que más circulan.",
+      "En primer lugar, conviene recordar de dónde surge la idea. La asociación viene reclamando desde 2019 una solución para las veredas, cuyo ancho no supera en algunos tramos el metro y medio. Los sábados por la mañana, cuando el mercado está lleno, caminar con un cochecito de bebé es casi imposible. Por consiguiente, el problema existe y no lo ha inventado nadie. Lo que se discute es la solución, y sobre eso conviene escuchar a todos los que viven y trabajan en la cuadra, no solo a quienes más gritan en las reuniones.",
+      "El argumento más repetido en contra es que la peatonal vaciaría el barrio. Según los comerciantes que lo sostienen, los clientes dejarían de venir si no pueden estacionar. No es cierto, sin embargo, que la mayoría llegue en auto. El estudio realizado por la Universidad del Oeste el año pasado, y no el que encargó el municipio, indica que casi la mitad de los clientes llega caminando y que solo uno de cada cinco viene en coche. Es cierto que ese quinto compra más, y por eso los comercios de materiales, como la ferretería de Ricardo Benítez, tienen razones para preocuparse.",
+      "El segundo argumento sostiene que la propuesta es improvisada. Nada más lejos de la realidad: el texto que la asociación presentó tiene veinte páginas, incluye un horario de carga y descarga de seis a diez de la mañana y prevé excepciones para vecinos con movilidad reducida. Ahora bien, un buen documento no sustituye una consulta. Si el municipio hubiera preguntado a los comerciantes desde el principio, hoy no habría tanta desconfianza, y muchos de ellos no se habrían enterado de la propuesta por los diarios.",
+      "Lejos de ser un callejón sin salida, el debate ha producido una idea razonable: una prueba de seis meses, con mediciones de ventas, tránsito y ruido, y una consulta vinculante al final. Para marzo, según ha anunciado la concejala de Movilidad, se habrá publicado el estudio de tránsito, de modo que la prueba podría empezar en otoño. Debe de haber, además, fórmulas intermedias: cerrar solo los domingos, por ejemplo, o habilitar un sector de carga para los comercios que venden productos pesados.",
+      "En definitiva, ni la peatonal es la panacea que algunos imaginan ni el desastre que otros anuncian. Es una herramienta, y como tal hay que medirla. A los vecinos que la defienden les pedimos paciencia; a los comerciantes que la temen, que acepten mirar los datos. Y al municipio le agradeceríamos que, por una vez, no decidiera a puertas cerradas lo que se va a vivir a la vista de todos."
     ],
     "glossary": [
       {
-        "es": "sostener un compromiso",
-        "note": "cumplir una promesa viable"
+        "es": "arder",
+        "note": "aquí, estar muy agitado o lleno de discusiones"
       },
       {
-        "es": "integrar perspectivas",
-        "note": "considerar miradas distintas"
+        "es": "una consulta vinculante",
+        "note": "votación cuyo resultado obliga a las autoridades"
       },
       {
-        "es": "delimitar responsabilidades",
-        "note": "precisar obligaciones de cada parte"
+        "es": "la panacea",
+        "note": "remedio que supuestamente lo resuelve todo"
       }
     ],
     "tasks": [
       {
-        "id": "r-comprender",
+        "id": "b2-20-r-comprension",
         "type": "choice",
-        "prompt": "Interpreta tesis y alcance; descarta respuestas que exageren la conclusión.",
+        "prompt": "Responde según la columna.",
         "items": [
           {
-            "q": "¿Qué exige una recomendación fiel al dossier?",
+            "q": "¿Qué objetivo declara la columna?",
             "options": [
-              "Dar por autorizado el patio.",
-              "Integrar condiciones técnicas, acceso y límites de los datos.",
-              "Tratar la encuesta como representación completa."
-            ],
-            "answer": 1,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
-          },
-          {
-            "q": "¿Qué demuestra la reformulación de la coordinadora?",
-            "options": [
-              "Permite detectar una condición que aún necesitaba precisión.",
-              "Elimina toda necesidad de documentación.",
-              "Obliga a todas las partes a hablar la misma variedad."
+              "Ordenar el debate y separar datos de suposiciones.",
+              "Apoyar sin reservas la peatonal.",
+              "Pedir que se cancele la propuesta."
             ],
             "answer": 0,
-            "why": "Comprueba esta interpretación con el texto completo y no solo con una palabra aislada."
+            "why": "Primer párrafo: «no pretende cerrar el debate, sino ordenarlo»."
+          },
+          {
+            "q": "¿Qué dato del estudio de la universidad usa el autor para refutar a los comerciantes?",
+            "options": [
+              "Que las ventas suben un 50 %.",
+              "Que casi la mitad de los clientes llega caminando.",
+              "Que no hay accidentes en la calle."
+            ],
+            "answer": 1,
+            "why": "Tercer párrafo."
+          },
+          {
+            "q": "¿Qué propone la columna como salida?",
+            "options": [
+              "Una peatonal permanente desde ya.",
+              "Esperar a un nuevo gobierno municipal.",
+              "Una prueba de seis meses con mediciones y una consulta vinculante."
+            ],
+            "answer": 2,
+            "why": "Quinto párrafo."
+          },
+          {
+            "q": "¿A quién le pide la columna que no decida «a puertas cerradas»?",
+            "options": [
+              "A la asociación vecinal.",
+              "A los comerciantes.",
+              "Al municipio."
+            ],
+            "answer": 2,
+            "why": "Último párrafo."
           }
         ]
       },
       {
-        "id": "r-evidencia",
+        "id": "b2-20-r-interpretar",
         "type": "open",
-        "prompt": "Apoya tu lectura con evidencia y distingue la postura de la fuente de la tuya.",
+        "prompt": "Interpreta el texto con tus palabras y apóyate en citas.",
         "items": [
           {
-            "prompt": "En «Checkpoint final: un acuerdo que pueda sostenerse», resume dos posiciones en 60–80 palabras, cita una evidencia y explica un límite que el texto no permite resolver.",
-            "model": "Recomiendo mantener tres días con programación reducida y utilizar únicamente las salas autorizadas. Esta opción preserva el encuentro y permite destinar recursos al transporte. La encuesta sugiere una necesidad, aunque su origen en redes limita la representatividad. La gestión de inscripciones seguirá pendiente hasta que el equipo revise una versión con datos mínimos y condiciones claras. Propongo publicar un documento único y verificar la demanda de traslado el primer día. Si excede la capacidad, el comité deberá acordar qué partida modifica, sin prometer un servicio ilimitado.",
+            "prompt": "Explica en 80–100 palabras cómo refuta el autor los dos argumentos en contra y si su postura te parece equilibrada. Usa al menos dos conectores de refutación y una concesión, y cita una frase del texto.",
+            "model": "El autor refuta el primer argumento con datos: no es cierto que la mayoría llegue en auto, porque casi la mitad camina. Al segundo responde con énfasis, «Nada más lejos de la realidad», y describe el documento de veinte páginas. Aun así, concede que los comercios de materiales tienen razones para preocuparse y que un buen documento no sustituye una consulta. Me parece equilibrado, porque, lejos de ridiculizar a los comerciantes, les pide que miren los datos y critica también al municipio.",
             "checklist": [
-              "Identifico las dos posiciones sin inventar consenso.",
-              "Utilizo una evidencia concreta.",
-              "Marco una inferencia como tal."
-            ]
-          },
-          {
-            "prompt": "Compara el anexo del checkpoint 20 con las primeras fuentes: identifica una limitación de los datos y una consecuencia práctica para la recomendación. Explica qué detalle conservarías al mediar para otra persona.",
-            "model": "Una cifra o una experiencia orienta la decisión solo dentro de su alcance. La recomendación debe conservar qué se midió, qué falta y qué condición se propone verificar.",
-            "checklist": [
-              "Identifico un dato concreto del anexo.",
-              "No generalizo fuera de la muestra o del caso.",
-              "Adapto el mensaje sin perder una condición."
+              "Explico cómo se refuta cada argumento.",
+              "Cito una frase literal del texto.",
+              "Uso dos conectores de refutación y una concesión."
             ]
           }
         ]
       }
     ],
     "noticing": {
-      "prompt": "Observa cómo la forma lingüística limita o precisa el mensaje.",
+      "prompt": "Observa cómo la columna combina conectores y estructuras de todo el nivel.",
       "items": [
         {
-          "quote": "El encuentro cultural del río reunirá asociaciones de varias ciudades.",
-          "note": "Identifica qué establece el inicio y cómo prepara la interpretación posterior."
+          "quote": "No es cierto, sin embargo, que la mayoría llegue en auto",
+          "note": "Refutación con subjuntivo; «sin embargo» entre comas enlaza con el argumento anterior."
         },
         {
-          "quote": "El éxito no consistirá en que todas las personas utilicen las mismas palabras, sino en que puedan explicar el mismo compromiso y reconocer qué límites no han desaparecido por el hecho de firmarlo.",
-          "note": "Relaciona el cierre con la tesis o con el giro narrativo; explica qué no afirma."
+          "quote": "Si el municipio hubiera preguntado a los comerciantes desde el principio, hoy no habría tanta desconfianza",
+          "note": "Condicional mixta: un pasado no realizado con efecto en el presente."
+        },
+        {
+          "quote": "El estudio realizado por la Universidad del Oeste el año pasado, y no el que encargó el municipio",
+          "note": "Grupo nominal preciso (semana 18): el participio aclara la autoría y la elipsis «el que» se recupera sin duda."
+        },
+        {
+          "quote": "A los vecinos que la defienden les pedimos paciencia",
+          "note": "Tema delante retomado con «les» (semana 19) y petición final con distancia."
         }
       ]
     }
   },
   "practice": {
-    "intro": "Recupera coordinación, modo y tiempo, concesión, fuentes, hipótesis, responsabilidad, precisión, cortesía y variedad: justifica al menos seis elecciones en tu entrega final.",
+    "intro": "Combina todo: conectores de exposición y refutación, las herramientas de síntesis B2 y las clases de las semanas 16 a 19.",
     "exercises": [
       {
-        "id": "x-orden",
+        "id": "b2-20-x-integracion",
+        "type": "gap",
+        "prompt": "Completa cada frase con la forma que pide la clase indicada entre corchetes.",
+        "items": [
+          {
+            "q": "La asociación tiene ___ (presentar) dos propuestas al municipio. [semana 16]",
+            "answers": [
+              [
+                "presentadas"
+              ]
+            ],
+            "why": "«Tener» + participio concordado con «dos propuestas»."
+          },
+          {
+            "q": "Los comerciantes ___ años pidiendo más estacionamiento. [semana 17, «llevar» en presente]",
+            "answers": [
+              [
+                "llevan"
+              ]
+            ],
+            "why": "«Llevar» + tiempo + gerundio."
+          },
+          {
+            "q": "Para el otoño, el municipio ya ___ (publicar) el estudio. [semana 17]",
+            "answers": [
+              [
+                "habrá publicado"
+              ]
+            ],
+            "why": "Futuro compuesto con punto futuro."
+          },
+          {
+            "q": "Nadie contó a los asistentes, pero ___ (haber) unas doscientas personas en la asamblea de ayer. [semana 18]",
+            "answers": [
+              [
+                "habría"
+              ]
+            ],
+            "why": "Suposición sobre el pasado: condicional."
+          },
+          {
+            "q": "La propuesta, ___ autores son tres vecinas del barrio, tiene veinte páginas. [relativos]",
+            "answers": [
+              [
+                "cuyos"
+              ]
+            ],
+            "why": "«Cuyo» concuerda con lo poseído: autores → cuyos."
+          },
+          {
+            "q": "Le agradeceríamos que nos ___ (enviar) el informe completo. [semana 19]",
+            "answers": [
+              [
+                "enviara",
+                "enviase"
+              ]
+            ],
+            "why": "Tras el condicional, imperfecto de subjuntivo."
+          }
+        ]
+      },
+      {
+        "id": "b2-20-x-orden",
         "type": "order",
-        "prompt": "Reconstruye los mensajes del caso de Buenos Aires y conserva sus relaciones.",
+        "prompt": "Ordena las palabras para reconstruir frases del debate.",
         "items": [
           {
             "words": [
-              "En",
-              "«Checkpoint final: un acuerdo que pueda sostenerse»,",
-              "Aceptaremos",
+              "Lejos",
+              "de",
+              "vaciar",
               "el",
-              "programa",
-              "siempre",
+              "barrio,",
+              "la",
+              "peatonal",
+              "lo",
+              "llenaría."
+            ],
+            "why": "«Lejos de» + infinitivo para refutar."
+          },
+          {
+            "words": [
+              "No",
+              "es",
               "que",
-              "se",
-              "publiquen",
-              "los",
-              "gastos."
+              "estemos",
+              "en",
+              "contra,",
+              "sino",
+              "que",
+              "pedimos",
+              "datos."
             ],
-            "why": "Condición y concordancia plural."
+            "why": "«No es que» + subjuntivo, «sino que» + indicativo."
           },
           {
             "words": [
-              "En",
-              "«Checkpoint final: un acuerdo que pueda sostenerse»,",
-              "Si",
-              "hubiéramos",
-              "aclarado",
-              "el",
-              "aforo,",
-              "ahora",
-              "tendríamos",
-              "menos",
-              "dudas."
+              "Debe",
+              "de",
+              "haber",
+              "otras",
+              "soluciones",
+              "más",
+              "baratas."
             ],
-            "why": "Condicional mixta."
+            "why": "«Debe de haber» en singular (semana 16)."
           }
         ]
       },
       {
-        "id": "x-edicion",
+        "id": "b2-20-x-error",
         "type": "error",
-        "prompt": "Revisa tres borradores de checkpoint final: un acuerdo que pueda sostenerse; cada uno tiene un único error deliberado.",
+        "prompt": "Cada frase tiene un error. Escríbela corregida.",
         "items": [
           {
-            "sentence": "Aceptaremos siempre que se publica los gastos.",
+            "sentence": "Es cierto que la calle sea estrecha, pero eso no justifica cerrarla.",
             "answers": [
-              "Aceptaremos siempre que se publiquen los gastos."
+              "Es cierto que la calle es estrecha, pero eso no justifica cerrarla."
             ],
-            "why": "Condición con subjuntivo y concordancia plural."
+            "why": "«Es cierto que» concede un hecho: indicativo."
           },
           {
-            "sentence": "No está claro que la encuesta representa a todo el barrio.",
+            "sentence": "El tránsito aumentó mucho; de ahí que los vecinos piden cambios.",
             "answers": [
-              "No está claro que la encuesta represente a todo el barrio."
+              "El tránsito aumentó mucho; de ahí que los vecinos pidan cambios."
             ],
-            "why": "Cuestionar la afirmación selecciona subjuntivo."
+            "why": "«De ahí que» lleva subjuntivo."
           },
           {
-            "sentence": "El mercado, cuyo salas están listas, abrirá por fases.",
+            "sentence": "Por mucho que insisten, no vamos a firmar sin una consulta.",
             "answers": [
-              "El mercado, cuyas salas están listas, abrirá por fases."
+              "Por mucho que insistan, no vamos a firmar sin una consulta."
             ],
-            "why": "Cuyo concuerda con salas."
+            "why": "«Por mucho que» con valor general va con subjuntivo."
+          },
+          {
+            "sentence": "La propuesta ya leímos y nos parece seria.",
+            "answers": [
+              "La propuesta ya la leímos y nos parece seria."
+            ],
+            "why": "Complemento directo conocido delante: pronombre obligatorio (semana 19)."
           }
         ]
       },
       {
-        "id": "x-produccion",
-        "type": "open",
-        "prompt": "Prepara dos fragmentos antes de tu entrega independiente; el modelo es una posibilidad, no una respuesta única.",
+        "id": "b2-20-x-funcion",
+        "type": "classify",
+        "prompt": "¿Qué hace cada conector? Clasifícalo.",
+        "categories": [
+          "Ordenar o añadir",
+          "Reformular o ejemplificar",
+          "Refutar o conceder",
+          "Concluir o sacar consecuencias"
+        ],
         "items": [
           {
-            "prompt": "Abre tu respuesta sobre integrar argumento, mediación, registro y variedad con una postura y una razón; adapta el destinatario.",
-            "model": "Recomiendo mantener tres días con programación reducida y utilizar únicamente las salas autorizadas.",
-            "checklist": [
-              "Presento una postura concreta.",
-              "Ajusto el registro a quien recibirá el mensaje."
-            ]
+            "text": "asimismo",
+            "cat": 0,
+            "why": "Añade, en registro formal."
           },
           {
-            "prompt": "Reformula una objeción o una reserva de «Checkpoint final: un acuerdo que pueda sostenerse» sin debilitarla, y responde con una condición verificable.",
-            "model": "Recomiendo mantener tres días con programación reducida y utilizar únicamente las salas autorizadas. Esta opción preserva el encuentro y permite destinar recursos al transporte. La encuesta sugiere una necesidad, aunque su origen en redes limita la representatividad. La gestión de inscripciones seguirá pendiente hasta que el equipo revise una versión con datos mínimos y condiciones claras. Propongo publicar un documento único y verificar la demanda de traslado el primer día. Si excede la capacidad, el comité deberá acordar qué partida modifica, sin prometer un servicio ilimitado.",
-            "checklist": [
-              "La objeción conserva su sentido.",
-              "Mi respuesta no promete lo que no controlo."
-            ]
+            "text": "pongamos por caso",
+            "cat": 1,
+            "why": "Introduce un ejemplo hipotético."
+          },
+          {
+            "text": "nada más lejos de la realidad",
+            "cat": 2,
+            "why": "Desmiente con énfasis."
+          },
+          {
+            "text": "por consiguiente",
+            "cat": 3,
+            "why": "Consecuencia formal."
+          },
+          {
+            "text": "mejor dicho",
+            "cat": 1,
+            "why": "Corrige lo que se acaba de decir."
+          },
+          {
+            "text": "en absoluto",
+            "cat": 2,
+            "why": "Negación rotunda."
+          },
+          {
+            "text": "en definitiva",
+            "cat": 3,
+            "why": "Cierre de la exposición."
+          },
+          {
+            "text": "a continuación",
+            "cat": 0,
+            "why": "Ordena el siguiente punto."
           }
         ]
       },
       {
-        "id": "x-recuperacion",
+        "id": "b2-20-x-guiada",
         "type": "open",
-        "prompt": "Recuperación espaciada: selecciona y produce los recursos señalados sin mirar sus explicaciones. En el checkpoint distribúyelos entre informe y ensayo oral.",
+        "prompt": "Escribe frases breves antes de la tarea de escritura. El modelo es una posibilidad, no la única.",
         "items": [
           {
-            "prompt": "Recupera la semana 1 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Subjuntivo en oraciones sustantivas. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo elegir el modo según el verbo principal: influencia, valoración, emoción, percepción o comunicación.",
+            "prompt": "Resume en tres frases ordenadas un problema de tu barrio o ciudad, con un ejemplo y una consecuencia.",
+            "model": "En primer lugar, en mi barrio casi no hay plazas. Es el caso de la zona del puerto, donde los niños juegan en el estacionamiento. Por consiguiente, muchas familias se están mudando a las afueras.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso un conector de orden, uno de ejemplo y uno de consecuencia.",
+              "Las ideas avanzan de forma lógica."
             ]
           },
           {
-            "prompt": "Recupera la semana 6 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Oraciones concesivas. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar aunque + indicativo o subjuntivo según la información, a pesar de (que), por mucho que y si bien.",
+            "prompt": "Refuta este argumento con dos estructuras distintas: «Las bicisendas no sirven para nada porque nadie las usa».",
+            "model": "No es cierto que nadie las use: según el último conteo, pasan dos mil ciclistas al día. Lejos de no servir, han reducido los accidentes en la avenida.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Uso subjuntivo tras «no es cierto que».",
+              "Apoyo la refutación en un dato atribuido."
             ]
           },
           {
-            "prompt": "Recupera la semana 9 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Pasiva e impersonalidad. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar ser + participio, se pasiva, tercera plural impersonal y uno/una.",
+            "prompt": "Escribe una frase que combine al menos tres clases de las semanas 16 a 19.",
+            "model": "Llevamos meses pidiendo un semáforo, y la carta la tenemos firmada por doscientos vecinos; para junio, el municipio ya habrá respondido, o eso esperamos.",
             "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 12 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Probabilidad en el pasado. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo especular sobre el pasado con habrá salido, habría llegado y debió de pasar.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 16 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Colocaciones frecuentes; Formación de palabras; Nominalización; Acento en derivados; Reescribir con precisión; Definir y explicar conceptos. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo combinar palabras de forma natural: tomar una decisión, plantear un problema, sacar conclusiones. Puedo deducir y crear palabras con prefijos y sufijos frecuentes. Puedo transformar verbos en sustantivos para escribir con concisión. Puedo pronunciar carácter/caracteres, régimen/regímenes y adverbios en -mente con dos acentos. Puedo mejorar un texto sustituyendo verbos comodín y repeticiones. Puedo definir un concepto, dar un ejemplo y diferenciarlo de otro parecido.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 17 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Cortesía y mitigación; ¿Te importa que…? y fórmulas con subjuntivo; Correspondencia profesional; Prosodia de la mitigación; Correo delicado; Escuchar una reunión. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo suavizar peticiones, críticas y desacuerdos: ¿te importaría que…?, convendría, quizás no sea lo ideal. Puedo pedir permiso y hacer peticiones indirectas con subjuntivo. Puedo usar fórmulas de inicio, cierre y transición en correos formales. Puedo suavizar con alargamientos, pausas y un tono más bajo. Puedo escribir un correo profesional que rechaza una propuesta sin dañar la relación. Puedo reconocer desacuerdos mitigados y lo que realmente se decide.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 18 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Marcadores conversacionales; Reformuladores; Expresiones coloquiales frecuentes; Prosodia de los marcadores; Gestionar una conversación; Conversación espontánea. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar bueno, pues, vamos, a ver, la verdad es que y hombre/mujer según la intención. Puedo reformular con o sea, es decir, mejor dicho, en otras palabras y vamos. Puedo entender y usar expresiones frecuentes como dar igual, pasarse, quedar bien o mal. Puedo dar a bueno o pues valores distintos con la entonación. Puedo ganar tiempo, reformular, interrumpir con educación y retomar. Puedo mantener una conversación de tres minutos sin bloquearme.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
-            ]
-          },
-          {
-            "prompt": "Recupera la semana 19 sin abrir su explicación y aplica sus recursos a «Checkpoint final: un acuerdo que pueda sostenerse»: Tiempos del relato y variación; Descripción literaria; Lectura expresiva; Leer un microrrelato; Escribir un microrrelato; Voseo; Ustedes y vosotros; Léxico regional; Sheísmo y acento del voseo; Adaptarse a la variedad; Comprender diálogo con léxico y formas rioplatenses. Integra los recursos en un párrafo o un turno de 60–90 segundos; señala las decisiones lingüísticas en tus notas.",
-            "model": "Guía de revisión, no texto para copiar: Puedo usar el presente histórico y reconozco el uso del perfecto y del indefinido en España y en América. Puedo describir atmósferas, gestos y sensaciones con precisión. Puedo leer un fragmento narrativo con cambios de ritmo y de voz. Puedo interpretar el giro final de un microrrelato. Puedo escribir un relato de 200 palabras con tiempos del pasado variados. Puedo reconocer y usar las formas de vos en presente e imperativo (vos tenés, vení, decime). Puedo adaptar el plural de segunda persona según la variedad. Puedo reconocer variantes léxicas frecuentes: auto/coche/carro, departamento/piso, celular/móvil. Puedo producir el acento del voseo y contrastar el sheísmo con una muestra real identificada en clase. Puedo entender a hablantes de distintas variedades y pedir aclaraciones sobre léxico regional. Puedo seguir un diálogo con voseo y léxico rioplatense sin confundir síntesis con una muestra de acento verificada.",
-            "checklist": [
-              "Integro los recursos indicados en una respuesta al caso actual.",
-              "Conservo personas, tiempo, postura y límites de las fuentes.",
-              "Marco una elección que tuve que corregir después de comprobarla."
+              "Identifico qué clase usa cada parte de la frase.",
+              "La frase suena natural y no forzada."
             ]
           }
         ]
@@ -745,197 +1194,258 @@ export const b2w20: Module = {
     ]
   },
   "writing": {
-    "task": "Redacta una recomendación de 250–300 palabras para el comité y un resumen oral para voluntariado. Cruza dossier y reunión, compara las tres opciones y defiende un acuerdo con condiciones, responsables, plazos y criterio de revisión.",
-    "context": "Destinatario, propósito y límites de la información forman parte de la evaluación. El modelo muestra una respuesta completa posible: analiza su organización y escribe después tu propio texto.",
+    "task": "Escribe una carta de lectores (230–300 palabras) para el periódico de tu barrio sobre una propuesta que divide a los vecinos (peatonalizar una calle, abrir un centro comercial, cerrar un mercado). Expón tu postura en orden, refuta al menos dos argumentos contrarios atribuyéndolos con justicia, concede algo y termina con una propuesta y una petición a las autoridades.",
+    "context": "La carta se publicará con tu nombre y la leerán vecinos que no piensan como tú. Tiene que ser firme pero respetuosa, y estar bien organizada en párrafos. Puedes usar el caso de la calle del mercado de Almagro o un tema real de tu ciudad.",
     "steps": [
-      "Extrae dos datos y dos posiciones de las fuentes; marca lo que no está confirmado.",
-      "Planifica apertura, desarrollo, objeción o complicación y cierre antes de redactar.",
-      "Escribe sin copiar el modelo; integra recursos nuevos y los recuperados.",
-      "Revisa referentes, modo, tiempo, colocaciones y registro; reescribe un párrafo y explica el cambio."
+      "Escribe tu tesis en una frase y anota los dos argumentos contrarios más fuertes, con quién los defiende.",
+      "Ordena la carta: presentación del tema y tesis, argumentos propios, refutación con concesión y cierre con propuesta y petición.",
+      "Usa conectores de orden, de refutación y de conclusión, y al menos tres estructuras de las semanas 16 a 19.",
+      "Revisa el modo después de cada conector («no es cierto que», «de ahí que», «es cierto que») y corrige los pronombres y los grupos nominales ambiguos."
     ],
     "useLanguage": [
-      "La tarea final combina recepción de fuentes, atribución precisa, negociación de condiciones y producción para dos públicos. Revisa modo, tiempo, referentes y conexiones lógicas después de planificar el mensaje. Una síntesis fiel mantiene diferencias de postura y grados de certeza, aunque elimine repeticiones.",
-      "Adapta registro y variedad sin alterar compromisos: un informe institucional y un mensaje cercano pueden expresar el mismo acuerdo con recursos distintos. Recupera colocaciones, nominalización útil, mitigación, reformulación y narración. Comprueba autonomía, claridad, alcance de la evidencia y capacidad de responder a una objeción inesperada.",
-      "Recupera coordinación, modo y tiempo, concesión, fuentes, hipótesis, responsabilidad, precisión, cortesía y variedad: justifica al menos seis elecciones en tu entrega final."
+      "en primer lugar / a continuación / por último",
+      "según… / como señala…",
+      "no es cierto que + subjuntivo",
+      "es cierto que…, pero…",
+      "lejos de + infinitivo / al contrario",
+      "de ahí que + subjuntivo / en definitiva",
+      "le agradeceríamos que + imperfecto de subjuntivo"
     ],
     "model": [
-      "Recomiendo mantener el encuentro durante tres días con programación reducida y utilizar únicamente las dos salas autorizadas. Esta opción conserva la participación de las asociaciones sin anunciar el patio como disponible antes de la inspección. Reducir todo a un día limitaría actividades importantes; aplazarlo permitiría esperar las obras, pero obligaría a reorganizar compromisos ya asumidos.",
-      "La programación reducida debe liberar recursos para dos viajes de regreso cada tarde. La encuesta sugiere una necesidad de transporte, aunque su difusión en redes limita la representatividad. No sabemos cuántas personas que no respondieron necesitarían ese servicio. Por ello, conviene reservar plazas y revisar la demanda durante el primer día. Si supera la capacidad, el comité deberá decidir qué partida modifica antes de prometer otro viaje.",
-      "La gestión de inscripciones seguirá pendiente hasta que el equipo responsable revise una versión con los datos mínimos necesarios y una explicación clara de su uso. El portavoz aceptó estudiar esa tarea, no asumir el sistema anterior. La coordinación debe corregir el acta y publicar un documento único que separe acuerdos confirmados y asuntos pendientes, con una persona responsable de cada decisión.",
-      "Para el voluntariado, propongo una ficha breve con salas, horarios, transporte y contacto para dudas. Cada asociación podrá adaptar el tratamiento a su variedad, siempre que conserve las condiciones. Los cambios importantes requerirán confirmación de recepción: el silencio no se interpretará automáticamente como aceptación.",
-      "Antes de publicar el programa, cada parte explicará con sus palabras lo que asume. Esa comprobación permitirá detectar interpretaciones distintas sin exigir que todas las personas hablen igual. El acuerdo será sostenible si limita sus promesas, hace visibles las responsabilidades y permite revisar dificultades con criterios conocidos desde el principio."
+      "Señora directora: le escribo como vecina de Almagro para opinar sobre la propuesta de peatonalizar los fines de semana la calle del mercado, un tema que llevamos meses discutiendo en el barrio. Adelanto mi postura: estoy a favor, siempre que se haga primero una prueba seria.",
+      "En primer lugar, las veredas de esa calle son peligrosamente estrechas; cualquiera que haya intentado pasar con un cochecito un sábado lo sabe. En segundo lugar, según el estudio de la Universidad del Oeste, casi la mitad de los clientes llega caminando. Por consiguiente, la calle ya funciona como peatonal, aunque nadie lo haya decidido.",
+      "Algunos comerciantes sostienen que la medida vaciaría el barrio. No es cierto que los clientes vayan a desaparecer; al contrario, en otras calles de la ciudad las ventas crecieron. Otros afirman que la propuesta es improvisada, y nada más lejos de la realidad: el documento prevé horarios de carga y excepciones. Es cierto, eso sí, que los negocios que venden productos pesados tienen un problema real, y debe de haber soluciones para ellos, como un sector de carga reservado.",
+      "En definitiva, propongo una prueba de seis meses con mediciones públicas y una consulta al final. Si el municipio hubiera consultado desde el principio, hoy no habría tanta desconfianza. Mientras tanto, sería útil que los comerciantes y la asociación se reunieran cada mes. Por eso, le agradeceríamos a la concejala de Movilidad que publicara el estudio de tránsito antes de marzo y que invitara a los comerciantes a todas las reuniones. Atentamente, Paula Ferreyra."
     ],
     "checklist": [
-      "Respondo al propósito y al destinatario concreto.",
-      "Organizo párrafos con relaciones claras, no conectores decorativos.",
-      "Distingo datos, opiniones, hipótesis y compromisos.",
-      "Integro una perspectiva distinta sin deformarla.",
-      "Reviso concordancia, modo, tiempos y léxico.",
-      "Explico una mejora entre borrador y versión final."
+      "Presento mi tesis al principio y la retomo al final.",
+      "Atribuyo con justicia los argumentos contrarios antes de refutarlos.",
+      "Uso el modo correcto después de cada conector de refutación y de consecuencia.",
+      "Incluyo al menos tres estructuras de las semanas 16 a 19.",
+      "La carta es firme, respetuosa y está organizada en párrafos con funciones claras."
     ],
     "words": [
-      250,
+      230,
       300
     ]
   },
   "speaking": {
-    "intro": "Prepara notas breves, no un texto para leer. Puedes grabarte localmente; la aplicación no califica automáticamente pronunciación ni calidad oral.",
+    "intro": "Este checkpoint cierra el nivel B2 con dos tareas orales que integran las cinco últimas semanas. Habla con notas, sin leer. Si te grabas, la grabación queda en tu dispositivo y no se evalúa automáticamente.",
     "tasks": [
       {
-        "title": "Exposición con evidencia",
-        "prompt": "Presenta el caso de «Checkpoint final: un acuerdo que pueda sostenerse» a alguien que no conoce las fuentes. Defiende una interpretación, menciona una evidencia y una reserva, y termina con una pregunta que permita continuar.",
+        "title": "Debate en la radio del barrio",
+        "prompt": "Tu docente defiende la postura contraria a la tuya sobre un cambio en tu ciudad (peatonalizar una calle, prohibir autos en el centro, cerrar un mercado). Expón tu postura en orden, escucha su argumento, atribúyelo con justicia, refútalo con datos, concede un punto y propongan juntos una salida intermedia.",
         "prep": [
-          "Anota tesis, evidencia y límite en cinco palabras clave.",
-          "Ensaya una transición y una reformulación."
-        ],
-        "seconds": 180,
-        "model": "Recomiendo mantener tres días con programación reducida y utilizar únicamente las salas autorizadas. Esta opción preserva el encuentro y permite destinar recursos al transporte. La encuesta sugiere una necesidad, aunque su origen en redes limita la representatividad. La gestión de inscripciones seguirá pendiente hasta que el equipo revise una versión con datos mínimos y condiciones claras. Propongo publicar un documento único y verificar la demanda de traslado el primer día. Si excede la capacidad, el comité deberá acordar qué partida modifica, sin prometer un servicio ilimitado.",
-        "selfCheck": [
-          "Se entiende mi postura sin leer un guion.",
-          "No convierto una conjetura en hecho.",
-          "Uso pausas para organizar el mensaje."
-        ]
-      },
-      {
-        "title": "Interacción y mediación",
-        "prompt": "Tu docente representa a una persona que cuestiona tu interpretación de integrar argumento, mediación, registro y variedad. Resume su postura antes de responder. Pregunta qué condición cambiaría su opinión; negocia un acuerdo parcial o explica respetuosamente por qué no lo hay.",
-        "prep": [
-          "Prepara una objeción probable y una pregunta de aclaración.",
-          "Incorpora una pregunta inesperada: ¿qué evidencia haría cambiar tu conclusión?",
-          "Al terminar, reformula en un minuto el resultado para una persona nueva."
+          "Prepara tres argumentos ordenados y un dato atribuido a una fuente.",
+          "Prepara dos refutaciones: «no es cierto que…» y «lejos de…».",
+          "Prepara una concesión y una petición cortés para cerrar."
         ],
         "seconds": 240,
         "selfCheck": [
-          "Respondo a la objeción real.",
-          "Pido y cedo el turno.",
-          "Adapto una explicación sin inventar consenso."
+          "Escucho y respondo a los argumentos reales de mi interlocutor.",
+          "Uso conectores variados y el modo correcto después de cada uno.",
+          "Terminamos con una propuesta concreta o explico por qué no hay acuerdo."
+        ]
+      },
+      {
+        "title": "Balance de mi B2",
+        "prompt": "Habla durante unos tres minutos sobre tu recorrido por el nivel B2. Cuenta cuánto tiempo llevas estudiando, qué tienes ya dominado, qué te ha costado más, qué habrías hecho de otra manera y qué habrás conseguido dentro de un año. Organiza tu exposición con conectores y termina con una conclusión clara.",
+        "prep": [
+          "Anota una estructura de cada semana de 16 a 20.",
+          "Ordena tu balance: situación, logros, dificultades, hipótesis y conclusión."
+        ],
+        "seconds": 180,
+        "model": "Llevo casi dos años estudiando español y este nivel ha sido el más exigente. En primer lugar, tengo bastante dominado el subjuntivo, aunque todavía dudo con algunos conectores. Además, ahora entiendo debates de radio que hace un año me parecían imposibles. Lo que más me ha costado son los pronombres de foco; si hubiera leído más prensa, seguramente los usaría con más naturalidad. En definitiva, estoy contento: dentro de un año habré empezado el C1, y para entonces espero haber perdido el miedo a hablar en público.",
+        "selfCheck": [
+          "Uso al menos una estructura de cada semana de 16 a 20.",
+          "Hago pausas después de los conectores de orden.",
+          "Mi balance tiene principio, desarrollo y una conclusión clara."
         ]
       }
     ]
   },
   "useInClass": {
-    "intro": "La mascota te acompaña al siguiente paso: convierte tu trabajo independiente en una conversación con consecuencias claras.",
+    "intro": "Lleva a clase tu trabajo del checkpoint y úsalo para comprobar con tu profesor qué dominas al cerrar el nivel B2.",
     "cards": [
       {
-        "move": "Defiende",
-        "task": "Presenta tu entrega de «Checkpoint final: un acuerdo que pueda sostenerse» en tres minutos y responde a una objeción inesperada.",
+        "move": "Debate",
+        "task": "Propón a tu profesor un tema polémico de tu ciudad y debátanlo cinco minutos: tú defiendes una postura y él o ella la contraria.",
         "phrases": [
-          "Mi interpretación se apoya en…",
-          "La reserva que mantengo es…"
+          "En primer lugar…",
+          "No es cierto que…",
+          "Es cierto que…, pero…"
         ]
       },
       {
-        "move": "Reformula",
-        "task": "Explica a otra persona lo que sostiene una voz del caso de Buenos Aires; pídele a tu docente que compruebe si has conservado el matiz.",
+        "move": "Refuta",
+        "task": "Lee a tu profesor un argumento de tu carta de lectores y pídele que lo refute; después responde tú a su refutación.",
         "phrases": [
-          "Si te he entendido bien…",
-          "No afirma que…; lo que plantea es…"
+          "Lejos de…",
+          "Al contrario…",
+          "Nada más lejos de la realidad."
         ]
       },
       {
-        "move": "Negocia",
-        "task": "Acuerda un criterio para valorar tu propuesta sobre integrar argumento, mediación, registro y variedad; identifica una condición que todavía necesita confirmación.",
+        "move": "Repasa",
+        "task": "Elige la clase de las semanas 16 a 20 que te parece más difícil y pide a tu profesor tres frases para practicarla antes de empezar C1.",
         "phrases": [
-          "Lo aceptaría siempre que…",
-          "Queda pendiente comprobar…"
+          "Todavía me cuesta…",
+          "¿Me das un ejemplo con…?"
         ]
       }
     ],
-    "bring": "Lleva borrador y versión revisada, cinco palabras clave para hablar y una duda de comprensión o prosodia."
+    "bring": "Trae tu carta de lectores con los conectores marcados en colores (orden, refutación, conclusión) y las estructuras de las semanas 16 a 19 subrayadas."
   },
   "quiz": {
     "items": [
       {
-        "q": "En la evaluación final de «Checkpoint final: un acuerdo que pueda sostenerse», ¿qué resume mejor el propósito?",
-        "options": [
-          "Evitar cualquier intercambio entre personas.",
-          "Confirmar condiciones antes de publicar un acuerdo compartido",
-          "Sustituir toda evidencia por una opinión rotunda."
+        "type": "gap",
+        "q": "No es cierto que la nueva línea de colectivos ___ (tardar) más que la anterior.",
+        "answers": [
+          [
+            "tarde"
+          ]
         ],
-        "answer": 1,
-        "why": "Relaciona comprensión y propósito.",
-        "type": "choice"
-      },
-      {
-        "type": "listen",
-        "audio": "Agradezco la rectificación. Mi equipo podría gestionar inscripciones siempre que solo se pidan los datos necesarios para organizar el aforo y se explique su uso. No aceptamos asumir todo el sistema actual. Cuando dije bueno, podemos verlo, estaba abriendo una conversación, no cerrando un compromiso.",
-        "voice": "es-MX-m",
-        "q": "Al escuchar de nuevo a Portavoz en «Checkpoint final: un acuerdo que pueda sostenerse», ¿qué intervención reconoces?",
-        "options": [
-          "Me niego a explicar mi punto de vista sobre este asunto.",
-          "Agradezco la rectificación",
-          "No hay ninguna condición pendiente y todas las partes aceptaron."
-        ],
-        "answer": 1,
-        "why": "Atiende a la formulación y a la posición, no solo al tema."
+        "why": "«No es cierto que» + subjuntivo."
       },
       {
         "type": "gap",
-        "q": "La inscripción seguirá pendiente hasta que el equipo la ___.",
+        "q": "Los alquileres subieron un 60 %; de ahí que muchas familias se ___ (ir) a las afueras.",
         "answers": [
           [
-            "revise"
+            "vayan",
+            "fueran",
+            "fuesen"
           ]
         ],
-        "why": "Evento futuro con hasta que."
+        "why": "«De ahí que» + subjuntivo, con el tiempo según el marco."
       },
       {
-        "type": "open",
-        "prompt": "Texto de partida: «Admitió: «Interpretamos demasiado rápido la respuesta».» Transmite con admitió que y anterioridad.",
-        "model": "Admitió que habían interpretado demasiado rápido la respuesta.",
-        "checklist": [
-          "Conservo participantes, referencia temporal y contenido pertinente.",
-          "Aplico la construcción o función solicitada; puedo elegir otro orden o una variante igualmente válida.",
-          "Comparo el significado y la forma con el modelo orientativo; no es una respuesta única ni se califica por coincidencia literal."
-        ]
+        "type": "gap",
+        "q": "El proyecto no busca recortar gastos, ___ mejorar el servicio.",
+        "answers": [
+          [
+            "sino"
+          ]
+        ],
+        "why": "«No…, sino…» sustituye la idea negada."
+      },
+      {
+        "type": "gap",
+        "q": "La comisión tiene ___ (revisar) todas las propuestas recibidas.",
+        "answers": [
+          [
+            "revisadas"
+          ]
+        ],
+        "why": "«Tener» + participio concordado (semana 16)."
+      },
+      {
+        "type": "choice",
+        "q": "«Son quince manzanas, mejor dicho, catorce.» ¿Qué hace «mejor dicho»?",
+        "options": [
+          "Añade un argumento.",
+          "Corrige lo que se acaba de decir.",
+          "Concluye la exposición."
+        ],
+        "answer": 1,
+        "why": "Autocorrección."
+      },
+      {
+        "type": "choice",
+        "q": "¿Qué frase concede un hecho antes de oponerse?",
+        "options": [
+          "Es cierto que el proyecto es caro, pero se pagará en cinco años.",
+          "No es cierto que el proyecto sea caro.",
+          "Lejos de ser caro, el proyecto ahorra dinero."
+        ],
+        "answer": 0,
+        "why": "«Es cierto que» + indicativo concede."
+      },
+      {
+        "type": "listen",
+        "q": "Según el audio, ¿qué postura tiene la hablante?",
+        "audio": "No es que me oponga al centro comercial, sino que exijo que se respete la plaza que está al lado.",
+        "voice": "es-AR-f",
+        "options": [
+          "Se opone totalmente.",
+          "Lo apoya sin condiciones.",
+          "No se opone, pero pone una condición."
+        ],
+        "answer": 2,
+        "why": "«No es que… sino que…» corrige una interpretación y añade una exigencia."
       },
       {
         "type": "error",
-        "sentence": "El comité exige que los responsables cumplen el acuerdo.",
+        "sentence": "Por mucho que protestan, el municipio no cambiará de idea.",
         "answers": [
-          "El comité exige que los responsables cumplan el acuerdo."
+          "Por mucho que protesten, el municipio no cambiará de idea."
         ],
-        "why": "Revisa la función, la construcción y la coherencia con el contexto; compara con el modelo de corrección."
+        "why": "«Por mucho que» con valor general: subjuntivo."
+      },
+      {
+        "type": "error",
+        "sentence": "La propuesta no es mala, pero al contrario, es muy buena.",
+        "answers": [
+          "La propuesta no es mala; al contrario, es muy buena.",
+          "La propuesta no es mala, sino muy buena."
+        ],
+        "why": "«Al contrario» ya opone las ideas: no se combina con «pero»."
+      },
+      {
+        "type": "error",
+        "sentence": "Para diciembre ya terminarán las obras y deben de haber nuevos bancos en la plaza.",
+        "answers": [
+          "Para diciembre ya habrán terminado las obras y debe de haber nuevos bancos en la plaza."
+        ],
+        "why": "Futuro compuesto con punto futuro (semana 17) y «haber» impersonal en singular (semana 16)."
+      },
+      {
+        "type": "order",
+        "words": [
+          "En",
+          "definitiva,",
+          "proponemos",
+          "una",
+          "prueba",
+          "de",
+          "seis",
+          "meses."
+        ],
+        "why": "Conector de conclusión al principio."
       },
       {
         "type": "open",
-        "prompt": "Sintetiza en 50 palabras lo que sabes y lo que no puedes concluir sobre «Checkpoint final: un acuerdo que pueda sostenerse».",
-        "model": "Recomiendo mantener tres días con programación reducida y utilizar únicamente las salas autorizadas. Esta opción preserva el encuentro y permite destinar recursos al transporte. La encuesta sugiere una necesidad, aunque su origen en redes limita la representatividad. La gestión de inscripciones seguirá pendiente hasta que el equipo revise una versión con datos mínimos y condiciones claras. Propongo publicar un documento único y verificar la demanda de traslado el primer día. Si excede la capacidad, el comité deberá acordar qué partida modifica, sin prometer un servicio ilimitado.",
+        "prompt": "Escribe un párrafo breve (tres frases) que refute un argumento sobre tu ciudad: atribúyelo, refútalo con un conector y cierra con una consecuencia.",
+        "model": "Según algunos vecinos, el nuevo parque atraerá delincuencia. Nada más lejos de la realidad: en los barrios con más plazas los robos bajaron. Por consiguiente, lejos de temerlo, deberíamos exigir que se termine cuanto antes.",
         "checklist": [
-          "Atribuyo una fuente.",
-          "Explicito una reserva."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Contesta a quien sostiene lo contrario de tu postura sobre integrar argumento, mediación, registro y variedad; concede una razón y conserva tu argumento.",
-        "model": "Recomiendo mantener tres días con programación reducida y utilizar únicamente las salas autorizadas. Esta opción preserva el encuentro y permite destinar recursos al transporte. La encuesta sugiere una necesidad, aunque su origen en redes limita la representatividad. La gestión de inscripciones seguirá pendiente hasta que el equipo revise una versión con datos mínimos y condiciones claras. Propongo publicar un documento único y verificar la demanda de traslado el primer día. Si excede la capacidad, el comité deberá acordar qué partida modifica, sin prometer un servicio ilimitado.",
-        "checklist": [
-          "Conservo la postura contraria sin exagerarla.",
-          "Respondo con una razón o condición."
-        ]
-      },
-      {
-        "type": "open",
-        "prompt": "Explica dos cambios que harías para adaptar tu entrega de la semana 20 a un mensaje cercano y a un informe formal.",
-        "model": "Cambiaría el tratamiento y algunas fórmulas, pero conservaría las fuentes, los límites y las condiciones acordadas.",
-        "checklist": [
-          "Cambio recursos de registro.",
-          "No cambio el contenido del compromiso."
+          "Atribuyo el argumento a quien lo defiende.",
+          "Uso un conector de refutación y uno de consecuencia.",
+          "El párrafo tiene una progresión clara."
         ]
       }
     ]
   },
   "complete": {
     "canNow": [
-      "Puedo integrar argumento, mediación, registro y variedad.",
-      "Puedo sostener una interpretación con evidencia y una reserva.",
-      "Puedo revisar mi producción y continuarla mediante interacción."
+      "Puedo organizar una exposición con conectores para ordenar, añadir, ejemplificar, reformular y concluir, con la puntuación adecuada.",
+      "Puedo refutar con precisión (no es cierto que + subjuntivo, al contrario, lejos de, no… sino) y atribuir las ideas a quien las defiende.",
+      "Puedo elegir en cada momento la estructura B2 que necesito y combinar en un mismo texto las clases de las semanas 16 a 19."
     ],
     "review": [
-      "Recupera coordinación, modo y tiempo, concesión, fuentes, hipótesis, responsabilidad, precisión, cortesía y variedad: justifica al menos seis elecciones en tu entrega final.",
-      "Dentro de 48 horas, sin consultar el texto, reconstruye dos posiciones y un recurso lingüístico; comprueba después qué omitiste.",
-      "Una semana después, adapta tu respuesta a otro destinatario y recupera los objetivos marcados en la práctica."
+      "Mañana, sin mirar las tablas, escribe un conector de cada función y una frase con cada uno.",
+      "En tres días, escucha un debate de radio o televisión y anota tres conectores de refutación que oigas.",
+      "Antes de empezar C1, relee tus textos de las semanas 16 a 20 y elige dos estructuras que quieras usar con más naturalidad."
     ]
-  }
+  },
+  "related": [
+    {
+      "path": "/gramatica/conectores-para-exposicion-y-refutacion",
+      "label": "Clase: Conectores para exposición y refutación"
+    },
+    {
+      "path": "/gramatica/sintesis-b2-debate-explicacion-y-texto",
+      "label": "Clase: Síntesis B2: debate, explicación y texto formal"
+    }
+  ]
 };
