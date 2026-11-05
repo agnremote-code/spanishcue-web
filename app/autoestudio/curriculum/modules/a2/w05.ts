@@ -1,880 +1,610 @@
 import type { Module } from "../../types";
 
-/** Original A2 week: authored scenario, skills and retrieval. */
 export const a2w05: Module = {
-  "id": "a2-05",
-  "level": "a2",
-  "week": 5,
-  "kind": "checkpoint",
-  "title": "Checkpoint: un museo de recuerdos",
-  "subtitle": "Crear una pequeña exposición que reúna experiencias recientes, una biografía y hábitos de infancia.",
-  "stop": {
-    "place": "Masaya",
-    "country": "Nicaragua"
-  },
-  "minutes": 140,
-  "newObjectives": [
-    "a2.rev.checkpoint-1",
-    "a2.lis.podcast-recuerdos"
+  id: "a2-05",
+  level: "a2",
+  week: 5,
+  kind: "checkpoint",
+  title: "Desde cuándo, cuánto tiempo y qué ya ha cambiado",
+  subtitle: "Repaso de ya, todavía, ya no y antes; de antes de, después de y cuando; de desde, desde hace, hace y llevar + gerundio. Checkpoint: integra todo el pasado de las semanas 1 a 4.",
+  stop: { place: "Masaya", country: "Nicaragua" },
+  minutes: 140,
+  newObjectives: [
+    "a2.gram.g053",
+    "a2.gram.g054",
+    "a2.gram.g055",
+    "a2.voc.w05-mercado-artesanias",
+    "a2.pron.w05-fuerza-palabras-tiempo",
+    "a2.lis.w05-entrevista-artesana",
+    "a2.read.w05-perfil-guia-volcan",
+    "a2.wri.w05-perfil-vecino",
+    "a2.spk.w05-mi-historia-en-el-tiempo",
+    "a2.fun.w05-situar-en-el-tiempo",
+    "a2.disc.w05-ordenar-con-tiempo",
+    "a2.rev.w05-pasado-y-tiempo",
   ],
-  "reviewObjectives": [
-    "a2.gram.perfecto-compuesto",
-    "a2.gram.participios-irregulares",
-    "a2.gram.ya-todavia",
-    "a2.voc.experiencias-viaje",
-    "a2.pron.sinalefa-compuestos",
-    "a2.fun.experiencias",
-    "a2.spk.nunca-he",
-    "a2.gram.indefinido-regular",
-    "a2.gram.marcadores-pasado",
-    "a2.voc.fin-de-semana",
-    "a2.pron.acento-tiempos",
-    "a2.fun.contar-ayer",
-    "a2.lis.relato-breve",
-    "a2.gram.indefinido-irregular",
-    "a2.gram.ser-ir-indefinido",
-    "a2.voc.etapas-vida",
-    "a2.pron.tilde-diacritica",
-    "a2.fun.biografia",
-    "a2.read.biografia",
-    "a2.gram.imperfecto",
-    "a2.gram.soler",
-    "a2.voc.infancia",
-    "a2.pron.s-aspirada",
-    "a2.fun.comparar-antes",
-    "a2.wri.recuerdo",
-    "a2.gram.indefinido-ortografia",
-    "a2.gram.indefinido-ver-dar"
-  ],
-  "prerequisites": [
-    "a2-04"
-  ],
-  "goal": {
-    "canDo": "Puedo crear una pequeña exposición que reúna experiencias recientes, una biografía y hábitos de infancia.",
-    "steps": [
-      "Prepara la misión y recupera lo que ya sabes.",
-      "Escucha primero; localiza después los datos de la lectura.",
-      "Ensaya, escribe, revisa y lleva una intervención a clase."
-    ]
-  },
-  "theory": {
-    "intro": "Trabaja las formas como herramientas para resolver esta misión. Las escenas y los textos son originales y ficticios.",
-    "parts": [
-      {
-        "heading": "Checkpoint: un museo de recuerdos · formas que necesitas",
-        "body": [
-          "En este checkpoint eliges el tiempo por el mensaje: he visto conecta una experiencia con el presente; vi sitúa un hecho terminado; veía describe una costumbre. No cambies de tiempo solo para evitar repetir una forma. Escribe primero los marcadores y decide si cuentas una experiencia, un hecho o un hábito."
-        ],
-        "support": [
-          "Choose the past form for its job: experience linked to now, completed event, or past habit. Keep dates and background separate in your exhibit."
-        ],
-        "examples": [
-          {
-            "es": "Este año he encontrado una foto de mi abuela."
-          },
-          {
-            "es": "En 1980 abrió una tienda cerca de casa."
-          }
-        ],
-        "mistakes": [
-          {
-            "wrong": "Mi abuela ha abrió una tienda.",
-            "right": "Mi abuela abrió una tienda.",
-            "why": "No combines un auxiliar del perfecto con un verbo conjugado en indefinido."
-          }
-        ]
-      },
-      {
-        "heading": "Del sistema al mensaje",
-        "body": [
-          "Una exposición necesita información breve y comprensible para quien no conoce a la familia. Combina un título, una fecha y un recuerdo concreto. En la entrevista escucha el contexto antes de escribir fechas. Si no entiendes un dato, compruébalo: ¿has dicho en 1980? La revisión incluye auxiliares, participios, raíces irregulares y acentos."
-        ],
-        "examples": [
-          {
-            "es": "Antes trabajaba allí todos los sábados."
-          },
-          {
-            "es": "Mi hermano ya ha escrito el cartel; yo todavía no lo he visto."
-          }
-        ]
-      }
-    ]
-  },
-  "grammar": {
-    "exercises": [
-      {
-        "id": "grammar-gap",
-        "type": "gap",
-        "prompt": "Completa según la forma y el contexto indicados.",
-        "items": [
-          {
-            "q": "Este mes hemos ___ al vecino. (ver)",
-            "answers": [
-              [
-                "visto"
-              ]
-            ]
-          },
-          {
-            "q": "En 1985 Alicia ___ el puesto. (abrir)",
-            "answers": [
-              [
-                "abrió"
-              ]
-            ]
-          },
-          {
-            "q": "Sus hijos ___ los sábados. (venir, hábito)",
-            "answers": [
-              [
-                "venían"
-              ]
-            ]
-          }
-        ]
-      },
-      {
-        "id": "grammar-transform",
-        "type": "transform",
-        "prompt": "Reformulación controlada: respeta las palabras y el orden indicados. En las tareas abiertas posteriores puedes elegir otras formulaciones.",
-        "items": [
-          {
-            "source": "Mi tío guarda fotos.",
-            "instruction": "Cambia guarda al imperfecto y añade cuando era joven al final. Mantén Mi tío al principio.",
-            "answers": [
-              "Mi tío guardaba fotos cuando era joven."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Yo he hecho un cartel.",
-            "instruction": "Sustituye Yo por Ellas y ajusta solo el auxiliar; conserva el resto.",
-            "answers": [
-              "Ellas han hecho un cartel."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          },
-          {
-            "source": "Alicia va al mercado.",
-            "instruction": "Pon Ayer al principio y cambia va al indefinido; mantén Alicia y al mercado en ese orden.",
-            "answers": [
-              "Ayer Alicia fue al mercado."
-            ],
-            "why": "Esta actividad controla una forma concreta. La respuesta conserva los datos y sigue las palabras y el orden indicados; otras formulaciones se practican en producción abierta."
-          }
-        ]
-      }
-    ]
-  },
-  "vocabulary": {
-    "intro": "Aprende cada expresión como un bloque y úsala después con un dato propio.",
-    "groups": [
-      {
-        "title": "Acciones y relaciones",
-        "items": [
-          {
-            "es": "una foto de familia",
-            "en": "a family photo"
-          },
-          {
-            "es": "guardar un recuerdo",
-            "en": "keep a memory"
-          },
-          {
-            "es": "escribir un pie de foto",
-            "en": "write a caption"
-          },
-          {
-            "es": "ordenar por fechas",
-            "en": "sort by dates"
-          }
-        ]
-      },
-      {
-        "title": "Datos para resolver la misión",
-        "items": [
-          {
-            "es": "reconocer a alguien",
-            "en": "recognise someone"
-          },
-          {
-            "es": "una caja de recuerdos",
-            "en": "a box of keepsakes"
-          },
-          {
-            "es": "contar una historia familiar",
-            "en": "tell a family story"
-          },
-          {
-            "es": "preparar una exposición",
-            "en": "prepare an exhibition"
-          }
-        ]
-      }
+  reviewObjectives: [],
+  prerequisites: [],
+  goal: {
+    canDo: "Al final de esta semana puedes decir qué ya ha pasado y qué todavía no, ordenar acciones con antes de, después de y cuando, decir desde cuándo y cuánto tiempo haces algo, y combinar todos los tiempos del pasado de las semanas 1 a 4 en una misma historia.",
+    steps: [
+      "Repasa `ya`, `todavía`, `ya no`, `todavía no` y la diferencia entre `ayer` y `antes`.",
+      "Repasa `antes de` y `después de` + infinitivo, y `cuando` + verbo conjugado.",
+      "Repasa `desde`, `desde hace`, `hace` y `llevar` + gerundio.",
+      "Integra el perfecto, el indefinido, el imperfecto y `solía` de las semanas 1 a 4.",
+      "Escucha una entrevista a una artesana de Masaya y lee el perfil de un guía del volcán.",
+      "Escribe el perfil de una persona y graba tu propia historia en el tiempo.",
     ],
-    "exercises": [
-      {
-        "id": "vocabulary-match",
-        "type": "match",
-        "prompt": "Relaciona cada expresión con su significado; después úsala oralmente en una situación nueva.",
-        "pairs": [
-          {
-            "left": "una foto de familia",
-            "right": "a family photo"
-          },
-          {
-            "left": "guardar un recuerdo",
-            "right": "keep a memory"
-          },
-          {
-            "left": "escribir un pie de foto",
-            "right": "write a caption"
-          },
-          {
-            "left": "ordenar por fechas",
-            "right": "sort by dates"
-          },
-          {
-            "left": "reconocer a alguien",
-            "right": "recognise someone"
-          },
-          {
-            "left": "una caja de recuerdos",
-            "right": "a box of keepsakes"
-          },
-          {
-            "left": "contar una historia familiar",
-            "right": "tell a family story"
-          },
-          {
-            "left": "preparar una exposición",
-            "right": "prepare an exhibition"
-          }
-        ]
-      }
-    ]
   },
-  "pronunciation": {
-    "focus": "Una fecha debe llegar clara",
-    "explanation": [
-      "En una entrevista, las fechas y las terminaciones verbales contienen información esencial. Divide tu respuesta en una fecha, una acción y un detalle. Destaca la fecha corregida sin gritar. Repite la frase completa para que el oyente no pierda el contexto."
-    ],
-    "perceive": {
-      "id": "pronunciation-perceive",
-      "type": "listen",
-      "prompt": "Escucha primero y decide; usa también el contexto.",
-      "items": [
-        {
-          "audio": "Abrió el puesto en mil novecientos ochenta y cinco.",
-          "q": "¿Qué año escuchas?",
-          "options": [
-            "1985",
-            "1984"
+  theory: {
+    intro: "Esta es la semana de control. Repasas tres clases nuevas sobre el tiempo (marcadores, antes de / después de / cuando y las expresiones de duración) y las conectas con todo lo que repasaste en las semanas 1 a 4: el perfecto y sus participios, el indefinido regular e irregular, el imperfecto, la escena y los hechos, la variación regional y solía.",
+    parts: [
+      {
+        heading: "Ya, todavía, ya no, todavía no; ayer y antes",
+        body: [
+          "**Ya** dice que algo pasó, quizá antes de lo esperado: _Ya he comprado los billetes_ / _Ya compré los billetes_ (las dos variedades de la semana 4). **Todavía no** dice que no ha pasado, pero se espera: _Todavía no ha llegado el autobús_.",
+          "**Todavía** (o **aún**) dice que una situación **sigue igual**: _Todavía vivo con mis padres_. **Ya no** dice que una situación **cambió** y terminó: _Ya no fumo_.",
+          "**Ayer** sitúa un hecho en un día concreto: va con el indefinido (_Ayer vendí tres hamacas_). **Antes** solo, sin más, habla de **otra época**: va con el imperfecto o con solía (_Antes vendía en la calle_; _Antes solía vender en la calle_).",
+        ],
+        support: [
+          "_Ya_ = already; _todavía no_ = not yet; _todavía_ = still; _ya no_ = no longer. _Ayer_ + simple past; _antes_ (back then) + imperfect.",
+        ],
+        table: {
+          caption: "Cuatro marcadores, cuatro ideas",
+          head: ["Marcador", "Idea", "Ejemplo"],
+          rows: [
+            ["ya", "ha pasado", "Ya hemos cenado."],
+            ["todavía no", "no ha pasado, se espera", "Todavía no he cobrado."],
+            ["todavía / aún", "sigue igual", "Todavía trabaja en el mercado."],
+            ["ya no", "cambió, terminó", "Ya no trabaja en el mercado."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
         },
-        {
-          "audio": "Todos los sábados venían sus hijos.",
-          "q": "¿Qué verbo expresa la costumbre?",
-          "options": [
-            "venían",
-            "vinieron"
+        examples: [
+          { es: "¿Ya has visitado el volcán? —Todavía no, voy mañana.", en: "Have you visited the volcano yet? —Not yet, I'm going tomorrow." },
+          { es: "Mi abuelo todavía teje hamacas, pero ya no las vende.", en: "My grandfather still weaves hammocks, but he no longer sells them." },
+        ],
+        mistakes: [
+          { wrong: "Ya no he terminado el informe: lo termino esta tarde.", right: "Todavía no he terminado el informe: lo termino esta tarde.", why: "Algo pendiente que se espera: **todavía no**. **Ya no** es para algo que terminó." },
+          { wrong: "Antes ayer fui al banco.", right: "Ayer fui al banco.", why: "**Ayer** ya sitúa el hecho; **antes** solo es para otra época." },
+        ],
+      },
+      {
+        heading: "Antes de, después de y cuando",
+        body: [
+          "**Antes de** y **después de** van con un **infinitivo** (o con un nombre): _Antes de abrir el puesto, desayuno_; _Después de la comida, descanso_. Nunca con gerundio ni con verbo conjugado.",
+          "**Cuando** va con un **verbo conjugado**: _Cuando llego al mercado, cuelgo las hamacas_. Con presente cuenta una rutina; con pasado, un hecho o una costumbre del pasado (semanas 2 y 3): _Cuando llegué, la tienda estaba cerrada_.",
+          "Si la frase empieza con **antes de**, **después de** o **cuando**, pon una **coma** después de esa parte: _Cuando termino, me voy a casa._ Si va al final, no hace falta: _Me voy a casa cuando termino._",
+        ],
+        support: [
+          "_Antes de / después de_ + infinitive (_antes de salir_). _Cuando_ + conjugated verb (_cuando salgo_).",
+        ],
+        examples: [
+          { es: "Después de cenar, solíamos jugar a las cartas.", en: "After dinner, we used to play cards." },
+          { es: "Siempre me lavo las manos antes de cocinar.", en: "I always wash my hands before cooking." },
+          { es: "Cuando era niña, iba al mercado con mi madre.", en: "When I was a girl, I used to go to the market with my mother." },
+        ],
+        mistakes: [
+          { wrong: "Antes de saliendo, cierro las ventanas.", right: "Antes de salir, cierro las ventanas.", why: "Después de **antes de** va el infinitivo: **salir**." },
+          { wrong: "Cuando llegar a casa, me ducho.", right: "Cuando llego a casa, me ducho.", why: "**Cuando** necesita un verbo conjugado: **llego**." },
+        ],
+        tip: "Truco: si después de la palabra de tiempo puedes poner _yo_, _tú_ o _ella_, usa **cuando**; si no hay persona, usa **antes de** o **después de** + infinitivo.",
+      },
+      {
+        heading: "Desde, desde hace, hace y llevar + gerundio",
+        body: [
+          "**Desde** + un **momento** (una fecha, un año, un hecho) dice cuándo empezó algo que **sigue**: _Vivo en Masaya desde 2010_; _Trabajo aquí desde que terminé la escuela_.",
+          "**Desde hace** + una **cantidad de tiempo** dice cuánto dura algo que **sigue**: _Vivo en Masaya desde hace quince años_. El verbo va en presente porque la situación continúa.",
+          "**Hace** + una **cantidad** con el **indefinido** dice cuánto tiempo pasó desde un hecho **terminado**: _Hace dos años abrí una tienda_. Y **llevar** + cantidad + **gerundio** subraya la duración de algo que sigue: _Llevo quince años viviendo en Masaya_.",
+        ],
+        support: [
+          "_Desde_ + point in time; _desde hace_ + length of time (still going, present tense); _hace_ + length + simple past (= ago); _llevar_ + length + gerund (= have been doing).",
+        ],
+        table: {
+          caption: "Cuatro maneras de hablar del tiempo",
+          head: ["Estructura", "Pregunta", "Ejemplo"],
+          rows: [
+            ["desde + momento", "¿Desde cuándo…?", "Estudio español desde marzo."],
+            ["desde hace + cantidad", "¿Cuánto tiempo hace que…?", "Estudio español desde hace ocho meses."],
+            ["hace + cantidad + indefinido", "¿Cuándo…?", "Empecé hace ocho meses."],
+            ["llevar + cantidad + gerundio", "¿Cuánto tiempo llevas…?", "Llevo ocho meses estudiando español."],
           ],
-          "answer": 0,
-          "why": "Escucha de nuevo la frase completa y compara el dato con su forma escrita."
-        }
-      ]
+        },
+        examples: [
+          { es: "¿Cuánto tiempo llevas trabajando en el mercado?", en: "How long have you been working at the market?" },
+          { es: "Conocí a mi pareja hace seis años.", en: "I met my partner six years ago." },
+        ],
+        mistakes: [
+          { wrong: "Vivo aquí desde hace 2015.", right: "Vivo aquí desde 2015.", why: "Con una fecha, solo **desde**. **Desde hace** va con una cantidad: _desde hace diez años_." },
+          { wrong: "Llevo tres años vivir en Nicaragua.", right: "Llevo tres años viviendo en Nicaragua.", why: "**Llevar** + tiempo + **gerundio**: _viviendo_." },
+          { wrong: "Hace dos años vivo en Masaya.", right: "Hace dos años que vivo en Masaya. / Vivo en Masaya desde hace dos años.", why: "Para algo que sigue, usa **hace… que** + presente o **desde hace**. **Hace** solo + indefinido es para un hecho terminado." },
+        ],
+      },
+      {
+        heading: "Checkpoint: todo el pasado en un mapa (semanas 1 a 4)",
+        body: [
+          "**Semana 1** (perfecto y participios): novedades de hoy, experiencias y resultados: _He hecho cuarenta hamacas este mes_; _¿Has visto alguna vez lava?_ Recuerda los ocho irregulares: abierto, escrito, puesto, visto, vuelto, roto, dicho, hecho.",
+          "**Semana 2** (indefinido regular e irregular): hechos terminados en orden: _Ayer fui al mercado, compré cerámica y pedí un café_. Recuerda la tilde (_compró_), el yo de _busqué_ y los irregulares sin tilde (_tuve_, _hizo_, _pidió_).",
+          "**Semana 3** (imperfecto y escena / hechos): describir, costumbres y escena: _Llovía y el mercado estaba vacío cuando llegó un autobús de turistas_. **Semana 4** (variación y solía): _hoy he vendido_ o _hoy vendí_ según la región; costumbres con _solía_: _Antes solíamos vender en la plaza_.",
+          "Las expresiones de esta semana se combinan con todo: **ya** con el perfecto o el indefinido, **antes** con el imperfecto o solía, **hace** con el indefinido, **desde hace** y **llevar** con el presente.",
+        ],
+        support: [
+          "Checkpoint map: perfect (week 1), simple past (week 2), imperfect and scene/events (week 3), regional variation and _solía_ (week 4), plus this week's time expressions.",
+        ],
+        table: {
+          caption: "¿Qué tiempo va con cada marcador?",
+          head: ["Marcador", "Tiempo", "Semana"],
+          rows: [
+            ["hoy, esta semana, alguna vez, nunca", "perfecto (o indefinido en gran parte de América)", "1 y 4"],
+            ["ayer, el lunes pasado, en 2019, hace dos años", "indefinido", "2 y 5"],
+            ["antes, de niño, siempre, todos los días", "imperfecto o solía", "3 y 4"],
+            ["de repente, entonces", "indefinido después de una escena en imperfecto", "3"],
+            ["desde, desde hace, llevar + gerundio", "presente", "5"],
+          ],
+        },
+        mistakes: [
+          { wrong: "Hace tres años he empezado a tejer.", right: "Hace tres años empecé a tejer.", why: "**Hace** + cantidad sitúa un hecho terminado: indefinido en todas las variedades (semana 4)." },
+          { wrong: "De niña solía a ayudar a mi madre y un día rompía una vasija.", right: "De niña solía ayudar a mi madre y un día rompí una vasija.", why: "**Solía** sin preposición (semana 4) y **un día** + indefinido (semana 3)." },
+        ],
+      },
+    ],
+  },
+  grammar: {
+    intro: "Primero practicas las tres clases nuevas de esta semana; después, en la práctica, las combinas con las semanas 1 a 4.",
+    exercises: [
+      {
+        id: "g1",
+        type: "choice",
+        title: "Ya, todavía, ya no, todavía no",
+        prompt: "Elige el marcador que encaja.",
+        items: [
+          { q: "Mi hermana ___ vive en León: se mudó a Managua en marzo.", options: ["todavía", "ya no", "todavía no"], answer: 1, why: "La situación cambió: **ya no**." },
+          { q: "¿___ has terminado la tarea? ¡Qué rápido!", options: ["Ya", "Ya no", "Todavía no"], answer: 0, why: "Algo hecho antes de lo esperado: **ya**." },
+          { q: "Son las diez y el autobús ___ ha llegado.", options: ["ya", "todavía", "todavía no"], answer: 2, why: "No ha pasado, pero se espera: **todavía no**." },
+          { q: "Mi abuela tiene noventa años y ___ cocina todos los días.", options: ["todavía", "ya no", "todavía no"], answer: 0, why: "Sigue igual: **todavía**." },
+          { q: "___ mis padres solían ir al cine los sábados.", options: ["Ayer", "Antes", "Ya"], answer: 1, why: "Otra época + **solían**: **antes**." },
+        ],
+      },
+      {
+        id: "g2",
+        type: "gap",
+        title: "Antes de, después de, cuando",
+        prompt: "Completa con «antes de», «después de» o «cuando», y con la forma correcta del verbo si hace falta.",
+        items: [
+          { q: "___ (comer), siempre me lavo las manos.", answers: [["Antes de comer", "antes de comer"]], why: "Primero las manos, después la comida: **antes de** + infinitivo." },
+          { q: "___ (terminar) el trabajo, voy al gimnasio.", answers: [["Después de terminar", "después de terminar"]], why: "**Después de** + infinitivo." },
+          { q: "___ llego a casa, me quito los zapatos.", answers: [["Cuando", "cuando"]], why: "Hay un verbo conjugado (_llego_): **cuando**." },
+          { q: "Los turistas compran recuerdos ___ (visitar) el volcán.", answers: [["después de visitar"]], why: "Primero la visita, después las compras: **después de visitar**." },
+          { q: "___ era niño, mi padre me llevaba al mercado.", answers: [["Cuando", "cuando"]], why: "**Cuando** + verbo conjugado (_era_), como en la semana 3." },
+        ],
+      },
+      {
+        id: "g3",
+        type: "classify",
+        title: "¿Desde, desde hace o hace?",
+        prompt: "Decide qué palabra falta en cada frase.",
+        categories: ["desde", "desde hace", "hace"],
+        items: [
+          { text: "Trabajo en esta tienda ___ enero.", cat: 0, why: "Un momento: **desde** enero." },
+          { text: "Estudio cerámica ___ tres meses.", cat: 1, why: "Una cantidad y algo que sigue: **desde hace**." },
+          { text: "Visité Masaya por primera vez ___ cinco años.", cat: 2, why: "Un hecho terminado: **hace** + indefinido." },
+          { text: "No veo a mi prima ___ su boda.", cat: 0, why: "Un hecho como punto de partida: **desde** su boda." },
+          { text: "Mis vecinos viven en el barrio ___ mucho tiempo.", cat: 1 },
+          { text: "Se jubiló ___ un año.", cat: 2 },
+        ],
+      },
+      {
+        id: "g4",
+        type: "transform",
+        title: "Con llevar + gerundio",
+        prompt: "Di lo mismo con llevar + tiempo + gerundio.",
+        items: [
+          { source: "Vivo en Masaya desde hace siete años.", answers: ["Llevo siete años viviendo en Masaya."], why: "Yo: **llevo** + **siete años** + **viviendo**." },
+          { source: "Doña Julia hace hamacas desde hace cuarenta años.", answers: ["Doña Julia lleva cuarenta años haciendo hamacas."], why: "Ella: **lleva**; _hacer_ → **haciendo**." },
+          { source: "Esperamos el autobús desde hace media hora.", answers: ["Llevamos media hora esperando el autobús."], why: "Nosotros: **llevamos** + **esperando**." },
+          { source: "¿Estudias español desde hace mucho tiempo?", answers: ["¿Llevas mucho tiempo estudiando español?"], why: "Tú: **llevas** + **estudiando**." },
+        ],
+      },
+    ],
+  },
+  vocabulary: {
+    intro: "El tema de la semana es el mercado de artesanías de Masaya: los oficios, los materiales y cómo se compra y se vende.",
+    groups: [
+      {
+        title: "Oficios y materiales",
+        items: [
+          { es: "la hamaca", en: "the hammock" },
+          { es: "tejer a mano", en: "to weave by hand" },
+          { es: "el telar", en: "the loom" },
+          { es: "la cerámica / la vasija", en: "pottery / the clay pot" },
+          { es: "el cuero", en: "leather" },
+          { es: "el taller", en: "the workshop" },
+          { es: "el artesano / la artesana", en: "the craftsman / craftswoman" },
+        ],
+      },
+      {
+        title: "Comprar y vender",
+        items: [
+          { es: "el puesto", en: "the stall" },
+          { es: "regatear", en: "to haggle" },
+          { es: "hacer un pedido", en: "to place an order" },
+          { es: "la tienda en línea", en: "the online shop" },
+          { es: "enviar al extranjero", en: "to ship abroad" },
+        ],
+      },
+      {
+        title: "Preguntas sobre el tiempo",
+        items: [
+          { es: "¿Desde cuándo…?", en: "Since when…?" },
+          { es: "¿Cuánto tiempo hace que…?", en: "How long has it been since… / How long have you…?" },
+          { es: "¿Cuánto tiempo llevas…?", en: "How long have you been…?" },
+          { es: "¿Ya…? / ¿Todavía…?", en: "Already…? / Still…?" },
+        ],
+      },
+    ],
+    exercises: [
+      {
+        id: "v1",
+        type: "match",
+        title: "Preguntas y respuestas",
+        prompt: "Une cada pregunta con su respuesta.",
+        pairs: [
+          { left: "¿Desde cuándo tiene este taller?", right: "Desde 1998, cuando murió mi padre." },
+          { left: "¿Cuánto tiempo lleva tejiendo?", right: "Treinta años, más o menos." },
+          { left: "¿Cuándo abrió la tienda en línea?", right: "Hace dos años, con ayuda de mi nieto." },
+          { left: "¿Ya ha enviado hamacas al extranjero?", right: "Sí, a Canadá y a Japón." },
+          { left: "¿Todavía regatean los clientes?", right: "Sí, ¡casi todos!" },
+        ],
+        why: "Cada pregunta pide un tipo de respuesta: un momento (_desde_), una duración (_llevar_), un hecho terminado (_hace_) o una situación (_ya_, _todavía_).",
+      },
+      {
+        id: "v2",
+        type: "context",
+        title: "En el mercado",
+        prompt: "Lee la situación y elige la frase natural.",
+        items: [
+          { context: "Te gusta una hamaca, pero el precio te parece alto.", q: "Dices:", options: ["¿Me la deja un poco más barata?", "¿Desde cuándo es barata?", "¿Todavía no es barata?"], answer: 0, why: "Así se **regatea** con amabilidad." },
+          { context: "Quieres saber si el artesano envía sus productos a otros países.", q: "Preguntas:", options: ["¿Lleva usted enviando?", "¿Hace envíos al extranjero?", "¿Desde hace envía?"], answer: 1 },
+          { context: "Quieres saber cuánto tiempo trabaja el artesano en su oficio.", q: "Preguntas:", options: ["¿Hace cuánto trabaja?", "¿Desde hace trabaja?", "¿Cuánto tiempo lleva trabajando en esto?"], answer: 2, why: "**¿Cuánto tiempo lleva** + gerundio?" },
+        ],
+      },
+    ],
+  },
+  pronunciation: {
+    focus: "La fuerza en las palabras de tiempo",
+    explanation: [
+      "Las palabras de tiempo de esta semana son cortas y muy frecuentes, y su sílaba fuerte no siempre es la que esperas. _DES-de_ lleva la fuerza al principio, pero _des-PUÉS_, _a-YER_ y _a-ÚN_ la llevan al final.",
+      "_To-da-VÍ-a_ tiene cuatro sílabas, con la fuerza en la **í**, como las formas del imperfecto de la semana 3. _Ahora_ se dice _a-HO-ra_, y _antes_, _AN-tes_.",
+      "Si pones la fuerza en el lugar correcto, la frase suena natural aunque hables despacio: _Lle-vo tres A-ños vi-VIEN-do a-QUÍ._",
+    ],
+    support: [
+      "Stress: DES-de, des-PUÉS, a-YER, to-da-VÍ-a, a-HO-ra, AN-tes.",
+    ],
+    table: {
+      caption: "Dónde va la fuerza",
+      head: ["Palabra", "Sílaba fuerte"],
+      rows: [
+        ["desde", "DES-de"],
+        ["después", "des-PUÉS"],
+        ["todavía", "to-da-VÍ-a"],
+        ["ahora", "a-HO-ra"],
+        ["ayer", "a-YER"],
+      ],
     },
-    "produce": [
-      {
-        "text": "En mil novecientos ochenta y cuatro empezó el curso.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Abrió el puesto en ochenta y cinco.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      },
-      {
-        "text": "Antes cocinaba en casa; después vendió en el mercado.",
-        "tip": "Graba, escucha y repite. Pide a una persona que confirme lo que entendió; no hay evaluación automática de calidad oral."
-      }
-    ]
+    perceive: {
+      id: "p1",
+      type: "listen",
+      title: "¿Dónde va la fuerza?",
+      prompt: "Escucha la palabra y elige cuál es su sílaba fuerte.",
+      items: [
+        { q: "¿Cómo suena?", audio: "después", options: ["la primera: des", "la última: pués"], answer: 1 },
+        { q: "¿Cómo suena?", audio: "desde", options: ["la primera: des", "la última: de"], answer: 0 },
+        { q: "¿Cómo suena?", audio: "todavía", options: ["to", "da", "ví"], answer: 2 },
+        { q: "¿Cómo suena?", audio: "ahora", options: ["a", "ho", "ra"], answer: 1 },
+        { q: "¿Cómo suena?", audio: "ayer", options: ["yer", "a"], answer: 0 },
+      ],
+    },
+    produce: [
+      { text: "Todavía no he terminado.", tip: "_to-da-VÍ-a_: cuatro sílabas, fuerza en la í." },
+      { text: "Después de comer, descanso un rato.", tip: "_des-PUÉS_ con fuerza al final; _des-CAN-so_, con fuerza en la penúltima." },
+      { text: "Vivo aquí desde hace diez años.", tip: "_DES-de_ fuerte al principio; _A-ños_." },
+      { text: "Ayer vendí tres hamacas; ahora ya no me queda ninguna.", tip: "_a-YER_, _a-HO-ra_." },
+      { text: "¿Cuánto tiempo llevas estudiando español?", tip: "Grábate: _LLE-vas_, _es-tu-DIAN-do_." },
+    ],
+    spelling: "_Después_ y _todavía_ llevan tilde porque su fuerza no cae donde la regla general la pondría. _Desde_, _antes_ y _ahora_ no la llevan.",
   },
-  "listening": {
-    "title": "La grabación de Alicia",
-    "context": "Escena original de comunicación cotidiana. Escucha antes de abrir la transcripción. La reproducción disponible puede usar síntesis del navegador; no acredita una variedad regional ni una grabación humana.",
-    "speakers": [
-      {
-        "id": "a",
-        "name": "Persona A",
-        "voice": "es-ES-f"
-      },
-      {
-        "id": "b",
-        "name": "Persona B",
-        "voice": "es-ES-m"
-      }
+  listening: {
+    title: "Entrevista en el mercado",
+    context: "Valeria estudia periodismo y hace una entrevista para la radio de su universidad a doña Julia, que vende hamacas en el mercado de artesanías de Masaya.",
+    speakers: [
+      { id: "valeria", name: "Valeria", voice: "es-CO-f", role: "estudiante de periodismo" },
+      { id: "julia", name: "Doña Julia", voice: "es-MX-f", role: "artesana de hamacas" },
     ],
-    "script": [
-      {
-        "speaker": "a",
-        "text": "Alicia, hemos preparado la exposición, pero tenemos una duda. En el cuaderno pone 1984. ¿Ese año abriste el puesto del mercado o empezaste el curso de cocina?"
-      },
-      {
-        "speaker": "b",
-        "text": "Empecé el curso. Abrí el puesto en 1985. Antes trabajaba en una oficina y cocinaba solo para mi familia. Solía llevar comida a mis compañeras y ellas me animaron."
-      },
-      {
-        "speaker": "a",
-        "text": "Ya hemos puesto esa fecha en el cartel. También hemos encontrado una foto con tus hijos. ¿Te ayudaban todos los días? Uno parece muy pequeño para trabajar."
-      },
-      {
-        "speaker": "b",
-        "text": "No, venían los sábados. Mi hija mayor limpiaba las mesas y el pequeño dibujaba. Una vez él hizo un cartel precioso con el nombre del puesto. Todavía no lo hemos encontrado, pero recuerdo sus letras rojas."
-      },
-      {
-        "speaker": "a",
-        "text": "¿Podemos incluir también cómo era un día normal en el puesto? Ya hemos contado el primer día, pero queremos que los visitantes imaginen tu rutina. ¿A qué hora empezabas y quién compraba primero?"
-      },
-      {
-        "speaker": "b",
-        "text": "Llegaba antes de las siete y preparaba las mesas con mi hermana. Los primeros clientes eran trabajadores del mercado. Solían pedir algo caliente. Un día llegó una cantante conocida, pero eso fue una excepción, no nuestra vida de todos los días."
-      }
+    script: [
+      { speaker: "valeria", text: "Buenos días, doña Julia. ¿Desde cuándo tiene este puesto?" },
+      { speaker: "julia", text: "Desde 1995. Pero llevo cuarenta años haciendo hamacas. Aprendí con mi madre cuando tenía doce años." },
+      { speaker: "valeria", text: "¿Y cómo era el mercado antes?" },
+      { speaker: "julia", text: "Antes solíamos vender solo a gente de aquí. Ahora vienen turistas de todo el mundo." },
+      { speaker: "valeria", text: "¿Ya vende por internet?" },
+      { speaker: "julia", text: "Sí, hace dos años mi nieto abrió una tienda en línea. Todavía no sé usarla bien, pero ya hemos vendido hamacas a Canadá." },
+      { speaker: "valeria", text: "¿Cómo es un día normal para usted?" },
+      { speaker: "julia", text: "Antes de abrir, desayuno con mi familia. Cuando llego, cuelgo las hamacas. Después de comer, tejo hasta las cinco." },
+      { speaker: "valeria", text: "¿Todavía teje a mano?" },
+      { speaker: "julia", text: "Claro. Y ya no me duelen las manos: llevo un año haciendo ejercicios. Ah, y ayer vino un periodista de la televisión. ¡Usted es la segunda esta semana!" },
     ],
-    "stages": [
+    stages: [
       {
-        "stage": "gist",
-        "prompt": "Primera escucha: busca la situación general sin abrir la transcripción.",
-        "exercise": {
-          "id": "listen-gist",
-          "type": "choice",
-          "prompt": "Escucha «La grabación de Alicia» y reconoce la intención.",
-          "items": [
-            {
-              "q": "¿Qué hacen los interlocutores?",
-              "options": [
-                "Organizan un curso de cocina",
-                "Comprueban datos para una exposición",
-                "Reservan una mesa"
-              ],
-              "answer": 1,
-              "why": "La información de la situación corresponde a «Comprueban datos para una exposición»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Qué papel tiene quien pregunta?",
-              "options": [
-                "Comprar un puesto del mercado",
-                "Preparar información correcta para visitantes",
-                "Elegir un menú para comer"
-              ],
-              "answer": 1,
-              "why": "Comprueba el contexto y los datos de la escena: Preparar información correcta para visitantes."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "detail",
-        "prompt": "Segunda escucha: anota los datos necesarios; después comprueba tus respuestas.",
-        "exercise": {
-          "id": "listen-detail",
-          "type": "choice",
-          "prompt": "Localiza dos datos concretos en «La grabación de Alicia».",
-          "items": [
-            {
-              "q": "¿En qué año abrió Alicia el puesto?",
-              "options": [
-                "1985",
-                "1984",
-                "1990"
-              ],
-              "answer": 0,
-              "why": "La información de la situación corresponde a «1985»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "¿Con qué frecuencia iban sus hijos?",
-              "options": [
-                "Todos los días",
-                "Solo una vez",
-                "Los sábados"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Los sábados»; comprueba la frase completa antes de volver a responder."
-            }
-          ]
-        }
-      },
-      {
-        "stage": "notice",
-        "prompt": "Tercera escucha: atiende a las formas y a cómo se comprueba la información. La transcripción es opcional después de escuchar.",
-        "exercise": {
-          "id": "listen-notice",
-          "type": "choice",
-          "prompt": "Interpreta las palabras clave de «La grabación de Alicia».",
-          "items": [
-            {
-              "q": "¿Qué diferencia hay entre venían e hizo?",
-              "options": [
-                "Dos acciones futuras",
-                "Dos formas de pedir ayuda",
-                "Costumbre frente a una acción concreta"
-              ],
-              "answer": 2,
-              "why": "La información de la situación corresponde a «Costumbre frente a una acción concreta»; comprueba la frase completa antes de volver a responder."
-            },
-            {
-              "q": "En todavía no lo hemos encontrado, lo se refiere a…",
-              "options": [
-                "El cartel",
-                "El curso",
-                "El puesto"
-              ],
-              "answer": 0,
-              "why": "Comprueba el contexto y los datos de la escena: El cartel."
-            }
-          ]
-        }
-      }
-    ]
-  },
-  "reading": {
-    "title": "Tres objetos, una historia",
-    "genre": "Cartelas de una exposición familiar",
-    "frame": "Texto original de práctica en una situación ficticia.",
-    "text": [
-      "La maleta azul. En 1976 Alicia salió de su pueblo para trabajar en una ciudad cercana. Llevó esta maleta, dos vestidos y una libreta con direcciones de familiares. Durante los primeros meses vivió con una prima. Todos los domingos escribía una carta a sus padres. La maleta ya no cierra bien, pero su nieto la ha limpiado para la exposición.",
-      "El cuaderno verde. Alicia empezó un curso de cocina en 1984. En este cuaderno apuntaba las recetas y hacía dibujos de los platos. Solía practicar por la noche, después del trabajo. Un año después puso un pequeño puesto de comida junto al mercado. El primer día vendió todo antes de mediodía.",
-      "La fotografía del mercado. Esta foto es de 1990. Alicia aparece con sus dos hijos detrás del puesto. Este mes la familia ha vuelto al mercado y ha encontrado a un antiguo vecino. Él les ha contado más historias, pero todavía no han escrito todas. Quieren añadir un audio a la exposición.",
-      "Para visitar la exposición, empieza por la maleta y sigue las fechas de las cartelas. Al lado de cada objeto hay una pregunta para el público. No todas tienen una respuesta escrita: la familia quiere escuchar recuerdos de otras personas del barrio. Si reconoces a alguien en la fotografía, habla con la persona responsable antes de escribir su nombre en el libro de visitas."
-    ],
-    "glossary": [
-      {
-        "es": "una foto de familia",
-        "en": "a family photo"
-      },
-      {
-        "es": "guardar un recuerdo",
-        "en": "keep a memory"
-      },
-      {
-        "es": "escribir un pie de foto",
-        "en": "write a caption"
-      }
-    ],
-    "tasks": [
-      {
-        "id": "reading-choice",
-        "type": "choice",
-        "prompt": "Lee «Tres objetos, una historia» y localiza la evidencia para cada respuesta.",
-        "items": [
-          {
-            "q": "¿Qué objeto se relaciona con el viaje de 1976?",
-            "options": [
-              "La fotografía",
-              "La maleta",
-              "El cuaderno"
-            ],
-            "answer": 1,
-            "why": "La información de la situación corresponde a «La maleta»; comprueba la frase completa antes de volver a responder."
-          },
-          {
-            "q": "¿Qué tarea de la exposición no está terminada?",
-            "options": [
-              "Escribir todas las historias del vecino",
-              "Limpiar la maleta",
-              "Encontrar la fotografía"
-            ],
-            "answer": 0,
-            "why": "La información de la situación corresponde a «Escribir todas las historias del vecino»; comprueba la frase completa antes de volver a responder."
-          }
-        ]
-      },
-      {
-        "id": "reading-transfer",
-        "type": "open",
-        "prompt": "Usa la información de «Tres objetos, una historia» para otra persona.",
-        "items": [
-          {
-            "prompt": "Resume el dato más útil del texto para esta misión: Crear una pequeña exposición que reúna experiencias recientes, una biografía y hábitos de infancia. Explica qué frase lo demuestra y qué pregunta harías después.",
-            "model": "Primero selecciono la información que necesita mi interlocutor. Después explico el dato con mis palabras y señalo dónde aparece; si falta información, la pregunto sin inventarla.",
-            "checklist": [
-              "Seleccionas información que aparece en el texto.",
-              "Separas un dato confirmado de una pregunta o una opinión."
-            ]
-          }
-        ]
-      }
-    ],
-    "noticing": {
-      "prompt": "Vuelve al texto: interpreta estas dos frases y relaciona sus formas con el propósito del mensaje.",
-      "items": [
-        {
-          "quote": "La maleta azul.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
+        stage: "gist",
+        prompt: "Primera escucha: escucha todo y busca la idea general.",
+        exercise: {
+          id: "l1",
+          type: "choice",
+          prompt: "Responde con la idea general.",
+          items: [
+            { q: "¿De qué trata la entrevista?", options: ["de la vida y el trabajo de una artesana", "de un viaje a Canadá", "de un curso de periodismo"], answer: 0 },
+            { q: "¿Cómo ha cambiado el negocio de doña Julia?", options: ["Ya no vende hamacas.", "Ahora tiene clientes de muchos países.", "Ahora solo vende en la televisión."], answer: 1 },
+          ],
         },
-        {
-          "quote": "El cuaderno verde.",
-          "note": "Explica qué información aporta esta frase y cómo prepara los datos siguientes. Después localiza una forma de la semana en este párrafo."
-        }
-      ]
-    }
+      },
+      {
+        stage: "detail",
+        prompt: "Segunda escucha: atención a las fechas y a las duraciones.",
+        exercise: {
+          id: "l2",
+          type: "choice",
+          prompt: "Elige la respuesta correcta.",
+          items: [
+            { q: "¿Desde cuándo tiene doña Julia el puesto?", options: ["desde hace doce años", "desde 1995", "desde hace dos años"], answer: 1 },
+            { q: "¿Cuánto tiempo lleva haciendo hamacas?", options: ["cuarenta años", "doce años", "un año"], answer: 0 },
+            { q: "¿Qué hace después de comer?", options: ["Desayuna con su familia.", "Cuelga las hamacas.", "Teje hasta las cinco."], answer: 2 },
+            { q: "¿Quién visitó el puesto ayer?", options: ["su nieto", "un periodista de la televisión", "un cliente de Canadá"], answer: 1 },
+          ],
+        },
+      },
+      {
+        stage: "notice",
+        prompt: "Tercera escucha: fíjate en las expresiones de tiempo.",
+        exercise: {
+          id: "l3",
+          type: "classify",
+          prompt: "¿Qué dice cada expresión?",
+          categories: ["algo que sigue (desde, llevar, todavía)", "un hecho terminado (hace, ayer)", "algo que cambió (antes, ya no)"],
+          items: [
+            { text: "llevo cuarenta años haciendo hamacas", cat: 0 },
+            { text: "hace dos años mi nieto abrió una tienda", cat: 1, why: "**Hace** + indefinido." },
+            { text: "antes solíamos vender solo a gente de aquí", cat: 2, why: "**Antes** + **solíamos**, de la semana 4." },
+            { text: "¿Todavía teje a mano?", cat: 0 },
+            { text: "ya no me duelen las manos", cat: 2 },
+            { text: "ayer vino un periodista", cat: 1 },
+          ],
+        },
+      },
+    ],
   },
-  "practice": {
-    "intro": "La práctica combina reconstrucción, decisiones y producción breve. Haz la recuperación antes de volver a los apuntes. Para un reto con pareja, usa el modelo y las condiciones escritas como apoyo. Si estudias a solas, interpreta los dos papeles y graba primero las preguntas; después responde sin leer el modelo. Las voces sintéticas no verifican acentos regionales ni matices expresivos.",
-    "exercises": [
-      {
-        "id": "transfer-order",
-        "type": "order",
-        "prompt": "Reconstruye estas intervenciones de la misión; después explica cuándo las usarías.",
-        "items": [
-          {
-            "words": [
-              "Este",
-              "año",
-              "he",
-              "encontrado",
-              "una",
-              "foto",
-              "de",
-              "mi",
-              "abuela."
-            ]
-          },
-          {
-            "words": [
-              "Antes",
-              "trabajaba",
-              "allí",
-              "todos",
-              "los",
-              "sábados."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "transfer-context",
-        "type": "context",
-        "prompt": "Elige una respuesta que haga avanzar la gestión, no solo una frase correcta.",
-        "items": [
-          {
-            "options": [
-              "El curso empezó en 1984; el puesto abrió un año después.",
-              "Las dos fechas son exactamente la misma.",
-              "El puesto está en el mercado, que es grande."
-            ],
-            "answer": 0,
-            "why": "Comprueba el contexto y los datos de la escena: El curso empezó en 1984; el puesto abrió un año después..",
-            "context": "Un visitante confunde el inicio del curso y la apertura del puesto.",
-            "q": "¿Qué respuesta resuelve esta dificultad?"
-          },
-          {
-            "context": "Entrevista al profesor, que interpreta a la persona de una foto. Comprueba dos fechas y una costumbre; presenta después la información a un visitante.",
-            "q": "En esta interacción de «Checkpoint: un museo de recuerdos», ¿cómo compruebas que puedes continuar?",
-            "options": [
-              "Resumir el acuerdo o la información y pedir confirmación.",
-              "Dar por supuesto que la otra persona ha entendido todos los detalles."
-            ],
-            "answer": 0,
-            "why": "Confirmar evita que una diferencia de interpretación quede sin resolver."
-          }
-        ]
-      },
-      {
-        "id": "guided-production",
-        "type": "open",
-        "prompt": "Ensaya dos partes breves antes de producir tu texto completo.",
-        "items": [
-          {
-            "prompt": "Para «Checkpoint: un museo de recuerdos», escribe una apertura que sitúe a tu destinatario. Añade un dato nuevo elegido por ti.",
-            "model": "Este mes he encontrado un cuaderno de mi padre.",
-            "checklist": [
-              "Se entiende quién habla y por qué.",
-              "Incluyes un dato concreto que no contradice la situación."
-            ]
-          },
-          {
-            "prompt": "Prepara una pregunta de seguimiento para esta interacción: Entrevista al profesor, que interpreta a la persona de una foto. Comprueba dos fechas y una costumbre; presenta después la información a un visitante.",
-            "model": "¿Puedes confirmar ese dato? Quiero comprobar que he entendido bien antes de continuar.",
-            "checklist": [
-              "La pregunta pide un dato útil para esta situación.",
-              "Mantienes el mismo trato y respondes después a la información recibida."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-01",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 1. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 5: En un intercambio de experiencias, pregunta por una actividad hecha alguna vez y reacciona. Cuenta tres experiencias reales y una inventada con ya, todavía no y nunca; utiliza hecho, dicho, visto, escrito, puesto, vuelto, abierto y roto entre tus ejemplos. Enlaza he estado y lo he visto sin borrar el auxiliar. Tu pareja debe adivinar la experiencia inventada.",
-            "model": "Ya he hecho una ruta nocturna y he visto el amanecer. Nunca he roto una mochila. Todavía no he escrito la reseña. He puesto las fotos en una carpeta, he abierto el mapa y he vuelto al pueblo. Mi amiga ha dicho que la ruta es fácil.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 1→5: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Ya he hecho una ruta nocturna y he visto el amanecer. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-02",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 2. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 5: Sin mirar la semana 2, relata otro domingo con desayunar, caminar, comer, recibir y salir. Incluye ayer o hace dos días y ordena cuatro hechos. Compara hablo/habló en voz alta. Tu compañero escucha y reconstruye el orden; explica por qué esta mañana puede combinarse con tiempos distintos según la variedad y el contexto. Añade tres acciones con buscar, llegar y empezar en primera persona del pasado.",
-            "model": "Hace dos días desayuné temprano, caminé hasta el puerto, comí con una amiga y recibí una llamada. Después salí hacia casa. Hoy hablo del viaje; ayer habló mi amiga. Busqué la dirección, llegué temprano y empecé la visita.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 2→5: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Hace dos días desayuné temprano, caminé hasta el puerto, comí con una amiga y recibí una llamada. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-03",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 3. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 5: Presenta una biografía inventada con cuatro fechas y los verbos ir, estar, tener, hacer, poder, poner, venir y decir en indefinido. Incluye fue como ser y como ir. Escribe un pie de foto que distinga tú/tu, él/el, sí/si, mí/mi y sé/se; explica más/mas. Tu oyente ordena los hitos y pide una fecha que falte. Añade un hecho con ver y otro con dar, alternando yo y él o ella.",
-            "model": "En 2001 fue cocinero y después fue a Lima. Estuvo allí un año, tuvo un hijo e hizo un curso. Pudo volver en 2003, puso una tienda, vino su hermana y dijo: sí, sé que este lugar es para mí. Vi el anuncio y di mi respuesta. Ella vio el cartel y dio una explicación.",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 3→5: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: En 2001 fue cocinero y después fue a Lima. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      },
-      {
-        "id": "retrieval-week-04",
-        "type": "open",
-        "prompt": "Recuperación sin mirar · semana 4. Usa un caso diferente de los textos anteriores.",
-        "items": [
-          {
-            "prompt": "Reto de recuperación en la semana 5: Describe un colegio de antes y compáralo con uno actual. Usa era, iba, veía, solía y suelo; incluye juegos, habitación o patio y dos costumbres. Escribe un recuerdo de cuatro frases. Al oír una palabra poco clara, confirma singular o plural por el contexto y pide repetición; explica por qué un audio sintético no prueba una s regional.",
-            "model": "Mi colegio era pequeño. Iba andando y veía a mis amigos en la plaza. Solíamos jugar en el patio. Ahora suelo leer en una biblioteca. ¿Has dicho los patios o el patio?",
-            "checklist": [
-              "Resuelves todas las partes del reto con ejemplos propios.",
-              "Después comparas con tus apuntes y corriges una forma o un dato."
-            ]
-          },
-          {
-            "prompt": "Comprueba la recuperación 4→5: cambia un dato de tu respuesta y reformula la parte afectada. Explica qué cambió a tu compañero.",
-            "model": "En mi nueva versión cambia el lugar o la persona: Mi colegio era pequeño. Debo revisar también las referencias para que mi oyente entienda el cambio.",
-            "checklist": [
-              "El nuevo dato es coherente con el resto de la situación.",
-              "Repites la parte necesaria y compruebas que el oyente lo entiende."
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  "writing": {
-    "task": "Redacta tres cartelas conectadas para tu exposición: una experiencia reciente al encontrar un objeto, un hecho con fecha y una costumbre de la persona. Revisa la coherencia de todos los tiempos.",
-    "context": "Escribe una primera versión propia; el modelo es una posibilidad, no un texto para copiar. Puedes usar datos ficticios.",
-    "steps": [
-      "Anota destinatario, propósito y tres datos necesarios.",
-      "Organiza los datos en un orden que ayude a la otra persona.",
-      "Escribe el borrador con apoyo de las expresiones útiles.",
-      "Revisa si has respondido a todas las partes, corrige las formas y escribe una segunda versión."
+  reading: {
+    title: "Ernesto, guía del volcán",
+    genre: "Perfil en una guía de viaje",
+    frame: "Sección «Personas de Masaya» de una guía de viajes en línea.",
+    text: [
+      "Ernesto Gutiérrez lleva quince años trabajando como guía en el Parque Nacional Volcán Masaya. Vive en Nindirí, a diez minutos del parque, desde que nació. «De niño solía subir al volcán con mi abuelo», cuenta. «Él me explicaba historias de fuego y de dioses antiguos».",
+      "Hace cinco años el parque empezó a abrir de noche, y su trabajo cambió. Ya no termina a las cuatro de la tarde: ahora trabaja hasta las nueve. Antes de cada visita, revisa el viento y los gases. Después de explicar las normas, lleva a los grupos hasta el borde del cráter.",
+      "¿Ha visto alguna vez una erupción? «Una vez, en 2012. Era de madrugada, estaba solo en el mirador y de repente el cráter lanzó piedras. Corrí como nunca».",
+      "Ernesto todavía se emociona cuando ve la lava, aunque la ha visto miles de veces. Cuando los turistas se van, se sienta un rato en silencio delante del cráter. «Este año ya he hecho más de trescientas visitas, y cada noche es distinta».",
     ],
-    "useLanguage": [
-      "Este año he encontrado una foto de mi abuela.",
-      "En 1980 abrió una tienda cerca de casa.",
-      "Antes trabajaba allí todos los sábados.",
-      "Mi hermano ya ha escrito el cartel; yo todavía no lo he visto."
+    glossary: [
+      { es: "el borde", en: "the edge" },
+      { es: "de madrugada", en: "in the early hours" },
+      { es: "lanzar", en: "to throw out" },
+      { es: "emocionarse", en: "to be moved, to get excited" },
     ],
-    "model": [
-      "Este mes he encontrado un cuaderno de mi padre. En 1992 él fue a otra ciudad para estudiar. En el cuaderno escribía los gastos de cada semana y las direcciones de sus amigos. Solía dibujar los edificios que veía desde el autobús. En 1994 hizo su primera exposición en la biblioteca. Nunca he visto aquellas obras, pero ya he hablado con una antigua compañera suya. Ella ha guardado dos dibujos y quiere prestarlos a nuestra familia. La próxima semana vamos a entrevistarlo otra vez para preguntar por sus costumbres. Después escribiremos una cartela con las fechas confirmadas y dejaremos aparte las que todavía no sabemos."
-    ],
-    "checklist": [
-      "El destinatario puede entender el propósito sin preguntar de qué hablas.",
-      "Incluyes todos los datos pedidos y no inventas confirmaciones.",
-      "Los verbos y pronombres se refieren a las personas y tiempos correctos.",
-      "Relacionas las ideas y mantienes un trato coherente.",
-      "Relees y corriges al menos una frase después de comparar con el modelo."
-    ],
-    "words": [
-      100,
-      140
-    ]
-  },
-  "speaking": {
-    "intro": "Planifica con palabras clave, no con un texto completo. Habla, escucha tu grabación local si quieres y repite una parte más claramente.",
-    "tasks": [
+    tasks: [
       {
-        "title": "Tu intervención con un propósito",
-        "prompt": "Presenta tres objetos de tu exposición. Sitúa un hecho, describe una costumbre y cuenta lo que has descubierto recientemente.",
-        "prep": [
-          "Elige tres datos y ordénalos.",
-          "Prepara una frase inicial y un cierre que invite a responder."
+        id: "r1",
+        type: "choice",
+        prompt: "Lee el perfil y responde.",
+        items: [
+          { q: "¿Cuánto tiempo lleva Ernesto trabajando como guía?", options: ["cinco años", "quince años", "desde que nació"], answer: 1 },
+          { q: "¿Qué cambió hace cinco años?", options: ["El parque empezó a abrir de noche.", "Ernesto se mudó a Nindirí.", "Hubo una erupción."], answer: 0 },
+          { q: "¿Qué hace Ernesto antes de cada visita?", options: ["Explica las normas.", "Sube con su abuelo.", "Revisa el viento y los gases."], answer: 2 },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Se entiende la situación y el orden de las ideas.",
-          "Mantengo claras las palabras clave y reformulo si hace falta."
-        ]
       },
       {
-        "title": "Interacción con un cambio",
-        "prompt": "Entrevista al profesor, que interpreta a la persona de una foto. Comprueba dos fechas y una costumbre; presenta después la información a un visitante.",
-        "prep": [
-          "Prepara una pregunta de seguimiento.",
-          "Imagina una respuesta inesperada y una alternativa."
+        id: "r2",
+        type: "classify",
+        prompt: "¿Qué tiempo del pasado usa cada frase del perfil y para qué?",
+        categories: ["costumbre o escena (imperfecto, solía)", "hecho terminado (indefinido)", "experiencia o balance hasta hoy (perfecto)"],
+        items: [
+          { text: "De niño solía subir al volcán", cat: 0, why: "Costumbre con **solía** (semana 4)." },
+          { text: "el parque empezó a abrir de noche", cat: 1 },
+          { text: "¿Ha visto alguna vez una erupción?", cat: 2, why: "Experiencia con **alguna vez** (semana 1)." },
+          { text: "estaba solo en el mirador", cat: 0, why: "Escena (semana 3)." },
+          { text: "Corrí como nunca", cat: 1 },
+          { text: "Este año ya he hecho más de trescientas visitas", cat: 2, why: "Balance de **este año** con **ya** y **hecho**." },
         ],
-        "seconds": 120,
-        "selfCheck": [
-          "Escucho y respondo a la necesidad del otro.",
-          "Confirmo un dato o acuerdo y cedo el turno."
-        ]
-      }
-    ]
-  },
-  "useInClass": {
-    "intro": "La clase continúa el trabajo: lleva tu versión revisada y una duda concreta, no una lista de respuestas.",
-    "cards": [
-      {
-        "move": "Presenta",
-        "task": "Presenta tres objetos de tu exposición. Sitúa un hecho, describe una costumbre y cuenta lo que has descubierto recientemente."
       },
-      {
-        "move": "Negocia",
-        "task": "Entrevista al profesor, que interpreta a la persona de una foto. Comprueba dos fechas y una costumbre; presenta después la información a un visitante."
-      },
-      {
-        "move": "Reformula",
-        "task": "Pide al profesor que cambie un dato de la situación. Adapta tu respuesta sin leer el modelo y comprueba que el mensaje sigue siendo claro."
-      },
-      {
-        "move": "Comprueba",
-        "task": "El profesor resume lo que entendió. Corrige una diferencia de información y repite una frase cuyo sonido o ritmo quieras mejorar."
-      }
     ],
-    "bring": "Tu borrador revisado, tres palabras clave para hablar y una pregunta sobre la misión."
+    noticing: {
+      prompt: "Toca cada frase del perfil para ver qué gramática hay dentro.",
+      items: [
+        { quote: "lleva quince años trabajando", note: "**Llevar** + tiempo + gerundio: algo que empezó hace quince años y sigue." },
+        { quote: "Vive en Nindirí, a diez minutos del parque, desde que nació", note: "**Desde** + un hecho (_que nació_) como punto de partida." },
+        { quote: "Hace cinco años el parque empezó a abrir de noche", note: "**Hace** + cantidad + indefinido: un hecho terminado." },
+        { quote: "Ya no termina a las cuatro de la tarde", note: "**Ya no**: una situación que cambió." },
+        { quote: "Era de madrugada, estaba solo en el mirador y de repente el cráter lanzó piedras", note: "Escena en imperfecto y hecho en indefinido con **de repente** (semana 3)." },
+      ],
+    },
   },
-  "quiz": {
-    "items": [
+  practice: {
+    intro: "Checkpoint: combinas las clases de esta semana con el perfecto (semana 1), el indefinido (semana 2), el imperfecto (semana 3) y la variación y solía (semana 4).",
+    exercises: [
       {
-        "type": "gap",
-        "q": "Hace diez años nosotros ___ un álbum. (hacer)",
-        "answers": [
-          [
-            "hicimos"
-          ]
-        ]
-      },
-      {
-        "type": "gap",
-        "q": "Últimamente yo he ___ muchas fotos. (ver)",
-        "answers": [
-          [
-            "visto"
-          ]
-        ]
-      },
-      {
-        "type": "error",
-        "sentence": "Cuando era niña, he iba al río cada domingo.",
-        "answers": [
-          "Cuando era niña, iba al río cada domingo."
+        id: "x1",
+        type: "gap",
+        title: "Repaso integrado: un mensaje de Masaya",
+        prompt: "Completa con la forma correcta del verbo o con la palabra de tiempo que falta. Entre paréntesis tienes el verbo y la semana que lo repasa.",
+        items: [
+          { q: "Hoy ___ (visitar, semana 1) el mercado de artesanías por primera vez.", answers: [["he visitado", "visité"]], why: "**Hoy**: perfecto o indefinido según tu variedad (semanas 1 y 4)." },
+          { q: "Ayer ___ (ir, semana 2) al volcán y ___ (ver, semana 2) la lava.", answers: [["fui"], ["vi"]], why: "**Ayer**: indefinido; _ir_ es irregular." },
+          { q: "Cuando ___ (llegar, semana 3) al mirador, ___ (hacer) mucho viento.", answers: [["llegué", "llegamos"], ["hacía"]], why: "Hecho + escena: indefinido e imperfecto." },
+          { q: "De niño mi guía ___ (soler, semana 4) subir con su abuelo.", answers: [["solía"]], why: "Costumbre: **solía** + infinitivo." },
+          { q: "Mi amiga vive en Nicaragua ___ hace tres años y ___ (abrir, semana 1) una tienda este mes.", answers: [["desde"], ["ha abierto", "abrió"]], why: "**Desde hace** + cantidad; **este mes** con perfecto (o indefinido en gran parte de América)." },
         ],
-        "why": "Un hábito de infancia se presenta con imperfecto, iba, sin auxiliar he."
       },
       {
-        "type": "order",
-        "words": [
-          "Primero",
-          "encontré",
-          "la",
-          "foto",
-          "y",
-          "después",
-          "llamé",
-          "a",
-          "mi",
-          "tía."
-        ]
-      },
-      {
-        "type": "choice",
-        "q": "¿Qué pregunta ayuda a confirmar una fecha?",
-        "options": [
-          "¿Te gustan las fotos?",
-          "¿Has dicho en 1995?"
+        id: "x2",
+        type: "error",
+        title: "Corrige el diario de viaje",
+        prompt: "Cada frase tiene un error de una de las semanas 1 a 5. Escríbela bien.",
+        items: [
+          { sentence: "Llevo dos semanas viajar por Nicaragua.", answers: ["Llevo dos semanas viajando por Nicaragua."], why: "**Llevar** + tiempo + gerundio (semana 5)." },
+          { sentence: "Esta mañana he escribido una postal a mi madre.", answers: ["Esta mañana he escrito una postal a mi madre."], why: "Participio irregular: **escrito** (semana 1)." },
+          { sentence: "El guía nos dijió que el volcán estaba activo.", answers: ["El guía nos dijo que el volcán estaba activo."], why: "Indefinido irregular de _decir_: **dijo** (semana 2)." },
+          { sentence: "Cuando éramos pequeños, fuimos a la playa todos los veranos.", answers: ["Cuando éramos pequeños, íbamos a la playa todos los veranos."], why: "Costumbre con **todos los veranos**: imperfecto (semana 3)." },
+          { sentence: "Antes de visitando el mercado, cambié dinero.", answers: ["Antes de visitar el mercado, cambié dinero."], why: "**Antes de** + infinitivo (semana 5)." },
         ],
-        "answer": 1,
-        "why": "La opción elegida cumple la función comunicativa indicada."
       },
       {
-        "q": "¿Qué guardaba la persona en una caja?",
-        "options": [
-          "Fotografías de un mercado",
-          "Recetas de cocina",
-          "Entradas de cine"
+        id: "x3",
+        type: "order",
+        title: "Frases con tiempo",
+        prompt: "Toca las palabras en orden.",
+        items: [
+          { words: ["Hace", "un", "año", "que", "estudio", "cerámica", "en", "Masaya."], en: "I have been studying pottery in Masaya for a year." },
+          { words: ["Después", "de", "visitar", "el", "volcán,", "cenamos", "en", "el", "malecón."], en: "After visiting the volcano, we had dinner on the waterfront." },
+          { words: ["Todavía", "no", "he", "probado", "el", "vigorón."], en: "I haven't tried vigorón yet." },
         ],
-        "answer": 2,
-        "why": "Comprueba el contexto y los datos de la escena: Entradas de cine.",
-        "type": "listen",
-        "audio": "De pequeña guardaba entradas de cine en una caja."
       },
       {
-        "type": "open",
-        "prompt": "Evaluación de transferencia 5: Presenta tres objetos de tu exposición. Sitúa un hecho, describe una costumbre y cuenta lo que has descubierto recientemente.",
-        "model": "Este mes he encontrado un cuaderno de mi padre. En 1992 él fue a otra ciudad para estudiar. En el cuaderno escribía los gastos de cada semana y las direcciones de sus amigos. Solía dibujar los edificios que veía desde el autobús. En 1994 hizo su primera exposición en la biblioteca. Nunca he visto aquellas obras, pero ya he hablado con una antigua compañera suya. Ella ha guardado dos dibujos y quiere prestarlos a nuestra familia. La próxima semana vamos a entrevistarlo otra vez para preguntar por sus costumbres. Después escribiremos una cartela con las fechas confirmadas y dejaremos aparte las que todavía no sabemos.",
-        "checklist": [
-          "Cumples el propósito con datos comprensibles.",
-          "Usas las formas de la semana y revisas una duda."
-        ]
+        id: "x4",
+        type: "context",
+        title: "¿Qué frase encaja?",
+        prompt: "Lee la situación y elige la mejor frase.",
+        items: [
+          { context: "Un vecino nuevo te pregunta desde cuándo vives en el barrio. Llegaste en 2019.", q: "Respondes:", options: ["Vivo aquí desde hace 2019.", "Viví aquí hace 2019.", "Vivo aquí desde 2019."], answer: 2, why: "Con un año: **desde**." },
+          { context: "Tu amigo pregunta si todavía trabajas en el banco. Lo dejaste el año pasado.", q: "Respondes:", options: ["No, ya no trabajo allí. Lo dejé el año pasado.", "No, todavía no trabajo allí.", "Sí, ya trabajo allí."], answer: 0, why: "Situación que terminó: **ya no**; **el año pasado** + indefinido." },
+          { context: "Cuentas una anécdota de tu viaje a Masaya.", q: "Dices:", options: ["Compraba una hamaca cuando empezó a llover.", "Llovía mucho y de repente se cayó un puesto entero.", "Llovió mucho y de repente se caía un puesto."], answer: 1, why: "Escena en imperfecto + hecho con **de repente** (semana 3)." },
+        ],
       },
       {
-        "type": "open",
-        "prompt": "Resolución final 5: Entrevista al profesor, que interpreta a la persona de una foto. Comprueba dos fechas y una costumbre; presenta después la información a un visitante. Añade una pregunta para comprobar la respuesta.",
-        "checklist": [
-          "Reaccionas a lo que dice tu interlocutor.",
-          "Confirmas el dato o el acuerdo antes de terminar."
-        ]
-      }
-    ]
-  },
-  "complete": {
-    "canNow": [
-      "Crear una pequeña exposición que reúna experiencias recientes, una biografía y hábitos de infancia.",
-      "Seleccionar datos de una conversación y de un texto práctico.",
-      "Producir un mensaje propio, revisarlo y responder a otra persona."
+        id: "x5",
+        type: "open",
+        title: "Escribe tú: tu historia en el tiempo",
+        prompt: "Escribe frases sobre ti y compáralas con el modelo.",
+        items: [
+          {
+            prompt: "Di desde cuándo estudias español, cuánto tiempo llevas estudiándolo y cuándo empezaste.",
+            model: "Estudio español desde septiembre. Llevo nueve meses estudiándolo. Empecé hace nueve meses, después de un viaje a México.",
+            checklist: ["**Desde** + momento", "**Llevar** + tiempo + gerundio", "**Hace** + cantidad + indefinido"],
+          },
+          {
+            prompt: "Escribe dos cosas que ya has hecho este año, una que todavía no has hecho y una costumbre que ya no tienes.",
+            model: "Este año ya he viajado a Costa Rica y ya he leído un libro en español. Todavía no he visto el mar. Antes solía comer carne todos los días; ya no la como.",
+            checklist: ["**Ya** + perfecto (semana 1)", "**Todavía no** + perfecto", "**Antes solía** + **ya no** (semana 4)"],
+          },
+          {
+            prompt: "Cuenta tu rutina de la mañana con antes de, después de y cuando.",
+            model: "Cuando me despierto, miro el móvil. Antes de desayunar, me ducho. Después de desayunar, salgo a trabajar.",
+            checklist: ["**Antes de** y **después de** + infinitivo", "**Cuando** + verbo conjugado", "Coma después de la parte de tiempo inicial"],
+          },
+          {
+            prompt: "Cuenta una anécdota de un viaje: la escena, lo que pasó y una valoración.",
+            model: "Era mi primer día en Granada y hacía muchísimo calor. Mientras buscaba el hotel, un señor me regaló un mango. Fue un recibimiento precioso.",
+            checklist: ["Escena en imperfecto (semana 3)", "Hecho en indefinido (semana 2)", "Valoración con **fue**"],
+          },
+        ],
+      },
     ],
-    "review": [
-      "En dos días, repite la misión «Checkpoint: un museo de recuerdos» con personas y datos diferentes.",
-      "Antes de la próxima clase, recupera las expresiones sin mirar y comprueba después una duda.",
-      "Compara tu primera versión con la revisada: ¿qué entiende mejor ahora tu interlocutor?"
-    ]
-  }
+  },
+  writing: {
+    task: "Escribe el perfil de una persona que admiras para la sección «Personas de mi barrio» de una página web.",
+    context: "La página web de tu barrio publica perfiles cortos de vecinos con historias interesantes: un comerciante, una artista, un abuelo, una amiga. Puede ser una persona real o inventada.",
+    steps: [
+      "Presenta a la persona: desde cuándo vive en el barrio y cuánto tiempo lleva haciendo su trabajo o su afición.",
+      "Cuenta cómo era su vida antes y qué solía hacer (semanas 3 y 4).",
+      "Cuenta un hecho importante: cuándo pasó (hace…, en…) y qué pasó, con una escena (semanas 2 y 3).",
+      "Di qué ya ha hecho este año, qué todavía hace y qué ya no hace (semanas 1 y 5). Describe su rutina con antes de, después de o cuando.",
+      "Revisa los tiempos: hace + indefinido, desde hace + presente, solía + infinitivo, participios irregulares. Corrige lo que falle.",
+    ],
+    useLanguage: ["Vive en… desde…", "Lleva… años…-ando / -iendo", "Antes solía…", "Hace… años…", "Era… y de repente…", "Este año ya ha…", "Todavía… / Ya no…", "Antes de… / Después de… / Cuando…"],
+    model: [
+      "Don Ramón tiene la panadería más antigua del barrio. Vive aquí desde 1980 y lleva cuarenta años haciendo pan. Antes solía repartir el pan en bicicleta por todas las casas. Hace diez años tuvo un accidente: era temprano, llovía y un coche no lo vio. Desde entonces ya no reparte, pero todavía hornea cada mañana. Antes de abrir, prepara café para los vecinos. Este año ya ha enseñado su oficio a dos jóvenes del barrio.",
+    ],
+    checklist: [
+      "Usas desde, desde hace o llevar + gerundio para lo que sigue.",
+      "Usas hace + indefinido para un hecho terminado.",
+      "Las costumbres de antes van con solía o imperfecto, y la escena en imperfecto.",
+      "Usas ya, todavía y ya no con el sentido correcto.",
+      "Los participios y los indefinidos irregulares están bien.",
+    ],
+    words: [70, 130],
+  },
+  speaking: {
+    intro: "Checkpoint oral: habla en voz alta, grábate y escucha si mezclas bien los tiempos.",
+    tasks: [
+      {
+        title: "Mi historia en el tiempo",
+        prompt: "Cuenta tu historia con el español o con tu trabajo: desde cuándo, cuánto tiempo llevas, cuándo empezaste, qué solías hacer antes, qué ya has conseguido y qué todavía no.",
+        prep: ["Estudio… desde…", "Llevo… -ando / -iendo", "Empecé hace…", "Antes solía…", "Ya he… / Todavía no he…"],
+        seconds: 90,
+        model: "Estudio español desde 2023. Llevo dos años estudiándolo. Empecé hace dos años, cuando conocí a mi pareja, que es nicaragüense. Antes solía ver series en inglés; ahora las veo en español. Este año ya he viajado a Managua y ya he hablado por teléfono con su abuela. Todavía no entiendo todos los chistes, pero llevo poco tiempo.",
+        selfCheck: ["Uso desde, hace y llevar sin confundirlos.", "Combino presente, indefinido, imperfecto y perfecto.", "Pongo la fuerza en _to-da-VÍ-a_ y _des-PUÉS_."],
+      },
+      {
+        title: "Entrevista a un artesano",
+        prompt: "Imagina que entrevistas a un artesano del mercado de Masaya. Haz seis preguntas en voz alta con desde cuándo, cuánto tiempo, cuándo, ya y todavía, y respóndelas tú como si fueras él.",
+        prep: ["¿Desde cuándo…?", "¿Cuánto tiempo lleva…?", "¿Cuándo empezó…?", "¿Ya…? / ¿Todavía…?"],
+        seconds: 75,
+        model: "¿Desde cuándo tiene este taller? Desde 2005. ¿Cuánto tiempo lleva trabajando el cuero? Llevo veinte años. ¿Cuándo empezó? Hace veinte años, con mi tío. ¿Ya vende en internet? Todavía no, pero mi hija quiere abrir una tienda.",
+        selfCheck: ["Uso **usted** con el artesano.", "Las preguntas de sí o no suben al final."],
+      },
+      {
+        title: "Un día de mi viaje",
+        prompt: "Cuenta un día de un viaje real o imaginario a Nicaragua: la escena, lo que pasó, en orden, y una valoración.",
+        prep: ["Era… / Hacía…", "Primero… luego… al final…", "De repente…", "Fue…"],
+        seconds: 60,
+        selfCheck: ["Escena en imperfecto y hechos en indefinido.", "Ordeno con primero, luego, después de y al final."],
+      },
+    ],
+  },
+  useInClass: {
+    intro: "Lleva a tu próxima clase lo que repasaste estas cinco semanas y úsalo con tu profesor o profesora.",
+    cards: [
+      { move: "Entrevista", task: "Haz a tu profesor cinco preguntas sobre su vida con desde cuándo, cuánto tiempo, cuándo, ya y todavía.", phrases: ["¿Desde cuándo das clases?", "¿Cuánto tiempo llevas…?", "¿Ya has…?"] },
+      { move: "Cuéntale", task: "Cuenta tu historia en el tiempo en dos minutos, con al menos cuatro tiempos del pasado.", phrases: ["Empecé hace…", "Antes solía…", "Ya he…"] },
+      { move: "Corrige", task: "Pide a tu profesor que diga diez frases con errores de las semanas 1 a 5 y corrígelas.", phrases: ["Eso no está bien: se dice…", "Con ayer va el indefinido."] },
+      { move: "Compara", task: "Compara cómo era tu ciudad hace diez años y cómo es ahora.", phrases: ["Hace diez años…", "Antes había…; ya no hay…", "Todavía…"] },
+    ],
+    bring: "Trae una línea del tiempo de tu vida con cinco fechas importantes y prepara una frase para cada una con hace, desde o llevar.",
+  },
+  quiz: {
+    items: [
+      { type: "choice", q: "Mi hermano ___ vive con mis padres: tiene treinta años y no quiere irse.", options: ["ya no", "todavía", "todavía no"], answer: 1, why: "Sigue igual: **todavía**." },
+      { type: "listen", q: "¿Dónde va la fuerza?", audio: "después", options: ["la última: pués", "la primera: des"], answer: 0 },
+      { type: "gap", q: "Vivo en Masaya ___ 2018 y trabajo en el mercado ___ hace tres años.", answers: [["desde"], ["desde"]], why: "**Desde** + fecha; **desde hace** + cantidad." },
+      { type: "gap", q: "___ (cenar), solíamos sentarnos en la acera a hablar.", answers: [["Después de cenar", "después de cenar", "Antes de cenar", "antes de cenar"]], why: "**Antes de** o **después de** + infinitivo." },
+      { type: "transform", source: "Trabajo en esta escuela desde hace seis años.", instruction: "Dilo con llevar + gerundio.", answers: ["Llevo seis años trabajando en esta escuela."], why: "**Llevo** + seis años + **trabajando**." },
+      { type: "order", words: ["Hace", "tres", "años", "abrimos", "una", "tienda", "de", "cerámica."] },
+      { type: "error", sentence: "Hace dos meses he empezado un curso de cocina.", answers: ["Hace dos meses empecé un curso de cocina."], why: "**Hace** + cantidad sitúa un hecho terminado: indefinido." },
+      { type: "error", sentence: "Ya no he comido: tengo hambre.", answers: ["Todavía no he comido: tengo hambre."], why: "Algo pendiente: **todavía no**." },
+      { type: "gap", q: "¿Alguna vez ___ (ver, tú) un volcán activo? (semana 1)", answers: [["has visto"]], why: "Experiencia: **has visto**." },
+      { type: "gap", q: "Cuando ___ (ser) niña, mi madre ___ (vender) tortillas en el mercado. (semana 3)", answers: [["era"], ["vendía"]], why: "Descripción y costumbre: imperfecto." },
+      { type: "choice", q: "¿Qué frase es correcta en todas las variedades? (semana 4)", options: ["El lunes pasado he ido al dentista.", "En 2020 hemos vivido en León.", "El lunes pasado fui al dentista."], answer: 2, why: "Tiempo cerrado: indefinido." },
+      { type: "open", prompt: "Escribe cuatro frases sobre ti: desde cuándo haces algo, cuándo empezaste, qué solías hacer antes y qué ya has hecho este año.", model: "Toco la guitarra desde 2015. Empecé hace diez años. Antes solía tocar en la calle. Este año ya he dado dos conciertos.", checklist: ["desde + momento", "hace + indefinido", "solía + infinitivo", "ya + perfecto"] },
+    ],
+  },
+  complete: {
+    canNow: [
+      "Decir qué ya ha pasado, qué todavía no, qué sigue igual y qué ya no.",
+      "Distinguir ayer (un día concreto) de antes (otra época).",
+      "Ordenar acciones con antes de y después de + infinitivo y con cuando + verbo conjugado.",
+      "Decir desde cuándo y cuánto tiempo haces algo con desde, desde hace y llevar + gerundio.",
+      "Decir cuánto tiempo pasó desde un hecho con hace + indefinido.",
+      "Combinar en una historia el perfecto, el indefinido, el imperfecto y solía de las semanas 1 a 4.",
+    ],
+    review: ["ya / todavía no · todavía / ya no", "antes de / después de + infinitivo · cuando + verbo conjugado", "desde 2018 · desde hace 6 años · hace 6 años + indefinido · llevo 6 años + gerundio", "Semanas 1-4: he hecho · hice · hacía · solía hacer"],
+  },
+  related: [
+    { path: "/gramatica/marcadores-temporales-ayer-antes-ya-todavia", label: "Clase: Marcadores temporales: ayer, antes, ya, todavía" },
+    { path: "/antes-despues-cuando", label: "Clase: Antes de, después de y cuando + indicativo" },
+    { path: "/gramatica/desde-hace-duracion", label: "Clase: Desde, desde hace, hace y llevar + gerundio" },
+  ],
 };

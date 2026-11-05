@@ -1,0 +1,12 @@
+[
+  [3, "gram", "g049", "Imperfecto: descripciones, hábitos y acciones en curso", "Puedo describir personas y lugares del pasado, contar costumbres y presentar una acción en curso con el imperfecto regular y con era, iba y veía.", ["a2.gram.g047"], { "related": ["/sistema-verbal/preterito-imperfecto-indicativo"] }],
+  [3, "gram", "g050", "Indefinido e imperfecto: escena y hechos", "Puedo contar una anécdota con la escena en imperfecto y los hechos en indefinido, y elegir entre había, hubo, era y fue.", ["a2.gram.g049", "a2.gram.g048"], { "related": ["/gramatica/indefinido-e-imperfecto"] }],
+  [3, "voc", "w03-ciudad-antigua", "La ciudad colonial, la casa con patio y las costumbres de antes", "Puedo describir una ciudad antigua, una casa con patio y las costumbres de los vecinos.", ["a2.gram.g049"]],
+  [3, "pron", "w03-hiato-ia", "La í fuerte de había, tenía y vivía", "Puedo pronunciar las formas en -ía en tres sílabas, con la fuerza en la í, y distinguirlas de palabras como historia.", ["a2.gram.g049"]],
+  [3, "lis", "w03-recuerdos-abuela", "Escuchar los recuerdos de una abuela", "Puedo entender a una persona mayor que describe su infancia y cuenta un suceso, y distinguir la escena de los hechos.", ["a2.gram.g049", "a2.gram.g050"]],
+  [3, "read", "w03-cronica-murcielago", "Leer una crónica de recuerdos", "Puedo entender una crónica que describe una casa y sus costumbres y cuenta una anécdota.", ["a2.gram.g049", "a2.gram.g050"]],
+  [3, "wri", "w03-recuerdo-lugar", "Escribir el recuerdo de un lugar con una anécdota", "Puedo escribir un texto breve que describe un lugar de mi infancia, mis costumbres allí y una anécdota.", ["a2.gram.g049", "a2.gram.g050", "a2.disc.w03-escena-y-hechos"]],
+  [3, "spk", "w03-anecdota-infancia", "Contar una anécdota de mi infancia", "Puedo describir oralmente el lugar donde vivía y contar una anécdota con escena, hechos y valoración.", ["a2.fun.w03-describir-pasado"]],
+  [3, "fun", "w03-describir-pasado", "Describir el pasado y comparar con el presente", "Puedo describir cómo eran las cosas antes, contar qué hacía normalmente y compararlo con el presente.", ["a2.gram.g049"]],
+  [3, "disc", "w03-escena-y-hechos", "Organizar una anécdota: escena, hechos y cierre", "Puedo organizar una anécdota con una escena, un giro con de repente o entonces y una valoración final.", ["a2.gram.g050"]]
+]

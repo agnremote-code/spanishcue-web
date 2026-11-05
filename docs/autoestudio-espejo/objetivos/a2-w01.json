@@ -1,0 +1,12 @@
+[
+  [1, "gram", "g045", "Pretérito perfecto: novedades, experiencias y resultados", "Puedo contar qué he hecho hoy o esta semana, preguntar y responder por experiencias con alguna vez y nunca, y explicar un resultado que se ve ahora.", [], { "related": ["/sistema-verbal/preterito-perfecto-compuesto-indicativo"] }],
+  [1, "gram", "g046", "Participios regulares e irregulares frecuentes", "Puedo formar participios en -ado e -ido y usar sin dudar abierto, escrito, puesto, visto, vuelto, roto, dicho y hecho.", ["a2.gram.g045"], { "related": ["/gramatica/participios-frecuentes"] }],
+  [1, "voc", "w01-feria-voluntariado", "Tareas de una feria y experiencias útiles", "Puedo nombrar las tareas para preparar un evento de barrio y las experiencias que se piden a un voluntario.", ["a2.gram.g045"]],
+  [1, "pron", "w01-he-ha-han-enlazados", "He, ha y han unidos al participio", "Puedo distinguir de oído he, ha y han en la frase hablada y unirlos al participio al hablar.", ["a2.gram.g045"]],
+  [1, "lis", "w01-manana-feria", "Escuchar la revisión de tareas de una feria", "Puedo entender en una conversación qué tareas están hechas, cuáles no y qué experiencia tiene una persona.", ["a2.gram.g045", "a2.gram.g046"]],
+  [1, "read", "w01-ficha-voluntaria", "Leer una ficha de voluntariado", "Puedo entender una ficha en la que alguien cuenta su experiencia, lo que nunca ha hecho y lo que ha hecho esta semana.", ["a2.gram.g045", "a2.gram.g046"]],
+  [1, "wri", "w01-correo-voluntariado", "Escribir un correo para ofrecerme como voluntario", "Puedo escribir un correo breve para ofrecer ayuda contando mis experiencias y lo que ya he hecho para prepararme.", ["a2.gram.g045", "a2.gram.g046", "a2.disc.w01-sumar-experiencias"]],
+  [1, "spk", "w01-balance-experiencias", "Contar el balance de mi semana y mis experiencias", "Puedo hablar unos tres minutos sobre lo que he hecho esta semana, lo que todavía no he hecho y mis experiencias.", ["a2.fun.w01-novedades-experiencias"]],
+  [1, "fun", "w01-novedades-experiencias", "Dar novedades y hablar de experiencias", "Puedo contar novedades, preguntar a alguien por sus experiencias y responder con frecuencia o con nunca.", ["a2.gram.g045"]],
+  [1, "disc", "w01-sumar-experiencias", "Sumar experiencias con también, además y pero", "Puedo encadenar varias experiencias en un texto con también, además y pero sin repetir siempre la misma estructura.", ["a2.gram.g045"]]
+]
