@@ -1,5 +1,6 @@
 import { funnelContext } from "../immersive/attribution";
 import { consentFor } from "../privacy/consent";
+import { sendOpenAIPurchase, sendOpenAISignup } from "./openaiPixel";
 
 export const marketingEvents = [
   "landing_view",
@@ -37,8 +38,8 @@ export type MarketingEvent = (typeof marketingEvents)[number];
 
 const attributionKey = "spanishcue.marketing.attribution.v1";
 const eventQueueKey = "spanishcue.marketing.events.v1";
-const googleAdsConversionId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "";
-const googleAdsPurchaseLabel = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || "") : "";
+const googleAdsConversionId = (() => { try { return process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || ""; } catch { return ""; } })();
+const googleAdsPurchaseLabel = (() => { try { return process.env.NEXT_PUBLIC_GOOGLE_ADS_PURCHASE_LABEL?.trim() || ""; } catch { return ""; } })();
 const utmKeys = [
   "utm_source",
   "utm_medium",
@@ -256,6 +257,9 @@ export function trackMarketingEvent(
   if (event === "subscription_first_paid") {
     if (!properties.transaction_id) return;
     sendGoogleAdsPurchase(properties);
+    if (typeof properties.value === "number" && typeof properties.currency === "string") {
+      sendOpenAIPurchase(String(properties.transaction_id), properties.value, properties.currency.toUpperCase());
+    }
     if (!consentFor("analytics")) return;
     // GA4 gets one specific event for the transaction (never the generic
     // name as well), plus the documented revenue alias used by funnel reports.
@@ -266,6 +270,8 @@ export function trackMarketingEvent(
     }
     return;
   }
+
+  if (event === "signup_complete") sendOpenAISignup();
 
   if (!consentFor("analytics")) return;
 

@@ -8,10 +8,11 @@ import {
   readConsent,
   updateGoogleConsent,
 } from "../privacy/consent";
+import { installOpenAIPixel, revokeOpenAIPixelConsent } from "./openaiPixel";
 
 const scriptId = "spanishcue-google-tag";
-const measurementId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || "") : "";
-const googleAdsConversionId = typeof process !== "undefined" ? (process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || "") : "";
+const measurementId = (() => { try { return process.env.NEXT_PUBLIC_GA4_MEASUREMENT_ID?.trim() || ""; } catch { return ""; } })();
+const googleAdsConversionId = (() => { try { return process.env.NEXT_PUBLIC_GOOGLE_ADS_CONVERSION_ID?.trim() || ""; } catch { return ""; } })();
 
 function usableMeasurementId(value: string): boolean {
   return /^G-[A-Z0-9]+$/i.test(value);
@@ -75,7 +76,10 @@ export default function GoogleAnalytics() {
     initialiseGoogleConsent();
     installGoogleTag();
     const sync = () => {
-      updateGoogleConsent(readConsent());
+      const consent = readConsent();
+      updateGoogleConsent(consent);
+      if (consent?.marketing) installOpenAIPixel();
+      else revokeOpenAIPixelConsent();
       sendPageView();
     };
     sync();
