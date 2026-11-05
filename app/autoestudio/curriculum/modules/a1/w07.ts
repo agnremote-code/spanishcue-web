@@ -403,7 +403,7 @@ export const a1w07: Module = {
         prompt: "Lee el mensaje y responde.",
         items: [
           { q: "¿Dónde es la fiesta?", options: ["en la casa de la abuela", "en la casa de la tía Marta", "en un restaurante de Puebla"], answer: 1 },
-          { q: "¿Cuántas velas tiene el pastel de verdad?", options: ["dos, con números", "ochenta", "veinte"], answer: 0 },
+          { q: "¿Qué velas lleva al final el pastel de la abuela?", options: ["dos, con números", "ochenta", "veinte"], answer: 0 },
           { q: "¿Qué necesitan todavía?", options: ["un pastel y un regalo", "una mesa larga", "sillas, vasos y una bocina"], answer: 2 },
           { q: "¿Por qué tienen que traer una chamarra?", options: ["porque la fiesta es en una montaña", "porque por la noche hace frío", "porque la abuela tiene frío"], answer: 1 },
         ],
