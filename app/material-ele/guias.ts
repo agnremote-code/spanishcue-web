@@ -1011,6 +1011,141 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["subjuntivo", "b1", "b2", "c1"],
   },
+  {
+    slug: "como-ensenar-ser-y-estar",
+    path: `${GUIAS_PATH}/como-ensenar-ser-y-estar`,
+    title: "Cómo enseñar ser y estar en ELE: secuencia de A1 a B1 con fichas",
+    description:
+      "Cómo enseñar ser y estar paso a paso: qué va primero, una regla que el alumno puede usar al hablar, errores típicos, actividades y fichas gratis de A1 a B1.",
+    h1: "Cómo enseñar ser y estar en ELE: una secuencia clara de A1 a B1",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Ser y estar es el primer gran problema de gramática de casi cualquier alumno de español, y uno de los que más vuelve. Las listas de usos («ser para profesión, origen, material, hora…») sirven para un examen, pero no ayudan a decidir en medio de una frase. Esta guía propone una secuencia concreta de A1 a B1, una idea que el alumno puede aplicar al hablar, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para cada paso, gratis y sin registro.",
+    keywords: ["cómo enseñar ser y estar", "ser y estar ELE", "ser y estar para extranjeros", "actividades ser y estar", "ser y estar A1", "diferencia entre ser y estar", "fichas ser y estar"],
+    published: "2026-11-06",
+    lessonIds: [239, 311, 312, 48, 375, 537],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: qué es algo frente a cómo está o dónde está",
+        blocks: [
+          { type: "p", text: "Antes de cualquier lista, el alumno necesita una pregunta que pueda hacerse en el momento de hablar. La más útil en clase es esta: **¿estoy diciendo qué es algo o quién es alguien, o estoy diciendo cómo está o dónde está?** «Ana es médica» dice quién es Ana; «Ana está cansada» dice cómo está hoy; «Ana está en el hospital» dice dónde está." },
+          { type: "p", text: "Esta idea no cubre todos los casos, pero cubre los suficientes para que el alumno deje de adivinar. Los casos que no encajan, como «la fiesta es en mi casa» o «está muerto», se presentan después como excepciones con su propia lógica, nunca el primer día." },
+          { type: "p", text: "Evita la explicación de «permanente frente a temporal». Es intuitiva, pero falla pronto: «es joven» no es permanente y «está muerto» no es temporal. El alumno que la aprende tiene que desaprenderla en A2. La página de [ser y estar](/material-ele/ser-y-estar) de Material ELE resume los usos con ejemplos listos para proyectar." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es presentar ser y estar juntos y completos en una sola clase. Funciona mejor separarlos y juntarlos después, con una función nueva en cada paso. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "Primera clase: presentarse con ser",
+            blocks: [
+              { type: "p", text: "La [Clase inicial](/gramatica/clase-inicial) arranca con «soy», «me llamo» y «soy de…». El alumno usa ser antes de saber que hay otro verbo, y eso está bien: primero necesita frases que funcionen." },
+            ],
+          },
+          {
+            title: "A1: ser, estar y hay por separado",
+            blocks: [
+              { type: "ol", items: [
+                "**Ser para identidad, profesión y origen**: [ficha de ser](/material-ele/ficha/ser-identidad-y-origen).",
+                "**Estar para estados y lugares**: [ficha de estar](/material-ele/ficha/estar-estados-y-lugares). Estados de ánimo y ubicación de personas y cosas conocidas.",
+                "**Hay frente a estar**: [ficha de hay y estar](/material-ele/ficha/la-ciudad-de-los-motores). «Hay un banco en la plaza» frente a «el banco está en la plaza».",
+                "**El presente irregular**: [ser, estar, ir y tener](/material-ele/ficha/presente-irregular-ser-estar-ir-tener), para que la forma no frene el uso.",
+              ] },
+              { type: "p", text: "Al final de A1 entra [estar + gerundio](/material-ele/ficha/estar-gerundio) para hablar de lo que está pasando ahora." },
+            ],
+          },
+          {
+            title: "A2: describir personas y cosas",
+            blocks: [
+              { type: "p", text: "En A2 se juntan los dos verbos para describir: «es alto, pero hoy está muy serio», «lleva una camisa azul». La ficha de [ser, estar y llevar para descripciones](/material-ele/ficha/ser-estar-y-llevar-para-descripciones) trabaja este contraste con fotos y personas reales." },
+            ],
+          },
+          {
+            title: "B1: participios y adjetivos que cambian de significado",
+            blocks: [
+              { type: "p", text: "En B1 llegan [estar + participio](/material-ele/ficha/estar-participio-para-estados-resultantes) («la puerta está cerrada»), la [diferencia entre ser + participio y estar + participio](/material-ele/ficha/diferencia-entre-ser-participio-y-estar) y los [adjetivos que cambian de significado](/material-ele/ficha/ser-y-estar-con-adjetivos-que-cambian-de-significado): ser listo y estar listo, ser rico y estar rico, ser aburrido y estar aburrido." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicarlo en clase sin listas de usos",
+        blocks: [
+          { type: "p", text: "Tres técnicas que funcionan mejor que la lista de usos:" },
+          { type: "ol", items: [
+            "**Pares mínimos.** «Es nervioso» frente a «está nervioso», «es aburrido» frente a «está aburrido». Pregunta qué cambia en la persona, no en el verbo. El alumno descubre la diferencia y la recuerda.",
+            "**Una persona real.** Pide al alumno que describa a alguien de su familia: cómo es y cómo está esta semana. Ser y estar salen en la misma frase, con un motivo real.",
+            "**Un mapa.** Para hay y estar, un plano del barrio en la pantalla: qué hay en la plaza y dónde está la farmacia. Es la forma más rápida de que el contraste se vea.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación:" },
+          { type: "ul", items: [
+            "**«Estoy profesor».** Usa estar para la profesión, a menudo por influencia de su lengua. Solución: la pregunta «¿qué es o cómo está?» y un ejercicio corto de presentarse.",
+            "**«Soy en casa».** Usa ser para la ubicación. Solución: el mapa del barrio y la regla «dónde está = estar».",
+            "**«Hay el banco en la plaza».** Usa hay con algo ya conocido. Solución: el contraste hay + un/una frente a el/la + está.",
+            "**«Es cansado».** Confunde una característica con un estado. Solución: pares mínimos con adjetivos de ánimo.",
+            "**«La fiesta está en mi casa».** El caso de los eventos. Solución: presentarlo como excepción en A2, con ejemplos de conciertos, reuniones y clases.",
+          ] },
+          { type: "p", text: "El [ejercicio de ser y estar](/material-ele/ejercicio/ser-y-estar) y el [ejercicio de A1](/material-ele/ejercicio/a1) sirven para practicar estos puntos con soluciones. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar ser y estar",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la forma; la conversación fija la elección. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**¿Quién es?** El alumno describe a un famoso con ser (profesión, origen, carácter) y el otro adivina.",
+            "**Hoy estoy…** Cada clase empieza con «hoy estoy… porque…». Dos minutos, todos los días, y estar se automatiza.",
+            "**El piso ideal.** Qué hay en el piso y dónde está cada cosa, con un plano dibujado en la pantalla.",
+            "**Antes y ahora.** Una foto de alguien hace diez años y hoy: cómo era, cómo es y cómo está.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades) y preguntas listas para el nivel en [preguntas de conversación de A1](/material-ele/preguntas/a1). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A1, ser y estar)",
+        blocks: [
+          { type: "p", text: "Para la primera clase que junta los dos verbos en A1, esta secuencia deja al alumno eligiendo con criterio:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** «¿Cómo estás hoy?» y «¿De dónde eres?». Respuestas libres, sin corregir.",
+            "**Contraste (10 minutos):** tres pares mínimos en la pantalla y la pregunta «¿qué es o cómo está?».",
+            "**Práctica (15 minutos):** la [ficha de estar](/material-ele/ficha/estar-estados-y-lugares), con corrección en voz alta.",
+            "**Producción (15 minutos):** el alumno describe a una persona de su familia, cómo es y cómo está esta semana, y el profesor hace dos preguntas de seguimiento.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de ser y estar es gratis",
+        blocks: [
+          { type: "p", text: "Se abren gratis y sin registro la [Clase inicial](/gramatica/clase-inicial), todas las fichas de esta guía, el ejercicio de ser y estar y las preguntas de conversación. Las clases interactivas completas de ser y estar forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta con teoría y ejercicios." },
+          { type: "p", text: "Si estás preparando también el resto del nivel, la página de [A1](/material-ele/a1) ordena todo el material del nivel, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne todo lo gratuito por tipo. Para el siguiente gran tema, sigue con [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña ser y estar?", answer: "Desde A1. Primero ser para identidad y origen, después estar para estados y lugares y el contraste entre hay y estar. En A2 se juntan para describir, y en B1 llegan estar + participio y los adjetivos que cambian de significado." },
+      { question: "¿Cuál es la mejor forma de explicar ser y estar?", answer: "Con una pregunta que el alumno pueda hacerse al hablar: ¿digo qué es algo, o cómo está o dónde está? Funciona mejor que la regla de permanente y temporal, que falla con ejemplos como «es joven» o «está muerto»." },
+      { question: "¿Cómo se explica la diferencia entre hay y estar?", answer: "Hay presenta algo nuevo, con un, una o sin artículo: «hay un banco en la plaza». Estar ubica algo ya conocido, con el o la: «el banco está en la plaza». Un plano del barrio en la pantalla es la forma más rápida de practicarlo." },
+      { question: "¿Hay fichas de ser y estar gratis?", answer: "Sí. En Material ELE de SpanishCue hay fichas gratis de ser, estar, hay y estar, descripciones y adjetivos que cambian de significado, con soluciones y sin registro, además de un ejercicio de ser y estar y preguntas de conversación." },
+    ],
+    related: ["ser-y-estar", "a1", "a2", "b1"],
+  },
 ];
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
