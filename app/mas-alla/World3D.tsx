@@ -21,7 +21,7 @@ import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
 import { createBubbles, disposeGroup, stepWalker, type Box, type Talker, type Walker } from '../mundo-3d/kit3d';
 import { talkCircle, type Place3D, type TalkCircle, type VoiceWalker } from './common3d';
-import { buildUmbral } from './umbral3d';
+import { buildUmbral, createMirror } from './umbral3d';
 import { buildCielo } from './cielo3d';
 import { buildInfierno } from './infierno3d';
 import { buildIntro, INTRO_SECONDS, type Intro, type IntroBeat } from './intro3d';
@@ -54,7 +54,7 @@ export type WorldProps = {
 type Api = { joy: { x: number; y: number }; held: Set<string>; clear: () => void; interact: () => void; jump: () => void; nitro: { on: boolean } };
 type Live = { place: Place3D; rings: Map<string, TalkCircle>; walking: { w: VoiceWalker; ring: TalkCircle }[]; bubbles: ReturnType<typeof createBubbles>; greeted: Set<string> };
 
-const BUILDERS: Record<string, (o: { low: boolean; shadows: boolean }) => Place3D> = { umbral: buildUmbral, cielo: buildCielo, infierno: buildInfierno };
+const BUILDERS: Record<string, (o: { low: boolean; shadows: boolean; mirror?: ReturnType<typeof createMirror> }) => Place3D> = { umbral: buildUmbral, cielo: buildCielo, infierno: buildInfierno };
 
 export default function World3D(props: WorldProps) {
   const live = useRef(props);
@@ -174,10 +174,22 @@ export default function World3D(props: WorldProps) {
       renderer.toneMappingExposure = L.exposure;
       if (bloom) { bloom.strength = pl.id === 'cielo' ? 0.38 : pl.id === 'infierno' ? 0.55 : 0.45; bloom.threshold = pl.id === 'cielo' ? 0.9 : 0.82; }
     }
+    // 2026-11-06 repair (SwiftShader counts in the LQG file). The kit's disposeGroup frees
+    // geometries, materials and textures, but not an InstancedMesh's instance buffers
+    // (9 GPU buffers per Cielo + Infierno round). The Umbral's black mirror is made once
+    // per mount and reused (see createMirror), so it is lifted out before a place is freed
+    // and disposed only on unmount.
+    let mirror: ReturnType<typeof createMirror> | null = null;
+    function free(root: THREE.Object3D) {
+      mirror?.removeFromParent();
+      root.traverse(o => { if ((o as THREE.InstancedMesh).isInstancedMesh) (o as THREE.InstancedMesh).dispose(); });
+      disposeGroup(root);
+    }
     function enter(id: string, from: string | null) {
-      if (current) { disposeGroup(current.place.group); current = null; }
-      if (intro) { disposeGroup(intro.group); intro = null; }
-      const built = BUILDERS[id]({ low, shadows: !low });
+      if (current) { free(current.place.group); current = null; }
+      if (intro) { free(intro.group); intro = null; }
+      if (id === 'umbral' && !low) mirror ??= createMirror();
+      const built = BUILDERS[id]({ low, shadows: !low, mirror: mirror ?? undefined });
       const rings = new Map<string, TalkCircle>();
       const flames = id === 'infierno';
       for (const s of built.spots) rings.set(s.id, talkCircle(built.group, s.x, s.z, { flames, voice: false }));
@@ -454,11 +466,17 @@ export default function World3D(props: WorldProps) {
       window.removeEventListener('keydown', onKeyDown); window.removeEventListener('keyup', onKeyUp); window.removeEventListener('blur', onBlur);
       el.removeEventListener('pointerdown', onDown); el.removeEventListener('pointermove', onMove);
       el.removeEventListener('pointerup', onUp); el.removeEventListener('pointercancel', onUp); el.removeEventListener('wheel', onWheel);
-      if (current) disposeGroup(current.place.group);
-      if (intro) disposeGroup(intro.group);
-      disposeGroup(scene);
-      composer?.dispose();
+      // 2026-11-06 repair: the places, then whatever is left in the scene (hero, soul glow),
+      // then the bloom passes' own render targets (composer.dispose() frees only its two),
+      // the sun's shadow map, and finally the context, which frees any GPU memory left.
+      if (current) free(current.place.group);
+      if (intro) free(intro.group);
+      free(scene);
+      if (mirror) { mirror.dispose(); mirror.geometry.dispose(); mirror = null; }
+      if (composer) { for (const pass of composer.passes) pass.dispose(); composer.dispose(); }
+      sun.shadow.map?.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
       renderer.domElement.remove();
       api.current = null;
     };

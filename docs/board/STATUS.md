@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-05 by the Thursday reliability routine (scheduled cloud run; Alejandro convened as a subagent of the facilitator for review, see "Current work")._
+_Last updated: 2026-11-06 by the Friday 3D + assessment routine (scheduled cloud run; Alejandro convened twice as a subagent of the facilitator, for the code review and the W45 assessment, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -52,6 +52,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
+- **R0, NEW STATE 2026-11-06: Search Console is DISCONNECTED in Windsor.** `get_connectors` lists only `google_ads` (423-495-3611), and `get_data searchconsole` returns "No searchconsole accounts are configured". HYPOTHESIS: the extra accounts were removed for the Free plan, and Search Console went with them. The owner was pushed the reconnect link (`get_connector_connect_info searchconsole`) on 2026-11-06: re-authorize, then select `sc-domain:spanishcue.com` and click Finish. The history below is kept.
 - **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-11-03, Windsor returned the same "reads are paused … 6 accounts connected" error):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
@@ -78,6 +79,42 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-06 (Friday 3D + assessment routine): gated repair of the Más allá GPU leak (place swaps + unmount) + W45 assessment** (branch `claude/friday-assessment-20261106`, base main `ca5068a7`). Subscription usage: **UNKNOWN**.
+  - **Unit choice:** R4 is unanswered (#282 has had no comment since 10-26 and no push since 11-02), so #282 was not touched, and the W45 fallback was taken: the next leak repair, Más allá, reported as a **repair**.
+  - **Board:** convened proportionately.
+    - The facilitator built the repair.
+    - A fresh agent acting as Alejandro did the code review: **APPROVE**, 0 blockers, 5 notes. NB1 and NB2 were applied.
+    - A second fresh agent acting as Alejandro wrote the assessment.
+    - Sofia and Martin were not convened.
+    - Verbatim: [transcripts/2026-11-06-friday-3d-assessment.md](transcripts/2026-11-06-friday-3d-assessment.md).
+  - **Evidence:** LQG file [mas-alla-repair-gpu-20261106.md](../audits/mas-alla-repair-gpu-20261106.md). New check `node scripts/qa-feria-browser.mjs --masalla-gpu`: two Umbral → Cielo → Umbral → Infierno → Umbral rounds, then an unmount.
+    - On main: +9 buffers per round at 390 and 1280 px, and +4 textures per round at 1280 px (the Umbral mirror's render target, plus a three.js transmission target per new mirror camera). The unmount left 5/29 textures and 18 buffers, and the context was never lost.
+    - Fixed: no growth; the unmount leaves 5/7 textures and 0 buffers, and the context is lost. 6/6, reproduced by the reviewer.
+    - Fix: InstancedMesh dispose on every swap; one mirror per mount, reused; composer passes and the shadow map disposed; `forceContextLoss`. The shared `disposeGroup` was not changed.
+    - Regression test `tests/mas-alla-gpu.test.mjs` fails on main. The reviewer also ran two mutation checks, and the test catches both.
+  - **Checks (local, at `0b151cc7` plus docs):**
+    - `npm test`: exit 0, 1,575 pass, 0 fail, run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`, after fetching the pinned baseline commits.
+    - `validate:artifact`: OK.
+    - `tsc`: only the 3 errors already on main.
+    - eslint on the changed files: clean.
+    - `git diff --check`: clean.
+    - NB1 changed one QA threshold line after that, and `--masalla-gpu` re-ran 6/6.
+  - **W45 assessment:** [assessments/2026-W45.md](assessments/2026-W45.md) (Alejandro).
+    - By type: 3 board units in production (#357, #365, #387), plus this repair if it deploys. Strict LQG reading: 1, plus this one.
+    - 0 new worlds.
+    - 5 non-board seven-level `featured:true` worlds in 8 days have no LQG file.
+    - Every SEO indicator is UNKNOWN (fourth week).
+    - The W46 plan is in its §6.
+  - **Search Console:** disconnected, not just paused (see R0). The owner was notified by push this run.
+  - **Housekeeping:** this run first pushed the branch as `claude/board-friday-2026-W45`, then renamed it. Deleting the old remote branch failed ("remote end hung up"), so it still exists at `0b151cc7`, a subset of this branch. Anyone may delete it.
+  - **Release:** see the records PR (filled in after merge).
+  - **Next action (W46, from assessment §6):**
+    1. Mon: STT check v3 with a phoneme-level aligner, declared before any run.
+    2. Tue: the /material-ele §3.2 decision.
+    3. Wed: a 3D world the board can gate by itself, or the next leak repair.
+    4. Thu: the UID re-keying decision (first line of the brief).
+    5. Fri: a sampled audit of «El tren» and «La boda», plus the «Más allá» A2 rewording, the «También, tampoco» check, and the W46 assessment.
+    6. Kit follow-up (review NB4): `disposeGroup` in `app/mundo-3d/kit3d.ts` does not free InstancedMesh buffers for any world that uses it.
 - **2026-11-05 (Thursday reliability routine): PR #387** (branch `claude/thursday-review-20261105`, base main `27f896e9`). Subscription usage: **UNKNOWN**.
   - **Board:** convened proportionately. The facilitator did the audit and wrote the fixes. A fresh agent acting as Alejandro did the code review: **APPROVE**, 0 blockers, 4 non-blocking notes, none needing a change. Sofia and Martin were not needed. Verbatim: [transcripts/2026-11-05-thursday-reliability.md](transcripts/2026-11-05-thursday-reliability.md).
   - **CI and deploy health (VERIFIED, Actions runs API):**

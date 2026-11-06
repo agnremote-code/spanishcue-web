@@ -17,6 +17,15 @@ Entry format:
 
 ## Pending verification
 
+## 2026-11-06 — «Más allá: cielo e infierno»: place swaps and unmount free the GPU (repair)
+- URL(s): https://spanishcue.com/mas-alla (PRO; anonymous users → /acceso).
+- Level(s) / objectives: unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: filled in after release.
+- Production smoke evidence: pending.
+- Concept file / LQG review file: `docs/audits/mas-alla-repair-gpu-20261106.md`.
+- Built by / reviewed by: facilitator / Alejandro (fresh agent, APPROVE).
+- Known limitations: SwiftShader counts only (no real device). There is no `webglcontextlost` handler. The kit's `disposeGroup` still misses instance buffers in other worlds.
+
 ## 2026-11-03 — Material ELE: template Spanish, activity levels, video sitemap, grammar topic relevance (SEO/page)
 - URL(s):
   - every `https://spanishcue.com/material-ele/<grupo>/<tema>` and `…/<nivel>` page;

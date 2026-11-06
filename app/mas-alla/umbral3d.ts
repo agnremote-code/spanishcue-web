@@ -10,7 +10,19 @@ import { box, canvas, cylinder, random, type Light } from '../mundo-3d/kit3d';
 import { carved, finishPlace, fire, particles, populate, skyDome, veinTexture, type Place3D } from './common3d';
 import { softGlowTexture } from './figures3d';
 
-export function buildUmbral({ low, shadows }: { low: boolean; shadows: boolean }): Place3D {
+/**
+ * The black mirror. World3D makes ONE per mount and hands it to every Umbral it
+ * builds: three.js keeps a transmission target per camera it renders through, and
+ * a new Reflector brings a new virtual camera, so a fresh mirror per visit left a
+ * screen-sized GPU target behind each time (2026-11-06 repair, LQG file).
+ */
+export function createMirror() {
+  const mirror = new Reflector(new THREE.PlaneGeometry(220, 220), { textureWidth: 1024, textureHeight: 1024, color: new THREE.Color('#5a5a6a'), clipBias: 0.003 });
+  mirror.rotation.x = -Math.PI / 2; mirror.position.y = -0.01;
+  return mirror;
+}
+
+export function buildUmbral({ low, shadows, mirror }: { low: boolean; shadows: boolean; mirror?: Reflector }): Place3D {
   const group = new THREE.Group();
   const r = random(77);
   const anims: ((t: number, dt: number) => void)[] = [];
@@ -24,11 +36,7 @@ export function buildUmbral({ low, shadows }: { low: boolean; shadows: boolean }
   }));
 
   // ---------------------------------------------------------------- the black mirror
-  if (!low) {
-    const mirror = new Reflector(new THREE.PlaneGeometry(220, 220), { textureWidth: 1024, textureHeight: 1024, color: new THREE.Color('#5a5a6a'), clipBias: 0.003 });
-    mirror.rotation.x = -Math.PI / 2; mirror.position.y = -0.01;
-    group.add(mirror);
-  }
+  if (!low) group.add(mirror ?? createMirror());
   const film = new THREE.Mesh(new THREE.PlaneGeometry(220, 220), new THREE.MeshStandardMaterial({ map: veinTexture('#06060c', 'rgba(140,120,255,.12)', 5, 512, 30, 1.5), color: '#ffffff', transparent: true, opacity: low ? 1 : 0.55, roughness: 0.2, metalness: 0.6 }));
   (film.material as THREE.MeshStandardMaterial).map!.repeat.set(10, 10);
   film.rotation.x = -Math.PI / 2; film.receiveShadow = true;
