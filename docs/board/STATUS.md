@@ -107,7 +107,10 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - The W46 plan is in its §6.
   - **Search Console:** disconnected, not just paused (see R0). The owner was notified by push this run.
   - **Housekeeping:** this run first pushed the branch as `claude/board-friday-2026-W45`, then renamed it. Deleting the old remote branch failed ("remote end hung up"), so it still exists at `0b151cc7`, a subset of this branch. Anyone may delete it.
-  - **Release:** see the records PR (filled in after merge).
+  - **Release (VERIFIED):** #395 merged as `ff92f4f0`.
+    - Runs: CI + Auto Merge [42154987195](https://github.com/agnremote-code/spanishcue-web/actions/runs/42154987195), staging [42156815030](https://github.com/agnremote-code/spanishcue-web/actions/runs/42156815030) and production [42157200876](https://github.com/agnremote-code/spanishcue-web/actions/runs/42157200876), all successful.
+    - The production smoke on https://spanishcue.com passed (job 127694072383, 03:43Z), and the rollback was skipped. main = production = `ff92f4f0`.
+    - PUBLISHED.md moved the entry to Published (records PR from `claude/friday-assessment-records-20261106`).
   - **Next action (W46, from assessment §6):**
     1. Mon: STT check v3 with a phoneme-level aligner, declared before any run.
     2. Tue: the /material-ele §3.2 decision.
