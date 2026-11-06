@@ -11,6 +11,7 @@
 //   node scripts/qa-feria-browser.mjs --preview  # 8 s 640×360 H.264 hover clip (needs ffmpeg)
 //   node scripts/qa-feria-browser.mjs --hospital-gpu  # Hospital San Casi Vivo: unmount frees the GPU (2026-10-30 repair)
 //   node scripts/qa-feria-browser.mjs --bosque-gpu    # Bosque de los hongos gigantes: unmount frees the GPU (2026-11-04 repair)
+//   node scripts/qa-feria-browser.mjs --masalla-gpu   # Más allá: place swaps and unmount free the GPU (2026-11-06 repair)
 //   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (FERIA_COVER=<circle|intro>)
 //
 // Env: FERIA_QA_OUTPUT (evidence folder), FERIA_QA_LOOK_CIRCLES (Busca
@@ -34,8 +35,8 @@ import { CONTENT } from '../app/la-feria-de-villaluz/levels.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = new Set(process.argv.slice(2));
-const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview') && !argv.has('--hospital-gpu') && !argv.has('--bosque-gpu');
-const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview'), hospitalGpu: argv.has('--hospital-gpu'), bosqueGpu: argv.has('--bosque-gpu') };
+const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview') && !argv.has('--hospital-gpu') && !argv.has('--bosque-gpu') && !argv.has('--masalla-gpu');
+const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview'), hospitalGpu: argv.has('--hospital-gpu'), bosqueGpu: argv.has('--bosque-gpu'), masallaGpu: argv.has('--masalla-gpu') };
 const out = resolve(process.env.FERIA_QA_OUTPUT || resolve(repo, '.qa/feria-browser'));
 await mkdir(resolve(out, 'look'), { recursive: true });
 await mkdir(resolve(out, 'smoke'), { recursive: true });
@@ -52,6 +53,8 @@ import World3D from './app/la-feria-de-villaluz/World3D';
 import HospitalWorld from './app/hospital-san-casi-vivo/World3D';
 import './app/hospital-san-casi-vivo/hospital.css';
 import BosqueWorld from './app/bosque-de-los-hongos-gigantes/World3D';
+import MasAllaWorld from './app/mas-alla/World3D';
+import './app/mas-alla/mas-alla.css';
 import { placeSet } from './app/la-feria-de-villaluz/layout.mjs';
 window.__qa = { stats: null, failed: false, gl: 0, frames: 0 };
 // T5: real WebGL draw calls, counted on the context the same way for every
@@ -79,6 +82,14 @@ function BosqueHarness() {
   return <main className="bq-harness" style={{ position: 'fixed', inset: 0 }}>{mounted && <BosqueWorld paused={false} visited={[]} completed={false} unlocked={false}
     onZone={none} onFail={() => { window.__qa.failed = true; }} />}</main>;
 }
+function MasAllaHarness() {
+  const [mounted, setMounted] = useState(true);
+  const [view, setView] = useState('umbral');
+  useEffect(() => { window.__qa.masallaOff = () => setMounted(false); window.__qa.masallaOn = () => setMounted(true); window.__qa.masallaView = v => setView(v); }, []);
+  const none = () => {};
+  return <main className="ma-harness" style={{ position: 'fixed', inset: 0 }}>{mounted && <MasAllaWorld view={view} spotOpen={null} done={[]} paused={false} inset={{ right: 0, bottom: 0 }} greetings={{}} act={0}
+    onIntroBeat={none} onNear={none} onPortal={none} onExit={none} onFinal={none} onSpot={none} onPose={none} onFail={() => { window.__qa.failed = true; }} />}</main>;
+}
 function LookHarness() {
   const [busca, setBusca] = useState(null);
   const [intro, setIntro] = useState(false);
@@ -92,7 +103,7 @@ function LookHarness() {
     onSpot={() => {}} onNear={() => {}} onPose={() => {}} onFail={() => { window.__qa.failed = true; }} onStats={s => { window.__qa.stats = s; }} /></main>;
 }
 const q = new URLSearchParams(location.search);
-createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : q.get('harness') === 'hospital' ? <HospitalHarness /> : q.get('harness') === 'bosque' ? <BosqueHarness /> : <FeriaGame />);`,
+createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : q.get('harness') === 'hospital' ? <HospitalHarness /> : q.get('harness') === 'bosque' ? <BosqueHarness /> : q.get('harness') === 'masalla' ? <MasAllaHarness /> : <FeriaGame />);`,
     resolveDir: repo, loader: 'tsx',
   },
   bundle: true, format: 'esm', splitting: true, outdir: resolve(out, 'assets'), entryNames: 'lesson', chunkNames: 'chunk-[hash]', jsx: 'automatic',
@@ -736,6 +747,51 @@ if (RUN.bosqueGpu) {
   }
 }
 
+// ------------------------------------------------------------------ Más allá place swaps + unmount (gated repair, 2026-11-06)
+// Same leak list (STATUS 2026-10-28). Más allá builds the Cielo and the Infierno
+// when you cross a gate and frees them on the way out, so a swap must free its
+// place too. Mounted alone through ?harness=masalla in the Umbral, then
+// Umbral → Cielo → Umbral → Infierno → Umbral, then unmounted. Main numbers: LQG file.
+if (RUN.masallaGpu) {
+  const settle = async (page, view) => { await page.evaluate(v => window.__qa.masallaView(v), view); await page.waitForTimeout(2500); await frames(page, 10); };
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1280, height: 800 }]) {
+    const label = `masalla-${viewport.width}`;
+    const context = await browser.newContext({ viewport, deviceScaleFactor: 1.25, ...(viewport.width < 760 ? { hasTouch: true, isMobile: true } : {}) });
+    await context.addInitScript(countGpu);
+    const page = await context.newPage();
+    page.setDefaultTimeout(30000);
+    page.on('pageerror', e => report.errors.push(`${label}: ${e.message}`));
+    page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) report.errors.push(`${label} console: ${m.text()}`); });
+    await page.goto(`${origin}/?harness=masalla`);
+    await page.locator('.ma-harness canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 20);
+    const umbral = await page.evaluate(() => ({ ...window.__gpu }));
+    await page.screenshot({ path: resolve(out, 'smoke', `${label}-umbral-first.png`), timeout: 120000 });
+    // Two full rounds: the first warms every lazily built GPU object (shadow map, bloom targets, place shaders);
+    // a leak on the swap shows as growth from round 1 to round 2.
+    const round = async () => { await settle(page, 'cielo'); await settle(page, 'umbral'); await settle(page, 'infierno'); await settle(page, 'umbral'); return page.evaluate(() => ({ ...window.__gpu })); };
+    const first = await round(), back = await round();
+    await page.screenshot({ path: resolve(out, 'smoke', `${label}-umbral-after-two-rounds.png`), timeout: 120000 }); // the reused mirror still reflects
+    smoke(`${viewport.width} masalla place swaps free the place they leave (no growth from round 1 to round 2 back in the Umbral)`, back.buffers <= first.buffers && back.textures <= first.textures, { umbral, first, back });
+    await page.evaluate(() => window.__qa.masallaOff());
+    await page.locator('.ma-harness canvas').first().waitFor({ state: 'detached' });
+    await page.waitForTimeout(1500);
+    const after = await page.evaluate(() => ({ ...window.__gpu, failed: window.__qa.failed }));
+    // Desktop quality renders transmissive glass: three.js keeps one transmission target per camera
+    // (screen camera + mirror camera) that user code cannot reach; the context loss releases them.
+    const leftover = viewport.width < 760 ? 5 : 7;
+    smoke(`${viewport.width} masalla unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && back.textures > after.textures && after.textures <= leftover && after.buffers <= 5, { back, after, leftover });
+    const errorsBefore = report.errors.length;
+    await page.evaluate(() => window.__qa.masallaOn());
+    await page.locator('.ma-harness canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 15);
+    const px = await pixelStats(page, await page.screenshot({ timeout: 120000 })); // the canvas fills the page; an element shot waits for a 'stable' box SwiftShader frames rarely give
+    const failed = await page.evaluate(() => window.__qa.failed);
+    smoke(`${viewport.width} masalla remounts after the unmount with a non-blank canvas`, !failed && report.errors.length === errorsBefore && px.colours > 200 && px.sd > 8, px);
+    await context.close();
+  }
+}
+
 report.missing = [...missing].sort();
 await writeFile(resolve(out, 'results.json'), JSON.stringify(report, null, 2));
 await browser.close();
@@ -744,5 +800,5 @@ console.log(`Evidence: ${out}`);
 console.log(`Page/console errors: ${report.errors.length}${report.errors.length ? `\n  ${report.errors.join('\n  ')}` : ''}`);
 console.log(`404s: ${report.missing.join(', ') || 'none'}`);
 const failed = report.smoke.filter(s => !s.passed);
-if (RUN.smoke || RUN.hospitalGpu || RUN.bosqueGpu) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
+if (RUN.smoke || RUN.hospitalGpu || RUN.bosqueGpu || RUN.masallaGpu) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
 if (failed.length || report.errors.length) process.exitCode = 1;

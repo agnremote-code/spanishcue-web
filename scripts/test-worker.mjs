@@ -19,7 +19,7 @@ try{
  await run(['--test','tests/hospital-san-casi-vivo.test.mjs']);
  await run(['--test','tests/la-feria-de-villaluz.test.mjs','tests/feria-look-contract.test.mjs']);
  await run(['--test','tests/madrid-infectada.test.mjs']);
- await run(['--test','tests/mas-alla.test.mjs']);
+ await run(['--test','tests/mas-alla.test.mjs','tests/mas-alla-gpu.test.mjs']);
  await run(['--test','tests/vuelo-cancelado.test.mjs']);
  await run(['--test','tests/el-consorcio.test.mjs']);
  await run(['--test','tests/la-boda.test.mjs']);
