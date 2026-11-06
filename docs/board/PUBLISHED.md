@@ -17,15 +17,6 @@ Entry format:
 
 ## Pending verification
 
-## 2026-11-06 — «Más allá: cielo e infierno»: place swaps and unmount free the GPU (repair)
-- URL(s): https://spanishcue.com/mas-alla (PRO; anonymous users → /acceso).
-- Level(s) / objectives: unchanged. No lesson content changed.
-- PR / merged SHA / production deploy run: filled in after release.
-- Production smoke evidence: pending.
-- Concept file / LQG review file: `docs/audits/mas-alla-repair-gpu-20261106.md`.
-- Built by / reviewed by: facilitator / Alejandro (fresh agent, APPROVE).
-- Known limitations: SwiftShader counts only (no real device). There is no `webglcontextlost` handler. The kit's `disposeGroup` still misses instance buffers in other worlds.
-
 ## 2026-11-03 — Material ELE: template Spanish, activity levels, video sitemap, grammar topic relevance (SEO/page)
 - URL(s):
   - every `https://spanishcue.com/material-ele/<grupo>/<tema>` and `…/<nivel>` page;
@@ -41,6 +32,15 @@ Entry format:
 - Known limitations: the generated `/material-ele` families still fail the Indexable Teacher Page standard (§3.2), and a board decision is pending. SEO defects 4 (lesson 26 A1 link) and 5 (long resource titles) are open.
 
 ## Published
+
+## 2026-11-06 — «Más allá: cielo e infierno»: place swaps and unmount free the GPU (repair)
+- URL(s): https://spanishcue.com/mas-alla (PRO; anonymous users → /acceso).
+- Level(s) / objectives: unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: PR #395 → `ff92f4f0b42f94a27d29d57337f2823ee2aa2090`; CI + Auto Merge 42154987195 (on PR head `e325b65a`), Deploy Staging 42156815030 and Deploy Production 42157200876, all successful.
+- Production smoke evidence: the production workflow's smoke step against https://spanishcue.com (job 127694072383, 03:43Z) succeeded and printed `"passed": true`, and the rollback was skipped. This repair has no anonymous surface: the smoke shows that the release is healthy, not the GPU behaviour itself. The evidence for the fix is the SwiftShader count and the regression test (LQG file).
+- Concept file / LQG review file: `docs/audits/mas-alla-repair-gpu-20261106.md`.
+- Built by / reviewed by: facilitator / Alejandro (fresh agent, APPROVE).
+- Known limitations: SwiftShader counts only (no real device). There is no `webglcontextlost` handler. The kit's `disposeGroup` still misses instance buffers in other worlds.
 
 ## 2026-11-04 — «El bosque de los hongos gigantes»: the 3D world frees the GPU on unmount (repair)
 - URL(s): https://spanishcue.com/bosque-de-los-hongos-gigantes (PRO; anonymous users → /acceso).
