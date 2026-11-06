@@ -780,7 +780,7 @@ if (RUN.masallaGpu) {
     // Desktop quality renders transmissive glass: three.js keeps one transmission target per camera
     // (screen camera + mirror camera) that user code cannot reach; the context loss releases them.
     const leftover = viewport.width < 760 ? 5 : 7;
-    smoke(`${viewport.width} masalla unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && back.textures > after.textures && after.textures <= leftover && after.buffers <= 5, { back, after, leftover });
+    smoke(`${viewport.width} masalla unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && back.textures > after.textures && after.textures <= leftover && after.buffers === 0, { back, after, leftover }); // measured 0 after the repair (review NB1)
     const errorsBefore = report.errors.length;
     await page.evaluate(() => window.__qa.masallaOn());
     await page.locator('.ma-harness canvas').first().waitFor({ timeout: 60000 });

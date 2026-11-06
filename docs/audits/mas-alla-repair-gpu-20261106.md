@@ -33,7 +33,13 @@ The new check `node scripts/qa-feria-browser.mjs --masalla-gpu` mounts the world
 
 ## Gates
 - **G3** (`npm run test:language`): run as part of `npm test`. No text changed.
-- **G4** (author ≠ reviewer): see the transcript [2026-11-06-friday-3d-assessment.md](../board/transcripts/2026-11-06-friday-3d-assessment.md) for Alejandro's verdict, verbatim.
+- **G4** (author ≠ reviewer): Alejandro (a fresh agent) returned **APPROVE** on `0b151cc7`, with 0 blockers and 5 notes. NB1 (buffers after the unmount must be 0, not ≤ 5, in the Más allá check) and NB2 (the scope note below) were applied. NB3–NB5 need no change (the round-to-round check is enough for per-visit growth; a kit-level `disposeGroup` fix is a follow-up outside this one-world unit; the node test checks dispose calls, while the harness gives the GPU counts).
+  - He re-ran the browser check independently: 6/6, with the same numbers as the facilitator's.
+  - He showed that the test fails on main, in a `git archive ca5068a` copy.
+  - He ran two mutation checks (a new mirror per visit; no `forceContextLoss`); each makes the test fail.
+  - He did not run the browser check on main, so the main-side numbers are the facilitator's only.
+  - Verbatim: [2026-11-06-friday-3d-assessment.md](../board/transcripts/2026-11-06-friday-3d-assessment.md).
+- **Scope of the browser evidence (NB2):** at 390 px the harness runs the low-quality path (no mirror, no bloom), so the mirror path is measured in a browser only at 1280 px.
 - **G6 level honesty:** unchanged (no level or catalog change).
 - **Beat labelling:** not applicable, since no beat changed.
 - **G5(a)** (SwiftShader): `--masalla-gpu` passes **6/6** with 0 page or console errors and no 404s. At 390 and 1280 px: swaps do not grow, unmount frees the GPU and loses the context, and the world remounts in the same page with a non-blank canvas (760 and 1,705 colours).
