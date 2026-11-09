@@ -58,8 +58,8 @@ test('priority rules: repetition raises, correction and improvement lower, super
   assert.ok(corrected.score<many.score);
   const worked=pure.summarizeCategories([e('1',{createdAt:at(1),correctedAt:at(2)})],[{id:'n',category:'ser-estar',kind:'worked',text:'',createdAt:at(3)}],now)[0];
   assert.equal(worked.status,'superado');assert.equal(worked.afterWork.errorsAfter,0);
-  assert.deepEqual(pure.categoriesToSuggest([e('1')],new Set(['ser-estar'])),[]);
-  assert.deepEqual(pure.categoriesToSuggest([e('1')],new Set()),['ser-estar']);
+  assert.deepEqual(pure.categoriesToSuggest([e('1')],new Set(['ser-estar']),now),[]);
+  assert.deepEqual(pure.categoriesToSuggest([e('1')],new Set(),now),['ser-estar']);
 });
 
 test('class plan quotes the learner’s real errors and never invents history',()=>{

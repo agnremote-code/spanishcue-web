@@ -13404,6 +13404,18 @@
       "text": "Acento de las formas de vos",
       "reason": "Autoestudio espejo (2026-11-05): regional voseo shown and explained as variation in a dialogue, example or objective (or the name Tomás); instructions stay in tú.",
       "category": "regional-pedagogy"
+    },
+    {
+      "path": "app/partners/page.tsx",
+      "text": "Vos les ayudás a conseguir alumnos.",
+      "category": "neutral-context",
+      "reason": "Exact commercial hero copy explicitly supplied by the owner in the 2026-11-09 Partners brief. Preserve the requested voseo here only; the rest of the Partners UI uses tú."
+    },
+    {
+      "path": "app/partners/page.tsx",
+      "text": "Convertí tu red de profesores de español en una nueva fuente de ingresos. Recomendá SpanishCue y ganá comisiones por cada suscripción PRO.",
+      "category": "neutral-context",
+      "reason": "Exact commercial hero copy explicitly supplied by the owner in the 2026-11-09 Partners brief. Preserve the requested voseo here only; the rest of the Partners UI uses tú."
     }
   ]
 }

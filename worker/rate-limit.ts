@@ -19,6 +19,7 @@ export const RATE_LIMITED_POSTS: ReadonlySet<string> = new Set([
   "/api/billing/paddle/checkout",
   "/api/phonetics/speech-attempt",
   "/api/newsletter",
+  "/api/partners/apply",
 ]);
 
 export function rateLimitKey(request: Request, pathname: string, deployment: string | undefined): string | null {
