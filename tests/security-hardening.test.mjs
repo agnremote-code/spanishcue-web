@@ -57,3 +57,4 @@ test("the build declares the abuse limiter binding", async () => {
 // Partner intake and accounting use the same owner/IP security boundary.
 import "./partners/domain.test.mjs";
 import "./partners/routes.test.mjs";
+import "./partners/migration.test.mjs";

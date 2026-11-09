@@ -55,7 +55,9 @@ await rm(displacedRoot, { recursive: true, force: true });
 
 const pause = (milliseconds) =>
   new Promise((resolvePause) => setTimeout(resolvePause, milliseconds));
-const deadline = Date.now() + 10_000;
+// A large denylist on a synchronized filesystem can take longer than 10 s
+// to complete twelve clean scans. Keep all twelve checks; allow the I/O time.
+const deadline = Date.now() + 60_000;
 let stableChecks = 0;
 let recreatedPaths = [];
 while (Date.now() < deadline) {

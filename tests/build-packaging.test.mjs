@@ -65,3 +65,16 @@ test("final protected build absorbs a late static asset copy", async () => {
     await rm(root, { recursive: true, force: true });
   }
 });
+
+test("anonymous Partners visitors receive every public interactive chunk while PRO worlds remain protected",async()=>{
+  const report=JSON.parse(await readFile('dist/.openai/client-protection-report.json','utf8'));
+  const origin=process.env.CHESPANISH_TEST_ORIGIN;
+  for(const name of ['ApplicationForm','Calculator','ProductVideos']){
+    const file=report.publicFiles.find(path=>new RegExp(`(^|/)${name}-[^/]+\\.js$`).test(path));
+    assert.ok(file,`${name} must be a public chunk: anonymous Partners visitors cannot load a PRO-only module`);
+    assert.ok(!report.protectedFiles.includes(file));
+    await access(join('dist/client',file));
+    if(origin){const response=await fetch(new URL('/'+file,origin));assert.equal(response.status,200,`${name} must load anonymously`);assert.match(response.headers.get('content-type')||'',/javascript/);}
+  }
+  assert.ok(report.protectedFiles.some(path=>/(^|\/)NocheAbierta-[^/]+\.js$/.test(path)),'the full PRO world must remain private');
+});
