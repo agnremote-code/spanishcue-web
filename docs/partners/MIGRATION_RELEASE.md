@@ -41,3 +41,9 @@ This is a separate migration release, not an ordinary deployment hook. Only a pu
 No existing deployment workflow or ad-related PR #209 file is edited. This owner-directed dedicated production operation is isolated in its own workflow despite the older unrelated workflow PR remaining open; it shares production serialization and does not change the older PR's source or intent.
 
 Pre-execution review: independent review found an overly permissive schema normalizer. It now preserves quoted SQL defaults and CHECK values exactly; regression tests reject changed case or internal whitespace. Backup restore/rehearsal, exact authorization/binding checks and partial-schema rejection pass locally. A failed or ambiguous SQL execution is recorded as requiring reconciliation, never as zero confirmed writes or as an automatic retry.
+
+## Public client activation correction
+
+Live smoke testing found the Partners public client islands were incorrectly classified as private build modules, causing a dynamic import failure after server rendering. The exact ApplicationForm, Calculator and ProductVideos roots now join the public allowlist; paid world modules remain protected. The packaging regression test checks actual output classification/files and anonymous HTTP access when run with the existing test Worker. The protected-build finalizer retains all twelve clean scans and denylist checks while allowing sixty seconds for synchronized-filesystem I/O.
+
+Validation: production build succeeded; 30 packaging/security/release-policy assertions passed, including actual public island output and private premium-world classification. Changed scripts/tests passed ESLint. Independent review found no safety/security issue in these narrow changes. CI remains the full-suite and merge gate.

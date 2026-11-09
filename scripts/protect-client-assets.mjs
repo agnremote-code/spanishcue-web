@@ -96,6 +96,10 @@ const publicRoots = new Set([
   "app/audience/TrackedLink.tsx",
   // Anonymous institutional demo requests carry no educational lesson bodies.
   "app/academias/DemoForm.tsx",
+  // Public Partners intake/calculator/product recordings contain no paid lesson bodies.
+  "app/partners/ApplicationForm.tsx",
+  "app/partners/Calculator.tsx",
+  "app/partners/ProductVideos.tsx",
   "app/academias/WhatsAppFloat.tsx",
   "app/bauti/AskBauti.tsx",
   "app/academias/panel/AcademyPanel.tsx",
