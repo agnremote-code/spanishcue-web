@@ -1,6 +1,6 @@
 # Partners: dedicated additive migration proposal
 
-Status: PROPOSED, tested in disposable SQLite and local D1. NOT executed against production.
+Status: AUTHORIZED by the owner in this conversation on 2026-11-10, for the exact SQL checksum below. Tested in disposable SQLite and local D1. NOT executed against production; provider access and production preflight remain pending.
 Source base: `78f178be91a5fb6b40d32947eeeb2a078b259ac3` (GitHub main when this task started).
 Forward SQL: `docs/partners/schema.sql`.
 SHA-256: `7107020f64c27a1c5f2abebebf16c6d04848ff60cbb9958816cebaa6e4111a86`.
