@@ -37,6 +37,7 @@ export default async function Admin() {
         <p><Link href="/?vista=profesor">Probar la vista de profesor →</Link></p>
         <p><Link href="/admin/newsletter">Newsletter: emails capturados →</Link></p>
         <p><Link href="/admin/reportes">Reportes de clases →</Link></p>
+        <p><Link href="/admin/partners">Partners: solicitudes y comisiones →</Link></p>
         <p><Link href="/admin/academias">Solicitudes de demo de academias →</Link></p>
         <p><Link href="/admin/seguridad">Seguridad: rastrear copias y cuentas compartidas →</Link></p>
         <OfferEditor initial={offer} />

@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { captureMarketingAttribution, trackMarketingEvent } from "./analytics";
+import { capturePartnerReferral } from "../partners/capture";
 import { CONSENT_EVENT, readConsent } from "../privacy/consent";
 
 const acquisitionLandings = new Set([
@@ -51,7 +52,7 @@ export default function MarketingAttribution({
     const run = () => {
       const consent = readConsent();
       // Ad click IDs and UTMs follow marketing consent even without analytics.
-      if (consent?.marketing) captureMarketingAttribution();
+      if (consent?.marketing) { captureMarketingAttribution(); void capturePartnerReferral(); }
       if (!consent?.analytics || tracked.current) return;
       tracked.current = true;
       captureMarketingAttribution();

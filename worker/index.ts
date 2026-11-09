@@ -38,6 +38,8 @@ import { giftCoversPath, hasGift } from "../app/newsletter/server";
 import { GIFT_LANDING_PATH } from "../app/newsletter/gift";
 import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
 import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
+import { bindAttribution } from "../db/partners";
+import { PARTNER_COOKIE, partnerCookieValue, partnerMarketingConsent, verifyReferral } from "../app/partners/referral";
 import { deviceCookieHeader, deviceHash, deviceIdFromCookie, deviceLabel, newDeviceId, recordPremiumOpen } from "../db/account-security";
 
 // vinext's default in-memory ISR cache is unbounded and grew past the isolate's
@@ -357,6 +359,15 @@ const app = {
     const fullGame=fullAccess&&!rscPayload?({'/demo/noche-abierta':'/noche-abierta','/demo/hospital-san-casi-vivo':'/hospital-san-casi-vivo'} as Record<string,string>)[pathname]:undefined;
     if(fullGame)return noStoreRedirect(new URL(fullGame,url),verifiedLocale,307);
     const accountId=accountIdFromHeaders(verifiedHeaders);
+    // Partner attribution is independent of teacher rewards and PRO grants.
+    // A storage/configuration outage must never fail auth or a payment.
+    const partnerCookie = partnerCookieValue(request.headers.get('cookie'));
+    if (accountId && partnerCookie && partnerMarketingConsent(request.headers.get("cookie")) && !writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
+      try {
+        const referral = await verifyReferral(partnerCookie, env.AUTOESTUDIO_SHARE_SECRET ?? '');
+        if (referral) await bindAttribution(env.DB, accountId, referral);
+      } catch { console.error('partner_attribution_unavailable'); }
+    }
     if (accountId&&lesson&&!rscPayload&&request.method==='GET'&&!writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
       ctx.waitUntil(saveLessonProgress(env.DB,accountId,lesson.id).catch(()=>undefined));
     }
@@ -440,6 +451,10 @@ const app = {
     if (deviceCookie) {
       finalResponse = new Response(finalResponse.body, finalResponse);
       finalResponse.headers.append('Set-Cookie', deviceCookie);
+    }
+    if (partnerCookie && !partnerMarketingConsent(request.headers.get('cookie'))) {
+      finalResponse = new Response(finalResponse.body, finalResponse);
+      finalResponse.headers.append('Set-Cookie', `${PARTNER_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`);
     }
     return finalResponse;
   },
