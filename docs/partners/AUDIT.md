@@ -53,3 +53,9 @@ Privacy hardening: a signed public recommendation waits in the home URL until th
 ## Final local check record
 
 The complete `npm test` command exited 0 with 1,588 assertions after fetching its pinned historic Git baselines and fixing the unrelated date-dependent fixture clock. The subsequent consent hardening passed 48 focused partner/security/billing/referral/identity regressions, the production build and artifact validation, lint on changed implementation, neutral-Spanish guard (0 unresolved findings), and English-copy guard (unchanged). The full-suite run began before the final consent change; CI on the final remote head is the canonical all-source verification. No claim is made that TypeScript's three unrelated existing diagnostics were resolved. No production migration, payment or deployment has been executed in this task at this checkpoint.
+
+## Follow-up · 2026-11-10
+
+PR #398 passed CI, merged as 6d62775a2bb57f83ed2d3ed7fb91eaf6e07a6997 and production deployment 42657766571 completed successfully. The owner then authorized the exact five-table/three-index SQL. No production SQL was executed: Cloudflare had no browser session, and automatic approval review denied the Apple authentication origin reached during sign-in. The migration authorization remains valid; access, backup/restore rehearsal and schema preflight must be completed before application.
+
+The hero now uses the two existing real product recordings (/grammar-previews/40.mp4 and /noche-abierta/como-funciona.mp4), in identical native 16:9 players with object-fit: contain, controls, inline playback, and reduced-motion support. No video was generated or edited, and the home/campaign destinations remain unchanged.
