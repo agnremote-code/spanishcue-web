@@ -39,7 +39,7 @@ import { GIFT_LANDING_PATH } from "../app/newsletter/gift";
 import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
 import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
 import { bindAttribution } from "../db/partners";
-import { partnerCookieValue, verifyReferral } from "../app/partners/referral";
+import { PARTNER_COOKIE, partnerCookieValue, partnerMarketingConsent, verifyReferral } from "../app/partners/referral";
 import { deviceCookieHeader, deviceHash, deviceIdFromCookie, deviceLabel, newDeviceId, recordPremiumOpen } from "../db/account-security";
 
 // vinext's default in-memory ISR cache is unbounded and grew past the isolate's
@@ -362,7 +362,7 @@ const app = {
     // Partner attribution is independent of teacher rewards and PRO grants.
     // A storage/configuration outage must never fail auth or a payment.
     const partnerCookie = partnerCookieValue(request.headers.get('cookie'));
-    if (accountId && partnerCookie && !writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
+    if (accountId && partnerCookie && partnerMarketingConsent(request.headers.get("cookie")) && !writeFreezeActive(env.SPANISHCUE_WRITE_FREEZE)) {
       try {
         const referral = await verifyReferral(partnerCookie, env.AUTOESTUDIO_SHARE_SECRET ?? '');
         if (referral) await bindAttribution(env.DB, accountId, referral);
@@ -451,6 +451,10 @@ const app = {
     if (deviceCookie) {
       finalResponse = new Response(finalResponse.body, finalResponse);
       finalResponse.headers.append('Set-Cookie', deviceCookie);
+    }
+    if (partnerCookie && !partnerMarketingConsent(request.headers.get('cookie'))) {
+      finalResponse = new Response(finalResponse.body, finalResponse);
+      finalResponse.headers.append('Set-Cookie', `${PARTNER_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`);
     }
     return finalResponse;
   },

@@ -19,3 +19,10 @@ export async function verifyReferral(value:string|null,secret:string,now=Math.fl
  }catch{return null;}
 }
 export function partnerCookieValue(header:string|null) {return header?.split(/;\s*/).find(v=>v.startsWith(`${PARTNER_COOKIE}=`))?.slice(PARTNER_COOKIE.length+1)??null;}
+
+/** Keep affiliate attribution under the site's existing marketing choice. */
+export function partnerMarketingConsent(header:string|null) {
+ const raw=header?.split(/;\s*/).find(v=>v.startsWith('spanishcue-consent-v1='))?.slice('spanishcue-consent-v1='.length);
+ if(!raw||raw.length>2000)return false;
+ try {const state=JSON.parse(decodeURIComponent(raw));return state?.version===1&&state.decided===true&&state.marketing===true;}catch{return false;}
+}
