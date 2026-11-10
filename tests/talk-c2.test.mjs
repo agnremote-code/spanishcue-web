@@ -151,7 +151,7 @@ test('C2 server-renders its colorful home and all fifteen three-question boards 
     state = [world, [0, 3, 7], true];
     const html = render();
     assert.equal((html.match(/<article/g) ?? []).length, 3, world.title);
-    assert.match(html, /Mismas ideas, otro interlocutor/);
+    assert.match(html, /Otra lectura · 8 min/);
     assert.match(html, /talk-c2-closing/);
     assert.match(html, /Apoyo opcional/);
     assert.doesNotMatch(html, /<details[^>]*\bopen(?:=|\s|>)/);
