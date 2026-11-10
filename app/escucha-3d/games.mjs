@@ -191,6 +191,14 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // HR Crisis: one listening per mission at each level (A1–C1), voiced by
+  // the same employees who work in that corner of the office. PRO lesson (ID 258).
+  hr: {
+    title: 'HR Crisis: la empresa es un caos',
+    levels: ['A1', 'A2', 'B1', 'B2', 'C1'],
+    spots: ['m1-recepcion', 'm2-ivan', 'm3-jimena', 'm4-rumor', 'm5-informe', 'm6-crisis'],
+    ownListening: true,
+  },
   // El tren de las 23:40: every circle of the night train has its own
   // listening at each level, voiced by the same passengers and crew who
   // speak there. PRO lesson (ID 256).

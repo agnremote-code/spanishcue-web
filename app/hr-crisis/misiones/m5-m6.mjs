@@ -8,15 +8,15 @@ export const M5_M6 = [
       A1: {
         line: 'Buenos días, {nombre}. ¿Qué pasó esta semana en Recursos Humanos?',
         prompt: 'Cuenta a Olga tres cosas que pasaron esta semana. Usa el pasado.',
-        hints: ['El lunes hice dos entrevistas.', 'El martes hablé con Iván.', 'Ayer corregí la nómina de Jimena.'],
-        write: { need: ['pasado'], extra: ['fecha', 'numero'], min: 12, model: 'El lunes hice dos entrevistas. El martes hablé con Iván y con Rafa. Ayer corregí la nómina de Jimena.' },
+        hints: ['El lunes hice dos entrevistas.', 'El martes hablé con Iván.', 'Ayer arreglé la nómina de Jimena.'],
+        write: { need: ['pasado'], extra: ['fecha', 'numero'], min: 12, model: 'El lunes hice dos entrevistas. El martes hablé con Iván y con Rafa. Ayer arreglé la nómina de Jimena.' },
         good: 'Muy bien. Una semana intensa, ¿eh?', part: '¿Y qué más pasó? Cuéntame en pasado: «hice», «hablé»…',
       },
       A2: {
         line: 'Siéntate, {nombre}. El director quiere un resumen. ¿Qué ha pasado esta semana?',
         prompt: 'Informa a Olga de lo que pasó esta semana: entrevistas, quejas y nóminas. Usa el pasado y algún número.',
         hints: ['Esta semana he hecho… El miércoles hubo… Corregimos…'],
-        write: { need: ['pasado', 'numero'], extra: ['fecha', 'conectores'], min: 20, model: 'Esta semana he hecho dos entrevistas y elegí a Lucía. El miércoles hubo tres quejas en la oficina: la trompeta, el pescado y una silla rota. También corregimos la nómina de Jimena: el programa escribió 13 euros en vez de 1.300.' },
+        write: { need: ['pasado', 'numero'], extra: ['fecha', 'conectores'], min: 20, model: 'Esta semana he hecho dos entrevistas y escogí a Lucía. El miércoles hubo tres quejas en la oficina: la trompeta, el pescado y una silla rota. También corregimos la nómina de Jimena: el programa escribió 13 euros en vez de 1.300.' },
         good: 'Clarísimo. Así da gusto.', part: 'Bien, pero me faltan datos: ¿cuántas quejas?, ¿qué pasó con la nómina?',
       },
       B1: {

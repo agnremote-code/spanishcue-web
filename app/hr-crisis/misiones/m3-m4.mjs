@@ -6,7 +6,7 @@ export const M3_M4 = [
     levels: {
       A1: {
         line: 'Esta es la nómina de Jimena. Yo creo que está bien… Mi Excel es de mil novecientos noventa y ocho.',
-        prompt: 'Lee la nómina. Marca las líneas con un error. Después, escribe a Don Tomás los errores con los números correctos.',
+        prompt: 'Lee la nómina. Marca las líneas con un error. Después, escribe a Don Ernesto los errores con los números correctos.',
         hints: ['El salario no es 13 euros. Es 1.300 euros.', 'Febrero no tiene 31 días.', 'Se llama Jimena, no…'],
         doc: { title: 'NÓMINA · Octubre', lines: [
           { t: 'Empleada: Jimena Ruiz Soto' },
@@ -15,12 +15,12 @@ export const M3_M4 = [
           { t: 'Horas de trabajo: 40 por semana' },
           { t: 'Fecha de pago: 31 de febrero', err: true, why: 'Esa fecha no existe.' },
         ] },
-        write: { need: ['numero', 'negacion'], extra: ['dinero', 'fecha'], min: 10, model: 'Don Tomás, hay tres errores. El salario no es 13 euros, es 1.300 euros. La fecha no es el 31 de febrero. Y el nombre es Jimena Ruiz.' },
+        write: { need: ['numero', 'negacion'], extra: ['dinero', 'fecha'], min: 10, model: 'Don Ernesto, hay tres errores. El salario no es 13 euros, es 1.300 euros. La fecha no es el 31 de febrero. Y el nombre es Jimena Ruiz.' },
         good: '¡Uy! ¡Trece euros! Ahora lo corrijo. Gracias, {nombre}.', part: '¿Qué errores? Dime los números, por favor.',
       },
       A2: {
         line: 'Jimena dice que su nómina está mal. Yo la hice con mucho cuidado… creo. ¿Puedes mirarla?',
-        prompt: 'Encuentra los errores de la nómina y explica a Don Tomás qué está mal y cuál es el dato correcto.',
+        prompt: 'Encuentra los errores de la nómina y explica a Don Ernesto qué está mal y cuál es el dato correcto.',
         hints: ['El salario base es 1.300 €, no…', 'Las horas extra son 10, no…'],
         doc: { title: 'NÓMINA · Octubre · Jimena Ruiz Soto', lines: [
           { t: 'Departamento: Logística' },
@@ -30,12 +30,12 @@ export const M3_M4 = [
           { t: 'Fecha de pago: 31 de febrero', err: true, why: 'Es el 31 de octubre.' },
           { t: 'Cuenta bancaria: termina en 4471' },
         ] },
-        write: { need: ['numero', 'dinero', 'negacion'], extra: ['fecha'], min: 18, model: 'Don Tomás, hay tres errores. El salario base no es 13 euros, es 1.300 euros. Las horas extra no son 0 euros: son 10 horas a 15 euros, es decir, 150 euros. Y la fecha de pago es el 31 de octubre.' },
+        write: { need: ['numero', 'dinero', 'negacion'], extra: ['fecha'], min: 18, model: 'Don Ernesto, hay tres errores. El salario base no es 13 euros, es 1.300 euros. Las horas extra no son 0 euros: son 10 horas a 15 euros, es decir, 150 euros. Y la fecha de pago es el 31 de octubre.' },
         good: '¡Madre mía! Gracias. Lo arreglo hoy mismo.', part: 'Vale… pero ¿cuál es el número correcto?',
       },
       B1: {
         line: 'No entiendo por qué se queja todo el mundo. Las nóminas salen solas del programa. Bueno, casi solas.',
-        prompt: 'Revisa la nómina con atención: hay errores de números y de fechas. Explica a Don Tomás cada error y su corrección.',
+        prompt: 'Revisa la nómina con atención: hay errores de números y de fechas. Explica a Don Ernesto cada error y su corrección.',
         hints: ['El primer error es… Debería ser… Además…'],
         doc: { title: 'NÓMINA · Octubre · Jimena Ruiz Soto', lines: [
           { t: 'Categoría: técnica de logística · Antigüedad: 3 años' },
@@ -46,12 +46,12 @@ export const M3_M4 = [
           { t: 'Fecha de pago: 31 de febrero', err: true, why: 'Debe ser el 31 de octubre.' },
           { t: 'Vacaciones pendientes: 8 días' },
         ] },
-        write: { need: ['numero', 'dinero', 'fecha'], extra: ['negacion', 'conectores'], min: 30, model: 'Don Tomás, he encontrado cuatro errores. El salario base debería ser 1.300 euros, no 13. Las veinte horas extra aparecen a cero: son 300 euros. Además, la retención no puede ser del 95 %, sino del 15 %. Y la fecha de pago es el 31 de octubre, no de febrero.' },
+        write: { need: ['numero', 'dinero', 'fecha'], extra: ['negacion', 'conectores'], min: 30, model: 'Don Ernesto, he encontrado cuatro errores. El salario base debería ser 1.300 euros, no 13. Las veinte horas extra aparecen a cero: son 300 euros. Además, la retención no puede ser del 95 %, sino del 15 %. Y la fecha de pago es el 31 de octubre, no de febrero.' },
         good: 'Vaya… ¿el noventa y cinco por ciento? Con razón Jimena lloraba. Lo corrijo.', part: 'Dime los datos correctos uno por uno, que yo me pierdo.',
       },
       B2: {
         line: 'El programa de nóminas hizo una «actualización» el domingo. Desde entonces hay cosas raras, pero yo no toco nada, por si acaso.',
-        prompt: 'Detecta los errores (algunos son sutiles) y redacta para Don Tomás un resumen con cada error, la cifra correcta y la causa probable.',
+        prompt: 'Detecta los errores (algunos son sutiles) y redacta para Don Ernesto un resumen con cada error, la cifra correcta y la causa probable.',
         hints: ['Tras la actualización… En primer lugar… Por otro lado…'],
         doc: { title: 'NÓMINA · Octubre · Jimena Ruiz Soto', lines: [
           { t: 'Categoría: técnica de logística · Antigüedad: 3 años' },
@@ -62,12 +62,12 @@ export const M3_M4 = [
           { t: 'Paga extra prorrateada: 216,67 € (duplicada)', err: true, why: 'Aparece dos veces.' },
           { t: 'Fecha de pago: 31 de noviembre', err: true, why: 'Noviembre tiene 30 días; además es la nómina de octubre.' },
         ] },
-        write: { need: ['numero', 'dinero', 'fecha', 'pasado'], extra: ['conectores', 'porque'], min: 45, model: 'Don Tomás, desde la actualización del domingo hay cuatro errores. En primer lugar, el complemento de antigüedad ha desaparecido: deberían ser 45 euros. Además, las horas extra se han calculado a 1,50 euros en vez de 15, así que faltan 270 euros. Por otro lado, la paga extra está duplicada. Por último, la fecha de pago es el 31 de octubre.' },
+        write: { need: ['numero', 'dinero', 'fecha', 'pasado'], extra: ['conectores', 'porque'], min: 45, model: 'Don Ernesto, desde la actualización del domingo hay cuatro errores. En primer lugar, el complemento de antigüedad ha desaparecido: deberían ser 45 euros. Además, las horas extra se han calculado a 1,50 euros en vez de 15, así que faltan 270 euros. Por otro lado, la paga extra está duplicada. Por último, la fecha de pago es el 31 de octubre.' },
         good: 'Esto se lo mando al informático tal cual. Gracias, de verdad.', part: 'Está bien, pero dame también las cifras correctas, que si no, no sé qué cambiar.',
       },
       C1: {
         line: 'Te confieso algo: llevo treinta años haciendo nóminas y nunca había visto algo así. O el programa está poseído, o alguien ha tocado lo que no debía.',
-        prompt: 'Analiza la nómina, separa los errores de cálculo de los posibles errores de configuración y redacta un diagnóstico preciso para Don Tomás.',
+        prompt: 'Analiza la nómina, separa los errores de cálculo de los posibles errores de configuración y redacta un diagnóstico preciso para Don Ernesto.',
         hints: [],
         doc: { title: 'NÓMINA · Octubre · Jimena Ruiz Soto', lines: [
           { t: 'Categoría: técnica de logística · Antigüedad: 3 años y 2 meses' },
@@ -78,7 +78,7 @@ export const M3_M4 = [
           { t: 'Cuenta de abono: la de Bruno Salvatierra', err: true, why: 'Bruno ni siquiera trabaja aquí.' },
           { t: 'Fecha de pago: 31 de octubre' },
         ] },
-        write: { need: ['numero', 'dinero', 'pasado', 'conectores'], extra: ['condicional', 'subjuntivo'], min: 60, model: 'Don Tomás, he encontrado tres anomalías de distinta naturaleza. Por un lado, hay un error de cálculo: veinte horas a quince euros son trescientos, no treinta. Por otro, dos errores de configuración: el complemento de antigüedad tiene fecha de efecto en 2027 y la cuenta de abono es la de Bruno Salvatierra, que ni siquiera es empleado. Eso último no parece casual; convendría revisar quién modificó los datos bancarios antes de hacer ningún pago.' },
+        write: { need: ['numero', 'dinero', 'pasado', 'conectores'], extra: ['condicional', 'subjuntivo'], min: 60, model: 'Don Ernesto, he encontrado tres anomalías de distinta naturaleza. Por un lado, hay un error de cálculo: veinte horas a quince euros son trescientos, no treinta. Por otro, dos errores de configuración: el complemento de antigüedad tiene fecha de efecto en 2027 y la cuenta de abono es la de Bruno Salvatierra, que ni siquiera es empleado. Eso último no parece casual; convendría revisar quién modificó los datos bancarios antes de hacer ningún pago.' },
         good: '¿La cuenta de Bruno? Esto va directamente al director. Qué bien que lo hayas visto.', part: 'Buen ojo, pero necesito que separes bien qué es cálculo y qué es configuración.',
       },
     },
@@ -108,7 +108,7 @@ export const M3_M4 = [
         good: 'Gracias por no darme excusas. Eso ya es un cambio.', part: 'Ya, lo siento, lo siento… pero ¿cuándo cobro?',
       },
       B2: {
-        line: 'Mira, no quiero excusas del programa ni de Don Tomás. Quiero saber cuándo cobro y qué garantía tengo de que no vuelva a pasar.',
+        line: 'Mira, no quiero excusas del programa ni de Don Ernesto. Quiero saber cuándo cobro y qué garantía tengo de que no vuelva a pasar.',
         prompt: 'Responde con disculpa, datos, plazos y una medida concreta para que no se repita.',
         hints: ['Lamento… Recibirás… Para que no vuelva a pasar…'],
         write: { need: ['disculpa', 'numero', 'fecha', 'futuro'], extra: ['subjuntivo', 'conectores'], min: 45, model: 'Lamento mucho la situación, y entiendo que no quieras excusas. Recibirás los 1.300 euros del salario y los 300 de horas extra el jueves por transferencia urgente. Además, a partir de este mes revisaré tu nómina antes de que se pague. Te lo confirmo por escrito hoy mismo.' },
@@ -141,7 +141,7 @@ export const M3_M4 = [
         good: 'El banco: «Estimada cliente: transferencia programada. Gracias».', part: 'El banco: «Por favor, indíquenos el importe y la fecha exactos».',
       },
       B1: {
-        line: 'Nuevo correo · Para: Banco Central · CC: Don Tomás.',
+        line: 'Nuevo correo · Para: Banco Central · CC: Don Ernesto.',
         prompt: 'Redacta un correo formal: explica brevemente el error de la nómina, pide la transferencia con los datos y despídete.',
         hints: ['Estimados señores: Les escribo porque… Les pedimos que…'],
         write: { need: ['formal', 'numero', 'fecha', 'pasado', 'despedida'], extra: ['porque', 'cortesia'], min: 35, model: 'Estimados señores: Les escribo porque este mes hubo un error en la nómina de nuestra empleada Jimena Ruiz Soto. Les pedimos una transferencia urgente de 1.600 euros a su cuenta, con fecha de este jueves. Les agradecería que nos confirmaran la operación. Atentamente, {nombre}.' },
@@ -274,7 +274,7 @@ export const M3_M4 = [
       },
       B2: {
         line: 'El rumor ha llegado a un cliente. Me acaba de llamar preguntando si «cerramos». Y yo le he dicho que no sé…',
-        prompt: 'Tranquiliza a Nacho, aclara la situación y dale instrucciones claras para los clientes.',
+        prompt: 'Tranquiliza a Nacho, aclara la situación y explícale con claridad qué tiene que decir a los clientes.',
         hints: ['Entiendo que te hayas asustado… Si vuelve a llamar, dile que…'],
         write: { need: ['calma', 'negacion', 'empatia'], extra: ['subjuntivo', 'condicional'], min: 45, model: 'Tranquilo, Nacho, entiendo que te hayas asustado, pero no cerramos ni despedimos a nadie: es una reorganización interna. Si el cliente vuelve a llamar, dile que todo sigue igual y que su responsable le escribirá hoy. Y te pido que me pases cualquier llamada parecida, para que no tengas que improvisar.' },
         good: 'Gracias. Ya me sentía responsable de la quiebra de la empresa.', part: 'Vale, ¿pero qué le digo exactamente al cliente?',

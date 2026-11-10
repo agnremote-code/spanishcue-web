@@ -171,6 +171,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/la-boda-english-additions-20261104.json',
   'docs/audits/el-tren-de-las-2340-english-additions-20261104.json',
   'docs/audits/autoestudio-espejo-english-20261105.json',
+  'docs/audits/hr-crisis-english-additions-20261110.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

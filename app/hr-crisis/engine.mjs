@@ -4,10 +4,15 @@
 import { emptyStats } from './evaluar.mjs';
 import { TASK_IDS } from './misiones.mjs';
 
+/**
+ * @typedef {{ done: string[], unlocked: boolean, answers: Record<string, string>, picks: Record<string, number>, asked: Record<string, string[]>, stats: import('./evaluar.mjs').Stats }} LessonState
+ * @returns {LessonState}
+ */
 export function createState() {
   return { done: [], unlocked: false, answers: {}, picks: {}, asked: {}, stats: emptyStats() };
 }
 
+/** @param {string | null} raw @returns {LessonState} */
 export function restore(raw) {
   const base = createState();
   if (!raw) return base;
@@ -23,11 +28,14 @@ export function restore(raw) {
     };
   } catch { return base; }
 }
+/** @param {LessonState} state */
 export const serialise = (state) => JSON.stringify(state);
 
+/** @param {LessonState} state @param {string} id @returns {LessonState} */
 export function complete(state, id) {
   return state.done.includes(id) ? state : { ...state, done: [...state.done, id] };
 }
+/** @param {LessonState} state @param {string} id @param {{ answer?: string, pick?: number, asked?: string[], stats?: import('./evaluar.mjs').Stats }} patch @returns {LessonState} */
 export function remember(state, id, patch) {
   return {
     ...state,

@@ -49,7 +49,7 @@ export const AYUDA = {
     falsos: [['acordar', 'entrar em acordo (e não «acordar» do sono = «despertarse»)']],
   },
   'm3-nomina': {
-    situacao: 'O holerite (a «nómina») de Jimena tem erros. Marque as linhas erradas e explique a Don Tomás os números corretos.',
+    situacao: 'O holerite (a «nómina») de Jimena tem erros. Marque as linhas erradas e explique a Don Ernesto os números corretos.',
     vocab: [['la nómina', 'o holerite / a folha de pagamento', 'el documento con tu salario del mes'], ['el salario base', 'o salário-base', 'el dinero fijo del mes'], ['la retención', 'o desconto (imposto retido)', 'el dinero que se paga a Hacienda'], ['la fecha de pago', 'a data de pagamento', 'el día en que cobras'], ['mil trescientos euros', 'mil e trezentos euros', '1.300 €']],
     gramatica: 'Números: 1.300 = «mil trescientos» (não «um mil»). 15 = quince, 20 = veinte, 300 = trescientos, 500 = quinientos. Em espanhol os milhares usam ponto (1.300) e os decimais vírgula (13,50), como no Brasil.',
     falsos: [['cobrar', 'receber o salário (e também «cobrar» de alguém)'], ['salir', 'sair; «la nómina sale» = «o holerite é emitido»']],

@@ -146,7 +146,7 @@ export const M1_M2 = [
           { t: 'Te escribo porque ya no sé a quién recurrir.' },
           { t: 'Iván ensaya con la trompeta en la oficina, incluso durante las llamadas con clientes.', err: true },
           { t: 'Rafa calienta pescado en el microondas cada mediodía y Carmen escondió el cable por venganza.', err: true },
-          { t: 'Mi silla lleva dos semanas rota y ya pedí otra tres veces.', err: true },
+          { t: 'Mi silla lleva dos semanas rota y ya he pedido otra tres veces.', err: true },
           { t: 'El mes pasado hice veinte horas extra y no aparecen en la nómina.', err: true },
           { t: 'Por cierto, el nuevo café de la máquina está buenísimo.' },
           { t: 'No quiero problemas con nadie, solo quiero trabajar tranquila.' },

@@ -1,0 +1,750 @@
+{
+ "game": "hr",
+ "level": "C1",
+ "items": [
+  {
+   "id": "m1-recepcion",
+   "title": "Lo que no sale en el currículum",
+   "place": "La recepción",
+   "context": "Marga, que lleva media vida en la recepción, le cuenta a Bruno cómo es de verdad la empresa mientras espera la entrevista.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Bruno",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Disculpe, ¿siempre hay este ajetreo? Llevo veinte minutos aquí y ya he visto pasar a tres personas corriendo con carpetas."
+    },
+    {
+     "s": 0,
+     "text": "Hoy es un día tranquilo, créeme. Aquí, si no hay una crisis antes del café, la gente se pone nerviosa porque piensa que se avecina una peor."
+    },
+    {
+     "s": 1,
+     "text": "Vaya. En el anuncio decían que buscaban a alguien con capacidad para trabajar en un entorno dinámico."
+    },
+    {
+     "s": 0,
+     "text": "Dinámico es una forma elegante de decirlo. Yo diría que es un entorno en el que nadie sabe qué va a pasar mañana, pero en el que nadie se aburre."
+    },
+    {
+     "s": 1,
+     "text": "Pues, si le soy sincero, eso me tranquiliza. En mi último trabajo todo estaba tan pautado que dejé de aprender a los seis meses."
+    },
+    {
+     "s": 0,
+     "text": "Entonces díselo así a la nueva responsable, con esas mismas palabras. Lo que no te recomiendo es que finjas que lo sabes todo: aquí se nota enseguida quién improvisa con criterio y quién se limita a improvisar."
+    },
+    {
+     "s": 1,
+     "text": "Me lo apunto. Y una última pregunta: ¿por qué se fue la persona que ocupaba el puesto antes?"
+    },
+    {
+     "s": 0,
+     "text": "Esa pregunta, querido, hazla en la entrevista. Si te la contestan con franqueza, sabrás que estás en buenas manos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere decir Marga con que hoy es un día tranquilo?",
+     "infer": true,
+     "options": [
+      "Que el ajetreo que ve Bruno es lo normal",
+      "Que hoy no ha venido casi nadie a trabajar por la huelga",
+      "Que está aburrida"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo interpreta Marga la expresión «entorno dinámico»?",
+     "infer": true,
+     "options": [
+      "Como una empresa que crece muy rápido y contrata sin parar",
+      "Como un eufemismo de que nadie sabe qué pasará mañana",
+      "Como un lugar con mucho deporte"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué dejó Bruno de aprender en su último trabajo?",
+     "options": [
+      "Porque su jefe no le enseñaba",
+      "Porque cambiaba de tareas constantemente",
+      "Porque todo estaba demasiado pautado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué no responde Marga a la última pregunta de Bruno?",
+     "infer": true,
+     "options": [
+      "Porque quiere que Bruno compruebe la franqueza de la empresa",
+      "Porque no sabe la respuesta",
+      "Porque está prohibido hablar de los antiguos empleados en la recepción"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué eufemismos de las ofertas de empleo conoces y qué significan realmente?",
+     "model": "«Buen ambiente de trabajo» a veces significa que no hay estructura y que se espera que hagas horas extra sin cobrarlas."
+    },
+    {
+     "q": "¿Qué preguntas harías tú al final de una entrevista para conocer la empresa por dentro?",
+     "model": "Preguntaría por qué quedó libre el puesto y cómo se mide el éxito en los primeros seis meses."
+    },
+    {
+     "q": "¿Prefieres un entorno pautado o uno impredecible? ¿Por qué?",
+     "model": "Me quedo con uno algo impredecible, siempre que haya objetivos claros, porque la rutina absoluta me apaga."
+    }
+   ],
+   "gaps": "Lo que no te recomiendo es que [finjas] que lo sabes todo: aquí se nota enseguida quién [improvisa] con [criterio] y quién se [limita] a improvisar.",
+   "glossary": [
+    {
+     "word": "ajetreo",
+     "meaning": "mucho movimiento y actividad"
+    },
+    {
+     "word": "se avecina",
+     "meaning": "está a punto de llegar"
+    },
+    {
+     "word": "pautado",
+     "meaning": "organizado con reglas fijas"
+    },
+    {
+     "word": "franqueza",
+     "meaning": "sinceridad"
+    }
+   ]
+  },
+  {
+   "id": "m2-ivan",
+   "title": "Una queja con matices",
+   "place": "Los despachos",
+   "context": "Antes de la reunión de mediación, Sonia e Iván se encuentran en el pasillo. Ninguno de los dos quiere ceder del todo.",
+   "speakers": [
+    {
+     "name": "Sonia",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Sonia, he leído tu queja. Me ha dolido menos lo que dices que el tono: parece que estuvieras describiendo a un delincuente."
+    },
+    {
+     "s": 0,
+     "text": "Quizá me pasé con algunas expresiones, lo reconozco. Pero redacté aquello después de perder un informe entero por no poder concentrarme, y no estaba para matices."
+    },
+    {
+     "s": 1,
+     "text": "Lo entiendo, de verdad, y siento lo del informe. Aun así, me habría gustado que me lo dijeras a la cara antes de ponerlo por escrito y mandarlo con copia a medio departamento."
+    },
+    {
+     "s": 0,
+     "text": "Te lo dije, Iván. Lo que pasa es que siempre lo convertías en una broma y yo acababa sintiéndome la aguafiestas de la oficina."
+    },
+    {
+     "s": 1,
+     "text": "Bien visto. Supongo que me resultaba más cómodo pensar que era una manía tuya que admitir que molestaba a todo el mundo."
+    },
+    {
+     "s": 0,
+     "text": "Mira, no quiero que te sancionen. Quiero poder trabajar. Si llegamos a un acuerdo antes de la reunión, retiro la queja formal."
+    },
+    {
+     "s": 1,
+     "text": "Me parece más que razonable. Y, para que conste, pienso proponer yo mismo las condiciones: así nadie podrá decir que he cedido a regañadientes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le ha molestado más a Iván de la queja?",
+     "infer": true,
+     "options": [
+      "Las acusaciones falsas",
+      "El tono que usó Sonia",
+      "Que Sonia la firmara sola"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no cuidó Sonia sus expresiones?",
+     "options": [
+      "Porque quería que despidieran a Iván cuanto antes",
+      "Porque se la redactó otra persona",
+      "Porque estaba frustrada tras perder un informe"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué admite Iván cuando dice «Bien visto»?",
+     "infer": true,
+     "options": [
+      "Que prefería pensar que el problema era de Sonia",
+      "Que Sonia exagera",
+      "Que la queja de Sonia es injusta y está mal escrita"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué quiere Iván proponer él las condiciones?",
+     "infer": true,
+     "options": [
+      "Para imponer sus horarios sin tener que negociar con nadie",
+      "Para que no parezca que ha cedido a regañadientes",
+      "Porque Sonia no tiene ideas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué es más difícil para ti: reconocer que molestas a alguien o decirle a alguien que te molesta?",
+     "model": "Me cuesta más decirlo, porque temo parecer exagerado, aunque luego lo agradezco."
+    },
+    {
+     "q": "¿Crees que el tono de una queja puede invalidar su contenido?",
+     "model": "No lo invalida, pero puede hacer que la otra persona se ponga a la defensiva y no escuche."
+    },
+    {
+     "q": "¿Qué ventajas tiene resolver un conflicto antes de que intervenga la empresa?",
+     "model": "Que se mantiene la relación y nadie queda marcado en su expediente."
+    }
+   ],
+   "gaps": "Si llegamos a un [acuerdo] antes de la reunión, [retiro] la [queja] [formal].",
+   "glossary": [
+    {
+     "word": "matices",
+     "meaning": "diferencias sutiles"
+    },
+    {
+     "word": "aguafiestas",
+     "meaning": "persona que estropea la diversión"
+    },
+    {
+     "word": "manía",
+     "meaning": "costumbre o rechazo exagerado"
+    },
+    {
+     "word": "a regañadientes",
+     "meaning": "sin ganas, obligado"
+    }
+   ]
+  },
+  {
+   "id": "m3-jimena",
+   "title": "Una auditoría improvisada",
+   "place": "Nóminas y administración",
+   "context": "Jimena ha descubierto que el error de su nómina no es un caso aislado y se lo plantea a Don Ernesto.",
+   "speakers": [
+    {
+     "name": "Jimena",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Don Ernesto",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Ernesto, he hablado con varios compañeros del almacén y a ocho de nosotros nos faltan horas extra desde marzo. Esto ya no es un despiste."
+    },
+    {
+     "s": 1,
+     "text": "Me lo temía. Llevo meses advirtiendo de que el programa que usamos es de otra época, pero en dirección siempre había algo más urgente."
+    },
+    {
+     "s": 0,
+     "text": "Le creo, pero comprenderá que a nosotros esas explicaciones no nos sirven de mucho. Hay quien ha dejado de cobrar casi trescientos euros."
+    },
+    {
+     "s": 1,
+     "text": "Por supuesto. Si me permites una sugerencia, no presentéis una queja individual cada uno. Redactad un escrito conjunto con todos los casos documentados."
+    },
+    {
+     "s": 0,
+     "text": "¿No será eso echar más leña al fuego? No queremos que parezca una rebelión."
+    },
+    {
+     "s": 1,
+     "text": "Al contrario. Un escrito ordenado, con fechas y cantidades, es lo que necesito para que la dirección deje de mirar hacia otro lado. Sin pruebas, para ellos esto sería un problema de percepción."
+    },
+    {
+     "s": 0,
+     "text": "Entendido. Lo tendrá el lunes. Y le agradecería que la nueva responsable de Recursos Humanos estuviera en la reunión: hasta ahora es la única que nos ha preguntado qué pasa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos compañeros del almacén tienen el mismo problema?",
+     "options": [
+      "Tres",
+      "Trescientos",
+      "Ocho"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué da a entender Don Ernesto sobre la dirección?",
+     "infer": true,
+     "options": [
+      "Que ignoró sus advertencias durante meses",
+      "Que no sabe nada del programa",
+      "Que quiere despedirlo porque el programa no funciona"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué duda Jimena de presentar un escrito conjunto?",
+     "options": [
+      "Porque no tiene tiempo",
+      "Porque teme que parezca una rebelión",
+      "Porque sus compañeros no quieren"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué sugiere la última frase de Jimena sobre la nueva responsable?",
+     "infer": true,
+     "options": [
+      "Que es demasiado nueva para ayudar",
+      "Que es amiga íntima de la dirección y les cuenta todo",
+      "Que se ha ganado la confianza de los empleados"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué crees que un escrito conjunto puede tener más fuerza que muchas quejas individuales?",
+     "model": "Porque demuestra que el problema es estructural y no un caso aislado, y es más difícil de ignorar."
+    },
+    {
+     "q": "¿Qué haría falta para que la dirección de una empresa priorice un problema que no parece urgente?",
+     "model": "Datos concretos sobre lo que cuesta no resolverlo, en dinero y en confianza."
+    },
+    {
+     "q": "¿Has estado alguna vez en una situación en la que tuviste que defender a un grupo?",
+     "model": "Sí, como delegada de clase tuve que negociar con la dirección el calendario de exámenes."
+    }
+   ],
+   "gaps": "Un escrito ordenado, con [fechas] y [cantidades], es lo que necesito para que la dirección deje de [mirar hacia] otro [lado].",
+   "glossary": [
+    {
+     "word": "despiste",
+     "meaning": "error por falta de atención"
+    },
+    {
+     "word": "echar más leña al fuego",
+     "meaning": "empeorar un conflicto"
+    },
+    {
+     "word": "mirar hacia otro lado",
+     "meaning": "ignorar un problema a propósito"
+    },
+    {
+     "word": "percepción",
+     "meaning": "forma subjetiva de ver algo"
+    }
+   ]
+  },
+  {
+   "id": "m4-rumor",
+   "title": "El rumor perfecto",
+   "place": "La cocina",
+   "context": "Nacho le cuenta a Paloma el último rumor de la oficina. Ella intenta separar los hechos de la imaginación.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Paloma, esta vez lo tengo de buena fuente: van a fusionarnos con la competencia y el director lo va a anunciar en la cena de Navidad."
+    },
+    {
+     "s": 1,
+     "text": "¿De buena fuente? ¿Y quién es esa fuente, si se puede saber?"
+    },
+    {
+     "s": 0,
+     "text": "Hugo vio una reunión en la sala grande con gente de traje que no conocía, y uno llevaba una carpeta con el logotipo de la competencia."
+    },
+    {
+     "s": 1,
+     "text": "O sea, que nadie ha oído nada. Alguien vio una carpeta y el resto lo ha rellenado la imaginación colectiva."
+    },
+    {
+     "s": 0,
+     "text": "Dicho así suena ridículo, pero reconoce que es sospechoso que la dirección no diga ni una palabra."
+    },
+    {
+     "s": 1,
+     "text": "En eso te doy la razón, y es justo lo que he planteado esta mañana: cuando una empresa calla, la gente no se queda en blanco, sino que llena el silencio con el peor escenario posible."
+    },
+    {
+     "s": 0,
+     "text": "¿Entonces sabes algo o no?"
+    },
+    {
+     "s": 1,
+     "text": "Sé lo que puedo contar, que no es lo mismo. Y lo que puedo contar es que el lunes se explicarán los cambios y que la palabra fusión no aparece en ningún documento que yo haya visto. Lo demás, de momento, es literatura."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿En qué se basa el rumor de Nacho?",
+     "options": [
+      "En una carpeta con el logotipo de la competencia",
+      "En un correo del director",
+      "En una noticia del periódico sobre fusiones en el sector"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué opina Paloma de la «buena fuente» de Nacho?",
+     "infer": true,
+     "options": [
+      "Que es fiable",
+      "Que nadie ha oído nada concreto",
+      "Que es un invento de Hugo para hacerse el interesante"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Paloma, ¿qué hace la gente cuando la empresa calla?",
+     "options": [
+      "Espera con paciencia",
+      "Deja de trabajar",
+      "Imagina el peor escenario posible"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué da a entender Paloma con «sé lo que puedo contar, que no es lo mismo»?",
+     "infer": true,
+     "options": [
+      "Que sabe más de lo que puede decir",
+      "Que no sabe nada",
+      "Que mentirá el lunes para no alarmar a los empleados"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué crees que algunos rumores resultan tan convincentes?",
+     "model": "Porque mezclan un detalle real con lo que la gente teme, y eso los hace verosímiles."
+    },
+    {
+     "q": "¿Cuál es la responsabilidad de Recursos Humanos ante los rumores?",
+     "model": "Dar información oficial pronto, aunque sea parcial, para que el silencio no lo ocupen las suposiciones."
+    },
+    {
+     "q": "¿Alguna vez has tenido que callar algo que sabías? ¿Cómo lo gestionaste?",
+     "model": "Sí; dije claramente que no podía dar detalles, pero que la información llegaría en unos días."
+    }
+   ],
+   "gaps": "cuando una empresa [calla], la gente no se queda en [blanco], sino que llena el [silencio] con el peor [escenario] posible.",
+   "glossary": [
+    {
+     "word": "de buena fuente",
+     "meaning": "de alguien que sabe de verdad"
+    },
+    {
+     "word": "fusionarnos",
+     "meaning": "unir dos empresas en una"
+    },
+    {
+     "word": "rellenado",
+     "meaning": "completado"
+    },
+    {
+     "word": "literatura",
+     "meaning": "aquí, invención, algo no comprobado"
+    }
+   ]
+  },
+  {
+   "id": "m5-informe",
+   "title": "Cifras y relatos",
+   "place": "El despacho de Olga",
+   "context": "Olga y Hugo discuten la forma de presentar al consejo un trimestre complicado.",
+   "speakers": [
+    {
+     "name": "Olga",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Hugo",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Olga, si presentamos el trimestre tal cual, el consejo va a pedir cabezas, y la primera será la mía."
+    },
+    {
+     "s": 0,
+     "text": "Por eso no vamos a presentar solo cifras, sino un relato coherente. Las cifras dicen qué ha pasado; el relato explica por qué y qué vamos a hacer."
+    },
+    {
+     "s": 1,
+     "text": "Lo que me preocupa es que parezca que maquillamos los datos. Ya sabes cómo es Ramiro: huele una excusa a kilómetros."
+    },
+    {
+     "s": 0,
+     "text": "No se trata de maquillar nada. Las ventas han caído un dieciocho por ciento, y eso irá en la primera diapositiva. Pero justo después irá que el ochenta por ciento de la caída se explica por dos clientes que perdimos por errores de facturación."
+    },
+    {
+     "s": 1,
+     "text": "Errores que ya hemos corregido, aunque el sistema que los provocó lo eligió el propio consejo."
+    },
+    {
+     "s": 0,
+     "text": "Eso, ni se te ocurra decirlo así. Basta con mostrar que desde que revisamos las facturas a mano no se ha repetido ningún error. Quien tenga que entenderlo, lo entenderá."
+    },
+    {
+     "s": 1,
+     "text": "Ya veo. Señalar sin acusar."
+    },
+    {
+     "s": 0,
+     "text": "Exacto. Y cerramos con una propuesta concreta y su coste. Un consejo perdona un mal trimestre; lo que no perdona es la sensación de que nadie tiene el control."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué teme Hugo si presentan solo las cifras?",
+     "options": [
+      "Que el consejo no las entienda",
+      "Que el consejo busque culpables, empezando por él",
+      "Que la presentación sea aburrida y el consejo se duerma"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto han caído las ventas?",
+     "options": [
+      "Un ochenta por ciento",
+      "Un ocho por ciento",
+      "Un dieciocho por ciento"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere decir Olga con «quien tenga que entenderlo, lo entenderá»?",
+     "infer": true,
+     "options": [
+      "Que los datos dejarán ver la responsabilidad del consejo sin decirlo",
+      "Que la presentación es demasiado técnica para un consejo que solo mira el resultado final",
+      "Que algunos consejeros no saben leer cifras"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué resume Hugo con «señalar sin acusar»?",
+     "infer": true,
+     "options": [
+      "Que deben ocultar el problema",
+      "Que hay que mostrar la causa sin culpar abiertamente",
+      "Que van a acusar al proveedor"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué diferencia ves entre presentar datos y construir un relato con ellos?",
+     "model": "Los datos solos se interpretan de cualquier manera; el relato orienta esa interpretación hacia una conclusión."
+    },
+    {
+     "q": "¿Dónde está el límite entre contextualizar y maquillar los datos?",
+     "model": "En no ocultar nada: puedes ordenar la información, pero la cifra mala tiene que estar a la vista."
+    },
+    {
+     "q": "¿Cómo señalarías un error de un superior sin acusarlo directamente?",
+     "model": "Mostraría los hechos en orden cronológico y dejaría que las conclusiones salieran solas."
+    }
+   ],
+   "gaps": "Un consejo [perdona] un mal [trimestre]; lo que no perdona es la [sensación] de que nadie tiene el [control].",
+   "glossary": [
+    {
+     "word": "pedir cabezas",
+     "meaning": "exigir que alguien sea despedido"
+    },
+    {
+     "word": "maquillamos",
+     "meaning": "presentamos mejor de lo que es"
+    },
+    {
+     "word": "relato",
+     "meaning": "historia que da sentido a unos hechos"
+    },
+    {
+     "word": "trimestre",
+     "meaning": "periodo de tres meses"
+    }
+   ]
+  },
+  {
+   "id": "m6-crisis",
+   "title": "La comparecencia",
+   "place": "El despacho del director",
+   "context": "A cinco minutos de comparecer ante la prensa, Álvaro quiere suavizar el mensaje. Carmen no está dispuesta.",
+   "speakers": [
+    {
+     "name": "Carmen",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Álvaro",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Carmen, he estado pensando: ¿y si decimos que estamos analizando la situación? Es una frase que no compromete a nada."
+    },
+    {
+     "s": 0,
+     "text": "Precisamente por eso no sirve. Los periodistas llevan dos horas en la puerta y la plantilla lleva dos semanas cobrando mal. «Estamos analizando» suena a que no tenemos ni idea."
+    },
+    {
+     "s": 1,
+     "text": "Pero si doy fechas y luego no las cumplimos, será peor."
+    },
+    {
+     "s": 0,
+     "text": "Por eso da solo las fechas que podemos cumplir. Las nóminas corregidas, el viernes; la auditoría del sistema, antes de fin de mes. Nada más."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si me preguntan si va a haber despidos?"
+    },
+    {
+     "s": 0,
+     "text": "Dices que no, porque no los habrá, y explicas en una frase en qué consiste la reorganización. Si titubeas, mañana el titular será tu titubeo."
+    },
+    {
+     "s": 1,
+     "text": "No sé si estoy preparado para esto. En la escuela de negocios no nos enseñaron a dar la cara con un loro gritando de fondo."
+    },
+    {
+     "s": 0,
+     "text": "Nadie está preparado para esto, Álvaro. Pero la gente no te pide que seas perfecto; te pide que no te escondas. Sal, di tres verdades y deja que la nueva responsable de Recursos Humanos hable de las personas. A ella sí la van a creer."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué rechaza Carmen la frase «estamos analizando la situación»?",
+     "infer": true,
+     "options": [
+      "Porque es demasiado larga",
+      "Porque es mentira y los periodistas ya lo saben",
+      "Porque da la impresión de que no tienen respuestas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué fechas propone dar Carmen?",
+     "options": [
+      "Las nóminas el viernes y la auditoría antes de fin de mes",
+      "Solo la de la auditoría",
+      "Ninguna fecha"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué advierte Carmen sobre los titubeos?",
+     "options": [
+      "Que son normales y nadie los nota",
+      "Que pueden convertirse en la noticia",
+      "Que los periodistas los perdonan"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué insinúa Carmen con «a ella sí la van a creer»?",
+     "infer": true,
+     "options": [
+      "Que la responsable de Recursos Humanos miente mejor",
+      "Que los periodistas la conocen",
+      "Que Álvaro ha perdido credibilidad ante el equipo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué las frases vagas pueden empeorar una crisis?",
+     "model": "Porque transmiten que no hay control, y la gente rellena ese vacío con sospechas."
+    },
+    {
+     "q": "¿Qué cualidades debe tener la persona que da la cara en una crisis?",
+     "model": "Credibilidad, calma y la capacidad de reconocer errores sin perder la autoridad."
+    },
+    {
+     "q": "Si fueras Álvaro, ¿qué tres verdades dirías ante la prensa?",
+     "model": "Que nos equivocamos con el sistema, que el viernes todo el mundo cobrará lo que le corresponde y que no habrá despidos."
+    }
+   ],
+   "gaps": "Pero la gente no te pide que seas [perfecto]; te pide que no te [escondas]. Sal, di tres [verdades] y deja que la nueva responsable de Recursos Humanos hable de las [personas].",
+   "glossary": [
+    {
+     "word": "auditoría",
+     "meaning": "revisión independiente de cuentas o sistemas"
+    },
+    {
+     "word": "plantilla",
+     "meaning": "conjunto de empleados"
+    },
+    {
+     "word": "titubeas",
+     "meaning": "dudas al hablar"
+    },
+    {
+     "word": "dar la cara",
+     "meaning": "asumir la responsabilidad en público"
+    }
+   ]
+  }
+ ]
+}

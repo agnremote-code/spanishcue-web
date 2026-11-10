@@ -19,6 +19,8 @@ import { complete, createState, remember, restore, serialise } from './engine.mj
 import { createAmbience, type Ambience } from './ambience';
 import { setShoutMuted } from '../escucha-3d/shout';
 import MusicVolume, { useMusicVolume } from '../escucha-3d/MusicVolume';
+import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
+import { GAMES } from '../escucha-3d/games.mjs';
 import type { Pose } from './World3D';
 import type { TiziaGesture, TiziaMood } from './tizia3d';
 import './hr.css';
@@ -327,6 +329,12 @@ export default function HrGame() {
   const [musicVolume, setMusicVolume] = useMusicVolume();
   const [mood, setMood] = useState<TiziaMood>('smile');
   const [gesture, setGesture] = useState<{ g: TiziaGesture; n: number }>({ g: 'none', n: 0 });
+  const [finalSeen, setFinalSeen] = useState(false);
+  // Comprensión auditiva in the same office: one listening per mission (undefined = closed, null = the list).
+  const [mode, setMode] = useListeningMode('hr');
+  const [listenAt, setListenAt] = useState<string | null | undefined>(undefined);
+  const [voicePlaying, setVoicePlaying] = useState(false);
+  const onAudio = useCallback((playing: boolean) => setVoicePlaying(playing), []);
   const ambience = useRef<Ambience | null>(null);
   const setState = useCallback((fn: (s: State) => State) => setStateRaw(fn), []);
 
@@ -348,9 +356,11 @@ export default function HrGame() {
   useEffect(() => { ambience.current = createAmbience(); return () => { ambience.current?.dispose(); ambience.current = null; }; }, []);
   useEffect(() => { ambience.current?.setMuted(!sound); setShoutMuted(!sound); }, [sound]);
   useEffect(() => { ambience.current?.setVolume(musicVolume); }, [musicVolume]);
-  useEffect(() => { ambience.current?.duck(taskId ? 0.25 : 1); }, [taskId]);
+  useEffect(() => { ambience.current?.duck(voicePlaying ? 0.05 : taskId || listenAt !== undefined ? 0.25 : 1); }, [taskId, listenAt, voicePlaying]);
 
   const level = profile.nivel;
+  const [heard, markHeard] = useListeningDone('hr', level);
+  const listening = mode === 'escucha';
   const rules = LEVEL_RULES[level as keyof typeof LEVEL_RULES];
   const open = useMemo(() => TASKS.filter(t => missionOpen(t.mission, state.done, state.unlocked)).map(t => t.id), [state.done, state.unlocked]);
   const task = taskId ? taskById(taskId) : null;
@@ -364,14 +374,18 @@ export default function HrGame() {
     if (good != null) ambience.current?.chime(good);
     window.setTimeout(() => setMood('smile'), 3500);
   }, []);
-  const openTask = useCallback((id: string) => { if (open.includes(id)) { setTaskId(id); setPanel(null); setMood('smile'); } }, [open]);
+  const openTask = useCallback((id: string) => {
+    if (listening) { if (GAMES.hr.spots.includes(id)) { setListenAt(id); setPanel(null); } return; }
+    if (open.includes(id)) { setTaskId(id); setPanel(null); setMood('smile'); }
+  }, [open, listening]);
+  const switchMode = (next: typeof mode) => { setMode(next); setListenAt(undefined); setTaskId(null); };
   const enter = () => { setEntered(true); ambience.current?.start(); };
   const nextHint = TASKS.find(t => open.includes(t.id) && !state.done.includes(t.id));
 
   if (!ready) return <main className="hr-root"><div className="hr-loading">Cargando…</div></main>;
 
   return <main className={`hr-root${entered ? ' is-in' : ''}`}>
-    {has3d && <World3D pais={profile.pais} level={level} open={open} done={state.done} taskId={taskId} paused={Boolean(panel) || !entered} intro={!entered} mood={mood} gesture={gesture}
+    {has3d && <World3D pais={profile.pais} level={level} open={listening ? GAMES.hr.spots : open} done={listening ? heard : state.done} taskId={taskId ?? (listenAt || null)} paused={Boolean(panel) || !entered || listenAt !== undefined} intro={!entered} mood={mood} gesture={gesture}
       onSpot={openTask} onNear={setNear} onPose={setPose} onFail={() => setHas3d(false)} />}
 
     {!entered && <section className="hr-title">
@@ -383,6 +397,7 @@ export default function HrGame() {
           {LEVEL_IDS.map(l => <button key={l} type="button" role="radio" aria-checked={level === l} className={level === l ? 'on' : ''} onClick={() => setProfile(p => ({ ...p, nivel: l }))}>{l}</button>)}
         </div>
         <p className="hr-level-note">{rules.label}</p>
+        <ModeSwitch mode={mode} onChange={switchMode} className="hr-mode" />
         <button type="button" className="hr-enter" onClick={enter}>Entrar en la empresa</button>
         <p className="hr-keys">WASD o flechas para caminar · arrastra para mirar · espacio para saltar · N nitro · E para hablar</p>
         <ProfileForm key={JSON.stringify(profile)} profile={profile} onSave={p => setProfile(p)} />
@@ -395,15 +410,19 @@ export default function HrGame() {
         <button type="button" className="hr-chip" onClick={() => setPanel(panel === 'missions' ? null : 'missions')} aria-expanded={panel === 'missions'}>📋 Misiones · {state.done.length}/{TASKS.length}</button>
         <span className="hr-room">{room?.name ?? 'Caos y Asociados'}</span>
         <span className="hr-spacer" />
+        <ModeSwitch mode={mode} onChange={switchMode} className="hr-mode hr-mode-hud" />
         <select className="hr-chip" value={level} onChange={e => setProfile(p => ({ ...p, nivel: e.target.value }))} aria-label="Nivel">{LEVEL_IDS.map(l => <option key={l} value={l}>{l}</option>)}</select>
         <button type="button" className="hr-chip" onClick={() => setPanel(panel === 'notebook' ? null : 'notebook')} aria-expanded={panel === 'notebook'}>📓 Cuaderno</button>
         <MusicVolume sound={sound} onSound={setSound} volume={musicVolume} onVolume={setMusicVolume} />
       </header>
 
-      {!task && !panel && near && <button type="button" className="hr-near" onClick={() => openTask(near)}>E · {f(taskById(near)?.title ?? '')}</button>}
-      {!task && !panel && !near && nextHint && has3d && <p className="hr-goal">Siguiente: <b>{f(nextHint.title)}</b> · {ROOMS.find(r => { const s = SPOTS[nextHint.id as keyof typeof SPOTS]; return s.x >= r.x0 && s.x <= r.x1 && s.z >= r.z0 && s.z <= r.z1 && r.id !== 'pasillo'; })?.name ?? ''}. Busca el círculo con el número {nextHint.mission}.</p>}
+      {listening && listenAt === undefined && !panel && <ListeningBadge game="hr" done={heard} onList={() => setListenAt(null)} />}
+      {listenAt !== undefined && <ListeningCard game="hr" level={level} spot={listenAt} done={heard} onDone={markHeard} onClose={() => setListenAt(undefined)} onAudio={onAudio} />}
+      {listening && listenAt === undefined && !panel && near && GAMES.hr.spots.includes(near) && <button type="button" className="hr-near" onClick={() => setListenAt(near)}>E · Escuchar: {ROOMS.find(r => { const s = SPOTS[near as keyof typeof SPOTS]; return s.x >= r.x0 && s.x <= r.x1 && s.z >= r.z0 && s.z <= r.z1 && r.id !== 'pasillo'; })?.name ?? ''}</button>}
+      {!listening && !task && !panel && near && <button type="button" className="hr-near" onClick={() => openTask(near)}>E · {f(taskById(near)?.title ?? '')}</button>}
+      {!listening && !task && !panel && !near && nextHint && has3d && <p className="hr-goal">Siguiente: <b>{f(nextHint.title)}</b> · {ROOMS.find(r => { const s = SPOTS[nextHint.id as keyof typeof SPOTS]; return s.x >= r.x0 && s.x <= r.x1 && s.z >= r.z0 && s.z <= r.z1 && r.id !== 'pasillo'; })?.name ?? ''}. Busca el círculo con el número {nextHint.mission}.</p>}
 
-      {(panel === 'missions' || !has3d) && !task && <div className="hr-panel hr-missions" role="dialog" aria-label="Misiones">
+      {(panel === 'missions' || (!has3d && !listening)) && !task && <div className="hr-panel hr-missions" role="dialog" aria-label="Misiones">
         <div className="hr-card-head"><div><small>{profile.area}</small><h2>Las misiones de {profile.nombre}</h2></div>{has3d && <button type="button" className="hr-x" onClick={() => setPanel(null)} aria-label="Cerrar">×</button>}</div>
         <div className="hr-card-body">
           {MISSIONS.map(m => {
@@ -424,8 +443,8 @@ export default function HrGame() {
         onClose={() => setTaskId(null)} onReact={react}
         onDone={() => { setTaskId(null); react('laugh', 'celebrate', true); }} />}
 
-      {allDone && !task && !panel && <div className="hr-panel hr-final" role="dialog" aria-label="Final">
-        <div className="hr-card-head"><div><small>Misión 6 cumplida</small><h2>{f('¡{nombre} salvó la empresa!')}</h2></div></div>
+      {!listening && allDone && !finalSeen && !task && !panel && <div className="hr-panel hr-final" role="dialog" aria-label="Final">
+        <div className="hr-card-head"><div><small>Misión 6 cumplida</small><h2>{f('¡{nombre} salvó la empresa!')}</h2></div><button type="button" className="hr-x" onClick={() => setFinalSeen(true)} aria-label="Volver a la oficina">×</button></div>
         <div className="hr-card-body">
           <p>{f('Entrevistaste a dos candidatos, resolviste quejas, corregiste nóminas, anunciaste cambios, te enfrentaste a la dirección y sacaste a Caos y Asociados de su peor crisis. Todo en español.')}</p>
           <button type="button" className="hr-primary" onClick={() => setPanel('notebook')}>Ver mi cuaderno</button>

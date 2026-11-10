@@ -143,7 +143,8 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   const printers: THREE.Vector3[] = [];
   let parrot: THREE.Group | null = null;
   let phoneSet: THREE.Group | null = null;
-  FURNITURE.forEach((f, i) => {
+  FURNITURE.forEach((raw, i) => {
+    const f = { ...raw, top: raw.top ?? 0 };
     const turned = f.rot === 1 || f.rot === -1;
     switch (f.type) {
       case 'mostrador': {

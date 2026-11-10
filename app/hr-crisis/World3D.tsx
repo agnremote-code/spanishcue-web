@@ -109,11 +109,10 @@ export default function World3D(props: WorldProps) {
     }
 
     // ------------------------------------------------------------ state
-    const solids = solidsFor();
+    const solids = solidsFor() as { x0: number; x1: number; z0: number; z1: number; top?: number }[];
     const walls = cameraBlockers();
     let player = { x: SPAWN.x, z: SPAWN.z, heading: SPAWN.heading, speed: 0, y: 0, vy: 0, jumpHeld: false };
     let yaw = player.heading, pitch = 0.3, zoom = low ? 3.6 : 3.8;
-    let turn = 0;
     const held = new Set<string>();
     const joy = { x: 0, y: 0 };
     const touchNitro = { on: false };
@@ -250,7 +249,6 @@ export default function World3D(props: WorldProps) {
       }
 
       const moving = !p.paused && !taskId && !p.intro && !charlas.isOpen();
-      const before = player.heading;
       if (moving) {
         const input = inputFrom(held);
         const ix = input.x + joy.x, iy = input.y + joy.y;
@@ -283,7 +281,6 @@ export default function World3D(props: WorldProps) {
         if (Math.abs(wantFov - camera.fov) > 0.05) { camera.fov += (wantFov - camera.fov) * Math.min(1, dt * 6); camera.updateProjectionMatrix(); }
         if (clock - lastDrag > 1.2) yaw = followYaw(yaw, player.heading, player.speed, dt);
       } else { player.speed = 0; player.y = 0; player.vy = 0; }
-      turn = dt > 0 ? angleBetween(before, player.heading) / dt : 0;
       place();
       for (let i = angry.length - 1; i >= 0; i--) {
         const who = angry[i];

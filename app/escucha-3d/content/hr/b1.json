@@ -1,0 +1,712 @@
+{
+ "game": "hr",
+ "level": "B1",
+ "items": [
+  {
+   "id": "m1-recepcion",
+   "title": "La recepcionista que lo sabe todo",
+   "place": "La recepción",
+   "context": "Mientras Bruno espera su entrevista, Marga le da algunos consejos que nadie le pidió.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Bruno",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Llevo quince años en esta recepción y he visto pasar a cientos de candidatos. ¿Quieres un consejo?"
+    },
+    {
+     "s": 1,
+     "text": "Claro, cualquier ayuda es bienvenida. Estoy un poco nervioso."
+    },
+    {
+     "s": 0,
+     "text": "No digas que tu defecto es ser perfeccionista. Todos dicen lo mismo y la nueva responsable lo odia."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué digo entonces? Antes trabajaba en una tienda y a veces llegaba tarde."
+    },
+    {
+     "s": 0,
+     "text": "Pues eso no lo digas así. Di que has aprendido a organizarte mejor y da un ejemplo concreto."
+    },
+    {
+     "s": 1,
+     "text": "Tiene sentido. ¿Y si me pregunta por qué quiero trabajar aquí? La verdad es que he visto el anuncio por casualidad."
+    },
+    {
+     "s": 0,
+     "text": "Mira a tu alrededor: aquí falta orden. Dile que te gustan los retos. Es verdad para cualquiera que entre por esa puerta."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo lleva Marga en la recepción?",
+     "options": [
+      "Quince años",
+      "Cinco años",
+      "Cincuenta años"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué respuesta no debe dar Bruno?",
+     "options": [
+      "Que trabajaba en una tienda antes de venir aquí",
+      "Que su defecto es ser perfeccionista",
+      "Que le gustan los retos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué problema tenía Bruno en su trabajo anterior?",
+     "options": [
+      "Discutía con los clientes",
+      "No sabía usar el ordenador",
+      "Llegaba tarde a veces"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo encontró Bruno el anuncio?",
+     "options": [
+      "Por casualidad",
+      "Se lo pasó un amigo",
+      "Lo buscó durante meses"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué defecto dirías en una entrevista y cómo lo presentarías?",
+     "model": "Diría que a veces acepto demasiadas tareas, pero he aprendido a decir que no."
+    },
+    {
+     "q": "¿Cuál es el mejor consejo de trabajo que has recibido?",
+     "model": "Una jefa me dijo que siempre pidiera las cosas por escrito, y me ha ayudado mucho."
+    },
+    {
+     "q": "¿Te gustan los retos o prefieres la rutina?",
+     "model": "Me gustan los retos, aunque necesito un poco de rutina para estar tranquilo."
+    }
+   ],
+   "gaps": "Di que has [aprendido] a [organizarte mejor] y da un [ejemplo] [concreto].",
+   "glossary": [
+    {
+     "word": "defecto",
+     "meaning": "característica negativa"
+    },
+    {
+     "word": "perfeccionista",
+     "meaning": "persona que quiere que todo esté perfecto"
+    },
+    {
+     "word": "retos",
+     "meaning": "cosas difíciles que motivan"
+    }
+   ]
+  },
+  {
+   "id": "m2-ivan",
+   "title": "Una mediación con guitarra",
+   "place": "Los despachos",
+   "context": "Paloma, de Recursos Humanos, está de vacaciones, así que Sonia e Iván intentan llegar a un acuerdo solos antes de hablar con la nueva responsable.",
+   "speakers": [
+    {
+     "name": "Sonia",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Sonia, he pensado en tu queja y creo que tienes parte de razón."
+    },
+    {
+     "s": 0,
+     "text": "¿Solo parte? Llevo dos semanas sin poder concentrarme por las mañanas."
+    },
+    {
+     "s": 1,
+     "text": "Vale, tienes razón. Pero tú también hablas por teléfono en voz muy alta, y yo nunca he dicho nada."
+    },
+    {
+     "s": 0,
+     "text": "Eso no lo sabía. Lo siento, no me había dado cuenta."
+    },
+    {
+     "s": 1,
+     "text": "Te propongo algo: yo no toco antes de las doce y tú haces las llamadas largas en la sala pequeña."
+    },
+    {
+     "s": 0,
+     "text": "Me parece justo. Y si un día necesitas tocar para inspirarte, me avisas y me voy a la cafetería."
+    },
+    {
+     "s": 1,
+     "text": "Trato hecho. ¿Se lo contamos a la nueva responsable de Recursos Humanos o ya no hace falta?"
+    },
+    {
+     "s": 0,
+     "text": "Se lo contamos. Así sabe que en esta empresa también hay gente que soluciona problemas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo lleva Sonia sin concentrarse?",
+     "options": [
+      "Dos días",
+      "Dos semanas",
+      "Un mes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué se queja Iván?",
+     "options": [
+      "De que Sonia llega tarde",
+      "De que Sonia toca música en la oficina por la tarde",
+      "De que Sonia habla por teléfono muy alto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué acuerdo proponen?",
+     "options": [
+      "Que Iván no toque antes de las doce",
+      "Que Iván cambie de despacho",
+      "Que Sonia trabaje desde casa todas las mañanas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué quiere Sonia contarlo a Recursos Humanos?",
+     "options": [
+      "Para castigar a Iván",
+      "Para que vean que hay gente que soluciona problemas",
+      "Para pedir un despacho nuevo, más grande y sin ruido"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Alguna vez has llegado a un acuerdo con alguien después de un conflicto?",
+     "model": "Sí, con mi compañero de piso: él limpia la cocina y yo el baño."
+    },
+    {
+     "q": "¿Qué te molesta de los demás cuando trabajas?",
+     "model": "Me molesta que la gente hable por teléfono en voz alta al lado de mí."
+    },
+    {
+     "q": "¿Crees que es mejor solucionar los conflictos solos o con un mediador?",
+     "model": "Primero solos, y si no funciona, con alguien neutral."
+    }
+   ],
+   "gaps": "Te propongo algo: yo no [toco] antes de las [doce] y tú haces las [llamadas largas] en la [sala pequeña].",
+   "glossary": [
+    {
+     "word": "concentrarme",
+     "meaning": "poner toda mi atención"
+    },
+    {
+     "word": "justo",
+     "meaning": "bien para las dos partes"
+    },
+    {
+     "word": "trato hecho",
+     "meaning": "estamos de acuerdo"
+    }
+   ]
+  },
+  {
+   "id": "m3-jimena",
+   "title": "La nómina equivocada",
+   "place": "Nóminas y administración",
+   "context": "Jimena vuelve a nóminas porque este mes el error es todavía más raro.",
+   "speakers": [
+    {
+     "name": "Jimena",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Don Ernesto",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Ernesto, este mes he cobrado tres mil euros. Normalmente cobro mil quinientos."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué honesta eres! Muchos no habrían dicho nada."
+    },
+    {
+     "s": 0,
+     "text": "Ya, pero al mismo tiempo ha desaparecido mi plus de transporte y no me han pagado las horas extra de octubre."
+    },
+    {
+     "s": 1,
+     "text": "Déjame ver… Ya lo entiendo. El sistema ha mezclado tu nómina con la de Jimena Robles, la directora de marketing."
+    },
+    {
+     "s": 0,
+     "text": "¿Hay otra Jimena? Entonces ella ha cobrado mi sueldo."
+    },
+    {
+     "s": 1,
+     "text": "Exactamente, y debe de estar furiosa. Vamos a hacer una nómina corregida y tendrás que devolver la diferencia."
+    },
+    {
+     "s": 0,
+     "text": "De acuerdo, pero quiero el plus y las horas extra en la misma transferencia. Y me gustaría que me lo confirmara por escrito."
+    },
+    {
+     "s": 1,
+     "text": "Te mando un correo antes de las cinco. Te lo prometo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto ha cobrado Jimena este mes?",
+     "options": [
+      "Mil quinientos euros",
+      "Dos mil euros",
+      "Tres mil euros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué falta en la nómina, además de las horas extra?",
+     "options": [
+      "El plus de transporte",
+      "Las vacaciones",
+      "El seguro médico"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ha hecho el sistema?",
+     "options": [
+      "Ha borrado la nómina",
+      "Ha mezclado dos nóminas",
+      "Ha pagado dos veces a todos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pide Jimena al final?",
+     "options": [
+      "Quedarse con el dinero",
+      "Hablar con el director",
+      "Una confirmación por escrito"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué harías si recibieras más dinero del que te corresponde?",
+     "model": "Lo diría enseguida, porque tarde o temprano lo descubren."
+    },
+    {
+     "q": "¿Prefieres que te confirmen las cosas por escrito o de palabra?",
+     "model": "Por escrito, porque así no hay malentendidos."
+    },
+    {
+     "q": "¿Alguna vez un sistema informático te ha causado un problema?",
+     "model": "Sí, una aerolínea canceló mi billete por un error del sistema."
+    }
+   ],
+   "gaps": "Vamos a hacer una [nómina corregida] y [tendrás] que [devolver] la [diferencia].",
+   "glossary": [
+    {
+     "word": "cobrado",
+     "meaning": "recibido el sueldo"
+    },
+    {
+     "word": "plus de transporte",
+     "meaning": "dinero extra para ir al trabajo"
+    },
+    {
+     "word": "transferencia",
+     "meaning": "envío de dinero entre cuentas"
+    }
+   ]
+  },
+  {
+   "id": "m4-rumor",
+   "title": "Lo que se dice en la cocina",
+   "place": "La cocina",
+   "context": "Nacho y Paloma hablan mientras esperan que la cafetera termine. Es el día antes de la reunión con todo el equipo.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Paloma, me han dicho que mañana van a anunciar que informática se va a trabajar desde otro país."
+    },
+    {
+     "s": 1,
+     "text": "¿Quién te lo ha dicho?"
+    },
+    {
+     "s": 0,
+     "text": "Carmen, que lo ha oído de Hugo, que lo ha leído en un correo que no era para él."
+    },
+    {
+     "s": 1,
+     "text": "Pues fíjate en la cadena: tres personas y un correo equivocado. Así nacen los rumores."
+    },
+    {
+     "s": 0,
+     "text": "Ya, pero si no es verdad, ¿por qué nadie nos explica nada?"
+    },
+    {
+     "s": 1,
+     "text": "En eso tienes razón. La dirección ha esperado demasiado y el silencio ha hecho más daño que la noticia."
+    },
+    {
+     "s": 0,
+     "text": "¿Puedes adelantarme algo? Aunque sea un poco."
+    },
+    {
+     "s": 1,
+     "text": "Solo puedo decirte que nadie de informática va a perder su trabajo. El resto lo explicará mañana la nueva responsable."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué rumor ha oído Nacho?",
+     "options": [
+      "Que informática va a trabajar desde otro país",
+      "Que la empresa cierra",
+      "Que van a bajar los sueldos de todo el departamento"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo llegó el rumor a Nacho?",
+     "options": [
+      "Por un anuncio oficial que se leyó en la reunión del lunes",
+      "Por una cadena de personas y un correo equivocado",
+      "Por la radio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Paloma, ¿qué ha hecho más daño?",
+     "options": [
+      "La noticia",
+      "El correo de Hugo",
+      "El silencio de la dirección"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué puede adelantarle Paloma?",
+     "options": [
+      "Que nadie de informática perderá su trabajo",
+      "Que habrá una subida de sueldo para todo el departamento",
+      "Que el director se va"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué crees que se difunden tan rápido los rumores en el trabajo?",
+     "model": "Porque la gente tiene miedo y, si nadie explica nada, imagina lo peor."
+    },
+    {
+     "q": "¿Alguna vez has leído un mensaje que no era para ti?",
+     "model": "Sí, una vez me llegó un correo de mi jefe para otra persona y fue muy incómodo."
+    },
+    {
+     "q": "¿Qué debería hacer una empresa antes de un cambio importante?",
+     "model": "Debería explicar los motivos y responder preguntas lo antes posible."
+    }
+   ],
+   "gaps": "La dirección ha esperado [demasiado] y el [silencio] ha hecho más [daño] que la [noticia].",
+   "glossary": [
+    {
+     "word": "fíjate",
+     "meaning": "presta atención"
+    },
+    {
+     "word": "cadena",
+     "meaning": "serie de personas o cosas una tras otra"
+    },
+    {
+     "word": "adelantarme",
+     "meaning": "decirme antes de tiempo"
+    }
+   ]
+  },
+  {
+   "id": "m5-informe",
+   "title": "Cómo presentar malas noticias",
+   "place": "El despacho de Olga",
+   "context": "Olga y Hugo ensayan la presentación que van a hacer mañana ante el consejo de dirección.",
+   "speakers": [
+    {
+     "name": "Olga",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Hugo",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Olga, si empiezo diciendo que hemos perdido el veinte por ciento de las ventas, el director se va a desmayar."
+    },
+    {
+     "s": 0,
+     "text": "Entonces no empieces por ahí. Empieza por lo que ha funcionado: la tienda online ha crecido un quince por ciento."
+    },
+    {
+     "s": 1,
+     "text": "¿Y luego?"
+    },
+    {
+     "s": 0,
+     "text": "Luego explicas el problema con datos: tres facturas mal hechas y dos clientes perdidos. Sin dramas y sin culpables."
+    },
+    {
+     "s": 1,
+     "text": "El problema es que el culpable fue el sistema nuevo, y lo eligió el director."
+    },
+    {
+     "s": 0,
+     "text": "Por eso no hablamos de culpables. Hablamos de soluciones: revisar las facturas a mano durante tres meses y contratar a una persona de apoyo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si pregunta cuánto cuesta?"
+    },
+    {
+     "s": 0,
+     "text": "Le dices que cuesta menos que perder otro cliente. Ese argumento siempre funciona."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué no quiere empezar Hugo con las ventas perdidas?",
+     "options": [
+      "Porque no tiene los datos",
+      "Porque el director se va a desmayar",
+      "Porque es un secreto que solo conocen él y Olga"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto ha crecido la tienda online?",
+     "options": [
+      "Un veinte por ciento",
+      "Un cinco por ciento",
+      "Un quince por ciento"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién eligió el sistema nuevo?",
+     "options": [
+      "El director",
+      "Olga",
+      "Hugo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué argumento propone Olga sobre el coste?",
+     "options": [
+      "Que es gratis",
+      "Que cuesta menos que perder otro cliente",
+      "Que lo paga el cliente"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo darías una mala noticia a tu jefe?",
+     "model": "Primero le daría el contexto, luego la noticia y enseguida una propuesta."
+    },
+    {
+     "q": "¿Has tenido que hacer alguna presentación importante?",
+     "model": "Sí, en la universidad presenté mi proyecto final delante de un tribunal."
+    },
+    {
+     "q": "¿Qué es mejor en un problema: buscar culpables o buscar soluciones?",
+     "model": "Buscar soluciones, aunque también hay que entender por qué pasó."
+    }
+   ],
+   "gaps": "Luego explicas el problema con [datos]: tres facturas mal hechas y dos [clientes perdidos]. Sin [dramas] y sin [culpables].",
+   "glossary": [
+    {
+     "word": "desmayar",
+     "meaning": "perder el conocimiento"
+    },
+    {
+     "word": "culpables",
+     "meaning": "personas responsables de un error"
+    },
+    {
+     "word": "argumento",
+     "meaning": "razón para convencer"
+    }
+   ]
+  },
+  {
+   "id": "m6-crisis",
+   "title": "Un director debajo de la mesa",
+   "place": "El despacho del director",
+   "context": "Carmen intenta que Álvaro salga a hablar con los periodistas.",
+   "speakers": [
+    {
+     "name": "Carmen",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Álvaro",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Álvaro, los periodistas llevan una hora esperando. Si no sales, van a escribir lo que quieran."
+    },
+    {
+     "s": 1,
+     "text": "Si salgo, me preguntarán por las nóminas, por el sistema y por el cliente que se ha ido. No sé qué decir."
+    },
+    {
+     "s": 0,
+     "text": "Di la verdad: que ha habido errores, que ya los estamos corrigiendo y que nadie se va a quedar sin cobrar."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si me preguntan por los despidos?"
+    },
+    {
+     "s": 0,
+     "text": "No hay despidos. Hay una reorganización. Si dices «despidos», mañana será el titular de todos los periódicos."
+    },
+    {
+     "s": 1,
+     "text": "Tienes razón. Pero prefiero que hable la nueva responsable de Recursos Humanos. Ella transmite calma."
+    },
+    {
+     "s": 0,
+     "text": "Ella puede hablar del equipo, pero la cara de la empresa eres tú. Sal con ella, habla tú primero y deja que ella complete."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo llevan esperando los periodistas?",
+     "options": [
+      "Diez minutos",
+      "Toda la mañana",
+      "Una hora"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué debe decir Álvaro, según Carmen?",
+     "options": [
+      "Que ha habido errores y ya se están corrigiendo",
+      "Que no ha pasado nada",
+      "Que la culpa de todo es del sistema y no de las personas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué palabra no debe usar Álvaro?",
+     "options": [
+      "Reorganización",
+      "Despidos",
+      "Errores"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Carmen al final?",
+     "options": [
+      "Que hable solo la responsable de Recursos Humanos",
+      "Que nadie hable",
+      "Que hable Álvaro primero y ella complete"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Te resulta fácil hablar en público cuando hay un problema?",
+     "model": "No mucho; necesito preparar dos o tres frases claras antes de empezar."
+    },
+    {
+     "q": "¿Por qué crees que es importante elegir bien las palabras en una crisis?",
+     "model": "Porque una sola palabra puede cambiar cómo la gente entiende la situación."
+    },
+    {
+     "q": "¿Qué esperas de un buen jefe en un momento difícil?",
+     "model": "Que dé la cara, que diga la verdad y que proponga un plan."
+    }
+   ],
+   "gaps": "Di la [verdad]: que ha habido [errores], que ya los estamos [corrigiendo] y que nadie se va a quedar sin [cobrar].",
+   "glossary": [
+    {
+     "word": "titular",
+     "meaning": "frase principal de una noticia"
+    },
+    {
+     "word": "reorganización",
+     "meaning": "nueva forma de organizar algo"
+    },
+    {
+     "word": "transmite",
+     "meaning": "comunica, da a los demás"
+    }
+   ]
+  }
+ ]
+}

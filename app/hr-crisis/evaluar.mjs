@@ -18,8 +18,8 @@ function hasPast(raw, plain) {
   if (/\b\w{2,}(aste|asteis|aron|ieron|iste|isteis|aban|abamos|abas)\b/.test(plain)) return true;
   if (/\b\w{2,}(aba|ia)\b/.test(plain) && /\b(antes|ayer|cuando|siempre|todos los)\b/.test(plain)) return true;
   // hablé, pagó… (with the accent the student typed)
-  const accented = String(raw).toLowerCase().match(/\b[\p{L}]{2,}[éó]\b/gu) ?? [];
-  return accented.some(w => !['qué', 'porqué', 'café', 'bebé', 'josé', 'cómo'].includes(w));
+  const accented = String(raw).toLowerCase().match(/(?<!\p{L})\p{L}{2,}[éó](?!\p{L})/gu) ?? [];
+  return accented.some(w => !['qué', 'porqué', 'café', 'josé', 'cómo'].includes(w));
 }
 function hasFuture(raw, plain) {
   if (/\b(voy|vas|va|vamos|vais|van) a [a-z]+(ar|er|ir)(lo|la|los|las|le|les|me|te|se|nos)?\b/.test(plain)) return true;
@@ -192,9 +192,17 @@ export function questionForm(raw) {
 // ------------------------------------------------------------ tracking
 // The notebook: recurring mistakes, vocabulary gaps and how each grammar
 // area is going. Stored with the progress; nothing is sent anywhere.
+/**
+ * @typedef {{ tags: Record<string, { ok: number, miss: number }>, issues: Record<string, { count: number, fix?: string, why: string, kind: string }>, vocab: string[], attempts: number }} Stats
+ * @returns {Stats}
+ */
 export function emptyStats() {
   return { tags: {}, issues: {}, vocab: [], attempts: 0 };
 }
+/**
+ * @param {Stats} stats @param {any} result @param {string} text @param {string[]} [vocabulary]
+ * @returns {Stats}
+ */
 export function recordAnswer(stats, result, text, vocabulary = []) {
   const s = { tags: { ...stats.tags }, issues: { ...stats.issues }, vocab: [...stats.vocab], attempts: stats.attempts + 1 };
   for (const item of result.ok ?? []) { const t = s.tags[item.tag] ?? { ok: 0, miss: 0 }; s.tags[item.tag] = { ...t, ok: t.ok + 1 }; }
@@ -213,6 +221,7 @@ export function recordAnswer(stats, result, text, vocabulary = []) {
   return s;
 }
 /** The three most repeated mistakes, most frequent first. */
+/** @param {Stats} stats @param {number} [n] */
 export function recurring(stats, n = 3) {
   return Object.entries(stats.issues).sort((a, b) => b[1].count - a[1].count).slice(0, n).map(([key, v]) => ({ key, ...v }));
 }

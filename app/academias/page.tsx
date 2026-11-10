@@ -47,6 +47,7 @@ export default async function Academias() {
     { href: '/el-consorcio', image: '/el-consorcio/portada.webp', title: 'El consorcio', free: false, body: es ? 'Un edificio de Buenos Aires en 3D: vecinos, quejas y una asamblea para negociar en español.' : 'A Buenos Aires apartment building in 3D: neighbours, complaints and a meeting to negotiate in Spanish.' },
     { href: '/la-boda', image: '/la-boda/portada.webp', title: 'La boda', free: false, body: es ? 'Una boda en una estancia, del atardecer al amanecer: celebrar, aconsejar y dar el brindis en español.' : 'A wedding at a country estate, from sunset to dawn: celebrate, give advice and make the toast in Spanish.' },
     { href: '/el-tren-de-las-2340', image: '/el-tren-de-las-2340/portada.webp', title: 'El tren de las 23:40', free: false, body: es ? 'Un tren nocturno que cruza los Andes en 3D: una novelista desaparece y tú investigas en español.' : 'A night train across the Andes in 3D: a novelist vanishes and you investigate in Spanish.' },
+    { href: '/hr-crisis', image: '/hr-crisis/portada.webp', title: 'HR Crisis', free: false, body: es ? 'Una empresa caótica en 3D: entrevistas, quejas, nóminas con errores y una crisis final, todo en español.' : 'A chaotic company in 3D: job interviews, complaints, payroll errors and a final crisis, all solved in Spanish.' },
   ];
   const benefits = es ? [
     ['Una base común para tu equipo', 'Cada profesor encuentra los materiales en la misma biblioteca, organizados por nivel y tema.'],
