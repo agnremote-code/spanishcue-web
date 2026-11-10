@@ -107,10 +107,10 @@
       "sha256": "9ccd4824f6ab555109d30b49d33c6aa3060367c1d8b22a101e0d0397849b36a4"
     },
     "app/conversation-worlds/data-c1.ts": {
-      "sha256": "842b3c70fa42c4ef5f1bd9768b10a0797eae49b066a12972db1500d331f37fba"
+      "sha256": "186ef523402ac24684c021aab87317650391fd6b16eaa8bbbefa000c0a5f4986"
     },
     "app/conversation-worlds/data-c2.ts": {
-      "sha256": "8949c670f6f728948afd5f999cfaf99683d8415891224afe4f732a91e92ac628"
+      "sha256": "d6bda0dde2c7201169aaa4af5f853bde04a7084c404f637343ced70e77c88689"
     },
     "app/conversation-worlds/state.ts": {
       "sha256": "84d2fe707ee1d09b1b2ac359bc4821aaa4a8a713e24aacdd6d96ccb84397ffde"
@@ -576,7 +576,7 @@
       "sha256": "49da7ebf1242fdd2fd49775abb11507ca07ba3f77a8637763c7f5d52a7db4141"
     },
     "tests/fixtures/conversation-batch1-run3-preserved.json": {
-      "sha256": "82bcafa256544d9f2f0138aba68e0563d67f366a03f42336bec62ba4b7624a44"
+      "sha256": "d463269077b9da7b6b8616b7b1d1c8032d7f481c2c571853384076c3aa3928f3"
     },
     "tests/fixtures/grammar-wave1-baseline.json": {
       "sha256": "c810ebed733576c88010df365c906f6b7df1d064937a45836a182bf99650c8ad"
