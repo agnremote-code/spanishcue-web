@@ -8,7 +8,7 @@ import { audit } from '../scripts/conversation-quality.mjs';
 import { questionProblems } from '../app/conversacion-general/quality.mjs';
 
 // Lower this number with every rewrite batch; never raise it.
-const MAX_FLAGGED = 1229;
+const MAX_FLAGGED = 1227;
 
 test('quality rules catch the problems Ale described', () => {
   assert.ok(questionProblems('¿Qué ropa llevarías hace diez años en la boda de tu tía?', 'B1').some((p) => p.startsWith('specific')));

@@ -22,8 +22,8 @@
     "absurdRulesB2": "994a23e3f6424a8ce4ed36f078207fe537ab8d19cb2edc78f52e4cd42e1ce188",
     "eliminationsA1": "ab28e60666c678ed242bf0f55c7140d370447f1f755432b4906928003f839629",
     "absurdRulesA1": "7d340900abef7baf66131bb3367bc7c714a34f2655adb20fa60874528949b941",
-    "eliminationsC1": "d6227d6a9d85a953ac7caff52c3bd856fb34c63c8ceb96a90589da57a9660098",
-    "absurdRulesC1": "372ddb6c14664e8266d0b9477da4c72b9a70304af8de33a7bd88c6d6dc7efda2"
+    "eliminationsC1": "a4df883ec99b88e7399381a65db1d26d08e0786e4430251407c8f7c3be76c67e",
+    "absurdRulesC1": "8639d16d3a34cc35978d087f0b2ee2f9559c908003adc3cc7f1357a125c984f9"
   },
   "routeLedger": "8b077b6ab73990771a8a01b97fee2fe736bb364dd5fdc69d20ab5145ce69ab6c",
   "families": [
@@ -526,7 +526,7 @@
     "app/choose-conversation/c2.css": "d03b100a261fa5fb22e1820097afb125d866efac65b0a7692c94fad41427f838",
     "app/choose-conversation/variants.ts": "be62868d930d9d3bce581bad518211f68287d47f79627b628fd4af1453b50521",
     "app/choose-conversation/page.tsx": "d249fd0d92893dc7710447f27d9c61b923d648b899ca9f4a7cbe417f80cb19f8",
-    "app/conversation-worlds/data-c1.ts": "842b3c70fa42c4ef5f1bd9768b10a0797eae49b066a12972db1500d331f37fba",
+    "app/conversation-worlds/data-c1.ts": "186ef523402ac24684c021aab87317650391fd6b16eaa8bbbefa000c0a5f4986",
     "app/conversation-worlds/state.ts": "84d2fe707ee1d09b1b2ac359bc4821aaa4a8a713e24aacdd6d96ccb84397ffde",
     "docs/lessons/conversation-batch1-run3-thumbnail-prompts.json": "53efef1d4761cb79284d9b076e60d4ff82e4eb45264ba396f77f16ac1b37787a",
     "tests/fixtures/conversation-batch1-run2-preserved.json": "49da7ebf1242fdd2fd49775abb11507ca07ba3f77a8637763c7f5d52a7db4141",
