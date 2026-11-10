@@ -451,7 +451,7 @@ export default {
       { say: 'Propongo un trato: una hora más de fiesta y después silencio total.', reply: '«Hora y media, y Juan sopla una vela conmigo.»', end: 'Juan sopla la vela y, sin querer, sonríe. Karina dice que es su regalo de cumpleaños favorito.', mood: 'smile' },
     ],
     talk: [
-      '¿Cómo te gusta celebrar tu cumpleaños?',
+      '¿Qué celebración del año disfrutas más? ¿Por qué?',
       '¿Recuerdas la fiesta más divertida o más desastrosa de tu vida?',
       '¿Qué haces cuando un vecino hace mucho ruido?',
       '¿Te da miedo envejecer o crees que cada edad tiene algo bueno?',

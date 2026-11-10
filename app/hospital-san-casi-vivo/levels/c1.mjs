@@ -197,7 +197,7 @@ export default {
     talk: [
       '¿Te cuesta pedir ayuda, aunque realmente la necesites?',
       '¿Crees que en la vida se escucha más al que grita más fuerte? ¿Tienes algún ejemplo?',
-      '¿Hay algo importante que te gustaría decirle a alguien de tu familia y que todavía no le has dicho?',
+      '¿Por qué crees que en muchas familias cuesta tanto decir las cosas importantes?',
       '¿Qué historia o secreto familiar te gustaría que no se perdiera nunca?',
       '¿La buena educación es siempre una virtud, o a veces se convierte en un obstáculo?',
     ],
@@ -400,8 +400,8 @@ export default {
     ],
     talk: [
       '¿Eres capaz de hacer varias cosas a la vez o es un mito que nos han vendido?',
-      '¿Cómo decides qué es urgente y qué puede esperar en tu día a día?',
-      '¿Te cuesta decir que no cuando alguien te pide un favor?',
+      '¿Qué cosas urgentes de tu vida te parecen, en el fondo, poco importantes?',
+      '¿Dónde pones el límite entre ayudar a alguien y dejar que se aprovechen de ti?',
       '¿Qué tiene que tener un buen jefe para que lo sigas sin rechistar?',
       '¿Te gusta sentirte imprescindible, o te agobia que todo el mundo dependa de ti?',
     ],
