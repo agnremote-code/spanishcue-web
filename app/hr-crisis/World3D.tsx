@@ -322,8 +322,10 @@ export default function World3D(props: WorldProps) {
       if (p.intro) {
         introAt += dt;
         const a = introAt * (reduced ? 0.02 : 0.08);
-        camera.position.set(Math.sin(a) * 1.6, 1.55, 13.2 + Math.cos(a) * 0.4);
-        camera.lookAt(player.x, 1.1, player.z);
+        // Tizia on the right third of the frame, clear of the title text on the left.
+        const wide = host.clientWidth > 720 ? 1 : 0;
+        camera.position.set(Math.sin(a) * 1.2 + wide * 0.6, 1.5, 12.3 + Math.cos(a) * 0.3);
+        camera.lookAt(player.x + wide * 1.5, 1.15, player.z);
       } else if (taskId) {
         const who = spot && 'npc' in spot ? CAST[spot.npc as keyof typeof CAST] : null;
         const tx = who ? who.x : player.x + Math.sin(player.heading) * 1.5, tz = who ? who.z : player.z + Math.cos(player.heading) * 1.5;
