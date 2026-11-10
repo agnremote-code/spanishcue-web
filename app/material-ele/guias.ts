@@ -1146,6 +1146,139 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["ser-y-estar", "a1", "a2", "b1"],
   },
+  {
+    slug: "como-ensenar-indefinido-e-imperfecto",
+    path: `${GUIAS_PATH}/como-ensenar-indefinido-e-imperfecto`,
+    title: "Cómo enseñar indefinido e imperfecto en ELE: secuencia A2–B1",
+    description:
+      "Cómo enseñar el pretérito indefinido y el imperfecto paso a paso: qué va primero, cómo explicar el contraste, errores típicos, actividades y fichas gratis.",
+    h1: "Cómo enseñar el indefinido y el imperfecto en ELE: una secuencia de A2 a B1",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "El contraste entre el pretérito indefinido y el imperfecto es el gran tema de A2 y uno de los que más tiempo de clase consume en B1. Las reglas de «acción terminada frente a acción habitual» ayudan al principio, pero se quedan cortas cuando el alumno empieza a contar historias de verdad. Esta guía propone una secuencia concreta, una forma de explicar el contraste que funciona al narrar, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para cada paso, muchos gratis y sin registro.",
+    keywords: ["cómo enseñar indefinido e imperfecto", "indefinido e imperfecto ELE", "contraste pasados español", "actividades indefinido imperfecto", "pretérito indefinido A2", "imperfecto ejercicios", "secuencia didáctica pasados"],
+    published: "2026-11-10",
+    lessonIds: [350, 142, 348, 143, 141, 18],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: la historia y el escenario",
+        blocks: [
+          { type: "p", text: "Antes de cualquier tabla, el alumno necesita una imagen que pueda usar al contar. La más útil en clase es la de una película: **el indefinido cuenta lo que pasa, los hechos que hacen avanzar la historia; el imperfecto describe el escenario, cómo eran las cosas mientras tanto**. «Ana llegó a casa, abrió la puerta y vio a su hermano» avanza; «era tarde, llovía y no había nadie en la calle» pinta el fondo." },
+          { type: "p", text: "Esta idea funciona mejor que «terminado frente a no terminado», porque «vivió diez años en Madrid» está terminado y también dura mucho. El alumno que piensa en hechos que avanzan y en fondo que describe elige bien en la mayoría de las frases que va a decir en clase." },
+          { type: "p", text: "La página de [indefinido e imperfecto](/material-ele/indefinido-e-imperfecto) de Material ELE resume los usos con ejemplos listos para proyectar, y la de [pretérito perfecto](/material-ele/preterito-perfecto) cubre el tercer pasado que el alumno ya conoce." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada paso",
+        blocks: [
+          { type: "p", text: "El error más común es presentar las dos formas y el contraste en la misma semana. Funciona mejor separar las formas, automatizarlas y juntarlas después. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "Antes: el pretérito perfecto",
+            blocks: [
+              { type: "p", text: "Muchos programas empiezan los pasados con el [pretérito perfecto para experiencias](/material-ele/ficha/preterito-perfecto-compuesto-indicativo) («¿has estado en México?»), porque se forma con un verbo que el alumno ya conoce. Más adelante conviene mostrar la [variación regional entre perfecto e indefinido](/material-ele/ficha/perfecto-e-indefinido-variacion), sobre todo si el alumno escucha español de América." },
+            ],
+          },
+          {
+            title: "A2: las formas, una por una",
+            blocks: [
+              { type: "ol", items: [
+                "**Indefinido regular**: [ficha del indefinido regular](/material-ele/ficha/preterito-perfecto-simple-indicativo), con marcadores como ayer, el año pasado, en 2019.",
+                "**Indefinido irregular de alta frecuencia**: [ficha de irregulares](/material-ele/ficha/indefinido-irregular). Fui, tuve, hice, estuve, dije: pocos verbos, mucho uso.",
+                "**Imperfecto para hábitos y descripciones**: [ficha del imperfecto](/material-ele/ficha/preterito-imperfecto-indicativo). «Cuando era pequeño, vivía en el campo y jugaba en la calle».",
+              ] },
+            ],
+          },
+          {
+            title: "A2: el contraste",
+            blocks: [
+              { type: "p", text: "Con las tres formas automatizadas llega el contraste: la clase gratis de [indefinido e imperfecto](/gramatica/indefinido-e-imperfecto), evento y contexto. Después, la ficha de [duración y frecuencia en pasado](/material-ele/ficha/expresar-duracion-y-frecuencia-en-pasado) («estuve dos horas», «iba todos los días»)." },
+            ],
+          },
+          {
+            title: "B1: contar con intención",
+            blocks: [
+              { type: "p", text: "En B1 se repasan los pasados para contar historias con intención, en la ficha de [revisión de pasados](/material-ele/ficha/past-b1), y entra el [pluscuamperfecto](/material-ele/ficha/preterito-pluscuamperfecto-indicativo) para lo que había pasado antes: «cuando llegué, la película ya había empezado»." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicarlo en clase sin listas de marcadores",
+        blocks: [
+          { type: "p", text: "Las listas de marcadores («ayer va con indefinido, siempre va con imperfecto») funcionan hasta que aparece «ayer hacía mucho frío». Tres técnicas que funcionan mejor:" },
+          { type: "ol", items: [
+            "**La línea del tiempo.** Dibuja una línea larga para el escenario (imperfecto) y puntos encima para los hechos (indefinido). «Llovía» es la línea; «sonó el teléfono» es el punto.",
+            "**La misma historia, dos versiones.** Cuenta una anécdota solo con indefinido y pregunta qué falta. Después añade el imperfecto y el alumno ve que la historia «se ve».",
+            "**Pares mínimos.** «Iba al gimnasio» frente a «fui al gimnasio», «tenía un perro» frente a «tuve un perro». Pregunta qué cambia en lo que imagina el oyente.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la historia:" },
+          { type: "ul", items: [
+            "**«Yo fue», «él hací».** Formas sin automatizar. Solución: práctica corta y diaria de la forma antes del contraste, por ejemplo con el [ejercicio de A2](/material-ele/ejercicio/a2).",
+            "**«Ayer estaba en el cine y vi una película» para un hecho cerrado.** Usa el imperfecto para todo lo que «dura». Solución: la línea del tiempo y la pregunta «¿hace avanzar la historia?».",
+            "**«Cuando fui pequeño…».** Usa el indefinido para una etapa de la vida. Solución: presentar «cuando era…» como bloque fijo desde el primer día.",
+            "**Todo en indefinido.** El alumno cuenta una lista de hechos sin escenario. Solución: pedir siempre dos frases de fondo antes de empezar la historia.",
+            "**«Ya empezó cuando llegué».** Falta el pluscuamperfecto en B1. Solución: dos hechos en la línea del tiempo y la pregunta «¿cuál pasó antes?».",
+          ] },
+          { type: "p", text: "El [ejercicio de indefinido e imperfecto](/material-ele/ejercicio/indefinido-e-imperfecto) practica estos puntos con soluciones. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar los pasados",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la forma; contar historias fija la elección. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**Mi primer día.** El primer día de trabajo, de colegio o en otro país: dos frases de escenario y tres hechos.",
+            "**La foto antigua.** Una foto de la infancia del alumno: cómo era todo (imperfecto) y qué pasó ese día (indefinido).",
+            "**Historia en cadena.** El profesor da el escenario; el alumno añade un hecho; el profesor añade otro; y así hasta un final.",
+            "**El interrogatorio.** «¿Qué hacías ayer a las ocho?» y «¿qué pasó después?»: el alumno defiende su coartada con los dos pasados.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades) y preguntas listas para el nivel en [preguntas de conversación de A2](/material-ele/preguntas/a2). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A2, contraste)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de contraste en A2, esta secuencia deja al alumno contando una historia con los dos pasados:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** «¿Qué hiciste el fin de semana?». Respuestas libres, sin corregir.",
+            "**Contraste (5 minutos):** la misma anécdota en dos versiones, solo hechos y con escenario. ¿Qué cambia?",
+            "**Clase (25 minutos):** la clase gratis de [indefinido e imperfecto](/gramatica/indefinido-e-imperfecto), con el modo profesor en pantalla compartida.",
+            "**Producción (10 minutos):** el alumno cuenta su primer día en un trabajo o en un país nuevo, con dos frases de escenario y tres hechos.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de pasados es gratis",
+        blocks: [
+          { type: "p", text: "Se abre gratis y sin registro la clase interactiva de [indefinido e imperfecto](/gramatica/indefinido-e-imperfecto), con su ficha completa de doce ejercicios, además de todas las fichas de esta guía, el ejercicio de indefinido e imperfecto y las preguntas de conversación. El resto de clases de pasados forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A2](/material-ele/a2) ordena todo el material, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Las guías anteriores de esta serie son [cómo enseñar ser y estar](/material-ele/guia/como-ensenar-ser-y-estar) y [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña el contraste entre indefinido e imperfecto?", answer: "En A2. Primero se enseñan las formas por separado (indefinido regular, irregulares frecuentes e imperfecto) y después el contraste. En B1 se repasa para contar historias con intención y se añade el pluscuamperfecto." },
+      { question: "¿Cuál es la mejor forma de explicar la diferencia?", answer: "Con la imagen de una película: el indefinido cuenta los hechos que hacen avanzar la historia y el imperfecto describe el escenario. Funciona mejor que «terminado frente a no terminado», que falla con frases como «vivió diez años en Madrid»." },
+      { question: "¿Qué se enseña primero, el indefinido o el imperfecto?", answer: "Lo más habitual es empezar por el indefinido regular y los irregulares frecuentes, porque sirven para contar qué hiciste. El imperfecto llega después para hábitos y descripciones, y el contraste cuando las tres formas ya salen sin esfuerzo." },
+      { question: "¿Hay una clase gratis de indefinido e imperfecto?", answer: "Sí. La clase interactiva de indefinido e imperfecto de SpanishCue se abre gratis, con su ficha completa, y en Material ELE hay fichas, un ejercicio con soluciones y preguntas de conversación, todo sin registro." },
+    ],
+    related: ["indefinido-e-imperfecto", "preterito-perfecto", "a2", "b1"],
+  },
 ];
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
