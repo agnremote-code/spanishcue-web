@@ -39,9 +39,18 @@ const QUESTION = /¿[^?¿"`\n]{4,400}\?/g;
 const LEVEL_IN_PATH = /(?:^|[\/_.-])(a0|a1|a2|b1|b2|c1|c2)(?:[\/_.-]|$)/i;
 const LEVEL_MARK = /(?:\blevel\s*:\s*['"]|['"]|\b)(A0|A1|A2|B1|B2|C1|C2)['"]?\s*[:,\]]/g;
 
+// Charlas 3D bands (app/charlas-3d/banco.mjs): a0 = A0, a = A1–A2, b = B1–B2, c = C1–C2.
+const BAND = /^\s+(a0|a|b|c): \[/gm;
+const BAND_LEVEL = { a0: 'A0', a: 'A2', b: 'B1', c: 'C1' };
+
 function levelAt(path, text, index) {
   const p = LEVEL_IN_PATH.exec(path);
   if (p) return p[1].toUpperCase();
+  if (path.endsWith('charlas-3d/banco.mjs')) {
+    let band = null;
+    for (const m of text.matchAll(BAND)) { if (m.index > index) break; band = m[1]; }
+    if (band) return BAND_LEVEL[band];
+  }
   let last = null;
   for (const m of text.matchAll(LEVEL_MARK)) { if (m.index > index) break; last = m[1]; }
   return last ?? 'B1';

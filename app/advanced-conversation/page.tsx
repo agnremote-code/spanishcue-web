@@ -8,7 +8,7 @@ type Topic={emoji:string;title:string;label:string;questions:string[]};
 
 const topics:Topic[]=[
   {emoji:"🧠",title:"Personalidad",label:"Personalidad y psicología",questions:[
-    "¿Hasta qué punto nuestra personalidad es realmente “nuestra” y hasta qué punto es una colección de respuestas que aprendimos para adaptarnos a otras personas?",
+    "¿Cuánto de tu personalidad es realmente tuyo y cuánto aprendiste para adaptarte a los demás?",
     "¿Hay rasgos de personalidad que admiramos precisamente porque no tenemos que convivir con ellos todos los días?",
     "¿Qué versión de uno mismo suele ser más auténtica: la que aparece cuando estamos solos o la que surge cuando estamos con las personas que más queremos?",
     "¿Puede una persona conocerse muy bien y, aun así, interpretar completamente mal las razones por las que hace ciertas cosas?",
@@ -50,16 +50,16 @@ const topics:Topic[]=[
     "¿Qué información personal nunca compartirías en internet?"
   ]},
   {emoji:"🎬",title:"Cultura pop",label:"Cultura popular",questions:[
-    "¿Qué película o serie (pop style) podrías ver muchas veces sin cansarte?",
-    "¿Qué celebridad popular te parece interesante por razones que no tienen que ver con su talento?",
-    "¿Qué canción y/o género populares te lleva inmediatamente a una época concreta de tu vida?",
-    "¿Qué tendencia cultural popular actual no entiendes del todo?",
+    "¿Qué película o serie podrías ver muchas veces sin cansarte?",
+    "¿Qué persona famosa te parece interesante por razones que no tienen que ver con su talento?",
+    "¿Qué canción te lleva inmediatamente a una época concreta de tu vida?",
+    "¿Qué moda cultural de hoy no entiendes del todo?",
     "¿Qué personaje ficticio famoso sería un amigo tuyo en la vida real y por qué?"
   ]},
   {emoji:"🍕",title:"Vida diaria",label:"Comida y vida diaria",questions:[
     "¿Qué comida sencilla te hace sentir inmediatamente en casa?",
     "¿Qué combinación de comida te gusta aunque otras personas la encuentren extraña?",
-    "¿Por qué pagarías mucho dinero en un restaurante y por qué no?",
+    "¿Por qué cosas pagarías mucho dinero en un restaurante?",
     "¿Qué plato aprendiste a apreciar solo cuando creciste?",
     "¿Qué costumbre de comida de otro país te gustaría adoptar?"
   ]},
@@ -68,7 +68,7 @@ const topics:Topic[]=[
     "¿Qué cualidad tiene un jefe realmente bueno?",
     "¿Qué parte de tu trabajo o estudios te da más energía?",
     "¿Qué consejo profesional te habría ayudado mucho hace unos años?",
-    "¿Para ti, cómo se reconoce el éxito sin hablar de dinero?"
+    "Para ti, ¿cómo se reconoce el éxito sin hablar de dinero?"
   ]},
   {emoji:"🔥",title:"Debate",label:"Debate y opiniones",questions:[
     "¿Es mejor ser completamente sincero o proteger los sentimientos de una persona?",
