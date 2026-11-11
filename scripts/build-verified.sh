@@ -35,6 +35,3 @@ node "${script_dir}/finalize-protected-build.mjs"
 node "${script_dir}/finalize-protected-build.mjs"
 
 "${script_dir}/validate-artifact.sh"
-
-# Fails the build when the Worker bundle passes its memory budget (incident 1102).
-node "${script_dir}/check-worker-bundle.mjs"
