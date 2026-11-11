@@ -25,7 +25,6 @@ import './mundo.css';
 const World3D = dynamic(() => import('./World3D'), { ssr: false, loading: () => <div className="mb-loading">Desplegando el papel…</div> });
 export const LESSON_ID = 259;
 const TOTAL = SPOTS.length;
-const INTRO_SECONDS = 9;
 const b = (es: string, en: string) => ({ es, en });
 
 function webglAvailable() {

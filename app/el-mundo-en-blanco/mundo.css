@@ -194,4 +194,5 @@
   .mb-slip { min-height: 0; transform: none !important; }
   .mb-hud-right > .mb-restart, .mb-hint { display: none; }
   .mb-prompt { bottom: 168px; }
+  .mb-toast { top: auto; bottom: 232px; font-size: 1rem; }
 }
