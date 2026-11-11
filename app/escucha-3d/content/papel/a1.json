@@ -200,8 +200,8 @@
    ],
    "open": [
     {
-     "q": "¿Qué persona de tu familia vive lejos de ti?",
-     "model": "Mi hermano vive lejos, en otra ciudad."
+     "q": "¿A qué familiar ves muy pocas veces al año?",
+     "model": "Veo a mi hermano dos veces al año."
     },
     {
      "q": "¿Qué mensaje corto mandas muchas veces?",

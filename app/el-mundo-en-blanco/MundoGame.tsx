@@ -215,6 +215,8 @@ export default function MundoGame() {
       }
       return next;
     });
+    // The card steps aside: the ink flooding the world is the reward.
+    setSpotOpen(null);
   }, [spotOpen, say]);
   const onFinal = useCallback(() => { setSpotOpen(null); setEnding(true); ambience.current?.play('gong'); }, []);
   const changeTeaching = (value: Teaching) => { setTeaching(value); writePref(`${STORAGE_KEY}:modo`, value); if (value === 'solo') setState(s => setLevel(restore(readPref(STORAGE_KEY)), s.level)); };

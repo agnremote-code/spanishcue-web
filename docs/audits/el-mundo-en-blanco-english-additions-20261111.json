@@ -1,0 +1,1674 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g (standing approval of English support copy for new classes), applied on 2026-11-11 to «El mundo en blanco» (ID 259): a new A0–C2 3D conversation and listening class in a paper world, whose A0 level is fully bilingual (encounters, answers, echoes and listening), whose A1 level glosses its key words in English, whose intro captions and interface hints carry an English line for beginners, plus one English line for the academies listing. This manifest approves only the exact English support literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A paper world with no ink, in 3D: twelve origami beings, twelve deep questions, and colour returns with every answer."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "This world was made of paper and ink."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "One day, its people stopped telling their stories. And the ink dried up."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "You bring the last pencil."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "I keep it for myself"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "You fold the page in four and put it in your pocket. It weighs little and yet you feel it as you walk."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "I give it to someone"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "Senba takes it in her beak and flies off. She does not say who it is for: she says you already know."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "I leave it open and keep writing"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "The Page smiles. At the very bottom, with your pencil, someone has written a single phrase: “To be continued”."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "Follow the ink circles: someone is waiting beside each one."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "The whole world has colour. Go back to the great inkwell: your page is waiting."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "${who.name}'s ink is back. Look at the world."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/MundoGame.tsx",
+      "text": "The page is yours. What do you do with it?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Crane number one thousand"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a paper sea. There is a white crane. It has a number: 1000."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. I am Senba. I am crane number one thousand."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello, Senba. You are very white."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. A thousand cranes are one wish."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A wish is a lovely thing."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I wait and wait. You have a wish too."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What wish do you write on your crane?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "More time"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Time is a big wish."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "More calm"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I want calm too."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A trip"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "How nice! I do not travel: I wait."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What are you waiting for this week?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who is waiting to hear from you?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Is your wish for you or for someone else?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the crane"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the wish"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "white"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "one thousand"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A boat on the sand"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a paper boat. It is not in the sea. It is on the sand."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. I am Captain Pliego."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. You are a boat with no sea."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I am made of paper. Water is bad for me."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "But the sea is lovely."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. The sea is adventure. The sand is calm."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Are you more sea or more sand?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Sea: I want adventure"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "How brave! I am afraid."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Sand: I want calm"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Like me. The sand is my home."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Both"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "One day sea and one day sand. That is fine."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What are you afraid of?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What small adventure do you want this month?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "In what place do you feel calm?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the boat"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the sea"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the sand"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "adventure"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The red mailbox"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a red mailbox. There is a fox with many letters. He is the postman."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Good morning. I am Remite, the postman."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. You have a lot of letters."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. They are letters with no stamp. Nobody sends them."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What a pity."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Here is a letter of yours. It has no name on it."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who is your unstamped letter for?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "For someone in my family"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Family is always waiting for letters."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "For a friend"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A letter to a friend is a gift."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "For me"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Very good. You need letters too."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What three words are in your letter?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who do you say “thank you” to today?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What lovely word do you rarely say?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the letter"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the mailbox"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the postman"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the stamp"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "to send"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A ball of paper"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a wastepaper bin. On the ground there is a ball of paper. It has two eyes."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. I am Borra. I am an idea."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. You are on the ground."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. To one person, I am a mistake."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A mistake is not a bad thing."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Thank you. You have mistakes too."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What do you do with a mistake of yours?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I start again"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Good! A new sheet."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I ask for help"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Two people see the mistake better."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I leave it and do something else"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Oh. I am a thing left behind."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What is hard for you?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What mistake do you often make in Spanish?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who helps you with your mistakes?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the ball"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the bin"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the mistake"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the idea"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "again"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The green frog"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a pond. There is a paper frog. It jumps and jumps."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello! I am Brinca. I jump."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello, Brinca. You jump very well."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Thank you. But I only jump forwards."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "You cannot go back."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "No. Behind me is yesterday. Ahead is tomorrow."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What do you think about more: yesterday or tomorrow?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yesterday"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yesterday is lovely. But I cannot go there."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Tomorrow"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Like me! Always forwards."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Today"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Today is a good place to be."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What good thing is there in your day today?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What nice plan do you have for tomorrow?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What lovely moment from yesterday do you remember?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the frog"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "to jump"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "yesterday"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "tomorrow"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "forwards"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The owl and the red pencil"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is an owl with glasses. He has a red pencil. He is very serious."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Good afternoon. I am Don Margen."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. You have a red pencil."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. I see mistakes. Lots of mistakes."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "And not the good things."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hmm. That is true. I never say “well done”."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Which person often says “well done” to you?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "My family"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "You have a good family."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "My teacher"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A good teacher sees the good."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I do"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "How nice! I do not know how to do that."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who do you say “well done” to?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What do you do very well?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Are you demanding with other people?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the owl"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the pencil"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the glasses"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "serious"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "demanding"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Five sisters"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There are five paper dolls. They are sisters. They are the same."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. I am Lina. I am number three."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. Your sisters are the same as you."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. One dress, one face, one hand."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "But you are Lina."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. I want to be a little different."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "How are you different from your family?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "In my job"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A different job is a new road."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "In my tastes"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I want a green dress. That is my taste."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "In my character"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Then you are not a copy."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who is the same as you in your family?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Which people do you feel good with?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What thing is only yours?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the doll"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the sister"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the same"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "different"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the hand"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The playtime plane"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a paper plane. It is in the air. It is a little boy's plane."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello! I am Dardo. I fly."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. You are a toy."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. I belong to an eight-year-old boy."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "And today that boy is a grown-up."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. But I am his childhood. I am here."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What do you still have from your childhood?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A toy or a book"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A friend of mine! It is a treasure."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A photo"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "In a photo, childhood does not go away."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A friendship"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "That is stronger than paper."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What is your favourite childhood game?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What is your childhood home like?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What do you play today?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the plane"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "to fly"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the toy"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "childhood"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "playtime"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The newspaper dragon"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a dragon. It is made of newspaper. It has a lot of news."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello! I am Titular. I have news."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. Your news is from yesterday."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. And nearly all of it is bad."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I want some good news."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Me too. Tomorrow there is a new newspaper."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What news do you want to read tomorrow?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "News about peace"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "That is the biggest news."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "News about my country"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Your country is far away, but it is yours."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "News about my family"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "It is small, but it is the most important."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What good news do you have today?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Do you read the news on paper or on your phone?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What topic do you not want to read about any more?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the dragon"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the news"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the newspaper"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "to read"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "peace"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The red lantern"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a red lantern on the mountain. It has fire inside. It gives a lot of light."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. I am Candela. I have fire."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. But you are made of paper."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. Fire is dangerous for me."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "But your light is very lovely."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Thank you. With no fire I am not a lantern."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What gives you light?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Music"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Music is good fire."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "My people"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Many lights together: a party."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "My job"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "How lucky! But rest too."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "When are you out of energy?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Where do you rest best: at home or out?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What activity do you do for many hours?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the lantern"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the fire"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the light"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "dangerous"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "to rest"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The whale and the village"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a blue whale in the sky. On her back there is a little village."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Good afternoon. I am Mar."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. You have houses on your back!"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. It is my village. I look after everyone."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "That is a lot of work."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. I am tired. But I do not say so."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who do you look after?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "My family"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Your family is your village."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "My friends"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Your friends are lucky."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "An animal"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Animals say thank you with no words."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Who do you call in a bad week?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Do you ask for help a lot or a little?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Which day of the week is the heaviest?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the whale"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the village"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the back"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "to look after"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "The blank page"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "There is a big desk. There is a blank page. It has no words."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. I am the last page."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Hello. You are blank."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Yes. I am a new page. I am for you."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "I have a pencil."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Very good. I want a word from you."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What is your first word on the page?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A name"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A name is a good first word."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A place"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Then your page is a journey."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "A wish"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "Senba, the crane, is happy."
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What new page do you want to start this year?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What word from this paper world are you taking with you?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "What colour is your day today?"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the page"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "blank"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "the word"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "new"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a0.mjs",
+      "text": "last"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the crane"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to fold"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the wish"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the shore"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the wing"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to sail"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the wave"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "dry"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to break"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "safe"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "brave"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the postman"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the envelope"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the stamp"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to send"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to keep"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the bag"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the bin"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to throw away"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the wrinkle"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to try"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to get angry"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the line"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the frog"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to jump"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the pond"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to go back"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "back"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "forwards"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the owl"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to correct"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the glasses"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "serious"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the branch"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "kindly"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the doll"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the same"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to let go"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "on your own"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the smile"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the dress"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to fly"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "playtime"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the pilot"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "when you grow up"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to stop"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the box"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the dragon"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the news"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the newspaper"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "yesterday"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the page"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the corner"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the lantern"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the flame"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to burn"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the light"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the warmth"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to rest"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the whale"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to carry"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to weigh"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the tower"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "to smile"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the back"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the sheet"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "blank"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the ink"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the pencil"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the letter"
+    },
+    {
+      "path": "app/el-mundo-en-blanco/levels/a1.mjs",
+      "text": "the desk"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Senba, the crane, and Captain Pliego look at the sea."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Hello. I am Senba. I am a crane."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Hello. I am Pliego. I am a boat."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "The sea is very white today."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Yes. And the water is cold."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "I want to see the sun."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "I want a hot coffee."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What is Senba?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What colour is the sea?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "How is the water?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What does the boat want?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What colour is the sea in your country?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Do you want sun or rain for tomorrow?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What do you drink on a cold morning?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "sea"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "water"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "sun"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Brinca, the frog, is jumping. Don Margen, the owl, is watching."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Hello, Don Margen! I am jumping a lot today."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Good morning, Brinca. You jump badly."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "No! I jump very well. Look: one, two, three."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Hmm. Three jumps. The third one is good."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Thank you! That is your first kind word."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "How many jumps does Brinca do?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Which jump is good?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "At first, how does Brinca jump according to the owl?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What does Brinca say at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Do you jump, run or walk more?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Can you count to twenty in Spanish?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What sport is good for you?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "jump"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "third"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "kind, lovely"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Dardo, the plane, sees the city. Lina, the doll, is down below."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Hello, Lina! From here I can see the whole city."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Hello, Dardo. Tell me what there is."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "There is a square, a market and a bridge."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "There are people in the square, for sure."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Yes. There is a party with music."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "How nice! I want to dance."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What does Dardo see?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What is there in the square?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What is there at the party?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What does Lina want?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What places are there near your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Who is the best dancer in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What music is on your phone?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "square"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "market"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "bridge"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "It is night on the mountain. Candela, the lantern, talks to Mar, the whale."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Good evening, Mar. You are very high up."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Good evening, Candela. Your light is lovely."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Thank you. You are cold, I can see it."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "A little. The mountain is cold at night."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "I have fire. I am here with you."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Thank you, my friend. Now I am fine."
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What time of day is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What is Candela's light like?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Who is cold?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What does Candela have?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What do you do on a cold night?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "Who is with you on bad days?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "What do you see from a high mountain?"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "light"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "cold"
+    },
+    {
+      "path": "app/escucha-3d/content/papel/a0.json",
+      "text": "fire"
+    }
+  ]
+}

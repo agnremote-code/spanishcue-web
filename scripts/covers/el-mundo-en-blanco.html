@@ -1,0 +1,100 @@
+<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#fff}svg{display:block}</style></head><body>
+<svg id="c" xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"></svg>
+<script>
+const S = [];
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const P = (pts, fill, extra = '') => `<polygon points="${pts.map(p => p.join(',')).join(' ')}" fill="${fill}" stroke="#2b2d3a" stroke-opacity=".55" stroke-width="1.6" stroke-linejoin="round" ${extra}/>`;
+const defs = `
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b2a6b"/><stop offset=".38" stop-color="#b0528f"/><stop offset=".62" stop-color="#f08a5d"/><stop offset=".8" stop-color="#ffd58a"/></linearGradient>
+  <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff6d0"/><stop offset=".35" stop-color="#ffe08a" stop-opacity=".9"/><stop offset="1" stop-color="#ffb35c" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffd27a" stop-opacity=".95"/><stop offset="1" stop-color="#ff7a3c" stop-opacity="0"/></radialGradient>
+  <filter id="sh" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="9" stdDeviation="8" flood-color="#1a1430" flood-opacity=".32"/></filter>
+  <filter id="shs" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#1a1430" flood-opacity=".28"/></filter>
+  <filter id="blank" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values=".045 .14 .02 0 .82  .045 .14 .02 0 .815  .045 .135 .02 0 .795  0 0 0 1 0"/></filter>
+  <filter id="grain" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".9" numOctaves="2" seed="3" result="n"/><feColorMatrix in="n" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .32 -.1"/><feComposite operator="in" in2="SourceGraphic"/></filter>
+  <filter id="bleed" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".011" numOctaves="3" seed="11" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="130" xChannelSelector="R" yChannelSelector="G"/><feGaussianBlur stdDeviation="2.2"/></filter>
+  <filter id="wash" x="-10%" y="-10%" width="120%" height="120%"><feTurbulence type="fractalNoise" baseFrequency=".02" numOctaves="2" seed="5" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="46"/><feGaussianBlur stdDeviation="5"/></filter>
+  <mask id="left"><rect width="1600" height="900" fill="#000"/><path filter="url(#bleed)" fill="#fff" d="M-200,-200 L760,-200 C700,120 860,300 760,470 C690,600 800,700 700,1100 L-200,1100 Z"/></mask>
+  <pattern id="news" width="46" height="13" patternUnits="userSpaceOnUse"><rect width="46" height="13" fill="#f3efe4"/><rect x="2" y="3" width="30" height="2.2" fill="#8d8a84"/><rect x="2" y="8" width="40" height="2.2" fill="#a9a59d"/></pattern>
+</defs>`;
+// ---- sky
+S.push('<rect width="1600" height="900" fill="url(#sky)"/>');
+S.push('<circle cx="1010" cy="560" r="330" fill="url(#sun)"/>');
+// clouds: folded paper sheets
+for (const [x, y, s] of [[300, 150, 1], [900, 110, .8], [1380, 420, .7], [560, 250, .6], [1230, 90, .55]]) S.push(`<g filter="url(#shs)" transform="translate(${x} ${y}) scale(${s})">${P([[-120, 20], [-60, -26], [10, -8], [70, -40], [140, 14], [60, 34], [-40, 30]], '#fff4ea')}${P([[-60, -26], [10, -8], [-40, 30]], '#ffe3d6')}${P([[70, -40], [140, 14], [60, 34]], '#ffd9cc')}</g>`);
+// ---- mountains (three cut-out layers)
+const ridge = (y, amp, n, fillA, fillB, s0) => { seed = s0; const pts = [[-20, 900], [-20, y]]; let out = '';
+  const peaks = []; for (let i = 0; i <= n; i++) peaks.push([-20 + i * 1640 / n, y - (i % 2 ? amp * (.55 + rnd() * .6) : amp * rnd() * .25)]);
+  for (let i = 0; i < peaks.length; i++) pts.push(peaks[i]); pts.push([1620, 900]);
+  out += P(pts, fillA);
+  for (let i = 1; i < peaks.length - 1; i += 2) out += P([peaks[i], [peaks[i][0] + 26, y + 60], peaks[i + 1], [peaks[i][0] + 90, y + 110]].slice(0, 3), fillB, 'stroke-opacity=".25"');
+  return `<g filter="url(#sh)">${out}</g>`; };
+S.push(ridge(520, 250, 8, '#6a3d9a', '#55307f', 21));
+S.push(ridge(575, 170, 10, '#8a55b8', '#7446a3', 33));
+// ---- pop-up city (right-centre)
+const house = (x, y, w, h, c, r) => P([[x, y], [x + w, y], [x + w, y - h], [x, y - h]], c) + P([[x - 6, y - h], [x + w / 2, y - h - w * .55], [x + w + 6, y - h]], r) + `<rect x="${x + w * .2}" y="${y - h * .62}" width="${w * .22}" height="${h * .25}" fill="#ffe9a8"/><rect x="${x + w * .58}" y="${y - h * .62}" width="${w * .22}" height="${h * .25}" fill="#ffe9a8"/>`;
+let city = ''; [[1030, 640, 70, 120, '#e8674f', '#b5402f'], [1108, 640, 56, 170, '#f3a65a', '#c9772f'], [1172, 640, 84, 100, '#d2553f', '#9e3a2b'], [1262, 640, 60, 150, '#f0c36a', '#c78f37'], [1330, 640, 78, 118, '#e8674f', '#b5402f'], [1416, 640, 62, 182, '#f3a65a', '#c9772f'], [1486, 640, 90, 96, '#d2553f', '#9e3a2b']].forEach(a => city += house(...a));
+S.push(`<g filter="url(#sh)">${city}</g>`);
+// garland
+S.push('<path d="M1050 500 Q1180 560 1290 478 Q1390 540 1500 452" fill="none" stroke="#2b2d3a" stroke-opacity=".6" stroke-width="1.6"/>');
+for (let i = 0; i < 12; i++) { const t = i / 11, x = 1060 + t * 430, y = 512 + Math.sin(t * Math.PI * 2.2) * 26 - t * 40; S.push(P([[x - 9, y], [x + 9, y], [x, y + 20]], ['#ffd166', '#06d6a0', '#ef476f', '#4f8fd0'][i % 4])); }
+// ---- forest (left / middle)
+const tree = (x, y, s, c1, c2) => `<g filter="url(#shs)">${P([[x - 5 * s, y], [x + 5 * s, y], [x + 4 * s, y - 26 * s], [x - 4 * s, y - 26 * s]], '#8b6a4a')}${P([[x - 34 * s, y - 22 * s], [x, y - 86 * s], [x + 34 * s, y - 22 * s]], c1)}${P([[x, y - 86 * s], [x + 34 * s, y - 22 * s], [x + 2 * s, y - 22 * s]], c2, 'stroke-opacity=".2"')}${P([[x - 26 * s, y - 58 * s], [x, y - 116 * s], [x + 26 * s, y - 58 * s]], c1)}${P([[x, y - 116 * s], [x + 26 * s, y - 58 * s], [x + 2 * s, y - 58 * s]], c2, 'stroke-opacity=".2"')}</g>`;
+// ground hill
+S.push(`<g filter="url(#sh)">${P([[-20, 900], [-20, 640], [200, 610], [520, 650], [820, 628], [1100, 650], [1620, 632], [1620, 900]], '#5aa469')}${P([[820, 628], [1100, 650], [1620, 632], [1620, 700], [900, 690]], '#4b925a', 'stroke-opacity=".2"')}</g>`);
+[[90, 640, 1.5], [200, 626, 1.9], [318, 640, 1.3], [420, 650, 1.6], [900, 648, 1.1], [968, 652, .9]].forEach(([x, y, s], i) => S.push(tree(x, y, s, i % 2 ? '#3f8f5a' : '#4fa56b', i % 2 ? '#2f7347' : '#3a8755')));
+// ---- sea: scalloped paper strips
+const wave = (y, c, ph) => { let d = `M-40 ${y}`; for (let x = -40; x < 1660; x += 80) d += ` q20 -26 40 0 q20 26 40 0`; d += ' L1660 920 L-40 920 Z'; return `<path filter="url(#shs)" transform="translate(${ph} 0)" d="${d}" fill="${c}" stroke="#2b2d3a" stroke-opacity=".45" stroke-width="1.5"/>`; };
+S.push(wave(720, '#2f6fb3', 0));
+// paper boat between waves
+S.push(`<g filter="url(#sh)" transform="translate(250 716) rotate(-5)">${P([[-110, 0], [110, 0], [70, 52], [-70, 52]], 'url(#news)')}${P([[-110, 0], [-70, 52], [-40, 0]], '#d9d4c6', 'stroke-opacity=".3"')}${P([[-52, 0], [0, -96], [52, 0]], 'url(#news)')}${P([[0, -96], [52, 0], [0, 0]], '#d9d4c6', 'fill-opacity=".7" stroke-opacity=".3"')}</g>`);
+S.push(wave(770, '#3f86cc', 34));
+S.push(wave(826, '#63a4e0', -22));
+// ---- whale with a village (top right)
+S.push(`<g filter="url(#sh)" transform="translate(1180 245)">
+ ${P([[-250, 30], [-170, -52], [20, -78], [170, -40], [262, 26], [150, 84], [-60, 100], [-200, 72]], '#2f6fb3')}
+ ${P([[-250, 30], [-200, 72], [-60, 100], [150, 84], [262, 26], [120, 44], [-80, 52]], '#dbe9f6')}
+ ${P([[-170, -52], [20, -78], [-40, 10], [-190, 16]], '#4f8fd0', 'stroke-opacity=".25"')}
+ ${P([[20, -78], [170, -40], [120, 44], [-40, 10]], '#3d7fc4', 'stroke-opacity=".25"')}
+ ${P([[262, 26], [352, -44], [330, 26], [362, 84]], '#2f6fb3')}
+ ${P([[40, 60], [96, 132], [120, 62]], '#3d7fc4')}
+ <circle cx="-196" cy="8" r="9" fill="#fff"/><circle cx="-198" cy="9" r="5" fill="#1d2233"/>
+ ${[[-120, -62, 34, 30, '#fff4ea', '#e8674f'], [-78, -70, 30, 40, '#ffe3b0', '#b5402f'], [-36, -76, 40, 30, '#fff4ea', '#e8674f'], [16, -78, 26, 62, '#ffe3b0', '#8a55b8'], [52, -68, 36, 28, '#fff4ea', '#e8674f']].map(([x, y, w, h, c, r]) => P([[x, y], [x + w, y], [x + w, y - h], [x, y - h]], c) + P([[x - 4, y - h], [x + w / 2, y - h - w * .6], [x + w + 4, y - h]], r)).join('')}
+ ${P([[98, -58], [110, -104], [122, -58]], '#3f8f5a')}
+ <path d="M-58 -128 q-16 -22 4 -38 q18 -16 2 -36" fill="none" stroke="#fff" stroke-opacity=".8" stroke-width="7" stroke-linecap="round"/>
+</g>`);
+// ---- lantern
+S.push('<circle cx="1470" cy="330" r="150" fill="url(#glow)"/>');
+S.push(`<g filter="url(#sh)" transform="translate(1470 330)"><path d="M0 -150 L0 -66" stroke="#2b2d3a" stroke-width="2"/>${P([[-30, -66], [30, -66], [22, -52], [-22, -52]], '#7a2a1f')}${P([[-22, -52], [22, -52], [48, 0], [22, 54], [-22, 54], [-48, 0]], '#e2452f')}${P([[-22, -52], [-4, -52], [-12, 54], [-22, 54], [-48, 0]], '#c2361f', 'stroke-opacity=".2"')}${P([[8, -52], [22, -52], [48, 0], [22, 54], [10, 54]], '#f2674a', 'stroke-opacity=".2"')}<ellipse cx="0" cy="2" rx="16" ry="30" fill="#ffe08a" opacity=".9"/>${P([[-22, 54], [22, 54], [16, 66], [-16, 66]], '#7a2a1f')}<path d="M0 66 L0 104" stroke="#e2452f" stroke-width="5"/></g>`);
+// ---- paper plane with dashed trail
+S.push('<path d="M560 300 Q760 180 900 250 T1090 150" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="3 12" stroke-linecap="round" opacity=".9"/>');
+S.push(`<g filter="url(#shs)" transform="translate(560 300) rotate(-152)">${P([[0, 0], [-92, -30], [-70, 0]], '#fff')}${P([[0, 0], [-92, 30], [-70, 0]], '#e6e2f2')}${P([[0, 0], [-70, 0], [-76, 16]], '#cfc9e2')}</g>`);
+// ---- crane, the hero (centre-left)
+S.push(`<g filter="url(#sh)" transform="translate(690 596) scale(1.38)">
+ ${P([[-30, -6], [150, -196], [96, 4]], '#e4dfd2')}
+ ${P([[-120, 40], [0, -18], [120, 40], [0, 84]], '#f4f1e8')}
+ ${P([[0, -18], [120, 40], [0, 84]], '#dedacd', 'stroke-opacity=".3"')}
+ ${P([[-120, 40], [-178, -150], [-140, -128], [-70, 16]], '#fbfaf5')}
+ ${P([[-178, -150], [-226, -124], [-168, -128]], '#f1ede2')}
+ ${P([[120, 40], [214, -112], [176, 22]], '#ebe7db')}
+ ${P([[-60, 10], [40, -236], [70, 22]], '#ffffff')}
+ ${P([[40, -236], [70, 22], [10, 16]], '#eeeae0', 'stroke-opacity=".25"')}
+ <circle cx="-186" cy="-136" r="3.6" fill="#1d2233"/>
+ <text x="52" y="-18" font-family="Georgia,serif" font-size="15" fill="#6a6878" transform="rotate(-78 52 -18)">1000</text>
+</g>`);
+// crane legs/shore strip shadow
+// ---- butterflies / paper bits
+seed = 91; for (let i = 0; i < 26; i++) { const x = 700 + rnd() * 880, y = 60 + rnd() * 560, s = 5 + rnd() * 9, r = rnd() * 360; S.push(`<g transform="translate(${x} ${y}) rotate(${r})" opacity=".9">${P([[0, 0], [s, -s * .8], [s * 1.6, 0]], ['#ffd166', '#06d6a0', '#ef476f', '#fff', '#9ad0ff'][i % 5], 'stroke-opacity=".3"')}</g>`); }
+// ---- giant pencil, bottom, drawing the line
+S.push(`<g filter="url(#sh)" transform="translate(770 842) rotate(-17)">${P([[0, -26], [560, -26], [560, 26], [0, 26]], '#f5b83d')}${P([[0, -26], [560, -26], [560, -8], [0, -8]], '#ffd062', 'stroke-opacity=".2"')}${P([[0, 8], [560, 8], [560, 26], [0, 26]], '#dd9c22', 'stroke-opacity=".2"')}${P([[560, -26], [610, -26], [610, 26], [560, 26]], '#c9ccd6')}${P([[610, -26], [668, -26], [668, 26], [610, 26]], '#f08a9b')}${P([[0, -26], [-74, 0], [0, 26]], '#f3dcb4')}${P([[-74, 0], [-48, -9], [-48, 9]], '#1d2233')}</g>`);
+const scene = S.join('\n');
+const svg = document.getElementById('c');
+svg.innerHTML = defs + `<g id="scene">${scene}</g>`
+ + `<g mask="url(#left)"><rect width="1600" height="900" fill="#faf8f2"/><g filter="url(#blank)">${scene}</g></g>`
+ // ink splashes along the edge
+ + `<g filter="url(#wash)" opacity=".85"><circle cx="760" cy="130" r="50" fill="#ef476f"/><circle cx="835" cy="300" r="34" fill="#ffd166"/><circle cx="640" cy="250" r="22" fill="#06d6a0"/><circle cx="668" cy="800" r="44" fill="#4f8fd0"/><circle cx="800" cy="26" r="40" fill="#8a55b8"/></g>`
+ + (() => { seed = 5; let o = ''; for (let i = 0; i < 40; i++) { const y = rnd() * 900, x = 660 + rnd() * 110 - (y / 900) * 40 - rnd() * 150, r = 2 + rnd() * 8; if (y > 330 && y < 700 && x > 470) continue; o += `<circle cx="${x}" cy="${y}" r="${r}" fill="${['#ef476f', '#ffd166', '#06d6a0', '#4f8fd0', '#8a55b8', '#f08a5d'][i % 6]}" opacity="${.5 + rnd() * .5}"/>`; } return o; })()
+ + '<rect width="1600" height="900" fill="#6b5a3a" filter="url(#grain)" opacity=".4"/>';
+document.title = 'ready';
+</script></body></html>

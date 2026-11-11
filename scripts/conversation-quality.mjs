@@ -21,7 +21,7 @@ export const CONVERSATION_DIRS = [
   'mi-yo-de-2035', 'el-consultorio-sentimental', 'resenas-de-una-estrella', 'el-billete-ganador', 'un-dia-sin-pantallas',
   'el-tribunal-de-las-cosas-pequenas',
   'el-reino-de-la-rosa-dormida', 'hospital-san-casi-vivo', 'la-feria-de-villaluz', 'madrid-infectada', 'mas-alla',
-  'vuelo-cancelado', 'el-consorcio', 'el-tren-de-las-2340', 'la-boda', 'marketing-de-casinos', 'suecia', 'argentina',
+  'vuelo-cancelado', 'el-consorcio', 'el-mundo-en-blanco', 'el-tren-de-las-2340', 'la-boda', 'marketing-de-casinos', 'suecia', 'argentina',
   'espana', 'la-ciudad-no-duerme', 'bosque-de-los-hongos-gigantes', 'entrenador-personal', 'la-vida-despues-de-los-30',
   'red-flag-o-no', 'red-flag-o-no-a2', 'red-flag-o-no-b1', 'red-flag-o-no-b2', 'ciudad-en-juego', 'modo-play-y-ahora-que',
   'modo-play-uno-o-el-otro', 'la-camara-de-presion', 'el-ministerio-de-las-versiones', 'la-agencia-de-vidas-paralelas',

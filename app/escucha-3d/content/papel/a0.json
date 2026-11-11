@@ -106,9 +106,9 @@
      "qEn": "Do you want sun or rain for tomorrow?"
     },
     {
-     "q": "¿Qué bebida caliente es tu favorita?",
-     "model": "Mi favorita es el café con leche.",
-     "qEn": "What is your favourite hot drink?"
+     "q": "¿Qué tomas en una mañana fría?",
+     "model": "Tomo un café con leche.",
+     "qEn": "What do you drink on a cold morning?"
     }
    ],
    "gaps": "El [mar] está muy [blanco] hoy. Sí. Y el [agua] está [fría].",

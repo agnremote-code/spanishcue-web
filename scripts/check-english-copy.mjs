@@ -170,6 +170,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/el-consorcio-english-additions-20261101.json',
   'docs/audits/la-boda-english-additions-20261104.json',
   'docs/audits/el-tren-de-las-2340-english-additions-20261104.json',
+  'docs/audits/el-mundo-en-blanco-english-additions-20261111.json',
   'docs/audits/autoestudio-espejo-english-20261105.json',
 ];
 export function loadApprovedAdditions(root) {

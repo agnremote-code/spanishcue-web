@@ -1,13 +1,14 @@
 /* El mundo en blanco · everything on screen is paper and ink: warm white
    sheets with a soft shadow, graphite text, a book serif for what the paper
    beings say and a hand for what you answer. The only colour is the ink of
-   whoever you are talking to (--tinta). No panels of glass, no neon. */
+   whoever you are talking to (--tinta). No panels of glass, nothing that glows. */
 .mb { --papel: #fbf8f0; --papel-2: #f3eee1; --grafito: #25222b; --gris: #6d6878; --linea: rgba(37, 34, 43, .16); --tinta: #2f6fb3;
   --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
   --mano: "Segoe Script", "Bradley Hand", "Snell Roundhand", "Comic Sans MS", cursive;
   position: fixed; inset: 0; overflow: hidden; background: #f1ede2; color: var(--grafito); font-family: "Helvetica Neue", "Segoe UI", system-ui, sans-serif; }
 .mb button, .mb select { font: inherit; color: inherit; cursor: pointer; }
 .mb button:focus-visible, .mb summary:focus-visible, .mb [tabindex]:focus-visible { outline: 3px solid var(--tinta); outline-offset: 2px; }
+.mb .mb-card-body:focus-visible, .mb .mb-q:focus-visible, .mb .mb-card:focus-visible { outline: none; }
 .mb kbd { display: inline-grid; place-items: center; min-width: 1.6em; height: 1.6em; margin-right: .5em; padding: 0 .35em; border: 1.5px solid currentColor; border-radius: 4px; font: 700 .72rem/1 ui-monospace, monospace; }
 .mb-en { display: block; margin-top: .18em; font-size: .78em; font-weight: 400; font-style: italic; opacity: .7; letter-spacing: 0; text-transform: none; font-family: "Helvetica Neue", system-ui, sans-serif; }
 .mb-world, .mb-canvas { position: absolute; inset: 0; }
