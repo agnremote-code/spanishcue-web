@@ -1,0 +1,462 @@
+{
+ "game": "papel",
+ "level": "A1",
+ "items": [
+  {
+   "id": "muelle",
+   "title": "Una carta para la grulla",
+   "place": "El muelle de papel · el buzón rojo",
+   "context": "Remite, el cartero, llega a la orilla con una carta. Es para Senba, la grulla.",
+   "speakers": [
+    {
+     "name": "Remite",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Senba",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días, Senba. Tengo una carta para ti."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué raro! Yo nunca recibo cartas."
+    },
+    {
+     "s": 0,
+     "text": "Es de una niña. Vive en una casa con una ventana grande."
+    },
+    {
+     "s": 1,
+     "text": "¡Es mi ventana! Por favor, lee la carta."
+    },
+    {
+     "s": 0,
+     "text": "Dice: «Gracias por esperar conmigo. Ahora estoy bien»."
+    },
+    {
+     "s": 1,
+     "text": "Entonces mi deseo ya está aquí."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Remite para Senba?",
+     "options": [
+      "Un paquete grande",
+      "Una carta",
+      "Un sello"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De quién es la carta?",
+     "options": [
+      "De una niña",
+      "De un capitán de barco",
+      "De una profesora"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo es la ventana de la casa?",
+     "options": [
+      "Muy pequeña",
+      "Vieja",
+      "Grande"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo está la niña ahora?",
+     "options": [
+      "Un poco triste",
+      "Cansada",
+      "Bien"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿De qué persona quieres recibir una carta?",
+     "model": "Quiero recibir una carta de mi abuela."
+    },
+    {
+     "q": "¿Qué ventana de tu vida recuerdas con cariño?",
+     "model": "Recuerdo la ventana de la cocina de mi abuela."
+    },
+    {
+     "q": "¿Quién tiene mucha paciencia contigo?",
+     "model": "Mi profesora de español tiene mucha paciencia conmigo."
+    }
+   ],
+   "gaps": "Dice: «[Gracias] por [esperar] conmigo. Ahora estoy [bien]». Entonces mi [deseo] ya está aquí.",
+   "glossary": [
+    {
+     "word": "carta",
+     "meaning": "papel con un mensaje para otra persona"
+    },
+    {
+     "word": "ventana",
+     "meaning": "parte de la casa para mirar fuera"
+    },
+    {
+     "word": "deseo",
+     "meaning": "una cosa que quieres mucho"
+    }
+   ]
+  },
+  {
+   "id": "bosque",
+   "title": "Un mensaje para la hermana",
+   "place": "El bosque recortado · cerca del estanque",
+   "context": "Borra, la bola de papel, habla con Brinca, la rana. Brinca tiene un problema.",
+   "speakers": [
+    {
+     "name": "Borra",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Brinca",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Brinca, tú saltas muy lejos. Yo solo ruedo."
+    },
+    {
+     "s": 1,
+     "text": "Pero tú puedes ir hacia atrás. Yo no puedo."
+    },
+    {
+     "s": 0,
+     "text": "Es verdad. Y tú quieres ir a un lugar, lo veo en tu cara."
+    },
+    {
+     "s": 1,
+     "text": "Quiero ver a mi hermana. Está en el estanque, a tres saltos de aquí."
+    },
+    {
+     "s": 0,
+     "text": "Yo ruedo hasta allí y le llevo un mensaje."
+    },
+    {
+     "s": 1,
+     "text": "¡Gracias! Mi mensaje es: «Te quiero mucho»."
+    },
+    {
+     "s": 0,
+     "text": "Hecho. Para eso sirve una bola de papel."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué no puede hacer Brinca?",
+     "options": [
+      "Saltar muy lejos",
+      "Ir hacia atrás",
+      "Hablar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A quién quiere ver Brinca?",
+     "options": [
+      "A su madre",
+      "A una amiga del bosque",
+      "A su hermana"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde está la hermana?",
+     "options": [
+      "En el estanque",
+      "En la ciudad de papel",
+      "En la montaña"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué lleva Borra?",
+     "options": [
+      "Una flor para la hermana",
+      "Un mensaje",
+      "Agua"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué persona de tu familia vive lejos de ti?",
+     "model": "Mi hermano vive lejos, en otra ciudad."
+    },
+    {
+     "q": "¿Qué mensaje corto mandas muchas veces?",
+     "model": "Mando «buenos días» a mi familia."
+    },
+    {
+     "q": "¿Quién hace favores por ti sin pedir nada?",
+     "model": "Mi vecina me ayuda con las plantas."
+    }
+   ],
+   "gaps": "Quiero ver a mi [hermana]. Está en el [estanque], a tres [saltos] de aquí. Yo ruedo hasta allí y le llevo un [mensaje].",
+   "glossary": [
+    {
+     "word": "ruedo",
+     "meaning": "me muevo como una pelota"
+    },
+    {
+     "word": "estanque",
+     "meaning": "lugar con agua tranquila"
+    },
+    {
+     "word": "mensaje",
+     "meaning": "palabras que mandas a otra persona"
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "title": "El secreto de Lina",
+   "place": "La ciudad desplegable · la plaza",
+   "context": "Titular, el dragón de periódico, ve a una muñeca sola en la plaza. Es Lina.",
+   "speakers": [
+    {
+     "name": "Titular",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Lina",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Noticia de hoy! Una muñeca camina sola por la plaza."
+    },
+    {
+     "s": 1,
+     "text": "Chist. Esa muñeca soy yo. No lo grites, por favor."
+    },
+    {
+     "s": 0,
+     "text": "Perdona. Pero dime adónde vas."
+    },
+    {
+     "s": 1,
+     "text": "Voy a la fuente. Quiero ver mi cara en el agua."
+    },
+    {
+     "s": 0,
+     "text": "Tus hermanas no están contigo."
+    },
+    {
+     "s": 1,
+     "text": "No. Duermen. Vuelvo en diez minutos."
+    },
+    {
+     "s": 0,
+     "text": "Muy bien. Entonces no lo escribo. Es tu secreto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién camina sola por la plaza?",
+     "options": [
+      "Lina",
+      "Una hermana de Lina",
+      "Titular"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde va?",
+     "options": [
+      "Al mercado de la ciudad",
+      "A la fuente",
+      "Al puente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere ver en el agua?",
+     "options": [
+      "Su cara",
+      "Un pez de colores",
+      "La luna"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace Titular con la noticia?",
+     "options": [
+      "La grita otra vez",
+      "La escribe",
+      "No la escribe"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Adónde vas cuando quieres silencio?",
+     "model": "Voy a un parque cerca de mi casa."
+    },
+    {
+     "q": "¿Qué secreto pequeño compartes con un amigo?",
+     "model": "Mi amigo y yo comemos chocolate en el trabajo."
+    },
+    {
+     "q": "¿Qué haces con diez minutos libres?",
+     "model": "Tomo un café y miro por la ventana."
+    }
+   ],
+   "gaps": "Voy a la [fuente]. Quiero ver mi [cara] en el agua. Tus [hermanas] no están contigo. No. Duermen. Vuelvo en diez [minutos].",
+   "glossary": [
+    {
+     "word": "fuente",
+     "meaning": "lugar de una plaza donde sale agua"
+    },
+    {
+     "word": "secreto",
+     "meaning": "una cosa que no dices a nadie"
+    },
+    {
+     "word": "grites",
+     "meaning": "hables muy, muy alto"
+    }
+   ]
+  },
+  {
+   "id": "cumbre",
+   "title": "La primera línea",
+   "place": "La cumbre · el escritorio",
+   "context": "Candela, el farol, visita a la Hoja en Blanco. Hablan de palabras.",
+   "speakers": [
+    {
+     "name": "Candela",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "La Hoja",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hoja, tú siempre estás en blanco. No lo entiendo."
+    },
+    {
+     "s": 1,
+     "text": "Es porque espero una palabra. Una palabra muy buena."
+    },
+    {
+     "s": 0,
+     "text": "Yo quiero saber tu palabra favorita."
+    },
+    {
+     "s": 1,
+     "text": "Me gusta «empezar». Es corta y abre una puerta."
+    },
+    {
+     "s": 0,
+     "text": "A mí me gusta «luz». Es mi trabajo."
+    },
+    {
+     "s": 1,
+     "text": "Entonces escribo las dos: «Empezar con luz»."
+    },
+    {
+     "s": 0,
+     "text": "¡Qué bonito! Es la primera línea."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué espera la Hoja?",
+     "options": [
+      "Una carta de un amigo",
+      "Una palabra",
+      "Un lápiz"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué palabra le gusta a la Hoja?",
+     "options": [
+      "«Luz»",
+      "«Puerta»",
+      "«Empezar»"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué le gusta «luz» a Candela?",
+     "options": [
+      "Es su trabajo",
+      "Es una palabra corta",
+      "Es roja"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué es «Empezar con luz»?",
+     "options": [
+      "La primera línea",
+      "El nombre de una canción",
+      "Un libro"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuál es tu palabra favorita en tu idioma?",
+     "model": "Mi palabra favorita es «casa»."
+    },
+    {
+     "q": "¿Qué actividad quieres empezar pronto?",
+     "model": "Quiero empezar clases de baile."
+    },
+    {
+     "q": "¿Con qué palabra corta explicas tu trabajo?",
+     "model": "La palabra es «ayudar»."
+    }
+   ],
+   "gaps": "Me gusta «[empezar]». Es corta y abre una [puerta]. A mí me gusta «[luz]». Es mi [trabajo].",
+   "glossary": [
+    {
+     "word": "en blanco",
+     "meaning": "sin palabras escritas"
+    },
+    {
+     "word": "favorita",
+     "meaning": "la que más te gusta"
+    },
+    {
+     "word": "línea",
+     "meaning": "palabras en una fila, en un papel"
+    }
+   ]
+  }
+ ]
+}

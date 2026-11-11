@@ -249,7 +249,7 @@ const level = {
       { t: b('A un animal', 'An animal'), echo: b('Los animales dan las gracias sin palabras.', 'Animals say thank you with no words.') },
     ],
     talk: [
-      b('¿Qué persona te cuida cuando estás mal?', 'Which person looks after you when you are unwell?'),
+      b('¿Qué persona te ayuda en un día difícil?', 'Which person helps you on a hard day?'),
       b('¿Pides ayuda mucho o poco?', 'Do you ask for help a lot or a little?'),
       b('¿Qué día de la semana pesa más?', 'Which day of the week is the heaviest?'),
     ],

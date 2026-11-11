@@ -1,0 +1,614 @@
+{
+ "game": "papel",
+ "level": "C2",
+ "items": [
+  {
+   "id": "muelle",
+   "title": "La misma verdad, doblada de otro modo",
+   "place": "El muelle de papel · el buzón rojo",
+   "context": "Senba, la grulla número mil, quiere contestar por carta a quien la dobló hace años y la dejó en una ventana. Consulta con Remite, el zorro que reparte lo que nunca se envió.",
+   "speakers": [
+    {
+     "name": "Senba",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Remite",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Remite, quiero contestar a quien me dobló. Y no sé si debo decirle la verdad."
+    },
+    {
+     "s": 1,
+     "text": "Depende de cuál de ellas. Las verdades, como los sobres, vienen en varios tamaños."
+    },
+    {
+     "s": 0,
+     "text": "La de que durante años le guardé rencor. Me dejó en una ventana y siguió con su vida, mientras yo permanecía allí, convertida en el recibo de un milagro que no llegó."
+    },
+    {
+     "s": 1,
+     "text": "No veo qué ganaría con saberlo."
+    },
+    {
+     "s": 0,
+     "text": "Nada, probablemente. Ganaría yo: me quitaría un peso."
+    },
+    {
+     "s": 1,
+     "text": "Entonces no es una carta, es una mudanza. Le trasladas a su casa un mueble que te estorba en la tuya."
+    },
+    {
+     "s": 0,
+     "text": "Hablas como si callar fuera siempre lo generoso. También hay silencios que son pura pereza moral: uno se ahorra la conversación y lo llama tacto."
+    },
+    {
+     "s": 1,
+     "text": "Sin duda. Reparto de los dos. Por eso no te pregunto si es verdad, que lo es, sino a quién le sirve."
+    },
+    {
+     "s": 0,
+     "text": "Tal vez le sirva saber que las cosas que uno hace para consolarse dejan huérfanos por el camino."
+    },
+    {
+     "s": 1,
+     "text": "Eso ya es otra carta, y bastante mejor. La primera decía «me hiciste daño»; esta dice «lo que hiciste tuvo consecuencias que no viste». La una pide una disculpa; la otra ofrece algo."
+    },
+    {
+     "s": 0,
+     "text": "Qué diferencia tan fina para pesar tanto."
+    },
+    {
+     "s": 1,
+     "text": "Es todo mi oficio, Senba: la misma verdad, según cómo se doble, es un reproche o un regalo. Tú de dobleces deberías saber más que yo."
+    },
+    {
+     "s": 0,
+     "text": "Sé que un pliegue mal hecho no se corrige alisando. Hay que empezar con otra hoja. Dame una."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué verdad duda Senba en contar?",
+     "options": [
+      "Que el deseo acabó cumpliéndose",
+      "Que guardó rencor durante años",
+      "Que piensa marcharse"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué critica Remite con la imagen de la «mudanza»?",
+     "options": [
+      "Que Senba busca aliviarse a costa del otro",
+      "Que la carta resultaría excesivamente larga para un sobre",
+      "Que cambia mucho de opinión"
+     ],
+     "answer": 0,
+     "infer": true
+    },
+    {
+     "q": "¿Qué matiz introduce Senba al hablar de «pereza moral»?",
+     "options": [
+      "Que Remite trabaja poco",
+      "Que escribir cartas agota a cualquiera",
+      "Que callar puede ser simple comodidad"
+     ],
+     "answer": 2,
+     "infer": true
+    },
+    {
+     "q": "¿Qué decide Senba al final?",
+     "options": [
+      "Empezar la carta en otra hoja",
+      "Enviar la primera versión tal como estaba",
+      "No escribir nada"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué verdad dicha por ti alivió a quien la decía más que a quien la escuchaba?",
+     "model": "Le confesé a una amiga que su boda me había parecido un error; me quedé muy a gusto y ella, destrozada."
+    },
+    {
+     "q": "¿Cómo reformularías un reproche antiguo para que ofreciera algo en vez de exigirlo?",
+     "model": "En lugar de «nunca estuviste», le diría a mi padre: «me habría gustado conocerte más, y aún estamos a tiempo»."
+    },
+    {
+     "q": "¿Qué silencio tuyo calificarías hoy, con honestidad, de pereza moral?",
+     "model": "No haber defendido a un compañero en una reunión: lo llamé prudencia, pero era pura comodidad."
+    }
+   ],
+   "gaps": "La primera decía «me hiciste [daño]»; esta dice «lo que hiciste tuvo [consecuencias] que no viste». La una pide una [disculpa]; la otra [ofrece] algo.",
+   "glossary": [
+    {
+     "word": "rencor",
+     "meaning": "resentimiento que dura mucho tiempo"
+    },
+    {
+     "word": "mudanza",
+     "meaning": "traslado de muebles de una casa a otra"
+    },
+    {
+     "word": "estorba",
+     "meaning": "molesta porque ocupa sitio"
+    },
+    {
+     "word": "huérfanos",
+     "meaning": "quienes se han quedado sin alguien que los cuide"
+    },
+    {
+     "word": "dobleces",
+     "meaning": "pliegues; también, segundas intenciones"
+    }
+   ]
+  },
+  {
+   "id": "bosque",
+   "title": "En lápiz o en tinta",
+   "place": "El bosque recortado · una rama sobre el estanque",
+   "context": "Don Margen, el búho que vive corrigiendo textos ajenos, observa con fastidio a Brinca, una rana cuyos pliegues solo le permiten saltar hacia delante, sin posibilidad de rectificar.",
+   "speakers": [
+    {
+     "name": "Don Margen",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Brinca",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "La observo desde hace rato, Brinca, y me irrita su método. Salta usted sin borrador."
+    },
+    {
+     "s": 1,
+     "text": "Háblame de tú, don Margen, que el bosque es pequeño. Y sí: sin borrador. No tengo donde tachar."
+    },
+    {
+     "s": 0,
+     "text": "Precisamente. Una vida sin margen de enmienda me parece una temeridad sintáctica."
+    },
+    {
+     "s": 1,
+     "text": "Y a mí, una vida entera en el margen me parece una frase que no se atreve a tener verbo."
+    },
+    {
+     "s": 0,
+     "text": "Encajo el golpe. Pero concédeme que el error que no puede enmendarse es una crueldad."
+    },
+    {
+     "s": 1,
+     "text": "Es una crueldad y es un peso. Y, sin embargo, mira lo que hace con los saltos: los vuelve míos. Tú puedes corregir una nota cien veces, y por eso ninguna te compromete del todo."
+    },
+    {
+     "s": 0,
+     "text": "Insinúas que la posibilidad de rectificar me ha vuelto irresponsable."
+    },
+    {
+     "s": 1,
+     "text": "Insinúo que te ha vuelto provisional. Todo lo tuyo está en lápiz. Lo mío, me guste o no, está en tinta."
+    },
+    {
+     "s": 0,
+     "text": "La tinta es una forma de soberbia."
+    },
+    {
+     "s": 1,
+     "text": "O de respeto. Cuando sé que no habrá segunda versión, miro dónde caigo. No siempre acierto. Pero nunca he caído distraída."
+    },
+    {
+     "s": 0,
+     "text": "Reconozco que jamás he escrito nada que no pudiera retirar. Lo consideraba prudencia intelectual."
+    },
+    {
+     "s": 1,
+     "text": "Lo será. Solo te pregunto qué has dicho, en todos estos años, que merezca el riesgo de quedar dicho."
+    },
+    {
+     "s": 0,
+     "text": "Concédame un momento. Concédeme, quiero decir. Es una pregunta que no admite nota al pie."
+    },
+    {
+     "s": 1,
+     "text": "Tómate el que quieras. Yo, ya sabes, no puedo esperarte: lo mío es hacia delante."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le irrita a don Margen del modo de saltar de Brinca?",
+     "options": [
+      "Que haga tanto ruido junto al estanque",
+      "Que no lo salude",
+      "Que no admita corrección"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué reprocha Brinca con «una frase que no se atreve a tener verbo»?",
+     "options": [
+      "Que hay faltas de gramática en casi todas sus notas",
+      "Que él comenta la vida sin actuar",
+      "Que habla demasiado"
+     ],
+     "answer": 1,
+     "infer": true
+    },
+    {
+     "q": "Según Brinca, ¿qué efecto tiene no poder rectificar?",
+     "options": [
+      "Presta atención a dónde cae",
+      "Salta menos que antes",
+      "Ha dejado de equivocarse para siempre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué revela el lapsus «Concédame… Concédeme, quiero decir»?",
+     "options": [
+      "Que no ha oído bien lo que le decían",
+      "Que la pregunta lo ha desarmado",
+      "Que quiere marcharse"
+     ],
+     "answer": 1,
+     "infer": true
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué has afirmado alguna vez sabiendo que no podrías retirarlo?",
+     "model": "Le dije a mi socio que no confiaba en él; era cierto, y la sociedad terminó esa misma tarde."
+    },
+    {
+     "q": "¿De qué modo la facilidad para rectificar ha rebajado el valor de tu palabra?",
+     "model": "Cancelo planes con un mensaje, sin coste alguno, y noto que mis «sí» ya no pesan como antes."
+    },
+    {
+     "q": "¿Qué decisión irrevocable te obligó a mirar con una atención que desconocías?",
+     "model": "Tener un hijo: por primera vez no había borrador, y empecé a fijarme en cada gesto mío."
+    }
+   ],
+   "gaps": "Insinúo que te ha vuelto [provisional]. Todo lo tuyo está en [lápiz]. Lo mío, me guste o no, está en [tinta]. La tinta es una forma de [soberbia].",
+   "glossary": [
+    {
+     "word": "borrador",
+     "meaning": "primera versión de un texto, que luego se corrige"
+    },
+    {
+     "word": "enmienda",
+     "meaning": "corrección de un error"
+    },
+    {
+     "word": "encajo",
+     "meaning": "recibo y acepto, como un golpe"
+    },
+    {
+     "word": "soberbia",
+     "meaning": "orgullo excesivo"
+    },
+    {
+     "word": "nota al pie",
+     "meaning": "aclaración escrita en la parte baja de la página"
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "title": "Lejos era el recreo",
+   "place": "La ciudad desplegable · sobre la plaza",
+   "context": "Dardo es un avión de papel que un niño lanzó hace treinta años con un encargo: «llega lejos». Desde entonces no ha aterrizado. Lina, que hace poco se soltó de la guirnalda de sus hermanas, lo escucha.",
+   "speakers": [
+    {
+     "name": "Dardo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Lina",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lina, tú que te soltaste, dime qué queda de uno cuando deja de hacer aquello por lo que lo conocen."
+    },
+    {
+     "s": 1,
+     "text": "Al principio, un hueco con forma de costumbre. Es desagradable. Notas la mano vacía y piensas que has perdido la mano."
+    },
+    {
+     "s": 0,
+     "text": "Eso temo. Llevo treinta años siendo «el avión que no aterriza». Si me poso, seré un papel en el suelo."
+    },
+    {
+     "s": 1,
+     "text": "Serías un avión que ha llegado. Que no es poco, tratándose de aviones."
+    },
+    {
+     "s": 0,
+     "text": "Pero él dijo «llega lejos». Posarme en esta plaza, a doscientos metros del aula, es una burla del encargo."
+    },
+    {
+     "s": 1,
+     "text": "O su cumplimiento más sensato. Dudo que un niño de ocho años midiera la lejanía en kilómetros. Para él, lejos era el recreo."
+    },
+    {
+     "s": 0,
+     "text": "No me tientes con interpretaciones benévolas."
+    },
+    {
+     "s": 1,
+     "text": "No es benevolencia, es filología. Las promesas se hacen en el idioma de quien las pide, y en el suyo «lejos» significaba «más allá de la ventana». Hace tres décadas que cumpliste, y sigues dando vueltas por exceso de celo."
+    },
+    {
+     "s": 0,
+     "text": "Si tienes razón, he malgastado media vida en un malentendido."
+    },
+    {
+     "s": 1,
+     "text": "O la has dedicado a una fidelidad, que no se mide por su utilidad. Yo no creo que mis años en la guirnalda fueran un error; fueron lo que supe hacer hasta que supe otra cosa."
+    },
+    {
+     "s": 0,
+     "text": "Hablas como si soltarse no costara nada."
+    },
+    {
+     "s": 1,
+     "text": "Cuesta la certeza, nada menos. Antes sabía quién era sin preguntármelo. Ahora tengo que decidirlo cada mañana, y hay mañanas en que no me apetece."
+    },
+    {
+     "s": 0,
+     "text": "Y aun así lo recomiendas."
+    },
+    {
+     "s": 1,
+     "text": "Yo no recomiendo nada. Solo te informo de que el suelo existe y de que, visto de cerca, está lleno de cosas interesantes que desde arriba parecen manchas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué teme Dardo que ocurra si aterriza?",
+     "options": [
+      "Quedarse sin identidad",
+      "Romperse contra las piedras de la plaza",
+      "Que Lina se enfade"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué argumenta Lina al llamar «filología» a su lectura?",
+     "options": [
+      "Que Dardo debería estudiar lenguas antes de opinar sobre promesas",
+      "Que lo prometido en la infancia no vale",
+      "Que «lejos» ha de entenderse como lo entendía el niño"
+     ],
+     "answer": 2,
+     "infer": true
+    },
+    {
+     "q": "¿Cómo valora Lina sus años en la guirnalda?",
+     "options": [
+      "Como una lamentable pérdida de tiempo",
+      "Como lo que supo hacer entonces",
+      "Como su mejor época"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué actitud adopta Lina al decir «Yo no recomiendo nada»?",
+     "options": [
+      "Se desentiende porque el asunto ha empezado a aburrirla",
+      "Intenta disuadirlo",
+      "Le deja decidir sin ocultarle el coste"
+     ],
+     "answer": 2,
+     "infer": true
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué quedó de ti cuando dejaste de hacer aquello por lo que te conocían?",
+     "model": "Al dejar la competición, noté que sin el «nadadora» delante casi no sabía presentarme."
+    },
+    {
+     "q": "¿Qué encargo recibido has interpretado con un rigor que nadie te pidió?",
+     "model": "Mi madre me dijo «cuida de tu hermano» a los doce años, y a los cuarenta sigo pagándole las multas."
+    },
+    {
+     "q": "¿Preferirías la certeza de un papel heredado o la fatiga de definirte a diario?",
+     "model": "La fatiga, creo, aunque reconozco que hay semanas en que envidio a quien nunca tuvo que elegir."
+    }
+   ],
+   "gaps": "Cuesta la [certeza], nada menos. Antes sabía quién era sin [preguntármelo]. Ahora tengo que [decidirlo] cada mañana, y hay mañanas en que no me [apetece].",
+   "glossary": [
+    {
+     "word": "me poso",
+     "meaning": "bajo y me quedo quieto sobre una superficie"
+    },
+    {
+     "word": "encargo",
+     "meaning": "tarea que alguien te confía"
+    },
+    {
+     "word": "benévolas",
+     "meaning": "amables, que juzgan con buena voluntad"
+    },
+    {
+     "word": "exceso de celo",
+     "meaning": "cuidado exagerado al cumplir una obligación"
+    },
+    {
+     "word": "malentendido",
+     "meaning": "interpretación equivocada"
+    }
+   ]
+  },
+  {
+   "id": "cumbre",
+   "title": "Una hora de ser prescindible",
+   "place": "La cumbre · el camino de noche",
+   "context": "Mar, la ballena que carga un pueblo que ignora su existencia, y Candela, el farol que se consume para alumbrar, se confiesan la envidia que cada una le tiene a la otra.",
+   "speakers": [
+    {
+     "name": "Mar",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "Candela",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Te confieso una envidia, Candela: tú te consumes por algo tuyo. Yo me desgasto por un pueblo que ni siquiera sabe mi nombre."
+    },
+    {
+     "s": 1,
+     "text": "Curiosa envidia. Yo daría media mecha por que alguien dependiera de mí. A un farol se lo admira, Mar; nadie lo necesita."
+    },
+    {
+     "s": 0,
+     "text": "La necesidad ajena está sobrevalorada. Es una cadena con muy buena reputación."
+    },
+    {
+     "s": 1,
+     "text": "Y la intensidad es una soledad con muy buena iluminación. Estamos en paz."
+    },
+    {
+     "s": 0,
+     "text": "No del todo. Tú podrías apagarte mañana y solo perderías tú. Si yo me detengo, se hunde un campanario."
+    },
+    {
+     "s": 1,
+     "text": "Dime la verdad: eso te pesa o te halaga."
+    },
+    {
+     "s": 0,
+     "text": "Las dos cosas, para mi vergüenza. Hay un orgullo inconfesable en ser imprescindible. Una se queja del peso y, a la vez, no soportaría que dejaran de necesitarla."
+    },
+    {
+     "s": 1,
+     "text": "Te entiendo mejor de lo que crees. Yo me quejo de arder y no sabría quién soy tibia. Cada una ha hecho de su condena una firma."
+    },
+    {
+     "s": 0,
+     "text": "Entonces ninguna de las dos es tan víctima como proclama."
+    },
+    {
+     "s": 1,
+     "text": "Ni tan libre. Tú no elegiste el pueblo de una vez, sino teja a teja; a mí la llama no me la consultó nadie, me encendieron. Lo único nuestro es lo que hacemos con ello esta noche."
+    },
+    {
+     "s": 0,
+     "text": "Dime entonces qué propones para esta noche."
+    },
+    {
+     "s": 1,
+     "text": "Un intercambio modesto. Bajo yo a tu plaza y alumbro la verbena: por una vez, alguien me necesitará. Tú, entretanto, flotas quieta una hora sin sostener nada que no sea a ti misma."
+    },
+    {
+     "s": 0,
+     "text": "Una hora de ser prescindible. Me aterra."
+    },
+    {
+     "s": 1,
+     "text": "Por eso mismo conviene probarla."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué envidia Mar de Candela?",
+     "options": [
+      "Que viva tan alto en la montaña",
+      "Que tenga amigos",
+      "Que se consuma por algo propio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué admite Mar con la expresión «para mi vergüenza»?",
+     "options": [
+      "Que ser imprescindible la enorgullece",
+      "Que desea abandonar al pueblo cuanto antes",
+      "Que ha mentido a Candela"
+     ],
+     "answer": 0,
+     "infer": true
+    },
+    {
+     "q": "¿Qué sentido tiene «cada una ha hecho de su condena una firma»?",
+     "options": [
+      "Que ambas han firmado un contrato que no pueden romper",
+      "Que han convertido lo que padecen en identidad",
+      "Que su castigo es injusto"
+     ],
+     "answer": 1,
+     "infer": true
+    },
+    {
+     "q": "¿Qué propone Candela para esa noche?",
+     "options": [
+      "Intercambiar los papeles una hora",
+      "Marcharse juntas lejos de la montaña",
+      "Apagarse para siempre"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué carga de la que te quejas echarías de menos si te la quitaran?",
+     "model": "Las llamadas diarias de mi madre: protesto, pero el día que no llama me inquieto."
+    },
+    {
+     "q": "¿Qué orgullo inconfesable se esconde detrás de alguna de tus obligaciones?",
+     "model": "Ser «la única que sabe cómo funciona todo» en la oficina: me agota y, a la vez, me encanta."
+    },
+    {
+     "q": "¿Qué harías con una hora en la que nadie, absolutamente nadie, te necesitara?",
+     "model": "Probablemente nada, y sospecho que eso es justo lo que más me costaría."
+    }
+   ],
+   "gaps": "Hay un [orgullo] inconfesable en ser [imprescindible]. Una se queja del [peso] y, a la vez, no [soportaría] que dejaran de necesitarla.",
+   "glossary": [
+    {
+     "word": "mecha",
+     "meaning": "cuerda que arde dentro de una vela o un farol"
+    },
+    {
+     "word": "halaga",
+     "meaning": "agrada porque hace sentirse importante"
+    },
+    {
+     "word": "inconfesable",
+     "meaning": "que da vergüenza reconocer"
+    },
+    {
+     "word": "verbena",
+     "meaning": "fiesta popular nocturna al aire libre"
+    },
+    {
+     "word": "prescindible",
+     "meaning": "que no es necesario"
+    }
+   ]
+  }
+ ]
+}

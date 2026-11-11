@@ -1,0 +1,513 @@
+{
+ "game": "papel",
+ "level": "A0",
+ "items": [
+  {
+   "id": "muelle",
+   "title": "El mar blanco",
+   "place": "El muelle de papel · la orilla",
+   "context": "Senba, la grulla, y el capitán Pliego miran el mar.",
+   "contextEn": "Senba, the crane, and Captain Pliego look at the sea.",
+   "speakers": [
+    {
+     "name": "Senba",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Capitán Pliego",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Soy Senba. Soy una grulla.",
+     "en": "Hello. I am Senba. I am a crane."
+    },
+    {
+     "s": 1,
+     "text": "Hola. Yo soy Pliego. Soy un barco.",
+     "en": "Hello. I am Pliego. I am a boat."
+    },
+    {
+     "s": 0,
+     "text": "El mar está muy blanco hoy.",
+     "en": "The sea is very white today."
+    },
+    {
+     "s": 1,
+     "text": "Sí. Y el agua está fría.",
+     "en": "Yes. And the water is cold."
+    },
+    {
+     "s": 0,
+     "text": "Yo quiero ver el sol.",
+     "en": "I want to see the sun."
+    },
+    {
+     "s": 1,
+     "text": "Yo quiero un café caliente.",
+     "en": "I want a hot coffee."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué es Senba?",
+     "options": [
+      "Una grulla",
+      "Un barco",
+      "Una rana verde"
+     ],
+     "answer": 0,
+     "qEn": "What is Senba?"
+    },
+    {
+     "q": "¿De qué color está el mar?",
+     "options": [
+      "Azul oscuro",
+      "Blanco",
+      "Verde"
+     ],
+     "answer": 1,
+     "qEn": "What colour is the sea?"
+    },
+    {
+     "q": "¿Cómo está el agua?",
+     "options": [
+      "Muy caliente",
+      "Sucia",
+      "Fría"
+     ],
+     "answer": 2,
+     "qEn": "How is the water?"
+    },
+    {
+     "q": "¿Qué quiere el barco?",
+     "options": [
+      "Un café",
+      "Ver el sol",
+      "Un mar azul"
+     ],
+     "answer": 0,
+     "qEn": "What does the boat want?"
+    }
+   ],
+   "open": [
+    {
+     "q": "¿De qué color es el mar en tu país?",
+     "model": "En mi país el mar es azul.",
+     "qEn": "What colour is the sea in your country?"
+    },
+    {
+     "q": "¿Quieres sol o lluvia para mañana?",
+     "model": "Quiero sol, por favor.",
+     "qEn": "Do you want sun or rain for tomorrow?"
+    },
+    {
+     "q": "¿Qué bebida caliente es tu favorita?",
+     "model": "Mi favorita es el café con leche.",
+     "qEn": "What is your favourite hot drink?"
+    }
+   ],
+   "gaps": "El [mar] está muy [blanco] hoy. Sí. Y el [agua] está [fría].",
+   "glossary": [
+    {
+     "word": "mar",
+     "meaning": "mucha agua con sal",
+     "en": "sea"
+    },
+    {
+     "word": "agua",
+     "meaning": "lo que bebes cuando tienes sed",
+     "en": "water"
+    },
+    {
+     "word": "sol",
+     "meaning": "la luz grande del día",
+     "en": "sun"
+    }
+   ]
+  },
+  {
+   "id": "bosque",
+   "title": "Tres saltos",
+   "place": "El bosque recortado · el estanque",
+   "context": "Brinca, la rana, salta. Don Margen, el búho, mira.",
+   "contextEn": "Brinca, the frog, is jumping. Don Margen, the owl, is watching.",
+   "speakers": [
+    {
+     "name": "Brinca",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Don Margen",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola, don Margen! Hoy salto mucho.",
+     "en": "Hello, Don Margen! I am jumping a lot today."
+    },
+    {
+     "s": 1,
+     "text": "Buenos días, Brinca. Saltas mal.",
+     "en": "Good morning, Brinca. You jump badly."
+    },
+    {
+     "s": 0,
+     "text": "¡No! Salto muy bien. Mira: uno, dos, tres.",
+     "en": "No! I jump very well. Look: one, two, three."
+    },
+    {
+     "s": 1,
+     "text": "Mmm. Tres saltos. El tercero es bueno.",
+     "en": "Hmm. Three jumps. The third one is good."
+    },
+    {
+     "s": 0,
+     "text": "¡Gracias! Es tu primera palabra bonita.",
+     "en": "Thank you! That is your first kind word."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos saltos hace Brinca?",
+     "options": [
+      "Dos",
+      "Tres",
+      "Cuatro saltos"
+     ],
+     "answer": 1,
+     "qEn": "How many jumps does Brinca do?"
+    },
+    {
+     "q": "¿Qué salto es bueno?",
+     "options": [
+      "El primero",
+      "El segundo salto",
+      "El tercero"
+     ],
+     "answer": 2,
+     "qEn": "Which jump is good?"
+    },
+    {
+     "q": "Primero, ¿cómo salta Brinca para el búho?",
+     "options": [
+      "Mal",
+      "Muy bien",
+      "Muy poco"
+     ],
+     "answer": 0,
+     "qEn": "At first, how does Brinca jump according to the owl?"
+    },
+    {
+     "q": "¿Qué dice Brinca al final?",
+     "options": [
+      "Buenas noches",
+      "Perdón",
+      "Gracias"
+     ],
+     "answer": 2,
+     "qEn": "What does Brinca say at the end?"
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Saltas, corres o caminas más?",
+     "model": "Camino mucho todos los días.",
+     "qEn": "Do you jump, run or walk more?"
+    },
+    {
+     "q": "¿Cuentas bien hasta veinte en español?",
+     "model": "Sí: uno, dos, tres, cuatro…",
+     "qEn": "Can you count to twenty in Spanish?"
+    },
+    {
+     "q": "¿Qué deporte es bueno para ti?",
+     "model": "El tenis es bueno para mí.",
+     "qEn": "What sport is good for you?"
+    }
+   ],
+   "gaps": "¡No! Salto muy [bien]. Mira: uno, [dos], tres. Mmm. Tres [saltos]. El [tercero] es bueno.",
+   "glossary": [
+    {
+     "word": "salto",
+     "meaning": "ir arriba con las piernas, un momento",
+     "en": "jump"
+    },
+    {
+     "word": "tercero",
+     "meaning": "el número tres de una lista",
+     "en": "third"
+    },
+    {
+     "word": "bonita",
+     "meaning": "muy agradable",
+     "en": "kind, lovely"
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "title": "La ciudad desde el aire",
+   "place": "La ciudad desplegable · la plaza",
+   "context": "Dardo, el avión, ve la ciudad. Lina, la muñeca, está abajo.",
+   "contextEn": "Dardo, the plane, sees the city. Lina, the doll, is down below.",
+   "speakers": [
+    {
+     "name": "Dardo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Lina",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola, Lina! Desde aquí veo toda la ciudad.",
+     "en": "Hello, Lina! From here I can see the whole city."
+    },
+    {
+     "s": 1,
+     "text": "Hola, Dardo. Dime qué hay.",
+     "en": "Hello, Dardo. Tell me what there is."
+    },
+    {
+     "s": 0,
+     "text": "Hay una plaza, un mercado y un puente.",
+     "en": "There is a square, a market and a bridge."
+    },
+    {
+     "s": 1,
+     "text": "En la plaza hay gente, seguro.",
+     "en": "There are people in the square, for sure."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Hay una fiesta con música.",
+     "en": "Yes. There is a party with music."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bien! Yo quiero bailar.",
+     "en": "How nice! I want to dance."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ve Dardo?",
+     "options": [
+      "Toda la ciudad",
+      "El mar",
+      "Una montaña muy alta"
+     ],
+     "answer": 0,
+     "qEn": "What does Dardo see?"
+    },
+    {
+     "q": "¿Qué hay en la plaza?",
+     "options": [
+      "Un mercado grande",
+      "Una fiesta",
+      "Un puente"
+     ],
+     "answer": 1,
+     "qEn": "What is there in the square?"
+    },
+    {
+     "q": "¿Qué hay en la fiesta?",
+     "options": [
+      "Mucha comida",
+      "Un avión",
+      "Música"
+     ],
+     "answer": 2,
+     "qEn": "What is there at the party?"
+    },
+    {
+     "q": "¿Qué quiere Lina?",
+     "options": [
+      "Dormir un poco",
+      "Bailar",
+      "Volar"
+     ],
+     "answer": 1,
+     "qEn": "What does Lina want?"
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugares hay cerca de tu casa?",
+     "model": "Hay un parque y una farmacia.",
+     "qEn": "What places are there near your home?"
+    },
+    {
+     "q": "¿Quién baila mejor en tu familia?",
+     "model": "Mi tía baila muy bien.",
+     "qEn": "Who is the best dancer in your family?"
+    },
+    {
+     "q": "¿Qué música hay en tu teléfono?",
+     "model": "Hay mucha música en español.",
+     "qEn": "What music is on your phone?"
+    }
+   ],
+   "gaps": "Hay una [plaza], un [mercado] y un puente. En la plaza hay [gente], seguro. Sí. Hay una fiesta con [música].",
+   "glossary": [
+    {
+     "word": "plaza",
+     "meaning": "lugar abierto en el centro de una ciudad",
+     "en": "square"
+    },
+    {
+     "word": "mercado",
+     "meaning": "lugar para comprar comida",
+     "en": "market"
+    },
+    {
+     "word": "puente",
+     "meaning": "camino por encima de un río",
+     "en": "bridge"
+    }
+   ]
+  },
+  {
+   "id": "cumbre",
+   "title": "Fuego para una amiga",
+   "place": "La cumbre · el camino de noche",
+   "context": "Es de noche en la montaña. Candela, el farol, habla con Mar, la ballena.",
+   "contextEn": "It is night on the mountain. Candela, the lantern, talks to Mar, the whale.",
+   "speakers": [
+    {
+     "name": "Candela",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Mar",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches, Mar. Estás muy alta.",
+     "en": "Good evening, Mar. You are very high up."
+    },
+    {
+     "s": 1,
+     "text": "Buenas noches, Candela. Tu luz es bonita.",
+     "en": "Good evening, Candela. Your light is lovely."
+    },
+    {
+     "s": 0,
+     "text": "Gracias. Tú tienes frío, lo veo.",
+     "en": "Thank you. You are cold, I can see it."
+    },
+    {
+     "s": 1,
+     "text": "Un poco. La montaña es fría de noche.",
+     "en": "A little. The mountain is cold at night."
+    },
+    {
+     "s": 0,
+     "text": "Yo tengo fuego. Estoy aquí contigo.",
+     "en": "I have fire. I am here with you."
+    },
+    {
+     "s": 1,
+     "text": "Gracias, amiga. Ahora estoy bien.",
+     "en": "Thank you, my friend. Now I am fine."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué momento del día es?",
+     "options": [
+      "La mañana",
+      "La tarde",
+      "La noche"
+     ],
+     "answer": 2,
+     "qEn": "What time of day is it?"
+    },
+    {
+     "q": "¿Cómo es la luz de Candela?",
+     "options": [
+      "Bonita",
+      "Muy pequeña",
+      "Fría"
+     ],
+     "answer": 0,
+     "qEn": "What is Candela's light like?"
+    },
+    {
+     "q": "¿Quién tiene frío?",
+     "options": [
+      "Candela",
+      "Mar",
+      "Las dos amigas"
+     ],
+     "answer": 1,
+     "qEn": "Who is cold?"
+    },
+    {
+     "q": "¿Qué tiene Candela?",
+     "options": [
+      "Mucho frío",
+      "Fuego",
+      "Miedo"
+     ],
+     "answer": 1,
+     "qEn": "What does Candela have?"
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces en una noche fría?",
+     "model": "Tomo un té y leo.",
+     "qEn": "What do you do on a cold night?"
+    },
+    {
+     "q": "¿Quién está contigo en los días malos?",
+     "model": "Mi hermana está conmigo.",
+     "qEn": "Who is with you on bad days?"
+    },
+    {
+     "q": "¿Qué ves desde una montaña alta?",
+     "model": "Veo casas pequeñas y un río.",
+     "qEn": "What do you see from a high mountain?"
+    }
+   ],
+   "gaps": "Un [poco]. La [montaña] es fría de noche. Yo tengo [fuego]. Estoy aquí [contigo].",
+   "glossary": [
+    {
+     "word": "luz",
+     "meaning": "lo contrario de la oscuridad",
+     "en": "light"
+    },
+    {
+     "word": "frío",
+     "meaning": "lo contrario de calor",
+     "en": "cold"
+    },
+    {
+     "word": "fuego",
+     "meaning": "da luz y calor; quema",
+     "en": "fire"
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,538 @@
+{
+ "game": "papel",
+ "level": "B2",
+ "items": [
+  {
+   "id": "muelle",
+   "title": "La carta del fondo de la bolsa",
+   "place": "El muelle de papel · el buzón rojo",
+   "context": "Senba es la última de mil grullas que alguien dobló para pedir un deseo, pero nunca supo cuál. Remite, el cartero de las cartas no enviadas, acaba de encontrar algo.",
+   "speakers": [
+    {
+     "name": "Remite",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Senba",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Senba, he encontrado algo en el fondo de la bolsa. Lleva tu número: mil."
+    },
+    {
+     "s": 1,
+     "text": "No puede ser. Será de quien me dobló."
+    },
+    {
+     "s": 0,
+     "text": "Eso parece. La escribió hace muchos años y nunca la echó al buzón. Si quieres, te la leo."
+    },
+    {
+     "s": 1,
+     "text": "Espera. Llevo media vida imaginando qué deseo pidió. Si me lo dices, se acabó el misterio."
+    },
+    {
+     "s": 0,
+     "text": "Y si no te lo digo, seguirás esperando sin saber qué."
+    },
+    {
+     "s": 1,
+     "text": "Tienes razón. Léela, pero despacio."
+    },
+    {
+     "s": 0,
+     "text": "Dice: «Mi deseo era que mi hermano se curara. No se curó. Pero mientras doblaba las grullas, él se sentaba conmigo y me contaba historias. Fueron los mejores meses que tuvimos. Si hubiera sabido que el deseo era ese tiempo, no habría pedido otra cosa»."
+    },
+    {
+     "s": 1,
+     "text": "Entonces no fallé."
+    },
+    {
+     "s": 0,
+     "text": "No. Solo que el deseo se cumplió por el camino, y no al final."
+    },
+    {
+     "s": 1,
+     "text": "Qué extraño. Llevo años mirando el horizonte, y lo importante había ocurrido a mis espaldas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde estaba la carta?",
+     "options": [
+      "Dentro del buzón rojo del muelle",
+      "En el fondo de la bolsa",
+      "Bajo una piedra"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué duda Senba antes de escucharla?",
+     "options": [
+      "Teme que se acabe el misterio",
+      "No se fía de lo que pueda inventar Remite",
+      "No sabe leer"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué deseo se había pedido?",
+     "options": [
+      "Hacer un viaje muy largo con la familia",
+      "Tener más tiempo libre",
+      "Que un hermano se curara"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué comprendió quien escribió la carta?",
+     "options": [
+      "Que el regalo fue el tiempo compartido",
+      "Que las grullas de papel no sirven para nada",
+      "Que debía doblar mil más"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué buscabas en un resultado y terminaste encontrando en el proceso?",
+     "model": "Quería aprobar unas oposiciones y, aunque no las saqué, conocí en la academia a mis mejores amigos."
+    },
+    {
+     "q": "¿Qué ilusión tuya se sostenía, en parte, gracias a no saber toda la verdad?",
+     "model": "Durante años idealicé a un tío mío hasta que supe cómo había tratado a mi madre."
+    },
+    {
+     "q": "¿Qué época difícil recuerdas hoy con gratitud por la compañía que tuviste?",
+     "model": "Los meses en que cuidamos a mi padre entre todos los hermanos: nunca habíamos estado tan unidos."
+    }
+   ],
+   "gaps": "Si hubiera [sabido] que el deseo era ese [tiempo], no habría pedido otra cosa». Entonces no [fallé]. No. Solo que el deseo se cumplió por el [camino], y no al final.",
+   "glossary": [
+    {
+     "word": "echó al buzón",
+     "meaning": "la metió en el buzón para enviarla"
+    },
+    {
+     "word": "misterio",
+     "meaning": "algo que no se conoce o no se entiende"
+    },
+    {
+     "word": "se curara",
+     "meaning": "recuperara la salud"
+    },
+    {
+     "word": "a mis espaldas",
+     "meaning": "detrás de mí, sin que yo lo viera"
+    }
+   ]
+  },
+  {
+   "id": "bosque",
+   "title": "El peso de un lápiz rojo",
+   "place": "El bosque recortado · al pie de la papelera",
+   "context": "Borra era una idea que alguien arrugó a la tercera línea. Hoy le hace una pregunta incómoda a don Margen, el búho que anota en rojo todo lo que ve.",
+   "speakers": [
+    {
+     "name": "Borra",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Don Margen",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Margen, una pregunta incómoda. Si hubieras leído mis tres líneas antes de que me arrugaran, dime qué habrías anotado."
+    },
+    {
+     "s": 1,
+     "text": "Con franqueza: que la primera era torpe y que sobraban dos adjetivos."
+    },
+    {
+     "s": 0,
+     "text": "Y nada más."
+    },
+    {
+     "s": 1,
+     "text": "Probablemente no. Yo señalo lo que falla; lo que funciona se supone que ya lo sabe el autor."
+    },
+    {
+     "s": 0,
+     "text": "Pues no lo sabía. Por eso me tiró. Bastaba con que alguien le dijera «sigue, aquí hay algo»."
+    },
+    {
+     "s": 1,
+     "text": "Eso no es corregir, es animar."
+    },
+    {
+     "s": 0,
+     "text": "No veo por qué han de ser cosas distintas. Una corrección que solo enumera errores le enseña al otro a dejar de escribir, no a escribir mejor."
+    },
+    {
+     "s": 1,
+     "text": "Me estás acusando de fabricar bolas de papel."
+    },
+    {
+     "s": 0,
+     "text": "Te estoy diciendo que tu lápiz pesa más de lo que crees. Por mucho que tengas razón en cada nota, si el resultado es una papelera llena, algo falla en el método."
+    },
+    {
+     "s": 1,
+     "text": "Es la crítica más dura que he recibido. Y fíjate: empezaste por lo que hago bien, que es decir la verdad. Tomo nota."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué habría anotado don Margen en las líneas de Borra?",
+     "options": [
+      "Solo los defectos",
+      "Un elogio general y dos sugerencias",
+      "Nada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Borra, ¿por qué la tiraron?",
+     "options": [
+      "Porque la idea era mala desde el principio",
+      "Porque faltaba papel",
+      "Nadie le dijo al autor que ahí había algo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué efecto tiene, para Borra, una corrección que solo enumera errores?",
+     "options": [
+      "Es dura, pero resulta la más útil de todas",
+      "Enseña a dejar de escribir",
+      "Hace reír al autor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué reconoce don Margen al final?",
+     "options": [
+      "Que Borra empezó por algo positivo",
+      "Que su método no necesita cambios",
+      "Que el rojo es mejor"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué corrección recibiste que te hizo abandonar en lugar de mejorar?",
+     "model": "Un profesor de dibujo me dijo que no tenía mano, y no volví a tocar un lápiz en diez años."
+    },
+    {
+     "q": "¿Cómo le dirías a alguien que su trabajo falla sin que pierda las ganas?",
+     "model": "Empezaría por lo que funciona y después le propondría un solo cambio concreto."
+    },
+    {
+     "q": "¿Hasta qué punto crees que animar y corregir son la misma tarea?",
+     "model": "Creo que se necesitan: sin ánimo, la corrección no se escucha; sin corrección, el ánimo es vacío."
+    }
+   ],
+   "gaps": "Yo [señalo] lo que falla; lo que [funciona] se supone que ya lo sabe el autor. Pues no lo sabía. Por eso me [tiró]. Bastaba con que alguien le dijera «[sigue], aquí hay algo».",
+   "glossary": [
+    {
+     "word": "torpe",
+     "meaning": "poco hábil, mal hecha"
+    },
+    {
+     "word": "sobraban",
+     "meaning": "había más de los necesarios"
+    },
+    {
+     "word": "enumera",
+     "meaning": "nombra uno por uno"
+    },
+    {
+     "word": "papelera",
+     "meaning": "recipiente para tirar papeles"
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "title": "Un titular más pequeño",
+   "place": "La ciudad desplegable · la esquina del quiosco",
+   "context": "Titular, el dragón de periódico, quiere abrir la edición de mañana con la historia de Dardo, el avión que un niño lanzó hace treinta años. Dardo no está de acuerdo con el enfoque.",
+   "speakers": [
+    {
+     "name": "Titular",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Dardo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Dardo, tu historia es oro. «Avión abandonado busca a su niño durante treinta años». Mañana abro con eso."
+    },
+    {
+     "s": 1,
+     "text": "Un momento. Yo no estoy abandonado. Me lanzaron con cariño."
+    },
+    {
+     "s": 0,
+     "text": "Detalles. «Abandonado» vende más que «lanzado con cariño»."
+    },
+    {
+     "s": 1,
+     "text": "Pero no es verdad. Y si él lo lee, pensará que me hizo daño."
+    },
+    {
+     "s": 0,
+     "text": "Si lo lee, vendrá a buscarte. Creía que era lo que querías."
+    },
+    {
+     "s": 1,
+     "text": "No así. No quiero que venga por culpa, sino porque se acuerde de mí."
+    },
+    {
+     "s": 0,
+     "text": "Eres el primer protagonista que me pide un titular más pequeño."
+    },
+    {
+     "s": 1,
+     "text": "Te propongo otro: «Avión de papel sigue volando gracias a un buen lanzamiento»."
+    },
+    {
+     "s": 0,
+     "text": "Con eso no despierto a nadie."
+    },
+    {
+     "s": 1,
+     "text": "A lo mejor no hace falta despertar a todo el mundo. Basta con que lo lea una persona."
+    },
+    {
+     "s": 0,
+     "text": "Me cuesta admitirlo, pero nunca había pensado en escribir para un solo lector. De acuerdo: lo publico en letra pequeña, por si acaso él todavía lee hasta el final."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo presenta a Dardo el primer titular?",
+     "options": [
+      "Como un héroe que nunca se rinde",
+      "Como un avión abandonado",
+      "Como un juguete"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué lo rechaza Dardo?",
+     "options": [
+      "Le parece demasiado largo para una portada",
+      "No quiere ser famoso",
+      "Es falso y podría herir al niño"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué motivo querría Dardo que el niño volviera?",
+     "options": [
+      "Porque lo recuerde",
+      "Por un sentimiento de culpa",
+      "Para pedirle explicaciones por aquel día"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué decide Titular al final?",
+     "options": [
+      "Mantener su primera versión en portada",
+      "Publicarlo en letra pequeña",
+      "No publicarlo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué historia tuya se ha contado de forma exagerada o injusta?",
+     "model": "En mi familia cuentan que dejé la carrera por capricho, cuando en realidad necesitaba trabajar."
+    },
+    {
+     "q": "¿Qué has hecho por culpa que habrías preferido hacer por cariño?",
+     "model": "Visitar a una tía cada domingo: iba por obligación y ella lo notaba."
+    },
+    {
+     "q": "¿Para qué único lector o lectora escribirías algo importante?",
+     "model": "Escribiría para mi hija, para que lo leyera cuando tuviera mi edad."
+    }
+   ],
+   "gaps": "No quiero que venga por [culpa], sino porque se [acuerde] de mí. Eres el primer [protagonista] que me pide un [titular] más pequeño.",
+   "glossary": [
+    {
+     "word": "abandonado",
+     "meaning": "dejado solo, sin cuidado"
+    },
+    {
+     "word": "lanzamiento",
+     "meaning": "acción de tirar algo por el aire"
+    },
+    {
+     "word": "hace falta",
+     "meaning": "es necesario"
+    },
+    {
+     "word": "por si acaso",
+     "meaning": "por si ocurre algo"
+    }
+   ]
+  },
+  {
+   "id": "cumbre",
+   "title": "La colina que respira",
+   "place": "La cumbre · el escritorio",
+   "context": "Mar, la ballena, lleva años cargando un pueblo que cree vivir sobre una colina. Había escrito con la Hoja en Blanco un mensaje para contar la verdad, pero ha cambiado de idea.",
+   "speakers": [
+    {
+     "name": "Mar",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "La Hoja",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hoja, he roto el mensaje que escribimos. No puedo decirles que estoy cansada."
+    },
+    {
+     "s": 1,
+     "text": "Algo habrá pasado."
+    },
+    {
+     "s": 0,
+     "text": "Esta mañana oí a dos vecinas en el lavadero. Una decía: «Qué suerte vivir en una colina tan tranquila». Si supieran que la colina respira, no volverían a dormir."
+    },
+    {
+     "s": 1,
+     "text": "O dormirían de otra manera. Sabiendo a quién deben el suelo."
+    },
+    {
+     "s": 0,
+     "text": "No sé de qué les serviría, aparte de preocuparse."
+    },
+    {
+     "s": 1,
+     "text": "Les serviría para elegir. Ahora mismo no pueden cuidarte porque no saben que existes. Les has quitado esa posibilidad sin consultarles."
+    },
+    {
+     "s": 0,
+     "text": "Lo hice para protegerlos."
+    },
+    {
+     "s": 1,
+     "text": "Seguro. Pero proteger a alguien de la verdad también es decidir por él. Si yo fuera vecina tuya, preferiría enterarme por ti antes que por un temblor."
+    },
+    {
+     "s": 0,
+     "text": "Pero quizá se marchen."
+    },
+    {
+     "s": 1,
+     "text": "Entonces sabrás que estaban por el suelo y no por ti. Duele, pero es mejor que cargar con la duda otros veinte años."
+    },
+    {
+     "s": 0,
+     "text": "Vuelve a escribirlo. Esta vez sin la palabra «perdón»: no he hecho nada malo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué llevó a Mar a romper el mensaje?",
+     "options": [
+      "Oír a dos vecinas contentas",
+      "Un consejo de la Hoja en Blanco",
+      "Una falta de ortografía"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según la Hoja, ¿qué les ha quitado Mar a los vecinos?",
+     "options": [
+      "La tranquilidad con que dormían antes",
+      "La colina",
+      "La posibilidad de elegir"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo preferiría enterarse la Hoja, en el lugar de los vecinos?",
+     "options": [
+      "Por un temblor inesperado del suelo",
+      "Por la propia Mar",
+      "Por el periódico"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué cambio pide Mar en el nuevo mensaje?",
+     "options": [
+      "Hacerlo mucho más largo y detallado",
+      "Firmarlo con otro nombre",
+      "Quitar la palabra «perdón»"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿De qué verdad has protegido a alguien que quizá habría preferido saberla?",
+     "model": "No le conté a mi madre que me habían despedido hasta que encontré otro empleo, y le dolió enterarse tarde."
+    },
+    {
+     "q": "¿Cómo reaccionarías si descubrieras cuánto se esfuerza alguien por ti en silencio?",
+     "model": "Me sentiría agradecida y algo culpable por no haberlo visto antes."
+    },
+    {
+     "q": "¿Por qué cosa has pedido perdón sin haber hecho nada malo?",
+     "model": "Me disculpé por tomarme una baja médica, como si enfermar fuera una falta."
+    }
+   ],
+   "gaps": "Les has [quitado] esa posibilidad sin [consultarles]. Lo hice para [protegerlos]. Seguro. Pero proteger a alguien de la verdad también es [decidir] por él.",
+   "glossary": [
+    {
+     "word": "lavadero",
+     "meaning": "lugar donde se lava la ropa"
+    },
+    {
+     "word": "colina",
+     "meaning": "montaña pequeña"
+    },
+    {
+     "word": "temblor",
+     "meaning": "movimiento brusco del suelo"
+    },
+    {
+     "word": "cargar con",
+     "meaning": "llevar un peso o una responsabilidad"
+    }
+   ]
+  }
+ ]
+}
