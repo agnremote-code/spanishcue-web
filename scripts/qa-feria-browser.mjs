@@ -12,6 +12,7 @@
 //   node scripts/qa-feria-browser.mjs --hospital-gpu  # Hospital San Casi Vivo: unmount frees the GPU (2026-10-30 repair)
 //   node scripts/qa-feria-browser.mjs --bosque-gpu    # Bosque de los hongos gigantes: unmount frees the GPU (2026-11-04 repair)
 //   node scripts/qa-feria-browser.mjs --masalla-gpu   # Más allá: place swaps and unmount free the GPU (2026-11-06 repair)
+//   node scripts/qa-feria-browser.mjs --madrid-gpu    # Madrid infectada: Metro trips and unmount free the GPU (2026-11-11 repair)
 //   node scripts/qa-feria-browser.mjs --cover    # 1200×750 cover candidates + cover.webp (FERIA_COVER=<circle|intro>)
 //
 // Env: FERIA_QA_OUTPUT (evidence folder), FERIA_QA_LOOK_CIRCLES (Busca
@@ -35,8 +36,8 @@ import { CONTENT } from '../app/la-feria-de-villaluz/levels.mjs';
 
 const repo = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const argv = new Set(process.argv.slice(2));
-const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview') && !argv.has('--hospital-gpu') && !argv.has('--bosque-gpu') && !argv.has('--masalla-gpu');
-const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview'), hospitalGpu: argv.has('--hospital-gpu'), bosqueGpu: argv.has('--bosque-gpu'), masallaGpu: argv.has('--masalla-gpu') };
+const all = !argv.has('--look') && !argv.has('--smoke') && !argv.has('--cover') && !argv.has('--calls') && !argv.has('--preview') && !argv.has('--hospital-gpu') && !argv.has('--bosque-gpu') && !argv.has('--masalla-gpu') && !argv.has('--madrid-gpu');
+const RUN = { look: all || argv.has('--look'), smoke: all || argv.has('--smoke'), cover: argv.has('--cover'), calls: argv.has('--calls'), preview: argv.has('--preview'), hospitalGpu: argv.has('--hospital-gpu'), bosqueGpu: argv.has('--bosque-gpu'), masallaGpu: argv.has('--masalla-gpu'), madridGpu: argv.has('--madrid-gpu') };
 const out = resolve(process.env.FERIA_QA_OUTPUT || resolve(repo, '.qa/feria-browser'));
 await mkdir(resolve(out, 'look'), { recursive: true });
 await mkdir(resolve(out, 'smoke'), { recursive: true });
@@ -55,6 +56,8 @@ import './app/hospital-san-casi-vivo/hospital.css';
 import BosqueWorld from './app/bosque-de-los-hongos-gigantes/World3D';
 import MasAllaWorld from './app/mas-alla/World3D';
 import './app/mas-alla/mas-alla.css';
+import MadridWorld from './app/madrid-infectada/World3D';
+import './app/madrid-infectada/madrid.css';
 import { placeSet } from './app/la-feria-de-villaluz/layout.mjs';
 window.__qa = { stats: null, failed: false, gl: 0, frames: 0 };
 // T5: real WebGL draw calls, counted on the context the same way for every
@@ -90,6 +93,15 @@ function MasAllaHarness() {
   return <main className="ma-harness" style={{ position: 'fixed', inset: 0 }}>{mounted && <MasAllaWorld view={view} spotOpen={null} done={[]} paused={false} inset={{ right: 0, bottom: 0 }} greetings={{}} act={0}
     onIntroBeat={none} onNear={none} onPortal={none} onExit={none} onFinal={none} onSpot={none} onPose={none} onFail={() => { window.__qa.failed = true; }} />}</main>;
 }
+function MadridHarness() {
+  const [mounted, setMounted] = useState(true);
+  const [go, setGo] = useState({ zone: 'sol', n: 0 });
+  useEffect(() => { window.__qa.madridOff = () => setMounted(false); window.__qa.madridOn = () => setMounted(true); window.__qa.madridGo = zone => setGo(g => ({ zone, n: g.n + 1 })); }, []);
+  const none = () => {};
+  return <main className="mi mi-harness" style={{ position: 'fixed', inset: 0 }}>{mounted && <MadridWorld level="b1" start="sol" go={go} target={null} intro={false} finale={false} spotOpen={null} done={[]} paused={false}
+    inset={{ right: 0, bottom: 0 }} act={0} fire={0} onIntroEnd={none} onFinaleEnd={none} onNear={none} onSpot={none} onVax={none}
+    onEvent={e => { if (e === 'metro') window.__qa.madridMetro = (window.__qa.madridMetro ?? 0) + 1; }} onPose={p => { window.__qa.madridZone = p.zone; }} onFail={() => { window.__qa.failed = true; }} />}</main>;
+}
 function LookHarness() {
   const [busca, setBusca] = useState(null);
   const [intro, setIntro] = useState(false);
@@ -103,7 +115,7 @@ function LookHarness() {
     onSpot={() => {}} onNear={() => {}} onPose={() => {}} onFail={() => { window.__qa.failed = true; }} onStats={s => { window.__qa.stats = s; }} /></main>;
 }
 const q = new URLSearchParams(location.search);
-createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : q.get('harness') === 'hospital' ? <HospitalHarness /> : q.get('harness') === 'bosque' ? <BosqueHarness /> : q.get('harness') === 'masalla' ? <MasAllaHarness /> : <FeriaGame />);`,
+createRoot(document.getElementById('root')).render(q.get('harness') === 'look' ? <LookHarness /> : q.get('harness') === 'hospital' ? <HospitalHarness /> : q.get('harness') === 'bosque' ? <BosqueHarness /> : q.get('harness') === 'masalla' ? <MasAllaHarness /> : q.get('harness') === 'madrid' ? <MadridHarness /> : <FeriaGame />);`,
     resolveDir: repo, loader: 'tsx',
   },
   bundle: true, format: 'esm', splitting: true, outdir: resolve(out, 'assets'), entryNames: 'lesson', chunkNames: 'chunk-[hash]', jsx: 'automatic',
@@ -792,6 +804,58 @@ if (RUN.masallaGpu) {
   }
 }
 
+// ------------------------------------------------------------------ Madrid infectada Metro trips + unmount (gated repair, 2026-11-11)
+// Same leak list (STATUS 2026-10-28). Madrid builds the ghost Metro station when you go down and frees
+// it when you come back up, so a trip must free it too. Mounted alone through ?harness=madrid at Sol,
+// then two rounds of Sol → Metro → Sol, then unmounted. Main numbers: LQG file.
+if (RUN.madridGpu) {
+  // A trip fades out, swaps and fades in on the world's own clock (dt capped at 50 ms), which SwiftShader
+  // runs slowly at 1280 px: wait until the pose reports the new place, then let the fade finish.
+  const settle = async (page, zone) => {
+    await page.evaluate(z => { window.__qa.madridZone = null; window.__qa.madridGo(z); }, zone);
+    await page.waitForFunction(z => (z === 'metro' ? window.__qa.madridZone === 'metro' : window.__qa.madridZone && window.__qa.madridZone !== 'metro'), zone, { timeout: 120000 });
+    await frames(page, 30);
+  };
+  for (const viewport of [{ width: 390, height: 844 }, { width: 1280, height: 800 }]) {
+    const label = `madrid-${viewport.width}`;
+    const context = await browser.newContext({ viewport, deviceScaleFactor: 1.25, ...(viewport.width < 760 ? { hasTouch: true, isMobile: true } : {}) });
+    await context.addInitScript(countGpu);
+    const page = await context.newPage();
+    page.setDefaultTimeout(30000);
+    page.on('pageerror', e => report.errors.push(`${label}: ${e.message}`));
+    page.on('console', m => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) report.errors.push(`${label} console: ${m.text()}`); });
+    await page.goto(`${origin}/?harness=madrid`);
+    await page.locator('.mi-harness canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 20);
+    const sol = await page.evaluate(() => ({ ...window.__gpu }));
+    await page.screenshot({ path: resolve(out, 'smoke', `${label}-sol-first.png`), timeout: 120000 });
+    // Two rounds: the first warms every lazily built GPU object (the station, shadow map, bloom targets);
+    // a leak on the trip shows as growth from round 1 to round 2.
+    const round = async () => { await settle(page, 'metro'); await settle(page, 'sol'); return page.evaluate(() => ({ ...window.__gpu })); };
+    const first = await round(), back = await round();
+    const trips = await page.evaluate(() => window.__qa.madridMetro ?? 0);
+    await page.screenshot({ path: resolve(out, 'smoke', `${label}-sol-after-two-rounds.png`), timeout: 120000 });
+    // The buffer count back at Sol drifts both ways from round to round, also on main (zombies spawn at
+    // random and culled streets upload when first drawn): 1,181–1,253 over six rounds at 390 px, +14 at
+    // 1280 px. A station left behind adds ~400 buffers and 15 textures per round, so 5% slack still catches it.
+    const slack = Math.ceil(first.buffers * 0.05);
+    smoke(`${viewport.width} madrid Metro trips free the station they leave (no growth from round 1 to round 2 back at Sol)`, trips === 2 && back.buffers <= first.buffers + slack && back.textures <= first.textures, { sol, first, back, slack, trips });
+    await page.evaluate(() => window.__qa.madridOff());
+    await page.locator('.mi-harness canvas').first().waitFor({ state: 'detached' });
+    await page.waitForTimeout(1500);
+    const after = await page.evaluate(() => ({ ...window.__gpu, failed: window.__qa.failed }));
+    smoke(`${viewport.width} madrid unmount frees the world's WebGL textures and buffers and loses the context`, !after.failed && after.lost >= 1 && back.textures > after.textures && after.textures <= 5 && after.buffers === 0, { back, after });
+    const errorsBefore = report.errors.length;
+    await page.evaluate(() => window.__qa.madridOn());
+    await page.locator('.mi-harness canvas').first().waitFor({ timeout: 60000 });
+    await frames(page, 15);
+    const px = await pixelStats(page, await page.screenshot({ timeout: 120000 }));
+    const failed = await page.evaluate(() => window.__qa.failed);
+    smoke(`${viewport.width} madrid remounts after the unmount with a non-blank canvas`, !failed && report.errors.length === errorsBefore && px.colours > 200 && px.sd > 8, px);
+    await context.close();
+  }
+}
+
 report.missing = [...missing].sort();
 await writeFile(resolve(out, 'results.json'), JSON.stringify(report, null, 2));
 await browser.close();
@@ -800,5 +864,5 @@ console.log(`Evidence: ${out}`);
 console.log(`Page/console errors: ${report.errors.length}${report.errors.length ? `\n  ${report.errors.join('\n  ')}` : ''}`);
 console.log(`404s: ${report.missing.join(', ') || 'none'}`);
 const failed = report.smoke.filter(s => !s.passed);
-if (RUN.smoke || RUN.hospitalGpu || RUN.bosqueGpu || RUN.masallaGpu) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
+if (RUN.smoke || RUN.hospitalGpu || RUN.bosqueGpu || RUN.masallaGpu || RUN.madridGpu) console.log(`Smoke: ${report.smoke.length - failed.length}/${report.smoke.length} passed`);
 if (failed.length || report.errors.length) process.exitCode = 1;
