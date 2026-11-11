@@ -1,0 +1,610 @@
+{
+ "game": "papel",
+ "level": "C1",
+ "items": [
+  {
+   "id": "muelle",
+   "title": "Una colección de coartadas",
+   "place": "El muelle de papel · el buzón rojo",
+   "context": "El capitán Pliego lleva treinta años al mando de un barco de papel que jamás ha tocado el agua. Hoy le entrega su cuaderno de bitácora a Remite, el cartero de las cartas que nadie envió.",
+   "speakers": [
+    {
+     "name": "Capitán Pliego",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Remite",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Remite, vengo a entregarte mi bitácora. Treinta años de anotaciones."
+    },
+    {
+     "s": 1,
+     "text": "Supongo que querrás enviársela a alguien."
+    },
+    {
+     "s": 0,
+     "text": "Quiero que la archives. Dudo que tenga destinatario."
+    },
+    {
+     "s": 1,
+     "text": "Déjame ver. «Lunes: mar revuelto, no conviene. Martes: mar en calma, sospechoso. Miércoles: marea baja, sería una imprudencia». Capitán, esto no es una bitácora. Es una colección de coartadas."
+    },
+    {
+     "s": 0,
+     "text": "Es un registro riguroso de las condiciones."
+    },
+    {
+     "s": 1,
+     "text": "De las condiciones en las que no zarpaste. Fíjate que hasta la calma te parecía sospechosa."
+    },
+    {
+     "s": 0,
+     "text": "La calma precede a todo lo demás; cualquier marino lo sabe."
+    },
+    {
+     "s": 1,
+     "text": "Cualquier marino que haya salido alguna vez. No te lo digo con mala intención. Reparto cartas no enviadas: reconozco el género en cuanto lo veo."
+    },
+    {
+     "s": 0,
+     "text": "Insinúas que mi bitácora es una carta."
+    },
+    {
+     "s": 1,
+     "text": "Larguísima. Dirigida al mar, y escrita para no tener que mandarla nunca. Lo que no logro saber es si le pides perdón o permiso."
+    },
+    {
+     "s": 0,
+     "text": "Permiso, supongo. Aunque dicho en voz alta suena ridículo: nadie necesita autorización para mojarse."
+    },
+    {
+     "s": 1,
+     "text": "Entonces no la archivo. Te la devuelvo con una hoja en blanco al final, fechada mañana. Lo que anotes ahí ya no me incumbe."
+    },
+    {
+     "s": 0,
+     "text": "Eres un cartero impertinente."
+    },
+    {
+     "s": 1,
+     "text": "Soy un cartero sin trabajo, capitán, el día que la gente empiece a enviar lo que escribe. Y créeme que lo estoy deseando."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le pide Pliego a Remite que haga con la bitácora?",
+     "options": [
+      "Archivarla",
+      "Enviársela al mar dentro de una botella",
+      "Corregir sus errores"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sugiere Remite al llamarla «colección de coartadas»?",
+     "options": [
+      "Que el mar era, en efecto, demasiado peligroso para un barco así",
+      "Que cada día halló una excusa para no navegar",
+      "Que está mal redactada"
+     ],
+     "answer": 1,
+     "infer": true
+    },
+    {
+     "q": "¿Qué deja entrever Pliego cuando responde «Permiso, supongo»?",
+     "options": [
+      "Que se siente culpable ante su antigua tripulación",
+      "Que no ha comprendido la pregunta",
+      "Que en el fondo desea entrar al mar"
+     ],
+     "answer": 2,
+     "infer": true
+    },
+    {
+     "q": "¿Qué hace Remite al final con la bitácora?",
+     "options": [
+      "La guarda en el fondo de su bolsa de cartero",
+      "La devuelve con una hoja en blanco",
+      "La arroja al agua"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué registro minucioso llevas que, bien mirado, justifica algo que evitas?",
+     "model": "Tengo una lista interminable de cursos que «necesito» antes de atreverme a montar mi propio estudio."
+    },
+    {
+     "q": "¿A qué o a quién le sigues pidiendo un permiso que nadie te exige?",
+     "model": "A mis padres, para vivir lejos: jamás me lo han prohibido, pero sigo justificándome en cada llamada."
+    },
+    {
+     "q": "¿Qué oficio dejaría de hacer falta si la gente dijera a tiempo lo que piensa?",
+     "model": "Buena parte de los mediadores familiares se quedaría sin clientes, me temo."
+    }
+   ],
+   "gaps": "Dirigida al mar, y escrita para no tener que [mandarla] nunca. Lo que no logro saber es si le pides [perdón] o permiso. Permiso, supongo. Aunque dicho en voz alta suena [ridículo]: nadie necesita [autorización] para mojarse.",
+   "glossary": [
+    {
+     "word": "bitácora",
+     "meaning": "cuaderno donde se anota lo que ocurre en un barco"
+    },
+    {
+     "word": "coartadas",
+     "meaning": "pruebas o excusas con que alguien se defiende"
+    },
+    {
+     "word": "zarpaste",
+     "meaning": "saliste del puerto con el barco"
+    },
+    {
+     "word": "me incumbe",
+     "meaning": "es asunto mío"
+    },
+    {
+     "word": "impertinente",
+     "meaning": "que dice cosas molestas o fuera de lugar"
+    }
+   ]
+  },
+  {
+   "id": "bosque",
+   "title": "Quince minutos de gloria",
+   "place": "El bosque recortado · entre el estanque y la papelera",
+   "context": "Brinca, la rana que solo puede saltar hacia delante, y Borra, la idea que alguien arrugó, comparan sus nostalgias una tarde en el bosque.",
+   "speakers": [
+    {
+     "name": "Brinca",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Borra",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Borra, tú que has estado en una mesa de verdad, dime si era tan maravillosa como la recuerdas."
+    },
+    {
+     "s": 1,
+     "text": "Era una mesa coja con una mancha de café. Pero sí: en mi memoria tiene luz de estudio de pintor."
+    },
+    {
+     "s": 0,
+     "text": "A mí me ocurre con los estanques. Cuanto más lejos quedan, más limpia tienen el agua. Sospecho que estoy enamorada de sitios que no existieron."
+    },
+    {
+     "s": 1,
+     "text": "Yo te envidio el paisaje. Mi nostalgia es más pobre: echo de menos quince minutos."
+    },
+    {
+     "s": 0,
+     "text": "Los quince en que fuiste una idea."
+    },
+    {
+     "s": 1,
+     "text": "Los quince en que alguien creyó en mí sin reservas. Fíjate qué poco pido."
+    },
+    {
+     "s": 0,
+     "text": "No es poco. Hay quien no los ha tenido nunca."
+    },
+    {
+     "s": 1,
+     "text": "Ya. Lo curioso es que no recuerdo las tres líneas. Recuerdo la presión del lápiz, la respiración contenida. O sea: no añoro lo que decía, sino cómo me miraban mientras lo decía."
+    },
+    {
+     "s": 0,
+     "text": "Entonces a lo mejor no necesitas que te alisen, sino que alguien vuelva a inclinarse sobre ti con esa atención."
+    },
+    {
+     "s": 1,
+     "text": "Qué manera tan elegante de decirme que busque otro autor."
+    },
+    {
+     "s": 0,
+     "text": "O que lo seas tú. Yo no puedo volver a mis estanques, pero tú sí puedes desplegarte sola. Nadie ha dicho que una bola no pueda leerse a sí misma."
+    },
+    {
+     "s": 1,
+     "text": "Sería la primera vez que algo arrugado se toma en serio. Me tienta, no creas. Aunque solo sea por llevarle la contraria a la papelera."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo era en realidad la mesa donde escribieron a Borra?",
+     "options": [
+      "Amplia, luminosa y muy ordenada",
+      "Recién comprada",
+      "Coja y manchada"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué echa de menos Borra, en el fondo?",
+     "options": [
+      "La atención con que la miraban",
+      "El contenido exacto de sus tres líneas",
+      "La comodidad de aquel escritorio"
+     ],
+     "answer": 0,
+     "infer": true
+    },
+    {
+     "q": "¿Qué le sucede a Brinca con los estanques que dejó atrás?",
+     "options": [
+      "Ha olvidado casi todos",
+      "Los recuerda mejores de lo que eran",
+      "Planea regresar al primero"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Con qué intención dice Brinca «O que lo seas tú»?",
+     "options": [
+      "Animarla a valorarse por sí misma",
+      "Reprocharle que se queje tanto de su suerte",
+      "Despedirse de ella"
+     ],
+     "answer": 0,
+     "infer": true
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué añoras de una etapa: lo que hacías o cómo te miraban entonces?",
+     "model": "De mis años de universidad no añoro las clases, sino la sensación de que alguien esperaba mucho de mí."
+    },
+    {
+     "q": "¿En qué momento alguien creyó en ti sin reservas, y qué hiciste con esa confianza?",
+     "model": "Una jefa me confió un proyecto enorme recién llegada; trabajé como nunca para no defraudarla."
+    },
+    {
+     "q": "¿Qué parte de tu trabajo podrías validar tú sin esperar la aprobación ajena?",
+     "model": "Mis traducciones: sé cuándo están bien, y aun así espero siempre a que el cliente lo diga."
+    }
+   ],
+   "gaps": "Lo curioso es que no recuerdo las tres [líneas]. Recuerdo la [presión] del lápiz, la respiración [contenida]. O sea: no [añoro] lo que decía, sino cómo me miraban mientras lo decía.",
+   "glossary": [
+    {
+     "word": "coja",
+     "meaning": "con una pata más corta que las otras"
+    },
+    {
+     "word": "sin reservas",
+     "meaning": "por completo, sin dudas"
+    },
+    {
+     "word": "añoro",
+     "meaning": "echo de menos"
+    },
+    {
+     "word": "desplegarte",
+     "meaning": "abrirte, extender lo que estaba doblado"
+    },
+    {
+     "word": "llevarle la contraria",
+     "meaning": "hacer o decir lo opuesto"
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "title": "Sucesos que no lo parecen",
+   "place": "La ciudad desplegable · la esquina del quiosco",
+   "context": "Lina se ha soltado por un rato de la guirnalda que forma con sus cuatro hermanas idénticas. Titular, el dragón de periódico, ha olido la noticia y quiere la exclusiva.",
+   "speakers": [
+    {
+     "name": "Titular",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Lina",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lina, me dicen que te has soltado de la guirnalda. Quiero la exclusiva: «La rebelde de la plaza»."
+    },
+    {
+     "s": 1,
+     "text": "No me he rebelado contra nadie. Me he ido a dar un paseo."
+    },
+    {
+     "s": 0,
+     "text": "Un paseo no es noticia. Una ruptura, sí. Dame una frase contra tus hermanas."
+    },
+    {
+     "s": 1,
+     "text": "No la tengo. Las adoro. Sucede que quería saber de qué color es mi sombra cuando no se mezcla con otras cuatro."
+    },
+    {
+     "s": 0,
+     "text": "Precioso, pero no cabe en un titular. Víctima o heroína: necesito encasillarte."
+    },
+    {
+     "s": 1,
+     "text": "Ahí está el problema. Salgo de una hoja donde todas éramos iguales y me ofreces otra donde vuelvo a ser una figura recortada: «la rebelde». Cambiar de molde no es salir del molde."
+    },
+    {
+     "s": 0,
+     "text": "La gente necesita etiquetas para entender."
+    },
+    {
+     "s": 1,
+     "text": "La gente necesita tiempo para entender, y tú se lo ahorras con etiquetas. No es lo mismo."
+    },
+    {
+     "s": 0,
+     "text": "Eso ha dolido, aunque reconozco la precisión. Entonces dime qué publico."
+    },
+    {
+     "s": 1,
+     "text": "Publica que no hay historia. Que una muñeca se soltó, caminó, tuvo frío en una mano y volvió porque quiso."
+    },
+    {
+     "s": 0,
+     "text": "Eso no vende ni un ejemplar."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Las cosas que de verdad nos cambian suelen ser pésimas noticias: ocurren despacio, sin culpables y sin moraleja."
+    },
+    {
+     "s": 0,
+     "text": "Voy a tener que inventarme una sección nueva. «Sucesos que no lo parecen»."
+    },
+    {
+     "s": 1,
+     "text": "Si la abres, guárdame la primera columna. Pero firmo yo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué titular quiere publicar el dragón al principio?",
+     "options": [
+      "«Sucesos que no lo parecen»",
+      "«La rebelde de la plaza»",
+      "«La guirnalda rota»"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere decir Lina con «cambiar de molde no es salir del molde»?",
+     "options": [
+      "Que desea volver a ser idéntica a sus cuatro hermanas",
+      "Que los periódicos se fabrican con moldes",
+      "Que otra etiqueta la encierra igual"
+     ],
+     "answer": 2,
+     "infer": true
+    },
+    {
+     "q": "¿Qué actitud muestra Titular al decir «eso ha dolido, aunque reconozco la precisión»?",
+     "options": [
+      "Acepta la crítica aunque le incomode",
+      "Se burla de la muñeca",
+      "Finge no haber oído nada"
+     ],
+     "answer": 0,
+     "infer": true
+    },
+    {
+     "q": "¿Qué condición pone Lina para aparecer en la nueva sección?",
+     "options": [
+      "Que no se publique su nombre verdadero",
+      "Cobrar por cada línea",
+      "Firmar ella su columna"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué etiqueta te han puesto que simplifica demasiado lo que hiciste?",
+     "model": "Me llaman «la valiente» por haber emigrado, cuando lo cierto es que no tenía muchas más opciones."
+    },
+    {
+     "q": "¿Qué cambio importante de tu vida ocurrió sin un momento que pudiera contarse?",
+     "model": "Dejé de tenerle miedo a mi padre poco a poco; no sabría señalar el día."
+    },
+    {
+     "q": "¿Cuándo has sustituido una pertenencia por otra creyendo que te liberabas?",
+     "model": "Dejé un entorno muy religioso y me metí en un grupo político igual de rígido."
+    }
+   ],
+   "gaps": "La gente necesita [etiquetas] para entender. La gente necesita [tiempo] para entender, y tú se lo [ahorras] con etiquetas. No es lo mismo. Eso ha dolido, aunque reconozco la [precisión].",
+   "glossary": [
+    {
+     "word": "exclusiva",
+     "meaning": "noticia que publica un solo medio"
+    },
+    {
+     "word": "encasillarte",
+     "meaning": "clasificarte de manera rígida"
+    },
+    {
+     "word": "molde",
+     "meaning": "forma hueca que da su figura a algo"
+    },
+    {
+     "word": "ejemplar",
+     "meaning": "cada copia de un periódico o libro"
+    },
+    {
+     "word": "moraleja",
+     "meaning": "enseñanza que se saca de una historia"
+    }
+   ]
+  },
+  {
+   "id": "cumbre",
+   "title": "A un palmo de la llama",
+   "place": "La cumbre · junto al escritorio, de noche",
+   "context": "Candela es un farol de papel con fuego dentro: alumbra, pero podría quemar lo que toca. La Hoja en Blanco, la última página de este mundo, le pide que se acerque.",
+   "speakers": [
+    {
+     "name": "Candela",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "La Hoja",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "No te acerques tanto, Hoja. Un mal soplo y te convierto en ceniza."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Aun así necesito tu luz: de noche nadie puede leerme, y de día nadie sube hasta aquí."
+    },
+    {
+     "s": 0,
+     "text": "Me pides que arriesgue tu vida para que alguien, tal vez, te lea."
+    },
+    {
+     "s": 1,
+     "text": "Te pido que me dejes decidirlo a mí. Llevas una hora retrocediendo como si mi miedo te perteneciera."
+    },
+    {
+     "s": 0,
+     "text": "Es que he quemado cosas, Hoja. Sin querer. Un programa de fiestas, una cometa. Una se cansa de pedir perdón por lo que es."
+    },
+    {
+     "s": 1,
+     "text": "Y la solución ha sido alumbrar desde lejos, para nadie en particular."
+    },
+    {
+     "s": 0,
+     "text": "Desde lejos no hago daño."
+    },
+    {
+     "s": 1,
+     "text": "Ni compañía. Fíjate en la paradoja: te alejas para protegerme y lo que consigues es que yo siga en blanco, que es la manera más lenta de desaparecer que conozco."
+    },
+    {
+     "s": 0,
+     "text": "Prefieres arder a amarillear."
+    },
+    {
+     "s": 1,
+     "text": "Prefiero que me lean. Si para eso hace falta una llama cerca, que sea una que al menos se preocupa. Las hay peores."
+    },
+    {
+     "s": 0,
+     "text": "No sé si eso es confianza o temeridad."
+    },
+    {
+     "s": 1,
+     "text": "Desde dentro se parecen bastante. La diferencia la pone el otro, cuando está a la altura. Así que ponte ahí, a un palmo. Ni más cerca ni más lejos."
+    },
+    {
+     "s": 0,
+     "text": "A un palmo. Si notas calor, grita."
+    },
+    {
+     "s": 1,
+     "text": "Si noto calor, sabré que por fin hay alguien leyendo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué necesita la Hoja la luz de Candela?",
+     "options": [
+      "De noche no se la puede leer",
+      "Tiene frío en lo alto de la montaña",
+      "Quiere secar la tinta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ha quemado Candela sin querer?",
+     "options": [
+      "Una carta que llevaba Remite en la bolsa",
+      "El escritorio",
+      "Un programa de fiestas y una cometa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le reprocha la Hoja al decir «como si mi miedo te perteneciera»?",
+     "options": [
+      "Que no le tenga miedo absolutamente a nada",
+      "Que decida por ella qué riesgos corre",
+      "Que la haya quemado antes"
+     ],
+     "answer": 1,
+     "infer": true
+    },
+    {
+     "q": "¿Qué da a entender la Hoja con su última frase?",
+     "options": [
+      "Que ser leída le importa más que el riesgo",
+      "Que huirá en cuanto note el calor",
+      "Que desconfía de Candela"
+     ],
+     "answer": 0,
+     "infer": true
+    }
+   ],
+   "open": [
+    {
+     "q": "¿De qué riesgo has querido proteger a alguien que tenía derecho a correrlo?",
+     "model": "Intenté disuadir a mi hijo de irse a vivir al extranjero, y era su vida, no la mía."
+    },
+    {
+     "q": "¿Qué distingue, en tu experiencia, la confianza de la temeridad?",
+     "model": "Que la confianza conoce el riesgo y lo acepta; la temeridad prefiere no mirarlo."
+    },
+    {
+     "q": "¿Qué has dejado de ofrecer a los demás por miedo a hacerles daño?",
+     "model": "Mi opinión sincera: durante años callé por si hería, y acabé siendo una presencia amable e inútil."
+    }
+   ],
+   "gaps": "Desde lejos no hago [daño]. Ni [compañía]. Fíjate en la [paradoja]: te alejas para protegerme y lo que consigues es que yo siga en [blanco]",
+   "glossary": [
+    {
+     "word": "ceniza",
+     "meaning": "polvo gris que queda después del fuego"
+    },
+    {
+     "word": "cometa",
+     "meaning": "juguete de papel que vuela sujeto a un hilo"
+    },
+    {
+     "word": "amarillear",
+     "meaning": "ponerse amarillo con el paso del tiempo"
+    },
+    {
+     "word": "temeridad",
+     "meaning": "valentía imprudente"
+    },
+    {
+     "word": "palmo",
+     "meaning": "medida aproximada de una mano abierta"
+    }
+   ]
+  }
+ ]
+}

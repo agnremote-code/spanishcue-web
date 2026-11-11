@@ -1,0 +1,510 @@
+{
+ "game": "papel",
+ "level": "A2",
+ "items": [
+  {
+   "id": "muelle",
+   "title": "Una carta para el mar",
+   "place": "El muelle de papel · junto al buzón",
+   "context": "El capitán Pliego nunca ha navegado. Hoy busca a Remite, el cartero, porque quiere mandar una carta muy especial.",
+   "speakers": [
+    {
+     "name": "Capitán Pliego",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Remite",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Remite, quiero mandar una carta."
+    },
+    {
+     "s": 1,
+     "text": "Claro, capitán. Dime para quién es."
+    },
+    {
+     "s": 0,
+     "text": "Para el mar. Ayer metí la punta en el agua por primera vez."
+    },
+    {
+     "s": 1,
+     "text": "¡Por fin! Cuéntame cómo fue."
+    },
+    {
+     "s": 0,
+     "text": "Tuve miedo, pero fue precioso. Quiero darle las gracias."
+    },
+    {
+     "s": 1,
+     "text": "El mar no tiene buzón. Pero puedo dejar la carta en una botella."
+    },
+    {
+     "s": 0,
+     "text": "Pero entonces la carta va a mojarse."
+    },
+    {
+     "s": 1,
+     "text": "Capitán, es una carta para el mar. Tiene que mojarse."
+    },
+    {
+     "s": 0,
+     "text": "Tienes razón. Entonces escribe: «Mañana vuelvo. Y voy a entrar un poco más»."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A quién quiere escribir Pliego?",
+     "options": [
+      "Al mar",
+      "A Remite",
+      "A una grulla que vive en la orilla"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hizo Pliego ayer?",
+     "options": [
+      "Navegó durante diez minutos",
+      "Metió la punta en el agua",
+      "Escribió un libro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde va a dejar Remite la carta?",
+     "options": [
+      "En el buzón rojo del muelle",
+      "En la arena",
+      "En una botella"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué promete Pliego en la carta?",
+     "options": [
+      "Volver mañana",
+      "No acercarse nunca más al agua",
+      "Comprar otro barco"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa probaste hace poco y quieres repetir?",
+     "model": "Hace poco monté a caballo y quiero repetirlo."
+    },
+    {
+     "q": "¿A qué lugar te gustaría darle las gracias?",
+     "model": "A la biblioteca de mi barrio, porque allí estudié muchos años."
+    },
+    {
+     "q": "¿Qué vas a intentar otra vez aunque te dé un poco de miedo?",
+     "model": "Voy a intentar conducir por la autopista otra vez."
+    }
+   ],
+   "gaps": "Tuve [miedo], pero fue [precioso]. Quiero darle las [gracias]. El mar no tiene [buzón].",
+   "glossary": [
+    {
+     "word": "punta",
+     "meaning": "la parte final y más fina de una cosa"
+    },
+    {
+     "word": "buzón",
+     "meaning": "caja donde se dejan las cartas"
+    },
+    {
+     "word": "botella",
+     "meaning": "recipiente de cristal para líquidos"
+    },
+    {
+     "word": "mojarse",
+     "meaning": "recibir agua, dejar de estar seco"
+    }
+   ]
+  },
+  {
+   "id": "bosque",
+   "title": "La tercera línea",
+   "place": "El bosque recortado · al lado de la papelera",
+   "context": "Don Margen, el búho que lo corrige todo, encuentra a Borra en el suelo. Borra era una idea, pero alguien la tiró.",
+   "speakers": [
+    {
+     "name": "Don Margen",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Borra",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Borra, no entiendo qué haces en el suelo."
+    },
+    {
+     "s": 1,
+     "text": "Me tiraron ayer. Dijeron que no servía."
+    },
+    {
+     "s": 0,
+     "text": "A ver, déjame leer. Mmm. Tres líneas."
+    },
+    {
+     "s": 1,
+     "text": "Ya sé: están mal."
+    },
+    {
+     "s": 0,
+     "text": "La primera tiene un error. La segunda es normal. Pero la tercera… la tercera es muy buena."
+    },
+    {
+     "s": 1,
+     "text": "¡No me lo creo! Nunca me habías dicho algo así."
+    },
+    {
+     "s": 0,
+     "text": "Nunca había leído hasta la tercera línea. Casi nadie llega."
+    },
+    {
+     "s": 1,
+     "text": "Entonces ayúdame a escribir la cuarta, por favor."
+    },
+    {
+     "s": 0,
+     "text": "De acuerdo. Pero la escribimos con lápiz negro. El rojo lo dejo para después."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo tiraron a Borra?",
+     "options": [
+      "Hoy por la mañana",
+      "Ayer",
+      "Hace un año"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué línea tiene un error?",
+     "options": [
+      "La primera",
+      "La segunda línea",
+      "La tercera"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué piensa don Margen de la tercera línea?",
+     "options": [
+      "Que es normal y un poco aburrida",
+      "Que está mal",
+      "Que es muy buena"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Con qué lápiz van a escribir la cuarta línea?",
+     "options": [
+      "Con el rojo de siempre",
+      "Con el negro",
+      "Con uno azul"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué trabajo tuyo mejoró cuando otra persona lo leyó con calma?",
+     "model": "Mi carta de presentación mejoró cuando la leyó mi hermana."
+    },
+    {
+     "q": "¿Qué persona te sorprendió para bien cuando la conociste mejor?",
+     "model": "Mi jefe: parecía muy serio, pero me ayudó con un problema."
+    },
+    {
+     "q": "¿Qué elogio recibiste sin esperarlo?",
+     "model": "Una clienta me dijo que yo explicaba muy bien."
+    }
+   ],
+   "gaps": "La primera tiene un [error]. La segunda es [normal]. Pero la tercera… la tercera es muy [buena]. ¡No me lo [creo]!",
+   "glossary": [
+    {
+     "word": "tiraron",
+     "meaning": "dejaron en la basura o en el suelo"
+    },
+    {
+     "word": "servía",
+     "meaning": "era útil"
+    },
+    {
+     "word": "línea",
+     "meaning": "fila de palabras en un texto"
+    },
+    {
+     "word": "lápiz",
+     "meaning": "objeto para escribir que se puede borrar"
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "title": "El niño del avión",
+   "place": "La ciudad desplegable · sobre el mercado",
+   "context": "Hace treinta años, un niño lanzó a Dardo por una ventana. Hoy Dardo tiene una noticia para Titular, el dragón de periódico.",
+   "speakers": [
+    {
+     "name": "Dardo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Titular",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Titular! Tengo una noticia para ti. Hoy vi a mi niño."
+    },
+    {
+     "s": 1,
+     "text": "¡El niño que te lanzó! Eso es portada. Dime dónde estaba."
+    },
+    {
+     "s": 0,
+     "text": "En el mercado, comprando naranjas. Ya es un hombre. Tenía barba y llevaba a una niña de la mano."
+    },
+    {
+     "s": 1,
+     "text": "Y te reconoció, claro."
+    },
+    {
+     "s": 0,
+     "text": "No me vio. Pero la niña sí. Me señaló y gritó: «¡Papá, un avión!»."
+    },
+    {
+     "s": 1,
+     "text": "Cuéntame qué hizo él."
+    },
+    {
+     "s": 0,
+     "text": "Miró al cielo y sonrió. Después le hizo un avión con el papel de las naranjas."
+    },
+    {
+     "s": 1,
+     "text": "Qué historia. La pongo en la primera página."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde estaba el hombre?",
+     "options": [
+      "En la plaza de las muñecas",
+      "En el mercado",
+      "En un aula"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué compraba?",
+     "options": [
+      "Naranjas",
+      "Pan para la niña",
+      "Papel"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién vio a Dardo?",
+     "options": [
+      "El hombre con barba",
+      "Titular",
+      "La niña"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hizo el hombre con el papel de las naranjas?",
+     "options": [
+      "Un avión",
+      "Un barco para su hija",
+      "Una carta"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿A quién viste hace poco después de muchos años?",
+     "model": "Vi a una compañera del colegio en el supermercado."
+    },
+    {
+     "q": "¿Qué juego le enseñaste a un niño de tu familia?",
+     "model": "Le enseñé a mi sobrino a jugar al ajedrez."
+    },
+    {
+     "q": "¿Qué te hizo sonreír en la calle esta semana?",
+     "model": "Un perro que llevaba un periódico en la boca."
+    }
+   ],
+   "gaps": "No me [vio]. Pero la niña sí. Me [señaló] y gritó: «¡Papá, un [avión]!». Cuéntame qué [hizo] él.",
+   "glossary": [
+    {
+     "word": "lanzó",
+     "meaning": "tiró con fuerza por el aire"
+    },
+    {
+     "word": "portada",
+     "meaning": "primera página de un periódico"
+    },
+    {
+     "word": "barba",
+     "meaning": "pelo en la cara de un hombre"
+    },
+    {
+     "word": "señaló",
+     "meaning": "mostró con el dedo"
+    }
+   ]
+  },
+  {
+   "id": "cumbre",
+   "title": "Un mensaje corto",
+   "place": "La cumbre · el escritorio",
+   "context": "Mar, la ballena, lleva un pueblo en la espalda desde hace años. Hoy le pide ayuda a la Hoja en Blanco para escribir algo difícil.",
+   "speakers": [
+    {
+     "name": "Mar",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "La Hoja",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hoja, necesito tu ayuda. Quiero escribir un mensaje para mi pueblo."
+    },
+    {
+     "s": 1,
+     "text": "Claro. Dime qué quieres contarles."
+    },
+    {
+     "s": 0,
+     "text": "Que estoy cansada. Hace años que los llevo y nunca he descansado."
+    },
+    {
+     "s": 1,
+     "text": "Es extraño que no se lo hayas dicho antes."
+    },
+    {
+     "s": 0,
+     "text": "Tenía miedo. Pensaba que se iban a ir."
+    },
+    {
+     "s": 1,
+     "text": "Entonces vamos a escribirlo despacio: «Queridos vecinos: los quiero mucho. Este domingo voy a dormir»."
+    },
+    {
+     "s": 0,
+     "text": "Es muy corto."
+    },
+    {
+     "s": 1,
+     "text": "Sí. Es corto, es verdad y no hace daño a nadie."
+    },
+    {
+     "s": 0,
+     "text": "Tienes razón. Ya me siento más ligera."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para quién es el mensaje?",
+     "options": [
+      "Para la Hoja en Blanco",
+      "Para Candela",
+      "Para su pueblo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo está Mar?",
+     "options": [
+      "Cansada",
+      "Enfadada con los vecinos",
+      "Enferma"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué no lo dijo antes?",
+     "options": [
+      "No tenía tiempo para escribir",
+      "No sabía cómo",
+      "Tenía miedo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué va a hacer Mar el domingo?",
+     "options": [
+      "Viajar a otro mar",
+      "Dormir",
+      "Mudarse"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mensaje corto te costó mucho escribir?",
+     "model": "Me costó escribir «no puedo ir a tu fiesta»."
+    },
+    {
+     "q": "¿Cuándo descansaste de verdad por última vez?",
+     "model": "Descansé de verdad en agosto, en casa de mis padres."
+    },
+    {
+     "q": "¿Qué verdad sencilla quieres decir a tu gente?",
+     "model": "Quiero decirles que necesito una tarde libre a la semana."
+    }
+   ],
+   "gaps": "Que estoy [cansada]. Hace años que los [llevo] y nunca he [descansado]. Es extraño que no se lo hayas dicho [antes].",
+   "glossary": [
+    {
+     "word": "pueblo",
+     "meaning": "lugar pequeño donde vive gente"
+    },
+    {
+     "word": "vecinos",
+     "meaning": "personas que viven cerca"
+    },
+    {
+     "word": "hace daño",
+     "meaning": "causa dolor"
+    },
+    {
+     "word": "ligera",
+     "meaning": "que pesa poco"
+    }
+   ]
+  }
+ ]
+}

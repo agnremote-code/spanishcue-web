@@ -3911,6 +3911,146 @@
    "seconds": 100.41,
    "src": "/audio/escucha-3d/noche-c2-terraza.mp3"
   },
+  "papel/a0-bosque": {
+   "hash": "60bbf7401113f557abeb",
+   "seconds": 34.34,
+   "src": "/audio/escucha-3d/papel-a0-bosque.mp3"
+  },
+  "papel/a0-ciudad": {
+   "hash": "5b80f314c42d74f6ed4a",
+   "seconds": 32.28,
+   "src": "/audio/escucha-3d/papel-a0-ciudad.mp3"
+  },
+  "papel/a0-cumbre": {
+   "hash": "26580eb5fdf52091f5e5",
+   "seconds": 40.27,
+   "src": "/audio/escucha-3d/papel-a0-cumbre.mp3"
+  },
+  "papel/a0-muelle": {
+   "hash": "b5b432a30865abd0276f",
+   "seconds": 29.86,
+   "src": "/audio/escucha-3d/papel-a0-muelle.mp3"
+  },
+  "papel/a1-bosque": {
+   "hash": "5b6d1c7a15d179cdad60",
+   "seconds": 43.01,
+   "src": "/audio/escucha-3d/papel-a1-bosque.mp3"
+  },
+  "papel/a1-ciudad": {
+   "hash": "a3dc99cc717677a7e646",
+   "seconds": 47.91,
+   "src": "/audio/escucha-3d/papel-a1-ciudad.mp3"
+  },
+  "papel/a1-cumbre": {
+   "hash": "08559e86af3725a03968",
+   "seconds": 40.18,
+   "src": "/audio/escucha-3d/papel-a1-cumbre.mp3"
+  },
+  "papel/a1-muelle": {
+   "hash": "8a331c3151697103e329",
+   "seconds": 32.74,
+   "src": "/audio/escucha-3d/papel-a1-muelle.mp3"
+  },
+  "papel/a2-bosque": {
+   "hash": "962f2dec20bb339ba557",
+   "seconds": 50.24,
+   "src": "/audio/escucha-3d/papel-a2-bosque.mp3"
+  },
+  "papel/a2-ciudad": {
+   "hash": "cfc83491a51c6254da07",
+   "seconds": 49.11,
+   "src": "/audio/escucha-3d/papel-a2-ciudad.mp3"
+  },
+  "papel/a2-cumbre": {
+   "hash": "30688c85f52cf697d084",
+   "seconds": 49.44,
+   "src": "/audio/escucha-3d/papel-a2-cumbre.mp3"
+  },
+  "papel/a2-muelle": {
+   "hash": "c99add0e17a5b8056618",
+   "seconds": 48.39,
+   "src": "/audio/escucha-3d/papel-a2-muelle.mp3"
+  },
+  "papel/b1-bosque": {
+   "hash": "713419b4fdcbe4e5e1a6",
+   "seconds": 55.65,
+   "src": "/audio/escucha-3d/papel-b1-bosque.mp3"
+  },
+  "papel/b1-ciudad": {
+   "hash": "c46aee37ba3c66219108",
+   "seconds": 64.96,
+   "src": "/audio/escucha-3d/papel-b1-ciudad.mp3"
+  },
+  "papel/b1-cumbre": {
+   "hash": "8658a9b762ef674da236",
+   "seconds": 62.13,
+   "src": "/audio/escucha-3d/papel-b1-cumbre.mp3"
+  },
+  "papel/b1-muelle": {
+   "hash": "e1afb6b3e71f08958f36",
+   "seconds": 54.89,
+   "src": "/audio/escucha-3d/papel-b1-muelle.mp3"
+  },
+  "papel/b2-bosque": {
+   "hash": "918b8460fdd171a9a9cd",
+   "seconds": 70.87,
+   "src": "/audio/escucha-3d/papel-b2-bosque.mp3"
+  },
+  "papel/b2-ciudad": {
+   "hash": "9257ca8a4e125b7fcb48",
+   "seconds": 74.2,
+   "src": "/audio/escucha-3d/papel-b2-ciudad.mp3"
+  },
+  "papel/b2-cumbre": {
+   "hash": "ad04ca4af19fd6e5dda9",
+   "seconds": 75.74,
+   "src": "/audio/escucha-3d/papel-b2-cumbre.mp3"
+  },
+  "papel/b2-muelle": {
+   "hash": "28b4e76284942a9c2d7e",
+   "seconds": 67.7,
+   "src": "/audio/escucha-3d/papel-b2-muelle.mp3"
+  },
+  "papel/c1-bosque": {
+   "hash": "4e6a42d3a03a522b9144",
+   "seconds": 97.81,
+   "src": "/audio/escucha-3d/papel-c1-bosque.mp3"
+  },
+  "papel/c1-ciudad": {
+   "hash": "7e3f5385e939d0f87fb7",
+   "seconds": 113.23,
+   "src": "/audio/escucha-3d/papel-c1-ciudad.mp3"
+  },
+  "papel/c1-cumbre": {
+   "hash": "4429d40820f4931ba90c",
+   "seconds": 98.88,
+   "src": "/audio/escucha-3d/papel-c1-cumbre.mp3"
+  },
+  "papel/c1-muelle": {
+   "hash": "6a37bed9e0a1538d0e6e",
+   "seconds": 100.39,
+   "src": "/audio/escucha-3d/papel-c1-muelle.mp3"
+  },
+  "papel/c2-bosque": {
+   "hash": "4f610e3f5e4e38b4fcc9",
+   "seconds": 104.76,
+   "src": "/audio/escucha-3d/papel-c2-bosque.mp3"
+  },
+  "papel/c2-ciudad": {
+   "hash": "3f222b975b7902df7dae",
+   "seconds": 119.21,
+   "src": "/audio/escucha-3d/papel-c2-ciudad.mp3"
+  },
+  "papel/c2-cumbre": {
+   "hash": "408898c807e5abe3b6cb",
+   "seconds": 117.67,
+   "src": "/audio/escucha-3d/papel-c2-cumbre.mp3"
+  },
+  "papel/c2-muelle": {
+   "hash": "e1ce33bec65786776188",
+   "seconds": 93.89,
+   "src": "/audio/escucha-3d/papel-c2-muelle.mp3"
+  },
   "reino/a0-aldren": {
    "hash": "89b571fd94d1349734e5",
    "seconds": 43.71,

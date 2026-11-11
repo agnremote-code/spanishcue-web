@@ -1,0 +1,534 @@
+{
+ "game": "papel",
+ "level": "B1",
+ "items": [
+  {
+   "id": "muelle",
+   "title": "Mañana voy a volar",
+   "place": "El muelle de papel · la piedra de Senba",
+   "context": "Senba lleva años esperando en la misma piedra a que alguien le diga si el deseo se cumplió. Esta tarde le cuenta al capitán Pliego que ha tomado una decisión.",
+   "speakers": [
+    {
+     "name": "Senba",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Capitán Pliego",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Capitán, he tomado una decisión. Mañana voy a volar."
+    },
+    {
+     "s": 1,
+     "text": "¡Volar! Pero si llevas años sin moverte de esa piedra."
+    },
+    {
+     "s": 0,
+     "text": "Por eso mismo. Esperaba que alguien viniera a decirme que el deseo se había cumplido. Y hoy he entendido que nadie va a venir."
+    },
+    {
+     "s": 1,
+     "text": "Te dará pena, me imagino."
+    },
+    {
+     "s": 0,
+     "text": "Un poco. Pero prefiero buscar la respuesta a seguir esperándola."
+    },
+    {
+     "s": 1,
+     "text": "Yo que tú lo pensaría mejor. Aquí estás segura."
+    },
+    {
+     "s": 0,
+     "text": "Tú también estás seguro en la arena, y no pareces muy contento."
+    },
+    {
+     "s": 1,
+     "text": "Eso ha sido un golpe bajo."
+    },
+    {
+     "s": 0,
+     "text": "Era una invitación. Si yo vuelo, tú podrías mojarte los pies."
+    },
+    {
+     "s": 1,
+     "text": "Déjame pensarlo… Bueno. Pero solo hasta la primera ola."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué va a hacer Senba mañana?",
+     "options": [
+      "Volar",
+      "Doblar otra grulla de papel",
+      "Escribir una carta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ha entendido hoy?",
+     "options": [
+      "Que el deseo se cumplió hace mucho tiempo",
+      "Que nadie va a venir a avisarle",
+      "Que el mar es peligroso"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le aconseja Pliego primero?",
+     "options": [
+      "Que se vaya cuanto antes de la orilla",
+      "Que vuele alto",
+      "Que lo piense mejor"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué acepta Pliego al final?",
+     "options": [
+      "Volar con ella sobre el horizonte",
+      "Entrar al mar hasta la primera ola",
+      "Quedarse en la arena"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué decisión tomaste cuando dejaste de esperar que otro la tomara por ti?",
+     "model": "Cambié de piso cuando vi que mi casero nunca iba a arreglar nada."
+    },
+    {
+     "q": "¿Qué consejo prudente te dieron y no seguiste?",
+     "model": "Me aconsejaron no dejar mi trabajo fijo, pero lo dejé y no me arrepiento."
+    },
+    {
+     "q": "¿A quién animarías hoy a dar un primer paso que le asusta?",
+     "model": "Animaría a mi hermana a presentarse a ese examen que lleva años aplazando."
+    }
+   ],
+   "gaps": "Pero prefiero [buscar] la respuesta a seguir [esperándola]. Yo que tú lo [pensaría] mejor. Aquí estás [segura].",
+   "glossary": [
+    {
+     "word": "se había cumplido",
+     "meaning": "se había hecho realidad"
+    },
+    {
+     "word": "golpe bajo",
+     "meaning": "comentario que duele porque toca un punto débil"
+    },
+    {
+     "word": "mojarte",
+     "meaning": "meterte en el agua"
+    },
+    {
+     "word": "ola",
+     "meaning": "movimiento del agua del mar"
+    }
+   ]
+  },
+  {
+   "id": "bosque",
+   "title": "El búho que no sabía caerse",
+   "place": "El bosque recortado · una rama baja",
+   "context": "Don Margen corrige a todo el mundo, pero hoy es él quien necesita un favor. Se lo pide a Brinca, la rana que se cae diez veces al día.",
+   "speakers": [
+    {
+     "name": "Don Margen",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Brinca",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Brinca, necesito pedirte algo y no sé cómo decirlo."
+    },
+    {
+     "s": 1,
+     "text": "Tú, sin palabras. Esto es nuevo."
+    },
+    {
+     "s": 0,
+     "text": "Quiero que me enseñes a saltar."
+    },
+    {
+     "s": 1,
+     "text": "¡Pero si tienes alas!"
+    },
+    {
+     "s": 0,
+     "text": "Las tengo, pero nunca las he usado. Siempre he tenido miedo de hacerlo mal delante de todos."
+    },
+    {
+     "s": 1,
+     "text": "Qué curioso. El que corrige a todo el mundo no se atreve a equivocarse."
+    },
+    {
+     "s": 0,
+     "text": "No te rías. Cuando era joven me caí de una rama y un pájaro se rio de mí. Desde entonces prefiero mirar."
+    },
+    {
+     "s": 1,
+     "text": "Pues mira esto: yo me caigo unas diez veces al día, y no pasa nada."
+    },
+    {
+     "s": 0,
+     "text": "Nada de nada. No puede ser."
+    },
+    {
+     "s": 1,
+     "text": "Me levanto, me aliso las patas y salto otra vez. Vamos, el primero lo damos juntos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le pide don Margen a Brinca?",
+     "options": [
+      "Que le corrija un texto difícil",
+      "Que le preste un lápiz",
+      "Que le enseñe a saltar"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué don Margen nunca ha usado las alas?",
+     "options": [
+      "Por miedo a hacerlo mal",
+      "Porque se le rompieron de joven",
+      "Porque no le gusta volar"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le pasó cuando era joven?",
+     "options": [
+      "Perdió las gafas en el estanque",
+      "Lo corrigió un maestro",
+      "Se rieron de él cuando se cayó"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasa cuando Brinca se cae?",
+     "options": [
+      "Llora un rato y después pide ayuda",
+      "Se levanta y salta de nuevo",
+      "Se esconde"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te gustaría aprender aunque al principio lo hagas fatal?",
+     "model": "Me gustaría aprender a patinar, aunque seguro que me caería mucho."
+    },
+    {
+     "q": "¿Qué burla de tu infancia te quitó las ganas de hacer algo?",
+     "model": "Se rieron de mi voz en el coro y dejé de cantar durante años."
+    },
+    {
+     "q": "¿Quién te enseñó algo con muchísima paciencia?",
+     "model": "Mi abuelo me enseñó a montar en bicicleta sin enfadarse nunca."
+    }
+   ],
+   "gaps": "Las tengo, pero nunca las he [usado]. Siempre he tenido [miedo] de hacerlo mal [delante] de todos. Qué curioso. El que corrige a todo el mundo no se [atreve] a equivocarse.",
+   "glossary": [
+    {
+     "word": "alas",
+     "meaning": "lo que usan los pájaros para volar"
+    },
+    {
+     "word": "se atreve",
+     "meaning": "tiene el valor de hacer algo"
+    },
+    {
+     "word": "rama",
+     "meaning": "parte de un árbol que sale del tronco"
+    },
+    {
+     "word": "aliso",
+     "meaning": "dejo sin arrugas"
+    }
+   ]
+  },
+  {
+   "id": "ciudad",
+   "title": "Una hora sin la guirnalda",
+   "place": "La ciudad desplegable · un banco al otro lado del puente",
+   "context": "Lina está cortada de la misma hoja que sus cuatro hermanas y siempre va de la mano con ellas. Hoy Dardo la encuentra sola por primera vez.",
+   "speakers": [
+    {
+     "name": "Dardo",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Lina",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Lina! Qué raro verte aquí sola, sin tus hermanas."
+    },
+    {
+     "s": 1,
+     "text": "Me he soltado. Solo una hora. Ellas siguen dormidas."
+    },
+    {
+     "s": 0,
+     "text": "Y dime, qué se siente."
+    },
+    {
+     "s": 1,
+     "text": "Es raro. Al principio no sabía qué hacer con las manos. Siempre habían estado ocupadas."
+    },
+    {
+     "s": 0,
+     "text": "Pero después se te pasó."
+    },
+    {
+     "s": 1,
+     "text": "Después crucé el puente yo sola y me senté en un banco. Nadie me miraba. Fue maravilloso."
+    },
+    {
+     "s": 0,
+     "text": "Entonces ya no vas a volver con ellas."
+    },
+    {
+     "s": 1,
+     "text": "Claro que sí. Las quiero. Pero ahora sé que puedo irme y volver, y eso lo cambia todo."
+    },
+    {
+     "s": 0,
+     "text": "Ojalá yo pudiera aterrizar una hora y después seguir volando."
+    },
+    {
+     "s": 1,
+     "text": "Podrías intentarlo algún día."
+    },
+    {
+     "s": 0,
+     "text": "Nunca lo he hecho. Quizá el problema no sea el suelo. Quizá sea yo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo se ha soltado Lina?",
+     "options": [
+      "Un día entero, hasta la noche",
+      "Una hora",
+      "Para siempre"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le resultó raro al principio?",
+     "options": [
+      "No saber qué hacer con las manos",
+      "No conocer las calles de la ciudad",
+      "Tener frío"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hizo después?",
+     "options": [
+      "Bailó en la plaza con desconocidos",
+      "Compró un vestido",
+      "Cruzó el puente y se sentó"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué ha descubierto Lina?",
+     "options": [
+      "Que puede irse y volver",
+      "Que ya no quiere a sus hermanas",
+      "Que prefiere vivir sola en otra ciudad"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuándo te alejaste de tu gente y volviste con otra mirada?",
+     "model": "Cuando estudié un año fuera, volví valorando mucho más las comidas en familia."
+    },
+    {
+     "q": "¿Qué haces con tu tiempo cuando nadie te necesita?",
+     "model": "Salgo a caminar sin rumbo y escucho pódcast."
+    },
+    {
+     "q": "¿Qué costumbre tuya te gustaría dejar durante una hora al día?",
+     "model": "Me gustaría dejar de mirar el teléfono durante la cena."
+    }
+   ],
+   "gaps": "Después [crucé] el puente yo sola y me senté en un [banco]. Nadie me [miraba]. Fue [maravilloso].",
+   "glossary": [
+    {
+     "word": "me he soltado",
+     "meaning": "he dejado de estar unida a algo"
+    },
+    {
+     "word": "ocupadas",
+     "meaning": "que no están libres"
+    },
+    {
+     "word": "aterrizar",
+     "meaning": "bajar al suelo después de volar"
+    },
+    {
+     "word": "ojalá",
+     "meaning": "expresa un deseo fuerte"
+    }
+   ]
+  },
+  {
+   "id": "cumbre",
+   "title": "Un trato entre dos cansadas",
+   "place": "La cumbre · el camino de noche",
+   "context": "Es de noche en la montaña. Mar no ve bien y le pide luz a Candela. Las dos descubren que tienen el mismo problema.",
+   "speakers": [
+    {
+     "name": "Mar",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "Candela",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Candela, alúmbrame un momento, por favor. No veo las montañas y tengo miedo de chocar."
+    },
+    {
+     "s": 1,
+     "text": "Claro. Aunque esta noche me queda poca llama."
+    },
+    {
+     "s": 0,
+     "text": "No tienes buena cara."
+    },
+    {
+     "s": 1,
+     "text": "Estoy agotada. Ayer alumbré tres fiestas seguidas porque no supe decir que no."
+    },
+    {
+     "s": 0,
+     "text": "A mí me pasa lo mismo. Llevo un pueblo entero y nunca he pedido un descanso."
+    },
+    {
+     "s": 1,
+     "text": "Somos un desastre las dos."
+    },
+    {
+     "s": 0,
+     "text": "Un poco. Te propongo un trato: tú me alumbras cuando vuelo de noche y yo te llevo en mi espalda cuando no puedas más."
+    },
+    {
+     "s": 1,
+     "text": "Pero en tu espalda está el pueblo."
+    },
+    {
+     "s": 0,
+     "text": "En el pueblo hay una plaza. Les va a encantar tener un farol."
+    },
+    {
+     "s": 1,
+     "text": "Trato hecho. Por primera vez en mucho tiempo, alguien me ofrece ayuda antes de pedirme luz."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué Mar pide luz?",
+     "options": [
+      "Tiene miedo de chocar",
+      "Quiere leer un mensaje de su pueblo",
+      "Busca a alguien"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué a Candela le queda poca llama?",
+     "options": [
+      "Llovió durante toda la tarde",
+      "Alumbró tres fiestas seguidas",
+      "Es muy vieja"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué trato hacen?",
+     "options": [
+      "Dejar el pueblo en la montaña",
+      "No trabajar más",
+      "Ayudarse la una a la otra"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sorprende a Candela?",
+     "options": [
+      "Que le ofrezcan ayuda",
+      "Que Mar vuele también de noche",
+      "Que haya una plaza en el pueblo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué trato harías con alguien para repartir mejor el cansancio?",
+     "model": "Le propondría a mi pareja cocinar por turnos, una semana cada uno."
+    },
+    {
+     "q": "¿Cuándo aceptaste un compromiso solo por no saber negarte?",
+     "model": "Acepté organizar la fiesta de la oficina y terminé agotada."
+    },
+    {
+     "q": "¿Quién te ofreció ayuda antes de que la pidieras?",
+     "model": "Una vecina me trajo comida cuando supo que estaba enferma."
+    }
+   ],
+   "gaps": "Estoy [agotada]. Ayer alumbré tres [fiestas] seguidas porque no supe decir que no. A mí me pasa lo [mismo]. Llevo un pueblo entero y nunca he pedido un [descanso].",
+   "glossary": [
+    {
+     "word": "alúmbrame",
+     "meaning": "dame luz"
+    },
+    {
+     "word": "llama",
+     "meaning": "parte visible del fuego"
+    },
+    {
+     "word": "trato",
+     "meaning": "acuerdo entre dos personas"
+    },
+    {
+     "word": "farol",
+     "meaning": "objeto que da luz en la calle"
+    }
+   ]
+  }
+ ]
+}

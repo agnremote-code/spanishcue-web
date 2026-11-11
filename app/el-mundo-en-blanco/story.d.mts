@@ -1,0 +1,16 @@
+export type Zone = { id: string; name: string; ink: string; hook: string };
+export const ZONES: Zone[];
+export const ZONE_IDS: string[];
+export function zoneById(id: string): Zone | null;
+export type Kind = 'grulla' | 'barco' | 'zorro' | 'bola' | 'rana' | 'buho' | 'munecas' | 'avion' | 'dragon' | 'farol' | 'ballena' | 'hoja';
+export type Member = { name: string; full: string; role: string; kind: Kind; gender: 'f' | 'm'; voice: string; country: string; ink: string };
+export const CAST: Record<string, Member>;
+export type Spot = { id: string; zone: string; cast: string[] };
+export const SPOTS: Spot[];
+export const SPOT_IDS: string[];
+export function spotById(id: string): Spot | null;
+export const OPTIONS: number;
+export const TALKS: number;
+export const LEVEL_IDS: string[];
+export const SCENE_WORDS: Record<string, [number, number]>;
+export const TALK_MIN_WORDS: Record<string, number>;

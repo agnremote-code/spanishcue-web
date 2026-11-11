@@ -1,0 +1,283 @@
+// El mundo en blanco · A1 · presente de verbos frecuentes, ser y estar, hay, gustar, querer, preferir, poder, «me gustaría» + infinitivo y frases cortas. Las palabras de cada encuentro llevan su traducción al inglés.
+const b = (es, en) => ({ es, en });
+
+const level = {
+  grulla: {
+    title: 'La grulla número mil',
+    line: 'Estás en la orilla de un mar de papel. Una grulla blanca mira el horizonte. En el ala tiene un número pequeño: 1000.',
+    dialogue: [
+      ['senba', 'Hola. Me llamo Senba. Soy la grulla número mil.'],
+      ['yo', 'Hola, Senba. Mil grullas son muchas.'],
+      ['senba', 'Sí. Una persona dobla mil grullas y pide un deseo. Yo soy la última.'],
+      ['yo', 'Y ahora esperas.'],
+      ['senba', 'Sí, espero todos los días. Pero esperar sola es difícil.'],
+    ],
+    q: '¿Qué deseo esperas desde hace mucho tiempo?',
+    options: [
+      { t: 'Un cambio en mi trabajo', echo: 'Un trabajo nuevo es una ventana nueva. Yo vivo en una ventana.' },
+      { t: 'Ver a una persona que está lejos', echo: 'Entonces tu deseo tiene nombre. Es un deseo bonito.' },
+      { t: 'Tener más tiempo para mí', echo: 'Tiempo… Yo tengo mucho. Te regalo un poco.' },
+    ],
+    talk: [
+      '¿Cómo pasas el tiempo cuando esperas una respuesta?',
+      '¿Con quién hablas de tus deseos?',
+      '¿Qué deseo pequeño puedes cumplir hoy?',
+    ],
+    words: [b('la grulla', 'the crane'), b('doblar', 'to fold'), b('el deseo', 'the wish'), b('la orilla', 'the shore'), b('esperar', 'to wait'), b('el ala', 'the wing')],
+  },
+  barco: {
+    title: 'Un barco en la arena',
+    line: 'Cerca del agua hay un barco de papel de periódico. Está seco y limpio. Cuando llega una ola pequeña, el barco va hacia atrás.',
+    dialogue: [
+      ['pliego', 'Buenos días. Soy el capitán Pliego. Cuidado con el agua, por favor.'],
+      ['yo', 'Pero tú eres un barco.'],
+      ['pliego', 'Soy un barco de papel. En el mar navego diez minutos y después me rompo.'],
+      ['yo', 'Y en la arena no navegas nunca.'],
+      ['pliego', 'Es verdad. Aquí estoy seguro, pero no soy feliz. Allí soy feliz, pero tengo miedo.'],
+    ],
+    q: '¿Qué prefieres: estar a salvo o vivir una aventura?',
+    options: [
+      { t: 'Prefiero estar a salvo', echo: 'Como yo. La arena es aburrida, pero no moja.' },
+      { t: 'Prefiero la aventura', echo: '¡Qué valiente! Yo miro el mar y me tiemblan los pliegues.' },
+      { t: 'Depende del día', echo: 'Entonces hoy decides tú. Yo siempre digo «mañana».' },
+    ],
+    talk: [
+      '¿Qué plan tuyo espera en la arena, sin empezar?',
+      '¿Qué te ayuda cuando el miedo es grande?',
+      '¿Quién es la persona más valiente de tu vida?',
+    ],
+    words: [b('navegar', 'to sail'), b('la ola', 'the wave'), b('seco', 'dry'), b('romperse', 'to break'), b('a salvo', 'safe'), b('valiente', 'brave')],
+  },
+  zorro: {
+    title: 'El buzón de las cartas sin sello',
+    line: 'Al lado de un buzón rojo hay un zorro con gorra de cartero. Tiene muchos sobres en el suelo. Ningún sobre tiene sello.',
+    dialogue: [
+      ['remite', 'Buenas. Me llamo Remite. Soy cartero.'],
+      ['yo', 'Hola. Tus cartas no tienen sello.'],
+      ['remite', 'Claro. Son las cartas que la gente escribe y no manda. Yo las guardo.'],
+      ['yo', 'Son muchas.'],
+      ['remite', 'Muchísimas. Aquí hay una tuya. Solo tiene un nombre y dos palabras.'],
+    ],
+    q: '¿Qué dos palabras hay en tu carta?',
+    options: [
+      { t: '«Muchas gracias»', echo: 'Es la carta más bonita de mi bolsa. Y casi nadie la manda.' },
+      { t: '«Lo siento»', echo: 'Son dos palabras pequeñas, pero pesan como un paquete.' },
+      { t: '«Te quiero»', echo: 'Esa carta no puede esperar. Yo la llevo hoy mismo.' },
+    ],
+    talk: [
+      '¿A quién quieres escribir una carta hoy?',
+      '¿Qué palabras son difíciles de decir para ti?',
+      '¿Qué mensaje bonito recibes esta semana?',
+    ],
+    words: [b('el cartero', 'the postman'), b('el sobre', 'the envelope'), b('el sello', 'the stamp'), b('mandar', 'to send'), b('guardar', 'to keep'), b('la bolsa', 'the bag')],
+  },
+  bola: {
+    title: 'La idea en el suelo',
+    line: 'Cerca de una papelera hay una bola de papel con dos ojos. La bola va hacia ti muy despacio y te mira.',
+    dialogue: [
+      ['borra', 'Hola. Soy Borra. Soy una idea. Bueno, soy media idea.'],
+      ['yo', 'Y ahora eres una bola.'],
+      ['borra', 'Sí. Una persona escribe tres líneas, dice «esto está mal» y me tira.'],
+      ['yo', 'A veces una idea necesita tiempo.'],
+      ['borra', 'Eso digo yo. Tres líneas es muy poco para saber.'],
+    ],
+    q: '¿Cuál es tu primera reacción cuando algo te sale mal?',
+    options: [
+      { t: 'Lo intento otra vez', echo: '¡Bien! Tú no tiras las hojas a la primera.' },
+      { t: 'Me enfado un poco', echo: 'Es normal. Yo también me enfado, y mira cómo estoy: llena de arrugas.' },
+      { t: 'Lo dejo para otro día', echo: 'Otro día… Yo espero ese día en el suelo.' },
+    ],
+    talk: [
+      '¿Qué cosa difícil quieres aprender?',
+      '¿Qué haces mal y no te importa?',
+      '¿Qué dices a un amigo cuando hace un error grande?',
+    ],
+    words: [b('la papelera', 'the bin'), b('tirar', 'to throw away'), b('la arruga', 'the wrinkle'), b('intentar', 'to try'), b('enfadarse', 'to get angry'), b('la línea', 'the line')],
+  },
+  rana: {
+    title: 'Solo hacia delante',
+    line: 'En el bosque hay un estanque. Una rana de papel verde salta, mira atrás y pone cara triste.',
+    dialogue: [
+      ['brinca', '¡Hola! Soy Brinca. No puedo ir a saludarte: solo salto hacia delante.'],
+      ['yo', 'No puedes volver atrás.'],
+      ['brinca', 'No. Mi papel está doblado así. Cada salto es un lugar nuevo.'],
+      ['yo', 'Eso es divertido.'],
+      ['brinca', 'A veces. Pero mi hermana está tres saltos atrás y yo no puedo volver.'],
+    ],
+    q: '¿A qué lugar de tu vida te gustaría volver un día?',
+    options: [
+      { t: 'A la casa de mi infancia', echo: 'Qué bonito. Seguro que esa casa también te recuerda.' },
+      { t: 'A una ciudad donde soy feliz', echo: 'Entonces tienes dos casas. Yo solo tengo saltos.' },
+      { t: 'A ninguno: prefiero lugares nuevos', echo: '¡Eres como yo! Siempre hacia delante.' },
+    ],
+    talk: [
+      '¿Qué cosa cambia en tu vida este año?',
+      '¿A qué persona quieres ver otra vez?',
+      '¿Cómo es un día perfecto en ese lugar?',
+    ],
+    words: [b('la rana', 'the frog'), b('saltar', 'to jump'), b('el estanque', 'the pond'), b('volver', 'to go back'), b('atrás', 'back'), b('hacia delante', 'forwards')],
+  },
+  buho: {
+    title: 'El búho que corrige',
+    line: 'En una rama hay un búho con gafas y un lápiz rojo. Te mira muy serio y escribe algo en el aire.',
+    dialogue: [
+      ['margen', 'Buenas tardes. Soy don Margen. Caminas un poco mal, la verdad.'],
+      ['yo', 'Gracias… creo.'],
+      ['margen', 'Yo corrijo todo. Veo un error y lo digo. Es mi trabajo.'],
+      ['yo', 'Y las cosas buenas no las dices.'],
+      ['margen', 'Mmm. No. Nunca. Por eso no tengo muchos amigos.'],
+    ],
+    q: '¿Qué prefieres escuchar primero: lo bueno o lo malo?',
+    options: [
+      { t: 'Primero lo bueno', echo: 'Entonces empiezo así: tienes un lápiz muy bonito. ¡Uf, qué difícil!' },
+      { t: 'Primero lo malo', echo: '¡Por fin una persona como yo! Pero lo bueno también existe, dicen.' },
+      { t: 'Solo lo bueno, por favor', echo: 'Ja. Eso no es posible conmigo. Pero lo intento.' },
+    ],
+    talk: [
+      '¿Qué dices cuando un amigo hace algo mal?',
+      '¿Quién corrige tus errores con cariño?',
+      '¿Qué cosa buena puedes decir hoy a una persona?',
+    ],
+    words: [b('el búho', 'the owl'), b('corregir', 'to correct'), b('las gafas', 'the glasses'), b('serio', 'serious'), b('la rama', 'the branch'), b('con cariño', 'kindly')],
+  },
+  munecas: {
+    title: 'Cinco de la mano',
+    line: 'En una plaza de la ciudad hay cinco muñecas de papel. Son hermanas y son iguales. La muñeca del centro mueve los pies.',
+    dialogue: [
+      ['lina', 'Chist. Soy Lina, la tercera. Mis hermanas duermen.'],
+      ['yo', 'Son todas iguales.'],
+      ['lina', 'Sí: el mismo vestido y la misma sonrisa. Somos de la misma hoja.'],
+      ['yo', 'Pero tú no duermes.'],
+      ['lina', 'No. Yo quiero caminar sola un rato. Pero no puedo soltar las manos.'],
+    ],
+    q: '¿Qué te gusta hacer a solas, sin tu grupo?',
+    options: [
+      { t: 'Caminar por la ciudad', echo: 'Eso quiero yo. Una calle, mis dos pies y nadie más.' },
+      { t: 'Leer o escuchar música', echo: 'Un rato de silencio. Con cuatro hermanas, es un sueño.' },
+      { t: 'Casi nada: prefiero estar con gente', echo: 'Entonces eres como mis hermanas. Ellas son felices así.' },
+    ],
+    talk: [
+      '¿Qué gusto tuyo no comparte nadie en tu grupo?',
+      '¿Qué cosas haces siempre con tu familia?',
+      '¿Cuándo necesitas estar a solas?',
+    ],
+    words: [b('la muñeca', 'the doll'), b('igual', 'the same'), b('soltar', 'to let go'), b('a solas', 'on your own'), b('la sonrisa', 'the smile'), b('el vestido', 'the dress')],
+  },
+  avion: {
+    title: 'El avión del recreo',
+    line: 'Un avión de papel vuela cerca de tu cabeza. No sube y no baja. En el ala hay tres palabras con letra de niño: «para el recreo».',
+    dialogue: [
+      ['dardo', '¡Hola! Soy Dardo. Perdona, no puedo parar.'],
+      ['yo', 'Hola, Dardo. Vuelas muy bien.'],
+      ['dardo', 'Gracias. Soy de un niño de ocho años. Bueno, hoy tiene treinta y ocho.'],
+      ['yo', 'Entonces vuelas desde hace treinta años.'],
+      ['dardo', 'Sí. Él quiere ser piloto. Yo no sé si hoy es piloto.'],
+    ],
+    q: 'Con ocho años, ¿qué quieres ser de mayor?',
+    options: [
+      { t: 'Algo con aventura: piloto, artista…', echo: '¡Como mi niño! Las aventuras pesan poco, por eso vuelan.' },
+      { t: 'Lo mismo que hago hoy', echo: '¡Qué sorpresa! Entonces eres un avión que llega a su aeropuerto.' },
+      { t: 'No lo recuerdo', echo: 'No pasa nada. Seguro que está escrito en un papel, en una caja.' },
+    ],
+    talk: [
+      '¿Qué juegos te gustan de niña o de niño?',
+      '¿Qué tienes hoy de esa persona de ocho años?',
+      '¿Qué te gustaría decir a tu profe del colegio?',
+    ],
+    words: [b('volar', 'to fly'), b('el recreo', 'playtime'), b('el piloto', 'the pilot'), b('de mayor', 'when you grow up'), b('parar', 'to stop'), b('la caja', 'the box')],
+  },
+  dragon: {
+    title: 'Las noticias de ayer',
+    line: 'En una esquina hay un dragón de papel de periódico. Tiene palabras grandes por todo el cuerpo. Todas son de ayer.',
+    dialogue: [
+      ['titular', '¡Última hora! Soy Titular. Tengo todas las noticias.'],
+      ['yo', 'Pero son noticias de ayer.'],
+      ['titular', 'Sí… Las noticias son importantes un día. Después nadie las lee.'],
+      ['yo', 'Y casi todas son malas.'],
+      ['titular', 'Es verdad. Las buenas son pequeñas y están en la última página.'],
+    ],
+    q: '¿Qué noticia buena de tu vida merece la primera página?',
+    options: [
+      { t: 'Una noticia de mi familia', echo: '¡Eso es un titular! Lo escribo aquí, en mi cola.' },
+      { t: 'Una noticia de mi trabajo o mis estudios', echo: 'Muy bien. Hoy la primera página es para ti.' },
+      { t: 'Una cosa pequeña de hoy', echo: 'Las noticias pequeñas son mis favoritas. Nadie las imprime.' },
+    ],
+    talk: [
+      '¿En qué momento del día lees o escuchas noticias?',
+      '¿Qué noticias no quieres leer nunca?',
+      '¿Quién se alegra más con tus noticias buenas?',
+    ],
+    words: [b('el dragón', 'the dragon'), b('la noticia', 'the news'), b('el periódico', 'the newspaper'), b('ayer', 'yesterday'), b('la página', 'the page'), b('la esquina', 'the corner')],
+  },
+  farol: {
+    title: 'Fuego en un farol de papel',
+    line: 'En el camino de la montaña hay un farol rojo. Dentro tiene una llama pequeña. El farol es de papel y el papel hace ruido.',
+    dialogue: [
+      ['candela', 'Cuidado. Soy Candela. Tengo fuego dentro y soy de papel.'],
+      ['yo', 'Eso es peligroso.'],
+      ['candela', 'Mucho. Pero sin fuego no doy luz. Soy una bolsa roja y nada más.'],
+      ['yo', 'Puedes tener un fuego pequeño.'],
+      ['candela', 'Con poco fuego nadie me ve. Con mucho fuego me quemo. Es difícil.'],
+    ],
+    q: '¿Qué actividad te gusta tanto que no puedes parar?',
+    options: [
+      { t: 'Mi trabajo o mis estudios', echo: 'Entonces tienes un fuego grande. Cuidado con el papel.' },
+      { t: 'Un deporte, la música o un juego', echo: '¡Qué bien! Ese fuego da luz y no quema.' },
+      { t: 'Hablar con mi gente', echo: 'Ese es el mejor fuego: da calor a muchos.' },
+    ],
+    talk: [
+      '¿Cuántas horas descansas en un día normal?',
+      '¿Qué haces cuando estás sin energía?',
+      '¿Qué persona te da energía cuando hablas con ella?',
+    ],
+    words: [b('el farol', 'the lantern'), b('la llama', 'the flame'), b('quemarse', 'to burn'), b('la luz', 'the light'), b('el calor', 'the warmth'), b('descansar', 'to rest')],
+  },
+  ballena: {
+    title: 'Un pueblo en la espalda',
+    line: 'Una ballena de papel azul nada en el aire, muy despacio. En la espalda lleva casas, una torre y dos árboles.',
+    dialogue: [
+      ['mar', 'Buenas tardes. Soy Mar. Perdona, no puedo bajar.'],
+      ['yo', 'Llevas un pueblo en la espalda.'],
+      ['mar', 'Sí. Primero llega una casa, después una panadería, después la torre. Yo nunca digo que no.'],
+      ['yo', 'Y pesa mucho.'],
+      ['mar', 'Sí, pesa. Pero ellos están contentos. Por eso yo sonrío y no digo nada.'],
+    ],
+    q: '¿Qué cosa haces por otras personas todas las semanas?',
+    options: [
+      { t: 'Cuido de alguien', echo: 'Entonces tú también llevas una casa en la espalda. Con cariño, se nota.' },
+      { t: 'Escucho sus problemas', echo: 'Escuchar también pesa. Y casi nadie lo ve.' },
+      { t: 'Cocino, llevo, compro, organizo', echo: '¡Eres un pueblo entero! Hoy descansa un poco.' },
+    ],
+    talk: [
+      '¿Quién hace cosas por ti todas las semanas?',
+      '¿Cuándo dices «no puedo»?',
+      '¿Qué necesitas al final de una semana pesada?',
+    ],
+    words: [b('la ballena', 'the whale'), b('llevar', 'to carry'), b('pesar', 'to weigh'), b('la torre', 'the tower'), b('sonreír', 'to smile'), b('la espalda', 'the back')],
+  },
+  hoja: {
+    title: 'La última página',
+    line: 'En lo alto de la montaña hay una mesa muy grande. Al lado hay una hoja en blanco. No tiene ni una letra.',
+    dialogue: [
+      ['hoja', 'Hola. Soy la última página de este mundo. Las otras ya tienen palabras.'],
+      ['yo', 'Y tú estás en blanco.'],
+      ['hoja', 'Sí. La persona que escribe aquí ya no viene. Por eso no hay tinta.'],
+      ['yo', 'Yo tengo un lápiz.'],
+      ['hoja', 'Lo sé. Es su lápiz. Ahora es tuyo, y yo también.'],
+    ],
+    q: '¿Qué te gustaría escribir en tu página de este año?',
+    options: [
+      { t: 'Un viaje', echo: 'Entonces empiezo con un mapa. Me gusta.' },
+      { t: 'Un trabajo o un estudio nuevo', echo: 'Una línea difícil, pero muy tuya.' },
+      { t: 'Más tiempo con mi gente', echo: 'Esa página se escribe con muchos nombres.' },
+    ],
+    talk: [
+      '¿Qué quieres hacer este mes por primera vez?',
+      '¿Qué línea de tu página no quieres borrar nunca?',
+      '¿Qué persona está siempre en tu página?',
+    ],
+    words: [b('la hoja', 'the sheet'), b('en blanco', 'blank'), b('la tinta', 'the ink'), b('el lápiz', 'the pencil'), b('la letra', 'the letter'), b('la mesa', 'the desk')],
+  },
+};
+
+export default level;
