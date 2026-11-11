@@ -14,10 +14,8 @@ import test from "node:test";
 
 const server = resolve("dist/server");
 const client = resolve("dist/client");
-// Uploaded modules: about 23.5 MiB after the SSR diet of 2026-11-11; the
-// build itself enforces the same budget (scripts/check-worker-bundle.mjs).
-import { WORKER_BUNDLE_BUDGET_MIB } from "../scripts/check-worker-bundle.mjs";
-const BUNDLE_BUDGET_BYTES = WORKER_BUNDLE_BUDGET_MIB * 1024 * 1024;
+// Uploaded modules after PERF-001: about 32 MiB (isolate ~95 MiB at startup).
+const BUNDLE_BUDGET_BYTES = 36 * 1024 * 1024;
 
 async function moduleBytes(directory) {
   let total = 0;
