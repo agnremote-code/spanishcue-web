@@ -14,7 +14,7 @@ test('library renders SPANISHCUE and excludes paid lesson bodies from public HTM
  const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();
  assert.match(html,/SPANISHCUE/);assert.match(html,/Deja de crear cada clase/);assert.match(html,/>Entrar</);assert.match(html,/Probar gratis/);
  assert.match(html,/rel="canonical" href="https:\/\/spanishcue\.com\/"/i);
- assert.match(html,/Clase 01/);assert.match(html,/href="\/demo\/hospital-san-casi-vivo"/);assert.match(html,/240 clases/);assert.match(html,/data-curriculum-order="100"/);
+ assert.match(html,/Clase 01/);assert.match(html,/href="\/demo\/hospital-san-casi-vivo"/);assert.match(html,/248 clases/);assert.match(html,/data-curriculum-order="100"/);
  assert.doesNotMatch(html,/SORPRÉNDEME|Sorpréndeme/);
  assert.doesNotMatch(html,/Promoción de lanzamiento|(?:US\$|\$)\s*(?:7\.49|14\.99)|library-access-dialog/);
  assert.doesNotMatch(html,/<meta[^>]*name="codex-preview"/);
@@ -62,7 +62,7 @@ test('lesson cards expose real links and explain view results versus the complet
  const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();
  assert.match(html,/class="card-hitarea" href="\/acceso\?returnTo=/);assert.match(html,/class="card-hitarea" href="\/la-fabrica-de-los-nombres"/);
  // The home opens on the Gramática route, so the count is the grammar catalog.
- assert.match(html,/240(?:<!-- -->|\s)+resultados/);assert.match(html,/325(?:<!-- -->|\s)+clases totales/);
+ assert.match(html,/248(?:<!-- -->|\s)+resultados/);assert.match(html,/333(?:<!-- -->|\s)+clases totales/);
  assert.match(html,/No está afiliado ni respaldado por el Instituto Cervantes/);
 });
 
