@@ -105,7 +105,7 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'choice', title: 'Comprueba · Check', items: [
             { prompt: 'Suena el timbre. Lucía dice: «___ a la puerta».', options: ['Ellos llaman', 'Llaman', 'Se llama'], answer: 1, why: 'No sabemos quién es: 3.ª plural sin sujeto.', en: 'The doorbell rings. Lucía says: “There’s someone at the door”.' },
-            { prompt: 'Ayer ___ del consulado para darme una cita.', options: ['me llamaron', 'se me llamó ellos', 'uno me llamó'], answer: 0, why: 'Alguien del consulado; no importa quién.', en: 'Yesterday the consulate called me to give me an appointment.' },
+            { prompt: 'Ayer ___ del consulado para darme una cita.', options: ['me llamaron', 'se me llamó', 'uno me llamó'], answer: 0, why: 'Alguien del consulado; no importa quién.', en: 'Yesterday the consulate called me to give me an appointment.' },
           ] },
           { kind: 'teacher', text: 'Cierre de Entender: tu alumno dice una misma idea («aprender un idioma es difícil al principio») de las cuatro formas y explica cuál usaría con un amigo y cuál en un texto.' },
         ] },
@@ -175,7 +175,7 @@ export const lesson: LiveLesson = {
           { kind: 'choice', items: [
             { context: 'No sabes quién lo hizo.', prompt: 'Anoche ___ el coche a mi vecina.', options: ['le rayaron', 'se le rayaron', 'uno le rayó'], answer: 0, why: 'Agente desconocido: 3.ª plural.', en: 'Last night someone scratched my neighbour’s car.' },
             { context: 'Verbo pronominal, experiencia general.', prompt: 'Después de un año, ___ de casi todo.', options: ['se se entera', 'uno se entera', 'se enteran'], answer: 1, why: 'Enterarse ya lleva «se»: uno.', en: 'After a year, you find out about almost everything.' },
-            { context: 'Guía turística, registro neutral.', prompt: 'En esta región ___ muy bien.', options: ['comes tú', 'se come', 'comen ellos'], answer: 1, why: 'Texto neutral: se + 3.ª singular.', en: 'The food is very good in this region.' },
+            { context: 'Guía turística, registro neutral.', prompt: 'En esta región ___ muy bien.', options: ['comes tú', 'se come', 'comen'], answer: 1, why: 'Texto neutral: se + 3.ª singular.', en: 'The food is very good in this region.' },
             { context: 'Rumor.', prompt: '___ van a cerrar la fábrica.', options: ['Dicen que', 'Ellos dicen', 'Se dicen que'], answer: 0, why: 'Dicen que: fuente indeterminada.', en: 'They say they are going to close the factory.' },
             { context: 'Conversación entre amigos.', prompt: 'Es increíble: ___ una pregunta sencilla y nadie ___.', options: ['haces / te contesta', 'se hacen / contestan', 'hacen / se contesta'], answer: 0, why: 'Tú genérico: cercano y coloquial.', en: 'It’s incredible: you ask a simple question and nobody answers you.' },
             { context: 'Una mujer habla de su experiencia.', prompt: 'A veces ___ cansada de explicar siempre lo mismo.', options: ['una está', 'se está una', 'están'], answer: 0, why: 'Una + adjetivo en femenino: experiencia propia generalizada.', en: 'Sometimes you (a woman) are tired of always explaining the same thing.' },
