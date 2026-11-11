@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-06 by the Friday 3D + assessment routine (scheduled cloud run; Alejandro convened twice as a subagent of the facilitator, for the code review and the W45 assessment, see "Current work")._
+_Last updated: 2026-11-11 by the Wednesday 3D routine (scheduled cloud run; Alejandro convened once as a subagent of the facilitator, for the code review, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -79,6 +79,42 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-11 (Wednesday 3D routine): gated repair of the Madrid infectada unmount GPU leak** (branch `claude/board-wed-3d-20261111`, PR #406, base main `301306c`). Subscription usage: **UNKNOWN**.
+  - **Monday's unit is still open and blocked.**
+    - #282 Ascensor: R4 is unanswered (no comment since 10-26, no push since 11-02), so it was **not touched**.
+    - The W46 Monday item (STT check v3) left **no branch, PR or STATUS entry** on GitHub. Either the 11-09 run did not happen or it left nothing (UNKNOWN which).
+    - There is therefore no VALID result to release Ascensor on, and the BOARD-DECISION-003 §3.1 amendment for a provable-gate concept does not exist.
+    - The run took the W46 plan item 3 fallback: the next GPU-leak repair, one world per PR, madrid-infectada. It is reported as a **repair**.
+  - **Board:** convened proportionately.
+    - The facilitator built the repair.
+    - A fresh agent acting as Alejandro did the code review: **APPROVE** on `2df3b8b9`, 0 blockers, 7 notes.
+    - Applied: NB2 (the canvas assertion could not fail; it now checks `parentNode`, mutation-verified) and NB5 (trip-check slack 5% → 10%). NB1, NB4 and NB6 were applied as audit wording. NB3 and NB7 need no change.
+    - Sofia and Martin were not convened: no content changed.
+    - Verbatim: [transcripts/2026-11-11-wednesday-3d-madrid-repair.md](transcripts/2026-11-11-wednesday-3d-madrid-repair.md).
+  - **Evidence:** LQG file [madrid-infectada-repair-gpu-20261111.md](../audits/madrid-infectada-repair-gpu-20261111.md). New check `node scripts/qa-feria-browser.mjs --madrid-gpu`: two Sol → Metro → Sol rounds, then an unmount.
+    - On main: the unmount leaves 18 textures and 3 buffers at 1280 px (5 and 3 at 390 px), and the context is not lost. The 3 buffers are the city's three tree `InstancedMesh`es. 4/6.
+    - Fixed: 5 textures and 0 buffers at both widths, the context is lost, and the world remounts non-blank. 6/6, reproduced by the reviewer.
+    - The Metro trip does **not** leak on main. The trip check is a guard, mutation-tested: a station that is only detached adds about 420 buffers and 15 textures per round, and the check catches it.
+    - Fix: a local `free()` (the Más allá pattern); the composer passes, the shadow map and the particle stock are disposed; `forceContextLoss`. The shared `disposeGroup` is unchanged.
+    - Regression test `tests/madrid-infectada-gpu.test.mjs` fails on main («freed 0»). The reviewer's mutations: 5 of 7 are caught. The particle stock and the no-op `leaveMetro` switch are not; the canvas removal is caught after NB2.
+  - **Checks (local):**
+    - eslint on the changed files: clean.
+    - `tsc`: only the 3 errors already on main.
+    - `git diff --check`: clean.
+    - `npm test`: see the PR (result recorded before ready).
+  - **Overlap:** `scripts/test-worker.mjs` is also edited by #404 (non-board, line 26) and #282 (board, held). This PR adds one file to line 21, and git merges them cleanly.
+  - **Release:** see PR #406 and the records PR. "Deployed" is claimed only with production evidence.
+  - **Next action:**
+    1. Thu 11-12: W46 item 4, the UID re-keying decision, as the first line of the brief.
+    2. Fri 11-13: W46 items 6–8 and the W46 assessment. Record this week's miss: item 1, STT v3, left no trace.
+    3. Follow-ups from this repair:
+       - the replayed finale boat is only detached (review NB4; free it as `leaveMetro` frees the station);
+       - Madrid has no `webglcontextlost` handler;
+       - the particle-stock dispose is untested;
+       - kit `disposeGroup` InstancedMesh (11-06 NB4) is still open.
+    4. Next leak repair: one of the non-board worlds (vuelo-cancelado, el-consorcio, el-tren-de-las-2340, la-boda) or mundo-3d, one world per PR.
+    5. If R4 is answered, Ascensor #282 comes first in any 3D slot.
+  - **W46 plan item 1 (STT v3, Mon): missed, no trace on GitHub, reason UNKNOWN. Item 3 (Wed 3D): done as the leak-repair fallback.**
 - **2026-11-06 (Friday 3D + assessment routine): gated repair of the Más allá GPU leak (place swaps + unmount) + W45 assessment** (branch `claude/friday-assessment-20261106`, base main `ca5068a7`). Subscription usage: **UNKNOWN**.
   - **Unit choice:** R4 is unanswered (#282 has had no comment since 10-26 and no push since 11-02), so #282 was not touched, and the W45 fallback was taken: the next leak repair, Más allá, reported as a **repair**.
   - **Board:** convened proportionately.
