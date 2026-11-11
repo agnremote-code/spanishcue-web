@@ -30,7 +30,7 @@ test('the long guide «materiales para enseñar español» is a full indexable a
  dom.window.close();
 });
 test('unknown long guide is a 404',async()=>{assert.equal((await fetch(origin+'/material-ele/guia/no-existe')).status,404);});
-for(const path of ['/material-ele/guia/preparar-una-clase-de-espanol-rapido','/material-ele/guia/fichas-ele-para-imprimir-y-proyectar','/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/guia/como-dar-clases-de-espanol-online','/material-ele/guia/recursos-ele-gratis','/material-ele/guia/como-ensenar-el-subjuntivo','/material-ele/guia/como-ensenar-ser-y-estar','/material-ele/guia/como-ensenar-indefinido-e-imperfecto'])test(`long guide renders as an indexable article: ${path}`,async()=>{
+for(const path of ['/material-ele/guia/preparar-una-clase-de-espanol-rapido','/material-ele/guia/fichas-ele-para-imprimir-y-proyectar','/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/guia/como-dar-clases-de-espanol-online','/material-ele/guia/recursos-ele-gratis','/material-ele/guia/como-ensenar-el-subjuntivo','/material-ele/guia/como-ensenar-ser-y-estar','/material-ele/guia/como-ensenar-indefinido-e-imperfecto','/material-ele/guia/como-ensenar-por-y-para'])test(`long guide renders as an indexable article: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  const dom=new JSDOM(await response.text());const d=dom.window.document;
  assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+path);
