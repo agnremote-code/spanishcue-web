@@ -103,7 +103,11 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - `git diff --check`: clean.
     - `npm test`: see the PR (result recorded before ready).
   - **Overlap:** `scripts/test-worker.mjs` is also edited by #404 (non-board, line 26) and #282 (board, held). This PR adds one file to line 21, and git merges them cleanly.
-  - **Release:** see PR #406 and the records PR. "Deployed" is claimed only with production evidence.
+  - **Release (VERIFIED):** #406 merged as `c58b0f11`.
+    - Runs: CI + Auto Merge [42948462378](https://github.com/agnremote-code/spanishcue-web/actions/runs/42948462378), staging [42951488259](https://github.com/agnremote-code/spanishcue-web/actions/runs/42951488259) and production [42951903547](https://github.com/agnremote-code/spanishcue-web/actions/runs/42951903547), all successful.
+    - The production smoke on https://spanishcue.com printed `"passed": true` (job 130297918067, 03:22Z), and the rollback was skipped. main = production = `c58b0f11`.
+    - The repair has no anonymous surface, and the sandbox cannot reach spanishcue.com (proxy 403), so `/madrid-infectada` was not smoked individually. The evidence for the fix is the SwiftShader count and the regression test.
+    - PUBLISHED.md entry added (records PR from `claude/board-wed-3d-records-20261111`).
   - **Next action:**
     1. Thu 11-12: W46 item 4, the UID re-keying decision, as the first line of the brief.
     2. Fri 11-13: W46 items 6–8 and the W46 assessment. Record this week's miss: item 1, STT v3, left no trace.

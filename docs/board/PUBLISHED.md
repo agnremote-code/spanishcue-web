@@ -33,6 +33,19 @@ Entry format:
 
 ## Published
 
+## 2026-11-11 — «Madrid infectada»: unmount frees the GPU (repair)
+- URL(s): https://spanishcue.com/madrid-infectada (PRO; anonymous users → /acceso).
+- Level(s) / objectives: unchanged. No lesson content changed.
+- PR / merged SHA / production deploy run: PR #406 → `c58b0f11092b3a85754abe7575ba73c034dadfff`; CI + Auto Merge 42948462378 (on PR head `bddf8e9f`), Deploy Staging 42951488259 and Deploy Production 42951903547, all successful.
+- Production smoke evidence: the production workflow's smoke step against https://spanishcue.com (job 130297918067, 03:22Z) succeeded and printed `"passed": true`, and the rollback was skipped. This repair has no anonymous surface: the smoke shows that the release is healthy, not the GPU behaviour itself. The evidence for the fix is the SwiftShader count (`--madrid-gpu`, 6/6; main 4/6) and the regression test (LQG file).
+- Concept file / LQG review file: `docs/audits/madrid-infectada-repair-gpu-20261111.md`.
+- Built by / reviewed by: facilitator / Alejandro (a fresh agent; APPROVE, 0 blockers; NB2 and NB5 applied).
+- Known limitations:
+  - a replayed finale boat is only detached until unmount;
+  - there is no `webglcontextlost` handler;
+  - the particle-stock dispose is untested;
+  - the counts come from SwiftShader, not a real device.
+
 ## 2026-11-06 — «Más allá: cielo e infierno»: place swaps and unmount free the GPU (repair)
 - URL(s): https://spanishcue.com/mas-alla (PRO; anonymous users → /acceso).
 - Level(s) / objectives: unchanged. No lesson content changed.
