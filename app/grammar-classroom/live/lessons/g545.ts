@@ -305,6 +305,12 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Tu alumno busca en un titular de prensa real dos de estos verbos y explica qué matiz aportan.' },
         ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 177 · Absolutas de participio y reducción de subordinadas', text: 'Ya matizas una valoración con «resultar», «quedar», «seguir», «mostrarse» o «quedarse». La clase 177 retoma la ruta del curso: «Absolutas de participio y reducción de subordinadas».', en: 'You can now nuance an assessment with “resultar”, “quedar”, “seguir”, “mostrarse” or “quedarse”. Class 177 returns to the main route of the course: “Absolutas de participio y reducción de subordinadas”.', href: '/gramatica/absolutas-de-participio-y-reduccion-de', label: 'Ir a la clase 177' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
+        ] },
       ],
     },
   ],

@@ -321,6 +321,12 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Pregunta final: «¿Qué había y qué no había “en tus tiempos”, cuando eras niño?».' },
         ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 124 · Elipsis y reformulación: evitar repeticiones', text: 'Ya hablas de cantidades con precisión: «mucha gente», «unos pocos limones», «dos botellas de agua». La clase 124 retoma la ruta del curso: «Elipsis y reformulación: evitar repeticiones».', en: 'You can now talk about quantities precisely: “mucha gente”, “unos pocos limones”, “dos botellas de agua”. Class 124 returns to the main route of the course: “Elipsis y reformulación: evitar repeticiones”.', href: '/decir-mas-sin-repetir', label: 'Ir a la clase 124' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
+        ] },
       ],
     },
   ],

@@ -1099,6 +1099,54 @@
       "voice": "es-CO-SalomeNeural",
       "rate": "-6%",
       "text": "Hola, Bruno, soy Rosa. Mañana abres tú solo, así que te dejo unas notas. Llega un poquito antes, a las siete menos cuarto. Las llaves están en el cajón de la mesa de la entrada. Primero enciende el horno y prepara el pan para la ventanilla. Doña Pilar viene siempre a las ocho: pide su cafecito con leche y un pedacito de pan para su perra. Si hay mucha gente, di «un momentito, por favor» con una sonrisa. ¡Ah! El pastel de chocolate fue un exitazo: haz dos, y uno grandote para la vitrina. Y no pienses más en el golpazo de la bandeja: todos rompemos algo el primer día. Si tienes cualquier duda, llámame. ¡Suerte!"
+    },
+    {
+      "id": 541,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-6%",
+      "text": "Hola, Paula, soy Inés. Me llamó mi tía: encontró varias cosas en la cabaña y no sé de quién son. Hay una bufanda verde; creo que es tuya, ¿no? También hay unos auriculares negros. Los míos los tengo aquí, así que seguro que son de Leo. Y hay un libro de cocina. Mío no es. ¿Será de Marcos? Ah, y un paraguas pequeño: ese sí es mío. Mi tía viene el viernes y lo trae todo. Por cierto, dice que unos vecinos suyos alquilan una cabaña más grande. ¿Vamos otra vez el mes que viene? Un beso."
+    },
+    {
+      "id": 542,
+      "voice": "es-CO-SalomeNeural",
+      "rate": "-6%",
+      "text": "Hola, Nico, soy Elena. Mañana es tu examen y quiero darte unos consejos. Primero: esta semana condujiste perfectamente, así que confía en ti. Esta noche cena ligero y duerme bien. Mañana llega temprano y saluda amablemente al examinador. Arranca lentamente, mira atentamente los espejos y frena suavemente. Si cometes un error, sigue tranquilamente: normalmente un error pequeño no importa. Y si no entiendes una instrucción, pregunta con calma. Sinceramente, creo que vas a aprobar fácilmente. ¡Mucha suerte!"
+    },
+    {
+      "id": 543,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "-3%",
+      "text": "Julián, soy yo. Estoy empezando a cocinar y falta de todo. ¿Puedes pasar otra vez por el supermercado? Mira: casi no queda sal, así que trae un paquete. También necesito dos barras de pan y unos pocos limones, tres o cuatro. Ah, y hielo: no hay nada de hielo. Y tengo una noticia: Luis viene con dos amigos, así que somos diez. Compra más agua y otro vino, por favor. Con el arroz no hay problema: hay muchísimo. ¿Llevas bastante dinero? Gracias, ¡date prisa!"
+    },
+    {
+      "id": 544,
+      "voice": "es-CL-CatalinaNeural",
+      "rate": "-3%",
+      "text": "Hola, Andrés; hola, Lucía. Soy Marta y llevo seis meses fuera. Me sentí muy identificada con el programa. Antes de venir, me dijeron que iba a ser fácil. No lo es. Llegas con mucha ilusión y, a las dos semanas, te das cuenta de que no entiendes ni el recibo de la luz. Cuando hablas mal el idioma, te hablan despacio y alto, como a un niño. Pero también hay cosas buenas: en el trabajo me ofrecieron un curso, y aquí se respeta mucho el horario. Dicen que el segundo año es mejor. A lo que uno no se acostumbra nunca es a perderse los cumpleaños de la familia. Es duro, pero no me arrepiento. Un abrazo."
+    },
+    {
+      "id": 545,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "+0%",
+      "text": "Anoche se estrenó «La casa de enfrente» y conviene decirlo pronto: la apuesta resulta valiente. El primer acto resulta algo premioso, y la iluminación queda pobre en varios momentos. Pero el texto se mantiene firme, y el protagonista, que al principio se muestra contenido, casi tímido, acaba deslumbrante en el monólogo final. Durante esa última escena, el público permaneció en silencio, sin una tos. Hay quien se hace el entendido y pide más ritmo; yo creo que la lentitud es parte de la propuesta. Salí del teatro tarde y me quedé con ganas de volver. La obra sigue en cartel hasta final de mes. Vayan."
+    },
+    {
+      "id": 546,
+      "voice": "es-ES-AlvaroNeural",
+      "rate": "+0%",
+      "text": "Buenas noches a todos y bienvenidos. Llevo veinte años aquí y solo pido tres cosas; están en los carteles, pero las repito. Primera: «Dejar las botas en la entrada». Segunda: «No encender hornillos en los dormitorios». Tercera: «Respetar el descanso de los demás». Dormir bien aquí arriba no es un lujo: es seguridad. A las diez se apaga la luz y, entonces, ¡a dormir! Si alguien ronca y otro protesta… ¡haber traído tapones! Mañana, el desayuno es a las seis y media. ¿Subir a la cumbre? A saber cómo amanece; lo decidimos con el café. A mi parecer, la montaña no se va a ir. Que descansen."
+    },
+    {
+      "id": 547,
+      "voice": "es-MX-DaliaNeural",
+      "rate": "+0%",
+      "text": "Darío, soy Carmen. Balance rápido de tu primera semana. Tu pieza sobre el sector pesquero fue la mejor: datos sólidos, un arranque limpio y ni una palabra de más. En la de la reforma educativa te enredaste: no existe «una muy presupuestaria decisión»; es «una decisión presupuestaria muy discutida». El adjetivo de relación, detrás y sin «muy». Dos consejos: escribe corto, que el papel es caro, y en las reuniones habla claro; tienes buenas ideas y las dices bajito. Las compañeras de cierre dicen que trabajas duro, y es verdad. El lunes te toca el pleno municipal; ven descansado. Buen fin de semana."
+    },
+    {
+      "id": 548,
+      "voice": "es-ES-ElviraNeural",
+      "rate": "+0%",
+      "text": "Buenas tardes, equipo. Esta semana, verbos con huecos. Primero, soler. He visto «soleremos» en dos informes. No existe. Un hábito no se anuncia con soler: escriban «normalmente publicaremos» o «acostumbraremos a publicar». En presente y en imperfecto, sin problema: «suele haber», «solíamos revisar». Segundo: atañer y concernir. Solo tercera persona, y ojo con el plural: «las cláusulas que atañen al autor», no «que atañe». Si el sujeto es plural, el verbo también. Lo mismo con «incumben» y «competen». Tercero: abolir. «Abole» está admitido; aun así, prefiero «deroga» o «suprime». En pasado, «abolió», tranquilamente. Y cuarto: cuando llover es figurado, concuerda: «llovieron las reclamaciones». Buen fin de semana."
     }
   ]
 }

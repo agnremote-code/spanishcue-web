@@ -317,6 +317,12 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Tu alumno completa: «De haberlo sabido…», «Con… basta», «Queda mucho por…».' },
         ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 179 · Relativas complejas: cuyo, el cual, lo cual', text: 'Ya usas el infinitivo como nombre, como norma de cartel, como orden y como reproche. La clase 179 retoma la ruta del curso: «Relativas complejas: cuyo, el cual, lo cual».', en: 'You can now use the infinitive as a noun, as a sign instruction, as an order and as a reproach. Class 179 returns to the main route of the course: “Relativas complejas: cuyo, el cual, lo cual”.', href: '/gramatica/relativas-complejas-cuyo-el-cual-lo', label: 'Ir a la clase 179' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
+        ] },
       ],
     },
   ],

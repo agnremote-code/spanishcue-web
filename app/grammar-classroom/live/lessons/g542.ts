@@ -307,6 +307,12 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Pregunta final: «¿Qué haces actualmente? ¿Y qué quieres hacer al final de este año?».' },
         ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 054 · Antes de, después de y cuando + indicativo', text: 'Ya explicas cómo se hace algo: «lentamente», «con cuidado», «muy bien». La clase 054 retoma la ruta del curso: «Antes de, después de y cuando + indicativo».', en: 'You can now explain how something is done: “lentamente”, “con cuidado”, “muy bien”. Class 054 returns to the main route of the course: “Antes de, después de y cuando + indicativo”.', href: '/antes-despues-cuando', label: 'Ir a la clase 054' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
+        ] },
       ],
     },
   ],

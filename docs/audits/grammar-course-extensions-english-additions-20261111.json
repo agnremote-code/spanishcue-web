@@ -1,0 +1,2250 @@
+{
+ "version": 1,
+ "authorization": "Owner request of 2026-11-11 (project thread «Agregar clases de gramática que faltan», cmsg_01Gr5R4j3t2Yet65UcmhcVhASVHN3dkjP2cnV1ombEwJeF): add every grammar class still missing from the course, «con el mismo diseño, todo», which includes the English support line every course class carries. Standing owner approvals for English copy: cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe (2026-10-14) and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g (2026-10-22). This manifest approves only the exact English support literals of the eight extension classes G241–G248 (app/grammar-classroom/live/lessons/g541.ts–g548.ts) and of the one link each anchor class gains towards its extension; it cannot exempt any edit or deletion of existing English copy.",
+ "additions": [
+  {
+   "path": "app/grammar-classroom/live/lessons/g353.ts",
+   "text": "Before moving on, an extension class on -mente adverbs: “lentamente”, “normalmente”, “afortunadamente”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g371.ts",
+   "text": "Before moving on, an extension class on “mío, tuyo, suyo”: how to say whose each thing is without repeating the noun."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g423.ts",
+   "text": "Before moving on, an extension class on countable and uncountable nouns: “mucho arroz”, “muchos huevos”, “un poco de sal”, “la gente es”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g449.ts",
+   "text": "Before moving on, an extension class on other ways of speaking without a specific subject: “uno se acostumbra”, “llegas y no conoces a nadie”, “dicen que…”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g476.ts",
+   "text": "Before moving on, an extension class on the verbs that add nuance where “ser” and “estar” stay flat: “resultó lento”, “permaneció atento”, “se mostró segura”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g478.ts",
+   "text": "Before moving on, an extension class on the infinitive standing alone: “Caminar cansa”, “No fumar”, “¡A dormir!”, “¡Haberlo dicho!”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g488.ts",
+   "text": "Before moving on, an extension class on two fine points about adjectives: “una crisis económica grave” (not “grave y económica”) and “hablar claro”, “jugar limpio”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g514.ts",
+   "text": "Before moving on, an extension class on verbs with an incomplete conjugation: “suele” (but not “soleré”), “atañe”, “concierne”, “abolió”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Inés, Marcos, Paula and Leo spent the weekend in a mountain cabin. It is Sunday afternoon and it is time to pack, but everything is mixed up. Marcos holds up a charger: “Whose is this?”. Inés answers: “It’s mine. Yours is in the kitchen”. Today you learn to say whose each thing is without repeating the word."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "It is my charger."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "This charger is mine."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Yours is in the kitchen."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "“El tuyo está en la cocina”. What is “el tuyo”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "“Whose charger is this?” “It’s mine.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "How do I say “it’s mine”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "“Whose towel is this?” “It’s mine.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "The red boots are yours, right?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Those socks aren’t mine."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Paula: “Those sunglasses are mine.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Leo, to Marcos: “Is this coat yours?”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "How do I avoid repeating the noun?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "My sleeping bag is very thin. Yours is better."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Your boots are dry, but mine are wet."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Our car is small. Let’s go in theirs."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "How do I say “a friend of mine”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "The cabin belongs to an aunt of mine."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Leo came with two friends of his."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Suyo can mean his, hers, yours (formal) or theirs. If it is not clear, say it with de + person: “This towel is Paula’s”, “Is it yours, sir/madam?”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "My suitcase is really heavy. And yours?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Yesterday I met a friend of mine in the village."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "“Are these your gloves?” “No, mine are black.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Madam, is this umbrella yours?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Whose is this blue towel?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "It’s mine. Thanks. And this charger? Is it yours, Leo?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "No, mine is white. That one is Inés’s, I think."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Yes, it’s mine. Marcos, have you seen my boots?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "There are some boots by the door, but I don’t know if they are yours or mine: they are the same."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Mine have red laces."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Hey, what about this grey jacket? It isn’t ours, is it?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "It belongs to Dani, a friend of mine who came on Saturday. I’ll take it to him."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Perfect. And the cabin keys? Are they your aunt’s, Inés?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Yes, they’re hers. I’ll leave them under the flowerpot, as usual."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Whose is the charger?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "What are Inés’s boots like?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Whose is the grey jacket?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "“Is this your book, Leo?” “Yes, it’s mine.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "This mug is mine. Where is yours?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "The cabin belongs to an aunt of mine."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "These gloves aren’t mine. Are they Leo’s?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Their photos are nice, but ours are better."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "These boots are mine."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Yours is in the kitchen."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "She is a friend of ours."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Whose are these keys?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "What is the main idea?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Whose is the green scarf?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Whose are the headphones?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "What about the book?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "When does the aunt bring the things?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "agrees with the thing, not with the person"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "to avoid repeating the noun"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "one of my friends"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "the short form needs a noun"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Is there a noun after it? → mi, tu, su. No noun? → mío, tuyo, suyo, with an article unless it follows ser: “Es mío”, “El mío es blanco”. And always look at the thing: la mochila → mía."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "“Whose are these keys?” “They’re mine.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Your coffee is hot, but mine is cold."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "This is Carla, a colleague of mine."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Sir, is this briefcase yours?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Their house is big, but ours has a garden."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Two ideas to go further. First: lo mío, lo tuyo refer to “my things” or “my thing” in general: “Lo mío es la cocina” = cooking is what I’m good at. Second: there are set expressions with these possessives: ¡Dios mío!, amor mío, hija mía, a mi lado / al lado mío (both are heard; careful writing prefers “a mi lado”)."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "“Lo mío es el baile”. What does it mean?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "Which sentence fits careful writing best?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g541.ts",
+   "text": "You can now say whose each thing is: “es mío”, “la tuya”, “un amigo nuestro”. Class 072 returns to the main route of the course: “Doble negación: nadie, nada, nunca”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Nico is twenty and today he starts at the driving school. His instructor, Elena, tells him: “Pull away slowly. Look carefully at the mirrors. And breathe calmly: normally, nobody drives well on the first day”. Today you learn to say how something is done with adverbs ending in -mente."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Nico is a slow driver."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Nico drives slowly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "“Mira atentamente los espejos”. What does “atentamente” describe?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Elena speaks clearly so that Nico understands."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "How do I form the adverb?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Pull away slowly and without fear."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "With practice, you will park easily."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Elena answers all the questions kindly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Cross the street slowly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "This car is easy to drive (drives easily)."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "How do I say “usually” or “lately”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "I usually have lessons on Tuesdays and Thursdays."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Lately there has been a lot of traffic downtown."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "If you see a stop sign, brake immediately."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "How do I say what I think about the whole sentence?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Fortunately, the test is in the morning."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Honestly, I think you are ready."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "I usually study at home, but today I’m going to the library."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "“Actualmente vivo en Bogotá” means…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Do all adverbs of manner end in -mente?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Nico parks well, but pulls away badly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Drive slowly near the school."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Turn carefully: there are bikes."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "When two -mente adverbs are joined by y or o, the first one drops the ending: “Conduce lenta y cuidadosamente”. It is more common in writing."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Elena explains the rules very well."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Go down the stairs carefully: they are wet."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Good morning, Nico. How are you today?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Honestly, a bit nervous. I slept badly last night."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Relax. Pull away slowly and look carefully in the mirror."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "OK. The car usually stalls on me here."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Not today. See? You did it perfectly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Yes! There’s a roundabout coming up, right?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Yes. Enter carefully and leave calmly. There’s no rush."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "That car is coming really fast."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "That’s why we brake gently and wait. Very good."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Lately I’ve been practising with my dad on Sundays."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "It shows. You can probably take the test next month."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "How is Nico at the start?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "What do they do when a fast car comes?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "When can he take the test?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Turn the steering wheel slowly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Lately I’ve been very tired: I work and study."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Fortunately, I passed with only one mistake."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "You park very well."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "You have to drive slowly here."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Elena speaks slowly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "I usually arrive at eight."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Nico parks very well."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Fortunately, I passed the test."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "What is the main idea?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "How did Nico drive this week?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "What does he have to do tonight?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "How should he greet the examiner?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "What does he do if he makes a mistake?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "how it is done; the accent stays: fácilmente"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "actualmente = currently"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "at the start, with a comma"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "bueno → bien, malo → mal"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Describing a person or thing? → adjective. Describing an action? → adverb. To form it: feminine + -mente. And remember the short ones: bien, mal, despacio."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "The train arrived punctually at eight."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "You speak Spanish very well."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "I currently work in a bank, but I used to be a teacher."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "She explained it clearly and simply."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Fortunately, nobody was hurt in the accident."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "Two ideas to go further. First: solamente and solo mean the same (only). Second: some adverbs look like English words but mean something else: actualmente = currently (not “actually”, which is “en realidad”); eventualmente = possibly, occasionally (not “eventually”, which is “al final”)."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "How do you say “Actually, I don’t drive”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "“Al final aprobé” in English is…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g542.ts",
+   "text": "You can now explain how something is done: “lentamente”, “con cuidado”, “muy bien”. Class 054 returns to the main route of the course: “Antes de, después de y cuando + indicativo”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Sara and Julián have invited six friends to dinner. At the supermarket, Sara reads the list: “We need twelve eggs, a lot of rice, a little salt and two bottles of water”. Julián asks: “How many tomatoes? And how much flour?”. In Spanish, as in English, there are things we count and things we do not. Today you learn what changes in the sentence with each type."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "We need twelve eggs."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "We need a lot of rice."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Which of these nouns is uncountable?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How many tomatoes shall I buy?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How do I say “much” and “many”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "We don’t have much flour, but there are a lot of eggs."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "You put too much salt in the soup."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How many glasses do we need? And how much wine?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Add a little oil to the salad."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "There are only a few lemons left."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How do I count water or bread?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Buy two bottles of water and a kilo of rice."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Can you pass me a piece of cheese?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "It needs a spoonful of sugar."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "“Compra pan” or “compra el pan”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Is there any milk in the fridge?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "I don’t drink coffee at night."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "We need half a kilo of meat."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "“What’s missing?” “We’re out of oil.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Can I say “dos cafés”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Two coffees and one sparkling water, please."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "This shop sells cheeses from all over the country."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "There were a lot of people at the party."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Waiter, two coffees, please."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Let’s see: for the chicken rice we need a lot of rice. There are eight of us."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "There’s one packet of rice left at home. Shall I get another?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Yes, just in case. And two whole chickens."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Two? That’s too much chicken, isn’t it?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Don’t be so sure: people eat a lot at our dinners."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "OK. How many tomatoes?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Six. And a little parsley. Oh, is there any oil at home?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "There isn’t much left. I’ll take a bottle of oil."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Perfect. For dessert, fruit: a few oranges and grapes."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "And to drink? Carla only drinks water."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Then wine and six sparkling waters. Did I give you any money?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "No, but I’ve got my card. A piece of advice: next time, let’s order pizza."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Why do they buy two chickens?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How much oil is left at home?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "What advice does Julián give?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "It needs a little salt."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "There aren’t enough plates for everyone."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How much milk is left?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Cut three pieces of bread, please."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "So many people! They are very punctual."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "I brought a wine for dinner."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "There isn’t much flour left."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Buy two bottles of water."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "People are very kind."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How many eggs do we need?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "What is the main idea?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "What about the salt?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How much bread does she ask for?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How many lemons?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "What news does Sara give?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "units: they have a plural"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "substances and ideas; no article when the amount is unspecified"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "no article after “de”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "un café = a cup of coffee"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Ask yourself: can I say “one, two, three”? If so → plural with muchos, pocos, cuántos. If not → singular with mucho, poco, cuánto, or a measure + de. And remember the differences from English: la gente es, mucha información, un consejo, una noticia."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "How much milk do you want in your coffee?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "In this city people have dinner very late."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "I only have a few coins."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Bring me a glass of water, please."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "I have two important pieces of news for you."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "Some uncountable nouns have a plural with a different meaning: el agua / las aguas (of a river or sea); el tiempo / los tiempos (eras); el interés / los intereses (bank interest, or the things you are interested in); la amistad / las amistades (friends). And in colloquial speech a singular can suggest a large quantity: “¡Cuánto coche hay hoy!” = there are so many cars."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "“En mis tiempos…”. What does “tiempos” mean?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "“¡Cuánto turista hay este verano!” means…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g543.ts",
+   "text": "You can now talk about quantities precisely: “mucha gente”, “unos pocos limones”, “dos botellas de agua”. Class 124 returns to the main route of the course: “Elipsis y reformulación: evitar repeticiones”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "On the podcast “Maletas”, Andrés interviews Lucía, who has lived in three countries. Lucía says: “At first you feel lost. You arrive and you don’t know anyone. They say the first year is the hardest, and it’s true. But life is very good there”. In four sentences she names nobody, and yet each one sounds different. Today you learn to choose between these four ways of speaking in general."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Life is very good there. / One lives well there."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "At first you feel lost (I did, and so does anyone)."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "You arrive and you don’t know anyone."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "They say the first year is the hardest."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Who says so?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Is Lucía talking only about Andrés?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "When do I use “se”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "In that country people have dinner very early."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "People work hard here, but they earn well."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "What does “uno” add?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "With time you get used to everything."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "When you (a woman) are alone in another country, you value friends more."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Sometimes people ask you odd questions."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "In a new city, you feel very lonely at first."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Life is very quiet in this neighbourhood."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Can I say “tú” without meaning you?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "You go to the bank and they ask you for ten documents."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "If you don’t speak the language, you feel like a child."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Sometimes generic tú is ambiguous. “Aquí trabajas demasiado” may be general or a reproach to the person you are talking to. If in doubt, use uno or se."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Which sentence suits a company report best?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Lucía, to a friend: “The first months you work all the time and you don’t see anyone”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "When do I use “dicen”, “llaman”, “me robaron”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "They say the winter there is really harsh."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "In my second month my bike was stolen."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "They look after you very well in that office."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "The doorbell rings. Lucía says: “There’s someone at the door”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Yesterday the consulate called me to give me an appointment."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Lucía, three countries in ten years. What is the hardest thing about starting from scratch?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "The paperwork. You go to an office, you queue for two hours and they tell you a stamp is missing."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "They say you can do everything online now."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "So they say. But you learn to be patient."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "And loneliness?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "It’s real. On Sundays you ask yourself what you are doing so far from home."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Any bad moments?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "In my first week my phone was stolen on the metro. I cried for an hour."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "But you stayed."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Yes, because life is good there and free time is respected. And when you are invited to someone’s home for the first time, you feel you belong."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "What is the hardest thing for Lucía?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Does Lucía believe everything can be done online?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Why did she stay?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Last night someone scratched my neighbour’s car."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "After a year, you find out about almost everything."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "The food is very good in this region."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "They say they are going to close the factory."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "It’s incredible: you ask a simple question and nobody answers you."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Sometimes you (a woman) are tired of always explaining the same thing."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "You get used to everything."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "They say it is going to rain."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "My wallet was stolen."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "The food is very good here."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "What is the main idea?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "What was she told before leaving?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "What happens when you speak the language badly?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "What was she offered at work?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "What do you never get used to?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "neutral; fine in formal texts"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "own experience; required with pronominal verbs"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "colloquial; puts the listener in the scene"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "unknown or irrelevant agent; no “ellos”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "All four hide who does the action, but they are not the same: se is neutral; uno speaks from experience; tú brings the scene closer and is colloquial; the 3rd person plural leaves the speaker out. Choose according to who is “inside” and the register."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Over the years, you worry less about small things."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "They say a metro station is going to open here."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "(Press article) In big cities people increasingly live alone."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Guess what? I got a pay rise yesterday."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "It’s just that you get home exhausted and on top of that you have to cook."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "There are more ways to avoid personalizing. Academic texts use the plural of modesty: “En este trabajo analizamos…”, even with a single author. La gente and todo el mundo generalize with a singular verb. And hay que expresses an obligation with no subject."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "In a thesis by a single author, which sentence is usual?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "Everybody knows that moving is hard."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g544.ts",
+   "text": "You can now choose between “se”, “uno”, generic tú and the third person plural according to register and who is included. Class 150 returns to the main route of the course: “Se accidental y responsabilidad atenuada”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Last night “La casa de enfrente” opened at a small theatre. This morning the director, Irene, sums up: “The first act turned out slow, but the audience remained attentive. Samuel came across as confident and the ending worked out perfectly. I’m still nervous: Olga’s review comes out today”. She could have said “was slow”, “was attentive”. But each verb adds something: an outcome, a duration, an attitude. That is what this class is about."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The audience was attentive."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The audience remained attentive."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The first act turned out slow."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "What does “resultó” add compared with “fue”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "“Irene sigue nerviosa” implies that…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "How do I say how something turned out?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The experiment with live music proved risky but effective."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The tickets worked out really expensive for us."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "After the cuts, the second act was reduced to twenty minutes."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "How do I say that a state does not change?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The auditorium remained in darkness for a whole minute."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "At seventy, the actress stays active."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The question remains open."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Despite the protests, the director stood firm in her decision."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Two spectators were slightly injured when a spotlight fell."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "How do I describe the impression someone gives?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The critics were (openly) enthusiastic about the cast."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "When they asked him about the mistake, Samuel pretended not to notice."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "And for the state someone ends up in or is usually in?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "On seeing the full house, Irene was left speechless."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "After three performances in a row, they ended up exhausted."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Samuel has been distracted since opening night."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "When the prize was announced, the two authors were left open-mouthed."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "She knew perfectly well who he was, but she played dumb."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "I’ve hardly slept. I’m still wired."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "That’s normal. From the booth, the first act felt endless to me."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "It was my fault: my mind went blank in the letter scene."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Nobody noticed. You came across as so confident that it looked like a deliberate pause."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "And Olga? I saw her in row three. She stayed motionless for the whole show."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "She always pretends to be indifferent. Then she writes wonders or sinks you."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The ending, on the other hand, came out perfect. People left moved."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Yes. And the lighting technician ended up exhausted, poor thing."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "You’ve been worn out too. Why don’t you rest today?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Once I’ve read the review. Until then, I’m keeping myself awake on coffee."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "What happened to Samuel in the letter scene?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Is Olga really indifferent, according to Irene?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "How did the ending turn out?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "After the storm, several streets were left flooded."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "At the press conference, the author appeared willing to answer everything."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "She’s had an odd week: she’s been in a bad mood."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The supposed expert turned out to be an impostor."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Despite their tiredness, they stayed focused to the end."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "We started out arguing about theatre and ended up angry."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The meeting proved useless."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "We were left speechless."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The theatre is still closed."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "He pretended to be surprised."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "What is the overall assessment?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "How did the first act turn out?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "How did the lead come across?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "What did the audience do in the last scene?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "How was Olga left feeling?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "the quality as an outcome"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "the state does not change"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "what is shown, or faked"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "reaction, end of a process, how someone has been lately"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Before writing “fue” or “estuvo”, ask yourself whether you mean something more: an outcome? A state that persists? An attitude on display? A reaction? If so, there is a verb that says it for you. And the attribute always agrees with the subject."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The measures proved insufficient to halt the crisis."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The witnesses remained silent throughout the questioning."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "He knew the answer, but he played dumb so as not to commit himself."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "At the news, my mother was stunned."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "Twenty years on, the novel remains relevant."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "The group is open-ended. Venir + adjective or participle describes how something or someone arrives. Caer + adjective expresses a sudden change. Verse + participle works like a situational passive: “He was forced to resign”. And hallarse / encontrarse are formal variants of estar."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "In the face of the scandal, the director was forced to resign."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "After weeks of touring, the actress fell ill."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g545.ts",
+   "text": "You can now nuance an assessment with “resultar”, “quedar”, “seguir”, “mostrarse” or “quedarse”. Class 177 returns to the main route of the course: “Absolutas de participio y reducción de subordinadas”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Nuria and Beto arrive at a mountain refuge soaked and late. On the door, a sign: “Leave boots at the entrance. No smoking”. Inside, Aurelio, the warden, looks at them: “Walking in this rain takes courage. Come on, dinner time!”. Beto mutters something about the cold, and Aurelio laughs: “Complaining, at this stage? You should have come up in August!”. Five infinitives, none of them depending on another verb. Today you see what the infinitive can do on its own."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Walking in this rain takes courage."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "No smoking."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Dinner time! / Off to dinner!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "You should have come up in August!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "“¡Haber subido en agosto!” means…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Who is the sign addressed to?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "How do I say “walking is healthy”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Getting up early was never my thing."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "I was woken by the creaking of the wood."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Thanks for waiting for us with dinner."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Can it take adjectives, demonstratives, a plural?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "From the window you could see the slow falling of the snow."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "That constant complaining of Beto’s wears me out."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Walking in the mountains at night is dangerous."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "We were woken by the ringing of the bells."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "When does the infinitive work as an order?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Do not leave rucksacks in the corridor."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Close the door on your way out."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "And “¡A dormir!”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "It’s ten o’clock: off to bed, we’re up early tomorrow!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "It started to hail and off we ran towards the refuge."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Aurelio, to a group of hikers who have just come in (formal, careful usage):"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Which text belongs on a sign?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What does an infinitive with no main verb express?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "“And what do you want to do tomorrow?” “Sleep. Just that.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Go down now, in this fog? No way."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "You’re cold? You should have brought a coat!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "“You left the torch downstairs.” “You should have told me to bring it up!”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "“They say you gave up halfway.” “Me, give up? Never.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "I can’t feel my feet. Coming up today was a mistake."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "The mistake was leaving at midday. You should have got up early!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Me, get up early? You were the one who couldn’t find her boots."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Peace. First things first here: “Hang wet clothes in the drying room”, as the sign says."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Right away. Does the wind always sound like that?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "All night. The whistling of the wind helps me sleep."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "And what do you recommend tomorrow? The summit?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Who knows what the morning will bring. In my view, the lake is better."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What are you planning to do tomorrow, Aurelio?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Chop wood, as always. And now, dinner! The soup is getting cold."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "With all this talking I had forgotten I was hungry."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "According to Nuria, what was the mistake?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What does Aurelio recommend for tomorrow?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Is Aurelio sure about tomorrow’s weather?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Sleeping at altitude requires drinking a lot of water."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "I’m fed up with tripping over rucksacks in the corridor so much."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "(Sign in the kitchen) Wash the dishes after use."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "It’s six and we have to leave: up you get!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "“There’s no bread left.” “You should have bought some yesterday, I told you!”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "I recognized him from afar by the way he walks."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Getting up early is not my thing."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "You should have said so earlier!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Close the door on your way out."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "We could hear the murmuring of the river."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What is Aurelio’s tone?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What do you do with the boots?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What time are the lights turned off?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What does he say about anyone who complains about snoring?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "What does he think about going up to the summit tomorrow?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "where English uses -ing; never the gerund"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "for specific people, use the imperative"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "spoken, energetic, collective order"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "disbelief and reproach"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "The infinitive is the name of the action. That is why it can be a subject, take an article or stand alone on a sign. Two reflexes worth fixing: after a preposition, always the infinitive; and to reproach what can no longer be fixed, ¡Haber + participle!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Learning languages opens many doors."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "“I’m soaked.” “You should have brought the umbrella!”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "(Sign in a museum) Do not touch the works."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "Me, to blame? I wasn’t even there!"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "We stayed listening to the drumming of the rain on the roof."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "With a preposition, the infinitive stands for a whole subordinate clause. Al + infinitive: time or cause. De + infinitive: condition (“Had I known…”). Con + infinitive: concession or sufficient condition. Por + infinitive: something still to be done."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "As we had no map, we followed the river."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "There is still half the route to cover."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g546.ts",
+   "text": "You can now use the infinitive as a noun, as a sign instruction, as an order and as a reproach. Class 179 returns to the main route of the course: “Relativas complejas: cuyo, el cual, lo cual”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "It is eleven at night in the newsroom of a regional daily. Darío, an intern, hands in his headline. Carmen, the desk editor, crosses it out: “It’s una crisis económica grave. ‘Económica’ says what type of crisis it is; ‘grave’ says what it is like. They don’t mix. And another thing: here you have to speak plainly and write short”. In two minutes Carmen has given two lessons: relational adjectives and adjectives that act as adverbs."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "a serious crisis"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "an economic crisis"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Which adjective is relational?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Which of these is not possible?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "How do I recognize a relational adjective?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The council approved an ambitious tax reform."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "A new wave of migration is worrying the region."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "European economic policy changed course."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Can the same adjective be of both types?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The diplomatic conflict was resolved with a very tactful note."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "She has a very melodious voice, although she has no musical training."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The correct headline is:"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "In “un gesto muy teatral”, “teatral” is…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Why “hablan claro” and not “hablan claros”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The spokeswomen spoke plainly: there will be no cuts."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "At this newspaper we play fair."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The new director is making a strong start."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "And “llegaron cansadas”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The reporters came back exhausted, but they wrote fast."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Readers are impatiently awaiting tomorrow’s edition."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The project’s directors are aiming high."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The correspondents returned exhausted from the trip."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Page twelve. “The regional government announces a far-reaching education reform”. Good."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "I had written “una profunda y educativa reforma”, but it sounded odd to me."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Rightly so. Next: “The dairy sector is going through a delicate moment”. Correct."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "In sports I wrote: “The players played fair and left satisfied”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Perfect: “limpio” goes with “jugar”; “satisfechas”, with them. And this? “A very diplomatic response from the mayor”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "I meant tactful, not from the diplomatic corps."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Then it’s fine. But not here: “las elecciones muy municipales”. That doesn’t exist."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "A copying error. I meant “a very closely fought municipal election”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "That’s right. Look, Darío: you aim high and you work hard. You just need to write short."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Noted. Shall I close the page?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Close it. And take a deep breath: there’s a council meeting tomorrow."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Why did “una profunda y educativa reforma” sound odd?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "What did Darío mean by “diplomática”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "What does Darío still need, according to Carmen?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The board approves an ambitious energy plan."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Rural tourism is growing in the province."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The union representatives spoke plainly: they will not sign."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The affected residents are anxiously awaiting a response."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The serious situation in hospitals is causing concern."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The new mayor arrives making her presence felt."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "It is a serious economic crisis."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The spokeswomen spoke plainly."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "We play fair here."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The reporters arrived exhausted."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "What is her assessment?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Which piece did she like best?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "What mistake does Darío keep making?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "What does she ask of him for next week?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "What is Darío covering on Monday?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "says what it is like"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "says what type it is; sits next to the noun"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "modifies the verb; invariable"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "describes the subject during the action"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Two questions solve almost everything. For an adjective next to a noun: can I say “muy”? If not, it is relational. For an adjective next to a verb: does it describe the action or the subject? If the action, it does not change; if the subject, it agrees."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The government announces a far-reaching labour reform."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The referees asked the teams to play fair."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "He is an actor with theatre training, with very theatrical gestures."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "The delegates left the meeting disappointed."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Which sequence is impossible?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Three final notes. Demonyms behave like relational adjectives, except in qualifying readings. In the press, relational adjectives often replace a de-phrase, sometimes excessively; avoid chaining more than two. And several adverbial adjectives live in set phrases."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "“Con esa crítica te quedaste corto” means that…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "Which phrase is most natural?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g547.ts",
+   "text": "You can now order relational adjectives correctly and tell “hablan claro” from “llegaron cansadas”. Class 189 returns to the main route of the course: “Conectores de reformulación: es decir, a saber, mejor dicho”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "At the style desk of a publishing house, Matilde reviews an institutional report that Iván has edited. She underlines three sentences with impossible verb forms. Iván defends himself: “They’re ordinary verbs, aren’t they?”. Matilde smiles: “They’re verbs with gaps. Some lack certain tenses; others, certain persons. And the interesting thing is why”. Such a verb is called defective."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The committee usually meets every quarter."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "That data does not concern me."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Yesterday criticism rained down."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Why is there no “yo concierno” in normal usage?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "How do you correct “El comité soleré reunirse”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Which forms does “soler” have?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The author usually delivers the chapters late."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "We used to print all the proofs."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "In these reports there tend to be misprints in the tables."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "When I retire, I will make a habit of getting up late."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "As a young man, my grandfather used to read the dictionary for pleasure."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "How are atañer, concernir, incumbir and competer used?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The third clause does not concern the translators."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "These decisions fall exclusively within the remit of the editorial board."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "It is not my place to judge the author’s style."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "And acontecer, acaecer, ocurrir, suceder?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The events took place on the night of 3 March."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What happened afterwards does not appear in the report."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The calendar changes affect the whole staff."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Resolving that conflict is the director’s responsibility, not mine."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Can “llover” have a subject?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "After the review, orders poured in."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Today I woke up to forty unread emails."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Can you say “abolo”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The country abolished prior censorship in 1978."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The new regulations repeal the previous rule."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "After the prize, manuscripts poured into the publishing house."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "In a careful legal report, which form is advisable?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Page four. “The committee usually meets every quarter”. That works."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "But the paragraph is about next year. I need a future."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Then: “it will, as a rule, meet every quarter”. Soler won’t give you that."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Page nine: “As regards the budgets…”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Correct. But two lines later: “the measures that concern the partners”, in the plural."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Noted. And “it falls to the board to approve the accounts”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Perfect. Compete, from competer. If you write “compite”, the board is running a race."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The historical section: “the events that took place in 1998”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Very solemn, but fine. And here, “la junta abole el artículo sexto”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The dictionary allows it."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "It does. And the reader stumbles. Write “deroga”; or, in the past, “abolió”, which bothers nobody."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Last one: “after the presentation, applications poured in”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Agreement spot on. You woke up sharp today, Iván."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Why does Matilde change “suele” in the sentence about next year?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What does Matilde think of “abole”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What would happen with “compite”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "As far as deadlines are concerned, there is no news."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "If I were given that post, I would make a point of reviewing each text twice."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Tax matters are the responsibility of the finance department."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "With the controversy, interview requests rained down on the author."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "At that time many privileges were abolished."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "We left at night and were on the coast by dawn."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "That is none of my business."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "There tend to be misprints in the tables."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "Criticism rained down."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The rules concern everyone."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What is the note about?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What does she say about “soleremos”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What does she ask for with “atañer” and “concernir”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What does she recommend for “abolir” in the present?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "What example does she give of “llover”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "no future, conditional, preterite or imperative"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "the subject is a matter or an event; watch the plural"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "figurative use takes a subject and agrees"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "“abole” is accepted but avoided in careful prose"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "A verb is defective because of its meaning or because of its form. In both cases the solution is the same: do not force the form; switch to another resource: an adverb, a synonym, a different construction."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "When I lived in the country, I used to go to bed at ten."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "The reforms concern all departments."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "That is none of your business: it is my affair."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "After the announcement, the calls poured in."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "If I were a minister, I would make a habit of visiting a school every week."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "For the curious. Usucapir survives almost only in the infinitive, gerund and participle. Adir is only used in the formula “adir la herencia”. Desabrir barely survives in the participle “desabrido”. Aterir remains in “aterido de frío”. And there are syntactic defectives: obstar is only used in the third person and in the negative, like holgar in “huelga decir”. They are museum pieces, but they turn up in legal and literary texts."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "“Huelga decir que…” means…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "“Ello no obsta para que…” means…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g548.ts",
+   "text": "You can now recognize verbs with gaps and know how to cover them with another resource. Class 215 returns to the main route of the course: “Voseo, tuteo y ustedeo: cambios pragmáticos de registro”."
+  }
+ ]
+}

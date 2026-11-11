@@ -320,6 +320,12 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Tu alumno redacta una frase formal con «huelga decir» y otra con «no obsta para que» + subjuntivo.' },
         ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 215 · Voseo, tuteo y ustedeo: cambios pragmáticos de registro', text: 'Ya reconoces los verbos con huecos y sabes cubrirlos con otro recurso. La clase 215 retoma la ruta del curso: «Voseo, tuteo y ustedeo: cambios pragmáticos de registro».', en: 'You can now recognize verbs with gaps and know how to cover them with another resource. Class 215 returns to the main route of the course: “Voseo, tuteo y ustedeo: cambios pragmáticos de registro”.', href: '/gramatica/voseo-tuteo-y-ustedeo-cambios-pragmaticos', label: 'Ir a la clase 215' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
+        ] },
       ],
     },
   ],

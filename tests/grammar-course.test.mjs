@@ -18,7 +18,7 @@ const GrammarCourse=require(`../${out}/grammar-classroom/GrammarCourse.js`).defa
 const {lessons}=require(`../${out}/lesson-catalog.js`);
 
 test('the course is one ordered sequence G001…G236 plus extension units, with stable catalog ids and acyclic prerequisites',()=>{
-  assert.equal(courseUnits.length,240);
+  assert.equal(courseUnits.length,248);
   const base=courseUnits.filter(u=>!u.extends);
   assert.equal(base.length,236);
   base.forEach((unit,index)=>{
@@ -27,7 +27,7 @@ test('the course is one ordered sequence G001…G236 plus extension units, with 
   });
   // Extensions take the numbers after G236 (nothing renumbered) and are studied right after the unit they extend.
   const extensions=courseUnits.filter(u=>u.extends);
-  assert.deepEqual(extensions.map(u=>u.code).sort(),['G237','G238','G239','G240']);
+  assert.deepEqual(extensions.map(u=>u.code).sort(),['G237','G238','G239','G240','G241','G242','G243','G244','G245','G246','G247','G248']);
   for(const unit of extensions){
     assert.equal(unit.catalogId,300+unit.sequence);
     const at=courseUnits.indexOf(unit),anchor=courseUnits[at-1];
@@ -39,8 +39,8 @@ test('the course is one ordered sequence G001…G236 plus extension units, with 
       assert.ok(courseUnits.findIndex(u=>u.code===code)<index,`${unit.code}: ${code} comes earlier`);
     }
   });
-  assert.equal(new Set(courseUnits.map(u=>u.catalogId)).size,240,'one catalog id per unit');
-  assert.equal(new Set(courseUnits.map(u=>u.canonicalSlug)).size,240,'one URL per unit');
+  assert.equal(new Set(courseUnits.map(u=>u.catalogId)).size,248,'one catalog id per unit');
+  assert.equal(new Set(courseUnits.map(u=>u.canonicalSlug)).size,248,'one URL per unit');
   assert.ok(!courseUnits.some(u=>u.catalogId===222),'222 is never reused');
   assert.equal(classNumber(7),'Clase 007');
   assert.equal(courseUnits[0].level,'A0');
@@ -94,7 +94,7 @@ test('course progress counts real answers section by section, exactly like the c
   assert.equal(course.total,lesson.stages.reduce((n,s)=>n+progressOf(s,{}).total,0));
   assert.deepEqual(savedProgress(undefined,lessonSections(lesson)),{done:0,total:course.total,started:false});
   const rows=courseRows();
-  assert.equal(rows.length,240);
+  assert.equal(rows.length,248);
   for(const row of rows)assert.equal(row.sections.length>0,row.status==='live',row.code);
   assert.ok(!JSON.stringify(rows).includes('"blocks"'),'rows carry no lesson body');
 });

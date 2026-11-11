@@ -2,7 +2,7 @@ import type { LiveLesson } from '../types';
 
 /**
  * Lesson 541 · A2 · Posesivos tónicos: mío, tuyo, suyo (course unit G241, extension
- * from the PCIC coverage review of 2026-11-11; studied after G064).
+ * from the PCIC coverage review of 2026-11-11; studied after G071).
  * One scene: the end of a shared weekend in a mountain cabin. Four friends (Inés,
  * Marcos, Paula and Leo) pack and sort out whose things are whose. In the voice
  * message Inés (Mexican voice) tells Paula what was left behind in the cabin.
@@ -297,6 +297,12 @@ export const lesson: LiveLesson = {
             { prompt: '¿Qué frase es más adecuada en un texto cuidado?', options: ['Siéntate a mi lado.', 'Siéntate al lado mi.', 'Siéntate a lado mío mi.'], answer: 0, why: '«A mi lado» es la forma recomendada en textos cuidados.', en: 'Which sentence fits careful writing best?' },
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Pregunta final: «¿Qué es lo tuyo: la cocina, los idiomas, el deporte?». Tu alumno responde con «Lo mío es…» y una razón.' },
+        ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 072 · Doble negación: nadie, nada, nunca', text: 'Ya dices de quién es cada cosa: «es mío», «la tuya», «un amigo nuestro». La clase 072 retoma la ruta del curso: «Doble negación: nadie, nada, nunca».', en: 'You can now say whose each thing is: “es mío”, “la tuya”, “un amigo nuestro”. Class 072 returns to the main route of the course: “Doble negación: nadie, nada, nunca”.', href: '/gramatica/doble-negacion-nadie-nada-nunca', label: 'Ir a la clase 072' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
         ] },
       ],
     },

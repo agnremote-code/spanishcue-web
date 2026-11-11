@@ -311,6 +311,12 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Pregunta final: «¿Qué hay que hacer para integrarse en un lugar nuevo?». Tres frases con «hay que».' },
         ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 150 · Se accidental y responsabilidad atenuada', text: 'Ya eliges entre «se», «uno», el tú genérico y la tercera persona del plural según el registro y quién queda dentro. La clase 150 retoma la ruta del curso: «Se accidental y responsabilidad atenuada».', en: 'You can now choose between “se”, “uno”, generic tú and the third person plural according to register and who is included. Class 150 returns to the main route of the course: “Se accidental y responsabilidad atenuada”.', href: '/gramatica/se-accidental-y-responsabilidad-atenuada', label: 'Ir a la clase 150' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
+        ] },
       ],
     },
   ],

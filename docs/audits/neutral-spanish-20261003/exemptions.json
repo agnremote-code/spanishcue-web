@@ -13416,6 +13416,90 @@
       "text": "Convertí tu red de profesores de español en una nueva fuente de ingresos. Recomendá SpanishCue y ganá comisiones por cada suscripción PRO.",
       "category": "neutral-context",
       "reason": "Exact commercial hero copy explicitly supplied by the owner in the 2026-11-09 Partners brief. Preserve the requested voseo here only; the rest of the Partners UI uses tú."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Hola, Andrés; hola, Lucía. Soy Marta y llevo seis meses fuera. Me sentí muy identificada con el programa. Antes de venir, me dijeron que iba a ser fácil. No lo es. Llegas con mucha ilusión y, a las dos semanas, te das cuenta de que no entiendes ni el recibo de la luz. Cuando hablas mal el idioma, te hablan despacio y alto, como a un niño. Pero también hay cosas buenas: en el trabajo me ofrecieron un curso, y aquí se respeta mucho el horario. Dicen que el segundo año es mejor. A lo que uno no se acostumbra nunca es a perderse los cumpleaños de la familia. Es duro, pero no me arrepiento. Un abrazo.",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («sentí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/audio/clips.json",
+      "text": "Anoche se estrenó «La casa de enfrente» y conviene decirlo pronto: la apuesta resulta valiente. El primer acto resulta algo premioso, y la iluminación queda pobre en varios momentos. Pero el texto se mantiene firme, y el protagonista, que al principio se muestra contenido, casi tímido, acaba deslumbrante en el monólogo final. Durante esa última escena, el público permaneció en silencio, sin una tos. Hay quien se hace el entendido y pide más ritmo; yo creo que la lentitud es parte de la propuesta. Salí del teatro tarde y me quedé con ganas de volver. La obra sigue en cartel hasta final de mes. Vayan.",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («Salí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g542.ts",
+      "text": "[[Sinceramente|violet]], un poco nervioso. Anoche dormí [[mal|blue]].",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («dormí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g542.ts",
+      "text": "¿Qué hace si comete un error?",
+      "category": "neutral-context",
+      "reason": "Tercera persona de «cometer» en presente, no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g543.ts",
+      "text": "tomate",
+      "category": "neutral-context",
+      "reason": "Sustantivo «tomate», no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g543.ts",
+      "text": "no hay tomates · [[ningún|teal]] tomate",
+      "category": "neutral-context",
+      "reason": "Sustantivo «tomate», no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g543.ts",
+      "text": "Muchos nombres no contables se usan como **contables** cuando significan **una porción** (un café, dos aguas, una cerveza) o **un tipo** (los quesos de la zona, un vino excelente). Y al revés: un contable se vuelve materia cuando es comida: «compré **dos pollos**» (animales enteros), pero «comí **mucho pollo**».",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («comí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g543.ts",
+      "text": "Comí demasiado pollo.",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («Comí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g544.ts",
+      "text": "Hola, Andrés; hola, Lucía. Soy Marta y llevo seis meses fuera. Me sentí muy identificada con el programa. Antes de venir, [[me dijeron|blue]] que iba a ser fácil. No lo es. [[Llegas|violet]] con mucha ilusión y, a las dos semanas, [[te das cuenta|violet]] de que no [[entiendes|violet]] ni el recibo de la luz. Cuando hablas mal el idioma, [[te hablan|blue]] despacio y alto, como a un niño. Pero también hay cosas buenas: en el trabajo [[me ofrecieron|blue]] un curso, y aquí [[se respeta|teal]] mucho el horario. [[Dicen que|blue]] el segundo año es mejor. A lo que [[uno no se acostumbra|orange]] nunca es a perderse los cumpleaños de la familia. Es duro, pero no me arrepiento. Un abrazo.",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («sentí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g544.ts",
+      "text": "Responde a Marta en voz alta: dale ánimo con dos generalizaciones («uno…», «dicen que…») y un consejo.",
+      "category": "neutral-context",
+      "reason": "Imperativo de tú de «dar» con pronombre («dale ánimo»), forma general."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g545.ts",
+      "text": "Anoche se estrenó «La casa de enfrente» y conviene decirlo pronto: la apuesta [[resulta|teal]] valiente. El primer acto [[resulta|teal]] algo premioso, y la iluminación [[queda|teal]] pobre en varios momentos. Pero el texto [[se mantiene|orange]] firme, y el protagonista, que al principio [[se muestra|violet]] contenido, casi tímido, [[acaba|blue]] deslumbrante en el monólogo final. Durante esa última escena, el público [[permaneció|orange]] en silencio, sin una tos. Hay quien [[se hace el entendido|violet]] y pide más ritmo; yo creo que la lentitud es parte de la propuesta. Salí del teatro tarde y [[me quedé|blue]] con ganas de volver. La obra [[sigue|orange]] en cartel hasta final de mes. Vayan.",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («Salí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g545.ts",
+      "text": "Salí… / Me quedé…",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («Salí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g547.ts",
+      "text": "En deportes escribí: «Las jugadoras [[jugaron limpio|violet]] y salieron [[satisfechas|blue]]».",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («escribí»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g548.ts",
+      "text": "Viví allí tres años. / Solía vivir allí.",
+      "category": "neutral-context",
+      "reason": "Pretérito indefinido en primera persona («Viví»), no un imperativo voseante."
     }
   ]
 }

@@ -308,6 +308,12 @@ export const lesson: LiveLesson = {
           ] },
           { kind: 'teacher', text: 'Este paso es opcional. Tu alumno explica con sus palabras «caer bajo», «tirar largo» y «jugar sucio», y da una situación para cada una.' },
         ] },
+        { title: 'Tus errores y el siguiente paso · Your mistakes and the next step', blocks: [
+          { kind: 'review' },
+          { kind: 'link', title: 'Siguiente: Clase 189 · Conectores de reformulación: es decir, a saber, mejor dicho', text: 'Ya ordenas bien los adjetivos de relación y distingues «hablan claro» de «llegaron cansadas». La clase 189 retoma la ruta del curso: «Conectores de reformulación: es decir, a saber, mejor dicho».', en: 'You can now order relational adjectives correctly and tell “hablan claro” from “llegaron cansadas”. Class 189 returns to the main route of the course: “Conectores de reformulación: es decir, a saber, mejor dicho”.', href: '/gramatica/conectores-de-reformulacion-es-decir-a', label: 'Ir a la clase 189' },
+          { kind: 'restart' },
+          { kind: 'teacher', text: 'Pregunta de cierre: tu alumno resume en tres frases lo que se lleva de la clase y da un ejemplo propio de cada punto. Tarea: terminar o reescribir el texto de Escribir.' },
+        ] },
       ],
     },
   ],
