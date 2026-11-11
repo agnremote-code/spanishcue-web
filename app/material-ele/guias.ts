@@ -1279,6 +1279,139 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["indefinido-e-imperfecto", "preterito-perfecto", "a2", "b1"],
   },
+  {
+    slug: "como-ensenar-por-y-para",
+    path: `${GUIAS_PATH}/como-ensenar-por-y-para`,
+    title: "Cómo enseñar por y para en ELE: secuencia de A1 a B1 con fichas",
+    description:
+      "Cómo enseñar por y para paso a paso: una idea que el alumno puede usar al hablar, qué va en cada nivel, errores típicos, actividades y una clase gratis de A2.",
+    h1: "Cómo enseñar por y para en ELE: una secuencia clara de A1 a B1",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Por y para es el error de preposición que más se repite en clase de español, y uno de los que más dura: hay alumnos de C1 que todavía dudan entre «gracias por» y «gracias para». Las listas de usos tienen diez o doce entradas por preposición y no ayudan a decidir en medio de una frase. Esta guía propone una secuencia concreta de A1 a B1, una idea que el alumno puede aplicar al hablar, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para cada paso, con una clase completa gratis.",
+    keywords: ["cómo enseñar por y para", "por y para ELE", "por y para para extranjeros", "actividades por y para", "diferencia entre por y para", "ejercicios por y para", "fichas por y para"],
+    published: "2026-11-11",
+    lessonIds: [374, 231, 212, 327, 373, 117],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: la causa detrás y la meta delante",
+        blocks: [
+          { type: "p", text: "Antes de cualquier lista, el alumno necesita una imagen que pueda usar al hablar. La más útil en clase es una flecha: **para mira hacia delante, a la meta, al destino o al destinatario; por mira hacia atrás, a la causa o al motivo, o señala el camino por donde se pasa**. «Estudio para aprobar» mira a la meta; «estudio por mis padres» mira al motivo; «paseo por el parque» señala el camino." },
+          { type: "p", text: "Esta idea cubre la mayoría de las frases que el alumno va a decir en A2 y B1. Los usos que no encajan del todo, como el precio («lo compró por diez euros») o el medio («hablamos por teléfono»), se presentan después como bloques fijos, nunca el primer día." },
+          { type: "p", text: "La página de [por y para](/material-ele/por-y-para) de Material ELE resume los usos con ejemplos listos para proyectar, y la de [conectores](/material-ele/conectores) cubre las formas de causa y finalidad que vienen después." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es presentar por y para juntos, con todos sus usos, en una sola clase. Funciona mejor empezar por la idea de causa y finalidad, separar las preposiciones y juntarlas cuando el alumno ya tiene frases que funcionan. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "A1: porque y para, antes de por",
+            blocks: [
+              { type: "ol", items: [
+                "**Causa y finalidad con porque y para + infinitivo**: [ficha de causa y finalidad](/material-ele/ficha/ideas-dentro-de-ideas). «Estudio español porque me gusta» y «estudio español para viajar».",
+                "**Preposiciones básicas**: [ficha de a, de, en, con y sin](/material-ele/ficha/preposiciones-basicas), para que el alumno tenga el sistema antes de los casos difíciles.",
+              ] },
+              { type: "p", text: "En A1 conviene no introducir por como preposición de causa: «porque» ya cumple esa función y evita la confusión temprana." },
+            ],
+          },
+          {
+            title: "A2: el primer contraste",
+            blocks: [
+              { type: "p", text: "Con la base de A1 llega la clase gratis de [por y para: motivo y destino](/gramatica/por-y-para-motivo-y-destino), que trabaja los usos más frecuentes: para + destino, destinatario y finalidad; por + motivo y lugar de paso. Al lado, la ficha de [preposiciones de movimiento y ubicación](/material-ele/ficha/preposiciones-de-movimiento-y-ubicacion) ayuda con «por el centro» frente a «al centro»." },
+            ],
+          },
+          {
+            title: "B1: plazo, precio, medio y causa formal",
+            blocks: [
+              { type: "p", text: "En B1 se amplía con la ficha de [por y para: causa, propósito, plazo y destinatario](/material-ele/ficha/por-para-razones-objetivos): «para el viernes», «por la mañana», «por diez euros», «por correo». Al mismo tiempo entran los [conectores causales](/material-ele/ficha/causales-ya-que-puesto-que-como) ya que, puesto que y como, que dan al alumno alternativas para explicar motivos." },
+            ],
+          },
+          {
+            title: "B2: verbos con preposición fija",
+            blocks: [
+              { type: "p", text: "En B2 el foco pasa a los [verbos que rigen preposición](/material-ele/ficha/verbos-que-piden-una-estructura): preocuparse por, luchar por, servir para. Aquí la flecha ayuda menos y conviene trabajar los verbos como bloques de vocabulario." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicarlo en clase sin listas de usos",
+        blocks: [
+          { type: "p", text: "Tres técnicas que funcionan mejor que la lista de usos:" },
+          { type: "ol", items: [
+            "**La flecha en la pantalla.** Dibuja una persona en el centro: a la derecha, la meta (para); a la izquierda, el motivo (por). Cada frase nueva se coloca en un lado.",
+            "**Pares mínimos.** «Lo hago para ti» frente a «lo hago por ti», «salgo para Madrid» frente a «paso por Madrid». Pregunta qué cambia en la situación, no en la preposición.",
+            "**Bloques fijos aparte.** Gracias por, por favor, por ejemplo, por teléfono, para siempre: una lista corta de expresiones que se aprenden enteras, separadas de la regla.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación:" },
+          { type: "ul", items: [
+            "**«Gracias para todo».** El caso más frecuente. Solución: tratar «gracias por» como bloque fijo desde el primer día.",
+            "**«Estudio por aprobar».** Usa por para la finalidad. Solución: la flecha y la pregunta «¿es la meta o el motivo?».",
+            "**«Para qué no viniste».** Confunde la pregunta de finalidad con la de causa. Solución: contrastar «¿por qué?» y «¿para qué?» con respuestas con porque y para.",
+            "**«Trabajo para la mañana».** Usa para con partes del día. Solución: presentar por la mañana, por la tarde y por la noche como bloque.",
+            "**«Necesito el informe por el viernes».** Plazo con por. Solución: en B1, para + fecha límite con ejemplos reales de trabajo.",
+          ] },
+          { type: "p", text: "El [ejercicio de por y para](/material-ele/ejercicio/por-y-para) practica estos puntos con soluciones, y el [ejercicio de A2](/material-ele/ejercicio/a2) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar por y para",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la regla; la conversación fija la elección. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**Regalos.** El alumno elige tres regalos: para quién son, para qué sirven y por qué los eligió.",
+            "**El viaje.** Un itinerario en el mapa: salgo para Lima, paso por Cusco, voy en tren por el valle.",
+            "**¿Por qué o para qué?** Diez decisiones de la vida del alumno (estudiar español, vivir en su ciudad, su trabajo) y una respuesta con cada pregunta.",
+            "**Lo haría por…** «¿Qué harías por un amigo?» frente a «¿qué harías para ser feliz?»: una conversación que obliga a elegir.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades) y preguntas listas para el nivel en [preguntas de conversación de A2](/material-ele/preguntas/a2) y de [B1](/material-ele/preguntas/b1). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A2, por y para)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de contraste en A2, esta secuencia deja al alumno eligiendo con criterio:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** «¿Por qué estudias español? ¿Para qué?». Respuestas libres, sin corregir.",
+            "**Contraste (5 minutos):** la flecha en la pantalla y tres pares mínimos.",
+            "**Clase (25 minutos):** la clase gratis de [por y para: motivo y destino](/gramatica/por-y-para-motivo-y-destino), con el modo profesor en pantalla compartida.",
+            "**Producción (10 minutos):** el alumno cuenta un viaje que quiere hacer: para dónde sale, por dónde pasa, para qué va y por qué ese lugar.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de por y para es gratis",
+        blocks: [
+          { type: "p", text: "Se abre gratis y sin registro la clase interactiva de [por y para: motivo y destino](/gramatica/por-y-para-motivo-y-destino), con su ficha completa, además de todas las fichas de esta guía, el ejercicio de por y para y las preguntas de conversación. El resto de clases forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A2](/material-ele/a2) ordena todo el material, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Las otras guías de esta serie son [cómo enseñar ser y estar](/material-ele/guia/como-ensenar-ser-y-estar), [cómo enseñar el indefinido y el imperfecto](/material-ele/guia/como-ensenar-indefinido-e-imperfecto) y [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña por y para?", answer: "El primer contraste llega en A2, con los usos más frecuentes: para + meta, destino y destinatario; por + motivo y lugar de paso. En A1 conviene trabajar antes porque y para + infinitivo. En B1 se añaden plazo, precio, medio y partes del día." },
+      { question: "¿Cuál es la mejor forma de explicar la diferencia entre por y para?", answer: "Con una flecha: para mira hacia delante, a la meta o al destinatario; por mira hacia atrás, al motivo, o señala el camino. Los usos que no encajan, como el precio o el medio, se enseñan como bloques fijos." },
+      { question: "¿Por qué los alumnos dicen «gracias para»?", answer: "Porque en muchas lenguas la misma preposición sirve para causa y finalidad. La solución más eficaz es enseñar «gracias por» como expresión fija desde el primer día, separada de la regla general." },
+      { question: "¿Hay una clase gratis de por y para?", answer: "Sí. La clase interactiva de por y para de A2 de SpanishCue se abre gratis, con su ficha completa, y en Material ELE hay fichas, un ejercicio con soluciones y preguntas de conversación, todo sin registro." },
+    ],
+    related: ["por-y-para", "conectores", "a2", "b1"],
+  },
 ];
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
