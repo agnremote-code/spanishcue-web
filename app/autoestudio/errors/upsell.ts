@@ -53,16 +53,20 @@ export function sectionTopic(module: Module, section: SectionKey): CategoryId {
 }
 
 /** A real line from the section to quote on the card. */
+// No lookbehind: Safari before 16.4 cannot parse it, and this file is part of
+// the Homework player chunk, which then fails to load for the student.
+const firstSentence = (text: string | undefined) => text?.replace(/([.!?])\s/, "$1\u0000").split("\u0000")[0];
+
 function sampleOf(module: Module, section: SectionKey): string | null {
   for (const exercise of sectionExercises(module, section)) {
     const items = "items" in exercise ? (exercise.items as Record<string, unknown>[]) : [];
     const q = items.map((item) => item.q ?? item.sentence ?? item.source ?? item.text).find((value) => typeof value === "string" && (value as string).length <= 90);
     if (typeof q === "string") return q.replace(/\*\*|`/g, "");
   }
-  if (section === "reading") return module.reading.text[0]?.split(/(?<=[.!?])\s/)[0]?.slice(0, 90) ?? null;
+  if (section === "reading") return firstSentence(module.reading.text[0])?.slice(0, 90) ?? null;
   if (section === "listening") return module.listening.script[0]?.text.slice(0, 90) ?? null;
   if (section === "theory") return module.theory.parts[0]?.examples?.[0]?.es ?? null;
-  if (section === "writing") return module.writing.model[0]?.split(/(?<=[.!?])\s/)[0]?.slice(0, 90) ?? null;
+  if (section === "writing") return firstSentence(module.writing.model[0])?.slice(0, 90) ?? null;
   return null;
 }
 
