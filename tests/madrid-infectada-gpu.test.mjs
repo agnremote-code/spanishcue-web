@@ -88,7 +88,8 @@ test('Madrid infectada frees the GPU on unmount after a Metro trip: instance buf
     assert.equal(freed.bloom, 1, 'the bloom pass frees its own render targets');
     assert.equal(freed.shadow, 1, "the sun's shadow map is freed");
     assert.equal(renderer.lost, 1, 'the context is lost exactly once');
-    assert.equal(renderer.domElement.isConnected, false, 'the canvas is removed');
+    // React's unmount already detaches the mount div, so check the canvas left its parent (review NB2).
+    assert.equal(renderer.domElement.parentNode, null, 'the canvas is removed from its mount');
   } finally {
     THREE.InstancedMesh.prototype.dispose = instDispose; UnrealBloomPass.prototype.dispose = bloomDispose;
   }

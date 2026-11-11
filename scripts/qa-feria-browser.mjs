@@ -837,8 +837,9 @@ if (RUN.madridGpu) {
     await page.screenshot({ path: resolve(out, 'smoke', `${label}-sol-after-two-rounds.png`), timeout: 120000 });
     // The buffer count back at Sol drifts both ways from round to round, also on main (zombies spawn at
     // random and culled streets upload when first drawn): 1,181–1,253 over six rounds at 390 px, +14 at
-    // 1280 px. A station left behind adds ~400 buffers and 15 textures per round, so 5% slack still catches it.
-    const slack = Math.ceil(first.buffers * 0.05);
+    // 1280 px (+42 and +12 in the reviewer's run). A station left behind adds ~400 buffers and 15 textures per
+    // round, so 10% slack on buffers still catches it (review NB5); textures, flat in every run, get none.
+    const slack = Math.ceil(first.buffers * 0.1);
     smoke(`${viewport.width} madrid Metro trips free the station they leave (no growth from round 1 to round 2 back at Sol)`, trips === 2 && back.buffers <= first.buffers + slack && back.textures <= first.textures, { sol, first, back, slack, trips });
     await page.evaluate(() => window.__qa.madridOff());
     await page.locator('.mi-harness canvas').first().waitFor({ state: 'detached' });
