@@ -503,7 +503,7 @@ export default {
       '¿Qué trabajo poco común te parece fascinante, aunque tú no lo harías nunca?',
       '¿Crees que el humor ayuda a soportar los momentos más duros o a veces es una falta de respeto?',
       '¿Cómo son los funerales en tu país? ¿Hay alguna costumbre que te parezca especialmente bonita o rara?',
-      '¿Qué canción te gustaría que sonara en tu despedida?',
+      '¿Qué papel crees que tiene la música en una despedida?',
     ],
     words: ['la fiambrera', 'no cuadrar', 'hay de sobra', 'tomarse algo a mal', 'tarde o temprano', 'de dos en dos'],
   },

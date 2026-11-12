@@ -830,7 +830,7 @@ const scenes = {
       "¿Qué te ha parecido la táctica de Valentina con Tano, y cuál habrías usado tú en su lugar?",
       "¿Recuerdas algún sitio en el que te hicieran sentir que no pintabas nada? ¿Cómo reaccionaste?",
       "¿Por qué crees que lo exclusivo nos atrae tanto, aunque sepamos que muchas veces es puro decorado?",
-      "¿Te has hecho pasar alguna vez por quien no eras para conseguir algo? ¿Te salió bien la jugada?",
+      "¿Qué opinas de quienes aparentan un estatus que no tienen para abrirse puertas?",
       "Si te ofrecieran entrar en un club al que solo pertenece el uno por ciento, ¿aceptarías sin hacer preguntas?"
     ],
     "words": [
