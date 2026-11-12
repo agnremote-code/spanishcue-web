@@ -167,12 +167,19 @@ export async function createInstitution(db: D1Database, userId: string, input: R
   const site = website(input.website);
   const id = crypto.randomUUID();
   const now = nowSeconds();
-  await db.batch([
-    db
-      .prepare("INSERT INTO institutions (id, name, city, website, seat_limit, created_by, created_at, updated_at) VALUES (?, ?, ?, ?, 0, ?, ?, ?)")
-      .bind(id, name, city, site, userId, now, now),
-    db.prepare("INSERT INTO institution_members (institution_id, user_id, role, created_at) VALUES (?, ?, 'admin', ?)").bind(id, userId, now),
-  ]);
+  try {
+    await db.batch([
+      db
+        .prepare("INSERT INTO institutions (id, name, city, website, seat_limit, created_by, created_at, updated_at) VALUES (?, ?, ?, ?, 0, ?, ?, ?)")
+        .bind(id, name, city, site, userId, now, now),
+      db.prepare("INSERT INTO institution_members (institution_id, user_id, role, created_at) VALUES (?, ?, 'admin', ?)").bind(id, userId, now),
+    ]);
+  } catch (error) {
+    // A concurrent create for the same account loses on institution_members.user_id
+    // UNIQUE and the batch rolls back: report the conflict, not an outage.
+    if (await getMembership(db, userId).catch(() => null)) throw new InstitutionError("Tu cuenta ya pertenece a una academia.", 409);
+    throw error;
+  }
   const membership = await getMembership(db, userId);
   if (!membership) throw new InstitutionError("No pudimos crear la academia.", 503);
   return membership;

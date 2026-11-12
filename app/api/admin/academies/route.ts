@@ -20,8 +20,15 @@ export async function POST(request: Request) {
   if (!ownerFromHeaders(request.headers)) return Response.json({ error: "No autorizado." }, { status: 403, headers: noStore });
   const origin = request.headers.get("origin");
   if (!origin || origin !== new URL(request.url).origin) return Response.json({ error: "Origen no válido." }, { status: 403, headers: noStore });
+  let body: { institutionId?: unknown; seats?: unknown };
   try {
-    const body = (await request.json()) as { institutionId?: unknown; seats?: unknown };
+    const parsed: unknown = await request.json();
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) throw new Error("not an object");
+    body = parsed as typeof body;
+  } catch {
+    return Response.json({ error: "Formato no válido." }, { status: 400, headers: noStore });
+  }
+  try {
     await setSeatLimit(env.DB, body.institutionId, body.seats);
     return Response.json({ items: await listInstitutions(env.DB) }, { headers: noStore });
   } catch (error) {
