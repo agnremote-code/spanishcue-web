@@ -114,9 +114,19 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
   - **Not done:**
     - W46 item 5 (billing-contract lines) is still blocked: #360 and #283 are both still open.
     - Re-adding the Bosque smoke row and the #357 URL checks: no capacity this run.
-  - **Checks:** recorded in the PR #414 comment before it is marked ready.
+  - **Checks (local, at `2d0303b9`; recorded in a #414 comment before ready):**
+    - `npm test`: exit 0, 1,618 pass, 0 fail.
+    - `validate:artifact`: OK.
+    - `tsc`: only the 3 errors already on main.
+    - eslint on the changed files: clean.
+    - `git diff --check`: clean.
+  - **Release (VERIFIED):** #414 merged as `f95f4d80` (02:49Z).
+    - CI + Auto Merge [43141085706](https://github.com/agnremote-code/spanishcue-web/actions/runs/43141085706). Attempt 1's `merge` job ("Reverify against current main") failed outside the diff: `tests/clasicas-routes.test.mjs:15` hit `fetch failed` after 300 s, a GET to the local wrangler dev Worker that never answered. `verify` had passed on the same tree. The one allowed re-run (attempt 2) passed.
+    - This is the **second** occurrence (the first was #387 on 11-05).
+    - Staging [43144622942](https://github.com/agnremote-code/spanishcue-web/actions/runs/43144622942) and production [43144995407](https://github.com/agnremote-code/spanishcue-web/actions/runs/43144995407) both succeeded. The production smoke on https://spanishcue.com printed `"passed": true` (job 130940638123, 03:01Z), and the rollback was skipped. main = production = `f95f4d80`.
+    - The fixes have no anonymous surface, so they were not smoked individually. Their evidence is the regression tests and the deploy.
   - **Next action:**
-    1. Merge, deploy and smoke #414 (this run, if it can).
+    1. Done: merge, deploy and smoke (above). Next Thursday: add a per-request timeout in `tests/clasicas-routes.test.mjs` that names the slug and headers, so the recurring wrangler-dev hang becomes diagnosable.
     2. Fri 11-13: W46 items 6–8 and the W46 assessment.
     3. Next Thursday: the smoke rows (W46 item 5b), and item 5a once #360/#283 resolve.
     4. Step A of BOARD-DECISION-005 only when a trigger fires.
