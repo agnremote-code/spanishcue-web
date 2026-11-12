@@ -150,3 +150,20 @@ Exported verbatim from the session's subagent transcripts (not retyped). Each ex
 >
 > I edited nothing and ran nothing that changes state. I read the decision file, `app/student-tracker/server.ts`, `app/autoestudio/share/server.ts`, `app/autoestudio/errors/server.ts`, `app/api/roster/route.ts` and `db/accounts.ts`, all under `/home/user/spanishcue-web/`.
 
+## Alejandro: delta review of the post-vote changes
+
+### Facilitator → Alejandro (2026-11-12T02:16:10.219Z)
+
+> The coordinator sent a message while you were working:
+> Delta review request (Alejandro): your notes are applied at HEAD 2d0303b9 — please confirm or object. Read-only as before; a full npm test is running in this checkout, so only targeted `node --test <file>` runs.
+> Delta = `git diff 58c7ff5e..2d0303b9 -- tests/ docs/board/decisions/`:
+> 1. tests/uid-keyed-surface.test.mjs: new FROZEN_CONSUMERS (17 files from your list + worker/index.ts, which imports share/server for the learner share-session cookie and /s redeem, not teacher()) and a helperUse regex (authenticatedOwnerId, or imports from autoestudio/share/server or ../share/server). Facilitator mutation check: a new route importing authenticatedOwnerId, or listPasses from share/server, fails the test.
+> 2. tests/backend-error-codes.test.mjs: the fake batch is serialized with a promise queue (N1). The race test now asserts the loser's error is exactly 'UNIQUE constraint failed: institution_members.user_id'. Against main's db/institutions.ts it still fails (503).
+> 3. BOARD-DECISION-005: your collision pre-check is in §3.3 B, the citation is fixed to 104-108, and Martin's changes are in §1, §3 A/C and §4. Status is ADOPTED 3/3, with the sign-off rows quoting your and Martin's notes marked "Applied".
+> Reply: DELTA APPROVE or the blockers, in under 10 lines.
+>
+> Address this before completing your current task.
+
+### Alejandro → Facilitator (2026-11-12T02:16:32.751Z)
+
+> {"message": "DELTA APPROVE (Alejandro, delta 58c7ff5e..2d0303b9). I ran `node --test tests/uid-keyed-surface.test.mjs tests/backend-error-codes.test.mjs` in this checkout: 6 pass, 0 fail.\n1. Guard, VERIFIED (`tests/uid-keyed-surface.test.mjs`): FROZEN_CONSUMERS lists all 17 files I named, plus `worker/index.ts`. That addition is justified: it imports only `verifyShareSession`, `redeem`, `privateHeaders` and `renewShareCookie`, not `teacher()`. The stale check stops the list from rotting, and the sample assertions cover `authenticatedOwnerId` and both import shapes.\n2. Race test, VERIFIED (`tests/backend-error-codes.test.mjs`): batches now run one at a time through a promise queue. The test asserts the loser's error is exactly `UNIQUE constraint failed: institution_members.user_id`, so it now exercises the real path. I did not re-run it against main's `db/institutions.ts`. That it still fails there (503) is HYPOTHESIS, but it follows: main has no catch, so the UNIQUE error still becomes 503.\n3. BOARD-DECISION-005, VERIFIED: the collision pre-check is in §3.3 B, the citation now reads 104-108, and my sign-off row is quoted accurately. Martin's §1, §3 A/C and §4 additions are consistent with the code they cite: `app/autoestudio/share/server.ts:207` (`mutatePass`) and `app/autoestudio/errors/server.ts:23-27` (`ownerOfPass`).\nNon-blocking note: `helperUse` misses an import of `./share/server` from a file directly in `app/autoestudio/`, and a dynamic `import()`. Neither is used today, so it is fine to leave and tighten it later if needed."}
