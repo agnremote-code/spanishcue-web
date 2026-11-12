@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-11 by the Wednesday 3D routine (scheduled cloud run; Alejandro convened once as a subagent of the facilitator, for the code review, see "Current work")._
+_Last updated: 2026-11-12 by the Thursday reliability routine (scheduled cloud run; Sofia, Alejandro and Martin convened as subagents of the facilitator, see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -79,6 +79,48 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-12 (Thursday reliability routine): PR #414** (branch `claude/thursday-review-20261112`, base main `a7625b4`). Subscription usage: **UNKNOWN**.
+  - **W46 plan item 4, the UID re-keying decision, is DONE (third attempt):** [BOARD-DECISION-005](decisions/BOARD-DECISION-005-uid-rekeying.md), **ADOPTED 3 of 3**.
+    - Sofia drafted it. Alejandro and Martin voted APPROVE WITH CHANGES, and every change was applied.
+    - **Decision:** defer the D1 re-keying, with no D1 write by any agent. The A/B/C migration plan is ready, including a collision pre-check and the share-pass fallback.
+    - **Triggers:** account linking, Firebase user deletion or recreation, Apple sign-in or a second provider, a change of Firebase project, and a recurring read-only orphan count through the owner's read path.
+    - **Review date:** the first Thursday after 2026-12-10.
+    - **Code-only step shipped now:** `tests/uid-keyed-surface.test.mjs` freezes the 8 files that read the UID directly and the 18 that reach it through helpers.
+    - **New finding (Martin, VERIFIED):** after a second UID, students keep submitting to links the teacher can neither see nor revoke (`app/autoestudio/errors/server.ts:23-27`, `share/server.ts:207`).
+  - **Board:** convened as three subagents.
+    - Sofia: draft.
+    - Alejandro: code review (**APPROVE**, 0 blockers) and vote.
+    - Martin: vote.
+    - The executives did not message each other. Verbatim: [transcripts/2026-11-12-thursday-reliability.md](transcripts/2026-11-12-thursday-reliability.md).
+  - **CI and deploy health (VERIFIED, `gh run list` + runs API):**
+    - main = production = `a7625b4` (#413). Production run [43069826293](https://github.com/agnremote-code/spanishcue-web/actions/runs/43069826293) succeeded. The scheduled smoke [43128552439](https://github.com/agnremote-code/spanishcue-web/actions/runs/43128552439) (11-12 00:36Z) passed.
+    - Only 3 failed runs since 11-05:
+      - staging 42671281517 / production 42671882235 for `a3dd0c85` (11-09) failed on "Promote", the known safe overlap refusal; later SHAs deployed.
+      - "Partners exact owner-authorized D1 operation" 42666907133 on a codex branch, not a board area.
+    - #410 (bundle diet) was reverted by #411 after a student reported «Something went wrong». #412 (no regex lookbehind for Safari < 16.4) followed. Both are non-board and deployed. Root cause per #412's title (HYPOTHESIS: not re-verified here).
+    - Open issues: only #40.
+  - **Audit of surfaces added since `8dff4873` (read-only):** partners (apply, touch, the admin ledger and settlements, attribution in the Worker).
+    - **Clean:**
+      - Origin, content-type and size checks through `readDemoRequest`.
+      - The referral cookie is HMAC-signed, base64url, expiring and bound to marketing consent.
+      - Admin is owner-gated, `no-store`, and its CSV is injection-safe.
+      - Settlement is idempotent and frozen in one statement.
+      - Identity routes are covered by the existing guard.
+    - **Note, not changed:** the Worker awaits `bindAttribution` (one D1 write) on every identity-aware request while a consented partner cookie exists (up to 30 days). It is fail-safe but adds latency. For the partners author to consider (`waitUntil`, or clear the cookie after the bind).
+  - **Fixed in #414 (each with a regression test that fails on main, `tests/backend-error-codes.test.mjs`):**
+    1. **L3 (10-29):** a concurrent academy create answered 503; it is now 409. Per review N1, the test now serializes batches the way D1 does, so the loser really hits the `institution_members.user_id` UNIQUE.
+    2. **L2 (10-29):** a malformed body to the owner academies POST answered 503; it is now 400.
+    3. **10-22:** a D1 failure in `/api/roster` POST gave a bare 500; it is now a JSON 503 with `no-store`.
+  - **Not done:**
+    - W46 item 5 (billing-contract lines) is still blocked: #360 and #283 are both still open.
+    - Re-adding the Bosque smoke row and the #357 URL checks: no capacity this run.
+  - **Checks:** recorded in the PR #414 comment before it is marked ready.
+  - **Next action:**
+    1. Merge, deploy and smoke #414 (this run, if it can).
+    2. Fri 11-13: W46 items 6–8 and the W46 assessment.
+    3. Next Thursday: the smoke rows (W46 item 5b), and item 5a once #360/#283 resolve.
+    4. Step A of BOARD-DECISION-005 only when a trigger fires.
+  - **W46 plan item 4: done. Item 5: missed (blocked on #360/#283; 5b no capacity). Item 9: done (Sofia and Martin convened for their items).**
 - **2026-11-11 (Wednesday 3D routine): gated repair of the Madrid infectada unmount GPU leak** (branch `claude/board-wed-3d-20261111`, PR #406, base main `301306c`). Subscription usage: **UNKNOWN**.
   - **Monday's unit is still open and blocked.**
     - #282 Ascensor: R4 is unanswered (no comment since 10-26, no push since 11-02), so it was **not touched**.

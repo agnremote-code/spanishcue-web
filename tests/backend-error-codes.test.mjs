@@ -16,17 +16,26 @@ async function database() {
     async all() { return { results: sqlite.prepare(query).all(...values) }; },
     async run() { return { meta: { changes: Number(sqlite.prepare(query).run(...values).changes) } }; },
   });
+  // D1 runs each batch atomically and one at a time; the queue keeps two
+  // concurrent batches from interleaving on the one sqlite connection.
+  let queue = Promise.resolve();
+  const runBatch = async list => {
+    sqlite.exec('BEGIN');
+    try { const out = []; for (const item of list) out.push(await item.run()); sqlite.exec('COMMIT'); return out; } catch (error) { sqlite.exec('ROLLBACK'); throw error; }
+  };
+  const errors = [];
   const db = {
     prepare: query => statement(query),
-    async batch(list) {
-      sqlite.exec('BEGIN');
-      try { const out = []; for (const item of list) out.push(await item.run()); sqlite.exec('COMMIT'); return out; } catch (error) { sqlite.exec('ROLLBACK'); throw error; }
+    batch(list) {
+      const next = queue.then(() => runBatch(list));
+      queue = next.catch(error => { errors.push(String(error.message)); });
+      return next;
     },
   };
   const user = (id, email) => {
     sqlite.prepare("INSERT INTO users (id,email,normalized_email,role,status,created_at,updated_at,last_sign_in_at) VALUES (?,?,?, 'teacher', 'active',1,1,1)").run(id, email, email);
   };
-  return { sqlite, db, user };
+  return { sqlite, db, user, errors };
 }
 
 async function load() {
@@ -41,7 +50,7 @@ const origin = 'https://spanishcue.test';
 const routes = await load();
 
 test('two concurrent "create" requests for one account: one succeeds, the other is a 409 conflict', async () => {
-  const { sqlite, db, user } = await database();
+  const { sqlite, db, user, errors } = await database();
   globalThis.__ERROR_CODES_TEST_ENV = { DB: db };
   user('admin1', 'dir@academia.test');
   const headers = { 'x-chespanish-account-id': 'admin1', 'x-chespanish-user-email': 'dir@academia.test', 'x-chespanish-user-uid': 'uid-admin1', origin, 'content-type': 'application/json' };
@@ -49,6 +58,7 @@ test('two concurrent "create" requests for one account: one succeeds, the other 
   const statuses = (await Promise.all([create('Academia A'), create('Academia B')])).map(response => response.status).sort();
   assert.deepEqual(statuses, [200, 409]);
   assert.equal(sqlite.prepare('SELECT count(*) AS n FROM institutions').get().n, 1, 'the losing batch rolled back');
+  assert.deepEqual(errors, ['UNIQUE constraint failed: institution_members.user_id'], 'the loser hit the membership UNIQUE, as in D1');
 });
 
 test('owner academies POST: a malformed or non-object body is a 400, not a 503', async () => {

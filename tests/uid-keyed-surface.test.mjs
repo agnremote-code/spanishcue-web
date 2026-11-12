@@ -44,11 +44,49 @@ test('no new server code reads the Firebase UID as a data key (BOARD-DECISION-00
   assert.deepEqual(stale, [], 'these paths no longer read the UID; remove them from FROZEN');
 });
 
+// Routes that reach the UID through a helper instead of reading it directly
+// (Alejandro's review, 2026-11-12): the tracker's authenticatedOwnerId and every
+// importer of the Autoestudio share server, whose teacher() returns the UID.
+const FROZEN_CONSUMERS = new Set([
+  'app/api/class-records/[id]/route.ts',
+  'app/api/class-records/route.ts',
+  'app/api/students/[id]/route.ts',
+  'app/api/students/export/route.ts',
+  'app/api/students/route.ts',
+  'app/autoestudio/errors/server.ts',
+  'app/api/autoestudio/claim/route.ts',
+  'app/api/autoestudio/errors/route.ts',
+  'app/api/autoestudio/events/route.ts',
+  'app/api/autoestudio/learners/[id]/errors/route.ts',
+  'app/api/autoestudio/learners/[id]/notes/route.ts',
+  'app/api/autoestudio/learners/[id]/route.ts',
+  'app/api/autoestudio/passes/[id]/route.ts',
+  'app/api/autoestudio/passes/route.ts',
+  'app/api/autoestudio/progress/route.ts',
+  'app/api/autoestudio/session/route.ts',
+  'app/s/[token]/route.ts',
+  'worker/index.ts', // learner share-session cookie and /s redeem, not teacher()
+]);
+const helperUse = /\bauthenticatedOwnerId\b|from\s*['"][^'"]*autoestudio\/share\/server['"]|from\s*['"]\.\.\/share\/server['"]/;
+
+test('no new route reaches the Firebase UID through the tracker or share helpers (BOARD-DECISION-005)', () => {
+  const consumers = ['app', 'db', 'worker', 'server'].flatMap(sources)
+    .filter(file => !FROZEN.has(file))
+    .filter(file => helperUse.test(readFileSync(file, 'utf8')));
+  const unexpected = consumers.filter(file => !FROZEN_CONSUMERS.has(file));
+  assert.deepEqual(unexpected, [], 'new consumer(s) of a UID-keyed helper: key new teacher data by accountId (BOARD-DECISION-005)');
+  const stale = [...FROZEN_CONSUMERS].filter(file => !consumers.includes(file));
+  assert.deepEqual(stale, [], 'these paths no longer use a UID-keyed helper; remove them from FROZEN_CONSUMERS');
+});
+
 test('the guard pattern catches the known UID-read shapes', () => {
   for (const sample of ['return session.userId;', 'session?.userId', 'if(!user.userId)', "h.get('x-chespanish-user-uid')", 'headers.set(VERIFIED_UID_HEADER, uid)']) {
     assert.match(sample, uidRead, sample);
   }
   for (const sample of ['session.accountId', 'account.userId', 'accountIdFromHeaders(h)']) {
     assert.doesNotMatch(sample, uidRead, sample);
+  }
+  for (const sample of ["const owner = authenticatedOwnerId(request);", "import { listPasses } from '../../../autoestudio/share/server';", 'import { teacher } from "../share/server";']) {
+    assert.match(sample, helperUse, sample);
   }
 });
