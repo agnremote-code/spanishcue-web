@@ -1412,6 +1412,139 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["por-y-para", "conectores", "a2", "b1"],
   },
+  {
+    slug: "como-ensenar-gustar",
+    path: `${GUIAS_PATH}/como-ensenar-gustar`,
+    title: "Cómo enseñar gustar en ELE: secuencia de A1 a B1 con fichas",
+    description:
+      "Cómo enseñar gustar y los verbos como gustar: la idea que evita «yo gusto», qué va en cada nivel, errores típicos, actividades y una clase gratis de A1.",
+    h1: "Cómo enseñar gustar en ELE: una secuencia clara de A1 a B1",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Gustar es de los primeros verbos que un alumno quiere usar y de los que más tarda en dominar: «yo gusto el café», «me gusta los libros» o «a mí me gusto» aparecen en A1 y siguen apareciendo en B1. El problema casi nunca es la forma, que es sencilla, sino que la frase está construida al revés de lo que el alumno espera. Esta guía propone una secuencia concreta de A1 a B1, una idea que el alumno puede aplicar al hablar, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para cada paso, con una clase completa gratis.",
+    keywords: ["cómo enseñar gustar", "gustar ELE", "verbos como gustar", "actividades gustar", "gustar para extranjeros", "ejercicios gustar", "fichas gustar"],
+    published: "2026-11-12",
+    lessonIds: [332, 362, 363, 333, 392, 463],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: la cosa es la que gusta",
+        blocks: [
+          { type: "p", text: "Antes de cualquier tabla, el alumno necesita entender quién hace qué en la frase. La imagen más útil en clase es esta: **en «me gusta el café», el sujeto es el café; el café produce algo en mí**. Por eso el verbo concuerda con la cosa: «me gusta el café», «me gustan los libros». La persona va con un pronombre de objeto indirecto: me, te, le, nos, os, les." },
+          { type: "p", text: "Con esta idea, la mayoría de los errores se corrigen con una sola pregunta: «¿qué es lo que gusta?». Si es una cosa, gusta; si son varias, gustan; si es una acción en infinitivo, gusta. La forma «a mí», «a ti», «a ella» se presenta después, como forma de dar énfasis o de aclarar a quién." },
+          { type: "p", text: "La página de [gustar](/material-ele/gustar) de Material ELE resume la estructura con ejemplos listos para proyectar, y la de [pronombres de objeto](/material-ele/pronombres-de-objeto) cubre el sistema de me, te, le que sostiene todo el tema." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es presentar gustar, encantar, interesar, doler y parecer en la misma clase, con todas las personas. Funciona mejor empezar por me gusta y te gusta, añadir el plural y el infinitivo, y abrir el grupo de verbos cuando la estructura ya es automática. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "A1: me gusta, me gustan y me encanta",
+            blocks: [
+              { type: "ol", items: [
+                "**Gustar y encantar con nombre e infinitivo**: la clase gratis de [gustar y encantar](/gramatica/gustar-y-encantar). «Me gusta el cine», «me gustan las series», «me encanta cocinar».",
+                "**Pronombres tras preposición**: [ficha de a mí, a ti, conmigo](/material-ele/ficha/pronombres-tras-preposicion), para que «a mí también» y «a mí tampoco» lleguen con la forma correcta.",
+              ] },
+              { type: "p", text: "En A1 conviene trabajar sobre todo la primera y la segunda persona: el alumno habla de sus gustos y pregunta por los del otro. Le y les pueden esperar unas semanas." },
+            ],
+          },
+          {
+            title: "A2: el grupo de verbos y la tercera persona",
+            blocks: [
+              { type: "p", text: "Con la base de A1 llega la ficha de [gustar, interesar, doler y faltar](/material-ele/ficha/gustar-interesar-doler-faltar-concordancia): «me duele la cabeza», «nos falta tiempo», «le interesan los idiomas». Al lado, la ficha de [objeto indirecto: le, les, me, te](/material-ele/ficha/objeto-indirecto-le-les-me-te) ordena el sistema completo de pronombres y explica por qué decimos «a mi hermana le gusta» con los dos elementos." },
+            ],
+          },
+          {
+            title: "B1: me gusta que + subjuntivo",
+            blocks: [
+              { type: "p", text: "En B1, gustar abre la puerta al subjuntivo: «me gusta que me llames», «me molesta que llegue tarde». La ficha de [emociones y reacciones con que + subjuntivo](/material-ele/ficha/emociones-y-reacciones-con-que-subjuntivo) trabaja este paso, que funciona mejor si el alumno ya usa gustar con infinitivo sin pensar. La regla práctica: mismo sujeto, infinitivo; sujeto distinto, que + subjuntivo." },
+            ],
+          },
+          {
+            title: "B2: duplicación y foco",
+            blocks: [
+              { type: "p", text: "En B2 el foco pasa a la [duplicación de pronombres y el foco](/material-ele/ficha/pronombres-redundancia-duplicacion-y-foco): por qué «a Juan le gusta» lleva los dos elementos y cómo cambia el sentido al poner la persona delante o detrás. Aquí también entran verbos como parecer, caer bien o quedar bien con valoraciones." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicarlo en clase sin tablas eternas",
+        blocks: [
+          { type: "p", text: "Tres técnicas que funcionan mejor que la tabla completa de personas:" },
+          { type: "ol", items: [
+            "**La flecha al revés.** Dibuja la cosa a la izquierda y a la persona a la derecha, con una flecha de la cosa a la persona. La cosa es el sujeto; la persona recibe el efecto.",
+            "**Pares de frases.** «Me gusta el libro» frente a «me gustan los libros», «me gusta leer» frente a «me gustan las novelas». Pregunta qué cambia en la cosa, no en la persona.",
+            "**Respuestas cortas aparte.** A mí también, a mí tampoco, a mí sí, a mí no: un bloque de cuatro respuestas que se practica en conversación desde el primer día.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación:" },
+          { type: "ul", items: [
+            "**«Yo gusto el café».** El alumno traslada la estructura de su lengua. Solución: la flecha al revés y la pregunta «¿qué es lo que gusta?».",
+            "**«Me gusta los libros».** Falta la concordancia con el plural. Solución: pares de frases con singular y plural, siempre con la cosa subrayada.",
+            "**«A mí gusta la música».** Falta el pronombre. Solución: presentar «a mí me gusta» como bloque y explicar que «a mí» es opcional y «me» no.",
+            "**«Le gusta a ellos».** Confusión entre le y les. Solución: en A2, contar las personas que reciben el efecto antes de elegir el pronombre.",
+            "**«Me gusta que vienes».** Indicativo después de que en B1. Solución: la regla del sujeto distinto y ejemplos de reacciones reales.",
+          ] },
+          { type: "p", text: "El [ejercicio de gustar](/material-ele/ejercicio/gustar) practica estos puntos con soluciones, el de [pronombres de objeto](/material-ele/ejercicio/pronombres-de-objeto) refuerza el sistema completo y el [ejercicio de A1](/material-ele/ejercicio/a1) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar gustar",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la forma; la conversación fija el uso. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**Gustos en común.** La actividad [gustos en común](/material-ele/actividad/gustos-en-comun): el alumno busca tres cosas que le gustan a los dos y tres que no, con a mí también y a mí tampoco.",
+            "**El médico.** Un juego de roles en la consulta: ¿qué te duele?, me duele la espalda, me duelen los pies.",
+            "**La lista del otro.** El alumno adivina qué le gusta y qué le molesta a una persona famosa o a alguien de su familia, en tercera persona.",
+            "**Lo que me molesta.** En B1, cinco situaciones cotidianas y una reacción con me molesta que o me encanta que.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades), materiales de la función [expresar gustos](/material-ele/funciones/expresar-gustos) y preguntas listas para el nivel en [preguntas de conversación de A1](/material-ele/preguntas/a1). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A1, gustar)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de gustar en A1, esta secuencia deja al alumno hablando de sus gustos con la estructura correcta:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** fotos de comida, deportes y lugares en pantalla. El alumno señala lo que prefiere, sin estructura todavía.",
+            "**Contraste (5 minutos):** la flecha al revés y tres pares de frases en singular y plural.",
+            "**Clase (25 minutos):** la clase gratis de [gustar y encantar](/gramatica/gustar-y-encantar), con el modo profesor en pantalla compartida.",
+            "**Producción (10 minutos):** el alumno describe un fin de semana perfecto: qué le gusta hacer, qué le encanta comer y qué no le gusta nada. El profesor responde con a mí también o a mí no.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de gustar es gratis",
+        blocks: [
+          { type: "p", text: "Se abre gratis y sin registro la clase interactiva de [gustar y encantar](/gramatica/gustar-y-encantar), con su ficha completa, además de todas las fichas de esta guía, el ejercicio de gustar y las preguntas de conversación. El resto de clases forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A1](/material-ele/a1) ordena todo el material, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Las otras guías de esta serie son [cómo enseñar por y para](/material-ele/guia/como-ensenar-por-y-para), [cómo enseñar ser y estar](/material-ele/guia/como-ensenar-ser-y-estar) y [cómo enseñar el indefinido y el imperfecto](/material-ele/guia/como-ensenar-indefinido-e-imperfecto)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña gustar?", answer: "Desde A1, con me gusta, me gustan y me encanta con nombres e infinitivos. En A2 se amplía a la tercera persona y a verbos como interesar, doler y faltar. En B1 llega me gusta que + subjuntivo." },
+      { question: "¿Cuál es la mejor forma de explicar gustar?", answer: "Con la idea de que la cosa es el sujeto: en «me gusta el café», el café produce algo en la persona. Por eso el verbo concuerda con la cosa y la persona va con me, te, le, nos, os o les." },
+      { question: "¿Por qué los alumnos dicen «yo gusto»?", answer: "Porque en muchas lenguas la persona es el sujeto del verbo equivalente. La solución más eficaz es la pregunta «¿qué es lo que gusta?», que obliga a buscar el sujeto real de la frase." },
+      { question: "¿Hay una clase gratis de gustar?", answer: "Sí. La clase interactiva de gustar y encantar de A1 de SpanishCue se abre gratis, con su ficha completa, y en Material ELE hay fichas, un ejercicio con soluciones y preguntas de conversación, todo sin registro." },
+    ],
+    related: ["gustar", "pronombres-de-objeto", "a1", "a2"],
+  },
 ];
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
