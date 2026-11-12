@@ -505,3 +505,50 @@ export function stepTraffic(cars, player, dt, blockers = []) {
     return { ...car, x, speed };
   });
 }
+
+// ---------------------------------------------------------------- lighter worlds
+// Shared by every 3D world so a laptop does not spin its fans in a class.
+
+// A frame limiter for requestAnimationFrame loops. Fast displays (90–144 Hz)
+// draw at most ~60 times a second, and a "calm" world (the title card, a panel
+// over the scene) about 30. A frame is only skipped when it comes clearly
+// early, so a 60 Hz display never drops one and the pace stays even.
+export function createFramePacer(fps = 60, calmFps = 30) {
+  let last = -Infinity;
+  return (now, calm = false) => {
+    if (now - last < (1000 / (calm ? calmFps : fps)) * 0.78) return false;
+    last = now;
+    return true;
+  };
+}
+
+// How many device pixels per CSS pixel a world draws. Besides the usual cap,
+// a very large canvas (a maximised window on a big Retina display) is held to
+// a pixel budget: past ~5 megapixels the extra sharpness is not visible but
+// the graphics card pays for every pixel, every frame.
+export function worldPixelRatio(width, height, cap, device = 1, budget = 5e6) {
+  const fit = Math.sqrt(budget / Math.max(1, width * height));
+  return Math.min(device || 1, cap, Math.max(1, fit));
+}
+
+// Scene.updateMatrixWorld walks every object every frame, also the floors and
+// areas that are hidden. This walks only what is visible; something hidden is
+// brought up to date on the first frame it shows again (its parent forces it).
+function updateVisibleMatrices(object, force) {
+  if (!object.visible) return;
+  if (object.matrixAutoUpdate) object.updateMatrix();
+  if (object.matrixWorldNeedsUpdate || force) {
+    if (object.matrixWorldAutoUpdate) {
+      if (object.parent === null) object.matrixWorld.copy(object.matrix);
+      else object.matrixWorld.multiplyMatrices(object.parent.matrixWorld, object.matrix);
+    }
+    object.matrixWorldNeedsUpdate = false;
+    force = true;
+  }
+  const children = object.children;
+  for (let i = 0; i < children.length; i++) updateVisibleMatrices(children[i], force);
+}
+export function skipHiddenMatrices(scene) {
+  scene.updateMatrixWorld = function (force) { updateVisibleMatrices(this, force === true); };
+  return scene;
+}

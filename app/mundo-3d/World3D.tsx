@@ -14,7 +14,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { angleBetween, canUseKeys, followYaw, inputFrom, keyAction, stepPlayer } from '../noche-abierta/world3d.mjs';
+import { angleBetween, canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, createFramePacer, skipHiddenMatrices, worldPixelRatio } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { animatePerson, setMood } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
@@ -96,7 +96,8 @@ export default function World3D(props: WorldProps) {
     try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
     catch { const t = window.setTimeout(() => live.current.onFail(), 0); return () => window.clearTimeout(t); }
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, low ? 1.25 : 1.75));
+    const ratioCap = low ? 1.25 : 1.75;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, ratioCap));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1;
     renderer.shadowMap.enabled = !low;
@@ -105,7 +106,7 @@ export default function World3D(props: WorldProps) {
     renderer.domElement.setAttribute('aria-label', `${live.current.country.name.es} en 3D. Flechas o WASD para caminar, espacio para saltar, E para entrar o hablar.`);
     host.appendChild(renderer.domElement);
 
-    const scene = new THREE.Scene();
+    const scene = skipHiddenMatrices(new THREE.Scene());
     const camera = new THREE.PerspectiveCamera(58, 1, 0.1, 1600);
     let map: ReturnType<typeof buildMap>;
     let hero: ReturnType<typeof createHero>;
@@ -333,6 +334,8 @@ export default function World3D(props: WorldProps) {
     let baseFov = 58, W = 1, H = 1;
     const resize = () => {
       W = host.clientWidth || 1; H = host.clientHeight || 1;
+      const ratio = worldPixelRatio(W, H, ratioCap, window.devicePixelRatio);
+      if (ratio !== renderer.getPixelRatio()) { renderer.setPixelRatio(ratio); composer?.setPixelRatio(ratio); }
       renderer.setSize(W, H, false); composer?.setSize(W, H);
       camera.aspect = W / H; baseFov = W / H < 0.8 ? 70 : 58; camera.fov = baseFov; camera.updateProjectionMatrix();
     };
@@ -350,9 +353,11 @@ export default function World3D(props: WorldProps) {
     }
 
     // ------------------------------------------------------------ loop
+    const pace = createFramePacer();
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
+      if (!pace(now)) return;
       const raw = previous ? (now - previous) / 1000 : 0.016;
       const dt = Math.min(0.05, raw);
       previous = now; clock += dt;
