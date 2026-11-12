@@ -11,7 +11,7 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
+import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, skipHiddenMatrices, worldPixelRatio } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { CEILING, ELEVATOR, ELEVATOR_ARRIVAL, SPAWN, STAIRS_ARRIVAL, atElevator, atStairs, cameraBlockers, circleStep, floorById, sceneById, sceneFraming, sectorAt, solidsFor, spotAt } from './layout.mjs';
 import { buildAirport, talking as talkingNow, type Airport, type Npc, type Mover } from './aeropuerto3d';
@@ -71,7 +71,8 @@ export default function World3D(props: WorldProps) {
     try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
     catch { const t = window.setTimeout(() => live.current.onFail(), 0); return () => window.clearTimeout(t); }
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, low ? 1.2 : 1.75));
+    const ratioCap = low ? 1.2 : 1.75;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, ratioCap));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 0.94;
     renderer.shadowMap.enabled = !low;
@@ -80,7 +81,7 @@ export default function World3D(props: WorldProps) {
     renderer.domElement.setAttribute('aria-label', 'Aeropuerto de Puerto Bruma en 3D. Flechas o WASD para caminar, arrastra para mirar, E para hablar.');
     host.appendChild(renderer.domElement);
 
-    const scene = new THREE.Scene();
+    const scene = skipHiddenMatrices(new THREE.Scene());
     scene.background = new THREE.Color('#070a12');
     scene.fog = new THREE.Fog('#0a0f18', 50, 260);
     const camera = new THREE.PerspectiveCamera(58, 1, 0.08, 900);
@@ -222,6 +223,8 @@ export default function World3D(props: WorldProps) {
     let baseFov = 58;
     const resize = () => {
       const w = host.clientWidth || 1, h = host.clientHeight || 1;
+      const ratio = worldPixelRatio(w, h, ratioCap, window.devicePixelRatio);
+      if (ratio !== renderer.getPixelRatio()) { renderer.setPixelRatio(ratio); composer?.setPixelRatio(ratio); }
       renderer.setSize(w, h, false);
       composer?.setSize(w, h);
       camera.aspect = w / h;
@@ -254,9 +257,11 @@ export default function World3D(props: WorldProps) {
     }
 
     // ------------------------------------------------------------ loop
+    const pace = createFramePacer();
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
+      if (!pace(now, live.current.intro || live.current.paused)) return;
       const dt = Math.min(0.05, previous ? (now - previous) / 1000 : 0.016);
       previous = now;
       clock += dt;

@@ -2,7 +2,7 @@
 
 import * as THREE from 'three';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { canUseKeys, followYaw, inputFrom, keyAction } from '../noche-abierta/world3d.mjs';
+import { canUseKeys, createFramePacer, followYaw, inputFrom, keyAction } from '../noche-abierta/world3d.mjs';
 import { currentQuest, type GameState } from './engine.mjs';
 import { buildWorld } from './world';
 import { createPrince } from './characters';
@@ -299,10 +299,12 @@ export default function World3D(props: WorldProps) {
     observer.observe(host);
     resize();
 
+    const pace = createFramePacer();
     const render = (now: number) => {
       if (disposed) return;
       frame = window.requestAnimationFrame(render);
       if (document.hidden || contextFailed) { previous = now; return; }
+      if (!pace(now)) return;
       const dt = previous ? Math.min((now - previous) / 1000, .05) : 1 / 60;
       previous = now;
       clock += dt;
