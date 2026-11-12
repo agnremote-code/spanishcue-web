@@ -25,7 +25,7 @@ const scenes = {
     ],
     end: "Rocco te devuelve la ficha y te empuja la puerta giratoria con una reverencia. «Ten cuidado ahí dentro. Y si alguien te pregunta, yo no te he visto.» Al fondo brilla la recepción de mármol.",
     talk: [
-      "¿Te pareces más a tu padre o a tu madre? ¿En qué cosas buenas y en qué cosas malas?",
+      "¿Qué rasgos de tu forma de ser crees que has heredado de tu familia?",
       "¿Qué cosas de tu familia no te gustaría repetir nunca en tu vida?",
       "¿Hay alguna persona de tu pasado que te gustaría volver a ver, aunque te diera un poco de miedo?",
       "Si un desconocido te dijera que sabe un secreto de tu familia, ¿querrías escucharlo o preferirías no saberlo?",
@@ -620,7 +620,7 @@ const scenes = {
     end: "Marco te deja sola en la terraza. El helicóptero se aleja. Detrás de ti, una puerta de madera oscura se abre sola: la oficina del dueño.",
     talk: [
       "¿Cuánto dinero tendrían que ofrecerte para abandonar algo muy importante para ti?",
-      "¿Te atrae la gente peligrosa o te da miedo? ¿Por qué crees que nos atrae a veces?",
+      "¿Qué señales te hacen desconfiar de alguien demasiado encantador?",
       "¿Alguna vez has sentido celos de un hermano o de alguien a quien tus padres querían mucho?",
       "¿Qué es más fuerte en ti: el orgullo o la necesidad? ¿En qué situaciones lo notas?",
       "¿Crees que Marco es un villano o solo un hijo con miedo?",

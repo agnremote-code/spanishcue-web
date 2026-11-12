@@ -42,7 +42,7 @@ export default {
     ],
     talk: [
       '¿Qué haces normalmente para no aburrirte cuando te toca esperar mucho tiempo?',
-      '¿Te resulta fácil hablar con desconocidos o necesitas tiempo para soltarte?',
+      '¿De qué temas te parece fácil hablar con un desconocido?',
       '¿Alguna vez una conversación con un desconocido te cambió el día?',
       '¿Qué es peor para ti: estar solo en casa o estar rodeado de gente que no conoces?',
       'Si un día tuvieras que pasar ocho horas en una sala de espera, ¿qué te llevarías para sobrevivir?',
