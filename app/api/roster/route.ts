@@ -32,13 +32,18 @@ export async function POST(request: Request) {
   if (!origin || origin !== new URL(request.url).origin) return json({ error: "Origen no permitido." }, 403);
   let body: Record<string, unknown>;
   try { body = await request.json(); } catch { return json({ error: "Solicitud no válida." }, 400); }
-  if (body?.action === "sync") {
-    const created = await syncRoster(env.DB, owner);
-    return json({ created, links: await listLinks(env.DB, owner) });
-  }
-  if (body?.action === "link" && typeof body.learnerId === "string" && typeof body.studentId === "string" && idPattern.test(body.learnerId) && idPattern.test(body.studentId)) {
-    if (!await linkLearner(env.DB, owner, body.learnerId, body.studentId)) return json({ error: "No encontramos ese alumno." }, 404);
-    return json({ links: await listLinks(env.DB, owner) });
+  try {
+    if (body?.action === "sync") {
+      const created = await syncRoster(env.DB, owner);
+      return json({ created, links: await listLinks(env.DB, owner) });
+    }
+    if (body?.action === "link" && typeof body.learnerId === "string" && typeof body.studentId === "string" && idPattern.test(body.learnerId) && idPattern.test(body.studentId)) {
+      if (!await linkLearner(env.DB, owner, body.learnerId, body.studentId)) return json({ error: "No encontramos ese alumno." }, 404);
+      return json({ links: await listLinks(env.DB, owner) });
+    }
+  } catch {
+    // A D1 failure is a retryable outage: answer JSON, never a cached bare 500.
+    return json({ error: "No pudimos actualizar la lista. Inténtalo de nuevo." }, 503);
   }
   return json({ error: "Solicitud no válida." }, 400);
 }
