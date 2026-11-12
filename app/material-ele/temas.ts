@@ -287,6 +287,23 @@ const levelCopy: Record<TemaGroupId, LevelCopy> = {
   cultura: { where: "Cada una lleva al alumno a un lugar que se recorre hablando, con escuchas por zona y preguntas sobre la vida real para que practique", order: "Primero el recorrido y la escucha, después la conversación comparada con la vida del alumno.", faqStart: "las clases van del recorrido y la escucha a la conversación, y cada país o tema suma acentos y registros nuevos", descTail: "con recorrido, escuchas por zona y conversación", shortTail: "recorrido, escucha y conversación" },
   formatos: { where: "Cada una usa este formato con la exigencia del nivel: la misma mecánica pide más lengua a medida que el alumno sube, y en todas hay un momento en que necesita", order: "De la clase más corta a la más larga: primero la que entra en media hora, después las que llenan una sesión entera.", faqStart: "las clases van de la más corta a la más larga, y dentro del formato cada una cambia la situación y el léxico", descTail: "con la mecánica del formato y conversación final", shortTail: "mecánica del formato y conversación final" },
 };
+/** Search-facing title and description for the level pages that Search Console
+ *  shows close to the first results (2026-11-12): they name what the page
+ *  holds in the words people search («comprensión auditiva A1 español»). */
+const levelSeo: Record<string, { title: (level: string) => string; description: (level: string, count: number) => string }> = {
+  "formatos/comprension-auditiva": {
+    title: (level) => `Comprensión auditiva ${level} en español: audios y actividades ELE | SpanishCue`,
+    description: (level, count) => `Comprensión auditiva ${level} en español: ${count} clases con audios de voces de distintos países, preguntas de comprensión y conversación final para la clase de ELE.`,
+  },
+  "formatos/juegos-de-conversacion": {
+    title: (level) => `Juegos de conversación ${level} en español: actividades ELE | SpanishCue`,
+    description: (level, count) => `Juegos de conversación en español para ${level}: ${count} clases interactivas para que los alumnos hablen, con dinámica de juego, preguntas y conversación final.`,
+  },
+  "formatos/roleplays": {
+    title: (level) => `Roleplays ${level} en español: situaciones para la clase de ELE | SpanishCue`,
+    description: (level, count) => `Roleplays en español para ${level}: ${count} clases interactivas con situaciones reales, papeles claros y una conversación final para la clase de ELE.`,
+  },
+};
 function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   const ids = tema.lessonIds.filter((id) => { const lesson = lessonById.get(id); return lesson ? lessonLevels(lesson).includes(level) : false; });
   if (ids.length < 2) return null;
@@ -300,9 +317,12 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   let description = `${tema.name} para alumnos de ${level}: ${ids.length} clases interactivas con teoría visual, práctica corregida y conversación, ${copy.descTail}.`;
   if (description.length > 165) description = `${tema.name} en ${level}: ${ids.length} clases interactivas con ${copy.shortTail} para la clase de ELE.`;
   if (description.length < 110) description = `${description} Tres clases gratis por nivel para probar sin registro.`;
+  const seo = levelSeo[`${tema.group}/${tema.slug}`];
+  const seoTitle = seo?.title(level);
+  const seoDescription = seo?.description(level, ids.length);
   return {
     group: tema.group, parent: tema.parent, slug: tema.slug, level, path: `${tema.path}/${level.toLowerCase()}`, name: tema.name, tema,
-    h1: `${tema.name} en ${level}: ${ids.length} clases ${levelPhrase[level]}`, title, description, order: copy.order,
+    h1: `${tema.name} en ${level}: ${ids.length} clases ${levelPhrase[level]}`, title: seoTitle && seoTitle.length <= 78 ? seoTitle : title, description: seoDescription && seoDescription.length >= 110 && seoDescription.length <= 165 ? seoDescription : description, order: copy.order,
     intro: `En ${level}, el tema «${tema.name}» se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. ${copy.where} ${lower} para decir lo que quiere decir.`,
     lessonIds: ids, freeCount,
     goals: uniq(items.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
