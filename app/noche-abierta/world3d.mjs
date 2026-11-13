@@ -505,3 +505,87 @@ export function stepTraffic(cars, player, dt, blockers = []) {
     return { ...car, x, speed };
   });
 }
+
+// ---------------------------------------------------------------- lighter worlds
+// Shared by every 3D world so a laptop does not spin its fans in a class.
+
+// A frame limiter for requestAnimationFrame loops. Fast displays (90–144 Hz)
+// draw at most ~60 times a second, and a "calm" world (the title card, a panel
+// over the scene, the mascot standing still) about 30. A frame is only skipped
+// when it comes clearly early, so a 60 Hz display never drops one and the pace
+// stays even.
+//
+// It also watches how long each frame's work takes. Measured on the owner's
+// MacBook (M4, 2026-11-13): the airport needs ~25 ms per frame all told, so at
+// 60 fps the machine is saturated and everything else stalls, while the
+// script's own share is only 5 ms. When that share stays above HEAVY_MS, or
+// frames keep arriving late, the world drops to the calm pace until it is
+// clearly light again; a light world on a computer that copes keeps its 60.
+const HEAVY_MS = 4, LIGHT_MS = 1.5;
+export function createFramePacer(fps = 60, calmFps = 30) {
+  let last = -Infinity, heavy = false, work = 0, streak = 0, late = 0;
+  const clockNow = () => (typeof performance !== 'undefined' ? performance.now() : 0);
+  const measure = (ms) => {
+    work += (ms - work) * 0.05;
+    const crossed = heavy ? work < LIGHT_MS : work > HEAVY_MS;
+    streak = crossed ? streak + 1 : 0;
+    if (streak > (heavy ? 300 : 120)) { heavy = !heavy; streak = 0; }
+  };
+  const pace = (now, calm = false) => {
+    const step = 1000 / (calm || heavy ? calmFps : fps);
+    if (now - last < step * 0.78) return false;
+    // Running at full pace and still a quarter of the frames come late: saturated.
+    if (!calm && !heavy && now - last < 250) {
+      late += ((now - last > step * 1.45 ? 1 : 0) - late) * 0.02;
+      if (late > 0.25) { heavy = true; streak = 0; late = 0; }
+    }
+    last = now;
+    const start = clockNow();
+    // Runs right after the frame callback returns: the time the frame took.
+    queueMicrotask(() => measure(clockNow() - start));
+    return true;
+  };
+  pace.measure = measure;
+  pace.heavy = () => heavy;
+  pace.work = () => work;
+  if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('qa3d')) window.__pace = pace;
+  return pace;
+}
+
+// How many device pixels per CSS pixel a world draws. Desktop worlds stop at
+// 1.5 (the graphics card pays for every pixel, every frame, and on the owner's
+// MacBook the fill was the largest single cost), and a very large canvas is
+// held to a ~5 megapixel budget.
+export const MAX_PIXEL_RATIO = 1.5;
+export function worldPixelRatio(width, height, cap, device = 1, budget = 5e6) {
+  const fit = Math.sqrt(budget / Math.max(1, width * height));
+  return Math.min(device || 1, cap, MAX_PIXEL_RATIO, Math.max(1, fit));
+}
+
+// Scene.updateMatrixWorld walks every object every frame, also the floors and
+// areas that are hidden. This walks only what is visible; something hidden is
+// brought up to date on the first frame it shows again (its parent forces it).
+function updateVisibleMatrices(object, force) {
+  if (!object.visible) return;
+  if (object.matrixAutoUpdate) object.updateMatrix();
+  if (object.matrixWorldNeedsUpdate || force) {
+    if (object.matrixWorldAutoUpdate) {
+      if (object.parent === null) object.matrixWorld.copy(object.matrix);
+      else object.matrixWorld.multiplyMatrices(object.parent.matrixWorld, object.matrix);
+    }
+    object.matrixWorldNeedsUpdate = false;
+    force = true;
+  }
+  const children = object.children;
+  for (let i = 0; i < children.length; i++) updateVisibleMatrices(children[i], force);
+}
+export function skipHiddenMatrices(scene) {
+  scene.updateMatrixWorld = function (force) { updateVisibleMatrices(this, force === true); };
+  return scene;
+}
+
+// Browser checks (?qa3d) can reach a world's renderer to measure it on the
+// real graphics card; nothing changes for anyone else.
+export function exposeForQa(handles) {
+  if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('qa3d')) window.__w3d = handles;
+}

@@ -22,7 +22,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { angleBetween, canUseKeys, escapeSolids, followYaw, inputFrom, keyAction, stepPlayer } from '../noche-abierta/world3d.mjs';
+import { angleBetween, canUseKeys, escapeSolids, followYaw, inputFrom, keyAction, stepPlayer, createFramePacer, skipHiddenMatrices, worldPixelRatio, exposeForQa } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { animatePerson, setMood, setPose } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
@@ -105,10 +105,12 @@ export default function World3D(props: WorldProps) {
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760 || params.get('calidad') === 'baja';
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
-    try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
+    // No canvas antialiasing: on desktop the picture is drawn by the effect composer, which never used it (it only cost video memory).
+    try { renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' }); }
     catch { const t = window.setTimeout(() => live.current.onFail(), 0); return () => window.clearTimeout(t); }
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, low ? 1.1 : 1.6));
+    const ratioCap = low ? 1.1 : 1.6;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, ratioCap));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.shadowMap.enabled = !low;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -116,7 +118,7 @@ export default function World3D(props: WorldProps) {
     renderer.domElement.setAttribute('aria-label', 'Madrid infectada en 3D. Flechas o WASD para caminar, espacio para saltar, F para disparar a la nube o a un zombi, E para hablar o bajar al metro.');
     host.appendChild(renderer.domElement);
 
-    const scene = new THREE.Scene();
+    const scene = skipHiddenMatrices(new THREE.Scene());
     const camera = new THREE.PerspectiveCamera(58, 1, 0.1, 160);
     let hero: ReturnType<typeof createHero>;
     let gear: ReturnType<typeof gearUp>;
@@ -146,6 +148,7 @@ export default function World3D(props: WorldProps) {
       composer.addPass(new UnrealBloomPass(new THREE.Vector2(512, 512), 0.35, 0.45, 0.88));
       composer.addPass(new OutputPass());
     }
+    exposeForQa({ renderer, scene, camera, composer });
 
     // ------------------------------------------------------------ the city, built once
     scene.add(city.group);
@@ -270,6 +273,11 @@ export default function World3D(props: WorldProps) {
     const crows = (x: number, z: number) => { for (let i = 0; i < (low ? 6 : 12); i++) { const m = new THREE.Mesh(birdGeo, birdMat); m.position.set(x + (Math.random() - 0.5) * 3, 0.3, z + (Math.random() - 0.5) * 3); scene.add(m); const a = Math.random() * Math.PI * 2; bits.push({ obj: m, v: new THREE.Vector3(Math.cos(a) * 4, 3 + Math.random() * 2, Math.sin(a) * 4), life: 3.5, kind: 'bird' }); } };
     const dust = (x: number, z: number, n: number) => { for (let i = 0; i < n; i++) { const s = new THREE.Sprite(dustMat); s.position.set(x + (Math.random() - 0.5), 0.3, z + (Math.random() - 0.5)); s.scale.setScalar(0.8); scene.add(s); bits.push({ obj: s, v: new THREE.Vector3((Math.random() - 0.5) * 3, 0.6, (Math.random() - 0.5) * 3), life: 1.2, kind: 'puff' }); } };
 
+    /** Frees a group: instance buffers first (the kit's disposeGroup leaves them), then the rest. */
+    function free(root: THREE.Object3D) {
+      root.traverse(o => { if ((o as THREE.InstancedMesh).isInstancedMesh) (o as THREE.InstancedMesh).dispose(); });
+      disposeGroup(root);
+    }
     function placeHero() {
       hero.root.position.set(player.x, player.y, player.z);
       hero.root.rotation.y = player.heading;
@@ -307,7 +315,7 @@ export default function World3D(props: WorldProps) {
       live.current.onEvent('metro');
     }
     function leaveMetro(where: { x: number; z: number; heading: number }) {
-      if (metro) { disposeGroup(metro.scene.group); metro = null; }
+      if (metro) { free(metro.scene.group); metro = null; }
       city.group.visible = true;
       place = cityPlace; doneKey = '';
       setLight(city.moodOf(whereIs(where.x, where.z).zone));
@@ -400,6 +408,8 @@ export default function World3D(props: WorldProps) {
     let baseFov = 58, W = 1, H = 1;
     const resize = () => {
       W = host.clientWidth || 1; H = host.clientHeight || 1;
+      const ratio = worldPixelRatio(W, H, ratioCap, window.devicePixelRatio);
+      if (ratio !== renderer.getPixelRatio()) { renderer.setPixelRatio(ratio); composer?.setPixelRatio(ratio); }
       renderer.setSize(W, H, false); composer?.setSize(W, H);
       camera.aspect = W / H; baseFov = W / H < 0.8 ? 70 : 58; camera.fov = baseFov; camera.updateProjectionMatrix();
     };
@@ -453,9 +463,11 @@ export default function World3D(props: WorldProps) {
     }
 
     // ------------------------------------------------------------ loop
+    const pace = createFramePacer();
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
+      if (!pace(now)) return;
       const raw = previous ? (now - previous) / 1000 : 0.016;
       const dt = Math.min(0.05, raw);
       previous = now; clock += dt;
@@ -898,10 +910,17 @@ export default function World3D(props: WorldProps) {
       window.removeEventListener('keydown', onKeyDown); window.removeEventListener('keyup', onKeyUp); window.removeEventListener('blur', onBlur);
       el.removeEventListener('pointerdown', onDown); el.removeEventListener('pointermove', onMove);
       el.removeEventListener('pointerup', onUp); el.removeEventListener('pointercancel', onUp); el.removeEventListener('wheel', onWheel);
-      if (metro) disposeGroup(metro.scene.group);
-      disposeGroup(scene);
-      composer?.dispose();
+      // 2026-11-11 repair: the station, then the scene (the city's tree instance buffers first,
+      // which disposeGroup does not free), the particle stock that lives outside the scene,
+      // the bloom passes' own render targets (composer.dispose() frees only its two), the
+      // sun's shadow map, and finally the context, which frees any GPU memory left.
+      if (metro) free(metro.scene.group);
+      free(scene);
+      for (const stock of [sparkGeo, sparkMat, birdGeo, birdMat, dustMat, puffTex, markTex]) stock.dispose();
+      if (composer) { for (const pass of composer.passes) pass.dispose(); composer.dispose(); }
+      sun.shadow.map?.dispose();
       renderer.dispose();
+      renderer.forceContextLoss();
       renderer.domElement.remove();
       api.current = null;
     };

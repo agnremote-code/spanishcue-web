@@ -134,6 +134,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/hospital-a0-english-additions-20261015.json',
   'docs/audits/hospital-patients-english-additions-20261015.json',
   'docs/audits/grammar-course-english-additions-20261020.json',
+  'docs/audits/grammar-course-extensions-english-additions-20261111.json',
   'docs/audits/article-immersive-english-additions-20261009.json',
   'docs/audits/instagram-funnel-english-additions-20261009.json',
   'docs/audits/article-studio-english-additions-20261009.json',
@@ -170,6 +171,8 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/el-consorcio-english-additions-20261101.json',
   'docs/audits/la-boda-english-additions-20261104.json',
   'docs/audits/el-tren-de-las-2340-english-additions-20261104.json',
+  'docs/audits/el-mundo-en-blanco-english-additions-20261111.json',
+  'docs/audits/pulido-lote-03-english-additions-20261112.json',
   'docs/audits/autoestudio-espejo-english-20261105.json',
   'docs/audits/hr-crisis-english-additions-20261110.json',
 ];

@@ -51,3 +51,15 @@ test('private grammar classrooms and premium audio remain protected',async()=>{
  }
  const free=await fetch(origin+'/audio/grammar-free/40.mp3');assert.equal(free.status,200);assert.match(free.headers.get('content-type'),/audio/);
 });
+
+// Free grammar classes are search landing pages: a title that says they are free, a description that fits the snippet and LearningResource data. PRO classes never get them.
+for(const [path,level] of [['/gramatica/gustar-y-encantar','A1'],['/gramatica/por-y-para-motivo-y-destino','A2'],['/la-fabrica-de-los-nombres','A1']])test(`free grammar class is a search landing page: ${path}`,async()=>{
+ const response=await fetch(origin+path);assert.equal(response.status,200);
+ const d=new JSDOM(await response.text()).window.document;
+ assert.match(d.title,new RegExp(`· clase gratis ${level} \\| SPANISHCUE$`));
+ const description=d.querySelector('meta[name="description"]')?.content||'';assert.match(description,/^Clase gratis de español/);assert.ok(description.length>=110&&description.length<=170,String(description.length));
+ const data=[...d.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>JSON.parse(s.textContent));
+ const resource=data.find(x=>x['@type']==='LearningResource');assert.ok(resource,'LearningResource');
+ assert.equal(resource.url,'https://spanishcue.com'+path);assert.equal(resource.isAccessibleForFree,true);assert.equal(resource.educationalLevel,`MCER ${level}`);
+ assert.ok(data.some(x=>x['@type']==='BreadcrumbList'));
+});

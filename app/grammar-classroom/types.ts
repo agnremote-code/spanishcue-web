@@ -9,7 +9,7 @@ export type LessonContext = {
   warmup: string[];
   reading: { title: string; text: string; questions: Question[] };
   discovery: { prompt: string; model: string }[];
-  listening: { title: string; transcript: string; voice: 'es-MX-DaliaNeural' | 'es-ES-AlvaroNeural'; questions: Question[] };
+  listening: { title: string; transcript: string; voice: 'en-US-EmmaMultilingualNeural' | 'de-DE-FlorianMultilingualNeural'; questions: Question[] };
   speaking: { prompt: string; followUp: string; support: string }[];
   writing: { prompt: string; words: [number, number]; model: string; checklist: string[] };
   closing: { prompt: string; model: string };

@@ -42,7 +42,7 @@ export default {
     ],
     talk: [
       '¿Qué haces normalmente para no aburrirte cuando te toca esperar mucho tiempo?',
-      '¿Te resulta fácil hablar con desconocidos o necesitas tiempo para soltarte?',
+      '¿De qué temas te parece fácil hablar con un desconocido?',
       '¿Alguna vez una conversación con un desconocido te cambió el día?',
       '¿Qué es peor para ti: estar solo en casa o estar rodeado de gente que no conoces?',
       'Si un día tuvieras que pasar ocho horas en una sala de espera, ¿qué te llevarías para sobrevivir?',
@@ -167,7 +167,7 @@ export default {
     talk: [
       '¿Cuál es la locura más grande que has hecho para impresionar a alguien?',
       '¿Crees que es mejor declararse aunque te arriesgues a hacer el ridículo, o esperar una señal clara?',
-      '¿Qué relación tienes con tus vecinos? ¿Tienes alguna anécdota buena con ellos?',
+      '¿Qué vecino recuerdas con más cariño? ¿Por qué?',
       '¿Hay algo que no dijiste a tiempo y que todavía te da rabia?',
       'Si pudieras repetir una situación en la que el orgullo te ganó la partida, ¿qué harías distinto?',
     ],
@@ -392,7 +392,7 @@ export default {
     ],
     talk: [
       '¿Eres capaz de hacer muchas cosas a la vez o te bloqueas enseguida?',
-      '¿Cómo decides qué es urgente y qué puede esperar en tu día a día?',
+      '¿Qué tarea aplazas siempre aunque sepas que es importante?',
       '¿Te cuesta decir que no? ¿Recuerdas alguna vez que dijiste que sí y luego te arrepentiste?',
       '¿Qué jefe o jefa te ha marcado más, para bien o para mal?',
       'Si un robot pudiera hacer la mitad de tu trabajo, ¿qué mitad le darías?',

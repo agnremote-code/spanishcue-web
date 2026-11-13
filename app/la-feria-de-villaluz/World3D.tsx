@@ -13,7 +13,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
+import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, skipHiddenMatrices, worldPixelRatio, exposeForQa } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { BOUNDS, SOLIDS, SPAWN, buscaCamera, buscaHeading, circleById, circleStep, framing, isClearGround, spotAt } from './layout.mjs';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
@@ -70,9 +70,11 @@ export default function World3D(props: WorldProps) {
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
-    try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
+    // No canvas antialiasing: on desktop the picture is drawn by the effect composer, which never used it (it only cost video memory).
+    try { renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' }); }
     catch { const t = window.setTimeout(() => live.current.onFail(), 0); return () => window.clearTimeout(t); }
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
+    const ratioCap = low ? 1.25 : 1.75;
     const dpr = Math.min(window.devicePixelRatio || 1, low ? 1.25 : 1.75);
     renderer.setPixelRatio(dpr);
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -85,7 +87,7 @@ export default function World3D(props: WorldProps) {
     const lost = (event: Event) => { event.preventDefault(); live.current.onFail(); };
     renderer.domElement.addEventListener('webglcontextlost', lost);
 
-    const scene = new THREE.Scene();
+    const scene = skipHiddenMatrices(new THREE.Scene());
     // Dusk: deep blue sky to a warm horizon.
     scene.background = new THREE.Color('#1c2440');
     scene.fog = new THREE.Fog('#2a2a48', 45, 150);
@@ -137,6 +139,7 @@ export default function World3D(props: WorldProps) {
       composer.addPass(new UnrealBloomPass(new THREE.Vector2(512, 512), 0.55, 0.45, 0.82));
       composer.addPass(new OutputPass());
     }
+    exposeForQa({ renderer, scene, camera, composer });
 
     // ------------------------------------------------------------ state
     const start = savedPose();
@@ -216,6 +219,8 @@ export default function World3D(props: WorldProps) {
     let baseFov = 58;
     const resize = () => {
       const w = host.clientWidth || 1, h = host.clientHeight || 1;
+      const ratio = worldPixelRatio(w, h, ratioCap, window.devicePixelRatio);
+      if (ratio !== renderer.getPixelRatio()) { renderer.setPixelRatio(ratio); composer?.setPixelRatio(ratio); }
       renderer.setSize(w, h, false);
       composer?.setSize(w, h);
       camera.aspect = w / h;
@@ -228,9 +233,12 @@ export default function World3D(props: WorldProps) {
     resize();
 
     // ------------------------------------------------------------ loop
+    const pace = createFramePacer();
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
+      // Half pace behind the title card or a panel, and while the mascot stands still (most of a class is talk).
+      if (!pace(now, live.current.intro || live.current.paused || (player.speed < 0.05 && !player.y && clock - lastDrag > 1.5))) return;
       const dt = Math.min(0.05, previous ? (now - previous) / 1000 : 0.016);
       previous = now;
       clock += dt;

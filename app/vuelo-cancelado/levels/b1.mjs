@@ -438,7 +438,7 @@ export default {
     talk: [
       '¿Qué es lo más generoso que hiciste por un desconocido?',
       '¿Aceptarías quedarte un día más en un lugar a cambio de un hotel gratis?',
-      '¿Qué evento familiar no te perderías por nada del mundo?',
+      '¿Qué fiesta familiar te gustaría repetir tal como fue?',
       '¿Crees que la suerte es buena forma de decidir cosas importantes?',
       'Después de una noche sin dormir, ¿cómo estás tú? ¿De buen humor o insoportable?',
     ],

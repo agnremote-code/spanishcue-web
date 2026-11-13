@@ -2,6 +2,8 @@
 //   node scripts/covers/render.mjs mas-alla            → public/mas-alla/portada.webp (the scene alone)
 //   node scripts/covers/render.mjs clasicas            → public/conversation-classics/<slug>.webp
 //   node scripts/covers/render.mjs mundos [slug]       → the 3D worlds' illustrated covers (art/<art>.webp cropped to 1200×750)
+// El mundo en blanco: its scene is drawn as paper cut-outs in scripts/covers/el-mundo-en-blanco.html
+// (open it in Chromium at 1600×900 and save the screenshot as art/el-mundo-en-blanco.webp).
 // Needs Playwright's Chromium and python3 with Pillow (the WebP encoder).
 import { execFileSync } from 'node:child_process';
 import { mkdir, readFile } from 'node:fs/promises';
@@ -28,6 +30,7 @@ const WORLDS = [
   ['el-consorcio', 'public/el-consorcio/portada.webp'],
   ['la-boda', 'public/la-boda/portada.webp'],
   ['el-tren-de-las-2340', 'public/el-tren-de-las-2340/portada.webp'],
+  ['el-mundo-en-blanco', 'public/el-mundo-en-blanco/portada.webp'],
   ['hr-crisis', 'public/hr-crisis/portada.webp'],
   ['noche-abierta', 'public/noche-abierta/portada.webp', ''], // 16:9 kept (tests/noche-abierta)
   ['hospital-san-casi-vivo', 'public/hospital-san-casi-vivo/portada.webp'],

@@ -1279,6 +1279,414 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["indefinido-e-imperfecto", "preterito-perfecto", "a2", "b1"],
   },
+  {
+    slug: "como-ensenar-por-y-para",
+    path: `${GUIAS_PATH}/como-ensenar-por-y-para`,
+    title: "Cómo enseñar por y para en ELE: secuencia de A1 a B1 con fichas",
+    description:
+      "Cómo enseñar por y para paso a paso: una idea que el alumno puede usar al hablar, qué va en cada nivel, errores típicos, actividades y una clase gratis de A2.",
+    h1: "Cómo enseñar por y para en ELE: una secuencia clara de A1 a B1",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Por y para es el error de preposición que más se repite en clase de español, y uno de los que más dura: hay alumnos de C1 que todavía dudan entre «gracias por» y «gracias para». Las listas de usos tienen diez o doce entradas por preposición y no ayudan a decidir en medio de una frase. Esta guía propone una secuencia concreta de A1 a B1, una idea que el alumno puede aplicar al hablar, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para cada paso, con una clase completa gratis.",
+    keywords: ["cómo enseñar por y para", "por y para ELE", "por y para para extranjeros", "actividades por y para", "diferencia entre por y para", "ejercicios por y para", "fichas por y para"],
+    published: "2026-11-11",
+    lessonIds: [374, 231, 212, 327, 373, 117],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: la causa detrás y la meta delante",
+        blocks: [
+          { type: "p", text: "Antes de cualquier lista, el alumno necesita una imagen que pueda usar al hablar. La más útil en clase es una flecha: **para mira hacia delante, a la meta, al destino o al destinatario; por mira hacia atrás, a la causa o al motivo, o señala el camino por donde se pasa**. «Estudio para aprobar» mira a la meta; «estudio por mis padres» mira al motivo; «paseo por el parque» señala el camino." },
+          { type: "p", text: "Esta idea cubre la mayoría de las frases que el alumno va a decir en A2 y B1. Los usos que no encajan del todo, como el precio («lo compró por diez euros») o el medio («hablamos por teléfono»), se presentan después como bloques fijos, nunca el primer día." },
+          { type: "p", text: "La página de [por y para](/material-ele/por-y-para) de Material ELE resume los usos con ejemplos listos para proyectar, y la de [conectores](/material-ele/conectores) cubre las formas de causa y finalidad que vienen después." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es presentar por y para juntos, con todos sus usos, en una sola clase. Funciona mejor empezar por la idea de causa y finalidad, separar las preposiciones y juntarlas cuando el alumno ya tiene frases que funcionan. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "A1: porque y para, antes de por",
+            blocks: [
+              { type: "ol", items: [
+                "**Causa y finalidad con porque y para + infinitivo**: [ficha de causa y finalidad](/material-ele/ficha/ideas-dentro-de-ideas). «Estudio español porque me gusta» y «estudio español para viajar».",
+                "**Preposiciones básicas**: [ficha de a, de, en, con y sin](/material-ele/ficha/preposiciones-basicas), para que el alumno tenga el sistema antes de los casos difíciles.",
+              ] },
+              { type: "p", text: "En A1 conviene no introducir por como preposición de causa: «porque» ya cumple esa función y evita la confusión temprana." },
+            ],
+          },
+          {
+            title: "A2: el primer contraste",
+            blocks: [
+              { type: "p", text: "Con la base de A1 llega la clase gratis de [por y para: motivo y destino](/gramatica/por-y-para-motivo-y-destino), que trabaja los usos más frecuentes: para + destino, destinatario y finalidad; por + motivo y lugar de paso. Al lado, la ficha de [preposiciones de movimiento y ubicación](/material-ele/ficha/preposiciones-de-movimiento-y-ubicacion) ayuda con «por el centro» frente a «al centro»." },
+            ],
+          },
+          {
+            title: "B1: plazo, precio, medio y causa formal",
+            blocks: [
+              { type: "p", text: "En B1 se amplía con la ficha de [por y para: causa, propósito, plazo y destinatario](/material-ele/ficha/por-para-razones-objetivos): «para el viernes», «por la mañana», «por diez euros», «por correo». Al mismo tiempo entran los [conectores causales](/material-ele/ficha/causales-ya-que-puesto-que-como) ya que, puesto que y como, que dan al alumno alternativas para explicar motivos." },
+            ],
+          },
+          {
+            title: "B2: verbos con preposición fija",
+            blocks: [
+              { type: "p", text: "En B2 el foco pasa a los [verbos que rigen preposición](/material-ele/ficha/verbos-que-piden-una-estructura): preocuparse por, luchar por, servir para. Aquí la flecha ayuda menos y conviene trabajar los verbos como bloques de vocabulario." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicarlo en clase sin listas de usos",
+        blocks: [
+          { type: "p", text: "Tres técnicas que funcionan mejor que la lista de usos:" },
+          { type: "ol", items: [
+            "**La flecha en la pantalla.** Dibuja una persona en el centro: a la derecha, la meta (para); a la izquierda, el motivo (por). Cada frase nueva se coloca en un lado.",
+            "**Pares mínimos.** «Lo hago para ti» frente a «lo hago por ti», «salgo para Madrid» frente a «paso por Madrid». Pregunta qué cambia en la situación, no en la preposición.",
+            "**Bloques fijos aparte.** Gracias por, por favor, por ejemplo, por teléfono, para siempre: una lista corta de expresiones que se aprenden enteras, separadas de la regla.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación:" },
+          { type: "ul", items: [
+            "**«Gracias para todo».** El caso más frecuente. Solución: tratar «gracias por» como bloque fijo desde el primer día.",
+            "**«Estudio por aprobar».** Usa por para la finalidad. Solución: la flecha y la pregunta «¿es la meta o el motivo?».",
+            "**«Para qué no viniste».** Confunde la pregunta de finalidad con la de causa. Solución: contrastar «¿por qué?» y «¿para qué?» con respuestas con porque y para.",
+            "**«Trabajo para la mañana».** Usa para con partes del día. Solución: presentar por la mañana, por la tarde y por la noche como bloque.",
+            "**«Necesito el informe por el viernes».** Plazo con por. Solución: en B1, para + fecha límite con ejemplos reales de trabajo.",
+          ] },
+          { type: "p", text: "El [ejercicio de por y para](/material-ele/ejercicio/por-y-para) practica estos puntos con soluciones, y el [ejercicio de A2](/material-ele/ejercicio/a2) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar por y para",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la regla; la conversación fija la elección. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**Regalos.** El alumno elige tres regalos: para quién son, para qué sirven y por qué los eligió.",
+            "**El viaje.** Un itinerario en el mapa: salgo para Lima, paso por Cusco, voy en tren por el valle.",
+            "**¿Por qué o para qué?** Diez decisiones de la vida del alumno (estudiar español, vivir en su ciudad, su trabajo) y una respuesta con cada pregunta.",
+            "**Lo haría por…** «¿Qué harías por un amigo?» frente a «¿qué harías para ser feliz?»: una conversación que obliga a elegir.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades) y preguntas listas para el nivel en [preguntas de conversación de A2](/material-ele/preguntas/a2) y de [B1](/material-ele/preguntas/b1). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A2, por y para)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de contraste en A2, esta secuencia deja al alumno eligiendo con criterio:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** «¿Por qué estudias español? ¿Para qué?». Respuestas libres, sin corregir.",
+            "**Contraste (5 minutos):** la flecha en la pantalla y tres pares mínimos.",
+            "**Clase (25 minutos):** la clase gratis de [por y para: motivo y destino](/gramatica/por-y-para-motivo-y-destino), con el modo profesor en pantalla compartida.",
+            "**Producción (10 minutos):** el alumno cuenta un viaje que quiere hacer: para dónde sale, por dónde pasa, para qué va y por qué ese lugar.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de por y para es gratis",
+        blocks: [
+          { type: "p", text: "Se abre gratis y sin registro la clase interactiva de [por y para: motivo y destino](/gramatica/por-y-para-motivo-y-destino), con su ficha completa, además de todas las fichas de esta guía, el ejercicio de por y para y las preguntas de conversación. El resto de clases forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A2](/material-ele/a2) ordena todo el material, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Las otras guías de esta serie son [cómo enseñar ser y estar](/material-ele/guia/como-ensenar-ser-y-estar), [cómo enseñar el indefinido y el imperfecto](/material-ele/guia/como-ensenar-indefinido-e-imperfecto) y [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña por y para?", answer: "El primer contraste llega en A2, con los usos más frecuentes: para + meta, destino y destinatario; por + motivo y lugar de paso. En A1 conviene trabajar antes porque y para + infinitivo. En B1 se añaden plazo, precio, medio y partes del día." },
+      { question: "¿Cuál es la mejor forma de explicar la diferencia entre por y para?", answer: "Con una flecha: para mira hacia delante, a la meta o al destinatario; por mira hacia atrás, al motivo, o señala el camino. Los usos que no encajan, como el precio o el medio, se enseñan como bloques fijos." },
+      { question: "¿Por qué los alumnos dicen «gracias para»?", answer: "Porque en muchas lenguas la misma preposición sirve para causa y finalidad. La solución más eficaz es enseñar «gracias por» como expresión fija desde el primer día, separada de la regla general." },
+      { question: "¿Hay una clase gratis de por y para?", answer: "Sí. La clase interactiva de por y para de A2 de SpanishCue se abre gratis, con su ficha completa, y en Material ELE hay fichas, un ejercicio con soluciones y preguntas de conversación, todo sin registro." },
+    ],
+    related: ["por-y-para", "conectores", "a2", "b1"],
+  },
+  {
+    slug: "como-ensenar-gustar",
+    path: `${GUIAS_PATH}/como-ensenar-gustar`,
+    title: "Cómo enseñar gustar en ELE: secuencia de A1 a B1 con fichas",
+    description:
+      "Cómo enseñar gustar y los verbos como gustar: la idea que evita «yo gusto», qué va en cada nivel, errores típicos, actividades y una clase gratis de A1.",
+    h1: "Cómo enseñar gustar en ELE: una secuencia clara de A1 a B1",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Gustar es de los primeros verbos que un alumno quiere usar y de los que más tarda en dominar: «yo gusto el café», «me gusta los libros» o «a mí me gusto» aparecen en A1 y siguen apareciendo en B1. El problema casi nunca es la forma, que es sencilla, sino que la frase está construida al revés de lo que el alumno espera. Esta guía propone una secuencia concreta de A1 a B1, una idea que el alumno puede aplicar al hablar, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para cada paso, con una clase completa gratis.",
+    keywords: ["cómo enseñar gustar", "gustar ELE", "verbos como gustar", "actividades gustar", "gustar para extranjeros", "ejercicios gustar", "fichas gustar"],
+    published: "2026-11-12",
+    lessonIds: [332, 362, 363, 333, 392, 463],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: la cosa es la que gusta",
+        blocks: [
+          { type: "p", text: "Antes de cualquier tabla, el alumno necesita entender quién hace qué en la frase. La imagen más útil en clase es esta: **en «me gusta el café», el sujeto es el café; el café produce algo en mí**. Por eso el verbo concuerda con la cosa: «me gusta el café», «me gustan los libros». La persona va con un pronombre de objeto indirecto: me, te, le, nos, os, les." },
+          { type: "p", text: "Con esta idea, la mayoría de los errores se corrigen con una sola pregunta: «¿qué es lo que gusta?». Si es una cosa, gusta; si son varias, gustan; si es una acción en infinitivo, gusta. La forma «a mí», «a ti», «a ella» se presenta después, como forma de dar énfasis o de aclarar a quién." },
+          { type: "p", text: "La página de [gustar](/material-ele/gustar) de Material ELE resume la estructura con ejemplos listos para proyectar, y la de [pronombres de objeto](/material-ele/pronombres-de-objeto) cubre el sistema de me, te, le que sostiene todo el tema." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es presentar gustar, encantar, interesar, doler y parecer en la misma clase, con todas las personas. Funciona mejor empezar por me gusta y te gusta, añadir el plural y el infinitivo, y abrir el grupo de verbos cuando la estructura ya es automática. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "A1: me gusta, me gustan y me encanta",
+            blocks: [
+              { type: "ol", items: [
+                "**Gustar y encantar con nombre e infinitivo**: la clase gratis de [gustar y encantar](/gramatica/gustar-y-encantar). «Me gusta el cine», «me gustan las series», «me encanta cocinar».",
+                "**Pronombres tras preposición**: [ficha de a mí, a ti, conmigo](/material-ele/ficha/pronombres-tras-preposicion), para que «a mí también» y «a mí tampoco» lleguen con la forma correcta.",
+              ] },
+              { type: "p", text: "En A1 conviene trabajar sobre todo la primera y la segunda persona: el alumno habla de sus gustos y pregunta por los del otro. Le y les pueden esperar unas semanas." },
+            ],
+          },
+          {
+            title: "A2: el grupo de verbos y la tercera persona",
+            blocks: [
+              { type: "p", text: "Con la base de A1 llega la ficha de [gustar, interesar, doler y faltar](/material-ele/ficha/gustar-interesar-doler-faltar-concordancia): «me duele la cabeza», «nos falta tiempo», «le interesan los idiomas». Al lado, la ficha de [objeto indirecto: le, les, me, te](/material-ele/ficha/objeto-indirecto-le-les-me-te) ordena el sistema completo de pronombres y explica por qué decimos «a mi hermana le gusta» con los dos elementos." },
+            ],
+          },
+          {
+            title: "B1: me gusta que + subjuntivo",
+            blocks: [
+              { type: "p", text: "En B1, gustar abre la puerta al subjuntivo: «me gusta que me llames», «me molesta que llegue tarde». La ficha de [emociones y reacciones con que + subjuntivo](/material-ele/ficha/emociones-y-reacciones-con-que-subjuntivo) trabaja este paso, que funciona mejor si el alumno ya usa gustar con infinitivo sin pensar. La regla práctica: mismo sujeto, infinitivo; sujeto distinto, que + subjuntivo." },
+            ],
+          },
+          {
+            title: "B2: duplicación y foco",
+            blocks: [
+              { type: "p", text: "En B2 el foco pasa a la [duplicación de pronombres y el foco](/material-ele/ficha/pronombres-redundancia-duplicacion-y-foco): por qué «a Juan le gusta» lleva los dos elementos y cómo cambia el sentido al poner la persona delante o detrás. Aquí también entran verbos como parecer, caer bien o quedar bien con valoraciones." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicarlo en clase sin tablas eternas",
+        blocks: [
+          { type: "p", text: "Tres técnicas que funcionan mejor que la tabla completa de personas:" },
+          { type: "ol", items: [
+            "**La flecha al revés.** Dibuja la cosa a la izquierda y a la persona a la derecha, con una flecha de la cosa a la persona. La cosa es el sujeto; la persona recibe el efecto.",
+            "**Pares de frases.** «Me gusta el libro» frente a «me gustan los libros», «me gusta leer» frente a «me gustan las novelas». Pregunta qué cambia en la cosa, no en la persona.",
+            "**Respuestas cortas aparte.** A mí también, a mí tampoco, a mí sí, a mí no: un bloque de cuatro respuestas que se practica en conversación desde el primer día.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación:" },
+          { type: "ul", items: [
+            "**«Yo gusto el café».** El alumno traslada la estructura de su lengua. Solución: la flecha al revés y la pregunta «¿qué es lo que gusta?».",
+            "**«Me gusta los libros».** Falta la concordancia con el plural. Solución: pares de frases con singular y plural, siempre con la cosa subrayada.",
+            "**«A mí gusta la música».** Falta el pronombre. Solución: presentar «a mí me gusta» como bloque y explicar que «a mí» es opcional y «me» no.",
+            "**«Le gusta a ellos».** Confusión entre le y les. Solución: en A2, contar las personas que reciben el efecto antes de elegir el pronombre.",
+            "**«Me gusta que vienes».** Indicativo después de que en B1. Solución: la regla del sujeto distinto y ejemplos de reacciones reales.",
+          ] },
+          { type: "p", text: "El [ejercicio de gustar](/material-ele/ejercicio/gustar) practica estos puntos con soluciones, el de [pronombres de objeto](/material-ele/ejercicio/pronombres-de-objeto) refuerza el sistema completo y el [ejercicio de A1](/material-ele/ejercicio/a1) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar gustar",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la forma; la conversación fija el uso. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**Gustos en común.** La actividad [gustos en común](/material-ele/actividad/gustos-en-comun): el alumno busca tres cosas que le gustan a los dos y tres que no, con a mí también y a mí tampoco.",
+            "**El médico.** Un juego de roles en la consulta: ¿qué te duele?, me duele la espalda, me duelen los pies.",
+            "**La lista del otro.** El alumno adivina qué le gusta y qué le molesta a una persona famosa o a alguien de su familia, en tercera persona.",
+            "**Lo que me molesta.** En B1, cinco situaciones cotidianas y una reacción con me molesta que o me encanta que.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades), materiales de la función [expresar gustos](/material-ele/funciones/expresar-gustos) y preguntas listas para el nivel en [preguntas de conversación de A1](/material-ele/preguntas/a1). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A1, gustar)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de gustar en A1, esta secuencia deja al alumno hablando de sus gustos con la estructura correcta:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** fotos de comida, deportes y lugares en pantalla. El alumno señala lo que prefiere, sin estructura todavía.",
+            "**Contraste (5 minutos):** la flecha al revés y tres pares de frases en singular y plural.",
+            "**Clase (25 minutos):** la clase gratis de [gustar y encantar](/gramatica/gustar-y-encantar), con el modo profesor en pantalla compartida.",
+            "**Producción (10 minutos):** el alumno describe un fin de semana perfecto: qué le gusta hacer, qué le encanta comer y qué no le gusta nada. El profesor responde con a mí también o a mí no.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de gustar es gratis",
+        blocks: [
+          { type: "p", text: "Se abre gratis y sin registro la clase interactiva de [gustar y encantar](/gramatica/gustar-y-encantar), con su ficha completa, además de todas las fichas de esta guía, el ejercicio de gustar y las preguntas de conversación. El resto de clases forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A1](/material-ele/a1) ordena todo el material, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Las otras guías de esta serie son [cómo enseñar por y para](/material-ele/guia/como-ensenar-por-y-para), [cómo enseñar ser y estar](/material-ele/guia/como-ensenar-ser-y-estar) y [cómo enseñar el indefinido y el imperfecto](/material-ele/guia/como-ensenar-indefinido-e-imperfecto)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña gustar?", answer: "Desde A1, con me gusta, me gustan y me encanta con nombres e infinitivos. En A2 se amplía a la tercera persona y a verbos como interesar, doler y faltar. En B1 llega me gusta que + subjuntivo." },
+      { question: "¿Cuál es la mejor forma de explicar gustar?", answer: "Con la idea de que la cosa es el sujeto: en «me gusta el café», el café produce algo en la persona. Por eso el verbo concuerda con la cosa y la persona va con me, te, le, nos, os o les." },
+      { question: "¿Por qué los alumnos dicen «yo gusto»?", answer: "Porque en muchas lenguas la persona es el sujeto del verbo equivalente. La solución más eficaz es la pregunta «¿qué es lo que gusta?», que obliga a buscar el sujeto real de la frase." },
+      { question: "¿Hay una clase gratis de gustar?", answer: "Sí. La clase interactiva de gustar y encantar de A1 de SpanishCue se abre gratis, con su ficha completa, y en Material ELE hay fichas, un ejercicio con soluciones y preguntas de conversación, todo sin registro." },
+    ],
+    related: ["gustar", "pronombres-de-objeto", "a1", "a2"],
+  },
+  {
+    slug: "como-ensenar-pronombres-de-objeto",
+    path: `${GUIAS_PATH}/como-ensenar-pronombres-de-objeto`,
+    title: "Cómo enseñar los pronombres de objeto en ELE: lo, la, le, se lo",
+    description:
+      "Cómo enseñar los pronombres de objeto directo e indirecto: qué va en cada nivel, cómo explicar «se lo», errores típicos, actividades y fichas con soluciones.",
+    h1: "Cómo enseñar los pronombres de objeto directo e indirecto en ELE",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Lo, la, le, se lo: los pronombres de objeto son cortos, se parecen entre sí y cambian de lugar según el verbo. Por eso muchos alumnos los entienden en la explicación y los evitan al hablar: repiten el sustantivo («compré el libro y leí el libro») o dicen «le lo di». Esta guía propone una secuencia concreta de A1 a B1, una forma de explicar cada paso sin tablas eternas, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para trabajarlos.",
+    keywords: ["cómo enseñar los pronombres de objeto", "pronombres de objeto directo e indirecto ELE", "actividades pronombres de objeto", "ejercicios lo la le", "se lo ELE", "pronombres átonos ELE", "fichas pronombres de objeto"],
+    published: "2026-11-13",
+    lessonIds: [106, 363, 364, 365, 422, 481, 332],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: el pronombre evita repetir",
+        blocks: [
+          { type: "p", text: "Antes de hablar de objeto directo e indirecto, el alumno necesita ver para qué sirve un pronombre: **para no repetir algo que los dos ya conocemos**. «¿Tienes las llaves? Sí, las tengo» suena natural; «sí, tengo las llaves» suena a libro de texto. Si la clase empieza por esa necesidad, la terminología llega después y pesa menos." },
+          { type: "p", text: "Dos preguntas bastan para elegir el pronombre en los niveles iniciales: **¿qué?** para la cosa (lo, la, los, las) y **¿a quién?** para la persona que recibe (me, te, le, nos, os, les). «Compro flores (¿qué?) a mi madre (¿a quién?)» se convierte en «las compro» o «le compro flores»." },
+          { type: "p", text: "La página de [pronombres de objeto](/material-ele/pronombres-de-objeto) de Material ELE resume el sistema con ejemplos listos para proyectar, y el tema de [gramática de pronombres de objeto](/material-ele/gramatica/pronombres-de-objeto) reúne todas las clases por nivel." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es presentar el objeto directo, el indirecto, la combinación «se lo» y la posición con infinitivo en la misma semana. Funciona mejor un paso por clase, y no avanzar hasta que el anterior sale sin pensar. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "A1: lo, la, los, las para no repetir",
+            blocks: [
+              { type: "ol", items: [
+                "**Objeto directo e indirecto, primera vuelta**: [ficha de evitar repeticiones](/material-ele/ficha/la-estacion-de-los-dos-destinos). «¿El billete? Lo tengo». Siempre con el pronombre delante del verbo conjugado.",
+                "**Me, te, le con gustar**: la clase gratis de [gustar y encantar](/gramatica/gustar-y-encantar) deja practicados los pronombres de persona antes de llamarlos «indirectos».",
+                "**A mí, a ti, conmigo**: [ficha de pronombres tras preposición](/material-ele/ficha/pronombres-tras-preposicion), para no mezclarlos con me y te.",
+              ] },
+            ],
+          },
+          {
+            title: "A2: le y les, se lo y la posición",
+            blocks: [
+              { type: "p", text: "A2 es el nivel de los pronombres. Tres clases, en este orden: la ficha de [objeto indirecto: le, les, me, te, nos](/material-ele/ficha/objeto-indirecto-le-les-me-te), la de [dos pronombres: se lo, me lo, te la](/material-ele/ficha/dos-pronombres-se-lo-me-lo) y la de [posición con infinitivo e imperativo](/material-ele/ficha/posicion-de-pronombres-con-infinitivo-e): «voy a comprarlo» o «lo voy a comprar», «dámelo». La página de [pronombres de objeto en A2](/material-ele/gramatica/pronombres-de-objeto/a2) las ordena." },
+              { type: "p", text: "La posición con imperativo se apoya en el material de [imperativo](/material-ele/imperativo), que incluye una clase gratis de imperativo afirmativo: conviene que el alumno domine «compra», «pon» y «di» antes de pegarles un pronombre." },
+            ],
+          },
+          {
+            title: "B1: orden y combinaciones más largas",
+            blocks: [
+              { type: "p", text: "En B1 se consolida con la ficha de [orden de pronombres y clíticos](/material-ele/ficha/orden-de-pronombres-y-cliticos-mas): perífrasis, gerundio («estoy leyéndolo»), imperativo negativo («no me lo digas») y verbos pronominales con objeto («se me olvidó»)." },
+            ],
+          },
+          {
+            title: "B2 y C1: duplicación, foco y leísmo",
+            blocks: [
+              { type: "p", text: "En los niveles altos el tema deja de ser la forma y pasa a ser el uso: la ficha de [redundancia, duplicación y foco](/material-ele/ficha/pronombres-redundancia-duplicacion-y-foco) explica «a Juan le di el libro» y «el libro lo compré ayer», y la clase gratis de [leísmo, laísmo y loísmo](/gramatica/pronombres-atonos-leismo-laismo-loismo-y) trabaja la variación entre países. La página de [pronombres de objeto en C1](/material-ele/gramatica/pronombres-de-objeto/c1) reúne ese material." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicar «se lo» y la posición sin tablas eternas",
+        blocks: [
+          { type: "p", text: "Tres técnicas que funcionan mejor que la tabla completa:" },
+          { type: "ol", items: [
+            "**Tarjetas que se mueven.** Escribe la frase en tarjetas: «Doy · el libro · a Ana». Cambia «el libro» por «lo» y «a Ana» por «le», y mueve las dos delante del verbo. El alumno ve el orden: primero la persona, después la cosa.",
+            "**Le + lo no existe.** Presenta «se lo» como una regla de sonido, sin más teoría: le lo y les lo no se dicen; le y les cambian a se. Una sola línea en la pantalla y diez frases de práctica.",
+            "**Dos lugares, nunca en el medio.** Con dos verbos, el pronombre va delante del primero o pegado al segundo: «lo quiero ver» o «quiero verlo». Nunca «quiero lo ver». Pide siempre las dos versiones.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación:" },
+          { type: "ul", items: [
+            "**Repetir el sustantivo.** «Compré el libro y leí el libro». No es un error de forma, pero indica que el alumno evita el pronombre. Solución: preguntas cortas que obligan a usarlo: «¿y lo leíste?».",
+            "**«Le lo di».** La combinación que no existe. Solución: la regla de sonido y práctica oral rápida con se lo, se la, se los, se las.",
+            "**«Quiero lo comprar».** El pronombre en el medio. Solución: las dos versiones correctas en la pantalla y el gesto de moverlo al principio o al final.",
+            "**«Lo di el libro a Ana».** Confunde directo e indirecto. Solución: las dos preguntas, ¿qué? y ¿a quién?, antes de elegir.",
+            "**«Dame lo».** Separado o sin tilde en el imperativo. Solución: escribir dámelo, dímelo y póntelo como palabras enteras.",
+            "**Le por lo.** «Le vi ayer» por «lo vi ayer»: es leísmo, aceptado en parte de España para personas. Conviene explicarlo como variación y no corregirlo como error grave.",
+          ] },
+          { type: "p", text: "El [ejercicio de pronombres de objeto](/material-ele/ejercicio/pronombres-de-objeto) practica estos puntos con soluciones, y el [ejercicio de A2](/material-ele/ejercicio/a2) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar los pronombres de objeto",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la forma; la conversación fija el reflejo de no repetir. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**¿Con pronombre o sin pronombre?** La actividad [con pronombre o sin pronombre](/material-ele/actividad/con-pronombre-o-sin-pronombre): el alumno decide cuándo suena natural repetir y cuándo no.",
+            "**¿Dónde va el pronombre?** La actividad [dónde va el pronombre](/material-ele/actividad/donde-va-el-pronombre): frases con dos verbos y dos posiciones posibles.",
+            "**La maleta.** «¿Llevas el pasaporte? Sí, lo llevo. ¿Y las gafas? No, no las llevo». Preguntas rápidas con objetos reales de un viaje.",
+            "**¿A quién se lo regalas?** Cinco objetos y cinco personas de la vida del alumno: «el libro se lo regalo a mi hermana».",
+            "**Órdenes en la cocina.** Una receta con imperativo: córtala, ponlo, añádeselo. Sirve para la posición y la tilde.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades) y preguntas listas para el nivel en [preguntas de conversación de A2](/material-ele/preguntas/a2) y de [B1](/material-ele/preguntas/b1). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A2, se lo)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de dos pronombres en A2, con le y lo ya trabajados por separado:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** «¿Qué regalaste la última vez? ¿A quién?». Respuestas libres; el profesor reformula con se lo y se la sin explicarlo todavía.",
+            "**Contraste (10 minutos):** las tarjetas que se mueven y la regla de sonido: le lo no existe, se dice se lo.",
+            "**Práctica (20 minutos):** la ficha de [dos pronombres](/material-ele/ficha/dos-pronombres-se-lo-me-lo), con los ejercicios en pantalla compartida y corrección inmediata.",
+            "**Producción (10 minutos):** el alumno reparte cinco objetos de su casa entre familiares y amigos, y explica a quién se los da y por qué.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de pronombres es gratis",
+        blocks: [
+          { type: "p", text: "Se abren gratis y sin registro las clases interactivas de [gustar y encantar](/gramatica/gustar-y-encantar), la de imperativo afirmativo que está en [imperativo](/material-ele/imperativo) y la de [leísmo, laísmo y loísmo](/gramatica/pronombres-atonos-leismo-laismo-loismo-y), además de todas las fichas de esta guía, el ejercicio de pronombres de objeto y las dos actividades del banco. Las clases de pronombres de A2 y B1 forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A2](/material-ele/a2) ordena todo el material, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Las otras guías de esta serie son [cómo enseñar gustar](/material-ele/guia/como-ensenar-gustar), [cómo enseñar por y para](/material-ele/guia/como-ensenar-por-y-para) y [cómo enseñar ser y estar](/material-ele/guia/como-ensenar-ser-y-estar)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseñan los pronombres de objeto?", answer: "Lo, la, los y las aparecen en A1 para evitar repeticiones. En A2 se trabajan le y les, la combinación se lo y la posición con infinitivo e imperativo. En B1 se consolidan el orden y las combinaciones largas, y en B2 y C1 llegan la duplicación y el leísmo." },
+      { question: "¿Cómo se explica «se lo»?", answer: "Como una regla de sonido: le lo y les lo no se dicen, así que le y les cambian a se delante de lo, la, los y las. Funciona mejor una línea en la pantalla y mucha práctica oral que una explicación larga." },
+      { question: "¿Dónde va el pronombre con dos verbos?", answer: "Delante del verbo conjugado o pegado al infinitivo o al gerundio: «lo quiero ver» o «quiero verlo». Nunca en el medio. Con imperativo afirmativo va siempre pegado: «dámelo»." },
+      { question: "¿Hay material gratis para practicar los pronombres de objeto?", answer: "Sí. En Material ELE de SpanishCue hay fichas con soluciones, un ejercicio y dos actividades de pronombres de objeto, todo sin registro, y se abren gratis las clases de gustar, de imperativo afirmativo y de leísmo, laísmo y loísmo." },
+    ],
+    related: ["pronombres-de-objeto", "gustar", "imperativo", "a2"],
+  },
 ];
+
+/** «Cómo enseñar…» guides that belong to a grammar topic page: the topic is
+ *  one of the guide's related slugs (level slugs excluded), so the topic page
+ *  can link to the teaching sequence for it. */
+export const teachingGuidesForTopic = (slug: string) =>
+  /^(a|b|c)[12]$/.test(slug) ? [] : guiaPages.filter((guide) => guide.slug.startsWith("como-ensenar-") && guide.related.includes(slug));
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));

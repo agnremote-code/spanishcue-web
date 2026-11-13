@@ -789,8 +789,8 @@ const scenes = {
     "talk": [
       "¿Tu empresa vende paquetes? ¿Qué incluyen?",
       "¿Qué es mejor después de un error: devolver dinero o dar un regalo?",
-      "¿Te has quejado alguna vez en un hotel o restaurante? ¿Qué te dieron?",
-      "¿Cómo fue la mejor fiesta de tu vida?",
+      "¿Qué debería hacer un buen hotel cuando un cliente se queja?",
+      "¿Qué necesita una fiesta para ser inolvidable?",
       "¿Es buena idea casarse si tienes dudas?"
     ],
     "words": [

@@ -21,11 +21,27 @@ const additions = [
         const lines=text.split('\n');
         const at=lines.flatMap((line,i)=>line.startsWith('  {id:258,')&&line.includes('path:"/hr-crisis"')?[i]:[]);
         assert.equal(at.length,1,'one hr crisis catalog entry');lines.splice(at[0],1);return lines.join('\n');
-      },[',255,256,257,258],',',255,256,257],']],
-      'app/conversation-preview-videos.ts':[[',255,256,257,258]);',',255,256,257]);']],
+      },[',257,259,258],',',257,259],']],
+      'app/conversation-preview-videos.ts':[[',257,259,258]);',',257,259]);']],
       'scripts/check-english-copy.mjs':[["\n  'docs/audits/hr-crisis-english-additions-20261110.json',",'']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/hr-crisis.test.mjs']);\n",'']],
-      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 332);','assert.equal(lessons.length, 331);'],['assert.equal(a1Lessons.length, 92);','assert.equal(a1Lessons.length, 91);'],["relative.startsWith('app/hr-crisis/')||",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 333);','assert.equal(lessons.length, 332);'],['assert.equal(a1Lessons.length, 93);','assert.equal(a1Lessons.length, 92);'],["relative.startsWith('app/hr-crisis/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/326(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/325(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
+    // 2026-11-11: El mundo en blanco (A0–C2), a PRO 3D paper world that gets its ink back, wired like La boda.
+    id:259,path:'/el-mundo-en-blanco',files:/^(?:app\/el-mundo-en-blanco\/|app\/escucha-3d\/content\/papel\/|public\/el-mundo-en-blanco\/|public\/audio\/escucha-3d\/papel-|tests\/el-mundo-en-blanco\.test\.mjs$|scripts\/check-mundo-en-blanco\.mjs$|scripts\/covers\/art\/el-mundo-en-blanco\.webp$|public\/conversation-previews\/259\.mp4$|docs\/audits\/el-mundo-en-blanco-english-additions-20261111\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:259,')&&line.includes('path:"/el-mundo-en-blanco"')?[i]:[]);
+        assert.equal(at.length,1,'one el mundo en blanco catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',253,254,255,256,257,259],',',253,254,255,256,257],']],
+      'app/conversation-preview-videos.ts':[[',253,254,255,256,257,259]);',',253,254,255,256,257]);']],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/el-mundo-en-blanco-english-additions-20261111.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/el-mundo-en-blanco.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 332);','assert.equal(lessons.length, 331);'],['253,254,255,256,257,259].includes(lesson.id)','253,254,255,256,257].includes(lesson.id)'],["l.levels?.includes('A0')).length,34);","l.levels?.includes('A0')).length,33);"],['assert.equal(a1Lessons.length, 92);','assert.equal(a1Lessons.length, 91);'],["relative.startsWith('app/el-mundo-en-blanco/')||",'']],
       'tests/rendered-html.test.mjs':[['assert.match(html,/325(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/324(?:<!-- -->|\\s)+clases totales/);']],
     },
   },
@@ -665,7 +681,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===258||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -676,7 +692,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==258&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

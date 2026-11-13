@@ -11,7 +11,7 @@ import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js'
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween } from '../noche-abierta/world3d.mjs';
+import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, skipHiddenMatrices, worldPixelRatio, exposeForQa } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { CEILING, ELEVATOR, ELEVATOR_ARRIVAL, OPEN_AIR, SPAWN, STAIRS_ARRIVAL, atElevator, atStairs, cameraBlockers, circleStep, floorById, sceneById, sceneFraming, sectorAt, solidsFor, spotAt } from './layout.mjs';
 import { buildBuilding, talking as talkingNow, type Building, type Npc, type Mover } from './edificio3d';
@@ -64,10 +64,12 @@ export default function World3D(props: WorldProps) {
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760;
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
-    try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
+    // No canvas antialiasing: on desktop the picture is drawn by the effect composer, which never used it (it only cost video memory).
+    try { renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' }); }
     catch { const t = window.setTimeout(() => live.current.onFail(), 0); return () => window.clearTimeout(t); }
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, low ? 1.2 : 1.75));
+    const ratioCap = low ? 1.2 : 1.75;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, ratioCap));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 0.94;
     renderer.shadowMap.enabled = !low;
@@ -76,7 +78,7 @@ export default function World3D(props: WorldProps) {
     renderer.domElement.setAttribute('aria-label', 'Edificio Las Glicinas en 3D. Flechas o WASD para caminar, arrastra para mirar, E para hablar.');
     host.appendChild(renderer.domElement);
 
-    const scene = new THREE.Scene();
+    const scene = skipHiddenMatrices(new THREE.Scene());
     scene.background = new THREE.Color('#9cc4e4');
     scene.fog = new THREE.Fog('#86a8c4', 70, 420);
     const camera = new THREE.PerspectiveCamera(58, 1, 0.08, 900);
@@ -115,6 +117,7 @@ export default function World3D(props: WorldProps) {
       composer.addPass(new UnrealBloomPass(new THREE.Vector2(512, 512), 0.2, 0.35, 0.95));
       composer.addPass(new OutputPass());
     }
+    exposeForQa({ renderer, scene, camera, composer });
 
     // ------------------------------------------------------------ state
     let floor = live.current.floor;
@@ -218,6 +221,8 @@ export default function World3D(props: WorldProps) {
     let baseFov = 58;
     const resize = () => {
       const w = host.clientWidth || 1, h = host.clientHeight || 1;
+      const ratio = worldPixelRatio(w, h, ratioCap, window.devicePixelRatio);
+      if (ratio !== renderer.getPixelRatio()) { renderer.setPixelRatio(ratio); composer?.setPixelRatio(ratio); }
       renderer.setSize(w, h, false);
       composer?.setSize(w, h);
       camera.aspect = w / h;
@@ -251,9 +256,12 @@ export default function World3D(props: WorldProps) {
     }
 
     // ------------------------------------------------------------ loop
+    const pace = createFramePacer();
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
+      // Half pace behind the title card or a panel, and while the mascot stands still (most of a class is talk).
+      if (!pace(now, live.current.intro || live.current.paused || (player.speed < 0.05 && !player.y && clock - lastDrag > 1.5))) return;
       const dt = Math.min(0.05, previous ? (now - previous) / 1000 : 0.016);
       previous = now;
       clock += dt;

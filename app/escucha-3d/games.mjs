@@ -199,6 +199,16 @@ export const GAMES = {
     spots: ['m1-recepcion', 'm2-ivan', 'm3-jimena', 'm4-rumor', 'm5-informe', 'm6-crisis'],
     ownListening: true,
   },
+  // El mundo en blanco: each of the four regions of the paper world has its
+  // own listening at each level, voiced by the paper beings who live there
+  // (any being of the region opens it). PRO lesson (ID 259).
+  papel: {
+    title: 'El mundo en blanco',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['muelle', 'bosque', 'ciudad', 'cumbre'],
+    ownListening: true,
+    bilingualA0: true,
+  },
   // El tren de las 23:40: every circle of the night train has its own
   // listening at each level, voiced by the same passengers and crew who
   // speak there. PRO lesson (ID 256).

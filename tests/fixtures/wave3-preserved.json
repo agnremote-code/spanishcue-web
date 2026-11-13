@@ -56,28 +56,28 @@
       "sha256": "1afe66ebfa4caa5b235bc188a8ab8c6c90494042eb3f730dd3308193680e3a17"
     },
     "app/choose-conversation/b2-data.ts": {
-      "sha256": "aafd41ca94691785a5a77b43454e94904c5f6b0a35b939e7e572b74b3dab7206"
+      "sha256": "20396564406e2e5759cf60311c2967eaa0d36f17de75a6c09b400850ed63b0d3"
     },
     "app/choose-conversation/b2.css": {
       "sha256": "b544abe519ecd40e18483a0055eab20e2a8c6714cd6b5776849edfcd56aef2dd"
     },
     "app/choose-conversation/c1-data.ts": {
-      "sha256": "8bf73ed6bb0527c925ffa9715f68c8fa2c6c7e1ed0113a25579eb153426350ef"
+      "sha256": "fdacf023974937c24bda9a72e3519ec18c098ea1b170e42f5ee327557c3bd01c"
     },
     "app/choose-conversation/c1.css": {
       "sha256": "1b38c1081f46215b84d296306f2fc4d23433612835430904a9fed62c4bcaeb38"
     },
     "app/choose-conversation/c2-data.ts": {
-      "sha256": "b7aca9e49abd55aed25884aae4b8f649c7ea0523cda7a5cf80d72a1277a70d35"
+      "sha256": "d98d08cabded1de73c1ad6e33c8264cfb7d179b69952dc9d9567506725d82b45"
     },
     "app/choose-conversation/c2.css": {
       "sha256": "d03b100a261fa5fb22e1820097afb125d866efac65b0a7692c94fad41427f838"
     },
     "app/choose-conversation/page.tsx": {
-      "sha256": "d07653cfa83f07243aa4cd8a772910c2fe1cf5b72bc703aefd69306358b02d1d"
+      "sha256": "d249fd0d92893dc7710447f27d9c61b923d648b899ca9f4a7cbe417f80cb19f8"
     },
     "app/choose-conversation/variants.ts": {
-      "sha256": "59fc062e0ca757b9d2d749ad6e939091270ed64885c44ba8ce4c15c97619fa25"
+      "sha256": "be62868d930d9d3bce581bad518211f68287d47f79627b628fd4af1453b50521"
     },
     "app/clase/[id]/page.tsx": {
       "sha256": "46f17d88d3cbd9aac92bddd07c09bed64b466b83bb1469dc29d8cf7b07f0fd91"
@@ -107,10 +107,10 @@
       "sha256": "9ccd4824f6ab555109d30b49d33c6aa3060367c1d8b22a101e0d0397849b36a4"
     },
     "app/conversation-worlds/data-c1.ts": {
-      "sha256": "842b3c70fa42c4ef5f1bd9768b10a0797eae49b066a12972db1500d331f37fba"
+      "sha256": "186ef523402ac24684c021aab87317650391fd6b16eaa8bbbefa000c0a5f4986"
     },
     "app/conversation-worlds/data-c2.ts": {
-      "sha256": "8949c670f6f728948afd5f999cfaf99683d8415891224afe4f732a91e92ac628"
+      "sha256": "d6bda0dde2c7201169aaa4af5f853bde04a7084c404f637343ced70e77c88689"
     },
     "app/conversation-worlds/state.ts": {
       "sha256": "84d2fe707ee1d09b1b2ac359bc4821aaa4a8a713e24aacdd6d96ccb84397ffde"
@@ -567,19 +567,19 @@
       "sha256": "30c2f0d1c67efdb3def50fc3e3ea5e6f0e380522e748b4f1b1fea8e1bc94d1c1"
     },
     "tests/fixtures/conversation-batch1-originals.json": {
-      "sha256": "c8bc0f631f60b4e767e6832945e9c3d3f4e96db1e0686b9f40136c55b013a113"
+      "sha256": "4d42ee945e543a96f0ea4c7f59cd26759e2d27b859601cfa127bba13913fd76e"
     },
     "tests/fixtures/conversation-batch1-run1-preserved.json": {
-      "sha256": "54ea31f16463de17e967f1d89ed056cd1ce424fd45b9f8d09da2230af5fc9c4e"
+      "sha256": "65efe1047860af4749dcc9e25b3790773e6baff7feb02b407f43ea277a593f2b"
     },
     "tests/fixtures/conversation-batch1-run2-preserved.json": {
-      "sha256": "f04760fa77211f0fa07f6deaef998bc4968742a118f3225d2037ed63ca16952f"
+      "sha256": "49da7ebf1242fdd2fd49775abb11507ca07ba3f77a8637763c7f5d52a7db4141"
     },
     "tests/fixtures/conversation-batch1-run3-preserved.json": {
-      "sha256": "3e263513e827dc5c622554a33080e0bbb96800ca22298621ce1f8e40157c0cce"
+      "sha256": "d463269077b9da7b6b8616b7b1d1c8032d7f481c2c571853384076c3aa3928f3"
     },
     "tests/fixtures/grammar-wave1-baseline.json": {
-      "sha256": "f7a1127e6ecf7d7889b12bf0fc53d8f104b578ead7855db54c4bf3cc0b3ab792"
+      "sha256": "c810ebed733576c88010df365c906f6b7df1d064937a45836a182bf99650c8ad"
     },
     "tests/fixtures/wave2-preserved.json": {
       "sha256": "84814cc17090e6a42f595b7b6631b95d65ec1a9d43c224cf9169d4a1776ccbd2"

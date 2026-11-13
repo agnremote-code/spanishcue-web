@@ -14,7 +14,7 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { angleBetween, canUseKeys, followYaw, inputFrom, keyAction, stepPlayer } from '../noche-abierta/world3d.mjs';
+import { angleBetween, canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, createFramePacer, skipHiddenMatrices, worldPixelRatio, exposeForQa } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
 import { animatePerson, setMood } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
@@ -75,10 +75,12 @@ export default function World3D(props: WorldProps) {
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760 || params.get('calidad') === 'baja';
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
-    try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance', preserveDrawingBuffer: params.has('qa3d') }); }
+    // No canvas antialiasing: on desktop the picture is drawn by the effect composer, which never used it (it only cost video memory).
+    try { renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance', preserveDrawingBuffer: params.has('qa3d') }); }
     catch { const t = window.setTimeout(() => live.current.onFail(), 0); return () => window.clearTimeout(t); }
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, low ? 1.2 : 1.75));
+    const ratioCap = low ? 1.2 : 1.75;
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, ratioCap));
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.shadowMap.enabled = !low;
     renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -86,7 +88,7 @@ export default function World3D(props: WorldProps) {
     renderer.domElement.setAttribute('aria-label', 'Más allá en 3D. Flechas o WASD para caminar, espacio para saltar, E para hablar o cruzar.');
     host.appendChild(renderer.domElement);
 
-    const scene = new THREE.Scene();
+    const scene = skipHiddenMatrices(new THREE.Scene());
     const camera = new THREE.PerspectiveCamera(58, 1, 0.05, 900);
     let hero: ReturnType<typeof createHero>;
     try { hero = createHero(!low); }
@@ -118,6 +120,7 @@ export default function World3D(props: WorldProps) {
       composer.addPass(bloom);
       composer.addPass(new OutputPass());
     }
+    exposeForQa({ renderer, scene, camera, composer });
 
     // ------------------------------------------------------------ state
     let view: View | null = null;
@@ -242,6 +245,8 @@ export default function World3D(props: WorldProps) {
     let baseFov = 58, W = 1, H = 1;
     const resize = () => {
       W = host.clientWidth || 1; H = host.clientHeight || 1;
+      const ratio = worldPixelRatio(W, H, ratioCap, window.devicePixelRatio);
+      if (ratio !== renderer.getPixelRatio()) { renderer.setPixelRatio(ratio); composer?.setPixelRatio(ratio); }
       renderer.setSize(W, H, false); composer?.setSize(W, H);
       camera.aspect = W / H; baseFov = W / H < 0.8 ? 70 : 58; if (view !== 'intro') camera.fov = baseFov; camera.updateProjectionMatrix();
     };
@@ -259,9 +264,11 @@ export default function World3D(props: WorldProps) {
     const setFade = (opacity: number, color?: string) => { if (!fade.current) return; if (color) fade.current.style.background = color; fade.current.style.opacity = String(opacity); };
 
     // ------------------------------------------------------------ loop
+    const pace = createFramePacer();
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
+      if (!pace(now)) return;
       const raw = previous ? (now - previous) / 1000 : 0.016;
       const dt = Math.min(0.05, raw);
       previous = now; clock += dt;

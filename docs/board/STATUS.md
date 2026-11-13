@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-06 by the Friday 3D + assessment routine (scheduled cloud run; Alejandro convened twice as a subagent of the facilitator, for the code review and the W45 assessment, see "Current work")._
+_Last updated: 2026-11-13 by the Friday 3D + assessment routine (scheduled cloud run; Martin and Alejandro convened as subagents of the facilitator, Sofia not convened; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -32,7 +32,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
 | 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **HELD on R4 (§9.2 listening).** Draft #282, renumbered to catalog id **246** on 2026-11-02 (243 went to «Más allá»). The BOARD-DECISION-003 speech-to-text check was NOT VALID on its first run (missed a seeded gap-word -s pair), and it flagged cafe («Yaneth» misheard; line 8 not located in the first model's transcript) |
-| 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`). **Partly covered already** (VERIFIED: `app/grammar-classroom/live/lessons/g332.ts:129` has a section «También, tampoco, sí, no · Reacting to tastes» with exercises), so whether any gap remains is a HYPOTHESIS; Martin duplicate-checks against main before any authoring | Martin → fresh agent (G4) | after rank 2 content |
+| — | ~~«También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`)~~ | — | **DROPPED 2026-11-13** (Martin's duplicate check, facilitator re-verified): free A1 class 332 (G032) already teaches all eight reactions with 6 exercises (`app/grammar-classroom/live/lessons/g332.ts:129-146`; free per `app/access-policy.ts:1-2`), the A1 objective assesses it (`app/autoestudio/curriculum/objectives/a1.ts:140`) and G372 reuses it at A2. If more practice is wanted, add 2–4 exercises to that g332 section instead |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
 | P+1 | COMP-001 ProfeDeELE.com benchmark (plan below) | Alejandro + Martin | after the first technical SEO fix |
@@ -52,7 +52,8 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
-- **R0, NEW STATE 2026-11-06: Search Console is DISCONNECTED in Windsor.** `get_connectors` lists only `google_ads` (423-495-3611), and `get_data searchconsole` returns "No searchconsole accounts are configured". HYPOTHESIS: the extra accounts were removed for the Free plan, and Search Console went with them. The owner was pushed the reconnect link (`get_connector_connect_info searchconsole`) on 2026-11-06: re-authorize, then select `sc-domain:spanishcue.com` and click Finish. The history below is kept.
+- **R0 RESOLVED 2026-11-13 (VERIFIED):** `get_connectors` lists `searchconsole` with account `sc-domain:spanishcue.com`, and reads return data (latest day 2026-11-10). The W46 indicators are in [assessments/2026-W46.md](assessments/2026-W46.md) §2. The history below is kept.
+- **R0, STATE 2026-11-06 (superseded): Search Console was DISCONNECTED in Windsor.** `get_connectors` lists only `google_ads` (423-495-3611), and `get_data searchconsole` returns "No searchconsole accounts are configured". HYPOTHESIS: the extra accounts were removed for the Free plan, and Search Console went with them. The owner was pushed the reconnect link (`get_connector_connect_info searchconsole`) on 2026-11-06: re-authorize, then select `sc-domain:spanishcue.com` and click Finish. The history below is kept.
 - **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-11-03, Windsor returned the same "reads are paused … 6 accounts connected" error):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
@@ -79,6 +80,140 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-13 (Friday 3D + assessment routine): PR #422** (branch `claude/friday-assessment-20261113`, base main `3f946b9`). Subscription usage: **UNKNOWN**.
+  - **Unit: gated content repair, «Más allá» A2** (reported as a **repair**; W46 item 6, second half). R4 is still unanswered (#282 has had no comment since 10-26), so #282 was not touched.
+    - Martin removed every structure above A2 from `app/mas-alla/levels/a2.mjs` (16 strings) and `voces/a2.mjs` (6 voice questions). That covers the four «si + imperfecto de subjuntivo» prompts from his 11-03 audit, «habrías hecho», and every bare hypothetical conditional. Only *gustaría* (wishes) remains.
+    - New guard `aboveA2()` in `scripts/check-mas-alla.mjs`, at A0–A2, in encounters and voices. The test fails against main's a2 (6 findings). Each guard line was mutation-checked by the reviewer and caught.
+    - LQG file: [mas-alla-repair-a2-hypothesis-20261113.md](../audits/mas-alla-repair-a2-hypothesis-20261113.md).
+  - **G4:** a fresh agent acting as Alejandro returned **CHANGES REQUESTED** with 4 blockers:
+    - B1: the rio question capped the answer at one glass;
+    - B2: the trono talk premise contradicted the scene;
+    - B3: the guard had misses («si fuera», «si yo pudiera») and false positives («si separa», «si la clase»);
+    - B4: the A2 voices were not repaired.
+    - All were fixed, and the delta review returned **DELTA APPROVE**. NB-D1 to NB-D4 were applied afterwards (docs plus two guard stem lists), as the reviewer allowed.
+  - **Item 7 done: «También, tampoco» DROPPED** as a duplicate of free G032 (backlog row above).
+  - **W46 assessment:** [assessments/2026-W46.md](assessments/2026-W46.md) (Alejandro, fresh agent, from the facilitator's facts sheet).
+    - 2 board units were in production before today (#406, #414), and Friday's would make 3 by type. Under the strict reading (an LQG file per unit) it is 2 with Friday.
+    - This is the third week with no new board world.
+    - Items 1 (Mon STT v3) and 2 (Tue §3.2 decision) left no trace (reason UNKNOWN).
+    - The 6th ungated non-board seven-level featured world shipped (#409 «El mundo en blanco»).
+  - **Search Console is back (R0 resolved).**
+    - 28 days (10-16..11-12, data through 11-10): 52 clicks, 772 impressions.
+    - `/material-ele` has 33 clicks and 339 impressions, at an impression-weighted position of 12.2.
+    - Weekly clicks W41–W45: 1, 2, 3, 5, 23. W46 so far (two days): 20.
+    - Indexed count UNKNOWN: the Sitemaps `indexed` field is deprecated; 5,658 URLs are submitted.
+  - **Board:** Martin (author ×2, plus item 7), Alejandro ×2 as separate fresh agents (the assessment; G4 plus delta). Sofia was not convened, because no 3D or frontend code changed. Verbatim: [transcripts/2026-11-13-friday-3d-assessment.md](transcripts/2026-11-13-friday-3d-assessment.md).
+  - **Checks (local):**
+    - `npm test`: exit 0, 1,628 pass, 0 fail, at `cd245ba` and again at `5812912` (content-final), run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000` after fetching 5 pinned baseline commits.
+    - The later commits change only docs and two guard lists: `check-mas-alla` passes, `tests/mas-alla.test.mjs` 13/13, `test:language` 43/43, neutral 0 findings, English copy UNCHANGED.
+    - eslint on the changed files: clean.
+    - `tsc`: only the 3 errors already on main.
+    - `validate:artifact`: OK.
+    - `git diff --check`: clean.
+  - **Release (VERIFIED):** #422 merged as `428cae42`.
+    - Runs: CI + Auto Merge [43353680039](https://github.com/agnremote-code/spanishcue-web/actions/runs/43353680039) (on PR head `e6f21c17`, attempt 1; no `clasicas-routes` hang this time), staging [43356369857](https://github.com/agnremote-code/spanishcue-web/actions/runs/43356369857) and production [43356727091](https://github.com/agnremote-code/spanishcue-web/actions/runs/43356727091), all successful.
+    - The production smoke on https://spanishcue.com printed `"passed": true` (job 131660403137, 03:10:41Z), and the rollback was skipped. IndexNow reported "no new URLs". main = production = `428cae42`.
+    - The A2 strings are PRO-only, so they were not smoked individually.
+    - PUBLISHED.md entry and assessment fill-ins: records PR from `claude/friday-assessment-records-20261113`.
+    - The smoke output still shows `paddle_api_403` (known, owner action).
+    - Records review (fresh agent): CHANGES REQUESTED for one stale assessment line. It is fixed, and the run IDs, SHAs, smoke step, counts and LQG file were all confirmed against git and the Actions API.
+  - **Next action:** W47 plan in [assessments/2026-W46.md](assessments/2026-W46.md) §6. Follow-ups from this repair:
+    - two near-duplicates that predate it, `a2.mjs:142` and `:221` talk[0];
+    - the voices flagged by `conversation-quality` at `voces/a2.mjs:5, 20, 23`;
+    - Flegias's «moneda» line.
+  - **W46 plan item 6:** half done (Más allá A2 shipped as this unit; the El tren / La boda audit missed). **Item 7:** done (dropped). **Item 8:** the assessment is done; no leak repair was done (the unit was the content repair).
+- **2026-11-12 (Thursday reliability routine): PR #414** (branch `claude/thursday-review-20261112`, base main `a7625b4`). Subscription usage: **UNKNOWN**.
+  - **W46 plan item 4, the UID re-keying decision, is DONE (third attempt):** [BOARD-DECISION-005](decisions/BOARD-DECISION-005-uid-rekeying.md), **ADOPTED 3 of 3**.
+    - Sofia drafted it. Alejandro and Martin voted APPROVE WITH CHANGES, and every change was applied.
+    - **Decision:** defer the D1 re-keying, with no D1 write by any agent. The A/B/C migration plan is ready, including a collision pre-check and the share-pass fallback.
+    - **Triggers:** account linking, Firebase user deletion or recreation, Apple sign-in or a second provider, a change of Firebase project, and a recurring read-only orphan count through the owner's read path.
+    - **Review date:** the first Thursday after 2026-12-10.
+    - **Code-only step shipped now:** `tests/uid-keyed-surface.test.mjs` freezes the 8 files that read the UID directly and the 18 that reach it through helpers.
+    - **New finding (Martin, VERIFIED):** after a second UID, students keep submitting to links the teacher can neither see nor revoke (`app/autoestudio/errors/server.ts:23-27`, `share/server.ts:207`).
+  - **Board:** convened as three subagents.
+    - Sofia: draft.
+    - Alejandro: code review (**APPROVE**, 0 blockers) and vote.
+    - Martin: vote.
+    - The executives did not message each other. Verbatim: [transcripts/2026-11-12-thursday-reliability.md](transcripts/2026-11-12-thursday-reliability.md).
+  - **CI and deploy health (VERIFIED, `gh run list` + runs API):**
+    - main = production = `a7625b4` (#413). Production run [43069826293](https://github.com/agnremote-code/spanishcue-web/actions/runs/43069826293) succeeded. The scheduled smoke [43128552439](https://github.com/agnremote-code/spanishcue-web/actions/runs/43128552439) (11-12 00:36Z) passed.
+    - Only 3 failed runs since 11-05:
+      - staging 42671281517 / production 42671882235 for `a3dd0c85` (11-09) failed on "Promote", the known safe overlap refusal; later SHAs deployed.
+      - "Partners exact owner-authorized D1 operation" 42666907133 on a codex branch, not a board area.
+    - #410 (bundle diet) was reverted by #411 after a student reported «Something went wrong». #412 (no regex lookbehind for Safari < 16.4) followed. Both are non-board and deployed. Root cause per #412's title (HYPOTHESIS: not re-verified here).
+    - Open issues: only #40.
+  - **Audit of surfaces added since `8dff4873` (read-only):** partners (apply, touch, the admin ledger and settlements, attribution in the Worker).
+    - **Clean:**
+      - Origin, content-type and size checks through `readDemoRequest`.
+      - The referral cookie is HMAC-signed, base64url, expiring and bound to marketing consent.
+      - Admin is owner-gated, `no-store`, and its CSV is injection-safe.
+      - Settlement is idempotent and frozen in one statement.
+      - Identity routes are covered by the existing guard.
+    - **Note, not changed:** the Worker awaits `bindAttribution` (one D1 write) on every identity-aware request while a consented partner cookie exists (up to 30 days). It is fail-safe but adds latency. For the partners author to consider (`waitUntil`, or clear the cookie after the bind).
+  - **Fixed in #414 (each with a regression test that fails on main, `tests/backend-error-codes.test.mjs`):**
+    1. **L3 (10-29):** a concurrent academy create answered 503; it is now 409. Per review N1, the test now serializes batches the way D1 does, so the loser really hits the `institution_members.user_id` UNIQUE.
+    2. **L2 (10-29):** a malformed body to the owner academies POST answered 503; it is now 400.
+    3. **10-22:** a D1 failure in `/api/roster` POST gave a bare 500; it is now a JSON 503 with `no-store`.
+  - **Not done:**
+    - W46 item 5 (billing-contract lines) is still blocked: #360 and #283 are both still open.
+    - Re-adding the Bosque smoke row and the #357 URL checks: no capacity this run.
+  - **Checks (local, at `2d0303b9`; recorded in a #414 comment before ready):**
+    - `npm test`: exit 0, 1,618 pass, 0 fail.
+    - `validate:artifact`: OK.
+    - `tsc`: only the 3 errors already on main.
+    - eslint on the changed files: clean.
+    - `git diff --check`: clean.
+  - **Release (VERIFIED):** #414 merged as `f95f4d80` (02:49Z).
+    - CI + Auto Merge [43141085706](https://github.com/agnremote-code/spanishcue-web/actions/runs/43141085706). Attempt 1's `merge` job ("Reverify against current main") failed outside the diff: `tests/clasicas-routes.test.mjs:15` hit `fetch failed` after 300 s, a GET to the local wrangler dev Worker that never answered. `verify` had passed on the same tree. The one allowed re-run (attempt 2) passed.
+    - This is the **second** occurrence (the first was #387 on 11-05).
+    - Staging [43144622942](https://github.com/agnremote-code/spanishcue-web/actions/runs/43144622942) and production [43144995407](https://github.com/agnremote-code/spanishcue-web/actions/runs/43144995407) both succeeded. The production smoke on https://spanishcue.com printed `"passed": true` (job 130940638123, 03:01Z), and the rollback was skipped. main = production = `f95f4d80`.
+    - The fixes have no anonymous surface, so they were not smoked individually. Their evidence is the regression tests and the deploy.
+  - **Next action:**
+    1. Done: merge, deploy and smoke (above). Next Thursday: add a per-request timeout in `tests/clasicas-routes.test.mjs` that names the slug and headers, so the recurring wrangler-dev hang becomes diagnosable.
+    2. Fri 11-13: W46 items 6–8 and the W46 assessment.
+    3. Next Thursday: the smoke rows (W46 item 5b), and item 5a once #360/#283 resolve.
+    4. Step A of BOARD-DECISION-005 only when a trigger fires.
+  - **W46 plan item 4: done. Item 5: missed (blocked on #360/#283; 5b no capacity). Item 9: done (Sofia and Martin convened for their items).**
+- **2026-11-11 (Wednesday 3D routine): gated repair of the Madrid infectada unmount GPU leak** (branch `claude/board-wed-3d-20261111`, PR #406, base main `301306c`). Subscription usage: **UNKNOWN**.
+  - **Monday's unit is still open and blocked.**
+    - #282 Ascensor: R4 is unanswered (no comment since 10-26, no push since 11-02), so it was **not touched**.
+    - The W46 Monday item (STT check v3) left **no branch, PR or STATUS entry** on GitHub. Either the 11-09 run did not happen or it left nothing (UNKNOWN which).
+    - There is therefore no VALID result to release Ascensor on, and the BOARD-DECISION-003 §3.1 amendment for a provable-gate concept does not exist.
+    - The run took the W46 plan item 3 fallback: the next GPU-leak repair, one world per PR, madrid-infectada. It is reported as a **repair**.
+  - **Board:** convened proportionately.
+    - The facilitator built the repair.
+    - A fresh agent acting as Alejandro did the code review: **APPROVE** on `2df3b8b9`, 0 blockers, 7 notes.
+    - Applied: NB2 (the canvas assertion could not fail; it now checks `parentNode`, mutation-verified) and NB5 (trip-check slack 5% → 10%). NB1, NB4 and NB6 were applied as audit wording. NB3 and NB7 need no change.
+    - Sofia and Martin were not convened: no content changed.
+    - Verbatim: [transcripts/2026-11-11-wednesday-3d-madrid-repair.md](transcripts/2026-11-11-wednesday-3d-madrid-repair.md).
+  - **Evidence:** LQG file [madrid-infectada-repair-gpu-20261111.md](../audits/madrid-infectada-repair-gpu-20261111.md). New check `node scripts/qa-feria-browser.mjs --madrid-gpu`: two Sol → Metro → Sol rounds, then an unmount.
+    - On main: the unmount leaves 18 textures and 3 buffers at 1280 px (5 and 3 at 390 px), and the context is not lost. The 3 buffers are the city's three tree `InstancedMesh`es. 4/6.
+    - Fixed: 5 textures and 0 buffers at both widths, the context is lost, and the world remounts non-blank. 6/6, reproduced by the reviewer.
+    - The Metro trip does **not** leak on main. The trip check is a guard, mutation-tested: a station that is only detached adds about 420 buffers and 15 textures per round, and the check catches it.
+    - Fix: a local `free()` (the Más allá pattern); the composer passes, the shadow map and the particle stock are disposed; `forceContextLoss`. The shared `disposeGroup` is unchanged.
+    - Regression test `tests/madrid-infectada-gpu.test.mjs` fails on main («freed 0»). The reviewer's mutations: 5 of 7 are caught. The particle stock and the no-op `leaveMetro` switch are not; the canvas removal is caught after NB2.
+  - **Checks (local):**
+    - eslint on the changed files: clean.
+    - `tsc`: only the 3 errors already on main.
+    - `git diff --check`: clean.
+    - `npm test`: see the PR (result recorded before ready).
+  - **Overlap:** `scripts/test-worker.mjs` is also edited by #404 (non-board, line 26) and #282 (board, held). This PR adds one file to line 21, and git merges them cleanly.
+  - **Release (VERIFIED):** #406 merged as `c58b0f11`.
+    - Runs: CI + Auto Merge [42948462378](https://github.com/agnremote-code/spanishcue-web/actions/runs/42948462378), staging [42951488259](https://github.com/agnremote-code/spanishcue-web/actions/runs/42951488259) and production [42951903547](https://github.com/agnremote-code/spanishcue-web/actions/runs/42951903547), all successful.
+    - The production smoke on https://spanishcue.com printed `"passed": true` (job 130297918067, 03:22Z), and the rollback was skipped. main = production = `c58b0f11`.
+    - The repair has no anonymous surface, and the sandbox cannot reach spanishcue.com (proxy 403), so `/madrid-infectada` was not smoked individually. The evidence for the fix is the SwiftShader count and the regression test.
+    - PUBLISHED.md entry added (records PR from `claude/board-wed-3d-records-20261111`).
+  - **Next action:**
+    1. Thu 11-12: W46 item 4, the UID re-keying decision, as the first line of the brief.
+    2. Fri 11-13: W46 items 6–8 and the W46 assessment. Record this week's miss: item 1, STT v3, left no trace.
+    3. Follow-ups from this repair:
+       - the replayed finale boat is only detached (review NB4; free it as `leaveMetro` frees the station);
+       - Madrid has no `webglcontextlost` handler;
+       - the particle-stock dispose is untested;
+       - kit `disposeGroup` InstancedMesh (11-06 NB4) is still open.
+    4. Next leak repair: one of the non-board worlds (vuelo-cancelado, el-consorcio, el-tren-de-las-2340, la-boda) or mundo-3d, one world per PR.
+    5. If R4 is answered, Ascensor #282 comes first in any 3D slot.
+  - **W46 plan item 1 (STT v3, Mon): missed, no trace on GitHub, reason UNKNOWN. Item 3 (Wed 3D): done as the leak-repair fallback.**
 - **2026-11-06 (Friday 3D + assessment routine): gated repair of the Más allá GPU leak (place swaps + unmount) + W45 assessment** (branch `claude/friday-assessment-20261106`, base main `ca5068a7`). Subscription usage: **UNKNOWN**.
   - **Unit choice:** R4 is unanswered (#282 has had no comment since 10-26 and no push since 11-02), so #282 was not touched, and the W45 fallback was taken: the next leak repair, Más allá, reported as a **repair**.
   - **Board:** convened proportionately.

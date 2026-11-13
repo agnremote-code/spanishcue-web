@@ -45,7 +45,7 @@ export default {
     talk: [
       '¿Qué haces normalmente cuando tienes que esperar mucho tiempo?',
       '¿Te resulta fácil hablar con desconocidos? ¿Recuerdas una conversación rara con alguien que no conocías?',
-      '¿Cuál fue la espera más larga de tu vida? ¿Qué pasó?',
+      '¿Qué opinas de la gente que conversa con todo el mundo en una sala de espera?',
       '¿Prefieres pasar un domingo solo en casa o rodeado de gente?',
       'Si un vecino mayor vive solo, ¿qué cosas pequeñas puedes hacer por él?',
     ],
@@ -197,7 +197,7 @@ export default {
     talk: [
       '¿Te cuesta pedir ayuda? ¿En qué situaciones?',
       '¿Crees que la gente educada recibe menos atención que la gente que grita?',
-      '¿Qué te contaban tus abuelos de su juventud? ¿Recuerdas alguna historia?',
+      '¿Qué anécdota de tus abuelos te gusta contar?',
       '¿Prefieres decir las cosas importantes en persona, por mensaje o por carta?',
       'Si una persona muy educada y una muy maleducada te piden el mismo favor, ¿a quién ayudas primero?',
     ],
@@ -248,7 +248,7 @@ export default {
     talk: [
       '¿Qué comes normalmente en un día de trabajo o de estudio?',
       '¿Cuál es tu comida favorita cuando estás triste o cansado?',
-      '¿Hay un plato de tu infancia que te recuerda a alguien de tu familia?',
+      '¿Qué comida casera echas de menos cuando pasas tiempo fuera de casa?',
       '¿Prefieres comer tranquilamente solo o con compañeros que hablan de todo?',
       '¿Crees que los chismes en el trabajo unen a la gente o la separan?',
     ],
@@ -402,7 +402,7 @@ export default {
     talk: [
       '¿Eres capaz de hacer varias cosas a la vez o prefieres hacer una cosa cada vez?',
       '¿Cómo decides qué es urgente y qué puede esperar en tu día a día?',
-      '¿Te cuesta decir que no cuando alguien te pide un favor?',
+      '¿Cómo dices que no a un favor sin quedar mal?',
       '¿Quién es el mejor jefe o la mejor jefa que tuviste? ¿Qué hacía bien?',
       'Si un robot puede hacer una parte de tu trabajo, ¿qué parte le das primero?',
     ],
@@ -451,7 +451,7 @@ export default {
       { say: 'Propongo un trato: una hora más de fiesta y después silencio total.', reply: '«Hora y media, y Juan sopla una vela conmigo.»', end: 'Juan sopla la vela y, sin querer, sonríe. Karina dice que es su regalo de cumpleaños favorito.', mood: 'smile' },
     ],
     talk: [
-      '¿Cómo te gusta celebrar tu cumpleaños?',
+      '¿Qué celebración del año disfrutas más? ¿Por qué?',
       '¿Recuerdas la fiesta más divertida o más desastrosa de tu vida?',
       '¿Qué haces cuando un vecino hace mucho ruido?',
       '¿Te da miedo envejecer o crees que cada edad tiene algo bueno?',

@@ -4,6 +4,23 @@ Newest first. Each week: what the critic caught, what to do from the start
 next time, and ideas left for later. Keep it short; promote stable lessons
 into PLAYBOOK.md.
 
+## 2026-11-11 · El mundo en blanco (259)
+
+- **Arte propio en vez de muñecos**: seres de origami hechos a mano con
+  triángulos (`seres3d.ts`) y un shader de tinta (`papel3d.ts`,
+  `onBeforeCompile` de Lambert) que tiñe el mundo por zonas. El progreso es
+  el color del mundo, no un marcador.
+- **La tarjeta se aparta al premiar**: al «Devolver la tinta» se cierra la
+  tarjeta para que la inundación de color se vea.
+- **Catálogo y /material-ele**: una palabra suelta del texto del catálogo
+  («número») clasificó la clase en un tema de vocabulario y creó una página
+  de nivel nueva; `npm run test:seo` lo detecta. Releer el texto contra los
+  `match` de `app/material-ele/temas.ts`.
+- **Bundle**: con esta clase, Total Upload = 29,78 MiB (presupuesto 30).
+  Antes de la próxima clase hay que mover contenido a assets/blobs.
+- **Video de hover**: con `?qa3d=1`, animar `look()` e `ink()` cuadro a
+  cuadro y montar a 12 fps con `minterpolate` a 24.
+
 ## Semana 1 · 2026-11-04 · El tren de las 23:40 (256) y La boda (257)
 
 Lo que cazó el crítico (hacerlo bien desde el principio la próxima vez):

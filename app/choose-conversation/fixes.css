@@ -137,3 +137,12 @@
   .topic-worlds { grid-template-columns: 1fr; }
   .topic-worlds button { min-height: 185px; }
 }
+
+/* Mobile: topic titles wrap between words, never inside one («Costumbr-es»). */
+@media (max-width: 650px) {
+  .topic-hero h1 {
+    font-size: clamp(28px, 8.5vw, 40px);
+    overflow-wrap: normal;
+    hyphens: auto;
+  }
+}

@@ -23,6 +23,7 @@ const vuelo = await import('../app/vuelo-cancelado/layout.mjs');
 const consorcio = await import('../app/el-consorcio/layout.mjs');
 const boda = await import('../app/la-boda/layout.mjs');
 const tren = await import('../app/el-tren-de-las-2340/layout.mjs');
+const papel = await import('../app/el-mundo-en-blanco/layout.mjs');
 const hr = await import('../app/hr-crisis/oficina.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
@@ -239,7 +240,17 @@ function hrWorld() {
   };
 }
 
-const WORLDS = [nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+// El mundo en blanco: one open paper world. The twelve folded beings stand
+// still (the whale swims overhead), nobody walks, and the mascot is put at
+// the spawn, at each brush circle and in front of the inkwell.
+function papelWorld() {
+  return {
+    id: 'papel', solids: papel.solidsFor(), bounds: papel.BOUNDS, staticWalkers: true, walkers: [],
+    people: papel.peopleOf().map(p => ({ id: p.id, x: p.x, z: p.z })),
+    spots: [{ id: 'spawn', x: papel.SPAWN.x, z: papel.SPAWN.z }, { id: 'final', x: papel.FINAL.x, z: papel.FINAL.z + papel.FINAL.r + 0.6 }, ...papel.PLACES.map(s => ({ id: s.id, x: s.x, z: s.z }))],
+  };
+}
+const WORLDS = [papelWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {

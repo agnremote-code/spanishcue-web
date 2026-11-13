@@ -419,7 +419,7 @@ const TALK = {
       "¿Alguna vez te leyeron las cartas o la mano?",
       "¿Cambiaste de trabajo o de estudios alguna vez? ¿Por qué?",
       "¿Qué haces para tener buena suerte?",
-      "¿Cómo imaginas tu vida dentro de diez años?",
+      "¿Qué te gustaría estar haciendo en esta misma calle dentro de diez años?",
     ],
     B1: [
       "¿Qué crees que estarás haciendo dentro de cinco años?",

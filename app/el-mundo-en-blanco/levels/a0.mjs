@@ -1,0 +1,283 @@
+// El mundo en blanco · A0 · primeras palabras: ser, estar, tener, hay, querer, gustar; frases de tres a seis palabras. Cada texto lleva su traducción al inglés debajo.
+const b = (es, en) => ({ es, en });
+
+const level = {
+  grulla: {
+    title: b('La grulla mil', 'Crane number one thousand'),
+    line: b('Hay un mar de papel. Hay una grulla blanca. Tiene un número: 1000.', 'There is a paper sea. There is a white crane. It has a number: 1000.'),
+    dialogue: [
+      ['senba', b('Hola. Soy Senba. Soy la grulla mil.', 'Hello. I am Senba. I am crane number one thousand.')],
+      ['yo', b('Hola, Senba. Eres muy blanca.', 'Hello, Senba. You are very white.')],
+      ['senba', b('Sí. Mil grullas son un deseo.', 'Yes. A thousand cranes are one wish.')],
+      ['yo', b('Un deseo es bonito.', 'A wish is a lovely thing.')],
+      ['senba', b('Yo espero y espero. Tú tienes un deseo también.', 'I wait and wait. You have a wish too.')],
+    ],
+    q: b('¿Qué deseo escribes en tu grulla?', 'What wish do you write on your crane?'),
+    options: [
+      { t: b('Más tiempo', 'More time'), echo: b('El tiempo es un deseo grande.', 'Time is a big wish.') },
+      { t: b('Más calma', 'More calm'), echo: b('Yo también quiero calma.', 'I want calm too.') },
+      { t: b('Un viaje', 'A trip'), echo: b('¡Qué bien! Yo no viajo: yo espero.', 'How nice! I do not travel: I wait.') },
+    ],
+    talk: [
+      b('¿Qué cosa esperas esta semana?', 'What are you waiting for this week?'),
+      b('¿Quién espera noticias tuyas?', 'Who is waiting to hear from you?'),
+      b('¿Tu deseo es para ti o para otra persona?', 'Is your wish for you or for someone else?'),
+    ],
+    words: [b('la grulla', 'the crane'), b('el deseo', 'the wish'), b('esperar', 'to wait'), b('blanco', 'white'), b('mil', 'one thousand')],
+  },
+  barco: {
+    title: b('Un barco en la arena', 'A boat on the sand'),
+    line: b('Hay un barco de papel. No está en el mar. Está en la arena.', 'There is a paper boat. It is not in the sea. It is on the sand.'),
+    dialogue: [
+      ['pliego', b('Hola. Soy el capitán Pliego.', 'Hello. I am Captain Pliego.')],
+      ['yo', b('Hola. Eres un barco sin mar.', 'Hello. You are a boat with no sea.')],
+      ['pliego', b('Soy de papel. El agua es mala para mí.', 'I am made of paper. Water is bad for me.')],
+      ['yo', b('Pero el mar es bonito.', 'But the sea is lovely.')],
+      ['pliego', b('Sí. El mar es aventura. La arena es calma.', 'Yes. The sea is adventure. The sand is calm.')],
+    ],
+    q: b('¿Tú eres más mar o más arena?', 'Are you more sea or more sand?'),
+    options: [
+      { t: b('Mar: quiero aventura', 'Sea: I want adventure'), echo: b('¡Qué valor! Yo tengo miedo.', 'How brave! I am afraid.') },
+      { t: b('Arena: quiero calma', 'Sand: I want calm'), echo: b('Como yo. La arena es mi casa.', 'Like me. The sand is my home.') },
+      { t: b('Las dos cosas', 'Both'), echo: b('Un día mar y un día arena. Está bien.', 'One day sea and one day sand. That is fine.') },
+    ],
+    talk: [
+      b('¿Qué cosa te da miedo?', 'What are you afraid of?'),
+      b('¿Qué aventura pequeña quieres este mes?', 'What small adventure do you want this month?'),
+      b('¿En qué lugar tienes calma?', 'In what place do you feel calm?'),
+    ],
+    words: [b('el barco', 'the boat'), b('el mar', 'the sea'), b('la arena', 'the sand'), b('el miedo', 'fear'), b('la aventura', 'adventure')],
+  },
+  zorro: {
+    title: b('El buzón rojo', 'The red mailbox'),
+    line: b('Hay un buzón rojo. Hay un zorro con muchas cartas. Es el cartero.', 'There is a red mailbox. There is a fox with many letters. He is the postman.'),
+    dialogue: [
+      ['remite', b('Buenos días. Soy Remite, el cartero.', 'Good morning. I am Remite, the postman.')],
+      ['yo', b('Hola. Tienes muchas cartas.', 'Hello. You have a lot of letters.')],
+      ['remite', b('Sí. Son cartas sin sello. Nadie las manda.', 'Yes. They are letters with no stamp. Nobody sends them.')],
+      ['yo', b('Qué pena.', 'What a pity.')],
+      ['remite', b('Aquí hay una carta tuya. No tiene nombre.', 'Here is a letter of yours. It has no name on it.')],
+    ],
+    q: b('¿Para quién es tu carta sin sello?', 'Who is your unstamped letter for?'),
+    options: [
+      { t: b('Para una persona de mi familia', 'For someone in my family'), echo: b('La familia espera cartas siempre.', 'Family is always waiting for letters.') },
+      { t: b('Para una amiga o un amigo', 'For a friend'), echo: b('Una carta a un amigo es un regalo.', 'A letter to a friend is a gift.') },
+      { t: b('Para mí', 'For me'), echo: b('Muy bien. Tú también necesitas cartas.', 'Very good. You need letters too.') },
+    ],
+    talk: [
+      b('¿Qué tres palabras hay en tu carta?', 'What three words are in your letter?'),
+      b('¿A quién dices «gracias» hoy?', 'Who do you say “thank you” to today?'),
+      b('¿Qué palabra bonita dices poco?', 'What lovely word do you rarely say?'),
+    ],
+    words: [b('la carta', 'the letter'), b('el buzón', 'the mailbox'), b('el cartero', 'the postman'), b('el sello', 'the stamp'), b('mandar', 'to send')],
+  },
+  bola: {
+    title: b('Una bola de papel', 'A ball of paper'),
+    line: b('Hay una papelera. En el suelo hay una bola de papel. Tiene dos ojos.', 'There is a wastepaper bin. On the ground there is a ball of paper. It has two eyes.'),
+    dialogue: [
+      ['borra', b('Hola. Soy Borra. Soy una idea.', 'Hello. I am Borra. I am an idea.')],
+      ['yo', b('Hola. Estás en el suelo.', 'Hello. You are on the ground.')],
+      ['borra', b('Sí. Para una persona, soy un error.', 'Yes. To one person, I am a mistake.')],
+      ['yo', b('Un error no es malo.', 'A mistake is not a bad thing.')],
+      ['borra', b('Gracias. Tú también tienes errores.', 'Thank you. You have mistakes too.')],
+    ],
+    q: b('¿Qué haces con un error tuyo?', 'What do you do with a mistake of yours?'),
+    options: [
+      { t: b('Empiezo otra vez', 'I start again'), echo: b('¡Bien! Una hoja nueva.', 'Good! A new sheet.') },
+      { t: b('Pido ayuda', 'I ask for help'), echo: b('Dos personas ven mejor el error.', 'Two people see the mistake better.') },
+      { t: b('Lo dejo y hago otra cosa', 'I leave it and do something else'), echo: b('Ay. Yo soy una cosa dejada.', 'Oh. I am a thing left behind.') },
+    ],
+    talk: [
+      b('¿Qué cosa es difícil para ti?', 'What is hard for you?'),
+      b('¿Qué error haces mucho en español?', 'What mistake do you often make in Spanish?'),
+      b('¿Quién te ayuda con tus errores?', 'Who helps you with your mistakes?'),
+    ],
+    words: [b('la bola', 'the ball'), b('la papelera', 'the bin'), b('el error', 'the mistake'), b('la idea', 'the idea'), b('otra vez', 'again')],
+  },
+  rana: {
+    title: b('La rana verde', 'The green frog'),
+    line: b('Hay un estanque. Hay una rana de papel. Salta y salta.', 'There is a pond. There is a paper frog. It jumps and jumps.'),
+    dialogue: [
+      ['brinca', b('¡Hola! Soy Brinca. Yo salto.', 'Hello! I am Brinca. I jump.')],
+      ['yo', b('Hola, Brinca. Saltas muy bien.', 'Hello, Brinca. You jump very well.')],
+      ['brinca', b('Gracias. Pero solo salto hacia delante.', 'Thank you. But I only jump forwards.')],
+      ['yo', b('No puedes ir atrás.', 'You cannot go back.')],
+      ['brinca', b('No. Atrás está ayer. Delante está mañana.', 'No. Behind me is yesterday. Ahead is tomorrow.')],
+    ],
+    q: b('¿En qué piensas más: en ayer o en mañana?', 'What do you think about more: yesterday or tomorrow?'),
+    options: [
+      { t: b('En ayer', 'Yesterday'), echo: b('Ayer es bonito. Pero yo no puedo ir.', 'Yesterday is lovely. But I cannot go there.') },
+      { t: b('En mañana', 'Tomorrow'), echo: b('¡Como yo! Siempre hacia delante.', 'Like me! Always forwards.') },
+      { t: b('En hoy', 'Today'), echo: b('Hoy es un buen lugar para estar.', 'Today is a good place to be.') },
+    ],
+    talk: [
+      b('¿Qué cosa buena hay en tu día de hoy?', 'What good thing is there in your day today?'),
+      b('¿Qué plan bonito tienes para mañana?', 'What nice plan do you have for tomorrow?'),
+      b('¿Qué momento bonito de ayer recuerdas?', 'What lovely moment from yesterday do you remember?'),
+    ],
+    words: [b('la rana', 'the frog'), b('saltar', 'to jump'), b('ayer', 'yesterday'), b('mañana', 'tomorrow'), b('hacia delante', 'forwards')],
+  },
+  buho: {
+    title: b('El búho y el lápiz rojo', 'The owl and the red pencil'),
+    line: b('Hay un búho con gafas. Tiene un lápiz rojo. Es muy serio.', 'There is an owl with glasses. He has a red pencil. He is very serious.'),
+    dialogue: [
+      ['margen', b('Buenas tardes. Soy don Margen.', 'Good afternoon. I am Don Margen.')],
+      ['yo', b('Hola. Tienes un lápiz rojo.', 'Hello. You have a red pencil.')],
+      ['margen', b('Sí. Yo veo errores. Muchos errores.', 'Yes. I see mistakes. Lots of mistakes.')],
+      ['yo', b('Y las cosas buenas, no.', 'And not the good things.')],
+      ['margen', b('Mmm. Es verdad. Yo nunca digo «muy bien».', 'Hmm. That is true. I never say “well done”.')],
+    ],
+    q: b('¿Qué persona te dice «muy bien» muchas veces?', 'Which person often says “well done” to you?'),
+    options: [
+      { t: b('Mi familia', 'My family'), echo: b('Tienes una buena familia.', 'You have a good family.') },
+      { t: b('Mi profe', 'My teacher'), echo: b('Un buen profe ve lo bueno.', 'A good teacher sees the good.') },
+      { t: b('Yo', 'I do'), echo: b('¡Qué bien! Yo no sé hacer eso.', 'How nice! I do not know how to do that.') },
+    ],
+    talk: [
+      b('¿A quién dices tú «muy bien»?', 'Who do you say “well done” to?'),
+      b('¿Qué cosa haces muy bien?', 'What do you do very well?'),
+      b('¿Eres exigente con las otras personas?', 'Are you demanding with other people?'),
+    ],
+    words: [b('el búho', 'the owl'), b('el lápiz', 'the pencil'), b('las gafas', 'the glasses'), b('serio', 'serious'), b('exigente', 'demanding')],
+  },
+  munecas: {
+    title: b('Cinco hermanas', 'Five sisters'),
+    line: b('Hay cinco muñecas de papel. Son hermanas. Son iguales.', 'There are five paper dolls. They are sisters. They are the same.'),
+    dialogue: [
+      ['lina', b('Hola. Soy Lina. Soy la número tres.', 'Hello. I am Lina. I am number three.')],
+      ['yo', b('Hola. Tus hermanas son iguales a ti.', 'Hello. Your sisters are the same as you.')],
+      ['lina', b('Sí. Un vestido, una cara, una mano.', 'Yes. One dress, one face, one hand.')],
+      ['yo', b('Pero tú eres Lina.', 'But you are Lina.')],
+      ['lina', b('Sí. Yo quiero ser un poco diferente.', 'Yes. I want to be a little different.')],
+    ],
+    q: b('¿En qué eres diferente de tu familia?', 'How are you different from your family?'),
+    options: [
+      { t: b('En mi trabajo', 'In my job'), echo: b('Un trabajo diferente es un camino nuevo.', 'A different job is a new road.') },
+      { t: b('En mis gustos', 'In my tastes'), echo: b('Yo quiero un vestido verde. Es mi gusto.', 'I want a green dress. That is my taste.') },
+      { t: b('En mi carácter', 'In my character'), echo: b('Entonces no eres una copia.', 'Then you are not a copy.') },
+    ],
+    talk: [
+      b('¿Quién es igual que tú en tu familia?', 'Who is the same as you in your family?'),
+      b('¿Con qué personas estás muy bien?', 'Which people do you feel good with?'),
+      b('¿Qué cosa es solo tuya?', 'What thing is only yours?'),
+    ],
+    words: [b('la muñeca', 'the doll'), b('la hermana', 'the sister'), b('igual', 'the same'), b('diferente', 'different'), b('la mano', 'the hand')],
+  },
+  avion: {
+    title: b('El avión del recreo', 'The playtime plane'),
+    line: b('Hay un avión de papel. Está en el aire. Es el avión de un niño.', 'There is a paper plane. It is in the air. It is a little boy\'s plane.'),
+    dialogue: [
+      ['dardo', b('¡Hola! Soy Dardo. Yo vuelo.', 'Hello! I am Dardo. I fly.')],
+      ['yo', b('Hola. Eres un juguete.', 'Hello. You are a toy.')],
+      ['dardo', b('Sí. Soy de un niño de ocho años.', 'Yes. I belong to an eight-year-old boy.')],
+      ['yo', b('Y hoy ese niño es mayor.', 'And today that boy is a grown-up.')],
+      ['dardo', b('Sí. Pero yo soy su infancia. Estoy aquí.', 'Yes. But I am his childhood. I am here.')],
+    ],
+    q: b('¿Qué tienes todavía de tu infancia?', 'What do you still have from your childhood?'),
+    options: [
+      { t: b('Un juguete o un libro', 'A toy or a book'), echo: b('¡Un amigo mío! Es un tesoro.', 'A friend of mine! It is a treasure.') },
+      { t: b('Una foto', 'A photo'), echo: b('En una foto, la infancia no se va.', 'In a photo, childhood does not go away.') },
+      { t: b('Una amistad', 'A friendship'), echo: b('Eso es más fuerte que el papel.', 'That is stronger than paper.') },
+    ],
+    talk: [
+      b('¿Cuál es tu juego favorito de la infancia?', 'What is your favourite childhood game?'),
+      b('¿Cómo es la casa de tu infancia?', 'What is your childhood home like?'),
+      b('¿A qué juegas hoy?', 'What do you play today?'),
+    ],
+    words: [b('el avión', 'the plane'), b('volar', 'to fly'), b('el juguete', 'the toy'), b('la infancia', 'childhood'), b('el recreo', 'playtime')],
+  },
+  dragon: {
+    title: b('El dragón de periódico', 'The newspaper dragon'),
+    line: b('Hay un dragón. Es de papel de periódico. Tiene muchas noticias.', 'There is a dragon. It is made of newspaper. It has a lot of news.'),
+    dialogue: [
+      ['titular', b('¡Hola! Soy Titular. Tengo noticias.', 'Hello! I am Titular. I have news.')],
+      ['yo', b('Hola. Tus noticias son de ayer.', 'Hello. Your news is from yesterday.')],
+      ['titular', b('Sí. Y casi todas son malas.', 'Yes. And nearly all of it is bad.')],
+      ['yo', b('Yo quiero una noticia buena.', 'I want some good news.')],
+      ['titular', b('Yo también. Mañana hay un periódico nuevo.', 'Me too. Tomorrow there is a new newspaper.')],
+    ],
+    q: b('¿Qué noticia quieres leer mañana?', 'What news do you want to read tomorrow?'),
+    options: [
+      { t: b('Una noticia de paz', 'News about peace'), echo: b('Es la noticia más grande.', 'That is the biggest news.') },
+      { t: b('Una noticia de mi país', 'News about my country'), echo: b('Tu país está lejos, pero es tuyo.', 'Your country is far away, but it is yours.') },
+      { t: b('Una noticia de mi familia', 'News about my family'), echo: b('Es pequeña, pero es la más importante.', 'It is small, but it is the most important.') },
+    ],
+    talk: [
+      b('¿Qué noticia buena tienes hoy?', 'What good news do you have today?'),
+      b('¿Lees las noticias en papel o en el móvil?', 'Do you read the news on paper or on your phone?'),
+      b('¿De qué tema no quieres leer más?', 'What topic do you not want to read about any more?'),
+    ],
+    words: [b('el dragón', 'the dragon'), b('la noticia', 'the news'), b('el periódico', 'the newspaper'), b('leer', 'to read'), b('la paz', 'peace')],
+  },
+  farol: {
+    title: b('El farol rojo', 'The red lantern'),
+    line: b('Hay un farol rojo en la montaña. Tiene fuego dentro. Da mucha luz.', 'There is a red lantern on the mountain. It has fire inside. It gives a lot of light.'),
+    dialogue: [
+      ['candela', b('Hola. Soy Candela. Tengo fuego.', 'Hello. I am Candela. I have fire.')],
+      ['yo', b('Hola. Pero tú eres de papel.', 'Hello. But you are made of paper.')],
+      ['candela', b('Sí. El fuego es peligroso para mí.', 'Yes. Fire is dangerous for me.')],
+      ['yo', b('Pero tu luz es muy bonita.', 'But your light is very lovely.')],
+      ['candela', b('Gracias. Sin fuego no soy un farol.', 'Thank you. With no fire I am not a lantern.')],
+    ],
+    q: b('¿Qué cosa te da luz a ti?', 'What gives you light?'),
+    options: [
+      { t: b('La música', 'Music'), echo: b('La música es fuego bueno.', 'Music is good fire.') },
+      { t: b('Mi gente', 'My people'), echo: b('Muchas luces juntas: una fiesta.', 'Many lights together: a party.') },
+      { t: b('Mi trabajo', 'My job'), echo: b('¡Qué suerte! Pero descansa también.', 'How lucky! But rest too.') },
+    ],
+    talk: [
+      b('¿Cuándo estás sin energía?', 'When are you out of energy?'),
+      b('¿Dónde descansas mejor: en casa o fuera?', 'Where do you rest best: at home or out?'),
+      b('¿Qué actividad haces muchas horas?', 'What activity do you do for many hours?'),
+    ],
+    words: [b('el farol', 'the lantern'), b('el fuego', 'the fire'), b('la luz', 'the light'), b('peligroso', 'dangerous'), b('descansar', 'to rest')],
+  },
+  ballena: {
+    title: b('La ballena y el pueblo', 'The whale and the village'),
+    line: b('Hay una ballena azul en el cielo. En su espalda hay un pueblo pequeño.', 'There is a blue whale in the sky. On her back there is a little village.'),
+    dialogue: [
+      ['mar', b('Buenas tardes. Soy Mar.', 'Good afternoon. I am Mar.')],
+      ['yo', b('Hola. ¡Tienes casas en la espalda!', 'Hello. You have houses on your back!')],
+      ['mar', b('Sí. Es mi pueblo. Yo cuido a todos.', 'Yes. It is my village. I look after everyone.')],
+      ['yo', b('Es mucho trabajo.', 'That is a lot of work.')],
+      ['mar', b('Sí. Estoy cansada. Pero no lo digo.', 'Yes. I am tired. But I do not say so.')],
+    ],
+    q: b('¿A quién cuidas tú?', 'Who do you look after?'),
+    options: [
+      { t: b('A mi familia', 'My family'), echo: b('Tu familia es tu pueblo.', 'Your family is your village.') },
+      { t: b('A mis amigos', 'My friends'), echo: b('Tus amigos tienen suerte.', 'Your friends are lucky.') },
+      { t: b('A un animal', 'An animal'), echo: b('Los animales dan las gracias sin palabras.', 'Animals say thank you with no words.') },
+    ],
+    talk: [
+      b('¿A quién llamas en una semana mala?', 'Who do you call in a bad week?'),
+      b('¿Pides ayuda mucho o poco?', 'Do you ask for help a lot or a little?'),
+      b('¿Qué día de la semana pesa más?', 'Which day of the week is the heaviest?'),
+    ],
+    words: [b('la ballena', 'the whale'), b('el pueblo', 'the village'), b('la espalda', 'the back'), b('cuidar', 'to look after'), b('cansado', 'tired')],
+  },
+  hoja: {
+    title: b('La hoja en blanco', 'The blank page'),
+    line: b('Hay una mesa grande. Hay una hoja en blanco. No tiene palabras.', 'There is a big desk. There is a blank page. It has no words.'),
+    dialogue: [
+      ['hoja', b('Hola. Soy la última hoja.', 'Hello. I am the last page.')],
+      ['yo', b('Hola. Estás en blanco.', 'Hello. You are blank.')],
+      ['hoja', b('Sí. Soy una página nueva. Soy para ti.', 'Yes. I am a new page. I am for you.')],
+      ['yo', b('Tengo un lápiz.', 'I have a pencil.')],
+      ['hoja', b('Muy bien. Yo quiero una palabra tuya.', 'Very good. I want a word from you.')],
+    ],
+    q: b('¿Cuál es tu primera palabra en la página?', 'What is your first word on the page?'),
+    options: [
+      { t: b('Un nombre', 'A name'), echo: b('Un nombre es una buena primera palabra.', 'A name is a good first word.') },
+      { t: b('Un lugar', 'A place'), echo: b('Entonces tu página es un viaje.', 'Then your page is a journey.') },
+      { t: b('Un deseo', 'A wish'), echo: b('Senba, la grulla, está contenta.', 'Senba, the crane, is happy.') },
+    ],
+    talk: [
+      b('¿Qué página nueva quieres empezar este año?', 'What new page do you want to start this year?'),
+      b('¿Qué palabra de este mundo de papel te llevas?', 'What word from this paper world are you taking with you?'),
+      b('¿Qué color tiene tu día de hoy?', 'What colour is your day today?'),
+    ],
+    words: [b('la hoja', 'the page'), b('en blanco', 'blank'), b('la palabra', 'the word'), b('nuevo', 'new'), b('último', 'last')],
+  },
+};
+
+export default level;

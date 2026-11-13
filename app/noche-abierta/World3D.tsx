@@ -13,6 +13,7 @@ import {
   angleBetween, canUseKeys, colliders, exitSpot, followCamera, followYaw, inputFrom, isWalkable, keyAction, nearestTarget, roomLayout,
   stepPlayer, streetFraming,
   type Box, type Hotspot, type RoomExit, type RoomLayout, type Target,
+  createFramePacer,
 } from './world3d.mjs';
 import { CANAL, CEILINGS, CITY_BUILDINGS, DISTRICT_ZONES, ROADS, STREET_ROOMS, districtAt, streetRoomLayout, type MovingVehicle } from './city.mjs';
 import { ambientReaction, openingFx, type ItemId, type StreetState } from './street-core.mjs';
@@ -976,8 +977,10 @@ export default function World3D(props: WorldProps) {
     const markerTargets = [...city.markers.keys()].map(id => [id, targetById.get(id)!] as const);
     let raf = 0;
     let last = performance.now();
+    const pace = createFramePacer();
     const frame = (now: number) => {
       raf = requestAnimationFrame(frame);
+      if (!pace(now)) return;
       const dt = Math.min(0.1, (now - last) / 1000);
       last = now;
       sim.clock += dt;

@@ -26,7 +26,7 @@ export const BANCO = {
     b: [
       { es: '¿Qué parte de tu personalidad casi nadie conoce?' },
       { es: 'Si pudieras empezar de cero en otra ciudad, ¿quién te gustaría ser allí?' },
-      { es: '¿Qué decisión de tu vida te cambió más de lo que esperabas?' },
+      { es: '¿Qué elección pequeña terminó cambiando mucho tu vida?' },
       { es: '¿Qué opinión tuya ha cambiado por completo en los últimos años?' },
       { es: '¿Qué te dice la gente de ti que tú no ves?' },
     ],
@@ -86,7 +86,7 @@ export const BANCO = {
     b: [
       { es: '¿Qué dice de una persona la manera en que baila?' },
       { es: '¿Alguna vez fuiste a una fiesta y querías estar en otro lugar? ¿Qué hiciste?' },
-      { es: '¿Qué te da más vergüenza en una pista de baile y por qué?' },
+      { es: '¿Qué te da más vergüenza en una pista de baile?' },
       { es: '¿Por qué crees que necesitamos celebrar, aunque no haya motivo?' },
       { es: 'Si organizaras la fiesta perfecta, ¿quién estaría y quién no?' },
     ],
@@ -116,7 +116,7 @@ export const BANCO = {
     b: [
       { es: '¿Por qué nos cuesta tanto no mirar cuando algo se destruye?' },
       { es: '¿Qué parte de tu vida dejarías arder para empezar de nuevo?' },
-      { es: '¿Crees que quien quema algo en la calle está gritando algo? ¿Qué?' },
+      { es: '¿Por qué crees que algunas protestas terminan en fuego y destrozos?' },
       { es: '¿Cuándo fue la última vez que sentiste rabia de verdad? ¿Qué hiciste con ella?' },
       { es: '¿Hay objetos que guardas solo por lo que recuerdan? ¿Cuáles?' },
     ],
@@ -137,7 +137,7 @@ export const BANCO = {
       { es: '¿Eres una persona tranquila?', en: 'Are you a calm person?' },
     ],
     a: [
-      { es: '¿Qué haces primero cuando ves un accidente en la calle?' },
+      { es: '¿Sabes qué hacer si alguien se hace daño delante de ti? ¿Qué harías?' },
       { es: '¿Eres una persona nerviosa o tranquila en un problema? Da un ejemplo.' },
       { es: '¿A quién llamas cuando algo sale muy mal?' },
       { es: '¿Te gusta manejar? ¿Qué te pone nervioso en el tráfico?' },
@@ -147,7 +147,7 @@ export const BANCO = {
       { es: '¿Por qué algunas personas ayudan y otras solo graban con el móvil?' },
       { es: '¿Alguna vez un susto te hizo cambiar algo de tu vida?' },
       { es: '¿Crees en la suerte o en que todo tiene una causa?' },
-      { es: '¿Qué harías si el culpable de un accidente fuera alguien que quieres?' },
+      { es: '¿Qué pesa más para ti, la lealtad a alguien que quieres o decir la verdad?' },
       { es: '¿Cómo reaccionas cuando ves sangre o dolor? ¿Te sorprende?' },
     ],
     c: [
@@ -508,7 +508,7 @@ export const BANCO = {
       { es: '¿Qué cosa harías hoy por el planeta aunque te cueste?' },
       { es: '¿Crees que los animales sienten como nosotros?' },
       { es: '¿Qué lugar natural de tu infancia ya no existe como antes?' },
-      { es: 'Si fueras un árbol o un animal, ¿cuál serías y por qué?' },
+      { es: '¿Qué paisaje natural te hace sentir más tranquilo? ¿Por qué?' },
     ],
     c: [
       { es: '¿La naturaleza tiene derechos propios o solo los que le damos?' },
@@ -535,10 +535,10 @@ export const BANCO = {
     ],
     b: [
       { es: '¿Por qué crees que mirar el mar calma a tanta gente?' },
-      { es: '¿Qué te llevarías a una isla desierta y por qué no tu teléfono?' },
+      { es: '¿Cuánto tiempo aguantarías sin teléfono en un lugar aislado?' },
       { es: '¿Qué pensamientos tienes cuando miras el horizonte?' },
       { es: '¿Cambiarías tu trabajo por una vida simple junto al mar?' },
-      { es: '¿Qué secreto le contarías al mar?' },
+      { es: '¿Qué recuerdo importante de tu vida está unido al mar o al agua?' },
     ],
     c: [
       { es: '¿El mar es frontera o camino? Piensa en la historia y en la actualidad.' },
@@ -564,7 +564,7 @@ export const BANCO = {
       { es: '¿Sacas fotos en los monumentos o solo miras?' },
     ],
     b: [
-      { es: '¿Qué momento de la historia de tu país te da orgullo y cuál vergüenza?' },
+      { es: '¿Qué momento de la historia de tu país te parece más importante? ¿Por qué?' },
       { es: '¿Qué edificio de tu ciudad tiene una historia que pocos conocen?' },
       { es: '¿Crees que la historia se repite? Da un ejemplo.' },
       { es: 'Si tu vida fuera un museo, ¿qué objeto pondrías en la sala principal?' },
@@ -740,7 +740,7 @@ export const BANCO = {
       { es: 'Si fueras rey o reina un día, ¿qué harías primero?' },
       { es: '¿Te gusta mandar o prefieres que otros decidan?' },
       { es: '¿Qué persona con poder admiras? ¿Por qué?' },
-      { es: '¿Qué cuento de reyes te gustaba de niño?' },
+      { es: '¿Qué historia o película de reyes y reinas recuerdas? ¿Qué te gustaba?' },
       { es: '¿Obedeces siempre las órdenes? Da un ejemplo.' },
     ],
     b: [
@@ -835,16 +835,16 @@ export const BANCO = {
     ],
     b: [
       { es: '¿Abrirías la puerta a un desconocido que pide ayuda en una crisis?' },
-      { es: '¿Qué harías si tu mejor amigo se convirtiera en un peligro?' },
+      { es: '¿Hasta dónde llegarías para proteger a tu familia en una emergencia?' },
       { es: '¿Crees que en una crisis la gente se vuelve mejor o peor?' },
       { es: '¿Qué regla moral romperías para salvar a tu familia?' },
       { es: '¿Qué descubriste de ti en una situación difícil real?' },
     ],
     c: [
-      { es: '¿Las películas de zombis hablan en realidad de qué miedo social?' },
+      { es: '¿Qué miedos de nuestra sociedad crees que aparecen en las películas de catástrofes?' },
       { es: '¿La civilización es una capa fina? ¿Qué la mantiene?' },
       { es: '¿Sobrevivir a cualquier precio sigue siendo vivir?' },
-      { es: '¿A quién dejarías atrás y cómo vivirías después con esa decisión?' },
+      { es: 'En una crisis real, ¿qué crees que sale primero de las personas: el egoísmo o la solidaridad?' },
       { es: '¿Qué aprendimos de verdad como sociedad de la última gran crisis?' },
     ],
   },
@@ -857,7 +857,7 @@ export const BANCO = {
       { es: '¿Qué animal no te gusta?', en: 'Which animal do you not like?' },
     ],
     a: [
-      { es: '¿Qué animal eres tú? ¿Por qué?' },
+      { es: '¿Qué animal te parece más interesante? ¿Por qué?' },
       { es: '¿Tuviste una mascota de niño? Cuéntame de ella.' },
       { es: '¿Qué animal te da miedo?' },
       { es: '¿Adoptarías un animal de la calle?' },
@@ -926,7 +926,7 @@ export const BANCO = {
     b: [
       { es: 'Si pudieras volver atrás una hora en tu vida, ¿qué hora elegirías?' },
       { es: '¿En qué pierdes el tiempo y no te arrepientes?' },
-      { es: '¿Cómo te imaginas dentro de diez años?' },
+      { es: '¿Qué parte de tu vida actual te gustaría conservar dentro de diez años?' },
       { es: '¿Qué te gustaría decirle a tu yo de hace cinco años?' },
       { es: '¿Sientes que el tiempo pasa más rápido ahora? ¿Por qué?' },
     ],
@@ -1018,7 +1018,7 @@ export const BANCO = {
       { es: '¿Qué aventura vivirías si nadie se enterara nunca?' },
       { es: '¿Por qué algunas personas necesitan el peligro para sentirse vivas?' },
       { es: '¿Qué te hace sentir libre de verdad?' },
-      { es: '¿Qué te dijo tu cuerpo la última vez que tuviste vértigo?' },
+      { es: '¿Qué situación te da miedo físico, como las alturas o la velocidad?' },
     ],
     c: [
       { es: '¿La aventura es salir lejos o atreverse a cambiar desde dentro?' },

@@ -41,7 +41,7 @@
     "listening": {
       "title": "Un pedido de material",
       "transcript": "Hola, Laura. La caja ya está aquí. Hay cuatro cuadernos y dos lápices, pero no hay libros. Las fotos están en una bolsa pequeña. También tengo el mapa de Lima. ¿Tienes una mesa libre para todo esto? Ahora trabajo en la sala de reuniones, cerca de la ventana.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -142,7 +142,7 @@
     "listening": {
       "title": "Una visita a la sala",
       "transcript": "Hola, Clara. Estoy en la sala grande. Las mesas son nuevas, pero las sillas son viejas. Las ventanas están abiertas y la sala es tranquila ahora. Tengo dos libros interesantes para ti. ¿Prefieres una mesa redonda o una mesa cuadrada para tu espacio? Las dos son pequeñas y cómodas.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -243,7 +243,7 @@
     "listening": {
       "title": "El punto de encuentro",
       "transcript": "Hola, Julia. Estoy en una cafetería cerca de la oficina. La cafetería tiene una puerta azul. Hay una mesa libre en la terraza. La mesa está junto a una planta grande. Tengo los documentos para nuestra reunión. Cuando estés aquí, buscamos juntos el café en la carta. Hasta ahora.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -345,7 +345,7 @@
     "listening": {
       "title": "Una foto de la tienda",
       "transcript": "Hola. Te envío una foto de la tienda. Esta mesa de aquí es pequeña. Esas sillas junto a ti son cómodas, pero aquellas sillas del fondo son más baratas. ¿Qué prefieres para la oficina? También hay algo nuevo en la entrada. No conozco su nombre. ¿Sabes qué es eso?",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -446,7 +446,7 @@
     "listening": {
       "title": "Las cosas de la sala",
       "transcript": "Hola, Elena. Tu mochila está en nuestra sala. Mis llaves están dentro de mi bolso, así que todo bien. Hay una carpeta en la mesa, pero no es mi carpeta. Es la carpeta de Marta. Nuestros documentos están en tu computadora. ¿Puedes traer también tu teléfono? Necesitamos una foto del grupo.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -548,7 +548,7 @@
     "listening": {
       "title": "Antes de salir al mercado",
       "transcript": "Luis, estoy en el mercado. Hay bastante fruta, pero llevo solo cuatro manzanas. También compro dos botellas de agua. ¿Tenemos suficientes platos? En tu foto veo pocas servilletas. Puedo comprar un paquete. Todas las tiendas cierran a las seis, así que espero tu respuesta antes de comprar el resto.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -649,7 +649,7 @@
     "listening": {
       "title": "La mañana del sábado",
       "transcript": "Hola, Lucía. Hoy me levanto tarde. Me preparo un café y trabajo un poco en casa. Tú te levantas temprano los sábados, ¿verdad? Podemos comer juntos a la una. Después nos sentamos en la terraza y hablamos de la semana. Por la noche yo me quedo en casa; tú tienes una cena.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -823,7 +823,7 @@
     "listening": {
       "title": "Una llamada desde la biblioteca",
       "transcript": "Hola. Estoy aquí, cerca de la ventana. Hoy hay mucha gente, pero la sala está muy tranquila. Tu mesa está ahí, junto a la puerta. Primero voy a leer y después voy a escribir. No trabajo mucho esta tarde. Mañana tengo una reunión allí, en la oficina del fondo.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -924,7 +924,7 @@
     "listening": {
       "title": "La primera visita",
       "transcript": "Hola, Julia. Estoy frente a tu edificio. Hay dos puertas y no sé cuál es la entrada de la oficina. La puerta azul está abierta. ¿Es esa? Tu calle es tranquila y hay una cafetería cerca. Tengo tiempo para un café. Mi computadora está en mi bolso y estoy listo para trabajar.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -1123,7 +1123,7 @@
     "listening": {
       "title": "Una pausa en la tienda",
       "transcript": "Hola. Ahora preparo los libros nuevos. Trabajo aquí de lunes a viernes y como cerca de la tienda. Mi compañera abre por la mañana; yo cierro por la tarde. Los clientes preguntan mucho por libros de viajes. ¿Tú lees ese tipo de libros? En mi tiempo libre leo novelas y escribo notas en español.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -1224,7 +1224,7 @@
     "listening": {
       "title": "Confirmación del material",
       "transcript": "Marta, tengo una mesa pequeña con patas blancas. Las dos sillas cómodas están listas. No tengo una lámpara de escritorio, pero hay una lámpara grande con luz blanca en la sala. También preparo una carpeta azul para los documentos de la reunión. ¿La mesa con patas blancas sirve para tu oficina?",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -1325,7 +1325,7 @@
     "listening": {
       "title": "Una llamada de organización",
       "transcript": "Hola, Ana. Hoy no trabajo en casa. Trabajo en la oficina por la tarde. Marta y yo preparamos los documentos a las tres. ¿Tú tienes tiempo a esa hora? La reunión no empieza a las cinco; empieza a las seis. ¿Dónde están los documentos nuevos? Los necesito antes de la reunión.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -1426,7 +1426,7 @@
     "listening": {
       "title": "Una propuesta para el sábado",
       "transcript": "Hola, Julia. El sábado tengo tiempo y quiero visitar el centro. Podemos ir por la mañana o por la tarde. El museo es interesante, pero cierra temprano. También hay una cafetería cerca y podemos comer allí. ¿Prefieres el museo o un paseo? Yo llevo la cámara y tú eliges el lugar.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -1527,7 +1527,7 @@
     "listening": {
       "title": "Una propuesta para estudiar",
       "transcript": "Hola. Creo que podemos estudiar en la biblioteca hoy. Prefiero ese lugar porque hay poco ruido. Voy a las cuatro para revisar el libro antes de la clase. También llevo mi cuaderno para escribir las palabras nuevas. ¿Tú puedes venir a esa hora? La cafetería está cerca, pero creo que la biblioteca es más tranquila para hablar de nuestras preguntas.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -1702,7 +1702,7 @@
     "listening": {
       "title": "La rutina de un compañero argentino",
       "transcript": "Hola, Lucía. Vos estudiás por la mañana, ¿verdad? Yo trabajo hasta las seis. Después como en casa y preparo la clase. Si vos vivís lejos, podemos estudiar por videollamada. ¿Comés antes de la clase? Yo tengo tiempo a las ocho. El sábado hablamos otra vez y confirmamos el horario.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -1901,7 +1901,7 @@
     "listening": {
       "title": "La entrega en la oficina",
       "transcript": "Hola, Ana. Tengo las carpetas nuevas y las llevo a la oficina. Veo a Pablo esta tarde y le doy una carpeta. A los otros compañeros les doy las carpetas mañana. ¿Tienes el mapa de la sala? Lo necesito para encontrar la mesa. También te mando una foto de la entrada.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2100,7 +2100,7 @@
     "listening": {
       "title": "El plan de hoy",
       "transcript": "Hola, Ana. Hoy estudiamos español a las seis. Yo trabajo ahora y tú preparas el libro en casa. El profesor escribe un mensaje: «Abre la página diez». Es una petición. También dice: «Espero que la clase sea útil». Es una esperanza. Para contar nuestro día decimos: trabajo, preparas y estudiamos.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2299,7 +2299,7 @@
     "listening": {
       "title": "Una actualización del proyecto",
       "transcript": "Hola, te cuento cómo vamos. Hoy hemos revisado las fotos y hemos elegido seis. Ya he encontrado la carpeta que había perdido, así que puedo enviar mi parte esta tarde. Todavía no he escrito la introducción. ¿Has hablado con el profesor esta semana? Quiero preguntarle cuánto tiempo tenemos para presentar. Yo he hecho presentaciones antes, pero nunca he trabajado con este equipo. Podemos practicar mañana y revisar lo que falta.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2400,7 +2400,7 @@
     "listening": {
       "title": "Una tarde diferente",
       "transcript": "Hola, ayer hice una visita rápida al centro. Salí de la oficina a las cinco y fui a la estación. Compré los billetes para el fin de semana y después tomé un café con Julia. Hablamos casi una hora. Volví a casa a las ocho, preparé la cena y envié un mensaje al grupo. No visité el museo porque llegué tarde. Al final tuve una tarde tranquila, aunque hice varias cosas.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2501,7 +2501,7 @@
     "listening": {
       "title": "Una oficina que cambió",
       "transcript": "Hola, ¿recuerdas nuestra oficina anterior? Era pequeña y tenía una sola sala de reuniones. Yo trabajaba junto a la puerta y tú tenías la mesa cerca de la ventana. Cada viernes comíamos todos juntos. Había mucho ruido por la tarde, pero nos ayudábamos con los proyectos. Ayer vi una foto de esa época. Mientras la miraba, recordé las reuniones largas y el café que preparaba Marta. Ahora entiendo por qué nos gustaba tanto ese lugar.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2602,7 +2602,7 @@
     "listening": {
       "title": "El viernes antes de la mudanza",
       "transcript": "Hola, equipo. El viernes enviaré la dirección nueva, como prometí. El transporte llegará a las nueve del lunes. Creo que necesitaremos toda la mañana para llevar las cajas. Marta estará en la entrada y yo ayudaré en la sala grande. El martes tendremos las computadoras listas. Seguramente habrá algunas dudas, pero las resolveremos juntos. Por favor, preparen una lista de lo que falta para que pueda organizarlo antes del lunes.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2703,7 +2703,7 @@
     "listening": {
       "title": "Antes de conectar",
       "transcript": "Hola, Marta. Para la llamada de hoy, usa la sala pequeña, por favor. Primero abre el documento y comprueba la cámara. No envíes el enlace viejo; el nuevo está en mi último mensaje. Habla despacio al principio porque nuestra compañera todavía aprende español. Si no escuchas bien, revisa los auriculares. Después de la reunión, guarda las notas en la carpeta del equipo. No borres los comentarios: los necesitamos para preparar la próxima clase.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2804,7 +2804,7 @@
     "listening": {
       "title": "La visita a las dos salas",
       "transcript": "Hola, ya vi las dos salas. La primera está preparada y las sillas están ordenadas. Es menos grande que la segunda, pero igual de tranquila. El equipo está contento con esa opción. La segunda tiene más luz, aunque los documentos están mezclados y la gente necesita tiempo para organizarla. Yo elegiría la primera para la reunión de mañana. Después podemos comparar las fotos y pensar si la sala grande sirve para un curso con más participantes.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -2905,7 +2905,7 @@
     "listening": {
       "title": "Un cambio de horario",
       "transcript": "Hola, equipo. Por la mañana, la biblioteca tiene una actividad para niños. Podemos reunirnos tranquilamente en la sala pequeña después de las tres. ¿Prefieren el martes o el miércoles? Yo trabajo el martes en casa hasta las dos, así que puedo llegar sin problemas. En la estación, junto a la puerta principal, podemos encontrarnos primero. Después caminamos a la biblioteca. Confirmen el día en el grupo y yo reservo la sala por la tarde.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3080,7 +3080,7 @@
     "listening": {
       "title": "Un consejo sobre el orden",
       "transcript": "Hola, Silvia. Probé tu forma de organizar el día. Antes de empezar, preparo una lista corta. Después de revisar el documento principal, abro el correo. Cuando recibo muchos mensajes, elijo los más urgentes y respondo después de comer. Me ayuda bastante. El problema es que a veces miro el teléfono antes de terminar una tarea. Quiero dejarlo en otra mesa. ¿Tú haces una pausa cuando acabas un documento o sigues directamente con el siguiente?",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3181,7 +3181,7 @@
     "listening": {
       "title": "El sábado por la mañana",
       "transcript": "Hola, Ana. Termino de trabajar a las ocho, así que podemos salir a las nueve. Si el autobús llega pronto, esperamos en la cafetería de la estación. Si no hay sitio, compramos un café para llevar. Llevo mi bolsa si encuentro un libro interesante. ¿Tú quieres comer allí? Sí, yo también. Si el mercado está muy lleno, damos un paseo primero y volvemos más tarde. Nos vemos junto a la puerta principal.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3282,7 +3282,7 @@
     "listening": {
       "title": "Una respuesta de la coordinación",
       "transcript": "Hola, Julia. Gracias por avisar. Ayer dije que revisaría el programa y ya lo tengo delante. La presentación será a las once, no a las diez. ¿Podrías enviar un resumen esta tarde? Me gustaría compartirlo con Marta antes de cerrar el orden. Preferiría que hablaras después de ella, como propusiste, porque así las dos partes quedarían conectadas. Te dije que tendrías cinco minutos, pero podemos darte siete si incluimos las preguntas. Confírmame si ese cambio te sirve y preparo la invitación definitiva. Así podrás organizar tu parte sin rehacer toda la presentación.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3383,7 +3383,7 @@
     "listening": {
       "title": "La versión de recepción",
       "transcript": "Hola, Elena. Quería explicarte la situación del viernes. Cuando llegaste, ya habíamos cambiado el sistema, pero no habíamos revisado todos los mensajes anteriores. Por eso tu reserva no aparecía. Un compañero había guardado tu lista de participantes y pudimos recuperarla. Además, un grupo había cancelado su taller a primera hora. Esa sala quedó libre y la preparamos para ti. Antes de que empezara la actividad, ya habíamos avisado al equipo de limpieza. Para la próxima vez, enviaremos una confirmación clara después de cada reserva. Gracias por mantener la calma y ayudarnos a ordenar la información.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3484,7 +3484,7 @@
     "listening": {
       "title": "El pedido de una participante",
       "transcript": "Hola, Elena. Me alegra que el taller sea práctico. Quiero que tengamos tiempo para hablar de casos reales. Te envío una pregunta para que puedas elegir un ejemplo cercano a nuestro trabajo. También espero que los participantes escuchen las opiniones diferentes. A veces una persona habla demasiado y otras no intervienen. ¿Puedes organizar turnos para que todos participen? Yo quiero preparar una explicación breve, sin ocupar toda la sesión. Me parece importante que cada persona salga con una idea que pueda probar después. Gracias por pensar en el grupo. Creo que ese equilibrio nos ayudará.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3585,7 +3585,7 @@
     "listening": {
       "title": "La confirmación pendiente",
       "transcript": "Hola, Elena. Me alegra que hayas guardado una copia de la propuesta. Todavía no veo una confirmación en el correo. Puede que el comité haya enviado la respuesta a otra dirección, aunque no tengo ninguna prueba. Dudo que hayan perdido los archivos: el sistema mostró un mensaje de entrega correcta. Estoy contenta de que Marta haya revisado las fotos antes de enviar todo. Ahora podemos esperar hasta mañana y comprobar las dos cuentas de correo. Si no aparece nada, preguntaremos por la recepción. No hace falta preparar otra propuesta desde cero.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3686,7 +3686,7 @@
     "listening": {
       "title": "Un mensaje más claro",
       "transcript": "Hola, Elena. Revisé los textos de la carpeta verde y los de la azul. Los de la verde están completos; los de la azul son versiones antiguas. Marta, nuestra fotógrafa, ya eligió las imágenes finales. ¿Quieres que hable con el diseñador que hizo el cartel o con el que preparó el catálogo? Prefiero confirmarlo porque ambos están trabajando hoy. También encontré una nota tuya, la del lunes, que pide cambiar el título. Puedo hacer ese cambio antes de imprimir. Si hay otra instrucción más reciente, envíamela para no usar una versión equivocada.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3787,7 +3787,7 @@
     "listening": {
       "title": "Una semana con poco tiempo",
       "transcript": "Hola, profe. Esta semana tengo mucho trabajo, pero sigo estudiando un poco. Suelo escribir un mensaje después de comer y vuelvo a escuchar el audio de la clase cuando viajo. He dejado de preparar textos demasiado largos porque me quitaban toda la tarde. Mi compañera sigue hablando conmigo los viernes, aunque ahora solo tenemos quince minutos. Antes solíamos conversar una hora. Me gustaría mantener esa actividad. ¿Podemos revisar los mismos errores durante dos clases? Así puedo comprobar si dejo de repetirlos. No quiero cambiar de método cada semana; prefiero dar tiempo a esta rutina.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3888,7 +3888,7 @@
     "listening": {
       "title": "Una opinión sobre la reunión",
       "transcript": "Hola, Julia. Ni el tamaño de la biblioteca ni la falta de proyector me preocupan. Podemos llevar copias impresas. Sin embargo, quiero comprobar si se puede hablar en la sala reservada: algunas bibliotecas piden silencio. La opción cerca de la estación es útil, aunque menos flexible con el horario. No podemos reunirnos ni el lunes ni el martes por la mañana. Yo prefiero el jueves por la tarde. Si confirmamos las condiciones de la biblioteca, podemos decidir hoy. También llevaré agua para el grupo. Creo que lo importante es tener tiempo para conversar sin interrupciones.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -3989,7 +3989,7 @@
     "listening": {
       "title": "Confirmar la visita",
       "transcript": "Hola, Elena. Soy Marta, la persona que lleva la agenda de los talleres. La sala que vimos ayer está libre el viernes. Luis, quien prepara el material, puede dejar las mesas listas antes de las diez. Necesito saber quién viene con tu grupo y qué cámara van a usar. La compañera que organiza las exposiciones también participará un rato, pero no coordinará el taller. Si buscas un espacio para dejar los bolsos, usa el armario que está junto a la entrada. Envíame la lista y compartiré los detalles con las personas que trabajan ese día.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -4090,7 +4090,7 @@
     "listening": {
       "title": "La experiencia de una compañera",
       "transcript": "Hola, ¿recuerdas el curso? Yo llegué un día antes y visité el barrio del centro. Las calles eran tranquilas y había muchas tiendas pequeñas. Durante las clases solía sentarme junto a la ventana. El último día presenté tres fotos y el profesor me dio una idea para mejorarlas. Desde entonces he cambiado mi forma de mirar los edificios. Esta semana he hecho fotos cerca de casa, aunque todavía no he elegido las mejores. Me gustó la actividad de la estación: llovía mucho afuera y pudimos trabajar sin prisa. Quiero volver a practicar con el grupo.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -4289,7 +4289,7 @@
     "listening": {
       "title": "Una recomendación práctica",
       "transcript": "Hola, Julia. Ya tengo cuatro respuestas. Si Marta confirma hoy, reservaremos la sala pequeña. Si no puede venir, prefiero mantener el viernes y conectar su computadora a la llamada. Yo enviaría los documentos esta tarde para que todos puedan leerlos. También haría una lista de preguntas antes de empezar. Si aparecen demasiados temas, elegimos dos y dejamos el resto para otro día. No necesitamos resolver todo en una sola reunión. Yo reservaría una hora como máximo. El miércoles revisamos las respuestas que faltan y confirmamos el formato con el equipo.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -4488,7 +4488,7 @@
     "listening": {
       "title": "La respuesta de un compañero",
       "transcript": "Hola, Elena. Ayer comenté que prefería que los resúmenes fueran más cortos, pero no quería que dejáramos de hablar de los problemas importantes. Creo que el ejemplo de tres puntos puede ayudar. Si todos siguiéramos ese formato, leeríamos menos y tendríamos más tiempo para decidir. También me gustaría que una persona reuniera las preguntas antes de la llamada. En la reunión anterior pedimos que cada compañero enviara su texto el jueves, pero dos lo mandaron después. No lo menciono para culparlos: quizá el plazo no estaba claro. Ojalá tuviéramos una confirmación simple de recepción. Podemos probarla esta semana y revisar el resultado antes de ampliar el sistema a otros equipos.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -4589,7 +4589,7 @@
     "listening": {
       "title": "Una revisión sin culpas",
       "transcript": "Hola, Elena. Me pareció útil que hubiéramos revisado el problema ayer con calma. Cuando vi los paneles antiguos, me molestó que no hubiéramos comprobado la versión antes, pero ahora entiendo que el enlace podía confundir. Si yo hubiera abierto la carpeta completa, habría visto el archivo final. No quiero que todo el control dependa de una persona. Ojalá hubiéramos repartido la revisión desde el principio. Para la próxima exposición podemos asignar dos comprobaciones: que cada participante confirme la descarga y que otro compañero revise una muestra. La idea es aprender de lo ocurrido. No hace falta guardar cada error como una acusación, sino entender qué paso nos habría permitido detectarlo a tiempo.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -4690,7 +4690,7 @@
     "listening": {
       "title": "Una explicación de la demora",
       "transcript": "Hola, Julia. Cuando empezamos, pensé que para marzo habríamos cerrado el catálogo. No conté con que las fotos necesitaran otra revisión. Habría enviado un avance si hubiera sabido que tu parte dependía de ese material. También reconozco que habría podido avisarte antes. Esperé hasta el último día porque quería dar una solución completa, y esa espera te dejó sin margen. No quiero repetir ese proceso. Para el próximo trabajo enviaré una muestra aunque falten imágenes. Así podrás revisar los textos y saber qué sigue pendiente. El catálogo salió bien, pero con una comunicación más temprana habríamos tenido menos presión al final. Me gustaría que acordáramos cuándo avisar y qué información compartir durante la preparación.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -4791,7 +4791,7 @@
     "listening": {
       "title": "El avance del montaje",
       "transcript": "Hola, equipo. Para mañana a las seis habremos terminado el montaje de la sala principal. Marta habrá revisado las fotos antes de que imprimamos los rótulos. Yo habré enviado la lista de invitados cuando ustedes lleguen el viernes. Todavía no encuentro el archivo de Luis; habrá compartido el enlace por otro canal, pero voy a preguntarle antes de asumirlo. Tenemos dos tareas pendientes y no quiero confundir una previsión con una confirmación. Si seguimos el horario, al abrir habremos comprobado todos los paneles. Les enviaré una actualización esta noche con lo que ya está hecho y lo que deberá quedar listo mañana. Revisen sus plazos y avisen si necesitan ayuda para cumplirlos.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -4892,7 +4892,7 @@
     "listening": {
       "title": "La aclaración de la autora",
       "transcript": "Hola, gracias por revisar la nota. Con «los de las visitas» quería decir los informes, no los resúmenes. Voy a repetir el nombre porque ambos aparecen en la carpeta. Sobre las copias, solo deben recibirlas los voluntarios que trabajan los sábados. No todos tienen ese horario, así que prefiero mantener la relativa sin comas. El retrato es obra de Laura, aunque la persona que aparece en la foto es Marta. Podemos escribir «el retrato de Marta realizado por Laura». También hay unas imágenes antiguas, las del año pasado, que no quiero incluir. En ese caso creo que el nombre se recupera bien. Mi objetivo es que el boletín sea breve, pero que nadie tenga que adivinar qué documento o persona estamos mencionando.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -5067,7 +5067,7 @@
     "listening": {
       "title": "La propuesta de Julia",
       "transcript": "Hola, creo que ya nos dimos cuenta de que el problema no era solo el número de fotos. La entrega depende de cómo repartamos la revisión. Yo insisto en empezar con una muestra y confío en que el equipo encontrará una solución. También insistiré en que cada persona confirme qué imágenes ha revisado. Así no repetimos el mismo trabajo. Me di cuenta de que algunos mensajes omitían de delante de que y podían sonar poco cuidados. Propongo escribir un acuerdo breve con las responsabilidades y el plazo. No necesitamos un informe largo, pero sí saber de qué depende cada paso y en quién podemos confiar para completarlo. Después compartimos la versión final con la coordinación.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -5242,7 +5242,7 @@
     "listening": {
       "title": "Una opinión después de la reunión",
       "transcript": "Hola, Elena. Me parece bien empezar con una tarde de prueba. Si conseguimos cuatro voluntarios, podremos organizarla sin cambiar todo el horario. Yo participaría más si la biblioteca abriera después de las seis, porque salgo tarde del trabajo. Si tuviera que elegir entre una tarde y un domingo, preferiría la tarde. Así más compañeros podrían venir al salir de la oficina. No digo que abrir los domingos sea imposible, pero ahora lo veo más distante. La encuesta nos ayudará a comparar las necesidades. También sería útil preguntar qué actividades harían los vecinos si hubiera una sala disponible por la noche. Con esas respuestas podemos pasar de las ideas imaginadas a un plan que realmente podamos probar.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -5343,7 +5343,7 @@
     "listening": {
       "title": "Una respuesta al grupo",
       "transcript": "Hola, Julia. Aunque el museo ha cambiado la hora de entrada, podemos llegar a tiempo. Te aviso porque quizá no habías visto el mensaje. Ya sabemos que el transporte será más lento: aunque tarde más, prefiero mantener la visita y salir antes. Y aunque llueva durante el camino, hay una entrada cubierta. Lo que sí necesito comprobar es el último autobús de vuelta. Si no podemos regresar sin esperar demasiado, propondría otro día. No quiero usar aunque para ignorar todas las dificultades, sino para explicar cuáles podemos aceptar. Envíame el horario nuevo cuando lo tengas y confirmamos el plan con el resto. Así distinguimos la noticia del museo de las objeciones que ya hemos discutido.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -5444,7 +5444,7 @@
     "listening": {
       "title": "La propuesta después del problema",
       "transcript": "Hola, Julia. Si hubiéramos hecho una prueba con todo el grupo, habríamos descubierto que dos personas no podían abrir los archivos. El inicio de la exposición habría sido más tranquilo. Pero quiero separar ese retraso de la situación actual. Si hubiéramos elegido una herramienta más sencilla, hoy trabajaríamos con menos ayuda externa. No significa que todos los errores desaparecieran: los nombres de los archivos también eran confusos. Para la próxima actividad propongo una copia accesible y una prueba breve por participante. Así podemos aprender de la condición pasada sin convertir la revisión en una lista de reproches. El programa ya está elegido, pero todavía podemos cambiar la forma de compartir el material. Esa parte sí depende de lo que hagamos ahora.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -5643,7 +5643,7 @@
     "listening": {
       "title": "La autora explica su intención",
       "transcript": "Hola, gracias por señalar las dudas. Con «la crítica de la directora» quería decir que ella evaluó la exposición, no que alguien la criticó. Podemos escribir «la evaluación que hizo la directora» si esa relación no queda clara en el párrafo. Sobre los documentos, comparo el informe breve con el informe de ayer. Había mencionado un resumen y entiendo que la elipsis deje dos candidatos. Prefiero repetir el nombre. El deseo de volver es de la fotógrafa: quiere regresar al barrio donde hizo las imágenes. No quería sugerir que el deseo fuera mío. Podemos nombrarla antes y después mantener el infinitivo. Me interesa conservar una reseña fluida, pero no a costa de que el lector reparta mal las acciones. Si una relación se entiende por el contexto inmediato, la dejaremos breve. Si necesita una adivinación, la explicaremos. Revisemos también el párrafo anterior, porque quizá allí empezó la confusión. Eso también importa.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -5818,7 +5818,7 @@
     "listening": {
       "title": "Una actualización desde el archivo",
       "transcript": "Hola, Julia. Esta semana vamos entendiendo mejor las fechas de las primeras exposiciones. El equipo viene comparando catálogos desde agosto y ahora tenemos preparada una tabla con las diferencias. Llevo revisadas cincuenta fotos de la carpeta nueva, pero solo treinta están clasificadas de forma definitiva. No quiero que el informe presente ambas cifras como equivalentes. Marta dejó resueltas las dudas sobre los nombres, aunque todavía falta confirmar dos lugares. La sala está ordenada y podemos recibir a las personas que traerán información. Eso facilita el trabajo, pero no significa que el archivo esté completo. Propongo dedicar la próxima sesión a los datos pendientes en lugar de seguir abriendo carpetas. Así lo acumulado se convierte en un resultado fiable y no solo en una cifra grande. Enviaré la tabla esta tarde y marcaré claramente qué está comprobado, qué seguimos revisando y qué queda preparado para la entrevista del viernes. Gracias por coordinarlo.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -5993,7 +5993,7 @@
     "listening": {
       "title": "Una conversación sobre la edición",
       "transcript": "Hola, vi el fragmento del archivo. Creo que podemos conservar la primera frase como cita breve y explicar la secuencia debajo. Cuando leo «apenas hubo terminado», entiendo que la lectura acabó justo antes de la entrega. No lo usaría en nuestro correo al equipo, porque sonaría demasiado distante. En el boletín podemos decir «apenas terminó la lectura» y mantener el ritmo. Para la segunda frase, prefiero «después de revisar la lista, los asistentes salieron». Si queremos resaltar que la revisión ya estaba completa al salir, también sirve una formulación con había. Lo importante es no cambiar el orden de las acciones ni presentar la revisión como simultánea a la salida. Revisemos cómo se conecta el fragmento con el párrafo anterior. Quizá allí hay una pausa más larga y no conviene exagerar la inmediatez. La versión moderna debe ser clara, pero también fiel a lo que la fuente realmente permite interpretar.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -6168,7 +6168,7 @@
     "listening": {
       "title": "La explicación para visitantes",
       "transcript": "Hola, revisé la página del reglamento. Me parece importante que la imagen conserve tuviere y llegare, porque forman parte de la fuente. En el texto para visitantes usaría tenga y llegue dentro de las mismas relaciones. La primera frase no señala a una persona concreta que ya tiene dudas; permite que cualquier visitante en esa situación pregunte. La segunda contempla la llegada de un catálogo nuevo, no afirma que ya haya llegado. También aclararía la diferencia entre llegare y llegará, porque la ausencia de tilde no es un descuido en el original. Para la fórmula «sea cual fuere» podemos dar una paráfrasis breve y comentar su tono heredado. No necesitamos pedir al personal que la use al hablar. Nuestro objetivo es ayudar a leer el archivo. Si la explicación parece demasiado técnica, añadamos un ejemplo actual de la misma situación y dejemos el nombre del tiempo verbal como apoyo para quien quiera profundizar.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -6343,7 +6343,7 @@
     "listening": {
       "title": "La nota del equipo editorial",
       "transcript": "Hola, revisé la explicación de la circular. Mantendría haya entregado en la paráfrasis, porque indica que el cuaderno debe estar entregado antes de retirar la copia. Si decimos simplemente «quien entregue», la relación sigue siendo posible, pero la atención al resultado completado queda menos explícita. Para las demostraciones, «cuando hayan terminado» conserva bien el punto anterior a la apertura. También aclararía que hubieren no convierte el participio en plural: concluido permanece invariable en la forma compuesta. No hace falta escribir una instrucción nueva con ese tiempo histórico. Podemos explicar a los visitantes el orden de las acciones con palabras actuales. La nota debe distinguir la lectura del documento de una afirmación sobre cómo funciona hoy la institución. Quizá convenga añadir que se trata de una circular de cursos antiguos y no de condiciones actuales de acceso. Así evitamos que la solemnidad de la forma parezca una autoridad presente y mantenemos el foco en la historia de la enseñanza y en la precisión de nuestra paráfrasis.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",
@@ -6518,7 +6518,7 @@
     "listening": {
       "title": "Un comentario sobre el informe",
       "transcript": "Hola, leí tu informe y creo que ahora las perspectivas están claras. Al principio esperaba que la reunión sirviera para elegir una opción definitiva. También me alegraba que hubiéramos recibido preguntas antes, porque nos permitían preparar ejemplos. Después vi que algunas necesidades eran distintas y preferí que probáramos la solución durante un mes. Hoy me alegra que hayamos acordado esa prueba, aunque no espero que resuelva todo de inmediato. Quiero que cada persona anote qué funciona y qué sigue siendo difícil. Cuando recuerde esta etapa en el próximo informe, distinguiré lo que esperaba entonces de lo que ya habíamos hecho. No necesito presentar cada duda como falta de realidad: a veces reacciono a un hecho confirmado. Me parece útil marcar cuándo cambia mi punto de vista para que el lector pueda seguirlo. Podemos revisar juntos un párrafo donde se mezclan la expectativa pasada y la petición actual, y comprobar si la alternancia corresponde a nuestra intención.",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "questions": [
         {
           "kind": "meaning",

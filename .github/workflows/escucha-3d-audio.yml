@@ -16,7 +16,7 @@ concurrency:
 jobs:
   audio:
     runs-on: ubuntu-latest
-    timeout-minutes: 40
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v5
         with:

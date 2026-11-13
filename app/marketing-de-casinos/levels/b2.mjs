@@ -689,7 +689,7 @@ const scenes = {
       "¿Mentirías para ayudar a un desconocido que te cae bien? ¿Dónde está tu límite?",
       "¿Qué crees que revela de una persona su manera de comportarse cuando ha bebido demasiado?",
       "¿Cuál es la peor noche que recuerdas por culpa del alcohol, tuya o de otra persona?",
-      "¿Crees que la vergüenza nos protege o nos impide vivir? ¿Qué es lo que más vergüenza te daría hacer en público?",
+      "¿Qué cosas te atreves a hacer en público que a otras personas les darían vergüenza?",
     ],
     words: ["borracho como una cuba", "hacerse responsable de", "liarla", "estar hecho polvo"],
   },
