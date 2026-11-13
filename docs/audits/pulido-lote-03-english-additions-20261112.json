@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "authorization": "Owner approval cmsg_01Gr5R4j3t2Yet65UcmhcVhACmxDGtiCM9wmxUKzBtb3KT («apruebo», 2026-11-13, typed in the academic board thread for exactly these six questions), on top of the standing approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g. Weekly polish batch 03: six conversation questions in the country 3D worlds (Estados Unidos, Reino Unido, Suiza) were rewritten in Spanish because they repeated a question from another world, and their English support line follows the new Spanish. This manifest approves only the exact English support literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    { "path": "app/estados-unidos-a2-b1/mundo/contenido/california.mjs", "text": "Which corner of your city has changed the most since your childhood?" },
+    { "path": "app/estados-unidos-a2-b1/mundo/contenido/florida.mjs", "text": "What object do you keep only for what it means to you?" },
+    { "path": "app/estados-unidos-a2-b1/mundo/contenido/nueva-york.mjs", "text": "Which decisions should always be made by everyone together?" },
+    { "path": "app/reino-unido-en-relieve/mundo/contenido/gales.mjs", "text": "What do you do when you feel you’re being overcharged?" },
+    { "path": "app/reino-unido-en-relieve/mundo/contenido/inglaterra.mjs", "text": "When have you noticed someone judging another person by their appearance?" },
+    { "path": "app/suiza-en-relieve/mundo/contenido/tesino.mjs", "text": "How can you tell whether a restaurant is authentic or just looks it?" }
+  ]
+}
