@@ -37,7 +37,7 @@ const level = {
       { t: 'Esperar el momento perfecto', echo: 'El momento perfecto nunca llega. Mira esta flor amarilla: era mi viaje a México.' },
       { t: 'Mirar el móvil todo el día', echo: 'Ja, ja. Es verdad. Yo miraba más el móvil que a las personas que estaban conmigo.' },
     ],
-    talk: ['¿Qué cosa quieres hacer «el año que viene» desde hace mucho tiempo? ¿Por qué no la haces ya?', '¿Qué haces cada día que no te gusta nada? ¿Podrías cambiarlo de alguna manera?'],
+    talk: ['¿Qué cosa quieres hacer «el año que viene» desde hace mucho tiempo? ¿Por qué no la haces ya?', '¿Qué haces cada día que no te gusta nada? ¿Puedes cambiarlo de alguna manera?'],
     words: ['plantar', 'la flor', 'el año que viene', 'dejar de', 'el accidente', 'el momento perfecto'],
   },
   biblioteca: {
@@ -52,7 +52,7 @@ const level = {
     ],
     q: 'Uriel te deja cambiar un solo capítulo de tu libro. ¿Cuál te gustaría cambiar?',
     options: [
-      { t: 'Mi infancia', echo: 'La infancia es el primer capítulo. Pero ella te hizo la persona que eres hoy.' },
+      { t: 'Mi infancia', echo: 'La infancia es el primer capítulo. Pero esa infancia te hizo la persona que eres hoy.' },
       { t: 'Un amor que terminó', echo: 'Ah, ese capítulo. Muchas personas lo leen una y otra vez. ¿Todavía piensas en esa persona?' },
       { t: 'Una decisión de trabajo o de estudios', echo: 'Una decisión pequeña puede cambiar toda una vida. ¿Qué querías hacer en vez de eso?' },
       { t: 'Ninguno: todo me hizo como soy', echo: 'Es una respuesta bonita. Tus errores también escribieron tu historia.' },
@@ -70,7 +70,7 @@ const level = {
       ['yo', '¿Usted bebió alguna vez?'],
       ['ernesto', 'Nunca. Mi hijo murió joven y fue muy triste. Pero si olvido la tristeza, también olvido a mi hijo. Y eso no lo quiero.'],
     ],
-    q: 'Ernesto te da un vaso. ¿Cuánta agua del río del olvido vas a beber?',
+    q: 'Ernesto no bebe nunca. ¿Y tú? ¿Cuánta agua del río del olvido quieres beber?',
     poles: ['No olvidar nada', 'Olvidarlo todo'],
     options: [
       { t: 'Nada: quiero recordarlo todo', echo: 'Como yo. Los recuerdos tristes también son parte de nosotros.' },
@@ -190,9 +190,9 @@ const level = {
       ['yo', 'No tengo dinero. Estoy muerto. O muerta.'],
       ['flegias', 'Ja, ja. Tranquilidad. Hoy tengo una oferta especial: un día más en la Tierra. Solo un día.'],
       ['yo', '¿Un día con mi familia?'],
-      ['flegias', 'Con quien quieras. Pero tienes que pagar algo. Pon una moneda en mi mano.'],
+      ['flegias', 'Tú eliges con quién. Pero tienes que pagar algo. Pon una moneda en mi mano.'],
     ],
-    q: 'Flegias quiere una moneda. ¿Qué vas a pagar por volver un día a la Tierra?',
+    q: 'Flegias quiere un pago. ¿Qué le vas a dar por volver un día a la Tierra?',
     options: [
       { t: 'Diez años de cielo', echo: 'Diez años por un día. Ese día tiene que ser muy especial, ¿no?' },
       { t: 'Mi recuerdo más bonito', echo: 'Un recuerdo bonito por un día nuevo. ¿Y si el día nuevo es peor?' },
@@ -218,7 +218,7 @@ const level = {
       { t: 'La comodidad', echo: 'Aquí no estoy bien, pero conozco esta jaula. Fuera no sé qué hay.' },
       { t: 'Lo que mi familia espera de mí', echo: 'Mi padre quería un hijo médico. Yo quería ser músico. Ya sabes qué pasó.' },
     ],
-    talk: ['¿Hay algo que quieres cambiar en tu vida y no cambias? ¿Qué te lo impide?', '¿Qué le dirías a Ramiro para ayudarlo a salir de la jaula?'],
+    talk: ['¿Hay algo que quieres cambiar en tu vida y no cambias? ¿Qué te lo impide?', '¿Qué puedes decirle a Ramiro para ayudarlo a salir de la jaula?'],
     words: ['la jaula', 'la cadena', 'la llave', 'salir', 'la comodidad', 'impedir'],
   },
   trono: {
@@ -238,7 +238,7 @@ const level = {
       { t: 'No, quiero otra vida', echo: 'Te entiendo. Pero otra vida es la vida de otra persona, no la tuya.' },
       { t: 'No lo sé', echo: 'Es una respuesta honesta. Casi nadie dice «no lo sé» aquí.' },
     ],
-    talk: ['¿Qué día de tu vida te gustaría vivir otra vez? ¿Por qué ese día?', 'Lucero te ofrece tu misma vida otra vez. ¿Qué cosa de tu pasado te gustaría hacer de otra manera? ¿Por qué?'],
+    talk: ['¿Qué día de tu vida te gustaría vivir otra vez? ¿Por qué ese día?', '¿Qué cosa de tu pasado te gustaría hacer de otra manera? ¿Por qué?'],
     words: ['el trono', 'el diablo', 'cansado', 'la oferta', 'la aguja', 'igual'],
   },
 };
