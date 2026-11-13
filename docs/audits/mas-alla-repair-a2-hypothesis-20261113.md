@@ -9,7 +9,7 @@
 ## Defect (VERIFIED)
 - `app/mas-alla/levels/a2.mjs` on main `3f946b9` states A2 objectives in its header (line 1): past tenses, comparisons, habits, and simple wishes with *me gustaría / quiero / prefiero*.
 - Its main prompts nevertheless used B1 hypothesis structures:
-  - «si + imperfecto de subjuntivo» four times (jardin q, biblioteca q, barca talk ×2, trono talk), including «si no estuvieras»;
+  - «si + imperfecto de subjuntivo» five times (jardin q, biblioteca q, barca talk ×2, trono talk), one of them «si no estuvieras»;
   - the condicional compuesto «¿Qué habrías hecho…?» (biblioteca echo);
   - bare hypothetical conditionals in deep questions and echoes (beberías, sería, pagarías, pedirías, vivirías, no serías, no estarías).
 - The A2 voice cards (`app/mas-alla/voces/a2.mjs`) had the same bare hypotheticals: olvidarías, usarías / harías, pagarías, venderías, dirías, podrías.
@@ -28,6 +28,11 @@
   1. *-iera / -iese* forms anywhere, except present subjunctives of e→ie verbs (quiera, prefieras…) and the words cualquiera, siquiera, quisiera and fiera;
   2. *-ara / -ase* forms and *fuera / dijera / trajera / quisiera…* after «si», with an optional subject, possessive + noun, «de verdad», «no» or clitics in between; present forms of *-arar* verbs (separa, compara, prepara…) and nouns such as clase, base and frase are excluded;
   3. the condicional compuesto.
+  - **Known gaps (delta review NB-D2, probed by the reviewer):**
+    - Silent misses: a bare name or an adverb outside the list between «si» and an -ara/-ase/fuera form («Si Clara fuera», «Si mamá fuera», «Si Juan me llamara»). The -iera forms are caught wherever they appear.
+    - False positive: the adverb in «Si fuera hace frío», and «Riviera». False positives fail the checker loudly, so an author sees them; misses are silent.
+    - Rule 1 is wider than «si»: it also refuses «aunque / ojalá / que» + -iera, which is right for A2.
+    - After NB-D3/NB-D4, the names Mara, Lara and Tamara are excluded, and «todos, todas, mañana, ahora» are accepted between «si» and the verb.
   - Boundaries are Unicode-aware lookarounds. JS `\b` only knows ASCII letters, which was review B3.
   - The guard does **not** catch bare hypothetical conditionals («¿Qué pagarías?»), because politeness conditionals have the same form. Those were removed by authoring and by the review, not by the machine.
 - **Test:** the new test in `tests/mas-alla.test.mjs` contains 14 above-A2 and 15 A2-legitimate probe sentences, a seeded A2 encounter, a seeded A2 voice, and a check that B1 still uses the hypothesis.
@@ -41,7 +46,7 @@
     - B3: the first guard missed «si fuera», «si yo pudiera» and «habría ido», and it flagged «si separa» and «si la clase»;
     - B4: the A2 voices were left unrepaired.
   - Also 8 notes. Martin applied B1, B2, B4 and NB2–NB4. The facilitator applied B3, NB5 (this file), NB6 (a seeded voice case; deleting the voice guard now fails the test, 12 pass / 1 fail, VERIFIED) and NB7 (the test comment). NB1 and NB8 needed no change.
-  - **Delta review:** see the "G4 delta" section below.
+  - **Delta review on `cd245ba..05dd19e`: DELTA APPROVE.** All 4 blockers are resolved. The reviewer re-probed the guard with 121 strings, ran 3 mutations (each guard line, and the exclusion list), each caught, and confirmed 16 new strings, 6 voice questions and 6 errors on main. 4 notes: NB-D1 and NB-D2 (this file) and NB-D3 and NB-D4 (guard stems and adverbs) were applied afterwards without another review, as the reviewer allowed.
 - **G6** (level honesty):
   - A2 was read in full by the author and by the reviewer.
   - The machine checks pass on all seven levels: `node scripts/check-mas-alla.mjs` prints «Más allá: all levels pass.».
