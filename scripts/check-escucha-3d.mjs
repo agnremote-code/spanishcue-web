@@ -10,6 +10,7 @@ import { CAST as CONSORCIO_CAST } from '../app/el-consorcio/story.mjs';
 import { CAST as BODA_CAST } from '../app/la-boda/story.mjs';
 import { CAST as TREN_CAST } from '../app/el-tren-de-las-2340/story.mjs';
 import { CAST as PAPEL_CAST } from '../app/el-mundo-en-blanco/story.mjs';
+import { CAST as HR_CAST } from '../app/hr-crisis/oficina.mjs';
 
 const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
 const [onlyGame, onlyLevel] = process.argv.slice(2);
@@ -60,6 +61,11 @@ export function checkFile(game, level, data, path) {
     if (game === 'tren') for (const speaker of speakers) {
       const member = Object.values(TREN_CAST).find(c => c.name === speaker.name);
       if (!member) bad(at, `${speaker.name} is not in the El tren de las 23:40 cast (story.mjs)`);
+      else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
+    }
+    if (game === 'hr') for (const speaker of speakers) {
+      const member = Object.values(HR_CAST).find(c => c.name === speaker.name || c.name.startsWith(`${speaker.name} `));
+      if (!member) bad(at, `${speaker.name} is not in the HR Crisis cast (oficina.mjs)`);
       else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
     }
     if (game === 'papel') for (const speaker of speakers) {
@@ -131,7 +137,7 @@ export function checkFile(game, level, data, path) {
 // at most 40% of the time, and from C1 every item asks at least two
 // inference questions (intention, irony, register, what is implied), marked
 // `infer: true`.
-export const STRICT_KEYS = ['tren', 'boda', 'papel'];
+export const STRICT_KEYS = ['tren', 'boda', 'papel', 'hr'];
 export function strictKey(level, items) {
   const out = [];
   const qs = items.flatMap(item => (item.choice ?? []).map(q => ({ item: item.id, ...q })));

@@ -62,7 +62,7 @@ test('lesson cards expose real links and explain view results versus the complet
  const response=await fetch(root);assert.equal(response.status,200);const html=await response.text();
  assert.match(html,/class="card-hitarea" href="\/acceso\?returnTo=/);assert.match(html,/class="card-hitarea" href="\/la-fabrica-de-los-nombres"/);
  // The home opens on the Gramática route, so the count is the grammar catalog.
- assert.match(html,/248(?:<!-- -->|\s)+resultados/);assert.match(html,/333(?:<!-- -->|\s)+clases totales/);
+ assert.match(html,/248(?:<!-- -->|\s)+resultados/);assert.match(html,/334(?:<!-- -->|\s)+clases totales/);
  assert.match(html,/No está afiliado ni respaldado por el Instituto Cervantes/);
 });
 

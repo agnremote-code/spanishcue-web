@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g: «HR Crisis: la empresa es un caos» (ID 258), a new A1–C1 3D conversation and listening class in a chaotic office with the mascot Tizia, adds one English line for the academies listing. This manifest approves only the exact English literal listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A chaotic company in 3D: job interviews, complaints, payroll errors and a final crisis, all solved in Spanish."
+    }
+  ]
+}

@@ -1,0 +1,704 @@
+{
+ "game": "hr",
+ "level": "B2",
+ "items": [
+  {
+   "id": "m1-recepcion",
+   "title": "Antes de la entrevista",
+   "place": "La recepción",
+   "context": "Bruno lleva media hora en la recepción. Marga cuelga el teléfono por fin y empiezan a charlar.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Bruno",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdona la espera. Hoy han llamado tres periodistas, un proveedor enfadado y mi madre. ¿Te han ofrecido algo de beber?"
+    },
+    {
+     "s": 1,
+     "text": "No se preocupe. La verdad es que me ha venido bien para repasar mis respuestas."
+    },
+    {
+     "s": 0,
+     "text": "¿Puedo darte un consejo? Aquí se valora mucho que la gente sea flexible. Si te preguntan qué harías ante un imprevisto, no respondas con teoría."
+    },
+    {
+     "s": 1,
+     "text": "Ya, cuente una experiencia real. En mi último trabajo se inundó el almacén el día de una entrega importante y tuve que reorganizar todos los pedidos en una tarde."
+    },
+    {
+     "s": 0,
+     "text": "Eso, exactamente eso. Y si te preguntan por qué dejaste ese trabajo, no hables mal de tu antiguo jefe aunque se lo mereciera."
+    },
+    {
+     "s": 1,
+     "text": "Me lo apunto, porque mi antiguo jefe se lo merecía, y mucho. ¿Sabe quién me va a entrevistar?"
+    },
+    {
+     "s": 0,
+     "text": "La nueva responsable de Recursos Humanos. Lleva aquí tres días y ya ha resuelto más problemas que la anterior en tres años."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién no ha llamado esta mañana a la recepción?",
+     "options": [
+      "El director",
+      "Un proveedor",
+      "La madre de Marga"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para qué le ha servido la espera a Bruno?",
+     "options": [
+      "Para tomar un café",
+      "Para repasar sus respuestas",
+      "Para hablar por teléfono"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó en el último trabajo de Bruno?",
+     "options": [
+      "Lo despidieron por llegar tarde",
+      "Perdió un cliente importante por una factura equivocada",
+      "Se inundó el almacén el día de una entrega"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué se deduce de lo que dice Marga sobre la nueva responsable?",
+     "options": [
+      "Que es más eficaz que la anterior",
+      "Que no le cae bien",
+      "Que va a dejar la empresa pronto por el estrés"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo reaccionaste la última vez que surgió un imprevisto en tu trabajo o en tus estudios?",
+     "model": "Mantuve la calma, hice una lista de prioridades y le pregunté a un compañero si podía ayudarme."
+    },
+    {
+     "q": "¿Por qué crees que no conviene hablar mal de un antiguo jefe en una entrevista?",
+     "model": "Porque da la impresión de que eres conflictivo, aunque tengas razón."
+    },
+    {
+     "q": "¿Qué cualidad crees que se valora más hoy en una empresa?",
+     "model": "Creo que la flexibilidad, porque todo cambia muy rápido."
+    }
+   ],
+   "gaps": "Aquí se [valora] mucho que la gente sea [flexible]. Si te preguntan qué harías ante un [imprevisto], no respondas con [teoría].",
+   "glossary": [
+    {
+     "word": "imprevisto",
+     "meaning": "algo que pasa sin esperarlo"
+    },
+    {
+     "word": "se inundó",
+     "meaning": "se llenó de agua"
+    },
+    {
+     "word": "se lo merecía",
+     "meaning": "era justo para él"
+    }
+   ]
+  },
+  {
+   "id": "m2-ivan",
+   "title": "La versión de Iván",
+   "place": "Los despachos",
+   "context": "Iván va a ver a Sonia después de recibir un aviso de Recursos Humanos por su queja.",
+   "speakers": [
+    {
+     "name": "Sonia",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Sonia, me ha llegado un aviso formal de Recursos Humanos. ¿No podrías haber hablado conmigo antes?"
+    },
+    {
+     "s": 0,
+     "text": "Lo intenté varias veces, Iván. Te lo dije con buenas palabras y cada vez me contestabas que la música te ayudaba a crear."
+    },
+    {
+     "s": 1,
+     "text": "Es verdad que me lo dijiste, pero pensé que exagerabas. Nadie más se había quejado."
+    },
+    {
+     "s": 0,
+     "text": "Que nadie se queje no significa que a nadie le moleste. La mitad de la oficina lleva auriculares desde que empezaste a tocar."
+    },
+    {
+     "s": 1,
+     "text": "Vaya, no me había dado cuenta. Me siento fatal. Si hubiera sabido que afectaba a tanta gente, habría parado hace meses."
+    },
+    {
+     "s": 0,
+     "text": "Te lo agradezco. Yo tampoco quiero que pierdas lo que te inspira. ¿Y si pedimos que se habilite la sala pequeña como estudio a determinadas horas?"
+    },
+    {
+     "s": 1,
+     "text": "Me parece una idea estupenda. La propondré yo mismo en la reunión, así se ve que he entendido el problema."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ha recibido Iván?",
+     "options": [
+      "Un despido",
+      "Un aviso formal de Recursos Humanos",
+      "Un correo de Sonia con copia a todo el departamento"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no hizo caso Iván a Sonia?",
+     "options": [
+      "Porque no la oyó",
+      "Porque estaba de vacaciones",
+      "Porque pensó que exageraba"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "Según Sonia, ¿qué hace la mitad de la oficina?",
+     "options": [
+      "Lleva auriculares",
+      "Se ha quejado por escrito",
+      "Trabaja desde casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué quiere Iván proponer él mismo la idea?",
+     "options": [
+      "Porque es su idea",
+      "Para que se vea que ha entendido el problema",
+      "Para que Sonia no hable en la reunión y no se queje más"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Crees que es mejor hablar directamente con un compañero o acudir a Recursos Humanos?",
+     "model": "Primero directamente; si después de varios intentos no cambia nada, a Recursos Humanos."
+    },
+    {
+     "q": "¿Alguna vez has molestado a alguien sin darte cuenta?",
+     "model": "Sí, en mi primer piso compartido ponía la lavadora de noche y no sabía que despertaba a todos."
+    },
+    {
+     "q": "¿Qué condiciones necesitas para concentrarte?",
+     "model": "Necesito luz natural, silencio y el móvil lejos de la mesa."
+    }
+   ],
+   "gaps": "Que nadie se queje no significa que a nadie le [moleste]. La [mitad] de la oficina lleva [auriculares] desde que empezaste a [tocar].",
+   "glossary": [
+    {
+     "word": "aviso formal",
+     "meaning": "advertencia oficial por escrito"
+    },
+    {
+     "word": "exagerabas",
+     "meaning": "decías que era más grave de lo que era"
+    },
+    {
+     "word": "se habilite",
+     "meaning": "se prepare para un uso"
+    }
+   ]
+  },
+  {
+   "id": "m3-jimena",
+   "title": "Un error que se repite",
+   "place": "Nóminas y administración",
+   "context": "Por tercera vez en el año, la nómina de Jimena tiene un error. Esta vez viene preparada.",
+   "speakers": [
+    {
+     "name": "Jimena",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Don Ernesto",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Ernesto, le traigo una tabla con mis nóminas de los últimos seis meses. En tres de ellas faltan horas extra."
+    },
+    {
+     "s": 1,
+     "text": "Caramba, qué organizada. Te reconozco que nuestro sistema no es precisamente moderno."
+    },
+    {
+     "s": 0,
+     "text": "No vengo a culpar a nadie, pero en total me deben doscientos cuarenta euros, y no es justo que tenga que revisar cada nómina como si fuera una auditora."
+    },
+    {
+     "s": 1,
+     "text": "Tienes toda la razón. El problema es que las horas extra se introducen a mano y, si tu jefe se olvida de enviarlas, el sistema no las registra."
+    },
+    {
+     "s": 0,
+     "text": "Entonces el problema no es solo mío. Seguramente le pasa a más gente que no lo ha notado."
+    },
+    {
+     "s": 1,
+     "text": "Es muy probable. Te propongo una cosa: te pago la diferencia este mes y voy a pedir a la nueva responsable de Recursos Humanos que revisemos todas las nóminas del almacén."
+    },
+    {
+     "s": 0,
+     "text": "Me parece bien. Y sería conveniente que las horas extra se registraran automáticamente en el futuro."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ha traído Jimena?",
+     "options": [
+      "Una carta de su abogado",
+      "Una queja firmada por todos sus compañeros del almacén",
+      "Una tabla con sus nóminas de seis meses"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto le deben a Jimena en total?",
+     "options": [
+      "Doscientos cuarenta euros",
+      "Cuatrocientos veinte euros",
+      "Ciento cuarenta euros"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué no se registran a veces las horas extra?",
+     "options": [
+      "Porque Jimena no las anota",
+      "Porque se introducen a mano y el jefe se olvida",
+      "Porque el sistema borra todos los datos al final de cada mes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué deduce Jimena?",
+     "options": [
+      "Que Don Ernesto lo hace a propósito",
+      "Que debe cambiar de trabajo",
+      "Que a más personas les pasa lo mismo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué harías si descubrieras un error que se repite en tu sueldo?",
+     "model": "Reuniría pruebas y pediría una reunión para encontrar la causa, no solo para cobrar."
+    },
+    {
+     "q": "¿Crees que se debería automatizar todo lo administrativo?",
+     "model": "Casi todo, aunque siempre hace falta una persona que revise los casos raros."
+    },
+    {
+     "q": "¿Eres una persona organizada con tus documentos?",
+     "model": "Bastante; guardo todas mis facturas en carpetas por año."
+    }
+   ],
+   "gaps": "El problema es que las horas extra se [introducen a mano] y, si tu jefe se [olvida] de enviarlas, el [sistema] no las [registra].",
+   "glossary": [
+    {
+     "word": "auditora",
+     "meaning": "persona que revisa cuentas"
+    },
+    {
+     "word": "registra",
+     "meaning": "guarda la información"
+    },
+    {
+     "word": "conveniente",
+     "meaning": "útil, recomendable"
+    }
+   ]
+  },
+  {
+   "id": "m4-rumor",
+   "title": "Rumores y medias verdades",
+   "place": "La cocina",
+   "context": "Nacho ha pasado la noche sin dormir por los rumores. Paloma decide explicarle lo que puede.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Paloma, anoche no pegué ojo. Dicen que van a externalizar informática y que a los que nos quedemos nos bajarán el sueldo."
+    },
+    {
+     "s": 1,
+     "text": "Nacho, entiendo que estés preocupado, pero ese rumor mezcla una parte de verdad con mucha imaginación."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cuál es la parte de verdad? Porque si me lo cuentas, prometo no decírselo a nadie."
+    },
+    {
+     "s": 1,
+     "text": "Lo único que puedo decirte es que se va a contratar a una empresa externa para el mantenimiento nocturno. Nadie pierde su puesto y nadie cobra menos."
+    },
+    {
+     "s": 0,
+     "text": "¿Entonces por qué la dirección no lo ha explicado? Si lo hubieran dicho hace una semana, no estaríamos todos de los nervios."
+    },
+    {
+     "s": 1,
+     "text": "Tienes razón, y se lo he dicho a la dirección con estas mismas palabras. La comunicación ha fallado, y eso también hay que reconocerlo."
+    },
+    {
+     "s": 0,
+     "text": "Bueno, por lo menos ya no tendré que contestar el teléfono a las tres de la madrugada cuando se cae el servidor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué no durmió Nacho?",
+     "options": [
+      "Por los rumores sobre informática",
+      "Porque el servidor se cayó a las tres de la madrugada",
+      "Por una fiesta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Paloma, ¿qué es verdad?",
+     "options": [
+      "Que van a bajar los sueldos a los que se queden en informática",
+      "Que contratarán una empresa externa para el mantenimiento nocturno",
+      "Que cierra informática"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ha hecho Paloma con la dirección?",
+     "options": [
+      "Nada, no es su trabajo",
+      "Ha pedido un aumento de sueldo para Nacho y su equipo",
+      "Les ha dicho que la comunicación ha fallado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué ventaja ve Nacho al final?",
+     "options": [
+      "Que ya no tendrá que contestar llamadas de madrugada",
+      "Que cobrará más",
+      "Que podrá trabajar desde casa todos los días de la semana"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo reaccionas cuando oyes un rumor que te afecta?",
+     "model": "Intento no sacar conclusiones y pregunto directamente a quien sabe."
+    },
+    {
+     "q": "¿Qué crees que debería haber hecho la dirección en este caso?",
+     "model": "Debería haber explicado el cambio antes de que empezaran los rumores."
+    },
+    {
+     "q": "¿Alguna vez has tenido que guardar un secreto profesional?",
+     "model": "Sí, sabía que iban a ascender a una compañera y no podía decir nada."
+    }
+   ],
+   "gaps": "Si lo [hubieran dicho] hace una [semana], no [estaríamos] todos de los [nervios].",
+   "glossary": [
+    {
+     "word": "no pegué ojo",
+     "meaning": "no pude dormir nada"
+    },
+    {
+     "word": "externalizar",
+     "meaning": "dar un trabajo a otra empresa"
+    },
+    {
+     "word": "mantenimiento",
+     "meaning": "cuidado técnico para que algo funcione"
+    }
+   ]
+  },
+  {
+   "id": "m5-informe",
+   "title": "Datos que no cuadran",
+   "place": "El despacho de Olga",
+   "context": "Olga revisa la presentación de Hugo para el consejo y encuentra un problema.",
+   "speakers": [
+    {
+     "name": "Olga",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Hugo",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hugo, en la diapositiva cuatro dices que hemos captado cuarenta clientes nuevos, pero en mis cuentas solo aparecen veintiocho."
+    },
+    {
+     "s": 1,
+     "text": "Es que he contado también los que han pedido presupuesto, aunque todavía no han firmado."
+    },
+    {
+     "s": 0,
+     "text": "Pues eso no se puede presentar como clientes. Si el consejo lo descubre, perderemos toda la credibilidad, y con razón."
+    },
+    {
+     "s": 1,
+     "text": "Ya, pero si digo veintiocho, van a pensar que el departamento comercial no hace nada."
+    },
+    {
+     "s": 0,
+     "text": "No necesariamente. Presenta los veintiocho como clientes y los doce como oportunidades. Así se ve el trabajo sin inflar los resultados."
+    },
+    {
+     "s": 1,
+     "text": "Visto así, suena incluso mejor. ¿Y qué hago con la caída de ventas de octubre?"
+    },
+    {
+     "s": 0,
+     "text": "Explícala con la causa y con lo que ya hemos cambiado: desde hace un mes revisamos cada factura a mano antes de enviarla. A un consejo no le asustan las malas cifras; le asustan las sorpresas."
+    },
+    {
+     "s": 1,
+     "text": "Entendido. Rehago la diapositiva esta tarde y te la mando antes de irme."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos clientes nuevos aparecen en las cuentas de Olga?",
+     "options": [
+      "Cuarenta",
+      "Veintiocho",
+      "Doce"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Hugo ha puesto cuarenta?",
+     "options": [
+      "Por un error de cálculo",
+      "Porque el director se lo pidió antes de la reunión del consejo",
+      "Porque ha contado los que solo han pedido presupuesto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué propone Olga?",
+     "options": [
+      "Presentar veintiocho clientes y doce oportunidades",
+      "No hablar de clientes",
+      "Decir cuarenta y explicarlo después"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Olga, ¿qué asusta a un consejo?",
+     "options": [
+      "Las malas cifras",
+      "Las sorpresas",
+      "Las presentaciones largas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Alguna vez has visto a alguien exagerar resultados en el trabajo o en los estudios?",
+     "model": "Sí, un compañero presentó como suyo un proyecto en el que apenas participó."
+    },
+    {
+     "q": "¿Por qué es tan importante la credibilidad en una empresa?",
+     "model": "Porque si una vez te pillan exagerando, ya nadie cree tus datos."
+    },
+    {
+     "q": "¿Cómo presentarías unos malos resultados sin desanimar a tu equipo?",
+     "model": "Explicaría las causas, destacaría lo que sí funcionó y propondría objetivos realistas."
+    }
+   ],
+   "gaps": "Presenta los veintiocho como [clientes] y los doce como [oportunidades]. Así se ve el trabajo sin [inflar] los [resultados].",
+   "glossary": [
+    {
+     "word": "presupuesto",
+     "meaning": "cálculo del precio de un servicio"
+    },
+    {
+     "word": "credibilidad",
+     "meaning": "capacidad de que te crean"
+    },
+    {
+     "word": "inflar",
+     "meaning": "hacer más grande de lo real"
+    }
+   ]
+  },
+  {
+   "id": "m6-crisis",
+   "title": "Comunicado de crisis",
+   "place": "El despacho del director",
+   "context": "Carmen y Álvaro preparan lo que van a decir a la prensa en diez minutos.",
+   "speakers": [
+    {
+     "name": "Carmen",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Álvaro",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Carmen, he escrito un comunicado. Empieza así: «Caos y Asociados lamenta los inconvenientes técnicos ajenos a la empresa»."
+    },
+    {
+     "s": 0,
+     "text": "¿Ajenos? Álvaro, el sistema lo compramos nosotros. Si dices que no es culpa nuestra, la gente se va a enfadar todavía más."
+    },
+    {
+     "s": 1,
+     "text": "Pero si reconozco el error, los periodistas lo usarán contra nosotros."
+    },
+    {
+     "s": 0,
+     "text": "Lo usarán de todos modos. La diferencia es si mañana el titular dice «la empresa esconde el problema» o «la empresa asume el error y lo soluciona»."
+    },
+    {
+     "s": 1,
+     "text": "Visto así… ¿Qué propones entonces?"
+    },
+    {
+     "s": 0,
+     "text": "Tres frases: reconocemos el fallo, todas las nóminas estarán corregidas el viernes y habrá una revisión externa del sistema. Y nada de excusas."
+    },
+    {
+     "s": 1,
+     "text": "De acuerdo. Pero quiero que la nueva responsable de Recursos Humanos hable del equipo. Si yo digo que la gente es lo más importante, nadie me va a creer."
+    },
+    {
+     "s": 0,
+     "text": "Por lo menos eres sincero. Ya es un comienzo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué decía el primer comunicado de Álvaro?",
+     "options": [
+      "Que la empresa cerraba",
+      "Que el sistema era excelente y que el problema eran los usuarios",
+      "Que los problemas eran ajenos a la empresa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué no está de acuerdo Carmen?",
+     "options": [
+      "Porque el sistema lo compró la empresa",
+      "Porque es muy largo",
+      "Porque tiene faltas de ortografía"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué incluye la propuesta de Carmen?",
+     "options": [
+      "Despedir al responsable",
+      "Una revisión externa del sistema",
+      "Echar la culpa al proveedor que les vendió el sistema"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere decir Carmen con su última frase?",
+     "options": [
+      "Que Álvaro miente",
+      "Que debe dimitir",
+      "Que reconocer sus límites es un buen paso"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Crees que una empresa debe reconocer siempre sus errores en público?",
+     "model": "Sí, porque esconderlos suele salir más caro cuando se descubren."
+    },
+    {
+     "q": "¿Qué tres frases dirías tú en un comunicado de crisis?",
+     "model": "Diría qué ha pasado, qué estamos haciendo ya y cuándo estará resuelto."
+    },
+    {
+     "q": "¿Recuerdas alguna empresa que gestionara bien o mal una crisis?",
+     "model": "Recuerdo una aerolínea que pidió perdón enseguida y compensó a todos; me pareció bien."
+    }
+   ],
+   "gaps": "Tres frases: [reconocemos] el [fallo], todas las nóminas estarán [corregidas] el viernes y habrá una [revisión externa] del sistema.",
+   "glossary": [
+    {
+     "word": "comunicado",
+     "meaning": "texto oficial para el público"
+    },
+    {
+     "word": "ajenos",
+     "meaning": "que no dependen de nosotros"
+    },
+    {
+     "word": "asume",
+     "meaning": "acepta la responsabilidad"
+    }
+   ]
+  }
+ ]
+}

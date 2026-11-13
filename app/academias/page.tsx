@@ -48,6 +48,7 @@ export default async function Academias() {
     { href: '/la-boda', image: '/la-boda/portada.webp', title: 'La boda', free: false, body: es ? 'Una boda en una estancia, del atardecer al amanecer: celebrar, aconsejar y dar el brindis en español.' : 'A wedding at a country estate, from sunset to dawn: celebrate, give advice and make the toast in Spanish.' },
     { href: '/el-mundo-en-blanco', image: '/el-mundo-en-blanco/portada.webp', title: 'El mundo en blanco', free: false, body: es ? 'Un mundo de papel sin tinta en 3D: doce seres de origami, doce preguntas profundas, y el color vuelve con cada respuesta.' : 'A paper world with no ink, in 3D: twelve origami beings, twelve deep questions, and colour returns with every answer.' },
     { href: '/el-tren-de-las-2340', image: '/el-tren-de-las-2340/portada.webp', title: 'El tren de las 23:40', free: false, body: es ? 'Un tren nocturno que cruza los Andes en 3D: una novelista desaparece y tú investigas en español.' : 'A night train across the Andes in 3D: a novelist vanishes and you investigate in Spanish.' },
+    { href: '/hr-crisis', image: '/hr-crisis/portada.webp', title: 'HR Crisis', free: false, body: es ? 'Una empresa caótica en 3D: entrevistas, quejas, nóminas con errores y una crisis final, todo en español.' : 'A chaotic company in 3D: job interviews, complaints, payroll errors and a final crisis, all solved in Spanish.' },
   ];
   const benefits = es ? [
     ['Una base común para tu equipo', 'Cada profesor encuentra los materiales en la misma biblioteca, organizados por nivel y tema.'],

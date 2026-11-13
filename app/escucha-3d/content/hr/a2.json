@@ -1,0 +1,680 @@
+{
+ "game": "hr",
+ "level": "A2",
+ "items": [
+  {
+   "id": "m1-recepcion",
+   "title": "El café del candidato",
+   "place": "La recepción",
+   "context": "Bruno espera en la recepción. Marga, la recepcionista, atiende el teléfono y a Bruno al mismo tiempo.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Bruno",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Caos y Asociados, buenos días… Un momento, por favor. Perdona, ¿qué necesitas?"
+    },
+    {
+     "s": 1,
+     "text": "Ayer me llamaron para una entrevista a las diez, pero nadie me dijo en qué sala."
+    },
+    {
+     "s": 0,
+     "text": "Las entrevistas son en la sala dos, al final del pasillo, a la izquierda. ¿Ya trajiste tu currículum?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, lo traje en papel. Esta mañana se me cayó el café encima, por eso tiene una mancha."
+    },
+    {
+     "s": 0,
+     "text": "No te preocupes. La semana pasada un candidato llegó con su perro. Tú no estás tan mal."
+    },
+    {
+     "s": 1,
+     "text": "¡Gracias! ¿Y quién me va a hacer la entrevista?"
+    },
+    {
+     "s": 0,
+     "text": "La nueva responsable de Recursos Humanos. Empezó ayer y es muy simpática."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo llamaron a Bruno?",
+     "options": [
+      "Ayer",
+      "Esta mañana",
+      "La semana pasada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde son las entrevistas?",
+     "options": [
+      "En la recepción",
+      "En la sala dos, al final del pasillo",
+      "En la cocina, al lado de la cafetera"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué tiene una mancha el currículum?",
+     "options": [
+      "Porque lo imprimió en una impresora vieja",
+      "Porque llovió",
+      "Porque se le cayó el café"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasó la semana pasada?",
+     "options": [
+      "Un candidato llegó con su perro",
+      "Un candidato llegó tarde",
+      "Marga llegó tarde por culpa de su perro"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo fue tu última entrevista de trabajo?",
+     "model": "Fue el año pasado. Estaba nervioso, pero me fue bien."
+    },
+    {
+     "q": "¿Alguna vez llegaste a una cita con un problema?",
+     "model": "Sí, una vez llegué con la camisa mojada porque llovió."
+    },
+    {
+     "q": "¿Qué llevas a una entrevista?",
+     "model": "Llevo mi currículum, un bolígrafo y una botella de agua."
+    }
+   ],
+   "gaps": "Las entrevistas son en la [sala dos], al [final] del [pasillo], a la [izquierda].",
+   "glossary": [
+    {
+     "word": "currículum",
+     "meaning": "documento con tus estudios y tu experiencia"
+    },
+    {
+     "word": "mancha",
+     "meaning": "marca sucia"
+    },
+    {
+     "word": "candidato",
+     "meaning": "persona que busca un puesto"
+    }
+   ]
+  },
+  {
+   "id": "m2-ivan",
+   "title": "Música en horas de trabajo",
+   "place": "Los despachos",
+   "context": "Sonia escribió una queja contra Iván. Ahora hablan los dos en el pasillo.",
+   "speakers": [
+    {
+     "name": "Sonia",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Iván, ayer te dije tres veces que necesitaba silencio y seguiste tocando. Por eso mandé una queja a Recursos Humanos."
+    },
+    {
+     "s": 1,
+     "text": "¿Escribiste una queja? Sonia, yo siempre pensé que te gustaba mi música."
+    },
+    {
+     "s": 0,
+     "text": "Me gusta en las fiestas, no a las nueve de la mañana. Tuve que repetir un informe entero."
+    },
+    {
+     "s": 1,
+     "text": "Lo siento. Es que cuando no toco, no tengo ideas para los diseños."
+    },
+    {
+     "s": 0,
+     "text": "Entiendo, pero tienes que buscar otra solución. ¿Por qué no usas auriculares?"
+    },
+    {
+     "s": 1,
+     "text": "Una guitarra eléctrica con auriculares… puede funcionar. Mañana los traigo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas veces le pidió silencio Sonia?",
+     "options": [
+      "Dos veces",
+      "Tres veces",
+      "Una vez"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hizo Sonia después?",
+     "options": [
+      "Habló directamente con el director general",
+      "Cambió de despacho",
+      "Escribió una queja a Recursos Humanos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué toca Iván?",
+     "options": [
+      "Porque sin música no tiene ideas",
+      "Porque quiere ser famoso con su música",
+      "Porque se aburre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué solución propone Sonia?",
+     "options": [
+      "Tocar en la cocina",
+      "Usar auriculares",
+      "Trabajar desde casa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Escuchas música cuando trabajas o estudias?",
+     "model": "Sí, escucho música tranquila, sin letra."
+    },
+    {
+     "q": "¿Alguna vez escribiste una queja?",
+     "model": "Sí, una vez mandé un correo a una tienda porque me vendieron un teléfono roto."
+    },
+    {
+     "q": "¿Qué haces cuando un compañero hace ruido?",
+     "model": "Primero le pido silencio con amabilidad."
+    }
+   ],
+   "gaps": "Entiendo, pero [tienes que] [buscar] otra [solución]. ¿Por qué no usas [auriculares]?",
+   "glossary": [
+    {
+     "word": "queja",
+     "meaning": "cuando dices que algo está mal"
+    },
+    {
+     "word": "auriculares",
+     "meaning": "aparato para escuchar sin molestar"
+    },
+    {
+     "word": "informe",
+     "meaning": "documento de trabajo con datos"
+    }
+   ]
+  },
+  {
+   "id": "m3-jimena",
+   "title": "Las horas extra que faltan",
+   "place": "Nóminas y administración",
+   "context": "Jimena revisa su nómina de octubre con Don Ernesto. Algo no está bien.",
+   "speakers": [
+    {
+     "name": "Jimena",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Don Ernesto",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Ernesto, en octubre trabajé doce horas extra y en la nómina no aparece ninguna."
+    },
+    {
+     "s": 1,
+     "text": "Déjame ver. Aquí pone que trabajaste ciento sesenta horas, como siempre."
+    },
+    {
+     "s": 0,
+     "text": "Pero el día veinte me quedé hasta las once de la noche por el inventario."
+    },
+    {
+     "s": 1,
+     "text": "Ah, sí, me acuerdo. El problema es que tu jefe no firmó el papel de las horas extra."
+    },
+    {
+     "s": 0,
+     "text": "¿Y ahora qué hago? Mi jefe está de vacaciones hasta el día cinco."
+    },
+    {
+     "s": 1,
+     "text": "Tranquila. Lo firma la directora financiera y te las pagamos en la nómina de noviembre."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas horas extra trabajó Jimena en octubre?",
+     "options": [
+      "Veinte",
+      "Once",
+      "Doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué se quedó hasta tarde el día veinte?",
+     "options": [
+      "Por el inventario",
+      "Por una reunión",
+      "Por una fiesta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué no hizo el jefe de Jimena?",
+     "options": [
+      "No pagó la nómina de octubre a nadie del almacén",
+      "No firmó el papel de las horas extra",
+      "No vino a trabajar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo le van a pagar las horas?",
+     "options": [
+      "Mañana",
+      "El día veinte, con las vacaciones de su jefe",
+      "En la nómina de noviembre"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Alguna vez trabajaste horas extra?",
+     "model": "Sí, el mes pasado trabajé dos sábados."
+    },
+    {
+     "q": "¿Qué hiciste la última vez que tuviste un problema en el trabajo?",
+     "model": "Hablé con mi jefa y lo solucionamos juntos."
+    },
+    {
+     "q": "¿Hasta qué hora trabajaste ayer?",
+     "model": "Ayer trabajé hasta las seis y después fui al gimnasio."
+    }
+   ],
+   "gaps": "El problema es que tu [jefe] no [firmó] el [papel] de las [horas extra].",
+   "glossary": [
+    {
+     "word": "horas extra",
+     "meaning": "horas de trabajo además del horario normal"
+    },
+    {
+     "word": "inventario",
+     "meaning": "lista de todo lo que hay en un almacén"
+    },
+    {
+     "word": "firmó",
+     "meaning": "escribió su nombre para aprobar"
+    }
+   ]
+  },
+  {
+   "id": "m4-rumor",
+   "title": "Nadie dijo nada oficial",
+   "place": "La cocina",
+   "context": "Nacho escuchó una conversación del director y está preocupado. Paloma, de Recursos Humanos, intenta calmarlo.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Paloma, esta mañana oí al director por teléfono. Dijo «reestructuración» tres veces."
+    },
+    {
+     "s": 1,
+     "text": "Nacho, una reestructuración no significa despidos. Significa organizar los equipos de otra manera."
+    },
+    {
+     "s": 0,
+     "text": "Pero Carmen dijo que van a cerrar el departamento de informática."
+    },
+    {
+     "s": 1,
+     "text": "¿Carmen? Carmen también dijo el año pasado que el director era un robot."
+    },
+    {
+     "s": 0,
+     "text": "Bueno, eso es verdad. Pero ¿qué va a pasar con mi trabajo?"
+    },
+    {
+     "s": 1,
+     "text": "No sé todos los detalles todavía. El lunes hay una reunión y Recursos Humanos va a explicar todo. Hasta entonces, no hagas caso a los rumores."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué palabra repitió el director?",
+     "options": [
+      "Reestructuración",
+      "Despidos",
+      "Vacaciones"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Paloma, ¿qué significa una reestructuración?",
+     "options": [
+      "Cerrar la empresa",
+      "Organizar los equipos de otra manera",
+      "Despedir a todo el equipo de informática"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dijo Carmen el año pasado?",
+     "options": [
+      "Que iba a dejar la empresa para ser directora",
+      "Que Nacho era el mejor",
+      "Que el director era un robot"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasa el lunes?",
+     "options": [
+      "Hay una reunión para explicar todo",
+      "Nacho empieza sus vacaciones y no vuelve hasta enero",
+      "Cierra informática"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Alguna vez creíste un rumor que no era verdad?",
+     "model": "Sí, una vez oí que iban a cerrar mi escuela, pero no era verdad."
+    },
+    {
+     "q": "¿Cómo prefieres recibir las noticias importantes?",
+     "model": "Prefiero una reunión, porque puedo hacer preguntas."
+    },
+    {
+     "q": "¿Qué cambió en tu trabajo el año pasado?",
+     "model": "El año pasado cambiaron mi horario y ahora empiezo a las ocho."
+    }
+   ],
+   "gaps": "El lunes hay una [reunión] y Recursos Humanos va a [explicar todo]. Hasta [entonces], no hagas caso a los [rumores].",
+   "glossary": [
+    {
+     "word": "reestructuración",
+     "meaning": "cambio en la organización de una empresa"
+    },
+    {
+     "word": "despidos",
+     "meaning": "cuando la empresa termina el contrato de alguien"
+    },
+    {
+     "word": "no hagas caso",
+     "meaning": "no escuches, no creas"
+    }
+   ]
+  },
+  {
+   "id": "m5-informe",
+   "title": "Un mes con pocas ventas",
+   "place": "El despacho de Olga",
+   "context": "Olga y Hugo preparan el informe para la reunión con la dirección.",
+   "speakers": [
+    {
+     "name": "Olga",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Hugo",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hugo, el mes pasado vendimos un veinte por ciento menos que en septiembre."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Perdimos dos clientes grandes en una semana."
+    },
+    {
+     "s": 0,
+     "text": "¿Por qué? Siempre estaban contentos con nosotros."
+    },
+    {
+     "s": 1,
+     "text": "Porque mandamos tres facturas con errores. Uno de ellos recibió una factura de cien mil euros en vez de diez mil."
+    },
+    {
+     "s": 0,
+     "text": "Eso fue el sistema nuevo. ¿Hablaste con ellos?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, me disculpé con ellos y les ofrecí un descuento. Uno va a volver en diciembre."
+    },
+    {
+     "s": 0,
+     "text": "Bien. Pon eso en el informe: el problema, la solución y el cliente que vuelve."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto bajaron las ventas?",
+     "options": [
+      "Un diez por ciento",
+      "Un veinte por ciento",
+      "Un treinta por ciento"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos clientes grandes perdieron?",
+     "options": [
+      "Tres",
+      "Uno",
+      "Dos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué problema tuvo un cliente?",
+     "options": [
+      "Recibió una factura de cien mil euros",
+      "No recibió el producto",
+      "Nadie le contestó el teléfono durante una semana"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué les ofreció Hugo?",
+     "options": [
+      "Un regalo",
+      "Un descuento",
+      "Una cena"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Alguna vez recibiste una factura con un error?",
+     "model": "Sí, una vez el banco me cobró dos veces el mismo mes."
+    },
+    {
+     "q": "¿Qué haces cuando un cliente o un amigo está enfadado contigo?",
+     "model": "Le pido perdón y le pregunto cómo puedo ayudar."
+    },
+    {
+     "q": "¿Cómo fue el mes pasado para ti?",
+     "model": "El mes pasado fue muy intenso porque tuve muchos exámenes."
+    }
+   ],
+   "gaps": "Sí, me [disculpé] con ellos y les ofrecí un [descuento]. Uno va a [volver] en [diciembre].",
+   "glossary": [
+    {
+     "word": "vendimos",
+     "meaning": "dimos productos a cambio de dinero"
+    },
+    {
+     "word": "factura",
+     "meaning": "documento con el precio que hay que pagar"
+    },
+    {
+     "word": "descuento",
+     "meaning": "precio más bajo"
+    }
+   ]
+  },
+  {
+   "id": "m6-crisis",
+   "title": "La peor mañana de Caos y Asociados",
+   "place": "El despacho del director",
+   "context": "Todo falla a la vez. Carmen entra corriendo al despacho de Álvaro.",
+   "speakers": [
+    {
+     "name": "Carmen",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Álvaro",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Álvaro, el sistema se cayó a las nueve, hay periodistas abajo y nuestro mejor cliente quiere cancelar el contrato."
+    },
+    {
+     "s": 1,
+     "text": "¿Todo a la vez? Esta mañana me levanté con un mal presentimiento."
+    },
+    {
+     "s": 0,
+     "text": "Los periodistas preguntan si es verdad que no pagamos las nóminas."
+    },
+    {
+     "s": 1,
+     "text": "¡Pero sí las pagamos! Bueno, menos las horas extra de algunas personas."
+    },
+    {
+     "s": 0,
+     "text": "Entonces necesitamos un mensaje claro para todos: para el equipo, para el cliente y para la prensa."
+    },
+    {
+     "s": 1,
+     "text": "Llama a la nueva responsable de Recursos Humanos. Ella habla con la gente mejor que yo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué hora se cayó el sistema?",
+     "options": [
+      "A las diez",
+      "A las ocho",
+      "A las nueve"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere hacer el mejor cliente?",
+     "options": [
+      "Cancelar el contrato",
+      "Comprar más",
+      "Visitar la oficina"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué preguntan los periodistas?",
+     "options": [
+      "Si la empresa cierra y se va a otro país",
+      "Si es verdad que no pagan las nóminas",
+      "Quién es el director"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A quién quiere llamar Álvaro?",
+     "options": [
+      "A Nacho",
+      "A su abogado, que trabaja en la oficina de al lado",
+      "A la nueva responsable de Recursos Humanos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuál fue el peor día de tu vida laboral?",
+     "model": "Fue un lunes: no llegué a tiempo al tren, olvidé mi ordenador y llegué tarde a una reunión."
+    },
+    {
+     "q": "¿Alguna vez tuviste un mal presentimiento?",
+     "model": "Sí, una vez no quise subir a un coche y después se rompió."
+    },
+    {
+     "q": "¿Quién habla mejor con la gente en tu familia?",
+     "model": "Mi madre, porque es muy paciente y escucha a todos."
+    }
+   ],
+   "gaps": "Entonces necesitamos un [mensaje claro] para [todos]: para el equipo, para el [cliente] y para la [prensa].",
+   "glossary": [
+    {
+     "word": "se cayó",
+     "meaning": "dejó de funcionar"
+    },
+    {
+     "word": "presentimiento",
+     "meaning": "sensación de que algo va a pasar"
+    },
+    {
+     "word": "prensa",
+     "meaning": "los periodistas y los medios"
+    }
+   ]
+  }
+ ]
+}

@@ -2791,6 +2791,156 @@
    "seconds": 84.27,
    "src": "/audio/escucha-3d/hospital-c2-vip.mp3"
   },
+  "hr/a1-m1-recepcion": {
+   "hash": "ad2f457648b8d6fdbae7",
+   "seconds": 31.9,
+   "src": "/audio/escucha-3d/hr-a1-m1-recepcion.mp3"
+  },
+  "hr/a1-m2-ivan": {
+   "hash": "8fb0a2c272d997e9c286",
+   "seconds": 35.21,
+   "src": "/audio/escucha-3d/hr-a1-m2-ivan.mp3"
+  },
+  "hr/a1-m3-jimena": {
+   "hash": "fcfaa7c826ef6ba125d3",
+   "seconds": 29.98,
+   "src": "/audio/escucha-3d/hr-a1-m3-jimena.mp3"
+  },
+  "hr/a1-m4-rumor": {
+   "hash": "8b768888876e3401005c",
+   "seconds": 30.43,
+   "src": "/audio/escucha-3d/hr-a1-m4-rumor.mp3"
+  },
+  "hr/a1-m5-informe": {
+   "hash": "9fbd0965be80f1a22475",
+   "seconds": 30.26,
+   "src": "/audio/escucha-3d/hr-a1-m5-informe.mp3"
+  },
+  "hr/a1-m6-crisis": {
+   "hash": "b470edfb028ad62a772d",
+   "seconds": 27.38,
+   "src": "/audio/escucha-3d/hr-a1-m6-crisis.mp3"
+  },
+  "hr/a2-m1-recepcion": {
+   "hash": "482d9790fdcc432d6bff",
+   "seconds": 46.84,
+   "src": "/audio/escucha-3d/hr-a2-m1-recepcion.mp3"
+  },
+  "hr/a2-m2-ivan": {
+   "hash": "3dcf2b148975c36cbdc1",
+   "seconds": 40.85,
+   "src": "/audio/escucha-3d/hr-a2-m2-ivan.mp3"
+  },
+  "hr/a2-m3-jimena": {
+   "hash": "b7feefc5cf4fd34d4bb5",
+   "seconds": 35.97,
+   "src": "/audio/escucha-3d/hr-a2-m3-jimena.mp3"
+  },
+  "hr/a2-m4-rumor": {
+   "hash": "893cf1c713591c799456",
+   "seconds": 43.03,
+   "src": "/audio/escucha-3d/hr-a2-m4-rumor.mp3"
+  },
+  "hr/a2-m5-informe": {
+   "hash": "dceb90c5c9f77cb88eef",
+   "seconds": 40.19,
+   "src": "/audio/escucha-3d/hr-a2-m5-informe.mp3"
+  },
+  "hr/a2-m6-crisis": {
+   "hash": "a27b3ee2122a17d0296c",
+   "seconds": 38.28,
+   "src": "/audio/escucha-3d/hr-a2-m6-crisis.mp3"
+  },
+  "hr/b1-m1-recepcion": {
+   "hash": "ab7fe5eb56a4b65c800c",
+   "seconds": 48.52,
+   "src": "/audio/escucha-3d/hr-b1-m1-recepcion.mp3"
+  },
+  "hr/b1-m2-ivan": {
+   "hash": "966e81d47f5b89ecd8e5",
+   "seconds": 49.14,
+   "src": "/audio/escucha-3d/hr-b1-m2-ivan.mp3"
+  },
+  "hr/b1-m3-jimena": {
+   "hash": "8cec748f5c02d2f90483",
+   "seconds": 51.78,
+   "src": "/audio/escucha-3d/hr-b1-m3-jimena.mp3"
+  },
+  "hr/b1-m4-rumor": {
+   "hash": "31ad957e9b31717c7ee5",
+   "seconds": 44.79,
+   "src": "/audio/escucha-3d/hr-b1-m4-rumor.mp3"
+  },
+  "hr/b1-m5-informe": {
+   "hash": "9aa28c2e7e4da6769744",
+   "seconds": 49.86,
+   "src": "/audio/escucha-3d/hr-b1-m5-informe.mp3"
+  },
+  "hr/b1-m6-crisis": {
+   "hash": "cda3c3f4feab5ad8d062",
+   "seconds": 50.66,
+   "src": "/audio/escucha-3d/hr-b1-m6-crisis.mp3"
+  },
+  "hr/b2-m1-recepcion": {
+   "hash": "3f00a50915f55748c615",
+   "seconds": 58.22,
+   "src": "/audio/escucha-3d/hr-b2-m1-recepcion.mp3"
+  },
+  "hr/b2-m2-ivan": {
+   "hash": "879ed9b7631b51b7fb91",
+   "seconds": 55.41,
+   "src": "/audio/escucha-3d/hr-b2-m2-ivan.mp3"
+  },
+  "hr/b2-m3-jimena": {
+   "hash": "3814512111506116424b",
+   "seconds": 56.2,
+   "src": "/audio/escucha-3d/hr-b2-m3-jimena.mp3"
+  },
+  "hr/b2-m4-rumor": {
+   "hash": "2c9cdafc27c3f657558d",
+   "seconds": 54.38,
+   "src": "/audio/escucha-3d/hr-b2-m4-rumor.mp3"
+  },
+  "hr/b2-m5-informe": {
+   "hash": "704927e1c5db8752c8b6",
+   "seconds": 62.0,
+   "src": "/audio/escucha-3d/hr-b2-m5-informe.mp3"
+  },
+  "hr/b2-m6-crisis": {
+   "hash": "01793db99f0d21497415",
+   "seconds": 61.86,
+   "src": "/audio/escucha-3d/hr-b2-m6-crisis.mp3"
+  },
+  "hr/c1-m1-recepcion": {
+   "hash": "8172f3ce1115390efb5b",
+   "seconds": 71.43,
+   "src": "/audio/escucha-3d/hr-c1-m1-recepcion.mp3"
+  },
+  "hr/c1-m2-ivan": {
+   "hash": "2dd561f69200f698496d",
+   "seconds": 65.54,
+   "src": "/audio/escucha-3d/hr-c1-m2-ivan.mp3"
+  },
+  "hr/c1-m3-jimena": {
+   "hash": "05796dda39c7d7286722",
+   "seconds": 66.83,
+   "src": "/audio/escucha-3d/hr-c1-m3-jimena.mp3"
+  },
+  "hr/c1-m4-rumor": {
+   "hash": "24a3abd246c6c2fd5d67",
+   "seconds": 62.6,
+   "src": "/audio/escucha-3d/hr-c1-m4-rumor.mp3"
+  },
+  "hr/c1-m5-informe": {
+   "hash": "f890f72c5c0d66fbff1e",
+   "seconds": 72.18,
+   "src": "/audio/escucha-3d/hr-c1-m5-informe.mp3"
+  },
+  "hr/c1-m6-crisis": {
+   "hash": "19ae4a09c604be4cf52a",
+   "seconds": 72.75,
+   "src": "/audio/escucha-3d/hr-c1-m6-crisis.mp3"
+  },
   "indonesia/a0-bali": {
    "hash": "37a5e3b5a8e7ccbcfbda",
    "seconds": 21.58,

@@ -13,6 +13,18 @@ export const CASTS = {
     r('Una chica con auriculares', 'Se quita un auricular cuando la saludas.', ['arte', 'tecnologia']),
     r('Una abuela con bolsas', 'Lleva dos bolsas pesadas y descansa un momento.', ['familia', 'tiempo']),
   ],
+  oficina: [
+    r('Una compañera con tres tazas de café', 'Lleva tres cafés y ninguno es para ella.', ['trabajo', 'comida']),
+    r('Un becario perdido', 'Es su segundo día y todavía no sabe dónde está el baño.', ['trabajo', 'miedo']),
+    r('Una comercial al teléfono', 'Tapa el móvil con la mano: «Un segundo, que es un cliente».', ['dinero', 'trabajo']),
+    r('Un compañero que se queja del wifi', 'Levanta el portátil hacia el techo buscando señal.', ['tecnologia', 'tiempo']),
+    r('Una diseñadora con auriculares enormes', 'Se quita un auricular: «¿Me hablas a mí?».', ['arte', 'trabajo']),
+    r('Un contable con gafas en la cabeza', 'Busca las gafas que lleva puestas en la cabeza.', ['dinero', 'persona']),
+    r('Una empleada que vuelve de vacaciones', 'Está morena y tiene cuatrocientos correos sin leer.', ['viaje', 'tiempo']),
+    r('Un compañero que duerme en su mesa', 'Abre un ojo: «No estaba durmiendo, estaba pensando».', ['salud', 'trabajo']),
+    r('Una jefa de proyecto con mil post-its', 'Tiene la pantalla cubierta de notas amarillas.', ['tiempo', 'poder']),
+    r('Un mensajero con un paquete', 'Busca a «alguien de Recursos Humanos» para firmar.', ['transporte', 'calle']),
+  ],
   noche: [
     r('Una chica que sale del boliche', 'Tiene el maquillaje corrido y los zapatos en la mano.', ['fiesta', 'noche']),
     r('Un taxista cansado', 'Fuma apoyado en el coche. Lleva doce horas trabajando.', ['trabajo', 'noche']),

@@ -1,0 +1,672 @@
+{
+ "game": "hr",
+ "level": "A1",
+ "items": [
+  {
+   "id": "m1-recepcion",
+   "title": "Un candidato muy temprano",
+   "place": "La recepción",
+   "context": "Son las ocho de la mañana. Bruno llega a la recepción para su entrevista.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Bruno",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Buenos días. Me llamo Bruno Salvatierra. Tengo una entrevista."
+    },
+    {
+     "s": 0,
+     "text": "Buenos días, Bruno. ¿A qué hora es la entrevista?"
+    },
+    {
+     "s": 1,
+     "text": "A las diez."
+    },
+    {
+     "s": 0,
+     "text": "¡Son las ocho! Llegas dos horas antes."
+    },
+    {
+     "s": 1,
+     "text": "Sí, estoy muy nervioso. ¿Hay café?"
+    },
+    {
+     "s": 0,
+     "text": "Hay café en la cocina, pero la cafetera no funciona. Siéntate en el sofá, por favor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama el candidato?",
+     "options": [
+      "Bruno Salvatierra",
+      "Bruno Ferrán",
+      "Marga Salvatierra"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora es la entrevista?",
+     "options": [
+      "A las ocho",
+      "A las diez",
+      "A las nueve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo está Bruno?",
+     "options": [
+      "Cansado",
+      "Contento",
+      "Muy nervioso"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué problema hay en la cocina?",
+     "options": [
+      "La cafetera no funciona",
+      "No hay leche",
+      "La cocina está cerrada"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Llegas temprano o tarde a las citas?",
+     "model": "Llego temprano, normalmente diez minutos antes."
+    },
+    {
+     "q": "¿Cómo estás antes de una entrevista?",
+     "model": "Estoy nervioso, pero también contento."
+    },
+    {
+     "q": "¿Qué bebes por la mañana?",
+     "model": "Bebo un café con leche."
+    }
+   ],
+   "gaps": "Hay café en la [cocina], pero la [cafetera] no [funciona]. Siéntate en el [sofá], por favor.",
+   "glossary": [
+    {
+     "word": "entrevista",
+     "meaning": "reunión para un trabajo"
+    },
+    {
+     "word": "nervioso",
+     "meaning": "que no está tranquilo"
+    },
+    {
+     "word": "cafetera",
+     "meaning": "máquina para hacer café"
+    }
+   ]
+  },
+  {
+   "id": "m2-ivan",
+   "title": "La guitarra de Iván",
+   "place": "Los despachos",
+   "context": "Iván toca la guitarra en su despacho. Sonia, su compañera, no puede trabajar.",
+   "speakers": [
+    {
+     "name": "Sonia",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Iván, por favor, ¡no puedo trabajar! Hay mucho ruido."
+    },
+    {
+     "s": 1,
+     "text": "Perdón, Sonia. Toco la guitarra para pensar. Soy diseñador."
+    },
+    {
+     "s": 0,
+     "text": "Yo soy analista y necesito silencio. Tengo una reunión a las once."
+    },
+    {
+     "s": 1,
+     "text": "Vale. ¿Toco en la cocina?"
+    },
+    {
+     "s": 0,
+     "text": "No, en la cocina come la gente. ¿Por qué no tocas en el parque, a la hora de comer?"
+    },
+    {
+     "s": 1,
+     "text": "Buena idea. A las dos voy al parque."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hace Iván en su despacho?",
+     "options": [
+      "Canta",
+      "Toca la guitarra",
+      "Come"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuál es el trabajo de Sonia?",
+     "options": [
+      "Diseñadora",
+      "Recepcionista",
+      "Analista"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué hora tiene Sonia una reunión?",
+     "options": [
+      "A las once",
+      "A las dos",
+      "A las diez"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde va a tocar Iván?",
+     "options": [
+      "En la cocina",
+      "En el parque",
+      "En la sala de reuniones"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Necesitas silencio para trabajar o estudiar?",
+     "model": "Sí, necesito silencio. Con ruido no puedo pensar."
+    },
+    {
+     "q": "¿Tocas un instrumento?",
+     "model": "No, no toco ningún instrumento, pero canto en casa."
+    },
+    {
+     "q": "¿Dónde comes al mediodía?",
+     "model": "Como en la cocina de la oficina con mis compañeros."
+    }
+   ],
+   "gaps": "Yo soy [analista] y necesito [silencio]. Tengo una [reunión] a las [once].",
+   "glossary": [
+    {
+     "word": "ruido",
+     "meaning": "sonido fuerte y molesto"
+    },
+    {
+     "word": "silencio",
+     "meaning": "cuando no hay ningún sonido"
+    },
+    {
+     "word": "analista",
+     "meaning": "persona que estudia datos"
+    }
+   ]
+  },
+  {
+   "id": "m3-jimena",
+   "title": "Faltan cien euros",
+   "place": "Nóminas y administración",
+   "context": "Jimena mira su nómina y habla con Don Ernesto, el responsable de nóminas.",
+   "speakers": [
+    {
+     "name": "Jimena",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Don Ernesto",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Ernesto, mi nómina tiene un error. Mi salario es de mil quinientos euros."
+    },
+    {
+     "s": 1,
+     "text": "A ver… Aquí dice mil cuatrocientos."
+    },
+    {
+     "s": 0,
+     "text": "¡Faltan cien euros! Y trabajo los sábados."
+    },
+    {
+     "s": 1,
+     "text": "Tienes razón. Perdón, el ordenador es muy viejo."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuándo recibo el dinero?"
+    },
+    {
+     "s": 1,
+     "text": "El viernes, el día quince. Prometido."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuál es el salario de Jimena?",
+     "options": [
+      "Mil cuatrocientos euros",
+      "Mil cien euros",
+      "Mil quinientos euros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto dinero falta?",
+     "options": [
+      "Cien euros",
+      "Cincuenta euros",
+      "Cuatrocientos euros"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué días trabaja también Jimena?",
+     "options": [
+      "Los domingos",
+      "Los sábados",
+      "Los lunes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo recibe Jimena el dinero?",
+     "options": [
+      "El lunes, día cinco",
+      "El sábado",
+      "El viernes, día quince"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué días trabajas?",
+     "model": "Trabajo de lunes a viernes."
+    },
+    {
+     "q": "¿Revisas tu nómina o tus facturas?",
+     "model": "Sí, reviso mis facturas todos los meses."
+    },
+    {
+     "q": "¿Qué haces si hay un error con tu dinero?",
+     "model": "Hablo con la persona responsable y pido una solución."
+    }
+   ],
+   "gaps": "¡[Faltan] [cien] euros! Y [trabajo] los [sábados].",
+   "glossary": [
+    {
+     "word": "nómina",
+     "meaning": "documento con el salario del mes"
+    },
+    {
+     "word": "salario",
+     "meaning": "dinero que recibes por tu trabajo"
+    },
+    {
+     "word": "prometido",
+     "meaning": "lo digo y lo hago"
+    }
+   ]
+  },
+  {
+   "id": "m4-rumor",
+   "title": "Un rumor en la cocina",
+   "place": "La cocina",
+   "context": "Nacho, el informático, habla con Paloma en la cocina. Está asustado.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Paloma",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Paloma, ¿es verdad? ¿La empresa cierra?"
+    },
+    {
+     "s": 1,
+     "text": "¿Qué? No, Nacho. ¿Quién dice eso?"
+    },
+    {
+     "s": 0,
+     "text": "Todo el mundo. Hay cajas en el pasillo."
+    },
+    {
+     "s": 1,
+     "text": "Las cajas son para las sillas nuevas."
+    },
+    {
+     "s": 0,
+     "text": "¿Sillas nuevas? Entonces la empresa no cierra."
+    },
+    {
+     "s": 1,
+     "text": "No. Hay cambios, pero no cierra. El lunes hay una reunión con todo el equipo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pregunta Nacho?",
+     "options": [
+      "Si la empresa cierra",
+      "Si hay café",
+      "Dónde está el director"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay en el pasillo?",
+     "options": [
+      "Sillas rotas",
+      "Cajas",
+      "Plantas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Para qué son las cajas?",
+     "options": [
+      "Para los ordenadores",
+      "Para los papeles",
+      "Para las sillas nuevas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo es la reunión con el equipo?",
+     "options": [
+      "El lunes",
+      "El viernes",
+      "Hoy"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hay rumores en tu trabajo o en tu escuela?",
+     "model": "Sí, a veces hay rumores, pero no son verdad."
+    },
+    {
+     "q": "¿Qué cambias en tu casa o en tu trabajo este año?",
+     "model": "Este año cambio mi escritorio y compro una silla nueva."
+    },
+    {
+     "q": "¿Te gustan las reuniones con todo el equipo?",
+     "model": "Sí, me gustan porque hablo con todos."
+    }
+   ],
+   "gaps": "Hay [cambios], pero no [cierra]. El lunes hay una [reunión] con todo el [equipo].",
+   "glossary": [
+    {
+     "word": "cierra",
+     "meaning": "deja de funcionar para siempre"
+    },
+    {
+     "word": "pasillo",
+     "meaning": "espacio largo entre las salas"
+    },
+    {
+     "word": "equipo",
+     "meaning": "grupo de personas que trabajan juntas"
+    }
+   ]
+  },
+  {
+   "id": "m5-informe",
+   "title": "Los números de Olga",
+   "place": "El despacho de Olga",
+   "context": "Olga, la directora financiera, presenta los números del mes a Hugo, el director comercial.",
+   "speakers": [
+    {
+     "name": "Olga",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Hugo",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hugo, aquí están los números de octubre."
+    },
+    {
+     "s": 1,
+     "text": "¿Y? ¿Vendemos mucho?"
+    },
+    {
+     "s": 0,
+     "text": "Vendemos poco. Este mes tenemos treinta clientes. En septiembre tenemos cincuenta."
+    },
+    {
+     "s": 1,
+     "text": "Ya. La página web no funciona bien."
+    },
+    {
+     "s": 0,
+     "text": "Necesitamos una página nueva y dos vendedores más."
+    },
+    {
+     "s": 1,
+     "text": "De acuerdo. Mañana hablo con el director."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué mes son los números?",
+     "options": [
+      "De septiembre",
+      "De octubre",
+      "De noviembre"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos clientes tienen este mes?",
+     "options": [
+      "Cincuenta",
+      "Trece",
+      "Treinta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no funciona bien?",
+     "options": [
+      "La página web",
+      "El teléfono",
+      "La impresora"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos vendedores más necesitan?",
+     "options": [
+      "Uno",
+      "Dos",
+      "Tres"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mes del año te gusta más?",
+     "model": "Me gusta octubre porque no hace calor."
+    },
+    {
+     "q": "¿Compras cosas por internet?",
+     "model": "Sí, compro ropa y libros por internet."
+    },
+    {
+     "q": "¿Qué necesita tu empresa o tu escuela?",
+     "model": "Mi escuela necesita más ordenadores."
+    }
+   ],
+   "gaps": "Necesitamos una [página] [nueva] y [dos] [vendedores] más.",
+   "glossary": [
+    {
+     "word": "vendemos",
+     "meaning": "damos productos por dinero"
+    },
+    {
+     "word": "clientes",
+     "meaning": "personas que compran"
+    },
+    {
+     "word": "vendedores",
+     "meaning": "personas que venden"
+    }
+   ]
+  },
+  {
+   "id": "m6-crisis",
+   "title": "El director tiene miedo",
+   "place": "El despacho del director",
+   "context": "Álvaro, el director general, está debajo de su mesa. Carmen, la jefa de ventas, entra.",
+   "speakers": [
+    {
+     "name": "Carmen",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Álvaro",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Álvaro, ¿estás debajo de la mesa?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Hay periodistas en la puerta y el sistema no funciona."
+    },
+    {
+     "s": 0,
+     "text": "Tranquilo. Nacho está con el sistema."
+    },
+    {
+     "s": 1,
+     "text": "¿Y los periodistas?"
+    },
+    {
+     "s": 0,
+     "text": "Los periodistas quieren hablar con el director. Tú eres el director."
+    },
+    {
+     "s": 1,
+     "text": "Vale. Salgo, pero tú vienes conmigo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está Álvaro?",
+     "options": [
+      "En la puerta",
+      "En la cocina",
+      "Debajo de la mesa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién está en la puerta?",
+     "options": [
+      "Los periodistas",
+      "Los clientes",
+      "Los vendedores"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién está con el sistema?",
+     "options": [
+      "Carmen",
+      "Nacho",
+      "Álvaro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere Álvaro al final?",
+     "options": [
+      "Un café",
+      "Ir a casa",
+      "Que Carmen va con él"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces cuando tienes miedo?",
+     "model": "Respiro y hablo con un amigo."
+    },
+    {
+     "q": "¿Hablas bien en público?",
+     "model": "No muy bien, porque estoy nervioso."
+    },
+    {
+     "q": "¿A quién le pides ayuda en tu primer día en una oficina nueva?",
+     "model": "Mi hermana me ayuda siempre."
+    }
+   ],
+   "gaps": "Los [periodistas] quieren [hablar] con el [director]. Tú eres el [director].",
+   "glossary": [
+    {
+     "word": "periodistas",
+     "meaning": "personas que escriben las noticias"
+    },
+    {
+     "word": "tranquilo",
+     "meaning": "sin nervios"
+    },
+    {
+     "word": "sistema",
+     "meaning": "programa de los ordenadores"
+    }
+   ]
+  }
+ ]
+}

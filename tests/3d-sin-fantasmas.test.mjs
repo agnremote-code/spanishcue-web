@@ -24,6 +24,7 @@ const consorcio = await import('../app/el-consorcio/layout.mjs');
 const boda = await import('../app/la-boda/layout.mjs');
 const tren = await import('../app/el-tren-de-las-2340/layout.mjs');
 const papel = await import('../app/el-mundo-en-blanco/layout.mjs');
+const hr = await import('../app/hr-crisis/oficina.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -226,6 +227,19 @@ function bodaWorld() {
   };
 }
 
+// HR Crisis: one office floor: the 15 employees with a task, the 13 who work
+// around them (one is the cardboard boss), the courier, the colleague with
+// boxes, the cleaner and the colleague who paces around HR.
+function hrWorld() {
+  const people = [...Object.entries(hr.CAST).map(([id, c]) => ({ id, x: c.x, z: c.z, y: 0, seated: Boolean(c.seated) })),
+    ...hr.CROWD.map((c, i) => ({ id: `oficina-${i}`, x: c.x, z: c.z, y: 0, seated: hr.crowdSeated(c) }))];
+  return {
+    id: 'hr', solids: hr.solidsFor().filter(b => !b.person), bounds: hr.BOUNDS, staticWalkers: true, people,
+    walkers: hr.WALKERS.map((w, i) => { const pts = []; for (let t = 0; t < 900; t += 0.05) pts.push(hr.walkerAt(w, t)); return { id: `walker-${i}`, points: pts }; }),
+    spots: [{ id: 'spawn', ...hr.SPAWN }, ...Object.entries(hr.SPOTS).map(([id, s]) => ({ id, x: s.x, z: s.z }))],
+  };
+}
+
 // El mundo en blanco: one open paper world. The twelve folded beings stand
 // still (the whale swims overhead), nobody walks, and the mascot is put at
 // the spawn, at each brush circle and in front of the inkwell.
@@ -236,7 +250,7 @@ function papelWorld() {
     spots: [{ id: 'spawn', x: papel.SPAWN.x, z: papel.SPAWN.z }, { id: 'final', x: papel.FINAL.x, z: papel.FINAL.z + papel.FINAL.r + 0.6 }, ...papel.PLACES.map(s => ({ id: s.id, x: s.x, z: s.z }))],
   };
 }
-const WORLDS = [papelWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+const WORLDS = [papelWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {
