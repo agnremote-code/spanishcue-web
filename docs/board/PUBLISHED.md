@@ -33,6 +33,15 @@ Entry format:
 
 ## Published
 
+## 2026-11-13 — «Más allá: cielo e infierno» A2: hypotheses at A2 level (repair)
+- URL(s): https://spanishcue.com/mas-alla, level A2 (PRO; anonymous users → /acceso).
+- Level(s) / objectives: A2 only. Its objectives are unchanged (past tenses, comparisons, habits, simple wishes). B1 forms were removed from 16 encounter strings and 6 voice questions: «si + imperfecto de subjuntivo», the condicional compuesto, and bare hypothetical conditionals. Levels A0–C2 stay in the catalog.
+- PR / merged SHA / production deploy run: PR #422 → `428cae42073fc826a14e7f24ff341ac526559eba`. CI + Auto Merge 43353680039, Deploy Staging 43356369857 and Deploy Production 43356727091, all successful.
+- Production smoke evidence: the production workflow's smoke against https://spanishcue.com (job 131660403137, 03:10:41Z) printed `"passed": true`, and the rollback was skipped. The A2 strings are PRO-only and were not smoked individually, so their evidence is the checker, the regression test and the deploy.
+- Concept file / LQG review file: `docs/audits/mas-alla-repair-a2-hypothesis-20261113.md`.
+- Built by / reviewed by: Martin (content), the facilitator (guard and test) / Alejandro as a fresh agent (G4: CHANGES REQUESTED with 4 blockers, then DELTA APPROVE).
+- Known limitations: the guard does not catch bare hypothetical conditionals, and it has known rare misses (listed in the LQG file). Two near-duplicates in the A2 encounters predate this repair, and `conversation-quality` also flags three A2 voices. Only A2 was re-read.
+
 ## 2026-11-11 — «Madrid infectada»: unmount frees the GPU (repair)
 - URL(s): https://spanishcue.com/madrid-infectada (PRO; anonymous users → /acceso).
 - Level(s) / objectives: unchanged. No lesson content changed.
