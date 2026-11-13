@@ -22,6 +22,28 @@ const isBi = (t) => t && typeof t === 'object' && typeof t.es === 'string' && ty
 const isText = (t) => (typeof t === 'string' ? t.trim().length > 0 : isBi(t));
 // The voseo guard does not know the plural «vosotros»; these forms never belong here.
 const VOSOTROS = /\b(?:vosotros|vosotras|os\s+\p{L}+(?:áis|éis|ís)|\p{L}+(?:áis|éis))\b/iu;
+// Up to A2 a hypothesis stays real (present, ir a, me gustaría): «si + imperfecto de subjuntivo»
+// and the conditional perfect («habrías hecho») are B1 and up (PCIC). Gated repair 2026-11-13,
+// docs/audits/mas-alla-repair-a2-hypothesis-20261113.md.
+// JS \b only knows ASCII letters, so the boundaries are written with \p{L} lookarounds.
+// 1. -iera/-iese forms are imperfect subjunctive anywhere (minus a few words that only look like it).
+const IERA = /(?<!\p{L})(\p{L}+(?:iera|ieras|iéramos|ieran|iese|ieses|iésemos|iesen))(?!\p{L})/giu;
+// Present subjunctive of e→ie verbs (quiera, prefieras, sugieran…) also ends in -iera: not B1.
+const IERA_OK = /^(?:cualquiera|quisiera|quisieras|siquiera|fiera|fieras|(?:qu|requ|adqu|pref|h|sug|dig|inf|ref|conf|transf|dif|interf)iera(?:s|n)?)$/iu;
+// 2. -ara/-ase forms and the irregular fuera/dijera/trajera family only after «si», with an
+//    optional subject, possessive + noun, «de verdad», «no» or clitics in between.
+const SI_FORM = /(?<!\p{L})si\s+(?:(?:yo|tú|él|ella|usted|nosotros|nosotras|ellos|ellas|ustedes|todo|todos|todas|mañana|ahora|alguien|nadie|de verdad|(?:el|la|los|las|mi|tu|su|mis|tus|sus|un|una)\s+\p{L}+|no|me|te|le|lo|la|los|las|se|nos|les)\s+){0,3}((?:fu|dij|traj|conduj|produj|traduj|quisi)(?:era|eras|éramos|eran|ese|eses)|\p{L}+(?:ara|aras|áramos|aran|ase|ases|asen))(?!\p{L})/giu;
+// Present indicative of -arar verbs, and nouns/names in -ara/-ase, are A1 words.
+const ARA_OK = /^(?:(?:separ|compar|prepar|declar|dispar|repar|ampar|aclar|par|car|clar|sar|mascar|máscar|cámar|vac|mar|lar|tamar)(?:a|as|an)|(?:cl|b|fr|f|p|c)ase|(?:cl|b|fr|f|p|c)ases)$/iu;
+// 3. Conditional perfect.
+const HABRIA = /(?<!\p{L})habr(?:ía|ías|íamos|ían)\s+\p{L}*(?:ado|ido|to|cho|sto)(?!\p{L})/iu;
+export function aboveA2(text) {
+  const t = String(text);
+  for (const m of t.matchAll(IERA)) if (!IERA_OK.test(m[1])) return true;
+  for (const m of t.matchAll(SI_FORM)) if (!ARA_OK.test(m[1])) return true;
+  return HABRIA.test(t);
+}
+const UP_TO_A2 = new Set(['A0', 'A1', 'A2']);
 
 export function checkLevel(level, content, path = `app/mas-alla/levels/${level.toLowerCase()}.mjs`) {
   const errors = [];
@@ -41,6 +63,7 @@ export function checkLevel(level, content, path = `app/mas-alla/levels/${level.t
       if (!isText(t)) fail(spot.id, `empty or malformed text ${JSON.stringify(t)}`);
       else if (a0 && !isBi(t)) fail(spot.id, `A0 text without English: ${JSON.stringify(t)}`);
       else if (VOSOTROS.test(es(t))) fail(spot.id, `vosotros form in ${JSON.stringify(es(t)).slice(0, 90)}`);
+      else if (UP_TO_A2.has(level) && aboveA2(es(t))) fail(spot.id, `above ${level} (si + imperfecto de subjuntivo or condicional compuesto) in ${JSON.stringify(es(t)).slice(0, 90)}`);
     }
     if (!a0) for (const t of texts) if (typeof t !== 'string' && !(level === 'A1' && (scene.poles ?? []).includes(t))) fail(spot.id, `only A0 (and A1 words) are bilingual: ${JSON.stringify(t)}`);
     if (level === 'A1' && !(scene.words ?? []).every(isBi)) fail(spot.id, 'A1 words need { es, en }');
@@ -92,6 +115,7 @@ export function checkVoices(level, raw, path = `app/mas-alla/voces/${level.toLow
       if (a0 ? !bi : typeof t !== 'string' || !t.trim()) fail(id, a0 ? `A0 texts are [es, en]: ${JSON.stringify(t)}` : `only A0 is bilingual: ${JSON.stringify(t)}`);
       const text = Array.isArray(t) ? t[0] : t;
       if (VOSOTROS.test(String(text))) fail(id, `vosotros in «${text}»`);
+      if (UP_TO_A2.has(level) && aboveA2(text)) fail(id, `above ${level} (si + imperfecto de subjuntivo or condicional compuesto) in «${text}»`);
     }
     for (const q of entry.slice(1)) {
       const text = String(Array.isArray(q) ? q[0] : q);

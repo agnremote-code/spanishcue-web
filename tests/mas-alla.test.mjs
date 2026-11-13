@@ -5,7 +5,7 @@ import * as L from '../app/mas-alla/layout.mjs';
 import * as E from '../app/mas-alla/engine.mjs';
 import { CAST, FORMS, LEVEL_IDS, SPOTS, WORLD_IDS, ZONES } from '../app/mas-alla/story.mjs';
 import { GAMES } from '../app/escucha-3d/games.mjs';
-import { checkAll } from '../scripts/check-mas-alla.mjs';
+import { aboveA2, checkAll, checkLevel, checkVoices } from '../scripts/check-mas-alla.mjs';
 import { VOICES, VOICE_IDS } from '../app/mas-alla/voces.mjs';
 import { PLAYER_RADIUS } from '../app/noche-abierta/world3d.mjs';
 
@@ -18,6 +18,25 @@ const catalog = readFileSync('app/lesson-catalog.ts', 'utf8');
 
 test('all seven levels pass the Más allá checker (twelve encounters, words per level, one deep question, two open ones, neutral Spanish)', async () => {
   assert.deepEqual(await checkAll(), []);
+});
+
+// Gated repair 2026-11-13 (docs/audits/mas-alla-repair-a2-hypothesis-20261113.md): main's A2 asked
+// B1 hypotheses (six findings: four «si + imperfecto de subjuntivo», «si no estuvieras» and the
+// condicional compuesto «habrías hecho»). The checker now refuses them up to A2, in encounters and voices.
+test('up to A2 no «si + imperfecto de subjuntivo» or condicional compuesto; B1 keeps them', async () => {
+  const above = ['Si te quedara solo un año de vida, ¿qué dejarías de hacer?', 'Si pudieras cambiar un capítulo, ¿cuál?', '¿Qué echarías de menos si no estuvieras en la Tierra?', '¿Qué habrías hecho en vez de eso?', 'Si fuera rico, ¿qué harías?', 'Si la vida fuera fácil, ¿qué harías?', 'Como si fuera ayer.', 'Si dijera la verdad, ¿qué pasaría?', 'Si yo pudiera volver…', 'Si mi hermano tuviera dinero…', 'Si de verdad quisieras…', 'Te habrías ido.', 'Si no importara el dinero…', 'Si separaras a los dos…', 'Si todos fueran amables…', 'Si mañana fuera tu último día…'];
+  const fine = ['Si tienes un día libre, ¿qué vas a hacer?', '¿Qué te gustaría cambiar de tu pasado?', 'Si para ti es difícil, ¿por qué?', 'Si separa a los niños, ¿qué pasa?', 'Si te separa de tu familia…', 'Si Sara quiere venir…', 'Si la clase es aburrida, ¿qué haces?', 'Si las clases terminan tarde…', 'Si estás fuera de casa…', 'Si era verdad, ¿por qué no lo dijo?', 'Cualquiera puede hacerlo.', 'Quisiera un café.', 'Ni siquiera lo sabe.', 'Con quien quieras.', 'Haz lo que prefieras.', 'Si Mara viene, hablamos.'];
+  for (const t of above) assert.ok(aboveA2(t), `above A2: ${t}`);
+  for (const t of fine) assert.ok(!aboveA2(t), `A2 is fine: ${t}`);
+  const a2 = (await import('../app/mas-alla/levels/a2.mjs')).default;
+  const seeded = { ...a2, jardin: { ...a2.jardin, q: 'Si te quedara solo un año de vida, ¿qué dejarías de hacer?' } };
+  assert.ok(checkLevel('A2', seeded).some(e => /jardin: above A2/.test(e)), 'the checker refuses a B1 hypothesis in an A2 encounter');
+  const v2 = (await import('../app/mas-alla/voces/a2.mjs')).default;
+  const [line, q1, q2] = v2.remedios;
+  const voiceSeeded = { ...v2, remedios: [line, q1, q2, 'Si fueras joven otra vez, ¿qué cosa de tu vida cambiarías primero?'] };
+  assert.ok(checkVoices('A2', voiceSeeded).some(e => /remedios: above A2/.test(e)), 'the checker refuses a B1 hypothesis in an A2 voice');
+  const b1 = (await import('../app/mas-alla/levels/b1.mjs')).default;
+  assert.ok(Object.values(b1).some(s => aboveA2(s.q) || s.talk.some(aboveA2)), 'B1 still teaches the hypothesis');
 });
 
 test('two worlds after the Umbral, three zones each, two encounters per zone, each in its own world', () => {

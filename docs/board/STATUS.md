@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-12 by the Thursday reliability routine (scheduled cloud run; Sofia, Alejandro and Martin convened as subagents of the facilitator, see "Current work")._
+_Last updated: 2026-11-13 by the Friday 3D + assessment routine (scheduled cloud run; Martin and Alejandro convened as subagents of the facilitator, Sofia not convened; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -32,7 +32,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
 | 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **HELD on R4 (§9.2 listening).** Draft #282, renumbered to catalog id **246** on 2026-11-02 (243 went to «Más allá»). The BOARD-DECISION-003 speech-to-text check was NOT VALID on its first run (missed a seeded gap-word -s pair), and it flagged cafe («Yaneth» misheard; line 8 not located in the first model's transcript) |
-| 3 | «También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`). **Partly covered already** (VERIFIED: `app/grammar-classroom/live/lessons/g332.ts:129` has a section «También, tampoco, sí, no · Reacting to tastes» with exercises), so whether any gap remains is a HYPOTHESIS; Martin duplicate-checks against main before any authoring | Martin → fresh agent (G4) | after rank 2 content |
+| — | ~~«También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`)~~ | — | **DROPPED 2026-11-13** (Martin's duplicate check, facilitator re-verified): free A1 class 332 (G032) already teaches all eight reactions with 6 exercises (`app/grammar-classroom/live/lessons/g332.ts:129-146`; free per `app/access-policy.ts:1-2`), the A1 objective assesses it (`app/autoestudio/curriculum/objectives/a1.ts:140`) and G372 reuses it at A2. If more practice is wanted, add 2–4 exercises to that g332 section instead |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
 | P+1 | COMP-001 ProfeDeELE.com benchmark (plan below) | Alejandro + Martin | after the first technical SEO fix |
@@ -52,7 +52,8 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
-- **R0, NEW STATE 2026-11-06: Search Console is DISCONNECTED in Windsor.** `get_connectors` lists only `google_ads` (423-495-3611), and `get_data searchconsole` returns "No searchconsole accounts are configured". HYPOTHESIS: the extra accounts were removed for the Free plan, and Search Console went with them. The owner was pushed the reconnect link (`get_connector_connect_info searchconsole`) on 2026-11-06: re-authorize, then select `sc-domain:spanishcue.com` and click Finish. The history below is kept.
+- **R0 RESOLVED 2026-11-13 (VERIFIED):** `get_connectors` lists `searchconsole` with account `sc-domain:spanishcue.com`, and reads return data (latest day 2026-11-10). The W46 indicators are in [assessments/2026-W46.md](assessments/2026-W46.md) §2. The history below is kept.
+- **R0, STATE 2026-11-06 (superseded): Search Console was DISCONNECTED in Windsor.** `get_connectors` lists only `google_ads` (423-495-3611), and `get_data searchconsole` returns "No searchconsole accounts are configured". HYPOTHESIS: the extra accounts were removed for the Free plan, and Search Console went with them. The owner was pushed the reconnect link (`get_connector_connect_info searchconsole`) on 2026-11-06: re-authorize, then select `sc-domain:spanishcue.com` and click Finish. The history below is kept.
 - **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-11-03, Windsor returned the same "reads are paused … 6 accounts connected" error):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
 - **R1:** Search Console Page-indexing report, Core Web Vitals report and per-query impressions. The Windsor connector exposes only search analytics and sitemaps.
 - **R2:** GA Admin: which property `G-6C7DY2C5LN` reports to.
@@ -79,6 +80,42 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-13 (Friday 3D + assessment routine): PR #422** (branch `claude/friday-assessment-20261113`, base main `3f946b9`). Subscription usage: **UNKNOWN**.
+  - **Unit: gated content repair, «Más allá» A2** (reported as a **repair**; W46 item 6, second half). R4 is still unanswered (#282 has had no comment since 10-26), so #282 was not touched.
+    - Martin removed every structure above A2 from `app/mas-alla/levels/a2.mjs` (16 strings) and `voces/a2.mjs` (6 voice questions). That covers the four «si + imperfecto de subjuntivo» prompts from his 11-03 audit, «habrías hecho», and every bare hypothetical conditional. Only *gustaría* (wishes) remains.
+    - New guard `aboveA2()` in `scripts/check-mas-alla.mjs`, at A0–A2, in encounters and voices. The test fails against main's a2 (6 findings). Each guard line was mutation-checked by the reviewer and caught.
+    - LQG file: [mas-alla-repair-a2-hypothesis-20261113.md](../audits/mas-alla-repair-a2-hypothesis-20261113.md).
+  - **G4:** a fresh agent acting as Alejandro returned **CHANGES REQUESTED** with 4 blockers:
+    - B1: the rio question capped the answer at one glass;
+    - B2: the trono talk premise contradicted the scene;
+    - B3: the guard had misses («si fuera», «si yo pudiera») and false positives («si separa», «si la clase»);
+    - B4: the A2 voices were not repaired.
+    - All were fixed, and the delta review returned **DELTA APPROVE**. NB-D1 to NB-D4 were applied afterwards (docs plus two guard stem lists), as the reviewer allowed.
+  - **Item 7 done: «También, tampoco» DROPPED** as a duplicate of free G032 (backlog row above).
+  - **W46 assessment:** [assessments/2026-W46.md](assessments/2026-W46.md) (Alejandro, fresh agent, from the facilitator's facts sheet).
+    - 2 board units were in production before today (#406, #414), and Friday's would make 3 by type. Under the strict reading (an LQG file per unit) it is 2 with Friday.
+    - This is the third week with no new board world.
+    - Items 1 (Mon STT v3) and 2 (Tue §3.2 decision) left no trace (reason UNKNOWN).
+    - The 6th ungated non-board seven-level featured world shipped (#409 «El mundo en blanco»).
+  - **Search Console is back (R0 resolved).**
+    - 28 days (10-16..11-12, data through 11-10): 52 clicks, 772 impressions.
+    - `/material-ele` has 33 clicks and 339 impressions, at an impression-weighted position of 12.2.
+    - Weekly clicks W41–W45: 1, 2, 3, 5, 23. W46 so far (two days): 20.
+    - Indexed count UNKNOWN: the Sitemaps `indexed` field is deprecated; 5,658 URLs are submitted.
+  - **Board:** Martin (author ×2, plus item 7), Alejandro ×2 as separate fresh agents (the assessment; G4 plus delta). Sofia was not convened, because no 3D or frontend code changed. Verbatim: [transcripts/2026-11-13-friday-3d-assessment.md](transcripts/2026-11-13-friday-3d-assessment.md).
+  - **Checks (local):**
+    - `npm test`: exit 0, 1,628 pass, 0 fail, at `cd245ba` and again at `5812912` (content-final), run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000` after fetching 5 pinned baseline commits.
+    - The later commits change only docs and two guard lists: `check-mas-alla` passes, `tests/mas-alla.test.mjs` 13/13, `test:language` 43/43, neutral 0 findings, English copy UNCHANGED.
+    - eslint on the changed files: clean.
+    - `tsc`: only the 3 errors already on main.
+    - `validate:artifact`: OK.
+    - `git diff --check`: clean.
+  - **Release:** PENDING at the time of writing. The facilitator records the merge SHA and the runs in a records PR.
+  - **Next action:** W47 plan in [assessments/2026-W46.md](assessments/2026-W46.md) §6. Follow-ups from this repair:
+    - two near-duplicates that predate it, `a2.mjs:142` and `:221` talk[0];
+    - the voices flagged by `conversation-quality` at `voces/a2.mjs:5, 20, 23`;
+    - Flegias's «moneda» line.
+  - **W46 plan item 6:** half done (Más allá A2 shipped as this unit; the El tren / La boda audit missed). **Item 7:** done (dropped). **Item 8:** the assessment is done; no leak repair was done (the unit was the content repair).
 - **2026-11-12 (Thursday reliability routine): PR #414** (branch `claude/thursday-review-20261112`, base main `a7625b4`). Subscription usage: **UNKNOWN**.
   - **W46 plan item 4, the UID re-keying decision, is DONE (third attempt):** [BOARD-DECISION-005](decisions/BOARD-DECISION-005-uid-rekeying.md), **ADOPTED 3 of 3**.
     - Sofia drafted it. Alejandro and Martin voted APPROVE WITH CHANGES, and every change was applied.
