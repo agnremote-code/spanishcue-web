@@ -18,7 +18,7 @@ function hasPast(raw, plain) {
   if (/\b\w{2,}(aste|asteis|aron|ieron|iste|isteis|aban|abamos|abas)\b/.test(plain)) return true;
   if (/\b\w{2,}(aba|ia)\b/.test(plain) && /\b(antes|ayer|cuando|siempre|todos los)\b/.test(plain)) return true;
   // hablé, pagó… (with the accent the student typed)
-  const accented = String(raw).toLowerCase().match(/(?<!\p{L})\p{L}{2,}[éó](?!\p{L})/gu) ?? [];
+  const accented = [...String(raw).toLowerCase().matchAll(/(?:^|[^\p{L}])(\p{L}{2,}[éó])(?!\p{L})/gu)].map(m => m[1]);
   return accented.some(w => !['qué', 'porqué', 'café', 'josé', 'cómo'].includes(w));
 }
 function hasFuture(raw, plain) {
