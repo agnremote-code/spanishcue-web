@@ -26,14 +26,38 @@ test('a calm world (title card, a panel over the scene) draws about 30', () => {
   for (const hz of [75, 90, 144]) { const fps = drawn(hz, 10, true); assert.ok(fps >= 28 && fps <= 38, `${hz} Hz draws ${fps}`); }
 });
 
-test('a normal window keeps its sharpness; a huge Retina canvas is held to the pixel budget', () => {
-  assert.equal(worldPixelRatio(1440, 800, 1.75, 2), 1.75);
+test('desktop worlds stop at 1.5 pixels per point; a huge Retina canvas is held to the pixel budget', () => {
+  assert.equal(worldPixelRatio(1440, 800, 1.75, 2), 1.5);
   assert.equal(worldPixelRatio(1280, 720, 1.75, 1), 1);
   assert.equal(worldPixelRatio(390, 780, 1.2, 3), 1.2);
   const huge = worldPixelRatio(2366, 1141, 1.75, 2);
   assert.ok(huge > 1.3 && huge < 1.4, String(huge));
   assert.ok(2366 * 1141 * huge * huge <= 5e6 + 1);
   assert.equal(worldPixelRatio(3840, 2160, 1.75, 1), 1, 'never below one device pixel');
+});
+
+test('a world that takes long per frame drops to the calm pace, and comes back only when clearly light', () => {
+  const pace = createFramePacer();
+  const fps = () => { let n = 0; for (let i = 0; i < 1200; i++) if (pace(1e6 + i * 1000 / 120)) n++; return n / 10; };
+  assert.equal(pace.heavy(), false);
+  for (let i = 0; i < 100; i++) pace.measure(12);
+  assert.equal(pace.heavy(), false, 'a short spike is not enough');
+  for (let i = 0; i < 200; i++) pace.measure(12);
+  assert.equal(pace.heavy(), true);
+  assert.equal(fps(), 30);
+  for (let i = 0; i < 600; i++) pace.measure(5);
+  assert.equal(pace.heavy(), true, 'middling frames keep the calm pace (no flapping)');
+  for (let i = 0; i < 600; i++) pace.measure(1);
+  assert.equal(pace.heavy(), false);
+});
+
+test('a world whose frames keep arriving late drops to the calm pace', () => {
+  const steady = createFramePacer();
+  for (let i = 0; i < 2000; i++) steady(i * 1000 / 60);
+  assert.equal(steady.heavy(), false, 'a steady 60 Hz is fine');
+  const choked = createFramePacer();
+  for (let i = 0; i < 400; i++) choked(i * 28);
+  assert.equal(choked.heavy(), true, '36 fps when asking for 60 is a saturated machine');
 });
 
 test('hidden parts of a scene cost nothing and are right again the frame they show', () => {

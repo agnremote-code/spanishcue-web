@@ -90,7 +90,8 @@ export function inputFrom(held: Set<string>): Input;
 export function canUseKeys(target: EventTarget | null): boolean;
 export function stepTraffic(cars: MovingCar[], player: { x: number; z: number }, dt: number, blockers?: { x: number; z: number }[]): MovingCar[];
 /** Frame limiter: returns whether this animation frame should be drawn (~60 fps, ~30 when calm). */
-export function createFramePacer(fps?: number, calmFps?: number): (now: number, calm?: boolean) => boolean;
+export function createFramePacer(fps?: number, calmFps?: number): ((now: number, calm?: boolean) => boolean) & { measure: (ms: number) => void; heavy: () => boolean; work: () => number };
+export const MAX_PIXEL_RATIO: number;
 /** Device pixels per CSS pixel for a world canvas, held to a pixel budget on very large canvases. */
 export function worldPixelRatio(width: number, height: number, cap: number, device?: number, budget?: number): number;
 /** Makes a scene skip the per-frame matrix update of everything that is hidden. */
