@@ -34,6 +34,9 @@ async def generate(id,lesson):
       if chunk['type']=='audio':data.extend(chunk['data'])
       elif chunk['type']=='WordBoundary':bounds.append({k:chunk[k] for k in ['offset','duration','text']})
      if not data or not bounds:raise ValueError('Empty speech output')
+     # Multilingual voices sometimes report a zero-length word: give it the gap up to the next word.
+     for i,b in enumerate(bounds):
+      if b['duration']<=0:b['duration']=max(1,(bounds[i+1]['offset']-b['offset']) if i+1<len(bounds) else 1)
      path.write_bytes(data);boundary.write_text(json.dumps(bounds,ensure_ascii=False)+'\n');break
     except Exception:
      if attempt==2:raise

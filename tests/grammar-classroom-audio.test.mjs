@@ -17,7 +17,7 @@ test('57 native neural recordings match the exact current transcript and reporte
   }
   for(const clip of manifest.clips){
     const input=contexts[clip.id].listening;
-    assert.equal(clip.voice,input.voice,`${clip.id} voice`);assert.match(clip.voice,/^es-(?:MX|ES)-.+Neural$/);
+    assert.equal(clip.voice,input.voice,`${clip.id} voice`);assert.match(clip.voice,/^(?:en-US-Emma|de-DE-Florian)MultilingualNeural$/);
     assert.equal(clip.transcriptSha256,hash(input.transcript),`${clip.id} stale transcript`);
     assert.equal(clip.sha256,hash(readFileSync('public'+clip.src)),`${clip.id} asset hash`);
     const words=read(clip.wordMetadata);
