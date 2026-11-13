@@ -172,6 +172,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/la-boda-english-additions-20261104.json',
   'docs/audits/el-tren-de-las-2340-english-additions-20261104.json',
   'docs/audits/el-mundo-en-blanco-english-additions-20261111.json',
+  'docs/audits/pulido-lote-03-english-additions-20261112.json',
   'docs/audits/autoestudio-espejo-english-20261105.json',
 ];
 export function loadApprovedAdditions(root) {
