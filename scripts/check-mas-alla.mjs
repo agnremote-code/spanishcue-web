@@ -32,9 +32,9 @@ const IERA = /(?<!\p{L})(\p{L}+(?:iera|ieras|iéramos|ieran|iese|ieses|iésemos|
 const IERA_OK = /^(?:cualquiera|quisiera|quisieras|siquiera|fiera|fieras|(?:qu|requ|adqu|pref|h|sug|dig|inf|ref|conf|transf|dif|interf)iera(?:s|n)?)$/iu;
 // 2. -ara/-ase forms and the irregular fuera/dijera/trajera family only after «si», with an
 //    optional subject, possessive + noun, «de verdad», «no» or clitics in between.
-const SI_FORM = /(?<!\p{L})si\s+(?:(?:yo|tú|él|ella|usted|nosotros|nosotras|ellos|ellas|ustedes|todo|alguien|nadie|de verdad|(?:el|la|los|las|mi|tu|su|mis|tus|sus|un|una)\s+\p{L}+|no|me|te|le|lo|la|los|las|se|nos|les)\s+){0,3}((?:fu|dij|traj|conduj|produj|traduj|quisi)(?:era|eras|éramos|eran|ese|eses)|\p{L}+(?:ara|aras|áramos|aran|ase|ases|asen))(?!\p{L})/giu;
+const SI_FORM = /(?<!\p{L})si\s+(?:(?:yo|tú|él|ella|usted|nosotros|nosotras|ellos|ellas|ustedes|todo|todos|todas|mañana|ahora|alguien|nadie|de verdad|(?:el|la|los|las|mi|tu|su|mis|tus|sus|un|una)\s+\p{L}+|no|me|te|le|lo|la|los|las|se|nos|les)\s+){0,3}((?:fu|dij|traj|conduj|produj|traduj|quisi)(?:era|eras|éramos|eran|ese|eses)|\p{L}+(?:ara|aras|áramos|aran|ase|ases|asen))(?!\p{L})/giu;
 // Present indicative of -arar verbs, and nouns/names in -ara/-ase, are A1 words.
-const ARA_OK = /^(?:(?:separ|compar|prepar|declar|dispar|repar|ampar|aclar|par|car|clar|sar|mascar|máscar|cámar|vac)(?:a|as|an)|(?:cl|b|fr|f|p|c)ase|(?:cl|b|fr|f|p|c)ases)$/iu;
+const ARA_OK = /^(?:(?:separ|compar|prepar|declar|dispar|repar|ampar|aclar|par|car|clar|sar|mascar|máscar|cámar|vac|mar|lar|tamar)(?:a|as|an)|(?:cl|b|fr|f|p|c)ase|(?:cl|b|fr|f|p|c)ases)$/iu;
 // 3. Conditional perfect.
 const HABRIA = /(?<!\p{L})habr(?:ía|ías|íamos|ían)\s+\p{L}*(?:ado|ido|to|cho|sto)(?!\p{L})/iu;
 export function aboveA2(text) {
