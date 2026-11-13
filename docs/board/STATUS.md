@@ -111,11 +111,12 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - `validate:artifact`: OK.
     - `git diff --check`: clean.
   - **Release (VERIFIED):** #422 merged as `428cae42`.
-    - Runs: CI + Auto Merge [43353680039](https://github.com/agnremote-code/spanishcue-web/actions/runs/43353680039) (attempt 1; no `clasicas-routes` hang this time), staging [43356369857](https://github.com/agnremote-code/spanishcue-web/actions/runs/43356369857) and production [43356727091](https://github.com/agnremote-code/spanishcue-web/actions/runs/43356727091), all successful.
+    - Runs: CI + Auto Merge [43353680039](https://github.com/agnremote-code/spanishcue-web/actions/runs/43353680039) (on PR head `e6f21c17`, attempt 1; no `clasicas-routes` hang this time), staging [43356369857](https://github.com/agnremote-code/spanishcue-web/actions/runs/43356369857) and production [43356727091](https://github.com/agnremote-code/spanishcue-web/actions/runs/43356727091), all successful.
     - The production smoke on https://spanishcue.com printed `"passed": true` (job 131660403137, 03:10:41Z), and the rollback was skipped. IndexNow reported "no new URLs". main = production = `428cae42`.
     - The A2 strings are PRO-only, so they were not smoked individually.
     - PUBLISHED.md entry and assessment fill-ins: records PR from `claude/friday-assessment-records-20261113`.
     - The smoke output still shows `paddle_api_403` (known, owner action).
+    - Records review (fresh agent): CHANGES REQUESTED for one stale assessment line. It is fixed, and the run IDs, SHAs, smoke step, counts and LQG file were all confirmed against git and the Actions API.
   - **Next action:** W47 plan in [assessments/2026-W46.md](assessments/2026-W46.md) §6. Follow-ups from this repair:
     - two near-duplicates that predate it, `a2.mjs:142` and `:221` talk[0];
     - the voices flagged by `conversation-quality` at `voces/a2.mjs:5, 20, 23`;
