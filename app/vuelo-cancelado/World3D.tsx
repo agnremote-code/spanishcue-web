@@ -263,7 +263,8 @@ export default function World3D(props: WorldProps) {
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
-      if (!pace(now, live.current.intro || live.current.paused)) return;
+      // Half pace behind the title card or a panel, and while the mascot stands still (most of a class is talk).
+      if (!pace(now, live.current.intro || live.current.paused || (player.speed < 0.05 && !player.y && clock - lastDrag > 1.5))) return;
       const dt = Math.min(0.05, previous ? (now - previous) / 1000 : 0.016);
       previous = now;
       clock += dt;
