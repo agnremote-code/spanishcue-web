@@ -50,6 +50,6 @@
 - **G5:** no rendered change. The same components show different strings, and the A2 talk strings stay ≥10 words, as before. Featured-flag status is unchanged: it is a non-board world and is out of scope.
 
 ## Not done / follow-ups
-- Two near-duplicates that `scripts/conversation-quality.mjs --list mas-alla/levels/a2` reports predate this repair and lie outside it: line 142 (jaula's sibling circle) and line 221 talk[0].
+- Two near-duplicates that `scripts/conversation-quality.mjs --list mas-alla/levels/a2` reports predate this repair and lie outside it: `a2.mjs:142` and `a2.mjs:221` talk[0].
 - Flegias still says «Pon una moneda en mi mano», which the authors read as a figure of speech.
 - The other levels were not re-read for over-level structures. Only A2 was in scope.
