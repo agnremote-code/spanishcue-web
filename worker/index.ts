@@ -37,6 +37,7 @@ import { pagePathname, pageSearch } from "./page-path";
 import { giftCoversPath, hasGift } from "../app/newsletter/server";
 import { GIFT_LANDING_PATH } from "../app/newsletter/gift";
 import { rateLimitKey, rateLimited, rateLimitResponse, type RateLimitBinding } from "./rate-limit";
+import { pageReadKey, pageReadLimitResponse, refusedAgent, refusedAgentResponse } from "./anti-scrape";
 import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
 import { bindAttribution } from "../db/partners";
 import { PARTNER_COOKIE, partnerCookieValue, partnerMarketingConsent, verifyReferral } from "../app/partners/referral";
@@ -56,6 +57,8 @@ interface Env {
   SPANISHCUE_WRITE_FREEZE?: string;
   AUTOESTUDIO_SHARE_SECRET?: string;
   ABUSE_LIMITER?: RateLimitBinding;
+  SCRAPE_LIMITER?: RateLimitBinding;
+  PAYLOAD_LIMITER?: RateLimitBinding;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -286,6 +289,18 @@ const app = {
       const clean = new URL(url);
       clean.searchParams.delete('lang');
       return languageRedirect(clean, requestedLocale);
+    }
+    // Anti-copy (app/crawler-policy.ts): refuse AI crawlers and scraping tools,
+    // slow down any IP reading pages in bulk. Search engines are exempt.
+    if (refusedAgent(request, pathname)) {
+      const refused = refusedAgentResponse();
+      setSecurityHeaders(refused.headers, url, localeFromHeaders(request.headers));
+      return refused;
+    }
+    if (await rateLimited(rscPayload ? env.PAYLOAD_LIMITER : env.SCRAPE_LIMITER, pageReadKey(request, pathname, env.SPANISHCUE_DEPLOYMENT, rscPayload))) {
+      const slowed = pageReadLimitResponse();
+      setSecurityHeaders(slowed.headers, url, localeFromHeaders(request.headers));
+      return slowed;
     }
     if (await rateLimited(env.ABUSE_LIMITER, rateLimitKey(request, pathname, env.SPANISHCUE_DEPLOYMENT))) {
       const limited = rateLimitResponse();

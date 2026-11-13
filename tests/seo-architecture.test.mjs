@@ -97,7 +97,9 @@ test("robots.txt blocks machine endpoints and abusive crawlers only, never a pag
   const blocked = rules.find((rule) => Array.isArray(rule.userAgent));
   assert.equal(blocked.disallow, "/");
   for (const bot of ["AhrefsBot", "SemrushBot", "GPTBot", "Bytespider"]) assert.ok(blocked.userAgent.includes(bot), bot);
-  for (const bot of blocked.userAgent) assert.doesNotMatch(bot, /google|bing/i, bot);
+  // Google's AI-only tokens are fine (they never affect Search); no search crawler may ever be listed.
+  const googleAiOnly = new Set(["Google-Extended", "Google-CloudVertexBot", "Google-NotebookLM"]);
+  for (const bot of blocked.userAgent) if (!googleAiOnly.has(bot)) assert.doesNotMatch(bot, /google|bing|^applebot$|duckduck|yandex/i, bot);
 });
 
 test("the sitemap lists clean, public, deduplicated URLs covering the organic architecture", () => {

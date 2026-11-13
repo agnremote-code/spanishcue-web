@@ -33,6 +33,19 @@ const localBindingConfig = (runWorkerFirst: boolean | string[]) => ({
       namespace_id: "7301",
       simple: { limit: 10, period: 60 as const },
     },
+    // Per-IP page reads (worker/anti-scrape.ts): far above a teacher or a whole
+    // classroom behind one IP, far below a scraper copying the library.
+    {
+      name: "SCRAPE_LIMITER",
+      namespace_id: "7302",
+      simple: { limit: 120, period: 60 as const },
+    },
+    // Client-navigation payloads: a long index page prefetches ~35 of them.
+    {
+      name: "PAYLOAD_LIMITER",
+      namespace_id: "7303",
+      simple: { limit: 600, period: 60 as const },
+    },
   ],
   d1_databases: d1
     ? [
