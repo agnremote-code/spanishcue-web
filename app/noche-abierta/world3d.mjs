@@ -552,3 +552,9 @@ export function skipHiddenMatrices(scene) {
   scene.updateMatrixWorld = function (force) { updateVisibleMatrices(this, force === true); };
   return scene;
 }
+
+// Browser checks (?qa3d) can reach a world's renderer to measure it on the
+// real graphics card; nothing changes for anyone else.
+export function exposeForQa(handles) {
+  if (typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('qa3d')) window.__w3d = handles;
+}
