@@ -27,3 +27,32 @@ test('public SEO pages and free samples still render for anonymous visitors',asy
   const response=await get(path);await response.arrayBuffer();assert.equal(response.status,200,path);
  }
 });
+
+test('AI crawlers and scraping tools are refused; search engines and visitors are served',async()=>{
+ const as=(path,agent)=>get(path,{headers:{'user-agent':agent}});
+ const googlebot='Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)';
+ const bingbot='Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; bingbot/2.0; +http://www.bing.com/bingbot.htm)';
+ const chrome='Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36';
+ for(const agent of [googlebot,bingbot,chrome])for(const path of ['/','/material-ele','/material-ele/fichas','/material-ele/guia/como-ensenar-gustar','/spanish-grammar-lessons','/gramatica/clase-inicial','/demo/noche-abierta','/sitemap.xml']){
+  const response=await as(path,agent);await response.arrayBuffer();assert.equal(response.status,200,`${agent} ${path}`);
+ }
+ for(const agent of ['Mozilla/5.0 (compatible; GPTBot/1.2; +https://openai.com/gptbot)','Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)','Mozilla/5.0 (compatible; PerplexityBot/1.0)','Mozilla/5.0 (compatible; Bytespider)','CCBot/2.0 (https://commoncrawl.org/faq/)']){
+  for(const path of ['/','/material-ele','/material-ele/fichas','/gramatica/clase-inicial','/demo/noche-abierta','/material-ele.rsc']){
+   const response=await as(path,agent);assert.equal(response.status,403,`${agent} ${path}`);
+   assert.doesNotMatch(await response.text(),/<html/i,path);
+  }
+  const robots=await as('/robots.txt',agent);assert.equal(robots.status,200);await robots.arrayBuffer();
+ }
+ for(const agent of ['python-requests/2.32.3','curl/8.5.0','Scrapy/2.11.2 (+https://scrapy.org)']){
+  const page=await as('/material-ele/fichas',agent);await page.arrayBuffer();assert.equal(page.status,403,agent);
+  for(const path of ['/','/sitemap.xml','/robots.txt']){const open=await as(path,agent);await open.arrayBuffer();assert.equal(open.status,200,`${agent} ${path}`);}
+ }
+});
+
+test('robots.txt keeps search engines in and names the AI crawlers',async()=>{
+ const text=await (await get('/robots.txt')).text();
+ for(const token of ['GPTBot','ChatGPT-User','ClaudeBot','PerplexityBot','CCBot','Bytespider','Google-Extended','Applebot-Extended'])assert.match(text,new RegExp(`User-Agent: ${token}\\b`,'i'),token);
+ assert.doesNotMatch(text,/User-Agent: (Googlebot|bingbot|Applebot|DuckDuckBot)\s/i);
+ assert.match(text,/User-Agent: \*\s+Allow: \//i);
+ assert.match(text,/Sitemap: https:\/\/spanishcue\.com\/sitemap\.xml/i);
+});
