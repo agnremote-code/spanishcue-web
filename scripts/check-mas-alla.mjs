@@ -22,6 +22,11 @@ const isBi = (t) => t && typeof t === 'object' && typeof t.es === 'string' && ty
 const isText = (t) => (typeof t === 'string' ? t.trim().length > 0 : isBi(t));
 // The voseo guard does not know the plural «vosotros»; these forms never belong here.
 const VOSOTROS = /\b(?:vosotros|vosotras|os\s+\p{L}+(?:áis|éis|ís)|\p{L}+(?:áis|éis))\b/iu;
+// Up to A2 a hypothesis stays real (present, ir a, me gustaría): «si + imperfecto de subjuntivo»
+// and the conditional perfect («habrías hecho») are B1 and up (PCIC). Gated repair 2026-11-13,
+// docs/audits/mas-alla-repair-a2-hypothesis-20261113.md.
+export const ABOVE_A2 = /\bsi\s+(?:(?:no|me|te|le|lo|la|los|las|se|nos|les)\s+)*(?!para\b|cara\b|clara\b)\p{L}+(?:ara|aras|áramos|aran|iera|ieras|iéramos|ieran|ase|ases|iese|ieses)\b|\bhabr(?:ía|ías|íamos|ían)\s+\p{L}+(?:ado|ido|to|cho|sto)\b/iu;
+const UP_TO_A2 = new Set(['A0', 'A1', 'A2']);
 
 export function checkLevel(level, content, path = `app/mas-alla/levels/${level.toLowerCase()}.mjs`) {
   const errors = [];
@@ -41,6 +46,7 @@ export function checkLevel(level, content, path = `app/mas-alla/levels/${level.t
       if (!isText(t)) fail(spot.id, `empty or malformed text ${JSON.stringify(t)}`);
       else if (a0 && !isBi(t)) fail(spot.id, `A0 text without English: ${JSON.stringify(t)}`);
       else if (VOSOTROS.test(es(t))) fail(spot.id, `vosotros form in ${JSON.stringify(es(t)).slice(0, 90)}`);
+      else if (UP_TO_A2.has(level) && ABOVE_A2.test(es(t))) fail(spot.id, `above ${level} (si + imperfecto de subjuntivo or condicional compuesto) in ${JSON.stringify(es(t)).slice(0, 90)}`);
     }
     if (!a0) for (const t of texts) if (typeof t !== 'string' && !(level === 'A1' && (scene.poles ?? []).includes(t))) fail(spot.id, `only A0 (and A1 words) are bilingual: ${JSON.stringify(t)}`);
     if (level === 'A1' && !(scene.words ?? []).every(isBi)) fail(spot.id, 'A1 words need { es, en }');
@@ -92,6 +98,7 @@ export function checkVoices(level, raw, path = `app/mas-alla/voces/${level.toLow
       if (a0 ? !bi : typeof t !== 'string' || !t.trim()) fail(id, a0 ? `A0 texts are [es, en]: ${JSON.stringify(t)}` : `only A0 is bilingual: ${JSON.stringify(t)}`);
       const text = Array.isArray(t) ? t[0] : t;
       if (VOSOTROS.test(String(text))) fail(id, `vosotros in «${text}»`);
+      if (UP_TO_A2.has(level) && ABOVE_A2.test(String(text))) fail(id, `above ${level} (si + imperfecto de subjuntivo or condicional compuesto) in «${text}»`);
     }
     for (const q of entry.slice(1)) {
       const text = String(Array.isArray(q) ? q[0] : q);

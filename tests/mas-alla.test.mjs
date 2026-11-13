@@ -5,7 +5,7 @@ import * as L from '../app/mas-alla/layout.mjs';
 import * as E from '../app/mas-alla/engine.mjs';
 import { CAST, FORMS, LEVEL_IDS, SPOTS, WORLD_IDS, ZONES } from '../app/mas-alla/story.mjs';
 import { GAMES } from '../app/escucha-3d/games.mjs';
-import { checkAll } from '../scripts/check-mas-alla.mjs';
+import { ABOVE_A2, checkAll, checkLevel } from '../scripts/check-mas-alla.mjs';
 import { VOICES, VOICE_IDS } from '../app/mas-alla/voces.mjs';
 import { PLAYER_RADIUS } from '../app/noche-abierta/world3d.mjs';
 
@@ -18,6 +18,18 @@ const catalog = readFileSync('app/lesson-catalog.ts', 'utf8');
 
 test('all seven levels pass the Más allá checker (twelve encounters, words per level, one deep question, two open ones, neutral Spanish)', async () => {
   assert.deepEqual(await checkAll(), []);
+});
+
+// Gated repair 2026-11-13 (docs/audits/mas-alla-repair-a2-hypothesis-20261113.md): A2 asked four
+// «si + imperfecto de subjuntivo» questions, which are B1 (PCIC). The checker now refuses them up to A2.
+test('up to A2 no «si + imperfecto de subjuntivo» or condicional compuesto; B1 keeps them', async () => {
+  for (const t of ['Si te quedara solo un año de vida, ¿qué dejarías de hacer?', 'Si pudieras cambiar un capítulo, ¿cuál?', '¿Qué echarías de menos si no estuvieras en la Tierra?', '¿Qué habrías hecho en vez de eso?']) assert.match(t, ABOVE_A2, t);
+  for (const t of ['Si tienes un día libre, ¿qué vas a hacer?', '¿Qué te gustaría cambiar de tu pasado?', 'Si para ti es difícil, ¿por qué?', '¿Qué cosa quieres hacer el año que viene?']) assert.doesNotMatch(t, ABOVE_A2, t);
+  const a2 = (await import('../app/mas-alla/levels/a2.mjs')).default;
+  const seeded = { ...a2, jardin: { ...a2.jardin, q: 'Si te quedara solo un año de vida, ¿qué dejarías de hacer?' } };
+  assert.ok(checkLevel('A2', seeded).some(e => /jardin: above A2/.test(e)), 'the checker refuses a B1 hypothesis at A2');
+  const b1 = (await import('../app/mas-alla/levels/b1.mjs')).default;
+  assert.ok(Object.values(b1).some(s => ABOVE_A2.test(s.q) || s.talk.some(t => ABOVE_A2.test(t))), 'B1 still teaches the hypothesis');
 });
 
 test('two worlds after the Umbral, three zones each, two encounters per zone, each in its own world', () => {
