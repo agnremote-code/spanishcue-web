@@ -5,6 +5,7 @@ import { faqPageSchema, webPageSchema } from "../../growth/schema";
 import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLessonGrid, EleLevelNav, ElePageDates, ElePreviewVideo, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, elePreviewLesson, featuredGrammarLesson, pageImage } from "../components";
 import { pageDates } from "../indice";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
+import { teachingGuidesForTopic } from "../guias";
 import { TemaGroupIndexPage } from "../tema-group-page";
 import { temaGroupById, temasByGroup, type TemaGroupId } from "../temas";
 import styles from "../../growth/growth.module.css";
@@ -101,6 +102,9 @@ export default async function ElePage({ params }: Props) {
 
           <div className={print.noPrint}>
             <Section title="Sigue con">
+              {teachingGuidesForTopic(page.slug).map((guide) => (
+                <p key={guide.path}>Guía para profesores: <Link className={styles.textLink} href={guide.path}>{guide.h1} →</Link></p>
+              ))}
               <EleTopicCards slugs={page.related} />
             </Section>
             <EleBuyBand />

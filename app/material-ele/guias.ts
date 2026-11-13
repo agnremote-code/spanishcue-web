@@ -1545,6 +1545,148 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["gustar", "pronombres-de-objeto", "a1", "a2"],
   },
+  {
+    slug: "como-ensenar-pronombres-de-objeto",
+    path: `${GUIAS_PATH}/como-ensenar-pronombres-de-objeto`,
+    title: "Cómo enseñar los pronombres de objeto en ELE: lo, la, le, se lo",
+    description:
+      "Cómo enseñar los pronombres de objeto directo e indirecto: qué va en cada nivel, cómo explicar «se lo», errores típicos, actividades y fichas con soluciones.",
+    h1: "Cómo enseñar los pronombres de objeto directo e indirecto en ELE",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Lo, la, le, se lo: los pronombres de objeto son cortos, se parecen entre sí y cambian de lugar según el verbo. Por eso muchos alumnos los entienden en la explicación y los evitan al hablar: repiten el sustantivo («compré el libro y leí el libro») o dicen «le lo di». Esta guía propone una secuencia concreta de A1 a B1, una forma de explicar cada paso sin tablas eternas, los errores que vas a ver en cada etapa y las clases, fichas y ejercicios de Material ELE para trabajarlos.",
+    keywords: ["cómo enseñar los pronombres de objeto", "pronombres de objeto directo e indirecto ELE", "actividades pronombres de objeto", "ejercicios lo la le", "se lo ELE", "pronombres átonos ELE", "fichas pronombres de objeto"],
+    published: "2026-11-13",
+    lessonIds: [106, 363, 364, 365, 422, 481, 332],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: el pronombre evita repetir",
+        blocks: [
+          { type: "p", text: "Antes de hablar de objeto directo e indirecto, el alumno necesita ver para qué sirve un pronombre: **para no repetir algo que los dos ya conocemos**. «¿Tienes las llaves? Sí, las tengo» suena natural; «sí, tengo las llaves» suena a libro de texto. Si la clase empieza por esa necesidad, la terminología llega después y pesa menos." },
+          { type: "p", text: "Dos preguntas bastan para elegir el pronombre en los niveles iniciales: **¿qué?** para la cosa (lo, la, los, las) y **¿a quién?** para la persona que recibe (me, te, le, nos, os, les). «Compro flores (¿qué?) a mi madre (¿a quién?)» se convierte en «las compro» o «le compro flores»." },
+          { type: "p", text: "La página de [pronombres de objeto](/material-ele/pronombres-de-objeto) de Material ELE resume el sistema con ejemplos listos para proyectar, y el tema de [gramática de pronombres de objeto](/material-ele/gramatica/pronombres-de-objeto) reúne todas las clases por nivel." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "El error más común es presentar el objeto directo, el indirecto, la combinación «se lo» y la posición con infinitivo en la misma semana. Funciona mejor un paso por clase, y no avanzar hasta que el anterior sale sin pensar. Esta es la secuencia de las clases de gramática de SpanishCue:" },
+        ],
+        subsections: [
+          {
+            title: "A1: lo, la, los, las para no repetir",
+            blocks: [
+              { type: "ol", items: [
+                "**Objeto directo e indirecto, primera vuelta**: [ficha de evitar repeticiones](/material-ele/ficha/la-estacion-de-los-dos-destinos). «¿El billete? Lo tengo». Siempre con el pronombre delante del verbo conjugado.",
+                "**Me, te, le con gustar**: la clase gratis de [gustar y encantar](/gramatica/gustar-y-encantar) deja practicados los pronombres de persona antes de llamarlos «indirectos».",
+                "**A mí, a ti, conmigo**: [ficha de pronombres tras preposición](/material-ele/ficha/pronombres-tras-preposicion), para no mezclarlos con me y te.",
+              ] },
+            ],
+          },
+          {
+            title: "A2: le y les, se lo y la posición",
+            blocks: [
+              { type: "p", text: "A2 es el nivel de los pronombres. Tres clases, en este orden: la ficha de [objeto indirecto: le, les, me, te, nos](/material-ele/ficha/objeto-indirecto-le-les-me-te), la de [dos pronombres: se lo, me lo, te la](/material-ele/ficha/dos-pronombres-se-lo-me-lo) y la de [posición con infinitivo e imperativo](/material-ele/ficha/posicion-de-pronombres-con-infinitivo-e): «voy a comprarlo» o «lo voy a comprar», «dámelo». La página de [pronombres de objeto en A2](/material-ele/gramatica/pronombres-de-objeto/a2) las ordena." },
+              { type: "p", text: "La posición con imperativo se apoya en el material de [imperativo](/material-ele/imperativo), que incluye una clase gratis de imperativo afirmativo: conviene que el alumno domine «compra», «pon» y «di» antes de pegarles un pronombre." },
+            ],
+          },
+          {
+            title: "B1: orden y combinaciones más largas",
+            blocks: [
+              { type: "p", text: "En B1 se consolida con la ficha de [orden de pronombres y clíticos](/material-ele/ficha/orden-de-pronombres-y-cliticos-mas): perífrasis, gerundio («estoy leyéndolo»), imperativo negativo («no me lo digas») y verbos pronominales con objeto («se me olvidó»)." },
+            ],
+          },
+          {
+            title: "B2 y C1: duplicación, foco y leísmo",
+            blocks: [
+              { type: "p", text: "En los niveles altos el tema deja de ser la forma y pasa a ser el uso: la ficha de [redundancia, duplicación y foco](/material-ele/ficha/pronombres-redundancia-duplicacion-y-foco) explica «a Juan le di el libro» y «el libro lo compré ayer», y la clase gratis de [leísmo, laísmo y loísmo](/gramatica/pronombres-atonos-leismo-laismo-loismo-y) trabaja la variación entre países. La página de [pronombres de objeto en C1](/material-ele/gramatica/pronombres-de-objeto/c1) reúne ese material." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "explicar",
+        title: "Cómo explicar «se lo» y la posición sin tablas eternas",
+        blocks: [
+          { type: "p", text: "Tres técnicas que funcionan mejor que la tabla completa:" },
+          { type: "ol", items: [
+            "**Tarjetas que se mueven.** Escribe la frase en tarjetas: «Doy · el libro · a Ana». Cambia «el libro» por «lo» y «a Ana» por «le», y mueve las dos delante del verbo. El alumno ve el orden: primero la persona, después la cosa.",
+            "**Le + lo no existe.** Presenta «se lo» como una regla de sonido, sin más teoría: le lo y les lo no se dicen; le y les cambian a se. Una sola línea en la pantalla y diez frases de práctica.",
+            "**Dos lugares, nunca en el medio.** Con dos verbos, el pronombre va delante del primero o pegado al segundo: «lo quiero ver» o «quiero verlo». Nunca «quiero lo ver». Pide siempre las dos versiones.",
+          ] },
+          { type: "p", text: "Las clases interactivas siguen este orden: teoría en pantalla, ejemplos con contraste, práctica guiada, audio y una producción final. El formato está explicado en [clases de gramática en vivo](/material-ele/formatos/clases-de-gramatica-en-vivo)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Los errores típicos en cada etapa",
+        blocks: [
+          { type: "p", text: "Saber qué error va a aparecer ayuda a corregirlo sin cortar la conversación:" },
+          { type: "ul", items: [
+            "**Repetir el sustantivo.** «Compré el libro y leí el libro». No es un error de forma, pero indica que el alumno evita el pronombre. Solución: preguntas cortas que obligan a usarlo: «¿y lo leíste?».",
+            "**«Le lo di».** La combinación que no existe. Solución: la regla de sonido y práctica oral rápida con se lo, se la, se los, se las.",
+            "**«Quiero lo comprar».** El pronombre en el medio. Solución: las dos versiones correctas en la pantalla y el gesto de moverlo al principio o al final.",
+            "**«Lo di el libro a Ana».** Confunde directo e indirecto. Solución: las dos preguntas, ¿qué? y ¿a quién?, antes de elegir.",
+            "**«Dame lo».** Separado o sin tilde en el imperativo. Solución: escribir dámelo, dímelo y póntelo como palabras enteras.",
+            "**Le por lo.** «Le vi ayer» por «lo vi ayer»: es leísmo, aceptado en parte de España para personas. Conviene explicarlo como variación y no corregirlo como error grave.",
+          ] },
+          { type: "p", text: "El [ejercicio de pronombres de objeto](/material-ele/ejercicio/pronombres-de-objeto) practica estos puntos con soluciones, y el [ejercicio de A2](/material-ele/ejercicio/a2) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+        ],
+      },
+      {
+        id: "practica",
+        title: "Actividades para practicar los pronombres de objeto",
+        blocks: [
+          { type: "p", text: "La práctica controlada fija la forma; la conversación fija el reflejo de no repetir. Actividades que funcionan en clase individual y en grupo:" },
+          { type: "ul", items: [
+            "**¿Con pronombre o sin pronombre?** La actividad [con pronombre o sin pronombre](/material-ele/actividad/con-pronombre-o-sin-pronombre): el alumno decide cuándo suena natural repetir y cuándo no.",
+            "**¿Dónde va el pronombre?** La actividad [dónde va el pronombre](/material-ele/actividad/donde-va-el-pronombre): frases con dos verbos y dos posiciones posibles.",
+            "**La maleta.** «¿Llevas el pasaporte? Sí, lo llevo. ¿Y las gafas? No, no las llevo». Preguntas rápidas con objetos reales de un viaje.",
+            "**¿A quién se lo regalas?** Cinco objetos y cinco personas de la vida del alumno: «el libro se lo regalo a mi hermana».",
+            "**Órdenes en la cocina.** Una receta con imperativo: córtala, ponlo, añádeselo. Sirve para la posición y la tilde.",
+          ] },
+          { type: "p", text: "Hay más dinámicas en el [banco de actividades](/material-ele/actividades) y preguntas listas para el nivel en [preguntas de conversación de A2](/material-ele/preguntas/a2) y de [B1](/material-ele/preguntas/b1). Si prefieres material para imprimir, en [fichas de gramática](/material-ele/fichas) hay una ficha por clase, con soluciones." },
+        ],
+      },
+      {
+        id: "clase-ejemplo",
+        title: "Una clase de 45 minutos de ejemplo (A2, se lo)",
+        blocks: [
+          { type: "p", text: "Para la primera clase de dos pronombres en A2, con le y lo ya trabajados por separado:" },
+          { type: "ol", items: [
+            "**Entrada (5 minutos):** «¿Qué regalaste la última vez? ¿A quién?». Respuestas libres; el profesor reformula con se lo y se la sin explicarlo todavía.",
+            "**Contraste (10 minutos):** las tarjetas que se mueven y la regla de sonido: le lo no existe, se dice se lo.",
+            "**Práctica (20 minutos):** la ficha de [dos pronombres](/material-ele/ficha/dos-pronombres-se-lo-me-lo), con los ejercicios en pantalla compartida y corrección inmediata.",
+            "**Producción (10 minutos):** el alumno reparte cinco objetos de su casa entre familiares y amigos, y explica a quién se los da y por qué.",
+          ] },
+          { type: "p", text: "Si la clase es por videollamada, la guía [cómo dar clases de español online](/material-ele/guia/como-dar-clases-de-espanol-online) explica cómo preparar la pantalla; si tienes poco tiempo, [cómo preparar una clase de español en 10 minutos](/material-ele/guia/preparar-una-clase-de-espanol-rapido) da el paso a paso." },
+        ],
+      },
+      {
+        id: "gratis",
+        title: "Qué material de pronombres es gratis",
+        blocks: [
+          { type: "p", text: "Se abren gratis y sin registro las clases interactivas de [gustar y encantar](/gramatica/gustar-y-encantar), la de imperativo afirmativo que está en [imperativo](/material-ele/imperativo) y la de [leísmo, laísmo y loísmo](/gramatica/pronombres-atonos-leismo-laismo-loismo-y), además de todas las fichas de esta guía, el ejercicio de pronombres de objeto y las dos actividades del banco. Las clases de pronombres de A2 y B1 forman parte de la suscripción, cuyos detalles están en [precios](/pricing), y cada una tiene su ficha abierta." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A2](/material-ele/a2) ordena todo el material, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Las otras guías de esta serie son [cómo enseñar gustar](/material-ele/guia/como-ensenar-gustar), [cómo enseñar por y para](/material-ele/guia/como-ensenar-por-y-para) y [cómo enseñar ser y estar](/material-ele/guia/como-ensenar-ser-y-estar)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseñan los pronombres de objeto?", answer: "Lo, la, los y las aparecen en A1 para evitar repeticiones. En A2 se trabajan le y les, la combinación se lo y la posición con infinitivo e imperativo. En B1 se consolidan el orden y las combinaciones largas, y en B2 y C1 llegan la duplicación y el leísmo." },
+      { question: "¿Cómo se explica «se lo»?", answer: "Como una regla de sonido: le lo y les lo no se dicen, así que le y les cambian a se delante de lo, la, los y las. Funciona mejor una línea en la pantalla y mucha práctica oral que una explicación larga." },
+      { question: "¿Dónde va el pronombre con dos verbos?", answer: "Delante del verbo conjugado o pegado al infinitivo o al gerundio: «lo quiero ver» o «quiero verlo». Nunca en el medio. Con imperativo afirmativo va siempre pegado: «dámelo»." },
+      { question: "¿Hay material gratis para practicar los pronombres de objeto?", answer: "Sí. En Material ELE de SpanishCue hay fichas con soluciones, un ejercicio y dos actividades de pronombres de objeto, todo sin registro, y se abren gratis las clases de gustar, de imperativo afirmativo y de leísmo, laísmo y loísmo." },
+    ],
+    related: ["pronombres-de-objeto", "gustar", "imperativo", "a2"],
+  },
 ];
+
+/** «Cómo enseñar…» guides that belong to a grammar topic page: the topic is
+ *  one of the guide's related slugs (level slugs excluded), so the topic page
+ *  can link to the teaching sequence for it. */
+export const teachingGuidesForTopic = (slug: string) =>
+  /^(a|b|c)[12]$/.test(slug) ? [] : guiaPages.filter((guide) => guide.slug.startsWith("como-ensenar-") && guide.related.includes(slug));
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
