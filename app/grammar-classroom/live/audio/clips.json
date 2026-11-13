@@ -16,7 +16,7 @@
     },
     {
       "id": 305,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "text": "Hola, Lucía. Soy Diego, de la oficina del puerto. Estoy en la sala con la lista. Hay cambios en el pedido. Para nosotros: diez lápices rojos, no ocho. También cuatro cuadernos grandes y dos relojes blancos para la pared. Las tres lámparas nuevas, sí, por favor: las lámparas viejas están rotas. Para la oficina del centro, Marta necesita cinco carpetas azules y seis marcadores negros. Las sillas grises están bien: no necesitamos sillas. Muchas gracias, Lucía. ¡Hasta el lunes!"
     },
@@ -58,13 +58,13 @@
     },
     {
       "id": 320,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "text": "Hola, Clara. Soy Diego. Estoy en el puerto. Tengo una idea para mañana. Hay un tour en barco a la Isla de la Plata: cuesta cuarenta dólares por persona. ¿Quieres ir? Yo quiero ir, pero no puedo pagar más de cuarenta. En la isla podemos comer en la playa. Allí la gente pide pescado con arroz, y no es caro. El barco sale a las nueve. ¿Puedes estar aquí a las ocho y media? Ah, Rosa y su novio también quieren venir otra vez. ¿Pueden venir con nosotros? Bueno, espero tu mensaje. Un abrazo."
     },
     {
       "id": 323,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "text": "Hola, buenos días. Gracias por llamar al Museo de los Colores, en Puebla. Estas son las preguntas frecuentes. ¿Cuándo abre el museo? De martes a domingo, de diez de la mañana a seis de la tarde. Los lunes está cerrado. ¿Cuánto cuesta la entrada? Ochenta pesos, y para estudiantes, cuarenta. Los domingos, la entrada es gratis. ¿Dónde está el museo? En la calle Reforma, número dieciocho, cerca de la catedral. ¿Qué días hay visitas guiadas? Los sábados y los domingos, a las once. ¿Cuántas personas pueden ir en un grupo? Veinte como máximo. ¿Quién da las visitas? Raúl, nuestro guía. Gracias por su llamada."
     },
@@ -130,7 +130,7 @@
     },
     {
       "id": 338,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "text": "Hola, Elena, soy Pablo. Hoy es jueves, 22 de octubre, y son las diez de la noche. Una pregunta: tu tren llega mañana a las ocho y cuarto, ¿verdad? Yo salgo del trabajo a las siete y media y voy a la estación en coche. La cena de cumpleaños de mamá es a las nueve y media, en un restaurante del puerto. Ah, y el sábado por la mañana hay mercado en la plaza. Abre a las nueve. Y el domingo tu tren sale a las cinco de la tarde, ¿no? Bueno, hasta mañana. ¡Un beso!"
     },
@@ -142,7 +142,7 @@
     },
     {
       "id": 340,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "text": "Hola, Laura. Soy Julio, de la agencia. Tengo buenas noticias para el viaje. Hay un hotel pequeño y barato cerca de la playa, y pueden pagar el hotel en Cartagena, no hoy. Para el barco a las islas, tienen que reservar antes del miércoles. ¿Gabriel no quiere ir? No hay problema: tú puedes ir sola el sábado. Ah, una cosa importante: el viernes tienen que estar en el aeropuerto a las cuatro, porque el vuelo sale a las seis. Y en Cartagena hace mucho calor: tienes que llevar agua y protector solar. ¿Quieres reservar el hotel hoy? Espero tu mensaje esta tarde. ¡Chao!"
     },
@@ -178,13 +178,13 @@
     },
     {
       "id": 350,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Hola, señora Carmen, soy Diego, el chico de la bicicleta. Tengo su número gracias a la agente Prado. Muchas gracias por su ayuda de ayer. Le cuento un poco: yo iba a mi primer día en un trabajo nuevo y tenía mucha prisa. Llovía y no había mucha luz en la calle. Cuando el taxi salió del garaje, frené muy fuerte y me caí. En el hospital, nada grave: solo un golpe en la rodilla. Y mi nuevo jefe fue muy amable: empiezo el lunes. Hoy estoy en casa con la pierna en alto, pero estoy bien. ¿Puedo invitarla a un café la semana que viene? Muchas gracias otra vez. Un saludo."
     },
     {
       "id": 351,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Hola, Lucía, soy Pablo. Te mando un audio rápido. Después de la clase de las siete he hablado otra vez con Ana y hemos cerrado el plan de la excursión del viernes: vamos al museo y después a comer. Ayer Ana llamó al museo, pero no pudo hacer la reserva. Hoy la he hecho yo por internet, ¡y ya está! También he escrito a los alumnos y ya han contestado doce. Ah, otra cosa: ayer olvidé mi paraguas en la sala de profesores y hoy no lo he encontrado. ¿Puedes mirar mañana por la mañana? Bueno, ¿y tú? ¿Has terminado los exámenes? Mañana me cuentas. ¡Un abrazo!"
     },
@@ -214,7 +214,7 @@
     },
     {
       "id": 360,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Hola, Nuria, soy Iván. Mamá me contó lo de ayer: la alarma no sonó y te despertaste tarde. ¡Qué mala suerte! Pero llegaste a tiempo y mañana tienes la segunda entrevista. ¡Felicidades! Mira, en mi primera entrevista me puse tan nervioso que dije mi nombre dos veces. La señora de la entrevista se rio, yo también me reí y entonces me tranquilicé. Al final me dieron el trabajo. Bueno, mi consejo: esta noche acuéstate temprano y no te preocupes por la alarma. Yo te llamo a las seis y media, por si acaso. Y mañana, si te pones nerviosa, respira y habla despacio. ¡Mucha suerte, hermanita! Luego me cuentas."
     },
@@ -256,7 +256,7 @@
     },
     {
       "id": 367,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Hola, Nuria, soy Raúl. Te cuento el plan para el sábado. Primero vamos al Café Aurora, el sitio donde Elena y yo nos conocimos. Después, el parque del río, en el que pasábamos los domingos. El puente viejo también es muy importante para nosotros: es el lugar donde le pedí matrimonio, en 2019, cuando vivíamos en la calle Luna. Mejor empezamos temprano, a las nueve, cuando la luz es suave y no hay mucha gente. Ah, y una cosa más: lo que más le gusta a Elena es reír, así que lo que queremos es un día divertido, sin fotos muy serias. Esta noche te mando la dirección del café. ¡Muchas gracias, Nuria! Un abrazo."
     },
@@ -274,13 +274,13 @@
     },
     {
       "id": 371,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Buenos días, señora Herrera. Soy Ramiro, del restaurante El Patio. Llamo por la cena del sábado. Tengo una buena noticia: un grupo canceló su reserva y ahora queda una mesa libre en la terraza. Es una mesa muy larga y hay mucho espacio. Pero el sábado por la noche va a hacer un poco de frío. En el salón, en cambio, no hay ningún problema. Usted decide. Si prefieren la terraza, necesito saberlo hoy, porque no queda ninguna otra mesa grande. Otra cosa: para los compañeros vegetarianos tenemos algunos platos nuevos, pero hay pocas raciones. Por favor, dígame el número exacto antes del jueves, porque el fin de semana tenemos muchas reservas. Muchas gracias y hasta pronto."
     },
     {
       "id": 372,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Hola, Marina, buenas tardes. Habla Federico, el del apartamento. Les cuento: el técnico ya arregló el wifi. No era nada grave, solo un cable. Y el aire acondicionado tampoco tenía nada grave: estaba sucio, y el técnico lo limpió. Sobre las toallas y las sábanas: la señora de la limpieza no vino el jueves y nadie me avisó. Eso no pasa nunca, de verdad. Ya les dejé toallas, sábanas, café y agua en la portería. Y por la primera noche no van a pagar nada. Ah, y el portero dice que anoche no vio a nadie porque estaba en el parqueadero. Ni él ni yo sabíamos la hora de su llegada. Cualquier cosa, me escriben. ¡Buen fin de semana!"
     },
@@ -298,7 +298,7 @@
     },
     {
       "id": 375,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Hola, Marta, soy Raúl. Ya estoy en el tren y llego a las siete y cuarto. Me dijiste que Hugo viene a buscarme, ¿verdad? Pues aquí va una descripción para él. Soy alto, eso no cambia, pero ahora llevo el pelo muy corto y llevo barba. Y llevo gafas, unas gafas negras. Hoy llevo una chaqueta verde y una mochila negra muy grande. Ah, y estoy más delgado que en la universidad, ¿eh? Ahora corro todos los días. Eso sí, estoy un poco cansado, porque llevo cuatro horas de viaje. ¿Y Hugo? ¿Cómo es? ¿Qué lleva hoy? Mándame un mensaje, por favor. ¡Nos vemos esta noche!"
     },
@@ -310,7 +310,7 @@
     },
     {
       "id": 377,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "text": "Hola, Inés, soy Mateo. Perdona, voy a llegar tarde a la mudanza. Es que el coche no arranca, o sea, hoy voy en autobús. Los sábados hay menos autobuses, por eso llego más o menos a las doce. Mi plan es este: primero paso por la tienda de la esquina y compro cinta para las cajas, porque tú no tienes, ¿verdad? Luego voy directamente a tu casa nueva, es decir, a la calle Olmo, no a la antigua. Y por último, yo pido la cena: pizza para todos, así que no compres nada, ¿de acuerdo? Ah, otra cosa: ¿el ascensor funciona? Mándame un mensaje. ¡Ánimo, hermanita! Hasta luego."
     },
@@ -376,7 +376,7 @@
     },
     {
       "id": 393,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "text": "Hola, Inés, soy Ramiro, el de la ferretería. Oye, quería decirte algo sobre la reunión de ayer. No es que esté en contra de los vecinos, ¿eh? Es que me preocupa mi negocio. Creo que la idea de los domingos es buena, porque ese día cierro. Pero, sinceramente, no creo que cerrar la calle también los sábados sea buena idea. Los sábados vienen muchos clientes en coche, y no estoy seguro de que el aparcamiento tenga espacio para todos. Paula piensa que la gente va a venir andando, y en parte tiene razón: estoy de acuerdo en que hay demasiado tráfico. Mira, mi propuesta es esta: empezamos con los domingos y, después de dos meses, lo hablamos otra vez. Estoy seguro de que así vamos a encontrar una solución. ¿Me llamas esta tarde? Gracias, Inés. Un abrazo."
     },
@@ -400,7 +400,7 @@
     },
     {
       "id": 398,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "text": "Hola, Nuria, soy Gabriel. Ya estoy en el aeropuerto; el vuelo sale en una hora. Te dejo unas cosas que se me olvidaron ayer. Cuando abras la puerta, no te preocupes por la alarma: la desconecté. En cuanto Tula te vea, va a saltar como loca. Es normal: déjala un minuto y se tranquiliza. Por la noche, sácala antes de que cierren el parque, a las diez, porque después la calle está muy oscura. Y otra cosa: mientras yo esté fuera, no le des comida de la mesa, por favor, que luego le duele la barriga. Ah, el jueves por la mañana viene el técnico del gas. Quédate en casa hasta que el técnico termine la revisión; solo tarda media hora. Yo te escribo cuando llegue al hotel, pero seguramente será muy tarde. Y cuando vuelva, te invito a cenar, ¿de acuerdo? Mil gracias, de verdad. ¡Un abrazo!"
     },
@@ -436,7 +436,7 @@
     },
     {
       "id": 409,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "text": "Buenos días, señora Reyes, le habla Óscar Fuentes, de la agencia. Siento mucho lo de la lavadora. Ya sé que es la tercera vez y que el técnico volvió a venir el viernes para nada. Esta mañana volví a llamar a la empresa de reparaciones y hablé con la encargada. Ramiro pasa otra vez por su apartamento el jueves a las diez, pero esta vez no va a volver a arreglar la pieza vieja: la va a cambiar por una nueva. Y si después de la reparación la lavadora vuelve a perder agua, la agencia le compra una nueva, se lo prometo. Por cierto, hablé con la vecina de abajo: no tiene ninguna mancha en el techo, así que tranquila. Le pido disculpas de nuevo. Esto no va a volver a pasar. Si tiene cualquier problema, vuelva a llamarme a este número. Que tenga un buen día."
     },
@@ -472,7 +472,7 @@
     },
     {
       "id": 416,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "text": "Hola, Elena, soy Julián. Te llamo desde la estación porque tenemos un problema: han cancelado nuestro tren por una avería. Acaban de decir por megafonía que el siguiente sale a las cuatro y que, por lo tanto, nos devuelven el dinero de los billetes. Pero la inauguración de la feria es a las doce, así que no podemos esperar. Hay otra editorial aquí con el mismo problema, de modo que vamos a compartir un taxi con ellos. Es más caro que el tren, pero entre cuatro no es tanto. Las cajas de libros no caben en el maletero, por eso las mando hoy por mensajería y llegan mañana. Entonces, hoy vamos a tener solo unos pocos ejemplares en el stand. ¿Puedes avisar a la organización de que llegamos tarde? Ah, y guardo la factura del taxi, así que luego hacemos la reclamación. Un abrazo."
     },
@@ -496,13 +496,13 @@
     },
     {
       "id": 420,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "text": "Buenos días, doña Beatriz. Le habla Mauricio Vega, de la inmobiliaria. Acabo de terminar la revisión del apartamento de la calle Olivo con la señora Castillo. En general, todo está en orden. Las paredes están pintadas, la cocina está limpia y los armarios están vacíos. Las llaves están devueltas: tengo las tres copias aquí, en la oficina. Hay dos detalles. Uno de los azulejos del baño está roto, pero ya estaba roto cuando la señora Castillo entró: está escrito en el inventario de hace dos años. Y la persiana del dormitorio quedó atascada a media altura; hay que llamar a un técnico. Por lo demás, tengo hechas las fotos de todas las habitaciones y se las envío por correo esta tarde. Si a usted le parece bien, el lunes firmamos el acta de entrega, el contrato queda cerrado y le devolvemos el depósito a la señora Castillo. Llámeme cuando pueda. Que tenga un buen día."
     },
     {
       "id": 421,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "text": "Buenos días, son las nueve y esto es Radio Valdemora. Ayer por la tarde fue inaugurado el Museo de la Ciudad, en la antigua estación de tren. El edificio fue construido en 1890 y estuvo cerrado casi cuarenta años. La puerta principal fue abierta a las seis por la alcaldesa, y más de trescientas personas entraron en la primera hora. Las cuatro salas ya están terminadas, y el mural del vestíbulo tiene otra vez sus colores originales. Un pequeño detalle: el famoso reloj de la estación fue reparado el mes pasado, pero esta mañana estaba parado otra vez. Los técnicos vuelven el lunes. La entrada es gratuita durante todo el mes. Eso sí, la plaza de la estación todavía está cerrada por obras, así que es mejor ir a pie o en autobús. Seguimos con más noticias después de la música."
     },
@@ -526,7 +526,7 @@
     },
     {
       "id": 426,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "text": "Naty, soy Sergio. Oye, anoche pensé mucho en lo de Monterrey y te dejo unas ideas antes de tu reunión con Luisa. Por un lado, si aceptas, vas a ganar mucho más y vas a aprender un montón en ese estudio. Por otro, allá estarías sola los primeros meses, y tú extrañas mucho a tu mamá. Yo que tú, le preguntaría a Luisa algo muy concreto: cuándo sería el cambio a coordinadora y con qué sueldo. Puede que te dé una fecha, y entonces todo es más fácil. Lo de trabajar desde aquí, pregúntalo también: a lo mejor dicen que sí. Lo más probable es que quieran verte allá una semana al mes, y eso no está mal. Ah, y una cosa más: es mejor decidir con calma que con miedo. ¿Vamos juntos el sábado a Monterrey y lo vemos? Llámame cuando salgas, ¿sí? ¡Suerte!"
     },
@@ -538,7 +538,7 @@
     },
     {
       "id": 429,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Hola a todos, habla Ernesto. Les dejo este audio porque anoche, con tanta gente en el vestíbulo, no pude hablar con cada uno. Cuando empezamos en agosto, les pedí que confiaran en mí y les exigí que llegaran puntuales todos los días. Ya sé que no fue fácil. A Valeria le hice repetir la escena de la carta hasta el cansancio, y a Diego no lo dejé improvisar ni una sola vez. Lo hice para que la obra respirara como un solo cuerpo. Anoche, cuando el público se puso de pie, me emocionó que estuviéramos todos juntos en el escenario, también Camilo y el equipo técnico. Y me encantó que tantos de ustedes trajeran a sus familias. Ahora, dos cosas prácticas. Lucía me pidió que les recuerde que el sábado hay doble función, a las cuatro y a las ocho. Y me sugirió que descansen la voz el viernes; estoy de acuerdo con ella. Gracias de corazón. Nos vemos esta noche."
     },
@@ -550,7 +550,7 @@
     },
     {
       "id": 435,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "¡Hola, gente! Les habla Felipe, desde Montreal, donde hoy estamos a diez grados bajo cero. Irene, mil gracias por organizarlo todo. Les cuento: si no hubiera aceptado aquel trabajo hace diez años, hoy estaría ahí con ustedes, comiendo ajiaco y cantando las canciones de la facultad. Pero no me arrepiento, ¿eh? Si me hubiera quedado en Bogotá, no habría conocido a Claire, y ahora no tendríamos a los mellizos. Eso sí, si yo fuera un poquito más organizado, habría comprado el pasaje en septiembre, cuando estaba barato, y estaría sentado en esa mesa. Ya saben cómo soy. De haber sabido que iban a poner este audio en el salón, lo habría preparado mejor, la verdad. Y Daniel: si me hubieras contestado los mensajes, ahora sabrías que le mandé una sorpresa a Irene para ti. Lucía, guárdame un pedazo de tarta para diciembre, que esta vez sí voy. ¡Un abrazo enorme a todos!"
     },
@@ -568,7 +568,7 @@
     },
     {
       "id": 439,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Inés, ¿qué tal? Soy Rodrigo. Te mando esta nota de voz porque por fin hay noticias. El agente de aduanas me había dicho que liberarían la escenografía en cuanto pagáramos los impuestos, y así fue: pagamos ayer y esta mañana ya iba en el camión. Tan pronto como llegue a Guadalajara, mi equipo empieza a montar. Los permisos de trabajo también están listos; te los reenvío apenas cuelgue. Lo del segundo teatro va más lento. Mientras no firmen el contrato, prefiero no anunciar las funciones, pero me prometieron que lo firmarían antes de que acabara el mes. Ah, y dile a Lola que, nada más aterrizar, se olvide de las maletas, que de eso me encargo yo. Cada vez que viene a México, quiere cargar ella sola con todo. Bueno, una vez que tengan los billetes, mándame los horarios de los vuelos y organizo los traslados. Y tranquila: esta vez no vamos a esperar a que algo salga mal para reaccionar. Un abrazo."
     },
@@ -580,7 +580,7 @@
     },
     {
       "id": 441,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Hola, Marina, soy Rodrigo. Te llamo para contarte cómo va la semana. La buena noticia: el piso del patio ya está puesto, tal y como lo dibujó Julia, y queda mejor de lo que esperábamos. La no tan buena: la madera para las ventanas llegó tarde, así que vamos a terminar unos días más tarde de lo previsto. Del costo no te preocupes: según me dijo el proveedor, no nos va a cobrar el envío. Para el color, haz como prefieras: si quieres el verde antiguo, lo preparamos aquí; si no, compra la pintura que más te guste. Otra cosa: el lunes tenemos que cortar el agua dos horas, pero lo haremos muy temprano, sin que los vecinos lo noten. Ah, y la vecina vino otra vez a dar órdenes, como si fuera la jefa de obra. Yo la escucho con paciencia y sigo trabajando como me pediste: con calma y sin discutir. Llámame cuando puedas, ¿sí? Un saludo."
     },
@@ -640,7 +640,7 @@
     },
     {
       "id": 456,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenas tardes y bienvenidos a «Barrio al día», en la radio de La Alameda. Como cada viernes, repasamos lo más importante de la semana. Ayer la asociación vecinal votó a favor de cerrar al tráfico la calle del Mercado durante un año. La decisión no fue fácil, y eso que muchos vecinos llevaban meses quejándose del ruido. Los comerciantes temen perder clientes. Sin embargo, según el municipio, en otras ciudades las calles peatonales han atraído más gente a las tiendas. Hugo Medina, dueño de la ferretería, tenía muchas dudas. Aun así, votó a favor; eso sí, pidió un horario fijo para los repartos. Pese a la tensión de los últimos días, el debate fue tranquilo y respetuoso. ¿Saldrá bien la prueba? Nadie lo sabe. Ahora bien, el municipio promete publicar cada tres meses los datos de ruido, de tráfico y de ventas. De todas formas, si quieren dar su opinión, pueden escribirnos o pasar por la asociación los martes por la tarde. Nosotros seguiremos informando. Buen fin de semana."
     },
@@ -664,7 +664,7 @@
     },
     {
       "id": 461,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Clara, soy Héctor. Te dejo un audio porque estarás todavía en el trabajo. Acabo de hablar con doña Rosario, la vecina del tercero, y se acuerda perfectamente del chico de la foto: se llamaba Ramón y repartía el correo en todo el barrio. Según ella, aquello sería hacia el año sesenta, así que la abuela tendría unos diecinueve años. Por lo visto, Ramón era un encanto. Sería muy simpático, pero para el padre de la abuela un cartero no era suficiente, y no lo podía ni ver. Al final lo trasladaron al puerto, y de ahí vendrán todas esas cartas. Lo que Rosario no sabe es por qué lo dejaron. ¿Qué pasaría? A lo mejor la familia la presionó, o a lo mejor él conoció a otra persona allí. Ah, y Rosario tiene una foto de la boda de los abuelos, pero no la encuentra; la habrá guardado su hija. El sábado vamos a ver a la abuela y se lo preguntamos con mucho tacto, ¿te parece? Un beso."
     },
@@ -676,13 +676,13 @@
     },
     {
       "id": 464,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenas tardes, Lucía, habla Ernesto Salas, el administrador. Quería comentarle dos cosas sobre la junta de ayer. Primero, el cartel del portal: ya lo tengo listo. Pondrá «Se ruega cerrar la puerta al entrar y al salir» y, debajo, «No dejar bicicletas en la entrada». ¿Le importaría colgarlo usted misma? Yo no podré pasar por allí hasta el lunes. Segundo, el presupuesto para los soportes de las bicicletas. El técnico necesita las medidas del patio, así que le agradecería que me las enviara antes del viernes, aunque sea una foto con un metro al lado. Ah, y una cosa delicada: el vecino del segundo, el de la música, me ha escrito bastante molesto. Me gustaría que habláramos con él con calma, sin cartas ni amenazas. Si a usted le parece bien, lo llamamos juntos. Bueno, no le quito más tiempo. Cuando pueda, ¿podría devolverme la llamada? Estoy en la oficina hasta las seis. Muchas gracias y que tenga buena tarde."
     },
     {
       "id": 465,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenas tardes al jurado y al público. Nuestro equipo defiende que los museos públicos no deben ser gratuitos, y lo vamos a demostrar con tres argumentos. En primer lugar, mantener un museo cuesta mucho dinero: luz, seguridad, restauración, personal. Si la entrada es gratis, alguien tiene que pagarlo, es decir, todos los contribuyentes, vayan o no al museo. En segundo lugar, lo gratuito se valora menos. Según el último informe del observatorio regional de cultura, en los días de entrada libre la visita media dura la mitad. Es más, aumenta el número de personas que entran solo para hacerse una foto. Por último, ya existen entradas reducidas: estudiantes, jubilados y desempleados pagan muy poco o nada. De ahí que la gratuidad total no tenga mucho sentido. Algunos dirán que el precio aleja a las familias. Nada más lejos de la realidad: es el caso de nuestra ciudad, donde el museo más visitado es también el más caro. En definitiva, un museo de calidad necesita ingresos propios. Muchas gracias."
     },
@@ -742,7 +742,7 @@
     },
     {
       "id": 477,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenas tardes. Abrimos el informativo local con una noticia muy esperada: la Biblioteca Pública La Ceiba reabre sus puertas este lunes. Concluidas las obras de reforma, que se prolongaron durante catorce meses, el edificio estrena sala infantil, terraza de lectura y un archivo climatizado para los fondos históricos. Según la directora, Beatriz Varela, el traslado de la colección fue lo más delicado. Una vez embalados los libros, cada caja se numeró y se registró, y tras reparar la cubierta, el equipo empezó a montar el archivo. No faltaron los sobresaltos: agotado el presupuesto inicial el pasado mes de marzo, la alcaldía aprobó una partida adicional, de modo que los trabajos no llegaron a interrumpirse. Tras la firma del convenio con la universidad, además, estudiantes de historia digitalizarán los periódicos antiguos de la ciudad. ¿Y los horarios? Aprobada la ampliación, la biblioteca abrirá también los sábados por la tarde, y llegado el momento, se estudiará abrir los domingos. Al terminar el acto de inauguración, previsto para las diez, habrá una lectura colectiva en la terraza. Dicho esto, un consejo: el estacionamiento seguirá cerrado, así que lo mejor es llegar en transporte público. Seguimos con más noticias."
     },
@@ -754,7 +754,7 @@
     },
     {
       "id": 479,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Hola a todos. Soy Gabriel Ortiz y hoy les hablo de La Hilandera, la fábrica textil en torno a la cual creció Villaseca del Río. Durante casi ochenta años sus naves dieron trabajo a unas doscientas familias, la mayoría de las cuales vivían en la colonia obrera, junto al río. Fue Leonor Albarracín quien la convirtió en algo más que una fábrica: abrió una escuela en cuyas aulas aprendieron a leer cientos de niños. En 1932 se quemó la nave de tintes, a raíz de lo cual muchos temieron el cierre. Fue entonces cuando los propios obreros, sin cuyo esfuerzo no se habría salvado nada, decidieron reconstruirla por turnos. Para escribir el libro hablé con Rosario Benítez, una antigua tejedora de noventa y cuatro años en cuya casa encontré cartas y fotografías inéditas. Rosario repite una frase según la cual la fábrica «no tenía dueño, tenía familia». No sé si es del todo justa, pero explica la manera en que el pueblo recuerda aquellos años. La presentación será el viernes en el antiguo almacén, que hoy es el centro cultural. Es allí donde empezó todo, y es allí donde quiero contarlo. Los espero."
     },
@@ -778,7 +778,7 @@
     },
     {
       "id": 483,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Muy buenos días, les habla Arturo Medina y esto es Valle Alto al Día. Arrancamos con salud. El nuevo pabellón de urgencias del Hospital General fue inaugurado ayer por la tarde, después de dos años de obras. El edificio fue diseñado por un equipo de arquitectas de la universidad estatal y cuenta con cuarenta camas y dos quirófanos. Durante la madrugada se trasladó a los primeros dieciocho pacientes, sin incidentes. Según la dirección, el área de observación ya funciona, pero la sala de pediatría todavía no está lista: su apertura está prevista para marzo. ¿Qué cambia para ustedes? Pues que la entrada de urgencias ya no es por la avenida principal, sino por la calle de los Fresnos, y que hay que llevar una identificación oficial. Como nos decía esta mañana una señora en la fila: «Uno nunca sabe cuándo le va a tocar, así que más vale saber dónde está la puerta». Se espera que el pabellón reduzca a la mitad los tiempos de espera. Eso sí, dicen que el estacionamiento se queda chico; la dirección promete una solución antes de fin de año. Seguiremos informando. Y ahora, el clima."
     },
@@ -802,13 +802,13 @@
     },
     {
       "id": 488,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenos días. Soy Raúl Ferrer, del Observatorio Ciudadano de Movilidad, y esta es mi tribuna de los martes. Hoy les hablo de la línea 7. Los datos de nuestro informe son claros: la subida del abono en enero y el retraso de las obras del carril bus explican el descenso de viajeros, casi un quince por ciento en un año. Hasta aquí, los hechos. Ahora, la opinión. Lo grave del asunto no es el retraso, que en una obra puede pasar; es la falta de explicaciones. El carril bus iba a estar listo en marzo, y en octubre seguimos con vallas, conos y un sobrecoste del cuarenta por ciento. Llamemos a las cosas por su nombre: es un despilfarro de dinero público y, en algunos tramos, una auténtica chapuza. Además, tuvieron la torpeza de anunciar la subida del abono el mismo mes en que cortaban la avenida. Pero no todo es negativo. La línea nocturna ha sido un acierto: quien trabaja de noche por fin puede volver a casa sin coche. Y es que el usuario no pide milagros. Pide puntualidad, información y respeto. La paciencia es una virtud, sí, pero también tiene un límite. Hasta el martes que viene."
     },
     {
       "id": 489,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenas tardes y gracias por venir. Mi compañera Nuria me ha pedido que hable claro, así que voy a intentarlo. Ahora mismo el embalse está al treinta y dos por ciento, es decir, guarda menos de un tercio del agua que podría almacenar. El plan de sequía tiene tres fases, a saber: prealerta, alerta y emergencia. Estamos en prealerta; mejor dicho, estábamos: desde el lunes, la fase es de alerta. Dicho de otro modo, lo que hasta ahora eran recomendaciones son ya normas: está prohibido regar jardines durante el día y llenar piscinas privadas. Sé que a algunos de ustedes les parece exagerado, y es una opinión respetable. En cualquier caso, las normas son obligatorias para todos. ¿Habrá cortes de agua en las casas? No están previstos; de todos modos, si llegaran, se anunciarían con una semana de antelación. Les pido tres cosas sencillas: ducharse en lugar de bañarse, arreglar los grifos que gotean y poner la lavadora solo cuando esté llena. En suma, pequeños gestos, muchas veces al día. Y no lo vean como un sacrificio: al fin y al cabo, el agua del embalse es la que sale de nuestros grifos."
     },
@@ -826,7 +826,7 @@
     },
     {
       "id": 492,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Hola, soy Mateo Ibarra y este es mi minuto de «Butaca doble». Irene ya les contó que «La última marea» se le hizo eterna. Yo no lo veo así. Es cierto que dura casi tres horas y que la protagonista pasa media película sin decir ni una palabra. Pero no se imaginan lo bien que actúa con la mirada: ni siquiera necesita hablar. La fotografía es de lo más cuidada y el sonido del mar está bien logrado; hasta el viento parece un personaje más. ¿Tiene defectos? Claro que los tiene. El final se alarga tanto que uno empieza a buscar la salida, y la música a veces subraya lo triste que es todo, como si no nos diéramos cuenta solos. Aun así, salí del cine con ganas de llamar a mi abuela, y eso sí que no me pasa seguido. ¡Qué manera tan sencilla de contar algo tan grande! Así que véanla en pantalla grande, si pueden, y después me cuentan si la escena del faro no los dejó sin aire. Irene, te espero la próxima semana con revancha."
     },
@@ -844,7 +844,7 @@
     },
     {
       "id": 495,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenos días, les habla Felipe Arango y esto es El Mirador en cinco minutos. Empezamos con la encuesta municipal de transporte. Según los datos publicados ayer, la mayoría de los vecinos usa el autobús al menos tres veces por semana, y el sesenta y dos por ciento de los jóvenes pide más frecuencias por la noche. Lo que más se critica son los retrasos de la línea 4. Seguimos en La Ribera, donde el martes hubo una asamblea muy concurrida: asistieron más de doscientas personas. Ni el alcalde ni la concejala de Movilidad acudieron a la cita, algo que los organizadores lamentaron. La concejala, junto con su equipo técnico, presentará el viernes un plan de choque. Hace dos años que se prometió un carril bici en el paseo del río, y todavía faltan dos tramos por construir. Carmen Vidal, presidenta de la asociación vecinal, lo resumía así: «Los vecinos estamos cansados de promesas: queremos obras, no anuncios». Y terminamos con una buena noticia: desde el lunes ya se venden los nuevos abonos mensuales en todas las estaciones. Esto ha sido todo por hoy. Gracias por escucharnos y hasta mañana."
     },
@@ -892,7 +892,7 @@
     },
     {
       "id": 506,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Hola a todos, les habla Hugo Medina, del equipo de Voces de antaño. Les cuento en pocos minutos cómo hemos trabajado. Cada texto aparece dos veces: a la izquierda, el original, tal cual; a la derecha, nuestra versión en español actual. En la ordenanza de 1868 dice: «Todo vecino que arrojare basuras será multado». Nosotros escribimos «que arroje», porque hoy esa posibilidad se expresa con presente de subjuntivo. Y donde pone «cuando el alguacil hubiere levantado el acta», ponemos «cuando haya levantado el acta». En la crónica, «apenas hubo llegado el gobernador» pasa a ser «en cuanto llegó», y «díjoles» se convierte en «les dijo». Lo más delicado fue la proclama: «si así no lo hiciereis». Como el libro se vende en España y en América, elegimos «si no lo hacen así», con ustedes, y explicamos en una nota que en España se diría «si no lo hacéis así». Ojo también con la prensa: si leen «la autora, que publicara su primera novela en 1990», no hay ninguna hipótesis; significa «que publicó» o «que había publicado». Eso sí, algunas fórmulas siguen vivas, como «sea lo que fuere», y esas las dejamos tal cual. Gracias por escuchar, y nos vemos en la presentación del libro."
     },
@@ -904,7 +904,7 @@
     },
     {
       "id": 508,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenos días. Son las ocho y les habla Gerardo Luna con el informativo de Radio Ciudad. Abrimos con el caso de la planta depuradora. Según fuentes de la investigación consultadas por esta emisora, el secretario de Obras Públicas, Arturo Medina, habría recibido en marzo un informe interno que advertía de un sobrecoste del cuarenta por ciento, y lo habría archivado sin enviarlo al pleno. Medina lo niega: asegura que el documento llegó al pleno a su debido tiempo y anuncia que hoy mismo presentará las actas. Lo que sí está confirmado es la detención, ayer por la tarde, de un empresario de cincuenta y dos años, al que la policía atribuye un presunto delito de falsedad documental. El juzgado no ha facilitado su nombre, pero, según las mismas fuentes, sería el administrador de la constructora adjudicataria y estaría colaborando con los investigadores. Un matiz importante: anoche varios medios publicaron que el empresario habría intentado huir al extranjero. Esta emisora ha comprobado que no es así: los agentes lo detuvieron en su domicilio. Fuentes judiciales indican que podría quedar en libertad esta misma tarde. Recordamos que, mientras no haya una sentencia firme, rige la presunción de inocencia. Seguiremos informando."
     },
@@ -958,7 +958,7 @@
     },
     {
       "id": 517,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Bienvenidos a «Dudas de norma», el pódcast de la Universidad Abierta del Atlántico. Soy Mauricio Quintero. Esta semana nos escribe Gloria, estudiante en Valparaíso. Le llegaron dos correos nuestros: uno decía «Le informamos que su matrícula está confirmada» y el otro, «La informamos de que su beca fue aprobada». ¿Cuál está bien? Los dos, Gloria. Con «de que», la persona es el complemento directo: lo o la. Sin «de», lo informado es el directo y la persona, el indirecto: le. Lo que no vale es mezclar: «la informamos que», sin la preposición. Segunda consulta, de un tutor de Salamanca: ¿puede escribir «a este alumno le evalué en junio»? Puede: es el leísmo de persona masculino singular, que la norma culta admite y que es muy común en el centro y el norte de España. Pero en nuestra guía, que se lee en veinte países, preferimos «lo evalué». Y dos avisos para todos. Primero: «les recordamos a los estudiantes», con ese, porque son varios. Segundo: si mandan un solo enlace a varias personas, escriban «ya se lo enviamos», aunque en la conversación muchos digamos «se los enviamos». Hasta la próxima semana, y gracias por escucharnos."
     },
@@ -988,7 +988,7 @@
     },
     {
       "id": 522,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Valeria, hola, soy Rodrigo. Oye, primero, gracias por mandarme todo el hilo con la doctora Carmona; se nota que le dedicaste tiempo. Ya hablé con ella y la llamada del jueves queda en pie. Sobre lo que me pediste, que pasemos la cuenta del congreso a Julián: entiendo perfectamente por qué lo propones, y en otra situación a lo mejor lo haría. Pero a estas alturas sería un mensaje raro para el cliente, y tú conoces el proyecto mejor que nadie. Lo que sí podríamos hacer es llevar juntos las próximas dos llamadas, y así no te toca a ti sola. Y una cosa, sin ningún drama: el correo del «no es posible» quedó un poquito seco. Seguramente yo habría escrito algo parecido con el cansancio de esa semana. No estaría de más que la próxima vez lo dejaras reposar una hora antes de mandarlo, o que me lo pasaras a mí. Fuera de eso, el manejo del aforo fue impecable: tenías razón y lo argumentaste bien. Mañana lo platicamos con calma, ¿te parece? Un abrazo."
     },
@@ -1018,7 +1018,7 @@
     },
     {
       "id": 527,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Beatriz, soy Julián. Te mando esto desde la puerta de la consejería, que acaban de salir ahora mismo. Te dicto lo básico y luego lo pulimos. Empresa y comité han firmado esta tarde, a las siete y cuarto, un preacuerdo que desconvoca la huelga del lunes. Lo que está confirmado, porque he visto el documento, es una subida salarial del tres coma cinco por ciento este año. Para el segundo año no hay cifra cerrada: según fuentes del comité, rondaría el dos por ciento, pero la empresa no lo confirma. Raúl Montero, el portavoz, ha dicho, abro comillas: «No es el acuerdo que queríamos, pero es el que se podía firmar». Cierro comillas. Ojo, que no lo ha admitido como una derrota, solo lo ha dicho; no le pongas un verbo que no usó. La consejera, Rosa Pérez, ha afirmado que el acuerdo costará algo más de cuatro millones de euros al año. Más de cuatro, no cerca de cinco: lo he preguntado dos veces. Y lo de que el director se va, nada. Lo comentaban en la puerta, pero nadie me lo ha confirmado, así que eso no entra. Te mando las fotos en cinco minutos."
     },
@@ -1048,7 +1048,7 @@
     },
     {
       "id": 532,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Lucía, buenas tardes, habla Mateo Rivas. Ya revisé las segundas pruebas y te confirmo los cambios. Acepto guion sin tilde: tienes razón, desde 2010 se considera monosílabo, igual que hui, y yo seguía con la norma de cuando estudiaba. En la página cuatro reordené la frase del impresor para que quede «solo trabajaba de noche», sin tilde y sin ambigüedad; me gusta más así que con la tilde. Los miles, como dices, con un espacio: doce mil quinientos ejemplares, sin coma. Y aunque en México usamos el punto decimal, entiendo que la revista prefiere la coma en todos los artículos, así que no hay problema. Lo que sí te pido es que mantengas video, sin tilde, en todo el texto, porque es la forma que uso yo y es igual de correcta, y que no cambies México en ningún caso. Ah, y una duda que aún tengo: en la conclusión puse «no sé por qué los impresores dejaron de firmar». ¿Ese «por qué» va separado y con tilde? Yo creo que sí, porque es una pregunta indirecta. Si me lo confirmas, te mando hoy mismo la versión definitiva. Gracias, y un abrazo a todo el equipo."
     },
@@ -1066,7 +1066,7 @@
     },
     {
       "id": 535,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Lorena, soy Álvaro. Acabo de leer la tercera versión y te adelanto la buena noticia: entra en el volumen. Te dejo cuatro apuntes, todos pequeños. Primero, la tesis. Ya no es tibia: dices que limitar las visitas está justificado siempre que vaya unido a una política de vivienda, y eso se puede discutir, que es justo lo que buscamos en un ensayo. Segundo, el párrafo de los comerciantes ha ganado muchísimo. Es cierto que les das la razón en lo económico; no obstante, demuestras que su negocio también depende de que haya vecinos, de ahí que la objeción acabe reforzando tu postura. Eso es contraargumentar con justicia. Tercero, las fuentes. Del informe del Observatorio dices que los datos apuntan a una relación, y no que la demuestran: bien visto. Pero en la cita de Carvajal has dejado el punto dentro de las comillas, y va fuera. Y cuarto, te sobra una pregunta retórica: con la del final basta, y además gana fuerza si va sola. La conclusión, por cierto, ya no repite los párrafos: sintetiza. Mándame la versión definitiva antes del viernes, que el lunes entra en imprenta. Un abrazo."
     },
@@ -1090,7 +1090,7 @@
     },
     {
       "id": 539,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Hola, Clara, soy Hugo, de La Estación. Ya hablé con Marcela y te tengo buenas noticias: acepta casi todo. Te pagamos la mitad por adelantado, siempre que nos mandes la factura antes del viernes; si llega más tarde, administración ya no la procesa este mes. La sala pequeña es tuya, a no ser que el festival de cine necesite más espacio, cosa que dudo mucho. Con el taller no hay ningún problema, con tal de que sea gratuito y para menores de veinticinco años, porque así lo pide la beca. En caso de que se llene el primer grupo, abrimos otro el sábado por la mañana. Ah, y Marcela me dijo que movería la inauguración al jueves a condición de que dieras una pequeña charla esa noche. Piénsalo. Y un aviso de amigo: como vuelvas a mandar las fotos en el último minuto, como el año pasado, cuelgo yo las etiquetas al revés. Es broma. Llámame cuando puedas, salvo que estés en plena sesión; en ese caso, mándame un mensaje y te llamo yo. Un abrazo."
     },
@@ -1132,7 +1132,7 @@
     },
     {
       "id": 546,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "text": "Buenas noches a todos y bienvenidos. Llevo veinte años aquí y solo pido tres cosas; están en los carteles, pero las repito. Primera: «Dejar las botas en la entrada». Segunda: «No encender hornillos en los dormitorios». Tercera: «Respetar el descanso de los demás». Dormir bien aquí arriba no es un lujo: es seguridad. A las diez se apaga la luz y, entonces, ¡a dormir! Si alguien ronca y otro protesta… ¡haber traído tapones! Mañana, el desayuno es a las seis y media. ¿Subir a la cumbre? A saber cómo amanece; lo decidimos con el café. A mi parecer, la montaña no se va a ir. Que descansen."
     },

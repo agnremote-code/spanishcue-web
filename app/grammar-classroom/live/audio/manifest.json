@@ -1,7 +1,7 @@
 {
   "producer": "Microsoft Edge online speech via edge-tts",
   "synthetic": true,
-  "generatedAt": "2026-11-12T09:44:29.070311+00:00",
+  "generatedAt": "2026-11-13T04:06:51.289198+00:00",
   "humanListeningQA": false,
   "clips": [
     {
@@ -34,17 +34,17 @@
     },
     {
       "id": 305,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "src": "/audio/grammar-live/305.mp3",
       "transcriptSha256": "21737598655c2b04af2750189ead29ded64eab8ceebf352e5fb850e6c2357727",
-      "sha256": "2e5084f1f87a06a64c5a2c83b3597401879ee880614140f648f0fca06c818492",
-      "durationSeconds": 43.82,
+      "sha256": "91bfc0f3b4e1e7831fff159aab46f9345a9c9cc035fc3d7a534a5168b9513966",
+      "durationSeconds": 38.57,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 20858,
-      "rmsPCM": 2464.49
+      "peakPCM": 20995,
+      "rmsPCM": 2468.0
     },
     {
       "id": 307,
@@ -132,31 +132,31 @@
     },
     {
       "id": 320,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "src": "/audio/grammar-live/320.mp3",
       "transcriptSha256": "7f529b650b380b6648a907cb9d3c73f0558edea5c9fb37eb7ad878356d6ceae5",
-      "sha256": "9bd34e9676a301f4abd738200234cd74353bc594b0001c7dfc2b9f2ea472ffa7",
-      "durationSeconds": 42.77,
+      "sha256": "c931734d2fe102e0cfbec4527b9a6181d23712686fece1212d6c38b481bf3786",
+      "durationSeconds": 39.05,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21404,
-      "rmsPCM": 2264.57
+      "peakPCM": 22324,
+      "rmsPCM": 2715.56
     },
     {
       "id": 323,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "src": "/audio/grammar-live/323.mp3",
       "transcriptSha256": "ff8dbd988007648fe1961043aa02f55c32c0ec4ac685d38296c931e2a3562c8d",
-      "sha256": "9dbffdafe85e10e13ac605024b64ea8a1636e5da8f2bdab2ed4ee121e2d15ee1",
-      "durationSeconds": 57.82,
+      "sha256": "b76349e4e394c8195977b1c4a93f434d4e5934e63141f0ab64fda78a00791c46",
+      "durationSeconds": 48.62,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26398,
-      "rmsPCM": 3158.89
+      "peakPCM": 19815,
+      "rmsPCM": 2432.33
     },
     {
       "id": 324,
@@ -300,17 +300,17 @@
     },
     {
       "id": 338,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "src": "/audio/grammar-live/338.mp3",
       "transcriptSha256": "dc71bc0605958c8c8a22ebebfa681615072f812435c86889350c1dcfa4502afa",
-      "sha256": "b4c8e30ad800309382f8766eb0b5924565d7dff89bab2d9ead51a62af7a6a8f4",
-      "durationSeconds": 40.7,
+      "sha256": "0734be91292a99c9c019386af9c64a8bbe7a268c80c4d7c7262df0e16811cbdf",
+      "durationSeconds": 35.9,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21711,
-      "rmsPCM": 2618.76
+      "peakPCM": 20262,
+      "rmsPCM": 2644.62
     },
     {
       "id": 339,
@@ -328,17 +328,17 @@
     },
     {
       "id": 340,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-12%",
       "src": "/audio/grammar-live/340.mp3",
       "transcriptSha256": "f578eb53211eb39dbaa63f3548d9702f73fe0cf9427b8580e2e98e3825249e07",
-      "sha256": "b3f63aaeae225045e2d477c469a004af48181d81d78a13695e7b013e0aec4293",
-      "durationSeconds": 43.92,
+      "sha256": "88113d8398d2be727db6cfe3502c2911019b6bc569986d56f563990bf918402b",
+      "durationSeconds": 40.63,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 23079,
-      "rmsPCM": 2288.02
+      "peakPCM": 21376,
+      "rmsPCM": 2684.48
     },
     {
       "id": 341,
@@ -412,31 +412,31 @@
     },
     {
       "id": 350,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-free/350.mp3",
       "transcriptSha256": "4813fe82d5b62ed82836a582a72842f1a0c98bc3a8a31645b211f24ead6e41e4",
-      "sha256": "536ce5ad71d6942066352a34463e58d198dc7d59be560d543a6b532ebe862917",
-      "durationSeconds": 46.44,
+      "sha256": "80e8c7dbfddbe87642e663a748af2e2a82ce3f970a7c5293a162752be2e38855",
+      "durationSeconds": 39.12,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26312,
-      "rmsPCM": 3208.67
+      "peakPCM": 19664,
+      "rmsPCM": 2731.88
     },
     {
       "id": 351,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-live/351.mp3",
       "transcriptSha256": "3f396437df14e61c3729bc9772f2e60ee45ed0f4692e334f599b239086b19c98",
-      "sha256": "e1b57e2e7a3b0fccd3bca8418bbf2daca81ff1bddb7196c0dc0ec68de96f8a79",
-      "durationSeconds": 44.95,
+      "sha256": "f9896fb3fe4f48ed970245178cf111624410702646bf2e9481ecaab7923adff3",
+      "durationSeconds": 38.59,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 22576,
-      "rmsPCM": 2612.88
+      "peakPCM": 22631,
+      "rmsPCM": 2702.78
     },
     {
       "id": 352,
@@ -496,17 +496,17 @@
     },
     {
       "id": 360,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-live/360.mp3",
       "transcriptSha256": "6762ed5f7ff3d5345e5dd0e5c48e7e0afb8078a9631389b7f00e9f7630806d21",
-      "sha256": "b44c24a88caf0b182c8fe5cc23d6d69ee6b17c64d3126ce3f7991d8ebb87a149",
-      "durationSeconds": 50.86,
+      "sha256": "443ee5c4bf2865eee38ef6032933547c2345ada1eddfa73273f8718acdd7a714",
+      "durationSeconds": 43.44,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26083,
-      "rmsPCM": 3122.1
+      "peakPCM": 20143,
+      "rmsPCM": 2602.33
     },
     {
       "id": 361,
@@ -594,17 +594,17 @@
     },
     {
       "id": 367,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-live/367.mp3",
       "transcriptSha256": "83b694a938624655a2b1a962a466cb204fbcaf08d3c5cc40b4b28fa078f3deac",
-      "sha256": "58b914ef4fc7fbff4f4e9aba21aee5179fbe64f83b1aaadb88c7a5eda53f6e64",
-      "durationSeconds": 45.43,
+      "sha256": "5038d82c57cde8c1618990f49037f7615bef17318f8e75448bfadc825032d8e8",
+      "durationSeconds": 42.58,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 20543,
-      "rmsPCM": 2373.23
+      "peakPCM": 21184,
+      "rmsPCM": 2797.94
     },
     {
       "id": 369,
@@ -636,31 +636,31 @@
     },
     {
       "id": 371,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-live/371.mp3",
       "transcriptSha256": "cbcce6552011fa05c3ab18c36b093304e6bcd787aee30562a72f993122d908e9",
-      "sha256": "3c59dab789059b71260ee6dc02703d6acf7656007a906784f3463543593414bd",
-      "durationSeconds": 51.91,
+      "sha256": "0b3ff3ceb4155b7d109893d30dfffaf5d8e1f4c506d0ae478a0126c152f00c7f",
+      "durationSeconds": 45.05,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21073,
-      "rmsPCM": 2705.02
+      "peakPCM": 18425,
+      "rmsPCM": 2710.85
     },
     {
       "id": 372,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-live/372.mp3",
       "transcriptSha256": "47401ead87669414e370ac621eb94a399158c46d012e077f7c0e06d1c4a3f5a1",
-      "sha256": "313f1e253b412fc7434630e0793ec72fa13730c0e57ecb01a4d719e59b3ba654",
-      "durationSeconds": 47.9,
+      "sha256": "e4514e969683bb701bab29e00160b512013ce7a73d1f89cbc0487c48202ecd8f",
+      "durationSeconds": 44.78,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21063,
-      "rmsPCM": 2416.61
+      "peakPCM": 20095,
+      "rmsPCM": 2579.99
     },
     {
       "id": 373,
@@ -692,17 +692,17 @@
     },
     {
       "id": 375,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-live/375.mp3",
       "transcriptSha256": "a4d59e20feff8246586ec27370af7e9a691d088a68f9932fae0660fbc5ce43ac",
-      "sha256": "d342f7afd7dbcbf6cc157ac5e9caef75139447323383c0736506f573a2054a50",
-      "durationSeconds": 48.84,
+      "sha256": "05db78016bf55df19555c26be2851531a7dd05e43ec3686dfedfb5b03b806b60",
+      "durationSeconds": 41.81,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 20448,
-      "rmsPCM": 2521.55
+      "peakPCM": 19175,
+      "rmsPCM": 2521.67
     },
     {
       "id": 376,
@@ -720,17 +720,17 @@
     },
     {
       "id": 377,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-6%",
       "src": "/audio/grammar-live/377.mp3",
       "transcriptSha256": "5d43f20f7e6608082b5f8495b59055b420f937f694f452d844faa6c8a889e099",
-      "sha256": "85014da2380cb7f46b0dad363a6efbee9f48913558cffbc17f4595cfa71632b9",
-      "durationSeconds": 48.72,
+      "sha256": "69cb8d0da80400acc977e30ca695d189ec7c2ce28abaaeef3863994204a3b483",
+      "durationSeconds": 42.19,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26111,
-      "rmsPCM": 3094.55
+      "peakPCM": 19701,
+      "rmsPCM": 2617.29
     },
     {
       "id": 379,
@@ -874,17 +874,17 @@
     },
     {
       "id": 393,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "src": "/audio/grammar-live/393.mp3",
       "transcriptSha256": "06c7f2edae8ca4731d7abb9c30743f6f734f27e10d3c3bfc5947465ea816b1ec",
-      "sha256": "8b1eeb7a1ebe9e5b420236f9cf0f82bba68bd1df19326fb563b16dbfd890419b",
-      "durationSeconds": 57.89,
+      "sha256": "2a8a8e4b5d5f932c1821b3c0fd10c8016332cddfa017ec1397c606e15b1a4c62",
+      "durationSeconds": 48.74,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 25782,
-      "rmsPCM": 3263.03
+      "peakPCM": 22474,
+      "rmsPCM": 2770.52
     },
     {
       "id": 394,
@@ -930,17 +930,17 @@
     },
     {
       "id": 398,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "src": "/audio/grammar-live/398.mp3",
       "transcriptSha256": "955caded3176d0c2f718604ce8aaadc50898c7c8e142b127b36fe5caefc1c3e9",
-      "sha256": "25f6b13fb510e418ecec18079737546f7616675226912c21429310c357070900",
-      "durationSeconds": 61.25,
+      "sha256": "94c580bda728124c166c89b37cd04c5b6342ab0fc8f893beb46964d53604c326",
+      "durationSeconds": 53.33,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26295,
-      "rmsPCM": 3208.0
+      "peakPCM": 20974,
+      "rmsPCM": 2678.95
     },
     {
       "id": 399,
@@ -1014,17 +1014,17 @@
     },
     {
       "id": 409,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "src": "/audio/grammar-live/409.mp3",
       "transcriptSha256": "f90fe64c7b2f1d7d51f55dc8ac12041708f30a23a44d039715c5f69af3b1ab69",
-      "sha256": "06c7ae7dcb9743226e18e2b7fc928dba323d591ee5b93c66f835944536dd259c",
-      "durationSeconds": 53.4,
+      "sha256": "3dcc8520a78d60cd08ca0edcce4b568ad1d60da811eec053a56198dcef632002",
+      "durationSeconds": 44.95,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 27051,
-      "rmsPCM": 3378.9
+      "peakPCM": 20576,
+      "rmsPCM": 2756.19
     },
     {
       "id": 410,
@@ -1098,17 +1098,17 @@
     },
     {
       "id": 416,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "src": "/audio/grammar-live/416.mp3",
       "transcriptSha256": "23cfb6d6455aaf3942fae1a1c8a0012eb120eb81c3ba7641c6d29115af50ce98",
-      "sha256": "90f4863fd230e0d2d256a65e2e90f433f6ae0582b1fcd967b9d0316e56f817ff",
-      "durationSeconds": 53.11,
+      "sha256": "6297d3146109248a96a62503386021e75efe731c2449555da73d57821c92eeb8",
+      "durationSeconds": 48.84,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 20196,
-      "rmsPCM": 2665.58
+      "peakPCM": 21087,
+      "rmsPCM": 2854.88
     },
     {
       "id": 417,
@@ -1154,31 +1154,31 @@
     },
     {
       "id": 420,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "src": "/audio/grammar-live/420.mp3",
       "transcriptSha256": "48a98f02c8cce1d85fd3f925a8d817d53464288cbe7dbd3f27d418fbbc0bbf0c",
-      "sha256": "b60c444970240fa570374b7558404840f55ed6c360fca10b5a26471cdf1b0592",
-      "durationSeconds": 57.19,
-      "codec": "mp3",
-      "sampleRate": 24000,
-      "channels": 1,
-      "peakPCM": 22043,
-      "rmsPCM": 2309.9
-    },
-    {
-      "id": 421,
-      "voice": "es-ES-AlvaroNeural",
-      "rate": "-3%",
-      "src": "/audio/grammar-live/421.mp3",
-      "transcriptSha256": "2ac87caaeff4f5af728d5997068bf020f11c5592a536db778440c037ac4b49e2",
-      "sha256": "28e9bef8477c37bf2c49b318739ceccf6edbc1fd460d31f7262dd40855dc3eb2",
+      "sha256": "7d7e7388724031f4ceaaf682bdaabfa5b30fbc88b2da2da91252be5dd00bf8c0",
       "durationSeconds": 54.22,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 20492,
-      "rmsPCM": 2706.01
+      "peakPCM": 19646,
+      "rmsPCM": 2715.92
+    },
+    {
+      "id": 421,
+      "voice": "de-DE-FlorianMultilingualNeural",
+      "rate": "-3%",
+      "src": "/audio/grammar-live/421.mp3",
+      "transcriptSha256": "2ac87caaeff4f5af728d5997068bf020f11c5592a536db778440c037ac4b49e2",
+      "sha256": "d976f27b9032f93e8276b2f829656cad65fabade678221a346ae9b281b491767",
+      "durationSeconds": 47.76,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 22370,
+      "rmsPCM": 2756.47
     },
     {
       "id": 422,
@@ -1224,17 +1224,17 @@
     },
     {
       "id": 426,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "-3%",
       "src": "/audio/grammar-live/426.mp3",
       "transcriptSha256": "4178eeffa356b4077e8cd29c94167fd4a4526da9e24119d23f08ba08e2313e4f",
-      "sha256": "ff9fc6a47b8c5f20e87defe858a1a47ec27d5db9f1f5ced0ab48c5263dbb0a4b",
-      "durationSeconds": 56.57,
+      "sha256": "e0fc994c9ee9a26bc951414b2a039c0b726b6e2128f35b66d213c87654748c11",
+      "durationSeconds": 48.14,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26558,
-      "rmsPCM": 3284.99
+      "peakPCM": 20268,
+      "rmsPCM": 2698.44
     },
     {
       "id": 427,
@@ -1252,17 +1252,17 @@
     },
     {
       "id": 429,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/429.mp3",
       "transcriptSha256": "bef75f7ab864cd70db52e8bfe40c850abc1f798088d04f405010a01f0027139c",
-      "sha256": "841ef688815bc414d9e493db5d404c2563610775673ad34c9e5d38f436bd3dac",
-      "durationSeconds": 54.19,
+      "sha256": "b89bb427b80f5f2831e9b45c2e0d65a8b3db7f08300eadae0c28a8f14dd51894",
+      "durationSeconds": 51.29,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 23772,
-      "rmsPCM": 2278.46
+      "peakPCM": 20389,
+      "rmsPCM": 2783.13
     },
     {
       "id": 430,
@@ -1280,17 +1280,17 @@
     },
     {
       "id": 435,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/435.mp3",
       "transcriptSha256": "d20b0c3a914a05408eb9b434cded9140e4249a65f7582148c8b18ab75abedb4f",
-      "sha256": "ce859699467f250f0bc436a567ab58af8f8be988205f0bfdb289e43ce80876cb",
-      "durationSeconds": 55.63,
+      "sha256": "0a2755c4ce70b7e47bde9565fd92ecd330d00f9a37b34a69ad3f4c4795f2da2d",
+      "durationSeconds": 54.12,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21275,
-      "rmsPCM": 2341.94
+      "peakPCM": 20367,
+      "rmsPCM": 2692.4
     },
     {
       "id": 436,
@@ -1322,17 +1322,17 @@
     },
     {
       "id": 439,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-free/439.mp3",
       "transcriptSha256": "8ae4b9fd1fa7571e769f36392a18d569babb7e66551e5dd7e0ddf0aed1305b6a",
-      "sha256": "72bde7fce78eb52eb9dbb2ced51894d9f51aa19e00238fa2085636f041667128",
-      "durationSeconds": 63.67,
+      "sha256": "8df9e48b18d3e1f212dbde13f92c1bf4f35b5639cbcb2947933dbf5c7e32d421",
+      "durationSeconds": 53.71,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26455,
-      "rmsPCM": 3297.71
+      "peakPCM": 20100,
+      "rmsPCM": 2733.12
     },
     {
       "id": 440,
@@ -1350,17 +1350,17 @@
     },
     {
       "id": 441,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/441.mp3",
       "transcriptSha256": "ce2878b85770541dfeb09c11b69882149e9b4e8a8af19f75fb69f60a43154764",
-      "sha256": "ad9395bf0811e011e02724e41f8e789d9a713c11574255248c6e1b09025d0b2a",
-      "durationSeconds": 58.92,
+      "sha256": "71559efbfb47c60cf8399a4a1d796593b70b83a10edabc40ec5d845dd180c922",
+      "durationSeconds": 51.55,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 25753,
-      "rmsPCM": 3187.48
+      "peakPCM": 20581,
+      "rmsPCM": 2721.84
     },
     {
       "id": 443,
@@ -1490,17 +1490,17 @@
     },
     {
       "id": 456,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/456.mp3",
       "transcriptSha256": "7e5e98c01f5011b9f5cb0a23963388839f47e1775992c5f79b35d73980485043",
-      "sha256": "5744380da29f811d15fee44899ba3ad3aa44b6b6d9a44c8f6959e14aafb7c522",
-      "durationSeconds": 70.92,
+      "sha256": "1b5592b4234a0836e7c3e19c152bd3af67718317c3f45b5953f0379454655e48",
+      "durationSeconds": 60.48,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26110,
-      "rmsPCM": 3385.2
+      "peakPCM": 21336,
+      "rmsPCM": 2625.21
     },
     {
       "id": 457,
@@ -1546,17 +1546,17 @@
     },
     {
       "id": 461,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-free/461.mp3",
       "transcriptSha256": "7db917dcbcf18202644cb168bea56a00dd9161837329b97926151563a4d348c7",
-      "sha256": "48f441fdade32f72448b5c1c3b87241ff09e2f99194b108d6c31ede816939929",
-      "durationSeconds": 62.95,
+      "sha256": "17c96d2683e06edf6778c516a3f6c42af457d4b4e130765194769b96878ea9ca",
+      "durationSeconds": 53.62,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26081,
-      "rmsPCM": 3236.86
+      "peakPCM": 21634,
+      "rmsPCM": 2722.59
     },
     {
       "id": 463,
@@ -1574,31 +1574,31 @@
     },
     {
       "id": 464,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/464.mp3",
       "transcriptSha256": "93827b5542943f3383f34789c3e55c963f186465be28aa98cb2216e325226fdb",
-      "sha256": "68f0d17ac33228b9bd1d2e203cbc3046b707a7a3bd7e69f45374771407cdffeb",
-      "durationSeconds": 62.18,
+      "sha256": "70c6c422ad31f37e3a65ec8cb30b0d7ebd367439004506468b930af3c47c342d",
+      "durationSeconds": 59.09,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 20856,
-      "rmsPCM": 2242.22
+      "peakPCM": 21687,
+      "rmsPCM": 2576.84
     },
     {
       "id": 465,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/465.mp3",
       "transcriptSha256": "2526ce16db28bce04adaa01e202d59ab6379b0f6f946666028b8453d6889f6e2",
-      "sha256": "d69ca3e230c8a7d5aec96efc5789c1aff889277bc1fc354b383078ae3dc1baf3",
-      "durationSeconds": 64.03,
+      "sha256": "fc8ff4c21fc2b7ba6b6ffe76bb3e578cddb74713425679566803f4a539ba1fe1",
+      "durationSeconds": 62.42,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21343,
-      "rmsPCM": 2323.71
+      "peakPCM": 21044,
+      "rmsPCM": 2819.95
     },
     {
       "id": 466,
@@ -1728,17 +1728,17 @@
     },
     {
       "id": 477,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/477.mp3",
       "transcriptSha256": "514bd3c64531b210357787e898f329b59a6f2c55bbf5de01705099363ae163c7",
-      "sha256": "a8f32d4f3a5f36d7ad068ad714ef2e12841537651b90975c4d46c878dbe18e48",
-      "durationSeconds": 74.74,
+      "sha256": "cb75db10c48ecf5e4d05cc873b7693e8cbd5d8b8e6eba8b91041d22b7bd1ee22",
+      "durationSeconds": 71.38,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21511,
-      "rmsPCM": 2143.63
+      "peakPCM": 20749,
+      "rmsPCM": 2780.65
     },
     {
       "id": 478,
@@ -1756,17 +1756,17 @@
     },
     {
       "id": 479,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/479.mp3",
       "transcriptSha256": "60b96763abb825c679d2658c9bf1a602be32322186cb90a4d5865793c0447f20",
-      "sha256": "bfb841a251b34884fddf976e0f9b0a89339b4cd1c0e4367c5445219864774329",
-      "durationSeconds": 65.71,
+      "sha256": "7d1fa9b770d4d6c3a9dd96127f91d8b1c69765a4adae6bb72260d215300cca0f",
+      "durationSeconds": 63.86,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21796,
-      "rmsPCM": 2225.23
+      "peakPCM": 19189,
+      "rmsPCM": 2895.97
     },
     {
       "id": 480,
@@ -1812,17 +1812,17 @@
     },
     {
       "id": 483,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/483.mp3",
       "transcriptSha256": "c0470b38bfb0e217bd8040846b3bcd66a3329fe823b82134329c7f69f181f90b",
-      "sha256": "6702462e954fc343a54b37f09e5ccbb41296cd555ad505b209cdb55fd7513287",
-      "durationSeconds": 72.5,
+      "sha256": "d736634e587c552c93a42c5ca83c2956fbcf401acfbcb1b48799667755385e52",
+      "durationSeconds": 62.62,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 27620,
-      "rmsPCM": 3389.84
+      "peakPCM": 21670,
+      "rmsPCM": 2856.22
     },
     {
       "id": 484,
@@ -1868,31 +1868,31 @@
     },
     {
       "id": 488,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/488.mp3",
       "transcriptSha256": "30625eb01da077b74769716467852503e099c3b657f10edf255555c7822caed9",
-      "sha256": "3e7348bc3a2ee32cb55f5c4db6a2834d1603f6a4f128131f9fa8e8fc2b693643",
-      "durationSeconds": 75.26,
+      "sha256": "a0599565bf48ed563474b7b614cab3a00cca7a82959b55ee8997e6f4c6bf13f9",
+      "durationSeconds": 66.77,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21574,
-      "rmsPCM": 2708.72
+      "peakPCM": 20041,
+      "rmsPCM": 2740.79
     },
     {
       "id": 489,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/489.mp3",
       "transcriptSha256": "9b6b0f3c51e9567e9cfad3aebda4413b25dcdb449d930f05a3a539c71911783a",
-      "sha256": "6ccc08787ea3268b3267193ff63d445dda82781f9c9c730a42031ad1e9ecdbc1",
-      "durationSeconds": 76.94,
+      "sha256": "8c5bacf32f9518f35c065cdcbade980d07a1e718951db9f5a5265d80a473bdfa",
+      "durationSeconds": 66.05,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 28510,
-      "rmsPCM": 3362.25
+      "peakPCM": 20694,
+      "rmsPCM": 2778.29
     },
     {
       "id": 490,
@@ -1924,17 +1924,17 @@
     },
     {
       "id": 492,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/492.mp3",
       "transcriptSha256": "9eb45ab556f5a61dd5ed20538963496dfaed3e980f1d1d86d9c0ced71a0cc096",
-      "sha256": "0497fb57de0e240348e81bd572fddf1ec4a5e013f040b75264fde2e6b0dd48b4",
-      "durationSeconds": 64.63,
+      "sha256": "fdb25cb12e221f4b297e74b6f53ae2aeeee49679e814b052321f31dee0091275",
+      "durationSeconds": 54.84,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 25514,
-      "rmsPCM": 3215.41
+      "peakPCM": 20401,
+      "rmsPCM": 2850.94
     },
     {
       "id": 493,
@@ -1966,17 +1966,17 @@
     },
     {
       "id": 495,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/495.mp3",
       "transcriptSha256": "cfaf58bc879e249f3ebef656bd937482e37c8f3e6b541738bf3e3823baa5df79",
-      "sha256": "ceb2a1406baf6a71c201f10e6857b051b7d37f996c9733b04f995adb10d280f8",
-      "durationSeconds": 66.17,
+      "sha256": "1bba92ba0bda399b6e3e88dd147420fddf6fa41db4ff05f0344f06b9d2031288",
+      "durationSeconds": 63.38,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21851,
-      "rmsPCM": 2170.61
+      "peakPCM": 20182,
+      "rmsPCM": 2873.47
     },
     {
       "id": 496,
@@ -2078,17 +2078,17 @@
     },
     {
       "id": 506,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/506.mp3",
       "transcriptSha256": "9f9946891936021f190a7f822928db9c4fe3260c9493002bfdcf944ba61a24c9",
-      "sha256": "b9ec2bb9c4eeeac9a75682d918802709a59a5e86e48f278cd68272d39bde1ff2",
-      "durationSeconds": 84.48,
+      "sha256": "c5c740a6d57e6b1b7ce10bcab52233e97041297229eecb4ba8168b10b1b9f170",
+      "durationSeconds": 75.46,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 25505,
-      "rmsPCM": 3309.17
+      "peakPCM": 20642,
+      "rmsPCM": 2933.73
     },
     {
       "id": 507,
@@ -2106,17 +2106,17 @@
     },
     {
       "id": 508,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/508.mp3",
       "transcriptSha256": "63375268eca292b5ab2acc41800fcf2bcbe59aeba3803d30bcf128facdf92563",
-      "sha256": "47d806678dec5e3615ea3c958ce6876e0c502907212092dbefeade61661c5364",
-      "durationSeconds": 80.35,
+      "sha256": "5c09868870d830bb6b9e97d18cb6aa354e0050b55a9c8c7a32b0620aafb41039",
+      "durationSeconds": 69.17,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 26209,
-      "rmsPCM": 3397.65
+      "peakPCM": 21893,
+      "rmsPCM": 2882.59
     },
     {
       "id": 509,
@@ -2232,17 +2232,17 @@
     },
     {
       "id": 517,
-      "voice": "es-CO-GonzaloNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/517.mp3",
       "transcriptSha256": "503c047a34b5adb70e27a3e4cb04d18a88c777ea81f48e171851a4e4310e5d95",
-      "sha256": "af58be11e421e9613bf26a9180622262c689530f70fcf8aaca058064e18f02b7",
-      "durationSeconds": 76.37,
+      "sha256": "5426e1368a1adf13b7e5828c776b87e67ecfed6afeb7f8724a55ae82c038caf3",
+      "durationSeconds": 73.85,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 22506,
-      "rmsPCM": 2266.56
+      "peakPCM": 20845,
+      "rmsPCM": 2790.77
     },
     {
       "id": 518,
@@ -2302,17 +2302,17 @@
     },
     {
       "id": 522,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/522.mp3",
       "transcriptSha256": "11f5cae8bbd45aa38524d05b8a7ae0ccc04a7d04f5de824a8665b091e3bb32b8",
-      "sha256": "e7fc16ec5e1ec959a733536915eed0680d92548875ef8cf6c1993923f2b10d08",
-      "durationSeconds": 66.0,
+      "sha256": "22b1c0b65d38964ac9301f011ddc2f7e94e0f10c2bea347c82bad48a0c5ace7c",
+      "durationSeconds": 57.02,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 25939,
-      "rmsPCM": 3213.6
+      "peakPCM": 20820,
+      "rmsPCM": 2781.57
     },
     {
       "id": 523,
@@ -2372,17 +2372,17 @@
     },
     {
       "id": 527,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/527.mp3",
       "transcriptSha256": "f29fcc08f5682726785b8160c62786708abcfa7fa3a21b403b13ac3cf6803776",
-      "sha256": "85065bcca47dc6219abca68fecefe6225fc80f10fa4c2aa253c47162b8a97639",
-      "durationSeconds": 72.6,
+      "sha256": "d3eef0d69b13fbce1154b805e896d7a694298360585bee08b7d11eb5fba7711d",
+      "durationSeconds": 64.68,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 21172,
-      "rmsPCM": 2686.72
+      "peakPCM": 22674,
+      "rmsPCM": 2786.71
     },
     {
       "id": 528,
@@ -2442,17 +2442,17 @@
     },
     {
       "id": 532,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/532.mp3",
       "transcriptSha256": "9af911d04c1e8487c26f38b6145bd6bceb9667ef9bf0fd20d9d7d2497f12aeb5",
-      "sha256": "f48abaffba3398de23fe463e5cb996f906c41b04c3868efaf7c8e59957bd8055",
-      "durationSeconds": 74.71,
+      "sha256": "792e3dbd996cd1a9cb4f3e50d0cb718c303ae8068c20e8a8cc0f1f4d34d1543a",
+      "durationSeconds": 64.92,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 25612,
-      "rmsPCM": 3218.85
+      "peakPCM": 20502,
+      "rmsPCM": 2723.21
     },
     {
       "id": 533,
@@ -2484,17 +2484,17 @@
     },
     {
       "id": 535,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/535.mp3",
       "transcriptSha256": "108935f0b9d0b2f6098dfe2793223a6c28e5221ad8b5cc693dba8e5a4a7bf2d0",
-      "sha256": "59c8a8b211108d63366bd75df6ab23c622f354a01c39c407aa6aa4e11ebe73f7",
-      "durationSeconds": 77.06,
+      "sha256": "75f6941eb5114c536e2208ef7033a8596bbafb7f533708f6341dbcb6f97199ea",
+      "durationSeconds": 67.15,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 27527,
-      "rmsPCM": 3291.8
+      "peakPCM": 21815,
+      "rmsPCM": 2751.98
     },
     {
       "id": 536,
@@ -2540,17 +2540,17 @@
     },
     {
       "id": 539,
-      "voice": "es-MX-JorgeNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/539.mp3",
       "transcriptSha256": "d334fec53c88cdfe1f9c135769de7003a52df70249ad0a870449871431e8083d",
-      "sha256": "0ef6b024993690e376ed293c06cb1046ef4ab8b40def401bf23747ae21114700",
-      "durationSeconds": 66.58,
+      "sha256": "9b81e4c8b9e21fc31ab4827d58263698f23c30998e2d864d53013a2c169c15c9",
+      "durationSeconds": 57.19,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 25185,
-      "rmsPCM": 3246.63
+      "peakPCM": 21607,
+      "rmsPCM": 2865.25
     },
     {
       "id": 540,
@@ -2638,17 +2638,17 @@
     },
     {
       "id": 546,
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "rate": "+0%",
       "src": "/audio/grammar-live/546.mp3",
       "transcriptSha256": "e585faf3eac8ca6d83604a7025d5dd9575dad1eef62e3e6f3a302d5f5bc23ac1",
-      "sha256": "d4d4f0c5f1700ffb82ea962301f5979966d630c775dea9fe51a7016049f4adf5",
-      "durationSeconds": 45.74,
+      "sha256": "93fb2185fc71c35e177421cd2850a383b2eba53b079b754d9640e4625d33729e",
+      "durationSeconds": 41.66,
       "codec": "mp3",
       "sampleRate": 24000,
       "channels": 1,
-      "peakPCM": 20772,
-      "rmsPCM": 2511.55
+      "peakPCM": 19934,
+      "rmsPCM": 2520.77
     },
     {
       "id": 547,

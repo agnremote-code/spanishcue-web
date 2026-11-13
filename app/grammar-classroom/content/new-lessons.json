@@ -145,7 +145,7 @@
     ],
     "listening": {
       "title": "Nota de voz de un vecino",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "transcript": "Hola, Elena. Soy Pablo, tu vecino del segundo. Vivo en el edificio desde septiembre. Hace tres semanas que voy a los paseos del barrio. El grupo sale los sábados a las diez, pero desde el sábado pasado nos encontramos en la plaza, no en la biblioteca. Yo no puedo caminar mucho: hace cinco días me hice daño en un pie. Esta semana voy solamente al café después del paseo. ¿Quieres venir? Podemos encontrarnos allí a las once y media.",
       "questions": [
         {
@@ -357,7 +357,7 @@
     ],
     "listening": {
       "title": "Cambio de plan en la imprenta",
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "transcript": "Hola, Eva. Acabo de hablar con la imprenta. Los carteles no estarán listos por la mañana por un problema con el papel. Nos los preparan para las tres. Para no perder tiempo, propongo llevar primero las mesas al centro cultural y pasar por la imprenta después. Nos ofrecen un descuento de diez euros por la espera. He dicho que prefiero cambiar ese descuento por veinte copias más, porque siempre llega más gente de la prevista. Las copias nuevas son para las tiendas de la zona. ¿Te parece bien? Llámame para confirmar el cambio antes de que hagan la factura. Yo puedo recoger todo por la tarde.",
       "questions": [
         {
@@ -559,7 +559,7 @@
     ],
     "listening": {
       "title": "Aclaraciones antes de publicar el aviso",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "transcript": "Buenos días. Antes de publicar el aviso, revisemos dos puntos. Las salas no se cerrarán todas al mismo tiempo: primero se reformará la planta baja y después se cambiarán las ventanas del piso superior. Durante la primera semana se atenderá a las personas que necesiten ayuda con los ordenadores en la sala provisional. No escriban que se suspende toda la actividad, porque los préstamos continuarán. También quiero que el informe técnico mencione a la empresa: las ventanas serán instaladas por el equipo que ganó el concurso. En el cartel para los usuarios basta con explicar qué servicios cambian. Se publicarán las fechas definitivas mañana por la tarde, cuando el equipo de obras confirme el calendario. Hasta entonces, el texto debe indicar que las fechas son provisionales.",
       "questions": [
         {
@@ -763,7 +763,7 @@
     ],
     "listening": {
       "title": "El mensaje de recepción",
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "transcript": "Hola, Marta. Soy Diego. Acabo de hablar con Julia y quiero asegurarme de que he entendido todo. Me dijo que el técnico iría el jueves entre las nueve y las diez, no exactamente a las nueve. También preguntó si había alguien en casa que pudiera abrir el cuarto de instalaciones. Le expliqué que tú trabajarías desde casa y me pidió que te enviara su número por si surgía algún problema. Sobre la ventana, confirmó que teníamos que dejar libre el espacio, pero aclaró que no hacía falta quitar las cortinas. Por último, dijo que la oficina abre a las ocho y que podemos llamar desde esa hora. Te mando este resumen para que no tengamos tres versiones distintas. Si alguno de estos datos no coincide con lo que te dijeron, lo comprobamos antes del jueves.",
       "questions": [
         {
@@ -968,7 +968,7 @@
     ],
     "listening": {
       "title": "Una aclaración sobre los documentos",
-      "voice": "es-MX-DaliaNeural",
+      "voice": "en-US-EmmaMultilingualNeural",
       "transcript": "Hola, Laura. Te llamo porque hemos mezclado dos documentos. El informe del que depende la autorización no es el presupuesto de las obras. El presupuesto es el documento en el que aparecen los precios y los materiales; ese ya lo tenemos. Nos falta la versión firmada del informe técnico. ¿Puedes indicarnos quién es la persona a la que debemos solicitarla? También queremos confirmar una condición sobre las salas. La sala en la que estamos interesados es la que tiene entrada desde la calle, pero no sabemos si podemos utilizar el pasillo con el que comunica. Para nosotros es importante, porque es el espacio por el que saldrían las personas en caso de emergencia. Si te parece, podemos hablar con la administradora con quien nos reunimos el martes.",
       "questions": [
         {
@@ -1171,7 +1171,7 @@
     ],
     "listening": {
       "title": "Evaluación del segundo taller",
-      "voice": "es-ES-AlvaroNeural",
+      "voice": "de-DE-FlorianMultilingualNeural",
       "transcript": "Hola, equipo. Ya tenemos los comentarios de la segunda sesión. Esta vez las instrucciones fueron tan claras que casi todos empezaron a trabajar sin pedir ayuda. Sin embargo, trajeron tantas bicicletas que nos faltaron soportes. No fue un problema de número de personas: el grupo era pequeño, pero había varios objetos del mismo tipo. Compartimos los soportes, así que algunas reparaciones terminaron más tarde. Una voluntaria explicó los pasos tan despacio que pudo seguirlos incluso la persona que llegó a mitad de la sesión. Para la próxima fecha vamos a preguntar antes qué objeto traerá cada participante. Así podremos calcular mejor los materiales. No hace falta comprar de todo: necesitamos conocer la demanda y distribuir las herramientas que ya tenemos. El presupuesto sigue siendo el mismo.",
       "questions": [
         {
