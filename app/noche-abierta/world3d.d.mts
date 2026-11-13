@@ -95,3 +95,5 @@ export function createFramePacer(fps?: number, calmFps?: number): (now: number, 
 export function worldPixelRatio(width: number, height: number, cap: number, device?: number, budget?: number): number;
 /** Makes a scene skip the per-frame matrix update of everything that is hidden. */
 export function skipHiddenMatrices<T extends { updateMatrixWorld: (force?: boolean) => void }>(scene: T): T;
+/** With ?qa3d in the URL, publishes the world's renderer handles as window.__w3d for measurements. */
+export function exposeForQa(handles: Record<string, unknown>): void;
