@@ -346,3 +346,11 @@ export const retiredTemaLevelPaths: ReadonlyMap<string, string> = new Map([
   ["/material-ele/gramatica/oraciones-finales/a1", "/material-ele/gramatica/oraciones-finales"],
 ]);
 export const temaLevelsOf = (tema: TemaPage) => temaLevelPages.filter((page) => page.slug === tema.slug && page.group === tema.group);
+/** Level pages that share a slug with a Material ELE topic page
+ *  (/material-ele/comprension-auditiva → …/formatos/comprension-auditiva/a1).
+ *  Search Console (2026-11-14) shows the «tema + nivel» searches landing on the
+ *  level pages, so the topic page links to each of them by name. */
+export function temaLevelsForTopic(slug: string): TemaLevelPage[] {
+  const tema = (["formatos", "gramatica", "funciones", "vocabulario", "cultura"] as const).map((group) => temaPages.find((page) => page.slug === slug && page.group === group)).find(Boolean);
+  return tema ? temaLevelsOf(tema) : [];
+}

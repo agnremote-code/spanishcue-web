@@ -1681,6 +1681,145 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["pronombres-de-objeto", "gustar", "imperativo", "a2"],
   },
+  {
+    slug: "como-ensenar-el-preterito-perfecto",
+    path: `${GUIAS_PATH}/como-ensenar-el-preterito-perfecto`,
+    title: "Cómo enseñar el pretérito perfecto en ELE: secuencia y actividades",
+    description:
+      "Cómo enseñar el pretérito perfecto: la idea que lo une al presente, participios irregulares, marcadores, contraste con el indefinido, errores y actividades.",
+    h1: "Cómo enseñar el pretérito perfecto en ELE: de «hoy he…» al contraste con el indefinido",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "El pretérito perfecto suele ser el primer pasado que ve un alumno, y parece fácil: haber más participio. Los problemas llegan después: «he escribido», «ha hecho» sin saber cuándo usarlo, «hoy he ido» mezclado con «ayer he ido». Esta guía propone una secuencia concreta para A2, una forma de explicar para qué sirve sin depender de listas de marcadores, los errores que vas a ver y las clases, fichas y ejercicios de Material ELE para trabajarlo.",
+    keywords: ["cómo enseñar el pretérito perfecto", "pretérito perfecto ELE", "actividades pretérito perfecto", "ejercicios pretérito perfecto", "participios irregulares ELE", "pretérito perfecto o indefinido", "alguna vez has"],
+    published: "2026-11-14",
+    lessonIds: [141, 346, 351, 142, 350, 149],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: un pasado que toca el presente",
+        blocks: [
+          { type: "p", text: "Antes de la tabla de haber, el alumno necesita saber para qué sirve este tiempo. La imagen más útil es esta: **el pretérito perfecto habla de algo pasado dentro de un tiempo que todavía no ha terminado**. «Hoy he desayunado tarde» funciona porque hoy sigue abierto. «Este año ha viajado mucho» funciona porque el año no se ha acabado. Y «¿has estado en México?» funciona porque la vida de la persona sigue." },
+          { type: "p", text: "Con esa idea, los marcadores dejan de ser una lista para memorizar. Hoy, esta semana, este mes, alguna vez, nunca, ya y todavía no comparten lo mismo: **el periodo incluye el momento en que hablamos**. Si el alumno entiende eso, puede decidir solo con marcadores que no ha visto antes." },
+          { type: "p", text: "La página de [pretérito perfecto](/material-ele/preterito-perfecto) de Material ELE resume el tiempo con actividades listas para usar, y el tema de [gramática del pretérito perfecto](/material-ele/gramatica/preterito-perfecto) reúne todas las clases por nivel." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar y en qué orden",
+        blocks: [
+          { type: "p", text: "El pretérito perfecto se trabaja sobre todo en A2, y cada paso necesita producción oral antes de pasar al siguiente. Este orden evita mezclar forma y uso en la misma clase." },
+        ],
+        subsections: [
+          {
+            title: "Paso 1: la forma con participios regulares",
+            blocks: [
+              { type: "p", text: "Empieza con el presente de haber y participios regulares de verbos que el alumno ya usa: hablar, comer, vivir, trabajar, estudiar. El contexto natural es el día de hoy: «¿qué has hecho hoy?». Dos reglas bastan: **haber no se separa del participio** («no he comido», nunca «he no comido») y **el participio no cambia** («ella ha llegado», no «ha llegada»)." },
+              { type: "p", text: "La clase de [participios regulares e irregulares frecuentes](/material-ele/ficha/participios-frecuentes) trabaja justo este paso con las tareas del día, y la de [pretérito perfecto: contar experiencias y novedades](/material-ele/ficha/preterito-perfecto-compuesto-indicativo) lo lleva a una conversación completa." },
+            ],
+          },
+          {
+            title: "Paso 2: los participios irregulares que más se usan",
+            blocks: [
+              { type: "p", text: "No presentes los irregulares como una lista de quince. Empieza con los seis que aparecen en cualquier conversación: **hecho, dicho, visto, escrito, puesto y vuelto**. Después añade abierto, roto y muerto cuando el tema los pida." },
+              { type: "ol", items: [
+                "Presenta cada participio dentro de una pregunta real: «¿qué has hecho este fin de semana?», «¿has visto alguna película esta semana?».",
+                "Haz que el alumno pregunte a su vez: la forma se fija cuando la usa para obtener información.",
+                "Recicla los irregulares en las clases siguientes, tres o cuatro minutos al empezar.",
+              ] },
+              { type: "p", text: "La actividad [Participios a la carta](/material-ele/actividad/participios-a-la-carta) del banco convierte este paso en un juego corto, sin preparación." },
+            ],
+          },
+          {
+            title: "Paso 3: experiencias con «alguna vez» y «nunca»",
+            blocks: [
+              { type: "p", text: "Es el uso que más conversación da. «¿Alguna vez has…?» permite que el alumno hable de su vida con una sola estructura, y la respuesta abre el camino a contar más: dónde, con quién, cómo estuvo. La actividad [¿Alguna vez has…?](/material-ele/actividad/alguna-vez-has) trae preguntas, frases de apoyo y una forma de corregir." },
+            ],
+          },
+          {
+            title: "Paso 4: «ya» y «todavía no»",
+            blocks: [
+              { type: "p", text: "Con una lista de tareas, el alumno dice qué ha hecho ya y qué no ha hecho todavía. Es un contexto muy claro porque la lista sigue abierta: lo que falta se puede hacer. La actividad [Hoy ya, hoy todavía no](/material-ele/actividad/hoy-ya-hoy-todavia-no) sirve para una clase individual por videollamada o para parejas." },
+            ],
+          },
+          {
+            title: "Paso 5: el contraste con el indefinido",
+            blocks: [
+              { type: "p", text: "Solo cuando el perfecto sale con soltura conviene presentar el indefinido al lado. La pregunta que ordena el contraste es la misma idea del principio: **¿el periodo sigue abierto o ya terminó?** «Esta semana ha trabajado mucho» frente a «la semana pasada trabajó mucho». El tema de [contraste de pasados](/material-ele/gramatica/contraste-de-pasados) reúne las clases para esta etapa, y el [pretérito indefinido](/material-ele/gramatica/preterito-indefinido) tiene las suyas." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "variedades",
+        title: "España y América: qué decir sobre la variación",
+        blocks: [
+          { type: "p", text: "Muchos profesores evitan el tema, pero el alumno lo va a oír. En buena parte de España se dice «hoy ha llovido mucho»; en gran parte de América, «hoy llovió mucho». Las dos formas son correctas. Lo honesto es contarlo pronto y con calma: **el alumno debe reconocer las dos y elegir una con coherencia**, la de su profesor o la del lugar donde va a usar el español." },
+          { type: "ul", items: [
+            "Si enseñas la norma peninsular, mantén la regla del periodo abierto y avisa de que en América oirá el indefinido con «hoy».",
+            "Si enseñas una variedad americana, presenta el perfecto para experiencias («¿has estado en…?», «nunca he probado…») y para lo que sigue vigente, y usa el indefinido para lo demás.",
+            "En los dos casos, no corrijas como error lo que es otra variedad: pregunta al alumno dónde lo oyó.",
+          ] },
+          { type: "p", text: "La clase [perfecto e indefinido: variación regional](/material-ele/ficha/perfecto-e-indefinido-variacion) trabaja este punto en A2 con ejemplos de las dos orillas, y en niveles altos existe la ficha sobre la [variación regional del pasado perfecto](/material-ele/ficha/variacion-regional-del-pasado-perfecto-y)." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Errores típicos y cómo corregirlos",
+        blocks: [
+          { type: "p", text: "Estos son los errores que aparecen en casi todos los grupos, con una corrección que funciona mejor que repetir la regla." },
+          { type: "ul", items: [
+            "**«He escribido», «ha hacido».** Regulariza el participio. Corrección: no expliques de nuevo; pregunta «¿escribido o…?» y deja que se corrija solo. Vuelve a los seis irregulares al empezar la clase siguiente.",
+            "**«He no comido», «he ya terminado».** Separa haber del participio, como en otras lenguas. Corrección: escribe haber y el participio dentro de un mismo recuadro; nada entra ahí.",
+            "**«Ella ha llegada».** Concuerda el participio como si fuera un adjetivo. Corrección: contrasta «la puerta está abierta» (adjetivo, cambia) con «ha abierto la puerta» (tiempo verbal, no cambia).",
+            "**«Ayer he ido al cine».** Usa el perfecto con un periodo cerrado. Corrección: «¿ayer sigue abierto o terminó?». Es la misma pregunta de siempre, y por eso conviene enseñarla desde el primer día.",
+            "**«Tengo comido».** Usa tener en lugar de haber por influencia de su lengua. Corrección: tener es para lo que posees; haber, para formar el tiempo.",
+          ] },
+          { type: "p", text: "Para practicar con corrección inmediata, el [ejercicio de pretérito perfecto con soluciones](/material-ele/ejercicio/preterito-perfecto) se puede proyectar o mandar como tarea, y en [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) hay más del mismo nivel." },
+        ],
+      },
+      {
+        id: "actividades",
+        title: "Actividades que hacen hablar",
+        blocks: [
+          { type: "p", text: "El pretérito perfecto se aprende preguntando y contestando. Estas actividades no necesitan material impreso y funcionan en clases individuales y en grupo." },
+          { type: "ol", items: [
+            "**Encuentra a alguien que…** Cada alumno recibe cinco experiencias («ha montado a caballo», «ha vivido en otro país») y pregunta hasta encontrar a quien las ha hecho. En clase individual, el alumno adivina cuáles ha hecho el profesor.",
+            "**Tres experiencias, una mentira.** El alumno cuenta tres cosas que ha hecho en su vida; una es falsa. Los demás preguntan detalles para descubrirla.",
+            "**El día hasta ahora.** A mitad de la clase, cada uno cuenta tres cosas que ha hecho hoy y una que todavía no ha hecho.",
+            "**Noticias de la semana.** El alumno trae una novedad personal o del mundo: «esta semana ha pasado algo…». Sirve como calentamiento fijo durante un mes.",
+            "**La lista de la vida.** Diez cosas que quiere hacer antes de los cincuenta: marca las que ya ha hecho y explica una.",
+          ] },
+          { type: "p", text: "Si buscas más ideas con pasos y respuesta modelo, el [banco de actividades](/material-ele/actividades) las ordena por tema y duración, y las [preguntas de conversación de A2](/material-ele/preguntas/a2) incluyen varias con «alguna vez». La guía de [actividades de conversación para adultos](/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos) propone más formatos para hablar." },
+        ],
+      },
+      {
+        id: "clase",
+        title: "Una clase de 45 minutos, paso a paso",
+        blocks: [
+          { type: "p", text: "Este plan sirve para la primera clase de experiencias en A2, cuando el alumno ya conoce la forma con participios regulares." },
+          { type: "ol", items: [
+            "**Calentamiento (5 min).** «¿Qué has hecho hoy antes de la clase?» Tres frases por alumno, sin corregir todavía.",
+            "**Presentación (8 min).** Dos fotos de lugares y la pregunta «¿has estado aquí?». Escribe «alguna vez» y «nunca» y marca que la vida es un periodo abierto.",
+            "**Participios irregulares (7 min).** Hecho, dicho, visto, escrito, puesto y vuelto, cada uno dentro de una pregunta.",
+            "**Práctica guiada (10 min).** Preguntas en parejas con «¿alguna vez has…?»; quien contesta que sí añade un detalle.",
+            "**Producción (12 min).** Tres experiencias, una mentira.",
+            "**Cierre (3 min).** Cada alumno dice algo que nunca ha hecho y quiere hacer.",
+          ] },
+          { type: "p", text: "Cuando el perfecto esté asentado, el paso siguiente es el relato en pasado: la clase gratis de [indefinido e imperfecto](/gramatica/indefinido-e-imperfecto) se abre sin registro, y la guía [cómo enseñar indefinido e imperfecto](/material-ele/guia/como-ensenar-indefinido-e-imperfecto) explica esa etapa. En B1, la misma forma vuelve con el subjuntivo: la ficha del [perfecto de subjuntivo](/material-ele/ficha/preterito-perfecto-subjuntivo) lo usa para reaccionar a lo que ha pasado." },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [A2](/material-ele/a2) ordena todo el material, las [fichas de gramática](/material-ele/fichas) se imprimen o se proyectan, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña el pretérito perfecto?", answer: "Sobre todo en A2: primero la forma con participios regulares, después los irregulares más frecuentes, las experiencias con alguna vez y nunca, ya y todavía no, y al final el contraste con el indefinido." },
+      { question: "¿Cuál es la mejor forma de explicar el pretérito perfecto?", answer: "Con la idea del periodo abierto: se usa para algo pasado dentro de un tiempo que todavía no ha terminado, como hoy, esta semana o la vida de la persona. Así los marcadores se entienden en lugar de memorizarse." },
+      { question: "¿Qué participios irregulares conviene enseñar primero?", answer: "Los seis que aparecen en cualquier conversación: hecho, dicho, visto, escrito, puesto y vuelto. Después se añaden abierto, roto y muerto cuando el tema los necesita." },
+      { question: "¿Se usa el pretérito perfecto en América?", answer: "Sí, pero menos que en España. En gran parte de América se prefiere el indefinido con hoy o esta semana, y el perfecto se mantiene para experiencias y para lo que sigue vigente. Las dos normas son correctas." },
+      { question: "¿Hay material gratis para practicar el pretérito perfecto?", answer: "Sí. En Material ELE hay actividades con pasos y respuesta modelo, un ejercicio con soluciones y preguntas de conversación de A2, todo sin registro, además de muestras de las fichas de cada clase." },
+    ],
+    related: ["preterito-perfecto", "indefinido-e-imperfecto", "a2", "b1"],
+  },
 ];
 
 /** «Cómo enseñar…» guides that belong to a grammar topic page: the topic is
