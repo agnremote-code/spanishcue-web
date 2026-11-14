@@ -54,8 +54,18 @@ test("Google and Bing are never in the blocked lists", () => {
   assert.ok(!policy.AI_CRAWLERS.includes("OAI-AdsBot"), "the ad landing-page check stays allowed");
 });
 
+test("live AI search agents are served but still counted by the page limiter", () => {
+  const agents = { ...UA, oaiSearch: "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; OAI-SearchBot/1.0; +https://openai.com/searchbot", claudeUser: "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; Claude-User/1.0; +Claude-User@anthropic.com)" };
+  for (const name of ["chatgptUser", "perplexity", "oaiSearch", "claudeUser"]) {
+    for (const path of ["/", "/material-ele", "/material-ele/fichas", "/clase-gratis"]) assert.equal(refused(path, agents[name]), false, `${name} ${path}`);
+    assert.equal(pageReadKey(get("/material-ele", agents[name]), "/material-ele", undefined), "production:pages:203.0.113.7", name);
+  }
+  for (const token of policy.AI_SEARCH_AGENTS) assert.ok(!policy.BLOCKED_CRAWLERS.includes(token), token);
+  for (const token of ["GPTBot", "ClaudeBot", "CCBot", "Bytespider", "Google-Extended"]) assert.ok(policy.BLOCKED_CRAWLERS.includes(token), token);
+});
+
 test("AI and SEO-tool crawlers are refused everywhere except robots.txt", () => {
-  for (const name of ["gptbot", "chatgptUser", "claudebot", "perplexity", "bytespider", "ahrefs"]) {
+  for (const name of ["gptbot", "claudebot", "bytespider", "ahrefs"]) {
     for (const path of ["/", "/material-ele", "/material-ele/fichas", "/clase-gratis", "/demo/noche-abierta", "/noche-abierta/demo-calle.json", "/sitemap.xml", "/assets/app.js"]) {
       assert.equal(refused(path, UA[name]), true, `${name} ${path}`);
     }
