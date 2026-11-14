@@ -18,12 +18,12 @@ export const SEO_TOOL_CRAWLERS = ["AhrefsBot", "SemrushBot", "MJ12bot", "DotBot"
 /**
  * AI crawlers and AI assistant fetchers, by the token they publish. Each is
  * both a robots.txt user-agent and a substring of the real User-Agent header.
- * `OAI-AdsBot` (OpenAI's ad landing-page check) is deliberately absent.
+ * `OAI-AdsBot` (OpenAI's ad landing-page check) is deliberately absent, and
+ * so are the live AI search agents below.
  */
 export const AI_CRAWLERS = [
-  "GPTBot", "ChatGPT-User", "OAI-SearchBot",
-  "ClaudeBot", "Claude-Web", "Claude-User", "Claude-SearchBot", "anthropic-ai",
-  "PerplexityBot", "Perplexity-User",
+  "GPTBot",
+  "ClaudeBot", "Claude-Web", "anthropic-ai",
   "CCBot", "Bytespider", "TikTokSpider", "Amazonbot",
   "Meta-ExternalAgent", "Meta-ExternalFetcher", "FacebookBot",
   "cohere-ai", "cohere-training-data-crawler",
@@ -32,6 +32,14 @@ export const AI_CRAWLERS = [
   "PanguBot", "ICC-Crawler", "iaskspider", "Kangaroo Bot", "img2dataset",
   "FirecrawlAgent", "Crawl4AI", "Google-CloudVertexBot", "Google-NotebookLM",
 ] as const;
+
+/**
+ * AI search agents that answer a person's question live and can recommend
+ * SpanishCue with a link (owner decision 2026-11-14). They are allowed, never
+ * listed in robots.txt, and counted by the per-IP page limiter like any
+ * visitor. Training crawlers of the same companies stay blocked above.
+ */
+export const AI_SEARCH_AGENTS = ["OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Perplexity-User", "Claude-SearchBot", "Claude-User"] as const;
 
 /**
  * robots.txt-only opt-outs: these never appear in a User-Agent header. They

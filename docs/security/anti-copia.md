@@ -7,7 +7,7 @@ search engines, free classes or checkout.
 
 | Layer | Where | Effect |
 | --- | --- | --- |
-| robots.txt | `app/robots.ts` + `app/crawler-policy.ts` | Disallows AI crawlers, AI assistant fetchers, SEO-tool crawlers; `Google-Extended` / `Applebot-Extended` opt out of AI training while Googlebot / Applebot keep indexing. |
+| robots.txt | `app/robots.ts` + `app/crawler-policy.ts` | Disallows AI training crawlers and SEO-tool crawlers; `Google-Extended` / `Applebot-Extended` opt out of AI training while Googlebot / Applebot keep indexing. |
 | User-Agent refusal | `worker/anti-scrape.ts` (`refusedAgent`) | 403 for those crawlers on every path except `/robots.txt`; 403 for default scraping libraries (python-requests, curl, Scrapy, wget, HTTrack…) on content pages. |
 | Page-read limiter | `SCRAPE_LIMITER` (120 HTML documents/min per IP), `PAYLOAD_LIMITER` (600 `.rsc` payloads/min per IP) | 429 with `Retry-After: 60`. Fails open. |
 | PRO content | existing (`scripts/protect-client-assets.mjs`, encrypted blobs, per-account watermark) | PRO pages, chunks, audio and question banks are only served to entitled accounts. |
@@ -39,6 +39,9 @@ terms and the per-account watermark.
 
 - Add or remove a crawler: `app/crawler-policy.ts` (robots.txt and the Worker
   follow). Never add a search engine.
-- To appear again in ChatGPT / Perplexity answers, remove `OAI-SearchBot`,
-  `ChatGPT-User`, `PerplexityBot`, `Perplexity-User` from `AI_CRAWLERS`.
+- Live AI search agents (`AI_SEARCH_AGENTS`: OAI-SearchBot, ChatGPT-User,
+  PerplexityBot, Perplexity-User, Claude-SearchBot, Claude-User) are allowed
+  since 2026-11-14 (owner decision) so those assistants can recommend
+  SpanishCue; they are still rate limited per IP. Training crawlers stay
+  blocked. To block them again, move them into `AI_CRAWLERS`.
 - Limits: `ratelimits` in `vite.config.ts`.
