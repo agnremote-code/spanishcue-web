@@ -4,7 +4,7 @@ import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../../../gro
 import { faqPageSchema, webPageSchema } from "../../../../growth/schema";
 import { EleBuyBand, EleFeaturedLesson, EleLessonGrid, ElePageDates, ElePreviewVideo, EleTopbar, eleLessonCards, eleMetadata, elePreviewLesson, featuredGrammarLesson, pageImage } from "../../../components";
 import { pageDates } from "../../../indice";
-import { MATERIAL_ELE_PATH, eleLevels } from "../../../data";
+import { MATERIAL_ELE_PATH, eleLevels, elePageBySlug } from "../../../data";
 import ShareSnippet from "../../../ShareSnippet";
 import { TemaCards, TemaGroupCards } from "../../../tema-components";
 import { retiredTemaLevelPaths, temaGroupById, temaLevelPageByPath, temaLevelPages, temaLevelsOf } from "../../../temas";
@@ -32,6 +32,8 @@ export default async function TemaLevelRoute({ params }: Props) {
   const levelGuide = eleLevels.find((level) => level.code === page.level);
   const otherLevels = temaLevelsOf(page.tema).filter((other) => other.level !== page.level);
   const lower = page.name.toLowerCase();
+  const topic = elePageBySlug.get(page.slug);
+  const topicGuide = topic?.kind === "topic" ? topic : null;
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
   return (
@@ -50,6 +52,7 @@ export default async function TemaLevelRoute({ params }: Props) {
               <Link className={styles.primaryButton} href="#clases">Ver las clases</Link>
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : levelGuide ? <Link className={styles.secondaryButton} href={levelGuide.path}>Material {page.level} con clase gratis</Link> : null}
               <Link className={styles.secondaryButton} href={page.tema.path}>{page.name}: todos los niveles</Link>
+              {topicGuide ? <Link className={styles.secondaryButton} href={topicGuide.path}>Actividades de {lower} para clase</Link> : null}
             </div>
             <ElePageDates dates={dates} />
           </section>

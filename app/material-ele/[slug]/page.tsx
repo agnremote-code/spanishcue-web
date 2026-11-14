@@ -7,7 +7,7 @@ import { pageDates } from "../indice";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
 import { teachingGuidesForTopic } from "../guias";
 import { TemaGroupIndexPage } from "../tema-group-page";
-import { temaGroupById, temasByGroup, type TemaGroupId } from "../temas";
+import { temaGroupById, temaLevelsForTopic, temasByGroup, type TemaGroupId } from "../temas";
 import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
 import print from "../print.module.css";
@@ -38,6 +38,7 @@ export default async function ElePage({ params }: Props) {
   const featured = featuredGrammarLesson(page.lessonIds);
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
+  const levelPages = temaLevelsForTopic(page.slug);
   return (
     <>
       <main className={styles.page} lang="es">
@@ -95,6 +96,16 @@ export default async function ElePage({ params }: Props) {
             <p><Link className={styles.textLink} href={PRICING_PATH}>Desbloquear todas las clases →</Link></p>
           </Section>
           </div>
+
+          {page.kind === "topic" && levelPages.length ? (
+            <div className={print.noPrint}>
+              <Section id="por-nivel" title={`${page.label} por nivel`} intro="Las clases de este tema, separadas por nivel del alumno.">
+                <div className={styles.cardGrid}>
+                  {levelPages.map((level) => <Link className={styles.levelCard} key={level.path} href={level.path}><em>{level.level}</em><b>{level.name} {level.level}</b><span>{level.lessonIds.length} clases{level.freeCount ? ` · ${level.freeCount} gratis` : ""}</span></Link>)}
+                </div>
+              </Section>
+            </div>
+          ) : null}
 
           <Section title="Preguntas frecuentes">
             <Faq items={page.faq} />
