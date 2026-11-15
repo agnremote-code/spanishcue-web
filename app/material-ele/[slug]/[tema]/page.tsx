@@ -8,6 +8,7 @@ import { MATERIAL_ELE_PATH, elePageBySlug } from "../../data";
 import { TemaCards, TemaGroupCards, TemaLevelLinks } from "../../tema-components";
 import { relatedTemas, temaGroupById, temaLevelsOf, temaPageByPath, temaPages } from "../../temas";
 import ShareSnippet from "../../ShareSnippet";
+import { EleFichaLinks } from "../../ficha-links";
 import styles from "../../../growth/growth.module.css";
 
 type Props = { params: Promise<{ slug: string; tema: string }> };
@@ -68,6 +69,8 @@ export default async function TemaPageRoute({ params }: Props) {
           <Section id="clases" title={`Clases para enseñar ${lower}`} intro={`${lessons.length === 1 ? "Una clase interactiva" : `${lessons.length} clases interactivas`} para compartir en pantalla, ordenadas de lo más básico a lo más avanzado. Las gratis se abren sin registro.`}>
             <EleLessonGrid lessons={lessons} />
           </Section>
+
+          <EleFichaLinks lessonIds={page.lessonIds} name={lower} />
 
           {page.goals.length ? (
             <Section title={`Qué aprende el alumno con ${lower}`} intro="Objetivos tomados de las propias clases: lo que el alumno puede hacer con el español al terminar.">
