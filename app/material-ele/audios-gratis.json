@@ -1,0 +1,540 @@
+[
+ {
+  "id": "usa-a1-florida",
+  "level": "A1",
+  "world": "Estados Unidos",
+  "worldPath": "/estados-unidos-a2-b1",
+  "lessonId": 36,
+  "title": "¿Dónde está mi pasaporte?",
+  "place": "La recepción del hotel",
+  "context": "Luis no encuentra su pasaporte y habla con la recepcionista.",
+  "src": "/audio/escucha-3d-libre/usa-a1-florida.mp3",
+  "seconds": 34,
+  "speakers": [
+   {
+    "name": "Marisol",
+    "country": "Cuba"
+   },
+   {
+    "name": "Luis",
+    "country": "Ecuador"
+   }
+  ],
+  "lines": [
+   {
+    "s": 1,
+    "text": "Buenas tardes. Tengo un problema: no encuentro mi pasaporte."
+   },
+   {
+    "s": 0,
+    "text": "Tranquilo. ¿Adónde fuiste esta mañana?"
+   },
+   {
+    "s": 1,
+    "text": "Primero a la playa, después a un café en Ocean Drive."
+   },
+   {
+    "s": 0,
+    "text": "Bueno, llamo al café ahora mismo. ¿Sí? ¿Tienen un pasaporte azul? ¡Perfecto!"
+   },
+   {
+    "s": 1,
+    "text": "¿Lo tienen? ¡Qué alivio!"
+   },
+   {
+    "s": 0,
+    "text": "Sí, está en la caja. Cierran a las seis, así que tienes una hora."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Qué problema tiene Luis?",
+    "options": [
+     "No encuentra su pasaporte",
+     "No tiene habitación",
+     "Está enfermo"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Adónde fue primero?",
+    "options": [
+     "Al café",
+     "A la playa",
+     "Al aeropuerto"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Dónde está el pasaporte?",
+    "options": [
+     "En la playa",
+     "En el hotel",
+     "En el café"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Cuánto tiempo tiene Luis?",
+    "options": [
+     "Una hora",
+     "Seis horas",
+     "Diez minutos"
+    ],
+    "answer": 0
+   }
+  ],
+  "talk": [
+   "¿Perdiste algo importante alguna vez?",
+   "¿Qué haces cuando tienes un problema en un viaje?",
+   "¿Qué llevas siempre cuando viajas?"
+  ]
+ },
+ {
+  "id": "mexico-a1-cdmx",
+  "level": "A1",
+  "world": "México",
+  "worldPath": "/mexico",
+  "lessonId": 210,
+  "title": "El metro a Coyoacán",
+  "place": "El metro",
+  "context": "Camila, de Perú, pregunta a un vendedor cómo llegar a la casa de Frida Kahlo.",
+  "src": "/audio/escucha-3d-libre/mexico-a1-cdmx.mp3",
+  "seconds": 28,
+  "speakers": [
+   {
+    "name": "Camila",
+    "country": "Perú"
+   },
+   {
+    "name": "Jorge",
+    "country": "México"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "Disculpe, ¿cómo llego a la casa de Frida Kahlo?"
+   },
+   {
+    "s": 1,
+    "text": "Toma la línea azul hasta la estación Coyoacán. Son ocho estaciones."
+   },
+   {
+    "s": 0,
+    "text": "¿Y desde la estación está lejos?"
+   },
+   {
+    "s": 1,
+    "text": "Unos veinte minutos a pie, o puedes tomar un taxi. Pero compra la entrada por internet, porque los domingos hay mucha fila."
+   },
+   {
+    "s": 0,
+    "text": "Hoy es domingo… ¡Gracias por el consejo!"
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Adónde quiere ir Camila?",
+    "options": [
+     "A un mercado",
+     "A la casa de Frida Kahlo",
+     "Al aeropuerto"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Qué línea debe tomar?",
+    "options": [
+     "La azul",
+     "La verde",
+     "La rosa"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Cuántas estaciones son?",
+    "options": [
+     "Cuatro",
+     "Doce",
+     "Ocho"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Por qué debe comprar la entrada por internet?",
+    "options": [
+     "Porque es más barata",
+     "Porque los domingos hay mucha fila",
+     "Porque la casa cierra temprano"
+    ],
+    "answer": 1
+   }
+  ],
+  "talk": [
+   "¿Usas el metro en tu ciudad?",
+   "¿Compras entradas por internet?",
+   "¿Qué museo te gustaría visitar?"
+  ]
+ },
+ {
+  "id": "usa-a2-nueva-york",
+  "level": "A2",
+  "world": "Estados Unidos",
+  "worldPath": "/estados-unidos-a2-b1",
+  "lessonId": 36,
+  "title": "Dejé el banco por una mochila",
+  "place": "La calle comercial",
+  "context": "Sebastián cuenta en un pódcast por qué cambió de vida.",
+  "src": "/audio/escucha-3d-libre/usa-a2-nueva-york.mp3",
+  "seconds": 34,
+  "speakers": [
+   {
+    "name": "Sebastián",
+    "country": "Venezuela"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "El año pasado trabajaba en un banco en Manhattan. Ganaba bien, pero siempre estaba cansado y no veía a mis amigos."
+   },
+   {
+    "s": 0,
+    "text": "Un lunes, en el metro, una señora mayor me preguntó: «¿Usted es feliz?». No supe qué contestar."
+   },
+   {
+    "s": 0,
+    "text": "Esa semana hablé con mi jefe y dejé el trabajo. Viajé seis meses por México y Perú con una mochila."
+   },
+   {
+    "s": 0,
+    "text": "Gasté casi todos mis ahorros, pero ahora sé qué quiero: enseñar música a niños. Mis padres pensaron que estaba loco. Hoy creo que fue la mejor decisión de mi vida."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Dónde trabajaba Sebastián?",
+    "options": [
+     "En una escuela",
+     "En un banco",
+     "En el metro"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Qué le preguntó la señora?",
+    "options": [
+     "Dónde estaba el banco",
+     "Qué hora era",
+     "Si era feliz"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Cuánto tiempo viajó?",
+    "options": [
+     "Seis meses",
+     "Seis semanas",
+     "Un año"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Qué quiere hacer ahora?",
+    "options": [
+     "Volver al banco",
+     "Enseñar música a niños",
+     "Abrir un restaurante"
+    ],
+    "answer": 1
+   }
+  ],
+  "talk": [
+   "¿Dejarías tu trabajo para viajar?",
+   "¿Qué te hace feliz en tu día a día?",
+   "¿Alguna vez cambiaste de planes de repente?"
+  ]
+ },
+ {
+  "id": "mexico-a2-cdmx",
+  "level": "A2",
+  "world": "México",
+  "worldPath": "/mexico",
+  "lessonId": 210,
+  "title": "La trajinera perdida",
+  "place": "Los canales de Xochimilco",
+  "context": "Un grupo de amigos alquila una trajinera en Xochimilco y algo sale mal.",
+  "src": "/audio/escucha-3d-libre/mexico-a2-cdmx.mp3",
+  "seconds": 36,
+  "speakers": [
+   {
+    "name": "Rodrigo",
+    "country": "El Salvador"
+   },
+   {
+    "name": "Paloma",
+    "country": "Estados Unidos"
+   },
+   {
+    "name": "Don Chuy",
+    "country": "México"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "Don Chuy, ¿cuánto tiempo falta para volver al embarcadero?"
+   },
+   {
+    "s": 2,
+    "text": "Unos cuarenta minutos, si no hay mucho tráfico de trajineras."
+   },
+   {
+    "s": 1,
+    "text": "¿Tráfico? ¿En el agua?"
+   },
+   {
+    "s": 2,
+    "text": "Uy, los domingos es peor que la avenida. Hace dos semanas nos quedamos parados una hora entera."
+   },
+   {
+    "s": 0,
+    "text": "Pues yo dejé mi mochila en el muelle. Pensé que alguien la iba a cuidar."
+   },
+   {
+    "s": 2,
+    "text": "No se preocupe. Mi sobrino trabaja allí. Ahorita le llamo por teléfono."
+   },
+   {
+    "s": 1,
+    "text": "Mientras tanto, ¿podemos comprar elotes a la señora de esa canoa?"
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Cuánto tiempo falta para volver?",
+    "options": [
+     "Diez minutos",
+     "Unos cuarenta minutos",
+     "Dos horas"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Qué pasó hace dos semanas?",
+    "options": [
+     "Se quedaron parados una hora",
+     "Llovió mucho",
+     "Una trajinera se hundió"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Qué problema tiene Rodrigo?",
+    "options": [
+     "Perdió su teléfono",
+     "Tiene hambre",
+     "Dejó su mochila en el muelle"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Qué quiere comprar Paloma?",
+    "options": [
+     "Flores",
+     "Elotes",
+     "Refrescos"
+    ],
+    "answer": 1
+   }
+  ],
+  "talk": [
+   "¿Perdiste alguna vez algo importante en un viaje?",
+   "¿Hay mucho tráfico en tu ciudad?",
+   "¿Qué comida compras en la calle?"
+  ]
+ },
+ {
+  "id": "usa-b1-hawai",
+  "level": "B1",
+  "world": "Estados Unidos",
+  "worldPath": "/estados-unidos-a2-b1",
+  "lessonId": 36,
+  "title": "Los efectos del turismo",
+  "place": "El restaurante junto al océano",
+  "context": "Un periodista entrevista a Lucía, dueña de un restaurante en Honolulu, sobre el turismo en la isla.",
+  "src": "/audio/escucha-3d-libre/usa-b1-hawai.mp3",
+  "seconds": 50,
+  "speakers": [
+   {
+    "name": "Camilo",
+    "country": "Colombia"
+   },
+   {
+    "name": "Lucía",
+    "country": "Uruguay"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "Lucía, usted tiene un restaurante en Honolulu desde hace quince años. ¿Cómo ha cambiado el turismo la isla?"
+   },
+   {
+    "s": 1,
+    "text": "Mucho. Por un lado, el turismo da trabajo a mi familia y a miles de personas. Mi hija trabaja en un hotel y está contenta. Por otro lado, los precios de las casas se dispararon. Mi hermano se fue a Las Vegas porque aquí no podía pagar el alquiler."
+   },
+   {
+    "s": 0,
+    "text": "Hace poco una cadena hotelera quiso comprar su restaurante."
+   },
+   {
+    "s": 1,
+    "text": "Sí, y me ofrecieron mucho dinero. Lo pensé durante semanas. Al final dije que no, pero no juzgo a quien acepta. Lo que me gustaría es que los turistas vinieran con más respeto: que coman en restaurantes locales, que no toquen las tortugas y que entiendan que esto no es un parque temático, es nuestra casa."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Cuál es el tema de la entrevista?",
+    "options": [
+     "La comida hawaiana",
+     "Los efectos del turismo",
+     "El surf"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Por qué se fue el hermano de Lucía?",
+    "options": [
+     "Encontró trabajo en un casino",
+     "Quería conocer el desierto",
+     "No podía pagar el alquiler"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Qué respondió Lucía a la cadena hotelera?",
+    "options": [
+     "Que no",
+     "Que sí",
+     "Que lo pensaría un año más"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Qué les pide a los turistas?",
+    "options": [
+     "Más dinero",
+     "Más respeto",
+     "Que no vengan"
+    ],
+    "answer": 1
+   }
+  ],
+  "talk": [
+   "¿Qué efectos positivos y negativos tiene el turismo en tu país?",
+   "¿Cómo se puede viajar con más respeto?",
+   "¿Venderías tu negocio a una gran empresa?"
+  ]
+ },
+ {
+  "id": "mexico-b1-oaxaca",
+  "level": "B1",
+  "world": "México",
+  "worldPath": "/mexico",
+  "lessonId": 210,
+  "title": "La Guelaguetza de verdad",
+  "place": "Una calle de Oaxaca",
+  "context": "Dos amigos discuten si vale la pena pagar la entrada de la Guelaguetza o ir a la versión popular.",
+  "src": "/audio/escucha-3d-libre/mexico-b1-oaxaca.mp3",
+  "seconds": 47,
+  "speakers": [
+   {
+    "name": "Rodrigo",
+    "country": "El Salvador"
+   },
+   {
+    "name": "Marisol",
+    "country": "México"
+   },
+   {
+    "name": "Juan",
+    "country": "Costa Rica"
+   }
+  ],
+  "lines": [
+   {
+    "s": 2,
+    "text": "Las entradas para el auditorio cuestan casi dos mil pesos. Es una locura."
+   },
+   {
+    "s": 1,
+    "text": "Es que los turistas las compran meses antes. Muchas familias de aquí ya no pueden ir a su propia fiesta."
+   },
+   {
+    "s": 0,
+    "text": "Pero el dinero sirve para pagar a los bailarines, ¿no?"
+   },
+   {
+    "s": 1,
+    "text": "En parte sí. Por eso yo bailo en el auditorio. Pero mañana también bailo gratis en la Guelaguetza popular, en el barrio de mi abuela."
+   },
+   {
+    "s": 2,
+    "text": "¿Y no es lo mismo?"
+   },
+   {
+    "s": 1,
+    "text": "Los bailes son iguales. Lo que cambia es el ambiente. Allá la gente comparte comida, los niños se meten a bailar y nadie mira el reloj. Eso es la Guelaguetza: compartir."
+   },
+   {
+    "s": 0,
+    "text": "Entonces voy a la de tu barrio. Y llevo pan de yema para compartir."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Cuánto cuestan las entradas para el auditorio?",
+    "options": [
+     "Doscientos pesos",
+     "Casi dos mil pesos",
+     "Son gratis"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Por qué muchas familias locales no pueden ir?",
+    "options": [
+     "Porque trabajan ese día",
+     "Porque los turistas compran las entradas antes",
+     "Porque no les interesa"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Dónde baila Marisol mañana?",
+    "options": [
+     "En el auditorio",
+     "En un hotel",
+     "En el barrio de su abuela"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Qué significa la Guelaguetza, según Marisol?",
+    "options": [
+     "Compartir",
+     "Bailar",
+     "Celebrar la cosecha"
+    ],
+    "answer": 0
+   }
+  ],
+  "talk": [
+   "¿Qué fiesta de tu país se ha vuelto demasiado turística?",
+   "¿Pagarías mucho dinero por un espectáculo tradicional?",
+   "¿Qué llevarías para compartir en una fiesta de barrio?"
+  ]
+ }
+]

@@ -1820,6 +1820,152 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["preterito-perfecto", "indefinido-e-imperfecto", "a2", "b1"],
   },
+  {
+    slug: "como-ensenar-el-imperativo",
+    path: `${GUIAS_PATH}/como-ensenar-el-imperativo`,
+    title: "Cómo enseñar el imperativo en ELE: secuencia, errores y actividades",
+    description:
+      "Cómo enseñar el imperativo afirmativo y negativo: qué va primero, tú y usted, pronombres pegados, errores típicos, actividades y una clase gratis de A2.",
+    h1: "Cómo enseñar el imperativo en ELE: de «pasa, siéntate» al imperativo negativo",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "El imperativo aparece en el aula desde el primer día («escucha», «repite», «abre el libro»), pero cuando llega la hora de enseñarlo se convierte en un bloque de tablas: afirmativo, negativo, tú, usted, irregulares y pronombres. El resultado es conocido: el alumno dice «no come eso», «dame lo» o evita el imperativo y lo cambia todo por «puedes…». Esta guía propone una secuencia concreta de A2 a B1, una forma de presentar cada paso sin tablas eternas, los errores que vas a ver y las clases, fichas y ejercicios de Material ELE para trabajarlo.",
+    keywords: ["cómo enseñar el imperativo", "imperativo ELE", "actividades imperativo", "ejercicios imperativo", "imperativo afirmativo y negativo", "imperativo con pronombres", "imperativo para extranjeros"],
+    published: "2026-11-15",
+    lessonIds: [358, 145, 365, 376, 396, 402],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: el imperativo sirve para cuatro cosas",
+        blocks: [
+          { type: "p", text: "Muchos alumnos creen que el imperativo es solo para dar órdenes, y por eso les suena brusco y lo evitan. Conviene empezar por ahí: **en español el imperativo se usa todo el tiempo y casi nunca es una orden**. Sirve para invitar («pasa, siéntate»), para dar instrucciones («gira a la derecha»), para aconsejar («prueba el pescado») y para pedir algo con confianza («pásame la sal, por favor»)." },
+          { type: "p", text: "Si la clase empieza por esos cuatro usos, el alumno entiende para qué necesita la forma antes de ver la tabla. Y entiende algo más: la cortesía en español no depende de evitar el imperativo, sino del tono, de «por favor» y de elegir bien entre tú y usted." },
+          { type: "p", text: "La página de [imperativo](/material-ele/imperativo) de Material ELE resume las formas con actividades listas para usar, y el tema de [gramática del imperativo](/material-ele/gramatica/imperativo) reúne todas las clases por nivel. Las funciones relacionadas tienen página propia: [dar órdenes e instrucciones](/material-ele/funciones/dar-ordenes-e-instrucciones) y [dar consejos y recomendaciones](/material-ele/funciones/dar-consejos-y-recomendaciones)." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar y en qué orden",
+        blocks: [
+          { type: "p", text: "El imperativo se trabaja sobre todo en A2 y se completa en B1. Este orden separa las dificultades para que cada clase tenga una sola novedad." },
+        ],
+        subsections: [
+          {
+            title: "Paso 1: afirmativo de tú con verbos regulares",
+            blocks: [
+              { type: "p", text: "La forma de tú es la más fácil de todas: **es igual a la tercera persona del presente**. «Él habla» y «habla más despacio»; «ella come» y «come algo». El alumno ya conoce esa forma, así que la clase puede dedicarse a usarla: instrucciones para llegar a un sitio, pasos de una receta, consejos para un amigo que visita la ciudad." },
+              { type: "p", text: "La ficha de [imperativo: instrucciones afirmativas y negativas](/material-ele/ficha/imperativo) acompaña este paso, y en [imperativo para A2](/material-ele/gramatica/imperativo/a2) están las clases del nivel." },
+            ],
+          },
+          {
+            title: "Paso 2: los ocho irregulares de tú",
+            blocks: [
+              { type: "p", text: "Son pocos y muy frecuentes: **di, haz, ve, pon, sal, sé, ten y ven**. No hace falta una regla; hace falta oírlos muchas veces dentro de frases útiles." },
+              { type: "ol", items: [
+                "Presenta cada uno en una frase de la vida real: «ven aquí», «ten cuidado», «pon la mesa», «sal de ahí», «haz la cama», «di la verdad».",
+                "Jueguen a «Simón dice» con esas ocho formas: el cuerpo ayuda a fijarlas.",
+                "Recíclalos como instrucciones de clase durante las semanas siguientes: «ven a la pizarra», «di otra frase».",
+              ] },
+            ],
+          },
+          {
+            title: "Paso 3: usted y ustedes",
+            blocks: [
+              { type: "p", text: "Para usted cambia la vocal: los verbos en -ar toman -e («hable, pase, espere») y los verbos en -er e -ir toman -a («coma, abra, escriba»). Para ustedes se añade una -n. Los contextos naturales son una farmacia, un hotel, una oficina o las indicaciones a un desconocido en la calle. El tema de [registro y cortesía](/material-ele/gramatica/registro-y-cortesia) ayuda a decidir cuándo usar cada tratamiento." },
+            ],
+          },
+          {
+            title: "Paso 4: el imperativo negativo",
+            blocks: [
+              { type: "p", text: "Aquí está la dificultad real, porque para tú la forma cambia: «habla» pero «no hables»; «come» pero «no comas». La explicación más corta es esta: **el negativo de tú es la forma de usted con una -s**. «Hable» pasa a «no hables»; «coma» pasa a «no comas». Si el paso 3 está asentado, el negativo no necesita una tabla nueva." },
+              { type: "p", text: "Un buen contexto son las normas: lo que se puede y no se puede hacer en un piso compartido, en un museo o en un parque. La actividad [Las reglas de la casa](/material-ele/actividad/las-reglas-de-la-casa) del banco trabaja exactamente eso." },
+            ],
+          },
+          {
+            title: "Paso 5: el imperativo con pronombres",
+            blocks: [
+              { type: "p", text: "La regla tiene dos mitades y conviene verlas juntas: **en afirmativo, el pronombre va pegado detrás («dímelo», «siéntate», «cómpralo»); en negativo, va delante y separado («no me lo digas», «no te sientes», «no lo compres»)**. La tilde aparece porque la palabra se alarga, y es mejor mostrarla que explicarla." },
+              { type: "p", text: "La ficha sobre la [posición de pronombres con infinitivo e imperativo](/material-ele/ficha/posicion-de-pronombres-con-infinitivo-e) trabaja este paso, y la guía [cómo enseñar los pronombres de objeto](/material-ele/guia/como-ensenar-pronombres-de-objeto) explica qué debe saber el alumno antes de llegar aquí." },
+            ],
+          },
+          {
+            title: "Paso 6: en B1, la conexión con el subjuntivo",
+            blocks: [
+              { type: "p", text: "Cuando el alumno llega al presente de subjuntivo descubre que ya conocía sus formas: son las del imperativo de usted y las del negativo. Dilo en voz alta en clase, porque quita miedo al subjuntivo. La ficha de [imperativo y peticiones indirectas con subjuntivo](/material-ele/ficha/imperativo-y-peticiones-indirectas-con-subjuntivo) une los dos temas («ven» frente a «te pido que vengas»), y en [imperativo para B1](/material-ele/gramatica/imperativo/b1) están las clases del nivel. La guía [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo) sigue desde ahí." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "alternativas",
+        title: "Otras formas de pedir: cuándo no usar el imperativo",
+        blocks: [
+          { type: "p", text: "Enseñar el imperativo también es enseñar sus alternativas. El alumno necesita un pequeño abanico para elegir según la situación." },
+          { type: "ul", items: [
+            "**¿Puedes…? / ¿Podría…?** para pedir un favor a alguien que no tiene obligación de hacerlo.",
+            "**Infinitivo** en carteles e instrucciones escritas: «no fumar», «empujar».",
+            "**Se impersonal** en recetas y manuales: «se cortan las cebollas», «se añade sal».",
+            "**Presente** para instrucciones orales paso a paso: «primero abres la aplicación, después eliges el idioma».",
+          ] },
+          { type: "p", text: "La ficha del [se impersonal para instrucciones](/material-ele/ficha/se-impersonal-introductorio-instrucciones) cubre el tercer caso. Un ejercicio que funciona bien es dar la misma instrucción de tres maneras y discutir cuál suena mejor en cada situación." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Errores típicos y cómo corregirlos",
+        blocks: [
+          { type: "p", text: "Estos errores aparecen en casi todos los grupos. La corrección más eficaz casi nunca es repetir la regla." },
+          { type: "ul", items: [
+            "**«No come eso», «no habla tan rápido».** Usa la forma afirmativa en el negativo. Corrección: «¿cómo se lo dices a un señor mayor?» («no coma»), y después «ahora añade una -s».",
+            "**«Dame lo», «no dímelo».** Coloca mal el pronombre. Corrección: escribe los dos modelos en la pizarra, «dímelo» y «no me lo digas», y deja que el alumno compare antes de repetir.",
+            "**«Pone la mesa», «hace la cama».** Regulariza los irregulares de tú. Corrección: vuelve a las ocho formas cortas con un juego de un minuto al empezar la clase.",
+            "**«Sientate», «digame».** Olvida la tilde al escribir. Corrección: lee la palabra en voz alta con el acento en otro lugar para que oiga la diferencia.",
+            "**«¿Puedes abrir la ventana?» para todo.** Evita el imperativo porque le suena brusco. Corrección: muestra diálogos reales entre amigos y en una tienda, y pide que cuente cuántos imperativos hay.",
+          ] },
+          { type: "p", text: "Para practicar con corrección inmediata, el [ejercicio de imperativo con soluciones](/material-ele/ejercicio/imperativo) se puede proyectar o mandar como tarea, y en [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) hay más del mismo nivel." },
+        ],
+      },
+      {
+        id: "actividades",
+        title: "Actividades que hacen hablar",
+        blocks: [
+          { type: "p", text: "El imperativo se aprende haciendo que alguien haga algo. Estas actividades funcionan en clases individuales por videollamada y en grupo." },
+          { type: "ol", items: [
+            "**El robot.** Un alumno guía a otro, o al profesor, para dibujar algo o moverse por la sala solo con imperativos. Si la instrucción no es clara, el robot se equivoca.",
+            "**La receta en directo.** El alumno explica una receta sencilla paso a paso mientras el profesor finge cocinarla. Está en el banco como [La receta en directo](/material-ele/actividad/la-receta-en-directo).",
+            "**Cómo llegar.** Con un mapa compartido en pantalla, el alumno da indicaciones desde un punto a otro: «sigue recto, gira a la izquierda, cruza la plaza».",
+            "**Consejos para un viaje.** Un amigo visita la ciudad del alumno: qué ver, qué probar y qué evitar. La actividad [Consejos para un viaje](/material-ele/actividad/consejos-para-un-viaje) trae frases de apoyo y respuesta modelo.",
+            "**El cartel.** En parejas, escriben las normas de un lugar inventado (un gimnasio para gatos, una biblioteca nocturna) y las presentan en afirmativo y negativo.",
+          ] },
+          { type: "p", text: "Si buscas más ideas con pasos y duración, el [banco de actividades](/material-ele/actividades) las ordena por tema, y los [juegos para la clase de español](/material-ele/juegos-para-clase-de-espanol) incluyen varios que se adaptan al imperativo." },
+        ],
+      },
+      {
+        id: "clase",
+        title: "Una clase de 45 minutos, paso a paso",
+        blocks: [
+          { type: "p", text: "Este plan sirve para la primera clase de imperativo afirmativo en A2." },
+          { type: "ol", items: [
+            "**Calentamiento (5 min).** Da instrucciones de clase y pide al alumno que las cumpla: «levanta la mano», «escribe tu nombre», «di una palabra con erre».",
+            "**Descubrimiento (8 min).** Muestra un diálogo corto en el que alguien recibe a un invitado. El alumno subraya las formas y nota que son iguales al presente de él o ella.",
+            "**Irregulares (7 min).** Las ocho formas cortas, cada una en una frase útil, y una ronda rápida de «Simón dice».",
+            "**Práctica guiada (10 min).** Indicaciones con un mapa en pantalla: el profesor sigue la ruta que el alumno dicta.",
+            "**Producción (12 min).** La receta en directo o los consejos para un viaje.",
+            "**Cierre (3 min).** Cada alumno da un consejo al grupo para aprender español.",
+          ] },
+          { type: "p", text: "En SpanishCue hay una clase gratis de imperativo afirmativo de A2 que se abre sin registro desde la página de [imperativo](/material-ele/imperativo#clases), con teoría, audio y práctica para proyectar. Para preparar el resto del nivel, la página de [A2](/material-ele/a2) ordena todo el material, las [fichas de gramática](/material-ele/fichas) se imprimen o se proyectan, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña el imperativo?", answer: "Sobre todo en A2: primero el afirmativo de tú, después los irregulares, usted y ustedes, el negativo y los pronombres. En B1 se conecta con el presente de subjuntivo y las peticiones indirectas." },
+      { question: "¿Qué se enseña primero, el imperativo afirmativo o el negativo?", answer: "El afirmativo de tú, porque es igual a la tercera persona del presente y el alumno ya la conoce. El negativo llega después de usted, porque el negativo de tú es la forma de usted con una -s." },
+      { question: "¿Cómo explicar el imperativo con pronombres?", answer: "Con dos modelos juntos: en afirmativo el pronombre va pegado detrás, como en dímelo o siéntate; en negativo va delante y separado, como en no me lo digas o no te sientes." },
+      { question: "¿Cuáles son los imperativos irregulares de tú?", answer: "Ocho formas cortas y muy frecuentes: di, haz, ve, pon, sal, sé, ten y ven. Se aprenden mejor dentro de frases útiles que en una lista." },
+      { question: "¿Hay una clase gratis de imperativo?", answer: "Sí. La clase interactiva de imperativo afirmativo de A2 de SpanishCue se abre gratis, y en Material ELE hay actividades, un ejercicio con soluciones y fichas de muestra, todo sin registro." },
+    ],
+    related: ["imperativo", "pronombres-de-objeto", "subjuntivo", "a2"],
+  },
 ];
 
 /** «Cómo enseñar…» guides that belong to a grammar topic page: the topic is

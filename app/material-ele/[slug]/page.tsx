@@ -6,6 +6,7 @@ import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLess
 import { pageDates } from "../indice";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
 import { teachingGuidesForTopic } from "../guias";
+import { EleFreeAudios, freeAudioSamples } from "../audios";
 import { TemaGroupIndexPage } from "../tema-group-page";
 import { temaGroupById, temaLevelsForTopic, temasByGroup, type TemaGroupId } from "../temas";
 import styles from "../../growth/growth.module.css";
@@ -96,6 +97,8 @@ export default async function ElePage({ params }: Props) {
             <p><Link className={styles.textLink} href={PRICING_PATH}>Desbloquear todas las clases →</Link></p>
           </Section>
           </div>
+
+          {page.slug === "comprension-auditiva" ? <div className={print.noPrint}><EleFreeAudios audios={freeAudioSamples()} pathname={page.path} title="Audios gratis para probar: A1, A2 y B1" intro="Tres audios para escuchar ahora, sin registro, con preguntas, respuestas y transcripción. En cada página de nivel hay más." /></div> : null}
 
           {page.kind === "topic" && levelPages.length ? (
             <div className={print.noPrint}>
