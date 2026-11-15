@@ -36,3 +36,10 @@ test('worksheets are indexed: sitemap, index, public and edge-cached',()=>{
   assert.equal(m.isSearchPrivatePath(path),false);assert.equal(m.isEdgeCacheablePath(path),true);
  }
 });
+
+test('fichasForLessons keeps the given order, skips classes without a ficha and respects the limit',()=>{
+ const ids=m.fichaPages.slice(0,20).map(p=>p.id);
+ assert.deepEqual(m.fichasForLessons([ids[3],-1,ids[0]]).map(p=>p.id),[ids[3],ids[0]]);
+ assert.equal(m.fichasForLessons(ids).length,12);
+ assert.equal(m.fichasForLessons(ids,5).length,5);
+});

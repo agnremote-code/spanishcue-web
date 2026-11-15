@@ -9,6 +9,7 @@ import { teachingGuidesForTopic } from "../guias";
 import { EleFreeAudios, freeAudioSamples } from "../audios";
 import { TemaGroupIndexPage } from "../tema-group-page";
 import { temaGroupById, temaLevelsForTopic, temasByGroup, type TemaGroupId } from "../temas";
+import { EleFichaLinks } from "../ficha-links";
 import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
 import print from "../print.module.css";
@@ -40,6 +41,7 @@ export default async function ElePage({ params }: Props) {
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
   const levelPages = temaLevelsForTopic(page.slug);
+  const fichaIds = [...new Set([...page.lessonIds, ...(temasByGroup("gramatica").find((tema) => tema.slug === page.slug)?.lessonIds ?? [])])];
   return (
     <>
       <main className={styles.page} lang="es">
@@ -97,6 +99,8 @@ export default async function ElePage({ params }: Props) {
             <p><Link className={styles.textLink} href={PRICING_PATH}>Desbloquear todas las clases →</Link></p>
           </Section>
           </div>
+
+          {page.kind === "topic" ? <div className={print.noPrint}><EleFichaLinks lessonIds={fichaIds} name={page.label.toLowerCase()} /></div> : null}
 
           {page.slug === "comprension-auditiva" ? <div className={print.noPrint}><EleFreeAudios audios={freeAudioSamples()} pathname={page.path} title="Audios gratis para probar: A1, A2 y B1" intro="Tres audios para escuchar ahora, sin registro, con preguntas, respuestas y transcripción. En cada página de nivel hay más." /></div> : null}
 

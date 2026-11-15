@@ -9,6 +9,7 @@ import ShareSnippet from "../../../ShareSnippet";
 import { EleFreeAudios, freeAudiosForLevel } from "../../../audios";
 import { TemaCards, TemaGroupCards } from "../../../tema-components";
 import { retiredTemaLevelPaths, temaGroupById, temaLevelPageByPath, temaLevelPages, temaLevelsOf } from "../../../temas";
+import { EleFichaLinks } from "../../../ficha-links";
 import styles from "../../../../growth/growth.module.css";
 
 type Props = { params: Promise<{ slug: string; tema: string; nivel: string }> };
@@ -64,6 +65,7 @@ export default async function TemaLevelRoute({ params }: Props) {
           <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro={page.order}>
             <EleLessonGrid lessons={lessons} />
           </Section>
+          <EleFichaLinks lessonIds={page.lessonIds} name={`${lower} ${page.level}`} />
           {page.goals.length ? (
             <Section title={`Qué aprende un alumno de ${page.level}`} intro="Objetivos tomados de las propias clases.">
               <div className={styles.panel}><ul>{page.goals.map((goal) => <li key={goal}>{goal}</li>)}</ul></div>

@@ -7,6 +7,7 @@ import { MATERIAL_ELE_PATH } from "../../data";
 import { lessonCards } from "../../../growth/lessons";
 import { FICHAS_PATH, fichaBySlug, fichaPages } from "../../fichas";
 import { fichaContent } from "../../ficha-content";
+import { temaPages } from "../../temas";
 import { Bold } from "../../ficha-components";
 import PrintButton from "../../PrintButton";
 import ShareSnippet from "../../ShareSnippet";
@@ -27,6 +28,7 @@ export default async function FichaPage({ params }: Props) {
   const content = page ? await fichaContent(page.id, page.sample) : undefined;
   if (!page || !content) notFound();
   const siblings = fichaPages.filter((other) => other.level === page.level && other.slug !== page.slug).slice(0, 12);
+  const temas = temaPages.filter((tema) => tema.group === "gramatica" && tema.lessonIds.includes(page.id)).slice(0, 4);
   const lessonHref = lessonCards([page.id])[0]?.href ?? page.lessonPath;
   const faq = [
     { question: "¿La ficha es gratis?", answer: "Sí. Se abre sin registro, se imprime o se guarda en PDF con el botón de la página y se puede proyectar en pantalla compartida." },
@@ -126,6 +128,13 @@ export default async function FichaPage({ params }: Props) {
               <Section title={`Más fichas de ${page.level}`}>
                 <div className={styles.cardGrid}>{siblings.map((sibling) => <Link className={styles.levelCard} key={sibling.path} href={sibling.path}><em>Ficha {sibling.level}</em><b>{sibling.name}</b></Link>)}</div>
                 <p><Link href={FICHAS_PATH}>Todas las fichas de gramática</Link></p>
+              </Section>
+            </div>
+          ) : null}
+          {temas.length ? (
+            <div className={print.noPrint}>
+              <Section title="Este tema en Material ELE" intro="Todas las clases, actividades y fichas del mismo tema.">
+                <div className={styles.cardGrid}>{temas.map((tema) => <Link className={styles.levelCard} key={tema.path} href={tema.path}><em>{tema.parent}</em><b>{tema.name}</b><span>{tema.lessonIds.length} clases</span></Link>)}</div>
               </Section>
             </div>
           ) : null}
