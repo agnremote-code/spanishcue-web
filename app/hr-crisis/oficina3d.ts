@@ -338,7 +338,11 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   let parrotAt = 6, chatterAt = 4;
   const CHATTER = ['¿Alguien sabe dónde está el director?', '¡Otra vez la impresora!', '¿Me pagan este mes?', 'Tengo tres reuniones a la vez', '¿Quién se comió mi yogur?', 'El wifi no funciona', '¡Me han cambiado la mesa!'];
 
-  if (real) fitSurfaces(world);
+  if (real) {
+    fitSurfaces(world);
+    // Furniture and walls cast real shadows (not glass, signs or the ceiling).
+    statics.traverse(o => { const m = o as THREE.Mesh; const mat = m.material as THREE.MeshStandardMaterial; if (m.isMesh && mat.isMeshStandardMaterial && !mat.transparent && mat !== panel && mat !== windowMat) m.castShadow = true; });
+  }
   batchStatic(statics, []);
 
   function animate(t: number, dt: number, px: number, pz: number) {

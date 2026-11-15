@@ -5,6 +5,10 @@
 // in the Worker bundle) and comes from Poly Haven (CC0).
 import * as THREE from 'three';
 import { HDRLoader } from 'three/addons/loaders/HDRLoader.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 
 const BASE = '/mundo-real/';
 const loader = new THREE.TextureLoader();
@@ -94,4 +98,35 @@ export function disposeSurfaces() {
   for (const t of textures.values()) t.dispose();
   for (const m of materials.values()) m.dispose();
   textures.clear(); materials.clear();
+}
+
+/** Render pipeline with ambient occlusion: the soft dark contact where things meet (chair legs, corners, a chin over a collar). */
+export function createRealComposer(renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.Camera, width: number, height: number) {
+  const composer = new EffectComposer(renderer);
+  composer.addPass(new RenderPass(scene, camera));
+  const ao = new GTAOPass(scene, camera, width, height);
+  ao.blendIntensity = 1;
+  ao.updateGtaoMaterial({ radius: 0.45, distanceExponent: 1.6, thickness: 1.2, scale: 1.1, samples: 8, distanceFallOff: 1, screenSpaceRadius: false });
+  ao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 6, rings: 2, samples: 8 });
+  composer.addPass(ao);
+  composer.addPass(new OutputPass());
+  return { composer, ao };
+}
+
+/** Ceiling light for interiors: one soft-shadowed light from above that follows the player, on top of the HDRI. */
+export function createCeilingLight(scene: THREE.Scene, size = 2048, reach = 16) {
+  const light = new THREE.DirectionalLight('#fff4e4', 2.2);
+  light.castShadow = true;
+  light.shadow.mapSize.set(size, size);
+  Object.assign(light.shadow.camera, { left: -reach, right: reach, top: reach, bottom: -reach, near: 1, far: 30 });
+  light.shadow.bias = -0.0003; light.shadow.normalBias = 0.025; light.shadow.radius = 5; light.shadow.blurSamples = 12;
+  scene.add(light, light.target);
+  const follow = (x: number, z: number) => {
+    // Snap to shadow texels so the shadow edges do not shimmer while walking.
+    const step = (reach * 2) / size * 4;
+    const sx = Math.round(x / step) * step, sz = Math.round(z / step) * step;
+    light.target.position.set(sx, 0, sz); light.position.set(sx + 2.2, 14, sz + 3.2);
+  };
+  follow(0, 0);
+  return { light, follow };
 }
