@@ -63,7 +63,11 @@ export default function World3D(props: WorldProps) {
     if (!host) return;
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760;
     // Realistic mode (photographic surfaces, HDRI light, soft shadows, ambient occlusion): opt-in with ?real while it is measured.
-    const real = !low && new URLSearchParams(window.location.search).has('real');
+    const realParam = new URLSearchParams(window.location.search).get('real');
+    const real = !low && realParam !== null;
+    // Measured on the owner's M4 (2028x898, 2026-11-15): plain 5.9 ms of GPU per frame, realistic 7.5 ms,
+    // and screen-space occlusion alone adds 8.4 ms. So occlusion stays off unless asked for with ?real=ao.
+    const realAo = real && realParam === 'ao';
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
     try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
@@ -110,7 +114,7 @@ export default function World3D(props: WorldProps) {
     scene.add(key, key.target);
     let composer: EffectComposer | null = null;
     if (!low) {
-      if (real) composer = createRealComposer(renderer, scene, camera, host.clientWidth || 1, host.clientHeight || 1).composer;
+      if (realAo) composer = createRealComposer(renderer, scene, camera, host.clientWidth || 1, host.clientHeight || 1).composer;
       else {
         composer = new EffectComposer(renderer);
         composer.addPass(new RenderPass(scene, camera));
