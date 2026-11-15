@@ -78,6 +78,8 @@ export async function generateMetadata(): Promise<Metadata> {
       apple: "/apple-touch-icon.png",
     },
     manifest: "/manifest.webmanifest",
+    // Bing Webmaster Tools ownership (ChatGPT search reads the Bing index). Public value, not a secret; keep it or the site loses verification.
+    verification: { other: { "msvalidate.01": "B1C9538B7AB87595B7CADD8319423320" } },
     robots: isSearchPrivatePath(pathname)
       ? { index: false, follow: false }
       : { index: true, follow: true },
