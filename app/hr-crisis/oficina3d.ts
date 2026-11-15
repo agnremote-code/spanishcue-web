@@ -6,7 +6,7 @@
 import * as THREE from 'three';
 import { batchStatic } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, randomLook, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
-import { fitSurfaces, surface } from '../mundo-real/real3d';
+import { fitSurfaces, placeFurniture, surface, type Placement } from '../mundo-real/real3d';
 import { CAST, CEILING, CROWD, DOORS, ENTRANCE, FURNITURE, ROOMS, SPOTS, WALKERS, WALL, WALLS, crowdSeated, walkerAt } from './oficina.mjs';
 
 export type Npc = { key: string; person: Person; x: number; z: number; heading: number; seated: boolean; baseMood: string; seed: number; cast?: string; angryUntil?: number; body?: string };
@@ -87,6 +87,12 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   const statics = new THREE.Group();
   world.add(statics);
   const keep: THREE.Object3D[] = [];
+  // Realistic mode: chairs, desks and sofas are photographed models. Their simple
+  // versions go to `soft` and stay only until (or unless) the models arrive.
+  const soft = new THREE.Group();
+  if (real) world.add(soft);
+  const simple = real ? soft : statics;
+  const muebles: Placement[] = [];
 
   // ------------------------------------------------------------ floors, ceiling, walls
   for (const r of ROOMS) {
@@ -144,6 +150,10 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   // ------------------------------------------------------------ furniture
   const wood = real ? surface('wood_table_001', '#d9b48c') : std('#b8916a', 0.6), lightWood = real ? surface('wood_table_001', '#f0dcc0') : std('#d8c0a0', 0.6), metal = std('#9aa0aa', 0.35, 0.6), dark = std('#2c2f38', 0.6), white = std('#f4f4f2', 0.6);
   const screens = SCREEN_TEXTS.map((t, i) => new THREE.MeshBasicMaterial({ map: label(t, i % 2 ? '#1a3a6a' : '#0d2a1a', i % 2 ? '#bfe0ff' : '#7aff9a', 512, 300, 'bold 52px monospace') }));
+  const seat = (x: number, z: number, heading: number) => {
+    chair(simple, x, z, heading);
+    muebles.push({ model: 'silla', x, z, rotY: heading, fit: [0.5, 0.92, 0.56] });
+  };
   let coffee: THREE.Vector3 | null = null;
   const printers: THREE.Vector3[] = [];
   let parrot: THREE.Group | null = null;
@@ -164,8 +174,9 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
       }
       case 'sofa': {
         const w = turned ? f.w : f.w, d = turned ? f.d : f.d;
-        box(statics, w, 0.42, d, std('#3a6a8a', 0.9), f.x, 0.21, f.z);
-        box(statics, 0.22, 0.4, d, std('#2f5a78', 0.9), f.x + (f.rot === 1 ? -w / 2 + 0.11 : w / 2 - 0.11), 0.62, f.z);
+        box(simple, w, 0.42, d, std('#3a6a8a', 0.9), f.x, 0.21, f.z);
+        box(simple, 0.22, 0.4, d, std('#2f5a78', 0.9), f.x + (f.rot === 1 ? -w / 2 + 0.11 : w / 2 - 0.11), 0.62, f.z);
+        muebles.push({ model: 'sofa', x: f.x, z: f.z, rotY: f.rot === 1 ? Math.PI / 2 : -Math.PI / 2, fit: [d, 0.8, w] });
         break;
       }
       case 'mesita': {
@@ -185,9 +196,11 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
       }
       case 'mesa': case 'mesa-larga': case 'escritorio': case 'isla': case 'escritorio-director': {
         const top = f.type === 'escritorio-director' ? std('#5a3a24', 0.4) : f.type === 'isla' ? white : wood;
-        box(statics, f.w, 0.05, f.d, top, f.x, f.top - 0.025, f.z);
+        const desk = f.type === 'escritorio' ? simple : statics;
+        if (f.type === 'escritorio') muebles.push({ model: 'escritorio', x: f.x, z: f.z, rotY: Math.PI, fit: [f.w, f.top, f.d] });
+        box(desk, f.w, 0.05, f.d, top, f.x, f.top - 0.025, f.z);
         if (f.type === 'escritorio-director') box(statics, f.w - 0.1, f.top - 0.05, 0.06, std('#4a2e1c', 0.5), f.x, (f.top - 0.05) / 2, f.z + f.d / 2 - 0.05);
-        for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) box(statics, 0.05, f.top - 0.05, 0.05, metal, f.x + sx * (f.w / 2 - 0.06), (f.top - 0.05) / 2, f.z + sz * (f.d / 2 - 0.06));
+        for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) box(desk, 0.05, f.top - 0.05, 0.05, metal, f.x + sx * (f.w / 2 - 0.06), (f.top - 0.05) / 2, f.z + sz * (f.d / 2 - 0.06));
         if (f.screen) monitor(statics, f.x, f.top, f.z - f.d / 2 + 0.2, 0, screens[i % screens.length]);
         if (f.type === 'isla') {
           monitor(statics, f.x - 0.9, f.top, f.z - 0.35, 0, screens[(i + 1) % screens.length]); monitor(statics, f.x + 0.9, f.top, f.z - 0.35, 0, screens[(i + 3) % screens.length]);
@@ -195,7 +208,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
           // Paper chaos on the desks.
           for (let k = 0; k < 6; k++) { const p = box(statics, 0.21, 0.004, 0.29, white, f.x - 1.3 + k * 0.5, f.top + 0.003 + k * 0.001, f.z + ((k % 3) - 1) * 0.2); p.rotation.y = k * 0.7; }
         }
-        if (f.type === 'mesa-larga') for (let k = 0; k < 4; k++) { chair(statics, f.x - f.w / 2 - 0.45, f.z - 2.2 + k * 1.5, Math.PI / 2); chair(statics, f.x + f.w / 2 + 0.45, f.z - 2.2 + k * 1.5, -Math.PI / 2); }
+        if (f.type === 'mesa-larga') for (let k = 0; k < 4; k++) { seat(f.x - f.w / 2 - 0.45, f.z - 2.2 + k * 1.5, Math.PI / 2); seat(f.x + f.w / 2 + 0.45, f.z - 2.2 + k * 1.5, -Math.PI / 2); }
         if (f.sign) { const s = new THREE.Mesh(new THREE.PlaneGeometry(0.9, 0.3), new THREE.MeshBasicMaterial({ map: label(f.sign, '#fff6c0', '#7a3a1a', 640, 200, 'bold 44px Arial') })); s.position.set(f.x, f.top + 0.2, f.z + f.d / 2 - 0.1); s.rotation.x = -0.4; statics.add(s); }
         if (f.type === 'escritorio-director') { const s = new THREE.Mesh(new THREE.PlaneGeometry(0.6, 0.14), new THREE.MeshBasicMaterial({ map: label('DIRECTOR GENERAL', '#c8a050', '#2a1a10', 512, 112, 'bold 46px Georgia') })); s.position.set(f.x, f.top + 0.08, f.z + f.d / 2 - 0.08); s.rotation.x = -0.6; statics.add(s); }
         break;
@@ -266,7 +279,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
     const seated = Boolean((c as { seated?: boolean }).seated);
     const person = makePerson(c.look as Look, c.pose, seated, c.mood);
     person.root.position.set(c.x, 0, c.z); person.root.rotation.y = c.heading;
-    if (seated) chair(statics, c.x - Math.sin(c.heading) * 0.05, c.z - Math.cos(c.heading) * 0.05, c.heading);
+    if (seated) seat(c.x - Math.sin(c.heading) * 0.05, c.z - Math.cos(c.heading) * 0.05, c.heading);
     npcs.push({ key, person, x: c.x, z: c.z, heading: c.heading, seated, baseMood: c.mood, seed: 100 + i * 7, cast: key, body: c.look.body });
   });
   CROWD.forEach((c, i) => {
@@ -277,7 +290,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
     const person = makePerson(look, c.pose, seated, c.cutout ? 'laugh' : c.pose === 'sleep' ? 'sleepy' : undefined);
     person.root.position.set(c.x, 0, c.z); person.root.rotation.y = c.heading;
     if (c.cutout) person.root.scale.z = 0.12; // a cardboard cut-out of the boss «on holiday since 2019»
-    if (seated && Math.abs(c.x) < 23 && !(c.pose === 'read' || c.x < -6.5 && c.z > 13)) chair(statics, c.x, c.z, c.heading);
+    if (seated && Math.abs(c.x) < 23 && !(c.pose === 'read' || c.x < -6.5 && c.z > 13)) seat(c.x, c.z, c.heading);
     npcs.push({ key: `crowd-${i}`, person, x: c.x, z: c.z, heading: c.heading, seated, baseMood: 'neutral', seed: c.seed, body: look.body });
   });
   const movers: Mover[] = WALKERS.map((w, i) => {
@@ -344,6 +357,10 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
     statics.traverse(o => { const m = o as THREE.Mesh; const mat = m.material as THREE.MeshStandardMaterial; if (m.isMesh && mat.isMeshStandardMaterial && !mat.transparent && mat !== panel && mat !== windowMat) m.castShadow = true; });
   }
   batchStatic(statics, []);
+  if (real) {
+    batchStatic(soft, []);
+    placeFurniture(world, muebles, opts.shadows).then(() => { soft.removeFromParent(); soft.traverse(o => (o as THREE.Mesh).geometry?.dispose()); }).catch(() => { /* the simple furniture stays */ });
+  }
 
   function animate(t: number, dt: number, px: number, pz: number) {
     clockNow = t;

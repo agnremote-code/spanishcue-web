@@ -5,6 +5,7 @@
 // in the Worker bundle) and comes from Poly Haven (CC0).
 import * as THREE from 'three';
 import { HDRLoader } from 'three/addons/loaders/HDRLoader.js';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { GTAOPass } from 'three/addons/postprocessing/GTAOPass.js';
@@ -108,6 +109,18 @@ export function createRealComposer(renderer: THREE.WebGLRenderer, scene: THREE.S
   ao.blendIntensity = 1;
   ao.updateGtaoMaterial({ radius: 0.45, distanceExponent: 1.6, thickness: 1.2, scale: 1.1, samples: 8, distanceFallOff: 1, screenSpaceRadius: false });
   ao.updatePdMaterial({ lumaPhi: 10, depthPhi: 2, normalPhi: 3, radius: 6, rings: 2, samples: 8 });
+  // Sprites (labels, speech bubbles, smoke) and glass must not enter the occlusion buffer: they would leave black squares.
+  const hidden: THREE.Object3D[] = [];
+  const internals = ao as unknown as { _overrideVisibility: () => void; _restoreVisibility: () => void };
+  internals._overrideVisibility = () => {
+    scene.traverseVisible(o => {
+      const mesh = o as THREE.Mesh;
+      const material = mesh.material as THREE.Material | undefined;
+      if ((o as THREE.Sprite).isSprite || (o as THREE.Points).isPoints || (o as THREE.Line).isLine || (mesh.isMesh && material && !Array.isArray(material) && material.transparent)) hidden.push(o);
+    });
+    for (const o of hidden) o.visible = false;
+  };
+  internals._restoreVisibility = () => { for (const o of hidden) o.visible = true; hidden.length = 0; };
   composer.addPass(ao);
   composer.addPass(new OutputPass());
   return { composer, ao };
@@ -129,4 +142,62 @@ export function createCeilingLight(scene: THREE.Scene, size = 2048, reach = 16) 
   };
   follow(0, 0);
   return { light, follow };
+}
+
+// ------------------------------------------------------------------ furniture
+
+export type Mueble = 'silla' | 'escritorio' | 'sofa';
+/** Where a piece goes. `fit` stretches the model's own box to [width, height, depth] in metres before turning it. */
+export type Placement = { model: Mueble; x: number; z: number; y?: number; rotY?: number; fit?: [number, number, number] };
+
+type Piece = { geometry: THREE.BufferGeometry; material: THREE.Material };
+const models = new Map<Mueble, Promise<{ pieces: Piece[]; box: THREE.Box3 }>>();
+function loadModel(name: Mueble) {
+  let p = models.get(name);
+  if (!p) {
+    p = new GLTFLoader().loadAsync(`${BASE}muebles/${name}.glb`).then(gltf => {
+      const pieces: Piece[] = [];
+      const box = new THREE.Box3();
+      gltf.scene.updateMatrixWorld(true);
+      gltf.scene.traverse(o => {
+        const mesh = o as THREE.Mesh;
+        if (!mesh.isMesh) return;
+        const geometry = mesh.geometry.clone().applyMatrix4(mesh.matrixWorld);
+        geometry.computeBoundingBox();
+        box.union(geometry.boundingBox as THREE.Box3);
+        pieces.push({ geometry, material: mesh.material as THREE.Material });
+      });
+      return { pieces, box };
+    });
+    models.set(name, p);
+  }
+  return p;
+}
+
+/** Photographed furniture (Poly Haven, CC0) drawn as instances: one draw call per model part, however many chairs there are. */
+export async function placeFurniture(parent: THREE.Object3D, placements: Placement[], shadows = true) {
+  const group = new THREE.Group();
+  group.name = 'muebles';
+  const byModel = new Map<Mueble, Placement[]>();
+  for (const p of placements) byModel.set(p.model, [...(byModel.get(p.model) ?? []), p]);
+  const m = new THREE.Matrix4(), q = new THREE.Quaternion(), up = new THREE.Vector3(0, 1, 0), s = new THREE.Vector3(), t = new THREE.Vector3();
+  await Promise.all([...byModel].map(async ([name, list]) => {
+    const { pieces, box } = await loadModel(name);
+    const size = box.getSize(new THREE.Vector3());
+    for (const piece of pieces) {
+      const inst = new THREE.InstancedMesh(piece.geometry, piece.material, list.length);
+      inst.castShadow = shadows; inst.receiveShadow = true;
+      list.forEach((p, i) => {
+        if (p.fit) s.set(p.fit[0] / size.x, p.fit[1] / size.y, p.fit[2] / size.z); else s.set(1, 1, 1);
+        q.setFromAxisAngle(up, p.rotY ?? 0);
+        m.compose(t.set(p.x, p.y ?? 0, p.z), q, s);
+        inst.setMatrixAt(i, m);
+      });
+      inst.instanceMatrix.needsUpdate = true;
+      inst.computeBoundingSphere();
+      group.add(inst);
+    }
+  }));
+  parent.add(group);
+  return group;
 }

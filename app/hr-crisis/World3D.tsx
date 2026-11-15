@@ -10,8 +10,9 @@ import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
-import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, skipHiddenMatrices, worldPixelRatio } from '../noche-abierta/world3d.mjs';
+import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, exposeForQa, skipHiddenMatrices, worldPixelRatio } from '../noche-abierta/world3d.mjs';
 import { BOUNDS, CAST, CEILING, JUMP_SPEED, SPAWN, SPOTS, cameraBlockers, circleStep, roomAt, solidsFor, spotAt, spotFraming } from './oficina.mjs';
+import { createCeilingLight, createRealComposer, loadEnvironment } from '../mundo-real/real3d';
 import { buildOficina, talking as talkingNow, type Npc, type Mover } from './oficina3d';
 import { animateTizia, createTizia, type TiziaGesture, type TiziaMood } from './tizia3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
@@ -61,6 +62,8 @@ export default function World3D(props: WorldProps) {
     const host = mount.current;
     if (!host) return;
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760;
+    // Realistic mode (photographic surfaces, HDRI light, soft shadows, ambient occlusion): opt-in with ?real while it is measured.
+    const real = !low && new URLSearchParams(window.location.search).has('real');
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
     try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
@@ -71,7 +74,7 @@ export default function World3D(props: WorldProps) {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.0;
     renderer.shadowMap.enabled = !low;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type = real ? THREE.VSMShadowMap : THREE.PCFSoftShadowMap;
     renderer.domElement.tabIndex = 0;
     renderer.domElement.setAttribute('aria-label', 'La oficina de Caos y Asociados en 3D. Flechas o WASD para caminar, arrastra para mirar, E para hablar, espacio para saltar, N para el nitro.');
     host.appendChild(renderer.domElement);
@@ -81,7 +84,7 @@ export default function World3D(props: WorldProps) {
     const camera = new THREE.PerspectiveCamera(60, 1, 0.06, 200);
     let building: ReturnType<typeof buildOficina>;
     let hero: ReturnType<typeof createTizia>;
-    try { building = buildOficina(scene, { low, shadows: !low }); hero = createTizia({ pais: live.current.pais }, !low); }
+    try { building = buildOficina(scene, { low, shadows: !low, real }); hero = createTizia({ pais: live.current.pais }, !low); }
     catch (error) {
       console.error(error);
       renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
@@ -93,10 +96,13 @@ export default function World3D(props: WorldProps) {
     const envTarget = pmrem.fromScene(new RoomEnvironment(), 0.04);
     scene.environment = envTarget.texture;
     scene.environmentIntensity = 0.35;
-    const hemi = new THREE.HemisphereLight('#ffffff', '#8a8070', 1.05);
+    const hemi = new THREE.HemisphereLight('#ffffff', real ? '#b0a898' : '#8a8070', real ? 0.35 : 1.05);
     scene.add(hemi);
-    const key = new THREE.DirectionalLight('#fff6ea', 0.8);
-    key.castShadow = !low;
+    const key = new THREE.DirectionalLight('#fff6ea', real ? 0 : 0.8);
+    key.castShadow = !low && !real;
+    const ceilingLight = real ? createCeilingLight(scene) : null;
+    let disposeEnv = () => {};
+    if (real) void loadEnvironment(renderer, scene, 'oficina_512.hdr', 1).then(d => { if (disposed) d(); else disposeEnv = d; });
     key.shadow.mapSize.set(1024, 1024);
     Object.assign(key.shadow.camera, { left: -10, right: 10, top: 10, bottom: -10, near: 0.5, far: 30 });
     key.shadow.bias = -0.0004;
@@ -104,10 +110,14 @@ export default function World3D(props: WorldProps) {
     scene.add(key, key.target);
     let composer: EffectComposer | null = null;
     if (!low) {
-      composer = new EffectComposer(renderer);
-      composer.addPass(new RenderPass(scene, camera));
-      composer.addPass(new OutputPass());
+      if (real) composer = createRealComposer(renderer, scene, camera, host.clientWidth || 1, host.clientHeight || 1).composer;
+      else {
+        composer = new EffectComposer(renderer);
+        composer.addPass(new RenderPass(scene, camera));
+        composer.addPass(new OutputPass());
+      }
     }
+    exposeForQa({ renderer, scene, camera, composer });
 
     // ------------------------------------------------------------ state
     const solids = solidsFor() as { x0: number; x1: number; z0: number; z1: number; top?: number }[];
@@ -137,6 +147,7 @@ export default function World3D(props: WorldProps) {
       hero.root.rotation.y = player.heading;
       key.position.set(player.x - 4, 9, player.z + 5);
       key.target.position.set(player.x, 0, player.z);
+      ceilingLight?.follow(player.x, player.z);
     }
     place();
 
@@ -388,6 +399,8 @@ export default function World3D(props: WorldProps) {
       for (const pass of composer?.passes ?? []) pass.dispose();
       composer?.dispose();
       envTarget.dispose();
+      disposeEnv();
+      ceilingLight?.light.shadow.dispose();
       pmrem.dispose();
       renderer.dispose();
       renderer.forceContextLoss();
