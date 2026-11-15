@@ -6,6 +6,7 @@ import { EleBuyBand, EleFeaturedLesson, EleLessonGrid, ElePageDates, ElePreviewV
 import { pageDates } from "../../../indice";
 import { MATERIAL_ELE_PATH, eleLevels, elePageBySlug } from "../../../data";
 import ShareSnippet from "../../../ShareSnippet";
+import { EleFreeAudios, freeAudiosForLevel } from "../../../audios";
 import { TemaCards, TemaGroupCards } from "../../../tema-components";
 import { retiredTemaLevelPaths, temaGroupById, temaLevelPageByPath, temaLevelPages, temaLevelsOf } from "../../../temas";
 import styles from "../../../../growth/growth.module.css";
@@ -33,6 +34,7 @@ export default async function TemaLevelRoute({ params }: Props) {
   const otherLevels = temaLevelsOf(page.tema).filter((other) => other.level !== page.level);
   const lower = page.name.toLowerCase();
   const topic = elePageBySlug.get(page.slug);
+  const audios = page.group === "formatos" && page.slug === "comprension-auditiva" ? freeAudiosForLevel(page.level) : [];
   const topicGuide = topic?.kind === "topic" ? topic : null;
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
@@ -57,6 +59,7 @@ export default async function TemaLevelRoute({ params }: Props) {
             <ElePageDates dates={dates} />
           </section>
           {preview ? <ElePreviewVideo lesson={preview} pathname={page.path} /> : null}
+          {audios.length ? <EleFreeAudios audios={audios} pathname={page.path} title={`Audio gratis de comprensión auditiva ${page.level}`} intro="Para escuchar ahora, sin registro: el audio, las preguntas con sus respuestas, preguntas para conversar y la transcripción." /> : null}
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
           <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro={page.order}>
             <EleLessonGrid lessons={lessons} />
