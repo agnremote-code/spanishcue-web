@@ -6,6 +6,7 @@
 import * as THREE from 'three';
 import { batchStatic } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, randomLook, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
+import { fitSurfaces, surface } from '../mundo-real/real3d';
 import { CAST, CEILING, CROWD, DOORS, ENTRANCE, FURNITURE, ROOMS, SPOTS, WALKERS, WALL, WALLS, crowdSeated, walkerAt } from './oficina.mjs';
 
 export type Npc = { key: string; person: Person; x: number; z: number; heading: number; seated: boolean; baseMood: string; seed: number; cast?: string; angryUntil?: number; body?: string };
@@ -78,7 +79,8 @@ function plant(g: THREE.Group, x: number, z: number, seed: number) {
 
 const SCREEN_TEXTS = ['ERROR 404: NÓMINA', 'Excel 1998', '¡REUNIÓN YA!', 'Bandeja: 999+', 'actualizando… 3 %'];
 
-export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: boolean }): Oficina {
+export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; real?: boolean }): Oficina {
+  const real = Boolean(opts.real);
   const world = new THREE.Group();
   world.name = 'oficina';
   scene.add(world);
@@ -90,11 +92,14 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   for (const r of ROOMS) {
     const tile = texture(128, 128, c => { c.fillStyle = r.floor; c.fillRect(0, 0, 128, 128); c.strokeStyle = 'rgba(0,0,0,.08)'; c.lineWidth = 2; c.strokeRect(0, 0, 64, 64); c.strokeRect(64, 64, 64, 64); c.strokeRect(64, 0, 64, 64); c.strokeRect(0, 64, 64, 64); }, true);
     tile.repeat.set((r.x1 - r.x0) / 2, (r.z1 - r.z0) / 2);
-    const floor = new THREE.Mesh(new THREE.PlaneGeometry(r.x1 - r.x0, r.z1 - r.z0), new THREE.MeshStandardMaterial({ map: tile, roughness: r.id === 'direccion' ? 0.4 : 0.85 }));
+    const hard = r.id === 'recepcion' || r.id === 'pasillo' || r.id === 'direccion';
+    const floorMat = !real ? new THREE.MeshStandardMaterial({ map: tile, roughness: r.id === 'direccion' ? 0.4 : 0.85 })
+      : hard ? surface('laminate_floor_02', r.id === 'direccion' ? '#8a6248' : '#ffffff') : surface('dirty_carpet', r.floor);
+    const floor = new THREE.Mesh(new THREE.PlaneGeometry(r.x1 - r.x0, r.z1 - r.z0), floorMat);
     floor.rotation.x = -Math.PI / 2; floor.position.set((r.x0 + r.x1) / 2, 0.005, (r.z0 + r.z1) / 2); floor.receiveShadow = true;
     world.add(floor);
   }
-  const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(48, 36), std('#f2f0ec', 0.95));
+  const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(48, 36), real ? surface('ceiling_interior') : std('#f2f0ec', 0.95));
   ceiling.rotation.x = Math.PI / 2; ceiling.position.set(0, CEILING, 0); world.add(ceiling);
   const panel = std('#ffffff', 0.4, 0, { emissive: '#fff6e0', emissiveIntensity: 0.9 });
   const flicker = new THREE.MeshStandardMaterial({ color: '#ffffff', emissive: '#fff6e0', emissiveIntensity: 0.9 });
@@ -104,7 +109,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
     p.rotation.x = Math.PI / 2; p.position.set(x, CEILING - 0.01, z);
     if (x === 3 && z === 5) { flickerPanel = p; world.add(p); keep.push(p); } else statics.add(p);
   }
-  const wallMat = std('#efe9de', 0.92), extMat = std('#e2dccf', 0.9), skirting = std('#8a7a68', 0.7);
+  const wallMat = real ? surface('plastered_wall_04', '#f3eee6') : std('#efe9de', 0.92), extMat = real ? surface('plastered_wall_04', '#e9e2d6') : std('#e2dccf', 0.9), skirting = std('#8a7a68', 0.7);
   const glass = new THREE.MeshStandardMaterial({ color: '#bfe0f0', transparent: true, opacity: 0.28, roughness: 0.05, metalness: 0.1, depthWrite: false });
   for (const [x0, z0, x1, z1, kind] of WALLS as [number, number, number, number, string][]) {
     const len = Math.max(Math.abs(x1 - x0), Math.abs(z1 - z0));
@@ -137,7 +142,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   }
 
   // ------------------------------------------------------------ furniture
-  const wood = std('#b8916a', 0.6), lightWood = std('#d8c0a0', 0.6), metal = std('#9aa0aa', 0.35, 0.6), dark = std('#2c2f38', 0.6), white = std('#f4f4f2', 0.6);
+  const wood = real ? surface('wood_table_001', '#d9b48c') : std('#b8916a', 0.6), lightWood = real ? surface('wood_table_001', '#f0dcc0') : std('#d8c0a0', 0.6), metal = std('#9aa0aa', 0.35, 0.6), dark = std('#2c2f38', 0.6), white = std('#f4f4f2', 0.6);
   const screens = SCREEN_TEXTS.map((t, i) => new THREE.MeshBasicMaterial({ map: label(t, i % 2 ? '#1a3a6a' : '#0d2a1a', i % 2 ? '#bfe0ff' : '#7aff9a', 512, 300, 'bold 52px monospace') }));
   let coffee: THREE.Vector3 | null = null;
   const printers: THREE.Vector3[] = [];
@@ -333,6 +338,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   let parrotAt = 6, chatterAt = 4;
   const CHATTER = ['¿Alguien sabe dónde está el director?', '¡Otra vez la impresora!', '¿Me pagan este mes?', 'Tengo tres reuniones a la vez', '¿Quién se comió mi yogur?', 'El wifi no funciona', '¡Me han cambiado la mesa!'];
 
+  if (real) fitSurfaces(world);
   batchStatic(statics, []);
 
   function animate(t: number, dt: number, px: number, pz: number) {
