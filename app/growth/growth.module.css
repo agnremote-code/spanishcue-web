@@ -97,6 +97,7 @@
 .panel { background: var(--g-card); border: 1px solid var(--g-line); border-radius: 18px; padding: 20px; }
 .panel h3 { margin: 0 0 10px; }
 .panel ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
+.panel ol { margin: 12px 0 0; padding-left: 22px; display: grid; gap: 8px; }
 .scaffold { display: grid; gap: 2px; margin-bottom: 10px; }
 .scaffold b { font-size: 16px; }
 .scaffold span { font-size: 14px; color: var(--g-muted); }

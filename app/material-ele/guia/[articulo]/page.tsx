@@ -5,6 +5,7 @@ import { faqPageSchema, webPageSchema } from "../../../growth/schema";
 import { EleBuyBand, EleLessonGrid, ElePageDates, ElePreviewVideo, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, elePreviewLesson, pageImage } from "../../components";
 import { GuiaBlocks } from "../../guia-components";
 import { guiaBySlug, guiaPages } from "../../guias";
+import { guiaRespuestas } from "../../guia-respuestas";
 import { pageDates } from "../../indice";
 import { MATERIAL_ELE_PATH } from "../../data";
 import styles from "../../../growth/growth.module.css";
@@ -31,6 +32,7 @@ export default async function GuiaPage({ params }: Props) {
   const freeLesson = lessons.find((lesson) => lesson.free);
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
+  const respuesta = guiaRespuestas[page.slug];
   return (
     <>
       <main className={styles.page} lang="es">
@@ -54,6 +56,15 @@ export default async function GuiaPage({ params }: Props) {
             </div>
             <ElePageDates dates={dates} />
           </section>
+          {respuesta ? (
+            <article className={styles.section} id="en-pocas-palabras" aria-labelledby="en-pocas-palabras-title">
+              <h2 id="en-pocas-palabras-title">En pocas palabras</h2>
+              <div className={styles.panel}>
+                <p>{respuesta.answer}</p>
+                <ol>{respuesta.steps.map((step) => <li key={step}>{step}</li>)}</ol>
+              </div>
+            </article>
+          ) : null}
           {preview ? <div className={print.noPrint}><ElePreviewVideo lesson={preview} pathname={page.path} /></div> : null}
 
           {page.sections.map((section) => (
