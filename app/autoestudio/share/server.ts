@@ -58,6 +58,11 @@ export async function verifyShareSession(cookieHeader: string | null, env: Share
   const state=await shareCookieState(cookieHeader,env);
   return state && !state.pending && state.pass.alias ? session(state.pass) : null;
 }
+/** The verified, claimed pass together with the teacher (Firebase uid) who issued it. */
+export async function verifyShareOwner(cookieHeader: string | null, env: ShareEnvironment): Promise<{session:ShareSession;ownerId:string}|null> {
+  const state=await shareCookieState(cookieHeader,env);
+  return state && !state.pending && state.pass.alias ? {session:session(state.pass),ownerId:state.pass.owner_id} : null;
+}
 // Student access never expires on its own: only the teacher revokes or rotates it.
 // Browsers cap cookies at 400 days, so every visit renews the cookie (renewShareCookie)
 // and the /s/ link can always be opened again on any device.
