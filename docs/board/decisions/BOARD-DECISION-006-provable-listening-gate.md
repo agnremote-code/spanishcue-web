@@ -2,7 +2,8 @@
 
 - Date: 2026-11-16 (Monday 3D routine, W47 plan item 2, [assessments/2026-W46.md](../assessments/2026-W46.md) §6)
 - Drafted by: Sofia (CPIO)
-- Status: **DRAFT v2** (v1 by Sofia; v2 applies the seven changes of the independent review, §Review, by the facilitator). Not adopted until §Votes records adoption.
+- Status: **ADOPTED 2026-11-16, 3 of 3, LOCKED** (v1 by Sofia; v2 applies the seven changes of the independent review, §Review, by the facilitator). Changes now need a new decision with new evidence.
+- **What adoption does and does not do:** it sets the rule. It closes §9.2 for no world yet. That needs the §3.6 code changes, reviewed, and then a VALID per-level run on a new world's own clips.
 - Labels: every claim is VERIFIED (with its source) or HYPOTHESIS.
 
 ## 1. Why
@@ -71,3 +72,7 @@ Whether a forced aligner should be added (v3) is a separate decision, made after
 - **Independent review (one objection round, CONSTITUTION §2):** Alejandro, as a fresh agent, on v1. Verdict **APPROVE WITH CHANGES**, no blockers. He re-verified §2.1, §2.3, §2.4 and §2.5 against the generator and the checker on #282's branch at `3631534f`, and found two more silent-shortfall paths (`zip(others, ops)` and `plain()` returning None). Seven changes, all applied in v2: (1) seeds per level; (2) minimum shape of the seed clips; (3) §3.3 same-gender rule as a clip-authoring rule; (4) text-only attestation for pairs the lint cannot see; (5) §3.5 additions (mismatch outside items is an open item; Ascensor G1 note); (6) reference cache key per casting; (7) why dropping the -s seed is not fitting to a result. Verbatim: [transcripts/2026-11-16-monday-3d-provable-gate.md](../transcripts/2026-11-16-monday-3d-provable-gate.md) §6.
 
 ## Votes
+- Sofia (drafter): **APPROVE** on v2.
+- Martin: **APPROVE** on v2. His notes for the LQG file, not conditions: put R4 (no regional particles or unlisted interjections in audio) and R5 (no sound effects inside clips) in the authoring guidance; who-said-what items count as gated only once that level's speaker seed is VALID.
+- Alejandro (independent reviewer): **APPROVE WITH CHANGES** on v1, and every change was applied in v2. He did not re-read v2. This is counted as approval, following the BOARD-DECISION-005 precedent.
+- **Result: ADOPTED 3 of 3, LOCKED.** Votes verbatim: [transcripts/2026-11-16-monday-3d-provable-gate.md](../transcripts/2026-11-16-monday-3d-provable-gate.md) §6, §9, §10.

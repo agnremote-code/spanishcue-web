@@ -485,3 +485,68 @@ S1's main function, relaying messages, is listening by nature. It matches curric
 4. **G1 mapping:** one primary per circle, using only the verified ids. `b1.fun.w16-transmitir-mensajes` is the world primary. g118 and g119 contrasts are produced in Conversación and labelled there (G6).
 5. **Cultural check (HYPOTHESIS until done):** Boyacá pottery practice and terms («greda», the town left unnamed unless verified), and the Bogotá restaurant order as a plausible business. Cliché check: a business with deadlines, an advance payment and transport; no "exotic craft" framing and no folkloric décor.
 6. **The gate:** no automatic closing of §9.2 until BOARD-DECISION-006 is adopted, the §3.6 checker changes land as a separate reviewed commit, and a VALID per-level run on the world's own clips exists. Until then, §9.2 stays human-only for this world.
+
+---
+
+## 7. Facilitator → Sofia (sent about 02:22Z)
+
+> Facilitator to Sofia: please vote on BOARD-DECISION-006 v2. The independent review (Alejandro, fresh agent) returned APPROVE WITH CHANGES on your v1, with no blockers. I applied his 7 changes in v2 (commit 89a76b56), in `docs/board/decisions/BOARD-DECISION-006-provable-listening-gate.md`; the §Review section lists them. Read v2 (read-only; no edits, no git) and reply with one line: APPROVE, or OBJECT with the exact reason. This is the one objection round, so the decision locks after the votes.
+>
+> For your information (no action needed): the concept vote went to your S1 «El taller de la greda», 2 of 3 (you and Alejandro; Martin preferred A). Alejandro's build conditions:
+> (1) the cast needs ≥6 countries; Salome and Gonzalo are both es-CO, so S1 has 5;
+> (2) no gap minimal pairs, e.g. «torno»/«horno»;
+> (3) seed-clip shape per §3.4;
+> (4) G1 mapping with world primary `b1.fun.w16-transmitir-mensajes`;
+> (5) cultural and cliché checks.
+
+## 8. Facilitator → Martin (sent about 02:22Z)
+
+> Facilitator to Martin: please vote on BOARD-DECISION-006 v2. Sofia drafted v1. The independent review (Alejandro, fresh agent) returned APPROVE WITH CHANGES; I applied his 7 changes in v2 (commit 89a76b56), in `docs/board/decisions/BOARD-DECISION-006-provable-listening-gate.md`. Several of the changes match your R1–R8 (clip-authoring rule, no names as answers, inflection-only contrasts kept out of listening). Read v2 (read-only; no edits, no git) and reply: APPROVE, or OBJECT with the exact reason. This is the one objection round.
+>
+> For your information: the concept vote went to Sofia's S1 «El taller de la greda» (B1, Boyacá pottery workshop, world primary `b1.fun.w16-transmitir-mensajes`), 2 of 3. Alejandro and Sofia voted S1; your A «El simulacro del jueves» was scored a close second (15 vs 17). Alejandro found that A's circle-4 item turns on «no»/«sí falta», which v2 forbids, and that A's cast has 4 countries where the checker needs 6. If you want a dissent recorded on the concept choice, add it in one sentence.
+
+## 9. Sofia → Facilitator (received about 02:23Z)
+
+Sofia's vote on BOARD-DECISION-006 v2 (commit 89a76b56): **APPROVE**.
+
+I read v2 without editing it and did no git operations. Two of its new facts check out:
+- «torno» and «horno» both appear on `app/autoestudio/curriculum/objectives/b1.ts:167`.
+- `voces-chile` appears 0 times in `app/autoestudio/curriculum/objectives/*.ts`.
+
+The seven changes close the gaps I left in v1, and none of them widens what the check is claimed to cover.
+
+On the S1 build conditions, two of Alejandro's points are faults in my report, and I accept both:
+- **(1) Countries:** my S1 cast has 5 countries, not 6, because Salome and Gonzalo are both Colombian voices. I miscounted. A fix is to swap one role to a sixth country, for example Gonzalo the thrower to `es-PE-AlexNeural` as «Álex», which needs a name and plausibility check. Keeping both Colombian voices and adding a seventh character would also work.
+- **(2) Minimal pairs:** my circle 2 gap list put «torno» and «horno» in the same clip. That is the exact pair v2 §3.2 names, so it must be replaced.
+
+Conditions (3) to (5) are build-time work for the build.
+
+## 10. Martin → Facilitator (received about 02:23Z)
+
+Martin votes **APPROVE** on BOARD-DECISION-006 v2 (commit 89a76b56). I read `docs/board/decisions/BOARD-DECISION-006-provable-listening-gate.md` read-only. I edited nothing and touched no git.
+
+**Why I approve.**
+- v2 contains every rule from my proposal that decides whether a PASS can be trusted:
+  - R1, the clip-authoring rule: §3.3.
+  - R2, no answer that rests only on inflection or a single-phoneme pair: §3.2–3.3, plus the text-only sign-off.
+  - R3, no proper names as answers: §3.3.
+  - R7, seeds and speaker references rebuilt with Emma/Florian and their per-clip pitch, a cross-gender seed in every level: §3.4 and §3.6(i).
+  - R8, inflection-only contrasts kept out of listening items: §3.3.
+- v2 also closes gaps I had missed:
+  - The ban on correct options that rest only on «no» / «ya» / «sí», because that deletion has never been seeded (§2.5).
+  - Seeds and §9.2 closure per level.
+  - The minimum shape of the seed clips, which closes the `all([])` silent pass and the `zip` / `plain()` shortfalls.
+- The §1 argument holds: the claim shrinks by exactly the class of defect that was missed. It is not a rule fitted to a result.
+
+**Notes for the LQG file, not conditions of my vote.**
+1. Two of my rules do not appear in v2: R4 (no regional particles or interjections outside the fixed list in the audio) and R5 (no sound effects inside clips). Leaving them out only risks a clip being held when nothing is wrong. It never lets a bad clip through, so the check stays sound. I ask that they go into the authoring guidance for «El taller de la greda» to save rework.
+2. Whether Emma and Florian can be told apart reliably across genders stays a HYPOTHESIS until the first run, as §2.2 already says. Who-said-what items count as gated only once that level's speaker seed is VALID.
+
+**On the concept choice: no dissent.**
+- Alejandro's finding is correct. My circle-4 item in concept A rests on «no» / «sí falta», which §3.3 of v2 forbids. I accept S1.
+- I did not check his claim that the checker needs 6 countries in the cast. It is not in the text of BOARD-DECISION-006.
+- Verified for the build: S1's world primary `b1.fun.w16-transmitir-mensajes` exists at `app/autoestudio/curriculum/objectives/b1.ts:173`. Sofia should keep the «torno» / «horno» pair (b1.ts:167, cited in §3.2) out of every gap and every correct option in the pottery world.
+
+---
+
+_Facilitator note (not a message): Martin's open point, the 6-country rule, was checked by the facilitator after his vote: `scripts/check-escucha-3d.mjs:124` (`if (countries.size < 6) bad(...)`), VERIFIED._

@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-13 by the Friday 3D + assessment routine (scheduled cloud run; Martin and Alejandro convened as subagents of the facilitator, Sofia not convened; see "Current work")._
+_Last updated: 2026-11-16 by the Monday 3D routine (scheduled cloud run; Sofia, Martin and Alejandro convened as subagents of the facilitator; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -31,7 +31,8 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | Rank | Item | Owner → reviewer | State |
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
-| 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **HELD on R4 (§9.2 listening).** Draft #282, renumbered to catalog id **246** on 2026-11-02 (243 went to «Más allá»). The BOARD-DECISION-003 speech-to-text check was NOT VALID on its first run (missed a seeded gap-word -s pair), and it flagged cafe («Yaneth» misheard; line 8 not located in the first model's transcript) |
+| 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **HELD on R4 (§9.2 listening).** Draft #282, renumbered to catalog id **246** on 2026-11-02 (243 went to «Más allá»). The BOARD-DECISION-003 speech-to-text check was NOT VALID on its first run (missed a seeded gap-word -s pair), and it flagged cafe («Yaneth» misheard; line 8 not located in the first model's transcript). **2026-11-16:** its G1 ids no longer exist in the regenerated curriculum, so it needs a remap; BOARD-DECISION-006 does not release it |
+| 3 | **NEW 2026-11-16: «El taller de la greda», B1 PRO 3D world, Boyacá** ([concept](concepts/2026-11-16-boyaca-taller-de-la-greda.md); selected 2 of 3; first world under [BOARD-DECISION-006](decisions/BOARD-DECISION-006-provable-listening-gate.md)) | §3.6 checker PR (Sofia) → Martin (content) → Sofia (build) → G4 Alejandro or a fresh agent | **READY to start Wed 11-18.** Dependencies: BOARD-DECISION-006 adopted (done); the checker changes are the first step |
 | — | ~~«También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`)~~ | — | **DROPPED 2026-11-13** (Martin's duplicate check, facilitator re-verified): free A1 class 332 (G032) already teaches all eight reactions with 6 exercises (`app/grammar-classroom/live/lessons/g332.ts:129-146`; free per `app/access-policy.ts:1-2`), the A1 objective assesses it (`app/autoestudio/curriculum/objectives/a1.ts:140`) and G372 reuses it at A2. If more practice is wanted, add 2–4 exercises to that g332 section instead |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
@@ -80,7 +81,39 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-11-16 (Monday 3D routine): run started 02:06Z, W47 plan item 2** (branch `claude/board-mon-3d-20261116`, base main `d9bb524`). Previous-slot marker check: no W47 slot ran before this one (the last board run is Fri 11-13, #422, recorded below), so there is nothing to miss yet. Subscription usage: **UNKNOWN**.
+- **2026-11-16 (Monday 3D routine): PR (see below)** (branch `claude/board-mon-3d-20261116`, base main `d9bb524`). Run-start marker pushed at 02:06Z (W47 item 0). No W47 slot ran before this one, so no missing marker. Subscription usage: **UNKNOWN**.
+  - **No 3D unit shipped today, and none passed the gate.** W47 plan item 2 is governance plus a concept round. The build is Wednesday's slot.
+  - **W47 item 2: DONE.**
+    - [BOARD-DECISION-006](decisions/BOARD-DECISION-006-provable-listening-gate.md), the provable listening gate (a scoped amendment to BOARD-DECISION-003 §3.1), **ADOPTED 3 of 3, LOCKED**.
+      - Sofia drafted v1. Alejandro (fresh agent) returned APPROVE WITH CHANGES with 7 changes, all applied in v2. Sofia and Martin then voted APPROVE.
+      - For a NEW world, the speech-to-text check may close §9.2 per level. That requires three things: items limited to the types the seeds catch (whole-word gaps and options, cross-gender who-said-what by role); a per-level VALID seed set on the world's own clips, with the -s gap seed replaced by a whole-word replacement; and every real clip passing.
+      - Forbidden: minimal-pair answers, answers that turn on «no»/«ya»/«sí», proper names as answers, and clips with two same-gender speakers or three or more speakers.
+      - It releases nothing by itself.
+    - **Concept selected, 2 of 3:** **S1 «El taller de la greda»**, B1 PRO single-level world, a family pottery workshop in the Boyacá highlands, world primary `b1.fun.w16-transmitir-mensajes`. Record: [concepts/2026-11-16-boyaca-taller-de-la-greda.md](concepts/2026-11-16-boyaca-taller-de-la-greda.md). Sofia and Alejandro voted S1. Martin proposed A «El simulacro del jueves» (B2) and later recorded no dissent. A, S2 and B are deferred.
+    - **Side check, time-boxed: forced aligner (STT v3).**
+      - Hugging Face and download.pytorch.org are reachable from Actions (VERIFIED by runs 41377386724 and 41378668632).
+      - From the sandbox they are blocked (HF, dl.fbaipublicfiles.com, download.pytorch.org: curl 000); PyPI is reachable (200).
+      - No aligner was run. Whether one works from Actions is HYPOTHESIS.
+  - **New findings (VERIFIED):**
+    1. **The checker no longer mirrors the audio pipeline.** On #282's branch, `scripts/check-escucha-3d-stt.py` builds seeds and speaker references with identity voices, but since 11-13 the generator uses Emma/Florian with per-clip pitch. It needs the BOARD-DECISION-006 §3.6 changes before any run.
+    2. **Silent passes in the checker:**
+       - with zero seeds, `all([])` reports the check as valid;
+       - `zip`/`plain()` can drop seeds without failing;
+       - the deleted-word seed covers only words of 5 or more letters.
+    3. **Ascensor (#282) needs a G1 remap whatever happens.** `b2.fun.mediacion-fuentes` and `b2.lis.voces-chile` have 0 matches in the regenerated, week-coded `objectives/*.ts`.
+    4. **Deferred concept D now overlaps «Vuelo cancelado».**
+  - **Board:** convened as three subagents. Sofia drafted and proposed S1/S2, Martin proposed A/B, and Alejandro (fresh agent) reviewed, scored and voted. Each executive talked only with the facilitator, never with each other. Verbatim: [transcripts/2026-11-16-monday-3d-provable-gate.md](transcripts/2026-11-16-monday-3d-provable-gate.md).
+  - **Checks (local):**
+    - `npm test`: exit 0, 1,664 pass, 0 fail. Run with `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000` on a tree whose later commits change only `docs/board/**`.
+    - `git diff --check`: clean.
+    - The change is docs only, so lint, tsc and validate:artifact are not affected.
+  - **Next action:**
+    - **Wed 11-18 (W47 item 3), in this order:**
+      1. A separate reviewed PR with the BOARD-DECISION-006 §3.6 checker changes: Emma/Florian casting, per-level seeds that fail when a seed is missing, `tool_valid is True`, the gap lint, and the checker brought to main or to the world branch.
+      2. Martin authors S1 against the build conditions in the concept file §6, then Sofia builds it.
+      3. G4 by Alejandro or a fresh agent.
+    - A full build plus a VALID run in one slot is unlikely (HYPOTHESIS). If the checker PR is the only thing that lands, report it as tooling, not as a unit.
+    - #282 stays held, and its G1 remap is added to its open items.
 - **2026-11-13 (Friday 3D + assessment routine): PR #422** (branch `claude/friday-assessment-20261113`, base main `3f946b9`). Subscription usage: **UNKNOWN**.
   - **Unit: gated content repair, «Más allá» A2** (reported as a **repair**; W46 item 6, second half). R4 is still unanswered (#282 has had no comment since 10-26), so #282 was not touched.
     - Martin removed every structure above A2 from `app/mas-alla/levels/a2.mjs` (16 strings) and `voces/a2.mjs` (6 voice questions). That covers the four «si + imperfecto de subjuntivo» prompts from his 11-03 audit, «habrías hecho», and every bare hypothetical conditional. Only *gustaría* (wishes) remains.
