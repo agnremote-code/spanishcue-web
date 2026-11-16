@@ -75,6 +75,8 @@ export type Person = {
   pose: Pose;
   mood: Mood;
   rig: Rig;
+  // Set by app/mundo-real/persona when a realistic body follows this figure: copies the pose and the face onto it.
+  real?: () => void;
 };
 
 // ------------------------------------------------------------------ caches
@@ -1643,6 +1645,7 @@ export function animatePerson(person: Person, dt: number, speed: number, talk = 
   rig.teeth.visible = n.teeth > 0.35 && mouthOpen > 0.1;
   rig.blush.visible = n.blush > 0.03;
   rig.blush.scale.setScalar(Math.max(0.001, n.blush));
+  person.real?.();
 }
 
 // A soft dark disc under a person: much cheaper than a real shadow and it
