@@ -1,0 +1,2235 @@
+{
+ "game": "reality",
+ "level": "A0",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "Un micrófono nuevo",
+   "place": "La entrada",
+   "context": "Marga y Lalo preparan la entrada de la Sorpresa.",
+   "contextEn": "Marga and Lalo get the Surprise’s entrance ready.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lalo, ¿la cámara uno está lista?",
+     "en": "Lalo, is camera one ready?"
+    },
+    {
+     "s": 1,
+     "text": "Sí, está lista. Y el micrófono es nuevo.",
+     "en": "Yes, it is ready. And the microphone is new."
+    },
+    {
+     "s": 0,
+     "text": "Bien. Son las diez. La puerta se abre en dos minutos.",
+     "en": "Good. It is ten o’clock. The door opens in two minutes."
+    },
+    {
+     "s": 1,
+     "text": "Tengo frío. Hay mucho aire aquí.",
+     "en": "I am cold. There is a lot of air here."
+    },
+    {
+     "s": 0,
+     "text": "Ponte el abrigo. Esta noche es larga.",
+     "en": "Put on your coat. Tonight is long."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué cámara está lista?",
+     "qEn": "Which camera is ready?",
+     "options": [
+      "La cámara uno",
+      "La cámara tres",
+      "La cámara dos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo es el micrófono?",
+     "qEn": "What is the microphone like?",
+     "options": [
+      "Es viejo y negro",
+      "Es muy pequeño",
+      "Es nuevo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Son las dos",
+      "Son las diez",
+      "Es la una y media"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tiene Lalo?",
+     "qEn": "What does Lalo have?",
+     "options": [
+      "Hambre y sueño",
+      "Frío",
+      "Calor"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo te sientes antes de entrar en un lugar nuevo?",
+     "qEn": "How do you feel before you go into a new place?",
+     "model": "Me siento nervioso, pero contento."
+    },
+    {
+     "q": "¿Qué ropa te pones cuando hace frío por la noche?",
+     "qEn": "What clothes do you wear when it is cold at night?",
+     "model": "Me pongo un abrigo y una bufanda."
+    },
+    {
+     "q": "¿A qué hora empieza tu programa de televisión favorito?",
+     "qEn": "What time does your favourite TV show start?",
+     "model": "Empieza a las nueve de la noche."
+    }
+   ],
+   "gaps": "Bien. Son las [diez]. La [puerta] se abre en dos [minutos]. Tengo [frío].",
+   "glossary": [
+    {
+     "word": "micrófono",
+     "meaning": "aparato para la voz",
+     "en": "microphone"
+    },
+    {
+     "word": "abrigo",
+     "meaning": "ropa para el frío",
+     "en": "coat"
+    },
+    {
+     "word": "lista",
+     "meaning": "preparada",
+     "en": "ready"
+    }
+   ]
+  },
+  {
+   "id": "confesionario",
+   "title": "El sillón rojo",
+   "place": "El confesionario",
+   "context": "La Voz habla con Marga en el confesionario.",
+   "contextEn": "La Voz talks to Marga in the confessional.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Hola, Voz. ¿Está todo bien?",
+     "en": "Hi, Voice. Is everything OK?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. El sillón rojo está limpio. La luz es buena.",
+     "en": "Yes. The red armchair is clean. The light is good."
+    },
+    {
+     "s": 1,
+     "text": "La Sorpresa viene pronto. Es su primera noche.",
+     "en": "The Surprise is coming soon. It is their first night."
+    },
+    {
+     "s": 0,
+     "text": "Tengo cinco preguntas para la Sorpresa.",
+     "en": "I have five questions for the Surprise."
+    },
+    {
+     "s": 1,
+     "text": "¿Preguntas fáciles?",
+     "en": "Easy questions?"
+    },
+    {
+     "s": 0,
+     "text": "No. Preguntas personales.",
+     "en": "No. Personal questions."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué color es el sillón?",
+     "qEn": "What colour is the armchair?",
+     "options": [
+      "Azul",
+      "Blanco y negro",
+      "Rojo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es la luz?",
+     "qEn": "What is the light like?",
+     "options": [
+      "Es mala",
+      "No hay luz en la sala",
+      "Es buena"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas preguntas tiene La Voz?",
+     "qEn": "How many questions does La Voz have?",
+     "options": [
+      "Quince",
+      "Cinco",
+      "Dos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo son las preguntas?",
+     "qEn": "What are the questions like?",
+     "options": [
+      "Fáciles",
+      "Personales",
+      "Cortas y tontas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué tema te da vergüenza en público?",
+     "qEn": "What topic embarrasses you in public?",
+     "model": "Me da vergüenza hablar de mi edad."
+    },
+    {
+     "q": "¿Dónde te sientas para hablar de cosas importantes?",
+     "qEn": "Where do you sit to talk about important things?",
+     "model": "Me siento en el sofá de mi casa."
+    },
+    {
+     "q": "¿Qué mueble de tu casa es tu favorito?",
+     "qEn": "What piece of furniture in your home is your favourite?",
+     "model": "Mi favorito es el sofá azul."
+    }
+   ],
+   "gaps": "El [sillón rojo] está limpio. La [luz] es buena. La Sorpresa viene [pronto]. Es su primera [noche].",
+   "glossary": [
+    {
+     "word": "sillón",
+     "meaning": "silla grande y cómoda",
+     "en": "armchair"
+    },
+    {
+     "word": "limpio",
+     "meaning": "sin suciedad",
+     "en": "clean"
+    },
+    {
+     "word": "pronto",
+     "meaning": "en poco tiempo",
+     "en": "soon"
+    }
+   ]
+  },
+  {
+   "id": "alianza",
+   "title": "Dos amigos en el sofá",
+   "place": "El salón",
+   "context": "Brenda y Óscar hablan en el salón.",
+   "contextEn": "Brenda and Óscar talk in the living room.",
+   "speakers": [
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Óscar",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Óscar, la Sorpresa es nueva. Es simpática.",
+     "en": "Óscar, the Surprise is new. They are nice."
+    },
+    {
+     "s": 1,
+     "text": "Sí. Necesitamos una amiga o un amigo más.",
+     "en": "Yes. We need one more friend."
+    },
+    {
+     "s": 0,
+     "text": "Somos dos. Con la Sorpresa, somos tres.",
+     "en": "We are two. With the Surprise, we are three."
+    },
+    {
+     "s": 1,
+     "text": "Tres votos. ¡Perfecto!",
+     "en": "Three votes. Perfect!"
+    },
+    {
+     "s": 0,
+     "text": "Habla bajo. Las cámaras escuchan.",
+     "en": "Talk quietly. The cameras are listening."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo es la Sorpresa, según Brenda?",
+     "qEn": "What is the Surprise like, according to Brenda?",
+     "options": [
+      "Antipática",
+      "Muy seria",
+      "Simpática"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos son con la Sorpresa?",
+     "qEn": "How many are they with the Surprise?",
+     "options": [
+      "Dos",
+      "Cuatro personas",
+      "Tres"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere Óscar?",
+     "qEn": "What does Óscar want?",
+     "options": [
+      "Comida y agua",
+      "Dinero",
+      "Votos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién escucha?",
+     "qEn": "Who is listening?",
+     "options": [
+      "Las cámaras",
+      "Los vecinos de la calle",
+      "La madre de Brenda"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo eliges a tus amigos en un grupo nuevo?",
+     "qEn": "How do you choose your friends in a new group?",
+     "model": "Elijo a las personas tranquilas."
+    },
+    {
+     "q": "¿Con quién hablas bajo para contar un secreto?",
+     "qEn": "Who do you talk quietly to when you tell a secret?",
+     "model": "Hablo bajo con mi hermana."
+    },
+    {
+     "q": "¿Cuántos amigos de verdad necesita una persona?",
+     "qEn": "How many true friends does a person need?",
+     "model": "Necesita dos o tres amigos."
+    }
+   ],
+   "gaps": "Somos [dos]. Con la Sorpresa, somos [tres]. Tres [votos]. ¡Perfecto! Habla [bajo].",
+   "glossary": [
+    {
+     "word": "votos",
+     "meaning": "lo que das para elegir a alguien",
+     "en": "votes"
+    },
+    {
+     "word": "bajo",
+     "meaning": "con poca voz",
+     "en": "quietly"
+    },
+    {
+     "word": "simpática",
+     "meaning": "agradable",
+     "en": "nice"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "Cuarenta latas",
+   "place": "La cocina",
+   "context": "Doña Fela y Chema están en la cocina.",
+   "contextEn": "Doña Fela and Chema are in the kitchen.",
+   "speakers": [
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Fela, ¿cuántas latas de atún hay aquí?",
+     "en": "Doña Fela, how many cans of tuna are there here?"
+    },
+    {
+     "s": 0,
+     "text": "Hay cuarenta. Son mías.",
+     "en": "There are forty. They are mine."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuarenta? ¡Es mucho atún!",
+     "en": "Forty? That is a lot of tuna!"
+    },
+    {
+     "s": 0,
+     "text": "Mañana cocino para todos. Arroz con atún.",
+     "en": "Tomorrow I cook for everyone. Rice with tuna."
+    },
+    {
+     "s": 1,
+     "text": "Bien. Yo traigo el pan.",
+     "en": "Good. I bring the bread."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hay en las latas?",
+     "qEn": "What is in the cans?",
+     "options": [
+      "Atún",
+      "Sardinas",
+      "Leche de coco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas latas hay?",
+     "qEn": "How many cans are there?",
+     "options": [
+      "Catorce",
+      "Cuatro",
+      "Cuarenta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué cocina Fela mañana?",
+     "qEn": "What does Fela cook tomorrow?",
+     "options": [
+      "Arroz con atún",
+      "Sopa",
+      "Pollo con papas fritas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué trae Chema?",
+     "qEn": "What does Chema bring?",
+     "options": [
+      "El agua fría",
+      "El pan",
+      "Los platos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué comida guardas siempre en tu cocina?",
+     "qEn": "What food do you always keep in your kitchen?",
+     "model": "Siempre guardo arroz y huevos."
+    },
+    {
+     "q": "¿Para cuántas personas cocinas normalmente?",
+     "qEn": "How many people do you usually cook for?",
+     "model": "Cocino para dos personas."
+    },
+    {
+     "q": "¿Qué plato sencillo cocinas muy bien?",
+     "qEn": "What simple dish do you cook very well?",
+     "model": "Cocino muy bien la tortilla."
+    }
+   ],
+   "gaps": "Hay [cuarenta]. Son [mías]. ¿Cuarenta? ¡Es mucho [atún]! Mañana [cocino] para todos.",
+   "glossary": [
+    {
+     "word": "latas",
+     "meaning": "envases de metal para comida",
+     "en": "cans"
+    },
+    {
+     "word": "atún",
+     "meaning": "un pescado",
+     "en": "tuna"
+    },
+    {
+     "word": "arroz",
+     "meaning": "comida blanca en granos",
+     "en": "rice"
+    }
+   ]
+  },
+  {
+   "id": "mudo",
+   "title": "Notas en la servilleta",
+   "place": "El comedor",
+   "context": "Mateo no habla en voz alta. Habla muy bajito con Yeni.",
+   "contextEn": "Mateo does not speak out loud. He whispers to Yeni.",
+   "speakers": [
+    {
+     "name": "Mateo",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mateo, ¿por qué no hablas?",
+     "en": "Mateo, why don’t you talk?"
+    },
+    {
+     "s": 0,
+     "text": "Hablo bajito. Solo contigo.",
+     "en": "I whisper. Only with you."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué escribes en las servilletas?",
+     "en": "And why do you write on the napkins?"
+    },
+    {
+     "s": 0,
+     "text": "Las cámaras no leen. Escuchan.",
+     "en": "The cameras don’t read. They listen."
+    },
+    {
+     "s": 1,
+     "text": "Ah. Yo también escribo, entonces.",
+     "en": "Oh. I write too, then."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo habla Mateo?",
+     "qEn": "How does Mateo talk?",
+     "options": [
+      "Bajito",
+      "Muy alto",
+      "Con gritos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde escribe Mateo?",
+     "qEn": "Where does Mateo write?",
+     "options": [
+      "En la pared",
+      "En un libro azul",
+      "En las servilletas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "Según Mateo, ¿qué hacen las cámaras?",
+     "qEn": "According to Mateo, what do the cameras do?",
+     "options": [
+      "Leen",
+      "Duermen",
+      "Escuchan"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hace Yeni al final?",
+     "qEn": "What does Yeni do at the end?",
+     "options": [
+      "Escribe también",
+      "Se va a dormir",
+      "Canta una canción"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué momento te quedas callado o callada?",
+     "qEn": "At what moment do you go quiet?",
+     "model": "Me quedo callada cuando estoy enfadada."
+    },
+    {
+     "q": "¿En qué lugar hablas muy bajito?",
+     "qEn": "In what place do you talk very quietly?",
+     "model": "Hablo bajito en la biblioteca."
+    },
+    {
+     "q": "¿A quién le escribes notas en papel?",
+     "qEn": "Who do you write paper notes to?",
+     "model": "Le escribo notas a mi madre."
+    }
+   ],
+   "gaps": "Hablo [bajito]. Solo [contigo]. ¿Y por qué [escribes] en las [servilletas]?",
+   "glossary": [
+    {
+     "word": "bajito",
+     "meaning": "con muy poca voz",
+     "en": "very quietly"
+    },
+    {
+     "word": "servilletas",
+     "meaning": "papeles para limpiarse en la mesa",
+     "en": "napkins"
+    },
+    {
+     "word": "entonces",
+     "meaning": "por eso",
+     "en": "then"
+    }
+   ]
+  },
+  {
+   "id": "nostalgia",
+   "title": "La foto de mamá",
+   "place": "El dormitorio",
+   "context": "Yeni está en su cama. Fela la visita.",
+   "contextEn": "Yeni is in her bed. Fela visits her.",
+   "speakers": [
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, extraño a mi mamá.",
+     "en": "Fela, I miss my mom."
+    },
+    {
+     "s": 1,
+     "text": "Es normal, mi niña. ¿Tienes una foto?",
+     "en": "It is normal, my girl. Do you have a photo?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Aquí está. Ella es peluquera también.",
+     "en": "Yes. Here it is. She is a hairdresser too."
+    },
+    {
+     "s": 1,
+     "text": "Es muy guapa. Tiene tus ojos.",
+     "en": "She is very pretty. She has your eyes."
+    },
+    {
+     "s": 0,
+     "text": "Gracias. Ahora estoy mejor.",
+     "en": "Thank you. Now I feel better."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A quién extraña Yeni?",
+     "qEn": "Who does Yeni miss?",
+     "options": [
+      "A su papá",
+      "A su perro",
+      "A su mamá"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene Yeni?",
+     "qEn": "What does Yeni have?",
+     "options": [
+      "Una carta larga",
+      "Una foto",
+      "Un teléfono"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué trabajo tiene la mamá?",
+     "qEn": "What job does the mom have?",
+     "options": [
+      "Es cocinera",
+      "Es peluquera",
+      "Es maestra de escuela"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo está Yeni al final?",
+     "qEn": "How is Yeni at the end?",
+     "options": [
+      "Peor",
+      "Muy enfadada",
+      "Mejor"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Quién de tu familia te escribe mensajes largos?",
+     "qEn": "Who in your family writes you long messages?",
+     "model": "Mi madre me escribe mensajes largos."
+    },
+    {
+     "q": "¿Qué foto llevas siempre contigo?",
+     "qEn": "What photo do you always carry with you?",
+     "model": "Llevo una foto de mi familia."
+    },
+    {
+     "q": "¿Qué canción escuchas para dormir mejor?",
+     "qEn": "What song do you listen to so you sleep better?",
+     "model": "Escucho una canción lenta de piano."
+    }
+   ],
+   "gaps": "Es [muy guapa]. Tiene tus [ojos]. Gracias. Ahora [estoy] [mejor].",
+   "glossary": [
+    {
+     "word": "extraño",
+     "meaning": "quiero ver a alguien que no está",
+     "en": "I miss"
+    },
+    {
+     "word": "peluquera",
+     "meaning": "mujer que corta el pelo",
+     "en": "hairdresser"
+    },
+    {
+     "word": "guapa",
+     "meaning": "bonita",
+     "en": "pretty"
+    }
+   ]
+  },
+  {
+   "id": "espejo",
+   "title": "Detrás del espejo",
+   "place": "El baño",
+   "context": "Lalo está detrás del espejo del baño. Habla con Chelo por radio.",
+   "contextEn": "Lalo is behind the bathroom mirror. He talks to Chelo on the radio.",
+   "speakers": [
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lalo, ¿qué ves?",
+     "en": "Lalo, what do you see?"
+    },
+    {
+     "s": 0,
+     "text": "Veo el baño. Una persona se lava los dientes.",
+     "en": "I see the bathroom. A person is brushing their teeth."
+    },
+    {
+     "s": 1,
+     "text": "¿Algo más?",
+     "en": "Anything else?"
+    },
+    {
+     "s": 0,
+     "text": "No. Pero tengo un problema. Quiero estornudar.",
+     "en": "No. But I have a problem. I want to sneeze."
+    },
+    {
+     "s": 1,
+     "text": "¡No! El espejo no estornuda.",
+     "en": "No! The mirror does not sneeze."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está Lalo?",
+     "qEn": "Where is Lalo?",
+     "options": [
+      "Detrás del espejo",
+      "En la cocina",
+      "En el jardín con Chelo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace la persona en el baño?",
+     "qEn": "What is the person in the bathroom doing?",
+     "options": [
+      "Se lava los dientes",
+      "Canta",
+      "Duerme"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere hacer Lalo?",
+     "qEn": "What does Lalo want to do?",
+     "options": [
+      "Estornudar",
+      "Comer algo",
+      "Salir de la casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo hablan Lalo y Chelo?",
+     "qEn": "How do Lalo and Chelo talk?",
+     "options": [
+      "Con notas",
+      "Por radio",
+      "Por teléfono móvil"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces en el baño antes de dormir?",
+     "qEn": "What do you do in the bathroom before you sleep?",
+     "model": "Me lavo los dientes y la cara."
+    },
+    {
+     "q": "¿Qué lugar de tu casa es solo para ti?",
+     "qEn": "What place in your home is only for you?",
+     "model": "Mi habitación es solo para mí."
+    },
+    {
+     "q": "¿Cómo te sientes cuando una cámara te mira?",
+     "qEn": "How do you feel when a camera looks at you?",
+     "model": "Me siento un poco nervioso."
+    }
+   ],
+   "gaps": "Veo el [baño]. Una persona se lava los [dientes]. ¿Algo más? No. Pero tengo un [problema]. Quiero [estornudar].",
+   "glossary": [
+    {
+     "word": "espejo",
+     "meaning": "cristal donde ves tu cara",
+     "en": "mirror"
+    },
+    {
+     "word": "dientes",
+     "meaning": "están en la boca",
+     "en": "teeth"
+    },
+    {
+     "word": "estornudar",
+     "meaning": "hacer «¡achís!»",
+     "en": "to sneeze"
+    }
+   ]
+  },
+  {
+   "id": "romance",
+   "title": "El beso de las once y media",
+   "place": "El jardín",
+   "context": "Sofi y Dani están en la hamaca del jardín.",
+   "contextEn": "Sofi and Dani are in the garden hammock.",
+   "speakers": [
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Dani",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Dani, son las once y media.",
+     "en": "Dani, it is half past eleven."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?",
+     "en": "So?"
+    },
+    {
+     "s": 0,
+     "text": "Producción quiere un beso ahora.",
+     "en": "Production wants a kiss now."
+    },
+    {
+     "s": 1,
+     "text": "Sofi, yo te quiero de verdad.",
+     "en": "Sofi, I really love you."
+    },
+    {
+     "s": 0,
+     "text": "Ay, Dani. Esto es un programa.",
+     "en": "Oh, Dani. This is a show."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están Sofi y Dani?",
+     "qEn": "Where are Sofi and Dani?",
+     "options": [
+      "En la hamaca",
+      "En la piscina",
+      "En la cocina con Fela"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Las doce",
+      "Las once y media",
+      "Las diez y cuarto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere producción?",
+     "qEn": "What does production want?",
+     "options": [
+      "Un beso",
+      "Una pelea en el salón",
+      "Una canción"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué siente Dani?",
+     "qEn": "What does Dani feel?",
+     "options": [
+      "Mucho sueño",
+      "Amor de verdad",
+      "Miedo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué hace una pareja romántica en una película?",
+     "qEn": "What does a romantic couple do in a film?",
+     "model": "Pasean y se miran mucho."
+    },
+    {
+     "q": "¿Dónde lees o descansas en verano?",
+     "qEn": "Where do you read or rest in summer?",
+     "model": "Leo en el balcón de mi casa."
+    },
+    {
+     "q": "¿Qué programa de amor ves en la tele?",
+     "qEn": "What love show do you watch on TV?",
+     "model": "No veo programas de amor."
+    }
+   ],
+   "gaps": "Producción quiere un [beso] ahora. Sofi, yo te [quiero] de [verdad]. Ay, Dani. Esto es un [programa].",
+   "glossary": [
+    {
+     "word": "producción",
+     "meaning": "equipo que hace el programa",
+     "en": "production"
+    },
+    {
+     "word": "beso",
+     "meaning": "se da con los labios",
+     "en": "kiss"
+    },
+    {
+     "word": "de verdad",
+     "meaning": "en serio",
+     "en": "really"
+    }
+   ]
+  },
+  {
+   "id": "edad",
+   "title": "Una foto muy vieja",
+   "place": "La piscina",
+   "context": "Nacho y Toño están en la piscina.",
+   "contextEn": "Nacho and Toño are by the pool.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Nacho, ¿cuántos años tienes?",
+     "en": "Nacho, how old are you?"
+    },
+    {
+     "s": 0,
+     "text": "Veintinueve.",
+     "en": "Twenty-nine."
+    },
+    {
+     "s": 1,
+     "text": "¿Y esta foto? Dice mil novecientos noventa y ocho.",
+     "en": "And this photo? It says nineteen ninety-eight."
+    },
+    {
+     "s": 0,
+     "text": "Es de mi hermano mayor.",
+     "en": "It is my older brother’s."
+    },
+    {
+     "s": 1,
+     "text": "Tu hermano tiene tu cara y tu reloj.",
+     "en": "Your brother has your face and your watch."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años dice tener Nacho?",
+     "qEn": "How old does Nacho say he is?",
+     "options": [
+      "Diecinueve",
+      "Veintinueve",
+      "Treinta y nueve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué año dice la foto?",
+     "qEn": "What year does the photo say?",
+     "options": [
+      "De 1998",
+      "De 2008",
+      "Del año pasado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Nacho, ¿de quién es la foto?",
+     "qEn": "According to Nacho, whose photo is it?",
+     "options": [
+      "De su padre",
+      "De Toño y su novia",
+      "De su hermano"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene el hermano?",
+     "qEn": "What does the brother have?",
+     "options": [
+      "Un perro",
+      "Un coche rojo",
+      "La cara y el reloj de Nacho"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Quién sale contigo en tu foto del teléfono?",
+     "qEn": "Who is with you in your phone photo?",
+     "model": "Sale mi perro conmigo."
+    },
+    {
+     "q": "¿A qué edad te sientes por dentro?",
+     "qEn": "What age do you feel inside?",
+     "model": "Por dentro tengo veinte años."
+    },
+    {
+     "q": "¿Qué objeto viejo guardas todavía?",
+     "qEn": "What old object do you still keep?",
+     "model": "Guardo un reloj de mi padre."
+    }
+   ],
+   "gaps": "Es de mi [hermano] [mayor]. Tu hermano tiene tu [cara] y tu [reloj].",
+   "glossary": [
+    {
+     "word": "foto",
+     "meaning": "imagen de una cámara",
+     "en": "photo"
+    },
+    {
+     "word": "mayor",
+     "meaning": "con más años",
+     "en": "older"
+    },
+    {
+     "word": "reloj",
+     "meaning": "te dice la hora",
+     "en": "watch"
+    }
+   ]
+  },
+  {
+   "id": "prueba",
+   "title": "La mano en el botón",
+   "place": "El gimnasio del jardín",
+   "context": "Toño tiene la mano en un botón. Chelo habla con él.",
+   "contextEn": "Toño has his hand on a button. Chelo talks to him.",
+   "speakers": [
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Toño, ¿cuántas horas llevas aquí?",
+     "en": "Toño, how many hours have you been here?"
+    },
+    {
+     "s": 0,
+     "text": "Siete horas. Me duele el brazo.",
+     "en": "Seven hours. My arm hurts."
+    },
+    {
+     "s": 1,
+     "text": "El premio es un coche.",
+     "en": "The prize is a car."
+    },
+    {
+     "s": 0,
+     "text": "Yo no tengo carro. Voy en bicicleta.",
+     "en": "I don’t have a car. I go by bike."
+    },
+    {
+     "s": 1,
+     "text": "Entonces, ¡no sueltes el botón!",
+     "en": "Then don’t let go of the button!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas horas lleva Toño?",
+     "qEn": "How many hours has Toño been there?",
+     "options": [
+      "Siete",
+      "Once",
+      "Tres"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le duele a Toño?",
+     "qEn": "What hurts Toño?",
+     "options": [
+      "La cabeza",
+      "El brazo",
+      "Los pies y las piernas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuál es el premio?",
+     "qEn": "What is the prize?",
+     "options": [
+      "Un coche",
+      "Una casa",
+      "Un viaje a la playa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo va Toño normalmente?",
+     "qEn": "How does Toño usually get around?",
+     "options": [
+      "En autobús",
+      "A pie",
+      "En bicicleta"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuántos minutos aguantas sin mirar el teléfono?",
+     "qEn": "How many minutes can you last without looking at your phone?",
+     "model": "Aguanto veinte minutos."
+    },
+    {
+     "q": "¿Qué regalo grande quieres ganar algún día?",
+     "qEn": "What big gift do you want to win one day?",
+     "model": "Quiero ganar un viaje a Japón."
+    },
+    {
+     "q": "¿Qué transporte usas todos los días?",
+     "qEn": "What transport do you use every day?",
+     "model": "Uso el metro y el autobús."
+    }
+   ],
+   "gaps": "Siete horas. Me duele el [brazo]. El [premio] es un [coche]. Yo no tengo carro. Voy en [bicicleta].",
+   "glossary": [
+    {
+     "word": "botón",
+     "meaning": "cosa pequeña para apretar",
+     "en": "button"
+    },
+    {
+     "word": "premio",
+     "meaning": "lo que ganas",
+     "en": "prize"
+    },
+    {
+     "word": "carro",
+     "meaning": "coche",
+     "en": "car"
+    }
+   ]
+  },
+  {
+   "id": "patrocinador",
+   "title": "El yogur Vitalín",
+   "place": "La nevera del patrocinador",
+   "context": "Chema y Marga están delante de la nevera.",
+   "contextEn": "Chema and Marga are in front of the fridge.",
+   "speakers": [
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chema, di «Yogur Vitalín» y come uno.",
+     "en": "Chema, say “Vitalín Yogurt” and eat one."
+    },
+    {
+     "s": 0,
+     "text": "«Yogur Vitalín». Pero no lo como.",
+     "en": "“Vitalín Yogurt”. But I don’t eat it."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué no?",
+     "en": "Why not?"
+    },
+    {
+     "s": 0,
+     "text": "No puedo tomar leche. Me duele la barriga.",
+     "en": "I can’t have milk. My tummy hurts."
+    },
+    {
+     "s": 1,
+     "text": "Ay, Chema. ¡Eres la cara del yogur!",
+     "en": "Oh, Chema. You are the face of the yogurt!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué marca de yogur es?",
+     "qEn": "What brand of yogurt is it?",
+     "options": [
+      "Vitamín",
+      "Vitalín",
+      "Natalín"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde están?",
+     "qEn": "Where are they?",
+     "options": [
+      "En la piscina",
+      "En el baño",
+      "Delante de la nevera"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no puede tomar Chema?",
+     "qEn": "What can’t Chema have?",
+     "options": [
+      "Agua",
+      "Café con azúcar",
+      "Leche"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le duele?",
+     "qEn": "What hurts?",
+     "options": [
+      "La espalda",
+      "Un ojo",
+      "La barriga"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué alimento te sienta mal?",
+     "qEn": "What food doesn’t agree with you?",
+     "model": "El queso me sienta mal."
+    },
+    {
+     "q": "¿Qué anuncio de la tele recuerdas?",
+     "qEn": "What TV advert do you remember?",
+     "model": "Recuerdo un anuncio de chocolate."
+    },
+    {
+     "q": "¿Qué tomas en el desayuno?",
+     "qEn": "What do you have for breakfast?",
+     "model": "Tomo café y pan con queso."
+    }
+   ],
+   "gaps": "No puedo tomar [leche]. Me duele la [barriga]. Ay, Chema. ¡Eres la [cara] del [yogur]!",
+   "glossary": [
+    {
+     "word": "cara",
+     "meaning": "parte delantera de la cabeza",
+     "en": "face"
+    },
+    {
+     "word": "barriga",
+     "meaning": "parte del cuerpo con el estómago",
+     "en": "tummy"
+    },
+    {
+     "word": "yogur",
+     "meaning": "comida blanca hecha con leche",
+     "en": "yogurt"
+    }
+   ]
+  },
+  {
+   "id": "nominaciones",
+   "title": "Un nombre en el sobre",
+   "place": "El confesionario",
+   "context": "La Voz y Chelo preparan las nominaciones.",
+   "contextEn": "La Voz and Chelo prepare the nominations.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Voz, aquí está el sobre.",
+     "en": "Voice, here is the envelope."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué nombre tiene?",
+     "en": "What name is in it?"
+    },
+    {
+     "s": 1,
+     "text": "Fela.",
+     "en": "Fela."
+    },
+    {
+     "s": 0,
+     "text": "¿Fela? Pero la gente quiere a Fela.",
+     "en": "Fela? But people love Fela."
+    },
+    {
+     "s": 1,
+     "text": "Es una orden del jefe.",
+     "en": "It is an order from the boss."
+    },
+    {
+     "s": 0,
+     "text": "No me gusta este juego.",
+     "en": "I don’t like this game."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le da Chelo a La Voz?",
+     "qEn": "What does Chelo give La Voz?",
+     "options": [
+      "Un café",
+      "Una foto vieja",
+      "Un sobre"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué nombre hay en el sobre?",
+     "qEn": "What name is in the envelope?",
+     "options": [
+      "Wendy",
+      "Brenda",
+      "Fela"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De quién es la orden?",
+     "qEn": "Whose order is it?",
+     "options": [
+      "De Fela",
+      "Del jefe",
+      "De la madre de Yeni"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué piensa La Voz del juego?",
+     "qEn": "What does La Voz think of the game?",
+     "options": [
+      "No le gusta",
+      "Le encanta",
+      "Es muy fácil"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué juego de niños recuerdas con cariño?",
+     "qEn": "What childhood game do you remember fondly?",
+     "model": "Recuerdo el escondite."
+    },
+    {
+     "q": "¿A quién quiere mucho la gente de tu ciudad?",
+     "qEn": "Who do people in your city love?",
+     "model": "La gente quiere a un cantante."
+    },
+    {
+     "q": "¿Qué haces cuando una orden no es justa?",
+     "qEn": "What do you do when an order is not fair?",
+     "model": "Hablo con mi jefe."
+    }
+   ],
+   "gaps": "Pero la gente [quiere] a Fela. Es una [orden] del [jefe]. No me gusta este [juego].",
+   "glossary": [
+    {
+     "word": "sobre",
+     "meaning": "papel doblado para una carta",
+     "en": "envelope"
+    },
+    {
+     "word": "orden",
+     "meaning": "lo que el jefe dice que hagas",
+     "en": "order"
+    },
+    {
+     "word": "jefe",
+     "meaning": "persona que manda",
+     "en": "boss"
+    }
+   ]
+  },
+  {
+   "id": "castigo",
+   "title": "Un suéter verde",
+   "place": "El cuarto de castigo",
+   "context": "Wendy está en el cuarto de castigo. Fela le lleva lana.",
+   "contextEn": "Wendy is in the punishment room. Fela brings her wool.",
+   "speakers": [
+    {
+     "name": "Wendy",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wendy, toma. Lana verde.",
+     "en": "Wendy, here. Green wool."
+    },
+    {
+     "s": 0,
+     "text": "¿Para qué?",
+     "en": "What for?"
+    },
+    {
+     "s": 1,
+     "text": "Para tejer. Aquí no hay nada que hacer.",
+     "en": "To knit. There is nothing to do here."
+    },
+    {
+     "s": 0,
+     "text": "Yo soy la mala del programa. Las malas no tejen.",
+     "en": "I am the bad one of the show. Bad girls don’t knit."
+    },
+    {
+     "s": 1,
+     "text": "Esta noche, sí.",
+     "en": "Tonight, they do."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está Wendy?",
+     "qEn": "Where is Wendy?",
+     "options": [
+      "En la cocina",
+      "En la piscina con Toño",
+      "En el cuarto de castigo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De qué color es la lana?",
+     "qEn": "What colour is the wool?",
+     "options": [
+      "Verde",
+      "Roja",
+      "Amarilla"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para qué es la lana?",
+     "qEn": "What is the wool for?",
+     "options": [
+      "Para dormir",
+      "Para limpiar el suelo",
+      "Para tejer"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién es la mala del programa?",
+     "qEn": "Who is the bad one of the show?",
+     "options": [
+      "Wendy",
+      "Fela",
+      "Chelo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces con las manos cuando estás aburrido o aburrida?",
+     "qEn": "What do you do with your hands when you are bored?",
+     "model": "Dibujo en un papel."
+    },
+    {
+     "q": "¿Qué personaje malo de la tele te cae bien?",
+     "qEn": "Which TV villain do you like?",
+     "model": "Me cae bien una bruja de una serie."
+    },
+    {
+     "q": "¿Quién te enseñó a hacer algo con las manos?",
+     "qEn": "Who taught you to make something with your hands?",
+     "model": "Mi abuela me enseñó a coser."
+    }
+   ],
+   "gaps": "Para [tejer]. Aquí no hay [nada] que hacer. Yo soy la [mala] del [programa].",
+   "glossary": [
+    {
+     "word": "lana",
+     "meaning": "hilo para hacer suéteres",
+     "en": "wool"
+    },
+    {
+     "word": "tejer",
+     "meaning": "hacer ropa con hilo y agujas",
+     "en": "to knit"
+    },
+    {
+     "word": "mala",
+     "meaning": "persona que no es buena",
+     "en": "bad one"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "Pizza a las tres",
+   "place": "El pasillo de producción",
+   "context": "Chelo y Marga comen en el pasillo de producción.",
+   "contextEn": "Chelo and Marga eat in the production corridor.",
+   "speakers": [
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chelo, ¿quieres pizza? Está fría.",
+     "en": "Chelo, do you want pizza? It is cold."
+    },
+    {
+     "s": 0,
+     "text": "Sí, gracias. Tengo mucha hambre.",
+     "en": "Yes, thanks. I am very hungry."
+    },
+    {
+     "s": 1,
+     "text": "¿Es verdad? ¿Tú ganaste la primera temporada?",
+     "en": "Is it true? You won the first season?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Hace diez años. Ahora trabajo aquí de noche.",
+     "en": "Yes. Ten years ago. Now I work here at night."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué vida!",
+     "en": "What a life!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está la pizza?",
+     "qEn": "How is the pizza?",
+     "options": [
+      "Muy caliente",
+      "Quemada",
+      "Fría"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene Chelo?",
+     "qEn": "What does Chelo have?",
+     "options": [
+      "Hambre",
+      "Sueño",
+      "Frío en los pies"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ganó Chelo?",
+     "qEn": "What did Chelo win?",
+     "options": [
+      "Un coche",
+      "La primera temporada",
+      "Una pizza gratis"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo trabaja Chelo?",
+     "qEn": "When does Chelo work?",
+     "options": [
+      "De noche",
+      "Por la mañana",
+      "Los domingos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué comes cuando trabajas o estudias hasta tarde?",
+     "qEn": "What do you eat when you work or study late?",
+     "model": "Como un sándwich."
+    },
+    {
+     "q": "¿Qué bebida fría tomas en verano?",
+     "qEn": "What cold drink do you have in summer?",
+     "model": "Tomo limonada con hielo."
+    },
+    {
+     "q": "¿En qué concurso de la tele te gustaría participar?",
+     "qEn": "What TV contest would you like to take part in?",
+     "model": "Me gustaría participar en un concurso de cocina."
+    }
+   ],
+   "gaps": "Sí, gracias. Tengo mucha [hambre]. ¿Es [verdad]? ¿Tú [ganaste] la primera [temporada]?",
+   "glossary": [
+    {
+     "word": "fría",
+     "meaning": "con temperatura baja",
+     "en": "cold"
+    },
+    {
+     "word": "temporada",
+     "meaning": "grupo de programas de un año",
+     "en": "season"
+    },
+    {
+     "word": "hambre",
+     "meaning": "ganas de comer",
+     "en": "hunger"
+    }
+   ]
+  },
+  {
+   "id": "abandono",
+   "title": "La puerta roja",
+   "place": "La puerta roja",
+   "context": "Hugo está delante de la puerta roja. Fela está con él.",
+   "contextEn": "Hugo is in front of the red door. Fela is with him.",
+   "speakers": [
+    {
+     "name": "Hugo",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, mi papá está en el hospital.",
+     "en": "Fela, my dad is in hospital."
+    },
+    {
+     "s": 1,
+     "text": "Ay, Hugo. Lo siento mucho.",
+     "en": "Oh, Hugo. I am very sorry."
+    },
+    {
+     "s": 0,
+     "text": "Si salgo por esta puerta, pago una multa.",
+     "en": "If I go out through this door, I pay a fine."
+    },
+    {
+     "s": 1,
+     "text": "Tu papá es más importante que el dinero.",
+     "en": "Your dad is more important than money."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Me voy.",
+     "en": "Yes. I am going."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está el papá de Hugo?",
+     "qEn": "Where is Hugo’s dad?",
+     "options": [
+      "En el hospital",
+      "En su casa",
+      "En la escuela"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De qué color es la puerta?",
+     "qEn": "What colour is the door?",
+     "options": [
+      "Roja",
+      "Blanca",
+      "Verde"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué paga Hugo si sale?",
+     "qEn": "What does Hugo pay if he leaves?",
+     "options": [
+      "Una multa",
+      "Una pizza",
+      "Nada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué decide Hugo?",
+     "qEn": "What does Hugo decide?",
+     "options": [
+      "Se queda en la casa",
+      "Se va",
+      "Llama a su madre"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa no compras con dinero?",
+     "qEn": "What thing can’t you buy with money?",
+     "model": "No compro la amistad."
+    },
+    {
+     "q": "¿Quién te ayuda con los problemas difíciles?",
+     "qEn": "Who helps you with difficult problems?",
+     "model": "Mi mejor amiga me ayuda."
+    },
+    {
+     "q": "¿Qué dices a un amigo con un familiar enfermo?",
+     "qEn": "What do you say to a friend with a sick relative?",
+     "model": "Le digo que estoy con él."
+    }
+   ],
+   "gaps": "Si salgo por esta [puerta], pago una [multa]. Tu papá es más [importante] que el [dinero].",
+   "glossary": [
+    {
+     "word": "multa",
+     "meaning": "dinero que pagas por romper una regla",
+     "en": "fine"
+    },
+    {
+     "word": "hospital",
+     "meaning": "lugar para las personas enfermas",
+     "en": "hospital"
+    },
+    {
+     "word": "lo siento",
+     "meaning": "frase para mostrar pena",
+     "en": "I am sorry"
+    }
+   ]
+  },
+  {
+   "id": "maquillaje",
+   "title": "Ojeras de las cuatro",
+   "place": "La sala de maquillaje",
+   "context": "Paty maquilla a Sofi a las cuatro de la mañana.",
+   "contextEn": "Paty does Sofi’s make-up at four in the morning.",
+   "speakers": [
+    {
+     "name": "Paty",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Paty, tengo ojeras.",
+     "en": "Paty, I have dark circles."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Son las cuatro. Todo el mundo tiene ojeras.",
+     "en": "Yes. It is four o’clock. Everybody has dark circles."
+    },
+    {
+     "s": 1,
+     "text": "¿Puedes quitar las ojeras?",
+     "en": "Can you remove the dark circles?"
+    },
+    {
+     "s": 0,
+     "text": "Claro. Un poco de crema y ya está.",
+     "en": "Of course. A bit of cream and that’s it."
+    },
+    {
+     "s": 1,
+     "text": "¡Parezco dormida de ocho horas!",
+     "en": "I look like I slept eight hours!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Sofi?",
+     "qEn": "What does Sofi have?",
+     "options": [
+      "Hambre",
+      "Un regalo",
+      "Ojeras"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Las ocho",
+      "Las dos y media",
+      "Las cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué usa Paty?",
+     "qEn": "What does Paty use?",
+     "options": [
+      "Agua fría",
+      "Crema",
+      "Un peine grande"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas horas parece dormida Sofi?",
+     "qEn": "How many hours does Sofi look like she slept?",
+     "options": [
+      "Cuatro",
+      "Ocho",
+      "Diez"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces los sábados por la noche antes de dormir?",
+     "qEn": "What do you do on Saturday nights before you sleep?",
+     "model": "Veo una película."
+    },
+    {
+     "q": "¿Qué haces por la mañana para despertarte?",
+     "qEn": "What do you do in the morning to wake up?",
+     "model": "Me ducho con agua fría."
+    },
+    {
+     "q": "¿Cuándo usas maquillaje o ropa especial?",
+     "qEn": "When do you use make-up or special clothes?",
+     "model": "Uso ropa especial en las fiestas."
+    }
+   ],
+   "gaps": "Sí. Son las [cuatro]. Todo el mundo tiene [ojeras]. ¿Puedes quitar las ojeras? [Claro]. Un poco de [crema] y ya está.",
+   "glossary": [
+    {
+     "word": "ojeras",
+     "meaning": "manchas oscuras debajo de los ojos",
+     "en": "dark circles"
+    },
+    {
+     "word": "crema",
+     "meaning": "producto suave para la piel",
+     "en": "cream"
+    },
+    {
+     "word": "quitar",
+     "meaning": "sacar algo de un lugar",
+     "en": "to remove"
+    }
+   ]
+  },
+  {
+   "id": "secreto",
+   "title": "La hija del presentador",
+   "place": "La lavandería",
+   "context": "Lucía y Brenda doblan ropa en la lavandería.",
+   "contextEn": "Lucía and Brenda fold clothes in the laundry room.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Brenda, tengo un secreto.",
+     "en": "Brenda, I have a secret."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué secreto?",
+     "en": "What secret?"
+    },
+    {
+     "s": 0,
+     "text": "Mi apellido no es Montalbán. Mi papá es el presentador.",
+     "en": "My surname is not Montalbán. My dad is the presenter."
+    },
+    {
+     "s": 1,
+     "text": "¡No! ¿El presentador del programa?",
+     "en": "No! The presenter of the show?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Y él no lo sabe. Habla bajo.",
+     "en": "Yes. And he doesn’t know. Talk quietly."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están?",
+     "qEn": "Where are they?",
+     "options": [
+      "En la lavandería",
+      "En el jardín",
+      "En el confesionario"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene Lucía?",
+     "qEn": "What does Lucía have?",
+     "options": [
+      "Una pizza",
+      "Un perro pequeño",
+      "Un secreto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién es el papá de Lucía?",
+     "qEn": "Who is Lucía’s dad?",
+     "options": [
+      "El camarógrafo",
+      "El presentador",
+      "Un cocinero"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Quién no sabe el secreto?",
+     "qEn": "Who does not know the secret?",
+     "options": [
+      "Brenda",
+      "El papá",
+      "Lucía"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Quién guarda tus secretos?",
+     "qEn": "Who keeps your secrets?",
+     "model": "Mi hermana guarda mis secretos."
+    },
+    {
+     "q": "¿Qué trabajo tiene alguien famoso de tu país?",
+     "qEn": "What job does someone famous from your country have?",
+     "model": "Es futbolista."
+    },
+    {
+     "q": "¿Qué tarea de la casa haces con música?",
+     "qEn": "What housework do you do with music?",
+     "model": "Lavo los platos con música."
+    }
+   ],
+   "gaps": "Mi [apellido] no es Montalbán. Mi papá es el [presentador]. ¡No! ¿El presentador del [programa]? Sí. Y él no lo [sabe].",
+   "glossary": [
+    {
+     "word": "secreto",
+     "meaning": "algo que nadie más sabe",
+     "en": "secret"
+    },
+    {
+     "word": "apellido",
+     "meaning": "nombre de la familia",
+     "en": "surname"
+    },
+    {
+     "word": "presentador",
+     "meaning": "persona que habla en un programa",
+     "en": "presenter"
+    }
+   ]
+  },
+  {
+   "id": "veredicto",
+   "title": "Las seis y cuarto",
+   "place": "El confesionario",
+   "context": "La Voz, Marga y Chelo terminan la noche en el confesionario.",
+   "contextEn": "La Voz, Marga and Chelo end the night in the confessional.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Son las seis y cuarto. Se acaba el programa.",
+     "en": "It is quarter past six. The show is ending."
+    },
+    {
+     "s": 2,
+     "text": "¿Esta noche o para siempre?",
+     "en": "Tonight or forever?"
+    },
+    {
+     "s": 0,
+     "text": "Para siempre. Es el último programa.",
+     "en": "Forever. It is the last show."
+    },
+    {
+     "s": 1,
+     "text": "Ay, no. Me gusta esta casa.",
+     "en": "Oh, no. I like this house."
+    },
+    {
+     "s": 0,
+     "text": "A mí también. Gracias por todo.",
+     "en": "Me too. Thank you for everything."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Las seis y cuarto",
+      "Las seis y media",
+      "Las cinco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pasa con el programa?",
+     "qEn": "What happens to the show?",
+     "options": [
+      "Se acaba",
+      "Empieza",
+      "Cambia de casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién da la noticia?",
+     "qEn": "Who gives the news?",
+     "options": [
+      "Marga",
+      "La Voz",
+      "Chelo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le gusta a Marga?",
+     "qEn": "What does Marga like?",
+     "options": [
+      "La pizza",
+      "La casa",
+      "Dormir"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué programa de la tele extrañas?",
+     "qEn": "What TV show do you miss?",
+     "model": "Extraño un programa de dibujos."
+    },
+    {
+     "q": "¿Cómo te sientes al final de una noche larga?",
+     "qEn": "How do you feel at the end of a long night?",
+     "model": "Me siento cansado, pero feliz."
+    },
+    {
+     "q": "¿A quién le das las gracias hoy?",
+     "qEn": "Who do you thank today?",
+     "model": "Le doy las gracias a mi profesora."
+    }
+   ],
+   "gaps": "Para [siempre]. Es el [último] programa. Ay, no. Me gusta esta [casa]. A mí también. Gracias por [todo].",
+   "glossary": [
+    {
+     "word": "se acaba",
+     "meaning": "termina",
+     "en": "it ends"
+    },
+    {
+     "word": "para siempre",
+     "meaning": "sin final",
+     "en": "forever"
+    },
+    {
+     "word": "último",
+     "meaning": "el final de una lista",
+     "en": "last"
+    }
+   ]
+  }
+ ]
+}

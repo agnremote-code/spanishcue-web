@@ -1,0 +1,2113 @@
+{
+ "game": "reality",
+ "level": "A2",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "La horquilla del micrófono",
+   "place": "La entrada",
+   "context": "Después de la entrada, Marga y Lalo comentan lo que pasó en directo.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Marga, ¿viste la entrada? Fue un desastre precioso."
+    },
+    {
+     "s": 0,
+     "text": "La vi desde la escalera. Primero se abrió la puerta, después sonó la música… y de repente el micrófono dejó de funcionar."
+    },
+    {
+     "s": 1,
+     "text": "Yo estaba grabando y pensé: «Se acabó, ahora llora». Pero no. La Sorpresa sacó una horquilla del pelo y lo arregló en diez segundos."
+    },
+    {
+     "s": 0,
+     "text": "En siete temporadas nunca había visto algo así. Los técnicos tardan cinco minutos."
+    },
+    {
+     "s": 1,
+     "text": "Y el público aplaudió más que con la frase de los guionistas."
+    },
+    {
+     "s": 0,
+     "text": "Claro. Una frase preparada la olvidas mañana. Una persona que arregla un problema, no."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde dónde vio Marga la entrada?",
+     "options": [
+      "Desde el confesionario",
+      "Desde su casa, en la tele",
+      "Desde la escalera"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dejó de funcionar?",
+     "options": [
+      "La puerta",
+      "Las luces del salón",
+      "El micrófono"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Con qué arregló el problema la Sorpresa?",
+     "options": [
+      "Con un cuchillo de la cocina",
+      "Con una horquilla",
+      "Con cinta adhesiva"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Marga, ¿qué recuerda el público?",
+     "options": [
+      "Las frases preparadas por los guionistas",
+      "A una persona que arregla un problema",
+      "La música de la entrada"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué problema pequeño arreglaste tú en el último momento?",
+     "model": "Arreglé una cremallera con un clip antes de una entrevista."
+    },
+    {
+     "q": "¿Qué recuerdas mejor de un evento: las palabras o los errores?",
+     "model": "Recuerdo mejor los errores, porque son más humanos."
+    },
+    {
+     "q": "¿Qué recuerdas de tu llegada a una clase o un trabajo nuevo?",
+     "model": "Llegué tarde y me senté en el sitio de otra persona."
+    }
+   ],
+   "gaps": "Primero se abrió la [puerta], después sonó la [música]… y de repente el [micrófono] dejó de [funcionar].",
+   "glossary": [
+    {
+     "word": "desastre",
+     "meaning": "algo que sale muy mal"
+    },
+    {
+     "word": "horquilla",
+     "meaning": "pequeño objeto de metal para el pelo"
+    },
+    {
+     "word": "tardan",
+     "meaning": "necesitan tiempo para hacer algo"
+    },
+    {
+     "word": "preparada",
+     "meaning": "hecha antes"
+    }
+   ]
+  },
+  {
+   "id": "confesionario",
+   "title": "El divorcio de La Voz",
+   "place": "El confesionario",
+   "context": "Marga encuentra a La Voz muy callado entre dos confesiones.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rodolfo, la última confesión duró diez minutos y tú solo hiciste una pregunta. ¿Qué te pasa?"
+    },
+    {
+     "s": 0,
+     "text": "Esta mañana firmé el divorcio. Veinte años casados y terminamos en una oficina gris, en un cuarto de hora."
+    },
+    {
+     "s": 1,
+     "text": "Lo siento muchísimo. ¿Por qué viniste a trabajar?"
+    },
+    {
+     "s": 0,
+     "text": "Porque aquí nadie me ve la cara. Puedo estar triste y nadie lo nota."
+    },
+    {
+     "s": 1,
+     "text": "La Sorpresa lo notó. Me dijo que tu voz sonaba como una tarde de lluvia."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Al final, fue la Sorpresa la que me hizo las preguntas a mí. Y no me molestó."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto duró la última confesión?",
+     "options": [
+      "Una hora",
+      "Un cuarto de hora",
+      "Diez minutos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué firmó La Voz esta mañana?",
+     "options": [
+      "Un contrato nuevo",
+      "El divorcio",
+      "La venta de su casa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué vino a trabajar?",
+     "options": [
+      "Porque necesita el dinero para pagar el divorcio",
+      "Porque su jefe lo obligó",
+      "Porque allí nadie le ve la cara"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hizo la Sorpresa?",
+     "options": [
+      "Se fue del confesionario",
+      "Le pidió una canción",
+      "Le hizo preguntas a La Voz"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Dónde escondes tu tristeza cuando tienes que trabajar?",
+     "model": "La escondo detrás de mucha actividad y café."
+    },
+    {
+     "q": "¿Cómo notas tú que una persona está triste?",
+     "model": "Lo noto porque habla menos y no mira a los ojos."
+    },
+    {
+     "q": "¿Qué te ayudó en un día muy difícil?",
+     "model": "Me ayudó una amiga que me llevó a pasear."
+    }
+   ],
+   "gaps": "Esta mañana firmé el [divorcio]. Veinte años [casados] y terminamos en una [oficina gris], en un cuarto de [hora].",
+   "glossary": [
+    {
+     "word": "notó",
+     "meaning": "se dio cuenta de algo"
+    },
+    {
+     "word": "divorcio",
+     "meaning": "final legal de un matrimonio"
+    },
+    {
+     "word": "lo notó",
+     "meaning": "se dio cuenta"
+    }
+   ]
+  },
+  {
+   "id": "alianza",
+   "title": "Dos alianzas en cinco minutos",
+   "place": "El salón",
+   "context": "Brenda y Óscar comparan lo que les dijo la Sorpresa cuando le ofrecieron una alianza.",
+   "speakers": [
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Óscar",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Brenda, ¿qué te contestó la Sorpresa?"
+    },
+    {
+     "s": 0,
+     "text": "Que no. Le ofrecí protección y mis seguidores, y me dijo que prefería hacer amigos de verdad."
+    },
+    {
+     "s": 1,
+     "text": "¿En serio? A mí me dijo lo mismo. Le prometí que llegaría a la final y se rió."
+    },
+    {
+     "s": 0,
+     "text": "Antes los nuevos eran más fáciles. En la primera semana Wendy aceptó todo en dos minutos."
+    },
+    {
+     "s": 1,
+     "text": "Y mírala ahora: está en el cuarto de castigo."
+    },
+    {
+     "s": 0,
+     "text": "Óscar, creo que tenemos un problema. Si la Sorpresa ve que somos pareja fuera, nos hunde."
+    },
+    {
+     "s": 1,
+     "text": "O nos ayuda. La gente honesta a veces es la mejor aliada."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le ofreció Brenda a la Sorpresa?",
+     "options": [
+      "Protección y sus seguidores",
+      "Dinero y ropa",
+      "Una cama mejor en el dormitorio grande"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hizo la Sorpresa cuando Óscar le prometió la final?",
+     "options": [
+      "Aceptó",
+      "Se enfadó mucho con él",
+      "Se rió"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo eran antes los nuevos, según Brenda?",
+     "options": [
+      "Más fáciles",
+      "Más simpáticos",
+      "Más inteligentes que ahora"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está Wendy ahora?",
+     "options": [
+      "En la piscina",
+      "En el cuarto de castigo",
+      "Fuera de la casa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué prefieres en un grupo nuevo: aliados o amigos?",
+     "model": "Prefiero amigos, aunque al principio sea más lento."
+    },
+    {
+     "q": "¿Qué promesa te hicieron que no te creíste?",
+     "model": "Un vendedor me prometió que el coche no gastaba nada."
+    },
+    {
+     "q": "¿Cómo eran tus amistades antes y cómo son ahora?",
+     "model": "Antes tenía muchos amigos; ahora tengo pocos, pero mejores."
+    }
+   ],
+   "gaps": "Le ofrecí [protección] y mis [seguidores], y me dijo que prefería hacer [amigos] de [verdad].",
+   "glossary": [
+    {
+     "word": "protección",
+     "meaning": "ayuda para no sufrir daño"
+    },
+    {
+     "word": "prometí",
+     "meaning": "dije que iba a hacer algo seguro"
+    },
+    {
+     "word": "hunde",
+     "meaning": "destruye"
+    },
+    {
+     "word": "aliada",
+     "meaning": "persona que te apoya"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "La crisis del atún",
+   "place": "La cocina",
+   "context": "Chema le cuenta a Doña Fela la pelea que hubo por sus latas.",
+   "speakers": [
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Fela, usted estaba en el jardín y se perdió la pelea. Wendy encontró sus latas debajo de la cama."
+    },
+    {
+     "s": 0,
+     "text": "Ay, Dios. ¿Y qué dijo?"
+    },
+    {
+     "s": 1,
+     "text": "Gritó que usted era una egoísta y que guardaba comida mientras los demás pasaban hambre."
+    },
+    {
+     "s": 0,
+     "text": "¿Y nadie me defendió?"
+    },
+    {
+     "s": 1,
+     "text": "La Sorpresa. Dijo que usted cocinaba para todos cada noche y que esas latas eran el arroz de mañana."
+    },
+    {
+     "s": 0,
+     "text": "Cuando yo era niña, en mi pueblo, a veces no había nada en la mesa. Por eso guardo. No es egoísmo, es miedo."
+    },
+    {
+     "s": 1,
+     "text": "Entonces mañana cocinamos juntos y se lo explicamos a todos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde estaba Fela durante la pelea?",
+     "options": [
+      "En el jardín",
+      "En la cocina",
+      "En el confesionario"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién encontró las latas?",
+     "options": [
+      "Wendy",
+      "La Sorpresa",
+      "Chema"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién defendió a Fela?",
+     "options": [
+      "Nadie",
+      "La Sorpresa",
+      "Óscar y Brenda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Fela, ¿por qué guarda comida?",
+     "options": [
+      "Por egoísmo",
+      "Porque no le gusta compartir",
+      "Por miedo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué hábito de ahorro te viene de tu infancia?",
+     "model": "Apago todas las luces porque en casa no había mucho dinero."
+    },
+    {
+     "q": "¿Cuándo defendiste a alguien delante de un grupo?",
+     "model": "Defendí a un compañero nuevo cuando todos se reían de él."
+    },
+    {
+     "q": "¿Qué comida se comparte siempre en tu familia?",
+     "model": "En mi familia siempre se comparte una olla grande de frijoles."
+    }
+   ],
+   "gaps": "Cuando yo era [niña], en mi [pueblo], a veces no había [nada] en la [mesa].",
+   "glossary": [
+    {
+     "word": "se perdió",
+     "meaning": "no vio algo"
+    },
+    {
+     "word": "egoísta",
+     "meaning": "que solo piensa en sí misma"
+    },
+    {
+     "word": "defendió",
+     "meaning": "habló a favor de alguien"
+    }
+   ]
+  },
+  {
+   "id": "mudo",
+   "title": "Conversación en servilletas",
+   "place": "El comedor",
+   "context": "Yeni le pregunta a Mateo por qué dejó de hablar, y él le susurra la historia.",
+   "speakers": [
+    {
+     "name": "Mateo",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mateo, el primer día eras el que más hablaba de la casa. Contabas chistes de abogados. ¿Qué pasó?"
+    },
+    {
+     "s": 0,
+     "text": "La segunda semana me dieron una copia de mi contrato. Es largo, pero lo leí entero en una noche."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?"
+    },
+    {
+     "s": 0,
+     "text": "La página cuarenta dice que el programa puede usar mi voz para cualquier producto. Para siempre. Imagina mi voz vendiendo pañales."
+    },
+    {
+     "s": 1,
+     "text": "Ja, ja. Bueno, sería un buen trabajo."
+    },
+    {
+     "s": 0,
+     "text": "Desde ese día solo escribo en servilletas. Ayer la Sorpresa me contestó también en servilletas. Hablamos media hora sin decir nada."
+    },
+    {
+     "s": 1,
+     "text": "En internet ya lo llaman «la conversación más bonita de la temporada»."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo era Mateo el primer día?",
+     "options": [
+      "Estaba muy callado y no salía de su cuarto",
+      "Lloraba mucho",
+      "Hablaba más que nadie"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo leyó el contrato?",
+     "options": [
+      "Antes de entrar",
+      "La segunda semana",
+      "Ayer por la tarde"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice la página cuarenta?",
+     "options": [
+      "Que el programa puede usar su voz para cualquier producto",
+      "Que no puede hablar",
+      "Que debe contar chistes"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo hablaron Mateo y la Sorpresa?",
+     "options": [
+      "Con servilletas",
+      "Por teléfono",
+      "Con gestos de las manos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cambió en ti después de leer algo importante?",
+     "model": "Después de leer un libro sobre el sueño, empecé a dormir más."
+    },
+    {
+     "q": "¿Cómo era tu forma de hablar de niño o niña?",
+     "model": "Hablaba sin parar y con muchas preguntas."
+    },
+    {
+     "q": "¿Qué conversación sin palabras recuerdas?",
+     "model": "Recuerdo una mirada con mi padre en un hospital."
+    }
+   ],
+   "gaps": "Desde ese día solo escribo en [servilletas]. Ayer la Sorpresa me [contestó] también en servilletas. Hablamos [media hora] sin decir [nada].",
+   "glossary": [
+    {
+     "word": "entero",
+     "meaning": "completo"
+    },
+    {
+     "word": "pañales",
+     "meaning": "ropa interior desechable para bebés"
+    },
+    {
+     "word": "servilletas",
+     "meaning": "papeles para limpiarse en la mesa"
+    }
+   ]
+  },
+  {
+   "id": "nostalgia",
+   "title": "El mensaje de la madre",
+   "place": "El dormitorio",
+   "context": "Fela y Yeni hablan después de que la producción pusiera un video de la madre de Yeni.",
+   "speakers": [
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, ¿viste lo que hicieron? Pusieron el video de mi mamá justo cuando estaba llorando."
+    },
+    {
+     "s": 1,
+     "text": "Lo vi. Fue muy bonito y también muy feo."
+    },
+    {
+     "s": 0,
+     "text": "Mi mamá decía: «Hija, la peluquería está bien, los clientes te extrañan». Y detrás se veía la silla vacía donde yo trabajaba."
+    },
+    {
+     "s": 1,
+     "text": "La producción espera a que alguien llore para poner esos videos. Así suben la audiencia."
+    },
+    {
+     "s": 0,
+     "text": "Por eso esta noche no voy a llorar. Voy a pensar en mi mamá y voy a sonreír."
+    },
+    {
+     "s": 1,
+     "text": "Esa es mi niña. Y si quieres llorar, ven a la cocina. Allí la cámara está rota."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo pusieron el video?",
+     "options": [
+      "Cuando Yeni estaba llorando",
+      "Durante la cena, delante de todos",
+      "Al día siguiente"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué se veía detrás de la madre?",
+     "options": [
+      "Un perro",
+      "La casa de Fela",
+      "La silla vacía de Yeni"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "Según Fela, ¿por qué ponen esos videos?",
+     "options": [
+      "Para ayudar a Yeni",
+      "Para subir la audiencia",
+      "Porque las madres lo piden"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Fela recomienda la cocina?",
+     "options": [
+      "Porque la cámara está rota",
+      "Porque hay comida",
+      "Porque es el lugar más caliente"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué objeto de tu casa te hace pensar en tu familia?",
+     "model": "La taza de mi abuelo me hace pensar en él."
+    },
+    {
+     "q": "¿Qué mensaje te emocionó cuando estabas lejos?",
+     "model": "Mi hermano me mandó un audio cantando, y me emocioné."
+    },
+    {
+     "q": "¿Dónde lloras cuando no quieres que nadie te vea?",
+     "model": "Lloro en el coche, con música alta."
+    }
+   ],
+   "gaps": "Por eso esta noche no voy a [llorar]. Voy a pensar en mi [mamá] y voy a [sonreír]. Esa es mi [niña].",
+   "glossary": [
+    {
+     "word": "justo",
+     "meaning": "exactamente en ese momento"
+    },
+    {
+     "word": "extrañan",
+     "meaning": "sienten tu ausencia"
+    },
+    {
+     "word": "rota",
+     "meaning": "que no funciona"
+    }
+   ]
+  },
+  {
+   "id": "espejo",
+   "title": "Pingüinos en lugar de personas",
+   "place": "El baño",
+   "context": "Lalo le cuenta a Chelo la conversación que tuvo con la Sorpresa a través del espejo.",
+   "speakers": [
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lalo, ¿por qué apagaste la cámara del baño veinte minutos?"
+    },
+    {
+     "s": 0,
+     "text": "Porque la Sorpresa se sentó delante del espejo y empezó a hablarme. Sabía que yo estaba detrás."
+    },
+    {
+     "s": 1,
+     "text": "¿Y de qué hablaron?"
+    },
+    {
+     "s": 0,
+     "text": "Me preguntó si me gustaba mi trabajo. Le dije la verdad: antes grababa documentales de pingüinos en el sur. Era feliz."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ahora?"
+    },
+    {
+     "s": 0,
+     "text": "Ahora grabo a gente que se lava los dientes. La Sorpresa me dijo que los pingüinos me necesitaban más que este baño."
+    },
+    {
+     "s": 1,
+     "text": "Si apagas la cámara otra vez, te despiden."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Por eso mañana llamo a mi antiguo jefe."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo apagó Lalo la cámara?",
+     "options": [
+      "Dos horas",
+      "Cinco minutos",
+      "Veinte minutos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué grababa Lalo antes?",
+     "options": [
+      "Partidos de fútbol",
+      "Bodas y cumpleaños de famosos",
+      "Documentales de pingüinos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué graba ahora?",
+     "options": [
+      "Pingüinos",
+      "Gente que se lava los dientes",
+      "Concursos de cocina"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué va a hacer mañana?",
+     "options": [
+      "Volver al baño",
+      "Hablar con el director del programa",
+      "Llamar a su antiguo jefe"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué trabajo antiguo te hacía más feliz que el actual?",
+     "model": "Era más feliz cuando trabajaba en una librería."
+    },
+    {
+     "q": "¿Qué frase amable de alguien en la calle te alegró la semana?",
+     "model": "Una señora en el metro me dijo que sonriera, y funcionó."
+    },
+    {
+     "q": "¿Cómo te sientes cuando una cámara de seguridad te graba?",
+     "model": "Me siento un poco incómoda, como si hiciera algo malo."
+    }
+   ],
+   "gaps": "Le dije la [verdad]: antes grababa [documentales] de [pingüinos] en el [sur].",
+   "glossary": [
+    {
+     "word": "apagaste",
+     "meaning": "hiciste que no funcionara"
+    },
+    {
+     "word": "documentales",
+     "meaning": "películas sobre cosas reales"
+    },
+    {
+     "word": "despiden",
+     "meaning": "quitan el trabajo"
+    }
+   ]
+  },
+  {
+   "id": "romance",
+   "title": "La hamaca se rompe de pena",
+   "place": "El jardín",
+   "context": "Dani le cuenta a Sofi qué le dijo la Sorpresa sobre su romance.",
+   "speakers": [
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Dani",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Sofi, la Sorpresa me lo contó todo. Tu romance conmigo estaba en tu contrato."
+    },
+    {
+     "s": 0,
+     "text": "Dani, déjame explicarte. Hace un año que no tengo trabajo de actriz. Me ofrecieron este papel y lo acepté."
+    },
+    {
+     "s": 1,
+     "text": "¿Y los besos? ¿Y las cartas en la almohada?"
+    },
+    {
+     "s": 0,
+     "text": "Los besos eran trabajo. Las cartas… las cartas las escribía yo. Esas no estaban en el contrato."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué quieres decir?"
+    },
+    {
+     "s": 0,
+     "text": "Que en algún momento dejé de actuar y no me di cuenta."
+    },
+    {
+     "s": 1,
+     "text": "Justo ahora se rompió la hamaca. Qué oportuna."
+    },
+    {
+     "s": 0,
+     "text": "Ves, hasta los muebles de esta casa tienen sentido del drama."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién le contó la verdad a Dani?",
+     "options": [
+      "La Voz",
+      "Brenda",
+      "La Sorpresa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto tiempo lleva Sofi sin trabajo de actriz?",
+     "options": [
+      "Un mes",
+      "Cinco años",
+      "Un año"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no estaba en el contrato?",
+     "options": [
+      "Las cartas",
+      "Los besos",
+      "Las fotos en la hamaca"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué se rompió?",
+     "options": [
+      "La hamaca",
+      "Una ventana",
+      "Un micrófono"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué papel interpretaste tú en un grupo sin querer?",
+     "model": "En mi clase siempre hacía el papel del gracioso."
+    },
+    {
+     "q": "¿Cómo cambió una relación tuya con el tiempo?",
+     "model": "Un compañero de trabajo se convirtió en mi mejor amigo."
+    },
+    {
+     "q": "¿Qué romance de la tele te pareció falso?",
+     "model": "Me pareció falso un romance de un concurso de cocina."
+    }
+   ],
+   "gaps": "Los besos eran [trabajo]. Las cartas… las cartas las [escribía] yo. Esas no estaban en el [contrato]. ¿Qué quieres [decir]?",
+   "glossary": [
+    {
+     "word": "papel",
+     "meaning": "personaje que hace un actor"
+    },
+    {
+     "word": "almohada",
+     "meaning": "parte blanda de la cama para la cabeza"
+    },
+    {
+     "word": "oportuna",
+     "meaning": "que pasa en el momento justo"
+    }
+   ]
+  },
+  {
+   "id": "edad",
+   "title": "Una foto de 1998 bajo el agua",
+   "place": "La piscina",
+   "context": "Nacho le cuenta a Toño cómo escondió su foto en la piscina con ayuda de la Sorpresa.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Nacho, ¿dónde está la foto de la universidad? Ayer estaba en tu mochila."
+    },
+    {
+     "s": 0,
+     "text": "Ya no existe. Anoche la Sorpresa y yo la metimos en una bolsa y la escondimos en el filtro de la piscina."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué tanto miedo? Cuarenta y cuatro años no es nada."
+    },
+    {
+     "s": 0,
+     "text": "Para ti, no. Cuando entré dije que tenía veintinueve. Si ahora digo la verdad, parezco un mentiroso y un viejo al mismo tiempo."
+    },
+    {
+     "s": 1,
+     "text": "Pues di la verdad con humor. «Tengo cuarenta y cuatro y todavía sé usar un walkman». A la gente le encanta eso."
+    },
+    {
+     "s": 0,
+     "text": "Antes tenía más pelo y menos miedo. Ahora tengo menos pelo y más miedo."
+    },
+    {
+     "s": 1,
+     "text": "Ves, ya te sale el chiste."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde estaba ayer la foto?",
+     "options": [
+      "En la cocina",
+      "En el confesionario",
+      "En la mochila de Nacho"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde la escondieron?",
+     "options": [
+      "Debajo de una cama del dormitorio",
+      "En el filtro de la piscina",
+      "En el jardín"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué edad dijo Nacho al entrar?",
+     "options": [
+      "Cuarenta y cuatro",
+      "Veintinueve",
+      "Treinta y nueve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le aconseja Toño?",
+     "options": [
+      "Romper la foto",
+      "Decir la verdad con humor",
+      "Salir de la casa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué edad dirías que tienes por dentro y por qué?",
+     "model": "Por dentro tengo dieciocho, porque todavía me encanta bailar."
+    },
+    {
+     "q": "¿Qué cosa era muy moderna cuando eras pequeño o pequeña?",
+     "model": "Cuando yo era pequeña, los teléfonos con cámara eran muy modernos."
+    },
+    {
+     "q": "¿Qué mentira pequeña se volvió grande con el tiempo?",
+     "model": "Dije que sabía cocinar y luego tuve que hacer una cena para diez."
+    }
+   ],
+   "gaps": "Antes tenía más [pelo] y menos [miedo]. Ahora tengo menos pelo y más miedo. Ves, ya te [sale] el [chiste].",
+   "glossary": [
+    {
+     "word": "mochila",
+     "meaning": "bolsa para la espalda"
+    },
+    {
+     "word": "filtro",
+     "meaning": "aparato que limpia el agua"
+    },
+    {
+     "word": "mentiroso",
+     "meaning": "persona que no dice la verdad"
+    }
+   ]
+  },
+  {
+   "id": "prueba",
+   "title": "El botón de la nevera",
+   "place": "El gimnasio del jardín",
+   "context": "Chelo le cuenta a Toño qué pasó durante las siete horas de la prueba.",
+   "speakers": [
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Toño, la prueba terminó. Lo hiciste muy bien."
+    },
+    {
+     "s": 0,
+     "text": "¿Gané el coche?"
+    },
+    {
+     "s": 1,
+     "text": "No exactamente. Cuando fuiste al baño, la Sorpresa sostuvo el botón por ti tres minutos. Los abogados dicen que eso no vale."
+    },
+    {
+     "s": 0,
+     "text": "¿Siete horas para nada? Me duelen el brazo y la espalda."
+    },
+    {
+     "s": 1,
+     "text": "Hay algo peor. Mientras tú apretabas el botón, la luz de la nevera estaba encendida. Ese botón solo encendía la nevera."
+    },
+    {
+     "s": 0,
+     "text": "¿Y el coche?"
+    },
+    {
+     "s": 1,
+     "text": "Nunca existió. Era una prueba de paciencia para el programa de humor del domingo."
+    },
+    {
+     "s": 0,
+     "text": "Pues díganles que el domingo yo no me río."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién sostuvo el botón por Toño?",
+     "options": [
+      "Chelo",
+      "Óscar",
+      "La Sorpresa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto tiempo lo sostuvo?",
+     "options": [
+      "Siete horas",
+      "Tres minutos",
+      "Una hora"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué encendía el botón?",
+     "options": [
+      "La luz de la nevera",
+      "El motor del coche",
+      "Las luces del jardín"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para qué era la prueba en realidad?",
+     "options": [
+      "Para elegir al ganador de la temporada",
+      "Para un programa de humor",
+      "Para probar el botón"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué esfuerzo tuyo no sirvió para nada al final?",
+     "model": "Estudié una semana para un examen que cancelaron."
+    },
+    {
+     "q": "¿Qué broma de la tele te pareció cruel?",
+     "model": "Me pareció cruel una broma con un falso premio de lotería."
+    },
+    {
+     "q": "¿Cuándo necesitaste mucha paciencia?",
+     "model": "Necesité paciencia cuando enseñé a mi madre a usar el móvil."
+    }
+   ],
+   "gaps": "Mientras tú apretabas el [botón], la luz de la [nevera] estaba [encendida]. Ese botón solo encendía la nevera. ¿Y el [coche]?",
+   "glossary": [
+    {
+     "word": "sostuvo",
+     "meaning": "tuvo en la mano"
+    },
+    {
+     "word": "apretabas",
+     "meaning": "hacías presión con el dedo"
+    },
+    {
+     "word": "paciencia",
+     "meaning": "capacidad de esperar sin enfadarse"
+    }
+   ]
+  },
+  {
+   "id": "patrocinador",
+   "title": "Treinta veces Vitalín",
+   "place": "La nevera del patrocinador",
+   "context": "Marga y Chema comentan cómo salió el anuncio en directo.",
+   "speakers": [
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chema, el patrocinador llamó. Dijo «Yogur Vitalín» treinta veces en un día. Están felices."
+    },
+    {
+     "s": 0,
+     "text": "Yo no estoy feliz. En la cena dije «Vitalín» en lugar de «gracias». Wendy me tiró una servilleta."
+    },
+    {
+     "s": 1,
+     "text": "Es tu contrato. Si dejas de decirlo, quitan el dinero y el programa termina antes."
+    },
+    {
+     "s": 0,
+     "text": "Marga, antes vendía seguros. Era aburrido, pero por lo menos podía comer lo que vendía."
+    },
+    {
+     "s": 1,
+     "text": "¿Comer seguros?"
+    },
+    {
+     "s": 0,
+     "text": "Es un decir. El problema es que soy intolerante a la lactosa. Cada vez que finjo comer yogur, me pongo blanco del miedo."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, por eso la cámara te quiere tanto: pareces muy natural."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas veces dijo Chema «Yogur Vitalín»?",
+     "options": [
+      "Trece",
+      "Treinta",
+      "Tres"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dijo Chema en la cena en lugar de «gracias»?",
+     "options": [
+      "«Vitalín»",
+      "«Perdón»",
+      "«Salud»"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué trabajo tenía Chema antes?",
+     "options": [
+      "Era actor",
+      "Vendía seguros",
+      "Era cocinero"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le pasa cuando finge comer yogur?",
+     "options": [
+      "Se ríe mucho y no puede parar",
+      "Se duerme",
+      "Se pone blanco del miedo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué palabra repites tanto que ya la dices sin pensar?",
+     "model": "Repito «vale» todo el tiempo, hasta con mi jefe."
+    },
+    {
+     "q": "¿Qué producto anunciarías aunque no lo usaras?",
+     "model": "Anunciaría un perfume caro, aunque yo uso jabón."
+    },
+    {
+     "q": "¿Qué trabajo aburrido hiciste y qué tenía de bueno?",
+     "model": "Trabajé en un archivo; lo bueno era el silencio."
+    }
+   ],
+   "gaps": "Si dejas de [decirlo], quitan el [dinero] y el programa [termina] antes. Marga, antes vendía [seguros].",
+   "glossary": [
+    {
+     "word": "patrocinador",
+     "meaning": "empresa que paga para salir en el programa"
+    },
+    {
+     "word": "seguros",
+     "meaning": "contratos que pagan si tienes un problema"
+    },
+    {
+     "word": "finjo",
+     "meaning": "hago como si fuera verdad"
+    }
+   ]
+  },
+  {
+   "id": "nominaciones",
+   "title": "Nadie nomina a nadie",
+   "place": "El confesionario",
+   "context": "La Voz le cuenta a Chelo cómo fueron las nominaciones con la Sorpresa.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rodolfo, ¿qué pasó en las nominaciones? El director está furioso."
+    },
+    {
+     "s": 0,
+     "text": "Hice lo que me pediste. Le dije a la Sorpresa que Fela era aburrida y que no daba audiencia."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?"
+    },
+    {
+     "s": 0,
+     "text": "Se quedó callada un rato. Después dijo que no quería nominar a nadie. Que en una casa de verdad no echas a la abuela."
+    },
+    {
+     "s": 1,
+     "text": "Eso no lo puede hacer. Las reglas dicen que todos nominan."
+    },
+    {
+     "s": 0,
+     "text": "Las reglas también dicen que yo hago preguntas y no doy órdenes. Hoy las dos reglas se rompieron."
+    },
+    {
+     "s": 1,
+     "text": "Mañana te van a llamar a la oficina."
+    },
+    {
+     "s": 0,
+     "text": "Que me llamen. Llevo siete años sin cara. Una noche con conciencia no me va a matar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está el director?",
+     "options": [
+      "Contento",
+      "Furioso",
+      "Preocupado por Fela"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le dijo La Voz a la Sorpresa sobre Fela?",
+     "options": [
+      "Que estaba enferma",
+      "Que era aburrida",
+      "Que quería salir"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hizo la Sorpresa?",
+     "options": [
+      "Nominó a Fela",
+      "No nominó a nadie",
+      "Se nominó a sí misma"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué va a pasar mañana?",
+     "options": [
+      "Fela va a salir de la casa por la puerta roja",
+      "Van a llamar a La Voz a la oficina",
+      "Habrá una fiesta"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué regla rompiste porque te pareció injusta?",
+     "model": "Me salté la fila para ayudar a una señora mayor."
+    },
+    {
+     "q": "¿Cómo reaccionas cuando alguien critica a una persona que quieres?",
+     "model": "Me enfado, pero intento explicar con calma."
+    },
+    {
+     "q": "¿Qué decisión difícil tomaste en un grupo de amigos?",
+     "model": "No fui a un viaje porque no invitaron a una amiga."
+    }
+   ],
+   "gaps": "Se quedó [callada] un [rato]. Después dijo que no quería [nominar] a nadie. Que en una casa de verdad no echas a la [abuela].",
+   "glossary": [
+    {
+     "word": "furioso",
+     "meaning": "muy enfadado"
+    },
+    {
+     "word": "echas",
+     "meaning": "haces salir a alguien"
+    },
+    {
+     "word": "conciencia",
+     "meaning": "sentido de lo que está bien y mal"
+    }
+   ]
+  },
+  {
+   "id": "castigo",
+   "title": "Un suéter para la villana",
+   "place": "El cuarto de castigo",
+   "context": "Fela le cuenta a Wendy lo que vieron los demás en la pantalla del salón.",
+   "speakers": [
+    {
+     "name": "Wendy",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, ¿por qué me miran todos así? He salido del cuarto de castigo y nadie me ha gritado."
+    },
+    {
+     "s": 1,
+     "text": "Porque la producción puso en la pantalla tu hora de castigo. Te vieron tejer, Wendy."
+    },
+    {
+     "s": 0,
+     "text": "¿Tejer? ¡Qué vergüenza! Llevo seis semanas siendo la mala de la temporada."
+    },
+    {
+     "s": 1,
+     "text": "También te vieron llorar. Y contarle a la Sorpresa que tu personaje lo inventaste en el casting porque las chicas simpáticas no pasaban."
+    },
+    {
+     "s": 0,
+     "text": "Eso era un secreto profesional."
+    },
+    {
+     "s": 1,
+     "text": "Pues ahora es un suéter. Verde, con una manga más larga que la otra. Pero es tuyo."
+    },
+    {
+     "s": 0,
+     "text": "La próxima vez me castigan sin lana."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pasó cuando Wendy salió del castigo?",
+     "options": [
+      "Todos le gritaron",
+      "Nadie le gritó",
+      "Hubo una fiesta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué vieron los demás en la pantalla?",
+     "options": [
+      "A Fela cocinando",
+      "A la Sorpresa durmiendo",
+      "A Wendy tejiendo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué inventó Wendy su personaje?",
+     "options": [
+      "Porque es mala de verdad",
+      "Porque las chicas simpáticas no pasaban el casting",
+      "Porque se lo pidió Fela"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo es el suéter?",
+     "options": [
+      "Rojo y muy grande",
+      "Azul, sin mangas",
+      "Verde, con una manga más larga"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué personaje inventaste alguna vez para encajar en un grupo?",
+     "model": "En el colegio fingía que me gustaba el fútbol."
+    },
+    {
+     "q": "¿Qué te dio vergüenza que otros vieran de ti?",
+     "model": "Me dio vergüenza que vieran mis dibujos de niña."
+    },
+    {
+     "q": "¿Qué regalo hecho a mano recuerdas con cariño?",
+     "model": "Recuerdo una bufanda que me tejió mi abuela."
+    }
+   ],
+   "gaps": "Pues ahora es un [suéter]. Verde, con una [manga] más larga que la [otra]. Pero es [tuyo].",
+   "glossary": [
+    {
+     "word": "vergüenza",
+     "meaning": "sentimiento cuando haces el ridículo"
+    },
+    {
+     "word": "personaje",
+     "meaning": "papel que una persona interpreta"
+    },
+    {
+     "word": "manga",
+     "meaning": "parte de la ropa para el brazo"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "La pizza que nadie grabó",
+   "place": "El pasillo de producción",
+   "context": "Chelo y Marga recuerdan la primera temporada mientras terminan la pizza.",
+   "speakers": [
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chelo, la Sorpresa me contó que estuvo contigo aquí en el pasillo. ¿Qué le dijiste?"
+    },
+    {
+     "s": 0,
+     "text": "La verdad. Que hace diez años yo era como ellos. Gané la primera temporada, salía en todas las revistas, me pedían fotos en el supermercado."
+    },
+    {
+     "s": 1,
+     "text": "¿Y después?"
+    },
+    {
+     "s": 0,
+     "text": "Después vino la segunda temporada y la gente se olvidó de mí en un mes. El dinero se fue en un piso que no podía pagar."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué volviste a la tele?"
+    },
+    {
+     "s": 0,
+     "text": "Porque es lo único que sé hacer. Esta noche, con la Sorpresa y una pizza fría, me he sentido más persona que cuando era famosa."
+    },
+    {
+     "s": 1,
+     "text": "Y nadie lo grabó."
+    },
+    {
+     "s": 0,
+     "text": "Por eso fue verdad."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde le pedían fotos a Chelo?",
+     "options": [
+      "En el supermercado",
+      "En el aeropuerto",
+      "En el hospital"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto tardó la gente en olvidarla?",
+     "options": [
+      "Un año",
+      "Una semana",
+      "Un mes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿En qué se fue su dinero?",
+     "options": [
+      "En viajes",
+      "En ropa cara",
+      "En un piso"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué fue verdad la conversación, según Chelo?",
+     "options": [
+      "Porque había pizza",
+      "Porque nadie la grabó",
+      "Porque era de noche"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué famoso de tu infancia ya nadie recuerda?",
+     "model": "Nadie recuerda a una cantante que salía en todos los programas."
+    },
+    {
+     "q": "¿Cuándo te sentiste más tú que nunca?",
+     "model": "Me noté muy yo en un viaje sola por la montaña."
+    },
+    {
+     "q": "¿Qué conversación importante tuviste con comida fría?",
+     "model": "Hablé con mi hermano toda la noche con una pizza fría."
+    }
+   ],
+   "gaps": "Gané la primera [temporada], salía en todas las [revistas], me pedían fotos en el [supermercado]. ¿Y [después]?",
+   "glossary": [
+    {
+     "word": "revistas",
+     "meaning": "publicaciones con fotos y noticias"
+    },
+    {
+     "word": "piso",
+     "meaning": "apartamento"
+    },
+    {
+     "word": "famosa",
+     "meaning": "conocida por mucha gente"
+    }
+   ]
+  },
+  {
+   "id": "abandono",
+   "title": "La colecta de la casa",
+   "place": "La puerta roja",
+   "context": "Fela le cuenta a Hugo cómo la casa juntó el dinero de su multa.",
+   "speakers": [
+    {
+     "name": "Hugo",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Hugo, deja la maleta un momento. Tengo noticias."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué pasó? ¿Mi papá está peor?"
+    },
+    {
+     "s": 1,
+     "text": "No, tranquilo. Mientras tú hacías la maleta, la Sorpresa habló con todos. Cada uno dio sus premios de la semana."
+    },
+    {
+     "s": 0,
+     "text": "¿Todos? ¿También Wendy?"
+    },
+    {
+     "s": 1,
+     "text": "Wendy dio la cena de lujo que ganó el lunes. Toño, su bono de la prueba. Y Brenda, el dinero de su anuncio."
+    },
+    {
+     "s": 0,
+     "text": "Fela, yo soy maestro en un pueblo. Nunca nadie hizo algo así por mí."
+    },
+    {
+     "s": 1,
+     "text": "Tú enseñaste a leer a Toño en esta casa. Eso no sale en la tele, pero todos lo vimos."
+    },
+    {
+     "s": 0,
+     "text": "Entonces me voy. Y cuando mi papá esté bien, vuelvo a ver la final con él."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hacía Hugo cuando habló la Sorpresa con todos?",
+     "options": [
+      "La cena",
+      "Una llamada",
+      "La maleta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dio Wendy?",
+     "options": [
+      "Una cena de lujo",
+      "Su bono de la prueba",
+      "Dinero de un anuncio"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde es maestro Hugo?",
+     "options": [
+      "En una ciudad grande",
+      "En la universidad",
+      "En un pueblo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué va a hacer Hugo cuando su padre esté bien?",
+     "options": [
+      "Ver la final con él",
+      "Volver a la casa para ganar",
+      "Escribir un libro"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué hizo un grupo por ti cuando lo necesitabas?",
+     "model": "Mis compañeros pagaron mi billete para ir a ver a mi madre."
+    },
+    {
+     "q": "¿Qué das tú cuando alguien de tu grupo tiene problemas?",
+     "model": "Doy mi tiempo: escucho y cocino."
+    },
+    {
+     "q": "¿Qué dejarías en pausa por la salud de un familiar?",
+     "model": "Dejaría mis estudios en pausa sin dudarlo."
+    }
+   ],
+   "gaps": "Wendy dio la cena de [lujo] que ganó el [lunes]. Toño, su [bono] de la prueba. Y Brenda, el dinero de su [anuncio].",
+   "glossary": [
+    {
+     "word": "maleta",
+     "meaning": "bolsa grande para viajar"
+    },
+    {
+     "word": "lujo",
+     "meaning": "algo caro y especial"
+    },
+    {
+     "word": "bono",
+     "meaning": "dinero extra como premio"
+    }
+   ]
+  },
+  {
+   "id": "maquillaje",
+   "title": "Bromas de funeraria",
+   "place": "La sala de maquillaje",
+   "context": "Sofi le cuenta a Paty de qué se rió con la Sorpresa a las cuatro de la mañana.",
+   "speakers": [
+    {
+     "name": "Paty",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Paty, ¿es verdad que la Sorpresa estuvo aquí y no paraban de reírse?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Le conté que los domingos maquillo en una funeraria y le hizo mucha gracia."
+    },
+    {
+     "s": 1,
+     "text": "¿Y de qué se reían?"
+    },
+    {
+     "s": 0,
+     "text": "Le dije que mis clientes de la funeraria son mejores: no se quejan del color y no miran el celular mientras trabajo."
+    },
+    {
+     "s": 1,
+     "text": "Ay, qué humor tan negro."
+    },
+    {
+     "s": 0,
+     "text": "Es mi forma de sobrevivir. Cuando murió mi abuela, la maquillé yo. Fue la última vez que la peiné. Desde entonces, la muerte no me da miedo; me da trabajo."
+    },
+    {
+     "s": 1,
+     "text": "Eso es precioso y horrible a la vez."
+    },
+    {
+     "s": 0,
+     "text": "Como este programa, mi amor. Cierra los ojos, que te pongo la base."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde trabaja Paty los domingos?",
+     "options": [
+      "En una funeraria",
+      "En una peluquería",
+      "En un teatro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué no hacen sus clientes de la funeraria?",
+     "options": [
+      "Mirar el celular",
+      "Pagar",
+      "Llegar a tiempo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A quién maquilló Paty cuando murió?",
+     "options": [
+      "A su madre",
+      "A su abuela",
+      "A una actriz famosa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le da la muerte a Paty?",
+     "options": [
+      "Trabajo",
+      "Miedo",
+      "Tristeza"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿De qué tema serio te ríes para no llorar?",
+     "model": "Me río de mis exámenes suspendidos."
+    },
+    {
+     "q": "¿Qué trabajo poco conocido te parece muy humano?",
+     "model": "Me parece muy humano el trabajo de las enfermeras de noche."
+    },
+    {
+     "q": "¿Qué te parece el humor negro entre amigos?",
+     "model": "Me parece bien si todos se conocen bien."
+    }
+   ],
+   "gaps": "Desde entonces, la [muerte] no me da [miedo]; me da [trabajo]. Eso es precioso y [horrible] a la vez.",
+   "glossary": [
+    {
+     "word": "funeraria",
+     "meaning": "empresa que prepara a los muertos"
+    },
+    {
+     "word": "celular",
+     "meaning": "teléfono móvil"
+    },
+    {
+     "word": "sobrevivir",
+     "meaning": "seguir viviendo después de algo difícil"
+    }
+   ]
+  },
+  {
+   "id": "secreto",
+   "title": "Planes en la lavandería",
+   "place": "La lavandería",
+   "context": "Brenda descubre qué hacían Lucía y la Sorpresa en la lavandería a las cinco.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lucía, ¿qué hacían tú y la Sorpresa aquí, entre la ropa sucia?"
+    },
+    {
+     "s": 0,
+     "text": "Hablábamos de mi padre. El presentador. Ayer, en la gala, me miró tres segundos y siguió leyendo el guion. No me reconoció."
+    },
+    {
+     "s": 1,
+     "text": "¿Hace cuánto que no se ven?"
+    },
+    {
+     "s": 0,
+     "text": "Cinco años. Cuando se fue, yo tenía dieciocho. Por eso entré con el apellido de mi abuela."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué van a hacer?"
+    },
+    {
+     "s": 0,
+     "text": "La Sorpresa tiene una idea: en la gala de mañana, en directo, le pregunto delante de todo el país si recuerda mi cumpleaños."
+    },
+    {
+     "s": 1,
+     "text": "Eso es sabotaje."
+    },
+    {
+     "s": 0,
+     "text": "No. Es una pregunta. Él vive de hacerlas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo la miró su padre en la gala?",
+     "options": [
+      "Tres segundos",
+      "Tres minutos",
+      "Toda la noche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tenía Lucía cuando su padre se fue?",
+     "options": [
+      "Dieciocho",
+      "Cinco",
+      "Ocho"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De quién es el apellido que usa?",
+     "options": [
+      "De su madre",
+      "De su abuela",
+      "De Brenda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le quiere preguntar Lucía a su padre?",
+     "options": [
+      "Por qué se fue sin despedirse",
+      "Si recuerda su cumpleaños",
+      "Cuánto gana"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué le dirías hoy a una persona que se fue de tu vida?",
+     "model": "Le diría que estoy bien y que no la odio."
+    },
+    {
+     "q": "¿Cómo te sientes cuando alguien no te reconoce?",
+     "model": "Me siento invisible y un poco triste."
+    },
+    {
+     "q": "¿Qué secreto de un amigo guardaste durante años?",
+     "model": "Guardé el secreto de una amiga que dejó la universidad."
+    }
+   ],
+   "gaps": "Ayer, en la [gala], me miró tres [segundos] y siguió leyendo el [guion]. No me [reconoció].",
+   "glossary": [
+    {
+     "word": "sucia",
+     "meaning": "que no está limpia"
+    },
+    {
+     "word": "guion",
+     "meaning": "texto que alguien lee o actúa"
+    },
+    {
+     "word": "sabotaje",
+     "meaning": "acción para romper un plan"
+    }
+   ]
+  },
+  {
+   "id": "veredicto",
+   "title": "El programa ha terminado",
+   "place": "El confesionario",
+   "context": "A las seis y cuarto, La Voz, Marga y Chelo hablan del final del programa.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 2,
+     "text": "Ya es oficial. El director mandó el correo: hoy fue el último programa. Cancelan La casa después de siete temporadas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y nos enteramos así, a las seis de la mañana, con un correo?"
+    },
+    {
+     "s": 0,
+     "text": "Siempre fue así. En la tele, las cosas empiezan con fuegos artificiales y terminan con un correo."
+    },
+    {
+     "s": 2,
+     "text": "La audiencia bajó mucho este año. Y anoche nadie hizo lo que pedía la producción."
+    },
+    {
+     "s": 1,
+     "text": "Por culpa de la Sorpresa. O gracias a la Sorpresa."
+    },
+    {
+     "s": 0,
+     "text": "Yo prefiero «gracias». Anoche, por primera vez en siete años, la gente de la casa fue de verdad."
+    },
+    {
+     "s": 2,
+     "text": "¿Y tú qué vas a hacer, Rodolfo?"
+    },
+    {
+     "s": 0,
+     "text": "Voy a salir por la puerta principal. Con mi cara. A desayunar como una persona normal."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se enteraron del final?",
+     "options": [
+      "Por la tele",
+      "Por una llamada del público",
+      "Por un correo del director"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas temporadas duró el programa?",
+     "options": [
+      "Siete",
+      "Diez",
+      "Cuatro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según La Voz, ¿cómo terminan las cosas en la tele?",
+     "options": [
+      "Con un correo",
+      "Con fuegos artificiales",
+      "Con una fiesta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué va a hacer La Voz?",
+     "options": [
+      "Salir con su cara a desayunar",
+      "Buscar otro programa de televisión",
+      "Quedarse en la casa"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo te enteraste de una noticia importante?",
+     "model": "Me enteré de que me daban la beca por un mensaje a medianoche."
+    },
+    {
+     "q": "¿Qué termina mejor: una serie larga o una corta?",
+     "model": "Termina mejor una serie corta, porque no se repite."
+    },
+    {
+     "q": "¿Qué harías el primer día después de un trabajo muy intenso?",
+     "model": "Dormiría hasta tarde y desayunaría en la playa."
+    }
+   ],
+   "gaps": "En la tele, las cosas empiezan con [fuegos artificiales] y terminan con un [correo]. La [audiencia] bajó mucho este [año].",
+   "glossary": [
+    {
+     "word": "oficial",
+     "meaning": "confirmado por quien manda"
+    },
+    {
+     "word": "nos enteramos",
+     "meaning": "conocimos una noticia"
+    },
+    {
+     "word": "fuegos artificiales",
+     "meaning": "luces de colores en el cielo para celebrar"
+    }
+   ]
+  }
+ ]
+}
