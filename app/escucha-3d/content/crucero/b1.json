@@ -1,0 +1,2056 @@
+{
+ "game": "crucero",
+ "level": "B1",
+ "items": [
+  {
+   "id": "popa",
+   "title": "¿Ahora o al amanecer?",
+   "place": "La cubierta de popa",
+   "context": "Amparo y Ezequiel discuten cuándo es mejor tirar las cenizas.",
+   "speakers": [
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Ezequiel",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Señora, con todo respeto, yo le aconsejo esperar. Con este viento, su marido va a terminar en la cocina."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé, hijo, pero tengo miedo de que, si espero, no me atreva. Llevo un año con esta caja en la mesita de noche. Hablo con ella cada mañana."
+    },
+    {
+     "s": 1,
+     "text": "Entiendo. Pero piense en Paco. ¿A él le gustaría salir así, con prisa y en medio de una tormenta?"
+    },
+    {
+     "s": 0,
+     "text": "A Paco le encantaban las tormentas. Decía que el barco bailaba mejor que los pasajeros."
+    },
+    {
+     "s": 1,
+     "text": "Entonces hagamos una cosa: usted descansa esta noche, y al amanecer, cuando el viento cambie, yo la acompaño. Le prometo que estaré aquí."
+    },
+    {
+     "s": 0,
+     "text": "¿Me lo promete de verdad? Mire que las viudas tenemos buena memoria."
+    },
+    {
+     "s": 1,
+     "text": "Se lo prometo. Y me pondré otra chaqueta."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le aconseja Ezequiel?",
+     "options": [
+      "Que lo haga ahora mismo",
+      "Que espere",
+      "Que hable con el capitán"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué tiene miedo Amparo de esperar?",
+     "options": [
+      "Porque quizás después no se atreva",
+      "Porque el barco llega pronto a Cádiz",
+      "Porque está muy cansada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué decía Paco de las tormentas?",
+     "options": [
+      "Que el barco bailaba mejor que los pasajeros",
+      "Que le daban miedo",
+      "Que eran peligrosas para un barco tan viejo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Ezequiel dice que se pondrá otra chaqueta?",
+     "options": [
+      "Porque hace frío al amanecer",
+      "Porque la suya tiene ceniza de Paco",
+      "Porque es su uniforme de gala"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué despedida importante aplazaste porque no te sentías preparado?",
+     "model": "Aplacé la despedida de mi piso de estudiante; me costaba dejar aquel lugar."
+    },
+    {
+     "q": "¿Qué objeto de alguien que quieres guardas cerca de ti?",
+     "model": "Guardo la bufanda de mi abuela en el armario; a veces todavía huele a ella."
+    },
+    {
+     "q": "¿Qué promesa te hicieron y se cumplió?",
+     "model": "Mi hermano me prometió venir a mi graduación desde otro país, y vino."
+    }
+   ],
+   "gaps": "Ya lo sé, hijo, pero tengo [miedo] de que, si [espero], no me [atreva]. Llevo un año con esta [caja] en la mesita de noche.",
+   "glossary": [
+    {
+     "word": "con todo respeto",
+     "meaning": "forma educada de no estar de acuerdo"
+    },
+    {
+     "word": "me atreva",
+     "meaning": "tenga el valor"
+    },
+    {
+     "word": "viudas",
+     "meaning": "mujeres cuyo marido murió"
+    }
+   ]
+  },
+  {
+   "id": "maquinas",
+   "title": "El consejo del jefe",
+   "place": "La sala de máquinas",
+   "context": "Brayan le pide consejo a Teodoro sobre su futuro.",
+   "speakers": [
+    {
+     "name": "Brayan",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Teodoro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Teodoro, mañana me quedo sin trabajo. Mi madre dice que vuelva a Honduras y estudie algo en la universidad."
+    },
+    {
+     "s": 1,
+     "text": "¿Y tú qué quieres?"
+    },
+    {
+     "s": 0,
+     "text": "No sé. Me gustan las máquinas, pero no sé si quiero pasar la vida en un sótano con calor."
+    },
+    {
+     "s": 1,
+     "text": "Mira, Brayan, yo entré aquí con veinte años y pensaba quedarme uno. Me quedé cuarenta y dos. No me arrepiento, pero me he perdido muchas cosas: cumpleaños, la boda de mi hermana, la infancia de mi hijo."
+    },
+    {
+     "s": 0,
+     "text": "¿Su hijo? No sabía que tenía un hijo."
+    },
+    {
+     "s": 1,
+     "text": "Por eso. Si te gustan las máquinas, estudia ingeniería. Pero en tierra. Que tus hijos sepan quién eres."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le pide la madre a Brayan?",
+     "options": [
+      "Que siga en el mar",
+      "Que vuelva y estudie",
+      "Que busque otro barco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué duda tiene Brayan?",
+     "options": [
+      "Si le gustan las máquinas",
+      "Si quiere trabajar toda la vida en un sótano caluroso",
+      "Si tiene dinero para estudiar en la universidad"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué perdió Teodoro por trabajar en el mar?",
+     "options": [
+      "Su casa, su coche y casi todos sus ahorros",
+      "Su salud",
+      "Momentos importantes de su familia"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le aconseja Teodoro al final?",
+     "options": [
+      "Que trabaje con él en otro barco",
+      "Que no estudie y viaje",
+      "Que estudie ingeniería en tierra"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué consejo sobre el trabajo te dio una persona mayor?",
+     "model": "Mi abuelo me dijo que eligiera un trabajo que me dejara tiempo para la familia."
+    },
+    {
+     "q": "¿Qué has perdido por trabajar o estudiar demasiado?",
+     "model": "He perdido muchas cenas con amigos por quedarme estudiando."
+    },
+    {
+     "q": "¿Qué plan te parece mejor para alguien de diecinueve años?",
+     "model": "Creo que es bueno estudiar, pero también trabajar un poco para conocer la vida real."
+    }
+   ],
+   "gaps": "Si te gustan las [máquinas], estudia [ingeniería]. Pero en [tierra]. Que tus hijos [sepan] quién eres.",
+   "glossary": [
+    {
+     "word": "sótano",
+     "meaning": "parte de un edificio debajo del suelo"
+    },
+    {
+     "word": "me arrepiento",
+     "meaning": "siento haber hecho algo"
+    },
+    {
+     "word": "en tierra",
+     "meaning": "no en el mar"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "La orden de la compañía",
+   "place": "La cocina",
+   "context": "Inés y Lalo hablan de lo que pide la compañía con la comida.",
+   "speakers": [
+    {
+     "name": "Inés",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chef, ha llamado la compañía. Dicen que no sirvamos la comida que sobra y que la tiremos en Cádiz. Así ahorran el sueldo de los camareros extra."
+    },
+    {
+     "s": 0,
+     "text": "¿Tirar doscientos kilos de gambas? Ni hablar. Mi abuela me pegaría desde el cielo."
+    },
+    {
+     "s": 1,
+     "text": "Pero si no obedecemos, igual no nos pagan el último mes."
+    },
+    {
+     "s": 0,
+     "text": "Mira, Lalo, yo creo que hay cosas que no se negocian. Esta noche cocinamos todo y lo servimos nosotros mismos. Los cocineros también sabemos llevar platos."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si se enfada el capitán?"
+    },
+    {
+     "s": 0,
+     "text": "El capitán ha comido mi ají de gallina durante dieciocho años. No se va a enfadar. Además, le voy a invitar a la mesa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere la compañía?",
+     "options": [
+      "Que regalen la comida a los pasajeros",
+      "Que tiren la comida que sobra",
+      "Que cocinen más platos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué la compañía quiere eso?",
+     "options": [
+      "Porque la comida está en mal estado",
+      "Porque los pasajeros no tienen hambre",
+      "Para ahorrar dinero en camareros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué teme Lalo?",
+     "options": [
+      "Que el capitán los despida",
+      "Que los pasajeros se mareen durante la cena",
+      "Que no les paguen el último mes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué piensa hacer Inés con el capitán?",
+     "options": [
+      "Pedirle permiso por escrito",
+      "No decirle nada",
+      "Invitarlo a la mesa"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué orden de un jefe te pareció injusta?",
+     "model": "Una vez mi jefe quería que trabajáramos un domingo sin pagarlo, y me pareció injusto."
+    },
+    {
+     "q": "¿Qué opinas de tirar comida en restaurantes y tiendas?",
+     "model": "Me parece terrible; deberían dársela a la gente que la necesita."
+    },
+    {
+     "q": "¿Qué cosas no negocias nunca, pase lo que pase?",
+     "model": "No negocio el tiempo con mi familia los domingos."
+    }
+   ],
+   "gaps": "Mira, Lalo, yo [creo] que hay cosas que no se [negocian]. Esta noche [cocinamos] todo y lo [servimos] nosotros mismos.",
+   "glossary": [
+    {
+     "word": "ahorran",
+     "meaning": "gastan menos dinero"
+    },
+    {
+     "word": "ni hablar",
+     "meaning": "de ninguna manera"
+    },
+    {
+     "word": "se negocian",
+     "meaning": "se discuten para cambiarlas"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "Llamar a la hermana",
+   "place": "El pasillo de los camarotes",
+   "context": "Rosa habla con Ezequiel sobre su hermana, a quien no ve desde hace veinte años.",
+   "speakers": [
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    },
+    {
+     "name": "Ezequiel",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rosa, ¿y tú adónde vas mañana? ¿Tienes familia en tierra?"
+    },
+    {
+     "s": 0,
+     "text": "Tengo una hermana en Asunción, Graciela. Pero hace veinte años que no hablamos. Nos peleamos por la casa de nuestra madre."
+    },
+    {
+     "s": 1,
+     "text": "¿Veinte años por una casa?"
+    },
+    {
+     "s": 0,
+     "text": "Por la casa y por el orgullo. Al principio pensé que me llamaría ella. Ella pensaba lo mismo. Y así pasaron veinte años."
+    },
+    {
+     "s": 1,
+     "text": "Yo que tú la llamaría esta noche, desde la radio. Sole te puede ayudar."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué le digo después de tanto tiempo? «Hola, soy Rosa, tengo un gato y no tengo casa»."
+    },
+    {
+     "s": 1,
+     "text": "Es un buen principio. Sincero, por lo menos. Y si no contesta, por lo menos lo has intentado antes de bajar del barco."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde vive la hermana de Rosa?",
+     "options": [
+      "En Asunción",
+      "En Cádiz",
+      "En Lisboa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué se pelearon?",
+     "options": [
+      "Por un hombre",
+      "Por dinero de un trabajo",
+      "Por la casa de su madre"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué no hablaron durante veinte años?",
+     "options": [
+      "Porque Graciela se mudó lejos y cambió de número",
+      "Porque Rosa no tenía teléfono",
+      "Porque cada una esperaba que llamara la otra"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué piensa Ezequiel de la frase de Rosa?",
+     "options": [
+      "Que es demasiado triste",
+      "Que es un buen principio",
+      "Que debe ser más formal"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué discusión de tu vida duró más de lo necesario?",
+     "model": "Estuve un año sin hablar con un amigo por una tontería de dinero."
+    },
+    {
+     "q": "¿Qué papel tiene el orgullo en tus relaciones?",
+     "model": "A veces el orgullo me impide pedir perdón primero, y eso me molesta de mí."
+    },
+    {
+     "q": "¿Cómo empezarías una conversación difícil después de mucho tiempo?",
+     "model": "Empezaría diciendo que la echo de menos, sin hablar del pasado."
+    }
+   ],
+   "gaps": "Al principio [pensé] que me [llamaría] ella. Ella [pensaba] lo mismo. Y así [pasaron] veinte años.",
+   "glossary": [
+    {
+     "word": "orgullo",
+     "meaning": "sentimiento de no querer ceder ante otro"
+    },
+    {
+     "word": "yo que tú",
+     "meaning": "si yo fuera tú"
+    },
+    {
+     "word": "sincero",
+     "meaning": "que dice la verdad"
+    }
+   ]
+  },
+  {
+   "id": "luna",
+   "title": "Los consejos de la abuela",
+   "place": "El camarote 12",
+   "context": "Lucía escucha un audio de su abuela con consejos para el mareo.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Mateo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lucía, tu abuela te ha mandado un audio. Te lo pongo."
+    },
+    {
+     "s": 0,
+     "text": "Mejor léemelo tú, que si miro la pantalla vomito."
+    },
+    {
+     "s": 1,
+     "text": "Dice: «Mija, para el mareo, jengibre y mirar el horizonte. Y dile a Mateo que no te hable de comida. Ah, y si los mareos siguen en tierra, no es el mar: hazte una prueba»."
+    },
+    {
+     "s": 0,
+     "text": "¿Una prueba? ¿Qué prueba?"
+    },
+    {
+     "s": 1,
+     "text": "No sé. ¿De qué? ¿De alergia?"
+    },
+    {
+     "s": 0,
+     "text": "Mateo… mi abuela tuvo nueve hijos. Sabe de qué habla."
+    },
+    {
+     "s": 1,
+     "text": "Ah. Ah. ¿Tú crees que…?"
+    },
+    {
+     "s": 0,
+     "text": "No lo sé. Pero mañana, en Cádiz, vamos a una farmacia antes que a cualquier restaurante. Y tú, por favor, no le digas nada a nadie todavía."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién manda el audio?",
+     "options": [
+      "La abuela de Lucía",
+      "La madre de Mateo",
+      "La doctora del barco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Lucía no quiere mirar la pantalla?",
+     "options": [
+      "Porque no tiene las gafas",
+      "Porque se marea más",
+      "Porque está enfadada"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué recomienda la abuela si los mareos siguen en tierra?",
+     "options": [
+      "Ir al hospital enseguida",
+      "Comer más jengibre",
+      "Hacerse una prueba"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué van a hacer en Cádiz primero?",
+     "options": [
+      "Ir a una farmacia",
+      "Comer en un restaurante",
+      "Visitar la catedral"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué consejos de tus abuelos sigues usando hoy?",
+     "model": "Sigo usando el consejo de mi abuelo de dormir siempre ocho horas."
+    },
+    {
+     "q": "¿Qué remedio casero funciona de verdad, según tu experiencia?",
+     "model": "Para el dolor de garganta, el limón con miel me funciona siempre."
+    },
+    {
+     "q": "¿Qué noticia cambiaría todos tus planes de este año?",
+     "model": "Si me ofrecieran un trabajo en otro país, cambiaría todos mis planes."
+    }
+   ],
+   "gaps": "Pero [mañana], en Cádiz, vamos a una [farmacia] antes que a [cualquier] [restaurante].",
+   "glossary": [
+    {
+     "word": "mija",
+     "meaning": "mi hija, palabra cariñosa"
+    },
+    {
+     "word": "horizonte",
+     "meaning": "la línea donde se juntan el cielo y el mar"
+    },
+    {
+     "word": "prueba",
+     "meaning": "análisis para saber algo de la salud"
+    }
+   ]
+  },
+  {
+   "id": "pareja",
+   "title": "Los pros y los contras",
+   "place": "El camarote 15",
+   "context": "Elena y Ramón hacen una lista para decidir si firman el divorcio.",
+   "speakers": [
+    {
+     "name": "Elena",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Ramón",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hagamos una lista, como los ingenieros. A favor del divorcio y en contra."
+    },
+    {
+     "s": 1,
+     "text": "A favor: ya no nos peleamos por el mando de la tele, porque cada uno tendrá su tele."
+    },
+    {
+     "s": 0,
+     "text": "En contra: ¿quién me va a decir que tengo el cuello de la camisa torcido?"
+    },
+    {
+     "s": 1,
+     "text": "A favor: podré roncar en paz."
+    },
+    {
+     "s": 0,
+     "text": "En contra: yo ya no sé dormir sin ese ruido. Lo he intentado en hoteles y no puedo."
+    },
+    {
+     "s": 1,
+     "text": "Elena, la lista está empatada."
+    },
+    {
+     "s": 0,
+     "text": "Entonces quizás no deberíamos decidir nada esta noche, con el barco moviéndose así."
+    },
+    {
+     "s": 1,
+     "text": "Estoy de acuerdo. Pero es la primera vez en treinta años que estamos de acuerdo tan rápido."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hacen Elena y Ramón?",
+     "options": [
+      "Una lista a favor y en contra",
+      "Una lista de la compra",
+      "Una lista de invitados para su aniversario"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ventaja ve Ramón en el divorcio?",
+     "options": [
+      "Viajar más",
+      "Roncar en paz",
+      "Tener más dinero"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué problema tiene Elena para dormir sola?",
+     "options": [
+      "Tiene miedo de la oscuridad",
+      "Se acostumbró al ruido de los ronquidos",
+      "No le gusta el silencio de los hoteles caros"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué deciden al final?",
+     "options": [
+      "Firmar los papeles enseguida",
+      "Pedir ayuda al capitán",
+      "No decidir nada esa noche"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué costumbre de otra persona echarías de menos si se fuera?",
+     "model": "Echaría de menos que mi compañera de piso cantara mientras cocina."
+    },
+    {
+     "q": "¿Para qué decisiones haces una lista de pros y contras?",
+     "model": "Hago una lista cuando pienso en cambiar de trabajo o de casa."
+    },
+    {
+     "q": "¿Por qué es mala idea decidir algo importante en un mal momento?",
+     "model": "Porque las emociones fuertes no te dejan pensar con claridad."
+    }
+   ],
+   "gaps": "Entonces [quizás] no [deberíamos] decidir nada esta noche, con el [barco] [moviéndose] así.",
+   "glossary": [
+    {
+     "word": "a favor",
+     "meaning": "con razones para hacerlo"
+    },
+    {
+     "word": "empatada",
+     "meaning": "con el mismo resultado en los dos lados"
+    },
+    {
+     "word": "torcido",
+     "meaning": "no recto"
+    }
+   ]
+  },
+  {
+   "id": "cartas",
+   "title": "Buscar a Isabel",
+   "place": "El camarote 21",
+   "context": "Germán le pide a Rosa que le ayude a buscar a Isabel en internet.",
+   "speakers": [
+    {
+     "name": "Germán",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Rosa, usted es joven. ¿Me ayuda a buscar a una persona en internet?"
+    },
+    {
+     "s": 1,
+     "text": "Joven, no; tengo cincuenta y dos años. Pero sí, claro. ¿Cómo se llama?"
+    },
+    {
+     "s": 0,
+     "text": "Isabel Cárdenas. Era de Quito. Bueno, ahora tendrá unos sesenta."
+    },
+    {
+     "s": 1,
+     "text": "Aquí hay una Isabel Cárdenas en Quito. Tiene una foto con cinco nietos y un señor con bigote."
+    },
+    {
+     "s": 0,
+     "text": "Es ella. Tiene la misma risa. Bueno, ya veo que es feliz."
+    },
+    {
+     "s": 1,
+     "text": "¿Le mando un mensaje?"
+    },
+    {
+     "s": 0,
+     "text": "No sé. Quizás no debería molestarla. O quizás sí. Yo creo que le diría solo una cosa: que el Albatros hizo su último viaje y que yo vine. Nada más. Ella entenderá el resto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le pide Germán a Rosa?",
+     "options": [
+      "Que le ayude a buscar a alguien en internet",
+      "Que le lleve una carta al correo de Cádiz mañana",
+      "Que le busque un camarote"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tiene Rosa?",
+     "options": [
+      "Cincuenta y dos",
+      "Veinticinco",
+      "Sesenta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay en la foto de Isabel?",
+     "options": [
+      "Isabel sola en el mar",
+      "Isabel con cinco nietos y un señor",
+      "Isabel en un barco, saludando con la mano"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le diría Germán a Isabel?",
+     "options": [
+      "Que el barco hizo su último viaje y que él vino",
+      "Que la quiere todavía y que la espera",
+      "Que le devuelve sus cartas"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿A quién de tu pasado buscarías en internet y por qué?",
+     "model": "Buscaría a mi profesora de primaria para darle las gracias."
+    },
+    {
+     "q": "¿Qué opinas de contactar con un antiguo amor?",
+     "model": "Creo que puede estar bien si no esperas nada a cambio."
+    },
+    {
+     "q": "¿Qué te alegraría saber de alguien que ya no ves?",
+     "model": "Me alegraría saber que mi amigo de la infancia está bien y es feliz."
+    }
+   ],
+   "gaps": "Es ella. Tiene la misma [risa]. Bueno, ya [veo] que es [feliz]. ¿Le [mando] un mensaje?",
+   "glossary": [
+    {
+     "word": "bigote",
+     "meaning": "pelo encima de la boca"
+    },
+    {
+     "word": "molestarla",
+     "meaning": "causarle problemas o incomodidad"
+    },
+    {
+     "word": "risa",
+     "meaning": "forma de reírse"
+    }
+   ]
+  },
+  {
+   "id": "enfermeria",
+   "title": "El reparto de pastillas",
+   "place": "La enfermería",
+   "context": "La doctora Beatriz explica al sobrecargo cómo va a repartir las pastillas.",
+   "speakers": [
+    {
+     "name": "Beatriz",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Ezequiel",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doctora, tengo una cola de cuarenta personas en el pasillo. Y usted solo tiene cuarenta pastillas."
+    },
+    {
+     "s": 0,
+     "text": "Pues vamos a hacer una cosa: partimos cada pastilla por la mitad. Media pastilla funciona bastante bien si además la gente hace lo que le digo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué les dice?"
+    },
+    {
+     "s": 0,
+     "text": "Que salgan del camarote, que miren un punto fijo, que coman galletas saladas y que no lean en el móvil. Y lo más importante: que no hablen de comida."
+    },
+    {
+     "s": 1,
+     "text": "Doctora, perdone, pero usted está verde."
+    },
+    {
+     "s": 0,
+     "text": "Ezequiel, si le cuenta esto a alguien, le receto un supositorio. Y ahora tráigame una galleta salada, por favor, y una silla que no se mueva."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas personas esperan en el pasillo?",
+     "options": [
+      "Ochenta",
+      "Cuarenta",
+      "Catorce"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué va a hacer la doctora con las pastillas?",
+     "options": [
+      "Dárselas solo a los niños",
+      "Guardarlas para mañana",
+      "Partirlas por la mitad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué NO deben hacer los pasajeros?",
+     "options": [
+      "Hablar de comida",
+      "Comer galletas saladas",
+      "Mirar un punto fijo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué amenaza hace la doctora con humor?",
+     "options": [
+      "Echarlo de la enfermería",
+      "Contárselo al capitán",
+      "Recetarle un supositorio"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo repartirías algo cuando no hay suficiente para todos?",
+     "model": "Lo repartiría primero entre las personas que más lo necesitan."
+    },
+    {
+     "q": "¿Qué truco usas para sentirte mejor cuando te encuentras mal?",
+     "model": "Salgo a caminar un poco y respiro aire fresco."
+    },
+    {
+     "q": "¿Qué opinas de los profesionales que esconden sus debilidades?",
+     "model": "Entiendo que lo hagan, pero creo que mostrarlas los hace más humanos."
+    }
+   ],
+   "gaps": "Pues vamos a hacer una cosa: [partimos] cada [pastilla] por la [mitad]. Media pastilla [funciona] bastante bien si además la gente hace lo que le digo.",
+   "glossary": [
+    {
+     "word": "cola",
+     "meaning": "fila de personas que esperan"
+    },
+    {
+     "word": "punto fijo",
+     "meaning": "un lugar que no se mueve"
+    },
+    {
+     "word": "le receto",
+     "meaning": "le doy una medicina por escrito"
+    }
+   ]
+  },
+  {
+   "id": "nina",
+   "title": "¿Qué pasa con los barcos viejos?",
+   "place": "La cubierta de botes, babor",
+   "context": "Martina le pregunta al abuelo qué van a hacer con el barco.",
+   "speakers": [
+    {
+     "name": "Martina",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    },
+    {
+     "name": "Benigno",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Abuelo, ¿es verdad que mañana van a matar al barco?"
+    },
+    {
+     "s": 1,
+     "text": "No lo van a matar, Martina. Lo van a desmontar. Es diferente."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué hacen con todas las piezas?"
+    },
+    {
+     "s": 1,
+     "text": "El metal lo funden y hacen cosas nuevas: coches, puentes, latas, bicicletas. Quizás tu próxima bicicleta tenga un trozo del Albatros."
+    },
+    {
+     "s": 0,
+     "text": "¿Y la placa con tus iniciales?"
+    },
+    {
+     "s": 1,
+     "text": "Le he pedido al capitán que me la guarde. Dice que lo va a intentar."
+    },
+    {
+     "s": 0,
+     "text": "Entonces el barco no se muere. Se convierte en otras cosas."
+    },
+    {
+     "s": 1,
+     "text": "Exacto. Como todo, como todos. Lo importante no es el metal, Martina. Lo importante es lo que vivimos dentro de él."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le preocupa a Martina?",
+     "options": [
+      "Que el barco muera",
+      "Que el abuelo esté enfermo",
+      "Que no llegan a Cádiz"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según el abuelo, ¿qué hacen con el metal?",
+     "options": [
+      "Lo tiran al mar",
+      "Lo funden para hacer cosas nuevas",
+      "Lo venden a otro barco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le ha pedido el abuelo al capitán?",
+     "options": [
+      "Visitar el puente",
+      "Viajar gratis",
+      "Que le guarde la placa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué conclusión llega Martina?",
+     "options": [
+      "Que el barco va a volver a navegar con otro nombre",
+      "Que el capitán es malo",
+      "Que el barco se convierte en otras cosas"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué objeto viejo te gustaría que se convirtiera en algo nuevo?",
+     "model": "Me gustaría que mi coche viejo se convirtiera en una bicicleta para mi hijo."
+    },
+    {
+     "q": "¿Cómo explicarías el final de algo a un niño?",
+     "model": "Le diría que las cosas cambian de forma, pero no desaparecen del todo."
+    },
+    {
+     "q": "¿Qué recuerdo de tu familia pedirías guardar antes de que desaparezca?",
+     "model": "Pediría guardar la mesa de la cocina de mis abuelos."
+    }
+   ],
+   "gaps": "El metal lo [funden] y hacen cosas [nuevas]: coches, [puentes], latas, [bicicletas].",
+   "glossary": [
+    {
+     "word": "desmontar",
+     "meaning": "separar las piezas de algo"
+    },
+    {
+     "word": "funden",
+     "meaning": "calientan el metal hasta que es líquido"
+    },
+    {
+     "word": "trozo",
+     "meaning": "parte pequeña de algo"
+    }
+   ]
+  },
+  {
+   "id": "polizon",
+   "title": "¿Qué hacemos con el polizón?",
+   "place": "La cubierta de botes, estribor",
+   "context": "Julián habla con Marina por radio sobre el polizón.",
+   "speakers": [
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Oficial, he encontrado a un polizón al lado del bote cuatro. Tiene ochenta y dos años."
+    },
+    {
+     "s": 1,
+     "text": "¿Ochenta y dos? ¿Está seguro?"
+    },
+    {
+     "s": 0,
+     "text": "Me ha enseñado el carné. Dice que fue cocinero del barco en los setenta y que quería hacer el último viaje."
+    },
+    {
+     "s": 1,
+     "text": "Según las normas, tenemos que avisar a la policía del puerto. Pero no quiero que un señor de esa edad pase la mañana en una comisaría."
+    },
+    {
+     "s": 0,
+     "text": "Yo propongo otra cosa: que trabaje esta noche en la cocina. Así paga el viaje."
+    },
+    {
+     "s": 1,
+     "text": "Me parece bien. Pero primero tráigalo al puente. El capitán querrá conocerlo. Y dele una manta y un café caliente; con esta lluvia, nadie debería estar fuera."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde encontró Julián al polizón?",
+     "options": [
+      "En la cocina",
+      "En un camarote vacío",
+      "Al lado del bote cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo comprobó Julián la edad?",
+     "options": [
+      "Se lo preguntó al capitán",
+      "Vio su carné",
+      "Lo adivinó por su cara"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dicen las normas?",
+     "options": [
+      "Que hay que avisar a la policía del puerto",
+      "Que hay que dejarlo en el bote hasta llegar a Cádiz",
+      "Que tiene que pagar el doble"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué propone Julián?",
+     "options": [
+      "Que lo encierren en un camarote vacío hasta mañana",
+      "Que lo bajen en un bote",
+      "Que el señor trabaje en la cocina"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuándo crees que está bien no cumplir una norma?",
+     "model": "Creo que está bien cuando la norma hace daño a una persona sin motivo."
+    },
+    {
+     "q": "¿Qué harías tú con un polizón de ochenta y dos años?",
+     "model": "Le dejaría terminar el viaje, pero le pediría que ayudara en algo."
+    },
+    {
+     "q": "¿Qué lugar de tu pasado te gustaría ver por última vez?",
+     "model": "Me gustaría ver por última vez la casa donde nací."
+    }
+   ],
+   "gaps": "Yo [propongo] otra cosa: que [trabaje] esta noche en la [cocina]. Así [paga] el viaje.",
+   "glossary": [
+    {
+     "word": "polizón",
+     "meaning": "persona que viaja escondida y sin billete"
+    },
+    {
+     "word": "carné",
+     "meaning": "documento de identidad"
+    },
+    {
+     "word": "comisaría",
+     "meaning": "oficina de la policía"
+    }
+   ]
+  },
+  {
+   "id": "barra",
+   "title": "Abrir o no abrir",
+   "place": "La barra del salón",
+   "context": "Wences y Yoli discuten qué hacer con la botella de 1971.",
+   "speakers": [
+    {
+     "name": "Wences",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wences, yo la abriría ahora, delante de todos. ¿Para qué guardarla más?"
+    },
+    {
+     "s": 0,
+     "text": "Porque la compañía quiere venderla en una subasta. Dicen que vale tres mil euros."
+    },
+    {
+     "s": 1,
+     "text": "¿Tres mil euros por un champán de cincuenta y cinco años? Seguro que es vinagre."
+    },
+    {
+     "s": 0,
+     "text": "Puede ser. Pero yo prometí abrirla el último día. Mi jefe me la dio con esa condición."
+    },
+    {
+     "s": 1,
+     "text": "Entonces no hay duda. Lo que se promete se cumple. Y si es vinagre, nos reímos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si me despiden?"
+    },
+    {
+     "s": 1,
+     "text": "Wences, mañana ya estás despedido. Todos lo estamos. Así que esta noche, por lo menos, vamos a brindar como si fuera nuestro."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere hacer Yoli con la botella?",
+     "options": [
+      "Venderla",
+      "Regalársela al capitán",
+      "Abrirla delante de todos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere hacer la compañía?",
+     "options": [
+      "Venderla en una subasta",
+      "Romperla contra el barco",
+      "Guardarla en un museo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué piensa Yoli del champán?",
+     "options": [
+      "Que es el mejor del mundo",
+      "Que seguramente es vinagre",
+      "Que vale más de tres mil euros"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no importa que despidan a Wences?",
+     "options": [
+      "Porque Wences ya tiene otro trabajo en un hotel de Cádiz",
+      "Porque el capitán lo protege",
+      "Porque mañana todos se quedan sin trabajo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué promesa cumplirías aunque te costara dinero?",
+     "model": "Cumpliría la promesa de ir a la boda de mi amigo, aunque el viaje sea caro."
+    },
+    {
+     "q": "¿Qué cosa valiosa preferirías disfrutar en lugar de vender?",
+     "model": "Preferiría disfrutar de un buen vino con amigos en lugar de venderlo."
+    },
+    {
+     "q": "¿Qué harías en tu último día de trabajo en un lugar?",
+     "model": "Invitaría a todos a desayunar y les escribiría una nota a cada uno."
+    }
+   ],
+   "gaps": "Lo que se [promete] se [cumple]. Y si es [vinagre], nos [reímos].",
+   "glossary": [
+    {
+     "word": "subasta",
+     "meaning": "venta donde gana quien paga más"
+    },
+    {
+     "word": "vinagre",
+     "meaning": "líquido ácido; un vino estropeado"
+    },
+    {
+     "word": "despiden",
+     "meaning": "quitan el trabajo"
+    }
+   ]
+  },
+  {
+   "id": "bingo",
+   "title": "Una noche sin bingo",
+   "place": "La pista de baile",
+   "context": "Yoli le cuenta a Aurelio su idea para la última noche.",
+   "speakers": [
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Maestro, nadie quiere jugar al bingo. Las bolas se escapan, la gente está mareada y yo ya no aguanto más."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si cambias el plan?"
+    },
+    {
+     "s": 0,
+     "text": "Estaba pensando en eso. En vez de bingo, propongo que cada pasajero cuente un recuerdo del barco. El primero que se me ocurre es el suyo: el incendio del noventa y ocho."
+    },
+    {
+     "s": 1,
+     "text": "Esa historia la cuento en cinco minutos. Pero luego toco algo y la gente llora."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. Necesito que la gente llore un poco. Llevamos tres días de sonrisas falsas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y tú? ¿Qué recuerdo contarás?"
+    },
+    {
+     "s": 0,
+     "text": "Ninguno. Yo presento, no cuento."
+    },
+    {
+     "s": 1,
+     "text": "Yoli, eso tiene que cambiar esta noche."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué nadie quiere jugar al bingo?",
+     "options": [
+      "Porque la gente está mareada y las bolas se escapan",
+      "Porque el premio es malo",
+      "Porque es muy tarde"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué propone Yoli?",
+     "options": [
+      "Un concurso de baile",
+      "Una cena especial",
+      "Que los pasajeros cuenten recuerdos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué historia va a contar Aurelio?",
+     "options": [
+      "La de su primer concierto",
+      "La del incendio del noventa y ocho",
+      "La de su boda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué piensa Aurelio de que Yoli no cuente nada?",
+     "options": [
+      "Que eso tiene que cambiar",
+      "Que es lo correcto",
+      "Que es divertido"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué recuerdo contarías delante de mucha gente?",
+     "model": "Contaría el día que un desconocido me ayudó a encontrar el hotel en una ciudad extranjera."
+    },
+    {
+     "q": "¿Cuándo te cansaste de sonreír por obligación?",
+     "model": "En mi trabajo de verano en una tienda, me cansaba de sonreír a clientes maleducados."
+    },
+    {
+     "q": "¿Qué plan cambiarías en el último momento para salvar una fiesta?",
+     "model": "Cambiaría la música y pediría a todos que contaran una anécdota."
+    }
+   ],
+   "gaps": "Perfecto. Necesito que la gente [llore] un poco. Llevamos tres [días] de [sonrisas] [falsas].",
+   "glossary": [
+    {
+     "word": "no aguanto más",
+     "meaning": "ya no puedo soportarlo"
+    },
+    {
+     "word": "se escapan",
+     "meaning": "se van, no se quedan en su lugar"
+    },
+    {
+     "word": "falsas",
+     "meaning": "que no son verdaderas"
+    }
+   ]
+  },
+  {
+   "id": "piano",
+   "title": "La orden de parar",
+   "place": "El escenario del salón",
+   "context": "Ezequiel le pide a Aurelio que deje de tocar por la tormenta.",
+   "speakers": [
+    {
+     "name": "Ezequiel",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Maestro, el capitán pide que todos vuelvan a los camarotes. Las olas son de seis metros."
+    },
+    {
+     "s": 1,
+     "text": "Que vuelvan. Yo me quedo. Alguien tiene que tocar."
+    },
+    {
+     "s": 0,
+     "text": "Pero si el piano se mueve, le puede hacer daño."
+    },
+    {
+     "s": 1,
+     "text": "El piano está atado al suelo desde mil novecientos setenta y nueve. Yo también. En el noventa y ocho no dejé de tocar durante un incendio, a oscuras, y la gente salió en orden. Si paro esta noche, el barco se queda solo."
+    },
+    {
+     "s": 0,
+     "text": "Maestro, con todo el cariño, el barco no escucha."
+    },
+    {
+     "s": 1,
+     "text": "Eso dices tú. Pero cuando toco, la máquina de abajo suena más tranquila. Pregúntale a Teodoro."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pide el capitán?",
+     "options": [
+      "Que Aurelio toque más fuerte",
+      "Que todos vuelvan a los camarotes",
+      "Que todos vayan al salón a escuchar el piano"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué tamaño son las olas?",
+     "options": [
+      "De dos metros",
+      "De seis metros",
+      "De diez metros"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó en el noventa y ocho?",
+     "options": [
+      "Aurelio tocó durante un incendio",
+      "Aurelio se casó a bordo",
+      "El piano se rompió en una tormenta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué cree Aurelio que pasa cuando toca?",
+     "options": [
+      "Que la gente se marea menos",
+      "Que la máquina suena más tranquila",
+      "Que las olas son más pequeñas y el viento se calma"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué hábito mantendrías aunque el mundo se pusiera difícil?",
+     "model": "Mantendría mi paseo de la mañana, pase lo que pase."
+    },
+    {
+     "q": "¿Qué opinas de las personas que no saben parar de trabajar?",
+     "model": "Las admiro un poco, pero creo que pierden cosas importantes de la vida."
+    },
+    {
+     "q": "¿Qué música te calma cuando todo se mueve a tu alrededor?",
+     "model": "Me calma la música clásica, sobre todo el piano."
+    }
+   ],
+   "gaps": "Si [paro] esta [noche], el [barco] se queda [solo].",
+   "glossary": [
+    {
+     "word": "atado",
+     "meaning": "sujeto con cuerdas o cadenas"
+    },
+    {
+     "word": "a oscuras",
+     "meaning": "sin luz"
+    },
+    {
+     "word": "con todo el cariño",
+     "meaning": "forma amable de decir algo difícil"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "¿Ahora o mañana?",
+   "place": "La cabina de radio",
+   "context": "Sole duda si darle ahora el mensaje a Teodoro y se lo consulta a Julián.",
+   "speakers": [
+    {
+     "name": "Sole",
+     "country": "Nicaragua",
+     "voice": "es-NI-YolandaNeural"
+    },
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Julián, tengo un mensaje para don Teodoro. Es de su hijo, Andrés. Dice que lo esperará mañana en el muelle de Cádiz."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué buena noticia! ¿Por qué pones esa cara?"
+    },
+    {
+     "s": 0,
+     "text": "Porque hace doce años que no se hablan. Si se lo doy ahora, quizás se emociona y no se concentra en la máquina. Y esta noche la máquina es importante."
+    },
+    {
+     "s": 1,
+     "text": "Yo creo que se lo tienes que dar. Una buena noticia da fuerzas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si lo pone nervioso?"
+    },
+    {
+     "s": 1,
+     "text": "Teodoro lleva cuarenta años trabajando con nervios. Lo que no tiene es un hijo esperándolo. Dáselo. Si quieres, bajo contigo a la sala de máquinas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De quién es el mensaje?",
+     "options": [
+      "De la esposa de Teodoro",
+      "De la compañía",
+      "Del hijo de Teodoro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuánto tiempo hace que no se hablan?",
+     "options": [
+      "Doce años",
+      "Dos años",
+      "Veinte años"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué teme Sole?",
+     "options": [
+      "Que Teodoro no se concentre en la máquina",
+      "Que Teodoro no lo crea",
+      "Que el mensaje sea falso"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué opina Julián?",
+     "options": [
+      "Que una buena noticia da fuerzas",
+      "Que es mejor esperar a mañana, cuando lleguen al puerto",
+      "Que Sole debe romper el mensaje"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuándo es mejor esperar para dar una noticia?",
+     "model": "Es mejor esperar si la persona está en un momento muy delicado."
+    },
+    {
+     "q": "¿Qué mensaje inesperado cambió tu humor durante una semana complicada?",
+     "model": "Cuando estaba enfermo, un mensaje de mi hermana diciendo que venía a verme me cambió el humor."
+    },
+    {
+     "q": "¿Por qué crees que las familias dejan de hablarse?",
+     "model": "Creo que por orgullo y por cosas que nadie se atreve a decir."
+    }
+   ],
+   "gaps": "Teodoro lleva cuarenta años [trabajando] con [nervios]. Lo que no tiene es un [hijo] [esperándolo].",
+   "glossary": [
+    {
+     "word": "muelle",
+     "meaning": "parte del puerto donde llegan los barcos"
+    },
+    {
+     "word": "se emociona",
+     "meaning": "siente algo muy fuerte"
+    },
+    {
+     "word": "da fuerzas",
+     "meaning": "ayuda a continuar"
+    }
+   ]
+  },
+  {
+   "id": "proa",
+   "title": "Una propuesta mojada",
+   "place": "La proa",
+   "context": "Norma le cuenta a Marina lo que pasó en la proa.",
+   "speakers": [
+    {
+     "name": "Norma",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    },
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Señora, ¿qué hacía usted en la proa con esta tormenta? Está prohibido."
+    },
+    {
+     "s": 0,
+     "text": "Lo siento, oficial. Mi pareja me pidió matrimonio. Quería hacerlo como en la película del Titanic."
+    },
+    {
+     "s": 1,
+     "text": "¿Como en el Titanic? Le recuerdo cómo termina esa película."
+    },
+    {
+     "s": 0,
+     "text": "Ya, ya. Él quería que yo extendiera los brazos. Pero vino una ola y nos mojó de pies a cabeza."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué le contestó?"
+    },
+    {
+     "s": 0,
+     "text": "Le dije que sí, claro. Llevamos veinte años juntos. Pero le puse una condición: que la próxima propuesta romántica sea en tierra firme. Y que el anillo no sea dos tallas más grande, porque ahora lo llevo en el pulgar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde estaba Norma?",
+     "options": [
+      "En el salón",
+      "En el puente",
+      "En la proa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿En qué película se inspiró Gustavo?",
+     "options": [
+      "En una película de piratas",
+      "En una película italiana",
+      "En Titanic"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasó durante la propuesta?",
+     "options": [
+      "Se cayó el anillo al agua",
+      "Una ola los mojó",
+      "Se apagaron las luces"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué condición puso Norma?",
+     "options": [
+      "Que la próxima propuesta sea en tierra",
+      "Que la boda sea en un barco",
+      "Que Gustavo deje de ver películas románticas antiguas"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué escena de película te gustaría vivir de verdad?",
+     "model": "Me gustaría bailar bajo la lluvia como en una película musical."
+    },
+    {
+     "q": "¿Qué condición pondrías antes de decir que sí a algo importante?",
+     "model": "Pondría la condición de compartir las tareas de la casa."
+    },
+    {
+     "q": "¿Qué momento romántico salió mal pero lo recuerdas con cariño?",
+     "model": "Una cena en la que se quemó la comida y terminamos pidiendo pizza."
+    }
+   ],
+   "gaps": "Le dije que sí, claro. Llevamos [veinte] años [juntos]. Pero le puse una [condición]: que la próxima propuesta romántica sea en tierra [firme].",
+   "glossary": [
+    {
+     "word": "pidió matrimonio",
+     "meaning": "preguntó «¿te casas conmigo?»"
+    },
+    {
+     "word": "de pies a cabeza",
+     "meaning": "completamente"
+    },
+    {
+     "word": "tierra firme",
+     "meaning": "suelo, no el mar"
+    }
+   ]
+  },
+  {
+   "id": "oficial",
+   "title": "Primera y última capitana",
+   "place": "El alerón del puente",
+   "context": "Marina habla con Julián sobre su futuro como capitana.",
+   "speakers": [
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Oficial, he oído que mañana usted será la capitana del Albatros."
+    },
+    {
+     "s": 0,
+     "text": "Sí, para llevarlo de Cádiz a Turquía, al desguace. Con una tripulación de doce personas."
+    },
+    {
+     "s": 1,
+     "text": "Es la primera mujer capitana de este barco."
+    },
+    {
+     "s": 0,
+     "text": "Y la última. Es raro: llevo veinte años esperando ser capitana, y lo voy a ser para un funeral."
+    },
+    {
+     "s": 1,
+     "text": "Yo creo que es un honor. Alguien tiene que acompañarlo hasta el final."
+    },
+    {
+     "s": 0,
+     "text": "Tienes razón. Prefiero que lo lleve alguien que lo quiere. Pero te confieso una cosa: tengo miedo de llorar delante de la tripulación."
+    },
+    {
+     "s": 1,
+     "text": "Llore, oficial. Nosotros también vamos a llorar. Y después vamos a cantar, como hacen los marineros cuando despiden un barco."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde llevará Marina el barco?",
+     "options": [
+      "A un museo en Cádiz",
+      "A un nuevo puerto en Panamá",
+      "Al desguace en Turquía"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas personas habrá en la tripulación?",
+     "options": [
+      "Ciento ochenta",
+      "Doce",
+      "Veinte"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué siente Marina sobre ser capitana?",
+     "options": [
+      "Que es raro serlo para un funeral",
+      "Solo alegría",
+      "Indiferencia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De qué tiene miedo Marina?",
+     "options": [
+      "De llorar delante de la tripulación",
+      "De la tormenta",
+      "De perderse en el mar"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué logro llegó en un momento extraño de tu vida?",
+     "model": "Me ascendieron justo cuando la empresa iba a cerrar."
+    },
+    {
+     "q": "¿Qué opinas de llorar delante de compañeros de trabajo?",
+     "model": "Me parece humano; no creo que sea una debilidad."
+    },
+    {
+     "q": "¿A quién o qué acompañarías hasta el final aunque fuera triste?",
+     "model": "Acompañaría a mi perro viejo hasta el último día."
+    }
+   ],
+   "gaps": "Y la [última]. Es raro: llevo veinte años [esperando] ser [capitana], y lo voy a ser para un [funeral].",
+   "glossary": [
+    {
+     "word": "desguace",
+     "meaning": "lugar donde se desmontan barcos viejos"
+    },
+    {
+     "word": "tripulación",
+     "meaning": "personas que trabajan en un barco"
+    },
+    {
+     "word": "honor",
+     "meaning": "algo que da orgullo y respeto"
+    }
+   ]
+  },
+  {
+   "id": "capitan",
+   "title": "La llamada de la compañía",
+   "place": "El puente de mando",
+   "context": "El capitán Salgado habla por radio con un directivo de la compañía.",
+   "speakers": [
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Sole",
+     "country": "Nicaragua",
+     "voice": "es-NI-YolandaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Capitán, tengo a la compañía en la línea. Es el señor director."
+    },
+    {
+     "s": 0,
+     "text": "Pásamelo. … Sí, buenas noches. No, no vamos a llegar a las siete. Las olas son de seis metros y voy a bajar la velocidad."
+    },
+    {
+     "s": 1,
+     "text": "Dice que el remolcador del desguace cobra mil euros por cada hora de retraso."
+    },
+    {
+     "s": 0,
+     "text": "Dígale que yo pago la primera hora. Las demás, que las pague la tormenta."
+    },
+    {
+     "s": 1,
+     "text": "Dice que es una falta de responsabilidad."
+    },
+    {
+     "s": 0,
+     "text": "Dígale que la responsabilidad es mía, y que en este barco hay cuatrocientas doce personas, un gato y un pianista. Llegaremos tarde, pero llegaremos todos. Y cuelgue, por favor, que tengo trabajo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con quién habla el capitán?",
+     "options": [
+      "Con el capitán de otro barco que navega cerca",
+      "Con su familia",
+      "Con el director de la compañía"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué decide el capitán?",
+     "options": [
+      "Ir más rápido",
+      "Bajar la velocidad",
+      "Volver a Tenerife"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto cobra el remolcador por hora de retraso?",
+     "options": [
+      "Cien euros",
+      "Diez mil euros",
+      "Mil euros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es lo más importante para el capitán?",
+     "options": [
+      "Llegar a la hora",
+      "Que lleguen todos",
+      "No pagar nada"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuándo has elegido la seguridad en lugar de la rapidez?",
+     "model": "Cuando nevaba, cancelé un viaje en coche aunque eso me costó una reunión importante."
+    },
+    {
+     "q": "¿Qué responsabilidad tomarías aunque te costara dinero?",
+     "model": "Pagaría yo el error de mi equipo para que no despidieran a nadie."
+    },
+    {
+     "q": "¿Qué opinas de las empresas que solo piensan en el horario y el dinero?",
+     "model": "Creo que se olvidan de que trabajan con personas, no con máquinas."
+    }
+   ],
+   "gaps": "Dígale que yo [pago] la primera [hora]. Las demás, que las [pague] la [tormenta].",
+   "glossary": [
+    {
+     "word": "remolcador",
+     "meaning": "barco pequeño que tira de otros barcos"
+    },
+    {
+     "word": "retraso",
+     "meaning": "llegada más tarde de lo previsto"
+    },
+    {
+     "word": "responsabilidad",
+     "meaning": "obligación de responder por algo"
+    }
+   ]
+  },
+  {
+   "id": "amanecer",
+   "title": "Lo que queda del barco",
+   "place": "La cubierta de popa",
+   "context": "Al amanecer, Marina y el capitán hablan sobre lo que quedará del Albatros.",
+   "speakers": [
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Capitán, ¿qué va a hacer con el cuaderno de bitácora? La compañía quiere que lo envíe a la oficina."
+    },
+    {
+     "s": 1,
+     "text": "Lo enviaré, pero antes haré una copia de la última página. Quiero que cada pasajero tenga una."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuatrocientas copias?"
+    },
+    {
+     "s": 1,
+     "text": "Cuatrocientas doce. Es lo único que va a quedar del barco que no sea metal."
+    },
+    {
+     "s": 0,
+     "text": "Y la gente. Cada uno se lleva algo: Rosa un gato, Fermín un pasaje escrito a mano, la doctora una pastilla."
+    },
+    {
+     "s": 1,
+     "text": "Tienes razón. Los barcos no se quedan en los puertos; se quedan en las personas. Apúntalo, Marina. Esa es la última línea. Y después, vamos a desayunar con todos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere la compañía?",
+     "options": [
+      "Que envíe el cuaderno a la oficina",
+      "Que tire el cuaderno al mar",
+      "Que venda el cuaderno"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere hacer el capitán antes?",
+     "options": [
+      "Copiar la última página para cada pasajero",
+      "Leerlo en voz alta por la radio para todo el barco",
+      "Romper la última página"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas copias quiere hacer?",
+     "options": [
+      "Cuarenta",
+      "Cuatrocientas doce",
+      "Ciento ochenta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde se quedan los barcos, según el capitán?",
+     "options": [
+      "En los puertos",
+      "En las personas",
+      "En los museos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué recuerdo te llevaste de un lugar que ya no existe?",
+     "model": "Me llevé una taza del café de mi barrio que cerró hace años."
+    },
+    {
+     "q": "¿Qué se queda en las personas cuando termina una etapa?",
+     "model": "Se quedan las amistades y lo que aprendimos juntos."
+    },
+    {
+     "q": "¿Qué recuerdo de una casa que ya no existe guardas todavía?",
+     "model": "Guardo las cenas de los domingos en casa de mi abuela, cuando mis primos llenaban la cocina de risas."
+    }
+   ],
+   "gaps": "Los barcos no se [quedan] en los [puertos]; se quedan en las [personas]. [Apúntalo], Marina.",
+   "glossary": [
+    {
+     "word": "cuaderno de bitácora",
+     "meaning": "libro donde se anota todo lo que pasa en un viaje"
+    },
+    {
+     "word": "copia",
+     "meaning": "otro ejemplar igual"
+    },
+    {
+     "word": "apúntalo",
+     "meaning": "escríbelo"
+    }
+   ]
+  }
+ ]
+}

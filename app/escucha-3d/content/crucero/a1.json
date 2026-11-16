@@ -1282,7 +1282,7 @@
     },
     {
      "s": 0,
-     "text": "Es corta, pero es la primera canción del barco. La toco desde mil novecientos setenta y nueve."
+     "text": "Es corta, pero es la canción del barco. La toco todas las noches desde mil novecientos noventa y cinco."
     },
     {
      "s": 1,
@@ -1316,8 +1316,8 @@
      "q": "¿Desde cuándo la toca?",
      "options": [
       "Desde dos mil",
-      "Desde mil novecientos setenta y nueve",
-      "Desde mil novecientos noventa"
+      "Desde mil novecientos noventa y cinco",
+      "Desde mil novecientos setenta y nueve"
      ],
      "answer": 1
     },
@@ -1345,7 +1345,7 @@
      "model": "Mi tío escribe poemas para sus nietos."
     }
    ],
-   "gaps": "Es corta, pero es la [primera] [canción] del [barco]. La [toco] desde mil novecientos setenta y nueve.",
+   "gaps": "Es corta, pero es la [canción] del [barco]. La [toco] todas las [noches] desde mil novecientos noventa y cinco.",
    "glossary": [
     {
      "word": "notas",

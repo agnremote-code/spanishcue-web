@@ -1,0 +1,2040 @@
+{
+ "game": "crucero",
+ "level": "A2",
+ "items": [
+  {
+   "id": "popa",
+   "title": "El cóctel equivocado",
+   "place": "La cubierta de popa",
+   "context": "Amparo le cuenta a Ezequiel cómo conoció a Paco en este barco.",
+   "speakers": [
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Ezequiel",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Señora, ¿cómo conoció a su marido?"
+    },
+    {
+     "s": 0,
+     "text": "Aquí mismo, en mil novecientos setenta y seis. Yo viajaba con mis padres. Una noche quise un zumo de naranja en el salón y Paco me trajo un cóctel con ron."
+    },
+    {
+     "s": 1,
+     "text": "¿Un error del camarero?"
+    },
+    {
+     "s": 0,
+     "text": "Eso dijo él. Después me confesó que no fue un error. Quería hablar conmigo y no sabía cómo empezar."
+    },
+    {
+     "s": 1,
+     "text": "¿Y usted qué hizo?"
+    },
+    {
+     "s": 0,
+     "text": "Me lo tomé, claro. Y al día siguiente volví al salón y otra vez quería un zumo de naranja. Me trajo otro cóctel. Nos casamos un año después."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo conoció Amparo a Paco?",
+     "options": [
+      "En mil novecientos noventa y seis",
+      "En mil novecientos setenta y seis",
+      "El año pasado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quería tomar Amparo aquella noche?",
+     "options": [
+      "Un zumo de naranja",
+      "Un cóctel con ron",
+      "Un café con leche y azúcar"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Paco, ¿por qué le llevó un cóctel?",
+     "options": [
+      "Porque quería hablar con ella",
+      "Porque no había zumo de naranja en el barco",
+      "Porque se equivocó de mesa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pasó al día siguiente?",
+     "options": [
+      "Ella se quejó al capitán",
+      "Ella volvió y quería otro zumo",
+      "Paco no fue a trabajar"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué broma o error sirvió para empezar una relación en tu vida?",
+     "model": "Una compañera se sentó en mi silla por error y así empezamos a hablar."
+    },
+    {
+     "q": "¿Qué error terminó bien en tu vida?",
+     "model": "Una vez tomé el autobús equivocado y encontré un barrio precioso."
+    },
+    {
+     "q": "¿Qué hiciste la última vez que querías hablar con alguien y no sabías cómo?",
+     "model": "Le pregunté la hora, aunque tenía reloj."
+    }
+   ],
+   "gaps": "Después me [confesó] que no fue un [error]. Quería [hablar] conmigo y no sabía cómo [empezar].",
+   "glossary": [
+    {
+     "word": "confesó",
+     "meaning": "dijo un secreto"
+    },
+    {
+     "word": "zumo",
+     "meaning": "bebida de fruta"
+    },
+    {
+     "word": "al día siguiente",
+     "meaning": "el día después"
+    }
+   ]
+  },
+  {
+   "id": "maquinas",
+   "title": "La noche del apagón",
+   "place": "La sala de máquinas",
+   "context": "Teodoro le cuenta a Brayan la peor noche de su vida en la sala de máquinas.",
+   "speakers": [
+    {
+     "name": "Teodoro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Brayan",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Don Teodoro, ¿cuál fue su peor noche aquí abajo?"
+    },
+    {
+     "s": 0,
+     "text": "Mil novecientos noventa y ocho. Hubo un incendio pequeño en la cocina y se apagaron todas las luces del barco."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué hizo?"
+    },
+    {
+     "s": 0,
+     "text": "Trabajé seis horas con una linterna en la boca. Arreglé la Dolores casi a ciegas."
+    },
+    {
+     "s": 1,
+     "text": "¿Tuvo miedo?"
+    },
+    {
+     "s": 0,
+     "text": "Muchísimo. Pero arriba había cuatrocientas personas en la oscuridad, y el pianista seguía tocando. Yo escuchaba el piano por los tubos y pensaba: si él no para, yo tampoco paro."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué noche habla Teodoro?",
+     "options": [
+      "De su primera noche en el barco",
+      "De su peor noche en la sala de máquinas",
+      "De la noche de su boda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó en mil novecientos noventa y ocho?",
+     "options": [
+      "Hubo una tormenta enorme",
+      "Hubo un incendio y se apagaron las luces",
+      "Se rompió el piano"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo trabajó Teodoro?",
+     "options": [
+      "Con la ayuda de diez mecánicos",
+      "Con todas las luces encendidas",
+      "Con una linterna en la boca"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le dio fuerzas a Teodoro?",
+     "options": [
+      "Pensar en su hijo",
+      "Hablar por radio con el capitán",
+      "Escuchar el piano por los tubos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuál fue la noche más difícil de tu vida?",
+     "model": "La noche más difícil fue cuando se enfermó mi padre y fuimos al hospital."
+    },
+    {
+     "q": "¿Qué hiciste la última vez que se fue la luz en tu casa?",
+     "model": "Encendí velas y jugué a las cartas con mi familia."
+    },
+    {
+     "q": "¿Quién te dio fuerzas en un momento difícil?",
+     "model": "Mi hermana me llamó todos los días y eso me ayudó mucho."
+    }
+   ],
+   "gaps": "Trabajé seis [horas] con una [linterna] en la [boca]. Arreglé la Dolores casi a [ciegas].",
+   "glossary": [
+    {
+     "word": "incendio",
+     "meaning": "fuego grande y peligroso"
+    },
+    {
+     "word": "linterna",
+     "meaning": "luz pequeña que llevas en la mano"
+    },
+    {
+     "word": "a ciegas",
+     "meaning": "sin ver"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "La primera chef",
+   "place": "La cocina",
+   "context": "Inés le cuenta a Lalo cómo llegó a ser jefa de cocina del Albatros.",
+   "speakers": [
+    {
+     "name": "Inés",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chef, ¿usted siempre fue la jefa?"
+    },
+    {
+     "s": 0,
+     "text": "¡Qué va! Llegué hace dieciocho años para lavar platos. Era la única mujer en esta cocina."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cómo llegó a chef?"
+    },
+    {
+     "s": 0,
+     "text": "Una noche el chef se puso enfermo y había una cena para el capitán. Nadie quería cocinar. Yo hice un ají de gallina, la receta de mi abuela."
+    },
+    {
+     "s": 1,
+     "text": "¿Y le gustó al capitán?"
+    },
+    {
+     "s": 0,
+     "text": "Pidió dos platos. Al día siguiente me dieron un delantal blanco. Desde entonces, en esta cocina se come ají de gallina los viernes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué trabajo hacía Inés al principio?",
+     "options": [
+      "Era camarera del salón",
+      "Lavaba platos",
+      "Era cocinera"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tenía de especial Inés en esa cocina?",
+     "options": [
+      "Era la más joven",
+      "Era la única peruana",
+      "Era la única mujer"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasó la noche importante?",
+     "options": [
+      "El capitán se enfadó con la cocina",
+      "Se rompió el horno",
+      "El chef se puso enfermo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué se come en la cocina los viernes?",
+     "options": [
+      "Gambas",
+      "Pescado frito con papas",
+      "Ají de gallina"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo empezaste en tu primer trabajo?",
+     "model": "Empecé repartiendo periódicos en mi barrio."
+    },
+    {
+     "q": "¿Qué plato de tu familia nadie sabe hacer como antes?",
+     "model": "Nadie sabe hacer el pan de mi abuelo como él."
+    },
+    {
+     "q": "¿Qué oportunidad apareció en tu vida por casualidad?",
+     "model": "Conseguí mi trabajo porque una compañera se fue de repente."
+    }
+   ],
+   "gaps": "Llegué hace [dieciocho] años para [lavar] [platos]. Era la única [mujer] en esta cocina.",
+   "glossary": [
+    {
+     "word": "delantal",
+     "meaning": "ropa que te pones para cocinar"
+    },
+    {
+     "word": "receta",
+     "meaning": "instrucciones para hacer una comida"
+    },
+    {
+     "word": "¡Qué va!",
+     "meaning": "expresión para decir que no"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "Cómo llegó Almirante",
+   "place": "El pasillo de los camarotes",
+   "context": "Rosa le cuenta a Ezequiel cómo encontró al gato.",
+   "speakers": [
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    },
+    {
+     "name": "Ezequiel",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rosa, ¿de dónde salió ese gato?"
+    },
+    {
+     "s": 0,
+     "text": "Hace siete años, en Lisboa. Un pasajero lo dejó en el camarote treinta. Bajó del barco y no volvió."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué no se lo dijiste al capitán?"
+    },
+    {
+     "s": 0,
+     "text": "Porque los animales no pueden viajar. Lo iban a dejar en el puerto. Y el gato me miró con unos ojos…"
+    },
+    {
+     "s": 1,
+     "text": "Siete años escondido. Increíble."
+    },
+    {
+     "s": 0,
+     "text": "Escondido no. Él conoce el barco mejor que tú. Duerme en la lavandería, come en la cocina y por la noche sube al puente."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde encontró Rosa al gato?",
+     "options": [
+      "En un camarote, en Lisboa",
+      "En la cocina, en Cádiz",
+      "En el puerto de Tenerife"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién dejó al gato?",
+     "options": [
+      "Un marinero",
+      "El capitán",
+      "Un pasajero"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué no se lo dijo al capitán?",
+     "options": [
+      "Porque el capitán odia los gatos",
+      "Porque tenía miedo de perder su trabajo",
+      "Porque iban a dejar al gato en el puerto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Adónde va el gato por la noche?",
+     "options": [
+      "A la proa",
+      "Al puente",
+      "A la sala de máquinas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo llegó a tu vida un animal o una planta?",
+     "model": "Mi gato llegó porque una vecina se mudó y no podía llevarlo."
+    },
+    {
+     "q": "¿Qué secreto guardaste durante mucho tiempo?",
+     "model": "Durante años no le dije a nadie que rompí el jarrón de mi abuela."
+    },
+    {
+     "q": "¿Qué lugar conoces mejor que nadie?",
+     "model": "Conozco mi barrio mejor que nadie: cada calle y cada tienda."
+    }
+   ],
+   "gaps": "Hace siete [años], en [Lisboa]. Un [pasajero] lo dejó en el [camarote] treinta.",
+   "glossary": [
+    {
+     "word": "escondido",
+     "meaning": "en un lugar donde nadie lo ve"
+    },
+    {
+     "word": "lavandería",
+     "meaning": "lugar donde se lava la ropa"
+    },
+    {
+     "word": "puerto",
+     "meaning": "lugar donde llegan y salen los barcos"
+    }
+   ]
+  },
+  {
+   "id": "luna",
+   "title": "Por qué este barco",
+   "place": "El camarote 12",
+   "context": "Lucía le pregunta a Mateo por qué eligió este crucero para la luna de miel.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Mateo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mateo, en serio, ¿por qué este barco? Mis amigas fueron a Bali."
+    },
+    {
+     "s": 1,
+     "text": "Porque leí que era el último viaje del Albatros. Me pareció romántico: el final de un barco, el principio de nosotros."
+    },
+    {
+     "s": 0,
+     "text": "Qué bonito. ¿Y cuánto costó?"
+    },
+    {
+     "s": 1,
+     "text": "Bueno… estaba muy barato. Setenta por ciento de descuento."
+    },
+    {
+     "s": 0,
+     "text": "¡Ah! Ahora entiendo."
+    },
+    {
+     "s": 1,
+     "text": "Pero lo romántico fue verdad, ¿eh? Lo del descuento lo vi después."
+    },
+    {
+     "s": 0,
+     "text": "Mateo, mírame. ¿Lo viste después?"
+    },
+    {
+     "s": 1,
+     "text": "Lo vi… al mismo tiempo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Adónde fueron las amigas de Lucía?",
+     "options": [
+      "A Bali",
+      "A Cádiz",
+      "A Tenerife"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le pareció romántico a Mateo?",
+     "options": [
+      "La comida del barco",
+      "El último viaje del barco",
+      "Los camarotes con balcón"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué descuento tenía el viaje?",
+     "options": [
+      "Diecisiete por ciento",
+      "Cincuenta por ciento",
+      "Setenta por ciento"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué confiesa Mateo al final?",
+     "options": [
+      "Que vio el descuento al mismo tiempo",
+      "Que no le gusta el mar",
+      "Que su madre pagó el viaje"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué viaje elegiste por el precio?",
+     "model": "Fui a Portugal porque los billetes estaban muy baratos."
+    },
+    {
+     "q": "¿Qué plan romántico salió diferente de lo esperado?",
+     "model": "Organicé un picnic y empezó a llover."
+    },
+    {
+     "q": "¿Qué te pareció romántico cuando eras más joven?",
+     "model": "Me parecía romántico escribir poemas en servilletas."
+    }
+   ],
+   "gaps": "Me pareció [romántico]: el [final] de un barco, el [principio] de [nosotros].",
+   "glossary": [
+    {
+     "word": "descuento",
+     "meaning": "dinero que no pagas, precio más bajo"
+    },
+    {
+     "word": "en serio",
+     "meaning": "de verdad"
+    },
+    {
+     "word": "al mismo tiempo",
+     "meaning": "a la vez"
+    }
+   ]
+  },
+  {
+   "id": "pareja",
+   "title": "La primera luna de miel",
+   "place": "El camarote 15",
+   "context": "Elena y Ramón recuerdan su luna de miel en el mismo barco, en 1995.",
+   "speakers": [
+    {
+     "name": "Elena",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Ramón",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "¿Te acuerdas de mil novecientos noventa y cinco? Este mismo camarote."
+    },
+    {
+     "s": 0,
+     "text": "Claro. Tú te mareaste el primer día y yo bailé sola toda la noche."
+    },
+    {
+     "s": 1,
+     "text": "Bailaste con el pianista."
+    },
+    {
+     "s": 0,
+     "text": "Bailé con el pianista porque mi marido estaba en la cama con un balde."
+    },
+    {
+     "s": 1,
+     "text": "Y al día siguiente te compré una pulsera en Madeira para pedir perdón."
+    },
+    {
+     "s": 0,
+     "text": "La tengo aquí. No me la quité nunca."
+    },
+    {
+     "s": 1,
+     "text": "¿Nunca? ¿Ni cuando nos peleamos?"
+    },
+    {
+     "s": 0,
+     "text": "Ni cuando nos peleamos. Una cosa es pelear y otra cosa es la pulsera."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿En qué año fue su luna de miel?",
+     "options": [
+      "En mil novecientos noventa y cinco",
+      "En mil novecientos ochenta y cinco",
+      "En dos mil cinco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le pasó a Ramón el primer día?",
+     "options": [
+      "Perdió la maleta",
+      "Se mareó",
+      "Se enfadó con el pianista"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le compró Ramón a Elena?",
+     "options": [
+      "Un anillo",
+      "Una pulsera",
+      "Un vestido de fiesta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice Elena de la pulsera?",
+     "options": [
+      "Que la perdió en Madeira",
+      "Que la guardó en un cajón",
+      "Que no se la quitó nunca"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué objeto llevas siempre y no te quitas nunca?",
+     "model": "Llevo siempre un anillo de mi madre."
+    },
+    {
+     "q": "¿Qué hiciste para pedir perdón la última vez?",
+     "model": "Le preparé una cena a mi hermano."
+    },
+    {
+     "q": "¿Qué viaje de tu pasado repetirías?",
+     "model": "Repetiría mi primer viaje con amigos, a la playa."
+    }
+   ],
+   "gaps": "Y al día [siguiente] te compré una [pulsera] en [Madeira] para pedir [perdón].",
+   "glossary": [
+    {
+     "word": "te mareaste",
+     "meaning": "te sentiste mal por el movimiento del barco"
+    },
+    {
+     "word": "pulsera",
+     "meaning": "joya para la muñeca"
+    },
+    {
+     "word": "nos peleamos",
+     "meaning": "discutimos fuerte"
+    }
+   ]
+  },
+  {
+   "id": "cartas",
+   "title": "El baile de 1985",
+   "place": "El camarote 21",
+   "context": "Germán le cuenta a Rosa la noche que conoció a Isabel.",
+   "speakers": [
+    {
+     "name": "Germán",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fue en mil novecientos ochenta y cinco, en el salón. Había una orquesta y yo no sabía bailar."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ella sí?"
+    },
+    {
+     "s": 0,
+     "text": "Isabel bailaba como si el barco no se moviera. Me sacó a bailar. Le pisé los pies tres veces."
+    },
+    {
+     "s": 1,
+     "text": "Pobre Isabel."
+    },
+    {
+     "s": 0,
+     "text": "Se rio mucho. Al final del viaje me dio su dirección en una servilleta y me dijo: «Si el Albatros hace su último viaje, nos vemos a bordo»."
+    },
+    {
+     "s": 1,
+     "text": "Y usted vino."
+    },
+    {
+     "s": 0,
+     "text": "Vine. Pero ella no está en la lista de pasajeros."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde se conocieron?",
+     "options": [
+      "En el salón",
+      "En la cubierta",
+      "En el puerto de Quito"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué problema tenía Germán?",
+     "options": [
+      "No sabía bailar",
+      "Estaba mareado",
+      "No hablaba con nadie"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde le escribió Isabel su dirección?",
+     "options": [
+      "En la primera página de un libro",
+      "En una servilleta",
+      "En una carta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué descubrió Germán en este viaje?",
+     "options": [
+      "Que Isabel no está en la lista",
+      "Que Isabel está en el camarote veinte",
+      "Que Isabel trabaja en el barco"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué promesa de tu juventud recuerdas?",
+     "model": "Recuerdo que prometí a un amigo viajar juntos a México."
+    },
+    {
+     "q": "¿Qué baile intentaste aprender alguna vez?",
+     "model": "Intenté aprender salsa, pero no tenía ritmo."
+    },
+    {
+     "q": "¿A quién buscarías en un viaje importante?",
+     "model": "Buscaría a mi primer amor de la escuela."
+    }
+   ],
+   "gaps": "Isabel [bailaba] como si el barco no se [moviera]. Me sacó a [bailar]. Le pisé los [pies] tres veces.",
+   "glossary": [
+    {
+     "word": "orquesta",
+     "meaning": "grupo grande de músicos"
+    },
+    {
+     "word": "le pisé",
+     "meaning": "puse mi pie sobre su pie"
+    },
+    {
+     "word": "a bordo",
+     "meaning": "dentro del barco"
+    }
+   ]
+  },
+  {
+   "id": "enfermeria",
+   "title": "Veintidós años mareada",
+   "place": "La enfermería",
+   "context": "La doctora Beatriz le cuenta su secreto a la camarera Rosa.",
+   "speakers": [
+    {
+     "name": "Beatriz",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doctora, ¿usted se marea? ¡No me lo creo!"
+    },
+    {
+     "s": 0,
+     "text": "Desde el primer día, hace veintidós años. Llegué de La Habana para seis meses. Me mareé en el desayuno."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué se quedó?"
+    },
+    {
+     "s": 0,
+     "text": "Porque el segundo mes nació una niña en este barco y la traje yo al mundo, en medio de una tormenta. Ese día pensé: aquí hago falta."
+    },
+    {
+     "s": 1,
+     "text": "¿Y nunca se tomó una pastilla?"
+    },
+    {
+     "s": 0,
+     "text": "Nunca. Pensé que una médica mareada no da confianza. Ahora creo que fue una tontería."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Desde cuándo se marea la doctora?",
+     "options": [
+      "Desde este viaje",
+      "Desde el primer día",
+      "Desde hace dos años"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto tiempo pensaba quedarse?",
+     "options": [
+      "Dos años",
+      "Toda la vida",
+      "Seis meses"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué se quedó en el barco?",
+     "options": [
+      "Porque ayudó a nacer a una niña",
+      "Porque le pagaban mucho",
+      "Porque se enamoró del capitán"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué piensa ahora de no tomar pastillas?",
+     "options": [
+      "Que fue una buena idea",
+      "Que no tenía pastillas",
+      "Que fue una tontería"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué lugar sentiste que hacías falta?",
+     "model": "Me di cuenta de que hacía falta cuando cuidé a mi abuelo enfermo."
+    },
+    {
+     "q": "¿Qué problema escondiste para parecer fuerte?",
+     "model": "Escondí que tenía miedo a los aviones durante años."
+    },
+    {
+     "q": "¿Qué plan corto se convirtió en algo largo en tu vida?",
+     "model": "Fui a Madrid para un verano y me quedé diez años."
+    }
+   ],
+   "gaps": "Ese día [pensé]: aquí [hago] [falta]. ¿Y nunca se [tomó] una pastilla?",
+   "glossary": [
+    {
+     "word": "hago falta",
+     "meaning": "me necesitan"
+    },
+    {
+     "word": "confianza",
+     "meaning": "seguridad en otra persona"
+    },
+    {
+     "word": "tontería",
+     "meaning": "cosa sin sentido"
+    }
+   ]
+  },
+  {
+   "id": "nina",
+   "title": "El barco del abuelo",
+   "place": "La cubierta de botes, babor",
+   "context": "Don Benigno le cuenta a Martina que él ayudó a construir el barco.",
+   "speakers": [
+    {
+     "name": "Benigno",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    },
+    {
+     "name": "Martina",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Martina, ¿sabes una cosa? Yo ayudé a construir este barco."
+    },
+    {
+     "s": 1,
+     "text": "¿Tú? ¿Con tus manos?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, con dos mil personas más. Tenía veinte años. Trabajé en el astillero, poniendo remaches en el casco."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué es un remache?"
+    },
+    {
+     "s": 0,
+     "text": "Es como un clavo grande que une dos piezas de metal. Puse miles. Y en la sala de máquinas hay una placa con mis iniciales."
+    },
+    {
+     "s": 1,
+     "text": "¿Podemos verla mañana?"
+    },
+    {
+     "s": 0,
+     "text": "Mañana el barco se va. Pero esta noche, si quieres, vamos a buscarla."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué cuenta el abuelo?",
+     "options": [
+      "Que ayudó a construir el barco",
+      "Que fue capitán del barco",
+      "Que viajó en el primer viaje"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tenía entonces?",
+     "options": [
+      "Diez",
+      "Veinte",
+      "Cuarenta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué es un remache, según el abuelo?",
+     "options": [
+      "Una pieza del motor",
+      "Una herramienta para pintar",
+      "Un clavo grande que une metal"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hay en la sala de máquinas?",
+     "options": [
+      "Una foto del abuelo",
+      "Una carta del capitán",
+      "Una placa con sus iniciales"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué construiste o hiciste con tus manos?",
+     "model": "Hice una estantería para mis libros con mi padre."
+    },
+    {
+     "q": "¿Qué trabajo hacían tus abuelos cuando eran jóvenes?",
+     "model": "Mi abuelo era carpintero y mi abuela costurera."
+    },
+    {
+     "q": "¿Dónde está tu nombre escrito además de tus documentos?",
+     "model": "Mi nombre está escrito en un árbol del parque."
+    }
+   ],
+   "gaps": "Trabajé en el [astillero], poniendo [remaches] en el [casco]. ¿Qué es un [remache]?",
+   "glossary": [
+    {
+     "word": "astillero",
+     "meaning": "lugar donde se construyen barcos"
+    },
+    {
+     "word": "casco",
+     "meaning": "el cuerpo exterior del barco"
+    },
+    {
+     "word": "iniciales",
+     "meaning": "primeras letras del nombre"
+    }
+   ]
+  },
+  {
+   "id": "polizon",
+   "title": "La comida de 1971",
+   "place": "La cubierta de botes, estribor",
+   "context": "Fermín le cuenta a Julián qué cocinaba en el primer viaje del barco.",
+   "speakers": [
+    {
+     "name": "Fermín",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Don Fermín, ¿qué cocinaba usted en mil novecientos setenta y uno?"
+    },
+    {
+     "s": 0,
+     "text": "Arroz con pollo para cuatrocientas personas. Y los domingos, potaje de garbanzos."
+    },
+    {
+     "s": 1,
+     "text": "¿Y le gustaba el trabajo?"
+    },
+    {
+     "s": 0,
+     "text": "Me encantaba. Me levantaba a las cuatro, y a las seis el pan ya estaba en las mesas. Un día el capitán vino a la cocina con un chico de catorce años, su sobrino. Le enseñé a pelar papas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué fue del chico?"
+    },
+    {
+     "s": 0,
+     "text": "No lo sé. Pelaba muy mal. Seguro que no siguió en el mar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué cocinaba Fermín en el primer viaje?",
+     "options": [
+      "Pescado frito",
+      "Pizza con jamón y queso",
+      "Arroz con pollo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué cocinaba los domingos?",
+     "options": [
+      "Paella",
+      "Potaje de garbanzos",
+      "Tartas de chocolate"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora se levantaba?",
+     "options": [
+      "A las cuatro",
+      "A las seis y media",
+      "A las siete"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué piensa Fermín del chico de catorce años?",
+     "options": [
+      "Que ahora es un gran cocinero",
+      "Que era muy bueno pelando papas",
+      "Que seguramente no siguió en el mar"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué comida preparabas cuando eras más joven?",
+     "model": "Preparaba huevos fritos casi todas las noches."
+    },
+    {
+     "q": "¿A qué hora te levantabas en tu primer trabajo?",
+     "model": "Me levantaba a las seis de la mañana."
+    },
+    {
+     "q": "¿Quién te enseñó algo útil cuando eras niño?",
+     "model": "Mi tío me enseñó a montar en bicicleta."
+    }
+   ],
+   "gaps": "Me levantaba a las [cuatro], y a las [seis] el [pan] ya estaba en las [mesas].",
+   "glossary": [
+    {
+     "word": "potaje",
+     "meaning": "comida caliente con legumbres"
+    },
+    {
+     "word": "garbanzos",
+     "meaning": "legumbre redonda y amarilla"
+    },
+    {
+     "word": "pelar",
+     "meaning": "quitar la piel"
+    }
+   ]
+  },
+  {
+   "id": "barra",
+   "title": "La botella de la inauguración",
+   "place": "La barra del salón",
+   "context": "Wences le cuenta a Yoli la historia de la botella de champán.",
+   "speakers": [
+    {
+     "name": "Wences",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wences, ¿de dónde salió esa botella?"
+    },
+    {
+     "s": 0,
+     "text": "Del primer viaje, en mil novecientos setenta y uno. Rompieron una botella contra el barco y guardaron otra igual para el último viaje."
+    },
+    {
+     "s": 1,
+     "text": "¿Y quién la guardó?"
+    },
+    {
+     "s": 0,
+     "text": "Todos los barmans. Pasó de mano en mano. A mí me la dio mi jefe en mil novecientos noventa y seis. Me dijo: «No la abras nunca, pero el último día sí»."
+    },
+    {
+     "s": 1,
+     "text": "Pues hoy es el último día."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Por eso tengo las manos frías."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué viaje es la botella?",
+     "options": [
+      "De un viaje a Francia",
+      "De la boda del capitán",
+      "Del primer viaje"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hicieron con la otra botella?",
+     "options": [
+      "La rompieron contra el barco",
+      "La bebió el capitán",
+      "La vendieron"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién le dio la botella a Wences?",
+     "options": [
+      "Un pasajero",
+      "Su jefe",
+      "El capitán"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Wences tiene las manos frías?",
+     "options": [
+      "Porque la botella está en hielo",
+      "Porque hace mucho frío en el salón",
+      "Porque hoy es el último día"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué guardas para una ocasión especial?",
+     "model": "Guardo un vestido para una boda importante."
+    },
+    {
+     "q": "¿Qué objeto pasó de mano en mano en tu familia?",
+     "model": "Un reloj de oro pasó de mi bisabuelo a mi padre."
+    },
+    {
+     "q": "¿Qué consejo te dio un jefe o un profesor?",
+     "model": "Mi profesora me dijo que nunca dejara de leer."
+    }
+   ],
+   "gaps": "Rompieron una [botella] contra el [barco] y [guardaron] otra igual para el [último] viaje.",
+   "glossary": [
+    {
+     "word": "último día",
+     "meaning": "el día final"
+    },
+    {
+     "word": "de mano en mano",
+     "meaning": "de una persona a otra"
+    },
+    {
+     "word": "barman",
+     "meaning": "persona que prepara bebidas en un bar"
+    }
+   ]
+  },
+  {
+   "id": "bingo",
+   "title": "Veintiocho años de sonrisa",
+   "place": "La pista de baile",
+   "context": "Yoli le cuenta a Aurelio cómo empezó a trabajar de animadora.",
+   "speakers": [
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Maestro, ¿sabe por qué soy animadora? Yo quería ser cantante."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué pasó?"
+    },
+    {
+     "s": 0,
+     "text": "Vine a una prueba en el barco en mil novecientos noventa y ocho. Me puse tan nerviosa que no salió la voz. El director me dijo: «No sabes cantar, pero sonríes muy bien. ¿Quieres ser animadora?»."
+    },
+    {
+     "s": 1,
+     "text": "Y dijo que sí."
+    },
+    {
+     "s": 0,
+     "text": "Dije que sí por un año. Y llevo veintiocho. Veintiocho años de bingo, concursos y sonrisas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cantar?"
+    },
+    {
+     "s": 0,
+     "text": "En la ducha. Solo en la ducha."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quería ser Yoli?",
+     "options": [
+      "Cantante",
+      "Actriz",
+      "Médica del barco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le pasó en la prueba?",
+     "options": [
+      "Cantó muy bien",
+      "Llegó tarde a la prueba",
+      "No le salió la voz"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por cuánto tiempo aceptó el trabajo al principio?",
+     "options": [
+      "Por un mes",
+      "Por un año",
+      "Para siempre"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde canta Yoli ahora?",
+     "options": [
+      "En la ducha",
+      "En el escenario",
+      "En el bingo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué sueño de tu infancia cambiaste por otro?",
+     "model": "De niño soñaba con ser futbolista, y ahora enseño música."
+    },
+    {
+     "q": "¿Qué cosa aceptaste por poco tiempo y duró mucho más?",
+     "model": "Acepté compartir piso por un mes y me quedé allí cinco años."
+    },
+    {
+     "q": "¿Dónde cantas cuando nadie te escucha?",
+     "model": "Canto en el coche cuando voy solo."
+    }
+   ],
+   "gaps": "Me puse tan [nerviosa] que no [salió] la [voz]. El [director] me dijo: «No sabes cantar, pero sonríes muy bien.",
+   "glossary": [
+    {
+     "word": "prueba",
+     "meaning": "examen para un trabajo artístico"
+    },
+    {
+     "word": "animadora",
+     "meaning": "persona que organiza juegos y diversión"
+    },
+    {
+     "word": "concursos",
+     "meaning": "juegos con premios"
+    }
+   ]
+  },
+  {
+   "id": "piano",
+   "title": "La canción para Elena",
+   "place": "El escenario del salón",
+   "context": "Aurelio le cuenta a Wences para quién escribió la canción del barco.",
+   "speakers": [
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Wences",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Maestro, ¿para quién escribió la canción del Albatros?"
+    },
+    {
+     "s": 0,
+     "text": "Para una pasajera, en mil novecientos noventa y cinco. Una recién casada. Su marido se mareó y ella bailó conmigo toda la noche."
+    },
+    {
+     "s": 1,
+     "text": "¿Y se enamoró de ella?"
+    },
+    {
+     "s": 0,
+     "text": "Un poquito. Esa noche apunté cuatro notas en una servilleta. Ella se fue en Cádiz y no la vi nunca más."
+    },
+    {
+     "s": 1,
+     "text": "Maestro… hay una pareja en el camarote quince. Vinieron porque aquí fue su luna de miel en el noventa y cinco."
+    },
+    {
+     "s": 0,
+     "text": "¿Cómo se llama ella?"
+    },
+    {
+     "s": 1,
+     "text": "Elena."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para quién escribió Aurelio la canción?",
+     "options": [
+      "Para su esposa",
+      "Para una pasajera recién casada",
+      "Para el capitán"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué ella bailó con Aurelio?",
+     "options": [
+      "Porque Aurelio la invitó primero",
+      "Porque su marido estaba mareado",
+      "Porque no tenía pareja"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde escribió la canción?",
+     "options": [
+      "En una servilleta",
+      "En un cuaderno",
+      "En el piano"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué descubre Aurelio al final?",
+     "options": [
+      "Que la canción es famosa",
+      "Que la pasajera puede estar en el barco",
+      "Que Wences conoce a Elena"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué persona viste una sola vez y no olvidaste?",
+     "model": "Vi a una señora muy amable en un tren y nunca la olvidé."
+    },
+    {
+     "q": "¿Qué escribiste en una servilleta o en un papel pequeño?",
+     "model": "Una vez apunté un número de teléfono en una servilleta."
+    },
+    {
+     "q": "¿Qué casualidad te sorprendió de verdad?",
+     "model": "Me encontré con mi vecino en un museo de Tokio."
+    }
+   ],
+   "gaps": "Esa noche [apunté] cuatro [notas] en una [servilleta]. Ella se fue en [Cádiz] y no la vi nunca más.",
+   "glossary": [
+    {
+     "word": "recién casada",
+     "meaning": "mujer que se casó hace muy poco"
+    },
+    {
+     "word": "se enamoró",
+     "meaning": "empezó a sentir amor"
+    },
+    {
+     "word": "nunca más",
+     "meaning": "ninguna vez después"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "La radio de antes",
+   "place": "La cabina de radio",
+   "context": "Sole le explica a Julián cómo era la radio del barco antes.",
+   "speakers": [
+    {
+     "name": "Sole",
+     "country": "Nicaragua",
+     "voice": "es-NI-YolandaNeural"
+    },
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Sole, ¿antes había más trabajo en la radio?"
+    },
+    {
+     "s": 0,
+     "text": "Muchísimo más. Cuando empecé, en dos mil cuatro, no había internet en el barco. Los pasajeros venían aquí para mandar mensajes a su familia."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué mensajes mandaban?"
+    },
+    {
+     "s": 0,
+     "text": "De todo. Felicitaciones, declaraciones de amor, una vez un divorcio. Yo los escribía y los mandaba, palabra por palabra."
+    },
+    {
+     "s": 1,
+     "text": "Entonces conoces muchos secretos."
+    },
+    {
+     "s": 0,
+     "text": "Todos. Pero una radiotelegrafista nunca habla. Es como un médico. Lo que entra por esta puerta, se queda aquí dentro."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo empezó Sole a trabajar en la radio?",
+     "options": [
+      "En mil novecientos noventa",
+      "El año pasado",
+      "En dos mil cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no había en el barco entonces?",
+     "options": [
+      "Internet",
+      "Teléfono",
+      "Electricidad"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tipo de mensaje mandó una vez?",
+     "options": [
+      "Un divorcio",
+      "Una receta de cocina",
+      "Una orden del capitán"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Con quién se compara Sole?",
+     "options": [
+      "Con un médico",
+      "Con un cura",
+      "Con una policía"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo te comunicabas con tus amigos antes de tener móvil?",
+     "model": "Antes llamaba al teléfono de su casa y hablaba con sus padres."
+    },
+    {
+     "q": "¿Qué mensaje importante mandaste por escrito?",
+     "model": "Mandé un mensaje para felicitar a mi amiga por su hija recién nacida."
+    },
+    {
+     "q": "¿Quién guarda tus secretos sin hablar?",
+     "model": "Mi hermana mayor guarda todos mis secretos."
+    }
+   ],
+   "gaps": "Yo los [escribía] y los [mandaba], [palabra] por [palabra].",
+   "glossary": [
+    {
+     "word": "felicitaciones",
+     "meaning": "mensajes para celebrar algo bueno"
+    },
+    {
+     "word": "declaraciones de amor",
+     "meaning": "mensajes para decir «te quiero»"
+    },
+    {
+     "word": "secretos",
+     "meaning": "cosas que no se cuentan"
+    }
+   ]
+  },
+  {
+   "id": "proa",
+   "title": "El susto del año pasado",
+   "place": "La proa",
+   "context": "Norma le pregunta a Gustavo por qué quiere casarse ahora.",
+   "speakers": [
+    {
+     "name": "Norma",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    },
+    {
+     "name": "Gustavo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Gustavo, veinte años sin hablar de boda. ¿Por qué ahora?"
+    },
+    {
+     "s": 1,
+     "text": "Por el año pasado. Por el hospital."
+    },
+    {
+     "s": 0,
+     "text": "El infarto."
+    },
+    {
+     "s": 1,
+     "text": "Sí. Estuve tres días en la cama y pensé: si me muero, Norma no es mi esposa. Nunca se lo pregunté."
+    },
+    {
+     "s": 0,
+     "text": "Ay, Gustavo. Yo no necesitaba un papel. Yo ya me sentía tu esposa desde hace mucho tiempo."
+    },
+    {
+     "s": 1,
+     "text": "Ya lo sé. Pero yo necesitaba preguntártelo. En voz alta, aquí, delante del mar. Aunque llueva y aunque tengamos frío."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo pasó sin hablar de boda?",
+     "options": [
+      "Dos años y medio",
+      "Diez años",
+      "Veinte años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le pasó a Gustavo el año pasado?",
+     "options": [
+      "Perdió su trabajo",
+      "Se cayó de un barco",
+      "Tuvo un infarto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pensó Gustavo en el hospital?",
+     "options": [
+      "Que quería viajar más",
+      "Que Norma no era su esposa",
+      "Que tenía que dejar de fumar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué necesitaba Gustavo?",
+     "options": [
+      "Preguntárselo en voz alta",
+      "Un papel firmado",
+      "Un anillo nuevo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué susto cambió tu forma de pensar?",
+     "model": "Un accidente de coche me hizo pensar más en mi familia."
+    },
+    {
+     "q": "¿Qué pregunta importante te costó hacer?",
+     "model": "Me costó preguntarle a mi jefe por un aumento."
+    },
+    {
+     "q": "¿Qué cambiaste después de un momento difícil?",
+     "model": "Empecé a pasar más tiempo con mis padres."
+    }
+   ],
+   "gaps": "Estuve tres [días] en la [cama] y pensé: si me [muero], Norma no es mi [esposa].",
+   "glossary": [
+    {
+     "word": "infarto",
+     "meaning": "problema grave del corazón"
+    },
+    {
+     "word": "en voz alta",
+     "meaning": "hablando, no en silencio"
+    },
+    {
+     "word": "papel",
+     "meaning": "aquí, el documento del matrimonio"
+    }
+   ]
+  },
+  {
+   "id": "oficial",
+   "title": "Marina y el mar",
+   "place": "El alerón del puente",
+   "context": "Marina le cuenta a Julián por qué se hizo marinera.",
+   "speakers": [
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Oficial, ¿por qué eligió el mar? Es un trabajo duro."
+    },
+    {
+     "s": 0,
+     "text": "Por mi padre. Era pescador en Colón. Salía de noche y volvía por la mañana con el barco lleno."
+    },
+    {
+     "s": 1,
+     "text": "¿Y usted iba con él?"
+    },
+    {
+     "s": 0,
+     "text": "Una vez, a los doce años. Me encantó. Pero cuando yo tenía quince, mi padre salió una noche de tormenta y no volvió."
+    },
+    {
+     "s": 1,
+     "text": "Lo siento mucho."
+    },
+    {
+     "s": 0,
+     "text": "Mi madre quería que yo estudiara lejos del mar. Yo estudié para ser capitana. Es la única forma que conozco de estar cerca de él."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde pescaba el padre de Marina?",
+     "options": [
+      "En Cádiz",
+      "En Tenerife",
+      "En Colón"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años tenía Marina cuando salió a pescar con él?",
+     "options": [
+      "Quince",
+      "Doce",
+      "Veinte"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le pasó al padre?",
+     "options": [
+      "Salió en una tormenta y no volvió",
+      "Se jubiló joven",
+      "Se fue a vivir a otro país"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quería la madre de Marina?",
+     "options": [
+      "Que estudiara lejos del mar",
+      "Que fuera pescadora",
+      "Que trabajara con ella"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Quién te inspiró para tu profesión?",
+     "model": "Me inspiró mi madre, que era enfermera."
+    },
+    {
+     "q": "¿Qué hiciste con tu padre o tu madre cuando eras niño?",
+     "model": "Iba con mi padre al mercado los sábados."
+    },
+    {
+     "q": "¿Cómo sientes cerca a una persona que no está?",
+     "model": "Cocino sus recetas y así la siento cerca."
+    }
+   ],
+   "gaps": "Era [pescador] en Colón. Salía de [noche] y volvía por la [mañana] con el barco [lleno].",
+   "glossary": [
+    {
+     "word": "duro",
+     "meaning": "difícil, que cansa mucho"
+    },
+    {
+     "word": "pescador",
+     "meaning": "persona que trabaja pescando"
+    },
+    {
+     "word": "capitana",
+     "meaning": "mujer que manda en un barco"
+    }
+   ]
+  },
+  {
+   "id": "capitan",
+   "title": "El chico que pelaba papas",
+   "place": "El puente de mando",
+   "context": "El capitán Salgado le cuenta a Marina cómo empezó en el Albatros.",
+   "speakers": [
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Marina, ¿sabes cuándo pisé este barco por primera vez? A los catorce años. Mi tío era el capitán."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ya quería ser capitán?"
+    },
+    {
+     "s": 0,
+     "text": "Qué va. Me mandaron a la cocina. Un cocinero cubano, muy gruñón, me enseñó a pelar papas. Lo hacía fatal."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cómo se llamaba?"
+    },
+    {
+     "s": 0,
+     "text": "No me acuerdo. Pero me dijo una frase que nunca olvidé: «En el mar, lo importante es llegar, no llegar rápido»."
+    },
+    {
+     "s": 1,
+     "text": "Pues la compañía piensa lo contrario."
+    },
+    {
+     "s": 0,
+     "text": "La compañía nunca peló papas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años tenía el capitán la primera vez en el barco?",
+     "options": [
+      "Cuarenta",
+      "Diecinueve",
+      "Catorce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién era el capitán entonces?",
+     "options": [
+      "Su padre",
+      "Su tío",
+      "Su abuelo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le enseñó el cocinero?",
+     "options": [
+      "A cocinar arroz",
+      "A llevar el barco",
+      "A pelar papas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué frase recuerda el capitán?",
+     "options": [
+      "El capitán siempre tiene razón",
+      "Lo importante es llegar, no llegar rápido",
+      "Hay que obedecer a la compañía"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué frase de una persona mayor nunca olvidaste?",
+     "model": "Mi abuela me dijo: «El que guarda, siempre tiene»."
+    },
+    {
+     "q": "¿Qué hacías muy mal cuando empezaste algo nuevo?",
+     "model": "Cuando empecé a conducir, aparcaba fatal."
+    },
+    {
+     "q": "¿Qué es más importante para ti: llegar pronto o llegar bien?",
+     "model": "Para mí es más importante llegar bien, sin estrés."
+    }
+   ],
+   "gaps": "«En el [mar], lo [importante] es [llegar], no llegar [rápido]».",
+   "glossary": [
+    {
+     "word": "gruñón",
+     "meaning": "que se queja y protesta mucho"
+    },
+    {
+     "word": "fatal",
+     "meaning": "muy mal"
+    },
+    {
+     "word": "pisé",
+     "meaning": "puse los pies por primera vez"
+    }
+   ]
+  },
+  {
+   "id": "amanecer",
+   "title": "La última página",
+   "place": "La cubierta de popa",
+   "context": "Al amanecer, el capitán le cuenta a Amparo qué escribió en el cuaderno de bitácora.",
+   "speakers": [
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Capitán, ¿qué escribió anoche en el cuaderno de bitácora?"
+    },
+    {
+     "s": 0,
+     "text": "Lo que me contaron. Una pareja que no se divorció, un gato con trabajo, un polizón de ochenta y dos años, una doctora mareada."
+    },
+    {
+     "s": 1,
+     "text": "¿Y yo?"
+    },
+    {
+     "s": 0,
+     "text": "Usted también. Puse: «Amparo vino a despedir a su marido y nos enseñó a esperar»."
+    },
+    {
+     "s": 1,
+     "text": "Paco se reiría. Él nunca esperaba nada, siempre tenía prisa."
+    },
+    {
+     "s": 0,
+     "text": "Entonces escribo otra línea: «Paco tenía prisa, pero llegó el último». Y ahora, señora, el viento está perfecto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde escribió el capitán?",
+     "options": [
+      "En el cuaderno de bitácora",
+      "En una carta",
+      "En el diario de la compañía"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién no se divorció, según el cuaderno?",
+     "options": [
+      "Una pareja",
+      "La doctora",
+      "El polizón"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué escribió sobre Amparo?",
+     "options": [
+      "Que no paró de llorar",
+      "Que enseñó a esperar",
+      "Que se mareó toda la noche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo era Paco, según Amparo?",
+     "options": [
+      "Era muy tranquilo",
+      "Siempre tenía prisa",
+      "Era muy tímido y callado"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué escribirías hoy en tu diario?",
+     "model": "Escribiría que fue un día largo pero bonito."
+    },
+    {
+     "q": "¿Qué te enseñó a esperar en la vida?",
+     "model": "Esperar el resultado de un examen me enseñó a tener paciencia."
+    },
+    {
+     "q": "¿Quién tiene siempre prisa en tu vida?",
+     "model": "Mi jefe tiene prisa siempre, incluso para comer."
+    }
+   ],
+   "gaps": "Usted también. Puse: «Amparo vino a [despedir] a su [marido] y nos [enseñó] a [esperar]».",
+   "glossary": [
+    {
+     "word": "cuaderno de bitácora",
+     "meaning": "libro donde el capitán escribe todo lo que pasa en el viaje"
+    },
+    {
+     "word": "despedir",
+     "meaning": "decir adiós"
+    },
+    {
+     "word": "anoche",
+     "meaning": "la noche de ayer"
+    }
+   ]
+  }
+ ]
+}
