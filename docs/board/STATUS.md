@@ -80,6 +80,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-16 (Monday 3D routine): run started 02:06Z, W47 plan item 2** (branch `claude/board-mon-3d-20261116`, base main `d9bb524`). Previous-slot marker check: no W47 slot ran before this one (the last board run is Fri 11-13, #422, recorded below), so there is nothing to miss yet. Subscription usage: **UNKNOWN**.
 - **2026-11-13 (Friday 3D + assessment routine): PR #422** (branch `claude/friday-assessment-20261113`, base main `3f946b9`). Subscription usage: **UNKNOWN**.
   - **Unit: gated content repair, «Más allá» A2** (reported as a **repair**; W46 item 6, second half). R4 is still unanswered (#282 has had no comment since 10-26), so #282 was not touched.
     - Martin removed every structure above A2 from `app/mas-alla/levels/a2.mjs` (16 strings) and `voces/a2.mjs` (6 voice questions). That covers the four «si + imperfecto de subjuntivo» prompts from his 11-03 audit, «habrías hecho», and every bare hypothetical conditional. Only *gustaría* (wishes) remains.
