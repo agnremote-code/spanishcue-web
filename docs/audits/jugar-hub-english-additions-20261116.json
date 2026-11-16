@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale’s 2026-11-16 «arranca» to the student game app (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAEJFpCLaCYhCzkAP8CfU7j9): the student hub at /jugar (map of 3D worlds, passport, stamps, milestones, install button) follows the site's ES/EN locale, and the student landing links to it.",
+  "additions": [
+    {
+      "path": "app/aprender-espanol/page.tsx",
+      "text": "Open my map of 3D worlds"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "SpanishCue · Play"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Play your Spanish."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Every world is a story in 3D. Step in, talk to its people and solve its scenes in Spanish. Your passport keeps what you live."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Start with Noche abierta"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Continue in"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Install on my phone"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "App installed"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "On iPhone: tap Share, then “Add to Home Screen”."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Passport"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Your name"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Traveller's name"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "1 scene lived"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "${n} scenes lived"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "1 more scene to reach ${rank}"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "${n} more scenes to reach ${rank}"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "You already sound like a local."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Open worlds"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Step in whenever you like, on your phone or your computer."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "They open with your teacher"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "These worlds are played in class with a SpanishCue teacher. Your progress in them shows in your passport too."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "With your teacher"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Play"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Step back in"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Complete"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "${done} of ${total} scenes"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Explored"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Brand new"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Story"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Country"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Stamps"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "One stamp for every world you set foot in. It turns gold when you finish all its scenes."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "What you have done so far"
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Your progress is saved on this device."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Create your free account to keep playing after the first minutes."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Create free account"
+    },
+    {
+      "path": "app/jugar/page.tsx",
+      "text": "Play · 3D worlds to learn Spanish | SPANISHCUE"
+    },
+    {
+      "path": "app/jugar/page.tsx",
+      "text": "Your map of 3D worlds to practise Spanish by playing: pick a world, live its scenes and keep your progress in your passport. Install it on your phone."
+    },
+    {
+      "path": "app/jugar/page.tsx",
+      "text": "My account"
+    },
+    {
+      "path": "app/jugar/page.tsx",
+      "text": "Log in"
+    },
+    {
+      "path": "app/jugar/page.tsx",
+      "text": "Do you teach Spanish? SpanishCue for teachers"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Tourist"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Traveller"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Explorer"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Resident"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Local"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "First scene"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "You finished your first scene in Spanish."
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Ten scenes"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Ten situations solved in Spanish."
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Three worlds"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "You stepped into three different worlds."
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Two countries"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "You travelled through two countries."
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "A whole world"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "You finished every scene of one world."
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Fifty scenes"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Fifty scenes lived."
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Three whole worlds"
+    },
+    {
+      "path": "app/jugar/progress.mjs",
+      "text": "Three worlds finished from start to end."
+    }
+  ]
+}
