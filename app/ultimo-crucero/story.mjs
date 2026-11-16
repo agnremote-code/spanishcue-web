@@ -122,7 +122,7 @@ export function stormPhase(done) {
 const n = (es, en) => ({ es, en });
 export const BITACORA = {
   popa: [
-    n('Amparo esperó cincuenta años a Paco; esta noche esperó una más.', 'Amparo waited fifty years for Paco; tonight she waited one more.'),
+    n('Amparo llevaba un año esperando para despedirse de Paco; esta noche esperó unas horas más.', 'Amparo had waited a year to say goodbye to Paco; tonight she waited a few hours more.'),
     n('Paco volvió al mar, y un poco de él se quedó en la chaqueta del sobrecargo.', 'Paco went back to the sea, and a little of him stayed on the purser’s jacket.'),
     n('Amparo se casó con un camarero por un cóctel equivocado, y no se arrepiente.', 'Amparo married a waiter because of a wrong cocktail, and she has no regrets.'),
   ],
