@@ -66,6 +66,10 @@ const FROZEN_CONSUMERS = new Set([
   'app/api/autoestudio/session/route.ts',
   'app/s/[token]/route.ts',
   'worker/index.ts', // learner share-session cookie and /s redeem, not teacher()
+  // Teacher's pass for the student hub: reads the learner's pass cookie and checks
+  // that the teacher who issued it (autoestudio_passes.owner_id, already UID-keyed)
+  // still has PRO. It stores nothing; re-key it together with the share server.
+  'app/jugar/student-pass.ts',
 ]);
 const helperUse = /\bauthenticatedOwnerId\b|from\s*['"][^'"]*autoestudio\/share\/server['"]|from\s*['"]\.\.\/share\/server['"]/;
 
