@@ -93,8 +93,8 @@ export default function LevelMap({ level, fullAccess, nextLevel, session, topics
       </ol>
       {topics.length > 0 && (
         <section className="ae-topics" aria-labelledby="ae-topics-title">
-          <h2 id="ae-topics-title">{en ? "Extra topics" : "Temas extra"}</h2>
-          <p>{en ? "Classes your teacher can assign on their own, outside the weekly route." : "Clases que tu profe puede asignarte aparte, fuera de las semanas."}</p>
+          <h2 id="ae-topics-title">Temas extra</h2>
+          <p>Clases que tu profe puede asignarte aparte, fuera de las semanas.</p>
           <ul>
             {topics.map((topic) => {
               const open = fullAccess || Boolean(session);
@@ -103,7 +103,7 @@ export default function LevelMap({ level, fullAccess, nextLevel, session, topics
                   <Link href={open ? topic.href : `/acceso?returnTo=${encodeURIComponent(topic.href)}`} className="ae-week-card" data-homework-topic>
                     <span className="ae-week-num" aria-hidden="true">＋</span>
                     <span className="ae-week-body">
-                      <small>{en ? "Topic" : "Tema"} · {level.code}</small>
+                      <small>Tema · {level.code}</small>
                       <b>{topic.title}</b>
                       <em>{topic.canDo}</em>
                       <span className="ae-week-tags">
