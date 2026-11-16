@@ -77,6 +77,17 @@ export const SHOW = {
   start: [22, 0],
   last: [5, 30],
   end: '06:15',
+  // The facts every scene, listening and housemate must agree with.
+  facts: {
+    season: 7, // «siete temporadas»: the show has run one season a year for seven years
+    cameras: 40,
+    vozYears: 7, // La Voz has asked the questions since the first season
+    cheloWon: { season: 1, yearsAgo: 7 }, // Chelo won the first season «hace siete años»
+    contractPage: 40, // Mateo's clause about his voice is on «la página cuarenta»
+    felaAge: 67,
+    felaDays: 40, // she has fed the house for forty days; tonight is day 41
+    exitFine: 10000, // dollars, for leaving through the red door
+  },
 };
 
 // The clock of the night: 22:00 with nothing played, 05:30 when the

@@ -200,7 +200,7 @@ export default {
     ],
     talk: [
       '¿Por qué crees que la industria del entretenimiento trata el envejecimiento como un defecto de fábrica?',
-      '¿Es censurable mentir sobre la edad cuando el mercado laboral discrimina abiertamente por ella?',
+      '¿Qué opinas de quien miente sobre su edad en un mercado laboral que discrimina abiertamente?',
       '¿Qué le reprocharía tu yo de hace quince años a la persona que eres hoy, y qué le agradecería?',
       '¿Qué ganancias de la madurez quedan sistemáticamente fuera de la publicidad?',
       '¿Cómo encajarías que alguien difundiera una imagen tuya del pasado para ridiculizarte?',
@@ -269,7 +269,7 @@ export default {
     ],
     talk: [
       '¿Qué harías si un superior te insinuara, sin dejar rastro, que perjudicaras a alguien inocente?',
-      '¿Es compatible la amistad sincera con una competición en la que solo puede ganar uno?',
+      '¿Cómo se mantiene una amistad sincera en una competición donde solo puede ganar uno?',
       '¿Por qué crees que la bondad resulta tan poco televisiva comparada con el conflicto?',
       '¿Qué decisión tomada bajo presión todavía te pesa en la conciencia?',
       '¿Qué legitimidad tiene un voto secreto cuando está teledirigido desde arriba?',
@@ -337,7 +337,7 @@ export default {
       { say: 'Ven al confesionario. Si exigimos una llamada en directo, no podrán negarse sin quedar como monstruos.', reply: '¿Se puede? Nadie me lo había dicho.', end: 'Llamas al hospital desde el confesionario. El padre de Hugo responde: «Hijo, quédate y gana».', mood: 'smile' },
     ],
     talk: [
-      '¿Te parece defendible que un contrato penalice a quien abandona por una urgencia familiar?',
+      '¿Qué opinión te merece un contrato que penaliza a quien abandona por una urgencia familiar?',
       '¿Cómo resolverías el dilema entre una oportunidad irrepetible y el deber de cuidar a alguien?',
       '¿Quién te transmitió un saber esencial sin haber pisado nunca una universidad?',
       '¿Qué revela de una comunidad su forma de reaccionar ante la desgracia de uno de sus miembros?',
@@ -362,7 +362,7 @@ export default {
     talk: [
       '¿Qué tiranía estética crees que padecen quienes viven de su imagen en pantalla?',
       '¿Por qué el humor negro florece precisamente en los oficios que conviven con la muerte?',
-      '¿Es más honesto mostrar el desgaste o disimularlo por cortesía hacia quien te mira?',
+      '¿Qué desgaste de tu cara prefieres mostrar en lugar de disimularlo?',
       '¿Cómo influye tu cultura en la manera de hablar de la muerte en voz alta?',
       '¿Dónde trazarías la línea entre arreglarse y falsear la propia imagen?',
     ],
@@ -385,8 +385,8 @@ export default {
     talk: [
       '¿Qué opinas de quien se sirve de un programa de televisión para ajustar cuentas con su propia familia?',
       '¿Qué te dolería más: que alguien cercano no te reconociera o que fingiera no hacerlo?',
-      '¿Existen secretos familiares que es preferible llevarse a la tumba?',
-      '¿Puede la venganza ser una forma legítima de reparación o siempre envenena a quien la ejecuta?',
+      '¿Qué secretos familiares crees que es preferible llevarse a la tumba?',
+      '¿Qué consecuencias tiene la venganza para quien la ejecuta?',
       '¿Qué tarea mecánica te ayuda a desenredar un problema emocional?',
     ],
     words: ['obsoleto', 'la partida de nacimiento', 'sepultado', 'dinamitar', 'desenredar'],

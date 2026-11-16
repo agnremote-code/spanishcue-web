@@ -9,7 +9,7 @@ export function castByName(name: string): string | null;
 export const LEVEL_IDS: string[];
 export const SCENE_WORDS: Record<string, [number, number]>;
 export const MOODS: string[];
-export const SHOW: { name: string; motto: string; edition: string; day: number; start: [number, number]; last: [number, number]; end: string };
+export const SHOW: { name: string; motto: string; edition: string; day: number; start: [number, number]; last: [number, number]; end: string; facts: { season: number; cameras: number; vozYears: number; cheloWon: { season: number; yearsAgo: number }; contractPage: number; felaAge: number; felaDays: number; exitFine: number } };
 export function nightClock(done: string[]): string;
 export function nightPhase(done: string[]): number;
 export const ROTULOS: Record<string, Caption[]>;

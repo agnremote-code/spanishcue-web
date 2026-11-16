@@ -39,7 +39,7 @@ export default {
     ],
     talk: [
       '¿Qué perderías si de repente te hicieras famosa o famoso de un día para otro?',
-      '¿Crees que se puede ser auténtico sabiendo que millones de personas te observan?',
+      '¿Cómo se puede mantener la autenticidad sabiendo que millones de personas te observan?',
       '¿Qué diferencia hay entre compartir tu vida en redes y venderla a un programa?',
       '¿Qué te habría gustado que alguien te preguntara en un momento difícil?',
       '¿Qué confesarías ante una cámara que no confesarías nunca a un amigo cara a cara?',
@@ -126,7 +126,7 @@ export default {
     ask: 'La cámara se acerca con un zumbido. ¿Qué haces?',
     options: [
       { say: 'Si necesitas llorar, hazlo. Sería injusto que también te quitaran eso.', reply: '…Esa es la voz de mi mamá. Lo han puesto.', end: 'Yeni llora y la pantalla se llena con el mensaje de su madre. La audiencia bate el récord de la temporada.', mood: 'sad' },
-      { say: 'Cuéntame un sábado en la peluquería, clienta por clienta, con todos los detalles aburridos.', reply: 'A las nueve llega doña Rosa, que lleva el mismo corte desde 1985…', end: 'Yeni se duerme a la sexta clienta. Has inventado un método para dormir que la producción no sabe cómo emitir.', mood: 'sleepy' },
+      { say: 'Cuéntame un sábado en la peluquería, clienta por clienta, con todos los detalles aburridos.', reply: 'A las nueve llega doña Rosa, que lleva el mismo corte desde 1985…', end: 'Yeni se duerme a la sexta clienta. En la sala de control, dos técnicos bostezan en directo.', mood: 'sleepy' },
       { say: 'Si no quieres llorar para ellos, date la vuelta. Que graben tu espalda.', reply: 'Tienes razón. Mis lágrimas no vienen en el contrato.', end: 'Yeni le da la espalda a la cámara. Esa noche la producción no sabe qué emitir.', mood: 'smile' },
     ],
     talk: [
@@ -178,7 +178,7 @@ export default {
     talk: [
       '¿Hasta qué punto es legítimo que un programa fabrique historias de amor para ganar audiencia?',
       '¿Qué harías si supieras que la relación de un amigo es una farsa y él no lo sabe?',
-      '¿Puede nacer un sentimiento auténtico de una situación completamente falsa?',
+      '¿Qué sentimiento auténtico has visto nacer de una situación completamente falsa?',
       '¿Qué romance famoso te pareció sospechosamente oportuno para la carrera de sus protagonistas?',
       '¿Cuándo has preferido una verdad incómoda antes que una ilusión agradable?',
     ],

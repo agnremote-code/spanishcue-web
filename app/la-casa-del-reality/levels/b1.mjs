@@ -39,7 +39,7 @@ export default {
     ],
     talk: [
       '¿Qué parte de tu vida no compartirías nunca en un programa de televisión?',
-      '¿Es más fácil ser sincero con una cámara que con una persona? ¿Por qué?',
+      '¿Por qué a veces es más fácil decir la verdad a una cámara que a una persona?',
       '¿Qué harías si todo el país pudiera ver tus peores momentos?',
       '¿Qué diferencia hay entre la fama que buscas y la fama que te encuentra?',
       '¿Cuándo sentiste que alguien te escuchaba de verdad, sin juzgarte?',
@@ -64,7 +64,7 @@ export default {
       '¿Qué opinas de la gente que hace amigos solo por interés?',
       '¿Cuándo es más inteligente trabajar en equipo que competir solo o sola?',
       '¿Qué harías si descubrieras que dos compañeros tienen una relación secreta?',
-      '¿Qué sueles responder cuando un vendedor insiste en que firmes ya?',
+      '¿Qué harías si alguien de tu trabajo te propusiera un pacto secreto contra otra persona?',
       '¿Qué alianzas inesperadas has visto en tu trabajo, tu clase o tu familia?',
     ],
     words: ['el estratega', 'hacer un hueco', 'la expulsión', 'intocable', 'comprometerse'],
@@ -126,7 +126,7 @@ export default {
     ask: 'La cámara se acerca un poco más. ¿Qué haces?',
     options: [
       { say: 'Si necesitas llorar, llora. No es justo que tengas que esconderte.', reply: '…¿Esa es la voz de mi mamá? ¡Han puesto el video!', end: 'Yeni llora y la pantalla se llena con el mensaje de su madre. La audiencia bate el récord de la temporada.', mood: 'sad' },
-      { say: 'Cuéntame un sábado normal en la peluquería, clienta por clienta, muy despacio.', reply: 'A las nueve llega doña Rosa, siempre con el mismo corte de 1985…', end: 'Yeni se duerme en la sexta clienta. Has inventado un método para dormir que la producción no sabe emitir.', mood: 'sleepy' },
+      { say: 'Cuéntame un sábado normal en la peluquería, clienta por clienta, muy despacio.', reply: 'A las nueve llega doña Rosa, siempre con el mismo corte de 1985…', end: 'Yeni se duerme en la sexta clienta. Los técnicos de sonido, también.', mood: 'sleepy' },
       { say: 'Si no quieres llorar para ellos, date la vuelta y mira la pared.', reply: 'Tienes razón. Mis lágrimas no forman parte del contrato.', end: 'Yeni le da la espalda a la cámara. Esa noche, la producción no sabe qué emitir.', mood: 'smile' },
     ],
     talk: [
@@ -176,7 +176,7 @@ export default {
       { say: 'Sofi, no hace falta que mientas. Cuéntaselo tú, delante de la cámara.', reply: 'Dani, empezó como un guion. Ahora ya no estoy tan segura.', end: 'Sofi y Dani cancelan su romance en directo. En las redes, nadie se lo cree.', mood: 'surprised' },
     ],
     talk: [
-      '¿Crees que es posible enamorarse de verdad delante de las cámaras?',
+      '¿Cómo puede nacer un amor de verdad delante de las cámaras?',
       '¿Qué opinas de las parejas famosas que parecen inventadas para vender?',
       '¿Cuándo es mejor decir una verdad dolorosa que mantener una mentira cómoda?',
       '¿Cómo reaccionarías si descubrieras que alguien fingía sentimientos contigo?',
@@ -269,7 +269,7 @@ export default {
     ],
     talk: [
       '¿Qué harías si tu jefe te pidiera perjudicar a un compañero inocente?',
-      '¿Es posible competir contra alguien y seguir siendo su amigo o amiga?',
+      '¿Cómo se puede competir contra una persona y seguir teniendo una buena amistad?',
       '¿Qué decisión tomaste por presión de otros y todavía lamentas?',
       '¿Qué opinas de que el público decida quién se queda en un programa?',
       '¿Qué criterio usarías tú para elegir a quién expulsar de un grupo?',

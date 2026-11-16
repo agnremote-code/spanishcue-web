@@ -256,8 +256,8 @@ export const FILLERS = [
   { x: -7.6, z: -1.2, heading: 2.6, pose: 'dance', mood: 'tipsy' },
   { x: 14.6, z: 8.6, heading: 0, pose: 'sit', seat: true, mood: 'laugh' },
   { x: -22.4, z: 7.1, heading: 0.2, pose: 'sit', seat: true, mood: 'sleepy' },
-  { x: -8.15, z: -11.6, heading: Math.PI / 2, pose: 'sit', seat: true, mood: 'sleepy' },
   { x: 10.4, z: -11.6, heading: -2.0, pose: 'arms', mood: 'laugh' },
+  { x: -8.15, z: -11.6, heading: Math.PI / 2, pose: 'sit', seat: true, mood: 'sleepy' },
   { x: -12.8, z: -18.6, heading: -0.6, pose: 'ground', mood: 'pain' },
 ];
 

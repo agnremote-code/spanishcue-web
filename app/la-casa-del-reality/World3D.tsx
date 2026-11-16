@@ -394,7 +394,9 @@ export default function World3D(props: WorldProps) {
         const s = sceneById(sceneId)!;
         const mid = temp.set((player.x + s.npc.x) / 2, 1.35, (player.z + s.npc.z) / 2);
         const side = Math.atan2(s.npc.x - player.x, s.npc.z - player.z) + Math.PI / 2;
-        const dist = Math.max(2.4, Math.hypot(s.npc.x - player.x, s.npc.z - player.z) * 0.9 + 1.1);
+        // Portrait phones see a narrow slice: the camera steps back so both faces fit.
+        const narrow = camera.aspect < 0.8 ? 1.3 : 1;
+        const dist = Math.max(2.4, Math.hypot(s.npc.x - player.x, s.npc.z - player.z) * 0.9 + 1.1) * narrow;
         let cx = mid.x + Math.sin(side) * dist, cz = mid.z + Math.cos(side) * dist;
         if (clearArm(mid.x, mid.z, cx, cz) < 0.8) { cx = mid.x - Math.sin(side) * dist; cz = mid.z - Math.cos(side) * dist; }
         const k = clearArm(mid.x, mid.z, cx, cz);
@@ -404,7 +406,7 @@ export default function World3D(props: WorldProps) {
         look.lerp(mid, 1 - Math.exp(-dt * 4));
         camera.lookAt(look);
       } else {
-        const dist = zoom;
+        const dist = zoom * (camera.aspect < 0.8 ? 1.35 : 1);
         const cx = player.x - Math.sin(yaw) * Math.cos(pitch) * dist;
         const cz = player.z - Math.cos(yaw) * Math.cos(pitch) * dist;
         const k = clearArm(player.x, player.z, cx, cz);

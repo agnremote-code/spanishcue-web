@@ -17,7 +17,7 @@ export default {
     ],
     talk: [
       t('¿Qué dices cuando entras en un lugar con mucha gente?', 'What do you say when you go into a place with many people?'),
-      t('¿Cuántas cámaras hay en tu calle?', 'How many cameras are there in your street?'),
+      t('¿En qué lugar de tu casa hablas por teléfono en secreto?', 'Where in your home do you talk on the phone in secret?'),
       t('¿Qué programa de televisión miras los sábados?', 'What TV programme do you watch on Saturdays?'),
       t('¿Qué objeto pequeño llevas siempre en el bolso o en el bolsillo?', 'What small object do you always carry in your bag or pocket?'),
       t('¿Cómo suena tu voz en un video del teléfono?', 'What does your voice sound like in a phone video?'),
@@ -41,7 +41,7 @@ export default {
     talk: [
       t('¿Qué cara pones cuando alguien saca el teléfono para una foto?', 'What face do you make when someone takes out a phone for a photo?'),
       t('¿Qué amigo o amiga guarda tus secretos desde el colegio?', 'Which friend has kept your secrets since school?'),
-      t('¿Qué dulce compras para animar a una persona?', 'What sweet do you buy to cheer someone up?'),
+      t('¿A quién le cuentas un secreto grande?', 'Who do you tell a big secret to?'),
       t('¿Qué parte de la vida de un famoso no quieres para ti?', 'What part of a famous person’s life do you not want for yourself?'),
       t('¿Qué rincón de tu ciudad es perfecto para estar sin gente?', 'What corner of your city is perfect for being without people?'),
     ],

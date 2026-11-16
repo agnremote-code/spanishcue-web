@@ -142,6 +142,34 @@ test('captions: three per circle before dawn, one per answer, bilingual, never s
   assert.deepEqual(rotulosFor(['entrada'], {}), [], 'no answer, no caption');
 });
 
+test('scenes: nobody genders the Sorpresa, and the student never speaks in o/a doublets', () => {
+  const es = (t) => (t && typeof t === 'object' ? t.es : String(t ?? ''));
+  const gendered = /(?<!\p{L})(?:de las nuestras|de los nuestros|guapo o guapa|guapa o guapo|(?:estás|eres|quedas|quedarás|sigues) nominad[oa]s?)(?!\p{L})/iu;
+  const doublet = /(?<!\p{L})(\p{L}+?)[oa](s?) o \1[oa]\2(?!\p{L})|(?<!\p{L})bienvenid[oa],? bienvenid[oa](?!\p{L})/iu;
+  for (const level of LEVEL_IDS) for (const [id, scene] of Object.entries(CONTENT[level])) {
+    const heard = [...scene.dialogue.map(([, t]) => t), ...scene.options.flatMap(o => [o.reply, o.end])].map(es);
+    for (const t of heard) assert.doesNotMatch(t, gendered, `${level} ${id}: «${t}»`);
+    for (const o of scene.options) {
+      assert.doesNotMatch(es(o.say), gendered, `${level} ${id}: «${es(o.say)}»`);
+      assert.doesNotMatch(es(o.say), doublet, `${level} ${id}: the student speaks in one voice, «${es(o.say)}»`);
+    }
+  }
+});
+
+test('one timeline: the show facts hold in every level and every listening', () => {
+  assert.equal(SHOW.facts.contractPage, 40);
+  assert.equal(SHOW.facts.cheloWon.yearsAgo, 7);
+  const texts = LEVEL_IDS.flatMap(level => [JSON.stringify(CONTENT[level]), JSON.stringify(listening(level))]);
+  for (const t of texts) {
+    assert.doesNotMatch(t, /página treinta/i, 'the clause is on page forty');
+    assert.doesNotMatch(t, /hace diez años|ten years ago/i, 'Chelo won seven years ago, in season one');
+  }
+});
+
+test('the scenes stay out of the Worker: the server build gets no level loaders', () => {
+  assert.match(readFileSync(`${DIR}/levels.mjs`, 'utf8'), /export const LOADERS = import\.meta\.env\?\.SSR \? \{\} :/);
+});
+
 test('engine: choose, caption, undo, saved picks and the edit read back at dawn', () => {
   const B1 = CONTENT.B1;
   let s = createState('B1');

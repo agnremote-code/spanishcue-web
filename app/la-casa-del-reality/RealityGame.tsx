@@ -82,7 +82,7 @@ function Captions({ state, open, onToggle }: { state: State; open: boolean; onTo
   const a0 = state.level === 'A0';
   const last = list.slice(-2);
   return <button type="button" className={open ? 'lc-captions is-open' : 'lc-captions'} onClick={onToggle} aria-expanded={open} aria-label={`Rótulos del programa sobre ti: ${list.length}`}>
-    <span className="lc-captions-title">Lo que el programa dice de ti</span>
+    <span className="lc-captions-title">Lo que el programa dice de ti</span><b className="lc-captions-count">{list.length}</b>
     {list.length === 0 && <em>Todavía nada. Para la audiencia eres «la Sorpresa».</em>}
     <ul>{(open ? list : last).map(c => <li key={c.id}>{c.caption.es}{a0 && <small lang="en">{c.caption.en}</small>}</li>)}</ul>
     {!open && list.length > 2 && <small className="lc-captions-more">y {list.length - 2} más…</small>}

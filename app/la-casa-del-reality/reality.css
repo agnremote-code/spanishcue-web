@@ -121,7 +121,7 @@
   .lc-progress, .lc-hint { display: none; }
   .lc-hud { flex-direction: column; padding: 10px 12px; }
   .lc-where { max-width: 100%; }
-  .lc-mapbox:not(.is-big) { width: 104px; top: 150px; bottom: auto; right: 12px; padding: 4px; }
+  .lc-mapbox:not(.is-big) { width: 104px; top: 236px; bottom: auto; right: 12px; padding: 4px; }
   .lc-hud .lc-mode b { font-size: .8rem; }
   .lc-hud-right > button { padding: .4rem .6rem; font-size: .8rem; }
   .lc-announce { top: 140px; font-size: .82rem; }
@@ -178,4 +178,15 @@ line.lc-map-garden { stroke: #5a6a4a; stroke-width: .5; }
 @keyframes lc-rec { to { visibility: hidden; } }
 .lc-announce-mic { color: #ff3b3b; font-size: .8rem; }
 .lc-list ol { list-style: none; margin: 0 0 1rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: .4rem; }
-@media (max-width: 720px) { .lc-captions { top: auto; bottom: 120px; max-height: 30vh; width: min(240px, calc(100% - 32px)); } .lc-mapbox .lc-map { width: 120px; height: 120px; } }
+.lc-captions-count { display: none; }
+/* Phones: the captions fold into a one-line chip under the HUD, left of the
+   map, so they never cover the joystick, the touch buttons or the prompt. */
+@media (max-width: 760px) {
+  .lc-captions { top: 236px; bottom: auto; left: 12px; width: calc(100% - 144px); max-height: max(120px, calc(100% - 480px)); padding: .4rem .6rem; }
+  .lc-captions:not(.is-open) ul, .lc-captions:not(.is-open) em, .lc-captions:not(.is-open) .lc-captions-more { display: none; }
+  .lc-captions:not(.is-open) { display: flex; align-items: center; gap: .3rem; }
+  .lc-captions:not(.is-open) .lc-captions-title { flex: 1; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .lc-captions-count { display: inline-block; min-width: 1.4em; padding: 0 .3rem; border-radius: 999px; background: var(--red); color: #fff; text-align: center; letter-spacing: 0; }
+  .lc-captions.is-open .lc-captions-count { display: none; }
+  .lc-mapbox .lc-map { width: 96px; height: 96px; }
+}
