@@ -10,6 +10,8 @@ TEX = 'public/mundo-real/gente/tex/'
 SMOOTH = {
     'male_casualsuit06_diffuse': [(0.18, 0.09, 0.30, 0.18), (0.42, 0.09, 0.60, 0.23)],
     'male_casualsuit02_diffuse': [(0.48, 0.08, 0.64, 0.25)],
+    'female_casualsuit01_diffuse': [(0.70, 0.14, 0.875, 0.32)],
+    'female_casualsuit02_diffuse': [(0.70, 0.14, 0.875, 0.32)],
 }
 # Parts of another garment that the first pass painted over: taken again from the original.
 RESTORE = {'male_casualsuit02_diffuse': ('male_casualsuit02/male_casualsuit02_diffuse.png', [(0.66, 0.50, 0.725, 0.84)])}

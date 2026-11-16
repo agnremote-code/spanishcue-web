@@ -224,7 +224,7 @@ function uncovered(geometry: THREE.BufferGeometry, bits: number) {
 }
 
 /** Builds the real body for a procedural person from the cast files and attaches it. Until it arrives the person stays as it was. */
-export async function makeReal(person: Person) {
+export async function makeReal(person: Person, original?: Set<THREE.Object3D>) {
   const L = person.rig.full;
   const w = wardrobe(L);
   // Under a cap, a beanie or a helmet the hair is cropped, so it does not come through.
@@ -270,12 +270,17 @@ export async function makeReal(person: Person) {
   if (hair) wear(hair, m => variant(`${m.uuid}|${L.hairColor}`, () => { const c = m.clone(); c.color.set(L.hairColor).multiplyScalar(2.6); return c; }));
 
   const build = L.build === 'heavy' ? 1.16 : L.build === 'slim' ? 0.95 : L.build === 'athletic' ? 1.04 : 1;
-  attachRealBody(person, template, model, build);
+  attachRealBody(person, template, model, build, original);
 }
 
 /** Every person the worlds create from now on gets a real body as soon as its files arrive. */
 export function enableRealPeople(on = true) {
-  personHooks.created = on ? person => { void makeReal(person).catch(() => {}); } : undefined;
+  personHooks.created = on ? person => {
+    // What the person is made of now; whatever its world puts on it afterwards (a cast, a dressing, a lanyard) is kept on the real body.
+    const original = new Set<THREE.Object3D>();
+    person.rig.body.traverse(o => { original.add(o); });
+    void makeReal(person, original).catch(() => {});
+  } : undefined;
 }
 
 type Driven = {
@@ -290,7 +295,7 @@ const va = new THREE.Vector3(), vb = new THREE.Vector3();
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
 /** Puts a real body on a procedural person. The procedural meshes stop being drawn; props in the hands stay. */
-export function attachRealBody(person: Person, template: Template, model: THREE.Object3D = cloneSkinned(template.scene), girth = 1) {
+export function attachRealBody(person: Person, template: Template, model: THREE.Object3D = cloneSkinned(template.scene), girth = 1, original?: Set<THREE.Object3D>) {
   const rig = person.rig;
   // Stop drawing the procedural figure (a layer no camera sees also keeps it out of shadows), but keep what the hands hold.
   const hands = [rig.handL, rig.handR];
@@ -298,8 +303,18 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
   if (rig.handheld) props.add(rig.handheld);
   const carried = hands.map(h => h.children.filter(c => props.has(c)));
   const onHead: THREE.Object3D[] = [];
+  // Things the world added to a part of the body after making the person: they go on following that part.
+  const added = new Map<THREE.Object3D, THREE.Object3D[]>();
+  const partOf = new Set<THREE.Object3D>([...Object.values(person.parts), ...hands]);
   const hide = (o: THREE.Object3D) => {
     if (props.has(o)) return;
+    if (original && !original.has(o)) {
+      const part = o.parent as THREE.Object3D;
+      if (part === person.parts.head) onHead.push(o);
+      else if (partOf.has(part)) added.set(part, [...(added.get(part) ?? []), o]);
+      else if ((o as THREE.Mesh).isMesh) o.layers.set(HIDDEN_LAYER);
+      return;
+    }
     const piece = (o as THREE.Mesh).isMesh ? (o as THREE.Mesh).geometry.name : '';
     if (ON_TORSO.test(piece)) return;
     if (ON_HEAD.test(piece)) { onHead.push(o); return; }
@@ -349,11 +364,23 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
     const g = new THREE.Group();
     g.scale.setScalar(rig.scale);
     person.root.add(g);
-    for (const c of carried[i]) g.add(c);
+    for (const c of [...carried[i], ...(added.get(old) ?? [])]) g.add(c);
+    added.delete(old);
     const bone = driven.find(d => d.bone.name === (i === 0 ? 'hand_l' : 'hand_r'))!.bone;
     return { group: g, old, bone };
   });
   rig.handL = holds[0].group; rig.handR = holds[1].group;
+
+  const followers = [...added].flatMap(([part, things]) => {
+    const bone = driven.find(d => d.part === part && !d.other)?.bone;
+    if (!bone) return [];
+    const g = new THREE.Group();
+    g.scale.setScalar(rig.scale);
+    person.root.add(g);
+    for (const o of things) g.add(o);
+    return [{ group: g, old: part, bone }];
+  });
+  const following = [...holds, ...followers];
 
   // What is worn on the head moves to the real skull, fitted to its size.
   const headBone = driven.find(d => d.bone.name === 'head')!.bone;
@@ -429,7 +456,7 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
     }
 
     // Held things.
-    for (const h of holds) {
+    for (const h of following) {
       if (!h.group.children.length) continue;
       h.bone.updateWorldMatrix(true, false);
       person.root.worldToLocal(h.group.position.setFromMatrixPosition(h.bone.matrixWorld));
