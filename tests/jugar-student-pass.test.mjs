@@ -129,7 +129,7 @@ test("the Worker, the build and the hub wire the pass and nothing wider", () => 
   assert.match(worker, /applyStudentPassHeaders\(verifiedHeaders,studentPass\);/);
   assert.match(worker, /const studentWorld=Boolean\(studentPass\)&&isStudentWorldLesson\(lesson\?\.id\);/);
   assert.match(worker, /\(lesson&&!isFreeLesson\(lesson\.id\)&&!fullAccess&&!gifted&&!studentWorld\)/);
-  assert.match(worker, /premiumAudio && !fullAccess && !gifted && !studentAudio/);
+  assert.match(worker, /premiumAudio && !fullAccess && !gifted && !\(topicAudio && shareSession\) && !studentAudio/);
   assert.match(worker, /\|\|Boolean\(lesson\)\|\|pathname==='\/jugar';/, "the hub is never served from the shared HTML cache");
   assert.doesNotMatch(worker, /VERIFIED_ACCESS_HEADER|set\(['"]x-chespanish-access-level/, "a pass never becomes a full-access header");
   const protect = read("scripts/protect-client-assets.mjs");
