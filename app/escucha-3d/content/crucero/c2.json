@@ -1,0 +1,2278 @@
+{
+ "game": "crucero",
+ "level": "C2",
+ "items": [
+  {
+   "id": "popa",
+   "title": "Elogio fúnebre con cóctel",
+   "place": "La cubierta de popa",
+   "context": "Sola en la popa, con la caja en el regazo, Amparo improvisa el elogio fúnebre que nadie le dejó pronunciar en el entierro de Paco.",
+   "speakers": [
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "En el entierro no me dejaron hablar. El cura tenía prisa, el sobrino quería leer un poema que había encontrado en internet y yo estaba demasiado sedada para llevarle la contraria a nadie. Así que lo digo ahora, Paco, con el mar de público, que al menos no mira el reloj. Fuiste un hombre mediocre en casi todo. Bailabas como un armario con ruedas, contabas los chistes empezando por el final y en cuarenta años no aprendiste a distinguir el cilantro del perejil. Pero tenías un talento que no he vuelto a encontrar en nadie: sabías equivocarte con elegancia. Aquel cóctel que me trajiste en mil novecientos setenta y ocho, el que yo no había pedido, lo serviste con tanta convicción que me lo tomé por no desanimarte."
+    },
+    {
+     "s": 0,
+     "text": "Y ahí empezó todo. Una vida entera construida sobre un error de pedido. La gente piensa que las grandes historias de amor nacen de miradas intensas y frases memorables. La nuestra nació de un camarero despistado y de una chica demasiado educada para devolver una copa. Ahora la gente me dice que tengo que pasar página. Como si la vida fuera una novela y uno pudiera decidir cuándo termina un capítulo. No, Paco. Yo no voy a pasar página. Voy a seguir leyendo la misma, despacio, subrayando lo que me gusta. Y al amanecer, cuando este viento traicionero se calme, te devolveré al sitio donde nos conocimos. Considéralo mi propina."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué no habló Amparo en el entierro de Paco?",
+     "options": [
+      "Porque el cura le prohibió hablar en la ceremonia",
+      "Porque estaba sedada y otros ocuparon su lugar",
+      "Porque prefirió escribir una carta que leyó su sobrino"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tono predomina en el elogio de Amparo?",
+     "infer": true,
+     "options": [
+      "Una amargura evidente por los defectos de su marido",
+      "Una solemnidad religiosa propia de un funeral formal",
+      "Una mezcla de ironía cariñosa y profunda ternura"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué rechaza Amparo con su respuesta a «pasar página»?",
+     "infer": true,
+     "options": [
+      "La costumbre de leer novelas para olvidar el dolor",
+      "La idea de que el duelo tenga un final decidido por otros",
+      "La posibilidad de volver a enamorarse algún día de otro hombre"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué sentido tiene la palabra «propina» al final?",
+     "infer": true,
+     "options": [
+      "Que el gesto cierra con humor la historia que empezó con un camarero",
+      "Que Amparo quiere pagarle a la tripulación por su ayuda",
+      "Que Paco le debía dinero al bar del barco desde hacía muchos años"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué rasgo aparentemente menor de una persona querida resumirías en un elogio, y por qué te parece revelador?",
+     "model": "Destacaría la manera en que mi abuelo pedía perdón por llegar temprano; resumía su respeto por el tiempo ajeno."
+    },
+    {
+     "q": "¿Qué opinas de la expresión «pasar página» aplicada al duelo y qué alternativa propondrías?",
+     "model": "Me parece demasiado brusca; prefiero hablar de releer de otra manera, porque lo vivido no se arranca."
+    },
+    {
+     "q": "¿Hasta qué punto el humor puede ser una forma legítima de honrar a los muertos?",
+     "model": "Puede serlo plenamente si nace del cariño; a veces la risa es la forma más fiel de recordar a alguien."
+    }
+   ],
+   "gaps": "La nuestra nació de un camarero [despistado] y de una chica demasiado [educada] para [devolver] una [copa].",
+   "glossary": [
+    {
+     "word": "sedada",
+     "meaning": "bajo el efecto de un calmante fuerte"
+    },
+    {
+     "word": "llevarle la contraria",
+     "meaning": "decir lo opuesto a alguien"
+    },
+    {
+     "word": "despistado",
+     "meaning": "que no presta atención"
+    },
+    {
+     "word": "traicionero",
+     "meaning": "que engaña o hace daño por sorpresa"
+    }
+   ]
+  },
+  {
+   "id": "maquinas",
+   "title": "Réquiem para Dolores",
+   "place": "La sala de máquinas",
+   "context": "A las dos de la madrugada, Teodoro le explica a Brayan qué siente al escuchar la máquina por última vez.",
+   "speakers": [
+    {
+     "name": "Teodoro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Brayan",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Escucha, Brayan. Para un momento y escucha. ¿Lo oyes? Ese tartamudeo en el tercer cilindro lleva ahí desde el noventa y nueve. Los técnicos de la compañía querían cambiar la pieza entera; yo la fui remendando año tras año, como quien zurce un calcetín que le regaló su madre."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué no la cambió?"
+    },
+    {
+     "s": 0,
+     "text": "Por pura terquedad, supongo. O por superstición. Pensaba que si le quitaba a Dolores sus manías, dejaría de ser Dolores. Uno se encariña con los defectos, ¿sabes? Los defectos son lo que hace reconocible a alguien. La perfección es intercambiable."
+    },
+    {
+     "s": 1,
+     "text": "Habla de ella como de una persona."
+    },
+    {
+     "s": 0,
+     "text": "Hablo de ella como de lo único que ha estado conmigo todos los días durante cuarenta y dos años. Mi mujer se marchó, mi hijo creció lejos, los capitanes iban y venían. Ella siempre estaba aquí, quejándose a su manera. Y mañana un soplete la convertirá en chatarra en una playa turca."
+    },
+    {
+     "s": 1,
+     "text": "Jefe, ¿y si le pide a la compañía una pieza? De recuerdo."
+    },
+    {
+     "s": 0,
+     "text": "Ya se lo he pedido. Me han dicho que todo el metal está vendido al peso. Ni un tornillo. Así que me llevo lo único que no pueden pesar: el ruido. Lo tengo aquí dentro. Dentro de veinte años, cuando me despierte de madrugada, todavía oiré ese tartamudeo en el tercer cilindro."
+    },
+    {
+     "s": 1,
+     "text": "¿Y su hijo? ¿Lo va a llevar dentro también?"
+    },
+    {
+     "s": 0,
+     "text": "Esa es la ironía, chaval. He sabido escuchar una máquina durante cuatro décadas y no he sabido escuchar a mi hijo ni una tarde. Mañana empiezo a aprender. Con cuarenta años de retraso, como el tercer cilindro."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué defecto tiene la máquina desde 1999?",
+     "options": [
+      "Una fuga de vapor en la caldera principal",
+      "Una vibración en la hélice de babor",
+      "Un tartamudeo en el tercer cilindro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué respuesta dio la compañía a la petición de Teodoro?",
+     "options": [
+      "Que podía llevarse una pieza pequeña si pagaba por ella",
+      "Que todo el metal estaba vendido al peso",
+      "Que lo pensaría después de llegar a Turquía"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué idea defiende Teodoro sobre los defectos?",
+     "infer": true,
+     "options": [
+      "Que deben corregirse cuanto antes para evitar accidentes",
+      "Que solo las máquinas antiguas tienen defectos realmente interesantes",
+      "Que son los que dan identidad, frente a una perfección sin rasgos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué paralelismo establece Teodoro al final?",
+     "infer": true,
+     "options": [
+      "Que, como el cilindro, él también llega tarde a corregir algo",
+      "Que su hijo es tan terco como la máquina",
+      "Que la máquina y su hijo tienen la misma edad"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué crees que nos encariñamos con los defectos de las personas y de los objetos que amamos?",
+     "model": "Porque los defectos son únicos y nos recuerdan una historia compartida; lo perfecto se parece a cualquier cosa."
+    },
+    {
+     "q": "¿Qué sonido cotidiano crees que recordarás dentro de veinte años como símbolo de una etapa de tu vida?",
+     "model": "El chirrido de la puerta del piso de estudiantes; anunciaba siempre que alguien volvía con noticias."
+    },
+    {
+     "q": "¿Cómo se explica que alguien sea muy sensible en su oficio y torpe en sus relaciones más cercanas?",
+     "model": "El oficio tiene reglas claras y respuestas previsibles; las personas exigen una atención sin manual que asusta más."
+    }
+   ],
+   "gaps": "Uno se [encariña] con los defectos, ¿sabes? Los defectos son lo que hace [reconocible] a alguien. La [perfección] es [intercambiable].",
+   "glossary": [
+    {
+     "word": "zurce",
+     "meaning": "cose un agujero en una tela"
+    },
+    {
+     "word": "soplete",
+     "meaning": "herramienta que corta metal con fuego"
+    },
+    {
+     "word": "chatarra",
+     "meaning": "metal viejo que se vende para fundir"
+    },
+    {
+     "word": "chaval",
+     "meaning": "chico joven"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "Un menú autobiográfico",
+   "place": "La cocina",
+   "context": "Mientras preparan la cena improvisada, Inés le explica a Lalo por qué cada plato de esta noche cuenta un capítulo de su vida.",
+   "speakers": [
+    {
+     "name": "Inés",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chef, no entiendo el menú. Ají de gallina, gambas al ajillo, sancocho, arroz con leche. No pega nada con nada."
+    },
+    {
+     "s": 0,
+     "text": "Porque no es un menú, Lalo. Es una autobiografía comestible. El ají de gallina es Lima, mi abuela, la cocina con suelo de tierra. Las gambas son mi primer año en este barco, cuando el jefe de entonces me dijo que una mujer no aguantaría el ritmo y yo le preparé ochocientas raciones en una noche para demostrarle lo contrario."
+    },
+    {
+     "s": 1,
+     "text": "¿Y el sancocho?"
+    },
+    {
+     "s": 0,
+     "text": "El sancocho es la tripulación. Lo hacía cada domingo para los marineros colombianos y venezolanos, los que no salen nunca en las fotos promocionales. Es un plato humilde que alimenta a muchos. Me parecía justo que esta noche lo comieran también los pasajeros de la suite."
+    },
+    {
+     "s": 1,
+     "text": "¿Y el arroz con leche?"
+    },
+    {
+     "s": 0,
+     "text": "El arroz con leche es el final. Es lo que se le da a un niño enfermo, a un abuelo sin dientes, a alguien que no puede con nada más. Es el plato de la ternura. Y esta noche el barco entero está convaleciente."
+    },
+    {
+     "s": 1,
+     "text": "Chef, ¿sabe que eso que acaba de decir es poesía?"
+    },
+    {
+     "s": 0,
+     "text": "Es cocina, que es lo mismo pero se come. Mira, los críticos hablan de técnica, de texturas, de deconstrucciones. Todo eso está muy bien. Pero un plato solo emociona de verdad cuando alguien pone en él algo que no está en la receta. Ese algo no se aprende en ninguna escuela. Se aprende perdiendo cosas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué ha perdido usted?"
+    },
+    {
+     "s": 0,
+     "text": "Dieciocho años en este barco, que mañana van a la basura con las gambas que no sirvamos. Así que sírvelas todas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué representa el ají de gallina en el menú de Inés?",
+     "options": [
+      "Su primer año como jefa de cocina",
+      "La comida favorita del capitán Salgado",
+      "Su infancia en Lima con su abuela"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué describe Inés al barco como «convaleciente»?",
+     "infer": true,
+     "options": [
+      "Porque muchos pasajeros tienen fiebre por la tormenta",
+      "Porque el barco tiene averías muy serias en la sala de máquinas esta noche",
+      "Porque todos, de algún modo, están frágiles y necesitan consuelo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué opone Inés a la visión de los críticos gastronómicos?",
+     "infer": true,
+     "options": [
+      "La necesidad de usar ingredientes caros y exóticos",
+      "La importancia de cocinar rápido para muchas personas",
+      "La idea de que la emoción de un plato nace de la experiencia vivida"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sugiere el cierre de Inés sobre las gambas?",
+     "infer": true,
+     "options": [
+      "Que está enfadada con Lalo por no haberlas servido antes",
+      "Que servirlas es una forma de no dejar que su historia acabe en la basura",
+      "Que las gambas están a punto de estropearse por el calor de la cocina"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué plato elegirías para contar el capítulo más difícil de tu vida en un menú de cuatro platos?",
+     "model": "Elegiría una sopa de lentejas: la comía cada día cuando no tenía dinero, y ahora me sabe a resistencia."
+    },
+    {
+     "q": "¿Hasta qué punto la cocina puede considerarse una forma de memoria colectiva y no solo un placer individual?",
+     "model": "Totalmente: una receta conserva migraciones, carencias y fiestas que ningún libro de historia cuenta igual."
+    },
+    {
+     "q": "¿Qué papel tienen las personas invisibles en la imagen pública de una empresa o de una institución?",
+     "model": "Son quienes la sostienen de verdad; cuando se las borra de las fotos, la imagen se vuelve una mentira amable."
+    }
+   ],
+   "gaps": "Pero un plato solo [emociona] de verdad cuando alguien pone en él algo que no está en la [receta]. Ese algo no se [aprende] en ninguna [escuela].",
+   "glossary": [
+    {
+     "word": "comestible",
+     "meaning": "que se puede comer"
+    },
+    {
+     "word": "humilde",
+     "meaning": "sencillo, de poco valor económico"
+    },
+    {
+     "word": "convaleciente",
+     "meaning": "que se recupera de una enfermedad"
+    },
+    {
+     "word": "deconstrucciones",
+     "meaning": "platos que separan y reinventan los ingredientes"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "Una casa sin dirección",
+   "place": "El pasillo de los camarotes",
+   "context": "Rosa y Ezequiel, sentados en el suelo del pasillo con Almirante, se preguntan qué es exactamente una casa.",
+   "speakers": [
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    },
+    {
+     "name": "Ezequiel",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ezequiel, ¿te has dado cuenta de que Almirante es más marinero que nosotros? Nunca ha pisado tierra desde Lisboa. Para él, el mundo es este pasillo, la lavandería y la ventana del camarote veintiuno."
+    },
+    {
+     "s": 1,
+     "text": "Entonces mañana va a ser el gato más desconcertado de Cádiz."
+    },
+    {
+     "s": 0,
+     "text": "O el más libre. Mira, yo llevo siete años diciendo que vivo en el Albatros, y es mentira. Vivo en un camarote de seis metros cuadrados que comparto con una camarera filipina que ronca en tagalo. Mi dirección oficial es la oficina de la compañía en Las Palmas. Legalmente, soy una persona sin casa."
+    },
+    {
+     "s": 1,
+     "text": "Eso nos pasa a casi todos los de aquí. ¿Dónde vives tú cuando no trabajas? En ningún sitio. Entre contrato y contrato, en casa de una prima, en un hostal, en un sofá prestado."
+    },
+    {
+     "s": 0,
+     "text": "Por eso me pregunto qué es una casa. ¿Las paredes? ¿El nombre en un buzón? Porque yo he sentido más hogar en este pasillo que en la casa de mi madre, por la que mi hermana y yo nos dejamos de hablar veinte años."
+    },
+    {
+     "s": 1,
+     "text": "Quizás una casa es el sitio donde alguien nota que no has llegado."
+    },
+    {
+     "s": 0,
+     "text": "Qué frase tan triste y tan bonita. ¿De quién es?"
+    },
+    {
+     "s": 1,
+     "text": "Mía. Se me acaba de ocurrir. Aquí, cuando tú no apareces a las siete con el carro, Inés pregunta por ti. Eso es una casa."
+    },
+    {
+     "s": 0,
+     "text": "Entonces mañana pierdo una casa y quizás gano otra. Mi hermana me ha preguntado si tengo dónde dormir. Llevaba veinte años sin preguntarme nada."
+    },
+    {
+     "s": 1,
+     "text": "Pues esa pregunta, Rosa, ya es una dirección."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué dice Rosa que Almirante es más marinero que ellos?",
+     "options": [
+      "Porque sabe orientarse por los pasillos del barco",
+      "Porque no se marea nunca, ni con olas grandes",
+      "Porque no ha pisado tierra desde que subió en Lisboa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuál es la dirección oficial de Rosa?",
+     "options": [
+      "El camarote veintiuno del Albatros",
+      "La casa de su hermana en Asunción",
+      "La oficina de la compañía en Las Palmas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué definición de casa propone Ezequiel?",
+     "infer": true,
+     "options": [
+      "Un lugar con paredes propias y nombre en el buzón",
+      "Un lugar donde has vivido durante muchos años",
+      "Un lugar donde alguien echa en falta tu ausencia"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere decir Ezequiel con «esa pregunta ya es una dirección»?",
+     "infer": true,
+     "options": [
+      "Que el interés de su hermana ya le ofrece un hogar posible",
+      "Que Rosa debe pedirle a su hermana la dirección exacta de su casa nueva",
+      "Que la pregunta de su hermana es demasiado directa"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué elementos consideras imprescindibles para que un lugar deje de ser alojamiento y se convierta en hogar?",
+     "model": "Que alguien me espere o me eche de menos, y que haya un objeto que cuente algo de mí."
+    },
+    {
+     "q": "¿Cómo afecta a la identidad de una persona no tener una dirección fija durante años?",
+     "model": "Puede dar libertad, pero también una sensación de provisionalidad que dificulta echar raíces y hacer planes."
+    },
+    {
+     "q": "¿Qué gesto mínimo de otra persona te hizo sentir que pertenecías a un lugar?",
+     "model": "En mi primer trabajo, un compañero me guardó una silla en la comida sin que yo se lo pidiera."
+    }
+   ],
+   "gaps": "Quizás una casa es el [sitio] donde alguien [nota] que no has [llegado]. Qué frase tan triste y tan [bonita].",
+   "glossary": [
+    {
+     "word": "desconcertado",
+     "meaning": "confundido, sin saber qué pasa"
+    },
+    {
+     "word": "hostal",
+     "meaning": "hotel pequeño y barato"
+    },
+    {
+     "word": "hogar",
+     "meaning": "lugar donde uno se siente en casa"
+    },
+    {
+     "word": "buzón",
+     "meaning": "caja donde se recibe el correo"
+    }
+   ]
+  },
+  {
+   "id": "luna",
+   "title": "Carta a alguien que quizás exista",
+   "place": "El camarote 12",
+   "context": "Incapaz de dormir, Lucía dicta en su teléfono una carta a un hijo que todavía no sabe si existe.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "No sé cómo empezar una carta a alguien que quizás no existe. Ni siquiera sé si eres alguien o solo un mareo con ambiciones. Mañana, en una farmacia de Cádiz, una raya o dos decidirán si esta carta tiene destinatario. Pero quiero escribirla esta noche, antes de saberlo, porque mañana ya no podré ser la persona que no sabe. Te cuento dónde estoy. En un barco de cincuenta y cinco años que va a morir dentro de unas horas, en medio de una tormenta, en un camarote que huele a jengibre y a desinfectante. Tu padre, si eres quien creo, está dormido en el suelo, abrazado a un cubo. Ha cancelado una cena con el capitán para sujetarme la frente. No es un gesto heroico, pero te aseguro que es mucho mejor que uno heroico."
+    },
+    {
+     "s": 0,
+     "text": "Soy enfermera, y he visto nacer a muchos niños en hospitales relucientes. Nunca pensé que el mío, si existe, empezaría a existir en un barco a punto de desaparecer. Tiene algo de simbólico, ¿no? Lo viejo se despide y lo nuevo llega sin pedir permiso. Tu bisabuela, que tuvo nueve hijos y sabe más que todos los médicos que conozco, lo ha adivinado por un audio. Si mañana la raya es una sola, esta carta será la prueba de que te imaginé con tanta fuerza que casi exististe. Y si son dos, la guardaré para dártela cuando tengas edad de entender que tus padres eran dos personas asustadas en un barco que se movía mucho. Que nadie te diga que hay un momento perfecto. Los momentos se vuelven perfectos después."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué quiere Lucía escribir la carta esta noche?",
+     "options": [
+      "Porque tiene miedo de olvidar lo que siente si espera",
+      "Porque su abuela le ha pedido que lo haga cuanto antes, antes de llegar",
+      "Porque mañana ya no podrá escribir desde la incertidumbre"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué valora Lucía del gesto de Mateo?",
+     "infer": true,
+     "options": [
+      "Que es un acto heroico digno de una película",
+      "Que su sencillez cotidiana vale más que el heroísmo",
+      "Que demuestra que Mateo ya no tiene miedo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué simbolismo encuentra Lucía en el lugar?",
+     "infer": true,
+     "options": [
+      "Que una vida posible empieza donde otra historia termina",
+      "Que los barcos viejos traen buena suerte a los recién casados",
+      "Que el mar es el mejor lugar para criar a un niño"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sentido tiene la última frase de la carta?",
+     "infer": true,
+     "options": [
+      "Que los padres deben planificar con cuidado cada decisión",
+      "Que nunca hay que esperar el momento perfecto para nada",
+      "Que el valor de un momento se construye al recordarlo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué le escribirías a alguien que todavía no existe, como un hijo, un nieto o un futuro alumno?",
+     "model": "Le diría que el mundo que encuentre lo hicimos con miedo y con prisas, pero también con muchas ganas de que fuera mejor."
+    },
+    {
+     "q": "¿Por qué crees que solemos valorar más los gestos cotidianos que los heroicos cuando miramos atrás?",
+     "model": "Porque los cotidianos se repiten y construyen confianza; los heroicos impresionan, pero rara vez sostienen una vida."
+    },
+    {
+     "q": "¿Qué opinas de la idea de que los momentos «se vuelven perfectos después»?",
+     "model": "Me parece cierta: la memoria suaviza lo incómodo y conserva el sentido, no el desorden de aquel día."
+    }
+   ],
+   "gaps": "Lo viejo se [despide] y lo nuevo [llega] sin pedir [permiso]. Tu [bisabuela], que tuvo nueve hijos y sabe más que todos los médicos que conozco, lo ha adivinado por un audio.",
+   "glossary": [
+    {
+     "word": "destinatario",
+     "meaning": "persona que recibe una carta"
+    },
+    {
+     "word": "relucientes",
+     "meaning": "muy limpios y brillantes"
+    },
+    {
+     "word": "bisabuela",
+     "meaning": "madre de la abuela o del abuelo"
+    },
+    {
+     "word": "adivinado",
+     "meaning": "descubierto sin pruebas"
+    }
+   ]
+  },
+  {
+   "id": "pareja",
+   "title": "Costumbre o elección",
+   "place": "El camarote 15",
+   "context": "De madrugada, Elena y Ramón discuten si su amor es una costumbre o algo que todavía eligen.",
+   "speakers": [
+    {
+     "name": "Elena",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Ramón",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mi hermana dice que lo nuestro ya no es amor, que es costumbre. Que seguimos juntos como se sigue usando una taza desconchada: por pereza de comprar otra."
+    },
+    {
+     "s": 1,
+     "text": "Tu hermana se ha divorciado tres veces. No es precisamente la autoridad en la materia."
+    },
+    {
+     "s": 0,
+     "text": "No cambies de tema. ¿Tú crees que es costumbre?"
+    },
+    {
+     "s": 1,
+     "text": "Creo que la palabra «costumbre» tiene mala fama injustamente. Todo el mundo idealiza el enamoramiento: el vértigo, las mariposas, las noches sin dormir. Pero eso es una enfermedad transitoria. Lo que viene después, lo que la gente llama costumbre con desprecio, es saber que te pones nerviosa antes de cada concierto aunque lleves treinta años dando clase, o que no soportas el olor del café quemado porque te recuerda a tu padre."
+    },
+    {
+     "s": 0,
+     "text": "Eso lo sabe cualquiera que haya vivido conmigo."
+    },
+    {
+     "s": 1,
+     "text": "No. Eso lo sabe quien se ha tomado el trabajo de aprenderlo. La costumbre no es pereza; es un conocimiento acumulado, como un idioma que solo hablamos dos personas en el mundo. Si firmamos esos papeles, ese idioma se queda sin hablantes."
+    },
+    {
+     "s": 0,
+     "text": "Qué manera tan de ingeniero de hacer una declaración de amor."
+    },
+    {
+     "s": 1,
+     "text": "Es la única que tengo. Pero te concedo algo: el idioma se nos ha empobrecido. Llevamos años usando solo las palabras imprescindibles: «la cena», «el médico», «la factura»."
+    },
+    {
+     "s": 0,
+     "text": "Entonces habrá que ampliar el vocabulario."
+    },
+    {
+     "s": 1,
+     "text": "¿Eso es un sí?"
+    },
+    {
+     "s": 0,
+     "text": "Es un «no firmo esta noche». A mi edad, ya no hago promesas grandes. Hago aplazamientos generosos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué compara la hermana de Elena su relación?",
+     "options": [
+      "A un barco viejo que ya nadie quiere arreglar",
+      "A una taza desconchada que se usa por pereza",
+      "A un piano desafinado que nadie toca"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo redefine Ramón la palabra «costumbre»?",
+     "infer": true,
+     "options": [
+      "Como un conocimiento íntimo acumulado con esfuerzo",
+      "Como una rutina inevitable que mata la pasión",
+      "Como una forma de pereza propia de la edad"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué expresa la metáfora del idioma «sin hablantes»?",
+     "infer": true,
+     "options": [
+      "Que Elena y Ramón ya no consiguen entenderse cuando hablan",
+      "Que Ramón quiere aprender otro idioma extranjero después del divorcio",
+      "Que el divorcio haría desaparecer un saber compartido y único"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué matiz tiene la respuesta final de Elena?",
+     "infer": true,
+     "options": [
+      "Una apertura prudente que evita comprometerse demasiado",
+      "Una negativa definitiva a seguir con Ramón",
+      "Una promesa firme de quedarse con él para siempre"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hasta qué punto la costumbre en una relación es una forma de conocimiento y no solo de inercia?",
+     "model": "Lo es cuando nace de la atención al otro; se vuelve inercia cuando dejamos de observar y solo repetimos."
+    },
+    {
+     "q": "¿Por qué crees que la cultura idealiza el enamoramiento y desprecia la estabilidad?",
+     "model": "Porque el enamoramiento es narrativo y espectacular, mientras que la estabilidad no genera conflicto ni historias fáciles de contar."
+    },
+    {
+     "q": "¿Qué palabras imprescindibles dominan tus conversaciones diarias con alguien cercano, y cuáles echas de menos?",
+     "model": "Hablamos de horarios y compras; echo de menos las preguntas sin utilidad, como «¿qué has soñado?»."
+    }
+   ],
+   "gaps": "La costumbre no es [pereza]; es un [conocimiento] acumulado, como un [idioma] que solo hablamos dos personas en el [mundo].",
+   "glossary": [
+    {
+     "word": "desconchada",
+     "meaning": "con pequeños trozos rotos en la superficie"
+    },
+    {
+     "word": "transitoria",
+     "meaning": "que dura poco tiempo"
+    },
+    {
+     "word": "aplazamientos",
+     "meaning": "decisiones de dejar algo para más tarde"
+    },
+    {
+     "word": "imprescindibles",
+     "meaning": "absolutamente necesarias"
+    }
+   ]
+  },
+  {
+   "id": "cartas",
+   "title": "Borrador para Quito",
+   "place": "El camarote 21",
+   "context": "Germán y Rosa redactan juntos la respuesta a Isabel, discutiendo cada palabra.",
+   "speakers": [
+    {
+     "name": "Germán",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Rosa, escriba: «Querida Isabel». No, «querida» es demasiado. Ponga «Estimada Isabel»."
+    },
+    {
+     "s": 1,
+     "text": "Don Germán, «estimada» es para una carta del banco. Esta mujer guarda sus cuarenta cartas debajo de la cama. Ponga «querida» y no sea cobarde."
+    },
+    {
+     "s": 0,
+     "text": "Está bien. «Querida Isabel: tu mensaje me ha encontrado en un barco que se despide». ¿Suena pretencioso?"
+    },
+    {
+     "s": 1,
+     "text": "Suena a usted. Siga."
+    },
+    {
+     "s": 0,
+     "text": "«He pensado mucho en el café que me ofreces. Debo confesarte que, durante cuarenta años, he sido mucho más valiente por escrito que en persona». Bórrelo. Parece que me estoy justificando."
+    },
+    {
+     "s": 1,
+     "text": "No lo borro. Es lo más sincero que ha dicho en toda la noche. Usted tiene la manía de quitar justo las frases que importan. Por eso sus cartas eran tan bonitas y su vida tan solitaria."
+    },
+    {
+     "s": 0,
+     "text": "Rosa, es usted bastante impertinente para ser camarera."
+    },
+    {
+     "s": 1,
+     "text": "Mañana dejo de ser camarera. Esta noche puedo permitirme el lujo de decir lo que pienso. Siga."
+    },
+    {
+     "s": 0,
+     "text": "«Tengo setenta y cuatro años, una rodilla que predice la lluvia y ninguna excusa nueva. Si el café sigue en pie, iré en primavera». ¿Y ahora cómo termino? ¿«Un abrazo»? ¿«Un beso»? ¿«Tuyo»?"
+    },
+    {
+     "s": 1,
+     "text": "¿Cómo terminaba las cartas en el ochenta y cinco?"
+    },
+    {
+     "s": 0,
+     "text": "«Hasta la próxima ola». Era una broma tonta, por los barcos."
+    },
+    {
+     "s": 1,
+     "text": "Entonces ya lo tiene. Una broma tonta compartida durante cuarenta años vale más que cualquier «tuyo». Firme y enviamos."
+    },
+    {
+     "s": 0,
+     "text": "Espere. Déjeme mirarla un minuto antes. Es la primera carta que de verdad va a llegar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué Rosa rechaza la palabra «estimada»?",
+     "options": [
+      "Porque Isabel podría pensar que Germán está enfadado",
+      "Porque le parece demasiado fría para alguien tan cercano",
+      "Porque es una palabra que ya no se usa en Ecuador"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué relación establece Rosa entre las cartas y la vida de Germán?",
+     "infer": true,
+     "options": [
+      "Que su costumbre de eliminar lo importante lo dejó solo",
+      "Que escribía bien porque viajaba mucho por el mundo",
+      "Que sus cartas eran tristes porque su vida era aburrida"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Rosa se siente libre para ser «impertinente»?",
+     "infer": true,
+     "options": [
+      "Porque Germán le ha pedido explícitamente sinceridad",
+      "Porque al perder su trabajo ya no está obligada a la cortesía profesional",
+      "Porque conoce a Germán desde hace muchos años"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué revela la última frase de Germán?",
+     "infer": true,
+     "options": [
+      "Que tiene miedo de que la radio no funcione bien",
+      "Que todavía no está seguro de querer enviar la carta esta misma noche a Quito",
+      "Que todas sus cartas anteriores, en el fondo, no fueron enviadas de verdad"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué fórmula de despedida usarías en una carta a alguien con quien tienes una historia larga e incompleta?",
+     "model": "Usaría una broma compartida, porque resume años de complicidad mejor que cualquier fórmula convencional."
+    },
+    {
+     "q": "¿Por qué tendemos a eliminar precisamente las frases más sinceras cuando revisamos lo que escribimos?",
+     "model": "Porque nos exponen; la versión pulida protege nuestra imagen, aunque pierda la verdad que la hacía valiosa."
+    },
+    {
+     "q": "¿Qué libertades verbales se permite una persona cuando sabe que está a punto de perder su posición?",
+     "model": "Se permite la franqueza; sin nada que proteger, el cálculo social pierde sentido y aparece la verdad."
+    }
+   ],
+   "gaps": "Usted tiene la [manía] de quitar justo las frases que [importan]. Por eso sus cartas eran tan [bonitas] y su vida tan [solitaria].",
+   "glossary": [
+    {
+     "word": "pretencioso",
+     "meaning": "que quiere parecer más importante de lo que es"
+    },
+    {
+     "word": "impertinente",
+     "meaning": "que dice cosas sin respeto o fuera de lugar"
+    },
+    {
+     "word": "manía",
+     "meaning": "costumbre extraña o exagerada"
+    },
+    {
+     "word": "sigue en pie",
+     "meaning": "todavía es válido"
+    }
+   ]
+  },
+  {
+   "id": "enfermeria",
+   "title": "Ética a media pastilla",
+   "place": "La enfermería",
+   "context": "El capitán Salgado baja a la enfermería y discute con la doctora Beatriz los criterios del reparto de pastillas.",
+   "speakers": [
+    {
+     "name": "Beatriz",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doctora, me llegan quejas. Dicen que está usted partiendo pastillas como quien reparte pan en la posguerra."
+    },
+    {
+     "s": 0,
+     "text": "Capitán, tengo cuarenta pastillas y ochenta personas vomitando. No soy Jesucristo; no multiplico panes ni dramamina. Así que divido."
+    },
+    {
+     "s": 1,
+     "text": "¿Y es eficaz media dosis?"
+    },
+    {
+     "s": 0,
+     "text": "A medias, como casi todo en la vida. Pero media pastilla con galletas saladas, aire fresco y una conversación tranquila funciona mejor que una pastilla entera tragada en un camarote cerrado con miedo. El efecto placebo no es un engaño, capitán: es la prueba de que la confianza también es medicina."
+    },
+    {
+     "s": 1,
+     "text": "Un pasajero de la suite dice que la va a denunciar por discriminación."
+    },
+    {
+     "s": 0,
+     "text": "Que me denuncie. Le he explicado que en esta enfermería no rige el precio del billete sino la vulnerabilidad. Primero la embarazada, luego los niños, luego los mayores con patologías. Él tiene cincuenta años, buena salud y un enfado considerable. El enfado no cuenta como síntoma."
+    },
+    {
+     "s": 1,
+     "text": "Le voy a decir una cosa, Beatriz. Si la compañía me pregunta, yo no he oído nada."
+    },
+    {
+     "s": 0,
+     "text": "Qué cobarde."
+    },
+    {
+     "s": 1,
+     "text": "Qué práctico. Usted dentro de unas horas no tendrá jefe; yo sí tendré una pensión que cobrar. Pero si me pregunta mi conciencia, le diré que tiene usted razón."
+    },
+    {
+     "s": 0,
+     "text": "Capitán, ¿sabe qué es lo más absurdo de esta noche? Que me he dado cuenta de que la mitad de mis pacientes no necesita pastillas. Necesita que alguien le diga que la tormenta va a pasar."
+    },
+    {
+     "s": 1,
+     "text": "¿Y va a pasar?"
+    },
+    {
+     "s": 0,
+     "text": "Usted es el capitán. Dígamelo usted, que a mí también me vendría bien oírlo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué parte las pastillas la doctora?",
+     "options": [
+      "Porque media dosis tiene menos efectos secundarios",
+      "Porque tiene la mitad de pastillas que de pacientes",
+      "Porque el capitán se lo ha ordenado para ahorrar dinero a la compañía"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué defiende la doctora al hablar del efecto placebo?",
+     "infer": true,
+     "options": [
+      "Que las pastillas no sirven para nada contra el mareo",
+      "Que la confianza forma parte real del tratamiento",
+      "Que engañar a los pacientes es aceptable en una emergencia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué contraste se percibe en la actitud del capitán?",
+     "infer": true,
+     "options": [
+      "Defiende públicamente a la doctora ante la compañía",
+      "Está de acuerdo con el pasajero de la suite y critica a la doctora",
+      "Muestra prudencia ante la empresa, pero le da la razón en privado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué revela la última petición de la doctora?",
+     "infer": true,
+     "options": [
+      "Que ella también necesita el consuelo que ofrece a los demás",
+      "Que no confía en la capacidad del capitán para llegar a puerto",
+      "Que quiere que el capitán atienda él mismo a los pacientes"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué criterios éticos aplicarías para repartir un recurso médico escaso en una situación de emergencia?",
+     "model": "Priorizaría la gravedad y la vulnerabilidad, con transparencia, para que nadie sintiera que el reparto es arbitrario."
+    },
+    {
+     "q": "¿Hasta qué punto es legítimo distinguir entre lo que uno defiende en privado y lo que declara ante una institución?",
+     "model": "Es comprensible, pero tiene un límite: cuando el silencio permite un daño, la prudencia se convierte en complicidad."
+    },
+    {
+     "q": "¿Por qué crees que los profesionales que cuidan a otros tienen tantas dificultades para pedir consuelo?",
+     "model": "Porque su identidad se basa en ser fuertes para los demás, y pedir ayuda les parece abandonar su función."
+    }
+   ],
+   "gaps": "El efecto placebo no es un [engaño], capitán: es la [prueba] de que la [confianza] también es [medicina].",
+   "glossary": [
+    {
+     "word": "posguerra",
+     "meaning": "tiempo de escasez después de una guerra"
+    },
+    {
+     "word": "dosis",
+     "meaning": "cantidad de medicamento que se toma"
+    },
+    {
+     "word": "rige",
+     "meaning": "está vigente, se aplica como norma"
+    },
+    {
+     "word": "patologías",
+     "meaning": "enfermedades"
+    }
+   ]
+  },
+  {
+   "id": "nina",
+   "title": "Grabación para cuando seas mayor",
+   "place": "La cubierta de botes, babor",
+   "context": "Mientras Martina duerme, don Benigno graba un mensaje en el teléfono de su nieta para que lo escuche cuando sea adulta.",
+   "speakers": [
+    {
+     "name": "Benigno",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Martina, son las cuatro de la madrugada y estás dormida encima de mi abrigo, con la boca abierta, como tu madre a tu edad. Te grabo esto para cuando tengas treinta o cuarenta años y yo ya no esté para repetirte las mismas batallitas. Esta noche me has preguntado si me da miedo morirme. Te he contestado lo que se les contesta a los niños, una verdad recortada. Ahora te digo la verdad entera. Sí, me da miedo. No el dolor, que a mi edad ya es un vecino conocido, sino el olvido. Me da miedo que dentro de cincuenta años nadie sepa que un chico de veinticuatro años remachó a mano las planchas de este casco, con frío, en un astillero de Puntarenas que ya no existe. Por eso te he traído."
+    },
+    {
+     "s": 0,
+     "text": "No para que veas un barco viejo, sino para que lo recuerdes por mí. Tú eres mi manera de no desaparecer del todo. Es mucha responsabilidad para una niña de ocho años, lo sé. Pero los abuelos somos egoístas en eso: queremos que nuestros nietos sean nuestros archivos. Una última cosa. Esta noche has contado entre el relámpago y el trueno y has llegado a siete antes de dormirte. Siete segundos son unos dos kilómetros. La tormenta se estaba alejando. Cuando seas mayor y algo te asuste, cuenta. Casi siempre, si esperas lo suficiente, el trueno llega más tarde y suena más bajo. Y si no, por lo menos habrás aprendido a respirar mientras cuentas. Te quiere, tu abuelo, el de las planchas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para cuándo graba don Benigno el mensaje?",
+     "options": [
+      "Para cuando Martina sea adulta",
+      "Para el cumpleaños de Martina la semana próxima",
+      "Para que la madre de Martina lo escuche mañana"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué es lo que realmente le da miedo a don Benigno?",
+     "options": [
+      "Que se olvide su historia",
+      "El dolor físico de la enfermedad",
+      "Quedarse solo en una residencia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere decir el abuelo con que los nietos son «archivos»?",
+     "infer": true,
+     "options": [
+      "Que Martina debe guardar los documentos familiares en orden",
+      "Que los niños aprenden mejor con fotografías y vídeos",
+      "Que confía en que ella conserve su memoria cuando él falte"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué lección vital extrae el abuelo de contar los truenos?",
+     "infer": true,
+     "options": [
+      "Que las tormentas son menos peligrosas de lo que parecen",
+      "Que la mayoría de los temores se alejan si uno espera con calma",
+      "Que hay que medir siempre la distancia exacta de todos los problemas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué verdad entera le dirías a un niño cuando sea adulto, después de haberle dado una versión recortada?",
+     "model": "Le diría que de pequeño le oculté lo difícil que fue aquel año para nosotros, para que pudiera ser feliz."
+    },
+    {
+     "q": "¿Qué legitimidad tiene pedir a las nuevas generaciones que custodien la memoria de las anteriores?",
+     "model": "Es justo como invitación, no como obligación; la memoria solo se conserva si quien la recibe la siente suya."
+    },
+    {
+     "q": "¿Qué estrategia, parecida a contar los truenos, utilizas para gestionar tus miedos?",
+     "model": "Escribo el peor escenario posible en un papel; al verlo escrito, casi siempre parece más pequeño."
+    }
+   ],
+   "gaps": "Casi siempre, si [esperas] lo suficiente, el [trueno] llega más [tarde] y suena más [bajo].",
+   "glossary": [
+    {
+     "word": "batallitas",
+     "meaning": "historias del pasado que alguien repite mucho"
+    },
+    {
+     "word": "remachó",
+     "meaning": "unió piezas de metal con clavos especiales"
+    },
+    {
+     "word": "astillero",
+     "meaning": "lugar donde se construyen barcos"
+    },
+    {
+     "word": "archivos",
+     "meaning": "lugares donde se guardan documentos"
+    }
+   ]
+  },
+  {
+   "id": "polizon",
+   "title": "Dos cocinas, cincuenta años",
+   "place": "La cocina",
+   "context": "Fermín, recién enrolado como ayudante, y la chef Inés discuten sobre cómo ha cambiado la cocina del barco desde 1971.",
+   "speakers": [
+    {
+     "name": "Fermín",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Inés",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Don Fermín, deje esas papas. El capitán dice que es usted una leyenda y yo no pongo a las leyendas a pelar."
+    },
+    {
+     "s": 0,
+     "text": "Chef, con todo respeto, las leyendas también pelan. Y usted lo está haciendo al revés. La papa se pela hacia uno, no hacia fuera."
+    },
+    {
+     "s": 1,
+     "text": "Llevo dieciocho años pelando hacia fuera y nadie se ha cortado."
+    },
+    {
+     "s": 0,
+     "text": "Entonces es usted una mujer con suerte. En el setenta y uno, en esta misma cocina, éramos once hombres, dos fogones de carbón y un jefe que tiraba los platos al suelo si la salsa no tenía brillo. Se cocinaba con miedo."
+    },
+    {
+     "s": 1,
+     "text": "Pues ahora se cocina con un ordenador que calcula las calorías y una compañía que calcula los céntimos. No sé qué es peor."
+    },
+    {
+     "s": 0,
+     "text": "Lo peor era el miedo. Los céntimos se pueden discutir. Pero le confieso una cosa: cuando he entrado esta noche y la he visto cantar mientras hacía el ají, he sentido envidia. En mi época nadie cantaba en una cocina. Era impensable."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ahora qué piensa?"
+    },
+    {
+     "s": 0,
+     "text": "Que perdimos muchos años creyendo que la disciplina y la crueldad eran la misma cosa. Usted manda más que mi jefe de entonces, pero nadie le tiene miedo. Le tienen respeto. Esa diferencia nos costó medio siglo aprenderla."
+    },
+    {
+     "s": 1,
+     "text": "Pues enséñeme a pelar hacia dentro. Pero sin tirarme el plato."
+    },
+    {
+     "s": 0,
+     "text": "Hecho. Y usted enséñeme esa canción. A mi edad, uno tiene derecho a aprender a cantar en una cocina."
+    },
+    {
+     "s": 1,
+     "text": "Trato hecho. Aunque le advierto que desafino."
+    },
+    {
+     "s": 0,
+     "text": "Mejor. Así no le tengo envidia también por eso."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué corrige Fermín a Inés?",
+     "options": [
+      "La dirección en la que pela las papas",
+      "La cantidad de sal que pone en el ají",
+      "La temperatura de los fogones de la cocina"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo era la cocina en 1971 según Fermín?",
+     "options": [
+      "Dura, con carbón y un jefe que tiraba los platos",
+      "Moderna y bien equipada para la época",
+      "Alegre, con muchos cocineros que cantaban"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué provoca la envidia de Fermín?",
+     "infer": true,
+     "options": [
+      "Que Inés tenga un sueldo mucho más alto que el suyo",
+      "Que Inés sea más joven y tenga más fuerza",
+      "Que Inés trabaje en un ambiente donde se puede cantar"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué distinción considera Fermín fundamental?",
+     "infer": true,
+     "options": [
+      "La diferencia entre la disciplina y la crueldad",
+      "La diferencia entre la cocina antigua y la moderna",
+      "La diferencia entre cocinar para pasajeros y para la tripulación"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué diferencia percibes entre la autoridad basada en el miedo y la autoridad basada en el respeto?",
+     "model": "La primera consigue obediencia inmediata pero frágil; la segunda tarda más, pero sobrevive incluso cuando el jefe no está."
+    },
+    {
+     "q": "¿Qué práctica laboral que hoy consideramos inaceptable se veía como normal hace pocas décadas?",
+     "model": "Gritar a los aprendices en público; se pensaba que endurecía el carácter, cuando en realidad solo enseñaba a callar."
+    },
+    {
+     "q": "¿Qué podrían aprender mutuamente un profesional veterano y uno joven en tu campo?",
+     "model": "El veterano aportaría intuición y paciencia; el joven, nuevas herramientas y una forma menos rígida de trabajar."
+    }
+   ],
+   "gaps": "Que perdimos muchos años creyendo que la [disciplina] y la [crueldad] eran la misma cosa. Usted manda más que mi jefe de entonces, pero nadie le tiene [miedo]. Le tienen [respeto].",
+   "glossary": [
+    {
+     "word": "fogones",
+     "meaning": "lugares de la cocina donde se pone el fuego"
+    },
+    {
+     "word": "impensable",
+     "meaning": "imposible de imaginar"
+    },
+    {
+     "word": "desafino",
+     "meaning": "canto fuera de tono"
+    },
+    {
+     "word": "trato hecho",
+     "meaning": "acuerdo aceptado"
+    }
+   ]
+  },
+  {
+   "id": "barra",
+   "title": "El testigo sobrio",
+   "place": "La barra del salón",
+   "context": "A las tres de la mañana, Wences le confiesa a Yoli lo que ha aprendido escuchando confesiones durante treinta años sin beber.",
+   "speakers": [
+    {
+     "name": "Wences",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wences, ¿cuántas confesiones crees que has escuchado detrás de esta barra?"
+    },
+    {
+     "s": 0,
+     "text": "Miles. Infidelidades, deudas, diagnósticos, herencias, cartas que nadie se atrevía a enviar. La gente bebe para tener valor y yo, que no bebo, me quedo con el valor ajeno. Es una posición rara: ser el único sobrio en una conversación borracha. Lo recuerdo todo."
+    },
+    {
+     "s": 1,
+     "text": "Qué responsabilidad."
+    },
+    {
+     "s": 0,
+     "text": "Y qué soledad. Ellos se van a dormir y por la mañana no se acuerdan de lo que me han contado. Yo sí. He sido el archivo involuntario de mil secretos. Alguna vez he pensado en escribirlos, cambiando los nombres. Pero no lo haré. Un camarero que traiciona una confidencia es como un cura que vende confesiones."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué has aprendido de tanto escuchar?"
+    },
+    {
+     "s": 0,
+     "text": "Tres cosas. La primera, que casi nadie se arrepiente de lo que hizo; se arrepienten de lo que no hicieron. La segunda, que todo el mundo cree que su secreto es único, y casi ninguno lo es. Y la tercera, que la gente no busca consejo. Busca un testigo. Alguien que diga: «Te he oído. Existes»."
+    },
+    {
+     "s": 1,
+     "text": "¿Y tú? ¿Quién ha sido tu testigo?"
+    },
+    {
+     "s": 0,
+     "text": "Nadie, hasta hace treinta años. Una noche, en esta misma barra, un pianista me vio llorar delante de un vaso de ron que no me atrevía a beber. No me dio un discurso. Solo se sentó al piano y tocó hasta que vacié el vaso en el fregadero. Fue mi primer día sin alcohol."
+    },
+    {
+     "s": 1,
+     "text": "¿El maestro Aurelio?"
+    },
+    {
+     "s": 0,
+     "text": "El mismo. Nunca se lo he agradecido. Esta noche, con la botella del setenta y uno, pienso hacerlo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "Según Wences, ¿por qué bebe la gente en la barra?",
+     "options": [
+      "Para olvidar el mareo que provoca la tormenta en los pasajeros",
+      "Para celebrar el final de un viaje largo",
+      "Para atreverse a contar lo que no se atreve a decir sobria"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué paradoja describe Wences sobre su posición?",
+     "infer": true,
+     "options": [
+      "Que el único que recuerda es quien no necesita olvidar",
+      "Que sirve alcohol cada noche aunque está en contra de su consumo",
+      "Que gana más dinero cuanto más bebe la gente"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según la tercera lección de Wences, ¿qué buscan realmente las personas?",
+     "infer": true,
+     "options": [
+      "Soluciones prácticas a sus problemas personales",
+      "Ser escuchadas y reconocidas por alguien",
+      "Un amigo que guarde sus secretos para siempre"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué paralelismo se establece entre el gesto de Aurelio y el oficio de Wences?",
+     "infer": true,
+     "options": [
+      "Los dos trabajan muchas horas por la noche en el salón",
+      "Aurelio fue para Wences el testigo silencioso que él es para otros",
+      "Los dos tienen problemas con el alcohol desde jóvenes"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué responsabilidad moral tiene quien conoce los secretos de muchas personas por su oficio?",
+     "model": "La de custodiarlos sin juzgar y sin usarlos; conocer un secreto es un préstamo, no una propiedad."
+    },
+    {
+     "q": "¿Hasta qué punto nos arrepentimos más de lo que no hicimos que de lo que hicimos?",
+     "model": "En general sí, aunque hay errores graves cuyo peso no disminuye; la omisión duele de otra manera, más difusa."
+    },
+    {
+     "q": "¿Qué diferencia hay entre dar consejo y ser testigo de lo que alguien vive?",
+     "model": "El consejo intenta resolver; el testigo acompaña y valida, y a veces eso es exactamente lo que se necesita."
+    }
+   ],
+   "gaps": "Y la tercera, que la gente no busca [consejo]. Busca un [testigo]. Alguien que diga: «Te he [oído]. [Existes]».",
+   "glossary": [
+    {
+     "word": "sobrio",
+     "meaning": "que no ha bebido alcohol"
+    },
+    {
+     "word": "ajeno",
+     "meaning": "que pertenece a otra persona"
+    },
+    {
+     "word": "confidencia",
+     "meaning": "secreto que se cuenta a alguien de confianza"
+    },
+    {
+     "word": "fregadero",
+     "meaning": "pila de la cocina donde se lava"
+    }
+   ]
+  },
+  {
+   "id": "bingo",
+   "title": "El oficio de alegrar",
+   "place": "La pista de baile",
+   "context": "Yoli y Aurelio reflexionan sobre si su trabajo de entretener a los pasajeros ha sido un consuelo honesto o una forma de engaño.",
+   "speakers": [
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Maestro, ¿alguna vez ha sentido que su trabajo era una mentira? Yo llevo veintiocho años diciendo «¡qué noche más maravillosa!» en noches que eran francamente mediocres."
+    },
+    {
+     "s": 1,
+     "text": "Todos los artistas mentimos un poco, Yoli. Pero hay mentiras que roban y mentiras que regalan. Si un pasajero viene triste y se va menos triste, no le has engañado. Le has prestado un estado de ánimo hasta que pueda fabricarse el suyo."
+    },
+    {
+     "s": 0,
+     "text": "Qué manera tan elegante de justificarse."
+    },
+    {
+     "s": 1,
+     "text": "No me justifico. Te cuento lo que he visto. En el noventa y ocho, durante el incendio, la gente salió del salón en orden porque el piano seguía sonando. No era un acto heroico; era pura costumbre. Pero esa costumbre evitó una estampida. A veces la alegría fingida tiene consecuencias muy reales."
+    },
+    {
+     "s": 0,
+     "text": "Pero hay noches en que me miro en el espejo del camerino y no reconozco a la que sonríe."
+    },
+    {
+     "s": 1,
+     "text": "Eso le pasa a cualquiera que lleve mucho tiempo en un personaje. El peligro no es fingir; es olvidar que se está fingiendo. Tú no lo has olvidado, por eso te duele. Los que no sienten nada son los que me preocupan."
+    },
+    {
+     "s": 0,
+     "text": "¿Y usted? ¿No se cansa de tocar para gente que habla por encima de la música?"
+    },
+    {
+     "s": 1,
+     "text": "Al principio me ofendía. Ahora entiendo que la música de fondo es como el aire: nadie le presta atención, pero sin ella la conversación se ahoga. Mi oficio no es que me escuchen. Es que puedan hablar."
+    },
+    {
+     "s": 0,
+     "text": "Entonces esta noche, cuando cante, ¿va a tocar de fondo o de frente?"
+    },
+    {
+     "s": 1,
+     "text": "Esta noche, Yoli, voy a tocar detrás de ti. Es el mejor sitio que existe en un escenario."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué distinción hace Aurelio entre tipos de mentira?",
+     "options": [
+      "Entre mentiras grandes y mentiras pequeñas",
+      "Entre mentiras que roban y mentiras que regalan",
+      "Entre mentiras de artistas y mentiras de políticos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "Según Aurelio, ¿cuál es el verdadero peligro del personaje?",
+     "infer": true,
+     "options": [
+      "Que el público descubra que el artista está fingiendo",
+      "Perder la conciencia de que uno está interpretando un papel",
+      "Cansarse de repetir siempre las mismas frases y los mismos chistes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo entiende ahora Aurelio la música de fondo?",
+     "infer": true,
+     "options": [
+      "Como una falta de respeto hacia el trabajo del músico",
+      "Como un soporte invisible que permite la conversación",
+      "Como la parte menos importante de su carrera artística"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué sugiere la frase final de Aurelio?",
+     "infer": true,
+     "options": [
+      "Que prefiere no ser visto por el público esta noche",
+      "Que tiene miedo de que Yoli se equivoque al cantar",
+      "Que considera un honor apoyar el momento de Yoli"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Dónde situarías el límite entre la amabilidad profesional fingida y el engaño al cliente?",
+     "model": "En la intención: si el gesto busca el bienestar del otro, es cortesía; si busca manipularlo, es engaño."
+    },
+    {
+     "q": "¿Qué oficios consideras «de fondo», imprescindibles pero invisibles, y cómo deberían reconocerse?",
+     "model": "La limpieza o el mantenimiento: deberían reconocerse con sueldos dignos y con visibilidad, no solo con agradecimientos puntuales."
+    },
+    {
+     "q": "¿Por qué el hecho de que algo nos duela puede ser una señal de que seguimos siendo auténticos?",
+     "model": "Porque el dolor indica que todavía distinguimos entre lo que somos y lo que representamos; la indiferencia sería peor."
+    }
+   ],
+   "gaps": "El peligro no es [fingir]; es [olvidar] que se está fingiendo. Tú no lo has olvidado, por eso te [duele]. Los que no sienten nada son los que me [preocupan].",
+   "glossary": [
+    {
+     "word": "francamente",
+     "meaning": "de verdad, sinceramente"
+    },
+    {
+     "word": "estampida",
+     "meaning": "huida desordenada de mucha gente"
+    },
+    {
+     "word": "camerino",
+     "meaning": "habitación donde se preparan los artistas"
+    },
+    {
+     "word": "se ahoga",
+     "meaning": "deja de poder respirar o de funcionar"
+    }
+   ]
+  },
+  {
+   "id": "piano",
+   "title": "El último bis",
+   "place": "El escenario del salón",
+   "context": "Antes de tocar por última vez la canción de las cuatro notas, Aurelio se dirige al salón por el micrófono.",
+   "speakers": [
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches, o buenos días, ya no sé muy bien. Me dicen que son las cinco y diez y que el barco ha dejado de moverse tanto. Será que la tormenta también se ha cansado de escucharme. Llevo cuarenta y siete años en este escenario. He tocado en bodas, en funerales, en un incendio y en innumerables cenas donde nadie levantaba la vista del plato. No me quejo. Un pianista de crucero aprende pronto que su obra maestra es pasar desapercibido. Pero esta noche ha ocurrido algo que no me había pasado nunca: el salón entero ha estado callado escuchando. No sé si por respeto, por cansancio o porque el mareo no les deja hablar, pero se lo agradezco. Antes de terminar quiero contarles un secreto."
+    },
+    {
+     "s": 0,
+     "text": "La canción de las cuatro notas, esa que han oído cada noche, la compuse en mil novecientos noventa y cinco para una mujer que cenaba sola. Esa mujer está aquí, en la tercera mesa. Y su marido, el que entonces estaba mareado, lleva media hora en el pasillo ensayando las cuatro notas en una mesa de madera, como si fuera un teclado. Lo he oído; tiene usted un ritmo espantoso, caballero, pero una voluntad admirable. Así que no voy a tocar esta canción. Hoy no me corresponde. Caballero, el piano es suyo. Y a los demás les pido un último favor: no aplaudan si se equivoca. Aplaudan después. Los errores de quien se atreve merecen un silencio respetuoso. Los aplausos, para el valor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años lleva Aurelio tocando en ese escenario?",
+     "options": [
+      "Treinta y un años",
+      "Cuarenta y siete años",
+      "Veintiocho años"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué significa para Aurelio que su «obra maestra» sea pasar desapercibido?",
+     "infer": true,
+     "options": [
+      "Que el éxito de su oficio consiste en acompañar sin protagonismo",
+      "Que nunca ha tenido talento suficiente para ser famoso",
+      "Que prefiere tocar en lugares donde no lo conozcan"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tono usa Aurelio al hablar del ritmo de Ramón?",
+     "infer": true,
+     "options": [
+      "Humorístico y afectuoso, valorando el esfuerzo más que el resultado",
+      "Despectivo, porque le molesta que un aficionado toque su canción",
+      "Preocupado, porque teme que Ramón estropee el piano"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué gesto hace Aurelio al ceder el piano?",
+     "infer": true,
+     "options": [
+      "Renuncia a su protagonismo para que la canción cumpla su sentido original",
+      "Se jubila definitivamente porque está demasiado cansado",
+      "Castiga a Ramón por no haber escuchado la canción aquella noche de 1995"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué oficios tienen como mayor logro pasar desapercibidos, y qué opinas de esa forma de éxito?",
+     "model": "Los árbitros o los intérpretes: cuanto menos se nota su presencia, mejor lo hacen; es un éxito humilde y exigente."
+    },
+    {
+     "q": "¿Por qué crees que cuesta tanto ceder el protagonismo en un momento importante?",
+     "model": "Porque asociamos reconocimiento con valor personal; ceder exige seguridad en uno mismo y generosidad."
+    },
+    {
+     "q": "¿Qué opinas de la idea de reservar el silencio para los errores y el aplauso para el valor?",
+     "model": "Me parece una ética preciosa: separa el resultado del gesto y anima a intentar sin miedo al ridículo."
+    }
+   ],
+   "gaps": "Los errores de quien se [atreve] merecen un [silencio] [respetuoso]. Los aplausos, para el [valor].",
+   "glossary": [
+    {
+     "word": "innumerables",
+     "meaning": "tan numerosas que no se pueden contar"
+    },
+    {
+     "word": "desapercibido",
+     "meaning": "sin que nadie lo note"
+    },
+    {
+     "word": "espantoso",
+     "meaning": "muy malo, horrible"
+    },
+    {
+     "word": "voluntad",
+     "meaning": "deseo firme de hacer algo"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "El mensaje del muelle",
+   "place": "La cabina de radio",
+   "context": "Sole le entrega por fin a Teodoro el mensaje de su hijo, y él lo recibe con una mezcla de alegría y miedo.",
+   "speakers": [
+    {
+     "name": "Sole",
+     "country": "Nicaragua",
+     "voice": "es-NI-YolandaNeural"
+    },
+    {
+     "name": "Teodoro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Teodoro, siéntese, por favor. Tengo algo para usted. Llegó a medianoche, pero me pareció mejor esperar a que la máquina estuviera tranquila."
+    },
+    {
+     "s": 1,
+     "text": "Sole, me estás asustando. Si es de la compañía, que se lo digan a otro."
+    },
+    {
+     "s": 0,
+     "text": "No es de la compañía. Es de Andrés. Dice: «Papá, estaré en el muelle a las siete. Iré con Lucía, tu nieta. Tiene seis años y quiere ver el barco del abuelo antes de que se lo lleven. No hace falta que digas nada»."
+    },
+    {
+     "s": 1,
+     "text": "Lucía. Se llama Lucía. Ni siquiera sabía su nombre."
+    },
+    {
+     "s": 0,
+     "text": "¿Está bien?"
+    },
+    {
+     "s": 1,
+     "text": "No lo sé. Llevo doce años preparando discursos para este momento y ahora resulta que no hace falta que diga nada. Eso es lo más generoso y lo más terrible que me podía escribir."
+    },
+    {
+     "s": 0,
+     "text": "¿Por qué terrible?"
+    },
+    {
+     "s": 1,
+     "text": "Porque me quita las excusas. Si me pidiera explicaciones, podría defenderme, justificarme, contarle lo de las averías y los turnos dobles. Pero no me pide nada. Me ofrece una niña de seis años y un muelle. Contra eso no hay discurso posible."
+    },
+    {
+     "s": 0,
+     "text": "Quizás es justo eso lo que quiere. Que deje de defenderse y simplemente esté."
+    },
+    {
+     "s": 1,
+     "text": "Sole, ¿tú crees que una persona puede aprender a ser abuelo sin haber aprendido a ser padre?"
+    },
+    {
+     "s": 0,
+     "text": "Creo que muchos abuelos son padres que han tenido una segunda oportunidad y la han aprovechado mejor. La vida no siempre es tan generosa."
+    },
+    {
+     "s": 1,
+     "text": "Dile que sí. Que estaré. Y que le enseñaré a la niña el tercer cilindro. Aunque mañana ya no suene."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué esperó Sole para entregar el mensaje?",
+     "options": [
+      "Porque la radio no funcionaba por la tormenta",
+      "Porque Teodoro estaba dormido en su camarote",
+      "Para que la máquina estuviera tranquila"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué Teodoro considera el mensaje «generoso» y «terrible» a la vez?",
+     "infer": true,
+     "options": [
+      "Porque es amable, pero confirma que su hijo no lo quiere ver",
+      "Porque ofrece reconciliación sin exigencias y lo deja sin defensas",
+      "Porque llega demasiado tarde para cambiar los planes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué interpreta Sole sobre la intención del hijo?",
+     "infer": true,
+     "options": [
+      "Que desea que su padre simplemente esté presente sin justificarse",
+      "Que quiere que su padre le pida perdón públicamente",
+      "Que solo quiere que su hija conozca el barco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué valor simbólico tiene la promesa de enseñar el tercer cilindro?",
+     "infer": true,
+     "options": [
+      "Que Teodoro quiere que su nieta sea ingeniera",
+      "Que quiere transmitir su mundo aunque ese mundo esté desapareciendo",
+      "Que intenta evitar hablar con su hijo distrayendo a la niña con la máquina"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué un gesto de reconciliación sin exigencias puede resultar más difícil de aceptar que una petición de explicaciones?",
+     "model": "Porque nos obliga a cambiar sin la protección de nuestras justificaciones; el perdón gratuito nos deja desnudos."
+    },
+    {
+     "q": "¿Qué opinas de la idea de que ser abuelo es una segunda oportunidad para quien no fue un buen padre?",
+     "model": "Puede serlo, siempre que no se use para borrar el pasado; los hijos también merecen un reconocimiento."
+    },
+    {
+     "q": "¿Qué te gustaría enseñarle a un niño de tu mundo profesional o familiar antes de que desaparezca?",
+     "model": "Le enseñaría a escribir a mano una carta; es un gesto lento que ya casi nadie practica."
+    }
+   ],
+   "gaps": "Si me pidiera [explicaciones], podría [defenderme], justificarme, contarle lo de las [averías] y los turnos [dobles].",
+   "glossary": [
+    {
+     "word": "muelle",
+     "meaning": "parte del puerto donde atracan los barcos"
+    },
+    {
+     "word": "averías",
+     "meaning": "daños que impiden funcionar a una máquina"
+    },
+    {
+     "word": "turnos dobles",
+     "meaning": "dos jornadas de trabajo seguidas"
+    },
+    {
+     "word": "aprovechado",
+     "meaning": "usado con provecho"
+    }
+   ]
+  },
+  {
+   "id": "proa",
+   "title": "Casarse a contracorriente",
+   "place": "La proa",
+   "context": "Ya a resguardo, Norma le explica a Marina, con cierta ironía, por qué se casará a los sesenta después de criticar el matrimonio toda su vida.",
+   "speakers": [
+    {
+     "name": "Norma",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    },
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Señora, le he traído una toalla. ¿Me permite decirle que me ha parecido muy valiente?"
+    },
+    {
+     "s": 0,
+     "text": "Muy valiente o muy ridícula, depende de a quién le pregunte. Llevo cuarenta años criticando el matrimonio, oficial. En mi juventud decía que era una institución patriarcal diseñada para convertir a las mujeres en administradoras de calcetines ajenos. Y ahora mírame: comprometida a los sesenta, empapada, con un anillo que me queda grande."
+    },
+    {
+     "s": 1,
+     "text": "¿Ha cambiado de opinión sobre el matrimonio?"
+    },
+    {
+     "s": 0,
+     "text": "No. He cambiado de opinión sobre los hospitales. El año pasado Gustavo tuvo un infarto y una enfermera me dejó seis horas en el pasillo porque yo no era «familia». Veinte años compartiendo hipoteca, perro y suegra, y para la burocracia yo era una desconocida. Esa noche me di cuenta de que mis principios eran muy bonitos, pero no me dejaban entrar en una habitación."
+    },
+    {
+     "s": 1,
+     "text": "Entonces se casa por pragmatismo."
+    },
+    {
+     "s": 0,
+     "text": "Me caso por amor y por pragmatismo, que son menos incompatibles de lo que dicen las canciones. Lo que me fastidia es tener que ceder ante una institución que sigo considerando imperfecta. Pero a mi edad he aprendido que la coherencia absoluta es un lujo de los veinte años. Después, uno elige qué batallas perder con dignidad."
+    },
+    {
+     "s": 1,
+     "text": "Yo nunca me he casado. Siempre he pensado que el mar era mi pareja."
+    },
+    {
+     "s": 0,
+     "text": "El mar es un pésimo compañero, oficial. No le deja entrar en el hospital cuando usted se pone enferma. Hágame caso: si encuentra a alguien que le guarde la cena caliente, ponga los papeles en orden. Aunque sea por fastidiar al sistema."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué opinaba Norma del matrimonio en su juventud?",
+     "options": [
+      "Que era una institución patriarcal injusta para las mujeres",
+      "Que era una tradición bonita pero demasiado cara",
+      "Que solo tenía sentido si se tenían hijos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué opina Norma de la relación entre amor y pragmatismo?",
+     "infer": true,
+     "options": [
+      "Que el pragmatismo destruye cualquier forma de amor",
+      "Que pueden convivir mucho mejor de lo que se suele creer",
+      "Que el amor verdadero no necesita ningún papel oficial ni ninguna boda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere decir Norma con «elegir qué batallas perder con dignidad»?",
+     "infer": true,
+     "options": [
+      "Que ha decidido abandonar todas sus ideas políticas",
+      "Que la madurez implica aceptar concesiones sin traicionarse del todo",
+      "Que piensa divorciarse si el matrimonio no funciona"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ironía encierra el consejo final de Norma a Marina?",
+     "infer": true,
+     "options": [
+      "Que recomienda el mar como la mejor pareja posible",
+      "Que critica el matrimonio y luego aconseja no casarse nunca con un marinero",
+      "Que propone casarse como un acto de rebeldía contra el propio sistema"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué principio tuyo de juventud has tenido que matizar al chocar con una situación práctica?",
+     "model": "Pensaba que nunca trabajaría para una gran empresa; la necesidad me hizo aceptar, aunque intento cambiar cosas desde dentro."
+    },
+    {
+     "q": "¿Hasta qué punto la burocracia condiciona las decisiones íntimas de las personas?",
+     "model": "Más de lo que admitimos: visados, herencias o visitas médicas obligan a formalizar relaciones que la gente vive de otra manera."
+    },
+    {
+     "q": "¿En qué casos la coherencia absoluta deja de ser una virtud y se convierte en rigidez?",
+     "model": "Es una virtud en lo esencial y una rigidez en lo accesorio; saber distinguir ambos terrenos es la verdadera madurez."
+    }
+   ],
+   "gaps": "Esa noche me di cuenta de que mis [principios] eran muy [bonitos], pero no me dejaban [entrar] en una [habitación].",
+   "glossary": [
+    {
+     "word": "patriarcal",
+     "meaning": "organizada según el poder de los hombres"
+    },
+    {
+     "word": "empapada",
+     "meaning": "completamente mojada"
+    },
+    {
+     "word": "pragmatismo",
+     "meaning": "actitud que busca lo práctico"
+    },
+    {
+     "word": "pésimo",
+     "meaning": "muy malo"
+    }
+   ]
+  },
+  {
+   "id": "oficial",
+   "title": "Relevo en el puente",
+   "place": "El alerón del puente",
+   "context": "Con el faro de Cádiz a la vista, el capitán Salgado le entrega a Marina el mando y ella le da la brújula de su padre.",
+   "speakers": [
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Marina, quedan veinte minutos para el faro. Según el protocolo, el relevo se hace en puerto, con papeles y firmas. Pero yo quiero hacerlo aquí, sin testigos, con el viento de cara."
+    },
+    {
+     "s": 1,
+     "text": "Capitán, no sé si estoy preparada."
+    },
+    {
+     "s": 0,
+     "text": "Nadie lo está. Cuando me dieron el mando, en el noventa y seis, vomité en el lavabo del puente diez minutos antes de la primera orden. Nadie lo supo, salvo un contramaestre que me alcanzó una toalla sin decir una palabra. Ese silencio fue el mejor consejo que me han dado nunca."
+    },
+    {
+     "s": 1,
+     "text": "Entonces le devuelvo el favor. Tome. Es la brújula de mi padre. La encontraron atada al banco de su barca cuando desapareció. La he llevado conmigo en cada barco durante veinte años."
+    },
+    {
+     "s": 0,
+     "text": "Marina, no puedo aceptarla. Es lo único que le queda de él."
+    },
+    {
+     "s": 1,
+     "text": "No es lo único. Me queda la forma de mirar el mar, que es suya. Y usted mañana se queda sin puente, sin rumbo y sin la palabra «capitán». Le hace más falta que a mí."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si me pierdo?"
+    },
+    {
+     "s": 1,
+     "text": "Entonces mire la aguja. No señala hacia dónde tiene que ir, sino dónde está el norte. Lo demás lo decide usted. Eso me decía mi padre."
+    },
+    {
+     "s": 0,
+     "text": "Sabia filosofía para un pescador."
+    },
+    {
+     "s": 1,
+     "text": "Los pescadores saben que el mar no da certezas, solo referencias. Usted me ha enseñado lo mismo durante doce años."
+    },
+    {
+     "s": 0,
+     "text": "Muy bien. Capitana Quiroga, el barco es suyo. Que el mar la respete tanto como la respeta esta tripulación."
+    },
+    {
+     "s": 1,
+     "text": "Gracias, capitán. Y no se preocupe: no pienso vomitar hasta que usted se haya ido."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué quiere el capitán hacer el relevo en el alerón?",
+     "options": [
+      "Porque prefiere un momento íntimo antes que el protocolo oficial",
+      "Porque las normas obligan a hacerlo antes de entrar en puerto",
+      "Porque en el puerto no habrá tiempo para ceremonias"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué el silencio del contramaestre fue un buen consejo?",
+     "infer": true,
+     "options": [
+      "Porque le mostró que el apoyo discreto puede valer más que las palabras",
+      "Porque le enseñó que un capitán nunca debe hablar de sus miedos con nadie",
+      "Porque le hizo entender que debía cambiar de profesión"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué distinción hace Marina sobre la función de la brújula?",
+     "infer": true,
+     "options": [
+      "Que no indica el destino, sino un punto de referencia para decidir",
+      "Que solo funciona bien en manos de un pescador experimentado",
+      "Que señala siempre el camino más seguro y más corto para volver a casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué revela la última frase de Marina?",
+     "infer": true,
+     "options": [
+      "Que está enferma por la tormenta y necesita descansar",
+      "Que asume su miedo con humor y honra la confesión del capitán",
+      "Que no confía en sus propias capacidades como capitana"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué valor tiene un ritual íntimo de transición frente a una ceremonia oficial?",
+     "model": "El íntimo conserva el sentido personal; la ceremonia legitima ante los demás. Ambos son necesarios, pero no se sustituyen."
+    },
+    {
+     "q": "¿Por qué crees que algunas personas solo encuentran referencias, y no certezas, en momentos de incertidumbre?",
+     "model": "Porque la realidad es cambiante; buscar certezas paraliza, mientras que las referencias permiten avanzar ajustando el rumbo."
+    },
+    {
+     "q": "¿Qué objeto con historia entregarías a alguien que va a empezar una etapa difícil, y qué le dirías al dárselo?",
+     "model": "Le daría mi primera libreta de trabajo y le diría que sus errores también caben en ella."
+    }
+   ],
+   "gaps": "No señala hacia dónde tiene que [ir], sino dónde está el [norte]. Lo [demás] lo decide [usted].",
+   "glossary": [
+    {
+     "word": "relevo",
+     "meaning": "cambio de una persona por otra en un puesto"
+    },
+    {
+     "word": "protocolo",
+     "meaning": "conjunto de normas para un acto oficial"
+    },
+    {
+     "word": "aguja",
+     "meaning": "parte de la brújula que señala el norte"
+    },
+    {
+     "word": "certezas",
+     "meaning": "conocimientos seguros"
+    }
+   ]
+  },
+  {
+   "id": "capitan",
+   "title": "Mensaje por megafonía",
+   "place": "El puente de mando",
+   "context": "A las cinco y cuarenta, el capitán Salgado se dirige a todo el barco por megafonía antes de la llegada.",
+   "speakers": [
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días a todos. Les habla el capitán Salgado desde el puente. Son las cinco y cuarenta. La tormenta ha perdido fuerza y el faro de Cádiz ya es visible por la proa. Llegaremos con dos horas de retraso. La compañía me ha recordado varias veces esta noche cuánto cuesta cada hora. Yo les recuerdo a ustedes cuánto valen: cuatrocientas doce personas, ciento ochenta tripulantes, un gato llamado Almirante y un pianista que no ha dejado de tocar. Hagan ustedes la cuenta. Antes de atracar, si el mar lo permite, daremos una vuelta completa a la bahía. No está en el plan de navegación. No me lo ha autorizado nadie. Es, probablemente, la última irregularidad de mi carrera, y la asumo con mucho gusto. En el muelle hay gente que trabajó en este barco, que se casó en este barco, que perdió a alguien en este barco."
+    },
+    {
+     "s": 0,
+     "text": "Merecen verlo pasar con todas las luces encendidas. Quiero decirles algo más, y luego les dejo en paz. Los barcos no terminan en los desguaces. Terminan cuando nadie los recuerda. Y después de esta noche, me atrevo a decir que el Albatros va a tardar mucho en terminar. Gracias por haber navegado con nosotros. Gracias a la tripulación, que ha trabajado toda la noche con el mar en contra y con la compañía en contra, que es todavía peor. Y gracias a la capitana Quiroga, que dentro de unas horas llevará el barco hasta su último puerto. Se queda en buenas manos. Mejores que las mías. Les habló, por última vez, su capitán."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con cuánto retraso llegará el barco?",
+     "options": [
+      "Con media hora de retraso",
+      "Con dos horas de retraso",
+      "Con cuatro horas de retraso"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué contraste plantea el capitán entre «cuánto cuesta» y «cuánto valen»?",
+     "infer": true,
+     "options": [
+      "Compara el precio de los billetes con el sueldo anual de toda la tripulación",
+      "Opone el criterio económico de la compañía al valor humano del pasaje",
+      "Explica que el retraso sale más caro que el combustible"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué actitud muestra el capitán ante la «irregularidad»?",
+     "infer": true,
+     "options": [
+      "Una aceptación serena y orgullosa de su responsabilidad",
+      "Arrepentimiento anticipado por desobedecer las normas",
+      "Miedo a las consecuencias legales que pueda tener"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según el capitán, ¿cuándo terminan realmente los barcos?",
+     "infer": true,
+     "options": [
+      "Cuando los cortan en piezas en un desguace",
+      "Cuando hacen su último viaje con pasajeros",
+      "Cuando ya nadie guarda su recuerdo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué diferencia ves entre lo que algo cuesta y lo que algo vale, con un ejemplo de tu vida?",
+     "model": "Mi bicicleta vieja cuesta muy poco, pero vale mucho: con ella conocí la ciudad el año en que llegué."
+    },
+    {
+     "q": "¿Cuándo está justificada una pequeña irregularidad al final de una carrera o de una etapa?",
+     "model": "Cuando no perjudica a nadie y sirve para honrar a otros; si solo busca lucimiento personal, pierde su legitimidad."
+    },
+    {
+     "q": "¿Qué crees que hace que un lugar o una institución desaparezca de verdad, más allá de su destrucción física?",
+     "model": "El olvido: cuando nadie cuenta sus historias, ni siquiera las ruinas logran mantenerlo vivo."
+    }
+   ],
+   "gaps": "Los barcos no [terminan] en los [desguaces]. Terminan cuando [nadie] los [recuerda].",
+   "glossary": [
+    {
+     "word": "tripulantes",
+     "meaning": "personas que trabajan en un barco"
+    },
+    {
+     "word": "atracar",
+     "meaning": "arrimar un barco al muelle"
+    },
+    {
+     "word": "irregularidad",
+     "meaning": "acción que no sigue las normas"
+    },
+    {
+     "word": "plan de navegación",
+     "meaning": "ruta oficial prevista para un barco"
+    }
+   ]
+  },
+  {
+   "id": "amanecer",
+   "title": "La vuelta a la bahía",
+   "place": "La cubierta de popa",
+   "context": "Mientras el Albatros da su vuelta de honor en la bahía, el capitán, Amparo y la capitana Marina contemplan la ciudad al amanecer.",
+   "speakers": [
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Capitán, mire el muelle. Hay gente con pañuelos. Como en las películas antiguas."
+    },
+    {
+     "s": 0,
+     "text": "Son los jubilados de la compañía. Les avisé por radio a medianoche. Pensaba que vendrían diez. Habrá doscientos."
+    },
+    {
+     "s": 2,
+     "text": "Y allí, junto a la grúa, un hombre con una niña. ¿Es el hijo de Teodoro?"
+    },
+    {
+     "s": 0,
+     "text": "Debe de serlo. La niña lleva un dibujo del barco. Teodoro ya los ha visto; lleva cinco minutos sin poder hablar."
+    },
+    {
+     "s": 1,
+     "text": "Qué curioso. Toda la noche he pensado que este viaje era una despedida, y resulta que la mitad del barco ha encontrado algo. Una hermana, una nieta, una carta, un trabajo de ayudante de cocina."
+    },
+    {
+     "s": 2,
+     "text": "Y otros han perdido algo. Usted, por ejemplo, a Paco en el mar."
+    },
+    {
+     "s": 1,
+     "text": "No, hija. A Paco se lo llevó la vida hace un año. Esta mañana solo lo he devuelto. Es distinto. Perder duele; devolver tiene algo de paz."
+    },
+    {
+     "s": 0,
+     "text": "Me gusta esa distinción. Yo también voy a devolver algo hoy. El barco. No lo pierdo; lo devuelvo a quien venga después."
+    },
+    {
+     "s": 2,
+     "text": "¿Y qué escribió por fin en la última línea, capitán?"
+    },
+    {
+     "s": 0,
+     "text": "Nada. La dejé en blanco, como sugirió la señora Amparo. Pero en el margen, con letra pequeña, he anotado la hora de la puesta de sol de ayer y la hora del amanecer de hoy. Entre las dos cabe todo lo que pasó. Quien sepa leer, entenderá."
+    },
+    {
+     "s": 1,
+     "text": "Capitán, para ser un marino, tiene usted alma de poeta."
+    },
+    {
+     "s": 0,
+     "text": "Todos los marinos la tenemos, señora. Lo que pasa es que la escondemos detrás del uniforme, por si nos ve la compañía."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quiénes son la mayoría de las personas del muelle?",
+     "options": [
+      "Familiares de los pasajeros que esperan su llegada",
+      "Periodistas que vienen a cubrir el último viaje",
+      "Jubilados de la compañía avisados por el capitán"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué distinción establece Amparo entre «perder» y «devolver»?",
+     "infer": true,
+     "options": [
+      "Que perder es algo temporal y devolver algo definitivo",
+      "Que perder ocurre siempre en tierra firme y devolver ocurre solo en el mar",
+      "Que perder es una herida sufrida y devolver es un acto voluntario y sereno"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sugiere el capitán con las dos horas anotadas en el margen?",
+     "infer": true,
+     "options": [
+      "Que el sentido de la noche está en lo vivido entre ambos momentos",
+      "Que quiere dejar constancia del retraso para la compañía",
+      "Que calculó mal la duración de la travesía"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ironía contiene la última frase del capitán?",
+     "infer": true,
+     "options": [
+      "Que el uniforme le resulta incómodo después de tantos años",
+      "Que la compañía obliga a los marinos a escribir poesía en el cuaderno de bitácora",
+      "Que la sensibilidad debe ocultarse ante una lógica empresarial"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué diferencia encuentras entre perder algo y devolverlo, aplicada a una experiencia propia?",
+     "model": "Al terminar mi contrato en un colegio, tuve la sensación de devolver a mis alumnos al mundo; no los perdía, los soltaba."
+    },
+    {
+     "q": "¿Qué significado tiene que un final se convierta para otros en un comienzo?",
+     "model": "Muestra que los finales no son puntos aislados; forman parte de una cadena donde lo que se cierra hace sitio a otra cosa."
+    },
+    {
+     "q": "¿Por qué crees que muchas profesiones obligan a esconder la sensibilidad «detrás del uniforme»?",
+     "model": "Porque se asocia la emoción con debilidad o falta de profesionalidad, aunque sea precisamente lo que mejora el trabajo."
+    }
+   ],
+   "gaps": "Perder [duele]; devolver tiene algo de [paz]. Me gusta esa [distinción]. Yo también voy a [devolver] algo hoy.",
+   "glossary": [
+    {
+     "word": "pañuelos",
+     "meaning": "trozos de tela que se agitan para despedirse"
+    },
+    {
+     "word": "grúa",
+     "meaning": "máquina para levantar objetos pesados en un puerto"
+    },
+    {
+     "word": "margen",
+     "meaning": "espacio en blanco al lado del texto"
+    },
+    {
+     "word": "marino",
+     "meaning": "persona que trabaja en el mar"
+    }
+   ]
+  }
+ ]
+}
