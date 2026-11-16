@@ -132,6 +132,8 @@ function cached(key: string, make: () => THREE.BufferGeometry) {
   let value = geometryCache.get(key);
   if (!value) {
     value = make();
+    // The key names the piece: worlds that put another body on a person find what is worn by it.
+    value.name = key;
     geometryCache.set(key, value);
   }
   return value;
@@ -198,9 +200,9 @@ function lightness(color: string) {
 // ------------------------------------------------------------------ head
 
 // The head is a unit sphere scaled to these radii (metres).
-const HEAD_R = { x: 0.092, y: 0.118, z: 0.106 };
+export const HEAD_R = { x: 0.092, y: 0.118, z: 0.106 };
 // Head centre above the head pivot (top of the neck).
-const HEAD_Y = 0.112;
+export const HEAD_Y = 0.112;
 
 // A skull that narrows into jaw and chin, flatter at the back of the neck.
 function shapeHead(v: THREE.Vector3) {

@@ -9,7 +9,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { clone as cloneSkinned } from 'three/addons/utils/SkeletonUtils.js';
-import { personHooks, type Person } from '../noche-abierta/people3d';
+import { HEAD_R, HEAD_Y, personHooks, type Person } from '../noche-abierta/people3d';
 
 type PartName = keyof Person['parts'];
 // Which procedural part turns each bone. Bones not listed keep their bind pose relative to their parent.
@@ -28,6 +28,18 @@ const DRIVERS: Record<string, { part: PartName; limb?: boolean; blend?: [PartNam
 // Hip joint height of the procedural figure at scale 1 (thigh + shin + ankle).
 const HIP_JOINT = 0.9, HIP_DROP = 0.05;
 const HIDDEN_LAYER = 31;
+// Pieces a person wears, by the name of their shape in people3d.
+const ON_HEAD = /^(glasses|earrings|bandage|cap|beanie|fedora|helmet|headphones|bruise|wound-cut)$/;
+// Hats were shaped for a drawn head with a low brow and thick hair: how each is moved up and flattened to sit on a real one.
+const HATS: Record<string, { up: number; tall: number; wide: number }> = {
+  cap: { up: -0.012, tall: 1.04, wide: 1.02 }, beanie: { up: -0.004, tall: 1.04, wide: 1.07 }, helmet: { up: -0.004, tall: 0.94, wide: 1 },
+  fedora: { up: -0.03, tall: 1, wide: 1 }, bandage: { up: 0, tall: 1, wide: 0.93 },
+};
+// Scarves stay; the boxy backpacks and shoulder bags of the drawn people do not belong on a real body.
+const ON_TORSO = /^scarf$/;
+// The measured skull is wider than the head people3d draws (ears) and deeper (nose): how much of each half size counts.
+const HEAD_FIT = { x: 0.92, y: 1, z: 1 };
+const HEAD_LIFT = -0.04, HEAD_PUSH = -0.12;
 
 export type Template = {
   scene: THREE.Object3D;
@@ -39,6 +51,8 @@ export type Template = {
   bind: Map<string, THREE.Quaternion>;
   /** Midpoint of the hip joints in the pelvis bone's own frame. */
   hipsInPelvis: THREE.Vector3;
+  /** The skull: its centre in the head bone's frame and its half sizes along the model's own axes. */
+  head: { center: THREE.Vector3; radius: THREE.Vector3 };
 };
 
 const DOWN = new THREE.Vector3(0, -1, 0);
@@ -81,7 +95,19 @@ export function prepareTemplate(scene: THREE.Object3D): Template {
     if (!mesh.geometry.boundingBox) mesh.geometry.computeBoundingBox();
     floor = Math.min(floor, (mesh.geometry.boundingBox as THREE.Box3).min.y);
   });
-  return { scene, hipHeight: hips.y - floor, floor, bind, hipsInPelvis: hips.clone().applyMatrix4(inverseOf('pelvis')) };
+  // The skull, from the skin that follows the head bone alone: where glasses, hats and beards are fitted.
+  const body = skinned as unknown as THREE.SkinnedMesh;
+  const headIndex = bones.findIndex(b => b.name === 'head');
+  const pos = body.geometry.attributes.position, si = body.geometry.attributes.skinIndex, sw = body.geometry.attributes.skinWeight;
+  const box = new THREE.Box3(), v = new THREE.Vector3();
+  for (let i = 0; i < pos.count; i++) {
+    let w = 0;
+    for (let k = 0; k < 4; k++) if (si.getComponent(i, k) === headIndex) w += sw.getComponent(i, k);
+    if (w > 0.98) box.expandByPoint(v.fromBufferAttribute(pos, i).applyMatrix4(body.bindMatrix));
+  }
+  // Kept in the head bone's own frame, so it stays on the skull whatever the bone does.
+  const head = { center: box.getCenter(new THREE.Vector3()).applyMatrix4(boneInverses[headIndex]), radius: box.getSize(new THREE.Vector3()).multiplyScalar(0.5) };
+  return { scene, hipHeight: hips.y - floor, floor, bind, hipsInPelvis: hips.clone().applyMatrix4(inverseOf('pelvis')), head };
 }
 
 const cache = new Map<string, Promise<Template>>();
@@ -198,9 +224,11 @@ function uncovered(geometry: THREE.BufferGeometry, bits: number) {
 }
 
 /** Builds the real body for a procedural person from the cast files and attaches it. Until it arrives the person stays as it was. */
-export async function makeReal(person: Person) {
+export async function makeReal(person: Person, original?: Set<THREE.Object3D>) {
   const L = person.rig.full;
   const w = wardrobe(L);
+  // Under a cap, a beanie or a helmet the hair is cropped, so it does not come through.
+  person.rig.body.traverse(o => { if (w.hair && /^(cap|beanie|helmet)$/.test((o as THREE.Mesh).geometry?.name ?? '')) w.hair = 'short04'; });
   const [cat, template, outfit, shoes, hair] = await Promise.all([
     loadCatalogue(), loadTemplate(`${GENTE}${w.body}/cuerpo.glb`), loadPiece(w.body, w.outfit), loadPiece(w.body, w.shoes), w.hair ? loadPiece(w.body, w.hair) : null,
   ]);
@@ -242,12 +270,17 @@ export async function makeReal(person: Person) {
   if (hair) wear(hair, m => variant(`${m.uuid}|${L.hairColor}`, () => { const c = m.clone(); c.color.set(L.hairColor).multiplyScalar(2.6); return c; }));
 
   const build = L.build === 'heavy' ? 1.16 : L.build === 'slim' ? 0.95 : L.build === 'athletic' ? 1.04 : 1;
-  attachRealBody(person, template, model, build);
+  attachRealBody(person, template, model, build, original);
 }
 
 /** Every person the worlds create from now on gets a real body as soon as its files arrive. */
 export function enableRealPeople(on = true) {
-  personHooks.created = on ? person => { void makeReal(person).catch(() => {}); } : undefined;
+  personHooks.created = on ? person => {
+    // What the person is made of now; whatever its world puts on it afterwards (a cast, a dressing, a lanyard) is kept on the real body.
+    const original = new Set<THREE.Object3D>();
+    person.rig.body.traverse(o => { original.add(o); });
+    void makeReal(person, original).catch(() => {});
+  } : undefined;
 }
 
 type Driven = {
@@ -262,15 +295,29 @@ const va = new THREE.Vector3(), vb = new THREE.Vector3();
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
 /** Puts a real body on a procedural person. The procedural meshes stop being drawn; props in the hands stay. */
-export function attachRealBody(person: Person, template: Template, model: THREE.Object3D = cloneSkinned(template.scene), girth = 1) {
+export function attachRealBody(person: Person, template: Template, model: THREE.Object3D = cloneSkinned(template.scene), girth = 1, original?: Set<THREE.Object3D>) {
   const rig = person.rig;
   // Stop drawing the procedural figure (a layer no camera sees also keeps it out of shadows), but keep what the hands hold.
   const hands = [rig.handL, rig.handR];
   const props = new Set<THREE.Object3D>(rig.props.values());
   if (rig.handheld) props.add(rig.handheld);
   const carried = hands.map(h => h.children.filter(c => props.has(c)));
+  const onHead: THREE.Object3D[] = [];
+  // Things the world added to a part of the body after making the person: they go on following that part.
+  const added = new Map<THREE.Object3D, THREE.Object3D[]>();
+  const partOf = new Set<THREE.Object3D>([...Object.values(person.parts), ...hands]);
   const hide = (o: THREE.Object3D) => {
     if (props.has(o)) return;
+    if (original && !original.has(o)) {
+      const part = o.parent as THREE.Object3D;
+      if (part === person.parts.head) onHead.push(o);
+      else if (partOf.has(part)) added.set(part, [...(added.get(part) ?? []), o]);
+      else if ((o as THREE.Mesh).isMesh) o.layers.set(HIDDEN_LAYER);
+      return;
+    }
+    const piece = (o as THREE.Mesh).isMesh ? (o as THREE.Mesh).geometry.name : '';
+    if (ON_TORSO.test(piece)) return;
+    if (ON_HEAD.test(piece)) { onHead.push(o); return; }
     if ((o as THREE.Mesh).isMesh) o.layers.set(HIDDEN_LAYER);
     for (const c of o.children) hide(c);
   };
@@ -317,11 +364,39 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
     const g = new THREE.Group();
     g.scale.setScalar(rig.scale);
     person.root.add(g);
-    for (const c of carried[i]) g.add(c);
+    for (const c of [...carried[i], ...(added.get(old) ?? [])]) g.add(c);
+    added.delete(old);
     const bone = driven.find(d => d.bone.name === (i === 0 ? 'hand_l' : 'hand_r'))!.bone;
     return { group: g, old, bone };
   });
   rig.handL = holds[0].group; rig.handR = holds[1].group;
+
+  const followers = [...added].flatMap(([part, things]) => {
+    const bone = driven.find(d => d.part === part && !d.other)?.bone;
+    if (!bone) return [];
+    const g = new THREE.Group();
+    g.scale.setScalar(rig.scale);
+    person.root.add(g);
+    for (const o of things) g.add(o);
+    return [{ group: g, old: part, bone }];
+  });
+  const following = [...holds, ...followers];
+
+  // What is worn on the head moves to the real skull, fitted to its size.
+  const headBone = driven.find(d => d.bone.name === 'head')!.bone;
+  const worn = new THREE.Group(), fit = new THREE.Group();
+  if (onHead.length) {
+    const r = template.head.radius;
+    worn.scale.set((r.x * scale * girth * HEAD_FIT.x) / HEAD_R.x, (r.y * scale * HEAD_FIT.y) / HEAD_R.y, (r.z * scale * girth * HEAD_FIT.z) / HEAD_R.z);
+    fit.position.set(0, -HEAD_Y, 0);
+    worn.add(fit);
+    person.root.add(worn);
+    for (const o of onHead) {
+      fit.add(o);
+      const hat = HATS[(o as THREE.Mesh).geometry.name];
+      if (hat) { o.position.y += hat.up; o.scale.multiply(va.set(hat.wide, hat.tall, hat.wide)); }
+    }
+  }
 
   const faces: Face[] = [];
   model.traverse(o => {
@@ -372,8 +447,16 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
     for (const m of mouth) m.visible = n.open > 0.04 || n.teeth > 0.3;
     setMorph('pucker', clamp(n.pucker, 0, 1));
 
+    if (onHead.length) {
+      headBone.updateWorldMatrix(true, false);
+      person.root.worldToLocal(worn.position.copy(template.head.center).applyMatrix4(headBone.matrixWorld));
+      partQ(person.parts.head, worn.quaternion);
+      const r = template.head.radius;
+      worn.position.add(va.set(0, r.y * HEAD_LIFT * scale, r.z * HEAD_PUSH * scale * girth).applyQuaternion(worn.quaternion));
+    }
+
     // Held things.
-    for (const h of holds) {
+    for (const h of following) {
       if (!h.group.children.length) continue;
       h.bone.updateWorldMatrix(true, false);
       person.root.worldToLocal(h.group.position.setFromMatrixPosition(h.bone.matrixWorld));
