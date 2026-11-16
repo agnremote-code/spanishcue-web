@@ -13,8 +13,9 @@ import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } f
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, exposeForQa, skipHiddenMatrices, worldPixelRatio } from '../noche-abierta/world3d.mjs';
 import { BOUNDS, CAST, CEILING, JUMP_SPEED, SPAWN, SPOTS, cameraBlockers, circleStep, roomAt, solidsFor, spotAt, spotFraming } from './oficina.mjs';
 import { createCeilingLight, createRealComposer, loadEnvironment } from '../mundo-real/real3d';
+import { enableRealPeople } from '../mundo-real/persona';
 import { buildOficina, talking as talkingNow, type Npc, type Mover } from './oficina3d';
-import { animateTizia, createTizia, type TiziaGesture, type TiziaMood } from './tizia3d';
+import { animateTizia, createRealTizia, createTizia, type TiziaGesture, type TiziaMood } from './tizia3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
 import { setMood } from '../noche-abierta/people3d';
@@ -63,7 +64,11 @@ export default function World3D(props: WorldProps) {
     if (!host) return;
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760;
     // Realistic mode (photographic surfaces, HDRI light, soft shadows, ambient occlusion): opt-in with ?real while it is measured.
-    const real = !low && new URLSearchParams(window.location.search).has('real');
+    const realParam = new URLSearchParams(window.location.search).get('real');
+    const real = !low && realParam !== null;
+    // Measured on the owner's M4 (2028x898, 2026-11-15): plain 5.9 ms of GPU per frame, realistic 7.5 ms,
+    // and screen-space occlusion alone adds 8.4 ms. So occlusion stays off unless asked for with ?real=ao.
+    const realAo = real && realParam === 'ao';
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
     try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
@@ -84,7 +89,9 @@ export default function World3D(props: WorldProps) {
     const camera = new THREE.PerspectiveCamera(60, 1, 0.06, 200);
     let building: ReturnType<typeof buildOficina>;
     let hero: ReturnType<typeof createTizia>;
-    try { building = buildOficina(scene, { low, shadows: !low, real }); hero = createTizia({ pais: live.current.pais }, !low); }
+    // Realistic mode gives everyone in the office a real body (skin, hair, clothes) that follows the same poses.
+    enableRealPeople(real);
+    try { building = buildOficina(scene, { low, shadows: !low, real }); hero = (real ? createRealTizia : createTizia)({ pais: live.current.pais }, !low); }
     catch (error) {
       console.error(error);
       renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
@@ -110,7 +117,7 @@ export default function World3D(props: WorldProps) {
     scene.add(key, key.target);
     let composer: EffectComposer | null = null;
     if (!low) {
-      if (real) composer = createRealComposer(renderer, scene, camera, host.clientWidth || 1, host.clientHeight || 1).composer;
+      if (realAo) composer = createRealComposer(renderer, scene, camera, host.clientWidth || 1, host.clientHeight || 1).composer;
       else {
         composer = new EffectComposer(renderer);
         composer.addPass(new RenderPass(scene, camera));
