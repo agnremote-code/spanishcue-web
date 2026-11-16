@@ -63,9 +63,11 @@ export default function World3D(props: WorldProps) {
     const host = mount.current;
     if (!host) return;
     const low = window.matchMedia('(pointer: coarse)').matches || window.innerWidth < 760;
-    // Realistic mode (photographic surfaces, HDRI light, soft shadows, ambient occlusion): opt-in with ?real while it is measured.
+    // Realistic mode (photographic surfaces, HDRI light, soft shadows, people with real bodies): on for computers,
+    // off on phones and with ?real=0. Measured on the owner's M4 on 2026-11-16 with the whole office in view:
+    // the graphics card works about 27 % of each second, with no long frames.
     const realParam = new URLSearchParams(window.location.search).get('real');
-    const real = !low && realParam !== null;
+    const real = !low && realParam !== '0';
     // Measured on the owner's M4 (2028x898, 2026-11-15): plain 5.9 ms of GPU per frame, realistic 7.5 ms,
     // and screen-space occlusion alone adds 8.4 ms. So occlusion stays off unless asked for with ?real=ao.
     const realAo = real && realParam === 'ao';
