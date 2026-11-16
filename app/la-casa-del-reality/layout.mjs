@@ -269,7 +269,7 @@ export const WALKERS = [
 
 // Short lines people say as you walk past.
 export const CHATTER = [
-  '¿Tú eres la sorpresa?', 'Aquí todo se graba, ¿eh?', 'Mañana nomino a Óscar.', '¿Quién se comió mi yogur?', 'Saluda a la cámara tres.',
+  'Así que tú eres la sorpresa.', 'Aquí todo se graba, ¿eh?', 'Mañana nomino a Óscar.', 'Alguien se ha comido mi yogur Vitalín.', 'Saluda a la cámara tres.',
   'No digas mi nombre en el baño.', 'Esta noche hay gala.', '¿Ya votó el público?', 'Quiero ir a mi casa.', 'El atún es de Fela.',
   'Sonríe, nos ven tres millones.', 'Esa hamaca es para los romances.', 'La Voz está rara hoy.', 'Me duele la cara de sonreír.', '¿Qué hora es? Aquí no hay relojes.',
 ];
