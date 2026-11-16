@@ -119,11 +119,7 @@ export function makeDemon(person: Person, seed: number) {
 export function makeSoul(person: Person, seed: number, warm = true) {
   const r = random(seed);
   const tint = new THREE.Color(warm ? '#fff6e6' : '#c7ccd6');
-  person.root.traverse(o => {
-    const mesh = o as THREE.Mesh;
-    if (!mesh.isMesh || !mesh.material) return;
-    const src = mesh.material as THREE.MeshStandardMaterial;
-    if (!src.color) return;
+  const light = (src: THREE.MeshStandardMaterial) => {
     const m = src.clone();
     m.color = src.color.clone().lerp(tint, warm ? 0.55 : 0.6);
     m.emissive = m.color.clone().multiplyScalar(warm ? 0.55 : 0.18);
@@ -131,9 +127,18 @@ export function makeSoul(person: Person, seed: number, warm = true) {
     m.transparent = true;
     m.opacity = warm ? 0.78 : 0.62;
     m.depthWrite = true;
-    mesh.material = m;
+    return m;
+  };
+  person.root.traverse(o => {
+    const mesh = o as THREE.Mesh;
+    if (!mesh.isMesh || !mesh.material) return;
+    const src = mesh.material as THREE.MeshStandardMaterial;
+    if (!src.color) return;
+    mesh.material = light(src);
     mesh.castShadow = false;
   });
+  // A real body, when the world uses them, is made of the same light.
+  person.root.userData.realFinish = light;
   const aura = addAura(person, warm ? '#fff2c8' : '#9aa6b8', 2, warm ? 0.3 : 0.16);
   rigs.set(person, { aura, phase: r() * 6 });
 }

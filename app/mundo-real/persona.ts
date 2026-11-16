@@ -299,6 +299,9 @@ export async function makeReal(person: Person, original?: Set<THREE.Object3D>) {
   if (hair) wear(hair, m => variant(`${m.uuid}|${L.hairColor}`, () => { const c = m.clone(); c.color.set(L.hairColor).multiplyScalar(2.6); return c; }));
 
   const build = L.build === 'heavy' ? 1.16 : L.build === 'slim' ? 0.95 : L.build === 'athletic' ? 1.04 : 1;
+  // A world may ask for its own finish (a soul made of light): it gets every material of the real body.
+  const finish = person.root.userData.realFinish as ((m: THREE.MeshStandardMaterial) => THREE.Material) | undefined;
+  if (finish) model.traverse(o => { const mesh = o as THREE.Mesh; if (mesh.isMesh && mesh.material) { mesh.material = finish(mesh.material as THREE.MeshStandardMaterial); mesh.castShadow = false; } });
   attachRealBody(person, template, model, build, original);
 }
 
@@ -308,7 +311,7 @@ export function enableRealPeople(on = true) {
     // What the person is made of now; whatever its world puts on it afterwards (a cast, a dressing, a lanyard) is kept on the real body.
     const original = new Set<THREE.Object3D>();
     person.rig.body.traverse(o => { original.add(o); });
-    void makeReal(person, original).catch(() => {});
+    void makeReal(person, original).catch(error => console.warn("mundo-real", error));
   } : undefined;
 }
 
@@ -422,7 +425,7 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
     person.root.add(worn);
     for (const o of onHead) {
       fit.add(o);
-      const hat = HATS[(o as THREE.Mesh).geometry.name];
+      const hat = HATS[(o as THREE.Mesh).geometry?.name ?? ""];
       if (hat) { o.position.y += hat.up; o.scale.multiply(va.set(hat.wide, hat.tall, hat.wide)); }
     }
   }
