@@ -80,7 +80,7 @@ export const SHIP = {
   dawn: '06:40',
   // Ages and years every level keeps.
   facts: {
-    amparo: 'tiene 74 años; conoció a Paco, camarero del barco, en 1976: cincuenta años',
+    amparo: 'tiene 74 años; conoció a Paco, camarero del barco, en 1978, con un cóctel que no había pedido: hace cuarenta y ocho años; se casaron en 1979',
     teodoro: 'jefe de máquinas desde 1984; la máquina se llama la Dolores',
     rosa: 'veinticinco años a bordo; el gato se llama Almirante',
     pareja: 'casados hace treinta y un años; luna de miel en el Albatros en 1995',
@@ -93,7 +93,8 @@ export const SHIP = {
     aurelio: 'toca en el salón desde 1979',
     gustavo: 'veinte años con Norma',
     marina: '41 años; su padre era pescador',
-    salgado: '64 años; diecinueve años capitán del Albatros',
+    salgado: '64 años; entró en el Albatros en 1976, a los catorce, pelando papas con Fermín; capitán desde hace treinta años',
+    sole: 'radiotelegrafista del Albatros desde hace treinta y cuatro años',
   },
 };
 

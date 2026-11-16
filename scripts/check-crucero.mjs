@@ -50,6 +50,12 @@ export function choiceBalance(level, file) {
   const text = (o) => (typeof o === 'string' ? o : o?.es ?? '');
   const longest = choices.filter((c) => { const len = c.options.map((o) => text(o).length); return len[c.answer] === Math.max(...len); }).length;
   if (longest / choices.length > 0.4) out.push(`${level} listening: the right answer is the longest option in ${longest} of ${choices.length} questions (max 40%)`);
+  const rank = (c) => { const len = c.options.map((o) => text(o).length); const sorted = [...len].sort((x, y) => x - y); return { len, sorted, key: len[c.answer] }; };
+  const middle = choices.filter((c) => { const r = rank(c); return r.key === r.sorted[1] && r.key !== r.sorted[0] && r.key !== r.sorted[2]; }).length;
+  const shortest = choices.filter((c) => { const r = rank(c); return r.key === r.sorted[0]; }).length;
+  if (middle / choices.length > 0.4) out.push(`${level} listening: the right answer is the middle-length option in ${middle} of ${choices.length} questions (max 40%)`);
+  if (shortest / choices.length < 0.25) out.push(`${level} listening: the right answer is the shortest option in only ${shortest} of ${choices.length} questions (min 25%)`);
+  for (const c of choices) { const r = rank(c); c.options.forEach((o, i) => { if (i !== c.answer && r.len[i] < 0.45 * r.key) out.push(`${level} listening ${c.id}: distractor «${text(o)}» is under 45% of the key's length; it gives the key away`); }); }
   const pos = choices.map((c) => c.answer);
   for (let k = 0; k < 3; k++) { const share = pos.filter((p) => p === k).length / pos.length; if (share < 0.2 || share > 0.4) out.push(`${level} listening: answer position ${k} used in ${Math.round(share * 100)}% of questions (20–40%)`); }
   const patterns = new Map();
@@ -58,6 +64,72 @@ export function choiceBalance(level, file) {
   // From C1, every item asks at least two inference questions (intention, irony, what is implied).
   if (level === 'C1' || level === 'C2') for (const item of file.items) { const n = (item.choice ?? []).filter((c) => c.infer === true).length; if (n < 2) out.push(`${level} listening ${item.id}: needs at least 2 inference questions (infer: true), has ${n}`); }
   for (const period of [1, 2, 3, 4, 6]) if (pos.every((p, i) => i < period || p === pos[i - period])) out.push(`${level} listening: answer positions repeat every ${period} questions`);
+  return out;
+}
+
+// The student has no gender: nothing addressed to them, or said by them, is
+// masculine or feminine, and no «solo o sola» doublets anywhere.
+const ADJ = '(?:tranquil|nervios|content|preparad|cansad|desconectad|list|segur|orgullos|enfadad|aburrid|emocionad|preocupad|agobiad|perdid|maread|asustad|enamorad|obligad|acompañad|equivocad|sol|sorprendid|avergonzad|celos|santo|dormid|despiert|ocupad|harto|hart|valiente\\b|loc|tímid|timid|callad|sincer|honest|generos|egoíst|egoist|celos|libre\\b|culpable\\b|contento|solit)';
+const YOU = '(?:estás|estabas|estuviste|estarías|estarás|estés|estuvieras|eres|fuiste|eras|serías|seas|fueras|sientes|sentías|sentiste|sentirte|te sientes|te sentiste|te sentías|te sentirías|te sientas|te pones|te pone|te ponen|te ponía|te puso|te quedas|te quedaste|quedarte|te ves|te veías|pareces|parecías|vas|ibas|viajas|viajabas|vives|vivías|sigues|te quedes|estar|sentirse|quedarse|ponerse|eres tan|tú)';
+const ME = '(?:estoy|estaba|estuve|estaría|me siento|me sentí|me sentía|me sentiría|me pongo|me pone|me ponen|me puso|me ponía|me quedo|me quedé|soy|era|fui|sería|voy|iba|viajo|vivo|sentirme|ponerme|quedarme)';
+const ADV = '(?:\\s+(?:muy|tan|más|menos|un poco|bastante|demasiado|algo|siempre|nunca|todavía|ya|tranquilamente|hoy))*[:,]?';
+const genderRe = (link) => new RegExp(`(?<!\\p{L})${link}${ADV}\\s+${ADJ}(?:o|a|os|as)?(?!\\p{L})`, 'iu');
+const YOU_RE = genderRe(YOU), ME_RE = genderRe(ME);
+const DOUBLET = /(?<!\p{L})(\p{L}{3,})o(s?) (?:o|y|u) \1a\2(?!\p{L})|(?<!\p{L})(\p{L}{3,})a(s?) (?:o|y|u) \3o\4(?!\p{L})|(?<!\p{L})(?:ti|tú) mism[oa] o (?:de )?(?:ti|tú) mism[oa]|\p{L}o\/a\b|\p{L}\(a\)|\p{L}@/iu;
+const NOUN_YOU = /(?<!\p{L})(?:eres|eras|fuiste|serías|seas|pareces|parecías)\s+(?:todo\s+)?(?:un|una)\s+\p{L}+/iu;
+const TOGETHER = /(?<!\p{L})\p{L}+(?:emos|amos|imos)\s+(?:tú y yo\s+)?junt(?:a|o)s(?!\p{L})|(?<!\p{L})(?:vamos|vayamos|bajemos|subamos)\s+junt(?:a|o)s(?!\p{L})/iu;
+// kind 'you': addressed to the student; 'me': said by the student; 'reply': an answer to the student;
+// 'npc': narration or a line between characters (only «tú» lines count); 'scene': characters talking among themselves.
+export function genderProblems(text, kind) {
+  const t = String(text ?? '');
+  const out = [];
+  if (DOUBLET.test(t)) out.push('o/a doublet');
+  if (kind === 'scene') return out;
+  if (kind !== 'npc' || /(?<!\p{L})tú(?!\p{L})/iu.test(t)) { if (YOU_RE.test(t)) out.push(`gendered «${t.match(YOU_RE)[0]}»`); }
+  if (kind === 'npc') return out;
+  if (NOUN_YOU.test(t)) out.push(`gendered «${t.match(NOUN_YOU)[0]}»`);
+  if (kind === 'me' && ME_RE.test(t)) out.push(`gendered «${t.match(ME_RE)[0]}»`);
+  if (TOGETHER.test(t)) out.push(`gendered «${t.match(TOGETHER)[0]}»`);
+  return out;
+}
+// Every text of the class with the role it plays for the student.
+export function studentTexts(level, content) {
+  const a0 = level === 'A0';
+  const es = (v) => (a0 && v && typeof v === 'object' ? v.es : v) ?? '';
+  const out = [];
+  for (const [id, s] of Object.entries(content ?? {})) {
+    out.push([`${level} ${id} line`, es(s.line), 'npc'], [`${level} ${id} ask`, es(s.ask), 'you']);
+    for (const [who, line] of s.dialogue ?? []) out.push([`${level} ${id} dialogue ${who}`, es(line), 'npc']);
+    (s.options ?? []).forEach((o, i) => out.push([`${level} ${id} option ${i} say`, es(o.say), 'me'], [`${level} ${id} option ${i} reply`, es(o.reply), 'reply'], [`${level} ${id} option ${i} end`, es(o.end), 'npc']));
+    (s.talk ?? []).forEach((q, i) => out.push([`${level} ${id} talk ${i}`, es(q), 'you']));
+  }
+  return out;
+}
+export function listeningTexts(level, file) {
+  const out = [];
+  for (const item of file.items) {
+    for (const l of item.lines ?? []) out.push([`${level} listening ${item.id} line`, l.text, 'scene']);
+    for (const c of item.choice ?? []) { out.push([`${level} listening ${item.id} choice`, c.q, 'you']); for (const o of c.options) out.push([`${level} listening ${item.id} option`, typeof o === 'string' ? o : o.es, 'scene']); }
+    for (const o of item.open ?? []) out.push([`${level} listening ${item.id} open`, o.q, 'you'], [`${level} listening ${item.id} model`, o.model, 'me']);
+  }
+  return out;
+}
+export function inviteTexts(INVITADOS) {
+  const out = [];
+  for (const [key, p] of Object.entries(INVITADOS)) {
+    out.push([`invitados ${key} basic`, p.basic?.es, 'npc'], [`invitados ${key} mid`, p.mid, 'npc'], [`invitados ${key} high`, p.high, 'npc']);
+    out.push([`invitados ${key} basicAsk`, p.basicAsk?.es, 'you'], [`invitados ${key} midAsk`, p.midAsk, 'you'], [`invitados ${key} highAsk`, p.highAsk, 'you']);
+  }
+  return out;
+}
+// From B1, questions are open: no «¿A o B?» choices.
+export const EITHER_OR = /^¿[^?]*\s(?:o|u)\s[^?]*\?$/u;
+const bag = (t) => new Set(String(t).toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g, '').match(/\p{L}{3,}/gu) ?? []);
+export function jaccard(a, b) { const x = bag(a), y = bag(b); const inter = [...x].filter((w) => y.has(w)).length; return inter / (new Set([...x, ...y]).size || 1); }
+// C2 is not C1 with fancier words: the same talk question at the same place may share at most 30% of its words.
+export function c1c2Overlap(c1, c2) {
+  const out = [];
+  for (const id of Object.keys(c2 ?? {})) (c2[id].talk ?? []).forEach((q, i) => { const j = jaccard(c1?.[id]?.talk?.[i] ?? '', q); if (j >= 0.3) out.push(`C2 ${id} talk ${i}: shares ${Math.round(j * 100)}% of its words with C1 (max 30%); give C2 its own task`); });
   return out;
 }
 
@@ -108,9 +180,11 @@ export function checkLevel(level, content) {
     }
     if (new Set(talk.map((q) => es(q).toLocaleLowerCase('es'))).size !== talk.length) bad(at, 'talk questions repeat');
     if (talk.filter((q) => TRAVEL.test(es(q))).length > 2) bad(at, 'more than 2 of the 5 talk questions stay on the ship; move them to the student\'s life');
+    if (!['A0', 'A1', 'A2'].includes(level)) for (const q of talk) if (EITHER_OR.test(es(q).trim())) bad(at, `talk «${es(q)}» is an either/or question; make it open`);
     const list = Array.isArray(s.words) ? s.words : [];
     if (list.length < 4 || list.length > 6 || !list.every(word)) bad(at, `words needs 4 to 6 entries${a0 || level === 'A1' ? ', each { es, en }' : ''}`);
   }
+  for (const [where, text, kind] of studentTexts(level, content)) for (const g of genderProblems(text, kind)) out.push(`${where}: ${g} «${String(text).slice(0, 80)}»; the student has no gender`);
   return out;
 }
 
@@ -153,6 +227,13 @@ async function main() {
   }
   for (const [key, p] of Object.entries(INVITADOS)) for (const k of ['basicAsk', 'midAsk', 'highAsk']) asked.push([typeof p[k] === 'string' ? p[k] : p[k]?.es ?? '', `invitados ${key} ${k}`]);
   problems.push(...crossClassDuplicates(asked));
+  for (const [where, text, kind] of inviteTexts(INVITADOS)) for (const g of genderProblems(text, kind)) problems.push(`${where}: ${g} «${String(text).slice(0, 80)}»`);
+  for (const level of LEVEL_IDS) {
+    const file = JSON.parse(readFileSync(`app/escucha-3d/content/crucero/${level.toLowerCase()}.json`, 'utf8'));
+    for (const [where, text, kind] of listeningTexts(level, file)) for (const g of genderProblems(text, kind)) problems.push(`${where}: ${g} «${String(text).slice(0, 80)}»`);
+  }
+  const C1 = (await import(pathToFileURL('app/ultimo-crucero/levels/c1.mjs').href)).default, C2 = (await import(pathToFileURL('app/ultimo-crucero/levels/c2.mjs').href)).default;
+  problems.push(...c1c2Overlap(C1, C2));
   for (const p of problems) console.error(p);
   console.log(problems.length ? `${problems.length} problems` : 'Último crucero: all levels OK');
   process.exitCode = problems.length ? 1 : 0;

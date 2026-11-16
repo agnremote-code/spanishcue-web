@@ -76,7 +76,7 @@
      "q": "¿Qué consejo le dieron a Amparo que no le sirvió?",
      "options": [
       "Hablar de Paco en voz alta",
-      "Volver al barco donde lo conoció hace cuarenta años",
+      "Volver al barco donde lo conoció hace casi cincuenta años",
       "Mantenerse ocupada y no mirar fotos"
      ],
      "answer": 2
@@ -1508,7 +1508,7 @@
      "model": "Una canción de verano me lleva a un viaje en coche con mis primos, con las ventanillas bajadas."
     },
     {
-     "q": "¿Qué gesto pequeño de un desconocido te acompañó cuando estabas solo o sola?",
+     "q": "¿Qué gesto pequeño de un desconocido te acompañó en un momento de soledad?",
      "model": "En una estación, una señora me ofreció la mitad de su bocadillo cuando el tren se fue sin mí."
     },
     {
@@ -1880,7 +1880,7 @@
    ],
    "open": [
     {
-     "q": "¿Qué truco usas para que los demás no noten que estás nervioso o nerviosa?",
+     "q": "¿Qué truco usas para que los demás no noten que tienes nervios?",
      "model": "Hablo más despacio y sujeto algo con las manos, como un bolígrafo."
     },
     {

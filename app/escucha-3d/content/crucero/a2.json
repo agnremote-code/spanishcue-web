@@ -26,7 +26,7 @@
     },
     {
      "s": 0,
-     "text": "Aquí mismo, en mil novecientos setenta y seis. Yo viajaba con mis padres. Una noche quise un zumo de naranja en el salón y Paco me trajo un cóctel con ron."
+     "text": "Aquí mismo, en mil novecientos setenta y ocho. Una noche pedí un zumo de naranja en el salón y Paco me trajo un cóctel con ron."
     },
     {
      "s": 1,
@@ -42,15 +42,15 @@
     },
     {
      "s": 0,
-     "text": "Me lo tomé, claro. Y al día siguiente volví al salón y otra vez quería un zumo de naranja. Me trajo otro cóctel. Nos casamos un año después."
+     "text": "Me lo tomé, claro. Y al día siguiente volví al salón y otra vez pedí un zumo de naranja. Me trajo otro cóctel. Nos casamos un año después."
     }
    ],
    "choice": [
     {
      "q": "¿Cuándo conoció Amparo a Paco?",
      "options": [
-      "En mil novecientos noventa y seis",
-      "En mil novecientos setenta y seis",
+      "En mil novecientos noventa y ocho",
+      "En mil novecientos setenta y ocho",
       "El año pasado"
      ],
      "answer": 1
@@ -1343,7 +1343,7 @@
     },
     {
      "q": "¿Dónde cantas cuando nadie te escucha?",
-     "model": "Canto en el coche cuando voy solo."
+     "model": "Canto en el coche cuando no hay nadie."
     }
    ],
    "gaps": "Me puse tan [nerviosa] que no [salió] la [voz]. El [director] me dijo: «No sabes cantar, pero sonríes muy bien.",

@@ -910,7 +910,7 @@
    ],
    "open": [
     {
-     "q": "¿Qué haces para estar tranquilo en una tormenta?",
+     "q": "¿Qué haces para tener calma en una tormenta?",
      "model": "Pongo música y leo un libro."
     },
     {
@@ -1025,7 +1025,7 @@
      "model": "Quiero visitar mi primera escuela."
     },
     {
-     "q": "¿Dónde te escondes cuando quieres estar solo?",
+     "q": "¿Dónde te escondes cuando no quieres ver a nadie?",
      "model": "Me escondo en mi habitación con música."
     },
     {
@@ -1230,8 +1230,8 @@
      "model": "No canto nunca delante de otras personas."
     },
     {
-     "q": "¿Qué te pone nervioso delante de un micrófono?",
-     "model": "Me pone nervioso olvidar las palabras."
+     "q": "¿Qué te da nervios delante de un micrófono?",
+     "model": "Me dan nervios olvidar las palabras."
     }
    ],
    "gaps": "Si el [barco] se [mueve], ustedes [bailan] con [él].",
@@ -1423,8 +1423,8 @@
    ],
    "open": [
     {
-     "q": "¿Qué mensaje te pone contento?",
-     "model": "Me pone contento un mensaje de un viejo amigo."
+     "q": "¿Qué mensaje te da alegría?",
+     "model": "Me da alegría un mensaje de un viejo amigo."
     },
     {
      "q": "¿A quién escribes cuando tienes una buena noticia?",
@@ -1650,7 +1650,7 @@
    "open": [
     {
      "q": "¿Qué dices cuando no quieres hablar de tu miedo?",
-     "model": "Digo que estoy cansado."
+     "model": "Digo que tengo sueño."
     },
     {
      "q": "¿A quién obedeces sin preguntar nada?",

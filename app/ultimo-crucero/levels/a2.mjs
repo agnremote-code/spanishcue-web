@@ -85,7 +85,7 @@ export default {
     ],
     talk: [
       "¿Qué animal encontraste o adoptaste alguna vez?",
-      "¿Qué hiciste en secreto cuando eras pequeño o pequeña?",
+      "¿Qué hiciste en secreto en tu infancia?",
       "¿Por qué discuten a veces las familias?",
       "¿Qué hiciste la primera vez que te quedaste sin trabajo o sin casa?",
       "¿Con quién te reconciliaste después de mucho tiempo?",
@@ -179,7 +179,7 @@ export default {
       "¿Qué secreto guardaste en un trabajo o en clase?",
       "¿Cómo repartiste algo cuando no había para todos?",
       "¿Qué hiciste para parecer fuerte delante de otras personas?",
-      "¿Qué remedio te funcionó cuando estuviste enfermo o enferma?",
+      "¿Qué remedio te funcionó la última vez que tuviste gripe?",
       "¿Quién te cuidó sin pedirte nada?",
     ],
     words: ["la cola", "el grifo", "repartir", "la camilla", "la galleta salada"],
@@ -309,12 +309,12 @@ export default {
     ],
     ask: "Sole te enseña el papel. ¿Qué le dices?",
     options: [
-      { say: "Dásela ahora. Una buena noticia da fuerzas.", reply: "Tienes razón. Bajamos juntos a la sala de máquinas.", end: "Teodoro lee el mensaje dos veces. Luego se limpia la cara con un trapo y le dice a la máquina: «Dolores, mi hijo me espera».", mood: "love" },
+      { say: "Dásela ahora. Una buena noticia da fuerzas.", reply: "Tienes razón. Bajamos tú y yo a la sala de máquinas.", end: "Teodoro lee el mensaje dos veces. Luego se limpia la cara con un trapo y le dice a la máquina: «Dolores, mi hijo me espera».", mood: "love" },
       { say: "Guárdala para el amanecer, como un regalo.", reply: "Me gusta. La meto en un sobre de los antiguos.", end: "Sole pone el mensaje en un sobre amarillo de 1980 y escribe: «Para Teodoro. Abrir al ver Cádiz».", mood: "smile" },
       { say: "Sole, ¿y tú? ¿A quién le mandas un mensaje esta noche?", reply: "¿Yo? Nunca mando nada mío. Bueno… a mi madre, quizás.", end: "Sole escribe su primer mensaje personal en años: «Mamá, mañana llego. Te quiero. Sole».", mood: "sad" },
     ],
     talk: [
-      "¿Qué tecnología antigua usaste cuando eras pequeño o pequeña?",
+      "¿Qué tecnología antigua usaste en tu infancia?",
       "¿Qué noticia importante recibiste en un mal momento?",
       "¿Cómo diste una buena noticia a alguien?",
       "¿A quién mandaste un mensaje que te costó escribir?",
@@ -380,7 +380,7 @@ export default {
     options: [
       { say: "Bajaría la velocidad. Llegamos tarde, pero llegamos todos.", reply: "Eso pienso yo. Que la compañía pague el retraso.", end: "El Albatros baja la velocidad. Llega a Cádiz a las nueve, con el sol alto y todos los pasajeros sanos.", mood: "smile" },
       { say: "¡A toda máquina! La compañía quiere las siete.", reply: "Muy bien. Marina, ¡a toda máquina!", end: "El barco salta entre las olas toda la noche. A las siete menos un minuto aparece el faro de Cádiz. Nadie aplaude: todos están mareados.", mood: "scared" },
-      { say: "Antes de entrar, demos una vuelta por la bahía. Para despedirnos.", reply: "Una vuelta de honor… Nadie me lo pidió en cuarenta años. ¡Hagámosla!", end: "El Albatros da una vuelta lenta por la bahía con la bocina sonando. En el muelle, cientos de personas dicen adiós con pañuelos blancos.", mood: "love" },
+      { say: "Antes de entrar, demos una vuelta por la bahía. Para despedirnos.", reply: "Una vuelta de honor… Nadie me lo pidió en cincuenta años a bordo. ¡Hagámosla!", end: "El Albatros da una vuelta lenta por la bahía con la bocina sonando. En el muelle, cientos de personas dicen adiós con pañuelos blancos.", mood: "love" },
     ],
     talk: [
       "¿Qué trabajo humilde te enseñó algo importante?",

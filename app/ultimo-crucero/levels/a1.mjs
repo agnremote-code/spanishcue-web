@@ -3,7 +3,7 @@ const t = (es, en) => ({ es, en });
 export default {
   popa: {
     title: "Cenizas con viento",
-    line: "Son las ocho de la noche. Empieza la tormenta. Tú viajas solo en el último viaje del Albatros, y el capitán te pide un favor: escribir las historias de la noche en su cuaderno. En la popa, una señora mayor abraza una caja de madera.",
+    line: "Son las ocho de la noche. Empieza la tormenta. Viajas sin compañía en el último viaje del Albatros, y el capitán te pide un favor: escribir las historias de la noche en su cuaderno. En la popa, una señora mayor abraza una caja de madera.",
     dialogue: [
       ["amparo", "Me llamo Amparo. Aquí están las cenizas de mi marido, Paco. Él quiere volver al mar desde este barco."],
       ["ezequiel", "Señora, soy el sobrecargo. Con este viento no es una buena idea."],
@@ -11,7 +11,7 @@ export default {
     ],
     ask: "Amparo abre un poco la caja y te mira. ¿Qué le dices?",
     options: [
-      { say: "Amparo, ¿por qué no espera al amanecer? Mañana el viento va a estar más tranquilo.", reply: "Tienes razón. Paco nunca tiene prisa.", end: "Amparo cierra la caja y se sienta con ella. Va a esperar al sol.", mood: "smile" },
+      { say: "Amparo, ¿por qué no espera al amanecer? Mañana va a hacer menos viento.", reply: "Tienes razón. Paco nunca tiene prisa.", end: "Amparo cierra la caja y se sienta con ella. Va a esperar al sol.", mood: "smile" },
       { say: "Vamos, ahora. Yo le ayudo con la caja.", reply: "Gracias, cariño. Uno, dos… ¡tres!", end: "El viento cambia. Paco vuelve al mar, pero un poco de él termina en la chaqueta azul de Ezequiel.", mood: "laugh" },
       { say: "¿Cómo conoce a Paco?", reply: "En este barco, en 1978. Él es camarero y me trae un cóctel. No es el mío, pero me lo tomo.", end: "Amparo ríe: «Un cóctel equivocado y una vida entera». Ezequiel también sonríe.", mood: "love" },
     ],
@@ -80,8 +80,8 @@ export default {
     ],
     ask: "Almirante maúlla. ¿Qué le dices a Rosa?",
     options: [
-      { say: "Mi maleta es grande. Almirante puede bajar conmigo mañana.", reply: "¿En tu maleta? ¡Eres un ángel!", end: "Almirante entra en tu maleta y se duerme encima de tu ropa. No quiere salir.", mood: "smile" },
-      { say: "Vamos a hablar con el capitán. Es la última noche.", reply: "¿Con el capitán? ¿Estás loco? Bueno… vamos.", end: "El capitán mira al gato y dice: «Almirante, tripulante de honor». Rosa no lo puede creer.", mood: "laugh" },
+      { say: "Mi maleta es grande. Almirante puede bajar conmigo mañana.", reply: "¿En tu maleta? ¡Qué buen corazón tienes!", end: "Almirante entra en tu maleta y se duerme encima de tu ropa. No quiere salir.", mood: "smile" },
+      { say: "Vamos a hablar con el capitán. Es la última noche.", reply: "¿Con el capitán? ¡Qué locura! Bueno… vamos.", end: "El capitán mira al gato y dice: «Almirante, tripulante de honor». Rosa no lo puede creer.", mood: "laugh" },
       { say: "Rosa, ¿tienes familia en tierra?", reply: "Tengo una hermana, Graciela. No hablamos desde hace veinte años.", end: "Rosa saca el teléfono y busca el número de Graciela. «Mañana la llamo», dice.", mood: "love" },
     ],
     talk: [
@@ -270,7 +270,7 @@ export default {
     ],
     talk: [
       "¿Qué juego de mesa juegas con tu familia?",
-      "¿Qué cosa haces sola o solo y nunca delante de gente?",
+      "¿Qué haces sin nadie delante?",
       "¿Qué recuerdo bonito cuentas con frecuencia?",
       "¿Qué premio raro tienes en casa?",
       "¿Qué haces cuando una fiesta es aburrida?",
@@ -292,7 +292,7 @@ export default {
       { say: "Maestro, ¿me enseña una canción fácil?", reply: "Es fácil: cuatro notas. La, do, mi, re.", end: "Tú tocas las cuatro notas del Albatros. Aurelio dice: «Muy bien. Ya eres pianista del barco».", mood: "smile" },
     ],
     talk: [
-      "¿Qué música escuchas cuando estás nervioso o nerviosa?",
+      "¿Qué música escuchas cuando tienes nervios?",
       "¿Qué sonido te relaja cuando hay mucho ruido?",
       "¿Qué haces hasta el final, aunque es difícil?",
       "¿Qué canción pones en una fiesta de despedida?",
@@ -370,7 +370,7 @@ export default {
   },
   capitan: {
     title: "La decisión del capitán",
-    line: "Son las cinco de la mañana. En el puente de mando, el capitán Arturo Salgado mira las pantallas. Tiene sesenta y cinco años y este es su último viaje. La compañía llama otra vez por la radio.",
+    line: "Son las cinco de la mañana. En el puente de mando, el capitán Arturo Salgado mira las pantallas. Tiene sesenta y cuatro años y este es su último viaje. La compañía llama otra vez por la radio.",
     dialogue: [
       ["salgado", "La compañía quiere llegar a Cádiz a las siete en punto. Sin retraso."],
       ["marina", "Capitán, las olas son de seis metros. Es peligroso."],

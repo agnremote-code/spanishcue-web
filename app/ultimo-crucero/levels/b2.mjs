@@ -82,7 +82,7 @@ export default {
     ],
     ask: "Rosa espera que la ayudes a ordenar sus ideas. ¿Qué le propones?",
     options: [
-      { say: "Yo lo bajaría en mi maleta. A los pasajeros casi no los revisan.", reply: "¿Arriesgarías una multa por un gato que acabas de conocer? Eres más loco que yo.", end: "Almirante se mete en tu maleta antes de que termines la frase. Ronronea sobre tu ropa como si llevara años esperando ese viaje.", mood: "smile" },
+      { say: "Yo lo bajaría en mi maleta. A los pasajeros casi no los revisan.", reply: "¿Arriesgarías una multa por un gato que acabas de conocer? Tienes más locura que yo.", end: "Almirante se mete en tu maleta antes de que termines la frase. Ronronea sobre tu ropa como si llevara años esperando ese viaje.", mood: "smile" },
       { say: "Le pediría al capitán que lo nombrara miembro de la tripulación. Esta noche está generoso.", reply: "¿Al capitán? Bueno, como ya me han despedido, no tengo nada que perder.", end: "El capitán acaricia al gato, se pone serio y firma un documento: «Almirante, tripulante de honor del Albatros». Rosa lo hará enmarcar.", mood: "laugh" },
       { say: "Si yo fuera tú, llamaría a tu hermana antes de bajar del barco.", reply: "¿Después de veinte años? ¿Y si me cuelga? Bueno… peor de lo que estamos no vamos a estar.", end: "Rosa encuentra el número de Graciela. Todavía no llama, pero se lo escribe en la palma de la mano para no poder fingir que lo ha perdido.", mood: "love" },
     ],
@@ -130,7 +130,7 @@ export default {
     ],
     ask: "Ambos te miran como si fueras el juez. ¿Qué les propones?",
     options: [
-      { say: "Si lo tienen decidido, firmen. Pero no dejen que una firma sea lo último que compartan.", reply: "Tiene razón. Desayunaremos juntos en Cádiz. Como gente civilizada.", end: "Firman sin hablar. Después, Ramón pregunta: «¿Café a las ocho?». Elena corrige: «A las ocho y media. Sé que llegarás tarde».", mood: "sad" },
+      { say: "Si lo tienen decidido, firmen. Pero no dejen que una firma sea lo último que compartan.", reply: "Tiene razón. Desayunaremos los dos en Cádiz. Como gente civilizada.", end: "Firman sin hablar. Después, Ramón pregunta: «¿Café a las ocho?». Elena corrige: «A las ocho y media. Sé que llegarás tarde».", mood: "sad" },
       { say: "Ninguna decisión tomada en una tormenta es del todo libre. Yo guardaría los papeles.", reply: "Es sensato. Llevamos un año dándole vueltas; un día más no cambia nada.", end: "Ramón guarda los papeles en el cajón. Elena lo cierra con la rodilla, como cierra todos los cajones desde 1995. Los dos fingen no darse cuenta.", mood: "neutral" },
       { say: "Antes de firmar, ¿podrían decirme algo que todavía les guste del otro?", reply: "¿De él? Que ronca. En los hoteles sin él, el silencio no me deja dormir.", end: "Ramón se queda colorado y confiesa que él no duerme sin la luz de leer de Elena. Esa noche nadie firma nada.", mood: "love" },
     ],
@@ -155,7 +155,7 @@ export default {
     options: [
       { say: "Yo enviaría una mañana. No todas, solo la que mejor te represente.", reply: "Puede que tengas razón. La de 1987: es la única en la que no me disculpo por nada.", end: "Germán guarda la carta de 1987 en el bolsillo interior de la chaqueta. Mañana buscará un buzón antes que un taxi.", mood: "smile" },
       { say: "¿Y si la buscamos ahora? Con un nombre y una ciudad, hoy se encuentra a casi cualquiera.", reply: "No creo que… ¡Isabel Cárdenas, Quito! Cinco nietos y la misma sonrisa.", end: "Germán le escribe: «Soy Germán, del baile del Albatros». Un minuto después, Isabel le da un me gusta. Germán tiene que sentarse en el suelo.", mood: "surprised" },
-      { say: "Quizás esas cartas fueron siempre para ti, una forma de no sentirte solo.", reply: "Es posible. Me hicieron compañía durante cuarenta años. No es poco.", end: "Germán lee una carta en voz alta y termina riéndose: «Era un cobarde, pero tenía buena letra».", mood: "sad" },
+      { say: "Quizás esas cartas fueron siempre para ti, una forma de sentir compañía.", reply: "Es posible. Me hicieron compañía durante cuarenta años. No es poco.", end: "Germán lee una carta en voz alta y termina riéndose: «Era un cobarde, pero tenía buena letra».", mood: "sad" },
     ],
     talk: [
       "¿Qué te parece peor: un no claro o una duda que dura años?",
@@ -315,9 +315,9 @@ export default {
     ],
     ask: "Sole te pregunta qué harías tú en su lugar. ¿Qué le contestas?",
     options: [
-      { say: "Yo se lo daría ahora. Una buena noticia no distrae; da fuerzas.", reply: "Tienes razón. Bajemos juntas a la sala de máquinas.", end: "Teodoro lee el mensaje dos veces. Se limpia la cara con un trapo lleno de aceite y le dice a la máquina: «Aguanta, Dolores. Mi hijo me espera».", mood: "love" },
+      { say: "Yo se lo daría ahora. Una buena noticia no distrae; da fuerzas.", reply: "Tienes razón. Bajemos tú y yo a la sala de máquinas.", end: "Teodoro lee el mensaje dos veces. Se limpia la cara con un trapo lleno de aceite y le dice a la máquina: «Aguanta, Dolores. Mi hijo me espera».", mood: "love" },
       { say: "Yo lo guardaría para el amanecer, como quien guarda un regalo.", reply: "Me convence. Lo meteré en un sobre de los de antes.", end: "Sole guarda el mensaje en un sobre amarillo de 1980 y escribe con su mejor letra: «Para Teodoro. Abrir al ver Cádiz».", mood: "smile" },
-      { say: "Sole, ¿y a ti quién te espera mañana en el muelle?", reply: "Nadie. Llevo treinta años transmitiendo los mensajes de los demás; los míos nunca los envío.", end: "Sole escribe, por primera vez en años, un mensaje personal: «Mamá, mañana llego. Te echo de menos. Pon el café».", mood: "sad" },
+      { say: "Sole, ¿y a ti quién te espera mañana en el muelle?", reply: "Nadie. Llevo treinta y cuatro años transmitiendo los mensajes de los demás; los míos nunca los envío.", end: "Sole escribe, por primera vez en años, un mensaje personal: «Mamá, mañana llego. Te echo de menos. Pon el café».", mood: "sad" },
     ],
     talk: [
       "¿Cuándo crees que retrasar una noticia es una forma de protección y cuándo de control?",
@@ -386,8 +386,8 @@ export default {
     ask: "El capitán espera tu opinión. ¿Qué le recomiendas?",
     options: [
       { say: "Yo reduciría la velocidad. Un retraso se paga; un accidente, no.", reply: "Estoy de acuerdo. Que la compañía pague la diferencia; para eso tiene contables.", end: "El Albatros reduce la velocidad. Llega a Cádiz a las nueve, con todos los pasajeros sanos y el sol muy alto sobre la ciudad.", mood: "smile" },
-      { say: "Yo mantendría la velocidad. Ha cumplido el horario cuarenta años; puede cumplirlo una vez más.", reply: "Muy bien. Por última vez: a toda máquina. Que nadie diga que el Albatros llegó tarde.", end: "El barco salta entre las olas. A las siete menos un minuto aparece el faro de Cádiz. Nadie lo celebra: están todos mareados.", mood: "scared" },
-      { say: "¿Y si, antes de atracar, damos una vuelta de honor por la bahía?", reply: "¿Una vuelta de honor? En cuarenta años nadie me lo había propuesto. ¡Hagámoslo!", end: "El Albatros recorre la bahía despacio, con la bocina sonando. En el muelle, cientos de antiguos tripulantes agitan pañuelos blancos.", mood: "love" },
+      { say: "Yo mantendría la velocidad. Ha cumplido el horario treinta años; puede cumplirlo una vez más.", reply: "Muy bien. Por última vez: a toda máquina. Que nadie diga que el Albatros llegó tarde.", end: "El barco salta entre las olas. A las siete menos un minuto aparece el faro de Cádiz. Nadie lo celebra: están todos mareados.", mood: "scared" },
+      { say: "¿Y si, antes de atracar, damos una vuelta de honor por la bahía?", reply: "¿Una vuelta de honor? En cincuenta años a bordo nadie me lo había propuesto. ¡Hagámoslo!", end: "El Albatros recorre la bahía despacio, con la bocina sonando. En el muelle, cientos de antiguos tripulantes agitan pañuelos blancos.", mood: "love" },
     ],
     talk: [
       "¿Cuándo has elegido la seguridad aunque te costara dinero o prestigio?",

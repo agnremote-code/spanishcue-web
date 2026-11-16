@@ -82,7 +82,7 @@ export default {
     ],
     ask: "Rosa espera que la ayudes a ordenar el desorden. ¿Qué le sugieres?",
     options: [
-      { say: "Lo bajaría en mi equipaje. Si alguien pregunta, declararé un peluche de carácter difícil.", reply: "¿Arriesgarías una multa por un gato al que conoces desde hace un cuarto de hora? No sé si eres un santo o un inconsciente.", end: "Almirante se instala en tu maleta antes de que acabes la frase, con la naturalidad de quien ha sido polizón toda su vida.", mood: "smile" },
+      { say: "Lo bajaría en mi equipaje. Si alguien pregunta, declararé un peluche de carácter difícil.", reply: "¿Arriesgarías una multa por un gato al que conoces desde hace un cuarto de hora? No sé si es santidad o inconsciencia.", end: "Almirante se instala en tu maleta antes de que acabes la frase, con la naturalidad de quien ha sido polizón toda su vida.", mood: "smile" },
       { say: "Le pediría al capitán que lo nombrara tripulante de honor. Esta noche tiene la sensiblería a flor de piel.", reply: "Como ya estoy despedida, lo peor que puede pasar es que el capitán sea alérgico. Vamos allá.", end: "El capitán acaricia al gato con gravedad notarial y firma un documento: «Almirante, tripulante de honor del Albatros». Rosa jura que lo hará enmarcar en pan de oro.", mood: "laugh" },
       { say: "En tu lugar, llamaría a tu hermana antes de tocar tierra. Recomenzar es menos áspero con alguien que te conoció antes de todo esto.", reply: "Veinte años de orgullo no se disuelven con una llamada… aunque quizás sea así como empiezan a disolverse.", end: "Rosa busca el número de Graciela. No llama todavía, pero se lo escribe en la palma de la mano para no poder fingir, mañana, que lo ha extraviado.", mood: "love" },
     ],
@@ -130,7 +130,7 @@ export default {
     ],
     ask: "Ambos te observan como si fueras el notario de su destino. ¿Qué les dices?",
     options: [
-      { say: "Si la decisión está tomada, firmen. Pero no consientan que una rúbrica sea lo último que compartan.", reply: "Tiene razón. Desayunaremos juntos en Cádiz, como dos personas sensatas que se quisieron con insensatez.", end: "Firman sin mirarse. Después, Ramón propone: «¿Café a las ocho?». Elena corrige sin levantar la vista: «A las ocho y media. Llegarás tarde de todos modos».", mood: "sad" },
+      { say: "Si la decisión está tomada, firmen. Pero no consientan que una rúbrica sea lo último que compartan.", reply: "Tiene razón. Desayunaremos los dos en Cádiz, como dos personas sensatas que se quisieron con insensatez.", end: "Firman sin mirarse. Después, Ramón propone: «¿Café a las ocho?». Elena corrige sin levantar la vista: «A las ocho y media. Llegarás tarde de todos modos».", mood: "sad" },
       { say: "Ninguna decisión tomada en plena tormenta es del todo libre. Yo dejaría que los papeles durmieran en un cajón.", reply: "Es lo más sensato que se ha dicho en este camarote desde 1995, y no es un elogio menor.", end: "Ramón guarda los papeles en el cajón. Elena lo cierra con la rodilla, como lleva treinta y un años haciendo. Ninguno de los dos se atreve a comentarlo.", mood: "neutral" },
       { say: "Antes de firmar, ¿podrían confesar qué es lo que todavía les gusta del otro?", reply: "¿De él? Que ronca. Cuando duermo sola en un hotel, el silencio me resulta ensordecedor.", end: "Ramón se ruboriza y admite que no consigue conciliar el sueño sin la lámpara de lectura de Elena. Esa noche nadie firma nada.", mood: "love" },
     ],
@@ -315,9 +315,9 @@ export default {
     ],
     ask: "Sole te pregunta qué harías en su lugar. ¿Qué le contestas?",
     options: [
-      { say: "Se lo daría ahora. Una buena noticia no distrae: apuntala.", reply: "Tienes razón. Bajemos juntas a la sala de máquinas antes de que me arrepienta.", end: "Teodoro lee el mensaje dos veces. Se enjuga la cara con un trapo lleno de aceite y le susurra a la máquina: «Aguanta, Dolores. Mi hijo me espera».", mood: "love" },
+      { say: "Se lo daría ahora. Una buena noticia no distrae: apuntala.", reply: "Tienes razón. Bajemos tú y yo a la sala de máquinas antes de que me arrepienta.", end: "Teodoro lee el mensaje dos veces. Se enjuga la cara con un trapo lleno de aceite y le susurra a la máquina: «Aguanta, Dolores. Mi hijo me espera».", mood: "love" },
       { say: "Lo guardaría para el amanecer, como quien reserva un regalo para el instante preciso.", reply: "Me convence. Lo meteré en uno de esos sobres que ya solo existen en los museos.", end: "Sole guarda el mensaje en un sobre amarillo de 1980 y escribe con su mejor caligrafía: «Para Teodoro. Abrir al avistar Cádiz».", mood: "smile" },
-      { say: "Sole, y a ti, ¿quién te aguarda mañana en el muelle?", reply: "Nadie. Llevo treinta años transmitiendo los mensajes de los demás; los míos se quedan siempre en borrador.", end: "Sole redacta, por primera vez en años, un mensaje propio: «Mamá, mañana llego. Te echo de menos. Pon el café».", mood: "sad" },
+      { say: "Sole, y a ti, ¿quién te aguarda mañana en el muelle?", reply: "Nadie. Llevo treinta y cuatro años transmitiendo los mensajes de los demás; los míos se quedan siempre en borrador.", end: "Sole redacta, por primera vez en años, un mensaje propio: «Mamá, mañana llego. Te echo de menos. Pon el café».", mood: "sad" },
     ],
     talk: [
       "¿Cuándo demorar una noticia es una forma de cuidado y cuándo una usurpación?",
@@ -386,8 +386,8 @@ export default {
     ask: "El capitán aguarda tu respuesta. ¿Qué le recomiendas?",
     options: [
       { say: "Reduciría la velocidad. Un retraso se paga con dinero; un accidente, con una moneda que no admite reembolso.", reply: "Suscribo cada palabra. Que la compañía asuma la diferencia; para eso mantiene un ejército de contables.", end: "El Albatros reduce la velocidad. Llega a Cádiz a las nueve, con el sol en lo alto y todos los pasajeros sanos y salvos.", mood: "smile" },
-      { say: "Mantendría la velocidad. Ha honrado el horario durante cuarenta años; fallar justo hoy tendría algo de patético.", reply: "Sea. Por última vez: a toda máquina. Que nadie diga que el Albatros llegó tarde a su propio entierro.", end: "El barco salta entre las olas. A las siete menos un minuto asoma el faro de Cádiz. Nadie lo celebra: el pasaje está demasiado mareado para aplaudir.", mood: "scared" },
-      { say: "Antes de atracar, daría una vuelta de honor por la bahía. Un barco así no merece entrar de puntillas.", reply: "¿Una vuelta de honor? En cuarenta años nadie me lo había sugerido. La compañía me va a crucificar. Adelante.", end: "El Albatros recorre la bahía con parsimonia, la bocina sonando. En el muelle, cientos de antiguos tripulantes agitan pañuelos blancos.", mood: "love" },
+      { say: "Mantendría la velocidad. Ha honrado el horario durante treinta años; fallar justo hoy tendría algo de patético.", reply: "Sea. Por última vez: a toda máquina. Que nadie diga que el Albatros llegó tarde a su propio entierro.", end: "El barco salta entre las olas. A las siete menos un minuto asoma el faro de Cádiz. Nadie lo celebra: el pasaje está demasiado mareado para aplaudir.", mood: "scared" },
+      { say: "Antes de atracar, daría una vuelta de honor por la bahía. Un barco así no merece entrar de puntillas.", reply: "¿Una vuelta de honor? En cincuenta años a bordo nadie me lo había sugerido. La compañía me va a crucificar. Adelante.", end: "El Albatros recorre la bahía con parsimonia, la bocina sonando. En el muelle, cientos de antiguos tripulantes agitan pañuelos blancos.", mood: "love" },
     ],
     talk: [
       "¿Cuándo has antepuesto la integridad a la rentabilidad, y a qué precio?",

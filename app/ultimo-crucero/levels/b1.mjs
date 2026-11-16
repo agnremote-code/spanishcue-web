@@ -314,7 +314,7 @@ export default {
     ],
     ask: "Sole te pregunta qué harías tú. ¿Qué le contestas?",
     options: [
-      { say: "Yo se lo daría ahora. Una buena noticia siempre da fuerzas.", reply: "Tienes razón. Bajemos juntos a la sala de máquinas.", end: "Teodoro lee el mensaje dos veces. Se limpia la cara con un trapo lleno de aceite y le dice a la máquina: «Dolores, mi hijo me espera».", mood: "love" },
+      { say: "Yo se lo daría ahora. Una buena noticia siempre da fuerzas.", reply: "Tienes razón. Bajemos tú y yo a la sala de máquinas.", end: "Teodoro lee el mensaje dos veces. Se limpia la cara con un trapo lleno de aceite y le dice a la máquina: «Dolores, mi hijo me espera».", mood: "love" },
       { say: "Yo lo guardaría para el amanecer, como se guarda un regalo.", reply: "Me gusta. Lo meto en un sobre de los antiguos.", end: "Sole guarda el mensaje en un sobre amarillo y escribe: «Para Teodoro. Abrir al ver Cádiz».", mood: "smile" },
       { say: "Sole, y para ti, ¿quién te espera mañana en el muelle?", reply: "Nadie. Yo transmito los mensajes de los demás; los míos nunca los envío.", end: "Sole escribe su primer mensaje personal en años: «Mamá, mañana llego. Te echo de menos».", mood: "sad" },
     ],
@@ -385,8 +385,8 @@ export default {
     ask: "El capitán espera tu opinión. ¿Qué le recomiendas?",
     options: [
       { say: "Le recomiendo que baje la velocidad. Es mejor llegar tarde que no llegar.", reply: "Estoy de acuerdo. Que la compañía pague la diferencia.", end: "El Albatros reduce la velocidad. Llega a Cádiz a las nueve, con todos los pasajeros sanos y el sol muy alto.", mood: "smile" },
-      { say: "Yo seguiría a toda máquina. Ha cumplido el horario durante cuarenta años.", reply: "De acuerdo. Una última vez, a toda máquina.", end: "El barco salta entre las olas. A las siete menos un minuto aparece el faro de Cádiz. Nadie celebra nada: están todos mareados.", mood: "scared" },
-      { say: "¿Y si antes de entrar damos una vuelta de honor por la bahía?", reply: "¿Una vuelta de honor? Nadie me lo había propuesto en cuarenta años. ¡Hagámoslo!", end: "El Albatros da una vuelta lenta por la bahía con la bocina sonando. En el muelle, cientos de personas agitan pañuelos blancos.", mood: "love" },
+      { say: "Yo seguiría a toda máquina. Ha cumplido el horario durante treinta años.", reply: "De acuerdo. Una última vez, a toda máquina.", end: "El barco salta entre las olas. A las siete menos un minuto aparece el faro de Cádiz. Nadie celebra nada: están todos mareados.", mood: "scared" },
+      { say: "¿Y si antes de entrar damos una vuelta de honor por la bahía?", reply: "¿Una vuelta de honor? Nadie me lo había propuesto en cincuenta años a bordo. ¡Hagámoslo!", end: "El Albatros da una vuelta lenta por la bahía con la bocina sonando. En el muelle, cientos de personas agitan pañuelos blancos.", mood: "love" },
     ],
     talk: [
       "¿Qué es más importante para ti: cumplir un horario o hacer las cosas bien?",

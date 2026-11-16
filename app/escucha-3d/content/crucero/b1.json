@@ -89,7 +89,7 @@
    ],
    "open": [
     {
-     "q": "¿Qué despedida importante aplazaste porque no te sentías preparado?",
+     "q": "¿Qué despedida importante aplazaste porque te faltaban fuerzas?",
      "model": "Aplacé la despedida de mi piso de estudiante; me costaba dejar aquel lugar."
     },
     {
@@ -2029,7 +2029,7 @@
     },
     {
      "q": "¿Qué se queda en las personas cuando termina una etapa?",
-     "model": "Se quedan las amistades y lo que aprendimos juntos."
+     "model": "Se quedan las amistades y lo que aprendimos con otras personas."
     },
     {
      "q": "¿Qué recuerdo de una casa que ya no existe guardas todavía?",
