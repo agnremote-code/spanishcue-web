@@ -33,6 +33,8 @@ export type Template = {
   scene: THREE.Object3D;
   /** Height of the hip joints above the ground in the model's own units. */
   hipHeight: number;
+  /** Height of the soles in the model's own units (the models stand around their origin). */
+  floor: number;
   /** Bind orientation of every bone relative to the model root, by bone name. */
   bind: Map<string, THREE.Quaternion>;
   /** Midpoint of the hip joints in the pelvis bone's own frame. */
@@ -79,7 +81,7 @@ export function prepareTemplate(scene: THREE.Object3D): Template {
     if (!mesh.geometry.boundingBox) mesh.geometry.computeBoundingBox();
     floor = Math.min(floor, (mesh.geometry.boundingBox as THREE.Box3).min.y);
   });
-  return { scene, hipHeight: hips.y - floor, bind, hipsInPelvis: hips.clone().applyMatrix4(inverseOf('pelvis')) };
+  return { scene, hipHeight: hips.y - floor, floor, bind, hipsInPelvis: hips.clone().applyMatrix4(inverseOf('pelvis')) };
 }
 
 const cache = new Map<string, Promise<Template>>();
@@ -153,7 +155,9 @@ function dyed(base: THREE.MeshStandardMaterial, top: string, bottom: string) {
   return variant(`${base.uuid}|${top}|${bottom}`, () => {
     const m = base.clone();
     const lum = (base.userData.lum as [number, number] | undefined) ?? [0.2, 0.2];
-    const uniforms = { uTop: { value: new THREE.Color(top) }, uBottom: { value: new THREE.Color(bottom) }, uLum: { value: new THREE.Vector2(lum[0], lum[1]) } };
+    // Worlds paint their people in poster colours; cloth under real light is a little greyer and darker.
+    const cloth = (hex: string) => { const c = new THREE.Color(hex), hsl = { h: 0, s: 0, l: 0 }; c.getHSL(hsl); return c.setHSL(hsl.h, hsl.s * 0.72, hsl.l * 0.9); };
+    const uniforms = { uTop: { value: cloth(top) }, uBottom: { value: cloth(bottom) }, uLum: { value: new THREE.Vector2(lum[0], lum[1]) } };
     m.color.set('#ffffff');
     m.onBeforeCompile = shader => {
       Object.assign(shader.uniforms, uniforms);
@@ -274,7 +278,17 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
 
   const scale = (HIP_JOINT * rig.scale) / template.hipHeight;
   model.scale.set(scale * girth, scale, scale * girth);
-  model.traverse(o => { if ((o as THREE.Mesh).isMesh) { o.castShadow = true; o.receiveShadow = false; } });
+  // Only what gives the silhouette casts a shadow, and each mesh is culled by a sphere around the whole standing person.
+  const bounds = new THREE.Sphere(new THREE.Vector3(0, template.floor + (0.9 * rig.scale) / scale, 0), 1.5 / scale);
+  const mouth: THREE.Object3D[] = [];
+  model.traverse(o => {
+    const mesh = o as THREE.SkinnedMesh;
+    if (!mesh.isMesh) return;
+    const small = /teeth|tongue|eyebrow|eyelash|low-poly/i.test(mesh.name);
+    mesh.castShadow = !small; mesh.receiveShadow = false;
+    mesh.boundingSphere = bounds; mesh.frustumCulled = true;
+    if (/teeth|tongue/i.test(mesh.name)) mouth.push(mesh);
+  });
   person.root.add(model);
 
   // Bones in hierarchy order, so a parent's orientation is known before its children's.
@@ -355,6 +369,7 @@ export function attachRealBody(person: Person, template: Template, model: THREE.
     setMorph('smile', clamp(n.smile, 0, 1));
     setMorph('frown', clamp(-n.smile, 0, 1));
     setMorph('open', clamp(n.open, 0, 1) * 0.55);
+    for (const m of mouth) m.visible = n.open > 0.04 || n.teeth > 0.3;
     setMorph('pucker', clamp(n.pucker, 0, 1));
 
     // Held things.

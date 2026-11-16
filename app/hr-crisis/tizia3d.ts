@@ -8,6 +8,7 @@
 // celebrate, think, facepalm, hands on hips) play on top of walking.
 import * as THREE from 'three';
 import { COUNTRIES } from './config.mjs';
+import { animatePerson, createPerson, setMood as setPersonMood, setPose, type Person } from '../noche-abierta/people3d';
 
 export type TiziaMood = 'smile' | 'laugh' | 'surprised' | 'worried' | 'sad' | 'neutral' | 'proud';
 export type TiziaGesture = 'wave' | 'celebrate' | 'think' | 'facepalm' | 'hips' | 'none';
@@ -22,6 +23,8 @@ export type Tizia = {
     legL: THREE.Group; legR: THREE.Group; browL: THREE.Mesh; browR: THREE.Mesh; lids: THREE.Mesh[];
     mouth: THREE.Mesh;
   };
+  /** In realistic mode Tizia is a person of the shared cast (app/mundo-real) and these drive her instead. */
+  person?: Person;
 };
 
 const mats = new Map<string, THREE.MeshStandardMaterial>();
@@ -198,9 +201,34 @@ export function createTizia(profile: { pais?: string } = {}, shadows = true): Ti
   return { root, setMood, gesture, state, parts: { body, head, hair, armL, armR, foreL, foreR, legL, legR, browL, browR, lids, mouth } };
 }
 
+const REAL_MOOD: Record<TiziaMood, string> = { smile: 'smile', laugh: 'laugh', surprised: 'surprised', worried: 'worried', sad: 'sad', neutral: 'neutral', proud: 'smile' };
+const REAL_GESTURE: Record<TiziaGesture, string> = { wave: 'wave', celebrate: 'hands-up', think: 'arms', facepalm: 'cry', hips: 'stand', none: 'stand' };
+
+/** Tizia for the realistic mode: the same student (curly brown hair, her country's colours on T-shirt and shorts) with a real body. */
+export function createRealTizia(profile: { pais?: string } = {}, shadows = true): Tizia {
+  const country = COUNTRIES[(profile.pais ?? 'BR') as keyof typeof COUNTRIES] ?? COUNTRIES.BR;
+  const person = createPerson({ skin: '#c98d62', body: 'f', age: 'young', height: 1.64, hairStyle: 'curly', hairColor: '#4a2c1a', top: 'tshirt', topColor: country.top, bottom: 'shorts', bottomColor: country.bottom, shoes: '#f4f4f2', seed: 258 }, shadows);
+  person.root.name = 'tizia';
+  const tizia = createTizia(profile, shadows);
+  const state = tizia.state;
+  return {
+    ...tizia, root: person.root, person,
+    setMood: mood => { state.mood = mood; setPersonMood(person, REAL_MOOD[mood]); },
+    gesture: (g, seconds = 2.2) => { state.gesture = g; state.until = state.clock + seconds; },
+  };
+}
+
 /** One frame: walk cycle, breathing, blinking, hair bounce and the gesture. */
 export function animateTizia(t: Tizia, dt: number, speed: number, talking: boolean, reduced = false) {
   const s = t.state, p = t.parts;
+  if (t.person) {
+    s.clock += dt;
+    const g = s.clock < s.until ? s.gesture : 'none';
+    const pose = g !== 'none' && g !== 'hips' ? REAL_GESTURE[g] : speed > 3.2 ? 'run' : speed > 0.2 ? 'walk' : 'stand';
+    if (t.person.pose !== pose) setPose(t.person, pose);
+    animatePerson(t.person, dt, speed, talking);
+    return;
+  }
   s.clock += dt;
   const moving = speed > 0.2;
   s.phase += dt * (moving ? Math.min(14, 4 + speed * 1.4) : 1.6);
