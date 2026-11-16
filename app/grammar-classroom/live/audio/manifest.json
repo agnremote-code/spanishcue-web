@@ -1,7 +1,7 @@
 {
   "producer": "Microsoft Edge online speech via edge-tts",
   "synthetic": true,
-  "generatedAt": "2026-11-13T04:06:51.289198+00:00",
+  "generatedAt": "2026-11-16T03:07:34.538391+00:00",
   "humanListeningQA": false,
   "clips": [
     {
@@ -2677,6 +2677,20 @@
       "channels": 1,
       "peakPCM": 21474,
       "rmsPCM": 3888.89
+    },
+    {
+      "id": 549,
+      "voice": "en-US-EmmaMultilingualNeural",
+      "rate": "+0%",
+      "src": "/audio/grammar-live/549.mp3",
+      "transcriptSha256": "23c0022aa5e38d19ce0eb34411c7bf872b70dc737178f144fea0d5a567f0c998",
+      "sha256": "c9dfc4badda2d7d8afbc60839aedcd200ab6fc33a82c9e50a8b6c094d61a52f8",
+      "durationSeconds": 43.34,
+      "codec": "mp3",
+      "sampleRate": 24000,
+      "channels": 1,
+      "peakPCM": 21958,
+      "rmsPCM": 4158.84
     }
   ]
 }
