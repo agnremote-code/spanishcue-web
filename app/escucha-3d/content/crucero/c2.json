@@ -445,7 +445,7 @@
      "infer": true,
      "options": [
       "Un lugar con paredes propias y nombre en el buzón",
-      "Un lugar donde has vivido durante muchos años",
+      "Un lugar donde has vivido durante muchos años seguidos",
       "Un lugar donde alguien echa en falta tu ausencia"
      ],
      "answer": 2
@@ -661,7 +661,7 @@
      "options": [
       "A un barco viejo que ya nadie quiere arreglar",
       "A una taza desconchada que se usa por pereza",
-      "A un piano desafinado que nadie toca"
+      "A un piano desafinado que ya nadie se molesta en tocar"
      ],
      "answer": 1
     },
@@ -2204,7 +2204,7 @@
      "q": "¿Quiénes son la mayoría de las personas del muelle?",
      "options": [
       "Familiares de los pasajeros que esperan su llegada",
-      "Periodistas que vienen a cubrir el último viaje",
+      "Periodistas que vienen a cubrir el último viaje del barco",
       "Jubilados de la compañía avisados por el capitán"
      ],
      "answer": 2

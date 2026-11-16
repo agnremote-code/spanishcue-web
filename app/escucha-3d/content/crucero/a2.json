@@ -51,7 +51,7 @@
      "options": [
       "En mil novecientos noventa y ocho",
       "En mil novecientos setenta y ocho",
-      "El año pasado"
+      "Hace muy pocos años"
      ],
      "answer": 1
     },
@@ -298,7 +298,7 @@
     {
      "q": "¿Qué se come en la cocina los viernes?",
      "options": [
-      "Gambas",
+      "Gambas al ajillo",
       "Pescado frito con papas",
       "Ají de gallina"
      ],
@@ -1081,7 +1081,7 @@
     {
      "q": "¿Qué cocinaba los domingos?",
      "options": [
-      "Paella",
+      "Paella de marisco",
       "Potaje de garbanzos",
       "Tartas de chocolate"
      ],
@@ -1194,7 +1194,7 @@
      "options": [
       "La rompieron contra el barco",
       "La bebió el capitán",
-      "La vendieron"
+      "La vendieron en Cádiz"
      ],
      "answer": 0
     },

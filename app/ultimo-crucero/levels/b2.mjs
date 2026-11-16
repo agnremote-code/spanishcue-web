@@ -158,7 +158,7 @@ export default {
       { say: "Quizás esas cartas fueron siempre para usted, una forma de sentir compañía.", reply: "Es posible. Me hicieron compañía durante cuarenta años. No es poco.", end: "Germán lee una carta en voz alta y termina riéndose: «Era un cobarde, pero tenía buena letra».", mood: "sad" },
     ],
     talk: [
-      "¿Qué te parece peor: un no claro o una duda que dura años?",
+      "¿Por qué crees que algunas dudas duelen más que un no claro?",
       "¿Qué historia de tu vida has vivido más en la imaginación que en la realidad?",
       "¿Qué opinas de reencontrar a un amor antiguo después de décadas?",
       "¿Qué escribiste alguna vez sin intención de enviarlo?",
@@ -208,7 +208,7 @@ export default {
       "¿Qué legado te gustaría dejar, aunque nadie supiera que es tuyo?",
       "¿Qué verdad difícil te parece necesario contar a los niños desde pequeños?",
       "¿Qué estrategia usas para que los demás no noten tu miedo?",
-      "¿Qué objeto o lugar guarda una parte de la historia de tu familia?",
+      "¿Qué objeto guarda una parte de la historia de tu familia?",
       "¿Qué te enseñó un adulto sobre el miedo cuando eras pequeño?",
     ],
     words: ["remachar", "las planchas", "el casco", "el astillero", "disimular"],
@@ -274,7 +274,7 @@ export default {
       { say: "Yo cantaría la canción de aquella audición. Esta noche nadie va a juzgar a nadie.", reply: "¿Ahora? ¿Con el barco bailando? Maestro… en re menor, por favor.", end: "Yoli canta con los ojos cerrados. Al terminar, el salón entero se pone de pie. Esta vez Yoli llora, y no es por el trabajo.", mood: "love" },
     ],
     talk: [
-      "¿Qué parte de tu personalidad has construido para trabajar o estudiar?",
+      "¿Qué parte de tu personalidad has construido para tu vida profesional?",
       "¿Qué error del pasado ha condicionado demasiado tus decisiones?",
       "¿Qué opinas de los trabajos que exigen estar siempre de buen humor?",
       "¿Qué te atreverías a hacer si supieras que nadie te va a juzgar?",
@@ -390,8 +390,8 @@ export default {
       { say: "¿Y si, antes de atracar, damos una vuelta de honor por la bahía?", reply: "¿Una vuelta de honor? En cincuenta años a bordo nadie me lo había propuesto. ¡Hagámoslo!", end: "El Albatros recorre la bahía despacio, con la bocina sonando. En el muelle, cientos de antiguos tripulantes agitan pañuelos blancos.", mood: "love" },
     ],
     talk: [
-      "¿Cuándo has elegido la seguridad aunque te costara dinero o prestigio?",
-      "¿Qué valoras más en un jefe: que cumpla los objetivos o que proteja a su equipo?",
+      "¿Cuándo has elegido la seguridad aunque te costara dinero?",
+      "¿Qué tiene que hacer un buen jefe cuando su equipo está en peligro?",
       "¿Cómo te gustaría cerrar tu carrera profesional?",
       "¿Qué gesto simbólico harías para despedirte de un lugar importante?",
       "¿Qué presión externa te ha hecho tomar una mala decisión?",

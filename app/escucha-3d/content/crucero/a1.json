@@ -48,7 +48,7 @@
      "options": [
       "El viento viene hacia el barco",
       "No encuentra la caja",
-      "Está mareada"
+      "Está muy mareada"
      ],
      "answer": 0
     },
@@ -338,7 +338,7 @@
      "options": [
       "Camarera de pisos",
       "Cocinera",
-      "Médica"
+      "Médica del barco"
      ],
      "answer": 0
     },
@@ -361,11 +361,11 @@
      "answer": 0
     },
     {
-     "q": "¿Cuánto tiempo vive Rosa en el barco?",
+     "q": "¿Cuánto tiempo lleva Rosa en el barco?",
      "options": [
       "Veinticinco años",
       "Cinco años",
-      "Un año"
+      "Un año y medio"
      ],
      "answer": 0
     }
@@ -777,7 +777,7 @@
     {
      "q": "¿Qué quiere un señor?",
      "options": [
-      "Agua",
+      "Agua con sal",
       "Tres pastillas",
       "Una galleta"
      ],
@@ -874,8 +874,8 @@
     {
      "q": "¿Qué enseña el abuelo?",
      "options": [
-      "A nadar en el mar",
-      "A leer un mapa",
+      "A nadar en el mar abierto",
+      "A leer un mapa de estrellas",
       "A contar entre el relámpago y el trueno"
      ],
      "answer": 2
@@ -1014,7 +1014,7 @@
      "options": [
       "Un trabajo nuevo",
       "El último viaje",
-      "Dinero"
+      "Mucho dinero"
      ],
      "answer": 1
     }
@@ -1195,7 +1195,7 @@
     {
      "q": "¿Qué hay esta noche?",
      "options": [
-      "Solo bingo",
+      "Solo bingo, sin baile",
       "Bingo, baile y tormenta",
       "Una cena de gala"
      ],
@@ -1315,7 +1315,7 @@
     {
      "q": "¿Desde cuándo la toca?",
      "options": [
-      "Desde dos mil",
+      "Desde dos mil cinco",
       "Desde mil novecientos noventa y cinco",
       "Desde mil novecientos setenta y nueve"
      ],
@@ -1414,7 +1414,7 @@
     {
      "q": "¿Cuántos mensajes hay para Sole?",
      "options": [
-      "Uno",
+      "Solo uno",
       "Ninguno",
       "Muchos, más de cien"
      ],
@@ -1525,9 +1525,9 @@
     {
      "q": "¿Qué error hay con los nietos?",
      "options": [
-      "No tienen perro",
+      "Nunca vienen a verlos",
       "Son nietos de Norma, no de los dos",
-      "No tienen casa"
+      "Viven muy lejos de ellos"
      ],
      "answer": 1
     }
@@ -1823,7 +1823,7 @@
     {
      "q": "¿Qué ven?",
      "options": [
-      "La luna",
+      "La luna llena",
       "Un barco pequeño",
       "El faro de Cádiz"
      ],

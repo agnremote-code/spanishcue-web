@@ -1244,10 +1244,6 @@
     },
     {
       "path": "app/ultimo-crucero/invitados.mjs",
-      "text": "What song do you sing when you are happy?"
-    },
-    {
-      "path": "app/ultimo-crucero/invitados.mjs",
       "text": "Insurance salesman, terrified of the storm"
     },
     {
@@ -1348,10 +1344,6 @@
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "Paco loves this ship."
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "Amparo looks at you. What do you say?"
     },
     {
@@ -1380,14 +1372,6 @@
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "What is Paco like?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "He is a waiter here, in 1978. He brings me a cocktail. It is not my cocktail."
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "Amparo smiles. A wrong cocktail and many years of love."
     },
     {
@@ -1401,10 +1385,6 @@
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "What drink do you order in a café?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "In which part of your house are you calm?"
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
@@ -1581,10 +1561,6 @@
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "Lalo writes a list. Tomorrow two hundred kilos of food go ashore."
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "What do you eat when you are ill?"
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
@@ -1781,10 +1757,6 @@
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "Do you get carsick in the car or on the bus?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "What hot drink do you have when you are ill?"
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
@@ -2197,10 +2169,6 @@
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "And your ticket, sir?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "I do not have a ticket. I am a cook on this ship. Well, in 1971."
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
@@ -3016,10 +2984,6 @@
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "How are you today: calm, tired or happy?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "the page"
     },
     {
@@ -3589,6 +3553,42 @@
     {
       "path": "app/ultimo-crucero/story.mjs",
       "text": "The captain asked for a lap of honour around the bay before handing over the ship."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What song do you sing on your good days?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Paco loved this ship."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What was Paco like?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "He was a waiter here, in 1978. He brought me a cocktail. It was not my cocktail."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In which part of your house do you feel calmest?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you eat when you have the flu?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What hot drink do you have when you have a fever?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I do not have a ticket. I was a cook on this ship, in 1971."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How do you feel today, at the end of the night?"
     }
   ]
 }

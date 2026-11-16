@@ -158,7 +158,7 @@ export default {
       { say: "Quizás esas cartas fueron siempre para usted: una manera de acompañarse durante cuarenta años.", reply: "Es una forma muy amable de llamarme cobarde. Y, sin embargo, creo que tiene razón.", end: "Germán lee una carta en voz alta y termina riéndose solo: «Era un cobarde, pero tenía una prosa admirable».", mood: "sad" },
     ],
     talk: [
-      "¿Qué resulta más difícil de soportar: un rechazo claro o una duda que no se resuelve nunca?",
+      "¿Por qué una duda que no se resuelve nunca puede pesar más que un rechazo claro?",
       "¿Qué relación has vivido más intensamente en la imaginación que en la realidad?",
       "¿Qué riesgos y qué recompensas tiene reencontrarse con alguien después de décadas?",
       "¿Por qué escribir puede ser una forma de compañía y, a la vez, de evasión?",
@@ -181,7 +181,7 @@ export default {
       { say: "¿Y si parte cada pastilla en dos? Media dosis acompañada de un poco de calma puede bastar.", reply: "Media pastilla, una galleta salada y alguien que les diga que esto pasará. Podría funcionar.", end: "La doctora corta las cuarenta pastillas con un cuchillo de cocina. Al amanecer, nadie se ha quedado sin nada y ella ha descubierto que la confianza también cura.", mood: "smile" },
     ],
     talk: [
-      "¿Qué vulnerabilidad has ocultado por miedo a perder autoridad o credibilidad?",
+      "¿Qué vulnerabilidad has ocultado por miedo a perder credibilidad?",
       "¿Qué presión adicional soportan quienes son los primeros de su grupo en un ámbito profesional?",
       "¿Con qué criterio repartirías un recurso escaso sin que nadie se sintiera humillado?",
       "¿Cuándo mostrar una debilidad propia puede ayudar más que cualquier consejo?",
@@ -274,7 +274,7 @@ export default {
       { say: "Yo cantaría la canción de aquella audición. Esta noche nadie está en condiciones de juzgar a nadie.", reply: "¿Ahora? ¿Con el barco bailando? Maestro… en re menor, por favor, y que sea lo que Dios quiera.", end: "Yoli canta con los ojos cerrados. Al terminar, el salón entero se pone de pie. Esta vez Yoli llora, y no forma parte del espectáculo.", mood: "love" },
     ],
     talk: [
-      "¿Qué personaje has construido para desenvolverte en el trabajo o en los estudios?",
+      "¿Qué personaje has construido para desenvolverte en tu vida profesional?",
       "¿Qué fracaso puntual ha condicionado más de lo razonable tu trayectoria?",
       "¿Qué opinas de las profesiones que exigen un buen humor permanente?",
       "¿Qué te atreverías a hacer si tuvieras la certeza de que nadie te juzgaría?",
@@ -390,8 +390,8 @@ export default {
       { say: "Antes de atracar, daría una vuelta de honor por la bahía. Un barco así no debería entrar a escondidas.", reply: "¿Una vuelta de honor? En cincuenta años a bordo nadie me lo había propuesto. La compañía me va a crucificar. Hagámoslo.", end: "El Albatros recorre la bahía despacio, con la bocina sonando. En el muelle, cientos de antiguos tripulantes agitan pañuelos blancos.", mood: "love" },
     ],
     talk: [
-      "¿Cuándo has antepuesto la seguridad o la ética a la rentabilidad, y qué te costó?",
-      "¿Qué valoras más en quien dirige: que cumpla los objetivos o que proteja a su gente?",
+      "¿Cuándo has antepuesto la ética a la rentabilidad, y qué te costó?",
+      "¿Qué le exiges a quien dirige cuando su gente corre peligro?",
       "¿Cómo te gustaría que fuera el último día de tu vida profesional?",
       "¿Qué gesto simbólico te parecería justo para despedir un lugar que ha marcado tu vida?",
       "¿Qué presión externa te ha llevado a actuar en contra de tu criterio?",

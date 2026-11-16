@@ -12,7 +12,7 @@ import * as L from '../app/ultimo-crucero/layout.mjs';
 import { FINAL, STORAGE_KEY, choose, closeScene, createState, doneFor, invitadoById, logFor, openScene, progress, restore, sceneView, serialise, setLevel, undo } from '../app/ultimo-crucero/engine.mjs';
 import { INVITADOS } from '../app/ultimo-crucero/invitados.mjs';
 import { GAMES, listeningFor } from '../app/escucha-3d/games.mjs';
-import { checkLevel, choiceBalance } from '../scripts/check-crucero.mjs';
+import { c1c2Overlap, checkLevel, choiceBalance } from '../scripts/check-crucero.mjs';
 import { scanSource } from '../scripts/neutral-spanish.mjs';
 
 const listening = (level) => JSON.parse(readFileSync(`app/escucha-3d/content/crucero/${level.toLowerCase()}.json`, 'utf8'));
@@ -59,6 +59,8 @@ test('conversation: 18 scenes × 7 levels pass the checker, loaded one chunk per
   assert.deepEqual(scanSource(readFileSync('app/ultimo-crucero/story.mjs', 'utf8'), 'story'), []);
   const game = readFileSync('app/ultimo-crucero/CruceroGame.tsx', 'utf8');
   assert.doesNotMatch(game, /from ['"]\.\/levels\/[a-c][0-2]\.mjs['"]/, 'the game never imports a level statically');
+  assert.match(readFileSync('app/ultimo-crucero/levels.mjs', 'utf8'), /import\.meta\.env\?\.SSR \? \{\} :/, 'the server build gets no scenes');
+  assert.deepEqual(c1c2Overlap(CONTENT.C1, CONTENT.C2), [], 'C2 asks its own questions, not C1 reworded');
 });
 
 test('everyone you can see on board who stops still has a conversation at three levels', () => {

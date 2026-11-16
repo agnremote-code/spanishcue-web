@@ -111,7 +111,7 @@ export default {
       { say: "Mateo, es mejor que te quedes con ella. La foto puede esperar.", reply: "Tienes razón. Mi abuelo habría hecho lo mismo.", end: "Mateo cancela la cena. Pasa la noche en el suelo con un cubo en una mano y la mano de Lucía en la otra.", mood: "love" },
     ],
     talk: [
-      "¿Qué es más importante para ti en un viaje: el plan o la compañía?",
+      "¿Qué hace que un viaje sea bueno para ti?",
       "¿Qué remedio contra el malestar recomendarías a un amigo?",
       "¿Por qué crees que algunos planes perfectos salen fatal?",
       "¿Qué renunciarías a hacer para cuidar a alguien que quieres?",
@@ -183,7 +183,7 @@ export default {
     talk: [
       "¿Quién debería tener prioridad en una sala de urgencias llena?",
       "¿Por qué crees que a algunos profesionales les cuesta mostrar debilidad?",
-      "¿Qué secreto de tu trabajo o de tus estudios te gustaría confesar?",
+      "¿Qué pequeño secreto de tu día a día te gustaría confesar?",
       "¿Cómo reaccionas cuando alguien se queja de tu decisión?",
       "¿Qué harías si tuvieras que elegir entre dos personas que necesitan ayuda?",
     ],
@@ -254,7 +254,7 @@ export default {
       "¿Qué objeto guardarías aunque te ofrecieran mucho dinero?",
       "¿Cómo celebrarías el último día de algo importante?",
       "¿Qué opinas de las personas que dejan un hábito difícil?",
-      "¿Qué esperas a veces demasiado tiempo para usar o disfrutar?",
+      "¿Qué guardas demasiado tiempo para una ocasión especial?",
     ],
     words: ["inclinarse", "la subasta", "denunciar", "la gota", "el corcho"],
   },
@@ -343,7 +343,7 @@ export default {
       { say: "Gustavo, ¿por qué ahora, después de veinte años?", reply: "El año pasado tuve un infarto. En el hospital me di cuenta de que no quiero esperar a nada.", end: "Norma le toma la cara con las dos manos: «Tonto, yo te dije que sí hace veinte años. En silencio».", mood: "love" },
     ],
     talk: [
-      "¿Qué te parecería más romántico: una propuesta discreta o una espectacular?",
+      "¿Cómo sería para ti una propuesta romántica perfecta?",
       "¿Qué te gustaría hacer antes de que sea demasiado tarde?",
       "¿Por qué crees que algunas parejas no se casan nunca?",
       "¿Qué susto te hizo cambiar tus prioridades?",
@@ -389,8 +389,8 @@ export default {
       { say: "¿Y si antes de entrar damos una vuelta de honor por la bahía?", reply: "¿Una vuelta de honor? Nadie me lo había propuesto en cincuenta años a bordo. ¡Hagámoslo!", end: "El Albatros da una vuelta lenta por la bahía con la bocina sonando. En el muelle, cientos de personas agitan pañuelos blancos.", mood: "love" },
     ],
     talk: [
-      "¿Qué es más importante para ti: cumplir un horario o hacer las cosas bien?",
-      "¿Cómo te gustaría despedirte de tu trabajo o de tus estudios?",
+      "¿Cuándo es mejor llegar tarde que hacer algo mal?",
+      "¿Cómo te gustaría despedirte de una etapa importante de tu vida?",
       "¿Qué decisión tomarías aunque tu jefe no estuviera de acuerdo?",
       "¿Qué opinas de las empresas que valoran más el dinero que la seguridad?",
       "¿Qué gesto te parecería ideal para cerrar una etapa importante?",

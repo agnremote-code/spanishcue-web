@@ -473,7 +473,7 @@
      "q": "¿Cuánto tardó Graciela en contestar?",
      "options": [
       "Varios minutos, después de muchos intentos",
-      "No contestó y Rosa dejó un mensaje",
+      "No contestó, y Rosa le dejó un mensaje de voz",
       "Contestó enseguida, al segundo tono"
      ],
      "answer": 2
@@ -1115,7 +1115,7 @@
      "options": [
       "Quién de los dos lleva más años en el barco",
       "Qué planchas del casco duraron más tiempo",
-      "Cuál de los dos tiene peor salud"
+      "Cuál de los dos tiene peor salud y más achaques"
      ],
      "answer": 1
     },
@@ -1859,7 +1859,7 @@
      "q": "¿Por qué estaba Gustavo en la proa?",
      "options": [
       "Estaba buscando el anillo que se le había caído",
-      "Quería ver los relámpagos de cerca",
+      "Quería ver de cerca los relámpagos de la tormenta",
       "Estaba pidiendo matrimonio a su pareja"
      ],
      "answer": 2
@@ -2127,7 +2127,7 @@
      "options": [
       "El barco tuvo un incendio en la sala de máquinas",
       "Salieron con mal tiempo y un marinero se hirió",
-      "La compañía estuvo a punto de vender el barco"
+      "La compañía estuvo a punto de vender el barco a otra naviera"
      ],
      "answer": 1
     },

@@ -72,7 +72,7 @@
      "q": "¿Qué decía Paco de las tormentas?",
      "options": [
       "Que el barco bailaba mejor que los pasajeros",
-      "Que le daban miedo",
+      "Que le daban mucho miedo",
       "Que eran peligrosas para un barco tan viejo"
      ],
      "answer": 0
@@ -183,7 +183,7 @@
      "q": "¿Qué perdió Teodoro por trabajar en el mar?",
      "options": [
       "Su casa, su coche y casi todos sus ahorros",
-      "Su salud",
+      "La salud de sus pulmones",
       "Momentos importantes de su familia"
      ],
      "answer": 2
@@ -303,7 +303,7 @@
      "q": "¿Qué piensa hacer Inés con el capitán?",
      "options": [
       "Pedirle permiso por escrito",
-      "No decirle nada",
+      "No contarle nada de la cena",
       "Invitarlo a la mesa"
      ],
      "answer": 2
@@ -399,7 +399,7 @@
     {
      "q": "¿Por qué se pelearon?",
      "options": [
-      "Por un hombre",
+      "Por un hombre que conocieron",
       "Por dinero de un trabajo",
       "Por la casa de su madre"
      ],
@@ -637,7 +637,7 @@
     {
      "q": "¿Qué ventaja ve Ramón en el divorcio?",
      "options": [
-      "Viajar más",
+      "Viajar más a menudo",
       "Roncar en paz",
       "Tener más dinero"
      ],
@@ -656,7 +656,7 @@
      "q": "¿Qué deciden al final?",
      "options": [
       "Firmar los papeles enseguida",
-      "Pedir ayuda al capitán",
+      "Pedir consejo al capitán del barco",
       "No decidir nada esa noche"
      ],
      "answer": 2
@@ -1199,7 +1199,7 @@
     {
      "q": "¿Qué quiere hacer Yoli con la botella?",
      "options": [
-      "Venderla",
+      "Venderla en Cádiz",
       "Regalársela al capitán",
       "Abrirla delante de todos"
      ],
@@ -1320,7 +1320,7 @@
      "options": [
       "Porque la gente está mareada y las bolas se escapan",
       "Porque el premio es malo",
-      "Porque es muy tarde"
+      "Porque ya es muy tarde para jugar"
      ],
      "answer": 0
     },
@@ -1338,7 +1338,7 @@
      "options": [
       "La de su primer concierto",
       "La del incendio del noventa y ocho",
-      "La de su boda"
+      "La de su boda en Sevilla"
      ],
      "answer": 1
     },
@@ -1541,7 +1541,7 @@
      "q": "¿De quién es el mensaje?",
      "options": [
       "De la esposa de Teodoro",
-      "De la compañía",
+      "De la compañía del barco",
       "Del hijo de Teodoro"
      ],
      "answer": 2
@@ -1766,7 +1766,7 @@
     {
      "q": "¿Adónde llevará Marina el barco?",
      "options": [
-      "A un museo en Cádiz",
+      "A un museo del mar en Cádiz",
       "A un nuevo puerto en Panamá",
       "Al desguace en Turquía"
      ],
@@ -1785,8 +1785,8 @@
      "q": "¿Qué siente Marina sobre ser capitana?",
      "options": [
       "Que es raro serlo para un funeral",
-      "Solo alegría",
-      "Indiferencia"
+      "Solo alegría y mucho orgullo",
+      "Una indiferencia total"
      ],
      "answer": 0
     },
@@ -1794,7 +1794,7 @@
      "q": "¿De qué tiene miedo Marina?",
      "options": [
       "De llorar delante de la tripulación",
-      "De la tormenta",
+      "De la tormenta de esta noche",
       "De perderse en el mar"
      ],
      "answer": 0
@@ -2006,7 +2006,7 @@
     {
      "q": "¿Cuántas copias quiere hacer?",
      "options": [
-      "Cuarenta",
+      "Cuarenta y dos",
       "Cuatrocientas doce",
       "Ciento ochenta"
      ],

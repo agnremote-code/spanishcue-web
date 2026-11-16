@@ -185,7 +185,7 @@
      "q": "¿Cuántos años tiene la Dolores?",
      "qEn": "How old is the Dolores?",
      "options": [
-      "Quince",
+      "Cuarenta y cinco",
       "Cincuenta y cinco",
       "Veinticinco"
      ],
@@ -309,7 +309,7 @@
      "qEn": "How many kilos of prawns are there?",
      "options": [
       "Doscientos",
-      "Doce",
+      "Nueve",
       "Veinte"
      ],
      "answer": 0
@@ -792,7 +792,7 @@
      "options": [
       "Una maleta con ropa",
       "Una caja de cartas",
-      "Un libro"
+      "Un libro de fotos viejas"
      ],
      "answer": 1
     },
@@ -919,7 +919,7 @@
      "qEn": "How many people are seasick?",
      "options": [
       "Sesenta y tres",
-      "Trece",
+      "Dieciséis",
       "Treinta"
      ],
      "answer": 0
@@ -1063,7 +1063,7 @@
      "options": [
       "Dónde está su madre",
       "Dónde está el barco mañana",
-      "Qué hora es"
+      "Qué hora es ahora"
      ],
      "answer": 1
     }
@@ -1284,7 +1284,7 @@
      "options": [
       "De mil novecientos noventa",
       "De mil novecientos setenta y uno",
-      "De dos mil uno"
+      "De dos mil dieciocho"
      ],
      "answer": 1
     },
@@ -1529,7 +1529,7 @@
      "qEn": "Since what year has Aurelio played?",
      "options": [
       "Desde mil novecientos noventa",
-      "Desde dos mil",
+      "Desde dos mil quince",
       "Desde mil novecientos setenta y nueve"
      ],
      "answer": 2
@@ -1540,7 +1540,7 @@
      "options": [
       "Duerme",
       "Toca el piano",
-      "Baila"
+      "Baila tango"
      ],
      "answer": 1
     }
@@ -1643,7 +1643,7 @@
      "options": [
       "La esposa de Teodoro",
       "El hijo de Teodoro",
-      "Un amigo"
+      "Un amigo de la infancia"
      ],
      "answer": 1
     },
@@ -1874,7 +1874,7 @@
      "options": [
       "Llueve mucho",
       "Hace sol y calor",
-      "Nieva"
+      "Nieva un poco"
      ],
      "answer": 0
     },
