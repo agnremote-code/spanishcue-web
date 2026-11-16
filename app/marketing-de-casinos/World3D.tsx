@@ -4,6 +4,7 @@
 // the heroine walking the casino. The lesson (CasinoGame.tsx) owns the state;
 // this component reports circles and the elevator and follows its props.
 import * as THREE from 'three';
+import { enableRealPeople } from '../mundo-real/persona';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
@@ -73,6 +74,8 @@ export default function World3D(props: WorldProps) {
     scene.fog = new THREE.Fog('#0b0812', 60, 420);
     const camera = new THREE.PerspectiveCamera(55, 1, 0.1, 1600);
     let casino: Casino;
+    // People with real bodies (skin, hair, clothes) on computers; phones keep the light drawn figures. ?real=0 turns it off.
+    enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') !== '0');
     try { casino = buildCasino(scene, { low, shadows: !low }); }
     catch (error) {
       console.error(error);
@@ -80,6 +83,7 @@ export default function World3D(props: WorldProps) {
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }
+    enableRealPeople(false);
     // A soft studio reflection so gold, marble and glass read as such.
     const pmrem = new THREE.PMREMGenerator(renderer);
     const envMap = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;

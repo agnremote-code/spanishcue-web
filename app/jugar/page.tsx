@@ -8,6 +8,7 @@ import { lessons } from "../lesson-catalog";
 import { SpanishCueWordmark } from "../SpanishCueBrand";
 import { canonicalUrl } from "../seo";
 import StudentHub, { type HubCard } from "./StudentHub";
+import { studentAliasFromHeaders, studentPassFromHeaders } from "./student-pass";
 import { HUB_PATH, HUB_WORLDS } from "./worlds.mjs";
 import "./jugar.css";
 
@@ -42,20 +43,25 @@ export const viewport: Viewport = { themeColor: "#061b3e", viewportFit: "cover" 
 /** Level shown on a card: the catalog's range, or its single level. */
 const levelOf = (lesson: { level: string; displayLevel?: string }) => lesson.displayLevel ?? lesson.level;
 
-export default async function JugarPage() {
+export default async function JugarPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const requestHeaders = await headers();
   const locale = localeFromHeaders(requestHeaders);
   const signedIn = signedInFromHeaders(requestHeaders);
   const fullAccess = fullAccessFromHeaders(requestHeaders);
+  // Teacher's pass: verified by the Worker, which recreates these headers.
+  const studentPass = studentPassFromHeaders(requestHeaders);
+  const alias = studentPass ? studentAliasFromHeaders(requestHeaders) : "";
+  const passLost = !studentPass && !fullAccess && (await searchParams).pase === "vencido";
   const es = locale === "es";
 
   // Catalog facts only (title, cover, level, route). A world opens through its
-  // class route when the visitor has full access, through its public door when
-  // it has one, and stays closed otherwise: the hub never grants access.
+  // class route when the visitor has full access or a teacher's pass (the
+  // Worker checks it again on that route), through its public door when it has
+  // one, and stays closed otherwise: the hub never grants access.
   const cards: HubCard[] = HUB_WORLDS.flatMap((world) => {
     const lesson = lessons.find((item) => item.id === world.id);
     if (!lesson?.path) return [];
-    const href = fullAccess ? lesson.path : world.open ?? null;
+    const href = fullAccess || studentPass ? lesson.path : world.open ?? null;
     return [{ id: world.id, title: lesson.title, level: levelOf(lesson), image: lesson.image, href }];
   });
 
@@ -69,7 +75,7 @@ export default async function JugarPage() {
           {signedIn ? (es ? "Mi cuenta" : "My account") : es ? "Entrar" : "Log in"}
         </a>
       </header>
-      <StudentHub cards={cards} locale={locale} signedIn={signedIn} fullAccess={fullAccess} />
+      <StudentHub cards={cards} locale={locale} signedIn={signedIn} fullAccess={fullAccess} studentPass={studentPass} alias={alias} passLost={passLost} />
       <p className="jg-crosslink">
         <a href={TEACHER_LANDING_PATH}>{es ? "¿Enseñas español? SpanishCue para profesores" : "Do you teach Spanish? SpanishCue for teachers"} →</a>
       </p>

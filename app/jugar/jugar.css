@@ -118,6 +118,8 @@
   color: #c6d4ea;
   font-size: 15px;
 }
+.jg-pass-on { border-color: rgba(255, 194, 77, .5); color: #ffe2a6; font-weight: 650; }
+.jg-pass-lost { border-color: rgba(255, 150, 130, .55); color: #ffd3c9; }
 .jg-account-note a { color: var(--jg-sun); font-weight: 750; text-decoration: none; }
 
 .jg-section { max-width: 1180px; margin: 0 auto; padding: clamp(26px, 4vw, 48px) 0 0; }

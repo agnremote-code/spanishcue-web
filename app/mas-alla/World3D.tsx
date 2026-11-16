@@ -23,6 +23,7 @@ import { createBubbles, disposeGroup, stepWalker, type Box, type Talker, type Wa
 import { talkCircle, type Place3D, type TalkCircle, type VoiceWalker } from './common3d';
 import { buildUmbral, createMirror } from './umbral3d';
 import { buildCielo } from './cielo3d';
+import { enableRealPeople } from '../mundo-real/persona';
 import { buildInfierno } from './infierno3d';
 import { buildIntro, INTRO_SECONDS, type Intro, type IntroBeat } from './intro3d';
 import { softGlowTexture } from './figures3d';
@@ -192,7 +193,10 @@ export default function World3D(props: WorldProps) {
       if (current) { free(current.place.group); current = null; }
       if (intro) { free(intro.group); intro = null; }
       if (id === 'umbral' && !low) mirror ??= createMirror();
-      const built = BUILDERS[id]({ low, shadows: !low, mirror: mirror ?? undefined });
+      // Angels, demons and souls with real bodies on computers; phones keep the light drawn figures. ?real=0 turns it off.
+      enableRealPeople(!low && params.get('real') !== '0');
+      let built: Place3D;
+      try { built = BUILDERS[id]({ low, shadows: !low, mirror: mirror ?? undefined }); } finally { enableRealPeople(false); }
       const rings = new Map<string, TalkCircle>();
       const flames = id === 'infierno';
       for (const s of built.spots) rings.set(s.id, talkCircle(built.group, s.x, s.z, { flames, voice: false }));

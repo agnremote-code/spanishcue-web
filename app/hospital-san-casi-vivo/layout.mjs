@@ -285,7 +285,7 @@ const PLACES = {
       { x: 27, z: 3.4, heading: 1.8, pose: 'stand', mood: 'smile', carryBox: true, look: L('#b9825c', 'young', 'f', 'long', '#2a1a12', 'jacket', '#e0a020', 'jeans', '#1f2840', ['earrings'], { seed: 73 }) }] },
   observacion: { spot: { x: -34.4, z: 0.5 }, npc: { x: -37.6, z: 0.5, heading: Math.PI / 2, lying: true }, pose: 'lie', mood: 'pain', injury: ['gown', 'iv'], look: GOWN('#d7a982', 'elderly', 'm', 'bald', '#cccccc', ['mustache']),
     extras: [{ x: -36.4, z: 9.5, heading: Math.PI / 2, pose: 'lie', mood: 'sleepy', look: GOWN('#e8c0a0', 'old', 'f', 'curly', '#bbbbbb') }] },
-  curaciones: { spot: { x: -8.4, z: 4.6 }, npc: { x: -8, z: 1.4, heading: 0, seat: true }, pose: 'sit', mood: 'pain', injury: ['brow'], look: L('#c48f69', 'adult', 'm', 'short', '#1a1210', 'shirt', '#e8c84a', 'shorts', '#3a5a3a', ['hat'], { seed: 91 }),
+  curaciones: { spot: { x: -8.4, z: 4.6 }, npc: { x: -8, z: 1.84, heading: 0, seat: true, perch: true }, pose: 'sit', mood: 'pain', injury: ['brow'], look: L('#c48f69', 'adult', 'm', 'short', '#1a1210', 'shirt', '#e8c84a', 'shorts', '#3a5a3a', ['hat'], { seed: 91 }),
     extras: [{ x: -5.6, z: 1.8, heading: -1.6, pose: 'stand', look: SCRUBS('#a8724e', 'f', 'bun', '#120d0b', '#8a4a9a') }] },
   cafeteria: { spot: { x: -24, z: -33.4 }, npc: { x: -24, z: -39, heading: 0 }, pose: 'cook', look: L('#8d5a3c', 'old', 'f', 'bun', '#3a3a3a', 'apron', '#f4f2ec', 'pants', '#2a2a2a', ['earrings'], { seed: 101 }),
     extras: [{ x: -21.4, z: -34.4, heading: Math.PI, pose: 'lean', look: L('#c99468', 'adult', 'm', 'short', '#1a1210', 'scrubs', '#6a6a8a', 'pants', '#6a6a8a', ['glasses'], { seed: 102 }) },

@@ -13,6 +13,7 @@ import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, skipHiddenMatrices, worldPixelRatio, exposeForQa } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
+import { enableRealPeople } from '../mundo-real/persona';
 import { CEILING, ELEVATOR, ELEVATOR_ARRIVAL, SPAWN, STAIRS_ARRIVAL, atElevator, atStairs, cameraBlockers, circleStep, floorById, sceneById, sceneFraming, sectorAt, solidsFor, spotAt } from './layout.mjs';
 import { buildAirport, talking as talkingNow, type Airport, type Npc, type Mover } from './aeropuerto3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
@@ -88,6 +89,8 @@ export default function World3D(props: WorldProps) {
     const camera = new THREE.PerspectiveCamera(58, 1, 0.08, 900);
     let airport: Airport;
     let hero: ReturnType<typeof createHero>;
+    // People with real bodies (skin, hair, clothes) on computers; phones keep the light drawn figures. ?real=0 turns it off.
+    enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') !== '0');
     try { airport = buildAirport(scene, { low, shadows: !low, cries: CRIES, onCry: (cry, volume) => { if (cry) shout(cry, volume); live.current.onCry(volume); }, onThunder: (delay, strength) => live.current.onThunder(delay, strength) }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
@@ -95,6 +98,7 @@ export default function World3D(props: WorldProps) {
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }
+    enableRealPeople(false);
     scene.add(hero.root);
     // A soft reflection so the polished terminal floor, steel and glass read as such.
     const pmrem = new THREE.PMREMGenerator(renderer);

@@ -32,7 +32,7 @@ test('a Homework topic opens for any valid pass and for nobody without one',asyn
  const {readFileSync}=await import('node:fs');
  const worker=readFileSync('worker/index.ts','utf8');
  assert.match(worker,/const topicAudio=premiumAudio&&isHomeworkTopicAudio\(pathname\);/);
- assert.match(worker,/if \(premiumAudio && !fullAccess && !gifted && !\(topicAudio && shareSession\)\)/);
+ assert.match(worker,/if \(premiumAudio && !fullAccess && !gifted && !\(topicAudio && shareSession\) && !studentAudio\)/);
  assert.match(readFileSync('worker/private-asset-auth.ts','utf8'),/isHomeworkTopicAudio\(path\) && await verifyShareSession\(/);
  // Every topic points at a real class and its real recording.
  const {lesson}=await bundle('./app/grammar-classroom/live/lessons/g549');
