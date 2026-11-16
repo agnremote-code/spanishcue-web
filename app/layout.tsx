@@ -101,7 +101,7 @@ export default async function RootLayout({
   const audience = audienceFromAccess(signedIn, fullAccess);
   const freeLessonCta = primaryCtaFor(audience, pathname);
   // Bauti stays out of lessons, 3D worlds and private tools, where the corner belongs to the class.
-  const bautiRoute = !currentLesson && !/^\/(demo|admin|autoestudio|clase|gramatica|ingresar|pro\/claim)(\/|$)/.test(pathname);
+  const bautiRoute = !currentLesson && !/^\/(demo|admin|autoestudio|clase|gramatica|ingresar|jugar|pro\/claim)(\/|$)/.test(pathname);
   // The free-version bar follows Bauti's browsing pages, minus the pages that already are a checkout or a campaign.
   const freeVersionBar = !fullAccess && bautiRoute && !/^\/(lp|pricing|acceso|academias)(\/|$)/.test(pathname);
   return (
