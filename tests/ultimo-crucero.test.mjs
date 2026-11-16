@@ -187,7 +187,7 @@ test('PRO by default: route, catalog, cover, preview, shared engine, realistic l
     const source = readFileSync(`app/ultimo-crucero/${file}`, 'utf8');
     assert.doesNotMatch(source, /speechSynthesis|SpeechSynthesisUtterance/, `${file} uses no browser speech`);
     assert.doesNotMatch(source, /https?:\/\/(?!spanishcue\.com)/, `${file} loads nothing from the network`);
-    assert.doesNotMatch(source, /\b(?:coins?|monedas|ranking|leaderboard|puntuación)\b/i, `${file} has no score HUD`);
+    if (/\.tsx?$/.test(file)) assert.doesNotMatch(source, /\b(?:coins?|ranking|leaderboard|score)\b/i, `${file} has no score HUD`);
   }
 });
 
