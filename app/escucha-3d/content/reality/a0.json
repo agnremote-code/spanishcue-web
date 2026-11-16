@@ -352,8 +352,8 @@
      "model": "Hablo bajo con mi hermana."
     },
     {
-     "q": "¿Cuántos amigos de verdad necesita una persona?",
-     "qEn": "How many true friends does a person need?",
+     "q": "¿Cuántas personas caben en tu grupo de mejores amigos?",
+     "qEn": "How many people fit in your group of best friends?",
      "model": "Necesita dos o tres amigos."
     }
    ],
@@ -475,8 +475,8 @@
      "model": "Cocino para dos personas."
     },
     {
-     "q": "¿Qué plato sencillo cocinas muy bien?",
-     "qEn": "What simple dish do you cook very well?",
+     "q": "¿Qué receta fácil te sale siempre bien?",
+     "qEn": "What easy recipe always turns out well for you?",
      "model": "Cocino muy bien la tortilla."
     }
    ],
@@ -598,8 +598,8 @@
      "model": "Hablo bajito en la biblioteca."
     },
     {
-     "q": "¿A quién le escribes notas en papel?",
-     "qEn": "Who do you write paper notes to?",
+     "q": "¿Dónde dejas notas de papel para tu familia?",
+     "qEn": "Where do you leave paper notes for your family?",
      "model": "Le escribo notas a mi madre."
     }
    ],
@@ -834,8 +834,8 @@
    ],
    "open": [
     {
-     "q": "¿Qué haces en el baño antes de dormir?",
-     "qEn": "What do you do in the bathroom before you sleep?",
+     "q": "¿Cuánto tiempo pasas en el baño por la mañana?",
+     "qEn": "How long do you spend in the bathroom in the morning?",
      "model": "Me lavo los dientes y la cara."
     },
     {
@@ -1090,8 +1090,8 @@
      "model": "Por dentro tengo veinte años."
     },
     {
-     "q": "¿Qué objeto viejo guardas todavía?",
-     "qEn": "What old object do you still keep?",
+     "q": "¿Qué objeto antiguo de tus padres está en tu casa?",
+     "qEn": "What old object from your parents is in your home?",
      "model": "Guardo un reloj de mi padre."
     }
    ],
@@ -1213,8 +1213,8 @@
      "model": "Quiero ganar un viaje a Japón."
     },
     {
-     "q": "¿Qué transporte usas todos los días?",
-     "qEn": "What transport do you use every day?",
+     "q": "¿Qué medio de transporte tomas para ir a clase o al trabajo?",
+     "qEn": "What means of transport do you take to class or work?",
      "model": "Uso el metro y el autobús."
     }
    ],
@@ -2079,8 +2079,8 @@
      "model": "Es futbolista."
     },
     {
-     "q": "¿Qué tarea de la casa haces con música?",
-     "qEn": "What housework do you do with music?",
+     "q": "¿Qué canción pones para limpiar la casa?",
+     "qEn": "What song do you put on to clean the house?",
      "model": "Lavo los platos con música."
     }
    ],
@@ -2207,8 +2207,8 @@
      "model": "Me siento cansado, pero feliz."
     },
     {
-     "q": "¿A quién le das las gracias hoy?",
-     "qEn": "Who do you thank today?",
+     "q": "¿Qué persona merece hoy un «gracias» tuyo?",
+     "qEn": "Who deserves a thank-you from you today?",
      "model": "Le doy las gracias a mi profesora."
     }
    ],

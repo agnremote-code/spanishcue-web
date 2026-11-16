@@ -1450,8 +1450,8 @@
      "model": "Sí, sobre todo si elige qué opciones parecen razonables."
     },
     {
-     "q": "¿Hasta dónde es responsable quien obedece una orden injusta?",
-     "model": "Es responsable de lo que hace, aunque no lo sea de la orden."
+     "q": "¿Qué parte de la culpa le corresponde a quien solo cumple órdenes?",
+     "model": "La parte de lo que hace con sus manos, aunque la orden no sea suya."
     },
     {
      "q": "¿Qué decisión profesional te dejaría sin dormir?",
@@ -1571,7 +1571,7 @@
      "model": "Porque te da seguridad y la gente espera que sigas siendo así."
     },
     {
-     "q": "¿Qué diferencia una disculpa sincera de una disculpa estratégica?",
+     "q": "¿Cómo distingues un perdón que nace del arrepentimiento de uno calculado?",
      "model": "La sincera no espera nada a cambio; la estratégica busca un resultado."
     },
     {

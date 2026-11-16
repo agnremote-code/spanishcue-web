@@ -656,7 +656,7 @@
      "model": "Cuento los países que conozco."
     },
     {
-     "q": "¿A quién ayudas los fines de semana?",
+     "q": "¿A qué vecino o familiar echas una mano los sábados?",
      "model": "Ayudo a mi padre en su tienda."
     },
     {
@@ -1441,8 +1441,8 @@
      "model": "Todos odian al villano de una serie, pero a mí me da pena."
     },
     {
-     "q": "¿Qué aprendiste de una persona mayor?",
-     "model": "Mi vecina me enseñó a cocinar."
+     "q": "¿Qué consejo práctico te dio una persona de otra generación?",
+     "model": "Mi vecina me dijo que cocinara siempre para dos días."
     }
    ],
    "gaps": "El país no te [conoce]. Ve una mujer que [grita]. Yo veo una mujer [cansada]. …Enséñame otra vez la [vuelta].",
@@ -1663,8 +1663,8 @@
      "model": "Me invitan a comer y no preguntan nada."
     },
     {
-     "q": "¿Qué enseñaste tú a otra persona?",
-     "model": "Le enseñé a nadar a mi primo."
+     "q": "¿Qué habilidad tuya compartiste con un compañero o una compañera?",
+     "model": "Le enseñé a nadar a un compañero de trabajo."
     }
    ],
    "gaps": "La casa tiene [premios] de esta semana. Podemos [juntar] todo. ¿Harían eso por [mí]? Tú le enseñaste a [leer] a Toño en un mes.",

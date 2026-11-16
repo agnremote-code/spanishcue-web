@@ -902,7 +902,7 @@
      "model": "En mi clase siempre hacía el papel del gracioso."
     },
     {
-     "q": "¿Cómo cambió una relación tuya con el tiempo?",
+     "q": "¿Qué amistad tuya se transformó con los años?",
      "model": "Un compañero de trabajo se convirtió en mi mejor amigo."
     },
     {
@@ -1140,8 +1140,8 @@
      "model": "Me pareció cruel una broma con un falso premio de lotería."
     },
     {
-     "q": "¿Cuándo necesitaste mucha paciencia?",
-     "model": "Necesité paciencia cuando enseñé a mi madre a usar el móvil."
+     "q": "¿Qué tarea lenta te obligó a ser paciente?",
+     "model": "Enseñar a mi madre a usar el móvil me obligó a ser muy paciente."
     }
    ],
    "gaps": "Mientras tú apretabas el [botón], la luz de la [nevera] estaba [encendida]. Ese botón solo encendía la nevera. ¿Y el [coche]?",
@@ -1255,7 +1255,7 @@
      "model": "Anunciaría un perfume caro, aunque yo uso jabón."
     },
     {
-     "q": "¿Qué trabajo aburrido hiciste y qué tenía de bueno?",
+     "q": "¿Qué empleo poco divertido te enseñó algo útil?",
      "model": "Trabajé en un archivo; lo bueno era el silencio."
     }
    ],
