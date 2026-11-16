@@ -28,7 +28,7 @@ export default {
     title: 'La voz detrás de la cortina',
     line: 'El confesionario es un cuarto oscuro con un sillón rojo y una cámara. Aquí los concursantes hablan de sus sentimientos. Hay una cortina negra. Detrás está La Voz. Nadie le ve la cara. Hoy su voz está rara.',
     dialogue: [
-      ['voz', 'Bienvenida, bienvenido, Sorpresa. Siéntate en el sillón, por favor.'],
+      ['voz', 'Te doy la bienvenida, Sorpresa. Siéntate en el sillón, por favor.'],
       ['voz', 'Tengo una pregunta para ti: ¿qué buscas en esta casa?'],
       ['voz', 'Perdón. Hoy tengo un mal día. Pero eso no importa. Contesta, por favor.'],
     ],
@@ -97,7 +97,7 @@ export default {
     title: 'Once días sin voz',
     line: 'En el comedor hay una mesa larga con servilletas de papel. Mateo es abogado. El primer día hablaba mucho y contaba chistes. Ahora no habla en voz alta desde hace once días. Escribe todo en servilletas.',
     dialogue: [
-      ['mateo', '(Escribe en una servilleta) «Hola. Bienvenida, bienvenido. No estoy enfermo».'],
+      ['mateo', '(Escribe en una servilleta) «Hola. Te doy la bienvenida. No estoy enfermo».'],
       ['mateo', '(Escribe) «Leí mi contrato. El programa puede usar mi voz en anuncios. Para siempre».'],
       ['mateo', '(Escribe) «Por eso no les regalo más palabras».'],
     ],
@@ -302,10 +302,10 @@ export default {
   },
   pasillo: {
     title: 'La productora de la noche',
-    line: 'Son las tres de la mañana. Detrás de una puerta gris está el pasillo de producción, con monitores y cables. Chelo es la productora del turno de noche. Hace diez años ganó la primera temporada del programa. Ahora come pizza fría.',
+    line: 'Son las tres de la mañana. Detrás de una puerta gris está el pasillo de producción, con monitores y cables. Chelo es la productora del turno de noche. Hace siete años ganó la primera temporada del programa. Ahora come pizza fría.',
     dialogue: [
       ['chelo', 'Hola, Sorpresa. Siéntate. Tengo un trato para ti.'],
-      ['chelo', 'A las tres y media, en el salón, discutes con Wendy. Gritos, lágrimas… Y tú no estás nominada la próxima semana.'],
+      ['chelo', 'A las tres y media, en el salón, discutes con Wendy. Gritos, lágrimas… Y la próxima semana tienes inmunidad.'],
       ['chelo', '¿Quieres pizza? Está fría, pero es gratis.'],
     ],
     ask: 'Chelo te mira. ¿Qué respondes?',

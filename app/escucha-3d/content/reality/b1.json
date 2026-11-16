@@ -59,7 +59,7 @@
      "options": [
       "El nombre de los demás concursantes",
       "La frase de los guionistas",
-      "Su micrófono"
+      "El micrófono que le pusieron en el camerino"
      ],
      "answer": 1
     },
@@ -178,7 +178,7 @@
      "options": [
       "Dos minutos, como siempre",
       "Veinte minutos",
-      "Una hora"
+      "Más de una hora, hasta la medianoche"
      ],
      "answer": 1
     },
@@ -187,14 +187,14 @@
      "options": [
       "Le contestó con otra pregunta",
       "Se quedó en silencio todo el tiempo",
-      "Se fue"
+      "Se levantó del sillón y salió del confesionario"
      ],
      "answer": 0
     },
     {
      "q": "¿Qué propone La Voz?",
      "options": [
-      "Borrar la grabación",
+      "Borrar la grabación antes de la gala",
       "Cambiar de concursante",
       "Emitir la confesión"
      ],
@@ -205,7 +205,7 @@
      "options": [
       "Que no lo proponga",
       "Que hable con el director de inmediato y sin miedo",
-      "Que se vaya"
+      "Que se vaya de la casa esta misma noche"
      ],
      "answer": 0
     }
@@ -296,7 +296,7 @@
      "q": "¿Qué quiere hacer Óscar?",
      "options": [
       "Contar que son pareja",
-      "Romper con Brenda",
+      "Romper con Brenda delante de todos en la gala",
       "Formar otra alianza con Wendy y con Toño"
      ],
      "answer": 0
@@ -305,7 +305,7 @@
      "q": "¿A quién vota ahora la gente?",
      "options": [
       "A los más guapos y famosos de la casa",
-      "A Brenda",
+      "A Brenda, por sus millones de seguidores",
       "A quien no finge"
      ],
      "answer": 2
@@ -421,7 +421,7 @@
      "options": [
       "No le gusta dar pena",
       "Tiene miedo de Wendy y de la producción",
-      "No se acuerda"
+      "No se acuerda bien de lo que pasó entonces"
      ],
      "answer": 0
     },
@@ -429,7 +429,7 @@
      "q": "¿Qué le propone Chema?",
      "options": [
       "Contarlo mientras cocina",
-      "Escribir una carta",
+      "Escribirle una carta larga",
       "Hablar en el confesionario con La Voz"
      ],
      "answer": 0
@@ -437,7 +437,7 @@
     {
      "q": "¿Cómo le enseñaba la vida su madre?",
      "options": [
-      "Con libros",
+      "Con libros que compraba en el mercado",
       "Mientras pelaban papas",
       "Con canciones antes de dormir"
      ],
@@ -539,7 +539,7 @@
      "q": "¿Qué puede hacer el programa con su voz?",
      "options": [
       "Venderla a otro canal de televisión durante un año",
-      "Nada",
+      "Nada sin pedirle permiso antes por escrito",
       "Usarla en anuncios para siempre"
      ],
      "answer": 2
@@ -549,7 +549,7 @@
      "options": [
       "Una buena idea legal para el juicio",
       "También un espectáculo",
-      "Una enfermedad"
+      "Una enfermedad que necesita un médico"
      ],
      "answer": 1
     },
@@ -557,7 +557,7 @@
      "q": "¿Qué hay en internet?",
      "options": [
       "Camisetas con su cara",
-      "Su contrato completo",
+      "Su contrato completo, con todas las cláusulas",
       "Un video de su familia"
      ],
      "answer": 0
@@ -667,7 +667,7 @@
      "q": "¿Qué le recomienda Fela?",
      "options": [
       "Llorar más, porque es lo que vota el público",
-      "Dormir",
+      "Dormir un poco y olvidar las cámaras",
       "Pensar en su madre y no en la gente"
      ],
      "answer": 2
@@ -677,7 +677,7 @@
      "options": [
       "Respirar en una bolsa de papel",
       "Contar clientes para dormirse",
-      "Cantar"
+      "Cantar una canción de cuna de su pueblo"
      ],
      "answer": 1
     }
@@ -767,7 +767,7 @@
     {
      "q": "¿Qué escribió la Sorpresa en el espejo?",
      "options": [
-      "«Te veo»",
+      "«Te veo, y sé que tú me ves»",
       "«Hola, Lalo»",
       "«Apaga la cámara, por favor»"
      ],
@@ -1016,7 +1016,7 @@
      "options": [
       "Una foto de la universidad de 1998",
       "Sus gafas de leer",
-      "Su pasaporte"
+      "Su pasaporte con la fecha de nacimiento"
      ],
      "answer": 1
     },
@@ -1024,7 +1024,7 @@
      "q": "¿Qué le propone Toño?",
      "options": [
       "Esconder las gafas para siempre",
-      "Salir de la casa",
+      "Salir de la casa antes de las nominaciones",
       "Contarlo con chistes"
      ],
      "answer": 2
@@ -1125,7 +1125,7 @@
      "q": "¿A quién se le ocurrió la prueba?",
      "options": [
       "Al director y al patrocinador",
-      "A Toño",
+      "A Toño, para ganar el coche",
       "A la guionista"
      ],
      "answer": 2
@@ -1577,7 +1577,7 @@
     },
     {
      "s": 0,
-     "text": "Me preguntó si yo habría aceptado ese trato hace diez años, cuando era concursante."
+     "text": "Me preguntó si yo habría aceptado ese trato hace siete años, cuando era concursante."
     },
     {
      "s": 1,

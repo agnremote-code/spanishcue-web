@@ -27,7 +27,7 @@ export default {
     title: 'El confesor necesita confesarse',
     line: 'El confesionario es el único reducto de la casa sin testigos de carne y hueso: un sillón de terciopelo rojo, raído por doscientas confesiones, el ojo inyectado de la cámara y una cortina negra tan opaca como la política de privacidad del programa. Tras ella, La Voz lleva siete temporadas administrando preguntas con la ecuanimidad de un notario. Esta noche, sin embargo, su aplomo hace aguas por todas partes.',
     dialogue: [
-      ['voz', 'Bienvenida, bienvenido. Aquí te oye un país entero, pero solo te mira un objetivo. No conviene confundir una cosa con la otra.'],
+      ['voz', 'Te doy la bienvenida. Aquí te oye un país entero, pero solo te mira un objetivo. No conviene confundir una cosa con la otra.'],
       ['voz', 'Vayamos a lo esencial: ¿qué has venido a buscar entre estas paredes?'],
       ['voz', 'Perdona. Hoy no estoy para muchos trotes, pero eso, como comprenderás, a la escaleta le trae sin cuidado. Cuando gustes.'],
     ],
@@ -97,12 +97,12 @@ export default {
     line: 'En el comedor, la mesa larga aparece alfombrada de servilletas cubiertas por una caligrafía de notario decimonónico. Son de Mateo, un abogado santiaguino que el primer día fue el alma de la fiesta y que, desde hace once días, no ha dejado escapar ni una sílaba audible. La producción ha hecho correr que se trata de «una maniobra para chupar cámara», versión que en la casa nadie se cree ni harto de vino.',
     dialogue: [
       ['mateo', '(Escribe) «Ni enfermo ni deprimido. Objetor».'],
-      ['mateo', '(Escribe) «Página treinta, apartado cuarto: toda frase que pronuncie aquí podrá explotarse comercialmente a perpetuidad, sin contraprestación y en cualquier soporte, incluidos los que aún no se han inventado».'],
+      ['mateo', '(Escribe) «Página cuarenta, apartado cuarto: toda frase que pronuncie aquí podrá explotarse comercialmente a perpetuidad, sin contraprestación y en cualquier soporte, incluidos los que aún no se han inventado».'],
       ['mateo', '(Escribe) «Ya les regalé cuarenta chistes. Los próximos, con factura».'],
     ],
     ask: 'Mateo te desliza una servilleta virgen y un bolígrafo. ¿Qué haces?',
     options: [
-      { say: 'Antes de despegar los labios otra vez, déjame examinar esa página treinta con lupa.', reply: '(Escribe) «Bienvenida, bienvenido al gremio del silencio».', end: 'Lees la cláusula y se te quitan las ganas de abrir la boca. Desde entonces, cada palabra tuya pasa por aduana.', mood: 'worried' },
+      { say: 'Antes de despegar los labios otra vez, déjame examinar esa página cuarenta con lupa.', reply: '(Escribe) «Te doy la bienvenida al gremio del silencio».', end: 'Lees la cláusula y se te quitan las ganas de abrir la boca. Desde entonces, cada palabra tuya pasa por aduana.', mood: 'worried' },
       { say: '(Escribes) «Moción: lo que queda de noche, solo por servilleta».', reply: '(Escribe) «Aprobada por unanimidad. Por fin un diálogo invendible».', end: 'Mateo y tú alfombran la mesa de servilletas. Las fotos de su «chat de papel» se viralizan antes de que acabe la hora.', mood: 'laugh' },
       { say: 'Respeto tu objeción, Mateo, pero te pediría una única excepción: que me dijeras algo a mí, aquí y ahora.', reply: '…Gracias.', end: 'Mateo habla por primera vez en once días. Su primera palabra es «gracias», y ningún abogado de la cadena puede facturarla.', mood: 'surprised' },
     ],
@@ -301,7 +301,7 @@ export default {
   },
   pasillo: {
     title: 'Broncas por encargo y pizza fiambre',
-    line: 'Son las tres de la madrugada. Tras una puerta gris sin rótulo se agazapa el pasillo de producción: cuarenta monitores, una maraña de cables y un tufo perenne a café recalentado. Allí impera Chelo, la productora del turno de noche, que hace diez años se alzó con la primera edición de LA CASA. Hoy vigila a sus herederos desde una silla giratoria y cena pizza fiambre sin despegar los ojos de las pantallas.',
+    line: 'Son las tres de la madrugada. Tras una puerta gris sin rótulo se agazapa el pasillo de producción: cuarenta monitores, una maraña de cables y un tufo perenne a café recalentado. Allí impera Chelo, la productora del turno de noche, que hace siete años se alzó con la primera edición de LA CASA. Hoy vigila a sus herederos desde una silla giratoria y cena pizza fiambre sin despegar los ojos de las pantallas.',
     dialogue: [
       ['chelo', 'Pasa y cierra. Aquí no graba ni Dios. Tengo una propuesta que te conviene.'],
       ['chelo', 'A las tres y media montas una bronca con Wendy en el salón, con lagrimones si puede ser. A cambio, inmunidad blindada en la próxima nominación.'],
@@ -309,7 +309,7 @@ export default {
     ],
     ask: 'Chelo te tiende la pizza y un documento sin firmar. ¿Qué haces?',
     options: [
-      { say: 'Trato hecho. A las tres y media tendrán su bronca.', reply: 'Sabía que eras de las nuestras. Repasa tu perfil bueno antes del primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube dos puntos.', mood: 'worried' },
+      { say: 'Trato hecho. A las tres y media tendrán su bronca.', reply: 'Sabía que podía contar contigo. Repasa tu perfil bueno antes del primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube dos puntos.', mood: 'worried' },
       { say: 'El trato me sobra; la pizza, en cambio, no se la desprecio.', reply: 'Siéntate. Hace años que nadie cena conmigo sin pedirme algo a cambio.', end: 'Compartes una pizza fría con la productora. Es lo único de toda la noche que no queda grabado.', mood: 'smile' },
       { say: 'Chelo, de haber sabido entonces lo que sabes ahora, ¿habrías cruzado esa puerta?', reply: 'Gané un dineral… y mi mejor amiga dejó de hablarme la noche de la final. Hasta hoy.', end: 'La ganadora de la primera temporada vuelve a llorar, sola, entre los monitores del pasillo.', mood: 'sad' },
     ],

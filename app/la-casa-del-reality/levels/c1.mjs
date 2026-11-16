@@ -27,7 +27,7 @@ export default {
     title: 'La voz que se quiebra tras la cortina',
     line: 'El confesionario es el único rincón de la casa donde no hay testigos de carne y hueso: un sillón de terciopelo rojo que ha visto llorar a doscientos concursantes, el ojo rojo de la cámara y una cortina negra impenetrable. Tras ella, La Voz lleva siete temporadas formulando preguntas con una serenidad casi clínica. Esta noche, sin embargo, algo en su tono se resquebraja.',
     dialogue: [
-      ['voz', 'Bienvenida, bienvenido. Aquí te escucha un país entero, pero solo te mira una cámara. Conviene no olvidarlo.'],
+      ['voz', 'Te doy la bienvenida. Aquí te escucha un país entero, pero solo te mira una cámara. Conviene no olvidarlo.'],
       ['voz', 'Empecemos por el principio: ¿qué has venido a buscar a esta casa?'],
       ['voz', 'Disculpa. No estoy en mi mejor día, aunque eso, como comprenderás, no le importa a la escaleta. Cuando quieras.'],
     ],
@@ -97,12 +97,12 @@ export default {
     line: 'En el comedor, la mesa larga está tapizada de servilletas escritas con una caligrafía impecable. Son obra de Mateo, un abogado santiaguino que el primer día era el alma de la fiesta y que desde hace once días no ha pronunciado ni una sílaba en voz alta. La producción ha difundido que se trata de «una maniobra para acaparar protagonismo», aunque en la casa nadie se traga esa versión.',
     dialogue: [
       ['mateo', '(Escribe) «Ni enfermo ni deprimido. En huelga».'],
-      ['mateo', '(Escribe) «Página treinta del contrato: cualquier frase que pronuncie aquí puede usarse en publicidad a perpetuidad, sin contraprestación alguna».'],
+      ['mateo', '(Escribe) «Página cuarenta del contrato: cualquier frase que pronuncie aquí puede usarse en publicidad a perpetuidad, sin contraprestación alguna».'],
       ['mateo', '(Escribe) «Ya les regalé cuarenta chistes. Los siguientes, que los paguen a precio de mercado».'],
     ],
     ask: 'Mateo te desliza una servilleta en blanco y un bolígrafo. ¿Qué haces?',
     options: [
-      { say: 'Antes de soltar una palabra más, déjame leer esa página treinta con lupa.', reply: '(Escribe) «Bienvenida, bienvenido al sindicato del silencio».', end: 'Lees la cláusula y se te quitan las ganas de abrir la boca. A partir de ahí, sopesas cada palabra.', mood: 'worried' },
+      { say: 'Antes de soltar una palabra más, déjame leer esa página cuarenta con lupa.', reply: '(Escribe) «Te doy la bienvenida al sindicato del silencio».', end: 'Lees la cláusula y se te quitan las ganas de abrir la boca. A partir de ahí, sopesas cada palabra.', mood: 'worried' },
       { say: '(Escribes) «Moción: el resto de la noche, solo por servilleta».', reply: '(Escribe) «Aprobada. Por fin una conversación invendible».', end: 'Mateo y tú cubren la mesa de servilletas. Las fotos de su «chat de papel» se viralizan en menos de una hora.', mood: 'laugh' },
       { say: 'Respeto tu huelga, Mateo, pero te pediría una sola excepción: que me dijeras algo a mí.', reply: '…Gracias.', end: 'Mateo habla por primera vez en once días. Su primera palabra es «gracias», y legalmente no pueden explotarla.', mood: 'surprised' },
     ],
@@ -301,7 +301,7 @@ export default {
   },
   pasillo: {
     title: 'Conflicto a la carta',
-    line: 'Son las tres de la madrugada. Tras una puerta gris sin rótulo se esconde el pasillo de producción: cuarenta monitores, una maraña de cables y un olor perenne a café recalentado. Allí manda Chelo, la productora del turno de noche, que hace diez años ganó la primera edición de LA CASA. Hoy vigila a sus herederos desde una silla giratoria y cena pizza fría sin apartar la vista de las pantallas.',
+    line: 'Son las tres de la madrugada. Tras una puerta gris sin rótulo se esconde el pasillo de producción: cuarenta monitores, una maraña de cables y un olor perenne a café recalentado. Allí manda Chelo, la productora del turno de noche, que hace siete años ganó la primera edición de LA CASA. Hoy vigila a sus herederos desde una silla giratoria y cena pizza fría sin apartar la vista de las pantallas.',
     dialogue: [
       ['chelo', 'Pasa y cierra. Aquí no graba nadie. Tengo una propuesta que te interesa.'],
       ['chelo', 'A las tres y media provocas una bronca con Wendy en el salón, con lágrimas a ser posible. A cambio, inmunidad garantizada en la próxima nominación.'],
@@ -309,7 +309,7 @@ export default {
     ],
     ask: 'Chelo te tiende la pizza y un documento sin firmar. ¿Qué haces?',
     options: [
-      { say: 'Trato hecho. A las tres y media tendrán su bronca.', reply: 'Sabía que eras de las nuestras. Repasa tu perfil bueno antes del primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube dos puntos.', mood: 'worried' },
+      { say: 'Trato hecho. A las tres y media tendrán su bronca.', reply: 'Sabía que podía contar contigo. Repasa tu perfil bueno antes del primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube dos puntos.', mood: 'worried' },
       { say: 'El trato me sobra; la pizza, en cambio, no la rechazo.', reply: 'Siéntate. Hace años que nadie cena conmigo sin pedirme algo a cambio.', end: 'Compartes una pizza fría con la productora. Es lo único de toda la noche que no queda grabado.', mood: 'smile' },
       { say: 'Chelo, de haber sabido lo que sabes ahora, ¿habrías entrado en esta casa?', reply: 'Gané mucho dinero… y mi mejor amiga dejó de hablarme la noche de la final.', end: 'La ganadora de la primera temporada vuelve a llorar, sola, entre los monitores del pasillo.', mood: 'sad' },
     ],

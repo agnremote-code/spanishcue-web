@@ -11,7 +11,7 @@ export default {
     ask: 'El redoble termina y la puerta empieza a abrirse. ¿Qué haces?',
     options: [
       { say: '¡Vengo a ganar!', reply: 'Tal como lo ensayamos. Aunque reconozco que el aplauso ha sonado a compromiso.', end: 'Entras con la frase de los guionistas. Hay tres segundos de silencio incómodo y una tos solitaria en la primera fila.', mood: 'worried' },
-      { say: 'Si les dijera que vengo a ganar, mentiría. Vengo, sobre todo, muerto o muerta de miedo.', reply: 'Eso no estaba en ningún guion… pero las redes están ardiendo, y para bien.', end: 'Tu sinceridad descoloca al público unos segundos. Después aplaude con más ganas que en toda la temporada.', mood: 'surprised' },
+      { say: 'Si les dijera que vengo a ganar, mentiría. Vengo, sobre todo, con un miedo terrible.', reply: 'Eso no estaba en ningún guion… pero las redes están ardiendo, y para bien.', end: 'Tu sinceridad descoloca al público unos segundos. Después aplaude con más ganas que en toda la temporada.', mood: 'surprised' },
       { say: 'Déjame la horquilla: si es el cable que imagino, lo arreglo antes de que se abra del todo.', reply: '¡Luz verde! ¿Se puede saber dónde aprendiste eso?', end: 'Arreglas el micrófono en directo delante de cuarenta cámaras. Antes de pisar el salón ya te llaman «la Sorpresa técnica».', mood: 'laugh' },
     ],
     talk: [
@@ -27,7 +27,7 @@ export default {
     title: 'Quién confiesa a quién',
     line: 'El confesionario es el único rincón de la casa sin compañeros: un sillón rojo de terciopelo gastado, una cámara con su luz roja y una cortina negra que no deja ver nada. Detrás trabaja La Voz, que lleva siete temporadas haciendo las mismas preguntas con la misma calma profesional. Esta noche, sin embargo, se le quiebra la voz entre frase y frase.',
     dialogue: [
-      ['voz', 'Bienvenida, bienvenido al confesionario. Lo que se dice aquí lo escucha todo el país, pero solo te mira una cámara.'],
+      ['voz', 'Te doy la bienvenida al confesionario. Lo que se dice aquí lo escucha todo el país, pero solo te mira una cámara.'],
       ['voz', 'Empecemos por la pregunta de siempre: ¿qué has venido a buscar a esta casa?'],
       ['voz', 'Disculpa, hoy no estoy en mi mejor momento. Pero eso no forma parte del programa. Adelante, cuando quieras.'],
     ],
@@ -97,12 +97,12 @@ export default {
     line: 'En el comedor, la mesa larga está cubierta de servilletas escritas con una caligrafía impecable. Son de Mateo, un abogado de Santiago que el primer día no dejaba de contar chistes y que, desde hace once días, no ha pronunciado una sola palabra en voz alta. La producción ha anunciado que se trata de «una estrategia para llamar la atención», aunque nadie de la casa se lo cree.',
     dialogue: [
       ['mateo', '(Escribe) «No estoy enfermo ni deprimido. Estoy en huelga».'],
-      ['mateo', '(Escribe) «El décimo día leí la página treinta del contrato: cualquier frase que pronuncie aquí puede usarse en anuncios, de por vida y sin compensación».'],
+      ['mateo', '(Escribe) «El décimo día leí la página cuarenta del contrato: cualquier frase que pronuncie aquí puede usarse en anuncios, de por vida y sin compensación».'],
       ['mateo', '(Escribe) «Ya les regalé cuarenta chistes. Si quieren más, que me los paguen».'],
     ],
     ask: 'Mateo te acerca una servilleta en blanco y un bolígrafo. ¿Qué haces?',
     options: [
-      { say: 'Antes de pronunciar una palabra más, déjame leer esa página treinta.', reply: '(Escribe) «Bienvenida, bienvenido a la huelga».', end: 'Lees la cláusula y se te quitan las ganas de hablar. Desde ese momento, mides cada palabra.', mood: 'worried' },
+      { say: 'Antes de pronunciar una palabra más, déjame leer esa página cuarenta.', reply: '(Escribe) «Te doy la bienvenida a la huelga».', end: 'Lees la cláusula y se te quitan las ganas de hablar. Desde ese momento, mides cada palabra.', mood: 'worried' },
       { say: '(Escribes) «Propuesta: el resto de la noche, solo por servilleta».', reply: '(Escribe) «Por fin una conversación que no pueden vender».', end: 'Mateo y tú llenan la mesa de servilletas. Las fotos de su «chat de papel» se hacen virales en una hora.', mood: 'laugh' },
       { say: 'Respeto tu huelga, Mateo, pero me gustaría que me concedieras una sola palabra.', reply: '…Gracias.', end: 'Mateo habla por primera vez en once días. Su primera palabra es «gracias», y legalmente no se puede usar en ningún anuncio.', mood: 'surprised' },
     ],
@@ -263,7 +263,7 @@ export default {
     ],
     ask: 'El reloj de la pantalla inicia la cuenta atrás. ¿Qué haces?',
     options: [
-      { say: 'Nomino a Fela. No me siento orgulloso ni orgullosa, pero lo hago.', reply: 'Perfecto. Producción sabrá agradecértelo.', end: 'Fela queda nominada. Mientras tanto, sin saber nada, te está preparando el desayuno en la cocina.', mood: 'sad' },
+      { say: 'Nomino a Fela. No es para presumir, pero lo hago.', reply: 'Perfecto. Producción sabrá agradecértelo.', end: 'Fela queda nominada. Mientras tanto, sin saber nada, te está preparando el desayuno en la cocina.', mood: 'sad' },
       { say: 'No nomino a nadie. No conozco a nadie lo bastante como para echarlo de su casa.', reply: 'Eso no está permitido… ni prohibido. Nunca se le había ocurrido a nadie.', end: 'Te niegas a nominar. La Voz se queda muda durante diez segundos eternos.', mood: 'surprised' },
       { say: 'Me nomino a mí. Si he de irme, prefiero irme sin haber traicionado a nadie.', reply: 'En siete temporadas, nadie se había nominado a sí mismo.', end: 'Te nominas tú. Por primera vez en la historia del programa, el público aplaude una nominación.', mood: 'laugh' },
     ],
@@ -301,7 +301,7 @@ export default {
   },
   pasillo: {
     title: 'Una pelea por encargo',
-    line: 'Son las tres de la mañana. Detrás de una puerta gris sin letrero se esconde el pasillo de producción: cuarenta monitores, cables por el suelo y un olor permanente a café recalentado. Allí manda Chelo, la productora del turno de noche. Hace diez años, ella ganó la primera edición de LA CASA. Hoy vigila a los concursantes y cena pizza fría de pie.',
+    line: 'Son las tres de la mañana. Detrás de una puerta gris sin letrero se esconde el pasillo de producción: cuarenta monitores, cables por el suelo y un olor permanente a café recalentado. Allí manda Chelo, la productora del turno de noche. Hace siete años, ella ganó la primera edición de LA CASA. Hoy vigila a los concursantes y cena pizza fría de pie.',
     dialogue: [
       ['chelo', 'Entra y cierra. Aquí no graba nadie. Tengo una propuesta que te conviene.'],
       ['chelo', 'A las tres y media provocas una discusión con Wendy en el salón, con lágrimas si es posible. A cambio, te garantizo inmunidad en la próxima nominación.'],
@@ -309,15 +309,15 @@ export default {
     ],
     ask: 'Chelo te ofrece la pizza y un documento sin firmar. ¿Qué haces?',
     options: [
-      { say: 'Acepto. A las tres y media tendrán su pelea.', reply: 'Sabía que eras de las nuestras. Mírate al espejo antes del primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube dos puntos.', mood: 'worried' },
-      { say: 'El trato me sobra, pero la pizza la acepto encantado o encantada.', reply: 'Siéntate. Hace años que nadie cena conmigo sin querer algo a cambio.', end: 'Compartes una pizza fría con la productora. Es lo único de toda la noche que no se graba.', mood: 'smile' },
+      { say: 'Acepto. A las tres y media tendrán su pelea.', reply: 'Sabía que podía contar contigo. Mírate al espejo antes del primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube dos puntos.', mood: 'worried' },
+      { say: 'El trato me sobra, pero la pizza la acepto con mucho gusto.', reply: 'Siéntate. Hace años que nadie cena conmigo sin querer algo a cambio.', end: 'Compartes una pizza fría con la productora. Es lo único de toda la noche que no se graba.', mood: 'smile' },
       { say: 'Chelo, si pudieras volver atrás, ¿volverías a entrar en esta casa?', reply: 'Gané mucho dinero… y mi mejor amiga dejó de hablarme la noche de la final.', end: 'La ganadora de la primera temporada vuelve a llorar, sola, entre los monitores del pasillo.', mood: 'sad' },
     ],
     talk: [
       '¿Qué opinas de que los programas fabriquen conflictos y luego los presenten como espontáneos?',
       '¿Qué precio personal pagarías por conseguir seguridad en una competición?',
       '¿Cómo crees que cambia una amistad cuando una de las dos personas se hace famosa?',
-      '¿Qué habrías hecho tú en el lugar de Chelo, diez años después de ganar?',
+      '¿Qué habrías hecho tú en el lugar de Chelo, siete años después de ganar?',
       '¿Qué trabajo nocturno conoces que el resto de la sociedad no valora?',
     ],
     words: ['por encargo', 'el letrero', 'la inmunidad', 'garantizar', 'recalentado'],

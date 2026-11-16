@@ -27,7 +27,7 @@ export default {
     title: 'Primera confesión',
     line: 'El confesionario es un cuarto sin ventanas con un sillón rojo, una cámara y una cortina negra. Detrás de la cortina está La Voz, que hace las preguntas desde hace siete años. Nadie ha visto nunca su cara. Esta noche su voz suena más cansada que otras veces.',
     dialogue: [
-      ['voz', 'Bienvenida, bienvenido. Siéntate y mira a la luz roja.'],
+      ['voz', 'Te doy la bienvenida. Siéntate y mira a la luz roja.'],
       ['voz', 'Primera pregunta: ¿por qué has venido a esta casa?'],
       ['voz', 'Disculpa el tono. Hoy ha sido un día largo para mí. Contesta cuando quieras.'],
     ],
@@ -97,12 +97,12 @@ export default {
     line: 'En la mesa larga del comedor hay un montón de servilletas escritas. Mateo, abogado de Santiago, era el más gracioso de la casa el primer día. Desde hace once días no dice ni una palabra en voz alta: lo escribe todo en servilletas de papel.',
     dialogue: [
       ['mateo', '(Escribe) «Hola, Sorpresa. No me he quedado sin voz. Estoy perfectamente».'],
-      ['mateo', '(Escribe) «El día diez leí la página treinta del contrato. El programa puede usar mi voz en anuncios para siempre».'],
+      ['mateo', '(Escribe) «El día diez leí la página cuarenta del contrato. El programa puede usar mi voz en anuncios para siempre».'],
       ['mateo', '(Escribe) «Ya les he regalado demasiadas palabras. Se acabó».'],
     ],
     ask: 'Mateo te pasa una servilleta en blanco y un bolígrafo. ¿Qué haces?',
     options: [
-      { say: '¿Puedo leer yo también la página treinta del contrato?', reply: '(Escribe) «Claro. Pero después no vas a querer hablar».', end: 'Lees el contrato. Cuando terminas, tú tampoco tienes ganas de decir nada.', mood: 'worried' },
+      { say: '¿Puedo leer yo también la página cuarenta del contrato?', reply: '(Escribe) «Claro. Pero después no vas a querer hablar».', end: 'Lees el contrato. Cuando terminas, tú tampoco tienes ganas de decir nada.', mood: 'worried' },
       { say: '(Escribes en la servilleta) «¿Jugamos a hablar solo con servilletas?».', reply: '(Escribe) «Por fin alguien que me entiende».', end: 'Mateo y tú pasan una hora escribiendo servilletas. En redes, su «chat de papel» ya es tendencia.', mood: 'laugh' },
       { say: 'Tu voz es tuya, Mateo. Pero yo quiero escucharla.', reply: '…Gracias.', end: 'Mateo habla en voz alta por primera vez en once días. Su primera palabra es «gracias».', mood: 'surprised' },
     ],
@@ -301,15 +301,15 @@ export default {
   },
   pasillo: {
     title: 'Pizza fría y un trato',
-    line: 'Son las tres de la mañana. Detrás de una puerta gris está el pasillo de producción, lleno de monitores, cables y tazas de café. Chelo, productora del turno de noche, ganó la primera temporada de LA CASA hace diez años. Ahora vigila las cámaras y cena pizza fría.',
+    line: 'Son las tres de la mañana. Detrás de una puerta gris está el pasillo de producción, lleno de monitores, cables y tazas de café. Chelo, productora del turno de noche, ganó la primera temporada de LA CASA hace siete años. Ahora vigila las cámaras y cena pizza fría.',
     dialogue: [
       ['chelo', 'Pasa, Sorpresa. Nadie te ha visto entrar. Te propongo un trato.'],
-      ['chelo', 'A las tres y media discutes con Wendy en el salón. Gritos y lágrimas. A cambio, la semana que viene no estás nominada.'],
+      ['chelo', 'A las tres y media discutes con Wendy en el salón. Gritos y lágrimas. A cambio, la semana que viene nadie te puede nominar.'],
       ['chelo', '¿Una porción? Está fría, pero sabe mejor que la comida de la casa.'],
     ],
     ask: 'Chelo te ofrece la pizza y un papel para firmar. ¿Qué haces?',
     options: [
-      { say: 'Trato hecho. A las tres y media hay pelea.', reply: 'Así me gusta. Sabía que eras de las nuestras.', end: 'Aceptas el trato de la producción. A las tres y media, el salón se llena de gritos.', mood: 'worried' },
+      { say: 'Trato hecho. A las tres y media hay pelea.', reply: 'Así me gusta. Sabía que podía contar contigo.', end: 'Aceptas el trato de la producción. A las tres y media, el salón se llena de gritos.', mood: 'worried' },
       { say: 'Sin trato. Pero sí acepto la pizza.', reply: 'Siéntate. Hace años que nadie cena conmigo.', end: 'Compartes una pizza fría con la productora. Es lo único de la noche que nadie graba.', mood: 'smile' },
       { say: 'Chelo, ¿fuiste feliz cuando ganaste?', reply: 'Gané mucho dinero… y mi mejor amiga ya no me habla.', end: 'La ganadora de la primera temporada vuelve a llorar en el pasillo, entre monitores.', mood: 'sad' },
     ],

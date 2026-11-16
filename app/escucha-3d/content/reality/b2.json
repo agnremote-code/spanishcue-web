@@ -66,7 +66,7 @@
     {
      "q": "¿Qué propone Lalo?",
      "options": [
-      "Cancelar la entrada",
+      "Cancelar la entrada y empezar con la piscina",
       "Que entre en silencio y con la cara tapada",
       "Aceptar los fuegos a cambio de libertad para la Sorpresa"
      ],
@@ -680,7 +680,7 @@
      "q": "¿Qué condición propone Fela?",
      "options": [
       "Que no emitan nada de Yeni nunca más",
-      "Que paguen más",
+      "Que le paguen más a Yeni por cada emisión",
       "Que emitan también lo que pasó después"
      ],
      "answer": 2
@@ -1011,7 +1011,7 @@
      "options": [
       "Un carné de la biblioteca de 1997",
       "Una foto de la piscina con la Sorpresa",
-      "Unas gafas"
+      "Unas gafas de leer escondidas en la almohada"
      ],
      "answer": 0
     },
@@ -1271,7 +1271,7 @@
      "options": [
       "Un viaje para Chema y su familia",
       "Un yogur sin lactosa y la verdad",
-      "Más dinero"
+      "Más dinero por cada anuncio en directo"
      ],
      "answer": 1
     },
@@ -1581,7 +1581,7 @@
     },
     {
      "s": 0,
-     "text": "La verdad, y no me preguntes por qué. Le conté que yo acepté un trato parecido hace diez años. Le grité a una compañera en directo, gané la final y nunca más volvió a hablarme."
+     "text": "La verdad, y no me preguntes por qué. Le conté que yo acepté un trato parecido hace siete años. Le grité a una compañera en directo, gané la final y nunca más volvió a hablarme."
     },
     {
      "s": 1,
@@ -1619,10 +1619,10 @@
      "answer": 0
     },
     {
-     "q": "¿Qué hizo Chelo hace diez años?",
+     "q": "¿Qué hizo Chelo hace siete años?",
      "options": [
       "Abandonó la casa por la puerta roja",
-      "Robó el trofeo",
+      "Robó el trofeo la noche de la final",
       "Le gritó a una compañera en directo"
      ],
      "answer": 2
@@ -1632,7 +1632,7 @@
      "options": [
       "A la chica que lloraba en el pasillo de producción",
       "A la ganadora llorando con el trofeo",
-      "Nada"
+      "Nada, porque nadie se acuerda de ella"
      ],
      "answer": 1
     },
@@ -1998,7 +1998,7 @@
      "options": [
       "No hacer nada hasta la final del programa",
       "Hacer la pregunta sin decir que es su padre",
-      "Contarlo ella"
+      "Contarlo ella misma en el confesionario"
      ],
      "answer": 1
     }
@@ -2120,7 +2120,7 @@
      "q": "¿Qué propone La Voz?",
      "options": [
       "Salir con una máscara en la gala",
-      "No decir nada",
+      "No decir nada hasta que acabe la emisión",
       "Hacerse a sí mismo la última pregunta"
      ],
      "answer": 2

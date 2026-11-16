@@ -78,7 +78,7 @@
      "options": [
       "Una frase corta y fácil de recordar para el público",
       "Una lágrima en los primeros cinco minutos",
-      "Una caída"
+      "Una caída por la escalera al entrar"
      ],
      "answer": 1
     },
@@ -88,7 +88,7 @@
      "options": [
       "Entusiasta, porque le encanta la publicidad",
       "Irónico y escéptico",
-      "Triste"
+      "Triste y nostálgico por los viejos tiempos"
      ],
      "answer": 1
     }
@@ -184,7 +184,7 @@
      "options": [
       "Dieciocho",
       "Veintitrés",
-      "Cinco"
+      "Cinco, como siempre"
      ],
      "answer": 0
     },
@@ -203,7 +203,7 @@
      "options": [
       "Una máquina neutral que trata a todos igual",
       "Alguien que elige preguntas para que duelan",
-      "Un actor contratado"
+      "Un actor contratado que lee un guion"
      ],
      "answer": 1
     },
@@ -463,7 +463,7 @@
      "options": [
       "Que Wendy sabe aprovechar cualquier cosa contra ella",
       "Que Wendy cocina muy bien y quiere aprender sus recetas cubanas",
-      "Que se reconciliarán"
+      "Que pronto se reconciliarán delante de las cámaras"
      ],
      "answer": 0
     }
@@ -554,7 +554,7 @@
      "q": "¿Qué hizo la producción con las servilletas?",
      "options": [
       "Las tiró a la basura cada noche",
-      "Las vendió",
+      "Las vendió en una subasta benéfica del canal",
       "Las subtituló con música épica"
      ],
      "answer": 2
@@ -935,7 +935,7 @@
      "infer": true,
      "options": [
       "Romántico y emocionado",
-      "Indiferente",
+      "Indiferente, como si no le importara nada",
       "Defensivo e irónico"
      ],
      "answer": 2
@@ -1047,7 +1047,7 @@
      "options": [
       "Un walkman y una foto de Nacho",
       "Un carné de la biblioteca de 1997",
-      "Su pasaporte"
+      "Su pasaporte, escondido en la maleta"
      ],
      "answer": 1
     },
@@ -1065,7 +1065,7 @@
      "q": "¿Qué le pasó a Nacho a los treinta y cinco?",
      "options": [
       "Ganó un concurso de belleza internacional en Miami",
-      "Dejó de bailar",
+      "Dejó de bailar por una lesión de rodilla",
       "Pasó de modelo de colonias a modelo de seguros"
      ],
      "answer": 2
@@ -1075,8 +1075,8 @@
      "infer": true,
      "options": [
       "Rabia contra Toño y contra la producción",
-      "Miedo",
-      "Resignación con humor"
+      "Miedo a que lo expulsen esta misma noche de gala",
+      "Resignación, pero con humor"
      ],
      "answer": 2
     }
@@ -1187,7 +1187,7 @@
      "options": [
       "Para llevar a su madre a diálisis",
       "Para trabajar en una empresa de mudanzas",
-      "Para venderlo"
+      "Para venderlo y pagar sus deudas"
      ],
      "answer": 0
     },
@@ -1652,7 +1652,7 @@
      "options": [
       "En la semana nueve",
       "En la primera semana",
-      "En la final"
+      "En la final, delante de todo el país"
      ],
      "answer": 0
     },
@@ -2029,7 +2029,7 @@
      "options": [
       "Que era la misma que usa en los anuncios",
       "Que era muy cariñosa, como cuando ella era pequeña",
-      "Que estaba nervioso"
+      "Que estaba nervioso y le temblaba la voz"
      ],
      "answer": 0
     },
@@ -2038,7 +2038,7 @@
      "options": [
       "Hacer la pregunta sin decir que es su padre",
       "No hacer ninguna pregunta y esperar a la final",
-      "Escribirle"
+      "Escribirle una carta desde la casa"
      ],
      "answer": 0
     },
@@ -2168,7 +2168,7 @@
      "options": [
       "Un resumen con los mejores momentos",
       "La noche de la Sorpresa sin cortar",
-      "Nada"
+      "Nada hasta que el director lo apruebe por escrito"
      ],
      "answer": 1
     },

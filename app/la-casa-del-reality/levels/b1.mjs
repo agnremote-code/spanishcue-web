@@ -27,7 +27,7 @@ export default {
     title: 'La Voz tiene un mal día',
     line: 'El confesionario es el único lugar de la casa donde los concursantes hablan solos con la cámara. Hay un sillón rojo, una luz roja y una cortina negra. Detrás de la cortina trabaja La Voz, que lleva siete años haciendo preguntas. Esta noche, por primera vez, parece que le cuesta concentrarse.',
     dialogue: [
-      ['voz', 'Bienvenida, bienvenido al confesionario. Aquí puedes decir lo que no dices fuera.'],
+      ['voz', 'Te doy la bienvenida al confesionario. Aquí puedes decir lo que no dices fuera.'],
       ['voz', 'Empecemos por lo fácil: ¿qué buscas en esta casa?'],
       ['voz', 'Perdona si hoy sueno distinto. No es asunto tuyo. Concéntrate en la cámara, por favor.'],
     ],
@@ -56,7 +56,7 @@ export default {
     ],
     ask: 'Los dos esperan tu respuesta. ¿Qué decides?',
     options: [
-      { say: 'Me parece bien. Es mejor tener un equipo que estar sola o solo.', reply: '¡Perfecto! Con tu voto, ya somos intocables.', end: 'Formas una alianza en tu primera hora. La pantalla del salón muestra en letras rojas: «ALIANZA».', mood: 'smile' },
+      { say: 'Me parece bien. Es mejor tener un equipo que estar sin nadie.', reply: '¡Perfecto! Con tu voto, ya somos intocables.', end: 'Formas una alianza en tu primera hora. La pantalla del salón muestra en letras rojas: «ALIANZA».', mood: 'smile' },
       { say: 'No creo que esto sea solo estrategia. Ustedes dos se miran como una pareja.', reply: '¡Calla! …Está bien: llevamos dos años juntos. Si se sabe, nos echan.', end: 'Descubres el secreto de Brenda y Óscar. Ahora eres la persona más peligrosa del salón.', mood: 'scared' },
       { say: 'Prefiero no comprometerme hasta conocer a todo el mundo.', reply: 'Qué raro. Wendy dijo lo mismo hace cinco minutos, ¿no?', end: 'Rechazas dos alianzas en cinco minutos. Es el nuevo récord de la temporada.', mood: 'surprised' },
     ],
@@ -93,16 +93,16 @@ export default {
     words: ['el presupuesto', 'la despensa', 'el tribunal', 'exigir', 'alcanzar'],
   },
   mudo: {
-    title: 'El contrato de la página treinta',
+    title: 'El contrato de la página cuarenta',
     line: 'En el comedor, la mesa larga está cubierta de servilletas escritas con letra pequeña y elegante. Son de Mateo, un abogado chileno que el primer día no paraba de contar chistes. Hace once días dejó de hablar en voz alta y nadie sabe exactamente por qué. La producción dice que es «una estrategia para llamar la atención».',
     dialogue: [
       ['mateo', '(Escribe) «No estoy enfermo ni deprimido. Estoy perfectamente».'],
-      ['mateo', '(Escribe) «Leí la página treinta del contrato: cualquier palabra que diga aquí puede usarse en anuncios, para siempre y sin pagarme».'],
+      ['mateo', '(Escribe) «Leí la página cuarenta del contrato: cualquier palabra que diga aquí puede usarse en anuncios, para siempre y sin pagarme».'],
       ['mateo', '(Escribe) «Ya les regalé suficientes chistes. A partir de ahora, solo papel».'],
     ],
     ask: 'Mateo te ofrece una servilleta y un bolígrafo. ¿Qué haces?',
     options: [
-      { say: 'Quiero leer esa página treinta antes de decir una palabra más.', reply: '(Escribe) «Bienvenida, bienvenido al club del silencio».', end: 'Lees la cláusula y te quedas pálido o pálida. Desde ese momento, piensas dos veces antes de hablar.', mood: 'worried' },
+      { say: 'Quiero leer esa página cuarenta antes de decir una palabra más.', reply: '(Escribe) «Te doy la bienvenida al club del silencio».', end: 'Lees la cláusula y se te va el color de la cara. Desde ese momento, piensas dos veces antes de hablar.', mood: 'worried' },
       { say: '(Escribes) «¿Y si hablamos solo con servilletas toda la noche?».', reply: '(Escribe) «Por fin una conversación sin micrófonos».', end: 'Mateo y tú llenan la mesa de servilletas. Las fotos de su «chat de papel» se hacen virales.', mood: 'laugh' },
       { say: 'Entiendo que protejas tu voz, Mateo, pero me encantaría que hablaras conmigo.', reply: '…Gracias.', end: 'Mateo vuelve a hablar después de once días. Su primera palabra es «gracias», y la producción no puede venderla.', mood: 'surprised' },
     ],
@@ -301,7 +301,7 @@ export default {
   },
   pasillo: {
     title: 'El trato de las tres y media',
-    line: 'Son las tres de la mañana. Detrás de una puerta gris sin letrero está el pasillo de producción: monitores, cables, tazas sucias y un olor permanente a café recalentado. Allí manda Chelo, la productora del turno de noche. Hace diez años, ella ganó la primera edición de LA CASA. Hoy vigila cuarenta pantallas y cena pizza fría.',
+    line: 'Son las tres de la mañana. Detrás de una puerta gris sin letrero está el pasillo de producción: monitores, cables, tazas sucias y un olor permanente a café recalentado. Allí manda Chelo, la productora del turno de noche. Hace siete años, ella ganó la primera edición de LA CASA. Hoy vigila cuarenta pantallas y cena pizza fría.',
     dialogue: [
       ['chelo', 'Entra, cierra la puerta. Aquí no hay cámaras. Tengo una propuesta para ti.'],
       ['chelo', 'A las tres y media empiezas una discusión con Wendy en el salón. Con lágrimas, si puede ser. A cambio, la semana próxima estás a salvo de las nominaciones.'],
@@ -309,7 +309,7 @@ export default {
     ],
     ask: 'Chelo te ofrece la pizza y un papel para firmar. ¿Qué haces?',
     options: [
-      { say: 'Acepto. A las tres y media habrá pelea.', reply: 'Sabía que eras de las nuestras. Ponte guapo o guapa para el primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube.', mood: 'worried' },
+      { say: 'Acepto. A las tres y media habrá pelea.', reply: 'Sabía que podía contar contigo. Prepárate para el primer plano.', end: 'Aceptas el trato de producción. A las tres y media, el salón se llena de gritos y la audiencia sube.', mood: 'worried' },
       { say: 'El trato no me interesa. La pizza, en cambio, sí.', reply: 'Siéntate. Hace mucho que nadie cena conmigo sin pedirme algo.', end: 'Compartes una pizza fría con la productora. Es lo único de la noche que nadie graba.', mood: 'smile' },
       { say: 'Chelo, ¿cómo te cambió la vida ganar la primera temporada?', reply: 'Gané mucho dinero… y mi mejor amiga no ha vuelto a hablarme desde la final.', end: 'La ganadora de la primera temporada vuelve a llorar, sola, entre los monitores del pasillo.', mood: 'sad' },
     ],
@@ -355,7 +355,7 @@ export default {
     ],
     ask: 'Paty abre un maletín con cuarenta pinceles. ¿Qué respondes?',
     options: [
-      { say: 'Sí, por favor. Quiero que parezca que he dormido ocho horas.', reply: 'Dame diez minutos y vas a parecer recién llegado o llegada de unas vacaciones.', end: 'Paty te maquilla para que parezca que has dormido ocho horas. Nadie sospecha de tu noche.', mood: 'smile' },
+      { say: 'Sí, por favor. Quiero que parezca que he dormido ocho horas.', reply: 'Dame diez minutos y vas a tener cara de vacaciones.', end: 'Paty te maquilla para que parezca que has dormido ocho horas. Nadie sospecha de tu noche.', mood: 'smile' },
       { say: 'Antes, cuéntame: ¿qué te han enseñado tus clientes de la funeraria?', reply: 'Que nadie se lleva los seguidores al otro lado. Ni el bronceado.', end: 'Te ríes de la muerte con la maquilladora a las cuatro de la mañana. Es la mejor charla de la noche.', mood: 'laugh' },
       { say: 'Gracias, pero hoy prefiero que el país vea mi cara real.', reply: 'Muy valiente. En alta definición, pero muy valiente.', end: 'Sales sin maquillaje. Tus ojeras aparecen en alta definición en millones de pantallas.', mood: 'surprised' },
     ],

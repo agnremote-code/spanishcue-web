@@ -25,7 +25,7 @@ export const INVITADOS = {
   '2': {
     name: 'Pancho',
     who: { es: 'Guardia de seguridad de la puerta', en: 'Security guard at the door' },
-    basic: { es: 'Trabajo en la puerta. Nadie entra, nadie sale. Llevo diez años aquí. Veo todos los programas, pero nunca salgo en la tele.', en: 'I work at the door. Nobody comes in, nobody goes out. I have been here for ten years. I see every show, but I am never on TV.' },
+    basic: { es: 'Trabajo en la puerta. Nadie entra, nadie sale. Llevo siete años aquí. Veo todos los programas, pero nunca salgo en la tele.', en: 'I work at the door. Nobody comes in, nobody goes out. I have been here for seven years. I see every show, but I am never on TV.' },
     basicAsk: { es: '¿Qué trabajo de tu ciudad nadie ve pero todos necesitan?', en: 'What job in your city does nobody see but everyone needs?' },
     mid: 'Diez temporadas cuidando esta puerta. He visto entrar a cantantes, modelos, un mago y un señor que decía ser príncipe. Todos entran sonriendo y salen llorando, ganen o pierdan. Yo nunca salgo en pantalla, y lo prefiero: mi esposa me ve en casa y me dice que soy el único de aquí que tiene un trabajo de verdad.',
     midAsk: '¿Qué ves cada día en tu trabajo o en tus estudios que otros no ven?',

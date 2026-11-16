@@ -302,10 +302,10 @@ export default {
   },
   pasillo: {
     title: t('Pizza fría a las tres', 'Cold pizza at three'),
-    line: t('Son las tres de la mañana. Entras en el pasillo de producción. Chelo come pizza fría. Chelo ganó el programa hace diez años.', 'It is three in the morning. You go into the production corridor. Chelo is eating cold pizza. Chelo won the show ten years ago.'),
+    line: t('Son las tres de la mañana. Entras en el pasillo de producción. Chelo come pizza fría. Chelo ganó el programa hace siete años.', 'It is three in the morning. You go into the production corridor. Chelo is eating cold pizza. Chelo won the show seven years ago.'),
     dialogue: [
       ['chelo', t('Hola. Tengo un trato para ti.', 'Hi. I have a deal for you.')],
-      ['chelo', t('A las tres y media, gritas a Wendy. Y no estás nominada.', 'At half past three, you shout at Wendy. And you are not nominated.')],
+      ['chelo', t('A las tres y media, gritas a Wendy. Y la semana que viene tienes inmunidad.', 'At half past three, you shout at Wendy. And next week you have immunity.')],
       ['chelo', t('¿Quieres pizza? Está fría.', 'Do you want pizza? It is cold.')],
     ],
     ask: t('Chelo espera. ¿Qué respondes?', 'Chelo waits. What do you answer?'),
