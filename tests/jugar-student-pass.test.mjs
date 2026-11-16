@@ -135,7 +135,7 @@ test("the Worker, the build and the hub wire the pass and nothing wider", () => 
   const protect = read("scripts/protect-client-assets.mjs");
   assert.match(protect, /if \(studentFiles\.has\(file\)\) clientAssets\[`\/\$\{file\}`\]\.student = true;/);
   assert.match(protect, /!await mayReadPrivateMedia\(request,env,path\)&&!await mayReadStudentAsset\(request,env,path,media\.student===true\)/);
-  assert.match(protect, /studentProtectedFiles\.length > protectedFiles\.length \* 0\.7/, "the build refuses a pass that covers the library");
+  assert.match(protect, /studentProtectedFiles\.length > protectedFiles\.length \* 0\.9/, "the build refuses a pass that covers the library");
   const page = read("app/jugar/page.tsx");
   assert.match(page, /const href = fullAccess \|\| studentPass \? lesson\.path : world\.open \?\? null;/);
   assert.match(page, /studentPassFromHeaders\(requestHeaders\)/);

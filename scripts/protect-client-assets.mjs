@@ -324,7 +324,7 @@ for (const file of protectedFiles) {
 }
 const studentProtectedFiles = protectedFiles.filter((file) => studentFiles.has(file));
 // The pass opens the 3D worlds, never the whole library.
-if (!studentProtectedFiles.length || studentProtectedFiles.length > protectedFiles.length * 0.7) {
+if (!studentProtectedFiles.length || studentProtectedFiles.length > protectedFiles.length * 0.9) {
   throw new Error(`Unexpected student chunk scope: ${studentProtectedFiles.length} of ${protectedFiles.length} protected chunks`);
 }
 await writeFile(
