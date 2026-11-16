@@ -367,7 +367,7 @@ const app = {
     }
     // Newsletter gift: an authentic email-signup cookie opens one PRO grammar class and its audio, nothing else.
     const gifted=!fullAccess&&giftCoversPath(pathname,lesson?.id??null)&&await hasGift(request.headers.get('cookie'),env.AUTOESTUDIO_SHARE_SECRET).catch(()=>false);
-    if (premiumAudio && !fullAccess && !gifted && !studentAudio && !(topicAudio && shareSession)) {
+    if (premiumAudio && !fullAccess && !gifted && !(topicAudio && shareSession) && !studentAudio) {
       const headers = new Headers({'Cache-Control':'private, no-store'});
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});
