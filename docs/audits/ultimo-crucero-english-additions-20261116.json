@@ -1568,10 +1568,6 @@
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "What food is always in your fridge?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "Do you like prawns?"
     },
     {
@@ -1933,10 +1929,6 @@
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "What important paper do you keep in a box?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "Who is in the photo on your phone screen?"
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
@@ -3589,6 +3581,14 @@
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "Where do you keep your special photos?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you have for dinner when you get home late?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you do on Sunday afternoons?"
     }
   ]
 }

@@ -385,7 +385,7 @@ export default {
     talk: [
       "¿Qué trabajo humilde te enseñó algo importante?",
       "¿Qué decisión tomaste aunque tu jefe no estaba de acuerdo?",
-      "¿Cómo te despediste de un trabajo o de una escuela?",
+      "¿Qué fiesta de despedida recuerdas con cariño?",
       "¿Qué prefieres: llegar puntual o llegar tranquilo?",
       "¿Qué te pidieron que hicieras rápido y lo hiciste despacio?",
     ],

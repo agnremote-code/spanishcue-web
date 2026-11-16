@@ -64,7 +64,7 @@ export default {
     talk: [
       t("¿Qué comes cuando tienes gripe?", "What do you eat when you have the flu?"),
       t("¿Cocinas mucho o poco?", "Do you cook a lot or a little?"),
-      t("¿Qué comida hay siempre en tu nevera?", "What food is always in your fridge?"),
+      t("¿Qué cenas cuando llegas tarde a casa?", "What do you have for dinner when you get home late?"),
       t("¿Te gustan las gambas?", "Do you like prawns?"),
       t("¿Qué plato grande cocina tu familia para muchas personas?", "What big dish does your family cook for many people?"),
     ],
@@ -153,7 +153,7 @@ export default {
     ],
     talk: [
       t("¿Qué papel importante tienes en una caja?", "What important paper do you keep in a box?"),
-      t("¿Quién sale en la foto de tu teléfono?", "Who is in the photo on your phone screen?"),
+      t("¿Qué haces los domingos por la tarde?", "What do you do on Sunday afternoons?"),
       t("¿Qué ciudad lejana te gusta?", "What faraway city do you like?"),
       t("¿Cómo hablas con tus amigos lejos?", "How do you talk to your friends far away?"),
       t("¿A quién escribes muchos mensajes?", "Who do you write a lot of messages to?"),
