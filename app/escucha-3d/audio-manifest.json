@@ -2057,8 +2057,8 @@
    "src": "/audio/escucha-3d/crucero-a1-pasillo.mp3"
   },
   "crucero/a1-piano": {
-   "hash": "6f67574c969026b034f9",
-   "seconds": 37.75,
+   "hash": "ad6bf34da7ab3ced0526",
+   "seconds": 38.38,
    "src": "/audio/escucha-3d/crucero-a1-piano.mp3"
   },
   "crucero/a1-polizon": {
@@ -2080,6 +2080,186 @@
    "hash": "f1f15120c0ed4521d26e",
    "seconds": 30.57,
    "src": "/audio/escucha-3d/crucero-a1-radio.mp3"
+  },
+  "crucero/a2-amanecer": {
+   "hash": "25e88f30618f6e676999",
+   "seconds": 44.76,
+   "src": "/audio/escucha-3d/crucero-a2-amanecer.mp3"
+  },
+  "crucero/a2-barra": {
+   "hash": "4afb3ae3a9d527941769",
+   "seconds": 42.93,
+   "src": "/audio/escucha-3d/crucero-a2-barra.mp3"
+  },
+  "crucero/a2-bingo": {
+   "hash": "cbd399c5ce91ff3bff7a",
+   "seconds": 41.63,
+   "src": "/audio/escucha-3d/crucero-a2-bingo.mp3"
+  },
+  "crucero/a2-capitan": {
+   "hash": "44a83fb20a0e790eede3",
+   "seconds": 45.62,
+   "src": "/audio/escucha-3d/crucero-a2-capitan.mp3"
+  },
+  "crucero/a2-cartas": {
+   "hash": "9470e1e2777f8b83efc3",
+   "seconds": 44.56,
+   "src": "/audio/escucha-3d/crucero-a2-cartas.mp3"
+  },
+  "crucero/a2-cocina": {
+   "hash": "5ad29dbf3622d4a81661",
+   "seconds": 40.73,
+   "src": "/audio/escucha-3d/crucero-a2-cocina.mp3"
+  },
+  "crucero/a2-enfermeria": {
+   "hash": "7d7d05f5adb00dcd7d7f",
+   "seconds": 36.07,
+   "src": "/audio/escucha-3d/crucero-a2-enfermeria.mp3"
+  },
+  "crucero/a2-luna": {
+   "hash": "1292205a04ff8c0258a9",
+   "seconds": 45.27,
+   "src": "/audio/escucha-3d/crucero-a2-luna.mp3"
+  },
+  "crucero/a2-maquinas": {
+   "hash": "06fb01ce58663cefaa3a",
+   "seconds": 46.99,
+   "src": "/audio/escucha-3d/crucero-a2-maquinas.mp3"
+  },
+  "crucero/a2-nina": {
+   "hash": "329a375088a3651deaf2",
+   "seconds": 44.99,
+   "src": "/audio/escucha-3d/crucero-a2-nina.mp3"
+  },
+  "crucero/a2-oficial": {
+   "hash": "e39f07a307a6002fae20",
+   "seconds": 40.53,
+   "src": "/audio/escucha-3d/crucero-a2-oficial.mp3"
+  },
+  "crucero/a2-pareja": {
+   "hash": "eefa2d1b160ee6295806",
+   "seconds": 43.11,
+   "src": "/audio/escucha-3d/crucero-a2-pareja.mp3"
+  },
+  "crucero/a2-pasillo": {
+   "hash": "10fb8237d0c63b3ee143",
+   "seconds": 40.49,
+   "src": "/audio/escucha-3d/crucero-a2-pasillo.mp3"
+  },
+  "crucero/a2-piano": {
+   "hash": "9ebade17da752725b2f4",
+   "seconds": 50.58,
+   "src": "/audio/escucha-3d/crucero-a2-piano.mp3"
+  },
+  "crucero/a2-polizon": {
+   "hash": "4ecbebd971c0d7d95967",
+   "seconds": 49.63,
+   "src": "/audio/escucha-3d/crucero-a2-polizon.mp3"
+  },
+  "crucero/a2-popa": {
+   "hash": "28017f261713a5a37eca",
+   "seconds": 42.81,
+   "src": "/audio/escucha-3d/crucero-a2-popa.mp3"
+  },
+  "crucero/a2-proa": {
+   "hash": "dd675be05d180d5372de",
+   "seconds": 45.31,
+   "src": "/audio/escucha-3d/crucero-a2-proa.mp3"
+  },
+  "crucero/a2-radio": {
+   "hash": "5854d8584b2d2395cca9",
+   "seconds": 44.9,
+   "src": "/audio/escucha-3d/crucero-a2-radio.mp3"
+  },
+  "crucero/b1-amanecer": {
+   "hash": "6b1b918f6fa461954a00",
+   "seconds": 52.03,
+   "src": "/audio/escucha-3d/crucero-b1-amanecer.mp3"
+  },
+  "crucero/b1-barra": {
+   "hash": "572b5dab217744a79b06",
+   "seconds": 50.73,
+   "src": "/audio/escucha-3d/crucero-b1-barra.mp3"
+  },
+  "crucero/b1-bingo": {
+   "hash": "bdad0f500880bbf5017a",
+   "seconds": 53.22,
+   "src": "/audio/escucha-3d/crucero-b1-bingo.mp3"
+  },
+  "crucero/b1-capitan": {
+   "hash": "ff86ec1169eabf3e3944",
+   "seconds": 52.65,
+   "src": "/audio/escucha-3d/crucero-b1-capitan.mp3"
+  },
+  "crucero/b1-cartas": {
+   "hash": "f78bb47bda35bb93a4f4",
+   "seconds": 57.71,
+   "src": "/audio/escucha-3d/crucero-b1-cartas.mp3"
+  },
+  "crucero/b1-cocina": {
+   "hash": "d9a3e02d2348280f88b2",
+   "seconds": 51.45,
+   "src": "/audio/escucha-3d/crucero-b1-cocina.mp3"
+  },
+  "crucero/b1-enfermeria": {
+   "hash": "efa92c70ddb572918d46",
+   "seconds": 48.29,
+   "src": "/audio/escucha-3d/crucero-b1-enfermeria.mp3"
+  },
+  "crucero/b1-luna": {
+   "hash": "68dabf1f2d04e3be4b23",
+   "seconds": 56.46,
+   "src": "/audio/escucha-3d/crucero-b1-luna.mp3"
+  },
+  "crucero/b1-maquinas": {
+   "hash": "0deebe23e989f42dd907",
+   "seconds": 58.39,
+   "src": "/audio/escucha-3d/crucero-b1-maquinas.mp3"
+  },
+  "crucero/b1-nina": {
+   "hash": "e119d51b889a2d77e4af",
+   "seconds": 54.39,
+   "src": "/audio/escucha-3d/crucero-b1-nina.mp3"
+  },
+  "crucero/b1-oficial": {
+   "hash": "1d9f95f802f734ccbfde",
+   "seconds": 54.76,
+   "src": "/audio/escucha-3d/crucero-b1-oficial.mp3"
+  },
+  "crucero/b1-pareja": {
+   "hash": "b01792d7750e59f4fdc7",
+   "seconds": 48.56,
+   "src": "/audio/escucha-3d/crucero-b1-pareja.mp3"
+  },
+  "crucero/b1-pasillo": {
+   "hash": "a333e46c262952e38b75",
+   "seconds": 56.08,
+   "src": "/audio/escucha-3d/crucero-b1-pasillo.mp3"
+  },
+  "crucero/b1-piano": {
+   "hash": "d1256a4137844f934e13",
+   "seconds": 56.06,
+   "src": "/audio/escucha-3d/crucero-b1-piano.mp3"
+  },
+  "crucero/b1-polizon": {
+   "hash": "055a9ea97839711c0bc9",
+   "seconds": 52.34,
+   "src": "/audio/escucha-3d/crucero-b1-polizon.mp3"
+  },
+  "crucero/b1-popa": {
+   "hash": "c369432e318fdd69f189",
+   "seconds": 62.44,
+   "src": "/audio/escucha-3d/crucero-b1-popa.mp3"
+  },
+  "crucero/b1-proa": {
+   "hash": "13e5db2255463de740c9",
+   "seconds": 45.07,
+   "src": "/audio/escucha-3d/crucero-b1-proa.mp3"
+  },
+  "crucero/b1-radio": {
+   "hash": "fed490f3defc85dcfba6",
+   "seconds": 49.56,
+   "src": "/audio/escucha-3d/crucero-b1-radio.mp3"
   },
   "espana/a0-andalucia": {
    "hash": "8451af3244c5885aa30f",
