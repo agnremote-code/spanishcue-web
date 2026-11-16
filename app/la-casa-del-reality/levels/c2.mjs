@@ -39,7 +39,7 @@ export default {
     ],
     talk: [
       '¿Qué parcela de tu intimidad no venderías ni a precio de oro, y qué te hace sospechar que otros sí lo harían?',
-      '¿Puede alguien seguir siendo auténtico cuando cada gesto suyo es inmediatamente interpretado, recortado y redistribuido por desconocidos?',
+      '¿Qué queda de la autenticidad de alguien cuando cada gesto suyo es interpretado, recortado y redistribuido por desconocidos?',
       '¿Qué diferencia moral ves entre exhibir tu vida gratis en redes y cederla a cambio de un cheque a una productora?',
       '¿Qué pregunta te habría salvado de un mal trago si alguien hubiera tenido el valor de hacértela a tiempo?',
       '¿Por qué crees que solemos ser más sinceros con una cámara impersonal que con quienes nos quieren?',

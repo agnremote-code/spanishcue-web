@@ -39,7 +39,7 @@ export default {
     ],
     talk: [
       '¿Qué parcela de tu intimidad consideras innegociable, por mucho dinero que te ofrecieran por exponerla?',
-      '¿Es posible mantener la autenticidad cuando sabes que cada gesto tuyo será interpretado por millones de desconocidos?',
+      '¿Qué gesto tuyo cambiarías si supieras que millones de desconocidos van a interpretarlo?',
       '¿En qué se diferencia la fama que uno persigue de la que le cae encima sin buscarla?',
       '¿Qué te habría gustado que alguien te preguntara en el peor momento de tu vida?',
       '¿Hasta qué punto la exposición constante en redes nos ha preparado para vivir dentro de un reality?',
@@ -177,7 +177,7 @@ export default {
     ],
     talk: [
       '¿Hasta qué punto es lícito que una productora fabrique sentimientos ajenos para sostener su audiencia?',
-      '¿Puede un afecto genuino brotar de una situación concebida como pura ficción?',
+      '¿Qué afecto genuino has visto brotar de una situación concebida como pura ficción?',
       '¿Qué harías si supieras que la relación de alguien cercano es un montaje y esa persona lo ignora?',
       '¿Qué romance mediático te pareció demasiado oportuno para la carrera de sus protagonistas?',
       '¿Cuándo has preferido una verdad dolorosa a una ilusión que te hacía feliz?',

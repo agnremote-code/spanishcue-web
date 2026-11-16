@@ -243,7 +243,7 @@ export const CROWD = [
   { x: 9.6, z: 15.2, heading: 2.2, pose: 'phone', mood: 'worried' },
   { x: 22.6, z: 1.4, heading: -2.6, pose: 'sweep', mood: 'neutral' },
   { x: 10.15, z: 10.2, heading: Math.PI, pose: 'read', seat: true, mood: 'neutral' },
-  { x: -8.15, z: -14.6, heading: Math.PI / 2, pose: 'sit', seat: true, mood: 'smile' },
+  { x: -8.0, z: -14.6, heading: Math.PI / 2, pose: 'sit', seat: true, mood: 'smile' },
   { x: 8.6, z: -4.2, heading: -0.8, pose: 'cook', mood: 'neutral' },
   { x: -19.2, z: -18.4, heading: 0.4, pose: 'arms', mood: 'pain' },
   { x: 3.4, z: -7.6, heading: -2.8, pose: 'dance', mood: 'laugh' },
@@ -257,7 +257,7 @@ export const FILLERS = [
   { x: 14.6, z: 8.6, heading: 0, pose: 'sit', seat: true, mood: 'laugh' },
   { x: -22.4, z: 7.1, heading: 0.2, pose: 'sit', seat: true, mood: 'sleepy' },
   { x: 10.4, z: -11.6, heading: -2.0, pose: 'arms', mood: 'laugh' },
-  { x: -8.15, z: -11.6, heading: Math.PI / 2, pose: 'sit', seat: true, mood: 'sleepy' },
+  { x: -8.0, z: -11.6, heading: Math.PI / 2, pose: 'sit', seat: true, mood: 'sleepy' },
   { x: -12.8, z: -18.6, heading: -0.6, pose: 'ground', mood: 'pain' },
 ];
 
