@@ -246,7 +246,7 @@ export default {
       t("¿Qué botella hay en tu cocina ahora?", "What bottle is in your kitchen now?"),
       t("¿Qué celebras con tu familia?", "What do you celebrate with your family?"),
       t("¿Te gusta el agua con gas o sin gas?", "Do you like sparkling or still water?"),
-      t("¿Dónde guardas las cosas importantes?", "Where do you keep important things?"),
+      t("¿Dónde guardas tus fotos especiales?", "Where do you keep your special photos?"),
     ],
     words: [t("la barra", "the bar"), t("la botella", "the bottle"), t("el vinagre", "the vinegar"), t("el brindis", "the toast")],
   },

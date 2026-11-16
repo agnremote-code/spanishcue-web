@@ -1,0 +1,2217 @@
+{
+ "game": "reality",
+ "level": "C1",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "Espontaneidad bajo guion",
+   "place": "La entrada",
+   "context": "Marga y Lalo comentan, con ironía, la entrada de la Sorpresa mientras revisan la grabación.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mírala otra vez, Marga. Se le estropea el micro, saca una horquilla del pelo y lo arregla en diez segundos sin dejar de sonreír. El director ya lo llama «un momento de autenticidad»."
+    },
+    {
+     "s": 0,
+     "text": "Claro. Y mañana nos pedirá que el próximo concursante traiga una horquilla de serie. Autenticidad con número de referencia."
+    },
+    {
+     "s": 1,
+     "text": "No seas cruel. Fue precioso precisamente porque nadie lo había previsto."
+    },
+    {
+     "s": 0,
+     "text": "Por eso mismo me inquieta. Llevo siete temporadas viendo cómo esta casa convierte cualquier gesto espontáneo en fórmula. El primer año, una chica lloró al entrar y desde entonces los guionistas exigen una lágrima en los primeros cinco minutos."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, también podríamos aprender la lección contraria: que lo que funciona es lo que no se fabrica."
+    },
+    {
+     "s": 0,
+     "text": "Eso sería pedirle a la televisión que renuncie a su oficio. Aquí fabricamos naturalidad como otros fabrican tornillos."
+    },
+    {
+     "s": 1,
+     "text": "Pues yo voy a guardar esta toma sin editar. Para cuando necesite acordarme de por qué me hice cámara."
+    },
+    {
+     "s": 0,
+     "text": "Guárdala bien. En un mes la verás en un anuncio de champú con la frase «Arregla tu vida en diez segundos»."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hizo la Sorpresa cuando falló el micrófono?",
+     "options": [
+      "Pidió ayuda a los técnicos y esperó cinco minutos",
+      "Siguió sin micrófono",
+      "Lo arregló con una horquilla"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere decir Marga con «autenticidad con número de referencia»?",
+     "infer": true,
+     "options": [
+      "Que la Sorpresa es en realidad una actriz contratada por el canal",
+      "Que lo espontáneo se convertirá en un producto repetido",
+      "Que la horquilla era cara"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué exigen los guionistas desde la primera temporada?",
+     "options": [
+      "Una frase corta y fácil de recordar para el público",
+      "Una lágrima en los primeros cinco minutos",
+      "Una caída por la escalera al entrar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tono usa Marga en su última intervención?",
+     "infer": true,
+     "options": [
+      "Entusiasta, porque le encanta la publicidad",
+      "Irónico y escéptico",
+      "Triste y nostálgico por los viejos tiempos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué gesto espontáneo has visto convertirse en moda o fórmula?",
+     "model": "He visto cómo un baile improvisado en un video acabó en todos los anuncios del verano."
+    },
+    {
+     "q": "¿Por qué la televisión necesita fabricar naturalidad?",
+     "model": "Porque la naturalidad real es imprevisible y la televisión necesita controlar los tiempos."
+    },
+    {
+     "q": "¿Qué recuerdo guardas para no olvidar por qué elegiste lo que haces?",
+     "model": "Guardo la nota que me escribió mi primer alumno, para los días malos."
+    }
+   ],
+   "gaps": "Aquí fabricamos [naturalidad] como otros fabrican [tornillos]. Pues yo voy a guardar esta [toma] sin [editar].",
+   "glossary": [
+    {
+     "word": "se le estropea",
+     "meaning": "deja de funcionar"
+    },
+    {
+     "word": "de serie",
+     "meaning": "incluido siempre, como estándar"
+    },
+    {
+     "word": "me inquieta",
+     "meaning": "me preocupa"
+    },
+    {
+     "word": "toma",
+     "meaning": "parte grabada de una sola vez"
+    }
+   ]
+  },
+  {
+   "id": "confesionario",
+   "title": "Quien pregunta también confiesa",
+   "place": "El confesionario",
+   "context": "Marga reprocha a La Voz, con suavidad, que haya convertido una confesión en un desahogo propio.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rodolfo, la confesión de la Sorpresa dura veintitrés minutos y en dieciocho hablas tú. El director pregunta, literalmente, si te estamos pagando por hacer terapia."
+    },
+    {
+     "s": 0,
+     "text": "Dile que no se preocupe, que la terapia me la pagaré yo cuando me despida. Ha sido la Sorpresa la que ha dado la vuelta a la silla."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué te preguntó exactamente?"
+    },
+    {
+     "s": 0,
+     "text": "Algo terrible: «Usted pregunta a todos, pero a usted nadie le pregunta nada». Siete años interrogando a la gente sobre la fama, la soledad y el miedo, y resulta que nadie se había interesado por la voz."
+    },
+    {
+     "s": 1,
+     "text": "Comprendo que te removiera, pero no podemos emitir a la voz del confesionario hablando de su divorcio. Rompe la ilusión."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué ilusión, Marga? ¿La de que detrás de la cortina hay una máquina neutral? Llevo años eligiendo las preguntas que más duelen porque sé que son las que más audiencia dan. Eso no es neutralidad, es puntería."
+    },
+    {
+     "s": 1,
+     "text": "Te noto especialmente lúcido esta noche."
+    },
+    {
+     "s": 0,
+     "text": "El divorcio aclara mucho. Y la Sorpresa, más. Hoy, por primera vez, alguien entró en este cuarto y salió sabiendo más de mí que yo de él."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos minutos habla La Voz en la confesión?",
+     "options": [
+      "Dieciocho",
+      "Veintitrés",
+      "Cinco, como siempre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué insinúa La Voz con «la terapia me la pagaré yo cuando me despida»?",
+     "infer": true,
+     "options": [
+      "Que ya tiene psicólogo y seguro médico",
+      "Que quiere cambiar de trabajo voluntariamente",
+      "Que espera que lo despidan pronto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "Según La Voz, ¿qué hay realmente detrás de la cortina?",
+     "options": [
+      "Una máquina neutral que trata a todos igual",
+      "Alguien que elige preguntas para que duelan",
+      "Un actor contratado que lee un guion"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué sugiere la última frase de La Voz?",
+     "infer": true,
+     "options": [
+      "Que la Sorpresa es una espía del canal",
+      "Que La Voz no recuerda nada de lo que se dijo en la confesión",
+      "Que la Sorpresa invirtió los papeles del confesionario"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué pregunta inesperada te ha obligado a mirarte de otra manera?",
+     "model": "Una amiga me preguntó qué haría si no tuviera miedo, y no supe qué contestar."
+    },
+    {
+     "q": "¿Hasta qué punto quien hace las preguntas controla una conversación?",
+     "model": "Casi por completo: decide el tema, el ritmo y lo que queda fuera."
+    },
+    {
+     "q": "¿Qué ilusión sostiene un programa de telerrealidad y qué pasaría si se rompiera?",
+     "model": "La ilusión de que vemos la verdad; si se rompiera, veríamos solo un guion."
+    }
+   ],
+   "gaps": "Eso no es [neutralidad], es [puntería]. Te noto especialmente [lúcido] esta noche. El divorcio [aclara] mucho.",
+   "glossary": [
+    {
+     "word": "terapia",
+     "meaning": "tratamiento psicológico"
+    },
+    {
+     "word": "literalmente",
+     "meaning": "con esas mismas palabras"
+    },
+    {
+     "word": "removiera",
+     "meaning": "afectara emocionalmente"
+    },
+    {
+     "word": "lúcido",
+     "meaning": "que piensa con claridad"
+    }
+   ]
+  },
+  {
+   "id": "alianza",
+   "title": "Pacto de no agresión",
+   "place": "El salón",
+   "context": "Brenda y Óscar, en voz baja, analizan con cinismo la negativa de la Sorpresa a aliarse.",
+   "speakers": [
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Óscar",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Dos alianzas rechazadas en cinco minutos. Récord de la temporada. O es una genia de la estrategia o es la persona más ingenua que ha pisado esta casa."
+    },
+    {
+     "s": 1,
+     "text": "Yo me inclino por lo primero. Rechazar alianzas el primer día es la jugada más rentable posible: te conviertes en la única persona en la que todos pueden confiar."
+    },
+    {
+     "s": 0,
+     "text": "¿Tú crees que lo ha calculado? Me miró como se mira a un vendedor de seguros: con cariño y cero intención de firmar."
+    },
+    {
+     "s": 1,
+     "text": "Peor para nosotros. Lo que me inquieta es que nos haya calado. Me preguntó, sin venir a cuento, cuánto tiempo llevamos juntos. Ni siquiera dijo «si estamos juntos». Dijo «cuánto tiempo»."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. Mis patrocinadores estarán encantados de saber que su soltera favorita lleva dos años contigo."
+    },
+    {
+     "s": 1,
+     "text": "Quizá ha llegado el momento de dejar de ser «la soltera favorita» y «el estratega frío». El público ya no compra esos papeles."
+    },
+    {
+     "s": 0,
+     "text": "Habla el hombre que diseñó los papeles en una servilleta del aeropuerto."
+    },
+    {
+     "s": 1,
+     "text": "Y el mismo que ahora te propone romper la servilleta. Antes de que la rompa otra persona."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas alianzas rechazó la Sorpresa?",
+     "options": [
+      "Cinco",
+      "Dos",
+      "Una"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué cree Óscar que rechazar alianzas es rentable?",
+     "options": [
+      "Porque así nadie te nomina durante un mes",
+      "Porque te convierte en alguien en quien todos confían",
+      "Porque el público odia las alianzas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué revela la forma en que la Sorpresa hizo la pregunta?",
+     "infer": true,
+     "options": [
+      "Que quería formar pareja con Óscar",
+      "Que ya sabía que eran pareja",
+      "Que no entendía nada de lo que pasaba en la casa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué intención tiene el comentario «habla el hombre que diseñó los papeles»?",
+     "infer": true,
+     "options": [
+      "Recordarle a Óscar su responsabilidad",
+      "Felicitar a Óscar por su talento para el diseño",
+      "Cambiar de tema"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te parece más estratégico en un grupo nuevo: aliarte pronto o mantenerte libre?",
+     "model": "Mantenerme libre al principio, porque así observo antes de comprometerme."
+    },
+    {
+     "q": "¿Cómo reaccionas cuando alguien adivina algo que intentabas ocultar?",
+     "model": "Me pongo a la defensiva al principio, pero luego suelo agradecer no tener que fingir."
+    },
+    {
+     "q": "¿Qué papel social te ha resultado cómodo y luego agotador?",
+     "model": "El de persona siempre disponible; al principio me gustaba, luego me quemó."
+    }
+   ],
+   "gaps": "Lo que me inquieta es que nos haya [calado]. Me preguntó, sin venir a [cuento], cuánto tiempo llevamos [juntos]. Ni siquiera dijo «si estamos juntos». Dijo «cuánto [tiempo]».",
+   "glossary": [
+    {
+     "word": "ingenua",
+     "meaning": "que cree todo sin desconfiar"
+    },
+    {
+     "word": "rentable",
+     "meaning": "que da beneficio"
+    },
+    {
+     "word": "calado",
+     "meaning": "descubierto, entendido"
+    },
+    {
+     "word": "sin venir a cuento",
+     "meaning": "sin relación con lo que se hablaba"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "Memoria en conserva",
+   "place": "La cocina",
+   "context": "Doña Fela y Chema hablan de la escasez, la vergüenza y la mirada de las cámaras.",
+   "speakers": [
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Fela, la producción ha titulado el clip de esta tarde «La abuela acaparadora». Cuarenta latas en primer plano y música de suspense."
+    },
+    {
+     "s": 0,
+     "text": "Qué imaginación tienen. Si hubieran puesto la cámara en mi pueblo en el noventa y tres, habrían visto a una mujer haciendo sopa con agua y una cebolla para seis hijos. Esa música sí que habría sido de suspense."
+    },
+    {
+     "s": 1,
+     "text": "La gente no lo sabe. Si lo explicara, el clip cambiaría de sentido."
+    },
+    {
+     "s": 0,
+     "text": "No quiero que mi hambre se convierta en audiencia, Chema. Bastante tuvimos que tragarnos el orgullo entonces como para servirlo ahora en horario de máxima audiencia."
+    },
+    {
+     "s": 1,
+     "text": "Entonces no lo explique. Cocínelo. Haga el guiso de las tres latas para catorce y deje que la Sorpresa pregunte lo que quiera mientras pela las papas."
+    },
+    {
+     "s": 0,
+     "text": "Tienes buena cabeza para ser vendedor de seguros. Sí, eso puedo hacerlo. Las historias, en mi casa, se contaban con un cuchillo en la mano."
+    },
+    {
+     "s": 1,
+     "text": "Y Wendy tendrá que comerse sus palabras. Con guiso, por lo menos."
+    },
+    {
+     "s": 0,
+     "text": "Ojalá. Aunque, conociéndola, pedirá la receta para usarla en mi contra."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué título le puso la producción al clip?",
+     "options": [
+      "«La cocina del miedo»",
+      "«La abuela acaparadora»",
+      "«Cuarenta latas de amor»"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no quiere Fela explicar su historia?",
+     "options": [
+      "No recuerda bien lo que pasó en su pueblo cuando era niña",
+      "Le da miedo Wendy",
+      "No quiere que su hambre se convierta en audiencia"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué implica Fela con «esa música sí que habría sido de suspense»?",
+     "infer": true,
+     "options": [
+      "Que la verdadera tensión estaba en su pasado, no en las latas",
+      "Que le gusta la música de las películas de miedo",
+      "Que la producción usa mala música"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sugiere el último comentario de Fela sobre Wendy?",
+     "infer": true,
+     "options": [
+      "Que Wendy sabe aprovechar cualquier cosa contra ella",
+      "Que Wendy cocina muy bien y quiere aprender sus recetas cubanas",
+      "Que pronto se reconciliarán delante de las cámaras"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué algunas personas prefieren contar su pasado con hechos y no con palabras?",
+     "model": "Porque las palabras pueden sonar a queja, y los hechos hablan solos."
+    },
+    {
+     "q": "¿Qué hábito de una generación mayor entiendes mejor ahora que antes?",
+     "model": "Entiendo mejor que mi padre guarde todas las bolsas: creció sin nada."
+    },
+    {
+     "q": "¿Cómo cambia el sentido de una imagen según la música que la acompaña?",
+     "model": "Totalmente: la misma escena puede parecer romántica o amenazante."
+    }
+   ],
+   "gaps": "No quiero que mi [hambre] se convierta en [audiencia], Chema. Bastante tuvimos que tragarnos el [orgullo] entonces como para servirlo ahora en horario de máxima [audiencia].",
+   "glossary": [
+    {
+     "word": "suspense",
+     "meaning": "tensión por no saber qué va a pasar"
+    },
+    {
+     "word": "acaparadora",
+     "meaning": "que guarda más de lo que le corresponde"
+    },
+    {
+     "word": "tragarnos el orgullo",
+     "meaning": "aceptar algo humillante sin protestar"
+    }
+   ]
+  },
+  {
+   "id": "mudo",
+   "title": "El silencio como cláusula",
+   "place": "El comedor",
+   "context": "Yeni y Mateo, que solo susurra, conversan sobre el poder de callar en un lugar donde todo se graba.",
+   "speakers": [
+    {
+     "name": "Mateo",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mateo, la producción ha empezado a subtitular tus servilletas. Ayer pusieron en pantalla «Pásame la sal» con música épica."
+    },
+    {
+     "s": 0,
+     "text": "Era previsible. En esta casa, lo que no se puede grabar se dramatiza. El problema no es mi silencio, sino que tampoco les pertenece y les desespera."
+    },
+    {
+     "s": 1,
+     "text": "Once días susurrando. Debe de ser agotador."
+    },
+    {
+     "s": 0,
+     "text": "Me cansa menos que la alternativa. Leí la cláusula cuarenta tres veces antes de creérmela: cesión perpetua de voz e imagen para cualquier uso comercial. Mi voz anunciando seguros funerarios cuando yo ya no esté. Me parece una forma muy moderna de no descansar en paz."
+    },
+    {
+     "s": 1,
+     "text": "Visto así, tiene lógica. Pero la gente fuera piensa que estás enfermo o que es una estrategia."
+    },
+    {
+     "s": 0,
+     "text": "Que piensen. Un abogado aprende pronto que el silencio no se puede usar en tu contra. Lo dice la ley, y por una vez estoy de acuerdo con ella."
+    },
+    {
+     "s": 1,
+     "text": "La Sorpresa me dijo que habló contigo media hora en servilletas. Que fue la conversación más sincera que ha tenido en años."
+    },
+    {
+     "s": 0,
+     "text": "Porque nadie escribe tonterías cuando cada palabra le cuesta una servilleta. Deberían probarlo en el Congreso."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hizo la producción con las servilletas?",
+     "options": [
+      "Las tiró a la basura cada noche",
+      "Las vendió en una subasta benéfica del canal",
+      "Las subtituló con música épica"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué establece la cláusula cuarenta?",
+     "options": [
+      "La obligación de hablar en voz alta todos los días",
+      "La cesión perpetua de su voz e imagen",
+      "Una multa por callar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ironía hay en «una forma muy moderna de no descansar en paz»?",
+     "infer": true,
+     "options": [
+      "Que los abogados nunca duermen bien",
+      "Que le gustan los seguros funerarios",
+      "Que su voz seguiría trabajando después de muerto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué critica Mateo con su comentario sobre el Congreso?",
+     "infer": true,
+     "options": [
+      "Que el Congreso usa demasiadas servilletas en sus sesiones",
+      "Que los políticos hablan demasiado sin pensar",
+      "Que quiere ser diputado"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué poder tiene el silencio en una conversación tensa?",
+     "model": "Obliga al otro a llenar el vacío y, muchas veces, a decir más de lo que quería."
+    },
+    {
+     "q": "¿Qué derechos sobre tu propia voz o imagen defenderías siempre?",
+     "model": "Defendería que nadie pueda usar mi voz para decir algo que no he dicho."
+    },
+    {
+     "q": "¿Por qué escribir obliga a ser más preciso que hablar?",
+     "model": "Porque tienes tiempo para pensar y queda constancia de cada palabra."
+    }
+   ],
+   "gaps": "Un abogado aprende pronto que el [silencio] no se puede usar en tu [contra]. Lo dice la [ley], y por una vez estoy de [acuerdo] con ella.",
+   "glossary": [
+    {
+     "word": "previsible",
+     "meaning": "que se podía esperar"
+    },
+    {
+     "word": "cesión",
+     "meaning": "acción de dar un derecho a otra persona"
+    },
+    {
+     "word": "perpetua",
+     "meaning": "para siempre"
+    }
+   ]
+  },
+  {
+   "id": "nostalgia",
+   "title": "Lágrimas con horario",
+   "place": "El dormitorio",
+   "context": "Fela y Yeni hablan del uso que hace la producción de la tristeza de Yeni.",
+   "speakers": [
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, Chelo me lo ha dicho sin rodeos: si esta noche lloro antes de la una, ponen el video de mi mamá. Si lloro después, ya no entra en la emisión."
+    },
+    {
+     "s": 1,
+     "text": "Ah, qué considerados. Hasta la pena tiene horario de oficina en esta casa."
+    },
+    {
+     "s": 0,
+     "text": "No sé qué hacer. Si me aguanto, parezco fría. Si lloro, siento que estoy vendiendo a mi mamá."
+    },
+    {
+     "s": 1,
+     "text": "Mira, mi niña. Yo he enterrado a un marido y a una hermana, y te digo una cosa: las lágrimas no son el problema. El problema es quién decide cuándo valen."
+    },
+    {
+     "s": 0,
+     "text": "La Sorpresa me enseñó a dormir contando clientes de la peluquería. Anoche llegué a la señora Pilar, la que se tiñe de azul, y me quedé dormida riéndome."
+    },
+    {
+     "s": 1,
+     "text": "¿Ves? Eso es lo que no ponen en la tele. La niña que llora vende; la niña que se duerme riéndose no tiene música."
+    },
+    {
+     "s": 0,
+     "text": "Entonces esta noche voy a contar clientes. Si a la una sigo despierta, que pongan lo que quieran."
+    },
+    {
+     "s": 1,
+     "text": "Y si no, que pongan a la señora Pilar. Con ese pelo, la audiencia está garantizada."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pasa si Yeni llora antes de la una?",
+     "options": [
+      "La nominan esa misma noche",
+      "Le dan un premio",
+      "Ponen el video de su madre"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tono tiene «qué considerados» en boca de Fela?",
+     "infer": true,
+     "options": [
+      "Sarcástico",
+      "Agradecido y sincero",
+      "Indiferente"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Fela, ¿cuál es el verdadero problema?",
+     "options": [
+      "Llorar delante de las cámaras de la casa",
+      "Extrañar a la familia",
+      "Quién decide cuándo valen las lágrimas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere mostrar Fela con el ejemplo de la niña que se duerme riéndose?",
+     "infer": true,
+     "options": [
+      "Que la tele solo emite el dolor rentable",
+      "Que dormir es más importante que la tele",
+      "Que Yeni debería ser cómica"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Quién debería decidir qué parte de tu dolor es pública?",
+     "model": "Solo yo, y siempre con la posibilidad de cambiar de opinión."
+    },
+    {
+     "q": "¿Por qué la alegría tranquila casi nunca es noticia?",
+     "model": "Porque no genera conflicto ni urgencia, y la atención se alimenta de eso."
+    },
+    {
+     "q": "¿Qué ritual absurdo te ayuda a dormir cuando estás lejos de casa?",
+     "model": "Repaso mentalmente las calles de mi barrio, de la panadería a mi portal."
+    }
+   ],
+   "gaps": "La niña que llora [vende]; la niña que se duerme [riéndose] no tiene [música]. Entonces esta noche voy a contar [clientes].",
+   "glossary": [
+    {
+     "word": "sin rodeos",
+     "meaning": "de forma directa"
+    },
+    {
+     "word": "considerados",
+     "meaning": "que piensan en los demás"
+    },
+    {
+     "word": "se tiñe",
+     "meaning": "se cambia el color del pelo"
+    }
+   ]
+  },
+  {
+   "id": "espejo",
+   "title": "Ventana con mala educación",
+   "place": "El baño",
+   "context": "Lalo y Chelo discuten, con distintos registros, sobre el voyeurismo del programa.",
+   "speakers": [
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lalo, en tu informe pones «vulneración sistemática de la intimidad». ¿Desde cuándo escribes como un juez?"
+    },
+    {
+     "s": 0,
+     "text": "Desde que la Sorpresa me habló a través del espejo. Se sentó, me miró justo donde está el objetivo y me preguntó si dormía bien."
+    },
+    {
+     "s": 1,
+     "text": "Supongo que le contestaste que sí."
+    },
+    {
+     "s": 0,
+     "text": "Le dije la verdad: que hace dos años grababa pingüinos emperador en la Antártida y dormía como un tronco. Que desde que trabajo aquí sueño con cepillos de dientes."
+    },
+    {
+     "s": 1,
+     "text": "Mira, a mí también me incomoda la cámara del baño, pero es la firma del programa. «Cuarenta cámaras, cero secretos». Si la quitamos, ¿qué vendemos?"
+    },
+    {
+     "s": 0,
+     "text": "Personas, Chelo. Que, por cierto, es lo que llevamos vendiendo desde el principio. La cámara del baño no aporta imagen; aporta la sensación de que nadie está nunca a salvo. Y eso es lo que se ha convertido en marca."
+    },
+    {
+     "s": 1,
+     "text": "Qué discurso tan bonito para alguien que cobra por mirar."
+    },
+    {
+     "s": 0,
+     "text": "Por eso lo digo yo. Los que no miramos no tenemos derecho a quejarnos de lo que vemos. Y los que miramos ocho horas al día, Chelo, tenemos la obligación de decirlo en voz alta antes de acostumbrarnos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué frase aparece en el informe de Lalo?",
+     "options": [
+      "«Cuarenta cámaras, cero secretos»",
+      "«Cambio de horario»",
+      "«Vulneración sistemática de la intimidad»"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué grababa Lalo antes de trabajar en el programa?",
+     "options": [
+      "Bodas de famosos en hoteles de lujo",
+      "Pingüinos emperador en la Antártida",
+      "Partidos de fútbol"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué sugiere Chelo con «para alguien que cobra por mirar»?",
+     "infer": true,
+     "options": [
+      "Que Lalo es hipócrita",
+      "Que Lalo debería cobrar más por su trabajo",
+      "Que admira a Lalo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué da a entender Lalo con su última frase?",
+     "infer": true,
+     "options": [
+      "Que precisamente por mirar tiene autoridad para criticar",
+      "Que va a dejar de mirar la cámara del baño a partir de mañana",
+      "Que no le importa nada"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te parece más inquietante: ser visto o no saber cuándo te ven?",
+     "model": "No saber cuándo te ven, porque te obliga a actuar todo el tiempo."
+    },
+    {
+     "q": "¿Qué trabajo te cambiaría la forma de dormir y por qué?",
+     "model": "Uno con turnos de noche, porque altera todos los ritmos del cuerpo."
+    },
+    {
+     "q": "¿Tiene más derecho a criticar un sistema quien trabaja dentro de él?",
+     "model": "Tiene más información, pero también más responsabilidad en lo que critica."
+    }
+   ],
+   "gaps": "La cámara del baño no aporta [imagen]; aporta la [sensación] de que nadie está nunca a [salvo]. Y eso es lo que se ha convertido en [marca].",
+   "glossary": [
+    {
+     "word": "vulneración",
+     "meaning": "acción de no respetar un derecho"
+    },
+    {
+     "word": "objetivo",
+     "meaning": "lente de la cámara"
+    },
+    {
+     "word": "como un tronco",
+     "meaning": "muy profundamente"
+    }
+   ]
+  },
+  {
+   "id": "romance",
+   "title": "Un guion sobre la verdad",
+   "place": "El jardín",
+   "context": "Sofi y Dani discuten si su romance puede ser real dentro de un programa que lo inventó.",
+   "speakers": [
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Dani",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Sofi, la Sorpresa me lo ha contado todo. Que lo nuestro estaba en tu contrato, con hora de beso incluida. Once y media, puntual como un tren suizo."
+    },
+    {
+     "s": 0,
+     "text": "Ya. Supongo que ahora esperas una explicación dramática junto a la piscina, con violines."
+    },
+    {
+     "s": 1,
+     "text": "Espero una explicación, a secas. Los violines los pone la producción."
+    },
+    {
+     "s": 0,
+     "text": "La explicación es aburrida: llevo un año sin un papel, mi agente me consiguió este y lo acepté. El problema es que en algún momento olvidé cuál era el guion y cuál era yo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y las cartas de la almohada? ¿También venían en el contrato?"
+    },
+    {
+     "s": 0,
+     "text": "No. Esas son lo único de esta casa que no ha pasado por el departamento de guion. Ni siquiera Chelo sabe que existen."
+    },
+    {
+     "s": 1,
+     "text": "Entonces tenemos un problema muy de televisión: un romance falso con cartas verdaderas."
+    },
+    {
+     "s": 0,
+     "text": "O un romance verdadero con un horario falso. Depende de quién lo edite."
+    },
+    {
+     "s": 1,
+     "text": "Pues editémoslo nosotros. Mañana, en directo, sin hamaca y sin cronómetro. Que la gente vea lo que hay, aunque no tenga música."
+    },
+    {
+     "s": 0,
+     "text": "Si sale mal, por lo menos será un fracaso nuestro. Eso ya es más de lo que me ha dado este contrato."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué hora estaba previsto el beso?",
+     "options": [
+      "A medianoche",
+      "A las once en punto",
+      "A las once y media"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tono usa Sofi al hablar de «violines»?",
+     "infer": true,
+     "options": [
+      "Romántico y emocionado",
+      "Indiferente, como si no le importara nada",
+      "Defensivo e irónico"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no ha pasado por el departamento de guion?",
+     "options": [
+      "Los besos de la hamaca",
+      "Las cartas de la almohada",
+      "El contrato"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué implica «depende de quién lo edite»?",
+     "infer": true,
+     "options": [
+      "Que la verdad del romance la decide quien cuenta la historia",
+      "Que Sofi quiere ser editora de video",
+      "Que el programa tiene errores técnicos"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Puede algo verdadero nacer de una situación falsa? Pon un ejemplo.",
+     "model": "Sí: dos compañeros que se odiaban fingieron llevarse bien en una reunión y acabaron siendo amigos."
+    },
+    {
+     "q": "¿Qué pasa cuando alguien olvida dónde termina su personaje y empieza su vida?",
+     "model": "Se pierde la brújula; ya no sabe qué decisiones son suyas."
+    },
+    {
+     "q": "¿Por qué los gestos privados parecen más sinceros que los públicos?",
+     "model": "Porque no buscan aplauso; solo tienen sentido para quien los recibe."
+    }
+   ],
+   "gaps": "El problema es que en algún momento [olvidé] cuál era el [guion] y cuál era [yo]. ¿Y las cartas de la [almohada]?",
+   "glossary": [
+    {
+     "word": "a secas",
+     "meaning": "sin nada más"
+    },
+    {
+     "word": "agente",
+     "meaning": "persona que busca trabajo a un artista"
+    },
+    {
+     "word": "puntual",
+     "meaning": "que llega a la hora exacta"
+    }
+   ]
+  },
+  {
+   "id": "edad",
+   "title": "Cuarenta y cuatro, en directo",
+   "place": "La piscina",
+   "context": "Toño y Nacho negocian, entre bromas, cómo revelar la verdadera edad de Nacho.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Nacho, Wendy tiene tu carné de la biblioteca de 1997. Va a sacarlo en la gala, delante de todo el país, con su sonrisa de villana de telenovela."
+    },
+    {
+     "s": 0,
+     "text": "Esa mujer sería una agente de inteligencia excelente. Encuentra hasta lo que yo mismo había olvidado."
+    },
+    {
+     "s": 1,
+     "text": "Te quedan dos opciones. O lo cuentas tú y te conviertes en el señor encantador que se ríe de sí mismo, o lo cuenta ella y te conviertes en el mentiroso de la temporada."
+    },
+    {
+     "s": 0,
+     "text": "Qué menú tan apetitoso. Toño, tú no lo entiendes. A los treinta y cinco dejé de ser modelo de colonias y pasé a ser modelo de seguros de vida. Este programa era mi última oportunidad de volver a la colonia."
+    },
+    {
+     "s": 1,
+     "text": "Pues haz de la colonia una broma. «Tengo cuarenta y cuatro años y huelo a mil novecientos noventa y ocho»."
+    },
+    {
+     "s": 0,
+     "text": "No está mal. Aunque me gustaría negociar una cosa con la producción: que dejen de hacer zoom a mis rodillas cuando bailo."
+    },
+    {
+     "s": 1,
+     "text": "Eso es imposible. Tus rodillas tienen club de fans."
+    },
+    {
+     "s": 0,
+     "text": "Pues algo es algo. A mi edad, uno aprende a celebrar a las rodillas que todavía responden."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Wendy?",
+     "options": [
+      "Un walkman y una foto de Nacho",
+      "Un carné de la biblioteca de 1997",
+      "Su pasaporte, escondido en la maleta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tono tiene «qué menú tan apetitoso»?",
+     "infer": true,
+     "options": [
+      "Hambriento",
+      "Agradecido de verdad",
+      "Irónico"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le pasó a Nacho a los treinta y cinco?",
+     "options": [
+      "Ganó un concurso de belleza internacional en Miami",
+      "Dejó de bailar por una lesión de rodilla",
+      "Pasó de modelo de colonias a modelo de seguros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué actitud muestra Nacho al final?",
+     "infer": true,
+     "options": [
+      "Rabia contra Toño y contra la producción",
+      "Miedo a que lo expulsen esta misma noche de gala",
+      "Resignación, pero con humor"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué ventaja tiene reírse de uno mismo antes de que lo hagan otros?",
+     "model": "Le quitas el arma al otro y además demuestras seguridad."
+    },
+    {
+     "q": "¿Cómo trata tu cultura a quienes ya no son jóvenes en la pantalla?",
+     "model": "Los relega a papeles de padres o abuelos, aunque tengan cuarenta años."
+    },
+    {
+     "q": "¿Qué parte de envejecer te parece más injustamente ridiculizada?",
+     "model": "Las canas en las mujeres, que todavía se ven como descuido."
+    }
+   ],
+   "gaps": "O lo cuentas tú y te conviertes en el señor [encantador] que se ríe de sí [mismo], o lo cuenta ella y te conviertes en el [mentiroso] de la [temporada].",
+   "glossary": [
+    {
+     "word": "agente de inteligencia",
+     "meaning": "espía"
+    },
+    {
+     "word": "apetitoso",
+     "meaning": "que da ganas de comer"
+    },
+    {
+     "word": "algo es algo",
+     "meaning": "es poco, pero mejor que nada"
+    }
+   ]
+  },
+  {
+   "id": "prueba",
+   "title": "Metáforas con botón",
+   "place": "El gimnasio del jardín",
+   "context": "Toño y Chelo hablan de la prueba del botón, que resultó ser una broma de la guionista.",
+   "speakers": [
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Toño, antes de que me grites: la idea fue de la guionista. Dice que la prueba es una metáfora del concursante que espera un premio que nunca llega."
+    },
+    {
+     "s": 0,
+     "text": "Qué profundo. Dile a la guionista que yo reparto paquetes doce horas al día por un sueldo que no alcanza ni para la gasolina. Esa metáfora la vivo cada mañana sin necesidad de botón."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Y precisamente por eso la gente se ha volcado contigo. Eres el concursante más votado de la semana."
+    },
+    {
+     "s": 0,
+     "text": "Siete horas apretando un botón que encendía la luz de la nevera. Debo de ser el primer hombre de la historia que se hace famoso iluminando yogures."
+    },
+    {
+     "s": 1,
+     "text": "Te lo digo en serio: fuera hay tres millones de personas que se ven reflejadas en ti. Eso vale más que un coche."
+    },
+    {
+     "s": 0,
+     "text": "Para ti, que tienes coche. Para mí, el coche era llevar a mi madre a diálisis sin tres autobuses."
+    },
+    {
+     "s": 1,
+     "text": "…No sabía eso."
+    },
+    {
+     "s": 0,
+     "text": "Nadie lo sabía. Nunca lo conté porque aquí todo se convierte en música triste. No era una metáfora, Chelo. Era un martes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué representa la prueba, según la guionista?",
+     "options": [
+      "La fuerza física del concursante",
+      "Un premio que nunca llega",
+      "La paciencia del público"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ironía hay en «iluminando yogures»?",
+     "infer": true,
+     "options": [
+      "Que trabaja en una fábrica de yogures",
+      "Que le encantan los yogures",
+      "Que su esfuerzo solo servía para encender una nevera"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Para qué quería Toño el coche?",
+     "options": [
+      "Para llevar a su madre a diálisis",
+      "Para trabajar en una empresa de mudanzas",
+      "Para venderlo y pagar sus deudas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere decir Toño con «era un martes»?",
+     "infer": true,
+     "options": [
+      "Que para él no era un símbolo, sino su vida diaria",
+      "Que la prueba se hizo un martes por la noche, en directo",
+      "Que los martes tiene diálisis"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué a veces lo simbólico para unos es lo cotidiano para otros?",
+     "model": "Porque quien no vive una dificultad la ve como idea; quien la vive, como rutina."
+    },
+    {
+     "q": "¿Qué opinas del humor que se basa en el esfuerzo inútil de otros?",
+     "model": "Me resulta incómodo, sobre todo si la persona no sabe que es una broma."
+    },
+    {
+     "q": "¿Qué necesidad concreta se esconde detrás de un deseo que parece material?",
+     "model": "Detrás de querer un coche puede haber simplemente tiempo con la familia."
+    }
+   ],
+   "gaps": "Esa metáfora la vivo cada [mañana] sin necesidad de [botón]. Lo sé. Y precisamente por eso la gente se ha [volcado] contigo. Eres el concursante más [votado] de la semana.",
+   "glossary": [
+    {
+     "word": "metáfora",
+     "meaning": "imagen que representa otra idea"
+    },
+    {
+     "word": "se ha volcado",
+     "meaning": "ha apoyado con mucho entusiasmo"
+    },
+    {
+     "word": "diálisis",
+     "meaning": "tratamiento médico para los riñones"
+    }
+   ]
+  },
+  {
+   "id": "patrocinador",
+   "title": "La cara de un producto imposible",
+   "place": "La nevera del patrocinador",
+   "context": "Marga y Chema hablan del contrato publicitario de Chema y de su intolerancia a la lactosa.",
+   "speakers": [
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chema, el patrocinador está encantado contigo. Dicen que nadie había dicho «Yogur Vitalín» con tanta convicción."
+    },
+    {
+     "s": 0,
+     "text": "Será porque cada vez que lo digo rezo para no tener que comérmelo. La convicción es pánico bien administrado."
+    },
+    {
+     "s": 1,
+     "text": "Ya lo sé. La intolerancia a la lactosa. Paty me ha contado lo de la cuchara vacía."
+    },
+    {
+     "s": 0,
+     "text": "Un mes fingiendo cucharadas, Marga. He desarrollado una técnica tan depurada que podría dar clases en la escuela de arte dramático: entra la cuchara, gesto de placer, sale la cuchara, ni una gota."
+    },
+    {
+     "s": 1,
+     "text": "El patrocinador propone una salida. Lanzar un Vitalín sin lactosa y que tú lo presentes contando la verdad. «Yo era la cara de un yogur que no podía comer»."
+    },
+    {
+     "s": 0,
+     "text": "Fascinante. Mi barriga convertida en estrategia de marketing. Hace tres años vendía seguros de hogar y lo más íntimo que compartía era el código postal."
+    },
+    {
+     "s": 1,
+     "text": "Si aceptas, el programa sigue al menos hasta la final. Si no, el patrocinador se retira."
+    },
+    {
+     "s": 0,
+     "text": "Entonces no es una propuesta, es un rescate con lazo. Acepto, pero con una condición: que el primer yogur sin lactosa se lo coma Wendy en directo. Por las servilletas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "Según Chema, ¿qué es la convicción?",
+     "options": [
+      "Pánico bien administrado",
+      "Amor por el producto",
+      "Talento natural"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué técnica ha desarrollado Chema?",
+     "options": [
+      "Fingir cucharadas sin comer",
+      "Comer yogur sin que se note en cámara",
+      "Esconder el yogur"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere decir Chema con «un rescate con lazo»?",
+     "infer": true,
+     "options": [
+      "Que es una obligación presentada como regalo",
+      "Que el patrocinador le hace un regalo bonito",
+      "Que el programa necesita ayuda"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué quiere que Wendy se coma el primer yogur?",
+     "infer": true,
+     "options": [
+      "Porque Wendy es la favorita del público y vende",
+      "Porque a Wendy le encanta el yogur",
+      "Como pequeña venganza por las servilletas"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te parece que una marca use la vida privada de alguien para vender?",
+     "model": "Me parece eficaz pero peligroso, porque la intimidad deja de pertenecerte."
+    },
+    {
+     "q": "¿Cuándo una propuesta deja de ser libre y se convierte en una presión?",
+     "model": "Cuando rechazarla tiene un coste tan alto que en realidad no puedes decir que no."
+    },
+    {
+     "q": "¿Qué habilidad absurda has desarrollado para sobrevivir en un trabajo?",
+     "model": "Sé parecer concentrado en reuniones eternas mientras planeo la cena."
+    }
+   ],
+   "gaps": "Entonces no es una [propuesta], es un [rescate] con lazo. Acepto, pero con una [condición]: que el primer yogur sin lactosa se lo coma Wendy en [directo].",
+   "glossary": [
+    {
+     "word": "convicción",
+     "meaning": "seguridad al decir algo"
+    },
+    {
+     "word": "depurada",
+     "meaning": "perfeccionada"
+    },
+    {
+     "word": "se retira",
+     "meaning": "deja de participar"
+    }
+   ]
+  },
+  {
+   "id": "nominaciones",
+   "title": "Neutralidad imposible",
+   "place": "El confesionario",
+   "context": "Chelo y La Voz discuten, en tono tenso, sobre la orden de manipular las nominaciones contra Fela.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rodolfo, no te pido que mientas. Solo que formules la pregunta de manera que la Sorpresa piense en Fela. «¿Quién crees que está más cansado de la casa?». Inocente."
+    },
+    {
+     "s": 0,
+     "text": "Inocente como un cuchillo de mantequilla. No corta, pero empuja. Sabes perfectamente que ninguna pregunta es neutra."
+    },
+    {
+     "s": 1,
+     "text": "El director ha sido claro: si Fela no sale nominada esta noche, el canal no renueva. Son cuarenta puestos de trabajo."
+    },
+    {
+     "s": 0,
+     "text": "Y me los cargas a mí, que soy el único de este edificio que ni siquiera tiene cara. Es un detalle encantador."
+    },
+    {
+     "s": 1,
+     "text": "No te pongas dramático. Llevas siete años eligiendo qué preguntas hacen llorar a cada uno."
+    },
+    {
+     "s": 0,
+     "text": "Por eso lo sé mejor que nadie. He sido cómplice durante siete temporadas. Esta noche me gustaría ser, simplemente, una voz que pregunta y escucha."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si la Sorpresa nomina a Fela por su cuenta?"
+    },
+    {
+     "s": 0,
+     "text": "Entonces será su decisión, no la nuestra. La diferencia parece pequeña, pero es la que me deja dormir. Y después de siete años sin cara, Chelo, lo único que me queda es poder mirarme en el espejo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pregunta propone Chelo?",
+     "options": [
+      "«¿A quién nominas y por qué?»",
+      "«¿Quién crees que está más cansado de la casa?»",
+      "«¿Quién te ha cuidado?»"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere decir La Voz con «un cuchillo de mantequilla»?",
+     "infer": true,
+     "options": [
+      "Que la pregunta es demasiado blanda",
+      "Que tiene hambre",
+      "Que la pregunta parece inofensiva pero influye"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasa si Fela no sale nominada, según el director?",
+     "options": [
+      "Despiden a La Voz inmediatamente",
+      "El canal no renueva",
+      "Fela gana el programa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tono tiene «es un detalle encantador»?",
+     "infer": true,
+     "options": [
+      "Agradecido",
+      "Sarcástico",
+      "Romántico"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Puede una pregunta empujar una decisión sin que el otro lo note?",
+     "model": "Sí, sobre todo si elige qué opciones parecen razonables."
+    },
+    {
+     "q": "¿Qué parte de la culpa le corresponde a quien solo cumple órdenes?",
+     "model": "La parte de lo que hace con sus manos, aunque la orden no sea suya."
+    },
+    {
+     "q": "¿Qué decisión profesional te dejaría sin dormir?",
+     "model": "Firmar un informe que sé que perjudica a alguien inocente."
+    }
+   ],
+   "gaps": "He sido [cómplice] durante siete [temporadas]. Esta noche me gustaría ser, simplemente, una voz que [pregunta] y [escucha].",
+   "glossary": [
+    {
+     "word": "formules",
+     "meaning": "expreses con palabras"
+    },
+    {
+     "word": "renueva",
+     "meaning": "continúa un contrato"
+    },
+    {
+     "word": "cómplice",
+     "meaning": "persona que participa en algo malo"
+    }
+   ]
+  },
+  {
+   "id": "castigo",
+   "title": "Arrepentimiento con audiencia",
+   "place": "El cuarto de castigo",
+   "context": "Wendy le pide a Fela consejo para dejar de ser la villana del programa.",
+   "speakers": [
+    {
+     "name": "Wendy",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, quiero dejar de ser la mala. Pero si cambio de golpe, el público dirá que es estrategia."
+    },
+    {
+     "s": 1,
+     "text": "Lo dirá igual. En esta casa hasta el arrepentimiento tiene sospechosos. La pregunta es si te importa más el qué dirán o el qué harás."
+    },
+    {
+     "s": 0,
+     "text": "Me importa llegar a la final. Mi personaje lo inventé en el casting: las chicas simpáticas no pasaban de la segunda prueba y las malas sí."
+    },
+    {
+     "s": 1,
+     "text": "Te salió demasiado bien. Llevas seis semanas metida en ese papel y ya no sabes dónde terminas tú."
+    },
+    {
+     "s": 0,
+     "text": "La Sorpresa me dijo lo mismo. Que el personaje me estaba comiendo por dentro. Me dio una rabia horrible, porque tenía razón."
+    },
+    {
+     "s": 1,
+     "text": "Entonces empieza por lo pequeño. No pidas perdón a todos en la gala, con música de piano. Ve a la cocina y ofrécele un café a Chema."
+    },
+    {
+     "s": 0,
+     "text": "¿A Chema? Le tiré un yogur a la cabeza."
+    },
+    {
+     "s": 1,
+     "text": "Precisamente. Una disculpa sin público es la única que nadie puede acusar de espectáculo. Y si te la acepta, ya tienes un testigo de que eres capaz de algo más que gritar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué inventó Wendy su personaje?",
+     "options": [
+      "Porque las malas pasaban el casting",
+      "Porque es antipática de verdad desde que era pequeña",
+      "Porque Fela se lo pidió"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sugiere Fela con «hasta el arrepentimiento tiene sospechosos»?",
+     "infer": true,
+     "options": [
+      "Que la policía investiga a los concursantes",
+      "Que en la casa cualquier cambio se interpreta como estrategia",
+      "Que Wendy cometió un delito"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le aconseja Fela?",
+     "options": [
+      "Ofrecerle un café a Chema",
+      "Pedir perdón en la gala con música",
+      "Salir de la casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué valor tiene, para Fela, una disculpa sin público?",
+     "infer": true,
+     "options": [
+      "Nadie puede acusarla de espectáculo",
+      "Es más rápida y no cuesta nada, ni dinero ni orgullo",
+      "No vale nada sin cámaras"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué es tan difícil abandonar un papel que te ha dado éxito?",
+     "model": "Porque te da seguridad y la gente espera que sigas siendo así."
+    },
+    {
+     "q": "¿Cómo distingues un perdón que nace del arrepentimiento de uno calculado?",
+     "model": "La sincera no espera nada a cambio; la estratégica busca un resultado."
+    },
+    {
+     "q": "¿Qué personaje inventaste alguna vez para que te aceptaran?",
+     "model": "En una empresa fingía ser muy extrovertido para encajar en el equipo."
+    }
+   ],
+   "gaps": "Una disculpa sin [público] es la única que nadie puede acusar de [espectáculo]. Y si te la acepta, ya tienes un [testigo] de que eres capaz de algo más que [gritar].",
+   "glossary": [
+    {
+     "word": "el qué dirán",
+     "meaning": "la opinión de los demás"
+    },
+    {
+     "word": "rabia",
+     "meaning": "enfado fuerte"
+    },
+    {
+     "word": "testigo",
+     "meaning": "persona que ve algo y puede contarlo"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "El trofeo y el pasillo",
+   "place": "El pasillo de producción",
+   "context": "Chelo le cuenta a Marga lo que habló con la Sorpresa sobre el precio de ganar.",
+   "speakers": [
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chelo, la Sorpresa ha rechazado tu trato. Inmunidad a cambio de una pelea a las tres. ¿Qué le dijiste para convencerla de que no?"
+    },
+    {
+     "s": 0,
+     "text": "Nada que esté en el manual de producción, desde luego. Me preguntó si yo habría aceptado. Y le conté que lo hice."
+    },
+    {
+     "s": 1,
+     "text": "¿En tu temporada?"
+    },
+    {
+     "s": 0,
+     "text": "En la semana nueve. Me ofrecieron lo mismo: humillar en directo a mi mejor amiga de la casa. Lo hice con tanto talento que gané la final. Ella no me ha vuelto a dirigir la palabra."
+    },
+    {
+     "s": 1,
+     "text": "Y te pasaste la gala final llorando con el trofeo."
+    },
+    {
+     "s": 0,
+     "text": "Eso es lo que emitieron. Lo que no emitieron es que lloré después, en este mismo pasillo, mientras ella salía por la puerta de atrás sin despedirse."
+    },
+    {
+     "s": 1,
+     "text": "Diez años guardando eso. No sé si lo que me cuentas es una confesión o una advertencia."
+    },
+    {
+     "s": 0,
+     "text": "Las dos cosas, supongo. La Sorpresa, que es más lista que yo a su edad, se lo tomó como advertencia. Yo, como penitencia. Y el director, si se entera, como un gran formato para la próxima temporada."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿En qué semana recibió Chelo el trato?",
+     "options": [
+      "En la semana nueve",
+      "En la primera semana",
+      "En la final, delante de todo el país"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hizo Chelo con su mejor amiga?",
+     "options": [
+      "La nominó en secreto y sin decírselo",
+      "La humilló en directo",
+      "La ayudó a ganar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué contraste hay entre lo emitido y lo no emitido?",
+     "infer": true,
+     "options": [
+      "El éxito del programa frente a su fracaso económico",
+      "La alegría del trofeo frente al dolor de perder a una amiga",
+      "La final frente al casting"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué critica Chelo con su última frase sobre el director?",
+     "infer": true,
+     "options": [
+      "Que el director es muy creativo y generoso con su equipo",
+      "Que él convertiría cualquier dolor en negocio",
+      "Que no ve el programa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué precio has pagado por ganar algo que deseabas?",
+     "model": "Conseguí un ascenso, pero un compañero que lo merecía dejó de confiar en mí."
+    },
+    {
+     "q": "¿Qué diferencia hay entre contar algo como confesión o como advertencia?",
+     "model": "La confesión alivia a quien habla; la advertencia protege a quien escucha."
+    },
+    {
+     "q": "¿Por qué los medios eligen ciertos momentos y esconden otros?",
+     "model": "Porque cuentan la historia que más vende, no la más completa."
+    }
+   ],
+   "gaps": "Lo que no emitieron es que lloré después, en este mismo [pasillo], mientras ella salía por la [puerta] de atrás sin [despedirse]. Diez años guardando eso. No sé si lo que me cuentas es una confesión o una [advertencia].",
+   "glossary": [
+    {
+     "word": "dirigir la palabra",
+     "meaning": "hablar con alguien"
+    },
+    {
+     "word": "advertencia",
+     "meaning": "aviso de un peligro"
+    },
+    {
+     "word": "penitencia",
+     "meaning": "castigo que uno acepta por un error"
+    }
+   ]
+  },
+  {
+   "id": "abandono",
+   "title": "La puerta roja y el orgullo",
+   "place": "La puerta roja",
+   "context": "Fela convence a Hugo de que acepte el dinero que la casa ha reunido para su multa.",
+   "speakers": [
+    {
+     "name": "Hugo",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, no puedo aceptarlo. Diez mil dólares reunidos con los premios de todos. Hasta Wendy ha renunciado a su cena de lujo. Me siento como un mendigo con micrófono."
+    },
+    {
+     "s": 1,
+     "text": "Ay, Hugo. En esta casa se han regalado cosas mucho peores. Por ejemplo, la dignidad, a cambio de minutos en pantalla. Que por una vez se regale algo bueno no es ninguna tragedia."
+    },
+    {
+     "s": 0,
+     "text": "Es que yo no he hecho nada para merecerlo."
+    },
+    {
+     "s": 1,
+     "text": "Le enseñaste a leer a Toño en un mes, con las etiquetas de las latas de atún. Eso aquí no lo emitieron porque no tenía música de suspense, pero todos lo vimos."
+    },
+    {
+     "s": 0,
+     "text": "Y si me voy, la producción me presentará como el que abandonó. Mis alumnos verán a su maestro huyendo por la puerta roja."
+    },
+    {
+     "s": 1,
+     "text": "Tus alumnos verán a un hombre que elige a su padre por encima de un premio. Si la producción no sabe contar eso, es problema de la producción."
+    },
+    {
+     "s": 0,
+     "text": "Lo más difícil no es irme. Es aceptar que me ayuden."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé, mijo. El orgullo es un abrigo muy bonito, pero no se puede ir con él al hospital."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se siente Hugo al recibir el dinero?",
+     "options": [
+      "Como un mendigo con micrófono",
+      "Como un ganador con suerte",
+      "Indiferente"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ironía hay en lo que dice Fela sobre lo que se ha regalado en la casa?",
+     "infer": true,
+     "options": [
+      "Que nadie regala nada en la casa",
+      "Que se ha regalado la dignidad, que es mucho peor",
+      "Que los regalos son caros"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo enseñó Hugo a leer a Toño?",
+     "options": [
+      "Con los guiones del programa que encontró en la basura",
+      "Con las etiquetas de las latas de atún",
+      "Con las servilletas de Mateo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué significa la metáfora del abrigo?",
+     "infer": true,
+     "options": [
+      "Que el orgullo no sirve en los momentos importantes",
+      "Que en el hospital hace frío",
+      "Que Hugo necesita ropa nueva"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué cuesta tanto aceptar la generosidad de otros?",
+     "model": "Porque nos hace sentir en deuda y vulnerables."
+    },
+    {
+     "q": "¿Qué gesto valioso de alguien nunca apareció en ninguna foto ni video?",
+     "model": "Mi vecino cuidó a mi perro un mes entero sin pedir nada y nadie lo supo."
+    },
+    {
+     "q": "¿Cuándo el orgullo te ha impedido hacer lo correcto?",
+     "model": "Me negué a que me ayudaran con una mudanza y acabé lesionado y con la mitad de las cosas rotas."
+    }
+   ],
+   "gaps": "Tus alumnos verán a un hombre que elige a su [padre] por encima de un [premio]. Si la producción no sabe contar eso, es problema de la [producción]. Lo más difícil no es [irme].",
+   "glossary": [
+    {
+     "word": "mendigo",
+     "meaning": "persona que pide dinero en la calle"
+    },
+    {
+     "word": "dignidad",
+     "meaning": "respeto que uno merece"
+    },
+    {
+     "word": "huyendo",
+     "meaning": "escapando"
+    }
+   ]
+  },
+  {
+   "id": "maquillaje",
+   "title": "Humor negro a las cuatro",
+   "place": "La sala de maquillaje",
+   "context": "Paty y Sofi hablan de la muerte y de la apariencia mientras Paty la maquilla.",
+   "speakers": [
+    {
+     "name": "Paty",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Paty, la Sorpresa salió de aquí riéndose a carcajadas. ¿Qué le contaste a las cuatro de la mañana?"
+    },
+    {
+     "s": 0,
+     "text": "Que los domingos maquillo en la funeraria de mi tío. Y que allí la clientela es más agradecida: no se mira en el espejo, no pide que le quite diez años y nunca llega tarde a su cita."
+    },
+    {
+     "s": 1,
+     "text": "Qué espanto. Y qué bueno."
+    },
+    {
+     "s": 0,
+     "text": "Todo el mundo reacciona así. Primero el espanto, luego la risa. Y luego, si es gente que vale la pena, una pregunta seria. La Sorpresa me preguntó si me daba miedo la muerte."
+    },
+    {
+     "s": 1,
+     "text": "¿Y te da?"
+    },
+    {
+     "s": 0,
+     "text": "Me da menos que esto. Allí maquillo para que una familia recuerde a alguien en paz. Aquí maquillo para que alguien parezca feliz delante de tres millones de desconocidos. Lo primero es un acto de amor; lo segundo, de supervivencia."
+    },
+    {
+     "s": 1,
+     "text": "Me estás diciendo que mi base de maquillaje es un chaleco salvavidas."
+    },
+    {
+     "s": 0,
+     "text": "Te estoy diciendo que hoy voy a ponerte menos. Que se te note un poco la noche. A veces lo más valiente de una cara es que parezca vivida."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde maquilla Paty los domingos?",
+     "options": [
+      "En un teatro de su barrio",
+      "En la funeraria de su tío",
+      "En una boda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ironía usa Paty al describir a sus clientes de la funeraria?",
+     "infer": true,
+     "options": [
+      "Los presenta como clientes ideales porque no se quejan",
+      "Dice que pagan más que los vivos",
+      "Dice que le dan miedo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Paty, ¿qué es maquillar en la funeraria?",
+     "options": [
+      "Un trabajo de supervivencia",
+      "Un negocio familiar sin importancia",
+      "Un acto de amor"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sugiere la frase «lo más valiente de una cara es que parezca vivida»?",
+     "infer": true,
+     "options": [
+      "Que Sofi parece enferma y necesita un médico",
+      "Que hay que maquillarse más",
+      "Que mostrar el cansancio puede ser un acto de honestidad"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Por qué el humor negro ayuda a algunas personas a soportar el dolor?",
+     "model": "Porque pone distancia y convierte lo insoportable en algo que se puede nombrar."
+    },
+    {
+     "q": "¿Qué te da más miedo: la muerte o una vida de apariencias?",
+     "model": "Una vida de apariencias, porque la muerte al menos es inevitable."
+    },
+    {
+     "q": "¿Qué señal de cansancio o de edad has dejado de ocultar?",
+     "model": "He dejado de taparme las ojeras: son parte de quien soy ahora."
+    }
+   ],
+   "gaps": "Allí maquillo para que una familia recuerde a alguien en [paz]. Aquí maquillo para que alguien parezca [feliz] delante de tres millones de [desconocidos]. Lo primero es un acto de [amor]; lo segundo, de supervivencia.",
+   "glossary": [
+    {
+     "word": "a carcajadas",
+     "meaning": "con risas fuertes"
+    },
+    {
+     "word": "espanto",
+     "meaning": "miedo intenso"
+    },
+    {
+     "word": "chaleco salvavidas",
+     "meaning": "prenda que te mantiene a flote en el agua"
+    }
+   ]
+  },
+  {
+   "id": "secreto",
+   "title": "La hija sin apellido",
+   "place": "La lavandería",
+   "context": "Lucía y Brenda debaten si es legítimo usar la televisión para enfrentarse a un padre ausente.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lucía, déjame entenderlo. ¿Vas a preguntarle al presentador, en directo, si recuerda qué pasó el veinte de marzo?"
+    },
+    {
+     "s": 0,
+     "text": "Mi cumpleaños. El día en que hizo la maleta, hace cinco años. Si lo recuerda, sabrá quién soy. Si no lo recuerda, lo sabrá el país."
+    },
+    {
+     "s": 1,
+     "text": "Es brillante y es cruel. No sé en qué proporción."
+    },
+    {
+     "s": 0,
+     "text": "Brenda, ayer me presentó como «Lucía Montalbán, la chica de Montevideo». Me miró durante tres segundos, con la misma sonrisa con la que anuncia los yogures, y siguió leyendo."
+    },
+    {
+     "s": 1,
+     "text": "Te entiendo mejor de lo que crees. Pero si conviertes esto en espectáculo, ya no será tuyo. Será un clip con millones de visitas y comentarios de desconocidos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué alternativa tengo? Él vive dentro de la tele. Es el único idioma que habla."
+    },
+    {
+     "s": 1,
+     "text": "Haz la pregunta sin decir que es tu padre. Que la respuesta, o el silencio, sea responsabilidad suya. Así, pase lo que pase, la que sale con la cabeza alta eres tú."
+    },
+    {
+     "s": 0,
+     "text": "Para ser influencer, tienes una ética sorprendente."
+    },
+    {
+     "s": 1,
+     "text": "No te emociones. Es estrategia. Lo que pasa es que a veces coinciden."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pasó el veinte de marzo?",
+     "options": [
+      "Es el cumpleaños de Lucía y el día en que su padre se fue",
+      "Es el aniversario del programa y de su estreno",
+      "Lucía entró en la casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué destaca Lucía de la sonrisa de su padre?",
+     "infer": true,
+     "options": [
+      "Que era la misma que usa en los anuncios",
+      "Que era muy cariñosa, como cuando ella era pequeña",
+      "Que estaba nervioso y le temblaba la voz"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le propone Brenda?",
+     "options": [
+      "Hacer la pregunta sin decir que es su padre",
+      "No hacer ninguna pregunta y esperar a la final",
+      "Escribirle una carta desde la casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué revela la última frase de Brenda?",
+     "infer": true,
+     "options": [
+      "Que a veces la ética y el interés coinciden",
+      "Que no tiene ninguna ética y solo busca votos",
+      "Que se ha emocionado mucho"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Es legítimo usar un medio público para resolver un conflicto privado?",
+     "model": "Solo cuando no queda otra vía, y aun así con mucho cuidado."
+    },
+    {
+     "q": "¿Qué hace que una verdad incómoda pierda su valor al hacerse espectáculo?",
+     "model": "Que deja de importar la persona y solo importa la reacción del público."
+    },
+    {
+     "q": "¿Cuándo has visto coincidir la ética y la conveniencia?",
+     "model": "Cuando una empresa pagó mejor a su personal y aumentó sus ventas."
+    }
+   ],
+   "gaps": "Haz la pregunta sin decir que es tu [padre]. Que la respuesta, o el [silencio], sea responsabilidad [suya]. Así, pase lo que pase, la que sale con la cabeza [alta] eres tú.",
+   "glossary": [
+    {
+     "word": "proporción",
+     "meaning": "relación de cantidad entre dos cosas"
+    },
+    {
+     "word": "visitas",
+     "meaning": "veces que se ve algo en internet"
+    },
+    {
+     "word": "con la cabeza alta",
+     "meaning": "con dignidad"
+    }
+   ]
+  },
+  {
+   "id": "veredicto",
+   "title": "La última pregunta de La Voz",
+   "place": "El confesionario",
+   "context": "Al amanecer, La Voz, Marga y Chelo deciden cómo despedir el programa cancelado.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 2,
+     "text": "El correo del director es una joya: «Agradecemos siete temporadas de compromiso. El formato no se renovará. Rogamos discreción». Ni una firma."
+    },
+    {
+     "s": 1,
+     "text": "Siete temporadas resumidas en treinta palabras. Ni el peor guionista habría sido tan cruel."
+    },
+    {
+     "s": 0,
+     "text": "Al contrario, es coherente. Un programa que lleva siete años despidiendo concursantes en directo merecía acabar con un despido por correo."
+    },
+    {
+     "s": 2,
+     "text": "Lo que no sé es qué emitimos. El director quiere un resumen con los mejores momentos, música y lágrimas."
+    },
+    {
+     "s": 1,
+     "text": "Yo emitiría la noche de la Sorpresa sin cortar. Es la primera vez que la casa se parece a una casa."
+    },
+    {
+     "s": 0,
+     "text": "Y yo pido una cosa más. Que la última pregunta del confesionario me la haga a mí mismo, en voz alta. «¿Valió la pena convertir la intimidad de los demás en mi sueldo?»."
+    },
+    {
+     "s": 2,
+     "text": "Eso no lo va a aprobar nadie."
+    },
+    {
+     "s": 0,
+     "text": "No necesito aprobación, Chelo. El programa ya está muerto. Por primera vez, nadie puede cancelarme."
+    },
+    {
+     "s": 1,
+     "text": "Entonces, que sea en directo. Y sin maquillaje para nadie. Que se nos vea la noche entera en la cara, como a la Sorpresa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pide el correo del director?",
+     "options": [
+      "Una fiesta de despedida",
+      "Una temporada más",
+      "Discreción"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tono usa Chelo al llamar «una joya» al correo?",
+     "infer": true,
+     "options": [
+      "Admirado",
+      "Emocionado",
+      "Irónico"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué propone Marga emitir?",
+     "options": [
+      "Un resumen con los mejores momentos",
+      "La noche de la Sorpresa sin cortar",
+      "Nada hasta que el director lo apruebe por escrito"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué implica La Voz con «nadie puede cancelarme»?",
+     "infer": true,
+     "options": [
+      "Que tiene un contrato de por vida",
+      "Que es el dueño del canal",
+      "Que ya no tiene nada que perder y puede ser sincero"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo debería terminar un proyecto en el que mucha gente puso su vida?",
+     "model": "Con un reconocimiento personal a cada persona, no con un correo genérico."
+    },
+    {
+     "q": "¿Qué pregunta incómoda te harías a ti mismo sobre tu trabajo?",
+     "model": "Me preguntaría si lo que hago mejora la vida de alguien o solo la mía."
+    },
+    {
+     "q": "¿Qué libertad aparece cuando ya no tienes nada que perder?",
+     "model": "La libertad de decir lo que piensas sin calcular las consecuencias."
+    }
+   ],
+   "gaps": "No necesito [aprobación], Chelo. El programa ya está [muerto]. Por primera vez, nadie puede [cancelarme]. Entonces, que sea en [directo].",
+   "glossary": [
+    {
+     "word": "una joya",
+     "meaning": "algo excelente; aquí, con ironía"
+    },
+    {
+     "word": "discreción",
+     "meaning": "silencio prudente"
+    },
+    {
+     "word": "coherente",
+     "meaning": "lógico, que tiene sentido"
+    }
+   ]
+  }
+ ]
+}

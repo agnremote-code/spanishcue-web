@@ -1,0 +1,2025 @@
+{
+ "game": "reality",
+ "level": "A1",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "La frase de los guionistas",
+   "place": "La entrada",
+   "context": "Antes de abrir la puerta, Marga le explica a Lalo el plan de la entrada.",
+   "speakers": [
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lalo, escucha. A las diez en punto entra la Sorpresa. Camina hasta la escalera y dice una frase."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué frase?"
+    },
+    {
+     "s": 0,
+     "text": "«Vengo a ganar». La escribieron los guionistas esta tarde."
+    },
+    {
+     "s": 1,
+     "text": "Es una frase un poco tonta, ¿no?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, pero es corta. La gente la recuerda. Tú grabas la cara y yo pongo la música."
+    },
+    {
+     "s": 1,
+     "text": "Vale. Y si se le cae el micrófono, ¿qué hago?"
+    },
+    {
+     "s": 0,
+     "text": "Grabas igual. En la tele, los errores también gustan."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué hora entra la Sorpresa?",
+     "options": [
+      "A las doce menos cuarto",
+      "A las diez en punto",
+      "A las nueve y media"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Quién escribió la frase?",
+     "options": [
+      "Marga, en su casa",
+      "Los guionistas",
+      "La Sorpresa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué graba Lalo?",
+     "options": [
+      "Las manos y los pies",
+      "La puerta",
+      "La cara"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "Según Marga, ¿qué pasa con los errores?",
+     "options": [
+      "Se borran",
+      "También gustan en la tele",
+      "Están prohibidos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué frase dirías al entrar en un programa de televisión?",
+     "model": "Diría: «Hola, vengo a conocer gente»."
+    },
+    {
+     "q": "¿Qué error pequeño te hace reír cuando lo recuerdas?",
+     "model": "Una vez saludé a una persona que no conocía."
+    },
+    {
+     "q": "¿Cómo te preparas antes de hablar delante de mucha gente?",
+     "model": "Respiro despacio y repito las primeras frases."
+    }
+   ],
+   "gaps": "«Vengo a [ganar]». La escribieron los [guionistas] esta tarde. Es una frase un poco [tonta], ¿no? Sí, pero es [corta].",
+   "glossary": [
+    {
+     "word": "en punto",
+     "meaning": "exactamente a esa hora"
+    },
+    {
+     "word": "guionistas",
+     "meaning": "personas que escriben lo que se dice en la tele"
+    },
+    {
+     "word": "grabas",
+     "meaning": "registras con una cámara"
+    },
+    {
+     "word": "igual",
+     "meaning": "de todas formas"
+    }
+   ]
+  },
+  {
+   "id": "confesionario",
+   "title": "Nadie le ve la cara",
+   "place": "El confesionario",
+   "context": "En el confesionario, Marga habla con La Voz, el hombre que hace las preguntas.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rodolfo, ¿estás bien? Tienes la voz rara hoy."
+    },
+    {
+     "s": 0,
+     "text": "Estoy cansado. Hace siete años que hago esto y nadie me ve la cara."
+    },
+    {
+     "s": 1,
+     "text": "Por eso eres famoso. Eres un misterio."
+    },
+    {
+     "s": 0,
+     "text": "Mi hija dice que soy una radio con zapatos."
+    },
+    {
+     "s": 1,
+     "text": "Ja, ja. Bueno, esta noche tienes una pregunta nueva para la Sorpresa."
+    },
+    {
+     "s": 0,
+     "text": "Sí: «¿Qué buscas en esta casa?». Es fácil de preguntar y difícil de contestar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama de verdad La Voz?",
+     "options": [
+      "Bartolomé",
+      "Óscar",
+      "Rodolfo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años lleva La Voz en el programa?",
+     "options": [
+      "Catorce",
+      "Siete",
+      "Dos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice la hija de La Voz?",
+     "options": [
+      "Que es muy guapo",
+      "Que es una radio con zapatos",
+      "Que trabaja poco y gana mucho"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo es la pregunta nueva?",
+     "options": [
+      "Fácil de preguntar y difícil de contestar",
+      "Muy larga",
+      "Divertida"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué parte de la fama te parece más pesada?",
+     "model": "Me parece pesado no poder caminar tranquilo por la calle."
+    },
+    {
+     "q": "¿Qué pregunta es difícil de contestar para ti?",
+     "model": "Para mí es difícil decir qué quiero hacer en el futuro."
+    },
+    {
+     "q": "¿Qué voz de la radio o de la tele reconoces enseguida?",
+     "model": "Reconozco la voz de un locutor de fútbol."
+    }
+   ],
+   "gaps": "Estoy [cansado]. Hace siete años que hago esto y nadie me ve la [cara]. Por eso eres [famoso]. Eres un [misterio].",
+   "glossary": [
+    {
+     "word": "rara",
+     "meaning": "diferente, extraña"
+    },
+    {
+     "word": "misterio",
+     "meaning": "algo que nadie entiende"
+    },
+    {
+     "word": "contestar",
+     "meaning": "responder"
+    }
+   ]
+  },
+  {
+   "id": "alianza",
+   "title": "Pareja fuera, rivales dentro",
+   "place": "El salón",
+   "context": "Brenda y Óscar hablan bajo en el sofá del salón.",
+   "speakers": [
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    },
+    {
+     "name": "Óscar",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Óscar, la Sorpresa está en la cocina. Ahora podemos hablar."
+    },
+    {
+     "s": 1,
+     "text": "Bien. Recuerda el plan: dentro de la casa no nos conocemos."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Pero es difícil. Te veo todos los días y no puedo darte la mano."
+    },
+    {
+     "s": 1,
+     "text": "Fuera somos pareja. Dentro somos rivales. Así ganamos más votos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si la Sorpresa lo descubre?"
+    },
+    {
+     "s": 1,
+     "text": "Entonces le ofrecemos una alianza. Tres es mejor que dos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está la Sorpresa?",
+     "options": [
+      "En el jardín",
+      "En la cocina",
+      "En el dormitorio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué son Brenda y Óscar fuera de la casa?",
+     "options": [
+      "Hermanos",
+      "Compañeros de trabajo",
+      "Pareja"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué no puede hacer Brenda?",
+     "options": [
+      "Dormir bien por la noche",
+      "Darle la mano a Óscar",
+      "Comer en la mesa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hacen si la Sorpresa lo descubre?",
+     "options": [
+      "La expulsan",
+      "Lo cuentan todo",
+      "Le ofrecen una alianza"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué parte de tu vida no cuentas en el trabajo o en clase?",
+     "model": "No cuento nada de mi vida amorosa."
+    },
+    {
+     "q": "¿Cómo eliges a tu compañero o compañera para un juego?",
+     "model": "Elijo a alguien rápido y divertido."
+    },
+    {
+     "q": "¿Qué te parece mentir para ganar un concurso?",
+     "model": "Me parece feo, pero en un juego es normal."
+    }
+   ],
+   "gaps": "Fuera somos [pareja]. Dentro somos [rivales]. Así ganamos más [votos]. ¿Y si la Sorpresa lo [descubre]?",
+   "glossary": [
+    {
+     "word": "rivales",
+     "meaning": "personas que compiten"
+    },
+    {
+     "word": "alianza",
+     "meaning": "acuerdo para ayudarse"
+    },
+    {
+     "word": "descubre",
+     "meaning": "encuentra algo escondido"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "Un guiso para catorce",
+   "place": "La cocina",
+   "context": "Doña Fela y Chema miran la despensa vacía.",
+   "speakers": [
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Fela, la producción solo nos da tres latas de atún para catorce personas."
+    },
+    {
+     "s": 0,
+     "text": "No pasa nada. Yo tengo mis cuarenta latas debajo de la cama."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuarenta? ¿Por qué tiene tanta comida escondida?"
+    },
+    {
+     "s": 0,
+     "text": "Porque en mi pueblo, de niña, a veces no había nada para comer. Desde entonces guardo."
+    },
+    {
+     "s": 1,
+     "text": "Entiendo. ¿Y qué cocinamos?"
+    },
+    {
+     "s": 0,
+     "text": "Un guiso con atún, papas y cebolla. Para catorce. Pásame el cuchillo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas latas da la producción?",
+     "options": [
+      "Trece",
+      "Cuarenta",
+      "Tres"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde guarda Fela sus latas?",
+     "options": [
+      "En la nevera",
+      "Debajo de la cama",
+      "En la maleta de Chema"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué guarda comida Fela?",
+     "options": [
+      "Porque le gusta mucho el atún",
+      "Porque de niña a veces no había comida",
+      "Porque la producción se lo pide"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le pide Fela a Chema al final?",
+     "options": [
+      "Las papas",
+      "El cuchillo",
+      "Un vaso de agua"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué compras de más por miedo a quedarte sin nada?",
+     "model": "Guardo velas, agua y pilas."
+    },
+    {
+     "q": "¿Qué receta cocinas cuando hay muy poco en la nevera?",
+     "model": "Hago una tortilla con lo que hay."
+    },
+    {
+     "q": "¿Qué regla de la mesa de tu infancia sigues hoy?",
+     "model": "Todavía como todo lo que hay en el plato."
+    }
+   ],
+   "gaps": "Un guiso con [atún], papas y [cebolla]. Para [catorce]. Pásame el [cuchillo].",
+   "glossary": [
+    {
+     "word": "escondida",
+     "meaning": "en un lugar secreto"
+    },
+    {
+     "word": "guiso",
+     "meaning": "comida cocinada despacio en una olla"
+    },
+    {
+     "word": "pueblo",
+     "meaning": "lugar pequeño fuera de la ciudad"
+    },
+    {
+     "word": "papas",
+     "meaning": "patatas"
+    }
+   ]
+  },
+  {
+   "id": "mudo",
+   "title": "Once días sin voz",
+   "place": "El comedor",
+   "context": "Mateo no habla en voz alta desde hace once días. Le susurra a Yeni en el comedor.",
+   "speakers": [
+    {
+     "name": "Mateo",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mateo, todos dicen que estás enfermo. ¿Es verdad?"
+    },
+    {
+     "s": 0,
+     "text": "No. Estoy muy bien. Pero soy abogado y leí el contrato."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué dice el contrato?"
+    },
+    {
+     "s": 0,
+     "text": "Que el programa puede usar todas mis palabras. Para siempre. En cualquier anuncio."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué horror! ¿Por eso escribes en servilletas?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Y las servilletas me las como después."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos días lleva Mateo sin hablar en voz alta?",
+     "options": [
+      "Siete",
+      "Once",
+      "Diez"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué trabajo tiene Mateo?",
+     "options": [
+      "Es médico",
+      "Es abogado",
+      "Es cocinero en un hotel"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué puede usar el programa, según el contrato?",
+     "options": [
+      "Todas sus palabras",
+      "Sus fotos de niño",
+      "Las cartas de su novia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace Mateo con las servilletas?",
+     "options": [
+      "Las tira a la basura",
+      "Se las da a Yeni",
+      "Se las come"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué documento firmaste sin leer con atención?",
+     "model": "Firmé el contrato del teléfono sin leerlo."
+    },
+    {
+     "q": "¿Qué palabras tuyas no te gustaría ver en un anuncio?",
+     "model": "No me gustaría ver mis mensajes de amor."
+    },
+    {
+     "q": "¿Qué gestos usas para explicar algo sin palabras?",
+     "model": "Uso las manos y la cara."
+    }
+   ],
+   "gaps": "Que el programa puede usar todas mis [palabras]. Para [siempre]. En cualquier [anuncio]. ¡Qué [horror]!",
+   "glossary": [
+    {
+     "word": "horror",
+     "meaning": "algo que da mucho miedo o asco"
+    },
+    {
+     "word": "contrato",
+     "meaning": "papel con reglas que firmas"
+    },
+    {
+     "word": "anuncio",
+     "meaning": "video para vender algo"
+    }
+   ]
+  },
+  {
+   "id": "nostalgia",
+   "title": "Contar clientes para dormir",
+   "place": "El dormitorio",
+   "context": "Yeni no puede dormir. Fela se sienta en su cama.",
+   "speakers": [
+    {
+     "name": "Yeni",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, no puedo dormir. Pienso en mi mamá y en la peluquería."
+    },
+    {
+     "s": 1,
+     "text": "¿Tu mamá trabaja sola ahora?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Y los sábados vienen muchos clientes. Yo siempre la ayudo."
+    },
+    {
+     "s": 1,
+     "text": "Mira, haz esto: cierra los ojos y cuenta clientes. Una señora con el pelo largo, un niño con el pelo corto…"
+    },
+    {
+     "s": 0,
+     "text": "Un señor sin pelo… Ja, ja. Ese es rápido."
+    },
+    {
+     "s": 1,
+     "text": "Así me gusta. Y mañana le mandas un saludo por la cámara."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿En qué piensa Yeni?",
+     "options": [
+      "En un chico de la casa",
+      "En el dinero del premio",
+      "En su mamá y en la peluquería"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué día tiene más clientes la peluquería?",
+     "options": [
+      "El sábado",
+      "El lunes",
+      "El domingo por la tarde"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le dice Fela que cuente?",
+     "options": [
+      "Clientes",
+      "Ovejas",
+      "Estrellas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo le puede mandar Yeni un saludo a su mamá?",
+     "options": [
+      "Por teléfono",
+      "Con una carta",
+      "Por la cámara"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cuentas tú en la cama para tener sueño?",
+     "model": "Cuento los países que conozco."
+    },
+    {
+     "q": "¿A qué vecino o familiar echas una mano los sábados?",
+     "model": "Ayudo a mi padre en su tienda."
+    },
+    {
+     "q": "¿Qué saludo mandarías a tu familia por la tele?",
+     "model": "Diría: «Mamá, como bien y duermo poco»."
+    }
+   ],
+   "gaps": "Sí. Y los [sábados] vienen muchos [clientes]. Yo siempre la [ayudo]. Mira, haz esto: cierra los [ojos] y cuenta clientes.",
+   "glossary": [
+    {
+     "word": "peluquería",
+     "meaning": "tienda donde cortan el pelo"
+    },
+    {
+     "word": "clientes",
+     "meaning": "personas que compran o usan un servicio"
+    },
+    {
+     "word": "saludo",
+     "meaning": "palabras para decir hola"
+    }
+   ]
+  },
+  {
+   "id": "espejo",
+   "title": "El espejo que estornuda",
+   "place": "El baño",
+   "context": "Lalo graba detrás del espejo del baño y habla con Chelo por la radio.",
+   "speakers": [
+    {
+     "name": "Lalo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lalo, ¿qué pasa? Oigo ruidos raros."
+    },
+    {
+     "s": 0,
+     "text": "Perdón. Estornudé. Hay mucho polvo aquí detrás."
+    },
+    {
+     "s": 1,
+     "text": "¡No puedes estornudar! La Sorpresa está en el baño."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Ahora mira el espejo con mucha atención. Creo que me oyó."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué hace?"
+    },
+    {
+     "s": 0,
+     "text": "Le dice al espejo: «Salud». Muy educada, la Sorpresa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hizo Lalo?",
+     "options": [
+      "Estornudó",
+      "Se cayó",
+      "Cantó una canción"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué estornuda Lalo?",
+     "options": [
+      "Porque tiene gripe",
+      "Porque hace frío en el pasillo",
+      "Porque hay mucho polvo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién está en el baño?",
+     "options": [
+      "Chelo",
+      "Doña Fela",
+      "La Sorpresa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le dice la Sorpresa al espejo?",
+     "options": [
+      "«Hola»",
+      "«Salud»",
+      "«¿Quién está ahí?»"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cámaras ves en tu barrio o en tu trabajo?",
+     "model": "Veo cámaras en el banco y en el metro."
+    },
+    {
+     "q": "¿En qué lugar necesitas estar solo o sola de verdad?",
+     "model": "Necesito estar sola en la ducha."
+    },
+    {
+     "q": "¿Qué ruido tuyo te da vergüenza en público?",
+     "model": "Me da vergüenza el ruido de mi estómago."
+    }
+   ],
+   "gaps": "Perdón. [Estornudé]. Hay mucho [polvo] aquí detrás. ¡No puedes estornudar! La Sorpresa está en el [baño]. Ya lo sé. Ahora mira el [espejo] con mucha atención.",
+   "glossary": [
+    {
+     "word": "polvo",
+     "meaning": "suciedad muy fina"
+    },
+    {
+     "word": "detrás",
+     "meaning": "en la parte de atrás"
+    },
+    {
+     "word": "educada",
+     "meaning": "que tiene buenos modales"
+    }
+   ]
+  },
+  {
+   "id": "romance",
+   "title": "Un minuto tarde",
+   "place": "El jardín",
+   "context": "Sofi y Dani están en la hamaca. La producción espera un beso.",
+   "speakers": [
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Dani",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Dani, son las once y treinta. La producción quiere el beso ya."
+    },
+    {
+     "s": 1,
+     "text": "Sofi, ¿para ti esto es solo trabajo?"
+    },
+    {
+     "s": 0,
+     "text": "Es mi contrato. Soy actriz. Necesito salir en la tele."
+    },
+    {
+     "s": 1,
+     "text": "Yo soy bombero. Yo no actúo. A mí me gustas de verdad."
+    },
+    {
+     "s": 0,
+     "text": "Dani… No digas eso ahora. Hay seis cámaras."
+    },
+    {
+     "s": 1,
+     "text": "Pues que lo graben. Ya son las once y treinta y uno."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es al principio?",
+     "options": [
+      "Las doce y media",
+      "Las diez y cuarto",
+      "Las once y treinta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué trabajo tiene Sofi?",
+     "options": [
+      "Es actriz",
+      "Es bombera",
+      "Es periodista"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué siente Dani?",
+     "options": [
+      "Le gusta Sofi de verdad",
+      "Está aburrido",
+      "Tiene miedo del agua"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas cámaras hay?",
+     "options": [
+      "Dos",
+      "Seis",
+      "Catorce"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué película de amor te parece falsa?",
+     "model": "Me parecen falsas las películas donde todo es perfecto."
+    },
+    {
+     "q": "¿Qué gesto de una persona te parece sincero?",
+     "model": "Me parece sincero mirar a los ojos."
+    },
+    {
+     "q": "¿Qué harías por salir en la tele?",
+     "model": "Cantaría en un concurso, pero no mentiría."
+    }
+   ],
+   "gaps": "Es mi [contrato]. Soy [actriz]. Necesito salir en la [tele]. Yo soy [bombero].",
+   "glossary": [
+    {
+     "word": "ya",
+     "meaning": "ahora mismo"
+    },
+    {
+     "word": "actúo",
+     "meaning": "hago un papel, finjo"
+    },
+    {
+     "word": "bombero",
+     "meaning": "persona que apaga fuegos"
+    }
+   ]
+  },
+  {
+   "id": "edad",
+   "title": "El walkman de la piscina",
+   "place": "La piscina",
+   "context": "Toño encuentra algo en la mochila de Nacho, junto a la piscina.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Nacho, ¿qué es esto? ¿Un walkman? ¡Mi papá tenía uno!"
+    },
+    {
+     "s": 0,
+     "text": "Es… es un objeto antiguo. Lo compré en internet."
+    },
+    {
+     "s": 1,
+     "text": "¿Y esta foto de la universidad? Dice mil novecientos noventa y ocho."
+    },
+    {
+     "s": 0,
+     "text": "Bueno, vale. No tengo veintinueve años. Tengo cuarenta y cuatro."
+    },
+    {
+     "s": 1,
+     "text": "¡Cuarenta y cuatro! ¿Y por qué mientes?"
+    },
+    {
+     "s": 0,
+     "text": "Porque en la tele, después de los cuarenta, eres el papá de alguien."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué encuentra Toño?",
+     "options": [
+      "Un teléfono",
+      "Un walkman",
+      "Una carta de amor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué año es la foto de la universidad?",
+     "options": [
+      "De 2018",
+      "De 1988",
+      "De 1998"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años tiene Nacho de verdad?",
+     "options": [
+      "Cuarenta y cuatro",
+      "Veintinueve",
+      "Cincuenta y cuatro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué miente Nacho?",
+     "options": [
+      "Porque es tímido",
+      "Porque es un juego",
+      "Porque en la tele, después de los cuarenta, eres el papá de alguien"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué objeto de los años noventa conoces?",
+     "model": "Conozco los discos compactos."
+    },
+    {
+     "q": "¿Qué edad te parece perfecta y por qué?",
+     "model": "Treinta, porque tienes energía y experiencia."
+    },
+    {
+     "q": "¿Qué piensas de mentir sobre la edad?",
+     "model": "Pienso que no es grave, pero es un poco triste."
+    }
+   ],
+   "gaps": "Bueno, [vale]. No tengo [veintinueve] años. Tengo [cuarenta y cuatro]. ¡Cuarenta y cuatro! ¿Y por qué [mientes]?",
+   "glossary": [
+    {
+     "word": "antiguo",
+     "meaning": "muy viejo"
+    },
+    {
+     "word": "universidad",
+     "meaning": "lugar para estudiar después del colegio"
+    },
+    {
+     "word": "mientes",
+     "meaning": "no dices la verdad"
+    }
+   ]
+  },
+  {
+   "id": "prueba",
+   "title": "Siete horas para nada",
+   "place": "El gimnasio del jardín",
+   "context": "Toño tiene la mano en el botón de la prueba. Chelo viene a verlo.",
+   "speakers": [
+    {
+     "name": "Toño",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Toño, ¿cómo estás? Llevas siete horas."
+    },
+    {
+     "s": 0,
+     "text": "Me duele todo. Y tengo que ir al baño."
+    },
+    {
+     "s": 1,
+     "text": "Si sueltas el botón, pierdes el coche."
+    },
+    {
+     "s": 0,
+     "text": "Una pregunta, Chelo. ¿Para qué sirve este botón?"
+    },
+    {
+     "s": 1,
+     "text": "Pues… mira la nevera."
+    },
+    {
+     "s": 0,
+     "text": "¿La luz de la nevera? ¿Siete horas encendiendo la luz de la nevera?"
+    },
+    {
+     "s": 1,
+     "text": "Es la prueba más famosa de la temporada."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas horas lleva Toño?",
+     "options": [
+      "Siete",
+      "Tres",
+      "Quince"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde tiene que ir Toño?",
+     "options": [
+      "A la cocina",
+      "A la cama",
+      "Al baño"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pierde si suelta el botón?",
+     "options": [
+      "El coche",
+      "Una casa",
+      "Su trabajo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué enciende el botón?",
+     "options": [
+      "La luz de la nevera",
+      "La música del jardín",
+      "Una cámara"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa aburrida harías por un buen premio?",
+     "model": "Contaría arroz durante un día."
+    },
+    {
+     "q": "¿Cuánto tiempo aguantas haciendo algo difícil?",
+     "model": "Aguanto una hora, luego necesito descansar."
+    },
+    {
+     "q": "¿Qué prueba absurda viste en un programa de la tele?",
+     "model": "Vi a gente comiendo limones sin hacer caras."
+    }
+   ],
+   "gaps": "Me duele [todo]. Y tengo que ir al [baño]. Si sueltas el botón, pierdes el [coche]. Una [pregunta], Chelo.",
+   "glossary": [
+    {
+     "word": "sueltas",
+     "meaning": "dejas de tener algo en la mano"
+    },
+    {
+     "word": "sirve",
+     "meaning": "tiene una función"
+    },
+    {
+     "word": "encendiendo",
+     "meaning": "poniendo la luz"
+    }
+   ]
+  },
+  {
+   "id": "patrocinador",
+   "title": "La cara del yogur",
+   "place": "La nevera del patrocinador",
+   "context": "Marga graba un anuncio con Chema delante de la nevera del patrocinador.",
+   "speakers": [
+    {
+     "name": "Chema",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chema, mira a la cámara, sonríe y di: «Yogur Vitalín, energía natural»."
+    },
+    {
+     "s": 0,
+     "text": "«Yogur Vitalín, energía natural»."
+    },
+    {
+     "s": 1,
+     "text": "Muy bien. Ahora abre el yogur y cómelo despacio."
+    },
+    {
+     "s": 0,
+     "text": "Marga, no puedo. Soy intolerante a la lactosa."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué? ¡Eres la cara del yogur desde hace un mes!"
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Por eso siempre como con una cuchara vacía."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué dice el anuncio?",
+     "options": [
+      "«Leche Vitalín, para toda la familia»",
+      "«Yogur Vitalín, energía natural»",
+      "«Comer bien es vivir bien»"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo tiene que comer el yogur Chema?",
+     "options": [
+      "Rápido",
+      "Con pan",
+      "Despacio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué problema tiene Chema?",
+     "options": [
+      "No le gusta sonreír",
+      "Tiene miedo de las cámaras",
+      "Es intolerante a la lactosa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo come Chema en los anuncios?",
+     "options": [
+      "Con los ojos cerrados",
+      "Con una cuchara vacía",
+      "Con mucha azúcar"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué canción de un anuncio se te queda en la cabeza?",
+     "model": "Recuerdo un anuncio de galletas con un perro."
+    },
+    {
+     "q": "¿Qué producto anunciarías con gusto?",
+     "model": "Anunciaría bicicletas, porque las uso mucho."
+    },
+    {
+     "q": "¿Qué comida rechazas aunque sea gratis?",
+     "model": "Rechazo el hígado, aunque sea gratis."
+    }
+   ],
+   "gaps": "Muy bien. Ahora abre el yogur y cómelo [despacio]. Marga, no [puedo]. Soy [intolerante] a la [lactosa].",
+   "glossary": [
+    {
+     "word": "cuchara",
+     "meaning": "objeto para comer sopa o yogur"
+    },
+    {
+     "word": "intolerante",
+     "meaning": "que no puede tomar algo"
+    },
+    {
+     "word": "vacía",
+     "meaning": "sin nada dentro"
+    }
+   ]
+  },
+  {
+   "id": "nominaciones",
+   "title": "La orden del sobre",
+   "place": "El confesionario",
+   "context": "Chelo trae a La Voz el sobre de las nominaciones.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rodolfo, aquí tienes el sobre. El nombre es Fela."
+    },
+    {
+     "s": 0,
+     "text": "¿Fela? Pero Fela es la favorita del público."
+    },
+    {
+     "s": 1,
+     "text": "Por eso. Es mayor, no se pelea con nadie y no da audiencia."
+    },
+    {
+     "s": 0,
+     "text": "Cocina para todos. Cuida a Yeni. Es la abuela de la casa."
+    },
+    {
+     "s": 1,
+     "text": "Es una orden del director. Tienes que convencer a los concursantes."
+    },
+    {
+     "s": 0,
+     "text": "Yo hago preguntas, Chelo. No hago trampas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué nombre hay en el sobre?",
+     "options": [
+      "Fela",
+      "Yeni",
+      "Wendy"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué quieren nominar a Fela?",
+     "options": [
+      "Porque no da audiencia",
+      "Porque roba comida",
+      "Porque está enferma"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De quién es la orden?",
+     "options": [
+      "Del director",
+      "De Marga",
+      "Del público"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice La Voz al final?",
+     "options": [
+      "Que está de acuerdo",
+      "Que quiere irse a casa",
+      "Que hace preguntas, no trampas"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te parece cuando un concurso de la tele es injusto?",
+     "model": "Me enfada mucho y cambio de canal."
+    },
+    {
+     "q": "¿A quién votarías para salir de tu clase o tu oficina?",
+     "model": "No votaría a nadie, me caen bien todos."
+    },
+    {
+     "q": "¿Qué haces cuando tu jefe te pide algo injusto?",
+     "model": "Le explico por qué no estoy de acuerdo."
+    }
+   ],
+   "gaps": "Por eso. Es [mayor], no se pelea con [nadie] y no da [audiencia]. Cocina para todos. Cuida a Yeni. Es la [abuela] de la casa.",
+   "glossary": [
+    {
+     "word": "convencer",
+     "meaning": "hacer que alguien piense como tú"
+    },
+    {
+     "word": "audiencia",
+     "meaning": "personas que ven un programa"
+    },
+    {
+     "word": "trampas",
+     "meaning": "cosas para ganar sin respetar las reglas"
+    }
+   ]
+  },
+  {
+   "id": "castigo",
+   "title": "La villana teje",
+   "place": "El cuarto de castigo",
+   "context": "Wendy está sola en el cuarto de castigo. Fela entra con lana.",
+   "speakers": [
+    {
+     "name": "Wendy",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wendy, te traigo lana y dos agujas."
+    },
+    {
+     "s": 0,
+     "text": "¿Para qué? Estoy castigada tres horas, no en una residencia de abuelas."
+    },
+    {
+     "s": 1,
+     "text": "Tejer calma los nervios. Mira, así: una vuelta, otra vuelta."
+    },
+    {
+     "s": 0,
+     "text": "Todo el país me odia, Fela. Soy la villana de la temporada."
+    },
+    {
+     "s": 1,
+     "text": "El país no te conoce. Ve una mujer que grita. Yo veo una mujer cansada."
+    },
+    {
+     "s": 0,
+     "text": "…Enséñame otra vez la vuelta."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le trae Fela a Wendy?",
+     "options": [
+      "Lana y dos agujas",
+      "Un libro y una lámpara",
+      "Comida caliente"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas horas está castigada Wendy?",
+     "options": [
+      "Cuatro",
+      "Una",
+      "Tres"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hace tejer, según Fela?",
+     "options": [
+      "Da hambre",
+      "Cansa los ojos",
+      "Calma los nervios"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué ve Fela en Wendy?",
+     "options": [
+      "Una mujer mala",
+      "Una actriz",
+      "Una mujer cansada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué actividad tranquila te calma los nervios?",
+     "model": "Me calma regar las plantas."
+    },
+    {
+     "q": "¿Qué personaje de la tele todo el mundo odia y tú no?",
+     "model": "Todos odian al villano de una serie, pero a mí me da pena."
+    },
+    {
+     "q": "¿Qué consejo práctico te dio una persona de otra generación?",
+     "model": "Mi vecina me dijo que cocinara siempre para dos días."
+    }
+   ],
+   "gaps": "El país no te [conoce]. Ve una mujer que [grita]. Yo veo una mujer [cansada]. …Enséñame otra vez la [vuelta].",
+   "glossary": [
+    {
+     "word": "agujas",
+     "meaning": "palos finos para tejer"
+    },
+    {
+     "word": "castigada",
+     "meaning": "que recibe un castigo"
+    },
+    {
+     "word": "villana",
+     "meaning": "la mala de una historia"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "La ganadora de la primera",
+   "place": "El pasillo de producción",
+   "context": "Marga y Chelo comen pizza fría en el pasillo de producción a las tres.",
+   "speakers": [
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chelo, toma un trozo de pizza. Está fría, pero es pizza."
+    },
+    {
+     "s": 0,
+     "text": "Gracias. Hace siete años yo estaba allí dentro, en esa casa."
+    },
+    {
+     "s": 1,
+     "text": "Ya lo sé. Ganaste la primera temporada. Todo el país te conocía."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Gané mucho dinero y en dos años no tenía nada. Ahora soy productora del turno de noche."
+    },
+    {
+     "s": 1,
+     "text": "¿Y te gusta?"
+    },
+    {
+     "s": 0,
+     "text": "Me gusta la pizza fría. Lo demás, depende del día."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está la pizza?",
+     "options": [
+      "Caliente",
+      "Fría",
+      "Quemada"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo estuvo Chelo en la casa?",
+     "options": [
+      "El año pasado",
+      "Hace veinte años",
+      "Hace siete años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasó con el dinero de Chelo?",
+     "options": [
+      "Lo guardó en el banco",
+      "Se acabó en dos años",
+      "Lo dio a su familia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué trabajo tiene Chelo ahora?",
+     "options": [
+      "Presentadora",
+      "Productora del turno de noche",
+      "Cocinera"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué famoso de tu país desapareció de la tele?",
+     "model": "Un cantante de mi infancia ahora vende casas."
+    },
+    {
+     "q": "¿En qué gastarías un premio grande de la tele?",
+     "model": "Pagaría mi casa y viajaría con mi madre."
+    },
+    {
+     "q": "¿Qué comida fría te gusta a medianoche?",
+     "model": "Me gusta el arroz frío de la cena."
+    }
+   ],
+   "gaps": "Sí. Gané mucho [dinero] y en dos [años] no tenía nada. Ahora soy [productora] del turno de [noche].",
+   "glossary": [
+    {
+     "word": "trozo",
+     "meaning": "parte pequeña de algo"
+    },
+    {
+     "word": "turno",
+     "meaning": "horas de trabajo"
+    },
+    {
+     "word": "depende",
+     "meaning": "cambia según algo"
+    }
+   ]
+  },
+  {
+   "id": "abandono",
+   "title": "Una multa y un padre",
+   "place": "La puerta roja",
+   "context": "Hugo está delante de la puerta roja con su maleta. Fela intenta ayudarlo.",
+   "speakers": [
+    {
+     "name": "Hugo",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Fela",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Fela, mi papá está en el hospital. Mi hermana me lo dijo en la carta de esta semana."
+    },
+    {
+     "s": 1,
+     "text": "Ay, Hugo. ¿Y qué vas a hacer?"
+    },
+    {
+     "s": 0,
+     "text": "Si salgo por la puerta roja, pago una multa de diez mil dólares. Soy maestro. No tengo ese dinero."
+    },
+    {
+     "s": 1,
+     "text": "La casa tiene premios de esta semana. Podemos juntar todo."
+    },
+    {
+     "s": 0,
+     "text": "¿Harían eso por mí?"
+    },
+    {
+     "s": 1,
+     "text": "Tú le enseñaste a leer a Toño en un mes. Claro que sí."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo supo Hugo lo de su papá?",
+     "options": [
+      "Por una carta de su hermana",
+      "Por la tele",
+      "Por La Voz"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto es la multa?",
+     "options": [
+      "Veinte mil dólares",
+      "Diez mil dólares",
+      "Cien mil dólares"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué trabajo tiene Hugo?",
+     "options": [
+      "Es médico",
+      "Es maestro",
+      "Es camarógrafo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hizo Hugo por Toño?",
+     "options": [
+      "Le enseñó a leer",
+      "Le prestó dinero",
+      "Le cortó el pelo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué dejarías por ir con tu familia?",
+     "model": "Dejaría mi trabajo un tiempo."
+    },
+    {
+     "q": "¿Cómo te ayudan tus amigos cuando no tienes dinero?",
+     "model": "Me invitan a comer y no preguntan nada."
+    },
+    {
+     "q": "¿Qué habilidad tuya compartiste con un compañero o una compañera?",
+     "model": "Le enseñé a nadar a un compañero de trabajo."
+    }
+   ],
+   "gaps": "La casa tiene [premios] de esta semana. Podemos [juntar] todo. ¿Harían eso por [mí]? Tú le enseñaste a [leer] a Toño en un mes.",
+   "glossary": [
+    {
+     "word": "hospital",
+     "meaning": "lugar para las personas enfermas"
+    },
+    {
+     "word": "multa",
+     "meaning": "dinero que pagas por romper una regla"
+    },
+    {
+     "word": "juntar",
+     "meaning": "poner en un solo lugar"
+    }
+   ]
+  },
+  {
+   "id": "maquillaje",
+   "title": "Base para las ojeras",
+   "place": "La sala de maquillaje",
+   "context": "A las cuatro de la mañana, Paty maquilla a Sofi en la sala de maquillaje.",
+   "speakers": [
+    {
+     "name": "Paty",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Sofi",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Paty, tengo unas ojeras enormes. Parezco un oso panda."
+    },
+    {
+     "s": 0,
+     "text": "Tranquila. Un poco de base, un poco de color y pareces dormida de ocho horas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y aquí el turno es siempre de noche?"
+    },
+    {
+     "s": 0,
+     "text": "Aquí, sí. Y los domingos maquillo en una funeraria."
+    },
+    {
+     "s": 1,
+     "text": "¡No! ¿A los muertos?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Son mis mejores clientes: no se quejan y no se mueven."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué animal se parece Sofi, según ella?",
+     "options": [
+      "A un gato",
+      "A un búho",
+      "A un oso panda"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas horas parece dormida Sofi después del maquillaje?",
+     "options": [
+      "Cuatro",
+      "Ocho",
+      "Doce"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde trabaja Paty los domingos?",
+     "options": [
+      "En un hotel",
+      "En un hospital",
+      "En una funeraria"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué son buenos clientes los muertos?",
+     "options": [
+      "No se quejan y no se mueven",
+      "Pagan bien",
+      "Llegan temprano"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué oficio extraño te gustaría probar una semana?",
+     "model": "Me gustaría probar camas en un hotel."
+    },
+    {
+     "q": "¿Qué haces para parecer descansado o descansada?",
+     "model": "Me lavo la cara con agua fría."
+    },
+    {
+     "q": "¿Qué te parece el humor sobre la muerte?",
+     "model": "Me parece bien si es con respeto."
+    }
+   ],
+   "gaps": "Tranquila. Un poco de [base], un poco de [color] y pareces [dormida] de ocho [horas].",
+   "glossary": [
+    {
+     "word": "ojeras",
+     "meaning": "manchas oscuras debajo de los ojos"
+    },
+    {
+     "word": "base",
+     "meaning": "crema de color para la cara"
+    },
+    {
+     "word": "funeraria",
+     "meaning": "empresa que prepara a los muertos"
+    }
+   ]
+  },
+  {
+   "id": "secreto",
+   "title": "Un apellido prestado",
+   "place": "La lavandería",
+   "context": "Lucía y Brenda doblan ropa en la lavandería. Lucía cuenta un secreto.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Brenda",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Brenda, mi apellido no es Montalbán. Es el apellido de mi abuela."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cuál es tu apellido de verdad?"
+    },
+    {
+     "s": 0,
+     "text": "El mismo que el del presentador. Es mi papá."
+    },
+    {
+     "s": 1,
+     "text": "¡No! ¿Él lo sabe?"
+    },
+    {
+     "s": 0,
+     "text": "No. Hace cinco años que no hablamos. Entré en el programa para verlo los domingos en la gala."
+    },
+    {
+     "s": 1,
+     "text": "Qué historia tan triste… y tan buena para la tele."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De quién es el apellido Montalbán?",
+     "options": [
+      "De su abuela",
+      "De su madre",
+      "De una actriz"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién es el papá de Lucía?",
+     "options": [
+      "El presentador",
+      "La Voz",
+      "El director del canal"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años hace que no hablan?",
+     "options": [
+      "Quince",
+      "Cinco",
+      "Dos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué entró Lucía en el programa?",
+     "options": [
+      "Para ganar dinero",
+      "Para ser actriz",
+      "Para ver a su papá en la gala"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué secreto de familia sale en muchas películas?",
+     "model": "Sale mucho el hermano que nadie conocía."
+    },
+    {
+     "q": "¿Qué apellido de tu familia te gusta más?",
+     "model": "Me gusta el apellido de mi madre, porque es raro."
+    },
+    {
+     "q": "¿Qué harías para ver a una persona querida?",
+     "model": "Viajaría muchas horas en autobús."
+    }
+   ],
+   "gaps": "No. Hace cinco años que no [hablamos]. Entré en el [programa] para verlo los [domingos] en la [gala].",
+   "glossary": [
+    {
+     "word": "presentador",
+     "meaning": "persona que conduce un programa"
+    },
+    {
+     "word": "apellido",
+     "meaning": "nombre de la familia"
+    },
+    {
+     "word": "gala",
+     "meaning": "programa especial en directo"
+    }
+   ]
+  },
+  {
+   "id": "veredicto",
+   "title": "El último amanecer",
+   "place": "El confesionario",
+   "context": "A las seis y cuarto, La Voz, Marga y Chelo reciben una noticia en el confesionario.",
+   "speakers": [
+    {
+     "name": "La Voz",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Marga",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Chelo",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 2,
+     "text": "Tengo un mensaje del director. Lo leo: «Esta es la última noche de La casa»."
+    },
+    {
+     "s": 1,
+     "text": "¿La última? ¿Cancelan el programa?"
+    },
+    {
+     "s": 2,
+     "text": "Sí. La audiencia baja desde hace meses."
+    },
+    {
+     "s": 0,
+     "text": "Siete años de preguntas… y termina así, con un correo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y los concursantes?"
+    },
+    {
+     "s": 0,
+     "text": "Hoy salen todos. Por la puerta grande. Y yo, por fin, voy a salir con mi cara."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién manda el mensaje?",
+     "options": [
+      "El público",
+      "El patrocinador",
+      "El director"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pasa con el programa?",
+     "options": [
+      "Lo cancelan",
+      "Cambia de hora",
+      "Empieza una temporada nueva"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué lo cancelan?",
+     "options": [
+      "Porque la audiencia baja",
+      "Porque no hay dinero para la casa",
+      "Porque La Voz se va"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo va a salir La Voz?",
+     "options": [
+      "Con una máscara",
+      "Con su cara",
+      "Por la puerta roja"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo te despides de un lugar que quieres?",
+     "model": "Hago una foto y doy una vuelta despacio."
+    },
+    {
+     "q": "¿Qué programa de televisión querías ver siempre de pequeño o pequeña?",
+     "model": "Quería ver siempre los dibujos de la tarde."
+    },
+    {
+     "q": "¿Qué noticia importante recibiste por correo o mensaje?",
+     "model": "Me llegó por correo mi primer trabajo."
+    }
+   ],
+   "gaps": "Siete años de [preguntas]… y termina así, con un [correo]. ¿Y los concursantes? Hoy salen [todos]. Por la puerta [grande].",
+   "glossary": [
+    {
+     "word": "cancelan",
+     "meaning": "terminan algo antes de lo previsto"
+    },
+    {
+     "word": "correo",
+     "meaning": "mensaje por internet"
+    },
+    {
+     "word": "por fin",
+     "meaning": "después de mucho tiempo"
+    }
+   ]
+  }
+ ]
+}

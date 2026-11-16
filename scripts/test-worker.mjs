@@ -24,6 +24,7 @@ try{
  await run(['--test','tests/el-consorcio.test.mjs']);
  await run(['--test','tests/la-boda.test.mjs']);
  await run(['--test','tests/hr-crisis.test.mjs']);
+ await run(['--test','tests/la-casa-del-reality.test.mjs']);
  await run(['--test','tests/el-tren-de-las-2340.test.mjs']);
  await run(['--test','tests/el-mundo-en-blanco.test.mjs']);
  await run(['--test','tests/ultimo-crucero.test.mjs']);

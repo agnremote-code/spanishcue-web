@@ -22,6 +22,7 @@ const masAlla = await import('../app/mas-alla/layout.mjs');
 const vuelo = await import('../app/vuelo-cancelado/layout.mjs');
 const consorcio = await import('../app/el-consorcio/layout.mjs');
 const boda = await import('../app/la-boda/layout.mjs');
+const reality = await import('../app/la-casa-del-reality/layout.mjs');
 const tren = await import('../app/el-tren-de-las-2340/layout.mjs');
 const papel = await import('../app/el-mundo-en-blanco/layout.mjs');
 const hr = await import('../app/hr-crisis/oficina.mjs');
@@ -228,6 +229,20 @@ function bodaWorld() {
   };
 }
 
+// La casa: the reality-show house and its garden: the people of the 18
+// circles (La Voz has no body: he is the confessional camera), the 17
+// housemates who talk, the others around them and the two who cannot sleep.
+function realityWorld() {
+  const scenePeople = reality.SCENES.filter(s => !s.voice).flatMap(s => [s.npc, ...(s.extras ?? [])].map((p, i) => ({ id: s.id, x: p.x, z: p.z, y: p.y ?? 0, seated: Boolean(p.seat || /sit|lie|sleep/.test(p.pose ?? (i === 0 ? s.pose : '') ?? '')), lying: Boolean(p.lying) })));
+  const house = (list, tag) => list.map((c, i) => ({ id: `${tag}-${i}`, x: c.x, z: c.z, y: c.y ?? 0, seated: Boolean(c.seat || /sit|lie|sleep/.test(c.pose)), lying: /lie|ground/.test(c.pose) }));
+  return {
+    id: 'reality', solids: reality.solidsFor().filter(b => !b.person), bounds: reality.BOUNDS, staticWalkers: true,
+    people: [...scenePeople, ...house(reality.CROWD, 'concursante'), ...house(reality.FILLERS, 'casa')],
+    walkers: reality.WALKERS.map((w, i) => { const pts = []; for (let t = 0; t < 900; t += 0.05) pts.push(reality.walkerAt(w, t)); return { id: `walker-${i}`, points: pts }; }),
+    spots: [{ id: 'spawn', ...reality.SPAWN }, ...reality.SPOTS.map(s => ({ id: s.key, x: s.x, z: s.z }))],
+  };
+}
+
 // HR Crisis: one office floor: the 15 employees with a task, the 13 who work
 // around them (one is the cardboard boss), the courier, the colleague with
 // boxes, the cleaner and the colleague who paces around HR.
@@ -265,7 +280,7 @@ function cruceroWorld() {
     spots: [{ id: 'spawn', ...crucero.SPAWN }, ...crucero.SCENES.map(s => ({ id: s.id, ...s.spot })), ...crucero.LANDMARKS.map(l => ({ id: `charla-${l.id}`, x: l.x, z: l.z }))],
   };
 }
-const WORLDS = [papelWorld(), cruceroWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+const WORLDS = [papelWorld(), cruceroWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), realityWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {

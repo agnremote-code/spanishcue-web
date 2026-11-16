@@ -209,6 +209,17 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // La casa: every housemate or crew member with a problem has a listening at
+  // each level, voiced by the same people who speak in that scene; the red
+  // armchair of the confessional has three. PRO lesson (ID 260).
+  reality: {
+    title: 'La casa',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['entrada', 'confesionario', 'alianza', 'cocina', 'mudo', 'nostalgia', 'espejo', 'romance', 'edad', 'prueba',
+      'patrocinador', 'nominaciones', 'castigo', 'pasillo', 'abandono', 'maquillaje', 'secreto', 'veredicto'],
+    ownListening: true,
+    bilingualA0: true,
+  },
   // El tren de las 23:40: every circle of the night train has its own
   // listening at each level, voiced by the same passengers and crew who
   // speak there. PRO lesson (ID 256).

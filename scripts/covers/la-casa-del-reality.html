@@ -1,0 +1,155 @@
+<!doctype html><html><head><meta charset="utf-8"><title>La casa</title><style>html,body{margin:0;background:#0b0d1e}svg{display:block}</style></head><body>
+<!-- La casa (ID 260): key art for the cover. The reality-show house at night
+     seen from the garden: the lit glass front with housemates inside, the red
+     armchair of the confessional, the glowing pool, cameras everywhere and
+     the mascot walking up the red carpet as the surprise contestant.
+     Open in Chromium at 1600×900 and save the screenshot as
+     scripts/covers/art/la-casa-del-reality.webp; then
+     node scripts/covers/render.mjs mundos la-casa-del-reality -->
+<svg id="c" xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#0a0c24"/><stop offset=".55" stop-color="#2a1f55"/><stop offset="1" stop-color="#5a2f6e"/></linearGradient>
+  <linearGradient id="beam" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#fff6d8" stop-opacity=".55"/><stop offset="1" stop-color="#fff6d8" stop-opacity="0"/></linearGradient>
+  <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd890"/><stop offset="1" stop-color="#f6a65a"/></linearGradient>
+  <linearGradient id="confession" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6a6a"/><stop offset="1" stop-color="#a8122a"/></linearGradient>
+  <linearGradient id="pool" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7ff0ff"/><stop offset=".5" stop-color="#22b6dc"/><stop offset="1" stop-color="#0b6a9c"/></linearGradient>
+  <linearGradient id="carpet" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#b0142a"/><stop offset="1" stop-color="#e2283c"/></linearGradient>
+  <linearGradient id="deck" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#7a5a48"/><stop offset="1" stop-color="#4a3428"/></linearGradient>
+  <linearGradient id="grass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f4a3a"/><stop offset="1" stop-color="#0f2a22"/></linearGradient>
+  <radialGradient id="spot" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff4d0" stop-opacity=".85"/><stop offset="1" stop-color="#fff4d0" stop-opacity="0"/></radialGradient>
+  <radialGradient id="poolglow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#5ae0ff" stop-opacity=".55"/><stop offset="1" stop-color="#5ae0ff" stop-opacity="0"/></radialGradient>
+  <radialGradient id="redglow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff3040" stop-opacity=".6"/><stop offset="1" stop-color="#ff3040" stop-opacity="0"/></radialGradient>
+  <radialGradient id="moon" cx=".4" cy=".4" r=".6"><stop offset="0" stop-color="#fffbe8"/><stop offset="1" stop-color="#e8dcb0"/></radialGradient>
+</defs>
+<g id="scene" stroke="#17142a" stroke-linejoin="round" stroke-linecap="round"></g>
+</svg>
+<script>
+const g = document.getElementById('scene');
+let seed = 11; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const out = [];
+const add = s => out.push(s);
+const R = (x, y, w, h, fill, extra = '') => add(`<rect x="${x}" y="${y}" width="${w}" height="${h}" fill="${fill}" ${extra}/>`);
+const P = (pts, fill, extra = '') => add(`<polygon points="${pts.map(p => p.join(',')).join(' ')}" fill="${fill}" ${extra}/>`);
+
+// Sky, stars, moon, searchlights.
+R(0, 0, 1600, 900, 'url(#sky)', 'stroke="none"');
+for (let i = 0; i < 140; i++) { const x = rnd() * 1600, y = rnd() * 360, r = rnd() * 1.8 + 0.4; add(`<circle cx="${x}" cy="${y}" r="${r}" fill="#fff" opacity="${0.3 + rnd() * 0.6}" stroke="none"/>`); }
+add('<circle cx="1330" cy="110" r="52" fill="url(#moon)" stroke-width="4"/>');
+add('<circle cx="1312" cy="98" r="9" fill="#e2d4a4" stroke="none"/><circle cx="1348" cy="128" r="6" fill="#e2d4a4" stroke="none"/>');
+P([[420, 330], [440, 330], [140, -20], [20, -20]], 'url(#beam)', 'stroke="none"');
+P([[1180, 330], [1200, 330], [1560, -20], [1400, -20]], 'url(#beam)', 'stroke="none"');
+P([[760, 300], [780, 300], [700, -20], [600, -20]], 'url(#beam)', 'stroke="none" opacity=".6"');
+
+// Garden wall and palm trees behind.
+R(0, 560, 1600, 80, '#2a2448', 'stroke="none"');
+const palm = (x, y, s, flip = 1) => {
+  add(`<path d="M${x} ${y} C ${x + 10 * flip} ${y - 120 * s}, ${x + 30 * flip} ${y - 220 * s}, ${x + 40 * flip} ${y - 300 * s}" stroke="#17142a" stroke-width="${18 * s}" fill="none"/>`);
+  add(`<path d="M${x} ${y} C ${x + 10 * flip} ${y - 120 * s}, ${x + 30 * flip} ${y - 220 * s}, ${x + 40 * flip} ${y - 300 * s}" stroke="#4a3a5a" stroke-width="${12 * s}" fill="none"/>`);
+  const tx = x + 40 * flip, ty = y - 300 * s;
+  for (const a of [-160, -125, -90, -55, -20, 15, 200]) {
+    const r = a * Math.PI / 180, L = 120 * s;
+    const ex = tx + Math.cos(r) * L, ey = ty + Math.sin(r) * L * 0.7 + 30 * s;
+    add(`<path d="M${tx} ${ty} Q ${tx + Math.cos(r) * L * 0.5} ${ty + Math.sin(r) * L * 0.5 - 30 * s} ${ex} ${ey} Q ${tx + Math.cos(r) * L * 0.5} ${ty + Math.sin(r) * L * 0.5 - 6 * s} ${tx} ${ty}" fill="#1f5a48" stroke-width="3"/>`);
+  }
+};
+palm(150, 640, 1.05, 1); palm(250, 650, 0.8, -1); palm(1440, 640, 1.1, -1); palm(1350, 655, 0.75, 1);
+
+// The house.
+P([[200, 300], [1400, 300], [1400, 640], [200, 640]], '#ece6dc', 'stroke-width="5"');
+R(180, 280, 1240, 26, '#d8d0c4', 'stroke-width="5"');
+// Rooftop: spotlights and a camera.
+for (const x of [260, 520, 1080, 1340]) { add(`<rect x="${x - 14}" y="258" width="28" height="22" rx="4" fill="#2a2a34" stroke-width="3"/><circle cx="${x}" cy="262" r="7" fill="#fff4c8" stroke-width="2"/>`); }
+add('<g transform="translate(800 254)"><rect x="-34" y="-22" width="60" height="34" rx="6" fill="#2a2a34" stroke-width="4"/><rect x="26" y="-14" width="22" height="18" rx="3" fill="#3a3a48" stroke-width="3"/><circle cx="-20" cy="-8" r="5" fill="#ff2a3a" stroke="none"/><rect x="-6" y="12" width="10" height="16" fill="#2a2a34" stroke-width="3"/></g>');
+
+// Lit glass front with housemates inside.
+const panes = [[230, 330, 250, 240], [500, 330, 250, 240], [850, 330, 250, 240]];
+for (const [x, y, w, h] of panes) {
+  R(x, y, w, h, 'url(#glass)', 'stroke-width="5"');
+  add(`<line x1="${x + w / 2}" y1="${y}" x2="${x + w / 2}" y2="${y + h}" stroke-width="4"/>`);
+}
+// Living room: sofa and housemates.
+R(250, 500, 210, 46, '#3a6a8a', 'rx="12" stroke-width="4"'); R(250, 476, 210, 34, '#2e5a78', 'rx="10" stroke-width="4"');
+const person = (x, y, s, body, hair, skin = '#e8b890', arms = 'down') => {
+  add(`<path d="M${x - 22 * s} ${y + 70 * s} Q ${x - 24 * s} ${y + 10 * s} ${x} ${y + 8 * s} Q ${x + 24 * s} ${y + 10 * s} ${x + 22 * s} ${y + 70 * s} Z" fill="${body}" stroke-width="4"/>`);
+  if (arms === 'up') add(`<path d="M${x - 18 * s} ${y + 22 * s} L ${x - 40 * s} ${y - 18 * s}" stroke="${body}" stroke-width="${11 * s}"/><path d="M${x + 18 * s} ${y + 22 * s} L ${x + 40 * s} ${y - 18 * s}" stroke="${body}" stroke-width="${11 * s}"/>`);
+  if (arms === 'point') add(`<path d="M${x + 18 * s} ${y + 22 * s} L ${x + 52 * s} ${y + 14 * s}" stroke="${body}" stroke-width="${11 * s}"/>`);
+  add(`<circle cx="${x}" cy="${y - 8 * s}" r="${17 * s}" fill="${skin}" stroke-width="4"/>`);
+  add(`<path d="M${x - 17 * s} ${y - 10 * s} Q ${x} ${y - 36 * s} ${x + 17 * s} ${y - 10 * s} Q ${x} ${y - 20 * s} ${x - 17 * s} ${y - 10 * s}" fill="${hair}" stroke-width="3"/>`);
+};
+person(300, 440, 1, '#e2405a', '#3a2416', '#d8a07a', 'up');
+person(370, 446, 0.95, '#f2c230', '#141418', '#8a5a3a');
+person(430, 440, 1, '#6a4ab8', '#c8a050', '#f0c8a0', 'point');
+// Kitchen: two housemates whispering, a third with a frying pan.
+R(510, 500, 230, 70, '#c8ccd4', 'stroke-width="4"');
+person(560, 438, 1, '#2aa878', '#5a2a16', '#c88a64');
+person(608, 442, 0.95, '#f07a3a', '#e8d080', '#f2d0b0');
+person(690, 436, 1, '#3a4a8a', '#2a1a10', '#b07850', 'up');
+add('<g transform="translate(722 400) rotate(-30)"><ellipse cx="0" cy="0" rx="22" ry="12" fill="#2a2a30" stroke-width="3"/><rect x="18" y="-4" width="34" height="8" fill="#2a2a30" stroke-width="3"/></g>');
+// Dining: a housemate staring at a camera on the wall.
+add('<g transform="translate(1062 352)"><rect x="-22" y="-14" width="40" height="26" rx="5" fill="#2a2a34" stroke-width="3"/><circle cx="-10" cy="-4" r="4" fill="#ff2a3a" stroke="none"/></g>');
+person(960, 444, 1, '#14141a', '#e0e0e0', '#e8b890');
+person(1030, 450, 0.9, '#ff7ab0', '#7a2a1a', '#d8a07a', 'up');
+R(880, 520, 200, 20, '#8a6a50', 'stroke-width="4"');
+// The confessional: red room, red armchair, one camera.
+R(1130, 330, 230, 240, 'url(#confession)', 'stroke-width="5"');
+add('<g transform="translate(1245 470)"><path d="M-70 70 L-70 -10 Q -70 -60 -40 -60 L 40 -60 Q 70 -60 70 -10 L 70 70 Z" fill="#d81e30" stroke-width="5"/><rect x="-88" y="0" width="34" height="74" rx="14" fill="#c01628" stroke-width="5"/><rect x="54" y="0" width="34" height="74" rx="14" fill="#c01628" stroke-width="5"/><rect x="-56" y="24" width="112" height="34" rx="10" fill="#e8283a" stroke-width="4"/><path d="M-40 -46 Q 0 -30 40 -46" fill="none" stroke="#9a0e1e" stroke-width="4"/></g>');
+add('<g transform="translate(1180 360)"><rect x="-18" y="-10" width="34" height="22" rx="4" fill="#1e1e26" stroke-width="3"/><circle cx="-8" cy="-2" r="4" fill="#ff4a5a" stroke="none"/></g>');
+add('<circle cx="1245" cy="450" r="170" fill="url(#redglow)" stroke="none"/>');
+// The door, where the carpet ends.
+R(760, 400, 70, 240, '#2a2438', 'stroke-width="5"'); R(770, 410, 50, 220, '#ffcf7a', 'stroke-width="3"');
+add('<circle cx="795" cy="420" r="70" fill="url(#spot)" stroke="none"/>');
+
+// Ground: grass, deck, red carpet, pool.
+P([[0, 640], [1600, 640], [1600, 900], [0, 900]], 'url(#grass)', 'stroke="none"');
+P([[120, 660], [1480, 660], [1600, 900], [0, 900]], 'url(#deck)', 'stroke-width="4"');
+for (let i = 1; i < 9; i++) { const y = 660 + i * 30; const k = (y - 660) / 240; add(`<line x1="${120 - 120 * k}" y1="${y}" x2="${1480 + 120 * k}" y2="${y}" stroke="#3a2a20" stroke-width="2" opacity=".6"/>`); }
+// Pool (left of the carpet) with glow and ripples.
+add('<ellipse cx="420" cy="770" rx="380" ry="120" fill="url(#poolglow)" stroke="none"/>');
+P([[180, 700], [640, 700], [700, 860], [80, 860]], 'url(#pool)', 'stroke-width="6"');
+for (let i = 0; i < 9; i++) { const x = 160 + rnd() * 460, y = 720 + rnd() * 120; add(`<path d="M${x} ${y} q 14 -8 28 0 t 28 0" fill="none" stroke="#d8fbff" stroke-width="3" opacity=".8"/>`); }
+// An inflatable flamingo, because it is a reality show.
+add('<g transform="translate(330 770)"><ellipse cx="0" cy="10" rx="56" ry="22" fill="#ff8ab4" stroke-width="4"/><path d="M30 6 Q 46 -40 30 -60 Q 20 -72 8 -62" fill="none" stroke="#17142a" stroke-width="16"/><path d="M30 6 Q 46 -40 30 -60 Q 20 -72 8 -62" fill="none" stroke="#ff8ab4" stroke-width="10"/><path d="M8 -62 L -6 -56 L 6 -52 Z" fill="#17142a" stroke-width="2"/></g>');
+// Loungers on the right.
+for (const x of [1150, 1320]) add(`<g transform="translate(${x} 760)"><path d="M-70 20 L 50 20 L 80 -24" fill="none" stroke="#17142a" stroke-width="14"/><path d="M-70 20 L 50 20 L 80 -24" fill="none" stroke="#f4f4f2" stroke-width="8"/><line x1="-60" y1="22" x2="-60" y2="50" stroke-width="5"/><line x1="40" y1="22" x2="40" y2="50" stroke-width="5"/><rect x="-66" y="6" width="110" height="10" rx="4" fill="#2a9ad8" stroke-width="3"/></g>`);
+// The red carpet from the bottom to the door.
+P([[770, 640], [820, 640], [1010, 900], [600, 900]], 'url(#carpet)', 'stroke-width="5"');
+add('<ellipse cx="795" cy="770" rx="150" ry="70" fill="url(#spot)" stroke="none"/>');
+
+// Studio camera on a tripod, left of the carpet, REC on.
+add(`<g transform="translate(560 690)">
+  <line x1="0" y1="40" x2="-40" y2="150" stroke-width="7"/><line x1="0" y1="40" x2="40" y2="150" stroke-width="7"/><line x1="0" y1="40" x2="0" y2="150" stroke-width="7"/>
+  <rect x="-54" y="-20" width="96" height="58" rx="8" fill="#2a2a34" stroke-width="5"/>
+  <rect x="42" y="-8" width="40" height="36" rx="6" fill="#3a3a48" stroke-width="4"/><circle cx="82" cy="10" r="12" fill="#1a3a5a" stroke-width="3"/>
+  <rect x="-40" y="-40" width="44" height="20" rx="4" fill="#3a3a48" stroke-width="3"/>
+  <circle cx="-38" cy="-2" r="7" fill="#ff2a3a" stroke="none"/>
+</g>`);
+// Boom microphone over the carpet from the right.
+add('<line x1="1120" y1="900" x2="1050" y2="560" stroke-width="7"/><line x1="1050" y1="560" x2="880" y2="520" stroke-width="7"/><rect x="840" y="508" width="56" height="26" rx="12" fill="#5a5a66" stroke-width="4"/>');
+
+// The mascot: young teacher in black, giant pencil, walking up the carpet.
+add(`<g transform="translate(800 770)">
+  <ellipse cx="0" cy="88" rx="56" ry="12" fill="#000" opacity=".35" stroke="none"/>
+  <path d="M-22 40 L -30 86 L -10 86 L -4 44 Z" fill="#141418" stroke-width="4"/>
+  <path d="M22 40 L 34 82 L 14 86 L 4 44 Z" fill="#141418" stroke-width="4"/>
+  <rect x="-36" y="82" width="28" height="12" rx="5" fill="#f4f4f2" stroke-width="3"/><rect x="12" y="80" width="28" height="12" rx="5" fill="#f4f4f2" stroke-width="3"/>
+  <path d="M-34 44 Q -40 -28 0 -32 Q 40 -28 34 44 Z" fill="#1a1a20" stroke-width="5"/>
+  <path d="M-30 -10 L -58 -64" stroke="#17142a" stroke-width="20"/><path d="M-30 -10 L -58 -64" stroke="#1a1a20" stroke-width="13"/>
+  <circle cx="-60" cy="-68" r="10" fill="#e8b890" stroke-width="4"/>
+  <path d="M30 -8 L 52 30" stroke="#17142a" stroke-width="20"/><path d="M30 -8 L 52 30" stroke="#1a1a20" stroke-width="13"/>
+  <g transform="translate(56 34) rotate(-28)"><rect x="-9" y="-120" width="18" height="124" fill="#f4c430" stroke-width="4"/><rect x="-9" y="-136" width="18" height="18" rx="3" fill="#f08aa0" stroke-width="4"/><rect x="-9" y="-122" width="18" height="6" fill="#c8c8d0" stroke-width="2"/><path d="M-9 4 L 0 26 L 9 4 Z" fill="#f2d8b0" stroke-width="4"/><path d="M-3 18 L 0 26 L 3 18 Z" fill="#17142a" stroke="none"/></g>
+  <circle cx="54" cy="32" r="10" fill="#e8b890" stroke-width="4"/>
+  <circle cx="0" cy="-56" r="30" fill="#e8b890" stroke-width="5"/>
+  <path d="M-31 -60 Q -30 -96 4 -94 Q 34 -92 30 -60 Q 22 -76 0 -74 Q -18 -74 -31 -60 Z" fill="#2a1a12" stroke-width="4"/>
+  <circle cx="-10" cy="-54" r="3.5" fill="#17142a" stroke="none"/><circle cx="12" cy="-54" r="3.5" fill="#17142a" stroke="none"/>
+  <path d="M-10 -40 Q 1 -32 12 -40" fill="none" stroke-width="3.5"/>
+  <path d="M-30 -60 Q -36 -48 -26 -44" fill="none" stroke-width="3"/><circle cx="-30" cy="-48" r="4" fill="#3a3a48" stroke-width="2"/>
+</g>`);
+
+// Confetti falling over the entrance.
+const colours = ['#ff3a5a', '#f2c230', '#5ae0ff', '#ffffff', '#9a6aff', '#3ad08a'];
+for (let i = 0; i < 90; i++) { const x = 480 + rnd() * 640, y = 300 + rnd() * 420, a = rnd() * 180; add(`<rect x="${x}" y="${y}" width="${6 + rnd() * 6}" height="${3 + rnd() * 3}" fill="${colours[i % colours.length]}" transform="rotate(${a} ${x} ${y})" stroke="none"/>`); }
+
+g.innerHTML = out.join('\n');
+document.title = 'ready';
+</script>
+</body></html>

@@ -2320,10 +2320,6 @@
     },
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
-      "text": "Where do you keep important things?"
-    },
-    {
-      "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "the bar"
     },
     {
@@ -3589,6 +3585,10 @@
     {
       "path": "app/ultimo-crucero/levels/a0.mjs",
       "text": "How do you feel today, at the end of the night?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Where do you keep your special photos?"
     }
   ]
 }

@@ -4831,6 +4831,636 @@
    "seconds": 91.78,
    "src": "/audio/escucha-3d/papel-c2-muelle.mp3"
   },
+  "reality/a0-abandono": {
+   "hash": "93a88043b9dc3d21168e",
+   "seconds": 24.21,
+   "src": "/audio/escucha-3d/reality-a0-abandono.mp3"
+  },
+  "reality/a0-alianza": {
+   "hash": "e4e32e647b9839393dd3",
+   "seconds": 28.41,
+   "src": "/audio/escucha-3d/reality-a0-alianza.mp3"
+  },
+  "reality/a0-castigo": {
+   "hash": "a73f1a3bf7d3c59bdeff",
+   "seconds": 20.18,
+   "src": "/audio/escucha-3d/reality-a0-castigo.mp3"
+  },
+  "reality/a0-cocina": {
+   "hash": "9eda6a34c6dadc1ebd8b",
+   "seconds": 26.06,
+   "src": "/audio/escucha-3d/reality-a0-cocina.mp3"
+  },
+  "reality/a0-confesionario": {
+   "hash": "e901a7481340f9064996",
+   "seconds": 31.82,
+   "src": "/audio/escucha-3d/reality-a0-confesionario.mp3"
+  },
+  "reality/a0-edad": {
+   "hash": "6f66c80443d37ecb1d46",
+   "seconds": 26.23,
+   "src": "/audio/escucha-3d/reality-a0-edad.mp3"
+  },
+  "reality/a0-entrada": {
+   "hash": "78f34d02262501dbc868",
+   "seconds": 28.72,
+   "src": "/audio/escucha-3d/reality-a0-entrada.mp3"
+  },
+  "reality/a0-espejo": {
+   "hash": "8798cff97c99d949df3a",
+   "seconds": 25.08,
+   "src": "/audio/escucha-3d/reality-a0-espejo.mp3"
+  },
+  "reality/a0-maquillaje": {
+   "hash": "a52ff6db2b869f8874f7",
+   "seconds": 21.12,
+   "src": "/audio/escucha-3d/reality-a0-maquillaje.mp3"
+  },
+  "reality/a0-mudo": {
+   "hash": "54290075ac52891a3c08",
+   "seconds": 24.43,
+   "src": "/audio/escucha-3d/reality-a0-mudo.mp3"
+  },
+  "reality/a0-nominaciones": {
+   "hash": "aa1cfb322badfe6b8d42",
+   "seconds": 22.56,
+   "src": "/audio/escucha-3d/reality-a0-nominaciones.mp3"
+  },
+  "reality/a0-nostalgia": {
+   "hash": "077d05a807ff39522ce8",
+   "seconds": 23.54,
+   "src": "/audio/escucha-3d/reality-a0-nostalgia.mp3"
+  },
+  "reality/a0-pasillo": {
+   "hash": "3d48977e2044571c28b4",
+   "seconds": 23.83,
+   "src": "/audio/escucha-3d/reality-a0-pasillo.mp3"
+  },
+  "reality/a0-patrocinador": {
+   "hash": "406f9869384b2f91b665",
+   "seconds": 25.51,
+   "src": "/audio/escucha-3d/reality-a0-patrocinador.mp3"
+  },
+  "reality/a0-prueba": {
+   "hash": "2353500f8bb99e7cf21f",
+   "seconds": 23.95,
+   "src": "/audio/escucha-3d/reality-a0-prueba.mp3"
+  },
+  "reality/a0-romance": {
+   "hash": "c59fb9c5f775ed794f51",
+   "seconds": 19.89,
+   "src": "/audio/escucha-3d/reality-a0-romance.mp3"
+  },
+  "reality/a0-secreto": {
+   "hash": "e55204fd99817c7bd6ca",
+   "seconds": 21.91,
+   "src": "/audio/escucha-3d/reality-a0-secreto.mp3"
+  },
+  "reality/a0-veredicto": {
+   "hash": "2948e583c3eb416f5f32",
+   "seconds": 25.41,
+   "src": "/audio/escucha-3d/reality-a0-veredicto.mp3"
+  },
+  "reality/a1-abandono": {
+   "hash": "3dc3cbf915a9cc0db1ef",
+   "seconds": 40.51,
+   "src": "/audio/escucha-3d/reality-a1-abandono.mp3"
+  },
+  "reality/a1-alianza": {
+   "hash": "69aa5c27da4a76ab3469",
+   "seconds": 41.28,
+   "src": "/audio/escucha-3d/reality-a1-alianza.mp3"
+  },
+  "reality/a1-castigo": {
+   "hash": "c00149b5edd7f73bbbb4",
+   "seconds": 35.57,
+   "src": "/audio/escucha-3d/reality-a1-castigo.mp3"
+  },
+  "reality/a1-cocina": {
+   "hash": "6433763487d0db1b3d25",
+   "seconds": 41.86,
+   "src": "/audio/escucha-3d/reality-a1-cocina.mp3"
+  },
+  "reality/a1-confesionario": {
+   "hash": "642b977d06209e36c8ed",
+   "seconds": 40.56,
+   "src": "/audio/escucha-3d/reality-a1-confesionario.mp3"
+  },
+  "reality/a1-edad": {
+   "hash": "e9b7bbcd50fc4693831c",
+   "seconds": 47.52,
+   "src": "/audio/escucha-3d/reality-a1-edad.mp3"
+  },
+  "reality/a1-entrada": {
+   "hash": "a589b060373e5cf790cb",
+   "seconds": 43.76,
+   "src": "/audio/escucha-3d/reality-a1-entrada.mp3"
+  },
+  "reality/a1-espejo": {
+   "hash": "33432838e6ae63e117da",
+   "seconds": 37.34,
+   "src": "/audio/escucha-3d/reality-a1-espejo.mp3"
+  },
+  "reality/a1-maquillaje": {
+   "hash": "c949aaf2aaaa1576e619",
+   "seconds": 32.21,
+   "src": "/audio/escucha-3d/reality-a1-maquillaje.mp3"
+  },
+  "reality/a1-mudo": {
+   "hash": "56ac70fa8ddd64b84ea7",
+   "seconds": 38.54,
+   "src": "/audio/escucha-3d/reality-a1-mudo.mp3"
+  },
+  "reality/a1-nominaciones": {
+   "hash": "9addc6eac8703ddc49cf",
+   "seconds": 39.91,
+   "src": "/audio/escucha-3d/reality-a1-nominaciones.mp3"
+  },
+  "reality/a1-nostalgia": {
+   "hash": "658b7d31efeab1a53084",
+   "seconds": 38.21,
+   "src": "/audio/escucha-3d/reality-a1-nostalgia.mp3"
+  },
+  "reality/a1-pasillo": {
+   "hash": "096e4da3e3ec2b5019ed",
+   "seconds": 36.5,
+   "src": "/audio/escucha-3d/reality-a1-pasillo.mp3"
+  },
+  "reality/a1-patrocinador": {
+   "hash": "b420611f296f82878480",
+   "seconds": 36.62,
+   "src": "/audio/escucha-3d/reality-a1-patrocinador.mp3"
+  },
+  "reality/a1-prueba": {
+   "hash": "e21e252d728e0d20011a",
+   "seconds": 38.55,
+   "src": "/audio/escucha-3d/reality-a1-prueba.mp3"
+  },
+  "reality/a1-romance": {
+   "hash": "bb59cb712c5e01209550",
+   "seconds": 39.38,
+   "src": "/audio/escucha-3d/reality-a1-romance.mp3"
+  },
+  "reality/a1-secreto": {
+   "hash": "a8f6966505da51fec261",
+   "seconds": 31.15,
+   "src": "/audio/escucha-3d/reality-a1-secreto.mp3"
+  },
+  "reality/a1-veredicto": {
+   "hash": "3acd56b07afc66e234af",
+   "seconds": 36.94,
+   "src": "/audio/escucha-3d/reality-a1-veredicto.mp3"
+  },
+  "reality/a2-abandono": {
+   "hash": "94c720134c53342d76ed",
+   "seconds": 56.6,
+   "src": "/audio/escucha-3d/reality-a2-abandono.mp3"
+  },
+  "reality/a2-alianza": {
+   "hash": "f4fddf1cb04eafe8ff0d",
+   "seconds": 48.54,
+   "src": "/audio/escucha-3d/reality-a2-alianza.mp3"
+  },
+  "reality/a2-castigo": {
+   "hash": "c92565cba2559f3424df",
+   "seconds": 43.98,
+   "src": "/audio/escucha-3d/reality-a2-castigo.mp3"
+  },
+  "reality/a2-cocina": {
+   "hash": "7b852d2188f0d55423de",
+   "seconds": 49.89,
+   "src": "/audio/escucha-3d/reality-a2-cocina.mp3"
+  },
+  "reality/a2-confesionario": {
+   "hash": "44f9afcc77df004fe935",
+   "seconds": 46.68,
+   "src": "/audio/escucha-3d/reality-a2-confesionario.mp3"
+  },
+  "reality/a2-edad": {
+   "hash": "4088ac75252f0ee10587",
+   "seconds": 61.65,
+   "src": "/audio/escucha-3d/reality-a2-edad.mp3"
+  },
+  "reality/a2-entrada": {
+   "hash": "f77e737e359f0adc3db6",
+   "seconds": 50.21,
+   "src": "/audio/escucha-3d/reality-a2-entrada.mp3"
+  },
+  "reality/a2-espejo": {
+   "hash": "1b919360f7e6f28d238e",
+   "seconds": 51.85,
+   "src": "/audio/escucha-3d/reality-a2-espejo.mp3"
+  },
+  "reality/a2-maquillaje": {
+   "hash": "0eaba2b9feafa514b889",
+   "seconds": 47.51,
+   "src": "/audio/escucha-3d/reality-a2-maquillaje.mp3"
+  },
+  "reality/a2-mudo": {
+   "hash": "20c137671348f1164451",
+   "seconds": 54.54,
+   "src": "/audio/escucha-3d/reality-a2-mudo.mp3"
+  },
+  "reality/a2-nominaciones": {
+   "hash": "39a68782a48433475aab",
+   "seconds": 55.69,
+   "src": "/audio/escucha-3d/reality-a2-nominaciones.mp3"
+  },
+  "reality/a2-nostalgia": {
+   "hash": "a5debe3f6efd3a603279",
+   "seconds": 41.88,
+   "src": "/audio/escucha-3d/reality-a2-nostalgia.mp3"
+  },
+  "reality/a2-pasillo": {
+   "hash": "060be00f15102d354dbf",
+   "seconds": 45.23,
+   "src": "/audio/escucha-3d/reality-a2-pasillo.mp3"
+  },
+  "reality/a2-patrocinador": {
+   "hash": "a3ea18557be7fe953913",
+   "seconds": 54.45,
+   "src": "/audio/escucha-3d/reality-a2-patrocinador.mp3"
+  },
+  "reality/a2-prueba": {
+   "hash": "390dbf7373ec1e41b342",
+   "seconds": 48.3,
+   "src": "/audio/escucha-3d/reality-a2-prueba.mp3"
+  },
+  "reality/a2-romance": {
+   "hash": "66c87ae24758b35cba9e",
+   "seconds": 50.75,
+   "src": "/audio/escucha-3d/reality-a2-romance.mp3"
+  },
+  "reality/a2-secreto": {
+   "hash": "a235b5ab10971dfb0362",
+   "seconds": 45.54,
+   "src": "/audio/escucha-3d/reality-a2-secreto.mp3"
+  },
+  "reality/a2-veredicto": {
+   "hash": "aec55a2ca406b1824a4b",
+   "seconds": 58.14,
+   "src": "/audio/escucha-3d/reality-a2-veredicto.mp3"
+  },
+  "reality/b1-abandono": {
+   "hash": "994a708f8285767d23a8",
+   "seconds": 58.21,
+   "src": "/audio/escucha-3d/reality-b1-abandono.mp3"
+  },
+  "reality/b1-alianza": {
+   "hash": "e207cd5dae18c3c6ca7b",
+   "seconds": 65.03,
+   "src": "/audio/escucha-3d/reality-b1-alianza.mp3"
+  },
+  "reality/b1-castigo": {
+   "hash": "f1917e4eb5759eed36ee",
+   "seconds": 52.67,
+   "src": "/audio/escucha-3d/reality-b1-castigo.mp3"
+  },
+  "reality/b1-cocina": {
+   "hash": "635c641055c2ccc71305",
+   "seconds": 60.78,
+   "src": "/audio/escucha-3d/reality-b1-cocina.mp3"
+  },
+  "reality/b1-confesionario": {
+   "hash": "af3ceaa83fd831e8197c",
+   "seconds": 63.66,
+   "src": "/audio/escucha-3d/reality-b1-confesionario.mp3"
+  },
+  "reality/b1-edad": {
+   "hash": "44be5e7d46bf67511280",
+   "seconds": 65.94,
+   "src": "/audio/escucha-3d/reality-b1-edad.mp3"
+  },
+  "reality/b1-entrada": {
+   "hash": "cff742180183216df88e",
+   "seconds": 60.75,
+   "src": "/audio/escucha-3d/reality-b1-entrada.mp3"
+  },
+  "reality/b1-espejo": {
+   "hash": "035be9fcc5cb9246c93c",
+   "seconds": 64.59,
+   "src": "/audio/escucha-3d/reality-b1-espejo.mp3"
+  },
+  "reality/b1-maquillaje": {
+   "hash": "d24a3d69d46517d1aaf1",
+   "seconds": 60.3,
+   "src": "/audio/escucha-3d/reality-b1-maquillaje.mp3"
+  },
+  "reality/b1-mudo": {
+   "hash": "582b1f020afc06b0e995",
+   "seconds": 58.76,
+   "src": "/audio/escucha-3d/reality-b1-mudo.mp3"
+  },
+  "reality/b1-nominaciones": {
+   "hash": "627cd7920721f1aaac53",
+   "seconds": 58.19,
+   "src": "/audio/escucha-3d/reality-b1-nominaciones.mp3"
+  },
+  "reality/b1-nostalgia": {
+   "hash": "4344c2e49243973f1f4a",
+   "seconds": 51.8,
+   "src": "/audio/escucha-3d/reality-b1-nostalgia.mp3"
+  },
+  "reality/b1-pasillo": {
+   "hash": "d63650504adb441f41ac",
+   "seconds": 46.86,
+   "src": "/audio/escucha-3d/reality-b1-pasillo.mp3"
+  },
+  "reality/b1-patrocinador": {
+   "hash": "1c875f69c55c80ecce73",
+   "seconds": 61.62,
+   "src": "/audio/escucha-3d/reality-b1-patrocinador.mp3"
+  },
+  "reality/b1-prueba": {
+   "hash": "78b0bac8ce91f649c118",
+   "seconds": 63.9,
+   "src": "/audio/escucha-3d/reality-b1-prueba.mp3"
+  },
+  "reality/b1-romance": {
+   "hash": "8ca66a989c4844707dd7",
+   "seconds": 61.69,
+   "src": "/audio/escucha-3d/reality-b1-romance.mp3"
+  },
+  "reality/b1-secreto": {
+   "hash": "c03db31bab5ad0132256",
+   "seconds": 57.61,
+   "src": "/audio/escucha-3d/reality-b1-secreto.mp3"
+  },
+  "reality/b1-veredicto": {
+   "hash": "74d090925c8a63f4c299",
+   "seconds": 57.51,
+   "src": "/audio/escucha-3d/reality-b1-veredicto.mp3"
+  },
+  "reality/b2-abandono": {
+   "hash": "204d3a7f05d6e114ae89",
+   "seconds": 65.36,
+   "src": "/audio/escucha-3d/reality-b2-abandono.mp3"
+  },
+  "reality/b2-alianza": {
+   "hash": "2eb83497e342f389d81a",
+   "seconds": 74.53,
+   "src": "/audio/escucha-3d/reality-b2-alianza.mp3"
+  },
+  "reality/b2-castigo": {
+   "hash": "ef5179c92df3de410065",
+   "seconds": 59.72,
+   "src": "/audio/escucha-3d/reality-b2-castigo.mp3"
+  },
+  "reality/b2-cocina": {
+   "hash": "7e5f7bab489e778e3415",
+   "seconds": 70.67,
+   "src": "/audio/escucha-3d/reality-b2-cocina.mp3"
+  },
+  "reality/b2-confesionario": {
+   "hash": "921c1804f34a6c26403d",
+   "seconds": 72.06,
+   "src": "/audio/escucha-3d/reality-b2-confesionario.mp3"
+  },
+  "reality/b2-edad": {
+   "hash": "3443004c686bdb8ec3bc",
+   "seconds": 80.39,
+   "src": "/audio/escucha-3d/reality-b2-edad.mp3"
+  },
+  "reality/b2-entrada": {
+   "hash": "3500347f301283917752",
+   "seconds": 74.89,
+   "src": "/audio/escucha-3d/reality-b2-entrada.mp3"
+  },
+  "reality/b2-espejo": {
+   "hash": "686fe5993adbed9f3f21",
+   "seconds": 67.95,
+   "src": "/audio/escucha-3d/reality-b2-espejo.mp3"
+  },
+  "reality/b2-maquillaje": {
+   "hash": "bd67306893ccd0577ead",
+   "seconds": 60.37,
+   "src": "/audio/escucha-3d/reality-b2-maquillaje.mp3"
+  },
+  "reality/b2-mudo": {
+   "hash": "9686a45c9368b6bcb706",
+   "seconds": 71.94,
+   "src": "/audio/escucha-3d/reality-b2-mudo.mp3"
+  },
+  "reality/b2-nominaciones": {
+   "hash": "359b4b597a354044a516",
+   "seconds": 67.21,
+   "src": "/audio/escucha-3d/reality-b2-nominaciones.mp3"
+  },
+  "reality/b2-nostalgia": {
+   "hash": "60193fb511985bb9c0b4",
+   "seconds": 52.33,
+   "src": "/audio/escucha-3d/reality-b2-nostalgia.mp3"
+  },
+  "reality/b2-pasillo": {
+   "hash": "5b111ea83c7258ce0363",
+   "seconds": 57.49,
+   "src": "/audio/escucha-3d/reality-b2-pasillo.mp3"
+  },
+  "reality/b2-patrocinador": {
+   "hash": "62b6ee0c617a9f623c16",
+   "seconds": 69.56,
+   "src": "/audio/escucha-3d/reality-b2-patrocinador.mp3"
+  },
+  "reality/b2-prueba": {
+   "hash": "c5c11f16f9fc951ae878",
+   "seconds": 73.3,
+   "src": "/audio/escucha-3d/reality-b2-prueba.mp3"
+  },
+  "reality/b2-romance": {
+   "hash": "03636b55ff656b2aa5df",
+   "seconds": 75.29,
+   "src": "/audio/escucha-3d/reality-b2-romance.mp3"
+  },
+  "reality/b2-secreto": {
+   "hash": "052ba4c5c756ca017a3f",
+   "seconds": 71.48,
+   "src": "/audio/escucha-3d/reality-b2-secreto.mp3"
+  },
+  "reality/b2-veredicto": {
+   "hash": "b9c3c0695cb151c5dc76",
+   "seconds": 73.32,
+   "src": "/audio/escucha-3d/reality-b2-veredicto.mp3"
+  },
+  "reality/c1-abandono": {
+   "hash": "c59e5063702731bfb961",
+   "seconds": 76.67,
+   "src": "/audio/escucha-3d/reality-c1-abandono.mp3"
+  },
+  "reality/c1-alianza": {
+   "hash": "ef63f66aeaea75c5d471",
+   "seconds": 79.38,
+   "src": "/audio/escucha-3d/reality-c1-alianza.mp3"
+  },
+  "reality/c1-castigo": {
+   "hash": "d830f9383f4443b5ce83",
+   "seconds": 67.81,
+   "src": "/audio/escucha-3d/reality-c1-castigo.mp3"
+  },
+  "reality/c1-cocina": {
+   "hash": "10c15afc2e6c28547f4b",
+   "seconds": 80.15,
+   "src": "/audio/escucha-3d/reality-c1-cocina.mp3"
+  },
+  "reality/c1-confesionario": {
+   "hash": "794493ae866b2d77de57",
+   "seconds": 84.25,
+   "src": "/audio/escucha-3d/reality-c1-confesionario.mp3"
+  },
+  "reality/c1-edad": {
+   "hash": "d2225080c593072360f4",
+   "seconds": 88.09,
+   "src": "/audio/escucha-3d/reality-c1-edad.mp3"
+  },
+  "reality/c1-entrada": {
+   "hash": "4b0b548e59a26b15828b",
+   "seconds": 79.91,
+   "src": "/audio/escucha-3d/reality-c1-entrada.mp3"
+  },
+  "reality/c1-espejo": {
+   "hash": "a4b759a7131b09080259",
+   "seconds": 86.43,
+   "src": "/audio/escucha-3d/reality-c1-espejo.mp3"
+  },
+  "reality/c1-maquillaje": {
+   "hash": "9a7dda3d0df93d5f5a24",
+   "seconds": 66.73,
+   "src": "/audio/escucha-3d/reality-c1-maquillaje.mp3"
+  },
+  "reality/c1-mudo": {
+   "hash": "9fc6d9bd7f378124399f",
+   "seconds": 86.55,
+   "src": "/audio/escucha-3d/reality-c1-mudo.mp3"
+  },
+  "reality/c1-nominaciones": {
+   "hash": "65ae9dae766c7c1659be",
+   "seconds": 82.4,
+   "src": "/audio/escucha-3d/reality-c1-nominaciones.mp3"
+  },
+  "reality/c1-nostalgia": {
+   "hash": "b29f25756be0b79e2442",
+   "seconds": 69.42,
+   "src": "/audio/escucha-3d/reality-c1-nostalgia.mp3"
+  },
+  "reality/c1-pasillo": {
+   "hash": "1040e56a0ccf880f5934",
+   "seconds": 68.51,
+   "src": "/audio/escucha-3d/reality-c1-pasillo.mp3"
+  },
+  "reality/c1-patrocinador": {
+   "hash": "65d297f569475190f041",
+   "seconds": 86.07,
+   "src": "/audio/escucha-3d/reality-c1-patrocinador.mp3"
+  },
+  "reality/c1-prueba": {
+   "hash": "c0625e4c3f43b50414eb",
+   "seconds": 76.4,
+   "src": "/audio/escucha-3d/reality-c1-prueba.mp3"
+  },
+  "reality/c1-romance": {
+   "hash": "58ab42ca9099a6aa5dad",
+   "seconds": 86.59,
+   "src": "/audio/escucha-3d/reality-c1-romance.mp3"
+  },
+  "reality/c1-secreto": {
+   "hash": "d19795bdeb5e9d0adae7",
+   "seconds": 77.45,
+   "src": "/audio/escucha-3d/reality-c1-secreto.mp3"
+  },
+  "reality/c1-veredicto": {
+   "hash": "f264216523a71f59b81f",
+   "seconds": 80.88,
+   "src": "/audio/escucha-3d/reality-c1-veredicto.mp3"
+  },
+  "reality/c2-abandono": {
+   "hash": "e794eb6a82f0a5ceb6d3",
+   "seconds": 93.94,
+   "src": "/audio/escucha-3d/reality-c2-abandono.mp3"
+  },
+  "reality/c2-alianza": {
+   "hash": "1e875c70d49e55aada8e",
+   "seconds": 95.02,
+   "src": "/audio/escucha-3d/reality-c2-alianza.mp3"
+  },
+  "reality/c2-castigo": {
+   "hash": "df77d71838ac44dffd73",
+   "seconds": 82.89,
+   "src": "/audio/escucha-3d/reality-c2-castigo.mp3"
+  },
+  "reality/c2-cocina": {
+   "hash": "b7ed2ac909bc3637af76",
+   "seconds": 86.77,
+   "src": "/audio/escucha-3d/reality-c2-cocina.mp3"
+  },
+  "reality/c2-confesionario": {
+   "hash": "e70c51d75dbf45ead312",
+   "seconds": 87.97,
+   "src": "/audio/escucha-3d/reality-c2-confesionario.mp3"
+  },
+  "reality/c2-edad": {
+   "hash": "db5e9efbe44b27e19ea0",
+   "seconds": 99.26,
+   "src": "/audio/escucha-3d/reality-c2-edad.mp3"
+  },
+  "reality/c2-entrada": {
+   "hash": "912d4b023df3cd67b5cd",
+   "seconds": 89.55,
+   "src": "/audio/escucha-3d/reality-c2-entrada.mp3"
+  },
+  "reality/c2-espejo": {
+   "hash": "c765f9c4850e3d648852",
+   "seconds": 103.7,
+   "src": "/audio/escucha-3d/reality-c2-espejo.mp3"
+  },
+  "reality/c2-maquillaje": {
+   "hash": "9b974d050f1efc5a5151",
+   "seconds": 81.81,
+   "src": "/audio/escucha-3d/reality-c2-maquillaje.mp3"
+  },
+  "reality/c2-mudo": {
+   "hash": "75ca2d8b3116ac75a5c1",
+   "seconds": 104.21,
+   "src": "/audio/escucha-3d/reality-c2-mudo.mp3"
+  },
+  "reality/c2-nominaciones": {
+   "hash": "c09f783b3dbb1a2c9df6",
+   "seconds": 92.93,
+   "src": "/audio/escucha-3d/reality-c2-nominaciones.mp3"
+  },
+  "reality/c2-nostalgia": {
+   "hash": "629902daec1e9abc6519",
+   "seconds": 84.65,
+   "src": "/audio/escucha-3d/reality-c2-nostalgia.mp3"
+  },
+  "reality/c2-pasillo": {
+   "hash": "44d6e82be8666927a8b4",
+   "seconds": 85.2,
+   "src": "/audio/escucha-3d/reality-c2-pasillo.mp3"
+  },
+  "reality/c2-patrocinador": {
+   "hash": "421984daa028576c9295",
+   "seconds": 103.56,
+   "src": "/audio/escucha-3d/reality-c2-patrocinador.mp3"
+  },
+  "reality/c2-prueba": {
+   "hash": "dfe96fc7cb3f73cdd987",
+   "seconds": 94.77,
+   "src": "/audio/escucha-3d/reality-c2-prueba.mp3"
+  },
+  "reality/c2-romance": {
+   "hash": "ae89086c4b29ab6b68a5",
+   "seconds": 94.82,
+   "src": "/audio/escucha-3d/reality-c2-romance.mp3"
+  },
+  "reality/c2-secreto": {
+   "hash": "e29d1f93c78ead94d3ff",
+   "seconds": 85.75,
+   "src": "/audio/escucha-3d/reality-c2-secreto.mp3"
+  },
+  "reality/c2-veredicto": {
+   "hash": "53ad42432b0554b8751d",
+   "seconds": 95.64,
+   "src": "/audio/escucha-3d/reality-c2-veredicto.mp3"
+  },
   "reino/a0-aldren": {
    "hash": "2be2bb70aa0980218828",
    "seconds": 33.24,

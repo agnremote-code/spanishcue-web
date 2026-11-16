@@ -138,4 +138,17 @@ export const CASTS = {
     r('Una bióloga con lupa', 'Estudia unos insectos que brillan.', ['animales', 'trabajo']),
     r('Un caminante perdido', 'Busca el camino desde hace horas.', ['miedo', 'aventura']),
   ],
+  // La casa del reality: the housemates and crew without a scene of their own.
+  reality: [
+    r('Una concursante que habla con la cámara', 'Le cuenta sus planes a la cámara siete como si fuera su diario.', ['tecnologia', 'soledad']),
+    r('Un concursante que hace flexiones', 'Hace flexiones justo delante del objetivo y cuenta en voz alta.', ['deporte', 'poder']),
+    r('Una concursante que llora en el sofá', 'Llora desde hace una hora y nadie sabe si es de verdad.', ['familia', 'miedo']),
+    r('Un concursante que cocina a escondidas', 'Esconde una tortilla debajo de un trapo: «No es para mí».', ['comida', 'juego']),
+    r('Una cámara de producción', 'Carga una cámara al hombro y no puede hablar contigo. Habla igual.', ['trabajo', 'noche']),
+    r('Un técnico de sonido', 'Te ajusta el micrófono sin pedir permiso.', ['tecnologia', 'trabajo']),
+    r('Una concursante que extraña a su perro', 'Tiene una foto del perro pegada en la almohada.', ['animales', 'familia']),
+    r('Un concursante que quiere ser famoso', 'Ya tiene pensado el nombre de su perfume.', ['dinero', 'fiesta']),
+    r('Una concursante que no duerme', 'Lleva tres noches sin dormir y lo cuenta todo.', ['salud', 'tiempo']),
+    r('Un concursante que juega a las cartas', 'Te ofrece una partida: «Si pierdes, me das tu voto».', ['juego', 'dinero']),
+  ],
 };
