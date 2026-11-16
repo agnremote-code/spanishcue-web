@@ -277,4 +277,5 @@ export const thumbnails = [
   { id: 546, level: 'C1', family: 'tiempos', topic: 'El infinitivo solo', example: '*Caminar* cansa. *No fumar*. *¡A dormir!*', chips: ['el caminar', 'No fumar', '¡A dormir!', '¡Haberlo dicho!'], mascot: 'explorer' },
   { id: 547, level: 'C1', family: 'concordancia', topic: 'Adjetivos de relación', example: 'Una crisis *económica* grave. Ellas *hablan claro*.', chips: ['crisis económica grave', '*muy económica', 'hablar claro', 'llegaron cansadas'], mascot: 'grammar' },
   { id: 548, level: 'C2', family: 'tiempos', topic: 'Verbos defectivos', example: '*Suele* haber erratas. Eso no me *incumbe*.', chips: ['suelo · solía', 'atañe / atañen', 'llovieron críticas', 'abolió → deroga'], mascot: 'grammar' },
+  { id: 549, level: 'A2', family: 'cantidad', topic: 'Números, dinero y monedas', example: '¿*Cuánto cuesta*? Son *tres mil quinientos* pesos.', chips: ['cien · mil · un millón', '¿cuánto cuesta?', 'en efectivo'], mascot: 'explorer' },
 ];
