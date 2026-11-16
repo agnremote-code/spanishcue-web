@@ -246,7 +246,7 @@ export default {
       ["wences", "Y lo mejor del caso es que yo no voy a beber ni un sorbo. Treinta años sin una copa."],
       ["wences", "Mi jefe era listo. Le dio la llave de la bodega al único que no tenía sed."],
     ],
-    ask: "Entre dos olas, el barman empuja la botella hacia ti: la última palabra es tuya. ¿Qué consejo das?",
+    ask: "Entre dos olas, el barman empuja la botella hacia ti: la última palabra es tuya. ¿Qué le aconsejas?",
     options: [
       { say: "Descórchela ahora. Una promesa a un difunto pesa más que cualquier subasta.", reply: "¡Que me denuncien! Esta noche, tras esta barra, la única jurisdicción que reconozco es la mía.", end: "El corcho rebota en la lámpara de cristal. El champán resulta ser vinagre, y el salón entero brinda entre muecas y carcajadas. Es el mejor brindis del viaje.", mood: "laugh" },
       { say: "La reservaría para el amanecer. Un epílogo así merece luz natural.", reply: "Me gusta. El sol de Cádiz se la ha ganado con más méritos que cualquier coleccionista.", end: "Wences sumerge la botella en hielo y escribe en una servilleta: «Prohibido tocar hasta avistar Cádiz». Luego la cubre con un paño, como a un pájaro dormido.", mood: "smile" },
@@ -362,7 +362,7 @@ export default {
       ["marina", "Las olas no me asustan. Me asusta que los marineros vean que me tiemblan los dedos."],
       ["marina", "La brújula era de mi padre, pescador en Colón. Un día salió al mar y no volvió. Encontraron su barca vacía, con esto atado al banco."],
     ],
-    ask: "Contra el horizonte negro, Marina quiere saber cómo se manda un barco con miedo. ¿Qué consejo le das?",
+    ask: "Contra el horizonte negro, Marina quiere saber cómo se manda un barco con miedo. ¿Qué le respondes?",
     options: [
       { say: "Hablaría con el capitán. Me extrañaría muchísimo que, en treinta años, no hubiera sentido exactamente lo mismo.", reply: "No sé si se atreverá a reconocerlo, pero por preguntar no se pierde nada, salvo el orgullo.", end: "El capitán la escucha en silencio y confiesa: «Treinta años al mando y todavía me flaquean las piernas en cada tormenta. Es lo que me ha mantenido con vida».", mood: "love" },
       { say: "Daría las órdenes con voz firme. La tripulación obedece a la voz, no a las manos.", reply: "Voz firme, manos en la espalda. Dicho así suena casi sencillo.", end: "Marina da las órdenes con una voz nítida y serena. Nadie advierte que sus manos tiemblan, entrelazadas a la espalda.", mood: "worried" },
