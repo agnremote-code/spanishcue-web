@@ -186,6 +186,15 @@ export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as u
     C1: () => import('./content/tren/c1.json'),
     C2: () => import('./content/tren/c2.json'),
   },
+  crucero: {
+    A0: () => import('./content/crucero/a0.json'),
+    A1: () => import('./content/crucero/a1.json'),
+    A2: () => import('./content/crucero/a2.json'),
+    B1: () => import('./content/crucero/b1.json'),
+    B2: () => import('./content/crucero/b2.json'),
+    C1: () => import('./content/crucero/c1.json'),
+    C2: () => import('./content/crucero/c2.json'),
+  },
 };
 
 export async function loadListenings(game: string, level: string): Promise<ListeningFile | null> {
