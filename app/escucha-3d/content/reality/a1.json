@@ -168,7 +168,7 @@
     {
      "q": "¿Cómo se llama de verdad La Voz?",
      "options": [
-      "Lalo",
+      "Bartolomé",
       "Óscar",
       "Rodolfo"
      ],
@@ -177,7 +177,7 @@
     {
      "q": "¿Cuántos años lleva La Voz en el programa?",
      "options": [
-      "Once",
+      "Catorce",
       "Siete",
       "Dos"
      ],
@@ -281,7 +281,7 @@
      "options": [
       "En el jardín",
       "En la cocina",
-      "En el baño"
+      "En el dormitorio"
      ],
      "answer": 1
     },
@@ -525,7 +525,7 @@
      "options": [
       "Todas sus palabras",
       "Sus fotos de niño",
-      "Su casa"
+      "Las cartas de su novia"
      ],
      "answer": 0
     },
@@ -867,7 +867,7 @@
      "options": [
       "Dos",
       "Seis",
-      "Diez"
+      "Catorce"
      ],
      "answer": 1
     }
@@ -1066,7 +1066,7 @@
      "options": [
       "Siete",
       "Tres",
-      "Doce"
+      "Quince"
      ],
      "answer": 0
     },
@@ -1406,7 +1406,7 @@
     {
      "q": "¿Cuántas horas está castigada Wendy?",
      "options": [
-      "Seis",
+      "Cuatro",
       "Una",
       "Tres"
      ],
@@ -1628,7 +1628,7 @@
     {
      "q": "¿Cuánto es la multa?",
      "options": [
-      "Mil dólares",
+      "Veinte mil dólares",
       "Diez mil dólares",
       "Cien mil dólares"
      ],
@@ -1852,7 +1852,7 @@
      "options": [
       "El presentador",
       "La Voz",
-      "El director"
+      "El director del canal"
      ],
      "answer": 0
     },
