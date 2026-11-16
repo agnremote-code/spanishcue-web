@@ -114,6 +114,11 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
       3. G4 by Alejandro or a fresh agent.
     - A full build plus a VALID run in one slot is unlikely (HYPOTHESIS). If the checker PR is the only thing that lands, report it as tooling, not as a unit.
     - #282 stays held, and its G1 remap is added to its open items.
+  - **Release (VERIFIED):** #439 merged as `de2d380f` (02:40:51Z); its tree is identical to PR head `589ef0ac`.
+    - The first CI + Auto Merge runs raced: the ready_for_review run was cancelled by the concurrency group, and the other skipped because its payload still said draft. One re-run of that cancelled run ([43791886401](https://github.com/agnremote-code/spanishcue-web/actions/runs/43791886401), attempt 2) passed verify, then merge.
+    - Production run [43794488845](https://github.com/agnremote-code/spanishcue-web/actions/runs/43794488845) succeeded: the "Production smoke" step passed (02:53:12–02:53:21Z) and the rollback was skipped. Staging run [43794171543](https://github.com/agnremote-code/spanishcue-web/actions/runs/43794171543) dispatched it.
+    - main = production = `de2d380f`. The change is docs only, so there is no learner-facing URL to smoke, and there is no PUBLISHED.md entry because nothing visible to learners changed.
+    - **Process note for the next run:** push the last commit before marking the PR ready, or wait for the synchronize run to finish, to avoid this race.
 - **2026-11-13 (Friday 3D + assessment routine): PR #422** (branch `claude/friday-assessment-20261113`, base main `3f946b9`). Subscription usage: **UNKNOWN**.
   - **Unit: gated content repair, «Más allá» A2** (reported as a **repair**; W46 item 6, second half). R4 is still unanswered (#282 has had no comment since 10-26), so #282 was not touched.
     - Martin removed every structure above A2 from `app/mas-alla/levels/a2.mjs` (16 strings) and `voces/a2.mjs` (6 voice questions). That covers the four «si + imperfecto de subjuntivo» prompts from his 11-03 audit, «habrías hecho», and every bare hypothetical conditional. Only *gustaría* (wishes) remains.
