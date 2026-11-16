@@ -81,7 +81,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-11-16 (Monday 3D routine): PR (see below)** (branch `claude/board-mon-3d-20261116`, base main `d9bb524`). Run-start marker pushed at 02:06Z (W47 item 0). No W47 slot ran before this one, so no missing marker. Subscription usage: **UNKNOWN**.
+- **2026-11-16 (Monday 3D routine): PR #439** (branch `claude/board-mon-3d-20261116`, base main `d9bb524`). Run-start marker pushed at 02:06Z (W47 item 0). No W47 slot ran before this one, so no missing marker. Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** W47 plan item 2 is governance plus a concept round. The build is Wednesday's slot.
   - **W47 item 2: DONE.**
     - [BOARD-DECISION-006](decisions/BOARD-DECISION-006-provable-listening-gate.md), the provable listening gate (a scoped amendment to BOARD-DECISION-003 §3.1), **ADOPTED 3 of 3, LOCKED**.
