@@ -231,6 +231,17 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Último crucero: every circle of the old liner has its own listening at
+  // each level, voiced by the same passengers and crew who speak there. PRO
+  // lesson (ID 261).
+  crucero: {
+    title: 'Último crucero',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['popa', 'maquinas', 'cocina', 'pasillo', 'luna', 'pareja', 'cartas', 'enfermeria', 'nina', 'polizon',
+      'barra', 'bingo', 'piano', 'radio', 'proa', 'oficial', 'capitan', 'amanecer'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.

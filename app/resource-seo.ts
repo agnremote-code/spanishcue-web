@@ -154,6 +154,7 @@ export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map
   [256, "tren"],
   [259, "papel"],
   [260, "reality"],
+  [261, "crucero"],
 ]);
 
 export function isImmersiveWorld(lesson: Lesson): boolean {

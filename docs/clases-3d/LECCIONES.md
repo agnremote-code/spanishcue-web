@@ -4,6 +4,42 @@ Newest first. Each week: what the critic caught, what to do from the start
 next time, and ideas left for later. Keep it short; promote stable lessons
 into PLAYBOOK.md.
 
+## Semana 3 · 2026-11-16 · La casa (260) y Último crucero (261)
+
+- **Las dos clases repitieron los mismos cuatro errores**, así que desde la
+  semana 4 son chequeos en el `check-<slug>` de cada clase, no tareas del
+  crítico:
+  1. Alumno con género («de las nuestras», «nominada», «juntas», «solo o
+     sola»): guard de regex sobre todo texto dirigido al alumno (escenas,
+     invitados y escucha). Ojo: la escucha también le habla al alumno.
+  2. HUD a 390 px: subtítulos/bitácora y minimapa tapaban «Usar», el joystick,
+     el selector de modo y el volumen. El creador entrega una captura a
+     390×844 sin solapes; minimapa debajo del HUD (top ≥ 236 px) y prompt
+     encima de los botones.
+  3. Claves de escucha adivinables por longitud: la correcta es la opción de
+     longitud media ≤ 40 % de las veces, la más corta ≥ 25 %, y ninguna
+     opción mide menos del 45 % de la clave (`LENGTH_KEYS`).
+  4. Niveles en el bundle: `import()` solo no alcanza; `LOADERS =
+     import.meta.env?.SSR ? {} : {…}` como `app/escucha-3d/loaders.ts`.
+- **C2 con voz propia desde el borrador**: en las dos, C2 salió como C1 con
+  sinónimos. Funcionó darle otro narrador (en el crucero narra el barco) y
+  otros tipos de tarea (defender una tesis, cambiar de registro,
+  contrafáctico, anécdota). Regla: Jaccard C1/C2 de las preguntas < 0,3.
+  Pendiente: el texto de escena del crucero aún comparte vocabulario (0,47).
+- **Una tabla de hechos** en `story.mjs` (años, páginas, edades) y todo texto
+  y escucha alineados a ella: las dos clases tenían fechas y números
+  contradictorios entre escenas y escucha.
+- **A0/A1 en pasado**: el crucero volvió a forzar el presente sobre hechos
+  pasados (ya estaba en esta lista). Revisarlo antes de entregar.
+- **Personas sentadas**: tumbonas y pianos. Asientos con la raíz hacia el
+  borde delantero; cuerpos de muebles sin el volumen del teclado/mostrador.
+- **Realista desde el inicio** (`app/mundo-real`): personas y materiales
+  reales en computadoras, livianas en teléfonos, `?real=0` las apaga. Worker
+  modules tras las dos clases: 24,2 MiB de 27.
+- **CI**: dos veces una petición al Worker de prueba (`wrangler dev`) quedó
+  colgada 300 s en tests ajenos a la clase (`clasicas-routes`,
+  `jugar-pass-worker`), y pasó al relanzar; localmente 3/3 en verde.
+
 ## 2026-11-11 · El mundo en blanco (259)
 
 - **Arte propio en vez de muñecos**: seres de origami hechos a mano con

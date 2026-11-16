@@ -1,0 +1,3594 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g (2026-11-16): «Último crucero» (ID 261), a new A0–C2 3D conversation and listening class on the last night of an old ocean liner in a storm, whose A0 level is fully bilingual (conversation, passengers, choices, logbook and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "The last night of an old ocean liner in a storm, in 3D: goodbyes, fears and what really matters, in Spanish."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Amparo and Ezequiel are on the stern deck. It is windy."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Madam, it is very windy. What do you have in the box?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is Paco, my husband. Well, his ashes."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I am very sorry, madam."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Thank you. Paco is a waiter here, on this ship. Well, he was a waiter."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Then it is his home."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is the weather like?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who is Paco?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is in the box?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What was Paco's job?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you do on a very windy day?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How many kilometres from the sea is your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What family memento do you keep at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "ashes"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "husband"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "wind"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Don Teodoro introduces the engine to the apprentice Brayan."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Brayan, this is the Dolores."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "The Dolores? Is it an engine or a lady?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Both. She is fifty-five years old and she is very strong."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "She makes a lot of noise."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes, but it is a beautiful noise. It is her voice."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who is the Dolores?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How old is the Dolores?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Brayan say about the engine?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "For Teodoro, what is the noise?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What appliance in your home is very old?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What sound relaxes you at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Do you give names to your things?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "engine"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "noise"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "voice"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Chef Inés and Lalo look in the freezer."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Chef, there are two hundred kilos of prawns in the freezer."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Two hundred? Phew! And cakes?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Forty chocolate cakes."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Well, tomorrow there is no ship. Tonight we cook everything."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Everything? Tonight?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where are the prawns?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How many kilos of prawns are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What are the cakes made of?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do they cook tonight?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What food do you have in your freezer?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is your favourite cake?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who makes dinner in your home on Sundays?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "prawns"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "freezer"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "cakes"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Rosa talks to Ezequiel in the corridor. There is a laundry cart."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Rosa, what is in your cart? It is moving."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "They are towels. Clean towels."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Towels do not go “meow”."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Well… It is Almirante, my cat. He is black and very good."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "A cat on the ship!"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Rosa say first?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is really in the cart?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is the animal called?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What colour is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What animal lives with you or with your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What animal do you want to have in the future?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What colour is your bedroom?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "cart"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "towels"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "clean"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Lucía is in bed. Mateo has a glass of water."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Lucía, my love, how are you?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Very bad. I am seasick. The ship moves a lot."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Have some water. It is our honeymoon."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I know. It is a honeymoon with a bucket."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where is Lucía?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How is Lucía?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Mateo give her?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What are Lucía and Mateo celebrating?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "In which kind of transport do you feel sick?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you take when you feel bad?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What place is good for a honeymoon?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "seasick"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "honeymoon"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "bucket"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Elena and Ramón look at some papers."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Ramón, here are the papers."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes. Tomorrow in Cádiz, right?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes, tomorrow. Do you have a pen?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I have a blue one. It is your pen. It is from nineteen ninety-five."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "My pen! Thank you."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is on the table?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "When do they sign?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What colour is the pen?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Whose is the pen?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What object have you had since school?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you write with: pen, pencil or computer?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who is your favourite person to travel with?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "papers"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "pen"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "tomorrow"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Germán talks to Rosa. He has a box of letters."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Mr Germán, what is that box?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "They are letters. Forty letters."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who are they for?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "For Isabel. She is a friend from this ship, from nineteen eighty-five."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "And where is Isabel?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I do not know. The letters are here, with me."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Germán have?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How many letters are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who are the letters for?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where are the letters now?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "When do you write a letter on paper?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where does your most distant friend live?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you keep in a box?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "letters"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "box"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "with me"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Doctor Beatriz talks to the purser."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Doctor, there are many seasick people."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes, sixty-three. And I have forty pills."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "And you? Are you well?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Well… no. I am seasick too. It is a secret."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who talks to the doctor?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How many people are seasick?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How many pills does she have?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is the doctor's secret?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What helps you when your tummy hurts?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who knows your secrets?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is your doctor's name?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "pills"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "secret"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "too"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Martina and her grandfather look at the sea at night."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Grandpa, look! A light in the sky!"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is lightning, Martina."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I am scared. Is the ship OK?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes, the ship is strong. And I am here, with you."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "And tomorrow? Where is the ship tomorrow?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Martina see in the sky?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How is Martina?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is the ship like, according to grandpa?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Martina ask at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you do when you are scared at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where are you when there is a storm?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who are you with when you are scared?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "lightning"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "fear"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "grandfather"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Julián finds an old man next to a lifeboat."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Good evening, sir. Your ticket, please?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I do not have a ticket. I am eighty-two years old."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "So?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I am Fermín. I am a cook on this ship. Well, from seventy-one."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Oh, sir!"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Julián ask for?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How old is the man?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is the man's name?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What was his job on the ship?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How old is the oldest person in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who teaches you to cook in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What transport do you prefer for a long trip?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "ticket"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "cook"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "sir"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Wences talks to Yoli at the bar."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Wences, what is that bottle?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is a bottle of champagne from nineteen seventy-one. From the first voyage."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "How old! Shall we open it?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I do not know. At twelve the bar closes. Forever."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is in the bottle?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What year is the bottle from?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Yoli ask?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What time does the bar close?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you open for a special celebration?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What time do you end your day?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What thing from your grandparents is there in your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "bottle"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "champagne"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "forever"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yoli calls out the bingo numbers."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Good evening! It is the last bingo! The number… seven."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yoli, the balls are moving on the floor."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is the ship! Well… the number… where is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is under the piano. It is twenty-two."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What game is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is the first number?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where are the balls?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Which number is under the piano?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What game do you play with your friends?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Which number is good luck for you?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who always wins at games in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "balls"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "floor"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "under"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Maestro Aurelio plays the piano. Ezequiel arrives."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Maestro, there is a storm. Everyone is going to the cabins."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Not me. I play."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Why?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "I play here every night since nineteen seventy-nine. Tonight too."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is there tonight?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where is everyone going?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Since what year has Aurelio played?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Aurelio do tonight?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Which instrument sounds beautiful to you?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you do every night before turning off the light?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What song do you listen to when you are sad?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "storm"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "cabins"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "every night"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Sole receives a message on the radio."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Don Teodoro, I have a message for you."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "For me? From whom?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "From your son, Andrés. He says: “Dad, tomorrow I am on the quay.”"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Andrés? Tomorrow?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes. At seven."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who is the message for?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who writes the message?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where is Andrés tomorrow?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "At what time?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who sends you the first message of the day?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What radio programme or podcast do you listen to?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What time does your day start on Saturdays?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "message"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "quay"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "son"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Gustavo and Norma are at the bow. It is very windy."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Norma, come here, to the bow."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Now? It is cold and it is raining."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is important. I have a question."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you have in your hand?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "A ring. Norma, will you marry me?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where are they?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Gustavo have in his hand?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Gustavo ask?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What jewellery do you wear every day?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What clothes do you wear when it rains a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Where is a good place for an important question?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "bow"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "ring"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "it is raining"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Marina talks to Julián on the bridge wing. It is raining a lot."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Officer, what do you have in your hand?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is a compass. It is my father's."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Is your father a sailor?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "He was a fisherman. I always carry his compass. Tonight too."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does Marina have?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Whose is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What was the father's job?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What gift from your family is very special to you?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What jobs do the people in your family do?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do you have in your pockets now?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "compass"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "fisherman"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "always"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Captain Salgado talks to Marina on the bridge."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Captain, a message from the company."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What does it say?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It says: “Arrival in Cádiz at seven. Maximum speed.”"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "With this storm? The waves are very big."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do we do, captain?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who is the message from?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What time do they arrive in Cádiz?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What speed does the company ask for?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What are the waves like?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who gives you orders at work?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Who always arrives late in your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Do you prefer to go fast or slowly in the car?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "company"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "speed"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "waves"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "The captain and Amparo watch the sunrise."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Captain, look! The sun!"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes, madam. There is no storm. And there is Cádiz."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "It is the ship's last day."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Yes. It is sad, but it is beautiful."
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What do they see?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "Which city is there?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What day is it for the ship?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is the moment like, according to the captain?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "At what time do you see the sun in the morning?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What is sad but beautiful for you?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "What port or beach do you remember fondly?"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "sun"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "last"
+    },
+    {
+      "path": "app/escucha-3d/content/crucero/a0.json",
+      "text": "sad"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Passenger with forty cruises on the Albatros"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "This is my fortieth cruise. I always sleep in cabin 8. Tomorrow the ship goes away and I don’t know where to go in summer."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What place do you visit always, every year?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Twenty-year-old sailor, on his first voyage"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "It is my first voyage and also the ship’s last one. I am very happy and a bit sad. My mother calls every hour."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Who worries about you when you go far away?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Retired dentist who bought a life ring at the auction"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Yesterday there was an auction. I bought an old life ring. My wife is angry. She says it doesn’t fit in the car."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What old thing do you never want to throw away?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "The ship’s magician, with a seasick rabbit"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I am a magician. My rabbit is called Houdini. Today he doesn’t want to come out of the hat. He is seasick, like everyone."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What show do you like to watch live?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Passenger who has just won his first bingo"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I won the bingo! It is the first time in my life. The prize is a photo of the captain. I don’t know what to do with it."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What draw or contest did you ever win, even a small one?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Passenger who reads tarot cards in the lounge"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I read the cards. Tonight the same card always comes out: the ship. It is not a good card. Sit down, please."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What would you like to know about your future?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Waiter who has broken three thousand plates in twenty years"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I am a waiter. I break many plates. Tonight, with the storm, there are already twelve. The boss says nothing. Today nothing matters."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What thing do you do badly and everybody knows it?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "The ship’s photographer for thirty years"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I take photos of the passengers. I have photos from thirty years in boxes. Tomorrow I don’t know where to keep them."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What photo of yours do you like a lot?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Fifteen-year-old with no wifi"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "There is no wifi on the ship. I haven’t talked to my friends for five days. My grandmother says it is good. I don’t know."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "How do you spend a whole afternoon without your phone?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "The ship’s former singer, a passenger today"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I used to sing here in the seventies. Now I am a passenger. Tonight I want to sing again, but I am scared."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Insurance salesman, terrified of the storm"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I sell insurance. I have insurance for everything. But I don’t have insurance for this storm. I am very scared."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What scares you when you travel?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "In charge of the laundry"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I work in the laundry. I wash everyone’s clothes. I know all the ship’s secrets. But I say nothing!"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Who in your family is good at keeping a secret?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Security guard without a single incident in fifteen years"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I am a security guard. In fifteen years nothing happened. Nothing! Tonight, at last, there is a stowaway. I am happy."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What would you like to experience, at least once?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Recently divorced woman travelling alone"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I am travelling alone. I have been divorced since March. It is my first trip alone in thirty years. I am a bit nervous, but free."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Where do you go when you want some time without anyone?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Retired sailor who puts ships in bottles"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I was a sailor for forty years. Now I make small ships inside bottles. This is the Albatros. It took me a year."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What do you do with your hands in your free time?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "The ship’s tango teacher"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I teach tango on the ship. Tonight dancing is difficult, the ship moves a lot. But people dance anyway."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What music makes your feet move without wanting to?"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "Passenger who wants to buy the ship’s bell"
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "I want to buy the ship’s bell. It is very beautiful and very old. The captain doesn’t want to sell it to me. I am going to try again."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What thing belonging to someone else would you like to have?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Amparo's box"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is night. There is wind and rain. It is the last voyage of the ship Albatros. The captain gives you a notebook: “Write the stories of tonight.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Hello. I am Amparo. In this box are the ashes of Paco, my husband."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Madam, there is a lot of wind. It is dangerous."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Amparo looks at you. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Madam, wait for dawn. Tomorrow there is no wind."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. Paco can wait a little more."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Amparo keeps the box in her coat. Tomorrow, with sun, is the moment."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Now, madam. One, two, three…"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Oh! The wind!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Part of Paco is in the sea. Another part is on Ezequiel's jacket."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Amparo smiles. A wrong cocktail and many years of love."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What thing of your grandmother or grandfather is in your house?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Do you like the wind or do you prefer calm?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What drink do you order in a café?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What colour is your favourite notebook?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the box"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the wind"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the dawn"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The old engine"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Down below is the engine room. It is very hot and there is a lot of noise. The engine is old: it is from 1971."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I am Teodoro, the chief engineer. This is Dolores, my engine."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Boss, the engine is making a strange noise."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Dolores is tired. Like me."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Teodoro has a wrench in his hand. What do you do?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I call the captain. Slower, please."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. Dolores needs to go slowly."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The ship goes slower. The engine breathes."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "And the wrench? What is it for?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Look: one, two, three blows."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Bang, bang, bang. The strange noise stops. Brayan cannot believe it."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Teodoro, and tomorrow? Where do you live?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I have no house on land. My home is this ship."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Brayan says: “My house is small, but I have a sofa.” Teodoro does not speak. His eyes are red."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What appliance in your kitchen makes a lot of noise?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What clothes do you wear on a very hot day?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What noise from your street do you hear at night?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who fixes things in your family?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What time does your day of work or classes end?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the engine"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the noise"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the wrench"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "slowly"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Lots of prawns in the kitchen"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In the kitchen there are pots and plates on the floor. The ship moves. Chef Inés has a problem: a lot of food and few people."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I have two hundred kilos of prawns. Two hundred!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The passengers are not eating. They are seasick."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The company says: “In the rubbish.” I say: no."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Inés looks at you with a spoon. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A dinner for everyone: passengers and crew, together in the ballroom."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes! The cooks eat today too."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In the ballroom, a waitress and a passenger eat prawns at the same table."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Soup in mugs. The plates do not stay put."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Good idea! Mugs have handles."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "People have soup in mugs. A wave comes and the soup dances, but it does not fall."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Tomorrow, in Cádiz, the food goes to a food bank."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Good. Food is not rubbish."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Lalo writes a list. Tomorrow two hundred kilos of food go ashore."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Do you cook a lot or a little?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Do you like prawns?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What big dish does your family cook for many people?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the prawns"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the pot"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "seasick"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the rubbish"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A cat in the cart"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In the cabin corridor there is a cart with sheets and towels. Rosa is a stewardess. Under the towels there is a cat."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Shhh. It is Almirante, my cat. He lives with me on the ship. It is a secret."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Tomorrow I have no job and no house. And Almirante?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The cat looks at you. So does Rosa. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "My suitcase is big. Almirante goes ashore with me."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Really? Thank you!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Almirante gets into your suitcase. He sleeps on top of your jumper."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Let's talk to the captain."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "With the captain? How scary!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain laughs: “Almirante is an honorary crew member.” The cat has a paper with his name."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Rosa, do you have family on land?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I have a sister. We have not talked for twenty years."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Rosa looks at her phone. “I will call her tomorrow,” she says."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What is the name of the pet in your house or your neighbour's?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you pack in your suitcase when you travel?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who lives with you?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What animal sleeps on your family's bed?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How often do you talk to your brothers and sisters?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the cat"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the towels"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the cabin"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A seasick honeymoon"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In cabin 12 there is a young couple: Lucía and Mateo. It is their honeymoon. Lucía is in bed. She is green."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I feel very bad. The ship moves a lot."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Tonight we have dinner with the captain."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Dinner? No, please. Do not say “dinner.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Mateo does not know what to do. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Ginger, Lucía. And look at the horizon."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Ginger, OK. But it is night. There is no horizon."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Lucía eats ginger. She is a little better. She looks at the light of the lighthouse."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Lucía, and what if it is not the sea?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What? It is not the sea? Oh!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Mateo and Lucía look at each other. Tomorrow they go to a pharmacy in Cádiz."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Mateo, the dinner is not important. Lucía is."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "You are right. I am staying here."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Mateo does not go to the dinner. He has a bucket in one hand and Lucía's hand in the other."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you do when your stomach hurts?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What biscuits do you buy for your stomach?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Do you get carsick in the car or on the bus?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What special trip do you want to make?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the honeymoon"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the ginger"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the horizon"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the bucket"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Two signatures and a pen"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In cabin 15 there is an older couple: Elena and Ramón. There are papers on the table. They are the divorce papers."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Thirty-one years together. Tomorrow we sign."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Elena, do you have a pen?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I always have a pen. You, never."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Elena gives you the pen. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Sign, but tomorrow have breakfast together."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Breakfast? Well… yes."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Elena and Ramón sign. Then they say: “Coffee at eight.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "There is a storm. Not today. The papers, in the drawer."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is true. Today is not a good day."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Ramón puts the papers in a drawer. Elena closes the drawer with her hand."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you like about Ramón, Elena?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "He snores a lot. And without his noise I do not sleep."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Ramón laughs. Elena does too. Today there are no signatures."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What noise from your family helps you sleep?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you have for breakfast with your family on Saturdays?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What is in the drawer of your desk?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How many years have your parents or grandparents been together?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you not like signing?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the papers"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the divorce"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the pen"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the drawer"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Forty letters in a box"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In cabin 21 there is a man alone. His name is Germán. He has a shoebox with old letters."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "They are forty letters. They are for Isabel. I never send them."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Isabel lives in Quito. I have loved her since 1985."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Germán has a letter in his hand. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Tomorrow, in Cádiz, send a letter. Just one."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "One? OK. The last one."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Germán puts a letter in his pocket. Tomorrow he looks for a postbox."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Isabel is on social media, right?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I do not know. Look, on the phone… Yes! It is her!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Germán writes “Hello.” A minute later, Isabel gives him a like."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Germán, are the letters for Isabel or for you?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Hmm. For me, I think."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Germán reads a letter out loud. It is for him. He smiles a little."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What important paper do you keep in a box?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What faraway city do you like?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How do you talk to your friends far away?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who do you write a lot of messages to?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the letter"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the shoebox"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "to send"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the postbox"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Few pills"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The infirmary is small and white. There is a long queue at the door. Everyone is seasick. Doctor Beatriz counts the pills."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I have forty pills. In the queue there are eighty people."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "And I… I am seasick too. It is a secret."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The doctor is pale. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "First the children and the grandparents."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. It is fair."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A grandfather has a pill. He looks at a child. He gives his pill to the child."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Doctor, you need a pill too."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Me? Well… yes."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The doctor takes a pill. After twenty-two years, finally."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Half a pill for each person."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Of course! Forty times two, eighty."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The doctor cuts the pills with a knife. There is medicine for everyone."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What plasters or bandages are in your backpack?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Where are there very long queues in your city?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you do when a friend is pale or tired?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What time does the pharmacy in your neighbourhood open?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who goes first in your family at the table?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the infirmary"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the pill"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the queue"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "pale"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Lightning on the deck"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "On the lifeboat deck there is a girl with her grandfather. The girl is called Martina. She is eight years old. There is lightning over the sea."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Grandpa, does the ship die tomorrow?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It does not die. It is different."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I am scared of the lightning."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Martina looks at you. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Martina, the metal of the ship is going to be bicycles."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Bicycles? My bicycle too?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Martina says: “Ships do not die. They are bicycles.” Her grandfather laughs."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Look at the light and count: one, two, three…"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Four, five, six…!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Martina counts to seven. After the thunder, she sleeps in her grandfather's coat."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Don Benigno, do you know this ship?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. In 1971 I put in the rivets. With these hands."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Martina looks at her grandfather's hands. “My grandpa makes ships,” she says."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What light do you leave on at night?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Where do you go by bike or on foot?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What does your grandfather or grandmother do?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What did you do on Saturdays when you were eight?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What thing do you make with your hands?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the girl"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the lightning"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the thunder"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the rivets"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A man without a ticket"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Next to lifeboat four there is an old man. He is wet. He has no ticket. He is a stowaway. Julián, the boatswain, has a torch."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "My name is Fermín. I am eighty-two years old."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "And your ticket, sir?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Julián looks at you. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I will write a ticket. Here, in my notebook."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A handwritten ticket? Well, OK."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Fermín has a handwritten ticket. He keeps it like a treasure."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Don Fermín, do you cook? The chef needs help."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Of course! I peel potatoes very fast."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Fermín goes into the kitchen. He peels potatoes and sings. Inés is happy."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Julián, let's go to the captain. Those are the rules."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "OK. Let's go to the bridge."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain looks at Fermín and says: “My potato teacher!”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What quick dish do you make for your friends?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Where do you buy train or bus tickets?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What vegetable do you peel for dinner?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who is the oldest person on your street?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What fruit do you eat with your hands?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the ticket"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the stowaway"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the torch"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "to peel"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The 1971 bottle"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In the ballroom there is a wooden bar. Behind it is Wences, the barman. He has a very old bottle in his hand."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is champagne from 1971. From the ship's first voyage."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The company says it is worth a lot of money."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Wences looks at you. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Open it. It is the last night."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Now? OK… Pop!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The champagne is vinegar. Everyone laughs. It is the best toast of the trip."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Better at dawn. With the sun."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. The bottle waits a little more."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Wences puts the bottle in a safe place. Tomorrow is the moment."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Wences, do you drink champagne?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "No. I have not drunk alcohol for thirty years. Sparkling water."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Wences serves drinks all night. He drinks water with lemon and he is happy."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What cold drink do you order in summer?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What bottle is in your kitchen now?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you celebrate with your family?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Do you like sparkling or still water?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the bar"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the bottle"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the vinegar"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the toast"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The last bingo"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "On the dance floor there is a bingo game. But the ship moves and the balls roll across the floor. Yoli is the entertainer. She has a microphone."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Number twenty-two! No, wait! The ball is rolling."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "There are few people. Everyone is tired."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yoli looks at you with the microphone. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Bingo! Well, not me. The lady over there!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Bingo for the lady! She is ninety years old."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The lady wins a toaster. She cries with happiness."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "No bingo. Each person tells a story of the ship."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I like it! Who starts?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A man tells about his wedding on the ship. Another lady tells about her first trip. The ballroom listens."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yoli, do you sing?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A little. Never on stage."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yoli sings a song. Her voice is beautiful. People clap a lot."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What game do you like at a party?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What song do you sing with your friends?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What prize do you want to win?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What thing in your kitchen do you want to change?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What music do you listen to in the morning?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the dance floor"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the balls"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the microphone"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the toaster"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The storm pianist"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "On the ballroom stage there is a piano. Maestro Aurelio plays. The chairs move, but he plays and plays."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I have played here since 1979. Today is my last concert."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Maestro, the captain says: “Everyone to the cabins.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Not me. The ship needs music."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Aurelio looks at you. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Maestro, play. I am listening."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Thank you. A song for the ship."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Aurelio plays all night. The ship is not alone."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Maestro, a minute of silence."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "OK. Silence."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The piano stops. Then the ship's horn sounds: it is a perfect A."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Maestro, an easy song for me?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is four notes: A, C, E, D."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "You play the four notes of the Albatros. Aurelio claps."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What instrument is there in your family's house?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What song do you listen to in the car or on the bus?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What music do you put on to sleep?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Where is there silence in your neighbourhood?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What concert do you remember?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the piano"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the stage"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the horn"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the notes"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A message for Teodoro"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The radio cabin is small. There are lights and buttons. Sole is the radio operator. She has a paper with a message."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is a message for Teodoro, the chief engineer."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is from his son. It says: “Dad, I will wait for you at the port.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "They have not talked for twelve years."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Sole has the paper in her hand. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Now, Sole. Let's go to the engine room."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. Good news does not wait."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Teodoro reads the paper. He does not speak. He puts his hand on the engine."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Better at dawn, like a present."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "OK. I keep it here."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Sole keeps the paper in an envelope. She writes “Teodoro” on the envelope."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Sole, and for you? Are there messages for you?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Never. I only send other people's messages."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Sole writes a message for her mother: “Mum, I arrive tomorrow. I love you.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How many messages do you write every day?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who waits for you when you get home?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What thing do you keep in an envelope?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who do you phone on Sundays?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who sends you messages in the morning?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the radio"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the message"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the port"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the envelope"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A ring in the wind"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "At the bow there is a lot of wind and water. Gustavo and Norma are there. Gustavo has a small box. Inside there is a ring."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Norma, after twenty years… will you marry me?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Gustavo! Not here! There are waves!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is like in the Titanic film."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Norma looks at you. She is wet. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Inside, please. It is dangerous."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. Inside. And now: yes!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Norma says yes. The ring is big. She wears it on her thumb."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Arms open, Norma!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Like in the film! Oh, a wave!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A big wave comes. They are both wet. Norma says “yes” and laughs."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Gustavo, why now?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Last year, my heart… a heart attack. Now I do not wait any more."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Norma takes Gustavo's hand: “I said yes to you twenty years ago. In silence.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Where is a beautiful place for a proposal?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "On which finger do you wear a ring?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What romantic film do you remember?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you put on your head when it is cold?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How many years have your friends been together?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the bow"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the ring"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the wave"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "wet"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Officer Marina"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "On the bridge wing it is raining a lot. Marina is the first officer. She looks at the sea with an old compass in her hand."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Tomorrow I am the captain. I take the ship to Turkey."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The waves are very big. I am scared."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Marina looks at you. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Marina, talk to the captain."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "About fear? OK."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain listens and says: “I am scared too, Marina.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "You can do it. Strong voice, Marina."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. Strong voice."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Marina gives the orders with a strong voice. Her hands shake a little."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Whose is the compass?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "My father's. He is a fisherman. One day he does not come back."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Marina puts the compass in the pocket of her uniform, near her heart."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What scares you at work or at school?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What object do you always carry in your pocket?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What job does your father or mother do?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Do you speak with a strong or soft voice?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What country by the sea do you want to get to know?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the officer"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the compass"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "fear"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the pocket"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain on the bridge"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "On the bridge there are screens and a wheel. Captain Salgado looks at the sea. It is five in the morning. It is his last voyage."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The company says: “Arrival at seven. No delay.”"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Captain, there are six-metre waves."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "And what do you think?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain looks at you. What do you say?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Slower, captain. We arrive late, but we all arrive."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Yes. That is what matters."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The ship goes slowly. At nine, everyone is fine in Cádiz."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Fast, captain! At seven!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Full speed!"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The ship races through the storm. At one minute to seven, they see the lighthouse."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Captain, a lap around the bay. To say goodbye."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A lap of honour. I like it."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The Albatros goes once around the bay. At the port, people wave goodbye."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What clock do you look at so you are not late?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How do you say goodbye to a special place?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you do at five in the morning?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Who decides dinner in your house?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How many minutes do you walk to get to your work or school?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the bridge"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the wheel"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the lighthouse"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the bay"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The sun in Cádiz"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is dawn. There is no storm. The sea is calm and the sun rises. The captain has the logbook. The last line is missing."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "It is the last page of the Albatros."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Paco is in the sea now. I am calm."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Captain, what do you write?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain gives you the pen. What do you write?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "“Nothing to report.” As always."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Nothing to report… and with a lot of love."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain writes “Nothing to report” and closes the notebook. He smiles."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The names of everyone."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Everyone? There are four hundred and twelve people."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "They write the names until seven. At the end, the name of a cat: Almirante."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Nothing. A blank line."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "A blank line… for the future."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "The captain writes nothing. Marina looks at the white line. The sun shines onto the page."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you write on a piece of paper before sleeping?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What time does the sun rise in your city?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you do on the last day of a trip?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What important name do you write on a paper?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the page"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the logbook"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "calm"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "the line"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the stern"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the purser"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the box"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the engine room"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the apprentice"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the wrench"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the torch"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "slowly"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the pot"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the crew"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to throw away"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the prawns"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the food bank"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the corridor"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the cart"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the cabin"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the sister"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to meow"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the honeymoon"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "seasickness"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "ginger"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to vomit"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bucket"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "married"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the divorce"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to sign"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the drawer"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to snore"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the letter"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the dance"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to send"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the postbox"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "courage"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the infirmary"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the queue"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the pill"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "pale"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "fair"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the deck"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the lightning"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the thunder"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to take apart"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the rivets"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the stowaway"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the ticket"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the boatswain"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "hidden"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to peel"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bar"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bottle"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the cork"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the vinegar"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the toast"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the dance floor"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the sequins"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the balls"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the microphone"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the storeroom"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the stage"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bow tie"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the horn"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the notes"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to stop"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the headphones"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the quay"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the envelope"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bow"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the proposal"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the ring"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the thumb"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the heart attack"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bridge wing"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the officer"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the scrapyard"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the compass"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "to shake"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bridge"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the screen"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the delay"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the lighthouse"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the bay"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the dawn"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the logbook"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "the line"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "blank"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a1.mjs",
+      "text": "on board"
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Amparo had waited a year to say goodbye to Paco; tonight she waited a few hours more."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Paco went back to the sea, and a little of him stayed on the purser’s jacket."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Amparo married a waiter because of a wrong cocktail, and she has no regrets."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The Dolores slowed down to reach her last port alive."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Don Teodoro fixed a 1971 engine with three blows of a wrench and a lot of love."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Don Teodoro has no home on land, but tonight an apprentice offered him his sofa."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "For the first time, the crew had dinner in the ballroom with the passengers."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Tonight the soup was served in mugs, because the sea wanted a taste too."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Tomorrow, two hundred kilos of food go ashore for whoever needs them."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "A cat called Almirante goes ashore tomorrow in a passenger’s suitcase."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The captain named an honorary crew member a cat that never paid for a ticket."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Rosa is going to call her sister after twenty years of silence."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Lucía discovered that ginger works and that at night there is no horizon."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "A seasick honeymoon can end with much bigger news."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Mateo cancelled dinner with the captain to hold a bucket and a hand."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Elena and Ramón signed the divorce and agreed to have breakfast together."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Elena and Ramón put the papers in a drawer: nobody decides anything in a storm."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Thirty-one years later, Elena still sleeps better with Ramón’s snoring."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Tomorrow Germán is going to send a letter that took forty years to leave."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Isabel, from Quito, gave Germán a like after forty years."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Germán discovered that his forty letters were, deep down, for himself."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "In the infirmary, a grandfather gave his pill to a child."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The doctor finally took a seasickness pill, after twenty-two years."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Tonight, forty pills were enough for eighty people."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Martina knows that ships do not die: they turn into bicycles."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Between a flash of lightning and a thunderclap, Martina counted to seven and fell asleep."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Don Benigno put rivets in this ship in 1971, and his granddaughter found out tonight."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "An eighty-two-year-old stowaway travels with a handwritten ticket."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Don Fermín went back to the Albatros kitchen thirty-six years later."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The captain recognised the stowaway: he was the one who taught him to peel potatoes."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The 1971 bottle was vinegar, and it was the best toast of the trip."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Wences kept the bottle from the launch for the last dawn."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The best barman in the Atlantic has not had a drink in thirty years, and he serves like nobody else."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "A ninety-year-old lady won a toaster at the last bingo and cried with happiness."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Tonight, instead of bingo, the ballroom filled up with stories."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Yoli, the entertainer, finally sang the song she had kept for twenty-eight years."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Maestro Aurelio played in the storm so that the ship would not feel alone."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "When the piano went quiet, the ship’s horn gave a perfect A."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Maestro Aurelio taught a passenger the four notes of the Albatros."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "A message came over the radio: Don Teodoro’s son is waiting for him on the quay."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Sole kept good news until dawn, the way you keep a present."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Sole, the radio operator, finally sent a message of her own: to her mother."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Norma said yes, but indoors, and she wears the ring on her thumb."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "A wave soaked Gustavo’s proposal, and Norma said yes laughing."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Norma confessed to Gustavo that she said yes twenty years ago, in silence."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The first officer confessed her fear, and the captain confessed his."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Marina gave her orders with a steady voice and shaking hands."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "Marina carries her fisherman father’s compass in the pocket of her uniform."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The captain reduced speed: we arrived late, but we all arrived."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The Albatros crossed the storm at full speed and saw the lighthouse at one minute to seven."
+    },
+    {
+      "path": "app/ultimo-crucero/story.mjs",
+      "text": "The captain asked for a lap of honour around the bay before handing over the ship."
+    },
+    {
+      "path": "app/ultimo-crucero/invitados.mjs",
+      "text": "What song do you sing on your good days?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Paco loved this ship."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What was Paco like?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "He was a waiter here, in 1978. He brought me a cocktail. It was not my cocktail."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "In which part of your house do you feel calmest?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you eat when you have the flu?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What hot drink do you have when you have a fever?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "I do not have a ticket. I was a cook on this ship, in 1971."
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "How do you feel today, at the end of the night?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "Where do you keep your special photos?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you have for dinner when you get home late?"
+    },
+    {
+      "path": "app/ultimo-crucero/levels/a0.mjs",
+      "text": "What do you do on Sunday afternoons?"
+    }
+  ]
+}

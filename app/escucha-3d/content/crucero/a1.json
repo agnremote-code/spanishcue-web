@@ -1,0 +1,1882 @@
+{
+ "game": "crucero",
+ "level": "A1",
+ "items": [
+  {
+   "id": "popa",
+   "title": "Un audio para la hija",
+   "place": "La cubierta de popa",
+   "context": "Amparo graba un mensaje de voz para su hija desde la popa.",
+   "speakers": [
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola, Carmen, cariño. Soy mamá. Estoy en el barco, en la popa. Hace mucho viento y el mar está negro. Tengo la caja de papá en las manos. Quiero tirar las cenizas al mar, pero el viento viene hacia el barco."
+    },
+    {
+     "s": 0,
+     "text": "Ezequiel, el sobrecargo, tiene ceniza en la chaqueta. Pobre chico. Mañana a las siete llego a Cádiz. Un beso grande."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A quién habla Amparo?",
+     "options": [
+      "A su hija Carmen",
+      "A su hermana Carmen",
+      "Al capitán del barco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo está el mar?",
+     "options": [
+      "Negro",
+      "Azul y tranquilo",
+      "Verde y bonito"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué problema tiene Amparo?",
+     "options": [
+      "El viento viene hacia el barco",
+      "No encuentra la caja",
+      "Está muy mareada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo llega a Cádiz?",
+     "options": [
+      "Esta noche a las once",
+      "Mañana por la tarde",
+      "Mañana a las siete"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué noticia prefieres contar con un audio y no por escrito?",
+     "model": "Prefiero contar las noticias tristes con un audio."
+    },
+    {
+     "q": "¿Qué haces con las cosas de una persona que ya no está?",
+     "model": "Guardo algunas cosas, como fotos y libros."
+    },
+    {
+     "q": "¿Cómo es el mar en tu país?",
+     "model": "En mi país el mar es frío y gris."
+    }
+   ],
+   "gaps": "Quiero [tirar] las [cenizas] al mar, pero el [viento] viene hacia el [barco].",
+   "glossary": [
+    {
+     "word": "popa",
+     "meaning": "la parte de atrás del barco"
+    },
+    {
+     "word": "sobrecargo",
+     "meaning": "persona que organiza los servicios para los pasajeros"
+    },
+    {
+     "word": "cariño",
+     "meaning": "palabra para una persona que quieres mucho"
+    }
+   ]
+  },
+  {
+   "id": "maquinas",
+   "title": "El primer día de Brayan",
+   "place": "La sala de máquinas",
+   "context": "Brayan explica su trabajo a su madre por teléfono.",
+   "speakers": [
+    {
+     "name": "Brayan",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Teodoro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mamá, estoy bien. Trabajo en la sala de máquinas. Hace mucho calor y hay mucho ruido."
+    },
+    {
+     "s": 1,
+     "text": "Brayan, ¿hablas con tu madre? Dile que eres muy bueno."
+    },
+    {
+     "s": 0,
+     "text": "Es don Teodoro, mi jefe. Habla con la máquina. La máquina se llama la Dolores."
+    },
+    {
+     "s": 1,
+     "text": "Y ella me escucha más que mi exmujer."
+    },
+    {
+     "s": 0,
+     "text": "Mamá, no te preocupes. Mañana llamo otra vez. Te quiero."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde trabaja Brayan?",
+     "options": [
+      "En la cocina",
+      "En el puente de mando con el capitán",
+      "En la sala de máquinas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es su lugar de trabajo?",
+     "options": [
+      "Hay frío y silencio",
+      "Es pequeño y limpio",
+      "Hay calor y ruido"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién es don Teodoro?",
+     "options": [
+      "El padre de Brayan",
+      "El jefe de Brayan",
+      "Un pasajero"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace Teodoro con la máquina?",
+     "options": [
+      "Le canta",
+      "La pinta",
+      "Habla con ella"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué ruido escuchas todo el día en tu trabajo?",
+     "model": "En mi trabajo escucho teléfonos todo el día."
+    },
+    {
+     "q": "¿A quién llamas cuando empiezas algo nuevo?",
+     "model": "Llamo a mi madre cuando empiezo algo nuevo."
+    },
+    {
+     "q": "¿A qué objeto de tu casa le hablas a veces?",
+     "model": "Le hablo al ordenador cuando no funciona."
+    }
+   ],
+   "gaps": "Trabajo en la [sala] de [máquinas]. Hace mucho [calor] y hay mucho [ruido].",
+   "glossary": [
+    {
+     "word": "jefe",
+     "meaning": "la persona que manda en un trabajo"
+    },
+    {
+     "word": "ruido",
+     "meaning": "sonido fuerte y molesto"
+    },
+    {
+     "word": "no te preocupes",
+     "meaning": "tranquila, todo está bien"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "El menú de la última noche",
+   "place": "La cocina",
+   "context": "Inés y Lalo escriben el menú de la cena.",
+   "speakers": [
+    {
+     "name": "Inés",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Lalo",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Chef, ¿qué ponemos en el menú?"
+    },
+    {
+     "s": 0,
+     "text": "Todo. Gambas, pescado, carne, arroz, ensaladas y cuarenta tartas."
+    },
+    {
+     "s": 1,
+     "text": "Es mucha comida para una noche."
+    },
+    {
+     "s": 0,
+     "text": "Mañana el barco va al desguace. La comida no puede ir. Esta noche come todo el mundo."
+    },
+    {
+     "s": 1,
+     "text": "¿Los marineros también?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, Lalo. Los marineros, los camareros, los mecánicos. Todos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué escriben Inés y Lalo?",
+     "options": [
+      "Una carta",
+      "Una lista de compras",
+      "El menú"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas tartas hay?",
+     "options": [
+      "Cuarenta",
+      "Catorce",
+      "Cuatro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde va el barco mañana?",
+     "options": [
+      "A otro país con pasajeros",
+      "A una fiesta",
+      "Al desguace"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién come esta noche?",
+     "options": [
+      "Solo los pasajeros",
+      "Solo el capitán",
+      "Todo el mundo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué plato pones en la mesa para celebrar algo grande?",
+     "model": "Pongo una paella grande en la mesa."
+    },
+    {
+     "q": "¿Qué comida tiras a la basura y te da pena?",
+     "model": "Me da pena tirar el pan viejo."
+    },
+    {
+     "q": "¿Con quién comes los días de fiesta?",
+     "model": "Como con mi familia y algunos amigos."
+    }
+   ],
+   "gaps": "Mañana el [barco] va al [desguace]. La [comida] no puede [ir].",
+   "glossary": [
+    {
+     "word": "menú",
+     "meaning": "lista de platos"
+    },
+    {
+     "word": "desguace",
+     "meaning": "lugar donde rompen barcos viejos para usar el metal"
+    },
+    {
+     "word": "marineros",
+     "meaning": "personas que trabajan en un barco"
+    }
+   ]
+  },
+  {
+   "id": "pasillo",
+   "title": "La rutina de Rosa",
+   "place": "El pasillo de los camarotes",
+   "context": "Rosa cuenta un día normal de su trabajo.",
+   "speakers": [
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Me llamo Rosa y soy camarera de pisos. Me levanto a las cinco. Limpio veinte camarotes cada día. Hago las camas, cambio las toallas y dejo un chocolate en la almohada."
+    },
+    {
+     "s": 0,
+     "text": "Vivo en el barco desde hace veinticinco años. No tengo otra casa. Tengo un gato, Almirante. Es un secreto. Mañana el barco cierra y no sé adónde voy."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuál es el trabajo de Rosa?",
+     "options": [
+      "Camarera de pisos",
+      "Cocinera",
+      "Médica del barco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos camarotes limpia cada día?",
+     "options": [
+      "Doce",
+      "Veinte",
+      "Cincuenta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué deja en la almohada?",
+     "options": [
+      "Un chocolate",
+      "Una flor",
+      "Una carta de la naviera"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto tiempo lleva Rosa en el barco?",
+     "options": [
+      "Veinticinco años",
+      "Cinco años",
+      "Un año y medio"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces tú antes de las siete de la mañana?",
+     "model": "Antes de las siete me ducho y desayuno."
+    },
+    {
+     "q": "¿Qué pequeño detalle te gusta en un hotel?",
+     "model": "Me gusta encontrar agua y fruta en la habitación."
+    },
+    {
+     "q": "¿Qué lugar es tu casa de verdad?",
+     "model": "Mi casa de verdad es el pueblo de mis padres."
+    }
+   ],
+   "gaps": "Hago las [camas], cambio las [toallas] y dejo un [chocolate] en la [almohada].",
+   "glossary": [
+    {
+     "word": "camarera de pisos",
+     "meaning": "persona que limpia las habitaciones"
+    },
+    {
+     "word": "almohada",
+     "meaning": "lo que pones debajo de la cabeza en la cama"
+    },
+    {
+     "word": "secreto",
+     "meaning": "algo que no sabe nadie"
+    }
+   ]
+  },
+  {
+   "id": "luna",
+   "title": "Una cena imposible",
+   "place": "El camarote 12",
+   "context": "Mateo habla con Lucía sobre la cena con el capitán.",
+   "speakers": [
+    {
+     "name": "Mateo",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lucía, esta noche cenamos en la mesa del capitán. Es una sorpresa."
+    },
+    {
+     "s": 1,
+     "text": "Mateo, no puedo. Estoy mareada desde Tenerife."
+    },
+    {
+     "s": 0,
+     "text": "Pero es el último crucero del barco. Es especial. Hay langosta."
+    },
+    {
+     "s": 1,
+     "text": "¿Langosta? Por favor, no digas «langosta». Dame el balde."
+    },
+    {
+     "s": 0,
+     "text": "Vale, vale. No hay cena. Hay agua y galletas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué sorpresa tiene Mateo?",
+     "options": [
+      "Un viaje a Tenerife",
+      "Una cena con el capitán",
+      "Un regalo de boda"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Desde cuándo está mareada Lucía?",
+     "options": [
+      "Desde esta mañana",
+      "Desde la cena",
+      "Desde Tenerife"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué comida hay en la cena?",
+     "options": [
+      "Pescado con patatas",
+      "Langosta",
+      "Pollo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay al final para Lucía?",
+     "options": [
+      "Agua y galletas",
+      "Langosta y vino",
+      "Sopa caliente"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué comida no puedes ni mirar?",
+     "model": "No puedo mirar el hígado."
+    },
+    {
+     "q": "¿Qué sorpresa te gusta recibir?",
+     "model": "Me gusta recibir una cena especial."
+    },
+    {
+     "q": "¿Qué viaje tuyo empieza mal y termina bien?",
+     "model": "Mi viaje a Roma empieza mal, con lluvia, pero termina muy bien."
+    }
+   ],
+   "gaps": "¿[Langosta]? Por favor, no [digas] «langosta». [Dame] el [balde].",
+   "glossary": [
+    {
+     "word": "mareada",
+     "meaning": "con mal de estómago por el movimiento"
+    },
+    {
+     "word": "langosta",
+     "meaning": "animal del mar, grande y caro"
+    },
+    {
+     "word": "balde",
+     "meaning": "recipiente para agua"
+    }
+   ]
+  },
+  {
+   "id": "pareja",
+   "title": "¿Quién se queda con el perro?",
+   "place": "El camarote 15",
+   "context": "Elena y Ramón hablan de su perro.",
+   "speakers": [
+    {
+     "name": "Elena",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Ramón",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ramón, tenemos un problema. ¿Quién se queda con Tango?"
+    },
+    {
+     "s": 1,
+     "text": "Yo, claro. Tango duerme conmigo."
+    },
+    {
+     "s": 0,
+     "text": "Tango duerme contigo porque tú roncas y él también ronca."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, entonces Tango vive una semana contigo y una semana conmigo."
+    },
+    {
+     "s": 0,
+     "text": "¿Y los domingos?"
+    },
+    {
+     "s": 1,
+     "text": "Los domingos… comemos los tres juntos, como siempre."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién es Tango?",
+     "options": [
+      "El hijo de Elena y Ramón",
+      "El perro",
+      "Un amigo de Ramón"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Con quién duerme Tango?",
+     "options": [
+      "Con Elena",
+      "Solo, en el sofá",
+      "Con Ramón"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hacen Ramón y Tango?",
+     "options": [
+      "Cantan",
+      "Bailan",
+      "Roncan"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué propone Ramón para los domingos?",
+     "options": [
+      "Comer los tres juntos",
+      "Pasear por la playa",
+      "Ir al cine"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué animal de tu vida recuerdas con cariño?",
+     "model": "Recuerdo con cariño a mi gata Luna."
+    },
+    {
+     "q": "¿Qué costumbre tienes los domingos?",
+     "model": "Los domingos desayuno tarde y leo."
+    },
+    {
+     "q": "¿Qué ruido de otra persona te ayuda a dormir?",
+     "model": "El ruido de la lavadora me ayuda a dormir."
+    }
+   ],
+   "gaps": "Bueno, entonces Tango [vive] una [semana] contigo y una semana [conmigo]. ¿Y los [domingos]?",
+   "glossary": [
+    {
+     "word": "se queda con",
+     "meaning": "tiene, vive con"
+    },
+    {
+     "word": "roncas",
+     "meaning": "haces ruido con la nariz cuando duermes"
+    },
+    {
+     "word": "juntos",
+     "meaning": "en el mismo lugar, con otra persona"
+    }
+   ]
+  },
+  {
+   "id": "cartas",
+   "title": "La primera carta",
+   "place": "El camarote 21",
+   "context": "Germán lee el principio de su primera carta, de 1986.",
+   "speakers": [
+    {
+     "name": "Germán",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Querida Isabel: Hoy es lunes y llueve en Quito. Trabajo en un banco. No me gusta mi trabajo. Pienso en el barco, en el baile y en tu vestido amarillo."
+    },
+    {
+     "s": 0,
+     "text": "Tengo tu dirección en un papel, pero no tengo valor. Esta es mi primera carta. No sé si la voy a mandar. Un abrazo, Germán."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiempo hace en Quito?",
+     "options": [
+      "Hace sol",
+      "Nieva",
+      "Llueve"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde trabaja Germán?",
+     "options": [
+      "En un barco",
+      "En un hotel",
+      "En un banco"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De qué color es el vestido de Isabel?",
+     "options": [
+      "Rojo y blanco",
+      "Azul",
+      "Amarillo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le falta a Germán?",
+     "options": [
+      "Valor",
+      "La dirección",
+      "Dinero"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te da valor en un momento difícil?",
+     "model": "Me da valor hablar con mi hermana."
+    },
+    {
+     "q": "¿Qué trabajo no te gusta nada?",
+     "model": "No me gusta nada trabajar de noche."
+    },
+    {
+     "q": "¿Qué ropa recuerdas de una persona especial?",
+     "model": "Recuerdo la chaqueta verde de mi abuelo."
+    }
+   ],
+   "gaps": "Tengo tu [dirección] en un [papel], pero no tengo [valor]. Esta es mi [primera] carta.",
+   "glossary": [
+    {
+     "word": "querida",
+     "meaning": "palabra cariñosa al principio de una carta"
+    },
+    {
+     "word": "valor",
+     "meaning": "fuerza para hacer algo difícil"
+    },
+    {
+     "word": "dirección",
+     "meaning": "la calle y el número de una casa"
+    }
+   ]
+  },
+  {
+   "id": "enfermeria",
+   "title": "La lista de la doctora",
+   "place": "La enfermería",
+   "context": "La doctora Beatriz organiza las pastillas con la ayuda de Rosa.",
+   "speakers": [
+    {
+     "name": "Beatriz",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Rosa",
+     "country": "Paraguay",
+     "voice": "es-PY-TaniaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Rosa, tengo cuarenta pastillas y sesenta y tres personas mareadas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué hacemos, doctora?"
+    },
+    {
+     "s": 0,
+     "text": "Primero, los niños y las personas mayores. Después, los demás."
+    },
+    {
+     "s": 1,
+     "text": "Hay un señor que quiere tres pastillas."
+    },
+    {
+     "s": 0,
+     "text": "Tres no. Una. Y una galleta salada. Y que mire por la ventana."
+    },
+    {
+     "s": 1,
+     "text": "Doctora, usted está muy pálida."
+    },
+    {
+     "s": 0,
+     "text": "No es nada, Rosa. Es la luz."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién ayuda a la doctora?",
+     "options": [
+      "Lucía",
+      "El capitán",
+      "Rosa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién recibe las pastillas primero?",
+     "options": [
+      "Los marineros",
+      "El capitán y los oficiales",
+      "Los niños y los mayores"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere un señor?",
+     "options": [
+      "Agua con sal",
+      "Tres pastillas",
+      "Una galleta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo está la doctora?",
+     "options": [
+      "Muy pálida",
+      "Muy contenta",
+      "Muy cansada y dormida"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué tomas cuando te duele la cabeza?",
+     "model": "Tomo agua y descanso un poco."
+    },
+    {
+     "q": "¿Qué persona te prepara una sopa cuando estás mal?",
+     "model": "Mi pareja me prepara una sopa."
+    },
+    {
+     "q": "¿Qué cosa dices cuando no quieres hablar de un problema?",
+     "model": "Digo «no es nada» y cambio de tema."
+    }
+   ],
+   "gaps": "Primero, los [niños] y las [personas] [mayores]. Después, los [demás].",
+   "glossary": [
+    {
+     "word": "pálida",
+     "meaning": "con la cara blanca"
+    },
+    {
+     "word": "galleta salada",
+     "meaning": "galleta sin azúcar"
+    },
+    {
+     "word": "los demás",
+     "meaning": "las otras personas"
+    }
+   ]
+  },
+  {
+   "id": "nina",
+   "title": "Contar los truenos",
+   "place": "La cubierta de botes, babor",
+   "context": "El abuelo Benigno enseña a Martina a contar entre el relámpago y el trueno.",
+   "speakers": [
+    {
+     "name": "Benigno",
+     "country": "Costa Rica",
+     "voice": "es-CR-JuanNeural"
+    },
+    {
+     "name": "Martina",
+     "country": "Costa Rica",
+     "voice": "es-CR-MariaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Martina, mira. Ahí está el relámpago. Ahora contamos: uno, dos, tres…"
+    },
+    {
+     "s": 1,
+     "text": "¡Cuatro, cinco! ¡El trueno!"
+    },
+    {
+     "s": 0,
+     "text": "Muy bien. Cinco segundos. La tormenta está lejos."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si cuento uno?"
+    },
+    {
+     "s": 0,
+     "text": "Entonces está cerca. Pero el barco es fuerte, ¿eh?"
+    },
+    {
+     "s": 1,
+     "text": "Abuelo, ¿tú tienes miedo?"
+    },
+    {
+     "s": 0,
+     "text": "Un poquito. Por eso cuento contigo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué enseña el abuelo?",
+     "options": [
+      "A nadar en el mar abierto",
+      "A leer un mapa de estrellas",
+      "A contar entre el relámpago y el trueno"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos segundos cuentan?",
+     "options": [
+      "Tres",
+      "Cinco",
+      "Diez o más"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué significa contar cinco?",
+     "options": [
+      "Que la tormenta está lejos",
+      "Que la tormenta está muy cerca",
+      "Que la tormenta termina"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Tiene miedo el abuelo?",
+     "options": [
+      "Un poquito",
+      "No, nada",
+      "Mucho, muchísimo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces para tener calma en una tormenta?",
+     "model": "Pongo música y leo un libro."
+    },
+    {
+     "q": "¿Qué te enseñan tus abuelos o tus padres?",
+     "model": "Mi abuela me enseña a cocinar."
+    },
+    {
+     "q": "¿Con quién compartes tus miedos?",
+     "model": "Comparto mis miedos con mi mejor amiga."
+    }
+   ],
+   "gaps": "Muy bien. Cinco [segundos]. La [tormenta] está [lejos]. ¿Y si [cuento] uno?",
+   "glossary": [
+    {
+     "word": "relámpago",
+     "meaning": "luz fuerte en el cielo"
+    },
+    {
+     "word": "trueno",
+     "meaning": "el ruido fuerte después del relámpago"
+    },
+    {
+     "word": "un poquito",
+     "meaning": "un poco"
+    }
+   ]
+  },
+  {
+   "id": "polizon",
+   "title": "El viaje del carro",
+   "place": "La cubierta de botes, estribor",
+   "context": "Fermín cuenta a Julián cómo subió al barco.",
+   "speakers": [
+    {
+     "name": "Fermín",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Don Fermín, ¿cómo sube usted al barco sin billete?"
+    },
+    {
+     "s": 0,
+     "text": "Fácil. En Tenerife hay un carro de ropa sucia. Me meto en el carro, debajo de las sábanas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y nadie lo ve?"
+    },
+    {
+     "s": 0,
+     "text": "Nadie. Soy pequeño y viejo. Los viejos somos invisibles."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué?"
+    },
+    {
+     "s": 0,
+     "text": "Porque trabajo aquí veinte años. Cocino aquí. Quiero el último viaje."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde sube Fermín al barco?",
+     "options": [
+      "En Tenerife",
+      "En Cádiz",
+      "En Lisboa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde se mete Fermín?",
+     "options": [
+      "En un carro de ropa sucia",
+      "En una maleta grande",
+      "En un bote salvavidas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Fermín, ¿cómo son los viejos?",
+     "options": [
+      "Muy fuertes",
+      "Invisibles",
+      "Muy rápidos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere Fermín?",
+     "options": [
+      "Un trabajo nuevo",
+      "El último viaje",
+      "Mucho dinero"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugar de tu pasado quieres visitar otra vez?",
+     "model": "Quiero visitar mi primera escuela."
+    },
+    {
+     "q": "¿Dónde te escondes cuando no quieres ver a nadie?",
+     "model": "Me escondo en mi habitación con música."
+    },
+    {
+     "q": "¿Quién es invisible en tu ciudad?",
+     "model": "Las personas mayores son invisibles a veces."
+    }
+   ],
+   "gaps": "En Tenerife hay un [carro] de [ropa] [sucia]. Me meto en el carro, debajo de las [sábanas].",
+   "glossary": [
+    {
+     "word": "carro",
+     "meaning": "mesa con ruedas para llevar cosas"
+    },
+    {
+     "word": "sábanas",
+     "meaning": "telas de la cama"
+    },
+    {
+     "word": "invisibles",
+     "meaning": "que nadie ve"
+    }
+   ]
+  },
+  {
+   "id": "barra",
+   "title": "El último cliente",
+   "place": "La barra del salón",
+   "context": "Wences habla con un cliente, el maestro Aurelio, en la barra.",
+   "speakers": [
+    {
+     "name": "Wences",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wences, un café, por favor. Sin azúcar."
+    },
+    {
+     "s": 0,
+     "text": "¿Un café a medianoche, maestro?"
+    },
+    {
+     "s": 1,
+     "text": "Esta noche no duermo. Esta noche toco."
+    },
+    {
+     "s": 0,
+     "text": "Yo tampoco duermo. La barra cierra a la una. Para siempre."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué haces mañana?"
+    },
+    {
+     "s": 0,
+     "text": "No sé. Treinta años detrás de esta barra. Mañana, delante de la barra."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pide Aurelio?",
+     "options": [
+      "Un vino tinto",
+      "Un café sin azúcar",
+      "Agua con gas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué va a hacer Aurelio esta noche?",
+     "options": [
+      "Tocar",
+      "Dormir",
+      "Bailar"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora cierra la barra?",
+     "options": [
+      "A las doce",
+      "A las dos",
+      "A la una"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años trabaja Wences en la barra?",
+     "options": [
+      "Trece",
+      "Treinta",
+      "Veinte"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué bebes cuando no quieres dormir?",
+     "model": "Bebo café o té negro."
+    },
+    {
+     "q": "¿Qué lugar de tu ciudad cierra y te da pena?",
+     "model": "Me da pena el cine viejo de mi barrio."
+    },
+    {
+     "q": "¿Qué cambia en tu vida el próximo año?",
+     "model": "El próximo año empiezo un trabajo nuevo."
+    }
+   ],
+   "gaps": "Yo [tampoco] duermo. La [barra] cierra a la [una]. Para [siempre].",
+   "glossary": [
+    {
+     "word": "medianoche",
+     "meaning": "las doce de la noche"
+    },
+    {
+     "word": "sin azúcar",
+     "meaning": "solo, sin nada dulce"
+    },
+    {
+     "word": "tampoco",
+     "meaning": "también no"
+    }
+   ]
+  },
+  {
+   "id": "bingo",
+   "title": "Yoli presenta la noche",
+   "place": "La pista de baile",
+   "context": "Yoli presenta la última noche al micrófono.",
+   "speakers": [
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Buenas noches, Albatros! Soy Yoli, su animadora. Esta es la última noche del barco. Hay bingo, hay baile y hay tormenta. Si el barco se mueve, ustedes bailan con él."
+    },
+    {
+     "s": 0,
+     "text": "El premio del bingo es una tostadora. Sí, una tostadora. Y si alguien gana, yo canto. Bueno, no. Yo no canto nunca. ¡Primer número!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién habla?",
+     "options": [
+      "La capitana",
+      "La animadora",
+      "Una pasajera"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay esta noche?",
+     "options": [
+      "Solo bingo, sin baile",
+      "Bingo, baile y tormenta",
+      "Una cena de gala"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuál es el premio del bingo?",
+     "options": [
+      "Un viaje",
+      "Una tostadora",
+      "Una botella"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué no hace nunca Yoli?",
+     "options": [
+      "Bailar",
+      "Cantar",
+      "Jugar al bingo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué premio te gusta ganar?",
+     "model": "Me gusta ganar entradas para un concierto."
+    },
+    {
+     "q": "¿Qué no haces nunca delante de otras personas?",
+     "model": "No canto nunca delante de otras personas."
+    },
+    {
+     "q": "¿Qué te da nervios delante de un micrófono?",
+     "model": "Me dan nervios olvidar las palabras."
+    }
+   ],
+   "gaps": "Si el [barco] se [mueve], ustedes [bailan] con [él].",
+   "glossary": [
+    {
+     "word": "animadora",
+     "meaning": "persona que organiza juegos y fiestas"
+    },
+    {
+     "word": "premio",
+     "meaning": "lo que recibes cuando ganas"
+    },
+    {
+     "word": "tostadora",
+     "meaning": "máquina para tostar pan"
+    }
+   ]
+  },
+  {
+   "id": "piano",
+   "title": "La canción del barco",
+   "place": "El escenario del salón",
+   "context": "Aurelio explica a Yoli qué canción va a tocar.",
+   "speakers": [
+    {
+     "name": "Aurelio",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Yoli",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Maestro, ¿qué canción toca ahora?"
+    },
+    {
+     "s": 0,
+     "text": "La canción del Albatros. Tiene cuatro notas. Escucha: la, re, mi, la."
+    },
+    {
+     "s": 1,
+     "text": "Es muy corta."
+    },
+    {
+     "s": 0,
+     "text": "Es corta, pero es la canción del barco. La toco todas las noches desde mil novecientos noventa y cinco."
+    },
+    {
+     "s": 1,
+     "text": "¿Y quién la escribe?"
+    },
+    {
+     "s": 0,
+     "text": "Yo. Para una pasajera. Pero eso es otra historia."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué canción toca Aurelio?",
+     "options": [
+      "La canción del Albatros",
+      "Una canción de amor famosa",
+      "Una canción de cumpleaños"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas notas tiene?",
+     "options": [
+      "Catorce",
+      "Cuarenta",
+      "Cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Desde cuándo la toca?",
+     "options": [
+      "Desde dos mil cinco",
+      "Desde mil novecientos noventa y cinco",
+      "Desde mil novecientos setenta y nueve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Para quién escribe Aurelio la canción?",
+     "options": [
+      "Para el capitán",
+      "Para Yoli",
+      "Para una pasajera"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué melodía tienes en la cabeza esta semana?",
+     "model": "Esta semana tengo en la cabeza una canción de la radio."
+    },
+    {
+     "q": "¿Qué cosa haces desde hace muchos años?",
+     "model": "Juego al fútbol desde los diez años."
+    },
+    {
+     "q": "¿Quién escribe canciones o poemas en tu familia?",
+     "model": "Mi tío escribe poemas para sus nietos."
+    }
+   ],
+   "gaps": "Es corta, pero es la [canción] del [barco]. La [toco] todas las [noches] desde mil novecientos noventa y cinco.",
+   "glossary": [
+    {
+     "word": "notas",
+     "meaning": "sonidos de la música, como do, re, mi"
+    },
+    {
+     "word": "corta",
+     "meaning": "no larga"
+    },
+    {
+     "word": "historia",
+     "meaning": "cosa que pasa y se cuenta"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Los mensajes de la noche",
+   "place": "La cabina de radio",
+   "context": "Sole lee los mensajes que llegan por radio.",
+   "speakers": [
+    {
+     "name": "Sole",
+     "country": "Nicaragua",
+     "voice": "es-NI-YolandaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Son las dos y media. Llegan muchos mensajes. Uno es de la compañía: «Velocidad máxima». Otro es para Lucía, del camarote doce: «Feliz luna de miel, mamá». Otro es para don Teodoro, de su hijo."
+    },
+    {
+     "s": 0,
+     "text": "Para mí no hay mensajes. Nunca hay mensajes para la radiotelegrafista. Bueno, es normal. Yo leo los mensajes de todos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es?",
+     "options": [
+      "Las doce y media",
+      "Las dos y media",
+      "Las cuatro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice el mensaje de la compañía?",
+     "options": [
+      "«Bajen la velocidad»",
+      "«Feliz viaje»",
+      "«Velocidad máxima»"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De quién es el mensaje para Lucía?",
+     "options": [
+      "De su hermana",
+      "De su amiga",
+      "De su madre"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos mensajes hay para Sole?",
+     "options": [
+      "Solo uno",
+      "Ninguno",
+      "Muchos, más de cien"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mensaje te da alegría?",
+     "model": "Me da alegría un mensaje de un viejo amigo."
+    },
+    {
+     "q": "¿A quién escribes cuando tienes una buena noticia?",
+     "model": "Escribo a mi madre primero."
+    },
+    {
+     "q": "¿Qué mensaje esperas con ganas esta semana?",
+     "model": "Espero un mensaje del trabajo nuevo."
+    }
+   ],
+   "gaps": "Para mí no hay [mensajes]. [Nunca] hay mensajes para la [radiotelegrafista]. Bueno, es [normal].",
+   "glossary": [
+    {
+     "word": "radiotelegrafista",
+     "meaning": "persona que trabaja con la radio del barco"
+    },
+    {
+     "word": "compañía",
+     "meaning": "empresa"
+    },
+    {
+     "word": "nunca",
+     "meaning": "ninguna vez"
+    }
+   ]
+  },
+  {
+   "id": "proa",
+   "title": "Veinte años juntos",
+   "place": "La proa",
+   "context": "Norma habla con Gustavo en la puerta de la proa.",
+   "speakers": [
+    {
+     "name": "Norma",
+     "country": "Guatemala",
+     "voice": "es-GT-MartaNeural"
+    },
+    {
+     "name": "Gustavo",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Gustavo, ¿qué haces aquí fuera? Llueve mucho."
+    },
+    {
+     "s": 1,
+     "text": "Norma, tengo una pregunta. Es importante."
+    },
+    {
+     "s": 0,
+     "text": "¿Ahora? ¿Aquí? Tengo el pelo mojado."
+    },
+    {
+     "s": 1,
+     "text": "Llevamos veinte años juntos. Tenemos una casa, un perro y dos nietos."
+    },
+    {
+     "s": 0,
+     "text": "Gustavo, no tenemos nietos."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, tus nietos. Norma, ¿te casas conmigo?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiempo hace?",
+     "options": [
+      "Hace calor",
+      "Llueve mucho",
+      "Hace sol y calor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años llevan juntos?",
+     "options": [
+      "Veinte",
+      "Diez",
+      "Treinta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo tiene el pelo Norma?",
+     "options": [
+      "Corto",
+      "Mojado",
+      "Largo y seco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué error hay con los nietos?",
+     "options": [
+      "Nunca vienen a verlos",
+      "Son nietos de Norma, no de los dos",
+      "Viven muy lejos de ellos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosas tienes ahora que no tienes hace cinco años?",
+     "model": "Ahora tengo un piso y un gato."
+    },
+    {
+     "q": "¿Qué lugar de tu ciudad es romántico?",
+     "model": "El parque del río es romántico."
+    },
+    {
+     "q": "¿Cómo te sientes con el pelo mojado?",
+     "model": "Con el pelo mojado tengo frío."
+    }
+   ],
+   "gaps": "Llevamos [veinte] años juntos. Tenemos una [casa], un [perro] y dos [nietos].",
+   "glossary": [
+    {
+     "word": "mojado",
+     "meaning": "con agua"
+    },
+    {
+     "word": "juntos",
+     "meaning": "uno con el otro"
+    },
+    {
+     "word": "nietos",
+     "meaning": "hijos de los hijos"
+    }
+   ]
+  },
+  {
+   "id": "oficial",
+   "title": "Las órdenes de Marina",
+   "place": "El alerón del puente",
+   "context": "Marina da órdenes a Julián durante la tormenta.",
+   "speakers": [
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Julián",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Julián, revisa los botes salvavidas, por favor. Todos."
+    },
+    {
+     "s": 1,
+     "text": "Sí, oficial. ¿Y los pasajeros?"
+    },
+    {
+     "s": 0,
+     "text": "Los pasajeros, dentro. Nadie en la cubierta."
+    },
+    {
+     "s": 1,
+     "text": "Hay un señor en la proa con un anillo."
+    },
+    {
+     "s": 0,
+     "text": "¿Con un anillo? Bueno, cinco minutos. Después, dentro."
+    },
+    {
+     "s": 1,
+     "text": "Oficial, ¿está bien? Sus manos tiemblan."
+    },
+    {
+     "s": 0,
+     "text": "Es el frío, Julián. Solo el frío."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué revisa Julián?",
+     "options": [
+      "Las ventanas",
+      "Los camarotes",
+      "Los botes salvavidas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde deben estar los pasajeros?",
+     "options": [
+      "Dentro",
+      "En la cubierta",
+      "En la proa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene el señor de la proa?",
+     "options": [
+      "Un anillo",
+      "Una cámara",
+      "Un paraguas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "Según Marina, ¿por qué tiemblan sus manos?",
+     "options": [
+      "Por el frío",
+      "Por el miedo",
+      "Por el café"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué dices cuando no quieres hablar de tu miedo?",
+     "model": "Digo que tengo sueño."
+    },
+    {
+     "q": "¿A quién obedeces sin preguntar nada?",
+     "model": "Obedezco a mi médica sin preguntar."
+    },
+    {
+     "q": "¿Cuándo tiemblan tus manos o tu voz?",
+     "model": "Me tiembla la voz en los exámenes orales."
+    }
+   ],
+   "gaps": "Los [pasajeros], [dentro]. Nadie en la [cubierta]. Hay un señor en la proa con un [anillo].",
+   "glossary": [
+    {
+     "word": "botes salvavidas",
+     "meaning": "barcos pequeños para emergencias"
+    },
+    {
+     "word": "tiemblan",
+     "meaning": "se mueven solas, por frío o miedo"
+    },
+    {
+     "word": "dentro",
+     "meaning": "en el interior"
+    }
+   ]
+  },
+  {
+   "id": "capitan",
+   "title": "El último viaje del capitán",
+   "place": "El puente de mando",
+   "context": "El capitán Salgado graba un mensaje para su nieto.",
+   "speakers": [
+    {
+     "name": "Salgado",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola, Pablo. Soy el abuelo. Estoy en el puente del Albatros. Es mi último viaje. Hay una tormenta muy fuerte, pero el barco es valiente, como tú."
+    },
+    {
+     "s": 0,
+     "text": "Mañana llego a Cádiz y ya no soy capitán. Soy solo el abuelo. ¿Vamos a pescar el domingo? Tú y yo, en un barco pequeño. Un abrazo de capitán."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién es Pablo?",
+     "options": [
+      "Un marinero",
+      "El hijo de Amparo",
+      "El nieto del capitán"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es el barco, según el capitán?",
+     "options": [
+      "Viejo y lento",
+      "Valiente",
+      "Pequeño"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué es el capitán después de mañana?",
+     "options": [
+      "Solo el abuelo",
+      "Capitán de otro barco",
+      "Pescador"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere hacer el domingo?",
+     "options": [
+      "Navegar en el Albatros",
+      "Pescar con Pablo",
+      "Ir al cine"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué vas a hacer cuando no trabajes?",
+     "model": "Voy a viajar y a leer mucho."
+    },
+    {
+     "q": "¿Qué actividad tranquila haces con tus abuelos o tus padres?",
+     "model": "Juego a las cartas con mi abuelo."
+    },
+    {
+     "q": "¿Quién es valiente en tu vida?",
+     "model": "Mi madre es muy valiente."
+    }
+   ],
+   "gaps": "Mañana [llego] a [Cádiz] y ya no soy [capitán]. Soy solo el [abuelo].",
+   "glossary": [
+    {
+     "word": "puente",
+     "meaning": "lugar del barco donde está el capitán"
+    },
+    {
+     "word": "valiente",
+     "meaning": "sin miedo, con fuerza"
+    },
+    {
+     "word": "pescar",
+     "meaning": "sacar peces del agua"
+    }
+   ]
+  },
+  {
+   "id": "amanecer",
+   "title": "Después de la tormenta",
+   "place": "La cubierta de popa",
+   "context": "Al amanecer, Marina y Amparo hablan en la popa.",
+   "speakers": [
+    {
+     "name": "Marina",
+     "country": "Panamá",
+     "voice": "es-PA-MargaritaNeural"
+    },
+    {
+     "name": "Amparo",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Buenos días, oficial. ¿Ya no hay tormenta?"
+    },
+    {
+     "s": 0,
+     "text": "No, señora. El mar está tranquilo. Ahí está el faro de Cádiz."
+    },
+    {
+     "s": 1,
+     "text": "Entonces ahora sí. Ahora el viento está bien."
+    },
+    {
+     "s": 0,
+     "text": "¿Para las cenizas de su marido?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Para Paco. Él llega a Cádiz conmigo, pero se queda en el mar."
+    },
+    {
+     "s": 0,
+     "text": "Es un lugar bonito para quedarse."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está el mar?",
+     "options": [
+      "Tranquilo",
+      "Con olas grandes",
+      "Negro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ven?",
+     "options": [
+      "La luna llena",
+      "Un barco pequeño",
+      "El faro de Cádiz"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué ahora sí?",
+     "options": [
+      "Porque el viento está bien",
+      "Porque es tarde",
+      "Porque llueve"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde se queda Paco?",
+     "options": [
+      "En Cádiz",
+      "En el mar",
+      "En el barco"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugar es bonito para recordar a alguien?",
+     "model": "Un jardín con flores es bonito para recordar."
+    },
+    {
+     "q": "¿Qué ves primero desde tu ventana por la mañana?",
+     "model": "Veo un árbol y la calle."
+    },
+    {
+     "q": "¿Dónde ves un amanecer bonito cerca de tu casa?",
+     "model": "Veo un amanecer bonito desde el puente del río."
+    }
+   ],
+   "gaps": "No, señora. El mar está [tranquilo]. Ahí está el [faro] de [Cádiz]. Entonces ahora sí. Ahora el [viento] está bien.",
+   "glossary": [
+    {
+     "word": "faro",
+     "meaning": "torre con luz para los barcos"
+    },
+    {
+     "word": "tranquilo",
+     "meaning": "sin movimiento fuerte"
+    },
+    {
+     "word": "quedarse",
+     "meaning": "no irse, estar en un lugar"
+    }
+   ]
+  }
+ ]
+}

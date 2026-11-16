@@ -178,6 +178,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/autoestudio-espejo-english-20261105.json',
   'docs/audits/hr-crisis-english-additions-20261110.json',
   'docs/audits/la-casa-del-reality-english-additions-20261116.json',
+  'docs/audits/ultimo-crucero-english-additions-20261116.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {
