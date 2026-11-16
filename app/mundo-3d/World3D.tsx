@@ -9,6 +9,7 @@
 // The lesson (CountryGame.tsx) owns the state; this component follows its
 // props and reports gates, circles, portals and where the player is.
 import * as THREE from 'three';
+import { enableRealPeople } from '../mundo-real/persona';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
@@ -248,7 +249,11 @@ export default function World3D(props: WorldProps) {
       spent = null; inside = null;
     }
     function buildRegion(id: string, builder: SceneBuilder) {
-      const built = keepPeopleClear(builder({ low, shadows: !low, flag: live.current.country.id }));
+      // People with real bodies (skin, hair, clothes) on computers; phones keep the light drawn figures. ?real=0 turns it off.
+      enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') !== '0');
+      let scenery: ReturnType<SceneBuilder>;
+      try { scenery = builder({ low, shadows: !low, flag: live.current.country.id }); } finally { enableRealPeople(false); }
+      const built = keepPeopleClear(scenery);
       const rings = new Map<string, ReturnType<typeof spotRing>>();
       for (const s of built.spots) rings.set(s.id, spotRing(built.group, s.x, s.z));
       // Doors glow blue on the ground, so they read as a way somewhere else.
