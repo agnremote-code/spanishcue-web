@@ -79,6 +79,9 @@ export type Person = {
   real?: () => void;
 };
 
+// Lets app/mundo-real/persona give every new person a realistic body without each world asking for it.
+export const personHooks: { created?: (person: Person) => void } = {};
+
 // ------------------------------------------------------------------ caches
 
 const materialCache = new Map<string, THREE.MeshStandardMaterial>();
@@ -613,7 +616,7 @@ function normalise(look: Look): Full {
   };
 }
 
-type Rig = {
+export type Rig = {
   body: THREE.Group;
   scale: number;
   full: Full;
@@ -949,7 +952,7 @@ export function createPerson(look: Look, shadows = true): Person {
     glanceIn: r() * 4, glancing: 0, lookNow: 0, torsoLook: 0,
     old, variant: Math.floor(r() * 4), quirk: r(), nodClock: r() * 6, yawnIn: 6 + r() * 10,
   };
-  return {
+  const person: Person = {
     root,
     parts: { hips, torso, head, armL: left.arm, armR: right.arm, foreL: left.fore, foreR: right.fore, legL: legL.leg, legR: legR.leg, shinL: legL.shin, shinR: legR.shin },
     phase: r() * 6,
@@ -960,6 +963,8 @@ export function createPerson(look: Look, shadows = true): Person {
     mood: 'neutral',
     rig,
   };
+  personHooks.created?.(person);
+  return person;
 }
 
 // ------------------------------------------------------------------ looks

@@ -9,7 +9,7 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { clone as cloneSkinned } from 'three/addons/utils/SkeletonUtils.js';
-import type { Person } from '../noche-abierta/people3d';
+import { personHooks, type Person } from '../noche-abierta/people3d';
 
 type PartName = keyof Person['parts'];
 // Which procedural part turns each bone. Bones not listed keep their bind pose relative to their parent.
@@ -51,6 +51,7 @@ function fixMaterials(root: THREE.Object3D) {
     mesh.frustumCulled = false;
     if (/eyebrow|eyelash/.test(name)) { m.transparent = true; m.depthWrite = false; m.alphaTest = 0.02; }
     else if (/hair|bob|short|afro|ponytail|braid|long/.test(name)) { m.transparent = false; m.alphaTest = 0.4; m.side = THREE.DoubleSide; m.depthWrite = true; }
+    else if (/suit|shoes/.test(name)) { m.transparent = false; m.depthWrite = true; m.alphaTest = 0.5; m.side = THREE.DoubleSide; }
     else { m.transparent = false; m.depthWrite = true; m.alphaTest = 0; }
     m.metalness = 0;
     if (/body|skin/.test(name)) m.roughness = 0.55;
@@ -88,6 +89,163 @@ export function loadTemplate(url: string) {
   return p;
 }
 
+// ------------------------------------------------------------------ the cast
+// Bodies, outfits, shoes and hair are separate files fitted to each body, so a
+// person is put together from the look the world gave them: nearest skin,
+// their hairstyle and hair colour, and their clothes dyed in their colours.
+
+const GENTE = '/mundo-real/gente/';
+type Catalogue = { cuerpos: Record<string, Record<string, number>>; pieles: Record<string, [number, number, number]> };
+let catalogue: Promise<Catalogue> | null = null;
+const loadCatalogue = () => catalogue ??= fetch(`${GENTE}elenco.json`).then(r => r.json() as Promise<Catalogue>);
+
+const pieces = new Map<string, Promise<THREE.Object3D>>();
+function loadPiece(body: string, name: string) {
+  const key = `${body}/${name}`;
+  let p = pieces.get(key);
+  if (!p) { p = new GLTFLoader().loadAsync(`${GENTE}${key}.glb`).then(g => { fixMaterials(g.scene); return g.scene; }); pieces.set(key, p); }
+  return p;
+}
+
+type Full = Person['rig']['full'];
+const pick = <T,>(list: T[], seed: number) => list[Math.abs(Math.floor(seed)) % list.length];
+
+function wardrobe(L: Full) {
+  const f = L.body === 'f';
+  const c = new THREE.Color(L.skin);
+  const dark = c.r * 0.3 + c.g * 0.59 + c.b * 0.11 < 0.16;
+  const age = L.age === 'old' || L.age === 'elderly' ? 'old' : L.age === 'adult' ? 'middleage' : 'young';
+  const skin = `${age}_${dark ? 'african' : 'caucasian'}_${f ? 'female' : 'male'}`;
+  let outfit: string;
+  if (f) {
+    outfit = L.top === 'dress' || L.bottom === 'skirt' ? 'female_elegantsuit01'
+      : L.top === 'suit' ? 'male_elegantsuit01'
+        : L.top === 'jacket' || L.top === 'coat' ? 'male_casualsuit05'
+          : L.bottom === 'shorts' ? 'female_casualsuit02'
+            : L.top === 'shirt' || L.top === 'uniform' ? 'male_casualsuit01' : 'female_casualsuit01';
+  } else {
+    outfit = L.top === 'suit' ? 'male_elegantsuit01'
+      : L.top === 'jacket' || L.top === 'coat' ? 'male_casualsuit05'
+        : L.top === 'shirt' || L.top === 'uniform' ? 'male_casualsuit01'
+          : L.top === 'sweater' || L.top === 'hoodie' ? 'male_casualsuit02'
+            : L.top === 'apron' ? 'male_worksuit01' : 'male_casualsuit06';
+  }
+  const shoes = f ? (outfit === 'female_elegantsuit01' ? 'shoes04' : 'shoes02') : (L.top === 'suit' ? 'shoes01' : 'shoes02');
+  const h = L.hairStyle;
+  const hair = h === 'bald' ? null
+    : h === 'afro' || h === 'curly' ? 'afro01'
+      : h === 'long' ? 'long01'
+        : f ? (h === 'bob' ? 'bob02' : h === 'ponytail' || h === 'bun' ? 'ponytail01' : h === 'braids' ? 'braid01' : 'short04')
+          : h === 'buzz' || h === 'cap' ? 'short04' : pick(['short01', 'short02', 'short03'], L.seed);
+  return { body: `${f ? 'f' : 'm'}_${dark ? 'afr' : 'cau'}`, skin, outfit, shoes, hair };
+}
+
+const textureLoader = new THREE.TextureLoader();
+const variants = new Map<string, THREE.Material>();
+function variant<T extends THREE.Material>(key: string, make: () => T) {
+  let m = variants.get(key) as T | undefined;
+  if (!m) { m = make(); variants.set(key, m); }
+  return m;
+}
+
+/** Clothes dyed in the person's colours: the weave and folds of the photo stay, the upper and lower garments take one colour each. */
+function dyed(base: THREE.MeshStandardMaterial, top: string, bottom: string) {
+  return variant(`${base.uuid}|${top}|${bottom}`, () => {
+    const m = base.clone();
+    const lum = (base.userData.lum as [number, number] | undefined) ?? [0.2, 0.2];
+    const uniforms = { uTop: { value: new THREE.Color(top) }, uBottom: { value: new THREE.Color(bottom) }, uLum: { value: new THREE.Vector2(lum[0], lum[1]) } };
+    m.color.set('#ffffff');
+    m.onBeforeCompile = shader => {
+      Object.assign(shader.uniforms, uniforms);
+      shader.vertexShader = shader.vertexShader.replace('#include <common>', '#include <common>\nattribute float _region;\nvarying float vRegion;')
+        .replace('#include <begin_vertex>', '#include <begin_vertex>\nvRegion = _region;');
+      shader.fragmentShader = shader.fragmentShader.replace('#include <common>', '#include <common>\nvarying float vRegion;\nuniform vec3 uTop;\nuniform vec3 uBottom;\nuniform vec2 uLum;')
+        .replace('#include <map_fragment>', `#include <map_fragment>
+          float upper = step(0.5, vRegion);
+          float shade = dot(diffuseColor.rgb, vec3(0.2126, 0.7152, 0.0722)) / max(0.02, mix(uLum.x, uLum.y, upper));
+          diffuseColor.rgb = mix(uBottom, uTop, upper) * clamp(shade, 0.0, 2.4);`);
+    };
+    m.customProgramCacheKey = () => 'ropa-teñida';
+    return m;
+  });
+}
+
+const maskedGeometry = new Map<string, THREE.BufferGeometry>();
+/** The body without the skin its clothes cover (so it never pokes through them). Shares every vertex buffer with the original. */
+function uncovered(geometry: THREE.BufferGeometry, bits: number) {
+  const mask = geometry.attributes._mask;
+  if (!mask || !bits || !geometry.index) return geometry;
+  const key = `${geometry.uuid}|${bits}`;
+  let g = maskedGeometry.get(key);
+  if (!g) {
+    const src = geometry.index.array, kept: number[] = [];
+    for (let i = 0; i < src.length; i += 3) {
+      const a = src[i], b = src[i + 1], c = src[i + 2];
+      if ((mask.getX(a) & bits) || (mask.getX(b) & bits) || (mask.getX(c) & bits)) continue;
+      kept.push(a, b, c);
+    }
+    g = new THREE.BufferGeometry();
+    g.attributes = geometry.attributes; g.morphAttributes = geometry.morphAttributes; g.morphTargetsRelative = geometry.morphTargetsRelative;
+    g.boundingBox = geometry.boundingBox; g.boundingSphere = geometry.boundingSphere;
+    g.setIndex(kept);
+    maskedGeometry.set(key, g);
+  }
+  return g;
+}
+
+/** Builds the real body for a procedural person from the cast files and attaches it. Until it arrives the person stays as it was. */
+export async function makeReal(person: Person) {
+  const L = person.rig.full;
+  const w = wardrobe(L);
+  const [cat, template, outfit, shoes, hair] = await Promise.all([
+    loadCatalogue(), loadTemplate(`${GENTE}${w.body}/cuerpo.glb`), loadPiece(w.body, w.outfit), loadPiece(w.body, w.shoes), w.hair ? loadPiece(w.body, w.hair) : null,
+  ]);
+  const model = cloneSkinned(template.scene);
+  let bodyMesh: THREE.SkinnedMesh | null = null;
+  model.traverse(o => { const m = o as THREE.SkinnedMesh; if (m.isSkinnedMesh && m.geometry.attributes._mask) bodyMesh = m; });
+  const body = bodyMesh as unknown as THREE.SkinnedMesh;
+  const bits = cat.cuerpos[w.body];
+  body.geometry = uncovered(body.geometry, (1 << (bits[w.outfit] ?? 30)) | (1 << (bits[w.shoes] ?? 30)));
+
+  // Skin: the nearest photographed skin, toned to the person's own colour.
+  const mean = cat.pieles[w.skin] ?? cat.pieles[w.skin.replace(/^[a-z]+_/, 'young_')];
+  const want = new THREE.Color(L.skin), have = new THREE.Color().setRGB(mean[0], mean[1], mean[2], THREE.SRGBColorSpace);
+  const tone = new THREE.Color(clamp(want.r / have.r, 0.45, 1.25), clamp(want.g / have.g, 0.45, 1.25), clamp(want.b / have.b, 0.45, 1.25));
+  body.material = variant(`${w.body}|${w.skin}|${L.skin}`, () => {
+    const m = (body.material as THREE.MeshStandardMaterial).clone();
+    const t = textureLoader.load(`${GENTE}tex/piel_${w.skin}.webp`);
+    t.flipY = false; t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4;
+    m.map = t; m.color.copy(tone);
+    return m;
+  });
+
+  // Clothes, shoes and hair ride the body's own skeleton.
+  const skeleton = body.skeleton;
+  const byName = new Map(skeleton.bones.map(b => [b.name, b]));
+  const wear = (piece: THREE.Object3D, material: (m: THREE.MeshStandardMaterial) => THREE.Material) => {
+    piece.traverse(o => {
+      const src = o as THREE.SkinnedMesh;
+      if (!src.isSkinnedMesh) return;
+      const mesh = new THREE.SkinnedMesh(src.geometry, material(src.material as THREE.MeshStandardMaterial));
+      mesh.name = src.name; mesh.frustumCulled = false;
+      const same = src.skeleton.bones.length === skeleton.bones.length && src.skeleton.bones.every((b, i) => b.name === skeleton.bones[i].name);
+      mesh.bind(same ? skeleton : new THREE.Skeleton(src.skeleton.bones.map(b => byName.get(b.name) as THREE.Bone), src.skeleton.boneInverses), src.bindMatrix);
+      (body.parent as THREE.Object3D).add(mesh);
+    });
+  };
+  wear(outfit, m => dyed(m, L.topColor, L.top === 'dress' ? L.topColor : L.bottomColor));
+  wear(shoes, m => m);
+  if (hair) wear(hair, m => variant(`${m.uuid}|${L.hairColor}`, () => { const c = m.clone(); c.color.set(L.hairColor).multiplyScalar(2.6); return c; }));
+
+  const build = L.build === 'heavy' ? 1.16 : L.build === 'slim' ? 0.95 : L.build === 'athletic' ? 1.04 : 1;
+  attachRealBody(person, template, model, build);
+}
+
+/** Every person the worlds create from now on gets a real body as soon as its files arrive. */
+export function enableRealPeople(on = true) {
+  personHooks.created = on ? person => { void makeReal(person).catch(() => {}); } : undefined;
+}
+
 type Driven = {
   bone: THREE.Bone; parent: number; local: THREE.Quaternion;
   part?: THREE.Object3D; other?: THREE.Object3D; mix: number; offset: THREE.Quaternion;
@@ -100,7 +258,7 @@ const va = new THREE.Vector3(), vb = new THREE.Vector3();
 const clamp = (v: number, lo: number, hi: number) => Math.min(hi, Math.max(lo, v));
 
 /** Puts a real body on a procedural person. The procedural meshes stop being drawn; props in the hands stay. */
-export function attachRealBody(person: Person, template: Template) {
+export function attachRealBody(person: Person, template: Template, model: THREE.Object3D = cloneSkinned(template.scene), girth = 1) {
   const rig = person.rig;
   // Stop drawing the procedural figure (a layer no camera sees also keeps it out of shadows), but keep what the hands hold.
   const hands = [rig.handL, rig.handR];
@@ -114,9 +272,8 @@ export function attachRealBody(person: Person, template: Template) {
   };
   hide(rig.body);
 
-  const model = cloneSkinned(template.scene);
   const scale = (HIP_JOINT * rig.scale) / template.hipHeight;
-  model.scale.setScalar(scale);
+  model.scale.set(scale * girth, scale, scale * girth);
   model.traverse(o => { if ((o as THREE.Mesh).isMesh) { o.castShadow = true; o.receiveShadow = false; } });
   person.root.add(model);
 
@@ -184,7 +341,7 @@ export function attachRealBody(person: Person, template: Template) {
     rig.body.updateMatrix();
     va.set(0, -HIP_DROP, 0).applyQuaternion(hips.quaternion).add(hips.position).applyMatrix4(rig.body.matrix);
     vb.copy(template.hipsInPelvis).applyQuaternion(pelvis.world).multiplyScalar(scale);
-    va.sub(vb).divideScalar(scale);
+    va.sub(vb); va.x /= scale * girth; va.y /= scale; va.z /= scale * girth;
     pelvis.bone.position.copy(va.applyQuaternion(qb.copy(baseWorld).invert()));
 
     // Face.
