@@ -889,7 +889,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
     const people = [{ ...s.npc, pose: s.pose, mood: s.mood, look: s.look, injury: s.injury, smoke: s.smoke, mop: s.mop, main: true },
       ...(s.extras ?? []).map(e => ({ ...e, main: false }))];
     for (const p of people) {
-      const anyP = p as typeof p & { seat?: boolean; lying?: boolean; sheet?: boolean; gurney?: boolean; carryBox?: boolean; surgeon?: boolean; smoke?: boolean; mop?: boolean };
+      const anyP = p as typeof p & { seat?: boolean; perch?: boolean; lying?: boolean; sheet?: boolean; gurney?: boolean; carryBox?: boolean; surgeon?: boolean; smoke?: boolean; mop?: boolean };
       if (anyP.sheet) { sheetOver(group, s.floor, p.x, p.z); continue; }
       const person = makePerson(p.look as Look, p.pose, { seat: anyP.seat, lying: anyP.lying || p.pose === 'lie', mood: p.mood, injury: p.injury });
       let at = { x: p.x, z: p.z, heading: p.heading };
@@ -904,7 +904,9 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
       if (anyP.mop) { const rig = person.rig as unknown as { handR?: THREE.Object3D }; if (rig.handR) add(rig.handR, C(0.015, 0.015, 1.4, 6), std('#c8a060', 0.7), 0, -0.2, 0.05); add(group, C(0.25, 0.22, 0.35, 12), std('#f0c020', 0.6), p.x + 0.6, 0.18, p.z + 0.4); }
       if (anyP.carryBox) { const rig = person.rig as unknown as { handL?: THREE.Object3D }; if (rig.handL) add(rig.handL, B(0.4, 0.3, 0.3), std('#c8a070', 0.8), 0, -0.15, 0.1); }
       if (p.injury?.includes('iv')) ivPole(group, at.x + 0.6, at.z + 0.2);
-      if (anyP.seat && !anyP.lying) {
+      // Sitting on the foot of a bed: up on the mattress, legs hanging, no stool.
+      if (anyP.perch) person.root.position.y = 0.25;
+      else if (anyP.seat && !anyP.lying) {
         const back = new THREE.Vector3(0, 0, -0.12).applyAxisAngle(new THREE.Vector3(0, 1, 0), p.heading);
         add(group, B(0.5, 0.06, 0.46), std('#2d6aa0', 0.55), p.x + back.x, 0.45, p.z + back.z);
       }

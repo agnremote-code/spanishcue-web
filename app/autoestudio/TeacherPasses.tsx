@@ -81,7 +81,7 @@ export default function TeacherPasses({enabled}:{enabled:boolean}){
     {!enabled?<p>Los accesos para alumnos están incluidos en SpanishCue PRO.</p>:<>
       <div className="ae-create-pass"><label htmlFor="pass-level">Nivel</label><select id="pass-level" value={level} onChange={e=>setLevel(e.target.value)}>{levels.map(id=><option key={id} value={id}>{id.toUpperCase()}</option>)}</select><button type="button" disabled={busy} onClick={()=>void create()}>Crear acceso Autoestudio</button></div>
       <p className="ae-teacher-help">Un enlace por alumno y nivel. Dura hasta que lo revoques. Quien tenga el enlace puede usarlo: compártelo de forma privada.</p>
-      {link&&<div className="ae-copy-link"><label htmlFor="share-link">Enlace privado</label><input id="share-link" value={link} readOnly onFocus={e=>e.target.select()}/><button type="button" onClick={()=>void copy()}>Copiar link</button></div>}
+      {link&&<div className="ae-copy-link"><label htmlFor="share-link">Enlace privado</label><input id="share-link" value={link} readOnly onFocus={e=>e.target.select()}/><button type="button" onClick={()=>void copy()}>Copiar link</button><p className="ae-copy-worlds">Con este mismo enlace tu alumno también juega los mundos 3D en su teléfono: después de abrirlo, entra en spanishcue.com/jugar.</p></div>}
       {notice&&<p role="status">{notice}</p>}
       {error&&<p role="alert" className="ae-share-error">{error} <button type="button" onClick={load}>Reintentar</button></p>}
       {loading?<p role="status">Consultando accesos…</p>:passes.length===0?(!error&&<p>Todavía no creaste accesos.</p>):<>

@@ -42,7 +42,7 @@ test("a public door is a free demo or a FREE lesson, never a PRO class", () => {
   }
   assert.match(read("app/demo/noche-abierta/page.tsx"), /params\.from==='jugar'\?'\/jugar'/, "the demo knows its way back to the hub");
   const page = read("app/jugar/page.tsx");
-  assert.match(page, /fullAccess \? lesson\.path : world\.open \?\? null/, "PRO routes are linked only with full access");
+  assert.match(page, /fullAccess \|\| studentPass \? lesson\.path : world\.open \?\? null/, "PRO routes are linked only with full access or a teacher's pass");
   for (const source of [page, read("app/jugar/StudentHub.tsx")]) assert.doesNotMatch(source, /CheckoutButton|\/pricing|\/acceso|US\$|\$\d/, "no student checkout or price");
 });
 

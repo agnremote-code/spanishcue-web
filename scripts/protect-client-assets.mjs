@@ -25,6 +25,7 @@ import { build } from "esbuild";
 import { liveLessonData } from "./live-lessons.mjs";
 import { autoestudioModuleData } from "./autoestudio-modules.mjs";
 import { clasicasData } from "./clasicas-content.mjs";
+import { HUB_WORLDS } from "../app/jugar/worlds.mjs";
 import { tmpdir } from "node:os";
 import { dirname, extname, relative, resolve } from "node:path";
 
@@ -271,6 +272,45 @@ async function encryptAsset(plain, publicPath, directory, contentType) {
 // starts above Cloudflare's 128 MB memory limit, so each request is served by
 // a freshly started isolate (PERF-001). They are encrypted static blobs, like
 // premium audio, and the Worker keeps only the small decryption records.
+// Teacher's pass (app/jugar/student-pass.ts): a student with a valid pass may
+// load the chunks of the hub's PRO 3D worlds and nothing else. A world's
+// chunks are its own folder plus everything it imports; dynamic imports are
+// followed only into the world itself and the shared 3D engines, because the
+// framework entry dynamically imports every page of the site.
+const studentSharedRoots = [
+  "app/escucha-3d/",
+  "app/noche-abierta/",
+  "app/mundo-3d/",
+  "app/mundo-real/",
+  "app/country-atlas/",
+];
+const studentFiles = new Set();
+const studentWorldsWithoutChunks = [];
+for (const world of HUB_WORLDS) {
+  if (policy.isFreeLesson(world.id)) continue;
+  const lesson = policy.lessons.find((item) => item.id === world.id);
+  if (!lesson?.path?.startsWith("/")) throw new Error(`Student world ${world.id} has no class route`);
+  const own = `app${lesson.path}/`;
+  const inWorld = (key) => key.startsWith(own) || studentSharedRoots.some((prefix) => key.startsWith(prefix));
+  const seen = new Set();
+  const pending = Object.keys(manifest).filter((key) => key.startsWith(own));
+  if (!pending.length) studentWorldsWithoutChunks.push(lesson.path);
+  while (pending.length) {
+    const key = pending.pop();
+    const item = manifest[key];
+    if (seen.has(key) || !item) continue;
+    seen.add(key);
+    pending.push(...(item.imports ?? []));
+    for (const target of item.dynamicImports ?? []) {
+      if (inWorld(target) || (inWorld(key) && !target.startsWith("app/"))) pending.push(target);
+    }
+  }
+  for (const key of seen) studentFiles.add(manifest[key].file);
+}
+if (studentWorldsWithoutChunks.length) {
+  throw new Error(`Student worlds without client chunks: ${studentWorldsWithoutChunks.join(", ")}`);
+}
+
 await mkdir(resolve("dist/client/_protected-client"), { recursive: true });
 const clientAssets = {};
 for (const file of protectedFiles) {
@@ -280,6 +320,12 @@ for (const file of protectedFiles) {
     "_protected-client",
     "text/javascript; charset=utf-8",
   );
+  if (studentFiles.has(file)) clientAssets[`/${file}`].student = true;
+}
+const studentProtectedFiles = protectedFiles.filter((file) => studentFiles.has(file));
+// The pass opens the 3D worlds, never the whole library.
+if (!studentProtectedFiles.length || studentProtectedFiles.length > protectedFiles.length * 0.9) {
+  throw new Error(`Unexpected student chunk scope: ${studentProtectedFiles.length} of ${protectedFiles.length} protected chunks`);
 }
 await writeFile(
   "dist/server/private-client-assets.js",
@@ -502,7 +548,7 @@ import routedWebp from './public-webp-assets.js';
 import privateLessons from './private-lesson-assets.js';
 import privateAutoestudio from './private-autoestudio-assets.js';
 import privateClasicas from './private-clasicas-assets.js';
-import {mayReadPrivateMedia} from './private-access-runtime.js';
+import {mayReadPrivateMedia,mayReadStudentAsset} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
 const base64Bytes=value=>Uint8Array.from(atob(value),character=>character.charCodeAt(0));
@@ -586,7 +632,7 @@ export default {async fetch(request,env,ctx){
  let path;try{path=decodeURIComponent(new URL(request.url).pathname)}catch{return new Response('Bad request',{status:400})}
  const media=Object.hasOwn(privateAssets,path)?privateAssets[path]:privateMedia.assets[path];
  if(media){
-  if(!await mayReadPrivateMedia(request,env,path))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
+  if(!await mayReadPrivateMedia(request,env,path)&&!await mayReadStudentAsset(request,env,path,media.student===true))return new Response('Acceso restringido',{status:403,headers:privateHeaders()});
   if(request.method!=='GET'&&request.method!=='HEAD'){const headers=privateHeaders();headers.set('Allow','GET, HEAD');return new Response('Method not allowed',{status:405,headers});}
   return servePrivateMedia(request,env,media);
  }
@@ -608,6 +654,7 @@ await writeFile(
   JSON.stringify(
     {
       protectedFiles,
+      studentProtectedFiles,
       protectedMediaFiles,
       encryptedMediaFiles: Object.values(privateMediaAssets).map(
         (record) => record.assetPath,
