@@ -5,6 +5,7 @@ import { fullAccessFromHeaders } from "../../access-policy";
 import { publishedLevels } from "../curriculum/course";
 import { shareSessionFromHeaders } from "../session-display";
 import LevelMap from "../LevelMap";
+import { homeworkTopics, topicPath } from "../topics";
 
 export function generateStaticParams() {
   return publishedLevels().map((level) => ({ level: level.id }));
@@ -28,5 +29,6 @@ export default async function Page({ params }: { params: Promise<{ level: string
   const next = levels[index + 1];
   const h = await headers();
   const session = shareSessionFromHeaders(h);
-  return <LevelMap level={levels[index]} fullAccess={fullAccessFromHeaders(h) || session?.level === id} session={session} nextLevel={next ? { id: next.id, code: next.code } : null} />;
+  const topics = homeworkTopics.filter((topic) => topic.level === id).map((topic) => ({ href: topicPath(topic.slug), title: topic.title, canDo: topic.canDo, minutes: topic.minutes }));
+  return <LevelMap level={levels[index]} fullAccess={fullAccessFromHeaders(h) || session?.level === id} session={session} nextLevel={next ? { id: next.id, code: next.code } : null} topics={topics} />;
 }

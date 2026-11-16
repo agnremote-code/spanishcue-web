@@ -13500,6 +13500,60 @@
       "text": "Viví allí tres años. / Solía vivir allí.",
       "category": "neutral-context",
       "reason": "Pretérito indefinido en primera persona («Viví»), no un imperativo voseante."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "Acá tenés el vuelto.",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "Vos en Argentina · “Vos” in Argentina",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "En Argentina se usa **vos** en lugar de «tú», con formas propias: **tenés** (tienes), **querés** (quieres), **pagás** (pagas). Tú puedes hablar con «tú» o «usted» y todos te entienden; lo importante es **reconocer** estas formas cuando las oyes.",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "Son [[tres lucas y media|blue]]. ¿Pagás [[en efectivo|violet]]?",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "No hay problema. Acá tenés [[el vuelto|violet]]: [[seis mil quinientos|teal]].",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "Con billetes: **en** efectivo. «Pagás» es la forma de vos de «pagas».",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "El dinero que te devuelven. «Tenés» es la forma de vos de «tienes».",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "El mercado de San Telmo, en Buenos Aires. Un puesto de mochilas y carteras de cuero. El vendedor habla de vos. (San Telmo market, Buenos Aires. A stall with leather backpacks and bags. The seller uses vos.)",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g549.ts",
+      "text": "Justo. ¿Querés bolsa?",
+      "category": "regional-pedagogy",
+      "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
     }
   ]
 }

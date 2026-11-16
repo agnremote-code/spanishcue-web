@@ -55,7 +55,7 @@ test('lessons survive the encrypted-blob round trip the Worker build uses (scrip
 });
 test('every grammar class is a live class: seven sections in the fixed order, every activity checkable',()=>{
   for(const id of classroomIds)assert.ok(liveLessonIds.includes(id),`${id}: every grammar class id has a live lesson`);
-  assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337,338,339,340,341,343,344,346,348,350,351,352,353,356,358,360,361,362,363,364,365,366,367,369,370,371,372,373,374,375,376,377,379,380,382,383,384,385,389,390,391,392,393,394,395,396,398,399,401,402,406,408,409,410,411,412,413,415,416,417,418,419,420,421,422,423,425,426,427,429,430,435,436,438,439,440,441,443,444,445,447,449,450,452,453,455,456,457,458,459,461,463,464,465,466,468,469,470,471,472,473,474,476,477,478,479,480,481,482,483,484,485,487,488,489,490,491,492,493,494,495,496,497,498,499,500,503,504,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548],'live-only classes carry everything in their live lesson');
+  assert.deepEqual(liveLessonIds.filter(id=>!classroomIds.includes(id)),[239,303,305,307,311,312,314,318,319,320,323,324,327,328,330,331,332,333,335,336,337,338,339,340,341,343,344,346,348,350,351,352,353,356,358,360,361,362,363,364,365,366,367,369,370,371,372,373,374,375,376,377,379,380,382,383,384,385,389,390,391,392,393,394,395,396,398,399,401,402,406,408,409,410,411,412,413,415,416,417,418,419,420,421,422,423,425,426,427,429,430,435,436,438,439,440,441,443,444,445,447,449,450,452,453,455,456,457,458,459,461,463,464,465,466,468,469,470,471,472,473,474,476,477,478,479,480,481,482,483,484,485,487,488,489,490,491,492,493,494,495,496,497,498,499,500,503,504,506,507,508,509,510,511,512,513,514,515,516,517,518,519,520,521,522,523,524,525,526,527,528,529,530,531,532,533,534,535,536,537,538,539,540,541,542,543,544,545,546,547,548,549],'live-only classes carry everything in their live lesson');
   for(const id of liveLessonIds){
   const lesson=getLiveLesson(id);
   assert.equal(lesson.id,id);
@@ -283,4 +283,29 @@ test('the A0 first class: bilingual by default, the grandparents story, the real
     await v.click('[data-stage="cerrar"]');await v.click('[data-step="2"]');
     const link=v.$('[data-next-link]');assert.equal(link.getAttribute('href'),'/noche-abierta?level=A0');
   }finally{await v.close();}
+});
+
+test('a Homework topic shows the class in self-study only, with the way back to Homework and no teacher surface',async()=>{
+  await build({entryPoints:['app/grammar-classroom/live/LiveClassroom.tsx'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/link','next/navigation','three'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-homework.cjs',logLevel:'error'});
+  const LiveClassroom=require('../node_modules/.cache/grammar-live-homework.cjs').default;
+  const dom=new JSDOM('<div id="root"></div>',{url:'https://spanishcue.test/autoestudio/tema/numeros-dinero-y-monedas'});
+  Object.assign(globalThis,{window:dom.window,self:dom.window,document:dom.window.document,HTMLElement:dom.window.HTMLElement,IS_REACT_ACT_ENVIRONMENT:true});
+  dom.window.HTMLElement.prototype.scrollIntoView=function(){};dom.window.HTMLMediaElement.prototype.pause=function(){};dom.window.HTMLMediaElement.prototype.load=function(){};dom.window.scrollTo=()=>{};
+  // Even a browser that last used the class «Con profesor» opens the topic in self-study.
+  dom.window.localStorage.setItem('spanishcue:gramatica:mode','teacher');
+  const calls=[];globalThis.fetch=async url=>{calls.push(String(url));return new Response('{}',{status:401});};
+  const root=createRoot(document.getElementById('root'));
+  await act(async()=>root.render(React.createElement(LiveClassroom,{lesson:getLiveLesson(549),homework:{returnTo:'/autoestudio/a2',alias:'Luna'}})));
+  await wait(30);
+  try{
+    const shell=document.querySelector('[data-live-class="549"]');
+    assert.equal(shell.dataset.mode,'self');
+    assert.equal(document.querySelector('[data-mode-option]'),null,'no teacher / self switch');
+    assert.equal(document.querySelector('[data-teacher-note]'),null,'no teacher notes');
+    assert.equal(document.querySelector('[data-course-position]'),null,'no course navigation into the library');
+    const frame=document.querySelector('[data-homework-topic="549"]');
+    assert.match(frame.textContent,/Luna/);
+    assert.equal(frame.querySelector('a').getAttribute('href'),'/autoestudio/a2');
+    assert.ok(!calls.some(url=>url.startsWith('/api/students')||url.startsWith('/api/live-class')),'no teacher API calls');
+  }finally{await act(async()=>root.unmount());dom.window.close();}
 });

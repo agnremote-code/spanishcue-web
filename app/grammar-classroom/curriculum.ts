@@ -283,10 +283,11 @@ const rows: Row[] = [
   ["G246",546,"C1","tiempos","El infinitivo como nombre y como orden","/gramatica/el-infinitivo-como-nombre-y-como-orden",[],"live"],
   ["G247",547,"C1","concordancia","Adjetivos de relación y adjetivos que funcionan como adverbios","/gramatica/adjetivos-de-relacion-y-adjetivos-adverbiales",[],"live"],
   ["G248",548,"C2","tiempos","Verbos defectivos: soler, atañer, concernir, abolir","/gramatica/verbos-defectivos-soler-ataner-concernir-abolir",[],"live"],
+  ["G249",549,"A2","cantidad","Números, dinero y monedas del mundo hispano","/gramatica/numeros-dinero-y-monedas-del-mundo-hispano",[],"live"],
 ];
 
 /** Extension unit → the unit it is studied after. */
-const extensionAfter: Record<string, string> = { G237: 'G121', G238: 'G110', G239: 'G135', G240: 'G069', G241: 'G071', G242: 'G053', G243: 'G123', G244: 'G149', G245: 'G176', G246: 'G178', G247: 'G188', G248: 'G214' };
+const extensionAfter: Record<string, string> = { G237: 'G121', G238: 'G110', G239: 'G135', G240: 'G069', G241: 'G071', G242: 'G053', G243: 'G123', G244: 'G149', G245: 'G176', G246: 'G178', G247: 'G188', G248: 'G214', G249: 'G070' };
 
 const numbered: CourseUnit[] = rows.map(([code, catalogId, level, category, title, canonicalSlug, extra, status], index) => {
   const after = extensionAfter[code];

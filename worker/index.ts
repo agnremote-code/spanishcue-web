@@ -13,6 +13,7 @@ import { applyStudentPassHeaders, isStudentAudioPath, isStudentWorldLesson, stud
 import { lessons } from "../app/lesson-catalog";
 import { isPremiumBoardPath } from "../app/boards/access";
 import { isAutoestudioPath, isPremiumAutoestudioPath } from "../app/autoestudio/access";
+import { isHomeworkTopicAudio } from "../app/autoestudio/topics";
 import {
   authenticatedRequestHeaders,
   firebaseTokenFromHeaders,
@@ -332,7 +333,9 @@ const app = {
       ? await resolveFirebaseAccount(env.DB,verifiedUser).catch(()=>null)
       : null;
     const verifiedHeaders=authenticatedRequestHeaders(routedHeaders,verifiedUser,account,ownerIdentity);
-    const shareSession=(autoestudio || shareApi)
+    // A Homework topic plays one class recording: a student pass opens that file and no other premium audio.
+    const topicAudio=premiumAudio&&isHomeworkTopicAudio(pathname);
+    const shareSession=(autoestudio || shareApi || topicAudio)
       ? await verifyShareSession(routedHeaders.get("cookie"),env).catch(()=>null)
       : null;
     applyShareHeaders(verifiedHeaders,shareSession);
@@ -364,7 +367,7 @@ const app = {
     }
     // Newsletter gift: an authentic email-signup cookie opens one PRO grammar class and its audio, nothing else.
     const gifted=!fullAccess&&giftCoversPath(pathname,lesson?.id??null)&&await hasGift(request.headers.get('cookie'),env.AUTOESTUDIO_SHARE_SECRET).catch(()=>false);
-    if (premiumAudio && !fullAccess && !gifted && !studentAudio) {
+    if (premiumAudio && !fullAccess && !gifted && !studentAudio && !(topicAudio && shareSession)) {
       const headers = new Headers({'Cache-Control':'private, no-store'});
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});

@@ -504,3 +504,8 @@
 /* English helper line under the Spanish (A1–B2), same dashed rule as the live grammar classes. */
 .ae-en-line{display:block;margin-top:6px;padding-top:5px;border-top:1px dashed rgba(98,117,142,.28);color:#5d7088;font-style:italic;font-weight:400;font-size:.86em;line-height:1.45;letter-spacing:normal;text-transform:none}
 .ae-options .ae-en-line,.ae-mechanic .ae-en-line{display:none}
+/* Homework topics: classes a teacher assigns on their own, below the weekly route. */
+.ae-topics{max-width:980px;margin:56px auto 0;padding:0}
+.ae-topics h2{font:800 clamp(20px,2.4vw,26px)/1.2 "Plus Jakarta Sans",Inter,sans-serif;margin:0 0 4px;color:var(--ae-ink)}
+.ae-topics>p{margin:0 0 16px;color:var(--ae-muted,#5d6b7b)}
+.ae-topics ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:16px}
