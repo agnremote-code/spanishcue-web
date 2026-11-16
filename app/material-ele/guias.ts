@@ -1966,6 +1966,143 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["imperativo", "pronombres-de-objeto", "subjuntivo", "a2"],
   },
+  {
+    slug: "como-ensenar-los-conectores",
+    path: `${GUIAS_PATH}/como-ensenar-los-conectores`,
+    title: "Cómo enseñar los conectores en ELE: secuencia de A1 a C1",
+    description:
+      "Cómo enseñar los conectores en español: qué va en cada nivel, cómo pasar de la lista al uso, errores típicos, actividades para hablar y fichas con soluciones.",
+    h1: "Cómo enseñar los conectores en ELE: de «y, pero, porque» al texto argumentativo",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Los conectores suelen enseñarse con una lista: de adición, de contraste, de causa, de consecuencia. El alumno la memoriza, y en su siguiente texto aparecen «sin embargo» y «por lo tanto» en cada línea, a veces donde no hay contraste ni consecuencia. El problema no es la lista, es el orden: primero hay que tener dos ideas que unir y después elegir la palabra. Esta guía propone qué conectores trabajar en cada nivel, cómo presentarlos a partir de las ideas, los errores que vas a ver y las clases, fichas y ejercicios de Material ELE para practicarlos.",
+    keywords: ["cómo enseñar los conectores", "conectores ELE", "actividades conectores", "ejercicios conectores español", "conectores por niveles", "marcadores del discurso ELE", "conectores argumentativos"],
+    published: "2026-11-16",
+    lessonIds: [211, 213, 377, 350, 217, 417, 456, 489],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: un conector une dos ideas",
+        blocks: [
+          { type: "p", text: "Un conector no adorna una frase: **dice qué relación hay entre dos ideas**. Si el alumno no ve la relación, ninguna lista le ayuda. Por eso conviene empezar siempre por las ideas: «Llueve. Salgo a correr.» ¿Qué relación hay? Si es sorprendente, «llueve, pero salgo a correr». Si es la causa, «salgo a correr porque no llueve». La palabra llega al final, como respuesta a una pregunta." },
+          { type: "p", text: "Las relaciones que el alumno necesita son pocas y se repiten en todos los niveles: **sumar, oponer, explicar la causa, sacar una consecuencia, ordenar en el tiempo y aclarar**. Lo que cambia de A1 a C1 no son las relaciones, sino el registro y la precisión de las palabras que las expresan: de «pero» a «sin embargo» y a «ahora bien»." },
+          { type: "p", text: "La página de [conectores](/material-ele/conectores) de Material ELE resume los grupos con actividades listas para usar, y el tema de [gramática de conectores](/material-ele/gramatica/conectores) reúne todas las clases por nivel." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué conectores en cada nivel",
+        blocks: [
+          { type: "p", text: "Esta progresión sigue el orden en que el alumno necesita unir ideas, de la frase al texto. En cada nivel bastan cinco o seis conectores bien usados." },
+        ],
+        subsections: [
+          {
+            title: "A1: y, o, pero, porque, también",
+            blocks: [
+              { type: "p", text: "En A1 el objetivo es salir de las frases sueltas. Con **y, o, pero, porque y también** el alumno ya puede hablar de sí mismo con algo de hilo: «vivo en Lyon, pero trabajo en Ginebra porque…». Un detalle que conviene enseñar pronto: «porque» responde y «¿por qué?» pregunta." },
+            ],
+          },
+          {
+            title: "A2: ordenar y explicar",
+            blocks: [
+              { type: "p", text: "A2 es el nivel del relato, y el relato necesita orden: **primero, después, luego, al final, entonces, cuando, mientras**. Se añaden **por eso, así que y es que** para explicar. El mejor contexto es contar algo que pasó: un viaje, un día que salió mal, una receta." },
+              { type: "p", text: "La ficha de [conectores de secuencia y explicación](/material-ele/ficha/conectores-de-secuencia-y-explicacion) trabaja este paso, y en [conectores para A2](/material-ele/gramatica/conectores/a2) están las clases del nivel. La clase gratis de [indefinido e imperfecto](/gramatica/indefinido-e-imperfecto) da el relato sobre el que practicarlos." },
+            ],
+          },
+          {
+            title: "B1: opinar y matizar",
+            blocks: [
+              { type: "p", text: "En B1 el alumno empieza a defender una opinión, y para eso necesita **además, incluso, en cambio, sin embargo, aunque, ya que, como y por lo tanto**. Aquí aparece la diferencia entre conectores que van dentro de la frase («aunque llueve, salgo») y conectores que van después de una pausa («Llueve. Sin embargo, salgo»)." },
+              { type: "p", text: "Para este nivel sirven la ficha de [conectores argumentativos](/material-ele/ficha/conectores-argumentativos-ademas-incluso-en-cambio), la de [causales con ya que, puesto que y como](/material-ele/ficha/causales-ya-que-puesto-que-como) y la de [consecutivas con así que y por eso](/material-ele/ficha/consecutivas-asi-que-por-eso-de). Las clases están en [conectores para B1](/material-ele/gramatica/conectores/b1)." },
+            ],
+          },
+          {
+            title: "B2: conceder, objetar y organizar una exposición",
+            blocks: [
+              { type: "p", text: "B2 pide textos y exposiciones orales con estructura. Entran los organizadores (**en primer lugar, por un lado, por otro, en conclusión**) y los conectores de concesión y objeción (**a pesar de que, si bien, no obstante, de todos modos**). El trabajo ya no es entender cada conector, sino no repetir siempre el mismo." },
+              { type: "p", text: "Las fichas de [concesión y objeción](/material-ele/ficha/conectores-de-concesion-y-objecion) y de [exposición y refutación](/material-ele/ficha/conectores-para-exposicion-y-refutacion) cubren este nivel, junto con las clases de [conectores para B2](/material-ele/gramatica/conectores/b2) y el tema de [oraciones concesivas](/material-ele/gramatica/oraciones-concesivas)." },
+            ],
+          },
+          {
+            title: "C1: reformular y restringir",
+            blocks: [
+              { type: "p", text: "En C1 el alumno afina: **es decir, o sea, mejor dicho, a saber** para reformular, y **ahora bien, con todo, eso sí** para restringir lo que acaba de decir. También aprende a notar el registro: «o sea» es de conversación y «a saber» es de texto formal. La ficha de [conectores de reformulación](/material-ele/ficha/conectores-de-reformulacion-es-decir-a) y la de [contraargumentativos y restrictivos](/material-ele/ficha/conectores-contraargumentativos-y-restrictivos) trabajan estos matices." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "presentar",
+        title: "Cómo presentarlos: de las ideas a la palabra",
+        blocks: [
+          { type: "p", text: "Esta rutina funciona en cualquier nivel y evita que el conector se convierta en un adorno." },
+          { type: "ol", items: [
+            "**Dos ideas sin unir.** Escribe dos frases separadas que el alumno entienda sin esfuerzo.",
+            "**La pregunta.** «¿La segunda idea suma, se opone, explica o es una consecuencia?» El alumno decide antes de ver ninguna palabra.",
+            "**El conector.** Presenta dos opciones para esa relación, una ya conocida y una nueva: «pero» y «sin embargo».",
+            "**El lugar y la puntuación.** Muestra dónde va cada una y si lleva coma o punto delante.",
+            "**El cambio.** Cambia una de las ideas y pregunta si el conector todavía sirve. Si la relación cambia, la palabra cambia.",
+          ] },
+          { type: "p", text: "Con textos, el camino inverso también ayuda: quita los conectores de un texto corto y pide al alumno que lo lea. Lo que se pierde al quitarlos es exactamente lo que el conector aportaba." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Errores típicos y cómo corregirlos",
+        blocks: [
+          { type: "p", text: "Estos son los errores más frecuentes, con una corrección que funciona mejor que volver a la lista." },
+          { type: "ul", items: [
+            "**Un conector en cada frase.** El texto parece un ejercicio. Corrección: pide que tache la mitad y lea de nuevo; muchas relaciones se entienden sin palabra.",
+            "**«Sin embargo» sin contraste.** Usa el conector porque suena formal. Corrección: «¿qué dos ideas se oponen aquí?». Si no las encuentra, el conector sobra.",
+            "**«Porque» al principio en lugar de «como».** «Porque llovía, no salimos.» Corrección: cuando la causa va primero, el español prefiere «como»: «como llovía, no salimos».",
+            "**«Aunque» y «pero» juntos.** «Aunque estaba cansado, pero fue.» Corrección: una sola marca de contraste por frase; que elija una.",
+            "**Registro mezclado.** «O sea» en un correo formal o «no obstante» en un mensaje a un amigo. Corrección: clasificar los conectores conocidos en dos columnas, conversación y texto formal.",
+            "**Puntuación.** «Llueve sin embargo salgo.» Corrección: leer en voz alta y marcar la pausa; donde hay pausa larga, hay punto o punto y coma.",
+          ] },
+          { type: "p", text: "Para practicar con corrección inmediata, el [ejercicio de conectores con soluciones](/material-ele/ejercicio/conectores) se puede proyectar o mandar como tarea, y en [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) hay más por nivel." },
+        ],
+      },
+      {
+        id: "actividades",
+        title: "Actividades que hacen hablar",
+        blocks: [
+          { type: "p", text: "Los conectores se suelen practicar por escrito, pero se fijan hablando. Estas actividades no necesitan material impreso." },
+          { type: "ol", items: [
+            "**Ordena el desastre.** Los hechos de un mal día aparecen desordenados; el alumno los cuenta en orden usando primero, después, entonces y al final. Está en el banco como [Ordena el desastre](/material-ele/actividad/ordena-el-desastre).",
+            "**Sí, pero…** Un alumno da una opinión y el siguiente debe aceptarla en parte y añadir una objeción. La actividad [Sí, pero...](/material-ele/actividad/si-pero) trae frases de apoyo.",
+            "**La cadena.** Cada alumno continúa la frase del anterior con el conector que le toca en una tarjeta: además, en cambio, por eso, aunque.",
+            "**El mismo hecho, tres relaciones.** Con dos ideas fijas («estudia mucho» y «suspende»), el alumno construye tres frases con tres conectores distintos y explica qué cambia.",
+            "**Un minuto con estructura.** El alumno habla un minuto sobre un tema con tres organizadores obligatorios: por un lado, por otro, en conclusión.",
+          ] },
+          { type: "p", text: "Para llevar los conectores a la conversación, las páginas de [expresar opinión](/material-ele/funciones/expresar-opinion) y de [argumentar y debatir](/material-ele/funciones/argumentar-y-debatir) reúnen clases por nivel, y el [banco de actividades](/material-ele/actividades) ordena más ideas por tema y duración." },
+        ],
+      },
+      {
+        id: "clase",
+        title: "Una clase de 45 minutos, paso a paso",
+        blocks: [
+          { type: "p", text: "Este plan sirve para una clase de B1 sobre conectores de contraste." },
+          { type: "ol", items: [
+            "**Calentamiento (5 min).** Dos frases en la pizarra sobre la ciudad del alumno, una positiva y una negativa. «¿Cómo las unimos?»",
+            "**Descubrimiento (8 min).** Un texto corto de opinión con pero, sin embargo, aunque y en cambio. El alumno subraya y dice qué ideas se oponen en cada caso.",
+            "**Forma (7 min).** Dónde va cada conector y qué puntuación lleva. Dos columnas: dentro de la frase y después de pausa.",
+            "**Práctica guiada (10 min).** El mismo hecho, tres relaciones, en parejas o con el profesor.",
+            "**Producción (12 min).** Sí, pero…, con temas que le importen al alumno.",
+            "**Cierre (3 min).** Cada alumno dice una frase sobre su semana con «aunque».",
+          ] },
+          { type: "p", text: "Para preparar el resto del nivel, la página de [B1](/material-ele/b1) ordena todo el material, las [fichas de gramática](/material-ele/fichas) se imprimen o se proyectan, y la guía [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis) reúne lo gratuito por tipo. Si el alumno ya escribe textos largos, la guía [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo) cubre las concesivas con «aunque» y subjuntivo." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseñan los conectores?", answer: "En todos. En A1 bastan y, o, pero, porque y también; en A2 se añaden los de orden y explicación; en B1 los de opinión y matiz; en B2 los de concesión y los organizadores; en C1 los de reformulación y restricción." },
+      { question: "¿Cómo enseñar los conectores sin una lista?", answer: "Partiendo de dos ideas sin unir y preguntando qué relación hay entre ellas: sumar, oponer, causa o consecuencia. El conector se presenta después, como respuesta a esa pregunta." },
+      { question: "¿Cuál es el error más frecuente con los conectores?", answer: "Usar demasiados o usarlos sin la relación que expresan, sobre todo sin embargo y por lo tanto. Se corrige pidiendo al alumno que señale las dos ideas que el conector une." },
+      { question: "¿Qué diferencia hay entre pero y sin embargo?", answer: "Los dos oponen ideas. Pero va dentro de la frase y es de cualquier registro; sin embargo va después de una pausa, con punto o punto y coma delante, y es más formal." },
+      { question: "¿Hay material gratis para practicar conectores?", answer: "Sí. En Material ELE hay actividades con pasos y respuesta modelo, un ejercicio con soluciones y muestras de las fichas de cada clase, todo sin registro." },
+    ],
+    related: ["conectores", "subjuntivo", "b1", "b2"],
+  },
 ];
 
 /** «Cómo enseñar…» guides that belong to a grammar topic page: the topic is

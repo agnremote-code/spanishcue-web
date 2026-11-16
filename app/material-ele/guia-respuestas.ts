@@ -141,4 +141,14 @@ export const guiaRespuestas: Record<string, { answer: string; steps: string[] }>
       "Introduce el negativo junto con el subjuntivo y contrasta «hazlo» con «no lo hagas».",
     ],
   },
+  "como-ensenar-los-conectores": {
+    answer:
+      "Un conector dice qué relación hay entre dos ideas: sumar, oponer, explicar la causa o sacar una consecuencia. Se enseña mejor partiendo de dos ideas sin unir y preguntando por esa relación, y no con una lista. En cada nivel bastan cinco o seis: de «y, pero, porque» en A1 a «ahora bien» o «es decir» en C1.",
+    steps: [
+      "Escribe dos ideas separadas y pregunta qué relación hay entre ellas.",
+      "Presenta dos conectores para esa relación, uno conocido y uno nuevo, con su lugar y su puntuación.",
+      "Cambia una de las ideas y comprueba si el conector todavía sirve.",
+      "Practica hablando: una opinión, una objeción y una conclusión.",
+    ],
+  },
 };
