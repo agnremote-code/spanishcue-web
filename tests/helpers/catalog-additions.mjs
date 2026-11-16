@@ -14,6 +14,22 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 const additions = [
   ...courseLessons,
   {
+    // 2026-11-16: La casa (A0–C2), a PRO 3D reality-show house over one night, wired like La boda.
+    id:260,path:'/la-casa-del-reality',files:/^(?:app\/la-casa-del-reality\/|app\/escucha-3d\/content\/reality\/|public\/la-casa-del-reality\/|public\/audio\/escucha-3d\/reality-|tests\/la-casa-del-reality\.test\.mjs$|scripts\/check-la-casa-del-reality\.mjs$|scripts\/covers\/art\/la-casa-del-reality\.webp$|public\/conversation-previews\/260\.mp4$|docs\/audits\/la-casa-del-reality-english-additions-20261116\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:260,')&&line.includes('path:"/la-casa-del-reality"')?[i]:[]);
+        assert.equal(at.length,1,'one la casa catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',257,259,258,260],',',257,259,258],']],
+      'app/conversation-preview-videos.ts':[[',257,259,258,260]);',',257,259,258]);']],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/la-casa-del-reality-english-additions-20261116.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/la-casa-del-reality.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 343);','assert.equal(lessons.length, 342);'],['255,256,257,259,260].includes(lesson.id)','255,256,257,259].includes(lesson.id)'],["l.levels?.includes('A0')).length,35);","l.levels?.includes('A0')).length,34);"],['assert.equal(a1Lessons.length, 94);','assert.equal(a1Lessons.length, 93);'],["relative.startsWith('app/la-casa-del-reality/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/336(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/335(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     // 2026-11-10: HR Crisis (A1–C1), a PRO 3D chaotic office with the mascot Tizia, wired like La boda.
     id:258,path:'/hr-crisis',files:/^(?:app\/hr-crisis\/|app\/escucha-3d\/content\/hr\/|public\/hr-crisis\/|public\/audio\/escucha-3d\/hr-|tests\/hr-crisis\.test\.mjs$|scripts\/covers\/art\/hr-crisis\.webp$|public\/conversation-previews\/258\.mp4$|docs\/audits\/hr-crisis-english-additions-20261110\.json$)/,
     edits:{
@@ -681,7 +697,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===260||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -692,7 +708,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==260&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

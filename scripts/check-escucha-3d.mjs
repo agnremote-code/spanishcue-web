@@ -11,6 +11,7 @@ import { CAST as BODA_CAST } from '../app/la-boda/story.mjs';
 import { CAST as TREN_CAST } from '../app/el-tren-de-las-2340/story.mjs';
 import { CAST as PAPEL_CAST } from '../app/el-mundo-en-blanco/story.mjs';
 import { CAST as HR_CAST } from '../app/hr-crisis/oficina.mjs';
+import { CAST as REALITY_CAST } from '../app/la-casa-del-reality/story.mjs';
 
 const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
 const [onlyGame, onlyLevel] = process.argv.slice(2);
@@ -73,6 +74,11 @@ export function checkFile(game, level, data, path) {
       if (!member) bad(at, `${speaker.name} is not in the El mundo en blanco cast (story.mjs)`);
       else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
     }
+    if (game === 'reality') for (const speaker of speakers) {
+      const member = Object.values(REALITY_CAST).find(c => c.name === speaker.name);
+      if (!member) bad(at, `${speaker.name} is not in the La casa cast (story.mjs)`);
+      else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
+    }
     if (game === 'vuelo') for (const speaker of speakers) {
       const member = Object.values(VUELO_CAST).find(c => c.name === speaker.name);
       if (!member) bad(at, `${speaker.name} is not in the Vuelo cancelado cast (story.mjs)`);
@@ -128,6 +134,7 @@ export function checkFile(game, level, data, path) {
   const minUse = Math.min(6, Math.floor(answerUse.reduce((a, b) => a + b, 0) / 3));
   if (answerUse.some(n => n < minUse)) bad('', `correct answers are badly spread over A/B/C: ${answerUse.join('/')}`);
   if (STRICT_KEYS.includes(game)) out.push(...strictKey(level, items).map(m => `${path} ${m}`));
+  if (LENGTH_KEYS.includes(game)) out.push(...lengthKey(items).map(m => `${path} ${m}`));
   return out;
 }
 
@@ -137,7 +144,7 @@ export function checkFile(game, level, data, path) {
 // at most 40% of the time, and from C1 every item asks at least two
 // inference questions (intention, irony, register, what is implied), marked
 // `infer: true`.
-export const STRICT_KEYS = ['tren', 'boda', 'papel', 'hr'];
+export const STRICT_KEYS = ['tren', 'boda', 'papel', 'hr', 'reality'];
 export function strictKey(level, items) {
   const out = [];
   const qs = items.flatMap(item => (item.choice ?? []).map(q => ({ item: item.id, ...q })));
@@ -153,6 +160,29 @@ export function strictKey(level, items) {
   if (['C1', 'C2'].includes(level)) for (const item of items) {
     const n = (item.choice ?? []).filter(q => q.infer === true).length;
     if (n < 2) out.push(`${item.id}: ${level} needs at least 2 inference questions (infer: true), has ${n}`);
+  }
+  return out;
+}
+
+// Opt-in from La casa (older games are grandfathered): the length of an
+// option gives nothing away. The right option is the middle-length one at
+// most 45% of the time, and no option has three words or fewer while the
+// other two have seven or more.
+export const LENGTH_KEYS = ['reality'];
+export function lengthKey(items) {
+  const out = [];
+  const qs = items.flatMap(item => (item.choice ?? []).map(q => ({ item: item.id, ...q })));
+  if (!qs.length) return out;
+  const words = text => (String(text).match(/[\p{L}\p{N}]+/gu) ?? []).length;
+  const middle = qs.filter(q => {
+    const len = q.options.map(o => o.length);
+    const order = [0, 1, 2].sort((a, b) => len[a] - len[b]);
+    return order[1] === q.answer && len[order[0]] < len[order[1]] && len[order[1]] < len[order[2]];
+  });
+  if (middle.length > qs.length * 0.45) out.push(`: the right option is the middle-length one in ${middle.length} of ${qs.length} questions; at most 45%`);
+  for (const q of qs) {
+    const w = q.options.map(words);
+    if (w.some((n, k) => n <= 3 && w.every((m, j) => j === k || m >= 7))) out.push(`${q.item}: «${q.q}» has an option of ${Math.min(...w)} words next to two of 7 or more`);
   }
   return out;
 }

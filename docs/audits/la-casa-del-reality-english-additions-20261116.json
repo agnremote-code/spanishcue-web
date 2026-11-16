@@ -1,0 +1,3694 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g: «La casa» (ID 260), a new A0–C2 3D conversation and listening class inside a reality-show house over one night, whose A0 level is fully bilingual (conversation, housemates, choices, captions and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English support literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A night inside a reality-show house in 3D: alliances, nominations and a confessional with the most personal questions."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Marga and Lalo get the Surprise’s entrance ready."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Lalo, is camera one ready?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes, it is ready. And the microphone is new."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Good. It is ten o’clock. The door opens in two minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I am cold. There is a lot of air here."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Put on your coat. Tonight is long."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Which camera is ready?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What is the microphone like?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Lalo have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How do you feel before you go into a new place?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What clothes do you wear when it is cold at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What time does your favourite TV show start?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "microphone"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "coat"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "ready"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "La Voz talks to Marga in the confessional."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Hi, Voice. Is everything OK?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes. The red armchair is clean. The light is good."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "The Surprise is coming soon. It is their first night."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I have five questions for the Surprise."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Easy questions?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "No. Personal questions."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What colour is the armchair?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What is the light like?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many questions does La Voz have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What are the questions like?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What topic embarrasses you in public?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where do you sit to talk about important things?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What piece of furniture in your home is your favourite?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "armchair"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "clean"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "soon"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Brenda and Óscar talk in the living room."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Óscar, the Surprise is new. They are nice."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes. We need one more friend."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "We are two. With the Surprise, we are three."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Three votes. Perfect!"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Talk quietly. The cameras are listening."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What is the Surprise like, according to Brenda?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many are they with the Surprise?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Óscar want?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who is listening?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How do you choose your friends in a new group?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who do you talk quietly to when you tell a secret?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many people fit in your group of best friends?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "votes"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "quietly"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "nice"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Doña Fela and Chema are in the kitchen."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Doña Fela, how many cans of tuna are there here?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "There are forty. They are mine."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Forty? That is a lot of tuna!"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Tomorrow I cook for everyone. Rice with tuna."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Good. I bring the bread."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What is in the cans?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many cans are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Fela cook tomorrow?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Chema bring?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What food do you always keep in your kitchen?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many people do you usually cook for?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What easy recipe always turns out well for you?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "cans"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "tuna"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "rice"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Mateo does not speak out loud. He whispers to Yeni."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Mateo, why don’t you talk?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I whisper. Only with you."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "And why do you write on the napkins?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "The cameras don’t read. They listen."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Oh. I write too, then."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How does Mateo talk?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where does Mateo write?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "According to Mateo, what do the cameras do?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Yeni do at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "At what moment do you go quiet?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "In what place do you talk very quietly?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where do you leave paper notes for your family?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "very quietly"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "napkins"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "then"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yeni is in her bed. Fela visits her."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Fela, I miss my mom."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "It is normal, my girl. Do you have a photo?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes. Here it is. She is a hairdresser too."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "She is very pretty. She has your eyes."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Thank you. Now I feel better."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who does Yeni miss?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Yeni have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What job does the mom have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How is Yeni at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who in your family writes you long messages?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What photo do you always carry with you?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What song do you listen to so you sleep better?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I miss"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "hairdresser"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "pretty"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Lalo is behind the bathroom mirror. He talks to Chelo on the radio."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Lalo, what do you see?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I see the bathroom. A person is brushing their teeth."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Anything else?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "No. But I have a problem. I want to sneeze."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "No! The mirror does not sneeze."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where is Lalo?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What is the person in the bathroom doing?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Lalo want to do?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How do Lalo and Chelo talk?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How long do you spend in the bathroom in the morning?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What place in your home is only for you?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How do you feel when a camera looks at you?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "mirror"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "teeth"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "to sneeze"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Sofi and Dani are in the garden hammock."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Dani, it is half past eleven."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "So?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Production wants a kiss now."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Sofi, I really love you."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Oh, Dani. This is a show."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where are Sofi and Dani?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does production want?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Dani feel?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does a romantic couple do in a film?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where do you read or rest in summer?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What love show do you watch on TV?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "production"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "kiss"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "really"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Nacho and Toño are by the pool."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Nacho, how old are you?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Twenty-nine."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "And this photo? It says nineteen ninety-eight."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "It is my older brother’s."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Your brother has your face and your watch."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How old does Nacho say he is?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What year does the photo say?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "According to Nacho, whose photo is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does the brother have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who is with you in your phone photo?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What age do you feel inside?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What old object from your parents is in your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "photo"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "older"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "watch"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Toño has his hand on a button. Chelo talks to him."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Toño, how many hours have you been here?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Seven hours. My arm hurts."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "The prize is a car."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I don’t have a car. I go by bike."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Then don’t let go of the button!"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many hours has Toño been there?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What hurts Toño?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What is the prize?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How does Toño usually get around?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many minutes can you last without looking at your phone?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What big gift do you want to win one day?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What means of transport do you take to class or work?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "button"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "prize"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "car"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Chema and Marga are in front of the fridge."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Chema, say “Vitalín Yogurt” and eat one."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "“Vitalín Yogurt”. But I don’t eat it."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Why not?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I can’t have milk. My tummy hurts."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Oh, Chema. You are the face of the yogurt!"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What brand of yogurt is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where are they?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What can’t Chema have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What hurts?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What food doesn’t agree with you?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What TV advert do you remember?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What do you have for breakfast?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "face"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "tummy"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "yogurt"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "La Voz and Chelo prepare the nominations."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Voice, here is the envelope."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What name is in it?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Fela."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Fela? But people love Fela."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "It is an order from the boss."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I don’t like this game."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Chelo give La Voz?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What name is in the envelope?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Whose order is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does La Voz think of the game?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What childhood game do you remember fondly?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who do people in your city love?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What do you do when an order is not fair?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "envelope"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "order"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "boss"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Wendy is in the punishment room. Fela brings her wool."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Wendy, here. Green wool."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What for?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "To knit. There is nothing to do here."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I am the bad one of the show. Bad girls don’t knit."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Tonight, they do."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where is Wendy?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What colour is the wool?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What is the wool for?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who is the bad one of the show?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What do you do with your hands when you are bored?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Which TV villain do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who taught you to make something with your hands?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "wool"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "to knit"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "bad one"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Chelo and Marga eat in the production corridor."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Chelo, do you want pizza? It is cold."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes, thanks. I am very hungry."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Is it true? You won the first season?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes. Seven years ago. Now I work here at night."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What a life!"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How is the pizza?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Chelo have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What did Chelo win?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "When does Chelo work?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What do you eat when you work or study late?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What cold drink do you have in summer?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What TV contest would you like to take part in?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "cold"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "season"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "hunger"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Hugo is in front of the red door. Fela is with him."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Fela, my dad is in hospital."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Oh, Hugo. I am very sorry."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "If I go out through this door, I pay a fine."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Your dad is more important than money."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes. I am going."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Where is Hugo’s dad?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What colour is the door?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Hugo pay if he leaves?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Hugo decide?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What thing can’t you buy with money?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who helps you with difficult problems?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What do you say to a friend with a sick relative?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "fine"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "hospital"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I am sorry"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Paty does Sofi’s make-up at four in the morning."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Paty, I have dark circles."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes. It is four o’clock. Everybody has dark circles."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Can you remove the dark circles?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Of course. A bit of cream and that’s it."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "I look like I slept eight hours!"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Sofi have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Paty use?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How many hours does Sofi look like she slept?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What do you do on Saturday nights before you sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What do you do in the morning to wake up?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "When do you use make-up or special clothes?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "dark circles"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "cream"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "to remove"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Lucía and Brenda fold clothes in the laundry room."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Brenda, I have a secret."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What secret?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "My surname is not Montalbán. My dad is the presenter."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "No! The presenter of the show?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Yes. And he doesn’t know. Talk quietly."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Lucía have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who is Lucía’s dad?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who does not know the secret?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who keeps your secrets?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What job does someone famous from your country have?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What song do you put on to clean the house?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "secret"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "surname"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "presenter"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "La Voz, Marga and Chelo end the night in the confessional."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "It is quarter past six. The show is ending."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Tonight or forever?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Forever. It is the last show."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Oh, no. I like this house."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Me too. Thank you for everything."
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What happens to the show?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who gives the news?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What does Marga like?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "What TV show do you miss?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "How do you feel at the end of a long night?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "Who deserves a thank-you from you today?"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "it ends"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "forever"
+    },
+    {
+      "path": "app/escucha-3d/content/reality/a0.json",
+      "text": "last"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Contestant who talks to a plant"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "This plant is called Carmen. She is my friend. She does not talk, but she listens. In the house nobody listens. Carmen does."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What plant, animal or object do you tell your things to?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Contestant who does yoga at three in the morning"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I do yoga at night. At three in the morning there are no people. There are only cameras. I breathe, I stretch and I calm down."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What music or sound helps you relax in bed?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Security guard at the door"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I work at the door. Nobody comes in, nobody goes out. I have been here for seven years. I see every show, but I am never on TV."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What job in your city does nobody see but everyone needs?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Evicted contestant who came back in the second chance round"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "They evicted me a month ago. Now I am here again. People voted for me. I am happy, but I am afraid."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What would you do differently with a second chance?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Contestant who sleeps so he is not on camera"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I sleep a lot. I sleep in the day and at night. If I sleep, I don’t talk. If I don’t talk, I have no problems."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What is your trick for resting when there is a lot of noise?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Contestant who draws her videos on paper"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "There are no phones here. That is why I draw my videos on paper. This is a dance. This is a cat. I laugh a lot."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What do you do when you don’t have your phone with you?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "The oldest contestant, seventy years old"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I am seventy years old. I am the oldest in the house. The young people dance and I watch them. I like their energy."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What useful advice did a much older person give you?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Superfan of the show who finally got in"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I have watched this show since I was a girl. Now I am inside. This is the famous kitchen! I touch everything. I am very excited."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What TV programme did you watch when you were little?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Sound technician who hears everything"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I am a sound technician. I listen to all the microphones. I hear people snore, sing and cry. I know many secrets."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What night-time sound helps you relax?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Night cleaner"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I clean the house at night. The contestants sleep. I find everything: letters, socks and money. I say nothing."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Which housework do you hate and which do you not mind?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Contestant who is writing a book about the house"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I am writing a book about the house. I write everything in a notebook. The names are secret. I don’t know the ending yet."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What would you write a book about?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Contestant who never gets into the pool"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I sit next to the pool every day. I can’t swim. Nobody knows. I look at the water and the moon."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What basic skill are you embarrassed not to have?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Cook from the show’s catering"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I am the cook. I cook for the crew and for the house. Tonight there is soup. Soup helps when everyone is nervous."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What dish comforts you on a nervous day?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Contestant obsessed with counting steps"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I walk all day. Today I did twenty thousand steps. The house is small, so I go round and round. My feet hurt."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "How many steps do you take from your home to work or school?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Actor dressed as a banana for the sponsor"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I am an actor. Today I am a banana. I dance for the sponsor. The costume is yellow and very hot. People laugh a lot."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What costume did you wear once and how did you feel?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Scriptwriter of the show (though there is no script)"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I am a scriptwriter. But the show has no script. It is a secret. I write ideas for the people in the house. Today I am worried."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Which TV programme seems the most fake to you?"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "Electrician fixing the bathroom light"
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "I am an electrician. The bathroom light does not work. If there is no light, the camera can’t see. That is why I work fast."
+    },
+    {
+      "path": "app/la-casa-del-reality/invitados.mjs",
+      "text": "What do you fix yourself at home?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The door of the house"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is ten at night. It is the live show of LA CASA, a TV programme. You are the Surprise: the new person. There are forty cameras."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hi. I am Marga. In one minute you open the door."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Your line is: “I am here to win!”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Oh, no! Your microphone does not work."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Three million people are watching. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I say the line: “I am here to win!”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Good… but nobody claps."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You go in with the writers’ line. There is a very long silence."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I tell the truth: “Hi. I am scared.”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "That is honest! I like it."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The audience does not know what to do. Then it claps a lot."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "One moment. I fix the microphone with a hairpin."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It works! How fast!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You fix the microphone in ten seconds. The audience shouts “Surprise!”."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you say when you go into a place with many people?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Where in your home do you talk on the phone in secret?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What TV programme do you watch on Saturdays?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What small object do you always carry in your bag or pocket?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What does your voice sound like in a phone video?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the door"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the camera"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the microphone"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the hairpin"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to clap"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The red armchair"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The confessional is a small room. There is a red armchair and a camera. A voice speaks behind a curtain. It is La Voz. Nobody sees his face."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hello, Surprise. Sit down, please."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "First question: why are you here?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Sorry. Today I am a bit sad."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "La Voz waits for your answer. What do you say?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I am here for the money."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Ha! At least it is the truth."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "La Voz laughs. It is the first laugh of the night."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Are you sad? What is wrong?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Nobody asks me that… Thank you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You talk with La Voz for ten minutes. Now he feels better."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I say nothing. I look at the camera."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "One minute in silence… Very interesting."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You look at the camera for a minute. At home, people do not change the channel."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What face do you make when someone takes out a phone for a photo?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which friend has kept your secrets since school?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who do you tell a big secret to?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What part of a famous person’s life do you not want for yourself?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What corner of your city is perfect for being without people?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the armchair"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the curtain"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the face"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "sad"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Two friends on the sofa"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "In the living room there is a big sofa. Brenda is an influencer. Óscar is a trainer. They both want to win. They wave you over."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hi, Surprise. We are two. With you, we are three."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Three votes are better than two."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "But it is a secret. The cameras are listening."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Brenda and Óscar look at you. What do you answer?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes. We are a team."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Perfect! Now we have three votes."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Brenda shakes your hand. Óscar smiles. Now you have an alliance."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Are you boyfriend and girlfriend?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Shhh! Yes… but it is a secret."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Brenda is red. Now you know their secret."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "No, thanks. I want friends, not votes."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "No? Nobody says no."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You say no twice in five minutes. It is a record."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who do you team up with in class or at work?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What funny secret from your childhood can you tell now?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which household task do you do best alone?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you do on a big sofa with friends?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What plan from a friend do you always turn down with a smile?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the sofa"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the vote"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the team"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the alliance"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the secret"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Forty cans of tuna"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Doña Fela is sixty-seven. She is the grandmother of the house. Under her bed there are forty cans of tuna. Wendy is angry."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Forty cans! Fela is selfish!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is not true. Tomorrow I cook for everyone."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "We only have three cans for fourteen people."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Fela looks at you. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wendy, Fela cooks for everyone every night."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Thank you, my dear… thank you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wendy says nothing. The forty cans stay under the bed."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Fela, we cook together. Three cans, fourteen plates."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Good! You cut the onion."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You make a stew with tuna, potatoes and onion. Everyone eats."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Fela, why do you keep so much food?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Because as a girl I had no food."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Fela tells her story. In the kitchen nobody talks."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What cans of food are there in your kitchen now?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who is the grandma or grandpa of your group of friends?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What food do you make when ten people come to your home?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who in your family is the boss of the kitchen on Sundays?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What food do you keep for a difficult day?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the can"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the tuna"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the onion"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the stew"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "selfish"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Notes on napkins"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Mateo is in the dining room. He is a lawyer. He has not spoken out loud for eleven days. He writes on napkins."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "(He writes) “Hi. I read my contract.”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "(He writes) “The show can use my voice. Forever.”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "(He writes) “That is why I don’t talk.”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Mateo gives you a napkin and a pencil. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I read Mateo’s contract."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "(He writes) “See? It is horrible.”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You read the contract. Now you don’t want to talk either."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I write: “Hi, Mateo. How are you?”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "(He writes) “Good! You have nice handwriting.”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You talk with napkins for half an hour. On the internet it is trending."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I give him a hug. I write nothing."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Th… thank you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Mateo talks after eleven days. His first word is “thank you”."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What bank or phone document do you sign without reading?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who do you write little notes to at home?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "When are you all day without talking?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What favourite word do you repeat when you are happy?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who in your family has the nicest handwriting?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the napkin"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the contract"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the voice"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "forever"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "A photo of mom"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is midnight. Yeni is in her bed. She is twenty-two and she is a hairdresser. She looks at a photo of her mom and cries."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I miss my mom. I miss my hair salon."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I can’t sleep."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Attention: there is a message for Yeni."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yeni is crying. The camera is watching. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Look, Yeni. It is a video of your mom."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Mom! Mom!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yeni cries more. Production is happy: many people are watching."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Close your eyes and count clients from the salon."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "A lady… a boy… a bald man…"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yeni counts clients and falls asleep. She smiles."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yeni, don’t cry for the camera. Cry for yourself."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You are right. Now I am not crying."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yeni does not cry. Production does not know what to put on TV."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What thing from your home do you miss when you travel?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What photo do you have next to your bed?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you count to fall asleep?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who cuts your hair?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you do in bed before you close your eyes?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the bed"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the hair salon"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to miss"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to cry"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The bathroom mirror"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You are in the bathroom. There is a big mirror. Suddenly, the mirror goes “achoo!”. Behind the mirror there is a person. It is Lalo, the cameraman."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Oh! Sorry. There is a lot of dust here."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I work here. I film the bathroom."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Before, I filmed penguins. I was happy."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The mirror is silent. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I scream! The mirror sneezes!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Shhh! Don’t scream!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Everyone comes to the bathroom. Tomorrow it is a scandal."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hi, Lalo. How is your day?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Are you talking to me? How nice!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You talk with the mirror for half an hour. Lalo tells you many things."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Lalo, the penguins need you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes? Tomorrow I call my boss."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Lalo switches off the bathroom camera. He wants to film penguins again."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "How many mirrors are there in your home?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What animal do you like to watch in documentaries?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you do in front of the mirror in the morning?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What student job do you remember with a smile?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Where do you never want cameras?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the mirror"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the bathroom"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to sneeze"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the penguin"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the dust"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The half-past-eleven hammock"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is night in the garden. Sofi and Dani are in the hammock. They are a couple on the show. But Sofi is an actress and the romance is a contract."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is half past eleven. Now it is the kiss."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Sofi, I really love you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "(To you, quietly) Help, please."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Sofi looks at you. Dani knows nothing. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I say nothing. I leave."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Well… a kiss, then."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "There is a kiss in the hammock. Production wants it at 23:30. It comes at 23:31."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Dani, the romance is a contract."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What? Is it true, Sofi?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Dani is sad. Suddenly, the hammock breaks."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Sofi, you tell the truth."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Dani, it is a contract… but now I love you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Sofi and Dani cancel the romance live. Nobody believes it."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which couple in a series seems fake to you?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Where do you rest at home: on the sofa or in bed?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What small truth do you not tell your friends so as not to upset them?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What does an actor or actress do on Mondays?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you see in a garden at night?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the hammock"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the garden"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the kiss"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the actress"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to break"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "A walkman at the pool"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Nacho is next to the pool. He says he is twenty-nine. But in his backpack there is a walkman and a photo from 1998."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "That photo is not mine. It is my brother’s."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Well… I am forty-four."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "On TV, at forty you are the dad."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Nacho is scared. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Nacho is forty-four!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "No! Don’t shout!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Everybody knows it. Nacho is forty-four and has a walkman."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "We hide the photo in the pool."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes! In a bag, in the filter."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The photo from 1998 is in the pool filter. It is a secret of you both."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Nacho, tell your age with a joke."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "“I am forty-four and my knees sing.”"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Nacho tells his age. The house laughs and claps."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What old object still works in your home?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What music from the nineties do you listen to?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What person over eighty do you know?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What joke always makes you laugh?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What strange thing do you sometimes find at the bottom of your backpack?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the pool"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the backpack"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the age"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the joke"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to hide"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Seven hours on a button"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "In the garden gym there is a red button. Toño has had his hand on the button for seven hours. The prize is a car."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "My arm hurts. And I have to go to the bathroom."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "If I let go of the button, I lose the car."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Please… help."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Toño looks at you. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Toño, let go of the button. Your health is important."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You are right… There!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Toño lets go of the button. Seven hours for nothing. But he goes to the bathroom."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I put my hand on it. You go to the bathroom."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Thank you! Three minutes!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You hold the button for three minutes. Nobody knows if it is legal."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wait. What does this button do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I don’t know… Why?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You look carefully: the button turns on the fridge light."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What radio or TV contest do you know?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What part of your body hurts after sport?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "How many hours do you spend sitting in front of a screen?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What phone app do you open first in the morning?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "How do you help a tired person?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the button"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the arm"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the prize"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to let go"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the fridge"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Vitalín yogurt"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Next to the kitchen there is a fridge with Vitalín yogurts. Vitalín pays for the show. Chema is the face of the yogurt. But there is a problem."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I have to say “Vitalín Yogurt” thirty times today."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "And eat a yogurt. But I can’t have milk."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "My tummy hurts."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chema has a yogurt in his hand. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chema, say “Vitalín”. You can do it."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Vitalín, Vitalín, Vitalín…"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chema says “Vitalín” thirty times. The sponsor is happy."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I say “Vitalín” for you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Really? You are the best person in the house!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You say “Vitalín” with a big smile. Now the sponsor wants you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chema, tell the camera the truth."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hello. I can’t eat yogurt."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chema tells the truth. The yogurt stays in the fridge."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What food brand is always in your fridge?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What food upsets your tummy?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What TV advert do you like?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What word do you repeat a lot?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you have instead of milk?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the yogurt"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the milk"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the tummy"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the sponsor"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "A name to leave"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is one in the morning. You are in the red armchair again. It is the nominations: you have to say a name. The nominated person can leave the house."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Surprise, who do you nominate?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "(Quietly) Production wants Fela."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "But I say nothing."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "La Voz waits. What name do you say?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I nominate Fela."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "OK… Fela, nominated."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You do what production wants. Fela is sad."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I nominate nobody."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Nobody? That… is not possible."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You say no name. La Voz does not know what to say."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I nominate myself."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yourself? That never happens!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You nominate yourself. It is the first time in seven seasons."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What is fair and what is not fair in a game?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who do you choose first for your team?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "How do you feel when you vote?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "When do you say your name out loud?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which older neighbour helps you in your building?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to nominate"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to leave"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "nobody"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "fair"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The punishment room"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The punishment room is small and white. Wendy is here for three hours. Wendy is the bad girl of the show. Fela gives you green wool for her."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you want? I am the bad one."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Everybody hates me."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "There is nothing to do here."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You have wool and two needles. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Here. We knit a sweater."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "A sweater? Well… show me."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You leave the punishment room with a green sweater. One sleeve is longer."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wendy, are you OK?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "No… I am very tired."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wendy cries with you. Nobody knows if it is true."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wendy, you are not bad. Change!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Me? Good? Well… tomorrow."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wendy does not want to be the bad one. The audience protests."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What clothes did someone in your family make for you?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you do when there is nothing to do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What film villain do you like?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What old clothes do you never want to throw away?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What punishment did you get as a child?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the punishment"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the wool"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to knit"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the sweater"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the sleeve"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Cold pizza at three"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is three in the morning. You go into the production corridor. Chelo is eating cold pizza. Chelo won the show seven years ago."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hi. I have a deal for you."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "At half past three, you shout at Wendy. And next week you have immunity."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Do you want pizza? It is cold."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chelo waits. What do you answer?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes. I accept the deal."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Good. At half past three, in the living room."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You accept. Tonight there is a fight at half past three."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "No, thanks. But I do want pizza."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Ha, ha. Sit down."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You eat cold pizza with Chelo. Nobody films it."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chelo, are you happy?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I… don’t know."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Chelo cries in the corridor. The winner cries again."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What food do you take from the fridge very late at night?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What did you win in a game as a child?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which people work while your city sleeps?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What food from yesterday do you like more than freshly made?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you do with a friend at midnight?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the corridor"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the deal"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "cold"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to win"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to shout"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The red door"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "There is a red door in the house. It is for leaving the show. Hugo is in front of the door with his suitcase. His dad is in hospital."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "If I leave, I pay a fine. I have no money."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hugo, your dad is more important."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I am a teacher. My dad is alone."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hugo has his hand on the door. What do you do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hugo, go. Open the door."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Thank you. Goodbye, house."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Hugo leaves. The red door opens for the first time."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "We all give our prizes for the fine."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Everyone? For me?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The house pays Hugo’s fine with their prizes. Hugo cries."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Wait. I call the hospital from the confessional."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Can you do that?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You call the hospital. Hugo’s dad is stable."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What piece of clothing do you always pack too many of?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which relative lives in another country or city?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What teacher do you remember?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who do you visit when they are ill?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What building or tree can you see from your kitchen window?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the red door"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the fine"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the hospital"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the teacher"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Dark circles at four"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is four in the morning. Paty is in the make-up room. Paty does make-up for TV. On Sundays she does make-up at a funeral home."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Sit down. You have dark circles."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "My funeral home clients don’t have dark circles. Ha, ha."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Cream for the dark circles?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Paty has the cream in her hand. What do you say?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes, please. I want an eight-hours-of-sleep face."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Very good. Eight hours in one minute."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Paty does your make-up. You look like you slept eight hours."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "A funeral home? What a strange job!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes. There nobody complains. Ha, ha."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You and Paty laugh about death at four in the morning."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "No, thanks. I go out with my face."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Without make-up? How brave!"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You go out without make-up. Your dark circles are on TV."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "How many hours do you sleep before an important day?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What strange job does your family know?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you put on your face in the morning?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which brave person in your neighbourhood do you admire?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What noises are there in your street in the early morning?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the make-up"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the dark circles"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the cream"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the funeral home"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Dirty clothes and a secret"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is five o’clock. In the laundry room, Lucía folds clothes. Lucía has a big secret: her dad is the show’s presenter."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "My surname is fake. It is my grandmother’s."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "My dad does not look at me. He does not know me."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do I do?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Lucía has a T-shirt in her hand. What do you say?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Lucía, tell the truth on TV."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "OK. Dad, it is me, Lucía."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Lucía tells the truth. Her dad changes the channel."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Your secret is here, with the dirty clothes."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Thank you. Nobody looks here."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You keep Lucía’s secret in the laundry room."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I have an idea for the show."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "An idea? Tell me."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You and Lucía prepare a secret plan in the laundry room."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Who washes the clothes at your home?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Where is your surname from?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What secret do you keep for a friend?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What TV presenter do you know?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Where do you keep important things?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the laundry room"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the dirty clothes"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the surname"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the presenter"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to fold"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Quarter past six"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is quarter past six. It is the last confession. La Voz has news: the show is ending. Today. Forever."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Look at the screen. This is your night on TV."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Seven years… and today is the end."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Thank you, Surprise. One last question: how are you?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "It is the end. What do you say?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "I am fine. Thank you for everything, Voice."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Thank you. Really."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "La Voz says “thank you” without questions. It is the last line of the show."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Voice, do you want to come out with your face?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes. Finally."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "The curtain opens. The whole country sees La Voz’s face."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Let’s all go and have breakfast."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Yes! Coffee for everyone."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "You open the door. Everyone goes out for breakfast. It is sunny."
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What special dinner do you make on a quiet Friday?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you have for breakfast after a long night?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What TV show is ending that you will miss?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "Which worker in your neighbourhood do you thank?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "What do you do when the sun comes up?"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the end"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the news"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "the screen"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a0.mjs",
+      "text": "to have breakfast"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the floor manager"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the scriptwriter"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "live"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the hairpin"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to fix"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the confessional"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the curtain"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the armchair"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the divorce"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to answer"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the living room"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the followers"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the team"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the couple"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to vote"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the can"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the tuna"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "selfish"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to keep"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the stew"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the dining room"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the napkin"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the lawyer"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the contract"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "out loud"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the bedroom"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the hair salon"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to miss"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the tears"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to broadcast"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the mirror"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the cameraman"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to sneeze"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the toothbrush"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to fire"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the hammock"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the actress"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the firefighter"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the kiss"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "fake"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the pool"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the sun lounger"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the glasses"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to hide"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the knees"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the button"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the weights"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to hold on"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to let go"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the delivery driver"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the sponsor"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the advert"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "lactose"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the spoon"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "empty"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to nominate"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the nominees"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "production"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "boring"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the decision"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the punishment"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the villain"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the wool"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the needles"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to knit"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the corridor"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the producer"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the night shift"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the deal"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "free"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to quit"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the fine"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the suitcase"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the teacher"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "stable"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the make-up artist"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the dark circles"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the funeral home"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the foundation"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to complain"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the laundry room"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the washing machine"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the surname"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the presenter"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to recognise"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the sun"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the screen"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "to cancel"
+    },
+    {
+      "path": "app/la-casa-del-reality/levels/a1.mjs",
+      "text": "the moustache"
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise walks in with the line the writers gave them. Nobody claps."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise walks in telling the truth. The audience does not know what to do with that."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise fixes their microphone with a hairpin. A technical idol is born."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "First confession: the Surprise says they came for the money. At least it is not a lie."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "First confession: the Surprise comforts La Voz. Who is confessing to whom?"
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "First confession: the Surprise stares at the camera in silence for a minute."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "ALLIANCE: the Surprise joins Brenda and Óscar in their first hour."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise discovers that Brenda and Óscar are a couple outside the house."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise turns down two alliances in five minutes. Season record."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Tuna crisis: the Surprise defends Doña Fela and her forty tins."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise cooks a stew for fourteen with three tins, together with Doña Fela."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Doña Fela tells why she keeps food. The kitchen goes silent."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise reads Mateo’s contract. Now they do not want to speak either."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise and Mateo talk with napkins. It is already trending."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Mateo speaks again after eleven days. His first word: “thank you”."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Yeni cries and the production plays her mother’s message. Record audience."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise teaches Yeni to fall asleep counting hair-salon clients."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Yeni refuses to cry for the camera. The production does not know what to broadcast."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Bathroom scandal: the mirror sneezes."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise chats with a mirror for half an hour. Experts are worried."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise convinces the bathroom cameraman to go and film penguins."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "First kiss in the hammock. Production had asked for it at 23:30. It arrived at 23:31."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise tells Dani the truth about Sofi. The hammock breaks from sadness."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Sofi and Dani cancel their romance live. Nobody believes it."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "BOMBSHELL: Nacho is not 29. He is 44 and has a Walkman."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise and Nacho hide a photo from 1998 in the pool."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Nacho reveals his age by telling jokes. The house applauds him."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Toño lets go of the button. Seven hours for nothing."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise holds the button while Toño goes to the bathroom. Is that legal?"
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "They discover that the challenge button turns on the fridge light."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Chema says “Vitalín Yogurt” thirty times. The sponsor stays."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise says “Vitalín Yogurt” for Chema. An advertising deal in sight."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Chema confesses he cannot have dairy. The yogurt stays in the fridge."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Nominations: the Surprise obeys the production. Fela, nominated."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Nominations: the Surprise nominates nobody. La Voz is speechless."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Nominations: the Surprise nominates themself. First time in seven seasons."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise goes into the punishment room and comes out with a knitted sweater."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Wendy, the villain, cries with the Surprise. Strategy or truth?"
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise convinces Wendy to stop being the villain. The audience protests."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise accepts the production’s deal: there will be a fight at three."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise shares a cold pizza with the producer. Nobody films it."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The winner of the first season cries again in the corridor."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Hugo leaves the house to be with his father. The red door opens."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The house pays Hugo’s fine with their prizes of the week."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise calls the hospital from the confessional for Hugo."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Paty does the Surprise’s make-up so it looks like they slept eight hours."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise and the make-up artist laugh about death at four in the morning."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise goes out without make-up. Dark circles in high definition."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Lucía confesses she is the presenter’s daughter. Her father changes the channel."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "The Surprise keeps Lucía’s secret among the dirty laundry."
+    },
+    {
+      "path": "app/la-casa-del-reality/story.mjs",
+      "text": "Lucía and the Surprise plan to sabotage the show from the laundry room."
+    }
+  ]
+}

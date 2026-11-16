@@ -32,6 +32,7 @@ const WORLDS = [
   ['el-tren-de-las-2340', 'public/el-tren-de-las-2340/portada.webp'],
   ['el-mundo-en-blanco', 'public/el-mundo-en-blanco/portada.webp'],
   ['hr-crisis', 'public/hr-crisis/portada.webp'],
+  ['la-casa-del-reality', 'public/la-casa-del-reality/portada.webp'],
   ['noche-abierta', 'public/noche-abierta/portada.webp', ''], // 16:9 kept (tests/noche-abierta)
   ['hospital-san-casi-vivo', 'public/hospital-san-casi-vivo/portada.webp'],
   ['madrid-infectada', 'public/madrid-infectada/portada.webp'],
