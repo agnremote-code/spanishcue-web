@@ -30,6 +30,9 @@ const copy = {
     openLead: "Entra cuando quieras, desde el teléfono o la computadora.",
     lockedTitle: "Se abren con tu profesor",
     lockedLead: "Estos mundos se juegan en clase con un profesor de SpanishCue. Tu progreso en ellos también aparece en tu pasaporte.",
+    lockedHow: "¿Ya tienes profesor? Abre en este dispositivo el enlace que te envió y vuelve aquí: se abren todos.",
+    passOn: "Pase de tu profesor activo: todos los mundos están abiertos.",
+    passLost: "Tu pase no está activo en este dispositivo. Abre otra vez el enlace que te envió tu profesor.",
     locked: "Con tu profesor",
     play: "Jugar",
     again: "Volver a entrar",
@@ -65,6 +68,9 @@ const copy = {
     openLead: "Step in whenever you like, on your phone or your computer.",
     lockedTitle: "They open with your teacher",
     lockedLead: "These worlds are played in class with a SpanishCue teacher. Your progress in them shows in your passport too.",
+    lockedHow: "Already have a teacher? Open the link they sent you on this device and come back here: every world opens.",
+    passOn: "Your teacher's pass is active: every world is open.",
+    passLost: "Your pass is not active on this device. Open the link your teacher sent you again.",
     locked: "With your teacher",
     play: "Play",
     again: "Step back in",
@@ -88,7 +94,7 @@ const readSave = (key: string) => {
 };
 const emptyRead = () => null;
 
-export default function StudentHub({ cards, locale, signedIn, fullAccess }: { cards: HubCard[]; locale: Locale; signedIn: boolean; fullAccess: boolean }) {
+export default function StudentHub({ cards, locale, signedIn, fullAccess, studentPass, alias, passLost }: { cards: HubCard[]; locale: Locale; signedIn: boolean; fullAccess: boolean; studentPass: boolean; alias: string; passLost: boolean }) {
   const t = copy[locale];
   const [hub, setHub] = useState(createHub);
   const [ready, setReady] = useState(false);
@@ -195,7 +201,7 @@ export default function StudentHub({ cards, locale, signedIn, fullAccess }: { ca
           <p className="jg-passport-head"><span>{t.passport}</span><span className="jg-passport-rank">{rankName}</span></p>
           <label className="jg-passport-name">
             <span className="jg-sr">{t.nameLabel}</span>
-            <input value={hub.name} maxLength={24} placeholder={t.namePlaceholder} autoComplete="given-name" onChange={(event) => save({ ...hub, name: cleanName(event.target.value) })} />
+            <input value={hub.name || alias} maxLength={24} placeholder={t.namePlaceholder} autoComplete="given-name" onChange={(event) => save({ ...hub, name: cleanName(event.target.value) })} />
           </label>
           <p className="jg-passport-scenes">{t.scenes(book.summary.scenes)}</p>
           <p className="jg-passport-next">{book.next ? t.toNext(book.toNext, book.next[locale]) : t.topRank}</p>
@@ -207,7 +213,10 @@ export default function StudentHub({ cards, locale, signedIn, fullAccess }: { ca
         </aside>
       </section>
 
-      {!signedIn ? (
+      {studentPass ? <p className="jg-account-note jg-pass-on">{t.passOn}</p> : null}
+      {passLost ? <p className="jg-account-note jg-pass-lost" role="status">{t.passLost}</p> : null}
+
+      {!signedIn && !studentPass ? (
         <p className="jg-account-note">
           <span>{t.account}</span>
           <a href="/ingresar?modo=registro&returnTo=%2Fjugar">{t.accountCta} →</a>
@@ -226,7 +235,7 @@ export default function StudentHub({ cards, locale, signedIn, fullAccess }: { ca
         <section className="jg-section" aria-labelledby="jg-locked-title">
           <div className="jg-section-head">
             <h2 id="jg-locked-title">{t.lockedTitle}</h2>
-            <p>{t.lockedLead}</p>
+            <p>{t.lockedLead} {t.lockedHow}</p>
           </div>
           <ul className="jg-grid">{locked.map(card)}</ul>
         </section>

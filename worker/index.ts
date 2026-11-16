@@ -7,8 +7,9 @@ import {
   localLessonPath,
   ownerFromHeaders,
 } from "../app/access-policy";
-import { verifyShareSession, redeem, privateHeaders, renewShareCookie } from "../app/autoestudio/share/server";
+import { verifyShareSession, redeem, privateHeaders, renewShareCookie, SHARE_COOKIE } from "../app/autoestudio/share/server";
 import { applyShareHeaders, shareAllowsPath } from "./autoestudio-access";
+import { applyStudentPassHeaders, isStudentAudioPath, isStudentWorldLesson, studentPassScope, studentWorldPass } from "../app/jugar/student-pass";
 import { lessons } from "../app/lesson-catalog";
 import { isPremiumBoardPath } from "../app/boards/access";
 import { isAutoestudioPath, isPremiumAutoestudioPath } from "../app/autoestudio/access";
@@ -100,6 +101,10 @@ const PUBLIC_HTML_CACHE_CONTROL = 'public, max-age=0, must-revalidate';
 const BUILD_ID = typeof __SPANISHCUE_BUILD_ID__ === 'string' && __SPANISHCUE_BUILD_ID__ ? __SPANISHCUE_BUILD_ID__ : 'unversioned';
 const VISITOR_STATE_HEADERS = ['cookie', 'authorization', 'rsc', 'next-router-state-tree', 'next-router-prefetch', 'next-url'];
 
+/** The browser carries a student pass cookie (unverified): only chooses which page explains a refusal. */
+function shareHint(cookie: string | null): boolean {
+  return Boolean(cookie && cookie.includes(`${SHARE_COOKIE}=`));
+}
 function edgeCache(): Cache | null {
   const store = (globalThis as unknown as { caches?: { default?: Cache } }).caches;
   return store?.default ?? null;
@@ -315,7 +320,7 @@ const app = {
     const audioPrefix = pathname.match(/^\/audio\/([^/]+)\//)?.[1] || null;
     const premiumAudio = Boolean(audioPrefix && !freeAudioPrefixes.has(audioPrefix));
     const administrative=(pathname==='/admin'||pathname.startsWith('/admin/'))||pathname.startsWith('/api/settings')||pathname.startsWith('/api/admin/');
-    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname==='/api/favorites'||pathname==='/api/academy'||pathname==='/academias/panel'||pathname==='/academias/unirse'||pathname==='/api/live-class'||pathname==='/api/roster'||pathname==='/api/students'||pathname.startsWith('/api/students/')||pathname==='/api/class-records'||pathname.startsWith('/api/class-records/')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||pathname==='/api/phonetics/speech-attempt'||pathname==='/demo/noche-abierta'||pathname==='/demo/hospital-san-casi-vivo'||pathname==='/sistema-verbal'||pathname==='/choose-conversation'||pathname==='/lp'||pathname.startsWith('/lp/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson);
+    const identityAware=pathname==='/'||pathname==='/ingresar'||pathname==='/cuenta'||pathname==='/acceso'||pathname==='/pricing'||pathname==='/pro'||pathname.startsWith('/pro/')||pathname.startsWith('/api/progress')||pathname==='/api/lesson-reports'||pathname==='/api/favorites'||pathname==='/api/academy'||pathname==='/academias/panel'||pathname==='/academias/unirse'||pathname==='/api/live-class'||pathname==='/api/roster'||pathname==='/api/students'||pathname.startsWith('/api/students/')||pathname==='/api/class-records'||pathname.startsWith('/api/class-records/')||pathname.startsWith('/api/founder-access')||pathname.startsWith('/api/billing/')||pathname==='/api/phonetics/speech-attempt'||pathname==='/demo/noche-abierta'||pathname==='/demo/hospital-san-casi-vivo'||pathname==='/sistema-verbal'||pathname==='/choose-conversation'||pathname==='/lp'||pathname.startsWith('/lp/')||administrative||premiumAudio||premiumBoard||autoestudio||shareApi||Boolean(lesson)||pathname==='/jugar';
     // Pages only learn the visitor's session where it is resolved; elsewhere the
     // layout must not treat "no verified user" as "signed out" (AuthSessionSync).
     if(identityAware)routedHeaders.set("x-spanishcue-identity-checked","1");
@@ -331,9 +336,17 @@ const app = {
       ? await verifyShareSession(routedHeaders.get("cookie"),env).catch(()=>null)
       : null;
     applyShareHeaders(verifiedHeaders,shareSession);
-    const verifiedRequest=new Request(routedRequest,{headers:verifiedHeaders});
     const owner=ownerFromHeaders(verifiedHeaders);
     const fullAccess=fullAccessFromHeaders(verifiedHeaders);
+    // Teacher's pass (app/jugar/student-pass.ts): a student with a valid pass from a
+    // teacher who still has PRO plays the hub's 3D worlds and hears their audio. Nothing else.
+    const studentPass=!fullAccess&&studentPassScope(pathname,lesson?.id)
+      ? await studentWorldPass(routedHeaders.get("cookie"),env).catch(()=>null)
+      : null;
+    applyStudentPassHeaders(verifiedHeaders,studentPass);
+    const studentWorld=Boolean(studentPass)&&isStudentWorldLesson(lesson?.id);
+    const studentAudio=Boolean(studentPass)&&isStudentAudioPath(pathname);
+    const verifiedRequest=new Request(routedRequest,{headers:verifiedHeaders});
     const verifiedLocale=localeFromHeaders(verifiedHeaders);
     const edgeKey = !identityAware && !lesson && !premiumBoard && !premiumAutoestudio && !autoestudio && !administrative && !shareApi && !premiumAudio && !rscPayload
       ? edgeCacheKey(request, url, pathname, env.SPANISHCUE_DEPLOYMENT)
@@ -351,12 +364,12 @@ const app = {
     }
     // Newsletter gift: an authentic email-signup cookie opens one PRO grammar class and its audio, nothing else.
     const gifted=!fullAccess&&giftCoversPath(pathname,lesson?.id??null)&&await hasGift(request.headers.get('cookie'),env.AUTOESTUDIO_SHARE_SECRET).catch(()=>false);
-    if (premiumAudio && !fullAccess && !gifted) {
+    if (premiumAudio && !fullAccess && !gifted && !studentAudio) {
       const headers = new Headers({'Cache-Control':'private, no-store'});
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});
     }
-    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess&&!gifted)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess&&!shareAllowsPath(pathname,shareSession))) {
+    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess&&!gifted&&!studentWorld)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess&&!shareAllowsPath(pathname,shareSession))) {
       if(pathname.startsWith('/api/')) {
         const headers = new Headers({'content-type':'application/json','Cache-Control':'private, no-store'});
         setSecurityHeaders(headers,url,verifiedLocale);
@@ -367,6 +380,8 @@ const app = {
       if(lesson&&giftCoversPath(pathname,lesson.id)) return noStoreRedirect(new URL(GIFT_LANDING_PATH,url),verifiedLocale);
       // A student whose browser lost its pass (another device, an in-app browser, cleared cookies)
       // must see «open your teacher's link again», never the teacher PRO paywall.
+      // A student who lost the pass on a 3D world goes back to the hub, never to the teacher paywall.
+      if(isStudentWorldLesson(lesson?.id)&&shareHint(request.headers.get('cookie'))&&!rscPayload) return noStoreRedirect(new URL('/jugar?pase=vencido',url),verifiedLocale);
       if(premiumAutoestudio&&!rscPayload) return noStoreRedirect(new URL(`/autoestudio/claim?semana=${encodeURIComponent(pagePath)}`,url),verifiedLocale);
       return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(pagePath+pageSearch(url))}`,url),verifiedLocale);
     }
@@ -435,7 +450,7 @@ const app = {
     }
     setSecurityHeaders(safeResponse.headers,url,verifiedLocale);
     // Student pass cookies slide forward on every visit: access lasts until the teacher revokes it.
-    if (autoestudio && request.method === 'GET' && !safeResponse.headers.has('Set-Cookie')) {
+    if ((autoestudio || studentPass) && request.method === 'GET' && !safeResponse.headers.has('Set-Cookie')) {
       const renewed = await renewShareCookie(request.headers.get('cookie'), env).catch(() => null);
       if (renewed) safeResponse.headers.append('Set-Cookie', renewed);
     }

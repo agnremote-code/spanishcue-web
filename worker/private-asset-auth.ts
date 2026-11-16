@@ -7,6 +7,7 @@ import {
 } from "../app/firebase-session";
 import { GIFT_AUDIO_PATH } from "../app/newsletter/gift";
 import { hasGift } from "../app/newsletter/server";
+import { isStudentAudioPath, studentWorldPass } from "../app/jugar/student-pass";
 
 type PrivateAssetEnv = {
   DB: D1Database;
@@ -39,4 +40,19 @@ export async function mayReadPrivateMedia(
 ): Promise<boolean> {
   if (path === GIFT_AUDIO_PATH && await hasGift(request.headers.get("cookie"), env.AUTOESTUDIO_SHARE_SECRET).catch(() => false)) return true;
   return hasFullLibraryAccess(request, env);
+}
+
+/**
+ * Teacher's pass gate (app/jugar/student-pass.ts): a student with a valid pass
+ * from a teacher who still has PRO reads the chunks of the hub's 3D worlds
+ * (flagged at build time) and the listening audio of the 3D worlds. Nothing else.
+ */
+export async function mayReadStudentAsset(
+  request: Request,
+  env: PrivateAssetEnv,
+  path: string,
+  studentChunk: boolean,
+): Promise<boolean> {
+  if (!studentChunk && !isStudentAudioPath(path)) return false;
+  return Boolean(await studentWorldPass(request.headers.get("cookie"), env).catch(() => null));
 }

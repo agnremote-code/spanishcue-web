@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale’s 2026-11-16 «arranca» to the student game app (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAEJFpCLaCYhCzkAP8CfU7j9): the student hub at /jugar (map of 3D worlds, passport, stamps, milestones, install button) follows the site's ES/EN locale, and the student landing links to it.",
+  "authorization": "Owner standing approval (Ale) for new English copy, typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), applied to Ale’s 2026-11-16 «arranca» to the student game app (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAEJFpCLaCYhCzkAP8CfU7j9): the student hub at /jugar (map of 3D worlds, passport, stamps, milestones, install button) follows the site's ES/EN locale, and the student landing links to it. The same day Ale chose «Pase del profesor PRO» on the decision card (cmsg_01Gr5R4j3t2Yet65UcmhcVhA2oE1yyGRpimcWzCAWzTGB2): the hub tells a student when the teacher's pass is active, when it is missing on this device and how to open the locked worlds.",
   "additions": [
     {
       "path": "app/aprender-espanol/page.tsx",
@@ -241,6 +241,18 @@
     {
       "path": "app/jugar/progress.mjs",
       "text": "Three worlds finished from start to end."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Already have a teacher? Open the link they sent you on this device and come back here: every world opens."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Your teacher's pass is active: every world is open."
+    },
+    {
+      "path": "app/jugar/StudentHub.tsx",
+      "text": "Your pass is not active on this device. Open the link your teacher sent you again."
     }
   ]
 }
