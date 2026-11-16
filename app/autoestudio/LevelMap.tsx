@@ -11,7 +11,9 @@ import type { ShareSession } from "./progress/server-adapter";
 import ProgressNotice from "./progress/ProgressNotice";
 import { useStudyProgress } from "./progress/useProgress";
 
-export default function LevelMap({ level, fullAccess, nextLevel, session }: { session?: ShareSession | null; level: LandingLevel; fullAccess: boolean; nextLevel: { id: string; code: string } | null }) {
+export type TopicCard = { href: string; title: string; canDo: string; minutes: number };
+
+export default function LevelMap({ level, fullAccess, nextLevel, session, topics = [] }: { session?: ShareSession | null; level: LandingLevel; fullAccess: boolean; nextLevel: { id: string; code: string } | null; topics?: TopicCard[] }) {
   const { locale } = useI18n();
   const en = locale === "en";
   const t = copyFor(locale);
@@ -89,6 +91,33 @@ export default function LevelMap({ level, fullAccess, nextLevel, session }: { se
           );
         })}
       </ol>
+      {topics.length > 0 && (
+        <section className="ae-topics" aria-labelledby="ae-topics-title">
+          <h2 id="ae-topics-title">Temas extra</h2>
+          <p>Clases que tu profe puede asignarte aparte, fuera de las semanas.</p>
+          <ul>
+            {topics.map((topic) => {
+              const open = fullAccess || Boolean(session);
+              return (
+                <li key={topic.href}>
+                  <Link href={open ? topic.href : `/acceso?returnTo=${encodeURIComponent(topic.href)}`} className="ae-week-card" data-homework-topic>
+                    <span className="ae-week-num" aria-hidden="true">＋</span>
+                    <span className="ae-week-body">
+                      <small>Tema · {level.code}</small>
+                      <b>{topic.title}</b>
+                      <em>{topic.canDo}</em>
+                      <span className="ae-week-tags">
+                        <span>⏱ {topic.minutes} {t.minutes}</span>
+                        {!open && <span className="lock">🔒 {t.locked}</span>}
+                      </span>
+                    </span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      )}
       {nextLevel && (
         <p className="ae-level-after">
           <Link className="ae-ghost" href={`/autoestudio/${nextLevel.id}`}>
