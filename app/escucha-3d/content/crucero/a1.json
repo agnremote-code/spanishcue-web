@@ -136,7 +136,7 @@
      "q": "¿Dónde trabaja Brayan?",
      "options": [
       "En la cocina",
-      "En el puente",
+      "En el puente de mando con el capitán",
       "En la sala de máquinas"
      ],
      "answer": 2
@@ -356,7 +356,7 @@
      "options": [
       "Un chocolate",
       "Una flor",
-      "Una carta"
+      "Una carta de la naviera"
      ],
      "answer": 0
     },
@@ -461,7 +461,7 @@
     {
      "q": "¿Qué comida hay en la cena?",
      "options": [
-      "Pescado",
+      "Pescado con patatas",
       "Langosta",
       "Pollo"
      ],
@@ -662,7 +662,7 @@
     {
      "q": "¿De qué color es el vestido de Isabel?",
      "options": [
-      "Rojo",
+      "Rojo y blanco",
       "Azul",
       "Amarillo"
      ],
@@ -885,7 +885,7 @@
      "options": [
       "Tres",
       "Cinco",
-      "Diez"
+      "Diez o más"
      ],
      "answer": 1
     },
@@ -1416,7 +1416,7 @@
      "options": [
       "Uno",
       "Ninguno",
-      "Muchos"
+      "Muchos, más de cien"
      ],
      "answer": 1
     }
@@ -1500,7 +1500,7 @@
      "options": [
       "Hace calor",
       "Llueve mucho",
-      "Hace sol"
+      "Hace sol y calor"
      ],
      "answer": 1
     },

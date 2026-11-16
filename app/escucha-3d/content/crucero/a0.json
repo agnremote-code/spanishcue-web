@@ -84,7 +84,7 @@
      "options": [
       "Camarero",
       "Cocinero",
-      "Médico"
+      "Médico del barco"
      ],
      "answer": 0
     }
@@ -177,7 +177,7 @@
      "options": [
       "La esposa de Teodoro",
       "La máquina del barco",
-      "Una pasajera"
+      "Una pasajera muy simpática"
      ],
      "answer": 1
     },
@@ -1033,7 +1033,7 @@
      "options": [
       "Un relámpago",
       "La luna",
-      "Un avión"
+      "Un avión con luces"
      ],
      "answer": 0
     },
@@ -1776,7 +1776,7 @@
      "options": [
       "Un anillo",
       "Una flor",
-      "Una carta"
+      "Una carta de amor"
      ],
      "answer": 0
     },
@@ -1873,7 +1873,7 @@
      "qEn": "What is the weather like?",
      "options": [
       "Llueve mucho",
-      "Hace sol",
+      "Hace sol y calor",
       "Nieva"
      ],
      "answer": 0
