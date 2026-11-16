@@ -380,3 +380,108 @@ Every objective id below was checked in `app/autoestudio/curriculum/objectives/b
 I recommend **S1 «El taller de la greda»**. Its main function, relaying messages, is listening by nature and has no B1 world. Its new 3D work is small (a few piece-state toggles), so it fits one Wednesday slot. Its forbidden grammar contrasts move cleanly into Conversación beats, so every listening item stays within the amendment. S2 is the fallback; its evidence-inspection mechanic carries more build risk.
 
 Build condition: neither concept can be released through the automatic gate until BOARD-DECISION-006 is adopted, the §3.6 checker changes (Emma/Florian casting, the new seed set, failing when a seed is missing, the gap lint) are reviewed and committed, and a VALID run on the world's own clips exists. Until then, §9.2 stays human-only for it.
+
+---
+
+## 5. Facilitator → Alejandro (brief, sent about 02:17Z; fresh agent)
+
+> You are **Alejandro**, CEO & Chief Strategy Officer of the SpanishCue Executive Board (docs/board/CONSTITUTION.md), acting as a fresh, independent agent. Scheduled Monday 2026-11-16 3D routine. Repo: /home/user/spanishcue-web, branch `claude/board-mon-3d-20261116`. READ-ONLY for you: no edits, no git writes. Return text to the facilitator.
+>
+> You have two jobs, both working from the concrete deliverables (do not redo the whole investigation; spot-verify claims that matter).
+>
+> JOB 1 — Independent review of `docs/board/decisions/BOARD-DECISION-006-provable-listening-gate.md` (DRAFT v1, by Sofia), a scoped amendment to `docs/board/decisions/BOARD-DECISION-003.md` §3.1. Context: W47 plan item 2 in `docs/board/assessments/2026-W46.md` §6. The STT checker lives only on PR #282's branch: `git show origin/claude/escucha-3d-ascensor-cerro-b2-20261026:scripts/check-escucha-3d-stt.py` (if that ref is missing, run `git fetch origin claude/escucha-3d-ascensor-cerro-b2-20261026` — read-only fetch is fine — and use FETCH_HEAD). Verify at least the draft's §2.3 (seeds/references use identity voices, not Emma/Florian), §2.4 (no seeds → `all([])` True), §2.5 (`{5,}` regex) against that file, and §2.1 against `scripts/generate-escucha-3d-audio.py`. Check that the amendment truly only lets the check close §9.2 for item types the seeded test is proven to catch, that it can't be gamed (e.g. a world with no seedable clip), that it does not release #282 or lower any BOARD-DECISION-001 §3 gate, and that claims are labelled VERIFIED/HYPOTHESIS correctly. Note a fact the facilitator verified: the October G1 objective ids (`b2.fun.mediacion-fuentes`, `b2.lis.voces-chile`) have 0 matches in `app/autoestudio/curriculum/objectives/*.ts` today, so Ascensor needs a G1 remap regardless. Give a verdict: APPROVE, APPROVE WITH CHANGES (list exact, small changes), or REQUEST CHANGES (numbered blockers). This is the decision's one objection round (CONSTITUTION §2).
+>
+> JOB 2 — Concept selection (ROUTINES.md "Creative ownership" step 3). Four concepts were proposed; read them verbatim in `docs/board/transcripts/2026-11-16-monday-3d-provable-gate.md` (§2 Martin: A «El simulacro del jueves» B2 Mexico City school drill, B «La última edición» C1 Uruguayan newspaper; §4 Sofia: S1 «El taller de la greda» B1 Boyacá pottery workshop, S2 «La picantería a las once» B1 Arequipa). Martin recommends A; Sofia recommends S1. Spot-check: that the primary objective ids exist (`app/autoestudio/curriculum/objectives/<level>.ts`), that voice ids exist in `app/escucha-3d/voices.json`, and that no concept duplicates an existing world's setting, main function at the same level, or core mechanic (`app/escucha-3d/games.mjs`, each world's `levels-info.mjs`; e.g. check whether «Vuelo cancelado», «El consorcio», «La boda», «HR Crisis», «El tren» already teach relaying messages at B1, or a school/drill setting at B2). Also check fit with the amendment (listening items provable under BOARD-DECISION-006 §3.2–3.4: at least one single-voice clip with ≥2 gap words and one two-voice cross-gender clip). Score each concept 1–5 on educational value, originality, SEO evidence (no Search Console access in this run: all are HYPOTHESIS, score 1 unless you find repo evidence), build risk (5 = lowest) and kit reuse; give an unweighted total. Then cast your vote for one concept, with 2–3 sentences of reasons. Name any condition the build must meet (cultural checks, cliché checks, G1 mapping).
+>
+> Return: (1) JOB 1 verdict and items; (2) the score table; (3) your vote and conditions. Label every claim VERIFIED (path) or HYPOTHESIS. Do not message anyone; do not invent data or agreement.
+
+## 6. Alejandro → Facilitator (report, received about 02:20Z)
+
+Alejandro (CEO/CSO), Monday 2026-11-16 3D routine. I edited nothing and made no git writes. My only git action was a read-only `git show` of #282's branch at 3631534f. Nobody else was consulted, and nobody agreed to anything.
+
+## (1) JOB 1: BOARD-DECISION-006 DRAFT v1. Verdict: APPROVE WITH CHANGES
+
+**Spot-checks of the draft's facts** (checker = `scripts/check-escucha-3d-stt.py` on #282's branch at 3631534f):
+- §2.1 is correct. VERIFIED in `scripts/generate-escucha-3d-audio.py:24-53`: `ENGINE` is Emma for women and Florian for men. `SHIFT` is f [0,±8,±14,±20] and m [0,±5,±9,±13]. `casting()` bumps a second same-gender speaker in a clip to an unused shift.
+- §2.3 is correct. VERIFIED in the checker:
+  - `render_like_generator()` (l.124-140) calls `speak(text, voice)` with the content's identity voice id, with no pitch and no engine mapping.
+  - `references()` (l.143-147) does the same.
+  - The reference cache key is `(voice, level)` (l.176-182).
+- §2.4 is correct. VERIFIED, checker l.315 and l.411/420:
+  - With no single-voice gap clip, there are no word seeds. A missing two-voice clip is also skipped silently (l.357 `continue`).
+  - With zero seeds, `all_found` = `all([]) and all([])` = True, and `tool_valid` = True.
+  - Two more silent-shortfall paths: `zip(others, ops)` (l.335) drops seeds when the clip has fewer than 4 non-gap lines, and `plain()` can return None.
+- §2.5 is correct. VERIFIED, l.330: `\b[a-záéíóúñ]{5,}\b`.
+- Also VERIFIED:
+  - l.427 returns 0 when `tool_valid` is None (no `--seeded` flag), so §3.6(iii) is needed.
+  - The checker and workflow are absent from origin/main and HEAD (`git ls-tree`, 0 matches).
+  - MARGIN = 0.02 (l.43).
+- Labels are applied correctly. §2.2 and §2.8 are rightly marked HYPOTHESIS, and the rest checks out as VERIFIED.
+
+**Can it be gamed, and does it release anything?**
+- It does not release #282 (§3.5, and the scope is "NEW world authored after adoption").
+- It does not lower any BOARD-DECISION-001 §3 gate: §3.1(c) keeps BOARD-DECISION-003 §3.2–3.5 and §3.5 keeps BOARD-DECISION-003 §4.
+- It closes §9.2 only for item types matched by a seed that was caught. The removed -s gap seed is paired with a ban on the item types that depend on it. That is a narrower claim, not a tuned result.
+
+**Changes required (all small, no blockers):**
+1. **Seeds per level.** The checker runs once per (game, level) file. §3.4 should say "each level's run must contain every §3.4 seed, and §9.2 closes per level". Otherwise a level without a seedable clip reaches `tool_valid` True through `all([])`.
+2. **Minimum shape of the seed clip** (§3.4). The single-voice seed clip needs the gap line plus at least 4 other lines, each with a valid target:
+   - an article la/las/los/el;
+   - a plain word of 5 or more letters that occurs once in the line;
+   - a first word.
+   A missing target makes the run NOT VALID, which covers the `zip` truncation and `plain()` returning None. The speaker seed must sit in a cross-gender two-voice clip.
+3. **Reword §3.3 bullet 4 as a clip-authoring rule.** "No listening clip has two same-gender speakers or three or more speakers." The BOARD-DECISION-003 speaker check runs on every line of every real clip, not only on items, so a same-gender clip would produce an unproven speaker PASS even with no who-said-what item.
+4. **Human attestation for what the lint cannot see** (§3.2). The lint catches only final -s and mid-sentence capitals. Gender, person and mood pairs, and consonant pairs, need a recorded text-only sign-off per gap word and per correct option in the LQG file (CPIO plus the G4 reviewer). Example: «torno»/«horno», both in the B1 curriculum, `b1.ts:167`.
+5. **Two additions to §3.5.**
+   - (a) A single-phoneme mismatch between audio and transcript outside the items (for example a swallowed -s) is a **disclosed open item**, not a pass.
+   - (b) A factual note: Ascensor needs a G1 remap whatever happens. `b2.fun.mediacion-fuentes` and `b2.lis.voces-chile` have 0 matches in `app/autoestudio/curriculum/objectives/*.ts` (VERIFIED, this run, grep count 0).
+6. **§3.6(i):** speaker references must be built per clip casting (engine + pitch), so the cache key changes from `(voice, level)` to `(engine, pitch, level)`.
+7. **§1 or §3.4:** one sentence saying why dropping the -s seed is not fitting to a result under BOARD-DECISION-003 §3.7: the claim shrinks by exactly that defect class, and the Ascensor runs stay NOT VALID.
+
+## (2) Score table
+
+**Spot-checks behind the scores:**
+- **Objective ids.** All 24 primary and supporting `fun`/`spk`/`voc`/`lis`/`disc`/`wri` ids exist, one match each (VERIFIED in `objectives/b1.ts`, `b2.ts`, `c1.ts`). So do b1 `g111`, `g118` and `g119` (b1.ts:133, 165-166). `g120` is week 17 (b1.ts:175).
+- **Voice ids.** All 18 voice ids exist (VERIFIED, `app/escucha-3d/voices.json`).
+- **No duplicate world:**
+  - No world has a school or drill setting at B2: «colegio» appears only in passing in boda, masalla, noche, madrid and casino B2 content.
+  - No world has a pottery or picantería setting.
+  - Keyword grep over the B1/B2 content and the 6 `levels-info.mjs` files finds no world that teaches relaying messages («transmit…», «recado», «estilo indirecto», «discurso referido»). VERIFIED by keyword; full semantic coverage is HYPOTHESIS.
+  - Only Feria is single-level (A2) (VERIFIED, `games.mjs:140-145`).
+
+**Defects found in the concepts (all VERIFIED):**
+- **Too few countries in three of the four casts.** `scripts/check-escucha-3d.mjs:124` fails any file with fewer than 6 countries, and it applies to every game (l.162).
+  - A has 4 countries (MX×2, SV, PE, CO).
+  - B has 4 (UY×2, AR, PY, ES).
+  - S1 has **5, not the 6 Sofia states**: Salome and Gonzalo are both es-CO.
+  - S2 has 6 (PE, EC, BO, CL, VE, PY).
+- **A's circle-4 choice item breaks the draft's §3.3.** Its answer turns on «no»/«sí falta», a short function word. Martin says plain-word deletion was caught, but `plain()` seeds only words of 5 or more letters. Also, A's gap sample has 2 brackets where the README requires exactly 4.
+- **S1's circle-2 gaps break the draft's §3.2.** «torno» and «horno» are a single-phoneme pair that fits the same sentence.
+
+All four concepts have a single-voice clip and at least 4 cross-gender two-voice clips (VERIFIED from the transcript tables), so each can carry the §3.4 seed set.
+
+| Concept | Educational value | Originality | SEO evidence | Build risk (5 = lowest) | Kit reuse | Total |
+|---|---|---|---|---|---|---|
+| A «El simulacro del jueves» (B2) | 4 | 4 | 1 | 3 | 3 | **15** |
+| B «La última edición» (C1) | 3 | 4 | 1 | 2 | 3 | **13** |
+| S1 «El taller de la greda» (B1) | 4 | 4 | 1 | 4 | 4 | **17** |
+| S2 «La picantería a las once» (B1) | 4 | 3 | 1 | 3 | 4 | **15** |
+
+What drives the scores:
+- **SEO evidence:** 1 for all four. No Search Console access, and I found no repo evidence (HYPOTHESIS).
+- **B, educational value:** lowered because C1 stance and commitment items lean on intonation and modal endings that the amendment forbids.
+- **S2, originality:** lowered because kitchens already appear in Feria's churrería and boda's cocina scene, as near-overlaps.
+- **Build risk:** B has a new multi-floor building and the photo overlay; A has a reconfiguring route plus an inventory (HYPOTHESIS). S1 has about 5 prop-state toggles.
+- **A and S1, educational value:** both match a whole curriculum week. For A that is b2.ts:72-79. For S1, week 16 even names the setting: «una aprendiz cuenta lo que dijo… una clienta» (b1.ts:169) and «barro, torno, horno, esmalte, anticipo, muestra» (b1.ts:167).
+
+## (3) Vote: S1 «El taller de la greda»
+
+S1's main function, relaying messages, is listening by nature. It matches curriculum week 16 almost word for word (VERIFIED, b1.ts:165-174), and keyword checks find no world that teaches it. Its forbidden contrasts (mood in reported speech, the intonation of a reported question in `b1.pron.w16-pregunta-referida`) move cleanly into Conversación, so its listening items fit the amendment. It is also the lowest build risk of the four on Sofia's own estimate (HYPOTHESIS). A is a close second and a good next candidate for B2 once Ascensor's fate is settled.
+
+**Conditions the build must meet:**
+1. **At least 6 distinct countries in the listening file.** Change one of the two es-CO voices, or add a seventh character. Nationality stays incidental, never a theme.
+2. **No two gap words in one sentence may form a minimal pair** (torno/horno). This applies every BOARD-DECISION-006 §3.2/§3.3 rule as adopted, including no correct option that turns on «no», «ya» or «sí».
+3. **The voice-note seed clip** has the gap line plus at least 4 other lines with valid seed targets (an article, a word of 5+ letters that occurs once, a first word), and stays within B1's 100–160 words (`games.mjs:226`).
+4. **G1 mapping:** one primary per circle, using only the verified ids. `b1.fun.w16-transmitir-mensajes` is the world primary. g118 and g119 contrasts are produced in Conversación and labelled there (G6).
+5. **Cultural check (HYPOTHESIS until done):** Boyacá pottery practice and terms («greda», the town left unnamed unless verified), and the Bogotá restaurant order as a plausible business. Cliché check: a business with deadlines, an advance payment and transport; no "exotic craft" framing and no folkloric décor.
+6. **The gate:** no automatic closing of §9.2 until BOARD-DECISION-006 is adopted, the §3.6 checker changes land as a separate reviewed commit, and a VALID per-level run on the world's own clips exists. Until then, §9.2 stays human-only for this world.

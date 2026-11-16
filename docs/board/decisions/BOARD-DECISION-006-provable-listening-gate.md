@@ -2,13 +2,14 @@
 
 - Date: 2026-11-16 (Monday 3D routine, W47 plan item 2, [assessments/2026-W46.md](../assessments/2026-W46.md) §6)
 - Drafted by: Sofia (CPIO)
-- Status: **DRAFT v1**. Not adopted. Nothing in this file changes any gate until §Votes records adoption.
+- Status: **DRAFT v2** (v1 by Sofia; v2 applies the seven changes of the independent review, §Review, by the facilitator). Not adopted until §Votes records adoption.
 - Labels: every claim is VERIFIED (with its source) or HYPOTHESIS.
 
 ## 1. Why
 - BOARD-DECISION-003 §3.1 makes the speech-to-text check valid only if it catches every seeded defect. The Ascensor runs 41377386724 and 41378668632 caught all of them except one: the gap word «caro» seeded as «caros» was reported as heard. So the check is NOT VALID, and §9.2 stays human-only (VERIFIED, [BOARD-DECISION-003](BOARD-DECISION-003.md) §5).
 - What it did catch: a two-word repeat at a line join, a deleted plain word, an article -s pair (la→las), a replaced first word, a deleted gap word, and speaker swaps (margins about −0.2 same-gender, −0.34 cross-gender) (VERIFIED, same §5).
 - The failure is narrow: a single-phoneme difference on a gap word. Most listening items do not depend on that. This amendment lets a new world use the check for exactly the item types it has been shown to catch, and for nothing else.
+- **Why dropping the -s gap seed is not fitting the rule to a result (BOARD-DECISION-003 §3.7).** The claim shrinks by exactly the defect class that was missed: every item type that depends on it is forbidden (§3.3). No threshold, normalisation or other seed is relaxed, and the Ascensor runs stay NOT VALID under BOARD-DECISION-003.
 
 ## 2. Facts this draft rests on
 1. Since 2026-11-13, every woman is voiced by `en-US-EmmaMultilingualNeural` and every man by `de-DE-FlorianMultilingualNeural`. Same-gender characters in one clip differ only by a pitch shift: women 0/±8/±14/±20 Hz, men 0/±5/±9/±13 Hz (VERIFIED, `scripts/generate-escucha-3d-audio.py:24-53`, AGENTS.md "New Conversation and Listening classes are 3D worlds").
@@ -33,29 +34,33 @@ If any of these fails, §9.2 stays human-only for that world, exactly as now.
 **3.2 Allowed item types.**
 - `choice` questions whose correct option differs from both distractors by at least one whole content word that is spoken in the audio. Sequence questions («¿Qué hace después de…?») and inference questions are allowed when they rest on such words.
 - `gaps` where each bracketed word is a whole content word, is not a proper name, and has no single-phoneme minimal pair that would fit the same sentence. Lint (machine-checkable): no gap word ends in -s, and no gap word is capitalised mid-sentence. This also excludes invariable words such as «jueves» or «más». The cost is accepted, because the rule is simple and provable.
-- Who-said-what questions, only when the two candidate speakers in that clip differ in gender, and the options name roles («la clienta», «el tornero»), not names.
+- Who-said-what questions, only between the two speakers of a cross-gender clip (§3.3), with options that name roles («la clienta», «el tornero»), not names.
+- **Text-only attestation for what the lint cannot see.** The lint catches only final -s and mid-sentence capitals. For every gap word and every correct option, the LQG file records a text-only sign-off, by the CPIO and by the G4 reviewer, that it has no gender, person, mood or consonant minimal pair that fits the same sentence or the same question (example to avoid: «torno»/«horno», both in `b1.ts:167`).
 - `open` questions, unrestricted, since they are not scored against the audio.
 
 **3.3 Forbidden item types.**
 - A gap or correct option that hinges only on final -s, number, gender, person or mood inflection (caro/caros, hecho/hecha, habla/hable, tiene/tienes), or on any other single-phoneme pair.
 - A correct option that hinges only on a short function word (for example «no», «ya» or «sí»), because that deletion has never been seeded (§2.5).
 - A proper name as a gap word or as a correct option. The real Ascensor clip heard «Yaneth» as «Janet» (VERIFIED, BOARD-DECISION-003 §5).
-- Same-gender speaker attribution. Each clip has either one speaker or two speakers of different gender (§2.1–2.2).
+- **Clip-authoring rule: no listening clip has two same-gender speakers, or three or more speakers.** Each clip has one speaker, or one woman and one man (§2.1–2.2). This is a rule on clips, not only on items, because the BOARD-DECISION-003 speaker check runs on every line of every real clip, so a same-gender clip would give an unproven speaker PASS even without a who-said-what item.
 - Items that depend on intonation, stress or irony. BOARD-DECISION-003 §2 does not cover these.
 
 **3.4 The seed set under this amendment.** This is BOARD-DECISION-003 §3.1 minus the seed it could not catch:
 - in a single-voice clip with gaps: one gap word deleted, and a second gap word replaced by a different whole word that is not a minimal pair (this replaces the -s swap). On that clip's other lines: a two-word repeat at the join, a deleted plain word, an article -s pair, and a replaced first word;
 - in a two-voice clip: one line read by the other speaker, who is always of the other gender under §3.3;
-- every one of these seeds must be present, or the run is NOT VALID. A world must therefore include at least one single-voice clip with 2 or more gap words and at least one two-voice clip (closes §2.4).
+- **Per level.** The checker runs once per (game, level). Each level's run must contain every seed above, and §9.2 closes per level, never per world. A level without a seedable clip cannot close §9.2 (closes §2.4).
+- **Minimum shape of the seed clips.** Each level has at least one single-voice clip with the gap line plus at least 4 other lines, each holding a valid target: an article (la, las, los or el), a plain word of 5 or more letters that occurs once in the line, and a first word. Each level also has at least one cross-gender two-voice clip for the speaker seed. A missing target or a missing seed makes the run NOT VALID (closes the `zip` truncation and a `plain()` that returns None).
 
 **3.5 Not released by this amendment.**
 - El ascensor del cerro (#282) stays held. It needs a VALID v3 run, and the cafe clip must pass. If its clips are regenerated under the 2026-11-13 voices, §2.3 applies to it too (HYPOTHESIS whether they have been).
 - BOARD-DECISION-003 §2's partial and uncovered rows (stress shifts mapped back to the right word, artefacts inside a TTS line, a wrong voice declared for a character) stay written as **disclosed open items** in every LQG file that relies on the check, never as passes.
+- A single-phoneme mismatch between the audio and the transcript **outside** the items (for example a swallowed -s in a line that carries no item) is written as a disclosed open item, never as a pass.
+- Factual note (VERIFIED, grep count 0 this run): Ascensor's G1 ids `b2.fun.mediacion-fuentes` and `b2.lis.voces-chile` no longer exist in `app/autoestudio/curriculum/objectives/*.ts`, so #282 needs a G1 remap whatever happens with the check.
 - A person's defect report always overrides a PASS (BOARD-DECISION-003 §4). No other gate in BOARD-DECISION-001 §3 is lowered.
 
 **3.6 Code changes come first.** Any change to the checker or the workflow lands as a separate reviewed commit before the run that uses it, never fitted to a result (BOARD-DECISION-003 §3.7). At minimum, before a first run under this amendment:
-- (i) build seeds and references with the generator's Emma/Florian engines and per-clip pitch casting (§2.3);
-- (ii) apply the §3.4 seed set, and fail the run when a required seed is missing;
+- (i) build seeds and speaker references with the generator's Emma/Florian engines and per-clip pitch casting (§2.3); the reference cache key becomes `(engine, pitch, level)` instead of `(voice, level)`;
+- (ii) apply the §3.4 seed set per level, and fail the run when a required seed or target is missing;
 - (iii) the job exits green only when `tool_valid is True` (review note (b) of BOARD-DECISION-003 §6);
 - (iv) add the §3.2 gap lint to `scripts/check-escucha-3d.mjs`, or a sibling script;
 - (v) bring the checker and workflow to `main` or to the world's branch.
@@ -63,5 +68,6 @@ If any of these fails, §9.2 stays human-only for that world, exactly as now.
 Whether a forced aligner should be added (v3) is a separate decision, made after a time-boxed Actions run (§2.8).
 
 ## Review
+- **Independent review (one objection round, CONSTITUTION §2):** Alejandro, as a fresh agent, on v1. Verdict **APPROVE WITH CHANGES**, no blockers. He re-verified §2.1, §2.3, §2.4 and §2.5 against the generator and the checker on #282's branch at `3631534f`, and found two more silent-shortfall paths (`zip(others, ops)` and `plain()` returning None). Seven changes, all applied in v2: (1) seeds per level; (2) minimum shape of the seed clips; (3) §3.3 same-gender rule as a clip-authoring rule; (4) text-only attestation for pairs the lint cannot see; (5) §3.5 additions (mismatch outside items is an open item; Ascensor G1 note); (6) reference cache key per casting; (7) why dropping the -s seed is not fitting to a result. Verbatim: [transcripts/2026-11-16-monday-3d-provable-gate.md](../transcripts/2026-11-16-monday-3d-provable-gate.md) §6.
 
 ## Votes
