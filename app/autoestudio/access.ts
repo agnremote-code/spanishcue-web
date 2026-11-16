@@ -6,6 +6,8 @@
  * they show titles and goals only. Module pages carry the lesson bodies and are
  * PRO, except the free preview weeks listed here.
  */
+import { homeworkTopicAt } from "./topics";
+
 export const AUTOESTUDIO_ROOT = "/autoestudio";
 
 export const freeAutoestudioModules: ReadonlySet<string> = new Set([
@@ -39,9 +41,9 @@ export function isFreeAutoestudioModule(pathname: string): boolean {
   return freeAutoestudioModules.has(normalizeAutoestudioPath(pathname));
 }
 
-/** True when the path is a module body that needs full (PRO) access. */
+/** True when the path is a module body, or a Homework topic, that needs full (PRO) access or a student pass. */
 export function isPremiumAutoestudioPath(pathname: string): boolean {
-  return isAutoestudioModulePath(pathname) && !isFreeAutoestudioModule(pathname);
+  return (isAutoestudioModulePath(pathname) && !isFreeAutoestudioModule(pathname)) || Boolean(homeworkTopicAt(pathname));
 }
 
 export function moduleSlug(week: number): string {

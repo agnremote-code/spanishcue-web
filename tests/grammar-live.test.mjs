@@ -284,3 +284,28 @@ test('the A0 first class: bilingual by default, the grandparents story, the real
     const link=v.$('[data-next-link]');assert.equal(link.getAttribute('href'),'/noche-abierta?level=A0');
   }finally{await v.close();}
 });
+
+test('a Homework topic shows the class in self-study only, with the way back to Homework and no teacher surface',async()=>{
+  await build({entryPoints:['app/grammar-classroom/live/LiveClassroom.tsx'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/link','next/navigation','three'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-homework.cjs',logLevel:'error'});
+  const LiveClassroom=require('../node_modules/.cache/grammar-live-homework.cjs').default;
+  const dom=new JSDOM('<div id="root"></div>',{url:'https://spanishcue.test/autoestudio/tema/numeros-dinero-y-monedas'});
+  Object.assign(globalThis,{window:dom.window,self:dom.window,document:dom.window.document,HTMLElement:dom.window.HTMLElement,IS_REACT_ACT_ENVIRONMENT:true});
+  dom.window.HTMLElement.prototype.scrollIntoView=function(){};dom.window.HTMLMediaElement.prototype.pause=function(){};dom.window.HTMLMediaElement.prototype.load=function(){};dom.window.scrollTo=()=>{};
+  // Even a browser that last used the class «Con profesor» opens the topic in self-study.
+  dom.window.localStorage.setItem('spanishcue:gramatica:mode','teacher');
+  const calls=[];globalThis.fetch=async url=>{calls.push(String(url));return new Response('{}',{status:401});};
+  const root=createRoot(document.getElementById('root'));
+  await act(async()=>root.render(React.createElement(LiveClassroom,{lesson:getLiveLesson(549),homework:{returnTo:'/autoestudio/a2',alias:'Luna'}})));
+  await wait(30);
+  try{
+    const shell=document.querySelector('[data-live-class="549"]');
+    assert.equal(shell.dataset.mode,'self');
+    assert.equal(document.querySelector('[data-mode-option]'),null,'no teacher / self switch');
+    assert.equal(document.querySelector('[data-teacher-note]'),null,'no teacher notes');
+    assert.equal(document.querySelector('[data-course-position]'),null,'no course navigation into the library');
+    const frame=document.querySelector('[data-homework-topic="549"]');
+    assert.match(frame.textContent,/Luna/);
+    assert.equal(frame.querySelector('a').getAttribute('href'),'/autoestudio/a2');
+    assert.ok(!calls.some(url=>url.startsWith('/api/students')||url.startsWith('/api/live-class')),'no teacher API calls');
+  }finally{await act(async()=>root.unmount());dom.window.close();}
+});

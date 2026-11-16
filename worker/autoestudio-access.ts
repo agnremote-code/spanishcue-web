@@ -1,4 +1,5 @@
 import { normalizeAutoestudioPath } from '../app/autoestudio/access';
+import { homeworkTopicAt } from '../app/autoestudio/topics';
 import type { ShareSession } from '../app/autoestudio/progress/server-adapter';
 /** Erase every browser-controlled pass header, then add only verified display scope. */
 export function applyShareHeaders(headers: Headers, session: ShareSession | null): void {
@@ -11,6 +12,8 @@ export function applyShareHeaders(headers: Headers, session: ShareSession | null
   headers.set('x-autoestudio-alias',encodeURIComponent(session.alias));
 }
 export function shareAllowsPath(path: string, session: ShareSession | null): boolean {
+  // A Homework topic is assigned on its own: any valid student pass opens it, whatever its level.
+  if (session && homeworkTopicAt(path)) return true;
   const match=/^\/autoestudio\/(a1|a2|b1|b2|c1|c2)\/semana-([1-9]|1\d|20)$/.exec(normalizeAutoestudioPath(path));
   return Boolean(session && match && match[1]===session.level);
 }
