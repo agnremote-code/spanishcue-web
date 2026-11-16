@@ -8,6 +8,7 @@
 // faces the candidates from behind the mascot and drag-look is off, so
 // "a la izquierda" means screen-left for everyone (risk 3).
 import * as THREE from 'three';
+import { enableRealPeople } from '../mundo-real/persona';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
@@ -94,6 +95,8 @@ export default function World3D(props: WorldProps) {
     const camera = new THREE.PerspectiveCamera(58, 1, 0.1, 400);
     let fair: Fair;
     let hero: ReturnType<typeof createHero>;
+    // People with real bodies (skin, hair, clothes) on computers; phones keep the light drawn figures. ?real=0 turns it off.
+    enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') !== '0');
     try { fair = buildFair(scene, { low, shadows: !low }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
@@ -111,6 +114,7 @@ export default function World3D(props: WorldProps) {
       places: fairPlaces(),
     });
     fair.reveal(live.current.reveal);
+    enableRealPeople(false);
     scene.add(hero.root);
     const hemi = new THREE.HemisphereLight('#8a9ad8', '#3a2a22', 0.85);
     scene.add(hemi);

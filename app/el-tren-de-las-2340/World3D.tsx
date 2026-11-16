@@ -6,6 +6,7 @@
 // between cars and where the player is, and follows its props. Inside a car
 // the camera stays in the corridor, under the roof, and sways with the train.
 import * as THREE from 'three';
+import { enableRealPeople } from '../mundo-real/persona';
 import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
@@ -82,6 +83,8 @@ export default function World3D(props: WorldProps) {
     const camera = new THREE.PerspectiveCamera(58, 1, 0.08, 900);
     let building: Train;
     let hero: ReturnType<typeof createHero>;
+    // People with real bodies (skin, hair, clothes) on computers; phones keep the light drawn figures. ?real=0 turns it off.
+    enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') !== '0');
     try { building = buildTrain(scene, { low, shadows: !low }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
@@ -89,6 +92,7 @@ export default function World3D(props: WorldProps) {
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }
+    enableRealPeople(false);
     scene.add(hero.root);
     // A soft reflection so the brass, the varnish and the glass read as such.
     const pmrem = new THREE.PMREMGenerator(renderer);
