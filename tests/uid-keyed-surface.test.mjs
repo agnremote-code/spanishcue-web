@@ -66,6 +66,7 @@ const FROZEN_CONSUMERS = new Set([
   'app/api/autoestudio/session/route.ts',
   'app/s/[token]/route.ts',
   'worker/index.ts', // learner share-session cookie and /s redeem, not teacher()
+  'worker/private-asset-auth.ts', // learner share-session cookie for a Homework topic recording, not teacher(); stores nothing
 ]);
 const helperUse = /\bauthenticatedOwnerId\b|from\s*['"][^'"]*autoestudio\/share\/server['"]|from\s*['"]\.\.\/share\/server['"]/;
 
