@@ -177,6 +177,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/pulido-lote-03-english-additions-20261112.json',
   'docs/audits/autoestudio-espejo-english-20261105.json',
   'docs/audits/hr-crisis-english-additions-20261110.json',
+  'docs/audits/ultimo-crucero-english-additions-20261116.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

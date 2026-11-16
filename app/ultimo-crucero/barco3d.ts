@@ -13,7 +13,7 @@ import {
   ceilingAt, footprint, halfBeam, roofed, roundSeat, walkerAt, type Walker,
 } from './layout.mjs';
 
-export type Npc = { person: Person; scene?: string; main?: boolean; x: number; z: number; y: number; heading: number; baseMood: string; seated?: boolean; talk?: string; key?: string; body?: string; seed: number; angryUntil?: number };
+export type Npc = { person: Person; scene?: string; main?: boolean; x: number; z: number; y: number; heading: number; baseMood: string; seated?: boolean; talk?: string; key?: string; body?: string; seed: number; angryUntil?: number; kids?: number };
 export type Mover = { walker: Walker; person: Person; offset: number; x: number; z: number; moving?: boolean; body?: string; seed: number; key: string; angryUntil?: number; heading?: number };
 export type Spot = { id: string; group: THREE.Group; ring: THREE.Mesh; gem: THREE.Mesh; material: THREE.MeshBasicMaterial };
 export type Body = { x: number; z: number; radius?: number; who: Npc | Mover };
@@ -309,7 +309,9 @@ export function buildBarco(scene: THREE.Scene, opts: { low: boolean; shadows: bo
       case 'dancefloor': break;
       case 'bingo': add(g, B(w, 0.85, d), red, 0, 0.42); { const drum = add(g, new THREE.SphereGeometry(0.22, 12, 10), std('#e8e0c0', 0.2, 0.3, { transparent: true, opacity: 0.6 }), 0, 1.1, 0); anim.sway.push(drum); } break;
       case 'roundtable': {
-        add(g, C(0.62, 0.62, 0.05, 20), cloth, 0, 0.76); add(g, C(0.66, 0.7, 0.7, 20), cloth, 0, 0.38);
+        // A short cloth on a pedestal: the knees of the people seated around it stay clear of it.
+        add(g, C(0.62, 0.62, 0.05, 20), cloth, 0, 0.76); add(g, C(0.48, 0.5, 0.1, 20), cloth, 0, 0.69);
+        add(g, C(0.06, 0.07, 0.62, 10), gold, 0, 0.31); add(g, C(0.28, 0.3, 0.04, 16), gold, 0, 0.02);
         add(g, C(0.04, 0.04, 0.2, 8), std('#e8e0d0', 0.1, 0, { emissive: '#ffd890', emissiveIntensity: 0.7 }), 0, 0.88);
         for (let k = 0; k < 6; k++) { const a = k * Math.PI / 3, cx = Math.sin(a) * 1.2, cz = Math.cos(a) * 1.2; const ch = new THREE.Group(); ch.position.set(cx, 0, cz); ch.rotation.y = a + Math.PI; g.add(ch); add(ch, B(0.44, 0.06, 0.44), red, 0, 0.45); add(ch, B(0.44, 0.5, 0.06), red, 0, 0.72, -0.2); for (const [a2, b2] of [[-0.18, -0.18], [0.18, -0.18], [-0.18, 0.18], [0.18, 0.18]]) add(ch, B(0.03, 0.44, 0.03), gold, a2, 0.22, b2); }
         break;
@@ -351,7 +353,8 @@ export function buildBarco(scene: THREE.Scene, opts: { low: boolean; shadows: bo
     l.position.set(x, y, z); l.userData.base = intensity; world.add(l); lamps.push(l);
   }
   // Chandeliers in the ballroom, wall lamps in the corridor.
-  for (const z of [22, 32]) { const ch = new THREE.Group(); ch.position.set(0, 3.6, z); world.add(ch); keep.push(ch); anim.sway.push(ch); add(ch, C(0.02, 0.02, 0.6, 4), gold, 0, 0.3); add(ch, new THREE.SphereGeometry(0.35, 12, 10), lampMat, 0, -0.1).castShadow = false; for (let k = 0; k < 6; k++) add(ch, new THREE.SphereGeometry(0.08, 8, 6), lampMat, Math.sin(k) * 0.55, -0.15, Math.cos(k) * 0.55).castShadow = false; }
+  const chandeliers: THREE.Group[] = [];
+  for (const z of [22, 32]) { const ch = new THREE.Group(); ch.position.set(0, 3.6, z); world.add(ch); keep.push(ch); anim.sway.push(ch); chandeliers.push(ch); add(ch, C(0.02, 0.02, 0.6, 4), gold, 0, 0.3); add(ch, new THREE.SphereGeometry(0.35, 12, 10), lampMat, 0, -0.1).castShadow = false; for (let k = 0; k < 6; k++) add(ch, new THREE.SphereGeometry(0.08, 8, 6), lampMat, Math.sin(k) * 0.55, -0.15, Math.cos(k) * 0.55).castShadow = false; }
   for (let z = -18; z < 14; z += 4) for (const x of [-1.47, 1.47]) add(statics, B(0.06, 0.18, 0.28), lampMat, x, 2.3, z).castShadow = false;
   // A light at each deck door, and the green and red running lights.
   add(statics, new THREE.SphereGeometry(0.12, 8, 6), new THREE.MeshBasicMaterial({ color: '#30ff60', toneMapped: false }), 8.5, 3.0, -47.9);
@@ -476,6 +479,7 @@ export function buildBarco(scene: THREE.Scene, opts: { low: boolean; shadows: bo
   const wp = new THREE.Vector3();
   const far = opts.low ? 26 : 40;
   let seaTick = 0;
+  let farTick = 0;
   function animate(t: number, dt: number, px: number, pz: number, camera: THREE.Camera) {
     clockNow = t;
     const st = strength();
@@ -487,6 +491,8 @@ export function buildBarco(scene: THREE.Scene, opts: { low: boolean; shadows: bo
     // The ship rolls: lamps, the bell and the bingo drum swing with it.
     const roll = Math.sin(t * 0.85) * st;
     for (const s of anim.sway) s.rotation.z = roll * 0.22;
+    // The follow camera never ends up inside a chandelier: it steps aside while the camera passes.
+    for (const ch of chandeliers) ch.visible = Math.hypot(camera.position.x - ch.position.x, camera.position.y - 3.4, camera.position.z - ch.position.z) > 1.4;
     for (const f of anim.flags) { const p = f.geometry.attributes.position as THREE.BufferAttribute; for (let i = 0; i < p.count; i++) { const x = p.getX(i); p.setZ(i, Math.sin(t * (4 + st * 6) + x * 3) * 0.12 * (x + 0.8)); } p.needsUpdate = true; }
     for (const l of lamps) l.intensity = (l.userData.base as number) * (l.position.z < -20 && l.position.z > -34 ? 0.85 + Math.sin(t * 17) * 0.08 : 1);
     // The sea: bigger waves as the storm grows.
@@ -538,11 +544,15 @@ export function buildBarco(scene: THREE.Scene, opts: { low: boolean; shadows: bo
       m.person.root.rotation.y = at.heading;
       animatePerson(m.person, dt, at.moving ? m.walker.speed : 0, false);
     }
+    farTick++;
     for (const npc of npcs) {
       const d = Math.max(Math.abs(npc.x - px), Math.abs(npc.z - pz));
       npc.person.root.visible = d < far;
-      if (d > 24) continue;
-      animatePerson(npc.person, dt, 0, talking.has(npc.person));
+      // Far people still get a pose now and then: a real body loaded late must not keep its bind pose.
+      const kids = npc.person.root.children.length; // grows when the real body arrives
+      if (d > 24 && kids === npc.kids && (farTick + npc.seed) % 30 !== 0) continue;
+      npc.kids = kids;
+      animatePerson(npc.person, d > 24 ? 0 : dt, 0, talking.has(npc.person));
     }
     for (let i = bubbles.length - 1; i >= 0; i--) {
       const b = bubbles[i];

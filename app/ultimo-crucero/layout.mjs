@@ -209,7 +209,7 @@ const PLACES = {
     extras: [{ x: -9.4, z: -9.2, heading: 0.7, pose: 'arms', mood: 'worried', look: L('#c48f69', 'elderly', 'm', 'cap', '#d8d8d8', 'coat', '#3a3a30', 'pants', '#2a2a2a', ['mustache'], { seed: 92 }) }] },
   polizon: { spot: { x: 8.6, z: -6.6 }, npc: { x: 10.65, z: -8.4, heading: -Math.PI / 2, seat: true }, pose: 'sit', mood: 'smile', look: L('#8d5a3c', 'elderly', 'm', 'short', '#e8e8e8', 'jacket', '#5a4a3a', 'pants', '#3a3028', ['hat'], { seed: 101 }),
     extras: [{ x: 9.0, z: -10.0, heading: 0.4, pose: 'arms', mood: 'angry', look: L('#c48f69', 'adult', 'm', 'short', '#120d0b', 'jacket', '#1a2440', 'pants', '#1a2440', ['beard'], { seed: 102 }) }] },
-  barra: { spot: { x: -3.9, z: 22.0 }, npc: { x: -6.15, z: 22.0, heading: Math.PI / 2 }, pose: 'cook', mood: 'neutral', look: L('#a8724e', 'old', 'm', 'short', '#5a5a5a', 'suit', '#7a1a2a', 'pants', '#141418', ['mustache'], { seed: 111 }) },
+  barra: { spot: { x: -3.9, z: 22.0 }, npc: { x: -6.22, z: 22.0, heading: Math.PI / 2 }, pose: 'arms', mood: 'neutral', look: L('#a8724e', 'old', 'm', 'short', '#5a5a5a', 'suit', '#7a1a2a', 'pants', '#141418', ['mustache'], { seed: 111 }) },
   bingo: { spot: { x: -0.6, z: 27.6 }, npc: { x: -0.8, z: 30.6, heading: Math.PI }, pose: 'wave', mood: 'laugh', look: L('#c48f69', 'adult', 'f', 'curly', '#3a1a10', 'dress', '#e0408a', null, null, ['earrings'], { seed: 121 }) },
   piano: { spot: { x: 3.0, z: 19.2 }, npc: { x: 4.3, z: 16.1, heading: Math.PI, seat: true, y: STAGE.top }, pose: 'sit', mood: 'sad', look: L('#e2b896', 'elderly', 'm', 'short', '#e8e8e8', 'suit', '#141418', 'pants', '#141418', ['glasses'], { seed: 131 }) },
   radio: { spot: { x: -3.6, z: -36.8 }, npc: { x: -6.1, z: -38, heading: -Math.PI / 2, seat: true }, pose: 'sit', mood: 'worried', look: L('#b9825c', 'adult', 'f', 'bob', '#120d0b', 'uniform', '#1a2440', 'pants', '#1a2440', ['headphones'], { seed: 141 }) },
@@ -275,7 +275,7 @@ export const WALKERS = [
 // Short lines people say as you walk past (shown as bubbles near them).
 export const CHATTER = [
   '¡Cómo se mueve esto!', '¿Dónde está el capitán?', 'Yo me casé en este salón.', '¿Quedan pastillas para el mareo?', 'Mañana a las siete, Cádiz.',
-  '¿Has visto el gato?', 'Dicen que hay un polizón.', 'Otra canción, maestro.', 'Esta orquesta ya tocaba en 1980.', 'Agárrate, que viene otra.',
+  'Nadie encuentra al gato del capitán.', 'Dicen que hay un polizón.', 'Otra canción, maestro.', 'Esta orquesta ya tocaba en 1980.', 'Agárrate, que viene otra.',
   '¡Bingo! Ah, no.', 'Qué pena, un barco tan bonito.', 'El bufé sigue abierto.', 'No mires por la ventana.', 'Esta noche no duerme nadie.',
 ];
 
