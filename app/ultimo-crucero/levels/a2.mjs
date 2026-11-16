@@ -148,9 +148,9 @@ export default {
     ],
     ask: "Germán te da una carta para leer. ¿Qué le dices?",
     options: [
-      { say: "Germán, mañana manda una. La mejor.", reply: "¿Una? Bueno… la de 1987. En ella le hablo del mar.", end: "Germán guarda la carta de 1987 en el bolsillo de su chaqueta. Mañana, en Cádiz, va a buscar un buzón amarillo.", mood: "smile" },
+      { say: "Germán, mañana mande una. La mejor.", reply: "¿Una? Bueno… la de 1987. En ella le hablo del mar.", end: "Germán guarda la carta de 1987 en el bolsillo de su chaqueta. Mañana, en Cádiz, va a buscar un buzón amarillo.", mood: "smile" },
       { say: "¿La buscamos en internet? Seguro que tiene redes sociales.", reply: "¿Tú crees? A ver… ¡Isabel Cárdenas, Quito! ¡Es ella!", end: "Germán le escribe un mensaje corto: «Soy Germán, del baile del Albatros». Un minuto después, Isabel le da un me gusta. Germán no puede hablar.", mood: "surprised" },
-      { say: "Germán, ¿no crees que las escribiste para ti?", reply: "Puede ser. Escribirlas me acompañó mucho.", end: "Germán lee una carta en voz alta y, al final, sonríe: «Querido Germán, eres un cobarde, pero escribes bien».", mood: "sad" },
+      { say: "Germán, ¿no cree que las escribió para usted?", reply: "Puede ser. Escribirlas me acompañó mucho.", end: "Germán lee una carta en voz alta y, al final, sonríe: «Querido Germán, eres un cobarde, pero escribes bien».", mood: "sad" },
     ],
     talk: [
       "¿Qué papel o recuerdo guardaste durante muchos años?",
@@ -334,7 +334,7 @@ export default {
     options: [
       { say: "Vamos adentro. Allí pueden hablar sin peligro.", reply: "Adentro… vale. ¡Y sí, Gustavo, claro que sí!", end: "Norma dice que sí en el pasillo, con el pelo mojado. El anillo es tan grande que se lo pone en el pulgar.", mood: "smile" },
       { say: "¡Norma, abra los brazos como en el Titanic!", reply: "¿Así? ¡Estoy volando, Gustavo! ¡Ay, una ola!", end: "Una ola enorme los moja de pies a cabeza. Norma dice que sí con agua en la boca y los dos se ríen como niños.", mood: "laugh" },
-      { say: "Norma, ¿qué te dijo él en el hospital?", reply: "Nada. Pero yo le dije que sí, en silencio, hace veinte años. No lo sabía.", end: "Gustavo se queda con la boca abierta. Norma le pone el anillo a él en el meñique: «Ahora estamos en paz».", mood: "love" },
+      { say: "Norma, ¿qué le dijo él en el hospital?", reply: "Nada. Pero yo le dije que sí, en silencio, hace veinte años. No lo sabía.", end: "Gustavo se queda con la boca abierta. Norma le pone el anillo a él en el meñique: «Ahora estamos en paz».", mood: "love" },
     ],
     talk: [
       "¿Qué susto cambió tus planes?",

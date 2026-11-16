@@ -5,15 +5,15 @@ export default {
     title: "Cenizas con viento",
     line: "Son las ocho de la noche. Empieza la tormenta. Viajas sin compañía en el último viaje del Albatros, y el capitán te pide un favor: escribir las historias de la noche en su cuaderno. En la popa, una señora mayor abraza una caja de madera.",
     dialogue: [
-      ["amparo", "Me llamo Amparo. Aquí están las cenizas de mi marido, Paco. Él quiere volver al mar desde este barco."],
+      ["amparo", "Me llamo Amparo. Aquí están las cenizas de mi marido, Paco. Él quería volver al mar desde este barco."],
       ["ezequiel", "Señora, soy el sobrecargo. Con este viento no es una buena idea."],
       ["amparo", "Tengo que hacerlo hoy. Mañana el barco ya no existe."],
     ],
     ask: "Amparo abre un poco la caja y te mira. ¿Qué le dices?",
     options: [
-      { say: "Amparo, ¿por qué no espera al amanecer? Mañana va a hacer menos viento.", reply: "Tienes razón. Paco nunca tiene prisa.", end: "Amparo cierra la caja y se sienta con ella. Va a esperar al sol.", mood: "smile" },
+      { say: "Amparo, ¿por qué no espera al amanecer? Mañana va a hacer menos viento.", reply: "Tienes razón. Paco nunca tenía prisa.", end: "Amparo cierra la caja y se sienta con ella. Va a esperar al sol.", mood: "smile" },
       { say: "Vamos, ahora. Yo le ayudo con la caja.", reply: "Gracias, cariño. Uno, dos… ¡tres!", end: "El viento cambia. Paco vuelve al mar, pero un poco de él termina en la chaqueta azul de Ezequiel.", mood: "laugh" },
-      { say: "¿Cómo conoce a Paco?", reply: "En este barco, en 1978. Él es camarero y me trae un cóctel. No es el mío, pero me lo tomo.", end: "Amparo ríe: «Un cóctel equivocado y una vida entera». Ezequiel también sonríe.", mood: "love" },
+      { say: "¿Cómo conoció a Paco?", reply: "En este barco, en 1978. Él era camarero y me trajo un cóctel. No era el mío, pero me lo tomé.", end: "Amparo ríe: «Un cóctel equivocado y una vida entera». Ezequiel también sonríe.", mood: "love" },
     ],
     talk: [
       "¿Dónde te gustaría estar al final de tu vida?",
@@ -49,7 +49,7 @@ export default {
   },
   cocina: {
     title: "La última cena del Albatros",
-    line: "En la cocina, las ollas bailan con las olas. La chef Inés trabaja aquí hace dieciocho años. Su ayudante, Lalo, tiene una carta de la compañía en la mano. Hay comida para cuatrocientas personas, pero casi nadie tiene hambre.",
+    line: "En la cocina, las ollas bailan con las olas. La chef Inés trabaja aquí desde hace dieciocho años. Su ayudante, Lalo, tiene una carta de la compañía en la mano. Hay comida para cuatrocientas personas, pero casi nadie tiene hambre.",
     dialogue: [
       ["lalo", "La compañía dice que tenemos que tirar la comida en Cádiz."],
       ["ines", "¿Tirar doscientos kilos de gambas? Ni hablar."],
@@ -72,7 +72,7 @@ export default {
   },
   pasillo: {
     title: "El secreto de Rosa",
-    line: "En el pasillo de los camarotes, Rosa empuja un carro de toallas. Es camarera desde hace siete años. De repente, las toallas se mueven solas. Debajo hay un gato gris con ojos amarillos.",
+    line: "En el pasillo de los camarotes, Rosa empuja un carro de toallas. Es camarera del barco desde hace veinticinco años. De repente, las toallas se mueven solas. Debajo hay un gato gris con ojos amarillos.",
     dialogue: [
       ["rosa", "Shhh. Se llama Almirante. Vive conmigo en el barco desde Lisboa. Nadie lo sabe."],
       ["rosa", "Mañana no tengo trabajo, no tengo casa y tengo un gato ilegal. Perfecto."],
@@ -197,7 +197,7 @@ export default {
     options: [
       { say: "Martina, con el metal del barco hacen cosas nuevas. Por ejemplo, bicicletas.", reply: "¿Bicicletas? ¿Puede ser mi próxima bicicleta?", end: "Martina anuncia: «Los barcos no mueren. Se convierten en bicicletas». El abuelo aplaude.", mood: "smile" },
       { say: "Cuando ves la luz, cuenta hasta el trueno. Así sabes si la tormenta está lejos.", reply: "Uno, dos, tres, cuatro…", end: "Martina cuenta hasta siete. Luego bosteza y se duerme dentro del abrigo del abuelo.", mood: "sleepy" },
-      { say: "Don Benigno, ¿usted conoce bien este barco?", reply: "Lo conozco por dentro. En 1971 pongo los remaches del casco.", end: "Martina toca el barco con la mano: «Abuelo, aquí estás tú». Don Benigno no puede hablar.", mood: "love" },
+      { say: "Don Benigno, ¿usted conoce bien este barco?", reply: "Lo conozco por dentro. En 1971 puse los remaches del casco.", end: "Martina toca el barco con la mano: «Abuelo, aquí estás tú». Don Benigno no puede hablar.", mood: "love" },
     ],
     talk: [
       "¿Qué te da miedo cuando hay tormenta?",
@@ -213,7 +213,7 @@ export default {
     line: "En la cubierta de estribor, Julián, el contramaestre, encuentra a un señor escondido al lado del bote cuatro. El señor está mojado y tiene un sombrero viejo. No tiene billete.",
     dialogue: [
       ["julian", "Señor, ¿qué hace aquí? ¿Dónde está su billete?"],
-      ["fermin", "No tengo billete, joven. Me llamo Fermín. Soy cocinero de este barco desde 1971. Bueno, era."],
+      ["fermin", "No tengo billete, joven. Me llamo Fermín. Fui cocinero de este barco desde 1971 hasta 1990."],
       ["julian", "¿Cocinero? Tiene ochenta y dos años."],
     ],
     ask: "Julián tiene la radio en la mano. ¿Qué le dices?",
@@ -235,7 +235,7 @@ export default {
     title: "El champán del primer viaje",
     line: "En la barra del salón, Wences limpia los vasos. Es el barman del Albatros desde hace treinta años. Tiene en la mano una botella de champán muy vieja, con polvo.",
     dialogue: [
-      ["wences", "Esta botella es de 1971, del primer viaje. Mi primer jefe me la da con una condición: abrirla el último día."],
+      ["wences", "Esta botella es de 1971, del primer viaje. Mi primer jefe me la dio con una condición: abrirla el último día."],
       ["wences", "La compañía dice que vale tres mil euros. La quieren vender."],
       ["wences", "Y yo no sé qué hacer."],
     ],
@@ -355,8 +355,8 @@ export default {
     ],
     ask: "Marina guarda silencio. ¿Qué le dices?",
     options: [
-      { say: "Marina, hable con el capitán. Él también tiene miedo, seguro.", reply: "¿Tú crees? Bueno, voy a hablar con él.", end: "El capitán escucha y dice: «Yo tengo miedo cada noche, Marina. Por eso llego siempre».", mood: "love" },
-      { say: "Usted puede. Hable con voz fuerte.", reply: "Voz fuerte. Bien.", end: "Marina da las órdenes con voz fuerte. Nadie ve que sus manos tiemblan.", mood: "worried" },
+      { say: "Marina, habla con el capitán. Él también tiene miedo, seguro.", reply: "¿Tú crees? Bueno, voy a hablar con él.", end: "El capitán escucha y dice: «Yo tengo miedo cada noche, Marina. Por eso llego siempre».", mood: "love" },
+      { say: "Tú puedes. Habla con voz fuerte.", reply: "Voz fuerte. Bien.", end: "Marina da las órdenes con voz fuerte. Nadie ve que sus manos tiemblan.", mood: "worried" },
       { say: "¿Y esa brújula? Es muy vieja.", reply: "Es de mi padre. Es pescador y un día no vuelve.", end: "Marina besa la brújula y la pone en el bolsillo del uniforme. «Hoy me ayuda él», dice.", mood: "sad" },
     ],
     talk: [

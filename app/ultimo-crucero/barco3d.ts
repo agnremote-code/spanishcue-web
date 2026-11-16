@@ -304,7 +304,8 @@ export function buildBarco(scene: THREE.Scene, opts: { low: boolean; shadows: bo
       case 'backbar': add(g, B(w, 2.4, d), wood, 0, 1.2); for (let k = -d / 2 + 0.3; k < d / 2; k += 0.22) add(g, C(0.04, 0.045, 0.3, 8), new THREE.MeshStandardMaterial({ color: ['#2a6a3a', '#8a4a1a', '#c8c0a0', '#6a1a2a'][Math.round(k * 7 + 40) % 4], roughness: 0.15, metalness: 0.2 }), 0.15, 1.6 + (Math.round(k * 5) % 2) * 0.45, k).castShadow = false; break;
       case 'stool': add(g, C(0.18, 0.18, 0.06, 12), red, 0, 0.75); add(g, C(0.03, 0.03, 0.72, 6), metal, 0, 0.36); break;
       case 'stage': add(g, B(w, STAGE.top, d), wood, 0, STAGE.top / 2); add(g, B(w + 0.4, 3.6, 0.15), red, 0, 2.3, -d / 2 + 0.05).castShadow = false; break;
-      case 'piano': add(g, B(w, 0.9, d), black, 0, STAGE.top + 0.45); add(g, B(w, 0.04, 0.3), white, 0, STAGE.top + 0.78, d / 2 - 0.05); { const lid = add(g, B(w, 0.03, d * 0.9), black, 0, STAGE.top + 1.2, -0.1); lid.rotation.x = -0.5; } break;
+      // The body sits back; the keys are a thin front ledge, so the pianist's hands rest on them and not inside the case.
+      case 'piano': add(g, B(w, 0.9, d - 0.35), black, 0, STAGE.top + 0.45, -0.175); add(g, B(w, 0.06, 0.35), black, 0, STAGE.top + 0.71, d / 2 - 0.175); add(g, B(w - 0.1, 0.03, 0.18), white, 0, STAGE.top + 0.755, d / 2 - 0.12); { const lid = add(g, B(w, 0.03, d * 0.9), black, 0, STAGE.top + 1.2, -0.1); lid.rotation.x = -0.5; } break;
       case 'pianobench': add(g, B(w, 0.08, d), black, 0, STAGE.top + 0.45); add(g, B(w - 0.1, 0.4, 0.05), black, 0, STAGE.top + 0.22, 0); break;
       case 'dancefloor': break;
       case 'bingo': add(g, B(w, 0.85, d), red, 0, 0.42); { const drum = add(g, new THREE.SphereGeometry(0.22, 12, 10), std('#e8e0c0', 0.2, 0.3, { transparent: true, opacity: 0.6 }), 0, 1.1, 0); anim.sway.push(drum); } break;

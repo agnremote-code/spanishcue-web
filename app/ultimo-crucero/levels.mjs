@@ -2,7 +2,8 @@
 // level, so the Worker and the first paint never carry them). A0 is
 // bilingual: every text is { es, en }; A1 keeps its scene words as { es, en };
 // the rest is Spanish only.
-export const LOADERS = {
+// The server build (import.meta.env.SSR) gets no scenes: they only load in the browser, as in app/escucha-3d/loaders.ts.
+export const LOADERS = import.meta.env?.SSR ? {} : {
   A0: () => import('./levels/a0.mjs'),
   A1: () => import('./levels/a1.mjs'),
   A2: () => import('./levels/a2.mjs'),

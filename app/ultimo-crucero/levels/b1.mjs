@@ -153,9 +153,9 @@ export default {
     ],
     ask: "Germán te pregunta qué harías tú en su lugar. ¿Qué le contestas?",
     options: [
-      { say: "Yo mandaría una carta mañana. Solo una, la que más te guste.", reply: "Quizás tengas razón. La de 1987, donde le hablo del mar.", end: "Germán guarda la carta de 1987 en el bolsillo de la chaqueta. Mañana buscará un buzón antes que un taxi.", mood: "smile" },
+      { say: "Yo mandaría una carta mañana. Solo una, la que más le guste.", reply: "Quizás tengas razón. La de 1987, donde le hablo del mar.", end: "Germán guarda la carta de 1987 en el bolsillo de la chaqueta. Mañana buscará un buzón antes que un taxi.", mood: "smile" },
       { say: "¿Y si la buscamos en internet ahora mismo?", reply: "No creo que esté… ¡Isabel Cárdenas, Quito! ¡Con cinco nietos!", end: "Germán le escribe: «Soy Germán, del baile del Albatros». Un minuto después, ella le da un me gusta. Germán tiene que sentarse.", mood: "surprised" },
-      { say: "Germán, quizás esas cartas eran para ti.", reply: "Puede que sí. Me ayudaron a no sentirme tan solo.", end: "Germán lee una carta en voz alta y termina riéndose: «Era un cobarde, pero escribía muy bien».", mood: "sad" },
+      { say: "Germán, quizás esas cartas eran para usted.", reply: "Puede que sí. Me ayudaron a no sentirme tan solo.", end: "Germán lee una carta en voz alta y termina riéndose: «Era un cobarde, pero escribía muy bien».", mood: "sad" },
     ],
     talk: [
       "¿Qué harías si encontraras una carta que nunca enviaste?",
@@ -245,9 +245,9 @@ export default {
     ],
     ask: "Wences te pide que decidas por él. ¿Qué le aconsejas?",
     options: [
-      { say: "Te aconsejo que la abras ahora. Una promesa vale más que una subasta.", reply: "¡Que me denuncien! Esta noche mando yo en esta barra.", end: "El corcho llega hasta la lámpara. El champán es vinagre. Todo el salón se ríe y brinda igual: es el mejor brindis del viaje.", mood: "laugh" },
+      { say: "Le aconsejo que la abra ahora. Una promesa vale más que una subasta.", reply: "¡Que me denuncien! Esta noche mando yo en esta barra.", end: "El corcho llega hasta la lámpara. El champán es vinagre. Todo el salón se ríe y brinda igual: es el mejor brindis del viaje.", mood: "laugh" },
       { say: "Yo la guardaría para el amanecer, para cuando lleguemos a Cádiz.", reply: "Sí. Que el último brindis tenga sol.", end: "Wences mete la botella en un cubo con hielo y escribe en una servilleta: «No tocar hasta ver Cádiz».", mood: "smile" },
-      { say: "¿Por qué dices que no vas a beber ni una gota?", reply: "Porque hace treinta años que no bebo. Agua con gas y limón. Nadie lo nota.", end: "Wences sirve copas toda la noche con una sonrisa. Cuando brinda, levanta su vaso de agua con gas, y nadie nota la diferencia.", mood: "surprised" },
+      { say: "¿Por qué dice que no va a beber ni una gota?", reply: "Porque hace treinta años que no bebo. Agua con gas y limón. Nadie lo nota.", end: "Wences sirve copas toda la noche con una sonrisa. Cuando brinda, levanta su vaso de agua con gas, y nadie nota la diferencia.", mood: "surprised" },
     ],
     talk: [
       "¿Qué promesa te parecería imposible romper?",

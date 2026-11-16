@@ -7,13 +7,13 @@ export default {
     dialogue: [
       ["amparo", t("Hola. Soy Amparo. En esta caja están las cenizas de Paco, mi marido.", "Hello. I am Amparo. In this box are the ashes of Paco, my husband.")],
       ["ezequiel", t("Señora, hay mucho viento. Es peligroso.", "Madam, there is a lot of wind. It is dangerous.")],
-      ["amparo", t("Paco ama este barco.", "Paco loves this ship.")],
+      ["amparo", t("A Paco le encantaba este barco.", "Paco loved this ship.")],
     ],
     ask: t("Amparo te mira. ¿Qué dices?", "Amparo looks at you. What do you say?"),
     options: [
       { say: t("Señora, espere al amanecer. Mañana no hay viento.", "Madam, wait for dawn. Tomorrow there is no wind."), reply: t("Sí. Paco espera un poco más.", "Yes. Paco can wait a little more."), end: t("Amparo guarda la caja en su abrigo. Mañana, con sol, es el momento.", "Amparo keeps the box in her coat. Tomorrow, with sun, is the moment."), mood: "smile" },
       { say: t("Ahora, señora. Un, dos, tres…", "Now, madam. One, two, three…"), reply: t("¡Ay! ¡El viento!", "Oh! The wind!"), end: t("Una parte de Paco está en el mar. Otra parte está en la chaqueta de Ezequiel.", "Part of Paco is in the sea. Another part is on Ezequiel's jacket."), mood: "laugh" },
-      { say: t("¿Cómo es Paco?", "What is Paco like?"), reply: t("Es camarero aquí, en 1978. Me trae un cóctel. No es mi cóctel.", "He is a waiter here, in 1978. He brings me a cocktail. It is not my cocktail."), end: t("Amparo sonríe. Un cóctel equivocado y muchos años de amor.", "Amparo smiles. A wrong cocktail and many years of love."), mood: "love" },
+      { say: t("¿Cómo era Paco?", "What was Paco like?"), reply: t("Era camarero aquí, en 1978. Me trajo un cóctel. No era mi cóctel.", "He was a waiter here, in 1978. He brought me a cocktail. It was not my cocktail."), end: t("Amparo sonríe. Un cóctel equivocado y muchos años de amor.", "Amparo smiles. A wrong cocktail and many years of love."), mood: "love" },
     ],
     talk: [
       t("¿Qué cosa de tu abuela o tu abuelo está en tu casa?", "What thing of your grandmother or grandfather is in your house?"),
@@ -81,7 +81,7 @@ export default {
     options: [
       { say: t("Mi maleta es grande. Almirante baja conmigo.", "My suitcase is big. Almirante goes ashore with me."), reply: t("¿De verdad? ¡Gracias!", "Really? Thank you!"), end: t("Almirante entra en tu maleta. Duerme encima de tu jersey.", "Almirante gets into your suitcase. He sleeps on top of your jumper."), mood: "smile" },
       { say: t("Vamos a hablar con el capitán.", "Let's talk to the captain."), reply: t("¿Con el capitán? ¡Qué miedo!", "With the captain? How scary!"), end: t("El capitán ríe: «Almirante es tripulante de honor». El gato tiene un papel con su nombre.", "The captain laughs: “Almirante is an honorary crew member.” The cat has a paper with his name."), mood: "laugh" },
-      { say: t("Rosa, ¿tienes familia en tierra?", "Rosa, do you have family on land?"), reply: t("Tengo una hermana. No hablamos hace veinte años.", "I have a sister. We have not talked for twenty years."), end: t("Rosa mira el teléfono. «Mañana la llamo», dice.", "Rosa looks at her phone. “I will call her tomorrow,” she says."), mood: "love" },
+      { say: t("Rosa, ¿tienes familia en tierra?", "Rosa, do you have family on land?"), reply: t("Tengo una hermana. Hace veinte años que no hablamos.", "I have a sister. We have not talked for twenty years."), end: t("Rosa mira el teléfono. «Mañana la llamo», dice.", "Rosa looks at her phone. “I will call her tomorrow,” she says."), mood: "love" },
     ],
     talk: [
       t("¿Cómo se llama el animal de tu casa o de tu vecino?", "What is the name of the pet in your house or your neighbour's?"),
@@ -194,7 +194,7 @@ export default {
     options: [
       { say: t("Martina, el metal del barco va a ser bicicletas.", "Martina, the metal of the ship is going to be bicycles."), reply: t("¿Bicicletas? ¿Mi bicicleta también?", "Bicycles? My bicycle too?"), end: t("Martina dice: «Los barcos no mueren. Son bicicletas». El abuelo ríe.", "Martina says: “Ships do not die. They are bicycles.” Her grandfather laughs."), mood: "smile" },
       { say: t("Mira la luz y cuenta: uno, dos, tres…", "Look at the light and count: one, two, three…"), reply: t("¡Cuatro, cinco, seis…!", "Four, five, six…!"), end: t("Martina cuenta hasta siete. Después del trueno, duerme en el abrigo del abuelo.", "Martina counts to seven. After the thunder, she sleeps in her grandfather's coat."), mood: "sleepy" },
-      { say: t("Don Benigno, ¿usted conoce este barco?", "Don Benigno, do you know this ship?"), reply: t("Sí. En 1971 pongo los remaches. Con estas manos.", "Yes. In 1971 I put in the rivets. With these hands."), end: t("Martina mira las manos del abuelo. «Mi abuelo hace barcos», dice.", "Martina looks at her grandfather's hands. “My grandpa makes ships,” she says."), mood: "love" },
+      { say: t("Don Benigno, ¿usted conoce este barco?", "Don Benigno, do you know this ship?"), reply: t("Sí. En 1971 puse los remaches. Con estas manos.", "Yes. In 1971 I put in the rivets. With these hands."), end: t("Martina mira las manos del abuelo. «Mi abuelo hace barcos», dice.", "Martina looks at her grandfather's hands. “My grandpa makes ships,” she says."), mood: "love" },
     ],
     talk: [
       t("¿Qué luz dejas encendida por la noche?", "What light do you leave on at night?"),
@@ -211,7 +211,7 @@ export default {
     dialogue: [
       ["fermin", t("Me llamo Fermín. Tengo ochenta y dos años.", "My name is Fermín. I am eighty-two years old.")],
       ["julian", t("¿Y su billete, señor?", "And your ticket, sir?")],
-      ["fermin", t("No tengo billete. Soy cocinero de este barco. Bueno, en 1971.", "I do not have a ticket. I am a cook on this ship. Well, in 1971.")],
+      ["fermin", t("No tengo billete. Era cocinero de este barco, en 1971.", "I do not have a ticket. I was a cook on this ship, in 1971.")],
     ],
     ask: t("Julián te mira. ¿Qué dices?", "Julián looks at you. What do you say?"),
     options: [
@@ -301,7 +301,7 @@ export default {
     dialogue: [
       ["sole", t("Es un mensaje para Teodoro, el jefe de máquinas.", "It is a message for Teodoro, the chief engineer.")],
       ["sole", t("Es de su hijo. Dice: «Papá, te espero en el puerto».", "It is from his son. It says: “Dad, I will wait for you at the port.”")],
-      ["sole", t("No hablan hace doce años.", "They have not talked for twelve years.")],
+      ["sole", t("Hace doce años que no hablan.", "They have not talked for twelve years.")],
     ],
     ask: t("Sole tiene el papel en la mano. ¿Qué dices?", "Sole has the paper in her hand. What do you say?"),
     options: [
@@ -330,7 +330,7 @@ export default {
     options: [
       { say: t("Adentro, por favor. Hay peligro.", "Inside, please. It is dangerous."), reply: t("Sí. Adentro. Y ahora: ¡sí!", "Yes. Inside. And now: yes!"), end: t("Norma dice que sí. El anillo es grande. Lo lleva en el pulgar.", "Norma says yes. The ring is big. She wears it on her thumb."), mood: "smile" },
       { say: t("¡Los brazos abiertos, Norma!", "Arms open, Norma!"), reply: t("¡Como en la película! ¡Ay, una ola!", "Like in the film! Oh, a wave!"), end: t("Una ola grande llega. Los dos están mojados. Norma dice «sí» y ríe.", "A big wave comes. They are both wet. Norma says “yes” and laughs."), mood: "laugh" },
-      { say: t("Gustavo, ¿por qué ahora?", "Gustavo, why now?"), reply: t("El año pasado, mi corazón… un infarto. Ahora no espero más.", "Last year, my heart… a heart attack. Now I do not wait any more."), end: t("Norma toma la mano de Gustavo: «Te digo que sí hace veinte años. En silencio».", "Norma takes Gustavo's hand: “I said yes to you twenty years ago. In silence.”"), mood: "love" },
+      { say: t("Gustavo, ¿por qué ahora?", "Gustavo, why now?"), reply: t("El año pasado, mi corazón… un infarto. Ahora no espero más.", "Last year, my heart… a heart attack. Now I do not wait any more."), end: t("Norma toma la mano de Gustavo: «Te dije que sí hace veinte años. En silencio».", "Norma takes Gustavo's hand: “I said yes to you twenty years ago. In silence.”"), mood: "love" },
     ],
     talk: [
       t("¿Dónde es un lugar bonito para una propuesta?", "Where is a beautiful place for a proposal?"),
@@ -350,8 +350,8 @@ export default {
     ],
     ask: t("Marina te mira. ¿Qué dices?", "Marina looks at you. What do you say?"),
     options: [
-      { say: t("Marina, hable con el capitán.", "Marina, talk to the captain."), reply: t("¿Del miedo? Bueno.", "About fear? OK."), end: t("El capitán escucha y dice: «Yo también tengo miedo, Marina».", "The captain listens and says: “I am scared too, Marina.”"), mood: "love" },
-      { say: t("Usted puede. Voz fuerte, Marina.", "You can do it. Strong voice, Marina."), reply: t("Sí. Voz fuerte.", "Yes. Strong voice."), end: t("Marina da las órdenes con voz fuerte. Sus manos tiemblan un poco.", "Marina gives the orders with a strong voice. Her hands shake a little."), mood: "worried" },
+      { say: t("Marina, habla con el capitán.", "Marina, talk to the captain."), reply: t("¿Del miedo? Bueno.", "About fear? OK."), end: t("El capitán escucha y dice: «Yo también tengo miedo, Marina».", "The captain listens and says: “I am scared too, Marina.”"), mood: "love" },
+      { say: t("Tú puedes. Voz fuerte, Marina.", "You can do it. Strong voice, Marina."), reply: t("Sí. Voz fuerte.", "Yes. Strong voice."), end: t("Marina da las órdenes con voz fuerte. Sus manos tiemblan un poco.", "Marina gives the orders with a strong voice. Her hands shake a little."), mood: "worried" },
       { say: t("¿De quién es la brújula?", "Whose is the compass?"), reply: t("De mi padre. Es pescador. Un día no vuelve.", "My father's. He is a fisherman. One day he does not come back."), end: t("Marina pone la brújula en el bolsillo del uniforme, cerca del corazón.", "Marina puts the compass in the pocket of her uniform, near her heart."), mood: "sad" },
     ],
     talk: [

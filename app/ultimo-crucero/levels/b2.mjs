@@ -153,9 +153,9 @@ export default {
     ],
     ask: "Germán te pide tu opinión, con una carta en la mano. ¿Qué le dices?",
     options: [
-      { say: "Yo enviaría una mañana. No todas, solo la que mejor te represente.", reply: "Puede que tengas razón. La de 1987: es la única en la que no me disculpo por nada.", end: "Germán guarda la carta de 1987 en el bolsillo interior de la chaqueta. Mañana buscará un buzón antes que un taxi.", mood: "smile" },
+      { say: "Yo enviaría una mañana. No todas, solo la que mejor le represente.", reply: "Puede que tengas razón. La de 1987: es la única en la que no me disculpo por nada.", end: "Germán guarda la carta de 1987 en el bolsillo interior de la chaqueta. Mañana buscará un buzón antes que un taxi.", mood: "smile" },
       { say: "¿Y si la buscamos ahora? Con un nombre y una ciudad, hoy se encuentra a casi cualquiera.", reply: "No creo que… ¡Isabel Cárdenas, Quito! Cinco nietos y la misma sonrisa.", end: "Germán le escribe: «Soy Germán, del baile del Albatros». Un minuto después, Isabel le da un me gusta. Germán tiene que sentarse en el suelo.", mood: "surprised" },
-      { say: "Quizás esas cartas fueron siempre para ti, una forma de sentir compañía.", reply: "Es posible. Me hicieron compañía durante cuarenta años. No es poco.", end: "Germán lee una carta en voz alta y termina riéndose: «Era un cobarde, pero tenía buena letra».", mood: "sad" },
+      { say: "Quizás esas cartas fueron siempre para usted, una forma de sentir compañía.", reply: "Es posible. Me hicieron compañía durante cuarenta años. No es poco.", end: "Germán lee una carta en voz alta y termina riéndose: «Era un cobarde, pero tenía buena letra».", mood: "sad" },
     ],
     talk: [
       "¿Qué te parece peor: un no claro o una duda que dura años?",
@@ -341,7 +341,7 @@ export default {
     options: [
       { say: "Yo propondría seguir la conversación dentro, donde nadie corra el riesgo de ahogarse.", reply: "Dentro, sí. Y ya que estamos… sí, Gustavo. Claro que sí.", end: "Norma dice que sí en el pasillo, chorreando agua sobre la moqueta. El anillo le queda tan grande que se lo pone en el pulgar.", mood: "smile" },
       { say: "Norma, ya que está mojada, abra los brazos. Que la pedida sea completa.", reply: "¿Así? ¡Me siento ridícula! ¡Ay, Dios, que viene una ola!", end: "Una ola gigantesca los empapa de arriba abajo. Norma dice que sí escupiendo agua salada y los dos se ríen como adolescentes.", mood: "laugh" },
-      { say: "Gustavo, ¿qué ha cambiado para que ahora sí quieras casarte?", reply: "El año pasado tuve un infarto. En la ambulancia me di cuenta de que todos mis planes empezaban por «algún día».", end: "Norma le sujeta la cara con las dos manos: «Tonto, yo te dije que sí hace veinte años. En silencio. Tú no te enteraste».", mood: "love" },
+      { say: "Gustavo, ¿qué ha cambiado para que ahora sí quiera casarse?", reply: "El año pasado tuve un infarto. En la ambulancia me di cuenta de que todos mis planes empezaban por «algún día».", end: "Norma le sujeta la cara con las dos manos: «Tonto, yo te dije que sí hace veinte años. En silencio. Tú no te enteraste».", mood: "love" },
     ],
     talk: [
       "¿Qué susto te obligó a reordenar tus prioridades?",
