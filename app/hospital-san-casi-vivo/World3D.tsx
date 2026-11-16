@@ -100,6 +100,8 @@ export default function World3D(props: WorldProps) {
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }
+    // Everyone here is made by now: the next world decides for itself.
+    enableRealPeople(false);
     scene.add(hero.root);
     // A cold clinical reflection so vinyl floors, steel and glass read as such.
     const pmrem = new THREE.PMREMGenerator(renderer);

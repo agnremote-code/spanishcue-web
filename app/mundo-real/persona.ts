@@ -128,10 +128,36 @@ let catalogue: Promise<Catalogue> | null = null;
 const loadCatalogue = () => catalogue ??= fetch(`${GENTE}elenco.json`).then(r => r.json() as Promise<Catalogue>);
 
 const pieces = new Map<string, Promise<THREE.Object3D>>();
+/**
+ * One outfit came without its upper and lower garments told apart, so its shirt was dyed as trousers.
+ * Every piece of cloth that reaches the chest, or hangs out at the arms, belongs to the upper one.
+ */
+function splitGarments(geometry: THREE.BufferGeometry) {
+  const region = geometry.attributes._region as THREE.BufferAttribute | undefined, pos = geometry.attributes.position, index = geometry.index;
+  if (!region || !index) return;
+  for (let i = 0; i < region.count; i++) if (region.getX(i) > 0.5) return;
+  // Pieces as the texture cuts them (panels, sleeves, cuffs, legs).
+  const parent = new Int32Array(pos.count).map((_, i) => i);
+  const find = (i: number): number => { while (parent[i] !== i) { parent[i] = parent[parent[i]]; i = parent[i]; } return i; };
+  const tris = index.array;
+  for (let i = 0; i < tris.length; i += 3) { const a = find(tris[i]); parent[find(tris[i + 1])] = a; parent[find(tris[i + 2])] = a; }
+  let low = Infinity, high = -Infinity;
+  const top = new Map<number, number>(), side = new Map<number, number>();
+  for (let i = 0; i < pos.count; i++) {
+    const y = pos.getY(i), r = find(i);
+    top.set(r, Math.max(top.get(r) ?? -Infinity, y)); side.set(r, Math.min(side.get(r) ?? Infinity, Math.abs(pos.getX(i))));
+    low = Math.min(low, y); high = Math.max(high, y);
+  }
+  // Upper garment: whatever reaches the chest, and what hangs wholly out at the arms (cuffs).
+  const chest = low + (high - low) * 0.72, arm = (high - low) * 0.2;
+  for (let i = 0; i < pos.count; i++) { const r = find(i); region.setX(i, (top.get(r) as number) > chest || (side.get(r) as number) > arm ? 1 : 0); }
+  region.needsUpdate = true;
+}
+
 function loadPiece(body: string, name: string) {
   const key = `${body}/${name}`;
   let p = pieces.get(key);
-  if (!p) { p = new GLTFLoader().loadAsync(`${GENTE}${key}.glb`).then(g => { fixMaterials(g.scene); return g.scene; }); pieces.set(key, p); }
+  if (!p) { p = new GLTFLoader().loadAsync(`${GENTE}${key}.glb`).then(g => { fixMaterials(g.scene); g.scene.traverse(o => { if ((o as THREE.Mesh).isMesh) splitGarments((o as THREE.Mesh).geometry); }); return g.scene; }); pieces.set(key, p); }
   return p;
 }
 
@@ -176,11 +202,14 @@ function variant<T extends THREE.Material>(key: string, make: () => T) {
   return m;
 }
 
+// The shirt of this outfit is dark navy, but its file records the brightness of a light one, which dyed every shirt black.
+const LUM_FIX: Record<string, [number, number]> = { male_casualsuit01: [0.065, 0.05] };
+
 /** Clothes dyed in the person's colours: the weave and folds of the photo stay, the upper and lower garments take one colour each. */
 function dyed(base: THREE.MeshStandardMaterial, top: string, bottom: string) {
   return variant(`${base.uuid}|${top}|${bottom}`, () => {
     const m = base.clone();
-    const lum = (base.userData.lum as [number, number] | undefined) ?? [0.2, 0.2];
+    const lum = LUM_FIX[base.name.replace(/^Human\./, '')] ?? (base.userData.lum as [number, number] | undefined) ?? [0.2, 0.2];
     // Worlds paint their people in poster colours; cloth under real light is a little greyer and darker.
     const cloth = (hex: string) => { const c = new THREE.Color(hex), hsl = { h: 0, s: 0, l: 0 }; c.getHSL(hsl); return c.setHSL(hsl.h, hsl.s * 0.72, hsl.l * 0.9); };
     const uniforms = { uTop: { value: cloth(top) }, uBottom: { value: cloth(bottom) }, uLum: { value: new THREE.Vector2(lum[0], lum[1]) } };

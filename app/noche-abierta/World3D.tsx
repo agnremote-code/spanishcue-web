@@ -5,6 +5,7 @@
 // component only turns it into a place: run up to something, press E, and
 // the activity opens where it happens. The museum and the bar are rooms you
 // walk around in; the plaza is full of people you can talk to.
+import { enableRealPeople } from '../mundo-real/persona';
 import * as THREE from 'three';
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import { LOCATIONS, type Level, type Phase, type WorldOutcome } from './engine.mjs';
@@ -178,6 +179,8 @@ export default function World3D(props: WorldProps) {
     const indoorLights = [new THREE.PointLight('#ffc27a', 0, 16, 1.4), new THREE.PointLight('#ffc27a', 0, 12, 1.6)];
     scene.add(...indoorLights);
 
+    // People with real bodies: for now only when asked for with ?real=1, until the whole city is measured on a computer.
+    enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') === '1');
     const city: City = buildCity({ shadows: !low, crowd: !low });
     scene.add(city.root);
     // The districts around the centre, streamed in and out by distance.
@@ -1392,6 +1395,7 @@ export default function World3D(props: WorldProps) {
       observer.disconnect();
       canvas.removeEventListener('pointerdown', down);
       canvas.removeEventListener('webglcontextlost', lostContext);
+      enableRealPeople(false);
       window.removeEventListener('pointermove', move);
       window.removeEventListener('pointerup', up);
       window.removeEventListener('keydown', stray);
