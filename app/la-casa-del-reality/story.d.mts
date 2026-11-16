@@ -1,0 +1,17 @@
+export type CastMember = { name: string; full: string; role: string; gender: 'f' | 'm'; voice: string; country: string };
+export type StoryScene = { id: string; sector: string; cast: string[] };
+export type Caption = { es: string; en: string };
+export const CAST: Record<string, CastMember>;
+export const STORY: StoryScene[];
+export const STORY_IDS: string[];
+export const CONFESSIONS: string[];
+export function castByName(name: string): string | null;
+export const LEVEL_IDS: string[];
+export const SCENE_WORDS: Record<string, [number, number]>;
+export const MOODS: string[];
+export const SHOW: { name: string; motto: string; edition: string; day: number; start: [number, number]; last: [number, number]; end: string };
+export function nightClock(done: string[]): string;
+export function nightPhase(done: string[]): number;
+export const ROTULOS: Record<string, Caption[]>;
+export const ROTULO_IDS: string[];
+export function rotulosFor(done: string[], picks: Record<string, number> | undefined): { id: string; caption: Caption }[];

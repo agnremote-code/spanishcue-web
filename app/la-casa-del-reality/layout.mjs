@@ -121,7 +121,7 @@ export const FURNITURE = [
   F('clock', -9.86, 16, 0.1, 0.8, 0, { solid: false }),
   // The living room: the giant screen, three sofas round a coffee table, the board of nominees.
   F('screen', -9.86, 4, 0.12, 4.4, 0, { solid: false }),
-  F('sofa', -1.3, 4, 3, 0.95, 1),
+  F('sofa', -1.3, 4, 3, 0.95, 3),
   F('sofa', -4.4, 0.4, 2.8, 0.95, 0),
   F('sofa', -4.4, 7.6, 2.8, 0.95, 2),
   F('coffeetable', -4.6, 4, 1.4, 0.8),
