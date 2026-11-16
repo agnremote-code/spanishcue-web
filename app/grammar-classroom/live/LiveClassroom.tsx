@@ -16,19 +16,23 @@ const courseNumber = (sequence: number) => `Clase ${String(sequence).padStart(3,
 const levelColors: Record<string, string> = { A0: '#2e9ed9', A1: '#30bda2', A2: '#77b94a', B1: '#f4a52d', B2: '#f1754d', C1: '#9d70d4', C2: '#374f76' };
 
 /** One class for a live lesson and for self-study: same content, the mode only changes guidance. */
-export default function LiveClassroom({ lesson, scenes, course }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>>; course?: CoursePosition }) {
+/** A Homework topic: the same class, always in self-study, with the way back to the student's Homework. */
+export type HomeworkFrame = { returnTo: string; alias?: string };
+
+export default function LiveClassroom({ lesson, scenes, course, homework }: { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>>; course?: CoursePosition; homework?: HomeworkFrame }) {
   // The mode and the chosen student are this browser's preferences, outside any student's saved class.
-  const [mode, setMode] = usePreference<Mode>('mode', 'teacher');
+  const [preferred, setMode] = usePreference<Mode>('mode', 'teacher');
+  const mode: Mode = homework ? 'self' : preferred;
   const [student, setStudent] = usePreference<string>(`student:${lesson.id}`, '');
   const studentId = mode === 'teacher' && student ? student : null;
   return <LessonStoreProvider lessonId={lesson.id} studentId={studentId}>
-    <Classroom lesson={lesson} scenes={scenes} course={course} mode={mode} setMode={setMode} studentId={studentId} setStudent={setStudent} />
+    <Classroom lesson={lesson} scenes={scenes} course={course} mode={mode} setMode={setMode} studentId={studentId} setStudent={setStudent} homework={homework} />
   </LessonStoreProvider>;
 }
 
-type ClassroomProps = { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>>; course?: CoursePosition; mode: Mode; setMode: (mode: Mode) => void; studentId: string | null; setStudent: (id: string) => void };
+type ClassroomProps = { lesson: LiveLesson; scenes?: Partial<Record<VisualKey, ReactNode>>; course?: CoursePosition; mode: Mode; setMode: (mode: Mode) => void; studentId: string | null; setStudent: (id: string) => void; homework?: HomeworkFrame };
 
-function Classroom({ lesson, scenes, course, mode, setMode, studentId, setStudent }: ClassroomProps) {
+function Classroom({ lesson, scenes, course, mode, setMode, studentId, setStudent, homework }: ClassroomProps) {
   const store = useStore();
   const [at, setAt] = useState<Position>({ stage: 0, step: 0 });
   // At A0 the English help opens by default: the learner starts from zero.
@@ -162,21 +166,27 @@ function Classroom({ lesson, scenes, course, mode, setMode, studentId, setStuden
   return <LiveContext.Provider value={settings}>
     <div className="gl-shell" style={style} data-live-class={lesson.id} data-mode={mode} data-large-text={large}>
       <header className="gl-topbar">
-        <Link href="/" className="gl-brand" aria-label="SPANISHCUE, volver a la biblioteca"><SpanishCueBrand variant="compact" context="GRAMÁTICA" /></Link>
+        {homework
+          ? <Link href={homework.returnTo} className="gl-brand" aria-label="SPANISHCUE, volver a Homework"><SpanishCueBrand variant="compact" context="HOMEWORK" /></Link>
+          : <Link href="/" className="gl-brand" aria-label="SPANISHCUE, volver a la biblioteca"><SpanishCueBrand variant="compact" context="GRAMÁTICA" /></Link>}
         <div className="gl-tools">
-          <div className="gl-mode" role="radiogroup" aria-label="Cómo usas la clase">
+          {!homework && <div className="gl-mode" role="radiogroup" aria-label="Cómo usas la clase">
             {([['teacher', 'Con profesor'], ['self', 'Por mi cuenta']] as const).map(([value, label]) => <button type="button" role="radio" key={value} data-mode-option={value} aria-checked={mode === value} onClick={() => setMode(value)}>{label}</button>)}
-          </div>
+          </div>}
           {hasEnglish && <button type="button" data-tool="english" aria-pressed={english} onClick={() => setEnglish(!english)} title="Mostrar u ocultar la ayuda en inglés">EN</button>}
           <button type="button" data-tool="large" aria-pressed={large} onClick={() => setLarge(!large)} title="Texto más grande">A+</button>
         </div>
       </header>
 
       <section className="gl-hero">
-        <p className="gl-kicker"><span className="gl-level-pill">{lesson.level}</span> Gramática</p>
+        <p className="gl-kicker"><span className="gl-level-pill">{lesson.level}</span> {homework ? 'Homework · Tema' : 'Gramática'}</p>
         <h1>{lesson.title}</h1>
         <p className="gl-hero-sub">{lesson.subtitle}{lesson.now && <> <span className="gl-now">En esta clase, hoy es {lesson.now}.</span></>}</p>
-        {course && <nav className="gl-course" aria-label="Curso de gramática" data-course-position={course.code}>
+        {homework && <nav className="gl-course" aria-label="Homework" data-homework-topic={lesson.id}>
+          {homework.alias && <b>✓ {homework.alias} <small>· Acceso de tu profe</small></b>}
+          <Link href={homework.returnTo}>← Volver a Homework</Link>
+        </nav>}
+        {course && !homework && <nav className="gl-course" aria-label="Curso de gramática" data-course-position={course.code}>
           <b>{courseNumber(course.sequence)} <small>de {course.total} · {course.code}</small></b>
           {course.prev && <Link href={course.prev.href} data-course-prev={course.prev.code} title={course.prev.title}>← {courseNumber(course.prev.sequence)}</Link>}
           {course.next && <Link href={course.next.href} data-course-next={course.next.code} title={course.next.title}>{courseNumber(course.next.sequence)} →</Link>}
@@ -219,7 +229,7 @@ function Classroom({ lesson, scenes, course, mode, setMode, studentId, setStuden
 
           <footer className="gl-stage-foot">
             <button type="button" className="gl-ghost" data-prev disabled={isFirst} onClick={back} aria-label="Anterior">←<span className="gl-long"> Anterior</span></button>
-            {isLast ? (course?.next ? <Link className="gl-primary" href={course.next.href} data-course-continue>Siguiente: {courseNumber(course.next.sequence)} →</Link> : <Link className="gl-primary" href="/">Volver a la biblioteca</Link>) : <button type="button" className="gl-primary" data-next onClick={forward}><span className="gl-long">{nextLabel}</span><span className="gl-short">Siguiente</span> →</button>}
+            {isLast ? (homework ? <Link className="gl-primary" href={homework.returnTo} data-homework-return>Volver a Homework</Link> : course?.next ? <Link className="gl-primary" href={course.next.href} data-course-continue>Siguiente: {courseNumber(course.next.sequence)} →</Link> : <Link className="gl-primary" href="/">Volver a la biblioteca</Link>) : <button type="button" className="gl-primary" data-next onClick={forward}><span className="gl-long">{nextLabel}</span><span className="gl-short">Siguiente</span> →</button>}
           </footer>
         </main>
 

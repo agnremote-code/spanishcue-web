@@ -1,0 +1,394 @@
+{
+ "version": 1,
+ "authorization": "Owner approval of 2026-11-16 in the project thread «Crear clase de números, dinero y moneda argentina»: asked there for a written approval of the English text of class 249 (g549.ts and the new link in g370.ts) and of this manifest, the owner answered «OK» (cmsg_01Gr5R4j3t2Yet65UcmhcVhAUTkBhp7tx8vj6D1Y2cGaGH). The class itself was requested in cmsg_01Gr5R4j3t2Yet65UcmhcVhA1iZhaPpEPsTWeZDFf3Md1u and cmsg_01Gr5R4j3t2Yet65UcmhcVhAPp4x35ET4JdKfQtkruvU9z. This manifest approves only the exact English support literals of the extension class G249 (app/grammar-classroom/live/lessons/g549.ts) and of the one link its anchor class G070 gains towards it; it cannot exempt any edit or deletion of existing English copy.",
+ "additions": [
+  {
+   "path": "app/grammar-classroom/live/lessons/g370.ts",
+   "text": "Before moving on, an extension class on big numbers, prices and currencies: how to ask how much something costs and pay in pesos, euros, soles or dollars."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Lucía is Mexican and this year she travels through five cities: Madrid, Mexico City, Lima, Santiago and Buenos Aires. The currency changes in each place: she pays for a coffee with two euros in Madrid, fifty pesos in Mexico, eight soles in Lima and three thousand five hundred pesos in Buenos Aires. Today you learn to say big numbers, ask prices, pay and ask for a discount in any Spanish-speaking country."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The prices in this class are examples for practice. Real prices change over time, especially in countries with high inflation."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "It’s three thousand five hundred pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much is the coffee?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "I’m paying in cash."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Which currency does Lucía pay with in Lima?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“Pago en efectivo” means that I pay…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How do I say 100, 120, 200, 500?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The book costs one hundred pesos and the magazine, one hundred and twenty."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "I exchanged five hundred dollars and two hundred pounds."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The hotel costs seven hundred and fifty soles a week."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How do I say 1,000, 2,500, 1,000,000?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The coffee costs three thousand five hundred pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The rent is one million Chilean pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "I have twenty-one euros and twenty-one pounds."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The taxi costs 1,000 pesos: “It’s a thousand pesos.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The jacket costs 200 pounds."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The ticket costs 120 soles."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How do I ask and say a price?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“How much is this T-shirt?” “It’s fifteen euros.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“How much are the tickets?” “They’re two hundred pesos each.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“How much is everything?” “It’s forty soles.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much are these shoes?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "At the till, with all your shopping: “How much is it?”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "€3.50 is said…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How do I say how I pay?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Can I pay by card?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "We only take cash."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Here is your change: two hundred pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "I have no notes. Can I pay by card?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "You pay 800 pesos with a 1,000 note. You get 200 pesos back: it is…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "At a market you want to pay less. You ask:"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "In Peru you pay with…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "In Chile, “diez lucas” is…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "In which country do you pay with US dollars?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "In Argentina the currency is the Argentine peso. Prices are big numbers: a coffee costs thousands of pesos, so almost everything is paid with notes and coins are hardly used. The most common notes are the one thousand, two thousand, ten thousand and twenty thousand peso notes. Many people also save in dollars and ask every day: “What is the dollar at?”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "In Argentina people use vos instead of tú, with its own forms: tenés (tienes), querés (quieres), pagás (pagas). You can speak with tú or usted and everyone understands you; what matters is recognising these forms when you hear them."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Hi. How much is the water?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The water is two thousand and the alfajor, one thousand five hundred."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Both things, please. How much is it?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "It’s three and a half “lucas”. Are you paying cash?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Yes. I only have a ten thousand note."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "No problem. Here is your change: six thousand five hundred."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“Son quince lucas” means…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "In Buenos Aires you hear: “¿Cuánto sale?”. It is the same as…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“No tengo un mango” means…"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The rent is 1,000,000 Chilean pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "I have 500 pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Good afternoon. How much is this backpack?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "That one is ninety thousand pesos. It’s leather, handmade."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "It’s a bit expensive. And that small one?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The small one costs sixty-five thousand."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "I prefer the big one. Will you give me a discount if I pay cash?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "For cash you can have it for eighty “lucas”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Eighty “lucas”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Eighty thousand pesos. One “luca” is a thousand pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Oh, perfect. Here you are: four twenty-thousand notes."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Exact amount. Do you want a bag?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "No, thanks. Do you take dollars too?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Yes, but I give you the change in pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much is the big backpack at first?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much does Lucía pay in the end?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Why does the price go down?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Which notes does Lucía pay with?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“It’s four euros fifty.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“It’s a hundred pesos.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much are the tickets?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“It’s twelve thousand pesos.”"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Can I pay by card?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "She exchanged three hundred pounds."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much are these shoes?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "It’s three thousand five hundred pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Will you give me a discount?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "I prefer to pay in cash."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "It costs a million pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "What is the main idea?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much money did Lucía exchange?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much is a coffee?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "What is “una luca”?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much did Lucía pay for the backpack?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How did she pay for the taxi?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "mil without “un”; millón with “de”; 200–900 agree"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "costar agrees with the thing"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "each way of paying has its preposition"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "each country, its currency and its words"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Three steps in any country: ask (¿Cuánto cuesta? ¿Cuánto es?), understand the number (cien, quinientos, mil, un millón de) and pay (in cash or by card, and wait for your change). In Argentina, also count in thousands: una luca = a thousand pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The museum costs 100 pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "How much are these sunglasses?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The car costs 2,000,000 pesos."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "At the market you can only pay in cash."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "In Buenos Aires: “Son cinco lucas” = “It’s … pesos”."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "You paid 700 pounds."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "Two ideas to go further. First: percentages take an article and “por ciento”: “un diez por ciento de descuento”, “el veinte por ciento de propina”; 100% is cien por cien or cien por ciento. Second: some money expressions are very common: costar un ojo de la cara (to be very expensive), estar sin un peso (to have no money; in Spain “estar sin blanca”, in Argentina “no tener un mango”) and salir regalado (to be very cheap)."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "“El hotel cuesta un ojo de la cara”. What does it mean?"
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "The shop lowers the price by 10%."
+  },
+  {
+   "path": "app/grammar-classroom/live/lessons/g549.ts",
+   "text": "You can now say big numbers, ask prices and pay in any country: “¿Cuánto cuesta?”, “Son tres mil quinientos pesos”, “Pago en efectivo”. Class 071 returns to the main route of the course: “Alguno, ninguno, mucho, poco, demasiado”."
+  }
+ ]
+}
