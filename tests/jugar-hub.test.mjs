@@ -52,6 +52,7 @@ test("scene totals and save keys match each world's own engine", async () => {
     "el-tren-de-las-2340": "../app/el-tren-de-las-2340/engine.mjs",
     "vuelo-cancelado": "../app/vuelo-cancelado/engine.mjs",
     "la-boda": "../app/la-boda/engine.mjs",
+    "la-casa-del-reality": "../app/la-casa-del-reality/engine.mjs",
     "el-consorcio": "../app/el-consorcio/engine.mjs",
     "marketing-de-casinos": "../app/marketing-de-casinos/engine.mjs",
   };

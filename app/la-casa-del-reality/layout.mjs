@@ -193,7 +193,7 @@ const PLACES = {
     look: L('#a8724e', 'adult', 'm', 'cap', '#120d0b', 'tshirt', '#141418', 'jeans', '#1f2840', ['headphones'], { seed: 61 }) },
   romance: { spot: { x: 14.6, z: -11.2 }, npc: { x: 13.4, z: -13.4, heading: 0.6 }, pose: 'arms', mood: 'worried',
     look: L('#f0d6c0', 'young', 'f', 'bob', '#e0c070', 'dress', '#c81e2a', null, null, ['earrings'], { seed: 71 }),
-    extras: [{ x: 16, z: -14.95, heading: 0, pose: 'sit', seat: true, mood: 'smitten', look: L('#e2b896', 'young', 'm', 'short', '#3a2416', 'shirt', '#f4f0ea', 'shorts', '#2a3a5a', ['beard'], { seed: 72 }) }] },
+    extras: [{ x: 16, z: -15.3, heading: 0, pose: 'sit', seat: true, mood: 'smitten', look: L('#e2b896', 'young', 'm', 'short', '#3a2416', 'shirt', '#f4f0ea', 'shorts', '#2a3a5a', ['beard'], { seed: 72 }) }] },
   edad: { spot: { x: 8.6, z: -14.4 }, npc: { x: 7.1, z: -16.4, heading: 0.7 }, pose: 'arms', mood: 'scared',
     look: L('#e8c0a0', 'adult', 'm', 'short', '#3a2416', 'shirt', '#3fb0a0', 'shorts', '#f0c020', ['glasses'], { seed: 81 }) },
   prueba: { spot: { x: -16, z: -13.2 }, npc: { x: -16, z: -15.45, heading: Math.PI }, pose: 'point', mood: 'pain',

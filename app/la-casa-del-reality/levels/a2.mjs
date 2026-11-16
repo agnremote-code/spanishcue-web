@@ -270,7 +270,7 @@ export default {
     talk: [
       '¿Qué decisión difícil has tomado en menos de un minuto?',
       '¿Qué harías si tus dos mejores amigos te pidieran apoyo en una pelea?',
-      '¿Qué haces cuando tu jefe te pide algo que te parece injusto?',
+      '¿Qué harías si tu jefe te obligara a mentir a un cliente?',
       '¿Cómo votaron en tu clase o tu empresa la última vez?',
       '¿Qué te parece peor: competir con amigos o con desconocidos?',
     ],

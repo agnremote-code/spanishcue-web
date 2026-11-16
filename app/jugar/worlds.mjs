@@ -31,6 +31,7 @@ export const HUB_WORLDS = [
   { id: 259, slug: 'el-mundo-en-blanco', kind: 'historia', save: { key: 'spanishcue:el-mundo-en-blanco:v1', shape: 'levels' }, total: 12, tint: '#8c97a8' },
   { id: 243, slug: 'mas-alla', kind: 'historia', save: { key: 'spanishcue:mas-alla:v1', shape: 'levels' }, total: 12, tint: '#e0b84f' },
   { id: 237, slug: 'marketing-de-casinos', kind: 'historia', save: { key: 'spanishcue:gran-meridiano:v1', shape: 'levels' }, total: 30, tint: '#c23b4a' },
+  { id: 260, slug: 'la-casa-del-reality', kind: 'historia', save: { key: 'spanishcue:la-casa-del-reality:v1', shape: 'levels' }, total: 18, tint: '#c4232f' },
   { id: 258, slug: 'hr-crisis', kind: 'historia', save: { key: 'spanishcue:hr-crisis:v1', shape: 'list' }, total: null, tint: '#2f9e77' },
   { id: 241, slug: 'la-feria-de-villaluz', kind: 'historia', save: { key: 'spanishcue:la-feria-de-villaluz:v1', shape: 'levels' }, total: 8, tint: '#e2703a' },
   { id: 238, slug: 'el-reino-de-la-rosa-dormida', kind: 'historia', save: null, total: null, tint: '#a25bb5' },

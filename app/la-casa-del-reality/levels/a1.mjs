@@ -156,7 +156,7 @@ export default {
     talk: [
       '¿Cuántos minutos pasas en el baño por la mañana?',
       '¿Qué animal de documental te parece muy bonito?',
-      '¿Qué lugar de tu casa es solo tuyo?',
+      '¿En qué rincón de tu casa nadie te molesta?',
       '¿Qué trabajo dejarías por algo que te hace feliz?',
       '¿Cómo te sientes con las cámaras en las tiendas?',
     ],
@@ -269,7 +269,7 @@ export default {
       { say: 'Me nomino a mí. Así no elijo a nadie.', reply: '¿A ti? ¡En siete temporadas nunca pasó!', end: 'Te nominas. En la sala de control, el director tira su café.', mood: 'laugh' },
     ],
     talk: [
-      '¿Qué haces cuando un jefe te pide algo injusto?',
+      '¿Qué respondes si tu jefe quiere algo que no es justo?',
       '¿A quién eliges siempre para tu equipo y por qué?',
       '¿Qué te parece votar por otras personas?',
       '¿Qué vecino tranquilo te ayuda mucho?',
@@ -341,7 +341,7 @@ export default {
       '¿Qué haces cuando un familiar está en el hospital?',
       '¿Qué maestro de tu escuela recuerdas y por qué?',
       '¿Qué dejas siempre en la maleta para un viaje urgente?',
-      '¿Cómo ayudan tus amigos cuando tienes un problema de dinero?',
+      '¿Qué amigo te ayuda primero en un mal momento?',
       '¿Qué plaza o parque de tu ciudad visita tu familia los domingos?',
     ],
     words: [w('abandonar', 'to quit'), w('la multa', 'the fine'), w('la maleta', 'the suitcase'), w('el maestro', 'the teacher'), w('estable', 'stable')],

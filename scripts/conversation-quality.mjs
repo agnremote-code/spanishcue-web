@@ -32,7 +32,7 @@ export const CONVERSATION_DIRS = [
   'buenos-aires-en-la-calle', 'mexico', 'estados-unidos-a2-b1', 'monasterio-de-las-ideas', 'irlanda-en-relieve',
   'reino-unido-en-relieve', 'australia-en-movimiento', 'suiza-en-relieve', 'mundo-fantastico', 'estados-unidos-basico',
   'israel-en-capas', 'indonesia-fantastica', 'future-city', 'preguntas-prohibidas-a2', 'preguntas-prohibidas',
-  'argento-roleplays', 'argento', 'life-roulette', 'basic-conversation',
+  'argento-roleplays', 'argento', 'life-roulette', 'basic-conversation', 'la-casa-del-reality',
 ];
 
 const QUESTION = /¿[^?¿"`\n]{4,400}\?/g;
