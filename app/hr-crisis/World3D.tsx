@@ -100,6 +100,8 @@ export default function World3D(props: WorldProps) {
       const t = window.setTimeout(() => live.current.onFail(), 0);
       return () => window.clearTimeout(t);
     }
+    // Everyone here is made by now: the next world decides for itself.
+    enableRealPeople(false);
     scene.add(hero.root);
     const pmrem = new THREE.PMREMGenerator(renderer);
     const envTarget = pmrem.fromScene(new RoomEnvironment(), 0.04);
