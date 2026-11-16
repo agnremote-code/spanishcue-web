@@ -201,6 +201,7 @@ export default async function Page() {
         <p className="aud-hero-reassurance">{t.reassurance}</p>
       </section>
 
+      <p className="aud-crosslink"><a href="/jugar">{locale === "es" ? "Abrir mi mapa de mundos 3D" : "Open my map of 3D worlds"} →</a></p>
       <p className="aud-crosslink"><a href={TEACHER_LANDING_PATH}>{t.teacher} →</a></p>
       <SpanishCueFooter />
     </main>

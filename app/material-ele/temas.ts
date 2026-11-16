@@ -61,7 +61,9 @@ export const temaGroups: TemaGroup[] = [
 ];
 export const temaGroupById = new Map(temaGroups.map((group) => [group.id, group]));
 
-type Source = { group: TemaGroupId; parent: string; slug: string; name: string; match: RegExp; intro: string; guide?: string; ids?: number[] };
+type Source = { group: TemaGroupId; parent: string; slug: string; name: string; match: RegExp; intro: string; guide?: string; ids?: number[];
+  /** Classes the pattern catches by a passing mention and that do not teach the topic. */
+  exclude?: number[] };
 
 /** A topic name inside a sentence: countries keep their capital («México»), acronyms stay («ELE», «3D»), common nouns start lower case («los adjetivos» → «adjetivos»). */
 const countrySlugs = new Set(["espana", "argentina", "mexico", "estados-unidos-hispano", "suiza", "suecia", "australia", "reino-unido-e-irlanda", "israel", "indonesia"]);
@@ -100,7 +102,7 @@ const sources: Source[] = [
   { group: "gramatica", parent: "Verbos", slug: "haber-estar-y-tener", name: "Haber, estar y tener", match: /\bhay\b|\btener\b|\btengo\b|tener edad/, intro: "«Hay» para lo que existe, «está» para dónde está y «tener» para edad, sensaciones y posesión: tres verbos que el alumno confunde con «to be» hasta que los usa en una descripción real." },
   { group: "gramatica", parent: "Verbos", slug: "gustar", name: "Gustar y verbos como gustar", match: /\bgustar\b|\bencantar\b|\bgustos\b|\bdoler\b|\binteresar\b/, intro: "«Me gusta», «me gustan», «a mí también»: gustar, encantar, interesar y doler con su concordancia al revés y los pronombres que los acompañan.", guide: "gustar" },
   { group: "gramatica", parent: "Verbos", slug: "verbos-reflexivos", name: "Verbos reflexivos", match: /reflexiv|\brutinas\b|se medio|se dativo/, intro: "Levantarse, ducharse, enojarse, quedarse: los verbos reflexivos para rutinas, cambios de estado y los valores del «se» que no son reflexivos.", guide: "verbos-reflexivos" },
-  { group: "gramatica", parent: "Verbos", slug: "perifrasis-verbales", name: "Perífrasis verbales", match: /perifrasis|estar gerundio|volver a|dejar de|empezar a|ponerse a|acabar de|seguir \+/, intro: "Estar + gerundio, ir a, volver a, dejar de, acabar de, seguir + gerundio: las perífrasis que organizan el tiempo y el aspecto de lo que contamos.", guide: "perifrasis-verbales" },
+  { group: "gramatica", parent: "Verbos", slug: "perifrasis-verbales", name: "Perífrasis verbales", match: /perifrasis|estar gerundio|volver a|dejar de|empezar a|ponerse a|acabar de|seguir \+/, intro: "Estar + gerundio, ir a, volver a, dejar de, acabar de, seguir + gerundio: las perífrasis que organizan el tiempo y el aspecto de lo que contamos.", guide: "perifrasis-verbales", exclude: [42, 110, 546] },
   { group: "gramatica", parent: "Verbos", slug: "verbos-de-cambio", name: "Verbos de cambio", match: /verbos de cambio|hacerse|volverse|ponerse|quedarse|convertirse/, intro: "Ponerse nervioso, quedarse sin trabajo, hacerse mayor, volverse loco: los verbos de cambio para contar cómo cambian las personas y las situaciones.", guide: "verbos-de-cambio" },
   { group: "gramatica", parent: "Verbos", slug: "gerundio-y-participio", name: "Gerundio y participio", match: /gerundio|participio/, intro: "El gerundio para lo que está pasando y cómo se hace algo; el participio como adjetivo y como resultado: «la puerta está cerrada», «los documentos firmados»." },
   { group: "gramatica", parent: "Verbos", slug: "obligacion-y-necesidad", name: "Obligación y necesidad", match: /obligacion|hay que|tener que|\bdeber\b|necesidad/, intro: "Hay que, tener que, deber, necesitar: cómo se expresa la obligación en español, de la norma general a la obligación personal, y la inferencia con «debe de»." },
@@ -219,7 +221,7 @@ const phoneticsTopics = new Set(["acentuacion", "pronunciacion-y-entonacion"]);
 function buildPage(source: Source): TemaPage | null {
   const group = temaGroupById.get(source.group)!;
   const inSentence = nameInSentence(source);
-  const matched = lessons.filter((lesson) => (source.ids?.includes(lesson.id) ?? false) || source.match.test(haystackByLesson.get(lesson.id) ?? ""));
+  const matched = lessons.filter((lesson) => !(source.exclude?.includes(lesson.id) ?? false) && ((source.ids?.includes(lesson.id) ?? false) || source.match.test(haystackByLesson.get(lesson.id) ?? "")));
   // Grammar points are taught by grammar classes; conversation worlds only join a grammar topic when named explicitly.
   // Phonetics classes belong only to the spelling and pronunciation topics, never to a grammar point they happen to mention.
   const phonetics = phoneticsTopics.has(source.slug);
@@ -344,6 +346,8 @@ export const retiredTemaLevelPaths: ReadonlyMap<string, string> = new Map([
   ["/material-ele/gramatica/comparativos-y-superlativos/c1", "/material-ele/gramatica/comparativos-y-superlativos"],
   ["/material-ele/gramatica/comparativos-y-superlativos/c2", "/material-ele/gramatica/comparativos-y-superlativos"],
   ["/material-ele/gramatica/oraciones-finales/a1", "/material-ele/gramatica/oraciones-finales"],
+  ["/material-ele/gramatica/perifrasis-verbales/a1", "/material-ele/gramatica/perifrasis-verbales"],
+  ["/material-ele/gramatica/perifrasis-verbales/c1", "/material-ele/gramatica/perifrasis-verbales"],
 ]);
 export const temaLevelsOf = (tema: TemaPage) => temaLevelPages.filter((page) => page.slug === tema.slug && page.group === tema.group);
 /** Level pages that share a slug with a Material ELE topic page

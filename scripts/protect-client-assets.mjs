@@ -94,6 +94,9 @@ const publicRoots = new Set([
   "app/audience/AudienceSwitch.tsx",
   "app/audience/AudienceTopbar.tsx",
   "app/audience/TrackedLink.tsx",
+  // Student hub (/jugar): catalog titles and covers arrive as page props; the
+  // chunk only reads the saves each world leaves in the browser.
+  "app/jugar/StudentHub.tsx",
   // Anonymous institutional demo requests carry no educational lesson bodies.
   "app/academias/DemoForm.tsx",
   // Public Partners intake/calculator/product recordings contain no paid lesson bodies.

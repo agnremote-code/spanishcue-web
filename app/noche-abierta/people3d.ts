@@ -75,7 +75,12 @@ export type Person = {
   pose: Pose;
   mood: Mood;
   rig: Rig;
+  // Set by app/mundo-real/persona when a realistic body follows this figure: copies the pose and the face onto it.
+  real?: () => void;
 };
+
+// Lets app/mundo-real/persona give every new person a realistic body without each world asking for it.
+export const personHooks: { created?: (person: Person) => void } = {};
 
 // ------------------------------------------------------------------ caches
 
@@ -611,7 +616,7 @@ function normalise(look: Look): Full {
   };
 }
 
-type Rig = {
+export type Rig = {
   body: THREE.Group;
   scale: number;
   full: Full;
@@ -947,7 +952,7 @@ export function createPerson(look: Look, shadows = true): Person {
     glanceIn: r() * 4, glancing: 0, lookNow: 0, torsoLook: 0,
     old, variant: Math.floor(r() * 4), quirk: r(), nodClock: r() * 6, yawnIn: 6 + r() * 10,
   };
-  return {
+  const person: Person = {
     root,
     parts: { hips, torso, head, armL: left.arm, armR: right.arm, foreL: left.fore, foreR: right.fore, legL: legL.leg, legR: legR.leg, shinL: legL.shin, shinR: legR.shin },
     phase: r() * 6,
@@ -958,6 +963,8 @@ export function createPerson(look: Look, shadows = true): Person {
     mood: 'neutral',
     rig,
   };
+  personHooks.created?.(person);
+  return person;
 }
 
 // ------------------------------------------------------------------ looks
@@ -1643,6 +1650,7 @@ export function animatePerson(person: Person, dt: number, speed: number, talk = 
   rig.teeth.visible = n.teeth > 0.35 && mouthOpen > 0.1;
   rig.blush.visible = n.blush > 0.03;
   rig.blush.scale.setScalar(Math.max(0.001, n.blush));
+  person.real?.();
 }
 
 // A soft dark disc under a person: much cheaper than a real shadow and it
