@@ -10,6 +10,6 @@ export default async function Page({searchParams}:{searchParams:Promise<Record<s
  const h=await headers();const params=await searchParams;
  if(fullAccessFromHeaders(h))redirect('/noche-abierta');
  // Only allowlisted campaign landings can be the demo's way back.
- const home=params.from==='google-teachers'?'/lp/google-teachers':params.from==='aprender-espanol'?'/aprender-espanol':undefined;
+ const home=params.from==='google-teachers'?'/lp/google-teachers':params.from==='aprender-espanol'?'/aprender-espanol':params.from==='jugar'?'/jugar':undefined;
  return <NocheDemo signedIn={signedInFromHeaders(h)} home={home} />;
 }
