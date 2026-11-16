@@ -575,6 +575,8 @@ function updateVisibleMatrices(object, force) {
     }
     object.matrixWorldNeedsUpdate = false;
     force = true;
+    // What SkinnedMesh.updateMatrixWorld does: without it a body with a skeleton is drawn away from its own bones.
+    if (object.isSkinnedMesh && object.bindMode === 'attached') object.bindMatrixInverse.copy(object.matrixWorld).invert();
   }
   const children = object.children;
   for (let i = 0; i < children.length; i++) updateVisibleMatrices(children[i], force);
