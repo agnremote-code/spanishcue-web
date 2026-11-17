@@ -7,6 +7,7 @@
 // Static pieces are merged by material (batchStatic) and only the floor you
 // are on is drawn.
 import * as THREE from 'three';
+import { realScenery } from '../mundo-real/escenario';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import { CEILING, CHATTER, CLOSED_DOORS, CROWD, DOORS, ELEVATOR, FLOORS, FLOOR_H, FURNITURE, OPEN_FLATS, SCENES, SECTORS, STAIRS, WALKERS, WALL, WALLS, footprint, walkerAt, type Furniture, type Walker } from './layout.mjs';
@@ -546,7 +547,7 @@ function buildFacade(glows: THREE.MeshStandardMaterial[], ownWindows: THREE.Mesh
 }
 
 // ---------------------------------------------------------------- the whole building
-export function buildBuilding(scene: THREE.Scene, opts: { low: boolean; shadows: boolean }): Building {
+export function buildBuilding(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; real?: boolean }): Building {
   const floors: Record<number, THREE.Group> = {};
   const doors: DoorRig[] = [];
   const lift: Building['lift'] = {};
@@ -564,6 +565,7 @@ export function buildBuilding(scene: THREE.Scene, opts: { low: boolean; shadows:
       ...anim.bobs.slice(before.bobs).map(b => b.mesh), ...anim.tails.slice(before.tails).map(t => t.mesh), ...anim.flames.slice(before.flames),
       ...anim.drips.filter(d => d.mesh.parent === group).map(d => d.mesh),
     ];
+    if (opts.real) realScenery(group, { floor: 'floor_tiles_06', wall: 'plastered_wall_04' }, moving);
     batchStatic(group, moving);
     floors[f.id] = group;
     scene.add(group);

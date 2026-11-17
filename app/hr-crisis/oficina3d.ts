@@ -138,8 +138,20 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   const backLogo = new THREE.Mesh(new THREE.PlaneGeometry(3.6, 0.8), new THREE.MeshBasicMaterial({ map: label('Caos y Asociados · «Aquí todo es urgente»', '#f3eee4', '#1d3f9a', 1024, 220, 'italic bold 58px Georgia') }));
   backLogo.position.set(0, 2.1, 6.14); statics.add(backLogo);
   const windowMat = std('#9ed0f0', 0.1, 0.2, { emissive: '#bfe6ff', emissiveIntensity: 0.55 });
-  for (const z of [-14, -8, -2, 9, 14]) for (const x of [-23.86, 23.86]) { const w = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 1.4), windowMat); w.position.set(x, 1.7, z); w.rotation.y = x < 0 ? Math.PI / 2 : -Math.PI / 2; statics.add(w); }
-  for (const x of [-20, -12, -4, 4, 12, 20]) { const w = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 1.4), windowMat); w.position.set(x, 1.7, -17.86); statics.add(w); }
+  // Realistic mode: every window looks out on the city (three photographs take turns), inside a dark frame with a sill.
+  const views = real ? [1, 2, 3].map(n => { const t = new THREE.TextureLoader().load(`/mundo-real/vista_ciudad_${n}.webp`); t.colorSpace = THREE.SRGBColorSpace; return new THREE.MeshBasicMaterial({ map: t, toneMapped: false }); }) : [];
+  const frame = std('#2a2d33', 0.45, 0.5), sill = std('#e9e4da', 0.6);
+  let windows = 0;
+  const windowAt = (x: number, z: number, rotY: number) => {
+    const g = new THREE.Group(); g.position.set(x, 1.7, z); g.rotation.y = rotY; statics.add(g);
+    const pane = new THREE.Mesh(new THREE.PlaneGeometry(2.4, 1.4), real ? views[windows++ % views.length] : windowMat); g.add(pane);
+    if (!real) return;
+    box(g, 2.52, 0.06, 0.08, frame, 0, 0.73, 0.03); box(g, 2.52, 0.06, 0.08, frame, 0, -0.73, 0.03);
+    for (const dx of [-1.23, 0, 1.23]) box(g, 0.06, 1.4, 0.08, frame, dx, 0, 0.03);
+    box(g, 2.7, 0.04, 0.22, sill, 0, -0.78, 0.1);
+  };
+  for (const z of [-14, -8, -2, 9, 14]) for (const x of [-23.86, 23.86]) windowAt(x, z, x < 0 ? Math.PI / 2 : -Math.PI / 2);
+  for (const x of [-20, -12, -4, 4, 12, 20]) windowAt(x, -17.86, 0);
   // Door signs above every doorway, readable from the corridor.
   for (const d of DOORS) {
     const s = new THREE.Mesh(new THREE.PlaneGeometry(Math.max(1.6, d.label.length * 0.13), 0.32), new THREE.MeshBasicMaterial({ map: label(d.label, '#1d3f9a', '#ffffff', 640, 112, 'bold 60px Arial') }));
@@ -180,13 +192,21 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
         break;
       }
       case 'mesita': {
-        box(statics, f.w, 0.05, f.d, f.mic ? dark : lightWood, f.x, f.top - 0.025, f.z);
-        for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) box(statics, 0.04, f.top - 0.05, 0.04, metal, f.x + sx * (f.w / 2 - 0.05), (f.top - 0.05) / 2, f.z + sz * (f.d / 2 - 0.05));
+        const low = f.mic ? statics : simple;
+        if (!f.mic) muebles.push({ model: 'CoffeeTable_01', x: f.x, z: f.z, rotY: Math.PI / 2, fit: [f.d, f.top, f.w] });
+        box(low, f.w, 0.05, f.d, f.mic ? dark : lightWood, f.x, f.top - 0.025, f.z);
+        for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) box(low, 0.04, f.top - 0.05, 0.04, metal, f.x + sx * (f.w / 2 - 0.05), (f.top - 0.05) / 2, f.z + sz * (f.d / 2 - 0.05));
         if (f.mic) { cyl(statics, 0.012, 0.012, 0.3, metal, f.x, f.top + 0.15, f.z); const head = new THREE.Mesh(new THREE.SphereGeometry(0.045, 10, 8), dark); head.position.set(f.x, f.top + 0.33, f.z); statics.add(head); }
         else for (let k = 0; k < 3; k++) box(statics, 0.24, 0.02, 0.3, std(['#d84a6a', '#4a8ad8', '#f0c020'][k], 0.7), f.x - 0.1 + k * 0.05, f.top + 0.01 + k * 0.02, f.z - 0.1 + k * 0.08);
         break;
       }
-      case 'planta': plant(statics, f.x, f.z, i); break;
+      case 'planta': {
+        plant(simple, f.x, f.z, i);
+        // Three scanned plants take turns: a tall pachira, a leafy pot and a calathea.
+        const [model, tall] = ([['pachira_aquatica_01', 1.75], ['potted_plant_02', 0.95], ['calathea_orbifolia_01', 0.8]] as [string, number][])[i % 3];
+        muebles.push({ model, x: f.x, z: f.z, tall, rotY: i * 1.9 });
+        break;
+      }
       case 'cafetera': {
         box(statics, f.w, f.top, f.d, std('#3a3a40', 0.4, 0.3), f.x, f.top / 2, f.z);
         const s = new THREE.Mesh(new THREE.PlaneGeometry(0.4, 0.2), new THREE.MeshBasicMaterial({ map: label('FUERA DE SERVICIO', '#c83a3a', '#fff', 512, 160, 'bold 56px Arial') }));
@@ -198,6 +218,8 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
         const top = f.type === 'escritorio-director' ? std('#5a3a24', 0.4) : f.type === 'isla' ? white : wood;
         const desk = f.type === 'escritorio' ? simple : statics;
         if (f.type === 'escritorio') muebles.push({ model: 'escritorio', x: f.x, z: f.z, rotY: Math.PI, fit: [f.w, f.top, f.d] });
+        if (f.type === 'escritorio' || f.type === 'escritorio-director') muebles.push({ model: 'desk_lamp_arm_01', x: f.x + f.w / 2 - 0.28, y: f.top, z: f.z - f.d / 2 + 0.3, tall: 0.5, rotY: 0.6 });
+        if (f.type === 'escritorio-director') muebles.push({ model: 'standing_picture_frame_01', x: f.x - f.w / 2 + 0.35, y: f.top, z: f.z - 0.2, tall: 0.24, rotY: Math.PI / 2 + 0.3 });
         box(desk, f.w, 0.05, f.d, top, f.x, f.top - 0.025, f.z);
         if (f.type === 'escritorio-director') box(statics, f.w - 0.1, f.top - 0.05, 0.06, std('#4a2e1c', 0.5), f.x, (f.top - 0.05) / 2, f.z + f.d / 2 - 0.05);
         for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) box(desk, 0.05, f.top - 0.05, 0.05, metal, f.x + sx * (f.w / 2 - 0.06), (f.top - 0.05) / 2, f.z + sz * (f.d / 2 - 0.06));
@@ -226,7 +248,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
       }
       case 'caja-fuerte': box(statics, f.w, f.top, f.d, std('#3a4048', 0.3, 0.7), f.x, f.top / 2, f.z); cyl(statics, 0.08, 0.08, 0.04, std('#c8a050', 0.3, 0.8), f.x, 0.6, f.z - f.d / 2 - 0.02).rotation.x = Math.PI / 2; break;
       case 'impresora': box(statics, f.w, f.top, f.d, std('#d8d8d4', 0.5), f.x, f.top / 2, f.z); box(statics, f.w * 0.7, 0.05, 0.3, dark, f.x, f.top + 0.02, f.z); printers.push(new THREE.Vector3(f.x, f.top + 0.05, f.z)); break;
-      case 'cajas': for (let k = 0; k < 3; k++) box(statics, 0.55, 0.4, 0.45, std('#c8a070', 0.9), f.x - 0.3 + (k % 2) * 0.6, 0.2 + (k === 2 ? 0.4 : 0), f.z); break;
+      case 'cajas': for (let k = 0; k < 3; k++) { box(simple, 0.55, 0.4, 0.45, std('#c8a070', 0.9), f.x - 0.3 + (k % 2) * 0.6, 0.2 + (k === 2 ? 0.4 : 0), f.z); muebles.push({ model: 'cardboard_box_01', x: f.x - 0.3 + (k % 2) * 0.6, y: k === 2 ? 0.4 : 0, z: f.z, rotY: k * 0.4, fit: [0.5, 0.4, 0.55] }); } break;
       case 'fuente': cyl(statics, 0.18, 0.2, 1, white, f.x, 0.5, f.z); cyl(statics, 0.14, 0.14, 0.4, std('#8ac8f0', 0.1, 0, { transparent: true, opacity: 0.7 }), f.x, 1.2, f.z); break;
       case 'encimera': {
         box(statics, f.w, f.top, f.d, std('#e8e2d6', 0.6), f.x, f.top / 2, f.z);
@@ -352,6 +374,11 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   const CHATTER = ['¿Alguien sabe dónde está el director?', '¡Otra vez la impresora!', '¿Me pagan este mes?', 'Tengo tres reuniones a la vez', '¿Quién se comió mi yogur?', 'El wifi no funciona', '¡Me han cambiado la mesa!'];
 
   if (real) {
+    // Rugs under the places where people sit and talk.
+    for (const [x, z, w, d, color] of [[-5.8, 15.2, 3.4, 4.2, '#7a2f3a'], [5.8, 15.2, 3.4, 4.2, '#7a2f3a'], [21.9, -4.5, 3.4, 4.6, '#2f4a6a'], [20, -12.4, 5, 4, '#6a2a2a'], [-20, 12.2, 3.6, 3.4, '#3a5a6a'], [-12, 12.2, 3.6, 3.4, '#5a6a3a']] as [number, number, number, number, string][]) {
+      const rug = new THREE.Mesh(new THREE.PlaneGeometry(w, d), surface('dirty_carpet', color)); rug.rotation.x = -Math.PI / 2; rug.position.set(x, 0.012, z); rug.receiveShadow = true; world.add(rug);
+      const edge = new THREE.Mesh(new THREE.PlaneGeometry(w + 0.16, d + 0.16), surface('dirty_carpet', '#e6dcc8')); edge.rotation.x = -Math.PI / 2; edge.position.set(x, 0.009, z); edge.receiveShadow = true; world.add(edge);
+    }
     fitSurfaces(world);
     // Furniture and walls cast real shadows (not glass, signs or the ceiling).
     statics.traverse(o => { const m = o as THREE.Mesh; const mat = m.material as THREE.MeshStandardMaterial; if (m.isMesh && mat.isMeshStandardMaterial && !mat.transparent && mat !== panel && mat !== windowMat) m.castShadow = true; });
@@ -359,6 +386,19 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   batchStatic(statics, []);
   if (real) {
     batchStatic(soft, []);
+    // The things that make an office lived in: pictures on the walls, lamps over the tables, vases, cushions.
+    const frames: [number, number, number][] = [
+      [-7.86, 11, 1], [7.86, 12.5, -1], [-17.6, 6.14, 0], [-14.4, 6.14, 0], [8.14, 13, 1],
+      [-16, 5.86, 2], [9, 5.86, 2], [19.5, 5.86, 2], [-12, 2.14, 0], [5.6, 2.14, 0], [15, 2.14, 0],
+      [-10.14, -6, -1], [-10.14, -12, -1], [-9.86, -8, 1], [16.14, -8, 1],
+    ];
+    frames.forEach(([x, z, quarter], i) => muebles.push({ model: i % 2 ? 'hanging_picture_frame_02' : 'fancy_picture_frame_01', x, z, y: 1.3, tall: i % 2 ? 0.9 : 1.05, rotY: quarter * Math.PI / 2 }));
+    for (const [x, z] of [[-20, 12], [-12, 12], [11, -10], [11, -6], [20, -12], [-5.6, 15.2], [5.6, 15.2], [-17, -6], [22.6, -4.5]]) muebles.push({ model: 'modern_ceiling_lamp_01', x, z, y: CEILING - 0.62, tall: 0.62 });
+    FURNITURE.forEach((f, i) => {
+      if (f.type === 'archivador') muebles.push({ model: i % 2 ? 'ceramic_vase_01' : 'ceramic_vase_02', x: f.x, y: f.top ?? 1.2, z: f.z, tall: 0.34 });
+      if (f.type === 'sofa') muebles.push({ model: 'throw_pillows_01', x: f.x, y: 0.45, z: f.z + 0.7, tall: 0.36, rotY: f.rot === 1 ? Math.PI / 2 : -Math.PI / 2 });
+    });
+    muebles.push({ model: 'brass_vase_03', x: -1.9, y: 1.08, z: 10.5, tall: 0.26 });
     placeFurniture(world, muebles, opts.shadows).then(() => { soft.removeFromParent(); soft.traverse(o => (o as THREE.Mesh).geometry?.dispose()); }).catch(() => { /* the simple furniture stays */ });
   }
 
