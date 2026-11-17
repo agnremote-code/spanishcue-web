@@ -5,6 +5,7 @@
 // Static furniture is merged by material (batchStatic), so a floor costs a
 // few hundred draw calls; only the floor you are on is drawn.
 import * as THREE from 'three';
+import { realScenery } from '../mundo-real/escenario';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import type { Voice } from '../escucha-3d/bump.mjs';
@@ -841,7 +842,7 @@ function buildExterior() {
 }
 
 // ---------------------------------------------------------------- the whole hospital
-export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; cries?: Cry[]; onCry?: (cry: Cry | null, volume: number) => void }): Hospital {
+export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; real?: boolean; cries?: Cry[]; onCry?: (cry: Cry | null, volume: number) => void }): Hospital {
   const floors: Record<number, THREE.Group> = {};
   const doors: DoorRig[] = [];
   const glowMats: THREE.MeshStandardMaterial[] = [];
@@ -850,6 +851,7 @@ export function buildHospital(scene: THREE.Scene, opts: { low: boolean; shadows:
   for (const f of FLOORS) {
     const group = buildFloor(f.id, opts.low, glowMats, doors, lift, flicks);
     const moving = [...doors.filter(d => d.floor === f.id).flatMap(d => d.leaves.map(l => l.mesh)), lift[f.id].left, lift[f.id].right];
+    if (opts.real) realScenery(group, { floor: 'large_floor_tiles_02', polish: 0.6, wall: 'plastered_wall_04' }, moving);
     batchStatic(group, moving);
     floors[f.id] = group;
     scene.add(group);

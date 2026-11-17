@@ -1891,7 +1891,7 @@ export const guiaPages: GuiaPage[] = [
           {
             title: "Paso 6: en B1, la conexión con el subjuntivo",
             blocks: [
-              { type: "p", text: "Cuando el alumno llega al presente de subjuntivo descubre que ya conocía sus formas: son las del imperativo de usted y las del negativo. Dilo en voz alta en clase, porque quita miedo al subjuntivo. La ficha de [imperativo y peticiones indirectas con subjuntivo](/material-ele/ficha/imperativo-y-peticiones-indirectas-con-subjuntivo) une los dos temas («ven» frente a «te pido que vengas»), y en [imperativo para B1](/material-ele/gramatica/imperativo/b1) están las clases del nivel. La guía [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo) sigue desde ahí." },
+              { type: "p", text: "Cuando el alumno llega al presente de subjuntivo descubre que ya conocía sus formas: son las del imperativo de usted y las del negativo. Dilo en voz alta en clase, porque quita miedo al subjuntivo. La ficha de [imperativo y peticiones indirectas con subjuntivo](/material-ele/ficha/imperativo-y-peticiones-indirectas-con-subjuntivo) une los dos temas («ven» frente a «te pido que vengas»), y en el tema de [imperativo](/material-ele/gramatica/imperativo) están todas las clases. La guía [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo) sigue desde ahí." },
             ],
           },
         ],
@@ -2247,6 +2247,279 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Hay una clase gratis sobre el futuro?", answer: "Sí. En SpanishCue se abren gratis la clase de condiciones reales con si + presente y futuro, de B1, y la de futuro y condicional de probabilidad, de B2. En Material ELE hay además actividades, un ejercicio con soluciones y fichas de muestra sin registro." },
     ],
     related: ["futuro", "condicional", "a2", "b1"],
+  },
+  {
+    slug: "como-ensenar-el-condicional",
+    path: `${GUIAS_PATH}/como-ensenar-el-condicional`,
+    title: "Cómo enseñar el condicional en ELE: secuencia de A2 a C1",
+    description:
+      "Cómo enseñar el condicional en español: cortesía, consejos, hipótesis con si, condicional compuesto, errores típicos, actividades para hablar y fichas.",
+    h1: "Cómo enseñar el condicional en ELE: de «me gustaría» a «si lo hubiera sabido»",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "El condicional tiene una forma fácil y un uso que se enseña demasiado tarde. La forma es el infinitivo más unas terminaciones que el alumno ya conoce del imperfecto, con los mismos doce irregulares del futuro. El uso, en cambio, suele presentarse pegado a las oraciones con «si» y al imperfecto de subjuntivo, cuando el alumno lleva meses necesitando decir «me gustaría», «¿podrías repetir?» o «yo que tú, no iría». Esta guía propone separar esos pasos: qué usos trabajar en cada nivel, cómo presentar la forma, los errores que vas a ver y las clases, fichas y ejercicios de Material ELE para practicar.",
+    keywords: ["cómo enseñar el condicional", "condicional ELE", "actividades condicional", "condicional simple español", "oraciones condicionales ELE", "ejercicios condicional", "condicional compuesto"],
+    published: "2026-11-17",
+    lessonIds: [146, 31, 219, 461, 23, 152, 436, 508],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: el condicional pone distancia",
+        blocks: [
+          { type: "p", text: "Todos los usos del condicional comparten una idea que el alumno puede entender en una frase: **el hablante se aleja un paso de lo que dice**. Se aleja para ser amable («¿podrías abrir la ventana?»), para no imponer un consejo («yo iría al médico»), para hablar de algo que no es real («viviría en la playa») o para no comprometerse con una información («el ministro dimitiría mañana»)." },
+          { type: "p", text: "Con esa idea, el alumno no memoriza cuatro usos sin relación: reconoce el mismo gesto en cuatro situaciones. Y el profesor puede ordenarlos por necesidad, empezando por los que el alumno usa en su vida diaria. La página de [el condicional](/material-ele/condicional) resume los usos con actividades listas, y el tema de [gramática del condicional simple](/material-ele/gramatica/condicional-simple) reúne las clases por nivel." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "Esta progresión va de las fórmulas hechas a la hipótesis, y de la frase suelta a la oración compleja." },
+        ],
+        subsections: [
+          {
+            title: "A2: fórmulas de cortesía y deseo",
+            blocks: [
+              { type: "p", text: "En A2 no hace falta presentar el tiempo completo. Bastan tres fórmulas que el alumno necesita en un bar, una tienda o una clase: **me gustaría**, **¿podrías…?** y **¿te importaría…?** Se aprenden como expresiones, igual que «quería un café». Encajan en la función de [registro y cortesía](/material-ele/gramatica/registro-y-cortesia), y la actividad [Lo mismo, pero con cortesía](/material-ele/actividad/lo-mismo-pero-con-cortesia) las practica transformando órdenes directas." },
+            ],
+          },
+          {
+            title: "B1: la forma completa, consejos e hipótesis sencillas",
+            blocks: [
+              { type: "p", text: "En B1 se presenta la conjugación y se abren dos usos: **aconsejar** («yo que tú, hablaría con ella», «deberías descansar») e **imaginar** («con un año libre, viajaría por América»). Todavía sin la oración con «si» completa: el contexto hace de condición. La ficha de [condicional simple](/material-ele/ficha/condicional-simple-indicativo) trabaja la forma, y la función de [dar consejos y recomendaciones en B1](/material-ele/funciones/dar-consejos-y-recomendaciones/b1) reúne las clases para usarla." },
+              { type: "p", text: "Las clases del nivel están en [condicional simple para B1](/material-ele/gramatica/condicional-simple/b1), y la ficha de [condicionales de B1](/material-ele/ficha/condicionales-b1) prepara el paso siguiente." },
+            ],
+          },
+          {
+            title: "B2: si + imperfecto de subjuntivo, probabilidad y condicional compuesto",
+            blocks: [
+              { type: "p", text: "En B2 llega la estructura completa: **si tuviera tiempo, estudiaría más**. El alumno ya domina el condicional, así que toda la atención va al imperfecto de subjuntivo. Después se añaden el **condicional compuesto** para lo que ya no puede cambiarse («si lo hubiera sabido, habría venido») y el **condicional de probabilidad** para suponer algo del pasado («serían las tres cuando llegó»)." },
+              { type: "p", text: "La clase gratis de [futuro y condicional de probabilidad](/gramatica/futuro-y-condicional-de-probabilidad) se abre sin registro, igual que la de [como si + imperfecto de subjuntivo](/gramatica/como-si-imperfecto-pluscuamperfecto-subjuntivo). Para practicar están las fichas de [condicionales](/material-ele/ficha/condicionales), de [condicional compuesto](/material-ele/ficha/condicional-compuesto-indicativo) y de [condicionales mixtas](/material-ele/ficha/condicionales-mixtas-pasado-y-consecuencia-presente). Las clases están en [condicional simple para B2](/material-ele/gramatica/condicional-simple/b2) y en el tema de [oraciones condicionales](/material-ele/gramatica/oraciones-condicionales)." },
+            ],
+          },
+          {
+            title: "C1: rumor, hipótesis remotas y atenuación",
+            blocks: [
+              { type: "p", text: "En C1 el alumno aprende a leer el condicional de los titulares («el gobierno estudiaría una subida») como marca de información no confirmada, y a usar hipótesis remotas con valor retórico. Las fichas de [valores del condicional de rumor](/material-ele/ficha/valores-discursivos-del-condicional-de-rumor) y de [hipótesis remotas](/material-ele/ficha/hipotesis-remotas-y-contrafactualidad-retorica) trabajan estos usos, y las clases están en [condicional simple para C1](/material-ele/gramatica/condicional-simple/c1)." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "presentar",
+        title: "Cómo presentar la forma en B1",
+        blocks: [
+          { type: "p", text: "La forma se presenta en diez minutos si se apoya en lo que el alumno ya sabe." },
+          { type: "ol", items: [
+            "**Parte de una fórmula conocida.** Escribe «me gustaría» y pregunta de qué verbo viene. El alumno descubre que ya usa el condicional.",
+            "**El infinitivo entero.** hablar, comer y vivir reciben la misma terminación: hablaría, comería, viviría. No se quita nada.",
+            "**Terminaciones conocidas.** -ía, -ías, -ía, -íamos, -íais, -ían son las del imperfecto de comer y vivir. Lo nuevo es solo dónde se ponen.",
+            "**Los irregulares, sin lista nueva.** Son las raíces del futuro: tendría, pondría, saldría, vendría, podría, sabría, querría, habría, diría, haría. Si el alumno ya trabajó el futuro, es un repaso.",
+            "**Una pregunta para usarlo enseguida.** «¿Qué harías con un año libre?» Cada alumno responde con tres verbos distintos.",
+          ] },
+          { type: "p", text: "Si el grupo todavía no tiene el futuro simple, conviene verlo antes: la guía de [cómo enseñar el futuro](/material-ele/guia/como-ensenar-el-futuro) agrupa los irregulares en tres familias que sirven para los dos tiempos." },
+          { type: "p", text: "Un aviso útil para la pronunciación: todas las formas llevan tilde en la í, y la sílaba fuerte es siempre la misma. Leer la serie en voz alta evita «hablária» y «comeriá»." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Errores típicos y cómo corregirlos",
+        blocks: [
+          { type: "p", text: "Estos son los errores más frecuentes, con una corrección breve para cada uno." },
+          { type: "ul", items: [
+            "**Condicional después de «si».** «Si tendría dinero, viajaría.» Es el error más extendido. Corrección: una regla corta y visual, «si» nunca va con condicional; el condicional va en la otra mitad.",
+            "**Raíz regular en un irregular.** «Tenería», «ponería», «hacería». Corrección: volver a la raíz del futuro y pedir la frase completa.",
+            "**Imperfecto por condicional.** «Yo que tú, iba al médico.» Existe en la lengua hablada, pero en clase conviene fijar primero «iría». Corrección: repetir la frase con el condicional y seguir.",
+            "**«Me gustaría que» con indicativo.** «Me gustaría que vienes.» Corrección: en B2, mostrar el par «me gustaría ir» y «me gustaría que vinieras»: mismo sujeto, infinitivo; otro sujeto, subjuntivo.",
+            "**Demasiada cortesía o ninguna.** El alumno usa «quiero un café» en todas partes o «¿le importaría si pudiera…?» con un amigo. Corrección: ordenar tres peticiones de más directa a más amable y decidir con quién se usa cada una.",
+            "**Confundir «habría» y «hubiera».** «Si lo habría sabido, hubiera venido.» Corrección: el mismo esquema que en la hipótesis simple; después de «si», subjuntivo.",
+          ] },
+          { type: "p", text: "Para practicar con corrección inmediata, el [ejercicio de condicional con soluciones](/material-ele/ejercicio/condicional) combina el tiempo suelto con las oraciones con «si»." },
+        ],
+      },
+      {
+        id: "actividades",
+        title: "Actividades que hacen hablar",
+        blocks: [
+          { type: "p", text: "El condicional se presta a hablar porque casi todos sus usos son reacciones a otra persona." },
+          { type: "ol", items: [
+            "**Yo que tú.** Un alumno cuenta un problema pequeño y el resto aconseja sin repetir verbo. Está en el banco como [Yo que tú](/material-ele/actividad/yo-que-tu).",
+            "**La otra vida posible.** Cada alumno describe cómo sería su vida en otro país u otra profesión. [La otra vida posible](/material-ele/actividad/la-otra-vida-posible) trae preguntas de apoyo.",
+            "**Si tuviera, haría.** Cadena de hipótesis: el final de una frase es el principio de la siguiente. Es la actividad [Si tuviera, haría](/material-ele/actividad/si-tuviera-haria).",
+            "**Lo que habría pasado.** A partir de una decisión real del alumno, la clase imagina la alternativa con el condicional compuesto: [Lo que habría pasado](/material-ele/actividad/lo-que-habria-pasado).",
+            "**Debate con condiciones.** Cada postura debe aceptarse con una condición: «lo apoyaría si…». [Debate con condiciones](/material-ele/actividad/debate-con-condiciones) funciona desde B2.",
+          ] },
+          { type: "p", text: "Para viajes y recomendaciones, [Consejos para un viaje](/material-ele/actividad/consejos-para-un-viaje) permite reciclar «deberías» y «yo llevaría» con alumnos de B1." },
+        ],
+      },
+      {
+        id: "clase",
+        title: "Una clase de 45 minutos de condicional (B1)",
+        blocks: [
+          { type: "p", text: "Este plan sirve para una clase individual o un grupo pequeño en línea." },
+          { type: "ol", items: [
+            "**Entrada (5 min).** «¿Qué te gustaría hacer este año?» El alumno responde con la fórmula que ya conoce.",
+            "**Descubrimiento (5 min).** De «me gustaría» a «gustar»: el alumno deduce la forma.",
+            "**Forma (10 min).** Infinitivo más terminaciones, irregulares del futuro y lectura en voz alta.",
+            "**Práctica guiada (10 min).** Tres problemas cotidianos; el alumno da dos consejos para cada uno con «yo que tú» y «deberías».",
+            "**Producción (10 min).** «Un año libre y sin límite de dinero»: el alumno cuenta qué haría y responde a las preguntas del profesor.",
+            "**Cierre (5 min).** Corrección de dos o tres errores anotados y una frase para llevarse.",
+          ] },
+          { type: "p", text: "Como tarea, cinco consejos escritos para un amigo que llega a vivir a su ciudad. En [material por nivel B1](/material-ele/b1) están las clases interactivas del nivel ya armadas." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña el condicional?", answer: "Las fórmulas de cortesía como «me gustaría» y «¿podrías?» en A2. La conjugación completa, los consejos y las hipótesis sencillas en B1. Las oraciones con si + imperfecto de subjuntivo, el condicional compuesto y la probabilidad en B2." },
+      { question: "¿Cómo se forma el condicional simple?", answer: "Con el infinitivo completo más las terminaciones -ía, -ías, -ía, -íamos, -íais, -ían. Los irregulares usan la misma raíz que el futuro: tendría, pondría, saldría, vendría, podría, sabría, querría, habría, diría y haría." },
+      { question: "¿Por qué los alumnos dicen «si tendría»?", answer: "Porque en muchas lenguas la condición y la consecuencia llevan la misma forma. En español, después de «si» nunca va condicional: va imperfecto de subjuntivo, y el condicional queda en la otra mitad de la frase." },
+      { question: "¿Qué se enseña primero, el condicional o el imperfecto de subjuntivo?", answer: "El condicional. Se puede usar solo durante todo B1 para aconsejar, pedir con cortesía e imaginar, y así en B2 la atención se concentra en el imperfecto de subjuntivo." },
+      { question: "¿Hay una clase gratis de condicional?", answer: "Sí. La clase interactiva de futuro y condicional de probabilidad, de B2, se abre gratis en SpanishCue, y en Material ELE hay actividades, un ejercicio con soluciones y fichas de muestra sin registro." },
+    ],
+    related: ["condicional", "futuro", "subjuntivo", "b1"],
+  },
+  {
+    slug: "como-ensenar-las-preposiciones",
+    path: `${GUIAS_PATH}/como-ensenar-las-preposiciones`,
+    title: "Cómo enseñar las preposiciones en ELE: secuencia de A1 a B2",
+    description:
+      "Cómo enseñar las preposiciones en español: a, de, en, con, lugar y movimiento, por y para, verbos con preposición, errores típicos, actividades y fichas.",
+    h1: "Cómo enseñar las preposiciones en ELE: de «en casa» a «depende de»",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "Las preposiciones son palabras cortas y muy frecuentes, y casi nunca se traducen una por una. El alumno que busca la equivalencia con su lengua dice «pienso sobre ti», «voy en Madrid» o «depende en el precio», y ninguna lista de usos lo evita, porque al hablar no hay tiempo de consultar una lista. Lo que sí funciona es enseñarlas en tres capas: primero con su significado en el espacio, después dentro de expresiones fijas y por último pegadas al verbo que las exige. Esta guía propone qué trabajar en cada nivel, cómo presentarlas, los errores que vas a ver y las clases, fichas y ejercicios de Material ELE para practicarlas.",
+    keywords: ["cómo enseñar las preposiciones", "preposiciones ELE", "actividades preposiciones", "preposiciones de lugar español", "verbos con preposición ELE", "ejercicios preposiciones español", "a de en con"],
+    published: "2026-11-17",
+    lessonIds: [327, 328, 333, 373, 374, 410, 117, 234],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: tres capas, no una lista",
+        blocks: [
+          { type: "p", text: "Una preposición puede funcionar de tres maneras, y cada una se aprende de forma distinta." },
+          { type: "ul", items: [
+            "**Con significado propio.** «El libro está en la mesa», «voy a Lima», «vengo de Quito». Aquí la preposición dibuja un lugar o un movimiento, y se puede enseñar con un dibujo.",
+            "**Dentro de una expresión.** «A las ocho», «por la mañana», «de vacaciones», «en serio». No hay lógica que deducir: se aprenden enteras, como una palabra.",
+            "**Exigida por un verbo.** «Depender de», «pensar en», «soñar con», «acordarse de». La preposición forma parte del verbo y se aprende con él.",
+          ] },
+          { type: "p", text: "Decirle esto al alumno cambia su forma de estudiar: deja de preguntar «¿qué significa de?» y empieza a preguntar «¿con qué preposición va este verbo?». El tema de [gramática de las preposiciones](/material-ele/gramatica/preposiciones) reúne las clases por nivel." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "Esta progresión sigue las tres capas, de lo que se puede dibujar a lo que hay que memorizar." },
+        ],
+        subsections: [
+          {
+            title: "A1: a, de, en, con, sin y las contracciones",
+            blocks: [
+              { type: "p", text: "En A1 el alumno necesita cinco preposiciones para hablar de sí mismo: **soy de** Brasil, **vivo en** Oporto, **voy a** clase, **trabajo con** niños, **un café sin** azúcar. Se añaden las dos contracciones, **al** y **del**, que son obligatorias y se olvidan durante años si no se fijan pronto." },
+              { type: "p", text: "La ficha de [preposiciones básicas](/material-ele/ficha/preposiciones-basicas) y la de [contracciones al y del](/material-ele/ficha/contracciones-al-y-del) cubren este paso. Las clases están en [preposiciones para A1](/material-ele/gramatica/preposiciones/a1), y la ficha de [pronombres tras preposición](/material-ele/ficha/pronombres-tras-preposicion) añade «para mí», «contigo» y «sin ti»." },
+            ],
+          },
+          {
+            title: "A1–A2: lugar y movimiento",
+            blocks: [
+              { type: "p", text: "Las locuciones de lugar (**encima de, debajo de, al lado de, entre, enfrente de, detrás de**) se enseñan con objetos reales o un plano. En A2 se suma el movimiento: **a, hacia, hasta, desde, por**. El contraste que más ayuda es el de dirección frente a lugar: «voy a la oficina» y «estoy en la oficina»." },
+              { type: "p", text: "La ficha de [preposiciones de movimiento y ubicación](/material-ele/ficha/preposiciones-de-movimiento-y-ubicacion) trabaja ese contraste, el tema de [preposiciones de lugar](/material-ele/gramatica/preposiciones-de-lugar) reúne las clases y la ficha de [estar para estados y lugares](/material-ele/ficha/estar-estados-y-lugares) conecta con el verbo que las acompaña. El vocabulario de [la ciudad](/material-ele/vocabulario/la-ciudad) da el contexto para dar direcciones." },
+            ],
+          },
+          {
+            title: "A2–B1: por y para",
+            blocks: [
+              { type: "p", text: "Por y para merecen su propio espacio, porque muchas lenguas usan una sola palabra para las dos. Conviene presentarlas después de las preposiciones de movimiento, cuando el alumno ya asocia «por» con el camino y «para» con el destino. La guía de [cómo enseñar por y para](/material-ele/guia/como-ensenar-por-y-para) desarrolla la secuencia completa, y la clase gratis de [por y para: motivo y destino](/gramatica/por-y-para-motivo-y-destino) se abre sin registro." },
+            ],
+          },
+          {
+            title: "B1: verbos con preposición",
+            blocks: [
+              { type: "p", text: "En B1 empieza la tercera capa. Los verbos más frecuentes se presentan en grupos pequeños y dentro de frases: **pensar en, soñar con, acordarse de, enamorarse de, casarse con, tratar de, acostumbrarse a, depender de, insistir en**. Cinco o seis por clase, nunca una tabla de cincuenta." },
+              { type: "p", text: "La ficha de [acostumbrarse a, tratar de, pensar en](/material-ele/ficha/acostumbrarse-a-tratar-de-pensar-en) trabaja el primer grupo con frases para completar y preguntas para hablar." },
+            ],
+          },
+          {
+            title: "B2: relativos con preposición y régimen",
+            blocks: [
+              { type: "p", text: "En B2 la preposición viaja con el relativo: «la ciudad **en la que** nací», «el amigo **con quien** hablo», «el tema **del que** discutimos». Es difícil porque el alumno debe recordar la preposición del verbo antes de terminar la frase. La ficha de [relativos con preposición](/material-ele/ficha/relativos-con-preposicion) lo practica paso a paso, y las clases están en [preposiciones para B2](/material-ele/gramatica/preposiciones/b2)." },
+              { type: "p", text: "Para niveles altos, la clase gratis de [queísmo y dequeísmo](/gramatica/queismo-y-dequeismo-regimen-y-norma) explica cuándo «de que» es obligatorio y cuándo sobra, con su [ficha](/material-ele/ficha/queismo-y-dequeismo-regimen-y-norma)." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "presentar",
+        title: "Cómo presentarlas: dibujo, bloque y verbo",
+        blocks: [
+          { type: "p", text: "Cada capa tiene su técnica, y mezclarlas es lo que confunde." },
+          { type: "ol", items: [
+            "**Lo espacial, con un dibujo.** Una caja y una pelota bastan para encima, debajo, dentro, al lado y entre. El alumno mueve la pelota y dice la frase; no hace falta traducir.",
+            "**Las expresiones, como bloques.** «A las ocho», «por la tarde», «en verano», «de lunes a viernes» se escriben siempre completas y se repasan dentro de una rutina.",
+            "**El verbo, con su preposición puesta.** En la pizarra y en el cuaderno se anota «depender de», nunca «depender». Así el alumno la recupera junta.",
+            "**Una frase personal para cada verbo.** «Sueño con…», «me acuerdo de…», «no me acostumbro a…». La frase verdadera se recuerda mejor que el ejemplo del libro.",
+            "**Repaso espaciado.** Tres minutos al empezar la clase siguiente: el profesor dice el verbo y el alumno responde con la preposición y una frase.",
+          ] },
+          { type: "p", text: "Un detalle sobre «a»: la **a personal** («veo a María» frente a «veo la casa») no tiene significado espacial y conviene enseñarla aparte, cuando aparece el objeto directo de persona. La guía de [pronombres de objeto](/material-ele/guia/como-ensenar-pronombres-de-objeto) la retoma." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Errores típicos y cómo corregirlos",
+        blocks: [
+          { type: "p", text: "Estos son los errores más frecuentes, con una corrección breve para cada uno." },
+          { type: "ul", items: [
+            "**«En» por «a» con movimiento.** «Voy en Madrid.» Corrección: una flecha para «a» y un punto para «en»; el alumno decide si hay movimiento.",
+            "**Contracciones olvidadas.** «Voy a el cine», «vengo de el trabajo». Corrección: leer en voz alta; «a el» cuesta pronunciarlo y «al» sale solo.",
+            "**La preposición de la otra lengua.** «Pienso sobre ti», «depende en», «sueño de». Corrección: devolver el verbo con su preposición y pedir una frase nueva.",
+            "**Falta la a personal.** «Conozco tu hermano.» Corrección: preguntar «¿persona o cosa?» y repetir la frase.",
+            "**«En» con días y partes del día.** «En el lunes», «en la mañana» donde el español general dice «el lunes» y «por la mañana». Corrección: tratarlas como bloques y practicarlas con la agenda de la semana.",
+            "**Preposición al final.** «La persona que hablo con.» Corrección: en B2, mostrar que la preposición va delante del relativo: «la persona con la que hablo».",
+            "**«De que» de más o de menos.** «Pienso de que», «me acuerdo que». Corrección: sustituir la oración por «eso»: «pienso eso», «me acuerdo de eso».",
+          ] },
+          { type: "p", text: "Para practicar con corrección inmediata, el [ejercicio de por y para con soluciones](/material-ele/ejercicio/por-y-para) se puede proyectar, y en [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) hay más por nivel." },
+        ],
+      },
+      {
+        id: "actividades",
+        title: "Actividades que hacen hablar",
+        blocks: [
+          { type: "p", text: "Estas actividades hacen que la preposición sea necesaria para entenderse, y ninguna pide material impreso." },
+          { type: "ol", items: [
+            "**¿Dónde está la lámpara?** Un alumno describe una habitación y el otro la dibuja sin verla. Está en el banco como [¿Dónde está la lámpara?](/material-ele/actividad/donde-esta-la-lampara).",
+            "**¿Dónde está?** Preguntas y respuestas sobre objetos escondidos en la imagen o en la sala: [¿Dónde está?](/material-ele/actividad/donde-esta).",
+            "**El mapa de mi barrio.** Cada alumno explica cómo llegar de su casa a tres lugares. [El mapa de mi barrio](/material-ele/actividad/el-mapa-de-mi-barrio) practica a, hasta, por y desde.",
+            "**La casa en cuatro habitaciones.** Describir y comparar dos casas con locuciones de lugar: [La casa en cuatro habitaciones](/material-ele/actividad/la-casa-en-cuatro-habitaciones).",
+            "**Cinco verbos, cinco verdades.** El profesor dicta cinco verbos con preposición y cada alumno completa una frase verdadera con cada uno; el compañero pregunta por la que más le sorprende.",
+          ] },
+          { type: "p", text: "Con alumnos de A1, cualquiera de las tres primeras llena veinte minutos de conversación con vocabulario muy limitado." },
+        ],
+      },
+      {
+        id: "clase",
+        title: "Una clase de 45 minutos de verbos con preposición (B1)",
+        blocks: [
+          { type: "p", text: "Este plan sirve para una clase individual o un grupo pequeño en línea." },
+          { type: "ol", items: [
+            "**Entrada (5 min).** «¿En qué piensas cuando no puedes dormir?» El profesor anota la respuesta sin corregir.",
+            "**Las tres capas (5 min).** Un ejemplo de cada una, para que el alumno sepa qué tipo de preposición va a estudiar hoy.",
+            "**Seis verbos (10 min).** pensar en, soñar con, acordarse de, depender de, tratar de, acostumbrarse a. Cada uno con una frase modelo.",
+            "**Frases personales (10 min).** El alumno completa una frase verdadera con cada verbo y la lee.",
+            "**Conversación (10 min).** Preguntas con los seis verbos: «¿De qué depende tu fin de semana?», «¿A qué no te acostumbras en este país?».",
+            "**Cierre (5 min).** El profesor dice el verbo y el alumno responde solo con la preposición.",
+          ] },
+          { type: "p", text: "Como tarea, la ficha del tema con soluciones y un repaso de tres minutos al empezar la clase siguiente. En [material por nivel B1](/material-ele/b1) están las clases interactivas del nivel ya armadas." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué orden se enseñan las preposiciones en español?", answer: "Primero a, de, en, con y sin con las contracciones al y del, en A1. Después las de lugar y movimiento, por y para entre A2 y B1, los verbos con preposición en B1 y los relativos con preposición en B2." },
+      { question: "¿Cómo enseñar las preposiciones de lugar?", answer: "Con objetos o un dibujo, sin traducir. El alumno mueve un objeto y dice dónde está: encima de, debajo de, al lado de, entre, delante de, detrás de. Después describe una habitación o su barrio." },
+      { question: "¿Cómo se aprenden los verbos con preposición?", answer: "Junto con el verbo, como una sola unidad: «depender de», no «depender». Funciona presentar cinco o seis por clase, crear una frase personal con cada uno y repasarlos en la clase siguiente." },
+      { question: "¿Por qué los alumnos se equivocan tanto con las preposiciones?", answer: "Porque traducen la preposición de su lengua, y las preposiciones casi nunca coinciden entre lenguas. Ayuda distinguir cuándo la preposición tiene significado propio, cuándo forma parte de una expresión y cuándo la exige el verbo." },
+      { question: "¿Hay una clase gratis sobre preposiciones?", answer: "Sí. La clase interactiva de por y para de A2 se abre gratis en SpanishCue, y en Material ELE hay actividades, un ejercicio con soluciones y fichas de muestra sin registro." },
+    ],
+    related: ["por-y-para", "pronombres-de-objeto", "a1", "b1"],
   },
 ];
 
