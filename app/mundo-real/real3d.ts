@@ -182,7 +182,7 @@ type Piece = { geometry: THREE.BufferGeometry; material: THREE.Material };
  * Where one object stands. `fit` stretches it to a width, height and depth; `tall` scales it
  * evenly to a height. `y` is the height of its base (objects from /objetos stand on their base, centred).
  */
-export type Placement = { model: Mueble; x: number; z: number; y?: number; rotY?: number; fit?: [number, number, number]; tall?: number };
+export type Placement = { model: Mueble; x: number; z: number; y?: number; rotY?: number; fit?: [number, number, number]; tall?: number; /** Small things (vases, frames, lamps, plants) skip the shadow pass. */ small?: boolean };
 const OFFICE = new Set(['silla', 'escritorio', 'sofa']);
 
 const models = new Map<Mueble, Promise<{ pieces: Piece[]; box: THREE.Box3 }>>();
@@ -226,7 +226,7 @@ export async function placeFurniture(parent: THREE.Object3D, placements: Placeme
     const size = box.getSize(new THREE.Vector3());
     for (const piece of pieces) {
       const inst = new THREE.InstancedMesh(piece.geometry, piece.material, list.length);
-      inst.castShadow = shadows; inst.receiveShadow = true;
+      inst.castShadow = shadows && !list.every(p => p.small); inst.receiveShadow = true;
       list.forEach((p, i) => {
         if (p.fit) s.set(p.fit[0] / size.x, p.fit[1] / size.y, p.fit[2] / size.z); else s.setScalar(p.tall ? p.tall / size.y : 1);
         q.setFromAxisAngle(up, p.rotY ?? 0);
@@ -264,8 +264,8 @@ export function contactShade(parent: THREE.Object3D, walls: Footprint[], things:
     quads.push(g);
   };
   // The texture keeps 22 % of its width as fade on each side, so the quad grows to leave the dark core over the footprint.
-  for (const w of walls) { quad(w, 0.55, 0.014); if (ceiling) quad(w, 0.7, ceiling - 0.012); }
-  for (const t of things) quad(t, 0.32, 0.016);
+  for (const w of walls) { quad(w, 0.55, 0.026); if (ceiling) quad(w, 0.7, ceiling - 0.02); }
+  for (const t of things) quad(t, 0.32, 0.03);
   if (!quads.length) return () => {};
   const positions: number[] = [], uvs: number[] = [], index: number[] = [];
   quads.forEach((g, i) => {

@@ -122,14 +122,12 @@ export const FURNITURE = [
   { type: 'mueble', model: 'steel_frame_shelves_01', x: 12.6, z: 17.6, w: 1.04, d: 0.5, top: 2, tall: 2 },
   { type: 'mueble', model: 'steel_frame_shelves_01', x: 18, z: 17.6, w: 1.04, d: 0.5, top: 2, tall: 2 },
   { type: 'mueble', model: 'steel_frame_shelves_01', x: 19.1, z: 17.6, w: 1.04, d: 0.5, top: 2, tall: 2 },
-  { type: 'mueble', model: 'metal_trash_can', x: 13.3, z: 10, w: 0.4, d: 0.4, top: 0.6, tall: 0.6 },
   { type: 'mueble', model: 'sofa_02', x: -21.5, z: 1.3, w: 2.05, d: 0.92, top: 0.45, tall: 0.8, rot: Math.PI },
   { type: 'mueble', model: 'ArmChair_01', x: -23.3, z: -2.5, w: 0.8, d: 0.85, top: 0.45, tall: 1, rot: Math.PI / 2 },
   { type: 'mueble', model: 'Shelf_01', x: -17.5, z: -17.7, w: 1, d: 0.3, top: 2, tall: 2 },
   { type: 'mueble', model: 'Shelf_01', x: -23, z: -17.7, w: 1, d: 0.3, top: 2, tall: 2 },
   { type: 'mueble', model: 'steel_frame_shelves_01', x: -9.6, z: -7.4, w: 0.5, d: 1.04, top: 2, tall: 2, rot: Math.PI / 2 },
   { type: 'mueble', model: 'steel_frame_shelves_01', x: -9.6, z: -8.5, w: 0.5, d: 1.04, top: 2, tall: 2, rot: Math.PI / 2 },
-  { type: 'mueble', model: 'metal_trash_can', x: -9.5, z: -3, w: 0.4, d: 0.4, top: 0.6, tall: 0.6 },
   { type: 'mueble', model: 'vintage_wooden_drawer_01', x: 15.4, z: -4, w: 0.8, d: 1.45, top: 0.9, tall: 0.9, rot: -Math.PI / 2 },
   { type: 'mueble', model: 'GothicCabinet_01', x: 16.6, z: -9, w: 0.85, d: 1.45, top: 2.3, tall: 2.3, rot: Math.PI / 2 },
   { type: 'mueble', model: 'mid_century_lounge_chair', x: 23.1, z: -1.5, w: 0.9, d: 0.9, top: 0.45, tall: 0.9, rot: -2.2 },
@@ -283,5 +281,7 @@ export function solidsFor() {
 
 /** Walls only: the camera arm is shortened when one stands in the way. */
 export function cameraBlockers() {
-  return WALLS.filter(w => w[4] !== 'glass').map(wallBox);
+  // The entrance counts too: behind its glass the camera saw the office through a milky pane, with the
+  // hands of the clock over the door filling the screen.
+  return [...WALLS.filter(w => w[4] !== 'glass').map(wallBox), wallBox([ENTRANCE.x0, ENTRANCE.z, ENTRANCE.x1, ENTRANCE.z])];
 }

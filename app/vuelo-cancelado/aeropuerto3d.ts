@@ -381,7 +381,7 @@ function buildItem(g: THREE.Group, item: Item, floor: number, glows: THREE.MeshS
   const W = turned ? item.d : item.w, D = turned ? item.w : item.d;
   // Realistic mode: plants and sofas are scanned objects; their drawn version waits in `soft` until those load.
   if (dress && soft) {
-    if (item.type === 'plant') { dress.push({ model: 'pachira_aquatica_01', x: item.x, z: item.z, tall: 1.9, rotY: item.x }); g = soft; }
+    if (item.type === 'plant') { dress.push({ model: 'calathea_orbifolia_01', x: item.x, z: item.z, tall: 1.1, rotY: item.x, small: true }); g = soft; }
     else if (item.type === 'sofa') { dress.push({ model: 'sofa_03', x: item.x, z: item.z, fit: [item.w, 0.95, item.d], rotY: r }); g = soft; }
     else if (item.type === 'suitcases') for (let i = 0; i < 3; i++) dress.push({ model: 'vintage_suitcase', x: item.x + (i - 1) * 0.75, z: item.z + item.d / 2 + 0.35, tall: 0.62, rotY: i * 1.3 });
   }
