@@ -14,8 +14,8 @@ const built = await build({
 const course = await import("data:text/javascript;base64," + Buffer.from(built.outputFiles[0].text).toString("base64"));
 const clips = new Map();
 for (const [level, modules] of Object.entries(course.modulesByLevel)) {
-  for (const module of modules) {
-    for (const clip of course.moduleClips(module)) {
+  for (const mod of modules) {
+    for (const clip of course.moduleClips(mod)) {
       if (!clips.has(clip.key)) clips.set(clip.key, { key: clip.key, text: clip.text, voice: clip.voice ?? "es-MX-f", level });
     }
   }
