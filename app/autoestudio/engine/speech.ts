@@ -118,62 +118,76 @@ export function playClips(clips: Clip[], options: Options = {}): Promise<boolean
       clearTimeout(timer);
       timer = setTimeout(() => fail("audio-start-timeout"), 15000);
     };
+    // Device voice: only a fallback for a clip without a recording.
+    const speak = () => {
+      if (!synth) { fail("speech-unavailable"); return; }
+      warmVoices();
+      // cancel() does not clear paused; a paused global engine queues forever.
+      if (synth.speaking || synth.pending) synth.cancel();
+      if (synth.paused) synth.resume();
+      const selectedVoices = clips.map(clip => pickVoice(clip.voice));
+      // Never delegate voice selection to the browser's English/default voice.
+      // An empty/lazy catalog must be retried after voiceschanged, not spoken
+      // with an unknown accent. The existing UI exposes this error and resets.
+      if (selectedVoices.some(voice => !voice)) {
+        fail("speech-spanish-voice-unavailable");
+        return;
+      }
+      run.utterances = clips.map((clip, index) => {
+        const utterance = new SpeechSynthesisUtterance(clip.text);
+        const voice = selectedVoices[index]!;
+        utterance.lang = voice.lang.replaceAll("_", "-");
+        utterance.voice = voice;
+        utterance.rate = rate;
+        utterance.pitch = clip.voice?.endsWith("-m") ? 0.92 : 1.06;
+        utterance.onstart = () => onStart(index);
+        utterance.onerror = event => fail(`speech-${event.error}`);
+        utterance.onend = () => {
+          if (settled) return;
+          if (index === clips.length - 1) finish(true);
+          else expectStart();
+        };
+        return utterance;
+      });
+      expectStart();
+      for (const utterance of run.utterances) {
+        if (settled) break;
+        synth.speak(utterance);
+      }
+    };
     try {
       const sources = clips.map(clip => options.audio?.[audioKey(clip.text, clip.voice)]);
       if (sources.every(Boolean)) {
-        // Reuse the element unlocked by the first tap for subsequent files.
+        // Recorded MP3s are the normal path: they sound the same on every phone
+        // and need no Spanish voice installed. Reuse the element unlocked by the
+        // first tap for subsequent files.
         media ??= new Audio();
         const audio = media;
         const playFile = (index: number) => {
           if (settled) return;
+          // A file that cannot load (offline, blocked) falls back to the device
+          // voice when nothing has sounded yet; otherwise the error is shown.
+          const broken = (code: string) => {
+            if (settled) return;
+            if (!started && synth && clips.every(clip => pickVoice(clip.voice))) {
+              audio.onplaying = audio.onended = audio.onerror = null;
+              audio.pause();
+              speak();
+            } else fail(code);
+          };
           audio.src = sources[index]!;
           audio.playbackRate = rate;
           audio.onplaying = () => onStart(index);
-          audio.onerror = () => fail(`media-${audio.error?.code ?? "load"}`);
+          audio.onerror = () => broken(`media-${audio.error?.code ?? "load"}`);
           audio.onended = () => {
             if (index + 1 < clips.length) playFile(index + 1);
             else finish(true);
           };
           expectStart();
-          audio.play().catch(error => fail(`media-${error?.name ?? "play"}`));
+          audio.play().catch(error => broken(`media-${error?.name ?? "play"}`));
         };
         playFile(0);
-      } else {
-        if (!synth) { fail("speech-unavailable"); return; }
-        warmVoices();
-        // cancel() does not clear paused; a paused global engine queues forever.
-        if (synth.speaking || synth.pending) synth.cancel();
-        if (synth.paused) synth.resume();
-        const selectedVoices = clips.map(clip => pickVoice(clip.voice));
-        // Never delegate voice selection to the browser's English/default voice.
-        // An empty/lazy catalog must be retried after voiceschanged, not spoken
-        // with an unknown accent. The existing UI exposes this error and resets.
-        if (selectedVoices.some(voice => !voice)) {
-          fail("speech-spanish-voice-unavailable");
-          return;
-        }
-        run.utterances = clips.map((clip, index) => {
-          const utterance = new SpeechSynthesisUtterance(clip.text);
-          const voice = selectedVoices[index]!;
-          utterance.lang = voice.lang.replaceAll("_", "-");
-          utterance.voice = voice;
-          utterance.rate = rate;
-          utterance.pitch = clip.voice?.endsWith("-m") ? 0.92 : 1.06;
-          utterance.onstart = () => onStart(index);
-          utterance.onerror = event => fail(`speech-${event.error}`);
-          utterance.onend = () => {
-            if (settled) return;
-            if (index === clips.length - 1) finish(true);
-            else expectStart();
-          };
-          return utterance;
-        });
-        expectStart();
-        for (const utterance of run.utterances) {
-          if (settled) break;
-          synth.speak(utterance);
-        }
-      }
+      } else speak();
     } catch (error) {
       fail(error instanceof Error ? error.name : "audio-exception");
     }
