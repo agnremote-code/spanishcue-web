@@ -236,6 +236,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
         break;
       }
       case 'silla': break;
+      case 'mueble': box(simple, f.w, f.top, f.d, wood, f.x, f.top / 2, f.z); muebles.push({ model: f.model ?? 'side_table_01', x: f.x, z: f.z, tall: f.tall, rotY: f.rot ?? 0 }); break;
       case 'archivador': {
         box(statics, f.w, f.top, f.d, std('#8a909a', 0.45, 0.4), f.x, f.top / 2, f.z);
         for (let k = 0; k < 3; k++) box(statics, f.w - 0.06, 0.02, 0.02, dark, f.x, 0.3 + k * 0.38, f.z + (f.x > 20 ? -f.d / 2 : f.d / 2));
