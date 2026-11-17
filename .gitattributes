@@ -1,0 +1,2 @@
+# Radiance HDR light maps are binary, even when git guesses text.
+*.hdr binary
