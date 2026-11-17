@@ -151,4 +151,14 @@ export const guiaRespuestas: Record<string, { answer: string; steps: string[] }>
       "Practica hablando: una opinión, una objeción y una conclusión.",
     ],
   },
+  "como-ensenar-el-futuro": {
+    answer:
+      "El español habla del futuro con tres formas: ir a + infinitivo para intenciones, el presente para lo ya acordado y el futuro simple para predicciones y promesas. Se enseña en ese orden: ir a en A1, el futuro simple con sus doce irregulares en A2, y en B2 el futuro de probabilidad, como en «serán las diez».",
+    steps: [
+      "Empieza por los planes con ir a + infinitivo y el presente con marcador de tiempo.",
+      "Presenta el futuro simple con una predicción: infinitivo entero más terminaciones, y los irregulares en tres grupos.",
+      "Contrasta las tres formas con frases sobre el mismo día.",
+      "Practica hablando: predicciones, promesas y suposiciones sobre alguien que falta.",
+    ],
+  },
 };
