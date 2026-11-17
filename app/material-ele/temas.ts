@@ -310,6 +310,7 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
   const ids = tema.lessonIds.filter((id) => { const lesson = lessonById.get(id); return lesson ? lessonLevels(lesson).includes(level) : false; });
   if (ids.length < 2) return null;
   const items = ids.map((id) => lessonById.get(id)!);
+  const singleLevel = items.filter((lesson) => { const levels = lessonLevels(lesson); return levels.length === 1 && levels[0] === level; });
   const freeCount = ids.filter((id) => isFreeLesson(id)).length;
   const copy = levelCopy[tema.group];
   const lower = nameInSentence(tema);
@@ -327,9 +328,12 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
     h1: `${tema.name} en ${level}: ${ids.length} clases ${levelPhrase[level]}`, title: seoTitle && seoTitle.length <= 78 ? seoTitle : title, description: seoDescription && seoDescription.length >= 110 && seoDescription.length <= 165 ? seoDescription : description, order: copy.order,
     intro: `En ${level}, el tema «${tema.name}» se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. ${copy.where} ${lower} para decir lo que quiere decir.`,
     lessonIds: ids, freeCount,
-    goals: uniq(items.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
-    warmups: uniq(items.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
-    speaking: uniq(items.flatMap((lesson) => lesson.speaking).filter(Boolean)).slice(0, 8),
+    // BOARD-DECISION-007 H1: goals and prompts come only from classes written for this one level.
+    // A class written for several levels (the multi-level worlds) carries generic copy that would show
+    // C2 prompts on an A1 page, so it is listed but its copy is not shown here.
+    goals: uniq(singleLevel.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
+    warmups: uniq(singleLevel.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
+    speaking: uniq(singleLevel.flatMap((lesson) => lesson.speaking).filter(Boolean)).slice(0, 8),
     faq: [
       { question: `¿Qué parte de ${lower} corresponde a ${level}?`, answer: `La que enseñan estas ${ids.length} clases, alineadas con el MCER y el PCIC para ${level}: ${items.map((lesson) => lesson.title.replace(/:.*$/, "")).join("; ")}.` },
       { question: `¿Con cuál empiezo?`, answer: `Con la primera de la lista: ${copy.faqStart}. ${freeCount ? `${freeCount === 1 ? "Una es gratis y se abre" : `${freeCount} son gratis y se abren`} sin registro.` : "Para probar el formato, abre la clase gratis de este nivel en Material ELE por nivel."}` },
