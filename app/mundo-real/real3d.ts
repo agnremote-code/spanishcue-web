@@ -241,3 +241,44 @@ export async function placeFurniture(parent: THREE.Object3D, placements: Placeme
   parent.add(group);
   return group;
 }
+
+type Footprint = { x0: number; x1: number; z0: number; z1: number };
+/**
+ * Contact shade, painted once: the soft dark band where walls meet the floor and the ceiling, and the
+ * pool of shade under each piece of furniture. It is what screen-space occlusion would add, without
+ * its per-frame cost: two draw calls for the whole place.
+ */
+export function contactShade(parent: THREE.Object3D, walls: Footprint[], things: Footprint[], ceiling?: number) {
+  // A soft dark rectangle: full in the middle, fading smoothly to nothing over the outer 22 % of each side.
+  const canvas = document.createElement('canvas'); canvas.width = canvas.height = 64;
+  const context = canvas.getContext('2d')!;
+  const image = context.createImageData(64, 64);
+  const fade = (n: number) => { const k = Math.min(1, Math.min(n, 63 - n) / 14); return k * k * (3 - 2 * k); };
+  for (let y = 0; y < 64; y++) for (let x = 0; x < 64; x++) image.data[(y * 64 + x) * 4 + 3] = Math.round(255 * fade(x) * fade(y));
+  context.putImageData(image, 0, 0);
+  const pool = new THREE.CanvasTexture(canvas);
+  const quads: THREE.BufferGeometry[] = [];
+  const quad = (b: Footprint, grow: number, y: number) => {
+    const g = new THREE.PlaneGeometry(b.x1 - b.x0 + grow * 2, b.z1 - b.z0 + grow * 2);
+    g.rotateX(-Math.PI / 2); g.translate((b.x0 + b.x1) / 2, y, (b.z0 + b.z1) / 2);
+    quads.push(g);
+  };
+  // The texture keeps 22 % of its width as fade on each side, so the quad grows to leave the dark core over the footprint.
+  for (const w of walls) { quad(w, 0.55, 0.014); if (ceiling) quad(w, 0.7, ceiling - 0.012); }
+  for (const t of things) quad(t, 0.32, 0.016);
+  if (!quads.length) return () => {};
+  const positions: number[] = [], uvs: number[] = [], index: number[] = [];
+  quads.forEach((g, i) => {
+    positions.push(...(g.attributes.position.array as Float32Array)); uvs.push(...(g.attributes.uv.array as Float32Array));
+    index.push(...Array.from(g.index!.array, n => n + i * 4)); g.dispose();
+  });
+  const geometry = new THREE.BufferGeometry();
+  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+  geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+  geometry.setIndex(index);
+  const material = new THREE.MeshBasicMaterial({ map: pool, transparent: true, opacity: 0.42, depthWrite: false, side: THREE.DoubleSide, toneMapped: false });
+  const mesh = new THREE.Mesh(geometry, material);
+  mesh.renderOrder = 1; mesh.name = 'contact-shade';
+  parent.add(mesh);
+  return () => { mesh.removeFromParent(); geometry.dispose(); material.dispose(); pool.dispose(); };
+}

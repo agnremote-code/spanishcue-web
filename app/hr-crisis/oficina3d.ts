@@ -6,8 +6,8 @@
 import * as THREE from 'three';
 import { batchStatic } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, randomLook, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
-import { fitSurfaces, placeFurniture, surface, type Placement } from '../mundo-real/real3d';
-import { CAST, CEILING, CROWD, DOORS, ENTRANCE, FURNITURE, ROOMS, SPOTS, WALKERS, WALL, WALLS, crowdSeated, walkerAt } from './oficina.mjs';
+import { contactShade, fitSurfaces, placeFurniture, surface, type Placement } from '../mundo-real/real3d';
+import { CAST, CEILING, CROWD, DOORS, ENTRANCE, FURNITURE, ROOMS, SPOTS, WALKERS, WALL, WALLS, crowdSeated, footprint, walkerAt, wallBox } from './oficina.mjs';
 
 export type Npc = { key: string; person: Person; x: number; z: number; heading: number; seated: boolean; baseMood: string; seed: number; cast?: string; angryUntil?: number; body?: string };
 export type Mover = { key: string; person: Person; walker: (typeof WALKERS)[number]; x: number; z: number; heading: number; moving: boolean; seed: number; angryUntil?: number; body?: string };
@@ -100,7 +100,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
     tile.repeat.set((r.x1 - r.x0) / 2, (r.z1 - r.z0) / 2);
     const hard = r.id === 'recepcion' || r.id === 'pasillo' || r.id === 'direccion';
     const floorMat = !real ? new THREE.MeshStandardMaterial({ map: tile, roughness: r.id === 'direccion' ? 0.4 : 0.85 })
-      : hard ? surface('laminate_floor_02', r.id === 'direccion' ? '#8a6248' : '#ffffff') : surface('dirty_carpet', r.floor);
+      : hard ? surface('laminate_floor_02', r.id === 'direccion' ? '#8a6248' : '#ffffff') : surface('dirty_carpet', r.floor, { normalScale: new THREE.Vector2(0.35, 0.35) });
     const floor = new THREE.Mesh(new THREE.PlaneGeometry(r.x1 - r.x0, r.z1 - r.z0), floorMat);
     floor.rotation.x = -Math.PI / 2; floor.position.set((r.x0 + r.x1) / 2, 0.005, (r.z0 + r.z1) / 2); floor.receiveShadow = true;
     world.add(floor);
@@ -381,6 +381,8 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
       const edge = new THREE.Mesh(new THREE.PlaneGeometry(w + 0.16, d + 0.16), surface('dirty_carpet', '#e6dcc8')); edge.rotation.x = -Math.PI / 2; edge.position.set(x, 0.009, z); edge.receiveShadow = true; world.add(edge);
     }
     fitSurfaces(world);
+    // Shade where walls meet floor and ceiling, and under every piece of furniture.
+    contactShade(world, WALLS.filter(w => w[4] !== 'glass').map(w => wallBox(w as [number, number, number, number])), FURNITURE.filter(f => f.type !== 'pantalla' && f.type !== 'jaula').map(f => footprint(f)), CEILING);
     // Furniture and walls cast real shadows (not glass, signs or the ceiling).
     statics.traverse(o => { const m = o as THREE.Mesh; const mat = m.material as THREE.MeshStandardMaterial; if (m.isMesh && mat.isMeshStandardMaterial && !mat.transparent && mat !== panel && mat !== windowMat) m.castShadow = true; });
   }
