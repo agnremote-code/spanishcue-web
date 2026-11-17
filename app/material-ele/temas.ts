@@ -329,7 +329,7 @@ function buildLevelPage(tema: TemaPage, level: string): TemaLevelPage | null {
     intro: `En ${level}, el tema «${tema.name}» se trabaja en ${ids.length} clases: ${titles}${ids.length > 3 ? " y más" : ""}. ${copy.where} ${lower} para decir lo que quiere decir.`,
     lessonIds: ids, freeCount,
     // BOARD-DECISION-007 H1: goals and prompts come only from classes written for this one level.
-    // A class written for several levels (A0–C2 worlds) carries generic copy that would show
+    // A class written for several levels (the multi-level worlds) carries generic copy that would show
     // C2 prompts on an A1 page, so it is listed but its copy is not shown here.
     goals: uniq(singleLevel.flatMap((lesson) => lesson.goals.filter((goal) => goal && goal !== lesson.subtitle))).slice(0, 8),
     warmups: uniq(singleLevel.map((lesson) => lesson.warmup).filter(Boolean)).slice(0, 4),
