@@ -202,9 +202,9 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
       }
       case 'planta': {
         plant(simple, f.x, f.z, i);
-        // Three scanned plants take turns: a tall pachira, a leafy pot and a calathea.
-        const [model, tall] = ([['pachira_aquatica_01', 1.75], ['potted_plant_02', 0.95], ['calathea_orbifolia_01', 0.8]] as [string, number][])[i % 3];
-        muebles.push({ model, x: f.x, z: f.z, tall, rotY: i * 1.9 });
+        // Three light scanned plants take turns (the big pachira and the leafy pot cost 70 000 triangles each).
+        const [model, tall] = ([['calathea_orbifolia_01', 0.9], ['fern_02', 0.7], ['potted_plant_04', 1.1]] as [string, number][])[i % 3];
+        muebles.push({ model, x: f.x, z: f.z, tall, rotY: i * 1.9, small: true });
         break;
       }
       case 'cafetera': {
@@ -218,8 +218,8 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
         const top = f.type === 'escritorio-director' ? std('#5a3a24', 0.4) : f.type === 'isla' ? white : wood;
         const desk = f.type === 'escritorio' ? simple : statics;
         if (f.type === 'escritorio') muebles.push({ model: 'escritorio', x: f.x, z: f.z, rotY: Math.PI, fit: [f.w, f.top, f.d] });
-        if (f.type === 'escritorio' || f.type === 'escritorio-director') muebles.push({ model: 'desk_lamp_arm_01', x: f.x + f.w / 2 - 0.28, y: f.top, z: f.z - f.d / 2 + 0.3, tall: 0.5, rotY: 0.6 });
-        if (f.type === 'escritorio-director') muebles.push({ model: 'standing_picture_frame_01', x: f.x - f.w / 2 + 0.35, y: f.top, z: f.z - 0.2, tall: 0.24, rotY: Math.PI / 2 + 0.3 });
+        if (f.type === 'escritorio-director') muebles.push({ model: 'desk_lamp_arm_01', x: f.x + f.w / 2 - 0.28, y: f.top, z: f.z - f.d / 2 + 0.3, tall: 0.5, rotY: 0.6, small: true });
+        if (f.type === 'escritorio-director') muebles.push({ model: 'standing_picture_frame_01', x: f.x - f.w / 2 + 0.35, y: f.top, z: f.z - 0.2, tall: 0.24, rotY: Math.PI / 2 + 0.3, small: true });
         box(desk, f.w, 0.05, f.d, top, f.x, f.top - 0.025, f.z);
         if (f.type === 'escritorio-director') box(statics, f.w - 0.1, f.top - 0.05, 0.06, std('#4a2e1c', 0.5), f.x, (f.top - 0.05) / 2, f.z + f.d / 2 - 0.05);
         for (const [sx, sz] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) box(desk, 0.05, f.top - 0.05, 0.05, metal, f.x + sx * (f.w / 2 - 0.06), (f.top - 0.05) / 2, f.z + sz * (f.d / 2 - 0.06));
@@ -249,7 +249,7 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
       }
       case 'caja-fuerte': box(statics, f.w, f.top, f.d, std('#3a4048', 0.3, 0.7), f.x, f.top / 2, f.z); cyl(statics, 0.08, 0.08, 0.04, std('#c8a050', 0.3, 0.8), f.x, 0.6, f.z - f.d / 2 - 0.02).rotation.x = Math.PI / 2; break;
       case 'impresora': box(statics, f.w, f.top, f.d, std('#d8d8d4', 0.5), f.x, f.top / 2, f.z); box(statics, f.w * 0.7, 0.05, 0.3, dark, f.x, f.top + 0.02, f.z); printers.push(new THREE.Vector3(f.x, f.top + 0.05, f.z)); break;
-      case 'cajas': for (let k = 0; k < 3; k++) { box(simple, 0.55, 0.4, 0.45, std('#c8a070', 0.9), f.x - 0.3 + (k % 2) * 0.6, 0.2 + (k === 2 ? 0.4 : 0), f.z); muebles.push({ model: 'cardboard_box_01', x: f.x - 0.3 + (k % 2) * 0.6, y: k === 2 ? 0.4 : 0, z: f.z, rotY: k * 0.4, fit: [0.5, 0.4, 0.55] }); } break;
+      case 'cajas': for (let k = 0; k < 3; k++) { box(statics, 0.55, 0.4, 0.45, std('#c8a070', 0.9), f.x - 0.3 + (k % 2) * 0.6, 0.2 + (k === 2 ? 0.4 : 0), f.z); } break;
       case 'fuente': cyl(statics, 0.18, 0.2, 1, white, f.x, 0.5, f.z); cyl(statics, 0.14, 0.14, 0.4, std('#8ac8f0', 0.1, 0, { transparent: true, opacity: 0.7 }), f.x, 1.2, f.z); break;
       case 'encimera': {
         box(statics, f.w, f.top, f.d, std('#e8e2d6', 0.6), f.x, f.top / 2, f.z);
@@ -377,8 +377,8 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   if (real) {
     // Rugs under the places where people sit and talk.
     for (const [x, z, w, d, color] of [[-5.8, 15.2, 3.4, 4.2, '#7a2f3a'], [5.8, 15.2, 3.4, 4.2, '#7a2f3a'], [21.9, -4.5, 3.4, 4.6, '#2f4a6a'], [20, -12.4, 5, 4, '#6a2a2a'], [-20, 12.2, 3.6, 3.4, '#3a5a6a'], [-12, 12.2, 3.6, 3.4, '#5a6a3a']] as [number, number, number, number, string][]) {
-      const rug = new THREE.Mesh(new THREE.PlaneGeometry(w, d), surface('dirty_carpet', color)); rug.rotation.x = -Math.PI / 2; rug.position.set(x, 0.012, z); rug.receiveShadow = true; world.add(rug);
-      const edge = new THREE.Mesh(new THREE.PlaneGeometry(w + 0.16, d + 0.16), surface('dirty_carpet', '#e6dcc8')); edge.rotation.x = -Math.PI / 2; edge.position.set(x, 0.009, z); edge.receiveShadow = true; world.add(edge);
+      const rug = new THREE.Mesh(new THREE.PlaneGeometry(w, d), surface('dirty_carpet', color)); rug.rotation.x = -Math.PI / 2; rug.position.set(x, 0.02, z); rug.receiveShadow = true; world.add(rug);
+      const edge = new THREE.Mesh(new THREE.PlaneGeometry(w + 0.16, d + 0.16), surface('dirty_carpet', '#e6dcc8')); edge.rotation.x = -Math.PI / 2; edge.position.set(x, 0.012, z); edge.receiveShadow = true; world.add(edge);
     }
     fitSurfaces(world);
     // Shade where walls meet floor and ceiling, and under every piece of furniture.
@@ -389,19 +389,19 @@ export function buildOficina(scene: THREE.Scene, opts: { low: boolean; shadows: 
   batchStatic(statics, []);
   if (real) {
     batchStatic(soft, []);
-    // The things that make an office lived in: pictures on the walls, lamps over the tables, vases, cushions.
+    // The things that make an office lived in: pictures on the walls, vases, cushions.
     const frames: [number, number, number][] = [
       [-7.86, 11, 1], [7.86, 12.5, -1], [-17.6, 6.14, 0], [-14.4, 6.14, 0], [8.14, 13, 1],
       [-16, 5.86, 2], [9, 5.86, 2], [19.5, 5.86, 2], [-12, 2.14, 0], [5.6, 2.14, 0], [15, 2.14, 0],
       [-10.14, -6, -1], [-10.14, -12, -1], [-9.86, -8, 1], [16.14, -8, 1],
     ];
-    frames.forEach(([x, z, quarter], i) => muebles.push({ model: i % 2 ? 'hanging_picture_frame_02' : 'fancy_picture_frame_01', x, z, y: 1.3, tall: i % 2 ? 0.9 : 1.05, rotY: quarter * Math.PI / 2 }));
-    for (const [x, z] of [[-20, 12], [-12, 12], [11, -10], [11, -6], [20, -12], [-5.6, 15.2], [5.6, 15.2], [-17, -6], [22.6, -4.5]]) muebles.push({ model: 'modern_ceiling_lamp_01', x, z, y: CEILING - 0.62, tall: 0.62 });
+    frames.forEach(([x, z, quarter], i) => muebles.push({ model: i % 2 ? 'hanging_picture_frame_02' : 'fancy_picture_frame_01', x, z, y: 1.3, tall: i % 2 ? 0.9 : 1.05, rotY: quarter * Math.PI / 2, small: true }));
+    // No hanging lamps: the camera travels just under the ceiling and they swung through the picture.
     FURNITURE.forEach((f, i) => {
-      if (f.type === 'archivador') muebles.push({ model: i % 2 ? 'ceramic_vase_01' : 'ceramic_vase_02', x: f.x, y: f.top ?? 1.2, z: f.z, tall: 0.34 });
-      if (f.type === 'sofa') muebles.push({ model: 'throw_pillows_01', x: f.x, y: 0.45, z: f.z + 0.7, tall: 0.36, rotY: f.rot === 1 ? Math.PI / 2 : -Math.PI / 2 });
+      if (f.type === 'archivador' && i % 2) muebles.push({ model: 'ceramic_vase_01', x: f.x, y: f.top ?? 1.2, z: f.z, tall: 0.34, small: true });
+      if (f.type === 'sofa') muebles.push({ model: 'throw_pillows_01', x: f.x, y: 0.45, z: f.z + 0.7, tall: 0.36, rotY: f.rot === 1 ? Math.PI / 2 : -Math.PI / 2, small: true });
     });
-    muebles.push({ model: 'brass_vase_03', x: -1.9, y: 1.08, z: 10.5, tall: 0.26 });
+    muebles.push({ model: 'brass_vase_03', x: -1.9, y: 1.08, z: 10.5, tall: 0.26, small: true });
     placeFurniture(world, muebles, opts.shadows).then(() => { soft.removeFromParent(); soft.traverse(o => (o as THREE.Mesh).geometry?.dispose()); }).catch(() => { /* the simple furniture stays */ });
   }
 
