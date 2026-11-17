@@ -14,7 +14,8 @@ export const PADDLE_LEGACY_ANNUAL_CENTS = 12900;
 export const PADDLE_ANNUAL_CENTS = 15000;
 /** «Invitá a un colega»: one-period 100% discount (monthly price only, no checkout code), created by the owner in Paddle Live on 2026-10-31. */
 export const PADDLE_REFERRAL_DISCOUNT_ID = "dsc_01m686383k32zpnm3t5geedqss";
-export type PaddleOffer = "monthly" | "trial" | "annual";
+/** `promo`: first week US$0.99, then US$19.90/month, on a non-catalog price of the same product (app/promo-config.ts). */
+export type PaddleOffer = "monthly" | "trial" | "annual" | "promo";
 
 export type PaddleRuntimeConfig = {
   apiKey: string;

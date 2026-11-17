@@ -6,6 +6,10 @@ export const PAYPAL_LIVE_MONTHLY_PLAN_ID = "P-6KF00654VL845614NNLVQQNY";
 export const PAYPAL_LIVE_PRICE_CENTS = 1990;
 /** Amounts a PayPal payment may carry: the legacy US$15 Founder plan and, in Live, the US$19.90 plan. */
 export const PAYPAL_ALLOWED_CENTS = [APPROVED_PRICE_CENTS, PAYPAL_LIVE_PRICE_CENTS] as const;
+/** PayPal Live plan of the promo week (US$0.99 for 7 days, then US$19.90/month). Empty: the server
+ * finds it by name on the PRO product, or creates it once (owner order, 2026-11-17). */
+export const PAYPAL_LIVE_PROMO_PLAN_ID = "";
+export const PAYPAL_PROMO_PLAN_NAME = "SpanishCue PRO · primera semana US$0.99, luego US$19.90/mes";
 export const APPROVED_CURRENCY = "USD";
 export const APPROVED_FOUNDER_LIMIT = 1000;
 export const APPROVED_INTERVAL = { unit: "MONTH", count: 1 } as const;
@@ -19,6 +23,8 @@ export type BillingRuntimeConfig = {
   founderPlanId: string;
   /** The environment's previous Founder plan; only subscriptions already on it stay valid. */
   legacyFounderPlanId?: string;
+  /** Set per request only after the promo plan was fetched from PayPal and its terms verified. */
+  promoPlanId?: string;
   publicCheckoutEnabled: boolean;
   supervisedUserId: string;
   founderOffer: {

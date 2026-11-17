@@ -1,7 +1,9 @@
 import { env } from "cloudflare:workers";
 import { accountIdFromHeaders } from "../../../access-policy";
 import { billingConfig, billingReadiness, checkoutAllowed } from "../../../billing-config";
-import { getFounderOfferStatus } from "../../../../db/billing";
+import { getFounderOfferStatus, promoWeekEligible } from "../../../../db/billing";
+import { ensurePaypalPromoPlan } from "../../../paypal-server";
+import { PROMO_WEEK_CENTS, PROMO_WEEK_DAYS, PROMO_WEEK_ENDS_AT, PROMO_WEEK_THEN_CENTS, promoWeekActive } from "../../../promo-config";
 import { legalOperator } from "../../../legal/operator";
 import { paddleAnnualReady, paddleConfig, paddleReady } from "../../../paddle-config";
 
@@ -19,8 +21,26 @@ export async function GET(request: Request) {
     const paddleCheckoutAvailable = readiness === "live_ready"
       && config.publicCheckoutEnabled
       && paddleReady(paddleConfig(env));
+    // «Primera semana por US$0,99»: by card through Paddle, and by PayPal once its promo plan is verified.
+    const promoActive = promoWeekActive() && status.available;
+    const promoCard = promoActive && paddleCheckoutAvailable;
+    let promoPaypal = false;
+    if (promoActive && checkoutLive && config.paypalEnv === "live") {
+      try { promoPaypal = Boolean(await ensurePaypalPromoPlan(config)); } catch { promoPaypal = false; }
+    }
     return Response.json({
       ...status,
+      promoWeek: {
+        available: promoCard || promoPaypal,
+        cardAvailable: promoCard,
+        paypalAvailable: promoPaypal,
+        priceUsd: PROMO_WEEK_CENTS / 100,
+        days: PROMO_WEEK_DAYS,
+        thenPriceUsd: PROMO_WEEK_THEN_CENTS / 100,
+        endsAt: PROMO_WEEK_ENDS_AT,
+        // null: not signed in yet. The promo is for teachers who never paid before.
+        eligible: userId ? await promoWeekEligible(env.DB, userId) : null,
+      },
       priceUsd: 19.9,
       paypalPriceUsd: config.founderOffer.priceUsd,
       trialPriceUsd: 2,

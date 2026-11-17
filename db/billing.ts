@@ -1,3 +1,4 @@
+import { PROMO_WEEK_CENTS, PROMO_WEEK_THEN_CENTS } from "../app/promo-config";
 import { APPROVED_CURRENCY, APPROVED_PRICE_CENTS, PRO_PRODUCT_CODE, type BillingRuntimeConfig } from "../app/billing-config";
 
 export type PaypalEnvironment = "sandbox" | "live";
@@ -257,18 +258,37 @@ async function claimFounderSlot(db: D1Database, subscriptionId: number, userId: 
   return result?.founder_number ?? null;
 }
 
+/** The promo week is for teachers who never paid: no completed or refunded payment on any provider. */
+export async function promoWeekEligible(db: D1Database, userId: string) {
+  const paid = await db.prepare(`SELECT 1 AS found FROM billing_payments WHERE user_id = ? LIMIT 1`).bind(userId).first<{ found: number }>();
+  return !paid;
+}
+
+/** Plan of a PayPal subscription created at checkout (to tell a promo checkout from a regular one). */
+export async function paypalSubscriptionPlanId(db: D1Database, paypalSubscriptionId: string, environment: PaypalEnvironment) {
+  const row = await db.prepare(
+    `SELECT provider_plan_id AS planId FROM billing_subscriptions
+     WHERE provider = 'paypal' AND environment = ? AND provider_subscription_id = ? LIMIT 1`,
+  ).bind(environment, paypalSubscriptionId).first<{ planId: string | null }>();
+  return row?.planId ?? null;
+}
+
 export async function recordPaypalPayment(
   db: D1Database,
   input: {
     environment: PaypalEnvironment; paypalSubscriptionId: string; providerPaymentId: string;
     providerEventId?: string; amountCents: number; currency: string; status: PaymentStatus;
     occurredAt: number; paidThrough?: number | null;
+    /** The subscription is on the verified promo plan: US$0.99 opens its first week, then US$19.90. */
+    promoPlan?: boolean;
   },
   config: BillingRuntimeConfig,
 ) {
   if (input.environment !== config.paypalEnv) throw new Error("paypal_environment_mismatch");
   // A subscription created on the legacy US$15 Founder plan keeps renewing at US$15.
-  if (!(input.amountCents === Math.round(config.founderOffer.priceUsd * 100) || input.amountCents === APPROVED_PRICE_CENTS)
+  const promoTrial = Boolean(input.promoPlan) && input.amountCents === PROMO_WEEK_CENTS;
+  const promoMonth = Boolean(input.promoPlan) && input.amountCents === PROMO_WEEK_THEN_CENTS;
+  if (!(promoTrial || promoMonth || input.amountCents === Math.round(config.founderOffer.priceUsd * 100) || input.amountCents === APPROVED_PRICE_CENTS)
       || input.currency !== APPROVED_CURRENCY) throw new Error("paypal_payment_mismatch");
   const subscription = await subscriptionByPaypalId(db, input.paypalSubscriptionId, input.environment);
   if (!subscription) throw new Error("paypal_subscription_unknown");
@@ -295,15 +315,16 @@ export async function recordPaypalPayment(
       `SELECT id FROM billing_payments WHERE provider = 'paypal' AND environment = ? AND provider_payment_id = ?`,
     ).bind(input.environment, input.providerPaymentId).first<{ id: number }>();
     if (!payment) throw new Error("paypal_payment_not_persisted");
+    // The US$0.99 promo week is a paid trial: the first full month is the first subscription payment.
     const earliest = await db.prepare(
-      `SELECT id FROM billing_payments WHERE subscription_id = ? ORDER BY occurred_at, id LIMIT 1`,
+      `SELECT id FROM billing_payments WHERE subscription_id = ? AND amount_cents <> ${PROMO_WEEK_CENTS} ORDER BY occurred_at, id LIMIT 1`,
     ).bind(subscription.id).first<{ id: number }>();
-    const isFirst = earliest?.id === payment.id;
+    const isFirst = !promoTrial && earliest?.id === payment.id;
     const paidThrough = Math.max(subscription.paidThrough ?? 0, input.paidThrough ?? input.occurredAt);
     await db.prepare(
       `UPDATE billing_subscriptions SET first_payment_at = COALESCE(first_payment_at, ?),
        last_payment_at = ?, paid_through = ?, updated_at = ? WHERE id = ?`,
-    ).bind(input.occurredAt, input.occurredAt, paidThrough, stamp, subscription.id).run();
+    ).bind(promoTrial ? null : input.occurredAt, input.occurredAt, paidThrough, stamp, subscription.id).run();
     await db.prepare(
       `INSERT INTO access_grants (
         user_id, product_code, access_level, source, source_reference, plan_code,
@@ -317,7 +338,7 @@ export async function recordPaypalPayment(
     if (isFirst && subscription.offerCode === config.founderOffer.code) {
       await claimFounderSlot(db, subscription.id, subscription.userId, config);
     }
-    const eventName = isFirst ? "first_subscription_paid" : "subscription_renewed";
+    const eventName = promoTrial ? "trial_paid" : isFirst ? "first_subscription_paid" : "subscription_renewed";
     await db.prepare(
       `INSERT INTO billing_outbox_events (
         provider, environment, event_key, event_name, user_id, subscription_id, payment_id, occurred_at, created_at
@@ -325,7 +346,7 @@ export async function recordPaypalPayment(
        ON CONFLICT(provider, environment, event_key) DO NOTHING`,
     ).bind(input.environment, `${eventName}:${input.providerPaymentId}`, eventName, subscription.userId,
       subscription.id, payment.id, input.occurredAt, stamp).run();
-    return { kind: existing ? "duplicate" as const : isFirst ? "first" as const : "renewal" as const, paymentId: payment.id };
+    return { kind: existing ? "duplicate" as const : promoTrial ? "trial" as const : isFirst ? "first" as const : "renewal" as const, paymentId: payment.id, paidThrough };
   }
 
   if (!existing) throw new Error("paypal_payment_unknown");

@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale) for the «primera semana por US$0,99» promo, typed «Armá y lanzá, tanto para inglés como para español. Ya, autorizo todo.» on 2026-11-17 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAT55fT6qD4zbRbGaqWUcqgy), together with the standing approval for new English copy typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g): the checkout, the account panel, the home hero and the home pricing block announce the promo week and state that it renews at US$19.90 per month on day 8.",
+  "additions": [
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "PROMO"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Until"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": ": your first week of PRO for"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "US$0.99"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": ". Then US$19.90/month; cancel anytime."
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "PROMO · until ${until}"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Your first week of PRO for US$0.99"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Start for US$0.99 · card"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Start for US$0.99 · PayPal"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Create a free account and start for US$0.99"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "You pay US$0.99 today and get full PRO for 7 days. On day 8 the subscription renews automatically at US$19.90 per month until you cancel. We email you 2 days before, and you can cancel online from your account at any time. For your first subscription only."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "First week for US$0.99"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "First US$19.90 charge"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "US$0.99 for the first week, then US$19.90 / month"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "PROMO"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Until"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": ": your first week for"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "US$0.99"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": ". Then US$19.90/month; cancel anytime."
+    },
+    {
+      "path": "app/promo-config.ts",
+      "text": "30 November"
+    }
+  ]
+}

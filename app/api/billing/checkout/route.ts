@@ -1,13 +1,16 @@
 import { env } from "cloudflare:workers";
 import { accountIdFromHeaders, fullAccessFromHeaders, safeRelativeReturnPath } from "../../../access-policy";
 import { billingConfig, billingReadiness, checkoutAllowed } from "../../../billing-config";
-import { createPaypalSubscription } from "../../../paypal-server";
+import { createPaypalSubscription, ensurePaypalPromoPlan } from "../../../paypal-server";
+import { promoWeekActive } from "../../../promo-config";
 import {
   acquireCheckoutLock,
   completeCheckoutLock,
   createPendingSubscription,
   failCheckoutLock,
   getFounderOfferStatus,
+  paypalSubscriptionPlanId,
+  promoWeekEligible,
 } from "../../../../db/billing";
 import { legalOperator } from "../../../legal/operator";
 import { authorizePurchaseClaim, getOrCreatePurchaseClaim } from "../../../purchase-claim-cookie";
@@ -26,10 +29,17 @@ export async function POST(request: Request) {
   const raw = await request.text();
   if (raw.length > 1000) return Response.json({ error: "Solicitud no válida." }, { status: 400 });
   let returnTo = "/";
+  let promo = false;
   try {
-    const requested = (JSON.parse(raw) as { returnTo?: unknown }).returnTo;
+    const body = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown };
+    const requested = body.returnTo;
+    if (body.offer !== undefined && body.offer !== "monthly" && body.offer !== "promo") throw new Error("invalid_offer");
+    promo = body.offer === "promo";
     returnTo = safeRelativeReturnPath(typeof requested === "string" && requested.length <= 300 ? requested : null);
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
+  // The promo week needs an account: it is only for teachers who never paid before.
+  if (promo && !userId) return Response.json({ error: "Crea tu cuenta gratis o inicia sesión para usar la promo.", code: "promo_account_required" }, { status: 401 });
+  if (promo && !promoWeekActive()) return Response.json({ error: "La promo ya terminó.", code: "promo_ended" }, { status: 410 });
 
   const config = billingConfig(env);
   // Sandbox is intentionally available for the end-to-end test flow. Live
@@ -74,21 +84,32 @@ export async function POST(request: Request) {
         throw error;
       }
     }
+    let planId = config.founderPlanId;
+    if (promo) {
+      if (!(await promoWeekEligible(env.DB, userId))) {
+        return Response.json({ error: "La promo es solo para la primera suscripción.", code: "promo_not_eligible" }, { status: 409 });
+      }
+      planId = await ensurePaypalPromoPlan(config);
+    }
     const requestId = crypto.randomUUID();
     const lock = await acquireCheckoutLock(env.DB, {
       environment: config.paypalEnv, userId, requestId, heldUntil: Math.floor(Date.now() / 1000) + 120,
     });
     if (lock.kind === "ready") {
+      // A checkout opened a moment ago for the other offer must not be reused for this one.
+      if ((await paypalSubscriptionPlanId(env.DB, lock.paypalSubscriptionId, config.paypalEnv)) !== planId) {
+        return Response.json({ error: "Ya abriste otro pago con PayPal hace un momento. Vuelve a intentarlo en dos minutos." }, { status: 409 });
+      }
       return Response.json({ approvalUrl: lock.approvalUrl }, { headers: { "cache-control": "no-store" } });
     }
     if (lock.kind === "busy") {
       return Response.json({ error: "Ya estamos preparando tu suscripción. Vuelve a intentarlo en unos segundos." }, { status: 409 });
     }
     try {
-      const paypal = await createPaypalSubscription(config, { origin, returnTo, userId, requestId: lock.requestId });
+      const paypal = await createPaypalSubscription(config, { origin, returnTo, userId, requestId: lock.requestId, planId });
       await createPendingSubscription(env.DB, {
         environment: config.paypalEnv, userId, paypalSubscriptionId: paypal.subscriptionId,
-        planId: config.founderPlanId, offerCode: config.founderOffer.code,
+        planId, offerCode: config.founderOffer.code,
       });
       await completeCheckoutLock(env.DB, {
         environment: config.paypalEnv, userId, requestId: lock.requestId,

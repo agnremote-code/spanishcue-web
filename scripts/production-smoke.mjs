@@ -135,6 +135,13 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
     } catch (error) {
       results.push({ path: "/api/billing/paddle/webhook-status", status: 0, paddleWebhook: { error: String(error?.message || error).slice(0, 120) } });
     }
+    // Report only: launch check of the promo week (Paddle preview and the PayPal promo plan).
+    try {
+      const response = await request("/api/billing/promo-status", { headers });
+      results.push({ path: "/api/billing/promo-status", status: response.status, promoWeek: await response.json().catch(() => null) });
+    } catch (error) {
+      results.push({ path: "/api/billing/promo-status", status: 0, promoWeek: { error: String(error?.message || error).slice(0, 120) } });
+    }
   }
   // Checkout, payment confirmation and conversions refuse cross-site calls.
   for (const path of ["/api/billing/paddle/checkout", "/api/billing/paddle/confirm", "/api/billing/checkout", "/api/billing/conversion"]) {

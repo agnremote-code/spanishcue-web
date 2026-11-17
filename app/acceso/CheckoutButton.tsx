@@ -8,6 +8,7 @@ import "./payment-options.css";
 import { checkoutAttribution, trackMarketingEvent } from "../marketing/analytics";
 import { consentFor } from "../privacy/consent";
 import ArsPrice from "../marketing/ArsPrice";
+import { PROMO_WEEK_UNTIL } from "../promo-config";
 
 type FounderStatus = {
   limit: number;
@@ -19,6 +20,8 @@ type FounderStatus = {
   trialCheckoutAvailable?: boolean;
   annualCheckoutAvailable?: boolean;
   paypalPriceUsd?: number;
+  /** «Primera semana por US$0,99»; `eligible` is null until the teacher signs in. */
+  promoWeek?: { available?: boolean; cardAvailable?: boolean; paypalAvailable?: boolean; endsAt?: number; eligible?: boolean | null };
   mode: "sandbox" | "live";
 };
 
@@ -152,14 +155,14 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     window.location.assign(signedIn ? "/cuenta?checkout=paddle" : "/pro/claim?provider=paddle");
   }
 
-  async function checkoutPaddle(offer: "monthly" | "trial" | "annual" = "monthly") {
+  async function checkoutPaddle(offer: "monthly" | "trial" | "annual" | "promo" = "monthly") {
     if (starting.current) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
-    if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable) || (offer === "annual" && !founder.annualCheckoutAvailable)) return;
+    if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable) || (offer === "annual" && !founder.annualCheckoutAvailable) || (offer === "promo" && !founder.promoWeek?.cardAvailable)) return;
     starting.current = true;
     // One checkout_start per opened checkout; `plan` tells the trial apart and
     // `value` is the first real charge. Starting a checkout is not a purchase.
-    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : offer === "annual" ? 150 : 19.9, currency: "USD", method: "paddle" });
+    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : offer === "annual" ? 150 : 19.9, ...(offer === "promo" ? { value: 0.99 } : {}), currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
@@ -211,16 +214,18 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     }
   }
 
-  async function checkoutPayPal() {
+  const checkoutPayPal = () => startPayPal("monthly");
+
+  async function startPayPal(offer: "monthly" | "promo") {
     if (starting.current) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_paypal", signed_in: signedIn });
-    if (!founder?.available || !founder.checkoutLive) return;
+    if (!founder?.available || !founder.checkoutLive || (offer === "promo" && !founder.promoWeek?.paypalAvailable)) return;
     starting.current = true;
-    trackMarketingEvent("checkout_start", { plan: "paypal", value: founder.paypalPriceUsd ?? 15, currency: "USD", method: "paypal" });
+    trackMarketingEvent("checkout_start", { plan: offer === "promo" ? "promo" : "paypal", value: offer === "promo" ? 0.99 : founder.paypalPriceUsd ?? 15, currency: "USD", method: "paypal" });
     setStatus("paypal"); setMessage("");
     try {
       const response = await fetch("/api/billing/checkout", {
-        method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" }, body: JSON.stringify({ returnTo }),
+        method: "POST", credentials: "same-origin", headers: { "content-type": "application/json" }, body: JSON.stringify(offer === "promo" ? { returnTo, offer } : { returnTo }),
       });
       const body = await response.json() as { approvalUrl?: unknown; claimUrl?: unknown; error?: unknown };
       if (response.ok && body.claimUrl === "/pro/claim?provider=paypal") {
@@ -238,6 +243,32 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   }
 
   const busy = status === "paypal" || status === "paddle" || status === "confirming";
+
+  /** The promo week, above the regular plans: price today, what renews and when, and how to cancel. */
+  function promoWeekOffer(loaded: FounderStatus | null) {
+    const promo = loaded?.promoWeek;
+    if (!loaded?.available || !promo?.available || promo.eligible === false) return null;
+    const es = locale === "es";
+    const until = PROMO_WEEK_UNTIL[es ? "es" : "en"];
+    const accountHref = `/ingresar?modo=registro&returnTo=${encodeURIComponent(`/acceso?returnTo=${encodeURIComponent(returnTo)}`)}`;
+    return <div className="checkout-promo">
+      <strong className="checkout-promo-tag">{es ? `PROMO · hasta el ${until}` : `PROMO · until ${until}`}</strong>
+      <p className="checkout-promo-title">{es ? "Tu primera semana de PRO por US$0,99" : "Your first week of PRO for US$0.99"}</p>
+      {signedIn ? <>
+        {promo.cardAvailable && <button className="checkout-promo-button" type="button" onClick={() => checkoutPaddle("promo")} disabled={busy}>
+          {status === "paddle" || status === "confirming" ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Empezar por US$0,99 · tarjeta" : "Start for US$0.99 · card")}
+        </button>}
+        {!paddleOnly && promo.paypalAvailable && <button className="checkout-promo-button checkout-promo-paypal" type="button" onClick={() => startPayPal("promo")} disabled={busy}>
+          {status === "paypal" ? t("checkout.openingPayPal") : (es ? "Empezar por US$0,99 · PayPal" : "Start for US$0.99 · PayPal")}
+        </button>}
+      </> : <a className="checkout-promo-button" href={accountHref} onClick={() => trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "promo_week_account", signed_in: false })}>
+        {es ? "Crear cuenta gratis y empezar por US$0,99" : "Create a free account and start for US$0.99"}
+      </a>}
+      <p className="checkout-promo-terms">{es
+        ? "Pagas US$0,99 hoy y tienes PRO completo durante 7 días. El día 8 la suscripción se renueva sola a US$19,90 por mes, hasta que canceles. Te avisamos por correo 2 días antes y puedes cancelar en línea desde tu cuenta cuando quieras. Solo para tu primera suscripción."
+        : "You pay US$0.99 today and get full PRO for 7 days. On day 8 the subscription renews automatically at US$19.90 per month until you cancel. We email you 2 days before, and you can cancel online from your account at any time. For your first subscription only."}</p>
+    </div>;
+  }
   // The landing variant renders its final layout (disabled) while the status
   // loads, so the purchase controls never push the rest of the page down.
   if (variant === "landing" && founder === undefined) return landingCheckout(null);
@@ -258,6 +289,8 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
         ? locale === "es" ? `${founder.remaining} de ${founder.limit} lugares disponibles` : `${founder.remaining} of ${founder.limit} places available`
         : locale === "es" ? "Oferta fundadora completa" : "Founder offer fully claimed"}
     </strong>
+
+    {promoWeekOffer(founder)}
 
     {founder.paddleCheckoutAvailable && (
       <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !founder.available}>
@@ -301,6 +334,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     return <div className="checkout-action checkout-landing" aria-busy={pending}>
       {offer.mode === "sandbox" && <strong className="checkout-availability closed">{es ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
       {!pending && !offer.available && <strong className="checkout-availability closed">{es ? "Oferta fundadora completa" : "Founder offer fully claimed"}</strong>}
+      {promoWeekOffer(loaded)}
       <div className="checkout-landing-plans">
         {offer.paddleCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-monthly">
           <button className="checkout-card-button" type="button" onClick={() => checkoutPaddle("monthly")} disabled={busy || !offer.available}>

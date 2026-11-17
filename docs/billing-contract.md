@@ -11,6 +11,16 @@
 
 The constants live in `app/billing-config.ts`. Runtime configuration may reduce the enabled founder capacity but cannot raise it above 1,000 or change the accepted settled amount.
 
+## Promo week «primera semana por US$0,99» (owner order, 2026-11-17)
+
+Source of truth: `app/promo-config.ts`. New teachers pay USD 0.99 for the first 7 days and the same subscription then renews at the regular USD 19.90 every month until cancelled. The promo can be started until the end of 30 November 2026 (Argentina); subscriptions started before that keep working afterwards. Nothing above changes: no existing plan, price or subscription is edited.
+
+- **Account required, first subscription only.** `offer: "promo"` is refused without a signed-in account (`promo_account_required`), after the end date (`promo_ended`) and for an account with any earlier payment (`promo_not_eligible`, `promoWeekEligible`). The regular monthly and annual offers keep checkout before account creation.
+- **Paddle.** The transaction carries one non-catalog price of the PRO product (`paddlePromoPrice`): USD 19.90 monthly with a 7-day paid trial at USD 0.99, payment method required, tax included. It has no pinned ID; `paddleOffer` accepts it only with exactly those terms, on that product, and never on a catalog price ID. The USD 0.99 charge is a paid trial (`trial_paid`, seven days of access, no Founder slot); the first USD 19.90 is `first_subscription_paid`. It does not stack with the referral discount.
+- **PayPal.** Its own plan on the PRO product: one `TRIAL` week at USD 0.99, then `REGULAR` monthly at USD 19.90, no setup fee. `ensurePaypalPromoPlan` uses `PAYPAL_LIVE_PROMO_PLAN_ID` when pinned, otherwise finds the plan by its exact name and, only when PayPal has none, creates it once with a fixed `PayPal-Request-Id` (this is the single owner-authorized exception to "never create PayPal resources"). A subscription or a USD 0.99 payment on that plan is accepted only after the plan is fetched from PayPal and `validatePaypalPromoPlan` confirms its terms (`withPaypalPromoPlan`).
+- **Disclosure and reminder.** Every promo button sits next to the sentence stating the USD 19.90 monthly renewal on day 8 and how to cancel. When the paid week is recorded, `server/promo-reminder.ts` schedules one Resend mail two days before the first full charge (idempotent per subscription, best effort).
+- **Launch check.** `GET /api/billing/promo-status` reports, without secrets, whether Paddle accepts the promo price (a preview that creates nothing) and which PayPal plan carries the promo. The production smoke prints it as a notice.
+
 ## Trust and access boundary
 
 The Worker verifies Firebase, resolves the stable internal `users.id`, and replaces all browser-supplied `x-chespanish-*` headers. Page, API, JavaScript and premium media authorization consumes only those server-created headers and persisted `access_grants`. Owner access remains a separate role and is never inferred from an authenticated teacher.

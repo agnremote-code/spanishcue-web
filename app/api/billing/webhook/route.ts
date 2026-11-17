@@ -1,6 +1,8 @@
 import { env } from "cloudflare:workers";
 import { billingConfig, paypalReady } from "../../../billing-config";
-import { getPaypalSubscription, validatePaypalPayment, validatePaypalSubscription, verifyPaypalWebhook } from "../../../paypal-server";
+import { getPaypalSubscription, validatePaypalPayment, validatePaypalSubscription, verifyPaypalWebhook, withPaypalPromoPlan } from "../../../paypal-server";
+import { PROMO_WEEK_CENTS } from "../../../promo-config";
+import { schedulePromoReminder } from "../../../../server/promo-reminder";
 import {
   applyPaypalSubscriptionLifecycle,
   finishWebhook,
@@ -77,7 +79,7 @@ export async function POST(request: Request) {
   const eventId = typeof event.id === "string" ? event.id : "";
   const eventType = typeof event.event_type === "string" ? event.event_type : "";
   if (!eventId || !eventType) return new Response("invalid event", { status: 400 });
-  const config = billingConfig(env);
+  let config = billingConfig(env);
   if (!paypalReady(config)) return new Response("billing unavailable", { status: 503 });
   if (!(await verifyPaypalWebhook(config, request, event))) return new Response("invalid signature", { status: 401 });
   const providerSubscriptionId = subscriptionId(event);
@@ -124,6 +126,9 @@ export async function POST(request: Request) {
       await finishWebhook(env.DB, config.paypalEnv, eventId, "processed");
       return Response.json({ ok: true });
     }
+    // A subscription on the promo plan is accepted only after PayPal confirms that plan's terms.
+    config = await withPaypalPromoPlan(config, provider.plan_id);
+    const promoPlan = Boolean(config.promoPlanId) && provider.plan_id === config.promoPlanId;
     if (!(await validatePaypalOwnedSubscription(env.DB, provider, {
       subscriptionId: providerSubscriptionId, userId: local.userId, config,
     }))) throw new Error("paypal_subscription_mismatch");
@@ -143,9 +148,9 @@ export async function POST(request: Request) {
     } else if (payment) {
       const money = paymentMoney(event);
       const providerPaymentId = paymentId(event);
-      if (!providerPaymentId || !validatePaypalPayment(money, config)) throw new Error("paypal_payment_mismatch");
+      if (!providerPaymentId || !validatePaypalPayment(money, config, provider.plan_id)) throw new Error("paypal_payment_mismatch");
       const paidThrough = seconds(provider.billing_info?.next_billing_time);
-      await recordPaypalPayment(env.DB, {
+      const recorded = await recordPaypalPayment(env.DB, {
         environment: config.paypalEnv,
         paypalSubscriptionId: providerSubscriptionId,
         providerPaymentId,
@@ -155,7 +160,11 @@ export async function POST(request: Request) {
         status: payment,
         occurredAt: eventTime,
         paidThrough,
+        promoPlan,
       }, config);
+      if (recorded.kind === "trial" && cents(money.value) === PROMO_WEEK_CENTS && paidThrough) {
+        await schedulePromoReminder(env, env.DB, { userId: local.userId, provider: "paypal", subscriptionId: providerSubscriptionId, chargeAt: paidThrough });
+      }
     }
     await finishWebhook(env.DB, config.paypalEnv, eventId, "processed");
     return Response.json({ ok: true });
