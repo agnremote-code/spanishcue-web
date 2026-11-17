@@ -227,6 +227,21 @@ test('every spoken clip has text and a known voice', () => {
   const manifest = JSON.parse(readFileSync('app/autoestudio/audio-manifest.json', 'utf8'));
   for (const [key, file] of Object.entries(manifest.clips)) {
     assert.match(key, /^[0-9a-f]{16}$/);
+    assert.equal(file, `/audio/autoestudio/${key}.mp3`);
     assert.ok(existsSync(`public${file}`), file);
   }
+});
+
+// Students' phones often have no Spanish voice (Android, in-app browsers): the
+// lesson stayed silent three times. Every clip must ship as a recording; the
+// device voice is only a fallback. New or edited text? Run
+// scripts/generate-autoestudio-audio.py before merging.
+test('every Autoestudio clip is recorded, so no week depends on the device voice', () => {
+  const manifest = JSON.parse(readFileSync('app/autoestudio/audio-manifest.json', 'utf8'));
+  const missing = [];
+  for (const mod of allModules) {
+    for (const clip of course.moduleClips(mod)) if (!manifest.clips[clip.key]) missing.push(`${mod.id}: ${clip.text}`);
+  }
+  assert.deepEqual(missing.slice(0, 10), [], `${missing.length} clips without a recording`);
+  assert.match(readFileSync('app/access-policy.ts', 'utf8'), /freeAudioPrefixes = new Set\(\[[^\]]*'autoestudio'/, 'students with a pass (no PRO account) must be able to load the recordings');
 });
