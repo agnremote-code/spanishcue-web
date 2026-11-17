@@ -53,6 +53,7 @@ const describe = (base: string, extra: string) => {
 function activityPage(page: ElePage, activity: EleActivity): ActividadPage {
   const slug = slugify(activity.name);
   const level = activityLevel(page, activity);
+  const ownLevel = /\b[ABC][12]\b/.test(activity.goal);
   // A level guide («Material ELE A1») has no topic to name; only topic guides («Ser y estar») add «de …».
   const topic = page.kind === "topic" ? page.label.toLowerCase() : "";
   const title = fit(...(topic ? [`${activity.name}: actividad ELE ${level} de ${topic} | SpanishCue`] : []), `${activity.name}: actividad ELE ${level} | SpanishCue`);
@@ -62,7 +63,7 @@ function activityPage(page: ElePage, activity: EleActivity): ActividadPage {
     kind: "actividad", slug, path: `${MATERIAL_ELE_PATH}/actividad/${slug}`, title, description, level, activity, parent: page, siblings,
     h1: topic ? `${activity.name}: actividad de ${topic} para la clase de ELE` : `${activity.name}: actividad de ELE de nivel ${level}`,
     faq: [
-      { question: `¿Para qué nivel es «${activity.name}»?`, answer: `Para alumnos de nivel ${level}. Está pensada para una clase particular online o un grupo pequeño de adultos, y dura unos ${activity.minutes} minutos.` },
+      { question: `¿Para qué nivel es «${activity.name}»?`, answer: `${ownLevel || !level.includes("–") ? `Para alumnos de nivel ${level}.` : `No tiene un nivel propio: la guía «${page.h1}» la propone para ${level}, así que adapta las frases modelo al nivel del grupo.`} Está pensada para una clase particular online o un grupo pequeño de adultos, y dura unos ${activity.minutes} minutos.` },
       { question: "¿Qué necesito para hacerla?", answer: `Solo la ficha: ${activity.steps.length} pasos, ${activity.prompts.length === 1 ? "una frase modelo" : `${activity.prompts.length} frases modelo`} y la corrección más frecuente. ${activity.online}` },
       { question: "¿Dónde está el resto del material?", answer: `En la guía «${page.h1}», con ${page.activities.length} actividades${page.exercise ? ", un ejercicio con soluciones" : ""} y las clases interactivas que enseñan el mismo punto.` },
     ],

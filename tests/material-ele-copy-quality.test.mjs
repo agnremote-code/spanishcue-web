@@ -119,11 +119,38 @@ test('G-H6: free-class claims on topic and level pages are true',()=>{
  for(const p of m.temaLevelPages){
   assert.equal(p.freeCount,p.lessonIds.filter((id)=>m.isFreeLesson(id)).length,p.path);
   const copy=copyOf(p);
-  if(/Tres clases gratis por nivel/.test(copy))assert.ok(freeAt(p.level)>=3,`${p.path} promises three free classes at ${p.level}; ${freeAt(p.level)} exist`);
+  if(/Tres clases gratis por nivel/.test(copy))for(const level of ['A1','A2','B1','B2','C1','C2'])assert.ok(freeAt(level)>=3,`${p.path} promises three free classes at every level; ${level} has ${freeAt(level)}`);
   if(/la clase gratis de este nivel/.test(copy))assert.ok(freeAt(p.level)>=1,`${p.path} points to a free ${p.level} class that does not exist`);
  }
  for(const p of m.temaPages){
   assert.equal(p.freeCount,p.lessonIds.filter((id)=>m.isFreeLesson(id)).length,p.path);
   if(p.freeCount===0)for(const level of p.levels)assert.ok(freeAt(level)>=1,`${p.path} sends ${level} teachers to a free class of their level that does not exist`);
  }
+});
+
+// BOARD-DECISION-007 H1 (Martin, 2026-11-17): a level page never shows another level's teaching copy.
+// formatos/comprension-auditiva/a1 used to show the same C2 prompts as /c2, taken from A0–C2 classes.
+test('G-H1b: a level page shows goals, warm-ups and prompts only from classes written for that one level',()=>{
+ const byId=new Map(m.lessonsForTest.map((l)=>[l.id,l]));
+ for(const p of m.temaLevelPages){
+  const single=p.lessonIds.map((id)=>byId.get(id)).filter((l)=>{const lv=levelsOf(l);return lv.length===1&&lv[0]===p.level;});
+  for(const goal of p.goals)assert.ok(single.some((l)=>l.goals.includes(goal)),`${p.path} shows a goal from a class of another level: ${goal}`);
+  for(const warmup of p.warmups)assert.ok(single.some((l)=>l.warmup===warmup),`${p.path} shows a warm-up from a class of another level: ${warmup}`);
+  for(const prompt of p.speaking)assert.ok(single.some((l)=>l.speaking.includes(prompt)),`${p.path} shows a prompt from a class of another level: ${prompt}`);
+ }
+ const a1=m.temaLevelPageByPath.get('/material-ele/formatos/comprension-auditiva/a1');
+ assert.ok(a1);
+ assert.doesNotMatch([...a1.goals,...a1.speaking].join(' '),/A0 a C2|perdón que nunca pediste/);
+});
+
+test('an activity without a level of its own never claims its guide\'s whole range as its level',()=>{
+ let fallback=0;
+ for(const p of m.actividadPages){
+  if(/\b[ABC][12]\b/.test(p.activity.goal)||!p.level.includes('–'))continue;
+  fallback++;
+  const answer=p.faq[0].answer;
+  assert.doesNotMatch(answer,/^Para alumnos de nivel/,p.path);
+  assert.match(answer,/No tiene un nivel propio/,p.path);
+ }
+ assert.ok(fallback>=1,'no fallback activity found');
 });

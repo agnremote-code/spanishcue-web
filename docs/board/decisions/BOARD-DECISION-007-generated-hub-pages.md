@@ -2,7 +2,7 @@
 
 - Date: 2026-11-17 (Tuesday SEO routine, W47 plan item 1, [assessments/2026-W46.md](../assessments/2026-W46.md) §6)
 - Proposed by: Alejandro (CEO, technical SEO)
-- Status: **DRAFT v1. Votes pending from Martin and Sofia.** One objection round, then LOCKED (CONSTITUTION §2).
+- Status: **ADOPTED v2, 3 of 3, LOCKED (2026-11-17).** v1 drew APPROVE WITH CHANGES from Martin (4 changes) and Sofia (3 wording changes plus code notes); the facilitator applied all of them in v2 (see §Votes). Both votes were conditional on those changes being applied, so they count as APPROVE for v2.
 - Labels: every claim is VERIFIED (with its source), UNKNOWN or HYPOTHESIS. Search Console figures come from the facilitator's facts sheet of 2026-11-17 (Windsor `searchconsole`, `sc-domain:spanishcue.com`, data through 2026-11-14). Code facts were read on branch `claude/seo-tuesday-20261117` (HEAD 34cf110).
 
 ## 1. The question
@@ -35,12 +35,12 @@ What this means: the generated level pages are the site's best-ranking traffic s
 
 | # | Clause | Machine-enforced today? |
 |---|---|---|
-| H1 | **Level honesty.** Level page: every listed class is written for that level. Topic page: the stated span is computed from its classes. Activity page: the level its own goal names, else its guide's range | YES. Level: `tests/material-ele-temas.test.mjs:77`. Topic span: by construction only (`app/material-ele/temas.ts:225,227`). Activity: `tests/material-ele-copy-quality.test.mjs:37-50,94-98` |
-| H2 | **Substance.** Level page lists ≥2 authored classes of its level. Topic page ≥1 authored class and a hand-written intro | YES. `temas.ts:305` (`ids.length < 2` returns null); `tests/material-ele-temas.test.mjs:13,76`; intro unique and ≥80 chars at `:28,33` |
+| H1 | **Level honesty.** Level page: every listed class is written for that level, **and the goals, warm-ups and prompts it shows come only from classes written for that one level** (v2, Martin change 1). Topic page: the stated span is computed from its classes. Activity page: the level its own goal names; when it names none, the page says the range is the guide's, never that the activity is for A1–C2 (v2, Martin change 2). Previous wording: Level page: every listed class is written for that level. Topic page: the stated span is computed from its classes. Activity page: the level its own goal names, else its guide's range | YES. Level: `tests/material-ele-temas.test.mjs:77`. Topic span: by construction only (`app/material-ele/temas.ts:231,233`). Activity: `tests/material-ele-copy-quality.test.mjs:37-50,94-98` |
+| H2 | **Substance.** Level page lists ≥2 authored classes of its level. Topic page ≥1 authored class and a hand-written intro | YES. `temas.ts:311` (`ids.length < 2` returns null); `tests/material-ele-temas.test.mjs:13,76`; intro unique and ≥80 chars at `:28,33` |
 | H3 | **Unique bounded metadata.** Title ≤78, description 110–165, unique path/title/H1 (and intro for topic and level pages), ≥2–3 FAQ, in sitemap | YES. `tests/material-ele-temas.test.mjs:22-35,69-86`; `tests/material-ele-actividades.test.mjs:17-30` |
 | H4 | **Copy quality.** Template Spanish agrees for every topic; capitals and acronyms kept; no invented price, customers or rankings | YES. `tests/material-ele-copy-quality.test.mjs:12-35,53-58`; `tests/material-ele-temas.test.mjs:47-51`; `tests/material-ele-actividades.test.mjs:42-46` |
 | H5 | **No invented per-page teaching content.** Goals, warm-ups and speaking prompts on topic and level pages are copied from the listed classes. Activity pages show their guide's authored activity | **YES since this PR** for topic and level pages: guard G-H5 (`tests/material-ele-copy-quality.test.mjs`), mutation-checked by the facilitator (an injected «Objetivo inventado» goal fails it). Activity pages: by construction (`app/material-ele/actividades.ts:53-62`) |
-| H6 | **True access claims.** Any "free class" sentence is true for that page | **YES since this PR**: guard G-H6. The sentences at `temas.ts:321` («Tres clases gratis por nivel…») and `temas.ts:340`/`:251` («la clase gratis de este nivel», «una clase gratis de tu nivel») are **true today**: every level A1–C2 has three free grammar classes (VERIFIED, `app/access-policy.ts:1-2`). The guard fails if that stops being true (mutation-checked: removing the C2 samples fails it). `app/material-ele/guias.ts:574` names only A1–B2; it understates but is not false (recommendation: add C1 and C2) |
+| H6 | **True access claims.** Any "free class" sentence is true for that page | **YES since this PR**: guard G-H6. The sentences at `temas.ts:321` («Tres clases gratis por nivel…») and `temas.ts:335`/`:251` («la clase gratis de este nivel», «una clase gratis de tu nivel») are **true today**: every level A1–C2 has three free grammar classes (VERIFIED, `app/access-policy.ts:1-2`). The guard fails if that stops being true (mutation-checked: removing the C2 samples fails it). `app/material-ele/guias.ts:574` names only A1–B2; it understates but is not false (recommendation: add C1 and C2) |
 | H7 | **URL stability.** A published level path is generated or 308-redirects to its topic | YES. `tests/material-ele-copy-quality.test.mjs:79-91` |
 | H8 | **Factual correctness of authored content** shown on the page (e.g. the «café» syllable error) | Partly. Single known defects are pinned (`copy-quality.test.mjs:49`). test:language scans `app/` for voseo only (`scripts/neutral-spanish.mjs:8`), not facts. General correctness stays a human audit duty (§3.4) |
 
@@ -76,7 +76,18 @@ Whether the parent guides themselves meet §3.2 is UNKNOWN. They are audited whe
 - The 2027-02-16 measurement shows the generated families' click share falling below 15% of site clicks while the zero-impression count stays above 80%, or Search Console reports thin or duplicate content on these paths: reopen with that data.
 - An audit finds an H1, H6 or H8 failure on more than 2 of 10 sampled pages in one family: that family goes noindex until fixed.
 
+## v2 changes (2026-11-17)
+- **Martin 1, H1 on shown copy (VERIFIED by Martin with esbuild on db33e12, re-verified by the facilitator).** 260 of 377 level pages showed goals or prompts copied from classes written for several levels (mostly the A0–C2 worlds), and 217 showed the same copy as another level of their topic. Example: `formatos/comprension-auditiva/a1`, the most-clicked page, showed the same 8 prompts as `/c2`, including «Explica qué pesa más al final de una vida…», and goals saying «de A0 a C2». **Fixed in this PR**: `buildLevelPage` takes goals, warm-ups and prompts only from single-level classes of that level (`app/material-ele/temas.ts`). Guard **G-H1b** (`tests/material-ele-copy-quality.test.mjs`) fails on main's code (mutation-checked). After the fix, 188 of 377 level pages show goals, 74 show prompts, and 189 show only the class list, intro and FAQ, which is acceptable for a hub. comprension-auditiva/a1 keeps 3 goals and 1 warm-up. Risk (HYPOTHESIS): pages that lose copy may move in ranking. Watch the top level pages at the W48 measurement.
+- **Martin 2, activity fallback.** 71 of 105 activity goals name no level. Their pages answered «Para alumnos de nivel A1–C2». **Fixed in this PR** (`app/material-ele/actividades.ts`): when the activity names no level and the range is the guide's, the FAQ says «No tiene un nivel propio: la guía «…» la propone para …, así que adapta las frases modelo al nivel del grupo.» Guarded by a test.
+- **Martin 3, §3.3.** Prompt count is VERIFIED (Martin): 102 activities have 2 prompts, 2 have 1, and 1 has 3. "Part of its guide" holds only if **each parent guide is audited against §3.2 before 2027-02-16**, not only when touched.
+- **Martin 4, §3.4.** Having ≥1 impression never exempts a page from the pedagogy audit. **W48 Tuesday SEO routine:** H1/H8 sample of the ≤10 most-clicked generated pages (Martin or a fresh agent).
+- **Sofia 1, citations corrected** (temas.ts :231/:233, :311, :335). `guias.ts:574` is correct: the paragraph's second sentence names only A1–B2 (facilitator re-checked).
+- **Sofia 2, what G-H6 enforces:** `freeCount` equals the real count of free listed classes; «Tres clases gratis por nivel» needs ≥3 free classes at **every** level A1–C2 (Sofia NB1, applied); «la clase gratis de este nivel» and «una clase gratis de tu nivel» need ≥1 free class at that level. Free classes per level today: A1 10, A2 7, B1 5, B2 3, C1 3, C2 3 (Sofia, VERIFIED).
+- **Sofia 3:** the 2027-02-16 re-measurement is owned by the Tuesday SEO routine (Alejandro) and is recorded in STATUS.
+- **§3.6 amended:** besides tests, the two copy-only changes above (drop shown copy from multi-level classes; activity fallback wording) are authorized. They invent nothing.
+
 ## Votes
 - Alejandro (proposer): APPROVE v1.
-- Martin: pending.
-- Sofia: pending.
+- Martin: VOTE APPROVE WITH CHANGES on v1 (changes 1–4, applied in v2).
+- Sofia: VOTE APPROVE WITH CHANGES on v1 (changes 1–3, applied in v2); CODE APPROVE on db33e12 (NB1 applied; NB2 and NB3 deferred to follow-ups).
+- Result: 3 of 3 for v2. Verbatim messages: [transcripts/2026-11-17-tuesday-seo.md](../transcripts/2026-11-17-tuesday-seo.md).
