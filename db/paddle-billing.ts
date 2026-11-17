@@ -1,3 +1,4 @@
+import { isTrialCharge } from "../app/promo-config";
 import { PRO_PRODUCT_CODE, type BillingRuntimeConfig } from "../app/billing-config";
 import { getFounderOfferStatus, type SubscriptionStatus } from "./billing";
 
@@ -196,7 +197,7 @@ export async function recordPaddleCompletedPayment(
   config: BillingRuntimeConfig,
 ) {
   if (config.paypalEnv !== "live") throw new Error("paddle_requires_live_billing");
-  if (input.currency !== "USD" || (input.isTrial ? input.amountCents !== 200 : input.referralFree ? input.amountCents !== 0 : ![1500, 1550, 1990, 12900, 15000].includes(input.amountCents))) throw new Error("paddle_payment_amount_invalid");
+  if (input.currency !== "USD" || (input.isTrial ? !isTrialCharge(input.amountCents) : input.referralFree ? input.amountCents !== 0 : ![1500, 1550, 1990, 12900, 15000].includes(input.amountCents))) throw new Error("paddle_payment_amount_invalid");
   const subscription = await paddleSubscriptionById(db, input.subscriptionId);
   if (!subscription || subscription.userId !== input.userId) throw new Error("paddle_subscription_unknown");
 
@@ -294,7 +295,7 @@ export async function recordPaddleCompletedPayment(
   ).run();
 
   const trialBefore = isFirst ? await db.prepare(
-    `SELECT 1 AS found FROM billing_payments WHERE subscription_id = ? AND amount_cents = 200 AND status = 'COMPLETED' LIMIT 1`,
+    `SELECT 1 AS found FROM billing_payments WHERE subscription_id = ? AND amount_cents IN (200, 99) AND status = 'COMPLETED' LIMIT 1`,
   ).bind(subscription.id).first<{ found: number }>() : null;
   return {
     kind: existing ? "duplicate" as const : input.isTrial ? "trial" as const : isFirst ? "first" as const : "renewal" as const,

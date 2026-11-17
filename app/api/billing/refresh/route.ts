@@ -5,7 +5,10 @@ import {
   getPaypalSubscription,
   getPaypalSubscriptionTransactions,
   validatePaypalPayment,
+  withPaypalPromoPlan,
 } from "../../../paypal-server";
+import { PROMO_WEEK_CENTS } from "../../../promo-config";
+import { schedulePromoReminder } from "../../../../server/promo-reminder";
 import { validatePaypalOwnedSubscription } from "../../../guest-purchase-verification";
 import { paddleConfig, paddleReady } from "../../../paddle-config";
 import { reconcilePaddleSubscription } from "../../../paddle-reconcile";
@@ -43,7 +46,7 @@ export async function POST(request: Request) {
   const raw = await request.text();
   let subscriptionId: unknown = "";
   try { subscriptionId = (JSON.parse(raw || "{}") as { subscriptionId?: unknown }).subscriptionId; } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
-  const config = billingConfig(env);
+  let config = billingConfig(env);
   // No ID means "the subscription shown in my account" (the account panel).
   if (subscriptionId === undefined) {
     const current = await currentSubscriptionForUser(env.DB, userId, config.paypalEnv);
@@ -70,6 +73,8 @@ export async function POST(request: Request) {
   if (!paypalReady(config)) return Response.json({ status: local.status, accessConfirmed: false, pending: true }, { status: 202 });
   try {
     const paypal = await getPaypalSubscription(config, subscriptionId);
+    config = await withPaypalPromoPlan(config, paypal.plan_id);
+    const promoPlan = Boolean(config.promoPlanId) && paypal.plan_id === config.promoPlanId;
     if (!(await validatePaypalOwnedSubscription(env.DB, paypal, { subscriptionId, userId, config }))) {
       return Response.json({ error: "La suscripción no coincide con tu cuenta o plan." }, { status: 409 });
     }
@@ -83,11 +88,15 @@ export async function POST(request: Request) {
     const transactions = await getPaypalSubscriptionTransactions(config, subscriptionId);
     for (const transaction of transactions) {
       const money = transaction.amount_with_breakdown?.gross_amount || {};
-      if (transaction.status !== "COMPLETED" || typeof transaction.id !== "string" || !validatePaypalPayment(money, config)) continue;
+      if (transaction.status !== "COMPLETED" || typeof transaction.id !== "string" || !validatePaypalPayment(money, config, paypal.plan_id)) continue;
       const amountCents = cents(money.value);
       const occurredAt = seconds(transaction.time);
       if (amountCents === null || occurredAt === null) continue;
-      await recordPaypalPayment(env.DB, {
+      // On the promo plan the US$0.99 week ends 7 days after its charge, whatever PayPal bills next.
+      const promoTrial = promoPlan && amountCents === PROMO_WEEK_CENTS;
+      const nextBilling = seconds(paypal.billing_info?.next_billing_time);
+      const paidThrough = promoTrial ? occurredAt + 7 * 86400 : nextBilling;
+      const recorded = await recordPaypalPayment(env.DB, {
         environment: config.paypalEnv,
         paypalSubscriptionId: subscriptionId,
         providerPaymentId: transaction.id,
@@ -95,8 +104,12 @@ export async function POST(request: Request) {
         currency: String(money.currency_code || ""),
         status: "COMPLETED",
         occurredAt,
-        paidThrough: seconds(paypal.billing_info?.next_billing_time),
+        paidThrough,
+        promoPlan,
       }, config);
+      if (recorded.kind === "trial" && promoTrial && paidThrough && paidThrough > Math.floor(Date.now() / 1000)) {
+        await schedulePromoReminder(env, env.DB, { userId, provider: "paypal", subscriptionId, chargeAt: paidThrough });
+      }
     }
     const updated = await currentSubscriptionForUser(env.DB, userId, config.paypalEnv);
     const accessConfirmed = Boolean(updated?.paidThrough && updated.paidThrough > Math.floor(Date.now() / 1000));

@@ -3,8 +3,11 @@ import {
   APPROVED_INTERVAL,
   APPROVED_PRICE_CENTS,
   PAYPAL_ALLOWED_CENTS,
+  PAYPAL_LIVE_PROMO_PLAN_ID,
+  PAYPAL_PROMO_PLAN_NAME,
   type BillingRuntimeConfig,
 } from "./billing-config";
+import { PROMO_WEEK_CENTS, PROMO_WEEK_CODE, PROMO_WEEK_THEN_CENTS } from "./promo-config";
 
 type PaypalLink = { href?: unknown; rel?: unknown };
 export type PaypalSubscription = {
@@ -27,9 +30,11 @@ export type PaypalTransaction = {
 type PaypalMoney = { value?: unknown; currency_code?: unknown };
 type PaypalPlan = {
   id?: unknown;
+  name?: unknown;
   product_id?: unknown;
   status?: unknown;
   billing_cycles?: Array<{
+    sequence?: unknown;
     frequency?: { interval_unit?: unknown; interval_count?: unknown };
     tenure_type?: unknown;
     total_cycles?: unknown;
@@ -44,9 +49,13 @@ function cents(value: unknown) {
   return Number(whole) * 100 + Number(fraction.padEnd(2, "0"));
 }
 
-/** A payment carries the current plan price, or US$15 for a subscription still on the legacy Founder plan. */
-export function validatePaypalPayment(money: PaypalMoney, config: BillingRuntimeConfig) {
+/** A payment carries the current plan price, or US$15 for a subscription still on the legacy Founder plan.
+ * A subscription on the verified promo plan (`planId`) pays US$0.99 for its first week and then US$19.90. */
+export function validatePaypalPayment(money: PaypalMoney, config: BillingRuntimeConfig, planId?: unknown) {
   const amount = cents(money.value);
+  if (config.promoPlanId && planId === config.promoPlanId) {
+    return money.currency_code === APPROVED_CURRENCY && (amount === PROMO_WEEK_CENTS || amount === PROMO_WEEK_THEN_CENTS);
+  }
   return money.currency_code === APPROVED_CURRENCY
     && (amount === Math.round(config.founderOffer.priceUsd * 100) || amount === APPROVED_PRICE_CENTS)
     && (PAYPAL_ALLOWED_CENTS as readonly number[]).includes(amount ?? -1);
@@ -77,7 +86,8 @@ export function validatePaypalSubscription(
 ) {
   return subscription.id === expected.subscriptionId
     && (subscription.plan_id === expected.config.founderPlanId
-      || (Boolean(expected.config.legacyFounderPlanId) && subscription.plan_id === expected.config.legacyFounderPlanId))
+      || (Boolean(expected.config.legacyFounderPlanId) && subscription.plan_id === expected.config.legacyFounderPlanId)
+      || (Boolean(expected.config.promoPlanId) && subscription.plan_id === expected.config.promoPlanId))
     && subscription.custom_id === expected.userId;
 }
 
@@ -142,16 +152,101 @@ export async function setupPaypalBilling(config: BillingRuntimeConfig, origin: s
   return { productId: config.productId, founderPlanId: config.founderPlanId, webhookId: config.webhookId };
 }
 
+/** The promo plan: one US$0.99 trial week, then US$19.90 every month, on the PRO product, no setup fee. */
+export function validatePaypalPromoPlan(plan: PaypalPlan, config: BillingRuntimeConfig) {
+  if (typeof plan.id !== "string" || !plan.id.startsWith("P-") || plan.product_id !== config.productId || plan.status !== "ACTIVE"
+      || plan.id === config.founderPlanId || plan.id === config.legacyFounderPlanId) return false;
+  if (!Array.isArray(plan.billing_cycles) || plan.billing_cycles.length !== 2) return false;
+  const trial = plan.billing_cycles.find((cycle) => cycle.tenure_type === "TRIAL");
+  const regular = plan.billing_cycles.find((cycle) => cycle.tenure_type === "REGULAR");
+  const price = (cycle: typeof trial) => cycle?.pricing_scheme?.fixed_price;
+  return Boolean(trial && regular)
+    && trial!.sequence === 1 && trial!.total_cycles === 1
+    && trial!.frequency?.interval_unit === "WEEK" && trial!.frequency.interval_count === 1
+    && price(trial)?.currency_code === APPROVED_CURRENCY && cents(price(trial)?.value) === PROMO_WEEK_CENTS
+    && regular!.sequence === 2 && regular!.total_cycles === 0
+    && regular!.frequency?.interval_unit === APPROVED_INTERVAL.unit && regular!.frequency.interval_count === APPROVED_INTERVAL.count
+    && price(regular)?.currency_code === APPROVED_CURRENCY && cents(price(regular)?.value) === PROMO_WEEK_THEN_CENTS
+    && cents(plan.payment_preferences?.setup_fee?.value ?? "0") === 0;
+}
+
+// Promo plan IDs already fetched from PayPal and verified by this isolate, per environment.
+const verifiedPromoPlans = new Set<string>();
+const ensuredPromoPlan = new Map<string, { planId: string; at: number }>();
+
+/** True only when PayPal itself returns this plan with exactly the promo terms. */
+export async function paypalPromoPlanVerified(config: BillingRuntimeConfig, planId: unknown) {
+  if (typeof planId !== "string" || !/^P-[A-Z0-9]{10,40}$/.test(planId)) return false;
+  if (config.paypalEnv === "live" && PAYPAL_LIVE_PROMO_PLAN_ID && planId !== PAYPAL_LIVE_PROMO_PLAN_ID) return false;
+  const key = `${config.paypalEnv}:${planId}`;
+  if (verifiedPromoPlans.has(key)) return true;
+  const plan = await paypalJson<PaypalPlan>(config, `/v1/billing/plans/${encodeURIComponent(planId)}`, {});
+  if (plan.id !== planId || !validatePaypalPromoPlan(plan, config)) return false;
+  verifiedPromoPlans.add(key);
+  return true;
+}
+
+/** The same configuration with `promoPlanId` set when `planId` is the verified promo plan. Regular
+ * plans never cost a PayPal request, and a lookup failure only leaves the promo plan unrecognized. */
+export async function withPaypalPromoPlan(config: BillingRuntimeConfig, planId: unknown): Promise<BillingRuntimeConfig> {
+  if (typeof planId !== "string" || planId === config.founderPlanId || planId === config.legacyFounderPlanId) return config;
+  try {
+    return await paypalPromoPlanVerified(config, planId) ? { ...config, promoPlanId: planId } : config;
+  } catch {
+    return config;
+  }
+}
+
+/** Finds the promo plan on the PRO product (pinned ID, or by its exact name) and, only when PayPal has
+ * none, creates it once. The fixed request ID makes a concurrent or repeated creation return the same
+ * plan instead of a duplicate. Existing plans are never modified. */
+export async function ensurePaypalPromoPlan(config: BillingRuntimeConfig) {
+  const cached = ensuredPromoPlan.get(config.paypalEnv);
+  if (cached && Date.now() - cached.at < 6 * 60 * 60 * 1000) return cached.planId;
+  if (!config.clientId || !config.clientSecret || !config.productId) throw new Error("paypal_resources_missing");
+  let planId = config.paypalEnv === "live" ? PAYPAL_LIVE_PROMO_PLAN_ID : "";
+  if (!planId) {
+    const query = new URLSearchParams({ product_id: config.productId, page_size: "20", page: "1", total_required: "false" });
+    const listed = await paypalJson<{ plans?: Array<{ id?: unknown; name?: unknown; status?: unknown }> }>(config, `/v1/billing/plans?${query}`, {});
+    const found = (listed.plans || []).find((plan) => plan.name === PAYPAL_PROMO_PLAN_NAME && plan.status === "ACTIVE");
+    planId = typeof found?.id === "string" ? found.id : "";
+  }
+  if (!planId) {
+    const money = (amountCents: number) => ({ value: (amountCents / 100).toFixed(2), currency_code: APPROVED_CURRENCY });
+    const created = await paypalJson<PaypalPlan>(config, "/v1/billing/plans", {
+      method: "POST",
+      headers: { "paypal-request-id": `spanishcue-promo-${PROMO_WEEK_CODE}`, prefer: "return=representation" },
+      body: JSON.stringify({
+        product_id: config.productId,
+        name: PAYPAL_PROMO_PLAN_NAME,
+        description: "SpanishCue PRO: first week US$0.99, then US$19.90 every month until cancelled.",
+        status: "ACTIVE",
+        billing_cycles: [
+          { frequency: { interval_unit: "WEEK", interval_count: 1 }, tenure_type: "TRIAL", sequence: 1, total_cycles: 1,
+            pricing_scheme: { fixed_price: money(PROMO_WEEK_CENTS) } },
+          { frequency: { interval_unit: APPROVED_INTERVAL.unit, interval_count: APPROVED_INTERVAL.count }, tenure_type: "REGULAR", sequence: 2, total_cycles: 0,
+            pricing_scheme: { fixed_price: money(PROMO_WEEK_THEN_CENTS) } },
+        ],
+        payment_preferences: { auto_bill_outstanding: true, setup_fee: money(0), setup_fee_failure_action: "CONTINUE", payment_failure_threshold: 3 },
+      }),
+    });
+    planId = typeof created.id === "string" ? created.id : "";
+  }
+  if (!(await paypalPromoPlanVerified(config, planId))) throw new Error("paypal_promo_plan_mismatch");
+  ensuredPromoPlan.set(config.paypalEnv, { planId, at: Date.now() });
+  return planId;
+}
+
 export async function createPaypalSubscription(
   config: BillingRuntimeConfig,
-  input: { origin: string; returnTo: string; userId: string; claimId?: never; requestId?: string }
-    | { origin: string; returnTo: string; claimId: string; userId?: never; requestId?: string },
+  input: ({ origin: string; returnTo: string; userId: string; claimId?: never; requestId?: string }
+    | { origin: string; returnTo: string; claimId: string; userId?: never; requestId?: string }) & { planId?: string },
 ) {
   const response = await paypalRequest(config, "/v1/billing/subscriptions", {
     method: "POST",
     headers: { "paypal-request-id": input.requestId || crypto.randomUUID() },
     body: JSON.stringify({
-      plan_id: config.founderPlanId,
+      plan_id: input.planId || config.founderPlanId,
       custom_id: input.claimId || input.userId,
       application_context: {
         brand_name: "SPANISHCUE",

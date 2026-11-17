@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { PROMO_WEEK_UNTIL, promoWeekActive } from "./promo-config";
 import { useI18n } from "./i18n/LocaleProvider";
 import type { MessageKey } from "./i18n/messages";
 import { trackMarketingEvent } from "./marketing/analytics";
@@ -126,6 +127,17 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
               : <>Full PRO: <b>US$19.90/month</b> or <b>US$150/year</b> <span className="sc-hero-save">Save 37%</span></>}
             <ArsPrice usd={19.9} className="sc-hero-ars" />
           </p>
+        )}
+        {pricing && promoWeekActive() && (
+          <a
+            href="/pricing"
+            className="sc-hero-promo"
+            onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
+          >
+            {locale === "es"
+              ? <><span className="sc-hero-save">PROMO</span> Hasta el {PROMO_WEEK_UNTIL.es}: tu primera semana de PRO por <b>US$0,99</b>. Luego US$19,90/mes; cancelas cuando quieras.</>
+              : <><span className="sc-hero-save">PROMO</span> Until {PROMO_WEEK_UNTIL.en}: your first week of PRO for <b>US$0.99</b>. Then US$19.90/month; cancel anytime.</>}
+          </a>
         )}
         {pricing && (
           <p className="sc-hero-more">

@@ -1,5 +1,6 @@
 "use client";
 
+import { PROMO_WEEK_UNTIL } from "../promo-config";
 import { useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useI18n } from "../i18n/LocaleProvider";
 import { cantonShapes } from "../suiza-en-relieve/map-data";
@@ -327,7 +328,7 @@ export function SocialProof({ lessonCount, routeCount, levelRange, cultureCount 
   return <section className="mk-proof" aria-label={c.proofAria}>{values.map((value, index) => <div key={value}><b>{value}</b><span>{c.proof[index]}</span></div>)}</section>;
 }
 
-type FounderStatus = { enabled: boolean; limit: number; claimed: number; remaining: number; available: boolean; priceUsd: number; checkoutLive: boolean; publicCheckoutAvailable?: boolean; paddleCheckoutAvailable?: boolean; paypalPriceUsd?: number; mode?: "sandbox" | "live"; annualCheckoutAvailable?: boolean };
+type FounderStatus = { enabled: boolean; limit: number; claimed: number; remaining: number; available: boolean; priceUsd: number; checkoutLive: boolean; publicCheckoutAvailable?: boolean; paddleCheckoutAvailable?: boolean; paypalPriceUsd?: number; mode?: "sandbox" | "live"; annualCheckoutAvailable?: boolean; promoWeek?: { available?: boolean; eligible?: boolean | null } };
 
 export function FounderOffer({ audience, primary, primaryLabel }: { audience: MarketingAudience; primary: MarketingCta; primaryLabel: string }) {
   const c = useCopy();
@@ -368,6 +369,9 @@ export function FounderOffer({ audience, primary, primaryLabel }: { audience: Ma
       {audience !== "pro" && <div className="mk-founder-price"><b>{priceLabel}</b><span>/ {locale === "es" ? "mes" : "month"}</span></div>}
       {audience !== "pro" && priceLabel === "US$19.90" && <ArsPrice usd={19.9} />}
       {audience !== "pro" && status?.annualCheckoutAvailable && <p className="mk-founder-annual">{locale === "es" ? <>o <b>US$150/año</b> <span className="sc-hero-save">Ahorras 37 %</span></> : <>or <b>US$150/year</b> <span className="sc-hero-save">Save 37%</span></>}<ArsPrice usd={150} /></p>}
+      {audience !== "pro" && checkoutLive && status?.promoWeek?.available && status.promoWeek.eligible !== false && <p className="mk-founder-promo">{locale === "es"
+        ? <><span className="sc-hero-save">PROMO</span> Hasta el {PROMO_WEEK_UNTIL.es}: tu primera semana por <b>US$0,99</b>. Luego US$19,90/mes; cancelas cuando quieras.</>
+        : <><span className="sc-hero-save">PROMO</span> Until {PROMO_WEEK_UNTIL.en}: your first week for <b>US$0.99</b>. Then US$19.90/month; cancel anytime.</>}</p>}
       {audience === "pro" ? <MarketingLink cta={primary} className="mk-founder-cta" placement="home_founder_offer">{primaryLabel}<span>→</span></MarketingLink> : checkoutLive ? <MarketingLink cta={subscriptionCta} className="mk-founder-cta" placement="home_founder_offer">{c.subscribe}<span>→</span></MarketingLink> : <MarketingLink cta={launchCta} className="mk-founder-cta" placement="home_founder_reservation">{c.reserve}<span>→</span></MarketingLink>}
       {audience !== "pro" && <em>{checkoutLive ? c.payment : c.launchPayment}</em>}
     </div>

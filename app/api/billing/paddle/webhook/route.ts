@@ -27,6 +27,7 @@ import { getPurchaseClaim, markPurchaseCheckout, updatePurchaseLifecycle } from 
 import { verifyGuestPaddlePayment } from "../../../../guest-purchase-verification";
 import { deliverPaddleServerConversion } from "../../../../server-conversions";
 import { processReferrals } from "../../../../referrals-server";
+import { schedulePromoReminder } from "../../../../../server/promo-reminder";
 
 export const dynamic = "force-dynamic";
 
@@ -178,6 +179,9 @@ export async function POST(request: Request) {
         transactionId, amountCents: payment.amountCents, currency: payment.currency, attribution: paddleAttributionFrom(subscription),
       });
       await processReferrals(env.DB, paddle, { userId, subscriptionId, subscription, referralFree: payment.referralFree });
+      if (recorded.kind === "trial" && payment.offer === "promo") {
+        await schedulePromoReminder(env, env.DB, { userId, provider: "paddle", subscriptionId, chargeAt: payment.paidThrough });
+      }
       await finishPaddleWebhook(env.DB, eventId, "processed");
       return Response.json({ ok: true });
     }

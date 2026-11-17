@@ -13,6 +13,7 @@ import { recordPaddleCompletedPayment, upsertPaddleSubscription } from "../../..
 import { authorizePurchaseClaim } from "../../../../purchase-claim-cookie";
 import { verifyGuestPaddlePayment } from "../../../../guest-purchase-verification";
 
+import { schedulePromoReminder } from "../../../../../server/promo-reminder";
 export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
@@ -79,13 +80,16 @@ export async function POST(request: Request) {
       nextBillingTime: subscription.next_billed_at,
       occurredAt,
     });
-    await recordPaddleCompletedPayment(env.DB, {
+    const recorded = await recordPaddleCompletedPayment(env.DB, {
       userId,
       subscriptionId,
       transactionId,
       ...payment,
       occurredAt,
     }, billing);
+    if (recorded.kind === "trial" && payment.offer === "promo") {
+      await schedulePromoReminder(env, env.DB, { userId, provider: "paddle", subscriptionId, chargeAt: payment.paidThrough });
+    }
 
     return Response.json(
       { pending: false, accessConfirmed: true, subscriptionId },

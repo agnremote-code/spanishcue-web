@@ -4,7 +4,8 @@ import { billingConfig, billingReadiness } from "../../../../billing-config";
 import { legalOperator } from "../../../../legal/operator";
 import { paddleAnnualReady, paddleConfig, paddleReady, type PaddleOffer } from "../../../../paddle-config";
 import { createPaddleCheckoutTransaction, getPaddleTransaction, paddleOffer, sanitizePaddleAttribution, type PaddleAttribution } from "../../../../paddle-server";
-import { getFounderOfferStatus } from "../../../../../db/billing";
+import { getFounderOfferStatus, promoWeekEligible } from "../../../../../db/billing";
+import { promoWeekActive } from "../../../../promo-config";
 import { authorizePurchaseClaim, getOrCreatePurchaseClaim } from "../../../../purchase-claim-cookie";
 import { referralCodeFromCookie } from "../../../../referrals-server";
 import { lockPurchaseCheckout, markPurchaseCheckout, releasePurchaseCheckout } from "../../../../../db/purchase-claims";
@@ -49,11 +50,20 @@ export async function POST(request: Request) {
     if (raw.length > 3000) throw new Error("invalid_request");
     const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown; attribution?: unknown };
     attribution = sanitizePaddleAttribution(requested.attribution);
-    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial" && requested.offer !== "annual")
+    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial" && requested.offer !== "annual" && requested.offer !== "promo")
       || (requested.offer === "annual" && !paddleAnnualReady(paddle))) throw new Error("invalid_offer");
-    offer = requested.offer === "trial" ? "trial" : requested.offer === "annual" ? "annual" : "monthly";
+    offer = requested.offer === "trial" ? "trial" : requested.offer === "annual" ? "annual" : requested.offer === "promo" ? "promo" : "monthly";
     returnTo = safeRelativeReturnPath(typeof requested.returnTo === "string" && requested.returnTo.length <= 300 ? requested.returnTo : null);
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
+
+  if (offer === "promo") {
+    // The promo week needs an account: it is only for teachers who never paid before.
+    if (!userId) return Response.json({ error: "Crea tu cuenta gratis o inicia sesión para usar la promo.", code: "promo_account_required" }, { status: 401 });
+    if (!promoWeekActive()) return Response.json({ error: "La promo ya terminó.", code: "promo_ended" }, { status: 410 });
+    if (!(await promoWeekEligible(env.DB, userId))) {
+      return Response.json({ error: "La promo es solo para la primera suscripción.", code: "promo_not_eligible" }, { status: 409 });
+    }
+  }
 
   try {
     if (!userId) {
@@ -89,7 +99,8 @@ export async function POST(request: Request) {
       offer,
       offerCode: billing.founderOffer.code,
       attribution,
-      referralCode,
+      // The promo week does not stack with «Invitá a un colega».
+      referralCode: offer === "promo" ? null : referralCode,
     });
     return Response.json(
       { transactionId, clientToken: paddle.clientToken },

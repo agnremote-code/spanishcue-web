@@ -104,6 +104,7 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/promo-semana-099-english-additions-20261117.json',
   'docs/audits/jugar-hub-english-additions-20261116.json',
   'docs/audits/home-cta-english-additions-20261104.json',
   'docs/audits/precio-1990-english-changes-20261103.json',
