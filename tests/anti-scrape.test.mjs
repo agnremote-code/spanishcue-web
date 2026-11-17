@@ -61,7 +61,12 @@ test("live AI search agents are served but still counted by the page limiter", (
     assert.equal(pageReadKey(get("/material-ele", agents[name]), "/material-ele", undefined), "production:pages:203.0.113.7", name);
   }
   for (const token of policy.AI_SEARCH_AGENTS) assert.ok(!policy.BLOCKED_CRAWLERS.includes(token), token);
-  for (const token of ["GPTBot", "ClaudeBot", "CCBot", "Bytespider", "Google-Extended"]) assert.ok(policy.BLOCKED_CRAWLERS.includes(token), token);
+  for (const token of ["GPTBot", "ClaudeBot", "CCBot", "Bytespider", "Google-Extended", "MistralAI-Training"]) assert.ok(policy.BLOCKED_CRAWLERS.includes(token), token);
+  for (const [token, agent] of [["Claude-Agent", "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/140.0.0.0 Safari/537.36 Claude-Agent/1.0"], ["DuckAssistBot", "DuckAssistBot/1.2; (+http://duckduckgo.com/duckassistbot.html)"], ["MistralAI-User", "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; MistralAI-User/1.0; +https://docs.mistral.ai/robots)"], ["MistralAI-Index", "Mozilla/5.0 (compatible; MistralAI-Index/1.0; +https://docs.mistral.ai/robots)"]]) {
+    assert.ok(policy.AI_SEARCH_AGENTS.includes(token), token);
+    for (const path of ["/", "/material-ele", "/material-ele/fichas"]) assert.equal(refused(path, agent), false, `${token} ${path}`);
+  }
+  assert.equal(refused("/material-ele", "Mozilla/5.0 (compatible; MistralAI-Training/1.0; +https://docs.mistral.ai/robots)"), true);
 });
 
 test("AI and SEO-tool crawlers are refused everywhere except robots.txt", () => {

@@ -40,7 +40,9 @@ terms and the per-account watermark.
 - Add or remove a crawler: `app/crawler-policy.ts` (robots.txt and the Worker
   follow). Never add a search engine.
 - Live AI search agents (`AI_SEARCH_AGENTS`: OAI-SearchBot, ChatGPT-User,
-  PerplexityBot, Perplexity-User, Claude-SearchBot, Claude-User) are allowed
+  PerplexityBot, Perplexity-User, Claude-SearchBot, Claude-User; since
+  2026-11-17 also Claude-Agent, DuckAssistBot, MistralAI-User and
+  MistralAI-Index) are allowed
   since 2026-11-14 (owner decision) so those assistants can recommend
   SpanishCue; they are still rate limited per IP. Training crawlers stay
   blocked. To block them again, move them into `AI_CRAWLERS`.
