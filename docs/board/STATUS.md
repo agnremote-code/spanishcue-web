@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-16 by the Monday 3D routine (scheduled cloud run; Sofia, Martin and Alejandro convened as subagents of the facilitator; see "Current work")._
+_Last updated: 2026-11-17 by the Tuesday SEO routine (scheduled cloud run; Alejandro, Martin and Sofia convened as subagents of the facilitator; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -81,7 +81,36 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-11-17 (Tuesday SEO routine): run started 02:08Z, W47 plan items 0, 1 and 6.** Branch `claude/seo-tuesday-20261117`, base main `e11f4af`. Previous slot (Mon 11-16) left its marker (PR #439). Subscription usage: **UNKNOWN**.
+- **2026-11-17 (Tuesday SEO routine): PR #456** (branch `claude/seo-tuesday-20261117`, base main `e11f4af`). Run-start marker pushed at 02:08Z (W47 item 0). Mon 11-16 left its marker (#439). Subscription usage: **UNKNOWN**.
+  - **W47 item 1: DONE.** [BOARD-DECISION-007](decisions/BOARD-DECISION-007-generated-hub-pages.md), on generated hub pages and the §3.2 scope, **ADOPTED v2, 3 of 3, LOCKED**.
+    - No blanket noindex. §3.2 still applies in full to authored teaching pages (guide, preview, cluster lesson).
+    - Generated hub pages (113 topic, 377 topic-level and 105 activity pages, VERIFIED by running the generators) must meet the hub standard H1–H8 instead. Activity pages count as parts of their guide.
+    - Re-measurement on **2027-02-16**. Owner: the Tuesday SEO routine (Alejandro).
+  - **Implementation (in this PR):**
+    1. Martin's review found that **260 of 377 level pages showed goals or prompts copied from A0–C2 classes**. For example, `formatos/comprension-auditiva/a1`, the most-clicked page, showed the same C2 prompts as `/c2`. Level pages now show copy only from classes written for that one level (`app/material-ele/temas.ts`). After the fix, 188 show goals, 74 show prompts, and 189 show only the class grid, intro and FAQ.
+    2. Activities whose goal names no level no longer say «Para alumnos de nivel A1–C2». They now name the guide's range (`app/material-ele/actividades.ts`).
+    3. New guards in `tests/material-ele-copy-quality.test.mjs`: G-H5 (no invented copy), G-H6 (true «gratis» claims), G-H1b (same-level copy) and an activity-fallback test. Each was mutation-checked: it fails on the broken or previous code.
+  - **W47 item 6: Search Console measurement (VERIFIED, Windsor, data through 11-14).**
+    - 28 days (10-18..11-14): **77 clicks, 1,132 impressions, position 18.58** (W46 baseline: 52 / 772 / 21.88).
+    - ISO W46 (11-09..11-14, 6 days): 46 clicks, 554 impressions, position 13.71. W45: 23 / 308.
+    - /material-ele: 49 clicks, 542 impressions, weighted position 12.2.
+    - Generated level pages: **34 clicks (44% of the site)**, 229 impressions, weighted position 9.9.
+    - /guides: 1 click, 149 impressions, weighted position 44.3. Without `first-online-spanish-lesson`, the rest sits at 13.1. That one page has 76 impressions at position ~74, all on learner queries («learn spanish online» and similar), so the problem is intent mismatch, not ranking. Recommendation to the non-board stream: retitle that guide for teachers.
+    - Only 7 queries had ≥4 impressions.
+    - Indexed count: still UNKNOWN (R1).
+  - **Board:** convened as three subagents. Alejandro drafted; Martin and Sofia each voted APPROVE WITH CHANGES on v1, and both gave delta APPROVE on v2. Sofia did the code review: CODE APPROVE on db33e12, DELTA CODE APPROVE on a51b7448. Verbatim record: [transcripts/2026-11-17-tuesday-seo.md](transcripts/2026-11-17-tuesday-seo.md).
+  - **Checks:** see the PR body and the release note below.
+  - **Next action:**
+    - **W48 Tue 11-24 (BOARD-DECISION-007 §3.4):** H1/H8 pedagogy sample of the ≤10 most-clicked generated pages (Martin or a fresh agent). Re-pull the cluster table, and watch whether the top level pages that lost copy moved (HYPOTHESIS risk).
+    - **Before 2027-02-16:** audit each parent guide of the activity pages against §3.2 (§3.3).
+    - **2027-02-16 (Tue SEO):** the re-measurement. Sample the 189 copy-less level pages first.
+    - **Follow-ups, non-blocking:**
+      - Sofia NB2: a catch-all test for new «gratis» wordings.
+      - Sofia NB3: check that «Material ELE por nivel» links to a free class at each level.
+      - `guias.ts:574`: add C1 and C2.
+      - Martin's optional wording: «No tiene nivel propio».
+      - Martin's note: assert the topic-page level span in a test.
+    - W47 items 3–5 and 8 are unchanged (Wed: the §3.6 checker PR, then «El taller de la greda»).
 - **2026-11-16 (Monday 3D routine): PR #439** (branch `claude/board-mon-3d-20261116`, base main `d9bb524`). Run-start marker pushed at 02:06Z (W47 item 0). No W47 slot ran before this one, so no missing marker. Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** W47 plan item 2 is governance plus a concept round. The build is Wednesday's slot.
   - **W47 item 2: DONE.**

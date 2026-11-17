@@ -60,6 +60,7 @@ Whether the parent guides themselves meet §3.2 is UNKNOWN. They are audited whe
 - **Date:** Tuesday SEO routine of **2027-02-16**, window 2026-11-15..2027-02-13 (91 days, all after creation).
 - **Candidates:** a generated hub page with **0 impressions** in that window. Pages with ≥1 impression stay indexed.
 - **Treatment, per family, in one audited PR:** Martin (or a fresh agent) samples ≥5 candidates per family and checks them against §3.2-hub. Preferred remedy for a level page is consolidation (308 to its topic page, recorded in `retiredTemaLevelPaths`); noindex only where no parent exists. Never in bulk without that audit file; never a slug change for a page with impressions.
+- **Sampling order (v2, Sofia NB4):** the 189 level pages that show no goals or prompts after v2 are sampled first. They are the most likely consolidation candidates.
 - **Early trigger:** any page found to break H1, H6 or H8 is fixed or noindexed at once, in its own PR, independent of the date.
 
 **3.5 What §3.2 still requires, unchanged.** Every NEW guide, lesson preview or cluster page that presents itself as a teaching page needs: a CEFR level matching the content, one communicative objective, ≥8 authored classroom-usable prompts, a sequence of stated length, and test:language passing. Otherwise noindex. A generated page that adds per-page teaching copy (its own objective, prompts or sequence) becomes a teaching page and falls under §3.2 in full.
@@ -88,6 +89,6 @@ Whether the parent guides themselves meet §3.2 is UNKNOWN. They are audited whe
 
 ## Votes
 - Alejandro (proposer): APPROVE v1.
-- Martin: VOTE APPROVE WITH CHANGES on v1 (changes 1–4, applied in v2).
-- Sofia: VOTE APPROVE WITH CHANGES on v1 (changes 1–3, applied in v2); CODE APPROVE on db33e12 (NB1 applied; NB2 and NB3 deferred to follow-ups).
+- Martin: VOTE APPROVE WITH CHANGES on v1 (changes 1–4, applied in v2); DELTA APPROVE on a51b7448: vote stands for v2.
+- Sofia: VOTE APPROVE WITH CHANGES on v1 (changes 1–3, applied in v2); CODE APPROVE on db33e12 (NB1 applied; NB2 and NB3 deferred to follow-ups); DELTA CODE APPROVE on a51b7448 and VOTE APPROVE for v2 (NB4 applied as wording).
 - Result: 3 of 3 for v2. Verbatim messages: [transcripts/2026-11-17-tuesday-seo.md](../transcripts/2026-11-17-tuesday-seo.md).

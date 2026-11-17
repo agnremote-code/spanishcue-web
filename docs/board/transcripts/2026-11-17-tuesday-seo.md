@@ -179,3 +179,34 @@ I checked `git diff db33e12..a51b7448` and the decision file's "v2 changes" sect
 - About half the level pages (189 of 377) now show no teaching copy at all. That is honest for a hub, but they should be in the W48 sample, as v2 already notes.
 - An activity that falls back to a single-level guide still says «Para alumnos de nivel X». That is acceptable, since the guide is written for that level.
 ````
+
+## 10. Sofia → facilitator (≈02:21Z)
+
+````text
+**DELTA CODE: APPROVE** (`db33e12..a51b7448`)
+
+**Checks run:**
+- I ran `material-ele-copy-quality`, `material-ele-temas` and `material-ele-actividades` with `node --test`. All 23 tests pass.
+- `tsc --noEmit` reports nothing in `temas.ts` or `actividades.ts`.
+
+**Correctness:**
+- **Level pages:** `singleLevel` (temas.ts:313) uses the same `lessonLevels` as the existing `ids` filter (temas.ts:217, :310). G-H1b's `levelsOf` matches it, apart from the `levelOrder` filter, which does not matter here.
+- **Activity pages:** `ownLevel` (actividades.ts:56) uses the same `[ABC][12]` pattern as `activityLevel` (:27). So the new wording appears only when the level came from the guide's range (it contains «–»). A guide with a single level still says «Para alumnos de nivel X».
+- **NB1:** the G-H6 loop now checks A1–C2, so it is fixed.
+
+**Regressions:**
+- **Rendering:** only the two `page.tsx` files and `temas.ts` read `goals`/`warmups`/`speaking`. Both page files skip the section when the list is empty (`[nivel]/page.tsx:69,74,77-78`). No other app, worker, script or test code uses those fields on level pages.
+- **JSON-LD:** no schema code reads those fields.
+- **Sitemap:** unchanged, because the paths are unchanged.
+- **Thresholds:** no test sets a minimum number of goals or prompts.
+- **Topic pages:** untouched, still built at temas.ts:240-242.
+
+**Non-blocking:**
+- NB4: 189 of 377 level pages now show no goals or prompts. That is honest, but it makes them thinner. Note in §3.4 that the 2027-02-16 sample should cover these pages first, because they are the most likely consolidation candidates.
+- NB5: the G-H1b A1 check (`/A0 a C2|perdón que nunca pediste/`) is tied to specific copy. The level-set loop above it is the real guard, so this is acceptable.
+- From v1, NB2 (no catch-all check for new «gratis» wordings) and NB3 (the «Material ELE por nivel» link target is not checked) are still open and still non-blocking.
+
+**VOTE: my vote stands, APPROVE WITH CHANGES, and all three of my changes are now in v2.** That leaves only NB4, which is optional wording, so for v2 my vote is **APPROVE**. I accept keeping `guias.ts:574`, since its second sentence names A1–B2.
+````
+
+Result: BOARD-DECISION-007 v2 ADOPTED 3 of 3 (Alejandro APPROVE as proposer; Martin and Sofia APPROVE on the v2 delta). NB4 applied to §3.4 as wording. NB2, NB3 and Martin's optional «No tiene nivel propio» are recorded as follow-ups.
