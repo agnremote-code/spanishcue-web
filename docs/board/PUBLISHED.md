@@ -17,6 +17,18 @@ Entry format:
 
 ## Pending verification
 
+## 2026-11-17 — Material ELE level pages: only same-level teaching copy; activity level fallback (SEO/page, repair)
+- URL(s):
+  - every `https://spanishcue.com/material-ele/<grupo>/<tema>/<nivel>` page (377);
+  - `https://spanishcue.com/material-ele/actividad/*` pages whose goal names no level.
+  - Example: `/material-ele/formatos/comprension-auditiva/a1`.
+- Level(s) / objectives: no lesson content changed. Level pages no longer show goals, warm-ups or prompts copied from multi-level classes (260 of 377 pages did). 189 pages now show only the class grid, intro and FAQ. Activities without their own level now say the range is the guide's.
+- PR / merged SHA / production deploy run: PR #456 → `ca7fb3a0be036e1c4dd07836151e58245773ba0a`. CI + Auto Merge 44004217230, Deploy Staging 44006771795, Deploy Production 44007189157, all successful.
+- Production smoke evidence: the workflow's "Production smoke" step passed (job 133785261271), and the rollback was skipped. **The changed URLs were not smoked individually** (the sandbox proxy refuses spanishcue.com).
+- Concept file / LQG review file: not a lesson. Decision: [BOARD-DECISION-007](decisions/BOARD-DECISION-007-generated-hub-pages.md). Reviews: [transcripts/2026-11-17-tuesday-seo.md](transcripts/2026-11-17-tuesday-seo.md).
+- Built by / reviewed by: facilitator (code), from Martin's finding / Sofia (code review, delta approve), Martin (delta approve).
+- Known limitations: pages that lost copy may move in ranking (HYPOTHESIS); watched at W48. NB2/NB3 guards are follow-ups.
+
 ## 2026-11-03 — Material ELE: template Spanish, activity levels, video sitemap, grammar topic relevance (SEO/page)
 - URL(s):
   - every `https://spanishcue.com/material-ele/<grupo>/<tema>` and `…/<nivel>` page;

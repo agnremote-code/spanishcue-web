@@ -99,7 +99,19 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - Only 7 queries had ≥4 impressions.
     - Indexed count: still UNKNOWN (R1).
   - **Board:** convened as three subagents. Alejandro drafted; Martin and Sofia each voted APPROVE WITH CHANGES on v1, and both gave delta APPROVE on v2. Sofia did the code review: CODE APPROVE on db33e12, DELTA CODE APPROVE on a51b7448. Verbatim record: [transcripts/2026-11-17-tuesday-seo.md](transcripts/2026-11-17-tuesday-seo.md).
-  - **Checks:** see the PR body and the release note below.
+  - **Checks (local, Linux, head 62816a59):**
+    - `npm test`: exit 0, 1,716 pass, 0 fail.
+    - `npm run lint`: 0 errors.
+    - `git diff --check`: clean.
+    - `tsc --noEmit`: 3 errors, all in files this PR did not touch (`estados-unidos-a2-b1/data.ts`, `noche-abierta/voice.ts`). CI does not run tsc.
+    - One earlier local failure (`level-cleanup.test.mjs:56`, «A0» in a new comment) was fixed before marking ready.
+  - **Release (VERIFIED):** #456 merged as `ca7fb3a0`; its tree is identical to PR head `62816a59`.
+    - CI + Auto Merge run [44004217230](https://github.com/agnremote-code/spanishcue-web/actions/runs/44004217230) merged it; no race this time, because the last commit was pushed before the PR was marked ready.
+    - Staging run [44006771795](https://github.com/agnremote-code/spanishcue-web/actions/runs/44006771795) dispatched production run [44007189157](https://github.com/agnremote-code/spanishcue-web/actions/runs/44007189157).
+    - Production succeeded: "Production smoke" passed (03:05:16–03:05:28Z), and the rollback was skipped.
+    - main = production = `ca7fb3a0`.
+    - **The changed URLs were not smoked individually:** the sandbox proxy refuses spanishcue.com (CONNECT 403). Owed: confirm on `/material-ele/formatos/comprension-auditiva/a1` that «perdón que nunca pediste» is gone, at the W48 Tuesday run or in any session that can reach the site.
+    - PUBLISHED.md entry added under "Pending verification" (records PR from `claude/board-tue-seo-records-20261117`).
   - **Next action:**
     - **W48 Tue 11-24 (BOARD-DECISION-007 §3.4):** H1/H8 pedagogy sample of the ≤10 most-clicked generated pages (Martin or a fresh agent). Re-pull the cluster table, and watch whether the top level pages that lost copy moved (HYPOTHESIS risk).
     - **Before 2027-02-16:** audit each parent guide of the activity pages against §3.2 (§3.3).
