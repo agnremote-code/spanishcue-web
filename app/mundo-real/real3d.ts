@@ -27,9 +27,15 @@ function tex(file: string, srgb: boolean) {
   return t;
 }
 
-export type Surface = 'laminate_floor_02' | 'plastered_wall_04' | 'ceiling_interior' | 'wood_table_001' | 'dirty_carpet';
+export type Surface = 'laminate_floor_02' | 'plastered_wall_04' | 'ceiling_interior' | 'wood_table_001' | 'dirty_carpet'
+  | 'marble_01' | 'concrete_floor_02' | 'large_floor_tiles_02' | 'floor_tiles_06' | 'asphalt_02' | 'cobblestone_floor_04' | 'leafy_grass'
+  | 'red_brick_03' | 'sand_01' | 'metal_plate' | 'concrete_wall_008' | 'wood_planks';
 // Metres covered by one repeat of each photo.
-const SIZE: Record<Surface, number> = { laminate_floor_02: 2.4, plastered_wall_04: 3, ceiling_interior: 2.4, wood_table_001: 1.6, dirty_carpet: 2.2 };
+const SIZE: Record<Surface, number> = {
+  laminate_floor_02: 2.4, plastered_wall_04: 3, ceiling_interior: 2.4, wood_table_001: 1.6, dirty_carpet: 2.2,
+  marble_01: 3, concrete_floor_02: 3, large_floor_tiles_02: 2.4, floor_tiles_06: 2, asphalt_02: 4, cobblestone_floor_04: 2.4, leafy_grass: 3,
+  red_brick_03: 2, sand_01: 3, metal_plate: 2, concrete_wall_008: 3, wood_planks: 2,
+};
 
 const materials = new Map<string, THREE.MeshStandardMaterial>();
 /** A photographic material. `color` tints it; geometry must carry UVs in metres (see worldUV). */
@@ -44,6 +50,28 @@ export function surface(name: Surface, color = '#ffffff', extra: THREE.MeshStand
     });
     m.userData.metres = SIZE[name];
     materials.set(key, m);
+  }
+  return m;
+}
+
+const finishes = new Map<string, THREE.MeshStandardMaterial>();
+/**
+ * The same plain-coloured material with the fine grain of a painted surface: tiny relief and
+ * uneven shine, so light breaks on it like on a real object instead of a flat fill.
+ */
+export function finished(source: THREE.MeshStandardMaterial) {
+  let m = finishes.get(source.uuid);
+  if (!m) {
+    const metal = source.metalness > 0.5;
+    const grain = metal ? 'metal_plate' : 'plastered_wall_04';
+    m = source.clone();
+    m.normalMap = tex(`${grain}_nor.webp`, false);
+    m.normalScale = new THREE.Vector2(metal ? 0.25 : 0.6, metal ? 0.25 : 0.6);
+    m.roughnessMap = tex(`${grain}_arm.webp`, false);
+    // The map multiplies the material's own roughness: lift it so the average stays where the world set it.
+    m.roughness = Math.min(1, source.roughness * (metal ? 1.6 : 1.15));
+    m.userData.metres = metal ? 1.2 : 1.8;
+    finishes.set(source.uuid, m);
   }
   return m;
 }
@@ -98,7 +126,8 @@ export function loadEnvironment(renderer: THREE.WebGLRenderer, scene: THREE.Scen
 export function disposeSurfaces() {
   for (const t of textures.values()) t.dispose();
   for (const m of materials.values()) m.dispose();
-  textures.clear(); materials.clear();
+  for (const m of finishes.values()) m.dispose();
+  textures.clear(); materials.clear(); finishes.clear();
 }
 
 /** Render pipeline with ambient occlusion: the soft dark contact where things meet (chair legs, corners, a chin over a collar). */

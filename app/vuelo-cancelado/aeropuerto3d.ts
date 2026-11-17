@@ -7,6 +7,7 @@
 // few hundred draw calls; only the floor you are on is drawn.
 import * as THREE from 'three';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
+import { realScenery } from '../mundo-real/escenario';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import type { Voice } from '../escucha-3d/bump.mjs';
 import { CEILING, CHATTER, CROWD, DOORS, ELEVATOR, FLOORS, FURNITURE, SCENES, STAIRS, WALKERS, WALL, WALLS, footprint, walkerAt, type Walker } from './layout.mjs';
@@ -1097,7 +1098,7 @@ function buildApron(y: number, planes: THREE.Group[], taxiing: { plane: THREE.Gr
 }
 
 // ---------------------------------------------------------------- the whole airport
-export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; cries?: Cry[]; onCry?: (cry: Cry | null, volume: number) => void; onThunder?: (delay: number, strength: number) => void }): Airport {
+export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; real?: boolean; cries?: Cry[]; onCry?: (cry: Cry | null, volume: number) => void; onThunder?: (delay: number, strength: number) => void }): Airport {
   const floors: Record<number, THREE.Group> = {};
   const doors: DoorRig[] = [];
   const glows: THREE.MeshStandardMaterial[] = [];
@@ -1113,6 +1114,7 @@ export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: 
       ...escalators.filter(e => e.floor === f.id).flatMap(e => e.steps), ...belts.slice(before).flatMap(b => b.cases),
       ...screens.map(s => s.mesh),
     ];
+    if (opts.real) realScenery(group, { floor: 'marble_01', polish: 0.5, wall: 'plastered_wall_04', repaint: true }, moving);
     batchStatic(group, moving);
     floors[f.id] = group;
     scene.add(group);

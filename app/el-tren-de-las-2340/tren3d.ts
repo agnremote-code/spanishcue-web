@@ -9,6 +9,7 @@
 // the SpanishCue mascot (hero3d). Static pieces are merged by material
 // (batchStatic) and only the place you are in is drawn.
 import * as THREE from 'three';
+import { realScenery } from '../mundo-real/escenario';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import { B, C, IRON, STEEL, add, bright, mapped, std, textTexture, GLASS } from '../el-consorcio/edificio-items';
@@ -337,7 +338,7 @@ function buildStop(id: number, mats: { rock: THREE.MeshStandardMaterial; snow: T
 }
 
 // ---------------------------------------------------------------- the whole train
-export function buildTrain(scene: THREE.Scene, opts: { low: boolean; shadows: boolean }): Train {
+export function buildTrain(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; real?: boolean }): Train {
   const floors: Record<number, THREE.Group> = {};
   const doors: DoorRig[] = [];
   const anim: TrainAnim = { glows: [], drips: [], bobs: [], tails: [], bulbs: [], flames: [], curtains: [], flakes: [] };
@@ -348,6 +349,7 @@ export function buildTrain(scene: THREE.Scene, opts: { low: boolean; shadows: bo
       ...doors.filter(d => d.floor === f.id).flatMap(d => d.leaves.map(l => l.mesh)),
       ...anim.tails.slice(before.tails).map(t => t.mesh), ...anim.flames.slice(before.flames), ...anim.curtains.slice(before.curtains),
     ];
+    if (opts.real) realScenery(group, { floor: 'concrete_floor_02' }, moving);
     batchStatic(group, moving);
     group.visible = false;
     floors[f.id] = group;

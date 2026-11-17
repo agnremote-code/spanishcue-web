@@ -3,6 +3,7 @@
 // people come from Noche abierta's people3d. Static furniture is merged by
 // material so a floor costs a few hundred draw calls, not thousands.
 import * as THREE from 'three';
+import { realScenery } from '../mundo-real/escenario';
 import { addPalm, batchStatic, canvas, makeCar, placeVehicle, random } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import { CEILING, CROWD, ELEVATOR, FLOOR_H, FLOORS, FURNITURE, HEROINE, SCENES, WALL, WALLS, footprint } from './layout.mjs';
@@ -1202,17 +1203,19 @@ function buildSpot(id: string, floor: number, x: number, z: number, y: number): 
 
 // ---------------------------------------------------------------- the whole casino
 
-export function buildCasino(scene: THREE.Scene, opts: { low: boolean; shadows: boolean }): Casino {
+export function buildCasino(scene: THREE.Scene, opts: { low: boolean; shadows: boolean; real?: boolean }): Casino {
   const anim: Anim = { roulette: [], slotMaterials: [], flicker: [], spin: [], jets: [], beams: [], flames: [], cars: [], haze: [] };
   const floors: Record<number, THREE.Group> = {};
   const doors: Doors[] = [];
   for (const f of FLOORS) {
     const built = buildFloor(f.id, anim, opts.low);
-    batchStatic(built.group, [
+    const moving = [
       ...anim.roulette, ...anim.spin.map(s => s.object), ...anim.beams, ...anim.flames,
       ...built.doors.panels.flatMap(p => [p.left, p.right]),
       ...(anim.dance ? [anim.dance] : []), ...anim.jets.map(j => j.mesh),
-    ]);
+    ];
+    if (opts.real) realScenery(built.group, { wall: 'plastered_wall_04' }, moving);
+    batchStatic(built.group, moving);
     floors[f.id] = built.group;
     doors.push(built.doors);
     scene.add(built.group);
