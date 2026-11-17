@@ -18,13 +18,17 @@ test('anonymous organic HTML is edge-cacheable, byte-identical on a hit and neve
   assert.equal(await second.text(),firstBody,`${path}: a cache hit must serve the same anonymous HTML`);
  }
 });
-test('any visitor state bypasses the public cache in both directions',async()=>{
+test('cookies never bypass the public cache; each UI language has its own copy; real visitor state still bypasses',async()=>{
  const path='/spanish-grammar-lessons/a1';
- const localized=await fetch(origin+path,{headers:{cookie:'spanishcue_locale=es'}});
- assert.equal(localized.headers.get('cache-control'),'private, no-store');assert.equal(localized.headers.get('x-spanishcue-cache'),null);
+ const localized=await fetch(origin+path,{headers:{cookie:'_ga=GA1.1.1.1; spanishcue_locale=es'}});
+ assert.equal(localized.headers.get('cache-control'),PUBLIC);assert.ok(['MISS','HIT'].includes(localized.headers.get('x-spanishcue-cache')));assert.ok(!localized.headers.has('set-cookie'));
  assert.match(await localized.text(),/<html lang="es"/);
  const anonymous=await fetchHit(path);assert.equal(anonymous.headers.get('cache-control'),PUBLIC);
- assert.match(await anonymous.text(),/<html lang="en"/,'a localized render must never be stored under the anonymous key');
+ const anonymousBody=await anonymous.text();assert.match(anonymousBody,/<html lang="en"/,'a localized render must never be stored under the other language');
+ let browser;for(let attempt=0;attempt<5;attempt++){browser=await fetch(origin+path,{headers:{cookie:'_ga=GA1.1.2.2; spanishcue_consent=all'}});if(browser.headers.get('x-spanishcue-cache')==='HIT')break;await browser.arrayBuffer();await sleep(150);}
+ assert.equal(browser.headers.get('x-spanishcue-cache'),'HIT','a browser with analytics cookies is served from the edge cache');assert.equal(await browser.text(),anonymousBody);
+ let spanish;for(let attempt=0;attempt<5;attempt++){spanish=await fetch(origin+path,{headers:{cookie:'spanishcue_locale=es'}});if(spanish.headers.get('x-spanishcue-cache')==='HIT')break;await spanish.arrayBuffer();await sleep(150);}
+ assert.equal(spanish.headers.get('x-spanishcue-cache'),'HIT');assert.equal(spanish.headers.get('content-language'),'es');assert.match(await spanish.text(),/<html lang="es"/);
  const toggled=await fetch(origin+path+'?lang=es',{redirect:'manual'});assert.equal(toggled.status,301,'a legacy ?lang= URL redirects to the clean URL');assert.equal(toggled.headers.get('location'),origin+path);assert.equal(toggled.headers.get('cache-control'),'private, no-store');assert.match(toggled.headers.get('set-cookie')||'',/spanishcue_locale=es/);await toggled.arrayBuffer();
  const toggledWithAds=await fetch(origin+path+'?lang=en&utm_source=qa',{redirect:'manual'});assert.equal(toggledWithAds.status,301);assert.equal(toggledWithAds.headers.get('location'),origin+path+'?utm_source=qa','only the lang parameter is dropped');await toggledWithAds.arrayBuffer();
  const campaign=await fetch(origin+'/lp/spanish-grammar-lessons?lang=es',{redirect:'manual'});assert.equal(campaign.status,200,'campaign landings keep ?lang= (noindex anyway)');assert.match(campaign.headers.get('set-cookie')||'',/spanishcue_locale=es/);assert.equal(campaign.headers.get('cache-control'),'private, no-store');await campaign.arrayBuffer();

@@ -95,6 +95,13 @@ export default async function RootLayout({
   const locale = localeFromHeaders(requestHeaders);
   const pathname = safePathname(requestHeaders.get("x-spanishcue-pathname"));
   const currentLesson = lessonAtPath(pathname, lessons);
+  // Only the lesson being opened travels to the browser. Sending the whole
+  // catalog made up two thirds of every page and payload render (~50 KB each),
+  // which the Worker paid in memory on every request (incident 2026-11-17).
+  const reportLessons = lessons
+    .filter(l=>(l.path||`/clase/${l.id}`)===pathname)
+    .slice(0,1)
+    .map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}));
   const freeLesson = Boolean(currentLesson && isFreeLesson(currentLesson.id));
   const fullAccess = fullAccessFromHeaders(requestHeaders);
   const signedIn = signedInFromHeaders(requestHeaders);
@@ -119,7 +126,7 @@ export default async function RootLayout({
           {freeVersionBar && <FreeVersionBar />}
           {children}
           {!fullAccess && (freeLesson || pathname === "/" || pathname === "/sistema-verbal" || pathname === "/choose-conversation") && <ProDiscovery signedIn={signedIn} />}
-          <LessonReportRoutes lessons={lessons.map(l=>({id:l.id,title:l.title,level:l.level,levels:conversationFamilyByLessonId.get(l.id)?.availableLevels||l.levels,path:l.path||`/clase/${l.id}`}))} signedIn={signedIn} />
+          <LessonReportRoutes lessons={reportLessons} signedIn={signedIn} />
           {!fullAccess && bautiRoute && <AskBauti audience={pathname.startsWith("/academias") ? "academy" : "teacher"} fullAccess={fullAccess} identityChecked={requestHeaders.get("x-spanishcue-identity-checked") === "1"} />}
           <CookieConsent />
           {freeLesson && currentLesson && !signedIn && (

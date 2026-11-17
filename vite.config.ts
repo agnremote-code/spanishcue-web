@@ -3,6 +3,7 @@ import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
 import { sites } from "./build/sites-vite-plugin";
 import { ssrClientOnly } from "./build/ssr-client-only-plugin";
+import { intentPrefetchOnly } from "./build/intent-prefetch-plugin";
 import { createRequire } from "node:module";
 import { liveLessonData, liveLessonIndexModule } from "./scripts/live-lessons.mjs";
 import { autoestudioModuleData, autoestudioIndexModule } from "./scripts/autoestudio-modules.mjs";
@@ -140,6 +141,7 @@ export default defineConfig(async ({ command }) => {
       // Browser-only code (3D worlds, three.js, Noche abierta scenes) stays out
       // of the SSR bundle: every Worker module is resident in the isolate.
       ssrClientOnly(),
+      intentPrefetchOnly(),
       vinext(),
       sites(),
       cloudflare({
