@@ -141,6 +141,9 @@ const publicRoots = new Set([
   // Loaded on demand by the live visuals; geometry only.
   "app/grammar-classroom/duration/world.ts",
   "app/conversation-worlds/ConversationWorld.tsx",
+  // Pronunciation classes 201 and 202 are both FREE samples and the only
+  // lessons this engine renders (app/clase/[id]/page.tsx).
+  "app/phonetics/PhoneticsLesson.tsx",
   // Autoestudio engines carry no lesson bodies: module data arrives only in
   // the authorized page render (the Worker gates PRO weeks).
   "app/autoestudio/AutoestudioLanding.tsx",

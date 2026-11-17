@@ -161,4 +161,24 @@ export const guiaRespuestas: Record<string, { answer: string; steps: string[] }>
       "Practica hablando: predicciones, promesas y suposiciones sobre alguien que falta.",
     ],
   },
+  "como-ensenar-el-condicional": {
+    answer:
+      "El condicional sirve para poner distancia: pedir con cortesía, aconsejar, imaginar algo que no es real o dar una información sin confirmarla. Se enseña por necesidad: fórmulas como «me gustaría» en A2, la conjugación completa y los consejos en B1, y las oraciones con si + imperfecto de subjuntivo en B2. Los irregulares son los del futuro.",
+    steps: [
+      "Empieza por fórmulas que el alumno ya usa: «me gustaría» y «¿podrías?».",
+      "Presenta la forma: infinitivo entero más las terminaciones del imperfecto, con las raíces irregulares del futuro.",
+      "Practica consejos e hipótesis sencillas antes de la oración con «si».",
+      "Añade si + imperfecto de subjuntivo y recuerda que después de «si» nunca va condicional.",
+    ],
+  },
+  "como-ensenar-las-preposiciones": {
+    answer:
+      "Las preposiciones se enseñan mejor en tres capas que con una lista de usos: primero las que tienen significado espacial, con un dibujo; después las expresiones fijas, como bloques; y por último los verbos que exigen una preposición, aprendidos como una unidad. El orden habitual va de «a, de, en, con» en A1 a los relativos con preposición en B2.",
+    steps: [
+      "Presenta lugar y movimiento con objetos o un plano, sin traducir.",
+      "Enseña las expresiones de tiempo completas: «a las ocho», «por la mañana».",
+      "Anota cada verbo con su preposición: «depender de», «pensar en».",
+      "Pide una frase personal con cada verbo y repásalas en la clase siguiente.",
+    ],
+  },
 };
