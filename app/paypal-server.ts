@@ -173,6 +173,7 @@ export function validatePaypalPromoPlan(plan: PaypalPlan, config: BillingRuntime
 // Promo plan IDs already fetched from PayPal and verified by this isolate, per environment.
 const verifiedPromoPlans = new Set<string>();
 const ensuredPromoPlan = new Map<string, { planId: string; at: number }>();
+const promoPlanFailedAt = new Map<string, number>();
 
 /** True only when PayPal itself returns this plan with exactly the promo terms. */
 export async function paypalPromoPlanVerified(config: BillingRuntimeConfig, planId: unknown) {
@@ -203,6 +204,21 @@ export async function withPaypalPromoPlan(config: BillingRuntimeConfig, planId: 
 export async function ensurePaypalPromoPlan(config: BillingRuntimeConfig) {
   const cached = ensuredPromoPlan.get(config.paypalEnv);
   if (cached && Date.now() - cached.at < 6 * 60 * 60 * 1000) return cached.planId;
+  // After a failure, wait five minutes before asking PayPal again: page views must not hammer it.
+  const failedAt = promoPlanFailedAt.get(config.paypalEnv);
+  if (failedAt && Date.now() - failedAt < 5 * 60 * 1000) throw new Error("paypal_promo_plan_unavailable");
+  try {
+    const planId = await findOrCreatePaypalPromoPlan(config);
+    ensuredPromoPlan.set(config.paypalEnv, { planId, at: Date.now() });
+    promoPlanFailedAt.delete(config.paypalEnv);
+    return planId;
+  } catch (error) {
+    promoPlanFailedAt.set(config.paypalEnv, Date.now());
+    throw error;
+  }
+}
+
+async function findOrCreatePaypalPromoPlan(config: BillingRuntimeConfig) {
   if (!config.clientId || !config.clientSecret || !config.productId) throw new Error("paypal_resources_missing");
   let planId = config.paypalEnv === "live" ? PAYPAL_LIVE_PROMO_PLAN_ID : "";
   if (!planId) {
@@ -233,7 +249,6 @@ export async function ensurePaypalPromoPlan(config: BillingRuntimeConfig) {
     planId = typeof created.id === "string" ? created.id : "";
   }
   if (!(await paypalPromoPlanVerified(config, planId))) throw new Error("paypal_promo_plan_mismatch");
-  ensuredPromoPlan.set(config.paypalEnv, { planId, at: Date.now() });
   return planId;
 }
 

@@ -162,7 +162,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     starting.current = true;
     // One checkout_start per opened checkout; `plan` tells the trial apart and
     // `value` is the first real charge. Starting a checkout is not a purchase.
-    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : offer === "promo" ? 0.99 : offer === "annual" ? 150 : 19.9, currency: "USD", method: "paddle" });
+    trackMarketingEvent("checkout_start", { plan: offer, value: offer === "trial" ? 2 : offer === "annual" ? 150 : 19.9, ...(offer === "promo" ? { value: 0.99 } : {}), currency: "USD", method: "paddle" });
     setStatus("paddle");
     setMessage("");
     try {
