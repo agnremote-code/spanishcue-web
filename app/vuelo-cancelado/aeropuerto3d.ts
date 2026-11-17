@@ -8,9 +8,10 @@
 import * as THREE from 'three';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
 import { realScenery } from '../mundo-real/escenario';
+import { contactShade, placeFurniture, type Placement } from '../mundo-real/real3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import type { Voice } from '../escucha-3d/bump.mjs';
-import { CEILING, CHATTER, CROWD, DOORS, ELEVATOR, FLOORS, FURNITURE, SCENES, STAIRS, WALKERS, WALL, WALLS, footprint, walkerAt, type Walker } from './layout.mjs';
+import { CEILING, CHATTER, CROWD, DOORS, ELEVATOR, FLOORS, FURNITURE, SCENES, STAIRS, WALKERS, WALL, WALLS, footprint, walkerAt, wallBox, type Walker } from './layout.mjs';
 import { TRIP } from './story.mjs';
 
 type Item = { type: string; x: number; z: number; w: number; d: number; rot?: number; solid?: boolean };
@@ -370,10 +371,20 @@ function puff() {
 }
 
 // ---------------------------------------------------------------- furniture
+// Set by buildAirport while a floor is built in realistic mode.
+let dress: Placement[] | null = null;
+let soft: THREE.Group | null = null;
+const FLAT = new Set(['canopy', 'fids', 'queue', 'arch', 'rates', 'shopfront', 'camp', 'gatescreen', 'screen', 'rail', 'airlinewall', 'xscreen', 'taxi', 'bus', 'carousel', 'plant']);
 function buildItem(g: THREE.Group, item: Item, floor: number, glows: THREE.MeshStandardMaterial[], screens: { board: Board; mesh: THREE.Mesh }[], belts: { x: number; z: number; w: number; d: number; cases: THREE.Object3D[] }[]) {
   const r = (item.rot ?? 0) * Math.PI / 2;
   const turned = item.rot === 1 || item.rot === 3;
   const W = turned ? item.d : item.w, D = turned ? item.w : item.d;
+  // Realistic mode: plants and sofas are scanned objects; their drawn version waits in `soft` until those load.
+  if (dress && soft) {
+    if (item.type === 'plant') { dress.push({ model: 'pachira_aquatica_01', x: item.x, z: item.z, tall: 1.9, rotY: item.x }); g = soft; }
+    else if (item.type === 'sofa') { dress.push({ model: 'sofa_03', x: item.x, z: item.z, fit: [item.w, 0.95, item.d], rotY: r }); g = soft; }
+    else if (item.type === 'suitcases') for (let i = 0; i < 3; i++) dress.push({ model: 'vintage_suitcase', x: item.x + (i - 1) * 0.75, z: item.z + item.d / 2 + 0.35, tall: 0.62, rotY: i * 1.3 });
+  }
   switch (item.type) {
     case 'seats': seatRow(g, item, floor === 2 ? '#2a4a8a' : floor === 1 ? '#5a2a3a' : '#2a5a5a'); break;
     case 'pew': pew(g, item); break;
@@ -1108,7 +1119,9 @@ export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: 
   const escalators: { floor: number; steps: THREE.Object3D[] }[] = [];
   for (const f of FLOORS) {
     const before = belts.length;
+    dress = opts.real ? [] : null; soft = opts.real ? new THREE.Group() : null;
     const group = buildFloor(f.id, opts.low, glows, doors, lift, screens, belts, escalators);
+    const scanned = dress, drawn = soft; dress = soft = null;
     const moving = [
       ...doors.filter(d => d.floor === f.id).flatMap(d => d.leaves.map(l => l.mesh)), lift[f.id].left, lift[f.id].right,
       ...escalators.filter(e => e.floor === f.id).flatMap(e => e.steps), ...belts.slice(before).flatMap(b => b.cases),
@@ -1116,6 +1129,12 @@ export function buildAirport(scene: THREE.Scene, opts: { low: boolean; shadows: 
     ];
     if (opts.real) realScenery(group, { floor: 'marble_01', polish: 0.5, wall: 'plastered_wall_04', repaint: true }, moving);
     batchStatic(group, moving);
+    if (scanned && drawn) {
+      group.add(drawn);
+      const walls = ((WALLS as Record<number, (number | string)[][]>)[f.id] ?? []).filter(w => w[4] !== 'glass').map(w => wallBox(w as [number, number, number, number]));
+      contactShade(group, walls, ((FURNITURE[f.id] ?? []) as Item[]).filter(i => !FLAT.has(i.type)).map(i => footprint(i)), CEILING);
+      placeFurniture(group, scanned, opts.shadows).then(() => { drawn.removeFromParent(); drawn.traverse(o => (o as THREE.Mesh).geometry?.dispose()); }).catch(() => { /* the drawn furniture stays */ });
+    }
     floors[f.id] = group;
     scene.add(group);
   }
