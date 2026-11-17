@@ -2103,6 +2103,151 @@ export const guiaPages: GuiaPage[] = [
     ],
     related: ["conectores", "subjuntivo", "b1", "b2"],
   },
+  {
+    slug: "como-ensenar-el-futuro",
+    path: `${GUIAS_PATH}/como-ensenar-el-futuro`,
+    title: "Cómo enseñar el futuro en español (ELE): secuencia de A1 a B2",
+    description:
+      "Cómo enseñar el futuro en ELE: ir a + infinitivo, presente y futuro simple, irregulares, probabilidad, errores típicos, actividades y fichas con soluciones.",
+    h1: "Cómo enseñar el futuro en ELE: de «voy a» a «serán las diez»",
+    kicker: "Guía para profesores de ELE",
+    intro:
+      "El futuro simple parece el tiempo más fácil del español: una sola serie de terminaciones para las tres conjugaciones y doce irregulares. Y sin embargo el alumno que lo acaba de aprender dice «mañana iré al cine con Ana» donde un hablante diría «mañana voy al cine con Ana». La dificultad no está en la forma, sino en la elección: el español habla del futuro con tres formas, y además usa el futuro simple para suponer cosas del presente. Esta guía propone en qué orden enseñarlas, cómo presentar cada una, los errores que vas a ver y las clases, fichas y ejercicios de Material ELE para practicarlas.",
+    keywords: ["cómo enseñar el futuro", "futuro simple ELE", "actividades futuro simple", "ir a + infinitivo ELE", "futuro de probabilidad", "ejercicios futuro español", "futuro irregular español"],
+    published: "2026-11-17",
+    lessonIds: [339, 144, 356, 402, 398, 461, 153],
+    sections: [
+      {
+        id: "idea",
+        title: "La idea que ordena todo: tres formas para un solo futuro",
+        blocks: [
+          { type: "p", text: "Para hablar de mañana, el español elige entre **ir a + infinitivo**, el **presente** y el **futuro simple**. Las tres son correctas y las tres hablan del futuro. Lo que cambia es cómo ve el hablante lo que dice: una intención ya tomada, algo ya organizado o una predicción que todavía no depende de nadie." },
+          { type: "ul", items: [
+            "**«Voy a llamar a Ana.»** Intención o plan: la decisión ya está tomada.",
+            "**«Mañana como con Ana.»** Algo acordado, casi de agenda, siempre con un marcador de tiempo.",
+            "**«Ana llegará tarde.»** Predicción, promesa o suposición: nadie lo ha organizado.",
+          ] },
+          { type: "p", text: "Si el alumno entiende este mapa antes de conjugar nada, el futuro simple llega como una pieza más y no como «el futuro verdadero» que sustituye a todo lo anterior. La página de [el futuro en español](/material-ele/futuro) resume las tres formas con actividades listas, y el tema de [gramática del futuro simple](/material-ele/gramatica/futuro-simple) reúne las clases por nivel." },
+        ],
+      },
+      {
+        id: "secuencia",
+        title: "La secuencia: qué enseñar en cada nivel",
+        blocks: [
+          { type: "p", text: "Este orden sigue lo que el alumno necesita decir, no el orden de la tabla de conjugación." },
+        ],
+        subsections: [
+          {
+            title: "A1: ir a + infinitivo y el presente con marcador",
+            blocks: [
+              { type: "p", text: "En A1 el alumno solo necesita contar planes: «el sábado voy a cenar con unos amigos». **Ir a + infinitivo** se construye con un verbo que ya conoce y no tiene irregulares nuevos. Se añade el presente con marcador («mañana trabajo») para lo que ya está en la agenda. Con eso basta para [invitar y hacer planes](/material-ele/funciones/invitar-y-hacer-planes), que es la función del nivel." },
+            ],
+          },
+          {
+            title: "A2: el futuro simple, regular e irregular",
+            blocks: [
+              { type: "p", text: "En A2 llega el futuro simple con sus dos usos básicos: **predecir** («en 2050 viviremos más años») y **prometer** («te llamaré»). Las terminaciones se añaden al infinitivo completo, y eso conviene mostrarlo antes de presentar los irregulares. La ficha de [futuro simple](/material-ele/ficha/futuro-simple-indicativo) trabaja la forma, y la de [ir a + infinitivo frente al futuro simple](/material-ele/ficha/ir-a-infinitivo-frente-al-futuro) trabaja la elección." },
+              { type: "p", text: "Las clases del nivel están en [futuro simple para A2](/material-ele/gramatica/futuro-simple/a2)." },
+            ],
+          },
+          {
+            title: "B1: el futuro dentro de frases más largas",
+            blocks: [
+              { type: "p", text: "En B1 el futuro deja de ir solo. Aparece en las **condiciones reales** («si llueve, nos quedaremos en casa») y junto a las **temporales** («cuando llegues, cenaremos»), donde el alumno descubre que después de «cuando» no va futuro, sino subjuntivo. La clase gratis de [condiciones reales con si + presente y futuro](/gramatica/condiciones-reales-si-presente-y-futuro) se abre sin registro, y la ficha de [temporales futuras con cuando, en cuanto y hasta que](/material-ele/ficha/temporales-futuras-cuando-en-cuanto-hasta) cubre el segundo punto." },
+              { type: "p", text: "Las clases están en [futuro simple para B1](/material-ele/gramatica/futuro-simple/b1) y el tema de [oraciones temporales](/material-ele/gramatica/oraciones-temporales) amplía el contraste." },
+            ],
+          },
+          {
+            title: "B2: probabilidad y futuro compuesto",
+            blocks: [
+              { type: "p", text: "En B2 el futuro cambia de significado: **«serán las diez»** no habla de después, sino de ahora, y quiere decir «creo que son las diez». Es el futuro de probabilidad, muy frecuente en la conversación y casi ausente en lo que produce el alumno. Se completa con el **futuro compuesto** para suponer algo ya terminado («habrá salido tarde») o prever un resultado («en junio habremos terminado»)." },
+              { type: "p", text: "La clase gratis de [futuro y condicional de probabilidad](/gramatica/futuro-y-condicional-de-probabilidad) presenta el contraste completo. Para practicar están la ficha de [futuro y condicional de probabilidad](/material-ele/ficha/futuro-y-condicional-de-probabilidad), la de [futuro compuesto](/material-ele/ficha/futuro-compuesto-indicativo) y las clases de [futuro simple para B2](/material-ele/gramatica/futuro-simple/b2)." },
+            ],
+          },
+        ],
+      },
+      {
+        id: "presentar",
+        title: "Cómo presentar el futuro simple en A2",
+        blocks: [
+          { type: "p", text: "Esta rutina ocupa unos veinte minutos y deja la forma lista para usar." },
+          { type: "ol", items: [
+            "**Un contexto de predicción.** Una pregunta que nadie puede responder con un plan: «¿Cómo será tu ciudad dentro de veinte años?». Así el alumno no puede escapar hacia «voy a».",
+            "**El infinitivo entero.** Escribe hablar, comer y vivir y añade la misma terminación a los tres: hablaré, comeré, viviré. El alumno ve que no hay que quitar nada.",
+            "**Las terminaciones como algo conocido.** -é, -ás, -á, -emos, -éis, -án se parecen al presente de haber: he, has, ha, hemos, habéis, han. Es una ayuda de memoria que funciona.",
+            "**Las tildes.** Todas las personas llevan tilde menos nosotros. Se practica leyendo en voz alta: el acento va al final.",
+            "**Los irregulares en tres grupos.** Solo cambia la raíz; las terminaciones son las mismas.",
+            "**El contraste.** Tres frases sobre el mismo sábado, una con cada forma, y la pregunta: ¿qué sabe el hablante en cada una?",
+          ] },
+          { type: "p", text: "Los doce irregulares se aprenden mejor agrupados por lo que le pasa a la raíz:" },
+          { type: "ul", items: [
+            "**Pierden la vocal:** poder, podré; saber, sabré; querer, querré; haber, habré; caber, cabré.",
+            "**Cambian la vocal por una d:** tener, tendré; poner, pondré; salir, saldré; venir, vendré; valer, valdré.",
+            "**Raíz corta:** decir, diré; hacer, haré.",
+          ] },
+          { type: "p", text: "Un detalle que ahorra trabajo más adelante: estas mismas raíces sirven para el [condicional](/material-ele/condicional), así que lo que se fija ahora no hay que volver a aprenderlo." },
+        ],
+      },
+      {
+        id: "errores",
+        title: "Errores típicos y cómo corregirlos",
+        blocks: [
+          { type: "p", text: "Estos son los errores más frecuentes, con una corrección breve para cada uno." },
+          { type: "ul", items: [
+            "**Futuro simple para todo.** «Esta tarde iré al dentista.» Es correcto, pero suena lejano o solemne. Corrección: «¿ya tienes cita?». Si la tiene, es presente o ir a.",
+            "**«Voy a» sin la a o sin infinitivo.** «Voy estudiar», «voy a estudio». Corrección: tres piezas fijas, ir conjugado, a e infinitivo; el alumno las cuenta con los dedos.",
+            "**La raíz regular en un irregular.** «Poneré», «saliré», «teneré». Corrección: volver a los tres grupos y pedir la frase completa, no el verbo suelto.",
+            "**Futuro después de «cuando».** «Cuando llegaré, te llamo.» Corrección: en B1, mostrar el par «cuando llegue, te llamaré» y preguntar cuál de las dos acciones es segura.",
+            "**Futuro después de «si».** «Si tendré tiempo, iré.» Corrección: después de si va presente; el futuro va en la otra mitad de la frase.",
+            "**Tildes olvidadas.** «Hablare», «comera». Corrección: leer en voz alta y marcar la sílaba fuerte; sin tilde, la palabra es otra o no existe.",
+            "**No reconocer la probabilidad.** El alumno oye «estará en casa» y entiende que alguien va a estar en casa después. Corrección: pedir que reformule con «creo que» o «a lo mejor».",
+          ] },
+          { type: "p", text: "Para practicar con corrección inmediata, el [ejercicio de futuro con soluciones](/material-ele/ejercicio/futuro) pide elegir entre ir a, presente y futuro simple. En [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) hay más por nivel." },
+        ],
+      },
+      {
+        id: "actividades",
+        title: "Actividades que hacen hablar",
+        blocks: [
+          { type: "p", text: "Cada actividad obliga a usar una de las formas por una razón real, y ninguna necesita material impreso." },
+          { type: "ol", items: [
+            "**El fin de semana ya decidido.** Cada alumno cuenta tres planes cerrados y uno que todavía no ha decidido; el grupo adivina cuál es. Practica ir a + infinitivo y está en el banco como [El fin de semana ya decidido](/material-ele/actividad/el-fin-de-semana-ya-decidido).",
+            "**El mundo dentro de veinte años.** Predicciones sobre trabajo, transporte y ciudades, con acuerdo y desacuerdo. [El mundo dentro de veinte años](/material-ele/actividad/el-mundo-dentro-de-veinte-anos) trae los temas y frases de apoyo.",
+            "**Promesas de campaña.** Los alumnos son candidatos a la alcaldía y prometen cinco cosas; el resto pregunta cómo las van a pagar. Es la actividad [Promesas de campaña](/material-ele/actividad/promesas-de-campana).",
+            "**¿Dónde estará?** Falta alguien conocido y el grupo hace suposiciones: «estará en un atasco», «se habrá dormido». [¿Dónde estará?](/material-ele/actividad/donde-estara) trabaja el futuro de probabilidad desde la primera frase.",
+            "**El horóscopo de la clase.** Cada alumno escribe una predicción amable para un compañero sin decir para quién es, y la clase decide a quién le corresponde. Está en [El horóscopo de la clase](/material-ele/actividad/el-horoscopo-de-la-clase).",
+          ] },
+          { type: "p", text: "Para alumnos de A1 que todavía no tienen el futuro simple, [El plan del fin de semana](/material-ele/actividad/el-plan-del-fin-de-semana) se resuelve entera con ir a + infinitivo." },
+        ],
+      },
+      {
+        id: "clase",
+        title: "Una clase de 45 minutos de futuro simple (A2)",
+        blocks: [
+          { type: "p", text: "Este plan sirve para una clase individual o un grupo pequeño en línea." },
+          { type: "ol", items: [
+            "**Entrada (5 min).** «¿Qué vas a hacer este fin de semana?» El alumno responde con lo que ya sabe, ir a + infinitivo.",
+            "**Contexto (5 min).** Cambia la pregunta: «¿Y cómo será tu vida dentro de diez años?». Anota en la pizarra lo que el alumno intenta decir.",
+            "**Forma (10 min).** Infinitivo entero más terminaciones, tildes y los tres grupos de irregulares.",
+            "**Práctica guiada (10 min).** Completar predicciones y transformarlas en preguntas para el compañero o para el profesor.",
+            "**Contraste (5 min).** El mismo sábado con tres formas: plan, agenda y predicción.",
+            "**Producción (10 min).** Una de las actividades de arriba; la corrección se deja para el final.",
+          ] },
+          { type: "p", text: "Como tarea, la ficha del tema con soluciones o cinco predicciones escritas sobre la próxima semana, que se comprueban en la clase siguiente: es una de las pocas tareas que el alumno tiene ganas de corregir." },
+          { type: "p", text: "Si prefieres llevar la clase ya armada, en [material por nivel A2](/material-ele/a2) están las clases interactivas del nivel, y la guía de [cómo enseñar el imperativo](/material-ele/guia/como-ensenar-el-imperativo) sigue el mismo esquema para el otro gran tema de A2." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué nivel se enseña el futuro simple?", answer: "En A2, después de ir a + infinitivo, que se trabaja en A1. En B1 se combina con las condiciones reales y las oraciones temporales, y en B2 se añaden el futuro de probabilidad y el futuro compuesto." },
+      { question: "¿Qué se enseña primero, ir a + infinitivo o el futuro simple?", answer: "Ir a + infinitivo. Se forma con un verbo que el alumno ya conoce, no tiene irregulares nuevos y cubre lo que necesita en A1: hablar de planes e intenciones." },
+      { question: "¿Cuáles son los verbos irregulares en futuro?", answer: "Doce muy frecuentes, en tres grupos: poder, saber, querer, haber y caber pierden la vocal; tener, poner, salir, venir y valer la cambian por una d; decir y hacer tienen raíz corta. Las terminaciones no cambian." },
+      { question: "¿Cómo explicar la diferencia entre «voy a» y el futuro simple?", answer: "Con tres frases sobre el mismo día. Ir a + infinitivo presenta una intención ya tomada, el presente algo ya acordado y el futuro simple una predicción, una promesa o una suposición." },
+      { question: "¿Qué es el futuro de probabilidad?", answer: "Es el uso del futuro simple para suponer algo del presente: «serán las diez» significa «creo que son las diez». Se trabaja en B2, junto con el futuro compuesto para suposiciones sobre algo ya terminado." },
+      { question: "¿Hay una clase gratis sobre el futuro?", answer: "Sí. En SpanishCue se abren gratis la clase de condiciones reales con si + presente y futuro, de B1, y la de futuro y condicional de probabilidad, de B2. En Material ELE hay además actividades, un ejercicio con soluciones y fichas de muestra sin registro." },
+    ],
+    related: ["futuro", "condicional", "a2", "b1"],
+  },
 ];
 
 /** «Cómo enseñar…» guides that belong to a grammar topic page: the topic is
