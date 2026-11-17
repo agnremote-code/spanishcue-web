@@ -89,7 +89,7 @@ test('Paddle: any other terms, product, amount or a catalog ID is rejected', () 
 
 const live = pp.billingConfig({ PAYPAL_ENV: 'live', PAYPAL_LIVE_CLIENT_ID: 'client', PAYPAL_LIVE_CLIENT_SECRET: 'secret', PAYPAL_LIVE_WEBHOOK_ID: 'hook', PAYPAL_LIVE_PRODUCT_ID: 'PROD-TEST', PAYPAL_LIVE_FOUNDER_PLAN_ID: 'P-LEGACY0000000000' });
 const promoPlan = () => ({
-  id: 'P-PROMO00000000000001', name: pp.PAYPAL_PROMO_PLAN_NAME, product_id: 'PROD-TEST', status: 'ACTIVE',
+  id: 'P-3BW31966S0028752HNL6KR5Y', name: pp.PAYPAL_PROMO_PLAN_NAME, product_id: 'PROD-TEST', status: 'ACTIVE',
   billing_cycles: [
     { frequency: { interval_unit: 'WEEK', interval_count: 1 }, tenure_type: 'TRIAL', sequence: 1, total_cycles: 1, pricing_scheme: { fixed_price: { value: '0.99', currency_code: 'USD' } } },
     { frequency: { interval_unit: 'MONTH', interval_count: 1 }, tenure_type: 'REGULAR', sequence: 2, total_cycles: 0, pricing_scheme: { fixed_price: { value: '19.9', currency_code: 'USD' } } },
@@ -112,25 +112,46 @@ test('PayPal: only a plan with exactly the promo terms is the promo plan', () =>
 test('PayPal: US$0.99 is a valid payment only on the verified promo plan', () => {
   const week = { value: '0.99', currency_code: 'USD' }, month = { value: '19.90', currency_code: 'USD' };
   assert.equal(pp.validatePaypalPayment(week, live), false);
-  assert.equal(pp.validatePaypalPayment(week, live, 'P-PROMO00000000000001'), false);
-  const promo = { ...live, promoPlanId: 'P-PROMO00000000000001' };
-  assert.equal(pp.validatePaypalPayment(week, promo, 'P-PROMO00000000000001'), true);
-  assert.equal(pp.validatePaypalPayment(month, promo, 'P-PROMO00000000000001'), true);
+  assert.equal(pp.validatePaypalPayment(week, live, 'P-3BW31966S0028752HNL6KR5Y'), false);
+  const promo = { ...live, promoPlanId: 'P-3BW31966S0028752HNL6KR5Y' };
+  assert.equal(pp.validatePaypalPayment(week, promo, 'P-3BW31966S0028752HNL6KR5Y'), true);
+  assert.equal(pp.validatePaypalPayment(month, promo, 'P-3BW31966S0028752HNL6KR5Y'), true);
   assert.equal(pp.validatePaypalPayment(week, promo, live.founderPlanId), false);
-  assert.equal(pp.validatePaypalPayment({ value: '0.99', currency_code: 'EUR' }, promo, 'P-PROMO00000000000001'), false);
+  assert.equal(pp.validatePaypalPayment({ value: '0.99', currency_code: 'EUR' }, promo, 'P-3BW31966S0028752HNL6KR5Y'), false);
   assert.equal(pp.validatePaypalPayment(month, live), true);
-  const subscription = { id: 'I-TEST', plan_id: 'P-PROMO00000000000001', custom_id: 'teacher' };
+  const subscription = { id: 'I-TEST', plan_id: 'P-3BW31966S0028752HNL6KR5Y', custom_id: 'teacher' };
   assert.equal(pp.validatePaypalSubscription(subscription, { subscriptionId: 'I-TEST', userId: 'teacher', config: live }), false);
   assert.equal(pp.validatePaypalSubscription(subscription, { subscriptionId: 'I-TEST', userId: 'teacher', config: promo }), true);
 });
 
-test('PayPal: the promo plan is found by name, created once when missing, and never trusted without verification', async () => {
+test('PayPal Live: the promo plan is the pinned one, verified with PayPal and never created again', async () => {
+  const old = globalThis.fetch; const calls = [];
+  globalThis.fetch = async (url, init = {}) => {
+    const u = String(url);
+    if (u.endsWith('/v1/oauth2/token')) return Response.json({ access_token: 'token' });
+    calls.push(`${init.method || 'GET'} ${u.replace('https://api-m.paypal.com', '').split('?')[0]}`);
+    return u.endsWith(`/v1/billing/plans/${pp.PAYPAL_LIVE_PROMO_PLAN_ID}`) ? Response.json(promoPlan()) : new Response('{}', { status: 404 });
+  };
+  try {
+    assert.equal(pp.PAYPAL_LIVE_PROMO_PLAN_ID, 'P-3BW31966S0028752HNL6KR5Y');
+    assert.equal(await pp.ensurePaypalPromoPlan(live), pp.PAYPAL_LIVE_PROMO_PLAN_ID);
+    assert.deepEqual(calls, [`GET /v1/billing/plans/${pp.PAYPAL_LIVE_PROMO_PLAN_ID}`]);
+    assert.equal((await pp.withPaypalPromoPlan(live, pp.PAYPAL_LIVE_PROMO_PLAN_ID)).promoPlanId, pp.PAYPAL_LIVE_PROMO_PLAN_ID);
+    // Any other plan, even one with the promo terms, is not the Live promo plan.
+    assert.equal((await pp.withPaypalPromoPlan(live, 'P-OTHERPROMO000000001')).promoPlanId, undefined);
+    assert.equal((await pp.withPaypalPromoPlan(live, live.founderPlanId)).promoPlanId, undefined);
+    assert.equal((await pp.withPaypalPromoPlan(live, 'not-a-plan')).promoPlanId, undefined);
+  } finally { globalThis.fetch = old; }
+});
+
+test('PayPal Sandbox: the promo plan is found by name, created once when missing, and never trusted without verification', async () => {
+  const live = pp.billingConfig({ PAYPAL_ENV: 'sandbox', PAYPAL_SANDBOX_CLIENT_ID: 'client', PAYPAL_SANDBOX_CLIENT_SECRET: 'secret', PAYPAL_SANDBOX_WEBHOOK_ID: 'hook', PAYPAL_SANDBOX_PRODUCT_ID: 'PROD-TEST', PAYPAL_SANDBOX_FOUNDER_PLAN_ID: 'P-LEGACY0000000000' });
   const old = globalThis.fetch; const calls = [];
   let plans = [];
   globalThis.fetch = async (url, init = {}) => {
     const u = String(url);
     if (u.endsWith('/v1/oauth2/token')) return Response.json({ access_token: 'token' });
-    calls.push(`${init.method || 'GET'} ${u.replace('https://api-m.paypal.com', '').split('?')[0]}`);
+    calls.push(`${init.method || 'GET'} ${u.replace('https://api-m.sandbox.paypal.com', '').split('?')[0]}`);
     if (u.includes('/v1/billing/plans?')) return Response.json({ plans: plans.map(({ id, name, status }) => ({ id, name, status })) });
     if (init.method === 'POST' && u.endsWith('/v1/billing/plans')) {
       assert.equal(init.headers['paypal-request-id'], 'spanishcue-promo-semana-099-20261117');
@@ -145,13 +166,13 @@ test('PayPal: the promo plan is found by name, created once when missing, and ne
     return plan ? Response.json(plan) : new Response('{}', { status: 404 });
   };
   try {
-    assert.equal(await pp.ensurePaypalPromoPlan(live), 'P-PROMO00000000000001');
+    assert.equal(await pp.ensurePaypalPromoPlan(live), 'P-3BW31966S0028752HNL6KR5Y');
     assert.equal(calls.filter(c => c === 'POST /v1/billing/plans').length, 1);
     // Cached for this isolate: no second creation, no further requests.
     const before = calls.length;
-    assert.equal(await pp.ensurePaypalPromoPlan(live), 'P-PROMO00000000000001');
+    assert.equal(await pp.ensurePaypalPromoPlan(live), 'P-3BW31966S0028752HNL6KR5Y');
     assert.equal(calls.length, before);
-    assert.equal((await pp.withPaypalPromoPlan(live, 'P-PROMO00000000000001')).promoPlanId, 'P-PROMO00000000000001');
+    assert.equal((await pp.withPaypalPromoPlan(live, 'P-3BW31966S0028752HNL6KR5Y')).promoPlanId, 'P-3BW31966S0028752HNL6KR5Y');
     assert.equal((await pp.withPaypalPromoPlan(live, live.founderPlanId)).promoPlanId, undefined);
     assert.equal((await pp.withPaypalPromoPlan(live, 'P-UNKNOWN00000000000')).promoPlanId, undefined);
     assert.equal((await pp.withPaypalPromoPlan(live, 'not-a-plan')).promoPlanId, undefined);
@@ -170,8 +191,8 @@ test('PayPal: the week grants seven days as a paid trial; the first US$19.90 is 
   const { sqlite, db } = await database();
   const config = dbm.billingConfig({ PAYPAL_ENV: 'live' }), now = Math.floor(Date.now() / 1000);
   assert.equal(await dbm.promoWeekEligible(db, 'teacher'), true);
-  await dbm.createPendingSubscription(db, { environment: 'live', userId: 'teacher', paypalSubscriptionId: 'I-PROMO', planId: 'P-PROMO00000000000001', offerCode: config.founderOffer.code });
-  assert.equal(await dbm.paypalSubscriptionPlanId(db, 'I-PROMO', 'live'), 'P-PROMO00000000000001');
+  await dbm.createPendingSubscription(db, { environment: 'live', userId: 'teacher', paypalSubscriptionId: 'I-PROMO', planId: 'P-3BW31966S0028752HNL6KR5Y', offerCode: config.founderOffer.code });
+  assert.equal(await dbm.paypalSubscriptionPlanId(db, 'I-PROMO', 'live'), 'P-3BW31966S0028752HNL6KR5Y');
   const week = { environment: 'live', paypalSubscriptionId: 'I-PROMO', providerPaymentId: 'SALE-WEEK', amountCents: 99, currency: 'USD', status: 'COMPLETED', occurredAt: now, paidThrough: now + 7 * 86400 };
   // Without the verified promo plan the US$0.99 charge is refused.
   await assert.rejects(dbm.recordPaypalPayment(db, week, config), /paypal_payment_mismatch/);
