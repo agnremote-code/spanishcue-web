@@ -7,7 +7,7 @@
 
 ## 1. The question
 - Martin's audit of 2026-11-03 found that three sampled generated pages FAIL §3.2: topic page `formatos/mundos-3d`, level page `gramatica/adjetivos/a1` ("FAIL, but level-honest") and activity page `palmas-en-la-silaba-fuerte`. The generators have no fields for one objective, ≥8 authored prompts or a sequence, so the whole family fails those clauses (VERIFIED, [transcripts/2026-11-03-tuesday-seo.md](../transcripts/2026-11-03-tuesday-seo.md) §3).
-- The families: 113 topic, 371 topic-level and 105 activity pages, added 2026-11-01, all `index: true` (VERIFIED as of 11-03, same source; `robots: { index: true }` at `app/material-ele/components.tsx:28`). Current counts: UNKNOWN (no node_modules in this sandbox, so the generators were not executed this run).
+- The families: 113 topic, 371 topic-level and 105 activity pages, added 2026-11-01, all `index: true` (VERIFIED as of 11-03, same source; `robots: { index: true }` at `app/material-ele/components.tsx:28`). Current counts on main `e11f4af` (VERIFIED, facilitator ran the generators with esbuild on 2026-11-17): **113 topic, 377 topic-level, 105 activity pages**.
 - His options: (a) noindex the families until authored fields exist; (b) narrow §3.2.
 - The copy defects he named were fixed and guarded in PR #357 (VERIFIED, facts sheet; `tests/material-ele-copy-quality.test.mjs`).
 
@@ -19,7 +19,7 @@
 | …generated topic-level pages | 53 pages with ≥1 impr, **34 clicks**, 229 impr, **wpos 9.9** | VERIFIED, facts sheet |
 | Share of all site clicks from generated level pages | 34/77 = **44%** | VERIFIED, facts sheet |
 | Generated level pages with impressions but 0 clicks | 33 of 53 | VERIFIED, facts sheet |
-| Level pages with 0 impressions | ≈318 of ≈371 (371 − 53) | HYPOTHESIS: assumes the 11-03 count still holds |
+| Level pages with 0 impressions | 324 of 377 (377 − 53) | VERIFIED: generator count (§1) minus pages with impressions |
 | Topic pages and activity pages, separately | not split out in the facts sheet | UNKNOWN |
 | Age of the families inside the window | ≤14 days (created 11-01) | VERIFIED, dates |
 
@@ -39,12 +39,12 @@ What this means: the generated level pages are the site's best-ranking traffic s
 | H2 | **Substance.** Level page lists ≥2 authored classes of its level. Topic page ≥1 authored class and a hand-written intro | YES. `temas.ts:305` (`ids.length < 2` returns null); `tests/material-ele-temas.test.mjs:13,76`; intro unique and ≥80 chars at `:28,33` |
 | H3 | **Unique bounded metadata.** Title ≤78, description 110–165, unique path/title/H1 (and intro for topic and level pages), ≥2–3 FAQ, in sitemap | YES. `tests/material-ele-temas.test.mjs:22-35,69-86`; `tests/material-ele-actividades.test.mjs:17-30` |
 | H4 | **Copy quality.** Template Spanish agrees for every topic; capitals and acronyms kept; no invented price, customers or rankings | YES. `tests/material-ele-copy-quality.test.mjs:12-35,53-58`; `tests/material-ele-temas.test.mjs:47-51`; `tests/material-ele-actividades.test.mjs:42-46` |
-| H5 | **No invented per-page teaching content.** Goals, warm-ups and speaking prompts on topic and level pages are copied from the listed classes. Activity pages show their guide's authored activity | **By construction only, not tested.** `temas.ts:240-242,331-333`; `app/material-ele/actividades.ts:53-62` |
-| H6 | **True access claims.** Any "free class" sentence is true for that page | **NO.** `temas.ts:321` appends «Tres clases gratis por nivel para probar sin registro.» to short level descriptions, and `temas.ts:340` points to «la clase gratis de este nivel» when `freeCount` is 0, both without a check. Whether they are false on any C1/C2 page is UNKNOWN; `app/material-ele/guias.ts:574` says only A1–B2 have three free classes per level |
+| H5 | **No invented per-page teaching content.** Goals, warm-ups and speaking prompts on topic and level pages are copied from the listed classes. Activity pages show their guide's authored activity | **YES since this PR** for topic and level pages: guard G-H5 (`tests/material-ele-copy-quality.test.mjs`), mutation-checked by the facilitator (an injected «Objetivo inventado» goal fails it). Activity pages: by construction (`app/material-ele/actividades.ts:53-62`) |
+| H6 | **True access claims.** Any "free class" sentence is true for that page | **YES since this PR**: guard G-H6. The sentences at `temas.ts:321` («Tres clases gratis por nivel…») and `temas.ts:340`/`:251` («la clase gratis de este nivel», «una clase gratis de tu nivel») are **true today**: every level A1–C2 has three free grammar classes (VERIFIED, `app/access-policy.ts:1-2`). The guard fails if that stops being true (mutation-checked: removing the C2 samples fails it). `app/material-ele/guias.ts:574` names only A1–B2; it understates but is not false (recommendation: add C1 and C2) |
 | H7 | **URL stability.** A published level path is generated or 308-redirects to its topic | YES. `tests/material-ele-copy-quality.test.mjs:79-91` |
 | H8 | **Factual correctness of authored content** shown on the page (e.g. the «café» syllable error) | Partly. Single known defects are pinned (`copy-quality.test.mjs:49`). test:language scans `app/` for voseo only (`scripts/neutral-spanish.mjs:8`), not facts. General correctness stays a human audit duty (§3.4) |
 
-**Guards to add (tests only, small):**
+**Guards (tests only, small), added in this PR:**
 - **G-H5**, in `tests/material-ele-copy-quality.test.mjs`: for every topic and level page, each string in `goals`, `warmups` and `speaking` occurs in the corresponding field of one of its `lessonIds`. About 8 lines.
 - **G-H6**, same file: a level page whose description or FAQ says «gratis» must have `freeCount > 0`, or its level must have ≥1 free class in the catalogue (`isFreeLesson`). If it fails, the fix is copy-only (drop or condition the sentence), which this decision authorizes (§3.6).
 
