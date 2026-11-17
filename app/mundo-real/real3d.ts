@@ -175,16 +175,21 @@ export function createCeilingLight(scene: THREE.Scene, size = 2048, reach = 16) 
 
 // ------------------------------------------------------------------ furniture
 
-export type Mueble = 'silla' | 'escritorio' | 'sofa';
-/** Where a piece goes. `fit` stretches the model's own box to [width, height, depth] in metres before turning it. */
-export type Placement = { model: Mueble; x: number; z: number; y?: number; rotY?: number; fit?: [number, number, number] };
-
+/** A scanned object: one of the three office pieces in /muebles, or any file of /objetos (see scripts/mundo-real/modelos.py). */
+export type Mueble = string;
 type Piece = { geometry: THREE.BufferGeometry; material: THREE.Material };
+/**
+ * Where one object stands. `fit` stretches it to a width, height and depth; `tall` scales it
+ * evenly to a height. `y` is the height of its base (objects from /objetos stand on their base, centred).
+ */
+export type Placement = { model: Mueble; x: number; z: number; y?: number; rotY?: number; fit?: [number, number, number]; tall?: number };
+const OFFICE = new Set(['silla', 'escritorio', 'sofa']);
+
 const models = new Map<Mueble, Promise<{ pieces: Piece[]; box: THREE.Box3 }>>();
 function loadModel(name: Mueble) {
   let p = models.get(name);
   if (!p) {
-    p = new GLTFLoader().loadAsync(`${BASE}muebles/${name}.glb`).then(gltf => {
+    p = new GLTFLoader().loadAsync(`${BASE}${OFFICE.has(name) ? 'muebles' : 'objetos'}/${name}.glb`).then(gltf => {
       const pieces: Piece[] = [];
       const box = new THREE.Box3();
       gltf.scene.updateMatrixWorld(true);
@@ -196,6 +201,12 @@ function loadModel(name: Mueble) {
         box.union(geometry.boundingBox as THREE.Box3);
         pieces.push({ geometry, material: mesh.material as THREE.Material });
       });
+      if (!OFFICE.has(name)) {
+        // Stand it on its base, centred, whatever origin the scan came with.
+        const c = box.getCenter(new THREE.Vector3());
+        for (const piece of pieces) piece.geometry.translate(-c.x, -box.min.y, -c.z);
+        box.translate(new THREE.Vector3(-c.x, -box.min.y, -c.z));
+      }
       return { pieces, box };
     });
     models.set(name, p);
@@ -217,7 +228,7 @@ export async function placeFurniture(parent: THREE.Object3D, placements: Placeme
       const inst = new THREE.InstancedMesh(piece.geometry, piece.material, list.length);
       inst.castShadow = shadows; inst.receiveShadow = true;
       list.forEach((p, i) => {
-        if (p.fit) s.set(p.fit[0] / size.x, p.fit[1] / size.y, p.fit[2] / size.z); else s.set(1, 1, 1);
+        if (p.fit) s.set(p.fit[0] / size.x, p.fit[1] / size.y, p.fit[2] / size.z); else s.setScalar(p.tall ? p.tall / size.y : 1);
         q.setFromAxisAngle(up, p.rotY ?? 0);
         m.compose(t.set(p.x, p.y ?? 0, p.z), q, s);
         inst.setMatrixAt(i, m);
