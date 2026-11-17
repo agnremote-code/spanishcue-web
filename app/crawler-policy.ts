@@ -28,7 +28,7 @@ export const AI_CRAWLERS = [
   "Meta-ExternalAgent", "Meta-ExternalFetcher", "FacebookBot",
   "cohere-ai", "cohere-training-data-crawler",
   "Diffbot", "ImagesiftBot", "Omgilibot", "Omgili", "Webzio-Extended",
-  "Timpibot", "YouBot", "AI2Bot", "DuckAssistBot", "MistralAI-User", "DeepSeekBot",
+  "Timpibot", "YouBot", "AI2Bot", "MistralAI-Training", "DeepSeekBot",
   "PanguBot", "ICC-Crawler", "iaskspider", "Kangaroo Bot", "img2dataset",
   "FirecrawlAgent", "Crawl4AI", "Google-CloudVertexBot", "Google-NotebookLM",
 ] as const;
@@ -39,7 +39,13 @@ export const AI_CRAWLERS = [
  * listed in robots.txt, and counted by the per-IP page limiter like any
  * visitor. Training crawlers of the same companies stay blocked above.
  */
-export const AI_SEARCH_AGENTS = ["OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Perplexity-User", "Claude-SearchBot", "Claude-User"] as const;
+export const AI_SEARCH_AGENTS = [
+  "OAI-SearchBot", "ChatGPT-User", "PerplexityBot", "Perplexity-User", "Claude-SearchBot", "Claude-User",
+  // 2026-11-17, checked against each operator's own page: Claude-Agent is the browser Claude uses to finish a
+  // task for a person; DuckAssistBot fetches pages for DuckDuckGo's cited answers and is not used for training;
+  // MistralAI-User and MistralAI-Index serve Mistral's cited answers (MistralAI-Training stays blocked above).
+  "Claude-Agent", "DuckAssistBot", "MistralAI-User", "MistralAI-Index",
+] as const;
 
 /**
  * robots.txt-only opt-outs: these never appear in a User-Agent header. They
