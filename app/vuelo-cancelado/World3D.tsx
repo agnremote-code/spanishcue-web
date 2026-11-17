@@ -90,8 +90,9 @@ export default function World3D(props: WorldProps) {
     let airport: Airport;
     let hero: ReturnType<typeof createHero>;
     // People with real bodies (skin, hair, clothes) on computers; phones keep the light drawn figures. ?real=0 turns it off.
-    enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') !== '0');
-    try { airport = buildAirport(scene, { low, shadows: !low, cries: CRIES, onCry: (cry, volume) => { if (cry) shout(cry, volume); live.current.onCry(volume); }, onThunder: (delay, strength) => live.current.onThunder(delay, strength) }); hero = createHero(!low); }
+    const real = !low && new URLSearchParams(window.location.search).get('real') !== '0';
+    enableRealPeople(real);
+    try { airport = buildAirport(scene, { low, shadows: !low, real, cries: CRIES, onCry: (cry, volume) => { if (cry) shout(cry, volume); live.current.onCry(volume); }, onThunder: (delay, strength) => live.current.onThunder(delay, strength) }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
       renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
