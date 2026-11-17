@@ -43,12 +43,16 @@ import { pageReadKey, pageReadLimitResponse, refusedAgent, refusedAgentResponse 
 import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../app/license-watermark";
 import { bindAttribution } from "../db/partners";
 import { PARTNER_COOKIE, partnerCookieValue, partnerMarketingConsent, verifyReferral } from "../app/partners/referral";
+import { RenderGate, busyResponse, gatedRender } from "./render-gate";
 import { deviceCookieHeader, deviceHash, deviceIdFromCookie, deviceLabel, newDeviceId, recordPremiumOpen } from "../db/account-security";
 
 // vinext's default in-memory ISR cache is unbounded and grew past the isolate's
 // 128 MB under crawler traffic (Error 1102, 2026-11-02). Install the bounded one
 // before the first request; the edge cache keeps serving repeat anonymous HTML.
 setCacheHandler(new BoundedCacheHandler());
+
+// At most a few renders at once per isolate (worker/render-gate.ts, incident 2026-11-17).
+const renderGate = new RenderGate();
 
 interface Env {
   ASSETS: Fetcher;
@@ -100,7 +104,12 @@ declare const __SPANISHCUE_BUILD_ID__: string | undefined;
 const EDGE_HTML_TTL_SECONDS = 600;
 const PUBLIC_HTML_CACHE_CONTROL = 'public, max-age=0, must-revalidate';
 const BUILD_ID = typeof __SPANISHCUE_BUILD_ID__ === 'string' && __SPANISHCUE_BUILD_ID__ ? __SPANISHCUE_BUILD_ID__ : 'unversioned';
-const VISITOR_STATE_HEADERS = ['cookie', 'authorization', 'rsc', 'next-router-state-tree', 'next-router-prefetch', 'next-url'];
+// A cookie alone is not visitor state here: edge-cacheable paths are never
+// identity-aware, so their render depends only on path, build and UI language
+// (the locale is part of the key). Nearly every real browser carries analytics
+// or consent cookies, and bypassing on them sent every human page view to a
+// full render (incident 2026-11-17).
+const VISITOR_STATE_HEADERS = ['authorization', 'rsc', 'next-router-state-tree', 'next-router-prefetch', 'next-url'];
 
 /** The browser carries a student pass cookie (unverified): only chooses which page explains a refusal. */
 function shareHint(cookie: string | null): boolean {
@@ -111,10 +120,10 @@ function edgeCache(): Cache | null {
   return store?.default ?? null;
 }
 
-function edgeCacheKey(request: Request, url: URL, pathname: string, deployment: string | undefined): Request | null {
+function edgeCacheKey(request: Request, url: URL, pathname: string, deployment: string | undefined, locale: string): Request | null {
   if (request.method !== 'GET' || url.search !== '' || !isEdgeCacheablePath(pathname)) return null;
   for (const header of VISITOR_STATE_HEADERS) if (request.headers.has(header)) return null;
-  const variant = encodeURIComponent(`${deployment ?? 'production'}:${BUILD_ID}`);
+  const variant = encodeURIComponent(`${deployment ?? 'production'}:${BUILD_ID}:${locale}`);
   return new Request(`${url.origin}${url.pathname}?__spanishcue_build=${variant}`, { method: 'GET' });
 }
 
@@ -352,7 +361,7 @@ const app = {
     const verifiedRequest=new Request(routedRequest,{headers:verifiedHeaders});
     const verifiedLocale=localeFromHeaders(verifiedHeaders);
     const edgeKey = !identityAware && !lesson && !premiumBoard && !premiumAutoestudio && !autoestudio && !administrative && !shareApi && !premiumAudio && !rscPayload
-      ? edgeCacheKey(request, url, pathname, env.SPANISHCUE_DEPLOYMENT)
+      ? edgeCacheKey(request, url, pathname, env.SPANISHCUE_DEPLOYMENT, verifiedLocale)
       : null;
     if (edgeKey) {
       const store = edgeCache();
@@ -362,6 +371,11 @@ const app = {
         hit.headers.set('Cache-Control', PUBLIC_HTML_CACHE_CONTROL);
         hit.headers.set('X-SpanishCue-Cache', 'HIT');
         setSecurityHeaders(hit.headers, url, verifiedLocale);
+        // Same consent rule as a fresh render: a partner cookie without marketing consent is dropped.
+        const hitCookie = request.headers.get('cookie');
+        if (partnerCookieValue(hitCookie) && !partnerMarketingConsent(hitCookie)) {
+          hit.headers.append('Set-Cookie', `${PARTNER_COOKIE}=; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=0`);
+        }
         return hit;
       }
     }
@@ -420,9 +434,17 @@ const app = {
 
     const immutableAsset = url.pathname.startsWith('/assets/') || url.pathname.startsWith('/_next/static/');
     const publicMedia = /\.(?:avif|gif|ico|jpe?g|m4a|mp3|mp4|ogg|png|svg|ttf|wav|webm|webp|woff2?)$/i.test(url.pathname);
-    const response = immutableAsset || publicMedia
+    const rendered = immutableAsset || publicMedia
       ? await mediaRangeResponse(verifiedRequest, await env.ASSETS.fetch(verifiedRequest), url.pathname)
-      : await handler.fetch(verifiedRequest, env, ctx);
+      : gatedRender(request.method, pathname)
+        ? await renderGate.run(() => handler.fetch(verifiedRequest, env, ctx))
+        : await handler.fetch(verifiedRequest, env, ctx);
+    if (!rendered) {
+      const busy = busyResponse();
+      setSecurityHeaders(busy.headers, url, verifiedLocale);
+      return busy;
+    }
+    const response = rendered;
     const edgeStorable = Boolean(edgeKey) && !immutableAsset && !publicMedia && response.status === 200
       && !response.headers.has('Set-Cookie')
       && /^text\/html/i.test(response.headers.get('Content-Type') || '');
