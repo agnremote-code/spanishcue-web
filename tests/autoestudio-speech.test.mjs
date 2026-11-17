@@ -58,7 +58,18 @@ test('recorded audio reuses its unlocked element, propagates rejection, and acce
  const audio=Object.fromEntries(clips.map((clip,i)=>[audioKey(clip.text,clip.voice),`/audio/${i}.mp3`]));
  const done=h.api.playClips(clips,{audio,rate:0.7});const el=h.calls[0][1];assert.equal(el.playbackRate,0.7);el.onplaying();el.onended();
  assert.equal(h.calls[1][1],el);el.onended();assert.equal(await done,true);
- const failed=h.api.playClips(clips,{audio});el.error={code:4};el.onerror();await assert.rejects(failed,/media-4/);
+ // A recording that cannot load falls back to the device's Spanish voice…
+ const rescued=h.api.playClips(clips,{audio});el.error={code:4};el.onerror();
+ assert.equal(h.utterances().length,2);h.utterances()[0].onstart();h.utterances()[0].onend();h.utterances()[1].onend();assert.equal(await rescued,true);
+ // …and only fails when the device has none.
+ const bare=harness({voices:[]});const failed=bare.api.playClips(clips,{audio});const broken=bare.calls[0][1];broken.error={code:4};broken.onerror();
+ await assert.rejects(failed,/media-4/);assert.equal(bare.utterances().length,0);
+});
+test('recorded audio plays on a device with no speech synthesis at all (Android in-app browsers)',async()=>{
+ const h=harness({available:false});const {audioKey}=await import('../app/autoestudio/curriculum/audio-key.ts');
+ const audio=Object.fromEntries(clips.map((clip,i)=>[audioKey(clip.text,clip.voice),`/audio/autoestudio/${i}.mp3`]));
+ let starts=0;const done=h.api.playClips(clips,{audio,onStart:()=>starts++});const el=h.calls[0][1];
+ el.onplaying();el.onended();el.onplaying();el.onended();assert.equal(await done,true);assert.equal(starts,1);
 });
 
 for (const locale of ['es-MX','es-AR','es-CO','es-ES','es-US']) {

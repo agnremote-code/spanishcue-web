@@ -31,7 +31,7 @@ const es = {
   done: "Hecho",
   listen: "Escuchar",
   listenSlow: "Más despacio",
-  audioError: "No se pudo reproducir el audio. Vuelve a tocar Escuchar. Si continúa, comprueba que tu dispositivo tenga una voz en español.",
+  audioError: "No se pudo reproducir el audio. Revisa tu conexión a internet y vuelve a tocar Escuchar.",
   stop: "Parar",
   play: "Reproducir",
   transcript: "Transcripción",

@@ -23,7 +23,7 @@
       },
       {
         "before": "new Set(['hotel','latam','phonetics','grammar-free']);",
-        "after": "new Set(['hotel','latam','phonetics','grammar-free','escucha-3d-libre']);"
+        "after": "new Set(['hotel','latam','phonetics','grammar-free','escucha-3d-libre','autoestudio']);"
       },
       {
         "before": "/** Two fixed samples per category; filters never change access permissions. */\nexport const samplesByCategory: Record<string, number[]> = { 'Gramática':[40,41],",
