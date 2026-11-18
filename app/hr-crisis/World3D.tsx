@@ -73,7 +73,7 @@ export default function World3D(props: WorldProps) {
     const realAo = real && realParam === 'ao';
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let renderer: THREE.WebGLRenderer;
-    try { renderer = new THREE.WebGLRenderer({ antialias: !low, powerPreference: 'high-performance' }); }
+    try { renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'high-performance' }); }
     catch { const t = window.setTimeout(() => live.current.onFail(), 0); return () => window.clearTimeout(t); }
     const touchTimer = window.setTimeout(() => setTouch(window.matchMedia('(pointer: coarse)').matches), 0);
     const ratioCap = low ? 1.2 : 1.75;
@@ -82,6 +82,11 @@ export default function World3D(props: WorldProps) {
     renderer.toneMappingExposure = 1.0;
     renderer.shadowMap.enabled = !low;
     renderer.shadowMap.type = real ? THREE.VSMShadowMap : THREE.PCFSoftShadowMap;
+    // The shadow pass draws the whole office again (and VSM blurs it): redraw it every other frame,
+    // and at once when the light moves, so walking costs about half as much and shadows never lag behind.
+    renderer.shadowMap.autoUpdate = false;
+    renderer.shadowMap.needsUpdate = true;
+    let shadowFrame = 0;
     renderer.domElement.tabIndex = 0;
     renderer.domElement.setAttribute('aria-label', 'La oficina de Caos y Asociados en 3D. Flechas o WASD para caminar, arrastra para mirar, E para hablar, espacio para saltar, N para el nitro.');
     host.appendChild(renderer.domElement);
@@ -249,6 +254,18 @@ export default function World3D(props: WorldProps) {
 
     // ------------------------------------------------------------ loop
     const pace = createFramePacer();
+    // Furniture and real bodies arrive a few seconds after the office. Each new material compiled the first time it
+    // came into view, which froze the picture for a moment while walking. Compile them as they arrive instead,
+    // off the main thread where the browser allows it.
+    let meshCount = -1;
+    const warmup = window.setInterval(() => {
+      let n = 0;
+      scene.traverse(o => { if ((o as THREE.Mesh).isMesh) n++; });
+      if (n === meshCount) return;
+      meshCount = n;
+      void renderer.compileAsync(scene, camera).catch(() => { /* compiles on first draw instead */ });
+    }, 2500);
+    const stopWarmup = window.setTimeout(() => window.clearInterval(warmup), 45000);
     const loop = (now: number) => {
       if (disposed) return;
       frame = requestAnimationFrame(loop);
@@ -379,6 +396,7 @@ export default function World3D(props: WorldProps) {
         look.set(player.x, 1.2 + (player.y || 0) * 0.5, player.z);
         camera.lookAt(look);
       }
+      if (shadowFrame++ % 2 === 0) renderer.shadowMap.needsUpdate = true;
       if (composer) composer.render(); else renderer.render(scene, camera);
     };
     frame = requestAnimationFrame(loop);
@@ -386,6 +404,7 @@ export default function World3D(props: WorldProps) {
     return () => {
       disposed = true;
       cancelAnimationFrame(frame);
+      window.clearInterval(warmup); window.clearTimeout(stopWarmup);
       window.clearTimeout(touchTimer);
       observer.disconnect();
       charlas.dispose();
