@@ -1,0 +1,1141 @@
+{
+ "producer": "Microsoft Edge online speech via edge-tts",
+ "synthetic": true,
+ "humanListeningQA": false,
+ "clips": [
+  {
+   "id": "abc-01",
+   "text": "a.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "5ab640fad553cbf927dc96b8e7878a9844b2fa79b7a4f5c515e186970ec53027",
+   "sha256": "0ba3f8181a91a6a673cbee3b304a7a7dcc914d5d921c3330324b330a93145b8a",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-02",
+   "text": "be.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "cfd1903a2ddc0c29b6be1abbce7fa3f484cd45a298ff7c326107ace53d271ea4",
+   "sha256": "20388ebb9f3ef8fe5f485b20b328f713367871abef9b2559412b087ce5dbd791",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-03",
+   "text": "ce.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "3454ff6c55684c5f85826b7f6f91f8067afa33272c776b78de0bf6b2a66409aa",
+   "sha256": "37ebb9e6737f659d8049f866c0d99bd02376ee985ef1033af89d696ca96c160d",
+   "durationSeconds": 1.94
+  },
+  {
+   "id": "abc-04",
+   "text": "de.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "da5669bf60aa27fc8acc745ca55ce4cc8931f95ac5d767663f49026bfa06688b",
+   "sha256": "f741a06b7e29a4c11e4a0bbbab18082014e9589b14884be926b4cf1c81ef01d2",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-05",
+   "text": "e.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "4b237bf5b4c1ddd9abaa359dfdf4cbbd86f16b8571427e935f006e7c9291c48c",
+   "sha256": "40e4741af022092210359d4589db55dcd3cfa44f093e34be11148a6176dce7c3",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-06",
+   "text": "efe.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "9c5b093a8921e8dbe50bfb05861f2a6ccf5f4ff1a236b6d1d2dcdd644f7a4426",
+   "sha256": "85a5d23ad3cea57d607d128304edb3a0e7f6feed5e63bf6508bd73e04e978170",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-07",
+   "text": "ge.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "a55a343e4572ecd2af004b889092a40522297e096cc7c776e8f9e1420e7da5d5",
+   "sha256": "7ad80dabf82983f5813f7850bcfa1a22e6bdcc1854320d410d64012a01ccf852",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-08",
+   "text": "hache.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "d50d2a67079e91872696880ba5ab65bb4f39a0e12331f4e01b4cf5273eb517e0",
+   "sha256": "e891b814b132d5d22cdb1e5ef4d0cb0a4ee2c5464487929703eb28751c9986b5",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-09",
+   "text": "i.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "4c83460fa84a82bdfb87719c82726d7e3c0f60deebce523ecff333e422a04fe1",
+   "sha256": "3bc4433eb301916444ad121442bc1b707bf6dd6e9c54a5167e59c0b8377a97c4",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-10",
+   "text": "jota.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "edd2c55b30688eacbfc2d53290cfa7be2f04a0650d3b8325e0ac5d745b532239",
+   "sha256": "4ac08b7e6393d57b93811a44bc5cac778bbd68fea88c599a27ae0cb8e9f1f1b9",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-11",
+   "text": "ka.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "dee51d74cd1a782b634b68abe8163f605f75620a71ad81d1f776f716aa3afed7",
+   "sha256": "60e87668c42350b8d7b7198b302aa05db32fbb5586cfed97874abb3949c64cb3",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-12",
+   "text": "ele.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "c9a66cb6069402139a72ff009fb9d62be5e8af4727a429eb924eb6e1c9909c22",
+   "sha256": "e7509f83617154d5c4bdd9eca299d29159865ec4705d37d7ff97e0be63995b16",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-13",
+   "text": "eme.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "ab3a23e909093b8aef78ef3c7dea6aac17d7381f143c71a86fe518fe0583ee09",
+   "sha256": "cba325ce4ae03fb7fd56486fde76648a5684ad0f903c9d8a02d6324a80d63769",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-14",
+   "text": "ene.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "5f1fe57c0be9255579927d6920e206938316902b23399d4883ef90e45f9bf9e8",
+   "sha256": "70f5734dc0ad125438a8c836b0d10a768923c041acc01d3a3d777e850a0b87e4",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-15",
+   "text": "eñe.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "ea6d052a75eaa2d76d2f21f74210f45c64de55174e7acdf90c05b7725413c01d",
+   "sha256": "d3ceaf22e7fca8d182bbdd55a3ba78d85ea97ead352bd9375e4893c032293cc5",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-16",
+   "text": "o.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "ec3916f8cd89c7b5c6807f8ffd73c67465296dc69479d90e6b83070d7e296636",
+   "sha256": "4fd2099dc851e589ddf0bb2189f3afec9f863dc53d451b8e149f2838a8c76a16",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-17",
+   "text": "pe.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "7ca1884ed4e0c6f1532cb975bb9441add06e8e61358eb3e6ae79b9ac15ea44ba",
+   "sha256": "4d1876dceef919d1c799c595651ebda878ac49a0045b68c9f8ab74fa24e4eacf",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-18",
+   "text": "cu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "e2b8b894350740337526561a377a186042bd82a89bf9124deb8736e5d0b9fd5b",
+   "sha256": "a714b56996ee4dead71179aa34117f8c8d225c0911692c061a252742e8bb7203",
+   "durationSeconds": 1.94
+  },
+  {
+   "id": "abc-19",
+   "text": "erre.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "9e3b7672b1bbf5f0c8cbc9b8b7b8331d9071d139edf2ef813bc88b22fcdd58d4",
+   "sha256": "fbdeb4b9d0252940f58d6b28f3348ebf31fec71d78170209c80c2184c4b5d14a",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-20",
+   "text": "ese.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "69bf0dee48f4d60e9e9cfbcb23a18bf0ea5b1adc959bf9dc208f85b81bc4ffae",
+   "sha256": "b33bf718479f75ca3a71edd99c43ea91f18b30d8cdc621ece3a39eda5d9f1029",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-21",
+   "text": "te.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "c8514b7ce92b87fb94de0ce3afd82f66977a47f6649085b9c1dfcf93476d2428",
+   "sha256": "298a171a25151a7e5aaea0e655151694e72771e7eefc4a5c5208820c00fb1726",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-22",
+   "text": "u.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "c1caec8b528ff5eccde828ec7b8a6be3111b98fbd9dbb3b2163da215c3422cab",
+   "sha256": "3437d978cf7f3a607decd823bbbdbffc3926f981fd2f7ef607c90570506f502c",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-23",
+   "text": "uve.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "f412e6a232ca27f95284f810aa113d4e637e9e6c93e16891207372ab5e092f46",
+   "sha256": "9e8edffb1e253ed60f459f91995b50ac663661b865a8323e84733f077d75cdb2",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-24",
+   "text": "uve doble.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "c1c3fdf1995dab2154243ad25f444e6bcc2c37dcc2107d746687693dffafc73b",
+   "sha256": "fc03ca3315b2c78fda982958d04ef66f511dfdc6bf89f0bb2a9e0d633567af66",
+   "durationSeconds": 2.02
+  },
+  {
+   "id": "abc-25",
+   "text": "equis.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "4a840bc4563edd11705f57b60b57900122ded98ea1b5461b59ed95bce6ed4373",
+   "sha256": "0ab425844e248ac44c574e6b9d8652527d4cff693878ad66f27a63cda0c44b08",
+   "durationSeconds": 1.94
+  },
+  {
+   "id": "abc-26",
+   "text": "ye.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "6a3ca600214aa4da1baa6f47844fc39f39e26feb369b336db37248286b015c53",
+   "sha256": "5d2be79f6e33f1bdf05e7dcac2ebd83477b6d230742cb8e9c69e296d1070b0eb",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "abc-27",
+   "text": "zeta.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "519763b8dfa580b35c52ceeb6809063fc9df2da84976ac4b402e55d4e04d00b2",
+   "sha256": "2df2ef2032912d8d95041d8009936ea50065935dd7745c1fd8997c7a3d0fa322",
+   "durationSeconds": 1.9
+  },
+  {
+   "id": "acento-ar",
+   "text": "Yo me llamo Julio. Ayer cené pollo con arroz en la calle Zaragoza, cerca de las dos plazas.",
+   "voice": "es-AR-TomasNeural",
+   "rate": "-6%",
+   "textSha256": "3ab796ac275768a4d24220af55932a82f6bcc27e36b9f81e60432f6c25e99f4b",
+   "sha256": "ee78b66eef20eee5ca7d752caa09cc15c5bb4ce78240912c6d8b6c1aabe73344",
+   "durationSeconds": 7.42
+  },
+  {
+   "id": "acento-cl",
+   "text": "Yo me llamo Julio. Ayer cené pollo con arroz en la calle Zaragoza, cerca de las dos plazas.",
+   "voice": "es-CL-LorenzoNeural",
+   "rate": "-6%",
+   "textSha256": "3ab796ac275768a4d24220af55932a82f6bcc27e36b9f81e60432f6c25e99f4b",
+   "sha256": "d01c5c30054514b2aa00d95ec7f5637e994295371312566938a693a702e6412b",
+   "durationSeconds": 7.03
+  },
+  {
+   "id": "acento-co",
+   "text": "Yo me llamo Julio. Ayer cené pollo con arroz en la calle Zaragoza, cerca de las dos plazas.",
+   "voice": "es-CO-GonzaloNeural",
+   "rate": "-6%",
+   "textSha256": "3ab796ac275768a4d24220af55932a82f6bcc27e36b9f81e60432f6c25e99f4b",
+   "sha256": "4bcf3acc8dfdcd5eb8cd466db8fe6ce127a0c2bdff2235c56f5485aafc955761",
+   "durationSeconds": 7.22
+  },
+  {
+   "id": "acento-cu",
+   "text": "Yo me llamo Julio. Ayer cené pollo con arroz en la calle Zaragoza, cerca de las dos plazas.",
+   "voice": "es-CU-ManuelNeural",
+   "rate": "-6%",
+   "textSha256": "3ab796ac275768a4d24220af55932a82f6bcc27e36b9f81e60432f6c25e99f4b",
+   "sha256": "f74d867fc8dadd2770c0bfaf011c7908c8c8f7b11526f1291b1da11213c3e5ee",
+   "durationSeconds": 8.64
+  },
+  {
+   "id": "acento-es",
+   "text": "Yo me llamo Julio. Ayer cené pollo con arroz en la calle Zaragoza, cerca de las dos plazas.",
+   "voice": "es-ES-AlvaroNeural",
+   "rate": "-6%",
+   "textSha256": "3ab796ac275768a4d24220af55932a82f6bcc27e36b9f81e60432f6c25e99f4b",
+   "sha256": "266badb83e8e615b0f30389d203a1ec977efef0c9e624f9b8c0f8b9cc92d04e5",
+   "durationSeconds": 7.68
+  },
+  {
+   "id": "acento-mx",
+   "text": "Yo me llamo Julio. Ayer cené pollo con arroz en la calle Zaragoza, cerca de las dos plazas.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-6%",
+   "textSha256": "3ab796ac275768a4d24220af55932a82f6bcc27e36b9f81e60432f6c25e99f4b",
+   "sha256": "bca0a0e275a38bc56aa74047de68f75b6af0c04b81a918afd4b2528f539a6d4c",
+   "durationSeconds": 7.75
+  },
+  {
+   "id": "acento-pe",
+   "text": "Yo me llamo Julio. Ayer cené pollo con arroz en la calle Zaragoza, cerca de las dos plazas.",
+   "voice": "es-PE-AlexNeural",
+   "rate": "-6%",
+   "textSha256": "3ab796ac275768a4d24220af55932a82f6bcc27e36b9f81e60432f6c25e99f4b",
+   "sha256": "791dcd229f7a3dcd59e6e1171277b79db532e42a33d55e9ace043d255df9ea36",
+   "durationSeconds": 8.42
+  },
+  {
+   "id": "b-v-frase",
+   "text": "Un barco viejo viaja bien con buen viento.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "697ff34eca7207bd0c850dcc3a48e73ec6eeecf23ee9fce6c81acf76a6e863f2",
+   "sha256": "afbd183c7af59034dbd0a8ecf5a0b3ffd6e747d7b06e588878da2eeeb6c544b0",
+   "durationSeconds": 3.79
+  },
+  {
+   "id": "b-v-palabras",
+   "text": "beso. vaso. boca. vaca. abuelo. uva. nube.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "f7351f6d8699c5f4d50655698efce56c6b4cb97e8686914ad2613775f0a5c8f7",
+   "sha256": "0e116b7d300fada0a838359cc752a8fc846aff399130dffd4e942c090fbdf8a3",
+   "durationSeconds": 11.5
+  },
+  {
+   "id": "b-v-silabas",
+   "text": "ba, be, bi, bo, bu. va, ve, vi, vo, vu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "c0f4ab4e311e34afa866b8c86878764fd39fa64e569a8110e24a5cd4627a08bb",
+   "sha256": "b5cf63f42568119864292dff0043299c47d86d59e0922cdb3ef3ab49187e150d",
+   "durationSeconds": 8.47
+  },
+  {
+   "id": "c-k-q-frase",
+   "text": "¿Quién quiere queso con café en casa de Carlos?",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "1e2405a56149b1a4019e9009b5d9e3cc4668b94808f0edf1c6de7a21465a58a9",
+   "sha256": "d87c5d29577cb388e48cfd9536634b64b374e1581d9f72b06ee7aeff3d573832",
+   "durationSeconds": 3.96
+  },
+  {
+   "id": "c-k-q-palabras",
+   "text": "casa. cosa. cuna. queso. quince. kilo. koala.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "d9f6eec303eac2bde848dce2c4dfd8d7393b60d2e1d074728605147ca551bc3c",
+   "sha256": "154ae05c7538d800f8a4765c6eea7b06a6d36498f8308837616af9819f92b308",
+   "durationSeconds": 11.11
+  },
+  {
+   "id": "c-k-q-silabas",
+   "text": "ca, que, qui, co, cu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "9ad4660ff5b0f0b1bb3fc7a1fc7fe0ec694e891e3650e3c63e55fe6dfabed92e",
+   "sha256": "748bfe7fc36f3c7053e60871d24e52d91cff261f605008465698dd2c5e216e38",
+   "durationSeconds": 4.34
+  },
+  {
+   "id": "c-z-distincion",
+   "text": "cena. cielo. zapato. zona. azul. Cecilia cocina cinco cerezas y zanahorias azules.",
+   "voice": "es-ES-AlvaroNeural",
+   "rate": "-15%",
+   "textSha256": "2eb41179b99c5cf7ca723c51ba66e975b98d68f641a9989742810180173636e2",
+   "sha256": "fba75bb41205ab9337dd1574257b5d40dbe47380c841d755f49891aad5494d66",
+   "durationSeconds": 12.91
+  },
+  {
+   "id": "c-z-palabras",
+   "text": "cena. cielo. zapato. zona. azul. cinco.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "6229c9a8b1eedbc7e007446781e0273a25638d0435d44a3ebf391e691a378fd8",
+   "sha256": "a0d7a7636c9ba53b97c31159f0bffa5e12e9a1beb529bcaa7c460dab5a3ad3d0",
+   "durationSeconds": 10.27
+  },
+  {
+   "id": "c-z-seseo",
+   "text": "cena. cielo. zapato. zona. azul. Cecilia cocina cinco cerezas y zanahorias azules.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "2eb41179b99c5cf7ca723c51ba66e975b98d68f641a9989742810180173636e2",
+   "sha256": "7bf631a74b8d869cf7b53cac57469d658c986fa1e719cc90402836d62e720985",
+   "durationSeconds": 13.25
+  },
+  {
+   "id": "ch-frase",
+   "text": "Ocho chicos chilenos comen churros con chocolate.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "fed21721167fe82bd2134620457412797a4524bd157ca22cea34ee471e065545",
+   "sha256": "64841b1234b2859f3c76bee475a07747a2d495efd640fdeeefe63a88754054eb",
+   "durationSeconds": 4.44
+  },
+  {
+   "id": "ch-palabras",
+   "text": "chico. noche. leche. mucho. chocolate.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "c6f125b38142b5af71afbacb822e16b2234f1a6f21263845b7c05ceeb7422582",
+   "sha256": "28c2a464b7b9b1f1021aec1b8c0d835601ae331b83cdf0f38cd98544977965bd",
+   "durationSeconds": 8.42
+  },
+  {
+   "id": "ch-silabas",
+   "text": "cha, che, chi, cho, chu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "50a10b0f635c284948e29e79f27cc3a2c1816a973681db69e847e7712dfa9cfe",
+   "sha256": "428fa97ae28a11787bc14485f4bfcb15d227094697fb858a930c0c58873668a7",
+   "durationSeconds": 3.98
+  },
+  {
+   "id": "d-t-p-frase",
+   "text": "Tu tío Pedro te da todo el pan de la tienda.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "6eaef9f991b138a326da5506d5547bb527994e813449a723299204a81283b4d0",
+   "sha256": "45b06485f91b12819fef3f848ad1105d84716cc1e31b9f2627d0675f8670be3b",
+   "durationSeconds": 3.89
+  },
+  {
+   "id": "d-t-p-palabras",
+   "text": "dedo. nada. todo. tomate. papá. poco. puerta.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "5756d3d1def8681d8575559ea43057f38aa94dcb9887aabe70df640fc621d947",
+   "sha256": "0b185b7d147f8d6a2202e2dd2cb2e2ab88c69d7f3b61c60775e3c82ac2d9f45b",
+   "durationSeconds": 11.21
+  },
+  {
+   "id": "d-t-p-silabas",
+   "text": "da, de, di, do, du. ta, te, ti, to, tu. pa, pe, pi, po, pu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "0d0d435e1dd6b687794bcb1d6a91e8f9d8126151695b26b2649cb0b8504cc074",
+   "sha256": "7b2a77bd23a55a1d930aeb229f4af7772f24d05a04fb6c95fda9309205172d96",
+   "durationSeconds": 11.45
+  },
+  {
+   "id": "g-gu-frase",
+   "text": "El gato de Guille toca la guitarra con ganas.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "e3b3a521942f3d0f415dba600cbd0f56aee5273b5e8b5cee12cc31b84d78ee5f",
+   "sha256": "fa60928db2b6ae56efb1070f8be267ae542e70e74922ddda463d6425b70a18ee",
+   "durationSeconds": 4.13
+  },
+  {
+   "id": "g-gu-palabras",
+   "text": "gato. guerra. guitarra. gota. gusto. pingüino. vergüenza.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "20e6be9b73b5691f7ea59130089c08ec1a5f1c663f0a57c9b532badeb086cde7",
+   "sha256": "eb158df041e3956f1491a63864199f1cf068b6a65847f20601b333703f171ea2",
+   "durationSeconds": 11.95
+  },
+  {
+   "id": "g-gu-silabas",
+   "text": "ga, gue, gui, go, gu. güe, güi.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "92e59063a069427ab64cf30488316e2ae1d353033e9e5770c25014a7ca2f4939",
+   "sha256": "0bac061641205d69cbe57e2a2d12ad46c1a979647aa2f5cac761a1bbc8407977",
+   "durationSeconds": 5.95
+  },
+  {
+   "id": "g-j-frase",
+   "text": "El jefe gigante juega al ajedrez con Jorge.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "5f5798257f183dd6003403eaa5e9d1cc935d114b0bb2e1ba3cf381a645ff5443",
+   "sha256": "fab106b1e7204e090574a199f38670d978b0f3c6559d1c7ab6dbe87a5768480a",
+   "durationSeconds": 4.13
+  },
+  {
+   "id": "g-j-palabras",
+   "text": "gente. gigante. jamón. jefe. jirafa. joven. jugo.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "81292759da78e604e512b07a9b479b80f8c234526dcbf91178604c899f510a36",
+   "sha256": "491991af7f8b33993b09cead73e1b414e0bb8736ce45434315e05404cda96d0d",
+   "durationSeconds": 11.81
+  },
+  {
+   "id": "g-j-silabas",
+   "text": "ja, je, ji, jo, ju. ge, gi.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "8a3d2b569032c3917c67f0808736d9cb9171f3c209e038aefd292d6183359853",
+   "sha256": "139d1fb5990ea6f2be52ed70c6f160275a5b0992f72bb8534d7155835d5cd684",
+   "durationSeconds": 5.33
+  },
+  {
+   "id": "h-frase",
+   "text": "Hoy Hugo hace helado en el hotel.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "7c00a78a86961cbc4eb8376b33b5ba1a3985491070edcce0d1d7e1f12529976f",
+   "sha256": "c81519d625590d1ef7cfb7519450b07cc1d44187c8aa09e6fd3457a8ccb276ea",
+   "durationSeconds": 3.1
+  },
+  {
+   "id": "h-palabras",
+   "text": "hola. hora. hijo. hotel. ahora. huevo.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "2227ef92cf4b5570267e06f6648edafe85a92e28e9725971f4bf517ac8445de3",
+   "sha256": "32f06ee069a751e7fafd95a6f42590b6dcf35a26a3d75982aacba8a162ac62bc",
+   "durationSeconds": 9.6
+  },
+  {
+   "id": "h-silabas",
+   "text": "ha, he, hi, ho, hu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "7b42e9f8725e3f6e74ddca4da7b8735bbf72d69de31ea90190c260fd8f2b9a28",
+   "sha256": "fd2d8edd14a4b2f3bdbc1707907611c1a0411f71ecc0cfd1e00a73c3ca49ec48",
+   "durationSeconds": 3.79
+  },
+  {
+   "id": "ll-y-frase",
+   "text": "Yo llego a la playa cuando llueve en la calle.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "e7f0812444165d1e15028f5069eaee4c42ccd719f7a7367ab3867a4c93f24fd8",
+   "sha256": "a3be1d8986a142823e7e0aa5855784312b40b38ddcebd56858a0192cbb5f5a26",
+   "durationSeconds": 3.65
+  },
+  {
+   "id": "ll-y-palabras",
+   "text": "yo. ayer. playa. llave. calle. lluvia. pollo.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "7e008c98ca5cd71859e79f13f8ba4295228f196c3b0c552e0815f82ba94bc1d7",
+   "sha256": "b44bc9058b9410a1290492fbb517b6d62bd251cd4aa888cf361756eef178901f",
+   "durationSeconds": 11.11
+  },
+  {
+   "id": "ll-y-rioplatense",
+   "text": "yo. ayer. playa. llave. calle. lluvia. pollo. Yo llego a la playa cuando llueve en la calle.",
+   "voice": "es-AR-TomasNeural",
+   "rate": "-15%",
+   "textSha256": "79627cd0eab3926cd4f77d288f068ff0048a9c362f37b92af63e9f00f5fd3746",
+   "sha256": "998c30c2d336d3f68de3ee2a76745e11f3657c657c3220996ad4038d41d56f97",
+   "durationSeconds": 14.26
+  },
+  {
+   "id": "n-frase",
+   "text": "El niño español sueña con la montaña cada mañana.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "828ea1079647c64c4a319e1b5a1d3c45051fff10eb9df15ebfeb9ca9415cdb89",
+   "sha256": "767b2f8e07fd406db44eaaa83056fb817c4b9694257efb6ab0edeeb574e7272b",
+   "durationSeconds": 4.54
+  },
+  {
+   "id": "n-palabras",
+   "text": "año. niño. mañana. España. señor. montaña.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "c4b258cc2150cda4bbbfd1ebc09d40e0549412e0a4a312f72ab1ab7cdba50eff",
+   "sha256": "df522730db8e26fe47dd4d4e5d941eab2af8aa2fba1672454f986cf46b9ce3d3",
+   "durationSeconds": 10.32
+  },
+  {
+   "id": "n-silabas",
+   "text": "ña, ñe, ñi, ño, ñu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "b97e4c4c5ada6b4d594ef6d5f19aefbe60bce6625176bb4a4aab816f80250c1f",
+   "sha256": "0e485b1c5f726004b9d4b3c436d28043b8514cd2259c6a827c644107185bed2b",
+   "durationSeconds": 4.08
+  },
+  {
+   "id": "pais-ar",
+   "text": "Hola, soy de Argentina. Soy argentino. La capital de mi país es Buenos Aires.",
+   "voice": "es-AR-TomasNeural",
+   "rate": "-8%",
+   "textSha256": "377d8fcb31a1c86cc215400222c03182493fa89042bd23c358fc2102ff027b6f",
+   "sha256": "6677ecf1db300659596ab18cb845e54957f07639392d23357326fadfd284f11f",
+   "durationSeconds": 7.97
+  },
+  {
+   "id": "pais-bo",
+   "text": "Hola, soy de Bolivia. Soy boliviano. La capital de mi país es Sucre.",
+   "voice": "es-BO-MarceloNeural",
+   "rate": "-8%",
+   "textSha256": "050ffb4a60c5c44fe3a2bce86cba56384dfab4c51dae6cfb6d18fa4dbc08bfbb",
+   "sha256": "ce5c4318aa3b08137e0f1c98d55e0f9225cf6722f83f695874675bff001b75c8",
+   "durationSeconds": 7.27
+  },
+  {
+   "id": "pais-cl",
+   "text": "Hola, soy de Chile. Soy chileno. La capital de mi país es Santiago.",
+   "voice": "es-CL-LorenzoNeural",
+   "rate": "-8%",
+   "textSha256": "92937801c82182a77bd6011e143b644497cf8a04160fe03f49894776137d1573",
+   "sha256": "e67234804e553a3e26e77b057dad2c3f783dd12fda6ebfdc88600ae24fa7143a",
+   "durationSeconds": 7.03
+  },
+  {
+   "id": "pais-co",
+   "text": "Hola, soy de Colombia. Soy colombiano. La capital de mi país es Bogotá.",
+   "voice": "es-CO-GonzaloNeural",
+   "rate": "-8%",
+   "textSha256": "7fa60b0ca06fb2af6d455e6b8fbfdf727e307ccd55d3f5a2c3be97259c81c372",
+   "sha256": "5fbf344694ceebc613bb67a5dcfaaae7066cf77738da6e96c7d40408864bb2df",
+   "durationSeconds": 7.08
+  },
+  {
+   "id": "pais-cr",
+   "text": "Hola, soy de Costa Rica. Soy costarricense. La capital de mi país es San José.",
+   "voice": "es-CR-JuanNeural",
+   "rate": "-8%",
+   "textSha256": "9672bcfc95de1a5b1743285d7d2d3cd0a1c558106d515c198091d86ba0c36b9a",
+   "sha256": "09c19403142eef85bc58294f8fda83848759aa6692f160d654ae597d87d7565e",
+   "durationSeconds": 9.07
+  },
+  {
+   "id": "pais-cu",
+   "text": "Hola, soy de Cuba. Soy cubano. La capital de mi país es La Habana.",
+   "voice": "es-CU-ManuelNeural",
+   "rate": "-8%",
+   "textSha256": "2976989992da14747c2ceec6a0288b03eced278c92ffa6866124f8bb705a77ab",
+   "sha256": "58438803047c4a24739f50bc77e35e2ff203dfde450f48764e7f61fa6c423c24",
+   "durationSeconds": 8.45
+  },
+  {
+   "id": "pais-do",
+   "text": "Hola, soy de República Dominicana. Soy dominicano. La capital de mi país es Santo Domingo.",
+   "voice": "es-DO-EmilioNeural",
+   "rate": "-8%",
+   "textSha256": "4bf7e09aede1df591ed5f57baa2f8fa0d80e1c695289cb1d9188fa25b2d29158",
+   "sha256": "6614a3a68b30048e416afdf59b759c865a854cf5fca86c8070b5b76c92bd2099",
+   "durationSeconds": 9.77
+  },
+  {
+   "id": "pais-ec",
+   "text": "Hola, soy de Ecuador. Soy ecuatoriano. La capital de mi país es Quito.",
+   "voice": "es-EC-LuisNeural",
+   "rate": "-8%",
+   "textSha256": "c81f0751354797099057dc54be5c7bd05e0ca0156100b78f47156280fdac58f7",
+   "sha256": "c13a69df369c250b69151de577f3adb1dff5e3586df6f3f913746fd918d6a1a6",
+   "durationSeconds": 8.16
+  },
+  {
+   "id": "pais-es",
+   "text": "Hola, soy de España. Soy español. La capital de mi país es Madrid.",
+   "voice": "es-ES-AlvaroNeural",
+   "rate": "-8%",
+   "textSha256": "96c297f5e8d5ad85d1bb8f946925e715a3d96fd4b262b7b7232eeb7d68f0a3bd",
+   "sha256": "5b8fa516ac4cb6f9e8006369897828f08571a86599c78b6c55b095bdeb0b4a6e",
+   "durationSeconds": 7.39
+  },
+  {
+   "id": "pais-gq",
+   "text": "Hola, soy de Guinea Ecuatorial. Soy ecuatoguineano. La capital de mi país es Ciudad de la Paz.",
+   "voice": "es-GQ-JavierNeural",
+   "rate": "-8%",
+   "textSha256": "3f85a3ce86d80d4defae4e64e36565c34bb4dba7d36addd9d03bd40a5b855134",
+   "sha256": "b40db6ff36f1cac4188472c213f3a4d9806ba405093fd986af0660105a76f446",
+   "durationSeconds": 9.46
+  },
+  {
+   "id": "pais-gt",
+   "text": "Hola, soy de Guatemala. Soy guatemalteco. La capital de mi país es Ciudad de Guatemala.",
+   "voice": "es-GT-AndresNeural",
+   "rate": "-8%",
+   "textSha256": "dcceab033f95ca59f58744f26468fbcf6e16af94e21fc732930e8f4969fb3a92",
+   "sha256": "471953fdf79d2a7be4a441714215ada23ca731db4432240521dd7787aa25fba5",
+   "durationSeconds": 7.99
+  },
+  {
+   "id": "pais-hn",
+   "text": "Hola, soy de Honduras. Soy hondureño. La capital de mi país es Tegucigalpa.",
+   "voice": "es-HN-CarlosNeural",
+   "rate": "-8%",
+   "textSha256": "a364bc897efdd90bd7f4fbab1db4c442c3d63558db6057530225ca5e8019e746",
+   "sha256": "ef2d3e46df111d846245b0d0c269464ff119123e8cdad578cc140addb7b9e1f5",
+   "durationSeconds": 7.49
+  },
+  {
+   "id": "pais-mx",
+   "text": "Hola, soy de México. Soy mexicano. La capital de mi país es Ciudad de México.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-8%",
+   "textSha256": "36296269936c8df649e6f6aaa7e9ab049b0f7c080ce5a20cac6f8af5924fa14f",
+   "sha256": "e95525fa0357ec66a5bc1d3e89535022f131eafdcf0d00254cbd1b33e2fdbcdf",
+   "durationSeconds": 8.18
+  },
+  {
+   "id": "pais-ni",
+   "text": "Hola, soy de Nicaragua. Soy nicaragüense. La capital de mi país es Managua.",
+   "voice": "es-NI-FedericoNeural",
+   "rate": "-8%",
+   "textSha256": "4623b0b6afd30d1c4865495710136271dde69c21c38b0a8cadc9992b96974a2b",
+   "sha256": "0d23bf7683ccbf3acdd675ad33e4643c9fe26971a8ff41c9f671c46241d9a2bf",
+   "durationSeconds": 7.66
+  },
+  {
+   "id": "pais-pa",
+   "text": "Hola, soy de Panamá. Soy panameño. La capital de mi país es Ciudad de Panamá.",
+   "voice": "es-PA-RobertoNeural",
+   "rate": "-8%",
+   "textSha256": "19d459bb59c5ace086e0998d44a479c0f3bca0ea3dc3ebd6ce6cdf5c603d807c",
+   "sha256": "fb0396312025ccc784240412f9100ba8917726017845d2f86e029b42312ff2e8",
+   "durationSeconds": 8.83
+  },
+  {
+   "id": "pais-pe",
+   "text": "Hola, soy de Perú. Soy peruano. La capital de mi país es Lima.",
+   "voice": "es-PE-AlexNeural",
+   "rate": "-8%",
+   "textSha256": "ed5f83d372c0c8ad9ab99992932720384ff4348ef70fb85142a537b057bc3492",
+   "sha256": "fa045cd886bd171fd1e0e51a22bcc89557bb406160bd6eabaed58e7a8350016b",
+   "durationSeconds": 7.97
+  },
+  {
+   "id": "pais-pr",
+   "text": "Hola, soy de Puerto Rico. Soy puertorriqueño. La capital de mi país es San Juan.",
+   "voice": "es-PR-VictorNeural",
+   "rate": "-8%",
+   "textSha256": "4d9250f89198df89166375f0b896610c88887df55ffc0c10588a46325736a15b",
+   "sha256": "c37639357cf1822b3099f979250cd97a7c7ef9e5096946bb4ae9c4860e0843ae",
+   "durationSeconds": 8.74
+  },
+  {
+   "id": "pais-py",
+   "text": "Hola, soy de Paraguay. Soy paraguayo. La capital de mi país es Asunción.",
+   "voice": "es-PY-MarioNeural",
+   "rate": "-8%",
+   "textSha256": "e3340929abf92c8bb6c66b9cea20d61a5aba1e313d4118d79cdc0345d8657ff1",
+   "sha256": "51367e19da89bc7b9f922d8ac1c9f691e4044ed90ed6ca3a79fab7890ed250a5",
+   "durationSeconds": 6.96
+  },
+  {
+   "id": "pais-sv",
+   "text": "Hola, soy de El Salvador. Soy salvadoreño. La capital de mi país es San Salvador.",
+   "voice": "es-SV-RodrigoNeural",
+   "rate": "-8%",
+   "textSha256": "a3b9c97317bdc9d24d95db3604f282745418d8168517a227b06f7cfb42eae8a8",
+   "sha256": "4438bb839850121b3b33ffeeebb969dc0ef2c16232f0ddbfec76988e570d5f18",
+   "durationSeconds": 7.8
+  },
+  {
+   "id": "pais-uy",
+   "text": "Hola, soy de Uruguay. Soy uruguayo. La capital de mi país es Montevideo.",
+   "voice": "es-UY-MateoNeural",
+   "rate": "-8%",
+   "textSha256": "a53da5aff31c5ac202db523fc12a6026f7f14f283a385a126520bbeb5d1b8cdf",
+   "sha256": "e9107f7c225ada73fd91677d9c8d8e663f24412055133a0d13138275f6868a68",
+   "durationSeconds": 7.3
+  },
+  {
+   "id": "pais-ve",
+   "text": "Hola, soy de Venezuela. Soy venezolano. La capital de mi país es Caracas.",
+   "voice": "es-VE-SebastianNeural",
+   "rate": "-8%",
+   "textSha256": "6071343402b1a46aa0702f16a36d8093672317070194c264b8d106eb24f4c955",
+   "sha256": "c82f7ca334b7e517a270b4ae7d3d00b243de5acf38d84563a9ae6fc713649e07",
+   "durationSeconds": 7.51
+  },
+  {
+   "id": "palabra-animal",
+   "text": "animal.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "af208d67b22305c073adff84320e817364421820265d891cae118c553f17fde2",
+   "sha256": "d4a030e119fac04538c43a9daf1386434ab14b689fbf16087d36ddda5f95db1e",
+   "durationSeconds": 1.92
+  },
+  {
+   "id": "palabra-banana",
+   "text": "banana.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "33301543a1040f5a700c6bfc12eb07bd386f154fbacf291c385c404a551487e7",
+   "sha256": "771c256585eb902d6ce86b48b9d944a5c49ac3d9c14ea905883e3f62ea29ae75",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-casa",
+   "text": "casa.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "251c95d52d96c908990de4c76ed8d522fc54e6873106b78a63ca6edc5f1da89e",
+   "sha256": "7cd7463ef51270fdfae9c93d81af09c2fa629b0a4e7ec3747dac83fb07497f1d",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-chocolate",
+   "text": "chocolate.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "c8dc0198146e8c8dc73093134b3547f55bab4380171837ce94fafff453f43b24",
+   "sha256": "26066ecbfe212bd14c7b4fb18f4ebde89a515e24c309c29253c33b7cef387230",
+   "durationSeconds": 1.92
+  },
+  {
+   "id": "palabra-doctor",
+   "text": "doctor.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "9fda03d11c5db7482abf85f41b40c4881f453a347056c2e3f7ad5dc02eceef06",
+   "sha256": "300446b78ae2dbe1978409b2b31c4a82434500795c6c981545c88a5834fb4925",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-hospital",
+   "text": "hospital.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "7930dbcc9ff96c043343fe043343fca5736d4816e6927ccb2d36511e076e8824",
+   "sha256": "20bd92a53e1446bc2a945044a00ddec4bab51ed32b5c7e95855bcd2ba1251fe8",
+   "durationSeconds": 1.94
+  },
+  {
+   "id": "palabra-idea",
+   "text": "idea.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "1c36b752c79a1f0ae4a0d04685694b32ef469fcb81402fc162649e0a53fb74be",
+   "sha256": "5ab1c4e120d162aeac78974ec0e8dbcb0f2ad39ef54d158b98206ddf2150287b",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-luna",
+   "text": "luna.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "f7059ce246ece7daef0851296e1967e02ed4ce0291eb9f98fee122e33a2a597c",
+   "sha256": "6799627a17211c7bd95a102588b1c171fa3283a84b260603e265944e13637aea",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-mesa",
+   "text": "mesa.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "78d0f3ed231a1a3bae5f20ddaf28ec55d8b3c0294283bbf198f2a4475ea71cb3",
+   "sha256": "52b646b960c1fb8f2d01ccd2fcbff9d061b5996452fc410a5a3789b125fba6e1",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-poco",
+   "text": "poco.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "6889a55238a5e58cefd804a385f86f793d3855bb5bcd4375b9f8f0a5b25ac8d2",
+   "sha256": "e5aa1b0be567b3d8b2bb4b022e1953ca91df582289ca5149d38850a9870c2979",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-popular",
+   "text": "popular.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "2614af9117a4b8352b837b821a2cd9b9cb28ed76c3deedb3e032d921a29f1e6c",
+   "sha256": "19cee89d0e9f563ab9a0daa958cd811e2a53bc6e98c77912cd852a164c7cec03",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-radio",
+   "text": "radio.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "e9609ef5652d2a2d877c0734dd28b7b55a3a85b98033d3ed0777b2d7a2d5e27d",
+   "sha256": "91ec0d87767cf41f813279a4e9a964473d7593d85861061b49c180e13ca6c46a",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "palabra-vino",
+   "text": "vino.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "609d1f4c18bdccf7892e17c7a8e7a38a82189c0fa3b3d157de434e2ab0678897",
+   "sha256": "9449bdb74681b1f54daa83cd33ab34f863766979e9ded50113e67f799b3a9275",
+   "durationSeconds": 1.87
+  },
+  {
+   "id": "r-rr-frase",
+   "text": "El perro de Rosa corre rápido por la carretera.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "52edd9ea2ace43d5b0f2fe210f464f73ed672b8c52abd5c8437d54baeeb99be4",
+   "sha256": "1bc4f341670745702a5d470c26c28df0624c2ccf142c3ba67be5cc6b5ab55223",
+   "durationSeconds": 4.22
+  },
+  {
+   "id": "r-rr-fuerte",
+   "text": "perro. carro. rosa. rico. Enrique. alrededor.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "85ba90a15ec1f48d2239e07029aea74433f90157c18ca3aef57326a1feece4eb",
+   "sha256": "470c5cf99ec968ed595f9ddbca00fb4bae485dcea9b76ef222a4fc97c963a9c6",
+   "durationSeconds": 10.22
+  },
+  {
+   "id": "r-rr-pares",
+   "text": "pero, perro. caro, carro. ahora, ahorra.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "af937aa20e1857da545988c1c0275614e5417aa981597145f43f3b3ba5c908ea",
+   "sha256": "9ebed467eab82f4f646fb284ea7e1e8ab92dd7f1e9a706bbe9baf04b52dde0f2",
+   "durationSeconds": 7.27
+  },
+  {
+   "id": "r-rr-suave",
+   "text": "pero. caro. toro. María. tres. puerta.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "80f2480ceedcf12f139bcd668fb21ce65fe8cd0f0b73cc0a39b3925500561eb2",
+   "sha256": "d6db7c2f7d32babf5787a42644a15f36e18ae44ca1ca5c69de7022412cd4b87d",
+   "durationSeconds": 9.48
+  },
+  {
+   "id": "vocal-a-frase",
+   "text": "La gata blanca baila salsa hasta la mañana.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-12%",
+   "textSha256": "4ba9f84bdd161e8185a3fb20abd31ef9cacb1912896c89cc69d721d93224c26b",
+   "sha256": "724a650850622a51fd71db2e739b90071e2b8c4d16c3da7ca1d73eab587bc01e",
+   "durationSeconds": 3.98
+  },
+  {
+   "id": "vocal-a-letra",
+   "text": "a. a. a.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-20%",
+   "textSha256": "c82b91e6aa0a242e8a7c9809f16ca4ced31fc5295723c6d7d22f075ec74eb58e",
+   "sha256": "c2812f4c56ffd9e82e9c5a7852819a48968bbe3c1ab8095a83e4f6fefbdda361",
+   "durationSeconds": 2.42
+  },
+  {
+   "id": "vocal-a-palabras",
+   "text": "casa. mapa. mañana. banana.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "76de97958bf177a8f3ae8038fb2524e63027cbcf818af9ff98e516b3873e7f30",
+   "sha256": "be0deab00a27701bcdf3e13fa2693a91e935d74f192632e69ab46ef4865f96a1",
+   "durationSeconds": 6.79
+  },
+  {
+   "id": "vocal-a-silabas",
+   "text": "ma, pa, la, sa, ta, na.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "3522e4a3bcadfc18f03576ec117951ff8231497e916c1e1643f94812a919b40b",
+   "sha256": "bc478dd3a938e58ad01207aa1ed8145ad53aaaac006ec10ac79ccfe4338bfffe",
+   "durationSeconds": 5.04
+  },
+  {
+   "id": "vocal-e-frase",
+   "text": "El jefe de Pepe bebe té verde en el tren.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-12%",
+   "textSha256": "f325424a0ecd86da2f6cc0760f31b45fe5387e8f64fbd8305846756233952095",
+   "sha256": "46654a78594e8d6f3c12f41660aed873617f8498f015e76e402f38ce2d9d0724",
+   "durationSeconds": 3.67
+  },
+  {
+   "id": "vocal-e-letra",
+   "text": "e. e. e.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-20%",
+   "textSha256": "896273552e6c435c1558e7b2982f47c92d9e05ae0100c3a7adb551deba33038a",
+   "sha256": "1645b00960bbf730679f4f4080edf96f34b79c18c5dac424b4ccbbbbbebc839e",
+   "durationSeconds": 2.47
+  },
+  {
+   "id": "vocal-e-palabras",
+   "text": "mesa. verde. leche. tener.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "478ec8fd8960f6cfea124a4c45b58f3406a55aacdb31a22165fcde9a51030393",
+   "sha256": "735f36f2c77de542e80f6efffbf7a3fc060dfdcfff6f2627ae4a09a2ef7bf938",
+   "durationSeconds": 6.55
+  },
+  {
+   "id": "vocal-e-silabas",
+   "text": "me, pe, le, se, te, ne.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "70365f733e6e22d6fdd5a720d6af7abe857876f6de0497b78a6e909963de6cc5",
+   "sha256": "f77e528df3a55abd223c716d301a3a00129d290bca38e48088f11bb79a223b88",
+   "durationSeconds": 4.9
+  },
+  {
+   "id": "vocal-i-frase",
+   "text": "Mi tía Lili vive sin prisa y dice que sí.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-12%",
+   "textSha256": "6d6e8d482a94801c1285dc4f481e9b33f28eb0573c618c3a5841119a8755054c",
+   "sha256": "606bbdcf0ee992a046a6a7e7f9f145fc660945123875a707c72771b2016f46b1",
+   "durationSeconds": 3.94
+  },
+  {
+   "id": "vocal-i-letra",
+   "text": "i. i. i.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-20%",
+   "textSha256": "66de08173accab68314e190a7b3a5c59c63d773d4be986f36ecef1ed00041bec",
+   "sha256": "3a0bd03f43c2bf1b5094359eacd37d64447377253a71a6b92491f242eec1a17c",
+   "durationSeconds": 2.42
+  },
+  {
+   "id": "vocal-i-palabras",
+   "text": "vino. libro. amigo. difícil.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "d06e6ec8d22edf998a9f499f2c5d5e0ef9bf052e8c63c748db9b22d7dc2a1c95",
+   "sha256": "721a0184740a7b6658ce8809072e290e86f46d6d29c2fc359a684a4b1e537374",
+   "durationSeconds": 6.82
+  },
+  {
+   "id": "vocal-i-silabas",
+   "text": "mi, pi, li, si, ti, ni.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "c81b41e566d22c2e43a3150c770babf4eceec2eb086aca82955ba13ef4f024b6",
+   "sha256": "a353bae70daea3c53ca5de54d901ea364d7d5c79d42b751705cc95a67610d5aa",
+   "durationSeconds": 4.7
+  },
+  {
+   "id": "vocal-o-frase",
+   "text": "Rodolfo compró dos toros rojos por poco.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-12%",
+   "textSha256": "33e0cf1a4012a9de2bedbc26523f95f64a7f53df88ebbcbbad48d57172270658",
+   "sha256": "ff07cacac39b8214f98b4f0470245ba9769280fa71ae83f9e4f733740f87aa0c",
+   "durationSeconds": 3.86
+  },
+  {
+   "id": "vocal-o-letra",
+   "text": "o. o. o.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-20%",
+   "textSha256": "98e1136b407b183130788e1a984412881656c9726bdfa33699fdac4531f41e76",
+   "sha256": "17046d3e326e77d473def7f2b7a2fb7ff67bbcac7420c5705e3b5e2cd54b93f6",
+   "durationSeconds": 2.52
+  },
+  {
+   "id": "vocal-o-palabras",
+   "text": "poco. todo. ocho. color.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "0fe9307398b5c773a61a5a1ffcce5141c4f881c741d9b88d908b31f6052cab5e",
+   "sha256": "6292a14556824415994b90932bf21fc61433d492099aa423f1ba34debf72fd1b",
+   "durationSeconds": 6.36
+  },
+  {
+   "id": "vocal-o-silabas",
+   "text": "mo, po, lo, so, to, no.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "72fa5b5bbe967d6df4b7c2e1fe748532abce31664d9399f38f3a0b65037f24ae",
+   "sha256": "92b1328c23c1df068b9507b689a4d38526aa0563926e3d0bb685c25b0df516d6",
+   "durationSeconds": 4.94
+  },
+  {
+   "id": "vocal-u-frase",
+   "text": "Lulú sube su cucurucho a la luna.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-12%",
+   "textSha256": "c2541baf6a6e4bb0aacc65f3f0f9827bec266294dc2d8ceb7ababd08234ebd26",
+   "sha256": "709a2bbeefbc2ec702a5a51b71647274c560f70be274d7fa019cb71173f504d2",
+   "durationSeconds": 3.24
+  },
+  {
+   "id": "vocal-u-letra",
+   "text": "u. u. u.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-20%",
+   "textSha256": "24150aeb54e2cd1889be99a6424724b62c2ed7b5e37b1cbab8766b984ae1f21e",
+   "sha256": "0134fcba426b8958040631b59161b3eb58e3c51fd03e3bcf36bbaead69fecf7f",
+   "durationSeconds": 2.4
+  },
+  {
+   "id": "vocal-u-palabras",
+   "text": "luna. uno. mucho. música.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "0693e2ac776f9785f52802758b8d0a463809f25415e499bfb1a72af0f997c269",
+   "sha256": "78850221d6bc2c0528b773dc3512a8e291db8261ebeb0a81a2d1394c8fe227c0",
+   "durationSeconds": 6.65
+  },
+  {
+   "id": "vocal-u-silabas",
+   "text": "mu, pu, lu, su, tu, nu.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-18%",
+   "textSha256": "224a6d93c7cbc0865036fad5b56f66fd154a3ef190e44aae75c929f2223732c8",
+   "sha256": "098530c49382e537d2dd3cc01c182aa8d38b16357f76bb263b0c311ae59ae0b3",
+   "durationSeconds": 4.66
+  },
+  {
+   "id": "vocales-todas",
+   "text": "a. e. i. o. u.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-20%",
+   "textSha256": "f2db73469370926293d9e59f6787bec84c7e6da7192b9efbf50dd6cd31eebb1d",
+   "sha256": "6888d1058664582c35fce6f6038fcdee0e4f11a71860351f59a659299b15da33",
+   "durationSeconds": 3.24
+  },
+  {
+   "id": "w-x-frase",
+   "text": "El taxi de México llega al examen sin wifi.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "c8f2228fbb5d5e1eb0a97086d77fa5416b075b02e0b4a571c303ff63e4a176a2",
+   "sha256": "c301558c4c2f90f4effb3c44233b7a78a23b9d6bea48cd91cc1b5a650fb78180",
+   "durationSeconds": 4.34
+  },
+  {
+   "id": "w-x-w",
+   "text": "web. wifi. kiwi. sándwich. Washington.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "50ad18dc527272d225406d2105438398f8c6513fea61476fc6b48aa5ed172172",
+   "sha256": "18a72b96748f3e19eb112a4a5836c102eb87ee6a57a621bb61ad63b841df1fb3",
+   "durationSeconds": 8.45
+  },
+  {
+   "id": "w-x-x",
+   "text": "examen. taxi. éxito. texto. xilófono. México. Texas.",
+   "voice": "es-MX-JorgeNeural",
+   "rate": "-15%",
+   "textSha256": "b717d2cdd769cdf4e7d93d5810d10835b6f527c2c399bfb82343554f134c1a2c",
+   "sha256": "c191dc9ceb0edb589b94864ccf110224fbcbdb284d2f55a95418ea2c7c1f2834",
+   "durationSeconds": 12.24
+  }
+ ]
+}
