@@ -1,0 +1,190 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g (standing approval for English helper copy in new classes): «Clase de nivelación» (ID 262), a new trial-lesson class for beginners whose pronunciation cards carry short English glosses (mouth position, comparison with English sounds, rules, tips and phrase translations) that the teacher can switch off. This manifest approves only the exact English literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Mouth wide open, tongue low."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Like the a in “father”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "The white cat dances salsa until morning."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Mouth half open, relaxed lips. It never ends in an “ee” sound."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Like the e in “bed”, with no glide."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Pepe’s boss drinks green tea on the train."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "A small smile, tongue high and forward."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Like “see”, but shorter."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "My aunt Lili lives without hurry and says yes."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Round lips that stay still. It never ends in an “oo” sound."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Like the start of “go”, without the final glide."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Rodolfo bought two red bulls for very little."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Round, almost closed lips, tongue back."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Like “food”, steady, with no “y” before it."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Lulú takes her ice-cream cone up to the moon."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "B and V sound the same. Spanish has no English “v” sound: the lips touch, the teeth stay out of it."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Between vowels it gets softer: the lips barely touch."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "C in “ce, ci” and Z in “za, zo, zu” share one sound. The Spanish-speaking world says it in two ways."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Both are correct. You choose one and stay consistent."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "The /k/ sound is written “ca, co, cu” and “que, qui”. The u in “que, qui” is silent. K is rare and mostly appears in borrowed words."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "No puff of air: hold a hand in front of your mouth. “casa” has none of the breath of “cat”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "C + H make one sound, as in “chair”. It is not a letter of the alphabet: it is a digraph, two letters for one sound."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "It never sounds like “sh” or “k”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "T and D touch the teeth, not the ridge behind them. P and T have no puff of air. Between vowels D is very soft, close to the “th” in “this”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "In “todo” the second syllable is soft."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "The /g/ of “go” is written “ga, go, gu” and “gue, gui”. The u in “gue, gui” is silent; with two dots (ü) it is pronounced."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Guitarra has no “w” sound. Pingüino does."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "J always, and G in “ge, gi”, share one sound: strong, from the throat, like an English “h” with more friction."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "J never sounds like the j in “jump”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "H is always silent. You write it, you never say it."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "The English “h” sound is spelled with J in Spanish. Only with C does H make a sound: CH."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Y and LL sound the same almost everywhere, like the y in “yes” with more force. Alone or at the end of a word, y sounds like the vowel i."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "In Argentina and Uruguay they sound like “sh”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Ñ is its own letter, different from N. It sounds like the “ny” in “canyon”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "It changes the meaning: “ano” and “año” are very different words."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "There are two r sounds. The soft one is a single tap, like the “tt” in American “butter”. The strong one trills: it is written RR, and R is also strong at the start of a word and after l, n, s."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "It changes the meaning: pero / perro · caro / carro."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "W only appears in borrowed words and sounds like “u” or “gu”. X is /ks/ between vowels and at the end, /s/ at the start of a word, and like Spanish J in some names: México, Texas, Oaxaca."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "“México” is pronounced with the J sound and written with X."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "C/Z with /θ/, a sharper S, and “vosotros” for informal plural “you”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "C, Z and S sound the same; very clear consonants; “ustedes” for every plural “you”."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Y/LL sound like “sh”; “vos” replaces “tú” with its own verb forms; S before a consonant turns into a soft breath."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Final S turns into a breath or disappears; fast, musical rhythm."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Slow, very clear pronunciation; “usted” is common even with friends."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Very fast speech, aspirated final S, and its own slang."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Firm consonants, full vowels, steady rhythm."
+    }
+  ]
+}

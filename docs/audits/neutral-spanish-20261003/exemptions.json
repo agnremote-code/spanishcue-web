@@ -13554,6 +13554,12 @@
       "text": "Justo. ¿Querés bolsa?",
       "category": "regional-pedagogy",
       "reason": "Clase de monedas por país (G249): el paso de Argentina y el mercado de San Telmo enseñan a reconocer el voseo rioplatense en compras reales; el alumno sigue hablando con tú o usted."
+    },
+    {
+      "path": "app/clase-de-nivelacion/content.mjs",
+      "text": "Se usa **vos**: «vos **tenés**», «vos **querés**», «vos **sos**».",
+      "category": "regional-pedagogy",
+      "reason": "Clase de nivelación (262): la tarjeta del acento rioplatense enseña a reconocer el voseo como rasgo regional; el resto de la clase y el alumno siguen con tú."
     }
   ]
 }

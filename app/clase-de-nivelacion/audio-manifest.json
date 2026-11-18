@@ -428,12 +428,12 @@
   },
   {
    "id": "d-t-p-palabras",
-   "text": "dedo. nada. todo. tomate. papá. poco. puerta.",
+   "text": "dedo. nada. todo. tarde. papá. poco. puerta.",
    "voice": "es-MX-JorgeNeural",
    "rate": "-15%",
-   "textSha256": "5756d3d1def8681d8575559ea43057f38aa94dcb9887aabe70df640fc621d947",
-   "sha256": "0b185b7d147f8d6a2202e2dd2cb2e2ab88c69d7f3b61c60775e3c82ac2d9f45b",
-   "durationSeconds": 11.21
+   "textSha256": "da818e1d9094648f263ff04acf2e03dc334b3ef1f9412cfa899bc240b7c4aea2",
+   "sha256": "5d827104d818bc211597fc1b84ed26ea62e1c878394d6ea82f228fa09087d2ef",
+   "durationSeconds": 11.11
   },
   {
    "id": "d-t-p-silabas",
