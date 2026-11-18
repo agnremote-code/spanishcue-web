@@ -11,6 +11,7 @@ import type { LandingConfig } from './config';
 import { campaignCopy } from './campaign-copy';
 import { LandingLink } from './LandingConversion';
 import PaidLandingTracker from './PaidLandingTracker';
+import { promoWeekActive } from '../promo-config';
 import { featureMedia, paidCopy, type FeatureKey, type PaidLandingSlug } from './paid-copy';
 
 /** Fill-in-the-blank lines for the "worksheet" side of the contrast block. */
@@ -29,6 +30,9 @@ export default async function PaidLanding({ config, slug, pathname }: { config: 
  const pro = fullAccessFromHeaders(h);
  const signedIn = signedInFromHeaders(h);
  const t = paidCopy[locale];
+ // While the promo week runs, the buy buttons offer the US$0.99 first week; the checkout states the renewal.
+ const promoCta = promoWeekActive() ? (locale === 'es' ? 'Probar PRO US$0,99' : 'Try PRO US$0.99') : null;
+ const promoNote = locale === 'es' ? 'Luego US$19,90/mes · cancelas cuando quieras' : 'Then US$19.90/month · cancel anytime';
  const c = campaignCopy[locale];
  const original = config.copy[locale];
  const organicIntent = {
@@ -175,13 +179,13 @@ export default async function PaidLanding({ config, slug, pathname }: { config: 
 
   <section className="plp-final">
    <h2>{t.finalTitle}</h2>
-   <div><LandingLink href="#plans" primary className="plp-button plp-button-accent" placement={`landing_final_buy_${slug}`}>{t.finalCta} →</LandingLink><LandingLink href={freeLesson} className="plp-text-link" placement={`landing_final_free_${slug}`}>{t.tryFree} →</LandingLink></div>
+   <div><LandingLink href="#plans" primary className="plp-button plp-button-accent" placement={`landing_final_buy_${slug}`}>{promoCta ?? t.finalCta} →</LandingLink><LandingLink href={freeLesson} className="plp-text-link" placement={`landing_final_free_${slug}`}>{t.tryFree} →</LandingLink></div>
   </section>
 
   <footer className="plp-footer"><Link href="/"><SpanishCueBrand variant="compact" /></Link><nav aria-label={locale === 'es' ? 'Recursos, legal y contacto' : 'Resources, legal and contact'}><Link href="/resources">{locale === 'es' ? 'Recursos' : 'Resources'}</Link><Link href="/pricing">{locale === 'es' ? 'Precios' : 'Pricing'}</Link><Link href="/privacy">{locale === 'es' ? 'Privacidad' : 'Privacy'}</Link><Link href="/terms">{locale === 'es' ? 'Términos' : 'Terms'}</Link><Link href="/contact">{locale === 'es' ? 'Contacto' : 'Contact'}</Link></nav></footer>
 
   {!pro && <>
-   <div className="plp-sticky" id="plp-sticky" data-show="false"><LandingLink href="#plans" primary className="plp-sticky-link" placement={`landing_sticky_${slug}`}><strong>{t.sticky}</strong><small>{t.stickyNote}</small></LandingLink></div>
+   <div className="plp-sticky" id="plp-sticky" data-show="false"><LandingLink href="#plans" primary className="plp-sticky-link" placement={`landing_sticky_${slug}`}><strong>{promoCta ?? t.sticky}</strong><small>{promoCta ? promoNote : t.stickyNote}</small></LandingLink></div>
    <PaidLandingTracker slug={slug} />
   </>}
  </main>;

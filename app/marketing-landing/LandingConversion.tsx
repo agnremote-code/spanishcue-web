@@ -2,6 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { trackMarketingEvent } from '../marketing/analytics';
+import { promoWeekActive } from '../promo-config';
 import { consentFor, CONSENT_EVENT } from '../privacy/consent';
 import { campaignCopy } from './campaign-copy';
 import CheckoutButton from '../acceso/CheckoutButton';
@@ -103,7 +104,7 @@ export default function LandingConversion({ locale, pro, signedIn, slug, hero = 
    <div><span className="lp-eyebrow">FOUNDING TEACHERS</span><h2 id="founder-title">{live ? c.founder : launch ? c.launch : unavailableTitle}</h2><p>{live ? c.founderCopy : launch ? c.launchCopy : unavailableCopy}</p>{live && <p>{c.keep}</p>}</div>
    <div className="landing-founder-deal">{(live || launch) && <p className="landing-founder-price"><b>US$19.90</b><span>/ {c.month}</span></p>}<h3>{c.full}</h3>{live && <p className="landing-availability">{status.remaining} {c.remaining}</p>}{live ? <CheckoutButton signedIn={signedIn} returnTo="/" /> : <LandingLink href="/pricing" placement={`landing_founder_${slug}`} className="lp-button">{launch ? c.launchCta : (locale === 'es' ? 'VER OPCIONES PRO' : 'VIEW PRO OPTIONS')}</LandingLink>}<small>{live ? c.payment : launch ? (locale === 'es' ? 'Sin cobros hoy. Sin tarjeta.' : 'No payment today. No card.') : c.tryFirst}</small></div>
   </section>
-  {live && pastHero && !open && !converted && <aside className="landing-sticky" aria-label="Founder Price"><span>Founder Price · <strong>US$19.90/{c.month}</strong><small>{c.founderCopy}</small></span><button className="lp-button" type="button" onClick={() => { seen.current = true; sessionSet(seenKey); trigger.current = document.activeElement as HTMLElement; setOpen(true); trackMarketingEvent('founder_modal_click', { landing:slug, placement:'sticky' }); }}>{locale === 'es' ? 'Comprar PRO · US$19.90/mes' : 'Buy PRO · US$19.90/month'}</button></aside>}
+  {live && pastHero && !open && !converted && <aside className="landing-sticky" aria-label="Founder Price"><span>Founder Price · <strong>US$19.90/{c.month}</strong><small>{c.founderCopy}</small></span><button className="lp-button" type="button" onClick={() => { seen.current = true; sessionSet(seenKey); trigger.current = document.activeElement as HTMLElement; setOpen(true); trackMarketingEvent('founder_modal_click', { landing:slug, placement:'sticky' }); }}>{promoWeekActive() ? (locale === 'es' ? 'Probar PRO US$0,99' : 'Try PRO US$0.99') : locale === 'es' ? 'Comprar PRO · US$19.90/mes' : 'Buy PRO · US$19.90/month'}</button></aside>}
   {live && <dialog ref={dialog} className="landing-modal" aria-labelledby="founder-modal-title" aria-describedby="founder-modal-copy" onCancel={() => setOpen(false)} onClose={() => setOpen(false)}>
    <button className="landing-modal-close" type="button" aria-label={c.close} onClick={() => setOpen(false)}>×</button><span className="lp-eyebrow">FOUNDING TEACHERS</span><h2 id="founder-modal-title">{c.modalTitle}</h2><p id="founder-modal-copy">{c.founderCopy}</p><p>{c.keep}</p><p className="landing-availability">{status.remaining} {c.remaining}</p><CheckoutButton signedIn={signedIn} returnTo="/" /><button className="landing-modal-continue" type="button" onClick={() => setOpen(false)}>{c.continue}</button><small>{c.tryFirst}</small>
   </dialog>}

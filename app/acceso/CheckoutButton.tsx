@@ -8,7 +8,6 @@ import "./payment-options.css";
 import { checkoutAttribution, trackMarketingEvent } from "../marketing/analytics";
 import { consentFor } from "../privacy/consent";
 import ArsPrice from "../marketing/ArsPrice";
-import { PROMO_WEEK_UNTIL } from "../promo-config";
 
 type FounderStatus = {
   limit: number;
@@ -244,29 +243,26 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
 
   const busy = status === "paypal" || status === "paddle" || status === "confirming";
 
-  /** The promo week, above the regular plans: price today, what renews and when, and how to cancel. */
+  /** The promo week, above the regular plans: one button and a short App Store style renewal line. */
   function promoWeekOffer(loaded: FounderStatus | null) {
     const promo = loaded?.promoWeek;
     if (!loaded?.available || !promo?.available || promo.eligible === false) return null;
     const es = locale === "es";
-    const until = PROMO_WEEK_UNTIL[es ? "es" : "en"];
     const accountHref = `/ingresar?modo=registro&returnTo=${encodeURIComponent(`/acceso?returnTo=${encodeURIComponent(returnTo)}`)}`;
     return <div className="checkout-promo">
-      <strong className="checkout-promo-tag">{es ? `PROMO · hasta el ${until}` : `PROMO · until ${until}`}</strong>
-      <p className="checkout-promo-title">{es ? "Tu primera semana de PRO por US$0,99" : "Your first week of PRO for US$0.99"}</p>
       {signedIn ? <>
         {promo.cardAvailable && <button className="checkout-promo-button" type="button" onClick={() => checkoutPaddle("promo")} disabled={busy}>
-          {status === "paddle" || status === "confirming" ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Empezar por US$0,99 · tarjeta" : "Start for US$0.99 · card")}
+          {status === "paddle" || status === "confirming" ? (es ? "Abriendo el pago…" : "Opening checkout…") : (es ? "Probar PRO US$0,99 · tarjeta" : "Try PRO US$0.99 · card")}
         </button>}
         {!paddleOnly && promo.paypalAvailable && <button className="checkout-promo-button checkout-promo-paypal" type="button" onClick={() => startPayPal("promo")} disabled={busy}>
-          {status === "paypal" ? t("checkout.openingPayPal") : (es ? "Empezar por US$0,99 · PayPal" : "Start for US$0.99 · PayPal")}
+          {status === "paypal" ? t("checkout.openingPayPal") : (es ? "Probar PRO US$0,99 · PayPal" : "Try PRO US$0.99 · PayPal")}
         </button>}
       </> : <a className="checkout-promo-button" href={accountHref} onClick={() => trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "promo_week_account", signed_in: false })}>
-        {es ? "Crear cuenta gratis y empezar por US$0,99" : "Create a free account and start for US$0.99"}
+        {es ? "Probar PRO US$0,99" : "Try PRO US$0.99"}
       </a>}
       <p className="checkout-promo-terms">{es
-        ? "Pagas US$0,99 hoy y tienes PRO completo durante 7 días. El día 8 la suscripción se renueva sola a US$19,90 por mes, hasta que canceles. Te avisamos por correo 2 días antes y puedes cancelar en línea desde tu cuenta cuando quieras. Solo para tu primera suscripción."
-        : "You pay US$0.99 today and get full PRO for 7 days. On day 8 the subscription renews automatically at US$19.90 per month until you cancel. We email you 2 days before, and you can cancel online from your account at any time. For your first subscription only."}</p>
+        ? "US$0,99 la primera semana. Luego se renueva automáticamente a US$19,90/mes. Cancelas cuando quieras."
+        : "US$0.99 for the first week. Then renews automatically at US$19.90/month. Cancel anytime."}</p>
     </div>;
   }
   // The landing variant renders its final layout (disabled) while the status
