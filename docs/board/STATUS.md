@@ -81,6 +81,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-18 (Wednesday 3D routine): run started 02:13Z, W47 plan item 3** (branch `claude/board-wed-3d-20261118`, base main `e87a085`). Tue 11-17 left its marker (#456). Subscription usage: **UNKNOWN**. In progress.
 - **2026-11-17 (Tuesday SEO routine): PR #456** (branch `claude/seo-tuesday-20261117`, base main `e11f4af`). Run-start marker pushed at 02:08Z (W47 item 0). Mon 11-16 left its marker (#439). Subscription usage: **UNKNOWN**.
   - **W47 item 1: DONE.** [BOARD-DECISION-007](decisions/BOARD-DECISION-007-generated-hub-pages.md), on generated hub pages and the §3.2 scope, **ADOPTED v2, 3 of 3, LOCKED**.
     - No blanket noindex. §3.2 still applies in full to authored teaching pages (guide, preview, cluster lesson).
