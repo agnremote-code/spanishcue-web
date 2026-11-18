@@ -158,3 +158,61 @@ test('the run is green only when the seeded test is VALID and every clip passes 
   assert.match(source, /all_found = bool\(cases\) and /, 'zero seeds can never be valid (no all([]) pass)');
   assert.match(source, /report\['all_pass'\] = bool\(report\['clips'\]\) and /);
 });
+
+// ------------------------------------------------------------------ review fixes (PR #472)
+const py = (code) => {
+  const run = spawnSync('python3', ['-c', `import importlib.util, json, sys
+spec = importlib.util.spec_from_file_location('chk', '${SCRIPT}')
+chk = importlib.util.module_from_spec(spec); spec.loader.exec_module(chk)
+${code}`], { encoding: 'utf8' });
+  assert.equal(run.status, 0, run.stderr);
+  return JSON.parse(run.stdout);
+};
+
+test('a seed counts as caught only when the check measured that defect, never an unmeasured or unrelated line', () => {
+  const out = py(`
+f = lambda a, h, **k: {'authored': a, 'heard': h, 'kind': 'replace', **k}
+del_exp = {'seed': 'delete', 'match': chk.seed_match('delete', 'nieta')}
+art_exp = {'seed': 'article', 'match': chk.seed_match('article', ('la', 'las'))}
+rep_exp = {'seed': 'repeat', 'match': chk.seed_match('repeat', 'de buscarnos')}
+spk_exp = {'seed': 'speaker', 'other_cast': 'en-US-EmmaMultilingualNeural +20Hz'}
+bad = lambda *fs: {'words_ok': False, 'findings': list(fs)}
+print(json.dumps({
+ 'delete_caught': chk.seed_hit('words', del_exp, bad(f('nuestra nieta con', 'nuestra con'))),
+ 'delete_unrelated_slip': chk.seed_hit('words', del_exp, bad(f('vestido', 'vestidos'))),
+ 'delete_not_located': chk.seed_hit('words', del_exp, bad({'authored': 'Hoy vi a nuestra nieta', 'heard': '', 'note': 'line not located in the audio'})),
+ 'delete_cleared': chk.seed_hit('words', del_exp, {'words_ok': True, 'findings': [f('nieta', '')]}),
+ 'article_caught': chk.seed_hit('words', art_exp, bad(f('la', 'las'))),
+ 'article_wrong_heard': chk.seed_hit('words', art_exp, bad(f('la', 'le'))),
+ 'repeat_caught': chk.seed_hit('words', rep_exp, bad({'authored': '', 'heard': 'de buscarnos de buscarnos', 'kind': 'insert'})),
+ 'speaker_caught': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'margin': -0.2, 'closest_cast': 'en-US-EmmaMultilingualNeural +20Hz'}),
+ 'speaker_no_span': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'speaker_note': 'unresolved: no span'}),
+ 'speaker_too_short': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'speaker_note': 'unresolved: span too short to embed'}),
+ 'speaker_other_cast': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'margin': 0.01, 'closest_cast': 'de-DE-FlorianMultilingualNeural +13Hz'}),
+}))`);
+  assert.deepEqual(out, {
+    delete_caught: true, delete_unrelated_slip: false, delete_not_located: false, delete_cleared: false,
+    article_caught: true, article_wrong_heard: false, repeat_caught: true,
+    speaker_caught: true, speaker_no_span: false, speaker_too_short: false, speaker_other_cast: false,
+  });
+});
+
+test('every seed in a plan carries what the check must hear for it (match tokens or the other cast)', () => {
+  const p = plan(['boda', 'B1']);
+  for (const s of p.seeds) for (const e of s.expect) {
+    if (e.seed === 'speaker') assert.match(e.other_cast, /MultilingualNeural [+-]\d+Hz$/);
+    else assert.ok(e.match && (e.match.authored.length || e.match.heard.length), JSON.stringify(e));
+  }
+});
+
+test('--plan runs on levels whose lines contain digits without num2words', () => {
+  const p = plan(['consorcio', 'A0']);
+  assert.ok(Array.isArray(p.missing));
+});
+
+test('lint: a name after a colon is mid-sentence, and a digit gap gets its own message', () => {
+  const colon = provableKey([item({ gaps: 'Se llama: [Rocío] y vive [aquí].' })], voices);
+  assert.ok(colon.some(m => m.includes('«Rocío» is capitalised mid-sentence')), String(colon));
+  const digit = provableKey([item({ gaps: 'Son las [3] de la [tarde].' })], voices);
+  assert.ok(digit.some(m => m.includes('«3» is written in digits')), String(digit));
+});

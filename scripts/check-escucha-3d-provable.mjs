@@ -28,7 +28,7 @@ function midSentence(before) {
   // Text before the gap inside the gap sentence: the gap starts a sentence
   // when nothing but opening punctuation follows the last sentence end.
   const tail = before.replace(/[\s¿¡«"“(—-]+$/u, '');
-  return tail.length > 0 && !/[.!?…:]$/u.test(tail);
+  return tail.length > 0 && !/[.!?…]$/u.test(tail);  // a colon does not start a sentence: «Se llama: [Rocío]» fails
 }
 
 export function provableKey(items, voices) {
@@ -47,7 +47,8 @@ export function provableKey(items, voices) {
     answers.forEach((raw, i) => {
       before += parts[i] ?? '';
       const word = String(raw).trim();
-      if (!WORD.test(word)) out.push(`${at}: gap «${word}» must be one whole word (BOARD-DECISION-006 §3.2)`);
+      if (/\p{N}/u.test(word)) out.push(`${at}: gap «${word}» is written in digits; write the word that is spoken, and it must still pass this lint (BOARD-DECISION-006 §3.2)`);
+      else if (!WORD.test(word)) out.push(`${at}: gap «${word}» must be one whole word (BOARD-DECISION-006 §3.2)`);
       else {
         if (/s$/iu.test(word)) out.push(`${at}: gap «${word}» ends in -s (BOARD-DECISION-006 §3.2 lint)`);
         if (word[0] !== word[0].toLocaleLowerCase('es') && midSentence(before)) out.push(`${at}: gap «${word}» is capitalised mid-sentence; proper names cannot be gap words (BOARD-DECISION-006 §3.3)`);

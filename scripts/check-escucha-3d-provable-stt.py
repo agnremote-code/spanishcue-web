@@ -56,6 +56,7 @@ GAP_REPLACEMENTS = ['ventana', 'pelota', 'camino', 'tormenta']
 ARTICLE_PAIRS = (('la', 'las'), ('las', 'la'), ('los', 'lo'), ('el', 'en'))
 REQUIRED_SEEDS = ['gap-delete', 'gap-replace', 'repeat', 'delete', 'article', 'first', 'speaker']
 OPS = ['repeat', 'delete', 'article', 'first']
+PLAN_ONLY = False  # set by --plan: no audio, no models, standard library only
 
 
 def load_generator():
@@ -86,7 +87,9 @@ def norm(text):
     text = text.replace('%', ' por ciento')
     out = []
     for raw in re.findall(r"[\wáéíóúüñÁÉÍÓÚÜÑ]+", text):
-        if raw.isdigit():
+        if raw.isdigit() and PLAN_ONLY:
+            out.append(raw)  # --plan compares authored text with itself, so digits need no spelling
+        elif raw.isdigit():
             from num2words import num2words
             out.extend(fold(w) for w in re.findall(r'\w+', num2words(int(raw), lang='es')))
         else:
@@ -395,6 +398,35 @@ def assign(lines, gap_tokens):
     return best
 
 
+def seed_match(op, tgt):
+    """The tokens a finding must carry for this seed to count as caught: the
+    authored side must contain the seeded word and the heard side its
+    replacement, so an unrelated slip on the same line never counts."""
+    if op == 'repeat':
+        return {'authored': [], 'heard': norm(tgt)}
+    if op == 'delete':
+        return {'authored': norm(tgt), 'heard': []}
+    if op == 'article':
+        return {'authored': [tgt[0]], 'heard': [tgt[1]]}
+    return {'authored': norm(tgt), 'heard': ['ya' if tgt.lower() != 'ya' else 'y']}
+
+
+def contains(have, want):
+    return all(w in have for w in want)
+
+
+def seed_hit(kind, exp, line):
+    """True only when the check measured the seeded defect itself. A line the
+    checker could not measure (no span, too short to embed, not located) never
+    counts as a caught seed (independent review, PR #472)."""
+    if kind == 'speaker':
+        return 'margin' in line and not line['speaker_ok'] and line.get('closest_cast') == exp['other_cast']
+    m = exp['match']
+    return not line['words_ok'] and any(
+        'note' not in f and contains(f['authored'].split(), m['authored']) and contains(f['heard'].split(), m['heard'])
+        for f in line['findings'])
+
+
 def word_seed(item):
     """The single-voice word seed for one clip, or (None, missing)."""
     words = gap_words(item)
@@ -412,8 +444,8 @@ def word_seed(item):
         return None, ['gap-replace']
     line['text'] = re.sub(r'\s*' + whole(g0), '', line['text'], count=1).strip()
     line['text'] = re.sub(whole(g1), repl, line['text'], count=1)
-    expect = [{'seed': 'gap-delete', 'line': gi + 1, 'what': f'gap word «{g0}» deleted'},
-              {'seed': 'gap-replace', 'line': gi + 1, 'what': f'gap word «{g1}» → «{repl}»'}]
+    expect = [{'seed': 'gap-delete', 'line': gi + 1, 'what': f'gap word «{g0}» deleted', 'match': {'authored': norm(g0), 'heard': []}},
+              {'seed': 'gap-replace', 'line': gi + 1, 'what': f'gap word «{g1}» → «{repl}»', 'match': {'authored': norm(g1), 'heard': norm(repl)}}]
     others = [(i, l['text']) for i, l in enumerate(item['lines']) if i != gi]
     plan = assign(others, gap_tokens)
     missing = [op for op in OPS if op not in plan]
@@ -423,7 +455,7 @@ def word_seed(item):
         li = plan[op]
         tgt = target(op, broken['lines'][li]['text'], gap_tokens)
         broken['lines'][li]['text'], what = apply(op, broken['lines'][li]['text'], tgt)
-        expect.append({'seed': op, 'line': li + 1, 'what': what})
+        expect.append({'seed': op, 'line': li + 1, 'what': what, 'match': seed_match(op, tgt)})
     return {'kind': 'words', 'authored': item, 'broken': broken, 'expect': expect,
             'gaps_missed': [norm(g0)[0], norm(g1)[0]]}, []
 
@@ -440,7 +472,7 @@ def speaker_seed(item):
     broken['lines'][li]['s'] = other  # spoken with the other speaker's engine and pitch
     cast = GEN.casting(item['speakers'])
     return {'kind': 'speaker', 'authored': item, 'broken': broken, 'gaps_missed': [],
-            'expect': [{'seed': 'speaker', 'line': li + 1,
+            'expect': [{'seed': 'speaker', 'line': li + 1, 'other_cast': f'{cast[other][0]} {cast[other][1]}',
                         'what': f'line read by {item["speakers"][other]["name"]} ({cast[other][0]} {cast[other][1]}) instead of {item["speakers"][declared]["name"]} ({cast[declared][0]} {cast[declared][1]})'}]}
 
 
@@ -485,6 +517,10 @@ def main():
     ap.add_argument('--plan', action='store_true', help='print the seed plan only (no audio, no models)')
     ap.add_argument('--out', default=str(ROOT / 'docs/board/evidence/stt'))
     args = ap.parse_args()
+    global PLAN_ONLY
+    PLAN_ONLY = args.plan
+    if not args.content and not (args.game and args.level):
+        ap.error('give <game> <level> or --content FILE')
     path = pathlib.Path(args.content) if args.content else CONTENT / args.game / f'{args.level.lower()}.json'
     data = json.loads(path.read_text())
     game, level, items = data['game'], data['level'], data['items']
@@ -516,7 +552,7 @@ def main():
             found = []
             for exp in seed['expect']:
                 line = result['lines'][exp['line'] - 1]
-                hit = (not line['words_ok']) if seed['kind'] == 'words' else (not line['speaker_ok'])
+                hit = seed_hit(seed['kind'], exp, line)
                 entry = {**exp, 'found': hit}
                 if 'margin' in line:
                     entry['margin_declared_minus_best_other'] = line['margin']
