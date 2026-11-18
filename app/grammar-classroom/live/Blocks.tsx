@@ -179,6 +179,45 @@ function Build({ block, where }: { block: Extract<Block, { kind: 'build' }>; whe
   </Card>;
 }
 
+/** One tile per column (person + verb + rest): the sentence appears as it is built, one mission at a time. */
+function Machine({ block, where }: { block: Extract<Block, { kind: 'machine' }>; where: Where }) {
+  const [picks, setPicks] = useStored<Record<number, (number | null)[]>>(`${where.id}:picks`, {});
+  const [at, setAt] = useStored<number>(`${where.id}:at`, 0);
+  const save = useRecord(where);
+  const free = useModeText(block.free ?? {});
+  const i = Math.max(0, Math.min(at, block.items.length - 1));
+  const item = block.items[i];
+  const pick = block.columns.map((_, c) => picks[i]?.[c] ?? null);
+  const words = (list: (number | null)[]) => block.columns.map((column, c) => list[c] === null ? null : column.options[list[c] as number]);
+  const wrongColumn = (list: (number | null)[]) => words(list).findIndex((word, c) => word !== item.answer[c]);
+  const done = pick.every(p => p !== null);
+  const right = done && wrongColumn(pick) === -1;
+  const solved = (n: number) => block.columns.every((column, c) => column.options[picks[n]?.[c] ?? -1] === block.items[n].answer[c]);
+  const sentence = (list: string[]) => { const text = list.join(' '); return `${text.charAt(0).toUpperCase()}${text.slice(1)}.`; };
+  const choose = (c: number, o: number) => {
+    const next = pick.map((p, k) => k === c ? o : p);
+    setPicks(prev => ({ ...prev, [i]: next }));
+    if (next.every(p => p !== null)) save(i, wrongColumn(next) === -1, item.goal, sentence(item.answer));
+  };
+  return <Card kind="machine" title={block.title}>
+    <div className="gl-machine-pips" role="group" aria-label="Oraciones">{block.items.map((_, n) => <button type="button" key={n} data-mission={n} aria-current={n === i ? 'step' : undefined} className={solved(n) ? 'is-done' : ''} onClick={() => setAt(n)}>{solved(n) ? '✓' : n + 1}</button>)}</div>
+    <p className="gl-prompt gl-machine-goal">«{item.goal}»</p>
+    <p className="gl-machine-sentence" data-state={!done ? 'open' : right ? 'right' : 'wrong'} aria-live="polite">{block.columns.map((column, c) => <span key={c} className={`gl-machine-slot gl-tone-${column.tone}`} data-filled={pick[c] !== null}>{pick[c] === null ? column.label : c === 0 ? sentence([column.options[pick[c] as number]]).slice(0, -1) : column.options[pick[c] as number]}</span>)}</p>
+    <div className="gl-machine-columns">{block.columns.map((column, c) => <div key={c} className={`gl-machine-column gl-tone-${column.tone}`} role="group" aria-label={column.label}>
+      <span className="gl-badge">{column.label}</span>
+      {column.options.map((option, o) => <button type="button" key={o} data-column={c} data-option={o} aria-pressed={pick[c] === o} onClick={() => choose(c, o)}>{option}</button>)}
+    </div>)}</div>
+    {done && (right
+      ? <Feedback ok>{sentence(item.answer)}</Feedback>
+      : <Feedback ok={false}>Mira la columna «{block.columns[wrongColumn(pick)].label}» y prueba otra palabra.</Feedback>)}
+    <div className="gl-row">
+      <button type="button" className="gl-chip-button" disabled={pick.every(p => p === null)} onClick={() => setPicks(prev => ({ ...prev, [i]: [] }))}>Empezar de nuevo</button>
+      {right && i < block.items.length - 1 && <button type="button" className="gl-primary" data-machine-next onClick={() => setAt(i + 1)}>Siguiente oración →</button>}
+    </div>
+    {free && right && i === block.items.length - 1 && <p className="gl-guide"><span aria-hidden="true">🎲</span><Rich text={free} /></p>}
+  </Card>;
+}
+
 /** Type the new sentence. After two tries a model answer is offered. */
 function Rewrite({ block, where }: { block: Extract<Block, { kind: 'rewrite' }>; where: Where }) {
   const [typed, setTyped] = useStored<Record<number, string>>(`${where.id}:typed`, {});
@@ -457,6 +496,7 @@ export function LiveBlock({ block, where }: { block: Block; where: Where }) {
     case 'fix': return <Fix block={block} where={where} />;
     case 'chat-fill': return <ChatFill block={block} where={where} />;
     case 'build': return <Build block={block} where={where} />;
+    case 'machine': return <Machine block={block} where={where} />;
     case 'rewrite': return <Rewrite block={block} where={where} />;
     case 'listen': return <Listen block={block} where={where} />;
     case 'talk': return <Talk block={block} where={where} />;
