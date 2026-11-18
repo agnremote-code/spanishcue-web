@@ -2402,7 +2402,7 @@ export const guiaPages: GuiaPage[] = [
             "**Dentro de una expresión.** «A las ocho», «por la mañana», «de vacaciones», «en serio». No hay lógica que deducir: se aprenden enteras, como una palabra.",
             "**Exigida por un verbo.** «Depender de», «pensar en», «soñar con», «acordarse de». La preposición forma parte del verbo y se aprende con él.",
           ] },
-          { type: "p", text: "Decirle esto al alumno cambia su forma de estudiar: deja de preguntar «¿qué significa de?» y empieza a preguntar «¿con qué preposición va este verbo?». El tema de [gramática de las preposiciones](/material-ele/gramatica/preposiciones) reúne las clases por nivel." },
+          { type: "p", text: "Decirle esto al alumno cambia su forma de estudiar: deja de preguntar «¿qué significa de?» y empieza a preguntar «¿con qué preposición va este verbo?». La página de [preposiciones](/material-ele/preposiciones) trae cinco actividades listas y un ejercicio resuelto, y el tema de [gramática de las preposiciones](/material-ele/gramatica/preposiciones) reúne las clases por nivel." },
         ],
       },
       {
@@ -2519,7 +2519,7 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Por qué los alumnos se equivocan tanto con las preposiciones?", answer: "Porque traducen la preposición de su lengua, y las preposiciones casi nunca coinciden entre lenguas. Ayuda distinguir cuándo la preposición tiene significado propio, cuándo forma parte de una expresión y cuándo la exige el verbo." },
       { question: "¿Hay una clase gratis sobre preposiciones?", answer: "Sí. La clase interactiva de por y para de A2 se abre gratis en SpanishCue, y en Material ELE hay actividades, un ejercicio con soluciones y fichas de muestra sin registro." },
     ],
-    related: ["por-y-para", "pronombres-de-objeto", "a1", "b1"],
+    related: ["preposiciones", "por-y-para", "a1", "b1"],
   },
 ];
 
