@@ -1115,22 +1115,6 @@
   font-weight: 600;
 }
 .sc-hero-price b { color: #fff; font-weight: 900; }
-/* Promo week line (2026-11-17): one tappable sentence with the price today and the price after. */
-.sc-hero-promo {
-  display: block;
-  margin: 10px 0 0;
-  padding: 9px 12px;
-  border: 1px solid #ffd36b88;
-  border-radius: 12px;
-  background: #ffd36b1f;
-  color: #fff3d1;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.45;
-  text-decoration: none;
-}
-.sc-hero-promo b { color: #fff; font-weight: 900; }
-.sc-hero-promo:hover { background: #ffd36b33; }
 .mk-founder-promo { margin: 8px 0 0; font-size: 14px; line-height: 1.45; }
 .sc-hero-save {
   padding: 2px 8px;

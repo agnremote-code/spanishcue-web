@@ -254,9 +254,15 @@ test('checkout states the renewal next to every promo button and keeps the regul
   const ui = await readFile('app/acceso/CheckoutButton.tsx', 'utf8');
   assert.match(ui, /checkoutPaddle\("promo"\)/);
   assert.match(ui, /startPayPal\("promo"\)/);
-  assert.match(ui, /El día 8 la suscripción se renueva sola a US\$19,90 por mes/);
-  assert.match(ui, /On day 8 the subscription renews automatically at US\$19\.90 per month/);
-  assert.match(ui, /Solo para tu primera suscripción/);
+  // Short App Store style notice (owner, 2026-11-18): price now, automatic renewal price, cancel anytime.
+  assert.match(ui, /US\$0,99 la primera semana\. Luego se renueva automáticamente a US\$19,90\/mes\. Cancelas cuando quieras\./);
+  assert.match(ui, /US\$0\.99 for the first week\. Then renews automatically at US\$19\.90\/month\. Cancel anytime\./);
+  assert.doesNotMatch(ui, /PROMO_WEEK_UNTIL/);
+  const brand = await readFile('app/SpanishCueBrand.tsx', 'utf8');
+  assert.match(brand, /PROBAR PRO US\$0,99\/SEMANA/);
+  assert.match(brand, /Luego US\$19,90\/mes · Cancelas cuando quieras/);
+  assert.match(brand, /Probar una clase gratis/);
+  assert.doesNotMatch(brand, /PROMO_WEEK_UNTIL/);
   assert.match(ui, /promo\.eligible === false\) return null/);
   assert.match(ui, /checkoutPaddle\("monthly"\)/);
   for (const route of ['app/api/billing/paddle/checkout/route.ts', 'app/api/billing/checkout/route.ts']) {

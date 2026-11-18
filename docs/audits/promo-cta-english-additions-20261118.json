@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "authorization": "Owner request (Ale) on 2026-11-18 to present the promo week as a «PROBAR PRO 0,99/semana» button on the home and on every landing, without the end date, and with a short App Store style renewal notice in the checkout (messages cmsg_01Gr5R4j3t2Yet65UcmhcVhAXGNv1B4dH6e2jwYg36YYjh and cmsg_01Gr5R4j3t2Yet65UcmhcVhAD4V65JTFx6XdUGch72wZso), together with the standing approval for new English copy typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g).",
+  "additions": [
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "TRY PRO US$0.99/WEEK"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Try a free lesson"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Then US$19.90/month · Cancel anytime"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Try PRO US$0.99 · card"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Try PRO US$0.99 · PayPal"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Try PRO US$0.99"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "US$0.99 for the first week. Then renews automatically at US$19.90/month. Cancel anytime."
+    },
+    {
+      "path": "app/marketing-landing/LandingConversion.tsx",
+      "text": "Try PRO US$0.99"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "First week"
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": ". Then US$19.90/month. Cancel anytime."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "Try PRO US$0.99"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Try PRO US$0.99"
+    },
+    {
+      "path": "app/marketing-landing/PaidLanding.tsx",
+      "text": "Then US$19.90/month · cancel anytime"
+    }
+  ]
+}
