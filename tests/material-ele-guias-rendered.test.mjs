@@ -9,7 +9,7 @@ test('the long guide «materiales para enseñar español» is a full indexable a
  const dom=new JSDOM(await response.text());const d=dom.window.document;
  assert.equal(d.documentElement.lang,'es');
  assert.equal(d.querySelectorAll('h1').length,1);assert.match(d.querySelector('h1').textContent,/Materiales para enseñar español/);
- assert.equal(d.title,'Materiales para enseñar español: guía completa para profesores | SpanishCue');
+ assert.equal(d.title,'Materiales para enseñar español gratis, por nivel | SpanishCue');
  assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+path);
  assert.doesNotMatch(d.querySelector('meta[name="robots"]')?.content||'',/noindex/);
  assert.match(d.querySelector('meta[property="og:image"]').content,/^https:\/\/spanishcue\.com\//);
