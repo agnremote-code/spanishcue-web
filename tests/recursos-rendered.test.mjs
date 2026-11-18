@@ -19,3 +19,14 @@ test('an English resource page now links its Spanish twin',async()=>{
  assert.equal(d.querySelector('link[rel=alternate][hreflang=es]')?.getAttribute('href'),'https://spanishcue.com/recursos');
 });
 test('an unknown Spanish resource slug is a 404',async()=>{assert.equal((await fetch(origin+'/recursos/no-existe')).status,404);});
+test('Spanish pages link the Spanish resource pages, never only the sitemap',async()=>{
+ const links=async path=>{const d=new JSDOM(await (await fetch(origin+path)).text()).window.document;return [...d.querySelectorAll('a[href]')].map(a=>a.getAttribute('href'));};
+ const hub=await links('/material-ele');
+ assert.ok(hub.includes('/recursos'),'the Material ELE hub links the Spanish library');
+ assert.ok(hub.includes('/alternativa-a-profedeele'),'the comparison page has an internal link');
+ for(const path of ['/material-ele/gustar','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos']){
+  const hrefs=await links(path);
+  assert.ok(hrefs.some(href=>href.startsWith('/recursos/')),`${path} links a Spanish resource page`);
+  assert.deepEqual(hrefs.filter(href=>href.startsWith('/resources/')),[],`${path} keeps English resource pages out of Spanish copy`);
+ }
+});

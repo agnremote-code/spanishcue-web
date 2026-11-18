@@ -14,7 +14,7 @@ export function pageImage(ids: readonly number[]): string | undefined {
 const catalogById = new Map(lessons.map((lesson) => [lesson.id, lesson]));
 /** The first class of the page that has a short recording (free first), with the recording and the day the class went live. */
 export function elePreviewLesson(ids: readonly number[]): (LessonCardData & { video: string; addedAt: string }) | undefined {
-  for (const card of lessonCards(ids)) {
+  for (const card of lessonCards(ids, "es")) {
     const video = previewVideo(card.id);
     if (video) return { ...card, video, addedAt: catalogById.get(card.id)?.news?.addedAt ?? "2026-10-30" };
   }
