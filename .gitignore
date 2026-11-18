@@ -43,3 +43,6 @@ next-env.d.ts
 /work/
 
 *.tsbuildinfo
+
+# Python bytecode (the BOARD-DECISION-006 checker imports the audio generator in tests)
+__pycache__/

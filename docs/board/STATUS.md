@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-17 by the Tuesday SEO routine (scheduled cloud run; Alejandro, Martin and Sofia convened as subagents of the facilitator; see "Current work")._
+_Last updated: 2026-11-18 by the Wednesday 3D routine (scheduled cloud run; Alejandro convened as a fresh subagent reviewer; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -32,7 +32,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
 | 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **HELD on R4 (§9.2 listening).** Draft #282, renumbered to catalog id **246** on 2026-11-02 (243 went to «Más allá»). The BOARD-DECISION-003 speech-to-text check was NOT VALID on its first run (missed a seeded gap-word -s pair), and it flagged cafe («Yaneth» misheard; line 8 not located in the first model's transcript). **2026-11-16:** its G1 ids no longer exist in the regenerated curriculum, so it needs a remap; BOARD-DECISION-006 does not release it |
-| 3 | **NEW 2026-11-16: «El taller de la greda», B1 PRO 3D world, Boyacá** ([concept](concepts/2026-11-16-boyaca-taller-de-la-greda.md); selected 2 of 3; first world under [BOARD-DECISION-006](decisions/BOARD-DECISION-006-provable-listening-gate.md)) | §3.6 checker PR (Sofia) → Martin (content) → Sofia (build) → G4 Alejandro or a fresh agent | **READY to start Wed 11-18.** Dependencies: BOARD-DECISION-006 adopted (done); the checker changes are the first step |
+| 3 | **NEW 2026-11-16: «El taller de la greda», B1 PRO 3D world, Boyacá** ([concept](concepts/2026-11-16-boyaca-taller-de-la-greda.md); selected 2 of 3; first world under [BOARD-DECISION-006](decisions/BOARD-DECISION-006-provable-listening-gate.md)) | §3.6 checker PR (Sofia) → Martin (content) → Sofia (build) → G4 Alejandro or a fresh agent | **Checker in #472 (11-18, tooling; reviewed, DELTA APPROVE; on main once #472 merges). Next: unblock the STT workflow (rule 6 vs #282), then Martin authors.** Dependencies: BOARD-DECISION-006 adopted (done); §3.6 (i)–(iv) done; (v) workflow open |
 | — | ~~«También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`)~~ | — | **DROPPED 2026-11-13** (Martin's duplicate check, facilitator re-verified): free A1 class 332 (G032) already teaches all eight reactions with 6 exercises (`app/grammar-classroom/live/lessons/g332.ts:129-146`; free per `app/access-policy.ts:1-2`), the A1 objective assesses it (`app/autoestudio/curriculum/objectives/a1.ts:140`) and G372 reuses it at A2. If more practice is wanted, add 2–4 exercises to that g332 section instead |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
@@ -81,6 +81,37 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-18 (Wednesday 3D routine): PR #472** (branch `claude/board-wed-3d-20261118`, base main `e87a085`). Run-start marker pushed at 02:13Z (W47 item 0). Tue 11-17 left its marker (#456). Subscription usage: **UNKNOWN**.
+  - **No 3D unit shipped today, and none passed the gate.** This run delivered W47 item 3, step 1: the BOARD-DECISION-006 §3.6 checker changes. It is reported as **tooling, not a unit**. Steps 2 and 3 (Martin authors «El taller de la greda», Sofia builds it, then G4) did not start; there was no capacity for a full world plus a VALID run in this slot, as Monday predicted.
+  - **What #472 adds:**
+    - `scripts/check-escucha-3d-provable-stt.py`. Derived from #282's BOARD-DECISION-003 checker at `3631534f`, which stays untouched there for the Ascensor.
+      - (i) It imports the audio generator, so seeds and speaker references use Emma/Florian with the per-clip pitch from `casting()` and the generator's own `clip()`. References are cached per `(engine, pitch, level)`.
+      - (ii) It applies the §3.4 seed set per level and names every missing seed or target, which makes the level NOT VALID.
+      - (iii) It exits 0 only when `tool_valid is True` and every clip passes.
+      - §3.3: same-gender or 3+ speaker clips HOLD as unproven.
+      - `--plan` prints the seed plan with standard-library Python only.
+    - (iv) `scripts/check-escucha-3d-provable.mjs`: the §3.2/§3.3 lint (one-word gaps, no final -s, no capital mid-sentence, one speaker or one woman and one man). It is hooked into `checkFile` through `PROVABLE_KEYS`, which is empty, so older worlds are grandfathered.
+    - `generate-escucha-3d-audio.py`: `main()` guarded and `edge_tts` imported lazily. The audio output is unchanged.
+    - `tests/escucha-3d-provable-gate.test.mjs`: 18 tests, with 8 mutations each caught.
+  - **(v) NOT done, and the next run must resolve it:** the STT workflow is not on main. #282 holds the only open `.github/workflows/**` change (`escucha-3d-stt.yml`), and AGENTS.md rule 6 allows one open PR per sensitive area. Until the workflow reaches main or the Taller branch, no BOARD-DECISION-006 run can happen (fails safe).
+  - **Review:** Alejandro, as a fresh agent, returned APPROVE WITH CHANGES with one blocker: an unmeasured line (no span, too short to embed, not located) or an unrelated ASR slip counted as a caught seed. It is fixed in `bb02c13c` (`seed_hit`/`seed_match`), together with NB1–NB3 (a colon mid-sentence, digit gaps, `--plan` without num2words). The delta review returned **DELTA APPROVE**.
+    - Open NB4: a duplicated gap word collapses in the report (HYPOTHESIS; mostly fails closed).
+    - Open NB5: `el→en` is not an -s pair; record it in the Taller LQG file.
+    - Open NB6: some tests only check the source text.
+    - Sofia and Martin were not convened; the facilitator implemented. Verbatim: [transcripts/2026-11-18-wednesday-3d-checker.md](transcripts/2026-11-18-wednesday-3d-checker.md).
+  - **Checks (local, Linux):**
+    - `npm test`: exit 0, 1,756 pass, 0 fail, at `4ff0126b`. The later commits change only the checker, the lint, its test and `.gitignore`.
+    - At `bb02c13c`: provable-gate plus the escucha-3d, hr-crisis, feria and tren suites, 79/79.
+    - `validate:artifact`: OK. eslint on the changed files: clean. `git diff --check`: clean.
+    - `tsc`: only the 3 errors already on main.
+    - `--plan` runs on every content level without crashing.
+  - **Next action:**
+    1. **Fri 11-20 (or the next 3D slot): unblock (v).** Choose one option and record it:
+       - (a) commit on #282's own `claude/*` branch to drop `escucha-3d-stt.yml` from its diff (the branch is the board's own), then add a workflow that runs `check-escucha-3d-provable-stt.py` in a separate PR or on the Taller branch; or
+       - (b) put the workflow on the Taller branch once #282 is closed or merged.
+       - Do not open a second open PR that touches workflows.
+    2. Martin authors «El taller de la greda» B1 against concept §6. Opt the game into `PROVABLE_KEYS`, and run `--plan` until it exits 0. Then Sofia builds it, the audio is generated, the `--seeded` run happens, and G4.
+    3. #282 stays held (R4; it needs its G1 remap).
 - **2026-11-17 (Tuesday SEO routine): PR #456** (branch `claude/seo-tuesday-20261117`, base main `e11f4af`). Run-start marker pushed at 02:08Z (W47 item 0). Mon 11-16 left its marker (#439). Subscription usage: **UNKNOWN**.
   - **W47 item 1: DONE.** [BOARD-DECISION-007](decisions/BOARD-DECISION-007-generated-hub-pages.md), on generated hub pages and the §3.2 scope, **ADOPTED v2, 3 of 3, LOCKED**.
     - No blanket noindex. §3.2 still applies in full to authored teaching pages (guide, preview, cluster lesson).
