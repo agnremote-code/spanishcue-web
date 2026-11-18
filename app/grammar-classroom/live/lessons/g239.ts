@@ -79,13 +79,13 @@ export const lesson: LiveLesson = {
           { kind: 'tip', icon: '💡', title: 'Muchas veces no decimos el pronombre', text: '«Soy Alex» y «Yo soy Alex» son iguales. El verbo ya dice quién habla. Al principio, di el pronombre si te ayuda.', en: '“Soy Alex” and “Yo soy Alex” are the same. The verb already says who is speaking. At the start, say the pronoun if it helps you.' },
           { kind: 'tip', icon: '🇦🇷', title: 'Tú y vos', text: 'Tú y vos son la **misma persona**: «you». Con vos, el verbo cambia un poco: tú **eres** → vos **sos**. Hoy solo lo reconoces cuando tus abuelos lo dicen.', en: 'Tú and vos are the same person: “you”. With vos the verb changes a little: tú eres → vos sos. Today you only need to recognise it when your grandparents say it.' },
           { kind: 'choice', title: '¿Quién es? · Who is it?', items: [
-            { prompt: '👩 Marta → ___', options: ['ella', 'él', 'ellas'], answer: 0, why: 'Una mujer: ella (she).' },
-            { prompt: '👨 Tom → ___', options: ['él', 'ella', 'tú'], answer: 0, why: 'Un hombre: él (he).' },
-            { prompt: '👩👨 Marta y Tom → ___', options: ['ellos', 'ellas', 'nosotros'], answer: 0, why: 'Un grupo mixto: ellos (they).' },
-            { prompt: '👩👩 Marta y Ana → ___', options: ['ellas', 'ellos', 'ella'], answer: 0, why: 'Solo mujeres: ellas (they).' },
-            { prompt: '🙋 Tom y yo → ___', options: ['nosotros', 'ellos', 'ustedes'], answer: 0, why: 'Otra persona + yo = nosotros (we).' },
-            { prompt: '👉 Hablas con un amigo → ___', options: ['tú', 'yo', 'él'], answer: 0, why: 'La persona con quien hablas: tú (you).' },
-            { prompt: '👉👉 Hablas con dos amigos → ___', options: ['ustedes', 'nosotros', 'tú'], answer: 0, why: 'Dos personas con quienes hablas: ustedes (you all).' },
+            { prompt: '👩 Marta → ___', options: ['ella', 'él', 'ellas'], answer: 0, why: 'Una mujer: ella (she).', en: 'Marta, one woman' },
+            { prompt: '👨 Tom → ___', options: ['él', 'ella', 'tú'], answer: 0, why: 'Un hombre: él (he).', en: 'Tom, one man' },
+            { prompt: '👩👨 Marta y Tom → ___', options: ['ellos', 'ellas', 'nosotros'], answer: 0, why: 'Un grupo mixto: ellos (they).', en: 'Marta and Tom' },
+            { prompt: '👩👩 Marta y Ana → ___', options: ['ellas', 'ellos', 'ella'], answer: 0, why: 'Solo mujeres: ellas (they).', en: 'Marta and Ana, two women' },
+            { prompt: '🙋 Tom y yo → ___', options: ['nosotros', 'ellos', 'ustedes'], answer: 0, why: 'Otra persona + yo = nosotros (we).', en: 'Tom and I' },
+            { prompt: '👉 Hablas con un amigo → ___', options: ['tú', 'yo', 'él'], answer: 0, why: 'La persona con quien hablas: tú (you).', en: 'You talk to one friend' },
+            { prompt: '👉👉 Hablas con dos amigos → ___', options: ['ustedes', 'nosotros', 'tú'], answer: 0, why: 'Dos personas con quienes hablas: ustedes (you all).', en: 'You talk to two friends' },
           ] },
           { kind: 'choice', title: 'Comprueba · Check', items: [
             { prompt: 'Tu abuela habla de ella misma. ¿Qué pronombre usa?', options: ['yo', 'tú', 'ella'], answer: 0, why: 'La persona que habla dice «yo» (I).', en: 'Your grandma talks about herself. Which pronoun does she use?' },
@@ -95,7 +95,7 @@ export const lesson: LiveLesson = {
           ] },
         ] },
         { title: 'Soy · Who I am', mascot: '/brand/mascot/standing.webp', coach: 'Soy: tu nombre, tu lugar, tu gente.', blocks: [
-          { kind: 'lead', text: 'Segunda pieza: el **verbo**. Persona + verbo + algo más = tu primera oración: **yo** + **soy** + Alex.' },
+          { kind: 'lead', text: 'Segunda pieza: el **verbo**. Persona + verbo + algo más = tu primera oración: **yo** + **soy** + Alex.', en: 'Second piece: the verb. Person + verb + something else = your first sentence: yo + soy + Alex.' },
           { kind: 'concept', tone: 'blue', label: 'SOY', question: '¿Quién soy?', en: 'I am (who I am)', formula: ['yo soy + nombre · de + lugar · profesión', 'Soy Alex. Soy de Australia.'],
             meaning: 'Con **soy** dices tu **identidad**: tu nombre, de dónde eres, tu trabajo, qué tipo de persona eres. Es lo que no cambia de hoy a mañana.',
             examples: [
@@ -180,7 +180,7 @@ export const lesson: LiveLesson = {
           ], free: { teacher: 'Ahora sin máquina: cada alumno dice cómo está y dónde está, y después lo mismo de su compañero: «Él está…», «Ella está en…».', self: 'Ahora sin máquina: di en voz alta cómo estás y dónde estás.' } },
         ] },
         { title: 'Tu oración completa · Your full sentence', mascot: '/brand/mascot/pointing.webp', coach: 'Persona + verbo + algo más.', blocks: [
-          { kind: 'lead', text: 'Ya tienes las tres piezas: **persona + verbo + algo más**. Ahora eliges tú el verbo: **ser** para quién es la persona, **estar** para cómo o dónde está.' },
+          { kind: 'lead', text: 'Ya tienes las tres piezas: **persona + verbo + algo más**. Ahora eliges tú el verbo: **ser** para quién es la persona, **estar** para cómo o dónde está.', en: 'You now have the three pieces: person + verb + something else. Now you choose the verb: ser for who the person is, estar for how or where the person is.' },
           { kind: 'guide', text: { teacher: 'Competencia amistosa: tus alumnos se turnan una oración cada uno. Uno arma, el otro dice si está bien antes de ver el resultado.', self: 'Arma cada oración y léela en voz alta antes de mirar el resultado.' } },
           { kind: 'machine', title: 'Ser o estar: arma la oración · Build the sentence', columns: [
             { label: 'Persona', tone: 'orange', options: ['yo', 'tú', 'él', 'ella', 'nosotros', 'ellos'] },
@@ -195,7 +195,7 @@ export const lesson: LiveLesson = {
             { goal: 'They are from Argentina.', answer: ['ellos', 'son', 'de Argentina'] },
             { goal: 'They are fine.', answer: ['ellos', 'están', 'bien'] },
           ], free: { teacher: 'Cierre: cada alumno dice tres oraciones verdaderas. Una con yo, una con él o ella sobre su compañero y una con nosotros.', self: 'Cierre: di tres oraciones verdaderas en voz alta. Una con yo, una con él o ella y una con nosotros.' } },
-          { kind: 'tip', icon: '🧩', title: 'Tres piezas · Three pieces', text: '**Yo** + **soy** + de Australia. **Ella** + **está** + en casa. Cambias una pieza y tienes una oración nueva.' },
+          { kind: 'tip', icon: '🧩', title: 'Tres piezas · Three pieces', text: '**Yo** + **soy** + de Australia. **Ella** + **está** + en casa. Cambias una pieza y tienes una oración nueva.', en: 'Yo + soy + de Australia. Ella + está + en casa. Change one piece and you have a new sentence.' },
         ] },
         { title: 'Errores frecuentes · Common mistakes', mascot: '/brand/mascot/standing-crossed.webp', coach: 'Mira bien: ¿quién soy o cómo estoy?', blocks: [
           { kind: 'guide', text: { teacher: 'Tú lees la frase con el error y preguntas: «¿Quién soy o cómo estoy?». Tu alumno responde y después aparece la corrección.', self: 'Lee cada frase, busca el error y toca para ver la corrección.' } },
@@ -370,8 +370,8 @@ export const lesson: LiveLesson = {
             { tiles: ['soy', 'Hola,', 'abuela,', 'Alex'], accept: ['Hola, abuela, soy Alex'], en: 'Hi, grandma, I am Alex.' },
             { tiles: ['muy', 'Estoy', 'feliz', 'hoy'], accept: ['Estoy muy feliz hoy', 'Hoy estoy muy feliz'], en: 'I am very happy today.' },
             { tiles: ['abuelos', 'Mis', 'de', 'son', 'Argentina'], accept: ['Mis abuelos son de Argentina'], en: 'My grandparents are from Argentina.' },
-            { tiles: ['es', 'Ella', 'Argentina', 'de'], accept: ['Ella es de Argentina'] },
-            { tiles: ['clase', 'estamos', 'en', 'Nosotros'], accept: ['Nosotros estamos en clase'] },
+            { tiles: ['es', 'Ella', 'Argentina', 'de'], accept: ['Ella es de Argentina'], en: 'She is from Argentina.' },
+            { tiles: ['clase', 'estamos', 'en', 'Nosotros'], accept: ['Nosotros estamos en clase'], en: 'We are in class.' },
           ] },
           { kind: 'rewrite', title: 'Escríbelo en español · Write it in Spanish', items: [
             { prompt: 'I am happy.', instruction: 'Escribe la frase en español.', accept: ['Estoy feliz', 'Yo estoy feliz', 'Estoy muy feliz'] },
@@ -475,7 +475,7 @@ export const lesson: LiveLesson = {
           { kind: 'recap', items: [
             { tone: 'blue', label: 'SOY', formula: 'soy + nombre · de + lugar · fan de…', example: 'Soy Alex. Soy de Australia.', caption: 'quién soy', en: 'I am (who I am)' },
             { tone: 'teal', label: 'ESTOY', formula: 'estoy + bien / feliz · en + lugar', example: 'Estoy feliz. Estoy en casa.', caption: 'cómo y dónde estoy', en: 'I am (how / where I am)' },
-            { tone: 'violet', label: 'PERSONA + VERBO', formula: 'yo soy · tú eres · ella es · nosotros somos · ellos son', example: 'Ella es de Argentina. Nosotros estamos en clase.', caption: 'tu oración' },
+            { tone: 'violet', label: 'PERSONA + VERBO', formula: 'yo soy · tú eres · ella es · nosotros somos · ellos son', example: 'Ella es de Argentina. Nosotros estamos en clase.', caption: 'tu oración', en: 'person + verb = a sentence' },
             { tone: 'orange', label: '¿Y TÚ? ¿Y VOS?', formula: '¿cómo estás? · ¿dónde estás?', example: 'Abuela, ¿cómo estás?', caption: 'la pregunta para tus abuelos', en: 'And you? How are you?' },
           ] },
           { kind: 'tip', icon: '🔑', title: 'La clave · The key', text: 'Tu nombre, tu lugar de origen, tu gente y tus gustos: **soy**. Cómo te sientes hoy y dónde estás ahora: **estoy**. Y la h no suena: «hola» es «ola».', en: 'Your name, where you are from, your people and your likes: soy. How you feel today and where you are now: estoy. And the h is silent: “hola” sounds “ola”.' },

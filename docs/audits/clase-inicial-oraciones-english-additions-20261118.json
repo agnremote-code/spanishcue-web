@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale), typed «apruebo» on 2026-11-18 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA1dTSFUX8UmnEUrozKk7wRb) in reply to the request to add the English helper lines to the new activities of the first class (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA8oBp1ZsPSEA2X1ptyfSM8R): English helper lines for the pronoun practice, the sentence machine steps and the extra sentence-building items of the bilingual A0 class.",
+  "additions": [
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Marta, one woman"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tom, one man"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Marta and Tom"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Marta and Ana, two women"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Tom and I"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "You talk to one friend"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "You talk to two friends"
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Second piece: the verb. Person + verb + something else = your first sentence: yo + soy + Alex."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "You now have the three pieces: person + verb + something else. Now you choose the verb: ser for who the person is, estar for how or where the person is."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "Yo + soy + de Australia. Ella + está + en casa. Change one piece and you have a new sentence."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "She is from Argentina."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "We are in class."
+    },
+    {
+      "path": "app/grammar-classroom/live/lessons/g239.ts",
+      "text": "person + verb = a sentence"
+    }
+  ]
+}
