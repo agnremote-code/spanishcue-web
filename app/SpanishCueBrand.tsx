@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { PROMO_WEEK_UNTIL, promoWeekActive } from "./promo-config";
+import { promoWeekActive } from "./promo-config";
 import { useI18n } from "./i18n/LocaleProvider";
 import type { MessageKey } from "./i18n/messages";
 import { trackMarketingEvent } from "./marketing/analytics";
@@ -74,6 +74,8 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
     });
     trackMarketingEvent("teacher_demo_started", { placement: "hero_primary" });
   };
+  // While the promo week runs, the paid trial is the main action and the free lesson sits beside it.
+  const promo = Boolean(pricing) && promoWeekActive();
   return (
     <section className={pricing ? "sc-hero sc-hero--sell" : "sc-hero"} id="main-content" tabIndex={-1} aria-labelledby="sc-hero-title">
       <div className="sc-hero-art" aria-hidden="true">
@@ -102,14 +104,28 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
         <p className="sc-hero-lead">{t("hero.lead")}</p>
         <div className="sc-hero-actions">
           <div className="sc-hero-cta-anchor">
-            <a href={FREE_DEMO_PATH} className="sc-hero-primary" onClick={openSamples}>
-              {locale === "es" ? "PROBAR UNA CLASE GRATIS" : "TRY A FREE LESSON"}
-            </a>
+            {promo ? (
+              <a
+                href="/pricing"
+                className="sc-hero-primary"
+                onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
+              >
+                {locale === "es" ? "PROBAR PRO US$0,99/SEMANA" : "TRY PRO US$0.99/WEEK"}
+              </a>
+            ) : (
+              <a href={FREE_DEMO_PATH} className="sc-hero-primary" onClick={openSamples}>
+                {locale === "es" ? "PROBAR UNA CLASE GRATIS" : "TRY A FREE LESSON"}
+              </a>
+            )}
             <div className="sc-mascot-cue" aria-hidden="true">
               <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
             </div>
           </div>
-          {pricing && (
+          {promo ? (
+            <a href={FREE_DEMO_PATH} className="sc-hero-secondary" onClick={openSamples}>
+              {locale === "es" ? "Probar una clase gratis" : "Try a free lesson"}
+            </a>
+          ) : pricing && (
             <a
               href="/pricing"
               className="sc-hero-secondary"
@@ -119,7 +135,9 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
             </a>
           )}
         </div>
-        <p className="sc-hero-reassurance">{locale === "es" ? "Gratis · Sin tarjeta · Clase real incluida" : "Free · No card · Real lesson included"}</p>
+        <p className="sc-hero-reassurance">{promo
+          ? (locale === "es" ? "Luego US$19,90/mes · Cancelas cuando quieras" : "Then US$19.90/month · Cancel anytime")
+          : (locale === "es" ? "Gratis · Sin tarjeta · Clase real incluida" : "Free · No card · Real lesson included")}</p>
         {pricing && (
           <p className="sc-hero-price">
             {locale === "es"
@@ -127,17 +145,6 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
               : <>Full PRO: <b>US$19.90/month</b> or <b>US$150/year</b> <span className="sc-hero-save">Save 37%</span></>}
             <ArsPrice usd={19.9} className="sc-hero-ars" />
           </p>
-        )}
-        {pricing && promoWeekActive() && (
-          <a
-            href="/pricing"
-            className="sc-hero-promo"
-            onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
-          >
-            {locale === "es"
-              ? <><span className="sc-hero-save">PROMO</span> Hasta el {PROMO_WEEK_UNTIL.es}: tu primera semana de PRO por <b>US$0,99</b>. Luego US$19,90/mes; cancelas cuando quieras.</>
-              : <><span className="sc-hero-save">PROMO</span> Until {PROMO_WEEK_UNTIL.en}: your first week of PRO for <b>US$0.99</b>. Then US$19.90/month; cancel anytime.</>}
-          </a>
         )}
         {pricing && (
           <p className="sc-hero-more">
