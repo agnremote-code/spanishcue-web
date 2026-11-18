@@ -4,6 +4,7 @@
 import { readFileSync, existsSync } from 'node:fs';
 import { GAMES, WORDS, parseGaps, transcriptOf, wordCount } from '../app/escucha-3d/games.mjs';
 import { scanSource } from './neutral-spanish.mjs';
+import { PROVABLE_KEYS, provableKey } from './check-escucha-3d-provable.mjs';
 import { CAST } from '../app/hospital-san-casi-vivo/story.mjs';
 import { CAST as VUELO_CAST } from '../app/vuelo-cancelado/story.mjs';
 import { CAST as CONSORCIO_CAST } from '../app/el-consorcio/story.mjs';
@@ -141,6 +142,7 @@ export function checkFile(game, level, data, path) {
   if (answerUse.some(n => n < minUse)) bad('', `correct answers are badly spread over A/B/C: ${answerUse.join('/')}`);
   if (STRICT_KEYS.includes(game)) out.push(...strictKey(level, items).map(m => `${path} ${m}`));
   if (LENGTH_KEYS.includes(game)) out.push(...lengthKey(items).map(m => `${path} ${m}`));
+  if (PROVABLE_KEYS.includes(game)) out.push(...provableKey(items, voices).map(m => `${path} ${m}`));
   return out;
 }
 
