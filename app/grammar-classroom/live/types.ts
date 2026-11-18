@@ -33,6 +33,8 @@ export type Block =
   | { kind: 'chat-fill'; title?: string; lines: { who: string; text: string; options?: string[]; answer?: number; why?: string }[] }
   /** Tap the words to build the sentence; any listed order counts. */
   | { kind: 'build'; title?: string; items: { tiles: string[]; accept: string[]; en?: string }[] }
+  /** One tile per column (person, verb, rest): the sentence builds itself, one mission at a time. `answer` names the right tile of each column. */
+  | { kind: 'machine'; title?: string; columns: { label: string; tone: Tone; options: string[] }[]; items: { goal: string; en?: string; answer: string[] }[]; free?: ByMode }
   /** Type the transformed sentence; answers are compared without case, accents or punctuation. */
   | { kind: 'rewrite'; title?: string; items: { prompt: string; instruction: string; accept: string[] }[] }
   | { kind: 'listen'; title: string; channel: string; src: string; before: string; gist: ChoiceItem; details: ChoiceItem[]; transcript: string; reply: ByMode }

@@ -5,7 +5,7 @@ import type { Block, LiveLesson, LiveStage } from './types';
 /** How many checkable things a block holds. Only real, completable activities count. */
 export function targets(block: Block): number {
   switch (block.kind) {
-    case 'choice': case 'classify': case 'fix': case 'build': case 'rewrite': return block.items.length;
+    case 'choice': case 'classify': case 'fix': case 'build': case 'machine': case 'rewrite': return block.items.length;
     case 'chat-fill': return block.lines.filter(line => line.options).length;
     case 'explore': return Object.keys(block.notes).length;
     case 'listen': return 1 + block.details.length;

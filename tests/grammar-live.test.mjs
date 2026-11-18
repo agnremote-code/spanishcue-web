@@ -285,6 +285,28 @@ test('the A0 first class: bilingual by default, the grandparents story, the real
   }finally{await v.close();}
 });
 
+test('the first class builds sentences piece by piece: person + verb + something else, one mission at a time',async()=>{
+  const lesson=getLiveLesson(239);
+  const steps=lesson.stages[0].steps;
+  assert.deepEqual(steps.map(s=>s.title.split(' · ')[0]),['Hola','Yo, tú y vos','Soy','Estoy','Tu oración completa','Errores frecuentes','El abecedario'],'pronouns first, then one verb at a time, then full sentences');
+  const machines=steps.flatMap(s=>s.blocks.filter(b=>b.kind==='machine'));
+  assert.equal(machines.length,3);
+  for(const m of machines)for(const item of m.items){assert.equal(item.answer.length,m.columns.length);item.answer.forEach((word,c)=>assert.ok(m.columns[c].options.includes(word),`${item.goal}: ${word}`));}
+  assert.ok(!JSON.stringify(lesson).includes('pide al alumno'),'teacher lines describe, they never give orders about the student');
+  const dom=new JSDOM('<div id="root"></div>',{url:'https://spanishcue.test/gramatica/clase-inicial'});
+  const v=await mount(dom,239);try{
+    await v.click('[data-step="2"]');
+    const m=machines[0],pick=async words=>{for(const [c,word] of words.entries())await v.click(`[data-block="machine"] [data-column="${c}"][data-option="${m.columns[c].options.indexOf(word)}"]`);};
+    await pick(['yo','es','Alex']);
+    assert.equal(v.$('.gl-machine-sentence').dataset.state,'wrong');assert.match(v.$('[data-block="machine"] .gl-feedback').textContent,/Verbo/);
+    await pick(['yo','soy','Alex']);
+    assert.equal(v.$('.gl-machine-sentence').dataset.state,'right');assert.match(v.$('[data-block="machine"] .gl-feedback').textContent,/Yo soy Alex\./);
+    await v.click('[data-machine-next]');
+    assert.match(v.$('.gl-machine-goal').textContent,/You are from Australia/);
+    assert.equal(v.$('[data-mission="0"]').className,'is-done');
+  }finally{await v.close();}
+});
+
 test('a Homework topic shows the class in self-study only, with the way back to Homework and no teacher surface',async()=>{
   await build({entryPoints:['app/grammar-classroom/live/LiveClassroom.tsx'],bundle:true,platform:'node',format:'cjs',jsx:'automatic',external:['react','react-dom','next/link','next/navigation','three'],loader:{'.css':'empty'},outfile:'node_modules/.cache/grammar-live-homework.cjs',logLevel:'error'});
   const LiveClassroom=require('../node_modules/.cache/grammar-live-homework.cjs').default;
