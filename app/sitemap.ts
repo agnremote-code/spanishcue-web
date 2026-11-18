@@ -13,6 +13,7 @@ import { INDICE_PATH, lastModifiedByPath } from "./material-ele/indice";
 import { elePreviewLesson } from "./material-ele/media";
 import { guiaPages } from "./material-ele/guias";
 import { FICHAS_PATH, fichaPages } from "./material-ele/fichas";
+import { PLANTILLAS_PATH, plantillaFiles, plantillas } from "./material-ele/plantillas";
 import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
@@ -59,6 +60,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...bancoPaths.map((path) => ({ path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: FICHAS_PATH, priority: 0.85, changeFrequency: "weekly" },
   ...fichaPages.map((page) => ({ path: page.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
+  { path: PLANTILLAS_PATH, priority: 0.85, changeFrequency: "weekly" },
+  ...plantillas.map((page) => ({ path: page.path, priority: 0.8, changeFrequency: "monthly" as Frequency })),
   { path: INDICE_PATH, priority: 0.8, changeFrequency: "weekly" },
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
@@ -87,6 +90,8 @@ function pageMedia(path: string, lessonIds: readonly number[]): Media {
 }
 const mediaByPath = new Map<string, Media>([...temaPages, ...temaLevelPages].map((page) => [page.path, pageMedia(page.path, page.lessonIds)]));
 for (const page of [...elePages, ...guiaPages]) mediaByPath.set(page.path, pageMedia(page.path, page.lessonIds));
+for (const page of plantillas) mediaByPath.set(page.path, { images: [canonicalUrl(plantillaFiles(page.slug).preview)] });
+mediaByPath.set(PLANTILLAS_PATH, { images: plantillas.map((page) => canonicalUrl(plantillaFiles(page.slug).preview)) });
 
 function entry(path: string, priority: number, changeFrequency: Frequency, lastModified?: string, media?: Media): Entry {
   const languages = languageAlternates(path);

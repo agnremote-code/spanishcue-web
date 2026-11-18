@@ -16,3 +16,7 @@
 /pinterest/*
   Access-Control-Allow-Origin: *
   Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Free teacher templates (PDF and preview images): public downloads, linked from /material-ele/plantillas.
+/plantillas/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
