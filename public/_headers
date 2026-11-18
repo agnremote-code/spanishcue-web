@@ -11,3 +11,8 @@
 
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
+
+# Pinterest pin images of the free worksheets (public marketing art, fetched cross-origin when publishing).
+/pinterest/*
+  Access-Control-Allow-Origin: *
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
