@@ -73,13 +73,13 @@ function activityPage(page: ElePage, activity: EleActivity): ActividadPage {
 function exercisePage(page: ElePage, exercise: EleExercise): EjercicioPage {
   const slug = page.slug;
   const level = pageLevel(page);
-  const title = fit(`${exercise.title} con soluciones, nivel ${level} | SpanishCue`, `${exercise.title} con soluciones | SpanishCue`, `${exercise.title} | SpanishCue`);
-  const description = describe(`${exercise.title}: ${exercise.items.length} frases para completar con sus soluciones explicadas, nivel ${level}.`, `Para hacer en clase o de tarea, con ficha en PDF y las clases interactivas del mismo tema.`);
+  const title = fit(`${exercise.title} online con soluciones, nivel ${level} | SpanishCue`, `${exercise.title} online con soluciones | SpanishCue`, `${exercise.title} con soluciones, nivel ${level} | SpanishCue`, `${exercise.title} con soluciones | SpanishCue`, `${exercise.title} | SpanishCue`);
+  const description = describe(`${exercise.title}: ${exercise.items.length} frases para completar en línea, con corrección al instante y soluciones explicadas, nivel ${level}.`, `Para clase o de tarea, con ficha en PDF.`);
   return {
     kind: "ejercicio", slug, path: `${MATERIAL_ELE_PATH}/ejercicio/${slug}`, title, description, level, exercise, parent: page,
     h1: `${exercise.title} (${exercise.items.length} frases con soluciones)`,
     faq: [
-      { question: "¿Cómo se usa este ejercicio en clase?", answer: `${exercise.instructions} Las soluciones están ocultas: el alumno responde primero y después abre cada una para comparar. En pantalla compartida, lo resuelven juntos; de tarea, descarga la ficha en PDF.` },
+      { question: "¿Cómo se usa este ejercicio en clase?", answer: `${exercise.instructions} El alumno escribe su respuesta en cada hueco y pulsa «Comprobar respuestas»: la página marca las correctas y muestra la solución explicada de las demás. En pantalla compartida, lo resuelven juntos; de tarea, descarga la ficha en PDF.` },
       { question: `¿Para qué nivel es?`, answer: `Para nivel ${level}. Si el alumno falla más de la mitad, vuelve a la guía «${page.h1}» y a su clase interactiva antes de repetirlo.` },
     ],
   };
