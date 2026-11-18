@@ -48,7 +48,7 @@ export const guiaPages: GuiaPage[] = [
   {
     slug: "materiales-para-ensenar-espanol",
     path: `${GUIAS_PATH}/materiales-para-ensenar-espanol`,
-    title: "Materiales para enseñar español: guía completa para profesores | SpanishCue",
+    title: "Materiales para enseñar español gratis, por nivel | SpanishCue",
     description:
       "Qué materiales para enseñar español necesitas por nivel, dónde conseguirlos gratis, cómo evaluarlos y cómo convertir una ficha en una clase completa de 45 minutos.",
     h1: "Materiales para enseñar español: guía completa para profesores",
@@ -110,6 +110,23 @@ export const guiaPages: GuiaPage[] = [
         ],
       },
       {
+        id: "lista-por-tema",
+        title: "Materiales gratis por tema: actividades y ejercicios con soluciones",
+        blocks: [
+          { type: "p", text: "Si lo que buscas es material para el tema de mañana, empieza por aquí. Cada página tiene cinco actividades listas para clase (con pasos, preguntas, modelo de respuesta y corrección frecuente) y un ejercicio con soluciones explicadas, gratis y sin registro:" },
+          { type: "ul", items: [
+            "**Verbos de A1–A2**: [presente de indicativo](/material-ele/presente-de-indicativo), [ser y estar](/material-ele/ser-y-estar), [verbos reflexivos](/material-ele/verbos-reflexivos), [gustar](/material-ele/gustar) e [imperativo](/material-ele/imperativo).",
+            "**Pasados**: [pretérito perfecto](/material-ele/preterito-perfecto), [indefinido e imperfecto](/material-ele/indefinido-e-imperfecto) y [pretérito pluscuamperfecto](/material-ele/preterito-pluscuamperfecto).",
+            "**Futuro, hipótesis y subjuntivo**: [futuro](/material-ele/futuro), [condicional](/material-ele/condicional), [subjuntivo](/material-ele/subjuntivo) y [estilo indirecto](/material-ele/estilo-indirecto).",
+            "**El grupo nominal**: [artículos](/material-ele/articulos), [género y número](/material-ele/genero-y-numero), [demostrativos y posesivos](/material-ele/demostrativos-y-posesivos), [cuantificadores](/material-ele/cuantificadores) y [comparativos y superlativos](/material-ele/comparativos-y-superlativos).",
+            "**Pronombres y oraciones**: [pronombres de objeto](/material-ele/pronombres-de-objeto), [oraciones de relativo](/material-ele/oraciones-de-relativo), [interrogativos](/material-ele/interrogativos), [negación](/material-ele/negacion) y [se impersonal y pasiva](/material-ele/se-impersonal-y-pasiva).",
+            "**Preposiciones y conectores**: [preposiciones](/material-ele/preposiciones), [por y para](/material-ele/por-y-para) y [conectores](/material-ele/conectores).",
+            "**Destrezas**: [comprensión auditiva](/material-ele/comprension-auditiva) con audios gratis de A1 a B1, y [preguntas de conversación](/material-ele/preguntas-de-conversacion) por nivel.",
+          ] },
+          { type: "p", text: "Los ejercicios de los temas más buscados (gustar, ser y estar, subjuntivo, por y para, imperativo y otros) tienen más de veinte frases ordenadas de fácil a difícil, para usarlos como práctica en clase o como tarea." },
+        ],
+      },
+      {
         id: "evaluar",
         title: "Cómo evaluar un material en dos minutos",
         blocks: [
@@ -153,6 +170,7 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Qué materiales necesito para empezar a enseñar español online?", answer: "Una clase inicial lista, una lista de preguntas de conversación por nivel y un material de gramática secuenciado para A1 y A2. Con eso cubres las primeras semanas con cualquier alumno." },
       { question: "¿Hay materiales para enseñar español gratis de verdad?", answer: `Sí. En Material ELE todas las fichas, ejercicios y preguntas son gratis sin registro, y hay ${free} clases interactivas gratis, incluidas tres de gramática por nivel. Los sitios de la lista de arriba también tienen parte gratuita.` },
       { question: "¿Cuánto cuesta tener todas las clases?", answer: "En SpanishCue, US$19,90 al mes o US$150 al año, con tarjeta o PayPal, y se cancela cuando quieras. Se prueban primero las clases marcadas GRATIS." },
+      { question: "¿Dónde hay ejercicios de español con soluciones gratis?", answer: "En las páginas de tema de Material ELE: cada una trae un ejercicio con soluciones explicadas y cinco actividades de clase. Los temas más buscados, como gustar, ser y estar o por y para, tienen más de veinte frases." },
       { question: "¿Sirven para clases presenciales?", answer: "Sí: cada guía tiene una ficha imprimible, y las clases interactivas se proyectan igual que se comparten por pantalla." },
       { question: "¿Cómo sé el nivel de un material?", answer: "Por el MCER y el PCIC. Cada clase y cada página de SpanishCue indica su nivel y, en los mundos 3D, el nivel se elige dentro." },
     ],
@@ -358,7 +376,7 @@ export const guiaPages: GuiaPage[] = [
   {
     slug: "actividades-de-conversacion-en-espanol-para-adultos",
     path: `${GUIAS_PATH}/actividades-de-conversacion-en-espanol-para-adultos`,
-    title: `Actividades de conversación en español para adultos: preguntas, roleplays y 3D`,
+    title: `Actividades de conversación en español para adultos (A1–C2)`,
     description:
       "Actividades de conversación en español para adultos por nivel: preguntas, roleplays, juegos y mundos 3D que ponen al alumno a hablar de su vida real.",
     h1: "Actividades de conversación en español para adultos: de las preguntas a los mundos 3D",
@@ -446,6 +464,23 @@ export const guiaPages: GuiaPage[] = [
         ],
       },
       {
+        id: "por-gramatica",
+        title: "Actividades de conversación para practicar cada tema de gramática",
+        blocks: [
+          { type: "p", text: "Con adultos funciona mejor practicar la gramática hablando de su vida que completando huecos. Estas páginas tienen actividades de conversación de 6 a 10 minutos pensadas para un tema concreto, con preguntas, modelo de respuesta y la corrección que más vas a necesitar:" },
+          { type: "ul", items: [
+            "**Rutina y presente**: «Mi día de principio a fin» en [presente de indicativo](/material-ele/presente-de-indicativo) y las rutinas de [verbos reflexivos](/material-ele/verbos-reflexivos).",
+            "**Gustos y opiniones**: [gustar](/material-ele/gustar), con reacciones de acuerdo y desacuerdo («a mí también», «a mí tampoco»).",
+            "**Experiencias**: «¿Alguna vez has…?» en [pretérito perfecto](/material-ele/preterito-perfecto) y anécdotas con [indefinido e imperfecto](/material-ele/indefinido-e-imperfecto).",
+            "**Planes y predicciones**: el alumno organiza su próximo año en [futuro](/material-ele/futuro).",
+            "**Consejos e hipótesis**: «¿Qué harías si…?» en [condicional](/material-ele/condicional) y deseos y recomendaciones en [subjuntivo](/material-ele/subjuntivo).",
+            "**Comparar y decidir**: «Tres ofertas, una decisión» en [comparativos y superlativos](/material-ele/comparativos-y-superlativos).",
+            "**Quejarse y negociar**: «El hotel desastroso» en [negación](/material-ele/negacion) y «Quiero, puedo, prefiero» en [presente de indicativo](/material-ele/presente-de-indicativo).",
+            "**Escuchar antes de hablar**: audios cortos con preguntas en [comprensión auditiva](/material-ele/comprension-auditiva), que sirven de arranque para la conversación.",
+          ] },
+        ],
+      },
+      {
         id: "llevarlas",
         title: "Cómo llevar una actividad de conversación sin que sea un interrogatorio",
         blocks: [
@@ -465,6 +500,7 @@ export const guiaPages: GuiaPage[] = [
       { question: "¿Cómo evito que el alumno conteste con monosílabos?", answer: "Pregunta por decisiones y razones, no por hechos: «¿qué harías?» y «¿por qué?» en vez de «¿te gusta?». Y responde tú primero: el modelo baja la tensión y marca la longitud esperada." },
       { question: "¿Sirven estas actividades para clases presenciales en grupo?", answer: "Sí. Las preguntas y los roleplays se reparten en parejas sin cambios; los mundos 3D se proyectan y el grupo decide adónde ir y qué responder." },
       { question: "¿Las actividades de conversación son gratis?", answer: `Las preguntas de conversación, las fichas y los ejercicios de Material ELE son gratis sin registro. De los mundos 3D, Estados Unidos es gratis completo y Noche abierta tiene el centro gratis; el resto está en la suscripción de US$19,90 al mes, que incluye las ${total} clases.` },
+      { question: "¿Cómo practico gramática con conversación en clases de adultos?", answer: "Elige una situación de su vida en la que necesite el tema: planes para el futuro, consejos para el condicional, anécdotas para el pasado. Las páginas de tema de Material ELE traen actividades así, con modelo y corrección." },
       { question: "¿Cuánto dura una actividad de conversación?", answer: "Una lista de preguntas, de cinco a diez minutos; un roleplay, de diez a quince; un mundo 3D, la clase entera de 45 minutos, con su escucha incluida." },
     ],
     related: ["preguntas-de-conversacion", "juegos-para-clase-de-espanol", "comprension-auditiva", "b1", "b2", "c1"],
@@ -2526,7 +2562,23 @@ export const guiaPages: GuiaPage[] = [
 /** «Cómo enseñar…» guides that belong to a grammar topic page: the topic is
  *  one of the guide's related slugs (level slugs excluded), so the topic page
  *  can link to the teaching sequence for it. */
+// General guides linked from the topic pages that earn the most impressions.
+const MATERIALES = "materiales-para-ensenar-espanol";
+const CONVERSACION_ADULTOS = "actividades-de-conversacion-en-espanol-para-adultos";
+const featuredGuidesByTopic: Record<string, string[]> = {
+  futuro: [CONVERSACION_ADULTOS, MATERIALES],
+  "comprension-auditiva": [CONVERSACION_ADULTOS, MATERIALES],
+  "verbos-reflexivos": [CONVERSACION_ADULTOS, MATERIALES],
+  condicional: [CONVERSACION_ADULTOS, MATERIALES],
+  gustar: [CONVERSACION_ADULTOS, MATERIALES],
+  "preterito-perfecto": [CONVERSACION_ADULTOS, MATERIALES],
+  "perifrasis-verbales": [MATERIALES],
+  imperativo: [MATERIALES],
+  "presente-de-indicativo": [CONVERSACION_ADULTOS, MATERIALES],
+};
+
 export const teachingGuidesForTopic = (slug: string) =>
-  /^(a|b|c)[12]$/.test(slug) ? [] : guiaPages.filter((guide) => guide.slug.startsWith("como-ensenar-") && guide.related.includes(slug));
+  /^(a|b|c)[12]$/.test(slug) ? [] : guiaPages.filter((guide) =>
+    (guide.slug.startsWith("como-ensenar-") && guide.related.includes(slug)) || (featuredGuidesByTopic[slug]?.includes(guide.slug) ?? false));
 
 export const guiaBySlug = new Map(guiaPages.map((page) => [page.slug, page]));
