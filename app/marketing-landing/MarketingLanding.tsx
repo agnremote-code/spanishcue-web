@@ -10,6 +10,8 @@ import type { LandingConfig } from './config';
 import { campaignCopy, campaignHero } from './campaign-copy';
 import LandingConversion, { LandingLink } from './LandingConversion';
 import { canonicalUrl } from '../seo';
+import { promoWeekActive } from '../promo-config';
+import PromoHeroCta from '../marketing/PromoHeroCta';
 
 export default async function MarketingLanding({ config, pathname }: { config: LandingConfig; pathname?: string }) {
  const h = await headers();
@@ -32,7 +34,7 @@ export default async function MarketingLanding({ config, pathname }: { config: L
   <a className="skip-link" href="#landing-title">{locale === 'es' ? 'Ir al contenido' : 'Skip to content'}</a>
   <header className="landing-nav"><Link href="/" aria-label="SPANISHCUE"><SpanishCueBrand variant="compact" /></Link><nav aria-label={locale === 'es' ? 'Cuenta e idioma' : 'Account and language'}><LanguageSwitcher className="landing-language" /><Link href={signedIn ? '/cuenta' : '/ingresar'}>{signedIn ? c.login : c.loginVisitor}</Link></nav></header>
   <section className="landing-hero" aria-labelledby="landing-title">
-   <div className="landing-hero-copy"><span className="lp-eyebrow">{c.teacher} · {original.kicker}</span><h1 id="landing-title">{hero.title}</h1><p className="landing-mechanism">{c.mechanism}</p><p>{hero.lead}</p><ul className="landing-pains">{c.pains.map(p => <li key={p}>{p}</li>)}</ul><LandingConversion {...shared} hero /><div className="landing-actions landing-actions-secondary"><LandingLink href={freePath} placement={`landing_hero_free_${config.slug}`}>{c.primary}<b aria-hidden="true">↗</b></LandingLink></div><small>{original.proof}</small></div>
+   <div className="landing-hero-copy"><span className="lp-eyebrow">{c.teacher} · {original.kicker}</span><h1 id="landing-title">{hero.title}</h1><p className="landing-mechanism">{c.mechanism}</p><p>{hero.lead}</p><ul className="landing-pains">{c.pains.map(p => <li key={p}>{p}</li>)}</ul>{promoWeekActive() && !pro ? <PromoHeroCta locale={locale} href="#founder-offer" freeHref={freePath} placement={`landing_hero_promo_${config.slug}`} tone="light" /> : <><LandingConversion {...shared} hero /><div className="landing-actions landing-actions-secondary"><LandingLink href={freePath} placement={`landing_hero_free_${config.slug}`}>{c.primary}<b aria-hidden="true">↗</b></LandingLink></div></>}<small>{original.proof}</small></div>
    <div className={`landing-human landing-human-${hero.image}`}><Image className="landing-human-photo" src={`/brand/campaign/${hero.image}.webp`} alt="" width={1536} height={1024} fetchPriority="high" sizes="(max-width: 760px) 100vw, 50vw" />
     <div className="landing-human-tag">{locale === 'es' ? 'Tu clase empieza aquí.' : 'Your class starts here.'}</div>
     {firstFree && <LandingLink href={freePath} className="landing-product-float" placement={`landing_visual_${config.slug}`}><Image src={firstFree.lesson.image} alt={firstFree.lesson.title} width={720} height={450} sizes="(max-width: 760px) 70vw, 300px" /><span><small>{c.free} · {firstFree.lesson.displayLevel || firstFree.lesson.level}</small><b>{firstFree.lesson.title}</b><em>{c.open} ↗</em></span></LandingLink>}

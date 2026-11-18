@@ -1134,3 +1134,7 @@
 .sc-hero-more a:hover, .sc-hero-more a:focus-visible { color: #fff; }
 /* The selling hero has two buttons and a price line; the pointing mascot would cover them. */
 .sc-hero--sell .sc-mascot-cue { display: none; }
+
+/* Promo week hero (2026-11-18): free lesson as a small link in the line under the one button. */
+.sc-hero-free-link { color: #e5f5ff; text-decoration: underline; text-underline-offset: 2px; }
+.sc-hero-free-link:hover, .sc-hero-free-link:focus-visible { color: #fff; }
