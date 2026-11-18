@@ -1,0 +1,32 @@
+/* Promo week hero CTA (2026-11-18): one large button plus one small line, shared by the landings. */
+.promo-hero-cta { margin: 18px 0 0; }
+.promo-hero-cta .promo-hero-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+  min-height: 58px;
+  max-width: 100%;
+  padding: 0 26px;
+  border-radius: 15px;
+  background: linear-gradient(115deg, #fafdff, #bdeaff);
+  color: #05245b;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: .55px;
+  text-decoration: none;
+  box-shadow: 0 13px 32px rgba(0, 19, 49, .45), 0 0 0 1px #fff;
+}
+.promo-hero-cta .promo-hero-cta-button b { font-size: 20px; line-height: 1; }
+.promo-hero-cta .promo-hero-cta-button:hover,
+.promo-hero-cta .promo-hero-cta-button:focus-visible { filter: brightness(1.04); transform: translateY(-1px); }
+.promo-hero-cta-light .promo-hero-cta-button { background: linear-gradient(115deg, #0b3a8a, #1565d8); color: #fff; box-shadow: 0 12px 28px -10px rgba(11, 58, 138, .7); }
+.promo-hero-cta .promo-hero-cta-note { margin: 10px 0 0; font-size: 12.5px; font-weight: 700; line-height: 1.45; }
+.promo-hero-cta-dark .promo-hero-cta-note { color: #a9c7df; }
+.promo-hero-cta-dark .promo-hero-cta-note a { color: #e5f5ff; }
+.promo-hero-cta-light .promo-hero-cta-note { color: #4a5d78; }
+.promo-hero-cta-light .promo-hero-cta-note a { color: #0b3a8a; }
+.promo-hero-cta .promo-hero-cta-note a { text-decoration: underline; text-underline-offset: 2px; }
+@media (max-width: 520px) {
+  .promo-hero-cta .promo-hero-cta-button { display: flex; width: 100%; padding: 0 18px; font-size: 12.5px; letter-spacing: .3px; }
+}

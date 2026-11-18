@@ -102,43 +102,52 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
           </>
         )}
         <p className="sc-hero-lead">{t("hero.lead")}</p>
-        <div className="sc-hero-actions">
-          <div className="sc-hero-cta-anchor">
-            {promo ? (
-              <a
-                href="/pricing"
-                className="sc-hero-primary"
-                onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
-              >
-                {locale === "es" ? "PROBAR PRO US$0,99/SEMANA" : "TRY PRO US$0.99/WEEK"}
-              </a>
-            ) : (
-              <a href={FREE_DEMO_PATH} className="sc-hero-primary" onClick={openSamples}>
-                {locale === "es" ? "PROBAR UNA CLASE GRATIS" : "TRY A FREE LESSON"}
-              </a>
-            )}
-            <div className="sc-mascot-cue" aria-hidden="true">
-              <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
+        {promo ? (
+          <>
+            <div className="sc-hero-actions">
+              <div className="sc-hero-cta-anchor">
+                <a
+                  href="/pricing"
+                  className="sc-hero-primary"
+                  onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
+                >
+                  {locale === "es" ? "PROBAR PRO · US$0,99 LA PRIMERA SEMANA" : "TRY PRO · US$0.99 FIRST WEEK"}
+                </a>
+                <div className="sc-mascot-cue" aria-hidden="true">
+                  <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
+                </div>
+              </div>
             </div>
-          </div>
-          {promo ? (
-            <a href={FREE_DEMO_PATH} className="sc-hero-secondary" onClick={openSamples}>
-              {locale === "es" ? "Probar una clase gratis" : "Try a free lesson"}
-            </a>
-          ) : pricing && (
-            <a
-              href="/pricing"
-              className="sc-hero-secondary"
-              onClick={() => trackMarketingEvent("cta_click", { placement: "hero_secondary", cta_type: "buy", destination: "/pricing" })}
-            >
-              {locale === "es" ? "Ver planes PRO" : "See PRO plans"}
-            </a>
-          )}
-        </div>
-        <p className="sc-hero-reassurance">{promo
-          ? (locale === "es" ? "Luego US$19,90/mes · Cancelas cuando quieras" : "Then US$19.90/month · Cancel anytime")
-          : (locale === "es" ? "Gratis · Sin tarjeta · Clase real incluida" : "Free · No card · Real lesson included")}</p>
-        {pricing && (
+            <p className="sc-hero-reassurance">
+              {locale === "es" ? "Luego US$19,90/mes · Cancelas cuando quieras · " : "Then US$19.90/month · Cancel anytime · "}
+              <a href={FREE_DEMO_PATH} className="sc-hero-free-link" onClick={openSamples}>{locale === "es" ? "O prueba una clase gratis" : "Or try a free lesson"}</a>
+            </p>
+          </>
+        ) : (
+          <>
+            <div className="sc-hero-actions">
+              <div className="sc-hero-cta-anchor">
+                <a href={FREE_DEMO_PATH} className="sc-hero-primary" onClick={openSamples}>
+                  {locale === "es" ? "PROBAR UNA CLASE GRATIS" : "TRY A FREE LESSON"}
+                </a>
+                <div className="sc-mascot-cue" aria-hidden="true">
+                  <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
+                </div>
+              </div>
+              {pricing && (
+                <a
+                  href="/pricing"
+                  className="sc-hero-secondary"
+                  onClick={() => trackMarketingEvent("cta_click", { placement: "hero_secondary", cta_type: "buy", destination: "/pricing" })}
+                >
+                  {locale === "es" ? "Ver planes PRO" : "See PRO plans"}
+                </a>
+              )}
+            </div>
+            <p className="sc-hero-reassurance">{locale === "es" ? "Gratis · Sin tarjeta · Clase real incluida" : "Free · No card · Real lesson included"}</p>
+          </>
+        )}
+        {pricing && !promo && (
           <p className="sc-hero-price">
             {locale === "es"
               ? <>Todo PRO: <b>US$19,90/mes</b> o <b>US$150/año</b> <span className="sc-hero-save">Ahorras 37 %</span></>
@@ -146,7 +155,7 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
             <ArsPrice usd={19.9} className="sc-hero-ars" />
           </p>
         )}
-        {pricing && (
+        {pricing && !promo && (
           <p className="sc-hero-more">
             {locale === "es" ? "Prueba también gratis:" : "Also free to try:"}{" "}
             <a href="/demo/hospital-san-casi-vivo" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_hospital", cta_type: "view_lesson", destination: "/demo/hospital-san-casi-vivo" })}>Hospital San Casi Vivo (3D)</a>
@@ -207,7 +216,7 @@ export function SpanishCueFooter() {
       <div className="sc-footer-brand"><SpanishCueWordmark compact /><p>{t("footer.tagline")}</p><small>CHOOSE. OPEN. TEACH.</small></div>
       <div className="sc-footer-links">
         <nav aria-label={es ? "Producto" : "Product"}><b>{es ? "Producto" : "Product"}</b><Link href="/#library-results">{es ? "Biblioteca" : "Library"}</Link><Link href="/#how-it-works">{es ? "Cómo funciona" : "How it works"}</Link><Link href="/para-profesores">{es ? "Para profesores" : "For teachers"}</Link><Link href="/aprender-espanol">{es ? "Aprender español" : "Learn Spanish"}</Link><Link href="/pricing">{es ? "Precios" : "Pricing"}</Link><Link href="/cuenta">{es ? "Mi cuenta" : "My account"}</Link><Link href="/about">{es ? "Sobre SpanishCue" : "About SpanishCue"}</Link><Link href="/partners">Partners</Link><Link href="/zeely">{es ? "Kit de marca" : "Brand kit"}</Link></nav>
-        <nav aria-label={es ? "Recursos" : "Resources"}><b>{es ? "Recursos" : "Resources"}</b><Link href="/material-ele">Material ELE</Link><Link href="/ele-recursos-profesores">{es ? "Recursos ELE" : "ELE resources"}</Link><Link href="/spanish-teacher-resources">{es ? "Recursos docentes" : "Teacher resources"}</Link><Link href="/spanish-conversation-activities">{es ? "Conversación" : "Conversation"}</Link><Link href="/spanish-conversation-questions">{es ? "Preguntas de conversación" : "Conversation questions"}</Link><Link href="/spanish-grammar-lessons">{es ? "Gramática" : "Grammar"}</Link><Link href="/resources">{es ? "Biblioteca de clases" : "Lesson library"}</Link><Link href="/guides">{es ? "Guías para profes" : "Teaching guides"}</Link><Link href="/autoestudio">Autoestudio</Link></nav>
+        <nav aria-label={es ? "Recursos" : "Resources"}><b>{es ? "Recursos" : "Resources"}</b><Link href="/material-ele">Material ELE</Link><Link href="/ele-recursos-profesores">{es ? "Recursos ELE" : "ELE resources"}</Link><Link href="/spanish-teacher-resources">{es ? "Recursos docentes" : "Teacher resources"}</Link><Link href="/spanish-conversation-activities">{es ? "Conversación" : "Conversation"}</Link><Link href="/spanish-conversation-questions">{es ? "Preguntas de conversación" : "Conversation questions"}</Link><Link href="/spanish-grammar-lessons">{es ? "Gramática" : "Grammar"}</Link><Link href={es ? "/recursos" : "/resources"}>{es ? "Biblioteca de clases" : "Lesson library"}</Link><Link href="/guides">{es ? "Guías para profes" : "Teaching guides"}</Link><Link href="/autoestudio">Autoestudio</Link></nav>
         <nav aria-label={es ? "Cuenta" : "Account"}><b>{es ? "Cuenta" : "Account"}</b><Link href="/ingresar?modo=registro">{es ? "Crear cuenta gratis" : "Create free account"}</Link><Link href="/ingresar?modo=entrar">{es ? "Iniciar sesión" : "Sign in"}</Link><Link href="/cuenta">{es ? "Gestionar suscripción" : "Manage subscription"}</Link></nav>
         <nav aria-label={es ? "Legal y privacidad" : "Legal and privacy"}><b>{es ? "Legal y privacidad" : "Legal and privacy"}</b><Link href="/terms">{es ? "Términos" : "Terms"}</Link><Link href="/privacy">{es ? "Privacidad" : "Privacy"}</Link><Link href="/cookies">Cookies</Link><Link href="/contact">{es ? "Contacto / Soporte" : "Contact / Support"}</Link><Link href="/subscription-terms">{es ? "Suscripción" : "Subscription"}</Link><Link href="/refunds">{es ? "Reembolsos" : "Refunds"}</Link><Link href="/legal">{es ? "Aviso legal" : "Legal notice"}</Link><CookieSettingsButton /></nav>
       </div>

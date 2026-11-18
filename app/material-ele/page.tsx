@@ -130,6 +130,8 @@ export default function MaterialElePage() {
           </Section>
 
           <nav className={styles.linkList} aria-label="Más recursos">
+            <Link href="/recursos">Biblioteca de clases: todas, una por una</Link>
+            <Link href="/alternativa-a-profedeele">Alternativa a ProfeDeELE: comparación</Link>
             <Link href="/autoestudio">Autoestudio para tus alumnos</Link>
             <Link href="/sistema-verbal">Sistema verbal del español</Link>
             <Link href="/para-profesores">SpanishCue para profesores</Link>

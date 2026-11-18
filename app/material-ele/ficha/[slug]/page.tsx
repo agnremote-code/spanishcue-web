@@ -29,7 +29,7 @@ export default async function FichaPage({ params }: Props) {
   if (!page || !content) notFound();
   const siblings = fichaPages.filter((other) => other.level === page.level && other.slug !== page.slug).slice(0, 12);
   const temas = temaPages.filter((tema) => tema.group === "gramatica" && tema.lessonIds.includes(page.id)).slice(0, 4);
-  const lessonHref = lessonCards([page.id])[0]?.href ?? page.lessonPath;
+  const lessonHref = lessonCards([page.id], "es")[0]?.href ?? page.lessonPath;
   const faq = [
     { question: "¿La ficha es gratis?", answer: "Sí. Se abre sin registro, se imprime o se guarda en PDF con el botón de la página y se puede proyectar en pantalla compartida." },
     page.sample
