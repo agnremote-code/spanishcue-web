@@ -88,8 +88,8 @@ const pinHtml = (design, preview) => {
 .lv{position:absolute;right:64px;top:42px;background:#ffc454;color:#0a2472;font-weight:900;font-size:30px;padding:10px 22px;border-radius:16px}
 h1{font-family:'Inter Display',Inter;font-weight:900;font-size:${size}px;line-height:1.06;letter-spacing:-1.5px;margin-top:30px;max-width:860px;position:relative;z-index:1}
 .sub{font-size:30px;line-height:1.36;margin-top:20px;opacity:.94;max-width:820px;position:relative;z-index:1}
-.mid{flex:1;min-height:0;display:flex;align-items:flex-start;justify-content:center;padding:44px 0 0;overflow:hidden}
-.mid img{width:${design.landscape ? 880 : 700}px;border-radius:14px;box-shadow:0 18px 50px rgba(10,36,114,.22);border:1px solid #d7e4f5;${design.landscape ? "transform:rotate(-2deg);margin-top:40px" : "transform:rotate(-1.5deg)"}}
+.mid{flex:1;min-height:0;display:flex;align-items:${design.landscape ? "center" : "flex-start"};justify-content:center;padding:${design.landscape ? "0" : "44px 0 0"};overflow:hidden}
+.mid img{width:${design.landscape ? 920 : 700}px;border-radius:14px;box-shadow:0 18px 50px rgba(10,36,114,.22);border:1px solid #d7e4f5;transform:rotate(${design.landscape ? -2 : -1.5}deg)}
 .bot{padding:26px 64px 44px;display:flex;align-items:center;justify-content:space-between;background:#f6f8fc;position:relative;z-index:2;box-shadow:0 -30px 40px #f6f8fc}
 .tag{font-size:26px;font-weight:600;color:#4a5878;line-height:1.4}
 .brand{display:flex;align-items:center;gap:14px;background:#0a2472;color:#fff;border-radius:999px;padding:14px 28px 14px 16px;font-size:28px;font-weight:800}
