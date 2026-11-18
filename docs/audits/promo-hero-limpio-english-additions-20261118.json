@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "authorization": "Owner request (Ale) on 2026-11-18 to follow the cleaner EnglishCue hero style on the SpanishCue home and landings: one large «Probar PRO · US$0,99 la primera semana» button and one small line with the renewal price and a free-lesson link (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA1xi86RJHQYQzaYFn5ZY66E), together with the standing approval for new English copy typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). The English strings are the ones already live on englishcue.app.",
+  "additions": [
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "TRY PRO · US$0.99 FIRST WEEK"
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Then US$19.90/month · Cancel anytime · "
+    },
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "Or try a free lesson"
+    },
+    {
+      "path": "app/marketing/PromoHeroCta.tsx",
+      "text": "TRY PRO · US$0.99 FIRST WEEK"
+    },
+    {
+      "path": "app/marketing/PromoHeroCta.tsx",
+      "text": "Then US$19.90/month · Cancel anytime · "
+    },
+    {
+      "path": "app/marketing/PromoHeroCta.tsx",
+      "text": "Or try a free lesson"
+    }
+  ]
+}

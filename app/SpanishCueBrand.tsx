@@ -102,43 +102,52 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
           </>
         )}
         <p className="sc-hero-lead">{t("hero.lead")}</p>
-        <div className="sc-hero-actions">
-          <div className="sc-hero-cta-anchor">
-            {promo ? (
-              <a
-                href="/pricing"
-                className="sc-hero-primary"
-                onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
-              >
-                {locale === "es" ? "PROBAR PRO US$0,99/SEMANA" : "TRY PRO US$0.99/WEEK"}
-              </a>
-            ) : (
-              <a href={FREE_DEMO_PATH} className="sc-hero-primary" onClick={openSamples}>
-                {locale === "es" ? "PROBAR UNA CLASE GRATIS" : "TRY A FREE LESSON"}
-              </a>
-            )}
-            <div className="sc-mascot-cue" aria-hidden="true">
-              <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
+        {promo ? (
+          <>
+            <div className="sc-hero-actions">
+              <div className="sc-hero-cta-anchor">
+                <a
+                  href="/pricing"
+                  className="sc-hero-primary"
+                  onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
+                >
+                  {locale === "es" ? "PROBAR PRO · US$0,99 LA PRIMERA SEMANA" : "TRY PRO · US$0.99 FIRST WEEK"}
+                </a>
+                <div className="sc-mascot-cue" aria-hidden="true">
+                  <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
+                </div>
+              </div>
             </div>
-          </div>
-          {promo ? (
-            <a href={FREE_DEMO_PATH} className="sc-hero-secondary" onClick={openSamples}>
-              {locale === "es" ? "Probar una clase gratis" : "Try a free lesson"}
-            </a>
-          ) : pricing && (
-            <a
-              href="/pricing"
-              className="sc-hero-secondary"
-              onClick={() => trackMarketingEvent("cta_click", { placement: "hero_secondary", cta_type: "buy", destination: "/pricing" })}
-            >
-              {locale === "es" ? "Ver planes PRO" : "See PRO plans"}
-            </a>
-          )}
-        </div>
-        <p className="sc-hero-reassurance">{promo
-          ? (locale === "es" ? "Luego US$19,90/mes · Cancelas cuando quieras" : "Then US$19.90/month · Cancel anytime")
-          : (locale === "es" ? "Gratis · Sin tarjeta · Clase real incluida" : "Free · No card · Real lesson included")}</p>
-        {pricing && (
+            <p className="sc-hero-reassurance">
+              {locale === "es" ? "Luego US$19,90/mes · Cancelas cuando quieras · " : "Then US$19.90/month · Cancel anytime · "}
+              <a href={FREE_DEMO_PATH} className="sc-hero-free-link" onClick={openSamples}>{locale === "es" ? "O prueba una clase gratis" : "Or try a free lesson"}</a>
+            </p>
+          </>
+        ) : (
+          <>
+            <div className="sc-hero-actions">
+              <div className="sc-hero-cta-anchor">
+                <a href={FREE_DEMO_PATH} className="sc-hero-primary" onClick={openSamples}>
+                  {locale === "es" ? "PROBAR UNA CLASE GRATIS" : "TRY A FREE LESSON"}
+                </a>
+                <div className="sc-mascot-cue" aria-hidden="true">
+                  <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />
+                </div>
+              </div>
+              {pricing && (
+                <a
+                  href="/pricing"
+                  className="sc-hero-secondary"
+                  onClick={() => trackMarketingEvent("cta_click", { placement: "hero_secondary", cta_type: "buy", destination: "/pricing" })}
+                >
+                  {locale === "es" ? "Ver planes PRO" : "See PRO plans"}
+                </a>
+              )}
+            </div>
+            <p className="sc-hero-reassurance">{locale === "es" ? "Gratis · Sin tarjeta · Clase real incluida" : "Free · No card · Real lesson included"}</p>
+          </>
+        )}
+        {pricing && !promo && (
           <p className="sc-hero-price">
             {locale === "es"
               ? <>Todo PRO: <b>US$19,90/mes</b> o <b>US$150/año</b> <span className="sc-hero-save">Ahorras 37 %</span></>
@@ -146,7 +155,7 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
             <ArsPrice usd={19.9} className="sc-hero-ars" />
           </p>
         )}
-        {pricing && (
+        {pricing && !promo && (
           <p className="sc-hero-more">
             {locale === "es" ? "Prueba también gratis:" : "Also free to try:"}{" "}
             <a href="/demo/hospital-san-casi-vivo" onClick={() => trackMarketingEvent("cta_click", { placement: "hero_more_hospital", cta_type: "view_lesson", destination: "/demo/hospital-san-casi-vivo" })}>Hospital San Casi Vivo (3D)</a>
