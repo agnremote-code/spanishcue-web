@@ -85,7 +85,7 @@ const categoryLabel = new Map(catalogLessons.map((lesson) => [lesson.id, lesson.
 
 /** Catalog cards with Spanish labels: free lessons first, unknown ids dropped. */
 export function eleLessonCards(ids: readonly number[]): LessonCardData[] {
-  return lessonCards(ids).map((card) => ({ ...card, category: categoryLabel.get(card.id) ?? card.category }));
+  return lessonCards(ids, "es").map((card) => ({ ...card, category: categoryLabel.get(card.id) ?? card.category }));
 }
 
 export function EleLessonGrid({ lessons }: { lessons: LessonCardData[] }) {

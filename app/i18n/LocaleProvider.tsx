@@ -1,5 +1,7 @@
 "use client";
 
+// Side effect: keeps the page alive when the browser translates it (see the module).
+import "../dom-translation-guard";
 import {
   createContext,
   useCallback,

@@ -12,6 +12,7 @@ import { campaignCopy } from './campaign-copy';
 import { LandingLink } from './LandingConversion';
 import PaidLandingTracker from './PaidLandingTracker';
 import { promoWeekActive } from '../promo-config';
+import PromoHeroCta from '../marketing/PromoHeroCta';
 import { featureMedia, paidCopy, type FeatureKey, type PaidLandingSlug } from './paid-copy';
 
 /** Fill-in-the-blank lines for the "worksheet" side of the contrast block. */
@@ -100,8 +101,10 @@ export default async function PaidLanding({ config, slug, pathname }: { config: 
      <h1 id="landing-title">{t.titleLead} <span className="plp-accent">{t.titleAccent}</span></h1>
      <p className="plp-lead">{t.lead[slug]}</p>
      <ul className="plp-points">{t.heroPoints.map(point => <li key={point}>{point}</li>)}</ul>
-     <div className="plp-hero-checkout">{checkout}</div>
-     <LandingLink href={freeLesson} className="plp-text-link" placement={`landing_hero_free_${slug}`}>{t.tryFree} →</LandingLink>
+     {promoCta && !pro ? <PromoHeroCta locale={locale} href="#plans" freeHref={freeLesson} placement={`landing_hero_promo_${slug}`} /> : <>
+      <div className="plp-hero-checkout">{checkout}</div>
+      <LandingLink href={freeLesson} className="plp-text-link" placement={`landing_hero_free_${slug}`}>{t.tryFree} →</LandingLink>
+     </>}
      <figure className="plp-hero-inline"><div className="plp-frame"><Image src={featureMedia.worlds.image} alt={t.features.worlds[0]} width={1280} height={800} fetchPriority="high" sizes="(max-width: 600px) 100vw, 560px" /></div><figcaption><b>{t.shots.worlds}</b></figcaption></figure>
      <div className="plp-hero-strip" aria-hidden="true">
       {(['forest', 'map'] as const).map(key => <figure key={key}><div className="plp-frame"><Image src={featureMedia[key].image} alt="" width={1280} height={800} loading="lazy" sizes="50vw" /></div><figcaption>{t.shots[key]}</figcaption></figure>)}

@@ -3,6 +3,8 @@ import {useEffect,useRef,useState} from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import CheckoutButton from '../acceso/CheckoutButton';
+import PromoHeroCta from '../marketing/PromoHeroCta';
+import { promoWeekActive } from '../promo-config';
 import LanguageSwitcher from '../i18n/LanguageSwitcher';
 import {useI18n} from '../i18n/LocaleProvider';
 import {trackMarketingEvent} from '../marketing/analytics';
@@ -69,7 +71,7 @@ export default function GoogleTeachersLanding({pro,signedIn,cafe,spots,level,sho
     <p className="gt-lead">{c.hero.lead}</p>
     <p>{c.hero.p}</p>
     <div ref={heroBuy} id="buy" className="gt-buy gt-buy-hero" onClickCapture={buyClick('hero')}>
-     {!pro?<CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" />:<Link className="im-primary" href="/noche-abierta">{c.hero.openFull}</Link>}
+     {!pro?(promoWeekActive()?<PromoHeroCta locale={es?'es':'en'} href="#pro" freeHref="#tour" placement={`${LANDING}_hero_promo`} />:<CheckoutButton signedIn={signedIn} returnTo="/noche-abierta" variant="landing" />):<Link className="im-primary" href="/noche-abierta">{c.hero.openFull}</Link>}
     </div>
     <div className="im-reassurance">{c.hero.reassure.map(r=><span key={r}>✓ {r}</span>)}</div>
    </div>
