@@ -105,6 +105,7 @@ export function filterReviewedChanges(findings, reviewed) {
  */
 export const APPROVAL_MANIFESTS = [
   'docs/audits/clase-inicial-oraciones-english-additions-20261118.json',
+  'docs/audits/promo-cta-english-additions-20261118.json',
   'docs/audits/promo-semana-099-english-additions-20261117.json',
   'docs/audits/jugar-hub-english-additions-20261116.json',
   'docs/audits/home-cta-english-additions-20261104.json',
