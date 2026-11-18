@@ -195,6 +195,17 @@ function wardrobe(L: Full) {
 }
 
 const textureLoader = new THREE.TextureLoader();
+/** One copy of each photographed skin, shared by everyone who wears it (each copy is ~5 MB of GPU memory). */
+const skins = new Map<string, THREE.Texture>();
+function skinTexture(name: string) {
+  let t = skins.get(name);
+  if (!t) {
+    t = textureLoader.load(`${GENTE}tex/piel_${name}.webp`);
+    t.flipY = false; t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4;
+    skins.set(name, t);
+  }
+  return t;
+}
 const variants = new Map<string, THREE.Material>();
 function variant<T extends THREE.Material>(key: string, make: () => T) {
   let m = variants.get(key) as T | undefined;
@@ -274,9 +285,7 @@ export async function makeReal(person: Person, original?: Set<THREE.Object3D>) {
   const tone = new THREE.Color(clamp(want.r / have.r, 0.45, 1.25), clamp(want.g / have.g, 0.45, 1.25), clamp(want.b / have.b, 0.45, 1.25));
   body.material = variant(`${w.body}|${w.skin}|${L.skin}`, () => {
     const m = (body.material as THREE.MeshStandardMaterial).clone();
-    const t = textureLoader.load(`${GENTE}tex/piel_${w.skin}.webp`);
-    t.flipY = false; t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 4;
-    m.map = t; m.color.copy(tone);
+    m.map = skinTexture(w.skin); m.color.copy(tone);
     return m;
   });
 
