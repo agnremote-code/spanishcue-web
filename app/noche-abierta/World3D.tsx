@@ -284,7 +284,7 @@ export default function World3D(props: WorldProps) {
       const out = pushOut(sim.player.x, sim.player.z, people, (x, z) => isWalkable(x, z, solids, bounds));
       sim.player.x = out.x; sim.player.z = out.z;
       const who = out.hit >= 0 ? people[out.hit] : null;
-      if (!who || !(speed > 1.2 || who.moving) || !mayYell(who.key, sim.clock)) return;
+      if (!who || !(speed > 1.2) || !mayYell(who.key, sim.clock)) return;
       const line = insultFor(who.body, who.seed);
       shout(line);
       const until = sim.clock + 3.5;

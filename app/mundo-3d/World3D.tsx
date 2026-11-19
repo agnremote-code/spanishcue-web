@@ -504,7 +504,7 @@ export default function World3D(props: WorldProps) {
           const out = pushOut(player.x, player.z, bodies, (x: number, z: number) => !solids.some(b => (b.top == null || player.y < b.top) && x > b.x0 - 0.35 && x < b.x1 + 0.35 && z > b.z0 - 0.35 && z < b.z1 + 0.35));
           if (player.y < 1) { player.x = out.x; player.z = out.z; }
           const who = out.hit >= 0 && player.y < 1 ? bodies[out.hit] : null;
-          if (who && (next.speed > 1.2 || ('moving' in who && who.moving)) && mayYell(who, clock)) {
+          if (who && next.speed > 1.2 && mayYell(who, clock)) {
             const line = insultFor(who.body, who.seed);
             region.bubbles.say(who, line.text, 3, true);
             shout(line, 1);

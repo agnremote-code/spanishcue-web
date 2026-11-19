@@ -104,10 +104,12 @@ VOCES = ROOT / 'app/escucha-3d/voces.json'
 
 
 async def shout(line, key, digest):
-    # Shouted lines (a bumped passer-by, a cry in the hospital): faster, higher
-    # and louder than the listenings.
+    # Shouted lines (a bumped passer-by, a cry in the hospital): faster, a little
+    # higher and louder than the listenings. They use the line's own native
+    # voice (es-AR, es-MX...), not Emma/Florian: the owner heard the multilingual
+    # voices swear with an English accent («mierda» without a rolled r).
     async with sem:
-        pcm = pcm_of(await speak(line['text'], ENGINE[gender_of(line['voice'])], '+12%', f"{8 + base_shift(line['voice']):+d}Hz")) + b'\0\0' * int(SR * 0.15)
+        pcm = pcm_of(await speak(line['text'], line['voice'], '+8%', '+4Hz')) + b'\0\0' * int(SR * 0.15)
         dest = OUT / f"voces-{line['id']}.mp3"
         dest.parent.mkdir(parents=True, exist_ok=True)
         subprocess.run(['ffmpeg', '-v', 'error', '-y', '-f', 's16le', '-ar', str(SR), '-ac', '1', '-i', 'pipe:0',
@@ -140,7 +142,7 @@ async def main():
                 jobs.append(clip(game, level, item, key, digest))
     for line in json.loads(VOCES.read_text())['lines']:
         key = f"voces/{line['id']}"
-        digest = hashlib.sha256(json.dumps([VERSION, 'shout', line['voice'], line['text']], ensure_ascii=False).encode()).hexdigest()[:20]
+        digest = hashlib.sha256(json.dumps([VERSION, 'shout-native', line['voice'], line['text']], ensure_ascii=False).encode()).hexdigest()[:20]
         dest = OUT / f"voces-{line['id']}.mp3"
         if old.get(key, {}).get('hash') == digest and dest.exists():
             keep[key] = old[key]

@@ -310,7 +310,7 @@ export default function World3D(props: WorldProps) {
           const out = pushOut(player.x, player.z, bodies, free);
           player.x = out.x; player.z = out.z;
           const who: Npc | Mover | null = out.hit >= 0 ? bodies[out.hit].who : null;
-          if (who && (next.speed > 1.2 || ('moving' in who && who.moving)) && mayYell(who, clock)) {
+          if (who && next.speed > 1.2 && mayYell(who, clock)) {
             const line = insultFor(who.body ?? 'm', who.seed);
             building.say(who, line.text, 3.2, true);
             shout(line, 1);

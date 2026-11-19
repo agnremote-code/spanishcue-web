@@ -308,7 +308,7 @@ export default function World3D(props: WorldProps) {
         const out = pushOut(player.x, player.z, bodies, free);
         player.x = out.x; player.z = out.z;
         const who = out.hit >= 0 ? bodies[out.hit] : null;
-        if (who && (player.speed > 1.2 || who.walk) && mayYell(who, clock)) {
+        if (who && player.speed > 1.2 && mayYell(who, clock)) {
           const line = insultFor(who.body, who.seed);
           casino.say(who, line.text, 3);
           shout(line, 1);

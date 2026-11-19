@@ -10,6 +10,7 @@ import { createRoot, type Root } from 'react-dom/client';
 import { charlaFor } from './charlas.mjs';
 import CharlaCard, { type Charla } from './CharlaCard';
 import type { CharlaPlace } from './lugar';
+import { hushVoices } from '../escucha-3d/shout';
 
 export { onFreeGround, type CharlaPlace } from './lugar';
 
@@ -80,11 +81,13 @@ export function createCharlas(o: Options) {
     if (!near || open) return;
     const c = charlaFor({ world: o.world, key: near.key, level: o.level(), place: near.place });
     open = { ...c, key: near.key };
+    // Nobody in the background yells or cries while the learner is talking.
+    hushVoices('charla', true);
     // The world's held keys are cleared the way a lost focus clears them.
     window.dispatchEvent(new Event('blur'));
     render();
   }
-  function close() { open = null; render(); }
+  function close() { open = null; hushVoices('charla', false); render(); }
 
   // While the card is open, keys belong to the card; E opens it when near.
   const onKey = (e: KeyboardEvent) => {
@@ -143,6 +146,7 @@ export function createCharlas(o: Options) {
     },
     dispose() {
       disposed = true;
+      hushVoices('charla', false);
       window.removeEventListener('keydown', onKey, true);
       o.parent.remove(group);
       personGeo.dispose(); placeGeo.dispose(); personMat.dispose(); placeMat.dispose(); bubbleMat.dispose(); bubble.dispose();

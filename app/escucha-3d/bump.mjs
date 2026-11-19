@@ -44,11 +44,16 @@ export function createBumpClock(each = 4, gap = 1.4) {
   };
 }
 
-// A stable line for a person: same voice every time you crash into them.
-export function bumpLine(lines, body, seed) {
+// A stable voice for a person (same voice every time you crash into them);
+// `n`, the number of the crash, walks through that voice's lines so the same
+// person does not repeat themselves.
+export function bumpLine(lines, body, seed, n = 0) {
   const pool = lines.filter(l => l.kind === 'bump' && (!body || l.body === body));
   const list = pool.length ? pool : lines.filter(l => l.kind === 'bump');
-  return list[Math.abs(Math.floor(seed)) % list.length];
+  const voices = [...new Set(list.map(l => l.voice))];
+  const voice = voices[Math.abs(Math.floor(seed)) % voices.length];
+  const own = list.filter(l => l.voice === voice);
+  return own[Math.abs(Math.floor(n)) % own.length];
 }
 
 export const voiceSrc = (id) => `/audio/escucha-3d/voces-${id}.mp3`;
