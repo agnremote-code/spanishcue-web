@@ -13560,6 +13560,18 @@
       "text": "Se usa **vos**: «vos **tenés**», «vos **querés**», «vos **sos**».",
       "category": "regional-pedagogy",
       "reason": "Clase de nivelación (262): la tarjeta del acento rioplatense enseña a reconocer el voseo como rasgo regional; el resto de la clase y el alumno siguen con tú."
+    },
+    {
+      "path": "app/escucha-3d/voces.json",
+      "text": "¡Qué tarado, por favor! ¡Fijate!",
+      "category": "regional-pedagogy",
+      "reason": "Shouted line in a deliberate Argentine voice, spoken by the Argentine Edge voice es-AR-*; every bump line in voces.json uses the Spanish of its own speaker's country (Ale, 2026-11-19: insults must sound native and varied)."
+    },
+    {
+      "path": "app/escucha-3d/voces.json",
+      "text": "¡Ma sí, andá a cagar!",
+      "category": "regional-pedagogy",
+      "reason": "Shouted line in a deliberate Argentine voice, spoken by the Argentine Edge voice es-AR-*; every bump line in voces.json uses the Spanish of its own speaker's country (Ale, 2026-11-19: insults must sound native and varied)."
     }
   ]
 }

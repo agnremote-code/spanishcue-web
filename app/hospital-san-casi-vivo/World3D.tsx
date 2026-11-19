@@ -93,7 +93,7 @@ export default function World3D(props: WorldProps) {
     let hero: ReturnType<typeof createHero>;
     // People with real bodies (skin, hair, clothes) on computers; phones keep the light drawn figures. ?real=0 turns it off.
     enableRealPeople(!low && new URLSearchParams(window.location.search).get('real') !== '0');
-    try { hospital = buildHospital(scene, { low, shadows: !low, cries: CRIES, onCry: (cry, volume) => { if (cry) shout(cry, volume); live.current.onCry(volume); } }); hero = createHero(!low); }
+    try { hospital = buildHospital(scene, { low, shadows: !low, cries: CRIES, onCry: (cry, volume) => { if (live.current.paused || live.current.sceneId || live.current.personId) return; if (cry) shout(cry, volume); live.current.onCry(volume); } }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
       renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
@@ -372,7 +372,7 @@ export default function World3D(props: WorldProps) {
           const out = pushOut(player.x, player.z, bodies, free);
           player.x = out.x; player.z = out.z;
           const who = out.hit >= 0 ? bodies[out.hit] : null;
-          if (who && (next.speed > 1.2 || ('moving' in who && who.moving)) && mayYell(who, clock)) {
+          if (who && next.speed > 1.2 && mayYell(who, clock)) {
             const line = insultFor(who.body, who.seed);
             hospital.say(who, line.text, 3.2, true);
             shout(line, 1);

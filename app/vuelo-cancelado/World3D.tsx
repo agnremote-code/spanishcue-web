@@ -93,7 +93,7 @@ export default function World3D(props: WorldProps) {
     const realParam = new URLSearchParams(window.location.search).get('real');
     enableRealPeople(!low && realParam !== '0');
     // The photographic scenery waits for ?real=2 until the office version is measured stable on the owner's laptop.
-    try { airport = buildAirport(scene, { low, shadows: !low, real: !low && realParam === '2', cries: CRIES, onCry: (cry, volume) => { if (cry) shout(cry, volume); live.current.onCry(volume); }, onThunder: (delay, strength) => live.current.onThunder(delay, strength) }); hero = createHero(!low); }
+    try { airport = buildAirport(scene, { low, shadows: !low, real: !low && realParam === '2', cries: CRIES, onCry: (cry, volume) => { if (live.current.paused || live.current.sceneId || live.current.personId) return; if (cry) shout(cry, volume); live.current.onCry(volume); }, onThunder: (delay, strength) => live.current.onThunder(delay, strength) }); hero = createHero(!low); }
     catch (error) {
       console.error(error);
       renderer.dispose(); renderer.forceContextLoss(); renderer.domElement.remove();
@@ -363,7 +363,7 @@ export default function World3D(props: WorldProps) {
           const out = pushOut(player.x, player.z, bodies, free);
           player.x = out.x; player.z = out.z;
           const who: Npc | Mover | null = out.hit >= 0 ? bodies[out.hit].who : null;
-          if (who && (next.speed > 1.2 || ('moving' in who && who.moving)) && mayYell(who, clock)) {
+          if (who && next.speed > 1.2 && mayYell(who, clock)) {
             const line = insultFor(who.body, who.seed);
             airport.say(who, line.text, 3.2, true);
             shout(line, 1);
