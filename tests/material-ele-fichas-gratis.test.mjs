@@ -33,6 +33,11 @@ test('free section is indexed: sitemap, index, public and edge-cached',()=>{
  }
 });
 
+test('the social twin is not in the sitemap and stays out of the clean section',()=>{
+ const urls=m.sitemap().map(x=>x.url);
+ assert.ok(!urls.some(u=>u.includes('/fichas-para-profes')));
+});
+
 test('nothing in the free section leads to a payment (owner rule)',()=>{
  const dir='app/material-ele/fichas-gratis';
  const files=[];const walk=d=>{for(const e of readdirSync(d,{withFileTypes:true})){if(e.isDirectory())walk(join(d,e.name));else files.push(join(d,e.name));}};walk(dir);

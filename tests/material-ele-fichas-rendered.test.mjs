@@ -35,3 +35,12 @@ for(const path of ['/material-ele/fichas-gratis','/material-ele/fichas-gratis/pr
  if(path.endsWith('/presente-de-indicativo')){assert.ok(main.querySelector('#errores'));assert.ok(main.querySelectorAll('#ejercicios ol > li').length>=8);}
  dom.window.close();
 });
+for(const [path,canonical] of [['/material-ele/fichas-para-profes','/material-ele/fichas-gratis'],['/material-ele/fichas-para-profes/presente-de-indicativo','/material-ele/fichas-gratis/presente-de-indicativo'],['/material-ele/fichas-para-profes/pack-a2','/material-ele/fichas-gratis/pack-a2']])test(`social twin of the free worksheets: normal navigation, soft CTA, canonical to the clean section: ${path}`,async()=>{
+ const response=await fetch(origin+path);assert.equal(response.status,200);
+ const dom=new JSDOM(await response.text());const d=dom.window.document;
+ assert.equal(d.querySelectorAll('h1').length,1);assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+canonical);
+ const main=d.querySelector('main');
+ assert.ok(main.querySelector('a[href="/"]'),'soft CTA to the home page');assert.match(main.textContent,/¿Te sirvió\?/);
+ if(path.split('/').length>3){assert.match(main.textContent,/Descargar/);assert.ok(main.querySelector('[id$="soluciones"]'));}
+ dom.window.close();
+});
