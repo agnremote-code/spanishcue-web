@@ -15,7 +15,7 @@ export default {
       { say: 'Vale, te pago noventa. Pero me cantas una canción.', reply: '«¿Una canción? ¡Te canto un tango entero!»', end: 'Ramiro canta un tango debajo de la lluvia. La gente de la acera aplaude y una señora llora.', mood: 'surprised' },
     ],
     talk: [
-      '¿Cuánto cuesta un taxi en tu ciudad?',
+      '¿Los taxis de tu ciudad son caros o baratos?',
       '¿Alguna vez pagaste demasiado por algo? ¿Qué pasó?',
       '¿Te gusta caminar cuando llueve?',
       '¿Cómo vas normalmente al trabajo o a clase?',
@@ -65,7 +65,7 @@ export default {
     talk: [
       '¿Prefieres el asiento de ventana o de pasillo?',
       '¿Tienes un objeto especial de una persona importante para ti?',
-      '¿Cómo conocieron tus abuelos o tus padres a su pareja?',
+      '¿Conoces alguna pareja que se conoció en un viaje?',
       '¿Hay reglas tontas en tu trabajo o en tu escuela?',
       '¿Lloras con facilidad o casi nunca?',
     ],
@@ -89,7 +89,7 @@ export default {
     talk: [
       '¿Cuál fue la cola más larga de tu vida?',
       '¿Qué haces cuando tienes que esperar mucho tiempo?',
-      '¿Sabes tejer, coser o hacer algo con las manos?',
+      '¿Qué cosas sabes hacer con las manos?',
       '¿Eres una persona paciente?',
       '¿Exageras a veces cuando cuentas historias?',
     ],
@@ -137,7 +137,7 @@ export default {
     talk: [
       '¿Qué comida de tu país te gusta llevar de regalo?',
       '¿Hay una receta especial en tu familia?',
-      '¿Quién cocina mejor en tu familia?',
+      '¿Qué plato te pide siempre tu familia o tus amigos?',
       '¿Compartes tu comida con facilidad?',
       '¿Cómo hablas con las personas que viven lejos de ti?',
     ],
@@ -236,7 +236,7 @@ export default {
       '¿Esperaste a alguien que no llegó?',
       '¿Te gusta regalar flores?',
       '¿Eres una persona romántica?',
-      '¿Cómo conociste a tu mejor amigo o amiga?',
+      '¿Alguna vez conociste a alguien importante por casualidad?',
     ],
     words: ['el cartel', 'las flores', 'llegar', 'el perfil falso', 'la videollamada', 'romántico'],
   },
@@ -330,7 +330,7 @@ export default {
     talk: [
       '¿Te gustaría ser famoso?',
       '¿Qué cantante te gusta más?',
-      '¿Qué música escuchas cuando estás triste?',
+      '¿Qué canción te pone de buen humor?',
       '¿Conociste a una persona famosa?',
       '¿Mentiste alguna vez para entrar a un lugar?',
     ],

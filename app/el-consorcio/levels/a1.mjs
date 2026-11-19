@@ -135,7 +135,7 @@ export default {
       { say: 'Lo siento, tengo cajas en la calle.', reply: '¿Cajas? ¡Mi casa es una piscina!', end: 'Wilson está furioso. Una gota cae en tu cabeza.', mood: 'furious' },
     ],
     talk: [
-      '¿Quién arregla las cosas en tu casa?',
+      '¿A quién llamas cuando se rompe algo en tu casa?',
       '¿Qué haces cuando algo se rompe?',
       '¿Qué hay en tu sala?',
       '¿Llueve mucho en tu ciudad? ¿En qué meses?',
@@ -344,7 +344,7 @@ export default {
       '¿Pagas algo en cuotas?',
       '¿Quién es la persona más vieja de tu familia?',
       '¿Qué mueble de tu casa te gusta mucho?',
-      '¿Quién te cuida cuando tienes fiebre?',
+      '¿Qué comes o bebes cuando tienes fiebre?',
       '¿Qué haces para estar bien de salud?',
     ],
     words: [
@@ -463,7 +463,7 @@ export default {
       '¿Guardas secretos bien?',
       '¿Qué haces los fines de semana para descansar?',
       '¿Quién en tu familia sabe arreglar cosas?',
-      '¿Cómo es la cocina de tu casa?',
+      '¿Cocinas mucho o poco en casa?',
     ],
     words: [
       { es: 'la obra', en: 'the building works' },
