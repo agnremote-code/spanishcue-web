@@ -183,6 +183,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/hr-crisis-english-additions-20261110.json',
   'docs/audits/la-casa-del-reality-english-additions-20261116.json',
   'docs/audits/ultimo-crucero-english-additions-20261116.json',
+  'docs/audits/clase-de-nivelacion-english-additions-20261118.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

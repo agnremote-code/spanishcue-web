@@ -14,6 +14,21 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 const additions = [
   ...courseLessons,
   {
+    // 2026-11-18: Clase de nivelación, a PRO trial lesson (student sheet, phonetics with native audio, countries, closing plan).
+    id:262,path:'/clase-de-nivelacion',files:/^(?:app\/clase-de-nivelacion\/|public\/clase-de-nivelacion\/|public\/audio\/nivelacion\/|tests\/clase-de-nivelacion\.test\.mjs$|scripts\/generate-nivelacion-audio\.py$|docs\/audits\/clase-de-nivelacion-english-additions-20261118\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:262,')&&line.includes('path:"/clase-de-nivelacion"')?[i]:[]);
+        assert.equal(at.length,1,'one clase de nivelacion catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },['"Fonética":[201,202,38,224,225,262],','"Fonética":[201,202,38,224,225],']],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/clase-de-nivelacion-english-additions-20261118.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/clase-de-nivelacion.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 345);','assert.equal(lessons.length, 344);'],['assert.equal(a1Lessons.length, 96);','assert.equal(a1Lessons.length, 95);'],["idsFor('Fonética'), [201, 202, 38, 224, 225, 262]","idsFor('Fonética'), [201, 202, 38, 224, 225]"]],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/338(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/337(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     // 2026-11-16: Último crucero (A0–C2), a PRO 3D ocean liner on its last night in a storm, wired like La boda.
     id:261,path:'/ultimo-crucero',files:/^(?:app\/ultimo-crucero\/|app\/escucha-3d\/content\/crucero\/|public\/ultimo-crucero\/|public\/audio\/escucha-3d\/crucero-|tests\/ultimo-crucero\.test\.mjs$|scripts\/check-crucero\.mjs$|scripts\/covers\/art\/ultimo-crucero\.webp$|public\/conversation-previews\/261\.mp4$|docs\/audits\/ultimo-crucero-english-additions-20261116\.json$)/,
     edits:{
@@ -713,7 +728,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===260||item.id===261||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===262||item.id===260||item.id===261||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -724,7 +739,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==260&&item.id!==261&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==262&&item.id!==260&&item.id!==261&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {
