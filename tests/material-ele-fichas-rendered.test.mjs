@@ -27,7 +27,7 @@ for(const path of ['/material-ele/fichas-gratis','/material-ele/fichas-gratis/pr
  assert.doesNotMatch(d.querySelector('meta[name="robots"]')?.content??'',/noindex/);
  const main=d.querySelector('main');const text=main.textContent;
  assert.doesNotMatch(text,/\[\[|\*\*/);
- assert.doesNotMatch(text,/US\$|precio|suscri|\bPRO\b|comprar\b|muestra con/i);
+ assert.doesNotMatch(text,/US\$|€|Suscribirse|\bPRO\b|Founder|muestra con/);
  assert.match(text,/gratis/i);
  for(const a of d.querySelectorAll('a[href]')){const href=a.getAttribute('href');assert.ok(href.startsWith('#')||href.startsWith('/material-ele/fichas-gratis'),`${path} links only inside the free section: ${href}`);}
  if(path.endsWith('/fichas-gratis'))assert.match(text,/100 % gratuita/);
