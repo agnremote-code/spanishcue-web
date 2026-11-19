@@ -104,9 +104,19 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
       - `webhook-status` still shows `paddle_api_403`. That is the known Paddle key-permission item, an owner action.
       - **`lastEventAt` = 2026-11-04 13:04Z: no live Paddle webhook event has been stored for 14 days.** That covers the promo week, which started 11-17. Whether this means no Paddle activity or failed delivery is UNKNOWN; the board cannot read Paddle or D1. Owner check: Paddle dashboard → Notifications → delivery log.
       - `promo-status`: paddle ok, paypal ok, live.
-  - **Checks:** see the PR body (filled in before ready).
+  - **Checks (local, Linux):**
+    - `npm test` at `fa198f74`: exit 0, 1,794 pass, 0 fail.
+    - At head `ca6a89d9`: the unit suites passed 59/59; the build, `scripts/test-worker.mjs` and validate:artifact all passed; worker-startup and client-compat passed 7/7.
+    - lint: 0 errors. tsc: only the 3 errors already on main. `git diff --check`: clean.
+  - **Release (VERIFIED):** #492 merged as `08a49e05` (02:52:17Z); its tree is identical to PR head `ca6a89d9`.
+    - CI + Auto Merge run [44443972707](https://github.com/agnremote-code/spanishcue-web/actions/runs/44443972707) passed on attempt 1. The last commit was pushed and its run skipped (draft) before the PR was marked ready, so there was no race.
+    - Staging run [44448447015](https://github.com/agnremote-code/spanishcue-web/actions/runs/44448447015) and production run [44448867925](https://github.com/agnremote-code/spanishcue-web/actions/runs/44448867925) both succeeded.
+    - "Production smoke" passed (job 135307604964, 03:07:56–03:08:03Z): `"passed": true` on https://spanishcue.com, and the rollback was skipped.
+    - The new rows ran in production: `/bosque-de-los-hongos-gigantes` 302, its teacher page 200, and `/material-ele/gramatica/comparativos-y-superlativos/c1` and `/oraciones-finales/a1` both 308.
+    - main = production = `08a49e05`.
+    - The anti-scrape change was not smoked with a curl User-Agent (the sandbox proxy refuses spanishcue.com). Its evidence is the regression test and the deploy.
   - **Next action:**
-    1. Merge #492 once checks pass, then verify the merged SHA, staging, production and its smoke (the smoke now includes the new rows).
+    1. Done: merge, deploy and smoke (above). This records PR (`claude/thursday-review-records-20261119`) is docs only.
     2. Billing owner: F2 (promo-status cache) once billing has no other open PR. Owner: the Paddle delivery-log check.
     3. Next Thursday: the 11-18 favorites-step failure, if it recurs, and the review date for BOARD-DECISION-005 (first Thursday after 12-10).
 - **2026-11-18 (Wednesday 3D routine): PR #472** (branch `claude/board-wed-3d-20261118`, base main `e87a085`). Run-start marker pushed at 02:13Z (W47 item 0). Tue 11-17 left its marker (#456). Subscription usage: **UNKNOWN**.
