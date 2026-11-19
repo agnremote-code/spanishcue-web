@@ -4,6 +4,7 @@ import { collectionPageSchema } from "../../growth/schema";
 import { EleBuyBand, EleTopbar, eleMetadata } from "../components";
 import { MATERIAL_ELE_PATH } from "../data";
 import { FICHAS_PATH, fichaPages, fichasDescription, fichasTitle } from "../fichas";
+import { FICHAS_GRATIS_PATH, fichasGratis } from "../fichas-gratis";
 import styles from "../../growth/growth.module.css";
 
 export const metadata = eleMetadata(FICHAS_PATH, fichasTitle, fichasDescription);
@@ -21,6 +22,7 @@ export default function FichasPage() {
             <p className={styles.eyebrow}>Fichas ELE gratis · A1–C2</p>
             <h1 className={styles.title}>Fichas ELE de gramática: gratis, para imprimir y con soluciones</h1>
             <p className={styles.lead}>{fichasDescription} Cada ficha sale de una clase interactiva: las de las clases gratis son completas y las de las clases PRO son una muestra con cinco ejercicios.</p>
+            <p className={styles.lead}><Link href={FICHAS_GRATIS_PATH}><strong>{fichasGratis.length} fichas completas y 100 % gratis</strong></Link>: enteras, con soluciones y en PDF, sin registro ni pagos.</p>
           </section>
           {LEVELS.map((level) => (
             <Section key={level} id={level.toLowerCase()} title={`Fichas de ${level}`}>

@@ -10,6 +10,7 @@ import { temaPages } from "./temas";
 import { FEED_PATH, INDICE_PATH } from "./indice";
 import { guiaPages } from "./guias";
 import { FICHAS_PATH } from "./fichas";
+import { FICHAS_GRATIS_PATH, fichasGratis } from "./fichas-gratis";
 import { PLANTILLAS_PATH } from "./plantillas";
 import { ACTIVIDADES_PATH, actividadPages, ejercicioPages } from "./actividades";
 import styles from "../growth/growth.module.css";
@@ -90,6 +91,7 @@ export default function MaterialElePage() {
 
           <Section id="banco" title="Banco de actividades: cada ficha con su propia página" intro={`${actividadPages.length} actividades, ${ejercicioPages.length} ejercicios con soluciones y preguntas de conversación por nivel, para imprimir o compartir en pantalla.`}>
             <Link className={styles.primaryButton} href={ACTIVIDADES_PATH}>Abrir el banco de actividades</Link>
+            <Link className={styles.secondaryButton} href={FICHAS_GRATIS_PATH}>{fichasGratis.length} fichas completas y gratis</Link>
             <Link className={styles.secondaryButton} href={FICHAS_PATH}>Fichas de gramática con soluciones</Link>
             <Link className={styles.secondaryButton} href={PLANTILLAS_PATH}>Plantillas para profesores en PDF</Link>
           </Section>

@@ -6,6 +6,7 @@ import { EleBuyBand, EleTopbar, eleMetadata } from "../../components";
 import { MATERIAL_ELE_PATH } from "../../data";
 import { lessonCards } from "../../../growth/lessons";
 import { FICHAS_PATH, fichaBySlug, fichaPages } from "../../fichas";
+import { fichaGratisById } from "../../fichas-gratis";
 import { fichaContent } from "../../ficha-content";
 import { temaPages } from "../../temas";
 import { Bold } from "../../ficha-components";
@@ -30,6 +31,7 @@ export default async function FichaPage({ params }: Props) {
   const siblings = fichaPages.filter((other) => other.level === page.level && other.slug !== page.slug).slice(0, 12);
   const temas = temaPages.filter((tema) => tema.group === "gramatica" && tema.lessonIds.includes(page.id)).slice(0, 4);
   const lessonHref = lessonCards([page.id], "es")[0]?.href ?? page.lessonPath;
+  const complete = fichaGratisById.get(page.id);
   const faq = [
     { question: "¿La ficha es gratis?", answer: "Sí. Se abre sin registro, se imprime o se guarda en PDF con el botón de la página y se puede proyectar en pantalla compartida." },
     page.sample
@@ -52,6 +54,7 @@ export default async function FichaPage({ params }: Props) {
             <p className={styles.lead}>{content.subtitle}</p>
             <div className={`${styles.heroActions} ${print.noPrint}`}>
               <PrintButton />
+              {complete ? <Link className={styles.primaryButton} href={complete.freePath}>Ficha completa gratis</Link> : null}
               <Link className={styles.secondaryButton} href={lessonHref}>{page.sample ? "Ver la clase completa" : "Abrir la clase interactiva gratis"}</Link>
             </div>
           </section>
