@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-18 by the Wednesday 3D routine (scheduled cloud run; Alejandro convened as a fresh subagent reviewer; see "Current work")._
+_Last updated: 2026-11-19 by the Thursday reliability routine (scheduled cloud run; Sofia and Alejandro convened as fresh subagents; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -81,7 +81,34 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-11-19 (Thursday reliability routine): run started 02:05Z, W47 plan item 4** (branch `claude/thursday-review-20261119`). Wed 11-18 left its marker (#472). In progress.
+- **2026-11-19 (Thursday reliability routine): PR #492** (branch `claude/thursday-review-20261119`, base main `8eb9c490`). Run-start marker pushed at 02:05Z (W47 item 0). Wed 11-18 left its marker (#472). Subscription usage: **UNKNOWN**.
+  - **Board:** two fresh subagents. Sofia did the read-only audit of every backend surface changed since `f95f4d80`. Alejandro did the independent code review (**APPROVE**, 0 blockers; NB1 and NB3 applied). Martin was not convened, because no content changed. The executives did not message each other. Record: [transcripts/2026-11-19-thursday-reliability.md](transcripts/2026-11-19-thursday-reliability.md). Messages 2 and 4 there are compact re-typings, not byte-exact.
+  - **W47 item 4:**
+    - **(a) Already done by non-board work:** `c3347930` (11-18), "Worker tests: bound the wait for headers and retry a hung GET" (`scripts/worker-test-fetch.mjs`, `tests/worker-test-fetch.test.mjs`). A hung GET now fails fast and names its method and URL. VERIFIED from source. Since 11-12, 11 CI + Auto Merge runs needed a re-run (count from the runs API; causes not checked one by one).
+    - **(b) DONE in #492:** `scripts/production-smoke.mjs` now asserts the Bosque PRO world (302 `/acceso`) and its teacher page (3D title, "Inside the 3D world", BreadcrumbList). It also asserts that two retired `/material-ele` level pages from #357 308 to their topic page. Tests in `tests/production-smoke.test.mjs` cover the pass case and each failure, and they fail against main's script (3 fail). Draft #360 also edits this file, but in a hunk about 60 lines away, and it already conflicts with main.
+    - **(c) Still blocked:** #360 (draft, `dirty`, untouched since 11-03) and #283 are both open. Main already ships US$19.90/US$150 (`e3aa9b0f`) and the promo week (`9e7bead7`), so #360's price change (US$199/year) looks superseded (HYPOTHESIS: it needs the owner's or its author's call). No PR comment was posted.
+  - **Fixed in #492 (VERIFIED defect, regression test fails on main):** `worker/anti-scrape.ts` `refusedAgent` refused curl, okhttp and Go-http-client with 403 even on bundles, icons and the social preview image. That contradicted its own header and breaks link-preview images in apps that use those clients. Presentation files are now exempt for scraping tools. Content JSON, audio, video and `/_vinext/image` (a paid transform) stay refused, and AI crawlers stay refused everywhere. No private asset becomes reachable: the asset gate in `protect-client-assets.mjs`/`private-asset-auth.ts` is unchanged (Alejandro, VERIFIED).
+  - **Found, not fixed (Sofia):**
+    - **F2, LOW-MEDIUM, VERIFIED:** anonymous `GET /api/billing/promo-status` calls Paddle `/transactions/preview` on every request, with no cache or throttle (`app/api/billing/promo-status/route.ts:16-35`). A loop could burn the shared Paddle API rate limit. Suggested code-only fix: cache the result per isolate for about 5 min, plus a test of two GETs causing at most one call. **Not changed here,** because billing already has open PRs #360 and #283 (AGENTS.md rule 6). It is for the billing owner.
+    - **F3, LOW, HYPOTHESIS:** promo-week eligibility is checked only when a checkout is created, so two parallel promo checkouts could give two US$0.99 weeks. Each is still a settled charge.
+    - **F4, negligible:** the PayPal promo plan stays verified for the life of the isolate.
+    - **F5, policy question for the owner:** Homework topic passes do not re-check that the issuing teacher still has PRO, unlike the 3D teacher's pass. This matches the older Autoestudio weeks.
+    - **Clean:** edge-cache keys after the cookie change, header spoofing, the teacher's-pass scope, the render gate, anti-scrape against search engines, and promo-week grants (access only from a settled payment; the founder slot is claimed on the first full charge).
+  - **CI and deploy health (VERIFIED, runs API):**
+    - main = production = `8eb9c490` (#487). Production run [44373101345](https://github.com/agnremote-code/spanishcue-web/actions/runs/44373101345) succeeded. The scheduled smoke [44391016270](https://github.com/agnremote-code/spanishcue-web/actions/runs/44391016270) (11-18 20:26Z) passed.
+    - 11-18 failures:
+      - Staging runs 44253423754, 44258533769, 44268043746, 44271194698 and 44273899268 failed on "Promote", and production runs 44259496148, 44269087608 and 44274417692 failed on "Enforce a single production deployer". These are the known safe overlap refusals, and later SHAs deployed.
+      - **Production run 44253869553 (`9c846494`) failed in "Prepare account favorites table".** The `0013_lesson_favorites.sql` execute succeeded (0 rows written). The step then exited 1 with no error text, during the `PRAGMA` or the verify command. The cause is UNKNOWN, because the PRAGMA output goes to a file. The next run (`34aa756a`) passed the same step.
+      - Suggestion for the workflow owner: print the PRAGMA's stderr. Not changed, because `.github/workflows/**` is held by #282 (rule 6).
+    - **Billing diagnostics (report only):**
+      - `webhook-status` still shows `paddle_api_403`. That is the known Paddle key-permission item, an owner action.
+      - **`lastEventAt` = 2026-11-04 13:04Z: no live Paddle webhook event has been stored for 14 days.** That covers the promo week, which started 11-17. Whether this means no Paddle activity or failed delivery is UNKNOWN; the board cannot read Paddle or D1. Owner check: Paddle dashboard → Notifications → delivery log.
+      - `promo-status`: paddle ok, paypal ok, live.
+  - **Checks:** see the PR body (filled in before ready).
+  - **Next action:**
+    1. Merge #492 once checks pass, then verify the merged SHA, staging, production and its smoke (the smoke now includes the new rows).
+    2. Billing owner: F2 (promo-status cache) once billing has no other open PR. Owner: the Paddle delivery-log check.
+    3. Next Thursday: the 11-18 favorites-step failure, if it recurs, and the review date for BOARD-DECISION-005 (first Thursday after 12-10).
 - **2026-11-18 (Wednesday 3D routine): PR #472** (branch `claude/board-wed-3d-20261118`, base main `e87a085`). Run-start marker pushed at 02:13Z (W47 item 0). Tue 11-17 left its marker (#456). Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** This run delivered W47 item 3, step 1: the BOARD-DECISION-006 §3.6 checker changes. It is reported as **tooling, not a unit**. Steps 2 and 3 (Martin authors «El taller de la greda», Sofia builds it, then G4) did not start; there was no capacity for a full world plus a VALID run in this slot, as Monday predicted.
   - **What #472 adds:**
