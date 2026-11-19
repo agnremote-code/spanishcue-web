@@ -6,6 +6,7 @@ import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLess
 import { pageDates } from "../indice";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
 import { teachingGuidesForTopic } from "../guias";
+import { ejercicioBySlug } from "../actividades";
 import { EleFreeAudios, freeAudioSamples } from "../audios";
 import { TemaGroupIndexPage } from "../tema-group-page";
 import { temaGroupById, temaLevelsForTopic, temasByGroup, type TemaGroupId } from "../temas";
@@ -41,6 +42,7 @@ export default async function ElePage({ params }: Props) {
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
   const levelPages = temaLevelsForTopic(page.slug);
+  const ejercicio = ejercicioBySlug.get(page.slug);
   const fichaIds = [...new Set([...page.lessonIds, ...(temasByGroup("gramatica").find((tema) => tema.slug === page.slug)?.lessonIds ?? [])])];
   return (
     <>
@@ -60,6 +62,7 @@ export default async function ElePage({ params }: Props) {
             <p className={styles.lead}>{page.intro}</p>
             <div className={`${styles.heroActions} ${print.noPrint}`}>
               <Link className={styles.primaryButton} href="#actividades">Ver las actividades</Link>
+              {ejercicio ? <Link className={styles.secondaryButton} href={ejercicio.path}>Ejercicios con soluciones</Link> : null}
               <PrintButton />
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : <Link className={styles.secondaryButton} href="/demo/noche-abierta">Probar una clase gratis</Link>}
             </div>
@@ -86,6 +89,7 @@ export default async function ElePage({ params }: Props) {
           {page.exercise ? (
             <Section id="ejercicio" title={page.exercise.title}>
               <EleExerciseBlock exercise={page.exercise} />
+              {ejercicio ? <p className={print.noPrint}><Link className={styles.textLink} href={ejercicio.path}>Ejercicio de {page.kind === "level" ? `nivel ${page.code}` : page.label.toLowerCase()} en página propia, para mandar al alumno: {ejercicio.exercise.items.length} frases con corrección automática y soluciones →</Link></p> : null}
             </Section>
           ) : null}
 

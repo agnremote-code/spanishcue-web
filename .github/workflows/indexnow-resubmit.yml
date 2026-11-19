@@ -1,0 +1,37 @@
+name: IndexNow resubmit (Bing, DuckDuckGo, Yandex)
+
+# Manual, read-only toward the site: fetches the live sitemap and tells the
+# IndexNow engines about every public URL in it (max 10,000 per run). Use it
+# once after a large batch of changes or after the site was first verified in
+# Bing Webmaster Tools; the production deploy already submits new URLs on its
+# own. Google ignores IndexNow and keeps crawling the sitemap.
+# It deploys nothing and uses no secrets: the IndexNow key is public by design.
+
+on:
+  workflow_dispatch:
+    inputs:
+      scope:
+        description: all (every sitemap URL)
+        required: true
+        default: all
+        type: choice
+        options: [all]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow-resubmit
+  cancel-in-progress: false
+
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22.19.0"
+      - name: Submit every sitemap URL to IndexNow
+        run: node scripts/indexnow-ping.mjs --all
