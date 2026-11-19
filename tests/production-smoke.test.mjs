@@ -5,6 +5,11 @@ import { runSmoke } from '../scripts/production-smoke.mjs';
 const resourcePages = {
   '/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo': '3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo',
   '/resources/spanish-conversation-activity-a2-la-feria-de-villaluz': '3D Spanish Conversation Activity A2: La feria de Villaluz',
+  '/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes': '3D Spanish Conversation Activity A0–C2: El bosque de los hongos gigantes',
+};
+const retiredLevels = {
+  '/material-ele/gramatica/comparativos-y-superlativos/c1': '/material-ele/gramatica/comparativos-y-superlativos',
+  '/material-ele/gramatica/oraciones-finales/a1': '/material-ele/gramatica/oraciones-finales',
 };
 const legacyResource = '/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares';
 function fixture(overrides = {}) {
@@ -12,7 +17,7 @@ function fixture(overrides = {}) {
     const path = new URL(url).pathname;
     if (overrides[path]) return overrides[path]();
     if (path === '/cuenta') return new Response(null, { status: 307, headers: { location: '/ingresar?next=/cuenta' } });
-    if (path === '/tablero-de-eso-si-hablo' || path === '/noche-abierta' || path === '/hospital-san-casi-vivo' || path === '/la-feria-de-villaluz') return new Response(null, { status: 302, headers: { location: '/acceso' } });
+    if (path === '/tablero-de-eso-si-hablo' || path === '/noche-abierta' || path === '/hospital-san-casi-vivo' || path === '/bosque-de-los-hongos-gigantes' || path === '/la-feria-de-villaluz') return new Response(null, { status: 302, headers: { location: '/acceso' } });
     if (path.startsWith('/audio/')) return new Response('Forbidden', { status: 403 });
     if (path === '/api/students') return Response.json({ error: 'unauthorized' }, { status: 401, headers: { 'cache-control': 'private, no-store' } });
     if (path === '/api/auth/verification-email') return Response.json({ code: 'INVALID_SESSION' }, { status: 401 });
@@ -25,6 +30,7 @@ function fixture(overrides = {}) {
       if (options.headers?.origin !== 'https://spanishcue.com') return Response.json({ error: 'origin' }, { status: 403 });
       return Response.json({ error: 'invalid' }, { status: 400 });
     }
+    if (retiredLevels[path]) return new Response(null, { status: 308, headers: { location: retiredLevels[path] } });
     if (path === legacyResource) return new Response(null, { status: 308, headers: { location: '/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares' } });
     if (resourcePages[path]) return new Response(`<html><title>${resourcePages[path]} | SPANISHCUE</title><h2>Inside the 3D world</h2><script type="application/ld+json">{"@type":"BreadcrumbList"}</script></html>`);
     if (path.startsWith('/does-not-exist')) return new Response('404', { status: 404 });
@@ -163,4 +169,20 @@ test('the Paddle webhook status is reported and never fails the smoke', async ()
   assert.deepEqual(report.find(r => r.path === '/api/billing/paddle/webhook-status').paddleWebhook, { destination: 'found', active: true, missingEvents: [] });
   const broken = await runSmoke('https://spanishcue.com', fixture({ '/api/billing/paddle/webhook-status': () => new Response('boom', { status: 500 }) }));
   assert.equal(broken.find(r => r.path === '/api/billing/paddle/webhook-status').status, 500);
+});
+
+test('the Bosque PRO world stays private and its teacher page public (W47 item 4b)', async () => {
+  const results = await runSmoke('https://spanishcue.com', fixture());
+  for (const path of ['/bosque-de-los-hongos-gigantes', '/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes']) assert.ok(results.some(r => r.path === path), path);
+  await assert.rejects(runSmoke('https://spanishcue.com', fixture({ '/bosque-de-los-hongos-gigantes': () => new Response('<html>world</html>') })), /bosque-de-los-hongos-gigantes: expected/);
+  await assert.rejects(runSmoke('https://spanishcue.com', fixture({ '/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes': () => new Response('<html><title>Bosque</title></html>') })), /must carry its 3D title/);
+});
+
+test('retired /material-ele level pages must 308 to their topic page (#357)', async () => {
+  const results = await runSmoke('https://spanishcue.com', fixture());
+  for (const path of Object.keys(retiredLevels)) assert.ok(results.some(r => r.path === path && r.status === 308), path);
+  const [first, topic] = Object.entries(retiredLevels)[0];
+  await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [first]: () => new Response('404', { status: 404 }) })), /comparativos-y-superlativos\/c1: expected 308, got 404/);
+  await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [first]: () => new Response(null, { status: 308, headers: { location: '/material-ele' } }) })), /wrong redirect target/);
+  await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [first]: () => new Response(null, { status: 308, headers: { location: 'https://example.com' + topic } }) })), /foreign redirect/);
 });
