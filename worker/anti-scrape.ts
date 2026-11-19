@@ -11,9 +11,9 @@
  * Search engines and link previews are exempt from all three, and nothing here
  * touches POSTs, APIs, webhooks or student links. Scraping tools may fetch
  * presentation files (bundles, styles, fonts, images); content files (JSON,
- * audio, video) stay refused to them. The limiter never counts static files. The limiter
- * fails open, like the abuse limiter, so a configuration gap never blocks a
- * teacher in class.
+ * audio, video) and the image transformer stay refused to them. The page
+ * limiter never counts static files, and it fails open, like the abuse
+ * limiter, so a configuration gap never blocks a teacher in class.
  */
 import { isBlockedCrawlerAgent, isScrapingToolAgent, isSearchEngineAgent } from "../app/crawler-policy";
 
@@ -35,7 +35,8 @@ function readOnly(request: Request): boolean {
 const PRESENTATION_FILE = /\.(?:avif|css|gif|ico|jpe?g|js|map|png|svg|ttf|webmanifest|webp|woff2?)$/i;
 
 function presentationPath(pathname: string): boolean {
-  return pathname.startsWith("/assets/") || pathname.startsWith("/_next/static/") || pathname === "/_vinext/image" || PRESENTATION_FILE.test(pathname);
+  // Not /_vinext/image: each call runs a paid image transform.
+  return pathname.startsWith("/assets/") || pathname.startsWith("/_next/static/") || PRESENTATION_FILE.test(pathname);
 }
 
 function staticPath(pathname: string): boolean {

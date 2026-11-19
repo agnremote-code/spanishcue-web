@@ -80,10 +80,10 @@ test("AI and SEO-tool crawlers are refused everywhere except robots.txt", () => 
 
 test("scraping libraries may load presentation files (link previews), not content files", () => {
   for (const ua of [UA.curl, "okhttp/4.12.0", "Go-http-client/2.0"]) {
-    for (const path of ["/assets/index-abc.js", "/assets/app.css", "/favicon.svg", "/favicon.ico", "/icon-192.png", "/brand/spanishcue-logo.png", "/social/preview.jpg", "/mas-alla/portada.webp", "/manifest.webmanifest", "/fonts/inter.woff2", "/_next/static/chunks/a.js", "/_vinext/image"]) {
+    for (const path of ["/assets/index-abc.js", "/assets/app.css", "/favicon.svg", "/favicon.ico", "/icon-192.png", "/brand/spanishcue-logo.png", "/social/preview.jpg", "/mas-alla/portada.webp", "/manifest.webmanifest", "/fonts/inter.woff2", "/_next/static/chunks/a.js"]) {
       assert.equal(refused(path, ua), false, `${ua} ${path}`);
     }
-    for (const path of ["/noche-abierta/demo-calle.json", "/audio/escucha-3d/feria-a2-baile.mp3", "/audio/free/a.mp3", "/video/demo.mp4", "/material-ele/fichas"]) {
+    for (const path of ["/noche-abierta/demo-calle.json", "/audio/escucha-3d/feria-a2-baile.mp3", "/audio/free/a.mp3", "/video/demo.mp4", "/_vinext/image", "/material-ele/fichas"]) {
       assert.equal(refused(path, ua), true, `${ua} ${path}`);
     }
   }
