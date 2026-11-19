@@ -81,6 +81,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-19 (Thursday reliability routine): run started 02:05Z, W47 plan item 4** (branch `claude/thursday-review-20261119`). Wed 11-18 left its marker (#472). In progress.
 - **2026-11-18 (Wednesday 3D routine): PR #472** (branch `claude/board-wed-3d-20261118`, base main `e87a085`). Run-start marker pushed at 02:13Z (W47 item 0). Tue 11-17 left its marker (#456). Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** This run delivered W47 item 3, step 1: the BOARD-DECISION-006 §3.6 checker changes. It is reported as **tooling, not a unit**. Steps 2 and 3 (Martin authors «El taller de la greda», Sofia builds it, then G4) did not start; there was no capacity for a full world plus a VALID run in this slot, as Monday predicted.
   - **What #472 adds:**
