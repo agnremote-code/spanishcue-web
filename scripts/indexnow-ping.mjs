@@ -31,7 +31,8 @@ async function main() {
   const args = process.argv.slice(2);
   const opt = name => { const i = args.indexOf(name); return i === -1 ? undefined : args[i + 1]; };
   const after = opt('--after') ?? `https://${INDEXNOW_HOST}/sitemap.xml`;
-  const afterXml = await (await fetch(after)).text();
+  // Own User-Agent: the Worker's anti-scrape rule exempts IndexNow traffic, never an anonymous fetcher.
+  const afterXml = await (await fetch(after, { headers: { 'user-agent': 'SpanishCue-IndexNow/1.0' } })).text();
   const urls = args.includes('--all') ? sitemapUrls(afterXml) : newUrls(opt('--before') ? readFileSync(opt('--before'), 'utf8') : '', afterXml);
   if (!urls.length) { console.log('IndexNow: no new URLs to submit.'); return; }
   const body = { host: INDEXNOW_HOST, key: INDEXNOW_KEY, keyLocation: `https://${INDEXNOW_HOST}/${INDEXNOW_KEY}.txt`, urlList: urls.slice(0, 10000) };
