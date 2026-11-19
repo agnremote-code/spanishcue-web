@@ -19,7 +19,7 @@ export default {
       '¿Eres buena persona para regatear o pagas lo que te piden sin discutir?',
       '¿Qué haces normalmente cuando llueve mucho y tienes que salir?',
       'Si un desconocido te dice algo que puede cambiar tus planes, ¿lo crees o lo compruebas primero?',
-      '¿Qué medio de transporte usas más en tu ciudad y qué es lo peor de él?',
+      '¿Qué es lo peor del transporte público en tu ciudad?',
     ],
     words: ['la tarifa', 'el taxímetro', 'regatear', 'duplicarse', 'arriesgarse', 'el paraguas'],
   },

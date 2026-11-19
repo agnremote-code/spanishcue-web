@@ -233,7 +233,7 @@ export default {
       { say: 'Si el ascensor es tan importante para usted, dígalo en la asamblea.', reply: '¿Yo? ¿Hablar delante de todos? Hace años que no hablo en público.', end: 'Don Washington ensayó su discurso delante de la foto de Elsa. Te pidió que lo escucharas a las nueve.', mood: 'smile' },
     ],
     talk: [
-      '¿Cómo se conocieron tus padres o tus abuelos?',
+      '¿Qué pareja de tu familia tiene la historia más curiosa?',
       '¿Qué baile aprendiste o te gustaría aprender?',
       '¿Qué lugar es especial para ti por un recuerdo?',
       '¿Hablaste alguna vez delante de mucha gente? ¿Cómo fue?',
@@ -377,7 +377,7 @@ export default {
       { say: 'Si no lo dices tú, lo va a descubrir Elvira.', reply: '¿Elvira? Bueno… voy a hablarlo en la asamblea.', end: 'Brian se puso pálido. Cirilo, por primera vez, sonrió.', mood: 'scared' },
     ],
     talk: [
-      '¿Qué cambiarías en tu casa si tuvieras dinero?',
+      'Si pudieras cambiar una sola cosa de tu edificio o tu barrio, ¿cuál sería?',
       '¿Alguna vez ocultaste algo a tu familia o a tus amigos?',
       '¿Quién te enseñó a arreglar cosas?',
       '¿Qué regla rompiste de pequeño o de pequeña?',
@@ -405,7 +405,7 @@ export default {
       '¿Qué comiste en la última fiesta a la que fuiste?',
       '¿Qué regla de tu casa no te parecía justa?',
       '¿Cocinaste alguna vez para muchas personas? ¿Qué preparaste?',
-      '¿Qué olor te recuerda a tu infancia?',
+      '¿Qué olor de tu edificio o de tu calle reconoces enseguida?',
     ],
     words: ['tender la ropa', 'la soga', 'el choripán', 'el chimichurri', 'la parrilla'],
   },

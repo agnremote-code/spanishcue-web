@@ -108,7 +108,7 @@ export default {
       '¿Qué haces en una cola larga?',
       '¿Tienes una bufanda favorita?',
       '¿Sabes hacer ropa?',
-      '¿Hablas con personas que no conoces?',
+      '¿Con quién hablas cuando esperas un avión o un tren?',
     ],
     words: [
       { es: 'la cola', en: 'the queue' },
@@ -135,8 +135,8 @@ export default {
     talk: [
       '¿Pagas con tarjeta o con dinero?',
       '¿Tienes monedas en el bolsillo ahora?',
-      '¿Qué comes cuando tienes mucha hambre?',
-      '¿Te gusta invitar a tus amigos?',
+      '¿Qué comes en un aeropuerto?',
+      '¿Quién paga cuando comes con amigos?',
       '¿Cuál es tu moneda?',
     ],
     words: [
@@ -194,7 +194,7 @@ export default {
     talk: [
       '¿Te gusta cantar?',
       '¿Qué color de ropa te gusta?',
-      '¿Tu maleta es grande o pequeña?',
+      '¿Cuántas maletas llevas en un viaje?',
       '¿Qué haces cuando tienes vergüenza?',
       '¿Ayudas a las personas en la calle?',
     ],
