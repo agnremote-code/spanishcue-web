@@ -57,6 +57,7 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
   // while its indexable teacher page stays public and names the 3D world.
   for (const [world, audio, resource, title] of [
     ["/hospital-san-casi-vivo", null, "/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo", "3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo"],
+    ["/bosque-de-los-hongos-gigantes", null, "/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes", "3D Spanish Conversation Activity A0–C2: El bosque de los hongos gigantes"],
     ["/la-feria-de-villaluz", "/audio/escucha-3d/feria-a2-baile.mp3", "/resources/spanish-conversation-activity-a2-la-feria-de-villaluz", "3D Spanish Conversation Activity A2: La feria de Villaluz"],
   ]) {
     await protectedRedirect(world, "/acceso");
@@ -76,6 +77,17 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
     const location = new URL(legacy.headers.get("location") || "", origin);
     assert.equal(location.origin, origin, `${legacyResource}: foreign redirect`);
     assert.equal(location.pathname, "/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares", `${legacyResource}: wrong redirect target`);
+  }
+  // Retired /material-ele level pages (2026-11-03, app/material-ele/temas.ts retiredTemaLevelPaths) 308 to their
+  // topic page and never become a 404.
+  for (const [retired, topic] of [
+    ["/material-ele/gramatica/comparativos-y-superlativos/c1", "/material-ele/gramatica/comparativos-y-superlativos"],
+    ["/material-ele/gramatica/oraciones-finales/a1", "/material-ele/gramatica/oraciones-finales"],
+  ]) {
+    const moved = await check(retired, 308);
+    const location = new URL(moved.headers.get("location") || "", origin);
+    assert.equal(location.origin, origin, `${retired}: foreign redirect`);
+    assert.equal(location.pathname, topic, `${retired}: wrong redirect target`);
   }
   const students = await check("/api/students", 401);
   assert.match(students.headers.get("cache-control") || "", /no-store/i);
