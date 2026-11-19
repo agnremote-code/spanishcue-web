@@ -4,6 +4,7 @@ import { temaGroups, temaLevelPages, temaPages } from "./temas";
 import { lessons } from "../lesson-catalog";
 import { guiaPages } from "./guias";
 import { FICHAS_PATH, fichaPages, fichasDescription, fichasPublished, fichasTitle } from "./fichas";
+import { PLANTILLAS_PATH, plantillas, plantillasDescription, plantillasPublished, plantillasTitle } from "./plantillas";
 
 export const INDICE_PATH = `${MATERIAL_ELE_PATH}/indice`;
 export const FEED_PATH = `${MATERIAL_ELE_PATH}/feed.xml`;
@@ -38,6 +39,7 @@ export const indiceSections: { id: string; title: string; entries: IndiceEntry[]
   { id: "actividades", title: "Banco de actividades", entries: actividadPages.map((page) => row(page.path, page.title, page.description, "Actividades", published.banco)) },
   { id: "ejercicios", title: "Ejercicios con soluciones", entries: ejercicioPages.map((page) => row(page.path, page.title, page.description, "Ejercicios", published.banco)) },
   { id: "fichas", title: "Fichas de gramática para imprimir", entries: [row(FICHAS_PATH, fichasTitle, fichasDescription, "Fichas", fichasPublished, fichaPages.map((page) => page.id)), ...fichaPages.map((page) => row(page.path, page.title, page.description, "Fichas", fichasPublished, [page.id]))] },
+  { id: "plantillas", title: "Plantillas para profesores en PDF", entries: [row(PLANTILLAS_PATH, plantillasTitle, plantillasDescription, "Plantillas", plantillasPublished), ...plantillas.map((page) => row(page.path, page.title, page.description, "Plantillas", plantillasPublished))] },
   { id: "preguntas", title: "Preguntas de conversación por nivel", entries: preguntasPages.map((page) => row(page.path, page.title, page.description, "Preguntas", published.banco)) },
 ];
 

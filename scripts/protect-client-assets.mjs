@@ -63,6 +63,8 @@ const publicRoots = new Set([
   "app/newsletter/EmailGiftPopup.tsx",
   // «Descargar ficha en PDF» on the public /material-ele pages.
   "app/material-ele/PrintButton.tsx",
+  // Fill-in exercises answered on the public /material-ele pages: sentences and answer keys are public copy.
+  "app/material-ele/ExerciseCheck.tsx",
   "app/newsletter/GiftSignup.tsx",
   "app/Library.tsx",
   // Public demo imports geometry/physics only; server allowlists every lesson payload.

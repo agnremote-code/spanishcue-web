@@ -1,7 +1,7 @@
 import { isFreeLesson, localLessonPath } from "../access-policy";
 import { catalogLessons, type ConversationCatalogLesson } from "../conversation-families/catalog";
 import { translateCategory } from "../i18n/messages";
-import { resourcePathForLesson } from "../resource-seo";
+import { recursoPathForLesson, resourcePathForLesson } from "../resource-seo";
 
 export type LessonCardData = {
   id: number;
@@ -21,12 +21,17 @@ export type LessonCardData = {
 
 const cardById = new Map<number, ConversationCatalogLesson>(catalogLessons.map((lesson) => [lesson.id, lesson]));
 
-export function lessonCard(id: number): LessonCardData | null {
+/**
+ * `locale` picks the public description page a PRO card points to: Spanish pages
+ * link the Spanish twin (/recursos/…), English pages the English one (/resources/…),
+ * so each language version receives its own internal links.
+ */
+export function lessonCard(id: number, locale: "en" | "es" = "en"): LessonCardData | null {
   const lesson = cardById.get(id);
   if (!lesson) return null;
   const free = isFreeLesson(lesson.id);
   const lessonPath = localLessonPath(lesson);
-  const resourcePath = resourcePathForLesson(lesson);
+  const resourcePath = locale === "es" ? recursoPathForLesson(lesson) : resourcePathForLesson(lesson);
   return {
     id: lesson.id,
     title: lesson.title,
@@ -43,8 +48,8 @@ export function lessonCard(id: number): LessonCardData | null {
 }
 
 /** Resolves ids in order, free lessons first, dropping ids that are not public catalog cards. */
-export function lessonCards(ids: readonly number[]): LessonCardData[] {
-  const cards = ids.map(lessonCard).filter((card): card is LessonCardData => Boolean(card));
+export function lessonCards(ids: readonly number[], locale: "en" | "es" = "en"): LessonCardData[] {
+  const cards = ids.map((id) => lessonCard(id, locale)).filter((card): card is LessonCardData => Boolean(card));
   return [...cards.filter((card) => card.free), ...cards.filter((card) => !card.free)];
 }
 

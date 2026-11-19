@@ -11,7 +11,9 @@ let cookie;
 async function access(){if(cookie)return cookie;const r=await fetch(`${origin}/s/${signed}`,{redirect:'manual'});assert.equal(r.status,303);assert.equal(r.headers.get('referrer-policy'),'no-referrer');assert.equal(r.headers.get('location'),'/autoestudio/a1');const value=r.headers.get('set-cookie');assert.match(value,/HttpOnly/);assert.match(value,/Secure/);cookie=value.split(';')[0];return cookie;}
 test('real Worker exchanges bearer for clean URL without HTML, analytics or token reflection',{skip:!enabled},async()=>{await access();const r=await fetch(`${origin}/s/${signed}bad`,{redirect:'manual'});assert.equal(r.status,303);assert.equal(r.headers.get('referrer-policy'),'no-referrer');assert.doesNotMatch(await r.text(),/gtag|v1\./);});
 test('real pass opens assigned paid week, but never another level, teacher API or dashboard',{skip:!enabled},async()=>{
- const headers={cookie:await access()};const r=await fetch(`${origin}/autoestudio/a1/semana-3`,{headers,redirect:'manual'});assert.equal(r.status,200);assert.match(await r.text(),/ae-module/);
+ const headers={cookie:await access()};const r=await fetch(`${origin}/autoestudio/a1/semana-3`,{headers,redirect:'manual'});assert.equal(r.status,200);const week=await r.text();assert.match(week,/ae-module/);
+ // A translating browser must leave Homework alone: translated text nodes used to crash the player.
+ assert.match(week,/<div class="notranslate ae-notranslate" translate="no"/);
  for(const path of ['/autoestudio/b1/semana-3','/autoestudio/b1/semana-3.rsc','/cuenta?tab=alumnos']){const r=await fetch(origin+path,{headers,redirect:'manual'});assert.notEqual(r.status,200,path);assert.doesNotMatch(await r.text(),/"listening"|ae-module/);}
  const teacher=await fetch(`${origin}/api/autoestudio/passes`,{headers});assert.equal(teacher.status,401);
 });

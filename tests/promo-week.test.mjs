@@ -259,9 +259,15 @@ test('checkout states the renewal next to every promo button and keeps the regul
   assert.match(ui, /US\$0\.99 for the first week\. Then renews automatically at US\$19\.90\/month\. Cancel anytime\./);
   assert.doesNotMatch(ui, /PROMO_WEEK_UNTIL/);
   const brand = await readFile('app/SpanishCueBrand.tsx', 'utf8');
-  assert.match(brand, /PROBAR PRO US\$0,99\/SEMANA/);
-  assert.match(brand, /Luego US\$19,90\/mes · Cancelas cuando quieras/);
-  assert.match(brand, /Probar una clase gratis/);
+  // Clean hero (owner, 2026-11-18, EnglishCue style): one button, one small line with the free lesson as a link.
+  assert.match(brand, /PROBAR PRO · US\$0,99 LA PRIMERA SEMANA/);
+  assert.match(brand, /Luego US\$19,90\/mes · Cancelas cuando quieras · /);
+  assert.match(brand, /O prueba una clase gratis/);
+  const cta = await readFile('app/marketing/PromoHeroCta.tsx', 'utf8');
+  assert.match(cta, /PROBAR PRO · US\$0,99 LA PRIMERA SEMANA/);
+  for (const landing of ['app/marketing-landing/PaidLanding.tsx', 'app/marketing-landing/MarketingLanding.tsx', 'app/immersive/GoogleTeachersLanding.tsx']) {
+    assert.match(await readFile(landing, 'utf8'), /<PromoHeroCta /);
+  }
   assert.doesNotMatch(brand, /PROMO_WEEK_UNTIL/);
   assert.match(ui, /promo\.eligible === false\) return null/);
   assert.match(ui, /checkoutPaddle\("monthly"\)/);

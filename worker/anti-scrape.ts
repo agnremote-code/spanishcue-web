@@ -9,9 +9,11 @@
  *    vite.config.ts).
  *
  * Search engines and link previews are exempt from all three, and nothing here
- * touches POSTs, APIs, webhooks, student links or static files. The limiter
- * fails open, like the abuse limiter, so a configuration gap never blocks a
- * teacher in class.
+ * touches POSTs, APIs, webhooks or student links. Scraping tools may fetch
+ * presentation files (bundles, styles, fonts, images); content files (JSON,
+ * audio, video) and the image transformer stay refused to them. The page
+ * limiter never counts static files, and it fails open, like the abuse
+ * limiter, so a configuration gap never blocks a teacher in class.
  */
 import { isBlockedCrawlerAgent, isScrapingToolAgent, isSearchEngineAgent } from "../app/crawler-policy";
 
@@ -21,6 +23,20 @@ const STATIC_FILE = /\.(?:avif|css|gif|ico|jpe?g|js|json|m4a|map|mp3|mp4|ogg|png
 
 function readOnly(request: Request): boolean {
   return request.method === "GET" || request.method === "HEAD";
+}
+
+/**
+ * Presentation files a page needs to render or preview (bundles, styles, fonts,
+ * images, icons, the manifest). Plain HTTP clients may fetch these: link
+ * unfurlers and app image loaders often send okhttp, Go-http-client or curl
+ * User-Agents, and a 403 here breaks a shared link's preview image. Content
+ * files (JSON data, audio, video) stay refused to scraping tools.
+ */
+const PRESENTATION_FILE = /\.(?:avif|css|gif|ico|jpe?g|js|map|png|svg|ttf|webmanifest|webp|woff2?)$/i;
+
+function presentationPath(pathname: string): boolean {
+  // Not /_vinext/image: each call runs a paid image transform.
+  return pathname.startsWith("/assets/") || pathname.startsWith("/_next/static/") || PRESENTATION_FILE.test(pathname);
 }
 
 function staticPath(pathname: string): boolean {
@@ -35,6 +51,7 @@ export function refusedAgent(request: Request, pathname: string): boolean {
   if (!isScrapingToolAgent(agent)) return false;
   // Release smokes and uptime checks use plain HTTP clients on these.
   if (pathname === "/" || OPEN_FILE.test(pathname) || pathname.startsWith("/api/") || pathname === "/s" || pathname.startsWith("/s/")) return false;
+  if (presentationPath(pathname)) return false;
   return true;
 }
 

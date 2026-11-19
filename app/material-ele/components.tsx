@@ -7,6 +7,7 @@ import { canonicalUrl } from "../seo";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import { JsonLd } from "../growth/components";
 import { elePreviewLesson, formatDateEs, pageImage } from "./media";
+import ExerciseCheck from "./ExerciseCheck";
 export { elePreviewLesson, formatDateEs, pageImage } from "./media";
 import { videoObjectSchema, type PageDates } from "../growth/schema";
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics, elePageBySlug, type EleActivity, type EleExercise, type EleQuestionSet } from "./data";
@@ -84,7 +85,7 @@ const categoryLabel = new Map(catalogLessons.map((lesson) => [lesson.id, lesson.
 
 /** Catalog cards with Spanish labels: free lessons first, unknown ids dropped. */
 export function eleLessonCards(ids: readonly number[]): LessonCardData[] {
-  return lessonCards(ids).map((card) => ({ ...card, category: categoryLabel.get(card.id) ?? card.category }));
+  return lessonCards(ids, "es").map((card) => ({ ...card, category: categoryLabel.get(card.id) ?? card.category }));
 }
 
 export function EleLessonGrid({ lessons }: { lessons: LessonCardData[] }) {
@@ -134,16 +135,8 @@ export function EleExerciseBlock({ exercise }: { exercise: EleExercise }) {
   return (
     <div className={ele.exercise}>
       <p>{exercise.instructions}</p>
-      <ol>
-        {exercise.items.map((item) => (
-          <li key={item.q}>
-            <details>
-              <summary>{item.q}</summary>
-              <p><strong>Solución: </strong>{item.a}</p>
-            </details>
-          </li>
-        ))}
-      </ol>
+      {exercise.items.some((item) => item.q.includes("___")) ? <p>Escribe tu respuesta en cada hueco y pulsa «Comprobar respuestas»: la página te dice cuáles están bien y te muestra la solución explicada de las demás.</p> : null}
+      <ExerciseCheck items={exercise.items} />
     </div>
   );
 }
