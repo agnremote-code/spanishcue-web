@@ -4,6 +4,7 @@ import { MATERIAL_ELE_PATH, eleLevels } from "./data";
 import { INDICE_PATH, indiceCount } from "./indice";
 import { temaGroups, temaPages } from "./temas";
 import { guiaPages } from "./guias";
+import { FICHAS_GRATIS_PATH, fichasGratis } from "./fichas-gratis";
 
 /** Server-rendered index of Material ELE on the home page, for visitors without PRO: every topic is one click from the home page,
  * which is how crawlers find the Spanish cluster fastest. Spanish only, because the pages are Spanish. */
@@ -13,7 +14,7 @@ export default function MaterialEleHomeLinks() {
       <div className="mk-section-heading">
         <small>MATERIAL ELE GRATIS PARA PROFESORES</small>
         <h2 id="mk-ele-title">Material ELE por tema y por nivel</h2>
-        <p>{temaPages.length} temas de gramática, vocabulario, funciones, cultura y formatos, con las clases que enseñan cada uno. <Link href={INDICE_PATH}>Índice completo ({indiceCount} páginas)</Link></p>
+        <p>{temaPages.length} temas de gramática, vocabulario, funciones, cultura y formatos, con las clases que enseñan cada uno. <Link href={INDICE_PATH}>Índice completo ({indiceCount} páginas)</Link> · <Link href={FICHAS_GRATIS_PATH}>{fichasGratis.length} fichas completas y gratis</Link></p>
       </div>
       <div className="mk-ele-grid">
         {temaGroups.map((group) => (

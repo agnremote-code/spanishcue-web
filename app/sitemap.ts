@@ -13,6 +13,7 @@ import { INDICE_PATH, lastModifiedByPath } from "./material-ele/indice";
 import { elePreviewLesson } from "./material-ele/media";
 import { guiaPages } from "./material-ele/guias";
 import { FICHAS_PATH, fichaPages } from "./material-ele/fichas";
+import { FICHAS_GRATIS_LEVELS, FICHAS_GRATIS_PATH, fichasGratis, packPath } from "./material-ele/fichas-gratis";
 import { PLANTILLAS_PATH, plantillaFiles, plantillas } from "./material-ele/plantillas";
 import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
@@ -58,6 +59,9 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...temaLevelPages.map((page) => ({ path: page.path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: ACTIVIDADES_PATH, priority: 0.85, changeFrequency: "weekly" },
   ...bancoPaths.map((path) => ({ path, priority: 0.7, changeFrequency: "monthly" as Frequency })),
+  { path: FICHAS_GRATIS_PATH, priority: 0.9, changeFrequency: "weekly" },
+  ...fichasGratis.map((page) => ({ path: page.freePath, priority: 0.8, changeFrequency: "monthly" as Frequency })),
+  ...FICHAS_GRATIS_LEVELS.map((level) => ({ path: packPath(level), priority: 0.75, changeFrequency: "monthly" as Frequency })),
   { path: FICHAS_PATH, priority: 0.85, changeFrequency: "weekly" },
   ...fichaPages.map((page) => ({ path: page.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
   { path: PLANTILLAS_PATH, priority: 0.85, changeFrequency: "weekly" },

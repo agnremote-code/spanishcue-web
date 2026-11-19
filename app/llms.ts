@@ -2,6 +2,7 @@ import { catalogSummary, freeLessonCards } from "./growth/lessons";
 import { MATERIAL_ELE_PATH } from "./material-ele/data";
 import { ACTIVIDADES_PATH } from "./material-ele/actividades";
 import { FICHAS_PATH, fichaPages } from "./material-ele/fichas";
+import { FICHAS_GRATIS_PATH, fichasGratis } from "./material-ele/fichas-gratis";
 import { guiaPages } from "./material-ele/guias";
 import { INDICE_PATH, FEED_PATH } from "./material-ele/indice";
 import { SITE_ORIGIN } from "./seo";
@@ -54,6 +55,7 @@ export function llmsTxt(): string {
     "",
     "## Material gratis para imprimir o proyectar",
     "",
+    link("Fichas ELE completas y 100 % gratis", FICHAS_GRATIS_PATH, `${fichasGratis.length} fichas enteras de A1 a C2, con soluciones, sin registro ni pagos`),
     link("Fichas ELE de gramática con soluciones", FICHAS_PATH, `${fichaPages.length} fichas de A1 a C2`),
     link("Banco de actividades ELE", ACTIVIDADES_PATH, "fichas, ejercicios con soluciones y preguntas de conversación"),
     link("Índice completo de Material ELE", INDICE_PATH, "todas las páginas abiertas en una lista"),
