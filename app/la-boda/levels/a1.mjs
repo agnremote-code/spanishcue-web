@@ -12,7 +12,7 @@ export default {
     ask: '¿Qué vas a hacer primero?',
     options: [
       { say: 'Es el auto de Facundo. Voy a llevar su saco a la capilla.', reply: '¿Y el padrino dónde está? La ceremonia empieza en media hora.', end: 'Tienes el saco del padrino en el brazo. En los bolsillos hay un pañuelo y una nota, pero no hay anillos.', mood: 'worried' },
-      { say: 'Señor, la invitación es del padrino. Yo voy con él. Mi nombre tiene que estar con el suyo.', reply: 'Bueno, usted tiene cara de buena persona. Pase.', end: 'Anselmo escribe tu nombre al final de la lista, con letra muy pequeña: «de parte del padrino».', mood: 'smile' },
+      { say: 'Señor, la invitación es del padrino. Vengo con él. Mi nombre tiene que estar con el suyo.', reply: 'Bueno, usted tiene cara de buena persona. Pase.', end: 'Anselmo escribe tu nombre al final de la lista, con letra muy pequeña: «de parte del padrino».', mood: 'smile' },
       { say: 'Wilmer, yo lo ayudo. La llave tiene que estar en el auto.', reply: '¡Aquí está! Debajo del asiento. Gracias, amigo.', end: 'Wilmer apaga el motor. Ahora el auto de Facundo está en el estacionamiento, con los otros.', mood: 'laugh' },
     ],
     talk: [
@@ -103,7 +103,7 @@ export default {
     ],
     ask: 'La abuela te ofrece el mate. ¿Qué le dices?',
     options: [
-      { say: 'Doña Chela, ¿tiene fotos de su boda?', reply: '¿Fotos? No tengo fotos de mi boda. Mi novio y yo nos escapamos a caballo.', end: 'La abuela se ríe fuerte. En 1962 se escapa de noche con su novio, en un caballo blanco.', mood: 'laugh' },
+      { say: 'Doña Chela, ¿tiene fotos de su boda?', reply: '¿Fotos? No hay fotos. Mi novio y yo nos escapamos a caballo.', end: 'La abuela se ríe fuerte. En 1962 se escapa de noche con su novio, en un caballo blanco.', mood: 'laugh' },
       { say: 'Joaquín es un buen chico. ¿Por qué no le hace preguntas?', reply: 'Muy bien. Tráelo. Va a tener un examen.', end: 'La abuela le hace diez preguntas a Joaquín. Él aprueba con un seis y toma un mate horrible.', mood: 'smile' },
       { say: 'Doña Chela, ¿cómo se llama su esposo?', reply: 'Aurelio. Cincuenta y un años juntos. Y cincuenta y un años de peleas.', end: 'La abuela mira una foto de su esposo. Está triste y contenta al mismo tiempo.', mood: 'sad' },
     ],
@@ -282,12 +282,12 @@ export default {
     line: 'La pista de baile está vacía. Solo hay un hombre: Don Horacio, el padre de la novia. Practica el vals con los brazos en el aire. Tiene una rodilla mala y a las diez tiene que bailar con su hija.',
     dialogue: [
       ['horacio', 'Uno, dos, tres. Uno, dos… ¡Ay! Mi rodilla.'],
-      ['horacio', 'Esta fiesta cuesta mucho. Mi auto ya no es mío. Vendo el auto para la boda.'],
+      ['horacio', 'Esta fiesta cuesta mucho. Mi auto ya no es mío. Ahora es de mi vecino. Todo para la boda.'],
       ['horacio', 'Shhh. Valentina no sabe nada.'],
     ],
     ask: '¿Qué le dices a Don Horacio?',
     options: [
-      { say: '¿Usted vende su auto por la fiesta? Es un regalo enorme.', reply: 'Un auto es un auto. Mi hija es mi hija.', end: 'Don Horacio sonríe. No tiene auto, pero tiene una hija feliz. Es suficiente.', mood: 'sad' },
+      { say: '¿Su auto ya no es suyo? ¿Por la fiesta? Es un regalo enorme.', reply: 'Un auto es un auto. Mi hija es mi hija.', end: 'Don Horacio sonríe. No tiene auto, pero tiene una hija feliz. Es suficiente.', mood: 'sad' },
       { say: 'Pasos pequeños, Don Horacio. Uno, dos, tres. Despacio.', reply: 'Pasos pequeños… Así no me duele.', end: 'Don Horacio baila despacio. Con pasos pequeños es elegante, como un señor de película.', mood: 'smile' },
       { say: 'Usted baila mal, pero baila. Eso es lo importante.', reply: '¡Ja! Tienes razón. ¡Bailo mal y con orgullo!', end: 'Don Horacio baila mal y se ríe mucho. Los invitados lo aplauden.', mood: 'laugh' },
     ],
@@ -380,7 +380,7 @@ export default {
     ask: '¿Qué le dices a Facundo?',
     options: [
       { say: '¿Me das tu papel? Yo puedo leer tus palabras.', reply: '¿Tú? Bueno… Las palabras son buenas. Yo no soy bueno.', end: 'Tienes el papel de Facundo. Hay frases muy bonitas sobre la amistad.', mood: 'smile' },
-      { say: 'Lo siento mucho, Facundo. ¿Quieres hablar de tu papá?', reply: 'Sí. En mis recuerdos siempre está en un asado, bailando muy mal.', end: 'Facundo habla de su papá veinte minutos. Llora y ríe al mismo tiempo.', mood: 'sad' },
+      { say: 'Lo siento mucho, Facundo. ¿Quieres hablar de tu papá?', reply: 'Sí. En mis recuerdos siempre está en un asado. Baila muy mal.', end: 'Facundo habla de su papá veinte minutos. Llora y ríe al mismo tiempo.', mood: 'sad' },
       { say: 'Vamos a la fiesta. Joaquín te necesita.', reply: '¿Y si se enoja? Bueno. Vamos.', end: 'Facundo se levanta. Caminan juntos a la carpa. Él tiene los ojos rojos.', mood: 'love' },
     ],
     talk: [

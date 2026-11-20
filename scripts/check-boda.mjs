@@ -62,15 +62,17 @@ export function choiceBalance(level, file) {
 }
 
 // A1 is present tense (see the header of levels/a1.mjs). Past forms that an
-// A1 student would have to read or say are refused: second-person preterites
-// (-aste, -iste), third-person preterites ending in an accented -ó, and the
-// common past forms of ser, estar, tener, hacer and haber. «murió» is the one
-// fixed chunk the scene needs (Facundo's father). Nouns such as «triste»,
-// «chiste» or «canción» are not verbs and are excluded. Known gaps: regular
-// first-person preterites (-é, -í) and -aba / -ía imperfects are not caught,
-// because their forms collide with A1 vocabulary (café, aquí, día, tía).
-const PAST_A1 = /(?<![\p{L}])(\p{L}+(?:aste|iste|ó)|eras|era|eran|estuvo|estuviste|estaba|estabas|fue|fuiste|fueron|tuvo|tuviste|tuve|hizo|hice|hiciste|había|habías)(?![\p{L}])/giu;
-const PAST_A1_OK = new Set(['murió', 'triste', 'tristes', 'chiste', 'chistes', 'existe', 'insiste', 'consiste', 'resiste', 'viste', 'alpiste']);
+// A1 student would have to read or say are refused: preterites in -aste,
+// -iste, -aron, -ieron and an accented final -ó, the common strong preterites
+// and past forms of ser, estar, tener, hacer, decir, poder and haber, and the
+// present perfect (he/ha/han… + -ado/-ido). «murió» is the one fixed chunk the
+// scene needs (Facundo's father). Words such as «triste» and «chiste» end like
+// a preterite but are not verbs, so they are allowed by name. Known gaps:
+// regular first-person preterites (-é, -í) and -aba / -ía imperfects are not
+// caught, because their forms collide with A1 vocabulary (café, aquí, día,
+// tía); «viste» is allowed because it is also the present of «vestir».
+const PAST_A1 = /(?<![\p{L}])(\p{L}+(?:aste|iste|aron|ieron|ó)|eras|era|eran|estuvo|estuviste|estuvimos|estaba|estabas|fue|fuiste|fuimos|fueron|tuvo|tuviste|tuvimos|tuve|hizo|hice|hiciste|dijo|dije|dijiste|puso|pudo|quiso|supo|trajo|hubo|había|habías|(?:he|has|ha|hemos|han)\s+\p{L}+(?:ado|ido))(?![\p{L}])/giu;
+const PAST_A1_OK = new Set(['murió', 'triste', 'tristes', 'chiste', 'chistes', 'existe', 'insiste', 'consiste', 'resiste', 'viste', 'alpiste', 'contraste', 'despiste', 'quiste', 'capó', 'dominó', 'bistró']);
 export function pastAtA1(text) {
   return [...String(text).matchAll(PAST_A1)].map((m) => m[1]).filter((t) => !PAST_A1_OK.has(t.toLocaleLowerCase('es')));
 }

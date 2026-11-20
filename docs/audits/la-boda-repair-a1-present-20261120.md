@@ -20,11 +20,13 @@
   - The duplicate talk question at :345 is replaced by a new present-tense one.
   - :106 «nos escapamos» reads as a present to an A1 learner and as natural past narration to a native speaker. «murió» at :377 stays as the one fixed past chunk.
   - :406 no longer marks the student's gender («solo»).
+  - **After G4 (applied by the facilitator from the reviewer's suggested wording, then delta-reviewed):** NB1 :106 reply «¿Fotos? No hay fotos.» (A2–C2 say there was no wedding); NB2 :383 reply without the gerund («…en un asado. Baila muy mal.»); NB3 :15 «Vengo con él»; NB4 two more present-for-past lines of the same defect type, :285 «Mi auto ya no es mío. Ahora es de mi vecino. Todo para la boda.» and :290 «¿Su auto ya no es suyo? ¿Por la fiesta? Es un regalo enorme.». Total: 15 lines, 18 strings in La boda A1.
   - Keys, option counts, moods and every `end` narration are unchanged. No string is copied from a2.mjs. These strings have no recorded audio.
 - **Guard (facilitator):** `scripts/check-boda.mjs` exports `pastAtA1(text)`. At A1, `checkLevel` refuses past forms in every scene string: title, line, ask, dialogue, option say/reply/end and talk. It catches second-person preterites (-aste/-iste), third-person preterites ending in -ó, and the common past forms of ser, estar, tener, hacer and haber. Exclusions: «murió» and nouns such as triste or chiste.
+  - After G4 NB6–NB9 the guard also refuses -aron/-ieron, the strong preterites (dijo, puso, pudo, quiso, supo, trajo, hubo…), fuimos/estuvimos/tuvimos and the present perfect (he/ha/han… + -ado/-ido). Allowed by name: contraste, despiste, quiste, capó, dominó, bistró. «viste» stays allowed (also the present of «vestir»), which is a known miss.
   - **Known gaps:** regular first-person preterites (-é/-í) and -aba/-ía imperfects are not caught, because their forms collide with A1 words (café, aquí, día, tía). Present forced onto past meaning cannot be caught by a machine; it was removed by authoring and by review.
   - Boundaries are Unicode lookarounds (JS `\b` is ASCII-only).
-- **Test:** a new test in `tests/la-boda.test.mjs` runs 8 past probes and 8 A1-legitimate probes, a seeded A1 scene with 3 injected past forms, and checks that A2 is unaffected. **It fails against main's A1** (4 findings; VERIFIED by swapping in main's a1.mjs: the test fails, 12 pass / 1 fail).
+- **Test:** a new test in `tests/la-boda.test.mjs` runs 14 past probes (8 + 6 added after G4 NB8) and 8 A1-legitimate probes, a seeded A1 scene with 3 injected past forms, and checks that A2 is unaffected. **It fails against main's A1** (4 findings; VERIFIED by swapping in main's a1.mjs: 11 pass / 2 fail of 13, the new test and «18 scenes × 7 levels pass the checker», because `checkLevel` now includes the past check; corrected per G4 B1).
 
 ## Gates
 - **G3** `npm run test:language`: pass. 43/43; neutral-Spanish guard «0 unresolved findings across 2312 source files»; ENGLISH COPY UNCHANGED (Martin's run on the final text).
@@ -39,4 +41,7 @@
 - Martin's other findings (El tren A1/A2 above-level input, «hacer fotos», «enfadarse») stay open in the audit.
 
 ## G4 review
-_(filled in after the independent review)_
+- **Reviewer:** a fresh agent acting as Alejandro, who wrote neither the content nor the guard.
+- **First review on `94751e1d`: APPROVE WITH CHANGES.** One blocker, B1 (this file's test count was wrong, "12 pass / 1 fail" → 11 / 2 of 13), fixed. Notes NB1–NB4 (content), NB6–NB9 (guard misses, false positives, mutation-weak alternatives and the comment) applied; NB5 (:6 «tu invitación es con él», :194 stiff) left as a follow-up.
+- The reviewer VERIFIED: 24/24 la-boda + el-mundo-en-blanco tests, test:language 43/43, 4 findings on main's A1, A1 read in full (no other past form besides «murió»; two gerunds outside the stated scope, :19 «caminando» left), facts consistent with A2–C2, usted/tú consistent, :383 respectful.
+- **Delta review:** see below.

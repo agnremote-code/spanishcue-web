@@ -199,7 +199,7 @@ test('unmount frees the GPU: texture slots, shadow map, bloom targets, the PMREM
 });
 
 test('A1 stays in the present: the past-form guard catches the 2026-11-20 defects and leaves A1 vocabulary alone', () => {
-  for (const bad of ['Señor, el padrino me invitó.', '¿Cómo eras tú a los ocho años?', '¿Cuántos años estuvo casada, doña Chela?', '¿Montaste alguna vez a caballo?', '¿Qué hiciste ayer?', '¿Dónde estabas?', 'Fue un día largo.', '¿Viajaste solo?'])
+  for (const bad of ['Señor, el padrino me invitó.', '¿Cómo eras tú a los ocho años?', '¿Cuántos años estuvo casada, doña Chela?', '¿Montaste alguna vez a caballo?', '¿Qué hiciste ayer?', '¿Dónde estabas?', 'Fue un día largo.', '¿Viajaste solo?', '¿Comiste bien?', 'Hizo frío.', 'Estaba cansado.', 'Se casaron en 1962.', 'Me dijo la verdad.', 'Facundo ha llegado tarde.'])
     assert.ok(pastAtA1(bad).length > 0, `catches «${bad}»`);
   for (const ok of ['Mi papá murió en junio. Mi discurso es triste.', 'Cuéntame un chiste.', '¿Qué canción te gusta?', 'La invitación es del padrino.', 'Un café, por favor. ¿Dónde está mi tía?', '¿Existe el amor a primera vista?', 'Hoy es un día especial.', 'El corazón y la razón.'])
     assert.deepEqual(pastAtA1(ok), [], `accepts «${ok}»`);
