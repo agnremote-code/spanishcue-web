@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-19 by the Thursday reliability routine (scheduled cloud run; Sofia and Alejandro convened as fresh subagents; see "Current work")._
+_Last updated: 2026-11-20 by the Friday 3D + assessment routine (scheduled cloud run; Martin, Alejandro and a fresh G4 reviewer convened as subagents; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -81,7 +81,32 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-11-20 (Friday 3D + assessment routine): run started 02:09Z, W47 items 3 (Taller unblock), 5 and 8** (branch `claude/friday-assessment-20261120`). Thu 11-19 left its marker (#492). Subscription usage: **UNKNOWN**.
+- **2026-11-20 (Friday 3D + assessment routine): PR #500** (branch `claude/friday-assessment-20261120`, base main `f1d4a5dd`). Run-start marker pushed at 02:09Z (W47 item 0). Thu 11-19 left its marker (#492). Subscription usage: **UNKNOWN**.
+  - **Unit: gated content repair, «La boda» A1** (non-board world id 257, reported as a **repair**).
+    - Source: W47 item 5, Martin's sampled G3/G6 audit [non-board-sample-g3-g6-20261120.md](../audits/non-board-sample-g3-g6-20261120.md). El tren, La boda and El mundo en blanco all pass G3 and are PASS WITH NOTES on G6, so there is no reason for noindex or removing a level. The same pattern runs through all three A1 files: past plots told with the present only.
+    - Content (Martin): 15 lines and 18 strings in `app/la-boda/levels/a1.mjs`, which now stays in the present tense (4 past forms above A1 removed; the present forced onto past meaning rewritten, including «¿Cómo es?» about Facundo's dead father). Plus the calque «hace un error» → «se equivoca en algo importante» (`app/el-mundo-en-blanco/levels/a1.mjs:93`).
+    - Guard (facilitator): `pastAtA1` in `scripts/check-boda.mjs`. Test in `tests/la-boda.test.mjs`; it fails against main's A1 (4 findings; 11 pass / 2 fail of 13).
+    - LQG file: [la-boda-repair-a1-present-20261120.md](../audits/la-boda-repair-a1-present-20261120.md).
+    - **G4:** fresh agent as Alejandro, APPROVE WITH CHANGES (B1: a wrong count in the docs; NB1–NB4 content; NB6–NB9 guard), all applied; then **DELTA APPROVE**. NB5 («tu invitación es con él» at :6, the stiff line at :194) is a follow-up.
+  - **W47 assessment:** [assessments/2026-W47.md](assessments/2026-W47.md), written by Alejandro as a fresh agent from the facilitator's facts sheet.
+    - Search Console (Windsor, data through 11-17): 28 days 10-21..11-17 = **106 clicks, 1,637 impressions, position 14.82**. W46, full week: 49 clicks / 678 impressions.
+    - /material-ele: 69 clicks, 819 impressions, weighted position 11.1. /guides: 3 clicks, 165 impressions, weighted position 27.0.
+    - Indexed count UNKNOWN (R1).
+    - No new board world for the fourth week running. Non-board ungated featured worlds: now 9 (+3: HR Crisis, La casa, Último crucero).
+  - **W47 item 3(v), the Taller STT workflow: NOT done in this run.** The decision goes to W48 item 1. Alejandro recommends option (a): commit on #282's own branch to drop `escucha-3d-stt.yml`, then open one reviewed PR with a workflow that runs `check-escucha-3d-provable-stt.py`, never deploys, and is limited to `claude/escucha-3d-*`.
+  - **Board:** Martin (audit plus content), Alejandro (the assessment), and a separate fresh agent acting as Alejandro (G4 plus delta). Sofia was not convened, because no engine or frontend code changed. Record: [transcripts/2026-11-20-friday-3d-assessment.md](transcripts/2026-11-20-friday-3d-assessment.md); not byte-exact.
+  - **Found, not fixed (VERIFIED):**
+    - `node scripts/check-boda.mjs` exits 1 on main too: the A0 listening «¿Hablas solo a veces?» duplicates `app/choose-conversation/a1-data.ts`. The test suite does not run that CLI check.
+    - `app/la-boda/levels/a0.mjs:69` «¿De niño eras…?» is a past form at A0.
+    - El tren A1 uses the present for past meaning (:154, 161, 492–494) and a Peninsular perfect at :409. El tren A2 has dense B1/B2 input. Minor neutral drift: «hacer fotos», «enfadarse».
+    - In a shallow clone, `npm test` needs the pinned baseline commits fetched (829bfdef, 1d0c7656, 43e4b3eb), or entonacion and hablar-sin-cortar fail.
+  - **Checks and release:** filled in below once the PR is ready and released.
+  - **Next action (W48 plan, assessment §6):**
+    1. Mon 11-23: unblock and start Taller.
+    2. Wed: build and gate it.
+    3. Owner requests: the Paddle delivery log (no stored live webhook since 11-04), #360/#283 (they block F2), the gap that lets non-board worlds be featured without a level check, and F5.
+    4. Tue: the BOARD-DECISION-007 §3.4 sample.
+    - Next repair candidates: La boda A0:69 plus extending the guard to A0, El tren A1, and NB5.
 - **2026-11-19 (Thursday reliability routine): PR #492** (branch `claude/thursday-review-20261119`, base main `8eb9c490`). Run-start marker pushed at 02:05Z (W47 item 0). Wed 11-18 left its marker (#472). Subscription usage: **UNKNOWN**.
   - **Board:** two fresh subagents. Sofia did the read-only audit of every backend surface changed since `f95f4d80`. Alejandro did the independent code review (**APPROVE**, 0 blockers; NB1 and NB3 applied). Martin was not convened, because no content changed. The executives did not message each other. Record: [transcripts/2026-11-19-thursday-reliability.md](transcripts/2026-11-19-thursday-reliability.md). Messages 2 and 4 there are compact re-typings, not byte-exact.
   - **W47 item 4:**
