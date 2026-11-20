@@ -100,7 +100,17 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - `app/la-boda/levels/a0.mjs:69` «¿De niño eras…?» is a past form at A0.
     - El tren A1 uses the present for past meaning (:154, 161, 492–494) and a Peninsular perfect at :409. El tren A2 has dense B1/B2 input. Minor neutral drift: «hacer fotos», «enfadarse».
     - In a shallow clone, `npm test` needs the pinned baseline commits fetched (829bfdef, 1d0c7656, 43e4b3eb), or entonacion and hablar-sin-cortar fail.
-  - **Checks and release:** filled in below once the PR is ready and released.
+  - **Checks (local, Linux, head `1cc48a37`):**
+    - `npm test`: exit 0, 1,812 pass, 0 fail, after fetching the pinned baseline commits. The first run failed only on entonacion and hablar-sin-cortar, because of missing baseline objects in the shallow clone.
+    - la-boda + el-mundo-en-blanco tests: 24/24. test:language: 43/43.
+    - validate:artifact: OK. eslint on the changed files: 0 errors. `git diff --check`: clean.
+  - **Release (VERIFIED):** #500 merged as `93bd5fcc` (03:06:53Z); its tree is identical to PR head `1cc48a37`.
+    - CI + Auto Merge run [44662877622](https://github.com/agnremote-code/spanishcue-web/actions/runs/44662877622) passed on attempt 1. The last commit was pushed and its run skipped (draft) before the PR was marked ready.
+    - Staging run [44666258252](https://github.com/agnremote-code/spanishcue-web/actions/runs/44666258252) and production run [44666716304](https://github.com/agnremote-code/spanishcue-web/actions/runs/44666716304) both succeeded.
+    - "Production smoke" passed (job 136057674568, 03:20:54–03:21:04Z): `"passed": true` on https://spanishcue.com, and the rollback was skipped.
+    - main = production = `93bd5fcc`.
+    - The A1 strings sit behind PRO `/la-boda` and were not smoked individually (the sandbox proxy also refuses spanishcue.com). Their evidence is the guard, the regression test and the deploy.
+    - PUBLISHED.md entry: this records PR (`claude/friday-assessment-records-20261120`).
   - **Next action (W48 plan, assessment §6):**
     1. Mon 11-23: unblock and start Taller.
     2. Wed: build and gate it.
