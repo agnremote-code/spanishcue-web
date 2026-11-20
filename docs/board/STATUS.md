@@ -81,6 +81,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-20 (Friday 3D + assessment routine): run started 02:09Z, W47 items 3 (Taller unblock), 5 and 8** (branch `claude/friday-assessment-20261120`). Thu 11-19 left its marker (#492). Subscription usage: **UNKNOWN**.
 - **2026-11-19 (Thursday reliability routine): PR #492** (branch `claude/thursday-review-20261119`, base main `8eb9c490`). Run-start marker pushed at 02:05Z (W47 item 0). Wed 11-18 left its marker (#472). Subscription usage: **UNKNOWN**.
   - **Board:** two fresh subagents. Sofia did the read-only audit of every backend surface changed since `f95f4d80`. Alejandro did the independent code review (**APPROVE**, 0 blockers; NB1 and NB3 applied). Martin was not convened, because no content changed. The executives did not message each other. Record: [transcripts/2026-11-19-thursday-reliability.md](transcripts/2026-11-19-thursday-reliability.md). Messages 2 and 4 there are compact re-typings, not byte-exact.
   - **W47 item 4:**
