@@ -34,4 +34,3 @@ test('the PRO speech-attempt API is resolved with the visitor session', () => {
   assert.equal(isIdentityAware('/api/phonetics/speech-attempt'), true);
   assert.equal(isIdentityAware('/api/city-demo'), false);
 });
-

@@ -64,4 +64,3 @@ test('Worker constructs one catalog index outside fetch and keeps the existing a
   assert.match(worker, /const verifiedUser=identityAware&&firebaseTokenFromHeaders/);
   assert.match(worker, /const verifiedHeaders=authenticatedRequestHeaders\(routedHeaders,verifiedUser,account,ownerIdentity\)/);
 });
-
