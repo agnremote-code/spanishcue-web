@@ -73,11 +73,16 @@ function activityPage(page: ElePage, activity: EleActivity): ActividadPage {
 function exercisePage(page: ElePage, exercise: EleExercise): EjercicioPage {
   const slug = page.slug;
   const level = pageLevel(page);
-  const title = fit(`${exercise.title} online con soluciones, nivel ${level} | SpanishCue`, `${exercise.title} online con soluciones | SpanishCue`, `${exercise.title} con soluciones, nivel ${level} | SpanishCue`, `${exercise.title} con soluciones | SpanishCue`, `${exercise.title} | SpanishCue`);
+  // Topic exercises are named the way teachers search for them («ejercicios de gustar con soluciones»),
+  // with the topic page's own level range only once; level exercises keep their specific title.
+  const topic = page.kind === "topic" ? page.label.charAt(0).toLowerCase() + page.label.slice(1) : "";
+  const title = topic
+    ? fit(`Ejercicios de ${topic} con soluciones (${level}) | SpanishCue`, `Ejercicios de ${topic} con soluciones | SpanishCue`, `Ejercicios de ${topic} | SpanishCue`)
+    : fit(`${exercise.title} online con soluciones | SpanishCue`, `${exercise.title} con soluciones | SpanishCue`, `${exercise.title} | SpanishCue`);
   const description = describe(`${exercise.title}: ${exercise.items.length} frases para completar en línea, con corrección al instante y soluciones explicadas, nivel ${level}.`, `Para clase o de tarea, con ficha en PDF.`);
   return {
     kind: "ejercicio", slug, path: `${MATERIAL_ELE_PATH}/ejercicio/${slug}`, title, description, level, exercise, parent: page,
-    h1: `${exercise.title} (${exercise.items.length} frases con soluciones)`,
+    h1: topic ? `Ejercicios de ${topic}: ${exercise.items.length} frases con soluciones` : `${exercise.title} (${exercise.items.length} frases con soluciones)`,
     faq: [
       { question: "¿Cómo se usa este ejercicio en clase?", answer: `${exercise.instructions} El alumno escribe su respuesta en cada hueco y pulsa «Comprobar respuestas»: la página marca las correctas y muestra la solución explicada de las demás. En pantalla compartida, lo resuelven juntos; de tarea, descarga la ficha en PDF.` },
       { question: `¿Para qué nivel es?`, answer: `Para nivel ${level}. Si el alumno falla más de la mitad, vuelve a la guía «${page.h1}» y a su clase interactiva antes de repetirlo.` },
