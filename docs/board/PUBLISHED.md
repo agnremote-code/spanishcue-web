@@ -45,6 +45,15 @@ Entry format:
 
 ## Published
 
+## 2026-11-20 — «La boda» A1: back to the present tense (repair)
+- URL(s): https://spanishcue.com/la-boda, level A1 (PRO; anonymous users → /acceso). Also https://spanishcue.com/el-mundo-en-blanco, level A1, one talk question.
+- Level(s) / objectives: A1 only. Its objectives are unchanged: present tense, «ir a» + infinitive, «tener que», «hay», gustar. 18 strings on 15 lines no longer use past tenses above A1 (invitó, eras, estuvo, Montaste) or the present for past meaning. That includes «¿Cómo es?» about Facundo's dead father, which became condolence and an invitation to talk. In El mundo en blanco A1, the calque «hace un error» became «se equivoca en algo importante». Levels A0–C2 stay in the catalog.
+- PR / merged SHA / production deploy run: PR #500 → `93bd5fccd1453e0def5f06d63a1230abc53277fc`. CI + Auto Merge 44662877622 (on PR head `1cc48a37`), Deploy Staging 44666258252 and Deploy Production 44666716304, all successful.
+- Production smoke evidence: the production workflow's smoke against https://spanishcue.com (job 136057674568, 03:21Z) printed `"passed": true`, and the rollback was skipped. The A1 strings are PRO-only and were not smoked individually, so their evidence is the `pastAtA1` guard, the regression test (it fails on main's A1) and the deploy.
+- Concept file / LQG review file: `docs/audits/la-boda-repair-a1-present-20261120.md`. Source audit: `docs/audits/non-board-sample-g3-g6-20261120.md`.
+- Built by / reviewed by: Martin (audit and content), the facilitator (guard and test) / a fresh agent acting as Alejandro (G4: APPROVE WITH CHANGES with 1 blocker in the docs only, then DELTA APPROVE).
+- Known limitations: the guard misses regular first-person preterites, -aba/-ía imperfects and «viste». The present used for past meaning is not machine-checkable. A0:69 «eras» and NB5 (:6, :194) are follow-ups. Only A1 was re-read.
+
 ## 2026-11-13 — «Más allá: cielo e infierno» A2: hypotheses at A2 level (repair)
 - URL(s): https://spanishcue.com/mas-alla, level A2 (PRO; anonymous users → /acceso).
 - Level(s) / objectives: A2 only. Its objectives are unchanged (past tenses, comparisons, habits, simple wishes). B1 forms were removed from 16 encounter strings and 6 voice questions: «si + imperfecto de subjuntivo», the condicional compuesto, and bare hypothetical conditionals. Levels A0–C2 stay in the catalog.
