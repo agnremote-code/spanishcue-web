@@ -9,6 +9,7 @@ import { FICHAS_PATH, fichaBySlug, fichaPages } from "../../fichas";
 import { fichaGratisById } from "../../fichas-gratis";
 import { fichaContent } from "../../ficha-content";
 import { temaPages } from "../../temas";
+import { ejercicioBySlug } from "../../actividades";
 import { Bold } from "../../ficha-components";
 import PrintButton from "../../PrintButton";
 import ShareSnippet from "../../ShareSnippet";
@@ -30,6 +31,8 @@ export default async function FichaPage({ params }: Props) {
   if (!page || !content) notFound();
   const siblings = fichaPages.filter((other) => other.level === page.level && other.slug !== page.slug).slice(0, 12);
   const temas = temaPages.filter((tema) => tema.group === "gramatica" && tema.lessonIds.includes(page.id)).slice(0, 4);
+  // The topic exercise of each grammar theme this class belongs to: more practice with automatic correction.
+  const ejercicios = [...new Map(temaPages.filter((tema) => tema.group === "gramatica" && tema.lessonIds.includes(page.id) && tema.guide).map((tema) => ejercicioBySlug.get(tema.guide!)).filter((item) => item !== undefined).map((item) => [item.path, item])).values()].slice(0, 2);
   const lessonHref = lessonCards([page.id], "es")[0]?.href ?? page.lessonPath;
   const complete = fichaGratisById.get(page.id);
   const faq = [
@@ -126,6 +129,13 @@ export default async function FichaPage({ params }: Props) {
             <ol className={sheet.answers}>{content.exercises.map((item, index) => <li key={index}><strong><Bold text={item.answer} /></strong>{item.why ? <> <Bold text={item.why} /></> : null}</li>)}</ol>
           </Section>
 
+          {ejercicios.length ? (
+            <div className={print.noPrint}>
+              <Section title="Más práctica con corrección automática" intro="El alumno escribe, pulsa «Comprobar respuestas» y ve la solución explicada de cada frase.">
+                {ejercicios.map((item) => <p key={item.path}><Link className={styles.textLink} href={item.path}>{item.h1} →</Link></p>)}
+              </Section>
+            </div>
+          ) : null}
           {siblings.length ? (
             <div className={print.noPrint}>
               <Section title={`Más fichas de ${page.level}`}>
