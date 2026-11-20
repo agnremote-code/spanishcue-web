@@ -3,7 +3,6 @@ import {
   freeAudioPrefixes,
   fullAccessFromHeaders,
   isFreeLesson,
-  lessonAtPath,
   localLessonPath,
   ownerFromHeaders,
 } from "../app/access-policy";
@@ -11,6 +10,7 @@ import { verifyShareSession, redeem, privateHeaders, renewShareCookie, SHARE_COO
 import { applyShareHeaders, shareAllowsPath } from "./autoestudio-access";
 import { applyStudentPassHeaders, isStudentAudioPath, isStudentWorldLesson, studentPassScope, studentWorldPass } from "../app/jugar/student-pass";
 import { lessons } from "../app/lesson-catalog";
+import { createLessonPathIndex } from "./lesson-path-index";
 import { isPremiumBoardPath } from "../app/boards/access";
 import { isAutoestudioPath, isPremiumAutoestudioPath } from "../app/autoestudio/access";
 import { isHomeworkTopicAudio } from "../app/autoestudio/topics";
@@ -53,6 +53,10 @@ setCacheHandler(new BoundedCacheHandler());
 
 // At most a few renders at once per isolate (worker/render-gate.ts, incident 2026-11-17).
 const renderGate = new RenderGate();
+
+// Normalize the static catalog once per isolate, rather than on every request.
+// This stores lesson metadata only; every identity/access check below still runs.
+const findLessonAtPath = createLessonPathIndex(lessons);
 
 interface Env {
   ASSETS: Fetcher;
@@ -322,7 +326,7 @@ const app = {
       setSecurityHeaders(limited.headers, url, localeFromHeaders(request.headers));
       return limited;
     }
-    const lesson=lessonAtPath(pathname,lessons);
+    const lesson=findLessonAtPath(pathname);
     const premiumBoard=isPremiumBoardPath(pathname);
     const autoestudio=isAutoestudioPath(pathname);
     const shareApi=pathname.startsWith('/api/autoestudio/');
