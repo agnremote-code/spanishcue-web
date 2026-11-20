@@ -1,3 +1,4 @@
+import './lesson-path-index.test.mjs';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
@@ -33,3 +34,4 @@ test('the PRO speech-attempt API is resolved with the visitor session', () => {
   assert.equal(isIdentityAware('/api/phonetics/speech-attempt'), true);
   assert.equal(isIdentityAware('/api/city-demo'), false);
 });
+
