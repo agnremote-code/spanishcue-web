@@ -52,6 +52,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/about", priority: 0.5, changeFrequency: "monthly" },
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },
   { path: "/alternativa-a-profedeele", priority: 0.8, changeFrequency: "monthly" },
+  { path: "/clases-de-espanol-listas-para-dar", priority: 0.85, changeFrequency: "monthly" },
   ...guiaPages.map((page) => ({ path: page.path, priority: 0.85, changeFrequency: "monthly" as Frequency })),
   ...elePages.map((page) => ({ path: page.path, priority: page.kind === "level" ? 0.85 : 0.8, changeFrequency: "monthly" as Frequency })),
   ...temaGroups.map((group) => ({ path: group.path, priority: 0.85, changeFrequency: "weekly" as Frequency })),

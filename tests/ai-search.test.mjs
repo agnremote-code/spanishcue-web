@@ -45,3 +45,17 @@ test('AI search agents stay allowed and Bing ownership stays verifiable',()=>{
  assert.ok(code);
  assert.ok(readFileSync('app/layout.tsx','utf8').includes(`"msvalidate.01": "${code}"`));
 });
+
+test('the «clases listas para dar» answer page is indexed, Spanish-first and listed for AI assistants',async()=>{
+ const {build}=await import('esbuild');
+ const r2=await build({stdin:{contents:'export {isEdgeCacheablePath,isEnglishDefaultPath,isSearchPrivatePath} from "./app/seo.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {llmsTxt} from "./app/llms.ts";',resolveDir:process.cwd(),loader:'ts'},bundle:true,write:false,format:'esm',platform:'node'});
+ const s=await import('data:text/javascript;base64,'+Buffer.from(r2.outputFiles[0].text).toString('base64'));
+ const path='/clases-de-espanol-listas-para-dar';
+ assert.ok(s.sitemap().some(x=>x.url==='https://spanishcue.com'+path));
+ assert.ok(s.llmsTxt().includes('https://spanishcue.com'+path));
+ assert.equal(s.isEdgeCacheablePath(path),true);assert.equal(s.isEnglishDefaultPath(path),false);assert.equal(s.isSearchPrivatePath(path),false);
+ const page=readFileSync('app/clases-de-espanol-listas-para-dar/page.tsx','utf8');
+ assert.ok(page.indexOf('en-pocas-palabras')<page.indexOf('lado a lado'),'short answer first');
+ assert.doesNotMatch(page,/\d+ ?€|US?\$\d|\$\d/,'no hand-typed prices; PRICE_LABEL only');
+ assert.match(page,/const CHECKED = "/,'facts about other sites carry their check date');
+});
