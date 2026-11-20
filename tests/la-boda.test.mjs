@@ -12,7 +12,7 @@ import * as L from '../app/la-boda/layout.mjs';
 import { choose, closeScene, createState, doneFor, invitadoById, notesFor, openScene, progress, restore, sceneView, serialise, setLevel, undo } from '../app/la-boda/engine.mjs';
 import { INVITADOS } from '../app/la-boda/invitados.mjs';
 import { GAMES, listeningFor } from '../app/escucha-3d/games.mjs';
-import { checkLevel } from '../scripts/check-boda.mjs';
+import { checkLevel, pastAtA1 } from '../scripts/check-boda.mjs';
 import { scanSource } from '../scripts/neutral-spanish.mjs';
 
 const listening = (level) => JSON.parse(readFileSync(`app/escucha-3d/content/boda/${level.toLowerCase()}.json`, 'utf8'));
@@ -196,4 +196,20 @@ test('unmount frees the GPU: texture slots, shadow map, bloom targets, the PMREM
   assert.match(cleanup, /composer\?\.passes[\s\S]*pass\.dispose\(\)/);
   assert.match(cleanup, /envTarget\.dispose\(\)/);
   assert.match(cleanup, /renderer\.forceContextLoss\(\)/);
+});
+
+test('A1 stays in the present: the past-form guard catches the 2026-11-20 defects and leaves A1 vocabulary alone', () => {
+  for (const bad of ['Señor, el padrino me invitó.', '¿Cómo eras tú a los ocho años?', '¿Cuántos años estuvo casada, doña Chela?', '¿Montaste alguna vez a caballo?', '¿Qué hiciste ayer?', '¿Dónde estabas?', 'Fue un día largo.', '¿Viajaste solo?', '¿Comiste bien?', 'Hizo frío.', 'Estaba cansado.', 'Se casaron en 1962.', 'Me dijo la verdad.', 'Facundo ha llegado tarde.'])
+    assert.ok(pastAtA1(bad).length > 0, `catches «${bad}»`);
+  for (const ok of ['Mi papá murió en junio. Mi discurso es triste.', 'Cuéntame un chiste.', '¿Qué canción te gusta?', 'La invitación es del padrino.', 'Un café, por favor. ¿Dónde está mi tía?', '¿Existe el amor a primera vista?', 'Hoy es un día especial.', 'El corazón y la razón.'])
+    assert.deepEqual(pastAtA1(ok), [], `accepts «${ok}»`);
+  assert.deepEqual(checkLevel('A1', CONTENT.A1).filter((m) => /past form/.test(m)), [], 'A1 has no past forms besides «murió»');
+  const seeded = structuredClone(CONTENT.A1);
+  const first = STORY_IDS[0];
+  seeded[first].talk[0] = '¿Qué hiciste el fin de semana?';
+  seeded[first].options[1].say = 'Señor, el padrino me invitó.';
+  seeded[first].dialogue[0] = [seeded[first].dialogue[0][0], '¿Cómo eras de niño?'];
+  const found = checkLevel('A1', seeded).filter((m) => /past form/.test(m));
+  assert.equal(found.length, 3, found.join('\n'));
+  assert.deepEqual(checkLevel('A2', CONTENT.A2).filter((m) => /past form/.test(m)), [], 'A2 and up may use the past');
 });

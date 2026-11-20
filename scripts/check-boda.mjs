@@ -61,6 +61,22 @@ export function choiceBalance(level, file) {
   return out;
 }
 
+// A1 is present tense (see the header of levels/a1.mjs). Past forms that an
+// A1 student would have to read or say are refused: preterites in -aste,
+// -iste, -aron, -ieron and an accented final -ó, the common strong preterites
+// and past forms of ser, estar, tener, hacer, decir, poder and haber, and the
+// present perfect (he/ha/han… + -ado/-ido). «murió» is the one fixed chunk the
+// scene needs (Facundo's father). Words such as «triste» and «chiste» end like
+// a preterite but are not verbs, so they are allowed by name. Known gaps:
+// regular first-person preterites (-é, -í) and -aba / -ía imperfects are not
+// caught, because their forms collide with A1 vocabulary (café, aquí, día,
+// tía); «viste» is allowed because it is also the present of «vestir».
+const PAST_A1 = /(?<![\p{L}])(\p{L}+(?:aste|iste|aron|ieron|ó)|eras|era|eran|estuvo|estuviste|estuvimos|estaba|estabas|fue|fuiste|fuimos|fueron|tuvo|tuviste|tuvimos|tuve|hizo|hice|hiciste|dijo|dije|dijiste|puso|pudo|quiso|supo|trajo|hubo|había|habías|(?:he|has|ha|hemos|han)\s+\p{L}+(?:ado|ido))(?![\p{L}])/giu;
+const PAST_A1_OK = new Set(['murió', 'triste', 'tristes', 'chiste', 'chistes', 'existe', 'insiste', 'consiste', 'resiste', 'viste', 'alpiste', 'contraste', 'despiste', 'quiste', 'capó', 'dominó', 'bistró']);
+export function pastAtA1(text) {
+  return [...String(text).matchAll(PAST_A1)].map((m) => m[1]).filter((t) => !PAST_A1_OK.has(t.toLocaleLowerCase('es')));
+}
+
 export function checkLevel(level, content) {
   const out = [];
   const bad = (where, message) => out.push(`${level} ${where}: ${message}`);
@@ -108,6 +124,10 @@ export function checkLevel(level, content) {
     }
     if (new Set(talk.map((q) => es(q).toLocaleLowerCase('es'))).size !== talk.length) bad(at, 'talk questions repeat');
     if (talk.filter((q) => TRAVEL.test(es(q))).length > 2) bad(at, 'more than 2 of the 5 talk questions stay at the wedding; move them to the student\'s life');
+    if (level === 'A1') {
+      const texts = [s.title, s.line, s.ask, ...dialogue.map((d) => d?.[1]), ...options.flatMap((o) => [o?.say, o?.reply, o?.end]), ...talk];
+      for (const text of texts) for (const form of pastAtA1(es(text))) bad(at, `«${form}» is a past form; A1 is present tense («${es(text).slice(0, 60)}»)`);
+    }
     const list = Array.isArray(s.words) ? s.words : [];
     if (list.length < 4 || list.length > 6 || !list.every(word)) bad(at, `words needs 4 to 6 entries${a0 || level === 'A1' ? ', each { es, en }' : ''}`);
   }

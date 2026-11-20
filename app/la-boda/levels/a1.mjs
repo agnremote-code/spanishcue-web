@@ -12,7 +12,7 @@ export default {
     ask: '¿Qué vas a hacer primero?',
     options: [
       { say: 'Es el auto de Facundo. Voy a llevar su saco a la capilla.', reply: '¿Y el padrino dónde está? La ceremonia empieza en media hora.', end: 'Tienes el saco del padrino en el brazo. En los bolsillos hay un pañuelo y una nota, pero no hay anillos.', mood: 'worried' },
-      { say: 'Señor, el padrino me invitó. Mi nombre tiene que estar con el suyo.', reply: 'Bueno, usted tiene cara de buena persona. Pase.', end: 'Anselmo escribe tu nombre al final de la lista, con letra muy pequeña: «de parte del padrino».', mood: 'smile' },
+      { say: 'Señor, la invitación es del padrino. Vengo con él. Mi nombre tiene que estar con el suyo.', reply: 'Bueno, usted tiene cara de buena persona. Pase.', end: 'Anselmo escribe tu nombre al final de la lista, con letra muy pequeña: «de parte del padrino».', mood: 'smile' },
       { say: 'Wilmer, yo lo ayudo. La llave tiene que estar en el auto.', reply: '¡Aquí está! Debajo del asiento. Gracias, amigo.', end: 'Wilmer apaga el motor. Ahora el auto de Facundo está en el estacionamiento, con los otros.', mood: 'laugh' },
     ],
     talk: [
@@ -65,7 +65,7 @@ export default {
       '¿Qué te gusta hacer con los niños de tu familia?',
       '¿Tienes plantas en tu casa?',
       '¿Qué haces con la ropa sucia antes de un evento?',
-      '¿Cómo eras tú a los ocho años?',
+      '¿Qué juego de niños te gusta todavía?',
       '¿Guardas algún objeto pequeño de tu infancia?',
     ],
     words: [w('el paje', 'the page boy'), w('la tierra', 'the soil'), w('plantar', 'to plant'), w('la cuchara', 'the spoon'), w('crecer', 'to grow')],
@@ -82,7 +82,7 @@ export default {
     options: [
       { say: 'Vengo con Facundo. Tengo hilo de pescar en el bolsillo. Es transparente y muy fuerte.', reply: '¿Hilo de pescar? ¿Para mi vestido? Bueno, sí. ¡Rápido!', end: 'Camila cose el vestido con hilo de pescar. No se ve nada. Valentina respira con cuidado.', mood: 'laugh' },
       { say: 'Camila, tú puedes. Yo voy a buscar hilo blanco a la cocina.', reply: 'Gracias. Y trae un vaso de agua para la novia.', end: 'Vuelves con hilo blanco y agua. Camila cose rápido y con las manos firmes.', mood: 'smile' },
-      { say: 'Valentina, ¿tu abuela tiene su vestido de novia aquí?', reply: 'Sí, en el armario. Es de 1962. Nunca me lo pruebo.', end: 'El vestido de la abuela es perfecto. Valentina llora un poco y Camila arregla su maquillaje.', mood: 'love' },
+      { say: 'Valentina, ¿tu abuela tiene su vestido de novia aquí?', reply: 'Sí, en el armario. Es de 1962, pero está como nuevo.', end: 'El vestido de la abuela es perfecto. Valentina llora un poco y Camila arregla su maquillaje.', mood: 'love' },
     ],
     talk: [
       '¿Qué haces cuando algo se rompe en el último momento?',
@@ -103,9 +103,9 @@ export default {
     ],
     ask: 'La abuela te ofrece el mate. ¿Qué le dices?',
     options: [
-      { say: 'Abuela, ¿cómo es su boda? ¿Usted sabe bailar tango?', reply: '¿Mi boda? Yo no tengo boda. Yo me escapo a caballo.', end: 'La abuela se ríe fuerte. En 1962 se escapa de noche con su novio, en un caballo blanco.', mood: 'laugh' },
+      { say: 'Doña Chela, ¿tiene fotos de su boda?', reply: '¿Fotos? No hay fotos. Mi novio y yo nos escapamos a caballo.', end: 'La abuela se ríe fuerte. En 1962 se escapa de noche con su novio, en un caballo blanco.', mood: 'laugh' },
       { say: 'Joaquín es un buen chico. ¿Por qué no le hace preguntas?', reply: 'Muy bien. Tráelo. Va a tener un examen.', end: 'La abuela le hace diez preguntas a Joaquín. Él aprueba con un seis y toma un mate horrible.', mood: 'smile' },
-      { say: '¿Cuántos años estuvo casada, doña Chela?', reply: 'Cincuenta y un años. Y cincuenta y un años de peleas.', end: 'La abuela mira una foto de su esposo. Está triste y contenta al mismo tiempo.', mood: 'sad' },
+      { say: 'Doña Chela, ¿cómo se llama su esposo?', reply: 'Aurelio. Cincuenta y un años juntos. Y cincuenta y un años de peleas.', end: 'La abuela mira una foto de su esposo. Está triste y contenta al mismo tiempo.', mood: 'sad' },
     ],
     talk: [
       '¿Cómo son tus abuelos?',
@@ -191,7 +191,7 @@ export default {
     dialogue: [
       ['gloria', 'Pepe, levántate. Esa no es tu silla.'],
       ['pepe', 'El papel dice Pepe, Gloria. Mira bien.'],
-      ['gloria', '¿Quién hace este plano? ¿Una persona con odio?'],
+      ['gloria', '¿De quién es este plano? ¿De una persona con odio?'],
     ],
     ask: 'Gloria te da el papel. ¿Qué haces?',
     options: [
@@ -212,7 +212,7 @@ export default {
     title: 'Una mujer de rojo entre las rosas',
     line: 'En el rosedal hay una mujer con un vestido rojo. Es Renata, la exnovia de Joaquín. Tiene una caja de cartón en las manos. Rocío, la florista, corta flores muy rápido y mira a Renata con miedo.',
     dialogue: [
-      ['renata', 'Hola. Tengo invitación. Me la da Facundo.'],
+      ['renata', 'Hola. Tengo invitación. Vengo con Facundo.'],
       ['rocio', '¿Facundo, el padrino? ¿Por qué?'],
       ['renata', 'Porque Facundo es mi novio. Desde marzo. Y esta caja es para Joaquín.'],
     ],
@@ -243,7 +243,7 @@ export default {
     options: [
       { say: 'Primero usted, Mariela. ¿Cómo está? Tome un vaso de agua.', reply: 'Nadie me pregunta cómo estoy. Nadie, nunca.', end: 'Mariela respira, bebe el agua y escucha a su abogado. Después vuelve al trabajo, más tranquila.', mood: 'sad' },
       { say: 'Yo voy al micrófono. Tengo chistes malos para veinte minutos.', reply: '¿Malos? Perfecto. Los malos funcionan mejor.', end: 'Cuentas chistes malos veinte minutos. La gente ríe de vergüenza. Mariela tiene su tiempo.', mood: 'laugh' },
-      { say: 'Cambiamos el plan: primero la comida, después la música.', reply: '¿Por qué no lo pienso yo? Vamos.', end: 'El plan cambia. Los mozos sirven las empanadas. Los invitados comen y nadie espera.', mood: 'smile' },
+      { say: 'Cambiamos el plan: primero la comida, después la música.', reply: '¡Claro! Así de simple. Vamos.', end: 'El plan cambia. Los mozos sirven las empanadas. Los invitados comen y nadie espera.', mood: 'smile' },
     ],
     talk: [
       '¿Haces muchas cosas al mismo tiempo?',
@@ -282,12 +282,12 @@ export default {
     line: 'La pista de baile está vacía. Solo hay un hombre: Don Horacio, el padre de la novia. Practica el vals con los brazos en el aire. Tiene una rodilla mala y a las diez tiene que bailar con su hija.',
     dialogue: [
       ['horacio', 'Uno, dos, tres. Uno, dos… ¡Ay! Mi rodilla.'],
-      ['horacio', 'Esta fiesta cuesta mucho. Mi auto ya no es mío. Vendo el auto para la boda.'],
+      ['horacio', 'Esta fiesta cuesta mucho. Mi auto ya no es mío. Ahora es de mi vecino. Todo para la boda.'],
       ['horacio', 'Shhh. Valentina no sabe nada.'],
     ],
     ask: '¿Qué le dices a Don Horacio?',
     options: [
-      { say: '¿Usted vende su auto por la fiesta? Es un regalo enorme.', reply: 'Un auto es un auto. Mi hija es mi hija.', end: 'Don Horacio sonríe. No tiene auto, pero tiene una hija feliz. Es suficiente.', mood: 'sad' },
+      { say: '¿Su auto ya no es suyo? ¿Por la fiesta? Es un regalo enorme.', reply: 'Un auto es un auto. Mi hija es mi hija.', end: 'Don Horacio sonríe. No tiene auto, pero tiene una hija feliz. Es suficiente.', mood: 'sad' },
       { say: 'Pasos pequeños, Don Horacio. Uno, dos, tres. Despacio.', reply: 'Pasos pequeños… Así no me duele.', end: 'Don Horacio baila despacio. Con pasos pequeños es elegante, como un señor de película.', mood: 'smile' },
       { say: 'Usted baila mal, pero baila. Eso es lo importante.', reply: '¡Ja! Tienes razón. ¡Bailo mal y con orgullo!', end: 'Don Horacio baila mal y se ríe mucho. Los invitados lo aplauden.', mood: 'laugh' },
     ],
@@ -310,7 +310,7 @@ export default {
     ],
     ask: 'Ximena te mira. ¿Qué le dices?',
     options: [
-      { say: 'Tu vida es tuya. No tienes que contestar.', reply: '¿No? Nunca pienso en eso.', end: 'La tía hace la pregunta número trece. Ximena dice «No, gracias» y se va a bailar.', mood: 'laugh' },
+      { say: 'Tu vida es tuya. No tienes que contestar.', reply: '¿No? Tienes razón. No tengo que contestar.', end: 'La tía hace la pregunta número trece. Ximena dice «No, gracias» y se va a bailar.', mood: 'laugh' },
       { say: 'Edgardo, ¿usted tiene un consejo para Ximena?', reply: 'Un consejo: una mujer feliz no necesita explicar nada.', end: 'Ximena va a la pista y baila sola. Baila muy bien. Las tías la miran en silencio.', mood: 'smile' },
       { say: 'Para mí, un jugo de naranja. ¿Tú quieres uno?', reply: 'Un jugo. Bueno. Así hablamos de verdad.', end: 'Ximena y tú toman jugo y hablan media hora. Ella está cansada de fingir.', mood: 'sad' },
     ],
@@ -342,7 +342,7 @@ export default {
       '¿Montas a caballo o no?',
       '¿Qué animal de campo te gusta más?',
       '¿Qué te da miedo a ti?',
-      '¿Montaste alguna vez a caballo?',
+      '¿Te gustan los fuegos artificiales o te molesta el ruido?',
     ],
     words: [w('el establo', 'the stable'), w('el peón', 'the farmhand'), w('el ramo', 'the bouquet'), w('el heno', 'the hay'), w('los fuegos artificiales', 'the fireworks')],
   },
@@ -380,7 +380,7 @@ export default {
     ask: '¿Qué le dices a Facundo?',
     options: [
       { say: '¿Me das tu papel? Yo puedo leer tus palabras.', reply: '¿Tú? Bueno… Las palabras son buenas. Yo no soy bueno.', end: 'Tienes el papel de Facundo. Hay frases muy bonitas sobre la amistad.', mood: 'smile' },
-      { say: 'Cuéntame de tu papá. ¿Cómo es?', reply: 'En mi cabeza siempre está contento. Baila muy mal y ama los asados.', end: 'Facundo habla de su papá veinte minutos. Llora y ríe al mismo tiempo.', mood: 'sad' },
+      { say: 'Lo siento mucho, Facundo. ¿Quieres hablar de tu papá?', reply: 'Sí. En mis recuerdos siempre está en un asado. Baila muy mal.', end: 'Facundo habla de su papá veinte minutos. Llora y ríe al mismo tiempo.', mood: 'sad' },
       { say: 'Vamos a la fiesta. Joaquín te necesita.', reply: '¿Y si se enoja? Bueno. Vamos.', end: 'Facundo se levanta. Caminan juntos a la carpa. Él tiene los ojos rojos.', mood: 'love' },
     ],
     talk: [
@@ -397,13 +397,13 @@ export default {
     line: 'Son las doce de la noche. La música termina y las luces de la carpa bajan. Todos tienen una copa en la mano. Mariela te da el micrófono. Los novios te miran.',
     dialogue: [
       ['mariela', 'Ahora tú. Tienes tres minutos. Habla.'],
-      ['valentina', 'No te conozco, pero hoy nos salvas muchas veces.'],
+      ['valentina', 'No te conozco, pero gracias por todo lo de hoy.'],
       ['joaquin', 'Tranquilo. Aquí todos somos familia.'],
     ],
     ask: 'Tienes tus notas en la mano. ¿Cómo empiezas?',
     options: [
       { say: 'Hola a todos. Yo no soy el padrino. Soy el plan B.', reply: '¡Viva el plan B!', end: 'Todos ríen. Lees tus notas y, al final, ciento sesenta copas suben al mismo tiempo.', mood: 'laugh' },
-      { say: 'Hoy llego solo. Ahora tengo una familia grande y un poco loca.', reply: '¡Muy loca!', end: 'La abuela Chela aplaude primero. Lees tus notas despacio y muchos lloran.', mood: 'love' },
+      { say: 'Mi invitación es prestada, pero ahora tengo una familia grande y un poco loca.', reply: '¡Muy loca!', end: 'La abuela Chela aplaude primero. Lees tus notas despacio y muchos lloran.', mood: 'love' },
       { say: 'Valentina, Joaquín: ¡felicidades! Este brindis es de todos.', reply: '¡Salud!', end: 'Lees cada nota. Cada persona escucha su nombre y levanta la copa.', mood: 'smile' },
     ],
     talk: [

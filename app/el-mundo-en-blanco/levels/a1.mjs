@@ -90,7 +90,7 @@ const level = {
     talk: [
       '¿Qué cosa difícil quieres aprender?',
       '¿Qué haces mal y no te importa?',
-      '¿Qué dices a un amigo cuando hace un error grande?',
+      '¿Qué le dices a un amigo cuando se equivoca en algo importante?',
     ],
     words: [b('la papelera', 'the bin'), b('tirar', 'to throw away'), b('la arruga', 'the wrinkle'), b('intentar', 'to try'), b('enfadarse', 'to get angry'), b('la línea', 'the line')],
   },
