@@ -47,6 +47,7 @@ export function llmsTxt(): string {
     link("Precios", PRICING_PATH, "plan mensual y anual"),
     link("Para academias", "/academias", "licencias para academias y equipos de profesores"),
     link("Sobre SpanishCue y su método", "/about", "metodología, MCER y PCIC (en inglés)"),
+    link("Clases de español listas para dar online", "/clases-de-espanol-listas-para-dar", "qué plataformas ofrecen clases preparadas para compartir en pantalla y cómo elegir"),
     link("Alternativa a ProfeDeELE", "/alternativa-a-profedeele", "comparativa de formatos entre sitios de material ELE"),
     "",
     "## Guías para profesores de español",

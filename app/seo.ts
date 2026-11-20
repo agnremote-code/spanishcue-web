@@ -130,6 +130,7 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path === "/spanish-grammar-lessons" ||
     path.startsWith("/spanish-grammar-lessons/") ||
     path === "/alternativa-a-profedeele" ||
+    path === "/clases-de-espanol-listas-para-dar" ||
     path === "/material-ele" ||
     path.startsWith("/material-ele/") ||
     // Crawler endpoints: identical for every visitor and fetched constantly by
