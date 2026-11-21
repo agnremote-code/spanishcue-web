@@ -43,6 +43,9 @@ export default async function ElePage({ params }: Props) {
   const preview = elePreviewLesson(page.lessonIds);
   const levelPages = temaLevelsForTopic(page.slug);
   const ejercicio = ejercicioBySlug.get(page.slug);
+  // A long topic exercise lives in full on its own page (the one built for «ejercicios de …» searches);
+  // the guide shows the first sentences so the two pages are not duplicates of each other.
+  const exercisePreview = page.kind === "topic" && ejercicio && page.exercise && page.exercise.items.length > 12 ? { ...page.exercise, items: page.exercise.items.slice(0, 8) } : undefined;
   const fichaIds = [...new Set([...page.lessonIds, ...(temasByGroup("gramatica").find((tema) => tema.slug === page.slug)?.lessonIds ?? [])])];
   return (
     <>
@@ -87,9 +90,9 @@ export default async function ElePage({ params }: Props) {
           </Section>
 
           {page.exercise ? (
-            <Section id="ejercicio" title={page.exercise.title}>
-              <EleExerciseBlock exercise={page.exercise} />
-              {ejercicio ? <p className={print.noPrint}><Link className={styles.textLink} href={ejercicio.path}>Ejercicio de {page.kind === "level" ? `nivel ${page.code}` : page.label.toLowerCase()} en página propia, para mandar al alumno: {ejercicio.exercise.items.length} frases con corrección automática y soluciones →</Link></p> : null}
+            <Section id="ejercicio" title={page.exercise.title} intro={exercisePreview ? `Las primeras ${exercisePreview.items.length} de ${page.exercise.items.length} frases. Las ${page.exercise.items.length}, con corrección automática y ficha en PDF, están en la página del ejercicio.` : undefined}>
+              <EleExerciseBlock exercise={exercisePreview ?? page.exercise} />
+              {ejercicio ? <p className={print.noPrint}><Link className={styles.textLink} href={ejercicio.path}>Ejercicio de {page.kind === "level" ? `nivel ${page.code}` : page.label.toLowerCase()} {exercisePreview ? "completo" : "en página propia"}, para mandar al alumno: {ejercicio.exercise.items.length} frases con corrección automática y soluciones →</Link></p> : null}
             </Section>
           ) : null}
 
