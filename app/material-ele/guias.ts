@@ -524,7 +524,7 @@ export const guiaPages: GuiaPage[] = [
         title: "Qué tiene que tener un ejercicio ELE con soluciones para servir en clase",
         blocks: [
           { type: "p", text: "No todos los ejercicios con respuestas valen lo mismo. Para que uno funcione en una clase real, en persona o por pantalla compartida, tiene que cumplir cuatro condiciones. **Una sola cosa por ejercicio**: ocho frases sobre ser y estar, no ocho frases que mezclan ser, estar, pasados y pronombres. **Frases con contexto**: «Mi profesora ___ argentina» se entiende sola; «___ alto» no. **Una solución visible a voluntad**: el alumno decide cuándo mirarla, el profesor decide si la proyecta. **Una consigna de una línea**: si la instrucción necesita un párrafo, el ejercicio está mal diseñado." },
-          { type: "p", text: `Los ${exercises} ejercicios del [banco de actividades](/material-ele/actividades) de SpanishCue cumplen las cuatro: entre seis y diez frases cada uno, una consigna, y cada frase se abre para ver la solución. Son gratis y no piden registro. Abajo están ordenados por nivel y por tema, con lo que practica cada uno.` },
+          { type: "p", text: `Los ${exercises} ejercicios del [banco de actividades](/material-ele/actividades) de SpanishCue cumplen las cuatro: los de nivel tienen entre seis y diez frases y los de cada tema de gramática, veinte o más, ordenadas de más fácil a más difícil; una consigna, y el alumno escribe, pulsa «Comprobar respuestas» y ve la solución explicada. Son gratis y no piden registro. Abajo están ordenados por nivel y por tema, con lo que practica cada uno.` },
         ],
       },
       {
@@ -554,7 +554,7 @@ export const guiaPages: GuiaPage[] = [
               { type: "ul", items: [
                 "[Ser, estar o hay](/material-ele/ejercicio/ser-y-estar) (A1–B1), con la [guía de ser y estar](/material-ele/ser-y-estar) para explicar antes de practicar.",
                 "[Indefinido o imperfecto](/material-ele/ejercicio/indefinido-e-imperfecto) (A2–B1): conjugar el verbo en el pasado que pide el relato. La [guía de los pasados](/material-ele/indefinido-e-imperfecto) tiene la explicación con ejemplos.",
-                "[Por o para](/material-ele/ejercicio/por-y-para) (A2–B1), diez frases con las preposiciones que más errores producen; guía en [por y para](/material-ele/por-y-para).",
+                "[Por o para](/material-ele/ejercicio/por-y-para) (A2–B1), veintidós frases con los usos que más errores producen; guía en [por y para](/material-ele/por-y-para).",
                 "[Indicativo o subjuntivo](/material-ele/ejercicio/subjuntivo) (B1–C1): elegir el modo en frases con «creo que», «no creo que», «cuando», «aunque». Explicación en la [guía del subjuntivo](/material-ele/subjuntivo).",
               ] },
             ],
@@ -587,6 +587,32 @@ export const guiaPages: GuiaPage[] = [
               ] },
             ],
           },
+          {
+            title: "Artículos, sustantivos y la frase básica",
+            blocks: [
+              { type: "ul", items: [
+                "[Presente de indicativo](/material-ele/ejercicio/presente-de-indicativo) (A1–A2): de los regulares a los irregulares en primera persona (salgo, conozco, traduzco).",
+                "[Artículos](/material-ele/ejercicio/articulos) (A1–B1): el, un o ningún artículo (Ø), con profesiones, idiomas, horas y gustar.",
+                "[Género y número](/material-ele/ejercicio/genero-y-numero) (A1–B1): el problema, la mano, el agua, los lápices y los adjetivos que no cambian.",
+                "[Demostrativos y posesivos](/material-ele/ejercicio/demostrativos-y-posesivos) (A1–A2): este, ese, aquel, esto, y mío, tuyo, suyo detrás del verbo.",
+                "[Interrogativos](/material-ele/ejercicio/interrogativos) (A1–B1): qué o cuál, preposición delante («¿de dónde?», «¿con quién?») y preguntas indirectas con tilde.",
+                "[La negación](/material-ele/ejercicio/negacion) (A1–B1): doble negación, nunca delante del verbo, ninguno, tampoco y ni.",
+                "[Cuantificadores](/material-ele/ejercicio/cuantificadores) (A1–B1): muy o mucho, bastante, demasiado, algo, alguien, ninguno.",
+                "[Comparativos y superlativos](/material-ele/ejercicio/comparativos-y-superlativos) (A1–B1): más que, tan como, tanto como, mejor, peor, mayor, menor y «más de lo que».",
+                "[Preposiciones](/material-ele/ejercicio/preposiciones) (A1–B1): a, de, en, con, por, para, desde y los verbos que las piden (pensar en, soñar con, tardar en).",
+              ] },
+            ],
+          },
+          {
+            title: "Oraciones complejas",
+            blocks: [
+              { type: "ul", items: [
+                "[Oraciones de relativo](/material-ele/ejercicio/oraciones-de-relativo) (A2–B2): que, donde, lo que, quien, el que, el cual y cuyo, con subjuntivo cuando el antecedente es desconocido.",
+                "[Pretérito pluscuamperfecto](/material-ele/ejercicio/preterito-pluscuamperfecto) (B1–B2): lo que había pasado antes, con participios irregulares y el pluscuamperfecto de subjuntivo.",
+                "[Se impersonal y pasiva](/material-ele/ejercicio/se-impersonal-y-pasiva) (A2–B2): se vende, se busca, fue construida, y el se accidental («se le cayó»).",
+              ] },
+            ],
+          },
         ],
       },
       {
@@ -595,7 +621,7 @@ export const guiaPages: GuiaPage[] = [
         blocks: [
           { type: "p", text: "La solución visible cambia quién corrige. Hay tres maneras de aprovecharlo, y conviene alternarlas." },
           { type: "ol", items: [
-            "**Corrección a ciegas.** El alumno completa las ocho frases sin abrir nada. Después abre las soluciones una por una y marca sus errores. Tú solo intervienes en los que marcó: ahí está la explicación que necesita, no en las frases que acertó.",
+            "**Corrección a ciegas.** El alumno completa todas las frases sin abrir nada. Después abre las soluciones una por una y marca sus errores. Tú solo intervienes en los que marcó: ahí está la explicación que necesita, no en las frases que acertó.",
             "**Corrección en voz alta.** Proyectas el ejercicio en pantalla compartida, el alumno lee cada frase completa y justifica la forma en una palabra («es porque es nacionalidad»). Abres la solución después de la justificación, nunca antes. Sirve para B1 en adelante, donde explicar la regla es parte de la práctica.",
             "**Corrección invertida.** Abres primero todas las soluciones y el alumno tiene que explicar por qué cada una es correcta, o inventar una frase nueva con la misma forma. Es la versión para repasar un tema que ya conoce: no busca el acierto sino la regla.",
           ] },
