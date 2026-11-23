@@ -14,6 +14,22 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 const additions = [
   ...courseLessons,
   {
+    // 2026-11-23: Objetos perdidos (A0–C2), a PRO 3D night shift at the municipal lost-and-found office, wired like Último crucero.
+    id:264,path:'/objetos-perdidos',files:/^(?:app\/objetos-perdidos\/|app\/escucha-3d\/content\/perdidos\/|public\/objetos-perdidos\/|public\/audio\/escucha-3d\/perdidos-|tests\/objetos-perdidos\.test\.mjs$|scripts\/check-objetos-perdidos\.mjs$|scripts\/covers\/art\/objetos-perdidos\.webp$|scripts\/covers\/objetos-perdidos\.html$|public\/conversation-previews\/264\.mp4$|docs\/audits\/objetos-perdidos-english-additions-20261123\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:264,')&&line.includes('path:"/objetos-perdidos"')?[i]:[]);
+        assert.equal(at.length,1,'one objetos perdidos catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',257,259,258,260,261,264],',',257,259,258,260,261],']],
+      'app/conversation-preview-videos.ts':[[',257,259,258,260,261,264]);',',257,259,258,260,261]);']],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/objetos-perdidos-english-additions-20261123.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/objetos-perdidos.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 346);','assert.equal(lessons.length, 345);'],['255,256,257,259,260,261,264].includes(lesson.id)','255,256,257,259,260,261].includes(lesson.id)'],["l.levels?.includes('A0')).length,37);","l.levels?.includes('A0')).length,36);"],['assert.equal(a1Lessons.length, 97);','assert.equal(a1Lessons.length, 96);'],["||relative.startsWith('app/objetos-perdidos/')",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/339(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/338(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
     // 2026-11-18: Clase de nivelación, a PRO trial lesson (student sheet, phonetics with native audio, countries, closing plan).
     id:262,path:'/clase-de-nivelacion',files:/^(?:app\/clase-de-nivelacion\/|public\/clase-de-nivelacion\/|public\/audio\/nivelacion\/|tests\/clase-de-nivelacion\.test\.mjs$|scripts\/generate-nivelacion-audio\.py$|docs\/audits\/clase-de-nivelacion-english-additions-20261118\.json$)/,
     edits:{
@@ -728,7 +744,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===262||item.id===260||item.id===261||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>item.id===300||item.id===264||item.id===262||item.id===260||item.id===261||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -739,7 +755,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==262&&item.id!==260&&item.id!==261&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>item.id!==300&&item.id!==264&&item.id!==262&&item.id!==260&&item.id!==261&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

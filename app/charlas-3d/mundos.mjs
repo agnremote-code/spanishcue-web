@@ -130,6 +130,21 @@ export const CASTS = {
     r('Un pasajero que no quiere que llegue la mañana', 'Dice que las despedidas le dan alergia.', ['muerte', 'tiempo']),
     r('Una violinista de la orquesta', 'Guarda el violín en su estuche para que no se moje.', ['arte', 'soledad']),
   ],
+  // Objetos perdidos: the people who wait, work or wander at the lost-and-found office after the festival.
+  perdidos: [
+    r('Una señora con un número en la mano', 'Tiene el número 214 y la pantalla va por el 37.', ['tiempo', 'persona']),
+    r('Un chico disfrazado de dragón', 'Perdió la cabeza del disfraz y lleva el resto puesto.', ['fiesta', 'noche']),
+    r('Una limpiadora con su fregona', 'Friega el suelo por tercera vez: «La gente entra con confeti hasta en los bolsillos».', ['trabajo', 'calle']),
+    r('Un músico de la banda sin trompeta', 'Busca su trompeta y silba la canción para no olvidarla.', ['arte', 'fiesta']),
+    r('Una turista con un mapa al revés', 'No encuentra su hotel ni su maleta, y se ríe de las dos cosas.', ['viaje', 'aventura']),
+    r('Un repartidor de pizzas', 'Trae una pizza para «la oficina» y nadie la pidió.', ['comida', 'trabajo']),
+    r('Una abuela que busca a su nieto', 'Dice que el nieto no se perdió: se perdió ella.', ['familia', 'tiempo']),
+    r('Un hombre con un solo zapato', 'Camina con un zapato y un calcetín de rayas.', ['fiesta', 'persona']),
+    r('Una niña con un globo desinflado', 'Quiere saber si los globos perdidos también llegan aquí.', ['infancia', 'fantasia']),
+    r('Un policía local con un perro', 'El perro encontró tres carteras esta noche y espera un premio.', ['animales', 'ley']),
+    r('Una estudiante que perdió los apuntes', 'Tiene un examen a las nueve y los apuntes en algún lugar de la fiesta.', ['miedo', 'tiempo']),
+    r('Un señor que viene a dejar algo', 'Trae un paraguas que encontró y quiere un recibo con su nombre.', ['ley', 'calle']),
+  ],
   bosque: [
     r('Una exploradora con un mapa', 'Dice que ningún mapa explica este bosque.', ['aventura', 'naturaleza']),
     r('Un recolector de setas', 'Lleva una cesta y sabe cuáles son venenosas.', ['naturaleza', 'comida']),

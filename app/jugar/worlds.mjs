@@ -29,6 +29,7 @@ export const HUB_WORLDS = [
   { id: 245, slug: 'el-consorcio', kind: 'historia', save: { key: 'spanishcue:el-consorcio:v1', shape: 'levels' }, total: 18, tint: '#b9773f' },
   { id: 242, slug: 'madrid-infectada', kind: 'historia', save: { key: 'spanishcue:madrid-infectada:v1', shape: 'levels' }, total: 50, tint: '#7fae4a' },
   { id: 259, slug: 'el-mundo-en-blanco', kind: 'historia', save: { key: 'spanishcue:el-mundo-en-blanco:v1', shape: 'levels' }, total: 12, tint: '#8c97a8' },
+  { id: 264, slug: 'objetos-perdidos', kind: 'historia', save: { key: 'spanishcue:objetos-perdidos:v1', shape: 'levels' }, total: 18, tint: '#c9873a' },
   { id: 261, slug: 'ultimo-crucero', kind: 'historia', save: { key: 'spanishcue:ultimo-crucero:v1', shape: 'levels' }, total: 18, tint: '#3b5b86' },
   { id: 243, slug: 'mas-alla', kind: 'historia', save: { key: 'spanishcue:mas-alla:v1', shape: 'levels' }, total: 12, tint: '#e0b84f' },
   { id: 237, slug: 'marketing-de-casinos', kind: 'historia', save: { key: 'spanishcue:gran-meridiano:v1', shape: 'levels' }, total: 30, tint: '#c23b4a' },

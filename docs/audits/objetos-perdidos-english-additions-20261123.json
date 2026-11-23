@@ -1,0 +1,3374 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g (standing approvals, applied 2026-11-23): «Objetos perdidos» (ID 264), a new A0–C2 3D conversation and listening class on the night shift at a municipal lost-and-found office, whose A0 level is fully bilingual (conversation, extras, choices, ledger and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "The night shift at a lost-and-found office in 3D: absurd claims, small mysteries and owners to reunite with their things, all in Spanish."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Don Evaristo comes to the counter. He talks to Don Celestino."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Good evening, sir. What are you looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "My false teeth. They fell out last night at the festival. Dancing."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Here is a box with three sets of false teeth."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Three! And which one is mine?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I don’t know. One was inside a tuba."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is Don Evaristo looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where did he lose his false teeth?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How many sets of false teeth are in the box?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where was one set of false teeth?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you lose often?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What music do you dance to at a party?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where do you leave your things at night?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "false teeth"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "dancing"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "box"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Rocío brings a black umbrella to the office."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Hello. This umbrella is not mine."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Whose is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "A guy’s from the festival. It was raining and he gave it to me."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Look, it says something inside: “If you find me, call Teo.”"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Teo! His name is Teo."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Rocío bring?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Whose is the umbrella?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What was the weather like at the festival?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is the guy’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you do when it rains and you have no umbrella?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you lend a stranger?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What colour is your umbrella?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "umbrella"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "it was raining"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "guy"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Wilson is a locksmith. He talks to himself in front of the keys."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I am a locksmith. I open all the doors in the city."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "But tonight I can’t open my workshop. My keys stayed behind at the festival."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "There are three thousand keys here. Three thousand! One is mine. Oh, how embarrassing."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What job does Wilson have?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What can’t he open?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How many keys are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How does Wilson feel?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How many keys do you have on your key ring?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Who has a copy of your key?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What embarrasses you at work?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "locksmith"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "workshop"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "embarrassment"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Doña Herminia is looking for her phone. A phone rings on the shelf."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I’m looking for my phone. It is old and small."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Listen. A phone is ringing."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "It’s mine! My husband Julio’s voice is on the phone."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Who is calling?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "My grandson, Iker. He calls all night."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is Herminia’s phone like?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is on the phone?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "When does Iker call?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Who in your family do you call on Sundays?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How old is your phone?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Whose voice do you like to hear?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "rings"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "husband"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "grandson"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Gaspar is in the cold room, with the plants."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "This is my grandfather’s bonsai. It is sixty years old."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I water it every day. For twenty years."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Wait a moment… The leaves are plastic. It’s plastic! Grandpa, seriously?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Whose bonsai is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How old is the bonsai?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Gaspar do every day?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What are the leaves made of?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Which plant in your house needs a lot of water?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you do every day at eight?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What gift from your family do you keep?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I water"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "leaves"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "plastic"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Álex is looking for a food container in the cold room."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Please, I’m looking for my mother’s food container. It’s blue."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "There are two hundred and twelve containers here."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "My mother’s has her name on it: Lupe."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Here it is. And inside there is a note: “Call me more.”"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What colour is the container?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How many containers are there?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is Álex’s mother’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does the note say?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What food does your family make for you?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "When do you call your mother or father?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you take to work to eat?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "food container"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "note"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "inside"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Doña Aurora comes to the archive. She comes every year."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Good evening, Celestino. And my glove?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Good evening, Aurora. A red glove, from 1986?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Yes. I lost it at the lantern festival. Forty years ago."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Well… here it is. It’s in my drawer."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What colour is the glove?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What year is the glove from?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where did Aurora lose the glove?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where is the glove?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What colour are your gloves?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you keep in your drawer?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What place do you visit every year?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "glove"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "drawer"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "lanterns"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Vanesa and Óliver are looking for a ring in the room of big objects."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "My wedding is on Saturday and I don’t have the ring."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Well, love, it’s not important."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Not important? It’s my ring!"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "The thing is… the ring has a name on it. And it isn’t your name."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "When is the wedding?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is Vanesa looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Óliver say about the ring?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What problem does the ring have?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What jewellery do you wear every day?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Which day of the week do you prefer for a party?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What name do you like a lot?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "wedding"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "ring"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "love"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Fidel plays the tuba in the city band. He is looking for his tuba."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "My tuba! Here it is, in the room of big objects."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Last night, at the festival, the tuba sounded very good. Better than ever."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What? False teeth inside my tuba? That’s why it sounded so good!"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What instrument does Fidel play?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where is the tuba?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How did the tuba sound last night?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is inside the tuba?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Which instrument has an ugly sound for you?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you do better than ever this year?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What music do you hear in the street?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "tuba"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "sounded"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "last night"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Nacho and Guille want the same canoe."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "This canoe is mine. It’s called La Gaviota."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "No! The canoe is mine."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Look, here are our names. Nacho and Guille, 1998."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "It’s true. We were friends."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is the canoe called?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do Nacho and Guille want?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is on the canoe?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What year are the names from?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is your childhood friend’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you share with a friend?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What water sport do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "canoe"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "names"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "friends"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Lisandro is looking for his dog’s ashes. He talks to a bus driver."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I’m looking for a small box. It’s my dog Canelo’s ashes."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Oh! The box is on my bus, line 14."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "All night at the front, with me. And tonight there are no problems on the line."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Canelo looks after the bus. Like he looks after my house."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is the dog’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where is the box?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Which line is the bus?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Canelo do, according to Lisandro?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What animal do you have or would you like to have?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What bus do you take?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Who looks after your house when you travel?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "ashes"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "route"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "looks after"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Rubén is a taxi driver. He brings a parrot to the office. Doña Fefa arrives."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "My parrot! His name is Fígaro."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Fígaro? My parrot was also called Fígaro. He flew away six years ago."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I found him six years ago, in the street."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Fígaro, who am I?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What job does Rubén have?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is the parrot’s name?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "When did Rubén lose his parrot?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where did Fefa find the parrot?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What animal seems funny to you?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What did you once find in the street?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "When do you take a taxi?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "parrot"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "flew away"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I found"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Tato arrives with a bag. He talks to Celestino in the street."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Good evening. Here you are: fourteen wallets from the festival."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Fourteen? Did you find them?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Well… not exactly. I stole them. But now I’m returning them."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "And I want my reward: ten percent."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How many wallets does Tato bring?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where are the wallets from?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "How did Tato get the wallets?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Tato want?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you carry in your wallet?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where do you keep your money at a party?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What reward do you like to get?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "wallets"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I stole"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "reward"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Benja is in pyjamas in the street. Gloria is a pharmacist."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Good evening. Where am I? I have only one shoe."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "You are in front of the pharmacy. Last night you sang at the festival karaoke."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Me? Sing? I don’t remember anything."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "You won. Your trophy is in the office, with your shoe."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What clothes is Benja wearing?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where is Benja?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What did Benja do last night?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where is the trophy?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What song do you sing very badly?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What clothes do you wear to sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What prize have you won in your life?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "shoe"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "pharmacy"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "trophy"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Selene goes up to the office rooftop. She is looking for her paper lantern."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Last night, at the festival, I let go of a paper lantern with a wish."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "The lantern didn’t fly to the sky. It fell here, on the rooftop."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "My wish is written on the paper. It’s a secret. Please, don’t read it!"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What did Selene let go of?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where did the lantern fall?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is on the paper?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Selene ask?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What wish do you have for this year?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What festival in your city do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What secret do you keep with a friend?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "lantern"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "wish"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "rooftop"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Yuri is a security guard. He rests on the rooftop with a diary."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I am Yuri, the night guard."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "In a lost backpack there is a diary. I read it all night. It is very interesting."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Page one hundred… wait a moment. It’s my boss’s diary, Doña Pura’s!"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What job does Yuri have?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where is the diary?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Yuri do all night?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Whose diary is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What book do you have on the table now?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you write in your notebook?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is in your backpack or bag today?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "security guard"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "backpack"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "boss"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Ernesto waits in the waiting room. He has a paper with a number."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "I have number 247. It’s urgent! I am the mayor’s secretary."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What are you looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "The golden key of the city. The mayor lost it at the festival."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Ah, yes. But it isn’t gold. It’s chocolate."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What number does Ernesto have?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Who does Ernesto work for?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is Ernesto looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is the key made of?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Where do you wait a long time?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Which chocolate do you prefer?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What number brings you luck?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "mayor"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "urgent"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "key"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "It is seven o’clock. Doña Pura, the boss, arrives. Celestino has the night’s ledger."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Good morning, Celestino. How was the night?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Very good. Look at the book: many objects are going home."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Twelve? My bet is twelve."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Read, read. And here is your diary, boss."
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Who is Doña Pura?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What is Pura’s bet?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What does Celestino give Pura?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What time do you get to work or class?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "What do you do early in the morning?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "Who is your boss?"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "bet"
+    },
+    {
+      "path": "app/escucha-3d/content/perdidos/a0.json",
+      "text": "objects"
+    },
+    {
+      "path": "app/objetos-perdidos/PerdidosGame.tsx",
+      "text": "Tonight one object went home."
+    },
+    {
+      "path": "app/objetos-perdidos/PerdidosGame.tsx",
+      "text": "Tonight ${n} objects went home with their owners."
+    },
+    {
+      "path": "app/objetos-perdidos/PerdidosGame.tsx",
+      "text": "${en} ${n >= OFFICE.goal ? 'Doña Pura loses the bet and buys you a coffee.' : 'Doña Pura wins the bet… this time.'}"
+    },
+    {
+      "path": "app/objetos-perdidos/PerdidosGame.tsx",
+      "text": "Doña Pura loses the bet and buys you a coffee."
+    },
+    {
+      "path": "app/objetos-perdidos/PerdidosGame.tsx",
+      "text": "Doña Pura wins the bet… this time."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Neighbour with ticket 112, waiting since nine"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I have ticket 112. I have been waiting since nine. I am looking for my glasses, but without glasses I can’t see the screen."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What thing do you always look for at home?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Festival dancer who lost his shoes"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I danced all night. Now I don’t have shoes. They are red, patent leather. My feet are very tired."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What shoes do you wear for a party?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Student who lost her backpack with her notes"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I lost my backpack at the festival. My notes are inside. Tomorrow I have a history exam."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "How do you study for a difficult exam?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Neighbour dressed as a giant lantern"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am a lantern. It is my costume. I am looking for the costume’s head. Without the head, I am a sad lamp."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What costume would you like to wear at a party?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Town street sweeper who brings what she finds in the street"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I clean the street after the festival. I find everything: shoes, keys, a violin. I bring it here."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What curious thing did you ever find in the street?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Bike courier who lost a delivery"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am a delivery rider. I lost a pizza at the festival. The customer has been waiting for three hours. Poor customer."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What food do you order for delivery when you are at home?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Volunteer charging the sixty-four phones"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I charge the lost phones. There are sixty-four. When one rings, I answer: “Lost and found, how can I help?”"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Where do you leave your phone when you dance at a party?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "The office’s maintenance man for thirty years"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I fix the lights and doors of the office. Tonight the ticket machine is broken. Again."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What thing in your home is always broken?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Clerk who sorts odd gloves"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I sort gloves. I have three hundred gloves and no complete pair. It is a strange job, but I like it."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What clothes do you lose most often?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Intern in his first week, freezing cold"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am the intern. I work in the cold room. It is very cold here. I am wearing two jumpers and a hat."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What do you wear for a street party night?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Retired archivist who comes to read the old ledgers"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I worked here for thirty years. Now I come to read the old books. I like them more than novels."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What book or magazine are you reading now?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Musician in the town band, the bass drummer"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I play the bass drum in the band. Fidel is my bandmate. Last night the tuba sounded very strange and very beautiful."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What instrument would you like to play?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Mother of the bride, looking for the ring harder than anyone"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am Vanesa’s mother. The wedding is on Saturday. We need the ring! I am not sleeping tonight."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What wedding or family celebration do you remember well?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Bus mechanic checking the number 14 bus"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am a mechanic. I am checking the number 14 bus. There is confetti in the engine. A lot of confetti."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What transport do you use to go to work or class?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Taxi driver, Rubén’s colleague at the harbour rank"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am a taxi driver, like Rubén. My car is yellow. Tonight I drove forty people. Forty!"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Where do you go by taxi?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "The festival DJ, resting on the rooftop"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am the festival DJ. I lost my headphones. Now I listen to the city. It is very quiet from here."
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What music do you listen to at night?"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "Local newspaper photographer, with a flat camera battery"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "I am a photographer. I take photos of the festival for the newspaper. My camera has no battery. What bad luck!"
+    },
+    {
+      "path": "app/objetos-perdidos/invitados.mjs",
+      "text": "What old photo do you keep on your phone?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A smile in a tuba"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is eleven at night. It is your first day at the lost-and-found office. At the counter there is an old man. He has no teeth."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Good evening. My name is Evaristo. I am looking for my false teeth."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "There are three sets of teeth in the box. And there is a tuba with something inside."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "My teeth are small and very nice!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Evaristo looks at you. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here are three sets of teeth. Which one is yours?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Not this one. Not this one… This one! It is in the tuba."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Evaristo smiles with his teeth. Celestino writes in the book."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "You are cold. Here is a hot soup."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Thank you. I come back at seven, OK?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Evaristo drinks the soup without teeth. He is slow, but he is happy."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "One moment. I call the music band."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The band? My teeth are music!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A musician brings the tuba. The teeth go back into Evaristo's mouth."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who in your family has a nice smile?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What music plays at the festivals in your neighborhood?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What soup do you like in winter?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What time do you have dinner on Fridays?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who smiles a lot in your family?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the false teeth"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the counter"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the tuba"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the box"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Teo's umbrella"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On the shelves there are many black umbrellas. A girl has an umbrella in her hand. It is not her umbrella."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Hi. My name is Rocío. This umbrella belongs to a boy. His name is Teo."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Look at the label: “If you find me, call Teo.”"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Teo is very nice. And very handsome."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Rocío is nervous. What do you do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "There is a number on the label. Shall we call Teo?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Now? Well… yes. You call!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Teo answers. Rocío gives him the umbrella and her phone number."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Tomorrow it rains. Do you keep the umbrella?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes! It is a very good umbrella."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Rocío leaves with Teo's umbrella. Outside it is not raining."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I put it here, with the other umbrellas."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "OK… There are a lot of black umbrellas, right?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Teo's umbrella is on the shelf, among a thousand black umbrellas."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Where do you leave your umbrella when you get home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you have an umbrella in your backpack today?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you do at home on rainy days?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What name do you like for a boy?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you write your name on your things?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the umbrella"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the label"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the shelf"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "to rain"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Three thousand keys"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the keys aisle there are three thousand keys. A man is looking for a small grey key."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Wilson. I am a locksmith. I open doors every day."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "But today I don't have the key to my workshop. How embarrassing!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is a grey key, with a red ribbon."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Wilson is sad. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Let's look. Is it this one? And this one?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "No… no… Yes! Number two thousand eight hundred seventy-one."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Wilson has his key. He celebrates with a little dance."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here is a hairpin. You are a locksmith, right?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Of course! With a hairpin I open any door."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Wilson opens his workshop with a hairpin. He is a very good locksmith."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is very late. There is a sofa in the waiting room."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A sofa… Yes, I am very tired."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Wilson sleeps on the sofa. Tomorrow he opens his workshop."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Which key do you use every day?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Where do you put your keys when you get home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who opens the door of your home in the morning?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you have a comfortable sofa at home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What colour is your front door?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the locksmith"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the workshop"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the hairpin"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Julio's voice"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the phone room there are sixty-four phones. One phone rings and rings. An old lady is waiting."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Herminia. I am eighty-one years old. I am looking for my phone."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On my phone there is the voice of Julio, my husband. Julio is dead."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "My phone is old and blue."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Herminia has sad eyes. What do you do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here is a blue phone with no battery. I have an old charger."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is my phone! Does it work?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The phone works. Herminia hears Julio's voice and smiles."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Listen. A phone is ringing a lot. Is it yours?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes! It is Iker, my grandson. He calls all night."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Herminia answers. Her grandson is very happy."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here it is. We save Julio's voice on the computer."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On the computer? How modern!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Now Julio's voice is in three places. Herminia is calm."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What colour is your phone?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who do you call on the phone every week?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What voice message do you keep on your phone?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who do you call to share good news?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you have old photos at home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the phone"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the charger"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the voice"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the grandson"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A very old tree"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the cold room there are plants and food. It is very cold. A man is looking at a small tree."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Gaspar. This bonsai is my grandfather's. It is sixty years old."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I water the bonsai every day. Twenty years."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "But… it is strange. The leaves are not normal."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "You touch the bonsai. It is plastic. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is your bonsai. It is plastic, but it is your grandfather's."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Plastic… Well. It is my bonsai."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Gaspar carries the bonsai in his arms, like a baby."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Gaspar, the bonsai is plastic. Twenty years of water!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Plastic? Oh, grandpa! It is a joke!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Gaspar laughs a lot. It is the first time since the funeral."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is cold here. Shall we come back tomorrow?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes, better tomorrow. I don't want to know more."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The bonsai is in the cold room. Gaspar doesn't know the truth."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "How many plants are there in your kitchen?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What thing of your grandmother or grandfather do you like?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you do every day in the morning?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you like jokes?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What plant do you have in the window?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the bonsai"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the plastic"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "to water"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the cold room"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Mum's lentils"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the cold room there are two hundred and twelve plastic containers. A man is looking for his mother's container."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Hi. I am Álex. My mother's name is Lupe."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The container has her name on it. Inside there are lentils."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "My mother cooks very well. I don't."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Álex looks at the containers. What do you do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "This container says “Lupe”. It is your mother's!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes! Thank you. I am calling my mother right now."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is four in the morning. His mother answers very happily."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Look. There is a note inside."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The note says: “Call me more.” Oh, mum…"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Álex promises to call his mother every Sunday."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here is a red container. Does this one do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is similar… Yes, it does."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Álex takes another container. His mother is going to notice."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who makes the lentils in your family?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What food of your mother or father do you like?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you like lentils?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What food does someone at home make for you?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What food do you take to work or class?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the plastic food container"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the lentils"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the note"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "to cook"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A red glove"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The archive has forty old books. An old lady is looking for a red glove. She comes every year."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Aurora. I am looking for a red glove. It is from nineteen eighty-six."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Madam, there is no glove. I am sorry."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Celestino, every year you say the same thing."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Celestino has his hand in a drawer. What do you do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here, in the first book, it says: “red glove”."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "My glove! After forty years!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Aurora has her red glove on her hand. Celestino is red too."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Celestino, what is in your drawer?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A red glove… for forty years."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Celestino gives the glove to Aurora. They are both silent."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is late. Do you look for the glove together next year?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Together? Well… yes, I like the idea."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Aurora and Celestino have a date: next year, here."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you wear gloves in the winter in your city?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you keep in a drawer at home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What year is special for your family?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What place do you visit every year?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who do you dance with at a party?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the glove"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the archive"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the drawer"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the book"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The name in the ring"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the room of big objects there is a wedding dress and a canoe. A bride and her groom are looking for a ring."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Vanesa. I am getting married on Saturday. We don't have the ring!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Well… the ring has a problem."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A problem? What problem, Óliver?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Óliver is nervous. What do you do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Look, the ring is in the pocket of the dress."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here it is! But… it says “Jessica”. Who is Jessica?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Óliver explains everything. Vanesa now knows who Jessica is."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A tin ring is cheap and pretty."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Tin? Well… for Saturday, OK."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The ring with the name “Jessica” is at the office. On Saturday there is a tin ring."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What if we write “Jessica no” on the ring?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "“Jessica no”… I like it! It is funny."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Vanesa takes the ring. Tomorrow they go to the jeweller."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What jewellery do you like to give as a gift?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What clothes do you wear for a wedding?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What day of the week is good for a wedding?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What is your cousin's name?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you have many pockets in your clothes today?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the ring"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the bride"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the dress"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the pocket"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fidel's tuba"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the room of big objects there is a huge tuba. A musician from the band is waiting next to it."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Fidel. I play the tuba in the city band."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Last night my tuba sounded very good. Very, very good!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "But inside the tuba there is a set of false teeth."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fidel looks at his tuba. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The teeth are Evaristo's. Here is your tuba, clean."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Thank you. My normal tuba… it's fine."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fidel plays. The tuba sounds like always."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The tuba stays at the office for a week. You practise without the teeth."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A week? Phew… OK."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The tuba is at the office. Fidel practises at home with a flute."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fidel, the tuba sounds good because you play well."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Me? Really?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fidel plays the tuba in the room. It sounds very nice. Without teeth."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you like band music?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What instrument is there in your home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What song do you like a lot?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What thing do you do better without an audience?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What music is there at your neighbourhood parties?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the band"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the musician"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "to play"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A canoe for two"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the room there is an old canoe. It is called La Gaviota. Two men want the canoe."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Nacho. The canoe is mine."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "No. I am Guille, and the canoe is mine."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Guille and I don't talk. Ten years without talking."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "They are both angry. What do you do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The canoe is big. Do you both carry it?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Together? Well… it is heavy."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Nacho and Guille carry La Gaviota. One in front and one behind."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The canoe stays here until tomorrow. You talk."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Talk? No. Better not."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The canoe stays at the office. Nacho and Guille leave through different doors."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Look. Here there are two names: Nacho and Guille."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Our names… from nineteen ninety-eight."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Nacho and Guille read the names. After ten years, there is a hug."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you like water or do you prefer mountains?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "How old is your best friendship?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you like rowing on a lake?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Where is there water to swim in your city?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What thing do you share with your family?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the canoe"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the name"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the hug"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "heavy"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Canelo on the bus"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On the loading dock there is a bus. It is line fourteen. A man is looking for a small box."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Lisandro. In the box are the ashes of Canelo, my dog."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Mari Carmen, the driver. The box is here, on my bus!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Canelo travels with me all night."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Lisandro cries a little. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here is Canelo. Now he goes home."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Thank you. My wife is waiting."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Lisandro takes the box home. Canelo is with his family."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "One last ride on the bus, with Canelo?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes. Canelo really likes the bus."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Lisandro and Canelo do one last ride. Then, home."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Mari Carmen, a photo of Canelo on the bus?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes! A photo next to the steering wheel."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Now Canelo always travels on line fourteen, in a photo."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What animal lives on your street?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you sleep on the bus or on the train?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What number is your bus?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What is your neighbour's dog called?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What photo do you have on your phone?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the bus"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the driver"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the dog"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A parrot with two homes"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On the dock there is a taxi. Next to it there is a green parrot in a cage. A man and a lady are arguing."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Rubén. I am a taxi driver. This parrot is mine! His name is Fígaro."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Fefa. Fígaro lives in my house. Six years."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fígaro, say “Rubén”!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The parrot looks at both. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fígaro says “Rubén”. He belongs to Rubén."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fígaro! My friend!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fígaro goes back with Rubén. Fefa waves goodbye."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fígaro lives with Fefa. Rubén visits on Sundays."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On Sundays… with coffee, OK?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fígaro has two homes and two friends."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fígaro stays at the office until tomorrow."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "At the office? Poor Fígaro!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The parrot stays at the office. He repeats words from Rubén and Fefa."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What animal does someone in your family have?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What bird do you see from your home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who do you visit on Sundays?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you use taxis a lot?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What phrase of your mother's do you repeat a lot?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the parrot"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the cage"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the taxi"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "to repeat"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Fourteen wallets"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the street there is a man with a bag. Inside there are fourteen wallets."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Hi. I am Tato. I bring fourteen wallets from the festival."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "They are not mine. I am… well… a thief. A retired thief."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Is there a reward? Ten percent, please."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Tato waits. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "There is no reward. But here is a receipt."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A receipt? Well… it is my first receipt."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Tato leaves with a receipt. He is happy."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Thank you, Tato. Are you looking for work?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Work? Yes! Here, at the office?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The wallets go back to their owners. Tato waits for the boss."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Ten percent is not possible."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "No? Then goodbye. And the wallets come with me."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Tato leaves with the fourteen wallets. What a problem!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you carry in your wallet?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What colour is your bag or backpack?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you do with money you find in the street?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Are there many people in your street at night?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What job is good for a very fast person?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the wallet"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the thief"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the receipt"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the reward"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A boy in pyjamas"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In front of the pharmacy there is a bench. On the bench there is a young man in pyjamas. He has one shoe."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Where am I? I am Benja. I don't know anything."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am Gloria, the pharmacist. You are in the street, in pyjamas."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "And you have a trophy. It is from karaoke."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Benja looks at the trophy. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "At the office there is a shoe and a phone. Are they yours?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "My shoe! My phone! And the trophy?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Benja has his shoe, his phone and a new trophy."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Benja, last night you sang at the party. You are the karaoke king!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Me? Sing? How embarrassing!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Benja watches a video. He sings very well. He doesn't like it at all."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is late. Your house is near, right?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes. I am going. I don't want to know more."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Benja walks home in pyjamas and with one shoe."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What song do you choose at a karaoke?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What clothes do you wear to sleep?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you walk around the house at night?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What colour is the pharmacy cross in your country?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What song do you sing in the shower?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the pyjamas"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the pharmacy"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the shoe"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the trophy"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A wish on the roof"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On the roof there is a paper lantern. It is from the festival. A girl is looking for it."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Hello. I am Selene. It's my lantern!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Inside there is a wish. My wish is secret."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The lantern doesn't go up. Is it a bad sign?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Selene has the lantern in her hand. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Will you read your wish? Nobody is here."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "OK. “I want a bakery.”"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Selene reads her wish out loud. The city is sleeping."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I have a light. The lantern can go up again."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes! Goodbye, lantern."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The lantern goes up to the sky. Selene watches the lights."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Your wish is here, with you. It is for you."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "For me… Yes. I make my wish come true."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Selene takes the lantern home. Tomorrow her wish begins."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you see from the roof of your building?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What bread do you buy at the bakery?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What wish do you write on a paper lantern?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Are there festivals with lights in your country?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Can you see stars from your window?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the lantern"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the wish"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the rooftop"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the sky"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The boss's diary"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "On the roof there is a bench. The security guard is sitting. He is reading a diary."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Hi. I am Yuri, the guard. This diary is from a backpack."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is the boss's diary! Doña Pura's."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is very interesting. Doña Pura dances salsa."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yuri wants to read more. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yuri, close the diary. It is private."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "You are right. I put it on her desk."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The diary is on the boss's desk. Yuri doesn't read the end."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "And what else does it say? Read, read."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It says that… oops! This is a lot."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yuri reads the whole diary. Now he knows a lot about his boss."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The diary goes in the backpack, with a note."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A note: “Found by the night shift.”"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The diary is in the backpack. The note is nice and simple."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you write your secrets in a notebook?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What dance do you like?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Which notebook do you use in class?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you like reading at night?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Does your boss or teacher dance well?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the diary"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the security guard"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the backpack"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "private"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Number 247"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "In the waiting room there is a man with a tie. He has number 247. The screen says 112."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Good evening. I am Ernesto, the mayor's secretary."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "I am looking for the golden key of the city. It is for nine o'clock."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Well… it is a chocolate key."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Ernesto waits a lot. What do you do?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Here is a chocolate key. It has a bite."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "A bite… It doesn't matter. It's the key!"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Ernesto takes the key to the mayor. Nobody talks about the bite."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "You have number 247. Please wait."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "OK… I'll wait. I'll wait a lot."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Ernesto waits on the chair and sleeps."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "The pharmacy sells chocolate. A new key?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Good idea! A new chocolate key."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Ernesto buys a chocolate key at the pharmacy."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What chocolate do you buy for a gift?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Where do you wait more: at the bank or at the doctor's?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What number do you have in the queue today?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What is the name of your city's mayor?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Do you wear a tie or a skirt at work?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the chocolate"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the number"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "to wait"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Seven in the morning"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is seven. The boss arrives, Doña Pura. She opens the book of the night."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Good morning. I am Pura, the boss. How many objects go home?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Many, Doña Pura. The new shift works very well."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Let's see the book."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Doña Pura looks at you. What do you say?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Good morning. Here is the book of the night."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Thank you. I read it right now."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Doña Pura reads the book slowly. At the end, she smiles."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "It is a very long night. A coffee, Doña Pura?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Yes, a coffee. And I read the book."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "With a coffee, Doña Pura reads the book of the night."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Celestino helps a lot. He is a good colleague."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Celestino? Yes. Celestino is special."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Celestino is red. Doña Pura opens the book."
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What time does your boss or teacher arrive?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you have for breakfast after a night without sleep?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who is a good colleague for you?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "Who works at night in your family?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "What do you do after a long night?"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the boss"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the shift"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the morning"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a0.mjs",
+      "text": "the colleague"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "false teeth"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the stamp"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the town band"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the gold tooth"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the umbrella"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the label"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the shelf"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to give back"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to lend"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the key"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the locksmith"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the workshop"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the hairpin"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the ribbon"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the charger"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the battery"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the voice message"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to ring"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the grandson"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the bonsai"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the flowerpot"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to water"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the cold room"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "made of plastic"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the food container"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the lid"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the handwriting"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "beans"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to look alike"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the glove"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "wool"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the archive"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the drawer"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the logbook"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the ring"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the wedding dress"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the jeweller"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to engrave"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to get married"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the tuba"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the note"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to play (music)"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to clap"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the uniform"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the canoe"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the bow"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the stern"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "half"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to make up"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the urn"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the (female) driver"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the steering wheel"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the round trip"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the parrot"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the cage"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the taxi driver"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to escape"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to share"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the wallet"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the reward"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the receipt"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the cap"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the ground"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the all-night pharmacy"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "pyjamas"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the shoe"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the trophy"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to wake up"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the flat roof"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the lantern"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the wish"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to light"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "to come true"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the diary"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the security guard"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the torch"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the antenna"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "private"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the waiting room"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the secretary"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the mayor"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the bite"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "golden"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the shift change"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the bet"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the (female) boss"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "the office room"
+    },
+    {
+      "path": "app/objetos-perdidos/levels/a1.mjs",
+      "text": "dawn"
+    }
+  ]
+}
