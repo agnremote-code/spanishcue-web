@@ -143,3 +143,47 @@ test('newsletter wiring: rate limits, Worker gate, private media, public chunks,
   assert.match(seo, /path\.startsWith\("\/newsletter\/"\)/);
   assert.match(footer, /<EmailGiftPopup \/>/);
 });
+
+test('a new free account joins the profes sequence once, respecting past unsubscribes', async () => {
+  const { sqlite, mod, calls } = await setup();
+  const env = globalThis.__NEWSLETTER_TEST_ENV;
+  // Owner and paid accounts never enter the sequence.
+  assert.equal(await mod.enrollAccount(env.DB, { email: 'ale@example.test', role: 'owner', accessLevel: 'full' }), null);
+  assert.equal(await mod.enrollAccount(env.DB, { email: 'pro@example.test', role: 'teacher', accessLevel: 'full' }), null);
+  assert.equal(sqlite.prepare('SELECT count(*) n FROM newsletter_subscribers').get().n, 0);
+
+  const subscriber = await mod.enrollAccount(env.DB, { email: 'Profe@Example.test', role: 'teacher', accessLevel: 'free' });
+  assert.equal(subscriber.email, 'profe@example.test');
+  const row = sqlite.prepare('SELECT * FROM newsletter_subscribers').get();
+  assert.equal(row.source_path, mod.ACCOUNT_SOURCE_PATH);
+  assert.equal(row.status, 'active');
+  await mod.deliverWelcome(env, (input, init) => fetch(input, init), 'https://spanishcue.test', subscriber, 'account');
+  const mail = calls.filter(c => c.url === 'https://api.resend.com/emails');
+  assert.equal(mail.length, 1);
+  const sent = JSON.parse(mail[0].init.body);
+  assert.equal(mail[0].init.headers['idempotency-key'], `account-welcome/${subscriber.id}`);
+  assert.equal(sent.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
+  assert.equal(sent.headers['List-Unsubscribe'], `<https://spanishcue.test/api/newsletter/baja?t=${row.unsubscribe_token}>`);
+  assert.match(sent.text, /\/gramatica\/indefinido-e-imperfecto/);
+  assert.match(sent.text, /US\$19,90\/mes/);
+  assert.match(sent.text, /US\$150\/año/);
+  // The account mail does not claim a browser-unlocked gift class.
+  assert.doesNotMatch(sent.text, /desbloqueada en este navegador/);
+  const event = calls.find(c => c.url === 'https://api.resend.com/events/send');
+  assert.deepEqual(JSON.parse(event.init.body), { event: mod.NURTURE_EVENT, email: 'profe@example.test', payload: { source: 'account' } });
+
+  // Same email again (or one that unsubscribed earlier): untouched, no second enrollment.
+  sqlite.prepare("UPDATE newsletter_subscribers SET status='unsubscribed'").run();
+  assert.equal(await mod.enrollAccount(env.DB, { email: 'profe@example.test', role: 'teacher', accessLevel: 'free' }), null);
+  assert.equal(sqlite.prepare('SELECT status FROM newsletter_subscribers').get().status, 'unsubscribed');
+});
+
+test('account sign-in wiring: only brand-new accounts are enrolled, after purchase binding', async () => {
+  const [route, accounts] = await Promise.all(['app/api/auth/session/route.ts', 'db/accounts.ts'].map(f => readFile(f, 'utf8')));
+  assert.match(accounts, /created: !existingIdentity && account\.id === candidateId/);
+  const binding = route.indexOf('bindPurchaseToUser(env.DB');
+  const enroll = route.indexOf('enrollAccount(env.DB, account)');
+  assert.ok(binding > 0 && enroll > binding);
+  assert.match(route, /if \(accountCreated\) \{/);
+  assert.match(route, /subscriber, "account"\)/);
+});
