@@ -429,7 +429,7 @@
    "id": "bonsai",
    "title": "Veinte años de agua",
    "place": "La cámara fría",
-   "context": "Gaspar le cuenta al nuevo empleado cómo fueron sus veinte años con el bonsái.",
+   "context": "Gaspar le cuenta a la persona nueva del turno de noche cómo fueron sus veinte años con el bonsái.",
    "speakers": [
     {
      "name": "Gaspar",
@@ -1797,7 +1797,7 @@
    "lines": [
     {
      "s": 0,
-     "text": "Doce. Más que doce. Hasta el guante de Aurora. Cuarenta años preguntando, y vuelve justo en el primer turno del nuevo."
+     "text": "Doce. Más que doce. Hasta el guante de Aurora. Cuarenta años preguntando, y vuelve justo en la primera noche de quien empezó anoche."
     },
     {
      "s": 1,
@@ -1813,7 +1813,7 @@
     },
     {
      "s": 0,
-     "text": "Mi diario. Bueno… entonces ya saben lo de la salsa de los jueves. Pues el jueves que viene invito yo. El nuevo también. Le debo un desayuno, y una apuesta perdida se paga bailando."
+     "text": "Mi diario. Bueno… entonces ya saben lo de la salsa de los jueves. Pues el jueves que viene invito yo. Al turno nuevo también. Le debo un desayuno, y una apuesta perdida se paga bailando."
     }
    ],
    "choice": [
@@ -1868,7 +1868,7 @@
      "model": "Tuve que cocinar para todos, y me encantó."
     }
    ],
-   "gaps": "Pues el jueves que viene [invito] yo. El nuevo también. Le debo un [desayuno], y una [apuesta] perdida se paga [bailando].",
+   "gaps": "Pues el jueves que viene [invito] yo. Al turno nuevo también. Le debo un [desayuno], y una [apuesta] perdida se paga [bailando].",
    "glossary": [
     {
      "word": "honrado",

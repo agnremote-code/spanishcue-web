@@ -94,7 +94,7 @@ export const OFFICE = {
     aurora: '79 años; perdió un guante rojo en la Noche de los Faroles de 1986 y viene cada año la noche después de la fiesta',
     anillo: 'la boda es el sábado; el joyero grabó «Jessica», el nombre de la exnovia de Óliver',
     canoa: 'la canoa se llama La Gaviota; Nacho y Guille grabaron sus nombres en 1998; llevan diez años sin hablarse',
-    cenizas: 'el perro se llamaba Canelo y vivió catorce años; la urna viajó toda la noche en la línea 14',
+    cenizas: 'el perro se llamaba Canelo y vivió catorce años; Mari Carmen encontró la urna en un asiento de atrás a las nueve y la llevó toda la noche junto al volante de la línea 14',
     loro: 'el loro se llama Fígaro; Rubén lo perdió hace seis años y Fefa lo adoptó',
     tato: 'devuelve catorce carteras de la fiesta y pide el diez por ciento de recompensa',
     benja: '27 años; despertó en pijama en un banco; anoche ganó el karaoke de la fiesta',

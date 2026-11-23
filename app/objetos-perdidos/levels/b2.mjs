@@ -236,11 +236,11 @@ export default {
     words: ["detenerse en seco", "el tronco", "dirigir la palabra", "el reglamento", "reconciliarse"],
   },
   cenizas: {
-    title: "El guardián del asiento de atrás",
+    title: "El guardián junto al volante",
     line: "Bajas al muelle de carga, donde la policía municipal deja los vehículos en los que alguien ha olvidado algo importante. Allí está aparcado el autobús de la línea 14. La conductora, una mujer española con chaleco reflectante, baja con una urna pequeña de madera entre las manos, sujetándola con un cuidado que no esperarías de alguien que conduce un autobús de doce metros. Un hombre uruguayo cruza la calle corriendo hacia ella.",
     dialogue: [
       ["lisandro", "¡Canelo! Perdone… Lisandro Quiroga. Esas son las cenizas de mi perro, Canelo. Vivió catorce años conmigo. Ayer lo llevaba al río donde le gustaba nadar, me quedé dormido y bajé sin él."],
-      ["maricarmen", "Mari Carmen Toledo. La urna ha viajado toda la noche en el asiento de atrás. Y le diré algo: ha sido la noche más tranquila de mi carrera. Ni un borracho, ni una pelea. Como si alguien vigilara."],
+      ["maricarmen", "Mari Carmen Toledo. La encontré en un asiento de atrás y ha viajado toda la noche junto al volante. Y le diré algo: ha sido la noche más tranquila de mi carrera. Ni un borracho, ni una pelea. Como si alguien vigilara."],
       ["maricarmen", "Si me lo hubieran contado, me habría reído. Pero acabé hablándole en cada parada."],
     ],
     ask: "Lisandro abraza la urna y no consigue hablar. ¿Qué dices?",

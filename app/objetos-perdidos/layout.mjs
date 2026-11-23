@@ -199,7 +199,7 @@ const PLACES = {
   sonambulo: { spot: { x: -7.0, z: 25.8 }, npc: { x: -6.2, z: 28.35, heading: Math.PI, seat: true }, pose: 'sit', mood: 'sleepy', look: L('#a8724e', 'young', 'm', 'curly', '#120d0b', 'shirt', '#5a8ac8', 'pants', '#5a8ac8', [], { seed: 151 }),
     extras: [{ x: -8.4, z: 28.2, heading: 2.6, pose: 'arms', mood: 'smile', look: L('#b9825c', 'adult', 'f', 'bun', '#120d0b', 'scrubs', '#f4f4f0', 'pants', '#f4f4f0', ['glasses'], { seed: 152 }) }] },
   farol: { spot: { x: 1.6, z: -142.2 }, npc: { x: 2.6, z: -144.6 }, pose: 'stand', mood: 'worried', look: L('#c48f69', 'young', 'f', 'ponytail', '#2a1a12', 'jacket', '#e0a020', 'jeans', '#24304a', ['earrings'], { seed: 161 }) },
-  diario: { spot: { x: -4.0, z: -135.4 }, npc: { x: -4.0, z: -133.25, heading: Math.PI, seat: true }, pose: 'read', mood: 'surprised', look: L('#8d5a3c', 'young', 'm', 'short', '#120d0b', 'uniform', '#1a2440', 'pants', '#1a2440', [], { seed: 171 }) },
+  diario: { spot: { x: -4.0, z: -135.4 }, npc: { x: -4.0, z: -133.31, heading: Math.PI, seat: true }, pose: 'read', mood: 'surprised', look: L('#8d5a3c', 'young', 'm', 'short', '#120d0b', 'uniform', '#1a2440', 'pants', '#1a2440', [], { seed: 171 }) },
   alcalde: { spot: { x: -3.2, z: 11.6 }, npc: { ...rowSeat(ROWS[0], 1.8), seat: true }, pose: 'sit', mood: 'worried', look: L('#e2b896', 'adult', 'm', 'short', '#3a2416', 'suit', '#1a2440', 'pants', '#1a2440', ['glasses'], { seed: 181 }) },
   relevo: { spot: { x: 11.0, z: 12.6 }, npc: { x: 12.8, z: 11.2 }, pose: 'arms', mood: 'neutral', look: L('#c99468', 'adult', 'f', 'bob', '#3a2a20', 'suit', '#2a2a2a', 'pants', '#2a2a2a', ['glasses', 'earrings'], { seed: 191 }),
     extras: [{ x: 14.4, z: 12.8, heading: -1.8, pose: 'stand', mood: 'smile', look: CELESTINO }] },

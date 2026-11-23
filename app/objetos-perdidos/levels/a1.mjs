@@ -153,7 +153,7 @@ export default {
     ask: "Celestino está muy rojo. Aurora te mira a ti. ¿Qué haces?",
     options: [
       { say: "Voy a buscar en todas las cajas de 1986.", reply: "Hace cuarenta años que nadie mira esas cajas.", end: "En la última caja hay un guante rojo de lana. Aurora se lo pone. Le queda perfecto.", mood: "surprised" },
-      { say: "Celestino, ¿usted sabe algo más de este guante?", reply: "Yo… Está en mi cajón. Desde 1986. No quería que dejaras de venir, Aurora.", end: "Aurora no dice nada. Después, le da la mano a Celestino. La mano sin guante.", mood: "smitten" },
+      { say: "Celestino, ¿usted sabe algo más de este guante?", reply: "Yo… Está en mi cajón. Desde 1986. Tenía miedo de no verte más, Aurora.", end: "Aurora no dice nada. Después, le da la mano a Celestino. La mano sin guante.", mood: "smitten" },
       { say: "Es muy tarde. ¿Y si lo buscan el año que viene, los dos?", reply: "El año que viene… Sí, me gusta la idea, Celestino.", end: "Aurora y Celestino quedan para la próxima Noche de los Faroles. Celestino escribe la fecha en el libro.", mood: "love" },
     ],
     talk: [
@@ -241,14 +241,14 @@ export default {
     line: "En el muelle de carga está aparcado el autobús de la línea 14. La conductora tiene una urna pequeña en las manos. Un hombre uruguayo corre hacia ella.",
     dialogue: [
       ["lisandro", "¡Canelo! Perdón… Soy Lisandro. Son las cenizas de mi perro, Canelo. Vivió catorce años."],
-      ["maricarmen", "Soy Mari Carmen, la conductora. La urna viajó toda la noche en el asiento de atrás."],
+      ["maricarmen", "Soy Mari Carmen, la conductora. La urna viajó toda la noche conmigo, junto al volante."],
       ["maricarmen", "Y fue la primera noche tranquila de la línea 14. Ni un problema."],
     ],
     ask: "Lisandro abraza la urna. ¿Qué dices?",
     options: [
       { say: "Canelo cuidó el autobús toda la noche. Ahora vuelve a casa.", reply: "Siempre fue un buen guardián. Gracias.", end: "Lisandro sale con la urna bajo el brazo. Mari Carmen le dice adiós con la mano.", mood: "love" },
       { say: "¿Y si Canelo da una última vuelta en el autobús?", reply: "¿Una vuelta más? A él le encantaba ir en autobús.", end: "Mari Carmen enciende el motor. Lisandro y Canelo hacen la última vuelta de la línea 14.", mood: "smile" },
-      { say: "Mari Carmen, ¿quiere una foto de Canelo para el autobús?", reply: "¡Sí! Un perro guardián junto al volante.", end: "Lisandro le manda una foto. Mañana Canelo va a estar en la línea 14, al lado del volante.", mood: "sad" },
+      { say: "Mari Carmen, ¿quiere una foto de Canelo para el autobús?", reply: "¡Sí! Un perro guardián junto al volante.", end: "Lisandro le manda una foto. Mañana Canelo va a estar en la línea 14, al lado del volante.", mood: "love" },
     ],
     talk: [
       "¿Qué nombre bonito tiene un perro de tu calle?",
@@ -408,7 +408,7 @@ export default {
     ask: "Doña Pura lee el libro. ¿Qué le dices?",
     options: [
       { say: "Buenos días, doña Pura. Aquí tiene el libro de la noche, línea por línea.", reply: "Mmm. Mucho trabajo. Y buena letra.", end: "Doña Pura lee todo el libro en silencio. Al final, cierra el libro y te mira.", mood: "neutral" },
-      { say: "Es una noche muy larga. ¿Quiere otro café mientras lee?", reply: "Sí, gracias. Con dos de azúcar.", end: "Con el segundo café, doña Pura lee más despacio y casi sonríe.", mood: "smile" },
+      { say: "Fue una noche muy larga. ¿Quiere otro café mientras lee?", reply: "Sí, gracias. Con dos de azúcar.", end: "Con el segundo café, doña Pura lee más despacio y casi sonríe.", mood: "smile" },
       { say: "Celestino me ayudó mucho. Es el mejor compañero.", reply: "Celestino… Sí. Celestino es especial. Siempre.", end: "Celestino se pone rojo. Doña Pura y él se miran un momento largo.", mood: "love" },
     ],
     talk: [

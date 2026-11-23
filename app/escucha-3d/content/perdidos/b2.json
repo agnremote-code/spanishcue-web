@@ -450,7 +450,7 @@
    "id": "bonsai",
    "title": "El testamento de plástico",
    "place": "La cámara fría",
-   "context": "Gaspar encuentra, pegada debajo de la maceta del bonsái, una nota de su abuelo.",
+   "context": "Gaspar encuentra una nota de su abuelo escondida en el bonsái.",
    "speakers": [
     {
      "name": "Gaspar",
@@ -1924,7 +1924,7 @@
    "lines": [
     {
      "s": 0,
-     "text": "Usted sabe que aposté contra el nuevo. Pensé que no aguantaría ni hasta las tres. El turno de noche de la Noche de los Faroles es el peor del año."
+     "text": "Usted sabe que aposté contra la persona nueva. Pensé que no aguantaría ni hasta las tres. El turno de noche de la Noche de los Faroles es el peor del año."
     },
     {
      "s": 1,
@@ -1940,7 +1940,7 @@
     },
     {
      "s": 0,
-     "text": "Llevo treinta años diciendo que en esta oficina solo se guardan cosas. Y resulta que de noche aquí se encuentran personas. Le debo un desayuno al nuevo. Y quizás una disculpa a usted, Celestino."
+     "text": "Llevo treinta años diciendo que en esta oficina solo se guardan cosas. Y resulta que de noche aquí se encuentran personas. Le debo un desayuno a quien empezó anoche. Y quizás una disculpa a usted, Celestino."
     },
     {
      "s": 1,
@@ -1953,9 +1953,9 @@
    ],
    "choice": [
     {
-     "q": "¿Por qué apostó Pura contra el nuevo?",
+     "q": "¿Por qué apostó Pura contra la persona nueva?",
      "options": [
-      "Porque el nuevo llegó tarde",
+      "Porque la persona nueva llegó tarde",
       "Porque Celestino se lo pidió",
       "Porque es el peor turno del año"
      ],

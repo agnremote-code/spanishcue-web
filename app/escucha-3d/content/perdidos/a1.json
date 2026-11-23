@@ -421,7 +421,7 @@
    "id": "bonsai",
    "title": "Un árbol que no crece",
    "place": "La cámara fría",
-   "context": "En la cámara fría, entre plantas olvidadas, Gaspar encuentra un bonsái.",
+   "context": "Entre plantas olvidadas, Gaspar encuentra un bonsái.",
    "speakers": [
     {
      "name": "Gaspar",
@@ -515,7 +515,7 @@
    "id": "taper",
    "title": "Doscientos doce táperes",
    "place": "La cámara fría",
-   "context": "Son las cuatro de la mañana. Álex entra corriendo en la cámara fría.",
+   "context": "Álex entra corriendo en la cámara fría.",
    "speakers": [
     {
      "name": "Álex",
@@ -926,7 +926,7 @@
    "id": "canoa",
    "title": "La Gaviota tiene dos dueños",
    "place": "La sala de objetos grandes",
-   "context": "Nacho y Guille están delante de una canoa roja. Llevan diez años sin hablarse.",
+   "context": "Dos amigos están delante de una canoa. Llevan diez años sin hablarse.",
    "speakers": [
     {
      "name": "Nacho",
@@ -1132,7 +1132,7 @@
    "id": "loro",
    "title": "Fígaro reconoce una voz",
    "place": "El muelle de carga",
-   "context": "En el muelle de carga, Rubén, taxista, tiene una jaula con un loro. Llega Doña Fefa.",
+   "context": "En el muelle de carga, un taxista tiene una jaula con un loro. Llega Doña Fefa.",
    "speakers": [
     {
      "name": "Rubén",
@@ -1237,9 +1237,9 @@
   },
   {
    "id": "ladron",
-   "title": "El carterista honrado",
+   "title": "El hombre de la gorra",
    "place": "La calle",
-   "context": "Bajo el letrero verde de la farmacia, un hombre con gorra llama a Celestino desde la calle.",
+   "context": "En la calle, un hombre con gorra llama a Celestino.",
    "speakers": [
     {
      "name": "Tato",
@@ -1276,11 +1276,11 @@
    ],
    "choice": [
     {
-     "q": "¿Dónde está el hombre?",
+     "q": "¿Cuántas carteras trae el hombre?",
      "options": [
-      "Bajo el letrero de la farmacia",
-      "Dentro de la oficina",
-      "En el muelle de carga"
+      "Catorce",
+      "Cuatro",
+      "Cuarenta"
      ],
      "answer": 0
     },
@@ -1637,7 +1637,7 @@
    "id": "alcalde",
    "title": "Urgente con número",
    "place": "La sala de espera",
-   "context": "A las cinco de la mañana, Ernesto, el secretario del alcalde, espera en la sala de espera con el número 247.",
+   "context": "A las cinco de la mañana, Ernesto espera en la sala de espera con un papel en la mano.",
    "speakers": [
     {
      "name": "Ernesto",
@@ -1740,7 +1740,7 @@
    "id": "relevo",
    "title": "El cambio de turno",
    "place": "El despacho de la jefa",
-   "context": "A las siete en punto, Doña Pura entra en su despacho. Celestino la espera con el libro de registro.",
+   "context": "Doña Pura entra en su despacho. Celestino la espera con el libro de registro.",
    "speakers": [
     {
      "name": "Pura",
@@ -1756,7 +1756,7 @@
    "lines": [
     {
      "s": 0,
-     "text": "Buenos días, Celestino. ¿Cómo fue la primera noche del nuevo? Mi apuesta: menos de doce objetos devueltos."
+     "text": "Buenos días, Celestino. ¿Cómo fue la primera noche del turno nuevo? Mi apuesta: menos de doce objetos devueltos."
     },
     {
      "s": 1,

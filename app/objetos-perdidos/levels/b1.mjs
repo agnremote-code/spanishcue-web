@@ -240,7 +240,7 @@ export default {
     line: "Bajas al muelle de carga, donde la policía deja los vehículos con objetos olvidados. Allí está aparcado el autobús de la línea 14. La conductora, una mujer española, baja con una urna pequeña de madera entre las manos. Un hombre uruguayo cruza la calle corriendo hacia ella.",
     dialogue: [
       ["lisandro", "¡Canelo! Perdone… Lisandro Quiroga. Son las cenizas de mi perro, Canelo. Vivió catorce años conmigo. Ayer lo llevaba al río donde le gustaba nadar y lo olvidé en el asiento."],
-      ["maricarmen", "Mari Carmen Toledo. La urna ha viajado toda la noche en el asiento de atrás. Y le digo una cosa: ha sido la noche más tranquila de mi vida. Ni un borracho, ni una pelea, ni un grito."],
+      ["maricarmen", "Mari Carmen Toledo. La encontré en un asiento de atrás y ha viajado toda la noche a mi lado, junto al volante. Y le digo una cosa: ha sido la noche más tranquila de mi vida. Ni un borracho, ni una pelea, ni un grito."],
       ["maricarmen", "Me dio pena dejarla aquí. Le hablaba en cada parada."],
     ],
     ask: "Lisandro abraza la urna y no puede hablar. ¿Qué dices?",

@@ -37,7 +37,7 @@ export default {
     options: [
       { say: t("Hay un número en la etiqueta. ¿Llamamos a Teo?", "There is a number on the label. Shall we call Teo?"), reply: t("¿Ahora? Bueno… sí. ¡Llama tú!", "Now? Well… yes. You call!"), end: t("Teo contesta. Rocío le da el paraguas y su número de teléfono.", "Teo answers. Rocío gives him the umbrella and her phone number."), mood: "smitten" },
       { say: t("Mañana llueve. ¿Te quedas el paraguas?", "Tomorrow it rains. Do you keep the umbrella?"), reply: t("¡Sí! Es un paraguas muy bueno.", "Yes! It is a very good umbrella."), end: t("Rocío sale con el paraguas de Teo. Fuera no llueve.", "Rocío leaves with Teo's umbrella. Outside it is not raining."), mood: "laugh" },
-      { say: t("Lo pongo aquí, con los otros paraguas.", "I put it here, with the other umbrellas."), reply: t("Vale… Hay muchos paraguas negros, ¿no?", "OK… There are a lot of black umbrellas, right?"), end: t("El paraguas de Teo está en la estantería, entre mil paraguas negros.", "Teo's umbrella is on the shelf, among a thousand black umbrellas."), mood: "sad" },
+      { say: t("Lo pongo aquí, con los otros paraguas.", "I put it here, with the other umbrellas."), reply: t("Vale… Hay muchos paraguas negros, ¿no?", "OK… There are a lot of black umbrellas, right?"), end: t("El paraguas de Teo está en la estantería, entre más de mil paraguas negros.", "Teo's umbrella is on the shelf, among more than a thousand black umbrellas."), mood: "sad" },
     ],
     talk: [
       t("¿Dónde dejas el paraguas al entrar en casa?", "Where do you leave your umbrella when you get home?"),
@@ -238,7 +238,7 @@ export default {
     dialogue: [
       ["lisandro", t("Soy Lisandro. En la caja están las cenizas de Canelo, mi perro.", "I am Lisandro. In the box are the ashes of Canelo, my dog.")],
       ["maricarmen", t("Soy Mari Carmen, la conductora. ¡La caja está aquí, en mi autobús!", "I am Mari Carmen, the driver. The box is here, on my bus!")],
-      ["maricarmen", t("Canelo viaja conmigo toda la noche.", "Canelo travels with me all night.")],
+      ["maricarmen", t("Canelo viajó conmigo toda la noche.", "Canelo travelled with me all night.")],
     ],
     ask: t("Lisandro llora un poco. ¿Qué dices?", "Lisandro cries a little. What do you say?"),
     options: [
@@ -397,14 +397,14 @@ export default {
     title: t("Las siete de la mañana", "Seven in the morning"),
     line: t("Son las siete. Llega la jefa, doña Pura. Abre el libro de la noche.", "It is seven. The boss arrives, Doña Pura. She opens the book of the night."),
     dialogue: [
-      ["pura", t("Buenos días. Soy Pura, la jefa. ¿Cuántos objetos vuelven a casa?", "Good morning. I am Pura, the boss. How many objects go home?")],
-      ["celestino", t("Muchos, doña Pura. El turno nuevo trabaja muy bien.", "Many, Doña Pura. The new shift works very well.")],
+      ["pura", t("Buenos días. Soy Pura, la jefa. ¿Cuántos objetos volvieron a casa?", "Good morning. I am Pura, the boss. How many objects went home?")],
+      ["celestino", t("Muchos, doña Pura. El turno nuevo trabajó muy bien.", "Many, Doña Pura. The new shift worked very well.")],
       ["pura", t("Vamos a ver el libro.", "Let's see the book.")],
     ],
     ask: t("Doña Pura te mira. ¿Qué dices?", "Doña Pura looks at you. What do you say?"),
     options: [
       { say: t("Buenos días. Aquí está el libro de la noche.", "Good morning. Here is the book of the night."), reply: t("Gracias. Leo ahora mismo.", "Thank you. I read it right now."), end: t("Doña Pura lee el libro despacio. Al final, sonríe.", "Doña Pura reads the book slowly. At the end, she smiles."), mood: "smile" },
-      { say: t("Es una noche muy larga. ¿Un café, doña Pura?", "It is a very long night. A coffee, Doña Pura?"), reply: t("Sí, un café. Y leo el libro.", "Yes, a coffee. And I read the book."), end: t("Con un café, doña Pura lee el libro de la noche.", "With a coffee, Doña Pura reads the book of the night."), mood: "neutral" },
+      { say: t("Fue una noche muy larga. ¿Un café, doña Pura?", "It was a very long night. A coffee, Doña Pura?"), reply: t("Sí, un café. Y leo el libro.", "Yes, a coffee. And I read the book."), end: t("Con un café, doña Pura lee el libro de la noche.", "With a coffee, Doña Pura reads the book of the night."), mood: "neutral" },
       { say: t("Celestino ayuda mucho. Es un buen compañero.", "Celestino helps a lot. He is a good colleague."), reply: t("¿Celestino? Sí. Celestino es especial.", "Celestino? Yes. Celestino is special."), end: t("Celestino está rojo. Doña Pura abre el libro.", "Celestino is red. Doña Pura opens the book."), mood: "love" },
     ],
     talk: [

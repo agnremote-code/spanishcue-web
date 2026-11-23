@@ -4,7 +4,7 @@
  "items": [
   {
    "id": "dentadura",
-   "title": "Tres dentaduras en una caja",
+   "title": "Una sonrisa perdida",
    "place": "El mostrador",
    "context": "Don Evaristo llega al mostrador. Habla con Don Celestino.",
    "contextEn": "Don Evaristo comes to the counter. He talks to Don Celestino.",
@@ -129,8 +129,8 @@
    "id": "paraguas",
    "title": "Un paraguas de otra persona",
    "place": "Las estanterías de paraguas",
-   "context": "Rocío trae un paraguas negro a la oficina.",
-   "contextEn": "Rocío brings a black umbrella to the office.",
+   "context": "Rocío llega a la oficina con algo en la mano.",
+   "contextEn": "Rocío comes to the office with something in her hand.",
    "speakers": [
     {
      "name": "Rocío",
@@ -250,10 +250,10 @@
   },
   {
    "id": "llaves",
-   "title": "El cerrajero sin llaves",
+   "title": "Un hombre sin llaves",
    "place": "El pasillo de las llaves",
-   "context": "Wilson es cerrajero. Habla solo delante de las llaves.",
-   "contextEn": "Wilson is a locksmith. He talks to himself in front of the keys.",
+   "context": "Wilson habla solo delante de las llaves.",
+   "contextEn": "Wilson talks to himself in front of the keys.",
    "speakers": [
     {
      "name": "Wilson",
@@ -707,7 +707,7 @@
   },
   {
    "id": "guante",
-   "title": "Un guante rojo de 1986",
+   "title": "La señora de todos los años",
    "place": "El archivo",
    "context": "Doña Aurora llega al archivo. Viene todos los años.",
    "contextEn": "Doña Aurora comes to the archive. She comes every year.",
@@ -825,10 +825,10 @@
   },
   {
    "id": "anillo",
-   "title": "El anillo de la boda",
+   "title": "Antes de la boda",
    "place": "La sala de objetos grandes",
-   "context": "Vanesa y Óliver buscan un anillo en la sala de objetos grandes.",
-   "contextEn": "Vanesa and Óliver are looking for a ring in the room of big objects.",
+   "context": "Vanesa y Óliver buscan algo en la sala de objetos grandes.",
+   "contextEn": "Vanesa and Óliver are looking for something in the room of big objects.",
    "speakers": [
     {
      "name": "Vanesa",
@@ -943,10 +943,10 @@
   },
   {
    "id": "tuba",
-   "title": "La tuba de Fidel",
+   "title": "Un músico sin instrumento",
    "place": "La sala de objetos grandes",
-   "context": "Fidel toca la tuba en la banda de la ciudad. Busca su tuba.",
-   "contextEn": "Fidel plays the tuba in the city band. He is looking for his tuba.",
+   "context": "Fidel toca en la banda de la ciudad. Busca su instrumento.",
+   "contextEn": "Fidel plays in the city band. He is looking for his instrument.",
    "speakers": [
     {
      "name": "Fidel",
@@ -1051,10 +1051,10 @@
   },
   {
    "id": "canoa",
-   "title": "Una canoa para dos",
+   "title": "Dos amigos y un barco",
    "place": "La sala de objetos grandes",
-   "context": "Nacho y Guille quieren la misma canoa.",
-   "contextEn": "Nacho and Guille want the same canoe.",
+   "context": "Nacho y Guille están en la sala de objetos grandes.",
+   "contextEn": "Nacho and Guille are in the room of big objects.",
    "speakers": [
     {
      "name": "Nacho",
@@ -1169,10 +1169,10 @@
   },
   {
    "id": "cenizas",
-   "title": "Canelo en el autobús",
+   "title": "Un perro muy viajero",
    "place": "El muelle de carga",
-   "context": "Lisandro busca las cenizas de su perro. Habla con la conductora de un autobús.",
-   "contextEn": "Lisandro is looking for his dog’s ashes. He talks to a bus driver.",
+   "context": "Lisandro busca las cenizas de su perro. Habla con una conductora.",
+   "contextEn": "Lisandro is looking for his dog’s ashes. He talks to a driver.",
    "speakers": [
     {
      "name": "Lisandro",
@@ -1198,8 +1198,8 @@
     },
     {
      "s": 1,
-     "text": "Toda la noche delante, conmigo. Y esta noche no hay problemas en la línea.",
-     "en": "All night at the front, with me. And tonight there are no problems on the line."
+     "text": "Toda la noche delante, conmigo, junto al volante. Y esta noche no hubo problemas en la línea.",
+     "en": "All night at the front, with me, next to the steering wheel. And tonight there were no problems on the line."
     },
     {
      "s": 0,
@@ -1287,10 +1287,10 @@
   },
   {
    "id": "loro",
-   "title": "Un loro en el taxi",
+   "title": "Un pájaro que habla",
    "place": "El muelle de carga",
-   "context": "Rubén es taxista. Trae un loro a la oficina. Llega Doña Fefa.",
-   "contextEn": "Rubén is a taxi driver. He brings a parrot to the office. Doña Fefa arrives.",
+   "context": "Rubén trae un loro a la oficina. Llega Doña Fefa.",
+   "contextEn": "Rubén brings a parrot to the office. Doña Fefa arrives.",
    "speakers": [
     {
      "name": "Rubén",
@@ -1405,7 +1405,7 @@
   },
   {
    "id": "ladron",
-   "title": "Catorce carteras",
+   "title": "Una bolsa llena",
    "place": "La calle",
    "context": "Tato llega con una bolsa. Habla con Celestino en la calle.",
    "contextEn": "Tato arrives with a bag. He talks to Celestino in the street.",
@@ -1523,10 +1523,10 @@
   },
   {
    "id": "sonambulo",
-   "title": "Un zapato y un pijama",
+   "title": "Un zapato y una noche larga",
    "place": "La puerta de la farmacia",
-   "context": "Benja está en pijama en la calle. Gloria es farmacéutica.",
-   "contextEn": "Benja is in pyjamas in the street. Gloria is a pharmacist.",
+   "context": "Benja está en la calle. Gloria es farmacéutica.",
+   "contextEn": "Benja is in the street. Gloria is a pharmacist.",
    "speakers": [
     {
      "name": "Benja",
@@ -1641,10 +1641,10 @@
   },
   {
    "id": "farol",
-   "title": "Un deseo en la azotea",
+   "title": "Algo que cayó del cielo",
    "place": "La azotea",
-   "context": "Selene sube a la azotea de la oficina. Busca su farol de papel.",
-   "contextEn": "Selene goes up to the office rooftop. She is looking for her paper lantern.",
+   "context": "Selene llega a la oficina. Busca algo que soltó en la fiesta.",
+   "contextEn": "Selene comes to the office. She is looking for something she let go at the festival.",
    "speakers": [
     {
      "name": "Selene",
@@ -1751,8 +1751,8 @@
    "id": "diario",
    "title": "El diario de la mochila",
    "place": "La azotea",
-   "context": "Yuri es vigilante. Descansa en la azotea con un diario.",
-   "contextEn": "Yuri is a security guard. He rests on the rooftop with a diary.",
+   "context": "Yuri descansa en la azotea con un diario.",
+   "contextEn": "Yuri rests on the rooftop with a diary.",
    "speakers": [
     {
      "name": "Yuri",
@@ -1857,7 +1857,7 @@
   },
   {
    "id": "alcalde",
-   "title": "El número 247",
+   "title": "Un hombre con prisa",
    "place": "La sala de espera",
    "context": "Ernesto espera en la sala de espera. Tiene un papel con un número.",
    "contextEn": "Ernesto waits in the waiting room. He has a paper with a number.",
@@ -1975,10 +1975,10 @@
   },
   {
    "id": "relevo",
-   "title": "Las siete de la mañana",
+   "title": "El fin del turno",
    "place": "El despacho de la jefa",
-   "context": "Son las siete. Llega Doña Pura, la jefa. Celestino tiene el libro de la noche.",
-   "contextEn": "It is seven o’clock. Doña Pura, the boss, arrives. Celestino has the night’s ledger.",
+   "context": "Llega Doña Pura. Celestino tiene el libro de la noche.",
+   "contextEn": "Doña Pura arrives. Celestino has the night’s ledger.",
    "speakers": [
     {
      "name": "Pura",

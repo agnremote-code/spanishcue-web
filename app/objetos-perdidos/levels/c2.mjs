@@ -242,7 +242,7 @@ export default {
     line: "Desciendes al muelle de carga, cementerio provisional de los vehículos en los que alguien olvidó algo que no debía. Allí reposa el autobús de la línea 14. La conductora, una mujer española con chaleco reflectante y un aire de no haber pedido permiso jamás para nada, desciende sosteniendo una urna pequeña de madera con una ternura que desmiente de un plumazo toda su biografía aparente. Un hombre uruguayo cruza la calle a la carrera, sin mirar, como quien persigue algo más que un objeto.",
     dialogue: [
       ["lisandro", "¡Canelo! Perdone, perdone… Lisandro Quiroga. Son las cenizas de mi perro. Catorce años a mi lado. Ayer lo llevaba al río donde le gustaba chapotear, me quedé dormido y bajé sin él. Catorce años de lealtad y yo lo olvido en un autobús. Hay que tener cara."],
-      ["maricarmen", "Mari Carmen Toledo. La urna ha recorrido toda la noche en el asiento de atrás. Y le confieso algo que me cuesta pronunciar: ha sido la noche más plácida de mis veinte años en esta línea. Ni un borracho. Ni una reyerta. Ni un grito."],
+      ["maricarmen", "Mari Carmen Toledo. La encontré en un asiento de atrás y la he llevado toda la noche junto al volante. Y le confieso algo que me cuesta pronunciar: ha sido la noche más plácida de mis veinte años en esta línea. Ni un borracho. Ni una reyerta. Ni un grito."],
       ["maricarmen", "Terminé dándole las buenas noches en cada parada. Si se lo cuenta a alguien, lo desmentiré bajo juramento."],
     ],
     ask: "Lisandro estrecha la urna y no logra articular palabra. ¿Qué dices?",
@@ -408,9 +408,9 @@ export default {
     ],
     ask: "Doña Pura pasa las páginas sin alzar la vista. ¿Qué le dices?",
     options: [
-      { say: "Buenos días, doña Pura. Consta todo en el libro, tal como me instruyó Celestino: quién vino, qué buscaba y con qué se marchó.", reply: "Ordenado, minucioso y legible. En cuarenta años de servicio, es la primera vez que me ocurre.", end: "Doña Pura leyó el libro de principio a fin sin pronunciar palabra. Al terminar lo cerró despacio y te miró por encima de las gafas.", mood: "neutral" },
+      { say: "Buenos días, doña Pura. Consta todo en el libro, tal como me instruyó Celestino: quién vino, qué buscaba y con qué se marchó.", reply: "Ordenado, minucioso y legible. En treinta años de servicio, es la primera vez que me ocurre.", end: "Doña Pura leyó el libro de principio a fin sin pronunciar palabra. Al terminar lo cerró despacio y te miró por encima de las gafas.", mood: "neutral" },
       { say: "Ha sido una noche larga, y presiento que la lectura no le irá a la zaga. ¿Le preparo otro café?", reply: "Con dos de azúcar. Y no me mire así, que hoy me lo he ganado. O lo he perdido, ya veremos.", end: "Con el segundo café, doña Pura leyó más despacio y casi se le escapó una sonrisa en la página del loro.", mood: "smile" },
-      { say: "Sin Celestino no habría llegado ni a la mitad. Aunque intuyo que eso usted lo sabe desde hace bastante tiempo.", reply: "¿Celestino? Sí… Celestino siempre ha sido especial. Desde 1986, para ser exactos.", end: "Celestino se puso del color del guante de Aurora. Doña Pura lo miró un momento muy largo, más largo que el libro entero.", mood: "love" },
+      { say: "Sin Celestino no habría llegado ni a la mitad. Aunque intuyo que eso usted lo sabe desde hace bastante tiempo.", reply: "¿Celestino? Sí… Celestino siempre ha sido especial. Desde el día en que entré en esta oficina, para ser exactos.", end: "Celestino se puso del color del guante de Aurora. Doña Pura lo miró un momento muy largo, más largo que el libro entero.", mood: "love" },
     ],
     talk: [
       "Si tuvieras que resumir tu mejor noche de trabajo en el estilo seco de un parte oficial, ¿qué escribirías?",

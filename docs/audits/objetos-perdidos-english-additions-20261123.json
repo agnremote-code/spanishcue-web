@@ -72,7 +72,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Rocío brings a black umbrella to the office."
+      "text": "Rocío comes to the office with something in her hand."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -136,7 +136,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Wilson is a locksmith. He talks to himself in front of the keys."
+      "text": "Wilson talks to himself in front of the keys."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -428,7 +428,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Vanesa and Óliver are looking for a ring in the room of big objects."
+      "text": "Vanesa and Óliver are looking for something in the room of big objects."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -488,7 +488,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Fidel plays the tuba in the city band. He is looking for his tuba."
+      "text": "Fidel plays in the city band. He is looking for his instrument."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -544,7 +544,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Nacho and Guille want the same canoe."
+      "text": "Nacho and Guille are in the room of big objects."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -604,7 +604,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Lisandro is looking for his dog’s ashes. He talks to a bus driver."
+      "text": "Lisandro is looking for his dog’s ashes. He talks to a driver."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -616,7 +616,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "All night at the front, with me. And tonight there are no problems on the line."
+      "text": "All night at the front, with me, next to the steering wheel. And tonight there were no problems on the line."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -664,7 +664,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Rubén is a taxi driver. He brings a parrot to the office. Doña Fefa arrives."
+      "text": "Rubén brings a parrot to the office. Doña Fefa arrives."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -784,7 +784,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Benja is in pyjamas in the street. Gloria is a pharmacist."
+      "text": "Benja is in the street. Gloria is a pharmacist."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -844,7 +844,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Selene goes up to the office rooftop. She is looking for her paper lantern."
+      "text": "Selene comes to the office. She is looking for something she let go at the festival."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -900,7 +900,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "Yuri is a security guard. He rests on the rooftop with a diary."
+      "text": "Yuri rests on the rooftop with a diary."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -1016,7 +1016,7 @@
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
-      "text": "It is seven o’clock. Doña Pura, the boss, arrives. Celestino has the night’s ledger."
+      "text": "Doña Pura arrives. Celestino has the night’s ledger."
     },
     {
       "path": "app/escucha-3d/content/perdidos/a0.json",
@@ -1448,7 +1448,7 @@
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
-      "text": "Teo's umbrella is on the shelf, among a thousand black umbrellas."
+      "text": "Teo's umbrella is on the shelf, among more than a thousand black umbrellas."
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
@@ -2268,7 +2268,7 @@
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
-      "text": "Canelo travels with me all night."
+      "text": "Canelo travelled with me all night."
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
@@ -2928,11 +2928,11 @@
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
-      "text": "Good morning. I am Pura, the boss. How many objects go home?"
+      "text": "Good morning. I am Pura, the boss. How many objects went home?"
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
-      "text": "Many, Doña Pura. The new shift works very well."
+      "text": "Many, Doña Pura. The new shift worked very well."
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
@@ -2956,7 +2956,7 @@
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",
-      "text": "It is a very long night. A coffee, Doña Pura?"
+      "text": "It was a very long night. A coffee, Doña Pura?"
     },
     {
       "path": "app/objetos-perdidos/levels/a0.mjs",

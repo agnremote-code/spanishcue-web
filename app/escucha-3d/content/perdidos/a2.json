@@ -220,7 +220,7 @@
    "id": "llaves",
    "title": "El llavero con forma de pez",
    "place": "El pasillo de las llaves",
-   "context": "Wilson revisa cajas de llaves en el pasillo. Habla por teléfono con su mujer.",
+   "context": "Wilson revisa cajas de llaves en el pasillo. Habla por teléfono.",
    "speakers": [
     {
      "name": "Wilson",
@@ -316,9 +316,9 @@
   },
   {
    "id": "telefono",
-   "title": "Un cargador de 1998",
+   "title": "Una batería muerta",
    "place": "La estantería de los teléfonos",
-   "context": "Doña Herminia tiene su teléfono en la mano, pero la batería está muerta.",
+   "context": "Doña Herminia tiene su teléfono en la mano, pero no funciona.",
    "speakers": [
     {
      "name": "Herminia",
@@ -359,7 +359,7 @@
      "options": [
       "Porque se cayó al agua",
       "Porque Iker llamó muchas veces",
-      "Porque es nuevo"
+      "Porque es un modelo muy viejo"
      ],
      "answer": 1
     },
@@ -1563,7 +1563,7 @@
    "id": "diario",
    "title": "Lo que no debería saber",
    "place": "La azotea",
-   "context": "Yuri, en la azotea, habla por teléfono con su novia mientras termina el café.",
+   "context": "Yuri, en la azotea, habla por teléfono mientras termina el café.",
    "speakers": [
     {
      "name": "Yuri",
@@ -1768,7 +1768,7 @@
    "id": "relevo",
    "title": "La apuesta perdida",
    "place": "El despacho de la jefa",
-   "context": "A las siete, en el despacho, Doña Pura cuenta las líneas del libro de la noche.",
+   "context": "A las siete, en el despacho, Doña Pura tiene el libro de la noche en la mano.",
    "speakers": [
     {
      "name": "Pura",
@@ -1792,7 +1792,7 @@
     },
     {
      "s": 0,
-     "text": "Entonces gana el nuevo. Aposté a que el nuevo no llegaba a doce. Le debo un desayuno."
+     "text": "Entonces gana el turno nuevo. Aposté a que el turno nuevo no llegaba a doce. Le debo un desayuno."
     },
     {
      "s": 1,
@@ -1822,12 +1822,12 @@
      "options": [
       "Que la canoa no volvía",
       "Que esta noche no llovía",
-      "Que el nuevo no llegaba a doce"
+      "Que el turno nuevo no llegaba a doce"
      ],
      "answer": 2
     },
     {
-     "q": "¿Qué le debe Doña Pura al nuevo?",
+     "q": "¿Qué le debe Doña Pura a la persona nueva?",
      "options": [
       "Un desayuno",
       "Doce euros",
@@ -1859,7 +1859,7 @@
      "model": "Mis notas del teléfono."
     }
    ],
-   "gaps": "Aposté a que el [nuevo] no llegaba a [doce]. Le [debo] un [desayuno].",
+   "gaps": "Aposté a que el turno [nuevo] no llegaba a [doce]. Le [debo] un [desayuno].",
    "glossary": [
     {
      "word": "aposté",

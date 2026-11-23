@@ -248,7 +248,7 @@
    "id": "llaves",
    "title": "La llave que no abre nada",
    "place": "El pasillo de las llaves",
-   "context": "En el pasillo de las llaves, Wilson le habla al nuevo mientras sostiene un llavero muy gastado.",
+   "context": "En el pasillo de las llaves, Wilson le habla a la persona nueva del turno mientras sostiene un llavero muy gastado.",
    "speakers": [
     {
      "name": "Wilson",
@@ -384,7 +384,7 @@
     },
     {
      "s": 0,
-     "text": "Dígale que sí. Y otra cosa: mi nieto ha llamado ciento doce veces. Si alguien vuelve a decir que los jóvenes no tienen corazón, mándemelo a mí."
+     "text": "Dígale que sí. Y otra cosa: mi nieto ha llamado más de cuarenta veces. Si alguien vuelve a decir que los jóvenes no tienen corazón, mándemelo a mí."
     },
     {
      "s": 1,
@@ -944,7 +944,7 @@
    "id": "tuba",
    "title": "El sonido de una noche perfecta",
    "place": "La sala de objetos grandes",
-   "context": "Fidel espera en la sala de objetos grandes junto a su tuba y le habla al nuevo sin parar.",
+   "context": "Fidel espera en la sala de objetos grandes junto a su tuba y no deja de hablar con el turno de noche.",
    "speakers": [
     {
      "name": "Fidel",
@@ -1653,7 +1653,7 @@
    "id": "farol",
    "title": "Lo que el cielo devuelve",
    "place": "La azotea",
-   "context": "En la azotea, Selene sostiene un farol de papel quemado y le habla al nuevo como si pensara en voz alta.",
+   "context": "En la azotea, Selene sostiene un farol de papel quemado y habla con el turno de noche como si pensara en voz alta.",
    "speakers": [
     {
      "name": "Selene",
@@ -1757,7 +1757,7 @@
    "id": "diario",
    "title": "Confesiones de un vigilante",
    "place": "La azotea",
-   "context": "En el descanso de la azotea, Yuri le confiesa al nuevo lo que hizo con el diario encontrado.",
+   "context": "En el descanso de la azotea, Yuri le confiesa a la persona nueva lo que hizo con el diario encontrado.",
    "speakers": [
     {
      "name": "Yuri",
@@ -1768,7 +1768,7 @@
    "lines": [
     {
      "s": 0,
-     "text": "Te lo cuento porque eres nuevo y todavía no me juzgas. A medianoche apareció una mochila en el muelle. Dentro había un diario sin nombre. Mi obligación era registrarlo y guardarlo en el armario de documentos. Eso es lo que dice el protocolo, página cuatro."
+     "text": "Te lo cuento porque acabas de llegar y todavía no me juzgas. A medianoche apareció una mochila en el muelle. Dentro había un diario sin nombre. Mi obligación era registrarlo y guardarlo en el armario de documentos. Eso es lo que dice el protocolo, página cuatro."
     },
     {
      "s": 0,
@@ -1817,7 +1817,7 @@
      "q": "¿Qué pide Yuri al final?",
      "options": [
       "Consejo sobre qué hacer",
-      "Que el nuevo devuelva el diario",
+      "Que la persona nueva devuelva el diario",
       "Que nadie se lo cuente a la jefa"
      ],
      "answer": 0
@@ -2002,7 +2002,7 @@
     },
     {
      "s": 1,
-     "text": "Esta noche, un poco de todo. Y el nuevo lo ha hecho mejor que muchos con veinte años de experiencia."
+     "text": "Esta noche, un poco de todo. Y quien empezó anoche lo ha hecho mejor que muchos con veinte años de experiencia."
     },
     {
      "s": 0,
@@ -2022,7 +2022,7 @@
     },
     {
      "s": 0,
-     "text": "Porque también hay una línea aquí: «Diario sin nombre, devuelto a su dueña sin comentarios». Y reconozco la letra de Yuri. Esta oficina guarda más secretos de los que yo pensaba, y algunos son míos. Así que hoy no abro expedientes. Hoy invito a desayunar. Churros para todos, también para el nuevo, que se los ha ganado."
+     "text": "Porque también hay una línea aquí: «Diario sin nombre, devuelto a su dueña sin comentarios». Y reconozco la letra de Yuri. Esta oficina guarda más secretos de los que yo pensaba, y algunos son míos. Así que hoy no abro expedientes. Hoy invito a desayunar. Churros para todos, también para el turno nuevo, que se los ha ganado."
     }
    ],
    "choice": [
@@ -2037,7 +2037,7 @@
      "answer": 0
     },
     {
-     "q": "¿Qué opina Celestino del trabajo del nuevo?",
+     "q": "¿Qué opina Celestino del trabajo de la persona nueva?",
      "options": [
       "Que ha cometido demasiados errores",
       "Que ha sido normal para un principiante",

@@ -391,7 +391,7 @@
    "lines": [
     {
      "s": 0,
-     "text": "Iker, cariño, soy la abuela. No me cuelgues, que esto no es una llamada: es una carta, pero hablada, porque a mi edad la letra ya no me obedece. Esta noche me han devuelto el teléfono en la oficina de objetos perdidos. El señor que lo encontró dice que sonaba cada diez minutos. Eras tú. Ciento doce veces."
+     "text": "Iker, cariño, soy la abuela. No me cuelgues, que esto no es una llamada: es una carta, pero hablada, porque a mi edad la letra ya no me obedece. Esta noche me han devuelto el teléfono en la oficina de objetos perdidos. El señor que lo encontró dice que no paraba de sonar. Eras tú. Una docena de veces, por lo menos."
     },
     {
      "s": 0,
@@ -2183,7 +2183,7 @@
     },
     {
      "s": 0,
-     "text": "Que no lo entiendan. Última línea: «Se recomienda al nuevo empleado para el turno de noche de manera permanente, salvo que él prefiera otra cosa. Se le advierte de que el turno de noche no tiene horario: empieza cuando alguien pierde algo y termina cuando alguien deja de sentirse perdido»."
+     "text": "Que no lo entiendan. Última línea: «Se recomienda a la persona que empezó anoche para el turno de noche de manera permanente, salvo que prefiera otra cosa. Se le advierte de que el turno de noche no tiene horario: empieza cuando alguien pierde algo y termina cuando alguien deja de sentirse perdido»."
     },
     {
      "s": 1,
@@ -2219,7 +2219,7 @@
      "infer": true,
      "options": [
       "Que el orden es inútil en la oficina",
-      "Que el nuevo empleado ha cometido errores",
+      "Que la persona nueva ha cometido errores",
       "Que la oficina sirve sobre todo a las personas"
      ],
      "answer": 2
@@ -2228,7 +2228,7 @@
      "q": "¿Qué insinúa la invitación final a «algún funcionario sentimental»?",
      "infer": true,
      "options": [
-      "Que quiere sustituir a Celestino por el nuevo",
+      "Que quiere sustituir a Celestino por la persona nueva",
       "Que prohíbe a todos ir al puerto el jueves",
       "Que Pura invita a Celestino con complicidad"
      ],

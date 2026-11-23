@@ -41,6 +41,22 @@ export function crossClassDuplicates(questions, sources = otherClassSources()) {
   return out;
 }
 
+// A listening question must need the audio: its right answer is never already
+// written in the item's title or context (which the student reads first).
+const norm = (t) => String(t ?? '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const LEAD = /^(?:(?:es|son|un|una|unos|unas|el|la|los|las|lo|en|de|del|al|a|porque|que|su|sus|con|por|para|muy)\s+)+/;
+export function givenAway(level, file) {
+  const out = [];
+  for (const item of file.items) {
+    const seen = ` ${norm(item.title)} ${norm(item.context)} `;
+    for (const c of item.choice ?? []) {
+      const o = c.options[c.answer];
+      const full = norm(typeof o === 'string' ? o : o?.es), bare = full.replace(LEAD, ''), key = bare.length >= 4 ? bare : full;
+      if (key.length >= 3 && seen.includes(` ${key} `)) out.push(`${level} listening ${item.id}: the answer «${typeof o === 'string' ? o : o?.es}» to «${c.q}» is already in the title or context`);
+    }
+  }
+  return out;
+}
 // Listening multiple choice: the right answer must not give itself away by
 // being the longest option, nor sit in a fixed position.
 export function choiceBalance(level, file) {
@@ -78,12 +94,15 @@ const YOU_RE = genderRe(YOU), ME_RE = genderRe(ME);
 const DOUBLET = /(?<!\p{L})(\p{L}{3,})o(s?) (?:o|y|u) \1a\2(?!\p{L})|(?<!\p{L})(\p{L}{3,})a(s?) (?:o|y|u) \3o\4(?!\p{L})|(?<!\p{L})(?:ti|tú) mism[oa] o (?:de )?(?:ti|tú) mism[oa]|\p{L}o\/a\b|\p{L}\(a\)|\p{L}@/iu;
 const NOUN_YOU = /(?<!\p{L})(?:eres|eras|fuiste|serías|seas|pareces|parecías)\s+(?:todo\s+)?(?:un|una)\s+\p{L}+/iu;
 const TOGETHER = /(?<!\p{L})\p{L}+(?:emos|amos|imos)\s+(?:tú y yo\s+)?junt(?:a|o)s(?!\p{L})|(?<!\p{L})(?:vamos|vayamos|bajemos|subamos)\s+junt(?:a|o)s(?!\p{L})/iu;
+// The student is the new night clerk: never «el nuevo», «al nuevo empleado» or «eres nuevo».
+const NEWBIE = /(?<!\p{L})(?:el|al|del|un)\s+nuevo(?!\s+(?:turno|taller|almacén|trofeo|coche|paraguas|táper|anillo|libro|día|año)(?!\p{L}))(?!\p{L})|(?<!\p{L})(?:eres|es|soy|era)\s+(?:muy\s+)?nuev[oa](?!\p{L})|(?<!\p{L})nuev[oa]s?\s+(?:emplead|recepcionist|compañer|trabajador|encargad|vigilant)\p{L}*|(?<!\p{L})(?:un|el|al|del)\s+empleado\s+muy\s+amable/iu;
 // kind 'you': addressed to the student; 'me': said by the student; 'reply': an answer to the student;
 // 'npc': narration or a line between characters (only «tú» lines count); 'scene': characters talking among themselves.
 export function genderProblems(text, kind) {
   const t = String(text ?? '');
   const out = [];
   if (DOUBLET.test(t)) out.push('o/a doublet');
+  if (NEWBIE.test(t)) out.push(`gendered «${t.match(NEWBIE)[0]}» (the student is «la persona nueva», «el turno nuevo» or «quien empezó anoche»)`);
   if (kind === 'scene') return out;
   if (kind !== 'npc' || /(?<!\p{L})tú(?!\p{L})/iu.test(t)) { if (YOU_RE.test(t)) out.push(`gendered «${t.match(YOU_RE)[0]}»`); }
   if (kind === 'npc') return out;
@@ -108,6 +127,8 @@ export function studentTexts(level, content) {
 export function listeningTexts(level, file) {
   const out = [];
   for (const item of file.items) {
+    out.push([`${level} listening ${item.id} title`, item.title, 'scene'], [`${level} listening ${item.id} context`, item.context, 'scene']);
+    if (item.gaps) out.push([`${level} listening ${item.id} gaps`, String(item.gaps).replace(/[\[\]]/g, ''), 'scene']);
     for (const l of item.lines ?? []) out.push([`${level} listening ${item.id} line`, l.text, 'scene']);
     for (const c of item.choice ?? []) { out.push([`${level} listening ${item.id} choice`, c.q, 'you']); for (const o of c.options) out.push([`${level} listening ${item.id} option`, typeof o === 'string' ? o : o.es, 'scene']); }
     for (const o of item.open ?? []) out.push([`${level} listening ${item.id} open`, o.q, 'you'], [`${level} listening ${item.id} model`, o.model, 'me']);
@@ -224,6 +245,7 @@ async function main() {
     const file = JSON.parse(readFileSync(`app/escucha-3d/content/perdidos/${level.toLowerCase()}.json`, 'utf8'));
     for (const item of file.items) for (const o of item.open ?? []) asked.push([o.q, `${level} listening ${item.id} open`]);
     problems.push(...choiceBalance(level, file));
+    problems.push(...givenAway(level, file));
   }
   for (const [key, p] of Object.entries(INVITADOS)) for (const k of ['basicAsk', 'midAsk', 'highAsk']) asked.push([typeof p[k] === 'string' ? p[k] : p[k]?.es ?? '', `invitados ${key} ${k}`]);
   problems.push(...crossClassDuplicates(asked));
