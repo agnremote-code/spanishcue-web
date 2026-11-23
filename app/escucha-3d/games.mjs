@@ -242,6 +242,17 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Objetos perdidos: every circle of the night shift at the lost-and-found
+  // office has its own listening at each level, voiced by the same people
+  // who speak there. PRO lesson (ID 264).
+  perdidos: {
+    title: 'Objetos perdidos',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['dentadura', 'paraguas', 'llaves', 'telefono', 'bonsai', 'taper', 'guante', 'anillo', 'tuba', 'canoa',
+      'cenizas', 'loro', 'ladron', 'sonambulo', 'farol', 'diario', 'alcalde', 'relevo'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.
