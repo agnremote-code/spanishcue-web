@@ -2611,6 +2611,636 @@
    "seconds": 52.55,
    "src": "/audio/escucha-3d/espana-b1-valencia.mp3"
   },
+  "estrellas/a0-alien": {
+   "hash": "1cb431232edba9b9b749",
+   "seconds": 25.53,
+   "src": "/audio/escucha-3d/estrellas-a0-alien.mp3"
+  },
+  "estrellas/a0-apagon": {
+   "hash": "cef2d95db87f5bcff7a1",
+   "seconds": 25.56,
+   "src": "/audio/escucha-3d/estrellas-a0-apagon.mp3"
+  },
+  "estrellas/a0-astrologa": {
+   "hash": "aab3cbedfa34d3feaf59",
+   "seconds": 24.31,
+   "src": "/audio/escucha-3d/estrellas-a0-astrologa.mp3"
+  },
+  "estrellas/a0-cita": {
+   "hash": "063cf7770a4223592860",
+   "seconds": 26.92,
+   "src": "/audio/escucha-3d/estrellas-a0-cita.mp3"
+  },
+  "estrellas/a0-cocina": {
+   "hash": "78ff2ab0d5a3683ed572",
+   "seconds": 30.65,
+   "src": "/audio/escucha-3d/estrellas-a0-cocina.mp3"
+  },
+  "estrellas/a0-cupula": {
+   "hash": "01c4742eea12a5ac505b",
+   "seconds": 28.12,
+   "src": "/audio/escucha-3d/estrellas-a0-cupula.mp3"
+  },
+  "estrellas/a0-dron": {
+   "hash": "0d37d8bf4d3b9b20906e",
+   "seconds": 23.25,
+   "src": "/audio/escucha-3d/estrellas-a0-dron.mp3"
+  },
+  "estrellas/a0-duchas": {
+   "hash": "a845e0a0cf47f87dd029",
+   "seconds": 33.5,
+   "src": "/audio/escucha-3d/estrellas-a0-duchas.mp3"
+  },
+  "estrellas/a0-entrada": {
+   "hash": "0e85ff16ba9ec2ad8c85",
+   "seconds": 27.53,
+   "src": "/audio/escucha-3d/estrellas-a0-entrada.mp3"
+  },
+  "estrellas/a0-hamacas": {
+   "hash": "8fefa967bf298395ac98",
+   "seconds": 19.5,
+   "src": "/audio/escucha-3d/estrellas-a0-hamacas.mp3"
+  },
+  "estrellas/a0-lentes": {
+   "hash": "cbd26d8f47d849ee59a6",
+   "seconds": 28.36,
+   "src": "/audio/escucha-3d/estrellas-a0-lentes.mp3"
+  },
+  "estrellas/a0-llama": {
+   "hash": "2d6fbfc750e2c39fc44e",
+   "seconds": 25.15,
+   "src": "/audio/escucha-3d/estrellas-a0-llama.mp3"
+  },
+  "estrellas/a0-mina": {
+   "hash": "ebb9dd75993a51253eae",
+   "seconds": 26.3,
+   "src": "/audio/escucha-3d/estrellas-a0-mina.mp3"
+  },
+  "estrellas/a0-mirador": {
+   "hash": "a4d6a28d8a3f147a06f3",
+   "seconds": 20.66,
+   "src": "/audio/escucha-3d/estrellas-a0-mirador.mp3"
+  },
+  "estrellas/a0-radio": {
+   "hash": "5e415f9e20f88c5b0ff2",
+   "seconds": 26.59,
+   "src": "/audio/escucha-3d/estrellas-a0-radio.mp3"
+  },
+  "estrellas/a0-salar": {
+   "hash": "d534a2e5a7fcfba0b4ea",
+   "seconds": 26.8,
+   "src": "/audio/escucha-3d/estrellas-a0-salar.mp3"
+  },
+  "estrellas/a0-sendero": {
+   "hash": "4261ede1b5624b7ba368",
+   "seconds": 25.56,
+   "src": "/audio/escucha-3d/estrellas-a0-sendero.mp3"
+  },
+  "estrellas/a0-urna": {
+   "hash": "516e30cebf0f8b7f89d3",
+   "seconds": 24.28,
+   "src": "/audio/escucha-3d/estrellas-a0-urna.mp3"
+  },
+  "estrellas/a1-alien": {
+   "hash": "399b2227886401b0e287",
+   "seconds": 39.55,
+   "src": "/audio/escucha-3d/estrellas-a1-alien.mp3"
+  },
+  "estrellas/a1-apagon": {
+   "hash": "b20ec6d6440c03b90f55",
+   "seconds": 41.52,
+   "src": "/audio/escucha-3d/estrellas-a1-apagon.mp3"
+  },
+  "estrellas/a1-astrologa": {
+   "hash": "2c1e3af21bf257eab942",
+   "seconds": 37.49,
+   "src": "/audio/escucha-3d/estrellas-a1-astrologa.mp3"
+  },
+  "estrellas/a1-cita": {
+   "hash": "a5dbac7c1abfca8cdba0",
+   "seconds": 40.27,
+   "src": "/audio/escucha-3d/estrellas-a1-cita.mp3"
+  },
+  "estrellas/a1-cocina": {
+   "hash": "54e997682c2e9755cb23",
+   "seconds": 40.97,
+   "src": "/audio/escucha-3d/estrellas-a1-cocina.mp3"
+  },
+  "estrellas/a1-cupula": {
+   "hash": "a073c3f55bffd9e76b96",
+   "seconds": 47.64,
+   "src": "/audio/escucha-3d/estrellas-a1-cupula.mp3"
+  },
+  "estrellas/a1-dron": {
+   "hash": "0a1b3b1945328331ccaa",
+   "seconds": 40.08,
+   "src": "/audio/escucha-3d/estrellas-a1-dron.mp3"
+  },
+  "estrellas/a1-duchas": {
+   "hash": "dd353d2bb809dc8a6996",
+   "seconds": 46.34,
+   "src": "/audio/escucha-3d/estrellas-a1-duchas.mp3"
+  },
+  "estrellas/a1-entrada": {
+   "hash": "945570422d7d42e35819",
+   "seconds": 45.65,
+   "src": "/audio/escucha-3d/estrellas-a1-entrada.mp3"
+  },
+  "estrellas/a1-hamacas": {
+   "hash": "659f98f3c5f01a410503",
+   "seconds": 34.51,
+   "src": "/audio/escucha-3d/estrellas-a1-hamacas.mp3"
+  },
+  "estrellas/a1-lentes": {
+   "hash": "6245a6b3f73383a862b2",
+   "seconds": 43.87,
+   "src": "/audio/escucha-3d/estrellas-a1-lentes.mp3"
+  },
+  "estrellas/a1-llama": {
+   "hash": "c9ca67ed23f398d52aa8",
+   "seconds": 40.46,
+   "src": "/audio/escucha-3d/estrellas-a1-llama.mp3"
+  },
+  "estrellas/a1-mina": {
+   "hash": "13110250392c0df7247b",
+   "seconds": 44.9,
+   "src": "/audio/escucha-3d/estrellas-a1-mina.mp3"
+  },
+  "estrellas/a1-mirador": {
+   "hash": "214f2421e04a655fb755",
+   "seconds": 31.92,
+   "src": "/audio/escucha-3d/estrellas-a1-mirador.mp3"
+  },
+  "estrellas/a1-radio": {
+   "hash": "8479bb114ef82a85682e",
+   "seconds": 35.04,
+   "src": "/audio/escucha-3d/estrellas-a1-radio.mp3"
+  },
+  "estrellas/a1-salar": {
+   "hash": "11eab2f2092a94030f7b",
+   "seconds": 42.38,
+   "src": "/audio/escucha-3d/estrellas-a1-salar.mp3"
+  },
+  "estrellas/a1-sendero": {
+   "hash": "d8d3359cf782ba3b228e",
+   "seconds": 39.91,
+   "src": "/audio/escucha-3d/estrellas-a1-sendero.mp3"
+  },
+  "estrellas/a1-urna": {
+   "hash": "05c62577041c83230be7",
+   "seconds": 38.74,
+   "src": "/audio/escucha-3d/estrellas-a1-urna.mp3"
+  },
+  "estrellas/a2-alien": {
+   "hash": "d3d300b7ff166b20aa77",
+   "seconds": 50.0,
+   "src": "/audio/escucha-3d/estrellas-a2-alien.mp3"
+  },
+  "estrellas/a2-apagon": {
+   "hash": "2b2f4a2c9cd3fc234c6f",
+   "seconds": 49.63,
+   "src": "/audio/escucha-3d/estrellas-a2-apagon.mp3"
+  },
+  "estrellas/a2-astrologa": {
+   "hash": "0fbc2c9b58459ac6b2a7",
+   "seconds": 39.98,
+   "src": "/audio/escucha-3d/estrellas-a2-astrologa.mp3"
+  },
+  "estrellas/a2-cita": {
+   "hash": "eb88d462fdb5b857f86a",
+   "seconds": 43.17,
+   "src": "/audio/escucha-3d/estrellas-a2-cita.mp3"
+  },
+  "estrellas/a2-cocina": {
+   "hash": "af1c6fda674739269bc1",
+   "seconds": 46.94,
+   "src": "/audio/escucha-3d/estrellas-a2-cocina.mp3"
+  },
+  "estrellas/a2-cupula": {
+   "hash": "0c261c7262de606d83e7",
+   "seconds": 44.85,
+   "src": "/audio/escucha-3d/estrellas-a2-cupula.mp3"
+  },
+  "estrellas/a2-dron": {
+   "hash": "ea96eff6fba89fd8bd8d",
+   "seconds": 42.14,
+   "src": "/audio/escucha-3d/estrellas-a2-dron.mp3"
+  },
+  "estrellas/a2-duchas": {
+   "hash": "149cbf6d596df87424f4",
+   "seconds": 51.98,
+   "src": "/audio/escucha-3d/estrellas-a2-duchas.mp3"
+  },
+  "estrellas/a2-entrada": {
+   "hash": "000b039431b39f7f339e",
+   "seconds": 49.84,
+   "src": "/audio/escucha-3d/estrellas-a2-entrada.mp3"
+  },
+  "estrellas/a2-hamacas": {
+   "hash": "aca725c041a9bf936c68",
+   "seconds": 44.54,
+   "src": "/audio/escucha-3d/estrellas-a2-hamacas.mp3"
+  },
+  "estrellas/a2-lentes": {
+   "hash": "e68872b4b78c319de60b",
+   "seconds": 53.87,
+   "src": "/audio/escucha-3d/estrellas-a2-lentes.mp3"
+  },
+  "estrellas/a2-llama": {
+   "hash": "833e2f31520b19753127",
+   "seconds": 52.52,
+   "src": "/audio/escucha-3d/estrellas-a2-llama.mp3"
+  },
+  "estrellas/a2-mina": {
+   "hash": "4f966c5c380386d91b52",
+   "seconds": 56.8,
+   "src": "/audio/escucha-3d/estrellas-a2-mina.mp3"
+  },
+  "estrellas/a2-mirador": {
+   "hash": "9b27b071febe63248f8a",
+   "seconds": 43.48,
+   "src": "/audio/escucha-3d/estrellas-a2-mirador.mp3"
+  },
+  "estrellas/a2-radio": {
+   "hash": "1444831dcbe8a9cc688f",
+   "seconds": 42.19,
+   "src": "/audio/escucha-3d/estrellas-a2-radio.mp3"
+  },
+  "estrellas/a2-salar": {
+   "hash": "fd72b4b6aab668f3573d",
+   "seconds": 48.43,
+   "src": "/audio/escucha-3d/estrellas-a2-salar.mp3"
+  },
+  "estrellas/a2-sendero": {
+   "hash": "7b7ee0d3529c9b7ec717",
+   "seconds": 45.57,
+   "src": "/audio/escucha-3d/estrellas-a2-sendero.mp3"
+  },
+  "estrellas/a2-urna": {
+   "hash": "14418b963120400ecbe7",
+   "seconds": 53.37,
+   "src": "/audio/escucha-3d/estrellas-a2-urna.mp3"
+  },
+  "estrellas/b1-alien": {
+   "hash": "7c8982b41ad3d9dde7b1",
+   "seconds": 60.53,
+   "src": "/audio/escucha-3d/estrellas-b1-alien.mp3"
+  },
+  "estrellas/b1-apagon": {
+   "hash": "192306e6e571d6521f74",
+   "seconds": 57.2,
+   "src": "/audio/escucha-3d/estrellas-b1-apagon.mp3"
+  },
+  "estrellas/b1-astrologa": {
+   "hash": "71ce503dbafd9dcbc19d",
+   "seconds": 45.52,
+   "src": "/audio/escucha-3d/estrellas-b1-astrologa.mp3"
+  },
+  "estrellas/b1-cita": {
+   "hash": "896c2cea0918c6890c4f",
+   "seconds": 50.3,
+   "src": "/audio/escucha-3d/estrellas-b1-cita.mp3"
+  },
+  "estrellas/b1-cocina": {
+   "hash": "0e8ac90a6fa78b6f736b",
+   "seconds": 46.58,
+   "src": "/audio/escucha-3d/estrellas-b1-cocina.mp3"
+  },
+  "estrellas/b1-cupula": {
+   "hash": "426ce345a29ec683db8c",
+   "seconds": 47.42,
+   "src": "/audio/escucha-3d/estrellas-b1-cupula.mp3"
+  },
+  "estrellas/b1-dron": {
+   "hash": "222bc67edf213350fe11",
+   "seconds": 48.42,
+   "src": "/audio/escucha-3d/estrellas-b1-dron.mp3"
+  },
+  "estrellas/b1-duchas": {
+   "hash": "8ca7fd28d2698da3f2a1",
+   "seconds": 59.87,
+   "src": "/audio/escucha-3d/estrellas-b1-duchas.mp3"
+  },
+  "estrellas/b1-entrada": {
+   "hash": "1301901db4ce0d50eeb4",
+   "seconds": 54.83,
+   "src": "/audio/escucha-3d/estrellas-b1-entrada.mp3"
+  },
+  "estrellas/b1-hamacas": {
+   "hash": "021c09aade8ea0bbd281",
+   "seconds": 47.65,
+   "src": "/audio/escucha-3d/estrellas-b1-hamacas.mp3"
+  },
+  "estrellas/b1-lentes": {
+   "hash": "a22efa936935e3429c1a",
+   "seconds": 58.14,
+   "src": "/audio/escucha-3d/estrellas-b1-lentes.mp3"
+  },
+  "estrellas/b1-llama": {
+   "hash": "e1fd92cc58cd5dbac411",
+   "seconds": 57.83,
+   "src": "/audio/escucha-3d/estrellas-b1-llama.mp3"
+  },
+  "estrellas/b1-mina": {
+   "hash": "452b5ccfc6a491a5309a",
+   "seconds": 56.56,
+   "src": "/audio/escucha-3d/estrellas-b1-mina.mp3"
+  },
+  "estrellas/b1-mirador": {
+   "hash": "3ae41874da86e07fd6b3",
+   "seconds": 53.2,
+   "src": "/audio/escucha-3d/estrellas-b1-mirador.mp3"
+  },
+  "estrellas/b1-radio": {
+   "hash": "e539fbb0addce434efd8",
+   "seconds": 52.86,
+   "src": "/audio/escucha-3d/estrellas-b1-radio.mp3"
+  },
+  "estrellas/b1-salar": {
+   "hash": "8cada4740ed987dc1197",
+   "seconds": 53.53,
+   "src": "/audio/escucha-3d/estrellas-b1-salar.mp3"
+  },
+  "estrellas/b1-sendero": {
+   "hash": "de853e116eb4825a910a",
+   "seconds": 55.34,
+   "src": "/audio/escucha-3d/estrellas-b1-sendero.mp3"
+  },
+  "estrellas/b1-urna": {
+   "hash": "7bf986421e83306b1da7",
+   "seconds": 56.2,
+   "src": "/audio/escucha-3d/estrellas-b1-urna.mp3"
+  },
+  "estrellas/b2-alien": {
+   "hash": "596d60ffcddb5a2168c7",
+   "seconds": 65.93,
+   "src": "/audio/escucha-3d/estrellas-b2-alien.mp3"
+  },
+  "estrellas/b2-apagon": {
+   "hash": "3681d315d4e7ab002f5f",
+   "seconds": 74.19,
+   "src": "/audio/escucha-3d/estrellas-b2-apagon.mp3"
+  },
+  "estrellas/b2-astrologa": {
+   "hash": "3be0dc169a0e9b8a955b",
+   "seconds": 67.06,
+   "src": "/audio/escucha-3d/estrellas-b2-astrologa.mp3"
+  },
+  "estrellas/b2-cita": {
+   "hash": "76e4bf5bce83d9727919",
+   "seconds": 72.91,
+   "src": "/audio/escucha-3d/estrellas-b2-cita.mp3"
+  },
+  "estrellas/b2-cocina": {
+   "hash": "5005a703225c9757072f",
+   "seconds": 70.69,
+   "src": "/audio/escucha-3d/estrellas-b2-cocina.mp3"
+  },
+  "estrellas/b2-cupula": {
+   "hash": "a39c8e06455d2a4cabaa",
+   "seconds": 71.34,
+   "src": "/audio/escucha-3d/estrellas-b2-cupula.mp3"
+  },
+  "estrellas/b2-dron": {
+   "hash": "c7bfa1a76ad9fc028ae2",
+   "seconds": 67.16,
+   "src": "/audio/escucha-3d/estrellas-b2-dron.mp3"
+  },
+  "estrellas/b2-duchas": {
+   "hash": "ec4d154f70b27c988f3e",
+   "seconds": 71.51,
+   "src": "/audio/escucha-3d/estrellas-b2-duchas.mp3"
+  },
+  "estrellas/b2-entrada": {
+   "hash": "2887de39c661710d9147",
+   "seconds": 65.97,
+   "src": "/audio/escucha-3d/estrellas-b2-entrada.mp3"
+  },
+  "estrellas/b2-hamacas": {
+   "hash": "dcab77108afa3fcd0063",
+   "seconds": 58.4,
+   "src": "/audio/escucha-3d/estrellas-b2-hamacas.mp3"
+  },
+  "estrellas/b2-lentes": {
+   "hash": "c14270f59f2328de45ca",
+   "seconds": 68.06,
+   "src": "/audio/escucha-3d/estrellas-b2-lentes.mp3"
+  },
+  "estrellas/b2-llama": {
+   "hash": "f72e6194986d99f2c1e9",
+   "seconds": 56.88,
+   "src": "/audio/escucha-3d/estrellas-b2-llama.mp3"
+  },
+  "estrellas/b2-mina": {
+   "hash": "7223324345480c2c981d",
+   "seconds": 75.51,
+   "src": "/audio/escucha-3d/estrellas-b2-mina.mp3"
+  },
+  "estrellas/b2-mirador": {
+   "hash": "fe3f91ef6751a105c924",
+   "seconds": 67.23,
+   "src": "/audio/escucha-3d/estrellas-b2-mirador.mp3"
+  },
+  "estrellas/b2-radio": {
+   "hash": "e2e46e08ef23e6719e33",
+   "seconds": 64.54,
+   "src": "/audio/escucha-3d/estrellas-b2-radio.mp3"
+  },
+  "estrellas/b2-salar": {
+   "hash": "e7ebb774e93cf70fd232",
+   "seconds": 64.47,
+   "src": "/audio/escucha-3d/estrellas-b2-salar.mp3"
+  },
+  "estrellas/b2-sendero": {
+   "hash": "1f810cc9337e10177ce5",
+   "seconds": 70.71,
+   "src": "/audio/escucha-3d/estrellas-b2-sendero.mp3"
+  },
+  "estrellas/b2-urna": {
+   "hash": "d9c50df9d26cc4fb7bd8",
+   "seconds": 67.21,
+   "src": "/audio/escucha-3d/estrellas-b2-urna.mp3"
+  },
+  "estrellas/c1-alien": {
+   "hash": "d1b8f3e79fd7b8351890",
+   "seconds": 75.11,
+   "src": "/audio/escucha-3d/estrellas-c1-alien.mp3"
+  },
+  "estrellas/c1-apagon": {
+   "hash": "db5ba860812acb2f551c",
+   "seconds": 81.63,
+   "src": "/audio/escucha-3d/estrellas-c1-apagon.mp3"
+  },
+  "estrellas/c1-astrologa": {
+   "hash": "1726a915217bb3c3b19b",
+   "seconds": 72.34,
+   "src": "/audio/escucha-3d/estrellas-c1-astrologa.mp3"
+  },
+  "estrellas/c1-cita": {
+   "hash": "95bdd0ddeb8ee8484fde",
+   "seconds": 89.86,
+   "src": "/audio/escucha-3d/estrellas-c1-cita.mp3"
+  },
+  "estrellas/c1-cocina": {
+   "hash": "4b365fcee82e3779b845",
+   "seconds": 73.48,
+   "src": "/audio/escucha-3d/estrellas-c1-cocina.mp3"
+  },
+  "estrellas/c1-cupula": {
+   "hash": "72cd2db84f325ff1a369",
+   "seconds": 84.51,
+   "src": "/audio/escucha-3d/estrellas-c1-cupula.mp3"
+  },
+  "estrellas/c1-dron": {
+   "hash": "89a6f9c52707c1d33fbf",
+   "seconds": 85.23,
+   "src": "/audio/escucha-3d/estrellas-c1-dron.mp3"
+  },
+  "estrellas/c1-duchas": {
+   "hash": "27c01404a1e47a7668c0",
+   "seconds": 105.65,
+   "src": "/audio/escucha-3d/estrellas-c1-duchas.mp3"
+  },
+  "estrellas/c1-entrada": {
+   "hash": "fd86bfd5a0795d42f242",
+   "seconds": 90.01,
+   "src": "/audio/escucha-3d/estrellas-c1-entrada.mp3"
+  },
+  "estrellas/c1-hamacas": {
+   "hash": "042bcb74722c3e44995d",
+   "seconds": 79.32,
+   "src": "/audio/escucha-3d/estrellas-c1-hamacas.mp3"
+  },
+  "estrellas/c1-lentes": {
+   "hash": "0a3e9fbb3a4b5d34a151",
+   "seconds": 99.03,
+   "src": "/audio/escucha-3d/estrellas-c1-lentes.mp3"
+  },
+  "estrellas/c1-llama": {
+   "hash": "78dcb7e7bd52c67d18b6",
+   "seconds": 93.83,
+   "src": "/audio/escucha-3d/estrellas-c1-llama.mp3"
+  },
+  "estrellas/c1-mina": {
+   "hash": "6c52328b923d6c0a3927",
+   "seconds": 102.05,
+   "src": "/audio/escucha-3d/estrellas-c1-mina.mp3"
+  },
+  "estrellas/c1-mirador": {
+   "hash": "0a29c8cccf9e40cfce05",
+   "seconds": 84.05,
+   "src": "/audio/escucha-3d/estrellas-c1-mirador.mp3"
+  },
+  "estrellas/c1-radio": {
+   "hash": "0cd0925a495c93a93af7",
+   "seconds": 77.24,
+   "src": "/audio/escucha-3d/estrellas-c1-radio.mp3"
+  },
+  "estrellas/c1-salar": {
+   "hash": "a6acf3e5b8d471c5cc4e",
+   "seconds": 80.15,
+   "src": "/audio/escucha-3d/estrellas-c1-salar.mp3"
+  },
+  "estrellas/c1-sendero": {
+   "hash": "e102cd5e7e1e13020cba",
+   "seconds": 73.76,
+   "src": "/audio/escucha-3d/estrellas-c1-sendero.mp3"
+  },
+  "estrellas/c1-urna": {
+   "hash": "56230ed9bc09d55492b6",
+   "seconds": 81.1,
+   "src": "/audio/escucha-3d/estrellas-c1-urna.mp3"
+  },
+  "estrellas/c2-alien": {
+   "hash": "1495bdb6ca5d99f9e81d",
+   "seconds": 97.75,
+   "src": "/audio/escucha-3d/estrellas-c2-alien.mp3"
+  },
+  "estrellas/c2-apagon": {
+   "hash": "f967aae7e9025c6f82dd",
+   "seconds": 87.3,
+   "src": "/audio/escucha-3d/estrellas-c2-apagon.mp3"
+  },
+  "estrellas/c2-astrologa": {
+   "hash": "99510358f1c6d74f469b",
+   "seconds": 88.13,
+   "src": "/audio/escucha-3d/estrellas-c2-astrologa.mp3"
+  },
+  "estrellas/c2-cita": {
+   "hash": "762f7b1c6f570d09b0b1",
+   "seconds": 103.2,
+   "src": "/audio/escucha-3d/estrellas-c2-cita.mp3"
+  },
+  "estrellas/c2-cocina": {
+   "hash": "5d990399b7bc886257a4",
+   "seconds": 98.21,
+   "src": "/audio/escucha-3d/estrellas-c2-cocina.mp3"
+  },
+  "estrellas/c2-cupula": {
+   "hash": "38d60b0f664accde67d5",
+   "seconds": 107.88,
+   "src": "/audio/escucha-3d/estrellas-c2-cupula.mp3"
+  },
+  "estrellas/c2-dron": {
+   "hash": "5f2266671a202360538f",
+   "seconds": 91.85,
+   "src": "/audio/escucha-3d/estrellas-c2-dron.mp3"
+  },
+  "estrellas/c2-duchas": {
+   "hash": "12e6d1b540692a447bbb",
+   "seconds": 103.68,
+   "src": "/audio/escucha-3d/estrellas-c2-duchas.mp3"
+  },
+  "estrellas/c2-entrada": {
+   "hash": "5c0f7eaefa214f2594b3",
+   "seconds": 87.59,
+   "src": "/audio/escucha-3d/estrellas-c2-entrada.mp3"
+  },
+  "estrellas/c2-hamacas": {
+   "hash": "76f187429a41d1e55f9c",
+   "seconds": 84.46,
+   "src": "/audio/escucha-3d/estrellas-c2-hamacas.mp3"
+  },
+  "estrellas/c2-lentes": {
+   "hash": "aef01df49e3b976bc05c",
+   "seconds": 99.01,
+   "src": "/audio/escucha-3d/estrellas-c2-lentes.mp3"
+  },
+  "estrellas/c2-llama": {
+   "hash": "7266bf6a2b971666ce32",
+   "seconds": 102.02,
+   "src": "/audio/escucha-3d/estrellas-c2-llama.mp3"
+  },
+  "estrellas/c2-mina": {
+   "hash": "e07d1c77f3d0bc3df066",
+   "seconds": 101.6,
+   "src": "/audio/escucha-3d/estrellas-c2-mina.mp3"
+  },
+  "estrellas/c2-mirador": {
+   "hash": "2fb501b372f66d22230a",
+   "seconds": 97.79,
+   "src": "/audio/escucha-3d/estrellas-c2-mirador.mp3"
+  },
+  "estrellas/c2-radio": {
+   "hash": "e5fcc1141f84f729cc88",
+   "seconds": 90.99,
+   "src": "/audio/escucha-3d/estrellas-c2-radio.mp3"
+  },
+  "estrellas/c2-salar": {
+   "hash": "ad16a51ef8f6569142d5",
+   "seconds": 107.12,
+   "src": "/audio/escucha-3d/estrellas-c2-salar.mp3"
+  },
+  "estrellas/c2-sendero": {
+   "hash": "43dcdc8a4f4621f96583",
+   "seconds": 101.5,
+   "src": "/audio/escucha-3d/estrellas-c2-sendero.mp3"
+  },
+  "estrellas/c2-urna": {
+   "hash": "60813dfc5c0a75953c36",
+   "seconds": 84.51,
+   "src": "/audio/escucha-3d/estrellas-c2-urna.mp3"
+  },
   "feria/a2-artesania": {
    "hash": "68a8672044632a9f2852",
    "seconds": 46.18,
