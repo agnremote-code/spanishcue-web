@@ -178,6 +178,188 @@
   ]
  },
  {
+  "id": "usa-a1-california",
+  "level": "A1",
+  "world": "Estados Unidos",
+  "worldPath": "/estados-unidos-a2-b1",
+  "lessonId": 36,
+  "title": "Primera vez con patines",
+  "place": "El paseo de Venice",
+  "context": "Lupita enseña a patinar a Víctor en Venice Beach.",
+  "src": "/audio/escucha-3d-libre/usa-a1-california.mp3",
+  "seconds": 32,
+  "speakers": [
+   {
+    "name": "Lupita",
+    "country": "México"
+   },
+   {
+    "name": "Víctor",
+    "country": "Puerto Rico"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "¿Primera vez con patines? No pasa nada. Primero, mira al frente, no a los pies."
+   },
+   {
+    "s": 1,
+    "text": "Ay, es difícil. Me caigo."
+   },
+   {
+    "s": 0,
+    "text": "Dobla un poco las rodillas. Así. Ahora, despacio... ¡muy bien!"
+   },
+   {
+    "s": 1,
+    "text": "¡Estoy patinando! ¿Cuánto tiempo necesito para patinar como tú?"
+   },
+   {
+    "s": 0,
+    "text": "Yo patino todos los días desde hace un año. Tú puedes en un mes."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Qué aprende Víctor?",
+    "options": [
+     "A nadar",
+     "A surfear",
+     "A patinar"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Adónde tiene que mirar?",
+    "options": [
+     "Al frente",
+     "A los pies",
+     "Al cielo"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Qué tiene que doblar?",
+    "options": [
+     "Los brazos",
+     "Las rodillas",
+     "La espalda"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Desde cuándo patina Lupita?",
+    "options": [
+     "Desde niña",
+     "Desde hace un mes",
+     "Desde hace un año"
+    ],
+    "answer": 2
+   }
+  ],
+  "talk": [
+   "¿Qué deporte quieres aprender?",
+   "¿Tienes paciencia cuando algo es difícil?",
+   "¿Quién te enseñó a andar en bicicleta?"
+  ]
+ },
+ {
+  "id": "mexico-a1-jalisco",
+  "level": "A1",
+  "world": "México",
+  "worldPath": "/mexico",
+  "lessonId": 210,
+  "title": "La torta ahogada",
+  "place": "Un puesto de tortas",
+  "context": "Kevin, de Estados Unidos, prueba una torta ahogada en Guadalajara con su amiga Karla, de Honduras.",
+  "src": "/audio/escucha-3d-libre/mexico-a1-jalisco.mp3",
+  "seconds": 34,
+  "speakers": [
+   {
+    "name": "Kevin",
+    "country": "Estados Unidos"
+   },
+   {
+    "name": "Karla",
+    "country": "Honduras"
+   },
+   {
+    "name": "Beto",
+    "country": "México"
+   }
+  ],
+  "lines": [
+   {
+    "s": 2,
+    "text": "Dos tortas ahogadas. ¿Las quieren con salsa picante?"
+   },
+   {
+    "s": 0,
+    "text": "Yo, sin picante, por favor. Es mi primera vez."
+   },
+   {
+    "s": 1,
+    "text": "Yo sí, con mucho picante. Me encanta."
+   },
+   {
+    "s": 2,
+    "text": "Muy bien. Cuidado, que están muy calientes. Y aquí tienen limón y cebolla."
+   },
+   {
+    "s": 0,
+    "text": "¡Uf! Es deliciosa, pero me mancho toda la camisa."
+   },
+   {
+    "s": 1,
+    "text": "Por eso aquí todos piden una bolsa de plástico para comer."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Es la primera vez que Kevin come una torta ahogada?",
+    "options": [
+     "Sí",
+     "No, la come cada semana",
+     "No, la cocina en casa"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Cómo quiere Karla su torta?",
+    "options": [
+     "Sin salsa",
+     "Con poco picante",
+     "Con mucho picante"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Qué les da Beto además de las tortas?",
+    "options": [
+     "Pan y queso",
+     "Limón y cebolla",
+     "Agua y café"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Qué problema tiene Kevin?",
+    "options": [
+     "Se mancha la camisa",
+     "No tiene dinero",
+     "La torta está fría"
+    ],
+    "answer": 0
+   }
+  ],
+  "talk": [
+   "¿Te gusta la comida picante?",
+   "¿Cuál fue tu primera comida en otro país?",
+   "¿Te manchas la ropa cuando comes?"
+  ]
+ },
+ {
   "id": "usa-a2-nueva-york",
   "level": "A2",
   "world": "Estados Unidos",
@@ -353,6 +535,188 @@
    "¿Perdiste alguna vez algo importante en un viaje?",
    "¿Hay mucho tráfico en tu ciudad?",
    "¿Qué comida compras en la calle?"
+  ]
+ },
+ {
+  "id": "usa-a2-texas",
+  "level": "A2",
+  "world": "Estados Unidos",
+  "worldPath": "/estados-unidos-a2-b1",
+  "lessonId": 36,
+  "title": "Boda en la gasolinera",
+  "place": "La gasolinera de la ruta",
+  "context": "Ray y Karla recuerdan la noche de la inundación.",
+  "src": "/audio/escucha-3d-libre/usa-a2-texas.mp3",
+  "seconds": 35,
+  "speakers": [
+   {
+    "name": "Ray",
+    "country": "Estados Unidos"
+   },
+   {
+    "name": "Karla",
+    "country": "Honduras"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "Esa noche llovió como nunca. A las dos de la mañana cerraron la carretera y quince personas se quedaron en la gasolinera."
+   },
+   {
+    "s": 1,
+    "text": "Yo estaba allí con mi novio. ¡Íbamos a nuestra propia boda en San Antonio!"
+   },
+   {
+    "s": 0,
+    "text": "Es verdad. Repartimos café, sándwiches y mantas. Un camionero sacó una guitarra y todos cantaron."
+   },
+   {
+    "s": 1,
+    "text": "Y a las seis, cuando paró la lluvia, nos casamos allí mismo, delante de todos. El dueño de la gasolinera fue el testigo."
+   },
+   {
+    "s": 0,
+    "text": "Y yo todavía tengo la foto en la pared."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Por qué se quedaron en la gasolinera?",
+    "options": [
+     "Cerraron la carretera",
+     "Se rompió el coche",
+     "No tenían gasolina"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Adónde iba Karla?",
+    "options": [
+     "A su casa",
+     "A su boda",
+     "Al hospital"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Qué sacó un camionero?",
+    "options": [
+     "Una cámara",
+     "Un mapa",
+     "Una guitarra"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Dónde se casaron?",
+    "options": [
+     "En la gasolinera",
+     "En San Antonio",
+     "En una iglesia"
+    ],
+    "answer": 0
+   }
+  ],
+  "talk": [
+   "¿Alguna vez te quedaste atrapado en algún lugar?",
+   "¿Cómo te gustaría que fuera tu boda?",
+   "¿Qué haces con desconocidos en una situación difícil?"
+  ]
+ },
+ {
+  "id": "mexico-a2-oaxaca",
+  "level": "A2",
+  "world": "México",
+  "worldPath": "/mexico",
+  "lessonId": 210,
+  "title": "El mole de la abuela",
+  "place": "Una cocina familiar",
+  "context": "Doña Chelo enseña a su nieta y a una estudiante cubana a preparar mole negro.",
+  "src": "/audio/escucha-3d-libre/mexico-a2-oaxaca.mp3",
+  "seconds": 47,
+  "speakers": [
+   {
+    "name": "Doña Chelo",
+    "country": "México"
+   },
+   {
+    "name": "Belkys",
+    "country": "Cuba"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "Primero tostamos los chiles, pero con cuidado: si se queman, el mole sabe amargo."
+   },
+   {
+    "s": 1,
+    "text": "¿Cuántos ingredientes lleva?"
+   },
+   {
+    "s": 0,
+    "text": "Más de treinta. Mi mamá decía que cada uno tiene su momento. Chiles, chocolate, plátano, pan, especias…"
+   },
+   {
+    "s": 1,
+    "text": "¿Y usted lo prepara todas las semanas?"
+   },
+   {
+    "s": 0,
+    "text": "No, mija. Antes sí, cuando tenía el comedor. Ahora solo en bodas, bautizos y en el Día de Muertos. Tarda dos días."
+   },
+   {
+    "s": 1,
+    "text": "En Cuba mi abuela hacía un plato que también tardaba mucho, pero era con frijoles negros."
+   },
+   {
+    "s": 0,
+    "text": "Ya ves. Las abuelas en todo el mundo cocinan con paciencia."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Qué pasa si los chiles se queman?",
+    "options": [
+     "El mole sabe amargo",
+     "El mole pica más",
+     "El mole se pone dulce"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Cuántos ingredientes lleva el mole?",
+    "options": [
+     "Diez",
+     "Más de treinta",
+     "Cinco"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Cuándo prepara mole Doña Chelo ahora?",
+    "options": [
+     "Todos los domingos",
+     "Todas las semanas",
+     "En fiestas especiales"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Con qué cocinaba la abuela de Belkys?",
+    "options": [
+     "Con chocolate",
+     "Con frijoles negros",
+     "Con arroz y pollo"
+    ],
+    "answer": 1
+   }
+  ],
+  "talk": [
+   "¿Qué plato tarda mucho en tu familia?",
+   "¿Qué cocinaban tus abuelos en las fiestas?",
+   "¿Tienes paciencia en la cocina?"
   ]
  },
  {
@@ -535,6 +899,176 @@
    "¿Qué fiesta de tu país se ha vuelto demasiado turística?",
    "¿Pagarías mucho dinero por un espectáculo tradicional?",
    "¿Qué llevarías para compartir en una fiesta de barrio?"
+  ]
+ },
+ {
+  "id": "usa-b1-california",
+  "level": "B1",
+  "world": "Estados Unidos",
+  "worldPath": "/estados-unidos-a2-b1",
+  "lessonId": 36,
+  "title": "La casa amarilla",
+  "place": "El barrio del Valle",
+  "context": "Una vecina cuenta su conversación con Don Ernesto, que recibió una oferta por su casa.",
+  "src": "/audio/escucha-3d-libre/usa-b1-california.mp3",
+  "seconds": 39,
+  "speakers": [
+   {
+    "name": "Inés",
+    "country": "México"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "Ayer fui a ver a Don Ernesto, el vecino de la casa amarilla. Me contó que una empresa le ofreció casi un millón de dólares por su casa. Quieren tirarla y construir apartamentos de lujo."
+   },
+   {
+    "s": 0,
+    "text": "Él me dijo que con ese dinero podría ayudar a sus nietos con la universidad, pero que esa casa la construyó su padre con sus propias manos. Le pregunté qué pensaba hacer y me respondió que todavía no lo sabía."
+   },
+   {
+    "s": 0,
+    "text": "Yo entiendo las dos partes: el barrio necesita viviendas, pero si todos venden, los que vivimos aquí desde siempre ya no podremos pagar el alquiler. Creo que voy a proponer una reunión de vecinos."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Qué le ofrecieron a Don Ernesto?",
+    "options": [
+     "Un apartamento nuevo",
+     "Un trabajo",
+     "Casi un millón de dólares"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Qué quiere hacer la empresa?",
+    "options": [
+     "Construir apartamentos de lujo",
+     "Pintar la casa",
+     "Abrir una tienda"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Quién construyó la casa?",
+    "options": [
+     "Ernesto",
+     "El padre de Ernesto",
+     "Una empresa"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Qué va a proponer Inés?",
+    "options": [
+     "Comprar la casa",
+     "Mudarse a otro barrio",
+     "Una reunión de vecinos"
+    ],
+    "answer": 2
+   }
+  ],
+  "talk": [
+   "¿Venderías la casa de tu familia por mucho dinero?",
+   "¿Cómo ha cambiado tu barrio en los últimos años?",
+   "¿Qué objeto de tu familia nunca venderías?"
+  ]
+ },
+ {
+  "id": "mexico-b1-jalisco",
+  "level": "B1",
+  "world": "México",
+  "worldPath": "/mexico",
+  "lessonId": 210,
+  "title": "Chapala se seca",
+  "place": "El malecón de Chapala",
+  "context": "Un periodista entrevista a un pescador y a una jubilada estadounidense sobre el agua del lago.",
+  "src": "/audio/escucha-3d-libre/mexico-b1-jalisco.mp3",
+  "seconds": 44,
+  "speakers": [
+   {
+    "name": "Periodista",
+    "country": "Costa Rica"
+   },
+   {
+    "name": "Don Aurelio",
+    "country": "México"
+   },
+   {
+    "name": "Paloma",
+    "country": "Estados Unidos"
+   }
+  ],
+  "lines": [
+   {
+    "s": 0,
+    "text": "Don Aurelio, usted pesca aquí desde hace cincuenta años. ¿Qué ha cambiado?"
+   },
+   {
+    "s": 1,
+    "text": "Todo. Cuando yo era joven, el agua llegaba hasta esta calle. Hoy hay que caminar casi un kilómetro para meter la lancha."
+   },
+   {
+    "s": 0,
+    "text": "¿A qué se debe?"
+   },
+   {
+    "s": 1,
+    "text": "A que Guadalajara crece y necesita agua, y a que llueve menos que antes. El lago da de beber a millones de personas, pero nadie lo cuida."
+   },
+   {
+    "s": 2,
+    "text": "Yo vine a vivir aquí hace doce años por el clima y la tranquilidad. Me siento un poco culpable, porque los extranjeros también usamos mucha agua."
+   },
+   {
+    "s": 1,
+    "text": "No es culpa de nadie en particular, señora. Pero si no cambiamos algo pronto, mis nietos no van a conocer el lago."
+   }
+  ],
+  "questions": [
+   {
+    "q": "¿Desde cuándo pesca Don Aurelio en el lago?",
+    "options": [
+     "Desde hace diez años",
+     "Desde hace cincuenta años",
+     "Desde el año pasado"
+    ],
+    "answer": 1
+   },
+   {
+    "q": "¿Qué distancia hay que caminar hoy para meter la lancha?",
+    "options": [
+     "Casi un kilómetro",
+     "Diez metros",
+     "Cinco kilómetros"
+    ],
+    "answer": 0
+   },
+   {
+    "q": "¿Por qué vino Paloma a vivir a Chapala?",
+    "options": [
+     "Por trabajo",
+     "Por su familia",
+     "Por el clima y la tranquilidad"
+    ],
+    "answer": 2
+   },
+   {
+    "q": "¿Qué teme Don Aurelio?",
+    "options": [
+     "Que sus nietos no conozcan el lago",
+     "Perder su casa",
+     "Que lleguen más turistas"
+    ],
+    "answer": 0
+   }
+  ],
+  "talk": [
+   "¿Qué lugar natural de tu país está cambiando?",
+   "¿Te sentiste culpable alguna vez por tu forma de consumir?",
+   "¿Qué harías para proteger un lago como Chapala?"
   ]
  }
 ]

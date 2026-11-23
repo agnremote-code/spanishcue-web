@@ -18,5 +18,5 @@ test('free listening clips of Material ELE match their source and stay public', 
     for (const question of clip.questions) assert.ok(question.options[question.answer], question.q);
     for (const line of clip.lines) assert.ok(clip.speakers[line.s], clip.id);
   }
-  for (const level of ['A1', 'A2', 'B1']) assert.ok(clips.filter((clip) => clip.level === level).length >= 2, level);
+  for (const level of ['A1', 'A2', 'B1']) assert.ok(clips.filter((clip) => clip.level === level).length >= 4, level);
 });
