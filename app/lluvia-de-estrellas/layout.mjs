@@ -31,7 +31,7 @@ const inside = (r, x, z) => x > r.x0 && x < r.x1 && z > r.z0 && z < r.z1;
 // below the canvas; under the open sky it can climb.
 export function ceilingAt(x, z) {
   if (inside(KITCHEN, x, z)) return 3.2;
-  if (inside(DOME, x, z)) return 5.4;
+  if (inside(DOME, x, z)) return 3.3;
   return 14;
 }
 export const roofed = (x, z) => ceilingAt(x, z) < 8;

@@ -34,6 +34,7 @@ const WORLDS = [
   ['hr-crisis', 'public/hr-crisis/portada.webp'],
   ['la-casa-del-reality', 'public/la-casa-del-reality/portada.webp'],
   ['ultimo-crucero', 'public/ultimo-crucero/portada.webp'],
+  ['lluvia-de-estrellas', 'public/lluvia-de-estrellas/portada.webp'],
   ['noche-abierta', 'public/noche-abierta/portada.webp', ''], // 16:9 kept (tests/noche-abierta)
   ['hospital-san-casi-vivo', 'public/hospital-san-casi-vivo/portada.webp'],
   ['madrid-infectada', 'public/madrid-infectada/portada.webp'],
