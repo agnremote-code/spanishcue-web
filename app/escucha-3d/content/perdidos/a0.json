@@ -1,0 +1,2095 @@
+{
+ "game": "perdidos",
+ "level": "A0",
+ "items": [
+  {
+   "id": "dentadura",
+   "title": "Una sonrisa perdida",
+   "place": "El mostrador",
+   "context": "Don Evaristo llega al mostrador. Habla con Don Celestino.",
+   "contextEn": "Don Evaristo comes to the counter. He talks to Don Celestino.",
+   "speakers": [
+    {
+     "name": "Evaristo",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Buenas noches, señor. ¿Qué busca?",
+     "en": "Good evening, sir. What are you looking for?"
+    },
+    {
+     "s": 0,
+     "text": "Mi dentadura. Se me cayó anoche en la fiesta. Bailando.",
+     "en": "My false teeth. They fell out last night at the festival. Dancing."
+    },
+    {
+     "s": 1,
+     "text": "Aquí hay una caja con tres dentaduras.",
+     "en": "Here is a box with three sets of false teeth."
+    },
+    {
+     "s": 0,
+     "text": "¡Tres! ¿Y cuál es la mía?",
+     "en": "Three! And which one is mine?"
+    },
+    {
+     "s": 1,
+     "text": "No sé. Una estaba dentro de una tuba.",
+     "en": "I don’t know. One was inside a tuba."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué busca Don Evaristo?",
+     "qEn": "What is Don Evaristo looking for?",
+     "options": [
+      "Su dentadura",
+      "Su gorra de la fiesta",
+      "Su paraguas negro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde perdió la dentadura?",
+     "qEn": "Where did he lose his false teeth?",
+     "options": [
+      "En el autobús",
+      "En la fiesta, bailando",
+      "En su casa, en la cama"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas dentaduras hay en la caja?",
+     "qEn": "How many sets of false teeth are in the box?",
+     "options": [
+      "Tres",
+      "Dos",
+      "Una sola"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde estaba una dentadura?",
+     "qEn": "Where was one set of false teeth?",
+     "options": [
+      "En la caja del pan",
+      "En un zapato",
+      "En una tuba"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa pierdes con frecuencia?",
+     "qEn": "What do you lose often?",
+     "model": "Pierdo las llaves con frecuencia."
+    },
+    {
+     "q": "¿Qué música bailas en una fiesta?",
+     "qEn": "What music do you dance to at a party?",
+     "model": "Bailo salsa y pop."
+    },
+    {
+     "q": "¿Dónde dejas tus cosas por la noche?",
+     "qEn": "Where do you leave your things at night?",
+     "model": "Dejo mis cosas en la mesa."
+    }
+   ],
+   "gaps": "Aquí hay una [caja] con [tres] [dentaduras]. ¡Tres! ¿Y cuál es la [mía]?",
+   "glossary": [
+    {
+     "word": "dentadura",
+     "meaning": "dientes que no son naturales",
+     "en": "false teeth"
+    },
+    {
+     "word": "bailando",
+     "meaning": "moviendo el cuerpo con la música",
+     "en": "dancing"
+    },
+    {
+     "word": "caja",
+     "meaning": "objeto para guardar cosas",
+     "en": "box"
+    }
+   ]
+  },
+  {
+   "id": "paraguas",
+   "title": "Un paraguas de otra persona",
+   "place": "Las estanterías de paraguas",
+   "context": "Rocío llega a la oficina con algo en la mano.",
+   "contextEn": "Rocío comes to the office with something in her hand.",
+   "speakers": [
+    {
+     "name": "Rocío",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Este paraguas no es mío.",
+     "en": "Hello. This umbrella is not mine."
+    },
+    {
+     "s": 1,
+     "text": "¿De quién es?",
+     "en": "Whose is it?"
+    },
+    {
+     "s": 0,
+     "text": "De un chico de la fiesta. Llovía y me lo dio.",
+     "en": "A guy’s from the festival. It was raining and he gave it to me."
+    },
+    {
+     "s": 1,
+     "text": "Mire, dentro dice algo: «Si me encuentras, llama a Teo».",
+     "en": "Look, it says something inside: “If you find me, call Teo.”"
+    },
+    {
+     "s": 0,
+     "text": "¡Teo! Se llama Teo.",
+     "en": "Teo! His name is Teo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué trae Rocío?",
+     "qEn": "What does Rocío bring?",
+     "options": [
+      "Un abrigo",
+      "Un paraguas negro",
+      "Una mochila roja"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De quién es el paraguas?",
+     "qEn": "Whose is the umbrella?",
+     "options": [
+      "De la madre de Rocío",
+      "De un chico de la fiesta",
+      "De Celestino"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tiempo hacía en la fiesta?",
+     "qEn": "What was the weather like at the festival?",
+     "options": [
+      "Hacía sol",
+      "Llovía",
+      "Hacía mucho calor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo se llama el chico?",
+     "qEn": "What is the guy’s name?",
+     "options": [
+      "Teo",
+      "Pablo",
+      "Rodrigo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces cuando llueve y no tienes paraguas?",
+     "qEn": "What do you do when it rains and you have no umbrella?",
+     "model": "Espero en una cafetería."
+    },
+    {
+     "q": "¿Qué cosa le prestas a un desconocido?",
+     "qEn": "What do you lend a stranger?",
+     "model": "Le presto un bolígrafo."
+    },
+    {
+     "q": "¿De qué color es tu paraguas?",
+     "qEn": "What colour is your umbrella?",
+     "model": "Mi paraguas es azul."
+    }
+   ],
+   "gaps": "Mire, [dentro] dice algo: «Si me [encuentras], [llama] a [Teo]».",
+   "glossary": [
+    {
+     "word": "paraguas",
+     "meaning": "objeto para la lluvia",
+     "en": "umbrella"
+    },
+    {
+     "word": "llovía",
+     "meaning": "caía agua del cielo",
+     "en": "it was raining"
+    },
+    {
+     "word": "chico",
+     "meaning": "hombre joven",
+     "en": "guy"
+    }
+   ]
+  },
+  {
+   "id": "llaves",
+   "title": "Un hombre sin llaves",
+   "place": "El pasillo de las llaves",
+   "context": "Wilson habla solo delante de las llaves.",
+   "contextEn": "Wilson talks to himself in front of the keys.",
+   "speakers": [
+    {
+     "name": "Wilson",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Soy cerrajero. Abro todas las puertas de la ciudad.",
+     "en": "I am a locksmith. I open all the doors in the city."
+    },
+    {
+     "s": 0,
+     "text": "Pero esta noche no puedo abrir mi taller. Mis llaves se quedaron en la fiesta.",
+     "en": "But tonight I can’t open my workshop. My keys stayed behind at the festival."
+    },
+    {
+     "s": 0,
+     "text": "Aquí hay tres mil llaves. ¡Tres mil! Una es mía. Ay, qué vergüenza.",
+     "en": "There are three thousand keys here. Three thousand! One is mine. Oh, how embarrassing."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué trabajo tiene Wilson?",
+     "qEn": "What job does Wilson have?",
+     "options": [
+      "Es taxista",
+      "Es cerrajero",
+      "Es cocinero"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué no puede abrir?",
+     "qEn": "What can’t he open?",
+     "options": [
+      "La puerta de su casa",
+      "Su coche nuevo",
+      "Su taller"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas llaves hay?",
+     "qEn": "How many keys are there?",
+     "options": [
+      "Trescientas",
+      "Treinta",
+      "Tres mil"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo se siente Wilson?",
+     "qEn": "How does Wilson feel?",
+     "options": [
+      "Está feliz",
+      "Tiene hambre",
+      "Tiene vergüenza"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuántas llaves tienes en tu llavero?",
+     "qEn": "How many keys do you have on your key ring?",
+     "model": "Tengo cuatro llaves."
+    },
+    {
+     "q": "¿Quién tiene una copia de tu llave?",
+     "qEn": "Who has a copy of your key?",
+     "model": "Mi hermana tiene una copia."
+    },
+    {
+     "q": "¿Qué te da vergüenza en el trabajo?",
+     "qEn": "What embarrasses you at work?",
+     "model": "Me da vergüenza llegar tarde."
+    }
+   ],
+   "gaps": "Pero esta noche no puedo [abrir] mi [taller]. Mis [llaves] se quedaron en la [fiesta].",
+   "glossary": [
+    {
+     "word": "cerrajero",
+     "meaning": "persona que abre y arregla cerraduras",
+     "en": "locksmith"
+    },
+    {
+     "word": "taller",
+     "meaning": "lugar de trabajo",
+     "en": "workshop"
+    },
+    {
+     "word": "vergüenza",
+     "meaning": "lo que sientes cuando haces algo ridículo",
+     "en": "embarrassment"
+    }
+   ]
+  },
+  {
+   "id": "telefono",
+   "title": "Un teléfono que suena",
+   "place": "La estantería de los teléfonos",
+   "context": "Doña Herminia busca su teléfono. Un teléfono suena en la estantería.",
+   "contextEn": "Doña Herminia is looking for her phone. A phone rings on the shelf.",
+   "speakers": [
+    {
+     "name": "Herminia",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Busco mi teléfono. Es viejo y pequeño.",
+     "en": "I’m looking for my phone. It is old and small."
+    },
+    {
+     "s": 1,
+     "text": "Escuche. Un teléfono suena.",
+     "en": "Listen. A phone is ringing."
+    },
+    {
+     "s": 0,
+     "text": "¡Es el mío! En el teléfono está la voz de mi marido, Julio.",
+     "en": "It’s mine! My husband Julio’s voice is on the phone."
+    },
+    {
+     "s": 1,
+     "text": "¿Quién llama?",
+     "en": "Who is calling?"
+    },
+    {
+     "s": 0,
+     "text": "Mi nieto, Iker. Llama toda la noche.",
+     "en": "My grandson, Iker. He calls all night."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo es el teléfono de Herminia?",
+     "qEn": "What is Herminia’s phone like?",
+     "options": [
+      "Viejo y pequeño",
+      "Nuevo y muy grande",
+      "Rojo y moderno"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay en el teléfono?",
+     "qEn": "What is on the phone?",
+     "options": [
+      "La voz de su marido",
+      "Fotos de su perro",
+      "Un juego de cartas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién llama?",
+     "qEn": "Who is calling?",
+     "options": [
+      "Su nieto",
+      "Su hija mayor",
+      "Su marido Julio"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo llama Iker?",
+     "qEn": "When does Iker call?",
+     "options": [
+      "Por la mañana",
+      "A las doce",
+      "Toda la noche"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿A quién de tu familia llamas los domingos?",
+     "qEn": "Who in your family do you call on Sundays?",
+     "model": "Llamo a mi madre."
+    },
+    {
+     "q": "¿Cuántos años tiene tu teléfono?",
+     "qEn": "How old is your phone?",
+     "model": "Tiene tres años."
+    },
+    {
+     "q": "¿Qué voz te gusta escuchar?",
+     "qEn": "Whose voice do you like to hear?",
+     "model": "Me gusta la voz de mi abuela."
+    }
+   ],
+   "gaps": "¡Es el [mío]! En el teléfono está la [voz] de mi [marido], [Julio].",
+   "glossary": [
+    {
+     "word": "suena",
+     "meaning": "hace ruido",
+     "en": "rings"
+    },
+    {
+     "word": "marido",
+     "meaning": "esposo",
+     "en": "husband"
+    },
+    {
+     "word": "nieto",
+     "meaning": "hijo de tu hijo",
+     "en": "grandson"
+    }
+   ]
+  },
+  {
+   "id": "bonsai",
+   "title": "Una planta con historia",
+   "place": "La cámara fría",
+   "context": "Gaspar está en la cámara fría, con las plantas.",
+   "contextEn": "Gaspar is in the cold room, with the plants.",
+   "speakers": [
+    {
+     "name": "Gaspar",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Este es el bonsái de mi abuelo. Tiene sesenta años.",
+     "en": "This is my grandfather’s bonsai. It is sixty years old."
+    },
+    {
+     "s": 0,
+     "text": "Lo riego todos los días. Desde hace veinte años.",
+     "en": "I water it every day. For twenty years."
+    },
+    {
+     "s": 0,
+     "text": "Un momento… Las hojas son de plástico. ¡Es de plástico! Abuelo, ¿en serio?",
+     "en": "Wait a moment… The leaves are plastic. It’s plastic! Grandpa, seriously?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De quién es el bonsái?",
+     "qEn": "Whose bonsai is it?",
+     "options": [
+      "De Gaspar",
+      "Del abuelo de Gaspar",
+      "De una vecina"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años tiene el bonsái?",
+     "qEn": "How old is the bonsai?",
+     "options": [
+      "Sesenta",
+      "Seis",
+      "Veinte años"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace Gaspar todos los días?",
+     "qEn": "What does Gaspar do every day?",
+     "options": [
+      "Le canta una canción",
+      "Lo riega",
+      "Lo mira"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué son las hojas?",
+     "qEn": "What are the leaves made of?",
+     "options": [
+      "De papel",
+      "De chocolate",
+      "De plástico"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué planta de tu casa necesita mucha agua?",
+     "qEn": "Which plant in your house needs a lot of water?",
+     "model": "La planta de la cocina necesita mucha agua."
+    },
+    {
+     "q": "¿Qué haces todos los días a las ocho?",
+     "qEn": "What do you do every day at eight?",
+     "model": "Desayuno con mi familia."
+    },
+    {
+     "q": "¿Qué regalo de tu familia guardas?",
+     "qEn": "What gift from your family do you keep?",
+     "model": "Guardo un reloj de mi padre."
+    }
+   ],
+   "gaps": "Lo [riego] todos los [días]. Desde hace [veinte] [años].",
+   "glossary": [
+    {
+     "word": "riego",
+     "meaning": "le doy agua a una planta",
+     "en": "I water"
+    },
+    {
+     "word": "hojas",
+     "meaning": "partes verdes de una planta",
+     "en": "leaves"
+    },
+    {
+     "word": "plástico",
+     "meaning": "material artificial",
+     "en": "plastic"
+    }
+   ]
+  },
+  {
+   "id": "taper",
+   "title": "El táper de mamá",
+   "place": "La cámara fría",
+   "context": "Álex busca un táper en la cámara fría.",
+   "contextEn": "Álex is looking for a food container in the cold room.",
+   "speakers": [
+    {
+     "name": "Álex",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Por favor, busco el táper de mi madre. Es azul.",
+     "en": "Please, I’m looking for my mother’s food container. It’s blue."
+    },
+    {
+     "s": 1,
+     "text": "Hay doscientos doce táperes aquí.",
+     "en": "There are two hundred and twelve containers here."
+    },
+    {
+     "s": 0,
+     "text": "El de mi madre tiene su nombre: Lupe.",
+     "en": "My mother’s has her name on it: Lupe."
+    },
+    {
+     "s": 1,
+     "text": "Aquí está. Y dentro hay una nota: «Llámame más».",
+     "en": "Here it is. And inside there is a note: “Call me more.”"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué color es el táper?",
+     "qEn": "What colour is the container?",
+     "options": [
+      "Verde claro",
+      "Rojo",
+      "Azul"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos táperes hay?",
+     "qEn": "How many containers are there?",
+     "options": [
+      "Ciento doce",
+      "Doscientos doce",
+      "Trescientos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo se llama la madre de Álex?",
+     "qEn": "What is Álex’s mother’s name?",
+     "options": [
+      "Rosa",
+      "Marta",
+      "Lupe"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dice la nota?",
+     "qEn": "What does the note say?",
+     "options": [
+      "«Llámame más»",
+      "«Come bien»",
+      "«Te quiero mucho, hijo»"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué plato de tu familia viaja en un táper?",
+     "qEn": "What food does your family make for you?",
+     "model": "Mi madre me prepara sopa."
+    },
+    {
+     "q": "¿Cuándo llamas a tu madre o a tu padre?",
+     "qEn": "When do you call your mother or father?",
+     "model": "Los domingos."
+    },
+    {
+     "q": "¿Qué llevas al trabajo para comer?",
+     "qEn": "What do you take to work to eat?",
+     "model": "Llevo una ensalada."
+    }
+   ],
+   "gaps": "Aquí [está]. Y [dentro] hay una [nota]: «Llámame [más]».",
+   "glossary": [
+    {
+     "word": "táper",
+     "meaning": "caja de plástico para comida",
+     "en": "food container"
+    },
+    {
+     "word": "nota",
+     "meaning": "papel con un mensaje corto",
+     "en": "note"
+    },
+    {
+     "word": "dentro",
+     "meaning": "en el interior",
+     "en": "inside"
+    }
+   ]
+  },
+  {
+   "id": "guante",
+   "title": "La señora de todos los años",
+   "place": "El archivo",
+   "context": "Doña Aurora llega al archivo. Viene todos los años.",
+   "contextEn": "Doña Aurora comes to the archive. She comes every year.",
+   "speakers": [
+    {
+     "name": "Aurora",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches, Celestino. ¿Y mi guante?",
+     "en": "Good evening, Celestino. And my glove?"
+    },
+    {
+     "s": 1,
+     "text": "Buenas noches, Aurora. ¿Un guante rojo, de 1986?",
+     "en": "Good evening, Aurora. A red glove, from 1986?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Se me perdió en la fiesta de los faroles. Hace cuarenta años.",
+     "en": "Yes. I lost it at the lantern festival. Forty years ago."
+    },
+    {
+     "s": 1,
+     "text": "Pues… aquí está. Está en mi cajón.",
+     "en": "Well… here it is. It’s in my drawer."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué color es el guante?",
+     "qEn": "What colour is the glove?",
+     "options": [
+      "Negro y blanco",
+      "Rojo",
+      "Azul"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué año es el guante?",
+     "qEn": "What year is the glove from?",
+     "options": [
+      "De 2006",
+      "De 1986",
+      "De 1996"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde perdió Aurora el guante?",
+     "qEn": "Where did Aurora lose the glove?",
+     "options": [
+      "En la fiesta de los faroles",
+      "En el autobús",
+      "En el parque del centro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está el guante?",
+     "qEn": "Where is the glove?",
+     "options": [
+      "En la caja de guantes",
+      "En el cajón de Celestino",
+      "En el mostrador"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿De qué color son tus guantes?",
+     "qEn": "What colour are your gloves?",
+     "model": "Mis guantes son grises."
+    },
+    {
+     "q": "¿Qué guardas en tu cajón?",
+     "qEn": "What do you keep in your drawer?",
+     "model": "Guardo cartas y fotos."
+    },
+    {
+     "q": "¿Qué lugar visitas todos los años?",
+     "qEn": "What place do you visit every year?",
+     "model": "Visito el pueblo de mis padres."
+    }
+   ],
+   "gaps": "Sí. Se me [perdió] en la [fiesta] de los [faroles]. Hace [cuarenta] años.",
+   "glossary": [
+    {
+     "word": "guante",
+     "meaning": "ropa para la mano",
+     "en": "glove"
+    },
+    {
+     "word": "cajón",
+     "meaning": "parte de un mueble para guardar cosas",
+     "en": "drawer"
+    },
+    {
+     "word": "faroles",
+     "meaning": "luces de papel",
+     "en": "lanterns"
+    }
+   ]
+  },
+  {
+   "id": "anillo",
+   "title": "Antes de la boda",
+   "place": "La sala de objetos grandes",
+   "context": "Vanesa y Óliver buscan algo en la sala de objetos grandes.",
+   "contextEn": "Vanesa and Óliver are looking for something in the room of big objects.",
+   "speakers": [
+    {
+     "name": "Vanesa",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Óliver",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mi boda es el sábado y no tengo el anillo.",
+     "en": "My wedding is on Saturday and I don’t have the ring."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, amor, no es importante.",
+     "en": "Well, love, it’s not important."
+    },
+    {
+     "s": 0,
+     "text": "¿No es importante? ¡Es mi anillo!",
+     "en": "Not important? It’s my ring!"
+    },
+    {
+     "s": 1,
+     "text": "Es que… el anillo tiene un nombre. Y no es tu nombre.",
+     "en": "The thing is… the ring has a name on it. And it isn’t your name."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo es la boda?",
+     "qEn": "When is the wedding?",
+     "options": [
+      "El domingo por la tarde",
+      "El sábado",
+      "Mañana"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué busca Vanesa?",
+     "qEn": "What is Vanesa looking for?",
+     "options": [
+      "Su vestido de novia",
+      "Su anillo",
+      "Sus zapatos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice Óliver del anillo?",
+     "qEn": "What does Óliver say about the ring?",
+     "options": [
+      "Que no es importante",
+      "Que es muy caro",
+      "Que es feo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué problema tiene el anillo?",
+     "qEn": "What problem does the ring have?",
+     "options": [
+      "Es muy grande",
+      "Está roto",
+      "Tiene otro nombre"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué joya usas todos los días?",
+     "qEn": "What jewellery do you wear every day?",
+     "model": "Uso un reloj."
+    },
+    {
+     "q": "¿Qué noche de la semana eliges para salir de fiesta?",
+     "qEn": "Which day of the week do you prefer for a party?",
+     "model": "Prefiero el sábado."
+    },
+    {
+     "q": "¿Qué nombre te gusta mucho?",
+     "qEn": "What name do you like a lot?",
+     "model": "Me gusta el nombre Lucía."
+    }
+   ],
+   "gaps": "Mi [boda] es el [sábado] y no [tengo] el [anillo].",
+   "glossary": [
+    {
+     "word": "boda",
+     "meaning": "fiesta cuando dos personas se casan",
+     "en": "wedding"
+    },
+    {
+     "word": "anillo",
+     "meaning": "joya para el dedo",
+     "en": "ring"
+    },
+    {
+     "word": "amor",
+     "meaning": "palabra cariñosa para la pareja",
+     "en": "love"
+    }
+   ]
+  },
+  {
+   "id": "tuba",
+   "title": "Un músico sin instrumento",
+   "place": "La sala de objetos grandes",
+   "context": "Fidel toca en la banda de la ciudad. Busca su instrumento.",
+   "contextEn": "Fidel plays in the city band. He is looking for his instrument.",
+   "speakers": [
+    {
+     "name": "Fidel",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Mi tuba! Aquí está, en la sala de objetos grandes.",
+     "en": "My tuba! Here it is, in the room of big objects."
+    },
+    {
+     "s": 0,
+     "text": "Anoche, en la fiesta, la tuba sonó muy bien. Mejor que nunca.",
+     "en": "Last night, at the festival, the tuba sounded very good. Better than ever."
+    },
+    {
+     "s": 0,
+     "text": "¿Qué? ¿Una dentadura dentro de mi tuba? ¡Por eso sonó tan bien!",
+     "en": "What? False teeth inside my tuba? That’s why it sounded so good!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué instrumento toca Fidel?",
+     "qEn": "What instrument does Fidel play?",
+     "options": [
+      "La guitarra eléctrica",
+      "La tuba",
+      "El piano"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde está la tuba?",
+     "qEn": "Where is the tuba?",
+     "options": [
+      "En la calle de la fiesta",
+      "En el maletero del taxi de Rubén",
+      "En la sala de objetos grandes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo sonó la tuba anoche?",
+     "qEn": "How did the tuba sound last night?",
+     "options": [
+      "Muy mal",
+      "No sonó",
+      "Mejor que nunca"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hay dentro de la tuba?",
+     "qEn": "What is inside the tuba?",
+     "options": [
+      "Un gato",
+      "Unas llaves",
+      "Una dentadura"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué instrumento tiene un sonido feo para ti?",
+     "qEn": "Which instrument has an ugly sound for you?",
+     "model": "La gaita tiene un sonido feo para mí."
+    },
+    {
+     "q": "¿Qué haces mejor que nunca este año?",
+     "qEn": "What do you do better than ever this year?",
+     "model": "Cocino mejor que nunca."
+    },
+    {
+     "q": "¿Qué música escuchas en la calle?",
+     "qEn": "What music do you hear in the street?",
+     "model": "Escucho música de la radio."
+    }
+   ],
+   "gaps": "Anoche, en la [fiesta], la tuba [sonó] muy [bien]. Mejor que [nunca].",
+   "glossary": [
+    {
+     "word": "tuba",
+     "meaning": "instrumento grande de metal",
+     "en": "tuba"
+    },
+    {
+     "word": "sonó",
+     "meaning": "hizo un sonido",
+     "en": "sounded"
+    },
+    {
+     "word": "anoche",
+     "meaning": "la noche de ayer",
+     "en": "last night"
+    }
+   ]
+  },
+  {
+   "id": "canoa",
+   "title": "Dos amigos y un barco",
+   "place": "La sala de objetos grandes",
+   "context": "Nacho y Guille están en la sala de objetos grandes.",
+   "contextEn": "Nacho and Guille are in the room of big objects.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Guille",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Esta canoa es mía. Se llama La Gaviota.",
+     "en": "This canoe is mine. It’s called La Gaviota."
+    },
+    {
+     "s": 1,
+     "text": "¡No! La canoa es mía.",
+     "en": "No! The canoe is mine."
+    },
+    {
+     "s": 0,
+     "text": "Mira, aquí están nuestros nombres. Nacho y Guille, 1998.",
+     "en": "Look, here are our names. Nacho and Guille, 1998."
+    },
+    {
+     "s": 1,
+     "text": "Es verdad. Éramos amigos.",
+     "en": "It’s true. We were friends."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama la canoa?",
+     "qEn": "What is the canoe called?",
+     "options": [
+      "La Paloma Blanca",
+      "La Gaviota",
+      "El Delfín"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quieren Nacho y Guille?",
+     "qEn": "What do Nacho and Guille want?",
+     "options": [
+      "La misma canoa",
+      "Un café",
+      "Una bicicleta nueva"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay en la canoa?",
+     "qEn": "What is on the canoe?",
+     "options": [
+      "Sus nombres",
+      "Una foto de los dos",
+      "Agua sucia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De qué año son los nombres?",
+     "qEn": "What year are the names from?",
+     "options": [
+      "De 2018",
+      "De 1989",
+      "De 1998"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo se llama tu amigo de la infancia?",
+     "qEn": "What is your childhood friend’s name?",
+     "model": "Mi amigo de la infancia se llama Juan."
+    },
+    {
+     "q": "¿Qué cosa compartes con un amigo?",
+     "qEn": "What do you share with a friend?",
+     "model": "Comparto libros con mi amiga."
+    },
+    {
+     "q": "¿Qué deporte de agua te gusta?",
+     "qEn": "What water sport do you like?",
+     "model": "Me gusta nadar."
+    }
+   ],
+   "gaps": "Mira, aquí están nuestros [nombres]. [Nacho] y [Guille], [1998].",
+   "glossary": [
+    {
+     "word": "canoa",
+     "meaning": "barco pequeño con remos",
+     "en": "canoe"
+    },
+    {
+     "word": "nombres",
+     "meaning": "palabras para llamar a las personas",
+     "en": "names"
+    },
+    {
+     "word": "amigos",
+     "meaning": "personas que se quieren y se ayudan",
+     "en": "friends"
+    }
+   ]
+  },
+  {
+   "id": "cenizas",
+   "title": "Un perro muy viajero",
+   "place": "El muelle de carga",
+   "context": "Lisandro busca las cenizas de su perro. Habla con una conductora.",
+   "contextEn": "Lisandro is looking for his dog’s ashes. He talks to a driver.",
+   "speakers": [
+    {
+     "name": "Lisandro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Mari Carmen",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Busco una caja pequeña. Son las cenizas de mi perro, Canelo.",
+     "en": "I’m looking for a small box. It’s my dog Canelo’s ashes."
+    },
+    {
+     "s": 1,
+     "text": "¡Ah! La caja está en mi autobús, la línea 14.",
+     "en": "Oh! The box is on my bus, line 14."
+    },
+    {
+     "s": 1,
+     "text": "Toda la noche delante, conmigo, junto al volante. Y esta noche no hubo problemas en la línea.",
+     "en": "All night at the front, with me, next to the steering wheel. And tonight there were no problems on the line."
+    },
+    {
+     "s": 0,
+     "text": "Canelo cuida el autobús. Como cuida mi casa.",
+     "en": "Canelo looks after the bus. Like he looks after my house."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama el perro?",
+     "qEn": "What is the dog’s name?",
+     "options": [
+      "Canelo",
+      "Pancho",
+      "Toby el grande"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está la caja?",
+     "qEn": "Where is the box?",
+     "options": [
+      "En la calle principal",
+      "En el autobús",
+      "En la farmacia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué línea es el autobús?",
+     "qEn": "Which line is the bus?",
+     "options": [
+      "La 14",
+      "La 4",
+      "La 40"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hace Canelo, según Lisandro?",
+     "qEn": "What does Canelo do, according to Lisandro?",
+     "options": [
+      "Cuida el autobús",
+      "Duerme mucho",
+      "Come mucho"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué animal tienes o te gustaría tener?",
+     "qEn": "What animal do you have or would you like to have?",
+     "model": "Me gustaría tener un gato."
+    },
+    {
+     "q": "¿Qué autobús tomas?",
+     "qEn": "What bus do you take?",
+     "model": "Tomo el autobús 7."
+    },
+    {
+     "q": "¿Quién cuida tu casa cuando viajas?",
+     "qEn": "Who looks after your house when you travel?",
+     "model": "Mi vecina cuida mi casa."
+    }
+   ],
+   "gaps": "Busco una [caja] pequeña. Son las [cenizas] de mi [perro], [Canelo].",
+   "glossary": [
+    {
+     "word": "cenizas",
+     "meaning": "lo que queda después del fuego",
+     "en": "ashes"
+    },
+    {
+     "word": "línea",
+     "meaning": "recorrido fijo de un autobús",
+     "en": "route"
+    },
+    {
+     "word": "cuida",
+     "meaning": "protege",
+     "en": "looks after"
+    }
+   ]
+  },
+  {
+   "id": "loro",
+   "title": "Un pájaro que habla",
+   "place": "El muelle de carga",
+   "context": "Rubén trae un loro a la oficina. Llega Doña Fefa.",
+   "contextEn": "Rubén brings a parrot to the office. Doña Fefa arrives.",
+   "speakers": [
+    {
+     "name": "Rubén",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Fefa",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "¡Mi loro! Se llama Fígaro.",
+     "en": "My parrot! His name is Fígaro."
+    },
+    {
+     "s": 0,
+     "text": "¿Fígaro? Mi loro también se llamaba Fígaro. Se me escapó hace seis años.",
+     "en": "Fígaro? My parrot was also called Fígaro. He flew away six years ago."
+    },
+    {
+     "s": 1,
+     "text": "Yo lo encontré hace seis años, en la calle.",
+     "en": "I found him six years ago, in the street."
+    },
+    {
+     "s": 0,
+     "text": "Fígaro, ¿quién soy?",
+     "en": "Fígaro, who am I?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué trabajo tiene Rubén?",
+     "qEn": "What job does Rubén have?",
+     "options": [
+      "Es taxista",
+      "Es conductor de autobús",
+      "Es policía"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo se llama el loro?",
+     "qEn": "What is the parrot’s name?",
+     "options": [
+      "Paco",
+      "Fígaro",
+      "Lorenzo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo perdió Rubén su loro?",
+     "qEn": "When did Rubén lose his parrot?",
+     "options": [
+      "Ayer por la noche",
+      "Hace seis años",
+      "Hace un mes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde encontró Fefa el loro?",
+     "qEn": "Where did Fefa find the parrot?",
+     "options": [
+      "En la calle",
+      "En una tienda de animales",
+      "En el taxi"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué animal te parece divertido?",
+     "qEn": "What animal seems funny to you?",
+     "model": "El loro me parece divertido."
+    },
+    {
+     "q": "¿Qué encontraste una vez en la calle?",
+     "qEn": "What did you once find in the street?",
+     "model": "Encontré un billete."
+    },
+    {
+     "q": "¿Cuándo tomas un taxi?",
+     "qEn": "When do you take a taxi?",
+     "model": "Tomo un taxi por la noche."
+    }
+   ],
+   "gaps": "¿Fígaro? Mi [loro] también se llamaba Fígaro. Se me [escapó] hace [seis] [años].",
+   "glossary": [
+    {
+     "word": "loro",
+     "meaning": "pájaro de colores que habla",
+     "en": "parrot"
+    },
+    {
+     "word": "escapó",
+     "meaning": "se fue volando",
+     "en": "flew away"
+    },
+    {
+     "word": "encontré",
+     "meaning": "vi algo perdido y lo tomé",
+     "en": "I found"
+    }
+   ]
+  },
+  {
+   "id": "ladron",
+   "title": "Una bolsa llena",
+   "place": "La calle",
+   "context": "Tato llega con una bolsa. Habla con Celestino en la calle.",
+   "contextEn": "Tato arrives with a bag. He talks to Celestino in the street.",
+   "speakers": [
+    {
+     "name": "Tato",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches. Aquí tiene: catorce carteras de la fiesta.",
+     "en": "Good evening. Here you are: fourteen wallets from the festival."
+    },
+    {
+     "s": 1,
+     "text": "¿Catorce? ¿Usted las encontró?",
+     "en": "Fourteen? Did you find them?"
+    },
+    {
+     "s": 0,
+     "text": "Bueno… no exactamente. Las robé. Pero ahora las devuelvo.",
+     "en": "Well… not exactly. I stole them. But now I’m returning them."
+    },
+    {
+     "s": 0,
+     "text": "Y quiero mi recompensa: el diez por ciento.",
+     "en": "And I want my reward: ten percent."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas carteras trae Tato?",
+     "qEn": "How many wallets does Tato bring?",
+     "options": [
+      "Cuatro",
+      "Cuarenta",
+      "Catorce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De dónde son las carteras?",
+     "qEn": "Where are the wallets from?",
+     "options": [
+      "De un autobús",
+      "De una tienda grande",
+      "De la fiesta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo tiene Tato las carteras?",
+     "qEn": "How did Tato get the wallets?",
+     "options": [
+      "Las compró",
+      "Las robó",
+      "Las encontró en un banco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere Tato?",
+     "qEn": "What does Tato want?",
+     "options": [
+      "Un café caliente",
+      "El diez por ciento",
+      "Un trabajo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué llevas en tu cartera?",
+     "qEn": "What do you carry in your wallet?",
+     "model": "Llevo dinero y una foto."
+    },
+    {
+     "q": "¿Dónde guardas tu dinero en una fiesta?",
+     "qEn": "Where do you keep your money at a party?",
+     "model": "En el bolsillo de la chaqueta."
+    },
+    {
+     "q": "¿Qué recompensa te gusta recibir?",
+     "qEn": "What reward do you like to get?",
+     "model": "Me gusta recibir un café gratis."
+    }
+   ],
+   "gaps": "Las [robé]. Pero ahora las [devuelvo]. Y quiero mi [recompensa]: el diez por [ciento].",
+   "glossary": [
+    {
+     "word": "carteras",
+     "meaning": "objetos para llevar el dinero",
+     "en": "wallets"
+    },
+    {
+     "word": "robé",
+     "meaning": "tomé algo que no era mío",
+     "en": "I stole"
+    },
+    {
+     "word": "recompensa",
+     "meaning": "dinero o premio por ayudar",
+     "en": "reward"
+    }
+   ]
+  },
+  {
+   "id": "sonambulo",
+   "title": "Un zapato y una noche larga",
+   "place": "La puerta de la farmacia",
+   "context": "Benja está en la calle. Gloria es farmacéutica.",
+   "contextEn": "Benja is in the street. Gloria is a pharmacist.",
+   "speakers": [
+    {
+     "name": "Benja",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Gloria",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches. ¿Dónde estoy? Tengo un solo zapato.",
+     "en": "Good evening. Where am I? I have only one shoe."
+    },
+    {
+     "s": 1,
+     "text": "Estás delante de la farmacia. Anoche cantaste en el karaoke de la fiesta.",
+     "en": "You are in front of the pharmacy. Last night you sang at the festival karaoke."
+    },
+    {
+     "s": 0,
+     "text": "¿Yo? ¿Cantar? No recuerdo nada.",
+     "en": "Me? Sing? I don’t remember anything."
+    },
+    {
+     "s": 1,
+     "text": "Ganaste. Tu trofeo está en la oficina, con tu zapato.",
+     "en": "You won. Your trophy is in the office, with your shoe."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ropa tiene Benja?",
+     "qEn": "What clothes is Benja wearing?",
+     "options": [
+      "Un traje elegante",
+      "Un abrigo",
+      "Un pijama"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde está Benja?",
+     "qEn": "Where is Benja?",
+     "options": [
+      "En su casa, en la cama grande",
+      "En el autobús",
+      "Delante de la farmacia"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hizo Benja anoche?",
+     "qEn": "What did Benja do last night?",
+     "options": [
+      "Bailó tango",
+      "Cantó en el karaoke",
+      "Trabajó mucho"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde está el trofeo?",
+     "qEn": "Where is the trophy?",
+     "options": [
+      "En la farmacia de enfrente",
+      "En el bar",
+      "En la oficina"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué canción cantas muy mal?",
+     "qEn": "What song do you sing very badly?",
+     "model": "Canto muy mal las canciones de ópera."
+    },
+    {
+     "q": "¿Qué ropa usas para dormir?",
+     "qEn": "What clothes do you wear to sleep?",
+     "model": "Uso un pijama azul."
+    },
+    {
+     "q": "¿Qué premio ganaste en tu vida?",
+     "qEn": "What prize have you won in your life?",
+     "model": "Gané una medalla en la escuela."
+    }
+   ],
+   "gaps": "[Ganaste]. Tu [trofeo] está en la [oficina], con tu [zapato].",
+   "glossary": [
+    {
+     "word": "zapato",
+     "meaning": "ropa para el pie",
+     "en": "shoe"
+    },
+    {
+     "word": "farmacia",
+     "meaning": "tienda de medicinas",
+     "en": "pharmacy"
+    },
+    {
+     "word": "trofeo",
+     "meaning": "premio para el ganador",
+     "en": "trophy"
+    }
+   ]
+  },
+  {
+   "id": "farol",
+   "title": "Algo que cayó del cielo",
+   "place": "La azotea",
+   "context": "Selene llega a la oficina. Busca algo que soltó en la fiesta.",
+   "contextEn": "Selene comes to the office. She is looking for something she let go at the festival.",
+   "speakers": [
+    {
+     "name": "Selene",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Anoche, en la fiesta, solté un farol de papel con un deseo.",
+     "en": "Last night, at the festival, I let go of a paper lantern with a wish."
+    },
+    {
+     "s": 0,
+     "text": "El farol no voló al cielo. Cayó aquí, en la azotea.",
+     "en": "The lantern didn’t fly to the sky. It fell here, on the rooftop."
+    },
+    {
+     "s": 0,
+     "text": "Mi deseo está escrito en el papel. Es un secreto. ¡Por favor, no lo leas!",
+     "en": "My wish is written on the paper. It’s a secret. Please, don’t read it!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué soltó Selene?",
+     "qEn": "What did Selene let go of?",
+     "options": [
+      "Un farol de papel",
+      "Un globo",
+      "Un pájaro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde cayó el farol?",
+     "qEn": "Where did the lantern fall?",
+     "options": [
+      "En el río de la ciudad",
+      "En la azotea",
+      "En un árbol"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay en el papel?",
+     "qEn": "What is on the paper?",
+     "options": [
+      "Un dibujo de un gato",
+      "Su nombre",
+      "Su deseo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pide Selene?",
+     "qEn": "What does Selene ask?",
+     "options": [
+      "Que no lo leas",
+      "Que lo quemes",
+      "Que lo guardes"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué deseo tienes para este año?",
+     "qEn": "What wish do you have for this year?",
+     "model": "Quiero viajar a México."
+    },
+    {
+     "q": "¿Qué fiesta de tu ciudad te gusta?",
+     "qEn": "What festival in your city do you like?",
+     "model": "Me gusta la fiesta de verano."
+    },
+    {
+     "q": "¿Qué secreto guardas con un amigo?",
+     "qEn": "What secret do you keep with a friend?",
+     "model": "Guardo el secreto de un viaje."
+    }
+   ],
+   "gaps": "El farol no [voló] al [cielo]. [Cayó] aquí, en la [azotea].",
+   "glossary": [
+    {
+     "word": "farol",
+     "meaning": "luz de papel",
+     "en": "lantern"
+    },
+    {
+     "word": "deseo",
+     "meaning": "algo que quieres mucho",
+     "en": "wish"
+    },
+    {
+     "word": "azotea",
+     "meaning": "parte de arriba de un edificio",
+     "en": "rooftop"
+    }
+   ]
+  },
+  {
+   "id": "diario",
+   "title": "Una mochila en la azotea",
+   "place": "La azotea",
+   "context": "Yuri descansa en la azotea.",
+   "contextEn": "Yuri rests on the rooftop.",
+   "speakers": [
+    {
+     "name": "Yuri",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Soy Yuri, el vigilante de noche.",
+     "en": "I am Yuri, the night guard."
+    },
+    {
+     "s": 0,
+     "text": "En una mochila perdida hay un diario. Lo leo toda la noche. Es muy interesante.",
+     "en": "In a lost backpack there is a diary. I read it all night. It is very interesting."
+    },
+    {
+     "s": 0,
+     "text": "Página cien… un momento. ¡Es el diario de mi jefa, Doña Pura!",
+     "en": "Page one hundred… wait a moment. It’s my boss’s diary, Doña Pura’s!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué trabajo tiene Yuri?",
+     "qEn": "What job does Yuri have?",
+     "options": [
+      "Es cocinero en un hotel",
+      "Es vigilante",
+      "Es taxista"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde está el diario?",
+     "qEn": "Where is the diary?",
+     "options": [
+      "En la mesa",
+      "En una mochila perdida",
+      "En el taxi"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace Yuri toda la noche?",
+     "qEn": "What does Yuri do all night?",
+     "options": [
+      "Lee el diario",
+      "Duerme mucho",
+      "Canta y baila"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De quién es el diario?",
+     "qEn": "Whose diary is it?",
+     "options": [
+      "De su jefa",
+      "De Yuri",
+      "De un niño pequeño"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué libro tienes en la mesa ahora?",
+     "qEn": "What book do you have on the table now?",
+     "model": "Tengo una novela policiaca."
+    },
+    {
+     "q": "¿Qué escribes en tu cuaderno?",
+     "qEn": "What do you write in your notebook?",
+     "model": "Escribo listas de cosas."
+    },
+    {
+     "q": "¿Qué objeto pequeño olvidas siempre en casa?",
+     "qEn": "What is in your backpack or bag today?",
+     "model": "Hay agua y un libro."
+    }
+   ],
+   "gaps": "En una [mochila] perdida hay un [diario]. Lo [leo] toda la [noche].",
+   "glossary": [
+    {
+     "word": "vigilante",
+     "meaning": "persona que cuida un edificio",
+     "en": "security guard"
+    },
+    {
+     "word": "mochila",
+     "meaning": "bolsa para la espalda",
+     "en": "backpack"
+    },
+    {
+     "word": "jefa",
+     "meaning": "mujer que manda en el trabajo",
+     "en": "boss"
+    }
+   ]
+  },
+  {
+   "id": "alcalde",
+   "title": "Un hombre con prisa",
+   "place": "La sala de espera",
+   "context": "Ernesto espera en la sala de espera. Tiene un papel con un número.",
+   "contextEn": "Ernesto waits in the waiting room. He has a paper with a number.",
+   "speakers": [
+    {
+     "name": "Ernesto",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Tengo el número 247. ¡Es urgente! Soy el secretario del alcalde.",
+     "en": "I have number 247. It’s urgent! I am the mayor’s secretary."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué busca?",
+     "en": "What are you looking for?"
+    },
+    {
+     "s": 0,
+     "text": "La llave de oro de la ciudad. El alcalde la perdió en la fiesta.",
+     "en": "The golden key of the city. The mayor lost it at the festival."
+    },
+    {
+     "s": 1,
+     "text": "Ah, sí. Pero no es de oro. Es de chocolate.",
+     "en": "Ah, yes. But it isn’t gold. It’s chocolate."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué número tiene Ernesto?",
+     "qEn": "What number does Ernesto have?",
+     "options": [
+      "El 247",
+      "El 27",
+      "El 742"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para quién trabaja Ernesto?",
+     "qEn": "Who does Ernesto work for?",
+     "options": [
+      "Para la farmacia",
+      "Para Doña Pura",
+      "Para el alcalde"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué busca Ernesto?",
+     "qEn": "What is Ernesto looking for?",
+     "options": [
+      "Su coche nuevo",
+      "Una cartera con dinero dentro",
+      "La llave de la ciudad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De qué es la llave?",
+     "qEn": "What is the key made of?",
+     "options": [
+      "De chocolate",
+      "De oro",
+      "De madera vieja"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Dónde esperas mucho tiempo?",
+     "qEn": "Where do you wait a long time?",
+     "model": "Espero mucho en el médico."
+    },
+    {
+     "q": "¿Qué chocolate prefieres?",
+     "qEn": "Which chocolate do you prefer?",
+     "model": "Prefiero el chocolate negro."
+    },
+    {
+     "q": "¿Qué número te da suerte?",
+     "qEn": "What number brings you luck?",
+     "model": "El siete me da suerte."
+    }
+   ],
+   "gaps": "La [llave] de [oro] de la [ciudad]. El alcalde la [perdió] en la fiesta.",
+   "glossary": [
+    {
+     "word": "alcalde",
+     "meaning": "persona que manda en la ciudad",
+     "en": "mayor"
+    },
+    {
+     "word": "urgente",
+     "meaning": "que no puede esperar",
+     "en": "urgent"
+    },
+    {
+     "word": "llave",
+     "meaning": "objeto para abrir una puerta",
+     "en": "key"
+    }
+   ]
+  },
+  {
+   "id": "relevo",
+   "title": "El fin del turno",
+   "place": "El despacho de la jefa",
+   "context": "Llega Doña Pura. Celestino tiene el libro de la noche.",
+   "contextEn": "Doña Pura arrives. Celestino has the night’s ledger.",
+   "speakers": [
+    {
+     "name": "Pura",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días, Celestino. ¿Qué tal la noche?",
+     "en": "Good morning, Celestino. How was the night?"
+    },
+    {
+     "s": 1,
+     "text": "Muy buena. Mire el libro: muchos objetos volvieron a casa.",
+     "en": "Very good. Look at the book: many objects went home."
+    },
+    {
+     "s": 0,
+     "text": "¿Doce? Mi apuesta es doce.",
+     "en": "Twelve? My bet is twelve."
+    },
+    {
+     "s": 1,
+     "text": "Lea, lea. Y aquí está su diario, jefa.",
+     "en": "Read, read. And here is your diary, boss."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Es la una de la tarde",
+      "Son las once",
+      "Son las siete"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién es Doña Pura?",
+     "qEn": "Who is Doña Pura?",
+     "options": [
+      "Una clienta",
+      "La farmacéutica de enfrente",
+      "La jefa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuál es la apuesta de Pura?",
+     "qEn": "What is Pura’s bet?",
+     "options": [
+      "Diez",
+      "Veinte objetos",
+      "Doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le da Celestino a Pura?",
+     "qEn": "What does Celestino give Pura?",
+     "options": [
+      "Su diario",
+      "Un café caliente",
+      "Una llave"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿A qué hora llegas al trabajo o a clase?",
+     "qEn": "What time do you get to work or class?",
+     "model": "Llego a las nueve."
+    },
+    {
+     "q": "¿Qué haces por la mañana temprano?",
+     "qEn": "What do you do early in the morning?",
+     "model": "Tomo un café."
+    },
+    {
+     "q": "¿A qué hora llega tu jefe al trabajo?",
+     "qEn": "Who is your boss?",
+     "model": "Mi jefa se llama Ana."
+    }
+   ],
+   "gaps": "Muy [buena]. Mire el [libro]: muchos [objetos] volvieron a [casa].",
+   "glossary": [
+    {
+     "word": "jefa",
+     "meaning": "mujer que manda en el trabajo",
+     "en": "boss"
+    },
+    {
+     "word": "apuesta",
+     "meaning": "lo que alguien dice que va a pasar",
+     "en": "bet"
+    },
+    {
+     "word": "objetos",
+     "meaning": "cosas",
+     "en": "objects"
+    }
+   ]
+  }
+ ]
+}
