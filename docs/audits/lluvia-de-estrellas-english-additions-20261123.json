@@ -280,7 +280,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Simón, it is ten o’clock. It is time to sleep."
+      "text": "Simón, it is half past ten. It is time to sleep."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -1764,7 +1764,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Simón, it is ten o'clock. Time to sleep."
+      "text": "Simón, it is half past ten. Time to sleep."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -3408,7 +3408,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a1.mjs",
-      "text": "sharp"
+      "text": "the flashlight"
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",

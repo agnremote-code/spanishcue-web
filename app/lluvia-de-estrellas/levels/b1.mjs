@@ -237,7 +237,7 @@ export default {
     ask: "Amalia mira la cúpula, luego a los niños, luego a ti. ¿Qué le sugieres?",
     options: [
       { say: "En mi casa las cosas viejas se arreglan con un buen golpe. ¿Por qué no le da usted una patada?", reply: "¿Una patada? Hace sesenta años que no le pego a nada. Joaquín, apártese.", end: "La cúpula se destrabó con una patada de Doña Amalia, que tiene setenta y siete años.", mood: "laugh" },
-      { say: "Deje que los niños usen el telescopio cuando se arregle. Usted podría mirar su cometa como en 1966: sin aparatos.", reply: "Con los ojos, como aquella chica de diecisiete años. Me parece justo.", end: "Doña Amalia dejó el telescopio a los niños y mira la lluvia de su cometa sin aparatos, como en 1966.", mood: "love" },
+      { say: "Deje que los niños usen el telescopio cuando se arregle. Usted podría mirar la lluvia de su cometa como en 1966: sin aparatos.", reply: "Con los ojos, como aquella chica de diecisiete años. Me parece justo.", end: "Doña Amalia dejó el telescopio a los niños y mira la lluvia de su cometa sin aparatos, como en 1966.", mood: "love" },
       { say: "Lo importante es que esta vez no se duerma. ¿Le traigo un café bien fuerte?", reply: "Doble, por favor. No pienso perderme la lluvia dos veces en la misma vida.", end: "Doña Amalia tomó un café doble para no dormirse esta vez.", mood: "surprised" },
     ],
     talk: [
@@ -403,6 +403,6 @@ export default {
       "¿Qué historia de esta noche te ha parecido más conmovedora?",
       "¿Qué deseo pedirías si supieras que se va a cumplir?",
     ],
-    words: ["el pico", "renunciar", "a la de tres", "darse cuenta", "conmovedora"],
+    words: ["la linterna", "renunciar", "a la de tres", "darse cuenta", "conmovedora"],
   },
 };

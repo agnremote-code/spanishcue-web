@@ -403,6 +403,6 @@ export default {
       "¿Qué cosa escribes para no olvidarla?",
       "¿Qué personaje de esta noche invitarías a cenar a tu casa?",
     ],
-    words: [t("el mirador", "the lookout"), t("la libreta", "the notebook"), t("pedir un deseo", "to make a wish"), t("caer", "to fall"), t("en punto", "sharp")],
+    words: [t("el mirador", "the lookout"), t("la libreta", "the notebook"), t("pedir un deseo", "to make a wish"), t("caer", "to fall"), t("la linterna", "the flashlight")],
   },
 };

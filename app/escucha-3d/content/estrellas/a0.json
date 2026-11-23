@@ -402,8 +402,8 @@
     },
     {
      "s": 1,
-     "text": "Simón, son las diez. Es hora de dormir.",
-     "en": "Simón, it is ten o’clock. It is time to sleep."
+     "text": "Simón, son las diez y media. Es hora de dormir.",
+     "en": "Simón, it is half past ten. It is time to sleep."
     },
     {
      "s": 0,
@@ -436,9 +436,9 @@
      "q": "¿Qué hora es?",
      "qEn": "What time is it?",
      "options": [
-      "Son las doce",
-      "Son las diez",
-      "Es la una"
+      "Son las once y media",
+      "Son las diez y media",
+      "Son las nueve y media"
      ],
      "answer": 1
     },

@@ -237,7 +237,7 @@ export default {
     ask: "Joaquín golpea el motor sin resultado. Amalia mira a los niños por la puerta. ¿Qué le sugieres?",
     options: [
       { say: "Las máquinas viejas a veces solo necesitan un buen golpe. Usted ha arreglado cosas peores con menos: ¿por qué no prueba una patada?", reply: "Mi padre arreglaba la radio así y nunca falló. Joaquín, apártese, que voy.", end: "La cúpula se destrabó con una patada de Doña Amalia, que tiene setenta y siete años.", mood: "laugh" },
-      { say: "Si deja el telescopio a los niños, usted podría mirar su cometa como en 1966: con sus propios ojos.", reply: "Con mis ojos, como aquella chica de diecisiete años. Es lo más justo.", end: "Doña Amalia dejó el telescopio a los niños y mira la lluvia de su cometa sin aparatos, como en 1966.", mood: "love" },
+      { say: "Si deja el telescopio a los niños, usted podría mirar la lluvia de su cometa como en 1966: con sus propios ojos.", reply: "Con mis ojos, como aquella chica de diecisiete años. Es lo más justo.", end: "Doña Amalia dejó el telescopio a los niños y mira la lluvia de su cometa sin aparatos, como en 1966.", mood: "love" },
       { say: "Lo que no puede pasar es que se duerma otra vez. ¿Le traigo un café bien cargado?", reply: "Doble. No pienso perderme la misma lluvia dos veces en una vida.", end: "Doña Amalia tomó un café doble para no dormirse esta vez.", mood: "surprised" },
     ],
     talk: [
@@ -291,7 +291,7 @@ export default {
       "¿Qué papel juega la imagen en tu trabajo?",
       "¿Qué te habría gustado decirle a un jefe y nunca te atreviste?",
     ],
-    words: ["la cumbre", "la cobertura", "puntualísimos", "la naturalidad", "insensato"],
+    words: ["el techo de chapa", "la cobertura", "puntualísimos", "la naturalidad", "insensato"],
   },
   mina: {
     title: "El vértigo de un minero",

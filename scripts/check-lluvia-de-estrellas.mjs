@@ -83,6 +83,57 @@ export const VOSOTROS = /(?<!\p{L})(?:vosotr[oa]s|vuestr[oa]s?|os|mirad|volved|h
 const NUMBER_EIS = /(?<!\p{L})(?:dieciséis|veintiséis)(?!\p{L})/giu;
 // A role or a greeting that gives the student a gender: «como si fueras su abogado», «bienvenida a…».
 const ROLE_YOU = /(?<!\p{L})como si fueras\s+(?:su|un|una|el|la|mi|tu)\s+\p{L}+|(?<!\p{L})bienvenid[oa]\s+a(?!\p{L})/iu;
+// The scene's vocabulary list only names words the scene really uses: every
+// content word of each entry must appear in the scene (line, dialogue, ask,
+// options, talk), by its stem, so inflections and reflexive verbs still match
+// («mecerse» → «se mece», «agrietado» → «agrietadas»).
+const STOP = new Set(['el', 'la', 'los', 'las', 'lo', 'un', 'una', 'de', 'del', 'al', 'a', 'en', 'por', 'con', 'que', 'y', 'o', 'mi', 'tu', 'su', 'se', 'sin', 'para']);
+const norm = (t) => String(t ?? '').toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+export function wordStem(token) {
+  let w = norm(token).replace(/(?:se|me|te)$/u, (m, i, s) => (/(?:ar|er|ir)(?:se|me|te)$/u.test(s) ? '' : m));
+  if (/(?:ar|er|ir)$/u.test(w) && w.length >= 5) w = w.slice(0, -2);
+  else if (/(?:ar|er|ir)$/u.test(w)) return w;
+  else w = w.replace(/(?:es|os|as|o|a|e|s)$/u, '');
+  return w;
+}
+// A scene token matches when it starts with a stem variant and adds at most a seven-letter
+// ending (inflection, participle, enclitic), so «domar» is not found in «domesticaban».
+// Stem-changing and irregular verbs: «hervir» → hierve, «pedir» → pide, «poder» → puede, «dar» → dio.
+const IRREGULAR = { dar: ['da', 'di', 'doy'], ver: ['ve', 'vi'], ser: ['es', 'er', 'fu', 'so', 'sea'], caer: ['cae', 'cai', 'cay'], ten: ['tien', 'tuv'], ir: ['va', 'fu', 'ib'], hac: ['hic', 'hiz', 'har'], dec: ['dic', 'dij', 'dir'] };
+export function stemVariants(st) {
+  const out = new Set([st, ...(IRREGULAR[st] ?? [])]);
+  const i = st.lastIndexOf('e'), j = st.lastIndexOf('o');
+  if (i > 0) { out.add(st.slice(0, i) + 'ie' + st.slice(i + 1)); out.add(st.slice(0, i) + 'i' + st.slice(i + 1)); }
+  if (j > 0) out.add(st.slice(0, j) + 'ue' + st.slice(j + 1));
+  const u = st.lastIndexOf('u');
+  if (u > 0) out.add(st.slice(0, u) + 'ue' + st.slice(u + 1));
+  if (/c$/u.test(st)) { out.add(st.slice(0, -1) + 'zc'); out.add(st.slice(0, -1) + 'z'); out.add(st.slice(0, -1) + 'qu'); }
+  if (/g$/u.test(st)) { out.add(st + 'u'); out.add(st.slice(0, -1) + 'j'); }
+  if (/z$/u.test(st)) out.add(st.slice(0, -1) + 'c');
+  return [...out];
+}
+export function missingWords(level, content) {
+  const a0 = level === 'A0';
+  const es = (v) => (v && typeof v === 'object' && !Array.isArray(v) ? v.es : v) ?? '';
+  const out = [];
+  for (const [id, s] of Object.entries(content ?? {})) {
+    const text = [s.line, s.ask, ...(s.dialogue ?? []).map((d) => d[1]), ...(s.options ?? []).flatMap((o) => [o.say, o.reply, o.end]), ...(s.talk ?? [])].map(es).join(' ');
+    const tokens = (norm(text).match(/\p{L}+/gu) ?? []);
+    for (const entry of s.words ?? []) {
+      const label = es(entry).replace(/\([^)]*\)/gu, ' ');
+      const content = (norm(label).match(/\p{L}+/gu) ?? []).filter((t) => !STOP.has(t));
+      const miss = content.filter((t) => {
+        // Short words («par», «pico») must appear whole (or plural) unless they are listed irregular verbs.
+        if (t.length <= 4 && !IRREGULAR[t]) return ![t, `${t}s`, `${t}es`, ...(/[oa]$/u.test(t) ? ['o', 'a', 'os', 'as'].map((e) => t.slice(0, -1) + e) : [])].some((v) => tokens.includes(v));
+        const vs = stemVariants(wordStem(t));
+        return !tokens.some((w) => vs.some((v) => w.startsWith(v) && w.length - v.length <= 7));
+      });
+      if (miss.length) out.push(`${level} ${id}: vocabulary «${es(entry)}» is not in the scene (${miss.join(', ')})`);
+    }
+    void a0;
+  }
+  return out;
+}
 // kind 'you': addressed to the student; 'me': said by the student; 'reply': an answer to the student;
 // 'npc': narration or a line between characters (only «tú» lines count); 'scene': characters talking among themselves.
 export function genderProblems(text, kind) {
@@ -194,6 +245,7 @@ export function checkLevel(level, content) {
     const list = Array.isArray(s.words) ? s.words : [];
     if (list.length < 4 || list.length > 6 || !list.every(word)) bad(at, `words needs 4 to 6 entries${a0 || level === 'A1' ? ', each { es, en }' : ''}`);
   }
+  for (const m of missingWords(level, content)) out.push(m);
   for (const [where, text, kind] of studentTexts(level, content)) for (const g of genderProblems(text, kind)) out.push(`${where}: ${g} «${String(text).slice(0, 80)}»; the student has no gender`);
   return out;
 }

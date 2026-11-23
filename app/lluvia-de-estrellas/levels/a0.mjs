@@ -74,7 +74,7 @@ export default {
     line: t("Delante de una carpa azul hay un niño con un cuaderno. Es Simón. Tiene nueve años. Su mamá, Gabriela, está muy cansada.", "In front of a blue tent there is a boy with a notebook. It is Simón. He is nine. His mom, Gabriela, is very tired."),
     dialogue: [
       ["simon", t("Esta noche quiero ver un extraterrestre.", "Tonight I want to see an alien.")],
-      ["gabriela", t("Simón, son las diez. A dormir.", "Simón, it is ten o'clock. Time to sleep.")],
+      ["gabriela", t("Simón, son las diez y media. A dormir.", "Simón, it is half past ten. Time to sleep.")],
       ["simon", t("¡No! Los extraterrestres vienen de noche.", "No! Aliens come at night.")],
     ],
     ask: t("Simón te mira con su cuaderno. ¿Qué dices?", "Simón looks at you with his notebook. What do you say?"),

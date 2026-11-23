@@ -477,7 +477,7 @@ export default function World3D(props: WorldProps) {
     <div className="le-canvas" ref={mount} />
     {touch && !props.sceneId && !props.intro && <div className="le-joy" onPointerDown={joyDown} onPointerMove={joyMove} onPointerUp={joyUp} onPointerCancel={joyUp} aria-hidden="true"><span ref={knob} /></div>}
     {touch && !props.sceneId && !props.intro && <div className="le-touch-actions">
-      <button type="button" aria-label="Hablar o usar" onPointerDown={() => api.current?.interact()}>E<small>Usar</small></button>
+      <button type="button" aria-label="Hablar o usar" onPointerDown={() => api.current?.interact()}>◎<small>Usar</small></button>
       <button type="button" aria-label="Saltar" onPointerDown={() => api.current?.jump()}>↑<small>Saltar</small></button>
       <button type="button" aria-label="Nitro: mantén pulsado para correr muy rápido" onPointerDown={nitroOn} onPointerUp={nitroOff} onPointerCancel={nitroOff} onPointerLeave={nitroOff}>»<small>Nitro</small></button>
     </div>}

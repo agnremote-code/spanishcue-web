@@ -68,7 +68,7 @@ export default {
       "¿En qué despedida fúnebre se coló la risa sin pedir permiso?",
       "¿Qué parte de una persona querida crees que sobrevive en sus objetos más humildes?",
     ],
-    words: ["la azotea", "espantoso", "la nitidez", "infalible", "presenciar", "cada tanto"],
+    words: ["la mesada", "el recipiente", "desternillarse", "oscilar", "el remordimiento", "el trámite"],
   },
   alien: {
     title: "Tratado de diplomacia interestelar",
@@ -91,7 +91,7 @@ export default {
       "¿Qué misión imaginaria te tomabas totalmente en serio en tu infancia?",
       "¿Qué rasgo de la humanidad presentarías primero a una civilización desconocida?",
     ],
-    words: ["rezar (un cartel)", "impecable", "el náufrago", "el nombramiento", "el turno de guardia", "velar"],
+    words: ["la pancarta", "el intercomunicador", "inadvertido", "la solemnidad", "el cargo", "el párpado"],
   },
   cita: {
     title: "Teoría general de la mentira piadosa",
@@ -119,10 +119,10 @@ export default {
   },
   apagon: {
     title: "Negociación entre dos orgullos",
-    line: "Las bombillas son mis competidoras más obstinadas. Faltan cinco minutos para las once y Rogelio espera en la casilla del grupo electrógeno, con los dedos en la palanca que dejará todo en penumbra. Inútil, en parte: al este, los focos gigantes de Santa Rita me borran media bóveda con un fulgor de color mostaza. Quien manda en esa explotación es Teresa, que fue su mujer. Llevan nueve años sin dirigirse la palabra, desde que ella eligió el asfalto y él estas soledades. Y la única con poder para apagar esos focos es, cómo no, ella.",
+    line: "Las bombillas son mis competidoras más obstinadas. Faltan cinco minutos para las once y Rogelio espera en el cuarto de máquinas, con los dedos en la palanca que dejará todo en penumbra. Inútil, en parte: al este, los focos gigantes de Santa Rita me borran media bóveda con un fulgor de color mostaza. Quien manda en esa explotación es Teresa, que fue su mujer. Llevan nueve años sin dirigirse la palabra, desde que ella eligió el asfalto y él estas soledades. Y la única con poder para apagar esos focos es, cómo no, ella.",
     dialogue: [
-      ["rogelio", "Se largó porque esta inmensidad la asfixiaba. Hoy dirige una explotación a cuatro mil metros. El universo tiene una ironía que nadie le pidió."],
-      ["teresa", "Rogelio. Casi una década mudo y me buscas a esta hora por la frecuencia de socorro. Ojalá se trate de un incendio, por tu propio bien."],
+      ["rogelio", "Se largó porque esta inmensidad la asfixiaba. Hoy está al frente de un yacimiento a cuatro mil metros. El universo tiene una ironía que nadie le pidió."],
+      ["teresa", "Rogelio. Casi una década mudo y me buscas a esta hora por la frecuencia de emergencias. Ojalá se trate de un incendio, por tu propio bien."],
     ],
     ask: "Rogelio se queda sin voz y te pasa el aparato como quien entrega un petardo encendido. ¿Qué haces?",
     options: [
@@ -137,7 +137,7 @@ export default {
       "¿Qué reconciliación empezó con una excusa de lo más práctica?",
       "¿Qué recuerdo compartido usarías para reabrir un diálogo roto?",
     ],
-    words: ["tozudo", "el resplandor", "la mecha", "cobrar intereses", "el armisticio", "la orilla"],
+    words: ["obstinado", "la palanca", "el fulgor", "el petardo", "la soberbia", "el alto el fuego"],
   },
   cocina: {
     title: "Termodinámica de la paciencia",
@@ -160,7 +160,7 @@ export default {
       "¿Qué comida desastrosa acabó siendo memorable justamente por el desastre?",
       "¿Qué oficio invisible merecería un homenaje público en tu comunidad?",
     ],
-    words: ["ablandarse", "la fe ciega", "el funcionario", "las convicciones", "el cetro", "osar"],
+    words: ["exhalar", "la terquedad", "la altitud", "invicto", "el aplomo", "el forastero"],
   },
   llama: {
     title: "Natividad en el corral",
@@ -182,7 +182,7 @@ export default {
       "¿Qué historia sobre una llegada a la familia se sigue contando en tu casa?",
       "¿Qué tradición rural de tu región corre el riesgo de desaparecer en una generación?",
     ],
-    words: ["la ladera", "jadear", "a la sombra de", "mezquino", "al pie de la letra", "tocaya"],
+    words: ["el redil", "la parición", "jadear", "desgranarse", "balar", "el anhelo"],
   },
   hamacas: {
     title: "Insomnio por exceso de silencio",
@@ -204,7 +204,7 @@ export default {
       "¿Qué idea valiosa te regaló alguna noche de insomnio?",
       "¿Qué ruido doméstico echarías de menos si de repente desapareciera para siempre?",
     ],
-    words: ["mecerse", "de par en par", "lacónico", "la nana", "berrear", "declararse en huelga"],
+    words: ["el capullo", "la emboscada", "el berrido", "el arrullo", "abandonarse", "la canción de cuna"],
   },
   sendero: {
     title: "Sinfonía para un oyente",
@@ -227,7 +227,7 @@ export default {
       "¿Quién supo leer tu estado de ánimo sin que pronunciaras palabra, y cómo lo notaste?",
       "¿Qué paisaje te gustaría describir con palabras a quien nunca pudiera verlo?",
     ],
-    words: ["la estela", "ionizado", "el ajuste de cuentas", "enmudecer", "los videntes", "la procesión"],
+    words: ["el receptor", "el gorrión", "el agotamiento", "el bastón", "el resoplido", "el cerillo"],
   },
   cupula: {
     title: "La madre que se durmió en el parto",
@@ -250,7 +250,7 @@ export default {
       "¿Dónde te venció el sueño en el momento menos oportuno?",
       "¿Qué descubrimiento científico te habría gustado firmar con tu nombre?",
     ],
-    words: ["la tenacidad", "la obstinación", "la vigilia", "atascarse", "domar", "cabecear"],
+    words: ["la media naranja", "encasquillarse", "refunfuñar", "el porrazo", "cabezota", "la testarudez"],
   },
   radio: {
     title: "La señora que hablaba con el éter",
@@ -272,7 +272,7 @@ export default {
       "¿Qué conversación con un desconocido te dejó más huella que muchas charlas entre amigos?",
       "¿Qué te dirías si pudieras enviarle a tu yo de hace veinte años un único mensaje?",
     ],
-    words: ["rozar", "agonizar", "la parsimonia", "inverosímil", "la lírica", "conste en acta"],
+    words: ["el éter", "la casa rodante", "el acumulador", "el trasto", "propinar", "las pinzas"],
   },
   duchas: {
     title: "Capitalismo en toalla",
@@ -294,7 +294,7 @@ export default {
       "¿Desde qué lugar insólito te ha tocado atender una reunión de trabajo?",
       "¿Qué ritual usas para dejar de pensar en el trabajo cuando por fin desconectas?",
     ],
-    words: ["el barracón", "en paradero desconocido", "temerario", "la herejía", "cotizar en bolsa", "la servidumbre"],
+    words: ["el cobertizo", "chorrear", "el posgrado", "trepar", "el busto", "estrafalario"],
   },
   mina: {
     title: "El hombre que vivió al revés",
@@ -316,7 +316,7 @@ export default {
       "¿Qué confesión tardaste años en atreverte a hacer?",
       "¿Qué rutina antigua conservas aunque ya no tenga ninguna utilidad práctica?",
     ],
-    words: ["aferrarse", "el murciélago", "apuntalar", "el derrumbe", "el catre", "el convenio colectivo"],
+    words: ["las entrañas", "atrincherarse", "calado", "el derrumbe", "el socavón", "el catre"],
   },
   salar: {
     title: "Retrato de una obsesión seca",
@@ -338,7 +338,7 @@ export default {
       "¿Qué imagen has perseguido durante años sin llegar a capturarla?",
       "¿Qué parte de un paisaje conocido solo aparece en determinadas épocas del año?",
     ],
-    words: ["la diva", "la meticulosidad", "agrietado", "el tercero en discordia", "el encuadre", "insensato"],
+    words: ["la planicie", "presumido", "la expedición", "la amante", "el libreto", "en cueros"],
   },
   astrologa: {
     title: "Mecánica celeste para creyentes",
@@ -360,7 +360,7 @@ export default {
       "¿Cuándo te tocó sostener un papel que contradecía tus convicciones, y qué te costó?",
       "¿Qué conocimiento útil tienes que casi nadie de tu entorno sospecha?",
     ],
-    words: ["atribuir", "cursar", "augurar", "vaticinar", "despojarse", "la armadura"],
+    words: ["adjudicar", "el tenderete", "la sortija", "el catedrático", "la carta natal", "hechizar"],
   },
   dron: {
     title: "La influencer que tapó el cielo",
@@ -383,7 +383,7 @@ export default {
       "¿Qué escena bellísima decidiste no fotografiar?",
       "¿Qué papel cumplen en tu vida las personas que trabajan detrás del foco?",
     ],
-    words: ["pilotar", "teñir", "atrincherarse", "el mando a distancia", "confiscar", "el perfil bueno"],
+    words: ["las peñas", "la ocurrencia", "el pedrusco", "parapetarse", "el indicador de carga", "posar"],
   },
   mirador: {
     title: "Lo que el cometa vio",
@@ -406,6 +406,6 @@ export default {
       "¿Qué noche de tu vida recuerdas con la misma intensidad que esta?",
       "¿Qué le dirías tú al cometa, sabiendo que no volverá hasta dentro de sesenta años?",
     ],
-    words: ["el testigo", "incontenible", "el repertorio", "la insolencia", "el disparate", "levantar acta"],
+    words: ["la cima", "la quietud", "estrechar", "la frazada", "rajar", "la chifladura"],
   },
 };

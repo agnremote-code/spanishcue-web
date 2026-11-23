@@ -157,7 +157,7 @@ export default {
       "¿Qué plato andino o de montaña probaste alguna vez?",
       "¿Qué le agradeces a una persona que siempre trabaja para los demás?",
     ],
-    words: ["la quinua", "encogerse de hombros", "de espaldas", "al dente", "el ayudante"],
+    words: ["la quinua", "encogerse de hombros", "a esta altura", "al dente", "el ayudante"],
   },
   llama: {
     title: "Un nombre para la cría",
@@ -237,7 +237,7 @@ export default {
     ask: "Joaquín golpea el motor con un destornillador. Amalia suspira. ¿Qué le dices?",
     options: [
       { say: "Doña Amalia, usted arregló cosas más difíciles con menos. ¿Por qué no prueba una buena patada?", reply: "Mi padre arreglaba la radio así. ¡Joaquín, apártate!", end: "La cúpula se destrabó con una patada de Doña Amalia. Joaquín aplaudió con el destornillador en la mano.", mood: "laugh" },
-      { say: "¿Y si deja el telescopio a los niños y mira su cometa como en 1966, sin aparatos?", reply: "Sin aparatos… Como cuando tenía diecisiete años. Me gusta.", end: "Doña Amalia dejó el telescopio a los niños y miró su cometa con sus propios ojos.", mood: "love" },
+      { say: "¿Y si deja el telescopio a los niños y mira la lluvia de su cometa como en 1966, sin aparatos?", reply: "Sin aparatos… Como cuando tenía diecisiete años. Me gusta.", end: "Doña Amalia dejó el telescopio a los niños y miró la lluvia de su cometa con sus propios ojos.", mood: "love" },
       { say: "Primero un café doble. Esta vez nadie la va a ver dormida.", reply: "Doble y bien cargado. En 1966 no había café en mi jardín.", end: "Doña Amalia tomó un café doble para no dormirse esta vez. Le brillaban los ojos.", mood: "surprised" },
     ],
     talk: [
@@ -269,7 +269,7 @@ export default {
       "¿Qué lugar del mundo te gustaría escuchar por radio una noche?",
       "¿Qué hacías antes de tener teléfono móvil para hablar con tus amigos?",
     ],
-    words: ["la radioaficionada", "los auriculares", "la frecuencia", "el camionero", "estar callada"],
+    words: ["la caravana", "los auriculares", "la frecuencia", "el camionero", "la estación espacial"],
   },
   duchas: {
     title: "Señal en el techo",
@@ -380,7 +380,7 @@ export default {
       "¿Qué aparato tecnológico te dio más problemas?",
       "¿Qué hacías con tu hermano, tu hermana o tus primos en los viajes familiares?",
     ],
-    words: ["el seguidor", "las visitas", "el camarógrafo", "pitar", "sin filtros"],
+    words: ["el seguidor", "las visitas", "el camarógrafo", "pitar", "aterrizar"],
   },
   mirador: {
     title: "Mil estrellas por hora",

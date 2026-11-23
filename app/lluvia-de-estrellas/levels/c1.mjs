@@ -136,7 +136,7 @@ export default {
       "¿Qué decisión vital supuso una ruptura dolorosa con alguien a quien apreciabas?",
       "¿Qué gesto pequeño puede romper un silencio de muchos años entre dos personas?",
     ],
-    words: ["teñir", "tragarse el orgullo", "dar señales de vida", "la brasa", "andarse con rodeos", "la tregua"],
+    words: ["teñir", "tragarse el orgullo", "dar señales de vida", "la brasa", "nada de rodeos", "la tregua"],
   },
   cocina: {
     title: "Ochenta y ocho grados de frustración",
@@ -273,7 +273,7 @@ export default {
       "¿Qué tarea doméstica te parece un trámite, y cuál te parece casi una ceremonia?",
       "¿Cuánto tiempo aguantarías sin auriculares, radio ni pantallas antes de echarlos de menos?",
     ],
-    words: ["el éter", "agonizar", "dejar plantado", "los nudillos", "el trámite", "quedarse sin réplica"],
+    words: ["el éter", "agonizar", "dejar plantado", "los nudillos", "el trámite", "dejar sin réplica"],
   },
   duchas: {
     title: "Cuatro minutos de agua caliente",
