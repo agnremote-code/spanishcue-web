@@ -213,7 +213,7 @@
         { "s": 0, "text": "Que le mandemos también una jarra para el agua, del mismo color, para ver cómo se ve en la mesa del comedor." }
       ],
       "choice": [
-        { "q": "¿Qué hace Paola en esta conversación?", "options": ["Le pide ayuda a Emilio con el horno pequeño", "Le cuenta una llamada de la clienta", "Le explica a Emilio cómo se hace el esmalte"], "answer": 1 },
+        { "q": "¿Qué hace Paola en esta conversación?", "options": ["Le pide ayuda a Emilio con el horno pequeño", "Le cuenta qué dijo la del restaurante", "Le explica a Emilio cómo se hace el esmalte"], "answer": 1 },
         { "q": "¿Qué opinó la clienta de los platos de la muestra?", "options": ["Que eran justo lo que buscaba", "Que eran muy pesados", "Que el color era oscuro"], "answer": 0 },
         { "q": "¿Por qué quiere la clienta tazas más grandes?", "options": ["Porque las tazas de la muestra se rompieron", "Porque quiere servir sopa en ellas", "Porque allá sirven el café en taza grande"], "answer": 2 },
         { "q": "¿Qué pidió la clienta al final?", "options": ["Una jarra para el agua", "Más fotos", "Un descuento"], "answer": 0 }
@@ -291,7 +291,7 @@
         { "s": 0, "text": "Perfecto. Entonces salgo el miércoles por la noche y el jueves temprano estoy allá." }
       ],
       "choice": [
-        { "q": "¿De qué hablan Roberto y Marina?", "options": ["De la entrega del pedido", "Del precio del transporte hasta Bogotá", "De un problema con el horno grande"], "answer": 0 },
+        { "q": "¿De qué hablan Roberto y Marina?", "options": ["De la entrega de las cajas", "Del precio del transporte hasta Bogotá", "De un problema con el horno grande"], "answer": 0 },
         { "q": "¿Por qué tiene que entrar Roberto por la puerta de atrás?", "options": ["Porque adelante están pintando la fachada", "Porque la puerta de adelante está rota", "Porque el restaurante todavía no tiene llave"], "answer": 0 },
         { "q": "¿Qué va a hacer el chef antes de firmar?", "options": ["Pagar el saldo", "Llamar a Marina", "Revisar caja por caja"], "answer": 2 },
         { "q": "¿Qué tiene que mandarle Roberto a Marina?", "options": ["El dinero del saldo en efectivo", "Una foto de la factura firmada", "Un mensaje al salir"], "answer": 1 }
