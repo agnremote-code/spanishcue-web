@@ -14,6 +14,7 @@ import { CAST as PAPEL_CAST } from '../app/el-mundo-en-blanco/story.mjs';
 import { CAST as HR_CAST } from '../app/hr-crisis/oficina.mjs';
 import { CAST as REALITY_CAST } from '../app/la-casa-del-reality/story.mjs';
 import { CAST as CRUCERO_CAST } from '../app/ultimo-crucero/story.mjs';
+import { CAST as ESTRELLAS_CAST } from '../app/lluvia-de-estrellas/story.mjs';
 
 const voices = JSON.parse(readFileSync('app/escucha-3d/voices.json', 'utf8'));
 const [onlyGame, onlyLevel] = process.argv.slice(2);
@@ -86,6 +87,11 @@ export function checkFile(game, level, data, path) {
       if (!member) bad(at, `${speaker.name} is not in the Último crucero cast (story.mjs)`);
       else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
     }
+    if (game === 'estrellas') for (const speaker of speakers) {
+      const member = Object.values(ESTRELLAS_CAST).find(c => c.name === speaker.name);
+      if (!member) bad(at, `${speaker.name} is not in the Lluvia de estrellas cast (story.mjs)`);
+      else if (member.voice !== speaker.voice) bad(at, `${speaker.name} speaks with ${member.voice} in this class, not ${speaker.voice}`);
+    }
     if (game === 'vuelo') for (const speaker of speakers) {
       const member = Object.values(VUELO_CAST).find(c => c.name === speaker.name);
       if (!member) bad(at, `${speaker.name} is not in the Vuelo cancelado cast (story.mjs)`);
@@ -152,7 +158,7 @@ export function checkFile(game, level, data, path) {
 // at most 40% of the time, and from C1 every item asks at least two
 // inference questions (intention, irony, register, what is implied), marked
 // `infer: true`.
-export const STRICT_KEYS = ['tren', 'boda', 'papel', 'hr', 'reality', 'crucero'];
+export const STRICT_KEYS = ['tren', 'boda', 'papel', 'hr', 'reality', 'crucero', 'estrellas'];
 export function strictKey(level, items) {
   const out = [];
   const qs = items.flatMap(item => (item.choice ?? []).map(q => ({ item: item.id, ...q })));
@@ -176,7 +182,7 @@ export function strictKey(level, items) {
 // option gives nothing away. The right option is the middle-length one at
 // most 45% of the time, and no option has three words or fewer while the
 // other two have seven or more.
-export const LENGTH_KEYS = ['reality'];
+export const LENGTH_KEYS = ['reality', 'estrellas'];
 export function lengthKey(items) {
   const out = [];
   const qs = items.flatMap(item => (item.choice ?? []).map(q => ({ item: item.id, ...q })));

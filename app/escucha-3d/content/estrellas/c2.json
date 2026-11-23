@@ -1,0 +1,2365 @@
+{
+ "game": "estrellas",
+ "level": "C2",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "El sobre en la fogata del desayuno",
+   "place": "La entrada del camping",
+   "context": "Amanece sobre el desierto. Rogelio aviva la fogata del desayuno. Celeste llega con un sobre arrugado en la mano.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Vaya, vaya. Si no me falla la vista, eso que traes ahí tiene toda la pinta de ser cierto documento que alguien iba a firmar sin hacer preguntas."
+    },
+    {
+     "s": 1,
+     "text": "No te regodees, que todavía estoy a tiempo de arrepentirme. Lo he llevado en el bolsillo toda la noche, como quien lleva una piedra para tirarla a la primera ocasión. Y en el último tramo del sendero, cuando apagué la linterna, me acordé de él y me dio la risa."
+    },
+    {
+     "s": 0,
+     "text": "¿La risa? Yo esperaba lágrimas, un discurso, algo con un poco más de dramatismo."
+    },
+    {
+     "s": 1,
+     "text": "Me hizo gracia porque me pareció absurdo haber escrito tres versiones de una renuncia por miedo a algo que, al final, ni siquiera estaba fuera. Estaba en cómo me lo contaba. Llevaba años diciéndome que la oscuridad me paralizaba, y anoche descubrimos, Don Ramiro y yo, que lo que me paralizaba era estar sola en ella."
+    },
+    {
+     "s": 0,
+     "text": "Eso, dicho a las seis de la mañana y con este frío, suena casi a filosofía."
+    },
+    {
+     "s": 1,
+     "text": "No te hagas el duro, Rogelio. Tú lo sabías desde el principio. Por eso me propusiste el trato. Nunca pensaste firmarlo."
+    },
+    {
+     "s": 0,
+     "text": "Digamos que tenía cierta confianza en las estadísticas. En veintidós años, nadie que ha llegado al mirador a las tres y doce ha querido marcharse al día siguiente. Venga, échalo al fuego, que se enfría el café."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tono adopta Rogelio al ver el sobre?",
+     "infer": true,
+     "options": [
+      "Solemne y algo preocupado",
+      "Distante, como si no lo reconociera",
+      "Burlón y cómplice"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué se rió Celeste en el sendero?",
+     "options": [
+      "Porque Ramiro contaba chistes de la mina",
+      "Porque su miedo le pareció exagerado",
+      "Porque había perdido el sobre"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué distinción establece Celeste sobre su miedo?",
+     "options": [
+      "Entre el miedo de niña y el miedo adulto",
+      "Entre la oscuridad y la soledad dentro de ella",
+      "Entre el miedo real y el miedo fingido"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué da a entender Rogelio con lo de «las estadísticas»?",
+     "infer": true,
+     "options": [
+      "Que lleva un registro exacto de los campistas",
+      "Que había apostado dinero con otros empleados",
+      "Que el trato buscaba retenerla"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende o rebate esta idea: «Lo que nos paraliza no suele ser el peligro, sino el relato que nos hacemos de él».",
+     "model": "La defiendo: muchas veces el peligro es mínimo y lo que pesa es la historia que repetimos."
+    },
+    {
+     "q": "Cuenta una anécdota en la que un plan de huida acabó convertido, casi sin querer, en un motivo para quedarte.",
+     "model": "Iba a dejar el coro y la última noche me pidieron un solo; sigo allí cinco años después."
+    },
+    {
+     "q": "Reformula la propuesta de Rogelio como si fuera una cláusula de un contrato laboral, con lenguaje jurídico.",
+     "model": "La renuncia surtirá efecto únicamente si la trabajadora no alcanza el mirador antes de las tres y doce."
+    }
+   ],
+   "gaps": "Llevaba años diciéndome que la oscuridad me [paralizaba], y anoche descubrimos, Don Ramiro y yo, que lo que me [paralizaba] era estar [sola] en [ella].",
+   "glossary": [
+    {
+     "word": "tiene toda la pinta",
+     "meaning": "parece claramente"
+    },
+    {
+     "word": "no te regodees",
+     "meaning": "no disfrutes de mi situación"
+    },
+    {
+     "word": "me dio la risa",
+     "meaning": "empecé a reír sin poder evitarlo"
+    },
+    {
+     "word": "no te hagas el duro",
+     "meaning": "no finjas que no te importa"
+    }
+   ]
+  },
+  {
+   "id": "lentes",
+   "title": "El precio de lo regalado",
+   "place": "El estacionamiento",
+   "context": "Don Cosme carga en la furgoneta unas cajas vacías. Celeste le trae un café y le cuenta lo que ha visto en el mirador.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Cosme",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Cosme, tendría que haberlo visto. A las tres y doce había por lo menos cuarenta niños con sus lentes puestos, girando la cabeza de un lado a otro como búhos, convencidos de que veían deseos. Y unos cuantos adultos también, aunque disimulaban peor."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé, lo sé. Me lo han venido a contar uno por uno, como si yo hubiera hecho algo extraordinario. Y lo único que hice fue reconocer que mi mercancía no valía nada."
+    },
+    {
+     "s": 0,
+     "text": "Yo no diría eso. Diría que dejó de tener precio y empezó a tener valor."
+    },
+    {
+     "s": 1,
+     "text": "Muy bonito, señorita, pero la poesía no paga la gasolina. Aunque le voy a confesar algo que me tiene desconcertado. Una señora de Santiago me ha pedido mi número. Organiza fiestas infantiles y quiere encargarme doscientos lentes «para ver deseos», pagados por adelantado. Doscientos. Al precio que yo pedía ayer por los de eclipse."
+    },
+    {
+     "s": 0,
+     "text": "O sea, que regalando ha conseguido lo que no consiguió vendiendo."
+    },
+    {
+     "s": 1,
+     "text": "Eso parece. Cuarenta años de comerciante para descubrir, a los setenta, que la gente no compra objetos; compra la historia que va con ellos. Mi difunta mujer me lo decía constantemente, y yo le contestaba que eso eran cosas de publicistas."
+    },
+    {
+     "s": 0,
+     "text": "Pues brindemos por ella. Con café, que es lo que hay."
+    },
+    {
+     "s": 1,
+     "text": "Por ella. Y por la estupidez de mi primo, sin la cual nada de esto habría pasado."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué matiz introduce Celeste entre «precio» y «valor»?",
+     "options": [
+      "Que los lentes eran más caros de lo que parecía",
+      "Que los niños pagarían más que los adultos",
+      "Que lo invendible puede valer mucho"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué está desconcertado Cosme?",
+     "options": [
+      "Porque nadie le ha agradecido el regalo",
+      "Porque recibe un encargo pagado gracias a lo que regaló",
+      "Porque la señora quiere los lentes gratis"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué revela la referencia a su difunta mujer?",
+     "infer": true,
+     "options": [
+      "Que ella trabajaba en una agencia de publicidad",
+      "Que ella lo vio antes que él",
+      "Que ella se oponía a su negocio de lentes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Con qué intención brinda Cosme por la «estupidez» de su primo?",
+     "infer": true,
+     "options": [
+      "Con ironía agradecida",
+      "Con rencor sincero",
+      "Con total indiferencia"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "Argumenta a favor o en contra: «La gente no compra objetos, compra la historia que va con ellos».",
+     "model": "A favor: pagamos más por un café si nos cuentan de qué finca viene y quién lo cultiva."
+    },
+    {
+     "q": "Imagina que un error ajeno hubiera cambiado tu vida para bien: ¿cómo se lo agradecerías sin que pareciera una burla?",
+     "model": "Le escribiría una carta sincera explicando cómo su error me abrió una puerta, sin ironía."
+    },
+    {
+     "q": "Explica la diferencia entre precio y valor con un objeto de tu casa, primero como economista y después como poeta.",
+     "model": "Como economista, la taza vale dos euros; como poeta, guarda todas las mañanas de mi abuela."
+    }
+   ],
+   "gaps": "Cuarenta años de [comerciante] para descubrir, a los setenta, que la gente no compra [objetos]; compra la [historia] que va con [ellos].",
+   "glossary": [
+    {
+     "word": "búhos",
+     "meaning": "aves nocturnas que giran mucho la cabeza"
+    },
+    {
+     "word": "por adelantado",
+     "meaning": "antes de recibir el producto"
+    },
+    {
+     "word": "difunta",
+     "meaning": "que ha muerto"
+    },
+    {
+     "word": "publicistas",
+     "meaning": "personas que trabajan en publicidad"
+    }
+   ]
+  },
+  {
+   "id": "urna",
+   "title": "La última página del cuaderno",
+   "place": "Las carpas",
+   "context": "Amanece. Nora escribe en el cuaderno de observaciones de su padre. Iván lee por encima de su hombro.",
+   "speakers": [
+    {
+     "name": "Nora",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Noche del gran máximo. Cielo de una transparencia insultante. Tasa estimada: más de mil por hora. Observadora: su hija, que durante años creyó que todo esto era una manía suya». ¿Demasiado?"
+    },
+    {
+     "s": 1,
+     "text": "Lo de «insultante» le habría encantado. Él escribía así, como si el cielo le debiera algo y él tuviera que cobrárselo cada noche."
+    },
+    {
+     "s": 0,
+     "text": "Lo curioso es que, ahora que lo pienso, nunca me interesaron las estrellas. Me interesaba él cuando las miraba. Se le ponía una cara que no tenía en ningún otro momento, ni siquiera conmigo. De niña me daba celos; ahora creo que era la única vez que estaba en paz."
+    },
+    {
+     "s": 1,
+     "text": "Y anoche, ¿qué cara tenías tú?"
+    },
+    {
+     "s": 0,
+     "text": "No lo sé. Supongo que la suya. Inés me lo dijo por videollamada: «Te estás pareciendo a papá». No sé si era un elogio o una advertencia, viniendo de ella."
+    },
+    {
+     "s": 1,
+     "text": "Con tu hermana, probablemente las dos cosas."
+    },
+    {
+     "s": 0,
+     "text": "Hemos quedado en algo, por cierto. El año que viene, Inés sube con la urna y yo me encargo del cuaderno. Ella pone las cenizas y yo pongo las palabras. Es el reparto más justo que hemos hecho en cuarenta años."
+    },
+    {
+     "s": 1,
+     "text": "¿Y yo qué pongo?"
+    },
+    {
+     "s": 0,
+     "text": "Tú pones el coche. Y esta vez revisas el maletero dos veces."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué efecto busca Nora con el adjetivo «insultante»?",
+     "infer": true,
+     "options": [
+      "Imitar el estilo de su padre",
+      "Criticar el frío excesivo de la noche",
+      "Expresar su enfado por haber olvidado la urna"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué descubre Nora sobre su relación con las estrellas?",
+     "options": [
+      "Que lo que le interesaba era su padre al mirarlas",
+      "Que siempre le fascinaron en secreto",
+      "Que las odiaba por culpa de su padre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sugiere la ambigüedad de «Te estás pareciendo a papá»?",
+     "infer": true,
+     "options": [
+      "Que Inés no veía bien la videollamada",
+      "Que el padre tenía mal carácter con todos",
+      "Una relación fraternal tensa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene de significativo el acuerdo con Inés?",
+     "options": [
+      "Que Nora renuncia a volver al camping",
+      "Que por fin reparten el duelo de forma equilibrada",
+      "Que Inés se queda con todo lo del padre"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "Narra cómo era la cara de alguien querido cuando hacía lo que más le gustaba, con el máximo detalle posible.",
+     "model": "Mi madre cosiendo: los labios apretados, las gafas en la punta de la nariz y una calma que no tenía nunca."
+    },
+    {
+     "q": "Defiende una tesis: ¿heredamos de nuestros padres sus pasiones o solo la manera de vivirlas?",
+     "model": "Creo que heredamos la manera; mi padre amaba el fútbol y yo amo la música con la misma intensidad."
+    },
+    {
+     "q": "Reescribe la entrada del cuaderno en el registro de un parte meteorológico oficial.",
+     "model": "Visibilidad excelente, ausencia total de nubosidad y actividad meteórica superior a mil eventos por hora."
+    }
+   ],
+   "gaps": "Me interesaba él cuando las [miraba]. Se le ponía una [cara] que no tenía en ningún otro [momento], ni siquiera [conmigo].",
+   "glossary": [
+    {
+     "word": "transparencia",
+     "meaning": "claridad total"
+    },
+    {
+     "word": "manía",
+     "meaning": "obsesión, costumbre exagerada"
+    },
+    {
+     "word": "elogio",
+     "meaning": "alabanza, comentario positivo"
+    },
+    {
+     "word": "advertencia",
+     "meaning": "aviso de un peligro"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Una tarjeta para el espacio",
+   "place": "Las caravanas",
+   "context": "Por la mañana, Doña Hortensia rellena una tarjeta de confirmación para la estación espacial. Simón la mira con un bollo en la mano.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Simón",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Esto, jovencito, se llama tarjeta QSL. Cuando dos radioaficionados contactan, se mandan una por correo para demostrar que la conversación existió de verdad. Llevo cincuenta años coleccionándolas. Tengo de Japón, de Islandia, de un barco pesquero en las Malvinas…"
+    },
+    {
+     "s": 1,
+     "text": "¿Y de la estación espacial?"
+    },
+    {
+     "s": 0,
+     "text": "Ninguna, hasta hoy. Mi marido decía que esta sería la joya de la colección. Le guardé un hueco en el álbum durante cuarenta años, entre una de Finlandia y otra de un faro en Chiloé. Me parecía de mal agüero llenarlo con otra cosa."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ahora se lo va a pegar ahí?"
+    },
+    {
+     "s": 0,
+     "text": "Ahí mismo. Pero quiero que la firmes tú también, porque la segunda pregunta fue tuya. La de si se veía nuestro camping a oscuras. ¿Te acuerdas de lo que te contestaron?"
+    },
+    {
+     "s": 1,
+     "text": "Que no se veía el camping, pero sí se veía un trozo de desierto muy negro, sin ninguna luz, y que parecía un agujero en la Tierra."
+    },
+    {
+     "s": 0,
+     "text": "Eso. Un agujero. Llevo toda la mañana pensando en esa frase. Todo el mundo intenta que se le vea desde arriba, con más luces, más edificios, más ruido. Y nosotros salimos en el mapa precisamente por apagarlo todo."
+    },
+    {
+     "s": 1,
+     "text": "Como cuando juegas al escondite y ganas por quedarte quieto."
+    },
+    {
+     "s": 0,
+     "text": "Exacto. Firma aquí. Con letra clara, que esto va a durar más que nosotros dos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para qué sirve una tarjeta QSL?",
+     "options": [
+      "Para pedir permiso para usar una frecuencia",
+      "Para confirmar un contacto",
+      "Para participar en concursos internacionales"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Hortensia no había ocupado el hueco del álbum?",
+     "infer": true,
+     "options": [
+      "Porque no encontraba una tarjeta lo bastante bonita",
+      "Por superstición y lealtad",
+      "Porque el álbum era de su marido"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué paradoja le llama la atención a Hortensia?",
+     "options": [
+      "Que el camping sea visible justamente por su oscuridad",
+      "Que los astronautas no puedan ver luces",
+      "Que un niño haga mejores preguntas que los adultos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué implica la comparación de Simón con el escondite?",
+     "infer": true,
+     "options": [
+      "Que le aburre la conversación de Hortensia",
+      "Que quiere jugar en lugar de firmar",
+      "Que ha captado la idea"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende o rebate: en una época obsesionada con la visibilidad, desaparecer puede ser la forma más llamativa de existir.",
+     "model": "La defiendo: quien no publica nada genera más curiosidad que quien lo enseña todo."
+    },
+    {
+     "q": "Cuenta la historia de un objeto que guardas para una ocasión que quizá nunca llegue.",
+     "model": "Guardo una botella de vino de mi abuelo para celebrar algo grande; llevo diez años sin abrirla."
+    },
+    {
+     "q": "Si las luces de tu ciudad se apagaran una noche, ¿qué cambiaría en la forma de relacionarse de la gente? Plantea la hipótesis.",
+     "model": "Si se apagaran, la gente saldría a los balcones y hablaría con vecinos que nunca saluda."
+    }
+   ],
+   "gaps": "Todo el mundo intenta que se le vea desde [arriba], con más [luces], más edificios, más [ruido]. Y nosotros salimos en el mapa precisamente por [apagarlo] todo.",
+   "glossary": [
+    {
+     "word": "coleccionándolas",
+     "meaning": "juntándolas como colección"
+    },
+    {
+     "word": "la joya de la colección",
+     "meaning": "la pieza más valiosa"
+    },
+    {
+     "word": "de mal agüero",
+     "meaning": "que trae mala suerte"
+    },
+    {
+     "word": "escondite",
+     "meaning": "juego en el que unos se esconden y otro los busca"
+    }
+   ]
+  },
+  {
+   "id": "alien",
+   "title": "¿Dónde está todo el mundo?",
+   "place": "La carpa azul",
+   "context": "A media mañana, Simón ayuda a su madre a desmontar la carpa. Lleva un rato callado, algo raro en él.",
+   "speakers": [
+    {
+     "name": "Simón",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Gabriela",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mamá, la señora astrofísica me dijo anoche que en el universo hay más planetas que granos de arena en todas las playas de la Tierra. Entonces, ¿por qué no ha venido nadie a visitarnos?"
+    },
+    {
+     "s": 1,
+     "text": "Uf, Simón, esa pregunta se la hizo un físico muy famoso hace setenta años y todavía no tiene respuesta. Se llama la paradoja de Fermi. Hay quien piensa que están demasiado lejos. Otros, que no les interesamos. Y otros, que nos están mirando y prefieren no molestar."
+    },
+    {
+     "s": 0,
+     "text": "¿Como hicimos anoche con Estrella, la llama? Todos nos fuimos para que tuviera a su cría tranquila."
+    },
+    {
+     "s": 1,
+     "text": "Pues mira, no se me había ocurrido, pero es una teoría tan buena como cualquiera. Unos extraterrestres educados que no aterrizan por discreción."
+    },
+    {
+     "s": 0,
+     "text": "O a lo mejor no vienen porque piensan que somos raros. Como cuando llegué a la escuela nueva y nadie me hablaba. No era que yo fuera malo; es que no me conocían."
+    },
+    {
+     "s": 1,
+     "text": "Simón, esa frase vale más que muchos libros de psicología."
+    },
+    {
+     "s": 0,
+     "text": "Entonces les voy a hacer un cartel gigante en el salar, con piedras blancas, que diga «Hola, no somos raros». Así se animan."
+    },
+    {
+     "s": 1,
+     "text": "Me encanta el plan. Aunque quizá convenga matizar el mensaje. Tal vez algo como: «Somos un poco raros, pero simpáticos»."
+    },
+    {
+     "s": 0,
+     "text": "Eso es más honesto, ¿verdad?"
+    },
+    {
+     "s": 1,
+     "text": "Bastante más. Y sirve también para el lunes, en la escuela."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué plantea la paradoja de Fermi, según Gabriela?",
+     "options": [
+      "Que la Tierra es el único planeta con agua",
+      "Muchos mundos, ningún contacto",
+      "Que los extraterrestres ya nos visitaron en el pasado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué relación establece Simón con lo ocurrido la noche anterior?",
+     "options": [
+      "Compara a los extraterrestres con los meteoros",
+      "Compara la discreción extraterrestre con la que tuvieron con la llama",
+      "Dice que la llama es un animal de otro planeta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué deja ver la reflexión de Simón sobre la escuela nueva?",
+     "infer": true,
+     "options": [
+      "Que quiere volver a su escuela anterior",
+      "Que sus compañeros lo trataron con crueldad",
+      "Que proyecta su propia experiencia"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué la última frase de Gabriela tiene doble sentido?",
+     "infer": true,
+     "options": [
+      "Porque vale también para su escuela",
+      "Porque el lunes van a hacer un cartel en clase",
+      "Porque Simón tiene que presentarse a un examen"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "Formula tu propia hipótesis sobre por qué no hemos encontrado vida extraterrestre y defiéndela frente a una objeción.",
+     "model": "Creo que la vida inteligente dura poco; alguien diría que somos la prueba de lo contrario, pero llevamos muy poco tiempo aquí."
+    },
+    {
+     "q": "Narra una situación en la que te juzgaron por ser nuevo en un lugar y cómo cambió esa percepción.",
+     "model": "En mi primer trabajo pensaban que era antipático; solo era tímido, y lo entendieron en la cena de Navidad."
+    },
+    {
+     "q": "Redacta el mensaje que dejarías en el salar para una civilización desconocida, en tono diplomático y luego en tono coloquial.",
+     "model": "Diplomático: «Les damos la bienvenida en son de paz». Coloquial: «Pasen, que hay café»."
+    }
+   ],
+   "gaps": "No era que yo fuera [malo]; es que no me [conocían]. Simón, esa frase vale más que muchos libros de [psicología]. Entonces les voy a hacer un [cartel] gigante en el salar",
+   "glossary": [
+    {
+     "word": "visitarnos",
+     "meaning": "venir a vernos"
+    },
+    {
+     "word": "paradoja",
+     "meaning": "idea que parece contradictoria"
+    },
+    {
+     "word": "por discreción",
+     "meaning": "por prudencia, para no molestar"
+    },
+    {
+     "word": "matizar",
+     "meaning": "precisar, suavizar"
+    }
+   ]
+  },
+  {
+   "id": "cita",
+   "title": "Honestidad a cuatro grados bajo cero",
+   "place": "El círculo de la fogata",
+   "context": "Bruno y Lucía comparten el desayuno junto a las brasas. Ninguno de los dos ha dormido.",
+   "speakers": [
+    {
+     "name": "Bruno",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Tengo una propuesta formal, doctora Restrepo. Un acuerdo de transparencia total para lo que sea que esto vaya a ser. Cláusula primera: nada de perfiles inventados. Cláusula segunda: si uno de los dos se aburre, lo dice antes del postre."
+    },
+    {
+     "s": 1,
+     "text": "Me parece un contrato bastante razonable para un vendedor de seguros. Aunque me preocupa una cosa. La transparencia total está sobrevalorada. Mi última pareja la practicaba con entusiasmo: me informaba de todo lo que le molestaba de mí, con fecha y hora. Era honestísimo y absolutamente insoportable."
+    },
+    {
+     "s": 0,
+     "text": "Entonces, ¿qué propones? ¿Un poco de mentira bien administrada?"
+    },
+    {
+     "s": 1,
+     "text": "Propongo distinguir entre mentir y no decirlo todo. Yo no necesito saber qué piensas de mi manera de comer malvaviscos. Necesito saber que no me vas a contar que eres astrofísico."
+    },
+    {
+     "s": 0,
+     "text": "Ahí me has dado. Bueno, reformulo. Cláusula primera: verdad en lo importante. Cláusula segunda: piedad en lo accesorio."
+    },
+    {
+     "s": 1,
+     "text": "Eso ya suena a filosofía moral. ¿De dónde lo has sacado?"
+    },
+    {
+     "s": 0,
+     "text": "De la letra pequeña de una póliza de vida. Te sorprendería la cantidad de sabiduría que hay escondida en los seguros. El problema es que nadie la lee."
+    },
+    {
+     "s": 1,
+     "text": "Pues firmo. Pero con una cláusula adicional: la próxima cita la elijo yo, y será en un sitio con calefacción."
+    },
+    {
+     "s": 0,
+     "text": "Aceptada. Aunque, por lo que me han contado del clima de tu observatorio, vamos a seguir pasando frío."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tono emplea Bruno al principio?",
+     "infer": true,
+     "options": [
+      "Un tono romántico y apasionado",
+      "Una seriedad nerviosa y sincera",
+      "Una formalidad paródica"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué objeción plantea Lucía a la transparencia total?",
+     "options": [
+      "Que es imposible en una relación moderna",
+      "Que los vendedores de seguros no la respetan",
+      "Que puede volverse cruel e insoportable"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué distinción establece Lucía?",
+     "options": [
+      "Entre mentir y callar lo que no es esencial",
+      "Entre la verdad científica y la verdad personal",
+      "Entre las mentiras grandes y las pequeñas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ironía encierra la respuesta final de Bruno?",
+     "infer": true,
+     "options": [
+      "Que no le gustan los observatorios",
+      "Que no piensa aceptar la cláusula de Lucía",
+      "Que la condición de Lucía puede no resolver el frío"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende una postura: cuando alguien critica con «franqueza» todo lo que hace su pareja, ¿practica una virtud o disfraza su egoísmo?",
+     "model": "Puede ser egoísmo: quien lo dice todo a veces solo quiere quitarse un peso de encima."
+    },
+    {
+     "q": "Redacta tres cláusulas para un acuerdo de convivencia, primero en registro jurídico y después en lenguaje cotidiano.",
+     "model": "Jurídico: «Las partes se comprometen a respetar el descanso nocturno». Cotidiano: «Nada de música después de las once»."
+    },
+    {
+     "q": "Cuenta un caso en que callar un detalle fue la decisión más respetuosa que pudiste tomar.",
+     "model": "No le conté a mi amiga que su exnovio ya salía con otra; se habría enterado en su boda de todos modos."
+    }
+   ],
+   "gaps": "Cláusula primera: verdad en lo [importante]. Cláusula segunda: [piedad] en lo [accesorio]. Eso ya suena a filosofía [moral].",
+   "glossary": [
+    {
+     "word": "malvaviscos",
+     "meaning": "dulces blandos que se tuestan al fuego"
+    },
+    {
+     "word": "sobrevalorada",
+     "meaning": "considerada mejor de lo que es"
+    },
+    {
+     "word": "ahí me has dado",
+     "meaning": "tienes razón, me has convencido"
+    },
+    {
+     "word": "accesorio",
+     "meaning": "secundario, poco importante"
+    },
+    {
+     "word": "letra pequeña",
+     "meaning": "condiciones escritas en detalle"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "El mar de arriba",
+   "place": "La carpa cocina",
+   "context": "Es la hora del desayuno. Doña Petrona, que no ha dormido, sirve el café con una expresión que Mauro no le conocía.",
+   "speakers": [
+    {
+     "name": "Mauro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Petrona",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Doña Petrona, lleva toda la mañana sin regañarme. Ni siquiera ha dicho nada de los huevos, que me han salido como suela de zapato. Me está empezando a preocupar."
+    },
+    {
+     "s": 1,
+     "text": "Es que todavía no he bajado del todo, hijo. Anoche, cuando por fin levanté la cabeza, tuve la sensación de que me caía hacia arriba. Treinta años sin mirar y, de repente, todo eso encima."
+    },
+    {
+     "s": 0,
+     "text": "A mí me pasó al revés cuando llegué de la costa. Yo crecí mirando el mar, y aquí lo primero que me impresionó fue la falta de horizonte. El cielo empieza en el suelo. Las primeras noches me mareaba."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ahora?"
+    },
+    {
+     "s": 0,
+     "text": "Ahora pienso que el cielo de aquí es el mar de ustedes. Ustedes lo tienen arriba y nosotros lo tenemos delante. Y los dos sirven para lo mismo: para sentirse pequeño sin que duela."
+    },
+    {
+     "s": 1,
+     "text": "Qué cosas dices para ser tan joven y cocinar tan mal."
+    },
+    {
+     "s": 0,
+     "text": "Una cosa no quita la otra."
+    },
+    {
+     "s": 1,
+     "text": "Pues te voy a decir algo que no le he dicho a nadie en esta cocina. Mi madre tenía razón a medias. La cocinera que mira las estrellas quema el pan, sí. Pero la que no las mira nunca se olvida de para quién lo hace. Y yo llevaba años cocinando para nadie en concreto. Esta mañana, en cambio, he hecho el café pensando en cada una de las caras de anoche."
+    },
+    {
+     "s": 0,
+     "text": "Se nota. Está más rico."
+    },
+    {
+     "s": 1,
+     "text": "Eso es la altura, no te hagas ilusiones."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué se preocupa Mauro al principio?",
+     "infer": true,
+     "options": [
+      "Porque Petrona está enferma desde anoche",
+      "Porque ha quemado el desayuno de todos",
+      "Porque ella no lo regaña"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué contraste plantea Mauro entre la costa y el desierto?",
+     "options": [
+      "Que en la costa hace más frío por la noche",
+      "Que uno tiene la inmensidad delante y el otro encima",
+      "Que el mar es más peligroso que el cielo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué corrige Petrona del dicho de su madre?",
+     "options": [
+      "Que en realidad las estrellas no distraen a nadie",
+      "Que no mirar puede vaciar de sentido el trabajo",
+      "Que el pan solo se quema si hay mucha altura"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué revela la última réplica de Petrona?",
+     "infer": true,
+     "options": [
+      "Que cree sinceramente que la altura mejora el café",
+      "Que esconde la emoción tras su humor habitual",
+      "Que quiere desanimar a Mauro como cocinero"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "Compara dos paisajes que te hagan sentir pequeño de maneras distintas y explica qué te aporta cada uno.",
+     "model": "El mar me tranquiliza porque se mueve; la montaña me impone porque no se mueve nada."
+    },
+    {
+     "q": "Defiende o critica esta idea: «Trabajar para alguien concreto cambia la calidad de lo que hacemos».",
+     "model": "La defiendo: cuando pienso en un alumno concreto, preparo la clase con mucho más cuidado."
+    },
+    {
+     "q": "Reescribe el refrán de la madre de Petrona para que refleje lo que ella ha comprendido esta noche.",
+     "model": "«Cocinera que mira las estrellas quema un pan, pero sabe para quién hornea el siguiente»."
+    }
+   ],
+   "gaps": "Ustedes lo tienen [arriba] y nosotros lo tenemos [delante]. Y los dos sirven para lo [mismo]: para sentirse [pequeño] sin que duela.",
+   "glossary": [
+    {
+     "word": "suela de zapato",
+     "meaning": "cosa dura y seca, como la parte de abajo del zapato"
+    },
+    {
+     "word": "no he bajado del todo",
+     "meaning": "todavía estoy emocionada, en otro mundo"
+    },
+    {
+     "word": "una cosa no quita la otra",
+     "meaning": "las dos cosas pueden ser verdad"
+    },
+    {
+     "word": "no te hagas ilusiones",
+     "meaning": "no esperes demasiado"
+    }
+   ]
+  },
+  {
+   "id": "llama",
+   "title": "Una cría al amanecer",
+   "place": "El corral de las llamas",
+   "context": "Son las seis y media. Celeste llega corriendo al corral. Estrella ha tenido su cría hace unos minutos. Wilmer está sentado en el suelo, sin palabras.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Wilmer",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Me lo ha dicho Rogelio por radio! ¿Cómo está? ¿Y tú, cómo estás?"
+    },
+    {
+     "s": 1,
+     "text": "Ella, perfecta. Yo, no sé. Ha esperado a que se fuera todo el mundo, a que terminara la lluvia, a que se callara la radio del señor ciego. Ha esperado al silencio absoluto, justo antes de que saliera el sol. Y entonces, en diez minutos, sin ayuda, sin un ruido. Yo solo he tenido que mirar."
+    },
+    {
+     "s": 0,
+     "text": "Que no es poco. ¿Has llamado a tu padre?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Y ha pasado una cosa muy rara. Le he contado cómo había sido, y se ha quedado callado tanto rato que pensé que se había cortado. Luego me ha dicho: «Ya no me necesitas para esto». Y yo he aprovechado para decirle lo de la escuela de veterinaria."
+    },
+    {
+     "s": 0,
+     "text": "¿Así, de golpe? ¿Con la cría todavía mojada?"
+    },
+    {
+     "s": 1,
+     "text": "Pensé que nunca iba a encontrar un momento mejor. Y tenía razón. Me ha dicho que me vaya, pero con una condición: que vuelva cada verano, y que la cría la elija él. Que el nombre se lo ponga él."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cómo la va a llamar?"
+    },
+    {
+     "s": 1,
+     "text": "Dice que Ledesma, como el cometa. Que si su hijo se va a estudiar a la capital, por lo menos en el corral tiene que quedar alguien con apellido de científico."
+    },
+    {
+     "s": 0,
+     "text": "Tu padre tiene más sentido del humor del que me habías contado."
+    },
+    {
+     "s": 1,
+     "text": "Yo tampoco lo sabía. A lo mejor también estaba esperando el silencio."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué destaca Wilmer del parto?",
+     "options": [
+      "Que necesitó la ayuda del veterinario",
+      "Que la llama esperó al momento de máxima calma",
+      "Que fue muy largo y complicado"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué significa la frase del padre «Ya no me necesitas para esto»?",
+     "infer": true,
+     "options": [
+      "Que está enfadado porque no lo llamaron antes",
+      "Que piensa vender las llamas",
+      "Que acepta, algo triste, que ha crecido"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué condiciones pone el padre?",
+     "options": [
+      "Que Wilmer estudie en la ciudad más cercana",
+      "Que Wilmer se lleve a la cría a la capital",
+      "Veranos en casa y elegir el nombre"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sugiere la última frase de Wilmer?",
+     "infer": true,
+     "options": [
+      "Que su padre había estado enfermo en silencio",
+      "Que la llama y su padre se parecen físicamente",
+      "Que su padre también necesitaba calma para expresarse"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Narra un momento en que alguien de tu familia te reconoció como adulto, aunque no lo dijera abiertamente.",
+     "model": "Mi padre me dio las llaves del taller sin decir nada; con eso me quedó claro que confiaba en mí."
+    },
+    {
+     "q": "Defiende o rebate: las conversaciones más importantes surgen cuando no se buscan.",
+     "model": "La defiendo: mis mejores charlas con mi madre fueron en el coche, sin planearlas."
+    },
+    {
+     "q": "Imagina que tuvieras que poner nombre a un animal recién nacido para homenajear a alguien: ¿qué nombre elegirías y qué mensaje transmitiría?",
+     "model": "Lo llamaría Clara, por mi abuela, para que su nombre siga sonando en casa."
+    }
+   ],
+   "gaps": "Ha esperado al [silencio] absoluto, justo antes de que [saliera] el sol. Y entonces, en diez [minutos], sin ayuda, sin un [ruido].",
+   "glossary": [
+    {
+     "word": "que no es poco",
+     "meaning": "eso tiene mérito"
+    },
+    {
+     "word": "de golpe",
+     "meaning": "de repente, sin preparación"
+    },
+    {
+     "word": "mojada",
+     "meaning": "cubierta de líquido"
+    },
+    {
+     "word": "sentido del humor",
+     "meaning": "capacidad de hacer o entender bromas"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Un año sabático",
+   "place": "Las duchas",
+   "context": "Por la mañana, Fabián espera su turno para la ducha. Rogelio arregla el calentador solar a su lado.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Le he hecho caso, Don Rogelio. No he tomado ninguna decisión a tres mil seiscientos metros. Pero tampoco he hecho el informe. He escrito otra cosa."
+    },
+    {
+     "s": 1,
+     "text": "Miedo me da preguntar."
+    },
+    {
+     "s": 0,
+     "text": "Una solicitud de año sabático. La empresa lo permite tras diez años de antigüedad, aunque nadie lo pide porque se considera un suicidio profesional. Todavía no la he enviado. La tengo en borradores, como usted guardaba su sobre de la mina."
+    },
+    {
+     "s": 1,
+     "text": "Veo que Celeste le ha contado más de la cuenta."
+    },
+    {
+     "s": 0,
+     "text": "En este camping todo el mundo cuenta más de la cuenta. Debe de ser la altura. ¿Y usted cómo lo supo? Lo de que había que dejar la mina."
+    },
+    {
+     "s": 1,
+     "text": "No lo supe. Esa es la verdad que nadie quiere oír. Me fui con más dudas que certezas, y durante tres años me pregunté cada noche si me había equivocado. Lo que me convenció no fue un momento de iluminación, sino la acumulación de mañanas como esta: arreglando un calentador, con frío y sin jefe."
+    },
+    {
+     "s": 0,
+     "text": "Eso suena bastante menos épico que en las películas."
+    },
+    {
+     "s": 1,
+     "text": "Las películas se saltan la parte aburrida, que es casi toda. Mi consejo, si quiere uno: no envíe esa solicitud por haber visto una lluvia de estrellas. Envíela si dentro de un mes, en Madrid, un martes por la tarde, sigue queriendo enviarla."
+    },
+    {
+     "s": 0,
+     "text": "El test del martes por la tarde. Me lo apunto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ha escrito Fabián en lugar del informe?",
+     "options": [
+      "Su carta de renuncia definitiva",
+      "Una queja contra su jefe de Madrid",
+      "Una solicitud de año sabático"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué nadie en su empresa pide el año sabático?",
+     "infer": true,
+     "options": [
+      "Porque se ve como un suicidio laboral",
+      "Porque no lo pagan y casi nadie puede permitírselo",
+      "Porque solo pueden pedirlo los directivos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué desmitifica Rogelio sobre los grandes cambios de vida?",
+     "options": [
+      "Que se deciden en un instante de revelación",
+      "Que siempre salen mal al principio",
+      "Que requieren mucho dinero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué propone el «test del martes por la tarde»?",
+     "infer": true,
+     "options": [
+      "Enviar la solicitud un martes para que la aprueben",
+      "Tomarse los martes libres durante un mes",
+      "Ver si el deseo sobrevive a la rutina"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Rebate la visión cinematográfica de los cambios de vida con un ejemplo real o imaginado.",
+     "model": "Mi tía dejó la abogacía para ser panadera, pero tardó cinco años y muchas dudas; nada de escenas épicas."
+    },
+    {
+     "q": "Diseña tu propio «test del martes por la tarde» para una decisión que estés pensando y explica por qué funcionaría.",
+     "model": "Esperaría tres lunes lluviosos; si sigo queriendo mudarme, es que no es un capricho de verano."
+    },
+    {
+     "q": "¿Qué haría falta para que pedir un año sabático dejara de considerarse un suicidio profesional? Plantea medidas concretas.",
+     "model": "Que los directivos dieran ejemplo y que el puesto quedara garantizado por contrato."
+    }
+   ],
+   "gaps": "Lo que me convenció no fue un momento de [iluminación], sino la [acumulación] de mañanas como esta: arreglando un [calentador], con frío y sin [jefe].",
+   "glossary": [
+    {
+     "word": "año sabático",
+     "meaning": "año de descanso en el trabajo"
+    },
+    {
+     "word": "antigüedad",
+     "meaning": "tiempo trabajando en una empresa"
+    },
+    {
+     "word": "más de la cuenta",
+     "meaning": "más de lo necesario"
+    },
+    {
+     "word": "épico",
+     "meaning": "heroico, digno de una gran historia"
+    }
+   ]
+  },
+  {
+   "id": "hamacas",
+   "title": "Seis horas seguidas",
+   "place": "Las hamacas",
+   "context": "Son las diez de la mañana. Rocío se despierta en la hamaca con el sol en la cara. Celeste le trae un café.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Rocío",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días, bella durmiente. Has caído redonda en cuanto bajamos del mirador. Ni siquiera te has quitado las botas."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué hora es? ¿Las diez? ¿He dormido seis horas seguidas? Celeste, no recuerdo la última vez que pasó esto. Creo que fue antes del embarazo. En otra vida."
+    },
+    {
+     "s": 0,
+     "text": "¿Y qué tal la sensación?"
+    },
+    {
+     "s": 1,
+     "text": "Extrañísima. Me he despertado con el corazón a mil, buscando la cuna con la mano. Durante un segundo no sabía dónde estaba ni quién era. Y luego me he acordado: estoy en una hamaca, en el desierto, y mi hijo está con su padre, perfectamente. He tardado un buen rato en permitirme volver a cerrar los ojos."
+    },
+    {
+     "s": 0,
+     "text": "Siete meses de alerta no se desactivan en una noche."
+    },
+    {
+     "s": 1,
+     "text": "No. Pero algo ha cambiado. Anoche, en el mirador, mientras caían todas esas estrellas, pensé en algo que me dio vergüenza. Pensé que me apetecía tener una vida además de ser madre. No en lugar de, sino además de. Y por primera vez no me dio culpa pensarlo."
+    },
+    {
+     "s": 0,
+     "text": "Eso no tiene nada de vergonzoso. Es de lo más sensato que he oído en todo el fin de semana."
+    },
+    {
+     "s": 1,
+     "text": "Andrés me ha escrito que Martín ha dormido otra vez toda la noche. Empiezo a sospechar que el problema del sueño en mi casa no era solo del niño."
+    },
+    {
+     "s": 0,
+     "text": "Pues ya tienes tema de conversación para el viaje de vuelta."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo reacciona Rocío al despertarse?",
+     "options": [
+      "Con una alegría inmediata y tranquila",
+      "Con enfado por no haber visto el amanecer",
+      "Con desorientación y un reflejo de alerta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué matiz es clave en el deseo que confiesa Rocío?",
+     "options": [
+      "Que quiere volver al trabajo cuanto antes",
+      "Que desea dejar al niño más tiempo con su padre",
+      "Querer más, no algo distinto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sugiere la expresión «he tardado un buen rato en permitirme»?",
+     "infer": true,
+     "options": [
+      "Que el descanso le provoca todavía cierta culpa",
+      "Que tenía demasiado frío para dormir",
+      "Que esperaba una llamada de su marido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué insinúa Rocío con su última sospecha?",
+     "infer": true,
+     "options": [
+      "Que Martín está enfermo y necesita un médico",
+      "Que su ansiedad influía",
+      "Que Andrés le está mintiendo sobre el niño"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende la diferencia entre «en lugar de» y «además de» aplicada a un rol importante de tu vida.",
+     "model": "Quiero ser profesor además de músico, no en lugar de; uno alimenta al otro."
+    },
+    {
+     "q": "Narra el despertar más desconcertante que recuerdes y lo que sentiste en esos primeros segundos.",
+     "model": "Me desperté en un tren sin saber en qué país estaba; tardé un minuto en recordar el viaje."
+    },
+    {
+     "q": "Reformula la confesión de Rocío como la escribiría en un diario íntimo y después como la contaría en una entrevista.",
+     "model": "Diario: «Hoy me he permitido querer algo para mí». Entrevista: «La maternidad no debería borrar a la persona»."
+    }
+   ],
+   "gaps": "Pensé que me [apetecía] tener una vida además de ser [madre]. No en [lugar] de, sino además de. Y por primera vez no me dio [culpa] pensarlo.",
+   "glossary": [
+    {
+     "word": "has caído redonda",
+     "meaning": "te has dormido profundamente de inmediato"
+    },
+    {
+     "word": "con el corazón a mil",
+     "meaning": "muy nerviosa, con el corazón acelerado"
+    },
+    {
+     "word": "desactivan",
+     "meaning": "apagan, eliminan"
+    },
+    {
+     "word": "de lo más sensato",
+     "meaning": "muy razonable"
+    }
+   ]
+  },
+  {
+   "id": "sendero",
+   "title": "Un programa sobre el silencio",
+   "place": "El sendero del mirador",
+   "context": "Por la mañana, Elías y Marta bajan por el sendero. Elías lleva colgada una grabadora.",
+   "speakers": [
+    {
+     "name": "Elías",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Marta",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Lo tengo todo grabado. Cuatro horas de pitidos, viento y respiraciones. El jueves lo emito en mi programa. Se va a llamar «El sonido de lo que no se ve»."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuatro horas? Nadie va a escuchar cuatro horas de pitidos, Elías."
+    },
+    {
+     "s": 0,
+     "text": "No, claro. Voy a editarlo. Pero lo interesante no son los pitidos, Marta. Escucha esto. Minuto ciento ochenta y siete. Justo en el pico. Ahí hay sesenta y cuatro personas y no habla nadie. Es el silencio más lleno que he oído en mi vida."
+    },
+    {
+     "s": 1,
+     "text": "¿Cómo puede estar lleno un silencio?"
+    },
+    {
+     "s": 0,
+     "text": "Igual que una sala de conciertos antes de la primera nota. Se oye la expectación. La ropa que roza, alguien que traga saliva, un niño que contiene la risa. Para ti, anoche era un espectáculo de luces. Para mí, era la primera vez que sesenta y cuatro desconocidos se ponían de acuerdo en algo sin decir una palabra."
+    },
+    {
+     "s": 1,
+     "text": "A veces me das envidia. Tú oyes cosas que a mí me pasan por delante sin enterarme."
+    },
+    {
+     "s": 0,
+     "text": "Y tú ves cosas que yo nunca voy a ver. Por eso te he grabado a ti también. Minuto doscientos tres. Tu voz, describiendo una bólida verde. Con un temblor que no te había oído desde que éramos niños."
+    },
+    {
+     "s": 1,
+     "text": "Ni se te ocurra emitir eso."
+    },
+    {
+     "s": 0,
+     "text": "Demasiado tarde. Es el final del programa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué parte de la grabación considera Elías más valiosa?",
+     "options": [
+      "Los pitidos de los meteoros más grandes",
+      "Las explicaciones de la astrofísica",
+      "El silencio colectivo durante el pico"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere decir Elías con «el silencio más lleno»?",
+     "infer": true,
+     "options": [
+      "Que había mucho ruido de fondo en el mirador",
+      "Que estaba cargado de expectación",
+      "Que la grabadora falló durante el pico"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué diferencia de percepción subraya Elías?",
+     "options": [
+      "Que le impresionó el acuerdo mudo",
+      "Que él disfrutó menos que su hermana",
+      "Que los meteoros suenan más fuerte de lo que se ven"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué revela la reacción final de Marta?",
+     "infer": true,
+     "options": [
+      "Que le da pudor que se oiga su emoción",
+      "Que está enfadada de verdad con su hermano",
+      "Que no le gusta cómo suena su voz grabada"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "Describe un silencio que recuerdes como «lleno» y explica qué lo llenaba.",
+     "model": "El silencio de un hospital cuando nació mi sobrino; estaba lleno de nervios y de esperanza."
+    },
+    {
+     "q": "Defiende o rebate esta afirmación: «Los sentidos que nos faltan nos obligan a prestar más atención a los que tenemos».",
+     "model": "La defiendo con matices: ayuda, pero la atención también se entrena sin perder ningún sentido."
+    },
+    {
+     "q": "Imagina el guion de los primeros treinta segundos de un programa de radio sobre esta noche, sin usar descripciones visuales.",
+     "model": "Se oye el viento; una voz susurra: «Son las tres y doce. Nadie habla. Escuchen»."
+    }
+   ],
+   "gaps": "Igual que una sala de [conciertos] antes de la primera [nota]. Se oye la [expectación]. La ropa que [roza], alguien que traga saliva, un niño que contiene la risa.",
+   "glossary": [
+    {
+     "word": "grabado",
+     "meaning": "registrado en audio"
+    },
+    {
+     "word": "emito",
+     "meaning": "transmito por radio"
+    },
+    {
+     "word": "expectación",
+     "meaning": "interés y espera de algo que va a pasar"
+    },
+    {
+     "word": "temblor",
+     "meaning": "movimiento ligero, como de miedo o emoción"
+    }
+   ]
+  },
+  {
+   "id": "cupula",
+   "title": "Quedarse por elección",
+   "place": "La cúpula del observatorio",
+   "context": "A la mañana siguiente, Joaquín acompaña a Doña Amalia hasta su coche. Ella lleva una caja de cartón bajo el brazo.",
+   "speakers": [
+    {
+     "name": "Joaquín",
+     "country": "Panamá",
+     "voice": "es-PA-RobertoNeural"
+    },
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Doña Amalia, ya lo he decidido. Rechazo lo de Hawái. Me quedo."
+    },
+    {
+     "s": 1,
+     "text": "Espero que no sea por mí. Si me dice que lo ha decidido por lo que le conté anoche, le doy una patada como a la cúpula."
+    },
+    {
+     "s": 0,
+     "text": "No del todo. Anoche, cuando los niños se turnaban para mirar por el telescopio, uno de ellos se echó a llorar. No de miedo; de asombro. Era la primera vez que veía los anillos de Saturno. Y pensé que en Hawái yo apretaría botones para que otros científicos vieran galaxias lejanísimas, pero nunca vería esa cara."
+    },
+    {
+     "s": 1,
+     "text": "Ese argumento es noble, pero peligroso. Dentro de diez años, cuando le duela la espalda y siga cobrando una miseria, puede que el niño llorando le parezca menos convincente."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo he pensado. Por eso he puesto una condición. He escrito a la universidad para proponer un programa de visitas escolares. Si no lo aprueban en un año, me voy. No quiero quedarme por culpa ni por romanticismo, sino porque haya un proyecto."
+    },
+    {
+     "s": 1,
+     "text": "Eso ya es otra cosa. Eso es elegir con los ojos abiertos."
+    },
+    {
+     "s": 0,
+     "text": "¿Y esa caja?"
+    },
+    {
+     "s": 1,
+     "text": "Mis cuadernos de 1966. Las observaciones originales del cometa. Pensaba donarlos a un museo de Madrid, donde nadie los iba a mirar. Prefiero dejarlos aquí. Para su programa de visitas. Que los niños vean que una chica de diecisiete años, con un telescopio peor que el suyo, puede poner su nombre en el cielo."
+    },
+    {
+     "s": 0,
+     "text": "No sé qué decir."
+    },
+    {
+     "s": 1,
+     "text": "Diga gracias y arregle de una vez ese motor."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hizo cambiar de opinión a Joaquín?",
+     "options": [
+      "La reacción de asombro de un niño ante Saturno",
+      "Una conversación con Rogelio sobre el sueldo",
+      "Una mala noticia sobre el puesto en Hawái"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Amalia califica su argumento de «peligroso»?",
+     "options": [
+      "Porque los niños pueden romper el telescopio",
+      "Porque la universidad podría despedirlo",
+      "Porque la emoción no dura años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué distingue la decisión final de Joaquín de una decisión impulsiva?",
+     "infer": true,
+     "options": [
+      "Que ha consultado a su familia",
+      "La sujeta a un proyecto y un plazo",
+      "Que ha negociado un sueldo mejor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué intención tiene Amalia al dejar sus cuadernos en el observatorio?",
+     "infer": true,
+     "options": [
+      "Inspirar sobre todo a las niñas con su ejemplo",
+      "Deshacerse de objetos que ya no necesita",
+      "Garantizar que el museo de Madrid no los pierda"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende la diferencia entre quedarse por culpa, por romanticismo o por un proyecto, con un ejemplo de cada caso.",
+     "model": "Por culpa, cuidar sin querer; por romanticismo, seguir en un pueblo bonito sin trabajo; por proyecto, quedarse para abrir una escuela."
+    },
+    {
+     "q": "Narra una experiencia de asombro ajeno que te hizo valorar algo que dabas por hecho.",
+     "model": "Un amigo extranjero lloró al ver nevar en mi ciudad, y desde entonces miro la nieve de otra forma."
+    },
+    {
+     "q": "Plantea qué pasaría si los documentos originales de los grandes descubrimientos estuvieran en las escuelas en vez de en los museos.",
+     "model": "Los alumnos sentirían la ciencia más cercana, aunque correríamos el riesgo de deteriorarlos."
+    }
+   ],
+   "gaps": "No quiero quedarme por [culpa] ni por [romanticismo], sino porque haya un [proyecto]. Eso ya es otra [cosa].",
+   "glossary": [
+    {
+     "word": "se turnaban",
+     "meaning": "lo hacían uno después de otro"
+    },
+    {
+     "word": "asombro",
+     "meaning": "sorpresa y admiración"
+    },
+    {
+     "word": "una miseria",
+     "meaning": "muy poco dinero"
+    },
+    {
+     "word": "donarlos",
+     "meaning": "regalarlos a una institución"
+    }
+   ]
+  },
+  {
+   "id": "mina",
+   "title": "El primer amanecer de un minero",
+   "place": "La casucha minera",
+   "context": "El sol empieza a salir detrás de los cerros. Don Ramiro y Celeste lo miran desde la puerta de la casucha.",
+   "speakers": [
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Cuarenta y un años en el turno de noche, señorita. Entraba a las diez y salía a las siete. En invierno, todavía era de noche al salir. En verano, ya era de día, pero salía tan cansado que miraba el suelo hasta llegar a casa. Esto que estamos viendo ahora no lo he visto nunca así, de frente, tranquilo."
+    },
+    {
+     "s": 1,
+     "text": "¿Ni un solo amanecer en cuarenta y un años?"
+    },
+    {
+     "s": 0,
+     "text": "Ni uno entero. Por eso anoche, cuando vi la primera estrella fugaz, pensé que ya no podía haber nada más. Y ahora resulta que la noche tenía un final que yo tampoco conocía."
+    },
+    {
+     "s": 1,
+     "text": "Me alegra que se haya quedado a verlo. Los demás se han ido a dormir."
+    },
+    {
+     "s": 0,
+     "text": "Yo ya dormiré, que tengo todo el tiempo del mundo. Esa es otra cosa que estoy aprendiendo a mi edad. Cuando uno se jubila, la gente le dice «ahora a descansar», como si el descanso fuera un premio. No lo es. Es un vacío. Llevo dos años sin saber qué hacer con las noches."
+    },
+    {
+     "s": 1,
+     "text": "Pues aquí sobran noches. Rogelio necesita a alguien que acompañe a los campistas por el sendero. Alguien que no le tenga miedo a la oscuridad y que sepa hablar durante horas para que nadie se sienta solo."
+    },
+    {
+     "s": 0,
+     "text": "¿Me está ofreciendo trabajo? ¿A mis setenta y cuatro años?"
+    },
+    {
+     "s": 1,
+     "text": "Le estoy ofreciendo turnos de noche. Pero esta vez, mirando hacia arriba."
+    },
+    {
+     "s": 0,
+     "text": "Déjeme pensarlo. Unos tres segundos. Acepto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué Ramiro nunca había contemplado un amanecer?",
+     "options": [
+      "Por el horario y el agotamiento de su trabajo",
+      "Porque vivía en un valle sin vistas",
+      "Porque prefería dormir durante el día"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué critica Ramiro de la idea habitual de la jubilación?",
+     "options": [
+      "Que no es un premio, sino un vacío",
+      "Que las pensiones son demasiado bajas",
+      "Que obliga a mudarse a la ciudad"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene de simbólica la oferta de Celeste?",
+     "infer": true,
+     "options": [
+      "Transforma su antiguo turno en algo luminoso",
+      "Le permite volver a trabajar en la mina",
+      "Le obliga a dormir de día otra vez"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué transmite el «unos tres segundos» de Ramiro?",
+     "infer": true,
+     "options": [
+      "Que duda mucho antes de aceptar",
+      "Entusiasmo expresado con humor",
+      "Que no ha entendido la propuesta"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "Rebate con argumentos la idea de que la jubilación es «un premio» y propón otra manera de entenderla.",
+     "model": "No es un premio sino una etapa nueva; debería prepararse como se prepara un cambio de trabajo."
+    },
+    {
+     "q": "Narra la primera vez que viviste algo cotidiano para otros, pero que tú nunca habías visto o hecho.",
+     "model": "A los veinticinco años monté por primera vez en bicicleta; me vi como un niño delante de todos."
+    },
+    {
+     "q": "Si pudieras transformar una rutina pesada de tu pasado en algo valioso, ¿cómo lo harías? Plantea la hipótesis.",
+     "model": "Convertiría mis horas de autobús en tiempo para aprender idiomas con audios."
+    }
+   ],
+   "gaps": "Cuando uno se [jubila], la gente le dice «ahora a descansar», como si el [descanso] fuera un [premio]. No lo es. Es un [vacío].",
+   "glossary": [
+    {
+     "word": "turno de noche",
+     "meaning": "horario de trabajo nocturno"
+    },
+    {
+     "word": "de frente",
+     "meaning": "mirando directamente"
+    },
+    {
+     "word": "se jubila",
+     "meaning": "deja de trabajar por la edad"
+    },
+    {
+     "word": "vacío",
+     "meaning": "falta de algo, sensación de nada"
+    }
+   ]
+  },
+  {
+   "id": "salar",
+   "title": "Una foto que no se vende",
+   "place": "El salar",
+   "context": "Por la mañana, Ulises le enseña a Celeste un mensaje en el móvil. Gabriela le ha contestado sobre la foto de Simón.",
+   "speakers": [
+    {
+     "name": "Ulises",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Escucha lo que me ha escrito la madre de Simón: «Publícala donde quieras, pero con una condición: que el pie de foto diga su nombre completo. Quiero que algún día él la encuentre en una revista y sepa que la noche más bonita de su vida quedó registrada»."
+    },
+    {
+     "s": 1,
+     "text": "Qué maravilla. Entonces ya está, ¿no? La mandas a la revista y cobras el medio año de alquiler."
+    },
+    {
+     "s": 0,
+     "text": "Eso pensaba hacer. Pero esta mañana, mirándola en la pantalla grande, me he dado cuenta de algo. La revista la va a recortar. Va a quitar el balde, que les parecerá feo, y va a dejar solo el reflejo y la cara. Y lo que hace que esta foto sea buena es precisamente el balde. Un cubo de plástico abollado con el universo dentro."
+    },
+    {
+     "s": 1,
+     "text": "O sea, que te has vuelto purista de repente."
+    },
+    {
+     "s": 0,
+     "text": "No. Me he vuelto honesto con lo que llevo veinte años buscando. Yo creía que buscaba el salar como un espejo perfecto. Y resulta que buscaba lo contrario: lo imperfecto que, aun así, refleja todo."
+    },
+    {
+     "s": 1,
+     "text": "Eso suena a título de exposición."
+    },
+    {
+     "s": 0,
+     "text": "Es que lo va a ser. He escrito a una galería de Antigua. Una exposición pequeña, con veinte fotos: dieciocho de estos años de espera, una del salar seco y, al final, la del balde. Con el nombre completo de Simón."
+    },
+    {
+     "s": 1,
+     "text": "Ganarás menos que con la revista."
+    },
+    {
+     "s": 0,
+     "text": "Bastante menos. Pero, por primera vez en veinte años, me apetece que la gente vea lo que he hecho y no solo lo que he conseguido."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué condición pone Gabriela para publicar la foto?",
+     "options": [
+      "Que aparezca el nombre completo de Simón",
+      "Que le paguen la mitad del dinero",
+      "Que la foto no salga en internet"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Ulises desconfía de la revista?",
+     "options": [
+      "Porque quitaría el balde",
+      "Porque paga demasiado tarde",
+      "Porque no respeta los derechos de autor"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué descubre Ulises sobre su búsqueda de veinte años?",
+     "infer": true,
+     "options": [
+      "Que lo que buscaba era la belleza de lo imperfecto",
+      "Que el salar nunca fue su verdadero interés",
+      "Que debería haber cambiado de profesión"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué implica la distinción entre «lo que he hecho» y «lo que he conseguido»?",
+     "infer": true,
+     "options": [
+      "Que se arrepiente de no haber ganado premios",
+      "Que piensa dejar la fotografía",
+      "Que prefiere el proceso"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende o rebate: lo imperfecto suele contar mejor una historia que lo perfecto.",
+     "model": "La defiendo: una mesa con marcas de vasos cuenta más que una mesa recién comprada."
+    },
+    {
+     "q": "Narra una búsqueda personal que terminó revelándote que buscabas otra cosa.",
+     "model": "Buscaba el trabajo ideal y acabé descubriendo que lo que quería era tiempo libre."
+    },
+    {
+     "q": "Redacta el texto de presentación de la exposición de Ulises en registro de crítico de arte.",
+     "model": "La muestra explora la tensión entre la espera y el azar, culminando en un humilde balde que contiene el cosmos."
+    }
+   ],
+   "gaps": "Yo creía que buscaba el salar como un [espejo] perfecto. Y resulta que buscaba lo [contrario]: lo [imperfecto] que, aun así, [refleja] todo.",
+   "glossary": [
+    {
+     "word": "pie de foto",
+     "meaning": "texto debajo de una fotografía"
+    },
+    {
+     "word": "abollado",
+     "meaning": "con golpes que deforman"
+    },
+    {
+     "word": "purista",
+     "meaning": "que exige pureza absoluta"
+    },
+    {
+     "word": "galería",
+     "meaning": "lugar donde se exponen y venden obras de arte"
+    }
+   ]
+  },
+  {
+   "id": "astrologa",
+   "title": "Volver a la facultad",
+   "place": "La orilla del salar",
+   "context": "Después de la charla en el mirador, Madame Zulema y Lucía desayunan juntas. Zulema lleva el turbante en la mano.",
+   "speakers": [
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Zulema",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Zulema, tengo que reconocerlo: la gente se acordaba más de tu parte que de la mía. Un señor me ha dicho que por fin entiende para qué sirven los deseos. Nadie me ha dicho que por fin entiende la ionización atmosférica."
+    },
+    {
+     "s": 1,
+     "text": "No te lo tomes a mal. La ionización no hace llorar a nadie. Yo, en cambio, toco una fibra que tú, con tus gráficas, no tocas."
+    },
+    {
+     "s": 0,
+     "text": "Te propongo algo serio. En mi universidad hay un programa para personas que dejaron la carrera de ciencias. Podrías terminar física. Con tres años aprobados, te faltarían dos."
+    },
+    {
+     "s": 1,
+     "text": "¿A estas alturas? Tengo cuarenta y cinco años y una clientela fiel que me paga por decirle que Mercurio retrógrado tiene la culpa de sus divorcios."
+    },
+    {
+     "s": 0,
+     "text": "Precisamente. Imagínate a alguien que entienda la física y que, además, sepa cómo piensa la gente que no la entiende. Eso es lo que más falta en divulgación científica. Sabemos explicar, pero no sabemos seducir."
+    },
+    {
+     "s": 1,
+     "text": "Lo que me estás ofreciendo es convertirme en una traidora de los dos bandos. Los astrólogos me van a odiar por renegar de ellos y los físicos me van a mirar por encima del hombro."
+    },
+    {
+     "s": 0,
+     "text": "O vas a ser la única persona capaz de hablar con ambos."
+    },
+    {
+     "s": 1,
+     "text": "Eso es lo que diría un horóscopo, querida. «Esta semana se te abrirán nuevas puertas»."
+    },
+    {
+     "s": 0,
+     "text": "¿Y se abren?"
+    },
+    {
+     "s": 1,
+     "text": "Mándame el formulario. Pero no se lo cuentes a mis clientes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué reconoce Lucía sobre la charla?",
+     "options": [
+      "Que su explicación fue demasiado breve",
+      "Que la parte de Zulema caló más en el público",
+      "Que el público no prestó atención a ninguna de las dos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ventaja ve Lucía en que Zulema termine física?",
+     "infer": true,
+     "options": [
+      "Que uniría rigor y conexión",
+      "Que podría trabajar en su laboratorio",
+      "Que ganaría más dinero que con los horóscopos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué teme Zulema de su posible regreso?",
+     "options": [
+      "No poder aprobar los exámenes por su edad",
+      "Quedar rechazada tanto por astrólogos como por científicos",
+      "Perder el dinero que ya ha invertido"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tiene de irónico el final de la conversación?",
+     "infer": true,
+     "options": [
+      "Que Lucía también cree en los horóscopos",
+      "Que acepta como si fuera un horóscopo",
+      "Que Zulema rechaza la propuesta pese a todo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende una tesis: la divulgación científica necesita menos datos y más capacidad de seducir. Anticipa una objeción.",
+     "model": "La defiendo: sin emoción nadie escucha; me objetarían que se pierde rigor, pero se puede seducir con datos exactos."
+    },
+    {
+     "q": "Narra la historia de alguien que retomó unos estudios abandonados en una etapa tardía de su vida.",
+     "model": "Mi vecino terminó Historia a los sesenta; decía que por fin estudiaba por placer y no por obligación."
+    },
+    {
+     "q": "Reescribe el anuncio del programa universitario en el estilo de un horóscopo.",
+     "model": "«Si dejaste los números a medias, Saturno te invita a terminarlos: inscripciones abiertas hasta junio»."
+    }
+   ],
+   "gaps": "Sabemos [explicar], pero no sabemos [seducir]. Lo que me estás ofreciendo es convertirme en una traidora de los dos bandos. Los astrólogos me van a [odiar] por renegar de ellos y los físicos me van a mirar por encima del [hombro].",
+   "glossary": [
+    {
+     "word": "toco una fibra",
+     "meaning": "emociono profundamente"
+    },
+    {
+     "word": "a estas alturas",
+     "meaning": "en este momento tan avanzado"
+    },
+    {
+     "word": "renegar de",
+     "meaning": "rechazar algo que antes defendías"
+    },
+    {
+     "word": "mirar por encima del hombro",
+     "meaning": "tratar con desprecio"
+    }
+   ]
+  },
+  {
+   "id": "dron",
+   "title": "Una hora sin grabar",
+   "place": "Las rocas",
+   "context": "Kiara y Dante bajan del mirador. Kiara ha pasado una hora entera sin cámara ni teléfono.",
+   "speakers": [
+    {
+     "name": "Dante",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    },
+    {
+     "name": "Kiara",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Y bien? ¿Ha sido tan insoportable como temías?"
+    },
+    {
+     "s": 1,
+     "text": "Los primeros veinte minutos, horrible. Me picaban las manos. Cada vez que caía una estrella fugaz grande, pensaba automáticamente en el encuadre, en el texto, en la música que le pondría. Era como tener a un editor viviendo dentro de la cabeza."
+    },
+    {
+     "s": 0,
+     "text": "¿Y después?"
+    },
+    {
+     "s": 1,
+     "text": "Después pasó algo que no sé explicar. Dejé de narrarme. Hubo un momento, cuando cayó aquella bólida verde, en que no pensé «qué vídeo más bueno». Pensé «qué bonito». A secas. Y me di cuenta de que hacía años que no pensaba nada a secas. Todo lo que vivo lo vivo ya pensando en cómo contarlo."
+    },
+    {
+     "s": 0,
+     "text": "Bienvenida al club. A mí me pasa con los encuadres desde los dieciséis años."
+    },
+    {
+     "s": 1,
+     "text": "Lo que me da miedo es que mi trabajo consiste justamente en eso: convertir cada experiencia en contenido. Si dejo de hacerlo, me quedo sin trabajo. Si sigo, me quedo sin experiencias."
+    },
+    {
+     "s": 0,
+     "text": "O a lo mejor hay un término medio. Vives primero y cuentas después. Lo que se pierde en inmediatez se gana en verdad."
+    },
+    {
+     "s": 1,
+     "text": "¿Y eso lo has leído en algún libro de autoayuda?"
+    },
+    {
+     "s": 0,
+     "text": "No. Lo dice mamá desde que teníamos móvil. Nunca le hicimos caso."
+    },
+    {
+     "s": 1,
+     "text": "Pues no se lo digas, que se va a poner insoportable de orgullo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué sentía Kiara al principio de la hora sin cámara?",
+     "options": [
+      "Un alivio inmediato y profundo",
+      "Una necesidad casi física de grabar",
+      "Aburrimiento porque no pasaba nada"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué significa para Kiara pensar algo «a secas»?",
+     "infer": true,
+     "options": [
+      "Vivirlo sin traducirlo mentalmente a contenido",
+      "Pensarlo sin emoción, de forma fría",
+      "Pensarlo en voz alta para su hermano"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dilema describe Kiara?",
+     "options": [
+      "Elegir entre su hermano y su patrocinador",
+      "Elegir entre viajar y quedarse en casa",
+      "Elegir entre ganarse la vida y vivirla"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué revela la referencia final a la madre?",
+     "infer": true,
+     "options": [
+      "Que ignoraron un buen consejo",
+      "Que la madre trabaja también en redes sociales",
+      "Que los hermanos están enfadados con ella"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende o rebate: «Lo que se pierde en inmediatez se gana en verdad».",
+     "model": "La defiendo: si cuento un viaje una semana después, cuento lo que importó y no lo que impresionó."
+    },
+    {
+     "q": "Narra un momento en que viviste algo «a secas», sin pensar en contarlo ni fotografiarlo.",
+     "model": "Una tarde de tormenta en casa de mis abuelos; nadie sacó el móvil y aún la recuerdo entera."
+    },
+    {
+     "q": "Imagina que las redes sociales impusieran un retraso obligatorio de una semana en las publicaciones: ¿qué cambiaría? Argumenta.",
+     "model": "Habría menos reacciones impulsivas y más reflexión, aunque se perdería la sensación de compartir en directo."
+    }
+   ],
+   "gaps": "Dejé de [narrarme]. Hubo un momento, cuando cayó aquella [bólida] verde, en que no pensé «qué vídeo más [bueno]». Pensé «qué bonito». A [secas].",
+   "glossary": [
+    {
+     "word": "me picaban las manos",
+     "meaning": "tenía muchas ganas de hacer algo"
+    },
+    {
+     "word": "a secas",
+     "meaning": "sin nada más, simplemente"
+    },
+    {
+     "word": "término medio",
+     "meaning": "solución intermedia"
+    },
+    {
+     "word": "autoayuda",
+     "meaning": "libros para mejorar uno mismo"
+    }
+   ]
+  },
+  {
+   "id": "apagon",
+   "title": "Cuando vuelvan a encenderse",
+   "place": "La caseta del generador",
+   "context": "Amanece. A lo lejos, los reflectores de la mina vuelven a encenderse. Teresa se prepara para volver. Rogelio la acompaña hasta la camioneta.",
+   "speakers": [
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ya están encendidos otra vez. Mi segundo ha cumplido su palabra: ni un minuto más de lo acordado. Es un hombre de reglas. Me recuerda a mí hace diez años."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ahora? ¿Ya no eres una mujer de reglas?"
+    },
+    {
+     "s": 0,
+     "text": "Esta noche me he saltado unas cuantas. He apagado los reflectores sin permiso, he dejado la mina a cargo de otro y he subido a un mirador con mi exmarido a las tres de la mañana. Si mi jefe se entera, voy a tener que ser muy creativa con el informe."
+    },
+    {
+     "s": 1,
+     "text": "Pon que fue una prueba técnica. Es lo que dijiste por radio."
+    },
+    {
+     "s": 0,
+     "text": "Fue una prueba, sí. Pero no técnica. Quería comprobar si todavía era capaz de hacer algo porque sí, sin justificarlo con un cálculo de costes. Hace años que todo lo que hago tiene una hoja de cálculo detrás."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?"
+    },
+    {
+     "s": 0,
+     "text": "Y resulta que sí. Que todavía me sale. No te hagas ilusiones, Rogelio, no vuelvo. Pero tal vez podamos dejar de hablarnos solo por radio y a gritos."
+    },
+    {
+     "s": 1,
+     "text": "Me conformo. Aunque te propongo algo: el próximo agosto, en las Perseidas, apagas los reflectores media hora. Oficialmente. Con papeles. Como un acuerdo entre la mina y el camping."
+    },
+    {
+     "s": 0,
+     "text": "¿Un convenio de oscuridad? Eso no existe."
+    },
+    {
+     "s": 1,
+     "text": "Todavía no. Tú eres la gerenta. Invéntalo."
+    },
+    {
+     "s": 0,
+     "text": "Lo pensaré. Pero que conste en acta que la idea es tuya, por si sale mal."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ha cambiado en Teresa, según ella misma?",
+     "options": [
+      "Ha decidido dejar la mina",
+      "Ha vuelto a enamorarse de Rogelio",
+      "Se ha permitido romper sus propias normas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quería «probar» Teresa realmente?",
+     "infer": true,
+     "options": [
+      "Si los reflectores podían apagarse sin peligro",
+      "Si aún podía actuar porque sí",
+      "Si su segundo era de fiar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Rogelio?",
+     "options": [
+      "Que Teresa vuelva a vivir en el camping",
+      "Que cierren la mina en agosto",
+      "Un acuerdo formal para apagar las luces en ocasiones"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué revela la última frase de Teresa?",
+     "infer": true,
+     "options": [
+      "Que piensa rechazar la propuesta",
+      "Que acepta con humor y cierta cautela burocrática",
+      "Que quiere atribuirse el mérito de la idea"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende o critica: «Hacer algo porque sí, sin justificarlo, es un lujo que los adultos olvidamos».",
+     "model": "La defiendo: casi todo lo que hago tiene un objetivo, y por eso los paseos sin rumbo me sientan tan bien."
+    },
+    {
+     "q": "Redacta la primera cláusula de un «convenio de oscuridad» entre una empresa y una comunidad, en registro administrativo.",
+     "model": "La empresa se compromete a reducir su iluminación exterior durante los eventos astronómicos acordados."
+    },
+    {
+     "q": "Narra una situación en que te saltaste una norma propia y descubriste algo de ti.",
+     "model": "Siempre me acuesto a las once, pero una noche me quedé hablando hasta el amanecer y así supe que me encanta improvisar."
+    }
+   ],
+   "gaps": "Quería [comprobar] si todavía era capaz de hacer algo porque [sí], sin justificarlo con un cálculo de [costes]. Hace años que todo lo que hago tiene una hoja de [cálculo] detrás.",
+   "glossary": [
+    {
+     "word": "me he saltado",
+     "meaning": "no he respetado"
+    },
+    {
+     "word": "me conformo",
+     "meaning": "acepto lo que hay"
+    },
+    {
+     "word": "convenio",
+     "meaning": "acuerdo oficial"
+    },
+    {
+     "word": "que conste en acta",
+     "meaning": "que quede registrado oficialmente"
+    }
+   ]
+  },
+  {
+   "id": "mirador",
+   "title": "La última línea de la libreta",
+   "place": "El mirador",
+   "context": "Ya es de día. Casi todos han bajado. Celeste, Amalia y Ramiro siguen en el mirador. Celeste escribe la última línea de la libreta.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Me falta la última línea y no sé qué poner. Llevo diez minutos con el lápiz en el aire."
+    },
+    {
+     "s": 1,
+     "text": "Las últimas líneas son siempre las peores. En 1966 tuve que escribir el informe del descubrimiento y tardé una semana en terminar la última frase. Al final puse algo tan aburrido que nadie lo recuerda."
+    },
+    {
+     "s": 2,
+     "text": "Ponga lo que pasó y ya está. En la mina, el capataz nos decía que los informes tenían que ser como las vigas: cortos, rectos y que aguantaran peso."
+    },
+    {
+     "s": 0,
+     "text": "¿Lo que pasó? Pasó que sesenta y cuatro personas subieron a un mirador. Que un minero vio su primera estrella fugaz, que una astrónoma vio la lluvia que se había perdido hace sesenta años, que una llama esperó al silencio para ser madre. Y que una guía que le tenía miedo a la oscuridad apagó la linterna."
+    },
+    {
+     "s": 1,
+     "text": "Eso es demasiado largo para una línea."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Por eso no sé qué poner."
+    },
+    {
+     "s": 2,
+     "text": "Entonces ponga solo lo último. Lo de la linterna. Lo demás ya está en las otras páginas."
+    },
+    {
+     "s": 1,
+     "text": "Tiene razón Ramiro. Y escríbalo en primera persona. Las libretas que valen la pena siempre acaban hablando de quien las escribe, aunque empiecen hablando de los demás."
+    },
+    {
+     "s": 0,
+     "text": "Está bien. «A las tres y doce apagué la linterna, y la oscuridad estaba llena de gente»."
+    },
+    {
+     "s": 2,
+     "text": "Corto, recto y aguanta peso."
+    },
+    {
+     "s": 1,
+     "text": "Mucho mejor que mi informe de 1966. Ahora, si me disculpan, me voy a dormir. Esta vez, con la conciencia tranquila."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué problema tiene Celeste?",
+     "options": [
+      "No encuentra cómo cerrar la libreta",
+      "Se ha quedado sin páginas en la libreta",
+      "Ha olvidado lo que pasó durante la noche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué consejo da Ramiro con la imagen de las vigas?",
+     "options": [
+      "Que la libreta debe ser resistente al frío",
+      "Que el texto sea breve, directo y sólido",
+      "Que se escriba con letra grande y clara"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué sugiere Amalia sobre las buenas libretas?",
+     "infer": true,
+     "options": [
+      "Que terminan revelando a quien las escribe",
+      "Que deben hablar solo de los demás",
+      "Que es mejor escribirlas en tercera persona"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Amalia se va a dormir «con la conciencia tranquila»?",
+     "infer": true,
+     "options": [
+      "Porque ha terminado de escribir su informe",
+      "Porque ha hecho las paces con Ramiro",
+      "Porque por fin vio la lluvia"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Escribe tu propia última línea para una noche importante de tu vida y justifica por qué elegiste esas palabras.",
+     "model": "«Llegamos tarde a todo y aun así llegamos juntos»; resume una boda en la que todo salió mal y fue perfecta."
+    },
+    {
+     "q": "Defiende o rebate: los mejores textos sobre los demás acaban siempre hablando de quien los escribe.",
+     "model": "La defiendo: hasta en una crónica neutra se nota qué le llamó la atención al autor."
+    },
+    {
+     "q": "Reescribe la frase final de Celeste en el registro de un informe científico, como lo habría hecho Amalia en 1966.",
+     "model": "«A las 03:12 se suprimió la fuente de luz artificial; se constató una densidad humana inusual en condiciones de oscuridad total»."
+    }
+   ],
+   "gaps": "Las libretas que valen la [pena] siempre acaban hablando de quien las [escribe], aunque empiecen hablando de los [demás]. Está [bien].",
+   "glossary": [
+    {
+     "word": "con el lápiz en el aire",
+     "meaning": "sin saber qué escribir"
+    },
+    {
+     "word": "vigas",
+     "meaning": "piezas largas que sostienen un techo"
+    },
+    {
+     "word": "aguantaran peso",
+     "meaning": "soportaran una carga"
+    },
+    {
+     "word": "con la conciencia tranquila",
+     "meaning": "sin culpa ni preocupación"
+    }
+   ]
+  }
+ ]
+}

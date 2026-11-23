@@ -1,0 +1,2017 @@
+{
+ "game": "estrellas",
+ "level": "A1",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "Un favor para la guía",
+   "place": "La entrada del camping",
+   "context": "Celeste, la guía de astronomía, recibe a los campistas. Rogelio, el dueño, tiene una lista.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Celeste, hay sesenta y cuatro personas en la lista. Todas quieren ver la lluvia de estrellas."
+    },
+    {
+     "s": 0,
+     "text": "Perfecto. El mejor momento es a las tres y doce. Tenemos que estar todos en el mirador."
+    },
+    {
+     "s": 1,
+     "text": "El mirador está a veinte minutos a pie. Y a las once apago el generador."
+    },
+    {
+     "s": 0,
+     "text": "¿A las once? ¿Tan temprano?"
+    },
+    {
+     "s": 1,
+     "text": "Sí. Sin luces se ven más estrellas. ¿Por qué pones esa cara?"
+    },
+    {
+     "s": 0,
+     "text": "Por nada. Me gusta mucho la oscuridad. Mucho, mucho."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas personas hay en la lista?",
+     "options": [
+      "Sesenta y cuatro",
+      "Cuarenta y seis",
+      "Setenta y cuatro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuál es el mejor momento para ver la lluvia?",
+     "options": [
+      "Las tres y doce",
+      "Las once en punto",
+      "Las doce y tres de la noche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto tiempo se tarda a pie hasta el mirador?",
+     "options": [
+      "Veinte minutos",
+      "Una hora y media",
+      "Diez minutos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sugiere la última frase de Celeste?",
+     "options": [
+      "Que no dice la verdad",
+      "Que la oscuridad le encanta",
+      "Que quiere dormir temprano"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces cuando tienes miedo y no quieres decirlo?",
+     "model": "Hablo mucho y me río."
+    },
+    {
+     "q": "¿Cuánto tiempo caminas para llegar a tu trabajo o tu escuela?",
+     "model": "Camino quince minutos."
+    },
+    {
+     "q": "¿Qué espectáculo de la naturaleza quieres ver un día?",
+     "model": "Quiero ver una aurora boreal."
+    }
+   ],
+   "gaps": "Sí. Sin [luces] se ven más [estrellas]. ¿Por qué [pones] esa [cara]?",
+   "glossary": [
+    {
+     "word": "lista",
+     "meaning": "papel con nombres"
+    },
+    {
+     "word": "generador",
+     "meaning": "máquina que da electricidad"
+    },
+    {
+     "word": "oscuridad",
+     "meaning": "cuando no hay luz"
+    },
+    {
+     "word": "a pie",
+     "meaning": "caminando"
+    }
+   ]
+  },
+  {
+   "id": "lentes",
+   "title": "Lentes para el sol, sin sol",
+   "place": "El estacionamiento",
+   "context": "Don Cosme tiene una mesa con cajas en el estacionamiento. Celeste se acerca.",
+   "speakers": [
+    {
+     "name": "Cosme",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenas noches, señorita. ¿Quiere unos lentes? Tengo trescientos, todos nuevos."
+    },
+    {
+     "s": 1,
+     "text": "Don Cosme, son lentes de eclipse. Sirven para mirar el sol."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Los compré para el eclipse de 2024, pero ese día llovió."
+    },
+    {
+     "s": 1,
+     "text": "Y esta noche es una lluvia de estrellas. Para eso no hacen falta lentes."
+    },
+    {
+     "s": 0,
+     "text": "Entonces, ¿qué hago con trescientos lentes?"
+    },
+    {
+     "s": 1,
+     "text": "Venda café. A las tres de la mañana hace mucho frío."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para qué sirven los lentes de Cosme?",
+     "options": [
+      "Para mirar estrellas",
+      "Para mirar el sol",
+      "Para leer de noche en la carpa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuándo compró Cosme los lentes?",
+     "options": [
+      "Esta mañana",
+      "Para el eclipse de 2024",
+      "Para la lluvia de 1966"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó el día del eclipse?",
+     "options": [
+      "Llovió",
+      "Hizo mucho sol",
+      "Cosme se durmió"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le aconseja Celeste a Cosme?",
+     "options": [
+      "Que regale los lentes",
+      "Que venda café",
+      "Que vuelva a casa temprano"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué compraste una vez y nunca usaste?",
+     "model": "Compré una bicicleta y nunca la usé."
+    },
+    {
+     "q": "¿Qué bebida caliente tomas cuando hace mucho frío?",
+     "model": "Tomo chocolate caliente."
+    },
+    {
+     "q": "¿Qué compra inútil tienes guardada en un armario?",
+     "model": "Tengo una máquina de pan sin usar."
+    }
+   ],
+   "gaps": "Ya lo sé. Los [compré] para el [eclipse] de 2024, pero ese [día] [llovió].",
+   "glossary": [
+    {
+     "word": "señorita",
+     "meaning": "forma amable de hablar a una mujer joven"
+    },
+    {
+     "word": "sirven",
+     "meaning": "son útiles"
+    },
+    {
+     "word": "hacen falta",
+     "meaning": "son necesarios"
+    }
+   ]
+  },
+  {
+   "id": "urna",
+   "title": "Novecientos kilómetros",
+   "place": "Las carpas",
+   "context": "Nora e Iván montan su carpa. Vinieron a esparcir las cenizas del padre de Nora.",
+   "speakers": [
+    {
+     "name": "Nora",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Iván, saca la urna, por favor. Papá quería estar aquí esta noche."
+    },
+    {
+     "s": 1,
+     "text": "Claro. Está en la caja, al lado de la carpa."
+    },
+    {
+     "s": 0,
+     "text": "En la caja hay platos, una linterna y tu almohada."
+    },
+    {
+     "s": 1,
+     "text": "Ay, Nora. La urna está en la cocina de casa, al lado del azúcar."
+    },
+    {
+     "s": 0,
+     "text": "¿En Mendoza? ¡Está a novecientos kilómetros!"
+    },
+    {
+     "s": 1,
+     "text": "Lo siento mucho. Pero tu padre siempre llegaba tarde a todo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quería el padre de Nora?",
+     "options": [
+      "Estar en el desierto esta noche",
+      "Volver a Mendoza",
+      "Ver el mar desde un barco"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay en la caja?",
+     "options": [
+      "Platos, una linterna y una almohada",
+      "La urna y el azúcar",
+      "Comida para la cena del camping"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está la urna?",
+     "options": [
+      "En la cocina de su casa",
+      "En el coche, debajo del asiento",
+      "En la carpa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Iván habla de llegar tarde?",
+     "options": [
+      "Porque el viaje es largo",
+      "Para hacer una broma sobre el padre",
+      "Porque son las once"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué amigo o pariente tuyo es famoso por su impuntualidad?",
+     "model": "Mi hermano es famoso por su impuntualidad."
+    },
+    {
+     "q": "¿Qué cosa metes primero en la maleta?",
+     "model": "Meto primero los zapatos."
+    },
+    {
+     "q": "¿Dónde guardas el azúcar y el café en tu cocina?",
+     "model": "Los guardo en un armario pequeño."
+    }
+   ],
+   "gaps": "Ay, Nora. La [urna] está en la [cocina] de casa, al [lado] del [azúcar].",
+   "glossary": [
+    {
+     "word": "urna",
+     "meaning": "recipiente para las cenizas"
+    },
+    {
+     "word": "llegaba tarde",
+     "meaning": "no estaba a la hora"
+    },
+    {
+     "word": "almohada",
+     "meaning": "cojín para la cabeza en la cama"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Seis minutos con el espacio",
+   "place": "Las caravanas",
+   "context": "Doña Hortensia prepara su radio en la caravana. Celeste le lleva un té.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Hortensia, aquí tiene su té. ¿Qué está haciendo con todos esos cables?"
+    },
+    {
+     "s": 0,
+     "text": "Gracias, hija. Hoy quiero hablar con la estación espacial. Pasa a la una y cuarenta."
+    },
+    {
+     "s": 1,
+     "text": "¿Y se puede hablar con los astronautas por radio?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, pero solo seis minutos. Lo intento desde hace once años."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué les va a decir?"
+    },
+    {
+     "s": 0,
+     "text": "Que tengo ochenta y un años y que esta noche el cielo es el más bonito del mundo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le lleva Celeste a Hortensia?",
+     "options": [
+      "Un té",
+      "Un café con leche",
+      "Una manta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora pasa la estación espacial?",
+     "options": [
+      "A las tres y doce",
+      "A la una y cuarenta",
+      "A las once en punto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Desde cuándo lo intenta Hortensia?",
+     "options": [
+      "Desde hace once años",
+      "Desde esta mañana",
+      "Desde 1966, cuando era joven"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere decirles a los astronautas?",
+     "options": [
+      "Que tiene frío en la caravana",
+      "Que quiere viajar al espacio",
+      "Que el cielo de esta noche es precioso"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué habilidad intentas aprender sin éxito?",
+     "model": "Intento aprender a tocar la guitarra."
+    },
+    {
+     "q": "¿Qué le preguntas a un astronauta en seis minutos?",
+     "model": "Le pregunto qué come en el espacio."
+    },
+    {
+     "q": "¿Qué persona mayor de tu entorno usa muy bien la tecnología?",
+     "model": "Mi abuela usa muy bien la tableta."
+    }
+   ],
+   "gaps": "Sí, pero solo [seis] minutos. Lo [intento] desde hace [once] [años].",
+   "glossary": [
+    {
+     "word": "cables",
+     "meaning": "hilos para la electricidad"
+    },
+    {
+     "word": "astronautas",
+     "meaning": "personas que viajan al espacio"
+    },
+    {
+     "word": "lo intento",
+     "meaning": "trato de hacerlo"
+    }
+   ]
+  },
+  {
+   "id": "alien",
+   "title": "El cartel de bienvenida",
+   "place": "La carpa azul",
+   "context": "Simón, de nueve años, pinta un cartel. Su madre, Gabriela, quiere dormir.",
+   "speakers": [
+    {
+     "name": "Simón",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Gabriela",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Simón, ya son las once. ¿Qué pintas?"
+    },
+    {
+     "s": 0,
+     "text": "Un cartel para los extraterrestres. Dice «Bienvenidos a la Tierra». Y tiene un dibujo de nuestra casa."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué nuestra casa?"
+    },
+    {
+     "s": 0,
+     "text": "Porque si vienen, tienen que dormir en algún lugar. Tenemos un sofá."
+    },
+    {
+     "s": 1,
+     "text": "Hijo, en el sofá duerme el perro."
+    },
+    {
+     "s": 0,
+     "text": "El perro puede dormir con un extraterrestre. Es muy simpático."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es?",
+     "options": [
+      "Las nueve",
+      "Las once",
+      "Las tres y doce de la mañana"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dice el cartel?",
+     "options": [
+      "«Hola, amigos del espacio»",
+      "«Prohibido el paso»",
+      "«Bienvenidos a la Tierra»"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde duermen los extraterrestres, según Simón?",
+     "options": [
+      "En la carpa azul",
+      "En el coche",
+      "En el sofá de su casa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién duerme en el sofá normalmente?",
+     "options": [
+      "Gabriela",
+      "Simón",
+      "El perro"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mensaje escribes en un cartel para un visitante?",
+     "model": "Escribo «Bienvenido a mi casa»."
+    },
+    {
+     "q": "¿Dónde duermen las visitas en tu casa?",
+     "model": "Duermen en el sofá de la sala."
+    },
+    {
+     "q": "¿Qué dibujabas cuando tenías nueve años?",
+     "model": "Dibujaba coches y casas."
+    }
+   ],
+   "gaps": "Porque si [vienen], tienen que [dormir] en algún [lugar]. Tenemos un [sofá].",
+   "glossary": [
+    {
+     "word": "cartel",
+     "meaning": "papel grande con un mensaje"
+    },
+    {
+     "word": "bienvenidos",
+     "meaning": "palabra para recibir a alguien"
+    },
+    {
+     "word": "simpático",
+     "meaning": "amable, agradable"
+    }
+   ]
+  },
+  {
+   "id": "cita",
+   "title": "Una estrella que se mueve",
+   "place": "El círculo de la fogata",
+   "context": "Bruno y Lucía tienen su primera cita junto a la fogata. Se conocieron en una aplicación.",
+   "speakers": [
+    {
+     "name": "Bruno",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "En tu perfil dice que eres astrofísico. ¿Dónde trabajas?"
+    },
+    {
+     "s": 0,
+     "text": "En… una universidad. Muy grande. Con muchos telescopios."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué casualidad! Yo también soy astrofísica. ¿Qué estudias?"
+    },
+    {
+     "s": 0,
+     "text": "Estrellas. Por ejemplo, esa. La que se mueve."
+    },
+    {
+     "s": 1,
+     "text": "Bruno, las estrellas no se mueven así. Eso es un satélite."
+    },
+    {
+     "s": 0,
+     "text": "Bueno. La verdad es que vendo seguros."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde se conocieron Bruno y Lucía?",
+     "options": [
+      "En el camping",
+      "En una aplicación",
+      "En la universidad, hace años"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué profesión tiene Lucía?",
+     "options": [
+      "Guía de astronomía",
+      "Astrofísica",
+      "Vendedora de seguros"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué es la «estrella» que se mueve?",
+     "options": [
+      "Un satélite",
+      "Un avión pequeño",
+      "El dron de Kiara"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué trabajo tiene Bruno de verdad?",
+     "options": [
+      "Vende seguros",
+      "Trabaja en una universidad",
+      "Repara telescopios en su casa"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué información pones en un perfil de internet?",
+     "model": "Pongo mi edad y mis aficiones."
+    },
+    {
+     "q": "¿Qué mentira pequeña dice la gente en una primera cita?",
+     "model": "Dicen que les gusta cocinar."
+    },
+    {
+     "q": "¿Qué te parece más difícil: hablar de tu trabajo o de tu familia?",
+     "model": "Me parece más difícil hablar de mi familia."
+    }
+   ],
+   "gaps": "Bruno, las [estrellas] no se [mueven] así. Eso es un [satélite]. Bueno. La [verdad] es que vendo seguros.",
+   "glossary": [
+    {
+     "word": "perfil",
+     "meaning": "página con tus datos en una aplicación"
+    },
+    {
+     "word": "casualidad",
+     "meaning": "algo que pasa sin plan"
+    },
+    {
+     "word": "seguros",
+     "meaning": "contratos que te protegen si hay un problema"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "El agua que no hierve",
+   "place": "La carpa cocina",
+   "context": "En la carpa cocina hay ollas grandes. Doña Petrona cocina y Mauro, su ayudante nuevo, prueba los fideos.",
+   "speakers": [
+    {
+     "name": "Petrona",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    },
+    {
+     "name": "Mauro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Petrona, los fideos están en el agua desde hace veinte minutos y siguen duros."
+    },
+    {
+     "s": 0,
+     "text": "Claro, hijo. Estamos a tres mil seiscientos metros. Aquí el agua hierve a ochenta y ocho grados."
+    },
+    {
+     "s": 1,
+     "text": "En mi casa, en la costa, hierve a cien."
+    },
+    {
+     "s": 0,
+     "text": "Aquí no estás en la costa. Trae la quinua. Vamos a hacer sopa."
+    },
+    {
+     "s": 1,
+     "text": "¿Para sesenta y cuatro personas?"
+    },
+    {
+     "s": 0,
+     "text": "Para sesenta y cuatro personas y una llama. La llama también come."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo llevan los fideos en el agua?",
+     "options": [
+      "Diez minutos",
+      "Veinte minutos",
+      "Media hora o más"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué temperatura hierve el agua en el camping?",
+     "options": [
+      "A cien grados",
+      "A noventa y ocho grados",
+      "A ochenta y ocho grados"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De dónde es Mauro?",
+     "options": [
+      "De la costa",
+      "Del desierto",
+      "De la montaña, cerca del salar"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué van a cocinar ahora?",
+     "options": [
+      "Arroz con verduras",
+      "Sopa de quinua",
+      "Fideos con salsa y queso"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué receta rápida sale bien en tu cocina?",
+     "model": "Los huevos con arroz salen bien."
+    },
+    {
+     "q": "¿Qué ingrediente secreto pone tu familia en la sopa?",
+     "model": "Mi familia pone un poco de limón."
+    },
+    {
+     "q": "¿Qué comida de tu país es buena para el frío?",
+     "model": "El locro es bueno para el frío."
+    }
+   ],
+   "gaps": "Claro, hijo. Estamos a tres mil [seiscientos] metros. Aquí el agua [hierve] a [ochenta] y [ocho] grados.",
+   "glossary": [
+    {
+     "word": "hierve",
+     "meaning": "hace burbujas por el calor"
+    },
+    {
+     "word": "siguen duros",
+     "meaning": "todavía no están blandos"
+    },
+    {
+     "word": "quinua",
+     "meaning": "grano andino muy nutritivo"
+    }
+   ]
+  },
+  {
+   "id": "llama",
+   "title": "La noche de Estrella",
+   "place": "El corral de las llamas",
+   "context": "Wilmer cuida a las llamas del camping. Una de ellas está nerviosa. Celeste pasa por el corral.",
+   "speakers": [
+    {
+     "name": "Wilmer",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wilmer, ¿qué le pasa a esa llama? Está muy nerviosa."
+    },
+    {
+     "s": 0,
+     "text": "Es Estrella. Va a tener su cría esta noche. Lo sé porque no quiere comer."
+    },
+    {
+     "s": 1,
+     "text": "¿Esta noche? ¿Con la lluvia de estrellas?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Las llamas tienen a sus crías de día, normalmente. Estrella es diferente."
+    },
+    {
+     "s": 1,
+     "text": "¿Necesitas ayuda?"
+    },
+    {
+     "s": 0,
+     "text": "Necesito una manta, agua tibia y paciencia. Mucha paciencia."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está la llama?",
+     "options": [
+      "Tranquila y dormida",
+      "Enferma",
+      "Nerviosa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo sabe Wilmer que la cría llega esta noche?",
+     "options": [
+      "Porque se lo dijo el médico",
+      "Por las estrellas",
+      "Porque Estrella no quiere comer"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo tienen las llamas a sus crías normalmente?",
+     "options": [
+      "Por la noche",
+      "De día",
+      "En invierno, con frío"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué necesita Wilmer, además de cosas?",
+     "options": [
+      "Dinero",
+      "Una linterna potente",
+      "Paciencia"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mascota de un vecino o amigo conoces bien?",
+     "model": "Conozco bien al gato de mi vecina."
+    },
+    {
+     "q": "¿En qué situación necesitas mucha paciencia?",
+     "model": "Necesito paciencia en el tráfico."
+    },
+    {
+     "q": "¿Qué haces para ayudar a alguien nervioso?",
+     "model": "Le hablo despacio y le doy agua."
+    }
+   ],
+   "gaps": "Necesito una [manta], agua [tibia] y [paciencia]. Mucha [paciencia].",
+   "glossary": [
+    {
+     "word": "paciencia",
+     "meaning": "capacidad de esperar con calma"
+    },
+    {
+     "word": "nerviosa",
+     "meaning": "que no está tranquila"
+    },
+    {
+     "word": "cría",
+     "meaning": "animal recién nacido"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Reunión en toalla",
+   "place": "Las duchas",
+   "context": "Fabián sale de las duchas con el pelo lleno de champú. Rogelio arregla una lámpara.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Don Rogelio! ¡El agua caliente se terminó! Tengo champú en la cabeza."
+    },
+    {
+     "s": 1,
+     "text": "Sí, señor. El agua caliente dura cuatro minutos. Está en el cartel."
+    },
+    {
+     "s": 0,
+     "text": "Cuatro minutos no es una ducha. Además, no hay señal. A las dos tengo una reunión con Tokio."
+    },
+    {
+     "s": 1,
+     "text": "¿A las dos de la mañana?"
+    },
+    {
+     "s": 0,
+     "text": "Allí es por la tarde. ¿Dónde hay señal?"
+    },
+    {
+     "s": 1,
+     "text": "Solo en el techo de las duchas. Hay una escalera atrás."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Fabián en la cabeza?",
+     "options": [
+      "Champú",
+      "Un gorro",
+      "Una toalla"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está la información sobre el agua caliente?",
+     "options": [
+      "En la página del camping",
+      "En el cartel",
+      "En la lista de Rogelio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora es la reunión en el camping?",
+     "options": [
+      "A las doce de la noche",
+      "A las dos de la mañana",
+      "A las tres"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo se sube al techo?",
+     "options": [
+      "Con una cuerda",
+      "Por una escalera de atrás",
+      "Por la puerta de la cocina"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué canción de los años ochenta cantas bajo la ducha?",
+     "model": "Canto una de Soda Stereo."
+    },
+    {
+     "q": "¿Dónde buscas cobertura cuando el móvil no funciona?",
+     "model": "Busco cobertura cerca de una ventana."
+    },
+    {
+     "q": "¿A qué país te gustaría llamar por trabajo?",
+     "model": "Me gustaría llamar a Japón."
+    }
+   ],
+   "gaps": "Cuatro minutos no es una [ducha]. Además, no hay [señal]. A las dos tengo una [reunión] con [Tokio].",
+   "glossary": [
+    {
+     "word": "champú",
+     "meaning": "jabón para el pelo"
+    },
+    {
+     "word": "señal",
+     "meaning": "conexión del teléfono"
+    },
+    {
+     "word": "escalera",
+     "meaning": "sirve para subir"
+    }
+   ]
+  },
+  {
+   "id": "hamacas",
+   "title": "Una noche sin despertador",
+   "place": "Las hamacas",
+   "context": "Rocío está en una hamaca con los ojos abiertos. Celeste pasa con su linterna roja.",
+   "speakers": [
+    {
+     "name": "Rocío",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rocío, ¿estás bien? Son las doce."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Mi hijo Martín tiene siete meses. Hoy está con su papá, en casa. Es mi primera noche libre."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bien! Entonces, a dormir."
+    },
+    {
+     "s": 0,
+     "text": "No puedo. En casa siempre hay ruido: el niño, la tele, el perro. Aquí no hay nada."
+    },
+    {
+     "s": 1,
+     "text": "¿Y eso es malo?"
+    },
+    {
+     "s": 0,
+     "text": "El silencio es tan grande que me despierta."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con quién está Martín esta noche?",
+     "options": [
+      "Con su abuela",
+      "Con su papá",
+      "Con Rocío en la hamaca"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tiene de especial esta noche para Rocío?",
+     "options": [
+      "Es su primera noche libre",
+      "Es su cumpleaños",
+      "Es su primer viaje a la montaña"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay en casa de Rocío?",
+     "options": [
+      "Mucho silencio por la noche",
+      "Mucho ruido",
+      "Un jardín"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué despierta a Rocío en el camping?",
+     "options": [
+      "El frío de la noche",
+      "Las llamas",
+      "El silencio"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué ruido de tu casa ya no oyes porque es normal?",
+     "model": "Ya no oigo el refrigerador."
+    },
+    {
+     "q": "¿Cómo es tu domingo ideal, sin obligaciones?",
+     "model": "Duermo hasta tarde y camino por el parque."
+    },
+    {
+     "q": "¿Dónde duerme mejor la gente de tu familia, en el campo o en la ciudad?",
+     "model": "Mi familia duerme mejor en el campo."
+    }
+   ],
+   "gaps": "No puedo. En casa siempre hay [ruido]: el [niño], la tele, el [perro]. Aquí no hay [nada].",
+   "glossary": [
+    {
+     "word": "libre",
+     "meaning": "sin obligaciones"
+    },
+    {
+     "word": "silencio",
+     "meaning": "falta de ruido"
+    },
+    {
+     "word": "despierta",
+     "meaning": "hace que dejes de dormir"
+    }
+   ]
+  },
+  {
+   "id": "sendero",
+   "title": "Los meteoros suenan",
+   "place": "El sendero del mirador",
+   "context": "Elías y su hermana Marta prueban una radio en el sendero. Elías es ciego.",
+   "speakers": [
+    {
+     "name": "Elías",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Marta",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Elías, ¿qué hace esa radio? Solo hace ruido."
+    },
+    {
+     "s": 0,
+     "text": "Espera. Escucha… ¿Oyes ese «pin»? Es un meteoro."
+    },
+    {
+     "s": 1,
+     "text": "¿Un meteoro hace ruido?"
+    },
+    {
+     "s": 0,
+     "text": "No exactamente. La radio recibe una señal cuando un meteoro entra en el aire. Yo no veo las estrellas, pero las oigo."
+    },
+    {
+     "s": 1,
+     "text": "¡Otro! ¡Pin!"
+    },
+    {
+     "s": 0,
+     "text": "¿Ves? Esta noche tú también vas a escuchar el cielo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Elías en el sendero?",
+     "options": [
+      "Un telescopio",
+      "Una cámara",
+      "Una radio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es el «pin»?",
+     "options": [
+      "La señal de un meteoro",
+      "Un mensaje de su madre",
+      "Un pájaro del desierto"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo recibe la radio una señal?",
+     "options": [
+      "Cuando pasa un avión",
+      "Cada diez minutos",
+      "Cuando un meteoro entra en el aire"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere Elías para su hermana?",
+     "options": [
+      "Que vuelva a casa",
+      "Que escuche el cielo",
+      "Que compre otra radio"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué sonido de tu barrio reconoces con los ojos cerrados?",
+     "model": "Reconozco la campana de la iglesia."
+    },
+    {
+     "q": "¿Qué cosa aprendiste de un hermano o una hermana?",
+     "model": "Mi hermana me enseñó a nadar."
+    },
+    {
+     "q": "¿Qué parte del día prefieres para salir a caminar?",
+     "model": "Prefiero la tarde."
+    }
+   ],
+   "gaps": "Yo no [veo] las estrellas, pero las [oigo]. ¡Otro! ¡[Pin]! ¿[Ves]?",
+   "glossary": [
+    {
+     "word": "exactamente",
+     "meaning": "de forma precisa"
+    },
+    {
+     "word": "meteoro",
+     "meaning": "roca pequeña que se quema en el aire"
+    },
+    {
+     "word": "señal",
+     "meaning": "información que llega por la radio"
+    }
+   ]
+  },
+  {
+   "id": "cupula",
+   "title": "La patada de Amalia",
+   "place": "La cúpula del observatorio",
+   "context": "En el observatorio, el telescopio no puede mirar el cielo. Joaquín, el técnico, trabaja con una llave.",
+   "speakers": [
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Joaquín",
+     "country": "Panamá",
+     "voice": "es-PA-RobertoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Lo siento, Doña Amalia. La cúpula no gira. El motor no funciona."
+    },
+    {
+     "s": 0,
+     "text": "Joaquín, en 1966 encontré ese cometa con un telescopio de cartón. Tenía diecisiete años."
+    },
+    {
+     "s": 1,
+     "text": "¿De cartón? ¿En serio?"
+    },
+    {
+     "s": 0,
+     "text": "En serio. Y esa noche, la noche de la lluvia, me quedé dormida. No vi nada."
+    },
+    {
+     "s": 1,
+     "text": "Entonces hoy tiene que verla."
+    },
+    {
+     "s": 0,
+     "text": "Exacto. Aparta."
+    },
+    {
+     "s": 1,
+     "text": "¡Doña Amalia! ¡Le dio una patada! ¡Y gira!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué problema tiene la cúpula?",
+     "options": [
+      "No gira",
+      "Está rota por arriba",
+      "No tiene luz"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo era el telescopio de Amalia en 1966?",
+     "options": [
+      "Grande y moderno",
+      "Prestado",
+      "De cartón"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le pasó a Amalia en 1966?",
+     "options": [
+      "Se perdió en el desierto",
+      "Se quedó dormida",
+      "Llovió toda la noche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo arregla Amalia la cúpula?",
+     "options": [
+      "Con una llave",
+      "Con el motor nuevo de Joaquín",
+      "Con una patada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mueble o aparato reparaste con tus manos?",
+     "model": "Reparé una silla de la cocina."
+    },
+    {
+     "q": "¿Qué afición tenías a los diecisiete años?",
+     "model": "A los diecisiete años jugaba al fútbol."
+    },
+    {
+     "q": "¿En qué momento importante te ganó el sueño?",
+     "model": "El sueño me ganó en el cine, en la mejor parte."
+    }
+   ],
+   "gaps": "En serio. Y esa [noche], la noche de la [lluvia], me quedé [dormida]. No vi [nada].",
+   "glossary": [
+    {
+     "word": "cúpula",
+     "meaning": "techo redondo que gira"
+    },
+    {
+     "word": "cartón",
+     "meaning": "papel grueso"
+    },
+    {
+     "word": "patada",
+     "meaning": "golpe con el pie"
+    },
+    {
+     "word": "aparta",
+     "meaning": "muévete a un lado"
+    }
+   ]
+  },
+  {
+   "id": "mina",
+   "title": "Cuarenta y un años abajo",
+   "place": "La casucha minera",
+   "context": "Don Ramiro está sentado en una casucha minera vieja, con su casco puesto. Celeste lo invita al mirador.",
+   "speakers": [
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Don Ramiro, a las tres y doce es la lluvia de estrellas. ¿Viene al mirador?"
+    },
+    {
+     "s": 0,
+     "text": "No, gracias. Yo trabajé cuarenta y un años en la mina Santa Rita, siempre de noche. Abajo no hay cielo."
+    },
+    {
+     "s": 1,
+     "text": "¿Nunca vio una estrella fugaz?"
+    },
+    {
+     "s": 0,
+     "text": "Nunca. Y tengo setenta y cuatro años. Además, tanto cielo me da miedo. Es muy grande."
+    },
+    {
+     "s": 1,
+     "text": "Puede llevar el casco."
+    },
+    {
+     "s": 0,
+     "text": "¿El casco? Bueno… con casco, sí."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde trabajó Ramiro?",
+     "options": [
+      "En el observatorio",
+      "En el camping de Rogelio",
+      "En la mina Santa Rita"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo trabajaba?",
+     "options": [
+      "Por las mañanas",
+      "Siempre de noche",
+      "Los fines de semana"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos años tiene Ramiro?",
+     "options": [
+      "Cuarenta y uno",
+      "Setenta y cuatro",
+      "Sesenta y cuatro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué acepta subir al mirador al final?",
+     "options": [
+      "Porque hace calor",
+      "Porque puede llevar el casco",
+      "Porque Celeste le da café"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugar muy grande o muy abierto te da un poco de respeto?",
+     "model": "El mar me da un poco de respeto."
+    },
+    {
+     "q": "¿Qué objeto te da seguridad cuando sales?",
+     "model": "Mi teléfono me da seguridad."
+    },
+    {
+     "q": "¿Qué trabajo duro hizo alguien de tu familia?",
+     "model": "Mi abuelo trabajó en el campo."
+    }
+   ],
+   "gaps": "Nunca. Y tengo [setenta] y [cuatro] años. Además, tanto [cielo] me da [miedo].",
+   "glossary": [
+    {
+     "word": "mina",
+     "meaning": "lugar bajo tierra donde se sacan minerales"
+    },
+    {
+     "word": "casco",
+     "meaning": "protección dura para la cabeza"
+    },
+    {
+     "word": "estrella fugaz",
+     "meaning": "luz rápida que cruza el cielo"
+    }
+   ]
+  },
+  {
+   "id": "salar",
+   "title": "Veinte años esperando",
+   "place": "El salar",
+   "context": "Ulises, fotógrafo, está en el salar con un trípode. Celeste camina sobre la sal blanca.",
+   "speakers": [
+    {
+     "name": "Ulises",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Veinte años. Veinte años esperando esta foto, y el salar está seco."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué foto, Ulises?"
+    },
+    {
+     "s": 0,
+     "text": "Cuando llueve, el salar tiene un poco de agua y es un espejo. Las estrellas están arriba y abajo. Es la foto de mi vida."
+    },
+    {
+     "s": 1,
+     "text": "Pero este año no llovió."
+    },
+    {
+     "s": 0,
+     "text": "No. Tengo sal, frío y un trípode."
+    },
+    {
+     "s": 1,
+     "text": "Y tienes a sesenta y cuatro personas que van a mirar el cielo. Eso también es una foto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años lleva Ulises esperando la foto?",
+     "options": [
+      "Veinte años",
+      "Dos años",
+      "Doce años"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo está el salar este año?",
+     "options": [
+      "Seco",
+      "Lleno de agua",
+      "Cubierto de nieve"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pasa con el salar cuando llueve?",
+     "options": [
+      "Se cierra al público",
+      "Se pone de color rosa",
+      "Es un espejo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué foto le propone Celeste?",
+     "options": [
+      "Una foto de la sal",
+      "Una foto de la gente mirando el cielo",
+      "Una foto de ella con la luna"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué foto especial quieres sacar algún día?",
+     "model": "Quiero sacar una foto de una ballena."
+    },
+    {
+     "q": "¿Qué paisaje de postal quieres fotografiar?",
+     "model": "Quiero fotografiar un volcán con nieve."
+    },
+    {
+     "q": "¿Qué haces cuando el tiempo cambia tus planes?",
+     "model": "Cambio el plan y voy al cine."
+    }
+   ],
+   "gaps": "No. Tengo [sal], [frío] y un [trípode]. Y tienes a sesenta y cuatro [personas] que van a mirar el cielo.",
+   "glossary": [
+    {
+     "word": "trípode",
+     "meaning": "soporte de tres patas para la cámara"
+    },
+    {
+     "word": "seco",
+     "meaning": "sin agua"
+    },
+    {
+     "word": "espejo",
+     "meaning": "superficie que refleja"
+    }
+   ]
+  },
+  {
+   "id": "astrologa",
+   "title": "Una física con turbante",
+   "place": "La orilla del salar",
+   "context": "Madame Zulema tiene un puesto de horóscopos con velas. Lucía, la astrofísica, se sienta.",
+   "speakers": [
+    {
+     "name": "Zulema",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Siéntate, querida. ¿Qué quieres saber? ¿Amor, dinero o trabajo?"
+    },
+    {
+     "s": 1,
+     "text": "Quiero saber cómo funciona esto. Soy astrofísica."
+    },
+    {
+     "s": 0,
+     "text": "Ay, otra científica. Bueno, te digo un secreto: yo estudié física tres años."
+    },
+    {
+     "s": 1,
+     "text": "¿En serio? ¿Y por qué lees horóscopos?"
+    },
+    {
+     "s": 0,
+     "text": "Porque la física no paga el alquiler. Y la gente quiere historias, no fórmulas."
+    },
+    {
+     "s": 1,
+     "text": "Pues esta noche el cielo tiene una historia muy buena."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué temas ofrece Zulema?",
+     "options": [
+      "Salud, viajes o familia",
+      "Solo el amor",
+      "Amor, dinero o trabajo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué estudió Zulema?",
+     "options": [
+      "Medicina",
+      "Astrología en Europa",
+      "Física"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Durante cuánto tiempo estudió?",
+     "options": [
+      "Tres años",
+      "Trece años",
+      "Seis meses"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué lee horóscopos, según ella?",
+     "options": [
+      "Porque cree en ellos",
+      "Por su madre",
+      "Por dinero"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué carrera o curso empezaste y no terminaste?",
+     "model": "Empecé un curso de francés y no lo terminé."
+    },
+    {
+     "q": "¿Qué parte del periódico lee tu familia con más interés?",
+     "model": "Mi familia lee primero el horóscopo."
+    },
+    {
+     "q": "¿Qué empleo de estudiante recuerdas?",
+     "model": "Recuerdo un empleo en una tienda de ropa."
+    }
+   ],
+   "gaps": "Porque la [física] no paga el [alquiler]. Y la gente quiere [historias], no [fórmulas].",
+   "glossary": [
+    {
+     "word": "querida",
+     "meaning": "palabra cariñosa"
+    },
+    {
+     "word": "científica",
+     "meaning": "mujer que trabaja en la ciencia"
+    },
+    {
+     "word": "alquiler",
+     "meaning": "dinero que pagas por vivir en una casa"
+    }
+   ]
+  },
+  {
+   "id": "dron",
+   "title": "Tres espectadores",
+   "place": "Las rocas",
+   "context": "Kiara transmite en directo desde las rocas. Su hermano Dante sostiene el teléfono.",
+   "speakers": [
+    {
+     "name": "Kiara",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Dante",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola, mis viajeros! ¡Estoy en el desierto más alto del mundo! Dante, sube el dron."
+    },
+    {
+     "s": 1,
+     "text": "Kiara, el dron tiene luces de colores. La gente se queja: tapa las estrellas."
+    },
+    {
+     "s": 0,
+     "text": "Pero es mi contenido. ¿Cuántas personas nos miran?"
+    },
+    {
+     "s": 1,
+     "text": "Tres. Mamá, la tía Rosa y un señor de Alemania."
+    },
+    {
+     "s": 0,
+     "text": "¿Tres? ¿Y para tres personas molesto a sesenta y cuatro?"
+    },
+    {
+     "s": 1,
+     "text": "Esa es la pregunta, hermanita."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hace Kiara en las rocas?",
+     "options": [
+      "Saca fotos de las llamas",
+      "Duerme en su carpa",
+      "Transmite en directo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué se queja la gente del camping?",
+     "options": [
+      "Por la música muy alta",
+      "Por el ruido del motor",
+      "Porque el dron tapa las estrellas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quiénes miran la transmisión?",
+     "options": [
+      "Su madre, su tía y un señor de Alemania",
+      "Miles de personas de todo el mundo",
+      "Los campistas de la fogata"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué empieza a pensar Kiara al final?",
+     "options": [
+      "Que necesita otro dron",
+      "Que molesta a mucha gente por muy poca",
+      "Que su hermano miente"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa de internet te molesta un poco?",
+     "model": "Me molestan los anuncios."
+    },
+    {
+     "q": "¿Qué persona de tu familia te ayuda con tus proyectos?",
+     "model": "Mi hermana me ayuda con mis proyectos."
+    },
+    {
+     "q": "¿Qué lugar del mundo quieres mostrar a tus seguidores o amigos?",
+     "model": "Quiero mostrar las montañas de mi pueblo."
+    }
+   ],
+   "gaps": "Kiara, el dron tiene [luces] de [colores]. La gente se [queja]: tapa las [estrellas].",
+   "glossary": [
+    {
+     "word": "hermanita",
+     "meaning": "forma cariñosa de decir hermana"
+    },
+    {
+     "word": "se queja",
+     "meaning": "dice que algo no le gusta"
+    },
+    {
+     "word": "contenido",
+     "meaning": "vídeos y fotos para internet"
+    }
+   ]
+  },
+  {
+   "id": "apagon",
+   "title": "La gerenta de la mina",
+   "place": "La caseta del generador",
+   "context": "Son casi las once. Rogelio está en la caseta del generador y llama por radio a Teresa, la gerenta de la mina vecina.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Teresa, habla Rogelio. A las once apago el camping. ¿Puedes apagar los reflectores de la mina?"
+    },
+    {
+     "s": 1,
+     "text": "Rogelio, la mina trabaja toda la noche. No es tan fácil."
+    },
+    {
+     "s": 0,
+     "text": "Solo esta noche. Es la lluvia de estrellas más grande en sesenta años."
+    },
+    {
+     "s": 1,
+     "text": "Hace nueve años que no me llamas, y me llamas para apagar luces."
+    },
+    {
+     "s": 0,
+     "text": "También te llamo para darte las gracias."
+    },
+    {
+     "s": 1,
+     "text": "Bueno. A las once, todo apagado."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere Rogelio?",
+     "options": [
+      "Que la mina apague los reflectores",
+      "Que Teresa venga al camping",
+      "Dinero para el generador"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué no es fácil para Teresa?",
+     "options": [
+      "Porque la mina trabaja toda la noche",
+      "Porque no hay radio",
+      "Porque está de vacaciones"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto tiempo hace que Rogelio no llama a Teresa?",
+     "options": [
+      "Seis meses",
+      "Sesenta años",
+      "Nueve años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué decide Teresa?",
+     "options": [
+      "No apagar nada",
+      "Apagar a medianoche",
+      "Apagar todo a las once"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué amigo del colegio quieres llamar otra vez?",
+     "model": "Quiero llamar a Andrés, mi compañero de clase."
+    },
+    {
+     "q": "¿Qué vecino te ayudó con un problema?",
+     "model": "La vecina del tercero me ayudó con una gotera."
+    },
+    {
+     "q": "¿Qué haces en tu casa para gastar menos electricidad?",
+     "model": "Apago las luces que no uso."
+    }
+   ],
+   "gaps": "Hace [nueve] años que no me [llamas], y me llamas para [apagar] [luces].",
+   "glossary": [
+    {
+     "word": "reflectores",
+     "meaning": "luces muy potentes"
+    },
+    {
+     "word": "apagar",
+     "meaning": "hacer que una luz deje de funcionar"
+    },
+    {
+     "word": "todo apagado",
+     "meaning": "sin ninguna luz"
+    }
+   ]
+  },
+  {
+   "id": "mirador",
+   "title": "Todos arriba",
+   "place": "El mirador",
+   "context": "Son las tres y diez. Celeste, Doña Amalia y Don Ramiro están en el mirador con todo el camping.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ya estamos todos. Las sesenta y cuatro personas. Faltan dos minutos."
+    },
+    {
+     "s": 1,
+     "text": "Celeste, tienes la mano muy fría. ¿Tienes miedo?"
+    },
+    {
+     "s": 0,
+     "text": "Un poco. Me da miedo la oscuridad desde niña. Pero hoy estoy acompañada."
+    },
+    {
+     "s": 2,
+     "text": "Yo también tengo miedo. Por eso traje el casco."
+    },
+    {
+     "s": 1,
+     "text": "¡Miren! ¡Ahí empieza! Esta vez no me duermo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es al principio?",
+     "options": [
+      "Las tres y diez",
+      "Las tres y doce",
+      "Las dos y diez"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas personas hay en el mirador?",
+     "options": [
+      "Cuarenta y seis",
+      "Veintiséis",
+      "Sesenta y cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Desde cuándo le da miedo la oscuridad a Celeste?",
+     "options": [
+      "Desde esta noche",
+      "Desde hace un año",
+      "Desde niña"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué trajo Ramiro?",
+     "options": [
+      "Una manta",
+      "El casco",
+      "Una radio vieja"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué miedo tienes desde la infancia?",
+     "model": "Tengo miedo a los perros grandes desde la infancia."
+    },
+    {
+     "q": "¿Con quién te gusta mirar un espectáculo especial?",
+     "model": "Me gusta mirarlo con mis amigos."
+    },
+    {
+     "q": "¿Qué deseo pides esta noche, con una estrella fugaz?",
+     "model": "Pido un trabajo nuevo."
+    }
+   ],
+   "gaps": "Un poco. Me da [miedo] la [oscuridad] desde [niña]. Pero hoy estoy [acompañada].",
+   "glossary": [
+    {
+     "word": "faltan",
+     "meaning": "quedan para llegar"
+    },
+    {
+     "word": "acompañada",
+     "meaning": "con otras personas"
+    },
+    {
+     "word": "traje",
+     "meaning": "pasado de traer"
+    }
+   ]
+  }
+ ]
+}
