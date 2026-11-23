@@ -4,6 +4,35 @@ Newest first. Each week: what the critic caught, what to do from the start
 next time, and ideas left for later. Keep it short; promote stable lessons
 into PLAYBOOK.md.
 
+## Semana 4 · 2026-11-23 · Lluvia de estrellas (263) y Objetos perdidos (264)
+
+- **Los chequeos de la semana 3 funcionaron**: ninguna clase volvió a meter
+  los niveles en el bundle ni claves adivinables por longitud. Pero el guard
+  de género tiene que crecer con cada clase: se escaparon «el nuevo» /
+  «empleado» (perdidos), «como si fueras su abogado», «Bienvenida a…» y
+  formas de vosotros (estrellas). Ahora los checks de las dos clases las
+  cazan; copiarlos (`NEWBIE`, `ROLE_YOU`, `VOSOTROS`).
+- **C2 = C1 otra vez**, aunque las preguntas pasaban: el Jaccard tiene que
+  medir también el texto de escena, opciones y finales (< 0,3 por escena).
+  Al reescribir C2, regenerar la lista `words:` desde el texto nuevo: hay
+  un check que exige que cada palabra del glosario esté en su escena.
+- **Escuchas que se responden sin escuchar**: la respuesta estaba en el
+  título o el contexto (22 de 72 en A0). Check nuevo: la opción correcta no
+  puede aparecer en `title`/`context`.
+- **Reloj = escena**: si el HUD avanza por círculos, el orden de los
+  círculos tiene que seguir la hora de cada escena (el apagón de las 23:00
+  aparecía a las 02:40). Mejor: cada círculo con su hora en story.mjs.
+- **Fantasmas en geometrías raras**: la persona en la hamaca (TubeGeometry
+  cerrada) pasaba el check porque solo miraba Box y Cylinder. Ahora también
+  Tube y Dodecahedron; nada de tubos cerrados para telas.
+- **Catálogo**: «cielo» metió la clase en «vida y muerte» (5 páginas nuevas)
+  y «lluvia» en tiempo atmosférico (`exclude:[263]`). Releer contra
+  `temas.ts` antes del primer push.
+- **HUD a 390**: con el minimapa a 236 px tapaba «Nivel»; el badge de escucha
+  tapaba el selector de modo. Medir las cajas en los dos modos.
+- **Límite semanal de la API**: los dos creadores se cortaron a mitad de
+  trabajo y retomaron con SendMessage al reset sin perder nada.
+
 ## Semana 3 · 2026-11-16 · La casa (260) y Último crucero (261)
 
 - **Las dos clases repitieron los mismos cuatro errores**, así que desde la
