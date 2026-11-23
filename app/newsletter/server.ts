@@ -9,6 +9,9 @@ export const NEWSLETTER_SEGMENT_ID = '0cc01e46-2405-4064-b35b-999ed0c27026';
 export const NEWSLETTER_FROM = 'Ale de SpanishCue <novedades@spanishcue.com>';
 /** Starts the Resend automation «SpanishCue · Secuencia profes» (emails on days 2, 4, 7 and 10; the welcome is day 0). */
 export const NURTURE_EVENT = 'spanishcue.newsletter.subscribed';
+export const ACCOUNT_SOURCE_PATH = '/cuenta';
+export const ACCOUNT_FREE_CLASS_PATH = '/gramatica/indefinido-e-imperfecto';
+export const ACCOUNT_FREE_CLASS_TITLE = 'Indefinido e imperfecto';
 export const PRICING_CTA = 'Desbloquear todo · US$19,90/mes';
 const GIFT_MAX_AGE = 60 * 60 * 24 * 365;
 const encoder = new TextEncoder();
@@ -84,6 +87,24 @@ export async function subscribe(db: D1Database, value: Record<string, unknown>) 
   return { id: row.id, email: normalized, unsubscribeToken: row.unsubscribe_token, created: row.id === id };
 }
 
+/**
+ * A new free account joins the same profes sequence. Only an email that was never in the list is enrolled:
+ * an existing row (including one that unsubscribed) is left untouched, so a past unsubscribe is respected.
+ */
+export async function enrollAccount(db: D1Database, account: { email: string; role: string; accessLevel: string }) {
+  if (account.role === 'owner' || account.accessLevel !== 'free') return null;
+  const email = account.email.trim();
+  const normalized = email.toLowerCase();
+  if (!validEmail(normalized)) return null;
+  const now = new Date().toISOString();
+  const id = randomToken(), token = randomToken();
+  await db.prepare(`INSERT INTO newsletter_subscribers (id,email,normalized_email,source_path,status,unsubscribe_token,consent_at,created_at,updated_at)
+    VALUES (?,?,?,?,'active',?,?,?,?) ON CONFLICT(normalized_email) DO NOTHING`).bind(id, email, normalized, ACCOUNT_SOURCE_PATH, token, now, now, now).run();
+  const row = await db.prepare('SELECT id,unsubscribe_token FROM newsletter_subscribers WHERE normalized_email=?').bind(normalized).first<Row>();
+  if (!row || row.id !== id) return null;
+  return { id, email: normalized, unsubscribeToken: token, created: true };
+}
+
 export async function unsubscribe(db: D1Database, token: string) {
   if (!/^[a-f0-9]{48}$/.test(token)) return null;
   const row = await db.prepare('SELECT normalized_email FROM newsletter_subscribers WHERE unsubscribe_token=?').bind(token).first<{ normalized_email: string }>();
@@ -138,6 +159,49 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
   return { subject, text, html, leave };
 }
 
+export function accountWelcomeEmail(origin: string, unsubscribeToken: string) {
+  const free = `${origin}${ACCOUNT_FREE_CLASS_PATH}?utm_source=email&utm_medium=email&utm_campaign=cuenta_d0`;
+  const library = `${origin}/?utm_source=email&utm_medium=email&utm_campaign=cuenta_d0`;
+  const leave = `${origin}/api/newsletter/baja?t=${unsubscribeToken}`;
+  const pricing = `${origin}/pricing?utm_source=email&utm_medium=email&utm_campaign=cuenta_d0`;
+  const subject = 'Tu cuenta de SpanishCue: por dónde empezar';
+  const text = [
+    '¡Hola!',
+    '',
+    'Gracias por crear tu cuenta gratis en SpanishCue, la biblioteca de clases de español listas para dar.',
+    `Para empezar, abre la clase gratis «${ACCOUNT_FREE_CLASS_TITLE}»: explicación, práctica guiada y conversación, lista para usar en vivo con tu alumno.`,
+    '',
+    `Abrir la clase gratis: ${free}`,
+    `Ver la biblioteca: ${library}`,
+    '',
+    'En los próximos días te voy a escribir algunas veces con otras clases gratis e ideas para tus clases de ELE.',
+    '',
+    `${PRICING_CTA} (o US$150/año): ${pricing}`,
+    '',
+    'Ale',
+    'SpanishCue',
+    '',
+    `Darte de baja de estos emails: ${leave}`,
+  ].join('\n');
+  const html = `<!doctype html><html lang="es"><body style="margin:0;background:#f5f7fb;font-family:Arial,Helvetica,sans-serif;color:#17233b">
+<div style="max-width:560px;margin:0 auto;padding:28px 20px">
+<p style="font-size:13px;color:#2457c5;font-weight:bold;letter-spacing:.04em;margin:0 0 18px">SPANISHCUE</p>
+<div style="background:#fff;border-radius:14px;padding:28px 26px;border:1px solid #e3e8f2">
+<p style="font-size:17px;margin:0 0 14px">¡Hola!</p>
+<p style="font-size:15px;line-height:1.6;margin:0 0 14px">Gracias por crear tu cuenta gratis en SpanishCue, la biblioteca de clases de español listas para dar.</p>
+<p style="font-size:15px;line-height:1.6;margin:0 0 22px;color:#4a5875">Para empezar, abre la clase gratis <strong>${escapeHtml(ACCOUNT_FREE_CLASS_TITLE)}</strong>: explicación, práctica guiada y conversación, lista para usar en vivo con tu alumno.</p>
+<p style="margin:0 0 22px"><a href="${escapeHtml(free)}" style="display:inline-block;background:#2457c5;color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">Abrir la clase gratis</a></p>
+<p style="font-size:15px;line-height:1.6;margin:0 0 14px"><a href="${escapeHtml(library)}" style="color:#2457c5">Ver la biblioteca</a></p>
+<p style="font-size:15px;line-height:1.6;margin:0">En los próximos días te voy a escribir algunas veces con otras clases gratis e ideas para tus clases de ELE.</p>
+<p style="margin:22px 0 0"><a href="${escapeHtml(pricing)}" style="display:inline-block;background:#f6c343;color:#06152f;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">${PRICING_CTA}</a></p>
+<p style="font-size:13px;line-height:1.6;margin:8px 0 0;color:#4a5875">o US$150/año</p>
+<p style="font-size:15px;line-height:1.6;margin:18px 0 0">Ale<br>SpanishCue</p>
+</div>
+<p style="font-size:12px;color:#7a869e;margin:18px 0 0;text-align:center"><a href="${escapeHtml(leave)}" style="color:#7a869e">Darme de baja</a></p>
+</div></body></html>`;
+  return { subject, text, html, leave };
+}
+
 async function resend(env: NewsletterEnvironment, fetcher: Fetcher, path: string, init: { method: string; body?: unknown; idempotencyKey?: string }) {
   // Trimmed: a key pasted into `wrangler secret put` with a trailing newline would make the header invalid.
   const headers: Record<string, string> = { authorization: `Bearer ${(env.RESEND_API_KEY ?? '').trim()}`, 'content-type': 'application/json' };
@@ -150,7 +214,7 @@ function errorName(error: unknown) {
 }
 
 /** Best effort: the subscriber is already saved in D1, so mail or sync failures never fail the signup. */
-export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetcher, origin: string, subscriber: { id: string; email: string; unsubscribeToken: string; created: boolean }) {
+export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetcher, origin: string, subscriber: { id: string; email: string; unsubscribeToken: string; created: boolean }, variant: 'newsletter' | 'account' = 'newsletter') {
   if (!env.RESEND_API_KEY?.trim()) { console.warn('newsletter_delivery', { reason: 'no_resend_key' }); return { sent: false, synced: false }; }
   let synced = false, sent = false, newContact = subscriber.created;
   // Sanitized diagnostics: Resend HTTP statuses and error class names only, never keys or addresses.
@@ -172,14 +236,14 @@ export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetche
   } catch (error) { synced = false; trace.contact = errorName(error); }
   if (!newContact) return { sent, synced };
   try {
-    const mail = welcomeEmail(origin, subscriber.unsubscribeToken);
+    const mail = variant === 'account' ? accountWelcomeEmail(origin, subscriber.unsubscribeToken) : welcomeEmail(origin, subscriber.unsubscribeToken);
     const response = await resend(env, fetcher, '/emails', {
       method: 'POST',
-      idempotencyKey: `newsletter-welcome/${subscriber.id}`,
+      idempotencyKey: `${variant === 'account' ? 'account' : 'newsletter'}-welcome/${subscriber.id}`,
       body: {
         from: NEWSLETTER_FROM, to: [subscriber.email], subject: mail.subject, html: mail.html, text: mail.text,
         headers: { 'List-Unsubscribe': `<${mail.leave}>`, 'List-Unsubscribe-Post': 'List-Unsubscribe=One-Click' },
-        tags: [{ name: 'category', value: 'newsletter_welcome' }],
+        tags: [{ name: 'category', value: variant === 'account' ? 'account_welcome' : 'newsletter_welcome' }],
       },
     });
     sent = response.ok;
@@ -188,7 +252,7 @@ export async function deliverWelcome(env: NewsletterEnvironment, fetcher: Fetche
   // Only after the welcome went out: the automation sends the rest of the sequence to this contact.
   if (sent) {
     try {
-      const started = await resend(env, fetcher, '/events/send', { method: 'POST', idempotencyKey: `newsletter-nurture/${subscriber.id}`, body: { event: NURTURE_EVENT, email: subscriber.email, payload: { source: 'newsletter' } } });
+      const started = await resend(env, fetcher, '/events/send', { method: 'POST', idempotencyKey: `newsletter-nurture/${subscriber.id}`, body: { event: NURTURE_EVENT, email: subscriber.email, payload: { source: variant } } });
       if (!started.ok) console.warn('newsletter_nurture', { status: started.status });
     } catch { console.warn('newsletter_nurture', { status: 0 }); }
   }
