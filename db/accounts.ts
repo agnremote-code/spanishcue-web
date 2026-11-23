@@ -142,7 +142,7 @@ export async function syncFirebaseAccount(
   db: D1Database,
   user: FirebaseUser,
   ownerIdentity?: OwnerIdentity,
-): Promise<AccountAccess> {
+): Promise<AccountAccess & { created: boolean }> {
   if (!user.emailVerified) throw new Error("EMAIL_NOT_VERIFIED");
   const now = nowSeconds();
   const email = normalizedEmail(user.email);
@@ -253,7 +253,8 @@ export async function syncFirebaseAccount(
   await db.batch(statements);
   const access = await readAccessBySubject(db, FIREBASE_PROVIDER, user.uid);
   if (!access) throw new Error("Account access could not be resolved.");
-  return access;
+  // `created`: this sign-in made a brand-new users row (not a returning identity or email).
+  return { ...access, created: !existingIdentity && account.id === candidateId };
 }
 
 export async function listTeacherAccounts(
