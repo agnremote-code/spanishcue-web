@@ -1,0 +1,18 @@
+export type CastMember = { name: string; full: string; role: string; gender: 'f' | 'm'; voice: string; country: string };
+export type StoryScene = { id: string; sector: string; cast: string[] };
+export type Note = { es: string; en: string };
+export type Line = Note & { back: boolean };
+export const CAST: Record<string, CastMember>;
+export const STORY: StoryScene[];
+export const STORY_IDS: string[];
+export function castByName(name: string): string | null;
+export const LEVEL_IDS: string[];
+export const SCENE_WORDS: Record<string, [number, number]>;
+export const MOODS: string[];
+export const OFFICE: { name: string; city: string; festival: string; opened: number; start: [number, number]; change: string; goal: number; facts: Record<string, string> };
+export function shiftClock(done: string[]): string;
+export function nightPhase(done: string[]): number;
+export const REGISTRO: Record<string, Line[]>;
+export const REGISTRO_IDS: string[];
+export function ledgerLines(done: string[], picks: Record<string, number> | undefined): { id: string; line: Line }[];
+export function returned(done: string[], picks: Record<string, number> | undefined): number;
