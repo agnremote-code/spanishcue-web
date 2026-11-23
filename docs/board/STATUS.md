@@ -105,6 +105,10 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - Cultural check: Ráquira as a Boyacá pottery centre is VERIFIED (Martin, web search; Ministerio de Cultura, «Los Cuadernos del Barro. Ráquira»). The town stays unnamed. The «greda» frequency, lead-free glaze and the 50% advance convention are HYPOTHESIS.
   - **Found, not fixed (VERIFIED):** `node scripts/check-escucha-3d.mjs <game> b1` with a lower-case level checks nothing and still prints OK, because the compare is case-sensitive (`scripts/check-escucha-3d.mjs:203`) while files and the README use lower case. An unknown level such as `ZZ` also prints OK (reproduced by the reviewer). Any earlier run reported with a lower-case level proved nothing. Fix: normalise the case and reject unknown levels, with a test; Thursday slot.
   - **W48 item 4:** owner requests restated in "Owner data requests" (R5 plus (i)–(iv)). The factual comment on #360 was not posted, because the session instructions allow GitHub comments only when the owner asks.
+  - **Checks for #509** (local, Linux, records head `7296c7bc`; docs-only changes after that):
+    - `npm test`: exit 0, 1,817 pass, 0 fail (pinned baseline commits fetched, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`).
+    - `git diff --check`: clean.
+    - Pipeline check before ready: no `automation/merge-lock` ref, and no workflow run in progress.
   - **Board:** Martin only, as one subagent (authoring). Sofia and Alejandro were not convened: there was no build, and no G4 review, since nothing ships. The records PR was reviewed by a fresh agent acting as Alejandro: **APPROVE**, 0 blockers. Its 7 non-blocking notes were applied. No inter-executive messages were exchanged, so there is no transcript.
   - **Next action:**
     1. Wed 11-25 (W48 item 2): Sofia builds the Taller world on #510's branch (catalog lesson, resource page, both modes, no-WebGL fallback). Then the CPIO attestation, then G4 by a fresh agent on content and build.
