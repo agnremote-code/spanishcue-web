@@ -30,7 +30,7 @@ async function setup() {
   globalThis.__resendKnown = known;
   // The bundled module is cached across tests: update the env object it captured.
   globalThis.__NEWSLETTER_TEST_ENV = Object.assign(globalThis.__NEWSLETTER_TEST_ENV ?? {}, { DB: db, AUTOESTUDIO_SHARE_SECRET: SECRET, RESEND_API_KEY: 're_test\n' });
-  const bundle = await build({ stdin: { contents: `export { POST } from './app/api/newsletter/route'; export { GET as leave, POST as oneClick } from './app/api/newsletter/baja/route'; export { GET as admin } from './app/api/admin/newsletter/route'; export * from './app/newsletter/server'; export * from './app/newsletter/gift';`, resolveDir: process.cwd() }, bundle: true, write: false, format: 'esm', platform: 'node', plugins: [{ name: 'env', setup(b) {
+  const bundle = await build({ stdin: { contents: `export { POST } from './app/api/newsletter/route'; export { GET as leave, POST as oneClick } from './app/api/newsletter/baja/route'; export { GET as admin } from './app/api/admin/newsletter/route'; export * from './app/newsletter/server'; export * from './app/newsletter/gift'; export * from './app/newsletter/account-backfill'; export { GET as backfillStatus, POST as backfillRun } from './app/api/admin/newsletter/cuentas/route';`, resolveDir: process.cwd() }, bundle: true, write: false, format: 'esm', platform: 'node', plugins: [{ name: 'env', setup(b) {
     b.onResolve({ filter: /^cloudflare:workers$/ }, () => ({ path: 'env', namespace: 'test-env' }));
     b.onLoad({ filter: /.*/, namespace: 'test-env' }, () => ({ contents: 'export const env = globalThis.__NEWSLETTER_TEST_ENV;' }));
   } }] });
@@ -142,4 +142,84 @@ test('newsletter wiring: rate limits, Worker gate, private media, public chunks,
   for (const workflow of [prod, staging]) assert.match(workflow, /drizzle\/0018_newsletter_subscribers\.sql/);
   assert.match(seo, /path\.startsWith\("\/newsletter\/"\)/);
   assert.match(footer, /<EmailGiftPopup \/>/);
+});
+
+test('a new free account joins the profes sequence once, respecting past unsubscribes', async () => {
+  const { sqlite, mod, calls } = await setup();
+  const env = globalThis.__NEWSLETTER_TEST_ENV;
+  // Owner and paid accounts never enter the sequence.
+  assert.equal(await mod.enrollAccount(env.DB, { email: 'ale@example.test', role: 'owner', accessLevel: 'full' }), null);
+  assert.equal(await mod.enrollAccount(env.DB, { email: 'pro@example.test', role: 'teacher', accessLevel: 'full' }), null);
+  assert.equal(sqlite.prepare('SELECT count(*) n FROM newsletter_subscribers').get().n, 0);
+
+  const subscriber = await mod.enrollAccount(env.DB, { email: 'Profe@Example.test', role: 'teacher', accessLevel: 'free' });
+  assert.equal(subscriber.email, 'profe@example.test');
+  const row = sqlite.prepare('SELECT * FROM newsletter_subscribers').get();
+  assert.equal(row.source_path, mod.ACCOUNT_SOURCE_PATH);
+  assert.equal(row.status, 'active');
+  await mod.deliverWelcome(env, (input, init) => fetch(input, init), 'https://spanishcue.test', subscriber, 'account');
+  const mail = calls.filter(c => c.url === 'https://api.resend.com/emails');
+  assert.equal(mail.length, 1);
+  const sent = JSON.parse(mail[0].init.body);
+  assert.equal(mail[0].init.headers['idempotency-key'], `account-welcome/${subscriber.id}`);
+  assert.equal(sent.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
+  assert.equal(sent.headers['List-Unsubscribe'], `<https://spanishcue.test/api/newsletter/baja?t=${row.unsubscribe_token}>`);
+  assert.match(sent.text, /\/gramatica\/indefinido-e-imperfecto/);
+  assert.match(sent.text, /US\$19,90\/mes/);
+  assert.match(sent.text, /US\$150\/año/);
+  // The account mail does not claim a browser-unlocked gift class.
+  assert.doesNotMatch(sent.text, /desbloqueada en este navegador/);
+  const event = calls.find(c => c.url === 'https://api.resend.com/events/send');
+  assert.deepEqual(JSON.parse(event.init.body), { event: mod.NURTURE_EVENT, email: 'profe@example.test', payload: { source: 'account' } });
+
+  // Same email again (or one that unsubscribed earlier): untouched, no second enrollment.
+  sqlite.prepare("UPDATE newsletter_subscribers SET status='unsubscribed'").run();
+  assert.equal(await mod.enrollAccount(env.DB, { email: 'profe@example.test', role: 'teacher', accessLevel: 'free' }), null);
+  assert.equal(sqlite.prepare('SELECT status FROM newsletter_subscribers').get().status, 'unsubscribed');
+});
+
+test('account sign-in wiring: only brand-new accounts are enrolled, after purchase binding', async () => {
+  const [route, accounts] = await Promise.all(['app/api/auth/session/route.ts', 'db/accounts.ts'].map(f => readFile(f, 'utf8')));
+  assert.match(accounts, /created: !existingIdentity && account\.id === candidateId/);
+  const binding = route.indexOf('bindPurchaseToUser(env.DB');
+  const enroll = route.indexOf('enrollAccount(env.DB, account)');
+  assert.ok(binding > 0 && enroll > binding);
+  assert.match(route, /if \(accountCreated\) \{/);
+  assert.match(route, /subscriber, "account"\)/);
+});
+
+test('backfill: accounts since 5-nov get the first mail once; owner, paying and listed emails are skipped', async () => {
+  const { sqlite, mod, calls } = await setup();
+  const env = globalThis.__NEWSLETTER_TEST_ENV;
+  env.CHESPANISH_OWNER_EMAIL = 'Dueno@Example.test';
+  sqlite.exec(`CREATE TABLE IF NOT EXISTS users (id TEXT PRIMARY KEY, email TEXT, normalized_email TEXT, role TEXT, status TEXT, created_at INTEGER);
+    CREATE TABLE IF NOT EXISTS access_grants (user_id TEXT); CREATE TABLE IF NOT EXISTS billing_purchase_claims (normalized_email TEXT);`);
+  const since = mod.ACCOUNT_BACKFILL_SINCE;
+  const add = (id, email, created, role = 'teacher') => sqlite.prepare('INSERT INTO users VALUES (?,?,?,?,?,?)').run(id, email, email.toLowerCase(), role, 'active', created);
+  add('old', 'old@example.test', since - 10);
+  add('a', 'Uno@Example.test', since + 10);
+  add('b', 'dos@example.test', since + 20);
+  add('owner', 'dueno@example.test', since + 30);
+  add('owner2', 'otra@example.test', since + 31, 'owner');
+  add('pro', 'pro@example.test', since + 40); sqlite.prepare('INSERT INTO access_grants VALUES (?)').run('pro');
+  add('payer', 'paga@example.test', since + 50); sqlite.prepare('INSERT INTO billing_purchase_claims VALUES (?)').run('paga@example.test');
+  add('ale', 'agnremote+test@example.test', since + 60);
+  add('listed', 'ya@example.test', since + 70);
+  await mod.subscribe(env.DB, { email: 'ya@example.test', consent: true });
+  sqlite.prepare("UPDATE newsletter_subscribers SET status='unsubscribed'").run();
+  assert.deepEqual((await mod.pendingBackfillAccounts(env.DB, env.CHESPANISH_OWNER_EMAIL)).map(r => r.email), ['Uno@Example.test', 'dos@example.test']);
+
+  const owner = { 'x-chespanish-owner': '1', origin: 'https://spanishcue.test' };
+  assert.equal((await mod.backfillRun(new Request('https://spanishcue.test/api/admin/newsletter/cuentas', { method: 'POST', headers: { origin: 'https://spanishcue.test' } }))).status, 403);
+  assert.equal((await mod.backfillRun(new Request('https://spanishcue.test/api/admin/newsletter/cuentas', { method: 'POST', headers: { 'x-chespanish-owner': '1', origin: 'https://evil.test' } }))).status, 403);
+  calls.length = 0;
+  const result = await mod.runAccountBackfill(env, (input, init) => fetch(input, init), 'https://spanishcue.test', env.CHESPANISH_OWNER_EMAIL, 0);
+  assert.deepEqual(result, { processed: 2, sent: 2, remaining: 0 });
+  const mails = calls.filter(c => c.url === 'https://api.resend.com/emails').map(c => JSON.parse(c.init.body).to[0]);
+  assert.deepEqual(mails, ['uno@example.test', 'dos@example.test']);
+  assert.equal(calls.filter(c => c.url === 'https://api.resend.com/events/send').length, 2);
+  // Repeating is harmless: nothing left, nothing sent again; the unsubscribed email stays unsubscribed.
+  const status = await mod.backfillStatus(new Request('https://spanishcue.test/api/admin/newsletter/cuentas', { headers: owner }));
+  assert.deepEqual(await status.json(), { remaining: 0 });
+  assert.equal(sqlite.prepare("SELECT status FROM newsletter_subscribers WHERE normalized_email='ya@example.test'").get().status, 'unsubscribed');
 });

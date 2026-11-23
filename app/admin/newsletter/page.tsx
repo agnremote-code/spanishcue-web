@@ -4,6 +4,8 @@ import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { ownerFromHeaders, signedInFromHeaders } from '../../access-policy';
 import '../reportes/style.css';
+import AccountBackfillButton from './AccountBackfillButton';
+import { pendingBackfillAccounts } from '../../newsletter/account-backfill';
 
 export const dynamic = 'force-dynamic';
 
@@ -22,6 +24,10 @@ export default async function NewsletterAdminPage() {
   if (!ownerFromHeaders(h)) redirect('/cuenta');
   let rows: Row[] = [];
   let failed = false;
+  let pending: { email: string }[] = [];
+  try {
+    pending = await pendingBackfillAccounts(env.DB, (env as unknown as { CHESPANISH_OWNER_EMAIL?: string }).CHESPANISH_OWNER_EMAIL);
+  } catch { pending = []; }
   try {
     rows = (await env.DB.prepare('SELECT email,source_path,status,created_at,unsubscribed_at FROM newsletter_subscribers ORDER BY created_at DESC LIMIT 5000').all<Row>()).results;
   } catch { failed = true; }
@@ -33,6 +39,8 @@ export default async function NewsletterAdminPage() {
     {failed ? <p>La lista no está disponible ahora.</p> : <>
       <p>{active} activos de {rows.length} en total. Vienen del popup de regalo y de /clase-gratis.</p>
       <p><a href="/api/admin/newsletter?format=csv" download>Descargar CSV</a></p>
+      <AccountBackfillButton remaining={pending.length} />
+      {pending.length ? <p style={{ fontSize: 13, overflowWrap: 'anywhere' }}>Pendientes: {pending.map(row => row.email).join(', ')}</p> : null}
       <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: 15 }}>
         <thead><tr style={{ textAlign: 'left' }}><th>Email</th><th>Fecha</th><th>Página</th><th>Estado</th></tr></thead>
         <tbody>{rows.map(row => <tr key={row.email} style={{ borderTop: '1px solid #d7e1da' }}>
