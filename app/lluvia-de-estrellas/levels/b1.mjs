@@ -304,7 +304,7 @@ export default {
     options: [
       { say: "Yo no me iría. Fotografía a la gente del mirador: sesenta y cuatro personas mirando arriba también es un espejo.", reply: "Nunca he fotografiado personas aquí. Siempre me molestaban en el encuadre.", end: "Ulises no consiguió el espejo del salar, pero fotografió a sesenta y cuatro personas mirando arriba.", mood: "smile" },
       { say: "Llevas veinte años mirando por un visor. ¿Y si esta noche miras sin cámara?", reply: "Sin cámara me siento desnudo… Pero quizá por eso nunca disfruto de nada.", end: "Ulises dejó la cámara en la mochila y vio la lluvia con sus propios ojos.", mood: "love" },
-      { say: "Si el salar no tiene agua, haz tu propio espejo. ¿Tienes un balde?", reply: "¡Un balde! Es tan ridículo que puede ser genial. Petrona tiene uno en la cocina.", end: "Ulises hizo un espejo con un balde de agua y una foto que nadie entiende y todos aman.", mood: "laugh" },
+      { say: "Si el salar no tiene agua, haz tu propio espejo con un balde lleno.", reply: "¡Un balde! Es tan ridículo que puede ser genial. Petrona tiene uno en la cocina.", end: "Ulises hizo un espejo con un balde de agua y una foto que nadie entiende y todos aman.", mood: "laugh" },
     ],
     talk: [
       "¿Qué objetivo has perseguido durante años sin conseguirlo todavía?",

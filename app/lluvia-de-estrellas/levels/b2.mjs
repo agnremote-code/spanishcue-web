@@ -212,7 +212,7 @@ export default {
     ],
     ask: "Rocío se tapa la cara con la manta. ¿Qué le dices?",
     options: [
-      { say: "Tu cuerpo lleva siete meses programado para dormir con ruido. ¿Tienes algún audio de Martín llorando? Puede sonar raro, pero quizá te relaje.", reply: "Tengo uno de cuando le salían los dientes. Si alguien me ve, pensará que estoy loca… Da igual.", end: "Rocío se durmió escuchando el llanto de su hijo grabado en el teléfono.", mood: "sleepy" },
+      { say: "Tu cuerpo lleva siete meses programado para dormir con ruido. Pon un audio de Martín llorando. Puede sonar raro, pero quizá te relaje.", reply: "Tengo uno de cuando le salían los dientes. Si alguien me ve, pensará que estoy loca… Da igual.", end: "Rocío se durmió escuchando el llanto de su hijo grabado en el teléfono.", mood: "sleepy" },
       { say: "Olvídate de dormir. Quizá esta noche no necesites descansar, sino recordar que también existes tú.", reply: "Recordar que existo… Hace siete meses que solo soy la madre de Martín.", end: "Rocío no durmió: miró el cielo entero y dice que fue mejor que dormir.", mood: "surprised" },
       { say: "Llama a casa. Aunque sea tarde, oír que todo va bien quizá te quite la culpa.", reply: "¿Andrés? … No contesta… Espera. Oigo algo. ¡Están roncando los dos a dúo!", end: "Rocío llamó a casa, oyó roncar a su marido y al niño, y por fin se rio.", mood: "laugh" },
     ],
@@ -304,7 +304,7 @@ export default {
     options: [
       { say: "No te vayas todavía. Sesenta y cuatro personas mirando arriba también son un reflejo: el del cielo en sus caras.", reply: "En veinte años nunca he fotografiado personas aquí. Siempre me estorbaban.", end: "Ulises no consiguió el espejo del salar, pero fotografió a sesenta y cuatro personas mirando arriba.", mood: "smile" },
       { say: "Llevas veinte años mirando este cielo a través de un visor. ¿Y si esta noche lo miras sin intermediarios?", reply: "Sin cámara me siento desnudo… Quizá por eso nunca he disfrutado de verdad de lo que fotografío.", end: "Ulises dejó la cámara en la mochila y vio la lluvia con sus propios ojos.", mood: "love" },
-      { say: "Si el salar no te da el espejo, fabrícalo tú. ¿Tienes un balde?", reply: "Un balde… Es tan ridículo que solo puede salir bien. Petrona tiene uno en la cocina.", end: "Ulises hizo un espejo con un balde de agua y una foto que nadie entiende y todos aman.", mood: "laugh" },
+      { say: "Si el salar no te da el espejo, fabrícalo tú con un balde de agua.", reply: "Un balde… Es tan ridículo que solo puede salir bien. Petrona tiene uno en la cocina.", end: "Ulises hizo un espejo con un balde de agua y una foto que nadie entiende y todos aman.", mood: "laugh" },
     ],
     talk: [
       "¿Qué obsesión tuya te ha impedido disfrutar del momento presente?",
