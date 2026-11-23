@@ -109,6 +109,12 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - `npm test`: exit 0, 1,817 pass, 0 fail (pinned baseline commits fetched, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`).
     - `git diff --check`: clean.
     - Pipeline check before ready: no `automation/merge-lock` ref, and no workflow run in progress.
+  - **Release of #509 (VERIFIED):** merged as `6efcac0f`; its tree is identical to PR head `1ab81dd0`.
+    - CI + Auto Merge run [45101319818](https://github.com/agnremote-code/spanishcue-web/actions/runs/45101319818).
+    - Staging run [45103956242](https://github.com/agnremote-code/spanishcue-web/actions/runs/45103956242) and production run [45104306112](https://github.com/agnremote-code/spanishcue-web/actions/runs/45104306112) both succeeded.
+    - "Production smoke" passed (job 137461966384, 03:09:46–03:13:32Z): `"passed": true`, and the rollback was skipped.
+    - main = production = `6efcac0f`. #509 was docs only, so no URL changed and there was nothing more to smoke.
+    - The evidence is recorded here (PR `claude/monday-3d-records-20261123`).
   - **Board:** Martin only, as one subagent (authoring). Sofia and Alejandro were not convened: there was no build, and no G4 review, since nothing ships. The records PR was reviewed by a fresh agent acting as Alejandro: **APPROVE**, 0 blockers. Its 7 non-blocking notes were applied. No inter-executive messages were exchanged, so there is no transcript.
   - **Next action:**
     1. Wed 11-25 (W48 item 2): Sofia builds the Taller world on #510's branch (catalog lesson, resource page, both modes, no-WebGL fallback). Then the CPIO attestation, then G4 by a fresh agent on content and build.
