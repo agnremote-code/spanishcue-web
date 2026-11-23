@@ -81,6 +81,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-23 (Monday 3D routine): run started 02:08Z, W48 items 0, 1 (Taller unblock + authoring start) and 4** (branch `claude/monday-3d-20261123`, base main `59475b40`). Fri 11-20 left its marker (#500). Subscription usage: **UNKNOWN**.
 - **2026-11-20 (Friday 3D + assessment routine): PR #500** (branch `claude/friday-assessment-20261120`, base main `f1d4a5dd`). Run-start marker pushed at 02:09Z (W47 item 0). Thu 11-19 left its marker (#492). Subscription usage: **UNKNOWN**.
   - **Unit: gated content repair, «La boda» A1** (non-board world id 257, reported as a **repair**).
     - Source: W47 item 5, Martin's sampled G3/G6 audit [non-board-sample-g3-g6-20261120.md](../audits/non-board-sample-g3-g6-20261120.md). El tren, La boda and El mundo en blanco all pass G3 and are PASS WITH NOTES on G6, so there is no reason for noindex or removing a level. The same pattern runs through all three A1 files: past plots told with the present only.
