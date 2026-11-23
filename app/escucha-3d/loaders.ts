@@ -204,6 +204,15 @@ export const LOADERS: Record<string, Record<string, Loader>> = (import.meta as u
     C1: () => import('./content/crucero/c1.json'),
     C2: () => import('./content/crucero/c2.json'),
   },
+  perdidos: {
+    A0: () => import('./content/perdidos/a0.json'),
+    A1: () => import('./content/perdidos/a1.json'),
+    A2: () => import('./content/perdidos/a2.json'),
+    B1: () => import('./content/perdidos/b1.json'),
+    B2: () => import('./content/perdidos/b2.json'),
+    C1: () => import('./content/perdidos/c1.json'),
+    C2: () => import('./content/perdidos/c2.json'),
+  },
   estrellas: {
     A0: () => import('./content/estrellas/a0.json'),
     A1: () => import('./content/estrellas/a1.json'),

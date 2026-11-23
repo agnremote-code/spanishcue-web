@@ -155,6 +155,7 @@ export const immersiveWorldGameByLessonId: ReadonlyMap<number, string> = new Map
   [259, "papel"],
   [260, "reality"],
   [261, "crucero"],
+  [264, "perdidos"],
   [263, "estrellas"],
 ]);
 

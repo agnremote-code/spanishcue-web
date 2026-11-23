@@ -54,6 +54,7 @@ test("scene totals and save keys match each world's own engine", async () => {
     "la-boda": "../app/la-boda/engine.mjs",
     "la-casa-del-reality": "../app/la-casa-del-reality/engine.mjs",
     "ultimo-crucero": "../app/ultimo-crucero/engine.mjs",
+    "objetos-perdidos": "../app/objetos-perdidos/engine.mjs",
     "lluvia-de-estrellas": "../app/lluvia-de-estrellas/engine.mjs",
     "el-consorcio": "../app/el-consorcio/engine.mjs",
     "marketing-de-casinos": "../app/marketing-de-casinos/engine.mjs",

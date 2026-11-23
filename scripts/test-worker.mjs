@@ -31,6 +31,7 @@ try{
  await run(['--test','tests/el-tren-de-las-2340.test.mjs']);
  await run(['--test','tests/el-mundo-en-blanco.test.mjs']);
  await run(['--test','tests/ultimo-crucero.test.mjs']);
+ await run(['--test','tests/objetos-perdidos.test.mjs']);
  await run(['--test','tests/lluvia-de-estrellas.test.mjs']);
  await run(['--test','tests/clase-de-nivelacion.test.mjs']);
  await run(['--test','tests/clasicas-conversacion.test.mjs']);

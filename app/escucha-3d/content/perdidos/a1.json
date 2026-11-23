@@ -1,0 +1,1843 @@
+{
+ "game": "perdidos",
+ "level": "A1",
+ "items": [
+  {
+   "id": "dentadura",
+   "title": "La sonrisa de Don Evaristo",
+   "place": "El mostrador",
+   "context": "A las once de la noche, Don Evaristo espera en el mostrador con un pañuelo en la boca.",
+   "speakers": [
+    {
+     "name": "Evaristo",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Buenas noches. Usted es el primero del turno. ¿Qué necesita?"
+    },
+    {
+     "s": 0,
+     "text": "Mi dentadura, por favor. Anoche bailé mucho en la fiesta, al abrir la boca para cantar y… ¡adiós, dientes!"
+    },
+    {
+     "s": 1,
+     "text": "Tranquilo. Tenemos una caja con tres dentaduras. Una apareció dentro de una tuba."
+    },
+    {
+     "s": 0,
+     "text": "¿Dentro de una tuba? Yo bailé al lado de la banda municipal toda la noche…"
+    },
+    {
+     "s": 1,
+     "text": "Entonces vamos a probar esa primero."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué tiene Evaristo un pañuelo en la boca?",
+     "options": [
+      "Porque está muy resfriado",
+      "Porque hace frío en la oficina",
+      "Porque no tiene dientes"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hacía Evaristo cuando perdió la dentadura?",
+     "options": [
+      "Comía un bocadillo",
+      "Dormía en un banco",
+      "Cantaba en la fiesta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas dentaduras hay en la caja?",
+     "options": [
+      "Cuatro o cinco",
+      "Tres",
+      "Solo dos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué dentadura van a probar primero?",
+     "options": [
+      "La más pequeña de todas",
+      "La de la tuba",
+      "La más nueva"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué baile haces en las fiestas de tu ciudad?",
+     "model": "Bailo cumbia con mis amigos."
+    },
+    {
+     "q": "¿Qué parte de tu cuerpo cuidas mucho?",
+     "model": "Cuido mucho los dientes y la espalda."
+    },
+    {
+     "q": "¿Qué haces cuando algo te da vergüenza en público?",
+     "model": "Me río y cambio de tema."
+    }
+   ],
+   "gaps": "Tranquilo. Tenemos una [caja] con tres [dentaduras]. Una [apareció] dentro de una [tuba].",
+   "glossary": [
+    {
+     "word": "tranquilo",
+     "meaning": "sin nervios"
+    },
+    {
+     "word": "dentadura",
+     "meaning": "dientes artificiales"
+    },
+    {
+     "word": "banda municipal",
+     "meaning": "grupo de música de la ciudad"
+    }
+   ]
+  },
+  {
+   "id": "paraguas",
+   "title": "Si me encuentras, llama a Teo",
+   "place": "Las estanterías de paraguas",
+   "context": "Rocío deja un paraguas negro en el mostrador y mira a Celestino con una sonrisa nerviosa.",
+   "speakers": [
+    {
+     "name": "Rocío",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Hola. Vengo a dejar este paraguas. No es mío."
+    },
+    {
+     "s": 1,
+     "text": "Muy bien. Esta noche tenemos mil cuatrocientos doce paraguas negros. ¿De dónde viene este?"
+    },
+    {
+     "s": 0,
+     "text": "De la fiesta. Empezó a llover y un chico me lo dio. Después desapareció entre la gente."
+    },
+    {
+     "s": 1,
+     "text": "Mire, aquí dentro hay una etiqueta: «Si me encuentras, llama a Teo». Y un número de teléfono."
+    },
+    {
+     "s": 0,
+     "text": "Ay, no. ¿Y si llamo yo?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere hacer Rocío al principio?",
+     "options": [
+      "Dejar el paraguas",
+      "Comprar un paraguas nuevo",
+      "Buscar su abrigo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos paraguas negros hay en la oficina?",
+     "options": [
+      "Cincuenta",
+      "Más de mil",
+      "Unos cien más o menos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó con el chico?",
+     "options": [
+      "Desapareció entre la gente",
+      "Se fue en taxi a su casa",
+      "Llamó a Rocío"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene la etiqueta?",
+     "options": [
+      "Una dirección de la ciudad",
+      "Un precio en euros",
+      "Un nombre y un número"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te prestó una persona desconocida alguna vez?",
+     "model": "Una señora me prestó su bolígrafo en el banco."
+    },
+    {
+     "q": "¿Qué haces cuando empieza a llover en la calle?",
+     "model": "Corro a una cafetería y pido un té."
+    },
+    {
+     "q": "¿Qué escribes en tus cosas para no perderlas?",
+     "model": "Escribo mi nombre en los libros."
+    }
+   ],
+   "gaps": "Mire, aquí dentro hay una [etiqueta]: «Si me [encuentras], llama a [Teo]». Y un [número] de teléfono.",
+   "glossary": [
+    {
+     "word": "etiqueta",
+     "meaning": "papel pequeño con información"
+    },
+    {
+     "word": "desapareció",
+     "meaning": "ya no se vio más"
+    },
+    {
+     "word": "llover",
+     "meaning": "caer agua del cielo"
+    }
+   ]
+  },
+  {
+   "id": "llaves",
+   "title": "Tres mil llaves y una puerta",
+   "place": "El pasillo de las llaves",
+   "context": "Wilson camina despacio por el pasillo de las llaves y habla solo.",
+   "speakers": [
+    {
+     "name": "Wilson",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Qué ironía. Soy cerrajero desde hace veinte años. Abro las puertas de toda la ciudad: casas, coches, tiendas."
+    },
+    {
+     "s": 0,
+     "text": "Pero esta noche no puedo entrar en mi propio taller, porque mis llaves se quedaron en la fiesta."
+    },
+    {
+     "s": 0,
+     "text": "Aquí hay unas tres mil llaves. Mis llaves tienen un llavero amarillo con forma de pez. A ver… pez, pez, pez… ¡Un pez amarillo!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años lleva Wilson de cerrajero?",
+     "options": [
+      "Dos años",
+      "Veinte",
+      "Doce años"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué puertas abre Wilson normalmente?",
+     "options": [
+      "De casas, coches y tiendas",
+      "Solo las de su casa",
+      "Las de los bancos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuál es el problema de Wilson?",
+     "options": [
+      "No tiene trabajo esta semana",
+      "Su coche no arranca",
+      "No puede entrar en su taller"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es su llavero?",
+     "options": [
+      "Amarillo, con forma de pez",
+      "Rojo, con forma de corazón",
+      "Azul y redondo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué llavero usas para tus llaves?",
+     "model": "Uso un llavero de mi equipo de fútbol."
+    },
+    {
+     "q": "¿Qué haces si te quedas fuera de casa?",
+     "model": "Llamo a mi vecina, que tiene una copia."
+    },
+    {
+     "q": "¿Qué cosa irónica te pasó en el trabajo o en clase?",
+     "model": "El profesor de puntualidad llegó tarde."
+    }
+   ],
+   "gaps": "Pero esta noche no puedo [entrar] en mi [propio] taller, porque mis [llaves] se quedaron en la [fiesta].",
+   "glossary": [
+    {
+     "word": "ironía",
+     "meaning": "algo que pasa al revés de lo normal"
+    },
+    {
+     "word": "cerrajero",
+     "meaning": "persona que abre y arregla cerraduras"
+    },
+    {
+     "word": "llavero",
+     "meaning": "anillo o adorno para llevar las llaves"
+    }
+   ]
+  },
+  {
+   "id": "telefono",
+   "title": "La voz de Julio",
+   "place": "La estantería de los teléfonos",
+   "context": "Doña Herminia, de ochenta y un años, busca su teléfono en la estantería con Celestino.",
+   "speakers": [
+    {
+     "name": "Herminia",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mi teléfono es muy viejo, de los de botones. Nadie lo quiere robar, pero para mí es muy importante."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué, señora?"
+    },
+    {
+     "s": 0,
+     "text": "Porque tiene el último mensaje de voz de mi marido, Julio. Lo escucho todas las noches antes de dormir."
+    },
+    {
+     "s": 1,
+     "text": "Escuche… algo suena en la caja de los teléfonos."
+    },
+    {
+     "s": 0,
+     "text": "¡Es mi teléfono! Y llama Iker, mi nieto. Seguro que llama desde las once."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo es el teléfono de Herminia?",
+     "options": [
+      "Viejo, de botones",
+      "Nuevo y caro",
+      "Grande, con una pantalla rota"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene el teléfono?",
+     "options": [
+      "Fotos de su boda",
+      "Una canción de la radio",
+      "El último mensaje de Julio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo escucha Herminia el mensaje?",
+     "options": [
+      "Durante el desayuno",
+      "Los domingos",
+      "Antes de dormir"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién llama al teléfono?",
+     "options": [
+      "Su nieto",
+      "El vecino del quinto piso",
+      "Su marido"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mensaje de voz no quieres borrar?",
+     "model": "Un mensaje de cumpleaños de mi abuelo."
+    },
+    {
+     "q": "¿Qué haces todas las noches antes de dormir?",
+     "model": "Leo diez páginas de un libro."
+    },
+    {
+     "q": "¿Quién de tu familia te llama mucho?",
+     "model": "Mi madre me llama casi todos los días."
+    }
+   ],
+   "gaps": "Porque tiene el [último] mensaje de [voz] de mi [marido], [Julio].",
+   "glossary": [
+    {
+     "word": "botones",
+     "meaning": "partes que se aprietan en un aparato"
+    },
+    {
+     "word": "mensaje de voz",
+     "meaning": "grabación que alguien deja en el teléfono"
+    },
+    {
+     "word": "nieto",
+     "meaning": "hijo de tu hijo o de tu hija"
+    }
+   ]
+  },
+  {
+   "id": "bonsai",
+   "title": "Un árbol que no crece",
+   "place": "La cámara fría",
+   "context": "Entre plantas olvidadas, Gaspar encuentra un bonsái.",
+   "speakers": [
+    {
+     "name": "Gaspar",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Aquí está! El bonsái de mi abuelo. Tiene sesenta años. Antes de morir, mi abuelo me dijo: «Riégalo todos los días»."
+    },
+    {
+     "s": 0,
+     "text": "Y yo lo riego todos los días, desde hace veinte años. Nunca crece, pero siempre está verde."
+    },
+    {
+     "s": 0,
+     "text": "Un momento… esta hoja es muy dura. Y esta también. ¡Es de plástico! Ay, abuelo. Veinte años regando un árbol de plástico."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está el bonsái?",
+     "options": [
+      "En la estantería de los paraguas",
+      "En la cámara fría",
+      "En la azotea"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le dijo el abuelo a Gaspar?",
+     "options": [
+      "Que lo regara todos los días",
+      "Que lo vendiera",
+      "Que lo plantara en el jardín de su casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pasa con el árbol?",
+     "options": [
+      "Nunca crece",
+      "Pierde las hojas en invierno",
+      "Da flores rojas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué no crece?",
+     "options": [
+      "Porque hace frío",
+      "Porque es de plástico",
+      "Porque Gaspar no lo riega"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué consejo de tus abuelos recuerdas?",
+     "model": "Mi abuela decía: «Come despacio»."
+    },
+    {
+     "q": "¿Qué cosa haces cada día sin pensar?",
+     "model": "Preparo café sin pensar."
+    },
+    {
+     "q": "¿Qué broma de tu familia te hace reír?",
+     "model": "Mi padre esconde mis zapatos."
+    }
+   ],
+   "gaps": "Y yo lo [riego] todos los días, desde hace [veinte] años. Nunca [crece], pero siempre está [verde].",
+   "glossary": [
+    {
+     "word": "bonsái",
+     "meaning": "árbol muy pequeño en una maceta"
+    },
+    {
+     "word": "riego",
+     "meaning": "le doy agua"
+    },
+    {
+     "word": "crece",
+     "meaning": "se hace más grande"
+    }
+   ]
+  },
+  {
+   "id": "taper",
+   "title": "Doscientos doce táperes",
+   "place": "La cámara fría",
+   "context": "Álex entra corriendo en la cámara fría.",
+   "speakers": [
+    {
+     "name": "Álex",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Por favor, necesito el táper de mi madre. Lo olvidé en el metro. Si no lo devuelvo, mi madre me mata."
+    },
+    {
+     "s": 1,
+     "text": "Tranquilo. Hay doscientos doce táperes. ¿Cómo es el suyo?"
+    },
+    {
+     "s": 0,
+     "text": "Azul, con la tapa verde. Y tiene un nombre grabado: Lupe. Mi madre graba su nombre en todos sus táperes."
+    },
+    {
+     "s": 1,
+     "text": "Aquí está. Hay algo dentro: lentejas y una nota. Dice: «Llámame más»."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es?",
+     "options": [
+      "Las doce de la noche",
+      "Las ocho y media",
+      "Las cuatro de la mañana"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde olvidó Álex el táper?",
+     "options": [
+      "En el trabajo",
+      "En el metro",
+      "En casa de un amigo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué color es la tapa?",
+     "options": [
+      "Verde",
+      "Azul oscuro",
+      "Blanca con flores"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay dentro del táper?",
+     "options": [
+      "Lentejas y una nota",
+      "Arroz con pollo",
+      "Una sopa fría"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué comida de tu madre o de tu padre es tu favorita?",
+     "model": "Las lentejas de mi madre son mis favoritas."
+    },
+    {
+     "q": "¿Qué cosa olvidas en el transporte público?",
+     "model": "Olvido los guantes en el autobús."
+    },
+    {
+     "q": "¿Cada cuánto llamas a tu familia?",
+     "model": "Llamo a mi familia dos veces por semana."
+    }
+   ],
+   "gaps": "Azul, con la [tapa] verde. Y tiene un [nombre] grabado: [Lupe]. Mi madre graba su nombre en todos sus [táperes].",
+   "glossary": [
+    {
+     "word": "táper",
+     "meaning": "recipiente de plástico para la comida"
+    },
+    {
+     "word": "tapa",
+     "meaning": "parte de arriba que cierra"
+    },
+    {
+     "word": "lentejas",
+     "meaning": "legumbres pequeñas y redondas"
+    }
+   ]
+  },
+  {
+   "id": "guante",
+   "title": "Cuarenta años preguntando",
+   "place": "El archivo",
+   "context": "Como todos los años, la noche después de la fiesta, Doña Aurora visita el archivo.",
+   "speakers": [
+    {
+     "name": "Aurora",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Aurora, buenas noches. Puntual, como siempre."
+    },
+    {
+     "s": 0,
+     "text": "Buenas noches, Celestino. Ya sabe a qué vengo. Mi guante rojo, de la fiesta de mil novecientos ochenta y seis."
+    },
+    {
+     "s": 1,
+     "text": "Usted pregunta todos los años, y yo siempre digo que no."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Y yo siempre vuelvo. Es que aquella noche conocí a alguien. Un chico tímido, de esta oficina."
+    },
+    {
+     "s": 1,
+     "text": "Aurora… ese chico tímido era yo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo visita Aurora la oficina?",
+     "options": [
+      "Todos los lunes",
+      "Solo en verano",
+      "Cada año, después de la fiesta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué busca Aurora?",
+     "options": [
+      "Un abrigo de invierno",
+      "Un sombrero negro",
+      "Un guante rojo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué contesta Celestino cada año?",
+     "options": [
+      "Que no",
+      "Que el guante está en el archivo",
+      "Que no sabe nada"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién era el chico tímido?",
+     "options": [
+      "Celestino",
+      "Un músico de la banda",
+      "El hermano de Aurora"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugar visitas una vez al año?",
+     "model": "Visito el pueblo de mis abuelos en agosto."
+    },
+    {
+     "q": "¿Qué persona tímida conoces?",
+     "model": "Mi compañero de trabajo es muy tímido."
+    },
+    {
+     "q": "¿En qué lugar conociste a tu persona favorita?",
+     "model": "La conocí en una clase de baile."
+    }
+   ],
+   "gaps": "Sí. Y yo siempre [vuelvo]. Es que aquella [noche] conocí a [alguien]. Un chico [tímido], de esta oficina.",
+   "glossary": [
+    {
+     "word": "puntual",
+     "meaning": "que llega a la hora"
+    },
+    {
+     "word": "guante",
+     "meaning": "prenda para la mano"
+    },
+    {
+     "word": "tímido",
+     "meaning": "que tiene vergüenza de hablar"
+    }
+   ]
+  },
+  {
+   "id": "anillo",
+   "title": "Un nombre equivocado",
+   "place": "La sala de objetos grandes",
+   "context": "Vanesa y Óliver buscan el anillo de boda entre los objetos grandes. Hay un vestido de novia en un maniquí.",
+   "speakers": [
+    {
+     "name": "Vanesa",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Óliver",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Nos casamos el sábado, Óliver. ¡El sábado! Y el anillo no aparece."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, mi amor, podemos comprar otro. Uno más bonito."
+    },
+    {
+     "s": 0,
+     "text": "¿Otro? Tú elegiste este anillo con mucho cariño, ¿no?"
+    },
+    {
+     "s": 1,
+     "text": "Pues… más o menos. El joyero grabó un nombre dentro. Y no es Vanesa. Es Jessica."
+    },
+    {
+     "s": 0,
+     "text": "¿Jessica? ¿Tu exnovia Jessica?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo es la boda?",
+     "options": [
+      "El próximo mes de mayo",
+      "El sábado",
+      "Mañana"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Óliver?",
+     "options": [
+      "Cancelar la boda",
+      "Buscar en la calle toda la noche",
+      "Comprar otro anillo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué nombre tiene el anillo?",
+     "options": [
+      "Vanesa",
+      "Lupe",
+      "Jessica"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién es Jessica?",
+     "options": [
+      "La hermana de Vanesa",
+      "La exnovia de Óliver",
+      "La joyera de la tienda"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué regalo elegiste con mucho cariño?",
+     "model": "Busqué un libro antiguo para mi padre."
+    },
+    {
+     "q": "¿Qué error de otra persona te hizo reír?",
+     "model": "Un camarero escribió mal mi nombre en el café."
+    },
+    {
+     "q": "¿Qué joya de tu familia es especial?",
+     "model": "El collar de mi abuela."
+    }
+   ],
+   "gaps": "Pues… más o [menos]. El [joyero] grabó un [nombre] dentro. Y no es [Vanesa].",
+   "glossary": [
+    {
+     "word": "nos casamos",
+     "meaning": "hacemos nuestra boda"
+    },
+    {
+     "word": "joyero",
+     "meaning": "persona que vende o hace joyas"
+    },
+    {
+     "word": "exnovia",
+     "meaning": "antigua novia"
+    }
+   ]
+  },
+  {
+   "id": "tuba",
+   "title": "El mejor concierto de Fidel",
+   "place": "La sala de objetos grandes",
+   "context": "Fidel, tuba de la banda municipal, encuentra su instrumento entre una canoa y un vestido de novia.",
+   "speakers": [
+    {
+     "name": "Fidel",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mi tuba, por fin. Toco en la banda municipal desde hace doce años, y soy el peor músico de la banda. Todos lo saben."
+    },
+    {
+     "s": 0,
+     "text": "Pero anoche, en el desfile, mi tuba sonó perfecta. La gente aplaudía. El director me miraba sorprendido."
+    },
+    {
+     "s": 0,
+     "text": "Y ahora me dicen que había una dentadura dentro. Entonces… ¿no tocaba yo? ¿Tocaba la dentadura?"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años lleva Fidel en la banda?",
+     "options": [
+      "Veinte años",
+      "Dos años y medio",
+      "Doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo es Fidel como músico, según él?",
+     "options": [
+      "El mejor de la ciudad",
+      "El peor de la banda",
+      "Muy famoso"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pasó anoche en el desfile?",
+     "options": [
+      "La tuba sonó perfecta",
+      "Fidel se cayó",
+      "Empezó a llover"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué duda tiene Fidel?",
+     "options": [
+      "Si va a llover",
+      "Dónde está el director",
+      "Si tocaba él o la dentadura"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa haces mal y te gusta igual?",
+     "model": "Canto mal, pero me encanta cantar."
+    },
+    {
+     "q": "¿Qué desfile te gusta ver en tu ciudad?",
+     "model": "Me gusta el desfile de carnaval."
+    },
+    {
+     "q": "¿Cuándo te aplaudió la gente?",
+     "model": "En una obra de teatro de la escuela."
+    }
+   ],
+   "gaps": "Pero anoche, en el [desfile], mi tuba sonó [perfecta]. La gente [aplaudía]. El [director] me miraba sorprendido.",
+   "glossary": [
+    {
+     "word": "desfile",
+     "meaning": "grupo de personas que pasa por la calle en una fiesta"
+    },
+    {
+     "word": "aplaudía",
+     "meaning": "chocaba las manos para felicitar"
+    },
+    {
+     "word": "director",
+     "meaning": "persona que dirige la banda"
+    }
+   ]
+  },
+  {
+   "id": "canoa",
+   "title": "La Gaviota tiene dos dueños",
+   "place": "La sala de objetos grandes",
+   "context": "Dos amigos están delante de una canoa. Llevan diez años sin hablarse.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Guille",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Esta canoa es mía. Se llama La Gaviota. Anoche la usé en la carrera del río."
+    },
+    {
+     "s": 1,
+     "text": "Perdona, pero La Gaviota es mía. Mi padre la compró."
+    },
+    {
+     "s": 0,
+     "text": "Tu padre la compró, pero yo la pinté. Mira, aquí están nuestros nombres: Nacho y Guille, mil novecientos noventa y ocho."
+    },
+    {
+     "s": 1,
+     "text": "Teníamos doce años. Y ahora no nos hablamos. Qué tontos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿De qué color es la canoa?",
+     "options": [
+      "Verde con rayas blancas",
+      "Roja",
+      "Azul"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde usó Nacho la canoa anoche?",
+     "options": [
+      "En el lago del parque",
+      "En la carrera del río",
+      "En el mar, con amigos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Quién pintó la canoa?",
+     "options": [
+      "El padre de Guille",
+      "Guille y su padre juntos",
+      "Nacho"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años tenían en 1998?",
+     "options": [
+      "Dieciocho años",
+      "Doce",
+      "Veinte"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Con qué amigo ya no hablas?",
+     "model": "Ya no hablo con un compañero del colegio."
+    },
+    {
+     "q": "¿Qué objeto compartiste con alguien de niño?",
+     "model": "Mi hermano y yo teníamos una bicicleta para los dos."
+    },
+    {
+     "q": "¿Qué carrera o competición viste en tu ciudad?",
+     "model": "Vi una maratón en el centro."
+    }
+   ],
+   "gaps": "Tu padre la [compró], pero yo la [pinté]. Mira, aquí están nuestros [nombres]: [Nacho] y Guille",
+   "glossary": [
+    {
+     "word": "canoa",
+     "meaning": "barco pequeño y estrecho"
+    },
+    {
+     "word": "carrera",
+     "meaning": "competición de velocidad"
+    },
+    {
+     "word": "tontos",
+     "meaning": "personas que actúan sin pensar"
+    }
+   ]
+  },
+  {
+   "id": "cenizas",
+   "title": "El perro de la línea 14",
+   "place": "El muelle de carga",
+   "context": "En el muelle de carga, Lisandro habla con Mari Carmen, conductora de autobús.",
+   "speakers": [
+    {
+     "name": "Lisandro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Mari Carmen",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Disculpe, busco una urna pequeña de madera. Son las cenizas de mi perro, Canelo. Vivió catorce años conmigo."
+    },
+    {
+     "s": 1,
+     "text": "¡Ay, la urna! La encontré en mi autobús, en la línea 14. La puse delante, al lado del volante."
+    },
+    {
+     "s": 0,
+     "text": "¿Toda la noche?"
+    },
+    {
+     "s": 1,
+     "text": "Toda la noche. Y fue una noche perfecta: sin accidentes, sin peleas, sin borrachos. Su perro cuidó el autobús."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años vivió Canelo?",
+     "options": [
+      "Cuatro años",
+      "Catorce",
+      "Cuarenta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué es la urna?",
+     "options": [
+      "De metal dorado",
+      "De madera",
+      "De cristal"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde puso Mari Carmen la urna?",
+     "options": [
+      "En la ventana de atrás",
+      "En el suelo",
+      "Al lado del volante"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo fue la noche en el autobús?",
+     "options": [
+      "Muy difícil y peligrosa",
+      "Perfecta, sin problemas",
+      "Aburrida y muy lenta"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué animal fue importante en tu vida?",
+     "model": "Mi gata Luna fue muy importante."
+    },
+    {
+     "q": "¿Qué amuleto o cosa de la suerte llevas?",
+     "model": "Llevo una moneda de mi abuelo."
+    },
+    {
+     "q": "¿Cómo es tu línea de autobús favorita?",
+     "model": "Es la que va por el parque."
+    }
+   ],
+   "gaps": "¡Ay, la [urna]! La [encontré] en mi autobús, en la [línea] 14. La puse delante, al lado del [volante].",
+   "glossary": [
+    {
+     "word": "urna",
+     "meaning": "caja para guardar las cenizas"
+    },
+    {
+     "word": "volante",
+     "meaning": "rueda para dirigir un vehículo"
+    },
+    {
+     "word": "borrachos",
+     "meaning": "personas que bebieron demasiado alcohol"
+    }
+   ]
+  },
+  {
+   "id": "loro",
+   "title": "Fígaro reconoce una voz",
+   "place": "El muelle de carga",
+   "context": "En el muelle de carga, un taxista tiene una jaula con un loro. Llega Doña Fefa.",
+   "speakers": [
+    {
+     "name": "Rubén",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Fefa",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "¡Fígaro! Mi niño. Lo olvidé en su taxi anoche, joven. Gracias."
+    },
+    {
+     "s": 0,
+     "text": "¿Fígaro? Señora, mi loro se llamaba Fígaro. Se me escapó por la ventana hace seis años."
+    },
+    {
+     "s": 1,
+     "text": "Pues yo lo encontré hace seis años en mi balcón. Es mío desde entonces."
+    },
+    {
+     "s": 0,
+     "text": "Fígaro, ¿quién soy?"
+    },
+    {
+     "s": 1,
+     "text": "No va a contestar. Él solo habla con… ¡Ay! Dijo «Rubén»."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde olvidó Fefa el loro?",
+     "options": [
+      "En el autobús",
+      "En el taxi de Rubén",
+      "En la farmacia de guardia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo se escapó el loro de Rubén?",
+     "options": [
+      "Por la ventana",
+      "Por la puerta del taxi",
+      "En el parque"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde encontró Fefa al loro?",
+     "options": [
+      "En la calle de la fiesta",
+      "En una tienda",
+      "En su balcón"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dice el loro al final?",
+     "options": [
+      "«Fefa»",
+      "«Hola, guapa»",
+      "«Rubén»"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué animal te gustaría tener en tu balcón?",
+     "model": "Me gustaría tener un gato."
+    },
+    {
+     "q": "¿Qué palabras repites mucho?",
+     "model": "Repito mucho «vale» y «bueno»."
+    },
+    {
+     "q": "¿Qué mascota de tu infancia recuerdas?",
+     "model": "Recuerdo un pez naranja."
+    }
+   ],
+   "gaps": "¿Fígaro? Señora, mi [loro] se llamaba Fígaro. Se me [escapó] por la [ventana] hace seis [años].",
+   "glossary": [
+    {
+     "word": "niño",
+     "meaning": "aquí, palabra de cariño"
+    },
+    {
+     "word": "balcón",
+     "meaning": "parte de la casa que sale hacia la calle"
+    },
+    {
+     "word": "escapó",
+     "meaning": "se fue"
+    }
+   ]
+  },
+  {
+   "id": "ladron",
+   "title": "El hombre de la gorra",
+   "place": "La calle",
+   "context": "En la calle, un hombre con gorra llama a Celestino.",
+   "speakers": [
+    {
+     "name": "Tato",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Psst. Señor. Aquí tiene: catorce carteras. Todas de la fiesta."
+    },
+    {
+     "s": 1,
+     "text": "¿Catorce? ¿Usted las encontró?"
+    },
+    {
+     "s": 0,
+     "text": "Encontrar, encontrar… no. Soy carterista. Pero esta noche no puedo dormir. Una de las carteras tiene la foto de una niña, y me recordó a mi hija."
+    },
+    {
+     "s": 1,
+     "text": "Bueno, gracias. ¿Algo más?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. La ley dice que hay una recompensa. Quiero mi diez por ciento."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas carteras trae el hombre?",
+     "options": [
+      "Catorce",
+      "Cuatro",
+      "Cuarenta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué trabajo tiene el hombre?",
+     "options": [
+      "Es vigilante",
+      "Es taxista de noche",
+      "Es carterista"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué no puede dormir?",
+     "options": [
+      "Por el ruido de la calle",
+      "Porque toma mucho café",
+      "Por la foto de una niña"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pide al final?",
+     "options": [
+      "Un vaso de agua",
+      "El diez por ciento",
+      "Perdón al alcalde"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te quita el sueño por la noche?",
+     "model": "Me quita el sueño el trabajo."
+    },
+    {
+     "q": "¿Qué foto de tu familia guardas en el teléfono?",
+     "model": "Tengo una foto de mi perro."
+    },
+    {
+     "q": "¿Qué cosa devolviste a alguien?",
+     "model": "Devolví un libro de la biblioteca muy tarde."
+    }
+   ],
+   "gaps": "Encontrar, encontrar… no. Soy [carterista]. Pero esta noche no puedo [dormir]. Una de las [carteras] tiene la [foto] de una niña",
+   "glossary": [
+    {
+     "word": "carterista",
+     "meaning": "ladrón de carteras"
+    },
+    {
+     "word": "recompensa",
+     "meaning": "premio por ayudar"
+    },
+    {
+     "word": "ley",
+     "meaning": "norma oficial de un país"
+    }
+   ]
+  },
+  {
+   "id": "sonambulo",
+   "title": "Rey por una noche",
+   "place": "La puerta de la farmacia",
+   "context": "En la puerta de la farmacia, Benja, en pijama y con un solo zapato, habla con Gloria, la farmacéutica.",
+   "speakers": [
+    {
+     "name": "Benja",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Gloria",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone. Me desperté en un banco del parque. Tengo un solo zapato y no tengo teléfono. ¿Qué pasó anoche?"
+    },
+    {
+     "s": 1,
+     "text": "¿No te acuerdas? Cantaste en el karaoke de la fiesta. Toda la plaza cantaba contigo."
+    },
+    {
+     "s": 0,
+     "text": "¿Yo? Pero yo no canto nunca."
+    },
+    {
+     "s": 1,
+     "text": "Anoche sí. Ganaste el concurso. Tu trofeo y tu zapato están en la oficina de enfrente."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde se despertó Benja?",
+     "options": [
+      "En su casa",
+      "En la farmacia",
+      "En un banco del parque"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le falta a Benja?",
+     "options": [
+      "Un zapato y el teléfono",
+      "Su chaqueta nueva",
+      "Las llaves de su casa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hizo Benja anoche?",
+     "options": [
+      "Bailó con la banda municipal",
+      "Durmió en casa",
+      "Cantó en el karaoke"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde están el trofeo y el zapato?",
+     "options": [
+      "En la oficina",
+      "En el parque",
+      "En el karaoke de la plaza"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué canción te da vergüenza cantar en público?",
+     "model": "Canto canciones viejas de rock."
+    },
+    {
+     "q": "¿Qué concurso te gustaría ganar?",
+     "model": "Me gustaría ganar un concurso de cocina."
+    },
+    {
+     "q": "¿Qué haces cuando no recuerdas algo importante?",
+     "model": "Miro las fotos de mi teléfono."
+    }
+   ],
+   "gaps": "¿No te acuerdas? [Cantaste] en el [karaoke] de la fiesta. Toda la [plaza] cantaba [contigo].",
+   "glossary": [
+    {
+     "word": "banco",
+     "meaning": "asiento largo en la calle o el parque"
+    },
+    {
+     "word": "concurso",
+     "meaning": "competición con premio"
+    },
+    {
+     "word": "enfrente",
+     "meaning": "al otro lado de la calle"
+    }
+   ]
+  },
+  {
+   "id": "farol",
+   "title": "Un farol sin cielo",
+   "place": "La azotea",
+   "context": "En la azotea, entre antenas, Selene encuentra un farol de papel medio quemado.",
+   "speakers": [
+    {
+     "name": "Selene",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Anoche, en la Noche de los Faroles, dejé un deseo escrito en un farol de papel. Todo el mundo lo hace."
+    },
+    {
+     "s": 0,
+     "text": "Encendí la vela, y el farol subió un poco… pero el viento lo trajo aquí, a la azotea de esta oficina. El fuego se apagó."
+    },
+    {
+     "s": 0,
+     "text": "Aquí está. Mi deseo no se quemó. Todavía se puede leer. Y no quiero que nadie lo lea. Es muy personal."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hace la gente en la Noche de los Faroles?",
+     "options": [
+      "Canta en la playa",
+      "Escribe deseos en faroles",
+      "Pinta las calles"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Adónde llevó el viento el farol?",
+     "options": [
+      "A la azotea de la oficina",
+      "Al río de la ciudad",
+      "Al parque central de la ciudad"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pasó con el fuego?",
+     "options": [
+      "Quemó las antenas",
+      "Se apagó",
+      "Subió al cielo con el farol"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo es el deseo de Selene?",
+     "options": [
+      "Muy divertido",
+      "Muy personal",
+      "Para su familia"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué deseo pides en tu cumpleaños?",
+     "model": "Pido salud para mi familia."
+    },
+    {
+     "q": "¿Qué tradición de tu ciudad te gusta?",
+     "model": "Me gustan los fuegos artificiales de fin de año."
+    },
+    {
+     "q": "¿Qué escribes solo para ti?",
+     "model": "Escribo un diario por la noche."
+    }
+   ],
+   "gaps": "Encendí la [vela], y el farol [subió] un poco… pero el [viento] lo trajo aquí, a la [azotea] de esta oficina.",
+   "glossary": [
+    {
+     "word": "farol",
+     "meaning": "lámpara de papel con una vela"
+    },
+    {
+     "word": "vela",
+     "meaning": "cilindro de cera que da luz"
+    },
+    {
+     "word": "azotea",
+     "meaning": "techo plano de un edificio"
+    }
+   ]
+  },
+  {
+   "id": "diario",
+   "title": "Doscientas páginas de jefa",
+   "place": "La azotea",
+   "context": "Yuri, el vigilante, toma un café en la azotea. Tiene un cuaderno en la mano.",
+   "speakers": [
+    {
+     "name": "Yuri",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "A la una de la mañana encontré una mochila perdida. Dentro había un diario. Empecé a leer… y no puedo parar."
+    },
+    {
+     "s": 0,
+     "text": "Es la historia de una mujer seria que de noche baila salsa a escondidas y escribe poemas malos para un vecino."
+    },
+    {
+     "s": 0,
+     "text": "Página ciento ochenta: «Hoy, en la oficina, Celestino me trajo un café». ¿Celestino? ¿La oficina? ¡Es el diario de mi jefa!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué hora encontró Yuri la mochila?",
+     "options": [
+      "A las once de la noche",
+      "A la una de la mañana",
+      "A las seis"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hace la mujer del diario de noche?",
+     "options": [
+      "Baila salsa a escondidas",
+      "Trabaja en un bar del centro",
+      "Duerme en el sofá"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Para quién escribe poemas?",
+     "options": [
+      "Para su jefe",
+      "Para Celestino y Yuri",
+      "Para un vecino"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo sabe Yuri de quién es el diario?",
+     "options": [
+      "Por una frase sobre Celestino",
+      "Por una foto de la jefa",
+      "Por el nombre en la mochila"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué haces a escondidas para relajarte?",
+     "model": "Como chocolate a escondidas."
+    },
+    {
+     "q": "¿Qué libro no pudiste dejar de leer?",
+     "model": "Una novela de misterio, en una noche."
+    },
+    {
+     "q": "¿Qué te trae un compañero de trabajo o de clase?",
+     "model": "Mi compañera me trae galletas."
+    }
+   ],
+   "gaps": "Es la historia de una [mujer] seria que de noche baila [salsa] a escondidas y escribe [poemas] malos para un [vecino].",
+   "glossary": [
+    {
+     "word": "mochila",
+     "meaning": "bolsa que se lleva en la espalda"
+    },
+    {
+     "word": "a escondidas",
+     "meaning": "sin que nadie lo vea"
+    },
+    {
+     "word": "poemas",
+     "meaning": "textos en verso"
+    }
+   ]
+  },
+  {
+   "id": "alcalde",
+   "title": "Urgente con número",
+   "place": "La sala de espera",
+   "context": "A las cinco de la mañana, Ernesto espera en la sala de espera con un papel en la mano.",
+   "speakers": [
+    {
+     "name": "Ernesto",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Perdone, tengo el número doscientos cuarenta y siete, pero esto es muy urgente. Trabajo para el alcalde."
+    },
+    {
+     "s": 1,
+     "text": "Aquí todos tienen algo urgente, señor. ¿Qué busca?"
+    },
+    {
+     "s": 0,
+     "text": "La llave de oro de la ciudad. El alcalde la usó en la fiesta y después… desapareció. A las nueve tiene una foto con ella."
+    },
+    {
+     "s": 1,
+     "text": "La tenemos. Pero no es de oro. Es de chocolate. Y le falta un trozo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué número tiene Ernesto?",
+     "options": [
+      "El 742",
+      "El 24",
+      "El 247"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Para quién trabaja Ernesto?",
+     "options": [
+      "Para el alcalde",
+      "Para la farmacéutica",
+      "Para la banda"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tiene el alcalde a las nueve?",
+     "options": [
+      "Una foto con la llave",
+      "Una reunión en el banco",
+      "Un desayuno"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué problema tiene la llave?",
+     "options": [
+      "Está rota en dos partes",
+      "Le falta un trozo",
+      "Es falsa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué te parece urgente y a otros no?",
+     "model": "Contestar los mensajes me parece urgente."
+    },
+    {
+     "q": "¿Qué chocolate te gusta regalar?",
+     "model": "Me gusta regalar chocolate con naranja."
+    },
+    {
+     "q": "¿Cuánto tiempo esperas sin enfadarte?",
+     "model": "Espero unos veinte minutos."
+    }
+   ],
+   "gaps": "La llave de [oro] de la ciudad. El alcalde la [usó] en la [fiesta] y después… [desapareció].",
+   "glossary": [
+    {
+     "word": "urgente",
+     "meaning": "que no puede esperar"
+    },
+    {
+     "word": "trozo",
+     "meaning": "parte pequeña de algo"
+    },
+    {
+     "word": "alcalde",
+     "meaning": "persona que dirige la ciudad"
+    }
+   ]
+  },
+  {
+   "id": "relevo",
+   "title": "El cambio de turno",
+   "place": "El despacho de la jefa",
+   "context": "Doña Pura entra en su despacho. Celestino la espera con el libro de registro.",
+   "speakers": [
+    {
+     "name": "Pura",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Buenos días, Celestino. ¿Cómo fue la primera noche del turno nuevo? Mi apuesta: menos de doce objetos devueltos."
+    },
+    {
+     "s": 1,
+     "text": "Lea el libro, jefa. Una dentadura, un loro, una canoa, un guante de mil novecientos ochenta y seis…"
+    },
+    {
+     "s": 0,
+     "text": "¿El guante de Aurora? ¿Por fin?"
+    },
+    {
+     "s": 1,
+     "text": "Por fin. Ah, y esto es suyo. Lo encontró Yuri en una mochila. No lo leyó… mucho."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es?",
+     "options": [
+      "Las siete en punto",
+      "Las seis y media",
+      "Las ocho y cuarto"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué apuesta Doña Pura?",
+     "options": [
+      "Más de veinte objetos",
+      "Menos de doce objetos",
+      "Treinta objetos o más"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué objeto sorprende a Doña Pura?",
+     "options": [
+      "La canoa roja",
+      "El loro de Fefa",
+      "El guante de Aurora"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le da Celestino al final?",
+     "options": [
+      "Su diario",
+      "Las llaves de la oficina",
+      "Un café con leche"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cómo eres tú el primer día en una oficina desconocida?",
+     "model": "Al principio hablo poco y escucho mucho."
+    },
+    {
+     "q": "¿Qué apuesta hiciste con un amigo?",
+     "model": "Aposté una cena por un partido de fútbol."
+    },
+    {
+     "q": "¿Qué haces al final de un día largo?",
+     "model": "Me ducho y ceno sin prisa."
+    }
+   ],
+   "gaps": "Lea el [libro], jefa. Una [dentadura], un [loro], una [canoa]",
+   "glossary": [
+    {
+     "word": "jefa",
+     "meaning": "mujer que dirige un trabajo"
+    },
+    {
+     "word": "apuesta",
+     "meaning": "acuerdo sobre lo que va a pasar"
+    },
+    {
+     "word": "devueltos",
+     "meaning": "que volvieron a su dueño"
+    }
+   ]
+  }
+ ]
+}
