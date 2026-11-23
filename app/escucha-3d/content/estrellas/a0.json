@@ -200,7 +200,7 @@
      "q": "¿Qué hay esta noche en el cielo?",
      "qEn": "What is there in the sky tonight?",
      "options": [
-      "Hay mucho sol",
+      "Hay un sol muy fuerte",
       "Hay nubes",
       "Hay estrellas"
      ],
@@ -1194,7 +1194,7 @@
      "q": "¿Qué hay en el camping?",
      "qEn": "What is there at the campsite?",
      "options": [
-      "Mucho ruido",
+      "Mucho ruido de coches",
       "Música alta",
       "Mucho silencio"
      ],
@@ -1833,9 +1833,9 @@
    ],
    "open": [
     {
-     "q": "¿En qué mes cumple años tu mejor amigo o amiga?",
-     "qEn": "In which month does your best friend have a birthday?",
-     "model": "Mi mejor amiga cumple años en julio."
+     "q": "¿En qué mes cumple años la persona que más quieres?",
+     "qEn": "In which month does the person you love most have a birthday?",
+     "model": "Mi madre cumple años en julio."
     },
     {
      "q": "¿Qué parte del periódico o de las noticias lees primero?",

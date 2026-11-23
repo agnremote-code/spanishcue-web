@@ -89,7 +89,7 @@
    ],
    "open": [
     {
-     "q": "¿Qué te enseñó un abuelo o una persona mayor cuando eras pequeño o pequeña?",
+     "q": "¿Qué te enseñó un abuelo o una persona mayor en tu infancia?",
      "model": "Mi abuela me enseñó a hacer pan."
     },
     {
@@ -1346,7 +1346,7 @@
    ],
    "open": [
     {
-     "q": "¿Qué construiste con materiales caseros cuando eras pequeño o pequeña?",
+     "q": "¿Qué construiste con materiales caseros en tu infancia?",
      "model": "Hice una casa para mis muñecos con cajas."
     },
     {

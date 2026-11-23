@@ -612,7 +612,7 @@
     },
     {
      "q": "Narra una situación en la que te juzgaron por ser nuevo en un lugar y cómo cambió esa percepción.",
-     "model": "En mi primer trabajo pensaban que era antipático; solo era tímido, y lo entendieron en la cena de Navidad."
+     "model": "En mi primer trabajo pensaban que me faltaba simpatía; solo era timidez, y lo entendieron en la cena de Navidad."
     },
     {
      "q": "Redacta el mensaje que dejarías en el salar para una civilización desconocida, en tono diplomático y luego en tono coloquial.",
@@ -2330,7 +2330,7 @@
    "open": [
     {
      "q": "Escribe tu propia última línea para una noche importante de tu vida y justifica por qué elegiste esas palabras.",
-     "model": "«Llegamos tarde a todo y aun así llegamos juntos»; resume una boda en la que todo salió mal y fue perfecta."
+     "model": "«Llegamos tarde a todo y aun así llegamos a la vez»; resume una boda en la que todo salió mal y fue perfecta."
     },
     {
      "q": "Defiende o rebate: los mejores textos sobre los demás acaban siempre hablando de quien los escribe.",

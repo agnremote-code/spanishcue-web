@@ -451,7 +451,7 @@
      "options": [
       "Que es digna de un experto",
       "Que es demasiado difícil",
-      "Que nadie la va a entender"
+      "Que nadie la va a entender nunca"
      ],
      "answer": 0
     }
@@ -698,7 +698,7 @@
     {
      "q": "¿Qué critica Lucía de algunos colegas?",
      "options": [
-      "Que no saben explicar la ciencia",
+      "Que no saben explicar la ciencia con sencillez",
       "Que buscan la fama a cualquier precio",
       "Que cobran demasiado por sus charlas"
      ],
@@ -1216,8 +1216,8 @@
    ],
    "open": [
     {
-     "q": "¿En qué situación te sentiste culpable por estar bien mientras otros te necesitaban?",
-     "model": "Cuando me fui de vacaciones y mi madre estaba sola en casa."
+     "q": "¿En qué situación te dio culpa estar bien mientras otros te necesitaban?",
+     "model": "Cuando me fui de vacaciones y mi madre se quedó sin compañía en casa."
     },
     {
      "q": "¿Qué te cuesta hacer cuando por fin tienes tiempo libre sin obligaciones?",
@@ -1817,7 +1817,7 @@
     {
      "q": "¿Qué parte de sus horóscopos es exacta?",
      "options": [
-      "Las predicciones sobre el amor",
+      "Las predicciones sobre el amor y el dinero",
       "Las fechas de cumpleaños",
       "Las posiciones de los planetas"
      ],
@@ -2094,7 +2094,7 @@
     },
     {
      "q": "¿Qué recuerdo compartido usarías para convencer a una persona de tu pasado?",
-     "model": "Le recordaría el verano que trabajamos juntos en el campamento."
+     "model": "Le recordaría el verano en que compartimos trabajo en el campamento."
     }
    ],
    "gaps": "Entonces que lo [escuchen]. Los [mineros] también tienen [derecho] a ver el [cielo].",
@@ -2178,7 +2178,7 @@
      "q": "¿Qué tiene de especial lo que ve Ramiro?",
      "options": [
       "Que es de color rojo intenso",
-      "Que cae muy cerca del camping",
+      "Que cae muy cerca de las carpas del camping",
       "Que es su primera estrella fugaz"
      ],
      "answer": 2
