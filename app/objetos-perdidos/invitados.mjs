@@ -66,7 +66,7 @@ export const INVITADOS = {
     name: 'Paula',
     who: { es: 'Voluntaria que carga los sesenta y cuatro teléfonos', en: 'Volunteer charging the sixty-four phones' },
     basic: { es: 'Cargo los teléfonos perdidos. Hay sesenta y cuatro. Cuando suena uno, contesto: «Objetos perdidos, dígame».', en: 'I charge the lost phones. There are sixty-four. When one rings, I answer: “Lost and found, how can I help?”' },
-    basicAsk: { es: '¿Cuántas horas al día usas el teléfono?', en: 'How many hours a day do you use your phone?' },
+    basicAsk: { es: '¿Dónde dejas el teléfono cuando bailas en una fiesta?', en: 'Where do you leave your phone when you dance at a party?' },
     mid: 'Mi trabajo esta noche es cargar sesenta y cuatro teléfonos y contestar los que suenan. Ya he hablado con tres madres preocupadas, un jefe enfadado y una señora que quería saber si su marido estaba con otra. Le he dicho que su marido solo estaba con su teléfono, aquí, en una mesa. Me he dado cuenta de que un teléfono perdido es como una casa con la puerta abierta: entra todo el mundo.',
     midAsk: '¿Qué llamada inesperada recuerdas especialmente?',
     high: 'Sesenta y cuatro teléfonos vibrando sobre una mesa forman una especie de orquesta de la ansiedad. Cada pantalla que se enciende es alguien que busca a alguien. He contestado unas cuarenta llamadas esta noche y he aprendido que la gente, cuando cree que habla con un desconocido amable a las tres de la mañana, dice cosas que no dice de día. Una chica me pidió que, cuando su novio recuperara el teléfono, le dijera que lo había echado de menos. No sé si es parte de mi trabajo, pero se lo pienso decir.',
