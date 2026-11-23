@@ -85,7 +85,7 @@
      "model": "Sigo comprando el periódico del domingo, como hacía mi padre."
     },
     {
-     "q": "¿Qué canción te transporta a un momento concreto de tu vida?",
+     "q": "¿Qué melodía te devuelve de golpe a un verano concreto?",
      "model": "Una de los noventa que sonaba en el coche cuando íbamos a la playa."
     },
     {
@@ -1468,7 +1468,7 @@
    "lines": [
     {
      "s": 1,
-     "text": "Te voy a decir algo como farmacéutica: el sonambulismo empeora con el estrés. ¿Has dormido bien esta semana?"
+     "text": "Te voy a decir algo como farmacéutica: el sonambulismo empeora con el estrés. ¿Cuántas horas has dormido esta semana?"
     },
     {
      "s": 0,

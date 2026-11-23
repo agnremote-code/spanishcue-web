@@ -671,7 +671,7 @@
    ],
    "open": [
     {
-     "q": "¿Qué comida te prepara tu familia?",
+     "q": "¿Qué plato de tu familia viaja en un táper?",
      "qEn": "What food does your family make for you?",
      "model": "Mi madre me prepara sopa."
     },
@@ -912,7 +912,7 @@
      "model": "Uso un reloj."
     },
     {
-     "q": "¿Qué día de la semana prefieres para una fiesta?",
+     "q": "¿Qué noche de la semana eliges para salir de fiesta?",
      "qEn": "Which day of the week do you prefer for a party?",
      "model": "Prefiero el sábado."
     },
@@ -1831,7 +1831,7 @@
      "model": "Escribo listas de cosas."
     },
     {
-     "q": "¿Qué hay hoy en tu mochila o en tu bolso?",
+     "q": "¿Qué objeto pequeño olvidas siempre en casa?",
      "qEn": "What is in your backpack or bag today?",
      "model": "Hay agua y un libro."
     }
@@ -2067,7 +2067,7 @@
      "model": "Tomo un café."
     },
     {
-     "q": "¿Quién es tu jefe o tu jefa?",
+     "q": "¿A qué hora llega tu jefe al trabajo?",
      "qEn": "Who is your boss?",
      "model": "Mi jefa se llama Ana."
     }

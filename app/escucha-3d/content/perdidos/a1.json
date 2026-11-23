@@ -1318,7 +1318,7 @@
      "model": "Me quita el sueño el trabajo."
     },
     {
-     "q": "¿Qué foto tienes en la pantalla del teléfono?",
+     "q": "¿Qué foto de tu familia guardas en el teléfono?",
      "model": "Tengo una foto de mi perro."
     },
     {
@@ -1417,7 +1417,7 @@
    ],
    "open": [
     {
-     "q": "¿Qué canción cantas cuando nadie te escucha?",
+     "q": "¿Qué canción te da vergüenza cantar en público?",
      "model": "Canto canciones viejas de rock."
     },
     {
@@ -1811,7 +1811,7 @@
    ],
    "open": [
     {
-     "q": "¿Cómo es tu primer día en un trabajo nuevo?",
+     "q": "¿Cómo eres tú el primer día en una oficina desconocida?",
      "model": "Al principio hablo poco y escucho mucho."
     },
     {
