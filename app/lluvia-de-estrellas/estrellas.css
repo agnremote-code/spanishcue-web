@@ -185,3 +185,8 @@
   .le-notes { top: 236px; bottom: auto; left: 12px; width: min(220px, calc(100% - 100px)); max-height: 24vh; }
   .le-prompt { bottom: 224px; }
 }
+
+/* While the title card is open, the loading line stays hidden behind it. */
+.le:has(.le-title) .le-loading { display: none; }
+/* Touch screens have no E key: the prompt shows only its words. */
+@media (hover: none) and (pointer: coarse) { .le-prompt kbd { display: none; } }

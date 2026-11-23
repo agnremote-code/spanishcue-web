@@ -1,5 +1,5 @@
 export type CastMember = { name: string; full: string; role: string; gender: 'f' | 'm'; voice: string; country: string };
-export type StoryScene = { id: string; sector: string; cast: string[] };
+export type StoryScene = { id: string; at: string; sector: string; cast: string[] };
 export type Note = { es: string; en: string };
 export const CAST: Record<string, CastMember>;
 export const STORY: StoryScene[];
@@ -11,6 +11,8 @@ export const MOODS: string[];
 export const NIGHT: { camping: string; desert: string; saltFlat: string; observatory: string; altitude: number; campers: number; shower: string; comet: string; discovered: number; start: [number, number]; lightsOut: string; peak: string; perHour: number; lookoutWalk: number; facts: Record<string, string> };
 export function nightClock(done: string[]): string;
 export function skyPhase(done: string[]): number;
+export const LIGHTS_OUT: number;
+export function sceneTime(id: string): string | null;
 export const LIBRETA: Record<string, Note[]>;
 export const LIBRETA_IDS: string[];
 export function notebookLines(done: string[], picks: Record<string, number> | undefined): { id: string; line: Note }[];

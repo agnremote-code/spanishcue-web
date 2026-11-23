@@ -378,135 +378,6 @@
    ]
   },
   {
-   "id": "radio",
-   "title": "Una tarjeta para el espacio",
-   "place": "Las caravanas",
-   "context": "Por la mañana, Doña Hortensia rellena una tarjeta de confirmación para la estación espacial. Simón la mira con un bollo en la mano.",
-   "speakers": [
-    {
-     "name": "Hortensia",
-     "country": "Perú",
-     "voice": "es-PE-CamilaNeural"
-    },
-    {
-     "name": "Simón",
-     "country": "Ecuador",
-     "voice": "es-EC-LuisNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Esto, jovencito, se llama tarjeta QSL. Cuando dos radioaficionados contactan, se mandan una por correo para demostrar que la conversación existió de verdad. Llevo cincuenta años coleccionándolas. Tengo de Japón, de Islandia, de un barco pesquero en las Malvinas…"
-    },
-    {
-     "s": 1,
-     "text": "¿Y de la estación espacial?"
-    },
-    {
-     "s": 0,
-     "text": "Ninguna, hasta hoy. Mi marido decía que esta sería la joya de la colección. Le guardé un hueco en el álbum durante cuarenta años, entre una de Finlandia y otra de un faro en Chiloé. Me parecía de mal agüero llenarlo con otra cosa."
-    },
-    {
-     "s": 1,
-     "text": "¿Y ahora se lo va a pegar ahí?"
-    },
-    {
-     "s": 0,
-     "text": "Ahí mismo. Pero quiero que la firmes tú también, porque la segunda pregunta fue tuya. La de si se veía nuestro camping a oscuras. ¿Te acuerdas de lo que te contestaron?"
-    },
-    {
-     "s": 1,
-     "text": "Que no se veía el camping, pero sí se veía un trozo de desierto muy negro, sin ninguna luz, y que parecía un agujero en la Tierra."
-    },
-    {
-     "s": 0,
-     "text": "Eso. Un agujero. Llevo toda la mañana pensando en esa frase. Todo el mundo intenta que se le vea desde arriba, con más luces, más edificios, más ruido. Y nosotros salimos en el mapa precisamente por apagarlo todo."
-    },
-    {
-     "s": 1,
-     "text": "Como cuando juegas al escondite y ganas por quedarte quieto."
-    },
-    {
-     "s": 0,
-     "text": "Exacto. Firma aquí. Con letra clara, que esto va a durar más que nosotros dos."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Para qué sirve una tarjeta QSL?",
-     "options": [
-      "Para pedir permiso para usar una frecuencia",
-      "Para confirmar un contacto",
-      "Para participar en concursos internacionales"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Por qué Hortensia no había ocupado el hueco del álbum?",
-     "infer": true,
-     "options": [
-      "Porque no encontraba una tarjeta lo bastante bonita",
-      "Por superstición y lealtad",
-      "Porque el álbum era de su marido"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué paradoja le llama la atención a Hortensia?",
-     "options": [
-      "Que el camping sea visible justamente por su oscuridad",
-      "Que los astronautas no puedan ver luces",
-      "Que un niño haga mejores preguntas que los adultos"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué implica la comparación de Simón con el escondite?",
-     "infer": true,
-     "options": [
-      "Que le aburre la conversación de Hortensia",
-      "Que quiere jugar en lugar de firmar",
-      "Que ha captado la idea"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "Defiende o rebate: en una época obsesionada con la visibilidad, desaparecer puede ser la forma más llamativa de existir.",
-     "model": "La defiendo: quien no publica nada genera más curiosidad que quien lo enseña todo."
-    },
-    {
-     "q": "Cuenta la historia de un objeto que guardas para una ocasión que quizá nunca llegue.",
-     "model": "Guardo una botella de vino de mi abuelo para celebrar algo grande; llevo diez años sin abrirla."
-    },
-    {
-     "q": "Si las luces de tu ciudad se apagaran una noche, ¿qué cambiaría en la forma de relacionarse de la gente? Plantea la hipótesis.",
-     "model": "Si se apagaran, la gente saldría a los balcones y hablaría con vecinos que nunca saluda."
-    }
-   ],
-   "gaps": "Todo el mundo intenta que se le vea desde [arriba], con más [luces], más edificios, más [ruido]. Y nosotros salimos en el mapa precisamente por [apagarlo] todo.",
-   "glossary": [
-    {
-     "word": "coleccionándolas",
-     "meaning": "juntándolas como colección"
-    },
-    {
-     "word": "la joya de la colección",
-     "meaning": "la pieza más valiosa"
-    },
-    {
-     "word": "de mal agüero",
-     "meaning": "que trae mala suerte"
-    },
-    {
-     "word": "escondite",
-     "meaning": "juego en el que unos se esconden y otro los busca"
-    }
-   ]
-  },
-  {
    "id": "alien",
    "title": "¿Dónde está todo el mundo?",
    "place": "La carpa azul",
@@ -773,6 +644,143 @@
    ]
   },
   {
+   "id": "apagon",
+   "title": "Cuando vuelvan a encenderse",
+   "place": "La caseta del generador",
+   "context": "Amanece. A lo lejos, los reflectores de la mina vuelven a encenderse. Teresa se prepara para volver. Rogelio la acompaña hasta la camioneta.",
+   "speakers": [
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ya están encendidos otra vez. Mi segundo ha cumplido su palabra: ni un minuto más de lo acordado. Es un hombre de reglas. Me recuerda a mí hace diez años."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ahora? ¿Ya no eres una mujer de reglas?"
+    },
+    {
+     "s": 0,
+     "text": "Esta noche me he saltado unas cuantas. He apagado los reflectores sin permiso, he dejado la mina a cargo de otro y he subido a un mirador con mi exmarido a las tres de la mañana. Si mi jefe se entera, voy a tener que ser muy creativa con el informe."
+    },
+    {
+     "s": 1,
+     "text": "Pon que fue una prueba técnica. Es lo que dijiste por radio."
+    },
+    {
+     "s": 0,
+     "text": "Fue una prueba, sí. Pero no técnica. Quería comprobar si todavía era capaz de hacer algo porque sí, sin justificarlo con un cálculo de costes. Hace años que todo lo que hago tiene una hoja de cálculo detrás."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?"
+    },
+    {
+     "s": 0,
+     "text": "Y resulta que sí. Que todavía me sale. No te hagas ilusiones, Rogelio, no vuelvo. Pero tal vez podamos dejar de hablarnos solo por radio y a gritos."
+    },
+    {
+     "s": 1,
+     "text": "Me conformo. Aunque te propongo algo: el próximo agosto, en las Perseidas, apagas los reflectores media hora. Oficialmente. Con papeles. Como un acuerdo entre la mina y el camping."
+    },
+    {
+     "s": 0,
+     "text": "¿Un convenio de oscuridad? Eso no existe."
+    },
+    {
+     "s": 1,
+     "text": "Todavía no. Tú eres la gerenta. Invéntalo."
+    },
+    {
+     "s": 0,
+     "text": "Lo pensaré. Pero que conste en acta que la idea es tuya, por si sale mal."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ha cambiado en Teresa, según ella misma?",
+     "options": [
+      "Ha decidido dejar la mina",
+      "Ha vuelto a enamorarse de Rogelio",
+      "Se ha permitido romper sus propias normas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quería «probar» Teresa realmente?",
+     "infer": true,
+     "options": [
+      "Si los reflectores podían apagarse sin peligro",
+      "Si aún podía actuar porque sí",
+      "Si su segundo era de fiar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Rogelio?",
+     "options": [
+      "Que Teresa vuelva a vivir en el camping",
+      "Que cierren la mina en agosto",
+      "Un acuerdo formal para apagar las luces en ocasiones"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué revela la última frase de Teresa?",
+     "infer": true,
+     "options": [
+      "Que piensa rechazar la propuesta",
+      "Que acepta con humor y cierta cautela burocrática",
+      "Que quiere atribuirse el mérito de la idea"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende o critica: «Hacer algo porque sí, sin justificarlo, es un lujo que los adultos olvidamos».",
+     "model": "La defiendo: casi todo lo que hago tiene un objetivo, y por eso los paseos sin rumbo me sientan tan bien."
+    },
+    {
+     "q": "Redacta la primera cláusula de un «convenio de oscuridad» entre una empresa y una comunidad, en registro administrativo.",
+     "model": "La empresa se compromete a reducir su iluminación exterior durante los eventos astronómicos acordados."
+    },
+    {
+     "q": "Narra una situación en que te saltaste una norma propia y descubriste algo de ti.",
+     "model": "Siempre me acuesto a las once, pero una noche me quedé hablando hasta el amanecer y así supe que me encanta improvisar."
+    }
+   ],
+   "gaps": "Quería [comprobar] si todavía era capaz de hacer algo porque [sí], sin justificarlo con un cálculo de [costes]. Hace años que todo lo que hago tiene una hoja de [cálculo] detrás.",
+   "glossary": [
+    {
+     "word": "me he saltado",
+     "meaning": "no he respetado"
+    },
+    {
+     "word": "me conformo",
+     "meaning": "acepto lo que hay"
+    },
+    {
+     "word": "convenio",
+     "meaning": "acuerdo oficial"
+    },
+    {
+     "word": "que conste en acta",
+     "meaning": "que quede registrado oficialmente"
+    }
+   ]
+  },
+  {
    "id": "cocina",
    "title": "El mar de arriba",
    "place": "La carpa cocina",
@@ -1035,135 +1043,6 @@
     {
      "word": "sentido del humor",
      "meaning": "capacidad de hacer o entender bromas"
-    }
-   ]
-  },
-  {
-   "id": "duchas",
-   "title": "Un año sabático",
-   "place": "Las duchas",
-   "context": "Por la mañana, Fabián espera su turno para la ducha. Rogelio arregla el calentador solar a su lado.",
-   "speakers": [
-    {
-     "name": "Fabián",
-     "country": "España",
-     "voice": "es-ES-AlvaroNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Le he hecho caso, Don Rogelio. No he tomado ninguna decisión a tres mil seiscientos metros. Pero tampoco he hecho el informe. He escrito otra cosa."
-    },
-    {
-     "s": 1,
-     "text": "Miedo me da preguntar."
-    },
-    {
-     "s": 0,
-     "text": "Una solicitud de año sabático. La empresa lo permite tras diez años de antigüedad, aunque nadie lo pide porque se considera un suicidio profesional. Todavía no la he enviado. La tengo en borradores, como usted guardaba su sobre de la mina."
-    },
-    {
-     "s": 1,
-     "text": "Veo que Celeste le ha contado más de la cuenta."
-    },
-    {
-     "s": 0,
-     "text": "En este camping todo el mundo cuenta más de la cuenta. Debe de ser la altura. ¿Y usted cómo lo supo? Lo de que había que dejar la mina."
-    },
-    {
-     "s": 1,
-     "text": "No lo supe. Esa es la verdad que nadie quiere oír. Me fui con más dudas que certezas, y durante tres años me pregunté cada noche si me había equivocado. Lo que me convenció no fue un momento de iluminación, sino la acumulación de mañanas como esta: arreglando un calentador, con frío y sin jefe."
-    },
-    {
-     "s": 0,
-     "text": "Eso suena bastante menos épico que en las películas."
-    },
-    {
-     "s": 1,
-     "text": "Las películas se saltan la parte aburrida, que es casi toda. Mi consejo, si quiere uno: no envíe esa solicitud por haber visto una lluvia de estrellas. Envíela si dentro de un mes, en Madrid, un martes por la tarde, sigue queriendo enviarla."
-    },
-    {
-     "s": 0,
-     "text": "El test del martes por la tarde. Me lo apunto."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué ha escrito Fabián en lugar del informe?",
-     "options": [
-      "Su carta de renuncia definitiva",
-      "Una queja contra su jefe de Madrid",
-      "Una solicitud de año sabático"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Por qué nadie en su empresa pide el año sabático?",
-     "infer": true,
-     "options": [
-      "Porque se ve como un suicidio laboral",
-      "Porque no lo pagan y casi nadie puede permitírselo",
-      "Porque solo pueden pedirlo los directivos"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué desmitifica Rogelio sobre los grandes cambios de vida?",
-     "options": [
-      "Que se deciden en un instante de revelación",
-      "Que siempre salen mal al principio",
-      "Que requieren mucho dinero"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué propone el «test del martes por la tarde»?",
-     "infer": true,
-     "options": [
-      "Enviar la solicitud un martes para que la aprueben",
-      "Tomarse los martes libres durante un mes",
-      "Ver si el deseo sobrevive a la rutina"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "Rebate la visión cinematográfica de los cambios de vida con un ejemplo real o imaginado.",
-     "model": "Mi tía dejó la abogacía para ser panadera, pero tardó cinco años y muchas dudas; nada de escenas épicas."
-    },
-    {
-     "q": "Diseña tu propio «test del martes por la tarde» para una decisión que estés pensando y explica por qué funcionaría.",
-     "model": "Esperaría tres lunes lluviosos; si sigo queriendo mudarme, es que no es un capricho de verano."
-    },
-    {
-     "q": "¿Qué haría falta para que pedir un año sabático dejara de considerarse un suicidio profesional? Plantea medidas concretas.",
-     "model": "Que los directivos dieran ejemplo y que el puesto quedara garantizado por contrato."
-    }
-   ],
-   "gaps": "Lo que me convenció no fue un momento de [iluminación], sino la [acumulación] de mañanas como esta: arreglando un [calentador], con frío y sin [jefe].",
-   "glossary": [
-    {
-     "word": "año sabático",
-     "meaning": "año de descanso en el trabajo"
-    },
-    {
-     "word": "antigüedad",
-     "meaning": "tiempo trabajando en una empresa"
-    },
-    {
-     "word": "más de la cuenta",
-     "meaning": "más de lo necesario"
-    },
-    {
-     "word": "épico",
-     "meaning": "heroico, digno de una gran historia"
     }
    ]
   },
@@ -1555,6 +1434,264 @@
     {
      "word": "donarlos",
      "meaning": "regalarlos a una institución"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Una tarjeta para el espacio",
+   "place": "Las caravanas",
+   "context": "Por la mañana, Doña Hortensia rellena una tarjeta de confirmación para la estación espacial. Simón la mira con un bollo en la mano.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Simón",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Esto, jovencito, se llama tarjeta QSL. Cuando dos radioaficionados contactan, se mandan una por correo para demostrar que la conversación existió de verdad. Llevo cincuenta años coleccionándolas. Tengo de Japón, de Islandia, de un barco pesquero en las Malvinas…"
+    },
+    {
+     "s": 1,
+     "text": "¿Y de la estación espacial?"
+    },
+    {
+     "s": 0,
+     "text": "Ninguna, hasta hoy. Mi marido decía que esta sería la joya de la colección. Le guardé un hueco en el álbum durante cuarenta años, entre una de Finlandia y otra de un faro en Chiloé. Me parecía de mal agüero llenarlo con otra cosa."
+    },
+    {
+     "s": 1,
+     "text": "¿Y ahora se lo va a pegar ahí?"
+    },
+    {
+     "s": 0,
+     "text": "Ahí mismo. Pero quiero que la firmes tú también, porque la segunda pregunta fue tuya. La de si se veía nuestro camping a oscuras. ¿Te acuerdas de lo que te contestaron?"
+    },
+    {
+     "s": 1,
+     "text": "Que no se veía el camping, pero sí se veía un trozo de desierto muy negro, sin ninguna luz, y que parecía un agujero en la Tierra."
+    },
+    {
+     "s": 0,
+     "text": "Eso. Un agujero. Llevo toda la mañana pensando en esa frase. Todo el mundo intenta que se le vea desde arriba, con más luces, más edificios, más ruido. Y nosotros salimos en el mapa precisamente por apagarlo todo."
+    },
+    {
+     "s": 1,
+     "text": "Como cuando juegas al escondite y ganas por quedarte quieto."
+    },
+    {
+     "s": 0,
+     "text": "Exacto. Firma aquí. Con letra clara, que esto va a durar más que nosotros dos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Para qué sirve una tarjeta QSL?",
+     "options": [
+      "Para pedir permiso para usar una frecuencia",
+      "Para confirmar un contacto",
+      "Para participar en concursos internacionales"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Hortensia no había ocupado el hueco del álbum?",
+     "infer": true,
+     "options": [
+      "Porque no encontraba una tarjeta lo bastante bonita",
+      "Por superstición y lealtad",
+      "Porque el álbum era de su marido"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué paradoja le llama la atención a Hortensia?",
+     "options": [
+      "Que el camping sea visible justamente por su oscuridad",
+      "Que los astronautas no puedan ver luces",
+      "Que un niño haga mejores preguntas que los adultos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué implica la comparación de Simón con el escondite?",
+     "infer": true,
+     "options": [
+      "Que le aburre la conversación de Hortensia",
+      "Que quiere jugar en lugar de firmar",
+      "Que ha captado la idea"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Defiende o rebate: en una época obsesionada con la visibilidad, desaparecer puede ser la forma más llamativa de existir.",
+     "model": "La defiendo: quien no publica nada genera más curiosidad que quien lo enseña todo."
+    },
+    {
+     "q": "Cuenta la historia de un objeto que guardas para una ocasión que quizá nunca llegue.",
+     "model": "Guardo una botella de vino de mi abuelo para celebrar algo grande; llevo diez años sin abrirla."
+    },
+    {
+     "q": "Si las luces de tu ciudad se apagaran una noche, ¿qué cambiaría en la forma de relacionarse de la gente? Plantea la hipótesis.",
+     "model": "Si se apagaran, la gente saldría a los balcones y hablaría con vecinos que nunca saluda."
+    }
+   ],
+   "gaps": "Todo el mundo intenta que se le vea desde [arriba], con más [luces], más edificios, más [ruido]. Y nosotros salimos en el mapa precisamente por [apagarlo] todo.",
+   "glossary": [
+    {
+     "word": "coleccionándolas",
+     "meaning": "juntándolas como colección"
+    },
+    {
+     "word": "la joya de la colección",
+     "meaning": "la pieza más valiosa"
+    },
+    {
+     "word": "de mal agüero",
+     "meaning": "que trae mala suerte"
+    },
+    {
+     "word": "escondite",
+     "meaning": "juego en el que unos se esconden y otro los busca"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Un año sabático",
+   "place": "Las duchas",
+   "context": "Por la mañana, Fabián espera su turno para la ducha. Rogelio arregla el calentador solar a su lado.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Le he hecho caso, Don Rogelio. No he tomado ninguna decisión a tres mil seiscientos metros. Pero tampoco he hecho el informe. He escrito otra cosa."
+    },
+    {
+     "s": 1,
+     "text": "Miedo me da preguntar."
+    },
+    {
+     "s": 0,
+     "text": "Una solicitud de año sabático. La empresa lo permite tras diez años de antigüedad, aunque nadie lo pide porque se considera un suicidio profesional. Todavía no la he enviado. La tengo en borradores, como usted guardaba su sobre de la mina."
+    },
+    {
+     "s": 1,
+     "text": "Veo que Celeste le ha contado más de la cuenta."
+    },
+    {
+     "s": 0,
+     "text": "En este camping todo el mundo cuenta más de la cuenta. Debe de ser la altura. ¿Y usted cómo lo supo? Lo de que había que dejar la mina."
+    },
+    {
+     "s": 1,
+     "text": "No lo supe. Esa es la verdad que nadie quiere oír. Me fui con más dudas que certezas, y durante tres años me pregunté cada noche si me había equivocado. Lo que me convenció no fue un momento de iluminación, sino la acumulación de mañanas como esta: arreglando un calentador, con frío y sin jefe."
+    },
+    {
+     "s": 0,
+     "text": "Eso suena bastante menos épico que en las películas."
+    },
+    {
+     "s": 1,
+     "text": "Las películas se saltan la parte aburrida, que es casi toda. Mi consejo, si quiere uno: no envíe esa solicitud por haber visto una lluvia de estrellas. Envíela si dentro de un mes, en Madrid, un martes por la tarde, sigue queriendo enviarla."
+    },
+    {
+     "s": 0,
+     "text": "El test del martes por la tarde. Me lo apunto."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ha escrito Fabián en lugar del informe?",
+     "options": [
+      "Su carta de renuncia definitiva",
+      "Una queja contra su jefe de Madrid",
+      "Una solicitud de año sabático"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué nadie en su empresa pide el año sabático?",
+     "infer": true,
+     "options": [
+      "Porque se ve como un suicidio laboral",
+      "Porque no lo pagan y casi nadie puede permitírselo",
+      "Porque solo pueden pedirlo los directivos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué desmitifica Rogelio sobre los grandes cambios de vida?",
+     "options": [
+      "Que se deciden en un instante de revelación",
+      "Que siempre salen mal al principio",
+      "Que requieren mucho dinero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué propone el «test del martes por la tarde»?",
+     "infer": true,
+     "options": [
+      "Enviar la solicitud un martes para que la aprueben",
+      "Tomarse los martes libres durante un mes",
+      "Ver si el deseo sobrevive a la rutina"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "Rebate la visión cinematográfica de los cambios de vida con un ejemplo real o imaginado.",
+     "model": "Mi tía dejó la abogacía para ser panadera, pero tardó cinco años y muchas dudas; nada de escenas épicas."
+    },
+    {
+     "q": "Diseña tu propio «test del martes por la tarde» para una decisión que estés pensando y explica por qué funcionaría.",
+     "model": "Esperaría tres lunes lluviosos; si sigo queriendo mudarme, es que no es un capricho de verano."
+    },
+    {
+     "q": "¿Qué haría falta para que pedir un año sabático dejara de considerarse un suicidio profesional? Plantea medidas concretas.",
+     "model": "Que los directivos dieran ejemplo y que el puesto quedara garantizado por contrato."
+    }
+   ],
+   "gaps": "Lo que me convenció no fue un momento de [iluminación], sino la [acumulación] de mañanas como esta: arreglando un [calentador], con frío y sin [jefe].",
+   "glossary": [
+    {
+     "word": "año sabático",
+     "meaning": "año de descanso en el trabajo"
+    },
+    {
+     "word": "antigüedad",
+     "meaning": "tiempo trabajando en una empresa"
+    },
+    {
+     "word": "más de la cuenta",
+     "meaning": "más de lo necesario"
+    },
+    {
+     "word": "épico",
+     "meaning": "heroico, digno de una gran historia"
     }
    ]
   },
@@ -2079,143 +2216,6 @@
     {
      "word": "autoayuda",
      "meaning": "libros para mejorar uno mismo"
-    }
-   ]
-  },
-  {
-   "id": "apagon",
-   "title": "Cuando vuelvan a encenderse",
-   "place": "La caseta del generador",
-   "context": "Amanece. A lo lejos, los reflectores de la mina vuelven a encenderse. Teresa se prepara para volver. Rogelio la acompaña hasta la camioneta.",
-   "speakers": [
-    {
-     "name": "Teresa",
-     "country": "El Salvador",
-     "voice": "es-SV-LorenaNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Ya están encendidos otra vez. Mi segundo ha cumplido su palabra: ni un minuto más de lo acordado. Es un hombre de reglas. Me recuerda a mí hace diez años."
-    },
-    {
-     "s": 1,
-     "text": "¿Y ahora? ¿Ya no eres una mujer de reglas?"
-    },
-    {
-     "s": 0,
-     "text": "Esta noche me he saltado unas cuantas. He apagado los reflectores sin permiso, he dejado la mina a cargo de otro y he subido a un mirador con mi exmarido a las tres de la mañana. Si mi jefe se entera, voy a tener que ser muy creativa con el informe."
-    },
-    {
-     "s": 1,
-     "text": "Pon que fue una prueba técnica. Es lo que dijiste por radio."
-    },
-    {
-     "s": 0,
-     "text": "Fue una prueba, sí. Pero no técnica. Quería comprobar si todavía era capaz de hacer algo porque sí, sin justificarlo con un cálculo de costes. Hace años que todo lo que hago tiene una hoja de cálculo detrás."
-    },
-    {
-     "s": 1,
-     "text": "¿Y?"
-    },
-    {
-     "s": 0,
-     "text": "Y resulta que sí. Que todavía me sale. No te hagas ilusiones, Rogelio, no vuelvo. Pero tal vez podamos dejar de hablarnos solo por radio y a gritos."
-    },
-    {
-     "s": 1,
-     "text": "Me conformo. Aunque te propongo algo: el próximo agosto, en las Perseidas, apagas los reflectores media hora. Oficialmente. Con papeles. Como un acuerdo entre la mina y el camping."
-    },
-    {
-     "s": 0,
-     "text": "¿Un convenio de oscuridad? Eso no existe."
-    },
-    {
-     "s": 1,
-     "text": "Todavía no. Tú eres la gerenta. Invéntalo."
-    },
-    {
-     "s": 0,
-     "text": "Lo pensaré. Pero que conste en acta que la idea es tuya, por si sale mal."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué ha cambiado en Teresa, según ella misma?",
-     "options": [
-      "Ha decidido dejar la mina",
-      "Ha vuelto a enamorarse de Rogelio",
-      "Se ha permitido romper sus propias normas"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué quería «probar» Teresa realmente?",
-     "infer": true,
-     "options": [
-      "Si los reflectores podían apagarse sin peligro",
-      "Si aún podía actuar porque sí",
-      "Si su segundo era de fiar"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué propone Rogelio?",
-     "options": [
-      "Que Teresa vuelva a vivir en el camping",
-      "Que cierren la mina en agosto",
-      "Un acuerdo formal para apagar las luces en ocasiones"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué revela la última frase de Teresa?",
-     "infer": true,
-     "options": [
-      "Que piensa rechazar la propuesta",
-      "Que acepta con humor y cierta cautela burocrática",
-      "Que quiere atribuirse el mérito de la idea"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "Defiende o critica: «Hacer algo porque sí, sin justificarlo, es un lujo que los adultos olvidamos».",
-     "model": "La defiendo: casi todo lo que hago tiene un objetivo, y por eso los paseos sin rumbo me sientan tan bien."
-    },
-    {
-     "q": "Redacta la primera cláusula de un «convenio de oscuridad» entre una empresa y una comunidad, en registro administrativo.",
-     "model": "La empresa se compromete a reducir su iluminación exterior durante los eventos astronómicos acordados."
-    },
-    {
-     "q": "Narra una situación en que te saltaste una norma propia y descubriste algo de ti.",
-     "model": "Siempre me acuesto a las once, pero una noche me quedé hablando hasta el amanecer y así supe que me encanta improvisar."
-    }
-   ],
-   "gaps": "Quería [comprobar] si todavía era capaz de hacer algo porque [sí], sin justificarlo con un cálculo de [costes]. Hace años que todo lo que hago tiene una hoja de [cálculo] detrás.",
-   "glossary": [
-    {
-     "word": "me he saltado",
-     "meaning": "no he respetado"
-    },
-    {
-     "word": "me conformo",
-     "meaning": "acepto lo que hay"
-    },
-    {
-     "word": "convenio",
-     "meaning": "acuerdo oficial"
-    },
-    {
-     "word": "que conste en acta",
-     "meaning": "que quede registrado oficialmente"
     }
    ]
   },

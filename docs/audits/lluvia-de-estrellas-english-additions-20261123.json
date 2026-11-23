@@ -24,7 +24,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "OK. I have my red torch."
+      "text": "OK. I have my red flashlight."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -40,7 +40,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "What colour is Celeste’s torch?"
+      "text": "What color is Celeste’s flashlight?"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -60,11 +60,11 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Where do you keep your torch?"
+      "text": "Where do you keep your flashlight?"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "torch"
+      "text": "flashlight"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -76,7 +76,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Don Cosme sells glasses in the car park. Celeste walks by."
+      "text": "Don Cosme sells glasses in the parking lot. Celeste walks by."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -116,7 +116,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "What cheap product do people sell in your neighbourhood?"
+      "text": "What cheap product do people sell in your neighborhood?"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -204,7 +204,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Doña Hortensia is in her caravan with a big radio."
+      "text": "Doña Hortensia is in her RV with a big radio."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -276,7 +276,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Mum, today I see an alien."
+      "text": "Mom, today I see an alien."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -284,7 +284,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "No. I have biscuits for him."
+      "text": "No. I have cookies for him."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -328,7 +328,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "biscuits"
+      "text": "cookies"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -416,7 +416,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Because of the altitude. We are at three thousand six hundred metres."
+      "text": "Because of the altitude. We are at three thousand six hundred meters."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -644,7 +644,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "What quiet corner does your neighbourhood have?"
+      "text": "What quiet corner does your neighborhood have?"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -1000,7 +1000,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Three. And one is Mum."
+      "text": "Three. And one is Mom."
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -1024,7 +1024,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Who do you send photos of your holidays to?"
+      "text": "Who do you send photos of your vacations to?"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -1088,7 +1088,7 @@
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
-      "text": "Which noisy or kind neighbour lives near you?"
+      "text": "Which noisy or kind neighbor lives near you?"
     },
     {
       "path": "app/escucha-3d/content/estrellas/a0.json",
@@ -1188,7 +1188,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "I work at reception. I hand out the blankets and the red torches. Tonight there are sixty-four campers. It’s a record!"
+      "text": "I work at reception. I hand out the blankets and the red flashlights. Tonight there are sixty-four campers. It’s a record!"
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
@@ -1220,11 +1220,11 @@
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "Reads with a red torch beside her tent"
+      "text": "Reads with a red flashlight beside her tent"
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "I’m reading a book about the stars. The torch is red because white light bothers the eyes. It is my first night in the desert."
+      "text": "I’m reading a book about the stars. The flashlight is red because white light bothers the eyes. It is my first night in the desert."
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
@@ -1232,15 +1232,15 @@
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "Retired man who travels by caravan with his dog"
+      "text": "Retired man who travels by RV with his dog"
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "I have lived in my caravan for five years. I travel with my dog, Lucero. He is afraid of fireworks, but not of stars."
+      "text": "I have lived in my RV for five years. I travel with my dog, Lucero. He is afraid of fireworks, but not of stars."
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "Would you like to live in a house on wheels?"
+      "text": "Where would you like to live for a whole year?"
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
@@ -1268,11 +1268,11 @@
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "Vet on holiday, watching the pen"
+      "text": "Vet on vacation, watching the pen"
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "I’m a vet, but I’m on holiday. The llama is going to have a baby. I’m a bit nervous."
+      "text": "I’m a vet, but I’m on vacation. The llama is going to have a baby. I’m a bit nervous."
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
@@ -1280,11 +1280,11 @@
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "Queues for the showers, half asleep"
+      "text": "Lines for the showers, half asleep"
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "I’m in the queue for the showers. The hot water only lasts four minutes. I’m sleepy and cold."
+      "text": "I’m in line for the showers. The hot water only lasts four minutes. I’m sleepy and cold."
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
@@ -1308,7 +1308,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "I run every day, in the desert too. At this altitude it is very hard to breathe. Today I only did two kilometres."
+      "text": "I run every day, in the desert too. At this altitude it is very hard to breathe. Today I only did two kilometers."
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
@@ -1356,7 +1356,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
-      "text": "That drone has coloured lights! It ruins my photos. I have been waiting two hours for a dark sky."
+      "text": "That drone has colored lights! It ruins my photos. I have been waiting two hours for a dark sky."
     },
     {
       "path": "app/lluvia-de-estrellas/invitados.mjs",
@@ -1412,7 +1412,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Use a red torch. It does not bother the stars."
+      "text": "Use a red flashlight. It does not bother the stars."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1468,7 +1468,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "the torch"
+      "text": "the flashlight"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1476,7 +1476,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "In the car park there is a man with a table. On the table there are many boxes. It is Don Cosme."
+      "text": "In the parking lot there is a man with a table. On the table there are many boxes. It is Don Cosme."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1532,7 +1532,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Do you have sunglasses? What colour are they?"
+      "text": "Do you have sunglasses? What color are they?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1580,7 +1580,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Mendoza is nine hundred kilometres away!"
+      "text": "Mendoza is nine hundred kilometers away!"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1628,11 +1628,11 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What faraway city do you visit on the night bus?"
+      "text": "What faraway city do you want to visit someday?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What photo of your dad or mum do you have in the kitchen?"
+      "text": "What photo of your dad or mom do you have in the kitchen?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1640,7 +1640,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What does your dad or your mum really like?"
+      "text": "What does your dad or your mom really like?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1664,7 +1664,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "In a caravan there are many radios and cables. Doña Hortensia is eighty-one."
+      "text": "In a RV there are many radios and cables. Doña Hortensia is eighty-one."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1696,11 +1696,11 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "I hear a voice… It is a lorry driver from Salta."
+      "text": "I hear a voice… It is a truck driver from Salta."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "The lorry driver is also looking at the sky. Hortensia laughs."
+      "text": "The truck driver is also looking at the sky. Hortensia laughs."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1756,7 +1756,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "In front of a blue tent there is a boy with a notebook. It is Simón. He is nine. His mum, Gabriela, is very tired."
+      "text": "In front of a blue tent there is a boy with a notebook. It is Simón. He is nine. His mom, Gabriela, is very tired."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1800,7 +1800,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Your mum is tired. You look after the tent."
+      "text": "Your mom is tired. You look after the tent."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1808,7 +1808,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Gabriela sleeps. Simón looks after her with his torch."
+      "text": "Gabriela sleeps. Simón looks after her with his flashlight."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1824,7 +1824,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What alien film do you like?"
+      "text": "What alien movie do you like?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -1900,7 +1900,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Well… My profile says one metre seventy. I am one sixty."
+      "text": "Well… My profile says one meter seventy. I am one sixty."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2096,7 +2096,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What pretty name does your neighbour's dog or cat have?"
+      "text": "What pretty name does your neighbor's dog or cat have?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2104,7 +2104,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What colourful blanket do you have on the sofa?"
+      "text": "What colorful blanket do you have on the sofa?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2380,7 +2380,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What dark street in your neighbourhood do you not like?"
+      "text": "What dark street in your neighborhood do you not like?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2436,7 +2436,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Look at the comet without a telescope, like in 1966."
+      "text": "Look at the shower of your comet without a telescope, like in 1966."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2552,7 +2552,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What hard job does someone in your neighbourhood do?"
+      "text": "What hard job does someone in your neighborhood do?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2636,7 +2636,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "A little mirror! Brilliant!"
+      "text": "A little mirror! Awesome!"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2684,7 +2684,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "On the edge of the salt flat there is a table with candles. Madame Zulema sells horoscopes. There is a queue of people."
+      "text": "On the edge of the salt flat there is a table with candles. Madame Zulema sells horoscopes. There is a line of people."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2776,7 +2776,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "On the rocks there is a girl with a drone. It is Kiara, an influencer. The drone has coloured lights. Dante, her brother, has the camera."
+      "text": "On the rocks there is a girl with a drone. It is Kiara, an influencer. The drone has colored lights. Dante, her brother, has the camera."
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -2840,11 +2840,11 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "What device has coloured lights in your house?"
+      "text": "What device has colored lights in your house?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "At what moment of the day do you silence your mobile?"
+      "text": "At what moment of the day do you silence your phone?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -3004,7 +3004,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
-      "text": "Celeste, and your torch?"
+      "text": "Celeste, and your flashlight?"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a0.mjs",
@@ -3076,7 +3076,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a1.mjs",
-      "text": "the car park"
+      "text": "the parking lot"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a1.mjs",
@@ -3112,7 +3112,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a1.mjs",
-      "text": "the caravan"
+      "text": "the RV"
     },
     {
       "path": "app/lluvia-de-estrellas/levels/a1.mjs",
@@ -3416,7 +3416,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
-      "text": "Celeste goes up with her red torch, which bothers neither the stars nor her."
+      "text": "Celeste goes up with her red flashlight, which bothers neither the stars nor her."
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
@@ -3452,7 +3452,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
-      "text": "Doña Hortensia contacted a lorry driver in Salta who was also looking at the sky."
+      "text": "Doña Hortensia contacted a truck driver in Salta who was also looking at the sky."
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
@@ -3480,7 +3480,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
-      "text": "Lucía confessed that her profile says she is one metre seventy tall, and she is one sixty."
+      "text": "Lucía confessed that her profile says she is one meter seventy tall, and she is one sixty."
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
@@ -3512,7 +3512,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
-      "text": "Fabián cancelled the meeting with Tokyo and goes up to the lookout with wet hair."
+      "text": "Fabián canceled the meeting with Tokyo and goes up to the lookout with wet hair."
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
@@ -3548,7 +3548,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
-      "text": "Doña Amalia left the telescope to the children and watches her comet with no instruments, as in 1966."
+      "text": "Doña Amalia left the telescope to the children and watches her comet’s shower with no instruments, as in 1966."
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
@@ -3572,7 +3572,7 @@
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",
-      "text": "Ulises left the camera in his rucksack and saw the shower with his own eyes."
+      "text": "Ulises left the camera in his backpack and saw the shower with his own eyes."
     },
     {
       "path": "app/lluvia-de-estrellas/story.mjs",

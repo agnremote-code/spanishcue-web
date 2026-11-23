@@ -170,7 +170,7 @@ const PLACES = {
     extras: [{ x: 17.8, z: 2.4, heading: Math.PI / 2, pose: 'cook', mood: 'worried', look: L('#e8c0a0', 'young', 'm', 'curly', '#5a3a1a', 'apron', '#f4f0ea', 'jeans', '#24304a', [], { seed: 72 }) }] },
   llama: { spot: { x: 32.6, z: 8.2 }, npc: { x: 35.0, z: 9.4, heading: Math.PI / 2 }, pose: 'crouch', mood: 'worried', look: L('#a8724e', 'young', 'm', 'short', '#120d0b', 'sweater', '#c8402a', 'pants', '#2a2a2a', ['hat'], { seed: 81 }) },
   duchas: { spot: { x: 25.2, z: -4.4 }, npc: { x: 25.0, z: -7.4 }, pose: 'phone', mood: 'worried', look: L('#e8c0a0', 'adult', 'm', 'short', '#3a2416', 'shirt', '#f4f4f4', 'shorts', '#2a3a5a', ['glasses'], { seed: 91 }) },
-  hamacas: { spot: { x: -9, z: -8.8 }, npc: { x: -9, z: -12, heading: Math.PI / 2, lying: true, y: 0.62 }, pose: 'lie', mood: 'sleepy', look: L('#dcae88', 'adult', 'f', 'long', '#2a1a12', 'sweater', '#c890a8', 'pants', '#2a2a30', [], { seed: 101 }) },
+  hamacas: { spot: { x: -9, z: -8.8 }, npc: { x: -9, z: -12, heading: Math.PI / 2, lying: true, y: 0.58 }, pose: 'lie', mood: 'sleepy', look: L('#dcae88', 'adult', 'f', 'long', '#2a1a12', 'sweater', '#c890a8', 'pants', '#2a2a30', [], { seed: 101 }) },
   sendero: { spot: { x: 0.8, z: -20.6 }, npc: { x: -2.2, z: -20, heading: Math.PI / 2, seat: true }, pose: 'sit', mood: 'smile', look: L('#c48f69', 'adult', 'm', 'short', '#120d0b', 'jacket', '#2a2a2a', 'pants', '#2a2a30', ['glasses', 'headphones'], { seed: 111 }),
     extras: [{ x: -2.0, z: -22.4, pose: 'arms', mood: 'sad', look: L('#c48f69', 'adult', 'f', 'long', '#120d0b', 'coat', '#6a3a2a', 'jeans', '#24304a', ['earrings'], { seed: 112 }) }] },
   cupula: { spot: { x: -24.6, z: -26.6 }, npc: { x: -26.6, z: -28.8 }, pose: 'arms', mood: 'angry', look: LOOKS.amalia,
@@ -206,7 +206,7 @@ export const CROWD = [
   { x: -30.2, z: 30.0, heading: 0.8, pose: 'carry', mood: 'smile' }, // Ezequiel, the tents
   { x: -36.2, z: 22.4, heading: 2.0, pose: 'read', mood: 'neutral' }, // Paula, the tents
   { x: -48.6, z: 4.6, heading: 0.4, pose: 'arms', mood: 'laugh' }, // Don Anselmo, the caravans
-  { x: -0.6, z: 9.4, heading: Math.PI, pose: 'sit', seat: true, mood: 'love' }, // Inés, the fire
+  { x: -0.6, z: 9.4, heading: Math.PI, pose: 'sit', seat: true, mood: 'love' }, // Rosario, the fire
   { x: 21.0, z: 6.6, heading: -Math.PI / 2, pose: 'carry', mood: 'tipsy' }, // Rufino, by the kitchen
   { x: 28.4, z: 11.2, heading: Math.PI / 2, pose: 'arms', mood: 'surprised' }, // Vera, by the pen
   { x: 21.6, z: -6.2, heading: 2.2, pose: 'phone', mood: 'sleepy' }, // Bautista, the showers queue

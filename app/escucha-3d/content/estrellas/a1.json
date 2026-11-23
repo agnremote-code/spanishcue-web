@@ -340,117 +340,6 @@
    ]
   },
   {
-   "id": "radio",
-   "title": "Seis minutos con el espacio",
-   "place": "Las caravanas",
-   "context": "Doña Hortensia prepara su radio en la caravana. Celeste le lleva un té.",
-   "speakers": [
-    {
-     "name": "Hortensia",
-     "country": "Perú",
-     "voice": "es-PE-CamilaNeural"
-    },
-    {
-     "name": "Celeste",
-     "country": "Chile",
-     "voice": "es-CL-CatalinaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 1,
-     "text": "Doña Hortensia, aquí tiene su té. ¿Qué está haciendo con todos esos cables?"
-    },
-    {
-     "s": 0,
-     "text": "Gracias, hija. Hoy quiero hablar con la estación espacial. Pasa a la una y cuarenta."
-    },
-    {
-     "s": 1,
-     "text": "¿Y se puede hablar con los astronautas por radio?"
-    },
-    {
-     "s": 0,
-     "text": "Sí, pero solo seis minutos. Lo intento desde hace once años."
-    },
-    {
-     "s": 1,
-     "text": "¿Y qué les va a decir?"
-    },
-    {
-     "s": 0,
-     "text": "Que tengo ochenta y un años y que esta noche el cielo es el más bonito del mundo."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué le lleva Celeste a Hortensia?",
-     "options": [
-      "Un té",
-      "Un café con leche",
-      "Una manta"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿A qué hora pasa la estación espacial?",
-     "options": [
-      "A las tres y doce",
-      "A la una y cuarenta",
-      "A las once en punto"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Desde cuándo lo intenta Hortensia?",
-     "options": [
-      "Desde hace once años",
-      "Desde esta mañana",
-      "Desde 1966, cuando era joven"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué quiere decirles a los astronautas?",
-     "options": [
-      "Que tiene frío en la caravana",
-      "Que quiere viajar al espacio",
-      "Que el cielo de esta noche es precioso"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué habilidad intentas aprender sin éxito?",
-     "model": "Intento aprender a tocar la guitarra."
-    },
-    {
-     "q": "¿Qué le preguntas a un astronauta en seis minutos?",
-     "model": "Le pregunto qué come en el espacio."
-    },
-    {
-     "q": "¿Qué persona mayor de tu entorno usa muy bien la tecnología?",
-     "model": "Mi abuela usa muy bien la tableta."
-    }
-   ],
-   "gaps": "Sí, pero solo [seis] minutos. Lo [intento] desde hace [once] [años].",
-   "glossary": [
-    {
-     "word": "cables",
-     "meaning": "hilos para la electricidad"
-    },
-    {
-     "word": "astronautas",
-     "meaning": "personas que viajan al espacio"
-    },
-    {
-     "word": "lo intento",
-     "meaning": "trato de hacerlo"
-    }
-   ]
-  },
-  {
    "id": "alien",
    "title": "El cartel de bienvenida",
    "place": "La carpa azul",
@@ -673,6 +562,117 @@
    ]
   },
   {
+   "id": "apagon",
+   "title": "La gerenta de la mina",
+   "place": "La caseta del generador",
+   "context": "Son casi las once. Rogelio está en la caseta del generador y llama por radio a Teresa, la gerenta de la mina vecina.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Teresa, habla Rogelio. A las once apago el camping. ¿Puedes apagar los reflectores de la mina?"
+    },
+    {
+     "s": 1,
+     "text": "Rogelio, la mina trabaja toda la noche. No es tan fácil."
+    },
+    {
+     "s": 0,
+     "text": "Solo esta noche. Es la lluvia de estrellas más grande en sesenta años."
+    },
+    {
+     "s": 1,
+     "text": "Hace nueve años que no me llamas, y me llamas para apagar luces."
+    },
+    {
+     "s": 0,
+     "text": "También te llamo para darte las gracias."
+    },
+    {
+     "s": 1,
+     "text": "Bueno. A las once, todo apagado."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere Rogelio?",
+     "options": [
+      "Que la mina apague los reflectores",
+      "Que Teresa venga al camping",
+      "Dinero para el generador"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué no es fácil para Teresa?",
+     "options": [
+      "Porque la mina trabaja toda la noche",
+      "Porque no hay radio",
+      "Porque está de vacaciones"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuánto tiempo hace que Rogelio no llama a Teresa?",
+     "options": [
+      "Seis meses",
+      "Sesenta años",
+      "Nueve años"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué decide Teresa?",
+     "options": [
+      "No apagar nada",
+      "Apagar a medianoche",
+      "Apagar todo a las once"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué amigo del colegio quieres llamar otra vez?",
+     "model": "Quiero llamar a Andrés, mi compañero de clase."
+    },
+    {
+     "q": "¿Qué vecino te ayudó con un problema?",
+     "model": "La vecina del tercero me ayudó con una gotera."
+    },
+    {
+     "q": "¿Qué haces en tu casa para gastar menos electricidad?",
+     "model": "Apago las luces que no uso."
+    }
+   ],
+   "gaps": "Hace [nueve] años que no me [llamas], y me llamas para [apagar] [luces].",
+   "glossary": [
+    {
+     "word": "reflectores",
+     "meaning": "luces muy potentes"
+    },
+    {
+     "word": "apagar",
+     "meaning": "hacer que una luz deje de funcionar"
+    },
+    {
+     "word": "todo apagado",
+     "meaning": "sin ninguna luz"
+    }
+   ]
+  },
+  {
    "id": "cocina",
    "title": "El agua que no hierve",
    "place": "La carpa cocina",
@@ -891,117 +891,6 @@
     {
      "word": "cría",
      "meaning": "animal recién nacido"
-    }
-   ]
-  },
-  {
-   "id": "duchas",
-   "title": "Reunión en toalla",
-   "place": "Las duchas",
-   "context": "Fabián sale de las duchas con el pelo lleno de champú. Rogelio arregla una lámpara.",
-   "speakers": [
-    {
-     "name": "Fabián",
-     "country": "España",
-     "voice": "es-ES-AlvaroNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "¡Don Rogelio! ¡El agua caliente se terminó! Tengo champú en la cabeza."
-    },
-    {
-     "s": 1,
-     "text": "Sí, señor. El agua caliente dura cuatro minutos. Está en el cartel."
-    },
-    {
-     "s": 0,
-     "text": "Cuatro minutos no es una ducha. Además, no hay señal. A las dos tengo una reunión con Tokio."
-    },
-    {
-     "s": 1,
-     "text": "¿A las dos de la mañana?"
-    },
-    {
-     "s": 0,
-     "text": "Allí es por la tarde. ¿Dónde hay señal?"
-    },
-    {
-     "s": 1,
-     "text": "Solo en el techo de las duchas. Hay una escalera atrás."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué tiene Fabián en la cabeza?",
-     "options": [
-      "Champú",
-      "Un gorro",
-      "Una toalla"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Dónde está la información sobre el agua caliente?",
-     "options": [
-      "En la página del camping",
-      "En el cartel",
-      "En la lista de Rogelio"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿A qué hora es la reunión en el camping?",
-     "options": [
-      "A las doce de la noche",
-      "A las dos de la mañana",
-      "A las tres"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Cómo se sube al techo?",
-     "options": [
-      "Con una cuerda",
-      "Por una escalera de atrás",
-      "Por la puerta de la cocina"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué canción de los años ochenta cantas bajo la ducha?",
-     "model": "Canto una de Soda Stereo."
-    },
-    {
-     "q": "¿Dónde buscas cobertura cuando el móvil no funciona?",
-     "model": "Busco cobertura cerca de una ventana."
-    },
-    {
-     "q": "¿A qué país te gustaría llamar por trabajo?",
-     "model": "Me gustaría llamar a Japón."
-    }
-   ],
-   "gaps": "Cuatro minutos no es una [ducha]. Además, no hay [señal]. A las dos tengo una [reunión] con [Tokio].",
-   "glossary": [
-    {
-     "word": "champú",
-     "meaning": "jabón para el pelo"
-    },
-    {
-     "word": "señal",
-     "meaning": "conexión del teléfono"
-    },
-    {
-     "word": "escalera",
-     "meaning": "sirve para subir"
     }
    ]
   },
@@ -1343,6 +1232,228 @@
     {
      "word": "aparta",
      "meaning": "muévete a un lado"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Seis minutos con el espacio",
+   "place": "Las caravanas",
+   "context": "Doña Hortensia prepara su radio en la caravana. Celeste le lleva un té.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Hortensia, aquí tiene su té. ¿Qué está haciendo con todos esos cables?"
+    },
+    {
+     "s": 0,
+     "text": "Gracias, hija. Hoy quiero hablar con la estación espacial. Pasa a la una y cuarenta."
+    },
+    {
+     "s": 1,
+     "text": "¿Y se puede hablar con los astronautas por radio?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, pero solo seis minutos. Lo intento desde hace once años."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué les va a decir?"
+    },
+    {
+     "s": 0,
+     "text": "Que tengo ochenta y un años y que esta noche el cielo es el más bonito del mundo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le lleva Celeste a Hortensia?",
+     "options": [
+      "Un té",
+      "Un café con leche",
+      "Una manta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora pasa la estación espacial?",
+     "options": [
+      "A las tres y doce",
+      "A la una y cuarenta",
+      "A las once en punto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Desde cuándo lo intenta Hortensia?",
+     "options": [
+      "Desde hace once años",
+      "Desde esta mañana",
+      "Desde 1966, cuando era joven"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué quiere decirles a los astronautas?",
+     "options": [
+      "Que tiene frío en la caravana",
+      "Que quiere viajar al espacio",
+      "Que el cielo de esta noche es precioso"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué habilidad intentas aprender sin éxito?",
+     "model": "Intento aprender a tocar la guitarra."
+    },
+    {
+     "q": "¿Qué le preguntas a un astronauta en seis minutos?",
+     "model": "Le pregunto qué come en el espacio."
+    },
+    {
+     "q": "¿Qué persona mayor de tu entorno usa muy bien la tecnología?",
+     "model": "Mi abuela usa muy bien la tableta."
+    }
+   ],
+   "gaps": "Sí, pero solo [seis] minutos. Lo [intento] desde hace [once] [años].",
+   "glossary": [
+    {
+     "word": "cables",
+     "meaning": "hilos para la electricidad"
+    },
+    {
+     "word": "astronautas",
+     "meaning": "personas que viajan al espacio"
+    },
+    {
+     "word": "lo intento",
+     "meaning": "trato de hacerlo"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Reunión en toalla",
+   "place": "Las duchas",
+   "context": "Fabián sale de las duchas con el pelo lleno de champú. Rogelio arregla una lámpara.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Don Rogelio! ¡El agua caliente se terminó! Tengo champú en la cabeza."
+    },
+    {
+     "s": 1,
+     "text": "Sí, señor. El agua caliente dura cuatro minutos. Está en el cartel."
+    },
+    {
+     "s": 0,
+     "text": "Cuatro minutos no es una ducha. Además, no hay señal. A las dos tengo una reunión con Tokio."
+    },
+    {
+     "s": 1,
+     "text": "¿A las dos de la mañana?"
+    },
+    {
+     "s": 0,
+     "text": "Allí es por la tarde. ¿Dónde hay señal?"
+    },
+    {
+     "s": 1,
+     "text": "Solo en el techo de las duchas. Hay una escalera atrás."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Fabián en la cabeza?",
+     "options": [
+      "Champú",
+      "Un gorro",
+      "Una toalla"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde está la información sobre el agua caliente?",
+     "options": [
+      "En la página del camping",
+      "En el cartel",
+      "En la lista de Rogelio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora es la reunión en el camping?",
+     "options": [
+      "A las doce de la noche",
+      "A las dos de la mañana",
+      "A las tres"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo se sube al techo?",
+     "options": [
+      "Con una cuerda",
+      "Por una escalera de atrás",
+      "Por la puerta de la cocina"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué canción de los años ochenta cantas bajo la ducha?",
+     "model": "Canto una de Soda Stereo."
+    },
+    {
+     "q": "¿Dónde buscas cobertura cuando el móvil no funciona?",
+     "model": "Busco cobertura cerca de una ventana."
+    },
+    {
+     "q": "¿A qué país te gustaría llamar por trabajo?",
+     "model": "Me gustaría llamar a Japón."
+    }
+   ],
+   "gaps": "Cuatro minutos no es una [ducha]. Además, no hay [señal]. A las dos tengo una [reunión] con [Tokio].",
+   "glossary": [
+    {
+     "word": "champú",
+     "meaning": "jabón para el pelo"
+    },
+    {
+     "word": "señal",
+     "meaning": "conexión del teléfono"
+    },
+    {
+     "word": "escalera",
+     "meaning": "sirve para subir"
     }
    ]
   },
@@ -1787,117 +1898,6 @@
     {
      "word": "contenido",
      "meaning": "vídeos y fotos para internet"
-    }
-   ]
-  },
-  {
-   "id": "apagon",
-   "title": "La gerenta de la mina",
-   "place": "La caseta del generador",
-   "context": "Son casi las once. Rogelio está en la caseta del generador y llama por radio a Teresa, la gerenta de la mina vecina.",
-   "speakers": [
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    },
-    {
-     "name": "Teresa",
-     "country": "El Salvador",
-     "voice": "es-SV-LorenaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Teresa, habla Rogelio. A las once apago el camping. ¿Puedes apagar los reflectores de la mina?"
-    },
-    {
-     "s": 1,
-     "text": "Rogelio, la mina trabaja toda la noche. No es tan fácil."
-    },
-    {
-     "s": 0,
-     "text": "Solo esta noche. Es la lluvia de estrellas más grande en sesenta años."
-    },
-    {
-     "s": 1,
-     "text": "Hace nueve años que no me llamas, y me llamas para apagar luces."
-    },
-    {
-     "s": 0,
-     "text": "También te llamo para darte las gracias."
-    },
-    {
-     "s": 1,
-     "text": "Bueno. A las once, todo apagado."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué quiere Rogelio?",
-     "options": [
-      "Que la mina apague los reflectores",
-      "Que Teresa venga al camping",
-      "Dinero para el generador"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Por qué no es fácil para Teresa?",
-     "options": [
-      "Porque la mina trabaja toda la noche",
-      "Porque no hay radio",
-      "Porque está de vacaciones"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Cuánto tiempo hace que Rogelio no llama a Teresa?",
-     "options": [
-      "Seis meses",
-      "Sesenta años",
-      "Nueve años"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué decide Teresa?",
-     "options": [
-      "No apagar nada",
-      "Apagar a medianoche",
-      "Apagar todo a las once"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué amigo del colegio quieres llamar otra vez?",
-     "model": "Quiero llamar a Andrés, mi compañero de clase."
-    },
-    {
-     "q": "¿Qué vecino te ayudó con un problema?",
-     "model": "La vecina del tercero me ayudó con una gotera."
-    },
-    {
-     "q": "¿Qué haces en tu casa para gastar menos electricidad?",
-     "model": "Apago las luces que no uso."
-    }
-   ],
-   "gaps": "Hace [nueve] años que no me [llamas], y me llamas para [apagar] [luces].",
-   "glossary": [
-    {
-     "word": "reflectores",
-     "meaning": "luces muy potentes"
-    },
-    {
-     "word": "apagar",
-     "meaning": "hacer que una luz deje de funcionar"
-    },
-    {
-     "word": "todo apagado",
-     "meaning": "sin ninguna luz"
     }
    ]
   },

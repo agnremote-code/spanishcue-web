@@ -56,7 +56,7 @@ export default {
     ask: "Nora no grita. Se queda mirando el cielo, que empieza a llenarse de estrellas. ¿Qué le dices?",
     options: [
       { say: "Tu padre pasó la vida en los salares. Si esparces un puñado de sal en su nombre, el gesto no pierde sentido: lo importante es dónde y cuándo.", reply: "Él decía que la sal era polvo de estrellas que se había quedado a vivir en la Tierra. Seguro que se reiría de esto.", end: "Nora esparció en el viento la sal del salar, y dijo que su padre lo entendería.", mood: "sad" },
-      { say: "¿Alguien de tu familia podría entrar en vuestra casa? Arturo vería la lluvia en directo, aunque sea por una pantalla.", reply: "Inés tiene llave. Mi padre mirando las Ledésmidas desde la cocina, al lado del azúcar… Es tan absurdo que le habría encantado.", end: "Arturo miró la lluvia por videollamada, desde la cocina de Mendoza, al lado del azúcar.", mood: "laugh" },
+      { say: "¿Alguien de la familia podría entrar en su casa? Arturo vería la lluvia en directo, aunque sea por una pantalla.", reply: "Inés tiene llave. Mi padre mirando las Ledésmidas desde la cocina, al lado del azúcar… Es tan absurdo que le habría encantado.", end: "Arturo miró la lluvia por videollamada, desde la cocina de Mendoza, al lado del azúcar.", mood: "laugh" },
       { say: "Quizá esta noche no sea para despedirlo, sino para ver lo que él quería ver. Podríais volver con la urna el año que viene.", reply: "Volver en 2027… Tienes razón. Hoy miramos por él. Y la próxima vez la urna viaja en mi regazo.", end: "Iván y Nora decidieron volver en 2027 con la urna, y esa noche solo miraron el cielo.", mood: "love" },
     ],
     talk: [
@@ -67,28 +67,6 @@ export default {
       "¿Qué hábito de un familiar fallecido has adoptado sin darte cuenta?",
     ],
     words: ["el yerno", "encargarse de", "merecerse", "el puñado", "el regazo"],
-  },
-  radio: {
-    title: "Seis minutos de órbita",
-    line: "La caravana de Doña Hortensia parece la cabina de un submarino: antenas, diales, cables enrollados y fotos amarillentas de los años setenta. Hortensia tiene ochenta y un años y lleva cincuenta hablando por radio con desconocidos de todo el mundo. Esta noche, a la una y cuarenta, la estación espacial pasará sobre el desierto durante seis minutos exactos.",
-    dialogue: [
-      ["hortensia", "Once años intentándolo. Si aquella tormenta de 2019 no me hubiera quemado la antena, ya lo habría conseguido."],
-      ["hortensia", "Mi marido y yo empezamos juntos en 1975. Su sueño era hablar con alguien en órbita. Murió hace tres inviernos sin lograrlo. Desde entonces lo intento por los dos."],
-    ],
-    ask: "Hortensia te tiende los auriculares de repuesto. Faltan noventa segundos. ¿Qué le dices?",
-    options: [
-      { say: "El cielo no podría estar más limpio. Hable usted, Hortensia, y diga todo lo que lleva once años guardando.", reply: "Estación espacial, aquí Hortensia, desde el desierto de Ancoyo… ¿Me reciben? … ¡Contestan! ¡Es una voz de mujer!", end: "Doña Hortensia habló seis minutos con la estación espacial, y le preguntaron por su receta de sopa.", mood: "surprised" },
-      { say: "Mientras espera, ¿por qué no barre otras frecuencias? A lo mejor alguien en la Tierra está mirando lo mismo que nosotros.", reply: "Aquí hay alguien… Un camionero. Dice que ha aparcado en la cuneta, cerca de Salta, porque no podía conducir con semejante cielo.", end: "Doña Hortensia contactó a un camionero de Salta que también miraba el cielo, y se hicieron amigos de radio.", mood: "laugh" },
-      { say: "¿Y si hoy, por una vez, apaga la radio y mira? Quizá su marido preferiría que usted viera la lluvia en vez de escucharla.", reply: "Cincuenta años encendida… Él decía que yo no sabía estar sin ruido. Vamos a ver si tenía razón.", end: "Doña Hortensia apagó la radio por primera vez en cincuenta años y escuchó el silencio.", mood: "love" },
-    ],
-    talk: [
-      "¿Qué proyecto has continuado en nombre de alguien que ya no está?",
-      "Si hubieras nacido cincuenta años antes, ¿cómo te habrías comunicado con tus amigos lejanos?",
-      "¿Qué le preguntarías a una astronauta que nadie le haya preguntado nunca?",
-      "¿Qué opinas de la gente que mantiene aficiones analógicas en la era digital?",
-      "¿Qué golpe de mala suerte retrasó durante años algo que deseabas?",
-    ],
-    words: ["el dial", "en órbita", "lograr", "de repuesto", "la cuneta"],
   },
   alien: {
     title: "Guardia junto a la carpa azul",
@@ -136,6 +114,28 @@ export default {
     ],
     words: ["mantener el personaje", "a fondo", "parpadear", "la mirada de socorro", "presumir"],
   },
+  apagon: {
+    title: "Los reflectores de la mina",
+    line: "A las once menos cinco, Rogelio espera en la caseta del generador con la mano en el interruptor. Cuando lo baje, el camping quedará a oscuras. Pero en el horizonte brillan los reflectores de la mina Santa Rita, que iluminan medio cielo. La gerenta de la mina es Teresa, su exesposa. Hace nueve años que no se dirigen la palabra.",
+    dialogue: [
+      ["rogelio", "Nos separamos porque ella quería la ciudad y yo, este desierto. Y mira dónde ha terminado: dirigiendo una mina a cuatro mil metros. Si eso no es ironía…"],
+      ["teresa", "Rogelio. Nueve años de silencio y me llamas a las once de la noche por radio. Más vale que sea importante."],
+    ],
+    ask: "Rogelio se queda en blanco y te pasa la radio. ¿Qué haces?",
+    options: [
+      { say: "Rogelio, sé directo: dile que necesitas un favor y que se lo agradecerías de verdad. Nueve años de orgullo son suficientes.", reply: "Teresa… te pido un favor. Apaga los reflectores esta noche. Te lo agradecería más de lo que imaginas.", end: "Teresa apagó los reflectores de la mina, y Rogelio le dio las gracias después de nueve años.", mood: "love" },
+      { say: "Proponle una cuenta atrás: tú apagas el camping y ella la mina, a la vez. Que sea algo compartido.", reply: "Teresa, por una vez hagamos algo juntos. A las once en punto. Diez, nueve…", end: "A las 23:00 todo el desierto quedó a oscuras, hasta la mina Santa Rita.", mood: "surprised" },
+      { say: "¿Y si le propones mirar la lluvia juntos por radio, cada uno desde su lugar, como cuando estabais casados?", reply: "Teresa, ¿te acuerdas de las Perseidas del 98, en el techo de la camioneta? ¿Las miramos otra vez, aunque sea por radio?", end: "Rogelio y Teresa miran la lluvia por radio, cada uno desde su lado, como antes.", mood: "smile" },
+    ],
+    talk: [
+      "¿Qué favor le pedirías a alguien con quien rompiste hace años?",
+      "Si pudieras volver a hablar con alguien de tu pasado, ¿cómo empezarías la conversación?",
+      "¿Qué opinas de las empresas que priorizan la producción sobre el entorno?",
+      "¿Qué ironía del destino conoces que parezca sacada de una novela?",
+      "¿Qué recuerdo compartido podría reconciliar a dos personas enfrentadas?",
+    ],
+    words: ["dirigirse la palabra", "quedarse en blanco", "más vale que", "la cuenta atrás", "el orgullo"],
+  },
   cocina: {
     title: "Treinta años mirando ollas",
     line: "En la carpa cocina, Doña Petrona ha cocinado para sesenta y cuatro personas desde las cinco de la tarde. A tres mil seiscientos metros el agua hierve a ochenta y ocho grados, y la pasta se resiste. Mauro, su nuevo ayudante, recién llegado de la costa uruguaya, no termina de entender la física de la altura.",
@@ -181,28 +181,6 @@ export default {
     ],
     words: ["tumbarse", "a la altura de las circunstancias", "inquieto", "con que", "sensato"],
   },
-  duchas: {
-    title: "Una cumbre en toalla",
-    line: "Fabián, ejecutivo de una empresa madrileña de energía solar, lleva ocho meses negociando con una compañía de Tokio. La reunión que decidirá el contrato es a las dos de la mañana, hora del desierto. En las duchas, el agua caliente solo duró cuatro minutos y el único punto con cobertura es el techo de chapa del edificio.",
-    dialogue: [
-      ["fabian", "Si me hubieran dicho que la reunión de mi vida la haría en toalla y sobre un tejado, me habría reído en su cara."],
-      ["fabian", "Mi traje está en el coche, a quinientos metros. Y los japoneses son puntualísimos: dentro de seis minutos estarán conectados."],
-    ],
-    ask: "Fabián tiene un pie en la escalera y el portátil bajo el brazo. ¿Qué le recomiendas?",
-    options: [
-      { say: "Sube tal como estás. La cámara solo enfoca la cara, y a veces la naturalidad convence más que una corbata.", reply: "Si me despiden, por lo menos tendré la mejor anécdota de la empresa.", end: "Fabián hizo su videollamada con Tokio desde el techo de las duchas, en toalla.", mood: "laugh" },
-      { say: "Cancela. Los contratos se repiten; una lluvia de estrellas así no vuelve hasta dentro de sesenta años.", reply: "En quince años no he cancelado ni una reunión. Quizá por eso no me acuerdo de ninguna.", end: "Fabián canceló la reunión con Tokio y subió al mirador con el pelo mojado.", mood: "smile" },
-      { say: "Cuando te conectes, gira la cámara hacia el cielo. Que entiendan por qué estás aquí.", reply: "Doce ejecutivos en una sala de Tokio mirando estrellas en silencio… Es tan insensato que puede funcionar.", end: "Fabián les mostró la lluvia de estrellas a sus jefes de Tokio, y aplaudieron.", mood: "surprised" },
-    ],
-    talk: [
-      "¿Qué situación profesional incómoda terminó favoreciéndote?",
-      "Si tuvieras que elegir entre un contrato importante y una experiencia irrepetible, ¿qué elegirías?",
-      "¿Qué opinas de la cultura laboral que exige estar disponible a cualquier hora?",
-      "¿Qué papel juega la imagen en tu trabajo?",
-      "¿Qué te habría gustado decirle a un jefe y nunca te atreviste?",
-    ],
-    words: ["la cumbre", "la cobertura", "puntualísimos", "la naturalidad", "insensato"],
-  },
   hamacas: {
     title: "Insomnio con estrellas",
     line: "En la zona de las hamacas, Rocío lleva una hora con los ojos abiertos. Su hijo Martín tiene siete meses y, desde que nació, ella no ha dormido una noche entera. Su marido, Andrés, le regaló esta escapada para que descansara. Ahora, con silencio absoluto y una manta de alpaca, es incapaz de pegar ojo.",
@@ -237,7 +215,7 @@ export default {
     options: [
       { say: "Elías, ¿por qué no cuentas los meteoros en voz alta? Así el grupo te sigue por la voz y nadie se pierde.", reply: "¡Treinta y nueve! ¡Cuarenta! Seguid mi voz, que las piedras no muerden.", end: "Elías oyó cuarenta meteoros en la radio y los contó en voz alta para todos.", mood: "laugh" },
       { say: "Marta, mientras subimos, descríbele a tu hermano lo que ves, como cuando erais pequeños.", reply: "Hay una franja blanca que cruza todo el cielo… Elías, llevo años sin mirarla. Te la he descrito mil veces de memoria.", end: "Marta le describió el cielo a su hermano y descubrió que ella tampoco lo miraba hacía años.", mood: "surprised" },
-      { say: "Elías, guía tú al grupo. Esta noche la oscuridad juega a tu favor.", reply: "Agarraos a la chaqueta del de delante. La oscuridad es mi casa; hoy os invito yo.", end: "Elías guio a todos por el sendero a oscuras, porque la oscuridad es su casa.", mood: "smile" },
+      { say: "Elías, guía tú al grupo. Esta noche la oscuridad juega a tu favor.", reply: "Agarraos a la chaqueta del de delante. La oscuridad es mi casa; hoy los invito yo.", end: "Elías guio a todos por el sendero a oscuras, porque la oscuridad es su casa.", mood: "smile" },
     ],
     talk: [
       "¿Qué situación te hizo comprender cómo vive el mundo otra persona?",
@@ -259,7 +237,7 @@ export default {
     ask: "Joaquín golpea el motor sin resultado. Amalia mira a los niños por la puerta. ¿Qué le sugieres?",
     options: [
       { say: "Las máquinas viejas a veces solo necesitan un buen golpe. Usted ha arreglado cosas peores con menos: ¿por qué no prueba una patada?", reply: "Mi padre arreglaba la radio así y nunca falló. Joaquín, apártese, que voy.", end: "La cúpula se destrabó con una patada de Doña Amalia, que tiene setenta y siete años.", mood: "laugh" },
-      { say: "Si deja el telescopio a los niños, usted podría mirar su cometa como en 1966: con sus propios ojos.", reply: "Con mis ojos, como aquella chica de diecisiete años. Es lo más justo.", end: "Doña Amalia dejó el telescopio a los niños y mira su cometa sin aparatos, como en 1966.", mood: "love" },
+      { say: "Si deja el telescopio a los niños, usted podría mirar su cometa como en 1966: con sus propios ojos.", reply: "Con mis ojos, como aquella chica de diecisiete años. Es lo más justo.", end: "Doña Amalia dejó el telescopio a los niños y mira la lluvia de su cometa sin aparatos, como en 1966.", mood: "love" },
       { say: "Lo que no puede pasar es que se duerma otra vez. ¿Le traigo un café bien cargado?", reply: "Doble. No pienso perderme la misma lluvia dos veces en una vida.", end: "Doña Amalia tomó un café doble para no dormirse esta vez.", mood: "surprised" },
     ],
     talk: [
@@ -270,6 +248,50 @@ export default {
       "¿Qué aparato electrónico te dejó tirado justo cuando más falta te hacía, y qué hiciste?",
     ],
     words: ["trabada", "pelearse con", "oxidado", "destrabarse", "bien cargado"],
+  },
+  radio: {
+    title: "Seis minutos de órbita",
+    line: "La caravana de Doña Hortensia parece la cabina de un submarino: antenas, diales, cables enrollados y fotos amarillentas de los años setenta. Hortensia tiene ochenta y un años y lleva cincuenta hablando por radio con desconocidos de todo el mundo. Esta noche, a la una y cuarenta, la estación espacial pasará sobre el desierto durante seis minutos exactos.",
+    dialogue: [
+      ["hortensia", "Once años intentándolo. Si aquella tormenta de 2019 no me hubiera quemado la antena, ya lo habría conseguido."],
+      ["hortensia", "Mi marido y yo empezamos juntos en 1975. Su sueño era hablar con alguien en órbita. Murió hace tres inviernos sin lograrlo. Desde entonces lo intento por los dos."],
+    ],
+    ask: "Hortensia te tiende los auriculares de repuesto. Faltan noventa segundos. ¿Qué le dices?",
+    options: [
+      { say: "El cielo no podría estar más limpio. Hable usted, Hortensia, y diga todo lo que lleva once años guardando.", reply: "Estación espacial, aquí Hortensia, desde el desierto de Ancoyo… ¿Me reciben? … ¡Contestan! ¡Es una voz de mujer!", end: "Doña Hortensia habló seis minutos con la estación espacial, y le preguntaron por su receta de sopa.", mood: "surprised" },
+      { say: "Mientras espera, ¿por qué no barre otras frecuencias? A lo mejor alguien en la Tierra está mirando lo mismo que nosotros.", reply: "Aquí hay alguien… Un camionero. Dice que ha aparcado en la cuneta, cerca de Salta, porque no podía conducir con semejante cielo.", end: "Doña Hortensia contactó a un camionero de Salta que también miraba el cielo, y se hicieron amigos de radio.", mood: "laugh" },
+      { say: "¿Y si hoy, por una vez, apaga la radio y mira? Quizá su marido preferiría que usted viera la lluvia en vez de escucharla.", reply: "Cincuenta años encendida… Él decía que yo no sabía estar sin ruido. Vamos a ver si tenía razón.", end: "Doña Hortensia apagó la radio por primera vez en cincuenta años y escuchó el silencio.", mood: "love" },
+    ],
+    talk: [
+      "¿Qué proyecto has continuado en nombre de alguien que ya no está?",
+      "Si hubieras nacido cincuenta años antes, ¿cómo te habrías comunicado con tus amigos lejanos?",
+      "¿Qué le preguntarías a una astronauta que nadie le haya preguntado nunca?",
+      "¿Qué opinas de la gente que mantiene aficiones analógicas en la era digital?",
+      "¿Qué golpe de mala suerte retrasó durante años algo que deseabas?",
+    ],
+    words: ["el dial", "en órbita", "lograr", "de repuesto", "la cuneta"],
+  },
+  duchas: {
+    title: "Una cumbre en toalla",
+    line: "Fabián, ejecutivo de una empresa madrileña de energía solar, lleva ocho meses negociando con una compañía de Tokio. La reunión que decidirá el contrato es a las dos de la mañana, hora del desierto. En las duchas, el agua caliente solo duró cuatro minutos y el único punto con cobertura es el techo de chapa del edificio.",
+    dialogue: [
+      ["fabian", "Si me hubieran dicho que la reunión de mi vida la haría en toalla y sobre un tejado, me habría reído en su cara."],
+      ["fabian", "Mi traje está en el auto, a quinientos metros. Y los japoneses son puntualísimos: dentro de seis minutos estarán conectados."],
+    ],
+    ask: "Fabián tiene un pie en la escalera y el portátil bajo el brazo. ¿Qué le recomiendas?",
+    options: [
+      { say: "Sube tal como estás. La cámara solo enfoca la cara, y a veces la naturalidad convence más que una corbata.", reply: "Si me despiden, por lo menos tendré la mejor anécdota de la empresa.", end: "Fabián hizo su videollamada con Tokio desde el techo de las duchas, en toalla.", mood: "laugh" },
+      { say: "Cancela. Los contratos se repiten; una lluvia de estrellas así no vuelve hasta dentro de sesenta años.", reply: "En quince años no he cancelado ni una reunión. Quizá por eso no me acuerdo de ninguna.", end: "Fabián canceló la reunión con Tokio y subió al mirador con el pelo mojado.", mood: "smile" },
+      { say: "Cuando te conectes, gira la cámara hacia el cielo. Que entiendan por qué estás aquí.", reply: "Doce ejecutivos en una sala de Tokio mirando estrellas en silencio… Es tan insensato que puede funcionar.", end: "Fabián les mostró la lluvia de estrellas a sus jefes de Tokio, y aplaudieron.", mood: "surprised" },
+    ],
+    talk: [
+      "¿Qué situación profesional incómoda terminó favoreciéndote?",
+      "Si tuvieras que elegir entre un contrato importante y una experiencia irrepetible, ¿qué elegirías?",
+      "¿Qué opinas de la cultura laboral que exige estar disponible a cualquier hora?",
+      "¿Qué papel juega la imagen en tu trabajo?",
+      "¿Qué te habría gustado decirle a un jefe y nunca te atreviste?",
+    ],
+    words: ["la cumbre", "la cobertura", "puntualísimos", "la naturalidad", "insensato"],
   },
   mina: {
     title: "El vértigo de un minero",
@@ -360,28 +382,6 @@ export default {
     ],
     words: ["sobrevolar", "en zigzag", "no responder de sí", "a secas", "alarmar"],
   },
-  apagon: {
-    title: "Los reflectores de la mina",
-    line: "A las once menos cinco, Rogelio espera en la caseta del generador con la mano en el interruptor. Cuando lo baje, el camping quedará a oscuras. Pero en el horizonte brillan los reflectores de la mina Santa Rita, que iluminan medio cielo. La gerenta de la mina es Teresa, su exesposa. Hace nueve años que no se dirigen la palabra.",
-    dialogue: [
-      ["rogelio", "Nos separamos porque ella quería la ciudad y yo, este desierto. Y mira dónde ha terminado: dirigiendo una mina a cuatro mil metros. Si eso no es ironía…"],
-      ["teresa", "Rogelio. Nueve años de silencio y me llamas a las once de la noche por radio. Más vale que sea importante."],
-    ],
-    ask: "Rogelio se queda en blanco y te pasa la radio. ¿Qué haces?",
-    options: [
-      { say: "Rogelio, sé directo: dile que necesitas un favor y que se lo agradecerías de verdad. Nueve años de orgullo son suficientes.", reply: "Teresa… te pido un favor. Apaga los reflectores esta noche. Te lo agradecería más de lo que imaginas.", end: "Teresa apagó los reflectores de la mina, y Rogelio le dio las gracias después de nueve años.", mood: "love" },
-      { say: "Proponle una cuenta atrás: tú apagas el camping y ella la mina, a la vez. Que sea algo compartido.", reply: "Teresa, por una vez hagamos algo juntos. A las once en punto. Diez, nueve…", end: "A las 23:00 todo el desierto quedó a oscuras, hasta la mina Santa Rita.", mood: "surprised" },
-      { say: "¿Y si le propones mirar la lluvia juntos por radio, cada uno desde su lugar, como cuando estabais casados?", reply: "Teresa, ¿te acuerdas de las Perseidas del 98, en el techo de la camioneta? ¿Las miramos otra vez, aunque sea por radio?", end: "Rogelio y Teresa miran la lluvia por radio, cada uno desde su lado, como antes.", mood: "smile" },
-    ],
-    talk: [
-      "¿Qué favor le pedirías a alguien con quien rompiste hace años?",
-      "Si pudieras volver a hablar con alguien de tu pasado, ¿cómo empezarías la conversación?",
-      "¿Qué opinas de las empresas que priorizan la producción sobre el entorno?",
-      "¿Qué ironía del destino conoces que parezca sacada de una novela?",
-      "¿Qué recuerdo compartido podría reconciliar a dos personas enfrentadas?",
-    ],
-    words: ["dirigirse la palabra", "quedarse en blanco", "más vale que", "la cuenta atrás", "el orgullo"],
-  },
   mirador: {
     title: "La primera bólida de Ramiro",
     line: "Son las tres y doce. En el mirador de rocas, las sesenta y cuatro personas del camping miran hacia arriba sin hablar. Caen más de mil estrellas fugaces por hora. Celeste aprieta contra el pecho la libreta en la que ha apuntado cómo ha subido cada uno. A su lado, Doña Amalia y Don Ramiro comparten una manta.",
@@ -392,7 +392,7 @@ export default {
     ],
     ask: "Celeste te mira con la libreta abierta. «¿Y ahora qué?», te pregunta. ¿Qué le dices?",
     options: [
-      { say: "Léela tú, Celeste. La has escrito con todos, pero la noche es tuya.", reply: "Si se me quiebra la voz, haced como que no os dais cuenta.", end: "Celeste leyó la libreta en voz alta. Hubo risas, aplausos y alguna lágrima discreta.", mood: "smile" },
+      { say: "Léela tú, Celeste. La has escrito con todos, pero la noche es tuya.", reply: "Si se me quiebra la voz, hagan como que no se dan cuenta.", end: "Celeste leyó la libreta en voz alta. Hubo risas, aplausos y alguna lágrima discreta.", mood: "smile" },
       { say: "Antes de leer, pidamos un deseo todos a la vez. Luego, la libreta.", reply: "A la de tres, y en silencio. Que nadie diga el suyo.", end: "Sesenta y cuatro personas pidieron un deseo al mismo tiempo. Durante un minuto solo se oyó el viento.", mood: "love" },
       { say: "Celeste, ¿te has dado cuenta de que llevas un buen rato con la linterna apagada?", reply: "¿En serio? … Es verdad. Estoy a oscuras y no tengo miedo. No me lo puedo creer.", end: "Celeste miró la oscuridad llena de estrellas y de gente, y se rio como una niña.", mood: "surprised" },
     ],

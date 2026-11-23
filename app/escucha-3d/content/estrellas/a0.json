@@ -39,7 +39,7 @@
     {
      "s": 0,
      "text": "Bueno. Tengo mi linterna roja.",
-     "en": "OK. I have my red torch."
+     "en": "OK. I have my red flashlight."
     },
     {
      "s": 1,
@@ -65,7 +65,7 @@
     },
     {
      "q": "¿De qué color es la linterna de Celeste?",
-     "qEn": "What colour is Celeste’s torch?",
+     "qEn": "What color is Celeste’s flashlight?",
      "options": [
       "Es roja",
       "Es azul y blanca",
@@ -107,7 +107,7 @@
     },
     {
      "q": "¿Dónde guardas tu linterna?",
-     "qEn": "Where do you keep your torch?",
+     "qEn": "Where do you keep your flashlight?",
      "model": "Mi linterna está en un cajón de la cocina."
     }
    ],
@@ -116,7 +116,7 @@
     {
      "word": "linterna",
      "meaning": "luz pequeña que llevas en la mano",
-     "en": "torch"
+     "en": "flashlight"
     },
     {
      "word": "apago",
@@ -135,7 +135,7 @@
    "title": "Trescientos lentes",
    "place": "El estacionamiento",
    "context": "Don Cosme vende lentes en el estacionamiento. Celeste pasa.",
-   "contextEn": "Don Cosme sells glasses in the car park. Celeste walks by.",
+   "contextEn": "Don Cosme sells glasses in the parking lot. Celeste walks by.",
    "speakers": [
     {
      "name": "Cosme",
@@ -220,7 +220,7 @@
    "open": [
     {
      "q": "¿Qué producto barato vende la gente en tu barrio?",
-     "qEn": "What cheap product do people sell in your neighbourhood?",
+     "qEn": "What cheap product do people sell in your neighborhood?",
      "model": "Venden fruta y helados."
     },
     {
@@ -377,134 +377,6 @@
    ]
   },
   {
-   "id": "radio",
-   "title": "Hola, espacio",
-   "place": "Las caravanas",
-   "context": "Doña Hortensia está en su caravana con una radio grande.",
-   "contextEn": "Doña Hortensia is in her caravan with a big radio.",
-   "speakers": [
-    {
-     "name": "Hortensia",
-     "country": "Perú",
-     "voice": "es-PE-CamilaNeural"
-    },
-    {
-     "name": "Celeste",
-     "country": "Chile",
-     "voice": "es-CL-CatalinaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 1,
-     "text": "Doña Hortensia, ¿qué hace?",
-     "en": "Doña Hortensia, what are you doing?"
-    },
-    {
-     "s": 0,
-     "text": "Hablo con el espacio. Bueno, quiero hablar.",
-     "en": "I am talking to space. Well, I want to talk."
-    },
-    {
-     "s": 1,
-     "text": "¿Con la estación espacial?",
-     "en": "With the space station?"
-    },
-    {
-     "s": 0,
-     "text": "Sí. Pasa a la una y cuarenta. Seis minutos.",
-     "en": "Yes. It passes at one forty. Six minutes."
-    },
-    {
-     "s": 1,
-     "text": "¿Y qué les dice?",
-     "en": "And what do you say to them?"
-    },
-    {
-     "s": 0,
-     "text": "Hola, soy Hortensia, tengo ochenta y un años.",
-     "en": "Hello, I am Hortensia, I am eighty-one."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Con quién quiere hablar Hortensia?",
-     "qEn": "Who does Hortensia want to talk to?",
-     "options": [
-      "Con su hija en Lima",
-      "Con la estación espacial",
-      "Con Rogelio"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿A qué hora pasa la estación?",
-     "qEn": "At what time does the station pass?",
-     "options": [
-      "A las once",
-      "A la una y cuarenta",
-      "A las tres y doce"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Cuántos minutos pasa?",
-     "qEn": "How many minutes does it pass for?",
-     "options": [
-      "Seis",
-      "Diez",
-      "Sesenta"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Cuántos años tiene Hortensia?",
-     "qEn": "How old is Hortensia?",
-     "options": [
-      "Setenta y uno",
-      "Noventa",
-      "Ochenta y uno"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué radio, televisor o teléfono antiguo recuerdas?",
-     "qEn": "Which old radio, TV or phone do you remember?",
-     "model": "Recuerdo la radio grande de mi abuelo."
-    },
-    {
-     "q": "¿Qué dices cuando contestas el teléfono?",
-     "qEn": "What do you say when you answer the phone?",
-     "model": "Digo «¿Hola, quién es?»."
-    },
-    {
-     "q": "¿Qué palabra usas para saludar por teléfono?",
-     "qEn": "What word do you use to say hello on the phone?",
-     "model": "Digo «aló»."
-    }
-   ],
-   "gaps": "Sí. Pasa a la [una] y [cuarenta]. Seis [minutos]. ¿Y qué les [dice]?",
-   "glossary": [
-    {
-     "word": "espacio",
-     "meaning": "lo que hay más allá del cielo",
-     "en": "space"
-    },
-    {
-     "word": "estación espacial",
-     "meaning": "casa de astronautas que gira alrededor de la Tierra",
-     "en": "space station"
-    },
-    {
-     "word": "pasa",
-     "meaning": "cruza, va por un lugar",
-     "en": "passes"
-    }
-   ]
-  },
-  {
    "id": "alien",
    "title": "Un amigo de otro planeta",
    "place": "La carpa azul",
@@ -526,7 +398,7 @@
     {
      "s": 0,
      "text": "Mamá, hoy veo un extraterrestre.",
-     "en": "Mum, today I see an alien."
+     "en": "Mom, today I see an alien."
     },
     {
      "s": 1,
@@ -536,7 +408,7 @@
     {
      "s": 0,
      "text": "No. Tengo galletas para él.",
-     "en": "No. I have biscuits for him."
+     "en": "No. I have cookies for him."
     },
     {
      "s": 1,
@@ -618,7 +490,7 @@
     {
      "word": "galletas",
      "meaning": "dulces pequeños y secos",
-     "en": "biscuits"
+     "en": "cookies"
     },
     {
      "word": "lejos",
@@ -751,6 +623,129 @@
    ]
   },
   {
+   "id": "apagon",
+   "title": "Las luces de la mina",
+   "place": "La caseta del generador",
+   "context": "Rogelio habla por radio con Teresa, la gerenta de la mina.",
+   "contextEn": "Rogelio talks by radio with Teresa, the manager of the mine.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Teresa, son las once. Apaga las luces de la mina, por favor.",
+     "en": "Teresa, it is eleven. Turn off the mine lights, please."
+    },
+    {
+     "s": 1,
+     "text": "¿Rogelio? ¿Eres tú?",
+     "en": "Rogelio? Is that you?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Es la noche de las estrellas.",
+     "en": "Yes. It is the night of the stars."
+    },
+    {
+     "s": 1,
+     "text": "Bueno. Pero solo esta noche.",
+     "en": "OK. But only tonight."
+    },
+    {
+     "s": 0,
+     "text": "Gracias, Teresa.",
+     "en": "Thank you, Teresa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con quién habla Rogelio?",
+     "qEn": "Who does Rogelio talk to?",
+     "options": [
+      "Con Celeste",
+      "Con Teresa",
+      "Con Hortensia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo hablan?",
+     "qEn": "How do they talk?",
+     "options": [
+      "Por radio",
+      "Por carta",
+      "En la cocina"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Las once",
+      "Las nueve",
+      "Las diez"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Teresa al final?",
+     "qEn": "What does Teresa say in the end?",
+     "options": [
+      "Que no, nunca",
+      "Que mañana",
+      "Que solo esta noche"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué edificio con muchas luces hay cerca de tu casa?",
+     "qEn": "Which building with lots of lights is there near your home?",
+     "model": "Hay un supermercado con muchas luces."
+    },
+    {
+     "q": "¿Qué vecino ruidoso o amable vive cerca de ti?",
+     "qEn": "Which noisy or kind neighbor lives near you?",
+     "model": "Un vecino amable vive al lado."
+    },
+    {
+     "q": "¿Qué haces en casa durante un apagón?",
+     "qEn": "What do you do at home during a power cut?",
+     "model": "Enciendo velas y hablo con mi familia."
+    }
+   ],
+   "gaps": "Teresa, son las [once]. Apaga las [luces] de la [mina], por [favor].",
+   "glossary": [
+    {
+     "word": "mina",
+     "meaning": "lugar donde sacan metales de la tierra",
+     "en": "mine"
+    },
+    {
+     "word": "apaga",
+     "meaning": "haz que no esté encendido",
+     "en": "turn off"
+    },
+    {
+     "word": "solo",
+     "meaning": "únicamente",
+     "en": "only"
+    }
+   ]
+  },
+  {
    "id": "cocina",
    "title": "Fideos duros",
    "place": "La carpa cocina",
@@ -787,7 +782,7 @@
     {
      "s": 0,
      "text": "Por la altura. Estamos a tres mil seiscientos metros.",
-     "en": "Because of the altitude. We are at three thousand six hundred metres."
+     "en": "Because of the altitude. We are at three thousand six hundred meters."
     },
     {
      "s": 1,
@@ -1002,134 +997,6 @@
    ]
   },
   {
-   "id": "duchas",
-   "title": "Cuatro minutos",
-   "place": "Las duchas",
-   "context": "Fabián sale de la ducha con una toalla. Rogelio pasa.",
-   "contextEn": "Fabián comes out of the shower in a towel. Rogelio walks by.",
-   "speakers": [
-    {
-     "name": "Fabián",
-     "country": "España",
-     "voice": "es-ES-AlvaroNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "¡El agua está fría! ¡Fría!",
-     "en": "The water is cold! Cold!"
-    },
-    {
-     "s": 1,
-     "text": "Sí, señor. El agua caliente dura cuatro minutos.",
-     "en": "Yes, sir. The hot water lasts four minutes."
-    },
-    {
-     "s": 0,
-     "text": "¿Cuatro? Tengo una reunión con Tokio a las dos.",
-     "en": "Four? I have a meeting with Tokyo at two."
-    },
-    {
-     "s": 1,
-     "text": "¿Aquí? Aquí no hay señal.",
-     "en": "Here? There is no signal here."
-    },
-    {
-     "s": 0,
-     "text": "¿Y dónde hay señal?",
-     "en": "And where is there a signal?"
-    },
-    {
-     "s": 1,
-     "text": "En el techo de las duchas.",
-     "en": "On the roof of the showers."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Cómo está el agua?",
-     "qEn": "How is the water?",
-     "options": [
-      "Caliente",
-      "Fría",
-      "Sucia"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Cuánto dura el agua caliente?",
-     "qEn": "How long does the hot water last?",
-     "options": [
-      "Cuatro minutos",
-      "Catorce minutos",
-      "Una hora"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿A qué hora es la reunión de Fabián?",
-     "qEn": "At what time is Fabián’s meeting?",
-     "options": [
-      "A las doce",
-      "A las tres",
-      "A las dos"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Dónde hay señal?",
-     "qEn": "Where is there a signal?",
-     "options": [
-      "En el estacionamiento",
-      "En el techo de las duchas",
-      "En la cocina"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Cuántos minutos dura tu ducha?",
-     "qEn": "How many minutes does your shower last?",
-     "model": "Mi ducha dura diez minutos."
-    },
-    {
-     "q": "¿En qué rincón de tu casa funciona mejor el internet?",
-     "qEn": "In which corner of your home does the internet work best?",
-     "model": "Funciona mejor en la sala."
-    },
-    {
-     "q": "¿A qué hora es tu primera reunión o clase del lunes?",
-     "qEn": "At what time is your first meeting or class on Monday?",
-     "model": "Mi primera clase es a las ocho."
-    }
-   ],
-   "gaps": "Sí, señor. El agua [caliente] dura [cuatro] [minutos]. ¿Cuatro? Tengo una [reunión] con Tokio a las dos.",
-   "glossary": [
-    {
-     "word": "reunión",
-     "meaning": "encuentro de trabajo",
-     "en": "meeting"
-    },
-    {
-     "word": "señal",
-     "meaning": "conexión para el teléfono",
-     "en": "signal"
-    },
-    {
-     "word": "techo",
-     "meaning": "la parte de arriba de un edificio",
-     "en": "roof"
-    }
-   ]
-  },
-  {
    "id": "hamacas",
    "title": "Mucho silencio",
    "place": "Las hamacas",
@@ -1224,7 +1091,7 @@
     },
     {
      "q": "¿Qué rincón silencioso tiene tu barrio?",
-     "qEn": "What quiet corner does your neighbourhood have?",
+     "qEn": "What quiet corner does your neighborhood have?",
      "model": "Mi barrio tiene un parque pequeño y silencioso."
     }
    ],
@@ -1490,6 +1357,262 @@
      "word": "cometa",
      "meaning": "bola de hielo y polvo con cola en el cielo",
      "en": "comet"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Hola, espacio",
+   "place": "Las caravanas",
+   "context": "Doña Hortensia está en su caravana con una radio grande.",
+   "contextEn": "Doña Hortensia is in her RV with a big radio.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Hortensia, ¿qué hace?",
+     "en": "Doña Hortensia, what are you doing?"
+    },
+    {
+     "s": 0,
+     "text": "Hablo con el espacio. Bueno, quiero hablar.",
+     "en": "I am talking to space. Well, I want to talk."
+    },
+    {
+     "s": 1,
+     "text": "¿Con la estación espacial?",
+     "en": "With the space station?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Pasa a la una y cuarenta. Seis minutos.",
+     "en": "Yes. It passes at one forty. Six minutes."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué les dice?",
+     "en": "And what do you say to them?"
+    },
+    {
+     "s": 0,
+     "text": "Hola, soy Hortensia, tengo ochenta y un años.",
+     "en": "Hello, I am Hortensia, I am eighty-one."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con quién quiere hablar Hortensia?",
+     "qEn": "Who does Hortensia want to talk to?",
+     "options": [
+      "Con su hija en Lima",
+      "Con la estación espacial",
+      "Con Rogelio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora pasa la estación?",
+     "qEn": "At what time does the station pass?",
+     "options": [
+      "A las once",
+      "A la una y cuarenta",
+      "A las tres y doce"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos minutos pasa?",
+     "qEn": "How many minutes does it pass for?",
+     "options": [
+      "Seis",
+      "Diez",
+      "Sesenta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tiene Hortensia?",
+     "qEn": "How old is Hortensia?",
+     "options": [
+      "Setenta y uno",
+      "Noventa",
+      "Ochenta y uno"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué radio, televisor o teléfono antiguo recuerdas?",
+     "qEn": "Which old radio, TV or phone do you remember?",
+     "model": "Recuerdo la radio grande de mi abuelo."
+    },
+    {
+     "q": "¿Qué dices cuando contestas el teléfono?",
+     "qEn": "What do you say when you answer the phone?",
+     "model": "Digo «¿Hola, quién es?»."
+    },
+    {
+     "q": "¿Qué palabra usas para saludar por teléfono?",
+     "qEn": "What word do you use to say hello on the phone?",
+     "model": "Digo «aló»."
+    }
+   ],
+   "gaps": "Sí. Pasa a la [una] y [cuarenta]. Seis [minutos]. ¿Y qué les [dice]?",
+   "glossary": [
+    {
+     "word": "espacio",
+     "meaning": "lo que hay más allá del cielo",
+     "en": "space"
+    },
+    {
+     "word": "estación espacial",
+     "meaning": "casa de astronautas que gira alrededor de la Tierra",
+     "en": "space station"
+    },
+    {
+     "word": "pasa",
+     "meaning": "cruza, va por un lugar",
+     "en": "passes"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Cuatro minutos",
+   "place": "Las duchas",
+   "context": "Fabián sale de la ducha con una toalla. Rogelio pasa.",
+   "contextEn": "Fabián comes out of the shower in a towel. Rogelio walks by.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡El agua está fría! ¡Fría!",
+     "en": "The water is cold! Cold!"
+    },
+    {
+     "s": 1,
+     "text": "Sí, señor. El agua caliente dura cuatro minutos.",
+     "en": "Yes, sir. The hot water lasts four minutes."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuatro? Tengo una reunión con Tokio a las dos.",
+     "en": "Four? I have a meeting with Tokyo at two."
+    },
+    {
+     "s": 1,
+     "text": "¿Aquí? Aquí no hay señal.",
+     "en": "Here? There is no signal here."
+    },
+    {
+     "s": 0,
+     "text": "¿Y dónde hay señal?",
+     "en": "And where is there a signal?"
+    },
+    {
+     "s": 1,
+     "text": "En el techo de las duchas.",
+     "en": "On the roof of the showers."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está el agua?",
+     "qEn": "How is the water?",
+     "options": [
+      "Caliente",
+      "Fría",
+      "Sucia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto dura el agua caliente?",
+     "qEn": "How long does the hot water last?",
+     "options": [
+      "Cuatro minutos",
+      "Catorce minutos",
+      "Una hora"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora es la reunión de Fabián?",
+     "qEn": "At what time is Fabián’s meeting?",
+     "options": [
+      "A las doce",
+      "A las tres",
+      "A las dos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde hay señal?",
+     "qEn": "Where is there a signal?",
+     "options": [
+      "En el estacionamiento",
+      "En el techo de las duchas",
+      "En la cocina"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuántos minutos dura tu ducha?",
+     "qEn": "How many minutes does your shower last?",
+     "model": "Mi ducha dura diez minutos."
+    },
+    {
+     "q": "¿En qué rincón de tu casa funciona mejor el internet?",
+     "qEn": "In which corner of your home does the internet work best?",
+     "model": "Funciona mejor en la sala."
+    },
+    {
+     "q": "¿A qué hora es tu primera reunión o clase del lunes?",
+     "qEn": "At what time is your first meeting or class on Monday?",
+     "model": "Mi primera clase es a las ocho."
+    }
+   ],
+   "gaps": "Sí, señor. El agua [caliente] dura [cuatro] [minutos]. ¿Cuatro? Tengo una [reunión] con Tokio a las dos.",
+   "glossary": [
+    {
+     "word": "reunión",
+     "meaning": "encuentro de trabajo",
+     "en": "meeting"
+    },
+    {
+     "word": "señal",
+     "meaning": "conexión para el teléfono",
+     "en": "signal"
+    },
+    {
+     "word": "techo",
+     "meaning": "la parte de arriba de un edificio",
+     "en": "roof"
     }
    ]
   },
@@ -1904,7 +2027,7 @@
     {
      "s": 1,
      "text": "Tres. Y una es mamá.",
-     "en": "Three. And one is Mum."
+     "en": "Three. And one is Mom."
     }
    ],
    "choice": [
@@ -1957,7 +2080,7 @@
     },
     {
      "q": "¿A quién mandas fotos de tus vacaciones?",
-     "qEn": "Who do you send photos of your holidays to?",
+     "qEn": "Who do you send photos of your vacations to?",
      "model": "Mando fotos a mi madre."
     },
     {
@@ -1982,129 +2105,6 @@
      "word": "desierto",
      "meaning": "lugar muy seco",
      "en": "desert"
-    }
-   ]
-  },
-  {
-   "id": "apagon",
-   "title": "Las luces de la mina",
-   "place": "La caseta del generador",
-   "context": "Rogelio habla por radio con Teresa, la gerenta de la mina.",
-   "contextEn": "Rogelio talks by radio with Teresa, the manager of the mine.",
-   "speakers": [
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    },
-    {
-     "name": "Teresa",
-     "country": "El Salvador",
-     "voice": "es-SV-LorenaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Teresa, son las once. Apaga las luces de la mina, por favor.",
-     "en": "Teresa, it is eleven. Turn off the mine lights, please."
-    },
-    {
-     "s": 1,
-     "text": "¿Rogelio? ¿Eres tú?",
-     "en": "Rogelio? Is that you?"
-    },
-    {
-     "s": 0,
-     "text": "Sí. Es la noche de las estrellas.",
-     "en": "Yes. It is the night of the stars."
-    },
-    {
-     "s": 1,
-     "text": "Bueno. Pero solo esta noche.",
-     "en": "OK. But only tonight."
-    },
-    {
-     "s": 0,
-     "text": "Gracias, Teresa.",
-     "en": "Thank you, Teresa."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Con quién habla Rogelio?",
-     "qEn": "Who does Rogelio talk to?",
-     "options": [
-      "Con Celeste",
-      "Con Teresa",
-      "Con Hortensia"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Cómo hablan?",
-     "qEn": "How do they talk?",
-     "options": [
-      "Por radio",
-      "Por carta",
-      "En la cocina"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué hora es?",
-     "qEn": "What time is it?",
-     "options": [
-      "Las once",
-      "Las nueve",
-      "Las diez"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué dice Teresa al final?",
-     "qEn": "What does Teresa say in the end?",
-     "options": [
-      "Que no, nunca",
-      "Que mañana",
-      "Que solo esta noche"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué edificio con muchas luces hay cerca de tu casa?",
-     "qEn": "Which building with lots of lights is there near your home?",
-     "model": "Hay un supermercado con muchas luces."
-    },
-    {
-     "q": "¿Qué vecino ruidoso o amable vive cerca de ti?",
-     "qEn": "Which noisy or kind neighbour lives near you?",
-     "model": "Un vecino amable vive al lado."
-    },
-    {
-     "q": "¿Qué haces en casa durante un apagón?",
-     "qEn": "What do you do at home during a power cut?",
-     "model": "Enciendo velas y hablo con mi familia."
-    }
-   ],
-   "gaps": "Teresa, son las [once]. Apaga las [luces] de la [mina], por [favor].",
-   "glossary": [
-    {
-     "word": "mina",
-     "meaning": "lugar donde sacan metales de la tierra",
-     "en": "mine"
-    },
-    {
-     "word": "apaga",
-     "meaning": "haz que no esté encendido",
-     "en": "turn off"
-    },
-    {
-     "word": "solo",
-     "meaning": "únicamente",
-     "en": "only"
     }
    ]
   },

@@ -39,26 +39,28 @@ export const CAST = {
   teresa: { name: 'Teresa', full: 'Ingeniera Teresa Ugarte', role: 'Gerenta de la mina vecina y exesposa de Rogelio', gender: 'f', voice: 'es-SV-LorenaNeural', country: 'El Salvador' },
 };
 
-// The 18 circles: sector and who is there (first = the person you talk to).
+// The 18 circles: sector, the time each one happens (at) and who is there
+// (first = the person you talk to). Rogelio switches the generator off at
+// 23:00 (apagon, 22:55); the circles after it happen in the dark.
 export const STORY = [
-  { id: 'entrada', sector: 'La entrada del camping', cast: ['celeste', 'rogelio'] },
-  { id: 'lentes', sector: 'El estacionamiento', cast: ['cosme'] },
-  { id: 'urna', sector: 'Las carpas', cast: ['nora', 'ivan'] },
-  { id: 'radio', sector: 'Las caravanas', cast: ['hortensia'] },
-  { id: 'alien', sector: 'La carpa azul', cast: ['simon', 'gabriela'] },
-  { id: 'cita', sector: 'El círculo de la fogata', cast: ['bruno', 'lucia'] },
-  { id: 'cocina', sector: 'La carpa cocina', cast: ['petrona', 'mauro'] },
-  { id: 'llama', sector: 'El corral de las llamas', cast: ['wilmer'] },
-  { id: 'duchas', sector: 'Las duchas', cast: ['fabian'] },
-  { id: 'hamacas', sector: 'Las hamacas', cast: ['rocio'] },
-  { id: 'sendero', sector: 'El sendero del mirador', cast: ['elias', 'marta'] },
-  { id: 'cupula', sector: 'La cúpula del observatorio', cast: ['amalia', 'joaquin'] },
-  { id: 'mina', sector: 'La casucha minera', cast: ['ramiro'] },
-  { id: 'salar', sector: 'El salar', cast: ['ulises'] },
-  { id: 'astrologa', sector: 'La orilla del salar', cast: ['zulema'] },
-  { id: 'dron', sector: 'Las rocas', cast: ['kiara', 'dante'] },
-  { id: 'apagon', sector: 'La caseta del generador', cast: ['rogelio', 'teresa'] },
-  { id: 'mirador', sector: 'El mirador', cast: ['celeste', 'amalia', 'ramiro'] },
+  { id: 'entrada', at: '21:00', sector: 'La entrada del camping', cast: ['celeste', 'rogelio'] },
+  { id: 'lentes', at: '21:20', sector: 'El estacionamiento', cast: ['cosme'] },
+  { id: 'urna', at: '21:40', sector: 'Las carpas', cast: ['nora', 'ivan'] },
+  { id: 'alien', at: '22:30', sector: 'La carpa azul', cast: ['simon', 'gabriela'] },
+  { id: 'cita', at: '22:45', sector: 'El círculo de la fogata', cast: ['bruno', 'lucia'] },
+  { id: 'apagon', at: '22:55', sector: 'La caseta del generador', cast: ['rogelio', 'teresa'] },
+  { id: 'cocina', at: '23:20', sector: 'La carpa cocina', cast: ['petrona', 'mauro'] },
+  { id: 'llama', at: '00:30', sector: 'El corral de las llamas', cast: ['wilmer'] },
+  { id: 'hamacas', at: '00:45', sector: 'Las hamacas', cast: ['rocio'] },
+  { id: 'sendero', at: '01:00', sector: 'El sendero del mirador', cast: ['elias', 'marta'] },
+  { id: 'cupula', at: '01:15', sector: 'La cúpula del observatorio', cast: ['amalia', 'joaquin'] },
+  { id: 'radio', at: '01:35', sector: 'Las caravanas', cast: ['hortensia'] },
+  { id: 'duchas', at: '01:50', sector: 'Las duchas', cast: ['fabian'] },
+  { id: 'mina', at: '02:00', sector: 'La casucha minera', cast: ['ramiro'] },
+  { id: 'salar', at: '02:15', sector: 'El salar', cast: ['ulises'] },
+  { id: 'astrologa', at: '02:30', sector: 'La orilla del salar', cast: ['zulema'] },
+  { id: 'dron', at: '02:45', sector: 'Las rocas', cast: ['kiara', 'dante'] },
+  { id: 'mirador', at: '03:12', sector: 'El mirador', cast: ['celeste', 'amalia', 'ramiro'] },
 ];
 export const STORY_IDS = STORY.map((s) => s.id);
 export const castByName = (name) => Object.entries(CAST).find(([, c]) => c.name === name)?.[0] ?? null;
@@ -109,23 +111,36 @@ export const NIGHT = {
   },
 };
 
-// The night: 21:00 with nothing played, three in the morning when the
-// seventeen circles before the lookout are done; the last circle is the peak.
+// The night follows the circles' own times: the clock shows the latest circle
+// played (21:00 with nothing played, 03:12 at the lookout), so it never goes
+// back and every circle's text agrees with the hour on the HUD.
+const minutesOf = (hhmm) => { const [h, m] = hhmm.split(':').map(Number); return (h < 12 ? h + 24 : h) * 60 + m; };
+const START = NIGHT.start[0] * 60 + NIGHT.start[1];
+const LAST = minutesOf(STORY.at(-2).at);
+export const sceneTime = (id) => STORY.find((s) => s.id === id)?.at ?? null;
+function lateness(done) {
+  const list = Array.isArray(done) ? done : [];
+  return list.reduce((m, id) => { const at = sceneTime(id); return at && id !== 'mirador' ? Math.max(m, minutesOf(at)) : m; }, START);
+}
 export function nightClock(done) {
   const list = Array.isArray(done) ? done : [];
   if (list.includes('mirador')) return NIGHT.peak;
-  const n = list.filter((id) => id !== 'mirador').length;
-  const k = Math.max(0, Math.min(1, n / (STORY.length - 1)));
-  const minutes = Math.round((NIGHT.start[0] * 60 + NIGHT.start[1] + 6 * 60 * k) / 5) * 5;
+  const minutes = lateness(list);
   const h = Math.floor(minutes / 60) % 24;
   return `${String(h).padStart(2, '0')}:${String(minutes % 60).padStart(2, '0')}`;
 }
+// The sky phase at which the camp goes dark: 23:00 on the same scale.
+export const LIGHTS_OUT = (minutesOf(NIGHT.lightsOut) - START) / (LAST - START);
 // 0 at nine in the evening (a little light still in the west), 1 the darkest
-// sky with the shower growing, 2 the peak at the lookout.
+// sky with the shower growing (the last circle before the lookout), 2 the peak
+// at the lookout. The camp goes dark only when Rogelio switches the generator
+// off (apagon); until then the lamps stay on and wash out all but the first
+// meteors, so the sky stays below LIGHTS_OUT.
 export function skyPhase(done) {
   const list = Array.isArray(done) ? done : [];
   if (list.includes('mirador')) return 2;
-  return Math.max(0, Math.min(1, list.length / (STORY.length - 1)));
+  const k = Math.max(0, Math.min(1, (lateness(list) - START) / (LAST - START)));
+  return list.includes('apagon') ? Math.max(k, LIGHTS_OUT) : Math.min(k, LIGHTS_OUT - 0.01);
 }
 
 // Celeste's notebook: who comes up to the lookout, and how. Every answer of
@@ -135,7 +150,7 @@ const n = (es, en) => ({ es, en });
 export const LIBRETA = {
   entrada: [
     n('Celeste sube al mirador de la mano de alguien, y nadie se ríe.', 'Celeste goes up to the lookout holding someone’s hand, and nobody laughs.'),
-    n('Celeste sube con su linterna roja, que no molesta a las estrellas ni a ella.', 'Celeste goes up with her red torch, which bothers neither the stars nor her.'),
+    n('Celeste sube con su linterna roja, que no molesta a las estrellas ni a ella.', 'Celeste goes up with her red flashlight, which bothers neither the stars nor her.'),
     n('Celeste confesó por qué es guía: su abuelo le enseñó las estrellas para que no tuviera miedo.', 'Celeste confessed why she is a guide: her grandfather taught her the stars so she would not be afraid.'),
   ],
   lentes: [
@@ -150,7 +165,7 @@ export const LIBRETA = {
   ],
   radio: [
     n('Doña Hortensia habló seis minutos con la estación espacial, y le preguntaron por su receta de sopa.', 'Doña Hortensia talked for six minutes with the space station, and they asked about her soup recipe.'),
-    n('Doña Hortensia contactó a un camionero de Salta que también miraba el cielo.', 'Doña Hortensia contacted a lorry driver in Salta who was also looking at the sky.'),
+    n('Doña Hortensia contactó a un camionero de Salta que también miraba el cielo.', 'Doña Hortensia contacted a truck driver in Salta who was also looking at the sky.'),
     n('Doña Hortensia apagó la radio por primera vez en cincuenta años y escuchó el silencio.', 'Doña Hortensia switched off her radio for the first time in fifty years and listened to the silence.'),
   ],
   alien: [
@@ -161,7 +176,7 @@ export const LIBRETA = {
   cita: [
     n('Bruno confesó que vende seguros, y Lucía le explicó el universo con un malvavisco.', 'Bruno confessed that he sells insurance, and Lucía explained the universe to him with a marshmallow.'),
     n('Bruno no confesó nada; Lucía lo supo en tres preguntas y le dio una segunda cita igual.', 'Bruno confessed nothing; Lucía found out in three questions and gave him a second date anyway.'),
-    n('Lucía confesó que en su perfil dice que mide un metro setenta, y mide uno sesenta.', 'Lucía confessed that her profile says she is one metre seventy tall, and she is one sixty.'),
+    n('Lucía confesó que en su perfil dice que mide un metro setenta, y mide uno sesenta.', 'Lucía confessed that her profile says she is one meter seventy tall, and she is one sixty.'),
   ],
   cocina: [
     n('Doña Petrona sirvió fideos medio duros y todo el mundo dijo que eran al dente.', 'Doña Petrona served half-hard noodles and everyone said they were al dente.'),
@@ -175,7 +190,7 @@ export const LIBRETA = {
   ],
   duchas: [
     n('Fabián hizo su videollamada con Tokio desde el techo de las duchas, en toalla.', 'Fabián made his video call with Tokyo from the roof of the showers, in a towel.'),
-    n('Fabián canceló la reunión con Tokio y sube al mirador con el pelo mojado.', 'Fabián cancelled the meeting with Tokyo and goes up to the lookout with wet hair.'),
+    n('Fabián canceló la reunión con Tokio y sube al mirador con el pelo mojado.', 'Fabián canceled the meeting with Tokyo and goes up to the lookout with wet hair.'),
     n('Fabián les mostró la lluvia de estrellas a sus jefes de Tokio, y aplaudieron.', 'Fabián showed the meteor shower to his bosses in Tokyo, and they clapped.'),
   ],
   hamacas: [
@@ -190,7 +205,7 @@ export const LIBRETA = {
   ],
   cupula: [
     n('La cúpula se destrabó con una patada de Doña Amalia, que tiene setenta y siete años.', 'The dome came unstuck with a kick from Doña Amalia, who is seventy-seven.'),
-    n('Doña Amalia dejó el telescopio a los niños y mira su cometa sin aparatos, como en 1966.', 'Doña Amalia left the telescope to the children and watches her comet with no instruments, as in 1966.'),
+    n('Doña Amalia dejó el telescopio a los niños y mira la lluvia de su cometa sin aparatos, como en 1966.', 'Doña Amalia left the telescope to the children and watches her comet’s shower with no instruments, as in 1966.'),
     n('Doña Amalia tomó un café doble para no dormirse esta vez.', 'Doña Amalia had a double coffee so as not to fall asleep this time.'),
   ],
   mina: [
@@ -200,7 +215,7 @@ export const LIBRETA = {
   ],
   salar: [
     n('Ulises no consiguió el espejo del salar, pero fotografió a sesenta y cuatro personas mirando arriba.', 'Ulises did not get the salt-flat mirror, but he photographed sixty-four people looking up.'),
-    n('Ulises dejó la cámara en la mochila y vio la lluvia con sus propios ojos.', 'Ulises left the camera in his rucksack and saw the shower with his own eyes.'),
+    n('Ulises dejó la cámara en la mochila y vio la lluvia con sus propios ojos.', 'Ulises left the camera in his backpack and saw the shower with his own eyes.'),
     n('Ulises hizo un espejo con un balde de agua y una foto que nadie entiende y todos aman.', 'Ulises made a mirror with a bucket of water and a photo nobody understands and everybody loves.'),
   ],
   astrologa: [

@@ -352,125 +352,6 @@
    ]
   },
   {
-   "id": "radio",
-   "title": "La voz de Salta",
-   "place": "Las caravanas",
-   "context": "Es la una y treinta y cinco. Doña Hortensia gira los botones de la radio. Celeste está a su lado, sin hacer ruido.",
-   "speakers": [
-    {
-     "name": "Hortensia",
-     "country": "Perú",
-     "voice": "es-PE-CamilaNeural"
-    },
-    {
-     "name": "Celeste",
-     "country": "Chile",
-     "voice": "es-CL-CatalinaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Faltan cinco minutos. Si la estación responde, quiero que tú hables también. Mi voz tiembla."
-    },
-    {
-     "s": 1,
-     "text": "¿Yo? Doña Hortensia, usted lleva cincuenta años en la radio. Yo no sabría qué decir."
-    },
-    {
-     "s": 0,
-     "text": "Diles que aquí abajo sesenta y cuatro personas los saludan. Ya… escucha. Hay alguien."
-    },
-    {
-     "s": 1,
-     "text": "¿Es la estación?"
-    },
-    {
-     "s": 0,
-     "text": "No. Es un camionero. Dice que se llama Ramón, que está parado en la ruta, cerca de Salta, y que él también está mirando el cielo."
-    },
-    {
-     "s": 1,
-     "text": "¿Y qué más dice?"
-    },
-    {
-     "s": 0,
-     "text": "Que hace veinte años que no habla con nadie por radio. Que su padre era radioaficionado y que encendió el equipo esta noche por casualidad."
-    },
-    {
-     "s": 1,
-     "text": "Doña Hortensia, quizás no es un astronauta, pero también está mirando hacia arriba."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Por qué quiere Hortensia que Celeste hable?",
-     "options": [
-      "Porque Celeste habla inglés",
-      "Porque ella está muy cansada",
-      "Porque le tiembla la voz"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Quién responde por la radio?",
-     "options": [
-      "Un astronauta de la estación",
-      "El marido de Hortensia",
-      "Un camionero cerca de Salta"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Por qué encendió Ramón la radio esta noche?",
-     "options": [
-      "Para hablar con su hija",
-      "Porque Hortensia lo llamó antes",
-      "Por casualidad"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué quiere decir Celeste con su última frase?",
-     "options": [
-      "Que el contacto también tiene valor",
-      "Que Ramón miente",
-      "Que hay que seguir buscando la estación"
-     ],
-     "answer": 0
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué afición de tus padres te gustaría continuar?",
-     "model": "Me gustaría continuar con el huerto de mi madre."
-    },
-    {
-     "q": "¿Qué encuentro inesperado te alegró un día normal?",
-     "model": "Me encontré con una amiga del colegio en el metro."
-    },
-    {
-     "q": "¿Qué le dirías a un astronauta si pudieras hablar un minuto con él?",
-     "model": "Le preguntaría si echa de menos la lluvia."
-    }
-   ],
-   "gaps": "Dice que se llama Ramón, que está [parado] en la [ruta], cerca de Salta, y que él también está [mirando] el [cielo].",
-   "glossary": [
-    {
-     "word": "tiembla",
-     "meaning": "se mueve por los nervios"
-    },
-    {
-     "word": "camionero",
-     "meaning": "persona que conduce un camión"
-    },
-    {
-     "word": "equipo",
-     "meaning": "aparato de radio"
-    }
-   ]
-  },
-  {
    "id": "alien",
    "title": "El astronauta de guardia",
    "place": "La carpa azul",
@@ -709,6 +590,125 @@
    ]
   },
   {
+   "id": "apagon",
+   "title": "Las palabras de 1997",
+   "place": "La caseta del generador",
+   "context": "El desierto ya está a oscuras. Rogelio y Teresa siguen hablando por radio, cada uno desde su lado de la noche.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rogelio, estoy en el patio de la mina. Nunca había visto este desierto tan oscuro. Hay tantas estrellas que asusta."
+    },
+    {
+     "s": 0,
+     "text": "Ahora entiendes por qué levanté el camping justo aquí."
+    },
+    {
+     "s": 1,
+     "text": "Eso lo supe siempre. Lo que nunca me entró en la cabeza fue que eligieras el camping en vez de la ciudad, en vez de nosotros."
+    },
+    {
+     "s": 0,
+     "text": "Y a mí nunca me entró en la cabeza que tú eligieras la mina. Supongo que los dos queríamos estar cerca del cielo, cada uno a su manera."
+    },
+    {
+     "s": 1,
+     "text": "Tú mirándolo y yo cavando debajo."
+    },
+    {
+     "s": 0,
+     "text": "Teresa, gracias por apagar las luces. Llevo nueve años sin decirte algo importante."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué cosa?"
+    },
+    {
+     "s": 0,
+     "text": "Que tenías razón. Algún día ibas a apagar todo el desierto. Y lo hiciste."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ve Teresa desde el patio de la mina?",
+     "options": [
+      "Un cielo lleno de estrellas",
+      "Los reflectores encendidos",
+      "El camping iluminado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué no entendió Teresa?",
+     "options": [
+      "Por qué Rogelio apagó el generador",
+      "Por qué la llamó esta noche",
+      "Que Rogelio eligiera el camping en vez de la ciudad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tenían en común Rogelio y Teresa, según él?",
+     "options": [
+      "Los dos odiaban la ciudad",
+      "Los dos querían estar cerca del cielo",
+      "Los dos trabajaban en la mina"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le dice Rogelio después de nueve años?",
+     "options": [
+      "Que quiere volver con ella",
+      "Que ella tenía razón",
+      "Que va a vender el camping"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué decisión de vida separó tu camino del de una persona querida?",
+     "model": "Me fui a estudiar a otra ciudad y me alejé de mi mejor amigo."
+    },
+    {
+     "q": "¿A quién te gustaría decirle «tenías razón»?",
+     "model": "A mi madre, sobre la importancia de ahorrar."
+    },
+    {
+     "q": "¿Qué lugar elegiste para vivir y por qué?",
+     "model": "Vivo cerca del mar porque el ruido de las olas me calma."
+    }
+   ],
+   "gaps": "Supongo que los dos [queríamos] estar [cerca] del [cielo], cada uno a su [manera].",
+   "glossary": [
+    {
+     "word": "asusta",
+     "meaning": "da miedo"
+    },
+    {
+     "word": "cavando",
+     "meaning": "haciendo agujeros en la tierra"
+    },
+    {
+     "word": "a su manera",
+     "meaning": "de su propia forma"
+    }
+   ]
+  },
+  {
    "id": "cocina",
    "title": "La receta del api",
    "place": "La carpa cocina",
@@ -939,125 +939,6 @@
     {
      "word": "tranquila",
      "meaning": "sin molestias"
-    }
-   ]
-  },
-  {
-   "id": "duchas",
-   "title": "Una reunión con espectadores",
-   "place": "Las duchas",
-   "context": "Son las dos y diez. Fabián está en el techo de las duchas, en plena videollamada con Tokio. Rogelio sube con un termo de café.",
-   "speakers": [
-    {
-     "name": "Fabián",
-     "country": "España",
-     "voice": "es-ES-AlvaroNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Don Rogelio, no se mueva. Mis jefes japoneses lo están viendo. Ahora mismo me preguntan dónde estoy."
-    },
-    {
-     "s": 1,
-     "text": "¿Y qué les ha dicho?"
-    },
-    {
-     "s": 0,
-     "text": "La verdad: que estoy en un techo, en el desierto, a tres mil seiscientos metros, en toalla. Pensé que me iban a despedir."
-    },
-    {
-     "s": 1,
-     "text": "¿Y?"
-    },
-    {
-     "s": 0,
-     "text": "Me pidieron que girara la cámara hacia el cielo. Ahora hay doce ejecutivos en Tokio, en una sala de reuniones, mirando la lluvia de estrellas en silencio."
-    },
-    {
-     "s": 1,
-     "text": "¿Y los paneles solares?"
-    },
-    {
-     "s": 0,
-     "text": "Dicen que firmamos el contrato mañana. Que cualquier persona capaz de hacer una reunión así merece su confianza."
-    },
-    {
-     "s": 1,
-     "text": "Pues dígales que el café de doña Petrona también viene incluido en el contrato."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué le dijo Fabián a sus jefes?",
-     "options": [
-      "Que estaba en un hotel de la capital",
-      "La verdad, con todos los detalles",
-      "Que tenía problemas con la conexión"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué temía Fabián?",
-     "options": [
-      "Que se cortara la llamada",
-      "Que lo despidieran",
-      "Que Rogelio lo regañara"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué le pidieron los jefes?",
-     "options": [
-      "Que girara la cámara hacia el cielo",
-      "Que se pusiera un traje y volviera a la reunión",
-      "Que terminara la reunión rápido"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Por qué confían en Fabián, según los jefes?",
-     "options": [
-      "Porque siempre llega puntual a todas las reuniones",
-      "Por su manera de resolver la situación",
-      "Porque vende muy barato"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué situación incómoda de trabajo terminó bien gracias a la sinceridad?",
-     "model": "Confesé un error a mi jefa y me lo agradeció."
-    },
-    {
-     "q": "¿Qué espectáculo natural le mostrarías a alguien que vive en otro país?",
-     "model": "Le mostraría la puesta de sol en mi playa."
-    },
-    {
-     "q": "¿Qué opinas de las reuniones de trabajo por videollamada?",
-     "model": "Creo que ahorran tiempo, pero son más frías."
-    }
-   ],
-   "gaps": "Ahora hay [doce] [ejecutivos] en Tokio, en una sala de [reuniones], mirando la lluvia de estrellas en [silencio].",
-   "glossary": [
-    {
-     "word": "despedir",
-     "meaning": "quitarle el trabajo a alguien"
-    },
-    {
-     "word": "ejecutivos",
-     "meaning": "personas que dirigen una empresa"
-    },
-    {
-     "word": "contrato",
-     "meaning": "acuerdo firmado"
     }
    ]
   },
@@ -1403,6 +1284,244 @@
     {
      "word": "aparatos",
      "meaning": "instrumentos, máquinas"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "La voz de Salta",
+   "place": "Las caravanas",
+   "context": "Es la una y treinta y cinco. Doña Hortensia gira los botones de la radio. Celeste está a su lado, sin hacer ruido.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Faltan cinco minutos. Si la estación responde, quiero que tú hables también. Mi voz tiembla."
+    },
+    {
+     "s": 1,
+     "text": "¿Yo? Doña Hortensia, usted lleva cincuenta años en la radio. Yo no sabría qué decir."
+    },
+    {
+     "s": 0,
+     "text": "Diles que aquí abajo sesenta y cuatro personas los saludan. Ya… escucha. Hay alguien."
+    },
+    {
+     "s": 1,
+     "text": "¿Es la estación?"
+    },
+    {
+     "s": 0,
+     "text": "No. Es un camionero. Dice que se llama Ramón, que está parado en la ruta, cerca de Salta, y que él también está mirando el cielo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué más dice?"
+    },
+    {
+     "s": 0,
+     "text": "Que hace veinte años que no habla con nadie por radio. Que su padre era radioaficionado y que encendió el equipo esta noche por casualidad."
+    },
+    {
+     "s": 1,
+     "text": "Doña Hortensia, quizás no es un astronauta, pero también está mirando hacia arriba."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué quiere Hortensia que Celeste hable?",
+     "options": [
+      "Porque Celeste habla inglés",
+      "Porque ella está muy cansada",
+      "Porque le tiembla la voz"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién responde por la radio?",
+     "options": [
+      "Un astronauta de la estación",
+      "El marido de Hortensia",
+      "Un camionero cerca de Salta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué encendió Ramón la radio esta noche?",
+     "options": [
+      "Para hablar con su hija",
+      "Porque Hortensia lo llamó antes",
+      "Por casualidad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere decir Celeste con su última frase?",
+     "options": [
+      "Que el contacto también tiene valor",
+      "Que Ramón miente",
+      "Que hay que seguir buscando la estación"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué afición de tus padres te gustaría continuar?",
+     "model": "Me gustaría continuar con el huerto de mi madre."
+    },
+    {
+     "q": "¿Qué encuentro inesperado te alegró un día normal?",
+     "model": "Me encontré con una amiga del colegio en el metro."
+    },
+    {
+     "q": "¿Qué le dirías a un astronauta si pudieras hablar un minuto con él?",
+     "model": "Le preguntaría si echa de menos la lluvia."
+    }
+   ],
+   "gaps": "Dice que se llama Ramón, que está [parado] en la [ruta], cerca de Salta, y que él también está [mirando] el [cielo].",
+   "glossary": [
+    {
+     "word": "tiembla",
+     "meaning": "se mueve por los nervios"
+    },
+    {
+     "word": "camionero",
+     "meaning": "persona que conduce un camión"
+    },
+    {
+     "word": "equipo",
+     "meaning": "aparato de radio"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Una reunión con espectadores",
+   "place": "Las duchas",
+   "context": "Son las dos y diez. Fabián está en el techo de las duchas, en plena videollamada con Tokio. Rogelio sube con un termo de café.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Rogelio, no se mueva. Mis jefes japoneses lo están viendo. Ahora mismo me preguntan dónde estoy."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué les ha dicho?"
+    },
+    {
+     "s": 0,
+     "text": "La verdad: que estoy en un techo, en el desierto, a tres mil seiscientos metros, en toalla. Pensé que me iban a despedir."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?"
+    },
+    {
+     "s": 0,
+     "text": "Me pidieron que girara la cámara hacia el cielo. Ahora hay doce ejecutivos en Tokio, en una sala de reuniones, mirando la lluvia de estrellas en silencio."
+    },
+    {
+     "s": 1,
+     "text": "¿Y los paneles solares?"
+    },
+    {
+     "s": 0,
+     "text": "Dicen que firmamos el contrato mañana. Que cualquier persona capaz de hacer una reunión así merece su confianza."
+    },
+    {
+     "s": 1,
+     "text": "Pues dígales que el café de doña Petrona también viene incluido en el contrato."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le dijo Fabián a sus jefes?",
+     "options": [
+      "Que estaba en un hotel de la capital",
+      "La verdad, con todos los detalles",
+      "Que tenía problemas con la conexión"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué temía Fabián?",
+     "options": [
+      "Que se cortara la llamada",
+      "Que lo despidieran",
+      "Que Rogelio lo regañara"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le pidieron los jefes?",
+     "options": [
+      "Que girara la cámara hacia el cielo",
+      "Que se pusiera un traje y volviera a la reunión",
+      "Que terminara la reunión rápido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué confían en Fabián, según los jefes?",
+     "options": [
+      "Porque siempre llega puntual a todas las reuniones",
+      "Por su manera de resolver la situación",
+      "Porque vende muy barato"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué situación incómoda de trabajo terminó bien gracias a la sinceridad?",
+     "model": "Confesé un error a mi jefa y me lo agradeció."
+    },
+    {
+     "q": "¿Qué espectáculo natural le mostrarías a alguien que vive en otro país?",
+     "model": "Le mostraría la puesta de sol en mi playa."
+    },
+    {
+     "q": "¿Qué opinas de las reuniones de trabajo por videollamada?",
+     "model": "Creo que ahorran tiempo, pero son más frías."
+    }
+   ],
+   "gaps": "Ahora hay [doce] [ejecutivos] en Tokio, en una sala de [reuniones], mirando la lluvia de estrellas en [silencio].",
+   "glossary": [
+    {
+     "word": "despedir",
+     "meaning": "quitarle el trabajo a alguien"
+    },
+    {
+     "word": "ejecutivos",
+     "meaning": "personas que dirigen una empresa"
+    },
+    {
+     "word": "contrato",
+     "meaning": "acuerdo firmado"
     }
    ]
   },
@@ -1875,125 +1994,6 @@
     {
      "word": "dar un buen uso",
      "meaning": "usar algo de forma útil"
-    }
-   ]
-  },
-  {
-   "id": "apagon",
-   "title": "Las palabras de 1997",
-   "place": "La caseta del generador",
-   "context": "El desierto ya está a oscuras. Rogelio y Teresa siguen hablando por radio, cada uno desde su lado de la noche.",
-   "speakers": [
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    },
-    {
-     "name": "Teresa",
-     "country": "El Salvador",
-     "voice": "es-SV-LorenaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 1,
-     "text": "Rogelio, estoy en el patio de la mina. Nunca había visto este desierto tan oscuro. Hay tantas estrellas que asusta."
-    },
-    {
-     "s": 0,
-     "text": "Ahora entiendes por qué levanté el camping justo aquí."
-    },
-    {
-     "s": 1,
-     "text": "Eso lo supe siempre. Lo que nunca me entró en la cabeza fue que eligieras el camping en vez de la ciudad, en vez de nosotros."
-    },
-    {
-     "s": 0,
-     "text": "Y a mí nunca me entró en la cabeza que tú eligieras la mina. Supongo que los dos queríamos estar cerca del cielo, cada uno a su manera."
-    },
-    {
-     "s": 1,
-     "text": "Tú mirándolo y yo cavando debajo."
-    },
-    {
-     "s": 0,
-     "text": "Teresa, gracias por apagar las luces. Llevo nueve años sin decirte algo importante."
-    },
-    {
-     "s": 1,
-     "text": "¿Qué cosa?"
-    },
-    {
-     "s": 0,
-     "text": "Que tenías razón. Algún día ibas a apagar todo el desierto. Y lo hiciste."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué ve Teresa desde el patio de la mina?",
-     "options": [
-      "Un cielo lleno de estrellas",
-      "Los reflectores encendidos",
-      "El camping iluminado"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué no entendió Teresa?",
-     "options": [
-      "Por qué Rogelio apagó el generador",
-      "Por qué la llamó esta noche",
-      "Que Rogelio eligiera el camping en vez de la ciudad"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué tenían en común Rogelio y Teresa, según él?",
-     "options": [
-      "Los dos odiaban la ciudad",
-      "Los dos querían estar cerca del cielo",
-      "Los dos trabajaban en la mina"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué le dice Rogelio después de nueve años?",
-     "options": [
-      "Que quiere volver con ella",
-      "Que ella tenía razón",
-      "Que va a vender el camping"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué decisión de vida separó tu camino del de una persona querida?",
-     "model": "Me fui a estudiar a otra ciudad y me alejé de mi mejor amigo."
-    },
-    {
-     "q": "¿A quién te gustaría decirle «tenías razón»?",
-     "model": "A mi madre, sobre la importancia de ahorrar."
-    },
-    {
-     "q": "¿Qué lugar elegiste para vivir y por qué?",
-     "model": "Vivo cerca del mar porque el ruido de las olas me calma."
-    }
-   ],
-   "gaps": "Supongo que los dos [queríamos] estar [cerca] del [cielo], cada uno a su [manera].",
-   "glossary": [
-    {
-     "word": "asusta",
-     "meaning": "da miedo"
-    },
-    {
-     "word": "cavando",
-     "meaning": "haciendo agujeros en la tierra"
-    },
-    {
-     "word": "a su manera",
-     "meaning": "de su propia forma"
     }
    ]
   },

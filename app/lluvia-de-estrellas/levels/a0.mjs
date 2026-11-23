@@ -12,7 +12,7 @@ export default {
     ask: t("Celeste te mira. ¿Qué dices?", "Celeste looks at you. What do you say?"),
     options: [
       { say: t("Celeste, dame la mano. Yo no tengo miedo.", "Celeste, give me your hand. I am not afraid."), reply: t("¿De verdad? Gracias. Así es más fácil.", "Really? Thank you. That way it is easier."), end: t("Celeste toma tu mano. Nadie se ríe.", "Celeste takes your hand. Nobody laughs."), mood: "smile" },
-      { say: t("Usa una linterna roja. No molesta a las estrellas.", "Use a red torch. It does not bother the stars."), reply: t("¡Sí! Tengo una aquí, en la mochila.", "Yes! I have one here, in my backpack."), end: t("La luz roja es pequeña y bonita. Celeste está más tranquila.", "The red light is small and pretty. Celeste is calmer."), mood: "surprised" },
+      { say: t("Usa una linterna roja. No molesta a las estrellas.", "Use a red flashlight. It does not bother the stars."), reply: t("¡Sí! Tengo una aquí, en la mochila.", "Yes! I have one here, in my backpack."), end: t("La luz roja es pequeña y bonita. Celeste está más tranquila.", "The red light is small and pretty. Celeste is calmer."), mood: "surprised" },
       { say: t("¿Y por qué eres guía?", "And why are you a guide?"), reply: t("Por mi abuelo. Él me enseñó las estrellas para no tener miedo.", "Because of my grandfather. He taught me the stars so I would not be afraid."), end: t("Celeste mira el cielo y sonríe. Su abuelo está en sus ojos.", "Celeste looks at the sky and smiles. Her grandfather is in her eyes."), mood: "love" },
     ],
     talk: [
@@ -22,11 +22,11 @@ export default {
       t("¿Quién te enseña cosas nuevas en tu familia?", "Who teaches you new things in your family?"),
       t("¿Cuántas estrellas cuentas desde tu balcón o tu ventana?", "How many stars do you count from your balcony or window?"),
     ],
-    words: [t("la guía", "the guide"), t("la oscuridad", "the dark"), t("el mirador", "the lookout"), t("la linterna", "the torch")],
+    words: [t("la guía", "the guide"), t("la oscuridad", "the dark"), t("el mirador", "the lookout"), t("la linterna", "the flashlight")],
   },
   lentes: {
     title: t("Lentes de sol de noche", "Sunglasses at night"),
-    line: t("En el estacionamiento hay un señor con una mesa. En la mesa hay muchas cajas. Es Don Cosme.", "In the car park there is a man with a table. On the table there are many boxes. It is Don Cosme."),
+    line: t("En el estacionamiento hay un señor con una mesa. En la mesa hay muchas cajas. Es Don Cosme.", "In the parking lot there is a man with a table. On the table there are many boxes. It is Don Cosme."),
     dialogue: [
       ["cosme", t("¡Lentes para el eclipse! ¡Trescientos lentes!", "Glasses for the eclipse! Three hundred glasses!")],
       ["cosme", t("Nadie compra. ¿Por qué?", "Nobody buys. Why?")],
@@ -39,9 +39,9 @@ export default {
     ],
     talk: [
       t("¿Qué ropa de lana compras en invierno?", "What wool clothes do you buy in winter?"),
-      t("¿Tienes gafas de sol? ¿De qué color son?", "Do you have sunglasses? What colour are they?"),
+      t("¿Tienes gafas de sol? ¿De qué color son?", "Do you have sunglasses? What color are they?"),
       t("¿Qué vendes o regalas cuando no usas algo?", "What do you sell or give away when you do not use something?"),
-      t("¿Dónde aparcas el coche o la bicicleta?", "Where do you park the car or the bike?"),
+      t("¿Dónde estacionas el auto o la bicicleta?", "Where do you park the car or the bike?"),
       t("¿Qué bebida caliente pones en un termo para la montaña?", "What hot drink do you put in a flask for the mountains?"),
     ],
     words: [t("los lentes", "the glasses"), t("el eclipse", "the eclipse"), t("regalar", "to give away"), t("el deseo", "the wish")],
@@ -52,7 +52,7 @@ export default {
     dialogue: [
       ["nora", t("Mi papá amaba las estrellas. Aquí quiero dejar sus cenizas.", "My dad loved the stars. I want to leave his ashes here.")],
       ["ivan", t("Nora… la urna está en casa. En la cocina. En Mendoza.", "Nora… the urn is at home. In the kitchen. In Mendoza.")],
-      ["nora", t("¡Mendoza está a novecientos kilómetros!", "Mendoza is nine hundred kilometres away!")],
+      ["nora", t("¡Mendoza está a novecientos kilómetros!", "Mendoza is nine hundred kilometers away!")],
     ],
     ask: t("Nora llora. ¿Qué dices?", "Nora is crying. What do you say?"),
     options: [
@@ -62,38 +62,16 @@ export default {
     ],
     talk: [
       t("¿Qué olvidas muchas veces en casa?", "What do you often forget at home?"),
-      t("¿Qué ciudad lejana visitas en el autobús de noche?", "What faraway city do you visit on the night bus?"),
-      t("¿Qué foto de tu papá o tu mamá tienes en la cocina?", "What photo of your dad or mum do you have in the kitchen?"),
+      t("¿Qué ciudad lejana quieres visitar algún día?", "What faraway city do you want to visit someday?"),
+      t("¿Qué foto de tu papá o tu mamá tienes en la cocina?", "What photo of your dad or mom do you have in the kitchen?"),
       t("¿Qué hay en tu cocina al lado de la ventana?", "What is in your kitchen next to the window?"),
-      t("¿Qué le gusta mucho a tu papá o a tu mamá?", "What does your dad or your mum really like?"),
+      t("¿Qué le gusta mucho a tu papá o a tu mamá?", "What does your dad or your mom really like?"),
     ],
     words: [t("la urna", "the urn"), t("las cenizas", "the ashes"), t("olvidar", "to forget"), t("la sal", "the salt")],
   },
-  radio: {
-    title: t("La radio de Hortensia", "Hortensia's radio"),
-    line: t("En una caravana hay muchas radios y cables. Doña Hortensia tiene ochenta y un años.", "In a caravan there are many radios and cables. Doña Hortensia is eighty-one."),
-    dialogue: [
-      ["hortensia", t("A la una y cuarenta pasa la estación espacial. Seis minutos.", "At one forty the space station passes. Six minutes.")],
-      ["hortensia", t("Quiero hablar con los astronautas. Pero estoy nerviosa.", "I want to talk with the astronauts. But I am nervous.")],
-    ],
-    ask: t("Hortensia tiene el micrófono en la mano. ¿Qué dices?", "Hortensia has the microphone in her hand. What do you say?"),
-    options: [
-      { say: t("¡Hable, Hortensia! Ahora es el momento.", "Talk, Hortensia! Now is the moment."), reply: t("Hola, espacio… ¿Me oyen? ¡Me oyen!", "Hello, space… Can you hear me? They can hear me!"), end: t("Los astronautas hablan con ella seis minutos. Preguntan por su sopa.", "The astronauts talk with her for six minutes. They ask about her soup."), mood: "surprised" },
-      { say: t("¿Y otra persona? Una persona aquí, en la Tierra.", "And another person? Someone here, on Earth."), reply: t("Oigo una voz… Es un camionero de Salta.", "I hear a voice… It is a lorry driver from Salta."), end: t("El camionero también mira el cielo. Hortensia ríe.", "The lorry driver is also looking at the sky. Hortensia laughs."), mood: "laugh" },
-      { say: t("Hortensia, apague la radio. Escuche el silencio.", "Hortensia, turn off the radio. Listen to the silence."), reply: t("¿Apagar la radio? Cincuenta años… Bueno.", "Turn off the radio? Fifty years… All right."), end: t("No hay ruido. Hortensia escucha el desierto.", "There is no noise. Hortensia listens to the desert."), mood: "love" },
-    ],
-    talk: [
-      t("¿Qué emisora de música suena en tu cocina?", "What music station plays in your kitchen?"),
-      t("¿Qué situación te da nervios?", "What situation makes you nervous?"),
-      t("¿Qué afición tiene la abuela de tu mejor amistad?", "What hobby does your best friend's grandmother have?"),
-      t("¿Con qué persona mayor hablas los domingos?", "Which older person do you talk to on Sundays?"),
-      t("¿Qué lugar de tu ciudad tiene mucho silencio?", "What place in your city is very quiet?"),
-    ],
-    words: [t("la radio", "the radio"), t("la estación espacial", "the space station"), t("la voz", "the voice"), t("el silencio", "the silence")],
-  },
   alien: {
     title: t("Hola, extraterrestre", "Hello, alien"),
-    line: t("Delante de una carpa azul hay un niño con un cuaderno. Es Simón. Tiene nueve años. Su mamá, Gabriela, está muy cansada.", "In front of a blue tent there is a boy with a notebook. It is Simón. He is nine. His mum, Gabriela, is very tired."),
+    line: t("Delante de una carpa azul hay un niño con un cuaderno. Es Simón. Tiene nueve años. Su mamá, Gabriela, está muy cansada.", "In front of a blue tent there is a boy with a notebook. It is Simón. He is nine. His mom, Gabriela, is very tired."),
     dialogue: [
       ["simon", t("Esta noche quiero ver un extraterrestre.", "Tonight I want to see an alien.")],
       ["gabriela", t("Simón, son las diez. A dormir.", "Simón, it is ten o'clock. Time to sleep.")],
@@ -103,13 +81,13 @@ export default {
     options: [
       { say: t("Simón, haz un cartel: «Bienvenidos».", "Simón, make a sign: “Welcome.”"), reply: t("¡Sí! Con letras grandes y amarillas.", "Yes! With big yellow letters."), end: t("Simón sube al mirador con su cartel para los extraterrestres.", "Simón goes up to the lookout with his sign for the aliens."), mood: "laugh" },
       { say: t("Desde otra estrella, tú eres el extraterrestre.", "From another star, you are the alien."), reply: t("¿Yo? ¿Un extraterrestre? ¡Qué bien!", "Me? An alien? How great!"), end: t("Simón mira el cielo. Ahora él es el extraterrestre.", "Simón looks at the sky. Now he is the alien."), mood: "surprised" },
-      { say: t("Tu mamá está cansada. Tú cuidas la carpa.", "Your mum is tired. You look after the tent."), reply: t("Vale. Soy un astronauta de guardia.", "OK. I am an astronaut on watch."), end: t("Gabriela duerme. Simón la cuida con su linterna.", "Gabriela sleeps. Simón looks after her with his torch."), mood: "love" },
+      { say: t("Tu mamá está cansada. Tú cuidas la carpa.", "Your mom is tired. You look after the tent."), reply: t("Vale. Soy un astronauta de guardia.", "OK. I am an astronaut on watch."), end: t("Gabriela duerme. Simón la cuida con su linterna.", "Gabriela sleeps. Simón looks after her with his flashlight."), mood: "love" },
     ],
     talk: [
       t("¿Qué planeta dibujas en una hoja grande?", "What planet do you draw on a big sheet?"),
       t("¿Qué preguntas le haces a un astronauta?", "What questions do you ask an astronaut?"),
       t("¿Quién está cansado en tu familia?", "Who is tired in your family?"),
-      t("¿Qué película de extraterrestres te gusta?", "What alien film do you like?"),
+      t("¿Qué película de extraterrestres te gusta?", "What alien movie do you like?"),
       t("¿Qué cartel hay en la puerta de tu casa?", "What sign is on the door of your house?"),
     ],
     words: [t("el extraterrestre", "the alien"), t("la carpa", "the tent"), t("cansada", "tired"), t("el cartel", "the sign")],
@@ -126,7 +104,7 @@ export default {
     options: [
       { say: t("Bruno, di la verdad.", "Bruno, tell the truth."), reply: t("Vale… Vendo seguros. Perdón, Lucía.", "OK… I sell insurance. Sorry, Lucía."), end: t("Lucía ríe. Le explica el universo con un malvavisco.", "Lucía laughs. She explains the universe to him with a marshmallow."), mood: "smitten" },
       { say: t("Bruno, habla de otra cosa. Habla de música.", "Bruno, talk about something else. Talk about music."), reply: t("Eh… ¿Te gusta la música, Lucía?", "Er… Do you like music, Lucía?"), end: t("Lucía hace tres preguntas y sabe la verdad. Pero quiere otra cita.", "Lucía asks three questions and knows the truth. But she wants another date."), mood: "surprised" },
-      { say: t("Lucía, ¿y tu perfil? ¿Es todo verdad?", "Lucía, and your profile? Is it all true?"), reply: t("Bueno… Mi perfil dice un metro setenta. Mido uno sesenta.", "Well… My profile says one metre seventy. I am one sixty."), end: t("Bruno y Lucía ríen juntos. Nadie es perfecto.", "Bruno and Lucía laugh together. Nobody is perfect."), mood: "laugh" },
+      { say: t("Lucía, ¿y tu perfil? ¿Es todo verdad?", "Lucía, and your profile? Is it all true?"), reply: t("Bueno… Mi perfil dice un metro setenta. Mido uno sesenta.", "Well… My profile says one meter seventy. I am one sixty."), end: t("Bruno y Lucía ríen juntos. Nadie es perfecto.", "Bruno and Lucía laugh together. Nobody is perfect."), mood: "laugh" },
     ],
     talk: [
       t("¿Dónde es una buena primera cita?", "Where is a good first date?"),
@@ -136,6 +114,28 @@ export default {
       t("¿Qué pones en tu perfil de una aplicación?", "What do you put in your profile on an app?"),
     ],
     words: [t("la cita", "the date"), t("la fogata", "the campfire"), t("los seguros", "insurance"), t("la verdad", "the truth")],
+  },
+  apagon: {
+    title: t("Las once en punto", "Eleven o'clock sharp"),
+    line: t("Son las once menos cinco. Rogelio está en la caseta del generador. A las once apaga todas las luces. Pero la mina tiene luces muy fuertes.", "It is five to eleven. Rogelio is in the generator hut. At eleven he turns off all the lights. But the mine has very strong lights."),
+    dialogue: [
+      ["rogelio", t("La gerenta de la mina es Teresa. Es mi exesposa.", "The manager of the mine is Teresa. She is my ex-wife.")],
+      ["teresa", t("Rogelio, ¿qué quieres?", "Rogelio, what do you want?")],
+    ],
+    ask: t("Rogelio tiene la radio en la mano. ¿Qué dices?", "Rogelio has the radio in his hand. What do you say?"),
+    options: [
+      { say: t("Rogelio, pide un favor. Con cariño.", "Rogelio, ask for a favour. Kindly."), reply: t("Teresa… por favor, apaga las luces de la mina.", "Teresa… please, turn off the mine lights."), end: t("Teresa apaga las luces. Rogelio dice: «Gracias». Nueve años después.", "Teresa turns off the lights. Rogelio says: “Thank you.” Nine years later."), mood: "love" },
+      { say: t("Tres, dos, uno… ¡Apaga!", "Three, two, one… Turn it off!"), reply: t("¡Clic! … ¡Mira! La mina también.", "Click! … Look! The mine too."), end: t("A las once todo el desierto está oscuro. Hasta la mina.", "At eleven the whole desert is dark. Even the mine."), mood: "surprised" },
+      { say: t("¿Y si miran la lluvia juntos, por radio?", "And what if you watch the shower together, by radio?"), reply: t("Teresa… ¿miras la lluvia conmigo? Por radio.", "Teresa… will you watch the shower with me? By radio."), end: t("Rogelio y Teresa miran el cielo. Cada uno en su lugar.", "Rogelio and Teresa look at the sky. Each one in their place."), mood: "smile" },
+    ],
+    talk: [
+      t("¿A qué hora apagas la luz?", "What time do you turn off the light?"),
+      t("¿Qué haces cuando no hay luz en tu casa?", "What do you do when there is no power in your house?"),
+      t("¿Qué favor pides a tu familia?", "What favour do you ask your family?"),
+      t("¿Qué luz hay en tu calle?", "What light is there in your street?"),
+      t("¿Qué amistad antigua llamas para pedir perdón?", "What old friend do you call to say sorry?"),
+    ],
+    words: [t("el generador", "the generator"), t("la luz", "the light"), t("la mina", "the mine"), t("la exesposa", "the ex-wife")],
   },
   cocina: {
     title: t("El agua no hierve", "The water does not boil"),
@@ -174,34 +174,12 @@ export default {
     ],
     talk: [
       t("¿Qué animal de granja tiene tu pueblo o tu región?", "What farm animal is there in your town or region?"),
-      t("¿Qué nombre bonito tiene el perro o el gato de tu vecino?", "What pretty name does your neighbour's dog or cat have?"),
+      t("¿Qué nombre bonito tiene el perro o el gato de tu vecino?", "What pretty name does your neighbor's dog or cat have?"),
       t("¿Qué lugar tranquilo buscas en una fiesta ruidosa?", "What quiet place do you look for at a noisy party?"),
-      t("¿Qué manta de colores tienes en el sofá?", "What colourful blanket do you have on the sofa?"),
+      t("¿Qué manta de colores tienes en el sofá?", "What colorful blanket do you have on the sofa?"),
       t("¿A qué hora naciste?", "What time were you born?"),
     ],
     words: [t("la llama", "the llama"), t("el corral", "the pen"), t("la cría", "the baby animal"), t("la manta", "the blanket")],
-  },
-  duchas: {
-    title: t("Tokio en toalla", "Tokyo in a towel"),
-    line: t("En las duchas el agua caliente dura cuatro minutos. Fabián está en toalla. A las dos tiene una reunión con Tokio.", "In the showers the hot water lasts four minutes. Fabián is in a towel. At two he has a meeting with Tokyo."),
-    dialogue: [
-      ["fabian", t("Aquí no hay internet. Solo en el techo.", "There is no internet here. Only on the roof.")],
-      ["fabian", t("¡Y mi traje está en el coche!", "And my suit is in the car!")],
-    ],
-    ask: t("Fabián tiene el portátil en la mano. ¿Qué dices?", "Fabián has his laptop in his hand. What do you say?"),
-    options: [
-      { say: t("Sube al techo. En toalla, no pasa nada.", "Go up to the roof. In a towel, it does not matter."), reply: t("¿En toalla? Bueno… ¡Vamos!", "In a towel? Well… Let's go!"), end: t("Fabián habla con Tokio desde el techo, en toalla.", "Fabián talks with Tokyo from the roof, in a towel."), mood: "laugh" },
-      { say: t("Cancela la reunión. Hoy es la lluvia de estrellas.", "Cancel the meeting. Tonight is the meteor shower."), reply: t("¿Cancelar? Mmm… Sí. Hoy, no.", "Cancel? Hmm… Yes. Not today."), end: t("Fabián sube al mirador con el pelo mojado.", "Fabián goes up to the lookout with wet hair."), mood: "smile" },
-      { say: t("Enseña el cielo a tus jefes.", "Show the sky to your bosses."), reply: t("¿El cielo? ¡Buena idea!", "The sky? Good idea!"), end: t("En Tokio los jefes miran las estrellas. Aplauden.", "In Tokyo the bosses look at the stars. They clap."), mood: "surprised" },
-    ],
-    talk: [
-      t("¿Qué champú o jabón usas en la ducha?", "What shampoo or soap do you use in the shower?"),
-      t("¿A qué hora tienes reuniones?", "What time do you have meetings?"),
-      t("¿Qué ropa elegante llevas a una reunión importante?", "What smart clothes do you wear to an important meeting?"),
-      t("¿Dónde tienes buena conexión a internet?", "Where do you have a good internet connection?"),
-      t("¿Qué país está lejos de tu país?", "What country is far from your country?"),
-    ],
-    words: [t("la ducha", "the shower"), t("la toalla", "the towel"), t("la reunión", "the meeting"), t("el techo", "the roof")],
   },
   hamacas: {
     title: t("Dormir en una hamaca", "Sleeping in a hammock"),
@@ -242,7 +220,7 @@ export default {
       t("¿Qué sonido de la naturaleza te relaja?", "What sound of nature relaxes you?"),
       t("¿Tienes hermanos mayores o menores?", "Do you have older or younger siblings?"),
       t("¿Qué haces cuando no ves nada?", "What do you do when you cannot see anything?"),
-      t("¿Qué calle oscura de tu barrio no te gusta?", "What dark street in your neighbourhood do you not like?"),
+      t("¿Qué calle oscura de tu barrio no te gusta?", "What dark street in your neighborhood do you not like?"),
       t("¿Qué cuentas en voz alta?", "What do you count out loud?"),
     ],
     words: [t("el sendero", "the path"), t("ciego", "blind"), t("el meteoro", "the meteor"), t("el sonido", "the sound")],
@@ -257,7 +235,7 @@ export default {
     ask: t("Amalia mira la cúpula. ¿Qué dices?", "Amalia looks at the dome. What do you say?"),
     options: [
       { say: t("¿Y una patada a la cúpula?", "And a kick to the dome?"), reply: t("¿Una patada? ¡Ahí va!", "A kick? Here it goes!"), end: t("¡Pum! La cúpula gira. Joaquín no lo puede creer.", "Bang! The dome turns. Joaquín cannot believe it."), mood: "laugh" },
-      { say: t("Mire el cometa sin telescopio, como en 1966.", "Look at the comet without a telescope, like in 1966."), reply: t("Sí. Los niños usan el telescopio. Yo, mis ojos.", "Yes. The children use the telescope. I use my eyes."), end: t("Amalia mira el cielo sin aparatos. Los niños miran por el telescopio.", "Amalia looks at the sky without instruments. The children look through the telescope."), mood: "love" },
+      { say: t("Mire la lluvia de su cometa sin telescopio, como en 1966.", "Look at the shower of your comet without a telescope, like in 1966."), reply: t("Sí. Los niños usan el telescopio. Yo, mis ojos.", "Yes. The children use the telescope. I use my eyes."), end: t("Amalia mira el cielo sin aparatos. Los niños miran por el telescopio.", "Amalia looks at the sky without instruments. The children look through the telescope."), mood: "love" },
       { say: t("Doña Amalia, tome un café doble.", "Doña Amalia, have a double coffee."), reply: t("¡Doble! Esta vez no me duermo.", "Double! This time I will not fall asleep."), end: t("Amalia toma café. Tiene los ojos muy abiertos.", "Amalia drinks coffee. Her eyes are wide open."), mood: "surprised" },
     ],
     talk: [
@@ -268,6 +246,50 @@ export default {
       t("¿Qué haces con tus ojos cansados?", "What do you do with your tired eyes?"),
     ],
     words: [t("la cúpula", "the dome"), t("el telescopio", "the telescope"), t("el cometa", "the comet"), t("girar", "to turn")],
+  },
+  radio: {
+    title: t("La radio de Hortensia", "Hortensia's radio"),
+    line: t("En una caravana hay muchas radios y cables. Doña Hortensia tiene ochenta y un años.", "In a RV there are many radios and cables. Doña Hortensia is eighty-one."),
+    dialogue: [
+      ["hortensia", t("A la una y cuarenta pasa la estación espacial. Seis minutos.", "At one forty the space station passes. Six minutes.")],
+      ["hortensia", t("Quiero hablar con los astronautas. Pero estoy nerviosa.", "I want to talk with the astronauts. But I am nervous.")],
+    ],
+    ask: t("Hortensia tiene el micrófono en la mano. ¿Qué dices?", "Hortensia has the microphone in her hand. What do you say?"),
+    options: [
+      { say: t("¡Hable, Hortensia! Ahora es el momento.", "Talk, Hortensia! Now is the moment."), reply: t("Hola, espacio… ¿Me oyen? ¡Me oyen!", "Hello, space… Can you hear me? They can hear me!"), end: t("Los astronautas hablan con ella seis minutos. Preguntan por su sopa.", "The astronauts talk with her for six minutes. They ask about her soup."), mood: "surprised" },
+      { say: t("¿Y otra persona? Una persona aquí, en la Tierra.", "And another person? Someone here, on Earth."), reply: t("Oigo una voz… Es un camionero de Salta.", "I hear a voice… It is a truck driver from Salta."), end: t("El camionero también mira el cielo. Hortensia ríe.", "The truck driver is also looking at the sky. Hortensia laughs."), mood: "laugh" },
+      { say: t("Hortensia, apague la radio. Escuche el silencio.", "Hortensia, turn off the radio. Listen to the silence."), reply: t("¿Apagar la radio? Cincuenta años… Bueno.", "Turn off the radio? Fifty years… All right."), end: t("No hay ruido. Hortensia escucha el desierto.", "There is no noise. Hortensia listens to the desert."), mood: "love" },
+    ],
+    talk: [
+      t("¿Qué emisora de música suena en tu cocina?", "What music station plays in your kitchen?"),
+      t("¿Qué situación te da nervios?", "What situation makes you nervous?"),
+      t("¿Qué afición tiene la abuela de tu mejor amistad?", "What hobby does your best friend's grandmother have?"),
+      t("¿Con qué persona mayor hablas los domingos?", "Which older person do you talk to on Sundays?"),
+      t("¿Qué lugar de tu ciudad tiene mucho silencio?", "What place in your city is very quiet?"),
+    ],
+    words: [t("la radio", "the radio"), t("la estación espacial", "the space station"), t("la voz", "the voice"), t("el silencio", "the silence")],
+  },
+  duchas: {
+    title: t("Tokio en toalla", "Tokyo in a towel"),
+    line: t("En las duchas el agua caliente dura cuatro minutos. Fabián está en toalla. A las dos tiene una reunión con Tokio.", "In the showers the hot water lasts four minutes. Fabián is in a towel. At two he has a meeting with Tokyo."),
+    dialogue: [
+      ["fabian", t("Aquí no hay internet. Solo en el techo.", "There is no internet here. Only on the roof.")],
+      ["fabian", t("¡Y mi traje está en el auto!", "And my suit is in the car!")],
+    ],
+    ask: t("Fabián tiene el portátil en la mano. ¿Qué dices?", "Fabián has his laptop in his hand. What do you say?"),
+    options: [
+      { say: t("Sube al techo. En toalla, no pasa nada.", "Go up to the roof. In a towel, it does not matter."), reply: t("¿En toalla? Bueno… ¡Vamos!", "In a towel? Well… Let's go!"), end: t("Fabián habla con Tokio desde el techo, en toalla.", "Fabián talks with Tokyo from the roof, in a towel."), mood: "laugh" },
+      { say: t("Cancela la reunión. Hoy es la lluvia de estrellas.", "Cancel the meeting. Tonight is the meteor shower."), reply: t("¿Cancelar? Mmm… Sí. Hoy, no.", "Cancel? Hmm… Yes. Not today."), end: t("Fabián sube al mirador con el pelo mojado.", "Fabián goes up to the lookout with wet hair."), mood: "smile" },
+      { say: t("Enseña el cielo a tus jefes.", "Show the sky to your bosses."), reply: t("¿El cielo? ¡Buena idea!", "The sky? Good idea!"), end: t("En Tokio los jefes miran las estrellas. Aplauden.", "In Tokyo the bosses look at the stars. They clap."), mood: "surprised" },
+    ],
+    talk: [
+      t("¿Qué champú o jabón usas en la ducha?", "What shampoo or soap do you use in the shower?"),
+      t("¿A qué hora tienes reuniones?", "What time do you have meetings?"),
+      t("¿Qué ropa elegante llevas a una reunión importante?", "What smart clothes do you wear to an important meeting?"),
+      t("¿Dónde tienes buena conexión a internet?", "Where do you have a good internet connection?"),
+      t("¿Qué país está lejos de tu país?", "What country is far from your country?"),
+    ],
+    words: [t("la ducha", "the shower"), t("la toalla", "the towel"), t("la reunión", "the meeting"), t("el techo", "the roof")],
   },
   mina: {
     title: t("El minero y el cielo", "The miner and the sky"),
@@ -283,7 +305,7 @@ export default {
       { say: t("Apague la lámpara del casco y mire arriba.", "Turn off the helmet lamp and look up."), reply: t("¿Arriba? Bueno… ¡Oh!", "Up? Well… Oh!"), end: t("Ramiro mira el cielo de noche por primera vez.", "Ramiro looks at the night sky for the first time."), mood: "surprised" },
     ],
     talk: [
-      t("¿Qué trabajo duro hace alguien de tu barrio?", "What hard job does someone in your neighbourhood do?"),
+      t("¿Qué trabajo duro hace alguien de tu barrio?", "What hard job does someone in your neighborhood do?"),
       t("¿Qué profesión trabaja de noche en tu ciudad?", "What profession works at night in your city?"),
       t("¿Qué llevas en la cabeza cuando hace sol?", "What do you wear on your head when it is sunny?"),
       t("¿Qué carta vieja guardas en un cajón?", "What old letter do you keep in a drawer?"),
@@ -302,7 +324,7 @@ export default {
     options: [
       { say: t("Haz fotos de la gente. Todos miran arriba.", "Take photos of the people. Everyone is looking up."), reply: t("¿La gente? Mmm… Sí, es bonito.", "The people? Hmm… Yes, it is pretty."), end: t("Ulises fotografía a sesenta y cuatro personas mirando el cielo.", "Ulises photographs sixty-four people looking at the sky."), mood: "smile" },
       { say: t("Hoy, sin cámara. Mira con tus ojos.", "Today, no camera. Look with your eyes."), reply: t("Con mis ojos… Hace años que no.", "With my eyes… I have not for years."), end: t("Ulises deja la cámara en la mochila y mira la lluvia.", "Ulises leaves the camera in his backpack and watches the shower."), mood: "love" },
-      { say: t("¿Y un balde con agua?", "And a bucket of water?"), reply: t("¡Un espejo pequeño! ¡Genial!", "A little mirror! Brilliant!"), end: t("Ulises hace una foto del balde. Nadie la entiende. Todos la aman.", "Ulises takes a photo of the bucket. Nobody understands it. Everyone loves it."), mood: "laugh" },
+      { say: t("¿Y un balde con agua?", "And a bucket of water?"), reply: t("¡Un espejo pequeño! ¡Genial!", "A little mirror! Awesome!"), end: t("Ulises hace una foto del balde. Nadie la entiende. Todos la aman.", "Ulises takes a photo of the bucket. Nobody understands it. Everyone loves it."), mood: "laugh" },
     ],
     talk: [
       t("¿Qué paisaje del mundo quieres fotografiar?", "What landscape in the world do you want to photograph?"),
@@ -315,7 +337,7 @@ export default {
   },
   astrologa: {
     title: t("Madame Zulema", "Madame Zulema"),
-    line: t("En la orilla del salar hay una mesa con velas. Madame Zulema vende horóscopos. Hay una fila de gente.", "On the edge of the salt flat there is a table with candles. Madame Zulema sells horoscopes. There is a queue of people."),
+    line: t("En la orilla del salar hay una mesa con velas. Madame Zulema vende horóscopos. Hay una fila de gente.", "On the edge of the salt flat there is a table with candles. Madame Zulema sells horoscopes. There is a line of people."),
     dialogue: [
       ["zulema", t("Tu horóscopo: dinero, amor y un viaje.", "Your horoscope: money, love and a trip.")],
       ["zulema", t("Psst… Un secreto: estudié física tres años.", "Psst… A secret: I studied physics for three years.")],
@@ -337,7 +359,7 @@ export default {
   },
   dron: {
     title: t("Un dron con luces", "A drone with lights"),
-    line: t("En las rocas hay una chica con un dron. Es Kiara, una influencer. El dron tiene luces de colores. Dante, su hermano, tiene la cámara.", "On the rocks there is a girl with a drone. It is Kiara, an influencer. The drone has coloured lights. Dante, her brother, has the camera."),
+    line: t("En las rocas hay una chica con un dron. Es Kiara, una influencer. El dron tiene luces de colores. Dante, su hermano, tiene la cámara.", "On the rocks there is a girl with a drone. It is Kiara, an influencer. The drone has colored lights. Dante, her brother, has the camera."),
     dialogue: [
       ["kiara", t("¡Hola a todos! ¡Mi dron y las estrellas!", "Hello everyone! My drone and the stars!")],
       ["dante", t("Kiara, la gente no ve las estrellas. Ve tu dron.", "Kiara, people cannot see the stars. They see your drone.")],
@@ -352,32 +374,10 @@ export default {
       t("¿Qué ves en internet?", "What do you watch on the internet?"),
       t("¿Qué vídeo de viajes miras en el sofá?", "What travel video do you watch on the sofa?"),
       t("¿Qué juego compartes con tus primos?", "What game do you share with your cousins?"),
-      t("¿Qué aparato tiene luces de colores en tu casa?", "What device has coloured lights in your house?"),
-      t("¿En qué momento del día silencias el móvil?", "At what moment of the day do you silence your mobile?"),
+      t("¿Qué aparato tiene luces de colores en tu casa?", "What device has colored lights in your house?"),
+      t("¿En qué momento del día silencias el móvil?", "At what moment of the day do you silence your phone?"),
     ],
     words: [t("el dron", "the drone"), t("la batería", "the battery"), t("transmitir", "to stream"), t("apagar", "to turn off")],
-  },
-  apagon: {
-    title: t("Las once en punto", "Eleven o'clock sharp"),
-    line: t("Son las once menos cinco. Rogelio está en la caseta del generador. A las once apaga todas las luces. Pero la mina tiene luces muy fuertes.", "It is five to eleven. Rogelio is in the generator hut. At eleven he turns off all the lights. But the mine has very strong lights."),
-    dialogue: [
-      ["rogelio", t("La gerenta de la mina es Teresa. Es mi exesposa.", "The manager of the mine is Teresa. She is my ex-wife.")],
-      ["teresa", t("Rogelio, ¿qué quieres?", "Rogelio, what do you want?")],
-    ],
-    ask: t("Rogelio tiene la radio en la mano. ¿Qué dices?", "Rogelio has the radio in his hand. What do you say?"),
-    options: [
-      { say: t("Rogelio, pide un favor. Con cariño.", "Rogelio, ask for a favour. Kindly."), reply: t("Teresa… por favor, apaga las luces de la mina.", "Teresa… please, turn off the mine lights."), end: t("Teresa apaga las luces. Rogelio dice: «Gracias». Nueve años después.", "Teresa turns off the lights. Rogelio says: “Thank you.” Nine years later."), mood: "love" },
-      { say: t("Tres, dos, uno… ¡Apaga!", "Three, two, one… Turn it off!"), reply: t("¡Clic! … ¡Mira! La mina también.", "Click! … Look! The mine too."), end: t("A las once todo el desierto está oscuro. Hasta la mina.", "At eleven the whole desert is dark. Even the mine."), mood: "surprised" },
-      { say: t("¿Y si miran la lluvia juntos, por radio?", "And what if you watch the shower together, by radio?"), reply: t("Teresa… ¿miras la lluvia conmigo? Por radio.", "Teresa… will you watch the shower with me? By radio."), end: t("Rogelio y Teresa miran el cielo. Cada uno en su lugar.", "Rogelio and Teresa look at the sky. Each one in their place."), mood: "smile" },
-    ],
-    talk: [
-      t("¿A qué hora apagas la luz?", "What time do you turn off the light?"),
-      t("¿Qué haces cuando no hay luz en tu casa?", "What do you do when there is no power in your house?"),
-      t("¿Qué favor pides a tu familia?", "What favour do you ask your family?"),
-      t("¿Qué luz hay en tu calle?", "What light is there in your street?"),
-      t("¿Qué amistad antigua llamas para pedir perdón?", "What old friend do you call to say sorry?"),
-    ],
-    words: [t("el generador", "the generator"), t("la luz", "the light"), t("la mina", "the mine"), t("la exesposa", "the ex-wife")],
   },
   mirador: {
     title: t("Las estrellas caen", "The stars are falling"),
@@ -391,7 +391,7 @@ export default {
     options: [
       { say: t("Celeste, lee la libreta.", "Celeste, read the notebook."), reply: t("Vale. Aquí están las historias de esta noche.", "OK. Here are the stories of tonight."), end: t("Celeste lee. Todos escuchan y miran el cielo.", "Celeste reads. Everyone listens and looks at the sky."), mood: "smile" },
       { say: t("¡Un deseo! Todos, un deseo.", "A wish! Everyone, a wish."), reply: t("Sí. En silencio. Uno, dos, tres…", "Yes. In silence. One, two, three…"), end: t("Sesenta y cuatro personas piden un deseo. Nadie habla.", "Sixty-four people make a wish. Nobody speaks."), mood: "love" },
-      { say: t("Celeste, ¿y tu linterna?", "Celeste, and your torch?"), reply: t("Está apagada. ¡Y no tengo miedo!", "It is off. And I am not afraid!"), end: t("Celeste está en la oscuridad. Está feliz.", "Celeste is in the dark. She is happy."), mood: "surprised" },
+      { say: t("Celeste, ¿y tu linterna?", "Celeste, and your flashlight?"), reply: t("Está apagada. ¡Y no tengo miedo!", "It is off. And I am not afraid!"), end: t("Celeste está en la oscuridad. Está feliz.", "Celeste is in the dark. She is happy."), mood: "surprised" },
     ],
     talk: [
       t("¿Qué deseo pides hoy?", "What wish do you make today?"),

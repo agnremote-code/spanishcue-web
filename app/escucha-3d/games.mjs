@@ -248,8 +248,8 @@ export const GAMES = {
   estrellas: {
     title: 'Lluvia de estrellas',
     levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
-    spots: ['entrada', 'lentes', 'urna', 'radio', 'alien', 'cita', 'cocina', 'llama', 'duchas', 'hamacas',
-      'sendero', 'cupula', 'mina', 'salar', 'astrologa', 'dron', 'apagon', 'mirador'],
+    spots: ['entrada', 'lentes', 'urna', 'alien', 'cita', 'apagon', 'cocina', 'llama', 'hamacas',
+      'sendero', 'cupula', 'radio', 'duchas', 'mina', 'salar', 'astrologa', 'dron', 'mirador'],
     ownListening: true,
     bilingualA0: true,
   },

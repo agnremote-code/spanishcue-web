@@ -272,7 +272,7 @@
    "lines": [
     {
      "s": 0,
-     "text": "Inés dice que puso la urna en la ventana de la cocina, mirando al cielo, y que va a dejar el teléfono apoyado al lado para que papá «vea» la lluvia por videollamada."
+     "text": "Inés dice que entró en casa con su llave, puso la urna en la ventana de nuestra cocina, mirando al cielo, y que va a dejar el teléfono apoyado al lado para que papá «vea» la lluvia por videollamada."
     },
     {
      "s": 1,
@@ -280,7 +280,7 @@
     },
     {
      "s": 0,
-     "text": "Es muy de Inés. Ella siempre encuentra la manera de quedar bien. Cuidó a papá los últimos dos años, mientras yo venía una vez al mes desde Buenos Aires con regalos y prisas. Y ahora, sin quererlo, la urna también se queda con ella."
+     "text": "Es muy de Inés. Ella siempre encuentra la manera de quedar bien. Cuidó a papá los últimos dos años, mientras yo cruzaba la ciudad una vez al mes con regalos y prisas. Y ahora, sin quererlo, también es ella la que lo acompaña esta noche."
     },
     {
      "s": 1,
@@ -378,135 +378,6 @@
     {
      "word": "me arrepienta",
      "meaning": "cambie de opinión y lo lamente"
-    }
-   ]
-  },
-  {
-   "id": "radio",
-   "title": "Una voz desde la órbita",
-   "place": "Las caravanas",
-   "context": "Son las dos menos diez. La estación espacial ya pasó. Doña Hortensia, con los auriculares en el cuello, habla con Celeste.",
-   "speakers": [
-    {
-     "name": "Hortensia",
-     "country": "Perú",
-     "voice": "es-PE-CamilaNeural"
-    },
-    {
-     "name": "Celeste",
-     "country": "Chile",
-     "voice": "es-CL-CatalinaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Seis minutos, Celeste. Cincuenta años de antenas para seis minutos. Y la voz que contestó era la de una muchacha de Arequipa, a dos calles de donde nací."
-    },
-    {
-     "s": 1,
-     "text": "¿Una astronauta peruana? No sabía que hubiera una a bordo."
-    },
-    {
-     "s": 0,
-     "text": "Ni yo. Lo primero que me preguntó fue si los picantes de la plaza seguían igual de buenos. Imagínate: cuatrocientos kilómetros sobre la Tierra, girando a una velocidad absurda, y lo que echaba de menos era la comida de su barrio."
-    },
-    {
-     "s": 1,
-     "text": "¿Y usted qué le preguntó?"
-    },
-    {
-     "s": 0,
-     "text": "Nada de lo que tenía apuntado. Le dije que mi marido y yo empezamos con la radio en 1975, que él siempre quiso hablar con el espacio y que se murió sin conseguirlo. Ella se quedó callada un momento y después dijo: «Entonces salúdelo de mi parte». Como si estuviera en la habitación de al lado."
-    },
-    {
-     "s": 1,
-     "text": "Hortensia…"
-    },
-    {
-     "s": 0,
-     "text": "No me mires así, que no voy a llorar. Bueno, un poco. Lo curioso es que esperaba sentir que el mundo era enorme, y he sentido lo contrario. Que es un pañuelo."
-    },
-    {
-     "s": 1,
-     "text": "Pues ahora le toca subir al mirador a contárselo a sesenta y cuatro personas."
-    },
-    {
-     "s": 0,
-     "text": "A todas no. Solo a las que me caigan bien."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué tiene en común Hortensia con la astronauta?",
-     "options": [
-      "Las dos son radioaficionadas",
-      "Son del mismo barrio",
-      "Las dos estudiaron ingeniería"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Por qué Hortensia no hizo las preguntas que tenía apuntadas?",
-     "infer": true,
-     "options": [
-      "Porque se le cortó la comunicación",
-      "Porque se le olvidó la libreta",
-      "Porque la conversación tomó un rumbo personal"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué significa que el mundo sea «un pañuelo»?",
-     "options": [
-      "Que el planeta se ve frágil desde arriba",
-      "Que todo está más cerca",
-      "Que la vida pasa demasiado deprisa"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué deja entrever la última frase de Hortensia?",
-     "infer": true,
-     "options": [
-      "Que no quiere subir al mirador esta noche",
-      "Que conserva su carácter irónico pese a la emoción",
-      "Que está enfadada con algunos campistas"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué coincidencia te ha hecho pensar alguna vez que el mundo es un pañuelo?",
-     "model": "En un tren en Italia me senté al lado de una compañera de colegio que no veía desde hacía veinte años."
-    },
-    {
-     "q": "Si estuvieras meses lejos de tu país, ¿qué detalle cotidiano echarías de menos antes que nada?",
-     "model": "El pan de la panadería de abajo y el ruido de los vecinos por la mañana."
-    },
-    {
-     "q": "¿Qué sueño de una persona querida te gustaría cumplir en su nombre?",
-     "model": "Mi abuelo quería ver la aurora boreal; me gustaría verla por él."
-    }
-   ],
-   "gaps": "Lo curioso es que esperaba sentir que el mundo era [enorme], y he [sentido] lo [contrario]. Que es un [pañuelo].",
-   "glossary": [
-    {
-     "word": "a bordo",
-     "meaning": "dentro de una nave o un barco"
-    },
-    {
-     "word": "picantes",
-     "meaning": "platos con mucho ají"
-    },
-    {
-     "word": "echaba de menos",
-     "meaning": "extrañaba"
-    },
-    {
-     "word": "es un pañuelo",
-     "meaning": "es muy pequeño, todos se conocen"
     }
    ]
   },
@@ -765,6 +636,135 @@
    ]
   },
   {
+   "id": "apagon",
+   "title": "Lo que no se dijo",
+   "place": "La caseta del generador",
+   "context": "Los reflectores de la mina se han apagado. Teresa ha subido en su camioneta hasta el camping. Ella y Rogelio están junto a la caseta.",
+   "speakers": [
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "He apagado los reflectores y he dejado a mi segundo a cargo del turno. Si mañana me despiden, te mudas tú a la mina a dar explicaciones."
+    },
+    {
+     "s": 1,
+     "text": "Gracias, Teresa. De verdad. No esperaba que vinieras."
+    },
+    {
+     "s": 0,
+     "text": "Yo tampoco. Pero en la radio dijiste algo que me dejó pensando. Que los dos queríamos estar cerca del cielo. Durante nueve años te he culpado por elegir este camping antes que nuestra vida en la ciudad. Y resulta que yo me fui a trabajar a una mina a cuatro mil metros. No es precisamente la ciudad."
+    },
+    {
+     "s": 1,
+     "text": "Lo sé. Siempre me hizo gracia. Te fuiste por no vivir en el desierto y acabaste a quince kilómetros."
+    },
+    {
+     "s": 0,
+     "text": "No te rías. Me fui por no vivir a la sombra de tu sueño. Necesitaba uno propio, aunque fuera una mina."
+    },
+    {
+     "s": 1,
+     "text": "Nunca me lo dijiste así."
+    },
+    {
+     "s": 0,
+     "text": "Nunca me lo preguntaste así. Tú hablabas de estrellas y yo de facturas. Pensábamos que era una diferencia de carácter, y era solo una diferencia de idioma."
+    },
+    {
+     "s": 1,
+     "text": "¿Subes al mirador? Te guardo un sitio al lado del minero más famoso de tu empresa."
+    },
+    {
+     "s": 0,
+     "text": "Subo. Pero que conste que vengo por la lluvia, no por ti."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ha hecho Teresa antes de subir?",
+     "options": [
+      "Ha cerrado la mina hasta el día siguiente",
+      "Ha pedido permiso a su jefe por radio",
+      "Ha dejado a otra persona a cargo del turno"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué contradicción reconoce Teresa?",
+     "infer": true,
+     "options": [
+      "Decía odiar la minería y ahora la dirige",
+      "Siempre quiso tener hijos y al final no los tuvo",
+      "Huyó del aislamiento y acabó aislada"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué se fue Teresa realmente?",
+     "infer": true,
+     "options": [
+      "Porque no soportaba el frío del desierto",
+      "Porque le ofrecieron un sueldo muy alto",
+      "Porque necesitaba un proyecto propio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sugiere la frase final de Teresa?",
+     "options": [
+      "Que todavía está muy enfadada con Rogelio",
+      "Que, pese a sus palabras, hay un acercamiento",
+      "Que solo le interesa la lluvia de estrellas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué relación has descubierto tarde que el problema no era de carácter sino de forma de comunicarse?",
+     "model": "Con mi hermano; creíamos que éramos incompatibles y solo hablábamos de cosas distintas."
+    },
+    {
+     "q": "¿Qué significa para ti vivir «a la sombra del sueño de otro», y cómo se puede evitar en una pareja?",
+     "model": "Es renunciar a tus planes por los suyos; se evita hablando de lo que cada uno necesita."
+    },
+    {
+     "q": "¿Qué pregunta te habría gustado que alguien te hiciera en un momento clave de tu vida?",
+     "model": "Me habría gustado que me preguntaran qué quería estudiar yo, no qué tenía salida."
+    }
+   ],
+   "gaps": "Tú hablabas de [estrellas] y yo de [facturas]. Pensábamos que era una diferencia de [carácter], y era solo una diferencia de [idioma].",
+   "glossary": [
+    {
+     "word": "a cargo",
+     "meaning": "responsable de algo"
+    },
+    {
+     "word": "me dejó pensando",
+     "meaning": "me hizo reflexionar"
+    },
+    {
+     "word": "a la sombra de",
+     "meaning": "en un segundo plano detrás de"
+    },
+    {
+     "word": "que conste",
+     "meaning": "para que quede claro"
+    }
+   ]
+  },
+  {
    "id": "cocina",
    "title": "El pan que se quema",
    "place": "La carpa cocina",
@@ -1007,135 +1007,6 @@
     {
      "word": "temblando",
      "meaning": "moviéndose por miedo o frío"
-    }
-   ]
-  },
-  {
-   "id": "duchas",
-   "title": "Después del contrato",
-   "place": "Las duchas",
-   "context": "Son las dos y media. La videollamada ha terminado. Fabián sigue en el techo de las duchas, envuelto en una manta. Rogelio sube a buscarlo.",
-   "speakers": [
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    },
-    {
-     "name": "Fabián",
-     "country": "España",
-     "voice": "es-ES-AlvaroNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Enhorabuena por el contrato. Ya me ha contado medio camping que los japoneses aplaudieron."
-    },
-    {
-     "s": 1,
-     "text": "Aplaudieron, sí. Y en cuanto colgué, me llegaron catorce correos. El primero era de mi jefe en Madrid: «Bien hecho. Ahora necesito el informe antes de las ocho, hora española». Ni un minuto para celebrarlo."
-    },
-    {
-     "s": 0,
-     "text": "¿Y lo va a hacer?"
-    },
-    {
-     "s": 1,
-     "text": "Es lo que llevo haciendo quince años. Cerrar un contrato y empezar el siguiente sin mirar atrás. Pero esta noche, mientras hablaba con Tokio y la cámara apuntaba al cielo, me ha pasado algo raro. Por primera vez en mucho tiempo, no quería que la reunión terminara. Y no por el contrato."
-    },
-    {
-     "s": 0,
-     "text": "Eso suele pasar aquí arriba. A muchos les entra la crisis existencial a eso de las dos de la mañana. A las diez se les pasa con el desayuno."
-    },
-    {
-     "s": 1,
-     "text": "¿Me está diciendo que no me lo tome en serio?"
-    },
-    {
-     "s": 0,
-     "text": "Le estoy diciendo que no tome decisiones a tres mil seiscientos metros y con poco oxígeno. Pero tampoco haga como si no hubiera pasado. Haga el informe mañana, cuando baje. Esta noche, el cielo no espera."
-    },
-    {
-     "s": 1,
-     "text": "Usted habla como alguien que también dejó algo."
-    },
-    {
-     "s": 0,
-     "text": "Un puesto de ingeniero en la mina y una esposa que todavía me grita por radio. Suba al mirador y se lo cuento."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Cómo reacciona el jefe de Fabián al contrato?",
-     "options": [
-      "Le da el día libre para celebrarlo",
-      "Le ofrece un ascenso en Madrid",
-      "Le pide más trabajo"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué experimentó Fabián durante la reunión?",
-     "options": [
-      "Un deseo inesperado de alargar el momento",
-      "Miedo a perder el contrato en el último momento",
-      "Un cansancio enorme por la diferencia horaria"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué actitud recomienda Rogelio?",
-     "infer": true,
-     "options": [
-      "Esperar sin olvidarlo",
-      "Dejar el trabajo esa misma noche",
-      "Olvidar lo que sintió cuanto antes"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué se puede deducir del pasado de Rogelio?",
-     "infer": true,
-     "options": [
-      "Que nunca tuvo un trabajo estable",
-      "Que se arrepiente de haber abierto el camping",
-      "Que también cambió de vida y pagó un precio por ello"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué señales te indican que tu trabajo está ocupando demasiado espacio en tu vida?",
-     "model": "Cuando reviso el correo en vacaciones y me molesta que mis amigos me interrumpan."
-    },
-    {
-     "q": "¿Por qué crees que ciertos lugares o ciertas horas provocan reflexiones existenciales?",
-     "model": "Porque el silencio y la falta de rutina nos dejan escuchar lo que normalmente tapamos."
-    },
-    {
-     "q": "¿Qué opinas del consejo de no tomar decisiones importantes en momentos de mucha emoción?",
-     "model": "Me parece sensato, pero a veces la emoción revela algo verdadero que luego olvidamos."
-    }
-   ],
-   "gaps": "Le estoy diciendo que no tome [decisiones] a tres mil seiscientos metros y con poco [oxígeno]. Pero tampoco haga como si no hubiera [pasado]. Haga el [informe] mañana, cuando baje.",
-   "glossary": [
-    {
-     "word": "enhorabuena",
-     "meaning": "felicidades"
-    },
-    {
-     "word": "colgué",
-     "meaning": "terminé la llamada"
-    },
-    {
-     "word": "crisis existencial",
-     "meaning": "dudas profundas sobre el sentido de la vida"
-    },
-    {
-     "word": "a eso de",
-     "meaning": "más o menos a"
     }
    ]
   },
@@ -1515,6 +1386,264 @@
     {
      "word": "beca",
      "meaning": "ayuda económica para estudiar"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Una voz desde la órbita",
+   "place": "Las caravanas",
+   "context": "Son las dos menos diez. La estación espacial ya pasó. Doña Hortensia, con los auriculares en el cuello, habla con Celeste.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Seis minutos, Celeste. Cincuenta años de antenas para seis minutos. Y la voz que contestó era la de una muchacha de Arequipa, a dos calles de donde nací."
+    },
+    {
+     "s": 1,
+     "text": "¿Una astronauta peruana? No sabía que hubiera una a bordo."
+    },
+    {
+     "s": 0,
+     "text": "Ni yo. Lo primero que me preguntó fue si los picantes de la plaza seguían igual de buenos. Imagínate: cuatrocientos kilómetros sobre la Tierra, girando a una velocidad absurda, y lo que echaba de menos era la comida de su barrio."
+    },
+    {
+     "s": 1,
+     "text": "¿Y usted qué le preguntó?"
+    },
+    {
+     "s": 0,
+     "text": "Nada de lo que tenía apuntado. Le dije que mi marido y yo empezamos con la radio en 1975, que él siempre quiso hablar con el espacio y que se murió sin conseguirlo. Ella se quedó callada un momento y después dijo: «Entonces salúdelo de mi parte». Como si estuviera en la habitación de al lado."
+    },
+    {
+     "s": 1,
+     "text": "Hortensia…"
+    },
+    {
+     "s": 0,
+     "text": "No me mires así, que no voy a llorar. Bueno, un poco. Lo curioso es que esperaba sentir que el mundo era enorme, y he sentido lo contrario. Que es un pañuelo."
+    },
+    {
+     "s": 1,
+     "text": "Pues ahora le toca subir al mirador a contárselo a sesenta y cuatro personas."
+    },
+    {
+     "s": 0,
+     "text": "A todas no. Solo a las que me caigan bien."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene en común Hortensia con la astronauta?",
+     "options": [
+      "Las dos son radioaficionadas",
+      "Son del mismo barrio",
+      "Las dos estudiaron ingeniería"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Hortensia no hizo las preguntas que tenía apuntadas?",
+     "infer": true,
+     "options": [
+      "Porque se le cortó la comunicación",
+      "Porque se le olvidó la libreta",
+      "Porque la conversación tomó un rumbo personal"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué significa que el mundo sea «un pañuelo»?",
+     "options": [
+      "Que el planeta se ve frágil desde arriba",
+      "Que todo está más cerca",
+      "Que la vida pasa demasiado deprisa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué deja entrever la última frase de Hortensia?",
+     "infer": true,
+     "options": [
+      "Que no quiere subir al mirador esta noche",
+      "Que conserva su carácter irónico pese a la emoción",
+      "Que está enfadada con algunos campistas"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué coincidencia te ha hecho pensar alguna vez que el mundo es un pañuelo?",
+     "model": "En un tren en Italia me senté al lado de una compañera de colegio que no veía desde hacía veinte años."
+    },
+    {
+     "q": "Si estuvieras meses lejos de tu país, ¿qué detalle cotidiano echarías de menos antes que nada?",
+     "model": "El pan de la panadería de abajo y el ruido de los vecinos por la mañana."
+    },
+    {
+     "q": "¿Qué sueño de una persona querida te gustaría cumplir en su nombre?",
+     "model": "Mi abuelo quería ver la aurora boreal; me gustaría verla por él."
+    }
+   ],
+   "gaps": "Lo curioso es que esperaba sentir que el mundo era [enorme], y he [sentido] lo [contrario]. Que es un [pañuelo].",
+   "glossary": [
+    {
+     "word": "a bordo",
+     "meaning": "dentro de una nave o un barco"
+    },
+    {
+     "word": "picantes",
+     "meaning": "platos con mucho ají"
+    },
+    {
+     "word": "echaba de menos",
+     "meaning": "extrañaba"
+    },
+    {
+     "word": "es un pañuelo",
+     "meaning": "es muy pequeño, todos se conocen"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Después del contrato",
+   "place": "Las duchas",
+   "context": "Son las dos y media. La videollamada ha terminado. Fabián sigue en el techo de las duchas, envuelto en una manta. Rogelio sube a buscarlo.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Enhorabuena por el contrato. Ya me ha contado medio camping que los japoneses aplaudieron."
+    },
+    {
+     "s": 1,
+     "text": "Aplaudieron, sí. Y en cuanto colgué, me llegaron catorce correos. El primero era de mi jefe en Madrid: «Bien hecho. Ahora necesito el informe antes de las ocho, hora española». Ni un minuto para celebrarlo."
+    },
+    {
+     "s": 0,
+     "text": "¿Y lo va a hacer?"
+    },
+    {
+     "s": 1,
+     "text": "Es lo que llevo haciendo quince años. Cerrar un contrato y empezar el siguiente sin mirar atrás. Pero esta noche, mientras hablaba con Tokio y la cámara apuntaba al cielo, me ha pasado algo raro. Por primera vez en mucho tiempo, no quería que la reunión terminara. Y no por el contrato."
+    },
+    {
+     "s": 0,
+     "text": "Eso suele pasar aquí arriba. A muchos les entra la crisis existencial a eso de las dos de la mañana. A las diez se les pasa con el desayuno."
+    },
+    {
+     "s": 1,
+     "text": "¿Me está diciendo que no me lo tome en serio?"
+    },
+    {
+     "s": 0,
+     "text": "Le estoy diciendo que no tome decisiones a tres mil seiscientos metros y con poco oxígeno. Pero tampoco haga como si no hubiera pasado. Haga el informe mañana, cuando baje. Esta noche, el cielo no espera."
+    },
+    {
+     "s": 1,
+     "text": "Usted habla como alguien que también dejó algo."
+    },
+    {
+     "s": 0,
+     "text": "Un puesto de ingeniero en la mina y una esposa que todavía me grita por radio. Suba al mirador y se lo cuento."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo reacciona el jefe de Fabián al contrato?",
+     "options": [
+      "Le da el día libre para celebrarlo",
+      "Le ofrece un ascenso en Madrid",
+      "Le pide más trabajo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué experimentó Fabián durante la reunión?",
+     "options": [
+      "Un deseo inesperado de alargar el momento",
+      "Miedo a perder el contrato en el último momento",
+      "Un cansancio enorme por la diferencia horaria"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué actitud recomienda Rogelio?",
+     "infer": true,
+     "options": [
+      "Esperar sin olvidarlo",
+      "Dejar el trabajo esa misma noche",
+      "Olvidar lo que sintió cuanto antes"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué se puede deducir del pasado de Rogelio?",
+     "infer": true,
+     "options": [
+      "Que nunca tuvo un trabajo estable",
+      "Que se arrepiente de haber abierto el camping",
+      "Que también cambió de vida y pagó un precio por ello"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué señales te indican que tu trabajo está ocupando demasiado espacio en tu vida?",
+     "model": "Cuando reviso el correo en vacaciones y me molesta que mis amigos me interrumpan."
+    },
+    {
+     "q": "¿Por qué crees que ciertos lugares o ciertas horas provocan reflexiones existenciales?",
+     "model": "Porque el silencio y la falta de rutina nos dejan escuchar lo que normalmente tapamos."
+    },
+    {
+     "q": "¿Qué opinas del consejo de no tomar decisiones importantes en momentos de mucha emoción?",
+     "model": "Me parece sensato, pero a veces la emoción revela algo verdadero que luego olvidamos."
+    }
+   ],
+   "gaps": "Le estoy diciendo que no tome [decisiones] a tres mil seiscientos metros y con poco [oxígeno]. Pero tampoco haga como si no hubiera [pasado]. Haga el [informe] mañana, cuando baje.",
+   "glossary": [
+    {
+     "word": "enhorabuena",
+     "meaning": "felicidades"
+    },
+    {
+     "word": "colgué",
+     "meaning": "terminé la llamada"
+    },
+    {
+     "word": "crisis existencial",
+     "meaning": "dudas profundas sobre el sentido de la vida"
+    },
+    {
+     "word": "a eso de",
+     "meaning": "más o menos a"
     }
    ]
   },
@@ -2023,135 +2152,6 @@
     {
      "word": "insoportable",
      "meaning": "imposible de aguantar"
-    }
-   ]
-  },
-  {
-   "id": "apagon",
-   "title": "Lo que no se dijo",
-   "place": "La caseta del generador",
-   "context": "Los reflectores de la mina se han apagado. Teresa ha subido en su camioneta hasta el camping. Ella y Rogelio están junto a la caseta.",
-   "speakers": [
-    {
-     "name": "Teresa",
-     "country": "El Salvador",
-     "voice": "es-SV-LorenaNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "He apagado los reflectores y he dejado a mi segundo a cargo del turno. Si mañana me despiden, te mudas tú a la mina a dar explicaciones."
-    },
-    {
-     "s": 1,
-     "text": "Gracias, Teresa. De verdad. No esperaba que vinieras."
-    },
-    {
-     "s": 0,
-     "text": "Yo tampoco. Pero en la radio dijiste algo que me dejó pensando. Que los dos queríamos estar cerca del cielo. Durante nueve años te he culpado por elegir este camping antes que nuestra vida en la ciudad. Y resulta que yo me fui a trabajar a una mina a cuatro mil metros. No es precisamente la ciudad."
-    },
-    {
-     "s": 1,
-     "text": "Lo sé. Siempre me hizo gracia. Te fuiste por no vivir en el desierto y acabaste a quince kilómetros."
-    },
-    {
-     "s": 0,
-     "text": "No te rías. Me fui por no vivir a la sombra de tu sueño. Necesitaba uno propio, aunque fuera una mina."
-    },
-    {
-     "s": 1,
-     "text": "Nunca me lo dijiste así."
-    },
-    {
-     "s": 0,
-     "text": "Nunca me lo preguntaste así. Tú hablabas de estrellas y yo de facturas. Pensábamos que era una diferencia de carácter, y era solo una diferencia de idioma."
-    },
-    {
-     "s": 1,
-     "text": "¿Subes al mirador? Te guardo un sitio al lado del minero más famoso de tu empresa."
-    },
-    {
-     "s": 0,
-     "text": "Subo. Pero que conste que vengo por la lluvia, no por ti."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué ha hecho Teresa antes de subir?",
-     "options": [
-      "Ha cerrado la mina hasta el día siguiente",
-      "Ha pedido permiso a su jefe por radio",
-      "Ha dejado a otra persona a cargo del turno"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué contradicción reconoce Teresa?",
-     "infer": true,
-     "options": [
-      "Decía odiar la minería y ahora la dirige",
-      "Siempre quiso tener hijos y al final no los tuvo",
-      "Huyó del aislamiento y acabó aislada"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Por qué se fue Teresa realmente?",
-     "infer": true,
-     "options": [
-      "Porque no soportaba el frío del desierto",
-      "Porque le ofrecieron un sueldo muy alto",
-      "Porque necesitaba un proyecto propio"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué sugiere la frase final de Teresa?",
-     "options": [
-      "Que todavía está muy enfadada con Rogelio",
-      "Que, pese a sus palabras, hay un acercamiento",
-      "Que solo le interesa la lluvia de estrellas"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "¿En qué relación has descubierto tarde que el problema no era de carácter sino de forma de comunicarse?",
-     "model": "Con mi hermano; creíamos que éramos incompatibles y solo hablábamos de cosas distintas."
-    },
-    {
-     "q": "¿Qué significa para ti vivir «a la sombra del sueño de otro», y cómo se puede evitar en una pareja?",
-     "model": "Es renunciar a tus planes por los suyos; se evita hablando de lo que cada uno necesita."
-    },
-    {
-     "q": "¿Qué pregunta te habría gustado que alguien te hiciera en un momento clave de tu vida?",
-     "model": "Me habría gustado que me preguntaran qué quería estudiar yo, no qué tenía salida."
-    }
-   ],
-   "gaps": "Tú hablabas de [estrellas] y yo de [facturas]. Pensábamos que era una diferencia de [carácter], y era solo una diferencia de [idioma].",
-   "glossary": [
-    {
-     "word": "a cargo",
-     "meaning": "responsable de algo"
-    },
-    {
-     "word": "me dejó pensando",
-     "meaning": "me hizo reflexionar"
-    },
-    {
-     "word": "a la sombra de",
-     "meaning": "en un segundo plano detrás de"
-    },
-    {
-     "word": "que conste",
-     "meaning": "para que quede claro"
     }
    ]
   },

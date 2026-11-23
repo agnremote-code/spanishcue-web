@@ -78,13 +78,20 @@ const YOU_RE = genderRe(YOU), ME_RE = genderRe(ME);
 const DOUBLET = /(?<!\p{L})(\p{L}{3,})o(s?) (?:o|y|u) \1a\2(?!\p{L})|(?<!\p{L})(\p{L}{3,})a(s?) (?:o|y|u) \3o\4(?!\p{L})|(?<!\p{L})(?:ti|tú) mism[oa] o (?:de )?(?:ti|tú) mism[oa]|\p{L}o\/a\b|\p{L}\(a\)|\p{L}@/iu;
 const NOUN_YOU = /(?<!\p{L})(?:eres|eras|fuiste|serías|seas|pareces|parecías)\s+(?:todo\s+)?(?:un|una)\s+\p{L}+/iu;
 const TOGETHER = /(?<!\p{L})\p{L}+(?:emos|amos|imos)\s+(?:tú y yo\s+)?junt(?:a|o)s(?!\p{L})|(?<!\p{L})(?:vamos|vayamos|bajemos|subamos)\s+junt(?:a|o)s(?!\p{L})/iu;
+// Neutral Spanish uses «ustedes»: no vosotros forms anywhere (Dieciséis/veintiséis are numbers, not verbs).
+export const VOSOTROS = /(?<!\p{L})(?:vosotr[oa]s|vuestr[oa]s?|os|mirad|volved|haced|venid|escuchad|decid|pensad|traed|poned|tened|esperad|callad|corred|sentaos|callaos|\p{L}+(?:áis|éis))(?!\p{L})/iu;
+const NUMBER_EIS = /(?<!\p{L})(?:dieciséis|veintiséis)(?!\p{L})/giu;
+// A role or a greeting that gives the student a gender: «como si fueras su abogado», «bienvenida a…».
+const ROLE_YOU = /(?<!\p{L})como si fueras\s+(?:su|un|una|el|la|mi|tu)\s+\p{L}+|(?<!\p{L})bienvenid[oa]\s+a(?!\p{L})/iu;
 // kind 'you': addressed to the student; 'me': said by the student; 'reply': an answer to the student;
 // 'npc': narration or a line between characters (only «tú» lines count); 'scene': characters talking among themselves.
 export function genderProblems(text, kind) {
   const t = String(text ?? '');
   const out = [];
   if (DOUBLET.test(t)) out.push('o/a doublet');
+  if (VOSOTROS.test(t.replace(NUMBER_EIS, ''))) out.push(`vosotros «${t.replace(NUMBER_EIS, '').match(VOSOTROS)[0]}»`);
   if (kind === 'scene') return out;
+  if ((kind === 'you' || kind === 'reply') && ROLE_YOU.test(t)) out.push(`gendered «${t.match(ROLE_YOU)[0]}»`);
   if (kind !== 'npc' || /(?<!\p{L})tú(?!\p{L})/iu.test(t)) { if (YOU_RE.test(t)) out.push(`gendered «${t.match(YOU_RE)[0]}»`); }
   if (kind === 'npc') return out;
   if (NOUN_YOU.test(t)) out.push(`gendered «${t.match(NOUN_YOU)[0]}»`);
@@ -130,6 +137,9 @@ export function jaccard(a, b) { const x = bag(a), y = bag(b); const inter = [...
 export function c1c2Overlap(c1, c2) {
   const out = [];
   for (const id of Object.keys(c2 ?? {})) (c2[id].talk ?? []).forEach((q, i) => { const j = jaccard(c1?.[id]?.talk?.[i] ?? '', q); if (j >= 0.3) out.push(`C2 ${id} talk ${i}: shares ${Math.round(j * 100)}% of its words with C1 (max 30%); give C2 its own task`); });
+  // The scene itself too: the comet tells it in its own words, not C1's text with synonyms.
+  const sceneText = (s) => [s?.line, s?.ask, ...(s?.dialogue ?? []).map((d) => d[1]), ...(s?.options ?? []).flatMap((o) => [o.say, o.reply, o.end])].join(' ');
+  for (const id of Object.keys(c2 ?? {})) { const j = jaccard(sceneText(c1?.[id]), sceneText(c2[id])); if (j >= 0.3) out.push(`C2 ${id} scene: shares ${Math.round(j * 100)}% of its words with C1 (max 30%); retell it from the comet's angle`); }
   return out;
 }
 

@@ -364,133 +364,6 @@
    ]
   },
   {
-   "id": "radio",
-   "title": "Seis minutos prestados",
-   "place": "Las caravanas",
-   "context": "Es la una y treinta y cinco. En la caravana de Doña Hortensia, Simón mira las radios. Faltan cinco minutos para que pase la estación espacial.",
-   "speakers": [
-    {
-     "name": "Hortensia",
-     "country": "Perú",
-     "voice": "es-PE-CamilaNeural"
-    },
-    {
-     "name": "Simón",
-     "country": "Ecuador",
-     "voice": "es-EC-LuisNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Escúchame bien, Simón. Cuando pase la estación, tenemos seis minutos. Ni uno más. Y la señal va y viene, así que hay que hablar claro."
-    },
-    {
-     "s": 1,
-     "text": "¿Usted ya sabe qué les va a preguntar?"
-    },
-    {
-     "s": 0,
-     "text": "Llevo cincuenta años preparando preguntas. Pero, ¿sabes una cosa? A mi edad ya tengo casi todas las respuestas. Tú, en cambio, tienes la cabeza llena de preguntas nuevas."
-    },
-    {
-     "s": 1,
-     "text": "¿Me deja hablar a mí?"
-    },
-    {
-     "s": 0,
-     "text": "Te dejo la primera pregunta. Si la haces bien, te dejo la segunda. Y no se te ocurra preguntarles si han visto extraterrestres."
-    },
-    {
-     "s": 1,
-     "text": "¿Por qué no?"
-    },
-    {
-     "s": 0,
-     "text": "Porque se lo preguntan todos los niños del mundo, y quiero que se acuerden de ti. Pregúntales algo que nadie les haya preguntado antes."
-    },
-    {
-     "s": 1,
-     "text": "Ya lo tengo: les voy a preguntar si desde allí arriba se ve nuestro camping a oscuras."
-    },
-    {
-     "s": 0,
-     "text": "Eso, hijo, es una pregunta de radioaficionado."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Cuánto tiempo tienen para hablar con la estación?",
-     "options": [
-      "Unos diez minutos",
-      "Seis minutos",
-      "Toda la noche, con cortes"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Por qué Hortensia le cede la palabra a Simón?",
-     "options": [
-      "Porque está cansada y le duele la voz",
-      "Porque él tiene preguntas nuevas",
-      "Porque no habla bien inglés"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Por qué no quiere que Simón pregunte por extraterrestres?",
-     "options": [
-      "Porque los astronautas se enfadan",
-      "Porque es muy típica",
-      "Porque es un tema secreto"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué opina Hortensia de la pregunta final de Simón?",
-     "options": [
-      "Que es digna de un experto",
-      "Que es demasiado difícil",
-      "Que nadie la va a entender nunca"
-     ],
-     "answer": 0
-    }
-   ],
-   "open": [
-    {
-     "q": "Si tuvieras seis minutos para hablar con astronautas, ¿qué les preguntarías que nadie les haya preguntado?",
-     "model": "Les preguntaría qué olor tiene la estación espacial."
-    },
-    {
-     "q": "¿Qué persona mayor te dejó participar en algo importante cuando eras joven?",
-     "model": "Mi tío me dejó conducir su barca cuando tenía doce años."
-    },
-    {
-     "q": "¿Qué afición tuya podrías enseñarle a un niño de nueve años?",
-     "model": "Podría enseñarle a hacer pan, porque es como un experimento."
-    }
-   ],
-   "gaps": "Pregúntales [algo] que [nadie] les [haya] [preguntado] antes.",
-   "glossary": [
-    {
-     "word": "la señal va y viene",
-     "meaning": "la conexión se corta a ratos"
-    },
-    {
-     "word": "en cambio",
-     "meaning": "por el contrario"
-    },
-    {
-     "word": "no se te ocurra",
-     "meaning": "ni lo pienses, no lo hagas"
-    },
-    {
-     "word": "radioaficionado",
-     "meaning": "persona que se comunica por radio como afición"
-    }
-   ]
-  },
-  {
    "id": "alien",
    "title": "Recién llegados",
    "place": "La carpa azul",
@@ -749,6 +622,129 @@
    ]
   },
   {
+   "id": "apagon",
+   "title": "Los reflectores de Santa Rita",
+   "place": "La caseta del generador",
+   "context": "Son las doce y media. Los reflectores de la mina Santa Rita siguen encendidos en el horizonte. Rogelio llama por radio a Teresa, la gerenta.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Teresa, te lo pido como favor, no como exmarido. Tus reflectores se ven desde aquí como un amanecer falso. Media lluvia de estrellas se va a perder detrás de esa luz."
+    },
+    {
+     "s": 1,
+     "text": "Rogelio, no puedo apagar una mina por un camping. Hay un turno de noche trabajando. Si alguien se cae en la oscuridad, la responsable soy yo."
+    },
+    {
+     "s": 0,
+     "text": "No te pido que apagues la mina. Solo los reflectores que apuntan hacia arriba. Los de los túneles pueden seguir encendidos."
+    },
+    {
+     "s": 1,
+     "text": "¿Sabes cuánto papeleo hace falta para cambiar algo así a medianoche?"
+    },
+    {
+     "s": 0,
+     "text": "Sé que el año que nos casamos subiste conmigo a ver las Perseidas y dijiste que era lo más bonito que habías visto."
+    },
+    {
+     "s": 1,
+     "text": "No me hagas esto por radio, que me escucha medio turno."
+    },
+    {
+     "s": 0,
+     "text": "Entonces que lo escuchen. Los mineros también tienen derecho a ver el cielo. Uno de ellos, Ramiro, trabajó cuarenta y un años en tu mina y está aquí esta noche."
+    },
+    {
+     "s": 1,
+     "text": "Dame diez minutos. Si alguien pregunta, fue una prueba técnica."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué problema causan los reflectores?",
+     "options": [
+      "Consumen la electricidad del camping",
+      "Molestan a las llamas del corral",
+      "Iluminan el cielo e impiden ver bien la lluvia"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué Teresa se niega al principio?",
+     "options": [
+      "Porque está enfadada con Rogelio",
+      "Porque los reflectores no se pueden apagar",
+      "Por la seguridad de los trabajadores"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pide exactamente Rogelio?",
+     "options": [
+      "Que cierre la mina toda la noche",
+      "Que apague solo los reflectores hacia el cielo",
+      "Que mande a los mineros al camping"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué excusa piensa dar Teresa?",
+     "options": [
+      "Que hubo un apagón por accidente",
+      "Que fue una orden de su jefe",
+      "Una prueba técnica"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué favor le pedirías a alguien con quien ya no tienes una buena relación?",
+     "model": "Le pediría a un antiguo compañero que me recomendara para un trabajo."
+    },
+    {
+     "q": "¿Qué problema de contaminación lumínica o acústica hay donde vives?",
+     "model": "Hay un anuncio luminoso enorme frente a mi ventana."
+    },
+    {
+     "q": "¿Qué recuerdo compartido usarías para convencer a una persona de tu pasado?",
+     "model": "Le recordaría el verano en que compartimos trabajo en el campamento."
+    }
+   ],
+   "gaps": "Entonces que lo [escuchen]. Los [mineros] también tienen [derecho] a ver el [cielo].",
+   "glossary": [
+    {
+     "word": "reflectores",
+     "meaning": "focos de luz muy potentes"
+    },
+    {
+     "word": "exmarido",
+     "meaning": "hombre con el que estuviste casada"
+    },
+    {
+     "word": "papeleo",
+     "meaning": "trámites y documentos"
+    },
+    {
+     "word": "turno",
+     "meaning": "grupo que trabaja en un horario"
+    }
+   ]
+  },
+  {
    "id": "cocina",
    "title": "Ochenta y ocho grados",
    "place": "La carpa cocina",
@@ -999,129 +995,6 @@
     {
      "word": "título",
      "meaning": "diploma de una carrera"
-    }
-   ]
-  },
-  {
-   "id": "duchas",
-   "title": "Negociar el agua caliente",
-   "place": "Las duchas",
-   "context": "Es la una y media. Fabián tiene una reunión importante a las dos y quiere ducharse antes. Rogelio le explica las reglas del agua.",
-   "speakers": [
-    {
-     "name": "Fabián",
-     "country": "España",
-     "voice": "es-ES-AlvaroNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Don Rogelio, le pago lo que sea por diez minutos de agua caliente. Tengo la reunión más importante del año dentro de media hora."
-    },
-    {
-     "s": 1,
-     "text": "No es cuestión de dinero. El calentador es solar. Hay agua caliente para cuatro minutos por persona, y si usted gasta diez, la señora de la caravana verde se ducha con agua helada."
-    },
-    {
-     "s": 0,
-     "text": "Cuatro minutos no me alcanzan ni para lavarme el pelo."
-    },
-    {
-     "s": 1,
-     "text": "Le alcanzan si cierra el grifo mientras se enjabona. Aquí aprendemos todos a ducharnos como en un barco."
-    },
-    {
-     "s": 0,
-     "text": "¿Y si me ducho después de la reunión?"
-    },
-    {
-     "s": 1,
-     "text": "Después de la reunión es posible que ya no quede nada. A las tres sube todo el mundo al mirador y el que vuelve primero se queda con el agua."
-    },
-    {
-     "s": 0,
-     "text": "Muy bien. Cuatro minutos. Pero si mis jefes me ven despeinado, le echo la culpa a usted."
-    },
-    {
-     "s": 1,
-     "text": "Dígales que en el desierto el pelo es lo de menos. Lo que importa es el cielo."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué le ofrece Fabián a Rogelio?",
-     "options": [
-      "Ayudarle a arreglar el calentador",
-      "Pagar lo que haga falta",
-      "Ducharse en la caravana verde"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Por qué no acepta Rogelio?",
-     "options": [
-      "Porque perjudicaría a otros campistas",
-      "Porque las duchas cierran a la una",
-      "Porque Fabián no ha pagado la noche"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué truco le enseña Rogelio?",
-     "options": [
-      "Calentar el agua en la cocina",
-      "Ducharse de madrugada, cuando nadie lo hace",
-      "Cerrar el grifo al enjabonarse"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué quiere decir «el pelo es lo de menos»?",
-     "options": [
-      "Que hay cosas mucho más importantes",
-      "Que el pelo se seca rápido en el desierto",
-      "Que los jefes no miran el pelo"
-     ],
-     "answer": 0
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué recurso que normalmente das por hecho tuviste que racionar alguna vez?",
-     "model": "En un viaje por el desierto tuvimos que racionar el agua."
-    },
-    {
-     "q": "¿Hasta qué punto cambias tu imagen para una reunión de trabajo o una entrevista?",
-     "model": "Me pongo ropa más formal, pero no cambio mi peinado."
-    },
-    {
-     "q": "¿Qué norma de un lugar compartido te parece justa aunque te resulte incómoda?",
-     "model": "Limpiar la cocina enseguida en un piso compartido."
-    }
-   ],
-   "gaps": "Le alcanzan si [cierra] el [grifo] mientras se [enjabona]. Aquí aprendemos todos a ducharnos como en un [barco].",
-   "glossary": [
-    {
-     "word": "calentador",
-     "meaning": "aparato que calienta el agua"
-    },
-    {
-     "word": "helada",
-     "meaning": "muy fría"
-    },
-    {
-     "word": "grifo",
-     "meaning": "pieza que abre y cierra el agua"
-    },
-    {
-     "word": "es lo de menos",
-     "meaning": "no es importante"
     }
    ]
   },
@@ -1491,6 +1364,256 @@
     {
      "word": "bien cargado",
      "meaning": "fuerte, con mucho café"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Seis minutos prestados",
+   "place": "Las caravanas",
+   "context": "Es la una y treinta y cinco. En la caravana de Doña Hortensia, Simón mira las radios. Faltan cinco minutos para que pase la estación espacial.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Simón",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Escúchame bien, Simón. Cuando pase la estación, tenemos seis minutos. Ni uno más. Y la señal va y viene, así que hay que hablar claro."
+    },
+    {
+     "s": 1,
+     "text": "¿Usted ya sabe qué les va a preguntar?"
+    },
+    {
+     "s": 0,
+     "text": "Llevo cincuenta años preparando preguntas. Pero, ¿sabes una cosa? A mi edad ya tengo casi todas las respuestas. Tú, en cambio, tienes la cabeza llena de preguntas nuevas."
+    },
+    {
+     "s": 1,
+     "text": "¿Me deja hablar a mí?"
+    },
+    {
+     "s": 0,
+     "text": "Te dejo la primera pregunta. Si la haces bien, te dejo la segunda. Y no se te ocurra preguntarles si han visto extraterrestres."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué no?"
+    },
+    {
+     "s": 0,
+     "text": "Porque se lo preguntan todos los niños del mundo, y quiero que se acuerden de ti. Pregúntales algo que nadie les haya preguntado antes."
+    },
+    {
+     "s": 1,
+     "text": "Ya lo tengo: les voy a preguntar si desde allí arriba se ve nuestro camping a oscuras."
+    },
+    {
+     "s": 0,
+     "text": "Eso, hijo, es una pregunta de radioaficionado."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuánto tiempo tienen para hablar con la estación?",
+     "options": [
+      "Unos diez minutos",
+      "Seis minutos",
+      "Toda la noche, con cortes"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Hortensia le cede la palabra a Simón?",
+     "options": [
+      "Porque está cansada y le duele la voz",
+      "Porque él tiene preguntas nuevas",
+      "Porque no habla bien inglés"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no quiere que Simón pregunte por extraterrestres?",
+     "options": [
+      "Porque los astronautas se enfadan",
+      "Porque es muy típica",
+      "Porque es un tema secreto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué opina Hortensia de la pregunta final de Simón?",
+     "options": [
+      "Que es digna de un experto",
+      "Que es demasiado difícil",
+      "Que nadie la va a entender nunca"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "Si tuvieras seis minutos para hablar con astronautas, ¿qué les preguntarías que nadie les haya preguntado?",
+     "model": "Les preguntaría qué olor tiene la estación espacial."
+    },
+    {
+     "q": "¿Qué persona mayor te dejó participar en algo importante cuando eras joven?",
+     "model": "Mi tío me dejó conducir su barca cuando tenía doce años."
+    },
+    {
+     "q": "¿Qué afición tuya podrías enseñarle a un niño de nueve años?",
+     "model": "Podría enseñarle a hacer pan, porque es como un experimento."
+    }
+   ],
+   "gaps": "Pregúntales [algo] que [nadie] les [haya] [preguntado] antes.",
+   "glossary": [
+    {
+     "word": "la señal va y viene",
+     "meaning": "la conexión se corta a ratos"
+    },
+    {
+     "word": "en cambio",
+     "meaning": "por el contrario"
+    },
+    {
+     "word": "no se te ocurra",
+     "meaning": "ni lo pienses, no lo hagas"
+    },
+    {
+     "word": "radioaficionado",
+     "meaning": "persona que se comunica por radio como afición"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Negociar el agua caliente",
+   "place": "Las duchas",
+   "context": "Es la una y media. Fabián tiene una reunión importante a las dos y quiere ducharse antes. Rogelio le explica las reglas del agua.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Rogelio, le pago lo que sea por diez minutos de agua caliente. Tengo la reunión más importante del año dentro de media hora."
+    },
+    {
+     "s": 1,
+     "text": "No es cuestión de dinero. El calentador es solar. Hay agua caliente para cuatro minutos por persona, y si usted gasta diez, la señora de la caravana verde se ducha con agua helada."
+    },
+    {
+     "s": 0,
+     "text": "Cuatro minutos no me alcanzan ni para lavarme el pelo."
+    },
+    {
+     "s": 1,
+     "text": "Le alcanzan si cierra el grifo mientras se enjabona. Aquí aprendemos todos a ducharnos como en un barco."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si me ducho después de la reunión?"
+    },
+    {
+     "s": 1,
+     "text": "Después de la reunión es posible que ya no quede nada. A las tres sube todo el mundo al mirador y el que vuelve primero se queda con el agua."
+    },
+    {
+     "s": 0,
+     "text": "Muy bien. Cuatro minutos. Pero si mis jefes me ven despeinado, le echo la culpa a usted."
+    },
+    {
+     "s": 1,
+     "text": "Dígales que en el desierto el pelo es lo de menos. Lo que importa es el cielo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le ofrece Fabián a Rogelio?",
+     "options": [
+      "Ayudarle a arreglar el calentador",
+      "Pagar lo que haga falta",
+      "Ducharse en la caravana verde"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no acepta Rogelio?",
+     "options": [
+      "Porque perjudicaría a otros campistas",
+      "Porque las duchas cierran a la una",
+      "Porque Fabián no ha pagado la noche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué truco le enseña Rogelio?",
+     "options": [
+      "Calentar el agua en la cocina",
+      "Ducharse de madrugada, cuando nadie lo hace",
+      "Cerrar el grifo al enjabonarse"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere decir «el pelo es lo de menos»?",
+     "options": [
+      "Que hay cosas mucho más importantes",
+      "Que el pelo se seca rápido en el desierto",
+      "Que los jefes no miran el pelo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué recurso que normalmente das por hecho tuviste que racionar alguna vez?",
+     "model": "En un viaje por el desierto tuvimos que racionar el agua."
+    },
+    {
+     "q": "¿Hasta qué punto cambias tu imagen para una reunión de trabajo o una entrevista?",
+     "model": "Me pongo ropa más formal, pero no cambio mi peinado."
+    },
+    {
+     "q": "¿Qué norma de un lugar compartido te parece justa aunque te resulte incómoda?",
+     "model": "Limpiar la cocina enseguida en un piso compartido."
+    }
+   ],
+   "gaps": "Le alcanzan si [cierra] el [grifo] mientras se [enjabona]. Aquí aprendemos todos a ducharnos como en un [barco].",
+   "glossary": [
+    {
+     "word": "calentador",
+     "meaning": "aparato que calienta el agua"
+    },
+    {
+     "word": "helada",
+     "meaning": "muy fría"
+    },
+    {
+     "word": "grifo",
+     "meaning": "pieza que abre y cierra el agua"
+    },
+    {
+     "word": "es lo de menos",
+     "meaning": "no es importante"
     }
    ]
   },
@@ -1991,129 +2114,6 @@
     {
      "word": "cínico",
      "meaning": "que no cree en la bondad de los demás"
-    }
-   ]
-  },
-  {
-   "id": "apagon",
-   "title": "Los reflectores de Santa Rita",
-   "place": "La caseta del generador",
-   "context": "Son las doce y media. Los reflectores de la mina Santa Rita siguen encendidos en el horizonte. Rogelio llama por radio a Teresa, la gerenta.",
-   "speakers": [
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    },
-    {
-     "name": "Teresa",
-     "country": "El Salvador",
-     "voice": "es-SV-LorenaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 0,
-     "text": "Teresa, te lo pido como favor, no como exmarido. Tus reflectores se ven desde aquí como un amanecer falso. Media lluvia de estrellas se va a perder detrás de esa luz."
-    },
-    {
-     "s": 1,
-     "text": "Rogelio, no puedo apagar una mina por un camping. Hay un turno de noche trabajando. Si alguien se cae en la oscuridad, la responsable soy yo."
-    },
-    {
-     "s": 0,
-     "text": "No te pido que apagues la mina. Solo los reflectores que apuntan hacia arriba. Los de los túneles pueden seguir encendidos."
-    },
-    {
-     "s": 1,
-     "text": "¿Sabes cuánto papeleo hace falta para cambiar algo así a medianoche?"
-    },
-    {
-     "s": 0,
-     "text": "Sé que el año que nos casamos subiste conmigo a ver las Perseidas y dijiste que era lo más bonito que habías visto."
-    },
-    {
-     "s": 1,
-     "text": "No me hagas esto por radio, que me escucha medio turno."
-    },
-    {
-     "s": 0,
-     "text": "Entonces que lo escuchen. Los mineros también tienen derecho a ver el cielo. Uno de ellos, Ramiro, trabajó cuarenta y un años en tu mina y está aquí esta noche."
-    },
-    {
-     "s": 1,
-     "text": "Dame diez minutos. Si alguien pregunta, fue una prueba técnica."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué problema causan los reflectores?",
-     "options": [
-      "Consumen la electricidad del camping",
-      "Molestan a las llamas del corral",
-      "Iluminan el cielo e impiden ver bien la lluvia"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Por qué Teresa se niega al principio?",
-     "options": [
-      "Porque está enfadada con Rogelio",
-      "Porque los reflectores no se pueden apagar",
-      "Por la seguridad de los trabajadores"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué pide exactamente Rogelio?",
-     "options": [
-      "Que cierre la mina toda la noche",
-      "Que apague solo los reflectores hacia el cielo",
-      "Que mande a los mineros al camping"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Qué excusa piensa dar Teresa?",
-     "options": [
-      "Que hubo un apagón por accidente",
-      "Que fue una orden de su jefe",
-      "Una prueba técnica"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué favor le pedirías a alguien con quien ya no tienes una buena relación?",
-     "model": "Le pediría a un antiguo compañero que me recomendara para un trabajo."
-    },
-    {
-     "q": "¿Qué problema de contaminación lumínica o acústica hay donde vives?",
-     "model": "Hay un anuncio luminoso enorme frente a mi ventana."
-    },
-    {
-     "q": "¿Qué recuerdo compartido usarías para convencer a una persona de tu pasado?",
-     "model": "Le recordaría el verano en que compartimos trabajo en el campamento."
-    }
-   ],
-   "gaps": "Entonces que lo [escuchen]. Los [mineros] también tienen [derecho] a ver el [cielo].",
-   "glossary": [
-    {
-     "word": "reflectores",
-     "meaning": "focos de luz muy potentes"
-    },
-    {
-     "word": "exmarido",
-     "meaning": "hombre con el que estuviste casada"
-    },
-    {
-     "word": "papeleo",
-     "meaning": "trámites y documentos"
-    },
-    {
-     "word": "turno",
-     "meaning": "grupo que trabaja en un horario"
     }
    ]
   },

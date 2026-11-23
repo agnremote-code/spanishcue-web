@@ -44,7 +44,7 @@ export default {
       "¿Qué vendes por internet cuando ya no lo necesitas?",
       "¿Qué vendedor ambulante de tu ciudad tiene clientes fieles?",
     ],
-    words: [t("los lentes", "the glasses"), t("el estacionamiento", "the car park"), t("vender", "to sell"), t("regalar", "to give away"), t("el deseo", "the wish")],
+    words: [t("los lentes", "the glasses"), t("el estacionamiento", "the parking lot"), t("vender", "to sell"), t("regalar", "to give away"), t("el deseo", "the wish")],
   },
   urna: {
     title: "Novecientos kilómetros de olvido",
@@ -68,28 +68,6 @@ export default {
       "¿Qué árbol, playa o plaza visita tu familia para recordar a alguien?",
     ],
     words: [t("la urna", "the urn"), t("las cenizas", "the ashes"), t("olvidar", "to forget"), t("el azúcar", "the sugar"), t("la sal", "the salt")],
-  },
-  radio: {
-    title: "Hola, estación espacial",
-    line: "Dentro de una caravana hay radios viejas, cables y fotos. Doña Hortensia tiene ochenta y un años y es radioaficionada desde hace cincuenta. Esta noche quiere hablar con el espacio.",
-    dialogue: [
-      ["hortensia", "A la una y cuarenta pasa la estación espacial por aquí. Solo tengo seis minutos."],
-      ["hortensia", "Mi marido siempre quería hablar con los astronautas. Hoy lo voy a intentar por él."],
-    ],
-    ask: "Hortensia tiene el micrófono en la mano y le tiemblan los dedos. ¿Qué le dices?",
-    options: [
-      { say: "¡Ahora, Hortensia! Hable claro y despacio.", reply: "Estación espacial, aquí Hortensia, desde el desierto… ¡Contestan! ¡Me contestan!", end: "Hortensia habla seis minutos con el espacio. Los astronautas le preguntan por su receta de sopa.", mood: "surprised" },
-      { say: "Pruebe otra frecuencia. A lo mejor alguien en la Tierra también mira el cielo.", reply: "Oigo a alguien… Es un camionero. Está en la ruta, cerca de Salta.", end: "Hortensia y el camionero miran las mismas estrellas desde lugares diferentes. Los dos se ríen.", mood: "laugh" },
-      { say: "Hortensia, apague la radio un momento. Escuche el desierto.", reply: "¿Apagarla? Cincuenta años encendida… Bueno. Solo un momento.", end: "Por primera vez en cincuenta años, Hortensia escucha el silencio.", mood: "love" },
-    ],
-    talk: [
-      "¿Qué aparato viejo de tu familia todavía funciona?",
-      "¿Qué colección curiosa tiene tu vecina o tu vecino mayor?",
-      "¿Qué le preguntarías a un astronauta en seis minutos?",
-      "¿Qué emisora de radio pones por la mañana?",
-      "¿Qué receta de un familiar fallecido cocinas en su cumpleaños?",
-    ],
-    words: [t("la caravana", "the caravan"), t("el micrófono", "the microphone"), t("contestar", "to answer"), t("la estación espacial", "the space station"), t("el silencio", "the silence")],
   },
   alien: {
     title: "Un cuaderno para extraterrestres",
@@ -137,6 +115,29 @@ export default {
     ],
     words: [t("la cita", "the date"), t("la fogata", "the campfire"), t("vender seguros", "to sell insurance"), t("el perfil", "the profile"), t("la verdad", "the truth")],
   },
+  apagon: {
+    title: "El interruptor de las once",
+    line: "Son las once menos cinco. En la caseta del generador, Rogelio tiene la mano en el interruptor. A lo lejos, la mina Santa Rita tiene reflectores muy potentes. La gerenta es Teresa, su exesposa.",
+    dialogue: [
+      ["rogelio", "Con esos reflectores encendidos, la gente no va a ver la mitad de las estrellas."],
+      ["teresa", "Rogelio, te oigo por la radio. ¿Qué quieres esta vez?"],
+      ["rogelio", "No hablamos desde hace nueve años…"],
+    ],
+    ask: "Rogelio te pasa la radio un segundo. ¿Qué haces?",
+    options: [
+      { say: "Rogelio, pídeselo con cariño. Di «por favor».", reply: "Teresa… por favor. Apaga los reflectores. Solo esta noche.", end: "Teresa apaga los reflectores de la mina. Rogelio le da las gracias después de nueve años.", mood: "love" },
+      { say: "Cuenta conmigo. Tres, dos, uno… ¡Ahora!", reply: "¡Clic! … ¡Mira! ¡La mina también se apaga!", end: "A las once todo el desierto queda a oscuras, hasta la mina Santa Rita.", mood: "surprised" },
+      { say: "¿Por qué no miran la lluvia juntos? Por radio.", reply: "Teresa… ¿miramos la lluvia por radio? Como antes.", end: "Rogelio y Teresa miran la lluvia por radio, cada uno desde su lado.", mood: "smile" },
+    ],
+    talk: [
+      "¿Qué compañero de colegio buscas a veces en internet?",
+      "¿Qué luces de tu calle te molestan por la noche?",
+      "¿Qué vecino te ayuda cuando se rompe algo en casa?",
+      "¿Qué haces cuando se va la luz en tu edificio?",
+      "¿Qué cosa compartes todavía con una persona de tu pasado?",
+    ],
+    words: [t("el interruptor", "the switch"), t("el generador", "the generator"), t("los reflectores", "the floodlights"), t("la gerenta", "the manager"), t("la exesposa", "the ex-wife")],
+  },
   cocina: {
     title: "Fideos a tres mil seiscientos metros",
     line: "En la carpa cocina hay vapor y una olla enorme. Doña Petrona, de Bolivia, cocina para sesenta y cuatro personas. Su ayudante, Mauro, acaba de llegar de la costa de Uruguay.",
@@ -181,28 +182,6 @@ export default {
       "¿A qué persona llamas cuando necesitas ayuda urgente?",
     ],
     words: [t("el corral", "the pen"), t("la cría", "the baby animal"), t("la paja", "the straw"), t("cuidar", "to look after"), t("la manta", "the blanket")],
-  },
-  duchas: {
-    title: "Una reunión en toalla",
-    line: "En las duchas del camping, el agua caliente dura cuatro minutos. Fabián es un ejecutivo de Madrid. Está en toalla, con el portátil en la mano. A las dos tiene una videollamada con Tokio.",
-    dialogue: [
-      ["fabian", "Solo hay señal de internet en el techo de las duchas. ¡En el techo!"],
-      ["fabian", "Y mi traje está en el coche, a quinientos metros. Faltan diez minutos."],
-    ],
-    ask: "Fabián mira la escalera del techo. ¿Qué le dices?",
-    options: [
-      { say: "Sube al techo así. En Tokio solo te van a ver la cara.", reply: "¿En toalla? Bueno… ¡Es una reunión importante!", end: "Fabián hace la videollamada con Tokio desde el techo de las duchas, en toalla.", mood: "laugh" },
-      { say: "Cancela la reunión. Esta noche solo hay una lluvia de estrellas en sesenta años.", reply: "¿Cancelar? Mi jefe… Bueno. Hoy, no.", end: "Fabián cancela la reunión y sube al mirador con el pelo mojado.", mood: "smile" },
-      { say: "Gira la cámara hacia el cielo. Enséñales las estrellas.", reply: "¡Qué idea! En Tokio nunca ven un cielo así.", end: "Los jefes de Tokio miran la lluvia de estrellas en silencio. Después aplauden.", mood: "surprised" },
-    ],
-    talk: [
-      "¿Qué lugar de tu ciudad no tiene cobertura de móvil?",
-      "¿Cómo te vistes para una videollamada de trabajo?",
-      "¿Qué país lejano te gustaría visitar algún día?",
-      "¿Cuánto tiempo pasas en la ducha cuando tienes prisa?",
-      "¿Qué cosa rara hiciste por tu trabajo o tus estudios?",
-    ],
-    words: [t("la ducha", "the shower"), t("la toalla", "the towel"), t("la señal", "the signal"), t("el techo", "the roof"), t("la videollamada", "the video call")],
   },
   hamacas: {
     title: "Rocío no puede dormir",
@@ -259,7 +238,7 @@ export default {
     ask: "Joaquín tiene una llave inglesa en la mano. Amalia te mira. ¿Qué dices?",
     options: [
       { say: "A veces las máquinas viejas necesitan un golpe. ¿Una patada?", reply: "¿Una patada? Tengo setenta y siete años… ¡pero buenas piernas!", end: "¡Pum! Doña Amalia le da una patada a la cúpula y la cúpula gira. Joaquín se queda con la boca abierta.", mood: "laugh" },
-      { say: "¿Y si mira su cometa sin telescopio, como en 1966?", reply: "Sí. Los niños usan el telescopio. Yo tengo mis ojos.", end: "Doña Amalia deja el telescopio a los niños y mira su cometa sin aparatos.", mood: "love" },
+      { say: "¿Y si mira la lluvia de su cometa sin telescopio, como en 1966?", reply: "Sí. Los niños usan el telescopio. Yo tengo mis ojos.", end: "Doña Amalia deja el telescopio a los niños y mira la lluvia de su cometa sin aparatos.", mood: "love" },
       { say: "Lo primero: café. Esta vez no se va a dormir.", reply: "Doble, por favor. Y sin azúcar.", end: "Doña Amalia toma un café doble. Esta vez tiene los ojos muy abiertos.", mood: "surprised" },
     ],
     talk: [
@@ -270,6 +249,50 @@ export default {
       "¿Qué persona mayor de tu entorno tiene mucha energía?",
     ],
     words: [t("la cúpula", "the dome"), t("trabada", "stuck"), t("el telescopio", "the telescope"), t("descubrir", "to discover"), t("la patada", "the kick")],
+  },
+  radio: {
+    title: "Hola, estación espacial",
+    line: "Dentro de una caravana hay radios viejas, cables y fotos. Doña Hortensia tiene ochenta y un años y es radioaficionada desde hace cincuenta. Esta noche quiere hablar con el espacio.",
+    dialogue: [
+      ["hortensia", "A la una y cuarenta pasa la estación espacial por aquí. Solo tengo seis minutos."],
+      ["hortensia", "Mi marido siempre quería hablar con los astronautas. Hoy lo voy a intentar por él."],
+    ],
+    ask: "Hortensia tiene el micrófono en la mano y le tiemblan los dedos. ¿Qué le dices?",
+    options: [
+      { say: "¡Ahora, Hortensia! Hable claro y despacio.", reply: "Estación espacial, aquí Hortensia, desde el desierto… ¡Contestan! ¡Me contestan!", end: "Hortensia habla seis minutos con el espacio. Los astronautas le preguntan por su receta de sopa.", mood: "surprised" },
+      { say: "Pruebe otra frecuencia. A lo mejor alguien en la Tierra también mira el cielo.", reply: "Oigo a alguien… Es un camionero. Está en la ruta, cerca de Salta.", end: "Hortensia y el camionero miran las mismas estrellas desde lugares diferentes. Los dos se ríen.", mood: "laugh" },
+      { say: "Hortensia, apague la radio un momento. Escuche el desierto.", reply: "¿Apagarla? Cincuenta años encendida… Bueno. Solo un momento.", end: "Por primera vez en cincuenta años, Hortensia escucha el silencio.", mood: "love" },
+    ],
+    talk: [
+      "¿Qué aparato viejo de tu familia todavía funciona?",
+      "¿Qué colección curiosa tiene tu vecina o tu vecino mayor?",
+      "¿Qué le preguntarías a un astronauta en seis minutos?",
+      "¿Qué emisora de radio pones por la mañana?",
+      "¿Qué receta de un familiar fallecido cocinas en su cumpleaños?",
+    ],
+    words: [t("la caravana", "the RV"), t("el micrófono", "the microphone"), t("contestar", "to answer"), t("la estación espacial", "the space station"), t("el silencio", "the silence")],
+  },
+  duchas: {
+    title: "Una reunión en toalla",
+    line: "En las duchas del camping, el agua caliente dura cuatro minutos. Fabián es un ejecutivo de Madrid. Está en toalla, con el portátil en la mano. A las dos tiene una videollamada con Tokio.",
+    dialogue: [
+      ["fabian", "Solo hay señal de internet en el techo de las duchas. ¡En el techo!"],
+      ["fabian", "Y mi traje está en el auto, a quinientos metros. Faltan diez minutos."],
+    ],
+    ask: "Fabián mira la escalera del techo. ¿Qué le dices?",
+    options: [
+      { say: "Sube al techo así. En Tokio solo te van a ver la cara.", reply: "¿En toalla? Bueno… ¡Es una reunión importante!", end: "Fabián hace la videollamada con Tokio desde el techo de las duchas, en toalla.", mood: "laugh" },
+      { say: "Cancela la reunión. Esta noche solo hay una lluvia de estrellas en sesenta años.", reply: "¿Cancelar? Mi jefe… Bueno. Hoy, no.", end: "Fabián cancela la reunión y sube al mirador con el pelo mojado.", mood: "smile" },
+      { say: "Gira la cámara hacia el cielo. Enséñales las estrellas.", reply: "¡Qué idea! En Tokio nunca ven un cielo así.", end: "Los jefes de Tokio miran la lluvia de estrellas en silencio. Después aplauden.", mood: "surprised" },
+    ],
+    talk: [
+      "¿Qué lugar de tu ciudad no tiene cobertura de móvil?",
+      "¿Cómo te vistes para una videollamada de trabajo?",
+      "¿Qué país lejano te gustaría visitar algún día?",
+      "¿Cuánto tiempo pasas en la ducha cuando tienes prisa?",
+      "¿Qué cosa rara hiciste por tu trabajo o tus estudios?",
+    ],
+    words: [t("la ducha", "the shower"), t("la toalla", "the towel"), t("la señal", "the signal"), t("el techo", "the roof"), t("la videollamada", "the video call")],
   },
   mina: {
     title: "Cuarenta y un años sin cielo",
@@ -358,29 +381,6 @@ export default {
       "¿Qué domingo pasaste sin teléfono y fue un buen día?",
     ],
     words: [t("el dron", "the drone"), t("en directo", "live"), t("la batería", "the battery"), t("aterrizar", "to land"), t("quejarse", "to complain")],
-  },
-  apagon: {
-    title: "El interruptor de las once",
-    line: "Son las once menos cinco. En la caseta del generador, Rogelio tiene la mano en el interruptor. A lo lejos, la mina Santa Rita tiene reflectores muy potentes. La gerenta es Teresa, su exesposa.",
-    dialogue: [
-      ["rogelio", "Con esos reflectores encendidos, la gente no va a ver la mitad de las estrellas."],
-      ["teresa", "Rogelio, te oigo por la radio. ¿Qué quieres esta vez?"],
-      ["rogelio", "No hablamos desde hace nueve años…"],
-    ],
-    ask: "Rogelio te pasa la radio un segundo. ¿Qué haces?",
-    options: [
-      { say: "Rogelio, pídeselo con cariño. Di «por favor».", reply: "Teresa… por favor. Apaga los reflectores. Solo esta noche.", end: "Teresa apaga los reflectores de la mina. Rogelio le da las gracias después de nueve años.", mood: "love" },
-      { say: "Cuenta conmigo. Tres, dos, uno… ¡Ahora!", reply: "¡Clic! … ¡Mira! ¡La mina también se apaga!", end: "A las once todo el desierto queda a oscuras, hasta la mina Santa Rita.", mood: "surprised" },
-      { say: "¿Por qué no miran la lluvia juntos? Por radio.", reply: "Teresa… ¿miramos la lluvia por radio? Como antes.", end: "Rogelio y Teresa miran la lluvia por radio, cada uno desde su lado.", mood: "smile" },
-    ],
-    talk: [
-      "¿Qué compañero de colegio buscas a veces en internet?",
-      "¿Qué luces de tu calle te molestan por la noche?",
-      "¿Qué vecino te ayuda cuando se rompe algo en casa?",
-      "¿Qué haces cuando se va la luz en tu edificio?",
-      "¿Qué cosa compartes todavía con una persona de tu pasado?",
-    ],
-    words: [t("el interruptor", "the switch"), t("el generador", "the generator"), t("los reflectores", "the floodlights"), t("la gerenta", "the manager"), t("la exesposa", "the ex-wife")],
   },
   mirador: {
     title: "Las tres y doce en punto",

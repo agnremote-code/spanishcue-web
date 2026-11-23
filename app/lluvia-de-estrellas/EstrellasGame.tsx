@@ -13,7 +13,7 @@ import { useCallback, useEffect, useMemo, useRef, useState, type KeyboardEvent a
 import { ANNOUNCEMENTS, BOUNDS, CORRAL, DOME, FIRE, FURNITURE, KITCHEN, PARKING, PATH, SALAR, SCENES, SECTORS, sceneById } from './layout.mjs';
 import { LEVELS, loadLevel } from './levels.mjs';
 import type { LevelContent, Text } from './levels.d.mts';
-import { CAST, NIGHT, STORY, nightClock, skyPhase } from './story.mjs';
+import { CAST, NIGHT, STORY, nightClock, sceneTime, skyPhase } from './story.mjs';
 import { FINAL, STORAGE_KEY, choose, closeScene, createState, doneFor, invitadoById, logFor, normaliseLevel, openScene, progress, resetLevel, restore, sceneView, serialise, setLevel, undo } from './engine.mjs';
 import { ListeningBadge, ListeningCard, ModeSwitch, useListeningDone, useListeningMode } from '../escucha-3d/Escucha';
 import { createAmbience, type Ambience } from './ambience';
@@ -136,7 +136,9 @@ export default function EstrellasGame() {
   const sector = pose ? SECTORS.find(s => s.id === pose.sector) : null;
   const heardHere = mode === 'escucha' ? heard : done;
   // The night moves on, and the sky fills with meteors, with every circle of the mode you are playing.
-  const clock = nightClock(heardHere);
+  // While a circle is open the clock shows that circle's own time, so the HUD agrees with its text.
+  const openId = mode === 'escucha' ? null : state.scene?.id;
+  const clock = (openId && sceneTime(openId)) || nightClock(heardHere);
   const sky = skyPhase(heardHere);
 
   // Ambient sound: per sector, ducked while a card or a listening is open.

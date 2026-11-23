@@ -69,28 +69,6 @@ export default {
     ],
     words: ["revolver el maletero", "la encimera", "devastadora", "despistado", "desentonar", "quitarse un peso de encima"],
   },
-  radio: {
-    title: "La voz que baja del espacio",
-    line: "Junto a su caravana, Doña Hortensia ajusta una antena casera con unas tenazas y la paciencia de quien lleva cincuenta años escuchando el éter. Tiene ochenta y un años y una lista de contactos que abarca cinco continentes y dos expediciones antárticas. Esta noche persigue el premio que le falta: a la una y cuarenta, la Estación Espacial Internacional cruzará el cielo del desierto durante seis minutos exactos, y ella tiene intención de hablar con alguien a bordo. El problema es que la batería de su equipo agoniza.",
-    dialogue: [
-      ["hortensia", "Cincuenta años sin fallar a una cita, y esta batería me va a dejar plantada justo en la más importante. Es de una ironía casi literaria."],
-      ["hortensia", "Mi difunto marido decía que yo hablaba más con desconocidos de Noruega que con él. No le faltaba razón, pero los noruegos escuchaban mejor."],
-    ],
-    ask: "Doña Hortensia golpea el aparato con los nudillos, como si se tratara de un televisor antiguo. ¿Qué le planteas?",
-    options: [
-      { say: "La batería de una camioneta podría alimentar su equipo seis minutos sin problema. Le busco a alguien con cables y ganas de pasar a la historia.", reply: "Usted tiene el don de convertir una catástrofe en un trámite. Vaya, vaya, que la estación no espera a nadie.", end: "Doña Hortensia habló seis minutos con la estación espacial, y el astronauta le preguntó por su receta de sopa de quinua.", mood: "surprised" },
-      { say: "Si la estación se le escapa, quizá no sea una derrota. Esta noche medio continente está mirando el mismo cielo; habrá alguien en tierra con quien compartirlo.", reply: "Tiene razón. Una voz en una cabina de camión puede ser tan extraordinaria como una en órbita. Ojalá alguien esté despierto.", end: "Doña Hortensia contactó a un camionero de Salta que también miraba el cielo, y hablaron de estrellas hasta las tres.", mood: "smile" },
-      { say: "Lleva cincuenta años escuchando el mundo a través de un altavoz. ¿Le apetecería, por una noche, escuchar lo que suena cuando no suena nada?", reply: "Me ha dejado sin réplica, y eso a mi edad no es fácil. Probemos. Si me aburro, la culpa será suya.", end: "Doña Hortensia apagó la radio por primera vez en cincuenta años y escuchó el silencio del desierto. Dijo que era la mejor emisora.", mood: "love" },
-    ],
-    talk: [
-      "¿Qué afición antigua mantienes viva aunque la tecnología la haya vuelto casi innecesaria?",
-      "¿Qué conversación con un completo desconocido recuerdas con una nitidez sorprendente?",
-      "¿Por qué ciertas personas se comunican con más soltura con extraños que con su familia?",
-      "¿Qué tarea doméstica te parece un trámite, y cuál te parece casi una ceremonia?",
-      "¿Cuánto tiempo aguantarías sin auriculares, radio ni pantallas antes de echarlos de menos?",
-    ],
-    words: ["el éter", "agonizar", "dejar plantado", "los nudillos", "el trámite", "quedarse sin réplica"],
-  },
   alien: {
     title: "Protocolo de primer contacto",
     line: "Delante de una carpa azul con remiendos de cinta adhesiva, Simón, de nueve años, ha montado lo que él denomina «base de contacto»: tres linternas, un walkie-talkie sin pilas y un cartel escrito con rotulador que dice «BIENVENIDOS, NO TENEMOS ARMAS». Está convencido de que esta noche, entre tanto meteoro, algún extraterrestre aprovechará el tráfico para aterrizar. Su madre, Gabriela, lleva dieciocho horas despierta entre el viaje en bus, el montaje de la carpa y la cena, y apenas logra mantener los ojos abiertos.",
@@ -138,6 +116,28 @@ export default {
     ],
     words: ["la póliza", "vago", "dar cuerda", "pillar a alguien", "adornar", "con picardía"],
   },
+  apagon: {
+    title: "Nueve años de silencio por radio",
+    line: "A las once menos cinco, Rogelio aguarda en la caseta del generador con la mano sobre el interruptor que dejará el camping a oscuras. El gesto, sin embargo, servirá de poco: en el horizonte, los reflectores de la mina Santa Rita tiñen medio cielo de una luz amarillenta que borra las estrellas del este. La gerenta de la mina es Teresa, su exesposa. No se dirigen la palabra desde hace nueve años, desde que ella apostó por la ciudad y él por este desierto. Y ahora la única manera de apagar esos reflectores pasa por la radio, por ella y por un orgullo que ninguno de los dos ha sabido tragarse.",
+    dialogue: [
+      ["rogelio", "Ella se fue porque el desierto la ahogaba. Nueve años después, dirige una mina a cuatro mil metros. Si el destino tiene sentido del humor, es bastante cruel."],
+      ["teresa", "Rogelio. Nueve años sin dar señales de vida y me llamas a las once de la noche por el canal de emergencias. Espero que alguien se esté muriendo, porque si no, cuelgo."],
+    ],
+    ask: "Rogelio se queda mudo, con el micrófono temblándole en la mano, y te lo tiende como quien pasa una brasa. ¿Qué haces?",
+    options: [
+      { say: "Rogelio, nada de rodeos: pídeselo como un favor personal y reconoce que te cuesta. A veces la humildad desarma más que cualquier argumento.", reply: "Teresa… no te llamo por la mina. Te llamo porque te necesito, y me cuesta decirlo. ¿Apagarías los reflectores esta noche?", end: "Teresa apagó los reflectores de la mina, y Rogelio le dio las gracias después de nueve años. Ella tardó un rato en contestar «de nada».", mood: "love" },
+      { say: "Plantéale un pacto: una cuenta atrás compartida en la que tú apagas el camping y ella la mina en el mismo segundo. Así nadie le hace un favor a nadie.", reply: "Teresa, propongo una tregua técnica. A las once en punto, los dos a la vez. Sin vencedores. Diez, nueve…", end: "A las 23:00 todo el desierto quedó a oscuras, hasta la mina Santa Rita. Por la radio se oyó a Teresa contar el último segundo.", mood: "surprised" },
+      { say: "Quizá lo que echa de menos no sea la oscuridad, sino a ella. ¿Por qué no le propones mirar la lluvia juntos, cada uno desde su lado del desierto?", reply: "Teresa, ¿te acuerdas de las Perseidas del 98, en el techo de la camioneta? ¿Las miramos otra vez, aunque sea por radio y con un desierto en medio?", end: "Rogelio y Teresa miraron la lluvia por radio, cada uno desde su lado, como antes. Ninguno de los dos mencionó la luz de la mina.", mood: "smile" },
+    ],
+    talk: [
+      "¿Qué orgullo te ha impedido alguna vez pedir ayuda a alguien con quien tenías un conflicto?",
+      "¿Qué opinas de quienes mantienen una amistad cordial con su expareja durante años?",
+      "¿Qué estrategia usarías para pedirle un favor delicado a alguien que lleva años sin hablarte?",
+      "¿Qué decisión vital supuso una ruptura dolorosa con alguien a quien apreciabas?",
+      "¿Qué gesto pequeño puede romper un silencio de muchos años entre dos personas?",
+    ],
+    words: ["teñir", "tragarse el orgullo", "dar señales de vida", "la brasa", "andarse con rodeos", "la tregua"],
+  },
   cocina: {
     title: "Ochenta y ocho grados de frustración",
     line: "En la carpa cocina, el vapor empaña los faroles y huele a cebolla y a orégano. Doña Petrona cocina para sesenta y cuatro personas desde hace treinta años, y esta noche está a punto de perder la compostura. Mauro, su nuevo ayudante, llegó hace una semana de Montevideo y todavía no entiende por qué el agua hierve a borbotones y los fideos siguen duros como alambre. Nadie le explicó que a tres mil seiscientos metros el agua no supera los ochenta y ocho grados.",
@@ -184,28 +184,6 @@ export default {
     ],
     words: ["el queroseno", "arrodillarse", "parir", "la cría", "el novato", "anteponer"],
   },
-  duchas: {
-    title: "Cuatro minutos de agua caliente",
-    line: "En las duchas del camping, un barracón de chapa con espejos empañados, Fabián lleva diez minutos debatiéndose entre la dignidad y la higiene. Es ejecutivo de una empresa de Madrid y a las dos de la madrugada tiene una videollamada con unos inversores de Tokio que, según él, decidirá su carrera. Ha descubierto, demasiado tarde, que el agua caliente dura exactamente cuatro minutos y que la única zona con cobertura es el techo del barracón. Lleva la toalla al cuello y el portátil bajo el brazo.",
-    dialogue: [
-      ["fabian", "Tengo un máster en gestión de crisis y aquí estoy, intentando decidir si me presento ante Tokio con champú en el pelo."],
-      ["fabian", "Mi mujer me dijo: «Fabián, son unas vacaciones». Y yo: «Cariño, el capitalismo no tiene vacaciones». Ahora mismo me odio un poco."],
-    ],
-    ask: "Fabián te observa con el portátil en una mano y la toalla en la otra, como quien espera un dictamen. ¿Qué le sugieres?",
-    options: [
-      { say: "La cobertura está arriba, y Tokio no puede ver de cintura para abajo. Sube al techo, péinate con los dedos y sé el ejecutivo más audaz del hemisferio sur.", reply: "Una videollamada desde un tejado a cuatro mil metros. Si me ascienden, será por pura locura.", end: "Fabián hizo su videollamada con Tokio desde el techo de las duchas, en toalla, y los japoneses le preguntaron por el paisaje.", mood: "laugh" },
-      { say: "Dentro de diez años nadie recordará esa reunión, pero quizá tú sí recuerdes esta noche. ¿Y si mandas un correo cortés y aplazas la llamada?", reply: "Aplazarla… nunca lo he hecho. Pero si no lo hago hoy, ¿cuándo? Me sudan las manos solo de pensarlo.", end: "Fabián canceló la reunión con Tokio y subió al mirador con el pelo mojado y el teléfono apagado.", mood: "surprised" },
-      { say: "Lo que tienes delante vale más que cualquier gráfico. Conéctate, sí, pero gira la cámara hacia el cielo. Que Tokio vea por qué estás aquí.", reply: "Qué jugada. O me despiden por surrealista, o me convierto en una leyenda corporativa.", end: "Fabián les mostró la lluvia de estrellas a sus jefes de Tokio, y en la pantalla se oyeron aplausos.", mood: "smile" },
-    ],
-    talk: [
-      "¿Qué compromiso profesional has atendido en un lugar absolutamente inapropiado?",
-      "¿Cómo pondrías límites a un jefe que te escribe durante tus días libres?",
-      "¿Qué opinas de quienes presumen de no desconectar nunca del trabajo?",
-      "¿Qué detalle de tu aspecto te importa más antes de una reunión importante por videollamada?",
-      "¿Qué decisión profesional aplazaste y luego agradeciste haber aplazado?",
-    ],
-    words: ["el barracón de chapa", "debatirse", "la cobertura", "el portátil", "el dictamen", "aplazar"],
-  },
   hamacas: {
     title: "La noche que se debe",
     line: "En la zona de hamacas, colgadas entre dos algarrobos retorcidos, Rocío se balancea envuelta en un saco de dormir. Es madre de Martín, un niño de siete meses que no ha dormido una noche entera desde que nació. Su marido le regaló esta escapada con una sola instrucción: «Duerme. Por favor, duerme». Y ahora que por fin tiene ocho horas de silencio garantizado, no puede cerrar los ojos: el silencio le parece sospechoso y el teléfono no deja de iluminarse con mensajes que no llegan.",
@@ -216,7 +194,7 @@ export default {
     ],
     ask: "Rocío se tapa la cara con el saco de dormir y se ríe y casi llora a la vez. ¿Qué le propones?",
     options: [
-      { say: "No tiene nada de absurdo. Si ese llanto es tu canción de cuna, ponla bajito y déjate llevar. La lluvia seguirá ahí cuando despiertes.", reply: "Me da vergüenza, pero tienes razón. Mi canción de cuna es un niño gritando. Bienvenida a la maternidad.", end: "Rocío se durmió escuchando el llanto de su hijo grabado en el teléfono, con una sonrisa que no tenía hace meses.", mood: "sleepy" },
+      { say: "No tiene nada de absurdo. Si ese llanto es tu canción de cuna, ponla bajito y déjate llevar. La lluvia seguirá ahí cuando despiertes.", reply: "Me da vergüenza, pero tienes razón. Mi canción de cuna es un niño gritando. Así es la maternidad.", end: "Rocío se durmió escuchando el llanto de su hijo grabado en el teléfono, con una sonrisa que no tenía hace meses.", mood: "sleepy" },
       { say: "¿Y si esta noche, en lugar de dormir, haces lo que de verdad te apetece? Mirar el cielo también descansa, aunque de otra forma.", reply: "Un descanso distinto. No me lo había planteado así. Pero no me dejes dormirme a las tres, ¿eh?", end: "Rocío no durmió: miró el cielo entero y dijo que fue mejor que dormir.", mood: "smile" },
       { say: "Llama a casa. Que te aseguren que todo va bien. A veces la tranquilidad empieza por una voz conocida.", reply: "Lo hago. Si me contesta mi marido dormido, me reiré. Y si llora el niño, me volveré loca.", end: "Rocío llamó a casa, oyó roncar a su marido y al niño, y por fin se rio. Luego durmió seis horas seguidas.", mood: "laugh" },
     ],
@@ -263,7 +241,7 @@ export default {
     ask: "Joaquín se rasca la cabeza junto al motor y Doña Amalia se arremanga el abrigo. ¿Qué propones?",
     options: [
       { say: "En las películas, las máquinas viejas responden mejor a la fuerza que a la técnica. ¿Probamos un golpe certero en el engranaje, Doña Amalia?", reply: "Por fin alguien con sentido práctico. Apártate, Joaquín, que en mi época se arreglaba todo así.", end: "La cúpula se destrabó con una patada de Doña Amalia, que tiene setenta y siete años, y Joaquín no se lo contará a nadie.", mood: "laugh" },
-      { say: "Quizá esta noche no necesite el telescopio. En 1966 lo vio por primera vez a simple vista, ¿no? Deje que los niños usen el aparato y mírelo como entonces.", reply: "Tienes razón. Con diecisiete años no tenía más que mis ojos y un cuaderno. Aquellos ojos siguen aquí, un poco más cansados.", end: "Doña Amalia dejó el telescopio a los niños y miró su cometa sin aparatos, como en 1966.", mood: "love" },
+      { say: "Quizá esta noche no necesite el telescopio. En 1966 lo vio por primera vez a simple vista, ¿no? Deje que los niños usen el aparato y mírelo como entonces.", reply: "Tienes razón. Con diecisiete años no tenía más que mis ojos y un cuaderno. Aquellos ojos siguen aquí, un poco más cansados.", end: "Doña Amalia dejó el telescopio a los niños y miró la lluvia de su cometa sin aparatos, como en 1966.", mood: "love" },
       { say: "Lo que de verdad le preocupa es volver a dormirse, ¿no? Joaquín puede seguir con el motor; yo le traigo un café bien cargado.", reply: "Me ha leído el pensamiento. Que sea doble, que esta vez no pienso cerrar los ojos ni un segundo.", end: "Doña Amalia tomó un café doble para no dormirse esta vez, y se pasó la noche hablando sin parar.", mood: "smile" },
     ],
     talk: [
@@ -274,6 +252,50 @@ export default {
       "¿Cómo te aseguras de no estropear un momento que llevas mucho tiempo esperando?",
     ],
     words: ["crujir", "el ocular", "saldar la deuda", "trabarse", "desahuciado", "arremangarse"],
+  },
+  radio: {
+    title: "La voz que baja del espacio",
+    line: "Junto a su caravana, Doña Hortensia ajusta una antena casera con unas tenazas y la paciencia de quien lleva cincuenta años escuchando el éter. Tiene ochenta y un años y una lista de contactos que abarca cinco continentes y dos expediciones antárticas. Esta noche persigue el premio que le falta: a la una y cuarenta, la Estación Espacial Internacional cruzará el cielo del desierto durante seis minutos exactos, y ella tiene intención de hablar con alguien a bordo. El problema es que la batería de su equipo agoniza.",
+    dialogue: [
+      ["hortensia", "Cincuenta años sin fallar a una cita, y esta batería me va a dejar plantada justo en la más importante. Es de una ironía casi literaria."],
+      ["hortensia", "Mi difunto marido decía que yo hablaba más con desconocidos de Noruega que con él. No le faltaba razón, pero los noruegos escuchaban mejor."],
+    ],
+    ask: "Doña Hortensia golpea el aparato con los nudillos, como si se tratara de un televisor antiguo. ¿Qué le planteas?",
+    options: [
+      { say: "La batería de una camioneta podría alimentar su equipo seis minutos sin problema. Le busco a alguien con cables y ganas de pasar a la historia.", reply: "Usted tiene el don de convertir una catástrofe en un trámite. Vaya, vaya, que la estación no espera a nadie.", end: "Doña Hortensia habló seis minutos con la estación espacial, y el astronauta le preguntó por su receta de sopa de quinua.", mood: "surprised" },
+      { say: "Si la estación se le escapa, quizá no sea una derrota. Esta noche medio continente está mirando el mismo cielo; habrá alguien en tierra con quien compartirlo.", reply: "Tiene razón. Una voz en una cabina de camión puede ser tan extraordinaria como una en órbita. Ojalá alguien esté despierto.", end: "Doña Hortensia contactó a un camionero de Salta que también miraba el cielo, y hablaron de estrellas hasta las tres.", mood: "smile" },
+      { say: "Lleva cincuenta años escuchando el mundo a través de un altavoz. ¿Le apetecería, por una noche, escuchar lo que suena cuando no suena nada?", reply: "Me ha dejado sin réplica, y eso a mi edad no es fácil. Probemos. Si me aburro, la culpa será suya.", end: "Doña Hortensia apagó la radio por primera vez en cincuenta años y escuchó el silencio del desierto. Dijo que era la mejor emisora.", mood: "love" },
+    ],
+    talk: [
+      "¿Qué afición antigua mantienes viva aunque la tecnología la haya vuelto casi innecesaria?",
+      "¿Qué conversación con un completo desconocido recuerdas con una nitidez sorprendente?",
+      "¿Por qué ciertas personas se comunican con más soltura con extraños que con su familia?",
+      "¿Qué tarea doméstica te parece un trámite, y cuál te parece casi una ceremonia?",
+      "¿Cuánto tiempo aguantarías sin auriculares, radio ni pantallas antes de echarlos de menos?",
+    ],
+    words: ["el éter", "agonizar", "dejar plantado", "los nudillos", "el trámite", "quedarse sin réplica"],
+  },
+  duchas: {
+    title: "Cuatro minutos de agua caliente",
+    line: "En las duchas del camping, un barracón de chapa con espejos empañados, Fabián lleva diez minutos debatiéndose entre la dignidad y la higiene. Es ejecutivo de una empresa de Madrid y a las dos de la madrugada tiene una videollamada con unos inversores de Tokio que, según él, decidirá su carrera. Ha descubierto, demasiado tarde, que el agua caliente dura exactamente cuatro minutos y que la única zona con cobertura es el techo del barracón. Lleva la toalla al cuello y el portátil bajo el brazo.",
+    dialogue: [
+      ["fabian", "Tengo un máster en gestión de crisis y aquí estoy, intentando decidir si me presento ante Tokio con champú en el pelo."],
+      ["fabian", "Mi mujer me dijo: «Fabián, son unas vacaciones». Y yo: «Cariño, el capitalismo no tiene vacaciones». Ahora mismo me odio un poco."],
+    ],
+    ask: "Fabián te observa con el portátil en una mano y la toalla en la otra, como quien espera un dictamen. ¿Qué le sugieres?",
+    options: [
+      { say: "La cobertura está arriba, y Tokio no puede ver de cintura para abajo. Sube al techo, péinate con los dedos y sé el ejecutivo más audaz del hemisferio sur.", reply: "Una videollamada desde un tejado a cuatro mil metros. Si me ascienden, será por pura locura.", end: "Fabián hizo su videollamada con Tokio desde el techo de las duchas, en toalla, y los japoneses le preguntaron por el paisaje.", mood: "laugh" },
+      { say: "Dentro de diez años nadie recordará esa reunión, pero quizá tú sí recuerdes esta noche. ¿Y si mandas un correo cortés y aplazas la llamada?", reply: "Aplazarla… nunca lo he hecho. Pero si no lo hago hoy, ¿cuándo? Me sudan las manos solo de pensarlo.", end: "Fabián canceló la reunión con Tokio y subió al mirador con el pelo mojado y el teléfono apagado.", mood: "surprised" },
+      { say: "Lo que tienes delante vale más que cualquier gráfico. Conéctate, sí, pero gira la cámara hacia el cielo. Que Tokio vea por qué estás aquí.", reply: "Qué jugada. O me despiden por surrealista, o me convierto en una leyenda corporativa.", end: "Fabián les mostró la lluvia de estrellas a sus jefes de Tokio, y en la pantalla se oyeron aplausos.", mood: "smile" },
+    ],
+    talk: [
+      "¿Qué compromiso profesional has atendido en un lugar absolutamente inapropiado?",
+      "¿Cómo pondrías límites a un jefe que te escribe durante tus días libres?",
+      "¿Qué opinas de quienes presumen de no desconectar nunca del trabajo?",
+      "¿Qué detalle de tu aspecto te importa más antes de una reunión importante por videollamada?",
+      "¿Qué decisión profesional aplazaste y luego agradeciste haber aplazado?",
+    ],
+    words: ["el barracón de chapa", "debatirse", "la cobertura", "el portátil", "el dictamen", "aplazar"],
   },
   mina: {
     title: "Cuarenta y un años bajo tierra",
@@ -363,28 +385,6 @@ export default {
       "¿Cómo convencerías a alguien terco de que su idea está molestando a los demás?",
     ],
     words: ["zumbar", "tapar", "la resignación", "derribar", "con uñas y dientes", "el directo"],
-  },
-  apagon: {
-    title: "Nueve años de silencio por radio",
-    line: "A las once menos cinco, Rogelio aguarda en la caseta del generador con la mano sobre el interruptor que dejará el camping a oscuras. El gesto, sin embargo, servirá de poco: en el horizonte, los reflectores de la mina Santa Rita tiñen medio cielo de una luz amarillenta que borra las estrellas del este. La gerenta de la mina es Teresa, su exesposa. No se dirigen la palabra desde hace nueve años, desde que ella apostó por la ciudad y él por este desierto. Y ahora la única manera de apagar esos reflectores pasa por la radio, por ella y por un orgullo que ninguno de los dos ha sabido tragarse.",
-    dialogue: [
-      ["rogelio", "Ella se fue porque el desierto la ahogaba. Nueve años después, dirige una mina a cuatro mil metros. Si el destino tiene sentido del humor, es bastante cruel."],
-      ["teresa", "Rogelio. Nueve años sin dar señales de vida y me llamas a las once de la noche por el canal de emergencias. Espero que alguien se esté muriendo, porque si no, cuelgo."],
-    ],
-    ask: "Rogelio se queda mudo, con el micrófono temblándole en la mano, y te lo tiende como quien pasa una brasa. ¿Qué haces?",
-    options: [
-      { say: "Rogelio, nada de rodeos: pídeselo como un favor personal y reconoce que te cuesta. A veces la humildad desarma más que cualquier argumento.", reply: "Teresa… no te llamo por la mina. Te llamo porque te necesito, y me cuesta decirlo. ¿Apagarías los reflectores esta noche?", end: "Teresa apagó los reflectores de la mina, y Rogelio le dio las gracias después de nueve años. Ella tardó un rato en contestar «de nada».", mood: "love" },
-      { say: "Plantéale un pacto: una cuenta atrás compartida en la que tú apagas el camping y ella la mina en el mismo segundo. Así nadie le hace un favor a nadie.", reply: "Teresa, propongo una tregua técnica. A las once en punto, los dos a la vez. Sin vencedores. Diez, nueve…", end: "A las 23:00 todo el desierto quedó a oscuras, hasta la mina Santa Rita. Por la radio se oyó a Teresa contar el último segundo.", mood: "surprised" },
-      { say: "Quizá lo que echa de menos no sea la oscuridad, sino a ella. ¿Por qué no le propones mirar la lluvia juntos, cada uno desde su lado del desierto?", reply: "Teresa, ¿te acuerdas de las Perseidas del 98, en el techo de la camioneta? ¿Las miramos otra vez, aunque sea por radio y con un desierto en medio?", end: "Rogelio y Teresa miraron la lluvia por radio, cada uno desde su lado, como antes. Ninguno de los dos mencionó la luz de la mina.", mood: "smile" },
-    ],
-    talk: [
-      "¿Qué orgullo te ha impedido alguna vez pedir ayuda a alguien con quien tenías un conflicto?",
-      "¿Qué opinas de quienes mantienen una amistad cordial con su expareja durante años?",
-      "¿Qué estrategia usarías para pedirle un favor delicado a alguien que lleva años sin hablarte?",
-      "¿Qué decisión vital supuso una ruptura dolorosa con alguien a quien apreciabas?",
-      "¿Qué gesto pequeño puede romper un silencio de muchos años entre dos personas?",
-    ],
-    words: ["teñir", "tragarse el orgullo", "dar señales de vida", "la brasa", "andarse con rodeos", "la tregua"],
   },
   mirador: {
     title: "Las tres y doce",

@@ -348,117 +348,6 @@
    ]
   },
   {
-   "id": "radio",
-   "title": "Once años de intentos",
-   "place": "Las caravanas",
-   "context": "Dentro de la caravana de Doña Hortensia hay radios, cables y fotos viejas. Celeste mira las fotos.",
-   "speakers": [
-    {
-     "name": "Hortensia",
-     "country": "Perú",
-     "voice": "es-PE-CamilaNeural"
-    },
-    {
-     "name": "Celeste",
-     "country": "Chile",
-     "voice": "es-CL-CatalinaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 1,
-     "text": "¿Quién es este señor de la foto, Doña Hortensia?"
-    },
-    {
-     "s": 0,
-     "text": "Es mi marido, Eusebio. Él me regaló mi primera radio en 1976. Hablábamos con gente de todo el mundo. Una vez contactamos a un barco en el Polo Sur."
-    },
-    {
-     "s": 1,
-     "text": "¡Qué aventura!"
-    },
-    {
-     "s": 0,
-     "text": "Eusebio siempre quiso hablar con un astronauta. Lo intentó muchos años y nunca lo consiguió. Murió hace once años, y desde entonces lo intento yo."
-    },
-    {
-     "s": 1,
-     "text": "¿Y esta noche?"
-    },
-    {
-     "s": 0,
-     "text": "Esta noche la estación pasa a la una y cuarenta, muy alta, sin nubes. Es la mejor noche en once años."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Quién le regaló a Hortensia su primera radio?",
-     "options": [
-      "Su padre",
-      "Su marido",
-      "Un astronauta"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Con quién contactaron una vez?",
-     "options": [
-      "Con la estación espacial",
-      "Con un barco en el Polo Sur",
-      "Con un avión que cruzaba el mar"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Desde cuándo lo intenta Hortensia?",
-     "options": [
-      "Desde 1976, cuando tenía la radio nueva",
-      "Desde hace un año",
-      "Desde que murió Eusebio"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Por qué esta noche es especial para la radio?",
-     "options": [
-      "La estación pasa muy alta y sin nubes",
-      "Porque hay luna llena",
-      "Porque Rogelio apaga el generador"
-     ],
-     "answer": 0
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué sueño de otra persona te gustaría cumplir?",
-     "model": "Me gustaría cumplir el sueño de mi padre: ver el Mundial."
-    },
-    {
-     "q": "¿Qué regalo de hace muchos años todavía usas?",
-     "model": "Todavía uso un reloj que me regalaron a los quince."
-    },
-    {
-     "q": "¿Qué aventura de juventud cuenta tu familia en las cenas?",
-     "model": "Mis padres cuentan cómo se perdieron en Bolivia."
-    }
-   ],
-   "gaps": "Lo [intentó] muchos años y nunca lo [consiguió]. [Murió] hace once años, y desde [entonces] lo intento yo.",
-   "glossary": [
-    {
-     "word": "contactamos",
-     "meaning": "hablamos por primera vez"
-    },
-    {
-     "word": "consiguió",
-     "meaning": "logró, pudo hacerlo"
-    },
-    {
-     "word": "desde entonces",
-     "meaning": "a partir de ese momento"
-    }
-   ]
-  },
-  {
    "id": "alien",
    "title": "Escuelas en otros planetas",
    "place": "La carpa azul",
@@ -685,6 +574,117 @@
     {
      "word": "daba dinero",
      "meaning": "permitía ganar dinero"
+    }
+   ]
+  },
+  {
+   "id": "apagon",
+   "title": "Nueve años sin llamar",
+   "place": "La caseta del generador",
+   "context": "Son las once menos cinco. Rogelio espera en la caseta con la mano en el interruptor. Teresa llama por la radio.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rogelio, ¿estás ahí? Ya hablé con los ingenieros. A las once apagamos los reflectores durante cuatro horas."
+    },
+    {
+     "s": 0,
+     "text": "Gracias, Teresa. De verdad. Sé que no fue fácil."
+    },
+    {
+     "s": 1,
+     "text": "No fue fácil, no. El jefe de turno casi se desmaya. ¿Te acuerdas de 1997? Vinimos a este mismo lugar a ver un cometa, antes de construir el camping."
+    },
+    {
+     "s": 0,
+     "text": "Me acuerdo. Tú dijiste que algún día ibas a apagar todas las luces del desierto."
+    },
+    {
+     "s": 1,
+     "text": "Y aquí estoy, apagando las luces de mi propia mina. Cinco, cuatro, tres…"
+    },
+    {
+     "s": 0,
+     "text": "Dos, uno."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Durante cuánto tiempo apagan los reflectores?",
+     "options": [
+      "Toda la noche",
+      "Cuatro horas",
+      "Una hora"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Quién casi se desmaya?",
+     "options": [
+      "El jefe de turno",
+      "Rogelio, del susto",
+      "Un ingeniero nuevo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hicieron Rogelio y Teresa en 1997?",
+     "options": [
+      "Se casaron en la mina",
+      "Construyeron el camping",
+      "Vieron un cometa en este lugar"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué había dicho Teresa en 1997?",
+     "options": [
+      "Que nunca trabajaría en una mina",
+      "Que algún día iba a apagar las luces del desierto",
+      "Que quería vivir en la ciudad"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué frase que dijiste de joven se hizo realidad?",
+     "model": "Dije que viviría en el extranjero, y así fue."
+    },
+    {
+     "q": "¿Con qué persona de tu pasado te gustaría hablar una vez más?",
+     "model": "Me gustaría hablar con mi maestra de primaria."
+    },
+    {
+     "q": "¿Qué lugar de tu vida tiene un significado especial para dos personas?",
+     "model": "El parque donde conocí a mi pareja."
+    }
+   ],
+   "gaps": "Y aquí estoy, [apagando] las [luces] de mi [propia] [mina].",
+   "glossary": [
+    {
+     "word": "ingenieros",
+     "meaning": "personas que diseñan y controlan máquinas"
+    },
+    {
+     "word": "se desmaya",
+     "meaning": "pierde el conocimiento"
+    },
+    {
+     "word": "propia",
+     "meaning": "que es de uno mismo"
     }
    ]
   },
@@ -919,121 +919,6 @@
     {
      "word": "se queman",
      "meaning": "arden con fuego"
-    }
-   ]
-  },
-  {
-   "id": "duchas",
-   "title": "Señal en el techo",
-   "place": "Las duchas",
-   "context": "Fabián está sentado en el techo de las duchas, en toalla, con el portátil. Rogelio le sube un abrigo.",
-   "speakers": [
-    {
-     "name": "Fabián",
-     "country": "España",
-     "voice": "es-ES-AlvaroNeural"
-    },
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 1,
-     "text": "Señor Fabián, póngase esto. Hace dos grados."
-    },
-    {
-     "s": 0,
-     "text": "Gracias, Don Rogelio. Mi empresa vende paneles solares en Japón. La reunión es muy importante. Si sale bien, me ascienden."
-    },
-    {
-     "s": 1,
-     "text": "¿Y por qué vino a un camping sin señal la noche de la reunión?"
-    },
-    {
-     "s": 0,
-     "text": "Mi mujer reservó el viaje hace un año. Me dijo: «Vas a venir aunque tengas que hablar desde un techo». Yo pensé que era una broma."
-    },
-    {
-     "s": 1,
-     "text": "Su mujer es muy lista."
-    },
-    {
-     "s": 0,
-     "text": "Demasiado. ¿Cree que los japoneses van a notar que estoy en toalla?"
-    },
-    {
-     "s": 1,
-     "text": "Si no se levanta, no."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Qué temperatura hace?",
-     "options": [
-      "Dos grados",
-      "Doce grados",
-      "Cero grados"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué vende la empresa de Fabián?",
-     "options": [
-      "Paneles solares",
-      "Teléfonos",
-      "Viajes a Japón"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Quién reservó el viaje?",
-     "options": [
-      "Fabián",
-      "Su jefe",
-      "Su mujer"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué le aconseja Rogelio con humor?",
-     "options": [
-      "Que apague la cámara",
-      "Que vuelva a la ducha",
-      "Que no se levante"
-     ],
-     "answer": 2
-    }
-   ],
-   "open": [
-    {
-     "q": "¿En qué lugar raro trabajaste o estudiaste alguna vez?",
-     "model": "Estudié en una lavandería esperando la ropa."
-    },
-    {
-     "q": "¿Qué broma de un familiar se hizo realidad?",
-     "model": "Mi padre dijo que me casaría en la playa, y así fue."
-    },
-    {
-     "q": "¿Qué viaje reservaste con mucho tiempo de anticipación?",
-     "model": "Reservé un viaje a México con ocho meses."
-    }
-   ],
-   "gaps": "Me dijo: «Vas a [venir] aunque tengas que [hablar] desde un [techo]». Yo pensé que era una [broma].",
-   "glossary": [
-    {
-     "word": "reservó",
-     "meaning": "pidió un lugar con tiempo"
-    },
-    {
-     "word": "ascienden",
-     "meaning": "dan un puesto más alto"
-    },
-    {
-     "word": "lista",
-     "meaning": "inteligente"
     }
    ]
   },
@@ -1371,6 +1256,232 @@
     {
      "word": "intención",
      "meaning": "lo que quieres hacer"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Once años de intentos",
+   "place": "Las caravanas",
+   "context": "Dentro de la caravana de Doña Hortensia hay radios, cables y fotos viejas. Celeste mira las fotos.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "¿Quién es este señor de la foto, Doña Hortensia?"
+    },
+    {
+     "s": 0,
+     "text": "Es mi marido, Eusebio. Él me regaló mi primera radio en 1976. Hablábamos con gente de todo el mundo. Una vez contactamos a un barco en el Polo Sur."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué aventura!"
+    },
+    {
+     "s": 0,
+     "text": "Eusebio siempre quiso hablar con un astronauta. Lo intentó muchos años y nunca lo consiguió. Murió hace once años, y desde entonces lo intento yo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y esta noche?"
+    },
+    {
+     "s": 0,
+     "text": "Esta noche la estación pasa a la una y cuarenta, muy alta, sin nubes. Es la mejor noche en once años."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién le regaló a Hortensia su primera radio?",
+     "options": [
+      "Su padre",
+      "Su marido",
+      "Un astronauta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Con quién contactaron una vez?",
+     "options": [
+      "Con la estación espacial",
+      "Con un barco en el Polo Sur",
+      "Con un avión que cruzaba el mar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Desde cuándo lo intenta Hortensia?",
+     "options": [
+      "Desde 1976, cuando tenía la radio nueva",
+      "Desde hace un año",
+      "Desde que murió Eusebio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué esta noche es especial para la radio?",
+     "options": [
+      "La estación pasa muy alta y sin nubes",
+      "Porque hay luna llena",
+      "Porque Rogelio apaga el generador"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué sueño de otra persona te gustaría cumplir?",
+     "model": "Me gustaría cumplir el sueño de mi padre: ver el Mundial."
+    },
+    {
+     "q": "¿Qué regalo de hace muchos años todavía usas?",
+     "model": "Todavía uso un reloj que me regalaron a los quince."
+    },
+    {
+     "q": "¿Qué aventura de juventud cuenta tu familia en las cenas?",
+     "model": "Mis padres cuentan cómo se perdieron en Bolivia."
+    }
+   ],
+   "gaps": "Lo [intentó] muchos años y nunca lo [consiguió]. [Murió] hace once años, y desde [entonces] lo intento yo.",
+   "glossary": [
+    {
+     "word": "contactamos",
+     "meaning": "hablamos por primera vez"
+    },
+    {
+     "word": "consiguió",
+     "meaning": "logró, pudo hacerlo"
+    },
+    {
+     "word": "desde entonces",
+     "meaning": "a partir de ese momento"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Señal en el techo",
+   "place": "Las duchas",
+   "context": "Fabián está sentado en el techo de las duchas, en toalla, con el portátil. Rogelio le sube un abrigo.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Señor Fabián, póngase esto. Hace dos grados."
+    },
+    {
+     "s": 0,
+     "text": "Gracias, Don Rogelio. Mi empresa vende paneles solares en Japón. La reunión es muy importante. Si sale bien, me ascienden."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué vino a un camping sin señal la noche de la reunión?"
+    },
+    {
+     "s": 0,
+     "text": "Mi mujer reservó el viaje hace un año. Me dijo: «Vas a venir aunque tengas que hablar desde un techo». Yo pensé que era una broma."
+    },
+    {
+     "s": 1,
+     "text": "Su mujer es muy lista."
+    },
+    {
+     "s": 0,
+     "text": "Demasiado. ¿Cree que los japoneses van a notar que estoy en toalla?"
+    },
+    {
+     "s": 1,
+     "text": "Si no se levanta, no."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué temperatura hace?",
+     "options": [
+      "Dos grados",
+      "Doce grados",
+      "Cero grados"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué vende la empresa de Fabián?",
+     "options": [
+      "Paneles solares",
+      "Teléfonos",
+      "Viajes a Japón"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Quién reservó el viaje?",
+     "options": [
+      "Fabián",
+      "Su jefe",
+      "Su mujer"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le aconseja Rogelio con humor?",
+     "options": [
+      "Que apague la cámara",
+      "Que vuelva a la ducha",
+      "Que no se levante"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué lugar raro trabajaste o estudiaste alguna vez?",
+     "model": "Estudié en una lavandería esperando la ropa."
+    },
+    {
+     "q": "¿Qué broma de un familiar se hizo realidad?",
+     "model": "Mi padre dijo que me casaría en la playa, y así fue."
+    },
+    {
+     "q": "¿Qué viaje reservaste con mucho tiempo de anticipación?",
+     "model": "Reservé un viaje a México con ocho meses."
+    }
+   ],
+   "gaps": "Me dijo: «Vas a [venir] aunque tengas que [hablar] desde un [techo]». Yo pensé que era una [broma].",
+   "glossary": [
+    {
+     "word": "reservó",
+     "meaning": "pidió un lugar con tiempo"
+    },
+    {
+     "word": "ascienden",
+     "meaning": "dan un puesto más alto"
+    },
+    {
+     "word": "lista",
+     "meaning": "inteligente"
     }
    ]
   },
@@ -1819,117 +1930,6 @@
     {
      "word": "seguidores",
      "meaning": "personas que te siguen en internet"
-    }
-   ]
-  },
-  {
-   "id": "apagon",
-   "title": "Nueve años sin llamar",
-   "place": "La caseta del generador",
-   "context": "Son las once menos cinco. Rogelio espera en la caseta con la mano en el interruptor. Teresa llama por la radio.",
-   "speakers": [
-    {
-     "name": "Rogelio",
-     "country": "Bolivia",
-     "voice": "es-BO-MarceloNeural"
-    },
-    {
-     "name": "Teresa",
-     "country": "El Salvador",
-     "voice": "es-SV-LorenaNeural"
-    }
-   ],
-   "lines": [
-    {
-     "s": 1,
-     "text": "Rogelio, ¿estás ahí? Ya hablé con los ingenieros. A las once apagamos los reflectores durante cuatro horas."
-    },
-    {
-     "s": 0,
-     "text": "Gracias, Teresa. De verdad. Sé que no fue fácil."
-    },
-    {
-     "s": 1,
-     "text": "No fue fácil, no. El jefe de turno casi se desmaya. ¿Te acuerdas de 1997? Vinimos a este mismo lugar a ver un cometa, antes de construir el camping."
-    },
-    {
-     "s": 0,
-     "text": "Me acuerdo. Tú dijiste que algún día ibas a apagar todas las luces del desierto."
-    },
-    {
-     "s": 1,
-     "text": "Y aquí estoy, apagando las luces de mi propia mina. Cinco, cuatro, tres…"
-    },
-    {
-     "s": 0,
-     "text": "Dos, uno."
-    }
-   ],
-   "choice": [
-    {
-     "q": "¿Durante cuánto tiempo apagan los reflectores?",
-     "options": [
-      "Toda la noche",
-      "Cuatro horas",
-      "Una hora"
-     ],
-     "answer": 1
-    },
-    {
-     "q": "¿Quién casi se desmaya?",
-     "options": [
-      "El jefe de turno",
-      "Rogelio, del susto",
-      "Un ingeniero nuevo"
-     ],
-     "answer": 0
-    },
-    {
-     "q": "¿Qué hicieron Rogelio y Teresa en 1997?",
-     "options": [
-      "Se casaron en la mina",
-      "Construyeron el camping",
-      "Vieron un cometa en este lugar"
-     ],
-     "answer": 2
-    },
-    {
-     "q": "¿Qué había dicho Teresa en 1997?",
-     "options": [
-      "Que nunca trabajaría en una mina",
-      "Que algún día iba a apagar las luces del desierto",
-      "Que quería vivir en la ciudad"
-     ],
-     "answer": 1
-    }
-   ],
-   "open": [
-    {
-     "q": "¿Qué frase que dijiste de joven se hizo realidad?",
-     "model": "Dije que viviría en el extranjero, y así fue."
-    },
-    {
-     "q": "¿Con qué persona de tu pasado te gustaría hablar una vez más?",
-     "model": "Me gustaría hablar con mi maestra de primaria."
-    },
-    {
-     "q": "¿Qué lugar de tu vida tiene un significado especial para dos personas?",
-     "model": "El parque donde conocí a mi pareja."
-    }
-   ],
-   "gaps": "Y aquí estoy, [apagando] las [luces] de mi [propia] [mina].",
-   "glossary": [
-    {
-     "word": "ingenieros",
-     "meaning": "personas que diseñan y controlan máquinas"
-    },
-    {
-     "word": "se desmaya",
-     "meaning": "pierde el conocimiento"
-    },
-    {
-     "word": "propia",
-     "meaning": "que es de uno mismo"
     }
    ]
   },

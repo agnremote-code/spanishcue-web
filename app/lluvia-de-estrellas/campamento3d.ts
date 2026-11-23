@@ -7,6 +7,7 @@
 // ground, wood and stone are photographic surfaces (app/mundo-real) and the
 // people get real bodies (enableRealPeople, called by World3D before this runs).
 import * as THREE from 'three';
+import { LIGHTS_OUT } from './story.mjs';
 import { batchStatic, canvas, random } from '../noche-abierta/build3d';
 import { addBlobShadow, animatePerson, createPerson, setMood, setPose, type Look, type Person } from '../noche-abierta/people3d';
 import { fitSurfaces, surface } from '../mundo-real/real3d';
@@ -36,6 +37,8 @@ export type Campamento = {
 // People currently speaking in an open scene.
 export const talking = new WeakSet<Person>();
 
+/** Height of the hammock cloth at its lowest point: the person in it lies here. */
+export const HAMMOCK_SEAT = 0.5;
 const std = (color: string, roughness = 0.85, metalness = 0, extra: THREE.MeshStandardMaterialParameters = {}) => new THREE.MeshStandardMaterial({ color, roughness, metalness, ...extra });
 const B = (w: number, h: number, d: number) => new THREE.BoxGeometry(w, h, d);
 const C = (rt: number, rb: number, h: number, s = 14) => new THREE.CylinderGeometry(rt, rb, h, s);
@@ -363,7 +366,7 @@ export function buildCampamento(scene: THREE.Scene, opts: { low: boolean; shadow
   }
   const roof = add(statics, B(DOME.x1 - DOME.x0 + 0.3, 0.25, DOME.z1 - DOME.z0 + 0.3), stone, (DOME.x0 + DOME.x1) / 2, 3.6, (DOME.z0 + DOME.z1) / 2); roof.castShadow = true;
   const ceiling = add(statics, B(DOME.x1 - DOME.x0 - 0.2, 0.02, DOME.z1 - DOME.z0 - 0.2), std('#2a2a30', 0.9), (DOME.x0 + DOME.x1) / 2, 3.46, (DOME.z0 + DOME.z1) / 2); ceiling.castShadow = false;
-  const domeMat = std('#e8e8ec', 0.35, 0.4);
+  const domeMat = std('#d9dade', 0.85, 0.05); // painted sheet metal: matte, so the env map does not turn it into a chrome ball
   const cupola = add(world, new THREE.SphereGeometry(5.6, 32, 16, 0, Math.PI * 2, 0, Math.PI / 2), domeMat, (DOME.x0 + DOME.x1) / 2, 3.72, (DOME.z0 + DOME.z1) / 2);
   keep.push(cupola);
   const slit = add(world, B(1.1, 0.05, 5.8), dark, (DOME.x0 + DOME.x1) / 2, 7.2, (DOME.z0 + DOME.z1) / 2 + 1.6); slit.rotation.x = -0.55; keep.push(slit);
@@ -483,8 +486,24 @@ export function buildCampamento(scene: THREE.Scene, opts: { low: boolean; shadow
         break;
       }
       case 'hammock': {
-        const curve = new THREE.QuadraticBezierCurve3(new THREE.Vector3(-w / 2 + 0.3, 1.25, 0), new THREE.Vector3(0, 0.2, 0), new THREE.Vector3(w / 2 - 0.3, 1.25, 0));
-        const tube = add(g, new THREE.TubeGeometry(curve, 20, 0.34, 6, false), std('#c84a6a', 0.95, 0, { side: THREE.DoubleSide }), 0, 0, 0); tube.scale.z = 0.9;
+        // Open fabric, not a closed tube: a thin cloth that sags to HAMMOCK_SEAT in
+        // the middle and cups up at its long edges, hung from the trees by ropes.
+        // Whoever lies in it lies on top of it (layout: y = HAMMOCK_SEAT).
+        const len = w - 1.2, half = len / 2, wide = 0.95;
+        const cloth = new THREE.PlaneGeometry(len, wide, 28, 8); cloth.rotateX(-Math.PI / 2);
+        const pos = cloth.attributes.position;
+        for (let i = 0; i < pos.count; i++) {
+          const u = pos.getX(i) / half, v = pos.getZ(i) / (wide / 2);
+          pos.setY(i, HAMMOCK_SEAT + (1.25 - HAMMOCK_SEAT) * u * u + 0.22 * v * v * (1 - 0.6 * u * u));
+        }
+        cloth.computeVertexNormals();
+        add(g, cloth, std('#c84a6a', 0.95, 0, { side: THREE.DoubleSide }), 0, 0, 0);
+        const rope = std('#d8c8a0', 0.9);
+        for (const sx of [-1, 1]) for (const sz of [-1, 1]) {
+          const a = new THREE.Vector3(sx * half, 1.25 + 0.22, sz * wide / 2), b = new THREE.Vector3(sx * (w / 2 + 0.4), 1.7, 0);
+          const r = add(g, C(0.015, 0.015, a.distanceTo(b), 4), rope, (a.x + b.x) / 2, (a.y + b.y) / 2, (a.z + b.z) / 2);
+          r.quaternion.setFromUnitVectors(new THREE.Vector3(0, 1, 0), b.clone().sub(a).normalize()); r.castShadow = false;
+        }
         break;
       }
       case 'rock': { const r = add(g, new THREE.DodecahedronGeometry(0.55), rockMat, 0, 0.22, 0); r.scale.set(w / 1.1, 0.6, d / 1.1); break; }
@@ -682,7 +701,7 @@ export function buildCampamento(scene: THREE.Scene, opts: { low: boolean; shadow
     (dome.material.uniforms.uPeak as { value: number }).value = k > 1 ? 1 : 0;
     (stars.material.uniforms.uFade as { value: number }).value = 0.55 + Math.min(1, k) * 0.45;
     galaxy.material.opacity = (0.35 + Math.min(1, k) * 0.6) * (opts.low ? 0.8 : 1);
-    const lightsOut = k >= 0.34; // eleven o'clock
+    const lightsOut = k >= LIGHTS_OUT - 1e-6; // only once Rogelio has switched the generator off (skyPhase)
     for (const l of lamps) l.light.intensity = l.out && lightsOut ? 0 : l.base;
     lampMat.emissiveIntensity = lightsOut ? 0.25 : 1.8;
     glassWarm.emissiveIntensity = lightsOut ? 0.15 : 0.9;

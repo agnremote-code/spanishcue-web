@@ -7,6 +7,8 @@
 // glides when you walk into another sector. While a listening plays the
 // whole bed ducks so the voices stay clear.
 
+import { LIGHTS_OUT } from './story.mjs';
+
 type Mix = { wind: number; murmur: number; fire: number; hum: number; music: number; pans: number; llama: number; drip: number };
 const SILENT: Mix = { wind: 0, murmur: 0, fire: 0, hum: 0, music: 0, pans: 0, llama: 0, drip: 0 };
 const m = (part: Partial<Mix>): Mix => ({ ...SILENT, ...part });
@@ -119,7 +121,7 @@ export function createAmbience(): Ambience {
     const quiet = sky > 1 ? 0.25 : 1 - Math.min(1, sky) * 0.5;
     layers.wind.gain.setTargetAtTime(mix.wind * 0.5, t, 1.2);
     layers.murmur.gain.setTargetAtTime(mix.murmur * 0.25 * quiet, t, 1.2);
-    layers.hum.gain.setTargetAtTime(mix.hum * 0.08 * (sky >= 0.34 ? 0.2 : 1), t, 1.2);
+    layers.hum.gain.setTargetAtTime(mix.hum * 0.08 * (sky >= LIGHTS_OUT - 1e-6 ? 0.2 : 1), t, 1.2);
     layers.music.gain.setTargetAtTime(mix.music * 0.35, t, 1.2);
   }
   function tick() {
