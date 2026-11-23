@@ -178,12 +178,15 @@
 
 @media (max-width: 720px) { .op-mapbox:not(.is-big) .op-map { width: 60px; height: 128px; } }
 
-/* Phones: the HUD ends near 223px at 390×844, so the ledger and the map start below it,
-   and the «E» prompt sits above the joystick and the touch buttons, never on them. */
+/* Phones: the HUD and its button row (Nivel included) end near 262px at 390×844, so the
+   ledger, the map and the listening badge start below it, and the «E» prompt sits above
+   the joystick and the touch buttons, never on them. In Escucha the badge takes the
+   ledger's place (the ledger only shows in Conversación). */
 @media (max-width: 760px) {
-  .op-mapbox:not(.is-big) { top: 236px; bottom: auto; }
-  .op-notes { top: 236px; bottom: auto; left: 12px; width: min(220px, calc(100% - 100px)); max-height: 24vh; }
+  .op-mapbox:not(.is-big) { top: 276px; bottom: auto; }
+  .op-notes { top: 276px; bottom: auto; left: 12px; width: min(220px, calc(100% - 100px)); max-height: 24vh; }
   .op-prompt { bottom: 224px; }
+  body:has(.op-hud) .e3-badge.e3-badge { top: 276px; bottom: auto; left: 12px; transform: none; box-sizing: border-box; max-width: calc(100% - 96px); }
 }
 
 /* The final card: how many things went home, said as a sentence. */
