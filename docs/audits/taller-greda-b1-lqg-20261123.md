@@ -8,7 +8,7 @@
   - `docs/board/content/taller-greda-b1-conversacion.md`: Conversación scenes, 8 circles, teacher route, cultural check.
   - `app/escucha-3d/games.mjs`: `taller` registered (single level B1, `ownListening`).
   - `scripts/check-escucha-3d-provable.mjs`: `'taller'` added to `PROVABLE_KEYS`.
-- **Nothing is built, voiced or shipped.** No audio exists for this world, and no STT run has been made.
+- **Nothing is built or shipped.** The audio workflow (`escucha-3d-audio.yml`, triggered by the push) generated the 8 clips on this branch in commit `b9c8c661` (github-actions[bot]); nobody has listened to them. No STT run has been made.
 
 ## Machine checks (author's run on this branch)
 
@@ -20,9 +20,9 @@
 | `python3 scripts/check-escucha-3d-provable-stt.py taller b1 --plan` | exit 0, `"missing": []`. Word seed on `greda` (gap-delete «agua», gap-replace «plástico» → «ventana», repeat «este audio» on line 1, delete «llamó» on line 2, article «la» → «las» on line 3, first word «Después» → «Ya» on line 5). Speaker seed on `mostrador` line 2 (Valentina's line read by Gonzalo's engine) |
 | `node --test tests/escucha-3d-provable-gate.test.mjs` | 18/18 pass |
 | `npm run test:language` (G3) | 43/43 pass; neutral-Spanish guard «0 unresolved findings across 2315 source files»; ENGLISH COPY UNCHANGED |
-| `node --test tests/escucha-3d.test.mjs` | **1 fail**: «every listening has its audio once the generator has run» (`taller/b1-mostrador` not in the manifest). Expected until the audio workflow runs |
+| `node --test tests/escucha-3d.test.mjs` | 5/5 pass after the bot's audio commit `b9c8c661` (before it, the audio test failed: `taller/b1-mostrador` was not in the manifest) |
 | `node --test tests/resource-3d-worlds.test.mjs` | **1 fail**: «every 3D world in the listening registry has exactly one public resource page». Expected until the world has a catalog lesson |
-| Same two test files with the registration commit left out | 31/31 pass (with the provable-gate test) |
+| The three test files above together, at the branch tip | 30 pass, 1 fail (the resource-page test only). With the registration left out (checked before the audio existed): 31/31 |
 | The other world tests that import `games.mjs` (feria, paises, madrid, hospital, boda, consorcio, vuelo, más allá, crucero, hr, reality, papel, tren) | all pass |
 
 ## G1 · objectives (author: PASS, machine part VERIFIED by grep)
@@ -155,7 +155,7 @@ Attestation question: does the correct option differ from **both** distractors b
 3. **Same-gender speaker discrimination is unproven**, so the content avoids it by construction. **Cross-gender discrimination with Emma vs Florian is unmeasured** (BOARD-DECISION-006 §2.2). The one who-said-what item (torno Q4) is not gated until this level's speaker seed is VALID.
 4. **Proper names in the audio** (Valentina, Marina, Gonzalo, Paola, Emilio, Andrés, Roberto, Bogotá, «Taller La Greda») are not items, but an STT run may spell them differently («Yaneth»/«Janet» precedent). They would be outside-item mismatches under item 2.
 5. **Numbers in the audio** («cuatro», «seis», «diez», «doce») are spoken as words and carry no item.
-6. **No audio exists.** `scripts/generate-escucha-3d-audio.py` has not run for `taller`. The manifest test fails until it does.
+6. **Audio exists but is unheard.** The workflow generated the 8 clips (53.5–73.2 s; Emma/Florian with per-clip pitch, no accent claimed) in `b9c8c661` from the same lines as the final content (the manifest hash covers speakers and lines only; the later commit changed two answer options, not lines). No person and no STT check has listened to them.
 7. **Script defect found:** `node scripts/check-escucha-3d.mjs <game> b1` (lower-case level) skips every file and prints OK. Not fixed here; reported for a separate reviewed change.
 8. **Registration needs a built world:** `tests/resource-3d-worlds.test.mjs` needs a catalog lesson for `taller`. The registration is a separate commit, so it can be dropped or kept for Sofia's build.
 9. **Cultural claims marked HYPOTHESIS** in the conversation file §10: the local use of «greda», lead-free glaze practice, the advance/balance convention and «sumercé». Ráquira as a Boyacá pottery centre is VERIFIED from a Ministerio de Cultura publication (web, this run), but the town stays unnamed.
@@ -164,7 +164,7 @@ Attestation question: does the correct option differ from **both** distractors b
 ## §9.2 status: **NOT CLOSED**
 - §9.2 stays **human-only** for «El taller de la greda» B1. None of the three conditions in concept §6.6 / BOARD-DECISION-006 §3.1 holds yet:
   - (a) item types: satisfied by authoring, pending the CPIO and G4 attestations above;
-  - (b) a VALID seeded run on this world's own clips, same run and same SHA: **does not exist**. No audio has been generated, and no STT workflow for the provable checker exists on main (`.github/workflows/` at `59475b40` has only `escucha-3d-audio.yml`). The `--plan` output above is a plan, not a run;
+  - (b) a VALID seeded run on this world's own clips, same run and same SHA: **does not exist**. The clips exist, but no STT workflow for the provable checker exists on main (`.github/workflows/` at `59475b40` has only `escucha-3d-audio.yml`). The `--plan` output above is a plan, not a run;
   - (c) every real clip PASSES: **no run exists**.
 - So a person must listen to all 8 clips before release (BOARD-DECISION-003 §4: a person's defect report always overrides a PASS).
 
