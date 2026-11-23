@@ -147,6 +147,16 @@ export function inviteTexts(INVITADOS) {
 export const EITHER_OR = /^¿[^?]*\s(?:o|u)\s[^?]*\?$/u;
 const bag = (t) => new Set(String(t).toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g, '').match(/\p{L}{3,}/gu) ?? []);
 export function jaccard(a, b) { const x = bag(a), y = bag(b); const inter = [...x].filter((w) => y.has(w)).length; return inter / (new Set([...x, ...y]).size || 1); }
+// C2 also tells every scene in its own voice: the whole text of a scene (title, narration, dialogue,
+// question, answers, replies and consequences) shares less than 30% of its words with C1.
+export const sceneText = (s) => [s?.title, s?.line, ...(s?.dialogue ?? []).map((d) => d[1]), s?.ask, ...(s?.options ?? []).flatMap((o) => [o.say, o.reply, o.end])].join(' ');
+export function c1c2SceneOverlap(c1, c2) {
+  const out = [];
+  for (const id of Object.keys(c2 ?? {})) { const j = jaccard(sceneText(c1?.[id]), sceneText(c2[id])); if (j >= 0.3) out.push(`C2 ${id}: the scene shares ${Math.round(j * 100)}% of its words with C1 (max 30%); tell it with another voice and other tasks`); }
+  const all = (lv) => Object.values(lv ?? {}).map(sceneText).join(' ');
+  const g = jaccard(all(c1), all(c2)); if (g >= 0.3) out.push(`C2: all scenes together share ${Math.round(g * 100)}% of their words with C1 (max 30%)`);
+  return out;
+}
 // C2 is not C1 with fancier words: the same talk question at the same place may share at most 30% of its words.
 export function c1c2Overlap(c1, c2) {
   const out = [];
@@ -256,6 +266,7 @@ async function main() {
   }
   const C1 = (await import(pathToFileURL('app/objetos-perdidos/levels/c1.mjs').href)).default, C2 = (await import(pathToFileURL('app/objetos-perdidos/levels/c2.mjs').href)).default;
   problems.push(...c1c2Overlap(C1, C2));
+  problems.push(...c1c2SceneOverlap(C1, C2));
   for (const p of problems) console.error(p);
   console.log(problems.length ? `${problems.length} problems` : 'Objetos perdidos: all levels OK');
   process.exitCode = problems.length ? 1 : 0;
