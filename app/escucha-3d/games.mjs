@@ -253,6 +253,17 @@ export const GAMES = {
     ownListening: true,
     bilingualA0: true,
   },
+  // Lluvia de estrellas: every circle of the desert campsite has its own
+  // listening at each level, voiced by the same campers who speak there. PRO
+  // lesson (ID 263).
+  estrellas: {
+    title: 'Lluvia de estrellas',
+    levels: ['A0', 'A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    spots: ['entrada', 'lentes', 'urna', 'alien', 'cita', 'apagon', 'cocina', 'llama', 'hamacas',
+      'sendero', 'cupula', 'radio', 'duchas', 'mina', 'salar', 'astrologa', 'dron', 'mirador'],
+    ownListening: true,
+    bilingualA0: true,
+  },
 };
 
 // Transcript length in words for each level.

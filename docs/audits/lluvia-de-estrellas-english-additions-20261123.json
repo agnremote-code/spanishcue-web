@@ -1,0 +1,3618 @@
+{
+  "version": 1,
+  "authorization": "Owner approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g (2026-11-23): «Lluvia de estrellas» (ID 263), a new A0–C2 3D conversation and listening class at a desert campsite with an observatory during the biggest meteor shower in sixty years, whose A0 level is fully bilingual (conversation, campers, choices, notebook and listening) and whose A1 level glosses its key words in English, plus one English line for the academies listing. This manifest approves only the exact English literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    {
+      "path": "app/academias/page.tsx",
+      "text": "A night at a desert campsite under the biggest meteor shower in sixty years, in 3D: fears, wishes and humour, in Spanish."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Celeste, the guide, talks with Rogelio at the entrance. It is night."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Celeste, at eleven I turn off all the lights."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "All of them? The bathroom light too?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "All of them. It is the night of the stars."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "OK. I have my red flashlight."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Are you afraid?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "No, no. A little."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "At what time does Rogelio turn off the lights?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What color is Celeste’s flashlight?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which light does Celeste ask about?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Is Celeste afraid?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which lamp in your home do you turn off at the end of the day?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What small animal scares you at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Where do you keep your flashlight?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "flashlight"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "I turn off"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "fear"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Don Cosme sells glasses in the parking lot. Celeste walks by."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Glasses! Glasses for the sky! Ten pesos!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Don Cosme, those are eclipse glasses."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes. I have three hundred."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "But tonight there is no sun. There are stars."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Oh. Then they are glasses for sleeping."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Don Cosme sell?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How many glasses does he have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is there in the sky tonight?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What are the glasses for, according to Cosme, in the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What cheap product do people sell in your neighborhood?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "When do you use sunglasses?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What old clothes do you wear to sleep?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "glasses"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "eclipse"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "three hundred"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Nora is looking for something in the car. Iván watches her."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Iván, where is Dad’s urn?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "In the green bag."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Here there is bread, water and your jacket. There is no urn."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Oh, no. The urn is at home, in the kitchen."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "In Mendoza? Iván!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is Nora looking for?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is in the green bag?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Where is the urn?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Whose urn is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What thing do you often forget at home?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What important thing do you forget before a trip?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What souvenir from a trip is in your living room?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "urn"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "bag"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "kitchen"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Doña Hortensia is in her RV with a big radio."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Doña Hortensia, what are you doing?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "I am talking to space. Well, I want to talk."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "With the space station?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes. It passes at one forty. Six minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And what do you say to them?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Hello, I am Hortensia, I am eighty-one."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Who does Hortensia want to talk to?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "At what time does the station pass?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How many minutes does it pass for?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How old is Hortensia?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which old radio, TV or phone do you remember?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What do you say when you answer the phone?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What word do you use to say hello on the phone?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "space"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "space station"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "passes"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Simón, a nine-year-old boy, talks with his mother, Gabriela."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Mom, today I see an alien."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Simón, it is half past ten. It is time to sleep."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "No. I have cookies for him."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Biscuits? Why?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Because he comes from very far away. He is hungry."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Simón want to see?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Simón have for the alien?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Why, according to Simón?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What sweet do you keep in your kitchen for a visitor?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What time do the children in your family go to bed?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which planet looks beautiful to you in photos?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "alien"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "cookies"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "far away"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Bruno and Lucía are at the campfire. It is their first date."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Bruno, you are an astrophysicist, right?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes, of course. I work with… stars."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Me too! Which star do you study?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Er… that one. The big one. The yellow one."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Bruno, that is a plane."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Where are Bruno and Lucía?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Bruno say he is?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What job does Lucía have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is Bruno’s “yellow star”?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which science profession seems difficult to you?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What do you say on a first date?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which star or planet do you see from your city?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "astrophysicist"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "plane"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "you study"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Doña Petrona cooks for the whole campsite. Mauro helps her."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Doña Petrona, the noodles are hard."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes, dear. Here the water does not boil well."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Why?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Because of the altitude. We are at three thousand six hundred meters."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And what do the sixty-four people eat?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Quinoa soup. Quinoa is from here."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How are the noodles?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Why does the water not boil well?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How many people eat?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Petrona cook in the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What hot dish do you eat on cold days?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What food do you make for lots of guests?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What cereal or grain do you eat during the week?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "noodles"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "boils"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "altitude"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Wilmer is in the pen with a llama. Celeste arrives."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Wilmer, what is happening?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Estrella the llama is going to have a baby. Tonight!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Tonight? With the meteor shower?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes. I need warm water and a blanket."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "I will bring the blanket."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is the llama called?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is the llama going to have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Wilmer need?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Celeste bring?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which farm animal seems friendly to you?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What woollen garment did someone give you?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What nice name does a pet you know have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "baby animal"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "blanket"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "lukewarm"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Fabián comes out of the shower in a towel. Rogelio walks by."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "The water is cold! Cold!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes, sir. The hot water lasts four minutes."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Four? I have a meeting with Tokyo at two."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Here? There is no signal here."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And where is there a signal?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "On the roof of the showers."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How is the water?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How long does the hot water last?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "At what time is Fabián’s meeting?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Where is there a signal?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How many minutes does your shower last?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "In which corner of your home does the internet work best?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "At what time is your first meeting or class on Monday?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "meeting"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "signal"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "roof"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Rocío is in a hammock. She is not sleeping. Celeste greets her."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Hi, Rocío. Aren’t you sleeping?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "No. My son is seven months old. At home I do not sleep."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And here it is quiet."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes. A lot of silence. Too much silence!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Where is Rocío?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How old is her son in months?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is there at the campsite?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What problem does Rocío have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What street sound do you hear from your bed?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What soft music do you listen to before sleeping?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What quiet corner does your neighborhood have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "too much"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "silence"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "months"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Elías and his sister Marta walk along the path. Elías has a radio."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Elías, careful, there are stones."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Thanks. Listen to the radio, Marta."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is that sound? Ping… ping…"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "They are shooting stars. I do not see, but I listen."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How lovely!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is there on the path?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Elías have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is the “ping” sound?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Who is Marta?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which sound of nature do you like?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which person in your family do you go walking in the countryside with?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What do you listen to on the bus?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "careful"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "stones"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "shooting stars"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Doña Amalia and Joaquín are in the observatory."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Doña Amalia, the dome does not turn."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "It does not turn? It is my night! It is my comet!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Your comet?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes. I found it in 1966. I was seventeen."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Wow! Then the dome has to turn!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What problem is there?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Whose comet is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "In what year did Amalia discover the comet?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How old was Amalia in 1966?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which important year of your life do you remember well?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which device in your home needs a knock to work?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which scientific discovery seems great to you?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "dome"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "turns"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "comet"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Don Ramiro is in an old hut. He wears a helmet with a lamp."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Don Ramiro, why are you wearing a helmet?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "I am a miner. Forty-one years underground."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And the stars?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "I do not know them. I always worked at night, down below."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Today you meet them. Come to the lookout."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Don Ramiro wear?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How many years did he work underground?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "When did Ramiro work?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Where does Celeste invite him?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which uniform or work clothes do you know well?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which older person in your family worked for many years?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What night jobs are there in your city?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "helmet"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "miner"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "underground"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Ulises has a camera on the salt flat. Celeste walks with him."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "There is no water. This year there is no water."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And what is the water for?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "With water, the salt flat is a mirror. The sky is above and below."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And without water?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Without water, it is salt. Lots of salt."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Ulises have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is there not this year?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is the salt flat with water?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What is the salt flat without water?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What landscape photo do you keep on your phone?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "In which room of your home is there a big mirror?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which dry or hot place in your country do you know?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "salt flat"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "mirror"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "salt"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Zulema the astrologer has a horoscope stall. She talks with Lucía."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Your sign, dear?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "I am an astrophysicist. I do not have a sign."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "We all have a sign. Your birthday?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "The third of March."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Pisces. Today you meet a very strange person."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes. You."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Zulema have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "When is Lucía’s birthday?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What sign is Lucía, according to Zulema?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Who is the strange person, for Lucía?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "In which month does the person you love most have a birthday?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which part of the newspaper or the news do you read first?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What strange habit does someone in your family have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "dear"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "star sign"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "strange"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Kiara has a drone with lights. Her brother Dante has a camera."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Hi, friends! I am in the desert! Look at my drone!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Kiara, the drone has lights. It covers the stars."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "And how many people are watching?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Three. And one is Mom."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Kiara have?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does the drone cover?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Who is Dante?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How many people watch Kiara?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which phone app do you open before breakfast?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Who do you send photos of your vacations to?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which device with lights is annoying at night in your street?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "drone"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "covers"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "desert"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Rogelio talks by radio with Teresa, the manager of the mine."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Teresa, it is eleven. Turn off the mine lights, please."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Rogelio? Is that you?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Yes. It is the night of the stars."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "OK. But only tonight."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Thank you, Teresa."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Who does Rogelio talk to?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "How do they talk?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Teresa say in the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which building with lots of lights is there near your home?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Which noisy or kind neighbor lives near you?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What do you do at home during a power cut?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "mine"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "turn off"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "only"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "Celeste, Doña Amalia and Don Ramiro are at the lookout. It is the big moment."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "It is twelve minutes past three. Look up!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "One! Two! Lots!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "The sky is falling!"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "No, Don Ramiro. They are shooting stars."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "This time I do not fall asleep."
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What time is it?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Celeste say?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Don Ramiro think?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What does Amalia say at the end?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What shape is the moon this week?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What wish do you make on a shooting star?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "What time do you wake up on Sundays?"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "look"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "up"
+    },
+    {
+      "path": "app/escucha-3d/content/estrellas/a0.json",
+      "text": "is falling"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Plays the guitar by the campfire"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I play the guitar every night. Tonight I only know three songs, but everyone sings. My fingers are very cold."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What song do you know all the words to?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Campsite receptionist, in the booth at the entrance"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I work at reception. I hand out the blankets and the red flashlights. Tonight there are sixty-four campers. It’s a record!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What do you always take when you go on a trip?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Arrived late and is looking for a place to park"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I arrived late. The road is very long and there are no signs. My car is full of dust and so am I."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What is the longest trip you made by car?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Carries firewood for the campfire"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I’m carrying firewood for the campfire. Up here there are no trees, so we bring it from the village. It’s very heavy."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What household job do you like doing?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Reads with a red flashlight beside her tent"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I’m reading a book about the stars. The flashlight is red because white light bothers the eyes. It is my first night in the desert."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What book do you have on your bedside table now?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Retired man who travels by RV with his dog"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I have lived in my RV for five years. I travel with my dog, Lucero. He is afraid of fireworks, but not of stars."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Where would you like to live for a whole year?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Is celebrating her anniversary by the fire"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Today is my anniversary. My husband is in the tent, looking for chocolate. We have been together for forty years."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "How do you celebrate important days?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Carries a box of mulled wine to the kitchen tent"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I’m bringing hot wine with cinnamon for everyone. With this cold, it’s the best medicine. I already tried two glasses."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What hot drink do you have in winter?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Vet on vacation, watching the pen"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I’m a vet, but I’m on vacation. The llama is going to have a baby. I’m a bit nervous."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What animal would you like to look after?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Lines for the showers, half asleep"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I’m in line for the showers. The hot water only lasts four minutes. I’m sleepy and cold."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Do you prefer to shower in the morning or at night?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Reads poetry quietly by the hammocks"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I like reading poetry quietly. This book is by a Chilean poet. It talks about the night and the sea."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What word in Spanish do you find beautiful?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Mountain runner training on the path"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I run every day, in the desert too. At this altitude it is very hard to breathe. Today I only did two kilometers."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What sport do you do to feel good?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Astronomy student, volunteer guide at the observatory"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I study astronomy. Tonight I’m helping at the observatory. Look over there: that is the constellation of Orion!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What were you studying when you were eighteen?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Son of a miner, keeping Don Ramiro company"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "My dad also worked in the mine, with Don Ramiro. Today I brought him to the campsite. He never saw a shooting star."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What did your grandparents work as?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Newly married, on honeymoon at the salt flat"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I’m on honeymoon. My husband wanted to go to the beach and I wanted the desert. The desert won."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Do you prefer the beach or the mountains?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Amateur photographer, angry about the drone"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "That drone has colored lights! It ruins my photos. I have been waiting two hours for a dark sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What makes you very angry when you travel?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "Came with her grandchildren and waits at the lookout"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "I am ninety years old and I got to the lookout without help. My grandchildren took longer than me. Now I’m waiting for the stars."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/invitados.mjs",
+      "text": "What family story did they tell you as a child?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A guide who is afraid"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "It is nine at night. You are at a campsite in the desert. Tonight there is a very big meteor shower. Celeste is the guide."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hello. I am Celeste. At twelve past three everyone has to be at the lookout."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And at eleven there is no light in the campsite. No light at all."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A secret: I am afraid of the dark."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste looks at you. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste, give me your hand. I am not afraid."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Really? Thank you. That way it is easier."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste takes your hand. Nobody laughs."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Use a red flashlight. It does not bother the stars."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Yes! I have one here, in my backpack."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The red light is small and pretty. Celeste is calmer."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And why are you a guide?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Because of my grandfather. He taught me the stars so I would not be afraid."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste looks at the sky and smiles. Her grandfather is in her eyes."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What time do you turn off the light on Saturdays?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What light do you have next to your bed?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What dark place scares you?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Who teaches you new things in your family?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "How many stars do you count from your balcony or window?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the guide"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the dark"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the lookout"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the flashlight"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Sunglasses at night"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In the parking lot there is a man with a table. On the table there are many boxes. It is Don Cosme."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Glasses for the eclipse! Three hundred glasses!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Nobody buys. Why?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "There is no eclipse today. There are stars. What do you say to him?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Don Cosme, give the glasses away. They are glasses for seeing wishes."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Glasses for seeing wishes? I like it!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The children have glasses. The whole campsite wears glasses."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Keep the glasses. There is an eclipse in 2048."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In 2048? I am seventy… Well, I will wait!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Don Cosme closes the boxes. He goes up to the lookout with his hands free."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "At night it is cold. Sell hot coffee."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Coffee! Doña Petrona has a lot of coffee."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Don Cosme sells coffee. At last he has money."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What wool clothes do you buy in winter?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Do you have sunglasses? What color are they?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you sell or give away when you do not use something?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Where do you park the car or the bike?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What hot drink do you put in a flask for the mountains?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the glasses"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the eclipse"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to give away"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the wish"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The urn is in Mendoza"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In the tents there is a couple. Nora is sad. Iván is nervous."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "My dad loved the stars. I want to leave his ashes here."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Nora… the urn is at home. In the kitchen. In Mendoza."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Mendoza is nine hundred kilometers away!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Nora is crying. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Nora, here there is salt from the salt flat. It is white, like the stars."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Salt in the wind… My dad likes the idea."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Nora throws salt into the wind. She says: “Dad understands.”"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And a video call? Your dad watches from the kitchen."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "My sister is at home! I will call her."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The phone is next to the urn and the sugar. Arturo watches the shower."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Tonight, only the sky. Another year, the urn."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Yes… In 2027 we come back. With the urn."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Nora takes Iván's hand. They both look at the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you often forget at home?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What faraway city do you want to visit someday?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What photo of your dad or mom do you have in the kitchen?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What is in your kitchen next to the window?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What does your dad or your mom really like?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the urn"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to forget"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the salt"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hortensia's radio"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In a RV there are many radios and cables. Doña Hortensia is eighty-one."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "At one forty the space station passes. Six minutes."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "I want to talk with the astronauts. But I am nervous."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hortensia has the microphone in her hand. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Talk, Hortensia! Now is the moment."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hello, space… Can you hear me? They can hear me!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The astronauts talk with her for six minutes. They ask about her soup."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And another person? Someone here, on Earth."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "I hear a voice… It is a truck driver from Salta."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The truck driver is also looking at the sky. Hortensia laughs."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hortensia, turn off the radio. Listen to the silence."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Turn off the radio? Fifty years… All right."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "There is no noise. Hortensia listens to the desert."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What music station plays in your kitchen?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What situation makes you nervous?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What hobby does your best friend's grandmother have?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Which older person do you talk to on Sundays?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What place in your city is very quiet?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the radio"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the space station"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the voice"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the silence"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hello, alien"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In front of a blue tent there is a boy with a notebook. It is Simón. He is nine. His mom, Gabriela, is very tired."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Tonight I want to see an alien."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Simón, it is half past ten. Time to sleep."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "No! Aliens come at night."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Simón looks at you with his notebook. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Simón, make a sign: “Welcome.”"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Yes! With big yellow letters."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Simón goes up to the lookout with his sign for the aliens."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "From another star, you are the alien."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Me? An alien? How great!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Simón looks at the sky. Now he is the alien."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Your mom is tired. You look after the tent."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "OK. I am an astronaut on watch."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Gabriela sleeps. Simón looks after her with his flashlight."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What planet do you draw on a big sheet?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What questions do you ask an astronaut?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Who is tired in your family?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What alien movie do you like?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What sign is on the door of your house?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the alien"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the tent"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the sign"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A date by the fire"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "At the campfire there is a couple. It is their first date. Bruno says: “I am an astrophysicist.” It is not true. He sells insurance."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "That star is… er… very big."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Bruno, it is a plane."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "I really am an astrophysicist."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Bruno is red. What do you say to him?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Bruno, tell the truth."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "OK… I sell insurance. Sorry, Lucía."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Lucía laughs. She explains the universe to him with a marshmallow."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Bruno, talk about something else. Talk about music."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Er… Do you like music, Lucía?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Lucía asks three questions and knows the truth. But she wants another date."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Lucía, and your profile? Is it all true?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Well… My profile says one meter seventy. I am one sixty."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Bruno and Lucía laugh together. Nobody is perfect."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Where is a good first date?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What sweet do you eat by the fire?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What does your best friend do for work?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "How tall are you?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you put in your profile on an app?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the date"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the campfire"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "insurance"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the truth"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The water does not boil"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In the kitchen tent there is a huge pot. Doña Petrona cooks for sixty-four people. Mauro is her assistant."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Up here water boils at eighty-eight degrees. The noodles are hard."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Doña Petrona, people are hungry."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Petrona tries a noodle. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Serve the noodles. They are “al dente”."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Al dente? How elegant!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Everyone eats half-hard noodles. Everyone says: “Al dente!”"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And a quinoa soup?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Of course! Quinoa is not afraid of altitude."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The soup is very tasty. Mauro asks for more."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Doña Petrona, come. Look at the sky for a minute."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Me? Thirty years here and I never look up."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Petrona leaves the kitchen. She looks at the sky. She says: “Oh.”"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What huge dish do you cook for a birthday party?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Do you like hard or soft noodles?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What vegetable soup does your family make?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What Andean grain do you know: quinoa, corn…?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you have for dinner when you are very hungry?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the pot"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to boil"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the noodles"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the altitude"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A llama called Estrella"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In the pen there are llamas. Wilmer is nineteen. His llama, Estrella, is going to be a mother tonight."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Estrella is calm. But I am not."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "There are a lot of people and a lot of noise."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Wilmer has a blanket. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And the baby's name? Cometa?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Cometa! It is perfect for tonight."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "At midnight a little llama is born. Her name is Cometa."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Wilmer, I will help you with the blanket."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Thank you. All night with Estrella."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Wilmer helps Estrella. He goes up to the lookout smelling of the pen."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Estrella needs silence. Let's go."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Yes. She decides when."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Estrella waits for daylight. Like a calm person."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What farm animal is there in your town or region?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What pretty name does your neighbor's dog or cat have?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What quiet place do you look for at a noisy party?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What colorful blanket do you have on the sofa?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What time were you born?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the llama"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the pen"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the baby animal"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Tokyo in a towel"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In the showers the hot water lasts four minutes. Fabián is in a towel. At two he has a meeting with Tokyo."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "There is no internet here. Only on the roof."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And my suit is in the car!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Fabián has his laptop in his hand. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Go up to the roof. In a towel, it does not matter."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In a towel? Well… Let's go!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Fabián talks with Tokyo from the roof, in a towel."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Cancel the meeting. Tonight is the meteor shower."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Cancel? Hmm… Yes. Not today."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Fabián goes up to the lookout with wet hair."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Show the sky to your bosses."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The sky? Good idea!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In Tokyo the bosses look at the stars. They clap."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What shampoo or soap do you use in the shower?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What time do you have meetings?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What smart clothes do you wear to an important meeting?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Where do you have a good internet connection?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What country is far from your country?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the shower"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the towel"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the meeting"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the roof"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Sleeping in a hammock"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In the hammocks there is a young woman. It is Rocío. Her son, Martín, is seven months old. Martín is at home with his dad."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Seven months without sleeping a whole night."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Now I have silence… and I cannot sleep."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rocío is in the hammock with her eyes open. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And Martín's crying on the phone?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Yes, I have a recording. It is strange, but it works."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rocío listens to the crying and sleeps."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Do not sleep. Look at the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hmm… The sky is better than sleeping."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rocío does not sleep. She looks at all the stars."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Call home."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hello? … I hear snoring. They are both asleep!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rocío hears her husband and her son snoring. At last she laughs."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What pillow or cushion do you use to read in bed?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What calm music do you listen to in bed?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What noise in your house do you hear at midnight?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Do you like hammocks?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you listen to in order to sleep?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the hammock"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to sleep"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the crying"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to snore"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hearing the stars"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "On the path there are two siblings. Elías is blind. Marta is his older sister. Elías has a small radio."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Listen: “ping”. It is a meteor. The radio turns meteors into sounds."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "It is very dark. I cannot see the path."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Marta is afraid. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Elías, count the meteors out loud."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "One… two… three… forty!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Everyone listens to Elías. Forty meteors."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Marta, describe the sky for Elías."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "There are… thousands of stars. I have not looked for years!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Marta looks at the sky. She did not look at it either."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Elías, you are the guide."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Of course. The dark is my home."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Elías guides everyone along the dark path."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What sound of nature relaxes you?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Do you have older or younger siblings?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you do when you cannot see anything?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What dark street in your neighborhood do you not like?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you count out loud?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the path"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "blind"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the meteor"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the sound"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The telescope does not turn"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In the observatory dome there is a big telescope. Doña Amalia is seventy-seven. In 1966 she found a comet."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "I am sorry, Doña Amalia. The dome does not turn."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In 1966 I fell asleep. I did not see the shower. Tonight I want to see it."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Amalia looks at the dome. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And a kick to the dome?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A kick? Here it goes!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Bang! The dome turns. Joaquín cannot believe it."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Look at the shower of your comet without a telescope, like in 1966."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Yes. The children use the telescope. I use my eyes."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Amalia looks at the sky without instruments. The children look through the telescope."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Doña Amalia, have a double coffee."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Double! This time I will not fall asleep."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Amalia drinks coffee. Her eyes are wide open."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What old lamp or radio works with a bang?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "How many coffees do you have before an exam?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What older person teaches you things?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What pretty thing did you find in a park?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you do with your tired eyes?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the dome"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the telescope"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the comet"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to turn"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The miner and the sky"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "In an old hut there is a man with a helmet. It is Don Ramiro. He worked forty-one years in a mine."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "I always worked at night, down below, in the mine."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "I never saw a shooting star. Never."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ramiro looks at the ground. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Come to the lookout with your helmet."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "With my helmet, yes. In case the sky falls."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ramiro goes up to the lookout with his miner's helmet."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What is there in the hut?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Look: a letter for my wife. From 1985."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ramiro reads the letter. His eyes are red."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Turn off the helmet lamp and look up."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Up? Well… Oh!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ramiro looks at the night sky for the first time."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What hard job does someone in your neighborhood do?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What profession works at night in your city?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you wear on your head when it is sunny?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What old letter do you keep in a drawer?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you look at when you walk down the street?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the mine"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the helmet"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the hut"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the shooting star"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "No water on the salt flat"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The salt flat is white and huge. Ulises is a photographer. He wants a photo: the sky in the water of the salt flat."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Twenty years waiting. And today… the salt flat is dry. There is no water."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Without water, there is no mirror."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ulises puts away his camera. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Take photos of the people. Everyone is looking up."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The people? Hmm… Yes, it is pretty."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ulises photographs sixty-four people looking at the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Today, no camera. Look with your eyes."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "With my eyes… I have not for years."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ulises leaves the camera in his backpack and watches the shower."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And a bucket of water?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A little mirror! Awesome!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Ulises takes a photo of the bucket. Nobody understands it. Everyone loves it."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What landscape in the world do you want to photograph?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What concert or match are you waiting for this year?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Where is there a mirror in your house?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What white landscape, with snow or sand, do you know?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you carry in your backpack for a day in the countryside?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the salt flat"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "dry"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the mirror"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the bucket"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Madame Zulema"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "On the edge of the salt flat there is a table with candles. Madame Zulema sells horoscopes. There is a line of people."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Your horoscope: money, love and a trip."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Psst… A secret: I studied physics for three years."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Zulema looks at you. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Read the comet's future."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The comet… I see a long trip. A very long one!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Everyone laughs. The comet's horoscope is perfect."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Explain the meteors. You know physics."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Well… They are small stones that burn up."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Zulema explains the meteors. Everyone listens."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Tonight the stars speak for themselves."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "You are right. I am closing the stall."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Zulema blows out the candles and looks at the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What is your star sign?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What star sign does your best friend have?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What difficult science seems interesting to you?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What candle scent do you like at home?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What long train trip do you dream of taking?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the horoscope"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the candle"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the future"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "physics"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A drone with lights"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "On the rocks there is a girl with a drone. It is Kiara, an influencer. The drone has colored lights. Dante, her brother, has the camera."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Hello everyone! My drone and the stars!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Kiara, people cannot see the stars. They see your drone."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The drone is in the sky. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Kiara, bring the drone down. Stream the sky, without you."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Without me? Well… Only the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Kiara streams the sky live. Thousands of people watch."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Look, the drone has little battery."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What? No, no, no!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The drone lands by itself… in the kitchen tent."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Kiara, turn off your phone."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Turn it off? Hmm… OK."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Kiara looks at the sky in silence. Dante films her."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you watch on the internet?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What travel video do you watch on the sofa?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What game do you share with your cousins?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What device has colored lights in your house?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "At what moment of the day do you silence your phone?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the drone"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the battery"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to stream"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to turn off"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Eleven o'clock sharp"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "It is five to eleven. Rogelio is in the generator hut. At eleven he turns off all the lights. But the mine has very strong lights."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The manager of the mine is Teresa. She is my ex-wife."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rogelio, what do you want?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rogelio has the radio in his hand. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rogelio, ask for a favour. Kindly."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Teresa… please, turn off the mine lights."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Teresa turns off the lights. Rogelio says: “Thank you.” Nine years later."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Three, two, one… Turn it off!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Click! … Look! The mine too."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "At eleven the whole desert is dark. Even the mine."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "And what if you watch the shower together, by radio?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Teresa… will you watch the shower with me? By radio."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Rogelio and Teresa look at the sky. Each one in their place."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What time do you turn off the light?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you do when there is no power in your house?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What favour do you ask your family?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What light is there in your street?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What old friend do you call to say sorry?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the generator"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the light"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the mine"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the ex-wife"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "The stars are falling"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "It is twelve past three. Everyone is at the lookout. A thousand shooting stars fall every hour. Celeste has her notebook."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "We did it! Everyone is here."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "This time I am not falling asleep."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A shooting star! My first one!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste looks at you. What do you say?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste, read the notebook."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "OK. Here are the stories of tonight."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste reads. Everyone listens and looks at the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "A wish! Everyone, a wish."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Yes. In silence. One, two, three…"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Sixty-four people make a wish. Nobody speaks."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste, and your flashlight?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "It is off. And I am not afraid!"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Celeste is in the dark. She is happy."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What wish do you make today?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you see in the sky of your city?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What sometimes wakes you up in the early morning?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "Who do you want to watch a meteor shower with?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "What do you write in a notebook?"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the shooting star"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the wish"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "the notebook"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a0.mjs",
+      "text": "to fall"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the campsite"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the guide"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "it scares me"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "in the dark"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the owner"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the glasses"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the parking lot"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to sell"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to give away"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the wish"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the urn"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the ashes"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to forget"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the sugar"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the salt"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the RV"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the microphone"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to answer"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the space station"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the silence"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the alien"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the notebook"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the move"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "tired"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "on watch"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the date"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the campfire"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to sell insurance"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the profile"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the truth"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the kitchen tent"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to boil"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the noodles"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the altitude"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "quinoa"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the pen"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the baby animal"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the straw"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to look after"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the blanket"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the shower"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the towel"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the signal"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the roof"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the video call"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the hammock"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to miss"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the crying"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to snore"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the recording"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the path"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "blind"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the meteor"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the stone"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to guide"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the dome"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "stuck"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the telescope"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to discover"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the kick"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the mine"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the helmet"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the night shift"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the hut"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the shooting star"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the salt flat"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "dry"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the mirror"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "reflected"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the bucket"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the horoscope"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the candle"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the turban"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the dust"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the stall"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the drone"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "live"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the battery"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to land"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to complain"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the switch"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the generator"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the floodlights"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the manager"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the ex-wife"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the lookout"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the notebook"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to make a wish"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "to fall"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/levels/a1.mjs",
+      "text": "the flashlight"
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Celeste goes up to the lookout holding someone’s hand, and nobody laughs."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Celeste goes up with her red flashlight, which bothers neither the stars nor her."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Celeste confessed why she is a guide: her grandfather taught her the stars so she would not be afraid."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Don Cosme gives away eclipse glasses “for seeing wishes”, and the whole campsite wears them."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Don Cosme keeps his glasses for the 2048 eclipse and goes up to the lookout with his hands free."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Don Cosme sells flasks of coffee instead of glasses, and finally makes money."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Nora scatters salt from the salt flat into the wind, and says her father would understand."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Arturo watches the shower by video call, from the kitchen in Mendoza, next to the sugar."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Iván and Nora decide to come back in 2027 with the urn, and tonight they just look at the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Hortensia talked for six minutes with the space station, and they asked about her soup recipe."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Hortensia contacted a truck driver in Salta who was also looking at the sky."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Hortensia switched off her radio for the first time in fifty years and listened to the silence."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Simón goes up to the lookout with a welcome sign for the aliens."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Simón discovered that the nearest alien is himself, seen from another star."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Gabriela fell asleep in the tent and Simón looked after her like an astronaut on watch."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Bruno confessed that he sells insurance, and Lucía explained the universe to him with a marshmallow."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Bruno confessed nothing; Lucía found out in three questions and gave him a second date anyway."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Lucía confessed that her profile says she is one meter seventy tall, and she is one sixty."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Petrona served half-hard noodles and everyone said they were al dente."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Petrona swapped the noodles for quinoa soup, which is not afraid of altitude."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Petrona came out of the kitchen to look at the sky for the first time in thirty years."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "A llama was born under the meteor shower and her name is Cometa."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Wilmer helped Estrella all night and goes up to the lookout smelling of the pen."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Estrella the llama decided to wait until dawn, like sensible people."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Fabián made his video call with Tokyo from the roof of the showers, in a towel."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Fabián canceled the meeting with Tokyo and goes up to the lookout with wet hair."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Fabián showed the meteor shower to his bosses in Tokyo, and they clapped."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Rocío fell asleep listening to her baby’s crying recorded on her phone."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Rocío did not sleep: she watched the whole sky and says it was better than sleeping."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Rocío called home, heard her husband and the baby snoring, and finally laughed."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Elías heard forty meteors on the radio and counted them out loud for everyone."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Marta described the sky to her brother and discovered that she had not looked at it for years either."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Elías guided everyone along the path in the dark, because darkness is his home."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "The dome came unstuck with a kick from Doña Amalia, who is seventy-seven."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Amalia left the telescope to the children and watches her comet’s shower with no instruments, as in 1966."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Doña Amalia had a double coffee so as not to fall asleep this time."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Don Ramiro goes up to the lookout with his miner’s helmet, in case the sky falls."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Don Ramiro found in the hut the letter he wrote to his wife in 1985."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Don Ramiro switched off his helmet lamp and looked up at night for the first time."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Ulises did not get the salt-flat mirror, but he photographed sixty-four people looking up."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Ulises left the camera in his backpack and saw the shower with his own eyes."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Ulises made a mirror with a bucket of water and a photo nobody understands and everybody loves."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Madame Zulema read the comet’s future, and it got a long journey."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Zulema confessed that she studied physics, and explained the meteors better than anyone."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Zulema closed her horoscope stall: tonight the stars speak for themselves."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Kiara landed the drone and streamed live… the sky, without her."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Kiara’s drone ran out of battery and landed by itself, in the kitchen tent."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Kiara switched off her phone and her brother Dante filmed her, at last, in silence."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Teresa switched off the mine floodlights, and Rogelio thanked her after nine years."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "At 23:00 the whole desert went dark, even the Santa Rita mine."
+    },
+    {
+      "path": "app/lluvia-de-estrellas/story.mjs",
+      "text": "Rogelio and Teresa watch the shower over the radio, each from their own side, as before."
+    }
+  ]
+}

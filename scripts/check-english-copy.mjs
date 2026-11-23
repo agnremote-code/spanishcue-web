@@ -185,6 +185,7 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/ultimo-crucero-english-additions-20261116.json',
   'docs/audits/clase-de-nivelacion-english-additions-20261118.json',
   'docs/audits/objetos-perdidos-english-additions-20261123.json',
+  'docs/audits/lluvia-de-estrellas-english-additions-20261123.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

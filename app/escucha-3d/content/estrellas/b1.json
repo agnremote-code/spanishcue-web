@@ -1,0 +1,2121 @@
+{
+ "game": "estrellas",
+ "level": "B1",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "El plan de Celeste",
+   "place": "La entrada del camping",
+   "context": "Faltan pocos minutos para las nueve. Celeste le explica a Rogelio su plan para la noche, y también un problema que no le ha contado a nadie.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Rogelio, necesito que me ayudes con algo. El pico de la lluvia es a las tres y doce, y quiero que las sesenta y cuatro personas estén en el mirador a esa hora."
+    },
+    {
+     "s": 1,
+     "text": "Me parece muy bien, pero aquí cada uno hace lo que quiere. Hay gente que vino a dormir, gente que vino a trabajar y hasta un señor que vino a vender lentes."
+    },
+    {
+     "s": 0,
+     "text": "Por eso. Quiero hablar con todos antes de que apagues las luces."
+    },
+    {
+     "s": 1,
+     "text": "Hay otra cosa, ¿no? Llevas toda la tarde mirando el reloj."
+    },
+    {
+     "s": 0,
+     "text": "Te lo digo, pero no se lo cuentes a nadie. Me da pánico la oscuridad. Soy guía de astronomía y no soporto la noche sin una linterna."
+    },
+    {
+     "s": 1,
+     "text": "Es como un cocinero al que le da miedo el fuego."
+    },
+    {
+     "s": 0,
+     "text": "Exacto. Por eso necesito compañía en el sendero."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere conseguir Celeste esta noche?",
+     "options": [
+      "Que todos se acuesten temprano",
+      "Que nadie use linternas en todo el camping esta noche",
+      "Que todos estén en el mirador a las tres y doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "Según Rogelio, ¿por qué no será fácil?",
+     "options": [
+      "Cada campista tiene sus propios planes",
+      "El mirador está cerrado por la noche",
+      "Hace demasiado frío para caminar"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo se dio cuenta Rogelio de que algo pasaba?",
+     "options": [
+      "Celeste se lo contó por la mañana",
+      "Celeste miraba el reloj toda la tarde",
+      "Celeste no quiso cenar con el grupo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere decir Rogelio con la comparación del cocinero?",
+     "options": [
+      "Que Celeste debería cambiar de trabajo",
+      "Que el miedo de Celeste es una paradoja",
+      "Que el fuego es peligroso en el desierto"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué miedo tuyo choca con tu trabajo o tus estudios?",
+     "model": "Me da miedo hablar en público y soy profesora."
+    },
+    {
+     "q": "¿A quién le contarías un secreto que te da vergüenza?",
+     "model": "Se lo contaría a mi hermana, porque nunca me juzga."
+    },
+    {
+     "q": "¿Qué haces para convencer a un grupo de personas muy diferentes?",
+     "model": "Busco algo que les interese a todos, como la comida."
+    }
+   ],
+   "gaps": "Me da [pánico] la oscuridad. Soy guía de [astronomía] y no [soporto] la noche sin una [linterna].",
+   "glossary": [
+    {
+     "word": "pico",
+     "meaning": "el momento de más intensidad"
+    },
+    {
+     "word": "pánico",
+     "meaning": "miedo muy fuerte"
+    },
+    {
+     "word": "no soporto",
+     "meaning": "no aguanto, no tolero"
+    },
+    {
+     "word": "compañía",
+     "meaning": "personas que están contigo"
+    }
+   ]
+  },
+  {
+   "id": "lentes",
+   "title": "Un negocio a medianoche",
+   "place": "El estacionamiento",
+   "context": "Don Cosme sigue en el estacionamiento con sus cajas de lentes. Celeste intenta ayudarlo a cambiar de negocio.",
+   "speakers": [
+    {
+     "name": "Cosme",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Señorita, llevo dos horas aquí y no he vendido ni un par. La gente se ríe de mí con mucha educación, pero se ríe."
+    },
+    {
+     "s": 1,
+     "text": "Don Cosme, ¿y si cambia de producto? A las tres de la mañana aquí hace cinco grados bajo cero. Lo que la gente va a querer es algo caliente."
+    },
+    {
+     "s": 0,
+     "text": "No tengo café. Tengo trescientos lentes, una mesa y un termo de agua caliente para mi mate."
+    },
+    {
+     "s": 1,
+     "text": "Doña Petrona tiene café de sobra en la cocina. Si usted lo vende en el mirador, ella le da la mitad de lo que gane."
+    },
+    {
+     "s": 0,
+     "text": "¿Y los lentes?"
+    },
+    {
+     "s": 1,
+     "text": "Regálelos. Dígale a la gente que son lentes para ver deseos. A los niños les va a encantar."
+    },
+    {
+     "s": 0,
+     "text": "Lentes para ver deseos… Me gusta. Es el primer producto mágico de mi carrera."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos lentes ha vendido Cosme hasta ahora?",
+     "options": [
+      "Ninguno",
+      "Unos cuarenta pares",
+      "Los trescientos que trajo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué temperatura habrá a las tres de la mañana?",
+     "options": [
+      "Cinco grados bajo cero",
+      "Cinco grados sobre cero",
+      "Quince grados bajo cero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué acuerdo propone Celeste?",
+     "options": [
+      "Que Cosme trabaje gratis en la cocina",
+      "Que Rogelio le compre todos los lentes por la mitad",
+      "Vender el café de Petrona y repartir lo ganado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sugiere Celeste que haga con los lentes?",
+     "options": [
+      "Que los guarde para otro eclipse",
+      "Que los venda más baratos a las familias con niños",
+      "Que los regale como lentes para ver deseos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué producto venderías tú en un lugar con mucho frío?",
+     "model": "Vendería sopa caliente y guantes."
+    },
+    {
+     "q": "¿Qué cambiarías si tu pequeño negocio no tuviera ningún cliente?",
+     "model": "Pido consejo y pruebo otra estrategia."
+    },
+    {
+     "q": "¿Qué regalo pequeño puede hacer feliz a un niño?",
+     "model": "Una lupa o una linterna pequeña."
+    }
+   ],
+   "gaps": "Si usted lo [vende] en el [mirador], ella le da la [mitad] de lo que [gane].",
+   "glossary": [
+    {
+     "word": "con mucha educación",
+     "meaning": "de forma amable"
+    },
+    {
+     "word": "termo",
+     "meaning": "recipiente que mantiene la bebida caliente"
+    },
+    {
+     "word": "de sobra",
+     "meaning": "en cantidad más que suficiente"
+    }
+   ]
+  },
+  {
+   "id": "urna",
+   "title": "Una urna por videollamada",
+   "place": "Las carpas",
+   "context": "Nora habla por teléfono con su hermana, que está en Mendoza. Iván espera nervioso a su lado.",
+   "speakers": [
+    {
+     "name": "Nora",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Ya está, Iván. Mi hermana tiene la urna. La ha puesto en la ventana de la cocina, mirando al cielo, como si fuera una maceta."
+    },
+    {
+     "s": 1,
+     "text": "Me alegro. ¿Y qué ha dicho de mí?"
+    },
+    {
+     "s": 0,
+     "text": "Que no le sorprende. Que en nuestra boda también olvidaste los anillos."
+    },
+    {
+     "s": 1,
+     "text": "Eso fue culpa del taxi. Pero tiene razón. ¿Cuánto te ha molestado?"
+    },
+    {
+     "s": 0,
+     "text": "Al principio, sí. Ahora creo que a papá le habría hecho gracia. Él olvidaba todo menos las fechas de las lluvias de estrellas. Me llevaba a ver cada una, aunque al día siguiente yo tuviera colegio."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si en vez de cenizas esparcimos algo que él quería?"
+    },
+    {
+     "s": 0,
+     "text": "La sal del salar. Siempre decía que el salar era el único lugar donde la tierra imita al cielo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde ha puesto la hermana de Nora la urna?",
+     "options": [
+      "En la ventana de la cocina",
+      "En el jardín de la casa",
+      "Al lado del teléfono"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué olvidó Iván el día de la boda?",
+     "options": [
+      "El traje",
+      "La dirección de la iglesia",
+      "Los anillos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué era lo único que el padre de Nora no olvidaba?",
+     "options": [
+      "Los cumpleaños de sus hijas",
+      "Las fechas de las lluvias de estrellas",
+      "Las llaves del coche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué deciden esparcir en lugar de las cenizas?",
+     "options": [
+      "Pétalos de flores del pueblo",
+      "Las cartas viejas del padre",
+      "Sal del salar"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué despiste de alguien cercano se convirtió en una anécdota familiar?",
+     "model": "Mi padre fue al trabajo en pantuflas."
+    },
+    {
+     "q": "¿Qué te llevaba a ver tu familia en tu infancia?",
+     "model": "Me llevaban a ver los fuegos artificiales del puerto."
+    },
+    {
+     "q": "¿Qué ritual te parece bonito para recordar a una persona?",
+     "model": "Plantar un árbol en un lugar que le gustaba."
+    }
+   ],
+   "gaps": "Siempre decía que el [salar] era el único [lugar] donde la tierra [imita] al [cielo].",
+   "glossary": [
+    {
+     "word": "maceta",
+     "meaning": "recipiente para plantas"
+    },
+    {
+     "word": "le habría hecho gracia",
+     "meaning": "le habría parecido divertido"
+    },
+    {
+     "word": "imita",
+     "meaning": "copia, se parece a"
+    }
+   ]
+  },
+  {
+   "id": "alien",
+   "title": "El astronauta de guardia",
+   "place": "La carpa azul",
+   "context": "Gabriela se ha quedado dormida dentro de la carpa. Simón está sentado en la puerta con una linterna. Celeste pasa y lo ve.",
+   "speakers": [
+    {
+     "name": "Simón",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Gabriela",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mamá, ¿estás despierta? Mamá…"
+    },
+    {
+     "s": 1,
+     "text": "Mmm… ¿qué hora es?"
+    },
+    {
+     "s": 0,
+     "text": "Las dos menos cuarto. Te quedaste dormida mientras me leías el libro de los planetas. Te tapé con mi chaqueta."
+    },
+    {
+     "s": 1,
+     "text": "Ay, hijo. Perdona. Llevo una semana durmiendo cuatro horas. El trabajo, la mudanza, el viaje…"
+    },
+    {
+     "s": 0,
+     "text": "No pasa nada. Yo hice guardia, como los astronautas. Si viene un extraterrestre, te despierto. Pero solo si es simpático."
+    },
+    {
+     "s": 1,
+     "text": "¿Y si no es simpático?"
+    },
+    {
+     "s": 0,
+     "text": "Entonces le doy las galletas y le digo que vuelva mañana."
+    },
+    {
+     "s": 1,
+     "text": "Simón, a veces pienso que tú me cuidas a mí más que yo a ti."
+    },
+    {
+     "s": 0,
+     "text": "Ahora duerme tú, mamá. Yo sigo de guardia hasta que empiece la lluvia."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué estaba haciendo Gabriela cuando se durmió?",
+     "options": [
+      "Preparando la cena para los dos",
+      "Leyéndole un libro a su hijo",
+      "Mirando las estrellas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hizo Simón cuando su madre se durmió?",
+     "options": [
+      "Fue corriendo a buscar a Celeste",
+      "Se fue a la fogata",
+      "La tapó con su chaqueta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué está tan cansada Gabriela?",
+     "options": [
+      "Por la altura del desierto",
+      "Porque Simón no la dejó dormir en toda la noche",
+      "Por el trabajo, la mudanza y el viaje"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué siente Gabriela al final?",
+     "options": [
+      "Que su hijo la cuida a ella",
+      "Que Simón debería dormir ya",
+      "Que el viaje fue un error"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué época de tu vida dormiste muy poco y por qué?",
+     "model": "Cuando tuve exámenes finales, dormía cinco horas."
+    },
+    {
+     "q": "¿Qué persona joven te cuidó a ti en un momento difícil?",
+     "model": "Mi sobrino me ayudó cuando me rompí el brazo."
+    },
+    {
+     "q": "¿Qué responsabilidad tuviste de niño o de niña que te hizo sentir mayor?",
+     "model": "Cuidaba a mi hermano pequeño después del colegio."
+    }
+   ],
+   "gaps": "Yo hice [guardia], como los [astronautas]. Si viene un extraterrestre, te [despierto]. Pero solo si es [simpático].",
+   "glossary": [
+    {
+     "word": "te tapé",
+     "meaning": "te cubrí"
+    },
+    {
+     "word": "mudanza",
+     "meaning": "cambio de casa"
+    },
+    {
+     "word": "guardia",
+     "meaning": "vigilancia mientras otros duermen"
+    }
+   ]
+  },
+  {
+   "id": "cita",
+   "title": "El universo en un malvavisco",
+   "place": "El círculo de la fogata",
+   "context": "Lucía y Bruno siguen junto a la fogata. Ahora que Bruno ha dicho la verdad, ella le explica algo de su trabajo.",
+   "speakers": [
+    {
+     "name": "Bruno",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mira este malvavisco. Imagina que es el cometa Ledesma. Cada vez que pasa cerca del sol, se calienta y va dejando migas por el camino."
+    },
+    {
+     "s": 0,
+     "text": "¿Migas de malvavisco?"
+    },
+    {
+     "s": 1,
+     "text": "De polvo y hielo. La Tierra pasa por esas migas una vez al año, y cuando entran en el aire se queman. Eso son las estrellas fugaces."
+    },
+    {
+     "s": 0,
+     "text": "O sea, que esta noche vamos a ver la basura de un cometa."
+    },
+    {
+     "s": 1,
+     "text": "Dicho así, es menos romántico, pero sí."
+    },
+    {
+     "s": 0,
+     "text": "Para mí es más romántico. Una basura que viaja millones de kilómetros para brillar un segundo. Me parece una buena forma de vivir."
+    },
+    {
+     "s": 1,
+     "text": "Bruno, para ser vendedor de seguros, tienes alma de poeta."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué representa el malvavisco en la explicación de Lucía?",
+     "options": [
+      "La Tierra",
+      "El sol",
+      "El cometa"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿De qué están hechas las «migas» del cometa?",
+     "options": [
+      "De roca volcánica",
+      "De polvo y hielo",
+      "De gas caliente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué piensa Bruno de la explicación?",
+     "options": [
+      "Que es romántica",
+      "Que es aburrida",
+      "Que es demasiado técnica"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué opina Lucía de Bruno al final?",
+     "options": [
+      "Que tiene sensibilidad de poeta",
+      "Que debería estudiar física",
+      "Que no entendió nada"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué tema difícil te explicó alguien con un ejemplo sencillo?",
+     "model": "Mi profesor me explicó la economía con una pizza."
+    },
+    {
+     "q": "¿Qué cosa poco romántica te parece romántica a ti?",
+     "model": "Lavar los platos juntos después de cenar."
+    },
+    {
+     "q": "¿Qué talento escondido tiene alguien que conoces?",
+     "model": "Mi jefe canta ópera los fines de semana."
+    }
+   ],
+   "gaps": "Una [basura] que viaja millones de [kilómetros] para [brillar] un [segundo].",
+   "glossary": [
+    {
+     "word": "migas",
+     "meaning": "trozos muy pequeños"
+    },
+    {
+     "word": "polvo",
+     "meaning": "partículas muy finas"
+    },
+    {
+     "word": "alma de poeta",
+     "meaning": "sensibilidad artística"
+    }
+   ]
+  },
+  {
+   "id": "apagon",
+   "title": "Las palabras de 1997",
+   "place": "La caseta del generador",
+   "context": "El desierto ya está a oscuras. Rogelio y Teresa siguen hablando por radio, cada uno desde su lado de la noche.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rogelio, estoy en el patio de la mina. Nunca había visto este desierto tan oscuro. Hay tantas estrellas que asusta."
+    },
+    {
+     "s": 0,
+     "text": "Ahora entiendes por qué levanté el camping justo aquí."
+    },
+    {
+     "s": 1,
+     "text": "Eso lo supe siempre. Lo que nunca me entró en la cabeza fue que eligieras el camping en vez de la ciudad, en vez de nosotros."
+    },
+    {
+     "s": 0,
+     "text": "Y a mí nunca me entró en la cabeza que tú eligieras la mina. Supongo que los dos queríamos estar cerca del cielo, cada uno a su manera."
+    },
+    {
+     "s": 1,
+     "text": "Tú mirándolo y yo cavando debajo."
+    },
+    {
+     "s": 0,
+     "text": "Teresa, gracias por apagar las luces. Llevo nueve años sin decirte algo importante."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué cosa?"
+    },
+    {
+     "s": 0,
+     "text": "Que tenías razón. Algún día ibas a apagar todo el desierto. Y lo hiciste."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué ve Teresa desde el patio de la mina?",
+     "options": [
+      "Un cielo lleno de estrellas",
+      "Los reflectores encendidos",
+      "El camping iluminado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué no entendió Teresa?",
+     "options": [
+      "Por qué Rogelio apagó el generador",
+      "Por qué la llamó esta noche",
+      "Que Rogelio eligiera el camping en vez de la ciudad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tenían en común Rogelio y Teresa, según él?",
+     "options": [
+      "Los dos odiaban la ciudad",
+      "Los dos querían estar cerca del cielo",
+      "Los dos trabajaban en la mina"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le dice Rogelio después de nueve años?",
+     "options": [
+      "Que quiere volver con ella",
+      "Que ella tenía razón",
+      "Que va a vender el camping"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué decisión de vida separó tu camino del de una persona querida?",
+     "model": "Me fui a estudiar a otra ciudad y me alejé de mi mejor amigo."
+    },
+    {
+     "q": "¿A quién te gustaría decirle «tenías razón»?",
+     "model": "A mi madre, sobre la importancia de ahorrar."
+    },
+    {
+     "q": "¿Qué lugar elegiste para vivir y por qué?",
+     "model": "Vivo cerca del mar porque el ruido de las olas me calma."
+    }
+   ],
+   "gaps": "Supongo que los dos [queríamos] estar [cerca] del [cielo], cada uno a su [manera].",
+   "glossary": [
+    {
+     "word": "asusta",
+     "meaning": "da miedo"
+    },
+    {
+     "word": "cavando",
+     "meaning": "haciendo agujeros en la tierra"
+    },
+    {
+     "word": "a su manera",
+     "meaning": "de su propia forma"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "La receta del api",
+   "place": "La carpa cocina",
+   "context": "Doña Petrona le dicta a Mauro la receta del api antes de subir al mirador por primera vez en treinta años.",
+   "speakers": [
+    {
+     "name": "Petrona",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    },
+    {
+     "name": "Mauro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Apunta bien, Mauro. Maíz morado molido, agua, canela, clavo de olor y cáscara de naranja. Lo revuelves sin parar, porque si se pega, se arruina."
+    },
+    {
+     "s": 1,
+     "text": "¿Cuánto tiempo lo revuelvo?"
+    },
+    {
+     "s": 0,
+     "text": "Hasta que espese. Aquí, con la altura, tarda más. No le subas el fuego aunque tengas prisa."
+    },
+    {
+     "s": 1,
+     "text": "Doña Petrona, ¿está nerviosa por subir?"
+    },
+    {
+     "s": 0,
+     "text": "Un poco. Es raro que alguien cocine por mí. En treinta años nunca he comido algo que no haya hecho yo."
+    },
+    {
+     "s": 1,
+     "text": "Pues hoy va a probar el peor api de su vida."
+    },
+    {
+     "s": 0,
+     "text": "Si lo haces con paciencia, no será el peor. Será el primero que me hacen a mí."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué pasa si el api se pega a la olla?",
+     "options": [
+      "Queda más dulce",
+      "Tarda menos en estar listo",
+      "Se arruina"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué tarda más en espesar en el camping?",
+     "options": [
+      "Porque el maíz es diferente",
+      "Porque la olla es pequeña",
+      "Por la altura"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le resulta raro a Petrona?",
+     "options": [
+      "Subir a un lugar tan alto",
+      "Que alguien cocine para ella",
+      "Comer tan tarde por la noche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué quiere decir con su última frase?",
+     "options": [
+      "Que Mauro cocina muy mal",
+      "Que no piensa probar el api",
+      "Que valora el gesto más que el sabor"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué plato te gustaría que alguien cocinara para ti?",
+     "model": "Me gustaría que alguien me hiciera lasaña casera."
+    },
+    {
+     "q": "¿Qué receta familiar sabes hacer sin mirar instrucciones?",
+     "model": "Sé hacer las tortillas de mi abuela."
+    },
+    {
+     "q": "¿Qué tarea haces siempre tú y nunca delegas?",
+     "model": "Siempre hago yo las compras del supermercado."
+    }
+   ],
+   "gaps": "Es raro que [alguien] cocine por mí. En treinta años nunca he [comido] algo que no haya [hecho] [yo].",
+   "glossary": [
+    {
+     "word": "molido",
+     "meaning": "hecho polvo"
+    },
+    {
+     "word": "revuelves",
+     "meaning": "mueves con una cuchara"
+    },
+    {
+     "word": "espese",
+     "meaning": "se ponga más denso"
+    }
+   ]
+  },
+  {
+   "id": "llama",
+   "title": "Paciencia de llama",
+   "place": "El corral de las llamas",
+   "context": "Son las dos de la mañana. Estrella sigue sin tener su cría. Wilmer está agotado y Celeste le hace compañía.",
+   "speakers": [
+    {
+     "name": "Wilmer",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wilmer, ¿no deberíamos llamar a un veterinario?"
+    },
+    {
+     "s": 0,
+     "text": "El más cercano está a tres horas. Además, Estrella está bien. Solo está esperando."
+    },
+    {
+     "s": 1,
+     "text": "¿Esperando qué?"
+    },
+    {
+     "s": 0,
+     "text": "Mi abuelo decía que las llamas no tienen a sus crías cuando hay ruido o mucha gente mirando. Esta noche hay sesenta y cuatro personas y un dron con luces de colores. Yo tampoco tendría un hijo así."
+    },
+    {
+     "s": 1,
+     "text": "Entonces, ¿qué hacemos?"
+    },
+    {
+     "s": 0,
+     "text": "Nos vamos. La dejamos tranquila. Si quiere esperar al amanecer, que espere. Ella sabe más que nosotros."
+    },
+    {
+     "s": 1,
+     "text": "¿Y tú? ¿No vas a ver la lluvia de estrellas?"
+    },
+    {
+     "s": 0,
+     "text": "Desde el mirador se ve el corral. Puedo mirar las dos cosas."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está el veterinario más cercano?",
+     "options": [
+      "A tres horas",
+      "En el pueblo de al lado",
+      "En el camping"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué decía el abuelo de Wilmer?",
+     "options": [
+      "Que no tienen a sus crías con ruido o mucha gente",
+      "Que las llamas nacen siempre de día",
+      "Que las estrellas traen buena suerte"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué decide Wilmer?",
+     "options": [
+      "Llamar al veterinario",
+      "Quedarse toda la noche en el corral",
+      "Dejar tranquila a Estrella"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo va a ver Wilmer la lluvia sin abandonar a la llama?",
+     "options": [
+      "Desde el mirador se ve el corral",
+      "Con la cámara de Ulises",
+      "Por la radio de Hortensia"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué consejo de un abuelo o una abuela sigues usando hoy?",
+     "model": "Mi abuela decía que no hay que decidir con hambre."
+    },
+    {
+     "q": "¿En qué situación es mejor no hacer nada y esperar?",
+     "model": "Cuando discuto con alguien, es mejor esperar un día."
+    },
+    {
+     "q": "¿Qué necesitas tú para hacer algo importante con calma?",
+     "model": "Necesito silencio y una taza de té."
+    }
+   ],
+   "gaps": "Si quiere [esperar] al amanecer, que [espere]. Ella [sabe] más que [nosotros].",
+   "glossary": [
+    {
+     "word": "veterinario",
+     "meaning": "médico de animales"
+    },
+    {
+     "word": "crías",
+     "meaning": "hijos de un animal"
+    },
+    {
+     "word": "tranquila",
+     "meaning": "sin molestias"
+    }
+   ]
+  },
+  {
+   "id": "hamacas",
+   "title": "Un ronquido a distancia",
+   "place": "Las hamacas",
+   "context": "Rocío ha llamado a casa a las dos de la mañana para saber cómo está su hijo. Celeste la escucha reírse desde lejos.",
+   "speakers": [
+    {
+     "name": "Rocío",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Rocío, ¿qué pasa? Te estás riendo sola en la hamaca."
+    },
+    {
+     "s": 0,
+     "text": "Llamé a casa porque estaba preocupada. Pensé que Martín estaría llorando y que Diego no sabría qué hacer."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?"
+    },
+    {
+     "s": 0,
+     "text": "Diego contestó medio dormido y puso el altavoz. Se oían dos ronquidos: uno grande y uno pequeñito. Están dormidos los dos en el sofá, con el perro encima."
+    },
+    {
+     "s": 1,
+     "text": "O sea, que todo está bien."
+    },
+    {
+     "s": 0,
+     "text": "Todo está perfecto. Siete meses pensando que, si yo no estoy, el mundo se cae. Y el mundo ronca tranquilamente sin mí."
+    },
+    {
+     "s": 1,
+     "text": "¿Y eso te pone triste?"
+    },
+    {
+     "s": 0,
+     "text": "No. Me libera. Esta noche no tengo que sostener nada. Solo mirar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué llamó Rocío a casa?",
+     "options": [
+      "Porque estaba preocupada",
+      "Porque Diego la llamó primero",
+      "Porque no tenía sueño"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué se oía por el altavoz?",
+     "options": [
+      "Dos ronquidos",
+      "El llanto de Martín",
+      "La televisión encendida"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Dónde están dormidos Diego y Martín?",
+     "options": [
+      "En el sofá",
+      "En la cama grande",
+      "En el coche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo se siente Rocío al final?",
+     "options": [
+      "Triste porque no la necesitan",
+      "Enfadada con su marido",
+      "Liberada de una responsabilidad"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué responsabilidad te cuesta dejar en manos de otra persona?",
+     "model": "Me cuesta dejar que otros organicen mis viajes."
+    },
+    {
+     "q": "¿Cuándo descubriste que algo funcionaba bien sin ti?",
+     "model": "Cuando volví de vacaciones, la oficina estaba perfecta."
+    },
+    {
+     "q": "¿Qué te hace reír en un día de mucha preocupación?",
+     "model": "Los vídeos de animales haciendo tonterías."
+    }
+   ],
+   "gaps": "Siete meses pensando que, si yo no [estoy], el mundo se [cae]. Y el mundo [ronca] tranquilamente sin [mí].",
+   "glossary": [
+    {
+     "word": "altavoz",
+     "meaning": "función para que todos oigan el teléfono"
+    },
+    {
+     "word": "ronquidos",
+     "meaning": "ruidos que se hacen al dormir"
+    },
+    {
+     "word": "me libera",
+     "meaning": "me quita un peso"
+    }
+   ]
+  },
+  {
+   "id": "sendero",
+   "title": "La oscuridad de Elías",
+   "place": "El sendero del mirador",
+   "context": "Son las dos y media. Las luces del camping están apagadas y el sendero está oscuro. Elías va delante; Marta lo sigue.",
+   "speakers": [
+    {
+     "name": "Elías",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Marta",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Elías, espera. No veo nada. Hay piedras por todas partes."
+    },
+    {
+     "s": 0,
+     "text": "Ahora sabes cómo vivo yo. Dame la mano. El sendero gira a la derecha después de la piedra grande, la que suena hueca."
+    },
+    {
+     "s": 1,
+     "text": "¿Cómo lo sabes?"
+    },
+    {
+     "s": 0,
+     "text": "Esta tarde hice el camino tres veces. Conté los pasos: cuatrocientos doce hasta el mirador. Aquí arriba la oscuridad es igual para todos. Esta noche soy el guía."
+    },
+    {
+     "s": 1,
+     "text": "Detrás vienen unos campistas. ¿Los llevamos también?"
+    },
+    {
+     "s": 0,
+     "text": "Claro. Que se agarren a tu chaqueta. Y diles que no enciendan los teléfonos, que si no, después no ven las estrellas."
+    },
+    {
+     "s": 1,
+     "text": "Elías, eres el único guía que no necesita linterna."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le pasa a Marta en el sendero?",
+     "options": [
+      "No ve nada",
+      "Se torció un tobillo",
+      "Tiene mucho frío"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo conoce Elías el camino?",
+     "options": [
+      "Porque se lo explicó Celeste",
+      "Contó los pasos esta tarde",
+      "Porque tiene un mapa en braille"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos pasos hay hasta el mirador?",
+     "options": [
+      "Cuatrocientos doce",
+      "Doscientos catorce",
+      "Cuatrocientos veinte"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué no quiere que enciendan los teléfonos?",
+     "options": [
+      "Para no gastar batería",
+      "Para que puedan ver las estrellas",
+      "Porque molesta a la llama"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué situación los papeles se invirtieron y tú tuviste que pedir ayuda?",
+     "model": "En un país extranjero, mi hijo tuvo que traducir por mí."
+    },
+    {
+     "q": "¿Qué camino conoces tan bien que podrías hacerlo a oscuras?",
+     "model": "El camino de mi cama a la cocina."
+    },
+    {
+     "q": "¿Qué sentido usas más cuando hay poca luz?",
+     "model": "Uso mucho el oído."
+    }
+   ],
+   "gaps": "Aquí arriba la [oscuridad] es [igual] para [todos]. Esta noche soy el [guía].",
+   "glossary": [
+    {
+     "word": "hueca",
+     "meaning": "vacía por dentro"
+    },
+    {
+     "word": "pasos",
+     "meaning": "movimientos al caminar"
+    },
+    {
+     "word": "se agarren",
+     "meaning": "se sujeten con la mano"
+    }
+   ]
+  },
+  {
+   "id": "cupula",
+   "title": "Los niños al telescopio",
+   "place": "La cúpula del observatorio",
+   "context": "La cúpula ya gira y el telescopio apunta al cielo. Joaquín le pregunta a Doña Amalia quién debería mirar primero.",
+   "speakers": [
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Joaquín",
+     "country": "Panamá",
+     "voice": "es-PA-RobertoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Amalia, el telescopio está listo. Usted debería ser la primera en mirar. Es su cometa."
+    },
+    {
+     "s": 0,
+     "text": "No, Joaquín. Fuera hay una fila de niños esperando. Que miren ellos primero."
+    },
+    {
+     "s": 1,
+     "text": "Pero usted ha esperado sesenta años."
+    },
+    {
+     "s": 0,
+     "text": "Por eso. Yo ya sé lo que se siente al encontrar algo en el cielo. Ellos todavía no. Quizás uno de esos niños descubra algo dentro de diez años y yo pueda decir que le dejé mi turno."
+    },
+    {
+     "s": 1,
+     "text": "¿Y usted desde dónde lo va a ver?"
+    },
+    {
+     "s": 0,
+     "text": "Desde el mirador, sin aparatos, como en 1966. Con un café doble y alguien que me despierte si cierro los ojos."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién cree Joaquín que debería mirar primero?",
+     "options": [
+      "Los niños",
+      "Doña Amalia",
+      "Celeste"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay fuera de la cúpula?",
+     "options": [
+      "Un grupo de periodistas",
+      "Una fila de niños",
+      "El dron de Kiara"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué Amalia deja su turno?",
+     "options": [
+      "Para que los niños vivan la experiencia",
+      "Porque le duele la espalda",
+      "Porque ya vio el cometa ayer"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo quiere ver Amalia la lluvia?",
+     "options": [
+      "Con el telescopio grande",
+      "Desde la cúpula, sentada",
+      "Desde el mirador, sin aparatos"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué oportunidad le cederías a una persona más joven?",
+     "model": "Le cedería mi lugar en un curso a mi sobrina."
+    },
+    {
+     "q": "¿Qué persona te dejó su turno o su lugar alguna vez?",
+     "model": "Una señora me dejó pasar en la fila del banco."
+    },
+    {
+     "q": "¿Qué experiencia te gustaría que vivieran los niños de hoy?",
+     "model": "Me gustaría que jugaran en la calle sin pantallas."
+    }
+   ],
+   "gaps": "Yo ya sé lo que se [siente] al [encontrar] algo en el [cielo]. Ellos todavía [no].",
+   "glossary": [
+    {
+     "word": "fila",
+     "meaning": "personas una detrás de otra"
+    },
+    {
+     "word": "turno",
+     "meaning": "el momento que le toca a alguien"
+    },
+    {
+     "word": "aparatos",
+     "meaning": "instrumentos, máquinas"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "La voz de Salta",
+   "place": "Las caravanas",
+   "context": "Es la una y treinta y cinco. Doña Hortensia gira los botones de la radio. Celeste está a su lado, sin hacer ruido.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Faltan cinco minutos. Si la estación responde, quiero que tú hables también. Mi voz tiembla."
+    },
+    {
+     "s": 1,
+     "text": "¿Yo? Doña Hortensia, usted lleva cincuenta años en la radio. Yo no sabría qué decir."
+    },
+    {
+     "s": 0,
+     "text": "Diles que aquí abajo sesenta y cuatro personas los saludan. Ya… escucha. Hay alguien."
+    },
+    {
+     "s": 1,
+     "text": "¿Es la estación?"
+    },
+    {
+     "s": 0,
+     "text": "No. Es un camionero. Dice que se llama Ramón, que está parado en la ruta, cerca de Salta, y que él también está mirando el cielo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué más dice?"
+    },
+    {
+     "s": 0,
+     "text": "Que hace veinte años que no habla con nadie por radio. Que su padre era radioaficionado y que encendió el equipo esta noche por casualidad."
+    },
+    {
+     "s": 1,
+     "text": "Doña Hortensia, quizás no es un astronauta, pero también está mirando hacia arriba."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué quiere Hortensia que Celeste hable?",
+     "options": [
+      "Porque Celeste habla inglés",
+      "Porque ella está muy cansada",
+      "Porque le tiembla la voz"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién responde por la radio?",
+     "options": [
+      "Un astronauta de la estación",
+      "El marido de Hortensia",
+      "Un camionero cerca de Salta"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué encendió Ramón la radio esta noche?",
+     "options": [
+      "Para hablar con su hija",
+      "Porque Hortensia lo llamó antes",
+      "Por casualidad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere decir Celeste con su última frase?",
+     "options": [
+      "Que el contacto también tiene valor",
+      "Que Ramón miente",
+      "Que hay que seguir buscando la estación"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué afición de tus padres te gustaría continuar?",
+     "model": "Me gustaría continuar con el huerto de mi madre."
+    },
+    {
+     "q": "¿Qué encuentro inesperado te alegró un día normal?",
+     "model": "Me encontré con una amiga del colegio en el metro."
+    },
+    {
+     "q": "¿Qué le dirías a un astronauta si pudieras hablar un minuto con él?",
+     "model": "Le preguntaría si echa de menos la lluvia."
+    }
+   ],
+   "gaps": "Dice que se llama Ramón, que está [parado] en la [ruta], cerca de Salta, y que él también está [mirando] el [cielo].",
+   "glossary": [
+    {
+     "word": "tiembla",
+     "meaning": "se mueve por los nervios"
+    },
+    {
+     "word": "camionero",
+     "meaning": "persona que conduce un camión"
+    },
+    {
+     "word": "equipo",
+     "meaning": "aparato de radio"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Una reunión con espectadores",
+   "place": "Las duchas",
+   "context": "Son las dos y diez. Fabián está en el techo de las duchas, en plena videollamada con Tokio. Rogelio sube con un termo de café.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Don Rogelio, no se mueva. Mis jefes japoneses lo están viendo. Ahora mismo me preguntan dónde estoy."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué les ha dicho?"
+    },
+    {
+     "s": 0,
+     "text": "La verdad: que estoy en un techo, en el desierto, a tres mil seiscientos metros, en toalla. Pensé que me iban a despedir."
+    },
+    {
+     "s": 1,
+     "text": "¿Y?"
+    },
+    {
+     "s": 0,
+     "text": "Me pidieron que girara la cámara hacia el cielo. Ahora hay doce ejecutivos en Tokio, en una sala de reuniones, mirando la lluvia de estrellas en silencio."
+    },
+    {
+     "s": 1,
+     "text": "¿Y los paneles solares?"
+    },
+    {
+     "s": 0,
+     "text": "Dicen que firmamos el contrato mañana. Que cualquier persona capaz de hacer una reunión así merece su confianza."
+    },
+    {
+     "s": 1,
+     "text": "Pues dígales que el café de doña Petrona también viene incluido en el contrato."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le dijo Fabián a sus jefes?",
+     "options": [
+      "Que estaba en un hotel de la capital",
+      "La verdad, con todos los detalles",
+      "Que tenía problemas con la conexión"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué temía Fabián?",
+     "options": [
+      "Que se cortara la llamada",
+      "Que lo despidieran",
+      "Que Rogelio lo regañara"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le pidieron los jefes?",
+     "options": [
+      "Que girara la cámara hacia el cielo",
+      "Que se pusiera un traje y volviera a la reunión",
+      "Que terminara la reunión rápido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué confían en Fabián, según los jefes?",
+     "options": [
+      "Porque siempre llega puntual a todas las reuniones",
+      "Por su manera de resolver la situación",
+      "Porque vende muy barato"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué situación incómoda de trabajo terminó bien gracias a la sinceridad?",
+     "model": "Confesé un error a mi jefa y me lo agradeció."
+    },
+    {
+     "q": "¿Qué espectáculo natural le mostrarías a alguien que vive en otro país?",
+     "model": "Le mostraría la puesta de sol en mi playa."
+    },
+    {
+     "q": "¿Qué opinas de las reuniones de trabajo por videollamada?",
+     "model": "Creo que ahorran tiempo, pero son más frías."
+    }
+   ],
+   "gaps": "Ahora hay [doce] [ejecutivos] en Tokio, en una sala de [reuniones], mirando la lluvia de estrellas en [silencio].",
+   "glossary": [
+    {
+     "word": "despedir",
+     "meaning": "quitarle el trabajo a alguien"
+    },
+    {
+     "word": "ejecutivos",
+     "meaning": "personas que dirigen una empresa"
+    },
+    {
+     "word": "contrato",
+     "meaning": "acuerdo firmado"
+    }
+   ]
+  },
+  {
+   "id": "mina",
+   "title": "El casco en el mirador",
+   "place": "La casucha minera",
+   "context": "Don Ramiro guarda la carta en el bolsillo. Antes de salir de la casucha, le cuenta a Celeste por qué le da miedo el cielo abierto.",
+   "speakers": [
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Usted pensará que es una tontería, señorita, pero bajo tierra me siento seguro. Arriba hay paredes de roca, abajo hay roca. Sé dónde empieza y dónde termina todo."
+    },
+    {
+     "s": 1,
+     "text": "¿Y el cielo?"
+    },
+    {
+     "s": 0,
+     "text": "El cielo no termina nunca. La primera vez que terminé un turno de noche y vi todas las estrellas, me mareé. Desde entonces, cuando salgo de noche, miro al suelo."
+    },
+    {
+     "s": 1,
+     "text": "Don Ramiro, ¿quiere saber un secreto? A mí me pasa lo mismo con la oscuridad. Soy guía y tengo miedo."
+    },
+    {
+     "s": 0,
+     "text": "¿Usted? Entonces somos dos cobardes."
+    },
+    {
+     "s": 1,
+     "text": "Dos cobardes con casco y linterna. Si subimos juntos, nos cuidamos."
+    },
+    {
+     "s": 0,
+     "text": "Trato hecho. Pero el casco no me lo quito."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué se siente seguro Ramiro bajo tierra?",
+     "options": [
+      "Porque allí hace menos frío",
+      "Porque sabe dónde empieza y termina todo",
+      "Porque trabajó con sus amigos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le pasó la primera vez que vio todas las estrellas?",
+     "options": [
+      "Lloró de emoción",
+      "Se quedó dormido en el suelo",
+      "Se mareó"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué secreto le cuenta Celeste?",
+     "options": [
+      "Que le tiene miedo a la oscuridad",
+      "Que no es guía de verdad",
+      "Que conoció a Rosaura"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué acuerdo llegan?",
+     "options": [
+      "Suben juntos y se cuidan",
+      "Ramiro se queda en la casucha",
+      "Celeste le presta su linterna"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lugar te da una sensación de seguridad y por qué?",
+     "model": "Mi cocina, porque huele a casa."
+    },
+    {
+     "q": "¿Qué miedo compartiste con alguien y te ayudó a sentirte mejor?",
+     "model": "Le conté a un amigo mi miedo a volar y él también lo tenía."
+    },
+    {
+     "q": "¿Qué te parece más difícil: un espacio muy cerrado o uno muy abierto?",
+     "model": "Me cuesta más un espacio muy cerrado, como un ascensor."
+    }
+   ],
+   "gaps": "La primera vez que terminé un turno de [noche] y vi todas las [estrellas], me [mareé]. Desde entonces, cuando salgo de noche, miro al [suelo].",
+   "glossary": [
+    {
+     "word": "tontería",
+     "meaning": "cosa sin importancia"
+    },
+    {
+     "word": "me mareé",
+     "meaning": "tuve la sensación de que todo daba vueltas"
+    },
+    {
+     "word": "cobardes",
+     "meaning": "personas con miedo"
+    },
+    {
+     "word": "trato hecho",
+     "meaning": "estamos de acuerdo"
+    }
+   ]
+  },
+  {
+   "id": "salar",
+   "title": "La foto que nadie esperaba",
+   "place": "El salar",
+   "context": "Ulises mira en la pantalla de su cámara la foto que hizo con el balde de agua. Celeste se acerca para verla.",
+   "speakers": [
+    {
+     "name": "Ulises",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "¿Salió bien la foto del espejo?"
+    },
+    {
+     "s": 0,
+     "text": "Técnicamente es horrible. El balde se ve, el agua se movió por el viento y hay una bota mía en una esquina."
+    },
+    {
+     "s": 1,
+     "text": "Vaya."
+    },
+    {
+     "s": 0,
+     "text": "Pero mira. En el reflejo del agua aparecen tres estrellas fugaces y la cara de un niño que se acercó a mirar. Tiene la boca abierta, así."
+    },
+    {
+     "s": 1,
+     "text": "Es preciosa, Ulises."
+    },
+    {
+     "s": 0,
+     "text": "Durante veinte años busqué la foto perfecta, la de las revistas. Y la mejor foto de mi vida tiene un balde y una bota."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué vas a hacer con ella?"
+    },
+    {
+     "s": 0,
+     "text": "Regalársela a la madre del niño. Yo ya la tengo aquí. En la memoria."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué problemas técnicos tiene la foto?",
+     "options": [
+      "Está totalmente oscura",
+      "Se ven el balde y una bota",
+      "Se movió la cámara"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué aparece en el reflejo?",
+     "options": [
+      "La cara de Ulises",
+      "La luna llena sobre el salar",
+      "Tres estrellas fugaces y un niño"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué buscaba Ulises durante veinte años?",
+     "options": [
+      "Una foto de llamas",
+      "La foto perfecta de revista",
+      "Un premio internacional"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué va a hacer con la foto?",
+     "options": [
+      "Regalársela a la madre del niño",
+      "Venderla a una revista",
+      "Publicarla en internet"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué foto imperfecta es una de tus favoritas?",
+     "model": "Una foto movida de mi boda, donde todos se ríen."
+    },
+    {
+     "q": "¿Qué objetivo cambiaste porque encontraste algo mejor por el camino?",
+     "model": "Quería ser abogada, pero al final me di cuenta de que me gusta enseñar."
+    },
+    {
+     "q": "¿Qué momento guardas en la memoria aunque no tengas foto?",
+     "model": "El primer día que vi nieve."
+    }
+   ],
+   "gaps": "En el reflejo del [agua] aparecen tres estrellas [fugaces] y la cara de un [niño] que se acercó a [mirar].",
+   "glossary": [
+    {
+     "word": "técnicamente",
+     "meaning": "desde el punto de vista técnico"
+    },
+    {
+     "word": "reflejo",
+     "meaning": "imagen que se ve en el agua"
+    },
+    {
+     "word": "esquina",
+     "meaning": "rincón, borde"
+    }
+   ]
+  },
+  {
+   "id": "astrologa",
+   "title": "Clase gratis en la orilla",
+   "place": "La orilla del salar",
+   "context": "La astróloga Zulema ha cambiado el cartel de su puesto. Ahora dice «Física gratis». Lucía se sienta a escuchar.",
+   "speakers": [
+    {
+     "name": "Zulema",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Bienvenida a la primera clase de física con velas de la historia. Pregunta lo que quieras."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué cambiaste el cartel?"
+    },
+    {
+     "s": 0,
+     "text": "Porque esta tarde una niña me preguntó si las estrellas fugaces cumplen deseos, y le dije que sí. Después me quedé con mala conciencia. Yo sé lo que son."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué son, según tú?"
+    },
+    {
+     "s": 0,
+     "text": "Granos de polvo del tamaño de una lenteja que entran en la atmósfera a setenta kilómetros por segundo y se queman por la fricción. Pero, ¿sabes qué? La niña no quería física. Quería esperanza."
+    },
+    {
+     "s": 1,
+     "text": "¿Y no se pueden tener las dos?"
+    },
+    {
+     "s": 0,
+     "text": "Eso intento esta noche. Le explico la física y después le dejo pedir el deseo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué dice ahora el cartel del puesto?",
+     "options": [
+      "Física gratis",
+      "Horóscopos a mitad de precio",
+      "Cerrado por la lluvia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué se sintió mal Zulema esta tarde?",
+     "options": [
+      "Porque nadie compró horóscopos",
+      "Porque le dijo algo falso a una niña",
+      "Porque discutió con Lucía"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué tamaño son los granos de polvo?",
+     "options": [
+      "Como una pelota de tenis",
+      "Como una casa",
+      "Como una lenteja"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere hacer Zulema esta noche?",
+     "options": [
+      "Combinar la física y los deseos",
+      "Leerle el futuro a la niña",
+      "Volver a la universidad"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué mentira piadosa le dijiste a un niño?",
+     "model": "Le dije a mi sobrino que su pez se fue de vacaciones."
+    },
+    {
+     "q": "¿Crees que la ciencia y la ilusión pueden convivir? ¿Por qué?",
+     "model": "Sí, porque entender algo no le quita la magia."
+    },
+    {
+     "q": "¿Qué deseo le pediste una vez a una vela de cumpleaños?",
+     "model": "Que me fuera bien en un examen difícil, y me fue bien."
+    }
+   ],
+   "gaps": "Pero, ¿sabes qué? La niña no quería [física]. Quería [esperanza]. ¿Y no se pueden [tener] las [dos]?",
+   "glossary": [
+    {
+     "word": "lenteja",
+     "meaning": "legumbre pequeña y redonda"
+    },
+    {
+     "word": "fricción",
+     "meaning": "roce entre dos cosas"
+    },
+    {
+     "word": "esperanza",
+     "meaning": "confianza en que algo bueno pasará"
+    }
+   ]
+  },
+  {
+   "id": "dron",
+   "title": "El dron en la olla",
+   "place": "Las rocas",
+   "context": "El dron de Kiara se quedó sin batería y desapareció en la oscuridad. Dante vuelve corriendo de la carpa cocina.",
+   "speakers": [
+    {
+     "name": "Kiara",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Dante",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Kiara, encontré el dron."
+    },
+    {
+     "s": 0,
+     "text": "¿Dónde está? ¿Está roto?"
+    },
+    {
+     "s": 1,
+     "text": "Aterrizó solo en la carpa cocina. Exactamente dentro de una olla de sopa de quinua. Vacía, por suerte."
+    },
+    {
+     "s": 0,
+     "text": "No me lo puedo creer. Mi dron de mil dólares en una olla."
+    },
+    {
+     "s": 1,
+     "text": "Doña Petrona dice que es la primera vez que le cae algo del cielo en la cocina y que no piensa devolverlo hasta que le enseñes a usarlo."
+    },
+    {
+     "s": 0,
+     "text": "¿Para qué quiere un dron una cocinera?"
+    },
+    {
+     "s": 1,
+     "text": "Para llevarle café a la gente del mirador sin subir la cuesta."
+    },
+    {
+     "s": 0,
+     "text": "Bueno. Al menos alguien le va a dar un buen uso. Y yo voy a mirar las estrellas sin pantalla, para variar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué cayó el dron?",
+     "options": [
+      "Chocó con una roca",
+      "Se quedó sin batería",
+      "Dante lo apagó sin querer"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde aterrizó?",
+     "options": [
+      "En el corral de las llamas",
+      "Dentro de una olla vacía",
+      "En el techo de las duchas"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué condición pone Petrona para devolverlo?",
+     "options": [
+      "Que Kiara pague la olla",
+      "Que Kiara le enseñe a usarlo",
+      "Que Kiara la siga en internet"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Para qué quiere Petrona el dron?",
+     "options": [
+      "Para hacer fotos de su comida",
+      "Para vigilar a las llamas",
+      "Para subir café al mirador"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué aparato caro se te rompió o se te perdió de una forma absurda?",
+     "model": "Se me cayó el teléfono dentro de un acuario."
+    },
+    {
+     "q": "¿Qué uso creativo le diste a un objeto que no era para eso?",
+     "model": "Uso una tabla de cortar como bandeja."
+    },
+    {
+     "q": "¿Qué te gustaría enseñarle a una persona mayor sobre tecnología?",
+     "model": "Me gustaría enseñarle a mi padre a hacer videollamadas."
+    }
+   ],
+   "gaps": "Aterrizó solo en la carpa cocina. Exactamente dentro de una [olla] de [sopa] de quinua. [Vacía], por [suerte].",
+   "glossary": [
+    {
+     "word": "aterrizó",
+     "meaning": "bajó a tierra"
+    },
+    {
+     "word": "cuesta",
+     "meaning": "camino que sube"
+    },
+    {
+     "word": "dar un buen uso",
+     "meaning": "usar algo de forma útil"
+    }
+   ]
+  },
+  {
+   "id": "mirador",
+   "title": "Mil por hora",
+   "place": "El mirador",
+   "context": "Son las tres y doce. El cielo está lleno de estrellas fugaces. Celeste, Amalia y Ramiro están sentados en la roca más alta.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 2,
+     "text": "Señorita Celeste, ¿cuántas han caído ya?"
+    },
+    {
+     "s": 0,
+     "text": "Más de mil por hora, Don Ramiro. Es la lluvia más grande desde 1966. La próxima vez que pase algo así, ninguno de nosotros estará aquí."
+    },
+    {
+     "s": 1,
+     "text": "Yo no estaré, seguro. Pero esta vez la estoy viendo entera. Llevo cuarenta minutos con los ojos abiertos."
+    },
+    {
+     "s": 2,
+     "text": "Yo también. Me quité el casco hace un rato y ni me di cuenta."
+    },
+    {
+     "s": 0,
+     "text": "Y yo apagué la linterna. Hay tanta luz en el cielo que no me hace falta."
+    },
+    {
+     "s": 1,
+     "text": "Celeste, lee la libreta. Quiero oír cómo subió cada uno."
+    },
+    {
+     "s": 0,
+     "text": "Espere. Primero, todos, pidan un deseo. En silencio, que si no, no se cumple. Después leo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántas estrellas fugaces caen por hora?",
+     "options": [
+      "Unas cien",
+      "Exactamente sesenta y cuatro",
+      "Más de mil"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Desde cuándo no había una lluvia tan grande?",
+     "options": [
+      "Desde 1997",
+      "Desde 1966",
+      "Desde hace diez años"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hizo Ramiro sin darse cuenta?",
+     "options": [
+      "Se quedó dormido",
+      "Se quitó el casco",
+      "Perdió la carta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué pide Celeste antes de leer la libreta?",
+     "options": [
+      "Que apaguen los teléfonos",
+      "Que se sienten en silencio",
+      "Que todos pidan un deseo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué miedo dejaste atrás casi sin darte cuenta?",
+     "model": "El miedo a conducir de noche."
+    },
+    {
+     "q": "¿Qué acontecimiento único te gustaría presenciar antes de morir?",
+     "model": "Me gustaría ver un eclipse total."
+    },
+    {
+     "q": "¿Qué deseo pedirías esta noche si vieras mil estrellas fugaces?",
+     "model": "Pediría que mi familia esté siempre unida."
+    }
+   ],
+   "gaps": "Y yo apagué la [linterna]. Hay tanta [luz] en el [cielo] que no me hace [falta].",
+   "glossary": [
+    {
+     "word": "ni me di cuenta",
+     "meaning": "no lo noté"
+    },
+    {
+     "word": "libreta",
+     "meaning": "cuaderno pequeño"
+    },
+    {
+     "word": "entera",
+     "meaning": "completa, de principio a fin"
+    }
+   ]
+  }
+ ]
+}

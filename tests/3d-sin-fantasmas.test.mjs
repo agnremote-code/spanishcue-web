@@ -28,6 +28,7 @@ const papel = await import('../app/el-mundo-en-blanco/layout.mjs');
 const hr = await import('../app/hr-crisis/oficina.mjs');
 const perdidos = await import('../app/objetos-perdidos/layout.mjs');
 const crucero = await import('../app/ultimo-crucero/layout.mjs');
+const estrellas = await import('../app/lluvia-de-estrellas/layout.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -295,7 +296,21 @@ function cruceroWorld() {
     spots: [{ id: 'spawn', ...crucero.SPAWN }, ...crucero.SCENES.map(s => ({ id: s.id, ...s.spot })), ...crucero.LANDMARKS.map(l => ({ id: `charla-${l.id}`, x: l.x, z: l.z }))],
   };
 }
-const WORLDS = [papelWorld(), cruceroWorld(), perdidosWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), realityWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+// Lluvia de estrellas: Camping Los Cardones, from the barrier to the lookout:
+// the people of the 18 circles, the 17 campers who talk, the other campers,
+// and the three who walk. The mascot is put at the spawn, every circle and
+// every landmark circle.
+function estrellasWorld() {
+  const scenePeople = estrellas.SCENES.flatMap(s => [s.npc, ...(s.extras ?? [])].map((p, i) => ({ id: `${s.id}-${i}`, x: p.x, z: p.z, y: p.y ?? 0, seated: Boolean(p.seat || /sit|lie|sleep/.test(i === 0 ? s.pose : p.pose ?? '')), lying: Boolean(p.lying) })));
+  const party = (list, tag) => list.map((c, i) => ({ id: `${tag}-${i}`, x: c.x, z: c.z, y: c.y ?? 0, seated: Boolean(c.seat || /sit|lie|sleep/.test(c.pose)), lying: /lie|fallen/.test(c.pose) }));
+  return {
+    id: 'estrellas', solids: estrellas.solidsFor().filter(b => !b.person), bounds: estrellas.BOUNDS, staticWalkers: true,
+    people: [...scenePeople, ...party(estrellas.CROWD, 'campista'), ...party(estrellas.FILLERS, 'camping')],
+    walkers: estrellas.WALKERS.map((w, i) => { const pts = []; for (let t = 0; t < 900; t += 0.05) pts.push(estrellas.walkerAt(w, t)); return { id: `walker-${i}`, points: pts }; }),
+    spots: [{ id: 'spawn', ...estrellas.SPAWN }, ...estrellas.SCENES.map(s => ({ id: s.id, ...s.spot })), ...estrellas.LANDMARKS.map(l => ({ id: `charla-${l.id}`, x: l.x, z: l.z }))],
+  };
+}
+const WORLDS = [papelWorld(), cruceroWorld(), perdidosWorld(), estrellasWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), realityWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {
