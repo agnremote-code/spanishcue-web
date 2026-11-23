@@ -106,10 +106,10 @@ export default {
       { say: "Simón, toda base necesita a alguien de guardia mientras el equipo descansa. ¿Puedes vigilar la carpa mientras tu mamá duerme un rato?", reply: "Misión aceptada. Mamá, duerme, que yo te cuido. Si viene alguien verde, te despierto.", end: "Gabriela se durmió en la carpa y Simón la cuidó como un astronauta de guardia, con la linterna apuntando a la puerta.", mood: "sleepy" },
     ],
     talk: [
-      "¿Qué teoría disparatada defendías de pequeño con argumentos que te parecían irrefutables?",
+      "¿Qué teoría disparatada defendías en tu infancia con argumentos que te parecían irrefutables?",
       "¿Cómo explicarías a un alumno de nueve años la diferencia entre una hipótesis y una fantasía?",
       "¿Qué opinas de que los padres alimenten las fantasías infantiles en lugar de corregirlas?",
-      "¿Qué responsabilidad recibiste de niño que te hizo sentir importante de verdad?",
+      "¿Qué responsabilidad recibiste en la infancia que te hizo sentir importante de verdad?",
       "Si recibieras a un visitante de otro planeta, ¿qué costumbre local te daría vergüenza explicarle?",
     ],
     words: ["el remiendo", "la cinta adhesiva", "el rotulador", "bostezar", "la solemnidad", "estar de guardia"],

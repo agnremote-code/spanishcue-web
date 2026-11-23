@@ -174,7 +174,7 @@ export default {
     ],
     talk: [
       "¿Qué truco de campo o de huerta aprendiste de tus mayores?",
-      "¿Qué animal cuidaste de niño o de joven?",
+      "¿Qué animal cuidaste en tu infancia o juventud?",
       "¿Qué hiciste la primera vez que tuviste una responsabilidad grande?",
       "¿Qué nombre curioso tenía una mascota que conociste?",
       "¿Qué decisión difícil tomaste sin ayuda de nadie?",
@@ -285,7 +285,7 @@ export default {
       { say: "Apague la lámpara del casco un momento y mire hacia arriba conmigo.", reply: "¿Arriba? Está bien… ¡Madre mía! ¿Siempre estuvo así?", end: "Don Ramiro apagó la lámpara del casco y miró hacia arriba por primera vez de noche.", mood: "surprised" },
     ],
     talk: [
-      "¿Qué escondiste de niño o de joven y nunca encontraste?",
+      "¿Qué escondiste en tu infancia o juventud y nunca encontraste?",
       "¿Qué oficio desapareció de tu pueblo o de tu ciudad?",
       "¿Qué carta o mensaje nunca enviaste?",
       "¿Qué rutina tenías en tu primer trabajo?",
@@ -332,7 +332,7 @@ export default {
       "¿Qué carrera empezaste o pensaste empezar y después cambiaste?",
       "¿Qué superstición tenía alguien de tu familia?",
       "¿Qué secreto profesional de algún trabajo conoces?",
-      "¿Qué predicción del futuro escuchaste de niño y nunca se cumplió?",
+      "¿Qué predicción del futuro escuchaste en tu infancia y nunca se cumplió?",
       "¿Qué misterio sin resolver te parece fascinante?",
     ],
     words: ["la astróloga", "barajar", "de reojo", "el grano de polvo", "cobrar"],
