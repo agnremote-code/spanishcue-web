@@ -76,7 +76,7 @@ export const INVITADOS = {
     name: 'Don Ramiro',
     who: { es: 'Hombre de mantenimiento de la oficina desde hace treinta años', en: 'The office’s maintenance man for thirty years' },
     basic: { es: 'Arreglo las luces y las puertas de la oficina. Esta noche la máquina de números está rota. Otra vez.', en: 'I fix the lights and doors of the office. Tonight the ticket machine is broken. Again.' },
-    basicAsk: { es: '¿Qué cosa de tu casa está siempre rota?', en: 'What thing in your home is always broken?' },
+    basicAsk: { es: '¿Qué máquina de tu casa hace ruidos raros?', en: 'Which machine in your home makes strange noises?' },
     mid: 'Llevo treinta años arreglando esta oficina: las goteras del archivo, la puerta del muelle que se atasca, la cámara fría que suena como un barco. Esta noche la máquina de números se ha vuelto loca y escupe tickets de cien en cien. Ya le he dado dos golpes, que es el método oficial. Si no funciona, le daré un tercero. Las máquinas viejas, como los viejos, necesitan que alguien les haga caso.',
     midAsk: '¿Qué aparato viejo sigues usando aunque podrías cambiarlo?',
     high: 'La gente cree que el edificio funciona solo. No sabe que la cámara fría lleva doce años con una pieza que fabriqué yo con una lata de conservas, ni que la puerta del muelle solo se abre si la empujas mientras le hablas bonito. Cuando me jubile, nadie va a saber esos trucos. He pensado en escribirlos, pero ¿cómo se escribe «un golpecito cariñoso a la izquierda»? Hay conocimientos que viven en las manos y se van con ellas. Eso me preocupa más que la máquina de números.',

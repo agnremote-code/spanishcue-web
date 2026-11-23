@@ -369,7 +369,7 @@ export default {
       "¿Dónde termina la curiosidad comprensible y empieza la falta de respeto?",
       "¿Qué te inspira alguien que lleva décadas aplazando una confesión?",
       "¿Qué cambia en una relación laboral cuando sabes algo íntimo de la otra persona?",
-      "¿Qué mentira piadosa te parece aceptable para proteger la intimidad de alguien?",
+      "¿Hasta qué punto debe uno fingir ignorancia cuando se entera de algo íntimo por accidente?",
     ],
     words: ["desvencijado", "absorto", "la integridad", "el pacto de silencio", "la licencia poética"],
   },
