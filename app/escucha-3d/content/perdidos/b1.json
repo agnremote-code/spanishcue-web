@@ -1,0 +1,1888 @@
+{
+ "game": "perdidos",
+ "level": "B1",
+ "items": [
+  {
+   "id": "dentadura",
+   "title": "Un pañuelo y mucha dignidad",
+   "place": "El mostrador",
+   "context": "Don Evaristo explica a Celestino por qué no puede esperar a mañana.",
+   "speakers": [
+    {
+     "name": "Evaristo",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Usted me dirá que vuelva por la mañana, pero no puedo. A las nueve tengo la comida de los jubilados del barrio, y me toca dar el discurso. ¿Usted se imagina un discurso sin dientes?"
+    },
+    {
+     "s": 1,
+     "text": "Me lo imagino perfectamente: nadie se quejaría de que habla demasiado."
+    },
+    {
+     "s": 0,
+     "text": "Muy gracioso. Mire, yo no soy un hombre vanidoso, pero tengo setenta y ocho años y mi sonrisa es lo único que conservo intacto. Bueno, lo que conservaba."
+    },
+    {
+     "s": 1,
+     "text": "Tranquilo. De las tres que tenemos, una estaba dentro de una tuba. Si usted bailó delante de la banda, tiene muchas posibilidades."
+    },
+    {
+     "s": 0,
+     "text": "Bailé delante, detrás y encima, si me apura. Tráigala, por favor, y que alguien la lave antes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué no puede esperar Evaristo?",
+     "options": [
+      "Su hija viene a buscarlo a las ocho en punto",
+      "La oficina cierra pronto",
+      "Tiene que dar un discurso a las nueve"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué broma hace Celestino?",
+     "options": [
+      "Que sin dientes hablaría menos",
+      "Que la dentadura está en la basura",
+      "Que el discurso será aburrido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Evaristo de su sonrisa?",
+     "options": [
+      "Que nunca le gustó, ni de joven",
+      "Es la de su padre",
+      "Era lo único que tenía intacto"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué pide Evaristo antes de probarla?",
+     "options": [
+      "Que llamen a un dentista de guardia",
+      "Que la guarden",
+      "Que la laven"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué parte de tu aspecto cuidas más que nada?",
+     "model": "El pelo; me cuesta salir de casa si no me peino bien."
+    },
+    {
+     "q": "¿Cómo te preparas cuando tienes que hablar en público?",
+     "model": "Ensayo delante del espejo y respiro hondo antes de empezar."
+    },
+    {
+     "q": "¿Qué situación vergonzosa contarías hoy con humor?",
+     "model": "Una vez fui a una entrevista con la camisa al revés."
+    }
+   ],
+   "gaps": "Mire, yo no soy un hombre [vanidoso], pero tengo setenta y ocho años y mi [sonrisa] es lo único que [conservo] [intacto].",
+   "glossary": [
+    {
+     "word": "discurso",
+     "meaning": "texto que alguien dice delante de un público"
+    },
+    {
+     "word": "vanidoso",
+     "meaning": "que se preocupa demasiado por su imagen"
+    },
+    {
+     "word": "intacto",
+     "meaning": "completo, sin daño"
+    },
+    {
+     "word": "si me apura",
+     "meaning": "si quiere que exagere un poco"
+    }
+   ]
+  },
+  {
+   "id": "paraguas",
+   "title": "Llamar o no llamar",
+   "place": "Las estanterías de paraguas",
+   "context": "Rocío duda delante del teléfono de la oficina, con la etiqueta del paraguas en la mano.",
+   "speakers": [
+    {
+     "name": "Rocío",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Es que me da vergüenza. Son casi las doce de la noche. ¿Qué le digo? «Hola, soy la chica del paraguas, la que no te dio las gracias»."
+    },
+    {
+     "s": 1,
+     "text": "Le dice la verdad. Usted vino hasta aquí a devolver un paraguas de diez euros. Eso ya dice mucho de usted."
+    },
+    {
+     "s": 0,
+     "text": "Lo que pasa es que no vine solo por el paraguas. Me gustó cómo me miró. Desde que me separé, no me había fijado en nadie."
+    },
+    {
+     "s": 1,
+     "text": "Pues fíjese en esto: él escribió «Si me encuentras, llama a Teo» dentro de un paraguas. Ese hombre quiere que lo llamen."
+    },
+    {
+     "s": 0,
+     "text": "O lo pierde todo y por eso pone etiquetas. ¡Ay! Bueno, si contesta una mujer, cuelgo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué duda Rocío?",
+     "options": [
+      "No tiene saldo en el teléfono",
+      "No encuentra el número de la etiqueta",
+      "Le da vergüenza llamar tan tarde"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dice Celestino de la visita de Rocío?",
+     "options": [
+      "Que dice mucho de ella",
+      "Que es una pérdida de tiempo",
+      "Que el paraguas es caro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué confiesa Rocío?",
+     "options": [
+      "Que el paraguas es suyo",
+      "Que conoce a Teo de antes",
+      "Que le gustó cómo la miró"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hará Rocío si contesta una mujer?",
+     "options": [
+      "Pedir hablar con Teo enseguida",
+      "Colgar",
+      "Explicarlo todo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué gesto pequeño te dice mucho de una persona?",
+     "model": "Cómo trata a los camareros; ahí se ve todo."
+    },
+    {
+     "q": "¿En qué situación te cuesta dar el primer paso?",
+     "model": "Cuando tengo que pedir perdón a alguien de mi familia."
+    },
+    {
+     "q": "¿Qué te hace fijarte en alguien por primera vez?",
+     "model": "Su manera de reírse sin vergüenza."
+    }
+   ],
+   "gaps": "Lo que pasa es que no vine solo por el [paraguas]. Me gustó cómo me [miró]. Desde que me [separé], no me había [fijado] en nadie.",
+   "glossary": [
+    {
+     "word": "me da vergüenza",
+     "meaning": "siento timidez o pudor"
+    },
+    {
+     "word": "me separé",
+     "meaning": "terminé mi relación de pareja"
+    },
+    {
+     "word": "fijado",
+     "meaning": "prestado atención"
+    },
+    {
+     "word": "cuelgo",
+     "meaning": "termino la llamada"
+    }
+   ]
+  },
+  {
+   "id": "llaves",
+   "title": "Una horquilla y veinte años de oficio",
+   "place": "El pasillo de las llaves",
+   "context": "Wilson vuelve al pasillo de las llaves: la llave del pez no abre su taller.",
+   "speakers": [
+    {
+     "name": "Wilson",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "No lo puedo creer. Era el llavero de mi hija, sí, pero la llave no es la mía. Alguien encontró mi llavero y le puso sus propias llaves. ¡Me robaron el pez!"
+    },
+    {
+     "s": 0,
+     "text": "Llevo veinte años abriendo cerraduras de otros. Puertas blindadas, cajas fuertes, el coche del alcalde una vez. Y ahora estoy aquí, a la una de la mañana, sin herramientas."
+    },
+    {
+     "s": 0,
+     "text": "A ver, a ver… en esta caja hay objetos del pelo: gomas, pinzas, horquillas. Con dos horquillas un buen cerrajero abre casi cualquier cerradura vieja. Y mi taller tiene una cerradura de mil novecientos setenta. Si me ve alguien, va a pensar que soy un ladrón."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué descubre Wilson al probar la llave?",
+     "options": [
+      "Que no es la suya",
+      "Que su taller está abierto",
+      "Que la llave está rota"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué abrió Wilson una vez?",
+     "options": [
+      "La caja fuerte de un banco",
+      "La oficina de objetos",
+      "El coche del alcalde"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué encuentra en la caja de objetos del pelo?",
+     "options": [
+      "Un llavero con forma de gato",
+      "Unas tijeras",
+      "Horquillas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué teme Wilson al final?",
+     "options": [
+      "Que la cerradura sea moderna",
+      "Que su hija se enfade por el llavero",
+      "Que lo confundan con un ladrón"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué habilidad de tu trabajo usas también en casa?",
+     "model": "Organizar; en casa todo tiene una etiqueta, como en mi oficina."
+    },
+    {
+     "q": "¿Qué objeto de un hijo, un sobrino o un alumno guardas con cariño?",
+     "model": "Una taza que pintó mi sobrina para mi cumpleaños."
+    },
+    {
+     "q": "¿Qué arreglaste con lo que tenías a mano?",
+     "model": "Una mochila rota, con un imperdible y paciencia."
+    }
+   ],
+   "gaps": "Con dos [horquillas] un buen [cerrajero] abre casi cualquier [cerradura] vieja. Y mi [taller] tiene una cerradura de mil novecientos setenta.",
+   "glossary": [
+    {
+     "word": "cerraduras",
+     "meaning": "mecanismos que cierran puertas"
+    },
+    {
+     "word": "herramientas",
+     "meaning": "instrumentos para trabajar"
+    },
+    {
+     "word": "horquillas",
+     "meaning": "pinzas finas para sujetar el pelo"
+    }
+   ]
+  },
+  {
+   "id": "telefono",
+   "title": "Tres copias de una voz",
+   "place": "La estantería de los teléfonos",
+   "context": "Con el teléfono ya cargado, Herminia escucha el mensaje de Julio junto a Celestino.",
+   "speakers": [
+    {
+     "name": "Herminia",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Lo oyó? «Herminia, compra pan, que ya voy». Eso fue lo último. Esa tarde se cayó en la escalera del mercado y ya no llegó a casa."
+    },
+    {
+     "s": 1,
+     "text": "Lo siento mucho. Es una frase muy sencilla."
+    },
+    {
+     "s": 0,
+     "text": "Por eso me gusta. Si me hubiera dicho algo solemne, no lo podría escuchar todas las noches. Pero «compra pan» es su voz de todos los días, la de cuarenta y nueve años juntos."
+    },
+    {
+     "s": 1,
+     "text": "Mire, si quiere, mi compañero Yuri sabe de tecnología. Podemos guardar el mensaje en otro sitio, por si el teléfono se pierde otra vez."
+    },
+    {
+     "s": 0,
+     "text": "Mi nieto Iker me lo dice desde hace dos años y yo nunca quise. Me daba miedo borrarlo. Esta noche entiendo que el miedo era perderlo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le pasó a Julio?",
+     "options": [
+      "Tuvo un accidente de coche",
+      "Se cayó en la escalera del mercado",
+      "Se enfermó en casa durante el invierno"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué le gusta a Herminia que el mensaje sea sencillo?",
+     "options": [
+      "Porque es corto y fácil de escuchar",
+      "Porque Julio hablaba poco",
+      "Porque es su voz de todos los días"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años estuvieron juntos?",
+     "options": [
+      "Ochenta y uno",
+      "Cuarenta y nueve",
+      "Diecinueve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Celestino?",
+     "options": [
+      "Guardar el mensaje en otro sitio",
+      "Comprar un teléfono moderno",
+      "Borrar los mensajes viejos del teléfono"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué frase cotidiana de alguien querido te gustaría guardar?",
+     "model": "El «ya llegué» que grita mi padre al entrar en casa."
+    },
+    {
+     "q": "¿Qué cosas importantes guardas en más de un sitio?",
+     "model": "Las fotos de mis hijos, en el ordenador y en la nube."
+    },
+    {
+     "q": "¿Qué cambio aceptaste cuando por fin entendiste tu propio miedo?",
+     "model": "Mudarme; tenía miedo de la soledad, no de la ciudad."
+    }
+   ],
+   "gaps": "Pero «compra pan» es su [voz] de todos los [días], la de cuarenta y nueve [años] [juntos].",
+   "glossary": [
+    {
+     "word": "solemne",
+     "meaning": "muy serio y formal"
+    },
+    {
+     "word": "borrarlo",
+     "meaning": "eliminarlo para siempre"
+    },
+    {
+     "word": "sencilla",
+     "meaning": "simple, sin adornos"
+    }
+   ]
+  },
+  {
+   "id": "bonsai",
+   "title": "Veinte años de agua",
+   "place": "La cámara fría",
+   "context": "Gaspar le cuenta al nuevo empleado cómo fueron sus veinte años con el bonsái.",
+   "speakers": [
+    {
+     "name": "Gaspar",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mi abuelo me lo dio en su casa del campo, muy serio: «Este árbol tiene sesenta años. Si lo cuidas, te cuidará». Yo tenía treinta y dos y acababa de perder un trabajo. Me pareció una señal."
+    },
+    {
+     "s": 0,
+     "text": "Lo regué cada mañana. Me mudé cuatro veces y siempre lo llevé en el asiento del copiloto. Mis parejas se quejaban: «Ese árbol te importa más que yo». Y quizás tenían razón."
+    },
+    {
+     "s": 0,
+     "text": "Ayer lo olvidé en el tren y casi me da algo. Hoy descubro que es de plástico. Y lo raro es que no me siento estafado. Mi abuelo sabía que yo necesitaba una rutina, algo que cuidar. Me dio un árbol que no podía morirse."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le dijo el abuelo al darle el bonsái?",
+     "options": [
+      "Que debía venderlo algún día",
+      "Que si lo cuidaba, lo cuidaría",
+      "Que era muy caro y difícil de cuidar"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿En qué situación estaba Gaspar entonces?",
+     "options": [
+      "Acababa de perder un trabajo",
+      "Se iba a casar",
+      "Estudiaba en la universidad"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De qué se quejaban sus parejas?",
+     "options": [
+      "De que la casa estaba llena de plantas",
+      "De que el árbol le importaba más",
+      "De sus viajes largos por trabajo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo se siente Gaspar al final?",
+     "options": [
+      "No se siente estafado",
+      "Furioso con su abuelo",
+      "Muy triste y engañado por su abuelo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué rutina te ayudó en una época difícil?",
+     "model": "Salir a correr cada mañana después de mi divorcio."
+    },
+    {
+     "q": "¿Qué objeto llevas contigo en cada mudanza?",
+     "model": "Una lámpara vieja que era de mi madre."
+    },
+    {
+     "q": "¿Qué regalo entendiste años después de recibirlo?",
+     "model": "Un diccionario; entonces me pareció aburrido."
+    }
+   ],
+   "gaps": "Mi abuelo sabía que yo necesitaba una [rutina], algo que [cuidar]. Me dio un [árbol] que no podía [morirse].",
+   "glossary": [
+    {
+     "word": "copiloto",
+     "meaning": "asiento al lado del conductor"
+    },
+    {
+     "word": "estafado",
+     "meaning": "engañado"
+    },
+    {
+     "word": "rutina",
+     "meaning": "costumbre de todos los días"
+    }
+   ]
+  },
+  {
+   "id": "taper",
+   "title": "La llamada de las cuatro y media",
+   "place": "La cámara fría",
+   "context": "En la cámara fría, Álex marca el número de su madre mientras Celestino espera.",
+   "speakers": [
+    {
+     "name": "Álex",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Mamá? Sí, soy yo. No, no pasa nada, de verdad. No estoy en el hospital. Estoy en la oficina de objetos perdidos. Encontré tu táper."
+    },
+    {
+     "s": 0,
+     "text": "Sí, el azul. Con las lentejas. Leí tu nota… Ya, ya sé que no te llamo. Tienes razón. Es que siempre pienso que mañana tendré más tiempo, y mañana nunca llega."
+    },
+    {
+     "s": 1,
+     "text": "Dígale que el domingo."
+    },
+    {
+     "s": 0,
+     "text": "Mamá, ¿qué haces el domingo? Pensaba ir a comer contigo, como antes, cuando vivía en casa y llegaba tarde los sábados. Sí, a comer allí. Llevo el táper… y lo devuelvo lleno, ¿vale? No, no sé cocinar lentejas. Me enseñas tú."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué piensa la madre al principio?",
+     "options": [
+      "Que Álex está en una fiesta",
+      "Que se equivocó de número",
+      "Que pasa algo malo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué explica Álex sobre el tiempo?",
+     "options": [
+      "Que trabaja los domingos",
+      "Que su teléfono estaba roto",
+      "Que siempre piensa que mañana tendrá más"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué le sugiere Celestino?",
+     "options": [
+      "Proponer el domingo",
+      "Colgar enseguida",
+      "Llamar más tarde, ya de día"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué promete Álex?",
+     "options": [
+      "Comprar comida en el mercado",
+      "Devolver el táper lleno",
+      "Llamar todos los días a las cuatro"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué dejas siempre para mañana aunque sea importante?",
+     "model": "Ir al médico; siempre encuentro una excusa."
+    },
+    {
+     "q": "¿Qué receta de tu familia quieres aprender antes de que sea tarde?",
+     "model": "El arroz con leche de mi abuela."
+    },
+    {
+     "q": "¿Cómo reacciona tu familia cuando llamas a una hora rara?",
+     "model": "Mi madre siempre piensa que alguien se murió."
+    }
+   ],
+   "gaps": "Es que siempre [pienso] que mañana tendré más [tiempo], y [mañana] nunca [llega].",
+   "glossary": [
+    {
+     "word": "táper",
+     "meaning": "recipiente de plástico para comida"
+    },
+    {
+     "word": "lleno",
+     "meaning": "con algo dentro, completo"
+    },
+    {
+     "word": "tienes razón",
+     "meaning": "lo que dices es verdad"
+    }
+   ]
+  },
+  {
+   "id": "guante",
+   "title": "Una línea de 1986",
+   "place": "El archivo",
+   "context": "En el archivo, Aurora y Celestino leen juntos el primer libro de registro.",
+   "speakers": [
+    {
+     "name": "Aurora",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Guante rojo de mujer, talla seis, bordado con una A». Talla seis. Ya no me entra, Celestino, tengo los dedos de una señora de setenta y nueve años."
+    },
+    {
+     "s": 1,
+     "text": "A mí tampoco me entra el uniforme de entonces. Yo tenía veintiocho años y el pelo negro. Usted llevaba un abrigo verde y bailaba con los ojos cerrados."
+    },
+    {
+     "s": 0,
+     "text": "¿Y por qué no me lo dijo en cuarenta años? Le pregunté por el guante cada noviembre."
+    },
+    {
+     "s": 1,
+     "text": "Porque cada noviembre usted volvía. Si se lo daba, se acababa la excusa. Fui un cobarde con muy buena memoria."
+    },
+    {
+     "s": 0,
+     "text": "Pues yo fui una tonta con muy mala vista. Venía por usted, hombre, no por el guante."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene bordado el guante?",
+     "options": [
+      "Una A",
+      "Una flor roja",
+      "El año 1986"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo recuerda Celestino a Aurora en 1986?",
+     "options": [
+      "Con un vestido rojo, cantando",
+      "Con un abrigo verde, bailando",
+      "Llorando sola en la plaza bajo la lluvia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no le dio el guante?",
+     "options": [
+      "Para no perder la excusa de verla",
+      "Porque lo tenía otra persona",
+      "Porque no lo encontraba"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué confiesa Aurora al final?",
+     "options": [
+      "Que nunca le gustó el guante",
+      "Que venía por él",
+      "Que tiene otro igual en casa"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué excusa usaste para ver a alguien que te gustaba?",
+     "model": "Le pedía apuntes a una compañera aunque yo tenía los míos."
+    },
+    {
+     "q": "¿Qué detalle de alguien recuerdas después de muchos años?",
+     "model": "Cómo mi primer jefe silbaba los lunes por la mañana."
+    },
+    {
+     "q": "¿Qué cosa no dijiste a tiempo y todavía recuerdas?",
+     "model": "Que un amigo me importaba mucho antes de irse a vivir lejos."
+    }
+   ],
+   "gaps": "Porque cada noviembre usted [volvía]. Si se lo daba, se acababa la [excusa]. Fui un [cobarde] con muy buena [memoria].",
+   "glossary": [
+    {
+     "word": "talla",
+     "meaning": "tamaño de una prenda"
+    },
+    {
+     "word": "bordado",
+     "meaning": "decorado con hilo"
+    },
+    {
+     "word": "cobarde",
+     "meaning": "que no tiene valor"
+    },
+    {
+     "word": "excusa",
+     "meaning": "motivo que se usa para hacer algo"
+    }
+   ]
+  },
+  {
+   "id": "anillo",
+   "title": "El nombre de otra",
+   "place": "La sala de objetos grandes",
+   "context": "Vanesa tiene el anillo en la mano y lee el grabado en voz alta.",
+   "speakers": [
+    {
+     "name": "Vanesa",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Óliver",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Óliver y Jessica, para siempre». Qué bonito. Para siempre duró poco, ¿no?"
+    },
+    {
+     "s": 1,
+     "text": "Te lo juro, fue el joyero. Buscó mi nombre en el ordenador, vio el pedido antiguo y lo grabó sin preguntar. Lo vi anoche, cuando te lo quitaste para bailar. Casi me desmayo."
+    },
+    {
+     "s": 0,
+     "text": "Y por eso cuando se cayó dijiste: «Déjalo, amor, ya compramos otro»."
+    },
+    {
+     "s": 1,
+     "text": "Pensé que era mejor perderlo que explicarlo."
+    },
+    {
+     "s": 0,
+     "text": "Mira, lo que me molesta no es el nombre. Es que pensaras que yo no lo iba a entender. Si nos casamos el sábado, quiero un marido que me cuente los desastres, no uno que los esconda debajo de la mesa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué dice el grabado?",
+     "options": [
+      "«Vanesa y Óliver»",
+      "«Te quiero, Vanesa, mi amor»",
+      "«Óliver y Jessica, para siempre»"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo vio Óliver el grabado?",
+     "options": [
+      "Anoche, en la fiesta",
+      "En la joyería, al pagar",
+      "Esta mañana"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué pensó Óliver?",
+     "options": [
+      "Que Vanesa no lo iba a leer",
+      "Que era mejor perderlo que explicarlo",
+      "Que todo era culpa de Jessica y del joyero"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué le molesta a Vanesa?",
+     "options": [
+      "El nombre de Jessica",
+      "Que él no confiara en ella",
+      "El precio del anillo"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué desastre preferiste esconder en vez de contarlo?",
+     "model": "Que rompí el coche de mi padre; lo descubrió un mes después."
+    },
+    {
+     "q": "¿Qué te molesta más que el error mismo?",
+     "model": "Que me mientan para que no me enfade."
+    },
+    {
+     "q": "¿Qué promesa de «para siempre» no duró tanto en tu vida?",
+     "model": "Una amistad de la escuela; ahora solo nos felicitamos por mensajes."
+    }
+   ],
+   "gaps": "Si nos casamos el sábado, quiero un [marido] que me cuente los [desastres], no uno que los [esconda] debajo de la [mesa].",
+   "glossary": [
+    {
+     "word": "para siempre",
+     "meaning": "sin final"
+    },
+    {
+     "word": "desmayo",
+     "meaning": "pérdida del conocimiento por un momento"
+    },
+    {
+     "word": "esconda",
+     "meaning": "ponga donde nadie lo ve"
+    }
+   ]
+  },
+  {
+   "id": "tuba",
+   "title": "¿Quién tocaba anoche?",
+   "place": "La sala de objetos grandes",
+   "context": "Fidel prueba la tuba vacía en la sala de objetos grandes. Suena fatal.",
+   "speakers": [
+    {
+     "name": "Fidel",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Lo oyó? Eso es lo que sueno yo. Un elefante con gripe. Y anoche, con una dentadura dentro, sonaba como un ángel. La gente aplaudía, una señora me tiró un clavel."
+    },
+    {
+     "s": 0,
+     "text": "Tengo dos opciones. Puedo devolver la dentadura a ese señor y volver a ser el peor de la banda. O puedo esconderla y tocar con ella el resto de mi vida."
+    },
+    {
+     "s": 0,
+     "text": "Aunque… ¿sabe qué? Anoche no estaba nervioso. Por primera vez no pensé en el director ni en los otros músicos. Solo tocaba y miraba a la gente bailar. A lo mejor la dentadura no hacía nada. A lo mejor el que tocaba bien era yo, sin miedo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo suena la tuba vacía?",
+     "options": [
+      "Fatal, como un elefante con gripe",
+      "Mejor que anoche",
+      "Igual que siempre, bastante bien"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le tiró una señora anoche?",
+     "options": [
+      "Un clavel",
+      "Una moneda de un euro",
+      "Su sombrero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué segunda opción considera Fidel?",
+     "options": [
+      "Dejar la banda y tocar en la calle",
+      "Esconder la dentadura y tocar con ella",
+      "Vender la tuba y comprar un violín"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué empieza a pensar Fidel al final?",
+     "options": [
+      "Que la dentadura es mágica",
+      "Que el director lo odia",
+      "Que tocó bien porque no tenía miedo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuándo hiciste algo bien porque no estabas pensando en los demás?",
+     "model": "En un partido de fútbol, cuando olvidé que me miraba mi padre."
+    },
+    {
+     "q": "¿Qué amuleto crees que te da suerte, aunque sabes que no?",
+     "model": "Un bolígrafo azul que uso en todos los exámenes."
+    },
+    {
+     "q": "¿Qué actividad te hace olvidar el miedo al ridículo?",
+     "model": "Bailar en la cocina con la música muy alta."
+    }
+   ],
+   "gaps": "Por primera vez no pensé en el [director] ni en los otros [músicos]. Solo [tocaba] y miraba a la gente [bailar].",
+   "glossary": [
+    {
+     "word": "gripe",
+     "meaning": "enfermedad con fiebre y tos"
+    },
+    {
+     "word": "clavel",
+     "meaning": "flor típica, roja o blanca"
+    },
+    {
+     "word": "a lo mejor",
+     "meaning": "quizás"
+    }
+   ]
+  },
+  {
+   "id": "canoa",
+   "title": "Un mensaje perdido hace diez años",
+   "place": "La sala de objetos grandes",
+   "context": "Nacho y Guille, junto a la canoa, por fin hablan de la boda de la hermana de Guille.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Guille",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mi hermana te esperó en la iglesia. Te guardamos una silla en la primera fila. La silla vacía sale en todas las fotos."
+    },
+    {
+     "s": 0,
+     "text": "Esa mañana a mi padre le dio un infarto. Pasé el día en urgencias. Te mandé un mensaje larguísimo desde el pasillo del hospital."
+    },
+    {
+     "s": 1,
+     "text": "Yo nunca lo vi. Había cambiado de número esa semana."
+    },
+    {
+     "s": 0,
+     "text": "Y yo, como no contestaste, pensé que no te importaba mi padre. Diez años de orgullo por un número de teléfono."
+    },
+    {
+     "s": 1,
+     "text": "Anoche, en la carrera del río, vi La Gaviota pasar con otro equipo y me dio un vuelco el corazón. Pensé: si alguien la rescata, que seamos nosotros."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué sale en todas las fotos de la boda?",
+     "options": [
+      "La canoa roja",
+      "El padre de Nacho",
+      "Una silla vacía"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde estaba Nacho el día de la boda?",
+     "options": [
+      "En urgencias con su padre",
+      "En otra ciudad por trabajo",
+      "En la carrera del río"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Guille no vio el mensaje?",
+     "options": [
+      "Tenía el teléfono apagado",
+      "Lo borró sin leer",
+      "Había cambiado de número"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sintió Guille anoche al ver la canoa?",
+     "options": [
+      "Mucha rabia contra Nacho",
+      "Un vuelco en el corazón",
+      "Nada especial"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué malentendido duró demasiado en tu vida?",
+     "model": "Con una prima, que pensó que no la invité a mi boda a propósito."
+    },
+    {
+     "q": "¿Qué hiciste la última vez que quisiste reconciliarte con alguien?",
+     "model": "Le mandé una foto antigua de los dos, sin decir nada."
+    },
+    {
+     "q": "¿Qué objeto te dio un vuelco en el corazón al verlo otra vez?",
+     "model": "Mi primera bicicleta, en casa de mis padres."
+    }
+   ],
+   "gaps": "Y yo, como no [contestaste], pensé que no te [importaba] mi padre. Diez años de [orgullo] por un número de [teléfono].",
+   "glossary": [
+    {
+     "word": "infarto",
+     "meaning": "problema grave del corazón"
+    },
+    {
+     "word": "urgencias",
+     "meaning": "parte del hospital para casos graves"
+    },
+    {
+     "word": "orgullo",
+     "meaning": "no querer reconocer un error"
+    },
+    {
+     "word": "me dio un vuelco el corazón",
+     "meaning": "una emoción fuerte y repentina"
+    }
+   ]
+  },
+  {
+   "id": "cenizas",
+   "title": "La última vuelta de Canelo",
+   "place": "El muelle de carga",
+   "context": "Mari Carmen tiene que volver a su ruta. Lisandro abraza la urna en el muelle.",
+   "speakers": [
+    {
+     "name": "Lisandro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Mari Carmen",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mire, le voy a decir algo raro. En quince años, nunca tuve una noche así. Un borracho se subió gritando y, al ver la urna, se calló y se sentó. Una señora me trajo un café. Y un niño le dijo adiós al perro al bajar."
+    },
+    {
+     "s": 0,
+     "text": "Canelo era así. Cuando mi mujer y yo discutíamos, se ponía en medio y nos miraba hasta que nos reíamos."
+    },
+    {
+     "s": 1,
+     "text": "Me sale ahora la última vuelta, a las seis. ¿Quiere venir? Canelo puede ir delante otra vez, y usted a su lado."
+    },
+    {
+     "s": 0,
+     "text": "Él siempre quería ir en el asiento de adelante. Vamos. Una última vuelta por la ciudad, y después a casa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hizo el borracho al ver la urna?",
+     "options": [
+      "Empezó a llorar",
+      "Se calló y se sentó",
+      "Se bajó del autobús en la parada siguiente"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hacía Canelo cuando Lisandro discutía con su mujer?",
+     "options": [
+      "Se ponía en medio hasta que se reían",
+      "Se escondía debajo de la cama",
+      "Ladraba muy fuerte hasta que se callaban"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora es la última vuelta?",
+     "options": [
+      "A las seis",
+      "A las cuatro de la madrugada",
+      "A las siete y media"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué decide Lisandro?",
+     "options": [
+      "Dejar la urna en el autobús",
+      "Ir a casa a pie y descansar un rato",
+      "Hacer una última vuelta con Canelo"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué animal calmaba los problemas de tu casa?",
+     "model": "Nuestro gato; cuando alguien gritaba, se subía a la mesa."
+    },
+    {
+     "q": "¿Qué detalle amable de un desconocido te alegró un día gris?",
+     "model": "Un conductor que me esperó corriendo en la parada."
+    },
+    {
+     "q": "¿Cómo te despedirías de un lugar que quieres mucho?",
+     "model": "Pasaría una última tarde allí, sin prisa y sin fotos."
+    }
+   ],
+   "gaps": "Cuando mi mujer y yo [discutíamos], se ponía en [medio] y nos [miraba] hasta que nos [reíamos].",
+   "glossary": [
+    {
+     "word": "borracho",
+     "meaning": "persona que bebió demasiado alcohol"
+    },
+    {
+     "word": "se calló",
+     "meaning": "dejó de hablar"
+    },
+    {
+     "word": "vuelta",
+     "meaning": "recorrido completo de una ruta"
+    }
+   ]
+  },
+  {
+   "id": "loro",
+   "title": "Un loro con dos casas",
+   "place": "El muelle de carga",
+   "context": "Rubén y Doña Fefa intentan llegar a un acuerdo sobre Fígaro en el muelle.",
+   "speakers": [
+    {
+     "name": "Rubén",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Fefa",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Mire, joven, yo tengo setenta y seis años. Mis hijos viven lejos. Fígaro es quien me despierta, quien me canta boleros, quien me dice «buenas noches, Fefa». Si me lo quita, me quita la casa entera."
+    },
+    {
+     "s": 0,
+     "text": "Yo lo busqué durante meses. Puse carteles por todo el barrio. Mi hija lloraba cada noche. Cuando lo vi en mi taxi anoche, no lo podía creer."
+    },
+    {
+     "s": 1,
+     "text": "Y él lo reconoció. Lo vi en sus ojos."
+    },
+    {
+     "s": 0,
+     "text": "Escuche una idea. Usted se queda con él entre semana. Yo lo visito los domingos y le enseño las canciones de la radio. Mi hija también vendrá."
+    },
+    {
+     "s": 1,
+     "text": "Domingos, con café. Y si me lo devuelve con palabrotas, se acaba el trato."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué es tan importante Fígaro para Fefa?",
+     "options": [
+      "Es un loro caro y muy raro",
+      "Era de su marido",
+      "Le hace compañía porque vive sola"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hizo Rubén para encontrarlo?",
+     "options": [
+      "Llamó a la radio de la ciudad",
+      "Puso carteles por el barrio",
+      "Nada, solo esperó en casa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué propone Rubén?",
+     "options": [
+      "Visitarlo los domingos",
+      "Quedárselo entre semana",
+      "Venderlo y repartir el dinero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué condición pone Fefa?",
+     "options": [
+      "Que Rubén pague la comida",
+      "Que no aprenda palabrotas",
+      "Que vengan todos los días"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué acuerdo creativo hiciste para compartir algo?",
+     "model": "Con mi hermana compartimos el coche: ella lo usa entre semana y yo los fines de semana."
+    },
+    {
+     "q": "¿Qué te despierta por las mañanas además del despertador?",
+     "model": "Los pájaros del árbol de enfrente."
+    },
+    {
+     "q": "¿Qué buscaste con carteles o anuncios alguna vez?",
+     "model": "Un gato que se escapó del balcón cuando yo era pequeño."
+    }
+   ],
+   "gaps": "Usted se queda con él entre [semana]. Yo lo [visito] los [domingos] y le enseño las canciones de la [radio].",
+   "glossary": [
+    {
+     "word": "carteles",
+     "meaning": "papeles con anuncios en la calle"
+    },
+    {
+     "word": "palabrotas",
+     "meaning": "palabras feas o groseras"
+    },
+    {
+     "word": "trato",
+     "meaning": "acuerdo entre dos personas"
+    }
+   ]
+  },
+  {
+   "id": "ladron",
+   "title": "El recibo del carterista",
+   "place": "La calle",
+   "context": "En la calle, Celestino escribe un recibo oficial mientras Tato le cuenta su vida.",
+   "speakers": [
+    {
+     "name": "Tato",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Empecé con quince años, en el mercado. Mi tío me enseñó. Soy bueno, ¿eh? Anoche saqué catorce carteras en dos horas, en plena fiesta, sin que nadie sintiera nada."
+    },
+    {
+     "s": 1,
+     "text": "¿Y por qué las devuelve?"
+    },
+    {
+     "s": 0,
+     "text": "Por una foto. En una cartera había una niña con un disfraz de abeja. Igual que mi hija cuando tenía cinco años. Ahora tiene doce y no me habla. Dice que soy un ladrón. Y tiene razón."
+    },
+    {
+     "s": 1,
+     "text": "Aquí tiene. Recibo número uno de la noche: «El señor Tato Urquiza entrega catorce carteras». Con sello."
+    },
+    {
+     "s": 0,
+     "text": "¿Puedo hacerle una foto? Se la voy a mandar a mi hija. Es el primer papel con mi nombre que no viene de un juzgado."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Quién le enseñó a robar a Tato?",
+     "options": [
+      "Su tío",
+      "Un amigo del colegio",
+      "Su padre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué había en la foto de la cartera?",
+     "options": [
+      "Un perro con gafas",
+      "Una boda en una playa",
+      "Una niña disfrazada de abeja"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dice la hija de Tato?",
+     "options": [
+      "Que lo echa de menos",
+      "Que quiere verlo el domingo",
+      "Que es un ladrón"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué quiere hacer Tato con el recibo?",
+     "options": [
+      "Venderlo a un coleccionista",
+      "Mandarle una foto a su hija",
+      "Guardarlo en la cartera"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa pequeña te hizo cambiar de opinión sobre algo grande?",
+     "model": "Ver a mi abuelo leer el periódico con lupa me hizo valorar mi vista."
+    },
+    {
+     "q": "¿Qué documento te dio orgullo recibir?",
+     "model": "El título de mi carrera, que tardé siete años en terminar."
+    },
+    {
+     "q": "¿Qué le dirías a alguien que quiere cambiar su vida?",
+     "model": "Que empiece por un cambio pequeño y fácil de cumplir."
+    }
+   ],
+   "gaps": "Ahora tiene [doce] y no me [habla]. Dice que soy un [ladrón]. Y tiene [razón].",
+   "glossary": [
+    {
+     "word": "disfraz",
+     "meaning": "ropa para parecer otra cosa"
+    },
+    {
+     "word": "en plena fiesta",
+     "meaning": "en el centro de la fiesta"
+    },
+    {
+     "word": "juzgado",
+     "meaning": "lugar donde trabajan los jueces"
+    }
+   ]
+  },
+  {
+   "id": "sonambulo",
+   "title": "Un rey con entrevista",
+   "place": "La puerta de la farmacia",
+   "context": "Delante de la farmacia, Benja mira el vídeo del karaoke por tercera vez.",
+   "speakers": [
+    {
+     "name": "Benja",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Gloria",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Esto es una pesadilla. En tres horas tengo una entrevista en un banco, y medio barrio me vio cantando un bolero en pijama con una corona de papel."
+    },
+    {
+     "s": 1,
+     "text": "Pues mira los comentarios del vídeo. «El rey de los faroles», «Qué voz», «¿Quién es este chico?». Tiene ocho mil visitas."
+    },
+    {
+     "s": 0,
+     "text": "Ocho mil personas. Y el director de recursos humanos del banco seguramente es una de ellas."
+    },
+    {
+     "s": 1,
+     "text": "O a lo mejor le gusta. Un banco también necesita a alguien que no tenga miedo de cantar delante de una plaza llena."
+    },
+    {
+     "s": 0,
+     "text": "Yo no tenía miedo porque estaba dormido. Despierto soy la persona más tímida del mundo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Benja en tres horas?",
+     "options": [
+      "Un concierto en la plaza",
+      "Una entrevista en un banco",
+      "Una cita con el médico"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántas visitas tiene el vídeo?",
+     "options": [
+      "Ochocientas",
+      "Ochenta",
+      "Ocho mil"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué piensa Gloria del vídeo?",
+     "options": [
+      "Que debe borrarlo ya",
+      "Que puede gustarle al banco",
+      "Que Benja canta mal"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué no tenía miedo Benja?",
+     "options": [
+      "Porque había bebido mucho",
+      "Porque cantaba con amigos",
+      "Porque estaba dormido"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa haces sin miedo solo cuando nadie te conoce?",
+     "model": "Bailar; en los viajes bailo en cualquier sitio."
+    },
+    {
+     "q": "¿Qué parte de tu personalidad no muestras en una entrevista?",
+     "model": "Que hablo muchísimo cuando hay confianza."
+    },
+    {
+     "q": "¿Qué momento ridículo tuyo terminó saliendo bien?",
+     "model": "Me caí en una boda y así conocí a mi pareja."
+    }
+   ],
+   "gaps": "Un banco también necesita a alguien que no tenga [miedo] de [cantar] delante de una [plaza] [llena].",
+   "glossary": [
+    {
+     "word": "pesadilla",
+     "meaning": "sueño malo; situación horrible"
+    },
+    {
+     "word": "visitas",
+     "meaning": "veces que alguien vio el vídeo"
+    },
+    {
+     "word": "recursos humanos",
+     "meaning": "departamento que contrata personal"
+    }
+   ]
+  },
+  {
+   "id": "farol",
+   "title": "El deseo que no subió",
+   "place": "La azotea",
+   "context": "En la azotea, Selene lee su deseo a Yuri, el vigilante, que la dejó subir.",
+   "speakers": [
+    {
+     "name": "Selene",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Yuri",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Quiero tener el valor de dejar el despacho y abrir una panadería». Lo escribo cada año, desde hace cinco. Cada año el farol sube, se pierde en el cielo, y yo vuelvo al despacho el lunes."
+    },
+    {
+     "s": 1,
+     "text": "Y este año se quedó aquí, en mi azotea, entre las antenas."
+    },
+    {
+     "s": 0,
+     "text": "Al principio me dio vergüenza. Ahora pienso que el farol me está diciendo algo: los deseos no se cumplen solos en el cielo; se cumplen abajo, con harina y madrugones."
+    },
+    {
+     "s": 1,
+     "text": "Yo madrugo todos los días por obligación. Usted por lo menos lo haría por algo que quiere."
+    },
+    {
+     "s": 0,
+     "text": "Mi abuela hacía un pan de maíz que olía en toda la calle. Si lo consigo, el primero es para usted."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué dice el deseo de Selene?",
+     "options": [
+      "Que quiere abrir una panadería",
+      "Que quiere viajar por el mundo",
+      "Que quiere casarse"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Desde cuándo escribe el mismo deseo?",
+     "options": [
+      "Desde que era niña",
+      "Desde hace cinco años",
+      "Desde anoche, por primera vez"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué interpreta Selene ahora?",
+     "options": [
+      "Que los deseos se cumplen trabajando",
+      "Que debe olvidarse del deseo",
+      "Que el farol estaba roto"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le promete Selene a Yuri?",
+     "options": [
+      "Un trabajo en la panadería",
+      "Una cena en su casa",
+      "El primer pan"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cambio grande deseas pero todavía no te atreves a hacer?",
+     "model": "Vivir un año en otro país."
+    },
+    {
+     "q": "¿Por qué cosa madrugarías con gusto?",
+     "model": "Por ver el amanecer en la montaña."
+    },
+    {
+     "q": "¿Qué olor de tu infancia te gustaría volver a sentir?",
+     "model": "El olor del café que preparaba mi abuelo."
+    }
+   ],
+   "gaps": "los deseos no se [cumplen] solos en el [cielo]; se cumplen abajo, con [harina] y [madrugones].",
+   "glossary": [
+    {
+     "word": "valor",
+     "meaning": "fuerza para hacer algo difícil"
+    },
+    {
+     "word": "harina",
+     "meaning": "polvo para hacer pan"
+    },
+    {
+     "word": "madrugones",
+     "meaning": "veces que te levantas muy temprano"
+    }
+   ]
+  },
+  {
+   "id": "diario",
+   "title": "Veinte páginas de duda",
+   "place": "La azotea",
+   "context": "Yuri, solo en la azotea, le habla a una paloma mientras decide qué hacer con el diario.",
+   "speakers": [
+    {
+     "name": "Yuri",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Tú no me vas a juzgar, ¿verdad, paloma? Lo leí casi todo. Empecé por aburrimiento a la una y ya son las cinco."
+    },
+    {
+     "s": 0,
+     "text": "Doña Pura, la jefa que nos regaña si llegamos un minuto tarde, escribe que baila salsa los jueves en un salón del puerto. Que le escribe poemas a un vecino violinista y no se atreve a dárselos. Y que le da miedo jubilarse y quedarse sola en un piso demasiado grande."
+    },
+    {
+     "s": 0,
+     "text": "Me quedan veinte páginas. Seguro que ahí cuenta si le dio los poemas al vecino. Me muero por saberlo. Pero si lo leo, ya no es un diario encontrado: es un diario robado."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuándo empezó Yuri a leer?",
+     "options": [
+      "A las cinco",
+      "A la una",
+      "A medianoche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde baila Doña Pura?",
+     "options": [
+      "En un salón del puerto",
+      "En su piso",
+      "En la oficina, sola, por la noche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué le da miedo a Doña Pura?",
+     "options": [
+      "El vecino violinista",
+      "Quedarse sola al jubilarse",
+      "Las palomas de la azotea"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué duda tiene Yuri?",
+     "options": [
+      "Si contarle todo a Celestino",
+      "Si leer el final o no",
+      "Si devolver la mochila mañana"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa descubriste de alguien sin querer?",
+     "model": "Que mi jefe estudiaba piano por las noches."
+    },
+    {
+     "q": "¿Qué secreto de alguien cambió tu opinión sobre esa persona?",
+     "model": "Que mi vecina seria cuida gatos de la calle."
+    },
+    {
+     "q": "¿Qué te cuesta más guardar: tu curiosidad o un secreto?",
+     "model": "La curiosidad; siempre quiero saber el final."
+    }
+   ],
+   "gaps": "Me quedan veinte [páginas]. Seguro que ahí cuenta si le dio los [poemas] al [vecino]. Me muero por [saberlo].",
+   "glossary": [
+    {
+     "word": "juzgar",
+     "meaning": "opinar si algo está bien o mal"
+    },
+    {
+     "word": "regaña",
+     "meaning": "llama la atención con enfado"
+    },
+    {
+     "word": "me muero por",
+     "meaning": "tengo muchas ganas de"
+    }
+   ]
+  },
+  {
+   "id": "alcalde",
+   "title": "Operación chocolate",
+   "place": "La sala de espera",
+   "context": "En la sala de espera, Ernesto y Celestino arreglan la llave de la ciudad.",
+   "speakers": [
+    {
+     "name": "Ernesto",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Llevo doce años trabajando para el alcalde. Le he salvado de todo: de discursos sin terminar, de corbatas manchadas, de un perro que se comió su sombrero. Pero nunca de una llave mordida."
+    },
+    {
+     "s": 1,
+     "text": "Pásame el papel dorado. La farmacia tenía chocolate con almendras. Le damos forma, lo envolvemos y nadie notará nada."
+    },
+    {
+     "s": 0,
+     "text": "El alcalde lo va a notar. Es la primera foto del año. Va a sonreír con una llave de farmacia."
+    },
+    {
+     "s": 1,
+     "text": "Llevo cuarenta años aquí, señor Lagos. Le aseguro que la gente no recuerda los objetos; recuerda cómo la trataron cuando los perdió."
+    },
+    {
+     "s": 0,
+     "text": "Eso es muy bonito, pero el alcalde no es «la gente». Es el alcalde."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cuántos años lleva Ernesto con el alcalde?",
+     "options": [
+      "Cuarenta",
+      "Doce",
+      "Dos"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué se comió un perro una vez?",
+     "options": [
+      "La llave de chocolate",
+      "Un discurso escrito",
+      "El sombrero del alcalde"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene el chocolate de la farmacia?",
+     "options": [
+      "Almendras",
+      "Naranja confitada",
+      "Licor de café"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Celestino que recuerda la gente?",
+     "options": [
+      "Los objetos caros",
+      "Cómo la trataron",
+      "Los nombres de los empleados"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿De qué problema salvaste a tu jefe o a un compañero?",
+     "model": "De presentar un informe con el nombre de otra empresa."
+    },
+    {
+     "q": "¿Qué recuerdas de cómo te trataron en un mal momento?",
+     "model": "Una enfermera que me tomó la mano antes de una operación."
+    },
+    {
+     "q": "¿Qué arreglo de última hora te salió mejor de lo esperado?",
+     "model": "Un pastel roto que terminó como postre en vasos."
+    }
+   ],
+   "gaps": "Le [aseguro] que la gente no recuerda los [objetos]; recuerda cómo la [trataron] cuando los [perdió].",
+   "glossary": [
+    {
+     "word": "mordida",
+     "meaning": "con un trozo cortado con los dientes"
+    },
+    {
+     "word": "envolvemos",
+     "meaning": "cubrimos con papel"
+    },
+    {
+     "word": "manchadas",
+     "meaning": "sucias en una parte"
+    }
+   ]
+  },
+  {
+   "id": "relevo",
+   "title": "Un desayuno pendiente",
+   "place": "El despacho de la jefa",
+   "context": "A las siete, en el despacho, Doña Pura lee el libro mientras Celestino le sirve café.",
+   "speakers": [
+    {
+     "name": "Pura",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Doce. Más que doce. Hasta el guante de Aurora. Cuarenta años preguntando, y vuelve justo en el primer turno del nuevo."
+    },
+    {
+     "s": 1,
+     "text": "El guante lo tenía yo, jefa. En mi cajón. Desde mil novecientos ochenta y seis."
+    },
+    {
+     "s": 0,
+     "text": "¿Usted? ¿Cuarenta años? Celestino, es usted el empleado más honrado y más absurdo de esta ciudad."
+    },
+    {
+     "s": 1,
+     "text": "Y esto es suyo. Estaba en una mochila de la fiesta. Yuri dice que no lo leyó entero."
+    },
+    {
+     "s": 0,
+     "text": "Mi diario. Bueno… entonces ya saben lo de la salsa de los jueves. Pues el jueves que viene invito yo. El nuevo también. Le debo un desayuno, y una apuesta perdida se paga bailando."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué le sorprende más a Doña Pura?",
+     "options": [
+      "Que volviera el guante de Aurora",
+      "Que llegara la canoa",
+      "Que no hubiera clientes"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Pura de Celestino?",
+     "options": [
+      "Que debe jubilarse",
+      "Que es un mentiroso",
+      "Que es honrado y absurdo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sabe ahora el turno de noche?",
+     "options": [
+      "Que Pura baila salsa los jueves",
+      "Que Pura se va a jubilar",
+      "Que Pura escribe novelas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo pagará Pura la apuesta?",
+     "options": [
+      "Bailando, además del desayuno",
+      "Con un día libre para todo el turno",
+      "Con dinero de su sueldo"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué afición tuya sorprendería a tus compañeros?",
+     "model": "Que hago cerámica los sábados por la mañana."
+    },
+    {
+     "q": "¿Cómo celebras un buen trabajo en equipo?",
+     "model": "Con un desayuno largo en un café cerca de la oficina."
+    },
+    {
+     "q": "¿Qué apuesta perdiste y pagaste con gusto?",
+     "model": "Tuve que cocinar para todos, y me encantó."
+    }
+   ],
+   "gaps": "Pues el jueves que viene [invito] yo. El nuevo también. Le debo un [desayuno], y una [apuesta] perdida se paga [bailando].",
+   "glossary": [
+    {
+     "word": "honrado",
+     "meaning": "que no roba ni engaña"
+    },
+    {
+     "word": "absurdo",
+     "meaning": "sin lógica, ridículo"
+    },
+    {
+     "word": "le debo",
+     "meaning": "tengo que darle"
+    }
+   ]
+  }
+ ]
+}
