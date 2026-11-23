@@ -13,6 +13,7 @@ import { grammarTopics } from "../grammar-classroom/catalog";
 import { courseLevels } from "../grammar-classroom/curriculum";
 import { MATERIAL_ELE_PATH, elePageBySlug } from "./data";
 import { immersiveWorldGameByLessonId } from "../resource-seo";
+import freeAudioClips from "./audios-gratis.json";
 
 export type TemaGroupId = "gramatica" | "vocabulario" | "funciones" | "cultura" | "formatos";
 export type TemaGroup = { id: TemaGroupId; label: string; path: string; title: string; description: string; h1: string; intro: string; method: string[] };
@@ -295,7 +296,9 @@ const levelCopy: Record<TemaGroupId, LevelCopy> = {
 const levelSeo: Record<string, { title: (level: string) => string; description: (level: string, count: number) => string }> = {
   "formatos/comprension-auditiva": {
     title: (level) => `Comprensión auditiva ${level} en español: audios y actividades ELE | SpanishCue`,
-    description: (level, count) => `Comprensión auditiva ${level} en español: ${count} clases con audios de voces de distintos países, preguntas de comprensión y conversación final para la clase de ELE.`,
+    description: (level, count) => ["A1", "A2", "B1"].includes(level)
+      ? `Comprensión auditiva ${level} en español: ${freeAudioClips.filter((clip) => clip.level === level).length} audios gratis con preguntas y transcripción, y ${count} clases con voces de distintos países.`
+      : `Comprensión auditiva ${level} en español: ${count} clases con audios de voces de distintos países, preguntas de comprensión y conversación final para la clase de ELE.`,
   },
   "formatos/juegos-de-conversacion": {
     title: (level) => `Juegos de conversación ${level} en español: actividades ELE | SpanishCue`,
