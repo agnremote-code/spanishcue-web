@@ -481,7 +481,7 @@
   },
   {
    "id": "bonsai",
-   "title": "El árbol pequeño del abuelo",
+   "title": "Una planta con historia",
    "place": "La cámara fría",
    "context": "Gaspar está en la cámara fría, con las plantas.",
    "contextEn": "Gaspar is in the cold room, with the plants.",
@@ -1749,10 +1749,10 @@
   },
   {
    "id": "diario",
-   "title": "El diario de la mochila",
+   "title": "Una mochila en la azotea",
    "place": "La azotea",
-   "context": "Yuri descansa en la azotea con un diario.",
-   "contextEn": "Yuri rests on the rooftop with a diary.",
+   "context": "Yuri descansa en la azotea.",
+   "contextEn": "Yuri rests on the rooftop.",
    "speakers": [
     {
      "name": "Yuri",
@@ -1999,8 +1999,8 @@
     },
     {
      "s": 1,
-     "text": "Muy buena. Mire el libro: muchos objetos vuelven a casa.",
-     "en": "Very good. Look at the book: many objects are going home."
+     "text": "Muy buena. Mire el libro: muchos objetos volvieron a casa.",
+     "en": "Very good. Look at the book: many objects went home."
     },
     {
      "s": 0,
@@ -2072,7 +2072,7 @@
      "model": "Mi jefa se llama Ana."
     }
    ],
-   "gaps": "Muy [buena]. Mire el [libro]: muchos [objetos] vuelven a [casa].",
+   "gaps": "Muy [buena]. Mire el [libro]: muchos [objetos] volvieron a [casa].",
    "glossary": [
     {
      "word": "jefa",

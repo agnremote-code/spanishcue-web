@@ -9,7 +9,7 @@ export default {
     title: "Parte n.º 1: la boca que pedía asilo",
     line: "Parte del encargado, 23:07. Lo dejo escrito para quien herede este mostrador: la persona que hoy estrena el sello aún no había rubricado su primer recibo cuando irrumpió Evaristo Peña, setenta y ocho años, tapándose la boca con un pañuelo de lunares. Hablaba como un ventrílocuo resfriado. Sospecho, por la hora y por el aroma a ron, que la culpa es de la orquesta.",
     dialogue: [
-      ["evaristo", "Señores, comparezco desdentado y sin abogado. Mi prótesis desertó a mitad de un mambo y no ha vuelto a dar señales de vida. Treinta años de matrimonio y se fuga con la primera banda que pasa."],
+      ["evaristo", "Señores, comparezco desdentado y sin abogado. Mi prótesis desertó a mitad de un mambo y no ha vuelto a dar señales de vida. Cincuenta y cinco años de matrimonio y se fuga con la primera banda que pasa."],
       ["celestino", "No se aflija, don Evaristo: a esta casa llegan cada año más dientes que cartas de amor. Tenemos tres candidatas en la caja y una tuba municipal que, según su dueño, anoche sonaba sospechosamente acompañada."],
       ["evaristo", "La mía se reconoce a distancia: lleva un colmillo de oro que me puse el día de mi boda, en 1971. Ese brillo no se olvida."],
     ],
@@ -260,7 +260,7 @@ export default {
   },
   loro: {
     title: "Parte n.º 12: custodia compartida de un barítono con plumas",
-    line: "Parte del encargado, 03:55. Junto al autobús ha aparcado un taxi amarillo con las puertas abiertas. Rubén Arismendi, venezolano, taxista, ha traído un loro que se le subió al coche en la fiesta. El loro silba boleros y suelta palabrotas con una dicción impecable. Rubén asegura que es Fígaro, el loro que se le escapó hace seis años. Entonces aparece doña Fefa Linares, cubana, con una jaula vacía y una foto enmarcada.",
+    line: "Parte del encargado, 03:55. Junto al autobús ha aparcado un taxi amarillo con las puertas abiertas. Rubén Arismendi, venezolano, taxista, ha encontrado en el asiento trasero una jaula con un loro dentro, olvidada por algún pasajero al salir de la fiesta. El loro silba boleros y suelta palabrotas con una dicción impecable. Rubén asegura que es Fígaro, el loro que se le escapó hace seis años. Entonces aparece doña Fefa Linares, cubana, sin aliento y con una foto enmarcada: anoche se dejó la jaula en un taxi.",
     dialogue: [
       ["ruben", "Lo reconocería entre mil. Le enseñé a decir «Rubén, pásame un café» cuando trabajaba de noche. Se escapó por la ventana un martes de carnaval."],
       ["fefa", "Pues lleva seis años en mi balcón, comiendo mango y viendo telenovelas conmigo. Si alguien le enseñó algo, fui yo: canta la Guantanamera mejor que mi difunto."],
