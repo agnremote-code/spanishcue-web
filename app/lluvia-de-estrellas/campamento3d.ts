@@ -661,7 +661,8 @@ export function buildCampamento(scene: THREE.Scene, opts: { low: boolean; shadow
   const flashLight = new THREE.DirectionalLight('#cfe4ff', 0);
   flashLight.position.set(60, 120, -60); scene.add(flashLight);
   let fireballFn: (k: number) => void = () => {};
-  let fireAt = -1, fireDir = new THREE.Vector3(), fireVel = new THREE.Vector3();
+  let fireAt = -1;
+  const fireDir = new THREE.Vector3(), fireVel = new THREE.Vector3();
   const tmp = new THREE.Vector3(), side = new THREE.Vector3();
   function launch(m: Meteor, big = false) {
     // A point on the sky up to ~50° from the radiant, flying away from it.
