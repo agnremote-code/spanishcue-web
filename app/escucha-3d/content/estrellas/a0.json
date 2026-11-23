@@ -1743,8 +1743,8 @@
    "id": "astrologa",
    "title": "Tu horóscopo",
    "place": "La orilla del salar",
-   "context": "Madame Zulema tiene un puesto de horóscopos. Habla con Lucía.",
-   "contextEn": "Madame Zulema has a horoscope stall. She talks with Lucía.",
+   "context": "La astróloga Zulema tiene un puesto de horóscopos. Habla con Lucía.",
+   "contextEn": "Zulema the astrologer has a horoscope stall. She talks with Lucía.",
    "speakers": [
     {
      "name": "Zulema",
