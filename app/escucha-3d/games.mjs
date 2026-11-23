@@ -143,6 +143,16 @@ export const GAMES = {
     spots: ['informacion', 'churreria', 'tombola', 'noria', 'artesania', 'escenario', 'fotos', 'baile'],
     ownListening: true,
   },
+  // El taller de la greda (B1): every circle has its own listening, and each
+  // character keeps one voice. First world under the provable listening gate
+  // (BOARD-DECISION-006; 'taller' is in PROVABLE_KEYS). Conversation scenes:
+  // docs/board/content/taller-greda-b1-conversacion.md (world not built yet).
+  taller: {
+    title: 'El taller de la greda',
+    levels: ['B1'],
+    spots: ['mostrador', 'greda', 'torno', 'secadero', 'horno', 'esmaltes', 'oficina', 'patio'],
+    ownListening: true,
+  },
   // Madrid infectada (A0–C2): every zone has its own listening at each level;
   // both circles of a zone open it. They are what the pocket radio catches:
   // Lola's broadcasts, callers and voice messages of a Madrid where people
