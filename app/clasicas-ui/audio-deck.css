@@ -1,0 +1,22 @@
+/* Clásicas 2026: the shared listening player (../listening-studio/AudioDeck.tsx, byte-frozen) on the light look.
+   Only restyles; the deck keeps its own markup and behaviour. */
+.cx .audio-deck{--audio-accent:var(--cx-accent);border:1px solid var(--cx-line);background:var(--cx-paper);color:var(--cx-ink);padding:clamp(16px,2.4vw,24px);border-radius:var(--cx-r-md);box-shadow:var(--cx-sh-1)}
+.cx .audio-deck header small{color:color-mix(in srgb,var(--audio-accent) 80%,#000);font-size:14px;font-weight:650;letter-spacing:0}
+.cx .audio-deck h2{font-family:var(--cx-display);font-weight:700;letter-spacing:-.02em;font-size:clamp(21px,2.2vw,28px);line-height:1.15;margin-top:4px}
+.cx .audio-deck header>span{border-color:var(--cx-line);background:var(--cx-canvas);color:var(--cx-ink-2);font-size:13.5px;font-weight:650;letter-spacing:0;text-transform:lowercase;display:inline-block}
+.cx .audio-deck header>span::first-letter{text-transform:uppercase}
+.cx .audio-deck header>span.live{color:#fff;background:var(--audio-accent);border-color:var(--audio-accent)}
+.cx .audio-wave{height:72px;margin:14px 0 6px}
+.cx .audio-wave i{background:linear-gradient(180deg,var(--audio-accent),color-mix(in srgb,var(--audio-accent) 30%,#fff));opacity:.45}
+.cx .audio-wave.moving i{opacity:1}
+.cx .audio-progress{font-size:14px;color:var(--cx-muted)}
+.cx .audio-state{height:auto;min-height:34px;margin-top:10px;background:var(--cx-line-2);border-radius:10px}
+.cx .audio-state i{background:var(--cx-accent-soft);border-right:2px solid var(--audio-accent)}
+.cx .audio-state span{padding:6px 12px;color:var(--cx-ink-2);font-size:14px;line-height:1.3}
+.cx .audio-deck footer{flex-wrap:wrap;gap:8px}
+.cx .audio-deck footer>button,.cx .audio-rate button{min-height:44px;border:1px solid var(--cx-line);background:var(--cx-paper);color:var(--cx-ink);border-radius:999px;padding:10px 18px;font-size:14.5px;font-weight:650;letter-spacing:0}
+.cx .audio-deck .audio-play{background:var(--audio-accent);border-color:var(--audio-accent);color:#fff;min-width:132px}
+.cx .audio-rate{gap:2px;padding:3px;border:1px solid var(--cx-line);border-radius:999px;background:var(--cx-paper)}
+.cx .audio-rate button,.cx .audio-rate button:first-child,.cx .audio-rate button:last-child{border:0;border-radius:999px;min-height:36px;padding:6px 12px;color:var(--cx-ink-2)}
+.cx .audio-rate button.active{background:var(--cx-ink);color:#fff}
+.cx .audio-deck button:focus-visible,.cx .audio-deck input:focus-visible{outline:3px solid color-mix(in srgb,var(--audio-accent) 70%,#000)}
