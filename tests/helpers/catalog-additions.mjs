@@ -24,7 +24,7 @@ const additions = [
         const at=lines.flatMap((line,n)=>/^  \{id:(26[5-9]|27\d|28[0-4]),.*path:"\/roleplays-/.test(line)?[n]:[]);
         assert.equal(at.length,20,'twenty country roleplay catalog entries');
         assert.deepEqual(at,at.map((_,k)=>at[0]+k),'the twenty entries sit together');lines.splice(at[0],20);return lines.join('\n');
-      },['"Conversación":[27,24,26,19,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284,15,','"Conversación":[27,24,26,19,15,'],[', 227, 228, 229, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284]);',', 227, 228, 229]);']],
+      },['259,258,260,261,264,263,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284]','259,258,260,261,264,263]'],[', 227, 228, 229, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284]);',', 227, 228, 229]);']],
       'scripts/check-english-copy.mjs':[["\n  'docs/audits/roleplays-hispanos-english-additions-20261124.json',",'']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/roleplays-hispanos.test.mjs']);\n",'']],
       'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 367);','assert.equal(lessons.length, 347);'],['assert.equal(a1Lessons.length, 118);','assert.equal(a1Lessons.length, 98);']],
