@@ -8,6 +8,7 @@ import StudioGuide from './StudioGuide';
 import MascotGuide from './MascotGuide';
 import {attemptFor,initialState,levelUrl,reduce,resolveLevel} from './state.mjs';
 import type {WorldDefinition} from './types';
+import '../clasicas-ui/clasicas.css';
 import './phonetics-world.css';
 export default function PhoneticsWorld({definition:d}:{definition:WorldDefinition}) {
  const [state,dispatch]=useReducer(reduce,undefined,()=>initialState());
