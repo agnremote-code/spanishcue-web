@@ -4,6 +4,7 @@ import {useState,type CSSProperties} from "react";
 import Link from "next/link";
 import { ConversationFamily } from "../conversation-families/ConversationFamily";
 import { kingdomVariants } from "./variants";
+import "../clasicas-ui/clasicas.css";
 import "../preguntas-prohibidas/style.css";
 import "../preguntas-prohibidas/bilingual-fix.css";
 import "../preguntas-prohibidas/kingdom-game.css";
