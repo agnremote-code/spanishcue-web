@@ -34,8 +34,8 @@ const clean = (term: string) => term.replace(/[¡!¿?…]/g, '').trim();
 const isLetter = (ch: string | undefined) => Boolean(ch && /\p{L}/u.test(ch));
 
 /** Splits a line so the country's expressions can be highlighted. */
-function useHighlighter(expresiones: Expression[]) {
-  return useMemo(() => {
+function makeHighlighter(expresiones: Expression[]) {
+  {
     const variants = expresiones.flatMap((item) => item.t.split(/\s*\/\s*/).map((v) => ({ v: clean(v), item }))).filter((x) => x.v.length > 1);
     variants.sort((a, b) => b.v.length - a.v.length);
     if (!variants.length) return (text: string): { parts: ReactNode[]; found: Expression[] } => ({ parts: [text], found: [] });
@@ -58,7 +58,7 @@ function useHighlighter(expresiones: Expression[]) {
       if (last < text.length) parts.push(text.slice(last));
       return { parts, found };
     };
-  }, [expresiones]);
+  }
 }
 
 function Gloss({ pair, english, className = '' }: { pair: Pair; english: boolean; className?: string }) {
@@ -92,7 +92,7 @@ export default function Roleplays({ slug }: { slug: string }) {
     return () => { alive = false; };
   }, [slug]);
 
-  const highlight = useHighlighter(content?.expresiones ?? []);
+  const highlight = useMemo(() => makeHighlighter(content?.expresiones ?? []), [content]);
   const scenes = content?.escenas ?? [];
   const scene: Scene | null = current === null ? null : scenes[current] ?? null;
   const resetStep = () => { setChosen(null); setFilled(null); setIdea(false); };
