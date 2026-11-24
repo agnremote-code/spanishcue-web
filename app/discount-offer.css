@@ -1,0 +1,62 @@
+.discount-offer{
+  position:relative;
+  display:grid;
+  grid-template-columns:auto minmax(0,1fr) auto;
+  align-items:center;
+  gap:18px;
+  margin:20px 0 0;
+  padding:16px 52px 16px 18px;
+  border:1px solid #ecdcc0;
+  border-radius:16px;
+  background:#fffaf1;
+  color:#102a43;
+}
+.discount-offer-badge{
+  display:grid;
+  place-items:center;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:#102a43;
+  color:#f5c24b;
+  font-size:15px;
+  font-weight:900;
+  letter-spacing:-.3px;
+}
+.discount-offer-copy{min-width:0}
+.discount-offer h2{margin:0;font-family:Georgia,serif;font-size:clamp(17px,1.6vw,21px);font-weight:700;line-height:1.25;letter-spacing:-.2px;color:#102a43}
+.discount-offer p{margin:4px 0 0;color:#4c6472;font-size:14px;line-height:1.45}
+.discount-offer-cta{
+  display:inline-flex;
+  align-items:center;
+  white-space:nowrap;
+  padding:10px 16px;
+  border-radius:9px;
+  background:#102a43;
+  color:#fff;
+  font-size:14px;
+  font-weight:800;
+  text-decoration:none;
+  transition:background .2s;
+}
+.discount-offer-cta:hover,.discount-offer-cta:focus-visible{background:#18749a}
+.discount-offer-close{
+  position:absolute;
+  top:8px;
+  right:10px;
+  width:30px;
+  height:30px;
+  border:0;
+  border-radius:50%;
+  background:transparent;
+  color:#6b7f8c;
+  font-size:20px;
+  line-height:1;
+  cursor:pointer;
+}
+.discount-offer-close:hover,.discount-offer-close:focus-visible{background:#f1e6d2;color:#102a43}
+@media (max-width:640px){
+  .discount-offer{grid-template-columns:auto minmax(0,1fr);padding:14px 44px 14px 14px;gap:12px 14px}
+  .discount-offer-badge{align-self:start;width:44px;height:44px;font-size:13px}
+  .discount-offer-cta{grid-column:1/-1;justify-content:center}
+}

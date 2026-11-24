@@ -3,6 +3,7 @@ import Link from "next/link";
 import HowItWorksVideos from "./marketing/HowItWorksVideos";
 import TrustStats from "./marketing/TrustStats";
 import NewLessonsBanner from "./NewLessonsBanner";
+import DiscountOfferCard from "./DiscountOfferCard";
 import LessonReportPanel from "./lesson-reports/LessonReportPanel";
 import MoodTenseDisclosure from "./verbal-system/MoodTenseDisclosure";
 import VerbalPosition from "./verbal-system/VerbalPosition";
@@ -1685,6 +1686,7 @@ export default function Library({
         {!fullAccess && <SpanishCueHero pricing />}
         {!fullAccess && view === "Biblioteca" && <TrustStats primary={primaryCta} primaryLabel={primaryCtaLabel} secondary={subscriptionCta.href === primaryCta.href ? secondaryCta : subscriptionCta} secondaryLabel={subscriptionCta.href === primaryCta.href ? secondaryCtaLabel : subscriptionCtaLabel} />}
         {!fullAccess && view === "Biblioteca" && <HowItWorksVideos />}
+        {signedIn && !fullAccess && <DiscountOfferCard preview={owner} />}
         <NewLessonsBanner lessons={lessons} />
         <section className="library-heading" id="library-results">
           <div>

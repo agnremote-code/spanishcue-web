@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 export default async function Access({
   searchParams,
 }: {
-  searchParams: Promise<{ returnTo?: string }>;
+  searchParams: Promise<{ returnTo?: string; oferta?: string }>;
 }) {
   const [requestHeaders, params] = await Promise.all([headers(), searchParams]);
   const returnTo = safeRelativeReturnPath(params.returnTo);
@@ -136,7 +136,7 @@ export default async function Access({
               ? `Precio fundador previsto: ${priceLabel}/mes. El checkout público aún no está activo.`
               : `Planned Founder Price: ${priceLabel}/month. Public checkout is not active yet.`}</p>
 
-          {checkoutLive ? <CheckoutButton signedIn={signedIn} returnTo={returnTo} /> : <FounderAccessForm defaultEmail={accountEmail} priceLabel={`${priceLabel}/${locale === "es" ? "mes" : "month"}`} returnTo={returnTo} />}
+          {checkoutLive ? <CheckoutButton signedIn={signedIn} returnTo={returnTo} discount10={params.oferta === "descuento10"} /> : <FounderAccessForm defaultEmail={accountEmail} priceLabel={`${priceLabel}/${locale === "es" ? "mes" : "month"}`} returnTo={returnTo} />}
           {resumableProvider && <p className="checkout-action"><Link className="checkout-free-link" href={`/pro/claim?provider=${resumableProvider}`}>
             {locale === "es" ? "Continuar con mi pago confirmado" : "Continue with my confirmed payment"}
           </Link></p>}

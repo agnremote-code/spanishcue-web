@@ -7,3 +7,48 @@
 .board-category-option>span:first-child{flex:1}
 .board-selector>div button.board-category-option.board-category-taught:not([aria-pressed="true"]){border-color:#318255;color:#23643e;background:#eaf5ed}
 .board-category-status{flex:none;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;background:#dcefe2;color:#21623b;padding:6px 9px;font-size:12px;font-weight:900;letter-spacing:.04em;white-space:nowrap}
+
+/* Clásicas 2026: the boards take the shared light look (app/clasicas-ui). */
+.cx.board-page{--cx-accent:var(--board-second);--board-paper:var(--cx-canvas);--board-card:#fff;--board-line:var(--cx-line);--board-ink:var(--cx-ink);--board-muted:var(--cx-muted);background:var(--cx-canvas);font-family:var(--cx-body)}
+.cx.board-page .cx-top{margin:0 calc(-1 * max(22px,calc((100vw - 1240px)/2)));padding-left:max(22px,calc((100vw - 1240px)/2));padding-right:max(22px,calc((100vw - 1240px)/2))}
+.cx.board-page .board-hero{padding:36px 0 24px}
+.cx.board-page .board-hero>div:first-child>span.cx-kicker{display:inline-flex;margin-bottom:12px;font-size:14px;letter-spacing:0;color:color-mix(in srgb,var(--board-second) 80%,#000)}
+.cx.board-page .board-hero h1{font:800 clamp(2.8rem,6.4vw,5.6rem)/.98 var(--cx-display);letter-spacing:-.04em;text-transform:none}
+.cx.board-page .board-hero p{color:var(--cx-ink-2)}
+.cx.board-page .board-counts{border-left:0;padding:16px 20px;border-radius:var(--cx-r-md);background:#fff;border:1px solid var(--cx-line);box-shadow:var(--cx-sh-1)}
+.cx.board-page .board-counts span{font-size:15px}
+.cx.board-page .board-plan{border-radius:var(--cx-r-md);background:var(--cx-teacher-soft);border-color:#f3e2bf}
+.cx.board-page .board-plan summary{color:#5b4310}
+.cx.board-page .board-plan summary span{font-size:14px;color:var(--cx-teacher)}
+.cx.board-page .board-plan li{border-radius:var(--cx-r-sm)}
+.cx.board-page .board-plan li span,.cx.board-page .board-plan>p{font-size:14px}
+.cx.board-page .board-phases{gap:10px}
+.cx.board-page .board-phases button{min-height:52px;border-radius:999px;background:#fff;border-color:var(--cx-line);color:var(--cx-ink-2);font-weight:650;font-size:15.5px}
+.cx.board-page .board-phases button[aria-current="step"]{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+.cx.board-page :is(.board-selector,.board-empty,.board-interlude,.board-final,.board-stage){border-radius:var(--cx-r-lg);box-shadow:var(--cx-sh-2)}
+.cx.board-page :is(.board-selector,.board-empty,.board-interlude,.board-final)>span{font-size:14px;font-weight:650;letter-spacing:0;color:color-mix(in srgb,var(--board-second) 80%,#000);text-transform:lowercase}
+.cx.board-page :is(.board-selector,.board-empty,.board-interlude,.board-final)>span::first-letter{text-transform:uppercase}
+.cx.board-page :is(.board-selector,.board-empty,.board-interlude,.board-final) h2{font-family:var(--cx-display);font-weight:700;letter-spacing:-.035em}
+.cx.board-page .board-selector>div button{border-width:1px;border-radius:var(--cx-r-md);font-weight:650;font-size:16px;transition:border-color .2s,box-shadow .2s}
+.cx.board-page .board-selector>div button:hover{box-shadow:var(--cx-sh-1)}
+.cx.board-page .board-selector>div button[aria-pressed="true"]{box-shadow:inset 0 0 0 1px var(--board-second)}
+.cx.board-page .board-category-status{font-size:13.5px;letter-spacing:0}
+.cx.board-page :is(.board-primary,.board-secondary,.board-empty button,.board-final button,.board-actions button){border-radius:999px;font-weight:650;font-size:15.5px}
+.cx.board-page .board-secondary{background:#fff;border:1px solid var(--cx-line)}
+.cx.board-page .board-card-meta{font-size:14px;font-weight:650;letter-spacing:0;text-transform:none;color:color-mix(in srgb,var(--board-second) 80%,#000)}
+.cx.board-page .board-stage>h2{font-family:var(--cx-display);font-weight:700;letter-spacing:-.035em}
+.cx.board-page .board-depth{border-color:var(--cx-line-2)}
+.cx.board-page .board-depth>span{font-size:14px;letter-spacing:0;text-transform:lowercase;display:inline-block}
+.cx.board-page .board-depth>span::first-letter{text-transform:uppercase}
+.cx.board-page .board-depth aside{border-radius:var(--cx-r-md)}
+.cx.board-page .board-depth aside b{font-size:14px;letter-spacing:0;text-transform:lowercase;display:inline-block}
+.cx.board-page .board-depth aside b::first-letter{text-transform:uppercase}
+.cx.board-page .board-help summary{font-size:15px;color:var(--cx-teacher)}
+.cx.board-page .board-help span{font-size:14px}
+.cx.board-page .board-actions button{background:#fff;min-height:52px}
+.cx.board-page .board-actions .board-next{background:var(--cx-ink);color:#fff}
+.cx.board-page .board-status,.cx.board-page .board-footer{font-size:14px}
+.cx.board-page .board-footer{border-color:var(--cx-line-2)}
+.cx.board-page.board-presentation .cx-top{display:none}
+@media(max-width:720px){.cx.board-page .cx-top{margin:0 -14px;padding-left:14px;padding-right:14px}.cx.board-page .cx-top-title{display:none}.cx.board-page .board-hero h1{font-size:2.6rem}}
+.cx.board-page .cx-top-brand{font-weight:700;font-size:15px}.cx.board-page .cx-btn{font-weight:650;font-size:15.5px}

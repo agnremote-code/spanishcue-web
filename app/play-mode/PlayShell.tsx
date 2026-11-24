@@ -3,6 +3,7 @@
 import { type ReactNode, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { SpanishCueBrand } from "../SpanishCueBrand";
+import "../clasicas-ui/clasicas.css";
 import "./play-mode.css";
 
 export type PlayStage = { label: string; short: string; minutes: number; color: string };

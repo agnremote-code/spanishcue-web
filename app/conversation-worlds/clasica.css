@@ -1,0 +1,100 @@
+/* Conversation worlds (La máquina que elimina cosas, Tu vida con una regla
+   absurda), Clásicas 2026 skin. The world component, its data and worlds.css
+   are byte-frozen by the preservation tests, so the new look lives here and is
+   loaded from the layout of each route. Most of the frozen theme runs on
+   --cw-* variables, so the light canvas redefines them; the rest is overridden
+   with main.cw-world selectors, which outrank the frozen ones. */
+main.cw-world{--cx-accent:#0b7a85;--cw-bg:var(--cx-canvas);--cw-panel:#fff;--cw-ink:var(--cx-ink);--cw-muted:var(--cx-muted);--cw-accent:#0b7a85;--cw-border:var(--cx-line);background:var(--cx-canvas);color:var(--cx-ink);font-family:var(--cx-body)}
+main.cw-world.cw-rules{--cx-accent:#6741d9;--cw-bg:var(--cx-canvas);--cw-panel:#fff;--cw-muted:var(--cx-muted);--cw-accent:#6741d9;--cw-border:var(--cx-line);background:var(--cx-canvas)}
+main.cw-world :focus-visible{outline:3px solid color-mix(in srgb,var(--cw-accent) 70%,#000)}
+
+/* Sentence case for the frozen uppercase labels */
+main.cw-world :is(.cw-eyebrow,.cw-level,.cw-card-top>span,.cw-scene-caption div>span,.cw-choices b,.cw-choice-pill){text-transform:lowercase}
+main.cw-world :is(.cw-eyebrow,.cw-level,.cw-card-top>span,.cw-scene-caption div>span,.cw-choices b,.cw-choice-pill)::first-letter{text-transform:uppercase}
+main.cw-world :is(.cw-level,.cw-card-top>span,.cw-choice-pill){display:inline-block}
+main.cw-world .cw-eyebrow{display:block;font-size:14px!important;font-weight:650;letter-spacing:0;color:color-mix(in srgb,var(--cw-accent) 85%,#000)}
+main.cw-world .cw-level{font-size:14px;letter-spacing:0;font-weight:650;padding:6px 12px;border-radius:999px;background:var(--cx-accent-soft);color:color-mix(in srgb,var(--cw-accent) 80%,#000)}
+
+/* Top bar */
+main.cw-world .cw-shell{width:min(var(--cx-max),calc(100% - 2*var(--cx-pad)))}
+main.cw-world .cw-topbar{min-height:64px;gap:20px;border-bottom:0}
+main.cw-world .cw-topbar .sc-brand-system{--brand-ink:var(--cx-ink);--brand-subtle:var(--cx-muted);color:var(--cx-ink);text-shadow:none}
+main.cw-world .cw-topbar .sc-brand-name small{display:none}
+main.cw-world .cw-back{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--cx-paper);border:1px solid var(--cx-line);color:var(--cx-ink-2)!important;font-size:15px;font-weight:600}
+main.cw-world .cw-top-actions button{border-radius:999px;border-color:var(--cx-line);background:var(--cx-paper);color:var(--cx-ink-2);font-size:14px;font-weight:600;padding:8px 14px}
+
+/* Intro */
+main.cw-world .cw-intro{padding:28px 0 32px}
+main.cw-world .cw-intro h1{font-family:var(--cx-display);font-size:clamp(2.4rem,4.6vw,4rem);font-weight:700;line-height:1.02;letter-spacing:-.035em}
+main.cw-world .cw-intro h1 em,main.cw-world.cw-rules .cw-intro h1 em{font-family:var(--cx-display);font-style:normal;font-weight:700;color:var(--cw-accent)}
+main.cw-world .cw-intro-copy>p:first-child{font-size:19px;color:var(--cx-ink-2)}
+main.cw-world .cw-instruction,main.cw-world .cw-fiction{color:var(--cx-muted)}
+main.cw-world .cw-count{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--cx-paper);border:1px solid var(--cx-line);font-size:14px;color:var(--cx-ink-2)}
+
+/* Scene */
+main.cw-world .cw-panorama,main.cw-world.cw-rules .cw-panorama{border:0;border-radius:var(--cx-r-lg);box-shadow:var(--cx-sh-2)}
+main.cw-world .cw-light-pass,main.cw-world.cw-rules .cw-light-pass{display:none}
+main.cw-world .cw-scene-edge{display:none}
+main.cw-world .cw-scene-caption div>span{display:block;font-size:14px;letter-spacing:0;color:var(--cx-muted)}
+main.cw-world .cw-scene-caption strong{font-family:var(--cx-display);font-size:19px;font-weight:700}
+main.cw-world .cw-scene-caption>b{font-family:var(--cx-display);font-weight:700}
+main.cw-world .cw-progress{height:6px;border-radius:999px;background:var(--cx-line-2)}
+main.cw-world .cw-progress i{border-radius:999px}
+main.cw-world .cw-progress-meta{font-size:14px}
+main.cw-world .cw-scene-situation{border-left:3px solid var(--cw-accent);padding-left:16px}
+main.cw-world .cw-scene-situation>span{color:color-mix(in srgb,var(--cw-accent) 80%,#000)}
+main.cw-world .cw-scene-situation p{color:var(--cx-ink-2)}
+
+/* Card */
+main.cw-world .cw-round-bar{font-size:15px}
+main.cw-world .cw-round-bar button{font-size:14px;color:var(--cx-muted)}
+main.cw-world .cw-card,main.cw-world.cw-rules .cw-card{padding:clamp(22px,2.6vw,32px);border:1px solid var(--cx-line);border-radius:var(--cx-r-lg);background:var(--cx-paper);box-shadow:var(--cx-sh-2)}
+main.cw-world .cw-card-top{font-size:14px;letter-spacing:0;color:var(--cx-muted);border-bottom:1px solid var(--cx-line-2)}
+main.cw-world .cw-card-top>span:last-child{font-weight:650;color:var(--cw-accent)}
+main.cw-world .cw-card h2,main.cw-world .cw-rule-card h2{font-family:var(--cx-display);font-weight:700;letter-spacing:-.025em;color:var(--cx-ink)}
+main.cw-world .cw-context,main.cw-world .cw-law{color:var(--cx-ink-2)}
+main.cw-world .cw-decision-prompt{font-weight:600}
+main.cw-world .cw-choices button{min-height:96px;border-radius:var(--cx-r-md);box-shadow:var(--cx-sh-1);transition:transform .2s,box-shadow .2s}
+main.cw-world .cw-choices button:hover{transform:translateY(-3px);box-shadow:var(--cx-sh-2)}
+main.cw-world .cw-choices button:active{transform:translateY(1px);box-shadow:var(--cx-sh-1)}
+main.cw-world .cw-choices b{display:block;font-family:var(--cx-display);font-size:28px;font-weight:800;letter-spacing:-.01em}
+main.cw-world .cw-choices span{font-size:15px;font-weight:600}
+main.cw-world .cw-yes{background:#ff8a4c;color:#2b1307;border-color:#ff8a4c!important;box-shadow:var(--cx-sh-1)}
+main.cw-world .cw-no{background:#3bc9db;color:#05303a;border-color:#3bc9db!important;box-shadow:var(--cx-sh-1)}
+main.cw-world .cw-card-note{font-size:14px!important;color:var(--cx-muted)}
+main.cw-world .cw-choice-pill{font-size:13.5px;font-weight:650;letter-spacing:0;border-radius:999px;padding:4px 10px;background:var(--cx-accent-soft);color:color-mix(in srgb,var(--cw-accent) 80%,#000)}
+main.cw-world .cw-choice-yes{background:#fff0e6!important;color:#9a3f0c!important}
+main.cw-world .cw-question{font-family:var(--cx-display);font-weight:600;letter-spacing:-.015em;color:var(--cx-ink)}
+main.cw-world .cw-translation{color:var(--cx-ink-2)}
+main.cw-world .cw-help{border-color:var(--cx-line-2);color:var(--cx-ink-2)}
+main.cw-world .cw-help summary{font-size:15px;font-weight:650;color:var(--cx-ink)}
+main.cw-world .cw-help p{font-size:15.5px}
+main.cw-world .cw-help .cw-starter{color:color-mix(in srgb,var(--cw-accent) 85%,#000)}
+main.cw-world .cw-words span{border-radius:999px;padding:5px 12px;background:var(--cx-canvas);font-size:14.5px}
+main.cw-world .cw-primary,main.cw-world.cw-rules .cw-primary{border:0;border-radius:999px;background:var(--cx-ink);color:#fff;padding:14px 22px;box-shadow:none}
+main.cw-world .cw-primary:hover{box-shadow:var(--cx-sh-1)}
+main.cw-world .cw-consequence{border-left:3px solid #f08c4a}
+main.cw-world .cw-consequence .cw-eyebrow{color:#a8460f}
+main.cw-world .cw-consequence>p:not(.cw-eyebrow):not(.cw-verdict){color:var(--cx-ink-2)}
+main.cw-world .cw-consequence h4{font-family:var(--cx-display);font-weight:650}
+main.cw-world .cw-final-choices button{border:1px solid var(--cx-line);border-radius:999px;background:var(--cx-paper);color:var(--cx-ink);font-size:15px;font-weight:600}
+main.cw-world .cw-final-choices button[aria-pressed=true]{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+main.cw-world .cw-groups button[aria-pressed=true]{color:#fff}
+main.cw-world .cw-question-steps button[aria-current=step]{background:var(--cw-accent);border-color:var(--cw-accent);color:#fff}
+
+/* Rounds */
+main.cw-world .cw-round-tile,main.cw-world.cw-rules .cw-round-tile{border:1px solid var(--cx-line);border-radius:var(--cx-r-md);background:var(--cx-paper);color:var(--cx-ink);box-shadow:var(--cx-sh-1)}
+main.cw-world .cw-round-tile.cw-current,main.cw-world.cw-rules .cw-round-tile.cw-current{border-color:var(--cw-accent);box-shadow:inset 0 0 0 1px var(--cw-accent),var(--cx-sh-1)}
+main.cw-world .cw-scene-situation>span{display:inline-block;font-size:14px;font-weight:650;letter-spacing:0;text-transform:lowercase}
+main.cw-world .cw-scene-situation>span::first-letter{text-transform:uppercase}
+main.cw-world .cw-next button{border-radius:999px;background:var(--cx-paper);font-size:15px;font-weight:600;padding:10px 18px}
+main.cw-world .cw-next span{font-size:14px}
+main.cw-world .cw-rounds{border-top:1px solid var(--cx-line-2)}
+main.cw-world .cw-section-heading h2{font-family:var(--cx-display);font-weight:700;letter-spacing:-.025em}
+main.cw-world .cw-section-heading>span,main.cw-world .cw-footer p{font-size:14px}
+main.cw-world .cw-footer{border-top:1px solid var(--cx-line-2)}
+main.cw-world .cw-footer button,main.cw-world .cw-footer a{font-size:14px}
+main.cw-world :is(.cw-tile-meta,.cw-tile-bottom){font-size:14px}
+main.cw-world .cw-round-tile h3,main.cw-world .cw-round-tile strong{font-family:var(--cx-display);font-weight:650}
+main.cw-world .cw-count{border-radius:14px}
+main.cw-world .cw-tile-meta i{font-size:13.5px}
