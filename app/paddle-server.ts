@@ -1,4 +1,4 @@
-import { PROMO_WEEK_CENTS, PROMO_WEEK_CODE, PROMO_WEEK_DAYS, PROMO_WEEK_THEN_CENTS } from "./promo-config";
+import { DISCOUNT_10_CENTS, DISCOUNT_10_CODE, DISCOUNT_10_THEN_CENTS, PROMO_WEEK_CENTS, PROMO_WEEK_CODE, PROMO_WEEK_DAYS, PROMO_WEEK_THEN_CENTS } from "./promo-config";
 import { PADDLE_MONTHLY_PRICE_ID, PADDLE_LEGACY_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_ANNUAL_PRICE_ID, PADDLE_LEGACY_ANNUAL_PRICE_ID, PADDLE_LEGACY_ANNUAL_CENTS, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_ANNUAL_CENTS, PADDLE_PRODUCT_ID, PADDLE_REFERRAL_DISCOUNT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
 
 type PaddlePrice = {
@@ -101,6 +101,7 @@ export async function createPaddleCheckoutTransaction(
     method: "POST",
     body: JSON.stringify({
       items: [input.offer === "promo" ? { price: paddlePromoPrice(), quantity: 1 }
+        : input.offer === "discount10" ? { price: paddleDiscount10Price(), quantity: 1 }
         : { price_id: input.offer === "trial" ? config.trialPriceId : input.offer === "annual" ? config.annualPriceId : config.priceId, quantity: 1 }],
       currency_code: "USD",
       collection_mode: "automatic",
@@ -133,6 +134,25 @@ export function paddlePromoPrice() {
     tax_mode: "internal",
     quantity: { minimum: 1, maximum: 1 },
     custom_data: { spanishcue_promo: PROMO_WEEK_CODE },
+  };
+}
+
+/** The 10% offer: a non-catalog price of the PRO product whose first month (a paid one-month trial
+ * period) costs US$17.91, then US$19.90 every month. Nothing in the Paddle catalog changes. */
+export function paddleDiscount10Price() {
+  return {
+    product_id: PADDLE_PRODUCT_ID,
+    name: "First month 10% off (US$17.91), then US$19.90/month",
+    description: `SpanishCue PRO offer ${DISCOUNT_10_CODE}: first month US$17.91, then US$19.90 monthly`,
+    unit_price: { amount: String(DISCOUNT_10_THEN_CENTS), currency_code: "USD" },
+    billing_cycle: { interval: "month", frequency: 1 },
+    trial_period: {
+      interval: "month", frequency: 1, requires_payment_method: true,
+      unit_price: { amount: String(DISCOUNT_10_CENTS), currency_code: "USD" },
+    },
+    tax_mode: "internal",
+    quantity: { minimum: 1, maximum: 1 },
+    custom_data: { spanishcue_promo: DISCOUNT_10_CODE },
   };
 }
 
@@ -221,7 +241,7 @@ export function validatePaddleSubscription(subscription: PaddleSubscription, con
     : {};
   if (custom[customKey] !== userId) return false;
   return paddleOffer(subscription, config) !== null
-    && (subscription.status !== "trialing" || paddleOffer(subscription, config) === "trial" || paddleOffer(subscription, config) === "promo");
+    && (subscription.status !== "trialing" || ["trial", "promo", "discount10"].includes(String(paddleOffer(subscription, config))));
 }
 
 export function validatePaddleTransaction(transaction: PaddleTransaction, config: PaddleRuntimeConfig, userId: string, customKey: "spanishcue_user_id" | "spanishcue_claim_id" = "spanishcue_user_id") {
@@ -262,6 +282,11 @@ export function paddleOffer(entity: Pick<PaddleTransaction, "items">, config: Pa
       && ![config.priceId, config.trialPriceId, config.annualPriceId, PADDLE_LEGACY_MONTHLY_PRICE_ID, PADDLE_LEGACY_ANNUAL_PRICE_ID].includes(price.id)
       && trial?.interval === "day" && trial.frequency === PROMO_WEEK_DAYS && trial.requires_payment_method !== false
       && trial.unit_price?.amount === String(PROMO_WEEK_CENTS) && trial.unit_price.currency_code === "USD") return "promo";
+  // The 10% offer: the same safeguards, exactly one paid month at US$17.91, then US$19.90/month.
+  if (amount === String(DISCOUNT_10_THEN_CENTS) && typeof price.id === "string" && price.id.startsWith("pri_")
+      && ![config.priceId, config.trialPriceId, config.annualPriceId, PADDLE_LEGACY_MONTHLY_PRICE_ID, PADDLE_LEGACY_ANNUAL_PRICE_ID].includes(price.id)
+      && trial?.interval === "month" && trial.frequency === 1 && trial.requires_payment_method !== false
+      && trial.unit_price?.amount === String(DISCOUNT_10_CENTS) && trial.unit_price.currency_code === "USD") return "discount10";
   // The paid trial (not offered on the site) keeps its original US$15.50 base price.
   if (amount === "1550" && config.trialPriceId && config.trialPriceId !== config.priceId && price.id === config.trialPriceId
       && trial?.interval === "day" && trial.frequency === 1 && trial.requires_payment_method !== false
@@ -279,6 +304,7 @@ function paddleTransactionAmountValid(transaction: PaddleTransaction, config: Pa
   const amount = Number(transaction.details?.totals?.total);
   return offer !== null && (amount === Number(transaction.items?.[0].price?.unit_price?.amount) || (offer === "trial" && amount === PADDLE_TRIAL_CENTS)
     || (offer === "promo" && amount === PROMO_WEEK_CENTS)
+    || (offer === "discount10" && amount === DISCOUNT_10_CENTS)
     || referralFreeMonth(transaction, offer));
 }
 
@@ -293,13 +319,15 @@ export function paddleCompletedPayment(transaction: PaddleTransaction, subscript
       || transaction.subscription_id !== subscription.id || !transaction.customer_id
       || transaction.customer_id !== subscription.customer_id) return null;
   const amountCents = Number(transaction.details?.totals?.total);
-  const isTrial = offer === "promo" ? amountCents === PROMO_WEEK_CENTS : amountCents === PADDLE_TRIAL_CENTS;
+  const isTrial = offer === "promo" ? amountCents === PROMO_WEEK_CENTS : offer === "discount10" ? amountCents === DISCOUNT_10_CENTS : amountCents === PADDLE_TRIAL_CENTS;
   const trialSeconds = (offer === "promo" ? PROMO_WEEK_DAYS : 1) * 86400;
+  // The discounted first month is a calendar month (28 to 31 days), like a regular monthly period.
+  const trialLengthValid = (seconds: number) => offer === "discount10" ? seconds >= 28 * 86400 && seconds <= 31 * 86400 : seconds === trialSeconds;
   const period = transaction.billing_period ?? (isTrial && subscription.status === "trialing" ? subscription.current_billing_period : null);
   const start = typeof period?.starts_at === "string" ? Math.floor(Date.parse(period.starts_at) / 1000) : NaN;
   const end = typeof period?.ends_at === "string" ? Math.floor(Date.parse(period.ends_at) / 1000) : NaN;
   if (!Number.isInteger(start) || !Number.isInteger(end) || end <= start
-      || (isTrial && end - start !== trialSeconds)
+      || (isTrial && !trialLengthValid(end - start))
       || (!isTrial && offer !== "annual" && (end - start < 28 * 86400 || end - start > 31 * 86400))
       || (offer === "annual" && (end - start < 365 * 86400 || end - start > 366 * 86400))
       || (subscription.status === "trialing" && !isTrial)

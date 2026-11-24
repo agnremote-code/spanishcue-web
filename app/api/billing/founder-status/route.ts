@@ -1,9 +1,9 @@
 import { env } from "cloudflare:workers";
-import { accountIdFromHeaders } from "../../../access-policy";
+import { accountIdFromHeaders, fullAccessFromHeaders } from "../../../access-policy";
 import { billingConfig, billingReadiness, checkoutAllowed } from "../../../billing-config";
 import { getFounderOfferStatus, promoWeekEligible } from "../../../../db/billing";
 import { ensurePaypalPromoPlan } from "../../../paypal-server";
-import { PROMO_WEEK_CENTS, PROMO_WEEK_DAYS, PROMO_WEEK_ENDS_AT, PROMO_WEEK_THEN_CENTS, promoWeekActive } from "../../../promo-config";
+import { DISCOUNT_10_CENTS, DISCOUNT_10_PERCENT, DISCOUNT_10_THEN_CENTS, PROMO_WEEK_CENTS, PROMO_WEEK_DAYS, PROMO_WEEK_ENDS_AT, PROMO_WEEK_THEN_CENTS, promoWeekActive } from "../../../promo-config";
 import { legalOperator } from "../../../legal/operator";
 import { paddleAnnualReady, paddleConfig, paddleReady } from "../../../paddle-config";
 
@@ -40,6 +40,15 @@ export async function GET(request: Request) {
         endsAt: PROMO_WEEK_ENDS_AT,
         // null: not signed in yet. The promo is for teachers who never paid before.
         eligible: userId ? await promoWeekEligible(env.DB, userId) : null,
+      },
+      // «10% de descuento en tu próxima suscripción»: card only, for signed-in teachers without PRO.
+      discount10: {
+        cardAvailable: status.available && paddleCheckoutAvailable,
+        percent: DISCOUNT_10_PERCENT,
+        priceUsd: DISCOUNT_10_CENTS / 100,
+        thenPriceUsd: DISCOUNT_10_THEN_CENTS / 100,
+        // null: not signed in yet.
+        eligible: userId ? !fullAccessFromHeaders(request.headers) : null,
       },
       priceUsd: 19.9,
       paypalPriceUsd: config.founderOffer.priceUsd,

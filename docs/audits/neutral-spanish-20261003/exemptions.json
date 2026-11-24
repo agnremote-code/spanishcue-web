@@ -13572,6 +13572,54 @@
       "text": "¡Ma sí, andá a cagar!",
       "category": "regional-pedagogy",
       "reason": "Shouted line in a deliberate Argentine voice, spoken by the Argentine Edge voice es-AR-*; every bump line in voces.json uses the Spanish of its own speaker's country (Ale, 2026-11-19: insults must sound native and varied)."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En Buenos Aires se dice «vos sabés», en Madrid «tú sabes» y, para hablar a un grupo de amigos, en México se dice «ustedes saben».",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En el texto argentino dicen «vos tenés».",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Formas de sujeto: yo, tú, vos, usted, él, ella, nosotros, nosotras, ustedes, ellos, ellas",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Los pronombres personales parecen lo más fácil del curso, pero esconden tres trampas. La primera: en español el sujeto se omite casi siempre, y el alumno que dice «yo» en cada frase suena insistente. La segunda: tú, usted y vos no son intercambiables y dependen del país y de la relación. La tercera: después de preposición cambian a mí, ti y conmigo. Estas actividades trabajan las tres con presentaciones, situaciones de registro y conversaciones reales.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Tú es la forma de confianza en España y en gran parte de América. Usted marca distancia o respeto y va con el verbo en tercera persona. Vos es la forma de confianza en Argentina, Uruguay, Paraguay y Centroamérica.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Vos en Argentina, Uruguay, Paraguay y Centroamérica, con sus propias formas verbales",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Vos, tú y ustedes",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "¿Cuándo se usa tú, usted y vos?",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
     }
   ]
 }

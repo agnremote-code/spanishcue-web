@@ -60,12 +60,14 @@ PR #325; check later ones in LECCIONES.md). A class has:
   and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g; never self-approve),
   `scripts/check-<slug>.mjs`, `tests/<slug>.test.mjs`, and the world's floors in
   the WORLDS registry of `tests/3d-sin-fantasmas.test.mjs`.
-- Cover: cartoon key art in the grammar-mascot doll style (never a game
-  screenshot), art at `scripts/covers/art/<slug>.webp`, add it to WORLDS in
+- Cover: cinematic illustrated key art from an image model (adult, painterly,
+  animated-film quality, no text, its own protagonist), never a game screenshot
+  and NEVER a hand-drawn SVG/HTML scene (Ale, 2026-11-24: «espantosas»). Canva
+  `generate-image` if credits remain; otherwise ChatGPT through Remote Control on
+  Ale's Mac (16:10 PNG pushed to a temp branch). Art at
+  `scripts/covers/art/<slug>.webp` (16:10), add it to WORLDS in
   `scripts/covers/render.mjs`, render to `public/<slug>/portada.webp`
-  1200×750 < 120 KB. Canva `generate-image` with public/mascots/explorer.png as
-  style reference if credits remain; otherwise draw it as an illustrated SVG/HTML
-  scene in that style and render it (never a screenshot).
+  1200×750 < 120 KB, and bump `COVER_VERSION` when redrawing an existing cover.
 
 ## Non-negotiable rules (Ale)
 
