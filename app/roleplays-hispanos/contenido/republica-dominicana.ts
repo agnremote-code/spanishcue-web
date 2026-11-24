@@ -26,7 +26,7 @@ const contenido: CountryContent = {
         ['T', ['Sí, una funda de hielo y unos plátanos.', 'Yes, a bag of ice and some plantains.']],
         ['L', ['¿Cuántos plátanos?', 'How many plantains?']],
         ['T', ['Cuatro. Mañana hago mangú.', "Four. Tomorrow I'm making mangú."]],
-        ['L', ['¡Diache, ya eres dominicano!', "Wow, you're already Dominican!"]],
+        ['L', ['¡Diache, ya cocinas como en Santo Domingo!', "Wow, you already cook like in Santo Domingo!"]],
         ['T', ['Jaja, ¡un chin nada más! ¿Cuánto es?', 'Haha, just a little bit! How much is it?']],
         ['L', ['Ciento cincuenta pesos.', 'A hundred and fifty pesos.']],
         ['T', ['Aquí tienes. ¡Gracias, Félix!', 'Here you are. Thanks, Félix!']],
