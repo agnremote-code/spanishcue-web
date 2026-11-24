@@ -34,7 +34,7 @@ Only the briefs and the final reports exist. The briefs below are compact re-typ
    - the uniqueness guards.
    Do not edit anything. About 20 tool calls.
 5. **Sofia → Facilitator** (about 02:23Z). **CODE APPROVE**, 0 blockers.
-   - A generator diff of main against HEAD: 350 level pages on both. Only `intro`, `order` and `faq` change. Path, title, description, H1, lessonIds and indexing are unchanged, and topic pages are byte-identical.
+   - A generator diff of main against HEAD: 350 level pages on both. Only `intro` (264 pages), `order` (145) and `faq` (309: `faq[0]` on 72, `faq[1]` on 307) change. Path, title, description, H1, lessonIds and indexing are unchanged, and topic pages are byte-identical.
    - «Cada tarjeta indica el nivel y la duración» is true (`components.tsx:101`).
    - The regex change alters only class 256's short title.
    - Non-blocking notes:
