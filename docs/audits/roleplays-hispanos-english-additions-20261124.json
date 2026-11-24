@@ -1,0 +1,1986 @@
+{
+  "version": 1,
+  "authorization": "Owner request of 2026-11-24 in project thread cmsg_01Gr5R4j3t2Yet65UcmhcVhACkeC6qC2urGZ5qLa3cnUs8 (role-plays like the Argentine class for every Spanish-speaking country, graded for basic levels A1–A2), under the standing English-copy approvals cmsg_01Gr5R4j3t2Yet65UcmhcVhADwvzg9kA9GinuWu3D7FSfe and cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g. The classes are bilingual support material for A1–A2: this manifest approves only the exact English halves of the [es, en] pairs listed below, in app/roleplays-hispanos/.",
+  "additions": [
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "If you do not understand"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "Can you repeat, please?"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "Slower, please."
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "I do not understand this word."
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "What does… mean?"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "If you are missing a word"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "How do you say… in Spanish?"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "It is like…"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "I do not know the word, but…"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "One moment, please."
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "To buy time"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "Hmm, let me see…"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "Well…"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "That is a good question."
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "Let me think."
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "To keep the conversation going"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "And you?"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "And you? (formal)"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "How nice!"
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "Really?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "What a shame! / What a bummer!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "a little extra (free)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "go ahead / just"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Cheers! / Hooray!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "seller / regular customer"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "boy / girl, youngster"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "a lot"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "shared minibus taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "baked juicy empanada"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "hot purple corn drink"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Andean woman in traditional dress"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Darn!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "a little while"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Mid-morning salteñas"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "The La Paz cable car"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "In the shared taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "The Uyuni Salt Flat"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Cholita wrestling"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Api with a fritter"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "The Oruro Carnival"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Isla del Sol"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "At the Rodríguez market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "Lunch in Santa Cruz"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Get it? / You know?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "right away"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "(emphasis)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "What a drag!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "boring"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "intense / crazy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "boyfriend / girlfriend"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "afternoon tea"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "a thousand pesos"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "party / night out"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "city bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "loaded hot dog"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "traffic jam"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Afternoon tea"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "A completo italiano"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "On the bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "The hills of Valparaíso"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "A fonda at the national holidays"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Stars in Atacama"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Torres del Paine"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "A party with friends"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "At the Central Market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Curanto in Chiloé"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "What's up? / How are you?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "cool / great"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "buddy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "nice / cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "a black coffee"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "Could I have…?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "Go for it! / Sure!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "right away / absolutely"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "I'm sorry! / How embarrassing!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "to party"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "hangover"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "at your service / you're welcome"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "a lot"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "A black coffee in Bogotá"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "The fruit seller in Cartagena"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "The Medellín cable car"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "Street arepas"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "Salsa class in Cali"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "A coffee farm"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "On the TransMilenio bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "National team match"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "The Flower Festival"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "At the corner shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Great! / All good! / Hi! / Bye!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "dude / mate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "well… / so…"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "How cool!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "job / work"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Hello? Anyone home?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "you're welcome / with pleasure"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "luckily / thankfully"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "What bad luck!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "a moment / a little"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "small local restaurant"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "pickup football game"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Lunch at a soda"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Tour in Manuel Antonio"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Hello! Visiting the neighbour"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Zip-lining in Monteverde"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "A pickup game on Saturday"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Chocolate tour"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "In a red taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Rice and beans in Puerto Viejo"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Changing money at the bank"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Beach plans"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "buddy / mate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "the bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "to eat"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "to work"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "pal"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "foreigner"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "classic American car taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "private family restaurant"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "to get a lift / hitchhike"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "huge / amazing"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "I'm off"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "Dinner at a paladar"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "In a classic car taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "At the homestay"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "An afternoon on the Malecón"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "Salsa lesson in Trinidad"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "Waiting for the bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "Tobacco in Viñales"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "Dominoes with the neighbours"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "At the farmers’ market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "A fifteenth birthday party"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Darn! / Wow!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "brother / sister, close friend"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Brr! It's cold!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Ouch, it's hot!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "baby / small child"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "only one / single"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "for sure"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "to be broke"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Pardon?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "in a moment (or later…)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "buddy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "sweater / jacket"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "The Otavalo market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "The Quito cable car"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "The Middle of the World"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Tortoises in Galápagos"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Cycling in Baños"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Fish soup in Guayaquil"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Meeting the baby"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Hats in Cuenca"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Surfing in Montañita"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "The Devil's Nose train"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "How cool!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "friend / buddy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "kid"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Salvadoran"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Oh no! / Wow!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Okay then!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "exactly"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "hard / difficult"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "gossip"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "At the pupusa shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Surf lesson at El Tunco"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Festival in Juayúa"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "On the bus to Santa Ana"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Climbing Santa Ana volcano"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "A kid's birthday party"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Coffee in the historic centre"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "At the craft market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "At Lake Coatepeque"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "The gossip of the day"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "okay"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "No way! / Unbelievable!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "mate / guy, girl"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "it's cool / I like it"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "to work / job"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "to meet up"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "Come on! / Okay!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "Wow! / Oh my!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "nice / kind"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "to be amazed"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "to go for tapas"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "foreign tourist (playful)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "you (plural, informal)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "Tapas in Madrid"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "Churros with chocolate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "On the Madrid metro"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "The Sagrada Família"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "The April Fair"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "Paella in Valencia"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "The Way of St James"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "Meeting up with friends"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "A beach bar in Málaga"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/espana.ts",
+      "text": "The Alhambra in Granada"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "How cool!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "kid / young person"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Okay then!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Guatemalan"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "exactly"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "guys / everyone"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "dog"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "dirty / a street hot dog"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "blond"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Wow! / Oh my!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "At the Chichicastenango market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "On the chicken bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Chuchitos on the corner"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "At Lake Atitlán"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Guatemalan breakfast"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Climbing Pacaya volcano"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Street hot dogs at night"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "At the hostel"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Weekend plans"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "At a coffee farm"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "Hello (in Fang)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "mate / buddy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "to speak Spanish well"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "to make mistakes in Spanish"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "dazed / out of it"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "corner shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "change (money back)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "watchman / car guard"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "to clear weeds with a machete"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "to get a haircut"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "hair extensions"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "English-based pidgin"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "At the corner shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "The Bata bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "Speaking well in class"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "At the hair salon"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "The market car guard"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "With a mate on the promenade"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "A visit to the village"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "At Semu market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "Turtles in Ureka"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "Independence Day"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "How cool!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "kid"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Oh no! / Wow!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Honduran"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "okay / fine"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "close friend"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "a ride / a lift"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "corner shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "fair-skinned / blond"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "thing / stuff"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "dude"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Baleadas for breakfast"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "At the corner shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "The ferry to Roatán"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "The Copán ruins"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "A football match"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "A shared taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "At Grandma's house"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Diving lesson in Utila"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "At the Guamilito market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "A lift to the beach"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "Wow! / Okay! / Come on!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "How cool!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "right now / in a bit"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "Pardon? / Yes?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "Watch out!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "the truth / honestly"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "a lot"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "work / job"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "Enjoy your meal!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "dude"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "At the taco stand"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "On the bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "At the market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "At a friend's house"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "At the café"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "Asking for directions"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "At the pharmacy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "A family party"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "Making plans"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/mexico.ts",
+      "text": "To the airport"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "What?! / Hey!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "thing / stuff"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "kid / young person"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Okay, let's do it!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Nicaraguan"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Nicaraguan (from pinol)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Careful! / Watch out!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "fair-skinned / blond"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Wow! / Gosh!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "street grill"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "At the street grill"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Horse carriage ride in Granada"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Masaya volcano at night"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "The ferry to Ometepe"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Renting a board in San Juan del Sur"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Hammocks at the Masaya market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Rosquillas with the family"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "La Gritería festival"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "The bus to León"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Dance class"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Wow! / Oh no!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "a lot"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "kid / young person"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "friend"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "thing / stuff"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "great / cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Wow! / Oh my!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "to hang out"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "home / place"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "posh / fancy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "cheap local diner"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "At the Panama Canal"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Ceviche at the seafood market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Negotiating a taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Sancocho at the diner"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Trip to Guna Yala"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Coffee in Boquete"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "On the metro"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Bocas del Toro"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Hanging out on the coastal strip"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "A problem at the hotel"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Wow! / Hey!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "cold herbal mate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "(polite softener)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Let's go!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "(question tag)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "little / just"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "cheese bread ring"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "good / pretty"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "grumpy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "little boy / kid"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "my friend"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "savoury cornbread"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Spanish–Guaraní mix"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "A round of tereré"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "The chipa seller on the bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "At Mercado 4"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "The ruins of Trinidad"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "The big derby"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Ñandutí lace in Itauguá"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "The San Juan festival"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Sunday lunch"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "The Asunción waterfront"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Learning Guaraní"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Hey, buddy! What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "buddy / mate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "house / home"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "job / work"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "How embarrassing!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "right away"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "one sol (money)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Wow!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "kid / youngster"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Okay! / Sure!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Darn!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Chinese-Peruvian restaurant"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "a little extra (free)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "At the ceviche restaurant"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "At the market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "In the minibus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Machu Picchu"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Lunch at a chifa"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "A photo in Cusco"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "The Uros islands"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "A get-together at home"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "A walk in Barranco"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/peru.ts",
+      "text": "Sandboarding in Huacachina"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Yay! / Woo-hoo!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "awesome"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "to hang out"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "buddy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "group of friends"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "bro"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "trash can"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Oh, poor thing! / Oh no!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "roadside food spot"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Puerto Rican"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "jeans"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Shaved ice in Old San Juan"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Roast pork in Guavate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "On the bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Hike in El Yunque"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "The food stalls of Luquillo"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "The bioluminescent bay"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "The San Sebastián Street Festival"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Buying jeans"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "Plans with the crew"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/puerto-rico.ts",
+      "text": "A coffee farm in Yauco"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "What's up?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "a little bit"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "buddy / friend"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "thing / stuff"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "corner shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "shared taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "motorbike taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "bus / minibus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "Wow! / Gosh!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "it's all good"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "rice, beans and meat plate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "street-smart guy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "At the corner shop"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "In the shared taxi"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "The Dominican flag plate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "A baseball game"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "Walk around the Colonial Zone"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "Bachata at the party"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "Whale watching in Samaná"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "A motorbike taxi to the beach"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "Breakfast with mangú"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "A beach day"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "okay"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Amazing! / Wow!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "kid"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "hey / mate"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "boy / girl, kid"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "thermos (for mate)"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "How boring!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "great / huge"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "expensive / tough"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "steak sandwich"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "bar / nightclub"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "the waterfront promenade"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Mate on the promenade"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "A chivito"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "On the bus"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "The candombe drum parade"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "The Port Market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Beach in Punta del Este"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Cycling around Colonia"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "The national team"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "The Tristán Narvaja street market"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "A night of murga"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Hey! / Hi!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "guy / girl, kid"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "great / cool"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "buddy"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "a lot of"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Great! / Excellent!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "annoying / a drag"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "popcorn"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "party snacks"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "to give a ride"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "money"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Wow!"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "thing / stuff"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "arepa restaurant"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "At the arepa restaurant"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "To the cinema with popcorn"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Can you give me a ride?"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Boat to Los Roques"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "The Mérida cable car"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Birthday with tequeños"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "A baseball game"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Hallacas at Christmas"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Hiking El Ávila"
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Angel Falls"
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use tú; older people and shops get usted."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use vos; strangers get usted."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Usted is used a lot, even among friends; tú is rare."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use tú; strangers get usted."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Tú is used almost everywhere."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use tú; older people get usted."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Usted is common, even with friends; tú depends on the region."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use tú; usted is very common and polite."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use tú (vos in the east); older people get usted."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use tú; older people and offices get usted."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Friends use vos (sometimes tú); strangers get usted."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Tú is used with almost everyone, and vosotros for the plural."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Usted is very common, above all with elders; tú among friends."
+    }
+  ]
+}
