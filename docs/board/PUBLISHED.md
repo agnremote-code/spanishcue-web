@@ -17,6 +17,22 @@ Entry format:
 
 ## Pending verification
 
+## 2026-11-24 — Material ELE level pages: true order claims, whole class names, intros that close (SEO/page, repair)
+- URL(s):
+  - every `https://spanishcue.com/material-ele/<grupo>/<tema>/<nivel>` page (350). Copy changed on 264 intros, 145 order lines and 309 FAQs, per Sofia's generator diff. No URL, title, description or H1 changed.
+  - the materials guide that names the levels with three free grammar classes (`app/material-ele/guias.ts:636`, now with C1 and C2).
+  - Example: `/material-ele/formatos/comprension-auditiva/a1`.
+- Level(s) / objectives: no lesson content changed. What was fixed:
+  - the false «de la clase más corta a la más larga» order claim on format pages, and the unverified order claim on vocabulary pages;
+  - «El tren de las 23» now reads «El tren de las 23:40»;
+  - the broken intro closing clause on format and culture pages;
+  - «Para probar el formato» now reads «Para ver cómo funciona una clase completa».
+- PR / merged SHA / production deploy run: PR #516 → `d94911ae985432e1e1f77d2c8cd7d3ba57c83957`; its tree is identical to PR head `121d72e7`. CI + Auto Merge [45312954318](https://github.com/agnremote-code/spanishcue-web/actions/runs/45312954318), Deploy Staging [45317809918](https://github.com/agnremote-code/spanishcue-web/actions/runs/45317809918), Deploy Production [45318278518](https://github.com/agnremote-code/spanishcue-web/actions/runs/45318278518). All successful.
+- Production smoke evidence: "Production smoke" passed (job 138190325234, 03:20:00–03:20:17Z, `"passed": true`), and the rollback was skipped. **The changed URLs were not smoked individually.** The sandbox proxy refuses spanishcue.com (CONNECT 403), and WebFetch cannot resolve the host either.
+- Concept file / LQG review file: not a lesson. Audit: [material-ele-top10-h1-h8-sample-20261124.md](../audits/material-ele-top10-h1-h8-sample-20261124.md). Decision: [BOARD-DECISION-007](decisions/BOARD-DECISION-007-generated-hub-pages.md) §3.4. Record: [transcripts/2026-11-24-tuesday-seo.md](transcripts/2026-11-24-tuesday-seo.md).
+- Built by / reviewed by: facilitator (code), from Martin's audit. Sofia did the code review: CODE APPROVE, then DELTA APPROVE.
+- Known limitations: Sofia's NB1, NB2 and NB4 (softer order wording on grammar, function and culture pages; «En cada clase» on vocabulary pages that list grammar classes) are follow-ups.
+
 ## 2026-11-17 — Material ELE level pages: only same-level teaching copy; activity level fallback (SEO/page, repair)
 - URL(s):
   - every `https://spanishcue.com/material-ele/<grupo>/<tema>/<nivel>` page (377);

@@ -83,7 +83,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
-- **2026-11-24 (Tuesday SEO routine): PR #516** (branch `claude/seo-tuesday-20261124`, base main `dce909f`). Run-start marker pushed at 02:10Z (W48 item 0). Mon 11-23 left its marker (#509). Subscription usage: **UNKNOWN**.
+- **2026-11-24 (Tuesday SEO routine): PR #516, merged and deployed `d94911ae`; records PR from `claude/board-tue-seo-records-20261124`** (branch `claude/seo-tuesday-20261124`, base main `dce909f`). Run-start marker pushed at 02:10Z (W48 item 0). Mon 11-23 left its marker (#509). Subscription usage: **UNKNOWN**.
   - **W48 item 3: DONE.** This was the BOARD-DECISION-007 §3.4 early-trigger sample.
     - Martin audited the 10 most-clicked generated level pages: [audit](../audits/material-ele-top10-h1-h8-sample-20261124.md).
     - **7 of 10 FAIL**: all seven formatos pages, all on two template defects. 3 are PASS WITH NOTES.
@@ -120,9 +120,17 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - NB2: «En cada clase» on vocabulary pages that list grammar classes.
     - NB4: the order test is a denylist.
     - Martin N4/N5: topic fit (El consorcio and Objetos perdidos under fiestas; grammar class 429 under emociones).
+  - **Release of #516 (VERIFIED):** merged as `d94911ae`; its tree is identical to PR head `121d72e7`.
+    - CI + Auto Merge [45312954318](https://github.com/agnremote-code/spanishcue-web/actions/runs/45312954318) (verify 02:31–02:42Z, merge 03:05Z).
+    - Staging run [45317809918](https://github.com/agnremote-code/spanishcue-web/actions/runs/45317809918) and production run [45318278518](https://github.com/agnremote-code/spanishcue-web/actions/runs/45318278518) both succeeded.
+    - "Production smoke" passed (job 138190325234, 03:20:00–03:20:17Z, `"passed": true`), and the rollback was skipped.
+    - main = production = `d94911ae`.
+    - **The changed URLs were not smoked individually**, because the sandbox cannot reach spanishcue.com (proxy CONNECT 403; WebFetch DNS failure). PUBLISHED.md lists this release under "Pending verification", like 11-17.
+    - The same smoke log shows the Paddle notice `paddle_api_403`, `lastEventAt` 1793797447 (about 2026-11-04). This is the known silence in owner request (i); nothing new.
   - **Next action:**
-    - Mark #516 ready once the pipeline is free. Then verify the merged SHA, the staging and production runs and the production smoke, and record them in a records PR with a PUBLISHED.md entry.
+    - Any session that can reach spanishcue.com: smoke `/material-ele/formatos/comprension-auditiva/a1`. It should show «Cada tarjeta indica el nivel y la duración de la clase» and «El tren de las 23:40», and must not show «De la clase más corta a la más larga» or «perdón que nunca pediste». That closes the 11-17 and 11-24 Pending entries.
     - Wed 11-25: W48 item 2 (Taller build) as planned.
+    - Next Tue (12-01): Sofia's NB1, NB2 and NB4 copy pass, and re-pull the cluster table (watch `juegos-de-conversacion/b2`).
 - **2026-11-23 (Monday 3D routine): PR #509** (records; branch `claude/monday-3d-20261123`, base main `59475b40`) **and draft PR #510** (Taller content; branch `claude/escucha-3d-taller-greda-b1-20261123`). Run-start marker pushed at 02:08Z (W48 item 0). Fri 11-20 left its marker (#500). Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** The Taller content is a draft with unheard audio and no STT run. It is not counted as a unit.
   - **W48 item 1(a), the STT workflow: BLOCKED (VERIFIED), new owner request R5.**
