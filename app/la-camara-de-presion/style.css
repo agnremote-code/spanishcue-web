@@ -4,9 +4,9 @@
 .pressure-timer b{font-family:var(--cx-display);font-size:22px;font-variant-numeric:tabular-nums;min-width:72px;text-align:right;margin-right:4px}
 .pressure-timer .cx-btn{min-height:40px;padding:8px 16px;font-size:14.5px}
 .pressure-steps{grid-template-columns:repeat(7,minmax(0,1fr))}
-.pressure-steps b{display:flex;flex-direction:column;line-height:1.15}
+.pressure-steps button b{display:flex;flex-direction:column;line-height:1.15;white-space:normal}
 .pressure-steps button span{min-width:32px}
-.pressure-steps b small{font-size:13px;font-weight:500;color:var(--cx-muted)}
+.pressure-steps button b small{font-size:13px;font-weight:500;color:var(--cx-muted)}
 .pressure-room{display:grid;grid-template-columns:290px minmax(0,1fr);gap:24px;max-width:var(--cx-max);margin:0 auto;padding:28px var(--cx-pad) 64px;align-items:start}
 .pressure-bank{position:sticky;top:150px;display:grid;gap:2px;padding:14px;max-height:calc(100vh - 170px);overflow:auto}
 .pressure-bank header{display:flex;justify-content:space-between;align-items:baseline;padding:6px 10px 12px;font-size:15px}
