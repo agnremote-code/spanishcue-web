@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-23 by the Monday 3D routine (scheduled cloud run; Martin convened as a subagent, records reviewed by a fresh agent; see "Current work")._
+_Last updated: 2026-11-24 by the Tuesday SEO routine (scheduled cloud run; Martin and Sofia convened as subagents; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -83,6 +83,46 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-24 (Tuesday SEO routine): PR #516** (branch `claude/seo-tuesday-20261124`, base main `dce909f`). Run-start marker pushed at 02:10Z (W48 item 0). Mon 11-23 left its marker (#509). Subscription usage: **UNKNOWN**.
+  - **W48 item 3: DONE.** This was the BOARD-DECISION-007 §3.4 early-trigger sample.
+    - Martin audited the 10 most-clicked generated level pages: [audit](../audits/material-ele-top10-h1-h8-sample-20261124.md).
+    - **7 of 10 FAIL**: all seven formatos pages, all on two template defects. 3 are PASS WITH NOTES.
+    - Every class list is level-honest (H1). No class goal, prompt or free audio was wrong. Every «gratis» claim is true (H6).
+  - **Fixed in this PR (copy only, §3.6; no path, title, description, H1, lessonIds or indexing change, VERIFIED by Sofia's generator diff):**
+    - F1: format pages said the classes run «de la más corta a la más larga… la que entra en media hora». That was false: the list is sorted free first, then by level, then by curriculum order (`temas.ts:231`). Vocabulary pages made a similar unverified claim (N3).
+    - F2: class 256 was named «El tren de las 23», because titles were cut at the first colon.
+    - N1: the intro clause «… necesita comprensión auditiva para decir lo que quiere decir» was broken on format and culture pages.
+    - N2: «Para probar el formato» pointed readers to grammar classes.
+    - The materials guide now names C1 and C2 among the levels with three free grammar classes (true per `app/access-policy.ts`).
+    - 4 new guards in `tests/material-ele-copy-quality.test.mjs`, each mutation-checked: all fail on main's code and pass on the branch.
+    - Whether a 7/10 template failure crosses the §5 noindex threshold depends on whether template text counts as H4 or H8. Fixing it now clears it under either reading, so **no noindex**.
+  - **Search Console (VERIFIED, Windsor, data through 11-21):** [evidence/2026-11-24-search-console.md](evidence/2026-11-24-search-console.md).
+    - 28 days (10-25..11-21): **148 clicks, 2,417 impressions, position 13.20** (11-17 pull: 77 / 1,132 / 18.58).
+    - W47, first 6 days: 71 clicks / 1,276 impressions, against 46 / 554 for the same days of W46.
+    - Generated level pages: 56 pages with impressions, **54 clicks (36% of the site)**, 487 impressions, weighted position 9.61.
+    - **Pages that lost copy on 11-17:** no consistent movement on 1–24 impressions per window, which is noise. Watch `juegos-de-conversacion/b2`: position 5.1 → 9.8.
+    - Indexed count UNKNOWN (R1).
+  - **Found (VERIFIED), not a board action:**
+    - Non-board commits on 11-17 and 11-18 retired 27 level pages into `retiredTemaLevelPaths`, each 308 to its topic page (5 → 32 entries; 377 → 350 generated). One of them had impressions: `gramatica/perifrasis-verbales/c1` (5 impressions). The H7 test passes.
+    - `spanish tutor cost` gets 55 impressions at position 8.4 with 0 clicks on the non-board `/guides/online-spanish-tutor-rates`, a snippet issue (HYPOTHESIS).
+  - **Owed smoke (11-17):** «perdón que nunca pediste» cannot reach `/material-ele/formatos/comprension-auditiva/a1` (VERIFIED in source by Martin). The live page is still not smoked, because the sandbox proxy refuses spanishcue.com (CONNECT 403 again today).
+  - **Board:**
+    - Martin (audit) and Sofia (code review: CODE APPROVE at `c75c4f9b`, DELTA APPROVE at `86d5f1da`), both as fresh subagents.
+    - Alejandro was not convened as an agent: there was no vote. The facilitator did the data pull and the evidence file.
+    - Record: [transcripts/2026-11-24-tuesday-seo.md](transcripts/2026-11-24-tuesday-seo.md), not byte-exact.
+  - **Checks (local, Linux):**
+    - `npm test` at `c75c4f9b`: exit 0, 1,850 pass, 0 fail (pinned baseline commits present, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`).
+    - After the NB3/NB5 delta (`86d5f1da`): `npm run test:seo` 117/117 and `test:language` 43/43.
+    - `npm run lint`: 0 errors (207 warnings, all already present). eslint on the changed files: clean.
+    - `git diff --check`: clean.
+  - **Follow-ups (non-blocking, next Tuesday copy pass):**
+    - Sofia NB1: «Con la primera de la lista» and «En el orden del curso» on grammar, function and culture pages, a softer form of F1.
+    - NB2: «En cada clase» on vocabulary pages that list grammar classes.
+    - NB4: the order test is a denylist.
+    - Martin N4/N5: topic fit (El consorcio and Objetos perdidos under fiestas; grammar class 429 under emociones).
+  - **Next action:**
+    - Mark #516 ready once the pipeline is free. Then verify the merged SHA, the staging and production runs and the production smoke, and record them in a records PR with a PUBLISHED.md entry.
+    - Wed 11-25: W48 item 2 (Taller build) as planned.
 - **2026-11-23 (Monday 3D routine): PR #509** (records; branch `claude/monday-3d-20261123`, base main `59475b40`) **and draft PR #510** (Taller content; branch `claude/escucha-3d-taller-greda-b1-20261123`). Run-start marker pushed at 02:08Z (W48 item 0). Fri 11-20 left its marker (#500). Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** The Taller content is a draft with unheard audio and no STT run. It is not counted as a unit.
   - **W48 item 1(a), the STT workflow: BLOCKED (VERIFIED), new owner request R5.**
