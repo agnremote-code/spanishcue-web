@@ -4,6 +4,7 @@ import {CSSProperties,MouseEvent,useMemo,useRef,useState} from "react";
 import Link from "next/link";
 import {slangCards,topics,Topic} from "./data";
 import {useAccessibleModal} from "../useAccessibleModal";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 
 type RouletteStyle = CSSProperties & Record<`--${string}`,string|number>;
