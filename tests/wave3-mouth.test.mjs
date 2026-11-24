@@ -29,7 +29,7 @@ test('Mouth Lab SSR renders a neutral first listen and preserves the complete op
  const {default:Lab}=await load('app/mouth-lab/MouthLab.tsx');
  const html=renderToString(React.createElement(Lab,{lesson}));
  assert.match(html,/<audio\b/);assert.doesNotMatch(html,/audio-wave|autoplay/i);
- assert.match(html,/A1–C1/);assert.match(html,/un solo banco/);assert.match(html,/≈ 45 min/);
+ assert.match(html,/A1 guiado/);assert.doesNotMatch(html,/A1–C1/);assert.match(html,/un solo banco/);assert.match(html,/≈ 45 min/);
  const h=await harness();assert.ok(h.button('Un toque breve').props.disabled);assert.doesNotMatch(h.text(),/Sonó:/);
  h.click('Banco opcional');for(const line of [...lesson.practice,...lesson.speaking,lesson.warmup,lesson.explanation,lesson.homework])assert.ok(h.text().includes(line),line);
 });

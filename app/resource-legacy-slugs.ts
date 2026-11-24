@@ -9,6 +9,7 @@
  */
 export const legacyResourceSlugToLessonId: ReadonlyMap<string, number> = new Map([
   ["spanish-conversation-activity-a1-b1-reino-unido-en-relieve", 32],
+  ["spanish-pronunciation-lesson-a1-c1-spanish-mouth-lab", 38],
   ["spanish-conversation-activity-a1-c2-el-bosque-de-los-hongos-gigantes", 226],
   ["spanish-conversation-activity-a1-c2-el-gran-meridiano-una-noche-en-las-vegas", 237],
   ["spanish-conversation-activity-a1-c2-noche-abierta", 223],

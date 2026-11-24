@@ -17,6 +17,7 @@ import {
   trainerResult,
   updateCounts,
 } from "./engine.mjs";
+import "../clasicas-ui/clasicas.css";
 import "./personal-trainer.css";
 
 const warmupStops = [

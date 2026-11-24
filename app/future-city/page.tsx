@@ -2,6 +2,7 @@
 
 import { useMemo, useState, type CSSProperties } from "react";
 import Link from "next/link";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 import { districts, speakingTools, type District } from "./data";
 

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type CSSProperties, type ReactNode } from 
 import Link from "next/link";
 import { countries, type Country } from "./data";
 import LatamGlobe from "./LatamGlobe";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 
 type Stage = "map" | "listen" | "quiz" | "open" | "result" | "reading";

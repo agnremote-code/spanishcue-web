@@ -8,6 +8,7 @@ import {LEVELS,resolveLevel,initialProgress,restoreProgress,markComplete} from '
 import CityMap from './CityMap';
 import ScenePanel from './ScenePanel';
 import type {Content} from './types';
+import '../clasicas-ui/clasicas.css';
 import './style.css';
 import {restoreSceneFocus} from './focus';
 const content=data as unknown as Content;

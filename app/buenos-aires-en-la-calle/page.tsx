@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { calmPlan, openPrompts, stops, type CityStop } from "./data";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 
 type Screen = "intro" | "map" | "place";

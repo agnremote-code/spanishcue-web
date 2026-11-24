@@ -1,7 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import type { CSSProperties } from "react";
+import { ClassicTopBar } from "../clasicas-ui/TopBar";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 
 type Topic={emoji:string;title:string;label:string;questions:string[]};
@@ -126,14 +128,14 @@ export default function AdvancedConversation(){
   const [selected,setSelected]=useState<number|null>(null);
   const topic=topics[active];
   const chooseTopic=(index:number)=>{setActive(index);setSelected(null);window.scrollTo({top:0,behavior:"smooth"})};
-  return <main className="advanced-shell">
+  return <main className="cx advanced-shell" style={{"--cx-accent":"#e8590c"} as CSSProperties}>
+    <ClassicTopBar title="Conversación avanzada · C1"/>
     <div className="advanced-frame">
-      <header className="advanced-header"><Link href="/" className="advanced-brand"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>C1 · CONVERSACIÓN AVANZADA</small></span></Link><Link href="/" className="back-library">← Biblioteca</Link></header>
-      <section className="advanced-intro"><div><i/><p>CONVERSACIÓN · NIVEL C1</p><h1>Preguntas que dan ganas de hablar.</h1></div><p>Elige una categoría. Elige una pregunta. Responde con libertad. Sigue la conversación.</p></section>
+      <section className="advanced-intro"><div><p className="cx-kicker">Conversación · C1</p><h1>Preguntas que dan ganas de hablar.</h1></div><p>Elige una categoría. Elige una pregunta. Responde con libertad. Sigue la conversación.</p></section>
       <nav className="advanced-nav" aria-label="Categorías de conversación">{topics.map((item,index)=><button key={item.title} className={index===active?"active":""} aria-pressed={index===active} onClick={()=>chooseTopic(index)}>{item.emoji} {item.title}</button>)}</nav>
       <section className="advanced-panel" aria-label={topic.label} key={topic.title}>
         <div className="panel-title"><div><span>{topic.emoji}</span><h2>{topic.title}</h2></div><b>{String(active+1).padStart(2,"0")} / {topics.length}</b></div>
-        <div className="advanced-questions">{topic.questions.map((question,index)=><button key={question} className={`${index===0?"featured ":""}${selected===index?"selected":""}`} aria-pressed={selected===index} onClick={()=>setSelected(selected===index?null:index)}><span>{String(index+1).padStart(2,"0")}</span><p>{question}</p>{selected===index&&<i>HABLEMOS DE ESTA →</i>}</button>)}</div>
+        <div className="advanced-questions">{topic.questions.map((question,index)=><button key={question} className={`${index===0?"featured ":""}${selected===index?"selected":""}`} aria-pressed={selected===index} onClick={()=>setSelected(selected===index?null:index)}><span>{String(index+1).padStart(2,"0")}</span><p>{question}</p>{selected===index&&<i>Hablemos de esta →</i>}</button>)}</div>
       </section>
     </div>
   </main>;

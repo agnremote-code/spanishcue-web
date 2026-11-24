@@ -22,10 +22,10 @@
   z-index: -1;
   inset: 0 0 86px;
   background:
-    radial-gradient(circle at 12% 12%, #68c8ff22 0 4px, transparent 5px),
-    radial-gradient(circle at 82% 25%, #ffd34f26 0 4px, transparent 5px),
-    linear-gradient(#ffffff08 1px, transparent 1px),
-    linear-gradient(90deg, #ffffff08 1px, transparent 1px);
+    radial-gradient(circle at 12% 12%, #00649d22 0 4px, transparent 5px),
+    radial-gradient(circle at 82% 25%, #ac810026 0 4px, transparent 5px),
+    linear-gradient(#12121208 1px, transparent 1px),
+    linear-gradient(90deg, #12121208 1px, transparent 1px);
   background-size: auto, auto, 48px 48px, 48px 48px;
   mask-image: linear-gradient(#000 0 88%, transparent);
   pointer-events: none;
@@ -39,13 +39,13 @@
   right: 12px;
   bottom: 54px;
   height: 38px;
-  border: 3px solid #2c1734;
-  border-radius: 8px;
+  border: 3px solid #eeebef;
+  border-radius: 18px;
   background:
-    linear-gradient(90deg, transparent 48%, #7b402e 49% 52%, transparent 53%),
-    linear-gradient(#f39a3d 47%, #7b402e 48% 54%, #d77332 55%);
+    linear-gradient(90deg, transparent 48%, #d9a899 49% 52%, transparent 53%),
+    linear-gradient(#b8640b 47%, #d9a899 48% 54%, #be6125 55%);
   background-size: 68px 100%, 100% 38px;
-  box-shadow: 0 9px 0 #09071655;
+  box-shadow: 0 9px 0 rgba(14,21,37,0.041);
 }
 
 .pr-game-sky {
@@ -65,10 +65,10 @@
 
 .pr-game-sky .cloud-one,
 .pr-game-sky .cloud-two {
-  color: #fff;
+  color: #121212;
   font-size: 48px;
   line-height: 1;
-  filter: drop-shadow(7px 7px 0 #779ac477);
+  filter: drop-shadow(7px 7px 0 rgba(14,21,37,0.056));
   opacity: .9;
   animation: prCloudDrift 14s linear infinite;
 }
@@ -80,11 +80,11 @@
 .pr-game-sky .coin-two {
   width: 20px;
   height: 28px;
-  border: 3px solid #fff1a3;
+  border: 3px solid #766400;
   border-radius: 50%;
-  background: #ffd334;
+  background: #c19700;
   color: transparent;
-  box-shadow: inset 0 0 0 3px #e8a900, 0 7px 12px #05041655;
+  box-shadow: inset 0 0 0 3px rgba(14,21,37,0.056), 0 7px 12px rgba(14,21,37,0.041);
   animation: prCoinSpin 1.25s linear infinite;
 }
 
@@ -96,13 +96,13 @@
   top: 12px;
   width: 48px;
   height: 48px;
-  border: 4px solid #fff1a3;
-  border-radius: 8px;
-  background: linear-gradient(145deg, #ffdb3e, #e89409);
-  color: #553116;
+  border: 4px solid #766400;
+  border-radius: 18px;
+  background: linear-gradient(145deg, #b99600, #f69d0b);
+  color: #e7e1dd;
   font-size: 26px;
-  font-weight: 950;
-  box-shadow: inset 0 0 0 3px #c87808, 5px 6px 0 #09071666;
+  font-weight: 750;
+  box-shadow: inset 0 0 0 3px rgba(14,21,37,0.056), 5px 6px 0 rgba(14,21,37,0.049);
   animation: prBlockBob 2s steps(2, end) infinite;
 }
 
@@ -113,14 +113,14 @@
 .pr-topic-grid > button.pr-kingdom-gate {
   min-height: 440px;
   padding: 22px 20px 20px;
-  border: 3px solid color-mix(in srgb, var(--topic) 65%, #fff);
+  border: 3px solid color-mix(in srgb, var(--topic) 65%, #121212);
   border-radius: 22px 22px 12px 12px;
   background:
-    linear-gradient(#ffffff0b 1px, transparent 1px),
-    linear-gradient(90deg, #ffffff0b 1px, transparent 1px),
-    linear-gradient(155deg, color-mix(in srgb, var(--topic) 68%, #1f2851), #171535 72%);
+    linear-gradient(#1212120b 1px, transparent 1px),
+    linear-gradient(90deg, #1212120b 1px, transparent 1px),
+    linear-gradient(155deg, color-mix(in srgb, var(--topic) 68%, #dbdce3), #ecebf0 72%);
   background-size: 32px 22px, 32px 22px, auto;
-  box-shadow: 0 11px 0 color-mix(in srgb, var(--topic) 32%, #090716), 0 24px 45px #05031365;
+  box-shadow: 0 11px 0 color-mix(in srgb, var(--topic) 32%, rgba(14,21,37,0.056)), 0 24px 45px rgba(14,21,37,0.0486);
   overflow: visible;
   display: flex;
   flex-direction: column;
@@ -150,7 +150,7 @@
   transform: translateY(-8px);
   outline: 4px solid var(--gold);
   outline-offset: 4px;
-  box-shadow: 0 15px 0 color-mix(in srgb, var(--topic) 32%, #090716), 0 32px 58px #05031385;
+  box-shadow: 0 15px 0 color-mix(in srgb, var(--topic) 32%, rgba(14,21,37,0.056)), 0 32px 58px rgba(14,21,37,0.056);
 }
 
 .pr-castle-card {
@@ -159,7 +159,7 @@
   height: 176px;
   margin: 14px auto 18px;
   border: 4px solid color-mix(in srgb, var(--topic) 35%, #e6e3f0);
-  border-radius: 9px 9px 4px 4px;
+  border-radius: 18px 18px 12px 12px;
   background:
     linear-gradient(90deg, transparent 47%, #ffffff14 48% 52%, transparent 53%),
     linear-gradient(#ffffff16 46%, #0000001f 47% 54%, #ffffff0c 55%),
@@ -180,8 +180,8 @@
   box-shadow: inset 0 0 0 4px #00000017;
 }
 
-.pr-castle-card::before { left: -29px; border-radius: 8px 0 0; }
-.pr-castle-card::after { right: -29px; border-radius: 0 8px 0 0; }
+.pr-castle-card::before { left: -29px; border-radius: 18px 0 0; }
+.pr-castle-card::after { right: -29px; border-radius: 0 18px 0 0; }
 
 .pr-castle-merlons {
   position: absolute;
@@ -199,7 +199,7 @@
   height: 26px;
   border: 4px solid color-mix(in srgb, var(--topic) 35%, #e6e3f0);
   border-bottom: 0;
-  border-radius: 5px 5px 0 0;
+  border-radius: 18px 18px 0 0;
   background: color-mix(in srgb, var(--topic) 58%, #858098);
 }
 
@@ -212,12 +212,12 @@
   height: 142px;
   transform: translateX(-50%);
   overflow: hidden;
-  border: 5px solid #242039;
+  border: 5px solid #e8e7eb;
   border-bottom: 0;
-  border-radius: 55px 55px 5px 5px;
-  background: #090817;
+  border-radius: 55px 55px 18px 18px;
+  background: #f5f5f7;
   perspective: 420px;
-  box-shadow: 0 0 0 5px #ffffff18, inset 0 13px 30px #000;
+  box-shadow: 0 0 0 5px rgba(14,21,37,0.0115), inset 0 13px 30px rgba(14,21,37,0.056);
 }
 
 .pr-gate-glow {
@@ -239,7 +239,7 @@
   font-size: 52px;
   opacity: .2;
   transform: translate(-50%, 48px) scale(.72);
-  filter: drop-shadow(0 9px 8px #0008);
+  filter: drop-shadow(0 9px 8px rgba(14,21,37,0.056));
   transition: transform .48s cubic-bezier(.2,.9,.25,1.2), opacity .25s ease;
   animation: prCharacterHint 7s ease-in-out infinite;
 }
@@ -248,17 +248,17 @@
   position: absolute;
   z-index: 3;
   inset: 30px 0 0;
-  border: 3px solid #3a1f18;
+  border: 3px solid #eeeae9;
   border-bottom: 0;
   border-radius: 45px 45px 0 0;
   background:
-    linear-gradient(90deg, #ffffff15 2px, transparent 3px),
-    repeating-linear-gradient(90deg, #7b3f2b 0 24px, #5d2d25 25px 29px);
+    linear-gradient(90deg, #12121215 2px, transparent 3px),
+    repeating-linear-gradient(90deg, #dcaa9a 0 24px, #e6c5c0 25px 29px);
   transform-origin: left center;
   transition: transform .5s cubic-bezier(.2,.8,.2,1), filter .3s ease;
   animation: prDoorHint 7s ease-in-out infinite;
   backface-visibility: hidden;
-  box-shadow: inset -8px 0 13px #2e1518aa;
+  box-shadow: inset -8px 0 13px rgba(14,21,37,0.056);
 }
 
 .pr-gate-door > b {
@@ -268,11 +268,11 @@
   transform: translateX(-50%);
   min-width: 38px;
   padding: 5px 7px;
-  border: 2px solid #fff0a0;
-  border-radius: 8px;
-  background: #d99a17;
-  color: #392218;
-  font-size: 10px;
+  border: 2px solid #796600;
+  border-radius: 18px;
+  background: #e7a51c;
+  color: #eeebe9;
+  font-size: 14px;
   line-height: 1;
   text-align: center;
 }
@@ -283,10 +283,10 @@
   top: 61%;
   width: 10px;
   height: 10px;
-  border: 2px solid #fff2a1;
+  border: 2px solid #786800;
   border-radius: 50%;
-  background: #d89d18;
-  box-shadow: 0 0 0 3px #3d211944;
+  background: #e6a81d;
+  box-shadow: 0 0 0 3px rgba(14,21,37,0.0327);
 }
 
 .pr-kingdom-gate:hover .pr-gate-door,
@@ -316,7 +316,7 @@
 
 .pr-topic-grid .pr-door-copy h3 {
   margin: 0;
-  color: #fff;
+  color: #121212;
   font-size: 24px;
   line-height: 1.1;
   text-wrap: balance;
@@ -333,30 +333,30 @@
   align-items: center;
   gap: 10px;
   padding-top: 13px;
-  border-top: 1px solid #ffffff28;
+  border-top: 1px solid #12121228;
 }
 
 .pr-door-meta span {
-  color: #d7d2e6;
-  font-size: 10px;
+  color: #2a233f;
+  font-size: 14px;
 }
 
 .pr-door-meta b {
   color: var(--gold);
-  font-size: 10px;
-  letter-spacing: .5px;
+  font-size: 14px;
+  letter-spacing: 0;
 }
 
 .pr-block-grid > button {
   position: relative;
-  border: 4px solid color-mix(in srgb, var(--block) 45%, #bbb6c9);
-  border-radius: 12px 12px 5px 5px;
+  border: 4px solid color-mix(in srgb, var(--block) 45%, #423d52);
+  border-radius: 12px 12px 18px 18px;
   background:
-    linear-gradient(90deg, transparent 48%, #ffffff12 49% 52%, transparent 53%),
-    linear-gradient(#ffffff12 47%, #0000001c 48% 54%, #ffffff0a 55%),
-    linear-gradient(145deg, color-mix(in srgb, var(--block) 72%, #5f5a73), #17142f);
+    linear-gradient(90deg, transparent 48%, #12121212 49% 52%, transparent 53%),
+    linear-gradient(#12121212 47%, #faf9f71c 48% 54%, #1212120a 55%),
+    linear-gradient(145deg, color-mix(in srgb, var(--block) 72%, #9691a9), #eeeef2);
   background-size: 50px 34px, 100% 34px, auto;
-  box-shadow: 0 9px 0 #08061988, 0 20px 38px #0503135c;
+  box-shadow: 0 9px 0 rgba(14,21,37,0.056), 0 20px 38px rgba(14,21,37,0.0441);
   overflow: visible;
 }
 
@@ -367,7 +367,7 @@
   right: -4px;
   top: -17px;
   height: 20px;
-  background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--block) 55%, #8c879c) 0 28px, transparent 29px 39px);
+  background: repeating-linear-gradient(90deg, color-mix(in srgb, var(--block) 55%, #625d71) 0 28px, transparent 29px 39px);
   clip-path: polygon(0 0, 23% 0, 23% 42%, 38% 42%, 38% 0, 62% 0, 62% 42%, 77% 42%, 77% 0, 100% 0, 100% 100%, 0 100%);
 }
 
@@ -376,17 +376,17 @@
 }
 
 .pr-map-actions button {
-  border: 3px solid #ffffff28;
-  border-radius: 18px 18px 6px 6px;
-  background: linear-gradient(145deg, #352b62, #17142f);
-  box-shadow: 0 8px 0 #09071788;
+  border: 3px solid #12121228;
+  border-radius: 18px 18px 18px 18px;
+  background: linear-gradient(145deg, #bfb7e0, #eeeef2);
+  box-shadow: 0 8px 0 rgba(14,21,37,0.056);
   transition: transform .2s ease, background .2s ease;
 }
 
 .pr-map-actions button:hover,
 .pr-map-actions button:focus-visible {
   transform: translateY(-5px);
-  background: linear-gradient(145deg, #514180, #211a43);
+  background: linear-gradient(145deg, #998ac4, #e6e5eb);
   outline: 3px solid var(--gold);
   outline-offset: 3px;
 }
