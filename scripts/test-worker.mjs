@@ -33,6 +33,7 @@ try{
  await run(['--test','tests/ultimo-crucero.test.mjs']);
  await run(['--test','tests/objetos-perdidos.test.mjs']);
  await run(['--test','tests/lluvia-de-estrellas.test.mjs']);
+ await run(['--test','tests/roleplays-hispanos.test.mjs']);
  await run(['--test','tests/clase-de-nivelacion.test.mjs']);
  await run(['--test','tests/clasicas-conversacion.test.mjs']);
  await run(['--test','tests/grammar-classroom.test.mjs','tests/grammar-classroom-ui.test.mjs','tests/observatory-ui.test.mjs','tests/noun-studio-ui.test.mjs', 'tests/adjective-studio-ui.test.mjs', 'tests/article-studio-ui.test.mjs','tests/article-world.test.mjs','tests/duration-studio.test.mjs','tests/duration-world.test.mjs','tests/grammar-classroom-content.test.mjs','tests/grammar-classroom-audio.test.mjs']);
