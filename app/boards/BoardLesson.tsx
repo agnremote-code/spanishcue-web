@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   advanceSession,
@@ -13,6 +12,8 @@ import {
   setDeepened,
 } from "./engine";
 import type { BoardBank, BoardSession } from "./types";
+import { ClassicTopBar } from "../clasicas-ui/TopBar";
+import "../clasicas-ui/clasicas.css";
 import "./board.css";
 
 type Phase = "questions" | "student" | "final";
@@ -250,16 +251,14 @@ export default function BoardLesson({ bank }: { bank: BoardBank }) {
 
   if (!ready) return <main className="board-loading">Preparando el tablero…</main>;
 
-  return <main className={`board-page board-${bank.level.toLowerCase()} ${presentation ? "board-presentation" : ""}`}>
+  return <main className={`cx board-page board-${bank.level.toLowerCase()} ${presentation ? "board-presentation" : ""}`}>
     {presentation && <button type="button" className="board-presentation-exit" onClick={togglePresentation}>Salir de presentación</button>}
-    <header className="board-topbar">
-      <Link href="/#library-results" className="board-back">← Biblioteca</Link>
-      <div className="board-identity"><b>SPANISHCUE</b><span>CONVERSACIÓN · TABLEROS</span></div>
-      <button type="button" onClick={togglePresentation} aria-pressed={presentation}>{presentation ? "Salir de presentación" : "Modo presentación"}</button>
-    </header>
+    <ClassicTopBar title={`${bank.title} · Tablero ${bank.level}`}>
+      <button type="button" className="cx-btn" onClick={togglePresentation} aria-pressed={presentation}>{presentation ? "Salir de presentación" : "Modo presentación"}</button>
+    </ClassicTopBar>
 
     <section className="board-hero">
-      <div><span>{bank.level} · TABLERO</span><h1>{bank.title}</h1><p>{bank.subtitle}</p></div>
+      <div><span className="cx-kicker">Tablero · {bank.level}</span><h1>{bank.title}</h1><p>{bank.subtitle}</p></div>
       <div className="board-counts" aria-label="Tamaño del banco y progreso de la sesión">
         <span><b>Banco:</b> {bank.questions.length} principales + {bank.finals.length} finales</span>
         <span><b>Sesión:</b> {session?.visited.length ?? 0} vistas · {session?.skipped.length ?? 0} pasadas</span>
