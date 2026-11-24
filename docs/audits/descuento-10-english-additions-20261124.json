@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale) for the 10% offer card, typed on 2026-11-24 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhA23PcGwk4wYdbKktD8PYYfb, first month only per cmsg_01Gr5R4j3t2Yet65UcmhcVhAKUSP2FcYAcbmUytSRCDK2V), together with the standing approval for new English copy typed «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g): the library card, the checkout and the account panel announce 10% off the first month, then US$19.90 per month.",
+  "additions": [
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Claim 10% off · US$${first} first month"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Log in to claim your 10% off"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "Card: US$${first} for the first month. Then renews automatically at US$${then}/month. Cancel anytime."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "First month 10% off"
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "US$17.91 for the first month, then US$19.90 / month"
+    },
+    {
+      "path": "app/DiscountOfferCard.tsx",
+      "text": "10% off"
+    },
+    {
+      "path": "app/DiscountOfferCard.tsx",
+      "text": "Get 10% off your next subscription"
+    },
+    {
+      "path": "app/DiscountOfferCard.tsx",
+      "text": "Enjoy more kinds of activities, more features and more fun in class."
+    },
+    {
+      "path": "app/DiscountOfferCard.tsx",
+      "text": "Claim my discount"
+    },
+    {
+      "path": "app/DiscountOfferCard.tsx",
+      "text": "Dismiss"
+    }
+  ]
+}
