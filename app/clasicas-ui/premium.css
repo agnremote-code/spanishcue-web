@@ -142,3 +142,4 @@
 .cxp-final-grid>article p{color:var(--cx-ink-2)}
 @media (max-width:820px){.cxp-split{grid-template-columns:1fr}}
 .cxp>.cxp-controls{max-width:var(--cx-max);margin:12px auto 0;padding:16px var(--cx-pad)}
+.cxp-say .cx-teacher b,.cxp-say .cx-teacher h2{font-family:var(--cx-body);font-size:13.5px;font-weight:700;letter-spacing:0;line-height:1.3}
