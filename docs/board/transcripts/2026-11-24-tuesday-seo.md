@@ -44,4 +44,5 @@ Only the briefs and the final reports exist. The briefs below are compact re-typ
      - NB4: the order test is a denylist.
      - NB5: the guide test parses a JSON string and checks only one direction.
 6. **Facilitator** (no message). Applied NB3 and NB5 (commit `86d5f1da`). NB1, NB2 and NB4 are queued in STATUS.
-7. **Facilitator → Sofia** (about 02:35Z). Delta review of `c75c4f9b..86d5f1da`. Reply see STATUS (the delta verdict is recorded there).
+7. **Facilitator → Sofia** (about 02:35Z). Delta review of `c75c4f9b..86d5f1da`.
+8. **Sofia → Facilitator** (about 02:37Z). **DELTA APPROVE**, 0 blockers. The copy is natural and true, the test now walks the blocks and checks both directions, and only formatos strings changed. NB6: a future sentence that reuses the phrase in another context could cause a harmless false failure. NB1, NB2 and NB4 still stand.
