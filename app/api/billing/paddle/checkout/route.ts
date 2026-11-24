@@ -50,9 +50,9 @@ export async function POST(request: Request) {
     if (raw.length > 3000) throw new Error("invalid_request");
     const requested = JSON.parse(raw) as { returnTo?: unknown; offer?: unknown; priceId?: unknown; attribution?: unknown };
     attribution = sanitizePaddleAttribution(requested.attribution);
-    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial" && requested.offer !== "annual" && requested.offer !== "promo")
+    if (requested.priceId !== undefined || (requested.offer !== undefined && requested.offer !== "monthly" && requested.offer !== "trial" && requested.offer !== "annual" && requested.offer !== "promo" && requested.offer !== "discount10")
       || (requested.offer === "annual" && !paddleAnnualReady(paddle))) throw new Error("invalid_offer");
-    offer = requested.offer === "trial" ? "trial" : requested.offer === "annual" ? "annual" : requested.offer === "promo" ? "promo" : "monthly";
+    offer = requested.offer === "trial" ? "trial" : requested.offer === "annual" ? "annual" : requested.offer === "promo" ? "promo" : requested.offer === "discount10" ? "discount10" : "monthly";
     returnTo = safeRelativeReturnPath(typeof requested.returnTo === "string" && requested.returnTo.length <= 300 ? requested.returnTo : null);
   } catch { return Response.json({ error: "Solicitud no válida." }, { status: 400 }); }
 
@@ -63,6 +63,11 @@ export async function POST(request: Request) {
     if (!(await promoWeekEligible(env.DB, userId))) {
       return Response.json({ error: "La promo es solo para la primera suscripción.", code: "promo_not_eligible" }, { status: 409 });
     }
+  }
+
+  // «10% de descuento»: for signed-in FREE teachers (PRO accounts were turned away above).
+  if (offer === "discount10" && !userId) {
+    return Response.json({ error: "Inicia sesión para usar tu descuento.", code: "discount_account_required" }, { status: 401 });
   }
 
   try {
@@ -99,8 +104,8 @@ export async function POST(request: Request) {
       offer,
       offerCode: billing.founderOffer.code,
       attribution,
-      // The promo week does not stack with «Invitá a un colega».
-      referralCode: offer === "promo" ? null : referralCode,
+      // The promo week and the 10% offer do not stack with «Invitá a un colega».
+      referralCode: offer === "promo" || offer === "discount10" ? null : referralCode,
     });
     return Response.json(
       { transactionId, clientToken: paddle.clientToken },
