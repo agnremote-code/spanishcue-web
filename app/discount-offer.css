@@ -57,6 +57,6 @@
 .discount-offer-close:hover,.discount-offer-close:focus-visible{background:#f1e6d2;color:#102a43}
 @media (max-width:640px){
   .discount-offer{grid-template-columns:auto minmax(0,1fr);padding:14px 44px 14px 14px;gap:12px 14px}
-  .discount-offer-badge{width:44px;height:44px;font-size:13px}
+  .discount-offer-badge{align-self:start;width:44px;height:44px;font-size:13px}
   .discount-offer-cta{grid-column:1/-1;justify-content:center}
 }
