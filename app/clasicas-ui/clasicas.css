@@ -3,8 +3,10 @@
    Light warm canvas, white surfaces, one accent per class, a modern grotesque
    for titles and a calm sans for reading. Readable on a projector: no text
    under 14px, no tiny letter-spaced capitals, generous space. A class sets
-   --cx-accent (and optionally --cx-accent-ink) on its root and uses .cx. */
-.cx{
+   --cx-accent (and optionally --cx-accent-ink) on its root and uses .cx.
+   Byte-frozen classic pages (Última llamada, Habitación 508) cannot take the
+   class, so their roots are listed next to .cx and skinned from their layout. */
+:is(.cx,main.ul-app,main.h508-app){
   --cx-canvas:#f6f4ef;--cx-paper:#fff;--cx-ink:#0e1525;--cx-ink-2:#363f52;--cx-muted:#687083;
   --cx-line:#e6e1d8;--cx-line-2:#efebe4;--cx-accent:#2f5bea;--cx-accent-ink:#fff;
   --cx-accent-soft:color-mix(in srgb,var(--cx-accent) 11%,#fff);
@@ -19,14 +21,14 @@
   min-height:100vh;background:var(--cx-canvas);color:var(--cx-ink);font-family:var(--cx-body);
   font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip
 }
-.cx *,.cx *::before,.cx *::after{box-sizing:border-box}
-.cx :is(h1,h2,h3){font-family:var(--cx-display);font-weight:700;letter-spacing:-.025em;line-height:1.05;text-wrap:balance;margin:0}
-.cx p{margin:0}
-.cx button{font:inherit;color:inherit;cursor:pointer}
-.cx button:disabled{cursor:default;opacity:.4}
-.cx a{color:inherit}
-.cx :focus-visible{outline:3px solid color-mix(in srgb,var(--cx-accent) 70%,#000);outline-offset:3px;border-radius:10px}
-.cx img{max-width:100%}
+:is(.cx,main.ul-app,main.h508-app) *,:is(.cx,main.ul-app,main.h508-app) *::before,:is(.cx,main.ul-app,main.h508-app) *::after{box-sizing:border-box}
+:is(.cx,main.ul-app,main.h508-app) :is(h1,h2,h3){font-family:var(--cx-display);font-weight:700;letter-spacing:-.025em;line-height:1.05;text-wrap:balance;margin:0}
+:is(.cx,main.ul-app,main.h508-app) p{margin:0}
+:is(.cx,main.ul-app,main.h508-app) button{font:inherit;color:inherit;cursor:pointer}
+:is(.cx,main.ul-app,main.h508-app) button:disabled{cursor:default;opacity:.4}
+:is(.cx,main.ul-app,main.h508-app) a{color:inherit}
+:is(.cx,main.ul-app,main.h508-app) :focus-visible{outline:3px solid color-mix(in srgb,var(--cx-accent) 70%,#000);outline-offset:3px;border-radius:10px}
+:is(.cx,main.ul-app,main.h508-app) img{max-width:100%}
 
 /* Top bar */
 .cx-top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;min-height:64px;padding:8px var(--cx-pad);background:color-mix(in srgb,var(--cx-canvas) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--cx-line-2)}
@@ -61,4 +63,4 @@
 /* Motion: content arrives softly */
 @keyframes cx-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
 .cx-rise{animation:cx-rise .45s cubic-bezier(.2,.7,.2,1) both}
-@media (prefers-reduced-motion:reduce){.cx *{animation:none!important;transition:none!important}}
+@media (prefers-reduced-motion:reduce){:is(.cx,main.ul-app,main.h508-app) *{animation:none!important;transition:none!important}}
