@@ -88,10 +88,10 @@
 .rph-step h3{font-size:19px;margin-bottom:10px}
 .rph-options{display:grid;gap:10px}
 .rph-option{display:flex;gap:14px;align-items:center;text-align:left;padding:14px 18px;border-radius:var(--cx-r-md);border:2px solid var(--cx-line);background:var(--cx-paper);transition:border-color .2s,background .2s}
-.rph-option>span{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--cx-line-2);font-weight:700}
+.rph-option>.rph-letter{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--cx-line-2);font-weight:700}
 .rph-option b{font-size:19px}
 .rph-option.is-on{border-color:var(--rph-accent);background:color-mix(in srgb,var(--rph-accent) 8%,#fff)}
-.rph-option.is-on>span{background:var(--rph-accent);color:#fff}
+.rph-option.is-on>.rph-letter{background:var(--rph-accent);color:#fff}
 .rph-or{margin-top:12px;color:var(--cx-ink-2)}
 .rph-or u{text-decoration:none;display:inline-block;min-width:40px;border-bottom:2px dashed var(--cx-muted)}
 .rph-frame-line{display:flex;flex-wrap:wrap;align-items:baseline;gap:0;font-size:clamp(20px,2.2vw,26px)}
@@ -115,7 +115,7 @@
 .rph-roles-intro p[lang]{color:var(--cx-muted)}
 .rph-roles{list-style:none;margin:0;padding:0;display:grid;gap:10px}
 .rph-roles li{display:flex;gap:14px;align-items:center;padding:14px 18px}
-.rph-roles li>span{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--rph-accent);color:#fff;font-weight:700}
+.rph-roles li>.rph-letter{flex:none;width:36px;height:36px;border-radius:50%;display:grid;place-items:center;background:var(--rph-accent);color:#fff;font-weight:700}
 .rph-roles b{font-size:19px}
 
 /* Floating buttons and drawer */

@@ -17,7 +17,7 @@ const additions = [
   // on the shared engine app/roleplays-hispanos. Every shared-file edit sits on the first entry (265);
   // the other nineteen only take their lesson out of the historical catalog.
   ...['mexico','guatemala','honduras','el-salvador','nicaragua','costa-rica','panama','cuba','republica-dominicana','puerto-rico','colombia','venezuela','ecuador','peru','bolivia','chile','paraguay','uruguay','espana','guinea-ecuatorial'].map((slug,i)=>({
-    id:265+i,path:`/roleplays-${slug}`,files:i?/^$/:/^(?:app\/roleplays-[a-z-]+\/|public\/roleplays-hispanos\/|tests\/roleplays-hispanos\.test\.mjs$|scripts\/check-roleplays-hispanos\.mjs$|scripts\/covers\/roleplays-hispanos\.(?:mjs|html)$|scripts\/covers\/art\/roleplays-[a-z-]+\.(?:webp|png)$|docs\/audits\/roleplays-hispanos-english-additions-20261124\.json$)/,
+    id:265+i,path:`/roleplays-${slug}`,files:i?/^$/:/^(?:app\/roleplays-[a-z-]+\/|public\/roleplays-hispanos\/|tests\/roleplays-hispanos\.test\.mjs$|scripts\/check-roleplays-hispanos\.mjs$|scripts\/record-roleplays-preview\.mjs$|public\/conversation-previews\/2(?:6[5-9]|7\d|8[0-4])\.mp4$|scripts\/covers\/roleplays-hispanos\.(?:mjs|html)$|scripts\/covers\/art\/roleplays-[a-z-]+\.(?:webp|png)$|docs\/audits\/roleplays-hispanos-english-additions-20261124\.json$)/,
     edits:i?{}:{
       'app/lesson-catalog.ts':[text=>{
         const lines=text.split('\n');
@@ -25,6 +25,7 @@ const additions = [
         assert.equal(at.length,20,'twenty country roleplay catalog entries');
         assert.deepEqual(at,at.map((_,k)=>at[0]+k),'the twenty entries sit together');lines.splice(at[0],20);return lines.join('\n');
       },['259,258,260,261,264,263,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284]','259,258,260,261,264,263]'],[', 227, 228, 229, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284]);',', 227, 228, 229]);']],
+      'app/conversation-preview-videos.ts':[[',261,264,263,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284]);',',261,264,263]);']],
       'scripts/check-english-copy.mjs':[["\n  'docs/audits/roleplays-hispanos-english-additions-20261124.json',",'']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/roleplays-hispanos.test.mjs']);\n",'']],
       'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 367);','assert.equal(lessons.length, 347);'],['assert.equal(a1Lessons.length, 118);','assert.equal(a1Lessons.length, 98);']],

@@ -190,7 +190,7 @@ export default function Roleplays({ slug }: { slug: string }) {
           <p>Haz estas preguntas a tu profe. Tu profe responde como alumno, y a veces con una sorpresa.</p>
         </div>
         <ol className="rph-roles">
-          {scene.s.map((item, i) => <li key={item.q[0]} className="cx-card"><span>{i + 1}</span><Gloss pair={item.q} english={english} /></li>)}
+          {scene.s.map((item, i) => <li key={item.q[0]} className="cx-card"><span className="rph-letter">{i + 1}</span><Gloss pair={item.q} english={english} /></li>)}
         </ol>
         <p className="cx-teacher"><b>Para el profe</b>Responde con una sorpresa pequeña (no hay, es muy caro, cambias de idea) para que el alumno reaccione con las expresiones de la escena.</p>
       </section>}
@@ -265,7 +265,7 @@ function StepView({ pais, scene, index, help, english, chosen, setChosen, filled
       <h3>Elige una respuesta y dila en voz alta</h3>
       <div className="rph-options">
         {item.a.map((answer, i) => <button type="button" key={answer[0]} className={`rph-option${chosen === i ? ' is-on' : ''}`} aria-pressed={chosen === i} onClick={() => setChosen(i)}>
-          <span>{String.fromCharCode(65 + i)}</span><Gloss pair={answer} english={english} />
+          <span className="rph-letter">{String.fromCharCode(65 + i)}</span><Gloss pair={answer} english={english} />
         </button>)}
       </div>
       <p className="rph-or">¿Otra idea? Usa la frase: <b>{before}<u>…</u>{after}</b></p>
