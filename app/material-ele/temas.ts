@@ -350,6 +350,8 @@ export const temaLevelPageByPath = new Map(temaLevelPages.map((page) => [page.pa
  * grammar topics). Each 308-redirects to its topic page so the URL never turns into a 404.
  * tests/material-ele-copy-quality.test.mjs fails if a published level path is neither generated nor listed here. */
 export const retiredTemaLevelPaths: ReadonlyMap<string, string> = new Map([
+  ["/material-ele/cultura/variedades-del-espanol/b1", "/material-ele/cultura/variedades-del-espanol"],
+  ["/material-ele/cultura/variedades-del-espanol/b2", "/material-ele/cultura/variedades-del-espanol"],
   ["/material-ele/gramatica/comparativos-y-superlativos/c1", "/material-ele/gramatica/comparativos-y-superlativos"],
   ["/material-ele/gramatica/comparativos-y-superlativos/c2", "/material-ele/gramatica/comparativos-y-superlativos"],
   ["/material-ele/gramatica/oraciones-finales/a1", "/material-ele/gramatica/oraciones-finales"],
