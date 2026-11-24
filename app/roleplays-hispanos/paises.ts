@@ -26,7 +26,7 @@ export const PAISES: CountryMeta[] = [
   m('paraguay', 281, 'Paraguay', 'py', '#0038a8', '#d52b1e', ['¡Nde!', 'Tereré', 'Luego'], ['Entre amigos se usa vos; con desconocidos, usted.', 'Friends use vos; strangers get usted.'] as Pair, 'el español de Paraguay'),
   m('uruguay', 282, 'Uruguay', 'uy', '#0038a8', '#c49102', ['Ta', '¡Qué bárbaro!', 'Botija'], ['Entre amigos se usa vos (a veces tú); con desconocidos, usted.', 'Friends use vos (sometimes tú); strangers get usted.'] as Pair, 'el español de Uruguay'),
   m('espana', 283, 'España', 'es', '#aa151b', '#c99700', ['Vale', 'Guay', '¡Qué fuerte!'], ['Se usa tú con casi todo el mundo, y vosotros para el plural.', 'Tú is used with almost everyone, and vosotros for the plural.'] as Pair, 'el español de España'),
-  m('guinea-ecuatorial', 284, 'Guinea Ecuatorial', 'gq', '#3e9a00', '#e32118', ['Mbolo', 'Akiba', 'Bitácora'], ['Se usa mucho usted, sobre todo con mayores; tú entre amigos.', 'Usted is very common, above all with elders; tú among friends.'] as Pair, 'el español de Guinea Ecuatorial'),
+  m('guinea-ecuatorial', 284, 'Guinea Ecuatorial', 'gq', '#3e9a00', '#e32118', ['Mbolo', 'Castizar', '¡No dispares!'], ['Se usa mucho usted, sobre todo con mayores; tú entre amigos.', 'Usted is very common, above all with elders; tú among friends.'] as Pair, 'el español de Guinea Ecuatorial'),
 ];
 
 export const paisBySlug = (slug: string) => {
