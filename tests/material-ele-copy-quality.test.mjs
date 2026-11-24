@@ -192,7 +192,9 @@ test('level-page intros close with a sentence that fits the group',()=>{
 // classes names every level that has them.
 test('the guide sentence on three free classes per level names every level that has them',()=>{
  const freeGrammarAt=(level)=>m.lessonsForTest.filter((l)=>l.category==='Gramática'&&m.isFreeLesson(l.id)&&levelsOf(l).length===1&&levelsOf(l)[0]===level).length;
- const texts=JSON.stringify(m.guiaPages).split('"text":"').filter((t)=>/tres clases gratis por nivel/.test(t.split('"')[0]));
+ const texts=[];
+ const walk=(node)=>{if(Array.isArray(node))node.forEach(walk);else if(node&&typeof node==='object'){if(typeof node.text==='string'&&/tres clases gratis por nivel/.test(node.text))texts.push(node.text);Object.values(node).forEach(walk);}};
+ walk(m.guiaPages);
  assert.ok(texts.length>=1,'the sentence exists');
- for(const t of texts)for(const level of ['A1','A2','B1','B2','C1','C2'])if(freeGrammarAt(level)>=3)assert.match(t,new RegExp(`\\[${level}\\]\\(/material-ele/${level.toLowerCase()}\\)`),`guide omits ${level}`);
+ for(const t of texts)for(const level of ['A1','A2','B1','B2','C1','C2']){const named=t.includes(`[${level}](/material-ele/${level.toLowerCase()})`);if(named)assert.ok(freeGrammarAt(level)>=3,`guide names ${level}, which has only ${freeGrammarAt(level)} free grammar classes`);if(freeGrammarAt(level)>=3)assert.match(t,new RegExp(`\\[${level}\\]\\(/material-ele/${level.toLowerCase()}\\)`),`guide omits ${level}`);}
 });
