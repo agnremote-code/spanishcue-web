@@ -1,0 +1,105 @@
+/* Red Flag o No, Clásicas 2026 skin. RedFlagGame.tsx, red-flag.css and the
+   level data are byte-frozen by the preservation tests, so the new look lives
+   here and is loaded from the layout of each route. Every selector starts with
+   main.rf-game so it outranks the frozen rules. Uppercase strings in the frozen
+   markup are shown in sentence case with lowercase + ::first-letter. */
+main.rf-game{--cx-accent:var(--rf-accent);--rf-paper:var(--cx-canvas);--rf-line:var(--cx-line);padding:0 var(--cx-pad) 80px;background:var(--cx-canvas)}
+main.rf-game :focus-visible{outline:3px solid color-mix(in srgb,var(--rf-accent-text) 80%,#000);outline-offset:3px}
+
+/* Sentence case */
+main.rf-game :is(.rf-timeline span,.rf-eyebrow,.rf-intro>p,.rf-card-meta span,.rf-choices b,.rf-why span,.rf-title-lockup span),
+main.rf-game:not(.rf-c1) .rf-why h2,
+main.rf-game :where(button){text-transform:lowercase}
+main.rf-game :is(.rf-timeline span,.rf-eyebrow,.rf-intro>p,.rf-card-meta span,.rf-choices b,.rf-why span,.rf-title-lockup span)::first-letter,
+main.rf-game:not(.rf-c1) .rf-why h2::first-letter,
+main.rf-game :where(button)::first-letter{text-transform:uppercase}
+main.rf-game :is(.rf-eyebrow,.rf-intro>p,.rf-card-meta span,.rf-choices b,.rf-why span){display:block}
+main.rf-game button small{text-transform:none}
+/* The family bar above already names the class and the level */
+main.rf-game .rf-title-lockup,main.rf-game .rf-level{display:none}
+
+/* Header */
+main.rf-game .rf-header{height:auto;min-height:64px;max-width:1080px;display:flex;justify-content:space-between;border-bottom:0}
+main.rf-game .rf-header .sc-brand-system{font-size:15px}
+
+/* Steps */
+main.rf-game .rf-timeline{max-width:1080px;margin:8px auto 22px;display:flex;gap:10px;border:0;background:transparent;overflow-x:auto;padding:2px}
+main.rf-game .rf-timeline button{position:relative;flex:1 1 0;min-width:150px;display:block;padding:10px 14px 10px 58px;border:1px solid var(--cx-line);border-radius:18px;background:var(--cx-paper);color:var(--cx-ink);text-align:left;box-shadow:0 1px 2px rgba(14,21,37,.04);transition:border-color .2s,box-shadow .2s}
+main.rf-game .rf-timeline button:last-child{border-right:1px solid var(--cx-line)}
+main.rf-game .rf-timeline b{position:absolute;left:14px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--cx-line-2);color:var(--cx-ink-2);font-size:14px;font-weight:700}
+main.rf-game .rf-timeline span{margin:0;font-size:15.5px;font-weight:650;letter-spacing:0;color:var(--cx-ink)}
+main.rf-game .rf-timeline small{margin-top:2px;font-size:14px;color:var(--cx-muted)}
+main.rf-game .rf-timeline button.active{background:var(--cx-paper);color:var(--cx-ink);border-color:color-mix(in srgb,var(--rf-accent) 45%,var(--cx-line));box-shadow:var(--cx-sh-1)}
+main.rf-game .rf-timeline button.active b{background:var(--rf-accent);color:#fff}
+main.rf-game .rf-timeline button.active small{color:var(--cx-muted)}
+
+/* Panel */
+main.rf-game .rf-panel{max-width:1080px;min-height:0;border:1px solid var(--cx-line);border-radius:var(--cx-r-lg);background:var(--cx-paper);box-shadow:var(--cx-sh-2)}
+main.rf-game :is(.rf-intro,.rf-finale){padding:clamp(28px,5vw,64px)}
+main.rf-game .rf-eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:650;letter-spacing:0;color:var(--rf-accent-text)}
+main.rf-game .rf-intro>p{margin:36px 0 10px;font-size:15px;font-weight:600;letter-spacing:0;color:var(--cx-muted)}
+main.rf-game :is(.rf-intro h1,.rf-finale>h1){font-family:var(--cx-display);font-size:clamp(2.4rem,5.4vw,4.6rem);font-weight:700;line-height:1.02;letter-spacing:-.035em}
+main.rf-game .rf-intro-notes{gap:10px;margin:34px 0}
+main.rf-game .rf-intro-notes span{padding:10px 16px;border:1px solid var(--cx-line);border-radius:999px;background:var(--cx-canvas);font-size:15px;font-weight:600}
+main.rf-game .rf-primary{color:#fff;min-height:52px;padding:14px 26px;border-radius:999px;background:var(--cx-ink);font-size:16px;font-weight:650;letter-spacing:0;transition:transform .2s,box-shadow .2s}
+main.rf-game .rf-primary:hover{transform:translateY(-1px);box-shadow:var(--cx-sh-1)}
+
+/* Play */
+main.rf-game .rf-play{padding:clamp(22px,4vw,48px)}
+main.rf-game .rf-card-meta span{font-size:14px;font-weight:650;letter-spacing:0;color:var(--rf-accent-text)}
+main.rf-game .rf-card-meta small{font-size:15px;color:var(--cx-muted)}
+main.rf-game .rf-card-meta>strong{white-space:nowrap;font-family:var(--cx-display);font-size:28px;font-weight:700}
+main.rf-game .rf-card-meta i{font-size:15px;color:var(--cx-muted)}
+main.rf-game .rf-progress{height:6px;margin:16px 0 30px;border-radius:999px;background:var(--cx-line-2)}
+main.rf-game .rf-progress span{border-radius:999px}
+main.rf-game .rf-situation{min-height:200px;padding:28px clamp(16px,5vw,64px);border-radius:var(--cx-r-md);background:color-mix(in srgb,var(--rf-accent) 6%,#fff)}
+main.rf-game .rf-quote{top:-6px;left:18px;font-family:var(--cx-display);font-size:96px;color:color-mix(in srgb,var(--rf-accent) 30%,#fff)}
+main.rf-game .rf-situation h1{font-family:var(--cx-display);font-size:clamp(1.8rem,3.8vw,3rem);font-weight:700;line-height:1.12;letter-spacing:-.025em}
+main.rf-game.rf-c1 .rf-situation h1{font-size:clamp(1.6rem,3.2vw,2.5rem);line-height:1.2}
+main.rf-game :is(.rf-c1-first-look,.rf-c1-instruction){font-size:16.5px;color:var(--cx-ink-2)}
+main.rf-game .rf-choices{gap:14px;margin-top:22px}
+main.rf-game .rf-choices button{min-height:88px;padding:16px 22px;border:1.5px solid var(--cx-line);border-radius:var(--cx-r-md);background:var(--cx-paper);transition:transform .16s,background .16s,color .16s,border-color .16s,box-shadow .16s}
+main.rf-game .rf-choices button:hover{box-shadow:var(--cx-sh-1)}
+main.rf-game .rf-choices button b{font-family:var(--cx-display);font-size:22px;font-weight:700;letter-spacing:-.01em}
+main.rf-game .rf-choices button small{font-size:14px;color:var(--cx-muted)}
+main.rf-game .rf-choices button.selected small{color:#fff;opacity:.85}
+main.rf-game .rf-choices .green:hover{border-color:var(--rf-green)}
+main.rf-game .rf-choices .red:hover{border-color:var(--rf-red)}
+main.rf-game .rf-why{margin-top:18px;padding:20px 22px;border:0;border-radius:var(--cx-r-md);background:var(--cx-canvas)}
+main.rf-game .rf-why span{font-size:14px;font-weight:650;letter-spacing:0;color:var(--rf-accent-text)}
+main.rf-game .rf-why h2{font-family:var(--cx-display);font-size:28px;font-weight:700;letter-spacing:-.02em}
+main.rf-game .rf-why p{border-top:1px solid var(--cx-line);font-family:var(--cx-display);font-size:clamp(19px,2.6vw,25px);font-weight:600;line-height:1.3}
+main.rf-game :is(.rf-why button,.rf-controls button,.rf-final-actions>button:not(.rf-primary),.rf-c1-qualify,.rf-c1-history button){min-height:46px;padding:10px 20px;border:1px solid var(--cx-line);border-radius:999px;background:var(--cx-paper);color:var(--cx-ink);font-size:15px;font-weight:650;letter-spacing:0;transition:transform .2s,box-shadow .2s}
+main.rf-game :is(.rf-why button,.rf-controls button,.rf-final-actions>button:not(.rf-primary),.rf-c1-qualify,.rf-c1-history button):not(:disabled):hover{transform:translateY(-1px);box-shadow:var(--cx-sh-1)}
+main.rf-game .rf-c1-qualify[aria-pressed=true]{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+main.rf-game .rf-controls{margin-top:26px;padding-top:20px;border-top:1px solid var(--cx-line-2)}
+main.rf-game .rf-controls small{display:inline;margin-left:6px;font-size:13.5px;color:var(--cx-muted)}
+main.rf-game .rf-controls button.next{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+main.rf-game .rf-controls button:first-child{justify-self:start}
+main.rf-game .rf-controls button:first-child{font-size:0}
+main.rf-game .rf-controls button:first-child::before{content:"← Anterior" / "";font-size:15px;text-transform:none}
+main.rf-game .rf-shortcuts{font-size:14px;letter-spacing:0;color:var(--cx-muted)}
+
+/* Context and alternative cards (C1, C2) and A1 support */
+main.rf-game .rf-c1-context{padding:22px 24px;border-left:0;border-radius:var(--cx-r-md);background:color-mix(in srgb,var(--rf-accent) 6%,#fff)}
+main.rf-game :is(.rf-c1-context h2,.rf-c2-alternative h2,.rf-c2-protocol h2,.rf-c2-trial h2){font-family:var(--cx-display);font-size:26px;font-weight:700;letter-spacing:-.02em}
+main.rf-game :is(.rf-c2-alternative,.rf-c2-protocol,.rf-c2-trial){border:0;border-radius:var(--cx-r-md);background:#eef8f2}
+main.rf-game .rf-c2-protocol textarea{border:1px solid var(--cx-line);border-radius:var(--cx-r-sm)}
+main.rf-game .rf-a1 .rf-a1-support,main.rf-game.rf-a1 .rf-a1-support{border:0;border-radius:var(--cx-r-md);background:var(--cx-canvas)}
+main.rf-game .rf-a1-frames span{border-radius:999px;padding:8px 14px}
+main.rf-game :is(.rf-a1,.rf-c1) summary,main.rf-game:is(.rf-a1,.rf-c1) summary{text-decoration:none;color:var(--cx-teacher)}
+
+/* Final conversation */
+main.rf-game .rf-finale>p{font-size:18px;color:var(--cx-ink-2)}
+main.rf-game .rf-finale-grid{gap:12px;border:0}
+main.rf-game .rf-finale-grid article{min-height:140px;padding:22px;border:1px solid var(--cx-line);border-radius:var(--cx-r-md);background:var(--cx-paper);box-shadow:var(--cx-sh-1)}
+main.rf-game .rf-finale-grid span{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:color-mix(in srgb,var(--rf-accent) 12%,#fff);font-size:14px;font-weight:700}
+main.rf-game .rf-finale-grid h2{margin-top:18px;font-family:var(--cx-display);font-size:clamp(20px,2.4vw,26px);font-weight:650;line-height:1.2;letter-spacing:-.015em}
+main.rf-game:is(.rf-a1,.rf-c1) .rf-finale-grid h2{font-family:var(--cx-body);font-size:18px;font-weight:600}
+
+@media(max-width:700px){
+  main.rf-game{padding:0 16px 48px;background:var(--cx-canvas)}
+  main.rf-game .rf-timeline button{min-width:172px}
+  main.rf-game .rf-panel{min-height:0}
+  main.rf-game .rf-situation h1{font-size:1.75rem}
+}

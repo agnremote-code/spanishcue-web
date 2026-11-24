@@ -1,0 +1,91 @@
+/* Let's Talk, Clásicas 2026 skin. page.tsx, the level data and the B2/C1/C2
+   stylesheets are byte-frozen by the preservation tests, so the new look lives
+   here and is loaded from the layout of each route. Every selector starts with
+   main.talk-app so it outranks the frozen rules. The colourful topic tiles
+   stay: they are the class's identity, now on the light canvas. */
+main.talk-app{--cx-accent:#6741d9;--lime:#6741d9;color:var(--cx-ink);background:var(--cx-canvas);padding-bottom:72px}
+main.talk-app,main.talk-app button,main.talk-app a{font-family:var(--cx-body)}
+main.talk-app :focus-visible{outline:3px solid color-mix(in srgb,var(--cx-accent) 70%,#000)}
+
+/* Sentence case for frozen uppercase labels */
+main.talk-app :is(.talk-steps b,.topic-worlds button i,.topic-hero small,.question-layout aside>small,.ready-talk>small,.question-layout aside>button){text-transform:lowercase}
+main.talk-app :is(.talk-steps b,.topic-worlds button i,.topic-hero small,.question-layout aside>small,.ready-talk>small,.question-layout aside>button)::first-letter{text-transform:uppercase}
+main.talk-app :is(.topic-hero small,.question-layout aside>small,.ready-talk>small){display:block}
+/* Redundant with the family bar and the title */
+main.talk-app :is(.game-chip,.mode-chip,.talk-logo .sc-brand-name small){display:none}
+
+/* Header */
+main.talk-app .talk-header{height:auto;min-height:64px;max-width:var(--cx-max);padding:8px var(--cx-pad)}
+main.talk-app .talk-logo{color:var(--cx-ink)}
+main.talk-app .talk-logo span{width:auto;height:auto;overflow:visible;border-radius:0;background:transparent;box-shadow:none}
+main.talk-app .talk-logo .sc-monogram{width:34px;height:34px}
+main.talk-app .talk-logo>.sc-brand-system{display:inline-flex;align-items:center;gap:10px}
+main.talk-app .talk-logo .sc-brand-system{--brand-ink:var(--cx-ink);--brand-subtle:var(--cx-muted);color:var(--cx-ink);text-shadow:none}
+
+/* Home */
+main.talk-app :is(.talk-home,.topic-screen){max-width:var(--cx-max);padding:12px var(--cx-pad) 32px}
+main.talk-app .talk-intro{margin-bottom:40px}
+main.talk-app .talk-intro h1,main.talk-app.basic-mode .talk-intro h1{margin:12px 0 18px;font-family:var(--cx-display);font-size:clamp(3rem,8vw,6.4rem);font-weight:800;line-height:.95;letter-spacing:-.04em;color:var(--cx-ink)}
+main.talk-app .talk-intro>p:not(.mode-chip){max-width:720px;font-size:19px;font-weight:500;line-height:1.5;color:var(--cx-ink-2)}
+main.talk-app .talk-steps{gap:10px;margin-top:24px}
+main.talk-app .talk-steps b{display:inline-block;padding:9px 16px;border:1px solid var(--cx-line);border-radius:999px;background:var(--cx-paper);font-size:15px;font-weight:650;color:var(--cx-ink-2)}
+main.talk-app .talk-steps b:first-child{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+main.talk-app .talk-steps span{color:var(--cx-muted)}
+main.talk-app .world-heading{margin-bottom:16px}
+main.talk-app .world-heading h2{font-family:var(--cx-display);font-size:clamp(1.4rem,2.4vw,1.9rem);font-weight:700;letter-spacing:-.02em}
+main.talk-app .world-heading span{font-size:15px;color:var(--cx-muted)}
+main.talk-app .topic-worlds{gap:16px}
+main.talk-app .topic-worlds button{min-height:210px;border:0;border-radius:var(--cx-r-lg);box-shadow:0 2px 6px rgba(14,21,37,.06),0 22px 40px -24px rgba(14,21,37,.45)}
+main.talk-app .topic-worlds button:hover{transform:translateY(-4px);box-shadow:0 4px 10px rgba(14,21,37,.08),0 30px 50px -24px rgba(14,21,37,.5)}
+main.talk-app .topic-worlds button b{font-family:var(--cx-display);font-size:19px;font-weight:700;letter-spacing:-.01em}
+main.talk-app .topic-worlds button small{font-size:14px;font-weight:500;color:#ffffffe0}
+main.talk-app .topic-worlds button i{display:inline-block;align-self:flex-start;margin-top:auto;padding:6px 12px;border-radius:999px;background:#ffffff2e;font-size:13.5px;font-weight:650;letter-spacing:0}
+
+/* Topic screen */
+main.talk-app .all-topics{padding:10px 18px;border:1px solid var(--cx-line);border-radius:999px;background:var(--cx-paper);color:var(--cx-ink);font-size:15px;font-weight:650}
+main.talk-app .topic-hero{border:0;border-radius:var(--cx-r-lg);padding:clamp(22px,3vw,34px);box-shadow:var(--cx-sh-2);color:#fff}
+main.talk-app .topic-hero small{font-size:14px;font-weight:650;letter-spacing:0;color:#ffffffe0}
+main.talk-app .topic-hero h1{font-family:var(--cx-display);font-size:clamp(2.2rem,4.6vw,3.6rem);font-weight:800;letter-spacing:-.03em}
+main.talk-app .topic-hero p{font-size:17px;font-weight:500}
+main.talk-app .topic-hero>b{border:0;border-radius:999px;background:#ffffff2e;padding:10px 16px;font-size:15px;font-weight:650}
+main.talk-app :is(.talk-b2-invitation,.talk-c1-invitation,.talk-c2-invitation){margin:20px 0 0;font-size:17px;color:var(--cx-ink-2)}
+main.talk-app .question-layout{gap:24px}
+main.talk-app .question-layout section>h2{margin:0 0 14px;font-family:var(--cx-display);font-size:1.5rem;font-weight:700;letter-spacing:-.02em}
+main.talk-app .question-list{gap:12px}
+main.talk-app .question-list button{min-height:92px;border:1px solid var(--cx-line);border-radius:var(--cx-r-md);background:var(--cx-paper);color:var(--cx-ink);box-shadow:0 1px 2px rgba(14,21,37,.04)}
+main.talk-app .question-list button:hover:not(:disabled){background:var(--cx-paper);border-color:var(--cx-accent-line);transform:translateY(-2px);box-shadow:var(--cx-sh-1)}
+main.talk-app .question-list button:disabled{opacity:.4}
+main.talk-app .question-list button.selected{background:var(--cx-accent-soft);border-color:var(--cx-accent)}
+main.talk-app :is(.question-list button>b,.question-list button>i,.question-layout aside>div>b){width:30px;height:30px;border-radius:50%;background:var(--cx-line-2);color:var(--cx-ink-2);font-size:14px;font-weight:700}
+main.talk-app :is(.question-list button.selected>b,.question-list button.selected>i,.question-layout aside>div.filled b){background:var(--cx-accent);color:#fff}
+main.talk-app .question-list button span{font-size:16px;font-weight:550;line-height:1.45}
+main.talk-app .question-layout aside{top:80px;border:1px solid var(--cx-line);border-radius:var(--cx-r-lg);background:var(--cx-paper);box-shadow:var(--cx-sh-1);color:var(--cx-ink)}
+main.talk-app :is(.question-layout aside>small,.ready-talk>small){font-size:14px;font-weight:650;letter-spacing:0;color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+main.talk-app .question-layout aside h2{font-family:var(--cx-display);font-size:1.4rem;font-weight:700}
+main.talk-app .question-layout aside>div{border-bottom:1px solid var(--cx-line-2);font-size:15px;color:var(--cx-muted)}
+main.talk-app .question-layout aside>div.filled{color:var(--cx-ink)}
+main.talk-app .question-layout aside>button{min-height:50px;border-radius:999px;background:var(--cx-ink);color:#fff;font-size:16px;font-weight:650}
+main.talk-app .question-layout aside>p{font-size:14px;color:var(--cx-muted)}
+main.talk-app .ready-talk{border:0;border-radius:var(--cx-r-lg);background:var(--cx-accent-soft);padding:clamp(22px,3vw,34px)}
+main.talk-app .ready-talk h2{font-family:var(--cx-display);font-size:clamp(1.8rem,3.4vw,2.6rem);font-weight:800;letter-spacing:-.03em;color:var(--cx-ink)}
+main.talk-app .ready-talk>p{font-size:17px;color:var(--cx-ink-2)}
+main.talk-app .ready-talk article{border:1px solid var(--cx-line);border-radius:var(--cx-r-md);background:var(--cx-paper);font-size:16px;color:var(--cx-ink)}
+main.talk-app .ready-talk article b{border-radius:50%;background:var(--cx-accent);color:#fff}
+main.talk-app .ready-talk>button{padding:10px 18px;border:1px solid var(--cx-line);background:var(--cx-paper);color:var(--cx-ink);font-size:15px;font-weight:650}
+
+/* B2, C1, C2 entries and tools (frozen dark styling) */
+main.talk-app :is(.talk-b2-entry,.talk-c1-entry,.talk-c2-entry){border-left:0;border-radius:var(--cx-r-md);background:var(--cx-teacher-soft);border:1px solid #f3e2bf}
+main.talk-app :is(.talk-b2-entry,.talk-c1-entry,.talk-c2-entry) p{color:#5b4310}
+main.talk-app :is(.talk-b2-support,.talk-b2-closing,.talk-c1-support,.talk-c1-closing,.talk-c2-support,.talk-c2-closing){border:1px solid var(--cx-line);border-radius:var(--cx-r-md);background:var(--cx-paper);color:var(--cx-ink)}
+main.talk-app :is(.talk-b2-support,.talk-b2-closing,.talk-c1-support,.talk-c1-closing,.talk-c2-support,.talk-c2-closing) :is(p,dd,li){color:var(--cx-ink-2)}
+main.talk-app :is(.talk-b2-turn,.talk-c1-turn,.talk-c2-turn){color:var(--cx-ink-2)}
+main.talk-app :is(.talk-b2-support,.talk-c1-support,.talk-c2-support) dt{color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+main.talk-app summary{color:var(--cx-ink)}
+main.talk-app .cf-closing{max-width:var(--cx-max);margin:24px auto}
+
+@media(max-width:650px){
+  main.talk-app :is(.talk-home,.topic-screen){padding:8px 16px 24px}
+  main.talk-app .talk-intro h1,main.talk-app.basic-mode .talk-intro h1{font-size:3rem;letter-spacing:-.03em}
+  main.talk-app .topic-worlds button{min-height:190px}
+  main.talk-app .cf-closing{margin:16px}
+}
