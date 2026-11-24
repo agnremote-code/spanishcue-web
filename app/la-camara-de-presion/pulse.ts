@@ -29,7 +29,7 @@ type PulseGroup={topic:string;context:string;sourceIds:string[];prompts:string[]
 
 const pulseGroups:PulseGroup[]=[
   {
-    topic:"RUSIA–UCRANIA",
+    topic:"Rusia–Ucrania",
     context:"La invasión rusa de Ucrania continúa en su quinto año. Rusia exige concesiones territoriales; Ucrania las rechaza; siguen los ataques a infraestructura, las sanciones y los intentos de mediación.",
     sourceIds:["reutersBorder","reutersZaporizhzhia","reutersDiesel","natoUkraine"],
     prompts:[
@@ -44,7 +44,7 @@ const pulseGroups:PulseGroup[]=[
     ]
   },
   {
-    topic:"CHINA–TAIWÁN",
+    topic:"China–Taiwán",
     context:"China intensificó ejercicios, patrullas y reclamos de control alrededor de Taiwán. Taipéi los describe como presión desestabilizadora; Pekín sostiene que actúa dentro de su soberanía.",
     sourceIds:["reutersDrills","reutersTraffic","reutersReview","reutersOkinawa"],
     prompts:[
@@ -58,7 +58,7 @@ const pulseGroups:PulseGroup[]=[
     ]
   },
   {
-    topic:"GUERRA, PETRÓLEO Y RUTAS",
+    topic:"Guerra, petróleo y rutas",
     context:"El crudo superó los US$100 tras ataques y restricciones sobre infraestructura saudí, el Estrecho de Ormuz y Bab el-Mandeb. Un oleoducto alternativo llegó a poner en riesgo cerca del 4 % del suministro mundial.",
     sourceIds:["reutersOil","reutersPipeline","reutersYemen"],
     prompts:[
@@ -71,7 +71,7 @@ const pulseGroups:PulseGroup[]=[
     ]
   },
   {
-    topic:"TERREMOTOS Y CAUSALIDAD",
+    topic:"Terremotos y causalidad",
     context:"En pocas semanas se registraron sismos fuertes en Indonesia y Perú. USGS advierte que la cercanía temporal no basta para afirmar una conexión física, aunque ciertos grandes sismos pueden activar actividad distante en zonas vulnerables.",
     sourceIds:["usgsLatest","usgsFacts","usgsTrigger"],
     prompts:[
@@ -83,7 +83,7 @@ const pulseGroups:PulseGroup[]=[
     ]
   },
   {
-    topic:"IA, REGULACIÓN Y DEEPFAKES",
+    topic:"IA, regulación y deepfakes",
     context:"El AI Act europeo empezó a aplicarse de forma general en agosto de 2026, con calendarios distintos para algunas obligaciones. Al mismo tiempo, continúa la disputa política sobre si regular protege o frena la competencia tecnológica.",
     sourceIds:["euAiAct","reutersObama","reutersTrump"],
     prompts:[
@@ -95,7 +95,7 @@ const pulseGroups:PulseGroup[]=[
     ]
   },
   {
-    topic:"MINERALES, CHIPS Y DEPENDENCIA",
+    topic:"Minerales, chips y dependencia",
     context:"Las restricciones chinas sobre itrio expusieron dependencias de Estados Unidos y Japón. El metal es relevante para industrias aeroespaciales, energéticas y de semiconductores, mientras Taiwán concentra producción avanzada de chips.",
     sourceIds:["reutersYttrium","reutersReview"],
     prompts:[
@@ -106,7 +106,7 @@ const pulseGroups:PulseGroup[]=[
     ]
   },
   {
-    topic:"BRICS Y ORDEN MUNDIAL",
+    topic:"BRICS y orden mundial",
     context:"La cumbre BRICS de Nueva Delhi impulsó una cooperación ampliada en comercio, finanzas, política e IA. El bloque reúne potencias con intereses distintos que reivindican un orden más multipolar.",
     sourceIds:["reutersBrics"],
     prompts:[
@@ -116,7 +116,7 @@ const pulseGroups:PulseGroup[]=[
     ]
   },
   {
-    topic:"SEGURIDAD, PROPAGANDA Y CENSURA",
+    topic:"Seguridad, propaganda y censura",
     context:"Ucrania sancionó por diez años a varias personas acusadas de difundir propaganda rusa, incluida una ex secretaria de prensa presidencial que afirma haber sido castigada por sus críticas.",
     sourceIds:["reutersSanctions"],
     prompts:[
@@ -130,7 +130,7 @@ let pulseIndex=0;
 export const pulseQuestions:PressureQuestion[]=pulseGroups.flatMap(group=>group.prompts.map(prompt=>({
   id:`u${String(++pulseIndex).padStart(2,"0")}`,
   family:"pulse",
-  familyLabel:"PULSO ACTUAL",
+  familyLabel:"Pulso actual",
   topic:group.topic,
   context:group.context,
   prompt,
