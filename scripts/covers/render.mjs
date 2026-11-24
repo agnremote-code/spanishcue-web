@@ -18,12 +18,12 @@ const browser = await chromium.launch();
 
 // fit: 'cover16x10' crops the sides to 16:10 and scales to 1200×750 (the 3D covers' size).
 function webp(png, target, quality = 74, fit = '') {
-  execFileSync('python3', ['-I', '-c', 'import sys,io;from PIL import Image\nim=Image.open(io.BytesIO(sys.stdin.buffer.read())).convert("RGB").resize((1600,900),Image.LANCZOS)\nif sys.argv[3]:im=im.crop((80,0,1520,900)).resize((1200,750),Image.LANCZOS)\nim.save(sys.argv[1],"WEBP",quality=int(sys.argv[2]),method=6)', target, String(quality), fit], { input: png });
+  execFileSync('python3', ['-I', '-c', 'import sys,io;from PIL import Image\nim=Image.open(io.BytesIO(sys.stdin.buffer.read())).convert("RGB")\nif sys.argv[3] and abs(im.width/im.height-1.6)<0.02:im=im.resize((1200,750),Image.LANCZOS)\nelse:\n im=im.resize((1600,900),Image.LANCZOS)\n if sys.argv[3]:im=im.crop((80,0,1520,900)).resize((1200,750),Image.LANCZOS)\nq=int(sys.argv[2])\nwhile True:\n b=io.BytesIO();im.save(b,"WEBP",quality=q,method=6)\n if b.tell()<118000 or q<=40:break\n q-=4\nopen(sys.argv[1],"wb").write(b.getvalue())', target, String(quality), fit], { input: png });
 }
 
 const art = slug => pathToFileURL(resolve(repo, 'scripts/covers/art', `${slug}.webp`)).href;
 const url = pathToFileURL(resolve(repo, 'scripts/covers', `${name}.html`)).href;
-// 3D worlds: key art in the grammar mascots' cartoon style (Canva AI, 2026-11-02), never game screenshots.
+// 3D worlds: illustrated key art from an image model (Canva AI 2026-11-02; ChatGPT 16:10 art since 2026-11-24), never game screenshots or hand-drawn SVG.
 const WORLDS = [
   ['mas-alla', 'public/mas-alla/portada.webp'],
   ['vuelo-cancelado', 'public/vuelo-cancelado/portada.webp'],
