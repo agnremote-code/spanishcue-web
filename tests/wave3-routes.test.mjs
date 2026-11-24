@@ -64,7 +64,7 @@ test('four original IDs, CEFR contracts, categories, canonical URLs and PRO stat
     assert.equal(c.isFreeLesson(id),false);
   }
   const mouth=c.lessons.find(x=>x.id===38);
-  assert.deepEqual(Array.from(mouth.levels),['A1','A2','B1','B2','C1']);
-  assert.equal(mouth.displayLevel,'A1–C1');
+  assert.equal(mouth.levels,undefined);
+  assert.equal(mouth.displayLevel,undefined);
   assert.equal(c.freeAudioPrefixes.has('mouth-lab'),false);
 });
