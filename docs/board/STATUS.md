@@ -83,6 +83,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-24 (Tuesday SEO routine): run started 02:10Z, W48 plan item 3** (branch `claude/seo-tuesday-20261124`, base main `dce909f`). Mon 11-23 left its marker (#509). Subscription usage: **UNKNOWN**. In progress.
 - **2026-11-23 (Monday 3D routine): PR #509** (records; branch `claude/monday-3d-20261123`, base main `59475b40`) **and draft PR #510** (Taller content; branch `claude/escucha-3d-taller-greda-b1-20261123`). Run-start marker pushed at 02:08Z (W48 item 0). Fri 11-20 left its marker (#500). Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** The Taller content is a draft with unheard audio and no STT run. It is not counted as a unit.
   - **W48 item 1(a), the STT workflow: BLOCKED (VERIFIED), new owner request R5.**
