@@ -10,9 +10,11 @@ import cj from "../../conjugacion.module.css";
 import { IRREGULARES_PATH, irregularRows, tiempoBySlug, tiempoExercise, tiempoPages, type IrregularRow } from "../../tiempos";
 import { verbPath } from "../../verbos";
 import { MODO_PATH, modoPath } from "../../../indicativo-o-subjuntivo/data";
+import { PASADO_PATH, pasadoPath } from "../../../indefinido-o-imperfecto/data";
 
 type Props = { params: Promise<{ tiempo: string }> };
 
+const PASADO_LINKS = [["ayer", "Ayer"], ["de-repente", "De repente"], ["mientras", "Mientras"], ["siempre", "Siempre"], ["cuando", "Cuando"], ["de-nino", "De niño"]] as const;
 const SUBJ_LINKS = [["quiero-que", "Quiero que"], ["ojala", "Ojalá"], ["para-que", "Para que"], ["no-creo-que", "No creo que"], ["cuando", "Cuando"], ["aunque", "Aunque"], ["como-si", "Como si"], ["si-tuviera", "Si tuviera"]] as const;
 
 export function generateStaticParams() { return tiempoPages.map((page) => ({ tiempo: page.slug })); }
@@ -69,6 +71,14 @@ export default async function TiempoPage({ params }: Props) {
       <Section id="ejercicio" title={`Ejercicio: ${page.label.toLowerCase()} irregular`} intro={`${exercise.length} formas irregulares para practicar, de los verbos más frecuentes a los menos.`}>
         <EleExerciseBlock exercise={{ title: `Ejercicio: ${page.h1.toLowerCase()}`, instructions: "Escribe la forma correcta del verbo para la persona indicada.", items: exercise }} />
       </Section>
+      {page.slug === "indefinido" || page.slug === "imperfecto" ? (
+        <Section title="¿Indefinido o imperfecto?" intro="Una página por marcador temporal, con la regla y un ejercicio de elegir el tiempo.">
+          <ul className={cj.verbList}>
+            {PASADO_LINKS.map(([slug, label]) => <li key={slug}><Link href={pasadoPath(slug)}>{label}</Link></li>)}
+            <li><Link href={PASADO_PATH}>Todos los marcadores</Link></li>
+          </ul>
+        </Section>
+      ) : null}
       {page.slug.startsWith("subjuntivo-") ? (
         <Section title="¿Cuándo se usa el subjuntivo?" intro="Una página por expresión, con la regla y un ejercicio de elegir entre indicativo y subjuntivo.">
           <ul className={cj.verbList}>
