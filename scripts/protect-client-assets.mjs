@@ -65,6 +65,8 @@ const publicRoots = new Set([
   "app/material-ele/PrintButton.tsx",
   // Fill-in exercises answered on the public /material-ele pages: sentences and answer keys are public copy.
   "app/material-ele/ExerciseCheck.tsx",
+  // «¿Indicativo o subjuntivo?» chooser (public mini-apps).
+  "app/indicativo-o-subjuntivo/MoodChooser.tsx",
   // Copy button of the embeddable conjugator page (public, no account data).
   "app/material-ele/EmbedSnippet.tsx",
   "app/newsletter/GiftSignup.tsx",

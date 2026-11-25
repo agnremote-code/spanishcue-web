@@ -1,0 +1,25 @@
+.chooser ol { margin: 0; padding-left: 24px; display: grid; gap: 14px; max-width: 820px; }
+.chooser li { padding: 4px 0 4px 12px; border-left: 3px solid transparent; }
+.chooser li[data-state="right"] { border-left-color: #1f8a4c; }
+.chooser li[data-state="wrong"] { border-left-color: #c0392b; }
+.sentence { margin: 0 0 8px; font-size: 18px; line-height: 1.45; }
+.gap { font-weight: 800; color: var(--g-blue-dark); }
+.tag { display: inline-block; font-size: 12px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase; color: var(--g-muted); margin: 0 0 2px; }
+.options { display: flex; gap: 8px; flex-wrap: wrap; }
+.options button { font: inherit; font-weight: 700; padding: 8px 18px; border-radius: 12px; border: 1px solid var(--g-line); background: #fff; color: var(--g-ink); cursor: pointer; min-width: 110px; }
+.options button:hover:not(:disabled) { border-color: var(--g-blue-dark); }
+.options button:disabled { cursor: default; opacity: .75; }
+.options button[data-mark="right"] { background: #e7f6ec; border-color: #1f8a4c; color: #145c33; opacity: 1; }
+.options button[data-mark="wrong"] { background: #fdecea; border-color: #c0392b; color: #8e2a20; opacity: 1; }
+.feedback { margin: 8px 0 0; font-size: 15px; }
+.solution { margin: 8px 0 0; font-size: 14px; color: var(--g-muted); }
+.score { margin: 18px 0 0; font-weight: 800; display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+.score button { font: inherit; font-size: 14px; padding: 6px 12px; border-radius: 10px; border: 1px solid var(--g-line); background: #fff; cursor: pointer; }
+.rule { font-size: 19px; line-height: 1.5; max-width: 820px; margin: 0; }
+.tip { margin: 12px 0 0; max-width: 820px; background: #fff8e6; border: 1px solid #f0d58a; border-radius: 14px; padding: 10px 14px; }
+.cards { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); margin: 0; padding: 0; list-style: none; }
+.cards a { display: block; background: #fff; border: 1px solid var(--g-line); border-radius: 14px; padding: 12px 14px; text-decoration: none; color: var(--g-ink); height: 100%; }
+.cards a:hover { border-color: var(--g-blue-dark); }
+.cards strong { display: block; font-size: 17px; }
+.cards span { font-size: 13px; color: var(--g-muted); }
+@media print { .options, .score { display: none; } .solution { display: block; } }

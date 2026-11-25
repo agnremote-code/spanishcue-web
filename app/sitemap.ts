@@ -18,6 +18,8 @@ import { PLANTILLAS_PATH, plantillaFiles, plantillas } from "./material-ele/plan
 import { CONJUGACION_PATH, verbPath, verbos } from "./conjugacion/verbos";
 import { SPANISH_VERBS_PATH, verbPathEn } from "./conjugacion/verbos-en";
 import { IRREGULARES_PATH, tiempoPages } from "./conjugacion/tiempos";
+import { MODO_PATH, modoPath } from "./indicativo-o-subjuntivo/data";
+import { expresiones } from "./indicativo-o-subjuntivo/expresiones";
 import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
@@ -77,6 +79,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: IRREGULARES_PATH, priority: 0.8, changeFrequency: "monthly" },
   ...tiempoPages.map((page) => ({ path: page.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
   ...verbos.map((verb) => ({ path: verbPath(verb), priority: 0.6, changeFrequency: "monthly" as Frequency })),
+  { path: MODO_PATH, priority: 0.85, changeFrequency: "monthly" },
+  ...expresiones.map((e) => ({ path: modoPath(e.slug), priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-spanish-teaching-resources", priority: 0.6, changeFrequency: "monthly" },
