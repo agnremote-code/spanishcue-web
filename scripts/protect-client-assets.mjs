@@ -25,6 +25,7 @@ import { build } from "esbuild";
 import { liveLessonData } from "./live-lessons.mjs";
 import { autoestudioModuleData } from "./autoestudio-modules.mjs";
 import { clasicasData } from "./clasicas-content.mjs";
+import { guideBodiesData } from "./guide-bodies.mjs";
 import { HUB_WORLDS } from "../app/jugar/worlds.mjs";
 import { tmpdir } from "node:os";
 import { dirname, extname, relative, resolve } from "node:path";
@@ -489,6 +490,18 @@ for (const [slug, body] of Object.entries(clasicasBodies)) {
     "application/json",
   );
 }
+// Long-form guide prose (scripts/guide-bodies.mjs): one blob per guide.
+await mkdir(resolve("dist/client/_protected-guides"), { recursive: true });
+const { bodies: guideBodies } = await guideBodiesData();
+const guideAssets = {};
+for (const [key, body] of Object.entries(guideBodies)) {
+  guideAssets[key] = await encryptAsset(
+    Buffer.from(body),
+    `/guide-body/${key}`,
+    "_protected-guides",
+    "application/json",
+  );
+}
 const serverText = async (directory) => {
   let text = "";
   for (const entry of await readdir(directory, { withFileTypes: true })) {
@@ -520,6 +533,21 @@ for (const [slug, body] of Object.entries(clasicasBodies)) {
     if (workerText.includes(probe)) throw new Error(`Classic conversation ${slug} questions are still inside the Worker bundle`);
   }
 }
+const plainRun = (value) => {
+  // Any 60-character run of plain prose identifies a body: no quotes or escapes to differ in the bundle.
+  if (typeof value === "string") return value.match(/[A-Za-zÁÉÍÓÚáéíóúÑñü,. ]{60}/)?.[0];
+  if (value && typeof value === "object") for (const child of Object.values(value).reverse()) { const hit = plainRun(child); if (hit) return hit; }
+  return undefined;
+};
+for (const [key, body] of Object.entries(guideBodies)) {
+  const probe = plainRun(JSON.parse(body).sections);
+  if (!probe) throw new Error(`Guide ${key} has no prose to verify`);
+  if (workerText.includes(probe)) throw new Error(`Guide ${key} prose is still inside the Worker bundle`);
+}
+await writeFile(
+  "dist/server/private-guide-assets.js",
+  `export default ${JSON.stringify(guideAssets)};\n`,
+);
 await writeFile(
   "dist/server/private-clasicas-assets.js",
   `export default ${JSON.stringify(clasicasAssets)};\n`,
@@ -557,6 +585,7 @@ import routedWebp from './public-webp-assets.js';
 import privateLessons from './private-lesson-assets.js';
 import privateAutoestudio from './private-autoestudio-assets.js';
 import privateClasicas from './private-clasicas-assets.js';
+import privateGuides from './private-guide-assets.js';
 import {mayReadPrivateMedia,mayReadStudentAsset} from './private-access-runtime.js';
 
 const privateHeaders=()=>new Headers({'Cache-Control':'private, no-store','X-Content-Type-Options':'nosniff','Referrer-Policy':'strict-origin-when-cross-origin'});
@@ -623,6 +652,15 @@ globalThis.__spanishcueClasicas={async load(assets,slug){
  if(!record)return undefined;
  const response=await assets.fetch(new Request(new URL(record.assetPath,'https://assets.local')));
  if(!response.ok)throw new Error(\`Classic conversation \${slug} unavailable (\${response.status})\`);
+ const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:base64Bytes(record.iv)},await mediaKey(),await response.arrayBuffer());
+ return JSON.parse(new TextDecoder().decode(plain));
+}};
+// Read by the guide body loader inside app-worker.js (scripts/guide-bodies.mjs).
+globalThis.__spanishcueGuides={async load(assets,key){
+ const record=Object.hasOwn(privateGuides,key)?privateGuides[key]:undefined;
+ if(!record)return undefined;
+ const response=await assets.fetch(new Request(new URL(record.assetPath,'https://assets.local')));
+ if(!response.ok)throw new Error(\`Guide \${key} unavailable (\${response.status})\`);
  const plain=await crypto.subtle.decrypt({name:'AES-GCM',iv:base64Bytes(record.iv)},await mediaKey(),await response.arrayBuffer());
  return JSON.parse(new TextDecoder().decode(plain));
 }};

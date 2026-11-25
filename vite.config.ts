@@ -8,6 +8,7 @@ import { createRequire } from "node:module";
 import { liveLessonData, liveLessonIndexModule } from "./scripts/live-lessons.mjs";
 import { autoestudioModuleData, autoestudioIndexModule } from "./scripts/autoestudio-modules.mjs";
 import { clasicasData, clasicasIndexModule } from "./scripts/clasicas-content.mjs";
+import { GUIDE_SOURCES, guideBodiesData, guideBodyLoaderModule, trimGuideModule } from "./scripts/guide-bodies.mjs";
 
 const serverRequire = createRequire(import.meta.url);
 
@@ -136,6 +137,25 @@ export default defineConfig(async ({ command }) => {
           if (!id.replace(/\\/g, "/").endsWith("/app/conversacion-clasica/content.ts")) return null;
           if (this.environment?.name === "client") throw new Error("The classic conversation loader is server-only");
           return clasicasIndexModule(await clasicasData());
+        },
+      },
+      {
+        // Long-form guide prose ships as encrypted blobs too
+        // (scripts/guide-bodies.mjs); the Worker keeps each guide's card data.
+        name: "spanishcue-guide-bodies",
+        apply: "build",
+        enforce: "pre",
+        async load(id: string) {
+          if (!id.replace(/\\/g, "/").endsWith("/app/guide-bodies.ts")) return null;
+          if (this.environment?.name === "client") throw new Error("The guide body loader is server-only");
+          return guideBodyLoaderModule();
+        },
+        async transform(code: string, id: string) {
+          const clean = id.split("?")[0].replace(/\\/g, "/");
+          const source = GUIDE_SOURCES.find((s) => clean.endsWith(`/${s.file}`));
+          if (!source || this.environment?.name === "client") return null;
+          const { light } = await guideBodiesData();
+          return { code: trimGuideModule(code, source.file, light), map: null };
         },
       },
       // Browser-only code (3D worlds, three.js, Noche abierta scenes) stays out

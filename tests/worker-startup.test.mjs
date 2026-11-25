@@ -101,3 +101,19 @@ test("classic conversation question banks ship as encrypted blobs and decrypt in
   }
   assert.equal(await globalThis.__spanishcueClasicas.load(assets, "no-existe"), undefined);
 });
+
+test("long-form guide prose ships as encrypted blobs and decrypts in the Worker", async () => {
+  await import(pathToFileURL(resolve(server, "index.js")).href);
+  const guides = (await import(pathToFileURL(resolve(server, "private-guide-assets.js")).href)).default;
+  const keys = Object.keys(guides);
+  assert.ok(keys.filter((key) => key.startsWith("guia:")).length >= 18, "every Material ELE guide has an encrypted record");
+  assert.ok(keys.filter((key) => key.startsWith("guide:")).length >= 50, "every English teaching guide has an encrypted record");
+  const assets = { fetch: async (request) => new Response(await readFile(client + new URL(request.url).pathname)) };
+  for (const key of keys) {
+    assert.match(guides[key].assetPath, /^\/_protected-guides\/[0-9a-f]{64}\.bin$/, key);
+    const body = await globalThis.__spanishcueGuides.load(assets, key);
+    assert.ok(Array.isArray(body.sections) && body.sections.length >= 2, key);
+    if (key.startsWith("guia:")) assert.ok(body.intro && body.faq.length >= 3, key);
+  }
+  assert.equal(await globalThis.__spanishcueGuides.load(assets, "guia:no-existe"), undefined);
+});
