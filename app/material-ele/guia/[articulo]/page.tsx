@@ -5,6 +5,7 @@ import { faqPageSchema, webPageSchema } from "../../../growth/schema";
 import { EleBuyBand, EleLessonGrid, ElePageDates, ElePreviewVideo, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, elePreviewLesson, pageImage } from "../../components";
 import { GuiaBlocks } from "../../guia-components";
 import { guiaBySlug, guiaPages } from "../../guias";
+import { guiaWithBody } from "../../../guide-bodies";
 import { guiaRespuestas } from "../../guia-respuestas";
 import { pageDates } from "../../indice";
 import { MATERIAL_ELE_PATH } from "../../data";
@@ -26,8 +27,9 @@ export async function generateMetadata({ params }: Props) {
 
 export default async function GuiaPage({ params }: Props) {
   const { articulo } = await params;
-  const page = guiaBySlug.get(articulo);
-  if (!page) notFound();
+  const card = guiaBySlug.get(articulo);
+  if (!card) notFound();
+  const page = await guiaWithBody(card);
   const lessons = eleLessonCards(page.lessonIds);
   const freeLesson = lessons.find((lesson) => lesson.free);
   const dates = pageDates(page.path);

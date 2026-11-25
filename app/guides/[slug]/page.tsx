@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { teachingGuideBySlug, teachingGuides } from "../../teaching-guides";
+import { guideWithBody } from "../../guide-bodies";
 import { lessons, type Lesson } from "../../lesson-catalog";
 import { resourceLevelLabel, resourcePathForLesson } from "../../resource-seo";
 import { formatReviewedDate, guideModifiedDate } from "../guide-format";
@@ -49,8 +50,9 @@ export async function generateMetadata({ params }: GuidePageProps): Promise<Meta
 
 export default async function GuidePage({ params }: GuidePageProps) {
   const { slug } = await params;
-  const guide = teachingGuideBySlug.get(slug);
-  if (!guide) notFound();
+  const card = teachingGuideBySlug.get(slug);
+  if (!card) notFound();
+  const guide = await guideWithBody(card);
   const topic = grammarTopicByPath.get(`/guides/${slug}`);
   if (topic) return <GrammarTopicPage topic={topic} guide={guide} />;
 

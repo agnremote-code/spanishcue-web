@@ -63,3 +63,9 @@ for(const [path,level] of [['/gramatica/gustar-y-encantar','A1'],['/gramatica/po
  assert.equal(resource.url,'https://spanishcue.com'+path);assert.equal(resource.isAccessibleForFree,true);assert.equal(resource.educationalLevel,`MCER ${level}`);
  assert.ok(data.some(x=>x['@type']==='BreadcrumbList'));
 });
+test('a tutor-business guide renders its prose (decrypted from the guide blob in the Worker build)',async()=>{
+ const response=await fetch(origin+'/guides/teach-spanish-on-preply');assert.equal(response.status,200);
+ const d=new JSDOM(await response.text()).window.document;
+ assert.ok(d.querySelectorAll('main section h2').length>=4);
+ assert.ok([...d.querySelectorAll('main section p')].some(p=>p.textContent.length>120));
+});
