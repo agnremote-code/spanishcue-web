@@ -200,7 +200,7 @@ print(json.dumps({
 test('every seed in a plan carries what the check must hear for it (match tokens or the other cast)', () => {
   const p = plan(['boda', 'B1']);
   for (const s of p.seeds) for (const e of s.expect) {
-    if (e.seed === 'speaker') assert.match(e.other_cast, /MultilingualNeural [+-]\d+Hz$/);
+    if (e.seed === 'speaker') assert.match(e.other_cast, /^es-MX-(?:Dalia|Jorge)Neural [+-]\d+Hz$/);
     else assert.ok(e.match && (e.match.authored.length || e.match.heard.length), JSON.stringify(e));
   }
 });
