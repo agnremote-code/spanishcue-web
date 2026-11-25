@@ -89,4 +89,22 @@ test('English verb pages pair with the Spanish ones',async()=>{
  assert.equal(e.languageAlternates('/conjugacion/irregulares'),undefined);
  assert.ok(e.isEdgeCacheablePath('/spanish-verbs/tener')&&e.isEnglishDefaultPath('/spanish-verbs/tener'));
  const urls=new Set(m.sitemap().map(x=>x.url));assert.ok(urls.has('https://spanishcue.com/spanish-verbs/tener')&&urls.has('https://spanishcue.com/spanish-verbs'));
+test('irregular-verb pages per tense list the right verbs',async()=>{
+ const r2=await build({stdin:{contents:'export * from "./app/conjugacion/tiempos.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',logLevel:'error'});
+ const t=await import('data:text/javascript;base64,'+Buffer.from(r2.outputFiles[0].text).toString('base64'));
+ const verbs=(slug)=>t.irregularRows(t.tiempoBySlug.get(slug)).map(r=>r.verb);
+ assert.deepEqual(verbs('imperfecto').sort(),['entrever','ir','prever','ser','ver']);
+ for(const v of ['tener','hacer','decir','poder','saber','querer','venir','poner','salir','valer','haber','caber'])assert.ok(verbs('futuro').includes(v),v);
+ assert.ok(!verbs('futuro').includes('hablar'));
+ assert.ok(verbs('indefinido').includes('pedir')&&!verbs('indefinido').includes('leer')&&!verbs('indefinido').includes('buscar'));
+ assert.ok(verbs('participios').includes('escribir')&&!verbs('participios').includes('leer'));
+ assert.ok(verbs('gerundios').includes('dormir')&&!verbs('gerundios').includes('leer'));
+ const urls=new Set(m.sitemap().map(x=>x.url));
+ for(const p of t.tiempoPages){
+  assert.ok(urls.has('https://spanishcue.com'+p.path));
+  assert.ok(p.title.length<=78&&p.title.endsWith('| SpanishCue'),p.title);
+  assert.ok(p.description.length>=110&&p.description.length<=165,p.slug);
+  assert.ok(p.faq.length>=3);
+  const ex=t.tiempoExercise(p,t.irregularRows(p));assert.ok(ex.length>=5);for(const i of ex)assert.ok(i.q.includes('___')&&i.a);
+ }
 });
