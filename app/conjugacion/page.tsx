@@ -64,6 +64,9 @@ export default function ConjugacionHub() {
           </div>
         ))}
       </Section>
+      <Section title="Conjugador gratis para tu web">
+        <p className={styles.sectionIntro}>¿Tienes blog, web de academia o curso en Moodle? <Link className={styles.textLink} href="/material-ele/conjugador-para-tu-web">Inserta este conjugador gratis</Link>: sin registro, sin cookies, con los irregulares marcados.</p>
+      </Section>
       <Section title="Para enseñar cada tiempo">
         <p className={styles.sectionIntro}>Guías con explicación, actividades y ejercicios: <Link className={styles.textLink} href="/material-ele/presente-de-indicativo">presente</Link>, <Link className={styles.textLink} href="/material-ele/indefinido-e-imperfecto">indefinido e imperfecto</Link>, <Link className={styles.textLink} href="/material-ele/preterito-perfecto">pretérito perfecto</Link>, <Link className={styles.textLink} href="/material-ele/futuro">futuro</Link>, <Link className={styles.textLink} href="/material-ele/condicional">condicional</Link>, <Link className={styles.textLink} href="/material-ele/subjuntivo">subjuntivo</Link> e <Link className={styles.textLink} href="/material-ele/imperativo">imperativo</Link>.</p>
       </Section>
