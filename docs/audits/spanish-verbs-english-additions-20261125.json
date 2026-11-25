@@ -1,0 +1,618 @@
+{
+ "version": 1,
+ "authorization": "Standing owner approval for new English copy, typed by Ale «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g), and Ale's 2026-11-25 order to push SEO as aggressively as possible (cmsg_01Gr5R4j3t2Yet65UcmhcVhAWb7vYTMy4WPsFRk62XJu8u, cmsg_01Gr5R4j3t2Yet65UcmhcVhA9XicEho2ZFcHwsNmHhsggy): English twin of the /conjugacion pages at /spanish-verbs, with hreflang pairs.",
+ "additions": [
+  {
+   "path": "app/buscar-verbo/route.ts",
+   "text": "lang"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Indicative"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "The simple tenses of the indicative mood: facts, routines, the past, the future and hypotheses."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "presente"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Present"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "indefinido"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Preterite"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "imperfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Imperfect"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "futuro"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Future"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "condicional"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Conditional"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Compound tenses"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Formed with haber plus the past participle, which never changes."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "perfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Present perfect"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "pluscuamperfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Pluperfect"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "futuroPerfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Future perfect"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "condicionalPerfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Conditional perfect"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Subjunctive"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Wishes, doubts, emotions and clauses that depend on another verb: «quiero que…», «ojalá…», «cuando…»."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "subjPresente"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Present subjunctive"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "subjImperfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Imperfect subjunctive (-ra)"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "subjImperfectoSe"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Imperfect subjunctive (-se)"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "subjPerfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Present perfect subjunctive"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "subjPluscuamperfecto"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Pluperfect subjunctive"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "irregular -zco / -uje verb (like conducir)"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "irregular preterite or future stem (like tener, hacer, poder)"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "irregular -zco verb (like conocer)"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "irregular first person (like caer)"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "regular, with an irregular past participle"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "como"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "conjugated like ${rest}"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "propio"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "irregular, with forms of its own"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "stem"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": ":"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "stem change e → ie"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "stem change o → ue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "stem change e → i"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "stem change u → ue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "stem change o → hue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "stem change i → ie"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "written accent on í"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "written accent on ú"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${names[change]} (like ${model.example})"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "regular, with a spelling change"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "regular -${e} verb (like ${MODEL_REGULAR[e]})"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": ", "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "gu → gü before e, so the u is still pronounced"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "c → qu before e, to keep the /k/ sound"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "g → gu before e, to keep the hard g"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "z → c before e (Spanish rarely writes ze)"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "gu → g before a and o, where the u is no longer needed"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "c → z before a and o, to keep the soft c"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "g → j before a and o, to keep the /x/ sound"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "a y is added between the stem and endings that do not start with i"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "an unstressed i between two vowels is written y, and a stressed i takes an accent"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "the i of -ió and -iendo disappears after ñ, ll or ch"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${cap(verb)} is conjugated like ${base} and keeps all its irregular forms (${join([t.presente[0], t.indefinido[0], t.futuro[0], cj.participle])})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "It has forms of its own that follow no pattern, so learners memorise them, above all the present (${join([t.presente[0], t.presente[1], t.presente[2]])}), the preterite (${join([t.indefinido[0], t.indefinido[2]])}) and the present subjunctive (${t.subjPresente[0]})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ser"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ir"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Ser and ir share the same preterite (fui, fuiste, fue, fuimos, fuisteis, fueron) and imperfect subjunctive (fuera). Context tells them apart: «fue profesora» (ser) versus «fue al mercado» (ir)."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "haber"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "As an auxiliary it forms every compound tense (he hablado, había comido). Meaning «there is / there are» it is impersonal and stays in the third person singular: hay, hubo, había, habrá, haya."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "estar"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "It is irregular in the present (estoy, está), the preterite (estuve, estuvo) and the present subjunctive (esté). With a gerund it forms the progressive: «está trabajando»."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ir"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "«Ir a + infinitive» expresses plans and intentions: «voy a estudiar». The nosotros command is «vamos»."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "soler"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "It is defective: it is used mainly in the present and imperfect followed by an infinitive («suele llegar tarde», «solía leer mucho»). The future and the imperative are not used."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "It is a weather verb: in normal use it only appears in the third person singular (${join([t.presente[2], t.indefinido[2], t.imperfecto[2], t.futuro[2]])})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ie"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "u>ue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "o>hue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "i>ie"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "e → ie"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "o → ue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "u → ue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "o → hue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "i → ie"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Stem change ${change} whenever the stress falls on the stem: ${join([spec.yo ? \"\" : t.presente[0], t.presente[1], t.presente[2], t.presente[5]])}. Nosotros and vosotros keep the original vowel: ${join([t.presente[3], t.presente[4]])}.${spec.yo ? \"\" : ` The same change appears in the present subjunctive (${t.subjPresente[0]}) and the tú command (${t.imperativo[1]}).`}"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": " The same change appears in the present subjunctive (${t.subjPresente[0]}) and the tú command (${t.imperativo[1]})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ir"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ie"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "As an -ir verb it also changes ${spec.stem === \"ie\" ? \"e → i\" : \"o → u\"} in the third person preterite (${join([t.indefinido[2], t.indefinido[5]])}), the gerund (${cj.gerund}), nosotros in the present subjunctive (${t.subjPresente[3]}) and the whole imperfect subjunctive (${t.subjImperfecto[0]})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "e → i"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "o → u"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "i"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Stem change e → i when the stress falls on the stem (${join([t.presente[0], t.presente[1], t.presente[2], t.presente[5]])}), in the third person preterite (${join([t.indefinido[2], t.indefinido[5]])}), the gerund (${cj.gerund}) and the whole present and imperfect subjunctive (${join([t.subjPresente[0], t.subjImperfecto[0]])})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "í"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ú"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "The ${spec.stem} takes a written accent when stressed, which keeps it apart from the next vowel: ${join([t.presente[0], t.presente[1], t.presente[2], t.presente[5]])}. Nosotros has no accent (${t.presente[3]}). The accent comes back in the present subjunctive (${t.subjPresente[0]})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Only the first person present is irregular: ${t.presente[0]} (c → zc). Because the present subjunctive is built on that form, all of it carries zc: ${join(t.subjPresente.slice(0, 3))}… Everything else is regular."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "The first person present is irregular: ${t.presente[0]}. The present subjunctive is built on it: ${join(t.subjPresente.slice(0, 3))}…"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Irregular preterite stem in j: ${join([t.indefinido[0], t.indefinido[2], t.indefinido[5]])}. After j the ellos form ends in -eron, not -ieron. The imperfect subjunctive inherits the stem: ${t.subjImperfecto[0]}."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Strong preterite with an irregular stem: ${join([t.indefinido[0], t.indefinido[2], t.indefinido[5]])}. The yo and él forms end in unstressed -e and -o, with no accent. The imperfect subjunctive inherits the stem: ${t.subjImperfecto[0]}."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Irregular future and conditional stem: ${join([t.futuro[0], t.futuro[2], t.condicional[0]])}. The endings are regular."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Irregular tú command: ${t.imperativo[1]} (negative: ${t.imperativoNegativo[1]})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Tú command: ${t.imperativo[1]} (negative: ${t.imperativoNegativo[1]})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Irregular past participle: ${cj.participle}. It forms every compound tense («${t.perfecto[2]}») and also works as an adjective."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ir"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Irregular gerund: ${cj.gerund} («está ${cj.gerund}»)."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Spelling change: ${SPELLING_EN[sp.key]} (${join(examples)}). The pronunciation stays regular."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${cap(verb)} is a regular -${e} verb, conjugated like ${MODEL_REGULAR[e]}: the stem ${verb.slice(0, -2)}- plus the endings of each tense."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "In the tables, the ${count === 1 ? \"highlighted form is the only one\" : `${count} highlighted forms are the ones`} that break the regular pattern in the simple tenses."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "highlighted form is the only one"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${count} highlighted forms are the ones"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "yo"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "tú"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "él"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "nosotros"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "vosotros"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "ellos"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${name} conjugation in every Spanish tense: present, preterite, subjunctive and commands, with the irregular forms highlighted and a quiz."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${name} conjugation in every Spanish tense: a regular -${ending(verb)} verb, with present, preterite, future, subjunctive and commands, plus a quiz."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${PERSONS_SHORT[i]} ${form}"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": ", "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Presente de subjuntivo · que "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Present subjunctive · que "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Imperfecto de subjuntivo · si "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Imperfect subjunctive · si "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Present · "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Preterite · "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Imperfect · "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Future · "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Conditional · "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Present perfect · "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Command · "
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${name} Conjugation in Spanish: All Tenses and Forms | SpanishCue"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${name} conjugation"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Is ${verb} regular or irregular in Spanish?"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${name} is irregular: ${model}.${count ? ` ${count} of its simple-tense forms break the regular pattern.` : \"\"}"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": " ${count} of its simple-tense forms break the regular pattern."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${name} is regular: ${model}."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "What are the gerund and past participle of ${verb}?"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "The gerund is «${cj.gerund}» (estar ${cj.gerund}) and the past participle is «${cj.participle}» (haber ${cj.participle})."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "How do you conjugate ${verb} in the preterite?"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "${cap(list(t.indefinido))}."
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "What is the present subjunctive of ${verb}?"
+  },
+  {
+   "path": "app/conjugacion/verbos-en.ts",
+   "text": "Que ${list(t.subjPresente)}."
+  }
+ ]
+}

@@ -61,7 +61,7 @@ export const TENSE_GROUPS: { mood: string; intro: string; tenses: TenseInfo[] }[
 
 const SIMPLE: TenseKey[] = ["presente", "indefinido", "imperfecto", "futuro", "condicional", "subjPresente", "subjImperfecto", "imperativo"];
 
-function resolvedSpec(verb: string): { spec: VerbSpec; base?: string } {
+export function resolvedSpec(verb: string): { spec: VerbSpec; base?: string } {
   const spec = irregulares[verb] ?? {};
   if (spec.base) return { spec: { ...(irregulares[spec.base] ?? {}), ...spec, base: undefined }, base: spec.base };
   return { spec };
@@ -71,8 +71,8 @@ export function conjugateVerb(verb: string): Conjugation {
   return conjugate(verb, irregulares[verb] ?? {}, irregulares);
 }
 
-const ending = (verb: string) => verb.slice(-2).replace("í", "i") as "ar" | "er" | "ir";
-const MODEL_REGULAR = { ar: "hablar", er: "comer", ir: "vivir" } as const;
+export const ending = (verb: string) => verb.slice(-2).replace("í", "i") as "ar" | "er" | "ir";
+export const MODEL_REGULAR = { ar: "hablar", er: "comer", ir: "vivir" } as const;
 const CONJ_NUMBER = { ar: "primera", er: "segunda", ir: "tercera" } as const;
 
 /** Automatic spelling changes, read from the infinitive. */
@@ -91,7 +91,7 @@ export function spelling(verb: string): { key: string; text: string } | undefine
   return undefined;
 }
 
-const FULL_IRREGULAR = new Set(["ser", "ir", "estar", "haber", "dar", "ver", "saber", "caber", "oír", "reír", "errar"]);
+export const FULL_IRREGULAR = new Set(["ser", "ir", "estar", "haber", "dar", "ver", "saber", "caber", "oír", "reír", "errar"]);
 
 export type VerbModel = { key: string; label: string; example: string };
 
@@ -165,7 +165,7 @@ export function irregularCount(h: Highlight) {
   return SIMPLE.reduce((sum, key) => sum + h[key].filter(Boolean).length, 0);
 }
 
-const IMPERSONAL = new Set(["llover", "nevar", "lloviznar", "granizar", "diluviar", "tronar"]);
+export const IMPERSONAL = new Set(["llover", "nevar", "lloviznar", "granizar", "diluviar", "tronar"]);
 const join = (forms: string[]) => forms.filter(Boolean).join(", ");
 
 /** Teacher-facing notes, written from the verb's own forms. */
