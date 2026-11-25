@@ -117,6 +117,11 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - **B5 OPEN (gate):** §9.2 stays human-only. The 8 clips are unheard and there has been no STT run. The CPIO column of the LQG is still PENDING.
     - NB5 (stuck touch nitro, inherited from Feria and Hospital) and NB6 (a wrong comment) are fixed on the Taller branch only. Open notes: NB1–NB4, NB7 and NB8 (clip continuity, «el lunes», the circle 4→5 hand-off, answer-position and length cues, desktop draw calls, guessable fixed phrases).
     - **No delta review of `8a17cfa1` has been done yet.**
+  - **Found (VERIFIED, branch content at 03:35Z), not a board action:** a non-board session's branch `claude/escucha-3d-voces-nativas` (no PR yet) changes `scripts/generate-escucha-3d-audio.py` to `VERSION = 3`, with `ENGINE` set to `es-MX-DaliaNeural` / `es-MX-JorgeNeural`. Its comment cites the owner on 2026-11-25 ("the multilingual Emma/Florian sounded American"). The diff touches 5,268 files, and its `escucha-3d-audio.yml` run 45538091116 was in progress. If it merges:
+    - every clip regenerates, including the 8 Taller clips once #510 merges main;
+    - any listening or STT evidence on the current Taller clips becomes void;
+    - BOARD-DECISION-006 §2.1–2.3 (the Emma/Florian facts, and a checker that must reproduce the canonical voices) needs re-checking against the new voices.
+    The next 3D run should check its state before spending anything on the current Taller audio.
   - **Board:** Sofia (build plus fixes) and a fresh agent acting as Alejandro (G4), both subagents of the facilitator. Martin was not convened: his content was only transcribed, and the G4 changes did not need him. The executives exchanged no messages with each other; the facilitator relayed the G4 blockers to Sofia. No transcript was written because there were no inter-executive messages; the briefs and reports are summarised here.
   - **Next action (Fri 11-27, or the next 3D slot):**
     1. Apply B1 on #510, using the five `context` strings above, and record them and B5 in the LQG G4 section. Then add Sofia's CPIO column and fix the stale LQG line «G4 still reviews it». Run a G4 delta review of `8a17cfa1` plus B1. Re-run the full `npm test`.
