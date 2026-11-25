@@ -12,7 +12,7 @@
 // +z (south, the yard gate) and π looks to -z (north, the back wall).
 
 export const BOUNDS = { minX: -22, maxX: 22, minZ: -15, maxZ: 19 };
-export const SPAWN = { x: -4, z: 16, heading: Math.PI };
+export const SPAWN = { x: -4, z: 14, heading: Math.PI };
 export const SPOT_RADIUS = 1.15;
 /** The covered shed: roof over posts, back wall on the north bound. */
 export const SHED = { x0: -22, x1: 12.4, z0: -15, z1: 3, h: 4.2 };

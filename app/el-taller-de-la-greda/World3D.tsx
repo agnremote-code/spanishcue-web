@@ -15,7 +15,7 @@ import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
 import { useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from 'react';
 import { canUseKeys, followYaw, inputFrom, keyAction, stepPlayer, angleBetween, createFramePacer, skipHiddenMatrices, worldPixelRatio, exposeForQa } from '../noche-abierta/world3d.mjs';
 import { animateHero, createHero } from '../noche-abierta/hero3d';
-import { BOUNDS, SOLIDS, SPAWN, circleById, circleStep, framing, isClearGround, spotAt } from './layout.mjs';
+import { BOUNDS, CLOSING_SLOTS, SOLIDS, SPAWN, circleById, circleStep, framing, isClearGround, isFree, spotAt } from './layout.mjs';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
 import { buildWorkshop, type Workshop } from './taller3d';
@@ -305,11 +305,25 @@ export default function World3D(props: WorldProps) {
         const a = clock * (reduced ? 0.01 : 0.05);
         camera.position.set(Math.sin(a) * 10 + 4, 9 + Math.sin(clock * 0.2) * 0.6, 30 + Math.cos(a) * 4);
         camera.lookAt(-2, 1.5, -2);
+      } else if (circleId && p.closing && circleId === 'patio') {
+        // The chain round: a wide view of the yard with everyone in it.
+        const xs = Object.values(CLOSING_SLOTS);
+        const cx = xs.reduce((s, q) => s + q.x, player.x) / (xs.length + 1), cz = xs.reduce((s, q) => s + q.z, player.z) / (xs.length + 1);
+        const mid = temp.set(cx, 1.2, cz);
+        desired.set(cx - 7.5, 3.6, cz - 6.5);
+        if (camera.position.distanceTo(desired) > 14) { camera.position.copy(desired); look.copy(mid); }
+        camera.position.lerp(desired, 1 - Math.exp(-dt * 3));
+        look.lerp(mid, 1 - Math.exp(-dt * 4));
+        camera.lookAt(look);
       } else if (circleId) {
         const c = circleById(circleId)!;
         const mid = temp.set((player.x + c.npc.x) / 2, 1.35, (player.z + c.npc.z) / 2);
-        const side = Math.atan2(c.npc.x - player.x, c.npc.z - player.z) + Math.PI / 2;
         const dist = Math.max(2.8, Math.hypot(c.npc.x - player.x, c.npc.z - player.z) * 0.9 + 1.4);
+        // Side-on to the player and the speaker, on whichever side is open
+        // floor (a workshop has shelves and kilns close to every station).
+        const across = Math.atan2(c.npc.x - player.x, c.npc.z - player.z);
+        const side = [across + Math.PI / 2, across - Math.PI / 2, across + Math.PI * 0.75, across - Math.PI * 0.75]
+          .find(a => isFree(mid.x + Math.sin(a) * dist, mid.z + Math.cos(a) * dist, 0.6)) ?? across + Math.PI;
         desired.set(mid.x + Math.sin(side) * dist, 2.0, mid.z + Math.cos(side) * dist);
         if (camera.position.distanceTo(desired) > 12) { camera.position.copy(desired); look.copy(mid); }
         camera.position.lerp(desired, 1 - Math.exp(-dt * 3));

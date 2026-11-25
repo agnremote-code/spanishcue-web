@@ -182,7 +182,8 @@ export function buildWorkshop(scene: THREE.Scene, opts: { low: boolean; shadows:
   add(root, new THREE.BoxGeometry(0.5, 0.45, 0.5), std('#2e3a46', 0.8), 1.5, 0.45, 10.9);
   block(root, OFFICE_SHELF, 0, 1.6, wood, 0.03);
   for (const y of [0.5, 1.1]) block(root, OFFICE_SHELF, y - 0.03, y, darkWood);
-  for (const wall of OFFICE_WALLS) block(root, wall, 0, 2.2, plaster);
+  // Half-height partitions: the office stays open to the yard and the shed.
+  for (const wall of OFFICE_WALLS) block(root, wall, 0, 1.3, plaster);
 
   // 8. The yard: twelve crates on a pallet, the truck at the gate.
   const c = mid(CRATES);

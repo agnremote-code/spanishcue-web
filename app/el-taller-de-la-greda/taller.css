@@ -151,7 +151,7 @@
 .tg-map-stall { opacity: .85; }
 .tg-map-spot circle { fill: #fff; stroke: var(--red); stroke-width: .7; cursor: pointer; }
 .tg-map-done circle { fill: #9aa7b0; stroke: #6b7780; stroke-width: .5; cursor: pointer; }
-.tg-map text { font: 700 2.4px system-ui, sans-serif; fill: var(--ink); pointer-events: none; }
+.tg-map text { font: 700 1.9px system-ui, sans-serif; fill: var(--ink); stroke: none; pointer-events: none; }
 .tg-map-me { fill: var(--red); stroke: #fff; stroke-width: .3; }
 .tg-flatmap { margin-top: 1rem; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: #f3ece0; }
 

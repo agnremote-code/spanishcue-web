@@ -29,6 +29,7 @@ const hr = await import('../app/hr-crisis/oficina.mjs');
 const perdidos = await import('../app/objetos-perdidos/layout.mjs');
 const crucero = await import('../app/ultimo-crucero/layout.mjs');
 const estrellas = await import('../app/lluvia-de-estrellas/layout.mjs');
+const taller = await import('../app/el-taller-de-la-greda/layout.mjs');
 const bosque = await import('../app/bosque-de-los-hongos-gigantes/engine.mjs');
 const { pushOut } = await import('../app/escucha-3d/bump.mjs');
 
@@ -310,7 +311,20 @@ function estrellasWorld() {
     spots: [{ id: 'spawn', ...estrellas.SPAWN }, ...estrellas.SCENES.map(s => ({ id: s.id, ...s.spot })), ...estrellas.LANDMARKS.map(l => ({ id: `charla-${l.id}`, x: l.x, z: l.z }))],
   };
 }
-const WORLDS = [papelWorld(), cruceroWorld(), perdidosWorld(), estrellasWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), realityWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
+// El taller de la greda: the workshop, the dispatch yard and the office
+// corner: every person at home, at every circle they speak at and in the yard
+// for the closing round. The mascot is put at the spawn, every circle and
+// every arrival from the teacher list.
+function tallerWorld() {
+  const places = [null, ...taller.CIRCLE_IDS].flatMap(open => Object.entries(taller.standings(open, false)).map(([who, p]) => ({ id: `${who}@${open ?? 'casa'}`, x: p.x, z: p.z })));
+  const closing = Object.entries(taller.standings('patio', true)).map(([who, p]) => ({ id: `${who}@cierre`, x: p.x, z: p.z }));
+  return {
+    id: 'taller', solids: taller.SOLIDS, bounds: taller.BOUNDS, walkers: [], staticWalkers: true,
+    people: [...places, ...closing],
+    spots: [{ id: 'spawn', ...taller.SPAWN }, ...taller.CIRCLES.flatMap(c => [{ id: c.id, ...c.spot }, { id: `${c.id}-llegada`, ...taller.arrival(c.id) }])],
+  };
+}
+const WORLDS = [papelWorld(), cruceroWorld(), perdidosWorld(), estrellasWorld(), tallerWorld(), nocheStreet(), ...nocheRooms(), ...hospitalFloors(), ...vueloFloors(), ...consorcioFloors(), ...trenFloors(), bodaWorld(), realityWorld(), hrWorld(), ...casinoFloors(), feriaWorld(), ...madridZones(), madridCityWorld(), ...masAllaPlaces()];
 
 // ------------------------------------------------------------------ checks
 test('every world in the list has solids, people or walkers to check', () => {
