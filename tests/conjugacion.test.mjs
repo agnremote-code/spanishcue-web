@@ -81,6 +81,16 @@ test('the conjugation pages are in the sitemap and edge-cached',()=>{
  assert.ok(m.isEdgeCacheablePath('/conjugacion')&&m.isEdgeCacheablePath('/conjugacion/tener'));
 });
 
+test('English verb pages pair with the Spanish ones',async()=>{
+ const r3=await build({stdin:{contents:'export * from "./app/conjugacion/verbos-en.ts"; export {languageAlternates,isEdgeCacheablePath,isEnglishDefaultPath} from "./app/seo.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',logLevel:'error'});
+ const e=await import('data:text/javascript;base64,'+Buffer.from(r3.outputFiles[0].text).toString('base64'));
+ for(const v of m.verbos){const p=e.verbPageEn(v);assert.ok(p.title.length<=78,p.title);assert.ok(p.description.length>=110&&p.description.length<=165,`${v} ${p.description.length}`);assert.ok(p.notes.length>=1);assert.equal(p.exercise.length,12);assert.ok(!p.notes.some(n=>/undefined/.test(n)));}
+ assert.deepEqual(e.languageAlternates('/spanish-verbs/tener'),{es:'https://spanishcue.com/conjugacion/tener',en:'https://spanishcue.com/spanish-verbs/tener','x-default':'https://spanishcue.com/spanish-verbs/tener'});
+ assert.equal(e.languageAlternates('/conjugacion/irregulares'),undefined);
+ assert.ok(e.isEdgeCacheablePath('/spanish-verbs/tener')&&e.isEnglishDefaultPath('/spanish-verbs/tener'));
+ const urls=new Set(m.sitemap().map(x=>x.url));assert.ok(urls.has('https://spanishcue.com/spanish-verbs/tener')&&urls.has('https://spanishcue.com/spanish-verbs'));
+});
+
 test('irregular-verb pages per tense list the right verbs',async()=>{
  const r2=await build({stdin:{contents:'export * from "./app/conjugacion/tiempos.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',logLevel:'error'});
  const t=await import('data:text/javascript;base64,'+Buffer.from(r2.outputFiles[0].text).toString('base64'));

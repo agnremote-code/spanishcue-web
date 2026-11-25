@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { catalogLessons } from "../conversation-families/catalog";
 import { lessonCards, type LessonCardData } from "../growth/lessons";
-import { canonicalUrl } from "../seo";
+import { canonicalUrl, languageAlternates } from "../seo";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import { JsonLd } from "../growth/components";
 import { elePreviewLesson, formatDateEs, pageImage } from "./media";
@@ -25,7 +25,7 @@ export function eleMetadata(path: string, title: string, description: string, im
   return {
     title,
     description,
-    alternates: { canonical: canonicalUrl(path) },
+    alternates: { canonical: canonicalUrl(path), ...(languageAlternates(path) ? { languages: languageAlternates(path) } : {}) },
     robots: { index: true, follow: true },
     openGraph: { title, description, url: canonicalUrl(path), type: "website", locale: "es_ES", images: [ogImage] },
     twitter: { card: "summary_large_image", title, description, images: [image ? canonicalUrl(image) : socialPreviewUrl] },

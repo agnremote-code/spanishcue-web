@@ -42,3 +42,14 @@ test('exercise and verb pages carry the inline newsletter form and the popular-l
   assert.ok(d.querySelector('nav[aria-label="Material ELE más usado"] a[href="/material-ele/formatos/comprension-auditiva/a1"]'),path);
  }
 });
+for(const [path,h1] of [['/spanish-verbs','Spanish verb conjugation'],['/spanish-verbs/tener','Tener conjugation'],['/spanish-verbs/so%C3%B1ar','Soñar conjugation']])test(`English verb page: ${path}`,async()=>{
+ const response=await fetch(origin+path);assert.equal(response.status,200);assert.ok(!response.headers.has('set-cookie'));
+ const d=new JSDOM(await response.text()).window.document;
+ assert.equal(d.querySelector('h1').textContent,h1);
+ assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+path);
+ assert.equal(d.querySelector('link[rel="alternate"][hreflang="es"]').href,'https://spanishcue.com'+path.replace('/spanish-verbs','/conjugacion'));
+});
+test('Spanish verb page points to its English twin',async()=>{
+ const d=new JSDOM(await (await fetch(origin+'/conjugacion/tener')).text()).window.document;
+ assert.equal(d.querySelector('link[rel="alternate"][hreflang="en"]').href,'https://spanishcue.com/spanish-verbs/tener');
+});

@@ -45,13 +45,21 @@ export const languagePairs: ReadonlyArray<{ es: string; en: string }> = [
 export function languageAlternates(pathname: string): Record<string, string> | undefined {
   const path = normalizePathname(pathname);
   // Every lesson resource page exists in both languages (/recursos ↔ /resources).
-  const pair = languagePairs.find((item) => item.es === path || item.en === path) ?? resourceLanguagePair(path);
+  const pair = languagePairs.find((item) => item.es === path || item.en === path) ?? resourceLanguagePair(path) ?? verbLanguagePair(path);
   if (!pair) return undefined;
   return {
     es: canonicalUrl(pair.es),
     en: canonicalUrl(pair.en),
     "x-default": canonicalUrl(pair.en),
   };
+}
+
+/** Verb conjugation pages exist in both languages (/conjugacion/tener ↔ /spanish-verbs/tener). */
+function verbLanguagePair(path: string): { es: string; en: string } | undefined {
+  if (path === "/conjugacion" || path === "/spanish-verbs") return { es: "/conjugacion", en: "/spanish-verbs" };
+  const match = /^\/(?:conjugacion|spanish-verbs)\/([^/]+)$/.exec(path);
+  if (!match || match[1] === "irregulares") return undefined;
+  return { es: `/conjugacion/${match[1]}`, en: `/spanish-verbs/${match[1]}` };
 }
 
 /** Paths whose default UI language is English when no explicit choice exists. */
@@ -133,6 +141,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path === "/clases-de-espanol-listas-para-dar" ||
     path === "/material-ele" ||
     path === "/conjugacion" ||
+    path === "/spanish-verbs" ||
+    path.startsWith("/spanish-verbs/") ||
     path.startsWith("/conjugacion/") ||
     path.startsWith("/material-ele/") ||
     // Crawler endpoints: identical for every visitor and fetched constantly by
