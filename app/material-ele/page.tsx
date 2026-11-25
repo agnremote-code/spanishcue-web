@@ -136,6 +136,7 @@ export default function MaterialElePage() {
             <Link href="/clases-de-espanol-listas-para-dar">Clases de español listas para dar: plataformas</Link>
             <Link href="/alternativa-a-profedeele">Alternativa a ProfeDeELE: comparación</Link>
             <Link href="/autoestudio">Autoestudio para tus alumnos</Link>
+            <Link href="/conjugacion">Conjugación de más de 1.200 verbos</Link>
             <Link href="/sistema-verbal">Sistema verbal del español</Link>
             <Link href="/para-profesores">SpanishCue para profesores</Link>
             <Link href="/academias">Para academias</Link>
