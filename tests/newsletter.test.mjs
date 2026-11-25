@@ -165,8 +165,10 @@ test('a new free account joins the profes sequence once, respecting past unsubsc
   assert.equal(sent.headers['List-Unsubscribe-Post'], 'List-Unsubscribe=One-Click');
   assert.equal(sent.headers['List-Unsubscribe'], `<https://spanishcue.test/api/newsletter/baja?t=${row.unsubscribe_token}>`);
   assert.match(sent.text, /\/gramatica\/indefinido-e-imperfecto/);
-  assert.match(sent.text, /US\$19,90\/mes/);
-  assert.match(sent.text, /US\$150\/año/);
+  // One offer only: the one the site shows at send time.
+  const offer = mod.accountOffer();
+  assert.ok(sent.text.includes(offer.cta) && sent.text.includes(offer.detail));
+  assert.doesNotMatch(sent.text, /US\$150/);
   // The account mail does not claim a browser-unlocked gift class.
   assert.doesNotMatch(sent.text, /desbloqueada en este navegador/);
   const event = calls.find(c => c.url === 'https://api.resend.com/events/send');
@@ -222,4 +224,19 @@ test('backfill: accounts since 5-nov get the first mail once; owner, paying and 
   const status = await mod.backfillStatus(new Request('https://spanishcue.test/api/admin/newsletter/cuentas', { headers: owner }));
   assert.deepEqual(await status.json(), { remaining: 0 });
   assert.equal(sqlite.prepare("SELECT status FROM newsletter_subscribers WHERE normalized_email='ya@example.test'").get().status, 'unsubscribed');
+});
+
+test('account welcome carries a single offer: US$0,99 week until 30-nov, then 10 % first month', async () => {
+  const { mod } = await setup();
+  const beforeEnd = Date.UTC(2026, 10, 30, 23, 0) / 1000;
+  const afterEnd = Date.UTC(2026, 11, 2) / 1000;
+  const week = mod.accountWelcomeEmail('https://spanishcue.test', 'a'.repeat(48), beforeEnd);
+  assert.match(week.text, /Primera semana por US\$0,99/);
+  assert.match(week.text, /Hasta el 30 de noviembre\. Después, US\$19,90\/mes/);
+  assert.doesNotMatch(week.text, /10 %|17,91/);
+  const discount = mod.accountWelcomeEmail('https://spanishcue.test', 'a'.repeat(48), afterEnd);
+  assert.match(discount.text, /10 % de descuento en tu primer mes/);
+  assert.match(discount.text, /US\$17,91 el primer mes con tarjeta\. Después, US\$19,90\/mes/);
+  assert.doesNotMatch(discount.text, /0,99/);
+  for (const mail of [week, discount]) assert.match(mail.html, /Darme de baja/);
 });

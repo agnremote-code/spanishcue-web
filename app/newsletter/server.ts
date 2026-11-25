@@ -1,3 +1,4 @@
+import { DISCOUNT_10_CENTS, DISCOUNT_10_PERCENT, DISCOUNT_10_THEN_CENTS, PROMO_WEEK_CENTS, PROMO_WEEK_THEN_CENTS, PROMO_WEEK_UNTIL, promoWeekActive } from '../promo-config';
 import { GIFT_AUDIO_PATH, GIFT_LESSON_ID, GIFT_LESSON_LEVEL, GIFT_LESSON_PATH, GIFT_LESSON_PITCH, GIFT_LESSON_TITLE } from './gift';
 
 // Imported only by route handlers and the Worker. Never import from a client component.
@@ -159,11 +160,26 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
   return { subject, text, html, leave };
 }
 
-export function accountWelcomeEmail(origin: string, unsubscribeToken: string) {
+/**
+ * One offer per mail, the one the site shows a signed-in FREE teacher at send time:
+ * the US$0.99 first week while it runs (until 30-nov), then the 10% first month by card.
+ */
+export function accountOffer(nowSeconds = Math.floor(Date.now() / 1000)) {
+  if (promoWeekActive(nowSeconds)) {
+    return { cta: `Primera semana por US$${usd(PROMO_WEEK_CENTS)}`, detail: `Hasta el ${PROMO_WEEK_UNTIL.es}. Después, US$${usd(PROMO_WEEK_THEN_CENTS)}/mes hasta que lo canceles.`, campaign: 'cuenta_d0_semana' };
+  }
+  return { cta: `${DISCOUNT_10_PERCENT} % de descuento en tu primer mes`, detail: `US$${usd(DISCOUNT_10_CENTS)} el primer mes con tarjeta. Después, US$${usd(DISCOUNT_10_THEN_CENTS)}/mes hasta que lo canceles.`, campaign: 'cuenta_d0_descuento10' };
+}
+function usd(amountCents: number) {
+  return (amountCents / 100).toFixed(2).split('.').join(',');
+}
+
+export function accountWelcomeEmail(origin: string, unsubscribeToken: string, nowSeconds = Math.floor(Date.now() / 1000)) {
+  const offer = accountOffer(nowSeconds);
   const free = `${origin}${ACCOUNT_FREE_CLASS_PATH}?utm_source=email&utm_medium=email&utm_campaign=cuenta_d0`;
   const library = `${origin}/?utm_source=email&utm_medium=email&utm_campaign=cuenta_d0`;
   const leave = `${origin}/api/newsletter/baja?t=${unsubscribeToken}`;
-  const pricing = `${origin}/pricing?utm_source=email&utm_medium=email&utm_campaign=cuenta_d0`;
+  const pricing = `${origin}/pricing?utm_source=email&utm_medium=email&utm_campaign=${offer.campaign}`;
   const subject = 'Tu cuenta de SpanishCue: por dónde empezar';
   const text = [
     '¡Hola!',
@@ -176,7 +192,8 @@ export function accountWelcomeEmail(origin: string, unsubscribeToken: string) {
     '',
     'En los próximos días te voy a escribir algunas veces con otras clases gratis e ideas para tus clases de ELE.',
     '',
-    `${PRICING_CTA} (o US$150/año): ${pricing}`,
+    `${offer.cta}: ${pricing}`,
+    offer.detail,
     '',
     'Ale',
     'SpanishCue',
@@ -193,8 +210,8 @@ export function accountWelcomeEmail(origin: string, unsubscribeToken: string) {
 <p style="margin:0 0 22px"><a href="${escapeHtml(free)}" style="display:inline-block;background:#2457c5;color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">Abrir la clase gratis</a></p>
 <p style="font-size:15px;line-height:1.6;margin:0 0 14px"><a href="${escapeHtml(library)}" style="color:#2457c5">Ver la biblioteca</a></p>
 <p style="font-size:15px;line-height:1.6;margin:0">En los próximos días te voy a escribir algunas veces con otras clases gratis e ideas para tus clases de ELE.</p>
-<p style="margin:22px 0 0"><a href="${escapeHtml(pricing)}" style="display:inline-block;background:#f6c343;color:#06152f;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">${PRICING_CTA}</a></p>
-<p style="font-size:13px;line-height:1.6;margin:8px 0 0;color:#4a5875">o US$150/año</p>
+<p style="margin:22px 0 0"><a href="${escapeHtml(pricing)}" style="display:inline-block;background:#f6c343;color:#06152f;text-decoration:none;padding:13px 22px;border-radius:10px;font-size:15px;font-weight:bold">${escapeHtml(offer.cta)}</a></p>
+<p style="font-size:13px;line-height:1.6;margin:8px 0 0;color:#4a5875">${escapeHtml(offer.detail)}</p>
 <p style="font-size:15px;line-height:1.6;margin:18px 0 0">Ale<br>SpanishCue</p>
 </div>
 <p style="font-size:12px;color:#7a869e;margin:18px 0 0;text-align:center"><a href="${escapeHtml(leave)}" style="color:#7a869e">Darme de baja</a></p>
