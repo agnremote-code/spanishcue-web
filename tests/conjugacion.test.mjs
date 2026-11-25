@@ -89,6 +89,8 @@ test('English verb pages pair with the Spanish ones',async()=>{
  assert.equal(e.languageAlternates('/conjugacion/irregulares'),undefined);
  assert.ok(e.isEdgeCacheablePath('/spanish-verbs/tener')&&e.isEnglishDefaultPath('/spanish-verbs/tener'));
  const urls=new Set(m.sitemap().map(x=>x.url));assert.ok(urls.has('https://spanishcue.com/spanish-verbs/tener')&&urls.has('https://spanishcue.com/spanish-verbs'));
+});
+
 test('irregular-verb pages per tense list the right verbs',async()=>{
  const r2=await build({stdin:{contents:'export * from "./app/conjugacion/tiempos.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',logLevel:'error'});
  const t=await import('data:text/javascript;base64,'+Buffer.from(r2.outputFiles[0].text).toString('base64'));
