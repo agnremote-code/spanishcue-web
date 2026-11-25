@@ -44,8 +44,11 @@
 ## G4 · independent review: **PENDING**
 - Reviewer: Alejandro or a fresh agent, from the checklist and the diff only. The author does not review this unit.
 
-## G5 · rendered verification: **NOT APPLICABLE YET**
-- No world is built. This belongs to Sofia's build PR: SwiftShader smoke, the 2D fallback, longest card at 390 px, one real-device check.
+## G5 · rendered verification: **PARTIAL (Sofia, build 2026-11-25)**
+- Built as `app/el-taller-de-la-greda` (catalog lesson 285, PRO, B1). Builder's evidence only; G4 still reviews it.
+- SwiftShader smoke (headless Chromium, isolated esbuild bundle of the real `TallerGame`, DPR 1): title, walking, the teacher list, circle 3 (wrong then right contrast with its feedback), the relay to circle 4, the listening card at circle 8 (pre-generated `taller-b1-patio.mp3`), the closing round in the yard with all five on-stage characters, «Terminar»: no page errors, no missing files.
+- 2D fallback (reduced motion): the list and the map open with no WebGL. 390 × 844: the circle 7 card fits, no horizontal scroll.
+- Not done: one real-device check; the catalog cover (image-model key art, not a screenshot) is still to make.
 
 ## G6 · level honesty (author: PASS, by judgement)
 - One level only, B1. Catalogue `levels` must list `['B1']` only (as registered).

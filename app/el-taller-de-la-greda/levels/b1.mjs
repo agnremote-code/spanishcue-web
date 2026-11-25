@@ -600,7 +600,8 @@ export const CIRCLES = {
     talk: [
       '¿Escribes correos formales en tu trabajo o en tus estudios? ¿Cómo los empiezas?',
       '¿Te han cambiado alguna vez una fecha importante? ¿Qué pasó?',
-      '¿En tu país es normal pagar un anticipo? ¿Cuándo?',
+      // Reworded from Martin's question 3 (an advance payment in your country): the listening of this circle asks the same open question (platform near-duplicate audit).
+      'Cuando encargas algo hecho a medida, ¿pagas una parte antes? ¿Te parece justo?',
       '¿Qué es más claro para ti: un audio o un correo?',
       '¿Cómo cuentas por escrito una reunión a alguien que no estuvo?',
     ],
