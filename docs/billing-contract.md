@@ -21,6 +21,14 @@ Source of truth: `app/promo-config.ts`. New teachers pay USD 0.99 for the first 
 - **Disclosure and reminder.** Every promo button sits next to the sentence stating the automatic USD 19.90 monthly renewal after the first week and that it can be cancelled anytime (short App Store style notice since 2026-11-18; no end date in the copy). When the paid week is recorded, `server/promo-reminder.ts` schedules one Resend mail two days before the first full charge (idempotent per subscription, best effort).
 - **Launch check.** `GET /api/billing/promo-status` reports, without secrets, whether Paddle accepts the promo price (a preview that creates nothing) and which PayPal plan carries the promo. The production smoke prints it as a notice.
 
+## 10% off the first month (owner order, 2026-11-24)
+
+Source of truth: `DISCOUNT_10_*` in `app/promo-config.ts`. A signed-in teacher without PRO pays USD 17.91 (10% off) for the first month by card, then the same subscription renews at the regular USD 19.90 every month until cancelled. No catalog price, PayPal plan or existing subscription changes.
+
+- **Where.** A dismissible card in the library for signed-in FREE accounts (`app/DiscountOfferCard.tsx`) links to `/acceso?oferta=descuento10`, where the checkout shows the 10% button in place of the promo week. The card stays hidden while the USD 0.99 promo week is open to that teacher (`discount10Visible`), so the two offers never show together.
+- **Account required.** `offer: "discount10"` on `/api/billing/paddle/checkout` is refused without a signed-in account (`discount_account_required`) and, like every offer, for PRO accounts. It does not stack with the referral discount.
+- **Paddle only.** The transaction carries one non-catalog price of the PRO product (`paddleDiscount10Price`): USD 19.90 monthly with a one-month paid trial at USD 17.91, payment method required, tax included. `paddleOffer` accepts it only with exactly those terms and never on a catalog price ID. The USD 17.91 charge is recorded as a paid trial (28 to 31 days of access, no Founder slot); the first USD 19.90 is `first_subscription_paid`. There is no PayPal version.
+
 ## Trust and access boundary
 
 The Worker verifies Firebase, resolves the stable internal `users.id`, and replaces all browser-supplied `x-chespanish-*` headers. Page, API, JavaScript and premium media authorization consumes only those server-created headers and persisted `access_grants`. Owner access remains a separate role and is never inferred from an authenticated teacher.

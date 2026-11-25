@@ -1,0 +1,2273 @@
+{
+ "game": "perdidos",
+ "level": "C2",
+ "items": [
+  {
+   "id": "dentadura",
+   "title": "Ensayo de discurso con dientes prestados",
+   "place": "El mostrador",
+   "context": "De madrugada, Don Evaristo ensaya ante Celestino el discurso que dará a las nueve ante la banda municipal.",
+   "speakers": [
+    {
+     "name": "Evaristo",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Queridos músicos, autoridades, vecinos que todavía no se han ido a dormir: cincuenta años llevo desfilando delante de esta banda con el estandarte en alto. No he tocado una sola nota en mi vida, y aun así me atrevo a decir que nadie ha escuchado esta banda con más atención que yo."
+    },
+    {
+     "s": 1,
+     "text": "Muy bien. Solemne, pero sin pasarse. ¿Va a mencionar lo de anoche?"
+    },
+    {
+     "s": 0,
+     "text": "Esa es la cuestión. Mi nieta dice que lo omita, que un discurso no es lugar para confesar que uno escupió la dentadura dentro de una tuba. Pero yo creo que callarlo sería hacer trampa. Escuche: «Anoche, por primera vez, formé parte de la música. Literalmente. Una parte de mí viajó dentro del instrumento más humilde de la banda, y dicen que nunca sonó mejor»."
+    },
+    {
+     "s": 1,
+     "text": "Eso arranca carcajadas seguro. Y quizá alguna lágrima."
+    },
+    {
+     "s": 0,
+     "text": "Esa es la idea. A mi edad, uno aprende que la dignidad no consiste en que no te pase nada ridículo, sino en saber contarlo antes de que lo cuenten otros. Mi Carmela lo decía de otra manera: «Evaristo, quien se ríe primero, se ríe tranquilo»."
+    },
+    {
+     "s": 1,
+     "text": "¿Y el muchacho de la tuba? Ha preguntado por usted tres veces."
+    },
+    {
+     "s": 0,
+     "text": "Al muchacho le voy a dedicar el final. Porque el mérito fue suyo: mi dentadura solo puso la anécdota. Él puso doce años de ensayos en los que nadie lo miraba. Esas cosas, en un discurso, hay que decirlas despacio. Y con todos los dientes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué recurso retórico emplea Evaristo al decir que nadie ha escuchado la banda «con más atención»?",
+     "infer": true,
+     "options": [
+      "Una paradoja",
+      "Una exageración burlona sobre los músicos",
+      "Una comparación con su difunta mujer"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué decide no omitir el incidente?",
+     "infer": true,
+     "options": [
+      "Lo considera una cuestión de honestidad",
+      "Quiere vengarse de su nieta por el consejo",
+      "El alcalde le ha pedido que lo cuente"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué concepción de la dignidad defiende Evaristo?",
+     "options": [
+      "Evitar a toda costa las situaciones absurdas",
+      "Mantener las apariencias delante de las autoridades",
+      "Adelantarse a contar lo ridículo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué intención tiene la última frase, «con todos los dientes»?",
+     "infer": true,
+     "options": [
+      "Insinuar que la dentadura todavía está mal colocada",
+      "Cerrar con humor una idea seria",
+      "Quejarse de que su nieta no lo apoya"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué anécdota embarazosa contarías en público para restarle importancia, y en qué contexto lo harías?",
+     "model": "La de mi primer día de trabajo, cuando entré en la reunión equivocada; la contaría en una despedida."
+    },
+    {
+     "q": "¿Coincides con la idea de que la dignidad consiste en contar lo ridículo antes que los demás? Matiza tu respuesta.",
+     "model": "En parte; funciona entre amigos, pero hay contextos en los que exponerse así resulta imprudente."
+    },
+    {
+     "q": "¿Qué papel invisible pero imprescindible has desempeñado tú o alguien cercano en un grupo, y cómo se le podría reconocer?",
+     "model": "Mi hermana coordina la logística familiar; un brindis en Navidad sería un buen reconocimiento."
+    }
+   ],
+   "gaps": "la dignidad no consiste en que no te pase nada [ridículo], sino en saber [contarlo] antes de que lo [cuenten] [otros].",
+   "glossary": [
+    {
+     "word": "estandarte",
+     "meaning": "bandera de una agrupación"
+    },
+    {
+     "word": "solemne",
+     "meaning": "serio y formal"
+    },
+    {
+     "word": "omita",
+     "meaning": "deje fuera, no diga"
+    },
+    {
+     "word": "carcajadas",
+     "meaning": "risas fuertes"
+    }
+   ]
+  },
+  {
+   "id": "paraguas",
+   "title": "Reclamación formal de un paraguas ajeno",
+   "place": "Las estanterías de paraguas",
+   "context": "Rocío insiste en rellenar un impreso oficial de entrega y lo redacta en voz alta mientras Celestino la corrige.",
+   "speakers": [
+    {
+     "name": "Rocío",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«La abajo firmante declara haber recibido en préstamo, en la parada de la avenida del Puerto, un paraguas negro, sin daños aparentes, provisto de etiqueta con instrucciones de contacto». ¿Va bien así?"
+    },
+    {
+     "s": 1,
+     "text": "Va perfectamente, si lo que quiere es que el señor Teo lo lea como una citación judicial."
+    },
+    {
+     "s": 0,
+     "text": "Es que necesito distancia. Si lo escribo con mis palabras, se me nota todo. Y lo que se me nota es bochornoso: que llevo cuatro horas dando vueltas a una conversación de treinta segundos bajo una marquesina."
+    },
+    {
+     "s": 1,
+     "text": "Entiendo. El formulario como escudo. Lo he visto muchas veces. La gente redacta con un lenguaje de notario precisamente lo que más le tiembla por dentro."
+    },
+    {
+     "s": 0,
+     "text": "Pues sigo. «Asimismo, la declarante hace constar que el prestador se retiró precipitadamente sin facilitar ocasión de agradecimiento, circunstancia que la firmante considera, como mínimo, irregular»."
+    },
+    {
+     "s": 1,
+     "text": "«Irregular». Precioso. ¿Quiere añadir en el apartado de observaciones que el prestador tiene unos ojos irregularmente bonitos?"
+    },
+    {
+     "s": 0,
+     "text": "¡Celestino! Bueno… a lo mejor sí. Ponga en observaciones: «La firmante solicita que la devolución se realice en persona, a ser posible con café, y sin etiquetas de por medio»."
+    },
+    {
+     "s": 1,
+     "text": "Eso ya no es un impreso. Eso es una cita con sello municipal. Lo tramito ahora mismo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué efecto busca Rocío al usar un lenguaje administrativo?",
+     "infer": true,
+     "options": [
+      "Impresionar a Celestino con su formación jurídica",
+      "Ocultar la emoción que siente",
+      "Cumplir con una exigencia legal de la oficina"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué ironía encierra la palabra «irregular» en boca de Rocío?",
+     "infer": true,
+     "options": [
+      "Revela que Teo ha cometido un delito real",
+      "Muestra que Rocío desconoce su significado",
+      "Disfraza un reproche afectivo de tecnicismo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué observación general hace Celestino sobre los formularios?",
+     "options": [
+      "Que nadie los rellena correctamente a la primera",
+      "Que suelen esconder lo que más inquieta",
+      "Que son innecesarios en una oficina moderna"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo valora Celestino el último añadido de Rocío?",
+     "infer": true,
+     "options": [
+      "Como un error administrativo que debe corregir",
+      "Como una broma que no piensa tramitar",
+      "Como una invitación disfrazada"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué situaciones recurres a un registro formal para protegerte emocionalmente?",
+     "model": "Cuando escribo a alguien que me intimida; el usted y las fórmulas me dan una armadura."
+    },
+    {
+     "q": "¿Qué riesgos tiene expresar sentimientos a través de la ironía en lugar de decirlos directamente?",
+     "model": "Que el otro no capte la intención y se quede con el sarcasmo, no con el afecto."
+    },
+    {
+     "q": "¿Qué trámite burocrático te ha parecido absurdo y cómo lo describirías con humor?",
+     "model": "Pedir una cita para poder pedir otra cita; parece un laberinto diseñado por un poeta aburrido."
+    }
+   ],
+   "gaps": "La gente redacta con un [lenguaje] de [notario] precisamente lo que más le [tiembla] por [dentro].",
+   "glossary": [
+    {
+     "word": "citación judicial",
+     "meaning": "aviso oficial para presentarse ante un juez"
+    },
+    {
+     "word": "bochornoso",
+     "meaning": "que da mucha vergüenza"
+    },
+    {
+     "word": "marquesina",
+     "meaning": "techo de una parada de autobús"
+    },
+    {
+     "word": "tramito",
+     "meaning": "hago los pasos oficiales de un asunto"
+    }
+   ]
+  },
+  {
+   "id": "llaves",
+   "title": "Lección magistral de cerrajería",
+   "place": "El pasillo de las llaves",
+   "context": "Mientras esperan el amanecer en el pasillo de las llaves, Wilson filosofa sobre su oficio y Yuri lo interrumpe.",
+   "speakers": [
+    {
+     "name": "Wilson",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Yuri",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Veinte años de oficio me han enseñado una cosa: una cerradura no protege nada. Lo que protege es la paciencia que exige abrirla. Toda puerta es, en el fondo, una negociación entre el que tiene prisa y el que tiene tiempo."
+    },
+    {
+     "s": 1,
+     "text": "Eso suena muy bonito, pero yo cobro por vigilar puertas. Si me dices que no sirven, me quedo sin trabajo."
+    },
+    {
+     "s": 0,
+     "text": "Al contrario. Tú eres la parte de la cerradura que piensa. Mira este llavero: tres mil llaves en este pasillo, y cada una abrió alguna vez algo que a alguien le importaba. Un piso alquilado, un buzón con cartas de amor, un cajón con secretos. Las llaves perdidas son biografías incompletas."
+    },
+    {
+     "s": 1,
+     "text": "Ya está el poeta. Anoche te encontré con dos horquillas delante del almacén. Si no te conociera, te habría detenido."
+    },
+    {
+     "s": 0,
+     "text": "Estaba comprobando que no había perdido la mano, y de paso te hice un favor: esa cerradura se abre en tres segundos. Cámbiala antes de que otro menos sentimental que yo se dé cuenta."
+    },
+    {
+     "s": 1,
+     "text": "Lo apunto. ¿Y tu taller? ¿Ya tiene nombre?"
+    },
+    {
+     "s": 0,
+     "text": "Se llamará «Paciencia». Mi padre siempre decía que un buen cerrajero no fuerza nada: escucha. Las cerraduras, como las personas, terminan contándote cómo se abren si les das el tiempo suficiente."
+    },
+    {
+     "s": 1,
+     "text": "Pues aplícate el cuento con la jefa, que llega a las siete y no tiene ninguna paciencia."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tesis defiende Wilson al principio?",
+     "infer": true,
+     "options": [
+      "Que las cerraduras modernas son inútiles frente a los ladrones",
+      "Que los vigilantes son más importantes que las puertas",
+      "Que la seguridad depende del tiempo, no del mecanismo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué sentido tiene la expresión «biografías incompletas»?",
+     "infer": true,
+     "options": [
+      "Cada llave guarda parte de una historia ajena",
+      "Las llaves suelen llevar el nombre de su dueño",
+      "Los registros del pasillo están mal organizados"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo responde Yuri al tono reflexivo de Wilson?",
+     "options": [
+      "Con admiración y con ganas de aprender el oficio",
+      "Con un escepticismo algo burlón",
+      "Con miedo de que Wilson le quite el puesto"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué paralelismo establece la frase final de Wilson?",
+     "infer": true,
+     "options": [
+      "Entre su padre y la jefa de la oficina",
+      "Entre el taller nuevo y el almacén viejo",
+      "Entre abrir cerraduras y comprender a la gente"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué enseñanza de tu oficio o de tus estudios podría aplicarse a las relaciones humanas?",
+     "model": "De la enfermería: observar antes de intervenir sirve tanto con pacientes como con amigos."
+    },
+    {
+     "q": "¿Cómo interpretas la idea de que «las cosas perdidas son biografías incompletas»?",
+     "model": "Que cada objeto olvidado es un fragmento de una vida que no conocemos entera."
+    },
+    {
+     "q": "¿Qué nombre pondrías a un negocio propio para expresar una filosofía de vida?",
+     "model": "«Sin prisa», porque me gustaría trabajar respetando los ritmos de cada cliente."
+    }
+   ],
+   "gaps": "Toda puerta es, en el [fondo], una [negociación] entre el que tiene [prisa] y el que tiene [tiempo].",
+   "glossary": [
+    {
+     "word": "oficio",
+     "meaning": "profesión manual"
+    },
+    {
+     "word": "horquillas",
+     "meaning": "alambres para sujetar el pelo"
+    },
+    {
+     "word": "fuerza",
+     "meaning": "abre con violencia"
+    },
+    {
+     "word": "aplícate el cuento",
+     "meaning": "haz tú lo que dices a otros"
+    }
+   ]
+  },
+  {
+   "id": "telefono",
+   "title": "Carta de voz para un nieto",
+   "place": "La estantería de los teléfonos",
+   "context": "Antes de irse, Herminia graba en su teléfono recuperado un mensaje largo para su nieto Iker.",
+   "speakers": [
+    {
+     "name": "Herminia",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Iker, cariño, soy la abuela. No me cuelgues, que esto no es una llamada: es una carta, pero hablada, porque a mi edad la letra ya no me obedece. Esta noche me han devuelto el teléfono en la oficina de objetos perdidos. El señor que lo encontró dice que no paraba de sonar. Eras tú. Una docena de veces, por lo menos."
+    },
+    {
+     "s": 0,
+     "text": "Cuando murió tu abuelo y no viniste al entierro, pensé, y te lo confieso con vergüenza, que eras un chico frío, de esos que viven dentro de una pantalla. Me equivoqué de una manera que solo a los viejos se nos permite: con seguridad absoluta. Resulta que tú no sabías estar en un cementerio, pero has sabido estar en mi mesilla toda la noche, insistiendo para que alguien encontrara la voz de tu abuelo."
+    },
+    {
+     "s": 0,
+     "text": "Ese mensaje, «compra pan, que ya voy», lo escucho todas las noches. Tus tías dicen que es morboso. Yo digo que es lo más parecido a una oración que conozco. Julio nunca fue hombre de grandes frases. Me quiso a base de recados."
+    },
+    {
+     "s": 0,
+     "text": "Así que te dejo esto grabado, por si un día lo necesitas tú. Para que tengas una voz mía que no sea para regañarte. Te quiero, aunque no lo diga. Y, de paso, compra pan, que ya voy."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué Herminia define su mensaje como «una carta, pero hablada»?",
+     "infer": true,
+     "options": [
+      "Para dar solemnidad a lo que va a decir",
+      "Porque no sabe enviar mensajes escritos",
+      "Porque su nieto prefiere las llamadas largas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué autocrítica hace Herminia sobre su juicio anterior?",
+     "options": [
+      "Que juzgó con demasiada seguridad",
+      "Que nunca quiso a su nieto lo suficiente",
+      "Que culpó a Julio de la ausencia de Iker"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué significa «me quiso a base de recados»?",
+     "infer": true,
+     "options": [
+      "Que le encargaba demasiadas tareas a su mujer",
+      "Que expresaba su amor con gestos cotidianos",
+      "Que era un hombre desordenado y olvidadizo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué efecto tiene repetir al final «compra pan, que ya voy»?",
+     "infer": true,
+     "options": [
+      "Muestra que Herminia ha perdido la memoria",
+      "Convierte la frase en un legado familiar",
+      "Indica que necesita pan para el desayuno"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué opinas de la afirmación de que el amor se demuestra más con recados que con grandes frases?",
+     "model": "Estoy de acuerdo en parte, aunque a veces una frase explícita evita malentendidos muy dolorosos."
+    },
+    {
+     "q": "¿Qué prejuicio generacional has tenido que revisar a partir de una experiencia concreta?",
+     "model": "Creía que mis padres no entendían la tecnología, hasta que mi madre me enseñó a editar vídeos."
+    },
+    {
+     "q": "Si grabaras hoy un mensaje para alguien que lo escuchará dentro de veinte años, ¿qué incluirías?",
+     "model": "Algo cotidiano, como el ruido de casa un domingo, más que consejos solemnes."
+    }
+   ],
+   "gaps": "Resulta que tú no sabías estar en un [cementerio], pero has sabido estar en mi [mesilla] toda la noche, [insistiendo] para que alguien encontrara la [voz] de tu abuelo.",
+   "glossary": [
+    {
+     "word": "mesilla",
+     "meaning": "mueble pequeño junto a la cama"
+    },
+    {
+     "word": "morboso",
+     "meaning": "que atrae por lo triste o desagradable"
+    },
+    {
+     "word": "oración",
+     "meaning": "rezo"
+    },
+    {
+     "word": "recados",
+     "meaning": "pequeños encargos"
+    }
+   ]
+  },
+  {
+   "id": "bonsai",
+   "title": "Elogio fúnebre de un árbol que nunca vivió",
+   "place": "La cámara fría",
+   "context": "Gaspar, ya repuesto del susto, improvisa en la cámara fría un elogio solemne para su bonsái de plástico.",
+   "speakers": [
+    {
+     "name": "Gaspar",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Nos hemos reunido aquí, en esta cámara frigorífica municipal, para despedir a un ser excepcional. Tenía, según su certificado verbal, sesenta años. Según el mercadillo donde fue adquirido, tres euros. Según yo, veinte años de compañía ininterrumpida."
+    },
+    {
+     "s": 1,
+     "text": "Muy emotivo. Aunque técnicamente no se ha muerto."
+    },
+    {
+     "s": 0,
+     "text": "Precisamente por eso lo despido. Despido la versión del árbol que me contaba a mí mismo. Durante veinte años lo regué, lo podé, lo trasladé al sol como quien saca a pasear a un abuelo. Y él, estoico, aguantó cada litro sin pudrirse. Si eso no es carácter, que me lo expliquen."
+    },
+    {
+     "s": 1,
+     "text": "¿Y no está enfadado con su abuelo?"
+    },
+    {
+     "s": 0,
+     "text": "Ese hombre era un genio de la broma lenta. La mayoría de los bromistas necesitan ver la cara de la víctima. Él se conformó con imaginarla desde la tumba. Me regaló un árbol falso justo cuando yo no era capaz de cuidar de nada, ni de mí. Necesitaba un motivo para levantarme. Y un motivo, para funcionar, no tiene por qué ser verdadero."
+    },
+    {
+     "s": 1,
+     "text": "Eso no lo dice ningún manual de jardinería."
+    },
+    {
+     "s": 0,
+     "text": "Los manuales de jardinería hablan de plantas. Yo hablo de rutinas. Mañana me compro un limonero de verdad. Si se me muere, al menos sabré que estaba vivo. Y este se queda en la estantería, presidiendo. Jubilado con honores."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué contraste humorístico organiza el arranque del elogio?",
+     "infer": true,
+     "options": [
+      "Tres maneras distintas de medir el valor del árbol",
+      "La seriedad de Celestino frente al llanto de Gaspar",
+      "El precio del árbol frente al de un limonero real"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué está despidiendo realmente Gaspar?",
+     "infer": true,
+     "options": [
+      "Al árbol, que ha muerto por el frío",
+      "La ilusión que había construido",
+      "A su abuelo, en el aniversario de su muerte"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué distingue al abuelo de otros bromistas, según Gaspar?",
+     "options": [
+      "No necesitaba presenciar el efecto",
+      "Siempre gastaba bromas pesadas a los niños",
+      "Pedía a otros que hicieran las bromas por él"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué idea encierra «un motivo no tiene por qué ser verdadero»?",
+     "infer": true,
+     "options": [
+      "Que su abuelo mentía de forma habitual",
+      "Que lo que importa es el efecto que produce",
+      "Que nadie debería fiarse de los regalos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué ilusión de tu vida se desmontó y, aun así, cumplió una función positiva?",
+     "model": "Creía que mi primer jefe era un genio; cuando vi sus errores, ya había aprendido mucho de él."
+    },
+    {
+     "q": "¿Es legítimo engañar a alguien por su bien, como hizo el abuelo de Gaspar?",
+     "model": "Solo si el engaño es inofensivo y la persona, al descubrirlo, puede entender la intención."
+    },
+    {
+     "q": "¿Qué objeto «jubilarías con honores» en tu casa y por qué no te deshaces de él?",
+     "model": "Una cafetera rota que me acompañó en todas mis mudanzas; es casi un miembro de la familia."
+    }
+   ],
+   "gaps": "Necesitaba un [motivo] para [levantarme]. Y un motivo, para [funcionar], no tiene por qué ser [verdadero].",
+   "glossary": [
+    {
+     "word": "frigorífica",
+     "meaning": "que mantiene el frío"
+    },
+    {
+     "word": "estoico",
+     "meaning": "que aguanta sin quejarse"
+    },
+    {
+     "word": "pudrirse",
+     "meaning": "estropearse por la humedad"
+    },
+    {
+     "word": "presidiendo",
+     "meaning": "ocupando el lugar principal"
+    }
+   ]
+  },
+  {
+   "id": "taper",
+   "title": "Breve tratado del táper materno",
+   "place": "La cámara fría",
+   "context": "En la cámara fría, Álex y Celestino discuten, medio en broma, la función social de los táperes.",
+   "speakers": [
+    {
+     "name": "Álex",
+     "country": "México",
+     "voice": "es-MX-JorgeNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doscientos doce táperes en esta cámara. Si alguien quisiera estudiar a las familias de Puerto Alba, debería empezar por aquí, no por las estadísticas del ayuntamiento."
+    },
+    {
+     "s": 0,
+     "text": "Totalmente. El táper es el correo diplomático de las madres. No dice nada explícito, pero todo en él es mensaje. Que esté lleno hasta arriba significa: «te veo delgado». Que lleve tapa de otro color significa: «el tuyo nunca me lo devolviste». Y si trae nota… si trae nota, es una declaración de guerra."
+    },
+    {
+     "s": 1,
+     "text": "La de su madre decía «Llámame más»."
+    },
+    {
+     "s": 0,
+     "text": "Exacto. Una amenaza velada en tres palabras. Mi madre es una maestra de la concisión. Habría triunfado en la diplomacia internacional."
+    },
+    {
+     "s": 1,
+     "text": "Le voy a llevar la contraria. Yo no veo amenaza. Veo a alguien que no sabe cómo pedir lo que necesita y lo esconde debajo de unas lentejas."
+    },
+    {
+     "s": 0,
+     "text": "Ya. Esa es la versión que me da miedo, porque esa sí me obliga a hacer algo. Desde que murió mi padre, cocino poco, llamo poco y hablo menos. Las lentejas llegan cada semana como un recordatorio de que ella sí sigue intentándolo."
+    },
+    {
+     "s": 1,
+     "text": "Pues devuélvalo usted con una nota. No hace falta que sea larga. Su madre ya le ha enseñado que tres palabras bastan."
+    },
+    {
+     "s": 0,
+     "text": "«Voy el domingo». Ahí lo tiene. Tres palabras. Y que se prepare, porque las lentejas las hago yo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué metáfora usa Álex para describir el táper?",
+     "options": [
+      "Un arma secreta de las madres para controlar a los hijos",
+      "Un regalo envenenado que nadie se atreve a rechazar",
+      "La de un correo diplomático"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tono adopta Álex al analizar las notas maternas?",
+     "infer": true,
+     "options": [
+      "Una indignación completamente sincera",
+      "Una solemnidad paródica",
+      "Una nostalgia melancólica y resignada"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Por qué le da miedo la interpretación de Celestino?",
+     "infer": true,
+     "options": [
+      "Porque le exige actuar",
+      "Porque contradice lo que piensa su madre de él",
+      "Porque le recuerda una discusión antigua con su padre"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué conexión hay entre la nota de la madre y la de Álex?",
+     "infer": true,
+     "options": [
+      "Ambas condensan mucho en tres palabras",
+      "Ambas expresan enfado por la falta de llamadas",
+      "Ambas anuncian una visita inmediata"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué objeto o costumbre funciona en tu familia como un «mensaje cifrado»?",
+     "model": "Mi padre deja el periódico abierto en la página que quiere que lea; nunca lo comenta."
+    },
+    {
+     "q": "¿Por qué a algunas personas les resulta más fácil cuidar que pedir cuidado?",
+     "model": "Porque pedir implica mostrarse vulnerable, y cuidar permite mantener el control."
+    },
+    {
+     "q": "¿Qué mensaje de tres palabras le enviarías hoy a alguien con quien has perdido contacto?",
+     "model": "«Te echo de menos», aunque me costaría muchísimo enviarlo."
+    }
+   ],
+   "gaps": "Yo no veo amenaza. Veo a alguien que no sabe cómo [pedir] lo que [necesita] y lo [esconde] debajo de unas [lentejas].",
+   "glossary": [
+    {
+     "word": "diplomático",
+     "meaning": "relativo a las relaciones entre países"
+    },
+    {
+     "word": "velada",
+     "meaning": "oculta, no evidente"
+    },
+    {
+     "word": "concisión",
+     "meaning": "capacidad de decir mucho con pocas palabras"
+    },
+    {
+     "word": "llevar la contraria",
+     "meaning": "opinar lo opuesto"
+    }
+   ]
+  },
+  {
+   "id": "guante",
+   "title": "Primera línea del primer libro",
+   "place": "El archivo",
+   "context": "En el archivo, Celestino abre el libro de 1986 y lee a Aurora la entrada que escribió hace cuarenta años.",
+   "speakers": [
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Aurora",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Noviembre de mil novecientos ochenta y seis. Guante rojo de señora, mano izquierda, lana fina. Hallado en la plaza mayor. Observaciones: ninguna». Mentira. Tenía observaciones, pero no me atreví a escribirlas."
+    },
+    {
+     "s": 1,
+     "text": "¿Y cuáles eran?"
+    },
+    {
+     "s": 0,
+     "text": "Que la dueña bailaba mejor que nadie. Que se reía con la cabeza echada hacia atrás. Que yo le había pisado los pies cinco veces y ella, en lugar de irse, se había quedado hasta el final de la canción. Un funcionario no puede escribir eso en un registro oficial."
+    },
+    {
+     "s": 1,
+     "text": "Un funcionario no puede tampoco esconder un guante cuarenta años en un cajón. Y sin embargo."
+    },
+    {
+     "s": 0,
+     "text": "Lo sé. Mi falta es doble: administrativa y sentimental. Al principio me lo quedé por cobardía. Pensé que, si se lo devolvía, usted se iría y no volvería. Después se convirtió en costumbre. Y al final, en una especie de cita anual que yo había organizado sin que usted lo supiera."
+    },
+    {
+     "s": 1,
+     "text": "Pues mire, le voy a decir algo que tampoco he dicho nunca. Yo sabía que era usted. Lo supe el segundo noviembre, cuando le vi esconder la mano debajo del mostrador. Volví treinta y ocho veces más porque quería ver si algún día se atrevía."
+    },
+    {
+     "s": 0,
+     "text": "¿Lo sabía? ¿Desde el principio?"
+    },
+    {
+     "s": 1,
+     "text": "Desde el segundo año. Cuarenta años esperando a que un hombre tímido rellenara la casilla de observaciones. Escriba ahora, Celestino. Le dicto yo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué revela Celestino al calificar de «mentira» su propia entrada?",
+     "infer": true,
+     "options": [
+      "Que el guante no estaba en buen estado",
+      "Que omitió sus sentimientos por pudor profesional",
+      "Que el guante no era de Aurora"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué efecto tiene la réplica «Y sin embargo» de Aurora?",
+     "infer": true,
+     "options": [
+      "Muestra que no ha entendido la explicación",
+      "Señala con ironía la incoherencia de Celestino",
+      "Expresa su enfado por la falta administrativa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo evolucionó el motivo para guardar el guante?",
+     "options": [
+      "De un error de archivo a una decisión de la jefa",
+      "De cobardía a ritual compartido sin saberlo",
+      "De un descuido a un intento de venderlo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué giro aporta la confesión final de Aurora?",
+     "infer": true,
+     "options": [
+      "Que nunca le interesó recuperar el guante",
+      "Que piensa denunciar a Celestino ante la jefa",
+      "Que ella también participaba del juego"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué información relevante decidiste no registrar o no decir por pudor, y qué consecuencias tuvo?",
+     "model": "No dije en una entrevista que me apasionaba el proyecto; parecí indiferente y me descartaron."
+    },
+    {
+     "q": "¿Qué opinas de las relaciones que se sostienen en un juego tácito durante años?",
+     "model": "Tienen algo romántico, pero también una gran pérdida de tiempo que el miedo justifica mal."
+    },
+    {
+     "q": "¿Qué casilla de «observaciones» te gustaría rellenar hoy sobre algún momento de tu pasado?",
+     "model": "La de mi graduación: que por primera vez estaba en paz conmigo, aunque no lo dije."
+    }
+   ],
+   "gaps": "Que la [dueña] bailaba mejor que [nadie]. Que se reía con la [cabeza] echada hacia [atrás].",
+   "glossary": [
+    {
+     "word": "hallado",
+     "meaning": "encontrado"
+    },
+    {
+     "word": "me atreví",
+     "meaning": "tuve el valor de hacer algo"
+    },
+    {
+     "word": "cobardía",
+     "meaning": "falta de valor"
+    },
+    {
+     "word": "casilla",
+     "meaning": "espacio de un formulario para escribir"
+    }
+   ]
+  },
+  {
+   "id": "anillo",
+   "title": "Ensayo de brindis con nombre equivocado",
+   "place": "La sala de objetos grandes",
+   "context": "Sentado en la canoa de la sala de objetos grandes, Óliver ensaya su brindis de boda ante Vanesa, que no le deja terminar.",
+   "speakers": [
+    {
+     "name": "Óliver",
+     "country": "Puerto Rico",
+     "voice": "es-PR-VictorNeural"
+    },
+    {
+     "name": "Vanesa",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Queridos amigos: todos ustedes saben que el camino hasta este altar no ha sido recto. Hubo desvíos, malentendidos, y hasta un joyero con una memoria prodigiosa…»."
+    },
+    {
+     "s": 1,
+     "text": "Para. ¿Vas a contar lo del grabado delante de mi abuela?"
+    },
+    {
+     "s": 0,
+     "text": "Creo que sí. Lo he pensado toda la noche. Si lo ocultamos, alguien lo verá en el anillo, se lo contará a otro, y en diez años será un rumor horrible. Si lo contamos nosotros, será una anécdota. La diferencia entre un escándalo y una anécdota es quién la cuenta primero."
+    },
+    {
+     "s": 1,
+     "text": "Qué teoría tan conveniente para un hombre que llevaba cuatro días escondiéndolo."
+    },
+    {
+     "s": 0,
+     "text": "Precisamente. Quiero que conste en público que aprendo rápido. Sigo: «… y una novia que, en lugar de anular la boda, propuso añadir dos palabras al grabado. Desde hoy, nuestro anillo dice: Óliver y Jessica no. Para siempre»."
+    },
+    {
+     "s": 1,
+     "text": "Mi abuela va a necesitar las sales."
+    },
+    {
+     "s": 0,
+     "text": "Tu abuela se casó tres veces. Seguro que tiene alguna historia peor."
+    },
+    {
+     "s": 1,
+     "text": "Vale. Pero añade una frase. Di que la novia exige, como condición, que a partir de ahora cada desastre se cuente en la misma semana. Con fecha límite."
+    },
+    {
+     "s": 0,
+     "text": "«Con fecha límite». Me parece justo. Y muy tuyo: hasta el perdón lo conviertes en un contrato."
+    },
+    {
+     "s": 1,
+     "text": "Así es como sobreviven los matrimonios, Óliver. Con buenos contratos y mejores chistes."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué figura usa Óliver en «un joyero con una memoria prodigiosa»?",
+     "infer": true,
+     "options": [
+      "Un eufemismo irónico",
+      "Una acusación directa al joyero",
+      "Una comparación con su exnovia"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué argumento usa Óliver para contar la historia en público?",
+     "options": [
+      "Que la abuela de Vanesa ya la conoce",
+      "Que contarla primero la convierte en anécdota",
+      "Que el joyero va a estar entre los invitados"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué critica Vanesa con «qué teoría tan conveniente»?",
+     "infer": true,
+     "options": [
+      "Que su discurso es demasiado largo",
+      "Que llega tarde a la sinceridad",
+      "Que no ha pensado en los invitados"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué rasgo de Vanesa destaca Óliver al final?",
+     "infer": true,
+     "options": [
+      "Su incapacidad para perdonar a nadie",
+      "Su tendencia a formalizarlo todo",
+      "Su miedo al qué dirán de la familia"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Estás de acuerdo con que la diferencia entre escándalo y anécdota depende de quién la cuente primero?",
+     "model": "En gran parte sí, aunque hay hechos tan graves que ningún relato puede suavizarlos."
+    },
+    {
+     "q": "¿Qué «cláusulas» informales crees que ayudan a que una relación de pareja o de amistad funcione?",
+     "model": "Hablar de los problemas antes de dormir y no sacar temas antiguos en cada discusión."
+    },
+    {
+     "q": "¿Qué incluirías y qué evitarías en un brindis para una ocasión importante?",
+     "model": "Incluiría una anécdota cariñosa y evitaría bromas que solo entiendan unos pocos."
+    }
+   ],
+   "gaps": "La diferencia entre un [escándalo] y una [anécdota] es quién la [cuenta] [primero].",
+   "glossary": [
+    {
+     "word": "prodigiosa",
+     "meaning": "extraordinaria"
+    },
+    {
+     "word": "anular",
+     "meaning": "cancelar oficialmente"
+    },
+    {
+     "word": "las sales",
+     "meaning": "sustancia que se olía para no desmayarse"
+    },
+    {
+     "word": "fecha límite",
+     "meaning": "último día para hacer algo"
+    }
+   ]
+  },
+  {
+   "id": "tuba",
+   "title": "El abanderado y el tubista",
+   "place": "La sala de objetos grandes",
+   "context": "En la sala de objetos grandes, Fidel pregunta a Don Evaristo si alguna vez fue músico. La respuesta lo desconcierta.",
+   "speakers": [
+    {
+     "name": "Fidel",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    },
+    {
+     "name": "Evaristo",
+     "country": "Cuba",
+     "voice": "es-CU-ManuelNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Dígame la verdad, don Evaristo. ¿Usted fue músico? Porque anoche, con su dentadura dentro, mi tuba sonó como si la tocara otra persona."
+    },
+    {
+     "s": 1,
+     "text": "Músico, nunca. Yo era el abanderado. Cincuenta años delante de la banda, de espaldas a ustedes, con el estandarte. Nunca les vi la cara mientras tocaban. Pero les conozco el sonido mejor que mi propia voz."
+    },
+    {
+     "s": 0,
+     "text": "¿Y el mío? ¿Lo conocía?"
+    },
+    {
+     "s": 1,
+     "text": "El suyo era el que menos se oía. Un sonido educado, pidiendo permiso. Durante doce años pensé que el tubista era un hombre muy tímido o muy desgraciado. Y anoche, antes de que yo cantara y saliera volando mi dentadura, usted ya había cambiado. Tocaba con rabia, con alegría, como quien se ha cansado de disculparse."
+    },
+    {
+     "s": 0,
+     "text": "Anoche estaba la plaza tan llena que pensé que nadie me oiría. Y me solté."
+    },
+    {
+     "s": 1,
+     "text": "Ahí lo tiene. El anonimato le dio permiso. Mi dentadura solo fue el adorno de la tarta. Lo que me pregunto es si va a necesitar una plaza llena cada vez que quiera sonar así."
+    },
+    {
+     "s": 0,
+     "text": "Ojalá no. Pero no sé cómo se hace a propósito."
+    },
+    {
+     "s": 1,
+     "text": "Haga lo que hacía yo: no mire al público. Toque para la espalda de un viejo abanderado que le escucha desde hace doce años. Y si un día le falla, mándeme llamar. Mis dientes son de alquiler, pero mi atención es gratis."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué paradoja contiene el papel de Evaristo en la banda?",
+     "infer": true,
+     "options": [
+      "Conoce la música sin haber visto a los músicos",
+      "Dirigía la banda sin saber leer partituras",
+      "Tocaba la tuba aunque decía ser abanderado"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo describe Evaristo el sonido anterior de Fidel?",
+     "options": [
+      "Excesivamente discreto",
+      "Desafinado y agresivo con los demás",
+      "Brillante pero demasiado rápido"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué atribuye Evaristo al cambio de Fidel?",
+     "infer": true,
+     "options": [
+      "La libertad que da pasar desapercibido",
+      "El efecto acústico de la dentadura",
+      "Los consejos de la directora de la banda"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué ofrece Evaristo al final, en tono humorístico?",
+     "infer": true,
+     "options": [
+      "Alquilar la dentadura para cada desfile",
+      "Seguir siendo su oyente atento",
+      "Enseñarle a llevar el estandarte"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué contexto te liberó el anonimato para hacer algo mejor de lo habitual?",
+     "model": "En un coro grande canté sin miedo por primera vez, porque mi voz se mezclaba con las demás."
+    },
+    {
+     "q": "¿Por qué crees que algunas personas rinden más cuando creen que nadie las observa?",
+     "model": "Porque desaparece el miedo a ser evaluadas y se concentran en la tarea misma."
+    },
+    {
+     "q": "¿Quién ha sido para ti un «oyente atento» que te ayudó a mejorar sin que lo supieras?",
+     "model": "Una vecina que me escuchaba practicar el piano y me dejaba notas de ánimo en el buzón."
+    }
+   ],
+   "gaps": "Tocaba con [rabia], con [alegría], como quien se ha [cansado] de [disculparse].",
+   "glossary": [
+    {
+     "word": "abanderado",
+     "meaning": "persona que lleva la bandera"
+    },
+    {
+     "word": "desgraciado",
+     "meaning": "que tiene mala suerte o es infeliz"
+    },
+    {
+     "word": "me solté",
+     "meaning": "dejé atrás la timidez"
+    },
+    {
+     "word": "anonimato",
+     "meaning": "situación de quien no es conocido"
+    }
+   ]
+  },
+  {
+   "id": "canoa",
+   "title": "Comunicado conjunto al club de remo",
+   "place": "La sala de objetos grandes",
+   "context": "Nacho y Guille redactan en el muelle, entre risas, un comunicado oficial para inscribir La Gaviota en la próxima regata.",
+   "speakers": [
+    {
+     "name": "Nacho",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Guille",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Escribe: «Los abajo firmantes, tras una década de silencio diplomático, comunican al Club de Remo de Puerto Alba su intención de reanudar relaciones náuticas»."
+    },
+    {
+     "s": 1,
+     "text": "«Relaciones náuticas». Suena a tratado entre dos países que se han bombardeado."
+    },
+    {
+     "s": 0,
+     "text": "Es que algo de eso hubo. Tú me borraste de la foto del club. Yo dejé de ir a tu panadería y me pasé diez años comprando un pan malísimo en el supermercado. Daños colaterales."
+    },
+    {
+     "s": 1,
+     "text": "Sigo: «Ambas partes reconocen que el conflicto tuvo su origen en un mensaje extraviado y fue prolongado, sobre todo, por el orgullo de los firmantes». ¿Te parece bien así? Lo del orgullo es en plural."
+    },
+    {
+     "s": 0,
+     "text": "Me parece justo. Yo podría haberte llamado al salir del hospital. Preferí que fueras tú el malo de la historia. Era más cómodo que admitir que te echaba de menos."
+    },
+    {
+     "s": 1,
+     "text": "Y yo preferí odiarte que preguntar. Odiar no requiere hacer nada. Sigo: «Las partes se comprometen a reparar la grieta de La Gaviota, metáfora que el club puede interpretar como estime oportuno»."
+    },
+    {
+     "s": 0,
+     "text": "Muy sutil. Añade al final que tu padre… no, mi padre. Que mi padre preguntó por ti hasta el final. Que decía que eras el único que remaba sin quejarse."
+    },
+    {
+     "s": 1,
+     "text": "Eso no va en un comunicado, Nacho."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo sé. Va en otra parte. Pero quería que lo supieras antes de firmar."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué efecto tiene usar un lenguaje de tratado internacional?",
+     "infer": true,
+     "options": [
+      "Quitar dramatismo al conflicto con humor",
+      "Demostrar que ambos estudiaron Derecho",
+      "Cumplir los requisitos formales del club"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué son los «daños colaterales» para Nacho?",
+     "infer": true,
+     "options": [
+      "Los desperfectos que sufrió la canoa",
+      "Las multas del club por no competir",
+      "Las pérdidas cotidianas de la enemistad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué reconoce Nacho sobre su propia actitud?",
+     "options": [
+      "Que le convenía ver a Guille como culpable",
+      "Que nunca supo por qué se enfadó Guille",
+      "Que el hospital le impidió llamar durante años"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Por qué Nacho menciona a su padre aunque no vaya en el comunicado?",
+     "infer": true,
+     "options": [
+      "Para que el club acepte la inscripción",
+      "Para culpar a Guille de no haber ido al entierro",
+      "Para cerrar la reconciliación en lo personal"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué conflicto personal podría describirse con humor como un «tratado de paz», y qué cláusulas tendría?",
+     "model": "El de mis hermanos por el mando de la tele; incluiría turnos y una cláusula de silencio en los anuncios."
+    },
+    {
+     "q": "¿Por qué resulta a veces más cómodo mantener a alguien como «el malo de la historia»?",
+     "model": "Porque así no tenemos que revisar nuestra parte de culpa ni dar el primer paso."
+    },
+    {
+     "q": "¿Qué cosas importantes crees que no deben ir en un documento oficial, sino decirse en persona?",
+     "model": "Las disculpas sinceras y el agradecimiento profundo; por escrito pierden calor."
+    }
+   ],
+   "gaps": "Preferí que fueras tú el [malo] de la historia. Era más [cómodo] que [admitir] que te echaba de [menos].",
+   "glossary": [
+    {
+     "word": "reanudar",
+     "meaning": "volver a empezar algo interrumpido"
+    },
+    {
+     "word": "náuticas",
+     "meaning": "relacionadas con la navegación"
+    },
+    {
+     "word": "extraviado",
+     "meaning": "perdido"
+    },
+    {
+     "word": "sutil",
+     "meaning": "delicado, poco evidente"
+    }
+   ]
+  },
+  {
+   "id": "cenizas",
+   "title": "Epitafio para un perro viajero",
+   "place": "El muelle de carga",
+   "context": "Al final de su turno, Mari Carmen ayuda a Lisandro a escribir unas palabras para la urna de Canelo.",
+   "speakers": [
+    {
+     "name": "Lisandro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    },
+    {
+     "name": "Mari Carmen",
+     "country": "España",
+     "voice": "es-ES-XimenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mi mujer quiere grabar una frase en la urna. Llevo toda la noche dándole vueltas. Lo primero que se me ocurrió fue «Aquí yace Canelo, buen perro». Pero suena a ficha de veterinario."
+    },
+    {
+     "s": 1,
+     "text": "Es que «buen perro» lo dice todo el mundo. Usted me contó que nunca mendigaba, que se sentaba a tu lado y esperaba con dignidad. Eso es más interesante."
+    },
+    {
+     "s": 0,
+     "text": "«Aquí yace Canelo, que nunca pidió nada y siempre consiguió todo». Demasiado irónico, ¿no?"
+    },
+    {
+     "s": 1,
+     "text": "Un poco. Aunque a él le habría gustado. Mire, yo llevo veinte años conduciendo la línea 14, y anoche, con su urna junto al volante, la gente habló conmigo como nunca. Un chico me contó que su perro lo esperaba cada tarde en la parada. Una señora lloró por un gato que se le murió hace veinte años. Su perro, sin estar, hizo compañía a medio autobús."
+    },
+    {
+     "s": 0,
+     "text": "Entonces quizá la frase no debería hablar de él, sino de lo que provocaba."
+    },
+    {
+     "s": 1,
+     "text": "Eso. Algo como: «Viajó en la línea 14. Nadie se sintió solo a su lado»."
+    },
+    {
+     "s": 0,
+     "text": "Mi mujer va a llorar. Y yo también, para qué negarlo. Lo curioso es que vine aquí avergonzado por haberlo olvidado en el autobús, y me voy con la sensación de que le di el último paseo que se merecía."
+    },
+    {
+     "s": 1,
+     "text": "A veces los olvidos saben más que nosotros adónde hay que ir. Once vueltas, señor. Ningún pasajero ha sido tan fiel a mi ruta."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Por qué rechaza Lisandro su primera propuesta de epitafio?",
+     "infer": true,
+     "options": [
+      "Es demasiado larga para la urna",
+      "Le parece fría e impersonal",
+      "A su mujer no le gusta la palabra perro"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué problema tiene la segunda propuesta, según los dos?",
+     "options": [
+      "Un exceso de ironía",
+      "Que no menciona la línea 14",
+      "Que contiene una mentira sobre Canelo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué desplazamiento propone Lisandro para la frase final?",
+     "infer": true,
+     "options": [
+      "Del perro al efecto que tenía en los demás",
+      "Del perro a su mujer, que lo cuidaba",
+      "De la tristeza a una broma sobre su carácter"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cómo cambia la percepción de Lisandro sobre su olvido?",
+     "infer": true,
+     "options": [
+      "Pasa de la culpa a sentirlo como un acierto",
+      "Pasa del enfado a la indiferencia",
+      "Pasa del alivio a una vergüenza mayor"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué frase te gustaría que resumiera la huella que dejas en los demás?",
+     "model": "«Siempre tenía tiempo para escuchar», aunque todavía tengo que ganármelo."
+    },
+    {
+     "q": "¿Por qué crees que un objeto ligado a una pérdida facilita conversaciones entre desconocidos?",
+     "model": "Porque autoriza a hablar de lo íntimo; todos tenemos pérdidas y buscamos una excusa para contarlas."
+    },
+    {
+     "q": "¿Qué error que te avergonzaba acabó teniendo, con el tiempo, un sentido positivo?",
+     "model": "Perder un tren me obligó a quedarme en una ciudad donde conocí a mi mejor amiga."
+    }
+   ],
+   "gaps": "Su perro, sin [estar], hizo [compañía] a [medio] [autobús].",
+   "glossary": [
+    {
+     "word": "yace",
+     "meaning": "está enterrado"
+    },
+    {
+     "word": "ficha",
+     "meaning": "documento con datos"
+    },
+    {
+     "word": "provocaba",
+     "meaning": "causaba"
+    },
+    {
+     "word": "fiel",
+     "meaning": "leal y constante"
+    }
+   ]
+  },
+  {
+   "id": "loro",
+   "title": "Convenio regulador de un loro",
+   "place": "El muelle de carga",
+   "context": "En el muelle de carga, Doña Fefa lee en voz alta el acuerdo de custodia de Fígaro que ha redactado en una servilleta.",
+   "speakers": [
+    {
+     "name": "Fefa",
+     "country": "Cuba",
+     "voice": "es-CU-BelkysNeural"
+    },
+    {
+     "name": "Rubén",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Cláusula primera: Fígaro reside en casa de Josefa, por antigüedad y por tener la cocina más calentita. Cláusula segunda: Rubén lo visita los domingos de cinco a siete, con café y sin radio». ¿Conforme?"
+    },
+    {
+     "s": 1,
+     "text": "Conforme con la segunda. La primera me duele, pero la acepto. Seis años son seis años."
+    },
+    {
+     "s": 0,
+     "text": "«Cláusula tercera: queda prohibido enseñarle palabrotas de taxista. Cláusula cuarta: queda prohibido enseñarle a imitar la tos de nadie». Esa la pongo yo, por motivos personales."
+    },
+    {
+     "s": 1,
+     "text": "¿La tos?"
+    },
+    {
+     "s": 0,
+     "text": "Cuando murió mi marido, Fígaro siguió tosiendo como él durante meses. Por las mañanas, desde la cocina. Al principio me destrozaba. Luego me acostumbré, y casi le daba los buenos días. Fue la forma más extraña de duelo que se pueda imaginar. No quiero que vuelva a aprender la tos de nadie, ni siquiera la suya."
+    },
+    {
+     "s": 1,
+     "text": "Entendido. Pues añada una cláusula mía: si un día usted no puede cuidarlo, me avisa antes que a nadie. Yo me pasé seis años mirando todos los loros de la ciudad."
+    },
+    {
+     "s": 0,
+     "text": "Cláusula quinta, aprobada. Y una disposición final, que se me acaba de ocurrir: si Fígaro habla de mí en tu casa, no te creas nada. Exagera."
+    },
+    {
+     "s": 1,
+     "text": "Y si habla de mí en la suya, créaselo todo. Lo malo también."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué efecto produce redactar el acuerdo como un documento legal?",
+     "infer": true,
+     "options": [
+      "Una amenaza real de acudir a un abogado",
+      "Una forma de evitar cualquier contacto entre ellos",
+      "Una parodia afectuosa de un divorcio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué Rubén acepta la primera cláusula pese a que le duele?",
+     "options": [
+      "Cree que su casa es demasiado fría para el loro",
+      "Piensa recurrirla más adelante ante un juez",
+      "Reconoce el tiempo que Fefa lo ha cuidado"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué explica la inclusión de la cuarta cláusula?",
+     "infer": true,
+     "options": [
+      "Que el loro tiene una enfermedad respiratoria",
+      "Una experiencia de duelo que no quiere repetir",
+      "Que Rubén suele toser mucho en el taxi"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué revela el intercambio final sobre lo que dice el loro?",
+     "infer": true,
+     "options": [
+      "Que ninguno de los dos se fía de Fígaro",
+      "Que Fefa quiere esconder algún secreto grave",
+      "Que ambos confían en la sinceridad del otro con humor"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué forma inesperada de duelo has observado en ti o en alguien cercano?",
+     "model": "Mi tío siguió poniendo dos tazas en el desayuno durante meses después de enviudar."
+    },
+    {
+     "q": "¿Qué cláusulas incluirías en un acuerdo para compartir algo valioso con otra persona?",
+     "model": "Turnos claros, gastos a medias y una cláusula de revisión cada año."
+    },
+    {
+     "q": "¿Por qué el humor ayuda a negociar situaciones que, en el fondo, son dolorosas?",
+     "model": "Porque baja la tensión y permite decir cosas serias sin que suenen a ataque."
+    }
+   ],
+   "gaps": "Al principio me [destrozaba]. Luego me [acostumbré], y casi le daba los buenos [días]. Fue la forma más extraña de [duelo] que se pueda imaginar.",
+   "glossary": [
+    {
+     "word": "cláusula",
+     "meaning": "cada parte de un contrato"
+    },
+    {
+     "word": "conforme",
+     "meaning": "de acuerdo"
+    },
+    {
+     "word": "duelo",
+     "meaning": "dolor por la muerte de alguien"
+    },
+    {
+     "word": "disposición final",
+     "meaning": "última parte de una ley o contrato"
+    }
+   ]
+  },
+  {
+   "id": "ladron",
+   "title": "Conferencia para turistas despistados",
+   "place": "La calle",
+   "context": "Mientras espera a la jefa, Tato ensaya ante Celestino la charla que quiere dar a los turistas el próximo año.",
+   "speakers": [
+    {
+     "name": "Tato",
+     "country": "Honduras",
+     "voice": "es-HN-CarlosNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Damas y caballeros, bienvenidos a Puerto Alba. Durante quince años fui el responsable no oficial de redistribuir la riqueza en esta plaza. Hoy, retirado, les ofrezco mi experiencia para que ustedes no contribuyan a la causa."
+    },
+    {
+     "s": 1,
+     "text": "¿«Redistribuir la riqueza»? Es usted un descarado."
+    },
+    {
+     "s": 0,
+     "text": "Es marketing, don Celestino. Sigo: «Primera lección: el turista no pierde la cartera, la entrega. La entrega cuando mira hacia arriba, a los faroles, con la boca abierta. Un carterista no busca bolsillos; busca asombro. Donde hay asombro, hay distracción»."
+    },
+    {
+     "s": 1,
+     "text": "Eso es casi filosofía."
+    },
+    {
+     "s": 0,
+     "text": "«Segunda lección: desconfíen de quien les ofrece ayuda sin que la pidan. Yo fui esa persona muchas veces. Tercera lección: si alguien choca con ustedes y se disculpa demasiado, toquen el bolsillo». Y luego cuento lo de anoche: catorce carteras recuperadas de un chaval nuevo, que ahora está aprendiendo a arreglar bicicletas."
+    },
+    {
+     "s": 1,
+     "text": "Me parece que su charla es buena. Lo que no sé es si al ayuntamiento le gustará que un exladrón dé lecciones de seguridad."
+    },
+    {
+     "s": 0,
+     "text": "Por eso precisamente. ¿Quién va a explicarlo mejor? Un policía le cuenta las normas. Yo le cuento las trampas. Y además mi hija podrá decir en el colegio que su padre trabaja de profesor."
+    },
+    {
+     "s": 1,
+     "text": "Le escribo la recomendación para la jefa. Pero quite lo de redistribuir la riqueza."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué recurso emplea Tato con «redistribuir la riqueza»?",
+     "infer": true,
+     "options": [
+      "Una crítica sincera a la desigualdad económica",
+      "Un eufemismo cínico para el robo",
+      "Una referencia a su antiguo trabajo en un banco"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tesis sostiene Tato en su primera lección?",
+     "options": [
+      "Los turistas suelen olvidar dónde dejan sus cosas",
+      "La policía de la plaza vigila mal a los turistas",
+      "El robo aprovecha el asombro de la víctima"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué argumento usa Tato frente a las dudas de Celestino?",
+     "infer": true,
+     "options": [
+      "Que su experiencia lo hace más creíble",
+      "Que el ayuntamiento ya ha aprobado la charla",
+      "Que la policía no quiere dar charlas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué indica la última condición de Celestino?",
+     "infer": true,
+     "options": [
+      "Que en el fondo no se fía de Tato",
+      "Que quiere dar él mismo la charla",
+      "Que apoya el proyecto pero exige cierto decoro"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Puede la experiencia de alguien que ha cometido errores ser más valiosa que la de un experto «limpio»? Justifica tu respuesta.",
+     "model": "A veces sí, porque conoce los mecanismos desde dentro, aunque necesita demostrar un cambio real."
+    },
+    {
+     "q": "¿Qué situación cotidiana te hace especialmente vulnerable a una distracción?",
+     "model": "Mirar el móvil en el metro; ahí podrían quitarme cualquier cosa sin que me diera cuenta."
+    },
+    {
+     "q": "¿Qué eufemismo conoces que suavice una realidad incómoda de forma casi humorística?",
+     "model": "«Reajuste de plantilla» para despidos masivos; suena a gimnasia, no a drama."
+    }
+   ],
+   "gaps": "Un [carterista] no busca [bolsillos]; busca [asombro]. Donde hay asombro, hay [distracción]».",
+   "glossary": [
+    {
+     "word": "descarado",
+     "meaning": "que no tiene vergüenza"
+    },
+    {
+     "word": "asombro",
+     "meaning": "sorpresa grande"
+    },
+    {
+     "word": "chaval",
+     "meaning": "chico joven"
+    },
+    {
+     "word": "marketing",
+     "meaning": "técnicas para vender algo"
+    }
+   ]
+  },
+  {
+   "id": "sonambulo",
+   "title": "Simulacro de entrevista bajo un letrero verde",
+   "place": "La puerta de la farmacia",
+   "context": "A la puerta de la farmacia, Gloria hace de entrevistadora para que Benja ensaye antes de su cita en el banco.",
+   "speakers": [
+    {
+     "name": "Gloria",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    },
+    {
+     "name": "Benja",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Señor Benjamín, siéntese. Háblenos de un logro reciente del que se sienta especialmente satisfecho."
+    },
+    {
+     "s": 1,
+     "text": "Pues… anoche gané un concurso de karaoke. Dormido. En pijama. Con una ranchera."
+    },
+    {
+     "s": 0,
+     "text": "Interesante. ¿Y qué competencias diría que demuestra ese logro?"
+    },
+    {
+     "s": 1,
+     "text": "Capacidad de trabajar bajo presión, porque había trescientas personas. Improvisación, porque no recuerdo haber elegido la canción. Y una orientación a resultados indiscutible: traje el trofeo a casa. Bueno, a la farmacia."
+    },
+    {
+     "s": 0,
+     "text": "Muy bien. Ahora la pregunta trampa: ¿cuál es su mayor debilidad?"
+    },
+    {
+     "s": 1,
+     "text": "Esa me la sé de memoria. «Soy demasiado perfeccionista». Llevo un mes ensayándola."
+    },
+    {
+     "s": 0,
+     "text": "Ya. Te voy a decir algo, ahora como farmacéutica y no como entrevistadora. Esa respuesta la da todo el mundo, y suena a mentira ensayada. Anoche, en el vídeo, tenías los ojos cerrados y sonreías como un niño. Llevas un mes durmiendo fatal por intentar parecer otra persona. Quizá tu debilidad es justamente esa: que no te fías de lo que eres."
+    },
+    {
+     "s": 1,
+     "text": "¿Y le digo eso a un banco?"
+    },
+    {
+     "s": 0,
+     "text": "No con esas palabras. Pero sí puedes decir que a veces te exiges tanto que tu cuerpo protesta. Y que estás aprendiendo a escucharlo. Eso es verdad, y los entrevistadores buenos lo notan."
+    },
+    {
+     "s": 1,
+     "text": "Y si no me contratan, siempre puedo dedicarme a las rancheras."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué efecto cómico produce la respuesta de Benja sobre las competencias?",
+     "infer": true,
+     "options": [
+      "Muestra que no entiende la pregunta de Gloria",
+      "Revela que en realidad no ganó el concurso",
+      "Traduce un episodio absurdo a jerga empresarial"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué Gloria cambia de papel en mitad del ensayo?",
+     "options": [
+      "Porque se cansa de hacer de entrevistadora",
+      "Porque llega un cliente a la farmacia",
+      "Para darle un consejo sincero"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué debilidad real sugiere Gloria?",
+     "infer": true,
+     "options": [
+      "La falta de preparación para la entrevista",
+      "La desconfianza en su propia identidad",
+      "El exceso de seguridad delante de los demás"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué actitud revela la última frase de Benja?",
+     "infer": true,
+     "options": [
+      "Un pesimismo total sobre su futuro",
+      "Una decisión firme de dejar el banco",
+      "Un humor que relativiza la presión"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué opinas de las preguntas típicas de las entrevistas de trabajo y de las respuestas ensayadas?",
+     "model": "Me parecen un teatro mutuo; aprendo más de una conversación espontánea que de respuestas de manual."
+    },
+    {
+     "q": "¿Qué experiencia aparentemente irrelevante podrías presentar como una competencia profesional?",
+     "model": "Organizar viajes para veinte amigos demuestra planificación y paciencia infinita."
+    },
+    {
+     "q": "¿En qué momento te diste cuenta de que intentabas ser alguien distinto para encajar?",
+     "model": "En mi primer trabajo, cuando fingía que me gustaba el fútbol para hablar con el equipo."
+    }
+   ],
+   "gaps": "Llevas un mes durmiendo [fatal] por intentar [parecer] otra [persona]. Quizá tu [debilidad]",
+   "glossary": [
+    {
+     "word": "logro",
+     "meaning": "éxito conseguido"
+    },
+    {
+     "word": "competencias",
+     "meaning": "habilidades profesionales"
+    },
+    {
+     "word": "pregunta trampa",
+     "meaning": "pregunta difícil para ver cómo reaccionas"
+    },
+    {
+     "word": "rancheras",
+     "meaning": "canciones populares mexicanas"
+    }
+   ]
+  },
+  {
+   "id": "farol",
+   "title": "Borrador de una dimisión",
+   "place": "La azotea",
+   "context": "En la azotea, Selene redacta en voz alta su carta de dimisión del bufete mientras Yuri le ofrece café del termo.",
+   "speakers": [
+    {
+     "name": "Selene",
+     "country": "México",
+     "voice": "es-MX-DaliaNeural"
+    },
+    {
+     "name": "Yuri",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Estimado señor Montalvo: por la presente le comunico mi decisión irrevocable de abandonar el bufete». ¿Irrevocable es demasiado?"
+    },
+    {
+     "s": 1,
+     "text": "Depende. ¿Lo es?"
+    },
+    {
+     "s": 0,
+     "text": "Esta noche, sí. Mañana a las nueve, delante de su cara, no lo sé. Sigo: «Agradezco profundamente las oportunidades recibidas durante estos cinco años». Eso es mentira, pero queda elegante."
+    },
+    {
+     "s": 1,
+     "text": "Las cartas de dimisión son como los epitafios. Nadie espera sinceridad, solo buena educación."
+    },
+    {
+     "s": 0,
+     "text": "Pues quiero meter una verdad, aunque sea pequeña. Algo como: «He descubierto que soy mejor amasando que litigando». ¿Suena ridículo?"
+    },
+    {
+     "s": 1,
+     "text": "Suena a alguien que sabe lo que quiere. Mi madre limpió oficinas veinte años para que yo estudiara, ¿sabes? Yo acabé de vigilante. Cuando se lo conté, pensé que se iba a llevar un disgusto. Y me dijo: «Yo limpiaba para que tú pudieras elegir. No para elegir por ti»."
+    },
+    {
+     "s": 0,
+     "text": "Qué frase. Debería ir en la carta."
+    },
+    {
+     "s": 1,
+     "text": "No. Esa es para tus padres, no para tu jefe."
+    },
+    {
+     "s": 0,
+     "text": "Tienes razón. Entonces, carta corta. «Me voy a hacer pan. Gracias y adiós». Y la versión larga, con mi abuela, la receta y el farol que cayó del cielo, se la cuento a mis padres el domingo, con una barra recién hecha en la mesa."
+    },
+    {
+     "s": 1,
+     "text": "Y yo seré tu primer cliente. A las siete y media, después del turno."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué revela la duda de Selene sobre la palabra «irrevocable»?",
+     "infer": true,
+     "options": [
+      "Desconocimiento del lenguaje jurídico formal",
+      "Inseguridad ante su propia decisión",
+      "Miedo a ofender a su jefe con una palabra fea"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué compara Yuri con los epitafios?",
+     "options": [
+      "Las cartas de dimisión",
+      "Los contratos del bufete",
+      "Los deseos escritos en los faroles"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sentido tiene la frase de la madre de Yuri?",
+     "infer": true,
+     "options": [
+      "Que se arrepentía de haber trabajado tanto",
+      "Que esperaba que su hijo fuera abogado",
+      "El sacrificio buscaba dar libertad, no imponer un camino"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué distinción hace Selene al final?",
+     "infer": true,
+     "options": [
+      "Entre lo que debe decir al jefe y a la familia",
+      "Entre trabajar de día y trabajar de noche",
+      "Entre el pan de su abuela y el de su padre"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Hasta qué punto deben ser sinceras las despedidas formales, como una carta de dimisión?",
+     "model": "Lo justo para no mentir, pero sin convertirlas en un ajuste de cuentas."
+    },
+    {
+     "q": "¿Qué te parece la idea de que el sacrificio de los padres busca dar libertad y no imponer un camino?",
+     "model": "Me parece generosa, aunque no todos los padres lo viven así y eso genera culpa."
+    },
+    {
+     "q": "¿Qué distinguirías entre lo que se cuenta a un jefe y lo que se cuenta a la familia en un cambio de vida?",
+     "model": "Al jefe, los hechos; a la familia, los motivos y las emociones."
+    }
+   ],
+   "gaps": "«Yo [limpiaba] para que tú pudieras [elegir]. No para [elegir] por [ti]».",
+   "glossary": [
+    {
+     "word": "irrevocable",
+     "meaning": "que no se puede cambiar"
+    },
+    {
+     "word": "litigando",
+     "meaning": "defendiendo casos ante un juez"
+    },
+    {
+     "word": "disgusto",
+     "meaning": "pena o enfado"
+    },
+    {
+     "word": "barra",
+     "meaning": "pan alargado"
+    }
+   ]
+  },
+  {
+   "id": "diario",
+   "title": "Lo que escribe una jefa a medianoche",
+   "place": "La azotea",
+   "context": "En el descanso de la azotea, Yuri lee a Celestino un fragmento del diario de Doña Pura y se interrumpe a sí mismo.",
+   "speakers": [
+    {
+     "name": "Yuri",
+     "country": "Nicaragua",
+     "voice": "es-NI-FedericoNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Escuche esto, solo un párrafo, y luego lo cierro, se lo juro: «La oficina de noche tiene un silencio distinto. Los objetos esperan como animales dormidos. A veces pienso que yo también soy un objeto perdido que nadie ha venido a reclamar, y que por eso no me voy nunca»."
+    },
+    {
+     "s": 1,
+     "text": "Ciérralo, Yuri."
+    },
+    {
+     "s": 0,
+     "text": "Ya lo cierro. Pero dígame que no es precioso. Treinta años viéndola con esa cara de inspectora de hacienda y resulta que escribe como una poeta."
+    },
+    {
+     "s": 1,
+     "text": "Precisamente porque es precioso tienes que cerrarlo. Lo íntimo no deja de serlo por estar bien escrito. Al contrario: cuanto mejor escribe alguien, más se expone."
+    },
+    {
+     "s": 0,
+     "text": "Tiene razón. Me siento como si hubiera entrado en su casa por la ventana. Lo que no sé es qué hacer ahora. Si se lo devuelvo sin decir nada, voy a pasar el resto de mi vida mirándola con otros ojos, y ella no sabrá por qué."
+    },
+    {
+     "s": 1,
+     "text": "Entonces haz algo que no sea una confesión, sino un gesto. Ella escribe que va los jueves a bailar salsa sola al puerto. Ve un jueves. No le digas por qué. Sácala a bailar. Si te pregunta, dile que el turno de noche enseña a encontrar cosas."
+    },
+    {
+     "s": 0,
+     "text": "¿Y si lo adivina?"
+    },
+    {
+     "s": 1,
+     "text": "Lo adivinará. Es la persona más lista de esta oficina. Pero hay secretos que se perdonan solos cuando se usan con cariño. El mío tardó cuarenta años en demostrarlo."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué imagen usa Pura para describirse en el fragmento?",
+     "options": [
+      "La de un animal dormido entre las cajas",
+      "La de una inspectora vigilando la oficina",
+      "La de un objeto que nadie reclama"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué argumento da Celestino para cerrar el diario?",
+     "infer": true,
+     "options": [
+      "La calidad del texto no anula su intimidad",
+      "El diario está lleno de errores graves",
+      "La jefa podría despedir a Yuri por leerlo"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué propone Celestino en lugar de una confesión?",
+     "infer": true,
+     "options": [
+      "Una carta de disculpa por escrito",
+      "Devolver el diario por correo",
+      "Un gesto indirecto de complicidad"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿A qué alude Celestino con «el mío tardó cuarenta años»?",
+     "infer": true,
+     "options": [
+      "A su propio secreto con el guante",
+      "A su diario personal escondido en el archivo",
+      "A su retraso en jubilarse de la oficina"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Estás de acuerdo con que cuanto mejor escribe alguien sobre sí mismo, más se expone? ¿Por qué?",
+     "model": "Sí, porque la precisión revela matices que una persona torpe con las palabras dejaría ocultos."
+    },
+    {
+     "q": "¿Qué gesto puede reparar una indiscreción sin necesidad de confesarla abiertamente?",
+     "model": "Tratar a la persona con más cuidado y respetar justo aquello que descubriste."
+    },
+    {
+     "q": "¿Qué imagen elegirías para describir cómo te sientes en tu lugar de trabajo o de estudio de noche o en soledad?",
+     "model": "Me siento como un faro: encendido, útil, pero bastante solo."
+    }
+   ],
+   "gaps": "Lo [íntimo] no deja de [serlo] por estar bien [escrito]. Al contrario: cuanto mejor escribe alguien, más se [expone].",
+   "glossary": [
+    {
+     "word": "reclamar",
+     "meaning": "pedir algo que es tuyo"
+    },
+    {
+     "word": "inspectora de hacienda",
+     "meaning": "funcionaria que revisa impuestos"
+    },
+    {
+     "word": "se expone",
+     "meaning": "se muestra sin protección"
+    },
+    {
+     "word": "adivina",
+     "meaning": "descubre sin que se lo digan"
+    }
+   ]
+  },
+  {
+   "id": "alcalde",
+   "title": "Nota de prensa sobre una llave mordida",
+   "place": "La sala de espera",
+   "context": "En la sala de espera, Ernesto redacta la nota de prensa sobre la llave de chocolate y le lee los borradores a Celestino.",
+   "speakers": [
+    {
+     "name": "Ernesto",
+     "country": "El Salvador",
+     "voice": "es-SV-RodrigoNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Primer borrador: «Con motivo de las fiestas, el Ayuntamiento ha decidido renovar la llave simbólica de la ciudad por una versión más sostenible y comestible». ¿Cómo lo ve?"
+    },
+    {
+     "s": 1,
+     "text": "Lo veo como una mentira con lazo. Nadie se lo va a creer."
+    },
+    {
+     "s": 0,
+     "text": "Segundo borrador: «Durante la celebración, la llave de la ciudad sufrió un incidente menor que en ningún caso afecta al normal funcionamiento institucional»."
+    },
+    {
+     "s": 1,
+     "text": "«Incidente menor». La mordió el alcalde delante de doscientas personas pensando que era un bombón. Hay vídeos. Su nota va a salir a la vez que esos vídeos."
+    },
+    {
+     "s": 0,
+     "text": "Doce años en comunicación institucional, y nunca había tenido que explicar un mordisco. Mi trabajo consiste en que las cosas parezcan menos de lo que son."
+    },
+    {
+     "s": 1,
+     "text": "Pues pruebe lo contrario: que parezcan exactamente lo que son. La gente está harta de comunicados que no dicen nada. Un alcalde que se come su propia llave y lo cuenta con gracia es un alcalde humano. Un alcalde que lo esconde es un alcalde ridículo dos veces."
+    },
+    {
+     "s": 0,
+     "text": "Tercer borrador, entonces: «El alcalde confirma que la llave de la ciudad era de chocolate, que estaba buenísima y que, a partir de hoy, las puertas de Puerto Alba se abrirán con más dulzura»."
+    },
+    {
+     "s": 1,
+     "text": "Ese sí. Y súmele lo de las almendras de la nueva. A la gente le encantan los detalles."
+    },
+    {
+     "s": 0,
+     "text": "Si me despiden, le mando a usted el currículum."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué crítica implícita hace Celestino con «una mentira con lazo»?",
+     "infer": true,
+     "options": [
+      "Que la nota es demasiado breve y seca",
+      "Que el regalo para el alcalde es feo",
+      "Que el adorno verbal no oculta el engaño"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué rasgo del lenguaje institucional parodia el segundo borrador?",
+     "infer": true,
+     "options": [
+      "El exceso de datos técnicos y cifras",
+      "El tono emocional y cercano con los vecinos",
+      "La minimización mediante fórmulas vacías"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cómo define Ernesto su propio trabajo?",
+     "options": [
+      "Escribir los discursos del alcalde en las fiestas",
+      "Hacer que las cosas parezcan menos de lo que son",
+      "Atender las quejas de los vecinos de la ciudad"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué estrategia acaba adoptando el tercer borrador?",
+     "infer": true,
+     "options": [
+      "Culpar a un vecino del incidente",
+      "Asumir el hecho con humor y un juego de palabras",
+      "Negar la existencia de los vídeos"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué comunicado oficial te ha parecido especialmente vacío o, por el contrario, sorprendentemente honesto?",
+     "model": "Una empresa que reconoció un fallo con humor; me generó más confianza que cualquier disculpa formal."
+    },
+    {
+     "q": "¿Qué riesgos tiene para una institución reconocer sus errores con humor?",
+     "model": "Que parezca que no se toma en serio el problema, si el error ha perjudicado a alguien."
+    },
+    {
+     "q": "¿Cómo redactarías la nota de prensa sobre un pequeño desastre de tu vida cotidiana?",
+     "model": "«La cocina comunica que la cena de ayer sufrió un reajuste térmico no planificado»."
+    }
+   ],
+   "gaps": "Un alcalde que se come su propia [llave] y lo cuenta con [gracia] es un alcalde [humano]. Un alcalde que lo esconde es un alcalde [ridículo] dos veces.",
+   "glossary": [
+    {
+     "word": "borrador",
+     "meaning": "primera versión de un texto"
+    },
+    {
+     "word": "sostenible",
+     "meaning": "que respeta el medio ambiente"
+    },
+    {
+     "word": "comestible",
+     "meaning": "que se puede comer"
+    },
+    {
+     "word": "harta",
+     "meaning": "cansada de algo"
+    }
+   ]
+  },
+  {
+   "id": "relevo",
+   "title": "Cierre del libro de la noche",
+   "place": "El despacho de la jefa",
+   "context": "A las siete, Doña Pura escribe la última entrada del libro de registro y la lee en voz alta antes de firmarla.",
+   "speakers": [
+    {
+     "name": "Pura",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celestino",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "«Turno de noche posterior a la Noche de los Faroles. Objetos ingresados: muchos. Objetos devueltos: más de los que esta funcionaria habría apostado. Incidencias: un loro con custodia compartida, una canoa con dos dueños reconciliados, una llave de la ciudad parcialmente comida y un guante que llevaba cuarenta años sin catalogar por motivos que el responsable deberá explicar ante un café»."
+    },
+    {
+     "s": 1,
+     "text": "Es la primera vez que la veo escribir con adjetivos."
+    },
+    {
+     "s": 0,
+     "text": "Es la primera vez que hay motivo. Sigo: «Observaciones de la jefa de servicio: esta oficina se fundó para guardar cosas. Treinta años he defendido que su función es el orden. Esta noche reconozco que me equivocaba a medias. El orden sirve para que las cosas esperen. Pero lo que vuelve a su sitio no son las cosas: son las personas que las vienen a buscar»."
+    },
+    {
+     "s": 1,
+     "text": "Eso no se lo van a entender en la auditoría."
+    },
+    {
+     "s": 0,
+     "text": "Que no lo entiendan. Última línea: «Se recomienda a la persona que empezó anoche para el turno de noche de manera permanente, salvo que prefiera otra cosa. Se le advierte de que el turno de noche no tiene horario: empieza cuando alguien pierde algo y termina cuando alguien deja de sentirse perdido»."
+    },
+    {
+     "s": 1,
+     "text": "Doña Pura… ¿se encuentra bien?"
+    },
+    {
+     "s": 0,
+     "text": "Perfectamente. Y otra cosa, Celestino. He recuperado un diario que no sabía que había perdido. Alguien lo ha traído en mi mochila, sin una sola página doblada. Así que este jueves tengo intención de bailar en el puerto. Si algún funcionario sentimental quiere venir, que venga. Pero sin pisarme."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué contraste estilístico tiene la entrada de Pura?",
+     "infer": true,
+     "options": [
+      "Mezcla fórmulas burocráticas con ironía y emoción",
+      "Usa solo datos numéricos y frases técnicas",
+      "Está escrita en un tono completamente poético"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué sorprende a Celestino de la escritura de Pura?",
+     "options": [
+      "Que firme con su nombre completo",
+      "Que use adjetivos",
+      "Que escriba en el libro antiguo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué rectifica Pura en sus observaciones?",
+     "infer": true,
+     "options": [
+      "Que el orden es inútil en la oficina",
+      "Que la persona nueva ha cometido errores",
+      "Que la oficina sirve sobre todo a las personas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué insinúa la invitación final a «algún funcionario sentimental»?",
+     "infer": true,
+     "options": [
+      "Que quiere sustituir a Celestino por la persona nueva",
+      "Que prohíbe a todos ir al puerto el jueves",
+      "Que Pura invita a Celestino con complicidad"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué creencia profesional o personal has tenido que reconocer que era «verdad a medias»?",
+     "model": "Que la disciplina lo es todo; con los años vi que sin descanso la disciplina se vuelve terquedad."
+    },
+    {
+     "q": "¿Cómo interpretas la idea de que el turno de noche «no tiene horario»?",
+     "model": "Que el trabajo de cuidado no se mide en horas, sino en el efecto que tiene en los demás."
+    },
+    {
+     "q": "¿Qué escribirías tú en la casilla de observaciones sobre una noche que cambió tu forma de ver a alguien?",
+     "model": "Que mi jefe, que parecía frío, se quedó conmigo en urgencias hasta el amanecer."
+    }
+   ],
+   "gaps": "El orden sirve para que las cosas [esperen]. Pero lo que vuelve a su [sitio] no son las cosas: son las [personas] que las vienen a [buscar]",
+   "glossary": [
+    {
+     "word": "ingresados",
+     "meaning": "que han entrado en un registro"
+    },
+    {
+     "word": "incidencias",
+     "meaning": "sucesos que interrumpen lo normal"
+    },
+    {
+     "word": "auditoría",
+     "meaning": "revisión oficial"
+    },
+    {
+     "word": "pisarme",
+     "meaning": "ponerme el pie encima"
+    }
+   ]
+  }
+ ]
+}

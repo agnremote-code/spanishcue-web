@@ -61,7 +61,8 @@ test("Países opens with México and United States and aliases are searchable", 
   assert.deepEqual(countries.slice(0, 2).map((lesson) => lesson.id), [210, 36]);
 
   for (const alias of ["Mexico", "México", "mexicano", "mexicana"])
-    assert.deepEqual(product.filterLessons(product.lessons, { query: alias }).map((lesson) => lesson.id), [210]);
+    // 265 (Roleplays de México, 2026-11-24) may follow the flagship, never precede it.
+    assert.ok([[210], [210, 265]].some((ids) => JSON.stringify(ids) === JSON.stringify(product.filterLessons(product.lessons, { query: alias }).map((lesson) => lesson.id))), alias);
   for (const alias of ["USA", "United States", "US", "EEUU", "Estados Unidos"])
     assert.ok(product.filterLessons(product.lessons, { query: alias }).some((lesson) => lesson.id === 36), alias);
 });

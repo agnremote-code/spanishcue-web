@@ -8,13 +8,13 @@
 }
 
 .pr-topic-grid .pr-pair b {
-  color: #fff;
-  font-size: 13px;
+  color: #121212;
+  font-size: 14px;
 }
 
 .pr-topic-grid .pr-pair span {
-  color: #ffffffbd;
-  font-size: 11px;
+  color: #121212bd;
+  font-size: 14px;
 }
 
 .pr-topic-hero .pr-pair {
@@ -24,13 +24,13 @@
 }
 
 .pr-topic-hero .pr-pair b {
-  color: #fff;
+  color: #121212;
   font-size: 16px;
 }
 
 .pr-topic-hero .pr-pair span {
-  color: #ffffffc7;
-  font-size: 12px;
+  color: #121212c7;
+  font-size: 14px;
 }
 
 .pr-block-card aside .pr-pair {
@@ -41,19 +41,19 @@
 }
 
 .pr-block-card aside .pr-pair b {
-  color: #fff;
+  color: #121212;
   font-size: 14px;
   letter-spacing: 0;
 }
 
 .pr-block-card aside .pr-pair span {
-  color: #ddd7e9;
-  font-size: 11px;
+  color: #29203b;
+  font-size: 14px;
 }
 
 .pr-feedback-grid label small {
   display: block;
   margin-top: 3px;
-  color: #aaa4bd;
-  font-size: 10px;
+  color: #4a435d;
+  font-size: 14px;
 }

@@ -7,7 +7,7 @@ import { cancelPaddleSubscription, pausePaddleSubscription, resumePaddleSubscrip
 import { applyPaypalSubscriptionLifecycle, currentSubscriptionForUser } from "../../../../db/billing";
 import { applyPaddleLifecycle } from "../../../../db/paddle-billing";
 
-import { isTrialCharge, PROMO_WEEK_CENTS } from "../../../promo-config";
+import { DISCOUNT_10_CENTS, isTrialCharge, PROMO_WEEK_CENTS } from "../../../promo-config";
 
 export const dynamic = "force-dynamic";
 
@@ -24,6 +24,8 @@ function safe(subscription: Awaited<ReturnType<typeof currentSubscriptionForUser
     // A paid trial period (the legacy US$2 day or the US$0.99 promo week): the first full charge is due when it ends.
     trial: isTrialCharge(subscription.lastAmountCents),
     promoWeek: subscription.lastAmountCents === PROMO_WEEK_CENTS,
+    // The first month of the 10% offer (US$17.91), then US$19.90.
+    discountMonth: subscription.lastAmountCents === DISCOUNT_10_CENTS,
     amountCents: subscription.lastAmountCents,
     // A declined renewal newer than the last completed payment.
     paymentFailed: Boolean(subscription.lastFailureAt && subscription.lastFailureAt > (subscription.lastPaymentAt ?? 0)),

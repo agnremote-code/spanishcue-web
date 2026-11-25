@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+/* Clásicas 2026: the shared look of every classic (non-3D) class.
+   Light warm canvas, white surfaces, one accent per class, a modern grotesque
+   for titles and a calm sans for reading. Readable on a projector: no text
+   under 14px, no tiny letter-spaced capitals, generous space. A class sets
+   --cx-accent (and optionally --cx-accent-ink) on its root and uses .cx.
+   Byte-frozen classic pages (Última llamada, Habitación 508, Red Flag o No, Let's Talk, the conversation worlds) cannot take the
+   class, so their roots are listed next to .cx and skinned from their layout. */
+:is(.cx,main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world){
+  --cx-canvas:#f6f4ef;--cx-paper:#fff;--cx-ink:#0e1525;--cx-ink-2:#363f52;--cx-muted:#687083;
+  --cx-line:#e6e1d8;--cx-line-2:#efebe4;--cx-accent:#2f5bea;--cx-accent-ink:#fff;
+  --cx-accent-soft:color-mix(in srgb,var(--cx-accent) 11%,#fff);
+  --cx-accent-line:color-mix(in srgb,var(--cx-accent) 34%,var(--cx-line));
+  --cx-teacher:#b7791f;--cx-teacher-soft:#fff8eb;
+  --cx-r-lg:28px;--cx-r-md:20px;--cx-r-sm:14px;
+  --cx-sh-1:0 1px 2px rgba(14,21,37,.04),0 10px 28px -16px rgba(14,21,37,.16);
+  --cx-sh-2:0 2px 6px rgba(14,21,37,.05),0 28px 60px -28px rgba(14,21,37,.28);
+  --cx-display:"Bricolage Grotesque","Plus Jakarta Sans",ui-sans-serif,system-ui,sans-serif;
+  --cx-body:"Plus Jakarta Sans",Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --cx-pad:clamp(16px,4vw,48px);--cx-max:1240px;
+  min-height:100vh;background:var(--cx-canvas);color:var(--cx-ink);font-family:var(--cx-body);
+  font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:clip
+}
+.cx *,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) *,.cx *::before,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) *::before,.cx *::after,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) *::after{box-sizing:border-box}
+.cx :is(h1,h2,h3),:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) :is(h1,h2,h3){font-family:var(--cx-display);font-weight:700;letter-spacing:-.025em;line-height:1.05;text-wrap:balance;margin:0}
+.cx p,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) p{margin:0}
+.cx button,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) button{font:inherit;color:inherit;cursor:pointer}
+.cx button:disabled,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) button:disabled{cursor:default;opacity:.4}
+.cx a,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) a{color:inherit}
+.cx :focus-visible,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) :focus-visible{outline:3px solid color-mix(in srgb,var(--cx-accent) 70%,#000);outline-offset:3px;border-radius:10px}
+.cx img,:where(main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) img{max-width:100%}
+
+/* Top bar */
+.cx-top{position:sticky;top:0;z-index:40;display:flex;align-items:center;gap:16px;min-height:64px;padding:8px var(--cx-pad);background:color-mix(in srgb,var(--cx-canvas) 82%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--cx-line-2)}
+.cx-top-brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:700;font-size:15px;flex:none}
+.cx-top-brand img{width:34px;height:34px;object-fit:contain}
+.cx-top-brand span{display:flex;flex-direction:column;line-height:1.1}
+.cx-top-brand small{font-size:12.5px;font-weight:500;color:var(--cx-muted)}
+.cx-top-title{flex:1;min-width:0;font-weight:600;font-size:15px;color:var(--cx-ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center}
+.cx-top-end{display:flex;align-items:center;gap:8px;flex:none}
+
+/* Segmented control (levels, modes) */
+.cx-seg{display:inline-flex;flex-wrap:wrap;gap:2px;padding:4px;border-radius:999px;background:var(--cx-paper);border:1px solid var(--cx-line);box-shadow:0 1px 2px rgba(14,21,37,.04)}
+.cx-seg button{min-width:44px;min-height:36px;padding:6px 12px;border:0;border-radius:999px;background:transparent;font-weight:650;font-size:14px;color:var(--cx-ink-2);transition:background .2s,color .2s}
+.cx-seg button:hover{background:var(--cx-line-2)}
+.cx-seg button[aria-checked="true"],.cx-seg button[aria-pressed="true"],.cx-seg button.is-on{background:var(--cx-ink);color:#fff}
+
+/* Buttons and chips */
+.cx-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 22px;border-radius:999px;border:1px solid var(--cx-line);background:var(--cx-paper);font-weight:650;font-size:15.5px;text-decoration:none;transition:transform .2s,box-shadow .2s,background .2s}
+.cx-btn:not(:disabled):hover{transform:translateY(-1px);box-shadow:var(--cx-sh-1)}
+.cx-btn.is-primary{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+.cx-btn.is-accent{background:var(--cx-accent);border-color:var(--cx-accent);color:var(--cx-accent-ink)}
+.cx-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--cx-paper);border:1px solid var(--cx-line);font-size:14px;font-weight:600;color:var(--cx-ink-2)}
+.cx-chip.is-accent{background:var(--cx-accent-soft);border-color:transparent;color:color-mix(in srgb,var(--cx-accent) 78%,#000)}
+.cx-kicker{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:650;color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+.cx-kicker::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--cx-accent)}
+
+/* Surfaces */
+.cx-card{background:var(--cx-paper);border:1px solid var(--cx-line);border-radius:var(--cx-r-md);box-shadow:var(--cx-sh-1)}
+.cx-teacher{display:grid;gap:4px;padding:14px 18px;border-radius:var(--cx-r-sm);background:var(--cx-teacher-soft);border:1px solid #f3e2bf;color:#5b4310;font-size:15px}
+.cx-teacher b{font-size:13.5px;font-weight:700;color:var(--cx-teacher)}
+
+/* Motion: content arrives softly */
+@keyframes cx-rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.cx-rise{animation:cx-rise .45s cubic-bezier(.2,.7,.2,1) both}
+@media (prefers-reduced-motion:reduce){:is(.cx,main.ul-app,main.h508-app,main.rf-game,main.talk-app,main.cw-world) *{animation:none!important;transition:none!important}}

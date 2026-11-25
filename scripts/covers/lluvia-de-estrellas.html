@@ -1,0 +1,208 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Lluvia de estrellas · cover</title><style>html,body{margin:0;background:#050817}svg{display:block}</style></head><body>
+<!-- Lluvia de estrellas: the cover's key art, drawn as a cartoon scene in the mascots' doll style
+     (big heads, round eyes, soft shading). Open it in Chromium at 1600×900, save the screenshot
+     as scripts/covers/art/lluvia-de-estrellas.webp, then run: node scripts/covers/render.mjs mundos lluvia-de-estrellas -->
+<svg id="c" xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#03050f"/><stop offset=".45" stop-color="#0b1430"/><stop offset=".78" stop-color="#1d2a55"/><stop offset="1" stop-color="#3a3f6e"/></linearGradient>
+  <linearGradient id="milky" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#9fb4ff" stop-opacity="0"/><stop offset=".35" stop-color="#c9d4ff" stop-opacity=".28"/><stop offset=".5" stop-color="#f3e6d0" stop-opacity=".38"/><stop offset=".65" stop-color="#c9d4ff" stop-opacity=".26"/><stop offset="1" stop-color="#9fb4ff" stop-opacity="0"/></linearGradient>
+  <filter id="blur"><feGaussianBlur stdDeviation="18"/></filter>
+  <filter id="soft"><feGaussianBlur stdDeviation="4"/></filter>
+  <linearGradient id="meteor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff" stop-opacity="0"/><stop offset=".8" stop-color="#dfe9ff" stop-opacity=".7"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+  <linearGradient id="fireball" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7fe0c4" stop-opacity="0"/><stop offset=".7" stop-color="#b8ffe6" stop-opacity=".8"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+  <linearGradient id="far" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2b2c4f"/><stop offset="1" stop-color="#1b1c36"/></linearGradient>
+  <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#5b4a52"/><stop offset="1" stop-color="#2a2130"/></linearGradient>
+  <linearGradient id="salt" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#8d93b8"/><stop offset="1" stop-color="#5a5f86"/></linearGradient>
+  <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ffb35a" stop-opacity=".85"/><stop offset=".45" stop-color="#ff7a2e" stop-opacity=".3"/><stop offset="1" stop-color="#ff7a2e" stop-opacity="0"/></radialGradient>
+  <radialGradient id="redlamp" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#ff4a4a" stop-opacity=".8"/><stop offset="1" stop-color="#ff4a4a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="dome" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8f97ad"/><stop offset=".45" stop-color="#e9edf5"/><stop offset="1" stop-color="#7c8399"/></linearGradient>
+  <linearGradient id="tentA" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d8833a"/><stop offset="1" stop-color="#8f4a1e"/></linearGradient>
+  <linearGradient id="tentB" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#3f7fb5"/><stop offset="1" stop-color="#21466b"/></linearGradient>
+  <linearGradient id="tentC" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5aa36a"/><stop offset="1" stop-color="#2e5d3a"/></linearGradient>
+  <radialGradient id="skin" cx=".42" cy=".38" r=".7"><stop offset="0" stop-color="#ffdcc0"/><stop offset=".7" stop-color="#f1b48f"/><stop offset="1" stop-color="#d98f6c"/></radialGradient>
+  <radialGradient id="skin2" cx=".42" cy=".38" r=".7"><stop offset="0" stop-color="#d9a27a"/><stop offset=".7" stop-color="#b57a52"/><stop offset="1" stop-color="#8e5a3a"/></radialGradient>
+  <radialGradient id="skin3" cx=".42" cy=".38" r=".7"><stop offset="0" stop-color="#9b6a4c"/><stop offset=".7" stop-color="#7a4e34"/><stop offset="1" stop-color="#5a3622"/></radialGradient>
+  <linearGradient id="coatRed" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d0484c"/><stop offset="1" stop-color="#8a2632"/></linearGradient>
+  <linearGradient id="coatTeal" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f8f8a"/><stop offset="1" stop-color="#1a5552"/></linearGradient>
+  <linearGradient id="coatGold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#e2b24c"/><stop offset="1" stop-color="#a87822"/></linearGradient>
+  <linearGradient id="coatPlum" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#7c4f9a"/><stop offset="1" stop-color="#4a2b61"/></linearGradient>
+  <linearGradient id="llama" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f4ead8"/><stop offset="1" stop-color="#c9b89a"/></linearGradient>
+</defs>
+
+<!-- The sky -->
+<rect width="1600" height="900" fill="url(#sky)"/>
+<g id="milkyway" transform="rotate(-28 800 300)">
+  <ellipse cx="800" cy="300" rx="980" ry="120" fill="url(#milky)" filter="url(#blur)"/>
+  <ellipse cx="760" cy="300" rx="700" ry="46" fill="#f6ead6" opacity=".16" filter="url(#blur)"/>
+  <ellipse cx="900" cy="296" rx="380" ry="14" fill="#1a1e3a" opacity=".5" filter="url(#soft)"/>
+</g>
+<g id="stars" fill="#fff"></g>
+<!-- Meteors: the shower radiant top right -->
+<g id="meteors" stroke-linecap="round"></g>
+<!-- The fireball -->
+<g id="fireball-g">
+  <line x1="380" y1="70" x2="640" y2="250" stroke="url(#fireball)" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="640" cy="250" r="12" fill="#ffffff"/>
+  <circle cx="640" cy="250" r="34" fill="#b8ffe6" opacity=".35" filter="url(#soft)"/>
+</g>
+
+<!-- Volcanoes on the horizon -->
+<path d="M0 640 L170 560 L240 520 L300 548 L420 600 L560 616 L700 590 L760 548 L800 530 L850 552 L980 612 L1140 600 L1260 520 L1310 492 L1360 520 L1480 590 L1600 600 L1600 700 L0 700 Z" fill="url(#far)"/>
+<path d="M1292 504 L1310 492 L1330 506 L1318 512 L1304 508 Z" fill="#e8ecf6" opacity=".8"/>
+<path d="M226 528 L240 520 L256 530 L240 534 Z" fill="#e8ecf6" opacity=".7"/>
+
+<!-- The salt flat, right -->
+<path d="M980 660 Q1300 640 1600 650 L1600 720 Q1300 708 980 700 Z" fill="url(#salt)" opacity=".85"/>
+<g stroke="#b9bfe0" stroke-width="1.6" opacity=".45" fill="none">
+  <path d="M1040 680 l40 -10 l36 8 l40 -9 l44 9 l38 -7 l50 8 l40 -9 l46 8 l40 -6 l50 7"/>
+  <path d="M1080 694 l30 -8 l44 6 l36 -7 l40 8 l46 -8 l42 7 l50 -7 l40 6"/>
+</g>
+
+<!-- The desert floor -->
+<path d="M0 660 Q400 640 800 668 Q1200 700 1600 690 L1600 900 L0 900 Z" fill="url(#sand)"/>
+
+<!-- The observatory on its hill, left -->
+<path d="M60 690 Q190 610 330 690 Z" fill="#3a3046"/>
+<g id="observatory">
+  <rect x="150" y="600" width="90" height="62" fill="#c9ccd6"/>
+  <rect x="150" y="600" width="90" height="62" fill="#000" opacity=".12"/>
+  <path d="M146 604 A49 49 0 0 1 244 604 Z" fill="url(#dome)"/>
+  <path d="M188 556 L202 556 L204 604 L186 604 Z" fill="#20253c"/>
+  <rect x="186" y="626" width="18" height="36" fill="#5a3e2a"/>
+  <circle cx="195" cy="644" r="1.6" fill="#e7c06a"/>
+</g>
+
+<!-- The rocky lookout with tiny campers, centre far -->
+<path d="M640 610 Q700 560 760 566 Q820 560 880 616 Z" fill="#3b3048"/>
+<g fill="#0e0f1e">
+  <circle cx="712" cy="560" r="6"/><rect x="707" y="565" width="10" height="16" rx="4"/>
+  <circle cx="742" cy="556" r="6"/><rect x="737" y="561" width="10" height="16" rx="4"/>
+  <circle cx="770" cy="557" r="5"/><rect x="766" y="562" width="9" height="14" rx="4"/>
+  <circle cx="800" cy="561" r="6"/><rect x="795" y="566" width="10" height="16" rx="4"/>
+</g>
+<circle cx="742" cy="572" r="7" fill="url(#redlamp)"/>
+
+<!-- The campsite: tents and a caravan -->
+<g id="tents">
+  <path d="M330 742 L400 668 L470 742 Z" fill="url(#tentA)"/><path d="M400 668 L388 742 L412 742 Z" fill="#3a1e10" opacity=".7"/>
+  <path d="M1110 752 L1190 664 L1270 752 Z" fill="url(#tentB)"/><path d="M1190 664 L1176 752 L1204 752 Z" fill="#0e2034" opacity=".7"/>
+  <path d="M1290 760 L1350 696 L1410 760 Z" fill="url(#tentC)"/><path d="M1350 696 L1340 760 L1360 760 Z" fill="#132a18" opacity=".7"/>
+  <rect x="1420" y="690" width="150" height="70" rx="22" fill="#e8e1d1"/><rect x="1440" y="708" width="44" height="26" rx="6" fill="#ffcf7a" opacity=".85"/><circle cx="1452" cy="764" r="12" fill="#1c1a24"/><circle cx="1540" cy="764" r="12" fill="#1c1a24"/>
+</g>
+
+<!-- A llama by the corral -->
+<g id="llama" transform="translate(1000 676)">
+  <ellipse cx="0" cy="40" rx="42" ry="22" fill="url(#llama)"/>
+  <rect x="-34" y="52" width="9" height="34" rx="4" fill="#c9b89a"/><rect x="-14" y="54" width="9" height="34" rx="4" fill="#bfae90"/>
+  <rect x="12" y="54" width="9" height="34" rx="4" fill="#c9b89a"/><rect x="28" y="52" width="9" height="34" rx="4" fill="#bfae90"/>
+  <path d="M26 30 Q32 -6 40 -24 L56 -22 Q50 6 44 38 Z" fill="url(#llama)"/>
+  <ellipse cx="50" cy="-28" rx="17" ry="13" fill="url(#llama)"/>
+  <path d="M42 -40 L40 -54 L48 -42 Z M54 -40 L56 -54 L60 -40 Z" fill="#e6d8be"/>
+  <circle cx="56" cy="-30" r="3.2" fill="#1b1410"/><circle cx="57" cy="-31" r="1" fill="#fff"/>
+  <path d="M28 -6 Q44 -2 52 -12" stroke="#c94a64" stroke-width="5" fill="none"/>
+  <circle cx="30" cy="-4" r="4" fill="#e9b13a"/>
+</g>
+
+<!-- The campfire, centre front -->
+<ellipse cx="800" cy="812" rx="260" ry="90" fill="url(#glow)"/>
+<g id="fire">
+  <rect x="740" y="806" width="120" height="16" rx="8" fill="#5a3a22" transform="rotate(10 800 814)"/>
+  <rect x="740" y="806" width="120" height="16" rx="8" fill="#6b452a" transform="rotate(-12 800 814)"/>
+  <path d="M800 690 Q838 750 826 790 Q842 772 846 756 Q872 802 836 822 L764 822 Q730 798 756 752 Q762 776 776 786 Q764 740 800 690 Z" fill="#ff8a2a"/>
+  <path d="M800 728 Q822 768 816 800 Q830 790 832 778 Q846 806 822 820 L778 820 Q760 804 774 776 Q780 792 788 798 Q782 764 800 728 Z" fill="#ffd25a"/>
+  <path d="M800 766 Q812 790 808 812 L792 812 Q788 790 800 766 Z" fill="#fff4c4"/>
+  <g fill="#ffcf6a"><circle cx="772" cy="672" r="2.6"/><circle cx="830" cy="650" r="2"/><circle cx="812" cy="630" r="1.6"/></g>
+</g>
+
+<!-- The campers around the fire, looking up -->
+<!-- Left: an elderly woman wrapped in a blanket, pointing up -->
+<g id="amalia" transform="translate(560 640)">
+  <path d="M-62 210 Q-70 92 0 80 Q70 92 62 210 Z" fill="url(#coatPlum)"/>
+  <path d="M-58 140 Q0 172 58 140 L60 160 Q0 192 -60 160 Z" fill="#e2b24c" opacity=".9"/>
+  <path d="M36 104 Q80 40 98 -30" stroke="url(#coatPlum)" stroke-width="26" stroke-linecap="round" fill="none"/>
+  <circle cx="100" cy="-38" r="13" fill="url(#skin)"/>
+  <circle cx="0" cy="12" r="70" fill="url(#skin)"/>
+  <path d="M-72 4 Q-74 -60 0 -64 Q74 -60 72 4 Q60 -30 0 -36 Q-60 -30 -72 4 Z" fill="#e9e7ef"/>
+  <circle cx="-56" cy="-6" r="24" fill="#e9e7ef"/><circle cx="56" cy="-6" r="24" fill="#e9e7ef"/>
+  <ellipse cx="-24" cy="0" rx="11" ry="14" fill="#1b1410"/><ellipse cx="24" cy="0" rx="11" ry="14" fill="#1b1410"/>
+  <circle cx="-20" cy="-5" r="4" fill="#fff"/><circle cx="28" cy="-5" r="4" fill="#fff"/>
+  <circle cx="-24" cy="0" r="20" fill="none" stroke="#7a5a3a" stroke-width="3"/><circle cx="24" cy="0" r="20" fill="none" stroke="#7a5a3a" stroke-width="3"/><path d="M-4 0 L4 0" stroke="#7a5a3a" stroke-width="3"/>
+  <ellipse cx="-40" cy="30" rx="10" ry="6" fill="#f08a8a" opacity=".5"/><ellipse cx="40" cy="30" rx="10" ry="6" fill="#f08a8a" opacity=".5"/>
+  <path d="M-16 40 Q0 56 16 40 Q0 48 -16 40 Z" fill="#9a3b3b"/>
+</g>
+
+<!-- Centre right: Celeste, the guide, red head torch and notebook -->
+<g id="celeste" transform="translate(1010 610)">
+  <path d="M-66 260 Q-74 110 0 98 Q74 110 66 260 Z" fill="url(#coatRed)"/>
+  <path d="M-20 100 L0 150 L20 100 Z" fill="#f2efe6"/>
+  <g transform="translate(-58 168) rotate(-14)"><rect x="-30" y="-22" width="62" height="46" rx="6" fill="#2c3470"/><rect x="-26" y="-18" width="54" height="38" rx="4" fill="#f3ead2"/><path d="M-20 -8 h40 M-20 2 h34 M-20 12 h38" stroke="#7a6f58" stroke-width="2"/></g>
+  <circle cx="0" cy="22" r="74" fill="url(#skin2)"/>
+  <path d="M-78 30 Q-86 -66 0 -66 Q86 -66 78 30 Q74 -16 40 -30 Q0 -14 -40 -30 Q-74 -16 -78 30 Z" fill="#241712"/>
+  <path d="M-80 30 Q-90 120 -60 150 Q-70 80 -66 30 Z M80 30 Q90 120 60 150 Q70 80 66 30 Z" fill="#241712"/>
+  <path d="M-74 -20 Q0 -46 74 -20" stroke="#2a2a30" stroke-width="9" fill="none"/>
+  <rect x="-14" y="-46" width="28" height="18" rx="6" fill="#33343c"/><circle cx="0" cy="-37" r="7" fill="#ff4a4a"/><circle cx="0" cy="-37" r="30" fill="url(#redlamp)"/>
+  <ellipse cx="-26" cy="6" rx="11" ry="15" fill="#1b1410"/><ellipse cx="26" cy="6" rx="11" ry="15" fill="#1b1410"/>
+  <circle cx="-22" cy="0" r="4.5" fill="#fff"/><circle cx="30" cy="0" r="4.5" fill="#fff"/>
+  <ellipse cx="-44" cy="38" rx="11" ry="6" fill="#e07a6a" opacity=".5"/><ellipse cx="44" cy="38" rx="11" ry="6" fill="#e07a6a" opacity=".5"/>
+  <path d="M-22 48 Q0 70 22 48 Q0 58 -22 48 Z" fill="#8a2e2e"/>
+</g>
+
+<!-- Far left front: a child with binoculars -->
+<g id="simon" transform="translate(300 760)">
+  <path d="M-46 160 Q-52 66 0 58 Q52 66 46 160 Z" fill="url(#coatGold)"/>
+  <circle cx="0" cy="0" r="56" fill="url(#skin3)"/>
+  <path d="M-58 -2 Q-60 -62 0 -62 Q60 -62 58 -2 Q46 -36 0 -40 Q-46 -36 -58 -2 Z" fill="#111"/>
+  <path d="M-56 -20 Q0 -78 56 -20 Q50 -60 0 -66 Q-50 -60 -56 -20 Z" fill="#2f8f8a"/><circle cx="0" cy="-70" r="10" fill="#e2b24c"/>
+  <g transform="rotate(-24 0 -6)"><rect x="-38" y="-24" width="30" height="34" rx="10" fill="#22252e"/><rect x="8" y="-24" width="30" height="34" rx="10" fill="#22252e"/><rect x="-10" y="-14" width="20" height="12" fill="#22252e"/><circle cx="-23" cy="-22" r="10" fill="#7fa6d6" opacity=".7"/><circle cx="23" cy="-22" r="10" fill="#7fa6d6" opacity=".7"/></g>
+  <path d="M-14 32 Q0 46 14 32 Q0 40 -14 32 Z" fill="#7a2a2a"/>
+  <path d="M-36 80 Q-60 40 -44 10" stroke="url(#coatGold)" stroke-width="20" stroke-linecap="round" fill="none"/>
+  <path d="M36 80 Q60 40 44 10" stroke="url(#coatGold)" stroke-width="20" stroke-linecap="round" fill="none"/>
+</g>
+
+<!-- Far right front: a miner with a helmet lamp switched off, looking up for the first time -->
+<g id="ramiro" transform="translate(1340 770)">
+  <path d="M-58 150 Q-66 60 0 52 Q66 60 58 150 Z" fill="url(#coatTeal)"/>
+  <circle cx="0" cy="0" r="60" fill="url(#skin)"/>
+  <path d="M-64 -8 Q-64 -72 0 -74 Q64 -72 64 -8 L76 -6 L76 4 L-76 4 L-76 -6 Z" fill="#e8b43a"/>
+  <rect x="-12" y="-62" width="24" height="18" rx="5" fill="#5a5a62"/><circle cx="0" cy="-53" r="6" fill="#9aa0aa"/>
+  <path d="M-44 30 Q-30 64 0 66 Q30 64 44 30 Q30 48 0 48 Q-30 48 -44 30 Z" fill="#e8e8ec"/>
+  <ellipse cx="-22" cy="-2" rx="9" ry="13" fill="#1b1410"/><ellipse cx="22" cy="-2" rx="9" ry="13" fill="#1b1410"/>
+  <circle cx="-19" cy="-8" r="3.6" fill="#fff"/><circle cx="25" cy="-8" r="3.6" fill="#fff"/>
+  <ellipse cx="0" cy="40" rx="9" ry="7" fill="#7a2a2a"/>
+</g>
+
+<!-- Title band -->
+<g font-family="'Baloo 2','Fredoka','Nunito','Arial Rounded MT Bold',sans-serif" text-anchor="middle">
+  <text x="800" y="132" font-size="96" font-weight="800" fill="#fff6dc" stroke="#141a3a" stroke-width="10" paint-order="stroke" letter-spacing="2">Lluvia de estrellas</text>
+  <text x="800" y="186" font-size="34" font-weight="700" fill="#ffd27a" stroke="#141a3a" stroke-width="6" paint-order="stroke">Todos al mirador antes de las 03:12</text>
+</g>
+
+<script>
+// Deterministic stars and meteors (no randomness between renders).
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+const NS = 'http://www.w3.org/2000/svg';
+const stars = document.getElementById('stars');
+for (let i = 0; i < 520; i++) {
+  const c = document.createElementNS(NS, 'circle');
+  const y = Math.pow(rnd(), 1.3) * 600;
+  c.setAttribute('cx', (rnd() * 1600).toFixed(1)); c.setAttribute('cy', y.toFixed(1));
+  const big = rnd();
+  c.setAttribute('r', (big > 0.97 ? 2.6 : big > 0.85 ? 1.6 : 0.9).toFixed(1));
+  c.setAttribute('opacity', (0.35 + rnd() * 0.65).toFixed(2));
+  if (big > 0.92) c.setAttribute('fill', rnd() > 0.5 ? '#ffe2b8' : '#cfe0ff');
+  stars.appendChild(c);
+}
+const meteors = document.getElementById('meteors');
+const rad = [1380, 40];
+for (let i = 0; i < 16; i++) {
+  const a = Math.PI * (0.62 + rnd() * 0.3), d0 = 120 + rnd() * 520, len = 70 + rnd() * 150;
+  const x1 = rad[0] + Math.cos(a) * d0, y1 = rad[1] + Math.sin(a) * d0;
+  const x2 = rad[0] + Math.cos(a) * (d0 + len), y2 = rad[1] + Math.sin(a) * (d0 + len);
+  if (y2 > 520) continue;
+  const l = document.createElementNS(NS, 'line');
+  l.setAttribute('x1', x1.toFixed(1)); l.setAttribute('y1', y1.toFixed(1)); l.setAttribute('x2', x2.toFixed(1)); l.setAttribute('y2', y2.toFixed(1));
+  l.setAttribute('stroke', '#e6eeff'); l.setAttribute('opacity', (0.45 + rnd() * 0.5).toFixed(2)); l.setAttribute('stroke-width', (1.6 + rnd() * 2.4).toFixed(1));
+  meteors.appendChild(l);
+}
+</script>
+</svg></body></html>

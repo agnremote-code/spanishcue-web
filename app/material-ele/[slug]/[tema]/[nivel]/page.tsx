@@ -60,7 +60,7 @@ export default async function TemaLevelRoute({ params }: Props) {
             <ElePageDates dates={dates} />
           </section>
           {preview ? <ElePreviewVideo lesson={preview} pathname={page.path} /> : null}
-          {audios.length ? <EleFreeAudios audios={audios} pathname={page.path} title={`Audio gratis de comprensión auditiva ${page.level}`} intro="Para escuchar ahora, sin registro: el audio, las preguntas con sus respuestas, preguntas para conversar y la transcripción." /> : null}
+          {audios.length ? <EleFreeAudios audios={audios} pathname={page.path} title={audios.length > 1 ? `${audios.length} audios gratis de comprensión auditiva ${page.level}` : `Audio gratis de comprensión auditiva ${page.level}`} intro="Para escuchar ahora, sin registro: el audio, las preguntas con sus respuestas, preguntas para conversar y la transcripción." /> : null}
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
           <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro={page.order}>
             <EleLessonGrid lessons={lessons} />

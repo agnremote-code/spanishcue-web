@@ -1,0 +1,175 @@
+/* Última llamada, Clásicas 2026 skin. page.tsx, style.css and content.json are
+   byte-frozen by the preservation tests, so the new look lives here and is
+   loaded from layout.tsx. Every selector starts with main.ul-app so it outranks
+   the frozen .ul-* rules whatever order the stylesheets load in. Uppercase
+   strings in the frozen markup are shown in sentence case with
+   lowercase + ::first-letter. */
+main.ul-app{--cx-accent:#1c6fd6;--blue:#1c6fd6;--amber:#f0a92e;--paper:#fff;padding-bottom:96px}
+main.ul-app :focus-visible{outline:3px solid color-mix(in srgb,var(--cx-accent) 70%,#000)}
+
+/* Sentence case for the frozen uppercase labels */
+main.ul-app :is(.ul-top>span,.ul-stage button,.ul-teacher summary,.ul-hero>div>span,.ul-board header span,.ul-board button>i,.ul-workspace>header span,.ul-predict small,.ul-gist h3,.ul-task>small,.ul-task aside>b,.ul-transcript>b,.ul-mission header>span,.ul-clock span,.ul-clock i,.ul-mission aside>b,.ul-final>div>span,.ul-final article>small,.ul-support header b,.ul-board button small,.ul-workspace>header p),
+main.ul-app :where(button:not(.audio-deck button)){text-transform:lowercase}
+main.ul-app :is(.ul-top>a:first-child,.ul-top>span,.ul-teacher summary,.ul-hero>div>span,.ul-board header span,.ul-board button>i,.ul-workspace>header span,.ul-predict small,.ul-gist h3,.ul-task>small,.ul-task aside>b,.ul-transcript>b,.ul-mission header>span,.ul-clock span,.ul-clock i,.ul-mission aside>b,.ul-final>div>span,.ul-final article>small,.ul-support header b,.ul-board button small,.ul-workspace>header p)::first-letter,
+main.ul-app :where(button:not(.audio-deck button))::first-letter{text-transform:uppercase}
+main.ul-app :is(.ul-predict small,.ul-task>small,.ul-task aside>b,.ul-transcript>b,.ul-mission aside>b,.ul-final article>small,.ul-clock span,.ul-clock i,.ul-board button small){display:block}
+main.ul-app .ul-stage button b{text-transform:none}
+
+main.ul-app .audio-deck header small{display:inline-block;text-transform:lowercase}
+main.ul-app .audio-deck header small::first-letter{text-transform:uppercase}
+
+/* Top bar */
+main.ul-app .ul-top{position:sticky;top:0;z-index:40;height:auto;min-height:64px;padding:8px var(--cx-pad);gap:18px;background:color-mix(in srgb,var(--cx-canvas) 84%,transparent);backdrop-filter:saturate(1.4) blur(14px);-webkit-backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--cx-line-2)}
+main.ul-app .ul-top a{color:var(--cx-ink-2);font-size:15px;font-weight:600;letter-spacing:0}
+main.ul-app .ul-top>a:first-child{display:inline-block;padding:8px 14px;border-radius:999px;background:var(--cx-paper);border:1px solid var(--cx-line)}
+main.ul-app .ul-brand{color:var(--cx-ink)!important}
+main.ul-app .ul-brand .sc-brand-system{--brand-ink:var(--cx-ink);--brand-subtle:var(--cx-muted);color:var(--cx-ink);text-shadow:none}
+main.ul-app .ul-brand .sc-brand-name small{display:inline-block;margin-top:2px;font-size:12.5px;font-weight:500;letter-spacing:0;text-transform:lowercase}
+main.ul-app .ul-brand .sc-brand-name small::first-letter{text-transform:uppercase}
+main.ul-app .ul-top>a:first-child{font-size:0}
+main.ul-app .ul-top>a:first-child::before{content:"← Biblioteca" / "";font-size:15px}
+main.ul-app .ul-workspace>header span{text-transform:none}
+main.ul-app .ul-top>span{display:inline-block;padding:6px 12px;border-radius:999px;background:var(--cx-accent-soft);color:color-mix(in srgb,var(--cx-accent) 78%,#000);font-size:14px;font-weight:650}
+
+/* Steps */
+main.ul-app .ul-stage{position:sticky;top:64px;z-index:30;display:flex;gap:10px;padding:12px var(--cx-pad);background:color-mix(in srgb,var(--cx-canvas) 92%,transparent);backdrop-filter:blur(12px);border-bottom:0;overflow-x:auto}
+main.ul-app .ul-stage button{position:relative;flex:1 1 0;min-width:180px;display:block;padding:10px 16px 10px 62px;border:1px solid var(--cx-line);border-radius:18px;background:var(--cx-paper);color:var(--cx-ink);font-size:15.5px;font-weight:650;line-height:1.3;text-align:left;box-shadow:0 1px 2px rgba(14,21,37,.04);transition:border-color .2s,box-shadow .2s}
+main.ul-app .ul-stage button b{position:absolute;left:16px;top:50%;transform:translateY(-50%);display:grid;place-items:center;width:34px;height:34px;margin:0;border:0;border-radius:50%;background:var(--cx-line-2);color:var(--cx-ink-2);font-size:15px}
+main.ul-app .ul-stage small{display:block;margin:2px 0 0;color:var(--cx-muted);font-size:14px;font-weight:500}
+main.ul-app .ul-stage button.active{border-color:var(--cx-accent-line);box-shadow:var(--cx-sh-1);background:var(--cx-paper);color:var(--cx-ink)}
+main.ul-app .ul-stage button.active b{background:var(--cx-accent);color:#fff}
+
+/* Teacher guide */
+main.ul-app .ul-teacher{margin:4px var(--cx-pad) 0;padding:4px 18px;border:1px solid #f3e2bf;border-radius:var(--cx-r-sm);background:var(--cx-teacher-soft);color:#5b4310;font-size:15px}
+main.ul-app .ul-teacher summary{color:var(--cx-teacher);font-weight:700}
+main.ul-app .ul-teacher button{border-radius:999px;border:1px solid #e6cf9f;background:#fff;color:#5b4310;font-weight:650}
+
+/* Signals stage: hero card, then list + workspace */
+main.ul-app .ul-terminal{display:grid;grid-template-columns:minmax(260px,.42fr) 1fr;gap:20px;min-height:0;max-width:var(--cx-max);margin:0 auto;padding:24px var(--cx-pad) 40px;align-items:start}
+main.ul-app .ul-hero{position:relative;inset:auto;grid-column:1/-1;display:grid;grid-template-columns:1.05fr 1fr;align-items:center;gap:clamp(20px,4vw,56px);height:auto;overflow:visible}
+main.ul-app .ul-hero:after{content:none}
+main.ul-app .ul-hero>img{order:2;width:100%;height:clamp(240px,30vw,380px);object-fit:cover;border-radius:var(--cx-r-lg);box-shadow:var(--cx-sh-2)}
+main.ul-app .ul-hero>div{position:static;width:auto;padding:8px 0}
+main.ul-app .ul-hero>div>span,main.ul-app .ul-mission header>span,main.ul-app .ul-final>div>span{display:inline-block;font-size:14px;font-weight:650;letter-spacing:0;color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+main.ul-app :is(.ul-hero h1,.ul-mission h1,.ul-final h1){font:700 clamp(2.8rem,6vw,5.4rem)/.98 var(--cx-display);letter-spacing:-.035em;text-transform:none;margin:12px 0 18px;color:var(--cx-ink)}
+main.ul-app .ul-hero h1 em{font-family:var(--cx-display);font-style:normal;font-weight:700;color:var(--cx-accent)}
+main.ul-app :is(.ul-hero p,.ul-mission header>p,.ul-final>div>p){font-size:18px;line-height:1.55;color:var(--cx-ink-2)}
+
+main.ul-app :is(.ul-board,.ul-workspace){background:var(--cx-paper);border:1px solid var(--cx-line);border-radius:var(--cx-r-md);box-shadow:var(--cx-sh-1);backdrop-filter:none;color:var(--cx-ink)}
+main.ul-app .ul-board{grid-column:1;padding:10px;position:sticky;top:150px}
+main.ul-app .ul-board header{padding:8px 10px 12px;color:var(--cx-ink-2);font-size:15px;font-weight:650}
+main.ul-app .ul-board header b{color:var(--cx-accent)}
+main.ul-app .ul-board>button{grid-template-columns:36px 1fr auto;gap:12px;margin-top:4px;padding:12px 10px;border:0;border-radius:var(--cx-r-sm);color:var(--cx-ink);text-transform:none}
+main.ul-app .ul-board>button::first-letter{text-transform:none}
+main.ul-app .ul-board>button:hover{background:var(--cx-line-2)}
+main.ul-app .ul-board button>span{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--cx-line-2);font:700 14px var(--cx-body);color:var(--cx-ink-2)}
+main.ul-app .ul-board button p b{font-size:16px;font-weight:650}
+main.ul-app .ul-board button small{font-size:14px;color:var(--cx-muted)}
+main.ul-app .ul-board button>i{display:inline-block;padding:4px 10px;border-radius:999px;background:var(--cx-line-2);font-size:13.5px;font-weight:650;color:var(--cx-ink-2)}
+main.ul-app .ul-board button.active{background:var(--cx-accent-soft);color:var(--cx-ink)}
+main.ul-app .ul-board button.active>span{background:var(--cx-accent);color:#fff}
+main.ul-app .ul-board button.heard:not(.active)>i{background:#e6f6ef;color:#17694f}
+main.ul-app .ul-progress{padding:12px 10px 6px;color:var(--cx-muted);font-size:14px}
+
+main.ul-app .ul-workspace{grid-column:2;padding:clamp(18px,2.4vw,30px);max-height:none;overflow:visible}
+main.ul-app .ul-workspace>header{margin-bottom:16px}
+main.ul-app .ul-workspace>header span{display:inline-block;font-size:14px;font-weight:650;color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+main.ul-app .ul-workspace>header h2{font:700 clamp(1.8rem,3vw,2.5rem)/1.05 var(--cx-display);letter-spacing:-.025em;margin:6px 0}
+main.ul-app .ul-workspace>header p{display:inline-block;font-size:15px;color:var(--cx-muted)}
+main.ul-app .ul-predict{padding:14px 18px;border:0;border-radius:var(--cx-r-sm);background:var(--cx-accent-soft);margin-bottom:16px}
+main.ul-app :is(.ul-predict small,.ul-task>small){font-size:14px;font-weight:700;color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+main.ul-app .ul-predict p{font-size:16px;margin-top:4px;color:var(--cx-ink)}
+main.ul-app .ul-gist{margin:18px 0;padding:16px 18px;border:1px solid var(--cx-line);border-radius:var(--cx-r-sm)}
+main.ul-app .ul-gist h3{display:inline-block;font:700 15px var(--cx-body);color:var(--cx-ink-2)}
+main.ul-app .ul-gist p{font-size:16px;color:var(--cx-ink)}
+main.ul-app .ul-sealed{padding:18px;border:1.5px dashed var(--cx-line);border-radius:var(--cx-r-sm);background:var(--cx-canvas);color:var(--cx-muted);font-size:15px}
+
+main.ul-app .ul-task{margin-top:16px;padding:20px;border:1px solid var(--cx-accent-line);border-radius:var(--cx-r-md);background:var(--cx-paper);color:var(--cx-ink)}
+main.ul-app .ul-task h2{font:700 clamp(1.3rem,2vw,1.6rem)/1.25 var(--cx-display);letter-spacing:-.02em;margin:8px 0 14px}
+main.ul-app .ul-task>div{gap:8px}
+main.ul-app .ul-task>div:not(.ul-actions) button{padding:12px 16px;border:1px solid var(--cx-line);border-radius:var(--cx-r-sm);background:var(--cx-paper);color:var(--cx-ink);font-size:16px;text-transform:none}
+main.ul-app .ul-task>div:not(.ul-actions) button::first-letter{text-transform:none}
+main.ul-app .ul-task>div:not(.ul-actions) button:hover{border-color:var(--cx-accent-line)}
+main.ul-app :is(.ul-task,.ul-mission) button.selected{outline:0;border-color:var(--cx-accent);background:var(--cx-accent-soft);box-shadow:inset 0 0 0 1px var(--cx-accent)}
+main.ul-app .ul-task [role=status]{padding:12px 16px;border-radius:var(--cx-r-sm);background:var(--cx-canvas);font-size:15.5px}
+main.ul-app .ul-task aside{margin-top:16px;padding:16px 18px;border:0;border-radius:var(--cx-r-sm);background:#effaf5}
+main.ul-app .ul-task aside>b{font-size:14px;color:#17694f}
+main.ul-app .ul-task aside p{font-size:16px}
+main.ul-app .ul-task blockquote{margin:10px 0;padding-left:14px;border-left:3px solid #9ad8bf;font-size:16px;color:var(--cx-ink-2)}
+
+/* Every action button: a pill */
+main.ul-app :is(.ul-actions button,.ul-gist button,.ul-task aside button,.ul-facts button,.ul-final>div>button,.ul-workspace>footer button,.ul-mission footer button,.ul-final footer button,.ul-transcript-toggle){min-height:46px;padding:10px 20px;border:1px solid var(--cx-line);border-radius:999px;background:var(--cx-paper);color:var(--cx-ink);font-size:15px;font-weight:650;letter-spacing:0;transition:transform .2s,box-shadow .2s}
+main.ul-app :is(.ul-actions button,.ul-gist button,.ul-task aside button,.ul-facts button,.ul-final>div>button,.ul-workspace>footer button,.ul-mission footer button,.ul-final footer button,.ul-transcript-toggle):not(:disabled):hover{transform:translateY(-1px);box-shadow:var(--cx-sh-1)}
+main.ul-app .ul-task>div.ul-actions{gap:8px;margin-top:14px}
+main.ul-app .ul-actions button:first-child,main.ul-app .ul-task aside button.saved{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+main.ul-app :is(.ul-workspace>footer,.ul-mission footer,.ul-final footer){gap:10px;margin-top:18px}
+main.ul-app :is(.ul-workspace>footer,.ul-mission footer) button:last-child{background:var(--cx-accent);border-color:var(--cx-accent);color:#fff}
+main.ul-app .ul-transcript-toggle{width:auto;margin-top:12px;background:var(--cx-teacher-soft);border-color:#f3e2bf;color:#5b4310}
+main.ul-app .ul-transcript{margin-top:10px;padding:16px 18px;border-radius:var(--cx-r-sm);background:var(--cx-teacher-soft);border:1px solid #f3e2bf;color:#3d2f0f}
+main.ul-app .ul-transcript>b{font-size:14px;color:var(--cx-teacher)}
+main.ul-app .ul-transcript p{font-size:16px}
+
+/* Mission */
+main.ul-app .ul-mission{width:auto;max-width:var(--cx-max);margin:0 auto;padding:40px var(--cx-pad) 56px;min-height:0;grid-template-columns:1fr 220px;gap:24px 32px;align-items:start}
+main.ul-app .ul-mission>header{grid-column:1}
+main.ul-app .ul-clock{grid-column:2;align-self:center;padding:22px 16px;border-radius:var(--cx-r-md);background:var(--cx-paper);border:1px solid var(--cx-line);box-shadow:var(--cx-sh-1);color:var(--cx-ink);transform:none}
+main.ul-app :is(.ul-clock span,.ul-clock i){font-size:14px;font-weight:600;letter-spacing:0;color:var(--cx-muted)}
+main.ul-app .ul-clock b{font:700 clamp(2.4rem,4vw,3.6rem) var(--cx-display);color:var(--cx-accent);margin:6px 0}
+main.ul-app .ul-mission>article{grid-column:1/-1;padding:clamp(20px,3vw,34px);border:1px solid var(--cx-line);border-top:1px solid var(--cx-line);border-radius:var(--cx-r-lg);background:var(--cx-paper);box-shadow:var(--cx-sh-1);color:var(--cx-ink)}
+main.ul-app .ul-mission article h2{font:700 clamp(1.4rem,2.2vw,1.8rem)/1.2 var(--cx-display);letter-spacing:-.02em;margin:6px 0 14px}
+main.ul-app .ul-mission article>p{font-size:16px;color:var(--cx-ink-2)}
+main.ul-app .ul-mission article>div button{display:block;padding:14px 18px;border:1px solid var(--cx-line);border-radius:var(--cx-r-sm);background:var(--cx-paper);color:var(--cx-ink);font-size:16px;text-transform:none}
+main.ul-app .ul-mission article>div button::first-letter{text-transform:none}
+main.ul-app .ul-mission article>aside{margin-top:16px;padding:16px 18px;border:0;border-radius:var(--cx-r-sm);background:var(--cx-accent-soft)}
+main.ul-app .ul-mission aside>b{font-size:14px;color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+main.ul-app .ul-mission aside p{font-size:16px}
+main.ul-app .ul-mission aside h3{font:700 1.15rem/1.35 var(--cx-display)}
+main.ul-app .ul-facts{padding-left:22px}
+main.ul-app .ul-facts li{border-bottom:1px solid var(--cx-line-2);font-size:16px}
+
+/* Final conversation */
+main.ul-app .ul-final{width:auto;max-width:var(--cx-max);margin:0 auto;padding:40px var(--cx-pad) 56px;min-height:0;grid-template-columns:.9fr 1.1fr;gap:clamp(24px,4vw,48px);align-items:start}
+main.ul-app .ul-chosen{padding:12px 16px;border-left:0;border-radius:var(--cx-r-sm);background:var(--cx-accent-soft);font-size:16px}
+main.ul-app .ul-observation{padding:14px 16px;border-radius:var(--cx-r-sm);background:var(--cx-teacher-soft);border:1px solid #f3e2bf;color:#5b4310;font-size:15px}
+main.ul-app .ul-final>article{padding:clamp(22px,3vw,36px);border:1px solid var(--cx-line);border-radius:var(--cx-r-lg);background:var(--cx-paper);box-shadow:var(--cx-sh-2);color:var(--cx-ink)}
+main.ul-app .ul-final article>small{font-size:14px;color:color-mix(in srgb,var(--cx-accent) 80%,#000)}
+main.ul-app .ul-final article h2{font:700 clamp(1.7rem,3vw,2.6rem)/1.12 var(--cx-display);letter-spacing:-.025em}
+main.ul-app .ul-final article>p{font-size:16px;color:var(--cx-muted)}
+main.ul-app .ul-final nav{gap:6px}
+main.ul-app .ul-final nav button{width:44px;height:44px;border:1px solid var(--cx-line);border-radius:50%;background:var(--cx-paper);font-weight:650}
+main.ul-app .ul-final nav button.active{background:var(--cx-ink);border-color:var(--cx-ink);color:#fff}
+main.ul-app .ul-route-line i{height:6px;border-radius:999px;background:var(--cx-accent)}
+main.ul-app .ul-route-line i:nth-child(2){background:var(--amber)}
+main.ul-app .ul-route-line i:nth-child(3){background:#63c9a8}
+
+/* Support */
+main.ul-app .ul-help{right:20px;bottom:20px;padding:12px 20px;border-radius:999px;background:var(--cx-ink);color:#fff;font-size:15px;font-weight:650;box-shadow:var(--cx-sh-2)}
+main.ul-app .ul-support{right:20px;bottom:80px;padding:20px;border:1px solid var(--cx-line);border-radius:var(--cx-r-md);background:var(--cx-paper);color:var(--cx-ink);box-shadow:var(--cx-sh-2)}
+main.ul-app .ul-support header{align-items:center;margin-bottom:6px}
+main.ul-app .ul-support header b{font-size:15px}
+main.ul-app .ul-support header button{min-height:40px;width:40px;border-radius:50%;background:var(--cx-line-2)}
+main.ul-app .ul-support p{padding:10px 14px;border-radius:var(--cx-r-sm);background:var(--cx-canvas);font-size:15.5px}
+
+@media(max-width:1050px){
+  main.ul-app .ul-terminal{grid-template-columns:1fr;padding-top:20px}
+  main.ul-app .ul-board,main.ul-app .ul-workspace{grid-column:1;position:static}
+  main.ul-app .ul-mission{grid-template-columns:1fr}
+  main.ul-app .ul-clock{grid-column:1;justify-self:start;min-width:220px}
+}
+@media(max-width:720px){
+  main.ul-app .ul-top{padding:8px 16px;gap:10px}
+  main.ul-app .ul-top>a:first-child{padding:6px 12px}
+  main.ul-app .ul-stage{position:static;padding:12px 16px}
+  main.ul-app .ul-stage button{min-width:150px;padding:10px 12px 10px 58px;font-size:15px}
+  main.ul-app .ul-terminal{display:grid;padding:16px 16px 32px}
+  main.ul-app .ul-hero{grid-template-columns:1fr;height:auto}
+  main.ul-app .ul-hero>img{order:0;height:200px}
+  main.ul-app .ul-hero h1,main.ul-app .ul-mission h1,main.ul-app .ul-final h1{font-size:2.8rem}
+  main.ul-app .ul-mission,main.ul-app .ul-final{display:grid;grid-template-columns:1fr;padding:28px 16px 40px}
+  main.ul-app .ul-help{position:fixed;right:16px;bottom:16px;margin:0}
+}
+
+/* Buttons whose frozen label starts with an arrow: ::first-letter would catch the arrow, so the label is redrawn. */
+main.ul-app .ul-workspace>footer button:first-child,main.ul-app .ul-mission footer button:first-child{font-size:0}
+main.ul-app .ul-workspace>footer button:first-child::before{content:"← Señal anterior" / "";font-size:15px;text-transform:none}
+main.ul-app .ul-mission footer button:first-child::before{content:"← Revisar señales" / "";font-size:15px;text-transform:none}

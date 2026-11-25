@@ -6,6 +6,7 @@ import { ConversationFamily } from '../conversation-families/ConversationFamily'
 import content from './content.json';
 import { WORLD, cameraOffset, canHandleKeys, nearestStop, stepMotion } from './engine.mjs';
 import { CityDialogue, CityGuide, type Choice, type Stop } from './CityDialogue';
+import '../clasicas-ui/clasicas.css';
 import './city.css';
 
 const stops: Stop[] = content.stops;

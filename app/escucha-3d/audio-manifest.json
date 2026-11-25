@@ -2611,6 +2611,636 @@
    "seconds": 52.55,
    "src": "/audio/escucha-3d/espana-b1-valencia.mp3"
   },
+  "estrellas/a0-alien": {
+   "hash": "ba16f453ef9f815061f2",
+   "seconds": 26.08,
+   "src": "/audio/escucha-3d/estrellas-a0-alien.mp3"
+  },
+  "estrellas/a0-apagon": {
+   "hash": "cef2d95db87f5bcff7a1",
+   "seconds": 25.56,
+   "src": "/audio/escucha-3d/estrellas-a0-apagon.mp3"
+  },
+  "estrellas/a0-astrologa": {
+   "hash": "aab3cbedfa34d3feaf59",
+   "seconds": 24.31,
+   "src": "/audio/escucha-3d/estrellas-a0-astrologa.mp3"
+  },
+  "estrellas/a0-cita": {
+   "hash": "063cf7770a4223592860",
+   "seconds": 26.92,
+   "src": "/audio/escucha-3d/estrellas-a0-cita.mp3"
+  },
+  "estrellas/a0-cocina": {
+   "hash": "7602f01135cc7600711c",
+   "seconds": 30.65,
+   "src": "/audio/escucha-3d/estrellas-a0-cocina.mp3"
+  },
+  "estrellas/a0-cupula": {
+   "hash": "01c4742eea12a5ac505b",
+   "seconds": 28.12,
+   "src": "/audio/escucha-3d/estrellas-a0-cupula.mp3"
+  },
+  "estrellas/a0-dron": {
+   "hash": "c9b3b620021bb0aa1ef6",
+   "seconds": 23.25,
+   "src": "/audio/escucha-3d/estrellas-a0-dron.mp3"
+  },
+  "estrellas/a0-duchas": {
+   "hash": "a845e0a0cf47f87dd029",
+   "seconds": 33.5,
+   "src": "/audio/escucha-3d/estrellas-a0-duchas.mp3"
+  },
+  "estrellas/a0-entrada": {
+   "hash": "036e48cfd0edcae850d3",
+   "seconds": 27.53,
+   "src": "/audio/escucha-3d/estrellas-a0-entrada.mp3"
+  },
+  "estrellas/a0-hamacas": {
+   "hash": "8fefa967bf298395ac98",
+   "seconds": 19.5,
+   "src": "/audio/escucha-3d/estrellas-a0-hamacas.mp3"
+  },
+  "estrellas/a0-lentes": {
+   "hash": "cbd26d8f47d849ee59a6",
+   "seconds": 28.36,
+   "src": "/audio/escucha-3d/estrellas-a0-lentes.mp3"
+  },
+  "estrellas/a0-llama": {
+   "hash": "2d6fbfc750e2c39fc44e",
+   "seconds": 25.15,
+   "src": "/audio/escucha-3d/estrellas-a0-llama.mp3"
+  },
+  "estrellas/a0-mina": {
+   "hash": "ebb9dd75993a51253eae",
+   "seconds": 26.3,
+   "src": "/audio/escucha-3d/estrellas-a0-mina.mp3"
+  },
+  "estrellas/a0-mirador": {
+   "hash": "a4d6a28d8a3f147a06f3",
+   "seconds": 20.66,
+   "src": "/audio/escucha-3d/estrellas-a0-mirador.mp3"
+  },
+  "estrellas/a0-radio": {
+   "hash": "5e415f9e20f88c5b0ff2",
+   "seconds": 26.59,
+   "src": "/audio/escucha-3d/estrellas-a0-radio.mp3"
+  },
+  "estrellas/a0-salar": {
+   "hash": "d534a2e5a7fcfba0b4ea",
+   "seconds": 26.8,
+   "src": "/audio/escucha-3d/estrellas-a0-salar.mp3"
+  },
+  "estrellas/a0-sendero": {
+   "hash": "4261ede1b5624b7ba368",
+   "seconds": 25.56,
+   "src": "/audio/escucha-3d/estrellas-a0-sendero.mp3"
+  },
+  "estrellas/a0-urna": {
+   "hash": "516e30cebf0f8b7f89d3",
+   "seconds": 24.28,
+   "src": "/audio/escucha-3d/estrellas-a0-urna.mp3"
+  },
+  "estrellas/a1-alien": {
+   "hash": "399b2227886401b0e287",
+   "seconds": 39.55,
+   "src": "/audio/escucha-3d/estrellas-a1-alien.mp3"
+  },
+  "estrellas/a1-apagon": {
+   "hash": "b20ec6d6440c03b90f55",
+   "seconds": 41.52,
+   "src": "/audio/escucha-3d/estrellas-a1-apagon.mp3"
+  },
+  "estrellas/a1-astrologa": {
+   "hash": "2c1e3af21bf257eab942",
+   "seconds": 37.49,
+   "src": "/audio/escucha-3d/estrellas-a1-astrologa.mp3"
+  },
+  "estrellas/a1-cita": {
+   "hash": "a5dbac7c1abfca8cdba0",
+   "seconds": 40.27,
+   "src": "/audio/escucha-3d/estrellas-a1-cita.mp3"
+  },
+  "estrellas/a1-cocina": {
+   "hash": "54e997682c2e9755cb23",
+   "seconds": 40.97,
+   "src": "/audio/escucha-3d/estrellas-a1-cocina.mp3"
+  },
+  "estrellas/a1-cupula": {
+   "hash": "a073c3f55bffd9e76b96",
+   "seconds": 47.64,
+   "src": "/audio/escucha-3d/estrellas-a1-cupula.mp3"
+  },
+  "estrellas/a1-dron": {
+   "hash": "0a1b3b1945328331ccaa",
+   "seconds": 40.08,
+   "src": "/audio/escucha-3d/estrellas-a1-dron.mp3"
+  },
+  "estrellas/a1-duchas": {
+   "hash": "dd353d2bb809dc8a6996",
+   "seconds": 46.34,
+   "src": "/audio/escucha-3d/estrellas-a1-duchas.mp3"
+  },
+  "estrellas/a1-entrada": {
+   "hash": "945570422d7d42e35819",
+   "seconds": 45.65,
+   "src": "/audio/escucha-3d/estrellas-a1-entrada.mp3"
+  },
+  "estrellas/a1-hamacas": {
+   "hash": "659f98f3c5f01a410503",
+   "seconds": 34.51,
+   "src": "/audio/escucha-3d/estrellas-a1-hamacas.mp3"
+  },
+  "estrellas/a1-lentes": {
+   "hash": "6245a6b3f73383a862b2",
+   "seconds": 43.87,
+   "src": "/audio/escucha-3d/estrellas-a1-lentes.mp3"
+  },
+  "estrellas/a1-llama": {
+   "hash": "c9ca67ed23f398d52aa8",
+   "seconds": 40.46,
+   "src": "/audio/escucha-3d/estrellas-a1-llama.mp3"
+  },
+  "estrellas/a1-mina": {
+   "hash": "13110250392c0df7247b",
+   "seconds": 44.9,
+   "src": "/audio/escucha-3d/estrellas-a1-mina.mp3"
+  },
+  "estrellas/a1-mirador": {
+   "hash": "214f2421e04a655fb755",
+   "seconds": 31.92,
+   "src": "/audio/escucha-3d/estrellas-a1-mirador.mp3"
+  },
+  "estrellas/a1-radio": {
+   "hash": "8479bb114ef82a85682e",
+   "seconds": 35.04,
+   "src": "/audio/escucha-3d/estrellas-a1-radio.mp3"
+  },
+  "estrellas/a1-salar": {
+   "hash": "11eab2f2092a94030f7b",
+   "seconds": 42.38,
+   "src": "/audio/escucha-3d/estrellas-a1-salar.mp3"
+  },
+  "estrellas/a1-sendero": {
+   "hash": "d8d3359cf782ba3b228e",
+   "seconds": 39.91,
+   "src": "/audio/escucha-3d/estrellas-a1-sendero.mp3"
+  },
+  "estrellas/a1-urna": {
+   "hash": "05c62577041c83230be7",
+   "seconds": 38.74,
+   "src": "/audio/escucha-3d/estrellas-a1-urna.mp3"
+  },
+  "estrellas/a2-alien": {
+   "hash": "d3d300b7ff166b20aa77",
+   "seconds": 50.0,
+   "src": "/audio/escucha-3d/estrellas-a2-alien.mp3"
+  },
+  "estrellas/a2-apagon": {
+   "hash": "2b2f4a2c9cd3fc234c6f",
+   "seconds": 49.63,
+   "src": "/audio/escucha-3d/estrellas-a2-apagon.mp3"
+  },
+  "estrellas/a2-astrologa": {
+   "hash": "0fbc2c9b58459ac6b2a7",
+   "seconds": 39.98,
+   "src": "/audio/escucha-3d/estrellas-a2-astrologa.mp3"
+  },
+  "estrellas/a2-cita": {
+   "hash": "eb88d462fdb5b857f86a",
+   "seconds": 43.17,
+   "src": "/audio/escucha-3d/estrellas-a2-cita.mp3"
+  },
+  "estrellas/a2-cocina": {
+   "hash": "af1c6fda674739269bc1",
+   "seconds": 46.94,
+   "src": "/audio/escucha-3d/estrellas-a2-cocina.mp3"
+  },
+  "estrellas/a2-cupula": {
+   "hash": "0c261c7262de606d83e7",
+   "seconds": 44.85,
+   "src": "/audio/escucha-3d/estrellas-a2-cupula.mp3"
+  },
+  "estrellas/a2-dron": {
+   "hash": "ea96eff6fba89fd8bd8d",
+   "seconds": 42.14,
+   "src": "/audio/escucha-3d/estrellas-a2-dron.mp3"
+  },
+  "estrellas/a2-duchas": {
+   "hash": "149cbf6d596df87424f4",
+   "seconds": 51.98,
+   "src": "/audio/escucha-3d/estrellas-a2-duchas.mp3"
+  },
+  "estrellas/a2-entrada": {
+   "hash": "000b039431b39f7f339e",
+   "seconds": 49.84,
+   "src": "/audio/escucha-3d/estrellas-a2-entrada.mp3"
+  },
+  "estrellas/a2-hamacas": {
+   "hash": "aca725c041a9bf936c68",
+   "seconds": 44.54,
+   "src": "/audio/escucha-3d/estrellas-a2-hamacas.mp3"
+  },
+  "estrellas/a2-lentes": {
+   "hash": "e68872b4b78c319de60b",
+   "seconds": 53.87,
+   "src": "/audio/escucha-3d/estrellas-a2-lentes.mp3"
+  },
+  "estrellas/a2-llama": {
+   "hash": "833e2f31520b19753127",
+   "seconds": 52.52,
+   "src": "/audio/escucha-3d/estrellas-a2-llama.mp3"
+  },
+  "estrellas/a2-mina": {
+   "hash": "4f966c5c380386d91b52",
+   "seconds": 56.8,
+   "src": "/audio/escucha-3d/estrellas-a2-mina.mp3"
+  },
+  "estrellas/a2-mirador": {
+   "hash": "9b27b071febe63248f8a",
+   "seconds": 43.48,
+   "src": "/audio/escucha-3d/estrellas-a2-mirador.mp3"
+  },
+  "estrellas/a2-radio": {
+   "hash": "1444831dcbe8a9cc688f",
+   "seconds": 42.19,
+   "src": "/audio/escucha-3d/estrellas-a2-radio.mp3"
+  },
+  "estrellas/a2-salar": {
+   "hash": "fd72b4b6aab668f3573d",
+   "seconds": 48.43,
+   "src": "/audio/escucha-3d/estrellas-a2-salar.mp3"
+  },
+  "estrellas/a2-sendero": {
+   "hash": "7b7ee0d3529c9b7ec717",
+   "seconds": 45.57,
+   "src": "/audio/escucha-3d/estrellas-a2-sendero.mp3"
+  },
+  "estrellas/a2-urna": {
+   "hash": "14418b963120400ecbe7",
+   "seconds": 53.37,
+   "src": "/audio/escucha-3d/estrellas-a2-urna.mp3"
+  },
+  "estrellas/b1-alien": {
+   "hash": "7c8982b41ad3d9dde7b1",
+   "seconds": 60.53,
+   "src": "/audio/escucha-3d/estrellas-b1-alien.mp3"
+  },
+  "estrellas/b1-apagon": {
+   "hash": "192306e6e571d6521f74",
+   "seconds": 57.2,
+   "src": "/audio/escucha-3d/estrellas-b1-apagon.mp3"
+  },
+  "estrellas/b1-astrologa": {
+   "hash": "71ce503dbafd9dcbc19d",
+   "seconds": 45.52,
+   "src": "/audio/escucha-3d/estrellas-b1-astrologa.mp3"
+  },
+  "estrellas/b1-cita": {
+   "hash": "896c2cea0918c6890c4f",
+   "seconds": 50.3,
+   "src": "/audio/escucha-3d/estrellas-b1-cita.mp3"
+  },
+  "estrellas/b1-cocina": {
+   "hash": "0e8ac90a6fa78b6f736b",
+   "seconds": 46.58,
+   "src": "/audio/escucha-3d/estrellas-b1-cocina.mp3"
+  },
+  "estrellas/b1-cupula": {
+   "hash": "426ce345a29ec683db8c",
+   "seconds": 47.42,
+   "src": "/audio/escucha-3d/estrellas-b1-cupula.mp3"
+  },
+  "estrellas/b1-dron": {
+   "hash": "222bc67edf213350fe11",
+   "seconds": 48.42,
+   "src": "/audio/escucha-3d/estrellas-b1-dron.mp3"
+  },
+  "estrellas/b1-duchas": {
+   "hash": "8ca7fd28d2698da3f2a1",
+   "seconds": 59.87,
+   "src": "/audio/escucha-3d/estrellas-b1-duchas.mp3"
+  },
+  "estrellas/b1-entrada": {
+   "hash": "1301901db4ce0d50eeb4",
+   "seconds": 54.83,
+   "src": "/audio/escucha-3d/estrellas-b1-entrada.mp3"
+  },
+  "estrellas/b1-hamacas": {
+   "hash": "021c09aade8ea0bbd281",
+   "seconds": 47.65,
+   "src": "/audio/escucha-3d/estrellas-b1-hamacas.mp3"
+  },
+  "estrellas/b1-lentes": {
+   "hash": "a22efa936935e3429c1a",
+   "seconds": 58.14,
+   "src": "/audio/escucha-3d/estrellas-b1-lentes.mp3"
+  },
+  "estrellas/b1-llama": {
+   "hash": "e1fd92cc58cd5dbac411",
+   "seconds": 57.83,
+   "src": "/audio/escucha-3d/estrellas-b1-llama.mp3"
+  },
+  "estrellas/b1-mina": {
+   "hash": "452b5ccfc6a491a5309a",
+   "seconds": 56.56,
+   "src": "/audio/escucha-3d/estrellas-b1-mina.mp3"
+  },
+  "estrellas/b1-mirador": {
+   "hash": "3ae41874da86e07fd6b3",
+   "seconds": 53.2,
+   "src": "/audio/escucha-3d/estrellas-b1-mirador.mp3"
+  },
+  "estrellas/b1-radio": {
+   "hash": "e539fbb0addce434efd8",
+   "seconds": 52.86,
+   "src": "/audio/escucha-3d/estrellas-b1-radio.mp3"
+  },
+  "estrellas/b1-salar": {
+   "hash": "8cada4740ed987dc1197",
+   "seconds": 53.53,
+   "src": "/audio/escucha-3d/estrellas-b1-salar.mp3"
+  },
+  "estrellas/b1-sendero": {
+   "hash": "de853e116eb4825a910a",
+   "seconds": 55.34,
+   "src": "/audio/escucha-3d/estrellas-b1-sendero.mp3"
+  },
+  "estrellas/b1-urna": {
+   "hash": "7a79f051680bcc3f2999",
+   "seconds": 56.34,
+   "src": "/audio/escucha-3d/estrellas-b1-urna.mp3"
+  },
+  "estrellas/b2-alien": {
+   "hash": "596d60ffcddb5a2168c7",
+   "seconds": 65.93,
+   "src": "/audio/escucha-3d/estrellas-b2-alien.mp3"
+  },
+  "estrellas/b2-apagon": {
+   "hash": "3681d315d4e7ab002f5f",
+   "seconds": 74.19,
+   "src": "/audio/escucha-3d/estrellas-b2-apagon.mp3"
+  },
+  "estrellas/b2-astrologa": {
+   "hash": "3be0dc169a0e9b8a955b",
+   "seconds": 67.06,
+   "src": "/audio/escucha-3d/estrellas-b2-astrologa.mp3"
+  },
+  "estrellas/b2-cita": {
+   "hash": "76e4bf5bce83d9727919",
+   "seconds": 72.91,
+   "src": "/audio/escucha-3d/estrellas-b2-cita.mp3"
+  },
+  "estrellas/b2-cocina": {
+   "hash": "5005a703225c9757072f",
+   "seconds": 70.69,
+   "src": "/audio/escucha-3d/estrellas-b2-cocina.mp3"
+  },
+  "estrellas/b2-cupula": {
+   "hash": "a39c8e06455d2a4cabaa",
+   "seconds": 71.34,
+   "src": "/audio/escucha-3d/estrellas-b2-cupula.mp3"
+  },
+  "estrellas/b2-dron": {
+   "hash": "c7bfa1a76ad9fc028ae2",
+   "seconds": 67.16,
+   "src": "/audio/escucha-3d/estrellas-b2-dron.mp3"
+  },
+  "estrellas/b2-duchas": {
+   "hash": "ec4d154f70b27c988f3e",
+   "seconds": 71.51,
+   "src": "/audio/escucha-3d/estrellas-b2-duchas.mp3"
+  },
+  "estrellas/b2-entrada": {
+   "hash": "2887de39c661710d9147",
+   "seconds": 65.97,
+   "src": "/audio/escucha-3d/estrellas-b2-entrada.mp3"
+  },
+  "estrellas/b2-hamacas": {
+   "hash": "dcab77108afa3fcd0063",
+   "seconds": 58.4,
+   "src": "/audio/escucha-3d/estrellas-b2-hamacas.mp3"
+  },
+  "estrellas/b2-lentes": {
+   "hash": "c14270f59f2328de45ca",
+   "seconds": 68.06,
+   "src": "/audio/escucha-3d/estrellas-b2-lentes.mp3"
+  },
+  "estrellas/b2-llama": {
+   "hash": "f72e6194986d99f2c1e9",
+   "seconds": 56.88,
+   "src": "/audio/escucha-3d/estrellas-b2-llama.mp3"
+  },
+  "estrellas/b2-mina": {
+   "hash": "7223324345480c2c981d",
+   "seconds": 75.51,
+   "src": "/audio/escucha-3d/estrellas-b2-mina.mp3"
+  },
+  "estrellas/b2-mirador": {
+   "hash": "fe3f91ef6751a105c924",
+   "seconds": 67.23,
+   "src": "/audio/escucha-3d/estrellas-b2-mirador.mp3"
+  },
+  "estrellas/b2-radio": {
+   "hash": "e2e46e08ef23e6719e33",
+   "seconds": 64.54,
+   "src": "/audio/escucha-3d/estrellas-b2-radio.mp3"
+  },
+  "estrellas/b2-salar": {
+   "hash": "e7ebb774e93cf70fd232",
+   "seconds": 64.47,
+   "src": "/audio/escucha-3d/estrellas-b2-salar.mp3"
+  },
+  "estrellas/b2-sendero": {
+   "hash": "1f810cc9337e10177ce5",
+   "seconds": 70.71,
+   "src": "/audio/escucha-3d/estrellas-b2-sendero.mp3"
+  },
+  "estrellas/b2-urna": {
+   "hash": "d9c50df9d26cc4fb7bd8",
+   "seconds": 67.21,
+   "src": "/audio/escucha-3d/estrellas-b2-urna.mp3"
+  },
+  "estrellas/c1-alien": {
+   "hash": "d1b8f3e79fd7b8351890",
+   "seconds": 75.11,
+   "src": "/audio/escucha-3d/estrellas-c1-alien.mp3"
+  },
+  "estrellas/c1-apagon": {
+   "hash": "db5ba860812acb2f551c",
+   "seconds": 81.63,
+   "src": "/audio/escucha-3d/estrellas-c1-apagon.mp3"
+  },
+  "estrellas/c1-astrologa": {
+   "hash": "1726a915217bb3c3b19b",
+   "seconds": 72.34,
+   "src": "/audio/escucha-3d/estrellas-c1-astrologa.mp3"
+  },
+  "estrellas/c1-cita": {
+   "hash": "95bdd0ddeb8ee8484fde",
+   "seconds": 89.86,
+   "src": "/audio/escucha-3d/estrellas-c1-cita.mp3"
+  },
+  "estrellas/c1-cocina": {
+   "hash": "4b365fcee82e3779b845",
+   "seconds": 73.48,
+   "src": "/audio/escucha-3d/estrellas-c1-cocina.mp3"
+  },
+  "estrellas/c1-cupula": {
+   "hash": "72cd2db84f325ff1a369",
+   "seconds": 84.51,
+   "src": "/audio/escucha-3d/estrellas-c1-cupula.mp3"
+  },
+  "estrellas/c1-dron": {
+   "hash": "89a6f9c52707c1d33fbf",
+   "seconds": 85.23,
+   "src": "/audio/escucha-3d/estrellas-c1-dron.mp3"
+  },
+  "estrellas/c1-duchas": {
+   "hash": "27c01404a1e47a7668c0",
+   "seconds": 105.65,
+   "src": "/audio/escucha-3d/estrellas-c1-duchas.mp3"
+  },
+  "estrellas/c1-entrada": {
+   "hash": "fd86bfd5a0795d42f242",
+   "seconds": 90.01,
+   "src": "/audio/escucha-3d/estrellas-c1-entrada.mp3"
+  },
+  "estrellas/c1-hamacas": {
+   "hash": "042bcb74722c3e44995d",
+   "seconds": 79.32,
+   "src": "/audio/escucha-3d/estrellas-c1-hamacas.mp3"
+  },
+  "estrellas/c1-lentes": {
+   "hash": "0a3e9fbb3a4b5d34a151",
+   "seconds": 99.03,
+   "src": "/audio/escucha-3d/estrellas-c1-lentes.mp3"
+  },
+  "estrellas/c1-llama": {
+   "hash": "78dcb7e7bd52c67d18b6",
+   "seconds": 93.83,
+   "src": "/audio/escucha-3d/estrellas-c1-llama.mp3"
+  },
+  "estrellas/c1-mina": {
+   "hash": "6c52328b923d6c0a3927",
+   "seconds": 102.05,
+   "src": "/audio/escucha-3d/estrellas-c1-mina.mp3"
+  },
+  "estrellas/c1-mirador": {
+   "hash": "0a29c8cccf9e40cfce05",
+   "seconds": 84.05,
+   "src": "/audio/escucha-3d/estrellas-c1-mirador.mp3"
+  },
+  "estrellas/c1-radio": {
+   "hash": "0cd0925a495c93a93af7",
+   "seconds": 77.24,
+   "src": "/audio/escucha-3d/estrellas-c1-radio.mp3"
+  },
+  "estrellas/c1-salar": {
+   "hash": "a6acf3e5b8d471c5cc4e",
+   "seconds": 80.15,
+   "src": "/audio/escucha-3d/estrellas-c1-salar.mp3"
+  },
+  "estrellas/c1-sendero": {
+   "hash": "e102cd5e7e1e13020cba",
+   "seconds": 73.76,
+   "src": "/audio/escucha-3d/estrellas-c1-sendero.mp3"
+  },
+  "estrellas/c1-urna": {
+   "hash": "316034ed43ff88825042",
+   "seconds": 83.14,
+   "src": "/audio/escucha-3d/estrellas-c1-urna.mp3"
+  },
+  "estrellas/c2-alien": {
+   "hash": "1495bdb6ca5d99f9e81d",
+   "seconds": 97.75,
+   "src": "/audio/escucha-3d/estrellas-c2-alien.mp3"
+  },
+  "estrellas/c2-apagon": {
+   "hash": "f967aae7e9025c6f82dd",
+   "seconds": 87.3,
+   "src": "/audio/escucha-3d/estrellas-c2-apagon.mp3"
+  },
+  "estrellas/c2-astrologa": {
+   "hash": "99510358f1c6d74f469b",
+   "seconds": 88.13,
+   "src": "/audio/escucha-3d/estrellas-c2-astrologa.mp3"
+  },
+  "estrellas/c2-cita": {
+   "hash": "762f7b1c6f570d09b0b1",
+   "seconds": 103.2,
+   "src": "/audio/escucha-3d/estrellas-c2-cita.mp3"
+  },
+  "estrellas/c2-cocina": {
+   "hash": "5d990399b7bc886257a4",
+   "seconds": 98.21,
+   "src": "/audio/escucha-3d/estrellas-c2-cocina.mp3"
+  },
+  "estrellas/c2-cupula": {
+   "hash": "38d60b0f664accde67d5",
+   "seconds": 107.88,
+   "src": "/audio/escucha-3d/estrellas-c2-cupula.mp3"
+  },
+  "estrellas/c2-dron": {
+   "hash": "5f2266671a202360538f",
+   "seconds": 91.85,
+   "src": "/audio/escucha-3d/estrellas-c2-dron.mp3"
+  },
+  "estrellas/c2-duchas": {
+   "hash": "12e6d1b540692a447bbb",
+   "seconds": 103.68,
+   "src": "/audio/escucha-3d/estrellas-c2-duchas.mp3"
+  },
+  "estrellas/c2-entrada": {
+   "hash": "5c0f7eaefa214f2594b3",
+   "seconds": 87.59,
+   "src": "/audio/escucha-3d/estrellas-c2-entrada.mp3"
+  },
+  "estrellas/c2-hamacas": {
+   "hash": "76f187429a41d1e55f9c",
+   "seconds": 84.46,
+   "src": "/audio/escucha-3d/estrellas-c2-hamacas.mp3"
+  },
+  "estrellas/c2-lentes": {
+   "hash": "aef01df49e3b976bc05c",
+   "seconds": 99.01,
+   "src": "/audio/escucha-3d/estrellas-c2-lentes.mp3"
+  },
+  "estrellas/c2-llama": {
+   "hash": "6f33353e7548fb985f74",
+   "seconds": 102.43,
+   "src": "/audio/escucha-3d/estrellas-c2-llama.mp3"
+  },
+  "estrellas/c2-mina": {
+   "hash": "e07d1c77f3d0bc3df066",
+   "seconds": 101.6,
+   "src": "/audio/escucha-3d/estrellas-c2-mina.mp3"
+  },
+  "estrellas/c2-mirador": {
+   "hash": "2fb501b372f66d22230a",
+   "seconds": 97.79,
+   "src": "/audio/escucha-3d/estrellas-c2-mirador.mp3"
+  },
+  "estrellas/c2-radio": {
+   "hash": "e5fcc1141f84f729cc88",
+   "seconds": 90.99,
+   "src": "/audio/escucha-3d/estrellas-c2-radio.mp3"
+  },
+  "estrellas/c2-salar": {
+   "hash": "ad16a51ef8f6569142d5",
+   "seconds": 107.12,
+   "src": "/audio/escucha-3d/estrellas-c2-salar.mp3"
+  },
+  "estrellas/c2-sendero": {
+   "hash": "43dcdc8a4f4621f96583",
+   "seconds": 101.5,
+   "src": "/audio/escucha-3d/estrellas-c2-sendero.mp3"
+  },
+  "estrellas/c2-urna": {
+   "hash": "60813dfc5c0a75953c36",
+   "seconds": 84.51,
+   "src": "/audio/escucha-3d/estrellas-c2-urna.mp3"
+  },
   "feria/a2-artesania": {
    "hash": "68a8672044632a9f2852",
    "seconds": 46.18,
@@ -4830,6 +5460,636 @@
    "hash": "98c13b5017c4b1b839ad",
    "seconds": 91.78,
    "src": "/audio/escucha-3d/papel-c2-muelle.mp3"
+  },
+  "perdidos/a0-alcalde": {
+   "hash": "41a5a7bd1fff58aff842",
+   "seconds": 29.56,
+   "src": "/audio/escucha-3d/perdidos-a0-alcalde.mp3"
+  },
+  "perdidos/a0-anillo": {
+   "hash": "4e4d7534bad573056d15",
+   "seconds": 21.88,
+   "src": "/audio/escucha-3d/perdidos-a0-anillo.mp3"
+  },
+  "perdidos/a0-bonsai": {
+   "hash": "aface96074a9b77fed80",
+   "seconds": 26.48,
+   "src": "/audio/escucha-3d/perdidos-a0-bonsai.mp3"
+  },
+  "perdidos/a0-canoa": {
+   "hash": "3e6bf8a73e8b213e217f",
+   "seconds": 27.33,
+   "src": "/audio/escucha-3d/perdidos-a0-canoa.mp3"
+  },
+  "perdidos/a0-cenizas": {
+   "hash": "b0f3ceded7ec55160754",
+   "seconds": 31.06,
+   "src": "/audio/escucha-3d/perdidos-a0-cenizas.mp3"
+  },
+  "perdidos/a0-dentadura": {
+   "hash": "6b3ac3a442b35d680c9a",
+   "seconds": 33.12,
+   "src": "/audio/escucha-3d/perdidos-a0-dentadura.mp3"
+  },
+  "perdidos/a0-diario": {
+   "hash": "06ca60b894b1b89b1a80",
+   "seconds": 24.54,
+   "src": "/audio/escucha-3d/perdidos-a0-diario.mp3"
+  },
+  "perdidos/a0-farol": {
+   "hash": "7942872857bdbe2ad8b9",
+   "seconds": 20.72,
+   "src": "/audio/escucha-3d/perdidos-a0-farol.mp3"
+  },
+  "perdidos/a0-guante": {
+   "hash": "6d48b56f03ba79c9c819",
+   "seconds": 29.25,
+   "src": "/audio/escucha-3d/perdidos-a0-guante.mp3"
+  },
+  "perdidos/a0-ladron": {
+   "hash": "cf5e3b7238778722a2d9",
+   "seconds": 29.33,
+   "src": "/audio/escucha-3d/perdidos-a0-ladron.mp3"
+  },
+  "perdidos/a0-llaves": {
+   "hash": "1342a320ef85bad3b198",
+   "seconds": 26.17,
+   "src": "/audio/escucha-3d/perdidos-a0-llaves.mp3"
+  },
+  "perdidos/a0-loro": {
+   "hash": "8ee63605da0f81ea6e70",
+   "seconds": 24.28,
+   "src": "/audio/escucha-3d/perdidos-a0-loro.mp3"
+  },
+  "perdidos/a0-paraguas": {
+   "hash": "be9ade87d099987eb863",
+   "seconds": 23.52,
+   "src": "/audio/escucha-3d/perdidos-a0-paraguas.mp3"
+  },
+  "perdidos/a0-relevo": {
+   "hash": "84f54823965fcb803894",
+   "seconds": 25.74,
+   "src": "/audio/escucha-3d/perdidos-a0-relevo.mp3"
+  },
+  "perdidos/a0-sonambulo": {
+   "hash": "473a66ffe78577ee449f",
+   "seconds": 29.73,
+   "src": "/audio/escucha-3d/perdidos-a0-sonambulo.mp3"
+  },
+  "perdidos/a0-taper": {
+   "hash": "860455a71c38cb43a37e",
+   "seconds": 25.31,
+   "src": "/audio/escucha-3d/perdidos-a0-taper.mp3"
+  },
+  "perdidos/a0-telefono": {
+   "hash": "251322a1502a0ae88094",
+   "seconds": 25.87,
+   "src": "/audio/escucha-3d/perdidos-a0-telefono.mp3"
+  },
+  "perdidos/a0-tuba": {
+   "hash": "b21c055ef30632f30c27",
+   "seconds": 25.28,
+   "src": "/audio/escucha-3d/perdidos-a0-tuba.mp3"
+  },
+  "perdidos/a1-alcalde": {
+   "hash": "79409496ea7f1d9a8b5d",
+   "seconds": 42.47,
+   "src": "/audio/escucha-3d/perdidos-a1-alcalde.mp3"
+  },
+  "perdidos/a1-anillo": {
+   "hash": "1c368fed901be4284bf5",
+   "seconds": 36.69,
+   "src": "/audio/escucha-3d/perdidos-a1-anillo.mp3"
+  },
+  "perdidos/a1-bonsai": {
+   "hash": "ce4888ab713c368fdad1",
+   "seconds": 40.78,
+   "src": "/audio/escucha-3d/perdidos-a1-bonsai.mp3"
+  },
+  "perdidos/a1-canoa": {
+   "hash": "b642e683d6f468e513fe",
+   "seconds": 39.26,
+   "src": "/audio/escucha-3d/perdidos-a1-canoa.mp3"
+  },
+  "perdidos/a1-cenizas": {
+   "hash": "e2959e0f6e6f506fb02d",
+   "seconds": 37.5,
+   "src": "/audio/escucha-3d/perdidos-a1-cenizas.mp3"
+  },
+  "perdidos/a1-dentadura": {
+   "hash": "7579dd0093a6be8c6e2e",
+   "seconds": 43.63,
+   "src": "/audio/escucha-3d/perdidos-a1-dentadura.mp3"
+  },
+  "perdidos/a1-diario": {
+   "hash": "ab380f408bb06ea967bf",
+   "seconds": 38.19,
+   "src": "/audio/escucha-3d/perdidos-a1-diario.mp3"
+  },
+  "perdidos/a1-farol": {
+   "hash": "265863504b2332496684",
+   "seconds": 29.34,
+   "src": "/audio/escucha-3d/perdidos-a1-farol.mp3"
+  },
+  "perdidos/a1-guante": {
+   "hash": "ef5a4c5aa83e7f983e0b",
+   "seconds": 38.44,
+   "src": "/audio/escucha-3d/perdidos-a1-guante.mp3"
+  },
+  "perdidos/a1-ladron": {
+   "hash": "426d5262bb8dedd7357c",
+   "seconds": 45.09,
+   "src": "/audio/escucha-3d/perdidos-a1-ladron.mp3"
+  },
+  "perdidos/a1-llaves": {
+   "hash": "5c2abdf9cb95ba0b14cc",
+   "seconds": 36.42,
+   "src": "/audio/escucha-3d/perdidos-a1-llaves.mp3"
+  },
+  "perdidos/a1-loro": {
+   "hash": "4ab028260dc714271598",
+   "seconds": 38.01,
+   "src": "/audio/escucha-3d/perdidos-a1-loro.mp3"
+  },
+  "perdidos/a1-paraguas": {
+   "hash": "07a02c48e0d468cd3c92",
+   "seconds": 39.79,
+   "src": "/audio/escucha-3d/perdidos-a1-paraguas.mp3"
+  },
+  "perdidos/a1-relevo": {
+   "hash": "ea2c8d4fc6bbfc8493d3",
+   "seconds": 37.02,
+   "src": "/audio/escucha-3d/perdidos-a1-relevo.mp3"
+  },
+  "perdidos/a1-sonambulo": {
+   "hash": "7c254a2c3f4e79164398",
+   "seconds": 34.96,
+   "src": "/audio/escucha-3d/perdidos-a1-sonambulo.mp3"
+  },
+  "perdidos/a1-taper": {
+   "hash": "33b2bce67675b8fef606",
+   "seconds": 43.24,
+   "src": "/audio/escucha-3d/perdidos-a1-taper.mp3"
+  },
+  "perdidos/a1-telefono": {
+   "hash": "2b853f949cf182344255",
+   "seconds": 34.82,
+   "src": "/audio/escucha-3d/perdidos-a1-telefono.mp3"
+  },
+  "perdidos/a1-tuba": {
+   "hash": "5f0b1b4db5cc8b7bef84",
+   "seconds": 36.44,
+   "src": "/audio/escucha-3d/perdidos-a1-tuba.mp3"
+  },
+  "perdidos/a2-alcalde": {
+   "hash": "e4ce5bb53f1da849ea8a",
+   "seconds": 49.77,
+   "src": "/audio/escucha-3d/perdidos-a2-alcalde.mp3"
+  },
+  "perdidos/a2-anillo": {
+   "hash": "ae68f88ba8f10f96b99a",
+   "seconds": 48.57,
+   "src": "/audio/escucha-3d/perdidos-a2-anillo.mp3"
+  },
+  "perdidos/a2-bonsai": {
+   "hash": "ac8535b6b40004d4a745",
+   "seconds": 46.28,
+   "src": "/audio/escucha-3d/perdidos-a2-bonsai.mp3"
+  },
+  "perdidos/a2-canoa": {
+   "hash": "cbaa8518d7c75c693a60",
+   "seconds": 44.83,
+   "src": "/audio/escucha-3d/perdidos-a2-canoa.mp3"
+  },
+  "perdidos/a2-cenizas": {
+   "hash": "01f48aa5016522f0a931",
+   "seconds": 39.92,
+   "src": "/audio/escucha-3d/perdidos-a2-cenizas.mp3"
+  },
+  "perdidos/a2-dentadura": {
+   "hash": "8420f8cd95b0d541e637",
+   "seconds": 50.12,
+   "src": "/audio/escucha-3d/perdidos-a2-dentadura.mp3"
+  },
+  "perdidos/a2-diario": {
+   "hash": "6392648538533f4537e8",
+   "seconds": 39.85,
+   "src": "/audio/escucha-3d/perdidos-a2-diario.mp3"
+  },
+  "perdidos/a2-farol": {
+   "hash": "013b476d5e4684325bf6",
+   "seconds": 35.36,
+   "src": "/audio/escucha-3d/perdidos-a2-farol.mp3"
+  },
+  "perdidos/a2-guante": {
+   "hash": "713f9f9a654370ce6d5a",
+   "seconds": 40.83,
+   "src": "/audio/escucha-3d/perdidos-a2-guante.mp3"
+  },
+  "perdidos/a2-ladron": {
+   "hash": "b1162334cbe5175bc03b",
+   "seconds": 51.2,
+   "src": "/audio/escucha-3d/perdidos-a2-ladron.mp3"
+  },
+  "perdidos/a2-llaves": {
+   "hash": "c1af4510e9d47f9e95d9",
+   "seconds": 46.05,
+   "src": "/audio/escucha-3d/perdidos-a2-llaves.mp3"
+  },
+  "perdidos/a2-loro": {
+   "hash": "8e108c40c420255917f2",
+   "seconds": 42.34,
+   "src": "/audio/escucha-3d/perdidos-a2-loro.mp3"
+  },
+  "perdidos/a2-paraguas": {
+   "hash": "aa94237f2bbcf133f271",
+   "seconds": 44.22,
+   "src": "/audio/escucha-3d/perdidos-a2-paraguas.mp3"
+  },
+  "perdidos/a2-relevo": {
+   "hash": "67403f3351a678f340ae",
+   "seconds": 44.01,
+   "src": "/audio/escucha-3d/perdidos-a2-relevo.mp3"
+  },
+  "perdidos/a2-sonambulo": {
+   "hash": "b1f7325acd9c87c7a96b",
+   "seconds": 40.32,
+   "src": "/audio/escucha-3d/perdidos-a2-sonambulo.mp3"
+  },
+  "perdidos/a2-taper": {
+   "hash": "631e33357d53c77341d3",
+   "seconds": 48.68,
+   "src": "/audio/escucha-3d/perdidos-a2-taper.mp3"
+  },
+  "perdidos/a2-telefono": {
+   "hash": "f67af7c4e9127f2b6c0d",
+   "seconds": 46.23,
+   "src": "/audio/escucha-3d/perdidos-a2-telefono.mp3"
+  },
+  "perdidos/a2-tuba": {
+   "hash": "1c8c5ad211310d915106",
+   "seconds": 42.68,
+   "src": "/audio/escucha-3d/perdidos-a2-tuba.mp3"
+  },
+  "perdidos/b1-alcalde": {
+   "hash": "8217f0485a0b73858c00",
+   "seconds": 55.88,
+   "src": "/audio/escucha-3d/perdidos-b1-alcalde.mp3"
+  },
+  "perdidos/b1-anillo": {
+   "hash": "db5a72dfda8ed6ee61d5",
+   "seconds": 48.96,
+   "src": "/audio/escucha-3d/perdidos-b1-anillo.mp3"
+  },
+  "perdidos/b1-bonsai": {
+   "hash": "3ae365f5658983ecfec8",
+   "seconds": 55.84,
+   "src": "/audio/escucha-3d/perdidos-b1-bonsai.mp3"
+  },
+  "perdidos/b1-canoa": {
+   "hash": "f3c530ab78f63d91d70d",
+   "seconds": 52.32,
+   "src": "/audio/escucha-3d/perdidos-b1-canoa.mp3"
+  },
+  "perdidos/b1-cenizas": {
+   "hash": "1508fb5ec46161349bc7",
+   "seconds": 47.67,
+   "src": "/audio/escucha-3d/perdidos-b1-cenizas.mp3"
+  },
+  "perdidos/b1-dentadura": {
+   "hash": "a5682d743055da1bd21e",
+   "seconds": 60.03,
+   "src": "/audio/escucha-3d/perdidos-b1-dentadura.mp3"
+  },
+  "perdidos/b1-diario": {
+   "hash": "4d6bf0d82150bcc53189",
+   "seconds": 50.44,
+   "src": "/audio/escucha-3d/perdidos-b1-diario.mp3"
+  },
+  "perdidos/b1-farol": {
+   "hash": "f2eb4dfe73e8d4ea9ae6",
+   "seconds": 47.86,
+   "src": "/audio/escucha-3d/perdidos-b1-farol.mp3"
+  },
+  "perdidos/b1-guante": {
+   "hash": "4db435b169b3c76cfb92",
+   "seconds": 51.77,
+   "src": "/audio/escucha-3d/perdidos-b1-guante.mp3"
+  },
+  "perdidos/b1-ladron": {
+   "hash": "b399803678861a28a689",
+   "seconds": 60.32,
+   "src": "/audio/escucha-3d/perdidos-b1-ladron.mp3"
+  },
+  "perdidos/b1-llaves": {
+   "hash": "8054c589acf0a90d1a7b",
+   "seconds": 54.23,
+   "src": "/audio/escucha-3d/perdidos-b1-llaves.mp3"
+  },
+  "perdidos/b1-loro": {
+   "hash": "27f0b74a24d37faeea6c",
+   "seconds": 55.23,
+   "src": "/audio/escucha-3d/perdidos-b1-loro.mp3"
+  },
+  "perdidos/b1-paraguas": {
+   "hash": "228bc4e38ce2847c87bc",
+   "seconds": 48.89,
+   "src": "/audio/escucha-3d/perdidos-b1-paraguas.mp3"
+  },
+  "perdidos/b1-relevo": {
+   "hash": "0ad941cd0533b4bd810d",
+   "seconds": 51.99,
+   "src": "/audio/escucha-3d/perdidos-b1-relevo.mp3"
+  },
+  "perdidos/b1-sonambulo": {
+   "hash": "f347fbef83e995bb0e9d",
+   "seconds": 47.31,
+   "src": "/audio/escucha-3d/perdidos-b1-sonambulo.mp3"
+  },
+  "perdidos/b1-taper": {
+   "hash": "ccf43b0ec29f6a898429",
+   "seconds": 59.25,
+   "src": "/audio/escucha-3d/perdidos-b1-taper.mp3"
+  },
+  "perdidos/b1-telefono": {
+   "hash": "97b4facece092799fa18",
+   "seconds": 51.41,
+   "src": "/audio/escucha-3d/perdidos-b1-telefono.mp3"
+  },
+  "perdidos/b1-tuba": {
+   "hash": "b142a5daf66e01958dc8",
+   "seconds": 53.46,
+   "src": "/audio/escucha-3d/perdidos-b1-tuba.mp3"
+  },
+  "perdidos/b2-alcalde": {
+   "hash": "46381d2484dc6a7a023a",
+   "seconds": 69.19,
+   "src": "/audio/escucha-3d/perdidos-b2-alcalde.mp3"
+  },
+  "perdidos/b2-anillo": {
+   "hash": "d8997ded3590d0a1c638",
+   "seconds": 60.76,
+   "src": "/audio/escucha-3d/perdidos-b2-anillo.mp3"
+  },
+  "perdidos/b2-bonsai": {
+   "hash": "991bc618ef04219b2f13",
+   "seconds": 64.1,
+   "src": "/audio/escucha-3d/perdidos-b2-bonsai.mp3"
+  },
+  "perdidos/b2-canoa": {
+   "hash": "73fc937731d9ce1119c1",
+   "seconds": 70.77,
+   "src": "/audio/escucha-3d/perdidos-b2-canoa.mp3"
+  },
+  "perdidos/b2-cenizas": {
+   "hash": "3748bc0fd9957bce1907",
+   "seconds": 65.72,
+   "src": "/audio/escucha-3d/perdidos-b2-cenizas.mp3"
+  },
+  "perdidos/b2-dentadura": {
+   "hash": "ab004d556b7cdc6d8977",
+   "seconds": 71.91,
+   "src": "/audio/escucha-3d/perdidos-b2-dentadura.mp3"
+  },
+  "perdidos/b2-diario": {
+   "hash": "f07598954b1753cbaf73",
+   "seconds": 68.9,
+   "src": "/audio/escucha-3d/perdidos-b2-diario.mp3"
+  },
+  "perdidos/b2-farol": {
+   "hash": "8d9811bdda4aa8f53e86",
+   "seconds": 64.99,
+   "src": "/audio/escucha-3d/perdidos-b2-farol.mp3"
+  },
+  "perdidos/b2-guante": {
+   "hash": "f8812557dc3470ef3f44",
+   "seconds": 66.38,
+   "src": "/audio/escucha-3d/perdidos-b2-guante.mp3"
+  },
+  "perdidos/b2-ladron": {
+   "hash": "741a6f3c04c19d863db9",
+   "seconds": 75.15,
+   "src": "/audio/escucha-3d/perdidos-b2-ladron.mp3"
+  },
+  "perdidos/b2-llaves": {
+   "hash": "8ed9b316a680c7f063fe",
+   "seconds": 77.49,
+   "src": "/audio/escucha-3d/perdidos-b2-llaves.mp3"
+  },
+  "perdidos/b2-loro": {
+   "hash": "e49e3679e97454ca016e",
+   "seconds": 68.23,
+   "src": "/audio/escucha-3d/perdidos-b2-loro.mp3"
+  },
+  "perdidos/b2-paraguas": {
+   "hash": "ab17c239acce3b6bb41e",
+   "seconds": 66.99,
+   "src": "/audio/escucha-3d/perdidos-b2-paraguas.mp3"
+  },
+  "perdidos/b2-relevo": {
+   "hash": "14a6adf3e04ff3760892",
+   "seconds": 68.03,
+   "src": "/audio/escucha-3d/perdidos-b2-relevo.mp3"
+  },
+  "perdidos/b2-sonambulo": {
+   "hash": "d07a0d54f1fd8222855b",
+   "seconds": 63.57,
+   "src": "/audio/escucha-3d/perdidos-b2-sonambulo.mp3"
+  },
+  "perdidos/b2-taper": {
+   "hash": "0860cf0b852bc7ff9c32",
+   "seconds": 67.49,
+   "src": "/audio/escucha-3d/perdidos-b2-taper.mp3"
+  },
+  "perdidos/b2-telefono": {
+   "hash": "f0ed313c7d5f944f3682",
+   "seconds": 64.37,
+   "src": "/audio/escucha-3d/perdidos-b2-telefono.mp3"
+  },
+  "perdidos/b2-tuba": {
+   "hash": "57e1fb55d5da5a21c36b",
+   "seconds": 71.97,
+   "src": "/audio/escucha-3d/perdidos-b2-tuba.mp3"
+  },
+  "perdidos/c1-alcalde": {
+   "hash": "cc6cd46305e731f1816c",
+   "seconds": 103.14,
+   "src": "/audio/escucha-3d/perdidos-c1-alcalde.mp3"
+  },
+  "perdidos/c1-anillo": {
+   "hash": "89e2c557081263cd2f82",
+   "seconds": 82.94,
+   "src": "/audio/escucha-3d/perdidos-c1-anillo.mp3"
+  },
+  "perdidos/c1-bonsai": {
+   "hash": "a7e27770c519a639aeac",
+   "seconds": 106.74,
+   "src": "/audio/escucha-3d/perdidos-c1-bonsai.mp3"
+  },
+  "perdidos/c1-canoa": {
+   "hash": "a8f9bca7ab0d295f6c94",
+   "seconds": 93.86,
+   "src": "/audio/escucha-3d/perdidos-c1-canoa.mp3"
+  },
+  "perdidos/c1-cenizas": {
+   "hash": "7d4b029c64d045595676",
+   "seconds": 90.11,
+   "src": "/audio/escucha-3d/perdidos-c1-cenizas.mp3"
+  },
+  "perdidos/c1-dentadura": {
+   "hash": "2b7100c0b571f35da4d4",
+   "seconds": 99.02,
+   "src": "/audio/escucha-3d/perdidos-c1-dentadura.mp3"
+  },
+  "perdidos/c1-diario": {
+   "hash": "7cfc16eebc7a46d905a6",
+   "seconds": 90.02,
+   "src": "/audio/escucha-3d/perdidos-c1-diario.mp3"
+  },
+  "perdidos/c1-farol": {
+   "hash": "063a9c5a145313616362",
+   "seconds": 70.5,
+   "src": "/audio/escucha-3d/perdidos-c1-farol.mp3"
+  },
+  "perdidos/c1-guante": {
+   "hash": "dc93ea398b846d533cd8",
+   "seconds": 84.06,
+   "src": "/audio/escucha-3d/perdidos-c1-guante.mp3"
+  },
+  "perdidos/c1-ladron": {
+   "hash": "d7bfba9c27a617896fd4",
+   "seconds": 105.02,
+   "src": "/audio/escucha-3d/perdidos-c1-ladron.mp3"
+  },
+  "perdidos/c1-llaves": {
+   "hash": "e32a50a836bee757bbbb",
+   "seconds": 86.61,
+   "src": "/audio/escucha-3d/perdidos-c1-llaves.mp3"
+  },
+  "perdidos/c1-loro": {
+   "hash": "cbd90e0b1d618586b8e9",
+   "seconds": 87.26,
+   "src": "/audio/escucha-3d/perdidos-c1-loro.mp3"
+  },
+  "perdidos/c1-paraguas": {
+   "hash": "b353e84a227c619eef82",
+   "seconds": 82.6,
+   "src": "/audio/escucha-3d/perdidos-c1-paraguas.mp3"
+  },
+  "perdidos/c1-relevo": {
+   "hash": "90658cfae0e0dbe073d8",
+   "seconds": 86.2,
+   "src": "/audio/escucha-3d/perdidos-c1-relevo.mp3"
+  },
+  "perdidos/c1-sonambulo": {
+   "hash": "6a2585af26106147b823",
+   "seconds": 84.07,
+   "src": "/audio/escucha-3d/perdidos-c1-sonambulo.mp3"
+  },
+  "perdidos/c1-taper": {
+   "hash": "da9ef62b576617296182",
+   "seconds": 95.97,
+   "src": "/audio/escucha-3d/perdidos-c1-taper.mp3"
+  },
+  "perdidos/c1-telefono": {
+   "hash": "81a342ab58e40cad8219",
+   "seconds": 80.85,
+   "src": "/audio/escucha-3d/perdidos-c1-telefono.mp3"
+  },
+  "perdidos/c1-tuba": {
+   "hash": "57fdc2686481e2cc9d69",
+   "seconds": 99.91,
+   "src": "/audio/escucha-3d/perdidos-c1-tuba.mp3"
+  },
+  "perdidos/c2-alcalde": {
+   "hash": "ae212f2c01d274a4cec1",
+   "seconds": 102.7,
+   "src": "/audio/escucha-3d/perdidos-c2-alcalde.mp3"
+  },
+  "perdidos/c2-anillo": {
+   "hash": "c8b40f3a16e8d3fcd082",
+   "seconds": 102.5,
+   "src": "/audio/escucha-3d/perdidos-c2-anillo.mp3"
+  },
+  "perdidos/c2-bonsai": {
+   "hash": "4d1731784427e70412cc",
+   "seconds": 106.58,
+   "src": "/audio/escucha-3d/perdidos-c2-bonsai.mp3"
+  },
+  "perdidos/c2-canoa": {
+   "hash": "3ea0fb957ac679f73003",
+   "seconds": 105.03,
+   "src": "/audio/escucha-3d/perdidos-c2-canoa.mp3"
+  },
+  "perdidos/c2-cenizas": {
+   "hash": "0dc6e8ba6fefca2c6ed4",
+   "seconds": 96.39,
+   "src": "/audio/escucha-3d/perdidos-c2-cenizas.mp3"
+  },
+  "perdidos/c2-dentadura": {
+   "hash": "09904907bafc7a34e46d",
+   "seconds": 108.86,
+   "src": "/audio/escucha-3d/perdidos-c2-dentadura.mp3"
+  },
+  "perdidos/c2-diario": {
+   "hash": "bd56666be71c8db7b367",
+   "seconds": 106.28,
+   "src": "/audio/escucha-3d/perdidos-c2-diario.mp3"
+  },
+  "perdidos/c2-farol": {
+   "hash": "dfc13e38479b6cc0729a",
+   "seconds": 102.67,
+   "src": "/audio/escucha-3d/perdidos-c2-farol.mp3"
+  },
+  "perdidos/c2-guante": {
+   "hash": "5063d9ad70344f96173e",
+   "seconds": 104.84,
+   "src": "/audio/escucha-3d/perdidos-c2-guante.mp3"
+  },
+  "perdidos/c2-ladron": {
+   "hash": "1a4b5147276c3492dba9",
+   "seconds": 107.46,
+   "src": "/audio/escucha-3d/perdidos-c2-ladron.mp3"
+  },
+  "perdidos/c2-llaves": {
+   "hash": "9015424d106c4d1e8dd5",
+   "seconds": 104.03,
+   "src": "/audio/escucha-3d/perdidos-c2-llaves.mp3"
+  },
+  "perdidos/c2-loro": {
+   "hash": "844226035a0dfd244a60",
+   "seconds": 91.02,
+   "src": "/audio/escucha-3d/perdidos-c2-loro.mp3"
+  },
+  "perdidos/c2-paraguas": {
+   "hash": "70ba52c48497cb661cfa",
+   "seconds": 92.36,
+   "src": "/audio/escucha-3d/perdidos-c2-paraguas.mp3"
+  },
+  "perdidos/c2-relevo": {
+   "hash": "178796c4699368b892f3",
+   "seconds": 100.05,
+   "src": "/audio/escucha-3d/perdidos-c2-relevo.mp3"
+  },
+  "perdidos/c2-sonambulo": {
+   "hash": "04bdc143a69a34829eae",
+   "seconds": 100.01,
+   "src": "/audio/escucha-3d/perdidos-c2-sonambulo.mp3"
+  },
+  "perdidos/c2-taper": {
+   "hash": "bd814f27352a67dbd315",
+   "seconds": 105.97,
+   "src": "/audio/escucha-3d/perdidos-c2-taper.mp3"
+  },
+  "perdidos/c2-telefono": {
+   "hash": "c6e921b02a820a816bb6",
+   "seconds": 75.88,
+   "src": "/audio/escucha-3d/perdidos-c2-telefono.mp3"
+  },
+  "perdidos/c2-tuba": {
+   "hash": "5486a5759cfcc1607428",
+   "seconds": 107.12,
+   "src": "/audio/escucha-3d/perdidos-c2-tuba.mp3"
   },
   "reality/a0-abandono": {
    "hash": "93a88043b9dc3d21168e",

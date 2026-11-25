@@ -4,6 +4,7 @@ import { bindPurchaseToUser } from "../../../../db/purchase-binding";
 import { authorizePurchaseClaim } from "../../../purchase-claim-cookie";
 import { billingConfig } from "../../../billing-config";
 import { paddleConfig } from "../../../paddle-config";
+import { deliverWelcome, enrollAccount, type NewsletterEnvironment } from "../../../newsletter/server";
 import {
   FIREBASE_SESSION_COOKIE,
   ownerIdentityFromEnvironment,
@@ -71,8 +72,11 @@ export async function POST(request: Request) {
     CHESPANISH_OWNER_EMAIL: runtimeEnv.CHESPANISH_OWNER_EMAIL,
   });
   let account;
+  let accountCreated = false;
   try {
-    account = await syncFirebaseAccount(env.DB, user, ownerIdentity);
+    const synced = await syncFirebaseAccount(env.DB, user, ownerIdentity);
+    account = synced;
+    accountCreated = synced.created;
   } catch {
     return Response.json(
       { error: "No pudimos preparar tu cuenta. Inténtalo de nuevo." },
@@ -94,6 +98,17 @@ export async function POST(request: Request) {
         account = await resolveFirebaseAccount(env.DB, user) || account;
       }
     } catch { /* /pro/claim shows a retry or matching-email recovery step. */ }
+  }
+  // A brand-new free account joins the profes email sequence (one-click unsubscribe in every mail).
+  // Best effort, after billing binding so a just-paid account is not treated as free.
+  if (accountCreated) {
+    try {
+      const subscriber = await enrollAccount(env.DB, account);
+      if (subscriber) {
+        await deliverWelcome(env as unknown as NewsletterEnvironment, (input, init) => fetch(input, init),
+          new URL(request.url).origin, subscriber, "account");
+      }
+    } catch { console.warn("account_nurture", { enrolled: false }); }
   }
   return Response.json(
     {

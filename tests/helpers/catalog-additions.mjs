@@ -13,6 +13,57 @@ const courseLessons=[...readFileSync(new URL('../../app/grammar-classroom/catalo
 // The additions' own behaviour is covered by their tests (tests/noche-abierta.test.mjs).
 const additions = [
   ...courseLessons,
+  // 2026-11-24: Roleplays del mundo hispano, twenty country roleplay classes (A1–A2, ids 265–284)
+  // on the shared engine app/roleplays-hispanos. Every shared-file edit sits on the first entry (265);
+  // the other nineteen only take their lesson out of the historical catalog.
+  ...['mexico','guatemala','honduras','el-salvador','nicaragua','costa-rica','panama','cuba','republica-dominicana','puerto-rico','colombia','venezuela','ecuador','peru','bolivia','chile','paraguay','uruguay','espana','guinea-ecuatorial'].map((slug,i)=>({
+    id:265+i,path:`/roleplays-${slug}`,files:i?/^$/:/^(?:app\/roleplays-[a-z-]+\/|public\/roleplays-hispanos\/|tests\/roleplays-hispanos\.test\.mjs$|scripts\/check-roleplays-hispanos\.mjs$|scripts\/record-roleplays-preview\.mjs$|public\/conversation-previews\/2(?:6[5-9]|7\d|8[0-4])\.mp4$|scripts\/covers\/roleplays-hispanos\.(?:mjs|html)$|scripts\/covers\/art\/roleplays-[a-z-]+\.(?:webp|png)$|docs\/audits\/roleplays-hispanos-english-additions-20261124\.json$)/,
+    edits:i?{}:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,n)=>/^  \{id:(26[5-9]|27\d|28[0-4]),.*path:"\/roleplays-/.test(line)?[n]:[]);
+        assert.equal(at.length,20,'twenty country roleplay catalog entries');
+        assert.deepEqual(at,at.map((_,k)=>at[0]+k),'the twenty entries sit together');lines.splice(at[0],20);return lines.join('\n');
+      },['259,258,260,261,264,263,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284]','259,258,260,261,264,263]'],[', 227, 228, 229, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284]);',', 227, 228, 229]);']],
+      'app/conversation-preview-videos.ts':[[',261,264,263,265,266,267,268,269,270,271,272,273,274,275,276,277,278,279,280,281,282,283,284]);',',261,264,263]);']],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/roleplays-hispanos-english-additions-20261124.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/roleplays-hispanos.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 367);','assert.equal(lessons.length, 347);'],['assert.equal(a1Lessons.length, 118);','assert.equal(a1Lessons.length, 98);']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/360(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/340(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  })),
+  {
+    // 2026-11-23: Lluvia de estrellas (A0–C2), a PRO 3D desert campsite with an observatory on the night of a great meteor shower, wired like Último crucero.
+    id:263,path:'/lluvia-de-estrellas',files:/^(?:app\/lluvia-de-estrellas\/|app\/escucha-3d\/content\/estrellas\/|public\/lluvia-de-estrellas\/|public\/audio\/escucha-3d\/estrellas-|tests\/lluvia-de-estrellas\.test\.mjs$|scripts\/check-lluvia-de-estrellas\.mjs$|scripts\/covers\/art\/lluvia-de-estrellas\.webp$|public\/conversation-previews\/263\.mp4$|docs\/audits\/lluvia-de-estrellas-english-additions-20261123\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:263,')&&line.includes('path:"/lluvia-de-estrellas"')?[i]:[]);
+        assert.equal(at.length,1,'one lluvia de estrellas catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',257,259,258,260,261,264,263],',',257,259,258,260,261,264],']],
+      'app/conversation-preview-videos.ts':[[',257,259,258,260,261,264,263]);',',257,259,258,260,261,264]);']],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/lluvia-de-estrellas-english-additions-20261123.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/lluvia-de-estrellas.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 347);','assert.equal(lessons.length, 346);'],['261,264,263].includes(lesson.id)','261,264].includes(lesson.id)'],["l.levels?.includes('A0')).length,38);","l.levels?.includes('A0')).length,37);"],['assert.equal(a1Lessons.length, 98);','assert.equal(a1Lessons.length, 97);'],["relative.startsWith('app/lluvia-de-estrellas/')||",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/340(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/339(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
+  {
+    // 2026-11-23: Objetos perdidos (A0–C2), a PRO 3D night shift at the municipal lost-and-found office, wired like Último crucero.
+    id:264,path:'/objetos-perdidos',files:/^(?:app\/objetos-perdidos\/|app\/escucha-3d\/content\/perdidos\/|public\/objetos-perdidos\/|public\/audio\/escucha-3d\/perdidos-|tests\/objetos-perdidos\.test\.mjs$|scripts\/check-objetos-perdidos\.mjs$|scripts\/covers\/art\/objetos-perdidos\.webp$|scripts\/covers\/objetos-perdidos\.html$|public\/conversation-previews\/264\.mp4$|docs\/audits\/objetos-perdidos-english-additions-20261123\.json$)/,
+    edits:{
+      'app/lesson-catalog.ts':[text=>{
+        const lines=text.split('\n');
+        const at=lines.flatMap((line,i)=>line.startsWith('  {id:264,')&&line.includes('path:"/objetos-perdidos"')?[i]:[]);
+        assert.equal(at.length,1,'one objetos perdidos catalog entry');lines.splice(at[0],1);return lines.join('\n');
+      },[',257,259,258,260,261,264],',',257,259,258,260,261],']],
+      'app/conversation-preview-videos.ts':[[',257,259,258,260,261,264]);',',257,259,258,260,261]);']],
+      'scripts/check-english-copy.mjs':[["\n  'docs/audits/objetos-perdidos-english-additions-20261123.json',",'']],
+      'scripts/test-worker.mjs':[[" await run(['--test','tests/objetos-perdidos.test.mjs']);\n",'']],
+      'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 346);','assert.equal(lessons.length, 345);'],['255,256,257,259,260,261,264].includes(lesson.id)','255,256,257,259,260,261].includes(lesson.id)'],["l.levels?.includes('A0')).length,37);","l.levels?.includes('A0')).length,36);"],['assert.equal(a1Lessons.length, 97);','assert.equal(a1Lessons.length, 96);'],["||relative.startsWith('app/objetos-perdidos/')",'']],
+      'tests/rendered-html.test.mjs':[['assert.match(html,/339(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/338(?:<!-- -->|\\s)+clases totales/);']],
+    },
+  },
   {
     // 2026-11-18: Clase de nivelación, a PRO trial lesson (student sheet, phonetics with native audio, countries, closing plan).
     id:262,path:'/clase-de-nivelacion',files:/^(?:app\/clase-de-nivelacion\/|public\/clase-de-nivelacion\/|public\/audio\/nivelacion\/|tests\/clase-de-nivelacion\.test\.mjs$|scripts\/generate-nivelacion-audio\.py$|docs\/audits\/clase-de-nivelacion-english-additions-20261118\.json$)/,
@@ -728,7 +779,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes = Buffer.from(text);
   }
   // Undo the latest additive lessons in reverse order before the grammar snapshot.
-  for (const addition of additions.filter(item=>item.id===300||item.id===262||item.id===260||item.id===261||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
+  for (const addition of additions.filter(item=>(item.id>=265&&item.id<=284)||item.id===300||item.id===264||item.id===263||item.id===262||item.id===260||item.id===261||item.id===258||item.id===259||item.id===256||item.id===257||(item.id>=246&&item.id<=255)||item.id===245||item.id===244||item.id===243||item.id===242||item.id===241||item.id===240||item.id===239||item.id===238||item.id===237||item.id===236)) {
     const latestSteps=addition.edits[path]||[];
     if(!latestSteps.length)continue;
     let latest=bytes.toString('utf8');
@@ -739,7 +790,7 @@ export function withoutApprovedAdditions(path, bytes) {
     bytes=Buffer.from(latest);
   }
   bytes=beforeGrammarBytes(path,bytes);
-  const steps = [...additions.filter(item=>item.id!==300&&item.id!==262&&item.id!==260&&item.id!==261&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
+  const steps = [...additions.filter(item=>!(item.id>=265&&item.id<=284)&&item.id!==300&&item.id!==264&&item.id!==263&&item.id!==262&&item.id!==260&&item.id!==261&&item.id!==258&&item.id!==259&&item.id!==256&&item.id!==257&&!(item.id>=246&&item.id<=255)&&item.id!==245&&item.id!==244&&item.id!==236&&item.id!==237&&item.id!==238&&item.id!==239&&item.id!==240&&item.id!==241&&item.id!==242&&item.id!==243), ...repairs.filter(item => !item.latest)].flatMap(item => item.edits[path] || []);
   if (!steps.length) return bytes;
   let text = bytes.toString('utf8');
   for (const step of steps) {

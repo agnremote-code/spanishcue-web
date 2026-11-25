@@ -4,7 +4,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {build} from 'esbuild';
-const r=await build({stdin:{contents:'export * from "./app/material-ele/temas.ts"; export {actividadPages,activityLevel} from "./app/material-ele/actividades.ts"; export {lessons as lessonsForTest} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts"; export {default as sitemap} from "./app/sitemap.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
+const r=await build({stdin:{contents:'export * from "./app/material-ele/temas.ts"; export {actividadPages,activityLevel} from "./app/material-ele/actividades.ts"; export {lessons as lessonsForTest} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {guiaPages} from "./app/material-ele/guias.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 
 const copyOf=(p)=>[p.h1,p.description,p.intro,...p.faq.flatMap((f)=>[f.question,f.answer])].join('\n');
@@ -120,7 +120,7 @@ test('G-H6: free-class claims on topic and level pages are true',()=>{
   assert.equal(p.freeCount,p.lessonIds.filter((id)=>m.isFreeLesson(id)).length,p.path);
   const copy=copyOf(p);
   if(/Tres clases gratis por nivel/.test(copy))for(const level of ['A1','A2','B1','B2','C1','C2'])assert.ok(freeAt(level)>=3,`${p.path} promises three free classes at every level; ${level} has ${freeAt(level)}`);
-  if(/la clase gratis de este nivel/.test(copy))assert.ok(freeAt(p.level)>=1,`${p.path} points to a free ${p.level} class that does not exist`);
+  if(/(?:la|una) clase gratis de este nivel/.test(copy))assert.ok(freeAt(p.level)>=1,`${p.path} points to a free ${p.level} class that does not exist`);
  }
  for(const p of m.temaPages){
   assert.equal(p.freeCount,p.lessonIds.filter((id)=>m.isFreeLesson(id)).length,p.path);
@@ -153,4 +153,48 @@ test('an activity without a level of its own never claims its guide\'s whole ran
   assert.match(answer,/No tiene un nivel propio/,p.path);
  }
  assert.ok(fallback>=1,'no fallback activity found');
+});
+
+// BOARD-DECISION-007 §3.4 early-trigger sample (Martin, 2026-11-24): the ten most-clicked level pages.
+// F1: format and vocabulary level pages claimed an order (shortest to longest class, simplest to hardest
+// scene) that the list does not follow: it is sorted free first, then level, then curriculum order.
+test('level pages claim no class order the list does not follow',()=>{
+ for(const p of m.temaLevelPages){
+  const text=[p.order,copyOf(p)].join('\n');
+  assert.doesNotMatch(text,/más corta a la más larga|entra en media hora|escena más simple a la más exigente|más guiada a la más abierta/,p.path);
+ }
+});
+
+// F2: «El tren de las 23:40» was named «El tren de las 23», because titles were cut at the first colon.
+test('level pages name each listed class with its whole short title',()=>{
+ const byId=new Map(m.lessonsForTest.map((l)=>[l.id,l]));
+ let checked=0;
+ for(const p of m.temaLevelPages){
+  const answer=p.faq[0].answer;
+  for(const id of p.lessonIds){const short=byId.get(id).title.replace(/: .*$/,'');assert.ok(answer.includes(short),`${p.path} FAQ misnames class ${id}: ${short}`);checked++;}
+ }
+ assert.ok(checked>1000,`only ${checked} names checked`);
+ const tren=m.temaLevelPages.find((p)=>p.lessonIds.includes(256));
+ assert.ok(tren,'class 256 is on a level page');
+ assert.match(tren.faq[0].answer,/El tren de las 23:40/);
+});
+
+// N1: the intro's closing clause «… necesita comprensión auditiva para decir lo que quiere decir» made no
+// sense on format and culture pages. Only groups whose topic is something to say keep that clause.
+test('level-page intros close with a sentence that fits the group',()=>{
+ for(const p of m.temaLevelPages){
+  assert.match(p.intro,/[.!?]$/,p.path);
+  if(p.group==='formatos'||p.group==='cultura')assert.doesNotMatch(p.intro,/para decir lo que quiere decir|para que practique/,p.path);
+ }
+});
+
+// H6 follow-up (BOARD-DECISION-007 §3.2, guias note): a guide that says some levels have three free grammar
+// classes names every level that has them.
+test('the guide sentence on three free classes per level names every level that has them',()=>{
+ const freeGrammarAt=(level)=>m.lessonsForTest.filter((l)=>l.category==='Gramática'&&m.isFreeLesson(l.id)&&levelsOf(l).length===1&&levelsOf(l)[0]===level).length;
+ const texts=[];
+ const walk=(node)=>{if(Array.isArray(node))node.forEach(walk);else if(node&&typeof node==='object'){if(typeof node.text==='string'&&/tres clases gratis por nivel/.test(node.text))texts.push(node.text);Object.values(node).forEach(walk);}};
+ walk(m.guiaPages);
+ assert.ok(texts.length>=1,'the sentence exists');
+ for(const t of texts)for(const level of ['A1','A2','B1','B2','C1','C2']){const named=t.includes(`[${level}](/material-ele/${level.toLowerCase()})`);if(named)assert.ok(freeGrammarAt(level)>=3,`guide names ${level}, which has only ${freeGrammarAt(level)} free grammar classes`);if(freeGrammarAt(level)>=3)assert.match(t,new RegExp(`\\[${level}\\]\\(/material-ele/${level.toLowerCase()}\\)`),`guide omits ${level}`);}
 });

@@ -4,6 +4,7 @@ import {useState} from "react";
 import Link from "next/link";
 import {helpGroups,scenarios,slang,type Pair} from "./data";
 import {useAccessibleModal} from "../useAccessibleModal";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 import "./hero-fix.css";
 

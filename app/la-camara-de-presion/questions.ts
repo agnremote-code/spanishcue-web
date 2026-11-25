@@ -28,7 +28,7 @@ const expand=(groups:QuestionGroup[]):PressureQuestion[]=>groups.flatMap(group=>
 
 export const evergreenQuestions:PressureQuestion[]=expand([
   {
-    prefix:"w",family:"words",familyLabel:"MATICES LÉXICOS",topic:"PALABRAS QUE CAMBIAN EL JUICIO",
+    prefix:"w",family:"words",familyLabel:"Matices léxicos",topic:"Palabras que cambian el juicio",
     prompts:[
       "¿Qué frontera separa tolerar de consentir cuando quien tolera también controla las condiciones?",
       "¿Cuándo influir sobre una decisión se convierte en manipularla si toda comunicación selecciona información?",
@@ -41,7 +41,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"p",family:"premise",familyLabel:"CUESTIONA LA PREMISA",topic:"LA PREGUNTA YA TOMÓ PARTIDO",
+    prefix:"p",family:"premise",familyLabel:"Cuestiona la premisa",topic:"La pregunta ya tomó partido",
     prompts:[
       "La pregunta «¿por qué la gente perdió la capacidad de escuchar?» ya afirma que hubo una pérdida: ¿cómo la reformularías sin aceptar esa conclusión?",
       "Si alguien pregunta cómo reparar «el daño inevitable del turismo», ¿qué dos presuposiciones deberías discutir antes de responder?",
@@ -52,7 +52,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"l",family:"literal",familyLabel:"LITERALMENTE CIERTO, PERO…",topic:"LO QUE UNA FRASE PERMITE OCULTAR",
+    prefix:"l",family:"literal",familyLabel:"Literalmente cierto, pero…",topic:"Lo que una frase permite ocultar",
     prompts:[
       "«No fue una orden; todos sabían lo que se esperaba de ellos»: ¿qué afirma, qué sugiere y qué permite negar después?",
       "«Hasta ahora no encontramos motivos para cambiar el procedimiento»: ¿dónde termina la evidencia y empieza la estrategia comunicativa?",
@@ -63,7 +63,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"c",family:"wordshift",familyLabel:"CAMBIA UNA PALABRA",topic:"UN VERBO, OTRO RELATO",
+    prefix:"c",family:"wordshift",familyLabel:"Cambia una palabra",topic:"Un verbo, otro relato",
     prompts:[
       "«El gobierno corrigió, modificó o revirtió su política»: ¿qué relato sobre el pasado instala cada verbo?",
       "«La plataforma detecta, vigila o rastrea el comportamiento»: ¿qué cambia si la acción técnica es idéntica?",
@@ -74,7 +74,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"o",family:"opposite",familyLabel:"DEFIENDE LO CONTRARIO",topic:"LA MEJOR VERSIÓN DEL ADVERSARIO",
+    prefix:"o",family:"opposite",familyLabel:"Defiende lo contrario",topic:"La mejor versión del adversario",
     prompts:[
       "¿Qué espacio de anonimato digital conservarías y cuál es el argumento más fuerte para eliminarlo?",
       "¿Puede una transición energética responsable excluir la energía nuclear y cuál es la mejor objeción a tu respuesta?",
@@ -85,7 +85,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"e",family:"effects",familyLabel:"SEGUNDO Y TERCER EFECTO",topic:"LO QUE OCURRE DESPUÉS DE LO OBVIO",
+    prefix:"e",family:"effects",familyLabel:"Segundo y tercer efecto",topic:"Lo que ocurre después de lo obvio",
     prompts:[
       "Si verificar el origen de todo contenido digital fuera instantáneo y perfecto, ¿qué nuevas formas de engaño aparecerían después?",
       "Si trabajar remotamente desde cualquier país no tuviera obstáculos jurídicos, ¿qué problema resolveríamos y cuál trasladaríamos a otra escala?",
@@ -96,7 +96,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"r",family:"patterns",familyLabel:"¿CASUALIDAD O PATRÓN?",topic:"CAUSALIDAD BAJO SOSPECHA",
+    prefix:"r",family:"patterns",familyLabel:"¿Casualidad o patrón?",topic:"Causalidad bajo sospecha",
     prompts:[
       "Tres empresas rivales cometen errores casi idénticos en una semana: ¿qué evidencia convertiría la coincidencia en señal de una causa compartida?",
       "Varias conductas minoritarias se vuelven visibles al mismo tiempo: ¿cómo distinguimos un cambio social de un cambio en la capacidad de observarlo?",
@@ -106,7 +106,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"s",family:"speaker",familyLabel:"QUIÉN LO DICE",topic:"EL PODER DEL EMISOR",
+    prefix:"s",family:"speaker",familyLabel:"Quién lo dice",topic:"El poder del emisor",
     prompts:[
       "«Tenemos que ser flexibles»: ¿qué obligación distribuye la frase si la dice un empleador y cuál si la dice un empleado?",
       "«Todavía es demasiado pronto para extraer conclusiones»: ¿cuándo expresa rigor y cuándo funciona como una tecnología de la demora?",
@@ -116,7 +116,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"i",family:"personal",familyLabel:"PERSONAL C2",topic:"UNA RESPUESTA QUE NO SEA AUTOMÁTICA",
+    prefix:"i",family:"personal",familyLabel:"Personal C2",topic:"Una respuesta que no sea automática",
     prompts:[
       "¿Qué opinión tuya cambió tanto por acumulación que no puedes identificar el momento exacto en que dejó de ser la anterior?",
       "¿Qué rasgo que llamas personalidad podría ser una adaptación tan antigua que ya no sabes distinguirla de tu identidad?",
@@ -128,7 +128,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"a",family:"brutal",familyLabel:"ABSURDAMENTE DIFÍCIL",topic:"IDEAS SIN SALIDA FÁCIL",
+    prefix:"a",family:"brutal",familyLabel:"Absurdamente difícil",topic:"Ideas sin salida fácil",
     prompts:[
       "¿Puede una persona interpretar honestamente sus propias motivaciones de manera falsa sin que exista autoengaño deliberado?",
       "¿Sigue siendo libre una decisión cuando todas las alternativas disponibles fueron configuradas por circunstancias que el agente nunca eligió?",
@@ -140,7 +140,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"n",family:"nodepends",familyLabel:"SIN DERECHO A «DEPENDE»",topic:"TOMA POSICIÓN Y DESPUÉS MATIZA",
+    prefix:"n",family:"nodepends",familyLabel:"Sin derecho a «depende»",topic:"Toma posición y después matiza",
     prompts:[
       "Sin usar «depende»: ¿la transparencia aumenta la confianza? Elige una dirección y defiéndela.",
       "Sin usar «depende»: ¿la tecnología amplía la libertad humana? Define primero qué entiendes por libertad.",
@@ -150,7 +150,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"d",family:"newfact",familyLabel:"EL DATO QUE CAMBIA TODO",topic:"REVISA TU RESPUESTA SIN ESCAPAR",
+    prefix:"d",family:"newfact",familyLabel:"El dato que cambia todo",topic:"Revisa tu respuesta sin escapar",
     prompts:[
       "¿Prohibirías los alquileres de menos de treinta días si supieras que el 38 % de los anfitriones usa ese ingreso para pagar su única vivienda?",
       "¿Aceptarías que una IA priorice pacientes si mejora el promedio de espera pero concentra sus errores en un grupo pequeño y predecible?",
@@ -160,7 +160,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"h",family:"headline",familyLabel:"EL TITULAR YA ARGUMENTA",topic:"SESGO COMPRIMIDO EN UNA LÍNEA",
+    prefix:"h",family:"headline",familyLabel:"El titular ya argumenta",topic:"Sesgo comprimido en una línea",
     prompts:[
       "«La ciudad recupera viviendas» frente a «la ciudad interviene el mercado»: ¿qué presupone cada titular antes de presentar un solo dato?",
       "«Una IA supera a especialistas» frente a «un ensayo limitado reabre el debate»: ¿qué generalización introduce cada titular?",
@@ -173,7 +173,7 @@ export const evergreenQuestions:PressureQuestion[]=expand([
     ]
   },
   {
-    prefix:"f",family:"final",familyLabel:"CIERRE SIN PREPARACIÓN",topic:"DIEZ PREGUNTAS PARA CERRAR",
+    prefix:"f",family:"final",familyLabel:"Cierre sin preparación",topic:"Diez preguntas para cerrar",
     prompts:[
       "¿Qué afirmación que hiciste hoy cambiarías si tuvieras que defenderla ante una persona directamente afectada?",
       "¿Cuál de tus respuestas dependía de una palabra ambigua y cómo la reformularías ahora con mayor precisión?",

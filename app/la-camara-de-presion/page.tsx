@@ -1,7 +1,9 @@
 "use client";
 
-import Link from "next/link";
-import {useEffect,useMemo,useState} from "react";
+import {useEffect,useMemo,useState,type CSSProperties} from "react";
+import {ClassicTopBar} from "../clasicas-ui/TopBar";
+import "../clasicas-ui/clasicas.css";
+import "../clasicas-ui/premium.css";
 import {evergreenQuestions,familyOrder,type PressureQuestion} from "./questions";
 import {pulseQuestions,pulseSources,pulseUpdated} from "./pulse";
 import "./style.css";
@@ -9,30 +11,30 @@ import "./style.css";
 const allQuestions=[...pulseQuestions,...evergreenQuestions];
 const initialQuestion=evergreenQuestions.find(item=>item.family==="personal")??allQuestions[0];
 const stages=[
-  {name:"ENTRADA",time:"2 min",families:["personal"]},
-  {name:"ACTUALIDAD",time:"8 min",families:["pulse"]},
-  {name:"LENGUAJE",time:"8 min",families:["words","premise","literal","wordshift","speaker","headline"]},
-  {name:"IDEAS",time:"8 min",families:["opposite","effects","patterns","brutal"]},
-  {name:"SIN «DEPENDE»",time:"5 min",families:["nodepends"]},
-  {name:"DATO NUEVO",time:"5 min",families:["newfact"]},
-  {name:"CIERRE",time:"9 min",families:["final"]}
+  {name:"Entrada",time:"2 min",families:["personal"]},
+  {name:"Actualidad",time:"8 min",families:["pulse"]},
+  {name:"Lenguaje",time:"8 min",families:["words","premise","literal","wordshift","speaker","headline"]},
+  {name:"Ideas",time:"8 min",families:["opposite","effects","patterns","brutal"]},
+  {name:"Sin «depende»",time:"5 min",families:["nodepends"]},
+  {name:"Dato nuevo",time:"5 min",families:["newfact"]},
+  {name:"Cierre",time:"9 min",families:["final"]}
 ] as const;
 
 const familyNames:Record<string,string>={
-  words:"MATICES LÉXICOS",
-  premise:"CUESTIONA LA PREMISA",
-  literal:"LITERALMENTE CIERTO",
-  wordshift:"CAMBIA UNA PALABRA",
-  opposite:"DEFIENDE LO CONTRARIO",
-  effects:"2.º / 3.er EFECTO",
-  patterns:"¿CASUALIDAD O PATRÓN?",
-  speaker:"QUIÉN LO DICE",
-  personal:"PERSONAL C2",
-  brutal:"ABSURDAMENTE DIFÍCIL",
-  nodepends:"SIN «DEPENDE»",
-  newfact:"EL DATO QUE CAMBIA TODO",
-  headline:"EL TITULAR",
-  final:"CIERRE LISTO"
+  words:"Matices léxicos",
+  premise:"Cuestiona la premisa",
+  literal:"Literalmente cierto",
+  wordshift:"Cambia una palabra",
+  opposite:"Defiende lo contrario",
+  effects:"2.º y 3.er efecto",
+  patterns:"¿Casualidad o patrón?",
+  speaker:"Quién lo dice",
+  personal:"Personal C2",
+  brutal:"Absurdamente difícil",
+  nodepends:"Sin «depende»",
+  newfact:"El dato que cambia todo",
+  headline:"El titular",
+  final:"Cierre listo"
 };
 
 const pick=(pool:PressureQuestion[],currentId:string)=>{
@@ -101,41 +103,43 @@ export default function CamaraDePresion(){
     load(pick(unseen.length?unseen:pool,current.id));
   };
 
-  return <main className="pressure-app">
-    <nav className="pressure-top">
-      <Link href="/"><img src="/brand/spanishcue-logo.png" alt=""/><span><b>SPANISHCUE</b><small>C2 · CONVERSACIÓN</small></span></Link>
-      <div className="session-timer"><button onClick={()=>setRunning(value=>!value)}>{running?"PAUSA":"INICIAR"}</button><b>{time}</b><button onClick={()=>{setSeconds(45*60);setRunning(false)}} aria-label="Reiniciar temporizador">↺</button></div>
-      <Link href="/">BIBLIOTECA</Link>
+  return <main className="cx cxp pressure-app" style={{"--cx-accent":"#3b5bdb"} as CSSProperties}>
+    <ClassicTopBar title="La cámara de presión · C2">
+      <div className="pressure-timer" role="group" aria-label="Temporizador de la sesión">
+        <b>{time}</b>
+        <button className="cx-btn" onClick={()=>setRunning(value=>!value)}>{running?"Pausa":"Iniciar"}</button>
+        <button className="cx-btn" onClick={()=>{setSeconds(45*60);setRunning(false)}} aria-label="Reiniciar temporizador">↺</button>
+      </div>
+    </ClassicTopBar>
+
+    <nav className="cxp-steps pressure-steps" aria-label="Sesión sugerida de 45 minutos">
+      {stages.map((item,index)=><button key={item.name} className={stage===index&&!family?"active":""} onClick={()=>chooseStage(index)}><span>{index+1}</span><b>{item.name}<small>{item.time}</small></b></button>)}
     </nav>
 
-    <aside className="pressure-stagebar" aria-label="Sesión sugerida de 45 minutos">
-      {stages.map((item,index)=><button key={item.name} className={stage===index&&!family?"active":""} onClick={()=>chooseStage(index)}><span>{String(index+1).padStart(2,"0")}</span><b>{item.name}</b><small>{item.time}</small></button>)}
-    </aside>
-
-    <section className="chamber">
-      <div className="chamber-scene"/><div className="chamber-vignette"/><div className="pressure-lines" aria-hidden="true"><i/><i/><i/><i/></div>
-
-      <aside className="family-spine">
-        <header><span>BANCO</span><b>{allQuestions.length}</b></header>
-        <button className={!family?"active":""} onClick={()=>chooseFamily(null)}><i>?</i><span>TODO · {allQuestions.length}</span></button>
-        <button className={family==="pulse"?"active pulse":"pulse"} onClick={()=>chooseFamily("pulse")}><i>●</i><span>ACTUALIDAD · {pulseQuestions.length}</span></button>
-        {familyOrder.map((key,index)=><button key={key} className={family===key?"active":""} onClick={()=>chooseFamily(key)}><i>{String(index+1).padStart(2,"0")}</i><span>{familyNames[key]} · {allQuestions.filter(item=>item.family===key).length}</span></button>)}
+    <section className="pressure-room">
+      <aside className="pressure-bank cx-card" aria-label="Banco de preguntas">
+        <header><b>Banco de preguntas</b><span>{allQuestions.length}</span></header>
+        <button className={!family?"active":""} onClick={()=>chooseFamily(null)}><span>Todo</span><small>{allQuestions.length}</small></button>
+        <button className={family==="pulse"?"active pulse":"pulse"} onClick={()=>chooseFamily("pulse")}><span><i aria-hidden="true"/>Actualidad</span><small>{pulseQuestions.length}</small></button>
+        {familyOrder.map(key=><button key={key} className={family===key?"active":""} onClick={()=>chooseFamily(key)}><span>{familyNames[key]}</span><small>{allQuestions.filter(item=>item.family===key).length}</small></button>)}
       </aside>
 
-      <article className="question-core" key={current.id}>
-        <header><span>{current.familyLabel}</span><b>{String(globalIndex).padStart(3,"0")} / {allQuestions.length}</b></header>
-        <div className="topic-line"><span>TEMA</span><b>{current.topic}</b><small>{topicIndex}/{topicQuestions.length}</small></div>
-        {current.context&&<button className="context-strip" onClick={()=>setSourceOpen(value=>!value)}><span>CONTEXTO MÍNIMO · {pulseUpdated}</span><p>{current.context}</p><b>{sourceOpen?"OCULTAR FUENTES":"VER FUENTES"}</b></button>}
-        {sourceOpen&&sources.length>0&&<aside className="source-float">{sources.map(source=><a key={source.url} href={source.url} target="_blank" rel="noreferrer"><span>{source.name}</span><small>{source.date} ↗</small></a>)}</aside>}
+      <article className="pressure-core cx-card cx-rise" key={current.id}>
+        <header>
+          <span className="cx-kicker">{current.familyLabel}</span>
+          <span className="cx-chip">Pregunta {globalIndex} de {allQuestions.length}</span>
+        </header>
+        <p className="pressure-topic">Tema: <b>{current.topic}</b><small>{topicIndex} de {topicQuestions.length}</small></p>
         <h1>{current.prompt}</h1>
-        <p className="speak-now">EL ALUMNO RESPONDE · LA PRÓXIMA PREGUNTA YA ESTÁ LISTA</p>
+        {current.context&&<button className="pressure-context" onClick={()=>setSourceOpen(value=>!value)} aria-expanded={sourceOpen}><b>Contexto mínimo · {pulseUpdated}</b><p>{current.context}</p><span>{sourceOpen?"Ocultar fuentes":"Ver fuentes"}</span></button>}
+        {sourceOpen&&sources.length>0&&<div className="pressure-sources">{sources.map(source=><a key={source.url} href={source.url} target="_blank" rel="noreferrer"><span>{source.name}</span><small>{source.date} ↗</small></a>)}</div>}
+        <p className="cx-teacher"><b>Para el profe</b>El alumno responde con calma; la próxima pregunta ya está lista cuando haga falta.</p>
+        <footer className="pressure-controls">
+          <button className="cx-btn" onClick={anotherTopic}>Otro tema</button>
+          <div className="pressure-progress"><i><em style={{width:`${Math.min(100,(used.length/15)*100)}%`}}/></i><span>{used.length} {used.length===1?"abierta":"abiertas"} · 10–15 suelen completar la sesión</span></div>
+          <button className="cx-btn is-accent" onClick={next}>Siguiente pregunta →</button>
+        </footer>
       </article>
-
-      <footer className="question-controls">
-        <button onClick={anotherTopic}>OTRO TEMA</button>
-        <span><i style={{width:`${Math.min(100,(used.length/15)*100)}%`}}/><b>{used.length} abiertas · 10–15 suelen completar la sesión</b></span>
-        <button onClick={next}>SIGUIENTE PREGUNTA →</button>
-      </footer>
     </section>
   </main>;
 }

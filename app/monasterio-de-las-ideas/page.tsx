@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { type CSSProperties, useEffect, useMemo, useState } from "react";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 
 type Artifact = {

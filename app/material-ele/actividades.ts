@@ -70,14 +70,20 @@ function activityPage(page: ElePage, activity: EleActivity): ActividadPage {
   };
 }
 
+/** The words teachers use in Search Console queries when they differ from the guide's label. */
+const exerciseTopicNames: Record<string, string> = {
+  "pronombres-de-objeto": "objeto directo e indirecto",
+  "gustar": "gustar y verbos como gustar",
+};
+
 function exercisePage(page: ElePage, exercise: EleExercise): EjercicioPage {
   const slug = page.slug;
   const level = pageLevel(page);
   // Topic exercises are named the way teachers search for them («ejercicios de gustar con soluciones»),
   // with the topic page's own level range only once; level exercises keep their specific title.
-  const topic = page.kind === "topic" ? page.label.charAt(0).toLowerCase() + page.label.slice(1) : "";
+  const topic = page.kind === "topic" ? (exerciseTopicNames[page.slug] ?? page.label.charAt(0).toLowerCase() + page.label.slice(1)) : "";
   const title = topic
-    ? fit(`Ejercicios de ${topic} con soluciones (${level}) | SpanishCue`, `Ejercicios de ${topic} con soluciones | SpanishCue`, `Ejercicios de ${topic} | SpanishCue`)
+    ? fit(`Ejercicios de ${topic} con soluciones y PDF (${level}) | SpanishCue`, `Ejercicios de ${topic} con soluciones (${level}) | SpanishCue`, `Ejercicios de ${topic} con soluciones | SpanishCue`, `Ejercicios de ${topic} | SpanishCue`)
     : fit(`${exercise.title} online con soluciones | SpanishCue`, `${exercise.title} con soluciones | SpanishCue`, `${exercise.title} | SpanishCue`);
   const description = describe(`${exercise.title}: ${exercise.items.length} frases para completar en línea, con corrección al instante y soluciones explicadas, nivel ${level}.`, `Para clase o de tarea, con ficha en PDF.`);
   return {

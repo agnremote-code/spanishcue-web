@@ -79,7 +79,8 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     manifest: "/manifest.webmanifest",
     // Bing Webmaster Tools ownership (ChatGPT search reads the Bing index). Public value, not a secret; keep it or the site loses verification.
-    verification: { other: { "msvalidate.01": "B1C9538B7AB87595B7CADD8319423320" } },
+    // Pinterest website claim for @spanishcue (attribution + Rich Pins). Public value, not a secret.
+    verification: { other: { "msvalidate.01": "B1C9538B7AB87595B7CADD8319423320", "p:domain_verify": "3f2e6392e9ec5cb99718ca9008737782" } },
     robots: isSearchPrivatePath(pathname)
       ? { index: false, follow: false }
       : { index: true, follow: true },

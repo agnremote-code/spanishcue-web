@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-20 by the Friday 3D + assessment routine (scheduled cloud run; Martin, Alejandro and a fresh G4 reviewer convened as subagents; see "Current work")._
+_Last updated: 2026-11-24 by the Tuesday SEO routine (scheduled cloud run; Martin and Sofia convened as subagents; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -32,7 +32,7 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 |---|---|---|---|
 | 1 | LES-001 «La feria de Villaluz» A2 PRO 3D world (LESSON-DECISION-001 v5 + BOARD-DECISION-001 overlays) | Martin (content) → Sofia (build); G4 by Alejandro or a fresh agent; QA Martin | **Deployed 2026-10-21**: PR #251 → `6383b3b6`, production run 39549567404 (workflow smoke passed). The changed-URL smoke is still owed (see Current work). Open follow-ups: G5(b) real-device check (featured flag stays off until then), T5 fps on a real Android, the cover still shows the baile host in its old spot |
 | 2 | **NEW 2026-10-23: «El ascensor del cerro», B2 PRO 3D world, Valparaíso** ([concept](concepts/2026-10-23-valparaiso-ascensor-del-cerro.md); selected 3 of 3) | Martin (content, after his cultural check) → Sofia (build) → G4 Alejandro or a fresh agent | **HELD on R4 (§9.2 listening).** Draft #282, renumbered to catalog id **246** on 2026-11-02 (243 went to «Más allá»). The BOARD-DECISION-003 speech-to-text check was NOT VALID on its first run (missed a seeded gap-word -s pair), and it flagged cafe («Yaneth» misheard; line 8 not located in the first model's transcript). **2026-11-16:** its G1 ids no longer exist in the regenerated curriculum, so it needs a remap; BOARD-DECISION-006 does not release it |
-| 3 | **NEW 2026-11-16: «El taller de la greda», B1 PRO 3D world, Boyacá** ([concept](concepts/2026-11-16-boyaca-taller-de-la-greda.md); selected 2 of 3; first world under [BOARD-DECISION-006](decisions/BOARD-DECISION-006-provable-listening-gate.md)) | §3.6 checker PR (Sofia) → Martin (content) → Sofia (build) → G4 Alejandro or a fresh agent | **Checker on main via #472 → `9f8258a8`, deployed 11-18 (tooling; reviewed, DELTA APPROVE). Next: unblock the STT workflow (rule 6 vs #282), then Martin authors.** Dependencies: BOARD-DECISION-006 adopted (done); §3.6 (i)–(iv) done; (v) workflow open |
+| 3 | **NEW 2026-11-16: «El taller de la greda», B1 PRO 3D world, Boyacá** ([concept](concepts/2026-11-16-boyaca-taller-de-la-greda.md); selected 2 of 3; first world under [BOARD-DECISION-006](decisions/BOARD-DECISION-006-provable-listening-gate.md)) | §3.6 checker PR (Sofia) → Martin (content) → Sofia (build) → G4 Alejandro or a fresh agent | **Content drafted 11-23 in draft #510 (Martin; LQG draft, audio generated but unheard). STT workflow BLOCKED by rule 6: #209 (Codex) and #282 both hold `.github/workflows/**`, so the owner must decide #209 (R5). Next: Sofia builds (Wed), then CPIO, G4 and the STT run once R5 clears.** Checker on main via #472 → `9f8258a8`. Dependencies: BOARD-DECISION-006 adopted (done); §3.6 (i)–(iv) done; (v) workflow open |
 | — | ~~«También, tampoco, sí, no: reaccionar», A1 PRO grammar (`a1.gram.tambien-tampoco`)~~ | — | **DROPPED 2026-11-13** (Martin's duplicate check, facilitator re-verified): free A1 class 332 (G032) already teaches all eight reactions with 6 exercises (`app/grammar-classroom/live/lessons/g332.ts:129-146`; free per `app/access-policy.ts:1-2`), the A1 objective assesses it (`app/autoestudio/curriculum/objectives/a1.ts:140`) and G372 reuses it at A2. If more practice is wanted, add 2–4 exercises to that g332 section instead |
 | — | ~~«Gustar y verbos como gustar» A1 PRO grammar class~~ | — | **DROPPED 2026-10-23** (Alejandro, on Martin's evidence): duplicates G032 «Gustar y encantar» (`g332.ts`) + G062 «Gustar, interesar, doler, faltar» (`g362.ts`), both live and PRO. The other gaps in BOARD-DECISION-002 §2 (superlativos, obligación, indefinidos) are also covered (369, 340/380, 370–372). Supersedes BOARD-DECISION-002 §3.1(2) on this point |
 | P | Technical SEO, highest impact first (parallel stream) | Alejandro → Sofia (code review), Martin (QA) | First fix = PR #224, **merged `c06c01c` and deployed 2026-10-20** (production run 39359743902, workflow smoke passed). The changed-URL content smoke is still owed (PUBLISHED.md, Pending verification) |
@@ -53,6 +53,8 @@ Parallel streams: **3D = Sofia**, **technical SEO = Alejandro**, **QA/integratio
 | — | **COMP-001** ProfeDeELE.com benchmark: their offer, formats, pricing, the teacher queries they win, and the gaps SpanishCue can win with evidence. Feeds concept selection and SEO-002. | Alejandro (lead) + Martin (pedagogy) | next Tuesday SEO slot, or earlier if capacity allows |
 
 ## Owner data requests (open)
+- **R5 (NEW 2026-11-23, blocks the Taller listening gate): close or decide Codex PR #209.** #209 «Google Ads: connect verified subscription Purchase conversion» (non-draft, opened 2026-10-16, not updated since, `merge` job red) changes `.github/workflows/deploy-production.yml`. AGENTS.md rule 6 allows at most one open PR on `.github/workflows/**`, and #282 (board draft) holds `escucha-3d-stt.yml` as well, so that area already has two open PRs. The board may not touch Codex's PR (rule 3) and will not open a third. Until #209 is closed or merged, the STT workflow for BOARD-DECISION-006 cannot reach main or the Taller branch, so no VALID run can happen and «El taller de la greda» cannot ship. The W47 plan said #282 "holds the only open `.github/workflows/**` change" (W47 §6). That was wrong: the 11-23 run checked the files of all 8 other open PRs, excluding #509/#510 (VERIFIED). #209 also has merge conflicts (mergeable_state "dirty"), so closing it looks likelier than merging it.
+- **W48 item 4 owner requests (restated 2026-11-23; none is a board action):** (i) check the Paddle delivery log for the silence since 11-04 (no stored live webhook during the promo week); (ii) close or decide #360 (board draft, prices US$19.90/US$199; main already ships US$19.90/US$150 per CLAUDE.md and `docs/billing-contract.md`) and Codex #283 (US$2 trial retirement), which block F2 under rule 6 (billing); (iii) whether new non-board worlds must pass a level check before `featured:true` (AGENTS.md is the owner's file); (iv) F5 policy. The plan asked for a factual comment on #360. It was **not posted**: this run's session instructions allow GitHub comments only when the owner asks (that rule is not in a repository file), so the fact is recorded here instead.
 - **R0 RESOLVED 2026-11-13 (VERIFIED):** `get_connectors` lists `searchconsole` with account `sc-domain:spanishcue.com`, and reads return data (latest day 2026-11-10). The W46 indicators are in [assessments/2026-W46.md](assessments/2026-W46.md) §2. The history below is kept.
 - **R0, STATE 2026-11-06 (superseded): Search Console was DISCONNECTED in Windsor.** `get_connectors` lists only `google_ads` (423-495-3611), and `get_data searchconsole` returns "No searchconsole accounts are configured". HYPOTHESIS: the extra accounts were removed for the Free plan, and Search Console went with them. The owner was pushed the reconnect link (`get_connector_connect_info searchconsole`) on 2026-11-06: re-authorize, then select `sc-domain:spanishcue.com` and click Finish. The history below is kept.
 - **R0 (2026-10-20, blocking SEO measurement; STILL OPEN 2026-11-03, Windsor returned the same "reads are paused … 6 accounts connected" error):** Windsor.ai paused all reads: "reads are paused because you have 6 accounts connected and your Free plan includes 1 account". Every `searchconsole` query returns that placeholder row with 0 values. Fix: disconnect the 5 extra accounts at https://onboard.windsor.ai/app/ (keep `sc-domain:spanishcue.com`) or upgrade. The board may not buy paid plans. The owner was notified by push on 2026-10-20. Until this is fixed there is no fresh Search Console evidence; the last real numbers are from 2026-10-17 (PR #224 body).
@@ -81,6 +83,90 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-24 (Tuesday SEO routine): PR #516** (branch `claude/seo-tuesday-20261124`, base main `dce909f`), **merged and deployed `d94911ae`**. Records PR #518 (branch `claude/board-tue-seo-records-20261124`). Run-start marker pushed at 02:10Z (W48 item 0). Mon 11-23 left its marker (#509). Subscription usage: **UNKNOWN**.
+  - **W48 item 3: DONE.** This was the BOARD-DECISION-007 §3.4 early-trigger sample.
+    - Martin audited the 10 most-clicked generated level pages: [audit](../audits/material-ele-top10-h1-h8-sample-20261124.md).
+    - **7 of 10 FAIL**: all seven formatos pages, all on two template defects. 3 are PASS WITH NOTES.
+    - Every class list is level-honest (H1). No class goal, prompt or free audio was wrong. Every «gratis» claim is true (H6).
+  - **Fixed in this PR (copy only, §3.6; no path, title, description, H1, lessonIds or indexing change, VERIFIED by Sofia's generator diff):**
+    - F1: format pages said the classes run «de la más corta a la más larga… la que entra en media hora». That was false: the list is sorted free first, then by level, then by curriculum order (`temas.ts:231`). Vocabulary pages made a similar unverified claim (N3).
+    - F2: class 256 was named «El tren de las 23», because titles were cut at the first colon.
+    - N1: the intro clause «… necesita comprensión auditiva para decir lo que quiere decir» was broken on format and culture pages.
+    - N2: «Para probar el formato» pointed readers to grammar classes.
+    - The materials guide now names C1 and C2 among the levels with three free grammar classes (true per `app/access-policy.ts`).
+    - 4 new guards in `tests/material-ele-copy-quality.test.mjs`, each mutation-checked: all fail on main's code and pass on the branch.
+    - Whether a 7/10 template failure crosses the §5 noindex threshold depends on whether template text counts as H4 or H8. Fixing it now clears it under either reading, so **no noindex**.
+  - **Search Console (VERIFIED, Windsor, data through 11-21):** [evidence/2026-11-24-search-console.md](evidence/2026-11-24-search-console.md).
+    - 28 days (10-25..11-21): **148 clicks, 2,417 impressions, position 13.20** (11-17 pull: 77 / 1,132 / 18.58).
+    - W47, first 6 days: 71 clicks / 1,276 impressions, against 46 / 554 for the same days of W46.
+    - Generated level pages: 56 pages with impressions, **54 clicks (36% of the site)**, 487 impressions, weighted position 9.61.
+    - **Pages that lost copy on 11-17:** no consistent movement on 1–24 impressions per window, which is noise. Watch `juegos-de-conversacion/b2`: position 5.1 → 9.8.
+    - Indexed count UNKNOWN (R1).
+  - **Found (VERIFIED), not a board action:**
+    - Non-board commits on 11-17 and 11-18 retired 27 level pages into `retiredTemaLevelPaths`, each 308 to its topic page (5 → 32 entries; 377 → 350 generated). One of them had impressions: `gramatica/perifrasis-verbales/c1` (5 impressions). The H7 test passes.
+    - `spanish tutor cost` gets 55 impressions at position 8.4 with 0 clicks on the non-board `/guides/online-spanish-tutor-rates`, a snippet issue (HYPOTHESIS).
+  - **Owed smoke (11-17):** «perdón que nunca pediste» cannot reach `/material-ele/formatos/comprension-auditiva/a1` (VERIFIED in source by Martin). The live page is still not smoked, because the sandbox proxy refuses spanishcue.com (CONNECT 403 again today).
+  - **Board:**
+    - Martin (audit) and Sofia (code review: CODE APPROVE at `c75c4f9b`, DELTA APPROVE at `86d5f1da`), both as fresh subagents.
+    - Alejandro was not convened as an agent: there was no vote. The facilitator did the data pull and the evidence file.
+    - Record: [transcripts/2026-11-24-tuesday-seo.md](transcripts/2026-11-24-tuesday-seo.md), not byte-exact.
+  - **Checks (local, Linux):**
+    - `npm test` at `c75c4f9b`: exit 0, 1,850 pass, 0 fail (pinned baseline commits present, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`).
+    - After the NB3/NB5 delta (`86d5f1da`): `npm run test:seo` 117/117 and `test:language` 43/43.
+    - `npm run lint`: 0 errors (207 warnings, all already present). eslint on the changed files: clean.
+    - `git diff --check`: clean.
+  - **Follow-ups (non-blocking, next Tuesday copy pass):**
+    - Sofia NB1: «Con la primera de la lista» and «En el orden del curso» on grammar, function and culture pages, a softer form of F1.
+    - NB2: «En cada clase» on vocabulary pages that list grammar classes.
+    - NB4: the order test is a denylist.
+    - Martin N4/N5: topic fit (El consorcio and Objetos perdidos under fiestas; grammar class 429 under emociones).
+  - **Release of #516 (VERIFIED):** merged as `d94911ae`; its tree is identical to PR head `121d72e7`.
+    - CI + Auto Merge [45312954318](https://github.com/agnremote-code/spanishcue-web/actions/runs/45312954318) (verify 02:31–02:42Z, merge 03:05Z).
+    - Staging run [45317809918](https://github.com/agnremote-code/spanishcue-web/actions/runs/45317809918) and production run [45318278518](https://github.com/agnremote-code/spanishcue-web/actions/runs/45318278518) both succeeded.
+    - "Production smoke" passed (job 138190325234, 03:20:00–03:20:17Z, `"passed": true`), and the rollback was skipped.
+    - main = production = `d94911ae`.
+    - **The changed URLs were not smoked individually**, because the sandbox cannot reach spanishcue.com (proxy CONNECT 403; WebFetch DNS failure). PUBLISHED.md lists this release under "Pending verification", like 11-17.
+    - The same smoke log shows the Paddle notice `paddle_api_403`, `lastEventAt` 1793797447 (about 2026-11-04). This is the known silence in owner request (i); nothing new.
+  - **Next action:**
+    - Any session that can reach spanishcue.com: smoke `/material-ele/formatos/comprension-auditiva/a1`. It should show «Cada tarjeta indica el nivel y la duración de la clase» (the class-section intro, rendered from `page.order` at `app/material-ele/[slug]/[tema]/[nivel]/page.tsx:65`) and «El tren de las 23:40» (FAQ), and must not show «De la clase más corta a la más larga» or «perdón que nunca pediste». That closes the 11-17 and 11-24 Pending entries.
+    - Wed 11-25: W48 item 2 (Taller build) as planned.
+    - Next Tue (12-01): Sofia's NB1, NB2 and NB4 copy pass, and re-pull the cluster table (watch `juegos-de-conversacion/b2`).
+- **2026-11-23 (Monday 3D routine): PR #509** (records; branch `claude/monday-3d-20261123`, base main `59475b40`) **and draft PR #510** (Taller content; branch `claude/escucha-3d-taller-greda-b1-20261123`). Run-start marker pushed at 02:08Z (W48 item 0). Fri 11-20 left its marker (#500). Subscription usage: **UNKNOWN**.
+  - **No 3D unit shipped today, and none passed the gate.** The Taller content is a draft with unheard audio and no STT run. It is not counted as a unit.
+  - **W48 item 1(a), the STT workflow: BLOCKED (VERIFIED), new owner request R5.**
+    - Codex PR #209 (non-draft, idle since 10-16) changes `.github/workflows/deploy-production.yml`, and #282 holds `escucha-3d-stt.yml`. The W47 plan missed #209.
+    - Rule 6 allows one open PR per sensitive area, so the board did not open a third workflow PR. It also did not commit the workflow drop on #282's branch: on its own, that drop unblocks nothing.
+    - Once #209 is closed or merged, the next run does (a) as planned: drop the workflow from #282, then open one reviewed STT workflow PR.
+  - **W48 item 1(b), Taller authoring: DONE as a draft (#510).** Martin authored it as a subagent; the head was `d04b2678` when the PR opened.
+    - `app/escucha-3d/content/taller/b1.json`: 8 items, 113–147 words each.
+    - Cast: 6 countries (CO, UY, VE, DO, GT, PA) and 7 characters, including a new chef, Andrés (GT), which meets concept §6.1. 3 women and 4 men.
+    - Clips: 2 single-voice and 6 woman-plus-man. Answer spread 12/10/10.
+    - `PROVABLE_KEYS = ['taller']`, and `taller` is registered in `games.mjs` (separate commit `84489b18`).
+    - Conversación scenes: `docs/board/content/taller-greda-b1-conversacion.md`. The g118/g119 contrasts are labelled there, with a 45-minute route.
+    - LQG draft: `docs/audits/taller-greda-b1-lqg-20261123.md`. It holds 32 gap words and 32 correct options attested by the author. CPIO and G4 are PENDING. 9 gap words with an implausible sound-alike are flagged ⚑ for the reviewers.
+    - The push triggered `escucha-3d-audio.yml`, which generated the 8 clips (commit `b9c8c661`, github-actions[bot]). **Nobody has listened to them.**
+    - **Checks** (facilitator re-ran the first two at `d04b2678`):
+      - `node scripts/check-escucha-3d.mjs taller B1`: OK.
+      - `check-escucha-3d-provable-stt.py taller b1 --plan`: exit 0, missing `[]`.
+      - Provable-gate tests: 18/18 (Martin). `test:language`: 43/43 (Martin).
+      - Known red: `tests/resource-3d-worlds.test.mjs` (1 fail), because the registration has no catalog lesson yet. That is Sofia's build.
+    - Cultural check: Ráquira as a Boyacá pottery centre is VERIFIED (Martin, web search; Ministerio de Cultura, «Los Cuadernos del Barro. Ráquira»). The town stays unnamed. The «greda» frequency, lead-free glaze and the 50% advance convention are HYPOTHESIS.
+  - **Found, not fixed (VERIFIED):** `node scripts/check-escucha-3d.mjs <game> b1` with a lower-case level checks nothing and still prints OK, because the compare is case-sensitive (`scripts/check-escucha-3d.mjs:203`) while files and the README use lower case. An unknown level such as `ZZ` also prints OK (reproduced by the reviewer). Any earlier run reported with a lower-case level proved nothing. Fix: normalise the case and reject unknown levels, with a test; Thursday slot.
+  - **W48 item 4:** owner requests restated in "Owner data requests" (R5 plus (i)–(iv)). The factual comment on #360 was not posted, because the session instructions allow GitHub comments only when the owner asks.
+  - **Checks for #509** (local, Linux, records head `7296c7bc`; docs-only changes after that):
+    - `npm test`: exit 0, 1,817 pass, 0 fail (pinned baseline commits fetched, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`).
+    - `git diff --check`: clean.
+    - Pipeline check before ready: no `automation/merge-lock` ref, and no workflow run in progress.
+  - **Release of #509 (VERIFIED):** merged as `6efcac0f`; its tree is identical to PR head `1ab81dd0`.
+    - CI + Auto Merge run [45101319818](https://github.com/agnremote-code/spanishcue-web/actions/runs/45101319818).
+    - Staging run [45103956242](https://github.com/agnremote-code/spanishcue-web/actions/runs/45103956242) and production run [45104306112](https://github.com/agnremote-code/spanishcue-web/actions/runs/45104306112) both succeeded.
+    - "Production smoke" passed (job 137461966384, 03:09:46–03:13:32Z): `"passed": true`, and the rollback was skipped.
+    - main = production = `6efcac0f`. #509 was docs only, so no URL changed and there was nothing more to smoke.
+    - The evidence is recorded here (PR `claude/monday-3d-records-20261123`).
+  - **Board:** Martin only, as one subagent (authoring). Sofia and Alejandro were not convened: there was no build, and no G4 review, since nothing ships. The records PR was reviewed by a fresh agent acting as Alejandro: **APPROVE**, 0 blockers. Its 7 non-blocking notes were applied. No inter-executive messages were exchanged, so there is no transcript.
+  - **Next action:**
+    1. Wed 11-25 (W48 item 2): Sofia builds the Taller world on #510's branch (catalog lesson, resource page, both modes, no-WebGL fallback). Then the CPIO attestation, then G4 by a fresh agent on content and build.
+    2. Shipping still needs R5 resolved, the STT workflow merged, and a VALID `--seeded` run. If R5 is still open, Wed builds and the PR stays draft. Leak-repair (item 7) is the fallback unit.
 - **2026-11-20 (Friday 3D + assessment routine): PR #500** (branch `claude/friday-assessment-20261120`, base main `f1d4a5dd`). Run-start marker pushed at 02:09Z (W47 item 0). Thu 11-19 left its marker (#492). Subscription usage: **UNKNOWN**.
   - **Unit: gated content repair, «La boda» A1** (non-board world id 257, reported as a **repair**).
     - Source: W47 item 5, Martin's sampled G3/G6 audit [non-board-sample-g3-g6-20261120.md](../audits/non-board-sample-g3-g6-20261120.md). El tren, La boda and El mundo en blanco all pass G3 and are PASS WITH NOTES on G6, so there is no reason for noindex or removing a level. The same pattern runs through all three A1 files: past plots told with the present only.

@@ -1,0 +1,2240 @@
+{
+ "game": "estrellas",
+ "level": "A0",
+ "items": [
+  {
+   "id": "entrada",
+   "title": "La linterna roja",
+   "place": "La entrada del camping",
+   "context": "Celeste, la guía, habla con Rogelio en la entrada. Es de noche.",
+   "contextEn": "Celeste, the guide, talks with Rogelio at the entrance. It is night.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Celeste, a las once apago todas las luces.",
+     "en": "Celeste, at eleven I turn off all the lights."
+    },
+    {
+     "s": 0,
+     "text": "¿Todas? ¿También la luz del baño?",
+     "en": "All of them? The bathroom light too?"
+    },
+    {
+     "s": 1,
+     "text": "Todas. Es la noche de las estrellas.",
+     "en": "All of them. It is the night of the stars."
+    },
+    {
+     "s": 0,
+     "text": "Bueno. Tengo mi linterna roja.",
+     "en": "OK. I have my red flashlight."
+    },
+    {
+     "s": 1,
+     "text": "¿Tienes miedo?",
+     "en": "Are you afraid?"
+    },
+    {
+     "s": 0,
+     "text": "No, no. Un poco.",
+     "en": "No, no. A little."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿A qué hora apaga Rogelio las luces?",
+     "qEn": "At what time does Rogelio turn off the lights?",
+     "options": [
+      "A las nueve y media",
+      "A las once",
+      "A las tres"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De qué color es la linterna de Celeste?",
+     "qEn": "What color is Celeste’s flashlight?",
+     "options": [
+      "Es roja",
+      "Es azul y blanca",
+      "Es verde"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué luz pregunta Celeste?",
+     "qEn": "Which light does Celeste ask about?",
+     "options": [
+      "La luz de la cocina",
+      "La luz del baño del camping",
+      "La luz del coche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Celeste tiene miedo?",
+     "qEn": "Is Celeste afraid?",
+     "options": [
+      "Sí, un poco",
+      "No, nada de miedo",
+      "Mucho, y llora"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué lámpara de tu casa apagas al final del día?",
+     "qEn": "Which lamp in your home do you turn off at the end of the day?",
+     "model": "Apago la lámpara de la sala."
+    },
+    {
+     "q": "¿Qué animal pequeño te da miedo en tu casa?",
+     "qEn": "What small animal scares you at home?",
+     "model": "Las arañas me dan miedo."
+    },
+    {
+     "q": "¿Dónde guardas tu linterna?",
+     "qEn": "Where do you keep your flashlight?",
+     "model": "Mi linterna está en un cajón de la cocina."
+    }
+   ],
+   "gaps": "Todas. Es la [noche] de las [estrellas]. Bueno. [Tengo] mi [linterna] roja.",
+   "glossary": [
+    {
+     "word": "linterna",
+     "meaning": "luz pequeña que llevas en la mano",
+     "en": "flashlight"
+    },
+    {
+     "word": "apago",
+     "meaning": "hago que la luz no esté encendida",
+     "en": "I turn off"
+    },
+    {
+     "word": "miedo",
+     "meaning": "lo que sientes cuando algo te asusta",
+     "en": "fear"
+    }
+   ]
+  },
+  {
+   "id": "lentes",
+   "title": "Trescientos lentes",
+   "place": "El estacionamiento",
+   "context": "Don Cosme vende lentes en el estacionamiento. Celeste pasa.",
+   "contextEn": "Don Cosme sells glasses in the parking lot. Celeste walks by.",
+   "speakers": [
+    {
+     "name": "Cosme",
+     "country": "Paraguay",
+     "voice": "es-PY-MarioNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Lentes! ¡Lentes para el cielo! ¡Diez pesos!",
+     "en": "Glasses! Glasses for the sky! Ten pesos!"
+    },
+    {
+     "s": 1,
+     "text": "Don Cosme, son lentes de eclipse.",
+     "en": "Don Cosme, those are eclipse glasses."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Tengo trescientos.",
+     "en": "Yes. I have three hundred."
+    },
+    {
+     "s": 1,
+     "text": "Pero esta noche no hay sol. Hay estrellas.",
+     "en": "But tonight there is no sun. There are stars."
+    },
+    {
+     "s": 0,
+     "text": "Ay. Entonces son lentes para dormir.",
+     "en": "Oh. Then they are glasses for sleeping."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué vende Don Cosme?",
+     "qEn": "What does Don Cosme sell?",
+     "options": [
+      "Café caliente",
+      "Lentes",
+      "Mapas del cielo"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos lentes tiene?",
+     "qEn": "How many glasses does he have?",
+     "options": [
+      "Tiene doscientos",
+      "Tiene trescientos",
+      "Tiene treinta"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay esta noche en el cielo?",
+     "qEn": "What is there in the sky tonight?",
+     "options": [
+      "Hay un sol muy fuerte",
+      "Hay nubes",
+      "Hay estrellas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Para qué son los lentes, según Cosme, al final?",
+     "qEn": "What are the glasses for, according to Cosme, in the end?",
+     "options": [
+      "Para dormir",
+      "Para comer",
+      "Para ver el sol"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué producto barato vende la gente en tu barrio?",
+     "qEn": "What cheap product do people sell in your neighborhood?",
+     "model": "Venden fruta y helados."
+    },
+    {
+     "q": "¿Cuándo usas lentes de sol?",
+     "qEn": "When do you use sunglasses?",
+     "model": "Uso lentes de sol en verano."
+    },
+    {
+     "q": "¿Qué ropa vieja usas para dormir?",
+     "qEn": "What old clothes do you wear to sleep?",
+     "model": "Uso una camiseta vieja."
+    }
+   ],
+   "gaps": "Pero esta [noche] no hay [sol]. Hay [estrellas]. Ay. Entonces son lentes para [dormir].",
+   "glossary": [
+    {
+     "word": "lentes",
+     "meaning": "gafas, anteojos",
+     "en": "glasses"
+    },
+    {
+     "word": "eclipse",
+     "meaning": "cuando la luna tapa el sol",
+     "en": "eclipse"
+    },
+    {
+     "word": "trescientos",
+     "meaning": "el número 300",
+     "en": "three hundred"
+    }
+   ]
+  },
+  {
+   "id": "urna",
+   "title": "La urna en la cocina",
+   "place": "Las carpas",
+   "context": "Nora busca algo en el coche. Iván la mira.",
+   "contextEn": "Nora is looking for something in the car. Iván watches her.",
+   "speakers": [
+    {
+     "name": "Nora",
+     "country": "Argentina",
+     "voice": "es-AR-ElenaNeural"
+    },
+    {
+     "name": "Iván",
+     "country": "Argentina",
+     "voice": "es-AR-TomasNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Iván, ¿dónde está la urna de papá?",
+     "en": "Iván, where is Dad’s urn?"
+    },
+    {
+     "s": 1,
+     "text": "En la bolsa verde.",
+     "en": "In the green bag."
+    },
+    {
+     "s": 0,
+     "text": "Aquí hay pan, agua y tu chaqueta. No hay urna.",
+     "en": "Here there is bread, water and your jacket. There is no urn."
+    },
+    {
+     "s": 1,
+     "text": "Ay, no. La urna está en casa, en la cocina.",
+     "en": "Oh, no. The urn is at home, in the kitchen."
+    },
+    {
+     "s": 0,
+     "text": "¿En Mendoza? ¡Iván!",
+     "en": "In Mendoza? Iván!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué busca Nora?",
+     "qEn": "What is Nora looking for?",
+     "options": [
+      "Busca la urna",
+      "Busca su chaqueta",
+      "Busca agua fría"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hay en la bolsa verde?",
+     "qEn": "What is in the green bag?",
+     "options": [
+      "Libros y fotos de su padre",
+      "Pan, agua y una chaqueta",
+      "Una urna vacía"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Dónde está la urna?",
+     "qEn": "Where is the urn?",
+     "options": [
+      "En la cocina de casa",
+      "En el coche",
+      "En la carpa"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿De quién es la urna?",
+     "qEn": "Whose urn is it?",
+     "options": [
+      "De Iván, su marido",
+      "Del abuelo de Iván",
+      "Del padre de Nora"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué cosa olvidas en casa con frecuencia?",
+     "qEn": "What thing do you often forget at home?",
+     "model": "Olvido las llaves."
+    },
+    {
+     "q": "¿Qué cosa importante olvidas antes de un viaje?",
+     "qEn": "What important thing do you forget before a trip?",
+     "model": "Olvido el cargador del teléfono."
+    },
+    {
+     "q": "¿Qué recuerdo de un viaje está en tu sala?",
+     "qEn": "What souvenir from a trip is in your living room?",
+     "model": "En mi sala hay una piedra de una playa."
+    }
+   ],
+   "gaps": "Aquí hay [pan], agua y tu [chaqueta]. No [hay] [urna].",
+   "glossary": [
+    {
+     "word": "urna",
+     "meaning": "caja para las cenizas de una persona",
+     "en": "urn"
+    },
+    {
+     "word": "bolsa",
+     "meaning": "objeto para llevar cosas",
+     "en": "bag"
+    },
+    {
+     "word": "cocina",
+     "meaning": "lugar de la casa para cocinar",
+     "en": "kitchen"
+    }
+   ]
+  },
+  {
+   "id": "alien",
+   "title": "Un amigo de otro planeta",
+   "place": "La carpa azul",
+   "context": "Simón, un niño de nueve años, habla con su madre, Gabriela.",
+   "contextEn": "Simón, a nine-year-old boy, talks with his mother, Gabriela.",
+   "speakers": [
+    {
+     "name": "Simón",
+     "country": "Ecuador",
+     "voice": "es-EC-LuisNeural"
+    },
+    {
+     "name": "Gabriela",
+     "country": "Ecuador",
+     "voice": "es-EC-AndreaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Mamá, hoy veo un extraterrestre.",
+     "en": "Mom, today I see an alien."
+    },
+    {
+     "s": 1,
+     "text": "Simón, son las diez y media. Es hora de dormir.",
+     "en": "Simón, it is half past ten. It is time to sleep."
+    },
+    {
+     "s": 0,
+     "text": "No. Tengo galletas para él.",
+     "en": "No. I have cookies for him."
+    },
+    {
+     "s": 1,
+     "text": "¿Galletas? ¿Por qué?",
+     "en": "Biscuits? Why?"
+    },
+    {
+     "s": 0,
+     "text": "Porque viene de muy lejos. Tiene hambre.",
+     "en": "Because he comes from very far away. He is hungry."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué quiere ver Simón?",
+     "qEn": "What does Simón want to see?",
+     "options": [
+      "Una llama blanca",
+      "Un avión",
+      "Un extraterrestre"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Son las once y media",
+      "Son las diez y media",
+      "Son las nueve y media"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué tiene Simón para el extraterrestre?",
+     "qEn": "What does Simón have for the alien?",
+     "options": [
+      "Un cartel con su nombre",
+      "Una manta de lana",
+      "Galletas"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué, según Simón?",
+     "qEn": "Why, according to Simón?",
+     "options": [
+      "Porque tiene hambre",
+      "Porque es su cumpleaños",
+      "Porque tiene frío"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué dulce guardas en tu cocina para una visita?",
+     "qEn": "What sweet do you keep in your kitchen for a visitor?",
+     "model": "Guardo galletas de chocolate."
+    },
+    {
+     "q": "¿A qué hora se acuestan los niños de tu familia?",
+     "qEn": "What time do the children in your family go to bed?",
+     "model": "Se acuestan a las nueve."
+    },
+    {
+     "q": "¿Qué planeta te parece bonito en las fotos?",
+     "qEn": "Which planet looks beautiful to you in photos?",
+     "model": "Saturno me parece bonito."
+    }
+   ],
+   "gaps": "No. Tengo [galletas] para él. ¿Galletas? ¿Por qué? [Porque] viene de muy [lejos]. Tiene [hambre].",
+   "glossary": [
+    {
+     "word": "extraterrestre",
+     "meaning": "persona o ser de otro planeta",
+     "en": "alien"
+    },
+    {
+     "word": "galletas",
+     "meaning": "dulces pequeños y secos",
+     "en": "cookies"
+    },
+    {
+     "word": "lejos",
+     "meaning": "a mucha distancia",
+     "en": "far away"
+    }
+   ]
+  },
+  {
+   "id": "cita",
+   "title": "El astrofísico",
+   "place": "El círculo de la fogata",
+   "context": "Bruno y Lucía están en la fogata. Es su primera cita.",
+   "contextEn": "Bruno and Lucía are at the campfire. It is their first date.",
+   "speakers": [
+    {
+     "name": "Bruno",
+     "country": "Colombia",
+     "voice": "es-CO-GonzaloNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Bruno, eres astrofísico, ¿no?",
+     "en": "Bruno, you are an astrophysicist, right?"
+    },
+    {
+     "s": 0,
+     "text": "Sí, claro. Trabajo con… estrellas.",
+     "en": "Yes, of course. I work with… stars."
+    },
+    {
+     "s": 1,
+     "text": "¡Yo también! ¿Qué estrella estudias?",
+     "en": "Me too! Which star do you study?"
+    },
+    {
+     "s": 0,
+     "text": "Eh… esa. La grande. La amarilla.",
+     "en": "Er… that one. The big one. The yellow one."
+    },
+    {
+     "s": 1,
+     "text": "Bruno, eso es un avión.",
+     "en": "Bruno, that is a plane."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde están Bruno y Lucía?",
+     "qEn": "Where are Bruno and Lucía?",
+     "options": [
+      "En la fogata",
+      "En la cocina",
+      "En el coche"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Bruno que es?",
+     "qEn": "What does Bruno say he is?",
+     "options": [
+      "Astrofísico",
+      "Profesor de música",
+      "Cocinero"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué trabajo tiene Lucía?",
+     "qEn": "What job does Lucía have?",
+     "options": [
+      "Es médica",
+      "Es astrofísica",
+      "Es guía del camping"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué es la «estrella amarilla» de Bruno?",
+     "qEn": "What is Bruno’s “yellow star”?",
+     "options": [
+      "Un avión",
+      "La luna llena",
+      "Una linterna grande"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué profesión de la ciencia te parece difícil?",
+     "qEn": "Which science profession seems difficult to you?",
+     "model": "La profesión de médico me parece difícil."
+    },
+    {
+     "q": "¿Qué cosa dices en una primera cita?",
+     "qEn": "What do you say on a first date?",
+     "model": "Digo mi nombre y hablo de mi ciudad."
+    },
+    {
+     "q": "¿Qué estrella o planeta ves desde tu ciudad?",
+     "qEn": "Which star or planet do you see from your city?",
+     "model": "Veo la luna y una estrella grande."
+    }
+   ],
+   "gaps": "¡Yo [también]! ¿Qué [estrella] estudias? Eh… esa. La [grande]. La [amarilla].",
+   "glossary": [
+    {
+     "word": "astrofísico",
+     "meaning": "persona que estudia las estrellas",
+     "en": "astrophysicist"
+    },
+    {
+     "word": "avión",
+     "meaning": "máquina que vuela con personas",
+     "en": "plane"
+    },
+    {
+     "word": "estudias",
+     "meaning": "aprendes sobre un tema",
+     "en": "you study"
+    }
+   ]
+  },
+  {
+   "id": "apagon",
+   "title": "Las luces de la mina",
+   "place": "La caseta del generador",
+   "context": "Rogelio habla por radio con Teresa, la gerenta de la mina.",
+   "contextEn": "Rogelio talks by radio with Teresa, the manager of the mine.",
+   "speakers": [
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    },
+    {
+     "name": "Teresa",
+     "country": "El Salvador",
+     "voice": "es-SV-LorenaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Teresa, son las once. Apaga las luces de la mina, por favor.",
+     "en": "Teresa, it is eleven. Turn off the mine lights, please."
+    },
+    {
+     "s": 1,
+     "text": "¿Rogelio? ¿Eres tú?",
+     "en": "Rogelio? Is that you?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Es la noche de las estrellas.",
+     "en": "Yes. It is the night of the stars."
+    },
+    {
+     "s": 1,
+     "text": "Bueno. Pero solo esta noche.",
+     "en": "OK. But only tonight."
+    },
+    {
+     "s": 0,
+     "text": "Gracias, Teresa.",
+     "en": "Thank you, Teresa."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con quién habla Rogelio?",
+     "qEn": "Who does Rogelio talk to?",
+     "options": [
+      "Con Celeste",
+      "Con Teresa",
+      "Con Hortensia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cómo hablan?",
+     "qEn": "How do they talk?",
+     "options": [
+      "Por radio",
+      "Por carta",
+      "En la cocina"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Las once",
+      "Las nueve",
+      "Las diez"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué dice Teresa al final?",
+     "qEn": "What does Teresa say in the end?",
+     "options": [
+      "Que no, nunca",
+      "Que mañana",
+      "Que solo esta noche"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué edificio con muchas luces hay cerca de tu casa?",
+     "qEn": "Which building with lots of lights is there near your home?",
+     "model": "Hay un supermercado con muchas luces."
+    },
+    {
+     "q": "¿Qué vecino ruidoso o amable vive cerca de ti?",
+     "qEn": "Which noisy or kind neighbor lives near you?",
+     "model": "Un vecino amable vive al lado."
+    },
+    {
+     "q": "¿Qué haces en casa durante un apagón?",
+     "qEn": "What do you do at home during a power cut?",
+     "model": "Enciendo velas y hablo con mi familia."
+    }
+   ],
+   "gaps": "Teresa, son las [once]. Apaga las [luces] de la [mina], por [favor].",
+   "glossary": [
+    {
+     "word": "mina",
+     "meaning": "lugar donde sacan metales de la tierra",
+     "en": "mine"
+    },
+    {
+     "word": "apaga",
+     "meaning": "haz que no esté encendido",
+     "en": "turn off"
+    },
+    {
+     "word": "solo",
+     "meaning": "únicamente",
+     "en": "only"
+    }
+   ]
+  },
+  {
+   "id": "cocina",
+   "title": "Fideos duros",
+   "place": "La carpa cocina",
+   "context": "Doña Petrona cocina para todo el camping. Mauro la ayuda.",
+   "contextEn": "Doña Petrona cooks for the whole campsite. Mauro helps her.",
+   "speakers": [
+    {
+     "name": "Petrona",
+     "country": "Bolivia",
+     "voice": "es-BO-SofiaNeural"
+    },
+    {
+     "name": "Mauro",
+     "country": "Uruguay",
+     "voice": "es-UY-MateoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Petrona, los fideos están duros.",
+     "en": "Doña Petrona, the noodles are hard."
+    },
+    {
+     "s": 0,
+     "text": "Sí, hijo. Aquí el agua no hierve bien.",
+     "en": "Yes, dear. Here the water does not boil well."
+    },
+    {
+     "s": 1,
+     "text": "¿Por qué?",
+     "en": "Why?"
+    },
+    {
+     "s": 0,
+     "text": "Por la altura. Estamos a tres mil seiscientos metros.",
+     "en": "Because of the altitude. We are at three thousand six hundred meters."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué comen las sesenta y cuatro personas?",
+     "en": "And what do the sixty-four people eat?"
+    },
+    {
+     "s": 0,
+     "text": "Sopa de quinua. La quinua es de aquí.",
+     "en": "Quinoa soup. Quinoa is from here."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo están los fideos?",
+     "qEn": "How are the noodles?",
+     "options": [
+      "Muy salados",
+      "Fríos",
+      "Duros"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Por qué el agua no hierve bien?",
+     "qEn": "Why does the water not boil well?",
+     "options": [
+      "Porque hace frío",
+      "Porque no hay gas",
+      "Por la altura"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántas personas comen?",
+     "qEn": "How many people eat?",
+     "options": [
+      "Treinta y seis",
+      "Cuarenta y seis",
+      "Sesenta y cuatro"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué cocina Petrona al final?",
+     "qEn": "What does Petrona cook in the end?",
+     "options": [
+      "Arroz con pollo",
+      "Pan con queso",
+      "Sopa de quinua"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué plato caliente comes en los días de frío?",
+     "qEn": "What hot dish do you eat on cold days?",
+     "model": "Como sopa de verduras."
+    },
+    {
+     "q": "¿Qué comida preparas para muchos invitados?",
+     "qEn": "What food do you make for lots of guests?",
+     "model": "Preparo arroz con pollo."
+    },
+    {
+     "q": "¿Qué cereal o grano comes en la semana?",
+     "qEn": "What cereal or grain do you eat during the week?",
+     "model": "Como arroz y avena."
+    }
+   ],
+   "gaps": "Por la [altura]. Estamos a tres mil [seiscientos] [metros]. ¿Y qué comen las sesenta y cuatro [personas]?",
+   "glossary": [
+    {
+     "word": "fideos",
+     "meaning": "pasta larga",
+     "en": "noodles"
+    },
+    {
+     "word": "hierve",
+     "meaning": "el agua hace burbujas por el calor",
+     "en": "boils"
+    },
+    {
+     "word": "altura",
+     "meaning": "lo alto que está un lugar",
+     "en": "altitude"
+    }
+   ]
+  },
+  {
+   "id": "llama",
+   "title": "Estrella va a ser mamá",
+   "place": "El corral de las llamas",
+   "context": "Wilmer está en el corral con una llama. Celeste llega.",
+   "contextEn": "Wilmer is in the pen with a llama. Celeste arrives.",
+   "speakers": [
+    {
+     "name": "Wilmer",
+     "country": "Perú",
+     "voice": "es-PE-AlexNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Wilmer, ¿qué pasa?",
+     "en": "Wilmer, what is happening?"
+    },
+    {
+     "s": 0,
+     "text": "La llama Estrella va a tener una cría. ¡Esta noche!",
+     "en": "Estrella the llama is going to have a baby. Tonight!"
+    },
+    {
+     "s": 1,
+     "text": "¿Esta noche? ¿Con la lluvia de estrellas?",
+     "en": "Tonight? With the meteor shower?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Necesito agua tibia y una manta.",
+     "en": "Yes. I need warm water and a blanket."
+    },
+    {
+     "s": 1,
+     "text": "Yo traigo la manta.",
+     "en": "I will bring the blanket."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo se llama la llama?",
+     "qEn": "What is the llama called?",
+     "options": [
+      "Luna",
+      "Estrella",
+      "Cometa"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué va a tener la llama?",
+     "qEn": "What is the llama going to have?",
+     "options": [
+      "Fiebre alta",
+      "Una cría",
+      "Frío"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué necesita Wilmer?",
+     "qEn": "What does Wilmer need?",
+     "options": [
+      "Un médico y una luz",
+      "Agua tibia y una manta",
+      "Comida para la llama"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué trae Celeste?",
+     "qEn": "What does Celeste bring?",
+     "options": [
+      "El agua",
+      "La comida",
+      "La manta"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué animal de granja te parece simpático?",
+     "qEn": "Which farm animal seems friendly to you?",
+     "model": "La vaca me parece simpática."
+    },
+    {
+     "q": "¿Qué prenda de lana te regaló alguien?",
+     "qEn": "What woollen garment did someone give you?",
+     "model": "Mi madre me regaló un gorro de lana."
+    },
+    {
+     "q": "¿Qué nombre bonito tiene una mascota que conoces?",
+     "qEn": "What nice name does a pet you know have?",
+     "model": "El perro de mi vecina se llama Lucero."
+    }
+   ],
+   "gaps": "Sí. Necesito [agua] [tibia] y una [manta]. Yo [traigo] la manta.",
+   "glossary": [
+    {
+     "word": "cría",
+     "meaning": "hijo pequeño de un animal",
+     "en": "baby animal"
+    },
+    {
+     "word": "manta",
+     "meaning": "tela grande para tener calor",
+     "en": "blanket"
+    },
+    {
+     "word": "tibia",
+     "meaning": "ni fría ni caliente",
+     "en": "lukewarm"
+    }
+   ]
+  },
+  {
+   "id": "hamacas",
+   "title": "Mucho silencio",
+   "place": "Las hamacas",
+   "context": "Rocío está en una hamaca. No duerme. Celeste la saluda.",
+   "contextEn": "Rocío is in a hammock. She is not sleeping. Celeste greets her.",
+   "speakers": [
+    {
+     "name": "Rocío",
+     "country": "Uruguay",
+     "voice": "es-UY-ValentinaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Hola, Rocío. ¿No duermes?",
+     "en": "Hi, Rocío. Aren’t you sleeping?"
+    },
+    {
+     "s": 0,
+     "text": "No. Mi hijo tiene siete meses. En casa no duermo.",
+     "en": "No. My son is seven months old. At home I do not sleep."
+    },
+    {
+     "s": 1,
+     "text": "Y aquí hay silencio.",
+     "en": "And here it is quiet."
+    },
+    {
+     "s": 0,
+     "text": "Sí. Mucho silencio. ¡Demasiado silencio!",
+     "en": "Yes. A lot of silence. Too much silence!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Dónde está Rocío?",
+     "qEn": "Where is Rocío?",
+     "options": [
+      "En la carpa cocina",
+      "En una hamaca",
+      "En el coche"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos meses tiene su hijo?",
+     "qEn": "How old is her son in months?",
+     "options": [
+      "Once",
+      "Siete",
+      "Nueve"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué hay en el camping?",
+     "qEn": "What is there at the campsite?",
+     "options": [
+      "Mucho ruido de coches",
+      "Música alta",
+      "Mucho silencio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué problema tiene Rocío?",
+     "qEn": "What problem does Rocío have?",
+     "options": [
+      "Tiene frío y hambre",
+      "Tiene mucha sed",
+      "No puede dormir"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué sonido de la calle oyes desde tu cama?",
+     "qEn": "What street sound do you hear from your bed?",
+     "model": "Oigo los coches y un perro."
+    },
+    {
+     "q": "¿Qué música suave escuchas antes de dormir?",
+     "qEn": "What soft music do you listen to before sleeping?",
+     "model": "Escucho piano suave."
+    },
+    {
+     "q": "¿Qué rincón silencioso tiene tu barrio?",
+     "qEn": "What quiet corner does your neighborhood have?",
+     "model": "Mi barrio tiene un parque pequeño y silencioso."
+    }
+   ],
+   "gaps": "No. Mi [hijo] tiene [siete] [meses]. En casa no [duermo].",
+   "glossary": [
+    {
+     "word": "demasiado",
+     "meaning": "más de lo necesario",
+     "en": "too much"
+    },
+    {
+     "word": "silencio",
+     "meaning": "cuando no hay ruido",
+     "en": "silence"
+    },
+    {
+     "word": "meses",
+     "meaning": "partes del año; un año tiene doce",
+     "en": "months"
+    }
+   ]
+  },
+  {
+   "id": "sendero",
+   "title": "Escuchar el cielo",
+   "place": "El sendero del mirador",
+   "context": "Elías y su hermana Marta caminan por el sendero. Elías tiene una radio.",
+   "contextEn": "Elías and his sister Marta walk along the path. Elías has a radio.",
+   "speakers": [
+    {
+     "name": "Elías",
+     "country": "Venezuela",
+     "voice": "es-VE-SebastianNeural"
+    },
+    {
+     "name": "Marta",
+     "country": "Venezuela",
+     "voice": "es-VE-PaolaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Elías, cuidado, hay piedras.",
+     "en": "Elías, careful, there are stones."
+    },
+    {
+     "s": 0,
+     "text": "Gracias. Escucha la radio, Marta.",
+     "en": "Thanks. Listen to the radio, Marta."
+    },
+    {
+     "s": 1,
+     "text": "¿Qué es ese sonido? Pin… pin…",
+     "en": "What is that sound? Ping… ping…"
+    },
+    {
+     "s": 0,
+     "text": "Son las estrellas fugaces. Yo no veo, pero escucho.",
+     "en": "They are shooting stars. I do not see, but I listen."
+    },
+    {
+     "s": 1,
+     "text": "¡Qué bonito!",
+     "en": "How lovely!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hay en el sendero?",
+     "qEn": "What is there on the path?",
+     "options": [
+      "Agua",
+      "Llamas",
+      "Piedras"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué tiene Elías?",
+     "qEn": "What does Elías have?",
+     "options": [
+      "Una cámara",
+      "Un telescopio",
+      "Una radio"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es el sonido «pin»?",
+     "qEn": "What is the “ping” sound?",
+     "options": [
+      "Un pájaro de noche",
+      "El teléfono de Marta",
+      "Las estrellas fugaces"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Quién es Marta?",
+     "qEn": "Who is Marta?",
+     "options": [
+      "La hermana de Elías",
+      "La madre de Elías",
+      "La guía del camping"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué sonido de la naturaleza te gusta?",
+     "qEn": "Which sound of nature do you like?",
+     "model": "Me gusta el sonido del mar."
+    },
+    {
+     "q": "¿Con qué persona de tu familia paseas por el campo?",
+     "qEn": "Which person in your family do you go walking in the countryside with?",
+     "model": "Paseo con mi hermano."
+    },
+    {
+     "q": "¿Qué escuchas en el autobús?",
+     "qEn": "What do you listen to on the bus?",
+     "model": "Escucho música en el autobús."
+    }
+   ],
+   "gaps": "Son las estrellas [fugaces]. Yo no [veo], pero [escucho]. ¡Qué [bonito]!",
+   "glossary": [
+    {
+     "word": "cuidado",
+     "meaning": "atención, hay peligro",
+     "en": "careful"
+    },
+    {
+     "word": "piedras",
+     "meaning": "trozos duros de roca",
+     "en": "stones"
+    },
+    {
+     "word": "estrellas fugaces",
+     "meaning": "luces que cruzan el cielo muy rápido",
+     "en": "shooting stars"
+    }
+   ]
+  },
+  {
+   "id": "cupula",
+   "title": "La cúpula no gira",
+   "place": "La cúpula del observatorio",
+   "context": "Doña Amalia y Joaquín están en el observatorio.",
+   "contextEn": "Doña Amalia and Joaquín are in the observatory.",
+   "speakers": [
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Joaquín",
+     "country": "Panamá",
+     "voice": "es-PA-RobertoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Amalia, la cúpula no gira.",
+     "en": "Doña Amalia, the dome does not turn."
+    },
+    {
+     "s": 0,
+     "text": "¿No gira? ¡Es mi noche! ¡Es mi cometa!",
+     "en": "It does not turn? It is my night! It is my comet!"
+    },
+    {
+     "s": 1,
+     "text": "¿Su cometa?",
+     "en": "Your comet?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Lo encontré en 1966. Tenía diecisiete años.",
+     "en": "Yes. I found it in 1966. I was seventeen."
+    },
+    {
+     "s": 1,
+     "text": "¡Uy! ¡Entonces la cúpula tiene que girar!",
+     "en": "Wow! Then the dome has to turn!"
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué problema hay?",
+     "qEn": "What problem is there?",
+     "options": [
+      "No hay luz",
+      "La cúpula no gira",
+      "Hace calor"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿De quién es el cometa?",
+     "qEn": "Whose comet is it?",
+     "options": [
+      "De Joaquín",
+      "De Amalia",
+      "De Celeste"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿En qué año descubrió Amalia el cometa?",
+     "qEn": "In what year did Amalia discover the comet?",
+     "options": [
+      "En 1966",
+      "En 1986",
+      "En 1996"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tenía Amalia en 1966?",
+     "qEn": "How old was Amalia in 1966?",
+     "options": [
+      "Veintisiete",
+      "Diecisiete",
+      "Siete"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué año importante de tu vida recuerdas bien?",
+     "qEn": "Which important year of your life do you remember well?",
+     "model": "Recuerdo bien el año 2015."
+    },
+    {
+     "q": "¿Qué aparato de tu casa necesita un golpe para funcionar?",
+     "qEn": "Which device in your home needs a knock to work?",
+     "model": "La televisión necesita un golpe."
+    },
+    {
+     "q": "¿Qué descubrimiento de la ciencia te parece genial?",
+     "qEn": "Which scientific discovery seems great to you?",
+     "model": "La vacuna me parece genial."
+    }
+   ],
+   "gaps": "Sí. Lo [encontré] en 1966. Tenía [diecisiete] años. ¡Uy! ¡Entonces la [cúpula] tiene que [girar]!",
+   "glossary": [
+    {
+     "word": "cúpula",
+     "meaning": "techo redondo del observatorio",
+     "en": "dome"
+    },
+    {
+     "word": "gira",
+     "meaning": "da vueltas",
+     "en": "turns"
+    },
+    {
+     "word": "cometa",
+     "meaning": "bola de hielo y polvo con cola en el cielo",
+     "en": "comet"
+    }
+   ]
+  },
+  {
+   "id": "radio",
+   "title": "Hola, espacio",
+   "place": "Las caravanas",
+   "context": "Doña Hortensia está en su caravana con una radio grande.",
+   "contextEn": "Doña Hortensia is in her RV with a big radio.",
+   "speakers": [
+    {
+     "name": "Hortensia",
+     "country": "Perú",
+     "voice": "es-PE-CamilaNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Doña Hortensia, ¿qué hace?",
+     "en": "Doña Hortensia, what are you doing?"
+    },
+    {
+     "s": 0,
+     "text": "Hablo con el espacio. Bueno, quiero hablar.",
+     "en": "I am talking to space. Well, I want to talk."
+    },
+    {
+     "s": 1,
+     "text": "¿Con la estación espacial?",
+     "en": "With the space station?"
+    },
+    {
+     "s": 0,
+     "text": "Sí. Pasa a la una y cuarenta. Seis minutos.",
+     "en": "Yes. It passes at one forty. Six minutes."
+    },
+    {
+     "s": 1,
+     "text": "¿Y qué les dice?",
+     "en": "And what do you say to them?"
+    },
+    {
+     "s": 0,
+     "text": "Hola, soy Hortensia, tengo ochenta y un años.",
+     "en": "Hello, I am Hortensia, I am eighty-one."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Con quién quiere hablar Hortensia?",
+     "qEn": "Who does Hortensia want to talk to?",
+     "options": [
+      "Con su hija en Lima",
+      "Con la estación espacial",
+      "Con Rogelio"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿A qué hora pasa la estación?",
+     "qEn": "At what time does the station pass?",
+     "options": [
+      "A las once",
+      "A la una y cuarenta",
+      "A las tres y doce"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuántos minutos pasa?",
+     "qEn": "How many minutes does it pass for?",
+     "options": [
+      "Seis",
+      "Diez",
+      "Sesenta"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántos años tiene Hortensia?",
+     "qEn": "How old is Hortensia?",
+     "options": [
+      "Setenta y uno",
+      "Noventa",
+      "Ochenta y uno"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué radio, televisor o teléfono antiguo recuerdas?",
+     "qEn": "Which old radio, TV or phone do you remember?",
+     "model": "Recuerdo la radio grande de mi abuelo."
+    },
+    {
+     "q": "¿Qué dices cuando contestas el teléfono?",
+     "qEn": "What do you say when you answer the phone?",
+     "model": "Digo «¿Hola, quién es?»."
+    },
+    {
+     "q": "¿Qué palabra usas para saludar por teléfono?",
+     "qEn": "What word do you use to say hello on the phone?",
+     "model": "Digo «aló»."
+    }
+   ],
+   "gaps": "Sí. Pasa a la [una] y [cuarenta]. Seis [minutos]. ¿Y qué les [dice]?",
+   "glossary": [
+    {
+     "word": "espacio",
+     "meaning": "lo que hay más allá del cielo",
+     "en": "space"
+    },
+    {
+     "word": "estación espacial",
+     "meaning": "casa de astronautas que gira alrededor de la Tierra",
+     "en": "space station"
+    },
+    {
+     "word": "pasa",
+     "meaning": "cruza, va por un lugar",
+     "en": "passes"
+    }
+   ]
+  },
+  {
+   "id": "duchas",
+   "title": "Cuatro minutos",
+   "place": "Las duchas",
+   "context": "Fabián sale de la ducha con una toalla. Rogelio pasa.",
+   "contextEn": "Fabián comes out of the shower in a towel. Rogelio walks by.",
+   "speakers": [
+    {
+     "name": "Fabián",
+     "country": "España",
+     "voice": "es-ES-AlvaroNeural"
+    },
+    {
+     "name": "Rogelio",
+     "country": "Bolivia",
+     "voice": "es-BO-MarceloNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡El agua está fría! ¡Fría!",
+     "en": "The water is cold! Cold!"
+    },
+    {
+     "s": 1,
+     "text": "Sí, señor. El agua caliente dura cuatro minutos.",
+     "en": "Yes, sir. The hot water lasts four minutes."
+    },
+    {
+     "s": 0,
+     "text": "¿Cuatro? Tengo una reunión con Tokio a las dos.",
+     "en": "Four? I have a meeting with Tokyo at two."
+    },
+    {
+     "s": 1,
+     "text": "¿Aquí? Aquí no hay señal.",
+     "en": "Here? There is no signal here."
+    },
+    {
+     "s": 0,
+     "text": "¿Y dónde hay señal?",
+     "en": "And where is there a signal?"
+    },
+    {
+     "s": 1,
+     "text": "En el techo de las duchas.",
+     "en": "On the roof of the showers."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Cómo está el agua?",
+     "qEn": "How is the water?",
+     "options": [
+      "Caliente",
+      "Fría",
+      "Sucia"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Cuánto dura el agua caliente?",
+     "qEn": "How long does the hot water last?",
+     "options": [
+      "Cuatro minutos",
+      "Catorce minutos",
+      "Una hora"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿A qué hora es la reunión de Fabián?",
+     "qEn": "At what time is Fabián’s meeting?",
+     "options": [
+      "A las doce",
+      "A las tres",
+      "A las dos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Dónde hay señal?",
+     "qEn": "Where is there a signal?",
+     "options": [
+      "En el estacionamiento",
+      "En el techo de las duchas",
+      "En la cocina"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Cuántos minutos dura tu ducha?",
+     "qEn": "How many minutes does your shower last?",
+     "model": "Mi ducha dura diez minutos."
+    },
+    {
+     "q": "¿En qué rincón de tu casa funciona mejor el internet?",
+     "qEn": "In which corner of your home does the internet work best?",
+     "model": "Funciona mejor en la sala."
+    },
+    {
+     "q": "¿A qué hora es tu primera reunión o clase del lunes?",
+     "qEn": "At what time is your first meeting or class on Monday?",
+     "model": "Mi primera clase es a las ocho."
+    }
+   ],
+   "gaps": "Sí, señor. El agua [caliente] dura [cuatro] [minutos]. ¿Cuatro? Tengo una [reunión] con Tokio a las dos.",
+   "glossary": [
+    {
+     "word": "reunión",
+     "meaning": "encuentro de trabajo",
+     "en": "meeting"
+    },
+    {
+     "word": "señal",
+     "meaning": "conexión para el teléfono",
+     "en": "signal"
+    },
+    {
+     "word": "techo",
+     "meaning": "la parte de arriba de un edificio",
+     "en": "roof"
+    }
+   ]
+  },
+  {
+   "id": "mina",
+   "title": "El casco del minero",
+   "place": "La casucha minera",
+   "context": "Don Ramiro está en una casucha vieja. Lleva un casco con una lámpara.",
+   "contextEn": "Don Ramiro is in an old hut. He wears a helmet with a lamp.",
+   "speakers": [
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 1,
+     "text": "Don Ramiro, ¿por qué lleva casco?",
+     "en": "Don Ramiro, why are you wearing a helmet?"
+    },
+    {
+     "s": 0,
+     "text": "Soy minero. Cuarenta y un años bajo tierra.",
+     "en": "I am a miner. Forty-one years underground."
+    },
+    {
+     "s": 1,
+     "text": "¿Y las estrellas?",
+     "en": "And the stars?"
+    },
+    {
+     "s": 0,
+     "text": "No las conozco. Trabajé siempre de noche, abajo.",
+     "en": "I do not know them. I always worked at night, down below."
+    },
+    {
+     "s": 1,
+     "text": "Hoy las conoce. Venga al mirador.",
+     "en": "Today you meet them. Come to the lookout."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué lleva Don Ramiro?",
+     "qEn": "What does Don Ramiro wear?",
+     "options": [
+      "Una mochila grande",
+      "Una cámara",
+      "Un casco"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuántos años trabajó bajo tierra?",
+     "qEn": "How many years did he work underground?",
+     "options": [
+      "Cuarenta y uno",
+      "Treinta y uno",
+      "Veintiuno"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuándo trabajaba Ramiro?",
+     "qEn": "When did Ramiro work?",
+     "options": [
+      "De noche",
+      "De día",
+      "Los domingos"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Adónde lo invita Celeste?",
+     "qEn": "Where does Celeste invite him?",
+     "options": [
+      "A la cocina",
+      "Al mirador",
+      "A la fogata"
+     ],
+     "answer": 1
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué uniforme o ropa de trabajo conoces bien?",
+     "qEn": "Which uniform or work clothes do you know well?",
+     "model": "Conozco bien el uniforme de enfermera."
+    },
+    {
+     "q": "¿Qué persona mayor de tu familia trabajó muchos años?",
+     "qEn": "Which older person in your family worked for many years?",
+     "model": "Mi abuelo trabajó cuarenta años."
+    },
+    {
+     "q": "¿Qué trabajos de noche hay en tu ciudad?",
+     "qEn": "What night jobs are there in your city?",
+     "model": "Hay taxistas, enfermeras y panaderos."
+    }
+   ],
+   "gaps": "No las [conozco]. Trabajé [siempre] de [noche], [abajo].",
+   "glossary": [
+    {
+     "word": "casco",
+     "meaning": "sombrero duro que protege la cabeza",
+     "en": "helmet"
+    },
+    {
+     "word": "minero",
+     "meaning": "persona que trabaja en una mina",
+     "en": "miner"
+    },
+    {
+     "word": "bajo tierra",
+     "meaning": "debajo del suelo",
+     "en": "underground"
+    }
+   ]
+  },
+  {
+   "id": "salar",
+   "title": "El salar seco",
+   "place": "El salar",
+   "context": "Ulises tiene una cámara en el salar. Celeste camina con él.",
+   "contextEn": "Ulises has a camera on the salt flat. Celeste walks with him.",
+   "speakers": [
+    {
+     "name": "Ulises",
+     "country": "Guatemala",
+     "voice": "es-GT-AndresNeural"
+    },
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "No hay agua. Este año no hay agua.",
+     "en": "There is no water. This year there is no water."
+    },
+    {
+     "s": 1,
+     "text": "¿Y para qué es el agua?",
+     "en": "And what is the water for?"
+    },
+    {
+     "s": 0,
+     "text": "Con agua, el salar es un espejo. El cielo está arriba y abajo.",
+     "en": "With water, the salt flat is a mirror. The sky is above and below."
+    },
+    {
+     "s": 1,
+     "text": "¿Y sin agua?",
+     "en": "And without water?"
+    },
+    {
+     "s": 0,
+     "text": "Sin agua, es sal. Mucha sal.",
+     "en": "Without water, it is salt. Lots of salt."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Ulises?",
+     "qEn": "What does Ulises have?",
+     "options": [
+      "Una cámara",
+      "Una radio",
+      "Una linterna"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué no hay este año?",
+     "qEn": "What is there not this year?",
+     "options": [
+      "Agua",
+      "Sal",
+      "Estrellas"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué es el salar con agua?",
+     "qEn": "What is the salt flat with water?",
+     "options": [
+      "Un lago para nadar",
+      "Un río largo",
+      "Un espejo"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué es el salar sin agua?",
+     "qEn": "What is the salt flat without water?",
+     "options": [
+      "Arena",
+      "Hielo",
+      "Sal"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué foto de un paisaje guardas en el teléfono?",
+     "qEn": "What landscape photo do you keep on your phone?",
+     "model": "Guardo una foto de un lago."
+    },
+    {
+     "q": "¿En qué habitación de tu casa hay un espejo grande?",
+     "qEn": "In which room of your home is there a big mirror?",
+     "model": "Hay un espejo grande en el dormitorio."
+    },
+    {
+     "q": "¿Qué lugar seco o caluroso de tu país conoces?",
+     "qEn": "Which dry or hot place in your country do you know?",
+     "model": "Conozco un desierto en el norte."
+    }
+   ],
+   "gaps": "Con agua, el salar es un [espejo]. El [cielo] está [arriba] y [abajo].",
+   "glossary": [
+    {
+     "word": "salar",
+     "meaning": "lugar grande y plano lleno de sal",
+     "en": "salt flat"
+    },
+    {
+     "word": "espejo",
+     "meaning": "objeto donde ves tu cara",
+     "en": "mirror"
+    },
+    {
+     "word": "sal",
+     "meaning": "la usas para cocinar; es blanca",
+     "en": "salt"
+    }
+   ]
+  },
+  {
+   "id": "astrologa",
+   "title": "Tu horóscopo",
+   "place": "La orilla del salar",
+   "context": "La astróloga Zulema tiene un puesto de horóscopos. Habla con Lucía.",
+   "contextEn": "Zulema the astrologer has a horoscope stall. She talks with Lucía.",
+   "speakers": [
+    {
+     "name": "Zulema",
+     "country": "Puerto Rico",
+     "voice": "es-PR-KarinaNeural"
+    },
+    {
+     "name": "Lucía",
+     "country": "Colombia",
+     "voice": "es-CO-SalomeNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¿Tu signo, querida?",
+     "en": "Your sign, dear?"
+    },
+    {
+     "s": 1,
+     "text": "Soy astrofísica. No tengo signo.",
+     "en": "I am an astrophysicist. I do not have a sign."
+    },
+    {
+     "s": 0,
+     "text": "Todos tenemos signo. ¿Tu cumpleaños?",
+     "en": "We all have a sign. Your birthday?"
+    },
+    {
+     "s": 1,
+     "text": "El tres de marzo.",
+     "en": "The third of March."
+    },
+    {
+     "s": 0,
+     "text": "Piscis. Hoy conoces a una persona muy rara.",
+     "en": "Pisces. Today you meet a very strange person."
+    },
+    {
+     "s": 1,
+     "text": "Sí. A usted.",
+     "en": "Yes. You."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Zulema?",
+     "qEn": "What does Zulema have?",
+     "options": [
+      "Una tienda de café",
+      "Un telescopio",
+      "Un puesto de horóscopos"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Cuándo es el cumpleaños de Lucía?",
+     "qEn": "When is Lucía’s birthday?",
+     "options": [
+      "El trece de mayo",
+      "El tres de marzo",
+      "El dos de abril"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Qué signo es Lucía, según Zulema?",
+     "qEn": "What sign is Lucía, according to Zulema?",
+     "options": [
+      "Leo",
+      "Piscis",
+      "Aries"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Quién es la persona rara, para Lucía?",
+     "qEn": "Who is the strange person, for Lucía?",
+     "options": [
+      "Bruno",
+      "Celeste",
+      "Zulema"
+     ],
+     "answer": 2
+    }
+   ],
+   "open": [
+    {
+     "q": "¿En qué mes cumple años la persona que más quieres?",
+     "qEn": "In which month does the person you love most have a birthday?",
+     "model": "Mi madre cumple años en julio."
+    },
+    {
+     "q": "¿Qué parte del periódico o de las noticias lees primero?",
+     "qEn": "Which part of the newspaper or the news do you read first?",
+     "model": "Leo primero los deportes."
+    },
+    {
+     "q": "¿Qué costumbre rara tiene alguien de tu familia?",
+     "qEn": "What strange habit does someone in your family have?",
+     "model": "Mi tío come el postre primero."
+    }
+   ],
+   "gaps": "Todos [tenemos] signo. ¿Tu [cumpleaños]? El [tres] de [marzo].",
+   "glossary": [
+    {
+     "word": "querida",
+     "meaning": "palabra amable para una mujer",
+     "en": "dear"
+    },
+    {
+     "word": "signo",
+     "meaning": "grupo de estrellas de tu cumpleaños",
+     "en": "star sign"
+    },
+    {
+     "word": "rara",
+     "meaning": "diferente, extraña",
+     "en": "strange"
+    }
+   ]
+  },
+  {
+   "id": "dron",
+   "title": "Las luces del dron",
+   "place": "Las rocas",
+   "context": "Kiara tiene un dron con luces. Su hermano Dante tiene una cámara.",
+   "contextEn": "Kiara has a drone with lights. Her brother Dante has a camera.",
+   "speakers": [
+    {
+     "name": "Kiara",
+     "country": "República Dominicana",
+     "voice": "es-DO-RamonaNeural"
+    },
+    {
+     "name": "Dante",
+     "country": "República Dominicana",
+     "voice": "es-DO-EmilioNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "¡Hola, amigos! ¡Estoy en el desierto! ¡Miren mi dron!",
+     "en": "Hi, friends! I am in the desert! Look at my drone!"
+    },
+    {
+     "s": 1,
+     "text": "Kiara, el dron tiene luces. Tapa las estrellas.",
+     "en": "Kiara, the drone has lights. It covers the stars."
+    },
+    {
+     "s": 0,
+     "text": "¿Y cuántas personas miran?",
+     "en": "And how many people are watching?"
+    },
+    {
+     "s": 1,
+     "text": "Tres. Y una es mamá.",
+     "en": "Three. And one is Mom."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué tiene Kiara?",
+     "qEn": "What does Kiara have?",
+     "options": [
+      "Un dron",
+      "Un telescopio",
+      "Un perro"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué tapa el dron?",
+     "qEn": "What does the drone cover?",
+     "options": [
+      "La luna",
+      "Las estrellas",
+      "El sol"
+     ],
+     "answer": 1
+    },
+    {
+     "q": "¿Quién es Dante?",
+     "qEn": "Who is Dante?",
+     "options": [
+      "El hermano de Kiara",
+      "El novio de Kiara",
+      "El guía de astronomía"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Cuántas personas miran a Kiara?",
+     "qEn": "How many people watch Kiara?",
+     "options": [
+      "Tres",
+      "Trescientas",
+      "Treinta"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué aplicación del teléfono abres antes del desayuno?",
+     "qEn": "Which phone app do you open before breakfast?",
+     "model": "Abro una aplicación de noticias."
+    },
+    {
+     "q": "¿A quién mandas fotos de tus vacaciones?",
+     "qEn": "Who do you send photos of your vacations to?",
+     "model": "Mando fotos a mi madre."
+    },
+    {
+     "q": "¿Qué aparato con luces molesta de noche en tu calle?",
+     "qEn": "Which device with lights is annoying at night in your street?",
+     "model": "Molesta un cartel con luces."
+    }
+   ],
+   "gaps": "Kiara, el dron tiene [luces]. [Tapa] las [estrellas]. ¿Y cuántas [personas] miran?",
+   "glossary": [
+    {
+     "word": "dron",
+     "meaning": "máquina pequeña que vuela sin piloto",
+     "en": "drone"
+    },
+    {
+     "word": "tapa",
+     "meaning": "cubre, no deja ver",
+     "en": "covers"
+    },
+    {
+     "word": "desierto",
+     "meaning": "lugar muy seco",
+     "en": "desert"
+    }
+   ]
+  },
+  {
+   "id": "mirador",
+   "title": "Las tres y doce",
+   "place": "El mirador",
+   "context": "Celeste, Doña Amalia y Don Ramiro están en el mirador. Es el gran momento.",
+   "contextEn": "Celeste, Doña Amalia and Don Ramiro are at the lookout. It is the big moment.",
+   "speakers": [
+    {
+     "name": "Celeste",
+     "country": "Chile",
+     "voice": "es-CL-CatalinaNeural"
+    },
+    {
+     "name": "Amalia",
+     "country": "España",
+     "voice": "es-ES-ElviraNeural"
+    },
+    {
+     "name": "Ramiro",
+     "country": "Chile",
+     "voice": "es-CL-LorenzoNeural"
+    }
+   ],
+   "lines": [
+    {
+     "s": 0,
+     "text": "Son las tres y doce. ¡Miren arriba!",
+     "en": "It is twelve minutes past three. Look up!"
+    },
+    {
+     "s": 1,
+     "text": "¡Una! ¡Dos! ¡Muchas!",
+     "en": "One! Two! Lots!"
+    },
+    {
+     "s": 2,
+     "text": "¡El cielo se cae!",
+     "en": "The sky is falling!"
+    },
+    {
+     "s": 0,
+     "text": "No, Don Ramiro. Son estrellas fugaces.",
+     "en": "No, Don Ramiro. They are shooting stars."
+    },
+    {
+     "s": 1,
+     "text": "Esta vez no me duermo.",
+     "en": "This time I do not fall asleep."
+    }
+   ],
+   "choice": [
+    {
+     "q": "¿Qué hora es?",
+     "qEn": "What time is it?",
+     "options": [
+      "Las dos y doce",
+      "Las tres y media",
+      "Las tres y doce"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dice Celeste?",
+     "qEn": "What does Celeste say?",
+     "options": [
+      "¡Miren arriba!",
+      "¡A dormir!",
+      "¡Apaguen el fuego!"
+     ],
+     "answer": 0
+    },
+    {
+     "q": "¿Qué cree Don Ramiro?",
+     "qEn": "What does Don Ramiro think?",
+     "options": [
+      "Que hace frío",
+      "Que es tarde",
+      "Que el cielo se cae"
+     ],
+     "answer": 2
+    },
+    {
+     "q": "¿Qué dice Amalia al final?",
+     "qEn": "What does Amalia say at the end?",
+     "options": [
+      "Que no se duerme",
+      "Que tiene sueño",
+      "Que tiene hambre"
+     ],
+     "answer": 0
+    }
+   ],
+   "open": [
+    {
+     "q": "¿Qué forma tiene la luna esta semana?",
+     "qEn": "What shape is the moon this week?",
+     "model": "La luna es redonda esta semana."
+    },
+    {
+     "q": "¿Qué deseo pides con una estrella fugaz?",
+     "qEn": "What wish do you make on a shooting star?",
+     "model": "Pido salud para mi familia."
+    },
+    {
+     "q": "¿A qué hora te despiertas los domingos?",
+     "qEn": "What time do you wake up on Sundays?",
+     "model": "Me despierto a las diez."
+    }
+   ],
+   "gaps": "No, Don Ramiro. Son [estrellas] [fugaces]. Esta [vez] no me [duermo].",
+   "glossary": [
+    {
+     "word": "miren",
+     "meaning": "usen los ojos (ustedes)",
+     "en": "look"
+    },
+    {
+     "word": "arriba",
+     "meaning": "en lo alto",
+     "en": "up"
+    },
+    {
+     "word": "se cae",
+     "meaning": "va hacia abajo",
+     "en": "is falling"
+    }
+   ]
+  }
+ ]
+}

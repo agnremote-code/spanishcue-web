@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState, type CSSProperties, type ReactNode } from "react";
 import { useAccessibleModal } from "../useAccessibleModal";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 import {
   answerTools,

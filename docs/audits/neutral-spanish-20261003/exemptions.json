@@ -13572,6 +13572,1188 @@
       "text": "¡Ma sí, andá a cagar!",
       "category": "regional-pedagogy",
       "reason": "Shouted line in a deliberate Argentine voice, spoken by the Argentine Edge voice es-AR-*; every bump line in voces.json uses the Spanish of its own speaker's country (Ale, 2026-11-19: insults must sound native and varied)."
+    },
+    {
+      "path": "app/roleplays-hispanos/Roleplays.tsx",
+      "text": "¿Tú, vos o usted?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/bolivia.ts",
+      "text": "¡Pucha, perdí el trufi!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Perrito caliente con palta, tomate y mayonesa.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Es un hot dog chileno. El italiano lleva palta, tomate y mayo.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "tomate",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Tomás, el guía",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Tomás, the guide",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Muy bacán, aprendí mucho.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/chile.ts",
+      "text": "Salsa de tomate, cebolla y cilantro. Va con todo.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "Salí a rumbear con amigos.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/colombia.ts",
+      "text": "salí a rumbear",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/costa-rica.ts",
+      "text": "Perdí el bus. ¡Qué sala!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "Dale. ¡Que te vaya bien!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "Dale, aquí tienes.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "¡Dale! ¿Qué hacemos ahí?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "¡Dale! ¿A qué hora?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "¡Dale! Nos vemos a las ___.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "¡Dale!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "¡Dale, otra!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "¡Dale! Pero ahora ___.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/cuba.ts",
+      "text": "¡Dale, vamos!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "¡Chuta, perdí el bus!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "En la Sierra, un bebé o niño pequeño. Viene del kichwa.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Perdí un guante, ahora tengo uno chulla.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Visitas a una amiga de Quito que acaba de tener un bebé.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "¡Jaja, no! Aquí en la Sierra «guagua» es un bebé.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "Sí, ¡un bebé!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "un bebé",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/ecuador.ts",
+      "text": "¿Mande? No entendí bien.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Qué ondas? ¿Querés aprender a surfear?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Querés aprender a surfear?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Cuánto tiempo querés la clase?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Sabés nadar bien?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Es una salsa de tomate, cebolla y limón.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Hacés deporte?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Tenés hijos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Querés un tamal?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "No, siéntese. Digo, sentate.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "Gracias. ¿Sos turista?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Sos turista?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/el-salvador.ts",
+      "text": "¿Cuánto ponés?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Son diez quetzales. Subite rápido.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Ah, entonces llevala con vos.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Como dos horas. ¿Traés agua?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Un poco. Ponete la chumpa allá arriba.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "No, pero caminá despacio y seguime.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Cabal. ¿Querés asar un malvavisco?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Traés agua?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Querés asar un malvavisco?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Tenés hambre? ¿Vamos por unos shucos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Yo pido uno de salchicha. ¿Y vos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Solo si le ponés chile. ¿Tenés pisto?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Tenés hambre?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Un poco. ¿Qué querés comer?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Qué shuco querés?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Le ponés chile?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Tenés pisto?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Querés ir a Tikal? Salimos el viernes.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Querés ir a Tikal?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Cuántos días podés?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "¿Qué querés ver en Tikal?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guatemala.ts",
+      "text": "Sí, mandámela hoy, por favor.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "Sí, dormí muy poco. ¡Hace mucho calor por la noche!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "Bien, pero dormí poco.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/guinea-ecuatorial.ts",
+      "text": "dormí poco",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¿Tenés pisto para el bus?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¡Qué macizo! ¿Vos de quién sos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¿Vos de qué equipo sos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Del Olimpia, como vos.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Buscame en ___.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¡Hola! ¿Querés aprender a bucear?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "No, es fácil. ¿Sabés nadar?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¿Querés aprender a bucear?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¿Sabés nadar?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¿Qué querés ver en el mar?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¿Tenés alguna pregunta?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Llevá traje de baño y bloqueador.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "¡Sí! ¿Vos también?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/honduras.ts",
+      "text": "Gracias. ¿Me buscás en ___?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Vamos al lago? —¡Dale pues!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! ¿Cómo se llama el caballo?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! Gracias.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! Hasta luego.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Diez dólares el día. ¿Sos principiante?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! Gracias, Kevin.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Sos principiante?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Qué tabla querés?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Necesitás algo más?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! Nos vemos.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! ¿Es fácil de colgar?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! ¡Vamos!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Conocés esta fiesta?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! ¿Me avisa en la terminal?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Qué hacés el jueves en la noche?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Venís a una clase de palo de mayo?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¡Dale pues! Voy contigo.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Qué hacés el jueves?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "¿Venís a una clase de baile?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/nicaragua.ts",
+      "text": "Ponete ___.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Dale. ¿Qué se come ahí?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "Dale, vamos.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "¡Dale! ¿Qué hacemos ahí?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "¡Dale! ¿A dónde?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/panama.ts",
+      "text": "¡Dale! ¿Vamos a ___?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Suaviza un pedido: «vení luego» es «vení, por favor».",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Softens a request: «vení luego» means «come here, please».",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Y vos qué querés pio?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Hoy estoy pirevai, dormí poco.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¡Che ra'a! ¿Tomás un tereré con nosotros?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Ojo: tomás todo y me devolvés la guampa. Así es la ronda.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Decís «gracias». Si no, te sigo sirviendo.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Tomás un tereré?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Querés otro?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Qué hacés hoy?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Pan de almidón con queso y anís. Probá nomás.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Con cocido, ¡es lo mejor! Aquí tenés.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Cuántas querés?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Comprás frutas en el mercado más grande de Asunción.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¡Vení, vení! ¿Qué buscás?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Qué buscás?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Sabés decir «gracias» en guaraní?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Vos sos de Olimpia o de Cerro?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Querés una chipa o un mbeju?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Una torta de almidón y queso. ¡Probá luego!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿De qué equipo sos hoy?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¡De Olimpia, como vos!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Querés comer algo?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Un poquito. Mirá: esos chicos caminan sobre brasas.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Querés comer? Hay chipa guasu y pastel mandi'o.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "Un pastel de choclo con queso. Probá luego.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Conocés la fiesta de San Juan?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¡Pasá, pasá! Sentate luego. Ya está el asado.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¡Claro! ¿Querés un poquitomi más?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Qué querés comer?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Qué comés los domingos en tu país?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Querés más?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Qué hacés para el calor?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¿Cuántos idiomas hablás?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "¡Iporã! ¿Y vos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/paraguay.ts",
+      "text": "___, ¿y vos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "¡Dale! ¿Qué comemos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "¡Dale! Tengo hambre.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "¡Dale, vamos!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "¡Eso es una ballena con su bebé!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "¡Tiene un bebé!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "el bebé",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "Dormí ___.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/republica-dominicana.ts",
+      "text": "como un bebé",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Bo, vení un minuto!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Bo! ¿Querés un mate?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Ta, dale! ¿Cómo se toma?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Tomás todo con la bombilla y me lo devolvés.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Querés un mate?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Ta, dale!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Qué tomás en tu país?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "El sándwich nacional. Carne, jamón, queso, huevo, lechuga, tomate…",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Sí. O lo pedís al plato, con papas fritas.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Tremendo! Es para compartir, pero vos podés.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Tomás un ómnibus en Montevideo para ir a la Ciudad Vieja.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Sí, mi vida, el ciento veintiuno. Subí nomás.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Pagás con la tarjeta o al guarda, que está ahí atrás.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Tenés tarjeta?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Un domingo escuchás tambores en Barrio Sur y te acercás.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Ta! Tomá este. Con una mano y un palo, así.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "En febrero hay un desfile enorme. ¡Tenés que venir!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Querés probar el tambor?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Venís al desfile de febrero?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Buenas! Sentate. ¿Qué te sirvo de la parrilla?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Probá el medio y medio: mitad vino blanco, mitad espumoso.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Con qué lo querés?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Comés carne en tu país?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Buenas! ¿Querés alquilar una bici?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Sí, es del siglo diecisiete. Andá despacito.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Qué querés ver?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Sabés andar en bici?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Mirás un partido de Uruguay con una familia uruguaya.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Sabés por qué se llama la Celeste?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Querés algo para picar?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¡Buenas! Mirá nomás, sin compromiso.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "Ahora te falta el termo, ¡y ya sos de acá!",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Qué buscás?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Es para vos?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Entendés las letras?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/uruguay.ts",
+      "text": "¿Conocés la murga?",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/contenido/venezuela.ts",
+      "text": "Dale, toma agua. Mira, desde aquí se ve todo Caracas.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Entre amigos se usa vos; con desconocidos, usted.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Entre amigos se usa tú (en el oriente, vos); con mayores, usted.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/roleplays-hispanos/paises.ts",
+      "text": "Entre amigos se usa vos (a veces tú); con desconocidos, usted.",
+      "category": "regional-pedagogy",
+      "reason": "Roleplays del mundo hispano (2026-11-24): the class teaches the authentic regional variety of this country, where vos/voseo forms are the real everyday usage; the line is deliberate dialect pedagogy."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En Buenos Aires se dice «vos sabés», en Madrid «tú sabes» y, para hablar a un grupo de amigos, en México se dice «ustedes saben».",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "En el texto argentino dicen «vos tenés».",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Formas de sujeto: yo, tú, vos, usted, él, ella, nosotros, nosotras, ustedes, ellos, ellas",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Los pronombres personales parecen lo más fácil del curso, pero esconden tres trampas. La primera: en español el sujeto se omite casi siempre, y el alumno que dice «yo» en cada frase suena insistente. La segunda: tú, usted y vos no son intercambiables y dependen del país y de la relación. La tercera: después de preposición cambian a mí, ti y conmigo. Estas actividades trabajan las tres con presentaciones, situaciones de registro y conversaciones reales.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Tú es la forma de confianza en España y en gran parte de América. Usted marca distancia o respeto y va con el verbo en tercera persona. Vos es la forma de confianza en Argentina, Uruguay, Paraguay y Centroamérica.",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Vos en Argentina, Uruguay, Paraguay y Centroamérica, con sus propias formas verbales",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "Vos, tú y ustedes",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/material-ele/data.ts",
+      "text": "¿Cuándo se usa tú, usted y vos?",
+      "category": "regional-pedagogy",
+      "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
     }
   ]
 }

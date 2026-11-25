@@ -104,6 +104,8 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/roleplays-hispanos-english-additions-20261124.json',
+  'docs/audits/descuento-10-english-additions-20261124.json',
   'docs/audits/promo-hero-limpio-english-additions-20261118.json',
   'docs/audits/clase-inicial-oraciones-english-additions-20261118.json',
   'docs/audits/promo-cta-english-additions-20261118.json',
@@ -184,6 +186,8 @@ export const APPROVAL_MANIFESTS = [
   'docs/audits/la-casa-del-reality-english-additions-20261116.json',
   'docs/audits/ultimo-crucero-english-additions-20261116.json',
   'docs/audits/clase-de-nivelacion-english-additions-20261118.json',
+  'docs/audits/objetos-perdidos-english-additions-20261123.json',
+  'docs/audits/lluvia-de-estrellas-english-additions-20261123.json',
 ];
 export function loadApprovedAdditions(root) {
   return APPROVAL_MANIFESTS.flatMap(path => {

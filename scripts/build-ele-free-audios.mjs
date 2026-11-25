@@ -8,9 +8,9 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 export const PICKS = [
-  ['A1', 'usa', 'florida'], ['A1', 'mexico', 'cdmx'],
-  ['A2', 'usa', 'nueva-york'], ['A2', 'mexico', 'cdmx'],
-  ['B1', 'usa', 'hawai'], ['B1', 'mexico', 'oaxaca'],
+  ['A1', 'usa', 'florida'], ['A1', 'mexico', 'cdmx'], ['A1', 'usa', 'california'], ['A1', 'mexico', 'jalisco'],
+  ['A2', 'usa', 'nueva-york'], ['A2', 'mexico', 'cdmx'], ['A2', 'usa', 'texas'], ['A2', 'mexico', 'oaxaca'],
+  ['B1', 'usa', 'hawai'], ['B1', 'mexico', 'oaxaca'], ['B1', 'usa', 'california'], ['B1', 'mexico', 'jalisco'],
 ];
 const WORLD = { usa: { name: 'Estados Unidos', path: '/estados-unidos-a2-b1', lessonId: 36 }, mexico: { name: 'México', path: '/mexico', lessonId: 210 } };
 const read = path => JSON.parse(readFileSync(new URL(`../${path}`, import.meta.url), 'utf8'));

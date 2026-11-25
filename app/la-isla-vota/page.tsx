@@ -15,6 +15,7 @@ import {
   type IslandRound,
   type Metric,
 } from "./data";
+import "../clasicas-ui/clasicas.css";
 import "./style.css";
 
 type SessionMode = "duo" | "group";
