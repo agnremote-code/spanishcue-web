@@ -83,6 +83,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-25 (Wednesday 3D routine): run started 02:09Z, W48 plan item 2 (Taller build).** Branch `claude/wednesday-3d-20261125`, base main `203e924`. Tue 11-24 left its marker (#516/#518). Subscription usage: **UNKNOWN**. Details follow at the end of the run.
 - **2026-11-24 (Tuesday SEO routine): PR #516** (branch `claude/seo-tuesday-20261124`, base main `dce909f`), **merged and deployed `d94911ae`**. Records PR #518 (branch `claude/board-tue-seo-records-20261124`). Run-start marker pushed at 02:10Z (W48 item 0). Mon 11-23 left its marker (#509). Subscription usage: **UNKNOWN**.
   - **W48 item 3: DONE.** This was the BOARD-DECISION-007 §3.4 early-trigger sample.
     - Martin audited the 10 most-clicked generated level pages: [audit](../audits/material-ele-top10-h1-h8-sample-20261124.md).
