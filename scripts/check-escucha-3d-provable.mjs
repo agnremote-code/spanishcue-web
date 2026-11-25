@@ -20,7 +20,7 @@
 // «sí».
 import { parseGaps } from '../app/escucha-3d/games.mjs';
 
-export const PROVABLE_KEYS = [];
+export const PROVABLE_KEYS = ['taller'];
 
 const WORD = /^[\p{L}]+$/u;
 

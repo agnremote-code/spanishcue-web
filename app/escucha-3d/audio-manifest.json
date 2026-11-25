@@ -7161,6 +7161,46 @@
    "seconds": 61.74,
    "src": "/audio/escucha-3d/suiza-b1-zurich.mp3"
   },
+  "taller/b1-esmaltes": {
+   "hash": "acf6f56924e0f5302697",
+   "seconds": 66.15,
+   "src": "/audio/escucha-3d/taller-b1-esmaltes.mp3"
+  },
+  "taller/b1-greda": {
+   "hash": "faa1e2b7c700ba9e3ce3",
+   "seconds": 55.83,
+   "src": "/audio/escucha-3d/taller-b1-greda.mp3"
+  },
+  "taller/b1-horno": {
+   "hash": "8824970d36ddca188d0a",
+   "seconds": 64.52,
+   "src": "/audio/escucha-3d/taller-b1-horno.mp3"
+  },
+  "taller/b1-mostrador": {
+   "hash": "751be40dad9768f22a06",
+   "seconds": 73.23,
+   "src": "/audio/escucha-3d/taller-b1-mostrador.mp3"
+  },
+  "taller/b1-oficina": {
+   "hash": "85b17629d4777f2eca7f",
+   "seconds": 69.75,
+   "src": "/audio/escucha-3d/taller-b1-oficina.mp3"
+  },
+  "taller/b1-patio": {
+   "hash": "1b99814457f0c7f9a03d",
+   "seconds": 70.59,
+   "src": "/audio/escucha-3d/taller-b1-patio.mp3"
+  },
+  "taller/b1-secadero": {
+   "hash": "b13b5c6a4aab73d4c48d",
+   "seconds": 53.54,
+   "src": "/audio/escucha-3d/taller-b1-secadero.mp3"
+  },
+  "taller/b1-torno": {
+   "hash": "e461043e431268949284",
+   "seconds": 66.77,
+   "src": "/audio/escucha-3d/taller-b1-torno.mp3"
+  },
   "tren/a0-amanecer": {
    "hash": "2c27bccc9a8d7491d87c",
    "seconds": 19.22,

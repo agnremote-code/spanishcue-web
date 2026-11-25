@@ -1,0 +1,314 @@
+{
+  "game": "taller",
+  "level": "B1",
+  "items": [
+    {
+      "id": "mostrador",
+      "title": "Un recado para Marina",
+      "place": "El mostrador del taller",
+      "context": "Es lunes por la mañana. Marina, la dueña del taller, no está, y Gonzalo, el tornero, contesta el teléfono.",
+      "speakers": [
+        { "name": "Valentina", "country": "Uruguay", "voice": "es-UY-ValentinaNeural" },
+        { "name": "Gonzalo", "country": "Colombia", "voice": "es-CO-GonzaloNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Taller La Greda, buenos días." },
+        { "s": 0, "text": "Hola, buenos días. Habla Valentina, tengo un restaurante en Bogotá. ¿Podría hablar con Marina?" },
+        { "s": 1, "text": "Ella no está, salió temprano y vuelve por la tarde. Soy Gonzalo, el hermano. ¿Le dejo algún recado?" },
+        { "s": 0, "text": "Sí, por favor. Mire, vamos a abrir un segundo local en enero y necesito una vajilla completa: platos hondos, platos planos y tazas para el café." },
+        { "s": 1, "text": "Muy bien. ¿Y cómo los quiere? ¿Tiene alguna idea?" },
+        { "s": 0, "text": "Algo sencillo, color tierra, sin dibujos. Y lo más importante: que aguanten el lavaplatos, porque en la cocina no hay tiempo para lavar a mano." },
+        { "s": 1, "text": "Entiendo. Normalmente Marina manda primero una muestra, para que usted vea el color y el peso." },
+        { "s": 0, "text": "Perfecto. Dígale que me la mande esta semana, si puede, y que me llame para hablar del precio." },
+        { "s": 1, "text": "Con gusto. Apenas llegue, le doy el mensaje." }
+      ],
+      "choice": [
+        { "q": "¿Para qué llama Valentina al taller?", "options": ["Para quejarse de unos platos", "Para hacer un pedido de vajilla", "Para preguntar por un curso"], "answer": 1 },
+        { "q": "¿Por qué necesita Valentina la vajilla?", "options": ["Porque va a abrir un segundo local", "Porque se le rompieron los platos viejos", "Porque va a cambiar el menú"], "answer": 0 },
+        { "q": "¿Qué es lo más importante para Valentina?", "options": ["Que las piezas tengan dibujos de colores", "Que las piezas sean baratas y ligeras", "Que aguanten el lavaplatos"], "answer": 2 },
+        { "q": "¿Qué pide Valentina para esta semana?", "options": ["Que Marina visite el restaurante", "Que Marina le mande una muestra", "Que Marina le mande la factura"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez tomaste un recado para otra persona? ¿Llegó bien el mensaje?", "model": "Sí, una vez tomé un recado para mi jefa, pero se me olvidó decirle la hora. Desde entonces siempre lo escribo." },
+        { "q": "Si abrieras un restaurante, ¿cómo sería tu vajilla?", "model": "Usaría platos grandes y sencillos, de color blanco, porque así la comida se ve mejor." },
+        { "q": "¿Prefieres comprar cosas hechas a mano o en una tienda grande? ¿Por qué?", "model": "Prefiero las cosas hechas a mano, aunque son más caras, porque duran más y tienen una historia." }
+      ],
+      "gaps": "Mire, vamos a abrir un [segundo] local en [enero] y necesito una [vajilla] completa: platos hondos, platos planos y tazas para el [café].",
+      "glossary": [
+        { "word": "recado", "meaning": "mensaje que dejas para una persona que no está" },
+        { "word": "vajilla", "meaning": "todos los platos, tazas y fuentes que se usan para comer" },
+        { "word": "color tierra", "meaning": "un marrón rojizo, como el del barro" },
+        { "word": "lavaplatos", "meaning": "máquina que lava los platos; en otros países, lavavajillas" },
+        { "word": "muestra", "meaning": "pieza de ejemplo para ver cómo va a quedar un pedido" }
+      ]
+    },
+    {
+      "id": "greda",
+      "title": "Un audio desde la carretera",
+      "place": "La mesa de la greda",
+      "context": "Marina maneja hacia el mercado y le deja un mensaje de voz a Paola, la aprendiz del taller.",
+      "speakers": [
+        { "name": "Marina", "country": "Colombia", "voice": "es-CO-SalomeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Hola, Paola, soy Marina. Voy por la carretera y no puedo escribir, así que te dejo este audio." },
+        { "s": 0, "text": "Gonzalo me contó que llamó la señora del restaurante de Bogotá y que quiere una muestra esta semana." },
+        { "s": 0, "text": "Para la muestra vamos a usar la greda del saco azul, la que trajimos el lunes, que es más fina." },
+        { "s": 0, "text": "Antes de amasarla, mira que no esté muy seca. Si se rompe al doblarla, le echas un poco de agua tibia, la envuelves en un plástico y la guardas en un rincón fresco hasta mañana." },
+        { "s": 0, "text": "Después preparas seis bolas del mismo tamaño para el torno, porque Gonzalo empieza temprano con los platos." },
+        { "s": 0, "text": "Otra cosa: el horno grande sigue caliente desde anoche, así que no abras la puerta hasta las cuatro." },
+        { "s": 0, "text": "Y si vuelve a llamar la señora, le dices que yo la llamo esta noche. Gracias, Paola, nos vemos más tarde." }
+      ],
+      "choice": [
+        { "q": "¿Por qué Marina le manda un audio a Paola?", "options": ["Porque va por la carretera", "Porque Paola nunca contesta el teléfono", "Porque prefiere no hablar con Gonzalo"], "answer": 0 },
+        { "q": "¿Qué greda quiere Marina para la muestra?", "options": ["La del saco azul, que es más fina", "La del saco azul, que es barata", "La que sobró del mercado"], "answer": 0 },
+        { "q": "¿Qué tiene que hacer Paola si la greda se rompe al doblarla?", "options": ["Ponerla al sol durante toda la tarde", "Abrir otro saco de greda nuevo", "Echarle agua tibia"], "answer": 2 },
+        { "q": "¿Por qué Paola no puede abrir todavía el horno grande?", "options": ["Porque Gonzalo lo está usando", "Porque se rompió la puerta", "Porque sigue caliente desde anoche"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "¿Prefieres mandar audios o escribir mensajes? ¿Por qué?", "model": "Prefiero escribir, porque puedo pensar antes de enviar. Pero cuando manejo, mando audios." },
+        { "q": "¿Alguna vez trabajaste con las manos, con barro, madera o tela? ¿Qué hiciste?", "model": "En el colegio hicimos una taza de barro. Me quedó un poco torcida, pero todavía la tengo." },
+        { "q": "Cuando le dejas instrucciones a otra persona, ¿cómo te aseguras de que las entienda?", "model": "Las digo en orden y al final pregunto si tiene alguna duda." }
+      ],
+      "gaps": "Si se rompe al doblarla, le echas un poco de [agua] tibia, la envuelves en un [plástico] y la guardas en un [rincón] fresco hasta [mañana].",
+      "glossary": [
+        { "word": "greda", "meaning": "tierra arcillosa con la que se hacen piezas de cerámica" },
+        { "word": "amasar", "meaning": "trabajar una masa con las manos para que quede blanda y pareja" },
+        { "word": "tibia", "meaning": "ni fría ni caliente" },
+        { "word": "torno", "meaning": "máquina que gira y sirve para dar forma al barro" },
+        { "word": "rincón", "meaning": "lugar pequeño en una esquina" }
+      ]
+    },
+    {
+      "id": "torno",
+      "title": "¿Qué dijo exactamente?",
+      "place": "El torno de Gonzalo",
+      "context": "Por la tarde, Paola encuentra a Gonzalo en el torno y le pregunta por la llamada de la clienta.",
+      "speakers": [
+        { "name": "Gonzalo", "country": "Colombia", "voice": "es-CO-GonzaloNeural" },
+        { "name": "Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Gonzalo, Marina me dijo que llamó una clienta de Bogotá. ¿Qué quería exactamente?" },
+        { "s": 0, "text": "Una vajilla para un restaurante nuevo. Dijo que iban a abrir en enero y que necesitaba platos hondos, platos planos y tazas." },
+        { "s": 1, "text": "¿Y no preguntó cuánto tardamos?" },
+        { "s": 0, "text": "Sí, me preguntó si podíamos entregar todo antes de la inauguración. Le dije que eso lo decide Marina, que yo solo hago los platos." },
+        { "s": 1, "text": "Claro. ¿Y del color qué dijo?" },
+        { "s": 0, "text": "Que quería algo sencillo, color tierra, nada de flores ni dibujos. Y me pidió que le mandáramos una muestra esta semana." },
+        { "s": 1, "text": "Uy, esta semana está complicada. El horno grande está ocupado con un pedido para el mercado del domingo." },
+        { "s": 0, "text": "Por eso te lo cuento. ¿Puedes preguntarle a Emilio si nos deja un espacio en el horno pequeño?" },
+        { "s": 1, "text": "Bueno, yo hablo con él ahora mismo." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Paola y Gonzalo?", "options": ["De un problema con el torno", "De un pedido para el mercado", "De la llamada de una clienta"], "answer": 2 },
+        { "q": "¿Qué le preguntó la clienta a Gonzalo?", "options": ["Si tenían platos hechos", "Si podían entregar antes de la inauguración", "Si podía visitar el taller antes de hacer el pedido"], "answer": 1 },
+        { "q": "Según Gonzalo, ¿cómo quiere la clienta las piezas?", "options": ["Sencillas y de color tierra", "Blancas, con flores pequeñas", "Grandes y de muchos colores"], "answer": 0 },
+        { "q": "¿Quién va a hablar con Emilio del horno pequeño?", "options": ["El tornero", "La dueña del taller", "La aprendiz"], "answer": 2 }
+      ],
+      "open": [
+        { "q": "Cuando alguien te cuenta un mensaje de otra persona, ¿qué detalles se pierden más fácilmente?", "model": "Se pierden los números y las fechas. Por eso siempre le pido a la persona que me los repita." },
+        { "q": "¿Qué haces cuando alguien te pide algo que no depende de ti?", "model": "Le digo que lo voy a consultar con la persona que decide y que le respondo pronto." },
+        { "q": "¿Te gustaría aprender a usar un torno? ¿Qué harías primero?", "model": "Sí, me encantaría. Primero haría una taza para mi mamá, aunque seguro que me queda torcida." }
+      ],
+      "gaps": "Uy, esta [semana] está complicada. El horno grande está ocupado con un [pedido] para el [mercado] del [domingo].",
+      "glossary": [
+        { "word": "inauguración", "meaning": "el primer día que abre un lugar" },
+        { "word": "pedido", "meaning": "lo que un cliente encarga para comprarlo" },
+        { "word": "ocupado", "meaning": "que otra persona ya lo está usando" },
+        { "word": "complicada", "meaning": "difícil, con muchos problemas" }
+      ]
+    },
+    {
+      "id": "secadero",
+      "title": "Despacio, que se raja",
+      "place": "El secadero",
+      "context": "Emilio, el encargado del horno, te muestra el cuarto donde se secan las piezas antes de hornearlas.",
+      "speakers": [
+        { "name": "Emilio", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Bueno, esto es el secadero. Aquí se ponen las piezas que salen del torno, todavía blandas." },
+        { "s": 0, "text": "Primero se dejan unos días lejos de la ventana, porque si se secan demasiado rápido, se rajan." },
+        { "s": 0, "text": "Cada mañana se revisa todo, plato por plato. Si uno tiene una grieta, se aparta en esa caja de allá." },
+        { "s": 0, "text": "Esa greda no se tira: se moja otra vez, se amasa y se vuelve a usar. Aquí no se pierde nada." },
+        { "s": 0, "text": "Cuando la pieza cambia de color y ya no está fría al tocarla, está lista para la primera quema." },
+        { "s": 0, "text": "Y una regla importante: aquí no se entra con comida, porque el polvo de la greda se pega a todo." }
+      ],
+      "choice": [
+        { "q": "¿Qué explica Emilio?", "options": ["Cómo se secan las piezas", "Cómo se prepara el esmalte de colores", "Cómo se empaca un pedido para enviarlo"], "answer": 0 },
+        { "q": "¿Por qué se ponen las piezas lejos de la ventana?", "options": ["Porque si se secan rápido, se rajan", "Porque el sol cambia el color", "Porque entra polvo"], "answer": 0 },
+        { "q": "¿Qué se hace con la greda de una pieza que tiene una grieta?", "options": ["Se vende más barata", "Se guarda para tapar otras grietas", "Se moja y se vuelve a usar"], "answer": 2 },
+        { "q": "¿Por qué no se puede entrar con comida al secadero?", "options": ["Porque el cuarto es muy pequeño para tanta gente", "Porque el polvo de la greda se pega a todo", "Porque la comida atrae insectos al cuarto"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Conoces algún trabajo en el que la paciencia es muy importante? ¿Cuál?", "model": "Sí, el de mi abuelo, que era carpintero. Siempre decía que la madera no se puede apurar." },
+        { "q": "En tu casa o en tu trabajo, ¿qué reglas tienen que seguir todos?", "model": "En mi oficina no se come en el escritorio y se apaga la luz al salir." },
+        { "q": "¿Qué cosas se vuelven a usar en tu casa en lugar de tirarlas?", "model": "Se guardan los frascos de vidrio y se usan para el arroz y el café." }
+      ],
+      "gaps": "Y una [regla] importante: aquí no se entra con [comida], porque el [polvo] de la [greda] se pega a todo.",
+      "glossary": [
+        { "word": "secadero", "meaning": "cuarto donde se dejan secar las piezas" },
+        { "word": "se rajan", "meaning": "se abre una línea en la pieza y se rompe" },
+        { "word": "grieta", "meaning": "línea fina por donde se abre algo que se rompe" },
+        { "word": "quema", "meaning": "cada vez que las piezas se cocinan en el horno" }
+      ]
+    },
+    {
+      "id": "horno",
+      "title": "La muestra sale del horno",
+      "place": "El horno",
+      "context": "Diez días después, Emilio abre el horno pequeño y mira la muestra con Marina.",
+      "speakers": [
+        { "name": "Emilio", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" },
+        { "name": "Marina", "country": "Colombia", "voice": "es-CO-SalomeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Listo, Marina, ya se puede abrir. Ven a ver la muestra." },
+        { "s": 1, "text": "A ver... Los platos quedaron preciosos. Ese color tierra es justo lo que quería Valentina." },
+        { "s": 0, "text": "Sí, los platos salieron bien. Pero mira esta taza: tiene una grieta en el asa." },
+        { "s": 1, "text": "Ay, no. ¿Y eso por qué pasó?" },
+        { "s": 0, "text": "Creo que el asa estaba más húmeda que el resto de la taza y se secó a otro ritmo." },
+        { "s": 1, "text": "Bueno, no es grave. Le mando los platos el lunes, como le prometí, y la taza la hacemos otra vez." },
+        { "s": 0, "text": "Me parece bien. Y otra cosa: si la quiere para el lavaplatos, hay que usar el esmalte sin plomo, que cuesta el doble." },
+        { "s": 1, "text": "Eso ya lo hablamos por teléfono. Ella prefiere pagar un poco más, pero que sea seguro." },
+        { "s": 0, "text": "Entonces le aviso a Paola para que prepare ese esmalte." }
+      ],
+      "choice": [
+        { "q": "¿Qué problema tiene la muestra?", "options": ["Los platos salieron de otro color", "Una taza tiene una grieta en el asa", "Los platos hondos salieron sin esmalte"], "answer": 1 },
+        { "q": "Según Emilio, ¿por qué se rajó la taza?", "options": ["Porque el asa estaba más húmeda", "Porque el horno estaba demasiado caliente", "Porque a Emilio se le cayó al sacarla"], "answer": 0 },
+        { "q": "¿Qué decide Marina?", "options": ["Pedir más plazo", "Mandar todo junto la otra semana", "Mandar los platos el lunes"], "answer": 2 },
+        { "q": "Según Marina, ¿qué piensa Valentina del esmalte sin plomo?", "options": ["Que es demasiado caro", "Que prefiere pagar más por algo seguro", "Que solo lo quiere para tazas"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "Cuando algo sale mal en un trabajo, ¿prefieres avisar enseguida o buscar primero una solución?", "model": "Primero busco una solución, pero aviso pronto, porque la otra persona tiene derecho a saberlo." },
+        { "q": "¿Pagarías más por un producto más seguro? ¿Por ejemplo?", "model": "Sí, pago más por los juguetes de mi sobrino si son más seguros." },
+        { "q": "¿Qué haces cuando no puedes cumplir una promesa a tiempo?", "model": "Llamo antes, explico lo que pasó y propongo otra fecha." }
+      ],
+      "gaps": "Y otra [cosa]: si la quiere para el lavaplatos, hay que usar el [esmalte] sin [plomo], que cuesta el [doble].",
+      "glossary": [
+        { "word": "asa", "meaning": "parte de la taza por donde se agarra" },
+        { "word": "húmeda", "meaning": "un poco mojada" },
+        { "word": "esmalte", "meaning": "capa brillante que se pone sobre la cerámica antes de la última quema" },
+        { "word": "plomo", "meaning": "metal pesado y tóxico que no debe tocar la comida" }
+      ]
+    },
+    {
+      "id": "esmaltes",
+      "title": "Lo que dijo, lo que preguntó y lo que pidió",
+      "place": "La mesa de los esmaltes",
+      "context": "Valentina llamó al taller y habló con Paola. Ahora Paola le cuenta a Emilio la llamada.",
+      "speakers": [
+        { "name": "Paola", "country": "Venezuela", "voice": "es-VE-PaolaNeural" },
+        { "name": "Emilio", "country": "República Dominicana", "voice": "es-DO-EmilioNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Emilio, te cuento rápido: acaba de llamar Valentina, la del restaurante." },
+        { "s": 1, "text": "¿Y qué dijo? ¿Le gustaron las fotos de la muestra?" },
+        { "s": 0, "text": "Le encantaron. Dijo que los platos eran justo lo que buscaba y que el color quedaba perfecto con las mesas de madera." },
+        { "s": 1, "text": "Qué bien. ¿Y la taza rota? ¿Le contaste?" },
+        { "s": 0, "text": "Sí, y no se molestó. Pero preguntó si las tazas nuevas podían ser un poco más grandes, porque allá sirven el café en taza grande." },
+        { "s": 1, "text": "Eso no es problema. Se lo digo a Gonzalo. ¿Algo más?" },
+        { "s": 0, "text": "Sí, me preguntó si el esmalte tenía plomo. Le expliqué que usamos uno nuevo, sin plomo, y que es seguro para la comida." },
+        { "s": 1, "text": "Muy bien dicho. ¿Y qué pidió al final?" },
+        { "s": 0, "text": "Que le mandemos también una jarra para el agua, del mismo color, para ver cómo se ve en la mesa del comedor." }
+      ],
+      "choice": [
+        { "q": "¿Qué hace Paola en esta conversación?", "options": ["Le pide ayuda a Emilio con el horno pequeño", "Le cuenta qué dijo la del restaurante", "Le explica a Emilio cómo se hace el esmalte"], "answer": 1 },
+        { "q": "¿Qué opinó la clienta de los platos de la muestra?", "options": ["Que eran justo lo que buscaba", "Que eran muy pesados", "Que el color era oscuro"], "answer": 0 },
+        { "q": "¿Por qué quiere la clienta tazas más grandes?", "options": ["Porque las tazas de la muestra se rompieron", "Porque quiere servir sopa en ellas", "Porque allá sirven el café en taza grande"], "answer": 2 },
+        { "q": "¿Qué pidió la clienta al final?", "options": ["Una jarra para el agua", "Más fotos", "Un descuento"], "answer": 0 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez tuviste que darle a alguien una mala noticia de parte de otra persona? ¿Cómo lo hiciste?", "model": "Sí, tuve que decirle a un compañero que la reunión se cancelaba. Se lo dije con calma y le expliqué por qué." },
+        { "q": "¿En tu país el café se toma en taza grande o pequeña?", "model": "En mi país se toma en taza pequeña después de comer, pero en casa uso una taza grande." },
+        { "q": "¿Qué es más difícil para ti: contar lo que alguien dijo o contar lo que alguien preguntó?", "model": "Para mí, lo que alguien preguntó, porque tengo que acordarme de usar «si» y de cambiar el orden." }
+      ],
+      "gaps": "Que le mandemos también una [jarra] para el [agua], del mismo color, para ver cómo se ve en la [mesa] del [comedor].",
+      "glossary": [
+        { "word": "te cuento", "meaning": "expresión para empezar a dar una noticia" },
+        { "word": "se molestó", "meaning": "se enojó un poco" },
+        { "word": "madera", "meaning": "material que sale de los árboles" },
+        { "word": "jarra", "meaning": "recipiente con asa para servir agua o jugo" }
+      ]
+    },
+    {
+      "id": "oficina",
+      "title": "El recado del chef",
+      "place": "La oficina del taller",
+      "context": "Andrés, el chef del restaurante de Valentina, llama a Marina con un mensaje de parte de su jefa.",
+      "speakers": [
+        { "name": "Andrés", "country": "Guatemala", "voice": "es-GT-AndresNeural" },
+        { "name": "Marina", "country": "Colombia", "voice": "es-CO-SalomeNeural" }
+      ],
+      "lines": [
+        { "s": 1, "text": "Taller La Greda, buenas tardes, habla Marina." },
+        { "s": 0, "text": "Buenas tardes, señora Marina. Soy Andrés, el chef del restaurante de Valentina. Ella está en una reunión y me pidió que la llamara." },
+        { "s": 1, "text": "Ah, mucho gusto, Andrés. ¿Pasó algo con el pedido?" },
+        { "s": 0, "text": "Nada malo. Bueno, más o menos. Me dijo que le contara que la inauguración se adelantó una semana." },
+        { "s": 1, "text": "Uy, entonces tenemos menos tiempo. ¿Y quiere el pedido completo para esa fecha?" },
+        { "s": 0, "text": "Sí. También me preguntó cuánto es el anticipo y a qué cuenta lo puede transferir." },
+        { "s": 1, "text": "El anticipo es la mitad del total. Los datos de la cuenta se los mando por correo esta noche." },
+        { "s": 0, "text": "Perfecto. Y la última cosa: quiere saber si pueden entregar un jueves, porque ese día la cocina está tranquila." },
+        { "s": 1, "text": "Un jueves está bien. Dígale que mañana le confirmo todo por escrito." }
+      ],
+      "choice": [
+        { "q": "¿Por qué llama Andrés y no Valentina?", "options": ["Porque Valentina está enferma en casa", "Porque Valentina está de viaje", "Porque Valentina está en una reunión"], "answer": 2 },
+        { "q": "¿Qué noticia trae Andrés?", "options": ["Que cambió la dirección", "Que la inauguración se adelantó", "Que cancela una parte del pedido"], "answer": 1 },
+        { "q": "Según Marina, ¿cuánto es el anticipo?", "options": ["La mitad del total", "Un tercio del total", "Lo mismo que la muestra"], "answer": 0 },
+        { "q": "¿Por qué quiere Valentina recibir el pedido un jueves?", "options": ["Porque llega Andrés temprano", "Porque ese día la cocina está tranquila", "Porque es la inauguración"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Prefieres recibir los mensajes importantes por escrito o de palabra? ¿Por qué?", "model": "Por escrito, porque así no se me olvidan las fechas ni los números." },
+        { "q": "¿Qué haces cuando te cambian una fecha importante a última hora?", "model": "Primero me pongo nervioso, pero después hago una lista y organizo lo que falta." },
+        { "q": "¿En tu país es normal pagar un anticipo? ¿En qué situaciones?", "model": "Sí, se paga un anticipo para alquilar un salón o para un mueble hecho a medida." }
+      ],
+      "gaps": "El [anticipo] es la [mitad] del [total]. Los datos de la cuenta se los mando por [correo] esta noche.",
+      "glossary": [
+        { "word": "se adelantó", "meaning": "pasó a una fecha más temprana" },
+        { "word": "anticipo", "meaning": "parte del dinero que se paga antes de recibir algo" },
+        { "word": "transferir", "meaning": "mandar dinero de una cuenta del banco a otra" },
+        { "word": "por escrito", "meaning": "en un correo o en un papel, no solo de palabra" }
+      ]
+    },
+    {
+      "id": "patio",
+      "title": "Todo listo para Bogotá",
+      "place": "El patio de despacho",
+      "context": "El pedido ya está en cajas. Roberto, el transportista, viene a ver la carga y Marina le da las indicaciones de la clienta.",
+      "speakers": [
+        { "name": "Roberto", "country": "Panamá", "voice": "es-PA-RobertoNeural" },
+        { "name": "Marina", "country": "Colombia", "voice": "es-CO-SalomeNeural" }
+      ],
+      "lines": [
+        { "s": 0, "text": "Buenos días, doña Marina. ¿Esto es lo de Bogotá?" },
+        { "s": 1, "text": "Sí, Roberto. Son doce cajas: platos, tazas y las jarras. Van envueltas en papel y cartón, pero de todas formas hay que manejar con cuidado." },
+        { "s": 0, "text": "Tranquila, que yo llevo cerámica desde hace años. ¿A qué dirección las llevo?" },
+        { "s": 1, "text": "Al restaurante nuevo. La dueña me pidió que entregaras el jueves por la mañana, antes de las diez, por la puerta de atrás." },
+        { "s": 0, "text": "¿Por la puerta de atrás? ¿Y eso por qué?" },
+        { "s": 1, "text": "Porque adelante están pintando la fachada. Y otra cosa: el chef te va a revisar caja por caja antes de firmar." },
+        { "s": 0, "text": "Me parece bien. ¿Y el saldo? ¿Lo cobro yo?" },
+        { "s": 1, "text": "No, el saldo lo transfiere ella cuando reciba todo. Tú solo me mandas una foto de la factura firmada." },
+        { "s": 0, "text": "Perfecto. Entonces salgo el miércoles por la noche y el jueves temprano estoy allá." }
+      ],
+      "choice": [
+        { "q": "¿De qué hablan Roberto y Marina?", "options": ["De la entrega de las cajas", "Del precio del transporte hasta Bogotá", "De un problema con el horno grande"], "answer": 0 },
+        { "q": "¿Por qué tiene que entrar Roberto por la puerta de atrás?", "options": ["Porque adelante están pintando la fachada", "Porque la puerta de adelante está rota", "Porque el restaurante todavía no tiene llave"], "answer": 0 },
+        { "q": "¿Qué va a hacer el chef antes de firmar?", "options": ["Pagar el saldo", "Llamar a Marina", "Revisar caja por caja"], "answer": 2 },
+        { "q": "¿Qué tiene que mandarle Roberto a Marina?", "options": ["El dinero del saldo en efectivo", "Una foto de la factura firmada", "Un mensaje al salir"], "answer": 1 }
+      ],
+      "open": [
+        { "q": "¿Alguna vez mandaste algo frágil por correo o por transporte? ¿Cómo llegó?", "model": "Sí, le mandé unas copas a mi hermana. Las envolví en periódico y llegaron perfectas." },
+        { "q": "Si tú recibieras un pedido grande para tu trabajo, ¿qué revisarías antes de firmar?", "model": "Contaría las cajas y abriría algunas para ver si hay algo roto." },
+        { "q": "¿Qué haces para no olvidar las instrucciones que te da otra persona?", "model": "Las anoto en el teléfono y, si son muchas, las repito en voz alta." }
+      ],
+      "gaps": "Van envueltas en [papel] y [cartón], pero de todas formas hay que [manejar] con [cuidado].",
+      "glossary": [
+        { "word": "doña", "meaning": "palabra de respeto delante del nombre de una mujer" },
+        { "word": "envueltas", "meaning": "cubiertas con papel u otro material para protegerlas" },
+        { "word": "fachada", "meaning": "la parte de delante de un edificio" },
+        { "word": "saldo", "meaning": "el dinero que falta pagar" },
+        { "word": "factura", "meaning": "papel que dice qué se compró y cuánto cuesta" }
+      ]
+    }
+  ]
+}

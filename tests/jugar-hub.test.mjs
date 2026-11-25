@@ -56,6 +56,7 @@ test("scene totals and save keys match each world's own engine", async () => {
     "ultimo-crucero": "../app/ultimo-crucero/engine.mjs",
     "objetos-perdidos": "../app/objetos-perdidos/engine.mjs",
     "lluvia-de-estrellas": "../app/lluvia-de-estrellas/engine.mjs",
+    "el-taller-de-la-greda": "../app/el-taller-de-la-greda/engine.mjs",
     "el-consorcio": "../app/el-consorcio/engine.mjs",
     "marketing-de-casinos": "../app/marketing-de-casinos/engine.mjs",
   };
