@@ -9,7 +9,10 @@ import { ConjugacionFrame, VerbLinks, VerbSearch } from "../components";
 import { EleNewsletterInline } from "../../material-ele/PopularLinks";
 import { tiempoPages } from "../tiempos";
 import cj from "../conjugacion.module.css";
+import { SER_PATH, serPath } from "../../ser-o-estar/data";
 import { CONJUGACION_PATH, PERSONS, TENSE_GROUPS, verbFromParam, verbPage, verbPath, verbSlug, verbos, type Highlight } from "../verbos";
+
+const SER_LINKS = [["ubicacion", "Ubicación"], ["estado-de-animo", "Estado de ánimo"], ["origen-y-nacionalidad", "Origen y nacionalidad"], ["eventos", "Dónde es un evento"], ["listo", "Ser listo o estar listo"], ["aburrido", "Ser aburrido o estar aburrido"]] as const;
 
 type Props = { params: Promise<{ verbo: string }> };
 
@@ -90,6 +93,14 @@ export default async function VerbPage({ params }: Props) {
         <EleExerciseBlock exercise={{ title: `Ejercicio con ${verb}`, instructions: `Escribe la forma correcta de ${verb} en el tiempo y la persona indicados.`, items: page.exercise }} />
       </Section>
       <EleNewsletterInline source={page.path} />
+      {verb === "ser" || verb === "estar" ? (
+        <Section title="¿Ser o estar?" intro="Cada uso y cada adjetivo que cambia de significado tiene su regla y un ejercicio.">
+          <ul className={cj.verbList}>
+            <li><Link href={SER_PATH}>Todos los usos de ser y estar</Link></li>
+            {SER_LINKS.map(([slug, label]) => <li key={slug}><Link href={serPath(slug)}>{label}</Link></li>)}
+          </ul>
+        </Section>
+      ) : null}
       {page.related.length ? (
         <Section title={`Verbos que se conjugan como ${verb}`} intro={`Mismo modelo: ${page.model.label}. Practicarlos juntos ayuda a fijar el patrón.`}>
           <VerbLinks verbs={page.related} href={verbPath} />

@@ -150,6 +150,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path.startsWith("/verbos-con-preposicion/") ||
     path === "/indefinido-o-imperfecto" ||
     path.startsWith("/indefinido-o-imperfecto/") ||
+    path === "/ser-o-estar" ||
+    path.startsWith("/ser-o-estar/") ||
     path.startsWith("/material-ele/") ||
     // Crawler endpoints: identical for every visitor and fetched constantly by
     // bots, so the edge answers them instead of the Worker (2026-11-02 incident).
