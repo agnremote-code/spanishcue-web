@@ -42,6 +42,7 @@ const WORLDS = [
   ['marketing-de-casinos', 'public/marketing-de-casinos/portada.webp'],
   ['reino', 'public/reino/portada.webp'],
   ['la-feria-de-villaluz', 'public/la-feria-de-villaluz/portada.webp'],
+  ['el-taller-de-la-greda', 'public/el-taller-de-la-greda/portada.webp'],
 ];
 if (name === 'mas-alla' || name === 'mundos') {
   for (const [art, path, fit = 'cover16x10'] of WORLDS) {

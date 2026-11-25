@@ -146,7 +146,8 @@ export const GAMES = {
   // El taller de la greda (B1): every circle has its own listening, and each
   // character keeps one voice. First world under the provable listening gate
   // (BOARD-DECISION-006; 'taller' is in PROVABLE_KEYS). Conversation scenes:
-  // docs/board/content/taller-greda-b1-conversacion.md (world not built yet).
+  // docs/board/content/taller-greda-b1-conversacion.md, built as
+  // app/el-taller-de-la-greda (PRO lesson, ID 285).
   taller: {
     title: 'El taller de la greda',
     levels: ['B1'],

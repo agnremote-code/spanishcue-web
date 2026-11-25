@@ -24,6 +24,7 @@ export function answerBeat(state: State, beat: Beat, index?: number): State;
 export function lastFeedback(scene: SceneState | null, beat: Beat): { text: string; correct: boolean; feature: string | null } | null;
 export function pickOf(scene: SceneState | null, beat: Beat): number | null;
 export function settleScene(state: State, circles: Record<string, Circle>): State;
+export function progress(state: State): { done: number; total: number };
 export function setRoute(state: State, route: string): State;
 export function resetLevel(state: State): State;
 export function serialise(state: State): string;

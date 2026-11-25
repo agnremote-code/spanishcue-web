@@ -105,6 +105,11 @@ export function settleScene(state, circles) {
   return currentBeat(state.scene, circle) >= (circle.beats?.length ?? 0) ? markDone(state, id) : state;
 }
 
+/** Scenes done at the level, for the student hub (app/jugar/worlds.mjs). */
+export function progress(state) {
+  return { done: doneFor(state).length, total: CIRCLE_IDS.length };
+}
+
 export const setRoute = (state, route) => (route === 'conversacion' || route === 'escucha' ? { ...state, route } : state);
 export const resetLevel = state => ({ ...state, done: { ...state.done, [state.level]: [] }, scene: null });
 
