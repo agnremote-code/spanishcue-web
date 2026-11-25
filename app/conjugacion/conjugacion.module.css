@@ -28,3 +28,6 @@
 .search { display: flex; gap: 8px; flex-wrap: wrap; margin: 18px 0 0; }
 .search input { font: inherit; padding: 10px 14px; border: 1px solid var(--g-line); border-radius: 12px; min-width: 0; flex: 1 1 220px; max-width: 360px; }
 @media print { .tense { break-inside: avoid; } }
+.tenseList { display: grid; gap: 4px 24px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); }
+.tenseList p { margin: 0; font-size: 15px; line-height: 1.45; }
+.tenseList a { color: var(--g-blue-dark); font-weight: 800; text-decoration: none; }

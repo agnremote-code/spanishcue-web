@@ -7,6 +7,7 @@ import styles from "../../growth/growth.module.css";
 import type { Forms, TenseKey } from "../engine";
 import { ConjugacionFrame, VerbLinks, VerbSearch } from "../components";
 import { EleNewsletterInline } from "../../material-ele/PopularLinks";
+import { tiempoPages } from "../tiempos";
 import cj from "../conjugacion.module.css";
 import { CONJUGACION_PATH, PERSONS, TENSE_GROUPS, verbFromParam, verbPage, verbPath, verbSlug, verbos, type Highlight } from "../verbos";
 
@@ -94,6 +95,9 @@ export default async function VerbPage({ params }: Props) {
           <VerbLinks verbs={page.related} href={verbPath} />
         </Section>
       ) : null}
+      <Section title="Verbos irregulares por tiempo">
+        <ul className={cj.verbList}>{tiempoPages.map((tiempo) => <li key={tiempo.slug}><Link href={tiempo.path}>{tiempo.label}</Link></li>)}</ul>
+      </Section>
       <Section title="Otro verbo">
         <VerbSearch />
         <p className={styles.footnote}><Link className={styles.textLink} href={CONJUGACION_PATH}>Todos los verbos conjugados</Link> · <Link className={styles.textLink} href="/material-ele">Material ELE para profesores</Link></p>

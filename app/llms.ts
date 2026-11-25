@@ -49,6 +49,7 @@ export function llmsTxt(): string {
     link("Sobre SpanishCue y su método", "/about", "metodología, MCER y PCIC (en inglés)"),
     link("Clases de español listas para dar online", "/clases-de-espanol-listas-para-dar", "qué plataformas ofrecen clases preparadas para compartir en pantalla y cómo elegir"),
     link("Alternativa a ProfeDeELE", "/alternativa-a-profedeele", "comparativa de formatos entre sitios de material ELE"),
+    link("Verbos irregulares por tiempo", "/conjugacion/irregulares", "lista de verbos irregulares en cada tiempo verbal, con los patrones explicados y ejercicio"),
     link("Conjugación de verbos en español", "/conjugacion", "más de 1.200 verbos conjugados en todos los tiempos, con las irregularidades explicadas y un ejercicio por verbo"),
     "",
     "## Guías para profesores de español",
