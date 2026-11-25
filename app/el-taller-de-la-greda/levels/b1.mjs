@@ -378,7 +378,7 @@ export const CIRCLES = {
     ],
     task: 'Emilio no estuvo en la llamada entre Marina y Valentina. Tú se la cuentas durante dos minutos y respondes a sus preguntas, aclarando quién dijo cada cosa.',
     line: 'Diez días después. Emilio abre el horno pequeño. Los platos salieron perfectos; una taza, no.',
-    opening: 'Antes de empezar, dale a Marina el recado de Emilio, en voz alta: «Emilio dice que…»',
+    opening: 'Antes de empezar, cuéntale a Marina el recado de Emilio, en voz alta: «Emilio dice que…»',
     dialogue: [],
     beats: [
       {

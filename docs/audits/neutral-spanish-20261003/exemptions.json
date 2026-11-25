@@ -14754,6 +14754,12 @@
       "text": "¿Cuándo se usa tú, usted y vos?",
       "category": "regional-pedagogy",
       "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/el-taller-de-la-greda/levels/b1.mjs",
+      "text": "Las cajas ya están en el patio. A Marina la llaman del banco. «Dale tú las indicaciones a Roberto, que yo vuelvo en un rato.»",
+      "category": "neutral-context",
+      "reason": "«Dale» is the tú imperative of dar with «le» (give Roberto the instructions), Martin's authored scene line; not the Rioplatense interjection «¡dale!»."
     }
   ]
 }
