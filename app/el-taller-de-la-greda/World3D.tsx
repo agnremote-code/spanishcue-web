@@ -310,7 +310,7 @@ export default function World3D(props: WorldProps) {
         const xs = Object.values(CLOSING_SLOTS);
         const cx = xs.reduce((s, q) => s + q.x, player.x) / (xs.length + 1), cz = xs.reduce((s, q) => s + q.z, player.z) / (xs.length + 1);
         const mid = temp.set(cx, 1.2, cz);
-        desired.set(cx - 7.5, 3.6, cz - 6.5);
+        desired.set(cx - 6, 3.4, cz + 6);
         if (camera.position.distanceTo(desired) > 14) { camera.position.copy(desired); look.copy(mid); }
         camera.position.lerp(desired, 1 - Math.exp(-dt * 3));
         look.lerp(mid, 1 - Math.exp(-dt * 4));
@@ -322,8 +322,18 @@ export default function World3D(props: WorldProps) {
         // Side-on to the player and the speaker, on whichever side is open
         // floor (a workshop has shelves and kilns close to every station).
         const across = Math.atan2(c.npc.x - player.x, c.npc.z - player.z);
-        const side = [across + Math.PI / 2, across - Math.PI / 2, across + Math.PI * 0.75, across - Math.PI * 0.75]
-          .find(a => isFree(mid.x + Math.sin(a) * dist, mid.z + Math.cos(a) * dist, 0.6)) ?? across + Math.PI;
+        const clearView = (a: number) => {
+          // The camera stands on free floor and nothing solid is between it and the pair.
+          for (let i = 0; i <= 12; i++) {
+            const k = i / 12, x = mid.x + Math.sin(a) * dist * k, z = mid.z + Math.cos(a) * dist * k;
+            if (!isFree(x, z, i === 12 ? 0.6 : 0.05)) return false;
+          }
+          return true;
+        };
+        // The card covers the right of the screen: prefer the side that shows the speaker on the left.
+        const speakerLeft = (a: number) => { const fx = -Math.sin(a), fz = -Math.cos(a); return (c.npc.x - mid.x) * -fz + (c.npc.z - mid.z) * fx < 0; };
+        const sides = [across + Math.PI / 2, across - Math.PI / 2, across + Math.PI * 0.75, across - Math.PI * 0.75].filter(clearView);
+        const side = sides.find(speakerLeft) ?? sides[0] ?? across + Math.PI;
         desired.set(mid.x + Math.sin(side) * dist, 2.0, mid.z + Math.cos(side) * dist);
         if (camera.position.distanceTo(desired) > 12) { camera.position.copy(desired); look.copy(mid); }
         camera.position.lerp(desired, 1 - Math.exp(-dt * 3));
