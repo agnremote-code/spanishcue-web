@@ -14754,6 +14754,18 @@
       "text": "¿Cuándo se usa tú, usted y vos?",
       "category": "regional-pedagogy",
       "reason": "Explicit voseo teaching explanation: the pronombres personales guide teaches teachers to recognise vos as a regional variety; the page itself uses tú."
+    },
+    {
+      "path": "app/conjugacion/irregulares.ts",
+      "text": "oigo oyes oye oímos oís oyen",
+      "category": "regional-pedagogy",
+      "reason": "Conjugation reference data: the vosotros form of oír (oís) and the first-person preterite of reír (reí) are cells of a full conjugation table, not copy addressed to the reader."
+    },
+    {
+      "path": "app/conjugacion/irregulares.ts",
+      "text": "reí reíste rio reímos reísteis rieron",
+      "category": "regional-pedagogy",
+      "reason": "Conjugation reference data: the vosotros form of oír (oís) and the first-person preterite of reír (reí) are cells of a full conjugation table, not copy addressed to the reader."
     }
   ]
 }
