@@ -4,7 +4,8 @@ voices installed in their phone (many Android phones and in-app browsers have
 no Spanish voice at all, and the lesson stayed silent).
 
 Voices are the owner's choice for the whole site (2026-11-12/13): every woman
-is Emma, every man is Florian. The `voice` tag in the content (es-CO-f, …)
+is Dalia (es-MX), every man is Jorge (es-MX); native Spanish since
+2026-11-25 (the multilingual Emma/Florian sounded American). The `voice` tag in the content (es-CO-f, …)
 stays as the speaker's identity; a small pitch shift per tag keeps two women or
 two men of one dialogue apart.
 
@@ -23,8 +24,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 OUT = ROOT / 'public/audio/autoestudio'
 MANIFEST = ROOT / 'app/autoestudio/audio-manifest.json'
 STATE = ROOT / 'scripts/autoestudio-audio-state.json'
-VERSION = 1
-ENGINE = {'f': 'en-US-EmmaMultilingualNeural', 'm': 'de-DE-FlorianMultilingualNeural'}
+VERSION = 2
+ENGINE = {'f': 'es-MX-DaliaNeural', 'm': 'es-MX-JorgeNeural'}
 RATE = {'a1': '-12%', 'a2': '-8%', 'b1': '-4%', 'b2': '+0%', 'c1': '+0%', 'c2': '+0%'}
 REGIONS = ['MX', 'ES', 'AR', 'CO', 'CL', 'PE', 'UY', 'CU', 'VE', 'US', 'GQ']
 SHIFT = {'f': [0, -8, 8, -14, 14, -20, 20], 'm': [0, -5, 5, -9, 9, -13, 13]}

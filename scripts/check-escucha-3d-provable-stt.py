@@ -12,7 +12,7 @@ unchanged. What BOARD-DECISION-006 §3.6 changes:
 
 (i)   Seeded clips and speaker references are built with the audio generator's
       own code (scripts/generate-escucha-3d-audio.py is imported, not copied):
-      Emma for women, Florian for men, the per-clip pitch from `casting()`,
+      Dalia (es-MX) for women, Jorge (es-MX) for men, the per-clip pitch from `casting()`,
       and the generator's own `clip()` assembly. References are cached per
       (engine, pitch, level), not per identity voice.
 (ii)  The §3.4 seed set, per (game, level): in one single-voice clip with
@@ -540,7 +540,7 @@ def main():
     checker = Checker()
     report = {'game': game, 'level': level, 'rule': 'BOARD-DECISION-006 (amends BOARD-DECISION-003 §3.1)', 'code_sha': code_sha(),
               'models': ['large-v3-turbo (faster-whisper, int8)', 'large-v3 (second model, findings only)', 'Resemblyzer VoiceEncoder'],
-              'casting': 'scripts/generate-escucha-3d-audio.py casting(): Emma for women, Florian for men, per-clip pitch',
+              'casting': 'scripts/generate-escucha-3d-audio.py casting(): Dalia (es-MX) for women, Jorge (es-MX) for men, per-clip pitch',
               'margin': MARGIN, 'seeded': None, 'clips': []}
 
     if args.seeded:
