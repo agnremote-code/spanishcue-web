@@ -68,6 +68,8 @@ const publicRoots = new Set([
   "app/material-ele/ExerciseCheck.tsx",
   // «¿Indicativo o subjuntivo?» chooser (public mini-apps).
   "app/indicativo-o-subjuntivo/MoodChooser.tsx",
+  // Shared multiple-choice quiz of the public mini-app families.
+  "app/mini-apps/ChoiceQuiz.tsx",
   // Copy button of the embeddable conjugator page (public, no account data).
   "app/material-ele/EmbedSnippet.tsx",
   "app/newsletter/GiftSignup.tsx",

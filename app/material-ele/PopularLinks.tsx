@@ -14,6 +14,7 @@ const popular = [
   { href: "/spanish-conversation-questions", label: "Banco de preguntas de conversación de A1 a C2, con glosa en inglés" },
   { href: "/conjugacion", label: "Conjugación de más de 1.200 verbos" },
   { href: "/indicativo-o-subjuntivo", label: "¿Indicativo o subjuntivo? Ejercicios por expresión" },
+  { href: "/verbos-con-preposicion", label: "Verbos con preposición: soñar con, depender de, pensar en…" },
 ];
 
 export function ElePopularLinks({ current }: { current?: string }) {
