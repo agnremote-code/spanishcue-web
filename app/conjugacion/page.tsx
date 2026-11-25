@@ -5,6 +5,7 @@ import styles from "../growth/growth.module.css";
 import { ConjugacionFrame, VerbLinks, VerbSearch } from "./components";
 import cj from "./conjugacion.module.css";
 import { CONJUGACION_PATH, TOP_VERBS, isIrregular, modelGroups, verbPath, verbos } from "./verbos";
+import { IRREGULARES_PATH, tiempoPages } from "./tiempos";
 
 const title = "Conjugación de verbos en español: más de 1.200 verbos | SpanishCue";
 const description = `Conjugación completa de más de 1.200 verbos en español, con las formas irregulares marcadas, notas para enseñarlos y un ejercicio corregido en cada verbo.`;
@@ -35,6 +36,12 @@ export default function ConjugacionHub() {
     >
       <Section title="Los verbos más buscados" intro="Los verbos que más aparecen en clase de A1 a B1, casi todos irregulares.">
         <VerbLinks verbs={TOP_VERBS} href={verbPath} />
+      </Section>
+      <Section title="Verbos irregulares por tiempo" intro="Todos los irregulares de cada tiempo, con sus formas marcadas, los patrones explicados y un ejercicio.">
+        <ul className={cj.verbList}>
+          {tiempoPages.map((page) => <li key={page.slug}><Link href={page.path}>{page.h1}</Link></li>)}
+          <li><Link href={IRREGULARES_PATH}>Todos los tiempos</Link></li>
+        </ul>
       </Section>
       <Section title="Verbos irregulares agrupados por modelo" intro={`${irregularCount} de los ${verbos.length} verbos tienen alguna irregularidad. Agruparlos por modelo es la forma más rápida de enseñarlos: quien sabe pensar sabe también cerrar, empezar y despertar.`}>
         <div className={cj.groups}>
