@@ -20,6 +20,8 @@ import { SPANISH_VERBS_PATH, verbPathEn } from "./conjugacion/verbos-en";
 import { IRREGULARES_PATH, tiempoPages } from "./conjugacion/tiempos";
 import { MODO_PATH, modoPath } from "./indicativo-o-subjuntivo/data";
 import { expresiones } from "./indicativo-o-subjuntivo/expresiones";
+import { PREP_PATH, prepGroups, prepVerbPath } from "./verbos-con-preposicion/data";
+import { verbosPrep } from "./verbos-con-preposicion/verbos";
 import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
@@ -81,6 +83,9 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...verbos.map((verb) => ({ path: verbPath(verb), priority: 0.6, changeFrequency: "monthly" as Frequency })),
   { path: MODO_PATH, priority: 0.85, changeFrequency: "monthly" },
   ...expresiones.map((e) => ({ path: modoPath(e.slug), priority: 0.7, changeFrequency: "monthly" as Frequency })),
+  { path: PREP_PATH, priority: 0.85, changeFrequency: "monthly" },
+  ...prepGroups.map((g) => ({ path: g.path, priority: 0.75, changeFrequency: "monthly" as Frequency })),
+  ...verbosPrep.map((e) => ({ path: prepVerbPath(e), priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-spanish-teaching-resources", priority: 0.6, changeFrequency: "monthly" },
