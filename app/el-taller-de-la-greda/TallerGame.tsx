@@ -13,7 +13,7 @@ import dynamic from 'next/dynamic';
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { BOUNDS, CIRCLES, CIRCLE_IDS, SHED, SOLIDS, circleById } from './layout.mjs';
 import { LEVELS, contentFor, speakerName } from './levels.mjs';
-import type { Beat, Circle, ContrastOption, Route, StimulusOption } from './levels.d.mts';
+import type { Beat, Circle, ContrastOption, Route, RouteStep, StimulusOption } from './levels.d.mts';
 import {
   LESSON_ID, SESSION_KEY, STORAGE_KEY, TICKS, TICK_LABEL, ambienceGain, answerBeat, beatDone, closeScene, createSession, createState,
   currentBeat, doneFor, finish, lastFeedback, nextCircle, openScene, pickOf, resetGroup, resetLevel, restore, restoreSession, routeCircles,
@@ -213,6 +213,23 @@ export default function TallerGame() {
     apply(openScene(state, id));
   };
   const close = useCallback(() => { setState(s => closeScene(s)); }, []);
+  // A route step opens in its own mode: the listening step switches to
+  // Comprensión auditiva, every other step back to Conversación and its
+  // scene directly (open() would still see the old mode: G4 B3).
+  const openStep = (step: RouteStep, id: string) => {
+    setList(false); setMap(false);
+    if (step.listening) {
+      if (mode !== 'escucha') { setMode('escucha'); setState(s => setRoute(s, 'escucha')); }
+      setListenAt(id);
+      return;
+    }
+    if (mode === 'escucha') {
+      setMode('conversacion'); setListenAt(undefined); setTalkAt(0);
+      apply(openScene(setRoute(state, 'conversacion'), id));
+      return;
+    }
+    open(id);
+  };
   const switchMode = (next: typeof mode) => { setMode(next); setState(s => setRoute(s, next)); setListenAt(undefined); if (state.scene) close(); };
   const answer = (beat: Beat, index: number) => apply(answerBeat(state, beat, index));
   const newGroup = () => {
@@ -315,7 +332,7 @@ export default function TallerGame() {
         const isDone = step.closing ? session.finished : ids.length > 0 && stepDone(step, done, heard);
         if (!ids.length) return <li key={i}><div className="tg-step-note"><span>Calentamiento · {step.minutes} min</span><small>{step.do}</small></div></li>;
         return <li key={i} className="tg-step">{ids.map((id, k) => { const c = circleById(id)!; return <button key={id} type="button" className={isDone ? 'is-done' : undefined}
-          onClick={() => { if (step.listening && mode !== 'escucha') { setMode('escucha'); setState(s => setRoute(s, 'escucha')); setList(false); setListenAt(id); return; } open(id); }}>
+          onClick={() => openStep(step, id)}>
           <span>{k > 0 ? 'o ' : ''}{c.n}. {c.name}{step.closing ? ' · cierre' : ''}{step.listening ? ' · escucha' : ''}</span><small>{step.minutes} min{k === 0 && step.do ? ` · ${step.do}` : ''}</small>{isDone && <i aria-label="hecho">✓</i>}
         </button>; })}</li>;
       })}</ol>

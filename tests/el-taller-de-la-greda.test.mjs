@@ -230,3 +230,19 @@ test('the catalog cover exists and matches the other 3D covers (1200×750 lossy 
   assert.deepEqual([file.readUInt16LE(26) & 0x3fff, file.readUInt16LE(28) & 0x3fff], [1200, 750]);
   assert.ok(file.length < 120_000, `${file.length} bytes`);
 });
+
+test('G4 B3: after the listening step, a non-listening route step opens its scene in Conversación', () => {
+  const fn = game.slice(game.indexOf('const openStep'), game.indexOf('const switchMode'));
+  assert.ok(fn.length > 0, 'openStep exists');
+  assert.match(fn, /if \(step\.listening\) \{/);
+  assert.match(fn, /if \(mode === 'escucha'\) \{\s*setMode\('conversacion'\); setListenAt\(undefined\);[^}]*apply\(openScene\(setRoute\(state, 'conversacion'\), id\)\);\s*return;/);
+  assert.match(game, /onClick=\{\(\) => openStep\(step, id\)\}/, 'route buttons go through openStep');
+  assert.ok(B1.ROUTES[0].steps.some(s => s.listening) && B1.ROUTES[0].steps.some(s => s.circle && !s.listening), 'the route mixes both kinds of step');
+});
+
+test('G4 B2 and NB5: every exponent appears in its circle; clear() also lets go of the touch nitro', () => {
+  assert.ok(B1.CIRCLES.greda.words.some(w => w.includes('el plazo de entrega')));
+  assert.ok(B1.CIRCLES.patio.talk.some(q => q.includes('¿Qué te dijo exactamente?')));
+  for (const c of Object.values(B1.CIRCLES)) assert.ok(c.exponents.length >= 3);
+  assert.match(world, /function clear\(\) \{[^}]*touchNitro\.on = false;/);
+});

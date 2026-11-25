@@ -110,7 +110,12 @@ export function checkTaller() {
     ok(stimuli === 1, `${at}: one conversation stimulus`);
     for (const e of expIds) if (!covered.has(e)) warnings.push(`${at}: exponent ${e} is not targeted by a beat (covered by the doc's task, production or talk)`);
     ok(Array.isArray(c.talk) && c.talk.length === 5, `${at}: talk needs 5 questions`);
-    ok(Array.isArray(c.words) && c.words.length === 6, `${at}: words needs 6 entries`);
+    // Six words; a seventh only where it carries an exponent no beat targets (G4 B2).
+    ok(Array.isArray(c.words) && (c.words.length === 6 || (c.words.length === 7 && id === 'greda')), `${at}: words needs 6 entries`);
+    // Every exponent shows up in the circle: in a beat, or in its words, talk, task, scaffolding or production (G4 B2).
+    const circleText = JSON.stringify([c.words, c.talk, c.task, c.scaffolding, c.production ?? null, c.handoff ?? null, c.line, c.dialogue]).toLocaleLowerCase('es');
+    const KEYS = { 'plazo-envio': 'plazo de entrega', 'que-te-dijo': 'qué te dijo exactamente' };
+    for (const e of expIds) if (!covered.has(e) && KEYS[e]) ok(circleText.includes(KEYS[e]), `${at}: exponent ${e} appears nowhere in the circle`);
     // «El recado viaja»: every station but the yard hands a message on.
     if (id !== 'patio') ok(c.handoff?.text && CAST[c.handoff.who] && c.handoff.prop, `${at}: needs a hand-off (who, text, prop)`);
     else ok(!c.handoff, `${at}: the closing hands nothing on`);

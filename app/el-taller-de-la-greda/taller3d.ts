@@ -304,8 +304,10 @@ export function buildWorkshop(scene: THREE.Scene, opts: { low: boolean; shadows:
   animate(0, 0, null);
 
   const bodies = (): Body[] => npcs.map((n, i) => ({ key: `taller-${n.id}`, x: n.x, z: n.z, body: LOOKS[n.id]?.body, seed: i * 7 + 3 }));
-  // Everything here lives under the scene, so World3D's traverse frees it;
-  // nothing is cached outside it (unlike the feria's host bakes).
+  // The meshes live under the scene, so World3D's traverse frees their
+  // geometries and materials. Not reachable from here: the shared baker's
+  // module-level material cache (la-feria-de-villaluz/bake3d.ts), which every
+  // world that bakes reuses for the page's lifetime, and people3d's caches.
   function dispose() { propMeshes.clear(); }
   return { spots, npcs, stage, props, animate, bodies, dispose, people: () => npcs.length };
 }

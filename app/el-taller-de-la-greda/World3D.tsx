@@ -153,7 +153,7 @@ export default function World3D(props: WorldProps) {
     }
     place();
 
-    function clear() { held.clear(); joy.x = 0; joy.y = 0; drag = null; }
+    function clear() { held.clear(); joy.x = 0; joy.y = 0; drag = null; touchNitro.on = false; }
     function interact() {
       const p = live.current;
       if (p.paused || p.circleId || p.intro) return;

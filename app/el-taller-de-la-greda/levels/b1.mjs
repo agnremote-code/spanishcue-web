@@ -180,7 +180,8 @@ export const CIRCLES = {
       '¿Qué es más difícil para ti: seguir instrucciones orales o escritas?',
       '¿Te gustaría trabajar con las manos? ¿En qué?',
     ],
-    words: ['la greda', 'el barro', 'amasar', 'el torno', 'el horno', 'el plástico'],
+    // G4 B2: «el plazo de entrega» added so the plazo-envio exponent appears in the circle.
+    words: ['la greda', 'el barro', 'amasar', 'el torno', 'el horno', 'el plástico', 'el plazo de entrega (para cuándo hay que tener listo el pedido)'],
     scaffolding: 'Una tira de dibujos del proceso, sin palabras (greda → amasar → torno → secadero → horno → esmalte → horno): la clase pone el nombre a cada paso. Glosario de la escucha.',
     teacher: '«Greda» es la palabra que usa el taller; «arcilla» y «barro» son las generales. En Colombia también se oye «greda» fuera del taller. Ojo: «torno» y «horno» se parecen mucho al oído; pide que los pronuncien con la mano en la garganta (la t no vibra). Esa pareja no se usa nunca como respuesta en la escucha.',
   },
@@ -686,7 +687,8 @@ export const CIRCLES = {
     talk: [
       '¿Qué recado importante tuviste que transmitir alguna vez? ¿Salió bien?',
       '¿Por qué crees que los mensajes cambian cuando pasan por muchas personas?',
-      '¿Qué haces cuando no entiendes bien un mensaje que tienes que transmitir?',
+      // G4 B2: completed with the que-te-dijo exponent.
+      '¿Qué haces cuando no entiendes bien un mensaje que tienes que transmitir? ¿Le preguntas a la persona «¿Qué te dijo exactamente?»?',
       '¿Prefieres recibir instrucciones de la persona que decide o de alguien que las transmite?',
       'Si trabajaras en este taller, ¿qué puesto elegirías? ¿Por qué?',
     ],
