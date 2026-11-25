@@ -86,7 +86,12 @@ interface ExecutionContext {
 function setSecurityHeaders(headers: Headers, url: URL, locale: string): void {
   headers.set('X-Content-Type-Options','nosniff');
   headers.set('Referrer-Policy',url.pathname.startsWith('/s/') || url.pathname.startsWith('/api/autoestudio/') || url.pathname === '/autoestudio/claim' ? 'no-referrer' : 'strict-origin-when-cross-origin');
-  headers.set('X-Frame-Options','DENY');
+  // /embed/* are stateless, script-free widgets (the conjugator) that teachers
+  // frame on their own sites; every other path stays unframeable.
+  if (url.pathname.startsWith('/embed/')) {
+    headers.delete('X-Frame-Options');
+    headers.set('Content-Security-Policy',"frame-ancestors *; default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'");
+  } else headers.set('X-Frame-Options','DENY');
   // Autoestudio lets learners record themselves; the audio never leaves the browser.
   headers.set('Permissions-Policy',isAutoestudioPath(url.pathname)?'camera=(), microphone=(self), geolocation=()':'camera=(), microphone=(), geolocation=()');
   headers.set('Content-Language',locale);

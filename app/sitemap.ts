@@ -82,6 +82,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-spanish-teaching-resources", priority: 0.6, changeFrequency: "monthly" },
   { path: "/sistema-verbal", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/material-ele/conjugador-para-tu-web", priority: 0.75, changeFrequency: "monthly" },
   { path: "/autoestudio", priority: 0.7, changeFrequency: "monthly" },
   ...autoestudioLevelPaths.map((path) => ({ path, priority: 0.6, changeFrequency: "monthly" as Frequency })),
   ...[...freeAutoestudioModules].map((path) => ({ path, priority: 0.5, changeFrequency: "monthly" as Frequency })),
