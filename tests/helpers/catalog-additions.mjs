@@ -15,13 +15,14 @@ const additions = [
   ...courseLessons,
   {
     // 2026-11-25: El taller de la greda (B1), a PRO 3D family pottery workshop (board world, PR #510), wired like La feria de Villaluz.
-    id:285,path:'/el-taller-de-la-greda',files:/^(?:app\/el-taller-de-la-greda\/|app\/escucha-3d\/content\/taller\/|public\/el-taller-de-la-greda\/|public\/audio\/escucha-3d\/taller-|tests\/el-taller-de-la-greda\.test\.mjs$|scripts\/check-taller-greda\.mjs$|scripts\/covers\/art\/el-taller-de-la-greda\.webp$)/,
+    id:285,path:'/el-taller-de-la-greda',files:/^(?:app\/el-taller-de-la-greda\/|app\/escucha-3d\/content\/taller\/|public\/el-taller-de-la-greda\/|public\/audio\/escucha-3d\/taller-|tests\/el-taller-de-la-greda\.test\.mjs$|scripts\/check-taller-greda\.mjs$|scripts\/covers\/art\/el-taller-de-la-greda\.webp$|public\/conversation-previews\/285\.mp4$)/,
     edits:{
       'app/lesson-catalog.ts':[text=>{
         const lines=text.split('\n');
         const at=lines.flatMap((line,i)=>line.startsWith('  {id:285,')&&line.includes('path:"/el-taller-de-la-greda"')?[i]:[]);
         assert.equal(at.length,1,'one el taller de la greda catalog entry');lines.splice(at[0],1);return lines.join('\n');
       },[',283,284,285]',',283,284]']],
+      'app/conversation-preview-videos.ts':[[',283,284,285]);',',283,284]);']],
       'scripts/test-worker.mjs':[[" await run(['--test','tests/el-taller-de-la-greda.test.mjs']);\n",'']],
       'tests/level-cleanup.test.mjs':[['assert.equal(lessons.length, 368);','assert.equal(lessons.length, 367);']],
       'tests/rendered-html.test.mjs':[['assert.match(html,/361(?:<!-- -->|\\s)+clases totales/);','assert.match(html,/360(?:<!-- -->|\\s)+clases totales/);']],
