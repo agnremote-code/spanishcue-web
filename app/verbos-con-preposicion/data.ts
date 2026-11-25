@@ -105,4 +105,3 @@ function groupDescription(verbs: VerboPrep[], p: Prep, n: number) {
 export function hubQuiz(): QuizItem[] {
   return verbosPrep.filter((_, i) => i % 4 === 0).slice(0, 12).map((e, i) => quizItem(e, e.ex[(i + 2) % e.ex.length], label(e).replace(` ${e.p}`, "")));
 }
-
