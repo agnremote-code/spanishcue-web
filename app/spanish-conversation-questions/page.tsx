@@ -10,9 +10,9 @@ import QuestionBank from "./QuestionBank";
 import styles from "../growth/growth.module.css";
 
 const total = conversationQuestions.length;
-const title = `${total} Spanish Conversation Questions by Level (A1–C2) | SPANISHCUE`;
+const title = `${total} Spanish Conversation Questions to Ask, by Level (A1–C2) | SPANISHCUE`;
 const description =
-  `${total} Spanish conversation questions for teachers, graded from A1 to C2 and tagged by topic, in the tú form with an English gloss. Filter by level and topic, copy a question, use it in class today.`;
+  `${total} Spanish questions to ask in conversation class, graded from A1 to C2 and tagged by topic, in the tú form with an English gloss. Filter by level and topic, copy a question, use it today.`;
 
 export const metadata: Metadata = {
   title,

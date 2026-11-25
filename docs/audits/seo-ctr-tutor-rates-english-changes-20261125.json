@@ -1,0 +1,28 @@
+{
+ "version": 1,
+ "authorization": "Standing owner approval for English copy, typed by Ale «apruebo (siempre de ahora en más apruebo)» on 2026-10-22 (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAAAbp6kqDfMqxzNm3PL6f5g). Only the title and description of the tutor-rates guide change.",
+ "additions": [
+  {
+   "path": "app/guides/data/pricing-business.ts",
+   "text": "Spanish Tutor Cost: How Much Should an Online Spanish Tutor Charge?"
+  },
+  {
+   "path": "app/guides/data/pricing-business.ts",
+   "text": "Spanish tutor cost, from the tutor's side: set your hourly rate from demand, experience, niche, prep time and capacity instead of copying another teacher."
+  }
+ ],
+ "changes": [
+  {
+   "path": "app/guides/data/pricing-business.ts",
+   "kind": "english-changed-or-deleted",
+   "text": "How Much Should an Online Spanish Tutor Charge?",
+   "reason": "SEO: align the title and description with the Search Console query «spanish tutor cost» (76 impressions, average position 8, 2026-11-25); the guide's content is unchanged."
+  },
+  {
+   "path": "app/guides/data/pricing-business.ts",
+   "kind": "english-changed-or-deleted",
+   "text": "A practical pricing framework for online Spanish tutors using demand, experience, niche, preparation time and capacity instead of copying another teacher's rate.",
+   "reason": "SEO: align the title and description with the Search Console query «spanish tutor cost» (76 impressions, average position 8, 2026-11-25); the guide's content is unchanged."
+  }
+ ]
+}
