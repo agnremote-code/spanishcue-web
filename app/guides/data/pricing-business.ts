@@ -10,9 +10,9 @@ export const pricingBusinessGuides: TeachingGuide[] = [
   {
     ...businessCommon,
     slug: "online-spanish-tutor-rates",
-    title: "How Much Should an Online Spanish Tutor Charge?",
+    title: "Spanish Tutor Cost: How Much Should an Online Spanish Tutor Charge?",
     description:
-      "A practical pricing framework for online Spanish tutors using demand, experience, niche, preparation time and capacity instead of copying another teacher's rate.",
+      "Spanish tutor cost, from the tutor's side: set your hourly rate from demand, experience, niche, prep time and capacity instead of copying another teacher.",
     eyebrow: "PRICING · ONLINE SPANISH TUTORS",
     readingTime: "11 min",
     keywords: [

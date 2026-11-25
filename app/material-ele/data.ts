@@ -986,7 +986,7 @@ const topicInputs: PageInput[] = [
     slug: "preguntas-de-conversacion",
     kind: "topic",
     label: "Preguntas de conversación",
-    title: "Preguntas para clase de conversación en español por nivel | SpanishCue",
+    title: "Preguntas de conversación en español por nivel (A1–C2) | SpanishCue",
     description: "60 preguntas de conversación en español para clase de ELE, ordenadas de A1 a C2, con consejos para que el alumno hable más y clases de conversación 3D.",
     h1: "Preguntas para clase de conversación en español, de A1 a C2",
     kicker: "Conversación · Todos los niveles",
