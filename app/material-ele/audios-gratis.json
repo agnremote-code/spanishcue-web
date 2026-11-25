@@ -9,7 +9,7 @@
   "place": "La recepción del hotel",
   "context": "Luis no encuentra su pasaporte y habla con la recepcionista.",
   "src": "/audio/escucha-3d-libre/usa-a1-florida.mp3",
-  "seconds": 34,
+  "seconds": 41,
   "speakers": [
    {
     "name": "Marisol",
@@ -100,7 +100,7 @@
   "place": "El metro",
   "context": "Camila, de Perú, pregunta a un vendedor cómo llegar a la casa de Frida Kahlo.",
   "src": "/audio/escucha-3d-libre/mexico-a1-cdmx.mp3",
-  "seconds": 28,
+  "seconds": 32,
   "speakers": [
    {
     "name": "Camila",
@@ -187,7 +187,7 @@
   "place": "El paseo de Venice",
   "context": "Lupita enseña a patinar a Víctor en Venice Beach.",
   "src": "/audio/escucha-3d-libre/usa-a1-california.mp3",
-  "seconds": 32,
+  "seconds": 38,
   "speakers": [
    {
     "name": "Lupita",
@@ -274,7 +274,7 @@
   "place": "Un puesto de tortas",
   "context": "Kevin, de Estados Unidos, prueba una torta ahogada en Guadalajara con su amiga Karla, de Honduras.",
   "src": "/audio/escucha-3d-libre/mexico-a1-jalisco.mp3",
-  "seconds": 34,
+  "seconds": 40,
   "speakers": [
    {
     "name": "Kevin",
@@ -369,7 +369,7 @@
   "place": "La calle comercial",
   "context": "Sebastián cuenta en un pódcast por qué cambió de vida.",
   "src": "/audio/escucha-3d-libre/usa-a2-nueva-york.mp3",
-  "seconds": 34,
+  "seconds": 40,
   "speakers": [
    {
     "name": "Sebastián",
@@ -448,7 +448,7 @@
   "place": "Los canales de Xochimilco",
   "context": "Un grupo de amigos alquila una trajinera en Xochimilco y algo sale mal.",
   "src": "/audio/escucha-3d-libre/mexico-a2-cdmx.mp3",
-  "seconds": 36,
+  "seconds": 43,
   "speakers": [
    {
     "name": "Rodrigo",
@@ -547,7 +547,7 @@
   "place": "La gasolinera de la ruta",
   "context": "Ray y Karla recuerdan la noche de la inundación.",
   "src": "/audio/escucha-3d-libre/usa-a2-texas.mp3",
-  "seconds": 35,
+  "seconds": 40,
   "speakers": [
    {
     "name": "Ray",
@@ -634,7 +634,7 @@
   "place": "Una cocina familiar",
   "context": "Doña Chelo enseña a su nieta y a una estudiante cubana a preparar mole negro.",
   "src": "/audio/escucha-3d-libre/mexico-a2-oaxaca.mp3",
-  "seconds": 47,
+  "seconds": 52,
   "speakers": [
    {
     "name": "Doña Chelo",
@@ -729,7 +729,7 @@
   "place": "El restaurante junto al océano",
   "context": "Un periodista entrevista a Lucía, dueña de un restaurante en Honolulu, sobre el turismo en la isla.",
   "src": "/audio/escucha-3d-libre/usa-b1-hawai.mp3",
-  "seconds": 50,
+  "seconds": 54,
   "speakers": [
    {
     "name": "Camilo",
@@ -812,7 +812,7 @@
   "place": "Una calle de Oaxaca",
   "context": "Dos amigos discuten si vale la pena pagar la entrada de la Guelaguetza o ir a la versión popular.",
   "src": "/audio/escucha-3d-libre/mexico-b1-oaxaca.mp3",
-  "seconds": 47,
+  "seconds": 53,
   "speakers": [
    {
     "name": "Rodrigo",
@@ -911,7 +911,7 @@
   "place": "El barrio del Valle",
   "context": "Una vecina cuenta su conversación con Don Ernesto, que recibió una oferta por su casa.",
   "src": "/audio/escucha-3d-libre/usa-b1-california.mp3",
-  "seconds": 39,
+  "seconds": 40,
   "speakers": [
    {
     "name": "Inés",
@@ -986,7 +986,7 @@
   "place": "El malecón de Chapala",
   "context": "Un periodista entrevista a un pescador y a una jubilada estadounidense sobre el agua del lago.",
   "src": "/audio/escucha-3d-libre/mexico-b1-jalisco.mp3",
-  "seconds": 44,
+  "seconds": 50,
   "speakers": [
    {
     "name": "Periodista",
