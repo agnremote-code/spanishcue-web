@@ -13,6 +13,7 @@ const popular = [
   { href: "/material-ele/preguntas-de-conversacion", label: "Preguntas de conversación en español por nivel" },
   { href: "/spanish-conversation-questions", label: "Banco de preguntas de conversación de A1 a C2, con glosa en inglés" },
   { href: "/conjugacion", label: "Conjugación de más de 1.200 verbos" },
+  { href: "/indicativo-o-subjuntivo", label: "¿Indicativo o subjuntivo? Ejercicios por expresión" },
 ];
 
 export function ElePopularLinks({ current }: { current?: string }) {

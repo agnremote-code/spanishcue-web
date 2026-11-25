@@ -65,6 +65,8 @@ const publicRoots = new Set([
   "app/material-ele/PrintButton.tsx",
   // Fill-in exercises answered on the public /material-ele pages: sentences and answer keys are public copy.
   "app/material-ele/ExerciseCheck.tsx",
+  // «¿Indicativo o subjuntivo?» chooser (public mini-apps).
+  "app/indicativo-o-subjuntivo/MoodChooser.tsx",
   "app/newsletter/GiftSignup.tsx",
   "app/Library.tsx",
   // Public demo imports geometry/physics only; server allowlists every lesson payload.

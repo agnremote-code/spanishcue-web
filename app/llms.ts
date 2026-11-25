@@ -51,6 +51,7 @@ export function llmsTxt(): string {
     link("Alternativa a ProfeDeELE", "/alternativa-a-profedeele", "comparativa de formatos entre sitios de material ELE"),
     link("Verbos irregulares por tiempo", "/conjugacion/irregulares", "lista de verbos irregulares en cada tiempo verbal, con los patrones explicados y ejercicio"),
     link("Conjugación de verbos en español", "/conjugacion", "más de 1.200 verbos conjugados en todos los tiempos, con las irregularidades explicadas y un ejercicio por verbo"),
+    link("¿Indicativo o subjuntivo? Ejercicios por expresión", "/indicativo-o-subjuntivo", "36 expresiones (quiero que, ojalá, aunque, cuando, creo que…) con su regla y un ejercicio interactivo de elegir el modo"),
     "",
     "## Guías para profesores de español",
     "",
