@@ -33,3 +33,11 @@ test('an unknown verb is a 404 and the search box redirects',async()=>{
  const missing=await fetch(origin+'/buscar-verbo?v=zzz',{redirect:'manual'});
  assert.equal(new URL(missing.headers.get('location')).pathname,'/conjugacion');
 });
+test('exercise and verb pages carry the inline newsletter form and the popular-links block',async()=>{
+ for(const path of ['/material-ele/ejercicio/negacion','/conjugacion/tener']){
+  const d=new JSDOM(await (await fetch(origin+path)).text()).window.document;
+  assert.ok(d.querySelector('section[aria-label="Newsletter de SpanishCue"] input[type="email"]'),path);
+  assert.ok(d.querySelector('nav[aria-label="Material ELE más usado"] a[href="/material-ele/guia/materiales-para-ensenar-espanol"]'),path);
+  assert.ok(d.querySelector('nav[aria-label="Material ELE más usado"] a[href="/material-ele/formatos/comprension-auditiva/a1"]'),path);
+ }
+});

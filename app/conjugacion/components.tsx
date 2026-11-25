@@ -4,6 +4,7 @@ import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../growth/compo
 import { faqPageSchema, webPageSchema } from "../growth/schema";
 import { EleBuyBand, EleTopbar } from "../material-ele/components";
 import { MATERIAL_ELE_PATH } from "../material-ele/data";
+import { ElePopularLinks } from "../material-ele/PopularLinks";
 import styles from "../growth/growth.module.css";
 import cj from "./conjugacion.module.css";
 import { CONJUGACION_PATH } from "./verbos";
@@ -28,6 +29,7 @@ export function ConjugacionFrame({ path, title, description, h1, kicker, crumbs,
             {hero}
           </section>
           {children}
+          <ElePopularLinks current={path} />
           <Section title="Preguntas frecuentes"><Faq items={faq} /></Section>
           <EleBuyBand />
         </div>

@@ -6,6 +6,7 @@ import { elePageBySlug } from "../../material-ele/data";
 import styles from "../../growth/growth.module.css";
 import type { Forms, TenseKey } from "../engine";
 import { ConjugacionFrame, VerbLinks, VerbSearch } from "../components";
+import { EleNewsletterInline } from "../../material-ele/PopularLinks";
 import cj from "../conjugacion.module.css";
 import { CONJUGACION_PATH, PERSONS, TENSE_GROUPS, verbFromParam, verbPage, verbPath, verbSlug, verbos, type Highlight } from "../verbos";
 
@@ -87,6 +88,7 @@ export default async function VerbPage({ params }: Props) {
       <Section id="ejercicio" title={`Ejercicio: conjuga ${verb}`} intro="Doce formas en distintos tiempos, con las irregulares primero. Sirve como repaso rápido en clase o como tarea.">
         <EleExerciseBlock exercise={{ title: `Ejercicio con ${verb}`, instructions: `Escribe la forma correcta de ${verb} en el tiempo y la persona indicados.`, items: page.exercise }} />
       </Section>
+      <EleNewsletterInline source={page.path} />
       {page.related.length ? (
         <Section title={`Verbos que se conjugan como ${verb}`} intro={`Mismo modelo: ${page.model.label}. Practicarlos juntos ayuda a fijar el patrón.`}>
           <VerbLinks verbs={page.related} href={verbPath} />

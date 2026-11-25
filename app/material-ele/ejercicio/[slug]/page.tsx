@@ -3,6 +3,8 @@ import { Section } from "../../../growth/components";
 import { EleExerciseBlock, eleMetadata } from "../../components";
 import { ejercicioBySlug, ejercicioPages } from "../../actividades";
 import { BancoFrame } from "../../banco-components";
+import { EleNewsletterInline } from "../../PopularLinks";
+import print from "../../print.module.css";
 
 type Props = { params: Promise<{ slug: string }> };
 export function generateStaticParams() { return ejercicioPages.map((page) => ({ slug: page.slug })); }
@@ -19,6 +21,7 @@ export default async function EjercicioPage({ params }: Props) {
       <Section id="ejercicio" title={page.exercise.title} intro="Pulsa cada frase para ver la solución. El botón de PDF las abre todas antes de imprimir.">
         <EleExerciseBlock exercise={page.exercise} />
       </Section>
+      <div className={print.noPrint}><EleNewsletterInline source={page.path} /></div>
     </BancoFrame>
   );
 }
