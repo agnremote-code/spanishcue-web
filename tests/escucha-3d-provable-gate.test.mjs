@@ -96,11 +96,11 @@ test('a level with a seedable single-voice clip and a cross-gender dialogue gets
   assert.match(words.expect.find(e => e.seed === 'gap-replace').what, /→ «(ventana|pelota|camino|tormenta)»/);
 });
 
-test('seeds and references use the generator casting: Emma for women, Florian for men, per-clip pitch (§3.6 i)', () => {
+test('seeds and references use the generator casting: Dalia (es-MX) for women, Jorge (es-MX) for men, per-clip pitch (§3.6 i)', () => {
   const p = plan(['boda', 'B1']);
   const speaker = p.seeds.find(s => s.kind === 'speaker');
   assert.equal(speaker.cast.length, 2);
-  assert.ok(speaker.cast.some(c => c.startsWith('en-US-EmmaMultilingualNeural ')) && speaker.cast.some(c => c.startsWith('de-DE-FlorianMultilingualNeural ')), String(speaker.cast));
+  assert.ok(speaker.cast.some(c => c.startsWith('es-MX-DaliaNeural ')) && speaker.cast.some(c => c.startsWith('es-MX-JorgeNeural ')), String(speaker.cast));
   for (const c of speaker.cast) assert.match(c, / [+-]\d+Hz$/);
   // The seeded line is spoken by the other speaker index, so the generator gives it the other engine and pitch.
   const line = speaker.expect[0].line - 1;
@@ -175,7 +175,7 @@ f = lambda a, h, **k: {'authored': a, 'heard': h, 'kind': 'replace', **k}
 del_exp = {'seed': 'delete', 'match': chk.seed_match('delete', 'nieta')}
 art_exp = {'seed': 'article', 'match': chk.seed_match('article', ('la', 'las'))}
 rep_exp = {'seed': 'repeat', 'match': chk.seed_match('repeat', 'de buscarnos')}
-spk_exp = {'seed': 'speaker', 'other_cast': 'en-US-EmmaMultilingualNeural +20Hz'}
+spk_exp = {'seed': 'speaker', 'other_cast': 'es-MX-DaliaNeural +20Hz'}
 bad = lambda *fs: {'words_ok': False, 'findings': list(fs)}
 print(json.dumps({
  'delete_caught': chk.seed_hit('words', del_exp, bad(f('nuestra nieta con', 'nuestra con'))),
@@ -185,10 +185,10 @@ print(json.dumps({
  'article_caught': chk.seed_hit('words', art_exp, bad(f('la', 'las'))),
  'article_wrong_heard': chk.seed_hit('words', art_exp, bad(f('la', 'le'))),
  'repeat_caught': chk.seed_hit('words', rep_exp, bad({'authored': '', 'heard': 'de buscarnos de buscarnos', 'kind': 'insert'})),
- 'speaker_caught': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'margin': -0.2, 'closest_cast': 'en-US-EmmaMultilingualNeural +20Hz'}),
+ 'speaker_caught': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'margin': -0.2, 'closest_cast': 'es-MX-DaliaNeural +20Hz'}),
  'speaker_no_span': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'speaker_note': 'unresolved: no span'}),
  'speaker_too_short': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'speaker_note': 'unresolved: span too short to embed'}),
- 'speaker_other_cast': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'margin': 0.01, 'closest_cast': 'de-DE-FlorianMultilingualNeural +13Hz'}),
+ 'speaker_other_cast': chk.seed_hit('speaker', spk_exp, {'speaker_ok': False, 'margin': 0.01, 'closest_cast': 'es-MX-JorgeNeural +13Hz'}),
 }))`);
   assert.deepEqual(out, {
     delete_caught: true, delete_unrelated_slip: false, delete_not_located: false, delete_cleared: false,
@@ -200,7 +200,7 @@ print(json.dumps({
 test('every seed in a plan carries what the check must hear for it (match tokens or the other cast)', () => {
   const p = plan(['boda', 'B1']);
   for (const s of p.seeds) for (const e of s.expect) {
-    if (e.seed === 'speaker') assert.match(e.other_cast, /MultilingualNeural [+-]\d+Hz$/);
+    if (e.seed === 'speaker') assert.match(e.other_cast, /^es-MX-(?:Dalia|Jorge)Neural [+-]\d+Hz$/);
     else assert.ok(e.match && (e.match.authored.length || e.match.heard.length), JSON.stringify(e));
   }
 });
