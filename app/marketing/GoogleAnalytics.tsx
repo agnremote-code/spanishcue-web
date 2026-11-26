@@ -22,17 +22,21 @@ function usableGoogleAdsId(value: string): boolean {
   return /^AW-[0-9]+$/i.test(value);
 }
 
+let googleTagInstalled = false;
+
 function installGoogleTag(): void {
+  if (googleTagInstalled) return;
   const tagId = usableMeasurementId(measurementId)
     ? measurementId
     : usableGoogleAdsId(googleAdsConversionId)
       ? googleAdsConversionId
       : "";
   if (!tagId) return;
+  googleTagInstalled = true;
 
-  // Queue Consent Mode before the network script loads. The tag stays loaded
-  // even while storage is denied, so Google can honor consent changes without
-  // us tearing down and recreating the tag.
+  // Queue Consent Mode before the network script loads. Called only after an
+  // optional category is accepted; the tag then stays loaded so Google can honor
+  // later consent changes without us tearing down and recreating the tag.
   window.gtag?.("js", new Date());
   if (usableMeasurementId(measurementId)) {
     window.gtag?.("config", measurementId, {
@@ -74,10 +78,13 @@ export default function GoogleAnalytics() {
 
   useEffect(() => {
     initialiseGoogleConsent();
-    installGoogleTag();
     const sync = () => {
       const consent = readConsent();
       updateGoogleConsent(consent);
+      // Basic Consent Mode (2026-11-26 compliance pass): no request reaches Google
+      // until the visitor accepts analytics or marketing. Once loaded, the tag stays
+      // and Consent Mode honours later changes.
+      if (consent?.analytics || consent?.marketing) installGoogleTag();
       if (consent?.marketing) installOpenAIPixel();
       else revokeOpenAIPixelConsent();
       sendPageView();

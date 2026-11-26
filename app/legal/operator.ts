@@ -69,6 +69,9 @@ const COMPACT_DEFAULTS = {
   withdrawalPolicyEn: "Any mandatory withdrawal or cancellation rights under applicable law are respected. Accessing the service does not by itself constitute a waiver of those rights.",
 } as const;
 
+const OWNER_TAX_ID = "CUIT 20-36632288-5";
+const OWNER_ADDRESS = "Avenida Belgrano 1646, C1093 Ciudad Autónoma de Buenos Aires";
+
 function value(env: LegalEnv, key: keyof LegalEnv) {
   return env[key]?.trim() || "";
 }
@@ -94,12 +97,19 @@ function operatorFromJson(env: LegalEnv): LegalOperator | null {
     const parsed = JSON.parse(raw);
     if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return null;
     const ownerEmail = value(env, "CHESPANISH_OWNER_EMAIL");
-    const candidate = {
+    const candidate: Record<string, unknown> = {
       ...COMPACT_DEFAULTS,
       supportEmail: ownerEmail,
       privacyEmail: ownerEmail,
       ...(parsed as Record<string, unknown>),
     };
+    // Owner's published identification, given by Ale on 2026-11-26 for the legal notice.
+    // The production secret predates it (no CUIT, street only): only that exact record is
+    // completed; any other operator data, or a tax ID the secret sets, is left untouched.
+    if (typeof candidate.address === "string" && candidate.address.trim().toLowerCase() === "avenida belgrano 1646") {
+      candidate.address = OWNER_ADDRESS;
+      if (typeof candidate.taxId !== "string" || !candidate.taxId.trim()) candidate.taxId = OWNER_TAX_ID;
+    }
     if (!candidate.supportEmail) candidate.supportEmail = ownerEmail;
     if (!candidate.privacyEmail) candidate.privacyEmail = candidate.supportEmail || ownerEmail;
     return normalizeOperator(candidate);

@@ -104,6 +104,7 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/cumplimiento-legal-english-20261126.json',
   'docs/audits/newsletter-popup-english-additions-20261126.json',
   'docs/audits/spanish-verbs-english-additions-20261125.json',
   'docs/audits/seo-ctr-tutor-rates-english-changes-20261125.json',
@@ -244,6 +245,8 @@ export function checkEnglishCopy(root, base = BASE_SHA) {
   if(existsSync(espejoReviewedPath))reviewed.push(...JSON.parse(readFileSync(espejoReviewedPath,'utf8')).changes);
   const tutorRatesReviewedPath=resolve(root,'docs/audits/seo-ctr-tutor-rates-english-changes-20261125.json');
   if(existsSync(tutorRatesReviewedPath))reviewed.push(...JSON.parse(readFileSync(tutorRatesReviewedPath,'utf8')).changes);
+  const legalReviewedPath=resolve(root,'docs/audits/cumplimiento-legal-english-20261126.json');
+  if(existsSync(legalReviewedPath))reviewed.push(...JSON.parse(readFileSync(legalReviewedPath,'utf8')).changes);
   const derived = checkDerivedCopies(after);
   const compared = compareEnglishCopy(relocateEnglishSources(before), mergeSplitSources(derived.remaining));
   return { findings: [...derived.findings, ...filterReviewedChanges(filterApprovedAdditions(compared, additions), reviewed)], files: before.size, strings: [...before].reduce((n, [path, source]) => n + extractCopy(source, path).filter(c => c.language === 'en').length, 0), base };

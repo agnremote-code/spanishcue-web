@@ -28,3 +28,4 @@
 .checkout-action .checkout-promo .checkout-promo-button:disabled{opacity:.7;cursor:default}
 .checkout-action .checkout-promo .checkout-promo-button.checkout-promo-paypal{background:#fff;border:1px solid #10223f55;box-shadow:none}
 .checkout-action .checkout-promo .checkout-promo-terms{margin:0;color:#10223f;font-size:13px;line-height:1.5;text-align:left}
+.checkout-waiver{display:grid;grid-template-columns:auto 1fr;gap:4px 10px;align-items:start;margin:4px 0 10px;padding:10px 12px;border:1px solid #d5e2ee;border-radius:10px;background:#f7fbff;color:#2a4560;font-size:12.5px;line-height:1.45;text-align:left;cursor:pointer}.checkout-waiver input{width:18px;height:18px;margin:1px 0 0;accent-color:#0876e7}.checkout-waiver a{color:#075ab8;text-decoration:underline}.checkout-waiver small{grid-column:2;color:#b42318;font-weight:700}.checkout-waiver-nudge{border-color:#e0654f;background:#fff5f2}
