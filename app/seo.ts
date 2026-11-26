@@ -153,6 +153,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path === "/ser-o-estar" ||
     path === "/por-o-para" ||
     path.startsWith("/ejercicios-de-") ||
+    path === "/dudas-del-espanol" ||
+    path.startsWith("/dudas-del-espanol/") ||
     path.startsWith("/por-o-para/") ||
     path.startsWith("/ser-o-estar/") ||
     path.startsWith("/material-ele/") ||

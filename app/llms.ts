@@ -51,6 +51,7 @@ export function llmsTxt(): string {
     link("Alternativa a ProfeDeELE", "/alternativa-a-profedeele", "comparativa de formatos entre sitios de material ELE"),
     link("Verbos irregulares por tiempo", "/conjugacion/irregulares", "lista de verbos irregulares en cada tiempo verbal, con los patrones explicados y ejercicio"),
     link("Conjugación de verbos en español", "/conjugacion", "más de 1.200 verbos conjugados en todos los tiempos, con las irregularidades explicadas y un ejercicio por verbo"),
+    link("Dudas frecuentes del español", "/dudas-del-espanol", "16 dudas (muy o mucho, saber o conocer, hay o está, haber o a ver, hecho o echo, porque o por qué…) con su regla y un ejercicio"),
     link("Ejercicios del imperativo", "/ejercicios-de-imperativo", "tú afirmativo y negativo, los ocho irregulares, usted y ustedes, pronombres y reflexivos, con corrección al instante"),
     link("Ejercicios de gustar y verbos como gustar", "/ejercicios-de-gustar", "gusta o gustan, me/te/le/nos/les, encantar, doler, interesar, faltar, quedar, molestar, importar y parecer"),
     link("Ejercicios de pronombres de objeto directo e indirecto", "/ejercicios-de-pronombres", "lo, la, los, las; le, les; se lo; posición con infinitivo y gerundio"),
