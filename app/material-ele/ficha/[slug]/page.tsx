@@ -10,6 +10,7 @@ import { fichaGratisById } from "../../fichas-gratis";
 import { fichaContent } from "../../ficha-content";
 import { temaPages } from "../../temas";
 import { ejercicioBySlug } from "../../actividades";
+import { livePath } from "../../../seo-prune";
 import { Bold } from "../../ficha-components";
 import PrintButton from "../../PrintButton";
 import ShareSnippet from "../../ShareSnippet";
@@ -132,7 +133,7 @@ export default async function FichaPage({ params }: Props) {
           {ejercicios.length ? (
             <div className={print.noPrint}>
               <Section title="Más práctica con corrección automática" intro="El alumno escribe, pulsa «Comprobar respuestas» y ve la solución explicada de cada frase.">
-                {ejercicios.map((item) => <p key={item.path}><Link className={styles.textLink} href={item.path}>{item.h1} →</Link></p>)}
+                {ejercicios.map((item) => <p key={item.path}><Link className={styles.textLink} href={livePath(item.path)}>{item.h1} →</Link></p>)}
               </Section>
             </div>
           ) : null}
@@ -147,7 +148,7 @@ export default async function FichaPage({ params }: Props) {
           {temas.length ? (
             <div className={print.noPrint}>
               <Section title="Este tema en Material ELE" intro="Todas las clases, actividades y fichas del mismo tema.">
-                <div className={styles.cardGrid}>{temas.map((tema) => <Link className={styles.levelCard} key={tema.path} href={tema.path}><em>{tema.parent}</em><b>{tema.name}</b><span>{tema.lessonIds.length} clases</span></Link>)}</div>
+                <div className={styles.cardGrid}>{temas.map((tema) => <Link className={styles.levelCard} key={tema.path} href={livePath(tema.path)}><em>{tema.parent}</em><b>{tema.name}</b><span>{tema.lessonIds.length} clases</span></Link>)}</div>
               </Section>
             </div>
           ) : null}

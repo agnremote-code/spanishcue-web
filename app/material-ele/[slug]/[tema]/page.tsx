@@ -7,6 +7,7 @@ import { EleBuyBand, EleLessonGrid, ElePageDates, ElePreviewVideo, EleTopbar, el
 import { pageDates } from "../../indice";
 import { MATERIAL_ELE_PATH, elePageBySlug } from "../../data";
 import { ejercicioBySlug } from "../../actividades";
+import { livePath } from "../../../seo-prune";
 import { TemaCards, TemaGroupCards, TemaLevelLinks } from "../../tema-components";
 import { relatedTemas, temaGroupById, temaLevelsOf, temaPageByPath, temaPages } from "../../temas";
 import ShareSnippet from "../../ShareSnippet";
@@ -97,7 +98,7 @@ export default async function TemaPageRoute({ params }: Props) {
           {guide ? (
             <Section title="Guía con actividades y ejercicio" intro={`Si quieres material para llevar a clase sin pantalla, la guía «${guide.h1}» trae ${guide.activities.length} actividades con pasos y frases modelo${guide.exercise ? ", un ejercicio con soluciones" : ""} y una ficha en PDF.`}>
               <Link className={styles.primaryButton} href={guide.path}>Abrir la guía</Link>
-              {ejercicioBySlug.get(guide.slug) ? <p><Link className={styles.textLink} href={ejercicioBySlug.get(guide.slug)!.path}>Ejercicios de {lower} con soluciones y corrección automática →</Link></p> : null}
+              {ejercicioBySlug.get(guide.slug) ? <p><Link className={styles.textLink} href={livePath(ejercicioBySlug.get(guide.slug)!.path)}>Ejercicios de {lower} con soluciones y corrección automática →</Link></p> : null}
             </Section>
           ) : null}
 
