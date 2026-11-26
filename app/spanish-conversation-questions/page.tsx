@@ -7,12 +7,14 @@ import { webPageSchema } from "../growth/schema";
 import { canonicalUrl } from "../seo";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import QuestionBank from "./QuestionBank";
+import { ConversationExtra } from "../growth/ConversationExtra";
+import { conversationQuestionsExtra } from "../growth/conversation-page-extras";
 import styles from "../growth/growth.module.css";
 
 const total = conversationQuestions.length;
-const title = `${total} Spanish Conversation Questions to Ask, by Level (A1–C2) | SPANISHCUE`;
+const title = `${total} Spanish Conversation Questions by Level (A1–C2)`;
 const description =
-  `${total} Spanish questions to ask in conversation class, graded from A1 to C2 and tagged by topic, in the tú form with an English gloss. Filter by level and topic, copy a question, use it today.`;
+  `${total} Spanish conversation questions graded from A1 to C2, in the tú form with an English gloss, plus a model answer and a follow-up for each level.`;
 
 export const metadata: Metadata = {
   title,
@@ -63,6 +65,8 @@ export default function ConversationQuestionsPage() {
             levels={conversationLevels.map((level) => ({ code: level.code, slug: level.slug, name: level.name }))}
             topics={questionTopics}
           />
+
+          <ConversationExtra extra={conversationQuestionsExtra} />
 
           <Section id="how-to-use" title="How to use conversation questions in class" intro="Questions are the cheapest speaking material there is, and the easiest to waste. Four habits make them work.">
             <div className={styles.prose}>

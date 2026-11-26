@@ -9,10 +9,12 @@ import { canonicalUrl } from "../seo";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import { teachingGuideBySlug } from "../teaching-guides";
 import styles from "../growth/growth.module.css";
+import { ConversationExtra } from "../growth/ConversationExtra";
+import { conversationActivitiesExtra } from "../growth/conversation-page-extras";
 
-const title = "Spanish Conversation Activities by Level (A1–C2) | SPANISHCUE";
+const title = "Spanish Conversation Activities by Level (A1–C2)";
 const description =
-  "Spanish conversation activities for teachers, organised by CEFR level: step-by-step speaking tasks, sentence frames, 150 graded questions and interactive lessons you can open and teach in the browser.";
+  "Spanish speaking activities for adult learners, graded A1 to C2: steps, sentence frames and questions, connected to interactive lessons you can teach online.";
 
 export const metadata: Metadata = {
   title,
@@ -108,6 +110,8 @@ export default function ConversationActivitiesHub() {
               ))}
             </div>
           </Section>
+
+          <ConversationExtra extra={conversationActivitiesExtra} />
 
           <Section id="free" title="Free interactive conversation lessons" intro="Two complete conversation worlds are free, without a card. Open one, share your screen and teach it today.">
             <LessonGrid lessons={freeLessons} />
