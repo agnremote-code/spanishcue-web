@@ -41,3 +41,11 @@ test('each batch of the pruning plan changes at most 20 URLs',()=>{
  for(const line of src.split('\n')){const b=line.match(/Lote (R\d+)/);if(b)cur=b[1];if(cur&&/^\s*\["\//.test(line))counts[cur]=(counts[cur]??0)+1;}
  for(const [b,n] of Object.entries(counts))assert.ok(n<=20,`${b}: ${n} URLs`);
 });
+
+test('noindexed families leave the sitemap and carry noindex, follow',async()=>{
+ const r2=await build({stdin:{contents:'export {robotsHeaderFor} from "./app/seo.ts"; export {isPrunedNoindexPath} from "./app/seo-prune.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',logLevel:'error'});
+ const s=await import('data:text/javascript;base64,'+Buffer.from(r2.outputFiles[0].text).toString('base64'));
+ for(const p of sitemapPaths)assert.ok(!s.isPrunedNoindexPath(p),`${p} is noindex but listed`);
+ assert.equal(s.robotsHeaderFor('/spanish-verbs/tener'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/spanish-verbsx'),null);
+});

@@ -47,9 +47,11 @@ for(const [path,h1] of [['/spanish-verbs','Spanish verb conjugation'],['/spanish
  const d=new JSDOM(await response.text()).window.document;
  assert.equal(d.querySelector('h1').textContent,h1);
  assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+path);
- assert.equal(d.querySelector('link[rel="alternate"][hreflang="es"]').href,'https://spanishcue.com'+path.replace('/spanish-verbs','/conjugacion'));
+ assert.equal(d.querySelector('link[rel="alternate"][hreflang]'),null);
+ assert.match(d.querySelector('meta[name="robots"]').content,/noindex/);
+ assert.equal(response.headers.get('x-robots-tag'),'noindex, follow');
 });
-test('Spanish verb page points to its English twin',async()=>{
+test('Spanish verb page no longer declares the noindexed English twin',async()=>{
  const d=new JSDOM(await (await fetch(origin+'/conjugacion/tener')).text()).window.document;
- assert.equal(d.querySelector('link[rel="alternate"][hreflang="en"]').href,'https://spanishcue.com/spanish-verbs/tener');
+ assert.equal(d.querySelector('link[rel="alternate"][hreflang="en"]'),null);
 });

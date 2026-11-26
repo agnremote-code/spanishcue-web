@@ -32,6 +32,20 @@ export const prunedRedirects: ReadonlyMap<string, string> = new Map([
   ["/material-ele/gramatica/comparativos-y-superlativos/b2", "/material-ele/comparativos-y-superlativos"],
 ]);
 
+/**
+ * Families taken out of the index (`noindex, follow`), applied one family per batch
+ * (owner decision, 26/11/2026). The pages stay available and linkable for visitors;
+ * they only leave search results, the sitemap and the hreflang pairs.
+ */
+const NOINDEX_FAMILIES: readonly string[] = [
+  // Lote N1: English conjugation pages (1,259 URLs, no internal links, SERP owned by dictionaries).
+  "/spanish-verbs",
+];
+
+export function isPrunedNoindexPath(path: string): boolean {
+  return NOINDEX_FAMILIES.some((prefix) => path === prefix || path.startsWith(prefix + "/"));
+}
+
 /** Where an internal link to `path` should point: the consolidated URL, or the path itself. */
 export function livePath(path: string): string {
   return prunedRedirects.get(path) ?? path;
