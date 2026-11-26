@@ -32,7 +32,8 @@ test('grammar descendants reject unknown or unsupported planning pages with HTTP
 });
 test('the sitemap includes all Phase 2 pages without private or parameter variants',async()=>{
  const response=await fetch(origin+'/sitemap.xml');assert.equal(response.status,200);const xml=await response.text();
- for(const path of paths)assert.ok(xml.includes('<loc>https://spanishcue.com'+path+'</loc>'),path);
+ // Lote N5: A2 and B2 are noindex and must stay out of the sitemap.
+ for(const path of paths)assert.equal(xml.includes('<loc>https://spanishcue.com'+path+'</loc>'),!['/spanish-grammar-lessons/a2','/spanish-grammar-lessons/b2'].includes(path),path);
  const locations=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
  const purchasePaths=new Set(['/lp/spanish-teacher-resources','/lp/online-spanish-teaching-resources']);
  for(const url of locations){
