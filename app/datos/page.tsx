@@ -35,7 +35,7 @@ export default function DatosPage() {
               inLanguage: "es",
               creator: authorNode,
               publisher: organizationNode,
-              dataset: informes.filter((informe) => informe.dataset).map((informe) => ({ "@type": "Dataset", name: informe.title, description: informe.summary, url: canonicalUrl(informe.path) })),
+              dataset: informes.filter((informe) => informe.dataset).map((informe) => ({ "@type": "Dataset", name: informe.title, description: informe.summary, url: canonicalUrl(informe.path), creator: authorNode, license: "https://creativecommons.org/licenses/by/4.0/" })),
             }}
           />
           <EleTopbar current={MATERIAL_ELE_PATH} />

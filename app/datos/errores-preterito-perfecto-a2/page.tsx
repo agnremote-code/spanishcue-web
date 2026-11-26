@@ -5,6 +5,7 @@ import { TEAM_PATH, articleSchema, datasetSchema, faqPageSchema } from "../../gr
 import { EleTopbar } from "../../material-ele/components";
 import ExerciseCheck from "../../material-ele/ExerciseCheck";
 import { MATERIAL_ELE_PATH } from "../../material-ele/data";
+import { pageImage } from "../../material-ele/media";
 import { canonicalUrl } from "../../seo";
 import { DATOS_PATH } from "../informes";
 import { countByType, errorTypes, participleForms, realErrors, report } from "../preterito-perfecto-a2";
@@ -81,7 +82,7 @@ export default function ErroresPreteritoPerfectoPage() {
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <JsonLd data={articleSchema({ pathname: report.path, headline: h1, description, dates, inLanguage: "es", about: ["pretérito perfecto", "participios irregulares", "errores frecuentes de alumnos de español", "A2"] })} />
+          <JsonLd data={articleSchema({ pathname: report.path, headline: h1, description, dates, inLanguage: "es", image: pageImage([141]), about: ["pretérito perfecto", "participios irregulares", "errores frecuentes de alumnos de español", "A2"] })} />
           <JsonLd
             data={datasetSchema({
               pathname: report.path,

@@ -31,6 +31,9 @@ export const authorProfile = {
   knowsAbout: ["Enseñanza de español como lengua extranjera", "Gramática del español", "Clases de conversación", "MCER", "PCIC"],
 } as const;
 
+/** Google wants a full datetime with a timezone on Article dates; a date-only value becomes noon UTC of that day. */
+const articleDateTime = (value: string) => (/^\d{4}-\d{2}-\d{2}$/.test(value) ? `${value}T12:00:00Z` : value);
+
 /** Article node for authored long-form pages (guides, data reports). */
 export function articleSchema(input: { pathname: string; headline: string; description: string; dates: PageDates; inLanguage?: string; image?: string; about?: string[] }) {
   const url = canonicalUrl(input.pathname);
@@ -42,8 +45,8 @@ export function articleSchema(input: { pathname: string; headline: string; descr
     url,
     mainEntityOfPage: url,
     inLanguage: input.inLanguage ?? "es",
-    datePublished: input.dates.datePublished,
-    dateModified: input.dates.dateModified,
+    datePublished: articleDateTime(input.dates.datePublished),
+    dateModified: articleDateTime(input.dates.dateModified),
     author: authorNode,
     publisher: organizationNode,
     isPartOf: websiteNode,

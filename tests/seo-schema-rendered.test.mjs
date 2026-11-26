@@ -76,10 +76,13 @@ test('the data report states its sample, links its CSV and carries Article, Data
  assert.match(lead,/16 de los 43 errores/);assert.match(lead,/74 respuestas equivocadas reales de 6 alumnos/);
  assert.ok(d.querySelectorAll('table').length>=2);
  assert.equal(d.querySelectorAll('form').length>=3,true);
+ const article=nodesOf(d).find(n=>n['@type']==='Article');
+ assert.match(article.datePublished,/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(Z|[+-]\d{2}:\d{2})$/);assert.ok(article.image);
  const dataset=nodesOf(d).find(n=>n['@type']==='Dataset');
  const res=await fetch(origin+new URL(dataset.distribution[0].contentUrl).pathname);
  assert.equal(res.status,200);assert.match(res.headers.get('content-type')||'',/text\/csv/);
  assert.equal((await res.text()).trim().split('\n').length,44);
  const hub=nodesOf(new JSDOM(await (await fetch(origin+'/datos')).text()).window.document).find(n=>n['@type']==='DataCatalog');
  assert.ok(hub.dataset.some(x=>x.url==='https://spanishcue.com/datos/errores-preterito-perfecto-a2'));
+ assert.ok(hub.dataset.every(x=>x.license&&x.creator));
 });
