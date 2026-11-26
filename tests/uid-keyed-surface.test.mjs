@@ -70,7 +70,6 @@ const FROZEN_CONSUMERS = new Set([
   // that the teacher who issued it (autoestudio_passes.owner_id, already UID-keyed)
   // still has PRO. It stores nothing; re-key it together with the share server.
   'app/jugar/student-pass.ts',
-  'worker/private-asset-auth.ts', // learner share-session cookie for a Homework topic recording, not teacher(); stores nothing
 ]);
 const helperUse = /\bauthenticatedOwnerId\b|from\s*['"][^'"]*autoestudio\/share\/server['"]|from\s*['"]\.\.\/share\/server['"]/;
 

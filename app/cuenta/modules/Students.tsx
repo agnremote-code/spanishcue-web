@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { STUDENT_LEVELS, type ClassRecord, type ClassStatus, type Student, type StudentLevel } from "../../student-tracker/contracts";
 import { LevelDetail } from "../../autoestudio/TeacherPasses";
+import { freeHomeworkCopy } from "../free-homework";
 import TeacherErrors, { type TeacherTab } from "../../autoestudio/errors/TeacherErrors";
 import { shareMessage } from "../../autoestudio/share-messages";
 import type { ProgressState } from "../../autoestudio/progress/model";
@@ -48,7 +49,7 @@ function homeworkState(profile: Profile, now: number): { key: HomeworkFilter; da
   return { key: days <= ACTIVE_DAYS ? "studying" : "idle", days };
 }
 
-export default function Students({ lessons, startNew, homeworkEnabled }: { lessons: DashLesson[]; startNew: boolean; homeworkEnabled: boolean }) {
+export default function Students({ lessons, startNew, homeworkEnabled, homeworkFree = false }: { lessons: DashLesson[]; startNew: boolean; homeworkEnabled: boolean; homeworkFree?: boolean }) {
   const { t, locale } = useDash();
   const [students, reload] = useLoad<{ students: Student[] }>("/api/students");
   const [records, reloadRecords] = useLoad<{ records: ClassRecord[] }>("/api/class-records");
@@ -239,7 +240,7 @@ export default function Students({ lessons, startNew, homeworkEnabled }: { lesso
               {tabs.filter((item) => homeworkEnabled || !item.homework).map((item) => <button key={item.id} type="button" role="tab" aria-selected={tab === item.id} disabled={item.needsLearner && !current.learnerIds.length} onClick={() => setTab(item.id)}>{t(item.label)}</button>)}
             </div>
             {tab === "resumen" && <StudentOverview profile={current} now={now} homeworkEnabled={homeworkEnabled} titles={titles} onTab={setTab} />}
-            {tab === "tarea" && <HomeworkTab key={current.student.id} profile={current} students={list} busy={busy} onAssign={assign} onChanged={reloadHomework} />}
+            {tab === "tarea" && <HomeworkTab key={current.student.id} profile={current} students={list} busy={busy} onAssign={assign} onChanged={reloadHomework} free={homeworkFree} />}
             {tab === "clases" && <LoadState state={records} onRetry={reloadRecords}>{() => <Classes profile={current} titles={titles} onChanged={reloadRecords} />}</LoadState>}
             {(tab === "errores" || tab === "preparar" || tab === "recomendaciones") && current.learnerIds[0] && <TeacherErrors key={`${current.learnerIds[0]}-${tab}`} learnerId={current.learnerIds[0]} tab={tab} />}
           </article> : <div className="cx-panel cx-placeholder"><p className="cx-muted">{t("students.select")}</p></div>}
@@ -283,7 +284,7 @@ function StudentOverview({ profile, now, homeworkEnabled, titles, onTab }: { pro
 }
 
 /** Homework for one student: create, copy, regenerate, revoke, next level, and the real per-level progress. */
-function HomeworkTab({ profile, students, busy: parentBusy, onAssign, onChanged }: { profile: Profile; students: Student[]; busy: boolean; onAssign: (learnerId: string, studentId: string) => Promise<void>; onChanged: () => void }) {
+function HomeworkTab({ profile, students, busy: parentBusy, onAssign, onChanged, free = false }: { profile: Profile; students: Student[]; busy: boolean; onAssign: (learnerId: string, studentId: string) => Promise<void>; onChanged: () => void; free?: boolean }) {
   const { t, locale } = useDash();
   const initial = HW_LEVELS.includes(profile.student.level.toLowerCase()) ? profile.student.level.toLowerCase() : "a1";
   const [level, setLevel] = useState(initial);
@@ -326,7 +327,10 @@ function HomeworkTab({ profile, students, busy: parentBusy, onAssign, onChanged 
   const disabled = busy || parentBusy;
   const shown = detail.status === "ready" ? HW_LEVELS.filter((id) => detail.data.passes.some((pass) => pass.level === id)) : [];
 
+  // Free plan: the pass opens the preview weeks only (A1: 1–2, other levels: 1).
+  const freeDone = free && profile.passes.some((pass) => !pass.revokedAt && (pass.summary?.completed ?? 0) >= (pass.level === "a1" ? 2 : 1));
   return <div className="cx-stack">
+    {free && <div className={`cx-alert ${freeDone ? "is-ok" : ""}`} role="note"><span>{freeDone ? freeHomeworkCopy.finished(profile.student.alias) : `${freeHomeworkCopy.note} ${freeHomeworkCopy.upsell}`} <Link href="/pricing?utm_source=app&utm_campaign=homework_free">{t("sub.upgrade")} →</Link></span></div>}
     {error && <div className="cx-alert is-error" role="alert"><span>{error}</span></div>}
     {notice && <div className="cx-alert is-ok" role="status"><span>{notice}</span></div>}
     {link && <label className="cx-copy">{t("r.privateLink")}<input value={link} readOnly onFocus={(e) => e.target.select()} /></label>}

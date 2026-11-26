@@ -10,8 +10,10 @@ import "./style.css";
 
 export const dynamic = "force-dynamic";
 
+// Without a destination, teachers land on their dashboard (first steps with students), not the home page.
+const DEFAULT_RETURN = "/cuenta";
 function safeReturnTo(value: string | undefined): string {
-  if (!value || !value.startsWith("/") || value.startsWith("//")) return "/";
+  if (!value || !value.startsWith("/") || value.startsWith("//")) return DEFAULT_RETURN;
   return value;
 }
 

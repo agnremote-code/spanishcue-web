@@ -9,7 +9,6 @@ import { GIFT_AUDIO_PATH } from "../app/newsletter/gift";
 import { hasGift } from "../app/newsletter/server";
 import { isStudentAudioPath, studentWorldPass } from "../app/jugar/student-pass";
 import { isHomeworkTopicAudio } from "../app/autoestudio/topics";
-import { verifyShareSession } from "../app/autoestudio/share/server";
 
 type PrivateAssetEnv = {
   DB: D1Database;
@@ -41,8 +40,8 @@ export async function mayReadPrivateMedia(
   path: string,
 ): Promise<boolean> {
   if (path === GIFT_AUDIO_PATH && await hasGift(request.headers.get("cookie"), env.AUTOESTUDIO_SHARE_SECRET).catch(() => false)) return true;
-  // A Homework topic's own recording also opens for a student with a valid pass.
-  if (isHomeworkTopicAudio(path) && await verifyShareSession(request.headers.get("cookie"), env).catch(() => null)) return true;
+  // A Homework topic's own recording also opens for a student with a valid pass from a teacher with full access.
+  if (isHomeworkTopicAudio(path) && await studentWorldPass(request.headers.get("cookie"), env).catch(() => null)) return true;
   return hasFullLibraryAccess(request, env);
 }
 

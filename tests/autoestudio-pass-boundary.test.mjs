@@ -16,7 +16,7 @@ test('assigned level authorizes matching module HTML and RSC only',()=>{
  for(const path of ['/autoestudio/b1/semana-3','/autoestudio/b1/semana-3.rsc','/cuenta','/admin','/api/students','/clase/30','/autoestudio/a2/semana-21','/autoestudio/a2/semana-0'])assert.equal(boundary.shareAllowsPath(path,session),false,path);
  assert.equal(boundary.shareAllowsPath('/autoestudio/a2/semana-3',null),false);
 });
-test('a Homework topic opens for any valid pass and for nobody without one',async()=>{
+test('a Homework topic opens for any valid pass of a teacher with full access and for nobody without one',async()=>{
  const topic='/autoestudio/tema/numeros-dinero-y-monedas';
  for(const level of ['a1','a2','c2'])for(const path of [topic,`${topic}.rsc`,`${topic}/`])assert.equal(boundary.shareAllowsPath(path,{...session,level}),true,`${level} ${path}`);
  assert.equal(boundary.shareAllowsPath(topic,null),false);
@@ -32,8 +32,8 @@ test('a Homework topic opens for any valid pass and for nobody without one',asyn
  const {readFileSync}=await import('node:fs');
  const worker=readFileSync('worker/index.ts','utf8');
  assert.match(worker,/const topicAudio=premiumAudio&&isHomeworkTopicAudio\(pathname\);/);
- assert.match(worker,/if \(premiumAudio && !fullAccess && !gifted && !\(topicAudio && shareSession\) && !studentAudio\)/);
- assert.match(readFileSync('worker/private-asset-auth.ts','utf8'),/isHomeworkTopicAudio\(path\) && await verifyShareSession\(/);
+ assert.match(worker,/if \(premiumAudio && !fullAccess && !gifted && !\(topicAudio && shareFull\) && !studentAudio\)/);
+ assert.match(readFileSync('worker/private-asset-auth.ts','utf8'),/isHomeworkTopicAudio\(path\) && await studentWorldPass\(/);
  // Every topic points at a real class and its real recording.
  const {lesson}=await bundle('./app/grammar-classroom/live/lessons/g549');
  for(const t of topics.homeworkTopics){assert.equal(t.lessonId,lesson.id);assert.equal(t.title,lesson.title);

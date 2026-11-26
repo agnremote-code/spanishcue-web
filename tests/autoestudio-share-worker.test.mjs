@@ -8,10 +8,20 @@ const id='b'.repeat(48);
 const token=`v1.${id}.a1.1`;
 const signed=`${token}.${secret?createHmac('sha256',secret).update(token).digest('hex'):''}`;
 let cookie;
+const proId='d'.repeat(48);const proToken=`v1.${proId}.a1.1`;const proSigned=`${proToken}.${secret?createHmac('sha256',secret).update(proToken).digest('hex'):''}`;let proCookie;
+// Pass from a teacher with full access (seeded in scripts/test-worker.mjs as worker-test-pro).
+async function accessPro(){if(proCookie)return proCookie;const r=await fetch(`${origin}/s/${proSigned}`,{redirect:'manual'});assert.equal(r.status,303);assert.equal(r.headers.get('location'),'/autoestudio/a1');proCookie=r.headers.get('set-cookie').split(';')[0];return proCookie;}
 async function access(){if(cookie)return cookie;const r=await fetch(`${origin}/s/${signed}`,{redirect:'manual'});assert.equal(r.status,303);assert.equal(r.headers.get('referrer-policy'),'no-referrer');assert.equal(r.headers.get('location'),'/autoestudio/a1');const value=r.headers.get('set-cookie');assert.match(value,/HttpOnly/);assert.match(value,/Secure/);cookie=value.split(';')[0];return cookie;}
 test('real Worker exchanges bearer for clean URL without HTML, analytics or token reflection',{skip:!enabled},async()=>{await access();const r=await fetch(`${origin}/s/${signed}bad`,{redirect:'manual'});assert.equal(r.status,303);assert.equal(r.headers.get('referrer-policy'),'no-referrer');assert.doesNotMatch(await r.text(),/gtag|v1\./);});
-test('real pass opens assigned paid week, but never another level, teacher API or dashboard',{skip:!enabled},async()=>{
- const headers={cookie:await access()};const r=await fetch(`${origin}/autoestudio/a1/semana-3`,{headers,redirect:'manual'});assert.equal(r.status,200);const week=await r.text();assert.match(week,/ae-module/);
+test('a pass from a free teacher keeps the preview weeks and sends PRO weeks to the teacher-unlock notice',{skip:!enabled},async()=>{
+ const headers={cookie:await access()};
+ const free=await fetch(`${origin}/autoestudio/a1/semana-1`,{headers,redirect:'manual'});assert.equal(free.status,200);
+ const locked=await fetch(`${origin}/autoestudio/a1/semana-3`,{headers,redirect:'manual'});assert.equal(locked.status,302);
+ const location=new URL(locked.headers.get('location'),origin);assert.equal(location.pathname,'/autoestudio/claim');assert.equal(location.searchParams.get('profe'),'gratis');assert.equal(location.searchParams.get('semana'),'/autoestudio/a1/semana-3');
+ assert.doesNotMatch(await locked.text(),/ae-module/);
+});
+test('real pass from a PRO teacher opens assigned paid week, but never another level, teacher API or dashboard',{skip:!enabled},async()=>{
+ const headers={cookie:await accessPro()};const r=await fetch(`${origin}/autoestudio/a1/semana-3`,{headers,redirect:'manual'});assert.equal(r.status,200);const week=await r.text();assert.match(week,/ae-module/);
  // A translating browser must leave Homework alone: translated text nodes used to crash the player.
  assert.match(week,/<div class="notranslate ae-notranslate" translate="no"/);
  for(const path of ['/autoestudio/b1/semana-3','/autoestudio/b1/semana-3.rsc','/cuenta?tab=alumnos']){const r=await fetch(origin+path,{headers,redirect:'manual'});assert.notEqual(r.status,200,path);assert.doesNotMatch(await r.text(),/"listening"|ae-module/);}
