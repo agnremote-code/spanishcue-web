@@ -49,8 +49,9 @@ test('unknown topic group and topic are 404s',async()=>{
 });
 
 // Board review 2026-11-03 (B1): a level page that lost its classes answers 308 to its topic page in the built Worker.
+// Since batch R3 of the SEO plan that topic page is itself consolidated, so the redirect goes straight to the final URL (no chain).
 test('a retired level page 308-redirects to its topic page',async()=>{
  const response=await fetch(origin+'/material-ele/gramatica/oraciones-finales/a1',{redirect:'manual'});
  assert.equal(response.status,308);
- assert.equal(new URL(response.headers.get('location'),origin).pathname,'/material-ele/gramatica/oraciones-finales');
+ assert.equal(new URL(response.headers.get('location'),origin).pathname,'/material-ele/oraciones-finales');
 });
