@@ -552,9 +552,9 @@ export const guiaPages: GuiaPage[] = [
             title: "Las parejas que siempre se confunden",
             blocks: [
               { type: "ul", items: [
-                "[Ser, estar o hay](/material-ele/ejercicio/ser-y-estar) (A1–B1), con la [guía de ser y estar](/material-ele/ser-y-estar) para explicar antes de practicar.",
-                "[Indefinido o imperfecto](/material-ele/ejercicio/indefinido-e-imperfecto) (A2–B1): conjugar el verbo en el pasado que pide el relato. La [guía de los pasados](/material-ele/indefinido-e-imperfecto) tiene la explicación con ejemplos.",
-                "[Por o para](/material-ele/ejercicio/por-y-para) (A2–B1), veintidós frases con los usos que más errores producen; guía en [por y para](/material-ele/por-y-para).",
+                "[Ser, estar o hay](/ser-o-estar) (A1–B1), con la [guía de ser y estar](/material-ele/ser-y-estar) para explicar antes de practicar.",
+                "[Indefinido o imperfecto](/indefinido-o-imperfecto) (A2–B1): conjugar el verbo en el pasado que pide el relato. La [guía de los pasados](/material-ele/indefinido-e-imperfecto) tiene la explicación con ejemplos.",
+                "[Por o para](/por-o-para) (A2–B1), veintidós frases con los usos que más errores producen; guía en [por y para](/material-ele/por-y-para).",
                 "[Indicativo o subjuntivo](/material-ele/ejercicio/subjuntivo) (B1–C1): elegir el modo en frases con «creo que», «no creo que», «cuando», «aunque». Explicación en la [guía del subjuntivo](/material-ele/subjuntivo).",
               ] },
             ],
@@ -566,11 +566,11 @@ export const guiaPages: GuiaPage[] = [
                 "[Pretérito perfecto](/material-ele/ejercicio/preterito-perfecto) (A1–A2): el primer pasado que aprende un alumno, con «hoy», «esta semana», «ya» y «todavía no».",
                 "[Futuro: ir a, presente o futuro simple](/material-ele/ejercicio/futuro) (A2–B1): la forma más natural para cada plan, no la más gramatical.",
                 "[Condicional y oraciones con si](/material-ele/ejercicio/condicional) (B1–B2): condicional simple, compuesto o imperfecto de subjuntivo.",
-                "[Imperativo afirmativo y negativo](/material-ele/ejercicio/imperativo) (A2–B1), con la persona indicada en cada frase.",
+                "[Imperativo afirmativo y negativo](/ejercicios-de-imperativo) (A2–B1), con la persona indicada en cada frase.",
                 "[Verbos reflexivos](/material-ele/ejercicio/verbos-reflexivos) (A1–A2): el pronombre y la forma en presente.",
                 "[Perífrasis verbales](/material-ele/ejercicio/perifrasis-verbales) (B1–B2): «acabar de», «seguir + gerundio», «volver a», «dejar de».",
                 "[Verbos de cambio](/material-ele/ejercicio/verbos-de-cambio) (B1–B2): ponerse, volverse, hacerse, quedarse, convertirse en, llegar a ser.",
-                "[Gustar, encantar, interesar, doler](/material-ele/ejercicio/gustar) (A1–A2): pronombre más verbo concordado con lo que gusta.",
+                "[Gustar, encantar, interesar, doler](/ejercicios-de-gustar) (A1–A2): pronombre más verbo concordado con lo que gusta.",
               ] },
             ],
           },
@@ -578,7 +578,7 @@ export const guiaPages: GuiaPage[] = [
             title: "Pronombres, conectores y textos",
             blocks: [
               { type: "ul", items: [
-                "[Lo, la, le, se lo](/material-ele/ejercicio/pronombres-de-objeto) (A1–B1): completar respuestas con el pronombre o los pronombres correctos.",
+                "[Lo, la, le, se lo](/ejercicios-de-pronombres) (A1–B1): completar respuestas con el pronombre o los pronombres correctos.",
                 "[Conectores](/material-ele/ejercicio/conectores) (A2–C1): porque, como, por eso, sin embargo, además, en el lugar que pide cada frase.",
                 "[Estilo indirecto](/material-ele/ejercicio/estilo-indirecto) (B1–B2): transmitir un mensaje con el verbo introductor en pasado.",
                 "[Acentuación](/material-ele/ejercicio/acentuacion) (A1–B2): escribir la palabra con tilde si la necesita.",
@@ -875,7 +875,7 @@ export const guiaPages: GuiaPage[] = [
           { type: "p", text: "Cuando ya tienes la clase y te falta una pieza, lo que necesitas es una ficha o un ejercicio. El [banco de actividades](/material-ele/actividades) tiene las dos cosas separadas por nivel." },
           { type: "ul", items: [
             "**Fichas de actividades**: cada una con objetivo, consigna, pasos y respuesta modelo. Se imprimen con el botón de PDF o se proyectan en pantalla compartida. La guía [fichas ELE para imprimir y proyectar](/material-ele/guia/fichas-ele-para-imprimir-y-proyectar) explica cuándo conviene cada formato.",
-            "**Ejercicios con soluciones**: entre seis y diez frases sobre un solo punto, con la solución oculta hasta que el alumno la abre. Hay uno por nivel, como el de [ser, estar o hay en A1](/material-ele/ejercicio/a1), y uno por tema, como [ser y estar](/material-ele/ejercicio/ser-y-estar). La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) los lista todos con tres formas de corregirlos.",
+            "**Ejercicios con soluciones**: entre seis y diez frases sobre un solo punto, con la solución oculta hasta que el alumno la abre. Hay uno por nivel, como el de [ser, estar o hay en A1](/material-ele/ejercicio/a1), y uno por tema, como [ser y estar](/ser-o-estar). La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) los lista todos con tres formas de corregirlos.",
           ] },
           { type: "p", text: "Cada tema de gramática tiene además su propia página con explicación, actividades y la clase recomendada: por ejemplo [ser y estar](/material-ele/ser-y-estar), [subjuntivo](/material-ele/subjuntivo) o [por y para](/material-ele/por-y-para)." },
         ],
@@ -1160,7 +1160,7 @@ export const guiaPages: GuiaPage[] = [
             "**«Es cansado».** Confunde una característica con un estado. Solución: pares mínimos con adjetivos de ánimo.",
             "**«La fiesta está en mi casa».** El caso de los eventos. Solución: presentarlo como excepción en A2, con ejemplos de conciertos, reuniones y clases.",
           ] },
-          { type: "p", text: "El [ejercicio de ser y estar](/material-ele/ejercicio/ser-y-estar) y el [ejercicio de A1](/material-ele/ejercicio/a1) sirven para practicar estos puntos con soluciones. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+          { type: "p", text: "El [ejercicio de ser y estar](/ser-o-estar) y el [ejercicio de A1](/material-ele/ejercicio/a1) sirven para practicar estos puntos con soluciones. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
         ],
       },
       {
@@ -1293,7 +1293,7 @@ export const guiaPages: GuiaPage[] = [
             "**Todo en indefinido.** El alumno cuenta una lista de hechos sin escenario. Solución: pedir siempre dos frases de fondo antes de empezar la historia.",
             "**«Ya empezó cuando llegué».** Falta el pluscuamperfecto en B1. Solución: dos hechos en la línea del tiempo y la pregunta «¿cuál pasó antes?».",
           ] },
-          { type: "p", text: "El [ejercicio de indefinido e imperfecto](/material-ele/ejercicio/indefinido-e-imperfecto) practica estos puntos con soluciones. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+          { type: "p", text: "El [ejercicio de indefinido e imperfecto](/indefinido-o-imperfecto) practica estos puntos con soluciones. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
         ],
       },
       {
@@ -1559,7 +1559,7 @@ export const guiaPages: GuiaPage[] = [
             "**«Le gusta a ellos».** Confusión entre le y les. Solución: en A2, contar las personas que reciben el efecto antes de elegir el pronombre.",
             "**«Me gusta que vienes».** Indicativo después de que en B1. Solución: la regla del sujeto distinto y ejemplos de reacciones reales.",
           ] },
-          { type: "p", text: "El [ejercicio de gustar](/material-ele/ejercicio/gustar) practica estos puntos con soluciones, el de [pronombres de objeto](/material-ele/ejercicio/pronombres-de-objeto) refuerza el sistema completo y el [ejercicio de A1](/material-ele/ejercicio/a1) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+          { type: "p", text: "El [ejercicio de gustar](/ejercicios-de-gustar) practica estos puntos con soluciones, el de [pronombres de objeto](/ejercicios-de-pronombres) refuerza el sistema completo y el [ejercicio de A1](/material-ele/ejercicio/a1) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
         ],
       },
       {
@@ -1694,7 +1694,7 @@ export const guiaPages: GuiaPage[] = [
             "**«Dame lo».** Separado o sin tilde en el imperativo. Solución: escribir dámelo, dímelo y póntelo como palabras enteras.",
             "**Le por lo.** «Le vi ayer» por «lo vi ayer»: es leísmo, aceptado en parte de España para personas. Conviene explicarlo como variación y no corregirlo como error grave.",
           ] },
-          { type: "p", text: "El [ejercicio de pronombres de objeto](/material-ele/ejercicio/pronombres-de-objeto) practica estos puntos con soluciones, y el [ejercicio de A2](/material-ele/ejercicio/a2) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
+          { type: "p", text: "El [ejercicio de pronombres de objeto](/ejercicios-de-pronombres) practica estos puntos con soluciones, y el [ejercicio de A2](/material-ele/ejercicio/a2) los mezcla con el resto del nivel. La guía [ejercicios ELE con soluciones](/material-ele/guia/ejercicios-ele-con-soluciones) propone tres formas de corregirlos sin bloquear al alumno." },
         ],
       },
       {

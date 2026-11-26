@@ -1,3 +1,4 @@
+import { ConsolidatedExercise } from "../material-ele/ConsolidatedExercise";
 import Link from "next/link";
 import { Section } from "../growth/components";
 import { eleMetadata } from "../material-ele/components";
@@ -36,6 +37,7 @@ export default function PorParaHub() {
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases de usos distintos. Si dudas en alguna, abre su página y repasa la regla.">
         <ChoiceQuiz items={porParaMixed()} label="Elige por o para" />
       </Section>
+      <ConsolidatedExercise slug="por-y-para" />
       <EleNewsletterInline source={PORPARA_PATH} />
       <Section title="Para preparar la clase">
         <ul className={cj.verbList}>{PORPARA_GUIDES.map((g) => <li key={g.href}><Link href={g.href}>{g.label}</Link></li>)}</ul>

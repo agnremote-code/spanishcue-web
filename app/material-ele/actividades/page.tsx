@@ -1,3 +1,4 @@
+import { livePath } from "../../seo-prune";
 import Link from "next/link";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../growth/components";
 import { collectionPageSchema, faqPageSchema } from "../../growth/schema";
@@ -40,7 +41,7 @@ export default function BancoPage() {
           </Section>
           <Section id="ejercicios" title="Ejercicios con soluciones">
             <div className={styles.cardGrid}>
-              {ejercicioPages.map((page) => <Link className={styles.levelCard} key={page.path} href={page.path}><em>{page.level} · {page.exercise.items.length} frases</em><b>{page.exercise.title}</b></Link>)}
+              {ejercicioPages.map((page) => <Link className={styles.levelCard} key={page.path} href={livePath(page.path)}><em>{page.level} · {page.exercise.items.length} frases</em><b>{page.exercise.title}</b></Link>)}
             </div>
           </Section>
           <div id="actividades" />

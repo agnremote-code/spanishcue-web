@@ -44,6 +44,7 @@ import { watermarkDay, watermarkToken, withWatermark, type Rewriter } from "../a
 import { bindAttribution } from "../db/partners";
 import { PARTNER_COOKIE, partnerCookieValue, partnerMarketingConsent, verifyReferral } from "../app/partners/referral";
 import { RenderGate, busyResponse, gatedRender } from "./render-gate";
+import { prunedRedirects } from "../app/seo-prune";
 import { deviceCookieHeader, deviceHash, deviceIdFromCookie, deviceLabel, newDeviceId, recordPremiumOpen } from "../db/account-security";
 
 // vinext's default in-memory ISR cache is unbounded and grew past the isolate's
@@ -290,6 +291,10 @@ const app = {
       canonicalRedirect = true;
     }
     if (canonicalRedirect) return Response.redirect(url, 308);
+
+    // SEO plan step 4: URLs consolidated into the one URL that owns their intent.
+    const prunedTo = prunedRedirects.get(url.pathname);
+    if (prunedTo) return Response.redirect(new URL(prunedTo, url), 301);
 
     // Retire the old USA A1 landing before catalog entitlement checks can gate it.
     if (url.pathname === "/estados-unidos-basico") {

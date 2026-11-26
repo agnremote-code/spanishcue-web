@@ -1,3 +1,4 @@
+import { ConsolidatedExercise } from "../material-ele/ConsolidatedExercise";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Section } from "../growth/components";
@@ -37,6 +38,7 @@ export function GapHub({ family: f }: { family: GapFamily }) {
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases de reglas distintas. Si dudas en alguna, abre su página y repasa la regla.">
         <ChoiceQuiz items={gapMixed(f)} />
       </Section>
+      {f.ejercicio ? <ConsolidatedExercise slug={f.ejercicio} /> : null}
       <EleNewsletterInline source={f.path} />
       <Section title="Para preparar la clase">
         <ul className={cj.verbList}>

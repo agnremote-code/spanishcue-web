@@ -3,6 +3,7 @@ import { ACTIVIDADES_PATH } from "./actividades";
 import { MATERIAL_ELE_PATH, eleLevels } from "./data";
 import { INDICE_PATH, indiceCount } from "./indice";
 import { temaGroups, temaPages } from "./temas";
+import { livePath } from "../seo-prune";
 import { guiaPages } from "./guias";
 import { FICHAS_GRATIS_PATH, fichasGratis } from "./fichas-gratis";
 
@@ -21,7 +22,7 @@ export default function MaterialEleHomeLinks() {
           <nav key={group.id} aria-labelledby={`mk-ele-${group.id}`}>
             <h3 id={`mk-ele-${group.id}`}><Link href={group.path}>{group.label}</Link></h3>
             <ul>
-              {temaPages.filter((page) => page.group === group.id).map((page) => <li key={page.path}><Link href={page.path}>{page.name}</Link></li>)}
+              {temaPages.filter((page) => page.group === group.id).map((page) => <li key={page.path}><Link href={livePath(page.path)}>{page.name}</Link></li>)}
             </ul>
           </nav>
         ))}

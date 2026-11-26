@@ -1,3 +1,4 @@
+import { isPrunedPath } from "../seo-prune";
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics } from "./data";
 import { ACTIVIDADES_PATH, actividadPages, ejercicioPages, preguntasPages } from "./actividades";
 import { temaGroups, temaLevelPages, temaPages } from "./temas";
@@ -26,7 +27,7 @@ const row = (path: string, title: string, description: string, section: string, 
 const temaPublished = (group: string) => (group === "formatos" ? published.formatos : published.temas);
 const levelPublished = (group: string) => (group === "gramatica" ? published.niveles : group === "formatos" ? published.formatos : published.otherLevels);
 
-export const indiceSections: { id: string; title: string; entries: IndiceEntry[] }[] = [
+const allIndiceSections: { id: string; title: string; entries: IndiceEntry[] }[] = [
   { id: "portadas", title: "Portadas", entries: [
     row(MATERIAL_ELE_PATH, "Material ELE: clases listas para profesores de español | SpanishCue", "La portada de Material ELE: niveles, guías, temas y banco de actividades.", "Portadas", published.hub, lessons.map((lesson) => lesson.id)),
     row(ACTIVIDADES_PATH, "Banco de actividades ELE: fichas, ejercicios y preguntas | SpanishCue", "Todas las fichas, ejercicios con soluciones y preguntas de conversación, cada una en su página.", "Portadas", published.banco),
@@ -45,6 +46,8 @@ export const indiceSections: { id: string; title: string; entries: IndiceEntry[]
   { id: "preguntas", title: "Preguntas de conversación por nivel", entries: preguntasPages.map((page) => row(page.path, page.title, page.description, "Preguntas", published.banco)) },
 ];
 
+/** Consolidated URLs (app/seo-prune.ts) redirect, so the index and its feed never list them. */
+export const indiceSections = allIndiceSections.map((section) => ({ ...section, entries: section.entries.filter((entry) => !isPrunedPath(entry.path)) }));
 export const indiceEntries: IndiceEntry[] = indiceSections.flatMap((section) => section.entries);
 export const lastModifiedByPath = new Map<string, string>([[INDICE_PATH, published.indice], ...indiceEntries.map((entry): [string, string] => [entry.path, entry.modified])]);
 const entryByPath = new Map(indiceEntries.map((entry) => [entry.path, entry]));
