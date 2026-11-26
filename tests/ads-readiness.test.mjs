@@ -96,6 +96,10 @@ test("legal pages stay unpublished until real operator and refund data exist", a
   assert.equal(compact?.privacyEmail, "owner@example.test");
   assert.equal(compact?.taxId, "");
   assert.equal(compact?.registration, "");
+  // The production record (street only, no tax ID) is completed with the owner's published data.
+  const production = legal.legalOperator({ CHESPANISH_OWNER_EMAIL: "owner@example.test", LEGAL_OPERATOR_JSON: JSON.stringify({ legalName: "Real Name", address: "Avenida Belgrano 1646" }) });
+  assert.match(production?.address || "", /C1093 Ciudad Autónoma de Buenos Aires/);
+  assert.match(production?.taxId || "", /^CUIT \d{2}-\d{8}-\d$/);
   assert.match(compact?.refundPolicyEs || "", /cancelar/i);
   assert.equal(legal.legalOperator({ LEGAL_OPERATOR_JSON: "{bad-json" }), null);
   assert.equal(legal.legalOperator({
