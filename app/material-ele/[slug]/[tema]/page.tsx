@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EleNewsletterInline } from "../../PopularLinks";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../../growth/schema";
@@ -71,6 +72,7 @@ export default async function TemaPageRoute({ params }: Props) {
             <EleLessonGrid lessons={lessons} />
           </Section>
 
+          <EleNewsletterInline source={page.path} topic={lower} />
           <EleFichaLinks lessonIds={page.lessonIds} name={lower} />
 
           {page.goals.length ? (

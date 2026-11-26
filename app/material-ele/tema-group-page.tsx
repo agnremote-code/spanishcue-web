@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EleNewsletterInline } from "./PopularLinks";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../growth/components";
 import { collectionPageSchema, faqPageSchema } from "../growth/schema";
 import { EleBuyBand, ElePageDates, EleTopbar } from "./components";
@@ -37,6 +38,7 @@ export function TemaGroupIndexPage({ group }: { group: TemaGroup }) {
           </section>
           <div id="indice" />
           <TemaIndex group={group.id} />
+          <EleNewsletterInline source={group.path} />
           <Section title="Preguntas frecuentes"><Faq items={faq} /></Section>
           <Section title="Otros grupos de temas">
             <TemaGroupCards current={group.id} />

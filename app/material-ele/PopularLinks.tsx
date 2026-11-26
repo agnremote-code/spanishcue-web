@@ -31,10 +31,10 @@ export function ElePopularLinks({ current }: { current?: string }) {
 }
 
 /** Inline newsletter signup (same gift offer as the popup) for pages where readers practise. */
-export function EleNewsletterInline({ source }: { source: string }) {
+export function EleNewsletterInline({ source, topic }: { source: string; topic?: string }) {
   return (
     <section className={gift.card} aria-label="Newsletter de SpanishCue" style={{ margin: "34px 0 0" }}>
-      <GiftPitch />
+      <GiftPitch topic={topic} />
       <img className={gift.mascot} src="/brand/mascot/pointing.webp" alt="" width={140} height={186} loading="lazy" />
       <GiftSignupForm source={source} />
     </section>

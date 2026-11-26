@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EleNewsletterInline } from "../PopularLinks";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../growth/schema";
@@ -97,6 +98,8 @@ export default async function ElePage({ params }: Props) {
           <Section id="actividades" title={`${page.activities.length} actividades listas para usar`} intro="Cada actividad tiene pasos, frases para el alumno, una respuesta modelo y una forma de corregir. La respuesta modelo es solo una posibilidad: lo que el alumno quiere decir guía la corrección.">
             <EleActivities activities={page.activities} />
           </Section>
+
+          <div className={print.noPrint}><EleNewsletterInline source={page.path} topic={page.kind === "topic" ? page.label.toLowerCase() : undefined} /></div>
 
           {page.exercise ? (
             <Section id="ejercicio" title={page.exercise.title} intro={exercisePreview ? `Las primeras ${exercisePreview.items.length} de ${page.exercise.items.length} frases. Las ${page.exercise.items.length}, con corrección automática y ficha en PDF, están en la página del ejercicio.` : undefined}>
