@@ -99,6 +99,29 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   // A synchronous guard: a double click lands before React re-renders the
   // disabled button, and must not open two checkouts.
   const starting = useRef(false);
+  // Express request for immediate access + acknowledgement of losing the 14-day
+  // withdrawal right (EU Directive 2011/83 art. 16(m), Spain TRLGDCU art. 103(m)).
+  // Never pre-ticked; every payment button asks for it before opening a checkout.
+  const [waiver, setWaiver] = useState(false);
+  const [waiverNudge, setWaiverNudge] = useState(false);
+  const waiverRef = useRef<HTMLInputElement>(null);
+  function waiverMissing() {
+    if (waiver) return false;
+    setWaiverNudge(true);
+    waiverRef.current?.focus();
+    waiverRef.current?.scrollIntoView?.({ block: "center", behavior: "smooth" });
+    return true;
+  }
+  function waiverBox() {
+    const es = locale === "es";
+    return <label className={`checkout-waiver${waiverNudge && !waiver ? " checkout-waiver-nudge" : ""}`}>
+      <input ref={waiverRef} type="checkbox" checked={waiver} onChange={(event) => { setWaiver(event.target.checked); if (event.target.checked) setWaiverNudge(false); }} />
+      <span>{es
+        ? <>Quiero acceso inmediato a SpanishCue PRO y acepto que, al empezar a usarlo, pierdo el derecho de desistimiento de 14 días. La <Link href="/refunds">garantía de 30 días</Link> de mi primer pago sigue vigente.</>
+        : <>I want immediate access to SpanishCue PRO and I accept that, once it starts, I lose the 14-day right of withdrawal. The <Link href="/refunds">30-day guarantee</Link> on my first payment still applies.</>}</span>
+      {waiverNudge && !waiver && <small role="alert">{es ? "Marca la casilla para continuar con el pago." : "Tick the box to continue to payment."}</small>}
+    </label>;
+  }
 
   useEffect(() => {
     let active = true;
@@ -157,7 +180,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   }
 
   async function checkoutPaddle(offer: "monthly" | "trial" | "annual" | "promo" | "discount10" = "monthly") {
-    if (starting.current) return;
+    if (starting.current || waiverMissing()) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_card", signed_in: signedIn });
     if (!founder?.available || !founder.paddleCheckoutAvailable || (offer === "trial" && !founder.trialCheckoutAvailable) || (offer === "annual" && !founder.annualCheckoutAvailable) || (offer === "promo" && !founder.promoWeek?.cardAvailable) || (offer === "discount10" && !founder.discount10?.cardAvailable)) return;
     starting.current = true;
@@ -218,7 +241,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
   const checkoutPayPal = () => startPayPal("monthly");
 
   async function startPayPal(offer: "monthly" | "promo") {
-    if (starting.current) return;
+    if (starting.current || waiverMissing()) return;
     trackMarketingEvent("cta_click", { placement: "paywall", cta_type: "subscribe_paypal", signed_in: signedIn });
     if (!founder?.available || !founder.checkoutLive || (offer === "promo" && !founder.promoWeek?.paypalAvailable)) return;
     starting.current = true;
@@ -307,6 +330,8 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
         : locale === "es" ? "Oferta fundadora completa" : "Founder offer fully claimed"}
     </strong>
 
+    {waiverBox()}
+
     {discount10Offer(founder) ?? promoWeekOffer(founder)}
 
     {founder.paddleCheckoutAvailable && (
@@ -351,6 +376,7 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
     return <div className="checkout-action checkout-landing" aria-busy={pending}>
       {offer.mode === "sandbox" && <strong className="checkout-availability closed">{es ? "PRUEBA SANDBOX · no es un cobro real" : "SANDBOX TEST · not a real charge"}</strong>}
       {!pending && !offer.available && <strong className="checkout-availability closed">{es ? "Oferta fundadora completa" : "Founder offer fully claimed"}</strong>}
+      {waiverBox()}
       {promoWeekOffer(loaded)}
       <div className="checkout-landing-plans">
         {offer.paddleCheckoutAvailable && <div className="checkout-landing-plan checkout-landing-monthly">

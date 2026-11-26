@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { runSmoke } from '../scripts/production-smoke.mjs';
+import { consolidatedPath, runSmoke } from '../scripts/production-smoke.mjs';
 
 const resourcePages = {
   '/resources/spanish-conversation-activity-a0-c2-hospital-san-casi-vivo': '3D Spanish Conversation Activity A0–C2: Hospital San Casi Vivo',
@@ -8,8 +8,8 @@ const resourcePages = {
   '/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes': '3D Spanish Conversation Activity A0–C2: El bosque de los hongos gigantes',
 };
 const retiredLevels = {
-  '/material-ele/gramatica/comparativos-y-superlativos/c1': '/material-ele/gramatica/comparativos-y-superlativos',
-  '/material-ele/gramatica/oraciones-finales/a1': '/material-ele/gramatica/oraciones-finales',
+  '/material-ele/gramatica/comparativos-y-superlativos/c1': consolidatedPath('/material-ele/gramatica/comparativos-y-superlativos'),
+  '/material-ele/gramatica/oraciones-finales/a1': consolidatedPath('/material-ele/gramatica/oraciones-finales'),
 };
 const legacyResource = '/resources/spanish-grammar-lesson-a1-a2-ser-estar-y-hay-describir-personas-y-lugares';
 function fixture(overrides = {}) {
@@ -178,6 +178,12 @@ test('the Bosque PRO world stays private and its teacher page public (W47 item 4
   await assert.rejects(runSmoke('https://spanishcue.com', fixture({ '/resources/spanish-conversation-activity-a0-c2-el-bosque-de-los-hongos-gigantes': () => new Response('<html><title>Bosque</title></html>') })), /must carry its 3D title/);
 });
 
+test('the expected retired-level target follows the consolidation map of this checkout', () => {
+  assert.equal(consolidatedPath('/material-ele/gramatica/comparativos-y-superlativos'), '/material-ele/comparativos-y-superlativos');
+  assert.equal(consolidatedPath('/x', '  ["/x", "/y"],\n'), '/y');
+  assert.equal(consolidatedPath('/x', '  ["/x/a1", "/y"],\n'), '/x');
+});
+
 test('retired /material-ele level pages must 308 to their topic page (#357)', async () => {
   const results = await runSmoke('https://spanishcue.com', fixture());
   for (const path of Object.keys(retiredLevels)) assert.ok(results.some(r => r.path === path && r.status === 308), path);
@@ -185,4 +191,10 @@ test('retired /material-ele level pages must 308 to their topic page (#357)', as
   await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [first]: () => new Response('404', { status: 404 }) })), /comparativos-y-superlativos\/c1: expected 308, got 404/);
   await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [first]: () => new Response(null, { status: 308, headers: { location: '/material-ele' } }) })), /wrong redirect target/);
   await assert.rejects(runSmoke('https://spanishcue.com', fixture({ [first]: () => new Response(null, { status: 308, headers: { location: 'https://example.com' + topic } }) })), /foreign redirect/);
+  // SEO plan R1/R3: the 308 lands on the consolidated topic in one hop. Production may still serve the old
+  // grammar-index target until the consolidation is released; staging must already serve the final URL.
+  const previous = { [first]: () => new Response(null, { status: 308, headers: { location: '/material-ele/gramatica/comparativos-y-superlativos' } }) };
+  const production = await runSmoke('https://spanishcue.com', fixture(previous));
+  assert.ok(production.some(r => r.path === first && r.status === 308));
+  await assert.rejects(runSmoke('https://spanishcue-staging.agnremote.workers.dev', fixture(previous)), /wrong redirect target \/material-ele\/gramatica\/comparativos-y-superlativos/);
 });
