@@ -73,3 +73,12 @@ test('a tutor-business guide renders its prose (decrypted from the guide blob in
  assert.ok(d.querySelectorAll('main section h2').length>=4);
  assert.ok([...d.querySelectorAll('main section p')].some(p=>p.textContent.length>120));
 });
+
+// SEO plan step 6, batch L1 (English part, approved 2026-11-26): each guide carries its own unique section.
+for(const [path,id,rows] of [['/guides/spanish-subjunctive-lesson-plan','subjunctive-errors',8],['/spanish-grammar-lessons/por-vs-para-activities','route-or-destination',6],['/spanish-grammar-lessons/conditional-tense-activities','advice-clinic',6],['/guides/preterite-vs-imperfect-activities','timeline-storyboard',5]])test(`grammar guide shows its unique L1 section: ${path}`,async()=>{
+ const response=await fetch(origin+path);assert.equal(response.status,200);
+ const d=new JSDOM(await response.text()).window.document;
+ const section=d.getElementById(id);assert.ok(section,id);
+ assert.equal(section.querySelectorAll('tbody tr').length,rows);
+ assert.ok(section.querySelector('table caption').textContent.length>10);
+});

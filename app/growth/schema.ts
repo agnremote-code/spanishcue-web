@@ -4,6 +4,14 @@ export type BreadcrumbItem = { name: string; href: string };
 
 export const organizationRef = { "@id": `${SITE_ORIGIN}/#organization` };
 
+/**
+ * The brand entity as every page names it (publisher, author, provider). The `@id` ties each
+ * mention to the full Organization node on the homepage (app/growth/SiteSchema.tsx), so Google
+ * reads one entity called SPANISHCUE instead of many anonymous organizations.
+ */
+export const organizationNode = { "@type": "Organization", "@id": `${SITE_ORIGIN}/#organization`, name: SITE_NAME, url: SITE_ORIGIN } as const;
+export const websiteNode = { "@type": "WebSite", "@id": `${SITE_ORIGIN}/#website`, name: SITE_NAME, url: SITE_ORIGIN } as const;
+
 export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",
@@ -32,8 +40,8 @@ export function collectionPageSchema(input: {
     description: input.description,
     url: canonicalUrl(input.pathname),
     inLanguage: input.inLanguage ?? "en",
-    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_ORIGIN },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_ORIGIN },
+    isPartOf: websiteNode,
+    publisher: organizationNode,
     audience: { "@type": "EducationalAudience", educationalRole: "teacher" },
     about: input.about,
     mainEntity: {
@@ -60,13 +68,13 @@ export function webPageSchema(input: { pathname: string; name: string; descripti
     description: input.description,
     url: canonicalUrl(input.pathname),
     inLanguage: input.inLanguage ?? "en",
-    isPartOf: { "@type": "WebSite", name: SITE_NAME, url: SITE_ORIGIN },
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_ORIGIN },
+    isPartOf: websiteNode,
+    publisher: organizationNode,
     audience: { "@type": "EducationalAudience", educationalRole: "teacher" },
     about: input.about,
     ...(input.educationalLevel ? { educationalLevel: input.educationalLevel } : {}),
     ...(image ? { image, primaryImageOfPage: { "@type": "ImageObject", url: image } } : {}),
-    ...(input.dates ? { datePublished: input.dates.datePublished, dateModified: input.dates.dateModified, author: { "@type": "Organization", name: SITE_NAME, url: SITE_ORIGIN } } : {}),
+    ...(input.dates ? { datePublished: input.dates.datePublished, dateModified: input.dates.dateModified, author: organizationNode } : {}),
   };
 }
 
@@ -82,7 +90,7 @@ export function videoObjectSchema(input: { name: string; description: string; th
     uploadDate: `${input.uploadDate}T06:00:00Z`,
     inLanguage: input.inLanguage ?? "es",
     url: canonicalUrl(input.pathname),
-    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_ORIGIN },
+    publisher: organizationNode,
   };
 }
 

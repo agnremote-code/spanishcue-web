@@ -1,0 +1,45 @@
+import assert from 'node:assert/strict';
+import test from 'node:test';
+import {JSDOM} from 'jsdom';
+const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
+const ORG='https://spanishcue.com/#organization';
+
+// SEO plan step 7 (docs/seo-plan/06_SCHEMA/LEEME.md): one page per template. Every JSON-LD block must parse,
+// carry the properties Google requires for its type, and name the brand through the homepage entity's @id.
+const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about'];
+
+const required={
+ BreadcrumbList:n=>n.itemListElement.length>=2&&n.itemListElement.every((it,i)=>it['@type']==='ListItem'&&it.position===i+1&&it.name&&/^https:\/\/spanishcue\.com\//.test(it.item)),
+ FAQPage:n=>n.mainEntity.length>=1&&n.mainEntity.every(q=>q['@type']==='Question'&&q.name&&q.acceptedAnswer?.['@type']==='Answer'&&q.acceptedAnswer.text),
+ VideoObject:n=>n.name&&n.description&&n.thumbnailUrl?.length&&/^\d{4}-\d{2}-\d{2}T/.test(n.uploadDate)&&n.contentUrl,
+ AudioObject:n=>n.name&&n.contentUrl,
+ Article:n=>n.headline&&n.datePublished&&n.author&&n.publisher,
+ LearningResource:n=>n.name&&n.url,
+ WebPage:n=>n.name&&n.url,CollectionPage:n=>n.name&&n.url,AboutPage:n=>n.name||n.url,
+ WebSite:n=>n.name&&n.url&&n['@id']==='https://spanishcue.com/#website',
+ Organization:n=>n.name&&n.url&&n.logo&&n['@id']===ORG,
+};
+const nodesOf=d=>[...d.querySelectorAll('script[type="application/ld+json"]')].flatMap(s=>{const j=JSON.parse(s.textContent);return Array.isArray(j)?j:j['@graph']??[j];});
+const orgMentions=n=>[n.publisher,n.author,n.provider].filter(x=>x&&typeof x==='object'&&[x['@type']].flat().includes('Organization'));
+
+for(const path of paths)test(`structured data is valid and names one brand entity: ${path}`,async()=>{
+ const response=await fetch(origin+path);assert.equal(response.status,200);
+ const d=new JSDOM(await response.text()).window.document;
+ const nodes=nodesOf(d);assert.ok(nodes.length>=1,'no JSON-LD');
+ for(const n of nodes){
+  assert.equal(n['@context'],'https://schema.org',path);
+  const types=[n['@type']].flat();
+  const known=types.filter(t=>required[t]);assert.ok(known.length,`${path}: unknown type ${types}`);
+  for(const t of known)assert.ok(required[t](n),`${path}: ${t} misses required properties`);
+  for(const o of orgMentions(n))assert.equal(o['@id'],ORG,`${path}: ${types} names an organization without the brand @id`);
+ }
+});
+
+test('the homepage declares the brand as an educational organization with the profiles the owner runs',async()=>{
+ const d=new JSDOM(await (await fetch(origin+'/')).text()).window.document;
+ const org=nodesOf(d).find(n=>n['@id']===ORG);
+ assert.deepEqual(org['@type'],['Organization','EducationalOrganization']);
+ assert.equal(org.name,'SPANISHCUE');
+ assert.ok(org.alternateName.includes('SpanishCue')&&org.alternateName.includes('Spanish Cue'));
+ assert.deepEqual(org.sameAs,['https://www.linkedin.com/company/144023469','https://www.youtube.com/channel/UCCLhj6h2hmjGQZ3XVLyrpUg','https://www.pinterest.com/spanishcue/']);
+});

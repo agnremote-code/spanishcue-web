@@ -14796,6 +14796,12 @@
       "text": "**Confundir dormir y dormirse:** «Anoche dormí a las dos» → «Anoche me dormí a las dos».",
       "reason": "Pretérito en primera persona (yo) en el error típico y su corrección, no voseo.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/growth/grammar-topic-extras.ts",
+      "text": "Me levanté, me vestí y salí.",
+      "reason": "Pretérito en primera persona (yo) como ejemplo de acciones sucesivas en la guía del pretérito, no voseo.",
+      "category": "neutral-context"
     }
   ]
 }

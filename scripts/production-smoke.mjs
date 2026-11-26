@@ -1,5 +1,12 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import { pathToFileURL } from "node:url";
+
+/** Destination of a URL consolidated by the SEO plan in this checkout (app/seo-prune.ts), or the path itself. */
+export function consolidatedPath(path, source = readFileSync(new URL("../app/seo-prune.ts", import.meta.url), "utf8")) {
+  const escaped = path.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return source.match(new RegExp(`\\["${escaped}", "([^"]+)"\\]`))?.[1] ?? path;
+}
 
 export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } = {}) {
   origin = new URL(origin).origin;
@@ -79,7 +86,9 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
     assert.equal(location.pathname, "/resources/spanish-grammar-lesson-a1-ser-estar-y-hay-describir-personas-y-lugares", `${legacyResource}: wrong redirect target`);
   }
   // Retired /material-ele level pages (2026-11-03, app/material-ele/temas.ts retiredTemaLevelPaths) 308 to their
-  // topic page and never become a 404.
+  // topic page and never become a 404. When the SEO plan consolidates that topic page (app/seo-prune.ts), the 308
+  // goes straight to the consolidated page in one hop. Staging runs the checkout it was built from, so it must
+  // match this checkout exactly; production may still serve the previous target until that release lands.
   for (const [retired, topic] of [
     ["/material-ele/gramatica/comparativos-y-superlativos/c1", "/material-ele/gramatica/comparativos-y-superlativos"],
     ["/material-ele/gramatica/oraciones-finales/a1", "/material-ele/gramatica/oraciones-finales"],
@@ -87,7 +96,9 @@ export async function runSmoke(origin, fetcher = fetch, { retryDelayMs = 1500 } 
     const moved = await check(retired, 308);
     const location = new URL(moved.headers.get("location") || "", origin);
     assert.equal(location.origin, origin, `${retired}: foreign redirect`);
-    assert.equal(location.pathname, topic, `${retired}: wrong redirect target`);
+    const expected = consolidatedPath(topic);
+    const accepted = origin === "https://spanishcue.com" ? [expected, topic] : [expected];
+    assert.ok(accepted.includes(location.pathname), `${retired}: wrong redirect target ${location.pathname}`);
   }
   const students = await check("/api/students", 401);
   assert.match(students.headers.get("cache-control") || "", /no-store/i);

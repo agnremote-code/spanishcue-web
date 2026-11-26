@@ -218,8 +218,11 @@ test("the homepage never ships hidden text and carries site-wide Organization an
   assert.doesNotMatch(schema, /"(?:aggregateRating|review|award)"/);
   assert.match(schema, /alternateName: BRAND_ALTERNATE_NAMES/);
   assert.match(schema, /BRAND_ALTERNATE_NAMES = \["SpanishCue", "Spanish Cue", "spanishcue", "spanishcue.com"\]/);
-  assert.match(schema, /BRAND_PROFILES = \["https:\/\/www\.linkedin\.com\/company\/144023469"\]/);
-  assert.doesNotMatch(schema, /facebook|instagram|twitter|x\.com|youtube|tiktok/i, "only profiles the owner runs may be declared");
+  // Only profiles the owner runs: the LinkedIn company page, the SpanishCue YouTube channel and the
+  // @spanishcue Pinterest account (SEO plan step 7). Personal or unused networks stay out.
+  assert.match(schema, /BRAND_PROFILES = \[\s*"https:\/\/www\.linkedin\.com\/company\/144023469",\s*"https:\/\/www\.youtube\.com\/channel\/UCCLhj6h2hmjGQZ3XVLyrpUg",\s*"https:\/\/www\.pinterest\.com\/spanishcue\/",\s*\]/);
+  assert.doesNotMatch(schema, /facebook|instagram|twitter|x\.com|tiktok/i, "only profiles the owner runs may be declared");
+  assert.match(schema, /"@type": \["Organization", "EducationalOrganization"\]/);
 });
 
 test("indexable hub pages declare clean canonicals and the layout no longer emits parameter alternates", () => {

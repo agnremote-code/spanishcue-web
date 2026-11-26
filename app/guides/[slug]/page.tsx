@@ -75,11 +75,13 @@ export default async function GuidePage({ params }: GuidePageProps) {
     dateModified: guideModifiedDate(guide),
     author: {
       "@type": "Organization",
+      "@id": "https://spanishcue.com/#organization",
       name: "SPANISHCUE",
       url: "https://spanishcue.com",
     },
     publisher: {
       "@type": "Organization",
+      "@id": "https://spanishcue.com/#organization",
       name: "SPANISHCUE",
       url: "https://spanishcue.com",
     },
@@ -90,7 +92,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "SPANISHCUE", item: "https://spanishcue.com" },
+      { "@type": "ListItem", position: 1, name: "SPANISHCUE", item: "https://spanishcue.com/" },
       { "@type": "ListItem", position: 2, name: "Teaching Guides", item: "https://spanishcue.com/guides" },
       { "@type": "ListItem", position: 3, name: guide.title, item: canonical },
     ],

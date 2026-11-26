@@ -9,8 +9,11 @@
  *   node scripts/indexnow-ping.mjs --before before.xml [--after https://spanishcue.com/sitemap.xml]
  *   node scripts/indexnow-ping.mjs --all                 # resubmit every sitemap URL (manual use)
  *
- * --before: the sitemap captured before the deploy; only URLs absent from it are
- * submitted, so unchanged pages are never resubmitted on every deploy.
+ * --before: the sitemap captured before the deploy. Only URLs that changed status are
+ * submitted: new URLs, and URLs that left the sitemap (consolidated with a 301 or taken
+ * out with noindex by the SEO plan, app/seo-prune.ts), so Bing recrawls them and sees the
+ * redirect or the noindex instead of keeping the old page. Unchanged pages are never
+ * resubmitted on every deploy.
  */
 import { readFileSync } from 'node:fs';
 
@@ -27,14 +30,24 @@ export function newUrls(beforeXml, afterXml) {
   return sitemapUrls(afterXml).filter(u => !before.has(u));
 }
 
+/** URLs listed before the deploy and gone from the new sitemap (301 or noindex). */
+export function removedUrls(beforeXml, afterXml) {
+  const after = new Set(sitemapUrls(afterXml));
+  return sitemapUrls(beforeXml).filter(u => !after.has(u));
+}
+
+export function changedUrls(beforeXml, afterXml) {
+  return [...newUrls(beforeXml, afterXml), ...removedUrls(beforeXml, afterXml)];
+}
+
 async function main() {
   const args = process.argv.slice(2);
   const opt = name => { const i = args.indexOf(name); return i === -1 ? undefined : args[i + 1]; };
   const after = opt('--after') ?? `https://${INDEXNOW_HOST}/sitemap.xml`;
   // Own User-Agent: the Worker's anti-scrape rule exempts IndexNow traffic, never an anonymous fetcher.
   const afterXml = await (await fetch(after, { headers: { 'user-agent': 'SpanishCue-IndexNow/1.0' } })).text();
-  const urls = args.includes('--all') ? sitemapUrls(afterXml) : newUrls(opt('--before') ? readFileSync(opt('--before'), 'utf8') : '', afterXml);
-  if (!urls.length) { console.log('IndexNow: no new URLs to submit.'); return; }
+  const urls = args.includes('--all') ? sitemapUrls(afterXml) : changedUrls(opt('--before') ? readFileSync(opt('--before'), 'utf8') : '', afterXml);
+  if (!urls.length) { console.log('IndexNow: no new or removed URLs to submit.'); return; }
   const body = { host: INDEXNOW_HOST, key: INDEXNOW_KEY, keyLocation: `https://${INDEXNOW_HOST}/${INDEXNOW_KEY}.txt`, urlList: urls.slice(0, 10000) };
   const response = await fetch(ENDPOINT, { method: 'POST', headers: { 'content-type': 'application/json; charset=utf-8' }, body: JSON.stringify(body) });
   console.log(`IndexNow: submitted ${body.urlList.length} URLs, HTTP ${response.status}`);

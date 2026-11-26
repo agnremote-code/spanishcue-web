@@ -116,6 +116,7 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
     },
     provider: {
       "@type": "Organization",
+      "@id": "https://spanishcue.com/#organization",
       name: "SPANISHCUE",
       url: "https://spanishcue.com",
     },

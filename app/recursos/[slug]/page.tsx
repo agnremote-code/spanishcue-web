@@ -87,7 +87,7 @@ export default async function RecursoPage({ params }: Props) {
     learningResourceType: world3d ? [typeLabel, "Mundo 3D interactivo"] : typeLabel,
     audience: { "@type": "EducationalAudience", educationalRole: "teacher" },
     isAccessibleForFree: free,
-    provider: { "@type": "Organization", name: "SPANISHCUE", url: "https://spanishcue.com" },
+    provider: { "@type": "Organization", "@id": "https://spanishcue.com/#organization", name: "SPANISHCUE", url: "https://spanishcue.com" },
   };
   const breadcrumbs = breadcrumbSchema([
     { name: "SpanishCue", href: "/" },
