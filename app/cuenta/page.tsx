@@ -60,7 +60,7 @@ export default async function Account({
   const accountId = accountIdFromHeaders(requestHeaders);
   let referral: Awaited<ReturnType<typeof referralSummary>> | null = null;
   // Free teachers invite too: their free month stays queued until they subscribe (app/referrals-server.ts).
-  if ((tab === "suscripcion" || tab === "inicio") && !session.isOwner && accountId) {
+  if (tab === "suscripcion" && !session.isOwner && accountId) {
     try { referral = await referralSummary(env.DB, accountId); } catch { referral = null; }
   }
   const referralUrl = referral ? `https://spanishcue.com/invitar/${referral.code}` : "";
@@ -116,13 +116,14 @@ export default async function Account({
         <main className="cx-main" id="cx-main" tabIndex={-1}>
           <header className="cx-head">
             <p className="cx-kicker">{tab === "inicio" ? `${t("home.hello")}, ${name}` : t("nav.account")}</p>
-            <h1>{t(`head.${tab}` as DashKey)}</h1>
+            {/* Free accounts: the H1 of the home tab is «Crea tu primer alumno» (FirstStudent). */}
+            {tab === "inicio" && !fullAccess ? <h2>{t(`head.${tab}` as DashKey)}</h2> : <h1>{t(`head.${tab}` as DashKey)}</h1>}
             <p>{t(`head.${tab}Copy` as DashKey)}</p>
           </header>
 
           <SectionBoundary>
-            {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled homeworkFree={!fullAccess} plan={plan} inviteReady={Boolean(referral)} />}
-            {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} homeworkEnabled homeworkFree={!fullAccess} />}
+            {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled homeworkFree={!fullAccess} plan={plan} />}
+            {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} homeworkEnabled homeworkFree={!fullAccess} initialStudent={params.alumno ?? null} />}
             {tab === "historial" && <History lessons={dashLessons} startNew={params.nuevo === "1"} studentId={params.alumno ?? null} view={params.vista === "abiertas" ? "abiertas" : "registradas"} />}
             {tab === "favoritos" && <Favorites lessons={dashLessons} fullAccess={fullAccess} />}
             {tab === "suscripcion" && <div className="cx-stack">
