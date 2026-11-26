@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "authorization": "Owner approval on 2026-11-26 in the conversion thread cmsg_01Gr5R4j3t2Yet65UcmhcVhA8Kr8Tx8aRsnfTdEMkbVEL2: the owner chose «Sí, publicalo en inglés» on decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhAL8CCNRpyGFfQoK46svZ8pp («Aprobar el popup de mail en inglés para las páginas en inglés»). The email gift popup and its form show English on English SEO pages instead of Spanish. This manifest approves only the exact English literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    { "path": "app/newsletter/EmailGiftPopup.tsx", "text": "Close" },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "We could not save your email. Please try again." },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "No connection. Please try again." },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "Done! The lesson is now unlocked in this browser. We also sent it to your email." },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "Open the lesson" },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "Website" },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "you@email.com" },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "Your email" },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "I want the SpanishCue newsletter with ideas for my Spanish lessons. I can unsubscribe at any time." },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "Unlocking…" },
+    { "path": "app/newsletter/GiftSignup.tsx", "text": "Unlock the free lesson" }
+  ]
+}
