@@ -231,7 +231,7 @@ test('account welcome carries a single offer: US$0,99 week until 30-nov, then 10
   const beforeEnd = Date.UTC(2026, 10, 30, 23, 0) / 1000;
   const afterEnd = Date.UTC(2026, 11, 2) / 1000;
   const week = mod.accountWelcomeEmail('https://spanishcue.test', 'a'.repeat(48), beforeEnd);
-  assert.match(week.text, /Primera semana por US\$0,99/);
+  assert.match(week.text, /10 días por US\$0,99/);
   assert.match(week.text, /Hasta el 30 de noviembre\. Después, US\$19,90\/mes/);
   assert.doesNotMatch(week.text, /10 %|17,91/);
   const discount = mod.accountWelcomeEmail('https://spanishcue.test', 'a'.repeat(48), afterEnd);

@@ -88,7 +88,7 @@ export async function POST(request: Request) {
       occurredAt,
     }, billing);
     if (recorded.kind === "trial" && payment.offer === "promo") {
-      await schedulePromoReminder(env, env.DB, { userId, provider: "paddle", subscriptionId, chargeAt: payment.paidThrough });
+      await schedulePromoReminder(env, env.DB, { userId, provider: "paddle", subscriptionId, chargeAt: payment.paidThrough, startedAt: payment.paidAt });
     }
 
     return Response.json(

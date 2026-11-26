@@ -20,8 +20,8 @@ import ele from "./material-ele.module.css";
 
 export const PRICING_PATH = "/pricing";
 export const PRICE_LABEL = "US$19,90 al mes";
-/** Promo week (app/promo-config.ts): while it runs, every buy button of the SEO pages offers the US$0,99 first week. */
-export const PROMO_LABEL = "Probar PRO · US$0,99 la primera semana";
+/** Promo week (app/promo-config.ts): while it runs, every buy button of the SEO pages offers the US$0,99 first 10 days. */
+export const PROMO_LABEL = "Probar PRO · US$0,99 los primeros 10 días";
 export const PROMO_NOTE = `Luego ${PRICE_LABEL} · Cancelas cuando quieras`;
 /** The free grammar class the home page opens: no account, no card. */
 export const FREE_CLASS_PATH = "/gramatica/indefinido-e-imperfecto";
@@ -227,7 +227,7 @@ export function EleBuyBand() {
   const promo = promoWeekActive();
   return (
     <section className={styles.ctaBand} aria-label="Suscribirse a SpanishCue PRO">
-      <h2>{promo ? "Todas las clases, todos los niveles: tu primera semana por US$0,99." : `Todas las clases, todos los niveles, ${PRICE_LABEL}.`}</h2>
+      <h2>{promo ? "Todas las clases, todos los niveles: tus primeros 10 días por US$0,99." : `Todas las clases, todos los niveles, ${PRICE_LABEL}.`}</h2>
       <p>Gramática de A1 a C2, mundos 3D de conversación, comprensión auditiva y seguimiento de cada alumno. {promo ? `${PROMO_NOTE}.` : "Pruebas gratis las clases marcadas GRATIS y te suscribes cuando quieras. Puedes cancelar cuando quieras."}</p>
       <div className={styles.heroActions}>
         <Link className={ele.buyButton} href={PRICING_PATH}>{promo ? `${PROMO_LABEL} →` : `Suscribirse · ${PRICE_LABEL}`}</Link>

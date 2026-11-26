@@ -1,4 +1,4 @@
-import { DISCOUNT_10_CENTS, DISCOUNT_10_PERCENT, DISCOUNT_10_THEN_CENTS, PROMO_WEEK_CENTS, PROMO_WEEK_THEN_CENTS, PROMO_WEEK_UNTIL, promoWeekActive } from '../promo-config';
+import { DISCOUNT_10_CENTS, DISCOUNT_10_PERCENT, DISCOUNT_10_THEN_CENTS, PROMO_WEEK_CENTS, PROMO_WEEK_DAYS, PROMO_WEEK_THEN_CENTS, PROMO_WEEK_UNTIL, promoWeekActive } from '../promo-config';
 import { GIFT_AUDIO_PATH, GIFT_LESSON_ID, GIFT_LESSON_LEVEL, GIFT_LESSON_PATH, GIFT_LESSON_PITCH, GIFT_LESSON_TITLE } from './gift';
 
 // Imported only by route handlers and the Worker. Never import from a client component.
@@ -162,11 +162,11 @@ export function welcomeEmail(origin: string, unsubscribeToken: string) {
 
 /**
  * One offer per mail, the one the site shows a signed-in FREE teacher at send time:
- * the US$0.99 first week while it runs (until 30-nov), then the 10% first month by card.
+ * the US$0.99 first 10 days while it runs (until 30-nov), then the 10% first month by card.
  */
 export function accountOffer(nowSeconds = Math.floor(Date.now() / 1000)) {
   if (promoWeekActive(nowSeconds)) {
-    return { cta: `Primera semana por US$${usd(PROMO_WEEK_CENTS)}`, detail: `Hasta el ${PROMO_WEEK_UNTIL.es}. Después, US$${usd(PROMO_WEEK_THEN_CENTS)}/mes hasta que lo canceles.`, campaign: 'cuenta_d0_semana' };
+    return { cta: `${PROMO_WEEK_DAYS} días por US$${usd(PROMO_WEEK_CENTS)}`, detail: `Hasta el ${PROMO_WEEK_UNTIL.es}. Después, US$${usd(PROMO_WEEK_THEN_CENTS)}/mes hasta que lo canceles.`, campaign: 'cuenta_d0_semana' };
   }
   return { cta: `${DISCOUNT_10_PERCENT} % de descuento en tu primer mes`, detail: `US$${usd(DISCOUNT_10_CENTS)} el primer mes con tarjeta. Después, US$${usd(DISCOUNT_10_THEN_CENTS)}/mes hasta que lo canceles.`, campaign: 'cuenta_d0_descuento10' };
 }

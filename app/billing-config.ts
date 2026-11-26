@@ -6,10 +6,13 @@ export const PAYPAL_LIVE_MONTHLY_PLAN_ID = "P-6KF00654VL845614NNLVQQNY";
 export const PAYPAL_LIVE_PRICE_CENTS = 1990;
 /** Amounts a PayPal payment may carry: the legacy US$15 Founder plan and, in Live, the US$19.90 plan. */
 export const PAYPAL_ALLOWED_CENTS = [APPROVED_PRICE_CENTS, PAYPAL_LIVE_PRICE_CENTS] as const;
-/** PayPal Live plan of the promo week (US$0.99 for 7 days, then US$19.90/month), created once by the
- * server on 2026-11-17 (owner order) and pinned here. Sandbox still finds or creates its own by name. */
-export const PAYPAL_LIVE_PROMO_PLAN_ID = "P-3BW31966S0028752HNL6KR5Y";
-export const PAYPAL_PROMO_PLAN_NAME = "SpanishCue PRO · primera semana US$0.99, luego US$19.90/mes";
+/** PayPal Live plan of the promo (US$0.99 for 10 days, then US$19.90/month, owner order 2026-11-26).
+ * Empty until the server creates it once; then pinned here. Sandbox finds or creates its own by name. */
+export const PAYPAL_LIVE_PROMO_PLAN_ID = "";
+export const PAYPAL_PROMO_PLAN_NAME = "SpanishCue PRO · 10 días US$0.99, luego US$19.90/mes";
+/** The original 7-day promo plan (2026-11-17), created by the server and kept only so subscriptions
+ * already on it stay valid. It is never offered again. */
+export const PAYPAL_LIVE_PROMO_LEGACY_PLAN_ID = "P-3BW31966S0028752HNL6KR5Y";
 export const APPROVED_CURRENCY = "USD";
 export const APPROVED_FOUNDER_LIMIT = 1000;
 export const APPROVED_INTERVAL = { unit: "MONTH", count: 1 } as const;
@@ -25,6 +28,8 @@ export type BillingRuntimeConfig = {
   legacyFounderPlanId?: string;
   /** Set per request only after the promo plan was fetched from PayPal and its terms verified. */
   promoPlanId?: string;
+  /** Length in days of that verified promo plan's paid trial (10, or 7 on the original plan). */
+  promoPlanDays?: number;
   publicCheckoutEnabled: boolean;
   supervisedUserId: string;
   founderOffer: {

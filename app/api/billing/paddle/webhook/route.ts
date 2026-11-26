@@ -180,7 +180,7 @@ export async function POST(request: Request) {
       });
       await processReferrals(env.DB, paddle, { userId, subscriptionId, subscription, referralFree: payment.referralFree });
       if (recorded.kind === "trial" && payment.offer === "promo") {
-        await schedulePromoReminder(env, env.DB, { userId, provider: "paddle", subscriptionId, chargeAt: payment.paidThrough });
+        await schedulePromoReminder(env, env.DB, { userId, provider: "paddle", subscriptionId, chargeAt: payment.paidThrough, startedAt: payment.paidAt });
       }
       await finishPaddleWebhook(env.DB, eventId, "processed");
       return Response.json({ ok: true });
