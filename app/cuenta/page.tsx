@@ -59,7 +59,8 @@ export default async function Account({
 
   const accountId = accountIdFromHeaders(requestHeaders);
   let referral: Awaited<ReturnType<typeof referralSummary>> | null = null;
-  if (tab === "suscripcion" && fullAccess && !session.isOwner && accountId) {
+  // Free teachers invite too: their free month stays queued until they subscribe (app/referrals-server.ts).
+  if ((tab === "suscripcion" || tab === "inicio") && !session.isOwner && accountId) {
     try { referral = await referralSummary(env.DB, accountId); } catch { referral = null; }
   }
   const referralUrl = referral ? `https://spanishcue.com/invitar/${referral.code}` : "";
@@ -120,7 +121,7 @@ export default async function Account({
           </header>
 
           <SectionBoundary>
-            {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled homeworkFree={!fullAccess} plan={plan} />}
+            {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled homeworkFree={!fullAccess} plan={plan} inviteReady={Boolean(referral)} />}
             {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} homeworkEnabled homeworkFree={!fullAccess} />}
             {tab === "historial" && <History lessons={dashLessons} startNew={params.nuevo === "1"} studentId={params.alumno ?? null} view={params.vista === "abiertas" ? "abiertas" : "registradas"} />}
             {tab === "favoritos" && <Favorites lessons={dashLessons} fullAccess={fullAccess} />}
@@ -135,7 +136,7 @@ export default async function Account({
               {!session.isOwner && <SubscriptionManager fullAccess={fullAccess} />}
               {referral && <section className="cx-panel cx-referral" aria-labelledby="referral-title">
                 <header><h2 id="referral-title">{es ? "Invita a un colega" : "Invite a colleague"}</h2></header>
-                <p>{es ? "Comparte tu enlace. Cuando un profesor se suscribe y paga su primer mes, su segundo mes es gratis y tú también recibes un mes gratis." : "Share your link. When a teacher subscribes and pays their first month, their second month is free and you get a free month too."}</p>
+                <p>{es ? (fullAccess ? "Comparte tu enlace. Cuando un profesor se suscribe y paga su primer mes, su segundo mes es gratis y tú también recibes un mes gratis." : "Comparte tu enlace. Cuando un colega se suscribe y paga su primer mes, su segundo mes es gratis y a ti te queda un mes gratis guardado para cuando actives PRO.") : "Share your link. When a teacher subscribes and pays their first month, their second month is free and you get a free month too."}</p>
                 <input className="cx-referral-link" readOnly value={referralUrl} aria-label={es ? "Tu enlace de invitación" : "Your invitation link"} />
                 <p className="cx-actions"><a className="cx-btn is-primary" href={`https://wa.me/?text=${encodeURIComponent((es ? "Uso SPANISHCUE para mis clases de español. Con mi enlace tu segundo mes es gratis: " : "I use SPANISHCUE for my Spanish lessons. With my link your second month is free: ") + referralUrl)}`} target="_blank" rel="noopener noreferrer">WhatsApp</a> <a className="cx-btn" href={`mailto:?subject=${encodeURIComponent("SPANISHCUE")}&body=${encodeURIComponent((es ? "Con mi enlace tu segundo mes de SPANISHCUE es gratis: " : "With my link your second month of SPANISHCUE is free: ") + referralUrl)}`}>Email</a></p>
                 <p className="cx-muted">{es ? `Colegas suscritos: ${referral.qualified} · Meses gratis pendientes: ${referral.pending} · Usados: ${referral.used}. El mes gratis se aplica a la suscripción mensual con tarjeta.` : `Colleagues subscribed: ${referral.qualified} · Free months pending: ${referral.pending} · Used: ${referral.used}. The free month applies to the monthly card subscription.`}</p>
