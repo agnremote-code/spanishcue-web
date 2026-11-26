@@ -61,7 +61,7 @@
 .cx-main { min-width: 0; outline: none; }
 .cx-head { margin: 4px 0 18px; }
 .cx-kicker { margin: 0 0 6px; font-size: 12px; letter-spacing: 1.6px; text-transform: uppercase; font-weight: 900; color: var(--cx-cobalt); }
-.cx-head h1 { margin: 0; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.1; }
+.cx-head h1, .cx-head h2 { margin: 0; font-size: clamp(26px, 3.2vw, 38px); line-height: 1.1; }
 .cx-head p:last-child { margin: 6px 0 0; color: var(--cx-muted); }
 .cx-stack { display: grid; gap: 14px; }
 .cx-panel { background: #fff; border: 1px solid var(--cx-line); border-radius: 18px; padding: 16px 18px; min-width: 0; }
@@ -273,3 +273,23 @@
 .cx-referral p { margin: 0 0 10px; }
 .cx-referral-link { width: 100%; box-sizing: border-box; padding: 10px 12px; margin: 0 0 10px; border: 1px solid var(--cx-line, #d6dbe6); border-radius: 10px; font: inherit; background: transparent; color: inherit; }
 .cx-referral .cx-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+
+/* First screen of a free account: create a student, send Homework, see progress. */
+.cx-first-student { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 22px; align-items: start; border-color: #9cc3f5; }
+.cx-first-student h1 { margin: 0 0 4px; font-size: clamp(24px, 2.8vw, 32px); line-height: 1.15; }
+.cx-first-student-steps { list-style: none; margin: 14px 0 0; padding: 0; display: grid; gap: 10px; }
+.cx-first-student-steps li { border: 1px solid var(--cx-line); border-radius: 14px; padding: 12px 14px; display: grid; gap: 8px; }
+.cx-first-student-steps li.is-current { border-color: #0961e8; background: #f4f9ff; }
+.cx-first-student-steps li.is-done h2 { color: #1f7a4d; }
+.cx-first-student-steps li.is-locked { opacity: .55; }
+.cx-first-student-steps h2 { margin: 0; font-size: 16px; }
+.cx-first-student-steps p { margin: 0; }
+.cx-first-student-form { grid-template-columns: minmax(0, 1fr) 110px auto; align-items: end; }
+.cx-first-student-link { display: grid; gap: 4px; }
+.cx-first-student-link input { min-height: 40px; padding: 8px 11px; border: 1px solid #b9cde7; border-radius: 10px; font: inherit; min-width: 0; }
+.cx-first-student-video video, .cx-first-student-video-slot { width: 100%; aspect-ratio: 16 / 9; border-radius: 14px; display: block; }
+.cx-first-student-video-slot { display: grid; place-items: center; background: linear-gradient(135deg, #0b2a55, #0961e8); color: #fff; font-weight: 800; text-align: center; padding: 12px; }
+@media (max-width: 900px) {
+  .cx-first-student { grid-template-columns: minmax(0, 1fr); }
+  .cx-first-student-form { grid-template-columns: minmax(0, 1fr); }
+}

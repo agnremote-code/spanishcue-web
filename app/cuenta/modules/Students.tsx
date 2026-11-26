@@ -49,7 +49,7 @@ function homeworkState(profile: Profile, now: number): { key: HomeworkFilter; da
   return { key: days <= ACTIVE_DAYS ? "studying" : "idle", days };
 }
 
-export default function Students({ lessons, startNew, homeworkEnabled, homeworkFree = false }: { lessons: DashLesson[]; startNew: boolean; homeworkEnabled: boolean; homeworkFree?: boolean }) {
+export default function Students({ lessons, startNew, homeworkEnabled, homeworkFree = false, initialStudent = null }: { lessons: DashLesson[]; startNew: boolean; homeworkEnabled: boolean; homeworkFree?: boolean; initialStudent?: string | null }) {
   const { t, locale } = useDash();
   const [students, reload] = useLoad<{ students: Student[] }>("/api/students");
   const [records, reloadRecords] = useLoad<{ records: ClassRecord[] }>("/api/class-records");
@@ -58,8 +58,8 @@ export default function Students({ lessons, startNew, homeworkEnabled, homeworkF
   const [level, setLevel] = useState<string>("");
   const [filter, setFilter] = useState<Filter>("active");
   const [hwFilter, setHwFilter] = useState<HomeworkFilter>("");
-  const [selected, setSelected] = useState<string | null>(null);
-  const [tab, setTab] = useState<Tab>("resumen");
+  const [selected, setSelected] = useState<string | null>(initialStudent);
+  const [tab, setTab] = useState<Tab>(initialStudent && homeworkEnabled ? "tarea" : "resumen");
   const [form, setForm] = useState<{ mode: "new" | "edit"; draft: Draft } | null>(startNew ? { mode: "new", draft: emptyDraft() } : null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
