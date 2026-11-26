@@ -286,8 +286,8 @@ export default function CheckoutButton({ signedIn, returnTo, variant = "default"
         {es ? "Probar PRO US$0,99" : "Try PRO US$0.99"}
       </a>}
       <p className="checkout-promo-terms">{es
-        ? "US$0,99 la primera semana. Luego se renueva automáticamente a US$19,90/mes. Cancelas cuando quieras."
-        : "US$0.99 for the first week. Then renews automatically at US$19.90/month. Cancel anytime."}</p>
+        ? "US$0,99 los primeros 10 días. Luego se renueva automáticamente a US$19,90/mes. Cancelas cuando quieras."
+        : "US$0.99 for the first 10 days. Then renews automatically at US$19.90/month. Cancel anytime."}</p>
     </div>;
   }
   /** The 10% offer, reached from its card (/acceso?oferta=descuento10): it takes the promo week's place. */

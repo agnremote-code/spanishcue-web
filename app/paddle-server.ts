@@ -1,4 +1,4 @@
-import { DISCOUNT_10_CENTS, DISCOUNT_10_CODE, DISCOUNT_10_THEN_CENTS, PROMO_WEEK_CENTS, PROMO_WEEK_CODE, PROMO_WEEK_DAYS, PROMO_WEEK_THEN_CENTS } from "./promo-config";
+import { DISCOUNT_10_CENTS, DISCOUNT_10_CODE, DISCOUNT_10_THEN_CENTS, PROMO_ALLOWED_DAYS, PROMO_WEEK_CENTS, PROMO_WEEK_CODE, PROMO_WEEK_DAYS, PROMO_WEEK_THEN_CENTS } from "./promo-config";
 import { PADDLE_MONTHLY_PRICE_ID, PADDLE_LEGACY_MONTHLY_PRICE_ID, PADDLE_TRIAL_PRICE_ID, PADDLE_ANNUAL_PRICE_ID, PADDLE_LEGACY_ANNUAL_PRICE_ID, PADDLE_LEGACY_ANNUAL_CENTS, PADDLE_MONTHLY_CENTS, PADDLE_TRIAL_CENTS, PADDLE_ANNUAL_CENTS, PADDLE_PRODUCT_ID, PADDLE_REFERRAL_DISCOUNT_ID, type PaddleRuntimeConfig, type PaddleOffer } from "./paddle-config";
 
 type PaddlePrice = {
@@ -118,12 +118,12 @@ export async function createPaddleCheckoutTransaction(
   return data.id;
 }
 
-/** The promo price is created with each transaction (non-catalog), on the PRO product: first
- * week US$0.99, then US$19.90 every month. Nothing in the Paddle catalog changes. */
+/** The promo price is created with each transaction (non-catalog), on the PRO product: the first
+ * PROMO_WEEK_DAYS days US$0.99, then US$19.90 every month. Nothing in the Paddle catalog changes. */
 export function paddlePromoPrice() {
   return {
     product_id: PADDLE_PRODUCT_ID,
-    name: "First week US$0.99, then US$19.90/month",
+    name: `First ${PROMO_WEEK_DAYS} days US$0.99, then US$19.90/month`,
     description: `SpanishCue PRO promo ${PROMO_WEEK_CODE}: ${PROMO_WEEK_DAYS} days at US$0.99, then US$19.90 monthly`,
     unit_price: { amount: String(PROMO_WEEK_THEN_CENTS), currency_code: "USD" },
     billing_cycle: { interval: "month", frequency: 1 },
@@ -275,12 +275,12 @@ export function paddleOffer(entity: Pick<PaddleTransaction, "items">, config: Pa
   if (price.id === PADDLE_LEGACY_MONTHLY_PRICE_ID && price.trial_period == null
       && (amount === "1550" || (config.legacyMonthly && amount === "1500"))) return "monthly";
   const trial = price.trial_period;
-  // The promo week: a non-catalog price of the PRO product (so it has no pinned ID), accepted only
+  // The promo trial (10 days, or 7 for subscriptions started before 2026-11-26): a non-catalog price of the PRO product (so it has no pinned ID), accepted only
   // with exactly the promo terms on a price that is none of the catalog ones. Only the server can
   // create prices on the account.
   if (amount === String(PROMO_WEEK_THEN_CENTS) && typeof price.id === "string" && price.id.startsWith("pri_")
       && ![config.priceId, config.trialPriceId, config.annualPriceId, PADDLE_LEGACY_MONTHLY_PRICE_ID, PADDLE_LEGACY_ANNUAL_PRICE_ID].includes(price.id)
-      && trial?.interval === "day" && trial.frequency === PROMO_WEEK_DAYS && trial.requires_payment_method !== false
+      && trial?.interval === "day" && (PROMO_ALLOWED_DAYS as readonly unknown[]).includes(trial.frequency) && trial.requires_payment_method !== false
       && trial.unit_price?.amount === String(PROMO_WEEK_CENTS) && trial.unit_price.currency_code === "USD") return "promo";
   // The 10% offer: the same safeguards, exactly one paid month at US$17.91, then US$19.90/month.
   if (amount === String(DISCOUNT_10_THEN_CENTS) && typeof price.id === "string" && price.id.startsWith("pri_")
@@ -320,7 +320,9 @@ export function paddleCompletedPayment(transaction: PaddleTransaction, subscript
       || transaction.customer_id !== subscription.customer_id) return null;
   const amountCents = Number(transaction.details?.totals?.total);
   const isTrial = offer === "promo" ? amountCents === PROMO_WEEK_CENTS : offer === "discount10" ? amountCents === DISCOUNT_10_CENTS : amountCents === PADDLE_TRIAL_CENTS;
-  const trialSeconds = (offer === "promo" ? PROMO_WEEK_DAYS : 1) * 86400;
+  // The promo lasts as many days as its own price says (10, or 7 on the original terms).
+  const promoDays = Number(transaction.items?.[0].price?.trial_period?.frequency);
+  const trialSeconds = (offer === "promo" ? promoDays : 1) * 86400;
   // The discounted first month is a calendar month (28 to 31 days), like a regular monthly period.
   const trialLengthValid = (seconds: number) => offer === "discount10" ? seconds >= 28 * 86400 && seconds <= 31 * 86400 : seconds === trialSeconds;
   const period = transaction.billing_period ?? (isTrial && subscription.status === "trialing" ? subscription.current_billing_period : null);

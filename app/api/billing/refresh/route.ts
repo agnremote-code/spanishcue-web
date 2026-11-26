@@ -92,10 +92,10 @@ export async function POST(request: Request) {
       const amountCents = cents(money.value);
       const occurredAt = seconds(transaction.time);
       if (amountCents === null || occurredAt === null) continue;
-      // On the promo plan the US$0.99 week ends 7 days after its charge, whatever PayPal bills next.
+      // On the promo plan the US$0.99 trial ends its plan's days (10, or 7 on the original plan) after its charge.
       const promoTrial = promoPlan && amountCents === PROMO_WEEK_CENTS;
       const nextBilling = seconds(paypal.billing_info?.next_billing_time);
-      const paidThrough = promoTrial ? occurredAt + 7 * 86400 : nextBilling;
+      const paidThrough = promoTrial ? occurredAt + (config.promoPlanDays ?? 7) * 86400 : nextBilling;
       const recorded = await recordPaypalPayment(env.DB, {
         environment: config.paypalEnv,
         paypalSubscriptionId: subscriptionId,
@@ -108,7 +108,7 @@ export async function POST(request: Request) {
         promoPlan,
       }, config);
       if (recorded.kind === "trial" && promoTrial && paidThrough && paidThrough > Math.floor(Date.now() / 1000)) {
-        await schedulePromoReminder(env, env.DB, { userId, provider: "paypal", subscriptionId, chargeAt: paidThrough });
+        await schedulePromoReminder(env, env.DB, { userId, provider: "paypal", subscriptionId, chargeAt: paidThrough, startedAt: occurredAt });
       }
     }
     const updated = await currentSubscriptionForUser(env.DB, userId, config.paypalEnv);

@@ -22,7 +22,7 @@ export default function PromoHeroCta({ locale, href, freeHref, placement, tone =
       href={href}
       onClick={() => trackMarketingEvent("cta_click", { placement, cta_type: "buy", destination: href })}
     >
-      <span>{es ? "PROBAR PRO · US$0,99 LA PRIMERA SEMANA" : "TRY PRO · US$0.99 FIRST WEEK"}</span>
+      <span>{es ? "PROBAR PRO · US$0,99 LOS PRIMEROS 10 DÍAS" : "TRY PRO · US$0.99 FOR 10 DAYS"}</span>
       <b aria-hidden="true">→</b>
     </a>
     <p className="promo-hero-cta-note">

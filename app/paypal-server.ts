@@ -3,11 +3,12 @@ import {
   APPROVED_INTERVAL,
   APPROVED_PRICE_CENTS,
   PAYPAL_ALLOWED_CENTS,
+  PAYPAL_LIVE_PROMO_LEGACY_PLAN_ID,
   PAYPAL_LIVE_PROMO_PLAN_ID,
   PAYPAL_PROMO_PLAN_NAME,
   type BillingRuntimeConfig,
 } from "./billing-config";
-import { PROMO_WEEK_CENTS, PROMO_WEEK_CODE, PROMO_WEEK_THEN_CENTS } from "./promo-config";
+import { PROMO_LEGACY_DAYS, PROMO_WEEK_CENTS, PROMO_WEEK_CODE, PROMO_WEEK_DAYS, PROMO_WEEK_THEN_CENTS } from "./promo-config";
 
 type PaypalLink = { href?: unknown; rel?: unknown };
 export type PaypalSubscription = {
@@ -50,7 +51,7 @@ function cents(value: unknown) {
 }
 
 /** A payment carries the current plan price, or US$15 for a subscription still on the legacy Founder plan.
- * A subscription on the verified promo plan (`planId`) pays US$0.99 for its first week and then US$19.90. */
+ * A subscription on the verified promo plan (`planId`) pays US$0.99 for its paid trial and then US$19.90. */
 export function validatePaypalPayment(money: PaypalMoney, config: BillingRuntimeConfig, planId?: unknown) {
   const amount = cents(money.value);
   if (config.promoPlanId && planId === config.promoPlanId) {
@@ -152,54 +153,73 @@ export async function setupPaypalBilling(config: BillingRuntimeConfig, origin: s
   return { productId: config.productId, founderPlanId: config.founderPlanId, webhookId: config.webhookId };
 }
 
-/** The promo plan: one US$0.99 trial week, then US$19.90 every month, on the PRO product, no setup fee. */
-export function validatePaypalPromoPlan(plan: PaypalPlan, config: BillingRuntimeConfig) {
+/** Length in days of a promo plan's paid trial: 10 days (current terms) or one week (the original
+ * plan of 2026-11-17), at US$0.99, then US$19.90 every month, on the PRO product, no setup fee.
+ * Any other terms return null. */
+export function paypalPromoPlanDays(plan: PaypalPlan, config: BillingRuntimeConfig): number | null {
   if (typeof plan.id !== "string" || !plan.id.startsWith("P-") || plan.product_id !== config.productId || plan.status !== "ACTIVE"
-      || plan.id === config.founderPlanId || plan.id === config.legacyFounderPlanId) return false;
-  if (!Array.isArray(plan.billing_cycles) || plan.billing_cycles.length !== 2) return false;
+      || plan.id === config.founderPlanId || plan.id === config.legacyFounderPlanId) return null;
+  if (!Array.isArray(plan.billing_cycles) || plan.billing_cycles.length !== 2) return null;
   const trial = plan.billing_cycles.find((cycle) => cycle.tenure_type === "TRIAL");
   const regular = plan.billing_cycles.find((cycle) => cycle.tenure_type === "REGULAR");
   const price = (cycle: typeof trial) => cycle?.pricing_scheme?.fixed_price;
-  return Boolean(trial && regular)
+  const unit = trial?.frequency?.interval_unit, count = trial?.frequency?.interval_count;
+  const days = unit === "DAY" && count === PROMO_WEEK_DAYS ? PROMO_WEEK_DAYS
+    : unit === "WEEK" && count === 1 ? PROMO_LEGACY_DAYS : null;
+  const valid = Boolean(trial && regular && days)
     && trial!.sequence === 1 && trial!.total_cycles === 1
-    && trial!.frequency?.interval_unit === "WEEK" && trial!.frequency.interval_count === 1
     && price(trial)?.currency_code === APPROVED_CURRENCY && cents(price(trial)?.value) === PROMO_WEEK_CENTS
     && regular!.sequence === 2 && regular!.total_cycles === 0
     && regular!.frequency?.interval_unit === APPROVED_INTERVAL.unit && regular!.frequency.interval_count === APPROVED_INTERVAL.count
     && price(regular)?.currency_code === APPROVED_CURRENCY && cents(price(regular)?.value) === PROMO_WEEK_THEN_CENTS
     && cents(plan.payment_preferences?.setup_fee?.value ?? "0") === 0;
+  return valid ? days : null;
 }
 
-// Promo plan IDs already fetched from PayPal and verified by this isolate, per environment.
-const verifiedPromoPlans = new Set<string>();
+/** True when the plan carries promo terms (current or original). */
+export function validatePaypalPromoPlan(plan: PaypalPlan, config: BillingRuntimeConfig) {
+  return paypalPromoPlanDays(plan, config) !== null;
+}
+
+// Promo plan IDs already fetched from PayPal and verified by this isolate, per environment, with their trial length.
+const verifiedPromoPlans = new Map<string, number>();
 const ensuredPromoPlan = new Map<string, { planId: string; at: number }>();
 const promoPlanFailedAt = new Map<string, number>();
 
-/** True only when PayPal itself returns this plan with exactly the promo terms. */
-export async function paypalPromoPlanVerified(config: BillingRuntimeConfig, planId: unknown) {
-  if (typeof planId !== "string" || !/^P-[A-Z0-9]{10,40}$/.test(planId)) return false;
-  if (config.paypalEnv === "live" && PAYPAL_LIVE_PROMO_PLAN_ID && planId !== PAYPAL_LIVE_PROMO_PLAN_ID) return false;
+/** The trial length in days when PayPal itself returns this plan with exactly the promo terms, else null.
+ * In Live only the pinned plans count: the current one (once pinned) and the original 7-day one. */
+export async function paypalPromoPlanVerifiedDays(config: BillingRuntimeConfig, planId: unknown): Promise<number | null> {
+  if (typeof planId !== "string" || !/^P-[A-Z0-9]{10,40}$/.test(planId)) return null;
+  if (config.paypalEnv === "live" && PAYPAL_LIVE_PROMO_PLAN_ID && planId !== PAYPAL_LIVE_PROMO_PLAN_ID && planId !== PAYPAL_LIVE_PROMO_LEGACY_PLAN_ID) return null;
   const key = `${config.paypalEnv}:${planId}`;
-  if (verifiedPromoPlans.has(key)) return true;
+  const known = verifiedPromoPlans.get(key);
+  if (known) return known;
   const plan = await paypalJson<PaypalPlan>(config, `/v1/billing/plans/${encodeURIComponent(planId)}`, {});
-  if (plan.id !== planId || !validatePaypalPromoPlan(plan, config)) return false;
-  verifiedPromoPlans.add(key);
-  return true;
+  const days = plan.id === planId ? paypalPromoPlanDays(plan, config) : null;
+  if (!days) return null;
+  verifiedPromoPlans.set(key, days);
+  return days;
 }
 
-/** The same configuration with `promoPlanId` set when `planId` is the verified promo plan. Regular
- * plans never cost a PayPal request, and a lookup failure only leaves the promo plan unrecognized. */
+/** True only when PayPal itself returns this plan with exactly the promo terms. */
+export async function paypalPromoPlanVerified(config: BillingRuntimeConfig, planId: unknown) {
+  return (await paypalPromoPlanVerifiedDays(config, planId)) !== null;
+}
+
+/** The same configuration with `promoPlanId` (and its trial length) set when `planId` is a verified promo
+ * plan. Regular plans never cost a PayPal request, and a lookup failure only leaves the promo plan unrecognized. */
 export async function withPaypalPromoPlan(config: BillingRuntimeConfig, planId: unknown): Promise<BillingRuntimeConfig> {
   if (typeof planId !== "string" || planId === config.founderPlanId || planId === config.legacyFounderPlanId) return config;
   try {
-    return await paypalPromoPlanVerified(config, planId) ? { ...config, promoPlanId: planId } : config;
+    const days = await paypalPromoPlanVerifiedDays(config, planId);
+    return days ? { ...config, promoPlanId: planId as string, promoPlanDays: days } : config;
   } catch {
     return config;
   }
 }
 
-/** Finds the promo plan on the PRO product (pinned ID, or by its exact name) and, only when PayPal has
- * none, creates it once. The fixed request ID makes a concurrent or repeated creation return the same
+/** Finds the current (10-day) promo plan on the PRO product (pinned ID, or by its exact name) and, only
+ * when PayPal has none, creates it once. The original 7-day plan is never returned for new checkouts. The fixed request ID makes a concurrent or repeated creation return the same
  * plan instead of a duplicate. Existing plans are never modified. */
 export async function ensurePaypalPromoPlan(config: BillingRuntimeConfig) {
   const cached = ensuredPromoPlan.get(config.paypalEnv);
@@ -235,10 +255,10 @@ async function findOrCreatePaypalPromoPlan(config: BillingRuntimeConfig) {
       body: JSON.stringify({
         product_id: config.productId,
         name: PAYPAL_PROMO_PLAN_NAME,
-        description: "SpanishCue PRO: first week US$0.99, then US$19.90 every month until cancelled.",
+        description: `SpanishCue PRO: first ${PROMO_WEEK_DAYS} days US$0.99, then US$19.90 every month until cancelled.`,
         status: "ACTIVE",
         billing_cycles: [
-          { frequency: { interval_unit: "WEEK", interval_count: 1 }, tenure_type: "TRIAL", sequence: 1, total_cycles: 1,
+          { frequency: { interval_unit: "DAY", interval_count: PROMO_WEEK_DAYS }, tenure_type: "TRIAL", sequence: 1, total_cycles: 1,
             pricing_scheme: { fixed_price: money(PROMO_WEEK_CENTS) } },
           { frequency: { interval_unit: APPROVED_INTERVAL.unit, interval_count: APPROVED_INTERVAL.count }, tenure_type: "REGULAR", sequence: 2, total_cycles: 0,
             pricing_scheme: { fixed_price: money(PROMO_WEEK_THEN_CENTS) } },
@@ -248,7 +268,7 @@ async function findOrCreatePaypalPromoPlan(config: BillingRuntimeConfig) {
     });
     planId = typeof created.id === "string" ? created.id : "";
   }
-  if (!(await paypalPromoPlanVerified(config, planId))) throw new Error("paypal_promo_plan_mismatch");
+  if ((await paypalPromoPlanVerifiedDays(config, planId)) !== PROMO_WEEK_DAYS) throw new Error("paypal_promo_plan_mismatch");
   return planId;
 }
 

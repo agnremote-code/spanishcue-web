@@ -163,7 +163,7 @@ export async function POST(request: Request) {
         promoPlan,
       }, config);
       if (recorded.kind === "trial" && cents(money.value) === PROMO_WEEK_CENTS && paidThrough) {
-        await schedulePromoReminder(env, env.DB, { userId: local.userId, provider: "paypal", subscriptionId: providerSubscriptionId, chargeAt: paidThrough });
+        await schedulePromoReminder(env, env.DB, { userId: local.userId, provider: "paypal", subscriptionId: providerSubscriptionId, chargeAt: paidThrough, startedAt: eventTime });
       }
     }
     await finishWebhook(env.DB, config.paypalEnv, eventId, "processed");

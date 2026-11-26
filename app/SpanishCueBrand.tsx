@@ -111,7 +111,7 @@ export function SpanishCueHero({ kicker, kickerInHeading = false, pricing = fals
                   className="sc-hero-primary"
                   onClick={() => trackMarketingEvent("cta_click", { placement: "hero_promo_week", cta_type: "buy", destination: "/pricing" })}
                 >
-                  {locale === "es" ? "PROBAR PRO · US$0,99 LA PRIMERA SEMANA" : "TRY PRO · US$0.99 FIRST WEEK"}
+                  {locale === "es" ? "PROBAR PRO · US$0,99 LOS PRIMEROS 10 DÍAS" : "TRY PRO · US$0.99 FOR 10 DAYS"}
                 </a>
                 <div className="sc-mascot-cue" aria-hidden="true">
                   <img src="/brand/mascot/pointing.webp" alt="" width="900" height="1350" />

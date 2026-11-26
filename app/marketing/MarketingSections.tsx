@@ -369,8 +369,8 @@ export function FounderOffer({ audience, primary, primaryLabel }: { audience: Ma
       {audience !== "pro" && priceLabel === "US$19.90" && <ArsPrice usd={19.9} />}
       {audience !== "pro" && status?.annualCheckoutAvailable && <p className="mk-founder-annual">{locale === "es" ? <>o <b>US$150/año</b> <span className="sc-hero-save">Ahorras 37 %</span></> : <>or <b>US$150/year</b> <span className="sc-hero-save">Save 37%</span></>}<ArsPrice usd={150} /></p>}
       {audience !== "pro" && checkoutLive && status?.promoWeek?.available && status.promoWeek.eligible !== false && <p className="mk-founder-promo">{locale === "es"
-        ? <>Primera semana <b>US$0,99</b>. Luego US$19,90/mes. Cancelas cuando quieras.</>
-        : <>First week <b>US$0.99</b>. Then US$19.90/month. Cancel anytime.</>}</p>}
+        ? <>10 días por <b>US$0,99</b>. Luego US$19,90/mes. Cancelas cuando quieras.</>
+        : <>10 days for <b>US$0.99</b>. Then US$19.90/month. Cancel anytime.</>}</p>}
       {audience === "pro" ? <MarketingLink cta={primary} className="mk-founder-cta" placement="home_founder_offer">{primaryLabel}<span>→</span></MarketingLink> : checkoutLive ? <MarketingLink cta={subscriptionCta} className="mk-founder-cta" placement="home_founder_offer">{status?.promoWeek?.available && status.promoWeek.eligible !== false ? (locale === "es" ? "Probar PRO US$0,99" : "Try PRO US$0.99") : c.subscribe}<span>→</span></MarketingLink> : <MarketingLink cta={launchCta} className="mk-founder-cta" placement="home_founder_reservation">{c.reserve}<span>→</span></MarketingLink>}
       {audience !== "pro" && <em>{checkoutLive ? c.payment : c.launchPayment}</em>}
     </div>
