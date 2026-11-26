@@ -22,6 +22,9 @@ const MINI_APPS: Record<string, { href: string; label: string; detail: string }>
   "por-y-para": { href: "/por-o-para", label: "¿Por o para? Ejercicios por uso", detail: "15 usos, cada uno con su regla" },
   "indefinido-e-imperfecto": { href: "/indefinido-o-imperfecto", label: "¿Indefinido o imperfecto? Ejercicios por marcador", detail: "26 marcadores temporales" },
   subjuntivo: { href: "/indicativo-o-subjuntivo", label: "¿Indicativo o subjuntivo? Ejercicios por expresión", detail: "36 expresiones" },
+  imperativo: { href: "/ejercicios-de-imperativo", label: "Ejercicios del imperativo por regla", detail: "6 ejercicios: tú, irregulares, negativo, usted, pronombres y reflexivos" },
+  gustar: { href: "/ejercicios-de-gustar", label: "Ejercicios de gustar y verbos como gustar", detail: "8 ejercicios: gusta o gustan, pronombres, encantar, doler…" },
+  "pronombres-de-objeto": { href: "/ejercicios-de-pronombres", label: "Ejercicios de objeto directo e indirecto", detail: "4 ejercicios: lo/la, le/les, se lo y posición" },
   preposiciones: { href: "/verbos-con-preposicion", label: "Verbos con preposición: ejercicios", detail: "48 verbos con su preposición" },
 };
 
