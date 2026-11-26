@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { isPrunedNoindexPath } from "../seo-prune";
 import { catalogLessons } from "../conversation-families/catalog";
 import { lessonCards, type LessonCardData } from "../growth/lessons";
 import { canonicalUrl, languageAlternates } from "../seo";
@@ -32,7 +33,7 @@ export function eleMetadata(path: string, title: string, description: string, im
     title,
     description,
     alternates: { canonical: canonicalUrl(path), ...(languageAlternates(path) ? { languages: languageAlternates(path) } : {}) },
-    robots: { index: true, follow: true },
+    robots: { index: !isPrunedNoindexPath(path), follow: true },
     openGraph: { title, description, url: canonicalUrl(path), type: "website", locale: "es_ES", images: [ogImage] },
     twitter: { card: "summary_large_image", title, description, images: [image ? canonicalUrl(image) : socialPreviewUrl] },
   };
