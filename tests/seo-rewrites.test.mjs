@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {build} from 'esbuild';
-const r=await build({stdin:{contents:'export * from "./app/material-ele/seo-rewrites.ts"; export {miniAppRewrites} from "./app/mini-apps/seo-rewrites.ts"; export {isPrunedPath, isPrunedNoindexPath} from "./app/seo-prune.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {elePageBySlug, elePages} from "./app/material-ele/data.ts"; export {temaLevelPageByPath} from "./app/material-ele/temas.ts"; export {guiaPages} from "./app/material-ele/guias.ts"; export {ejercicioPages} from "./app/material-ele/actividades.ts"; export {ejercicioErrores} from "./app/material-ele/ejercicio-errores.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',logLevel:'error'});
+const r=await build({stdin:{contents:'export * from "./app/material-ele/seo-rewrites.ts"; export {miniAppRewrites} from "./app/mini-apps/seo-rewrites.ts"; export {isPrunedPath, isPrunedNoindexPath} from "./app/seo-prune.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {elePageBySlug, elePages} from "./app/material-ele/data.ts"; export {temaLevelPageByPath, temaPageByPath} from "./app/material-ele/temas.ts"; export {guiaPages} from "./app/material-ele/guias.ts"; export {ejercicioPages} from "./app/material-ele/actividades.ts"; export {ejercicioErrores} from "./app/material-ele/ejercicio-errores.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm',logLevel:'error'});
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 const sitemapPaths=new Set(m.sitemap().map(e=>new URL(e.url).pathname));
-const pageFor=(path)=>m.elePages.find(p=>p.path===path)??m.temaLevelPageByPath.get(path)??m.guiaPages.find(p=>p.path===path)??(path==='/material-ele/fichas'?{}:undefined);
+const pageFor=(path)=>m.elePages.find(p=>p.path===path)??m.temaLevelPageByPath.get(path)??m.temaPageByPath.get(path)??m.guiaPages.find(p=>p.path===path)??m.ejercicioPages.find(p=>p.path===path)??(path==='/material-ele/fichas'||path==='/material-ele'?{}:undefined);
 const texts=(rw)=>rw.sections.flatMap(s=>[s.title,s.intro??'',...s.blocks.flatMap(b=>b.type==='p'?[b.text]:b.type==='table'?[b.caption,...b.head,...b.rows.flat()]:b.items)]).concat((rw.faq??[]).flatMap(f=>[f.question,f.answer]));
 
 test('every rewritten URL is a live, indexable page listed in the sitemap',()=>{

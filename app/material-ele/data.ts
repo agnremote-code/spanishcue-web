@@ -854,7 +854,7 @@ const topicInputs: PageInput[] = [
         { q: "No pienso que ___ (ser) una buena idea.", a: "sea" },
         { q: "Quiero que ___ (venir, tú) a mi fiesta.", a: "vengas (deseo con otro sujeto)" },
         { q: "Quiero ___ (ir) a tu fiesta.", a: "ir (mismo sujeto: infinitivo)" },
-        { q: "Espero que ___ (tener, vosotros) buen viaje.", a: "tengáis" },
+        { q: "Espero que ___ (tener, ustedes) buen viaje.", a: "tengan" },
         { q: "Es importante que ___ (dormir, tú) ocho horas.", a: "duermas (valoración + que)" },
         { q: "Te recomiendo que ___ (probar) este plato.", a: "pruebes" },
         { q: "Ojalá ___ (hacer) buen tiempo mañana.", a: "haga" },
@@ -863,7 +863,7 @@ const topicInputs: PageInput[] = [
         { q: "Dudo que el museo ___ (abrir) los lunes.", a: "abra (duda)" },
         { q: "Aunque ___ (llover) mañana, iremos a la playa.", a: "llueva (no sabemos si lloverá)" },
         { q: "En cuanto ___ (saber, yo) algo, te llamo.", a: "sepa (momento futuro)" },
-        { q: "Me alegro de que ___ (estar, vosotros) aquí.", a: "estéis (emoción + que)" },
+        { q: "Me alegro de que ___ (estar, ustedes) aquí.", a: "estén (emoción + que)" },
       ],
     },
     errors: [

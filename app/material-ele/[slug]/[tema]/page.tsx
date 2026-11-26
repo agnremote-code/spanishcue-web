@@ -11,6 +11,8 @@ import { livePath } from "../../../seo-prune";
 import { TemaCards, TemaGroupCards, TemaLevelLinks } from "../../tema-components";
 import { relatedTemas, temaGroupById, temaLevelsOf, temaPageByPath, temaPages } from "../../temas";
 import ShareSnippet from "../../ShareSnippet";
+import { fillCount, pageRewrites } from "../../seo-rewrites";
+import { RewriteSections } from "../../rewrite-components";
 import { EleFichaLinks } from "../../ficha-links";
 import styles from "../../../growth/growth.module.css";
 
@@ -23,7 +25,10 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: Props) {
   const { slug: group, tema } = await params;
   const page = temaPageByPath.get(`${MATERIAL_ELE_PATH}/${group}/${tema}`);
-  return page ? eleMetadata(page.path, page.title, page.description, pageImage(page.lessonIds)) : {};
+  if (!page) return {};
+  const rewrite = pageRewrites.get(page.path);
+  const count = page.lessonIds.length;
+  return eleMetadata(page.path, fillCount(rewrite?.title ?? page.title, count), fillCount(rewrite?.description ?? page.description, count), pageImage(page.lessonIds));
 }
 
 export default async function TemaPageRoute({ params }: Props) {
@@ -40,18 +45,23 @@ export default async function TemaPageRoute({ params }: Props) {
   const lower = page.name.toLowerCase();
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
+  const rewrite = pageRewrites.get(page.path);
+  const fill = (text: string) => fillCount(text, page.lessonIds.length);
+  const title = fill(rewrite?.title ?? page.title);
+  const description = fill(rewrite?.description ?? page.description);
+  const faq = [...(rewrite?.faq ?? []), ...page.faq];
   return (
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: [page.name, group.label, "ELE", ...page.levels], inLanguage: "es", ...(page.levels.length === 1 ? { educationalLevel: page.levels[0] } : {}), image: pageImage(page.lessonIds), dates })} />
-          <JsonLd data={faqPageSchema(page.faq, "es")} />
+          <JsonLd data={webPageSchema({ pathname: page.path, name: title, description, about: [page.name, group.label, "ELE", ...page.levels], inLanguage: "es", ...(page.levels.length === 1 ? { educationalLevel: page.levels[0] } : {}), image: pageImage(page.lessonIds), dates })} />
+          <JsonLd data={faqPageSchema(faq, "es")} />
           <EleTopbar current={MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: group.label, href: group.path }, { name: page.name, href: page.path }]} />
           <section className={styles.hero}>
             <p className={styles.eyebrow}>{group.label} · {page.parent} · {page.levels.join(" · ")}</p>
-            <h1 className={styles.title}>{page.h1}</h1>
-            <p className={styles.lead}>{page.intro}</p>
+            <h1 className={styles.title}>{fill(rewrite?.h1 ?? page.h1)}</h1>
+            <p className={styles.lead}>{fill(rewrite?.intro ?? page.intro)}</p>
             <div className={styles.heroActions}>
               <Link className={styles.primaryButton} href="#clases">Ver las clases</Link>
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : <Link className={styles.secondaryButton} href="/demo/noche-abierta">Probar una clase gratis</Link>}
@@ -61,6 +71,7 @@ export default async function TemaPageRoute({ params }: Props) {
           </section>
           {preview ? <ElePreviewVideo lesson={preview} pathname={page.path} /> : null}
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
+          <RewriteSections rewrite={rewrite} />
           {levelPages.length ? (
             <Section title={`${page.name} por nivel`} intro="Cada nivel con sus propias clases, una página por nivel.">
               <div className={styles.cardGrid}>
@@ -70,19 +81,19 @@ export default async function TemaPageRoute({ params }: Props) {
           ) : null}
 
           <Section id="clases" title={`Clases para enseñar ${lower}`} intro={`${lessons.length === 1 ? "Una clase interactiva" : `${lessons.length} clases interactivas`} para compartir en pantalla, ordenadas de lo más básico a lo más avanzado. Las gratis se abren sin registro.`}>
-            <EleLessonGrid lessons={lessons} />
+            <EleLessonGrid lessons={lessons} compact={Boolean(rewrite)} />
           </Section>
 
           <EleNewsletterInline source={page.path} topic={lower} />
           <EleFichaLinks lessonIds={page.lessonIds} name={lower} />
 
-          {page.goals.length ? (
+          {!rewrite && page.goals.length ? (
             <Section title={`Qué aprende el alumno con ${lower}`} intro="Objetivos tomados de las propias clases: lo que el alumno puede hacer con el español al terminar.">
               <div className={styles.panel}><ul>{page.goals.map((goal) => <li key={goal}>{goal}</li>)}</ul></div>
             </Section>
           ) : null}
 
-          {page.warmups.length || page.speaking.length ? (
+          {!rewrite && (page.warmups.length || page.speaking.length) ? (
             <Section title="Para empezar y para conversar" intro="Preguntas de calentamiento y de producción oral que estas clases usan. Sirven también sin la pantalla, en cualquier clase sobre el tema.">
               <div className={styles.panel}>
                 {page.warmups.length ? <><h3>Para empezar</h3><ul>{page.warmups.map((item) => <li key={item}>{item}</li>)}</ul></> : null}
@@ -102,9 +113,9 @@ export default async function TemaPageRoute({ params }: Props) {
             </Section>
           ) : null}
 
-          <Section title="Preguntas frecuentes"><Faq items={page.faq} /></Section>
+          <Section title="Preguntas frecuentes"><Faq items={faq} /></Section>
           <Section title="Compartir">
-            <ShareSnippet path={page.path} title={`${page.name}: clases y actividades de español`} description={page.description} />
+            <ShareSnippet path={page.path} title={`${page.name}: clases y actividades de español`} description={description} />
           </Section>
 
           {related.length ? (
