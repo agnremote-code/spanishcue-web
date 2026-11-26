@@ -6,7 +6,7 @@ Actualizado: 26/11/2026.
 |---|---|---|
 | 1 Auditoría | 01_AUDITORIA.csv, 01_AUDITORIA_LEEME.md | Hecho. 4.816 URLs, método y hallazgos en el LEEME. |
 | 2 Mapa de demanda | 02_MAPA_DEMANDA.csv, 02_MAPA_DEMANDA_LEEME.md, serp/ | Hecho. 43 búsquedas con SERP real de Google (26/11, IP de España). |
-| 3 Prioridad ICE | 03_PRIORIDAD_ICE.csv | Pendiente |
+| 3 Prioridad ICE | 03_PRIORIDAD_ICE.csv | Hecho. 40 URLs de 43 candidatas, ICE = impacto × confianza × facilidad (1–5 cada uno); lote L1 = orden 1–20, L2 = 21–40. Impacto: intención de comprador y demanda medida; confianza: posición real en Google/GSC; facilidad: esfuerzo de reescritura y si depende de consolidar. |
 | 4 Poda | 04_PLAN_PODA.csv | Pendiente |
 | 5 Briefs | 05_BRIEFS/ | Pendiente |
 | 6 Producción | lotes de 20 URLs o menos | Pendiente |
