@@ -42,11 +42,11 @@ Se eligieron 43 búsquedas:
    Ninguna página programática entra en el top 10 de las búsquedas medidas.
 3. **Formato de las búsquedas de ejercicios.** Las de tipo «X ejercicios» las ganan páginas cortas de ejercicios, con una mediana de 344 a 760 palabras, más una guía larga con soluciones: spanishunicorn, con 2.200 a 4.300 palabras, sale en 11 de las 31.
 4. **Funciones de la SERP.**
-   - Hay vista creada con IA en 38 de las 43 búsquedas.
+   - Hay vista creada con IA en 38 de las 43 búsquedas (37 de 42 sin contar la de marca).
    - No hay «Otras preguntas de los usuarios» en ninguna búsqueda en español.
    - No hay fragmentos destacados.
 
-   La visibilidad en la vista creada con IA cuenta como resultado. Nos cita en las 3 búsquedas donde estamos en el top 10.
+   La visibilidad en la vista creada con IA cuenta como resultado. Nos cita en 2 de las 3 búsquedas donde estamos en el top 10; en «ejercicios ele con soluciones», 2.º orgánico, no sale entre sus enlaces visibles (corregido el 26/11 al recontar el JSON).
 5. **Marca.** Google corrige «spanishcue» a «spanish cute» y no muestra la web. Con `nfpr=1` sale 1.ª, con 5 URLs propias más Instagram, YouTube y LinkedIn. Se trabaja en el paso 7.
 6. **Búsquedas sin intención docente útil.**
    - «roleplays en español» es una SERP de diccionarios.
