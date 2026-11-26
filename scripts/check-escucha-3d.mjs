@@ -1,6 +1,7 @@
 // Checks every Comprensión auditiva file: shape, level length, voices from
 // several countries, gap-fill text taken word for word from the audio, and
 // neutral Spanish. Usage: node scripts/check-escucha-3d.mjs [game] [level]
+// (both case-insensitive; to filter by level alone, pass "" as the game).
 import { readFileSync, existsSync } from 'node:fs';
 import { GAMES, WORDS, parseGaps, transcriptOf, wordCount } from '../app/escucha-3d/games.mjs';
 import { scanSource } from './neutral-spanish.mjs';
@@ -208,11 +209,12 @@ export function lengthKey(items) {
 }
 
 // Resolves the optional [game] [level] arguments to the files to check. The
-// level is case-insensitive (files and docs use b1, GAMES uses B1), and an
+// game and level are case-insensitive (files and docs use b1, GAMES uses B1), and an
 // unknown game or level is an error: a filter that matches nothing must never
 // print "all files OK".
 export function selectTargets(game, level, games = GAMES) {
   const errors = [];
+  if (game) game = String(game).toLowerCase();
   const wantLevel = level ? String(level).toUpperCase() : undefined;
   if (game && !Object.hasOwn(games, game)) errors.push(`unknown game «${game}»; known: ${Object.keys(games).join(', ')}`);
   const targets = [];

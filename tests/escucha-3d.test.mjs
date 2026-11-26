@@ -1,9 +1,9 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 import { GAMES, audioSrc, listeningFor, parseGaps, sameWord } from '../app/escucha-3d/games.mjs';
 import { checkFile, selectTargets } from '../scripts/check-escucha-3d.mjs';
-import { spawnSync } from 'node:child_process';
 import { scanSource } from '../scripts/neutral-spanish.mjs';
 
 const fileOf = (game, level) => `app/escucha-3d/content/${game}/${level.toLowerCase()}.json`;
@@ -23,6 +23,7 @@ test('the checker CLI accepts a lower-case level and refuses a filter that match
   // checked no file and still printed OK. Unknown games and levels did too.
   assert.deepEqual(selectTargets('hospital', 'b1'), { targets: [{ game: 'hospital', level: 'B1' }], errors: [] });
   assert.deepEqual(selectTargets('hospital', 'B1'), selectTargets('hospital', 'b1'));
+  assert.deepEqual(selectTargets('HOSPITAL', 'b1'), selectTargets('hospital', 'b1'));
   assert.equal(selectTargets('hospital', 'ZZ').targets.length, 0);
   assert.match(selectTargets('hospital', 'ZZ').errors.join(), /unknown level «ZZ» for hospital/);
   assert.match(selectTargets('nope').errors.join(), /unknown game «nope»/);
@@ -38,6 +39,7 @@ test('the checker CLI accepts a lower-case level and refuses a filter that match
     const bad = run(...args);
     assert.equal(bad.status, 1, `${args.join(' ')} must fail`);
     assert.doesNotMatch(bad.stdout, /all files OK/);
+    assert.match(bad.stderr, /^arguments: unknown/m);
   }
 });
 
