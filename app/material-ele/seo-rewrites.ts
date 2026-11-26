@@ -1,3 +1,7 @@
+import { ejercicioPages } from "./actividades";
+import { ejercicioErrores } from "./ejercicio-errores";
+import { livePath } from "../seo-prune";
+
 /**
  * SEO plan, step 6 (docs/seo-plan/05_BRIEFS): hand-written rewrites for the priority URLs.
  *
@@ -33,7 +37,81 @@ const syntheticVoices = {
   answer: "No. Son voces sintéticas que leen guiones escritos para cada clase. Los personajes son de distintos países, pero no son grabaciones de personas de esos países: para trabajar acentos reales, combínalos con material auténtico.",
 };
 
+const levelOrder = ["A1", "A2", "B1", "B2", "C1", "C2"];
+/** One row per exercise, easiest level first, linking the live URL (a consolidated exercise lives on its mini-app). */
+const exerciseRows = [...ejercicioPages]
+  .sort((a, b) => levelOrder.indexOf(a.level.slice(0, 2)) - levelOrder.indexOf(b.level.slice(0, 2)) || a.exercise.title.localeCompare(b.exercise.title, "es"))
+  .map((page) => [`[${page.exercise.title.replace(/^Ejercicio( [A-C][12](–[A-C][12])?)?: /, "")}](${livePath(page.path)})`, page.level, String(page.exercise.items.length), ejercicioErrores[page.slug] ?? ""]);
+
 const rewrites: Record<string, PageRewrite> = {
+  "/material-ele/fichas": {
+    lote: "L1",
+    sections: [
+      {
+        id: "como-es-una-ficha",
+        title: "Cómo es una ficha y cómo se usa en clase",
+        intro: "Todas las fichas tienen la misma estructura, así que el alumno sabe dónde mirar desde la segunda vez.",
+        blocks: [
+          { type: "table", caption: "Partes de una ficha ELE de SpanishCue y su uso en clase", head: ["Parte", "Qué tiene", "Cómo usarla"], rows: [
+            ["Teoría", "La regla de la clase con ejemplos del nivel.", "Léela con el alumno antes de los ejercicios, no después: dos minutos bastan."],
+            ["Practicar", "Ejercicios sobre el mismo punto, de más fácil a más difícil.", "En clase, el alumno contesta en voz alta; como tarea, por escrito."],
+            ["Soluciones", "Al final de la ficha, con la misma numeración y una explicación corta de cada respuesta.", "Que el alumno corrija solo y te traiga las dudas: es la mitad del aprendizaje."],
+            ["Clase interactiva", "El enlace a la clase de la que sale la ficha.", "Para el día siguiente: la clase lleva el punto a una conversación."],
+          ] },
+          { type: "p", text: "Las fichas de las clases gratis son completas. Las de las clases PRO son una muestra con cinco ejercicios: sirven para ver el nivel y la forma de la clase antes de usarla." },
+        ],
+      },
+      {
+        id: "imprimir-o-proyectar",
+        title: "Imprimir o proyectar",
+        blocks: [
+          { type: "ul", items: [
+            "**Para imprimir o guardar en PDF:** usa el botón de imprimir de la ficha. Se imprime sin menús ni botones, con la dirección de la clase interactiva arriba.",
+            "**Para proyectar en una clase en línea:** comparte la pestaña de la ficha y baja hasta «Practicar». Deja las soluciones fuera de la pantalla hasta que el alumno conteste.",
+            "**Para mandar de tarea:** envía el enlace de la ficha. El alumno la abre en el móvil sin registrarse y corrige con las soluciones del final.",
+          ] },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/guia/ejercicios-ele-con-soluciones": {
+    lote: "L1",
+    sections: [
+      {
+        id: "tabla-de-ejercicios",
+        title: `Los ${ejercicioPages.length} ejercicios en una tabla: nivel, frases y el error que corrigen`,
+        intro: "Para elegir rápido: busca el error que oyes en clase en la última columna y abre el ejercicio de esa fila. Están ordenados del nivel más bajo al más alto.",
+        blocks: [
+          { type: "table", caption: "Ejercicios ELE con soluciones por nivel, número de frases y error que corrigen", head: ["Ejercicio", "Nivel", "Frases", "Error que corrige"], rows: exerciseRows },
+          { type: "p", text: "Los ejercicios de ser y estar, por y para, pasados, indicativo o subjuntivo, imperativo, gustar y pronombres están dentro de su práctica interactiva por reglas: la ficha con soluciones sigue ahí, al final de la página, junto a un ejercicio por cada regla." },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos": {
+    lote: "L1",
+    sections: [
+      {
+        id: "clase-de-45-minutos",
+        title: "Una clase de conversación de 45 minutos, paso a paso",
+        intro: "La secuencia con una clase real del catálogo, El consorcio (B1–B2): te mudas a un edificio antiguo de Buenos Aires y a las nueve de la noche hay asamblea de vecinos en la terraza.",
+        blocks: [
+          { type: "table", caption: "Secuencia de una clase de conversación de 45 minutos con El consorcio", head: ["Fase", "Minutos", "Qué hace el alumno", "Qué dices tú"], rows: [
+            ["Calentamiento", "5", "Cuenta un problema real con un vecino, suyo o de alguien que conoce.", "«¿Alguna vez tuviste un problema con un vecino? ¿Cómo terminó?»"],
+            ["Entrada en la tarea", "5", "Recorre el edificio y escucha a los primeros vecinos.", "«Tu objetivo es llegar a la asamblea con una propuesta. Escucha qué quiere cada uno.»"],
+            ["Tarea central", "20", "Habla con los vecinos que tienen un conflicto: aconseja, negocia y toma partido.", "Nada mientras habla. Anotas dos columnas: errores que impiden entender y errores de forma."],
+            ["Asamblea", "5", "Presenta su propuesta y la defiende ante una objeción.", "«Yo no estoy de acuerdo, ¿por qué debería votar tu propuesta?»"],
+            ["Corrección diferida", "7", "Corrige tres frases suyas que le muestras escritas.", "«Esto es lo que dijiste. ¿Cómo lo dirías ahora?»"],
+            ["Cierre", "3", "Escribe el acta de la asamblea en tres frases.", "«¿Qué se decidió y quién tiene que hacer qué?»"],
+          ] },
+          { type: "p", text: "La secuencia sirve con cualquier clase del catálogo: cambia el tema del calentamiento y la objeción de la asamblea. Lo que no cambia es el orden: primero un motivo real para hablar, después la tarea sin interrupciones y al final la corrección, cuando el alumno ya dijo lo que quería decir." },
+        ],
+      },
+    ],
+  },
+
   "/material-ele/formatos/comprension-auditiva/a1": {
     lote: "L1",
     title: "Comprensión auditiva A1 en español: audios con transcripción",
