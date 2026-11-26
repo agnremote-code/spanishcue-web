@@ -12,6 +12,8 @@ import { TemaCards, TemaGroupCards } from "../../../tema-components";
 import { isPrunedPath, livePath } from "../../../../seo-prune";
 import { retiredTemaLevelPaths, temaGroupById, temaLevelPageByPath, temaLevelPages, temaLevelsOf } from "../../../temas";
 import { EleFichaLinks } from "../../../ficha-links";
+import { fillCount, pageRewrites } from "../../../seo-rewrites";
+import { RewriteSections } from "../../../rewrite-components";
 import styles from "../../../../growth/growth.module.css";
 
 type Props = { params: Promise<{ slug: string; tema: string; nivel: string }> };
@@ -19,7 +21,10 @@ export function generateStaticParams() { return temaLevelPages.map((page) => ({ 
 export async function generateMetadata({ params }: Props) {
   const { slug, tema, nivel } = await params;
   const page = temaLevelPageByPath.get(`${MATERIAL_ELE_PATH}/${slug}/${tema}/${nivel}`);
-  return page ? eleMetadata(page.path, page.title, page.description, pageImage(page.lessonIds)) : {};
+  if (!page) return {};
+  const rewrite = pageRewrites.get(page.path);
+  const count = page.lessonIds.length;
+  return eleMetadata(page.path, fillCount(rewrite?.title ?? page.title, count), fillCount(rewrite?.description ?? page.description, count), pageImage(page.lessonIds));
 }
 
 export default async function TemaLevelRoute({ params }: Props) {
@@ -30,6 +35,11 @@ export default async function TemaLevelRoute({ params }: Props) {
   if (!page && retiredTo) permanentRedirect(livePath(retiredTo));
   if (!page) notFound();
   const group = temaGroupById.get(page.group)!;
+  const rewrite = pageRewrites.get(page.path);
+  const fill = (text: string) => fillCount(text, page.lessonIds.length);
+  const title = fill(rewrite?.title ?? page.title);
+  const description = fill(rewrite?.description ?? page.description);
+  const faq = [...(rewrite?.faq ?? []), ...page.faq];
   const lessons = eleLessonCards(page.lessonIds);
   const freeLesson = lessons.find((lesson) => lesson.free);
   const featured = featuredGrammarLesson(page.lessonIds);
@@ -45,14 +55,14 @@ export default async function TemaLevelRoute({ params }: Props) {
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: [page.name, page.level, group.label, "ELE"], inLanguage: "es", educationalLevel: page.level, image: pageImage(page.lessonIds), dates })} />
-          <JsonLd data={faqPageSchema(page.faq, "es")} />
+          <JsonLd data={webPageSchema({ pathname: page.path, name: title, description, about: [page.name, page.level, group.label, "ELE"], inLanguage: "es", educationalLevel: page.level, image: pageImage(page.lessonIds), dates })} />
+          <JsonLd data={faqPageSchema(faq, "es")} />
           <EleTopbar current={MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: group.label, href: group.path }, { name: page.name, href: page.tema.path }, { name: page.level, href: page.path }]} />
           <section className={styles.hero}>
             <p className={styles.eyebrow}>{group.label} · {page.parent} · {page.level}</p>
-            <h1 className={styles.title}>{page.h1}</h1>
-            <p className={styles.lead}>{page.intro}</p>
+            <h1 className={styles.title}>{fill(rewrite?.h1 ?? page.h1)}</h1>
+            <p className={styles.lead}>{fill(rewrite?.intro ?? page.intro)}</p>
             <div className={styles.heroActions}>
               <Link className={styles.primaryButton} href="#clases">Ver las clases</Link>
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : levelGuide ? <Link className={styles.secondaryButton} href={levelGuide.path}>Material {page.level} con clase gratis</Link> : null}
@@ -64,8 +74,9 @@ export default async function TemaLevelRoute({ params }: Props) {
           {preview ? <ElePreviewVideo lesson={preview} pathname={page.path} /> : null}
           {audios.length ? <EleFreeAudios audios={audios} pathname={page.path} title={audios.length > 1 ? `${audios.length} audios gratis de comprensión auditiva ${page.level}` : `Audio gratis de comprensión auditiva ${page.level}`} intro="Para escuchar ahora, sin registro: el audio, las preguntas con sus respuestas, preguntas para conversar y la transcripción." /> : null}
           {featured ? <EleFeaturedLesson lesson={featured} /> : null}
+          <RewriteSections rewrite={rewrite} />
           <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro={page.order}>
-            <EleLessonGrid lessons={lessons} />
+            <EleLessonGrid lessons={lessons} compact={Boolean(rewrite)} />
           </Section>
           <EleNewsletterInline source={page.path} topic={`${lower} ${page.level}`} />
           <EleFichaLinks lessonIds={page.lessonIds} name={`${lower} ${page.level}`} />
@@ -82,7 +93,7 @@ export default async function TemaLevelRoute({ params }: Props) {
               </div>
             </Section>
           ) : null}
-          <Section title="Preguntas frecuentes"><Faq items={page.faq} /></Section>
+          <Section title="Preguntas frecuentes"><Faq items={faq} /></Section>
           {otherLevels.length ? (
             <Section title={`${page.name} en otros niveles`}>
               <div className={styles.cardGrid}>
@@ -91,7 +102,7 @@ export default async function TemaLevelRoute({ params }: Props) {
             </Section>
           ) : null}
           <Section title="Compartir">
-            <ShareSnippet path={page.path} title={`${page.name} ${page.level}: clases de español`} description={page.description} />
+            <ShareSnippet path={page.path} title={`${page.name} ${page.level}: clases de español`} description={description} />
           </Section>
           <Section title={`Más temas de ${group.label.toLowerCase()}`}>
             <TemaCards pages={temaLevelPages.filter((other) => other.level === page.level && other.slug !== page.slug).slice(0, 8).map((other) => other.tema)} />

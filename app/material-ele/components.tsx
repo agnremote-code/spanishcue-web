@@ -94,7 +94,8 @@ export function eleLessonCards(ids: readonly number[]): LessonCardData[] {
   return lessonCards(ids, "es").map((card) => ({ ...card, category: categoryLabel.get(card.id) ?? card.category }));
 }
 
-export function EleLessonGrid({ lessons }: { lessons: LessonCardData[] }) {
+/** `compact` drops the card blurb: pages whose own copy already describes each class for this level use it, so the shared multi-level blurbs do not repeat across every level page. */
+export function EleLessonGrid({ lessons, compact = false }: { lessons: LessonCardData[]; compact?: boolean }) {
   if (!lessons.length) return null;
   return (
     <div className={styles.lessonGrid}>
@@ -107,7 +108,7 @@ export function EleLessonGrid({ lessons }: { lessons: LessonCardData[] }) {
               <span>{lesson.level} · {lesson.category} · {lesson.duration}</span>
             </div>
             <h3>{lesson.title}</h3>
-            <p>{lesson.subtitle}</p>
+            {compact ? null : <p>{lesson.subtitle}</p>}
           </div>
         </Link>
       ))}
