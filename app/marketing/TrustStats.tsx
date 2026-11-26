@@ -5,18 +5,16 @@ import { MarketingLink } from "./MarketingSections";
 
 /** «La experiencia detrás de SpanishCue» (was «Confían en SpanishCue» until the 2026-11-26
  *  compliance pass: the figures are the creator's teaching track record, not platform users,
- *  so the title and a visible note say so — EU Omnibus / misleading-advertising rules): a quiet figures bar right under the hero, only for visitors and
+ *  so the title says so; Ale confirmed on 2026-11-26 that «+100 profesores» and «+20 academias» were
+ *  not real and they were removed — only his 10+ years of teaching remain): a quiet figures bar right under the hero, only for visitors and
  *  accounts without PRO (Ale, 2026-11-03), closed by one value line, three concrete benefits
  *  and the two conversion doors. The figures are the owner's own; never inflate or invent them. */
-const VALUES = ["+100", "+20", "+10"] as const;
+const VALUES = ["+10"] as const;
 
 const copy = {
   es: {
     title: "La experiencia detrás de SpanishCue",
-    note: "Cifras de la trayectoria docente del profesor que creó SpanishCue, dentro y fuera de esta plataforma.",
     stats: [
-      "Profesores",
-      "Academias",
       "Años logrando que la gente hable y entienda español",
     ],
     pitch: "Tu próxima clase ya está lista. Ábrela, compártela y enseña.",
@@ -29,10 +27,7 @@ const copy = {
   },
   en: {
     title: "The experience behind SpanishCue",
-    note: "Figures from the teaching track record of the teacher who created SpanishCue, on and off this platform.",
     stats: [
-      "Teachers",
-      "Academies",
       "Years getting people to speak and understand Spanish",
     ],
     pitch: "Your next lesson is already done. Open it, share it and teach.",
@@ -56,7 +51,6 @@ export default function TrustStats({ primary, primaryLabel, secondary, secondary
         <dd>{VALUES[index]}</dd>
       </div>)}
     </dl>
-    <p className="mk-trust-note">{c.note}</p>
     <div className="mk-trust-pitch">
       <p>{c.pitch}</p>
       <ul>{c.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>

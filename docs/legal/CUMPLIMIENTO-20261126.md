@@ -13,7 +13,7 @@ El titular es una persona física con domicilio en **Argentina** (datos ya publi
 
 | Punto | Antes | Ahora |
 | --- | --- | --- |
-| Cifras de la home | «Confían en SpanishCue: +100 profesores, +20 academias, +10 años», leído como usuarios de la plataforma | «La experiencia detrás de SpanishCue» + nota visible: son la trayectoria docente de su creador, dentro y fuera de la plataforma. Cifras sin tocar |
+| Cifras de la home | «Confían en SpanishCue: +100 profesores, +20 academias, +10 años» | Ale confirmó que «+100 profesores» y «+20 academias» no eran reales: eliminadas de todo el sitio. Queda solo «+10 años» (confirmado por Ale como su experiencia dando clases) bajo «La experiencia detrás de SpanishCue» |
 | «998 de 1000 lugares» | Contador real (servidor, pagos confirmados) pero sin explicación | Se mantiene; /subscription-terms define el precio fundador y explica que el contador sale de pagos reales y no se reinicia |
 | Cuentas atrás | No hay ninguna en la web; la promo no muestra fecha en los botones | Fecha límite real publicada en las condiciones de la oferta |
 | Testimonios | Los de Preply ya citan la fuente, la fecha y aclaran que no son reseñas de la plataforma; las fotos de campaña están marcadas como modelos ficticios | Sin cambios |
@@ -29,8 +29,8 @@ El titular es una persona física con domicilio en **Argentina** (datos ya publi
 
 ## Lo que falta y depende de Ale
 
-1. **CUIT** (o CUIL) y **dirección completa** (ciudad, provincia y código postal): el aviso legal hoy muestra «Avenida Belgrano 1646, Argentina». Se cargan en el secreto `LEGAL_OPERATOR_JSON` (campos `taxId` y `address`).
-2. **Qué significan exactamente «+100 profesores» y «+20 academias»** (¿profes que usaron tu material?, ¿academias donde enseñaste?), para que la nota de la home lo diga con precisión.
+1. ~~CUIT y dirección completa~~: Ale los dio el 26/11; quedan en `app/legal/operator.ts` (completan lo que le falta al secreto `LEGAL_OPERATOR_JSON`).
+2. ~~Cifras de la home~~: resuelto (ver tabla).
 3. **Cumplir la garantía a mano**: no hay reembolso automático. Cuando alguien escriba dentro de los 30 días, el reembolso se hace desde Paddle (Transacciones → Reembolsar) o PayPal, y además se cancela la suscripción para que no haya más cobros. Verificar después que el acceso PRO de esa cuenta se cortó (el aviso de reembolso de PayPal está conectado; el de Paddle no está comprobado).
 4. **El email recordatorio de la promo de US$0,99 no puede salir** mientras el Worker no tenga `RESEND_API_KEY`. Por eso las condiciones públicas ya no lo prometen.
 
