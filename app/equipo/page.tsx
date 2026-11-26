@@ -66,7 +66,7 @@ export default function EquipoPage() {
                 <li><b>Niveles del MCER y el PCIC como referencia.</b> Los usamos para decidir qué entra en cada nivel. No son una certificación: SpanishCue no está afiliado al Consejo de Europa ni al Instituto Cervantes.</li>
                 <li><b>Una clase, un objetivo.</b> Cada clase busca que el alumno pueda hacer algo concreto al terminar, y termina con producción oral o escrita.</li>
                 <li><b>Voces sintéticas.</b> Los audios usan voces sintéticas con acento nativo, no grabaciones de personas.</li>
-                <li><b>Cifras verdaderas.</b> No publicamos número de usuarios, valoraciones ni testimonios que no podamos comprobar. Cuando damos un dato, decimos de dónde sale y de qué fecha es.</li>
+                <li><b>Cifras verdaderas.</b> No publicamos número de usuarios, valoraciones ni testimonios que no podamos comprobar. Cuando damos un dato, decimos de dónde sale y de qué fecha es. Los informes con datos están en <Link className={styles.textLink} href="/datos">Datos de SpanishCue</Link>.</li>
               </ul>
             </div>
           </Section>

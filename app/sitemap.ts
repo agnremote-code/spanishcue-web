@@ -65,6 +65,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...grammarTopicPages.filter(topic => topic.path.startsWith("/spanish-grammar-lessons/")).map(topic => ({path: topic.path, priority: 0.7, changeFrequency: "monthly" as Frequency})),
   { path: "/about", priority: 0.5, changeFrequency: "monthly" },
   { path: "/equipo", priority: 0.5, changeFrequency: "monthly" },
+  { path: "/datos", priority: 0.6, changeFrequency: "weekly" },
+  { path: "/datos/errores-preterito-perfecto-a2", priority: 0.6, changeFrequency: "monthly" },
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },
   { path: "/alternativa-a-profedeele", priority: 0.8, changeFrequency: "monthly" },
   { path: "/clases-de-espanol-listas-para-dar", priority: 0.85, changeFrequency: "monthly" },
