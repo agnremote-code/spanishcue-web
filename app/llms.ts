@@ -51,6 +51,7 @@ export function llmsTxt(): string {
     link("Alternativa a ProfeDeELE", "/alternativa-a-profedeele", "comparativa de formatos entre sitios de material ELE"),
     link("Verbos irregulares por tiempo", "/conjugacion/irregulares", "lista de verbos irregulares en cada tiempo verbal, con los patrones explicados y ejercicio"),
     link("Conjugación de verbos en español", "/conjugacion", "más de 1.200 verbos conjugados en todos los tiempos, con las irregularidades explicadas y un ejercicio por verbo"),
+    link("¿Por o para? Usos y ejercicios", "/por-o-para", "15 usos de por y para (causa, finalidad, destino, plazo, medio, precio, opinión…) con su regla y un ejercicio"),
     link("¿Ser o estar? Usos y ejercicios", "/ser-o-estar", "15 usos de ser y estar y 18 adjetivos que cambian de significado (listo, malo, rico, aburrido…), cada uno con su regla y un ejercicio"),
     link("¿Indefinido o imperfecto? Ejercicios por marcador", "/indefinido-o-imperfecto", "26 marcadores temporales (ayer, de repente, mientras, siempre, cuando…) con su regla y un ejercicio de elegir el tiempo"),
     link("Verbos con preposición", "/verbos-con-preposicion", "48 verbos con su preposición (soñar con, depender de, pensar en…), el error típico de cada uno y un ejercicio de elegir la preposición"),

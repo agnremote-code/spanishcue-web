@@ -25,6 +25,8 @@ import { verbosPrep } from "./verbos-con-preposicion/verbos";
 import { PASADO_PATH, pasadoPath } from "./indefinido-o-imperfecto/data";
 import { marcadores } from "./indefinido-o-imperfecto/marcadores";
 import { SER_PATH, serPath, serSlugs } from "./ser-o-estar/data";
+import { PORPARA_PATH, porParaPath } from "./por-o-para/data";
+import { usosPorPara } from "./por-o-para/usos";
 import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
@@ -93,6 +95,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...marcadores.map((m) => ({ path: pasadoPath(m.slug), priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: SER_PATH, priority: 0.85, changeFrequency: "monthly" },
   ...serSlugs().map((slug) => ({ path: serPath(slug), priority: 0.7, changeFrequency: "monthly" as Frequency })),
+  { path: PORPARA_PATH, priority: 0.85, changeFrequency: "monthly" },
+  ...usosPorPara.map((u) => ({ path: porParaPath(u.slug), priority: 0.7, changeFrequency: "monthly" as Frequency })),
   { path: "/ele-recursos-profesores", priority: 0.7, changeFrequency: "monthly" },
   { path: "/free-spanish-lesson", priority: 0.7, changeFrequency: "monthly" },
   { path: "/online-spanish-teaching-resources", priority: 0.6, changeFrequency: "monthly" },
