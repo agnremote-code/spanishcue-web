@@ -8,10 +8,12 @@ export type GapFamily = {
   key: string; path: string; label: string; h1: string; title: string; kicker: string; topic: string;
   intro: string; about: string[]; guides: { href: string; label: string }[];
   faq: { question: string; answer: string }[]; pages: GapPage[];
+  /** Slug of the /material-ele/ejercicio page consolidated into this hub (app/seo-prune.ts). */
+  ejercicio?: string;
 };
 
 export const imperativo: GapFamily = {
-  key: "imperativo", path: "/ejercicios-de-imperativo", label: "Ejercicios de imperativo", topic: "el imperativo",
+  key: "imperativo", ejercicio: "imperativo", path: "/ejercicios-de-imperativo", label: "Ejercicios de imperativo", topic: "el imperativo",
   h1: "Ejercicios del imperativo en español", title: "Ejercicios del imperativo en español, con solución | SpanishCue", kicker: "Gramática · A2–B1",
   intro: "Tú afirmativo y negativo, los ocho irregulares, usted y ustedes, pronombres y reflexivos: cada regla con su ejercicio y corrección al instante.",
   about: ["ejercicios de imperativo", "imperativo en español", "imperativo afirmativo y negativo", "ELE"],
@@ -42,7 +44,7 @@ export const imperativo: GapFamily = {
 };
 
 export const gustar: GapFamily = {
-  key: "gustar", path: "/ejercicios-de-gustar", label: "Ejercicios de gustar", topic: "gustar y los verbos como gustar",
+  key: "gustar", ejercicio: "gustar", path: "/ejercicios-de-gustar", label: "Ejercicios de gustar", topic: "gustar y los verbos como gustar",
   h1: "Ejercicios con el verbo gustar y verbos como gustar", title: "Ejercicios de gustar y verbos como gustar | SpanishCue", kicker: "Gramática · A1–B1",
   intro: "Gusta o gustan, me, te, le, nos, les, y los verbos que funcionan igual: encantar, doler, interesar, faltar, quedar, molestar, importar y parecer.",
   about: ["ejercicios con el verbo gustar", "verbos como gustar", "gusta o gustan", "ELE"],
@@ -77,7 +79,7 @@ export const gustar: GapFamily = {
 };
 
 export const pronombres: GapFamily = {
-  key: "pronombres", path: "/ejercicios-de-pronombres", label: "Ejercicios de pronombres", topic: "los pronombres de objeto directo e indirecto",
+  key: "pronombres", ejercicio: "pronombres-de-objeto", path: "/ejercicios-de-pronombres", label: "Ejercicios de pronombres", topic: "los pronombres de objeto directo e indirecto",
   h1: "Ejercicios de pronombres de objeto directo e indirecto", title: "Ejercicios de objeto directo e indirecto (lo, le, se lo) | SpanishCue", kicker: "Gramática · A2–B1",
   intro: "Lo, la, los, las; le, les; se lo cuando van juntos; y dónde se colocan con infinitivo y gerundio. Cada regla con su ejercicio.",
   about: ["ejercicios de objeto directo e indirecto", "pronombres de objeto directo", "pronombres de objeto indirecto", "ELE"],

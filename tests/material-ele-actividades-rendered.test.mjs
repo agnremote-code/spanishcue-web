@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
-const paths=['/material-ele/actividades','/material-ele/actividad/quien-es-quien','/material-ele/ejercicio/ser-y-estar','/material-ele/preguntas/b1'];
+const paths=['/material-ele/actividades','/material-ele/actividad/quien-es-quien','/material-ele/ejercicio/futuro','/material-ele/preguntas/b1'];
 for(const path of paths)test(`activity bank serves indexable, printable Spanish HTML for anonymous visitors: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));

@@ -1,3 +1,4 @@
+import { ConsolidatedExercise } from "../material-ele/ConsolidatedExercise";
 import Link from "next/link";
 import { Section } from "../growth/components";
 import { eleMetadata } from "../material-ele/components";
@@ -37,6 +38,7 @@ export default function PasadoHub() {
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases con marcadores distintos. Si dudas en alguna, abre su página y repasa la regla.">
         <MoodChooser items={mixed} />
       </Section>
+      <ConsolidatedExercise slug="indefinido-e-imperfecto" />
       <EleNewsletterInline source={PASADO_PATH} />
       <Section title="Para preparar la clase">
         <ul className={cj.verbList}>{PASADO_GUIDES.map((g) => <li key={g.href}><Link href={g.href}>{g.label}</Link></li>)}</ul>

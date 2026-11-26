@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Section } from "../growth/components";
 import { MATERIAL_ELE_PATH, eleLevels } from "./data";
+import { livePath } from "../seo-prune";
 import { temaGroups, temaParents, type TemaGroupId, type TemaPage } from "./temas";
 import styles from "../growth/growth.module.css";
 
@@ -23,7 +24,7 @@ export function TemaCards({ pages }: { pages: TemaPage[] }) {
   return (
     <div className={styles.cardGrid}>
       {pages.map((page) => (
-        <Link className={styles.levelCard} key={page.path} href={page.path}>
+        <Link className={styles.levelCard} key={page.path} href={livePath(page.path)}>
           <em>{page.levels.length > 1 ? `${page.levels[0]}–${page.levels[page.levels.length - 1]}` : page.levels[0]}</em>
           <b>{page.name}</b>
           <span>{page.lessonIds.length === 1 ? "1 clase interactiva" : `${page.lessonIds.length} clases interactivas`}{page.freeCount ? ` · ${page.freeCount} gratis` : ""}</span>

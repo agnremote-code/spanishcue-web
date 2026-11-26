@@ -1,3 +1,4 @@
+import { isPrunedNoindexPath, isPrunedPath } from "./seo-prune";
 import type { MetadataRoute } from "next";
 import { isFreeLesson, localLessonPath } from "./access-policy";
 import { freeAutoestudioModules } from "./autoestudio/access";
@@ -146,7 +147,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const seen = new Set<string>();
   const entries: Entry[] = [];
   const push = (item: Entry) => {
-    if (seen.has(item.url) || isSearchPrivatePath(new URL(item.url).pathname)) return;
+    if (seen.has(item.url) || isSearchPrivatePath(new URL(item.url).pathname) || isPrunedPath(new URL(item.url).pathname) || isPrunedNoindexPath(new URL(item.url).pathname)) return;
     seen.add(item.url);
     entries.push(item);
   };

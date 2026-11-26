@@ -10,6 +10,7 @@ import { teachingGuidesForTopic } from "../guias";
 import { ejercicioBySlug } from "../actividades";
 import { EleFreeAudios, freeAudioSamples } from "../audios";
 import { TemaGroupIndexPage } from "../tema-group-page";
+import { isPrunedPath, livePath } from "../../seo-prune";
 import { temaGroupById, temaLevelsForTopic, temasByGroup, type TemaGroupId } from "../temas";
 import { EleFichaLinks } from "../ficha-links";
 import styles from "../../growth/growth.module.css";
@@ -54,7 +55,7 @@ export default async function ElePage({ params }: Props) {
   const featured = featuredGrammarLesson(page.lessonIds);
   const dates = pageDates(page.path);
   const preview = elePreviewLesson(page.lessonIds);
-  const levelPages = temaLevelsForTopic(page.slug);
+  const levelPages = temaLevelsForTopic(page.slug).filter((level) => !isPrunedPath(level.path));
   const ejercicio = ejercicioBySlug.get(page.slug);
   // A long topic exercise lives in full on its own page (the one built for «ejercicios de …» searches);
   // the guide shows the first sentences so the two pages are not duplicates of each other.
@@ -78,7 +79,7 @@ export default async function ElePage({ params }: Props) {
             <p className={styles.lead}>{page.intro}</p>
             <div className={`${styles.heroActions} ${print.noPrint}`}>
               <Link className={styles.primaryButton} href="#actividades">Ver las actividades</Link>
-              {ejercicio ? <Link className={styles.secondaryButton} href={ejercicio.path}>Ejercicios con soluciones</Link> : null}
+              {ejercicio ? <Link className={styles.secondaryButton} href={livePath(ejercicio.path)}>Ejercicios con soluciones</Link> : null}
               <PrintButton />
               {freeLesson ? <Link className={styles.secondaryButton} href={freeLesson.href}>Clase gratis: {freeLesson.title}</Link> : <Link className={styles.secondaryButton} href="/demo/noche-abierta">Probar una clase gratis</Link>}
             </div>
@@ -107,7 +108,7 @@ export default async function ElePage({ params }: Props) {
           {page.exercise ? (
             <Section id="ejercicio" title={page.exercise.title} intro={exercisePreview ? `Las primeras ${exercisePreview.items.length} de ${page.exercise.items.length} frases. Las ${page.exercise.items.length}, con corrección automática y ficha en PDF, están en la página del ejercicio.` : undefined}>
               <EleExerciseBlock exercise={exercisePreview ?? page.exercise} />
-              {ejercicio ? <p className={print.noPrint}><Link className={styles.textLink} href={ejercicio.path}>Ejercicio de {page.kind === "level" ? `nivel ${page.code}` : page.label.toLowerCase()} {exercisePreview ? "completo" : "en página propia"}, para mandar al alumno: {ejercicio.exercise.items.length} frases con corrección automática y soluciones →</Link></p> : null}
+              {ejercicio ? <p className={print.noPrint}><Link className={styles.textLink} href={livePath(ejercicio.path)}>Ejercicio de {page.kind === "level" ? `nivel ${page.code}` : page.label.toLowerCase()} {exercisePreview ? "completo" : "en página propia"}, para mandar al alumno: {ejercicio.exercise.items.length} frases con corrección automática y soluciones →</Link></p> : null}
             </Section>
           ) : null}
 

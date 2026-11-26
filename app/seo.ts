@@ -1,3 +1,4 @@
+import { isPrunedNoindexPath } from "./seo-prune";
 import type { Locale } from "./i18n/messages";
 import { resourceLanguagePair } from "./resource-seo";
 
@@ -46,7 +47,8 @@ export function languageAlternates(pathname: string): Record<string, string> | u
   const path = normalizePathname(pathname);
   // Every lesson resource page exists in both languages (/recursos ↔ /resources).
   const pair = languagePairs.find((item) => item.es === path || item.en === path) ?? resourceLanguagePair(path) ?? verbLanguagePair(path);
-  if (!pair) return undefined;
+  // A pair is only declared while both pages are indexable (SEO plan, app/seo-prune.ts).
+  if (!pair || isPrunedNoindexPath(pair.es) || isPrunedNoindexPath(pair.en)) return undefined;
   return {
     es: canonicalUrl(pair.es),
     en: canonicalUrl(pair.en),
@@ -198,6 +200,7 @@ export function isCampaignPath(pathname: string): boolean {
  * crawlers at the indexable hubs.
  */
 export function robotsHeaderFor(pathname: string): string | null {
+  if (isPrunedNoindexPath(normalizePathname(pathname))) return "noindex, follow";
   if (isIndexablePurchaseLandingPath(pathname)) return null;
   if (isCampaignPath(pathname)) return "noindex, follow";
   if (isSearchPrivatePath(pathname)) return "noindex, nofollow";

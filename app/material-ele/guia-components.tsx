@@ -1,8 +1,10 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import type { GuiaBlock } from "./guias";
+import { livePath } from "../seo-prune";
 
-/** Turns `**bold**` and `[label](/path)` inside guide prose into elements; everything else stays literal text. */
+/** Turns `**bold**` and `[label](/path)` inside guide prose into elements; everything else stays literal text.
+ * Links go through `livePath`, so prose that names a consolidated URL points straight at its destination. */
 export function richText(text: string): ReactNode[] {
   const nodes: ReactNode[] = [];
   const pattern = /\*\*([^*]+)\*\*|\[([^\]]+)\]\(([^)\s]+)\)/g;
@@ -11,7 +13,7 @@ export function richText(text: string): ReactNode[] {
   while ((match = pattern.exec(text)) !== null) {
     if (match.index > last) nodes.push(text.slice(last, match.index));
     if (match[1] !== undefined) nodes.push(<strong key={match.index}>{match[1]}</strong>);
-    else nodes.push(<Link key={match.index} href={match[3]}>{match[2]}</Link>);
+    else nodes.push(<Link key={match.index} href={livePath(match[3])}>{match[2]}</Link>);
     last = match.index + match[0].length;
   }
   if (last < text.length) nodes.push(text.slice(last));

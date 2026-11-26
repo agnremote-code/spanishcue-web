@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { Breadcrumbs, CtaBand, Faq, GrowthFooter, GrowthTopbar, JsonLd, Section } from "../growth/components";
 import { faqPageSchema, webPageSchema } from "../growth/schema";
 import { canonicalUrl, languageAlternates } from "../seo";
+import { isPrunedNoindexPath } from "../seo-prune";
 import { socialPreviewImage, socialPreviewUrl } from "../social-preview";
 import styles from "../growth/growth.module.css";
 import cj from "../conjugacion/conjugacion.module.css";
@@ -15,7 +16,7 @@ export function verbsMetadata(path: string, title: string, description: string):
     title,
     description,
     alternates: { canonical: canonicalUrl(path), ...(languages ? { languages } : {}) },
-    robots: { index: true, follow: true },
+    robots: { index: !isPrunedNoindexPath(path), follow: true },
     openGraph: { title, description, url: canonicalUrl(path), type: "website", images: [socialPreviewImage] },
     twitter: { card: "summary_large_image", title, description, images: [socialPreviewUrl] },
   };
