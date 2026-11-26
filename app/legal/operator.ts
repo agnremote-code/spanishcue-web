@@ -104,9 +104,12 @@ function operatorFromJson(env: LegalEnv): LegalOperator | null {
       ...(parsed as Record<string, unknown>),
     };
     // Owner's published identification, given by Ale on 2026-11-26 for the legal notice.
-    // The secret predates it (no CUIT, street only), so fill what it lacks; never override a value it sets.
-    if (typeof candidate.taxId !== "string" || !candidate.taxId.trim()) candidate.taxId = OWNER_TAX_ID;
-    if (typeof candidate.address === "string" && candidate.address.trim().toLowerCase() === "avenida belgrano 1646") candidate.address = OWNER_ADDRESS;
+    // The production secret predates it (no CUIT, street only): only that exact record is
+    // completed; any other operator data, or a tax ID the secret sets, is left untouched.
+    if (typeof candidate.address === "string" && candidate.address.trim().toLowerCase() === "avenida belgrano 1646") {
+      candidate.address = OWNER_ADDRESS;
+      if (typeof candidate.taxId !== "string" || !candidate.taxId.trim()) candidate.taxId = OWNER_TAX_ID;
+    }
     if (!candidate.supportEmail) candidate.supportEmail = ownerEmail;
     if (!candidate.privacyEmail) candidate.privacyEmail = candidate.supportEmail || ownerEmail;
     return normalizeOperator(candidate);
