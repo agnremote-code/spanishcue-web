@@ -52,6 +52,28 @@ export function articleSchema(input: { pathname: string; headline: string; descr
   };
 }
 
+/** A small dataset published on /datos: who made it, what it measures, the period and the CSV. */
+export function datasetSchema(input: { pathname: string; name: string; description: string; temporalCoverage: string; variableMeasured: string[]; csvPath?: string; keywords?: string[]; dates: PageDates }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    name: input.name,
+    description: input.description,
+    url: canonicalUrl(input.pathname),
+    inLanguage: "es",
+    creator: authorNode,
+    publisher: organizationNode,
+    license: "https://creativecommons.org/licenses/by/4.0/",
+    isAccessibleForFree: true,
+    temporalCoverage: input.temporalCoverage,
+    variableMeasured: input.variableMeasured,
+    datePublished: input.dates.datePublished,
+    dateModified: input.dates.dateModified,
+    ...(input.keywords ? { keywords: input.keywords } : {}),
+    ...(input.csvPath ? { distribution: [{ "@type": "DataDownload", encodingFormat: "text/csv", contentUrl: canonicalUrl(input.csvPath) }] } : {}),
+  };
+}
+
 /** A CEFR level hub: an ordered set of classes for one level. */
 export function courseSchema(input: { pathname: string; name: string; description: string; educationalLevel: string; inLanguage?: string; lessons: { name: string; href: string }[] }) {
   return {

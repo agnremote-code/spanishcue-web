@@ -128,6 +128,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
   return (
     path === "/about" ||
     path === "/equipo" ||
+    path === "/datos" ||
+    path.startsWith("/datos/") ||
     path === "/resources" ||
     path.startsWith("/resources/") ||
     path === "/recursos" ||
