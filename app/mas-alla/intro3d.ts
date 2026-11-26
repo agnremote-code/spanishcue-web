@@ -20,10 +20,10 @@ const smooth = (a: number, b: number, t: number) => { const k = Math.min(1, Math
 const lerp = (a: number, b: number, k: number) => a + (b - a) * k;
 /** The chairs: seat height, and how far behind the sitter's root the seat centre is. */
 export const CHAIR = { seat: 0.36, back: 0.08 };
-/** The blanket over her legs (world space): a half-ellipse tube along z, resting on the mattress. */
+/** The blanket over his legs (world space): a half-ellipse tube along z, resting on the mattress. */
 export const BLANKET = { y: 0.83, z: -0.72, len: 0.86, rx: 0.45, ry: 0.42 };
 const BLANKET_TOP = BLANKET.y + BLANKET.ry;
-/** Where the soul first shows: clear of the blanket and of her body. */
+/** Where the soul first shows: clear of the blanket and of his body. */
 const SOUL_Y = BLANKET_TOP + 0.06;
 
 export function buildIntro(low: boolean, shadows: boolean) {
@@ -63,13 +63,13 @@ export function buildIntro(low: boolean, shadows: boolean) {
   const bed = new THREE.Group();
   const metal = solid('#d8dcdc', 0.4, 0.6);
   bed.add(box(1.05, 0.5, 2.1, metal, 0, 0.32, 0, shadows));
-  // The mattress top (0.83) is where her body rests; nothing of the bed goes through her.
+  // The mattress top (0.83) is where his body rests; nothing of the bed goes through him.
   bed.add(box(1.0, 0.34, 2.05, solid('#f2f2ee', 0.95), 0, 0.66, 0, shadows));
   bed.add(box(1.1, 0.7, 0.06, metal, 0, 0.75, -1.06, false));
   bed.add(box(1.1, 0.45, 0.06, metal, 0, 0.62, 1.06, false));
-  // The pillow stands against the headboard, just behind her head.
+  // The pillow stands against the headboard, just behind his head.
   bed.add(box(0.6, 0.15, 0.24, solid('#ffffff', 0.95), 0, 0.905, -0.9, false));
-  // The blanket is a soft tent over her legs: hollow, so her body stays under it, never inside it.
+  // The blanket is a soft tent over his legs: hollow, so his body stays under it, never inside it.
   const blanketMat = new THREE.MeshStandardMaterial({ color: '#9ab0c8', roughness: 0.95, side: THREE.DoubleSide });
   const shell = new THREE.CylinderGeometry(BLANKET.rx, BLANKET.rx, BLANKET.len, 22, 1, true, Math.PI / 2, Math.PI);
   shell.rotateX(Math.PI / 2); shell.scale(1, BLANKET.ry / BLANKET.rx, 1);
@@ -81,10 +81,10 @@ export function buildIntro(low: boolean, shadows: boolean) {
   group.add(bed);
 
   // ---------------------------------------------------------------- you, at eighty-nine
-  const look = { body: 'f', age: 'elderly', build: 'slim', top: 'shirt', topColor: '#dfe6ee', bottom: 'pants', bottomColor: '#dfe6ee', hairStyle: 'bun', hairColor: '#ece9e2', skin: '#eac0a0', seed: 89 };
+  const look = { body: 'm', age: 'elderly', build: 'slim', top: 'shirt', topColor: '#dfe6ee', bottom: 'pants', bottomColor: '#dfe6ee', hairStyle: 'short', hairColor: '#e8e5de', skin: '#e0ac85', seed: 89 };
   const you = createPerson(look as never, shadows);
   setPose(you, 'lie'); setMood(you, 'sleepy');
-  you.root.position.set(0, 0.86, -1.17); you.root.rotation.y = 0;
+  you.root.position.set(0, 0.86, -1.13); you.root.rotation.y = 0; // his longer legs: head clear of the pillow, feet clear of the footboard
   you.attention = 0;
   group.add(you.root); people.push(you);
   // The soul: the same body, made of light, rising out of it.
@@ -98,8 +98,8 @@ export function buildIntro(low: boolean, shadows: boolean) {
   const family: { look: Record<string, unknown>; x: number; z: number; h: number; pose: string }[] = [
     // Your daughter, holding your hand.
     { look: { body: 'f', age: 'adult', top: 'sweater', topColor: '#8a4a4a', bottom: 'jeans', bottomColor: '#2a3040', hairStyle: 'long', hairColor: '#5a3a22', skin: '#eac0a0' }, x: 1.1, z: -1.25, h: -Math.PI / 2, pose: 'sit' },
-    // Your husband, very old too, on the other side.
-    { look: { body: 'm', age: 'elderly', build: 'slim', top: 'sweater', topColor: '#5a6a5a', bottom: 'pants', bottomColor: '#3a3a3a', hairStyle: 'short', hairColor: '#e0ddd6', skin: '#e0ac85', extras: ['glasses'] }, x: -1.1, z: -1.6, h: Math.PI / 2, pose: 'sit' },
+    // Your wife, very old too, on the other side.
+    { look: { body: 'f', age: 'elderly', build: 'slim', top: 'sweater', topColor: '#5a6a5a', bottom: 'pants', bottomColor: '#3a3a3a', hairStyle: 'bun', hairColor: '#ece9e2', skin: '#eac0a0', extras: ['glasses'] }, x: -1.1, z: -1.6, h: Math.PI / 2, pose: 'sit' },
     // Your son, standing behind his sister, a hand on her shoulder.
     { look: { body: 'm', age: 'adult', top: 'jacket', topColor: '#2a3a50', bottom: 'jeans', bottomColor: '#2a2f3a', hairStyle: 'short', hairColor: '#3d2a1c', skin: '#e0ac85', extras: ['beard'] }, x: 1.55, z: -0.85, h: -Math.PI / 2 - 0.3, pose: 'stand' },
     // Your granddaughter, crying in her mother's arms… and your grandson at the foot of the bed.
@@ -231,7 +231,7 @@ export function buildIntro(low: boolean, shadows: boolean) {
         soul.root.visible = true;
         const up = smooth(7.2, 8.4, t);
         // It appears just above the blanket, never through it, and rises from there.
-        soul.root.position.set(0, SOUL_Y + k * 3.9, -1.17 - up * 0.5);
+        soul.root.position.set(0, SOUL_Y + k * 3.9, -1.13 - up * 0.5);
         if (up > 0.5 && soul.pose !== 'stand') setPose(soul, 'stand');
         soul.root.rotation.x = 0;
         animatePerson(soul, dt, 0, false);
