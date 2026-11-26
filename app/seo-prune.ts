@@ -50,6 +50,27 @@ export const prunedRedirects: ReadonlyMap<string, string> = new Map([
   ["/material-ele/gramatica/gustar", "/material-ele/gustar"],
   ["/material-ele/gramatica/imperativo", "/material-ele/imperativo"],
   ["/material-ele/gramatica/imperativo/a2", "/material-ele/imperativo"],
+  // Lote R3 (26/11/2026): grammar index topics duplicating the Material ELE topic page, with their levels.
+  ["/material-ele/gramatica/indicativo-o-subjuntivo", "/material-ele/indicativo-o-subjuntivo"],
+  ["/material-ele/gramatica/indicativo-o-subjuntivo/b1", "/material-ele/indicativo-o-subjuntivo"],
+  ["/material-ele/gramatica/indicativo-o-subjuntivo/c1", "/material-ele/indicativo-o-subjuntivo"],
+  ["/material-ele/gramatica/interrogativos", "/material-ele/interrogativos"],
+  ["/material-ele/gramatica/interrogativos/a1", "/material-ele/interrogativos"],
+  ["/material-ele/gramatica/negacion", "/material-ele/negacion"],
+  ["/material-ele/gramatica/oraciones-causales", "/material-ele/oraciones-causales"],
+  ["/material-ele/gramatica/oraciones-causales/b1", "/material-ele/oraciones-causales"],
+  ["/material-ele/gramatica/oraciones-concesivas", "/material-ele/oraciones-concesivas"],
+  ["/material-ele/gramatica/oraciones-concesivas/b1", "/material-ele/oraciones-concesivas"],
+  ["/material-ele/gramatica/oraciones-concesivas/b2", "/material-ele/oraciones-concesivas"],
+  ["/material-ele/gramatica/oraciones-consecutivas", "/material-ele/oraciones-consecutivas"],
+  ["/material-ele/gramatica/oraciones-de-relativo", "/material-ele/oraciones-de-relativo"],
+  ["/material-ele/gramatica/oraciones-de-relativo/a2", "/material-ele/oraciones-de-relativo"],
+  ["/material-ele/gramatica/oraciones-de-relativo/c1", "/material-ele/oraciones-de-relativo"],
+  ["/material-ele/gramatica/oraciones-finales", "/material-ele/oraciones-finales"],
+  ["/material-ele/gramatica/oraciones-finales/b1", "/material-ele/oraciones-finales"],
+  ["/material-ele/gramatica/oraciones-temporales", "/material-ele/oraciones-temporales"],
+  ["/material-ele/gramatica/oraciones-temporales/a2", "/material-ele/oraciones-temporales"],
+  ["/material-ele/gramatica/oraciones-temporales/b2", "/material-ele/oraciones-temporales"],
 ]);
 
 /**
