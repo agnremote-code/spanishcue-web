@@ -25,7 +25,8 @@ def fmt(url, p):
     if u.endswith('.pdf'): return 'pdf'
     if any(d in u for d in ('pinterest.', 'teacherspayteachers', 'tes.com', 'wordwall', 'liveworksheets', 'quizlet')): return 'banco de recursos'
     if any(d in u for d in ('reddit.com', 'quora.com', 'forum')): return 'foro'
-    if p.get('exercises'): return 'ejercicios'
+    ex = p.get('exercises')
+    if (ex.get('has') if isinstance(ex, dict) else ex): return 'ejercicios'
     if p.get('pdf'): return 'ficha pdf'
     if (p.get('words') or 0) >= 1500: return 'guía larga'
     return 'artículo/lista'
@@ -43,7 +44,8 @@ with open(out_path, 'w', newline='') as f:
         fm = Counter(fmt(u, p) for u, p in measured)
         words = [p['words'] for _, p in measured if isinstance(p.get('words'), int) and p['words'] > 0]
         feats = q.get('features') or {}
-        flist = [k for k, v in feats.items() if v and k not in ('paa', 'people_also_ask', 'ai_overview_sources')]
+        flist = [k for k, v in feats.items() if v and not isinstance(v, (list, dict)) and k not in ('videos_block',)]
+        if feats.get('ai_overview') and 'spanishcue.com' in (feats.get('ai_overview_domains') or []): flist.append('AIO cita spanishcue')
         paa = feats.get('paa') or feats.get('people_also_ask') or []
         w.writerow([
             q['query'], q.get('hl', ''), g['imp'] if g else 0, g['clk'] if g else 0,

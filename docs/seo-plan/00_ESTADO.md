@@ -5,7 +5,7 @@ Actualizado: 26/11/2026.
 | Paso | Entregable | Estado |
 |---|---|---|
 | 1 Auditoría | 01_AUDITORIA.csv, 01_AUDITORIA_LEEME.md | Hecho. 4.816 URLs, método y hallazgos en el LEEME. |
-| 2 Mapa de demanda | 02_MAPA_DEMANDA.csv | Pendiente |
+| 2 Mapa de demanda | 02_MAPA_DEMANDA.csv, 02_MAPA_DEMANDA_LEEME.md, serp/ | Hecho. 43 búsquedas con SERP real de Google (26/11, IP de España). |
 | 3 Prioridad ICE | 03_PRIORIDAD_ICE.csv | Pendiente |
 | 4 Poda | 04_PLAN_PODA.csv | Pendiente |
 | 5 Briefs | 05_BRIEFS/ | Pendiente |
@@ -31,5 +31,5 @@ Actualizado: 26/11/2026.
 ## Límites de acceso
 
 - spanishcue.com y la competencia están bloqueados desde el contenedor.
-- La SERP de Google se consulta con un buscador web que no es Google y se marca como tal.
+- La SERP de Google se captura desde Chrome en la Mac de Ale (IP de España, sesión iniciada, pws=0). 73 de 326 páginas del top 10 no se pudieron medir (antibots).
 - No hay datos de enlaces externos por URL (no hay Ahrefs ni Semrush).
