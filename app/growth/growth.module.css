@@ -98,6 +98,12 @@
 .panel h3 { margin: 0 0 10px; }
 .panel ul { margin: 0; padding-left: 20px; display: grid; gap: 8px; }
 .panel ol { margin: 12px 0 0; padding-left: 22px; display: grid; gap: 8px; }
+.tableWrap { overflow-x: auto; padding: 0; }
+.tableWrap table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
+.tableWrap caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.tableWrap th, .tableWrap td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--g-line); }
+.tableWrap thead th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--g-muted); }
+.tableWrap tbody tr:last-child th, .tableWrap tbody tr:last-child td { border-bottom: 0; }
 .scaffold { display: grid; gap: 2px; margin-bottom: 10px; }
 .scaffold b { font-size: 16px; }
 .scaffold span { font-size: 14px; color: var(--g-muted); }

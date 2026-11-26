@@ -22,8 +22,8 @@ export const grammarTopicPages: GrammarTopicPage[] = [
   },
   {
     slug: 'past', path: '/guides/preterite-vs-imperfect-activities',
-    title: 'Preterite vs Imperfect Activities for Teachers | SPANISHCUE',
-    description: 'Use three Spanish past-tense activities to teach background, completed events and narrative perspective, with sample prompts, corrections and real lessons.',
+    title: 'Preterite vs Imperfect Activities for Spanish Teachers',
+    description: 'Preterite vs imperfect activities for adults built on storytelling: background and events at A2, the full contrast at B1, plus a timeline storyboard to draw.',
     h1: 'Preterite vs imperfect activities with a story to tell', levels: 'A2–B1',
     introduction: 'Teach completed events and background with separate A2 support, then bring them together at B1. Each task asks the learner to communicate a perspective instead of guessing a tense from a keyword.',
     lessonIds: [142, 143, 18], levelSlugs: ['a2','b1'],
@@ -37,8 +37,8 @@ export const grammarTopicPages: GrammarTopicPage[] = [
   },
   {
     slug: 'subjunctive', path: '/guides/spanish-subjunctive-lesson-plan',
-    title: 'Spanish Subjunctive Activities and Lesson Plan | SPANISHCUE',
-    description: 'Plan communicative Spanish subjunctive activities for B1 and B2: workshop decisions, reactions and past requests, with sample prompts and teacher feedback.',
+    title: 'Spanish Subjunctive Lesson Plan and Activities (B1–B2)',
+    description: 'A Spanish subjunctive lesson plan for adults: wishes and recommendations at B1, doubt and reactions at B2, with three activities and an error-to-fix table.',
     h1: 'Spanish subjunctive activities built around a decision', levels: 'B1–B2, with C1 follow-up',
     introduction: 'Keep one communicative use in focus. Start with present wishes and recommendations at B1; move to earlier events or past requests only when the learner can explain the time relationship.',
     lessonIds: [148, 149, 150, 37], levelSlugs: ['b1','b2','c1'],
@@ -52,8 +52,8 @@ export const grammarTopicPages: GrammarTopicPage[] = [
   },
   {
     slug: 'por-para', path: '/spanish-grammar-lessons/por-vs-para-activities',
-    title: 'Por vs Para Activities for Spanish Teachers | SPANISHCUE',
-    description: 'Teach por vs para through a delivery problem, a purposeful exchange and a message repair task. B1 teacher instructions, sample answers and a real lesson.',
+    title: 'Por vs Para Activities for Spanish Teachers (B1)',
+    description: 'Por vs para activities for adult learners: a delivery to replan, a route-or-destination map and a message repair task, with prompts and teacher feedback.',
     h1: 'Por vs para activities with a plan to make', levels: 'B1',
     introduction: 'A shared delivery gives por and para different jobs: explain a cause, plan a route, identify a recipient and state a purpose or deadline. Ask what the speaker means before deciding which preposition fits.',
     lessonIds: [231, 212], levelSlugs: ['b1'],
@@ -67,8 +67,8 @@ export const grammarTopicPages: GrammarTopicPage[] = [
   },
   {
     slug: 'conditional', path: '/spanish-grammar-lessons/conditional-tense-activities',
-    title: 'Spanish Conditional Tense Activities for Teachers | SPANISHCUE',
-    description: 'Teach the Spanish conditional and si clauses through advice, plans and hypothetical deals: three teacher-led activities from A2 to B2 with prompts and feedback.',
+    title: 'Spanish Conditional Tense Activities for Teachers (A2–B2)',
+    description: 'Conditional tense activities that turn advice into a plan: real conditions at A2, polite advice at B1 and hypothetical deals at B2, with problem cards.',
     h1: 'Conditional tense activities that turn advice into a plan', levels: 'A2–B2',
     introduction: 'Start with real conditions at A2 (si + presente), move to advice and polite requests with the simple conditional at B1, and reach hypothetical negotiation at B2 (si + imperfecto de subjuntivo + condicional). Every task gives the learner a problem to solve, not a verb table to complete.',
     lessonIds: [146, 31, 214, 219, 23, 152], levelSlugs: ['a2','b1','b2'],
