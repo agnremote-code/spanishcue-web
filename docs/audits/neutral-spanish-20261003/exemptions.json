@@ -14766,6 +14766,36 @@
       "text": "reí reíste rio reímos reísteis rieron",
       "category": "regional-pedagogy",
       "reason": "Conjugation reference data: the vosotros form of oír (oís) and the first-person preterite of reír (reí) are cells of a full conjugation table, not copy addressed to the reader."
+    },
+    {
+      "path": "app/material-ele/seo-rewrites.ts",
+      "text": "La regla de la tilde: si al añadir pronombres la palabra pasa a ser esdrújula o sobresdrújula, lleva tilde (lee → léelo, pasa → pásamela). Por eso «dime», «dale» y «ponlo» no la llevan: siguen siendo llanas.",
+      "reason": "Neutral tú imperative da + le cited as an example of the accent rule for enclitic pronouns, not Argentine encouragement.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/seo-rewrites.ts",
+      "text": "Hoy comí con mi hermano.",
+      "reason": "Pretérito en primera persona (yo) en el ejemplo de la variante americana del pretérito, no voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/seo-rewrites.ts",
+      "text": "Duermo ocho horas, pero anoche me dormí a las dos.",
+      "reason": "Pretérito en primera persona (yo) en un ejemplo de dormir/dormirse, no voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/seo-rewrites.ts",
+      "text": "Para practicarlos, da al alumno la mitad de una frase y pídele que la termine con el verbo con o sin pronombre: «Estaba tan cansado que…» (me dormí), «La reunión terminó y…» (me fui).",
+      "reason": "Pretérito en primera persona (yo) en las respuestas modelo, no voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/material-ele/seo-rewrites.ts",
+      "text": "**Confundir dormir y dormirse:** «Anoche dormí a las dos» → «Anoche me dormí a las dos».",
+      "reason": "Pretérito en primera persona (yo) en el error típico y su corrección, no voseo.",
+      "category": "neutral-context"
     }
   ]
 }
