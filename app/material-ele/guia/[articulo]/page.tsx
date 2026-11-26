@@ -2,7 +2,7 @@ import Link from "next/link";
 import { EleNewsletterInline } from "../../PopularLinks";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd } from "../../../growth/components";
-import { faqPageSchema, webPageSchema } from "../../../growth/schema";
+import { articleSchema, faqPageSchema, webPageSchema } from "../../../growth/schema";
 import { EleBuyBand, EleLessonGrid, ElePageDates, ElePreviewVideo, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, elePreviewLesson, pageImage } from "../../components";
 import { GuiaBlocks } from "../../guia-components";
 import { guiaBySlug, guiaPages } from "../../guias";
@@ -43,6 +43,7 @@ export default async function GuiaPage({ params }: Props) {
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
           <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: page.keywords, inLanguage: "es", image: pageImage(page.lessonIds), dates })} />
+          <JsonLd data={articleSchema({ pathname: page.path, headline: page.h1, description: page.description, dates, inLanguage: "es", image: pageImage(page.lessonIds), about: page.keywords })} />
           <JsonLd data={faqPageSchema(page.faq, "es")} />
           <EleTopbar current={MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: page.h1, href: page.path }]} />

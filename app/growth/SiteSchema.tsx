@@ -31,6 +31,7 @@ export default function SiteSchema() {
     logo: `${SITE_ORIGIN}/brand/spanishcue-logo.png`,
     image: socialPreviewUrl,
     sameAs: BRAND_PROFILES,
+    founder: { "@id": `${SITE_ORIGIN}/equipo#ale` },
     knowsLanguage: ["es", "en"],
     contactPoint: {
       "@type": "ContactPoint",

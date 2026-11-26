@@ -33,3 +33,16 @@ Google corrige la búsqueda «spanishcue» a «spanish cute» (paso 2; con `nfpr
 ## Validación
 
 tests/seo-schema-rendered.test.mjs recorre una página por plantilla en el Worker construido y comprueba que cada bloque JSON-LD se puede leer, que tiene `@context` de schema.org, que cada tipo trae las propiedades que Google pide para su resultado (BreadcrumbList con posiciones y URLs absolutas, FAQPage con pregunta y respuesta, VideoObject con miniatura, fecha y archivo, Article con fechas, autor y editor) y que toda organización citada lleva el `@id` de la marca. Resultado: 18 de 18 tests en verde.
+
+## Misión, fase 3 (26/11/2026)
+
+- **Autor con nombre.** Las guías de Material ELE publican `Article` con `author` la persona `https://spanishcue.com/equipo#ale` («Ale», profesor de ELE con más de diez años de clases: la única cifra aprobada). El inicio la enlaza como `founder` de la organización. Las guías en inglés (/guides/*) siguen con la organización como `author`: cambiarlo borra textos que protege `check-english-copy.mjs` y necesita el OK de Ale en el hilo.
+- **/equipo.** Página nueva con `ProfilePage` y la persona completa (cargo, descripción, `worksFor`, idiomas). No lleva apellido, foto ni perfil personal hasta que el dueño los pase.
+- **Course** en los seis hubs de nivel (/material-ele/a1 … /c2), con `hasPart` hacia las clases del nivel.
+- **LearningResource** con `EducationalAudience`, `isAccessibleForFree` e `interactivityType` en las fichas abiertas (worksheet) y en las mini-apps de ejercicios (exercise, para alumno y profesor).
+- **Lo que no se agrega a propósito:**
+  - `HowTo`, porque su resultado enriquecido ya no existe;
+  - `Quiz` y «practice problems», que Google reserva para matemáticas y ciencias;
+  - valoraciones.
+- **Dataset** queda para /datos/ (fase 1).
+- tests/seo-schema-rendered.test.mjs suma /equipo y /material-ele/a1 y un test de autor, Course y LearningResource. La validación externa con la prueba de resultados enriquecidos de Google se hace después del deploy y queda en `schema-validation.csv`.
