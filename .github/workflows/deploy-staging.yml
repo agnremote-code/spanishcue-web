@@ -282,7 +282,9 @@ jobs:
 
           test -n "$ACTIVE_RUN"
           echo "Production run: ${GITHUB_SERVER_URL}/${GITHUB_REPOSITORY}/actions/runs/${ACTIVE_RUN}"
-          timeout 1800 gh run watch "$ACTIVE_RUN" --exit-status
+          # Poll every 30 s: the default 3 s interval spends ~2 API calls per poll and drained
+          # the repository GITHUB_TOKEN quota (1,000/h), which then 403s every deploy step.
+          timeout 1800 gh run watch "$ACTIVE_RUN" --exit-status --interval 30
 
       - name: Manual staging rollback
         if: github.event_name == 'workflow_dispatch' && inputs.action == 'rollback'
