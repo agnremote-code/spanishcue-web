@@ -1,4 +1,6 @@
 import { ConsolidatedExercise } from "../material-ele/ConsolidatedExercise";
+import { RewriteSections } from "../material-ele/rewrite-components";
+import { miniAppRewrites } from "../mini-apps/seo-rewrites";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Section } from "../growth/components";
@@ -35,6 +37,7 @@ export function GapHub({ family: f }: { family: GapFamily }) {
       <Section title="Ejercicios por regla" intro={f.intro}>
         <GapCards family={f} pages={f.pages} />
       </Section>
+      <RewriteSections rewrite={miniAppRewrites.get(f.path)} />
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases de reglas distintas. Si dudas en alguna, abre su página y repasa la regla.">
         <ChoiceQuiz items={gapMixed(f)} />
       </Section>

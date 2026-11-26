@@ -1,4 +1,6 @@
 import { ConsolidatedExercise } from "../material-ele/ConsolidatedExercise";
+import { RewriteSections } from "../material-ele/rewrite-components";
+import { miniAppRewrites } from "../mini-apps/seo-rewrites";
 import Link from "next/link";
 import { Section } from "../growth/components";
 import { eleMetadata } from "../material-ele/components";
@@ -34,6 +36,7 @@ export default function PorParaHub() {
       <Section title="Usos de para" intro="Finalidad, destinatario, destino, plazo, opinión.">
         <PorParaCards items={usosPorPara.filter((u) => u.prep === "para")} />
       </Section>
+      <RewriteSections rewrite={miniAppRewrites.get(PORPARA_PATH)} />
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases de usos distintos. Si dudas en alguna, abre su página y repasa la regla.">
         <ChoiceQuiz items={porParaMixed()} label="Elige por o para" />
       </Section>
