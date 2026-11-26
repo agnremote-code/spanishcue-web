@@ -15,7 +15,7 @@ function Block({ block }: { block: RewriteBlock }) {
         <table className={ele.compare}>
           <caption style={visuallyHidden}>{block.caption}</caption>
           <thead><tr>{block.head.map((cell) => <th key={cell} scope="col">{cell}</th>)}</tr></thead>
-          <tbody>{block.rows.map((row) => <tr key={row[0]}>{row.map((cell, index) => index === 0 ? <th key={index} scope="row">{richText(cell)}</th> : <td key={index}>{richText(cell)}</td>)}</tr>)}</tbody>
+          <tbody>{block.rows.map((row, rowIndex) => <tr key={rowIndex}>{row.map((cell, index) => index === 0 ? <th key={index} scope="row">{richText(cell)}</th> : <td key={index}>{richText(cell)}</td>)}</tr>)}</tbody>
         </table>
       </div>
     );
