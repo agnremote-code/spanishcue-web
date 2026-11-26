@@ -156,6 +156,14 @@ test('the demo shows the real opening stages, locks the rest server-side, opens 
     const paypal = dialog.querySelector('.checkout-paypal-button');
     assert.ok(paypal, 'PayPal button rendered from founder-status');
     assert.equal(dialog.querySelector('.checkout-card-button'), null, 'card option hidden when not configured');
+    // The withdrawal waiver (immediate access) must be ticked before any checkout opens.
+    await act(async () => paypal.click());
+    await settle();
+    assert.equal(calls.find(c => c.url === '/api/billing/checkout'), undefined, 'no checkout before the waiver is ticked');
+    assert.match(dialog.textContent, /Marca la casilla para continuar con el pago/);
+    const waiver = dialog.querySelector('.checkout-waiver input[type="checkbox"]');
+    assert.ok(waiver && !waiver.checked, 'waiver checkbox rendered unticked');
+    await act(async () => waiver.click());
     await act(async () => paypal.click());
     await settle();
     const checkout = calls.find(c => c.url === '/api/billing/checkout');
