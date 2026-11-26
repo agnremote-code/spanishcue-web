@@ -2,13 +2,1340 @@
   "version": 1,
   "resources": [
     {
+      "slug": "spanish-1-first-week",
+      "title": "Spanish 1 First Week: 5 No-Prep 60-Minute Lessons",
+      "price_usd": 14.5,
+      "grade_range": "6-10",
+      "level_label": "Spanish 1",
+      "cover_level": "SPANISH 1",
+      "cover_headline": "Spanish 1 First Week",
+      "cover_subline": "5 No-Prep 60-Minute Lessons",
+      "time_label": "5 x 60 minutes",
+      "lesson_label": "Day",
+      "tags": [
+        "Spanish",
+        "Back to School",
+        "Spanish 1",
+        "Greetings",
+        "Ser",
+        "No Prep"
+      ],
+      "guide_intro": "Five complete lessons for the first five days of Spanish 1. Each day has objectives, a minute-by-minute script, a two-page worksheet and an answer key. Day 1 starts from zero; by Day 5 students introduce themselves, say how they feel, give their age and talk about what they like.",
+      "description": "Start Spanish 1 with a week that is planned down to the minute. Day 1: greetings, subject pronouns and a first conversation. Day 2: ser for name, origin, nationality and job. Day 3: estar for feelings and places. Day 4: tener for age and how you feel (hambre, sed, frío). Day 5: me gusta and me encanta, ending with a class survey. Every lesson has clear objectives, a 60-minute script you can follow word for word, a print-and-go worksheet and a full answer key. Ideal for the first week of school, a new semester or a fresh start after a break.",
+      "whats_inside": [
+        "5 complete 60-minute lessons for the first week of Spanish 1",
+        "Teacher guide: objectives and a minute-by-minute script for each day",
+        "10 pages of print-and-go student worksheets (2 per lesson)",
+        "Speaking tasks every day: interviews, surveys and mini dialogues",
+        "Exit tickets to check understanding at the end of each class",
+        "Complete answer keys and model answers for every task"
+      ],
+      "lessons": [
+        {
+          "title": "¡Hola! Greetings and introductions",
+          "sources": [
+            {
+              "path": "/gramatica/clase-inicial"
+            }
+          ],
+          "objectives": [
+            "Greet people and say goodbye (**hola, buenos días, adiós, hasta mañana**).",
+            "Use the subject pronouns **yo, tú, él, ella, nosotros, ustedes, ellos, ellas**.",
+            "Say their name with **Soy…** / **Me llamo…** and ask **¿Cómo te llamas?**",
+            "Spell their name with the Spanish alphabet."
+          ],
+          "materials": [
+            "Student worksheet, Day 1",
+            "Name cards or sticky notes"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Welcome",
+              "do": "Greet every student at the door: **¡Hola! Soy [your name].** Point to yourself on *soy*. Students answer *Hola*."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Board: **hola, buenos días, buenas tardes, adiós, hasta mañana**. Act out each one (sun up, sun high, wave). Then model the mini dialogue: *—Hola, ¿cómo te llamas? —Me llamo Ana. ¿Y tú? —Soy Tom. —Mucho gusto.*"
+            },
+            {
+              "min": "15-25",
+              "stage": "Pronouns",
+              "do": "Point to people while you say **yo, tú, él, ella**; group students for **nosotros, ustedes, ellos, ellas**. Worksheet **A**: students choose the pronoun for each person or group."
+            },
+            {
+              "min": "25-35",
+              "stage": "Speaking",
+              "do": "Mingle: students greet five classmates with the dialogue and write their names in worksheet **B**. Walk around and model *Mucho gusto*."
+            },
+            {
+              "min": "35-45",
+              "stage": "Alphabet",
+              "do": "Say the alphabet slowly; students repeat. Highlight **ñ**, **ll**, **rr**, **j** and **h** (silent). Worksheet **C**: spell your name, then dictate two names to a partner (*¿Cómo se escribe?*)."
+            },
+            {
+              "min": "45-55",
+              "stage": "Practice",
+              "do": "Worksheet **D** (choose the right greeting) and **E** (complete the dialogue). Check aloud."
+            },
+            {
+              "min": "55-60",
+              "stage": "Exit ticket",
+              "do": "Each student says goodbye at the door with a greeting that fits the time of day and their name: *Adiós, soy Mia. ¡Hasta mañana!*"
+            }
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "Who is it?",
+              "instructions": "Choose the subject pronoun.",
+              "items": [
+                {
+                  "q": "Marta →",
+                  "options": [
+                    "ella",
+                    "él",
+                    "ellas"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Tom →",
+                  "options": [
+                    "él",
+                    "ella",
+                    "tú"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Marta y Tom →",
+                  "options": [
+                    "ellos",
+                    "ellas",
+                    "nosotros"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Marta y Ana →",
+                  "options": [
+                    "ellas",
+                    "ellos",
+                    "ella"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Tom y yo →",
+                  "options": [
+                    "nosotros",
+                    "ellos",
+                    "ustedes"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "You talk to one friend →",
+                  "options": [
+                    "tú",
+                    "yo",
+                    "él"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "You talk to two friends →",
+                  "options": [
+                    "ustedes",
+                    "nosotros",
+                    "tú"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Meet your classmates",
+              "instructions": "Greet five classmates: *—Hola, ¿cómo te llamas? —Me llamo… ¿Y tú?* Write their names.",
+              "lines": 5,
+              "model": "1. Me llamo Ana. 2. Soy Diego. 3. Me llamo Sofía… (any five names)"
+            },
+            {
+              "type": "write",
+              "title": "The alphabet",
+              "instructions": "Spell your name letter by letter in Spanish, then write two names your partner spells for you.",
+              "prompt": "Example: **Tom: te, o, eme.**",
+              "lines": 3,
+              "model": "Ana: a, ene, a. / Leo: ele, e, o."
+            },
+            {
+              "type": "choice",
+              "title": "Choose the greeting",
+              "instructions": "What do you say?",
+              "items": [
+                {
+                  "q": "It is 8:00 in the morning. You see your teacher.",
+                  "options": [
+                    "Buenos días.",
+                    "Buenas noches.",
+                    "Adiós."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "It is 3:00 in the afternoon.",
+                  "options": [
+                    "Buenas tardes.",
+                    "Buenos días.",
+                    "Hasta mañana."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Class is over. You see your friend tomorrow.",
+                  "options": [
+                    "Hasta mañana.",
+                    "Hola.",
+                    "Mucho gusto."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "You meet someone new.",
+                  "options": [
+                    "Mucho gusto.",
+                    "Adiós.",
+                    "Buenas noches."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "It is 10:00 at night.",
+                  "options": [
+                    "Buenas noches.",
+                    "Buenos días.",
+                    "Buenas tardes."
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Complete the dialogue",
+              "instructions": "Use: **llamas · Soy · gusto · Hola · tú**",
+              "wordBank": [
+                "llamas",
+                "Soy",
+                "gusto",
+                "Hola",
+                "tú"
+              ],
+              "items": [
+                {
+                  "q": "—________, ¿qué tal?",
+                  "answer": "Hola"
+                },
+                {
+                  "q": "—Bien. ¿Cómo te ________?",
+                  "answer": "llamas"
+                },
+                {
+                  "q": "—Me llamo Lucía. ¿Y ________?",
+                  "answer": "tú"
+                },
+                {
+                  "q": "—________ Marcos.",
+                  "answer": "Soy"
+                },
+                {
+                  "q": "—Mucho ________, Marcos.",
+                  "answer": "gusto"
+                }
+              ]
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket: any greeting that fits the time of day + *soy* / *me llamo* + a goodbye."
+          ]
+        },
+        {
+          "title": "Ser: who you are and where you are from",
+          "sources": [
+            {
+              "path": "/gramatica/ser-identidad-y-origen"
+            }
+          ],
+          "objectives": [
+            "Conjugate **ser** in the present: soy, eres, es, somos, son.",
+            "Say their origin and nationality (**Soy de México. Soy mexicana.**) with agreement.",
+            "Say what someone does: **Es médica. Es profesor.**",
+            "Introduce a classmate to the class."
+          ],
+          "materials": [
+            "Student worksheet, Day 2",
+            "A world map (optional)"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Review Day 1: students greet you and a partner. Ask three students *¿Cómo te llamas?*"
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Board: **yo soy, tú eres, él/ella/usted es, nosotros somos, ellos/ellas/ustedes son**. Model: *Soy [name]. Soy de [city]. Soy profesor/profesora.* Show the podcast host Marta interviewing Elena: *Soy Elena. Soy de Chile. Soy chilena. Soy médica.*"
+            },
+            {
+              "min": "15-25",
+              "stage": "Nationalities",
+              "do": "Show the agreement: **chileno / chilena, mexicano / mexicana, colombiano / colombiana**, but **estadounidense** for both. Worksheet **A** (forms of ser)."
+            },
+            {
+              "min": "25-35",
+              "stage": "Practice",
+              "do": "Worksheet **B** (nationality agreement) and **C** (professions: *Ana es ingeniera*, no *una*). Correct together."
+            },
+            {
+              "min": "35-50",
+              "stage": "Speaking",
+              "do": "Worksheet **D**: each student invents a new identity card (name, country, nationality, job). In pairs they interview each other: *¿De dónde eres? ¿Qué haces?* Then they introduce their partner to the class: *Él es Pablo. Es de Colombia. Es profesor de música.*"
+            },
+            {
+              "min": "50-57",
+              "stage": "Writing",
+              "do": "Worksheet **E**: three sentences about themselves with *ser*."
+            },
+            {
+              "min": "57-60",
+              "stage": "Exit ticket",
+              "do": "Students complete on a sticky note: *Yo soy de ______. Mi mejor amigo/amiga es ______.*"
+            }
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "Forms of ser",
+              "instructions": "Choose the correct form.",
+              "items": [
+                {
+                  "q": "Nosotras ___ de Valparaíso.",
+                  "options": [
+                    "somos",
+                    "son",
+                    "es"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "¿Usted ___ el señor Herrera?",
+                  "options": [
+                    "eres",
+                    "soy",
+                    "es"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Mis padres ___ profesores.",
+                  "options": [
+                    "somos",
+                    "es",
+                    "son"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Yo ___ de Texas.",
+                  "options": [
+                    "soy",
+                    "es",
+                    "eres"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "¿Tú ___ de Colombia?",
+                  "options": [
+                    "es",
+                    "eres",
+                    "soy"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Pablo y su hermano ___ de Medellín.",
+                  "options": [
+                    "somos",
+                    "es",
+                    "son"
+                  ],
+                  "answer": 2
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Nationalities",
+              "instructions": "Write the nationality. Watch the ending (-o / -a).",
+              "items": [
+                {
+                  "q": "Elena es de Chile. Es ________.",
+                  "answer": "chilena"
+                },
+                {
+                  "q": "Pablo es de Colombia. Es ________.",
+                  "answer": "colombiano"
+                },
+                {
+                  "q": "Ana es de Brasil. Es ________.",
+                  "answer": "brasileña"
+                },
+                {
+                  "q": "Diego es de México. Es ________.",
+                  "answer": "mexicano"
+                },
+                {
+                  "q": "Sara es de Estados Unidos. Es ________.",
+                  "answer": "estadounidense"
+                },
+                {
+                  "q": "Lucía y Marta son de Argentina. Son ________.",
+                  "answer": "argentinas"
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Jobs",
+              "instructions": "Choose the correct sentence.",
+              "items": [
+                {
+                  "q": "Ana / ingeniera",
+                  "options": [
+                    "Ana es ingeniera.",
+                    "Ana es una ingeniera.",
+                    "Ana está ingeniera."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Pablo / profesor muy divertido",
+                  "options": [
+                    "Pablo es profesor muy divertido.",
+                    "Pablo es un profesor muy divertido.",
+                    "Pablo está un profesor muy divertido."
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Elena / médica",
+                  "options": [
+                    "Elena está médica.",
+                    "Elena es médica.",
+                    "Elena son médica."
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "New identity",
+              "instructions": "Invent a person. Complete the card, then introduce your partner to the class.",
+              "prompt": "Nombre: ________ · País: ________ · Nacionalidad: ________ · Profesión: ________",
+              "lines": 4,
+              "model": "Él es Pablo. Es de Colombia. Es colombiano. Es profesor de música."
+            },
+            {
+              "type": "write",
+              "title": "About me",
+              "instructions": "Write three sentences about yourself with **ser**.",
+              "lines": 3,
+              "model": "Soy Mia. Soy de Chicago. Soy estudiante."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket: *Yo soy de [city/country]. Mi mejor amigo es [name].*"
+          ]
+        },
+        {
+          "title": "Estar: how you feel and where you are",
+          "sources": [
+            {
+              "path": "/gramatica/estar-estados-y-lugares"
+            }
+          ],
+          "objectives": [
+            "Conjugate **estar**: estoy, estás, está, estamos, están.",
+            "Say how they feel: **Estoy cansado / cansada, contento / contenta, nervioso / nerviosa.**",
+            "Say where people are: **Mamá está en la cocina.**",
+            "Tell the difference between **Es tranquilo** (personality) and **Está tranquilo hoy** (today)."
+          ],
+          "materials": [
+            "Student worksheet, Day 3",
+            "Emoji faces on the board (happy, tired, sick, nervous)"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Ask everyone *¿Cómo estás?* Teach the answers with faces: **bien, muy bien, más o menos, mal**."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Board: **estoy, estás, está, estamos, están**. Tell the story: Lucía is on a work trip in Monterrey and calls her brother Daniel. *—¿Dónde estás? —Estoy en Monterrey. Estoy cansada. —Mamá y yo estamos en casa.*"
+            },
+            {
+              "min": "15-25",
+              "stage": "Feelings",
+              "do": "Act out **cansado, contento, triste, enfermo, nervioso, aburrido**. Point out agreement: *Lucía está cansada / Daniel está cansado.* Worksheet **A**."
+            },
+            {
+              "min": "25-35",
+              "stage": "Places",
+              "do": "Teach **en casa, en clase, en la cocina, en el parque, aquí, allí**. Worksheet **B**. Short contrast with ser on the board: *Soy ingeniera* (who) / *Estoy en Monterrey* (where) / *Estoy cansada* (how)."
+            },
+            {
+              "min": "35-48",
+              "stage": "Speaking",
+              "do": "Charades: a student acts a feeling and a place; the class guesses *¿Estás cansado? ¿Estás en el parque?* The actor answers *Sí, estoy… / No, no estoy…*"
+            },
+            {
+              "min": "48-57",
+              "stage": "Practice",
+              "do": "Worksheet **C** (ser or estar) and **D** (write about your family right now)."
+            },
+            {
+              "min": "57-60",
+              "stage": "Exit ticket",
+              "do": "One sentence: *Hoy estoy ______ porque ______.* (they can answer the second part in English)."
+            }
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "Forms of estar",
+              "instructions": "Choose the correct form.",
+              "items": [
+                {
+                  "q": "Daniel y mamá ___ en casa.",
+                  "options": [
+                    "están",
+                    "estamos",
+                    "está"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Yo ___ en Monterrey.",
+                  "options": [
+                    "está",
+                    "estás",
+                    "estoy"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Mamá ___ en la cocina.",
+                  "options": [
+                    "esta",
+                    "está",
+                    "estás"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Lucía: «Hoy estoy muy ___».",
+                  "options": [
+                    "cansada",
+                    "cansadas",
+                    "cansado"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Daniel y mamá ___ contentos.",
+                  "options": [
+                    "están",
+                    "son",
+                    "está"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "¿Cómo estás? —Estoy ___, gracias.",
+                  "options": [
+                    "bienes",
+                    "buena",
+                    "bien"
+                  ],
+                  "answer": 2
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Where are they?",
+              "instructions": "Complete with the correct form of **estar**.",
+              "items": [
+                {
+                  "q": "Los estudiantes ________ en clase.",
+                  "answer": "están"
+                },
+                {
+                  "q": "Mi perro ________ en el parque.",
+                  "answer": "está"
+                },
+                {
+                  "q": "Nosotros ________ en la cafetería.",
+                  "answer": "estamos"
+                },
+                {
+                  "q": "¿Dónde ________ tú?",
+                  "answer": "estás"
+                },
+                {
+                  "q": "Yo ________ aquí.",
+                  "answer": "estoy"
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Ser or estar?",
+              "instructions": "Who you are → ser. Where you are or how you feel → estar.",
+              "items": [
+                {
+                  "q": "Lucía ___ ingeniera.",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Lucía ___ en un hotel.",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Hoy Daniel ___ nervioso: tiene un examen.",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Mi abuela ___ de Puebla.",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Mi hermano ___ tranquilo. Nunca está nervioso.",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "My family right now",
+              "instructions": "Write four sentences: where are three people you know right now, and how are they?",
+              "lines": 5,
+              "model": "Mi mamá está en el trabajo. Está ocupada. Mi hermano está en casa. Está aburrido. Yo estoy en clase y estoy contenta."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket: *Hoy estoy contento / cansada / nervioso…* + a reason."
+          ]
+        },
+        {
+          "title": "Tener: age and how you feel",
+          "sources": [
+            {
+              "path": "/gramatica/tener-edad-y-sensaciones"
+            }
+          ],
+          "objectives": [
+            "Conjugate **tener**: tengo, tienes, tiene, tenemos, tienen.",
+            "Ask and say their age: **¿Cuántos años tienes? Tengo catorce años.**",
+            "Say how their body feels: **tengo hambre, sed, sueño, frío, calor**.",
+            "Use numbers 1 to 30."
+          ],
+          "materials": [
+            "Student worksheet, Day 4"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Count with the class from 1 to 30 (clap on every 5). Then ask *¿Cómo estás?* to five students to review Day 3."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Story: Paula takes her son Leo to a clinic in Bogotá and fills in a form. *—¿Cuántos años tiene? —Tengo treinta años. Leo tiene seis años.* Board: **tengo, tienes, tiene, tenemos, tienen**. Point out: age uses **tener**, not *ser*."
+            },
+            {
+              "min": "15-25",
+              "stage": "Practice",
+              "do": "Worksheet **A** (forms) and **B** (tener, ser or estar). Students say a famous person and guess their age: *Taylor Swift tiene… años.*"
+            },
+            {
+              "min": "25-35",
+              "stage": "Sensations",
+              "do": "Mime **hambre, sed, sueño, frío, calor, miedo**. Add *mucho / mucha*: *tengo mucha hambre, tengo mucho frío*. Worksheet **C**."
+            },
+            {
+              "min": "35-48",
+              "stage": "Speaking",
+              "do": "Worksheet **D**: find someone who… Students walk around asking *¿Tienes hambre? ¿Tienes catorce años?* and write names."
+            },
+            {
+              "min": "48-57",
+              "stage": "Writing",
+              "do": "Worksheet **E**: a short clinic form about themselves."
+            },
+            {
+              "min": "57-60",
+              "stage": "Exit ticket",
+              "do": "Two sentences: *Tengo ___ años. Ahora tengo ___.*"
+            }
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "Forms of tener",
+              "instructions": "Choose the correct form.",
+              "items": [
+                {
+                  "q": "Leo ___ seis años.",
+                  "options": [
+                    "tiene",
+                    "tengo",
+                    "tienes"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Paula y Leo ___ una cita.",
+                  "options": [
+                    "tienen",
+                    "tenemos",
+                    "tiene"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Señora, ¿___ usted su documento?",
+                  "options": [
+                    "tiene",
+                    "tengo",
+                    "tienes"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Nosotros ___ clase de español.",
+                  "options": [
+                    "tienen",
+                    "tenemos",
+                    "tengo"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "You ask a friend his age:",
+                  "options": [
+                    "¿Cuántos años eres?",
+                    "¿Cuántos años tienes?",
+                    "¿Cuántos años estás?"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Tener, ser or estar?",
+              "instructions": "Choose the verb.",
+              "items": [
+                {
+                  "q": "Paula ___ treinta años.",
+                  "options": [
+                    "tiene",
+                    "está",
+                    "es"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Paula ___ de Argentina.",
+                  "options": [
+                    "tiene",
+                    "está",
+                    "es"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Leo ___ cansado.",
+                  "options": [
+                    "tiene",
+                    "está",
+                    "es"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Leo ___ mucha sed.",
+                  "options": [
+                    "tiene",
+                    "está",
+                    "es"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "How do they feel?",
+              "instructions": "Complete with **tener** + hambre, sed, sueño, frío or calor.",
+              "items": [
+                {
+                  "q": "It is 2 a.m. Yo ________.",
+                  "answer": "tengo sueño"
+                },
+                {
+                  "q": "It is 100 °F outside. Nosotros ________.",
+                  "answer": "tenemos calor"
+                },
+                {
+                  "q": "Leo wants a sandwich. Leo ________.",
+                  "answer": "tiene hambre"
+                },
+                {
+                  "q": "It is snowing. ¿Tú ________?",
+                  "answer": "tienes frío"
+                },
+                {
+                  "q": "After soccer, mis amigos ________.",
+                  "answer": "tienen sed"
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Find someone who…",
+              "instructions": "Ask your classmates. Write one name for each.",
+              "prompt": "…tiene catorce años · …tiene hambre ahora · …tiene un perro · …tiene sueño · …tiene un hermano",
+              "lines": 5,
+              "model": "Mateo tiene catorce años. Ana tiene hambre. Leo tiene un perro…"
+            },
+            {
+              "type": "write",
+              "title": "At the clinic",
+              "instructions": "Complete the form about you in full sentences.",
+              "prompt": "Nombre · Edad · País · ¿Cómo estás hoy? · ¿Tienes hambre, sed o sueño?",
+              "lines": 5,
+              "model": "Me llamo Sam. Tengo quince años. Soy de Estados Unidos. Hoy estoy bien. Tengo un poco de sueño."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket: *Tengo 14 años. Ahora tengo hambre.*"
+          ]
+        },
+        {
+          "title": "Me gusta: likes and dislikes",
+          "sources": [
+            {
+              "path": "/gramatica/gustar-y-encantar"
+            }
+          ],
+          "objectives": [
+            "Say what they like with **me gusta** + one thing or a verb and **me gustan** + plural things.",
+            "Say what they love with **me encanta(n)** and what they do not like with **no me gusta nada**.",
+            "Ask a friend: **¿Te gusta…?**",
+            "Present the results of a class survey."
+          ],
+          "materials": [
+            "Student worksheet, Day 5"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Thumbs up / thumbs down game: say *la pizza, el fútbol, los lunes, la música*; students react. Write **Me gusta 👍 / No me gusta 👎** on the board."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Story: Carmen and Diego are on vacation in Veracruz. The receptionist Valeria offers three restaurants. *A Diego no le gusta el ruido. A Carmen le encanta el pescado.* Board: **me gusta + el pescado / bailar**; **me gustan + los mariscos**."
+            },
+            {
+              "min": "15-25",
+              "stage": "Practice",
+              "do": "Worksheet **A** (gusta or gustan) and **B** (me, te, le, nos)."
+            },
+            {
+              "min": "25-30",
+              "stage": "Encantar",
+              "do": "Add a scale on the board: **me encanta > me gusta mucho > me gusta > no me gusta > no me gusta nada**."
+            },
+            {
+              "min": "30-45",
+              "stage": "Survey",
+              "do": "Worksheet **C**: each student asks four classmates *¿Te gusta…?* about five things and records answers."
+            },
+            {
+              "min": "45-55",
+              "stage": "Present",
+              "do": "Groups report one result each: *A tres personas les gusta el fútbol. A Ana le encanta bailar.* (accept *le gusta* forms with support)."
+            },
+            {
+              "min": "55-60",
+              "stage": "Exit ticket",
+              "do": "Homework: worksheet **D**. Week review on a sticky note: *Soy… Tengo… años. Hoy estoy… Me gusta… No me gusta…*"
+            }
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "Gusta or gustan?",
+              "instructions": "One thing or a verb → gusta. Plural things → gustan.",
+              "items": [
+                {
+                  "q": "Me ___ la comida mexicana.",
+                  "options": [
+                    "gustan",
+                    "gusta"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Me ___ los mariscos.",
+                  "options": [
+                    "gusta",
+                    "gustan"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Me ___ caminar por la playa.",
+                  "options": [
+                    "gustan",
+                    "gusta"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "No me ___ los lunes.",
+                  "options": [
+                    "gusta",
+                    "gustan"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Me ___ el fútbol.",
+                  "options": [
+                    "gusta",
+                    "gustan"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Me gusta ___ pescado.",
+                  "options": [
+                    "los",
+                    "el",
+                    "un"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Me, te, le or nos?",
+              "instructions": "Who likes it?",
+              "items": [
+                {
+                  "q": "Diego habla con Carmen: «¿___ gusta el pescado?»",
+                  "options": [
+                    "Le",
+                    "Me",
+                    "Te"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Valeria habla de Diego: «A Diego no ___ gusta el ruido».",
+                  "options": [
+                    "le",
+                    "te",
+                    "nos"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Carmen y Diego: «___ gusta Veracruz».",
+                  "options": [
+                    "Me",
+                    "Le",
+                    "Nos"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Yo: «___ encanta la música en vivo».",
+                  "options": [
+                    "Me",
+                    "Te",
+                    "Le"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Class survey",
+              "instructions": "Ask four classmates: **¿Te gusta…?** Write their answers (👍 / 👎 / ❤️).",
+              "prompt": "1. el fútbol · 2. bailar · 3. los videojuegos · 4. la pizza con piña · 5. las matemáticas",
+              "lines": 5,
+              "model": "A Ana le gusta el fútbol. A Leo no le gustan las matemáticas. A Mia le encanta bailar."
+            },
+            {
+              "type": "write",
+              "title": "About me",
+              "instructions": "Write four sentences: two things you like or love and two you do not like.",
+              "lines": 4,
+              "model": "Me encanta la música. Me gustan los perros. No me gusta el brócoli. No me gusta nada levantarme temprano."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket (model): *Soy Leo. Tengo 14 años. Hoy estoy contento. Me gusta el béisbol. No me gustan los lunes.*"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "ser-vs-estar-lesson",
+      "title": "Ser vs Estar: Complete 60-Minute Lesson",
+      "price_usd": 5.5,
+      "grade_range": "6-12",
+      "level_label": "Spanish 1-2",
+      "cover_level": "SPANISH 1-2",
+      "tags": [
+        "Spanish",
+        "Grammar",
+        "Ser and Estar",
+        "Describing People",
+        "No Prep",
+        "Spanish 1"
+      ],
+      "description": "Ser and estar finally make sense when students use them to describe real people. In this lesson Marta and Hugo look at an old photo and a new one of their friend Raúl, who arrives by train today. Students learn that ser tells what someone is like, estar tells how someone is now or how they have changed, and llevar describes clothes and glasses. They sort sentences, choose the right verb, fix common mistakes and describe a classmate so others can find them. The lesson is planned minute by minute for 60 minutes and comes with a print-and-go worksheet, a complete answer key and model answers.",
+      "whats_inside": [
+        "Teacher guide with objectives and a minute-by-minute 60-minute script",
+        "Print-and-go student worksheet (A4, prints fine on Letter)",
+        "One clear rule: ser for what someone is like, estar for how they are now",
+        "Bonus: llevar and tener to describe clothes, glasses and eyes",
+        "Find-the-mistake task and a \"Who is it?\" speaking game",
+        "Complete answer key and model answers"
+      ],
+      "lessons": [
+        {
+          "title": "Ser vs Estar: Describing Raúl",
+          "sources": [
+            {
+              "path": "/gramatica/ser-estar-y-llevar-para-descripciones"
+            },
+            {
+              "path": "/ser-o-estar"
+            }
+          ],
+          "objectives": [
+            "Use **ser** for characteristics: **Raúl es alto, es simpático, es de Sevilla.**",
+            "Use **estar** for a state now or a change: **Hoy está cansado. ¡Qué delgado está!**",
+            "Use **llevar** for clothes and accessories and **tener** for eyes and hair: **Lleva gafas. Tiene los ojos verdes.**",
+            "Describe a classmate so the class can identify them."
+          ],
+          "materials": [
+            "Student worksheet",
+            "Optional: two photos of the same person (old and new) to project"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Show (or describe) two photos of the same person, ten years apart. Ask: *What is the same? What is different?* Collect English answers."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Tell the story: Hugo must pick up Marta's friend Raúl at the station but has never met him. Marta explains: *Raúl **es** alto y rubio. **Es** muy simpático.* Then she sees a new photo: *¡Qué delgado **está**! Hoy **está** cansado del viaje.* And: ***Lleva** gafas y una chaqueta verde.* Three columns on the board: **SER: what he is like · ESTAR: how he is now · LLEVAR: what he has on**."
+            },
+            {
+              "min": "15-23",
+              "stage": "Guided practice",
+              "do": "Worksheet **A** (sort the sentences into ser / estar / llevar). Check aloud; students justify with *what he is like* or *how he is now*."
+            },
+            {
+              "min": "23-33",
+              "stage": "Practice",
+              "do": "Worksheet **B** (choose the verb). After each answer, ask *¿por qué?*"
+            },
+            {
+              "min": "33-41",
+              "stage": "Adjectives",
+              "do": "Worksheet **C**: adjectives that change meaning: **ser listo** (smart) / **estar listo** (ready); **ser aburrido** (boring) / **estar aburrido** (bored). Students draw a quick sketch for one pair."
+            },
+            {
+              "min": "41-47",
+              "stage": "Accuracy",
+              "do": "Worksheet **D** (find the mistake) individually, then compare with a partner."
+            },
+            {
+              "min": "47-57",
+              "stage": "Speaking game",
+              "do": "Worksheet **E**: each student writes a 4-sentence description of a classmate (ser + estar + llevar + tener) without the name. Read some aloud; the class guesses *¿Es Mateo?*"
+            },
+            {
+              "min": "57-60",
+              "stage": "Exit ticket",
+              "do": "Two sentences about yourself: one with **soy**, one with **estoy** today."
+            }
+          ],
+          "notes": [
+            "Keep the rule simple for Spanish 1: *what someone is like* vs *how someone is now*. The \"permanent vs temporary\" shortcut fails with *está muerto* or *es joven*, so avoid it.",
+            "Location always takes estar (*Raúl está en la estación*); events take ser (*La fiesta es en mi casa*)."
+          ],
+          "worksheet": [
+            {
+              "type": "sort",
+              "title": "Ser, estar or llevar?",
+              "instructions": "Which verb does each description need? Tick one box.",
+              "columns": [
+                "ser",
+                "estar",
+                "llevar"
+              ],
+              "items": [
+                {
+                  "text": "Raúl ___ alto y rubio.",
+                  "answer": 0
+                },
+                {
+                  "text": "Hoy ___ cansado del viaje.",
+                  "answer": 1
+                },
+                {
+                  "text": "Raúl ___ gafas.",
+                  "answer": 2
+                },
+                {
+                  "text": "¡Qué delgado ___ en la foto nueva!",
+                  "answer": 1
+                },
+                {
+                  "text": "___ muy simpático y divertido.",
+                  "answer": 0
+                },
+                {
+                  "text": "___ una chaqueta verde.",
+                  "answer": 2
+                },
+                {
+                  "text": "___ de Sevilla.",
+                  "answer": 0
+                },
+                {
+                  "text": "___ en el tren ahora.",
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Choose the verb",
+              "instructions": "Circle the correct option.",
+              "items": [
+                {
+                  "q": "Hugo no conoce a Raúl. Marta explica: «Raúl ___ alto y rubio».",
+                  "options": [
+                    "está",
+                    "es",
+                    "lleva"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Marta ve una foto nueva de Raúl: «¡Qué delgado ___!».",
+                  "options": [
+                    "está",
+                    "lleva",
+                    "es"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Raúl ___ los ojos verdes.",
+                  "options": [
+                    "está",
+                    "lleva",
+                    "tiene"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Hoy Marta ___ un vestido azul.",
+                  "options": [
+                    "está",
+                    "lleva",
+                    "es"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "¿Tú ___ gafas para leer?",
+                  "options": [
+                    "lleva",
+                    "llevas",
+                    "llevo"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "La fiesta ___ en casa de Marta.",
+                  "options": [
+                    "es",
+                    "está",
+                    "lleva"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Marta y Hugo ___ nerviosos: el tren llega tarde.",
+                  "options": [
+                    "son",
+                    "están",
+                    "llevan"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Raúl ___ profesor de historia.",
+                  "options": [
+                    "está",
+                    "es",
+                    "lleva"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "match",
+              "title": "Same adjective, different meaning",
+              "instructions": "Match each sentence to its meaning.",
+              "items": [
+                {
+                  "left": "Ana es lista.",
+                  "right": "Ana is smart."
+                },
+                {
+                  "left": "Ana está lista.",
+                  "right": "Ana is ready."
+                },
+                {
+                  "left": "La clase es aburrida.",
+                  "right": "The class is boring."
+                },
+                {
+                  "left": "Leo está aburrido.",
+                  "right": "Leo is bored."
+                },
+                {
+                  "left": "La sopa está rica.",
+                  "right": "The soup tastes good."
+                }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Each sentence has one mistake. Write it correctly.",
+              "items": [
+                {
+                  "q": "Raúl está alto.",
+                  "answer": "Raúl **es** alto."
+                },
+                {
+                  "q": "Mi hermana es en el hospital.",
+                  "answer": "Mi hermana **está** en el hospital."
+                },
+                {
+                  "q": "Hoy soy muy cansado.",
+                  "answer": "Hoy **estoy** muy cansado."
+                },
+                {
+                  "q": "Raúl es gafas.",
+                  "answer": "Raúl **lleva** gafas."
+                },
+                {
+                  "q": "Tengo dieciséis años y estoy de Ohio.",
+                  "answer": "Tengo dieciséis años y **soy** de Ohio."
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Who is it?",
+              "instructions": "Describe a classmate in four sentences. Do not write the name: the class will guess.",
+              "prompt": "Use: **Es… / Hoy está… / Lleva… / Tiene…**",
+              "lines": 5,
+              "model": "Es alta y muy simpática. Hoy está contenta. Lleva una sudadera roja. Tiene el pelo largo y los ojos marrones."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket (model): *Soy tranquilo. Hoy estoy un poco cansado.*"
+          ]
+        }
+      ]
+    },
+    {
       "slug": "preterite-vs-imperfect-story-task",
       "title": "Preterite vs Imperfect: Full Lesson with Story Task",
       "price_usd": 5.5,
       "grade_range": "8-12",
       "level_label": "Spanish 2-3",
       "cover_level": "SPANISH 2-3",
-      "tags": ["Spanish", "Grammar", "Preterite", "Imperfect", "Past Tense", "No Prep"],
+      "tags": [
+        "Spanish",
+        "Grammar",
+        "Preterite",
+        "Imperfect",
+        "Past Tense",
+        "No Prep"
+      ],
       "description": "Your students know both past tenses but still mix them up when they tell a story. This lesson fixes that with one clear idea: the imperfect paints the scene, the preterite moves the story forward. Students follow a witness, Carmen, who tells a police officer about a bike accident she saw from the bus stop. They sort scene and event sentences, choose the right verb in context, read the witness statement, correct real student mistakes and finish with their own witness report. Everything is planned minute by minute for a 60-minute class, with a complete answer key and model answers, so you can print it tonight and teach it tomorrow.",
       "whats_inside": [
         "Teacher guide with objectives and a minute-by-minute 60-minute script",
@@ -22,7 +1349,11 @@
         {
           "title": "Preterite vs Imperfect: The Witness",
           "worksheetTitle": "Preterite vs Imperfect: The Witness",
-          "sources": [{ "path": "/gramatica/indefinido-e-imperfecto" }],
+          "sources": [
+            {
+              "path": "/gramatica/indefinido-e-imperfecto"
+            }
+          ],
           "objectives": [
             "Use the **imperfect** to describe the scene of a past story (time, weather, place, what people were doing).",
             "Use the **preterite** for the events that move the story forward.",
@@ -34,17 +1365,49 @@
             "Board or projector (optional: the interactive class at spanishcue.com/gramatica/indefinido-e-imperfecto)"
           ],
           "plan": [
-            { "min": "0-5", "stage": "Warm-up", "do": "Write on the board: **Carmen dormía cuando sonó el teléfono.** Ask: Which part is the background? Which part is the new event? Underline *dormía* in blue (scene) and *sonó* in orange (event). Tell students: today the story has two colors." },
-            { "min": "5-15", "stage": "Present", "do": "Draw two columns: **ESCENA (imperfect)**: era, había, estaba, hacía, llovía, iba, tenía. **HECHOS (preterite)**: hubo, salió, frenó, paró, llegó, llamó. Give the rule in one line: the imperfect describes what was going on; the preterite says what happened next. Add the trap: *Ayer era un accidente* is wrong, it is **Ayer hubo un accidente**, because an accident happens." },
-            { "min": "15-22", "stage": "Guided practice", "do": "Worksheet **A** (scene or event) in pairs. Check aloud: students say *escena* or *hecho* and raise a blue or orange pen if you like." },
-            { "min": "22-30", "stage": "Practice", "do": "Worksheet **B** (choose the verb), individually. Correct together and ask *¿por qué?* after each answer: students should say *scene* or *event*, not just the form." },
-            { "min": "30-38", "stage": "Reading", "do": "Worksheet **C**: read Carmen's statement aloud with a student as the officer. Then **D** (comprehension) in pairs. Ask a fast follow-up: *¿Qué tiempo hacía? ¿Y qué pasó después?* (one scene sentence + one event sentence)." },
-            { "min": "38-46", "stage": "Practice", "do": "Worksheet **E** (the officer's report) and **F** (find the mistake). Early finishers explain each correction to a partner." },
-            { "min": "46-57", "stage": "Story task", "do": "Worksheet **G**: students become witnesses of an incident (a real one or invented). They need at least 3 scene sentences and 5 event sentences, joined with *cuando*, *de repente*, *después*, *al final*. Volunteers read their story; classmates call out *¡escena!* or *¡hecho!* for two of the verbs." },
-            { "min": "57-60", "stage": "Exit ticket", "do": "On a sticky note: one sentence with **había** and one with **hubo**. Collect at the door." }
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Write on the board: **Carmen dormía cuando sonó el teléfono.** Ask: Which part is the background? Which part is the new event? Underline *dormía* in blue (scene) and *sonó* in orange (event). Tell students: today the story has two colors."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Draw two columns: **ESCENA (imperfect)**: era, había, estaba, hacía, llovía, iba, tenía. **HECHOS (preterite)**: hubo, salió, frenó, paró, llegó, llamó. Give the rule in one line: the imperfect describes what was going on; the preterite says what happened next. Add the trap: *Ayer era un accidente* is wrong, it is **Ayer hubo un accidente**, because an accident happens."
+            },
+            {
+              "min": "15-22",
+              "stage": "Guided practice",
+              "do": "Worksheet **A** (scene or event) in pairs. Check aloud: students say *escena* or *hecho* and raise a blue or orange pen if you like."
+            },
+            {
+              "min": "22-30",
+              "stage": "Practice",
+              "do": "Worksheet **B** (choose the verb), individually. Correct together and ask *¿por qué?* after each answer: students should say *scene* or *event*, not just the form."
+            },
+            {
+              "min": "30-38",
+              "stage": "Reading",
+              "do": "Worksheet **C**: read Carmen's statement aloud with a student as the officer. Then **D** (comprehension) in pairs. Ask a fast follow-up: *¿Qué tiempo hacía? ¿Y qué pasó después?* (one scene sentence + one event sentence)."
+            },
+            {
+              "min": "38-46",
+              "stage": "Practice",
+              "do": "Worksheet **E** (the officer's report) and **F** (find the mistake). Early finishers explain each correction to a partner."
+            },
+            {
+              "min": "46-57",
+              "stage": "Story task",
+              "do": "Worksheet **G**: students become witnesses of an incident (a real one or invented). They need at least 3 scene sentences and 5 event sentences, joined with *cuando*, *de repente*, *después*, *al final*. Volunteers read their story; classmates call out *¡escena!* or *¡hecho!* for two of the verbs."
+            },
+            {
+              "min": "57-60",
+              "stage": "Exit ticket",
+              "do": "On a sticky note: one sentence with **había** and one with **hubo**. Collect at the door."
+            }
           ],
           "notes": [
-            "*Cuando* does not decide the tense: *Llovía cuando salí* (scene) and *Cuando llegó la ambulancia, Diego estaba sentado* (scene at the moment of an event).",
+            "*Cuando* does not decide the tense: *Llovía cuando Carmen salió* (scene) and *Cuando llegó la ambulancia, Diego estaba sentado* (scene at the moment of an event).",
             "A long but closed period takes the preterite: *Ayer llovió todo el día.*",
             "Clock time in a story is always background: *Eran las ocho y media*, never *fueron*."
           ],
@@ -53,16 +1416,43 @@
               "type": "sort",
               "title": "Scene or event?",
               "instructions": "Read Carmen's story. Is each sentence part of the scene (imperfect) or an event (preterite)? Tick one box.",
-              "columns": ["Scene (imperfect)", "Event (preterite)"],
+              "columns": [
+                "Scene (imperfect)",
+                "Event (preterite)"
+              ],
               "items": [
-                { "text": "Eran las ocho y media.", "answer": 0 },
-                { "text": "Un taxi salió de un garaje.", "answer": 1 },
-                { "text": "El suelo estaba mojado.", "answer": 0 },
-                { "text": "Carmen llamó a emergencias.", "answer": 1 },
-                { "text": "Un chico iba en bicicleta.", "answer": 0 },
-                { "text": "El taxista paró.", "answer": 1 },
-                { "text": "Hacía frío.", "answer": 0 },
-                { "text": "Carmen escribió su número de teléfono.", "answer": 1 }
+                {
+                  "text": "Eran las ocho y media.",
+                  "answer": 0
+                },
+                {
+                  "text": "Un taxi salió de un garaje.",
+                  "answer": 1
+                },
+                {
+                  "text": "El suelo estaba mojado.",
+                  "answer": 0
+                },
+                {
+                  "text": "Carmen llamó a emergencias.",
+                  "answer": 1
+                },
+                {
+                  "text": "Un chico iba en bicicleta.",
+                  "answer": 0
+                },
+                {
+                  "text": "El taxista paró.",
+                  "answer": 1
+                },
+                {
+                  "text": "Hacía frío.",
+                  "answer": 0
+                },
+                {
+                  "text": "Carmen escribió su número de teléfono.",
+                  "answer": 1
+                }
               ]
             },
             {
@@ -70,14 +1460,78 @@
               "title": "Choose the verb",
               "instructions": "Circle the correct form. Ask yourself: scene or event?",
               "items": [
-                { "q": "Ayer ___ un accidente en la calle Colón.", "options": ["era", "hubo", "estaba"], "answer": 1 },
-                { "q": "Cuando salí, ___ mucho tráfico en la calle.", "options": ["era", "había", "hubo"], "answer": 1 },
-                { "q": "El chico ___ joven, de unos veinte años.", "options": ["hubo", "había", "era"], "answer": 2 },
-                { "q": "___ las nueve cuando llegó la agente.", "options": ["Hubo", "Fueron", "Eran"], "answer": 2 },
-                { "q": "Carmen leía el periódico y de repente ___ un ruido fuerte.", "options": ["escuchó", "escuchaba", "escucha"], "answer": 0 },
-                { "q": "El sábado ___ toda la tarde y no salí de casa.", "options": ["llueve", "llovía", "llovió"], "answer": 2 },
-                { "q": "___ cuando Carmen salió de casa, por eso llevó paraguas.", "options": ["Llovió", "Llovía", "Llueve"], "answer": 1 },
-                { "q": "Cuando llegó la ambulancia, Diego ___ sentado en el suelo.", "options": ["está", "estaba", "estuvo"], "answer": 1 }
+                {
+                  "q": "Ayer ___ un accidente en la calle Colón.",
+                  "options": [
+                    "era",
+                    "hubo",
+                    "estaba"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Cuando Carmen llegó a la parada, ___ mucho tráfico en la calle.",
+                  "options": [
+                    "era",
+                    "había",
+                    "hubo"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "El chico ___ joven, de unos veinte años.",
+                  "options": [
+                    "hubo",
+                    "había",
+                    "era"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "___ las nueve cuando llegó la agente.",
+                  "options": [
+                    "Hubo",
+                    "Fueron",
+                    "Eran"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Carmen leía el periódico y de repente ___ un ruido fuerte.",
+                  "options": [
+                    "escuchó",
+                    "escuchaba",
+                    "escucha"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "El sábado ___ toda la tarde y Carmen no fue al parque.",
+                  "options": [
+                    "llueve",
+                    "llovía",
+                    "llovió"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "___ cuando Carmen salió de casa, por eso llevó paraguas.",
+                  "options": [
+                    "Llovió",
+                    "Llovía",
+                    "Llueve"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Cuando llegó la ambulancia, Diego ___ sentado en el suelo.",
+                  "options": [
+                    "está",
+                    "estaba",
+                    "estuvo"
+                  ],
+                  "answer": 1
+                }
               ]
             },
             {
@@ -105,11 +1559,26 @@
               "instructions": "Answer in Spanish with a full sentence.",
               "lineAfter": true,
               "items": [
-                { "q": "¿Dónde estaba Carmen a las ocho y media?", "answer": "Estaba en la parada del autobús. Esperaba el autobús." },
-                { "q": "¿Qué tiempo hacía?", "answer": "Llovía un poco (y el suelo estaba mojado)." },
-                { "q": "¿Por qué se cayó el chico?", "answer": "Porque frenó muy fuerte y el suelo estaba mojado." },
-                { "q": "¿Qué hizo Carmen después?", "answer": "Fue corriendo a ayudar al chico y llamó a emergencias." },
-                { "q": "¿Qué hacía el chico cuando llegó la ambulancia?", "answer": "Hablaba por teléfono con su hermana." }
+                {
+                  "q": "¿Dónde estaba Carmen a las ocho y media?",
+                  "answer": "Estaba en la parada del autobús. Esperaba el autobús."
+                },
+                {
+                  "q": "¿Qué tiempo hacía?",
+                  "answer": "Llovía un poco (y el suelo estaba mojado)."
+                },
+                {
+                  "q": "¿Por qué se cayó el chico?",
+                  "answer": "Porque frenó muy fuerte y el suelo estaba mojado."
+                },
+                {
+                  "q": "¿Qué hizo Carmen después?",
+                  "answer": "Fue corriendo a ayudar al chico y llamó a emergencias."
+                },
+                {
+                  "q": "¿Qué hacía el chico cuando llegó la ambulancia?",
+                  "answer": "Hablaba por teléfono con su hermana."
+                }
               ]
             },
             {
@@ -117,14 +1586,38 @@
               "title": "The officer's report",
               "instructions": "Complete the report with the imperfect or the preterite of the verb in parentheses.",
               "items": [
-                { "q": "A las ocho y media ________ (haber) mucho tráfico en la calle Colón.", "answer": "había" },
-                { "q": "A las ocho y treinta y cinco ________ (haber) un accidente en la esquina.", "answer": "hubo" },
-                { "q": "El ciclista ________ (llevar) un casco azul y una chaqueta negra.", "answer": "llevaba" },
-                { "q": "El taxista ________ (bajar) del coche y ayudó al chico.", "answer": "bajó" },
-                { "q": "Diego ________ (estar) dos horas en el hospital y después volvió a casa.", "answer": "estuvo" },
-                { "q": "Una furgoneta ________ (estar) delante del garaje y el taxista no ________ (poder) ver la calle.", "answer": "estaba · podía" },
-                { "q": "Cuando el taxista ________ (oír) el ruido, paró enseguida.", "answer": "oyó" },
-                { "q": "Diego ________ (tener) prisa porque ________ (ir) a la universidad.", "answer": "tenía · iba" }
+                {
+                  "q": "A las ocho y media ________ (haber) mucho tráfico en la calle Colón.",
+                  "answer": "había"
+                },
+                {
+                  "q": "A las ocho y treinta y cinco ________ (haber) un accidente en la esquina.",
+                  "answer": "hubo"
+                },
+                {
+                  "q": "El ciclista ________ (llevar) un casco azul y una chaqueta negra.",
+                  "answer": "llevaba"
+                },
+                {
+                  "q": "El taxista ________ (bajar) del coche y ayudó al chico.",
+                  "answer": "bajó"
+                },
+                {
+                  "q": "Diego ________ (estar) dos horas en el hospital y después volvió a casa.",
+                  "answer": "estuvo"
+                },
+                {
+                  "q": "Una furgoneta ________ (estar) delante del garaje y el taxista no ________ (poder) ver la calle.",
+                  "answer": "estaba · podía"
+                },
+                {
+                  "q": "Cuando el taxista ________ (oír) el ruido, paró enseguida.",
+                  "answer": "oyó"
+                },
+                {
+                  "q": "Diego ________ (tener) prisa porque ________ (ir) a la universidad.",
+                  "answer": "tenía · iba"
+                }
               ]
             },
             {
@@ -132,11 +1625,26 @@
               "title": "Find the mistake",
               "instructions": "Each sentence has one mistake. Write the correct sentence.",
               "items": [
-                { "q": "Ayer era un accidente cerca de mi casa.", "answer": "Ayer **hubo** un accidente cerca de mi casa." },
-                { "q": "Fueron las ocho y media cuando Diego frenó.", "answer": "**Eran** las ocho y media cuando Diego frenó." },
-                { "q": "Diego iba por la calle y de repente un taxi salía del garaje.", "answer": "Diego iba por la calle y de repente un taxi **salió** del garaje." },
-                { "q": "Carmen estuvo en la parada cuando pasó el accidente.", "answer": "Carmen **estaba** en la parada cuando pasó el accidente." },
-                { "q": "Anoche había una tormenta muy fuerte y después se fue la luz.", "answer": "Anoche **hubo** una tormenta muy fuerte y después se fue la luz." }
+                {
+                  "q": "Ayer era un accidente cerca de mi casa.",
+                  "answer": "Ayer **hubo** un accidente cerca de mi casa."
+                },
+                {
+                  "q": "Fueron las ocho y media cuando Diego frenó.",
+                  "answer": "**Eran** las ocho y media cuando Diego frenó."
+                },
+                {
+                  "q": "Diego iba por la calle y de repente un taxi salía del garaje.",
+                  "answer": "Diego iba por la calle y de repente un taxi **salió** del garaje."
+                },
+                {
+                  "q": "Carmen estuvo en la parada cuando pasó el accidente.",
+                  "answer": "Carmen **estaba** en la parada cuando pasó el accidente."
+                },
+                {
+                  "q": "Anoche había una tormenta muy fuerte y después se fue la luz.",
+                  "answer": "Anoche **hubo** una tormenta muy fuerte y después se fue la luz."
+                }
               ]
             },
             {
@@ -153,7 +1661,2589 @@
           ]
         }
       ]
+    },
+    {
+      "slug": "present-subjunctive-wishes-lesson",
+      "title": "Present Subjunctive for Wishes: 60-Minute Lesson",
+      "price_usd": 5.95,
+      "grade_range": "9-12",
+      "level_label": "Spanish 3-4",
+      "cover_level": "SPANISH 3-4",
+      "cover_headline": "Present Subjunctive for Wishes",
+      "cover_subline": "60-Minute Lesson",
+      "tags": [
+        "Spanish",
+        "Grammar",
+        "Subjunctive",
+        "Ojalá",
+        "Spanish 3",
+        "No Prep"
+      ],
+      "description": "Teach the present subjunctive through the use students need most: wishes. Daniel is moving abroad for a new job and his friends throw him a farewell party, full of quiero que, espero que and ojalá. Students learn one simple test: same person, use the infinitive (quiero ir); different person, use que plus subjunctive (quiero que vengas). They practise ojalá, react with ¡Ojalá!, learn party formulas like que te vaya bien and que te mejores, correct the classic mistakes and write a farewell card. Planned minute by minute for 60 minutes, with a print-and-go worksheet, a full answer key and model answers.",
+      "whats_inside": [
+        "Teacher guide with objectives and a minute-by-minute 60-minute script",
+        "Print-and-go student worksheet (A4, prints fine on Letter)",
+        "The one-subject or two-subjects test, with clear examples",
+        "Ojalá and good-wish formulas: que te vaya bien, que descanses",
+        "Find-the-mistake task with the errors students really make",
+        "Farewell card writing task, model answer and complete answer key"
+      ],
+      "lessons": [
+        {
+          "title": "Wishes: querer que, esperar que, ojalá",
+          "sources": [
+            {
+              "path": "/gramatica/deseos-querer-que-esperar-que-ojala"
+            }
+          ],
+          "objectives": [
+            "Tell a fact from a wish (**Daniel empieza el día 3** / **Ojalá empiece pronto**).",
+            "Use the infinitive with one subject and **que + subjunctive** with two: **Quiero ir. / Quiero que vengas.**",
+            "Use **ojalá (que) + subjunctive** and answer **¡Ojalá!**",
+            "Use good-wish formulas: **¡Que te vaya bien! ¡Que te mejores! ¡Que descanses!**"
+          ],
+          "materials": [
+            "Student worksheet",
+            "Index cards for the farewell card task (optional)"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Ask: *What do you wish for this weekend?* Write three English answers. Then say: *Ojalá haga sol. Ojalá no tenga tarea.* Students guess what *ojalá* means."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Story: Daniel is moving to Montreal for a lab job; Valeria plans a party. Board: **Valeria quiere hacer una fiesta** (one person: infinitive) / **Valeria quiere que Daniel invite a sus compañeros** (two people: que + subjunctive). Review forms: *-ar → -e (invite, empiece), -er/-ir → -a (venga, tenga)*."
+            },
+            {
+              "min": "15-23",
+              "stage": "Check",
+              "do": "Worksheet **A** (fact or wish?) and **B** (one subject or two). Check aloud: students say *one person* / *two people* before the answer."
+            },
+            {
+              "min": "23-31",
+              "stage": "Ojalá",
+              "do": "Ojalá is always followed by the subjunctive, even for your own wish: **Ojalá apruebe**, never *ojalá aprobar*. Short answer: *—¿Vas a venir a verme? —¡Ojalá!* Worksheet **C**."
+            },
+            {
+              "min": "31-38",
+              "stage": "Formulas",
+              "do": "Teach party and goodbye wishes: **¡Que te vaya bien! ¡Que te mejores! ¡Que descanses! ¡Que te diviertas!** Worksheet **D**: choose the right one for each situation."
+            },
+            {
+              "min": "38-45",
+              "stage": "Accuracy",
+              "do": "Worksheet **E** (find the mistake). Highlight *espero que te gustará* → **espero que te guste**."
+            },
+            {
+              "min": "45-57",
+              "stage": "Writing",
+              "do": "Worksheet **F**: students write a farewell card for Daniel (or for a senior, a friend who is moving, a teacher). At least 2 ojalá, 2 espero que / quiero que and 1 formula. Volunteers read them aloud."
+            },
+            {
+              "min": "57-60",
+              "stage": "Exit ticket",
+              "do": "Complete: *Ojalá mañana ______. Espero que mis amigos ______.*"
+            }
+          ],
+          "notes": [
+            "Productive work stays on wishes. Recommendations (*sugiero que*) and valuations (*es importante que*) can wait for the next lesson.",
+            "Formal wishes follow the same pattern: *Que les vaya muy bien* (ustedes)."
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "Fact or wish?",
+              "instructions": "Read and choose.",
+              "items": [
+                {
+                  "q": "«Valeria espera que Daniel encuentre piso.» ¿Daniel ya tiene piso?",
+                  "options": [
+                    "No lo sabemos: es un deseo.",
+                    "Sí, es un hecho.",
+                    "No, y no lo va a tener."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "¿Qué frase informa de un hecho?",
+                  "options": [
+                    "Su jefa quiere que Daniel empiece pronto.",
+                    "Daniel empieza en el laboratorio el día 3.",
+                    "Ojalá Daniel empiece pronto."
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "One subject or two?",
+              "instructions": "One person → infinitive. Two different people → que + subjunctive.",
+              "items": [
+                {
+                  "q": "Valeria quiere ___ una fiesta en su casa.",
+                  "options": [
+                    "que hace",
+                    "hacer",
+                    "que haga"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Valeria quiere que Daniel ___ a sus compañeros del laboratorio.",
+                  "options": [
+                    "invitar",
+                    "invita",
+                    "invite"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Esperamos que la nueva ciudad te ___.",
+                  "options": [
+                    "guste",
+                    "gusta",
+                    "gustará"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Daniel espera ___ a todos sus amigos antes del viaje.",
+                  "options": [
+                    "ver",
+                    "que ve",
+                    "que vea"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Espero que mi hermana ___ a verme en diciembre.",
+                  "options": [
+                    "vendrá",
+                    "venga",
+                    "viene"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Yo quiero ___ un curso intensivo de francés.",
+                  "options": [
+                    "hacer",
+                    "que haga",
+                    "que hago"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Ojalá",
+              "instructions": "Choose the correct option.",
+              "items": [
+                {
+                  "q": "Ojalá ___ tiempo para despedirme de todos.",
+                  "options": [
+                    "tenga",
+                    "tener",
+                    "tengo"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "—¿Vas a venir a verme a Montreal? —___",
+                  "options": [
+                    "¡Ojalá!",
+                    "¡Ojalá ir!",
+                    "¡Ojalá voy!"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Ojalá mis padres ___ a Montreal en verano.",
+                  "options": [
+                    "vengan",
+                    "venir",
+                    "vienen"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Ojalá no ___ (llover) el día de la fiesta.",
+                  "options": [
+                    "llueve",
+                    "llueva",
+                    "llover"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "What do you say?",
+              "instructions": "Choose the good wish for each situation.",
+              "items": [
+                {
+                  "q": "Tu compañera tiene gripe y se va a casa: «¡Que te ___!»",
+                  "options": [
+                    "mejoras",
+                    "mejores",
+                    "mejorar"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Tus amigos se van de vacaciones (ustedes): «¡Que les ___ muy bien!»",
+                  "options": [
+                    "va",
+                    "vaya",
+                    "vayan"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Your brother is going to bed: «¡Que ___!»",
+                  "options": [
+                    "descanses",
+                    "descansas",
+                    "descansar"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Your friend is going to a concert: «¡Que te ___!»",
+                  "options": [
+                    "diviertes",
+                    "diviertas",
+                    "divertir"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Correct each sentence.",
+              "items": [
+                {
+                  "q": "Espero que te gustará la fiesta.",
+                  "answer": "Espero que te **guste** la fiesta."
+                },
+                {
+                  "q": "Quiero que yo hable con Daniel.",
+                  "answer": "**Quiero hablar** con Daniel."
+                },
+                {
+                  "q": "Ojalá encuentras un piso bonito.",
+                  "answer": "Ojalá **encuentres** un piso bonito."
+                },
+                {
+                  "q": "Mis padres quieren que yo estudio más.",
+                  "answer": "Mis padres quieren que yo **estudie** más."
+                },
+                {
+                  "q": "Ojalá aprobar el examen.",
+                  "answer": "Ojalá **apruebe** el examen."
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "A farewell card",
+              "instructions": "Write a card for Daniel (or for someone you know who is leaving). Use at least 2 **ojalá**, 2 **espero que / quiero que** and 1 formula.",
+              "lines": 9,
+              "model": "¡Querido Daniel! Te vamos a extrañar mucho. Ojalá encuentres un piso bonito y ojalá hagas muchos amigos en Montreal. Espero que tu nuevo trabajo te guste y quiero que nos llames cada semana. ¡Que te vaya muy bien! Un abrazo, Valeria."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket (model): *Ojalá mañana no haya examen. Espero que mis amigos vengan a mi fiesta.*"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "por-vs-para-lesson",
+      "title": "Por vs Para: Complete No-Prep Lesson",
+      "price_usd": 5.25,
+      "grade_range": "8-12",
+      "level_label": "Spanish 2-3",
+      "cover_level": "SPANISH 2-3",
+      "tags": [
+        "Spanish",
+        "Grammar",
+        "Por and Para",
+        "Prepositions",
+        "Spanish 2",
+        "No Prep"
+      ],
+      "description": "Stop handing out lists of twelve rules. This lesson gives students one picture they remember: por looks back or along the way (cause, route, exchange), para looks ahead (goal, recipient, deadline). Students follow Eva and her team as they deliver tables and posters to a cultural center before Friday, and see por and para doing real jobs in real sentences. They identify cause and goal, choose por or para in context, sort uses into a chart, correct mistakes and plan an event of their own. Planned minute by minute for 60 minutes, with a print-and-go worksheet, a complete answer key and model answers. No prep needed.",
+      "whats_inside": [
+        "Teacher guide with objectives and a minute-by-minute 60-minute script",
+        "Print-and-go student worksheet (A4, prints fine on Letter)",
+        "One visual idea: por looks back, para looks ahead",
+        "Cause vs goal task and a uses chart students fill in",
+        "Fill-in-the-blank practice in context, plus find the mistake",
+        "Event-planning speaking task, model answer and full answer key"
+      ],
+      "lessons": [
+        {
+          "title": "Por vs Para: The Delivery",
+          "sources": [
+            {
+              "path": "/gramatica/por-para-razones-objetivos"
+            }
+          ],
+          "objectives": [
+            "Use **por** for cause (**por la lluvia**), route (**por el parque**) and exchange (**por veinte dólares**).",
+            "Use **para** for goal (**para evitar el tráfico**), recipient (**para mi abuela**) and deadline (**para el lunes**).",
+            "Explain their choice: looking back or looking ahead.",
+            "Plan an event and justify decisions with por and para."
+          ],
+          "materials": [
+            "Student worksheet",
+            "Board: an arrow pointing left (POR) and one pointing right (PARA)"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Board: *Salgo temprano **para** evitar el tráfico.* / *Salgo temprano **por** el tráfico.* Ask: which sentence says what I want to get? Which says the reason?"
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Draw two arrows. **POR ←** looks back (the cause) or along the way (route, exchange). **PARA →** looks ahead (goal, recipient, deadline). Story: Eva's team must take tables and posters to a cultural center. *La sala está cerrada **por** una avería. Llamo **para** confirmar la hora. Las mesas son **para** el centro. Lo necesito **para** el viernes. Pasamos **por** el parque.*"
+            },
+            {
+              "min": "15-22",
+              "stage": "Check",
+              "do": "Worksheet **A** (cause or goal?) in pairs."
+            },
+            {
+              "min": "22-32",
+              "stage": "Practice",
+              "do": "Worksheet **B** (por or para). After each answer students point left or right before they say it."
+            },
+            {
+              "min": "32-40",
+              "stage": "Chart",
+              "do": "Worksheet **C**: students sort ten sentences into the six uses. Check with the class and add one example of their own per use."
+            },
+            {
+              "min": "40-46",
+              "stage": "Accuracy",
+              "do": "Worksheet **D** (find the mistake)."
+            },
+            {
+              "min": "46-57",
+              "stage": "Speaking",
+              "do": "Worksheet **E**: in groups, students plan a school event (a fundraiser, a party, a game night). They write five sentences: what it is for, who it is for, the deadline, how much things cost, and one problem with its cause. Groups present."
+            },
+            {
+              "min": "57-60",
+              "stage": "Exit ticket",
+              "do": "One sentence with **por** and one with **para** about today."
+            }
+          ],
+          "notes": [
+            "*Gracias por…* and *por favor* are fixed expressions: teach them as chunks.",
+            "Price is **por** (exchange): *Compré la lámpara por veinte dólares*; the person who gets it is **para**: *Es para mi hermana.*"
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "Cause or goal?",
+              "instructions": "Choose the sentence that answers the question.",
+              "items": [
+                {
+                  "q": "Which sentence says **what you want to get**?",
+                  "options": [
+                    "Salgo temprano para evitar el tráfico.",
+                    "Salgo temprano por el tráfico."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Which sentence explains **the cause**?",
+                  "options": [
+                    "No fui a clase por la lluvia.",
+                    "Compré un paraguas para la lluvia."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Which sentence names **the person who receives** something?",
+                  "options": [
+                    "Esta tarjeta es para mi abuela.",
+                    "Gracias por la tarjeta."
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Por or para?",
+              "instructions": "Circle the correct word.",
+              "items": [
+                {
+                  "q": "La sala está cerrada ___ una avería.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Llamo ___ confirmar la hora.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Se canceló el vuelo ___ la niebla.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "La entrega es el lunes: lo necesito ___ el lunes.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Esta tarjeta es ___ mi abuela: mañana es su cumpleaños.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Atravesamos el parque: fuimos ___ el parque.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Tomo clases ___ hablar mejor con mis compañeros.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "El tren pasa ___ Córdoba.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "title": "Which use?",
+              "instructions": "Tick the use of por or para in each sentence.",
+              "columns": [
+                "POR cause",
+                "POR route",
+                "POR exchange",
+                "PARA goal",
+                "PARA recipient",
+                "PARA deadline"
+              ],
+              "items": [
+                {
+                  "text": "El cine cerró por un problema eléctrico.",
+                  "answer": 0
+                },
+                {
+                  "text": "Compré la lámpara por veinte dólares.",
+                  "answer": 2
+                },
+                {
+                  "text": "La lámpara es para mi hermana.",
+                  "answer": 4
+                },
+                {
+                  "text": "Caminamos por la playa.",
+                  "answer": 1
+                },
+                {
+                  "text": "Estudio para sacar una A.",
+                  "answer": 3
+                },
+                {
+                  "text": "El proyecto es para el viernes.",
+                  "answer": 5
+                },
+                {
+                  "text": "Llegué tarde por el tráfico.",
+                  "answer": 0
+                },
+                {
+                  "text": "Cambié mi bici por una patineta.",
+                  "answer": 2
+                }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Correct each sentence.",
+              "items": [
+                {
+                  "q": "Estudio español por hablar con mi familia.",
+                  "answer": "Estudio español **para** hablar con mi familia."
+                },
+                {
+                  "q": "Gracias para el regalo.",
+                  "answer": "Gracias **por** el regalo."
+                },
+                {
+                  "q": "El ensayo es por el lunes.",
+                  "answer": "El ensayo es **para** el lunes."
+                },
+                {
+                  "q": "Pagué diez dólares para la camiseta.",
+                  "answer": "Pagué diez dólares **por** la camiseta."
+                },
+                {
+                  "q": "No fuimos al parque para la lluvia.",
+                  "answer": "No fuimos al parque **por** la lluvia."
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Plan an event",
+              "instructions": "With your group, plan a school event. Write five sentences: what it is for (**para**), who it is for (**para**), the deadline (**para**), how much things cost (**por**) and one problem and its cause (**por**).",
+              "lines": 7,
+              "model": "Organizamos una noche de juegos para recaudar dinero. Es para el club de español. Necesitamos las mesas para el jueves. Compramos las pizzas por cien dólares. El gimnasio está cerrado por obras, así que usamos la cafetería."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket (model): *Llegué tarde por el autobús. Estudio para el examen de mañana.*"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "gustar-verbs-like-gustar-lesson",
+      "title": "Gustar and Verbs Like Gustar: Full Lesson",
+      "price_usd": 4.95,
+      "grade_range": "6-12",
+      "level_label": "Spanish 1-2",
+      "cover_level": "SPANISH 1-2",
+      "cover_headline": "Gustar and Verbs Like Gustar",
+      "cover_subline": "Full Lesson",
+      "tags": [
+        "Spanish",
+        "Grammar",
+        "Gustar",
+        "Indirect Object Pronouns",
+        "Spanish 2",
+        "No Prep"
+      ],
+      "description": "Students say me gusta easily, but they freeze at me duelen los pies or nos falta tiempo. This lesson connects gustar with interesar, doler, faltar and molestar through one story: a guided day trip in Guanajuato, Mexico. Rosa wants the art museum, Javier's feet hurt and the sun bothers him, and Marcos never has enough time for his photos. Students learn what really decides gusta or gustan (the thing, not the person), practise the pronouns me, te, le, nos, les, correct the usual mistakes and plan the group's afternoon. Planned minute by minute for 60 minutes, with a print-and-go worksheet and complete answer key.",
+      "whats_inside": [
+        "Teacher guide with objectives and a minute-by-minute 60-minute script",
+        "Print-and-go student worksheet (A4, prints fine on Letter)",
+        "Gustar, encantar, interesar, doler, faltar and molestar in one story",
+        "The rule that fixes gusta vs gustan: the verb agrees with the thing",
+        "Pronoun practice (me, te, le, nos, les) and find the mistake",
+        "Speaking task to plan an afternoon, with full answer key"
+      ],
+      "lessons": [
+        {
+          "title": "Gustar and friends: An Afternoon in Guanajuato",
+          "sources": [
+            {
+              "path": "/gramatica/gustar-interesar-doler-faltar-concordancia"
+            }
+          ],
+          "objectives": [
+            "Use **gustar, encantar, interesar, molestar, doler, faltar** with **me, te, le, nos, les**.",
+            "Make the verb agree with the thing: **le interesa el arte / le interesan los museos / me duelen los pies**.",
+            "Use **a + person** to make it clear: **A Javier le molesta el sol.**",
+            "Plan an activity for a group based on what each person likes and needs."
+          ],
+          "materials": [
+            "Student worksheet"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Quick poll: *¿Te gustan los museos? ¿Te gusta caminar? ¿Te duelen los pies después de caminar mucho?* Thumbs up or down."
+            },
+            {
+              "min": "5-15",
+              "stage": "Present",
+              "do": "Story: Elena, a tour guide in Guanajuato, has three travelers. At two o'clock they plan the afternoon. *A Rosa **le interesa** el museo de arte. A Javier **le duelen** los pies y **le molesta** el sol. A Marcos **le faltan** fotos del mirador y nunca **le falta**… ¡sí, **le falta** tiempo!* Board: **(a + person) + me/te/le/nos/les + verb + THING**. The verb agrees with the thing."
+            },
+            {
+              "min": "15-23",
+              "stage": "Check",
+              "do": "Worksheet **A** (understand the story). Ask: in *me duelen los pies*, what hurts? → the feet, so *duelen*."
+            },
+            {
+              "min": "23-33",
+              "stage": "Practice",
+              "do": "Worksheet **B** (singular or plural verb) and **C** (pronouns)."
+            },
+            {
+              "min": "33-40",
+              "stage": "Accuracy",
+              "do": "Worksheet **D** (find the mistake). Common error: *Yo gusto la pizza* → **Me gusta la pizza**."
+            },
+            {
+              "min": "40-55",
+              "stage": "Speaking",
+              "do": "Worksheet **E**: groups of three take the roles of Rosa, Javier and Marcos plus one guide. The guide asks *¿Qué les interesa? ¿Les duele algo?* and proposes a plan; the travelers react. Then each group presents its plan: *Como a Javier le duelen los pies, vamos en taxi…*"
+            },
+            {
+              "min": "55-60",
+              "stage": "Exit ticket",
+              "do": "Three sentences: something you love, something that bothers you, something you are missing today."
+            }
+          ],
+          "notes": [
+            "*Faltar* is useful for time: *Faltan diez minutos para las seis.*",
+            "Past tense works the same way: *Ayer me dolieron mucho los pies.*"
+          ],
+          "worksheet": [
+            {
+              "type": "choice",
+              "title": "The story",
+              "instructions": "Choose the best answer.",
+              "items": [
+                {
+                  "q": "¿Qué le pasa a Javier?",
+                  "options": [
+                    "Le duelen los pies.",
+                    "Le interesan los museos.",
+                    "No tiene cámara."
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "«Me falta tiempo» means…",
+                  "options": [
+                    "I'm late.",
+                    "I have a lot of time.",
+                    "I don't have enough time."
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "En «me duelen los pies», ¿qué duele?",
+                  "options": [
+                    "Javier.",
+                    "Los pies: por eso «duelen», en plural.",
+                    "Nada, es una pregunta."
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Singular or plural?",
+              "instructions": "Look at the thing, not the person.",
+              "items": [
+                {
+                  "q": "A Marcos le ___ la fotografía de calle.",
+                  "options": [
+                    "interesa",
+                    "interesan",
+                    "intereso"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Después de tantas escaleras, me ___ las piernas.",
+                  "options": [
+                    "duele",
+                    "duelen",
+                    "duelo"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "A Javier le ___ el calor.",
+                  "options": [
+                    "molesta",
+                    "molestan",
+                    "molesto"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "A Rosa le ___ conocer los museos de la ciudad.",
+                  "options": [
+                    "interesas",
+                    "interesan",
+                    "interesa"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "Nos ___ paciencia con tantos turistas.",
+                  "options": [
+                    "faltamos",
+                    "faltan",
+                    "falta"
+                  ],
+                  "answer": 2
+                },
+                {
+                  "q": "___ diez minutos para las seis.",
+                  "options": [
+                    "Faltamos",
+                    "Faltan",
+                    "Falta"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Ayer me ___ mucho los pies.",
+                  "options": [
+                    "dolió",
+                    "duelen",
+                    "dolieron"
+                  ],
+                  "answer": 2
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Who?",
+              "instructions": "Write **me, te, le, nos** or **les**.",
+              "items": [
+                {
+                  "q": "A mí ________ encantan los tacos.",
+                  "answer": "me"
+                },
+                {
+                  "q": "¿A ti ________ molesta el ruido?",
+                  "answer": "te"
+                },
+                {
+                  "q": "A Rosa ________ interesa el arte.",
+                  "answer": "le"
+                },
+                {
+                  "q": "A nosotros ________ falta dinero para la entrada.",
+                  "answer": "nos"
+                },
+                {
+                  "q": "A Javier y a Rosa ________ gusta caminar despacio.",
+                  "answer": "les"
+                },
+                {
+                  "q": "A Marcos ________ duele la espalda por la cámara.",
+                  "answer": "le"
+                }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Correct each sentence.",
+              "items": [
+                {
+                  "q": "Yo gusto la pizza.",
+                  "answer": "**Me gusta** la pizza."
+                },
+                {
+                  "q": "A Javier le duele los pies.",
+                  "answer": "A Javier le **duelen** los pies."
+                },
+                {
+                  "q": "Me interesan el arte.",
+                  "answer": "Me **interesa** el arte."
+                },
+                {
+                  "q": "A Rosa me encanta el museo.",
+                  "answer": "A Rosa **le** encanta el museo."
+                },
+                {
+                  "q": "Nos falta dos horas.",
+                  "answer": "Nos **faltan** dos horas."
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Plan the afternoon",
+              "instructions": "You are the guide. Write a plan for the group in five sentences. Say what each person likes or needs and what you will do.",
+              "prompt": "Rosa: arte, museos · Javier: le duelen los pies, le molesta el sol · Marcos: le faltan fotos del mirador, le falta tiempo · Bus: a las seis.",
+              "lines": 7,
+              "model": "A Rosa le interesa el arte, así que vamos al museo a las tres. A Javier le duelen los pies y le molesta el sol: él va en taxi. A Marcos le faltan fotos del mirador, por eso sube a las cinco. Nos falta poco tiempo: el autobús sale a las seis. ¡Nos encanta Guanajuato!"
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket (model): *Me encanta el fútbol. Me molesta el ruido. Hoy me falta tiempo.*"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "la-comida-menu-task",
+      "title": "La Comida: 60-Minute Lesson with Menu Task",
+      "price_usd": 5.5,
+      "grade_range": "6-12",
+      "level_label": "Spanish 1",
+      "cover_level": "SPANISH 1",
+      "tags": [
+        "Spanish",
+        "Food",
+        "Restaurant",
+        "Vocabulary",
+        "Spanish 1",
+        "No Prep"
+      ],
+      "description": "A food unit lesson that gets every student talking. Students enter an impossible restaurant where every dish on the menu is a question about them: their breakfast, the soup someone makes when they are sick, how much spice they can handle, their perfect birthday meal. They learn and practise the key food vocabulary, order in a restaurant with quisiera and para mí, and finish with the menu task: in groups they design their own impossible menu and act out ordering from it. Planned minute by minute for 60 minutes, with a print-and-go worksheet, a complete answer key and model answers.",
+      "whats_inside": [
+        "Teacher guide with objectives and a minute-by-minute 60-minute script",
+        "Print-and-go student worksheet (A4, prints fine on Letter)",
+        "Food vocabulary practice: breakfast, meals, drinks and desserts",
+        "Restaurant language: quisiera, para mí, la cuenta, por favor",
+        "Menu task: groups design a menu and role-play ordering from it",
+        "Personal questions for pair work and a complete answer key"
+      ],
+      "lessons": [
+        {
+          "title": "La Comida: The Impossible Restaurant",
+          "sources": [
+            {
+              "path": "/el-restaurante-imposible"
+            }
+          ],
+          "objectives": [
+            "Name common foods and drinks (**el pan, la sopa, el pollo, las frutas, el agua, el postre…**).",
+            "Talk about their food habits: **En el desayuno como… Me encanta… No me gusta…**",
+            "Order in a restaurant: **Quisiera… / Para mí… / ¿Me trae la cuenta, por favor?**",
+            "Design a menu and role-play ordering from it."
+          ],
+          "materials": [
+            "Student worksheet",
+            "Colored pencils or markers for the menu task"
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Warm-up",
+              "do": "Ask *¿Qué comes en el desayuno?* Draw a plate on the board and fill it with the answers students know."
+            },
+            {
+              "min": "5-15",
+              "stage": "Vocabulary",
+              "do": "Teach the words in worksheet **A** with quick drawings or gestures. Students sort them into **desayuno, comida, bebidas, postres**."
+            },
+            {
+              "min": "15-25",
+              "stage": "Pair talk",
+              "do": "Present the impossible restaurant: *Here every dish is a question about you.* Worksheet **B**: in pairs, students choose three dishes and answer the questions with the sentence starters."
+            },
+            {
+              "min": "25-35",
+              "stage": "Restaurant language",
+              "do": "Model a short scene with a volunteer: *—Buenas tardes. ¿Qué van a pedir? —Quisiera una sopa, por favor. —¿Y para tomar? —Para mí, un agua. … —¿Me trae la cuenta, por favor?* Worksheet **C** (match the waiter's questions and the answers) and **D** (complete the order)."
+            },
+            {
+              "min": "35-52",
+              "stage": "Menu task",
+              "do": "Worksheet **E**: groups of three design their own impossible menu with 2 starters, 2 main dishes, 2 drinks and 1 dessert, with prices. Then they swap menus: one student is the waiter, two are customers, and they order."
+            },
+            {
+              "min": "52-58",
+              "stage": "Show",
+              "do": "Two groups perform their restaurant scene for the class. The class votes for the most original menu."
+            },
+            {
+              "min": "58-60",
+              "stage": "Exit ticket",
+              "do": "Complete: *Mi comida favorita es ______. En el restaurante digo: «Quisiera ______, por favor».*"
+            }
+          ],
+          "worksheet": [
+            {
+              "type": "sort",
+              "title": "Food words",
+              "instructions": "When do you eat or drink it? Tick one box.",
+              "columns": [
+                "Desayuno",
+                "Comida / cena",
+                "Bebida",
+                "Postre"
+              ],
+              "items": [
+                {
+                  "text": "el cereal",
+                  "answer": 0
+                },
+                {
+                  "text": "el pollo con arroz",
+                  "answer": 1
+                },
+                {
+                  "text": "el jugo de naranja",
+                  "answer": 2
+                },
+                {
+                  "text": "el helado",
+                  "answer": 3
+                },
+                {
+                  "text": "los huevos",
+                  "answer": 0
+                },
+                {
+                  "text": "la sopa",
+                  "answer": 1
+                },
+                {
+                  "text": "el agua",
+                  "answer": 2
+                },
+                {
+                  "text": "el pastel",
+                  "answer": 3
+                },
+                {
+                  "text": "el pan tostado",
+                  "answer": 0
+                },
+                {
+                  "text": "los tacos",
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "open",
+              "title": "The impossible restaurant",
+              "instructions": "Choose three dishes. Ask your partner the question and write their answer.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "🥖 El pan de la mesa: ¿Qué pones en tu tostada favorita?",
+                  "answer": "En mi tostada pongo mantequilla y mermelada."
+                },
+                {
+                  "q": "🍲 La sopa de los recuerdos: ¿Qué sopa te prepara alguien cuando estás enfermo o enferma?",
+                  "answer": "Mi mamá me prepara sopa de pollo."
+                },
+                {
+                  "q": "🌶️ El plato picante: ¿Cuánto picante aguantas, del uno al diez?",
+                  "answer": "Aguanto un seis. Me gusta un poco picante."
+                },
+                {
+                  "q": "🎂 La fiesta: ¿Qué plato comes en tu cumpleaños?",
+                  "answer": "En mi cumpleaños como pizza y pastel de chocolate."
+                },
+                {
+                  "q": "🍎 La merienda: ¿Qué snack tienes ahora en tu mochila?",
+                  "answer": "En mi mochila hay una manzana y galletas."
+                }
+              ]
+            },
+            {
+              "type": "match",
+              "title": "At the restaurant",
+              "instructions": "Match the waiter's question to the best answer.",
+              "items": [
+                {
+                  "left": "Buenas tardes. ¿Qué van a pedir?",
+                  "right": "Quisiera una sopa, por favor."
+                },
+                {
+                  "left": "¿Y para tomar?",
+                  "right": "Para mí, un agua sin hielo."
+                },
+                {
+                  "left": "¿Algo de postre?",
+                  "right": "Sí, un helado de vainilla."
+                },
+                {
+                  "left": "¿Todo bien?",
+                  "right": "Sí, ¡está delicioso!"
+                },
+                {
+                  "left": "Aquí tiene la cuenta.",
+                  "right": "Gracias. ¿Puedo pagar con tarjeta?"
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Complete the order",
+              "instructions": "Use: **cuenta · Quisiera · tomar · postre · Para mí**",
+              "wordBank": [
+                "cuenta",
+                "Quisiera",
+                "tomar",
+                "postre",
+                "Para mí"
+              ],
+              "items": [
+                {
+                  "q": "—¿Qué va a pedir? —________ los tacos de pollo, por favor.",
+                  "answer": "Quisiera"
+                },
+                {
+                  "q": "—¿Y para ________? —Un jugo de mango.",
+                  "answer": "tomar"
+                },
+                {
+                  "q": "—¿Y usted, señora? —________, una ensalada.",
+                  "answer": "Para mí"
+                },
+                {
+                  "q": "—¿Quieren ________? —Sí, un flan, por favor.",
+                  "answer": "postre"
+                },
+                {
+                  "q": "—¿Me trae la ________, por favor?",
+                  "answer": "cuenta"
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Menu task: your impossible menu",
+              "instructions": "In groups, design a menu: 2 starters (**entradas**), 2 main dishes (**platos principales**), 2 drinks (**bebidas**) and 1 dessert (**postre**), with prices. Then act out ordering from another group's menu.",
+              "lines": 10,
+              "model": "Restaurante «La Luna». Entradas: sopa de tortilla ($4), guacamole con totopos ($5). Platos principales: tacos de pollo ($9), pizza de mango y queso ($10). Bebidas: agua de horchata ($2), jugo de naranja ($3). Postre: helado de chocolate con chile ($4)."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket (model): *Mi comida favorita es la pizza. En el restaurante digo: «Quisiera una pizza, por favor».*"
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "dia-de-muertos-altar-task",
+      "title": "Día de Muertos: Culture Lesson and Altar Task",
+      "price_usd": 5.95,
+      "grade_range": "7-12",
+      "level_label": "Spanish 1-3",
+      "cover_level": "SPANISH 1-3",
+      "tags": [
+        "Spanish",
+        "Culture",
+        "Día de Muertos",
+        "Mexico",
+        "Hispanic Heritage",
+        "No Prep"
+      ],
+      "status": "missing",
+      "missing_reason": "No Día de Muertos class exists in the SpanishCue catalog (app/lesson-catalog.ts, curriculum.ts). Not invented.",
+      "description": "",
+      "whats_inside": [],
+      "lessons": []
+    },
+    {
+      "slug": "emergency-spanish-sub-plans",
+      "title": "5 Emergency Spanish Sub Plans: Print and Go",
+      "price_usd": 12.99,
+      "grade_range": "6-12",
+      "level_label": "Spanish 1-3",
+      "cover_level": "SPANISH 1-3",
+      "cover_headline": "5 Emergency Spanish Sub Plans",
+      "cover_subline": "Print and Go",
+      "time_label": "5 x 60 minutes",
+      "lesson_label": "",
+      "tags": [
+        "Spanish",
+        "Sub Plans",
+        "Emergency Sub Plans",
+        "Independent Work",
+        "No Prep",
+        "Printable"
+      ],
+      "guide_intro": "Five self-contained 60-minute sub plans. The substitute does not need to speak Spanish: each worksheet opens with a short explanation box in English, then guided practice, a writing task and an early-finisher challenge. Copy one worksheet per student, leave this guide on your desk and you are ready for any unexpected absence.",
+      "description": "Sick days happen. Keep these five emergency sub plans in your desk and you are covered for a full week. Each plan fills a 60-minute class with independent work that any substitute can run, even one who speaks no Spanish: a short explanation box in English, guided practice, a writing task and a challenge for early finishers. Topics: ser and estar, gustar, preterite vs imperfect, por and para, and food and restaurants. Every plan includes a one-page script for the substitute and an answer key for you, so grading is quick when you are back. Print once, copy, and relax.",
+      "whats_inside": [
+        "5 complete 60-minute sub plans, print and go",
+        "A minute-by-minute script the substitute can follow without Spanish",
+        "Student worksheets with an explanation box in English",
+        "Topics: ser/estar, gustar, preterite/imperfect, por/para, food",
+        "Writing task and early-finisher challenge in every plan",
+        "Answer keys for quick grading when you return"
+      ],
+      "lessons": [
+        {
+          "title": "Sub Plan 1: Ser and Estar",
+          "sources": [
+            {
+              "path": "/gramatica/ser-estar-y-llevar-para-descripciones"
+            }
+          ],
+          "objectives": [
+            "Choose **ser** for what someone is like and **estar** for how someone is now or where they are.",
+            "Describe a person with ser, estar and llevar."
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Start",
+              "do": "Take attendance. Hand out the worksheet. Read the title and the instructions aloud."
+            },
+            {
+              "min": "5-15",
+              "stage": "Read",
+              "do": "Students read the explanation box in section **A** (ser vs estar) and complete section **B** alone."
+            },
+            {
+              "min": "15-35",
+              "stage": "Practice",
+              "do": "Students complete sections **C** and **D**. They may check with a partner quietly after each section."
+            },
+            {
+              "min": "35-50",
+              "stage": "Write",
+              "do": "Students complete the writing task in section **E**. Remind them of the minimum number of sentences."
+            },
+            {
+              "min": "50-58",
+              "stage": "Early finishers",
+              "do": "Students who finish read their writing to a partner and complete the challenge in section **F**."
+            },
+            {
+              "min": "58-60",
+              "stage": "Collect",
+              "do": "Collect all worksheets with names. Leave them with a note about who was absent."
+            }
+          ],
+          "notes": [
+            "The substitute does not need to speak Spanish. Students work alone or in pairs; the explanation box on the worksheet teaches ser and estar.",
+            "Collect the worksheets at the end of class. The answer key is in this guide, for you to grade when you are back."
+          ],
+          "worksheet": [
+            {
+              "type": "read",
+              "title": "Read first: ser or estar?",
+              "text": [
+                "**SER** = what someone or something is like, who they are, where they are from: *Raúl **es** alto. **Es** de Sevilla. **Es** profesor.*",
+                "**ESTAR** = how someone is now, a change you notice, or where someone is: *Hoy **está** cansado. ¡Qué delgado **está**! **Está** en la estación.*",
+                "**LLEVAR** = clothes and accessories: *Raúl **lleva** gafas y una chaqueta verde.*"
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Choose the verb",
+              "instructions": "Circle the correct option.",
+              "items": [
+                {
+                  "q": "Mi mejor amiga ___ muy simpática.",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Hoy mi hermano ___ enfermo.",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Nosotros ___ en la biblioteca.",
+                  "options": [
+                    "somos",
+                    "estamos"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Mis abuelos ___ de Puerto Rico.",
+                  "options": [
+                    "son",
+                    "están"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "La profesora ___ un vestido rojo.",
+                  "options": [
+                    "está",
+                    "lleva"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "¡Qué alto ___ tu primo este año!",
+                  "options": [
+                    "es",
+                    "está"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Complete",
+              "instructions": "Write the correct form of **ser** or **estar**.",
+              "items": [
+                {
+                  "q": "Yo ________ estudiante.",
+                  "answer": "soy"
+                },
+                {
+                  "q": "Tú ________ nervioso antes del examen.",
+                  "answer": "estás"
+                },
+                {
+                  "q": "La fiesta ________ en mi casa.",
+                  "answer": "es"
+                },
+                {
+                  "q": "Mis padres ________ en el trabajo.",
+                  "answer": "están"
+                },
+                {
+                  "q": "Nosotras ________ de Texas.",
+                  "answer": "somos"
+                },
+                {
+                  "q": "El café ________ frío. ¡Puaj!",
+                  "answer": "está"
+                }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Correct each sentence.",
+              "items": [
+                {
+                  "q": "Mi perro está grande y negro.",
+                  "answer": "Mi perro **es** grande y negro."
+                },
+                {
+                  "q": "Soy en la clase de español.",
+                  "answer": "**Estoy** en la clase de español."
+                },
+                {
+                  "q": "Hoy soy muy feliz porque es viernes.",
+                  "answer": "Hoy **estoy** muy feliz porque es viernes."
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Describe a famous person",
+              "instructions": "Choose a famous person. Write six sentences: what they are like (**es**), how they are in a photo you imagine (**está**) and what they are wearing (**lleva**).",
+              "lines": 8,
+              "model": "Taylor Swift es alta y rubia. Es cantante. Es de Pensilvania. En la foto está muy contenta. Está en un concierto. Lleva un vestido azul."
+            },
+            {
+              "type": "write",
+              "title": "Challenge for early finishers",
+              "instructions": "Write three sentences about you: one with **soy**, one with **estoy** and one with **llevo**.",
+              "lines": 3,
+              "model": "Soy alto. Estoy un poco cansado. Llevo una sudadera gris."
+            }
+          ]
+        },
+        {
+          "title": "Sub Plan 2: Gustar",
+          "sources": [
+            {
+              "path": "/gramatica/gustar-interesar-doler-faltar-concordancia"
+            }
+          ],
+          "objectives": [
+            "Use **gusta / gustan** with **me, te, le, nos, les**.",
+            "Use **encantar, interesar** and **doler** in the same pattern."
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Start",
+              "do": "Take attendance. Hand out the worksheet. Read the title and the instructions aloud."
+            },
+            {
+              "min": "5-15",
+              "stage": "Read",
+              "do": "Students read the explanation box in section **A** (gustar) and complete section **B** alone."
+            },
+            {
+              "min": "15-35",
+              "stage": "Practice",
+              "do": "Students complete sections **C** and **D**. They may check with a partner quietly after each section."
+            },
+            {
+              "min": "35-50",
+              "stage": "Write",
+              "do": "Students complete the writing task in section **E**. Remind them of the minimum number of sentences."
+            },
+            {
+              "min": "50-58",
+              "stage": "Early finishers",
+              "do": "Students who finish read their writing to a partner and complete the challenge in section **F**."
+            },
+            {
+              "min": "58-60",
+              "stage": "Collect",
+              "do": "Collect all worksheets with names. Leave them with a note about who was absent."
+            }
+          ],
+          "notes": [
+            "The substitute does not need to speak Spanish. Students work alone or in pairs; the explanation box on the worksheet teaches gustar.",
+            "Collect the worksheets at the end of class. The answer key is in this guide, for you to grade when you are back."
+          ],
+          "worksheet": [
+            {
+              "type": "read",
+              "title": "Read first: how gustar works",
+              "text": [
+                "In Spanish the thing you like is the subject. *Me gusta la pizza* = literally \"pizza is pleasing to me\".",
+                "One thing or an action → **gusta**: *Me gusta el fútbol. Me gusta bailar.* Plural things → **gustan**: *Me gustan los perros.*",
+                "Who likes it: **me** (I), **te** (you), **le** (he, she), **nos** (we), **les** (they). *A Ana le gusta el arte.*",
+                "**Encantar** (to love), **interesar** (to interest) and **doler** (to hurt) work the same way: *Me duelen los pies.*"
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Gusta or gustan?",
+              "instructions": "Circle the correct form.",
+              "items": [
+                {
+                  "q": "Me ___ los videojuegos.",
+                  "options": [
+                    "gusta",
+                    "gustan"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "A mi hermana le ___ cantar.",
+                  "options": [
+                    "gusta",
+                    "gustan"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Nos ___ la música latina.",
+                  "options": [
+                    "encanta",
+                    "encantan"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Me ___ la cabeza.",
+                  "options": [
+                    "duele",
+                    "duelen"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "¿Te ___ las matemáticas?",
+                  "options": [
+                    "interesa",
+                    "interesan"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "A mis padres les ___ las películas viejas.",
+                  "options": [
+                    "gusta",
+                    "gustan"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Who likes it?",
+              "instructions": "Write **me, te, le, nos** or **les**.",
+              "items": [
+                {
+                  "q": "A mí ________ gusta el chocolate.",
+                  "answer": "me"
+                },
+                {
+                  "q": "A ti ________ encantan los gatos.",
+                  "answer": "te"
+                },
+                {
+                  "q": "A Pedro ________ interesa la historia.",
+                  "answer": "le"
+                },
+                {
+                  "q": "A nosotros ________ gusta la clase de arte.",
+                  "answer": "nos"
+                },
+                {
+                  "q": "A ellas ________ duelen los pies.",
+                  "answer": "les"
+                }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Correct each sentence.",
+              "items": [
+                {
+                  "q": "Yo gusto el helado.",
+                  "answer": "**Me gusta** el helado."
+                },
+                {
+                  "q": "Me gusta los tacos.",
+                  "answer": "Me **gustan** los tacos."
+                },
+                {
+                  "q": "A Luis me encanta el béisbol.",
+                  "answer": "A Luis **le** encanta el béisbol."
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "My likes and dislikes",
+              "instructions": "Write eight sentences: four about you and four about people you know (friends, family). Use gustar, encantar, interesar and doler at least once each.",
+              "lines": 9,
+              "model": "Me encanta la música. Me gustan los perros. No me gusta el brócoli. Me interesa el arte. A mi mamá le gusta cocinar. A mi hermano le encantan los videojuegos. A mis abuelos les gusta caminar. A mi amigo le duele la rodilla."
+            },
+            {
+              "type": "write",
+              "title": "Challenge for early finishers",
+              "instructions": "Write a short survey of five questions with **¿Te gusta…? / ¿Te gustan…?** and answer it yourself.",
+              "lines": 5,
+              "model": "¿Te gusta el fútbol? Sí, me gusta mucho. ¿Te gustan las verduras? No, no me gustan…"
+            }
+          ]
+        },
+        {
+          "title": "Sub Plan 3: Preterite vs Imperfect",
+          "sources": [
+            {
+              "path": "/gramatica/indefinido-e-imperfecto"
+            }
+          ],
+          "objectives": [
+            "Use the imperfect for the scene and the preterite for the events of a story.",
+            "Write a short past story."
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Start",
+              "do": "Take attendance. Hand out the worksheet. Read the title and the instructions aloud."
+            },
+            {
+              "min": "5-15",
+              "stage": "Read",
+              "do": "Students read the explanation box in section **A** (preterite vs imperfect) and complete section **B** alone."
+            },
+            {
+              "min": "15-35",
+              "stage": "Practice",
+              "do": "Students complete sections **C** and **D**. They may check with a partner quietly after each section."
+            },
+            {
+              "min": "35-50",
+              "stage": "Write",
+              "do": "Students complete the writing task in section **E**. Remind them of the minimum number of sentences."
+            },
+            {
+              "min": "50-58",
+              "stage": "Early finishers",
+              "do": "Students who finish read their writing to a partner and complete the challenge in section **F**."
+            },
+            {
+              "min": "58-60",
+              "stage": "Collect",
+              "do": "Collect all worksheets with names. Leave them with a note about who was absent."
+            }
+          ],
+          "notes": [
+            "The substitute does not need to speak Spanish. Students work alone or in pairs; the explanation box on the worksheet teaches the preterite and the imperfect.",
+            "Collect the worksheets at the end of class. The answer key is in this guide, for you to grade when you are back."
+          ],
+          "worksheet": [
+            {
+              "type": "read",
+              "title": "Read first: scene or event?",
+              "text": [
+                "A story in the past has two layers.",
+                "**The scene → imperfect**: time, weather, place, what people were doing. *Eran las ocho. Llovía. Había mucho tráfico. Carmen esperaba el autobús.*",
+                "**The events → preterite**: what happened next, one after another. *De repente, un taxi salió de un garaje. El chico frenó y se cayó. Carmen llamó a emergencias.*",
+                "Trap: an accident *happens*, so: *Ayer **hubo** un accidente* (not *era*)."
+              ]
+            },
+            {
+              "type": "sort",
+              "title": "Scene or event?",
+              "instructions": "Tick one box for each sentence.",
+              "columns": [
+                "Scene (imperfect)",
+                "Event (preterite)"
+              ],
+              "items": [
+                {
+                  "text": "Hacía mucho calor.",
+                  "answer": 0
+                },
+                {
+                  "text": "Mi perro rompió la lámpara.",
+                  "answer": 1
+                },
+                {
+                  "text": "Había mucha gente en la tienda.",
+                  "answer": 0
+                },
+                {
+                  "text": "Mi hermana gritó.",
+                  "answer": 1
+                },
+                {
+                  "text": "Eran las seis de la tarde.",
+                  "answer": 0
+                },
+                {
+                  "text": "Llegó la policía.",
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Choose the verb",
+              "instructions": "Circle the correct form.",
+              "items": [
+                {
+                  "q": "___ las diez cuando sonó el teléfono.",
+                  "options": [
+                    "Fueron",
+                    "Eran"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Yo dormía cuando mi mamá ___.",
+                  "options": [
+                    "entró",
+                    "entraba"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Ayer ___ un examen difícil.",
+                  "options": [
+                    "hubo",
+                    "había"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Cuando Ana fue a la escuela, ___.",
+                  "options": [
+                    "llovió",
+                    "llovía"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "El sábado ___ toda la tarde.",
+                  "options": [
+                    "llovió",
+                    "llovía"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Mis amigos ___ fútbol cuando empezó la tormenta.",
+                  "options": [
+                    "jugaron",
+                    "jugaban"
+                  ],
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Complete the story",
+              "instructions": "Write the imperfect or the preterite of the verb.",
+              "items": [
+                {
+                  "q": "________ (ser) las cuatro de la tarde.",
+                  "answer": "Eran"
+                },
+                {
+                  "q": "Yo ________ (estar) en el parque con mi hermano.",
+                  "answer": "estaba"
+                },
+                {
+                  "q": "________ (hacer) sol y ________ (haber) muchos niños.",
+                  "answer": "Hacía · había"
+                },
+                {
+                  "q": "De repente, un perro ________ (correr) hacia nosotros.",
+                  "answer": "corrió"
+                },
+                {
+                  "q": "Mi hermano ________ (gritar) y nosotros ________ (salir) corriendo.",
+                  "answer": "gritó · salimos"
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Your story",
+              "instructions": "Write a story of eight to ten sentences about a surprise, an accident or a funny moment. Use at least three verbs in the imperfect (scene) and five in the preterite (events).",
+              "lines": 11,
+              "model": "Era sábado y hacía frío. Yo estaba en casa y miraba una película. De repente, alguien tocó la puerta. Era mi prima con un pastel. ¡Ese día era mi cumpleaños y yo no lo recordaba! Después llegaron mis amigos y comimos pizza. Fue un día increíble."
+            },
+            {
+              "type": "write",
+              "title": "Challenge for early finishers",
+              "instructions": "Rewrite your three favorite sentences as a comic strip with three panels and speech bubbles.",
+              "lines": 3,
+              "model": "Any three correct sentences from the student's story."
+            }
+          ]
+        },
+        {
+          "title": "Sub Plan 4: Por and Para",
+          "sources": [
+            {
+              "path": "/gramatica/por-para-razones-objetivos"
+            }
+          ],
+          "objectives": [
+            "Use **por** for cause, route and exchange, and **para** for goal, recipient and deadline.",
+            "Write sentences about a trip with por and para."
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Start",
+              "do": "Take attendance. Hand out the worksheet. Read the title and the instructions aloud."
+            },
+            {
+              "min": "5-15",
+              "stage": "Read",
+              "do": "Students read the explanation box in section **A** (por vs para) and complete section **B** alone."
+            },
+            {
+              "min": "15-35",
+              "stage": "Practice",
+              "do": "Students complete sections **C** and **D**. They may check with a partner quietly after each section."
+            },
+            {
+              "min": "35-50",
+              "stage": "Write",
+              "do": "Students complete the writing task in section **E**. Remind them of the minimum number of sentences."
+            },
+            {
+              "min": "50-58",
+              "stage": "Early finishers",
+              "do": "Students who finish read their writing to a partner and complete the challenge in section **F**."
+            },
+            {
+              "min": "58-60",
+              "stage": "Collect",
+              "do": "Collect all worksheets with names. Leave them with a note about who was absent."
+            }
+          ],
+          "notes": [
+            "The substitute does not need to speak Spanish. Students work alone or in pairs; the explanation box on the worksheet teaches por and para.",
+            "Collect the worksheets at the end of class. The answer key is in this guide, for you to grade when you are back."
+          ],
+          "worksheet": [
+            {
+              "type": "read",
+              "title": "Read first: looking back or looking ahead?",
+              "text": [
+                "**POR ←** looks back or along the way: **cause** (*No fui por la lluvia*), **route** (*Caminamos por el parque*), **exchange / price** (*Lo compré por diez dólares*).",
+                "**PARA →** looks ahead: **goal** (*Estudio para aprender*), **recipient** (*El regalo es para ti*), **deadline** (*La tarea es para el lunes*).",
+                "Fixed expressions: *gracias por*, *por favor*."
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Por or para?",
+              "instructions": "Circle the correct word.",
+              "items": [
+                {
+                  "q": "Este regalo es ___ mi mamá.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Llegué tarde ___ el tráfico.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "La tarea es ___ el viernes.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Pagué veinte dólares ___ la camiseta.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 0
+                },
+                {
+                  "q": "Corro todos los días ___ estar en forma.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 1
+                },
+                {
+                  "q": "Paseamos ___ el centro de la ciudad.",
+                  "options": [
+                    "por",
+                    "para"
+                  ],
+                  "answer": 0
+                }
+              ]
+            },
+            {
+              "type": "sort",
+              "title": "Which use?",
+              "instructions": "Tick the use in each sentence.",
+              "columns": [
+                "cause",
+                "route",
+                "price",
+                "goal",
+                "recipient",
+                "deadline"
+              ],
+              "items": [
+                {
+                  "text": "Gracias por la ayuda.",
+                  "answer": 0
+                },
+                {
+                  "text": "Pasamos por Texas.",
+                  "answer": 1
+                },
+                {
+                  "text": "Lo vendimos por cinco dólares.",
+                  "answer": 2
+                },
+                {
+                  "text": "Ahorro para comprar una bici.",
+                  "answer": 3
+                },
+                {
+                  "text": "La carta es para mi abuelo.",
+                  "answer": 4
+                },
+                {
+                  "text": "El proyecto es para mañana.",
+                  "answer": 5
+                }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Correct each sentence.",
+              "items": [
+                {
+                  "q": "Gracias para todo.",
+                  "answer": "Gracias **por** todo."
+                },
+                {
+                  "q": "Estudio por sacar buenas notas.",
+                  "answer": "Estudio **para** sacar buenas notas."
+                },
+                {
+                  "q": "El examen es por el lunes.",
+                  "answer": "El examen es **para** el lunes."
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "A dream trip",
+              "instructions": "Plan a dream trip in eight sentences. Include: why you go (**para**), places you pass through (**por**), a gift and who it is for (**para**), and how much something costs (**por**).",
+              "lines": 9,
+              "model": "Voy a México para conocer a mi familia. Viajo en coche y paso por San Antonio. Compro un sombrero por veinte dólares. Es para mi abuelo. También compro dulces para mis primos…"
+            },
+            {
+              "type": "write",
+              "title": "Challenge for early finishers",
+              "instructions": "Write a thank-you note to someone with **gracias por…** three times.",
+              "lines": 4,
+              "model": "Gracias por tu ayuda, gracias por el regalo y gracias por ser mi amigo."
+            }
+          ]
+        },
+        {
+          "title": "Sub Plan 5: La Comida",
+          "sources": [
+            {
+              "path": "/el-restaurante-imposible"
+            }
+          ],
+          "objectives": [
+            "Use food and drink vocabulary.",
+            "Write a restaurant dialogue and a personal menu."
+          ],
+          "plan": [
+            {
+              "min": "0-5",
+              "stage": "Start",
+              "do": "Take attendance. Hand out the worksheet. Read the title and the instructions aloud."
+            },
+            {
+              "min": "5-15",
+              "stage": "Read",
+              "do": "Students read the explanation box in section **A** (food and restaurant words) and complete section **B** alone."
+            },
+            {
+              "min": "15-35",
+              "stage": "Practice",
+              "do": "Students complete sections **C** and **D**. They may check with a partner quietly after each section."
+            },
+            {
+              "min": "35-50",
+              "stage": "Write",
+              "do": "Students complete the writing task in section **E**. Remind them of the minimum number of sentences."
+            },
+            {
+              "min": "50-58",
+              "stage": "Early finishers",
+              "do": "Students who finish read their writing to a partner and complete the challenge in section **F**."
+            },
+            {
+              "min": "58-60",
+              "stage": "Collect",
+              "do": "Collect all worksheets with names. Leave them with a note about who was absent."
+            }
+          ],
+          "notes": [
+            "The substitute does not need to speak Spanish. Students work alone or in pairs; the explanation box on the worksheet teaches the food words and restaurant phrases.",
+            "Collect the worksheets at the end of class. The answer key is in this guide, for you to grade when you are back."
+          ],
+          "worksheet": [
+            {
+              "type": "read",
+              "title": "Read first: food and restaurant words",
+              "text": [
+                "**Desayuno**: el cereal, los huevos, el pan tostado, el jugo. **Comida y cena**: la sopa, el pollo, el arroz, los tacos, la ensalada. **Bebidas**: el agua, el refresco, la leche. **Postres**: el helado, el pastel, el flan.",
+                "In a restaurant: **¿Qué va a pedir?** (What will you order?) · **Quisiera…** (I would like…) · **Para mí…** (For me…) · **¿Me trae la cuenta, por favor?** (Can I have the check, please?)"
+              ]
+            },
+            {
+              "type": "sort",
+              "title": "Sort the food",
+              "instructions": "Tick one box for each word.",
+              "columns": [
+                "Desayuno",
+                "Comida / cena",
+                "Bebida",
+                "Postre"
+              ],
+              "items": [
+                {
+                  "text": "el pan tostado",
+                  "answer": 0
+                },
+                {
+                  "text": "el arroz con pollo",
+                  "answer": 1
+                },
+                {
+                  "text": "la leche",
+                  "answer": 2
+                },
+                {
+                  "text": "el flan",
+                  "answer": 3
+                },
+                {
+                  "text": "el cereal",
+                  "answer": 0
+                },
+                {
+                  "text": "la ensalada",
+                  "answer": 1
+                }
+              ]
+            },
+            {
+              "type": "open",
+              "title": "About you",
+              "instructions": "Answer in Spanish with full sentences.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "¿Qué comes en el desayuno?",
+                  "answer": "En el desayuno como cereal y bebo jugo de naranja."
+                },
+                {
+                  "q": "¿Cuál es tu comida favorita?",
+                  "answer": "Mi comida favorita es la pizza."
+                },
+                {
+                  "q": "¿Qué comida no te gusta?",
+                  "answer": "No me gustan las verduras."
+                },
+                {
+                  "q": "¿Qué plato comes en tu cumpleaños?",
+                  "answer": "En mi cumpleaños como pastel de chocolate."
+                }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "Complete the order",
+              "instructions": "Use: **Quisiera · cuenta · Para mí · pedir**",
+              "wordBank": [
+                "Quisiera",
+                "cuenta",
+                "Para mí",
+                "pedir"
+              ],
+              "items": [
+                {
+                  "q": "—¿Qué va a ________?",
+                  "answer": "pedir"
+                },
+                {
+                  "q": "—________ una sopa de tortilla, por favor.",
+                  "answer": "Quisiera"
+                },
+                {
+                  "q": "—¿Y usted? —________, unos tacos.",
+                  "answer": "Para mí"
+                },
+                {
+                  "q": "—¿Me trae la ________, por favor?",
+                  "answer": "cuenta"
+                }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Your restaurant",
+              "instructions": "Invent a restaurant. Write a menu with 2 starters, 2 main dishes, 2 drinks and 1 dessert with prices, then a short dialogue (6 lines) between a waiter and a customer.",
+              "lines": 12,
+              "model": "Restaurante «El Sol». Entradas: guacamole ($5), sopa ($4). Platos: tacos ($8), enchiladas ($9). Bebidas: horchata ($2), agua ($1). Postre: flan ($3). —Buenas tardes, ¿qué va a pedir? —Quisiera los tacos, por favor. —¿Y para tomar? —Una horchata. —¿Algo más? —No, gracias. ¿Me trae la cuenta?"
+            },
+            {
+              "type": "write",
+              "title": "Challenge for early finishers",
+              "instructions": "Draw your perfect dinner plate and label every food in Spanish with its article (el / la / los / las).",
+              "lines": 3,
+              "model": "el pollo, el arroz, la ensalada, las papas, el agua…"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "slug": "roleplay-mexico-10-situations",
+      "title": "Roleplay México: 10 Real Situations",
+      "price_usd": 7.95,
+      "grade_range": "8-12",
+      "level_label": "Spanish 1-2",
+      "cover_level": "SPANISH 1-2",
+      "cover_headline": "Roleplay México",
+      "cover_subline": "10 Real Situations",
+      "tags": [
+        "Spanish",
+        "Speaking",
+        "Role Play",
+        "Mexico",
+        "Culture",
+        "No Prep"
+      ],
+      "description": "Give students ten real reasons to speak Spanish, set in Mexico. They order tacos al pastor at a street stand, take a city bus to the Zócalo, buy fruit at the market, visit a friend's home, order at a café in the Roma neighborhood, ask for directions to Frida Kahlo's Blue House, buy medicine at a pharmacy, join a family party with a piñata, make weekend plans and take a taxi to the airport in traffic. Each situation has a model dialogue and a role card with sentence frames, and students learn real Mexican expressions like ¿qué onda?, ¡órale! and ¡qué padre! Includes a 60-minute station plan and answer key.",
+      "whats_inside": [
+        "10 real-life role-play situations set in Mexico",
+        "A model dialogue for every situation, ready to read in pairs",
+        "Role cards with sentence frames so every student can speak",
+        "Mexican expressions: ¿qué onda?, ¡órale!, ¡qué padre!, ¡provecho!",
+        "Teacher guide with a 60-minute station rotation plan",
+        "Answer key with model answers for every role card"
+      ],
+      "lessons": [
+        {
+          "title": "Roleplay México: 10 Real Situations",
+          "sources": [
+            {
+              "path": "/roleplays-mexico"
+            }
+          ],
+          "objectives": [
+            "Handle ten everyday situations in Mexico: food, transportation, shopping, health, social plans.",
+            "Ask and answer questions with sentence frames, then without them.",
+            "Understand and use common Mexican expressions (**¿Qué onda?, ¡Órale!, ¡Qué padre!, ahorita, ¿Mande?**).",
+            "Switch roles and adapt a dialogue to new details."
+          ],
+          "materials": [
+            "Student packet (one per student)",
+            "Optional: set up 5 stations with two situations each"
+          ],
+          "plan": [
+            {
+              "min": "0-8",
+              "stage": "Warm-up",
+              "do": "Say *¿Qué onda?* and wait. Teach the expressions in section **A** with gestures; students do the matching task in pairs."
+            },
+            {
+              "min": "8-15",
+              "stage": "Model",
+              "do": "Read Situation 1 (*En la taquería*) with a volunteer. Then students read it in pairs and switch roles."
+            },
+            {
+              "min": "15-45",
+              "stage": "Stations",
+              "do": "Five stations, two situations each, 6 minutes per station. At each one pairs read the model dialogue once, then do the **Your turn** role card without looking at the model. Ring a bell to rotate."
+            },
+            {
+              "min": "45-55",
+              "stage": "Show",
+              "do": "Each pair picks its favorite situation and performs it with one new detail (another food, another place, a problem). The class listens for the Mexican expressions and counts them."
+            },
+            {
+              "min": "55-60",
+              "stage": "Exit ticket",
+              "do": "Students write two Mexican expressions and when they would use them."
+            }
+          ],
+          "notes": [
+            "*Güey* is very common among young friends but can be rude with other people: teach it as something to recognize, not to use with adults.",
+            "The situations also work as ten short warm-ups across a unit."
+          ],
+          "worksheet": [
+            {
+              "type": "match",
+              "title": "Mexican expressions",
+              "instructions": "Match each expression to its meaning.",
+              "items": [
+                {
+                  "left": "¿Qué onda?",
+                  "right": "What's up?"
+                },
+                {
+                  "left": "¡Órale!",
+                  "right": "Wow! / Okay! / Come on!"
+                },
+                {
+                  "left": "chido / chida",
+                  "right": "cool"
+                },
+                {
+                  "left": "¡Qué padre!",
+                  "right": "How cool!"
+                },
+                {
+                  "left": "ahorita",
+                  "right": "right now / in a bit"
+                },
+                {
+                  "left": "¿Mande?",
+                  "right": "Pardon? / Yes?"
+                },
+                {
+                  "left": "¡Aguas!",
+                  "right": "Watch out!"
+                },
+                {
+                  "left": "la neta",
+                  "right": "the truth / honestly"
+                },
+                {
+                  "left": "un chorro",
+                  "right": "a lot"
+                },
+                {
+                  "left": "lana",
+                  "right": "money"
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 1: En la taquería (At the taco stand)",
+              "instructions": "You are hungry and order tacos at a street stand. You talk to: the taco vendor. Read the model with a partner (**L** = the taco vendor, **T** = you).",
+              "text": [
+                "**L:** ¡Buenas! ¿Qué le damos?",
+                "**T:** Hola. Tres tacos de pastor, por favor.",
+                "**L:** ¿Con todo? ¿Cebolla y cilantro?",
+                "**T:** Sí, con todo. ¿Pica la salsa verde?",
+                "**L:** Pica poquito. La roja pica un chorro.",
+                "**T:** ¡Órale! Entonces la verde, por favor.",
+                "**L:** ¿Algo de tomar? Hay agua de horchata.",
+                "**T:** Sí, una horchata chica. ¿Cuánto es?",
+                "**L:** Son noventa pesos. ¡Provecho!",
+                "**T:** Gracias. ¡Están muy chidos!"
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: En la taquería",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¡Buenas! ¿Qué le damos?» → ___, por favor.",
+                  "answer": "Dos tacos de pastor, por favor."
+                },
+                {
+                  "q": "«¿Con todo?» → Sí, pero sin ___.",
+                  "answer": "Sí, con todo."
+                },
+                {
+                  "q": "«¿Roja o verde?» → La ___, por favor.",
+                  "answer": "Verde, por favor. No me gusta mucho el picante."
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 2: En el camión (On the bus)",
+              "instructions": "You get on a bus in Mexico City and are not sure it goes where you need. You talk to: the driver. Read the model with a partner (**L** = the driver, **T** = you).",
+              "text": [
+                "**T:** Buenos días. ¿Este camión va al Zócalo?",
+                "**L:** ¿Mande?",
+                "**T:** ¿Va al Zócalo?",
+                "**L:** Sí, joven. Súbase.",
+                "**T:** ¿Cuánto cuesta el pasaje?",
+                "**L:** Siete pesos. ¿Trae cambio?",
+                "**T:** Sí, aquí tiene. ¿Me avisa cuando lleguemos?",
+                "**L:** Claro. Ahorita le aviso.",
+                "**L:** ¡Aguas con el escalón! Ya llegamos.",
+                "**T:** Muchas gracias. ¡Que le vaya bien!"
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: En el camión",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«Buenos días. ¿A dónde va?» → Voy a ___.",
+                  "answer": "Voy al Zócalo."
+                },
+                {
+                  "q": "«Son siete pesos.» → Perdón, solo tengo ___.",
+                  "answer": "Aquí tiene."
+                },
+                {
+                  "q": "«¿Mande?» → ¿Me avisa cuando lleguemos a ___?",
+                  "answer": "¿Me avisa cuando lleguemos, por favor?"
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 3: En el mercado (At the market)",
+              "instructions": "You buy fruit and vegetables at a neighbourhood market. You talk to: the market vendor. Read the model with a partner (**L** = the market vendor, **T** = you).",
+              "text": [
+                "**L:** ¿Qué va a llevar? Todo está fresco.",
+                "**T:** Buenas. ¿A cómo están los aguacates?",
+                "**L:** A sesenta el kilo. Están bien buenos.",
+                "**T:** Medio kilo, por favor. ¿Están maduros?",
+                "**L:** Sí, para hoy. ¿Qué más le doy?",
+                "**T:** Un kilo de jitomates y unos limones.",
+                "**L:** Ándele. Le pongo un chile de pilón.",
+                "**T:** ¡Qué amable! ¿Cuánto es todo?",
+                "**L:** Son setenta y cinco pesos.",
+                "**T:** Aquí tiene. Gracias, seño."
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: En el mercado",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¿Qué va a llevar?» → ¿A cómo están ___?",
+                  "answer": "Un kilo de jitomates, por favor."
+                },
+                {
+                  "q": "«A cuarenta el kilo.» → ___, por favor.",
+                  "answer": "Medio kilo, por favor."
+                },
+                {
+                  "q": "«¿Para hoy o para mañana?» → Para ___, por favor.",
+                  "answer": "Para hoy, por favor."
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 4: En casa de un amigo (At a friend's house)",
+              "instructions": "Diego invites you to his home for the first time. You talk to: diego, your friend. Read the model with a partner (**L** = diego, your friend, **T** = you).",
+              "text": [
+                "**L:** ¡Qué onda! Pásale, estás en tu casa.",
+                "**T:** ¡Hola, Diego! Gracias por invitarme.",
+                "**L:** ¿Cómo llegaste? ¿En metro?",
+                "**T:** Sí, en metro. Fue muy fácil.",
+                "**L:** ¡Qué padre! ¿Quieres algo de tomar?",
+                "**T:** Un agua, por favor. Tu casa está muy chida.",
+                "**L:** Gracias. Mi mamá hizo pozole. ¿Te gusta?",
+                "**T:** No sé, nunca lo probé. ¿Qué es?",
+                "**L:** Es una sopa con maíz y carne. Está riquísima.",
+                "**T:** ¡Órale! Entonces sí, quiero probarlo."
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: En casa de un amigo",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¡Qué onda! Pásale.» → ¡Hola! Te traje ___.",
+                  "answer": "¡Hola! Gracias por invitarme."
+                },
+                {
+                  "q": "«¿Cómo llegaste?» → Llegué en ___.",
+                  "answer": "En metro. Fue muy fácil."
+                },
+                {
+                  "q": "«¿Quieres algo de tomar?» → Sí, ___, por favor.",
+                  "answer": "Sí, un agua, por favor."
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 5: En la cafetería (At the café)",
+              "instructions": "You order coffee and something sweet at a café in the Roma neighbourhood. You talk to: the waitress. Read the model with a partner (**L** = the waitress, **T** = you).",
+              "text": [
+                "**L:** Buenas tardes. ¿Ya sabe qué va a pedir?",
+                "**T:** Sí. Un café de olla, por favor.",
+                "**L:** ¿Algo de comer? Hay pan dulce y churros.",
+                "**T:** ¿Qué me recomienda?",
+                "**L:** La concha de chocolate. La neta, está buenísima.",
+                "**T:** Perfecto, una concha. ¿Tienen wifi?",
+                "**L:** Sí, la contraseña está en la mesa.",
+                "**T:** Gracias. Ahorita trabajo un rato.",
+                "**L:** Claro. ¿Le traigo la cuenta después?",
+                "**T:** Sí, después, por favor."
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: En la cafetería",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¿Ya sabe qué va a pedir?» → Sí, ___, por favor.",
+                  "answer": "Sí, un café americano, por favor."
+                },
+                {
+                  "q": "«¿Lo quiere con leche?» → Sí, con ___, por favor.",
+                  "answer": "Sí, con leche, por favor."
+                },
+                {
+                  "q": "«¿Algo de comer?» → Sí, ___, por favor.",
+                  "answer": "¿Qué me recomienda?"
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 6: Pedir indicaciones (Asking for directions)",
+              "instructions": "You are in Coyoacán looking for Frida Kahlo's Blue House. You talk to: a man in the street. Read the model with a partner (**L** = a man in the street, **T** = you).",
+              "text": [
+                "**T:** Disculpe, ¿dónde está la Casa Azul?",
+                "**L:** ¿El museo de Frida? Está cerca.",
+                "**T:** ¿Puedo ir caminando?",
+                "**L:** Sí, son como diez minutos.",
+                "**L:** Siga derecho y en la segunda calle dé vuelta a la derecha.",
+                "**T:** Derecho y a la derecha. ¿Hay una señal?",
+                "**L:** Sí, y va a ver un chorro de gente en la fila.",
+                "**T:** ¿Necesito boleto?",
+                "**L:** Mejor cómprelo en internet. Es más rápido.",
+                "**T:** Muchas gracias. ¡Muy amable!"
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: Pedir indicaciones",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¿Le ayudo? ¿Busca algo?» → Sí, ¿dónde está ___?",
+                  "answer": "Sí, ¿dónde está la Casa Azul?"
+                },
+                {
+                  "q": "«Está cerca, como a diez minutos.» → ¿Puedo ir ___?",
+                  "answer": "¿Puedo ir caminando?"
+                },
+                {
+                  "q": "«Siga derecho y dé vuelta a la derecha.» → Entonces, derecho y a la ___.",
+                  "answer": "Derecho y a la derecha. Gracias."
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 7: En la farmacia (At the pharmacy)",
+              "instructions": "You have a headache and go into a pharmacy. You talk to: the pharmacist. Read the model with a partner (**L** = the pharmacist, **T** = you).",
+              "text": [
+                "**L:** Buenas noches. ¿En qué le ayudo?",
+                "**T:** Buenas noches. Me duele mucho la cabeza.",
+                "**L:** ¿Desde cuándo?",
+                "**T:** Desde la mañana. Creo que es el calor.",
+                "**L:** ¿Tiene fiebre?",
+                "**T:** No, no tengo fiebre.",
+                "**L:** Le doy paracetamol. Una pastilla cada ocho horas.",
+                "**T:** Cada ocho horas. ¿Algo más?",
+                "**L:** Tome mucha agua y descanse.",
+                "**T:** Muchas gracias. ¿Cuánto es?"
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: En la farmacia",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¿En qué le ayudo?» → Me duele ___.",
+                  "answer": "Me duele la cabeza."
+                },
+                {
+                  "q": "«¿Desde cuándo?» → Desde ___.",
+                  "answer": "Desde ayer."
+                },
+                {
+                  "q": "«¿Tiene fiebre?» → No, pero tengo ___.",
+                  "answer": "No, no tengo fiebre."
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 8: Una fiesta familiar (A family party)",
+              "instructions": "Your friend's family celebrates a birthday with food and a piñata. You talk to: lupita, your friend's cousin. Read the model with a partner (**L** = lupita, your friend's cousin, **T** = you).",
+              "text": [
+                "**L:** ¡Hola! ¿Tú conoces a Sofía?",
+                "**T:** Sí, me llamo Alex. Trabajamos en la misma oficina.",
+                "**L:** Mucho gusto. Yo soy Lupita, su prima. ¿Ya comiste?",
+                "**T:** Todavía no. ¿Qué hay?",
+                "**L:** Hay mole, arroz y frijoles. ¡Mi tía cocina un chorro!",
+                "**T:** ¡Qué rico! Me encanta el mole.",
+                "**L:** Al rato rompemos la piñata. ¿Quieres pegarle?",
+                "**T:** ¡Órale! Nunca lo hice.",
+                "**L:** Es muy fácil. ¡Pero aguas con el palo!",
+                "**T:** Jaja, ¡sí! Esta fiesta está muy padre."
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: Una fiesta familiar",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¡Hola! ¿Tú conoces a Sofía?» → Sí, la conozco de ___.",
+                  "answer": "Sí, me llamo Alex. Mucho gusto."
+                },
+                {
+                  "q": "«¿Ya comiste?» → Todavía no, pero quiero probar ___.",
+                  "answer": "Todavía no. ¿Qué hay?"
+                },
+                {
+                  "q": "«¿Te gusta la comida picante?» → Me gusta ___.",
+                  "answer": "Sí, me gusta mucho."
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 9: Hacer planes (Making plans)",
+              "instructions": "A friend calls you to go out on Saturday. You talk to: mariana, your friend. Read the model with a partner (**L** = mariana, your friend, **T** = you).",
+              "text": [
+                "**L:** ¿Qué onda? ¿Qué haces el sábado?",
+                "**T:** Nada todavía. ¿Por qué?",
+                "**L:** ¿Vamos a Xochimilco? Rentamos una trajinera.",
+                "**T:** ¡Qué padre! ¿A qué hora?",
+                "**L:** A las once. ¿Te paso a buscar?",
+                "**T:** Sí, por favor. ¿Qué llevo?",
+                "**L:** Bloqueador y un poco de lana para la comida.",
+                "**T:** Perfecto. ¿Va más gente?",
+                "**L:** Sí, mi hermano y dos amigos. Son muy buena onda.",
+                "**T:** ¡Órale! Nos vemos el sábado."
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: Hacer planes",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¿Qué haces el sábado?» → El sábado ___.",
+                  "answer": "Nada todavía. ¿Por qué?"
+                },
+                {
+                  "q": "«¿Vamos a Xochimilco?» → Mejor vamos a ___.",
+                  "answer": "¡Qué padre! Sí, vamos."
+                },
+                {
+                  "q": "«¿A qué hora te queda bien?» → A las ___ está bien.",
+                  "answer": "A las once está bien."
+                }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Situation 10: Al aeropuerto (To the airport)",
+              "instructions": "You take a taxi to the airport and there is traffic. You talk to: the taxi driver. Read the model with a partner (**L** = the taxi driver, **T** = you).",
+              "text": [
+                "**L:** Buenas tardes. ¿A dónde lo llevo?",
+                "**T:** Al aeropuerto, terminal uno, por favor.",
+                "**L:** ¿A qué hora sale su vuelo?",
+                "**T:** A las siete. ¿Llegamos a tiempo?",
+                "**L:** Sí, pero hay un chorro de tráfico ahorita.",
+                "**T:** ¿Cuánto tiempo hacemos?",
+                "**L:** Como cuarenta minutos. ¿Viaja por chamba?",
+                "**T:** No, voy de vacaciones a Cancún.",
+                "**L:** ¡Qué padre! Ya llegamos. Son trescientos pesos.",
+                "**T:** Aquí tiene. ¡Gracias y buen día!"
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Your turn: Al aeropuerto",
+              "instructions": "Now answer with your own words. Use the frame if you need help, then switch roles.",
+              "lineAfter": true,
+              "items": [
+                {
+                  "q": "«¿A dónde lo llevo?» → A ___, por favor.",
+                  "answer": "Al aeropuerto, por favor."
+                },
+                {
+                  "q": "«¿A qué hora sale su vuelo?» → Sale a las ___.",
+                  "answer": "A las siete."
+                },
+                {
+                  "q": "«Hay mucho tráfico ahorita.» → ¿Cuánto tiempo ___?",
+                  "answer": "¿Llegamos a tiempo?"
+                }
+              ]
+            }
+          ],
+          "extraAnswers": [
+            "The role cards are open: accept any answer that fits the frame. The key shows one model answer for each."
+          ]
+        }
+      ]
     }
   ],
-  "bundles": []
+  "bundles": [
+    {
+      "slug": "bundle-sub-plans",
+      "title": "Spanish Sub Plans Bundle: 5 Sub Plans + 5 Full Lessons",
+      "price_usd": 19.95,
+      "grade_range": "6-12",
+      "level_label": "Spanish 1-3",
+      "cover_level": "BUNDLE",
+      "cover_headline": "Spanish Sub Plans Bundle",
+      "cover_subline": "5 Sub Plans + 5 Full Lessons",
+      "tags": [
+        "Spanish",
+        "Sub Plans",
+        "Bundle",
+        "Grammar",
+        "No Prep",
+        "Printable"
+      ],
+      "includes": [
+        "emergency-spanish-sub-plans",
+        "ser-vs-estar-lesson",
+        "preterite-vs-imperfect-story-task",
+        "por-vs-para-lesson",
+        "gustar-verbs-like-gustar-lesson",
+        "la-comida-menu-task"
+      ],
+      "previews": [
+        {
+          "label": "5 emergency sub plans, print and go",
+          "from": "emergency-spanish-sub-plans",
+          "doc": "worksheet",
+          "page": 0
+        },
+        {
+          "label": "5 full lessons with a 60-minute script",
+          "from": "ser-vs-estar-lesson",
+          "doc": "guide",
+          "page": 0
+        },
+        {
+          "label": "Worksheets and answer keys included",
+          "from": "preterite-vs-imperfect-story-task",
+          "doc": "worksheet",
+          "page": 0
+        }
+      ],
+      "description": "Everything you need for planned and unplanned absences, at a bundle price. You get the 5 Emergency Spanish Sub Plans plus the five full 60-minute lessons they come from: Ser vs Estar, Preterite vs Imperfect, Por vs Para, Gustar and Verbs Like Gustar, and La Comida with its menu task. Use a sub plan when you are out and the matching full lesson when you are back, so students review the same topic with you. Every lesson has a minute-by-minute script, a print-and-go worksheet and a complete answer key. Print it once and keep it in your sub folder all year.",
+      "whats_inside": [
+        "5 Emergency Spanish Sub Plans, print and go",
+        "5 full 60-minute lessons on the same five topics",
+        "Topics: ser/estar, preterite/imperfect, por/para, gustar, food",
+        "Minute-by-minute scripts for you and for the substitute",
+        "Print-and-go worksheets for every lesson and sub plan",
+        "Complete answer keys and model answers"
+      ]
+    }
+  ]
 }

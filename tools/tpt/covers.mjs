@@ -100,6 +100,8 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   const index = lessonIndex();
   const ready = (r) => r.status !== 'missing' && r.lessons.every((l) => (l.sources || []).length && l.sources.every((s) => index.has(s.path)));
   const lookup = Object.fromEntries(resources.map((r) => [r.slug, r]));
-  const picked = selectResources([...resources, ...bundles]).filter((r) => r.includes || ready(r));
+  const all = [...resources, ...bundles];
+  all.forEach((r, i) => { r.palette ??= i; });
+  const picked = selectResources(all).filter((r) => r.includes || ready(r));
   await renderCovers(picked, { lookup });
 }

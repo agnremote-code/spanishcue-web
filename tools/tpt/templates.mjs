@@ -42,6 +42,8 @@ tr, .item, .box, .section { break-inside: avoid; }
 table.sort { border-collapse: collapse; width: 100%; }
 table.sort td, table.sort th { border: 1px solid #c9cfdb; padding: 3pt 6pt; }
 table.sort td.c { width: 70pt; text-align: center; }
+table.sort.many td.c { width: 44pt; }
+table.sort.many th { font-size: 7.5pt; }
 .footer { margin-top: 14pt; font-size: 8pt; color: #7a8294; border-top: 1px solid #e2e6ee; padding-top: 4pt; }
 `;
 
@@ -84,6 +86,12 @@ function matchOrder(n) {
   return [...Array(n).keys()].map((i) => (i + shift) % n);
 }
 
+/** "Lesson 2: " / "Day 2: " prefix for multi-lesson resources; lesson_label '' turns it off. */
+function lessonHeading(resource, li) {
+  const label = resource.lesson_label ?? 'Lesson';
+  return resource.lessons.length > 1 && label ? `${label} ${li + 1}: ` : '';
+}
+
 export function teacherGuideHtml(resource) {
   const lessons = resource.lessons.map((lesson, li) => {
     const key = (lesson.worksheet || []).map((s, si) => {
@@ -91,7 +99,7 @@ export function teacherGuideHtml(resource) {
       return lines ? `<div class="section"><strong>${String.fromCharCode(65 + si)}. ${esc(s.title)}</strong><ol>${lines}</ol></div>` : '';
     }).join('');
     return `<section class="lesson">
-${resource.lessons.length > 1 ? `<h2>Lesson ${li + 1}: ${esc(lesson.title)}</h2>` : `<h2>${esc(lesson.title)}</h2>`}
+<h2>${esc(lessonHeading(resource, li))}${esc(lesson.title)}</h2>
 <h3>Objectives</h3><p>Students will be able to:</p><ul>${lesson.objectives.map((o) => `<li>${rich(o)}</li>`).join('')}</ul>
 ${lesson.materials ? `<h3>Materials</h3><ul>${lesson.materials.map((m) => `<li>${rich(m)}</li>`).join('')}</ul>` : ''}
 <h3>60-minute script</h3>
@@ -123,7 +131,7 @@ function worksheetSection(section, si) {
       body = `<ol>${items.map((it) => `<li class="item">${rich(it.q)}<div class="opts">${it.options.map((o) => `<span>${esc(o)}</span>`).join('')}</div></li>`).join('')}</ol>`;
       break;
     case 'sort':
-      body = `<table class="sort"><thead><tr><th>Sentence</th>${section.columns.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${items.map((it) => `<tr><td>${esc(it.text)}</td>${section.columns.map(() => '<td class="c">☐</td>').join('')}</tr>`).join('')}</tbody></table>`;
+      body = `<table class="sort${section.columns.length > 3 ? ' many' : ''}"><thead><tr><th>Sentence</th>${section.columns.map((c) => `<th>${esc(c)}</th>`).join('')}</tr></thead><tbody>${items.map((it) => `<tr><td>${esc(it.text)}</td>${section.columns.map(() => '<td class="c">☐</td>').join('')}</tr>`).join('')}</tbody></table>`;
       break;
     case 'match': {
       const order = matchOrder(items.length);
@@ -144,7 +152,7 @@ function worksheetSection(section, si) {
 
 export function worksheetHtml(resource) {
   const lessons = resource.lessons.map((lesson, li) => `<section class="lesson">
-<div class="brand">${BRAND} · Student Worksheet${resource.lessons.length > 1 ? ` · Lesson ${li + 1}` : ''}</div>
+<div class="brand">${BRAND} · Student Worksheet${lessonHeading(resource, li) ? ` · ${esc(lessonHeading(resource, li).replace(/: $/, ''))}` : ''}</div>
 <h1>${esc(lesson.worksheetTitle || lesson.title)}</h1>
 <div class="namebar"><span>Name:</span><span class="short">Date:</span><span class="short">Period:</span></div>
 ${(lesson.worksheet || []).map(worksheetSection).join('')}
