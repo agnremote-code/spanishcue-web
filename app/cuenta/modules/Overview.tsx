@@ -5,6 +5,7 @@ import { useMemo, useState } from "react";
 import type { ClassRecord, Student } from "../../student-tracker/contracts";
 import { dateLabel, type DashKey, type DashLesson } from "../copy";
 import { LoadState, useDash, useLoad } from "../ui";
+import { freeHomeworkCopy } from "../free-homework";
 
 export type HomeworkPass = {
   id: string; learnerId: string | null; level: string; revokedAt: string | null; createdAt: string; alias: string | null;
@@ -16,7 +17,7 @@ export type PlanSummary = { label: string; detail: string; tone: "owner" | "pro"
 
 const DAY = 86_400_000;
 
-export default function Overview({ lessons, homeworkEnabled, plan }: { lessons: DashLesson[]; homeworkEnabled: boolean; plan: PlanSummary }) {
+export default function Overview({ lessons, homeworkEnabled, homeworkFree = false, plan }: { lessons: DashLesson[]; homeworkEnabled: boolean; homeworkFree?: boolean; plan: PlanSummary }) {
   const { t, locale } = useDash();
   const byId = useMemo(() => new Map(lessons.map((lesson) => [lesson.id, lesson])), [lessons]);
   const [students, reloadStudents] = useLoad<{ students: Student[] }>("/api/students");
@@ -66,8 +67,9 @@ export default function Overview({ lessons, homeworkEnabled, plan }: { lessons: 
             return active.length ? <ul className="cx-list">{active.map((pass) => {
               const percent = pass.summary?.coursePercent ?? pass.summary?.percent ?? 0;
               return <li key={pass.id}><div><strong>{pass.alias} <small className="cx-level">{pass.level.toUpperCase()}</small></strong><span>{t("home.lastActivity")}: {dateLabel(locale, pass.summary?.lastActivity ?? null, true)}</span></div><span className="cx-meter-label"><span className="cx-meter" aria-hidden="true"><span style={{ width: `${Math.min(100, percent)}%` }} /></span>{percent.toLocaleString(locale, { maximumFractionDigits: 1 })} %</span></li>;
-            })}</ul> : <p className="cx-muted">{data.passes.some((p) => !p.revokedAt) ? t("home.unclaimed", { n: String(data.passes.filter((p) => !p.revokedAt).length) }) : t("home.noHomework")}</p>;
+            })}</ul> : homeworkFree && !data.passes.length ? <p className="cx-muted">{freeHomeworkCopy.overviewEmpty} <Link href="/cuenta?tab=alumnos&nuevo=1">{freeHomeworkCopy.overviewCta} →</Link></p> : <p className="cx-muted">{data.passes.some((p) => !p.revokedAt) ? t("home.unclaimed", { n: String(data.passes.filter((p) => !p.revokedAt).length) }) : t("home.noHomework")}</p>;
           }}</LoadState>}
+        {homeworkEnabled && homeworkFree && <p className="cx-muted"><small>{freeHomeworkCopy.badge} · {freeHomeworkCopy.upsell} <Link href="/pricing?utm_source=app&utm_campaign=homework_free">{t("sub.upgrade")} →</Link></small></p>}
       </section>
 
       <section className="cx-panel" aria-labelledby="home-opened">

@@ -5,6 +5,7 @@ const messages: Record<string,string> = {
  share_unavailable:'Los accesos de Autoestudio no están disponibles en este momento. Vuelve a intentarlo más tarde.',
  sign_in_required:'Ingresa a tu cuenta para administrar los accesos.',
  pro_required:'Necesitas SpanishCue PRO para crear accesos para tus alumnos.',
+ free_learner_limit:'Con el plan gratis puedes dar Homework a 2 alumnos (semanas gratis de cada nivel). Con PRO, alumnos ilimitados y las 20 semanas de cada nivel.',
  forbidden_origin:'La solicitud no se pudo validar. Recarga la página e intenta de nuevo.',
  rate_limited:'Hubo demasiadas solicitudes seguidas. Espera un minuto y vuelve a intentarlo.',
  pass_revoked:'Este acceso está revocado. Puedes crear uno nuevo conservando el alumno.',

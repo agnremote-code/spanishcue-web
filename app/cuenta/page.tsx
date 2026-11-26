@@ -120,8 +120,8 @@ export default async function Account({
           </header>
 
           <SectionBoundary>
-            {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled={fullAccess} plan={plan} />}
-            {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} homeworkEnabled={fullAccess} />}
+            {tab === "inicio" && <Overview lessons={dashLessons} homeworkEnabled homeworkFree={!fullAccess} plan={plan} />}
+            {tab === "alumnos" && <Students lessons={dashLessons} startNew={params.nuevo === "1"} homeworkEnabled homeworkFree={!fullAccess} />}
             {tab === "historial" && <History lessons={dashLessons} startNew={params.nuevo === "1"} studentId={params.alumno ?? null} view={params.vista === "abiertas" ? "abiertas" : "registradas"} />}
             {tab === "favoritos" && <Favorites lessons={dashLessons} fullAccess={fullAccess} />}
             {tab === "suscripcion" && <div className="cx-stack">

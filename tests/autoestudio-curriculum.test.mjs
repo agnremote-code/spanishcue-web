@@ -149,7 +149,9 @@ test('access: A1 weeks 1–2 and one sample per new level are free, maps are pub
 
 test('the Worker gates PRO weeks and the client engines never import course data', async () => {
   const worker = readFileSync('worker/index.ts', 'utf8');
-  assert.match(worker, /\(premiumAutoestudio&&!fullAccess&&!shareAllowsPath\(pathname,shareSession\)\)/);
+  assert.match(worker, /\(premiumAutoestudio&&!fullAccess&&!\(shareFull&&shareAllowsPath\(pathname,shareSession\)\)\)/);
+  // A pass from a free teacher never opens PRO weeks: shareFull needs the issuing teacher's full access.
+  assert.match(worker, /const shareFull=sharePremium\s*\? Boolean\(await studentWorldPass\(routedHeaders\.get\("cookie"\),env\)\.catch\(\(\)=>null\)\)\s*: false;/);
   assert.match(worker, /\|\|autoestudio\|\|shareApi\|\|Boolean\(lesson\)/);
   const protect = readFileSync('scripts/protect-client-assets.mjs', 'utf8');
   for (const root of ['AutoestudioLanding', 'LevelMap', 'ModulePlayer']) assert.match(protect, new RegExp(`app/autoestudio/${root}\\.tsx`));
