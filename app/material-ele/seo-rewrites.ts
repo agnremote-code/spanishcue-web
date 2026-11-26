@@ -913,6 +913,111 @@ const rewrites: Record<string, PageRewrite> = {
       },
     ],
   },
+  // Lote L2d (26/11/2026): briefs 21, 28 y 35.
+  "/material-ele/formatos/juegos-de-conversacion": {
+    lote: "L2",
+    title: "Juegos de conversación en español para la clase de ELE",
+    description: "Juegos de conversación de A1 a C2: decisiones, misterios, tableros y mundos 3D con una pregunta en cada paso, y cuál elegir según el tiempo y el nivel.",
+    intro: "Un juego de conversación funciona cuando para avanzar hay que hablar: elegir una salida y defenderla, convencer a un personaje, resolver un misterio. Aquí están las {n} clases de SpanishCue que funcionan así, de los roleplays de A1 a los casos de C2, y una tabla para elegir la adecuada según el tiempo que tienes y el nivel de tu alumno.",
+    sections: [
+      {
+        id: "elegir-juego",
+        title: "Qué juego elegir según el tiempo y el nivel",
+        intro: "Busca la fila que se parece a tu clase de hoy. Todas las clases nombradas están en la lista de abajo.",
+        blocks: [
+          { type: "table", caption: "Elección de juego de conversación por tiempo, nivel y objetivo", head: ["Tienes…", "Tu alumno es…", "Y quieres…", "Empieza por"], rows: [
+            ["45 minutos", "A1–A2", "situaciones reales de viaje con expresiones locales", "Un roleplay del mundo hispano: hay 20 países, cada uno con diez situaciones, como Roleplays de México o de Chile."],
+            ["45 minutos", "A2, en grupo", "pedir, reclamar y comparar entre varios", "La feria de Villaluz: encontrar a personas entre la gente y contar la noche."],
+            ["45 minutos", "B1", "que decida y justifique", "Uno o el otro, ¿Y ahora qué? o Ciudad en juego: bancos de elecciones, problemas y negociaciones que se pueden repetir con otros temas."],
+            ["45 minutos", "B1–B2", "una conversación más personal", "De eso sí hablo (B1) o No es tan simple (B2): tableros de 72 preguntas, o Red Flag o No en su nivel."],
+            ["De 45 a 90 minutos, o varias clases", "cualquier nivel", "un mundo para recorrer con escenas y escuchas", "Un mundo 3D del Modo Play: Vuelo cancelado, El consorcio o El tren de las 23:40. Cada escena trae un problema y una conversación."],
+            ["Una clase suelta", "cualquier nivel", "variedad: muchos juegos distintos en una sesión", "Noche abierta: diez lugares de un barrio de noche, con un juego de conversación distinto en cada uno."],
+            ["45 minutos", "C2", "inferir intenciones y negociar el sentido", "El Ministerio de las Versiones: cinco casos con relatos incompatibles."],
+          ] },
+          { type: "p", text: "Si buscas juegos para la clase en general (calentamientos, repasos de vocabulario, dinámicas de grupo), están en [juegos para clase de español](/material-ele/juegos-para-clase-de-espanol). Esta página es solo de juegos que obligan a conversar." },
+        ],
+      },
+      {
+        id: "que-no-falle",
+        title: "Tres formas en que un juego de conversación falla, y cómo evitarlas",
+        blocks: [
+          { type: "ul", items: [
+            "**Se gana sin hablar.** Si el alumno puede elegir con un clic y avanzar, el juego le gana a la conversación. Regla de la clase: antes de cada clic, una frase que explique por qué.",
+            "**Turnos desiguales.** En grupo, el más rápido juega por todos. Reparte los turnos antes de empezar y que cada uno defienda una opción distinta.",
+            "**El alumno lee en vez de conversar.** Los textos de la pantalla son el punto de partida, no la respuesta. Después de leer, pregunta por su vida: «¿y a ti te pasó algo así?».",
+          ] },
+          { type: "p", text: "Para B2 tienes una página propia con estas clases ordenadas por tipo de juego: [juegos de conversación B2](/material-ele/formatos/juegos-de-conversacion/b2). Para preguntas sueltas, mira las [preguntas para clase de conversación](/material-ele/preguntas-de-conversacion)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Sirven los juegos de conversación para clases individuales en línea?", answer: "Sí, y es donde más rinden: compartes la pantalla, el alumno decide qué hacer en cada paso y tú haces de compañero de juego. En un grupo, reparte los turnos antes de empezar para que no juegue solo el más rápido." },
+      { question: "¿Un mundo 3D del Modo Play sirve para un alumno de A1?", answer: "Sí, si cambias lo que pides. Con un A1, quédate con la escucha de cada escena y pide datos concretos (dónde está el personaje, qué necesita, a qué hora). Con un B2 o un C1, el mismo mundo sirve para negociar, convencer y debatir." },
+      { question: "¿Cuánto dura una partida?", answer: "Los bancos y tableros están pensados para unos 45 minutos y se pueden repetir con otros temas. Los mundos 3D dan para 45 a 90 minutos: puedes recorrer una parte en una clase y seguir en la siguiente." },
+    ],
+  },
+
+  "/material-ele": {
+    lote: "L2",
+    sections: [
+      {
+        id: "por-donde-empezar",
+        title: "Por dónde empezar en cada nivel",
+        intro: "Si es la primera vez que entras, esta tabla te lleva en dos clics a algo que puedes usar hoy: el nivel de tu alumno y un tema clave de ese nivel.",
+        blocks: [
+          { type: "table", caption: "Página de nivel y temas clave de Material ELE para cada nivel", head: ["Nivel", "Lo que el alumno necesita", "Temas para empezar"], rows: [
+            ["[A1](/material-ele/a1)", "Presentarse, hablar de su rutina y de lo que hay a su alrededor.", "[Presente de indicativo](/material-ele/presente-de-indicativo) · [ser y estar](/material-ele/ser-y-estar)"],
+            ["[A2](/material-ele/a2)", "Contar lo que hizo y cómo eran las cosas antes.", "[Indefinido e imperfecto](/material-ele/indefinido-e-imperfecto) · [pretérito perfecto](/material-ele/preterito-perfecto)"],
+            ["[B1](/material-ele/b1)", "Opinar, aconsejar y pedir con cortesía.", "[Subjuntivo](/material-ele/subjuntivo) · [condicional](/material-ele/condicional)"],
+            ["[B2](/material-ele/b2)", "Argumentar, conceder y contar lo que dijeron otros.", "[Estilo indirecto](/material-ele/estilo-indirecto) · [conectores](/material-ele/conectores)"],
+            ["[C1](/material-ele/c1)", "Matizar, imaginar el pasado de otra manera y entender lo implícito.", "[Si hubiera sabido](/material-ele/si-hubiera-sabido) · [oraciones concesivas](/material-ele/oraciones-concesivas)"],
+            ["[C2](/material-ele/c2)", "Jugar con el registro, la ironía y la precisión.", "[Comprensión auditiva](/material-ele/comprension-auditiva) · [preguntas de conversación](/material-ele/preguntas-de-conversacion)"],
+          ] },
+          { type: "p", text: "Cada página de tema tiene actividades de clase con pasos y frases modelo, un ejercicio con soluciones y las clases interactivas del tema. Si lo que buscas es un tipo de clase y no un tema, mira [juegos de conversación](/material-ele/formatos/juegos-de-conversacion) o las [fichas ELE](/material-ele/fichas)." },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/ejercicio/subjuntivo": {
+    lote: "L2",
+    title: "Ejercicios de subjuntivo con soluciones y PDF (B1–C1)",
+    description: "Ejercicio de presente de subjuntivo con soluciones: 22 frases de deseo, duda, valoración y «cuando», y las formas regulares e irregulares en una tabla.",
+    sections: [
+      {
+        id: "formas-subjuntivo",
+        title: "Cómo se forma el presente de subjuntivo",
+        intro: "Antes del ejercicio, las formas. El truco: se parte del «yo» del presente de indicativo y se cambia la vocal de la terminación.",
+        blocks: [
+          { type: "table", caption: "Formación del presente de subjuntivo con verbos regulares e irregulares", head: ["Grupo", "Yo del presente", "Presente de subjuntivo", "Ojo"], rows: [
+            ["Verbos en -ar", "hablo", "hable, hables, hable, hablemos, hablen", "La -a pasa a -e."],
+            ["Verbos en -er e -ir", "como, vivo", "coma, comas, coma, comamos, coman · viva, vivas…", "La -e o la -i pasan a -a."],
+            ["Irregulares en el yo", "tengo, hago, digo, pongo, salgo, conozco", "tenga, haga, diga, ponga, salga, conozca", "La irregularidad del «yo» pasa a todas las personas."],
+            ["Cambio de vocal", "quiero, puedo, pido", "quiera, pueda, pida · queramos, podamos, pidamos", "En «nosotros», querer y poder recuperan la vocal; pedir mantiene la -i."],
+            ["Los seis que no siguen el truco", "soy, estoy, voy, he, sé, doy", "sea, esté, vaya, haya, sepa, dé", "Se aprenden de memoria. «Dé» lleva tilde para no confundirse con la preposición."],
+          ] },
+          { type: "p", text: "Y la ortografía: «busque», «llegue», «empiece», «escoja». La letra cambia para que el sonido se mantenga, no porque el verbo sea irregular." },
+        ],
+      },
+      {
+        id: "errores-subjuntivo",
+        title: "Los cuatro errores que este ejercicio corrige",
+        blocks: [
+          { type: "ul", items: [
+            "**«Quiero que vienes»:** con deseo y otro sujeto, subjuntivo: «quiero que vengas». Con el mismo sujeto, infinitivo: «quiero ir».",
+            "**«Cuando llegaré»:** con «cuando» y un momento futuro, presente de subjuntivo: «cuando llegue, te llamo».",
+            "**«Ojalá viene»:** «ojalá» va siempre con subjuntivo: «ojalá venga».",
+            "**«Creo que sea»:** la opinión afirmativa va con indicativo, «creo que es»; la negada, con subjuntivo, «no creo que sea».",
+          ] },
+          { type: "p", text: "Esta página es de formas y usos básicos. Para practicar la elección entre los dos modos con más frases, usa [indicativo o subjuntivo](/indicativo-o-subjuntivo), y para enseñarlo en clase, lee [cómo enseñar el subjuntivo](/material-ele/guia/como-ensenar-el-subjuntivo)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿En qué orden conviene enseñar los usos del subjuntivo?", answer: "Primero el deseo con otro sujeto («quiero que vengas»), porque el alumno ve claro el cambio de sujeto. Después la valoración («es importante que») y la reacción («me alegro de que»), luego «cuando» con futuro y, al final, la duda y la opinión negada, que son las que más se confunden con el indicativo." },
+      { question: "¿Con «quizá» y «tal vez» va siempre subjuntivo?", answer: "No. Admiten los dos modos: «quizá llegan tarde» presenta la posibilidad como más probable que «quizá lleguen tarde». Por eso en el ejercicio esa frase acepta las dos respuestas." },
+    ],
+  },
 };
 
 export const pageRewrites: ReadonlyMap<string, PageRewrite> = new Map(Object.entries(rewrites));

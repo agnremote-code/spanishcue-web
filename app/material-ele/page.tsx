@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { pageRewrites } from "./seo-rewrites";
+import { RewriteSections } from "./rewrite-components";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../growth/components";
 import { catalogSummary } from "../growth/lessons";
 import { collectionPageSchema, faqPageSchema } from "../growth/schema";
@@ -61,6 +63,7 @@ export default function MaterialElePage() {
             </p>
           </section>
 
+          <RewriteSections rewrite={pageRewrites.get(MATERIAL_ELE_PATH)} />
           <Section id="niveles" title="Material ELE por nivel" intro="Cada nivel trae actividades comunicativas con pasos, frases modelo y corrección, un ejercicio con soluciones y las clases interactivas de ese nivel.">
             <EleLevelNav />
             <div className={styles.cardGrid}>

@@ -12,11 +12,11 @@ export default function EmbedSnippet({ verbs }: { verbs: string[] }) {
   };
   return (
     <div className={styles.panel}>
-      <label>Verbo inicial{" "}
+      {verbs.length > 1 && <label>Verbo inicial{" "}
         <select value={verb} onChange={(event) => setVerb(event.target.value)}>
           {verbs.map((item) => <option key={item} value={item}>{item}</option>)}
         </select>
-      </label>
+      </label>}
       <textarea readOnly value={code} rows={4} style={{ width: "100%", fontFamily: "monospace", fontSize: 12, marginTop: 10 }} aria-label="Código para insertar el conjugador" onFocus={(event) => event.currentTarget.select()} />
       <div className={styles.heroActions}>
         <button type="button" className={styles.primaryButton} onClick={copy}>{copied ? "Copiado" : "Copiar código"}</button>

@@ -181,4 +181,13 @@ export const guiaRespuestas: Record<string, { answer: string; steps: string[] }>
       "Pide una frase personal con cada verbo y repásalas en la clase siguiente.",
     ],
   },
+  "ia-de-google-en-busquedas-de-profes-de-ele": {
+    answer:
+      "El 26 de noviembre de 2026, desde España, la vista creada con IA de Google salió en 37 de 42 búsquedas típicas de profesores de ELE: en 26 de 31 en español y en las 11 en inglés. Citó una mediana de 7 fuentes, sobre todo páginas que ya estaban en los resultados y vídeos de YouTube.",
+    steps: [
+      "Incluye el nivel y el formato en la búsqueda: las de ejercicios concretos fueron las que menos IA mostraron.",
+      "Abre las fuentes citadas para comprobar nivel, variedad de español y soluciones.",
+      "Busca en español: en inglés los resultados se inclinan hacia material escolar de Estados Unidos.",
+    ],
+  },
 };
