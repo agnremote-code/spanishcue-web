@@ -1,6 +1,7 @@
 // Checks every Comprensión auditiva file: shape, level length, voices from
 // several countries, gap-fill text taken word for word from the audio, and
 // neutral Spanish. Usage: node scripts/check-escucha-3d.mjs [game] [level]
+// (both case-insensitive; to filter by level alone, pass "" as the game).
 import { readFileSync, existsSync } from 'node:fs';
 import { GAMES, WORDS, parseGaps, transcriptOf, wordCount } from '../app/escucha-3d/games.mjs';
 import { scanSource } from './neutral-spanish.mjs';
@@ -207,25 +208,44 @@ export function lengthKey(items) {
   return out;
 }
 
+// Resolves the optional [game] [level] arguments to the files to check. The
+// game and level are case-insensitive (files and docs use b1, GAMES uses B1), and an
+// unknown game or level is an error: a filter that matches nothing must never
+// print "all files OK".
+export function selectTargets(game, level, games = GAMES) {
+  const errors = [];
+  if (game) game = String(game).toLowerCase();
+  const wantLevel = level ? String(level).toUpperCase() : undefined;
+  if (game && !Object.hasOwn(games, game)) errors.push(`unknown game «${game}»; known: ${Object.keys(games).join(', ')}`);
+  const targets = [];
+  for (const [key, spec] of Object.entries(games)) {
+    if (game && key !== game) continue;
+    for (const l of spec.levels) if (!wantLevel || l === wantLevel) targets.push({ game: key, level: l });
+  }
+  if (wantLevel && !errors.length && !targets.length) {
+    const known = game ? games[game].levels.join(', ') : [...new Set(Object.values(games).flatMap(s => s.levels))].join(', ');
+    errors.push(`unknown level «${level}»${game ? ` for ${game}` : ''}; known: ${known}`);
+  }
+  return { targets: errors.length ? [] : targets, errors };
+}
+
 if (process.argv[1]?.endsWith('check-escucha-3d.mjs')) {
   const titles = new Map();
-  for (const [game, spec] of Object.entries(GAMES)) {
-    if (onlyGame && game !== onlyGame) continue;
-    for (const level of spec.levels) {
-      if (onlyLevel && level !== onlyLevel) continue;
-      const path = `app/escucha-3d/content/${game}/${level.toLowerCase()}.json`;
-      if (!existsSync(path)) { say(path, 'missing'); continue; }
-      const source = readFileSync(path, 'utf8');
-      let data; try { data = JSON.parse(source); } catch (error) { say(path, `invalid JSON: ${error.message}`); continue; }
-      problems.push(...checkFile(game, level, data, path));
-      for (const f of scanSource(source, path)) say(`${path}:${f.line}`, `neutral Spanish guard flags «${f.token}» (${f.kind}); rewrite the sentence`);
-      for (const item of data.items ?? []) {
-        const key = `${game}:${item.title}`;
-        if (titles.has(key)) say(path, `title «${item.title}» repeats ${titles.get(key)}`); else titles.set(key, `${level}/${item.id}`);
-      }
+  const { targets, errors } = selectTargets(onlyGame, onlyLevel);
+  for (const e of errors) say('arguments', e);
+  for (const { game, level } of targets) {
+    const path = `app/escucha-3d/content/${game}/${level.toLowerCase()}.json`;
+    if (!existsSync(path)) { say(path, 'missing'); continue; }
+    const source = readFileSync(path, 'utf8');
+    let data; try { data = JSON.parse(source); } catch (error) { say(path, `invalid JSON: ${error.message}`); continue; }
+    problems.push(...checkFile(game, level, data, path));
+    for (const f of scanSource(source, path)) say(`${path}:${f.line}`, `neutral Spanish guard flags «${f.token}» (${f.kind}); rewrite the sentence`);
+    for (const item of data.items ?? []) {
+      const key = `${game}:${item.title}`;
+      if (titles.has(key)) say(path, `title «${item.title}» repeats ${titles.get(key)}`); else titles.set(key, `${level}/${item.id}`);
     }
   }
   for (const p of problems) console.error(p);
-  console.log(problems.length ? `${problems.length} problems` : 'Escucha 3D: all files OK');
+  console.log(problems.length ? `${problems.length} problems` : `Escucha 3D: all files OK (${targets.length} checked)`);
   process.exitCode = problems.length ? 1 : 0;
 }
