@@ -1,0 +1,208 @@
+{
+ "version": 1,
+ "authorization": "Ale approved these exact English texts on 2026-11-26 by choosing «Sí, apruebo los textos en inglés» on decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhASNtTTdvLknpdY6KMLJF1Wi in the thread «Poner en regla lo legal del sitio» (cmsg_01Gr5R4j3t2Yet65UcmhcVhA3gUAfSsbVcLoiHX88HWo47); the full list was shared as /mnt/project-files/legal/textos-ingles-20261126.md. Legal compliance pass: truthful home figures, withdrawal waiver at checkout, current plans/offers/guarantee/Founder Price, cookie and processor lists, Argentina right to revoke.",
+ "additions": [
+  {
+   "path": "app/SpanishCueBrand.tsx",
+   "text": "Revoke a purchase"
+  },
+  {
+   "path": "app/acceso/CheckoutButton.tsx",
+   "text": "I want immediate access to SpanishCue PRO and I accept that, once it starts, I lose the 14-day right of withdrawal. The"
+  },
+  {
+   "path": "app/acceso/CheckoutButton.tsx",
+   "text": "30-day guarantee"
+  },
+  {
+   "path": "app/acceso/CheckoutButton.tsx",
+   "text": "on my first payment still applies."
+  },
+  {
+   "path": "app/acceso/CheckoutButton.tsx",
+   "text": "Tick the box to continue to payment."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "The conditions shown before payment—plan, currency, price, period, renewal and applicable taxes—form part of the purchase. SPANISHCUE PRO can be purchased by card through Paddle or via PayPal, depending on which methods are available. Current plans: monthly, US$19.90/month; annual by card, US$150/year; and, while advertised, welcome offers for new teachers (first week for US$0.99 or 10% off the first month), which then continue at US$19.90/month. All renew automatically until cancelled. Card payments are processed by Paddle.com as authorised reseller (merchant of record): Paddle sells and invoices the order and calculates applicable taxes. Any future price change is disclosed before it applies and does not reduce rights already acquired."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Immediate access and withdrawal"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "SPANISHCUE PRO is digital content delivered immediately. Before payment we ask you to expressly request immediate access and to acknowledge that, once it starts, you lose the 14-day right of withdrawal available to consumers in the European Union. That waiver does not affect the 30-day guarantee on your first payment or other mandatory rights. Details are in Refunds."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Sending account, verification and newsletter emails (email address and subscription status)"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Processor"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "ChatGPT ads conversion pixel, only with marketing consent"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Advertising provider"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "You may request access, correction, deletion, restriction, objection or portability where applicable, and withdraw consent without affecting earlier processing, by writing to ${operator.privacyEmail}. You may also complain to the authority competent where you live: in Argentina, the Agencia de Acceso a la Información Pública (AAIP); in Spain, the Agencia Española de Protección de Datos (AEPD); elsewhere in the EU, your country's data protection authority."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "1 year"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Functional · remembers the invitation link code you opened for the referral programme"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "60 days"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Functional · remembers the gift lesson you unlocked with your email"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Optional analytics · Google Analytics 4 tells visits apart without identifying you"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Up to 2 years"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "OpenAI pixel (oaiq)"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Optional marketing · measures whether a visit from a ChatGPT ad ends in a purchase"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Set by OpenAI; stops when consent is withdrawn"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "The Google tag and the OpenAI pixel do not load or send any request until you accept the corresponding optional category."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Before confirmation, checkout shows the selected method and its final amount: monthly, US$19.90/month by card (Paddle) or PayPal; annual, US$150/year by card. Renewal is automatic until cancellation, with the term and applicable taxes disclosed. Access begins after the relevant payment is confirmed. Subscriptions created earlier at another price keep that price while they stay active."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Welcome offers"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "First week for US$0.99: for teachers with an account and no earlier payments on SPANISHCUE, by card or PayPal. You pay US$0.99 today; after 7 days US$19.90 is charged automatically and then every month, unless you cancel first. The offer can be taken until 30 November 2026 at 23:59 (Argentina time)."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "10% off the first month: for signed-in teachers without active PRO, card only. You pay US$17.91 for the first month and then US$19.90/month. It cannot be combined with the US$0.99 week."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Founder Price"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "What it is: the price you confirm at checkout stays fixed while that same subscription remains active, even if SPANISHCUE raises its prices in the future. Today the Founder Price equals the current price (US$19.90/month or US$150/year); it is not a discount on an earlier price."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Limit: the first 1,000 subscriptions with a confirmed payment, card and PayPal combined. The “places available” counter is calculated on the server from real confirmed payments; it is not simulated or reset. If you cancel and return, the offer available then applies."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "First payment means your account’s first charge: US$19.90 on the monthly plan, US$150 on the annual plan, US$0.99 on the welcome week or US$17.91 on the 10% offer."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "The refund goes back through the same payment method (Paddle or PayPal) and cancels the subscription, so no further charges are made. When it shows up depends on your bank or PayPal."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "We answer requests within 3 business days."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Withdrawal in the European Union"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "As an EU consumer you generally have 14 days to withdraw from a distance contract. SPANISHCUE PRO is digital content with immediate access: before payment we ask you to tick a box requesting immediate access and acknowledging that, once it starts, you lose that right. Without that box, checkout does not open. The 30-day guarantee on your first payment is unchanged: it is broader than withdrawal and remains available."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Right to revoke (Argentina)"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "If you bought from Argentina, you can revoke the purchase within 10 calendar days of payment, with no reason and at no cost (Law 24.240, art. 34, and Resolution 424/2020). Email ${operator.supportEmail} with the subject “Arrepentimiento” from your account email, or use the button below; you don’t need to sign in. We send you a request code within 24 hours and refund the payment through the same method."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Revoke my purchase"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Nothing limits mandatory consumer rights. Unauthorised or duplicate charges and material failure to provide the service are reviewed and refunded when required by law or the payment provider. SPANISHCUE does not assume withdrawal rights are waived merely because the service was accessed: only the express checkout box counts."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "For card payments, Paddle acts as seller (merchant of record) and also applies its own buyer refund policy; nothing on this page reduces what Paddle or PayPal grant you."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Payments and invoicing"
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "text": "Card payments are processed by Paddle.com Market Limited as authorised reseller (merchant of record): Paddle is the seller to you, issues the invoice and handles VAT or equivalent tax. PayPal payments are processed by PayPal."
+  },
+  {
+   "path": "app/marketing/TrustStats.tsx",
+   "text": "The experience behind SpanishCue"
+  },
+  {
+   "path": "app/marketing/TrustStats.tsx",
+   "text": "Figures from the teaching track record of the teacher who created SpanishCue, on and off this platform."
+  }
+ ],
+ "changes": [
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "You may request access, correction, deletion, restriction, objection or portability where applicable, and withdraw consent without affecting earlier processing, by writing to ${operator.privacyEmail}. You may also complain to the authority competent where you live.",
+   "reason": "Replaced by the texts Ale approved on decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhASNtTTdvLknpdY6KMLJF1Wi (legal compliance pass 2026-11-26)."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "Google measurement loads only after the corresponding optional category is accepted.",
+   "reason": "Replaced by the texts Ale approved on decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhASNtTTdvLknpdY6KMLJF1Wi (legal compliance pass 2026-11-26)."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "The offer is limited to the first 1,000 teachers whose first full monthly payment is confirmed. Subscription approval alone does not claim a place and the counter is not simulated. The monthly price confirmed at checkout remains while that same subscription stays active. If you cancel and return, the offer available then applies.",
+   "reason": "Replaced by the texts Ale approved on decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhASNtTTdvLknpdY6KMLJF1Wi (legal compliance pass 2026-11-26)."
+  },
+  {
+   "path": "app/legal/LegalDocument.tsx",
+   "kind": "english-changed-or-deleted",
+   "text": "Withdrawal or revocation",
+   "reason": "Replaced by the texts Ale approved on decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhASNtTTdvLknpdY6KMLJF1Wi (legal compliance pass 2026-11-26)."
+  }
+ ]
+}

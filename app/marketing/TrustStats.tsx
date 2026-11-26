@@ -3,14 +3,17 @@ import { useI18n } from "../i18n/LocaleProvider";
 import type { MarketingCta } from "./cta-state";
 import { MarketingLink } from "./MarketingSections";
 
-/** «Confían en SpanishCue»: a quiet figures bar right under the hero, only for visitors and
+/** «La experiencia detrás de SpanishCue» (was «Confían en SpanishCue» until the 2026-11-26
+ *  compliance pass: the figures are the creator's teaching track record, not platform users,
+ *  so the title and a visible note say so — EU Omnibus / misleading-advertising rules): a quiet figures bar right under the hero, only for visitors and
  *  accounts without PRO (Ale, 2026-11-03), closed by one value line, three concrete benefits
  *  and the two conversion doors. The figures are the owner's own; never inflate or invent them. */
 const VALUES = ["+100", "+20", "+10"] as const;
 
 const copy = {
   es: {
-    title: "Confían en SpanishCue",
+    title: "La experiencia detrás de SpanishCue",
+    note: "Cifras de la trayectoria docente del profesor que creó SpanishCue, dentro y fuera de esta plataforma.",
     stats: [
       "Profesores",
       "Academias",
@@ -25,7 +28,8 @@ const copy = {
     actions: "Empezar con SpanishCue",
   },
   en: {
-    title: "Trusted by teachers and academies",
+    title: "The experience behind SpanishCue",
+    note: "Figures from the teaching track record of the teacher who created SpanishCue, on and off this platform.",
     stats: [
       "Teachers",
       "Academies",
@@ -52,6 +56,7 @@ export default function TrustStats({ primary, primaryLabel, secondary, secondary
         <dd>{VALUES[index]}</dd>
       </div>)}
     </dl>
+    <p className="mk-trust-note">{c.note}</p>
     <div className="mk-trust-pitch">
       <p>{c.pitch}</p>
       <ul>{c.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>
