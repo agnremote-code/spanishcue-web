@@ -58,4 +58,8 @@ test('noindexed families leave the sitemap and carry noindex, follow',async()=>{
  assert.equal(s.robotsHeaderFor('/dudas-del-espanol/haber-o-a-ver'),null);
  assert.equal(s.robotsHeaderFor('/material-ele/cultura/argentina/a1'),'noindex, follow');
  assert.equal(s.robotsHeaderFor('/material-ele/formatos/comprension-auditiva/a1'),null);
+ assert.equal(s.robotsHeaderFor('/material-ele/preguntas/b1'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/material-ele/preguntas'),null);
+ assert.equal(s.robotsHeaderFor('/spanish-grammar-lessons/b2'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/spanish-grammar-lessons/b1'),null);
 });

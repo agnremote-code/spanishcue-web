@@ -100,8 +100,23 @@ const NOINDEX_FAMILIES: readonly { prefix: string; keep?: (path: string) => bool
   ].map((prefix) => ({ prefix, keep: (path: string) => path === prefix })),
 ];
 
+/**
+ * Lote N5: level variants that repeat their hub's title (0 impressions in 90 days). The hub
+ * keeps the intent: /material-ele/preguntas for the six question pages, /spanish-grammar-lessons for A2 and B2.
+ */
+const NOINDEX_SAME_TITLE_PATHS: ReadonlySet<string> = new Set([
+  "/material-ele/preguntas/a1",
+  "/material-ele/preguntas/a2",
+  "/material-ele/preguntas/b1",
+  "/material-ele/preguntas/b2",
+  "/material-ele/preguntas/c1",
+  "/material-ele/preguntas/c2",
+  "/spanish-grammar-lessons/a2",
+  "/spanish-grammar-lessons/b2",
+]);
+
 export function isPrunedNoindexPath(path: string): boolean {
-  if (noindexLevelPaths.has(path)) return true;
+  if (noindexLevelPaths.has(path) || NOINDEX_SAME_TITLE_PATHS.has(path)) return true;
   return NOINDEX_FAMILIES.some(({ prefix, keep }) => (path === prefix || path.startsWith(prefix + "/")) && !keep?.(path));
 }
 
