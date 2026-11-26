@@ -102,6 +102,24 @@ atribuible (utm_campaign=homework_free o cuenta con pases). Revisar 2026-12-03 y
 (códigos creados por profes que abrieron su panel) y altas con `spanishcue_ref` que terminan en `referrals`.
 Alumnos creados por profes gratis: `SELECT COUNT(DISTINCT owner_id) FROM students WHERE created_at>='2026-11-26'` menos dueño y clienta PRO.
 
+## Descubrimiento 2 · Pedir enlaces no rinde; el enlace tiene que ser un efecto del uso (2026-11-26)
+
+Ale: «nadie quiere enlazar». Los mails pidiendo enlaces (hilo de 500 enlaces) rinden casi cero. Ya existían
+mecanismos de enlace por uso (conjugador embebible con crédito fuera del iframe, bloque «Compartir en tu aula
+virtual» en fichas), pero el conjugador embebible solo se ofrecía en una página (/material-ele/conjugador-para-tu-web)
+que casi nadie visita. Las ~1.200 páginas de verbos, que son las que reciben profes buscando un verbo, no lo ofrecían.
+
+**E3 (rama `claude/omega-enlaces`).** Cada /conjugacion/[verbo] ofrece «Pon el conjugador de X en tu web» con el código
+listo (iframe + enlace de crédito visible). Medir: dominios que cargan /embed/conjugador (Referer en logs del Worker o
+Links de GSC) antes/después; hoy línea base sin medir (GSC Links no está en Windsor).
+
+**Carril periodistas (pendiente de Ale).** Source of Sources, Qwoted, Help a B2B Writer: Ale como fuente experta.
+El filtro automático no deja registrar su mail sin su sí explícito; tarjeta de decisión enviada 2026-11-26.
+
+**Descartado por ahora:** estudio de «errores frecuentes de alumnos» con datos propios: `homework_errors` tiene 255
+errores de 15 alumnos de 2 profes. Muestra demasiado chica para un dato citable honesto. Reevaluar con >2.000 errores
+y >10 profes (E1 puede hacerlo crecer).
+
 ## Hipótesis descartadas
 
 - 2026-11-26: 11 hipótesis de ingreso descartadas con motivo en `docs/omega/MECANISMOS-INGRESO.md` §2 (app B2C sin canal, Preply, formación pagada, plan de por vida, afiliados, embed pago, corporativo duplicado, subvenciones, sub plans, marketplace UGC, Cervantes como cliente).
@@ -115,5 +133,6 @@ Alumnos creados por profes gratis: `SELECT COUNT(DISTINCT owner_id) FROM student
 ## Bitácora
 
 - 2026-11-26 · Ciclo 1: línea base, descubrimiento de la activación, E1 programado (PR #548).
+- 2026-11-26 · Ciclo 3: E3 conjugador embebible en cada página de verbo; carril periodistas pedido a Ale.
 - 2026-11-26 · Encargo «mecanismos de ingreso»: economía real (US$34,90 cobrados en total, 1 clienta, 0 checkouts desde la promo, 0 academias en el panel tras ~39 mails sin precio); 5 supervivientes en MECANISMOS-INGRESO.md. Primer paso: lista de centros acreditados Cervantes + precio de academia (tarjeta a Ale).
 - 2026-11-26 · Ciclo 2: E2 (alta → panel con primeros pasos, invitar colega para gratis).

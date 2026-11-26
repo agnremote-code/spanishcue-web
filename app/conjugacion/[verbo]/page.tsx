@@ -7,6 +7,7 @@ import styles from "../../growth/growth.module.css";
 import type { Forms, TenseKey } from "../engine";
 import { ConjugacionFrame, VerbLinks, VerbSearch } from "../components";
 import { EleNewsletterInline } from "../../material-ele/PopularLinks";
+import EmbedSnippet from "../../material-ele/EmbedSnippet";
 import { tiempoPages } from "../tiempos";
 import cj from "../conjugacion.module.css";
 import { SER_PATH, serPath } from "../../ser-o-estar/data";
@@ -108,6 +109,11 @@ export default async function VerbPage({ params }: Props) {
       ) : null}
       <Section title="Verbos irregulares por tiempo">
         <ul className={cj.verbList}>{tiempoPages.map((tiempo) => <li key={tiempo.slug}><Link href={tiempo.path}>{tiempo.label}</Link></li>)}</ul>
+      </Section>
+      {/* Distribution through use: every embed carries a plain credit link outside the iframe (docs/omega/LOG.md). */}
+      <Section id="insertar" title={`Pon el conjugador de ${verb} en tu web`} intro="Gratis para tu blog, la web de tu academia, Moodle o Google Sites. Tus alumnos conjugan sin salir de tu página.">
+        <EmbedSnippet verbs={[verb]} />
+        <p className={styles.footnote}><Link className={styles.textLink} href="/material-ele/conjugador-para-tu-web">Cómo insertarlo paso a paso</Link></p>
       </Section>
       <Section title="Otro verbo">
         <VerbSearch />

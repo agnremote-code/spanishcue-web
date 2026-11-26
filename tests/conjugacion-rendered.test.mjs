@@ -58,3 +58,10 @@ test('Spanish verb page no longer declares the noindexed English twin',async()=>
  const d=new JSDOM(await (await fetch(origin+'/conjugacion/tener')).text()).window.document;
  assert.equal(d.querySelector('link[rel="alternate"][hreflang="en"]'),null);
 });
+test('every verb page offers the embed code with a visible credit link outside the iframe',async()=>{
+ const d=new JSDOM(await (await fetch(origin+'/conjugacion/tener')).text()).window.document;
+ const code=d.querySelector('[id="insertar"] textarea')?.value??d.querySelector('[id="insertar"] textarea')?.textContent??'';
+ assert.match(code,/<iframe src="https:\/\/spanishcue\.com\/embed\/conjugador\?v=tener"/);
+ assert.match(code,/<\/iframe>\n<p><a href="https:\/\/spanishcue\.com\/conjugacion">/);
+ assert.ok(d.querySelector('[id="insertar"] a[href="/material-ele/conjugador-para-tu-web"]'));
+});
