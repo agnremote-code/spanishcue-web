@@ -103,6 +103,13 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - CI + Auto Merge: 50 success, 10 failure, 15 cancelled, 34 skipped. All failures are on non-board feature branches (lint, whitespace, regression suite, one merge-lock wait), and those branches merged later.
     - Escucha 3D audio: 18 success, 1 failure (`claude/escucha-3d-objetos-perdidos`, 11-23, later merged).
   - **Checks (local, Linux):** full `npm test` at `ce631f02` (the fix plus records): exit 0, 1,971 pass, 0 fail (pinned baseline commits fetched, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`). The review notes NB1–NB3 were applied after it (case-insensitive game, usage comment, import order, stderr assertion; 6 lines): `tests/escucha-3d.test.mjs` 6/6 and the full no-argument checker run (159 files) re-run on that head. The first full run in this shallow clone failed only in `check-english-copy.mjs`, because the pinned baseline `43e4b3eb` was missing; it was fetched and the run repeated. `node --test tests/escucha-3d.test.mjs` 6/6. eslint on the changed files clean. `git diff --check` clean.
+  - **Release (VERIFIED):** #543 marked ready after the checks and the review; pipeline check first (no `automation/merge-lock`, no run in progress; the open non-draft PRs #324/#283/#275/#257/#209 are stale non-board PRs, not in the pipeline). Merged as `35fcefe4` (02:34:30Z); its tree is identical to PR head `db37c509`.
+    - CI + Auto Merge run [45741448150](https://github.com/agnremote-code/spanishcue-web/actions/runs/45741448150) passed on attempt 1.
+    - Staging run [45744247316](https://github.com/agnremote-code/spanishcue-web/actions/runs/45744247316) and production run [45744631722](https://github.com/agnremote-code/spanishcue-web/actions/runs/45744631722) both succeeded.
+    - "Production smoke" passed (job 139657588285, 02:50:55–02:51:05Z, origin https://spanishcue.com), and the rollback was skipped.
+    - main = production = `35fcefe4`. #543 changed a developer script, its test and docs only, so no URL changed and there was nothing more to smoke.
+    - These release lines reach main through the records PR from `claude/board-thursday-records-20261126`.
+  - **Owner notified by push** (M1, the 21-day Paddle webhook silence, CI health).
   - **Next action:**
     1. Owner / billing owner: M1 (Founder accounting for the 10% offer) and L1, once billing has no other open PR. Close or decide #360/#283 (W48 item 4(ii)). Paddle delivery-log check (21 days silent).
     2. Next Thursday: L3/L4 if their areas are free; the BOARD-DECISION-005 review date (first Thursday after 12-10).
