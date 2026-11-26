@@ -1,0 +1,17 @@
+fecha,url,herramienta,tipos_detectados,estado,errores,avisos,notas
+2026-11-26,/,RRT,Organization,válido,0,0,
+2026-11-26,/,SMV,WebSite (con Organization|EducationalOrganization|Person|ContactPoint),válido,0,0,
+2026-11-26,/equipo,RRT,Breadcrumbs|Profile page,válido,0,0,
+2026-11-26,/equipo,SMV,BreadcrumbList|ProfilePage,válido,0,0,
+2026-11-26,/material-ele/guia/ejercicios-ele-con-soluciones,RRT,Articles|Breadcrumbs|Videos,válido con avisos,0,4,"Article: datePublished y dateModified solo con fecha, sin hora ni zona (opcional). Corregido en claude/seo-fase3-avisos"
+2026-11-26,/material-ele/guia/ejercicios-ele-con-soluciones,SMV,WebPage|VideoObject|BreadcrumbList|Article|FAQPage,válido,0,0,"RRT no muestra FAQPage como resultado enriquecido (restricción actual de Google)"
+2026-11-26,/material-ele/a1,RRT,Breadcrumbs|Course list item|Videos,válido,0,0,
+2026-11-26,/material-ele/a1,SMV,WebPage|VideoObject|BreadcrumbList|Course|FAQPage,válido,0,0,
+2026-11-26,/material-ele/ficha/indefinido-e-imperfecto,RRT,Breadcrumbs,válido,0,0,
+2026-11-26,/material-ele/ficha/indefinido-e-imperfecto,SMV,WebPage|BreadcrumbList|LearningResource|FAQPage,válido,0,0,
+2026-11-26,/ser-o-estar,RRT,Breadcrumbs,válido,0,0,
+2026-11-26,/ser-o-estar,SMV,WebPage|BreadcrumbList|LearningResource|FAQPage,válido,0,0,
+2026-11-26,/datos,RRT,Breadcrumbs|Datasets,válido con avisos,0,2,"Dataset dentro del catálogo sin license ni creator (opcional). Corregido en claude/seo-fase3-avisos"
+2026-11-26,/datos,SMV,DataCatalog|CollectionPage|BreadcrumbList,válido,0,0,
+2026-11-26,/datos/errores-preterito-perfecto-a2,RRT,Articles|Breadcrumbs|Datasets,válido con avisos,0,5,"Article sin image y fechas sin hora ni zona (opcional). Dataset válido sin avisos. Corregido en claude/seo-fase3-avisos"
+2026-11-26,/datos/errores-preterito-perfecto-a2,SMV,BreadcrumbList|Dataset|Article|FAQPage,válido,0,0,
