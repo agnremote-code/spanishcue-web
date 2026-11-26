@@ -219,7 +219,7 @@ const level = {
       { t: 'La comodidad', echo: 'Aquí no estoy bien, pero estoy cómodo. Es un problema.' },
       { t: 'Mi familia', echo: 'La familia quiere una cosa y tú quieres otra. Es difícil.' },
     ],
-    talk: ['¿Qué quieres cambiar en tu vida?', '¿Qué te da miedo cambiar?'],
+    talk: ['¿Qué puerta quieres abrir en tu vida este año?', '¿Qué te da miedo cambiar?'],
     words: [b('la jaula', 'the cage'), b('la cadena', 'the chain'), b('abierto', 'open'), b('salir', 'to go out'), b('la llave', 'the key'), b('fuerte', 'strong')],
   },
   trono: {
@@ -239,7 +239,7 @@ const level = {
       { t: 'No', echo: 'Quieres otra vida. Te entiendo.' },
       { t: 'No sé', echo: 'Es una respuesta honesta. Gracias.' },
     ],
-    talk: ['¿Qué te gusta de tu vida?', '¿Qué día quieres vivir otra vez?'],
+    talk: ['¿Qué cosa de tu vida no cambias por nada?', '¿Qué día quieres vivir otra vez?'],
     words: [b('el trono', 'the throne'), b('el diablo', 'the devil'), b('cansado', 'tired'), b('otra vez', 'again'), b('igual', 'the same'), b('la aguja', 'the clock hand')],
   },
 };
