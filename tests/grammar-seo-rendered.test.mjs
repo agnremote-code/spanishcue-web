@@ -3,13 +3,16 @@ import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
 const paths=['/spanish-grammar-lessons',...['a1','a2','b1','b2','c1','por-vs-para-activities','conditional-tense-activities'].map(s=>'/spanish-grammar-lessons/'+s),'/guides/how-to-teach-ser-vs-estar','/guides/preterite-vs-imperfect-activities','/guides/spanish-subjunctive-lesson-plan','/guides/spanish-imperative-activities','/guides/spanish-direct-indirect-object-pronouns','/about'];
-for(const path of paths)test(`grammar resource serves usable indexable HTML: ${path}`,async()=>{
+for(const path of paths)test(`grammar resource serves usable HTML with the right robots rule: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  assert.equal(response.headers.get('content-language'),'en');assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));
  const dom=new JSDOM(await response.text());const d=dom.window.document;
  assert.equal(d.querySelectorAll('h1').length,1);assert.ok(d.querySelector('h1').textContent.length>15);
  const canonical=d.querySelectorAll('link[rel="canonical"]');assert.equal(canonical.length,1);assert.equal(canonical[0].href,'https://spanishcue.com'+path);
- assert.match(d.querySelector('meta[name="robots"]')?.content||'',/index.*follow/);assert.doesNotMatch(d.querySelector('meta[name="robots"]')?.content||'',/noindex/);
+ assert.match(d.querySelector('meta[name="robots"]')?.content||'',/index.*follow/);
+ // Lote N5 of the SEO plan: A2 and B2 repeat the hub title and had no impressions, so they leave the index.
+ if(['/spanish-grammar-lessons/a2','/spanish-grammar-lessons/b2'].includes(path)){assert.match(d.querySelector('meta[name="robots"]').content,/noindex/);assert.equal(response.headers.get('x-robots-tag'),'noindex, follow');}
+ else{assert.doesNotMatch(d.querySelector('meta[name="robots"]')?.content||'',/noindex/);assert.equal(response.headers.get('x-robots-tag'),null);}
  assert.ok(d.title.length<=65,d.title);const description=d.querySelector('meta[name="description"]')?.content||'';assert.ok(description.length>=110&&description.length<=165,description);
  const schemas=[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent));
  assert.ok(schemas.some(s=>s['@type']==='BreadcrumbList'));assert.ok(schemas.some(s=>['WebPage','CollectionPage','AboutPage'].includes(s['@type'])));
@@ -29,7 +32,8 @@ test('grammar descendants reject unknown or unsupported planning pages with HTTP
 });
 test('the sitemap includes all Phase 2 pages without private or parameter variants',async()=>{
  const response=await fetch(origin+'/sitemap.xml');assert.equal(response.status,200);const xml=await response.text();
- for(const path of paths)assert.ok(xml.includes('<loc>https://spanishcue.com'+path+'</loc>'),path);
+ // Lote N5: A2 and B2 are noindex and must stay out of the sitemap.
+ for(const path of paths)assert.equal(xml.includes('<loc>https://spanishcue.com'+path+'</loc>'),!['/spanish-grammar-lessons/a2','/spanish-grammar-lessons/b2'].includes(path),path);
  const locations=[...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match=>match[1]);
  const purchasePaths=new Set(['/lp/spanish-teacher-resources','/lp/online-spanish-teaching-resources']);
  for(const url of locations){

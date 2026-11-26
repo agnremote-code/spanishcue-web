@@ -37,10 +37,10 @@ test('the engine produces the expected forms',()=>{
  assert.ok(answers.filter(a=>a===0).length>40&&answers.filter(a=>a===1).length>40,'right button is not always in the same place');
 });
 
-test('the mini-apps are in the sitemap and edge-cached',()=>{
+test('the hub is in the sitemap, the expression pages are noindex (lote N3), all edge-cached',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
  assert.ok(urls.has('https://spanishcue.com/indicativo-o-subjuntivo'));
- for(const e of m.expresiones)assert.ok(urls.has('https://spanishcue.com/indicativo-o-subjuntivo/'+e.slug),e.slug);
+ for(const e of m.expresiones)assert.ok(!urls.has('https://spanishcue.com/indicativo-o-subjuntivo/'+e.slug),e.slug);
  assert.ok(m.isEdgeCacheablePath('/indicativo-o-subjuntivo')&&m.isEdgeCacheablePath('/indicativo-o-subjuntivo/ojala'));
  assert.equal(m.mixedItems().length,12);
 });

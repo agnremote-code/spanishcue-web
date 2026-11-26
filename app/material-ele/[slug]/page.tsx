@@ -13,6 +13,8 @@ import { TemaGroupIndexPage } from "../tema-group-page";
 import { isPrunedPath, livePath } from "../../seo-prune";
 import { temaGroupById, temaLevelsForTopic, temasByGroup, type TemaGroupId } from "../temas";
 import { EleFichaLinks } from "../ficha-links";
+import { fillCount, pageRewrites } from "../seo-rewrites";
+import { RewriteSections } from "../rewrite-components";
 import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
 import print from "../print.module.css";
@@ -39,7 +41,9 @@ export async function generateMetadata({ params }: Props) {
   const { slug } = await params;
   const page = elePageBySlug.get(slug);
   const group = temaGroupById.get(slug as TemaGroupId);
-  return page ? eleMetadata(page.path, page.title, page.description, pageImage(page.lessonIds)) : group ? eleMetadata(group.path, group.title, group.description, pageImage(temasByGroup(group.id).flatMap((tema) => tema.lessonIds))) : {};
+  const rewrite = page ? pageRewrites.get(page.path) : undefined;
+  const count = page?.lessonIds.length ?? 0;
+  return page ? eleMetadata(page.path, fillCount(rewrite?.title ?? page.title, count), fillCount(rewrite?.description ?? page.description, count), pageImage(page.lessonIds)) : group ? eleMetadata(group.path, group.title, group.description, pageImage(temasByGroup(group.id).flatMap((tema) => tema.lessonIds))) : {};
 }
 
 export default async function ElePage({ params }: Props) {
@@ -50,6 +54,11 @@ export default async function ElePage({ params }: Props) {
     if (group) return <TemaGroupIndexPage group={group} />;
     notFound();
   }
+  const rewrite = pageRewrites.get(page.path);
+  const fill = (text: string) => fillCount(text, page.lessonIds.length);
+  const title = fill(rewrite?.title ?? page.title);
+  const description = fill(rewrite?.description ?? page.description);
+  const faq = [...(rewrite?.faq ?? []), ...page.faq];
   const lessons = eleLessonCards(page.lessonIds);
   const freeLesson = lessons.find((lesson) => lesson.free);
   const featured = featuredGrammarLesson(page.lessonIds);
@@ -65,8 +74,8 @@ export default async function ElePage({ params }: Props) {
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, about: page.keyPoints.items, inLanguage: "es", ...(page.code ? { educationalLevel: page.code } : {}), image: pageImage(page.lessonIds), dates })} />
-          <JsonLd data={faqPageSchema(page.faq, "es")} />
+          <JsonLd data={webPageSchema({ pathname: page.path, name: title, description, about: page.keyPoints.items, inLanguage: "es", ...(page.code ? { educationalLevel: page.code } : {}), image: pageImage(page.lessonIds), dates })} />
+          <JsonLd data={faqPageSchema(faq, "es")} />
           <EleTopbar current={page.slug === "preguntas-de-conversacion" || page.slug === "juegos-para-clase-de-espanol" ? page.path : MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: page.label, href: page.path }]} />
           <p className={print.printOnly}>
@@ -75,8 +84,8 @@ export default async function ElePage({ params }: Props) {
           </p>
           <section className={styles.hero}>
             <p className={styles.eyebrow}>{page.kicker}</p>
-            <h1 className={styles.title}>{page.h1}</h1>
-            <p className={styles.lead}>{page.intro}</p>
+            <h1 className={styles.title}>{fill(rewrite?.h1 ?? page.h1)}</h1>
+            <p className={styles.lead}>{fill(rewrite?.intro ?? page.intro)}</p>
             <div className={`${styles.heroActions} ${print.noPrint}`}>
               <Link className={styles.primaryButton} href="#actividades">Ver las actividades</Link>
               {ejercicio ? <Link className={styles.secondaryButton} href={livePath(ejercicio.path)}>Ejercicios con soluciones</Link> : null}
@@ -92,6 +101,8 @@ export default async function ElePage({ params }: Props) {
           <Section title={page.keyPoints.title}>
             <div className={styles.panel}><ul>{page.keyPoints.items.map((item) => <li key={item}>{item}</li>)}</ul></div>
           </Section>
+
+          <RewriteSections rewrite={rewrite} />
 
           {page.questions ? (
             <Section id="preguntas" title="60 preguntas de conversación por nivel" intro="Elige el nivel de tu alumno. Las preguntas suben de dificultad dentro de cada lista.">
@@ -144,7 +155,7 @@ export default async function ElePage({ params }: Props) {
           ) : null}
 
           <Section title="Preguntas frecuentes">
-            <Faq items={page.faq} />
+            <Faq items={faq} />
           </Section>
 
           <div className={print.noPrint}>

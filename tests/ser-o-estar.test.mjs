@@ -59,6 +59,6 @@ test('neutral Spanish: no vosotros forms and no first-person preterite',()=>{
 test('sitemap and edge cache',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
  assert.ok(urls.has('https://spanishcue.com/ser-o-estar'));
- for(const slug of m.serSlugs())assert.ok(urls.has('https://spanishcue.com/ser-o-estar/'+slug),slug);
+ for(const slug of m.serSlugs())assert.ok(!urls.has('https://spanishcue.com/ser-o-estar/'+slug),slug); // lote N3: noindex
  assert.ok(m.isEdgeCacheablePath('/ser-o-estar/listo'));
 });

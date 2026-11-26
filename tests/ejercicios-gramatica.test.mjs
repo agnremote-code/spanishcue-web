@@ -38,7 +38,8 @@ test('neutral Spanish: no first-person preterite in the sentences',()=>{
 
 test('sitemap and edge cache',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
- for(const path of m.gapPaths())assert.ok(urls.has('https://spanishcue.com'+path),path);
+ // Lote N3: rule pages leave the sitemap except /dudas-del-espanol/*, where each page answers a different question.
+ for(const path of m.gapPaths())assert.equal(urls.has('https://spanishcue.com'+path),path.split('/').length===2||path.startsWith('/dudas-del-espanol/'),path);
  assert.equal(m.gapPaths().length,38);
  assert.ok(m.isEdgeCacheablePath('/ejercicios-de-gustar/doler'));
  assert.ok(m.isEdgeCacheablePath('/dudas-del-espanol/haber-o-a-ver'));

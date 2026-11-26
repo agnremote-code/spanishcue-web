@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {build} from 'esbuild';
-const r=await build({stdin:{contents:'export {isPrunedPath,prunedRedirects} from "./app/seo-prune.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/actividades.ts"; export {elePages} from "./app/material-ele/data.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
+const r=await build({stdin:{contents:'export {isPrunedPath,isPrunedNoindexPath,prunedRedirects} from "./app/seo-prune.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/actividades.ts"; export {elePages} from "./app/material-ele/data.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 const all=[...m.actividadPages,...m.ejercicioPages,...m.preguntasPages];
 
@@ -32,7 +32,8 @@ test('bank pages have unique slugs, bounded unique metadata and a level',()=>{
 test('bank pages are in the sitemap, Spanish-first, indexable and edge-cached',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
  for(const path of [m.ACTIVIDADES_PATH,...m.bancoPaths].filter(p=>!m.isPrunedPath(p))){
-  assert.ok(urls.has('https://spanishcue.com'+path),path);
+  // Lote N5: the per-level question pages repeat their hub's title and leave the sitemap.
+  assert.equal(urls.has('https://spanishcue.com'+path),!m.isPrunedNoindexPath(path),path);
   assert.equal(m.isEnglishDefaultPath(path),false,path);
   assert.equal(m.isSearchPrivatePath(path),false,path);
   assert.equal(m.isEdgeCacheablePath(path),true,path);

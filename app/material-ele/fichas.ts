@@ -49,5 +49,5 @@ export const fichaBySlug = new Map(fichaPages.map((page) => [page.slug, page]));
 const fichaById = new Map(fichaPages.map((page) => [page.id, page]));
 /** The fichas of a set of classes, in the order given: topic and level pages link to them by name. */
 export const fichasForLessons = (ids: readonly number[], limit = 12) => ids.map((id) => fichaById.get(id)).filter((page): page is FichaPage => Boolean(page)).slice(0, limit);
-export const fichasTitle = "Fichas ELE de gramática gratis para imprimir, con soluciones";
+export const fichasTitle = "Fichas ELE de gramática para imprimir, con soluciones (A1–C2)";
 export const fichasDescription = `${fichaPages.length} fichas ELE de gramática gratis, de A1 a C2, con teoría, ejercicios y soluciones de cada clase, para imprimir en PDF o proyectar.`;

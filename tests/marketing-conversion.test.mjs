@@ -146,7 +146,8 @@ test("search landings, including a dedicated free demo, and crawl controls are i
         assert.match(page, /grammarMetadata\(GRAMMAR_HUB_PATH/);
         const metadata = await source("app/growth/grammar-metadata.ts");
         assert.match(metadata, /canonicalUrl\(/);
-        assert.match(metadata, /index: true, follow: true/);
+        // Indexable unless the SEO plan's pruning list takes the page out (batch N5: /spanish-grammar-lessons/a2 and b2).
+        assert.match(metadata, /robots: \{index: !isPrunedNoindexPath\(path\), follow: true\}/);
       } else {
         assert.match(page, /canonicalUrl\(/);
       }

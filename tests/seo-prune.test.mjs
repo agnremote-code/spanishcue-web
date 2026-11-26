@@ -21,7 +21,8 @@ test('consolidated URLs leave the Material ELE index and its feed',()=>{
 });
 
 test('every consolidated URL was a real generated page, so the 301 replaces something that existed',()=>{
- const generated=new Set([...m.temaPageByPath.keys(),...m.temaLevelPageByPath.keys(),...m.ejercicioPages.map(p=>p.path)]);
+ // A retired level page already answered with a redirect; consolidating it sends it to the final URL in one hop.
+ const generated=new Set([...m.temaPageByPath.keys(),...m.temaLevelPageByPath.keys(),...m.ejercicioPages.map(p=>p.path),...m.retiredTemaLevelPaths.keys()]);
  for(const from of m.prunedRedirects.keys())assert.ok(generated.has(from),`${from} is not a generated page`);
 });
 
@@ -53,4 +54,13 @@ test('noindexed families leave the sitemap and carry noindex, follow',async()=>{
  for(const p of sitemapPaths)assert.ok(!s.isPrunedNoindexPath(p),`${p} is noindex but listed`);
  assert.equal(s.robotsHeaderFor('/spanish-verbs/tener'),'noindex, follow');
  assert.equal(s.robotsHeaderFor('/spanish-verbsx'),null);
+ assert.equal(s.robotsHeaderFor('/ser-o-estar/listo'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/ser-o-estar'),null);
+ assert.equal(s.robotsHeaderFor('/dudas-del-espanol/haber-o-a-ver'),null);
+ assert.equal(s.robotsHeaderFor('/material-ele/cultura/argentina/a1'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/material-ele/formatos/comprension-auditiva/a1'),null);
+ assert.equal(s.robotsHeaderFor('/material-ele/preguntas/b1'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/material-ele/preguntas'),null);
+ assert.equal(s.robotsHeaderFor('/spanish-grammar-lessons/b2'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/spanish-grammar-lessons/b1'),null);
 });

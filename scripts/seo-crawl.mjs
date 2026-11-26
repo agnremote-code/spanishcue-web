@@ -49,10 +49,11 @@ try {
           rec.canonical = d.querySelector('link[rel="canonical"]')?.getAttribute('href') ?? null;
           rec.h1 = [...d.querySelectorAll('h1')].map((h) => h.textContent.trim());
           rec.links = [...new Set([...d.querySelectorAll('a[href]')].map((a) => a.getAttribute('href')).filter((h) => h.startsWith('/') && !h.startsWith('//')).map((h) => h.split('#')[0]).filter(Boolean))];
+          // Structured data first: the text extraction below removes every <script> inside <main>.
+          rec.schema = [...d.querySelectorAll('script[type="application/ld+json"]')].map((s) => { try { const j = JSON.parse(s.textContent); return j['@type'] || (j['@graph'] ? j['@graph'].map((g) => g['@type']).join('+') : ''); } catch { return 'invalid'; } });
           const main = d.querySelector('main') || d.body;
           for (const el of main.querySelectorAll('script,style,noscript,svg')) el.remove();
           rec.text = main.textContent.replace(/\s+/g, ' ').trim();
-          rec.schema = [...d.querySelectorAll('script[type="application/ld+json"]')].map((s) => { try { const j = JSON.parse(s.textContent); return j['@type'] || (j['@graph'] ? j['@graph'].map((g) => g['@type']).join('+') : ''); } catch { return 'invalid'; } });
         }
       } catch (e) { rec.error = String(e); }
       lines.push(JSON.stringify(rec));

@@ -5,8 +5,10 @@ const r=await build({stdin:{contents:'export {default as sitemap} from "./app/si
 const mod=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 test('teachers can discover each supported grammar planning page and topic through the sitemap',()=>{
  const urls=new Set(mod.sitemap().map(x=>x.url));
- for(const path of ['/spanish-grammar-lessons/a1','/spanish-grammar-lessons/a2','/spanish-grammar-lessons/b1','/spanish-grammar-lessons/b2','/spanish-grammar-lessons/c1','/spanish-grammar-lessons/por-vs-para-activities','/spanish-grammar-lessons/conditional-tense-activities','/guides/spanish-imperative-activities','/guides/spanish-direct-indirect-object-pronouns','/about'])assert.ok(urls.has('https://spanishcue.com'+path),path);
+ for(const path of ['/spanish-grammar-lessons/a1','/spanish-grammar-lessons/b1','/spanish-grammar-lessons/c1','/spanish-grammar-lessons/por-vs-para-activities','/spanish-grammar-lessons/conditional-tense-activities','/guides/spanish-imperative-activities','/guides/spanish-direct-indirect-object-pronouns','/about'])assert.ok(urls.has('https://spanishcue.com'+path),path);
  assert.ok(!urls.has('https://spanishcue.com/spanish-grammar-lessons/c2'),'C2 must not promise an unsupported full curriculum');
+ // Lote N5 of the SEO plan: A2 and B2 repeat the hub title and had no impressions; they stay available, out of the index.
+ for(const path of ['/spanish-grammar-lessons/a2','/spanish-grammar-lessons/b2'])assert.ok(!urls.has('https://spanishcue.com'+path),path);
 });
 test('methodology starts in English for the teacher audience',()=>assert.equal(mod.isEnglishDefaultPath('/about'),true));
 

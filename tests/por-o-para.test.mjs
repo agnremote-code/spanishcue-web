@@ -25,6 +25,6 @@ test('every use page resolves: own preposition first, two contrast items, valid 
 test('sitemap and edge cache',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
  assert.ok(urls.has('https://spanishcue.com/por-o-para'));
- for(const u of m.usosPorPara)assert.ok(urls.has('https://spanishcue.com/por-o-para/'+u.slug),u.slug);
+ for(const u of m.usosPorPara)assert.ok(!urls.has('https://spanishcue.com/por-o-para/'+u.slug),u.slug); // lote N3: noindex
  assert.ok(m.isEdgeCacheablePath('/por-o-para/causa'));
 });

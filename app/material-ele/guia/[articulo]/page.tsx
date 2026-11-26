@@ -10,6 +10,8 @@ import { guiaWithBody } from "../../../guide-bodies";
 import { guiaRespuestas } from "../../guia-respuestas";
 import { pageDates } from "../../indice";
 import { MATERIAL_ELE_PATH } from "../../data";
+import { pageRewrites } from "../../seo-rewrites";
+import { RewriteSections } from "../../rewrite-components";
 import styles from "../../../growth/growth.module.css";
 import PrintButton from "../../PrintButton";
 import print from "../../print.module.css";
@@ -84,6 +86,8 @@ export default async function GuiaPage({ params }: Props) {
               </div>
             </article>
           ))}
+
+          <RewriteSections rewrite={pageRewrites.get(page.path)} />
 
           <div className={print.noPrint}>
             <EleNewsletterInline source={page.path} />

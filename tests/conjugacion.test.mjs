@@ -74,10 +74,10 @@ test('irregular forms are marked and regular verbs stay unmarked',()=>{
  assert.equal(m.verbFromParam('oir'),'oír');assert.equal(m.verbFromParam('so%C3%B1ar'),'soñar');assert.equal(m.verbFromParam('nope'),undefined);
 });
 
-test('the conjugation pages are in the sitemap and edge-cached',()=>{
+test('the conjugation hub is in the sitemap, the verb tables are not (batch N2), and all are edge-cached',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
  assert.ok(urls.has('https://spanishcue.com/conjugacion'));
- assert.ok(urls.has('https://spanishcue.com/conjugacion/tener'));assert.ok(urls.has('https://spanishcue.com/conjugacion/oir'));assert.ok(urls.has('https://spanishcue.com/conjugacion/so%C3%B1ar'),[...urls].find(u=>u.includes('/conjugacion/so')));
+ for(const v of ['tener','oir','so%C3%B1ar'])assert.ok(!urls.has('https://spanishcue.com/conjugacion/'+v),v);
  assert.ok(m.isEdgeCacheablePath('/conjugacion')&&m.isEdgeCacheablePath('/conjugacion/tener'));
 });
 
@@ -87,10 +87,14 @@ test('English verb pages stay available but out of the index, the sitemap and th
  for(const v of m.verbos){const p=e.verbPageEn(v);assert.ok(p.title.length<=78,p.title);assert.ok(p.description.length>=110&&p.description.length<=165,`${v} ${p.description.length}`);assert.ok(p.notes.length>=1);assert.equal(p.exercise.length,12);assert.ok(!p.notes.some(n=>/undefined/.test(n)));}
  assert.equal(e.languageAlternates('/spanish-verbs/tener'),undefined);assert.equal(e.languageAlternates('/conjugacion/tener'),undefined);assert.equal(e.languageAlternates('/conjugacion'),undefined);
  for(const p of ['/spanish-verbs','/spanish-verbs/tener'])assert.equal(e.robotsHeaderFor(p),'noindex, follow',p);
- assert.equal(e.robotsHeaderFor('/conjugacion/tener'),null);
+ for(const p of ['/conjugacion','/conjugacion/irregulares','/conjugacion/irregulares/indefinido'])assert.equal(e.robotsHeaderFor(p),null,p);
+ for(const p of ['/conjugacion/tener','/conjugacion/so%C3%B1ar'])assert.equal(e.robotsHeaderFor(p),'noindex, follow',p);
  assert.equal(e.languageAlternates('/conjugacion/irregulares'),undefined);
  assert.ok(e.isEdgeCacheablePath('/spanish-verbs/tener')&&e.isEnglishDefaultPath('/spanish-verbs/tener'));
  const urls=[...m.sitemap().map(x=>x.url)];assert.ok(!urls.some(u=>u.startsWith('https://spanishcue.com/spanish-verbs')),'spanish-verbs left in the sitemap');
+ // Batch N2: verb tables leave the sitemap; the hub and the irregular guides stay.
+ assert.ok(!urls.includes('https://spanishcue.com/conjugacion/tener'),'verb table left in the sitemap');
+ for(const p of ['/conjugacion','/conjugacion/irregulares','/conjugacion/irregulares/indefinido'])assert.ok(urls.includes('https://spanishcue.com'+p),p);
 });
 
 test('irregular-verb pages per tense list the right verbs',async()=>{

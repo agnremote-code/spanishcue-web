@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { isPrunedNoindexPath } from "../seo-prune";
 import { catalogLessons } from "../conversation-families/catalog";
 import { lessonCards, type LessonCardData } from "../growth/lessons";
 import { canonicalUrl, languageAlternates } from "../seo";
@@ -32,7 +33,7 @@ export function eleMetadata(path: string, title: string, description: string, im
     title,
     description,
     alternates: { canonical: canonicalUrl(path), ...(languageAlternates(path) ? { languages: languageAlternates(path) } : {}) },
-    robots: { index: true, follow: true },
+    robots: { index: !isPrunedNoindexPath(path), follow: true },
     openGraph: { title, description, url: canonicalUrl(path), type: "website", locale: "es_ES", images: [ogImage] },
     twitter: { card: "summary_large_image", title, description, images: [image ? canonicalUrl(image) : socialPreviewUrl] },
   };
@@ -94,7 +95,8 @@ export function eleLessonCards(ids: readonly number[]): LessonCardData[] {
   return lessonCards(ids, "es").map((card) => ({ ...card, category: categoryLabel.get(card.id) ?? card.category }));
 }
 
-export function EleLessonGrid({ lessons }: { lessons: LessonCardData[] }) {
+/** `compact` drops the card blurb: pages whose own copy already describes each class for this level use it, so the shared multi-level blurbs do not repeat across every level page. */
+export function EleLessonGrid({ lessons, compact = false }: { lessons: LessonCardData[]; compact?: boolean }) {
   if (!lessons.length) return null;
   return (
     <div className={styles.lessonGrid}>
@@ -107,7 +109,7 @@ export function EleLessonGrid({ lessons }: { lessons: LessonCardData[] }) {
               <span>{lesson.level} · {lesson.category} · {lesson.duration}</span>
             </div>
             <h3>{lesson.title}</h3>
-            <p>{lesson.subtitle}</p>
+            {compact ? null : <p>{lesson.subtitle}</p>}
           </div>
         </Link>
       ))}

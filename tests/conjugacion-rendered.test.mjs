@@ -10,7 +10,10 @@ for(const [path,h1] of [['/conjugacion/irregulares/indefinido','Verbos irregular
  assert.equal(d.documentElement.lang,'es');
  assert.equal(d.querySelector('h1').textContent,h1);assert.equal(d.querySelectorAll('h1').length,1);
  assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+path);
- assert.ok(!d.querySelector('meta[name="robots"]')?.content.includes('noindex'));
+ // Batch N2 of the SEO plan: one table per verb stays available but out of the index; the hub and the irregular guides stay indexable.
+ const verbTable=path!=='/conjugacion'&&!path.startsWith('/conjugacion/irregulares');
+ if(verbTable){assert.match(d.querySelector('meta[name="robots"]').content,/noindex/);assert.equal(response.headers.get('x-robots-tag'),'noindex, follow');}
+ else assert.ok(!d.querySelector('meta[name="robots"]')?.content.includes('noindex'));
  assert.ok(d.querySelector('script[type="application/ld+json"]'));
  assert.ok(d.querySelector('form[action="/buscar-verbo"] input[name="v"]'));
  if(path.startsWith('/conjugacion/irregulares'))assert.ok(d.querySelectorAll('a[href^="/conjugacion/"]').length>=9);

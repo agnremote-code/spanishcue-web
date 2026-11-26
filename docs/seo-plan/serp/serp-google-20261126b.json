@@ -1,0 +1,2010 @@
+{
+  "collected_at": "2026-11-26T09:55:00+00:00",
+  "location_note": "Tanda b (9 búsquedas), mismo método que serp-google-20261126.json: IP residencial de la Mac de Ale (España), Chrome con sesión de Google iniciada; parámetros &hl/&gl por búsqueda, &num=10&pws=0, pausas aleatorias de 20–40 s; sin captcha. Google mostró 7–9 orgánicos por página. URLs sin query string salvo YouTube (youtu.be/ID, ?list=). AI Overview: dominios citados según los enlaces visibles sin expandir (vacío si el bloque aparecía sin enlaces visibles). Paso B: solo URLs del top 10 que no estaban en 'pages' del archivo anterior; HTML descargado con curl (UA Chrome, -L, timeout 20 s, 4 en paralelo, 1 reintento con cookies); palabras = texto visible sin script/style/nav/footer; exercises.has = palabras clave de soluciones o ≥3 inputs; pdf = enlaces .pdf en la página; date = JSON-LD dateModified/datePublished o meta article:*.",
+  "queries": [
+    {
+      "query": "comprensión auditiva ele",
+      "hl": "es",
+      "gl": "es",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://deleahora.com/actividades/comprension-auditiva",
+          "domain": "deleahora.com",
+          "title": "Actividades de comprensión auditiva en español",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://www.profedeele.es/actividad/b1-comprension-auditiva/",
+          "domain": "profedeele.es",
+          "title": "DELE B1: Comprensión auditiva",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://lingua.com/es/espanol/escucha/",
+          "domain": "lingua.com",
+          "title": "Comprensión auditiva en Español: Practicar la escucha y ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://www.profedeele.es/actividad/delea2-ca-m1/",
+          "domain": "profedeele.es",
+          "title": "Exámen DELE A2: Comprensión auditiva (Modelo 1).",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://www.profe-de-espanol.de/category/recursos-actividades/destrezas/escuchar/",
+          "domain": "profe-de-espanol.de",
+          "title": "Destrezas ELE escuchar: actividades de comprensión ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://enclave-ele.net/product/comprension-auditiva-a2-b1/",
+          "domain": "enclave-ele.net",
+          "title": "COMPRENSIÓN AUDITIVA (A2-B1)",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://www.youtube.com/playlist?list=PLL4jtSYBxxnbIbUwNhH4rReAbosbDTJOE",
+          "domain": "youtube.com",
+          "title": "Comprensión auditiva en español",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://todoele.net/bibliografia/la-comprension-auditiva-en-el-aula-de-espanol-como-lengua-extranjera-recursos-en",
+          "domain": "todoele.net",
+          "title": "La comprensión auditiva en el aula de español ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 9,
+          "url": "https://blogdeespanol.com/2022/02/comprension-auditiva-a1-a2/",
+          "domain": "blogdeespanol.com",
+          "title": "Comprensión auditiva ELE A1 A2 · Conoce a mis vecinos.",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": true,
+        "ai_overview_domains": [
+          "scielo.org.mx",
+          "deleahora.com",
+          "blogdeespanol.com",
+          "profedeele.es",
+          "profe-de-espanol.de",
+          "enclave-ele.net",
+          "youtube.com"
+        ],
+        "people_also_ask": [],
+        "videos": true,
+        "videos_block": true,
+        "videos_in_ai_overview": true,
+        "images": false,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": null,
+      "status": "ok"
+    },
+    {
+      "query": "juegos de conversación b2",
+      "hl": "es",
+      "gl": "es",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://wordwall.net/es-es/community/espa%C3%B1ol/b2",
+          "domain": "wordwall.net",
+          "title": "ESPAÑOL B2 - Recursos didácticos",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://www.profe-de-espanol.de/category/recursos-actividades/niveles/b2/",
+          "domain": "profe-de-espanol.de",
+          "title": "Recursos ELE nivel B2",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://spanishcue.com/material-ele/formatos/juegos-de-conversacion/b2",
+          "domain": "spanishcue.com",
+          "title": "Juegos de conversación B2 en español: actividades ELE",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://eduki.com/es/material/931015/speaking-game-b2-juego-de-conversacion-en-ingles-para-nivel-intermedio",
+          "domain": "eduki.com",
+          "title": "Speaking game (B2) - Juego de conversación en inglés ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://www.profedeele.es/blog/fichas-temas-conversacion-preguntas/",
+          "domain": "profedeele.es",
+          "title": "Habla de: juego de tarjetas de conversación para la clase ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://profesoresdeele.org/2026/05/21/tablero-de-conversacion-en-espanol-nivel-b2-c1/",
+          "domain": "profesoresdeele.org",
+          "title": "Tablero de conversación en español – Nivel B2/C1",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://ailespanol.com/es/recursos-didacticos-espanol/quizzes/nivel-b2/",
+          "domain": "ailespanol.com",
+          "title": "Nivel B2 - Quizzes de español",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://todoele.net/actividades-nivel/b2-1",
+          "domain": "todoele.net",
+          "title": "Actividades nivel B2",
+          "pdf_result": false
+        },
+        {
+          "pos": 9,
+          "url": "https://www.cerebriti.com/juegos-de-B2/tag/mas-recientes/",
+          "domain": "cerebriti.com",
+          "title": "Juegos de B2",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": false,
+        "ai_overview_domains": [],
+        "people_also_ask": [],
+        "videos": false,
+        "videos_block": false,
+        "videos_in_ai_overview": false,
+        "images": false,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": 3,
+      "status": "ok"
+    },
+    {
+      "query": "imperativo ele",
+      "hl": "es",
+      "gl": "es",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://www.profedeele.es/actividad/imperativo-regular-irregular/",
+          "domain": "profedeele.es",
+          "title": "Imperativo regular e irregular en español. Forma y usos.",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://arche-ele.com/el-imperativo-afirmativo-tu-usted-vosotros-ustedes",
+          "domain": "arche-ele.com",
+          "title": "EL IMPERATIVO AFIRMATIVO | Verbos Irregulares | ELE",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://www.profe-de-espanol.de/tag/imperativo/",
+          "domain": "profe-de-espanol.de",
+          "title": "Imperativo ELE – Actividades y ejercicios para tus clases",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://www.profedeele.es/gramatica/verbos/imperativo/",
+          "domain": "profedeele.es",
+          "title": "Imperativo",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://formacionele.com/ensenando-el-espanol-en-la-clase-de-ele-de-forma-practica/",
+          "domain": "formacionele.com",
+          "title": "El imperativo en la clase de español: una guía rápida",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://lenguajeyotrasluces.com/2017/01/20/imperativo-en-espanol-usos-forma/",
+          "domain": "lenguajeyotrasluces.com",
+          "title": "El imperativo en español",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://deleahora.com/actividades/imperativo",
+          "domain": "deleahora.com",
+          "title": "Actividades sobre el imperativo",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://todoele.net/actividades-gramatica/imperativo",
+          "domain": "todoele.net",
+          "title": "Actividades: imperativo - Gramática",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": true,
+        "ai_overview_domains": [
+          "youtube.com",
+          "marcoele.com",
+          "profedeele.es",
+          "arche-ele.com"
+        ],
+        "people_also_ask": [],
+        "videos": true,
+        "videos_block": false,
+        "videos_in_ai_overview": true,
+        "images": true,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": null,
+      "status": "ok"
+    },
+    {
+      "query": "pronombres de objeto ele",
+      "hl": "es",
+      "gl": "es",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://www.profedeele.es/actividad/pronombres-objeto-directo-indirecto/",
+          "domain": "profedeele.es",
+          "title": "Ejercicios de pronombres de objeto directo e indirecto",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://arche-ele.com/el-objeto-directo-od",
+          "domain": "arche-ele.com",
+          "title": "7. EL OBJETO DIRECTO (OD)",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://rutaele.es/comecocos-5/los-pronombres-de-objeto-directo-e-indirecto/",
+          "domain": "rutaele.es",
+          "title": "Pronombres de objeto directo e indirecto -",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://marcoele.com/papeles/09.3.pronombre.od.pdf",
+          "domain": "marcoele.com",
+          "title": "9.3. pronombres átonos de objeto directo",
+          "pdf_result": true
+        },
+        {
+          "pos": 5,
+          "url": "https://todoele.net/gramatica-contenido-gramatical/pronombres-objeto",
+          "domain": "todoele.net",
+          "title": "Materiales de gramática: pronombres objeto",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://youtu.be/DGiNo2J9O0Q",
+          "domain": "youtu.be",
+          "title": "Learn Spanish: Direct Object Pronouns - Aprender español",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://paginadelespanol.com/pronombres-de-objeto-directo/",
+          "domain": "paginadelespanol.com",
+          "title": "Pronombres de objeto directo",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": true,
+        "ai_overview_domains": [],
+        "people_also_ask": [
+          "¿Cuáles son los 7 pronombres?",
+          "¿Cómo identificar el OD y el OI?",
+          "¿Puedes darme 20 oraciones con objeto directo?",
+          "¿Qué son los pronombres de objeto indirecto?"
+        ],
+        "videos": true,
+        "videos_block": true,
+        "videos_in_ai_overview": false,
+        "images": true,
+        "featured_snippet": null,
+        "pdf_results": 1
+      },
+      "spanishcue_pos": null,
+      "status": "ok"
+    },
+    {
+      "query": "pretérito perfecto ele",
+      "hl": "es",
+      "gl": "es",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://arche-ele.com/el-preterito-perfecto-pasados-aprende-espanol",
+          "domain": "arche-ele.com",
+          "title": "EL PRETÉRITO PERFECTO | Pasados | Aprende Español",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://www.profedeele.es/gramatica/verbos/indicativo/preterito-perfecto/",
+          "domain": "profedeele.es",
+          "title": "Pretérito perfecto",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://blog.hispanic-horizons.org/audios-ele-a1/preterito-perfecto-en-espanol/",
+          "domain": "blog.hispanic-horizons.org",
+          "title": "Audio A1: ¿Qué has hecho este fin de semana?",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://todoele.net/gramatica-contenido-gramatical/preterito-perfecto-indicativo",
+          "domain": "todoele.net",
+          "title": "Materiales de gramática: pretérito perfecto indicativo",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://profesorescreativos.es/preterito-perfecto-hablando-ele/",
+          "domain": "profesorescreativos.es",
+          "title": "La nueva manera de explicar el pretérito perfecto | CREA",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://youtu.be/pccmhFo6t6I",
+          "domain": "youtu.be",
+          "title": "El Pretérito Perfecto",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://espanol.lingolia.com/es/gramatica/tiempos/preterito-perfecto",
+          "domain": "espanol.lingolia.com",
+          "title": "El pretérito perfecto de indicativo",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://rutaele.es/editorial-r1/comecocos/preteritos-perfecto-indefinido/",
+          "domain": "rutaele.es",
+          "title": "Pretérito perfecto e indefinido: actividades para la clase ...",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": true,
+        "ai_overview_domains": [
+          "marcoele.com",
+          "youtube.com",
+          "rutaele.es",
+          "arche-ele.com",
+          "profedeele.es",
+          "profesorescreativos.es"
+        ],
+        "people_also_ask": [],
+        "videos": true,
+        "videos_block": false,
+        "videos_in_ai_overview": true,
+        "images": true,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": null,
+      "status": "ok"
+    },
+    {
+      "query": "comprensión auditiva c1",
+      "hl": "es",
+      "gl": "es",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://www.profedeele.es/actividad/dele-c1-comprension-auditiva-y-uso-de-la-lengua/",
+          "domain": "profedeele.es",
+          "title": "DELE C1: Comprensión auditiva y uso de la lengua",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://deleahora.com/actividades/comprension-auditiva",
+          "domain": "deleahora.com",
+          "title": "Actividades de comprensión auditiva en español",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://blog.hispanic-horizons.org/audios-ele-c1/audios-ele-c1-comprension-auditiva-nivel-c1-alimentacion-ecologica/",
+          "domain": "blog.hispanic-horizons.org",
+          "title": "Comprensión auditiva nivel C1- audio C1",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://www.aporeldele.com/blog/dele-c1-comprension-auditiva-consejos-doble-escucha",
+          "domain": "aporeldele.com",
+          "title": "DELE C1 comprensión auditiva: cómo usar las dos ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://blogdeespanol.com/2018/12/podcast-nivel-c1/",
+          "domain": "blogdeespanol.com",
+          "title": "Podcast nivel ELE C1. Vivir de Madrid",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://espanol.lingolia.com/es/comprension-auditiva",
+          "domain": "espanol.lingolia.com",
+          "title": "Comprensión auditiva",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://www.profedeele.es/actividad/dele-escolar-b2-c1-comprension-auditiva/",
+          "domain": "profedeele.es",
+          "title": "DELE ESCOLAR B2/C1: Comprensión auditiva",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://martaspanishclass.com/es/actividad-de-comprension-oral-nivel-c1/",
+          "domain": "martaspanishclass.com",
+          "title": "Actividad de comprensión auditiva nivel C1",
+          "pdf_result": false
+        },
+        {
+          "pos": 9,
+          "url": "https://www.youtube.com/playlist?list=PL25ihCpbsaoZsO1Y1ZTRnXUKyNl4JGLlA",
+          "domain": "youtube.com",
+          "title": "NIVEL C1 | Comprensión auditiva",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": true,
+        "ai_overview_domains": [],
+        "people_also_ask": [],
+        "videos": true,
+        "videos_block": true,
+        "videos_in_ai_overview": false,
+        "images": false,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": null,
+      "status": "ok"
+    },
+    {
+      "query": "fiestas y tradiciones b2",
+      "hl": "es",
+      "gl": "es",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://www.profedeele.es/cultura/fiestas-y-tradiciones/",
+          "domain": "profedeele.es",
+          "title": "Fiestas y tradiciones",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://spanishcue.com/material-ele/cultura/fiestas-y-tradiciones/b2",
+          "domain": "spanishcue.com",
+          "title": "Fiestas y tradiciones B2: clases y actividades ELE",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://www.studocu.com/fr/document/institut-catholique-de-paris/espagnol/cours-espanol-b2-s2/107605721",
+          "domain": "studocu.com",
+          "title": "Curso Español B2 - Unidad 3: Tradiciones y Experiencias ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://youtu.be/E5zdd1X6K3o",
+          "domain": "youtu.be",
+          "title": "Dictado en español B2 — Aprende sobre las fiestas del pueblo",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://es.scribd.com/document/977371077/MICHAL-Spanish-Lesson-B2",
+          "domain": "es.scribd.com",
+          "title": "Lección de español B2: Tiempo libre y fiestas | PDF",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://todoele.net/actividades-cultura/fiestas",
+          "domain": "todoele.net",
+          "title": "Actividades: fiestas - Cultura",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://videoele.com/B2-Ya-es-navidad.html",
+          "domain": "videoele.com",
+          "title": "Ya es Navidad. Nivel B2.",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://www.facebook.com/profesoresdeele/posts/-%F0%9D%97%96%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%87%F0%9D%97%AE%F0%9D%97%BB-%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%80-%F0%9D%97%A6%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B3%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%98%80es-el-momento-perfecto-para-acercar-una-de-las-fiestas/1451733610318381/",
+          "domain": "facebook.com",
+          "title": "Los sanfermines en la clase de español (niveles B1- B2)",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": true,
+        "ai_overview_domains": [],
+        "people_also_ask": [
+          "¿Qué son las fiestas y tradiciones?",
+          "¿Cuáles son los temas de español para nivel B2?",
+          "¿Qué fiestas son tradiciones?",
+          "¿Qué ejercicios puedo hacer para el nivel B2 de español?"
+        ],
+        "videos": false,
+        "videos_block": false,
+        "videos_in_ai_overview": false,
+        "images": true,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": 2,
+      "status": "ok"
+    },
+    {
+      "query": "conditional tense activities spanish",
+      "hl": "en",
+      "gl": "us",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://conjuguemos.com/verb/114",
+          "domain": "conjuguemos.com",
+          "title": "Conditional Tense (all verbs) - Verb Conjugation",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://studyspanish.com/grammar/test/conditional",
+          "domain": "studyspanish.com",
+          "title": "Conditional Tense: Quiz #1",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://misclaseslocas.com/conditional-tense-spanish-practice-activities/",
+          "domain": "misclaseslocas.com",
+          "title": "Conditional Tense Spanish Practice Activities",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://personal.colby.edu/~bknelson/SLC/conditional1.html",
+          "domain": "personal.colby.edu",
+          "title": "Spanish Language & Culture | Conditional Tense",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://theengagedspanishclassroom.com/2022/03/elementor-2645.html",
+          "domain": "theengagedspanishclassroom.com",
+          "title": "Spanish class future and conditional tense",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://spanishcue.com/spanish-grammar-lessons/conditional-tense-activities",
+          "domain": "spanishcue.com",
+          "title": "Spanish Conditional Tense Activities for Teachers",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://www.spanishboat.com/verb-tenses-exercises/conditional-tense-exercise-1/",
+          "domain": "spanishboat.com",
+          "title": "Spanish Conditional Tense Exercise 1",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://www.teacherspayteachers.com/Product/El-Condicional-Conditional-Tense-Regular-and-Irregular-Verbs-in-Spanish-12589107",
+          "domain": "teacherspayteachers.com",
+          "title": "Spanish Conditional Tense Verbs El Condicional ...",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": false,
+        "ai_overview_domains": [],
+        "people_also_ask": [],
+        "videos": false,
+        "videos_block": false,
+        "videos_in_ai_overview": false,
+        "images": true,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": 6,
+      "status": "ok"
+    },
+    {
+      "query": "preterite vs imperfect activities",
+      "hl": "en",
+      "gl": "us",
+      "organic": [
+        {
+          "pos": 1,
+          "url": "https://studyspanish.com/grammar/test/pretimp1",
+          "domain": "studyspanish.com",
+          "title": "Preterite vs Imperfect Part I: Quiz #1",
+          "pdf_result": false
+        },
+        {
+          "pos": 2,
+          "url": "https://conjuguemos.com/grammar/229",
+          "domain": "conjuguemos.com",
+          "title": "Preterite vs. Imperfect #1 - Grammar",
+          "pdf_result": false
+        },
+        {
+          "pos": 3,
+          "url": "https://worldlanguagecafe.com/preterite-vs-imperfect-activities/",
+          "domain": "worldlanguagecafe.com",
+          "title": "Preterite vs. Imperfect Activities",
+          "pdf_result": false
+        },
+        {
+          "pos": 4,
+          "url": "https://vamospanish.com/learn-spanish/spanish-exercises-by-topic/preterite-vs-imperfect-exercises/",
+          "domain": "vamospanish.com",
+          "title": "Preterite vs imperfect Exercises with Answers",
+          "pdf_result": false
+        },
+        {
+          "pos": 5,
+          "url": "https://personal.colby.edu/~bknelson/SLC/pret_imp.html",
+          "domain": "personal.colby.edu",
+          "title": "Spanish Language & Culture | Preterite vs. Imperfect",
+          "pdf_result": false
+        },
+        {
+          "pos": 6,
+          "url": "https://www.teacherspayteachers.com/Product/Spanish-Preterite-vs-Imperfect-Google-Activity-Bundle-Digital-Activities-Grammar-7386105",
+          "domain": "teacherspayteachers.com",
+          "title": "Spanish Preterite vs Imperfect Google Activity Bundle ...",
+          "pdf_result": false
+        },
+        {
+          "pos": 7,
+          "url": "https://laprofeplotts.com/preterite-vs-imperfect-activities-for-spanish-class/",
+          "domain": "laprofeplotts.com",
+          "title": "Preterite vs. Imperfect Activities for Spanish Class",
+          "pdf_result": false
+        },
+        {
+          "pos": 8,
+          "url": "https://srtaspanish.com/product-category/grammar-topics/preterite-vs-imperfect-resources/",
+          "domain": "srtaspanish.com",
+          "title": "Preterite vs Imperfect Archives",
+          "pdf_result": false
+        }
+      ],
+      "features": {
+        "ai_overview": true,
+        "ai_overview_domains": [
+          "laprofeplotts.com",
+          "thellearningllama.com",
+          "youtube.com",
+          "spanish.yabla.com",
+          "studyspanish.com",
+          "etsy.com",
+          "facebook.com"
+        ],
+        "people_also_ask": [
+          "When to use imperfect vs preterite practice?",
+          "How to differentiate between imperfect and preterite?",
+          "When to use preterite vs imperfect in a story?",
+          "Can imperfect and preterite be used together?"
+        ],
+        "videos": true,
+        "videos_block": false,
+        "videos_in_ai_overview": true,
+        "images": true,
+        "featured_snippet": null,
+        "pdf_results": 0
+      },
+      "spanishcue_pos": null,
+      "status": "ok"
+    }
+  ],
+  "pages": {
+    "https://ailespanol.com/es/recursos-didacticos-espanol/quizzes/nivel-b2/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 000 · curl: (92) HTTP/2 stream 1 was not closed cleanly: PROTOCOL_ERROR (err 1)",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://arche-ele.com/el-imperativo-afirmativo-tu-usted-vosotros-ustedes": {
+      "words": 882,
+      "h2": 2,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 11,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Person",
+        "Organization",
+        "ImageObject",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "WebPage",
+        "Article"
+      ],
+      "date": "2025-09-27T13:24:19+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2020-10-26T16:36:47+00:00",
+      "date_modified": "2025-09-27T13:24:19+00:00"
+    },
+    "https://arche-ele.com/el-objeto-directo-od": {
+      "words": 592,
+      "h2": 2,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 11,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [
+        "Person",
+        "Organization",
+        "ImageObject",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "WebPage",
+        "Article",
+        "VideoObject"
+      ],
+      "date": "2025-09-27T13:24:40+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2020-10-26T16:35:43+00:00",
+      "date_modified": "2025-09-27T13:24:40+00:00"
+    },
+    "https://arche-ele.com/el-preterito-perfecto-pasados-aprende-espanol": {
+      "words": 648,
+      "h2": 2,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 11,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [
+        "Person",
+        "Organization",
+        "ImageObject",
+        "WebSite",
+        "BreadcrumbList",
+        "ListItem",
+        "WebPage",
+        "Article",
+        "VideoObject"
+      ],
+      "date": "2025-01-27T12:32:12+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2020-10-26T16:32:29+00:00",
+      "date_modified": "2025-01-27T12:32:12+00:00"
+    },
+    "https://blog.hispanic-horizons.org/audios-ele-a1/preterito-perfecto-en-espanol/": {
+      "words": 627,
+      "h2": 0,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Organization",
+        "ImageObject",
+        "WebSite",
+        "SearchAction",
+        "WebPage",
+        "Article",
+        "Person"
+      ],
+      "date": "2026-09-23T03:07:13+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2025-02-26T08:25:38+00:00",
+      "date_modified": "2026-09-23T03:07:13+00:00"
+    },
+    "https://blog.hispanic-horizons.org/audios-ele-c1/audios-ele-c1-comprension-auditiva-nivel-c1-alimentacion-ecologica/": {
+      "words": 943,
+      "h2": 0,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Organization",
+        "ImageObject",
+        "WebSite",
+        "SearchAction",
+        "WebPage",
+        "Article",
+        "Person"
+      ],
+      "date": "2026-06-15T14:40:15+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2026-06-15T13:23:55+00:00",
+      "date_modified": "2026-06-15T14:40:15+00:00"
+    },
+    "https://blogdeespanol.com/2018/12/podcast-nivel-c1/": {
+      "words": 859,
+      "h2": 2,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 12,
+        "forms": 3
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [
+        "Article",
+        "CommentAction",
+        "WebPage",
+        "ReadAction",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization",
+        "Person"
+      ],
+      "date": "2026-03-17T08:47:59+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2018-12-12T09:59:51+00:00",
+      "date_modified": "2026-03-17T08:47:59+00:00"
+    },
+    "https://blogdeespanol.com/2022/02/comprension-auditiva-a1-a2/": {
+      "words": 775,
+      "h2": 3,
+      "exercises": {
+        "has": true,
+        "keywords": [
+          "comprobar"
+        ],
+        "inputs": 12,
+        "forms": 3
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [
+        "Article",
+        "CommentAction",
+        "WebPage",
+        "ReadAction",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization",
+        "Person"
+      ],
+      "date": "2025-12-19T08:47:03+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2022-02-13T15:24:37+00:00",
+      "date_modified": "2025-12-19T08:47:03+00:00"
+    },
+    "https://conjuguemos.com/grammar/229": {
+      "words": 148,
+      "h2": 1,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 11,
+        "forms": 4
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://conjuguemos.com/verb/114": {
+      "words": 280,
+      "h2": 1,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 11,
+        "forms": 4
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://eduki.com/es/material/931015/speaking-game-b2-juego-de-conversacion-en-ingles-para-nivel-intermedio": {
+      "words": 1,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 0,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "WebSite"
+      ],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null,
+      "note": "Poco texto en HTML (posible render por JS o bloqueo)"
+    },
+    "https://es.scribd.com/document/977371077/MICHAL-Spanish-Lesson-B2": {
+      "words": 38,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 0,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null,
+      "note": "Poco texto en HTML (posible render por JS o bloqueo)"
+    },
+    "https://espanol.lingolia.com/es/comprension-auditiva": {
+      "words": 114,
+      "h2": 8,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://espanol.lingolia.com/es/gramatica/tiempos/preterito-perfecto": {
+      "words": 747,
+      "h2": 9,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://formacionele.com/ensenando-el-espanol-en-la-clase-de-ele-de-forma-practica/": {
+      "words": 1724,
+      "h2": 11,
+      "exercises": {
+        "has": true,
+        "keywords": [
+          "solucion"
+        ],
+        "inputs": 22,
+        "forms": 4
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "SiteNavigationElement",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "date": "2026-07-02T13:26:59+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2026-07-02T13:23:51+00:00",
+      "date_modified": "2026-07-02T13:26:59+00:00"
+    },
+    "https://laprofeplotts.com/preterite-vs-imperfect-activities-for-spanish-class/": {
+      "words": 2601,
+      "h2": 5,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 15,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Article",
+        "CommentAction",
+        "WebPage",
+        "ReadAction",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Person"
+      ],
+      "date": "2024-05-23T16:10:44+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2021-04-17T05:40:47+00:00",
+      "date_modified": "2024-05-23T16:10:44+00:00"
+    },
+    "https://lenguajeyotrasluces.com/2017/01/20/imperativo-en-espanol-usos-forma/": {
+      "words": 817,
+      "h2": 5,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 13,
+        "forms": 5
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Person",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "date": "2017-11-02T12:29:47+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2017-01-20T10:06:34+00:00",
+      "date_modified": "2017-11-02T12:29:47+00:00"
+    },
+    "https://marcoele.com/papeles/09.3.pronombre.od.pdf": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 000 · curl: (28) Connection timed out after 20003 milliseconds",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://martaspanishclass.com/es/actividad-de-comprension-oral-nivel-c1/": {
+      "words": 235,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 1,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [
+        "Article",
+        "CommentAction",
+        "WebPage",
+        "ReadAction",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization",
+        "Person"
+      ],
+      "date": "2021-03-05T18:43:15+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2018-12-12T10:45:40+00:00",
+      "date_modified": "2021-03-05T18:43:15+00:00"
+    },
+    "https://misclaseslocas.com/conditional-tense-spanish-practice-activities/": {
+      "words": 1746,
+      "h2": 12,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 2,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Article",
+        "WebPage",
+        "ReadAction",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization",
+        "Person"
+      ],
+      "date": "2026-11-20T20:20:37+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2025-05-23T20:38:25+00:00",
+      "date_modified": "2026-11-20T20:20:37+00:00"
+    },
+    "https://paginadelespanol.com/pronombres-de-objeto-directo/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 502",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://personal.colby.edu/~bknelson/SLC/conditional1.html": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 403",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://personal.colby.edu/~bknelson/SLC/pret_imp.html": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 403",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://profesorescreativos.es/preterito-perfecto-hablando-ele/": {
+      "words": 640,
+      "h2": 1,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 9,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Article",
+        "WebPage",
+        "ReadAction",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization",
+        "Person"
+      ],
+      "date": "2026-02-03T20:04:35+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2018-12-05T10:18:38+00:00",
+      "date_modified": "2026-02-03T20:04:35+00:00"
+    },
+    "https://rutaele.es/comecocos-5/los-pronombres-de-objeto-directo-e-indirecto/": {
+      "words": 1091,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 2,
+        "forms": 1
+      },
+      "pdf": true,
+      "video": false,
+      "schema": [
+        "Organization",
+        "ImageObject",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "WebPage",
+        "ReadAction",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "date": "2013-06-15T06:31:10+00:00",
+      "error": null,
+      "pdf_links": 2,
+      "date_published": "2013-06-15T06:31:10+00:00",
+      "date_modified": "2013-06-15T06:31:10+00:00"
+    },
+    "https://rutaele.es/editorial-r1/comecocos/preteritos-perfecto-indefinido/": {
+      "words": 1019,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 2,
+        "forms": 1
+      },
+      "pdf": true,
+      "video": false,
+      "schema": [
+        "Organization",
+        "ImageObject",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "WebPage",
+        "ReadAction",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "date": "2012-12-23T10:30:58+00:00",
+      "error": null,
+      "pdf_links": 3,
+      "date_published": "2012-12-23T10:30:58+00:00",
+      "date_modified": "2012-12-23T10:30:58+00:00"
+    },
+    "https://spanishcue.com/material-ele/cultura/fiestas-y-tradiciones/b2": {
+      "words": 869,
+      "h2": 7,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [
+        "WebPage",
+        "WebSite",
+        "Organization",
+        "EducationalAudience",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "BreadcrumbList",
+        "ListItem",
+        "VideoObject"
+      ],
+      "date": "2026-11-23",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2026-11-02",
+      "date_modified": "2026-11-23"
+    },
+    "https://spanishcue.com/material-ele/formatos/juegos-de-conversacion/b2": {
+      "words": 1752,
+      "h2": 9,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [
+        "WebPage",
+        "WebSite",
+        "Organization",
+        "EducationalAudience",
+        "ImageObject",
+        "FAQPage",
+        "Question",
+        "Answer",
+        "BreadcrumbList",
+        "ListItem",
+        "VideoObject"
+      ],
+      "date": "2026-11-23",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2026-11-02",
+      "date_modified": "2026-11-23"
+    },
+    "https://spanishcue.com/spanish-grammar-lessons/conditional-tense-activities": {
+      "words": 1066,
+      "h2": 6,
+      "exercises": {
+        "has": true,
+        "keywords": [
+          "solucion",
+          "soluciones"
+        ],
+        "inputs": 0,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "WebPage",
+        "WebSite",
+        "Organization",
+        "EducationalAudience",
+        "BreadcrumbList",
+        "ListItem"
+      ],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://srtaspanish.com/product-category/grammar-topics/preterite-vs-imperfect-resources/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 403",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://studyspanish.com/grammar/test/conditional": {
+      "words": 928,
+      "h2": 0,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 24,
+        "forms": 3
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://studyspanish.com/grammar/test/pretimp1": {
+      "words": 1099,
+      "h2": 0,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 24,
+        "forms": 3
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://theengagedspanishclassroom.com/2022/03/elementor-2645.html": {
+      "words": 2759,
+      "h2": 13,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 14,
+        "forms": 4
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "Article",
+        "CommentAction",
+        "WebPage",
+        "ReadAction",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization",
+        "Person"
+      ],
+      "date": "2022-04-09T14:41:31+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2022-03-27T20:20:48+00:00",
+      "date_modified": "2022-04-09T14:41:31+00:00"
+    },
+    "https://todoele.net/actividades-cultura/fiestas": {
+      "words": 816,
+      "h2": 12,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://todoele.net/actividades-gramatica/imperativo": {
+      "words": 868,
+      "h2": 12,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://todoele.net/bibliografia/la-comprension-auditiva-en-el-aula-de-espanol-como-lengua-extranjera-recursos-en": {
+      "words": 293,
+      "h2": 2,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 0,
+        "forms": 0
+      },
+      "pdf": true,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 1,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://todoele.net/gramatica-contenido-gramatical/preterito-perfecto-indicativo": {
+      "words": 687,
+      "h2": 6,
+      "exercises": {
+        "has": true,
+        "keywords": [
+          "solucion",
+          "soluciones"
+        ],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://todoele.net/gramatica-contenido-gramatical/pronombres-objeto": {
+      "words": 849,
+      "h2": 6,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 4,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://vamospanish.com/learn-spanish/spanish-exercises-by-topic/preterite-vs-imperfect-exercises/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 403",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://videoele.com/B2-Ya-es-navidad.html": {
+      "words": 101,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 0,
+        "forms": 0
+      },
+      "pdf": true,
+      "video": true,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 2,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://wordwall.net/es-es/community/espa%C3%B1ol/b2": {
+      "words": 844,
+      "h2": 2,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 1,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "WebPage",
+        "WebPageElement",
+        "WebSite"
+      ],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://worldlanguagecafe.com/preterite-vs-imperfect-activities/": {
+      "words": 1219,
+      "h2": 3,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 10,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "BlogPosting",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "Organization",
+        "Person",
+        "WebPage",
+        "WebSite"
+      ],
+      "date": "2026-01-21T13:04:54-05:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2025-03-04T12:59:03-05:00",
+      "date_modified": "2026-01-21T13:04:54-05:00"
+    },
+    "https://www.aporeldele.com/blog/dele-c1-comprension-auditiva-consejos-doble-escucha": {
+      "words": 2305,
+      "h2": 13,
+      "exercises": {
+        "has": true,
+        "keywords": [
+          "comprobar"
+        ],
+        "inputs": 9,
+        "forms": 2
+      },
+      "pdf": true,
+      "video": false,
+      "schema": [
+        "Article",
+        "Person",
+        "Organization",
+        "ImageObject"
+      ],
+      "date": null,
+      "error": null,
+      "pdf_links": 1,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.cerebriti.com/juegos-de-B2/tag/mas-recientes/": {
+      "words": 913,
+      "h2": 0,
+      "exercises": {
+        "has": true,
+        "keywords": [
+          "respuestas correctas"
+        ],
+        "inputs": 43,
+        "forms": 11
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.facebook.com/profesoresdeele/posts/-%F0%9D%97%96%F0%9D%97%BC%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%B2%F0%9D%97%BB%F0%9D%98%87%F0%9D%97%AE%F0%9D%97%BB-%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%80-%F0%9D%97%A6%F0%9D%97%AE%F0%9D%97%BB%F0%9D%97%B3%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%BA%F0%9D%97%B6%F0%9D%97%BB%F0%9D%97%B2%F0%9D%98%80es-el-momento-perfecto-para-acercar-una-de-las-fiestas/1451733610318381/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 400",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.profe-de-espanol.de/tag/imperativo/": {
+      "words": 718,
+      "h2": 7,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 15,
+        "forms": 2
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "CollectionPage",
+        "ImageObject",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization"
+      ],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.profedeele.es/actividad/dele-c1-comprension-auditiva-y-uso-de-la-lengua/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 307",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.profedeele.es/actividad/dele-escolar-b2-c1-comprension-auditiva/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 307",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.profedeele.es/cultura/fiestas-y-tradiciones/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 307",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.profedeele.es/gramatica/verbos/imperativo/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 307",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.profedeele.es/gramatica/verbos/indicativo/preterito-perfecto/": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 307",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.spanishboat.com/verb-tenses-exercises/conditional-tense-exercise-1/": {
+      "words": 245,
+      "h2": 1,
+      "exercises": {
+        "has": true,
+        "keywords": [],
+        "inputs": 14,
+        "forms": 1
+      },
+      "pdf": false,
+      "video": false,
+      "schema": [
+        "WebPage",
+        "ReadAction",
+        "BreadcrumbList",
+        "ListItem",
+        "WebSite",
+        "SearchAction",
+        "EntryPoint",
+        "PropertyValueSpecification",
+        "Organization",
+        "ImageObject"
+      ],
+      "date": "2022-10-06T21:18:42+00:00",
+      "error": null,
+      "pdf_links": 0,
+      "date_published": "2020-02-17T11:35:59+00:00",
+      "date_modified": "2022-10-06T21:18:42+00:00"
+    },
+    "https://www.studocu.com/fr/document/institut-catholique-de-paris/espagnol/cours-espanol-b2-s2/107605721": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 403",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.teacherspayteachers.com/Product/El-Condicional-Conditional-Tense-Regular-and-Irregular-Verbs-in-Spanish-12589107": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 403",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.teacherspayteachers.com/Product/Spanish-Preterite-vs-Imperfect-Google-Activity-Bundle-Digital-Activities-Grammar-7386105": {
+      "words": null,
+      "h2": null,
+      "exercises": null,
+      "pdf": null,
+      "video": null,
+      "schema": [],
+      "date": null,
+      "error": "HTTP 403",
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null
+    },
+    "https://www.youtube.com/playlist?list=PL25ihCpbsaoZsO1Y1ZTRnXUKyNl4JGLlA": {
+      "words": 28,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 1,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null,
+      "note": "Poco texto en HTML (posible render por JS o bloqueo)"
+    },
+    "https://www.youtube.com/playlist?list=PLL4jtSYBxxnbIbUwNhH4rReAbosbDTJOE": {
+      "words": 28,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 1,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null,
+      "note": "Poco texto en HTML (posible render por JS o bloqueo)"
+    },
+    "https://youtu.be/DGiNo2J9O0Q": {
+      "words": 31,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 1,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null,
+      "note": "Poco texto en HTML (posible render por JS o bloqueo)"
+    },
+    "https://youtu.be/E5zdd1X6K3o": {
+      "words": 38,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 1,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null,
+      "note": "Poco texto en HTML (posible render por JS o bloqueo)"
+    },
+    "https://youtu.be/pccmhFo6t6I": {
+      "words": 27,
+      "h2": 0,
+      "exercises": {
+        "has": false,
+        "keywords": [],
+        "inputs": 1,
+        "forms": 0
+      },
+      "pdf": false,
+      "video": true,
+      "schema": [],
+      "date": null,
+      "error": null,
+      "pdf_links": 0,
+      "date_published": null,
+      "date_modified": null,
+      "note": "Poco texto en HTML (posible render por JS o bloqueo)"
+    }
+  }
+}
