@@ -46,11 +46,11 @@ export function GiftSignupForm({ source }: { source: string }) {
   );
 }
 
-export function GiftPitch({ heading = 'h2' }: { heading?: 'h1' | 'h2' }) {
+export function GiftPitch({ heading = 'h2', topic }: { heading?: 'h1' | 'h2'; topic?: string }) {
   const Title = heading;
   return (
     <div className={styles.copy}>
-      <p className={styles.kicker}>Regalo para profes de ELE</p>
+      <p className={styles.kicker}>{topic ? `¿Das clases de ${topic}? Regalo para profes de ELE` : 'Regalo para profes de ELE'}</p>
       <Title className={styles.title}>Desbloquea gratis una clase PRO de gramática</Title>
       <p className={styles.lesson}>«{GIFT_LESSON_TITLE}» · {GIFT_LESSON_LEVEL}</p>
       <p className={styles.lead}>{GIFT_LESSON_PITCH} Una clase completa para dar en vivo, con explicación, audio, práctica y conversación. Deja tu email y se abre al instante.</p>

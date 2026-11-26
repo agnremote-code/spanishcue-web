@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EleNewsletterInline } from "../../../PopularLinks";
 import { notFound, permanentRedirect } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../../../growth/schema";
@@ -65,6 +66,7 @@ export default async function TemaLevelRoute({ params }: Props) {
           <Section id="clases" title={`Clases de ${lower} para ${page.level}`} intro={page.order}>
             <EleLessonGrid lessons={lessons} />
           </Section>
+          <EleNewsletterInline source={page.path} topic={`${lower} ${page.level}`} />
           <EleFichaLinks lessonIds={page.lessonIds} name={`${lower} ${page.level}`} />
           {page.goals.length ? (
             <Section title={`Qué aprende un alumno de ${page.level}`} intro="Objetivos tomados de las propias clases.">

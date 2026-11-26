@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EleNewsletterInline } from "../../PopularLinks";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd } from "../../../growth/components";
 import { faqPageSchema, webPageSchema } from "../../../growth/schema";
@@ -85,6 +86,7 @@ export default async function GuiaPage({ params }: Props) {
           ))}
 
           <div className={print.noPrint}>
+            <EleNewsletterInline source={page.path} />
             <article className={styles.section} id="clases" aria-labelledby="clases-title">
               <h2 id="clases-title">Clases que se citan en esta guía</h2>
               <p className={styles.sectionIntro}>Las clases GRATIS se abren ya. Las PRO están incluidas en la suscripción de {PRICE_LABEL}.</p>

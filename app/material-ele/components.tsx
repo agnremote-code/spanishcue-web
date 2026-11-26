@@ -12,12 +12,18 @@ export { elePreviewLesson, formatDateEs, pageImage } from "./media";
 import { videoObjectSchema, type PageDates } from "../growth/schema";
 import { MATERIAL_ELE_PATH, eleLevels, eleTopics, elePageBySlug, type EleActivity, type EleExercise, type EleQuestionSet } from "./data";
 import { actividadPathByName } from "./actividades";
+import { promoWeekActive } from "../promo-config";
 import styles from "../growth/growth.module.css";
 import grammar from "../growth/grammar.module.css";
 import ele from "./material-ele.module.css";
 
 export const PRICING_PATH = "/pricing";
 export const PRICE_LABEL = "US$19,90 al mes";
+/** Promo week (app/promo-config.ts): while it runs, every buy button of the SEO pages offers the US$0,99 first week. */
+export const PROMO_LABEL = "Probar PRO · US$0,99 la primera semana";
+export const PROMO_NOTE = `Luego ${PRICE_LABEL} · Cancelas cuando quieras`;
+/** The free grammar class the home page opens: no account, no card. */
+export const FREE_CLASS_PATH = "/gramatica/indefinido-e-imperfecto";
 
 /** Page metadata; `image` is the page's own featured class picture (the cover of its first class), so every page shares a different picture and Google can show it next to the result. */
 export function eleMetadata(path: string, title: string, description: string, image?: string): Metadata {
@@ -75,7 +81,7 @@ export function EleTopbar({ current }: { current?: string }) {
         {topLinks.map((link) => (
           <Link href={link.href} key={link.href} aria-current={link.href === current ? "page" : undefined}>{link.label}</Link>
         ))}
-        <Link className={ele.navCta} href={PRICING_PATH}>Suscribirse</Link>
+        <Link className={ele.navCta} href={PRICING_PATH}>{promoWeekActive() ? "Probar PRO US$0,99" : "Suscribirse"}</Link>
       </nav>
     </header>
   );
@@ -204,24 +210,26 @@ export function EleFeaturedLesson({ lesson }: { lesson: LessonCardData }) {
             <Link className={styles.primaryButton} href={lesson.href}>Abrir la clase gratis</Link>
           ) : (
             <>
-              <Link className={ele.buyButton} href={PRICING_PATH}>Desbloquear · {PRICE_LABEL}</Link>
+              <Link className={ele.buyButton} href={PRICING_PATH}>{promoWeekActive() ? `${PROMO_LABEL} →` : `Desbloquear · ${PRICE_LABEL}`}</Link>
               <Link className={styles.secondaryButton} href={lesson.href}>Ver qué incluye</Link>
             </>
           )}
         </div>
+        {!lesson.free && promoWeekActive() ? <p className={ele.promoNote}>{PROMO_NOTE}</p> : null}
       </div>
     </section>
   );
 }
 
 export function EleBuyBand() {
+  const promo = promoWeekActive();
   return (
     <section className={styles.ctaBand} aria-label="Suscribirse a SpanishCue PRO">
-      <h2>Todas las clases, todos los niveles, {PRICE_LABEL}.</h2>
-      <p>Gramática de A1 a C2, mundos 3D de conversación, comprensión auditiva y seguimiento de cada alumno. Pruebas gratis las clases marcadas GRATIS y te suscribes cuando quieras. Puedes cancelar cuando quieras.</p>
+      <h2>{promo ? "Todas las clases, todos los niveles: tu primera semana por US$0,99." : `Todas las clases, todos los niveles, ${PRICE_LABEL}.`}</h2>
+      <p>Gramática de A1 a C2, mundos 3D de conversación, comprensión auditiva y seguimiento de cada alumno. {promo ? `${PROMO_NOTE}.` : "Pruebas gratis las clases marcadas GRATIS y te suscribes cuando quieras. Puedes cancelar cuando quieras."}</p>
       <div className={styles.heroActions}>
-        <Link className={ele.buyButton} href={PRICING_PATH}>Suscribirse · {PRICE_LABEL}</Link>
-        <Link className={styles.secondaryButton} href="/demo/noche-abierta">Probar una clase gratis</Link>
+        <Link className={ele.buyButton} href={PRICING_PATH}>{promo ? `${PROMO_LABEL} →` : `Suscribirse · ${PRICE_LABEL}`}</Link>
+        <Link className={styles.secondaryButton} href={FREE_CLASS_PATH}>Probar una clase gratis</Link>
       </div>
     </section>
   );
