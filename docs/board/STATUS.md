@@ -83,6 +83,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-26 (Thursday reliability routine): run started 02:05Z, plan item 0 (marker) then W48 Thursday items.** Wed 11-25 left its marker (records PR from `claude/wednesday-3d-20261125`).
 - **2026-11-25 (Wednesday 3D routine): records PR from branch `claude/wednesday-3d-20261125`** (base main `203e924`) **and draft PR #510** (Taller build; head `8a17cfa1`). Run-start marker pushed at 02:09Z (W48 item 0). Tue 11-24 left its marker (#516/#518). Subscription usage: **UNKNOWN**.
   - **No 3D unit shipped today, and none passed the gate.** «El taller de la greda» is built but not gated, so #510 stays a draft and is not counted as a unit.
   - **R5 is still open (VERIFIED, open-PR list at 02:10Z):** Codex #209 and board draft #282 both still hold `.github/workflows/**`. The STT workflow therefore still cannot land, and no VALID `--seeded` run is possible.
