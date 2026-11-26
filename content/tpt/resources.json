@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "resources": [
+    {
+      "slug": "preterite-vs-imperfect-story-task",
+      "title": "Preterite vs Imperfect: Full Lesson with Story Task",
+      "price_usd": 5.5,
+      "grade_range": "8-12",
+      "level_label": "Spanish 2-3",
+      "cover_level": "SPANISH 2-3",
+      "tags": ["Spanish", "Grammar", "Preterite", "Imperfect", "Past Tense", "No Prep"],
+      "description": "Your students know both past tenses but still mix them up when they tell a story. This lesson fixes that with one clear idea: the imperfect paints the scene, the preterite moves the story forward. Students follow a witness, Carmen, who tells a police officer about a bike accident she saw from the bus stop. They sort scene and event sentences, choose the right verb in context, read the witness statement, correct real student mistakes and finish with their own witness report. Everything is planned minute by minute for a 60-minute class, with a complete answer key and model answers, so you can print it tonight and teach it tomorrow.",
+      "whats_inside": [
+        "Teacher guide with objectives and a minute-by-minute 60-minute script",
+        "4-page student worksheet, print and go (A4, prints fine on Letter)",
+        "Scene or event sorting task built on one memorable story",
+        "Reading: a witness statement with comprehension questions",
+        "Find-the-mistake task with the errors students really make",
+        "Story writing task with a model answer and a complete answer key"
+      ],
+      "lessons": [
+        {
+          "title": "Preterite vs Imperfect: The Witness",
+          "worksheetTitle": "Preterite vs Imperfect: The Witness",
+          "sources": [{ "path": "/gramatica/indefinido-e-imperfecto" }],
+          "objectives": [
+            "Use the **imperfect** to describe the scene of a past story (time, weather, place, what people were doing).",
+            "Use the **preterite** for the events that move the story forward.",
+            "Choose correctly between **había**, **hubo** and **era**.",
+            "Tell a short story about an incident they saw, in 8 to 10 sentences."
+          ],
+          "materials": [
+            "One copy of the student worksheet per student",
+            "Board or projector (optional: the interactive class at spanishcue.com/gramatica/indefinido-e-imperfecto)"
+          ],
+          "plan": [
+            { "min": "0-5", "stage": "Warm-up", "do": "Write on the board: **Carmen dormía cuando sonó el teléfono.** Ask: Which part is the background? Which part is the new event? Underline *dormía* in blue (scene) and *sonó* in orange (event). Tell students: today the story has two colors." },
+            { "min": "5-15", "stage": "Present", "do": "Draw two columns: **ESCENA (imperfect)**: era, había, estaba, hacía, llovía, iba, tenía. **HECHOS (preterite)**: hubo, salió, frenó, paró, llegó, llamó. Give the rule in one line: the imperfect describes what was going on; the preterite says what happened next. Add the trap: *Ayer era un accidente* is wrong, it is **Ayer hubo un accidente**, because an accident happens." },
+            { "min": "15-22", "stage": "Guided practice", "do": "Worksheet **A** (scene or event) in pairs. Check aloud: students say *escena* or *hecho* and raise a blue or orange pen if you like." },
+            { "min": "22-30", "stage": "Practice", "do": "Worksheet **B** (choose the verb), individually. Correct together and ask *¿por qué?* after each answer: students should say *scene* or *event*, not just the form." },
+            { "min": "30-38", "stage": "Reading", "do": "Worksheet **C**: read Carmen's statement aloud with a student as the officer. Then **D** (comprehension) in pairs. Ask a fast follow-up: *¿Qué tiempo hacía? ¿Y qué pasó después?* (one scene sentence + one event sentence)." },
+            { "min": "38-46", "stage": "Practice", "do": "Worksheet **E** (the officer's report) and **F** (find the mistake). Early finishers explain each correction to a partner." },
+            { "min": "46-57", "stage": "Story task", "do": "Worksheet **G**: students become witnesses of an incident (a real one or invented). They need at least 3 scene sentences and 5 event sentences, joined with *cuando*, *de repente*, *después*, *al final*. Volunteers read their story; classmates call out *¡escena!* or *¡hecho!* for two of the verbs." },
+            { "min": "57-60", "stage": "Exit ticket", "do": "On a sticky note: one sentence with **había** and one with **hubo**. Collect at the door." }
+          ],
+          "notes": [
+            "*Cuando* does not decide the tense: *Llovía cuando salí* (scene) and *Cuando llegó la ambulancia, Diego estaba sentado* (scene at the moment of an event).",
+            "A long but closed period takes the preterite: *Ayer llovió todo el día.*",
+            "Clock time in a story is always background: *Eran las ocho y media*, never *fueron*."
+          ],
+          "worksheet": [
+            {
+              "type": "sort",
+              "title": "Scene or event?",
+              "instructions": "Read Carmen's story. Is each sentence part of the scene (imperfect) or an event (preterite)? Tick one box.",
+              "columns": ["Scene (imperfect)", "Event (preterite)"],
+              "items": [
+                { "text": "Eran las ocho y media.", "answer": 0 },
+                { "text": "Un taxi salió de un garaje.", "answer": 1 },
+                { "text": "El suelo estaba mojado.", "answer": 0 },
+                { "text": "Carmen llamó a emergencias.", "answer": 1 },
+                { "text": "Un chico iba en bicicleta.", "answer": 0 },
+                { "text": "El taxista paró.", "answer": 1 },
+                { "text": "Hacía frío.", "answer": 0 },
+                { "text": "Carmen escribió su número de teléfono.", "answer": 1 }
+              ]
+            },
+            {
+              "type": "choice",
+              "title": "Choose the verb",
+              "instructions": "Circle the correct form. Ask yourself: scene or event?",
+              "items": [
+                { "q": "Ayer ___ un accidente en la calle Colón.", "options": ["era", "hubo", "estaba"], "answer": 1 },
+                { "q": "Cuando salí, ___ mucho tráfico en la calle.", "options": ["era", "había", "hubo"], "answer": 1 },
+                { "q": "El chico ___ joven, de unos veinte años.", "options": ["hubo", "había", "era"], "answer": 2 },
+                { "q": "___ las nueve cuando llegó la agente.", "options": ["Hubo", "Fueron", "Eran"], "answer": 2 },
+                { "q": "Carmen leía el periódico y de repente ___ un ruido fuerte.", "options": ["escuchó", "escuchaba", "escucha"], "answer": 0 },
+                { "q": "El sábado ___ toda la tarde y no salí de casa.", "options": ["llueve", "llovía", "llovió"], "answer": 2 },
+                { "q": "___ cuando Carmen salió de casa, por eso llevó paraguas.", "options": ["Llovió", "Llovía", "Llueve"], "answer": 1 },
+                { "q": "Cuando llegó la ambulancia, Diego ___ sentado en el suelo.", "options": ["está", "estaba", "estuvo"], "answer": 1 }
+              ]
+            },
+            {
+              "type": "read",
+              "title": "Read: Carmen's statement",
+              "instructions": "Officer Prado talks to Carmen at the police station.",
+              "text": [
+                "**Agente:** Buenos días, señora Ortega. Ayer por la mañana hubo un accidente en su calle. ¿Usted lo vio?",
+                "**Carmen:** Sí, lo vi todo. Eran las ocho y media. Yo esperaba el autobús en la parada.",
+                "**Agente:** ¿Qué tiempo hacía?",
+                "**Carmen:** Llovía un poco y había mucho tráfico. El suelo estaba mojado.",
+                "**Agente:** Entiendo. ¿Y qué pasó?",
+                "**Carmen:** Un chico iba en bicicleta por la calle. De repente, un taxi salió de un garaje.",
+                "**Agente:** ¿El taxi chocó con la bicicleta?",
+                "**Carmen:** No. El chico frenó muy fuerte, pero con el suelo mojado se cayó (*he fell*).",
+                "**Agente:** ¿Y usted qué hizo?",
+                "**Carmen:** Fui corriendo a ayudar al chico y llamé a emergencias. El taxista también paró.",
+                "**Agente:** ¿Cómo estaba el chico?",
+                "**Carmen:** Tenía la rodilla mal, pero estaba tranquilo. Cuando llegó la ambulancia, ya hablaba por teléfono con su hermana."
+              ]
+            },
+            {
+              "type": "open",
+              "title": "Did you understand?",
+              "instructions": "Answer in Spanish with a full sentence.",
+              "lineAfter": true,
+              "items": [
+                { "q": "¿Dónde estaba Carmen a las ocho y media?", "answer": "Estaba en la parada del autobús. Esperaba el autobús." },
+                { "q": "¿Qué tiempo hacía?", "answer": "Llovía un poco (y el suelo estaba mojado)." },
+                { "q": "¿Por qué se cayó el chico?", "answer": "Porque frenó muy fuerte y el suelo estaba mojado." },
+                { "q": "¿Qué hizo Carmen después?", "answer": "Fue corriendo a ayudar al chico y llamó a emergencias." },
+                { "q": "¿Qué hacía el chico cuando llegó la ambulancia?", "answer": "Hablaba por teléfono con su hermana." }
+              ]
+            },
+            {
+              "type": "fill",
+              "title": "The officer's report",
+              "instructions": "Complete the report with the imperfect or the preterite of the verb in parentheses.",
+              "items": [
+                { "q": "A las ocho y media ________ (haber) mucho tráfico en la calle Colón.", "answer": "había" },
+                { "q": "A las ocho y treinta y cinco ________ (haber) un accidente en la esquina.", "answer": "hubo" },
+                { "q": "El ciclista ________ (llevar) un casco azul y una chaqueta negra.", "answer": "llevaba" },
+                { "q": "El taxista ________ (bajar) del coche y ayudó al chico.", "answer": "bajó" },
+                { "q": "Diego ________ (estar) dos horas en el hospital y después volvió a casa.", "answer": "estuvo" },
+                { "q": "Una furgoneta ________ (estar) delante del garaje y el taxista no ________ (poder) ver la calle.", "answer": "estaba · podía" },
+                { "q": "Cuando el taxista ________ (oír) el ruido, paró enseguida.", "answer": "oyó" },
+                { "q": "Diego ________ (tener) prisa porque ________ (ir) a la universidad.", "answer": "tenía · iba" }
+              ]
+            },
+            {
+              "type": "fix",
+              "title": "Find the mistake",
+              "instructions": "Each sentence has one mistake. Write the correct sentence.",
+              "items": [
+                { "q": "Ayer era un accidente cerca de mi casa.", "answer": "Ayer **hubo** un accidente cerca de mi casa." },
+                { "q": "Fueron las ocho y media cuando Diego frenó.", "answer": "**Eran** las ocho y media cuando Diego frenó." },
+                { "q": "Diego iba por la calle y de repente un taxi salía del garaje.", "answer": "Diego iba por la calle y de repente un taxi **salió** del garaje." },
+                { "q": "Carmen estuvo en la parada cuando pasó el accidente.", "answer": "Carmen **estaba** en la parada cuando pasó el accidente." },
+                { "q": "Anoche había una tormenta muy fuerte y después se fue la luz.", "answer": "Anoche **hubo** una tormenta muy fuerte y después se fue la luz." }
+              ]
+            },
+            {
+              "type": "write",
+              "title": "Story task: you are the witness",
+              "instructions": "You saw a small incident (in the street, at school, at a game, at the mall). Write your statement for the police in 8 to 10 sentences.",
+              "prompt": "Include: the time (**Eran las…**), the weather (**Hacía… / Llovía…**), where you were and what you were doing, what happened (**De repente…**), what you did and how the people were at the end. Use at least 3 imperfect verbs and 5 preterite verbs.",
+              "lines": 12,
+              "model": "Eran las cuatro de la tarde y hacía mucho calor. Yo estaba en el parque con mi hermano. Había muchos niños y un señor vendía helados. De repente, un perro grande corrió hacia el carrito de helados. El señor gritó y el carrito se cayó. Mi hermano y yo fuimos a ayudar. Después, el dueño del perro llegó y pidió perdón. Al final, el señor estaba tranquilo y nos dio un helado gratis."
+            }
+          ],
+          "extraAnswers": [
+            "Exit ticket (examples): *Había mucha gente en la parada.* / *Ayer hubo un examen de español.*"
+          ]
+        }
+      ]
+    }
+  ],
+  "bundles": []
+}
