@@ -357,6 +357,12 @@ const app = {
       ? await verifyShareSession(routedHeaders.get("cookie"),env).catch(()=>null)
       : null;
     applyShareHeaders(verifiedHeaders,shareSession);
+    // A pass opens PRO weeks, topics and topic audio only while its teacher has full access.
+    // Passes from free teachers (FREE_HOMEWORK_LEARNERS) keep the public preview weeks only.
+    const sharePremium=Boolean(shareSession)&&(premiumAutoestudio||topicAudio);
+    const shareFull=sharePremium
+      ? Boolean(await studentWorldPass(routedHeaders.get("cookie"),env).catch(()=>null))
+      : false;
     const owner=ownerFromHeaders(verifiedHeaders);
     const fullAccess=fullAccessFromHeaders(verifiedHeaders);
     // Teacher's pass (app/jugar/student-pass.ts): a student with a valid pass from a
@@ -390,12 +396,12 @@ const app = {
     }
     // Newsletter gift: an authentic email-signup cookie opens one PRO grammar class and its audio, nothing else.
     const gifted=!fullAccess&&giftCoversPath(pathname,lesson?.id??null)&&await hasGift(request.headers.get('cookie'),env.AUTOESTUDIO_SHARE_SECRET).catch(()=>false);
-    if (premiumAudio && !fullAccess && !gifted && !(topicAudio && shareSession) && !studentAudio) {
+    if (premiumAudio && !fullAccess && !gifted && !(topicAudio && shareFull) && !studentAudio) {
       const headers = new Headers({'Cache-Control':'private, no-store'});
       setSecurityHeaders(headers,url,verifiedLocale);
       return new Response('Forbidden',{status:403,headers});
     }
-    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess&&!gifted&&!studentWorld)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess&&!shareAllowsPath(pathname,shareSession))) {
+    if ((administrative&&!owner)||(lesson&&!isFreeLesson(lesson.id)&&!fullAccess&&!gifted&&!studentWorld)||(premiumBoard&&!fullAccess)||(premiumAutoestudio&&!fullAccess&&!(shareFull&&shareAllowsPath(pathname,shareSession)))) {
       if(pathname.startsWith('/api/')) {
         const headers = new Headers({'content-type':'application/json','Cache-Control':'private, no-store'});
         setSecurityHeaders(headers,url,verifiedLocale);
@@ -408,6 +414,8 @@ const app = {
       // must see «open your teacher's link again», never the teacher PRO paywall.
       // A student who lost the pass on a 3D world goes back to the hub, never to the teacher paywall.
       if(isStudentWorldLesson(lesson?.id)&&shareHint(request.headers.get('cookie'))&&!rscPayload) return noStoreRedirect(new URL('/jugar?pase=vencido',url),verifiedLocale);
+      // The student has a valid pass, but the teacher's free plan stops at the preview weeks.
+      if(premiumAutoestudio&&!rscPayload&&shareSession&&!shareFull&&shareAllowsPath(pathname,shareSession)) return noStoreRedirect(new URL(`/autoestudio/claim?semana=${encodeURIComponent(pagePath)}&profe=gratis`,url),verifiedLocale);
       if(premiumAutoestudio&&!rscPayload) return noStoreRedirect(new URL(`/autoestudio/claim?semana=${encodeURIComponent(pagePath)}`,url),verifiedLocale);
       return noStoreRedirect(new URL(`/acceso?returnTo=${encodeURIComponent(pagePath+pageSearch(url))}`,url),verifiedLocale);
     }

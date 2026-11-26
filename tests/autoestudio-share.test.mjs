@@ -19,7 +19,6 @@ const call=async(fn,...args)=>{try{return await fn(...args,env);}catch(e){return
 let pass,token,pending,sessionCookie,session;
 test('migration preserves representative existing data and enforces tenant foreign keys',()=>{assert.equal(db.prepare("SELECT alias FROM students WHERE id='existing'").get().alias,'Existing learner');assert.throws(()=>db.prepare("INSERT INTO autoestudio_passes VALUES('x','wrong','absent','a2',1,NULL,'now')").run());});
 test('anonymous cannot mint',async()=>assert.equal((await call(api.createPass,req({level:'a2'},{owner:null}))).status,401));
-test('free account cannot mint',async()=>assert.equal((await call(api.createPass,req({level:'a2'},{pro:false}))).status,403));
 test('cross-origin mint denied',async()=>assert.equal((await call(api.createPass,req({level:'a2'},{headers:{origin:'https://evil.test'}}))).status,403));
 test('Pro creates one 192-bit pass and learner, no raw bearer stored',async()=>{const r=await call(api.createPass,req({level:'a2'}));assert.equal(r.status,201);const value=await r.json();pass=value.pass;token=value.link.split('/s/')[1];assert.match(pass.id,/^[a-f0-9]{48}$/);assert.equal(db.prepare('SELECT COUNT(*) n FROM autoestudio_learners').get().n,1);assert.ok(!JSON.stringify(db.prepare('SELECT * FROM autoestudio_passes').all()).includes(token));});
 test('valid link uses secure pending cookie and clean no-referrer redirect',async()=>{const r=await api.redeem(req(),token,env);assert.equal(r.status,303);assert.equal(r.headers.get('location'),'/autoestudio/claim');assert.equal(r.headers.get('referrer-policy'),'no-referrer');assert.match(r.headers.get('set-cookie'),/HttpOnly; Secure; SameSite=Lax/);pending=cookie(r);assert.equal(await api.verifyShareSession(pending,env),null);});
@@ -131,4 +130,16 @@ test('student access never lapses by time: long pending cookie, renewal of old c
   assert.equal(await api.renewShareCookie(fresh.slice(0,-2)+'00',env),null);
   await call(api.mutatePass,req({action:'revoke'}),made.pass.id);
   assert.equal(await api.renewShareCookie(fresh,env),null);
+});
+test('free teacher gives Homework to 2 learners, then gets free_learner_limit; listing says plan free',async()=>{
+  const free={owner:'teacher-free',pro:false};
+  const first=await call(api.createPass,req({level:'a1'},free));assert.equal(first.status,201);
+  const second=await call(api.createPass,req({level:'b1'},free));assert.equal(second.status,201);
+  const third=await call(api.createPass,req({level:'a2'},free));assert.equal(third.status,403);assert.equal((await third.json()).error,'free_learner_limit');
+  // Another level for a learner the free teacher already has stays allowed.
+  const learnerId=(await first.json()).pass.learnerId;
+  assert.equal((await call(api.createPass,req({level:'a2',learnerId},free))).status,201);
+  const listing=await (await call(api.listPasses,req(null,free))).json();
+  assert.equal(listing.plan,'free');assert.equal(listing.freeLearnerLimit,api.FREE_HOMEWORK_LEARNERS);assert.equal(listing.learners.length,2);
+  assert.equal((await (await call(api.listPasses,req(null))).json()).plan,'full');
 });

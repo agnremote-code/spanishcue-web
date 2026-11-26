@@ -105,12 +105,20 @@ function readOrigin(request: Request) {
   const origin=request.headers.get('origin');
   if(request.headers.get('sec-fetch-site')==='cross-site' || (origin && origin!==new URL(request.url).origin))fail(403,'forbidden_origin');
 }
-export function teacher(request: Request) {
+/**
+ * Free teachers may give Homework to FREE_HOMEWORK_LEARNERS students. Their passes
+ * open only the free preview weeks (public anyway, see ../access.ts): the Worker
+ * checks the issuing teacher's access before any PRO week or topic opens.
+ */
+export const FREE_HOMEWORK_LEARNERS = 2;
+export function teacherAccess(request: Request) {
   readOrigin(request);
   const user=getUserSessionFromHeaders(request.headers);
   if(!user.isAuthenticated || !user.userId)fail(401,'sign_in_required');
-  if(!user.isPro && !user.isOwner)fail(403,'pro_required');
-  return user.userId;
+  return {ownerId:user.userId,full:Boolean(user.isPro || user.isOwner)};
+}
+export function teacher(request: Request) {
+  return teacherAccess(request).ownerId;
 }
 /** Atomic distributed counters; 4096 rows maximum, IPs are never persisted. */
 export async function rateLimit(env: ShareEnvironment, key: string, limit=120) {
@@ -152,7 +160,7 @@ export async function claim(request: Request, env: ShareEnvironment) {
 }
 const publicPass=(p:Pass)=>({id:p.id,learnerId:p.learner_id,level:p.level,revision:p.revision,revokedAt:p.revoked_at,createdAt:p.created_at,alias:p.alias});
 export async function listPasses(request: Request,env: ShareEnvironment) {
-  const owner=teacher(request);configured(env);await rateLimit(env,`teacher:${owner}`);
+  const {ownerId:owner,full}=teacherAccess(request);configured(env);await rateLimit(env,`teacher:${owner}`);
   const passes=await env.DB.prepare('SELECT p.*,l.alias FROM autoestudio_passes p JOIN autoestudio_learners l ON l.id=p.learner_id AND l.owner_id=p.owner_id WHERE p.owner_id=? ORDER BY p.created_at DESC LIMIT 500').bind(owner).all<Pass>();
   const learners=await env.DB.prepare('SELECT id,alias,created_at AS createdAt FROM autoestudio_learners WHERE owner_id=? ORDER BY created_at DESC LIMIT 500').bind(owner).all();
   // One read of every week row this teacher's learners have; summaries are derived with the
@@ -161,7 +169,7 @@ export async function listPasses(request: Request,env: ShareEnvironment) {
   const byLearner=new Map<string,typeof rows.results>();
   for(const row of rows.results){const list=byLearner.get(row.learner_id)??[];list.push(row);byLearner.set(row.learner_id,list);}
   const errors=await errorCounts(env,owner);
-  return response({passes:passes.results.map(p=>({...publicPass(p),summary:p.alias?summarize(p.level,(byLearner.get(p.learner_id)??[]).filter(r=>r.module_id.startsWith(`${p.level}-`))):null,errors:errors.get(p.learner_id)??null})),learners:learners.results});
+  return response({passes:passes.results.map(p=>({...publicPass(p),summary:p.alias?summarize(p.level,(byLearner.get(p.learner_id)??[]).filter(r=>r.module_id.startsWith(`${p.level}-`))):null,errors:errors.get(p.learner_id)??null})),learners:learners.results,plan:full?"full":"free",freeLearnerLimit:FREE_HOMEWORK_LEARNERS});
 }
 /** Per-learner error totals for the list; a missing history table never hides the list itself. */
 async function errorCounts(env:ShareEnvironment,owner:string){
@@ -187,12 +195,16 @@ function summarize(level:string,rows:{module_id:string;sections:string;last_sect
     lastModule:latest?.module_id??null,lastSection:latest?.last_section??null,lastModuleSections:latest?requiredSectionsDone(state.modules[latest.module_id]):0,lastActivity:latest?.updated_at??null};
 }
 export async function createPass(request: Request,env: ShareEnvironment) {
-  sameOrigin(request);const owner=teacher(request);configured(env);await rateLimit(env,`mint:${owner}`,20);
+  sameOrigin(request);const {ownerId:owner,full}=teacherAccess(request);configured(env);await rateLimit(env,`mint:${owner}`,20);
   const data=await readJson(request);
   if(Object.keys(data).some(k=>!['level','learnerId'].includes(k)) || typeof data.level!=='string' || !levels.includes(data.level))fail(400,'invalid_level');
   const existing=data.learnerId;
   if(existing!==undefined && (typeof existing!=='string' || !idPattern.test(existing)))fail(400,'invalid_learner');
   if(existing && !await env.DB.prepare('SELECT id FROM autoestudio_learners WHERE id=? AND owner_id=?').bind(existing,owner).first())fail(404,'learner_not_found');
+  if(!full && !existing){
+    const learners=await env.DB.prepare('SELECT COUNT(*) AS n FROM autoestudio_learners WHERE owner_id=?').bind(owner).first<{n:number}>();
+    if((learners?.n??0)>=FREE_HOMEWORK_LEARNERS)fail(403,'free_learner_limit');
+  }
   const count=await env.DB.prepare('SELECT COUNT(*) AS n FROM autoestudio_passes WHERE owner_id=?').bind(owner).first<{n:number}>();
   if((count?.n??0)>=500)fail(409,'pass_limit');
   const id=randomId(), learnerId=existing??randomId(), now=new Date().toISOString();
