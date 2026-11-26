@@ -5,6 +5,12 @@
   "description": "Material gratis para enseñar español (ELE): conjugación, dudas de gramática, ejercicios y fichas.",
   "version": "1.0.0",
   "websiteUrl": "https://spanishcue.com",
+  "icons": [
+    {
+      "src": "https://spanishcue.com/favicon.svg",
+      "mimeType": "image/svg+xml"
+    }
+  ],
   "repository": {
     "url": "https://github.com/agnremote-code/spanishcue-web",
     "source": "github"

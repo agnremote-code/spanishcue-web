@@ -319,7 +319,7 @@ export const MCP_DISCOVERY_PATHS: ReadonlySet<string> = new Set(["/.well-known/m
 export const serverCard = () => ({
   $schema: "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   name: MCP_SERVER_NAME, title: SERVER_INFO.title, description: MCP_DESCRIPTION,
-  version: SERVER_INFO.version, websiteUrl: SITE_ORIGIN,
+  version: SERVER_INFO.version, websiteUrl: SITE_ORIGIN, icons: [{ src: url("/favicon.svg"), mimeType: "image/svg+xml" }],
   repository: { url: "https://github.com/agnremote-code/spanishcue-web", source: "github" },
   remotes: [{ type: "streamable-http", url: url(MCP_PATH) }],
   tools: mcpToolList(),
