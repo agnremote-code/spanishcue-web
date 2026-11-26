@@ -13,7 +13,7 @@ test('the full Material ELE index is an indexable HTML list of every page',async
  assert.doesNotMatch(d.querySelector('meta[name="robots"]')?.content||'',/noindex/);
  const links=new Set([...d.querySelectorAll('main a[href^="/material-ele/"]')].map(a=>a.getAttribute('href')));
  assert.ok(links.size>=500,`only ${links.size} links`);
- for(const p of ['/material-ele/gramatica/presente-de-indicativo','/material-ele/gramatica/presente-de-indicativo/a1','/material-ele/vocabulario/comida-y-restaurante/a2','/material-ele/actividades','/material-ele/preguntas/b1'])assert.ok(links.has(p),p);
+ for(const p of ['/material-ele/gramatica/preterito-indefinido','/material-ele/gramatica/preterito-indefinido/a2','/material-ele/vocabulario/comida-y-restaurante/a2','/material-ele/actividades','/material-ele/preguntas/b1'])assert.ok(links.has(p),p);
  dom.window.close();
 });
 
@@ -22,7 +22,7 @@ test('the Atom feed is served as XML for anonymous visitors',async()=>{
  assert.match(response.headers.get('content-type'),/application\/atom\+xml/);
  const xml=await response.text();
  assert.ok(xml.startsWith('<?xml'));assert.ok((xml.match(/<entry>/g)||[]).length>=500);
- assert.match(xml,/<id>https:\/\/spanishcue.com\/material-ele\/gramatica\/presente-de-indicativo\/a1<\/id>/);
+ assert.match(xml,/<id>https:\/\/spanishcue.com\/material-ele\/gramatica\/preterito-indefinido\/a2<\/id>/);
 });
 
 test('the home page links every Material ELE topic for visitors without PRO',async()=>{
@@ -31,6 +31,6 @@ test('the home page links every Material ELE topic for visitors without PRO',asy
  const section=d.querySelector('#material-ele');assert.ok(section,'home index section');
  const links=new Set([...section.querySelectorAll('a[href^="/material-ele/"]')].map(a=>a.getAttribute('href')));
  assert.ok(links.size>=100,`only ${links.size} links`);
- for(const p of ['/material-ele/gramatica','/material-ele/gramatica/presente-de-indicativo','/material-ele/cultura/argentina','/material-ele/indice','/material-ele/actividades','/material-ele/a1'])assert.ok(links.has(p),p);
+ for(const p of ['/material-ele/gramatica','/material-ele/gramatica/preterito-indefinido','/material-ele/cultura/argentina','/material-ele/indice','/material-ele/actividades','/material-ele/a1'])assert.ok(links.has(p),p);
  dom.window.close();
 });

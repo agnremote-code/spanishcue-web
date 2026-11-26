@@ -21,7 +21,8 @@ test('consolidated URLs leave the Material ELE index and its feed',()=>{
 });
 
 test('every consolidated URL was a real generated page, so the 301 replaces something that existed',()=>{
- const generated=new Set([...m.temaPageByPath.keys(),...m.temaLevelPageByPath.keys(),...m.ejercicioPages.map(p=>p.path)]);
+ // A retired level page already answered with a redirect; consolidating it sends it to the final URL in one hop.
+ const generated=new Set([...m.temaPageByPath.keys(),...m.temaLevelPageByPath.keys(),...m.ejercicioPages.map(p=>p.path),...m.retiredTemaLevelPaths.keys()]);
  for(const from of m.prunedRedirects.keys())assert.ok(generated.has(from),`${from} is not a generated page`);
 });
 

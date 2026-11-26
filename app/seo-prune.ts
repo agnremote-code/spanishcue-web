@@ -73,6 +73,27 @@ export const prunedRedirects: ReadonlyMap<string, string> = new Map([
   ["/material-ele/gramatica/oraciones-temporales", "/material-ele/oraciones-temporales"],
   ["/material-ele/gramatica/oraciones-temporales/a2", "/material-ele/oraciones-temporales"],
   ["/material-ele/gramatica/oraciones-temporales/b2", "/material-ele/oraciones-temporales"],
+  // Lote R4 (26/11/2026): grammar index topics duplicating the Material ELE topic page, with their levels.
+  ["/material-ele/gramatica/perifrasis-verbales", "/material-ele/perifrasis-verbales"],
+  ["/material-ele/gramatica/perifrasis-verbales/b1", "/material-ele/perifrasis-verbales"],
+  ["/material-ele/gramatica/perifrasis-verbales/b2", "/material-ele/perifrasis-verbales"],
+  ["/material-ele/gramatica/perifrasis-verbales/c1", "/material-ele/perifrasis-verbales"],
+  ["/material-ele/gramatica/por-y-para", "/material-ele/por-y-para"],
+  ["/material-ele/gramatica/preposiciones", "/material-ele/preposiciones"],
+  ["/material-ele/gramatica/preposiciones-de-lugar", "/material-ele/preposiciones-de-lugar"],
+  ["/material-ele/gramatica/preposiciones/a1", "/material-ele/preposiciones"],
+  ["/material-ele/gramatica/preposiciones/b2", "/material-ele/preposiciones"],
+  ["/material-ele/gramatica/presente-de-indicativo", "/material-ele/presente-de-indicativo"],
+  ["/material-ele/gramatica/presente-de-indicativo/a1", "/material-ele/presente-de-indicativo"],
+  ["/material-ele/gramatica/presente-de-indicativo/a2", "/material-ele/presente-de-indicativo"],
+  ["/material-ele/gramatica/preterito-perfecto", "/material-ele/preterito-perfecto"],
+  ["/material-ele/gramatica/preterito-perfecto/a2", "/material-ele/preterito-perfecto"],
+  ["/material-ele/gramatica/preterito-pluscuamperfecto", "/material-ele/preterito-pluscuamperfecto"],
+  ["/material-ele/gramatica/pronombres-de-objeto", "/material-ele/pronombres-de-objeto"],
+  ["/material-ele/gramatica/pronombres-de-objeto/a2", "/material-ele/pronombres-de-objeto"],
+  ["/material-ele/gramatica/pronombres-de-objeto/c1", "/material-ele/pronombres-de-objeto"],
+  ["/material-ele/gramatica/pronombres-personales", "/material-ele/pronombres-personales"],
+  ["/material-ele/gramatica/pronombres-personales/a1", "/material-ele/pronombres-personales"],
 ]);
 
 /**
