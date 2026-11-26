@@ -52,8 +52,6 @@ test('guides name the author from /equipo, level hubs declare a Course and free 
  const get=async p=>nodesOf(new JSDOM(await (await fetch(origin+p)).text()).window.document);
  const guide=(await get('/material-ele/guia/ejercicios-ele-con-soluciones')).find(n=>n['@type']==='Article');
  assert.equal(guide.author['@id'],PERSON);assert.equal(guide.author['@type'],'Person');
- const en=(await get('/guides/assess-spanish-student-level-online')).find(n=>n['@type']==='Article');
- assert.equal(en.author['@id'],PERSON);
  const course=(await get('/material-ele/a1')).find(n=>n['@type']==='Course');
  assert.equal(course.educationalLevel,'A1');assert.ok(course.hasPart.every(x=>/^https:\/\/spanishcue\.com\//.test(x.url)));
  for(const p of ['/material-ele/ficha/indefinido-e-imperfecto','/ser-o-estar']){

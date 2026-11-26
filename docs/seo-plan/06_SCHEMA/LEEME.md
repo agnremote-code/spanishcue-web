@@ -36,7 +36,7 @@ tests/seo-schema-rendered.test.mjs recorre una página por plantilla en el Worke
 
 ## Misión, fase 3 (26/11/2026)
 
-- **Autor con nombre.** Las guías de Material ELE publican `Article` y las guías en inglés cambian su `author` de la organización a la persona `https://spanishcue.com/equipo#ale` («Ale», profesor de ELE con más de diez años de clases: la única cifra aprobada). El inicio la enlaza como `founder` de la organización.
+- **Autor con nombre.** Las guías de Material ELE publican `Article` con `author` la persona `https://spanishcue.com/equipo#ale` («Ale», profesor de ELE con más de diez años de clases: la única cifra aprobada). El inicio la enlaza como `founder` de la organización. Las guías en inglés (/guides/*) siguen con la organización como `author`: cambiarlo borra textos que protege `check-english-copy.mjs` y necesita el OK de Ale en el hilo.
 - **/equipo.** Página nueva con `ProfilePage` y la persona completa (cargo, descripción, `worksFor`, idiomas). No lleva apellido, foto ni perfil personal hasta que el dueño los pase.
 - **Course** en los seis hubs de nivel (/material-ele/a1 … /c2), con `hasPart` hacia las clases del nivel.
 - **LearningResource** con `EducationalAudience`, `isAccessibleForFree` e `interactivityType` en las fichas abiertas (worksheet) y en las mini-apps de ejercicios (exercise, para alumno y profesor).

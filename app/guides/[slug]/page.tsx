@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { authorNode } from "../../growth/schema";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { teachingGuideBySlug, teachingGuides } from "../../teaching-guides";
@@ -74,7 +73,12 @@ export default async function GuidePage({ params }: GuidePageProps) {
     mainEntityOfPage: canonical,
     datePublished: guide.publishedAt,
     dateModified: guideModifiedDate(guide),
-    author: authorNode,
+    author: {
+      "@type": "Organization",
+      "@id": "https://spanishcue.com/#organization",
+      name: "SPANISHCUE",
+      url: "https://spanishcue.com",
+    },
     publisher: {
       "@type": "Organization",
       "@id": "https://spanishcue.com/#organization",
