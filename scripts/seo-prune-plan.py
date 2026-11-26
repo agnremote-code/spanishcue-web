@@ -118,7 +118,7 @@ for i, b in enumerate(batches):
     for p in b: plan[p][3] = f'R{i + 1}'
 
 with open(out_path, 'w', newline='') as f:
-    w = csv.writer(f); w.writerow(['url', 'accion', 'destino', 'motivo', 'lote', 'impresiones_90d', 'clics_90d', 'veredicto_auditoria'])
+    w = csv.writer(f, lineterminator='\n'); w.writerow(['url', 'accion', 'destino', 'motivo', 'lote', 'impresiones_90d', 'clics_90d', 'veredicto_auditoria'])
     for p in sorted(plan):
         a = plan[p]
         w.writerow(['https://spanishcue.com' + p, a[0], ('https://spanishcue.com' + a[1]) if a[1].startswith('/') else a[1], a[2], a[3], imp(p), clk(p), A[p]['veredicto']])

@@ -35,7 +35,7 @@ fields = ['consulta', 'idioma', 'impresiones_gsc_90d', 'clics_gsc_90d', 'posicio
           'url_objetivo', 'top10_dominios', 'formato_dominante', 'palabras_mediana_top10', 'funciones_serp',
           'preguntas_paa', 'entidades', 'brecha_explotable', 'se_puede_ganar', 'fuente_serp']
 with open(out_path, 'w', newline='') as f:
-    w = csv.writer(f); w.writerow(fields)
+    w = csv.writer(f, lineterminator='\n'); w.writerow(fields)
     for q in serp['queries']:
         key = norm_q(q['query']); g = gsc.get(key); j = judge.get(key, {})
         org = q.get('organic') or []

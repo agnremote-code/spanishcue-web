@@ -173,7 +173,7 @@ def verdict(r, ix, tp, g, grp, near, age):
 
 fields = ['url', 'tipo', 'clics_90d', 'impresiones_90d', 'posicion_media', 'intencion', 'similitud_plantilla_pct', 'similitud_hermana_max_pct', 'texto_propio_palabras', 'edad_familia_dias', 'click_depth', 'indexable', 'canibalizacion_grupo', 'veredicto', 'title', 'h1']
 with open(out_path, 'w', newline='') as f:
-    w = csv.writer(f); w.writerow(fields)
+    w = csv.writer(f, lineterminator='\n'); w.writerow(fields)
     for r in sorted(rows, key=lambda r: r['path']):
         p = r['path']; g = gsc[p]; ix = indexable(r)
         tp = template.get(p, 0.0)
