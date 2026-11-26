@@ -291,7 +291,7 @@ export default {
       ['jubilada', 'Una bufanda para él. Tiene el cuello muy frío. Mira, ya casi está.'],
     ],
     talk: [
-      '¿Conoces a una pareja que lleva muchos años junta? ¿Cuál crees que es su secreto?',
+      '¿Qué pareja de tu familia o de tus amigos te parece un buen ejemplo? ¿Qué hacen bien?',
       '¿Qué haces con tus manos para relajarte: cocinar, dibujar, tejer, otra cosa?',
     ],
     words: [b('hacer punto', 'to knit'), b('tejer', 'to knit / weave'), b('atado', 'tied up'), b('morder', 'to bite'), b('la bufanda', 'the scarf'), b('interrumpir', 'to interrupt')],
@@ -441,7 +441,7 @@ export default {
       why: 'Sergio dice que el tren «se paró a doscientos metros, dentro del túnel».',
     },
     talk: [
-      '¿Te gusta viajar en tren? ¿Cuál es el viaje más largo que has hecho?',
+      '¿Qué te gusta hacer durante un viaje largo en tren?',
       '¿Qué uniforme o ropa de trabajo te parece más bonita o más útil?',
     ],
     words: [b('el revisor', 'the ticket inspector'), b('el chaleco', 'the vest'), b('validar', 'to stamp / validate'), b('las vías', 'the tracks'), b('la boca del túnel', 'the tunnel mouth'), b('el brote', 'the outbreak')],
