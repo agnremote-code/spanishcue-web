@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
-const paths=['/material-ele/formatos','/material-ele/formatos/mundos-3d','/material-ele/formatos/mundos-3d/b1','/material-ele/gramatica','/material-ele/vocabulario','/material-ele/funciones','/material-ele/cultura','/material-ele/gramatica/preterito-indefinido','/material-ele/gramatica/ser-y-estar','/material-ele/gramatica/presente-de-subjuntivo','/material-ele/vocabulario/comida-y-restaurante','/material-ele/funciones/dar-consejos-y-recomendaciones','/material-ele/cultura/argentina','/material-ele/gramatica/preterito-indefinido/a2','/material-ele/gramatica/presente-de-subjuntivo/b1','/material-ele/vocabulario/comida-y-restaurante/a2','/material-ele/funciones/narrar/b1'];
+const paths=['/material-ele/formatos','/material-ele/formatos/mundos-3d','/material-ele/formatos/mundos-3d/b1','/material-ele/gramatica','/material-ele/vocabulario','/material-ele/funciones','/material-ele/cultura','/material-ele/gramatica/preterito-indefinido','/material-ele/gramatica/contraste-de-pasados','/material-ele/gramatica/presente-de-subjuntivo','/material-ele/vocabulario/comida-y-restaurante','/material-ele/funciones/dar-consejos-y-recomendaciones','/material-ele/cultura/argentina','/material-ele/gramatica/preterito-indefinido/a2','/material-ele/gramatica/presente-de-subjuntivo/b1','/material-ele/vocabulario/comida-y-restaurante/a2','/material-ele/funciones/narrar/b1'];
 const noindexLevels=new Set(['/material-ele/gramatica/preterito-indefinido/a2','/material-ele/formatos/mundos-3d/b1','/material-ele/funciones/narrar/b1','/material-ele/gramatica/presente-de-subjuntivo/b1','/material-ele/vocabulario/comida-y-restaurante/a2']);
 for(const path of paths)test(`topic index serves Spanish HTML with the right robots rule for anonymous visitors: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
@@ -60,8 +60,8 @@ test('a retired level page 308-redirects to its topic page',async()=>{
 });
 
 // Batch R4 of the SEO plan: a consolidated grammar index topic and its levels answer 301 straight to the Material ELE topic page.
-test('R4 consolidated grammar topics answer 301 to the final URL',async()=>{
- for(const [from,to] of [['/material-ele/gramatica/presente-de-indicativo','/material-ele/presente-de-indicativo'],['/material-ele/gramatica/presente-de-indicativo/a1','/material-ele/presente-de-indicativo'],['/material-ele/gramatica/perifrasis-verbales/c1','/material-ele/perifrasis-verbales']]){
+test('R4 and R5 consolidated grammar topics answer 301 to the final URL',async()=>{
+ for(const [from,to] of [['/material-ele/gramatica/presente-de-indicativo','/material-ele/presente-de-indicativo'],['/material-ele/gramatica/presente-de-indicativo/a1','/material-ele/presente-de-indicativo'],['/material-ele/gramatica/perifrasis-verbales/c1','/material-ele/perifrasis-verbales'],['/material-ele/gramatica/ser-y-estar','/material-ele/ser-y-estar'],['/material-ele/gramatica/verbos-reflexivos/a1','/material-ele/verbos-reflexivos']]){
   const response=await fetch(origin+from,{redirect:'manual'});
   assert.equal(response.status,301,from);
   assert.equal(new URL(response.headers.get('location'),origin).pathname,to,from);

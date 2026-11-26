@@ -20,7 +20,7 @@ export function AdjCards({ items }: { items: Adjetivo[] }) {
 }
 
 export const SER_GUIDES = [
-  { href: "/material-ele/gramatica/ser-y-estar", label: "Material para enseñar ser y estar" },
+  { href: "/material-ele/ser-y-estar", label: "Material para enseñar ser y estar" },
   { href: "/gramatica/ser-y-estar-con-adjetivos-que-cambian-de-significado", label: "Clase: ser y estar con adjetivos que cambian de significado" },
   { href: "/conjugacion/ser", label: "Conjugación del verbo ser" },
   { href: "/conjugacion/estar", label: "Conjugación del verbo estar" },

@@ -94,6 +94,16 @@ export const prunedRedirects: ReadonlyMap<string, string> = new Map([
   ["/material-ele/gramatica/pronombres-de-objeto/c1", "/material-ele/pronombres-de-objeto"],
   ["/material-ele/gramatica/pronombres-personales", "/material-ele/pronombres-personales"],
   ["/material-ele/gramatica/pronombres-personales/a1", "/material-ele/pronombres-personales"],
+  // Lote R5 (26/11/2026): last grammar index topics duplicating the Material ELE topic page, with their levels.
+  ["/material-ele/gramatica/puntuacion", "/material-ele/puntuacion"],
+  ["/material-ele/gramatica/puntuacion/c1", "/material-ele/puntuacion"],
+  ["/material-ele/gramatica/ser-y-estar", "/material-ele/ser-y-estar"],
+  ["/material-ele/gramatica/ser-y-estar/a1", "/material-ele/ser-y-estar"],
+  ["/material-ele/gramatica/ser-y-estar/b1", "/material-ele/ser-y-estar"],
+  ["/material-ele/gramatica/verbos-de-cambio", "/material-ele/verbos-de-cambio"],
+  ["/material-ele/gramatica/verbos-de-cambio/b1", "/material-ele/verbos-de-cambio"],
+  ["/material-ele/gramatica/verbos-reflexivos", "/material-ele/verbos-reflexivos"],
+  ["/material-ele/gramatica/verbos-reflexivos/a1", "/material-ele/verbos-reflexivos"],
 ]);
 
 /**
