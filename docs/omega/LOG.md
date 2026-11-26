@@ -104,7 +104,7 @@ Alumnos creados por profes gratis: `SELECT COUNT(DISTINCT owner_id) FROM student
 
 ## Hipótesis descartadas
 
-- (ninguna todavía)
+- 2026-11-26: 11 hipótesis de ingreso descartadas con motivo en `docs/omega/MECANISMOS-INGRESO.md` §2 (app B2C sin canal, Preply, formación pagada, plan de por vida, afiliados, embed pago, corporativo duplicado, subvenciones, sub plans, marketplace UGC, Cervantes como cliente).
 
 ## Cola de próximos ciclos (ordenada por evidencia × impacto ÷ esfuerzo)
 
@@ -115,4 +115,5 @@ Alumnos creados por profes gratis: `SELECT COUNT(DISTINCT owner_id) FROM student
 ## Bitácora
 
 - 2026-11-26 · Ciclo 1: línea base, descubrimiento de la activación, E1 programado (PR #548).
+- 2026-11-26 · Encargo «mecanismos de ingreso»: economía real (US$34,90 cobrados en total, 1 clienta, 0 checkouts desde la promo, 0 academias en el panel tras ~39 mails sin precio); 5 supervivientes en MECANISMOS-INGRESO.md. Primer paso: lista de centros acreditados Cervantes + precio de academia (tarjeta a Ale).
 - 2026-11-26 · Ciclo 2: E2 (alta → panel con primeros pasos, invitar colega para gratis).

@@ -32,6 +32,10 @@ export const marketingEvents = [
   "audience_selected_student",
   "teacher_demo_started",
   "student_demo_started",
+  // First screen of a free account (app/cuenta/modules/FirstStudent.tsx): activation, not purchases.
+  "onboarding_student_created",
+  "onboarding_homework_sent",
+  "onboarding_progress_viewed",
 ] as const;
 
 export type MarketingEvent = (typeof marketingEvents)[number];
