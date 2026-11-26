@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import ReinoGame from './ReinoGame';
+import ReinoGame from './ClientOnlyGame';
 
 export const metadata: Metadata = {
   title: 'El reino de la rosa dormida · RPG de conversación A0–C2 | SpanishCue',

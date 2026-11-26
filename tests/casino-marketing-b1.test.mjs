@@ -210,7 +210,7 @@ test('every 3D game jumps with Space and has a nitro on N',()=>{
 
 test('without WebGL the same scenes open from a list',async()=>{
   const compiled=await build({
-    entryPoints:['app/marketing-de-casinos/page.tsx'],bundle:true,write:false,
+    entryPoints:['app/marketing-de-casinos/CasinoGame.tsx'],bundle:true,write:false,
     format:'cjs',platform:'node',packages:'external',loader:{'.css':'empty'},
     plugins:[{name:'no-3d',setup(builder){
       builder.onResolve({filter:/^next\/dynamic$/},()=>({path:'dynamic',namespace:'casino-test'}));

@@ -1,3 +1,3 @@
-import HospitalPro from './HospitalPro';
+import HospitalPro from './ClientOnlyGame';
 
 export default function Page() { return <HospitalPro />; }
