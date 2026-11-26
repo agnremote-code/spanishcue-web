@@ -5,7 +5,7 @@ import { notFound, permanentRedirect } from "next/navigation";
 import { isFreeLesson, localLessonPath } from "../../access-policy";
 import { conversationFamilyByLessonId } from "../../conversation-families/catalog";
 import { conversationLessonHref, resolveConversationLevel } from "../../conversation-families/navigation";
-import { breadcrumbSchema, organizationNode } from "../../growth/schema";
+import { breadcrumbSchema } from "../../growth/schema";
 import { languageAlternates } from "../../seo";
 import {
   immersiveWorldListeningLevels,
@@ -114,7 +114,12 @@ export default async function ResourcePage({ params, searchParams }: ResourcePag
       "@type": "EducationalAudience",
       educationalRole: "teacher",
     },
-    provider: organizationNode,
+    provider: {
+      "@type": "Organization",
+      "@id": "https://spanishcue.com/#organization",
+      name: "SPANISHCUE",
+      url: "https://spanishcue.com",
+    },
   };
 
   const breadcrumbs = breadcrumbSchema([

@@ -6,7 +6,7 @@ import { isFreeLesson, localLessonPath } from "../../access-policy";
 import { conversationFamilyByLessonId } from "../../conversation-families/catalog";
 import { conversationLessonHref } from "../../conversation-families/navigation";
 import { GrowthFooter } from "../../growth/components";
-import { breadcrumbSchema, organizationNode } from "../../growth/schema";
+import { breadcrumbSchema } from "../../growth/schema";
 import { MATERIAL_ELE_PATH, eleLevels } from "../../material-ele/data";
 import {
   RECURSOS_PATH,
@@ -87,7 +87,7 @@ export default async function RecursoPage({ params }: Props) {
     learningResourceType: world3d ? [typeLabel, "Mundo 3D interactivo"] : typeLabel,
     audience: { "@type": "EducationalAudience", educationalRole: "teacher" },
     isAccessibleForFree: free,
-    provider: organizationNode,
+    provider: { "@type": "Organization", "@id": "https://spanishcue.com/#organization", name: "SPANISHCUE", url: "https://spanishcue.com" },
   };
   const breadcrumbs = breadcrumbSchema([
     { name: "SpanishCue", href: "/" },

@@ -11,7 +11,6 @@ import { grammarTopicByPath } from '../../growth/grammar-topics';
 import { grammarMetadata } from '../../growth/grammar-metadata';
 import LevelCrossLinks from "../../growth/LevelCrossLinks";
 import styles from "../guides.module.css";
-import { organizationNode } from "../../growth/schema";
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -74,8 +73,18 @@ export default async function GuidePage({ params }: GuidePageProps) {
     mainEntityOfPage: canonical,
     datePublished: guide.publishedAt,
     dateModified: guideModifiedDate(guide),
-    author: organizationNode,
-    publisher: organizationNode,
+    author: {
+      "@type": "Organization",
+      "@id": "https://spanishcue.com/#organization",
+      name: "SPANISHCUE",
+      url: "https://spanishcue.com",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://spanishcue.com/#organization",
+      name: "SPANISHCUE",
+      url: "https://spanishcue.com",
+    },
     about: guide.keywords,
   };
 
