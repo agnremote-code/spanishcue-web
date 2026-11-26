@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {build} from 'esbuild';
-const r=await build({stdin:{contents:'export {isPrunedPath,prunedRedirects} from "./app/seo-prune.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/temas.ts"; export {pageDates} from "./app/material-ele/indice.ts"; export {elePageBySlug} from "./app/material-ele/data.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
+const r=await build({stdin:{contents:'export {isPrunedPath,isPrunedNoindexPath,prunedRedirects} from "./app/seo-prune.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {isEnglishDefaultPath,isEdgeCacheablePath,isSearchPrivatePath} from "./app/seo.ts"; export * from "./app/material-ele/temas.ts"; export {pageDates} from "./app/material-ele/indice.ts"; export {elePageBySlug} from "./app/material-ele/data.ts"; export {lessons} from "./app/lesson-catalog.ts"; export {isFreeLesson} from "./app/access-policy.ts";',resolveDir:process.cwd()},bundle:true,write:false,platform:'node',format:'esm'});
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 
 test('the topic index is large, grouped like ELE teachers search, and never emits an empty page',()=>{
@@ -79,7 +79,7 @@ test('level pages exist for every group only where two or more classes are writt
   assert.ok(p.title.length<=78,`${p.path} title ${p.title.length}`);
   assert.ok(p.description.length>=110&&p.description.length<=165,`${p.path} description ${p.description.length}`);
   assert.ok(p.faq.length>=3,p.path);
-  assert.ok(m.isPrunedPath(p.path)||urls.has('https://spanishcue.com'+p.path),p.path);
+  assert.ok(m.isPrunedPath(p.path)||m.isPrunedNoindexPath(p.path)||urls.has('https://spanishcue.com'+p.path),p.path);
   assert.equal(m.isEdgeCacheablePath(p.path),true,p.path);
   paths.add(p.path);titles.add(p.title);h1s.add(p.h1);intros.add(p.intro);
  }

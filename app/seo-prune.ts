@@ -1,3 +1,5 @@
+import { noindexLevelPaths } from "./seo-prune-n4";
+
 /**
  * SEO plan, step 4 (docs/seo-plan/04_PLAN_PODA.csv): one search intent = one URL.
  *
@@ -99,6 +101,7 @@ const NOINDEX_FAMILIES: readonly { prefix: string; keep?: (path: string) => bool
 ];
 
 export function isPrunedNoindexPath(path: string): boolean {
+  if (noindexLevelPaths.has(path)) return true;
   return NOINDEX_FAMILIES.some(({ prefix, keep }) => (path === prefix || path.startsWith(prefix + "/")) && !keep?.(path));
 }
 

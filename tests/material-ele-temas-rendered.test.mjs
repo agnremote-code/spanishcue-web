@@ -3,14 +3,17 @@ import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
 const paths=['/material-ele/formatos','/material-ele/formatos/mundos-3d','/material-ele/formatos/mundos-3d/b1','/material-ele/gramatica','/material-ele/vocabulario','/material-ele/funciones','/material-ele/cultura','/material-ele/gramatica/presente-de-indicativo','/material-ele/gramatica/ser-y-estar','/material-ele/gramatica/presente-de-subjuntivo','/material-ele/vocabulario/comida-y-restaurante','/material-ele/funciones/dar-consejos-y-recomendaciones','/material-ele/cultura/argentina','/material-ele/gramatica/presente-de-indicativo/a1','/material-ele/gramatica/presente-de-subjuntivo/b1','/material-ele/vocabulario/comida-y-restaurante/a2','/material-ele/funciones/narrar/b1'];
-for(const path of paths)test(`topic index serves indexable Spanish HTML for anonymous visitors: ${path}`,async()=>{
+const noindexLevels=new Set(['/material-ele/formatos/mundos-3d/b1','/material-ele/funciones/narrar/b1','/material-ele/gramatica/presente-de-subjuntivo/b1','/material-ele/vocabulario/comida-y-restaurante/a2']);
+for(const path of paths)test(`topic index serves Spanish HTML with the right robots rule for anonymous visitors: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));
  const dom=new JSDOM(await response.text());const d=dom.window.document;
  assert.equal(d.documentElement.lang,'es');
  assert.equal(d.querySelectorAll('h1').length,1);
  assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+path);
- assert.doesNotMatch(d.querySelector('meta[name="robots"]')?.content||'',/noindex/);
+ // Lote N4 of the SEO plan: level variants without impressions stay available and linked, out of the index.
+ if(noindexLevels.has(path)){assert.match(d.querySelector('meta[name="robots"]').content,/noindex/);assert.equal(response.headers.get('x-robots-tag'),'noindex, follow');}
+ else{assert.doesNotMatch(d.querySelector('meta[name="robots"]')?.content||'',/noindex/);assert.equal(response.headers.get('x-robots-tag'),null);}
  const schemas=[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=>JSON.parse(s.textContent));
  for(const type of ['BreadcrumbList','FAQPage'])assert.ok(schemas.some(s=>s['@type']===type),type);
  assert.ok(schemas.some(s=>['WebPage','CollectionPage'].includes(s['@type'])&&s.inLanguage==='es'));

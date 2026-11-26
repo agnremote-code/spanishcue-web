@@ -56,4 +56,6 @@ test('noindexed families leave the sitemap and carry noindex, follow',async()=>{
  assert.equal(s.robotsHeaderFor('/ser-o-estar/listo'),'noindex, follow');
  assert.equal(s.robotsHeaderFor('/ser-o-estar'),null);
  assert.equal(s.robotsHeaderFor('/dudas-del-espanol/haber-o-a-ver'),null);
+ assert.equal(s.robotsHeaderFor('/material-ele/cultura/argentina/a1'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/material-ele/formatos/comprension-auditiva/a1'),null);
 });
