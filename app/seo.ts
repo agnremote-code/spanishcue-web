@@ -127,6 +127,7 @@ export function isEdgeCacheablePath(pathname: string): boolean {
   if (isSearchPrivatePath(path)) return false;
   return (
     path === "/about" ||
+    path === "/equipo" ||
     path === "/resources" ||
     path.startsWith("/resources/") ||
     path === "/recursos" ||

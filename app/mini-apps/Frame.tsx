@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../growth/components";
-import { faqPageSchema, webPageSchema } from "../growth/schema";
+import { faqPageSchema, learningResourceSchema, webPageSchema } from "../growth/schema";
 import { EleBuyBand, EleTopbar } from "../material-ele/components";
 import { MATERIAL_ELE_PATH } from "../material-ele/data";
 import { ElePopularLinks } from "../material-ele/PopularLinks";
@@ -16,6 +16,7 @@ export function MiniAppFrame({ path, title, description, h1, kicker, crumbs, faq
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
           <JsonLd data={webPageSchema({ pathname: path, name: title, description, about, inLanguage: "es", educationalLevel: level })} />
+          <JsonLd data={learningResourceSchema({ pathname: path, name: title, description, learningResourceType: "exercise", interactivityType: "active", educationalLevel: level, roles: ["student", "teacher"], teaches: about })} />
           <JsonLd data={faqPageSchema(faq, "es")} />
           <EleTopbar current={MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, ...crumbs]} />

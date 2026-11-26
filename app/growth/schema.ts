@@ -12,6 +12,82 @@ export const organizationRef = { "@id": `${SITE_ORIGIN}/#organization` };
 export const organizationNode = { "@type": "Organization", "@id": `${SITE_ORIGIN}/#organization`, name: SITE_NAME, url: SITE_ORIGIN } as const;
 export const websiteNode = { "@type": "WebSite", "@id": `${SITE_ORIGIN}/#website`, name: SITE_NAME, url: SITE_ORIGIN } as const;
 
+/** The page that presents the person behind SpanishCue (bio, track record). */
+export const TEAM_PATH = "/equipo";
+
+/**
+ * The author named on guides and data reports. Only true facts: the owner's
+ * teaching track record of more than ten years is the one figure approved for
+ * publication (2026-11-26); no surname, photo or personal profile until the
+ * owner provides them.
+ */
+export const authorNode = { "@type": "Person", "@id": `${SITE_ORIGIN}${TEAM_PATH}#ale`, name: "Ale", url: `${SITE_ORIGIN}${TEAM_PATH}` } as const;
+export const authorProfile = {
+  ...authorNode,
+  jobTitle: "Profesor de español como lengua extranjera",
+  description: "Profesor de español como lengua extranjera con más de diez años dando clases. Dirige SpanishCue.",
+  worksFor: organizationRef,
+  knowsLanguage: ["es", "en"],
+  knowsAbout: ["Enseñanza de español como lengua extranjera", "Gramática del español", "Clases de conversación", "MCER", "PCIC"],
+} as const;
+
+/** Article node for authored long-form pages (guides, data reports). */
+export function articleSchema(input: { pathname: string; headline: string; description: string; dates: PageDates; inLanguage?: string; image?: string; about?: string[] }) {
+  const url = canonicalUrl(input.pathname);
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: input.headline,
+    description: input.description,
+    url,
+    mainEntityOfPage: url,
+    inLanguage: input.inLanguage ?? "es",
+    datePublished: input.dates.datePublished,
+    dateModified: input.dates.dateModified,
+    author: authorNode,
+    publisher: organizationNode,
+    isPartOf: websiteNode,
+    ...(input.image ? { image: canonicalUrl(input.image) } : {}),
+    ...(input.about ? { about: input.about } : {}),
+  };
+}
+
+/** A CEFR level hub: an ordered set of classes for one level. */
+export function courseSchema(input: { pathname: string; name: string; description: string; educationalLevel: string; inLanguage?: string; lessons: { name: string; href: string }[] }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Course",
+    name: input.name,
+    description: input.description,
+    url: canonicalUrl(input.pathname),
+    inLanguage: input.inLanguage ?? "es",
+    educationalLevel: input.educationalLevel,
+    provider: organizationNode,
+    audience: { "@type": "EducationalAudience", educationalRole: "teacher" },
+    teaches: `Español como lengua extranjera, nivel ${input.educationalLevel} del MCER`,
+    hasPart: input.lessons.map((lesson) => ({ "@type": "LearningResource", name: lesson.name, url: canonicalUrl(lesson.href) })),
+  };
+}
+
+/** A worksheet or an interactive exercise page that is free to use without an account. */
+export function learningResourceSchema(input: { pathname: string; name: string; description: string; learningResourceType: string; interactivityType: "active" | "expositive" | "mixed"; educationalLevel?: string; inLanguage?: string; roles?: string[]; teaches?: string[] }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: input.name,
+    description: input.description,
+    url: canonicalUrl(input.pathname),
+    inLanguage: input.inLanguage ?? "es",
+    learningResourceType: input.learningResourceType,
+    interactivityType: input.interactivityType,
+    isAccessibleForFree: true,
+    ...(input.educationalLevel ? { educationalLevel: input.educationalLevel } : {}),
+    ...(input.teaches ? { teaches: input.teaches } : {}),
+    audience: (input.roles ?? ["teacher", "student"]).map((role) => ({ "@type": "EducationalAudience", educationalRole: role })),
+    provider: organizationNode,
+  };
+}
+
 export function breadcrumbSchema(items: BreadcrumbItem[]) {
   return {
     "@context": "https://schema.org",

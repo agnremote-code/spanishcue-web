@@ -2,7 +2,7 @@ import Link from "next/link";
 import { EleNewsletterInline } from "../PopularLinks";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../growth/components";
-import { faqPageSchema, webPageSchema } from "../../growth/schema";
+import { courseSchema, faqPageSchema, webPageSchema } from "../../growth/schema";
 import { EleActivities, EleBuyBand, EleExerciseBlock, EleFeaturedLesson, EleLessonGrid, EleLevelNav, ElePageDates, ElePreviewVideo, EleQuestions, EleTopbar, EleTopicCards, PRICE_LABEL, PRICING_PATH, eleLessonCards, eleMetadata, elePreviewLesson, featuredGrammarLesson, pageImage } from "../components";
 import { pageDates } from "../indice";
 import { MATERIAL_ELE_PATH, elePageBySlug, elePages } from "../data";
@@ -75,6 +75,7 @@ export default async function ElePage({ params }: Props) {
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
           <JsonLd data={webPageSchema({ pathname: page.path, name: title, description, about: page.keyPoints.items, inLanguage: "es", ...(page.code ? { educationalLevel: page.code } : {}), image: pageImage(page.lessonIds), dates })} />
+          {page.kind === "level" && page.code ? <JsonLd data={courseSchema({ pathname: page.path, name: title, description, educationalLevel: page.code, lessons: lessons.map((lesson) => ({ name: lesson.title, href: lesson.href })) })} /> : null}
           <JsonLd data={faqPageSchema(faq, "es")} />
           <EleTopbar current={page.slug === "preguntas-de-conversacion" || page.slug === "juegos-para-clase-de-espanol" ? page.path : MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: page.label, href: page.path }]} />

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Breadcrumbs, Faq, GrowthFooter, JsonLd, Section } from "../../../growth/components";
-import { faqPageSchema, webPageSchema } from "../../../growth/schema";
+import { faqPageSchema, learningResourceSchema, webPageSchema } from "../../../growth/schema";
 import { EleBuyBand, EleTopbar, eleMetadata } from "../../components";
 import { MATERIAL_ELE_PATH } from "../../data";
 import { lessonCards } from "../../../growth/lessons";
@@ -48,6 +48,7 @@ export default async function FichaPage({ params }: Props) {
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
           <JsonLd data={webPageSchema({ pathname: page.path, name: page.title, description: page.description, inLanguage: "es", educationalLevel: page.level, about: ["ficha ELE", page.name, page.level] })} />
+          <JsonLd data={learningResourceSchema({ pathname: page.path, name: page.title, description: page.description, learningResourceType: "worksheet", interactivityType: "mixed", educationalLevel: page.level, teaches: [page.name] })} />
           <JsonLd data={faqPageSchema(faq, "es")} />
           <EleTopbar current={MATERIAL_ELE_PATH} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: "Fichas de gramática", href: FICHAS_PATH }, { name: page.h1, href: page.path }]} />

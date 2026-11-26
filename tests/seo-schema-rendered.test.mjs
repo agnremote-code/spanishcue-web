@@ -3,10 +3,11 @@ import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
 const ORG='https://spanishcue.com/#organization';
+const PERSON='https://spanishcue.com/equipo#ale';
 
 // SEO plan step 7 (docs/seo-plan/06_SCHEMA/LEEME.md): one page per template. Every JSON-LD block must parse,
 // carry the properties Google requires for its type, and name the brand through the homepage entity's @id.
-const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about'];
+const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1'];
 
 const required={
  BreadcrumbList:n=>n.itemListElement.length>=2&&n.itemListElement.every((it,i)=>it['@type']==='ListItem'&&it.position===i+1&&it.name&&/^https:\/\/spanishcue\.com\//.test(it.item)),
@@ -15,6 +16,8 @@ const required={
  AudioObject:n=>n.name&&n.contentUrl,
  Article:n=>n.headline&&n.datePublished&&n.author&&n.publisher,
  LearningResource:n=>n.name&&n.url,
+ Course:n=>n.name&&n.description&&n.provider?.['@id']===ORG&&n.educationalLevel&&n.hasPart?.length>=1,
+ ProfilePage:n=>n.mainEntity?.['@type']==='Person'&&n.mainEntity.name&&n.mainEntity['@id']===PERSON,
  WebPage:n=>n.name&&n.url,CollectionPage:n=>n.name&&n.url,AboutPage:n=>n.name||n.url,
  WebSite:n=>n.name&&n.url&&n['@id']==='https://spanishcue.com/#website',
  Organization:n=>n.name&&n.url&&n.logo&&n['@id']===ORG,
@@ -42,4 +45,23 @@ test('the homepage declares the brand as an educational organization with the pr
  assert.equal(org.name,'SPANISHCUE');
  assert.ok(org.alternateName.includes('SpanishCue')&&org.alternateName.includes('Spanish Cue'));
  assert.deepEqual(org.sameAs,['https://www.linkedin.com/company/144023469','https://www.youtube.com/channel/UCCLhj6h2hmjGQZ3XVLyrpUg','https://www.pinterest.com/spanishcue/']);
+});
+
+// Mission phase 3: authored pages name one person, level hubs are courses, free worksheets and exercises are learning resources.
+test('guides name the author from /equipo, level hubs declare a Course and free practice declares a LearningResource',async()=>{
+ const get=async p=>nodesOf(new JSDOM(await (await fetch(origin+p)).text()).window.document);
+ const guide=(await get('/material-ele/guia/ejercicios-ele-con-soluciones')).find(n=>n['@type']==='Article');
+ assert.equal(guide.author['@id'],PERSON);assert.equal(guide.author['@type'],'Person');
+ const en=(await get('/guides/assess-spanish-student-level-online')).find(n=>n['@type']==='Article');
+ assert.equal(en.author['@id'],PERSON);
+ const course=(await get('/material-ele/a1')).find(n=>n['@type']==='Course');
+ assert.equal(course.educationalLevel,'A1');assert.ok(course.hasPart.every(x=>/^https:\/\/spanishcue\.com\//.test(x.url)));
+ for(const p of ['/material-ele/ficha/indefinido-e-imperfecto','/ser-o-estar']){
+  const lr=(await get(p)).find(n=>n['@type']==='LearningResource');
+  assert.ok(lr,p);assert.equal(lr.isAccessibleForFree,true);assert.ok(lr.audience.length>=1);
+ }
+ const profile=(await get('/equipo')).find(n=>n['@type']==='ProfilePage');
+ assert.match(profile.mainEntity.description,/más de diez años/);
+ const org=(await get('/')).find(n=>n['@id']===ORG);
+ assert.equal(org.founder['@id'],PERSON);
 });
