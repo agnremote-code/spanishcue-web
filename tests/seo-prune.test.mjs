@@ -35,6 +35,11 @@ test('the Worker answers consolidated URLs with a 301 before routing',()=>{
  assert.match(src,/Response\.redirect\(new URL\(prunedTo, url\), 301\)/);
 });
 
+test('guide prose links skip the redirect and point at the destination',()=>{
+ const src=readFileSync('app/material-ele/guia-components.tsx','utf8');
+ assert.match(src,/href=\{livePath\(match\[3\]\)\}/);
+});
+
 test('each batch of the pruning plan changes at most 20 URLs',()=>{
  const src=readFileSync('app/seo-prune.ts','utf8');
  const counts={};let cur=null;
