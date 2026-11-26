@@ -53,4 +53,7 @@ test('noindexed families leave the sitemap and carry noindex, follow',async()=>{
  for(const p of sitemapPaths)assert.ok(!s.isPrunedNoindexPath(p),`${p} is noindex but listed`);
  assert.equal(s.robotsHeaderFor('/spanish-verbs/tener'),'noindex, follow');
  assert.equal(s.robotsHeaderFor('/spanish-verbsx'),null);
+ assert.equal(s.robotsHeaderFor('/ser-o-estar/listo'),'noindex, follow');
+ assert.equal(s.robotsHeaderFor('/ser-o-estar'),null);
+ assert.equal(s.robotsHeaderFor('/dudas-del-espanol/haber-o-a-ver'),null);
 });

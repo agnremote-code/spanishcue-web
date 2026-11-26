@@ -33,6 +33,6 @@ test('forms come from the engine, pronominal verbs included',()=>{
 test('sitemap and edge cache',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
  assert.ok(urls.has('https://spanishcue.com/indefinido-o-imperfecto'));
- for(const x of m.marcadores)assert.ok(urls.has('https://spanishcue.com/indefinido-o-imperfecto/'+x.slug),x.slug);
+ for(const x of m.marcadores)assert.ok(!urls.has('https://spanishcue.com/indefinido-o-imperfecto/'+x.slug),x.slug); // lote N3: noindex
  assert.ok(m.isEdgeCacheablePath('/indefinido-o-imperfecto/ayer'));
 });

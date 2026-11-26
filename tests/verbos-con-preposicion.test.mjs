@@ -40,7 +40,7 @@ test('group pages, hub quiz, sitemap and edge cache',()=>{
  assert.equal(m.hubQuiz().length,12);
  const urls=new Set(m.sitemap().map(x=>x.url));
  assert.ok(urls.has('https://spanishcue.com/verbos-con-preposicion'));
- assert.ok(urls.has('https://spanishcue.com/verbos-con-preposicion/preposicion-de'));
- for(const e of m.verbosPrep)assert.ok(urls.has('https://spanishcue.com'+m.prepVerbPath(e)),m.prepVerbPath(e));
+ assert.ok(!urls.has('https://spanishcue.com/verbos-con-preposicion/preposicion-de')); // lote N3: noindex
+ for(const e of m.verbosPrep)assert.ok(!urls.has('https://spanishcue.com'+m.prepVerbPath(e)),m.prepVerbPath(e));
  assert.ok(m.isEdgeCacheablePath('/verbos-con-preposicion/pensar-en'));
 });

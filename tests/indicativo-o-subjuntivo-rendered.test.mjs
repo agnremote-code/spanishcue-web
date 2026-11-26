@@ -3,14 +3,16 @@ import test from 'node:test';
 import {JSDOM} from 'jsdom';
 const origin=process.env.CHESPANISH_TEST_ORIGIN || 'http://127.0.0.1:8787';
 
-for(const [path,h1,items] of [['/indicativo-o-subjuntivo','¿Indicativo o subjuntivo? Ejercicios por expresión',12],['/indicativo-o-subjuntivo/quiero-que','Quiero que + subjuntivo',6],['/indicativo-o-subjuntivo/aunque','Aunque: ¿indicativo o subjuntivo?',6],['/indicativo-o-subjuntivo/si-tuviera','Si + imperfecto de subjuntivo',6]])test(`mood page serves indexable Spanish HTML: ${path}`,async()=>{
+for(const [path,h1,items] of [['/indicativo-o-subjuntivo','¿Indicativo o subjuntivo? Ejercicios por expresión',12],['/indicativo-o-subjuntivo/quiero-que','Quiero que + subjuntivo',6],['/indicativo-o-subjuntivo/aunque','Aunque: ¿indicativo o subjuntivo?',6],['/indicativo-o-subjuntivo/si-tuviera','Si + imperfecto de subjuntivo',6]])test(`mood page serves Spanish HTML with the right robots rule: ${path}`,async()=>{
  const response=await fetch(origin+path);assert.equal(response.status,200);
  assert.equal(response.headers.get('cache-control'),'public, max-age=0, must-revalidate');assert.ok(!response.headers.has('set-cookie'));
  const d=new JSDOM(await response.text()).window.document;
  assert.equal(d.documentElement.lang,'es');
  assert.equal(d.querySelector('h1').textContent,h1);assert.equal(d.querySelectorAll('h1').length,1);
  assert.equal(d.querySelector('link[rel="canonical"]').href,'https://spanishcue.com'+path);
- assert.ok(!d.querySelector('meta[name="robots"]')?.content.includes('noindex'));
+ // Lote N3 of the SEO plan: one page per rule stays available but out of the index; the hub stays indexable.
+ if(path!=='/indicativo-o-subjuntivo'){assert.match(d.querySelector('meta[name="robots"]').content,/noindex/);assert.equal(response.headers.get('x-robots-tag'),'noindex, follow');}
+ else{assert.ok(!d.querySelector('meta[name="robots"]')?.content.includes('noindex'));assert.equal(response.headers.get('x-robots-tag'),null);}
  const ld=[...d.querySelectorAll('script[type="application/ld+json"]')].map(s=>s.textContent).join(' ');
  assert.ok(ld.includes('FAQPage'));
  const choices=d.querySelectorAll('[role="group"]');assert.equal(choices.length,items);

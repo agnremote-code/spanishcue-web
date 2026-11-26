@@ -84,6 +84,18 @@ const NOINDEX_FAMILIES: readonly { prefix: string; keep?: (path: string) => bool
   // Lote N2: one template table per verb (1,258 URLs, SERP owned by WordReference, Reverso and the RAE).
   // The hub and the irregular-verb guides by tense stay indexable.
   { prefix: "/conjugacion", keep: (path) => path === "/conjugacion" || path === "/conjugacion/irregulares" || path.startsWith("/conjugacion/irregulares/") },
+  // Lote N3: one page per rule under each exercise mini-app (181 URLs, 0 impressions in 90 days,
+  // 55–65% template). The hub owns the exercise intent and stays indexable; /dudas-del-espanol/* stays too.
+  ...[
+    "/verbos-con-preposicion",
+    "/indicativo-o-subjuntivo",
+    "/ser-o-estar",
+    "/indefinido-o-imperfecto",
+    "/por-o-para",
+    "/ejercicios-de-gustar",
+    "/ejercicios-de-imperativo",
+    "/ejercicios-de-pronombres",
+  ].map((prefix) => ({ prefix, keep: (path: string) => path === prefix })),
 ];
 
 export function isPrunedNoindexPath(path: string): boolean {
