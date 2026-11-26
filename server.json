@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.spanishcue/spanishcue",
+  "title": "SpanishCue",
+  "description": "Material gratis para enseñar español (ELE): conjugación, dudas de gramática, ejercicios y fichas.",
+  "version": "1.0.0",
+  "websiteUrl": "https://spanishcue.com",
+  "repository": {
+    "url": "https://github.com/agnremote-code/spanishcue-web",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://spanishcue.com/mcp"
+    }
+  ]
+}

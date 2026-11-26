@@ -51,6 +51,13 @@ import { deviceCookieHeader, deviceHash, deviceIdFromCookie, deviceLabel, newDev
 // before the first request; the edge cache keeps serving repeat anonymous HTML.
 setCacheHandler(new BoundedCacheHandler());
 
+const MCP_REGISTRY_AUTH = "v=MCPv1; k=ed25519; p=vHFyivruqpabioCl8psasy0VieJMbWQ2tO/ddvpxO+E=\n";
+/** Per-IP key for MCP calls, counted in the page-read limiter (120 per minute). */
+function mcpRateKey(request: Request, deployment: string | undefined): string | null {
+  const ip = request.headers.get("cf-connecting-ip")?.trim();
+  return ip ? `${deployment ?? "production"}:mcp:${ip}` : null;
+}
+
 // At most a few renders at once per isolate (worker/render-gate.ts, incident 2026-11-17).
 const renderGate = new RenderGate();
 
@@ -290,6 +297,17 @@ const app = {
       canonicalRedirect = true;
     }
     if (canonicalRedirect) return Response.redirect(url, 308);
+
+    // Public read-only MCP server for AI assistants (worker/mcp.ts), loaded only when called.
+    if (url.pathname === "/mcp" || url.pathname === "/.well-known/mcp.json" || url.pathname === "/.well-known/mcp/server-card.json") {
+      if (request.method === "POST" && await rateLimited(env.SCRAPE_LIMITER, mcpRateKey(request, env.SPANISHCUE_DEPLOYMENT))) return rateLimitResponse();
+      const mcp = await import("./mcp");
+      return url.pathname === mcp.MCP_PATH ? mcp.handleMcp(request) : mcp.handleMcpDiscovery(request);
+    }
+    // Domain proof for publishing com.spanishcue/* to the official MCP Registry (public key only).
+    if (url.pathname === "/.well-known/mcp-registry-auth") {
+      return new Response(MCP_REGISTRY_AUTH, { headers: { "Content-Type": "text/plain; charset=utf-8", "Cache-Control": "public, max-age=300" } });
+    }
 
     // Retire the old USA A1 landing before catalog entitlement checks can gate it.
     if (url.pathname === "/estados-unidos-basico") {
