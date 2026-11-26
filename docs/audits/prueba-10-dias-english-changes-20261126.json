@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "authorization": "Owner approval (Ale) on 2026-11-26: «cambialo dale» (message cmsg_01Gr5R4j3t2Yet65UcmhcVhAR5nDj7iGPQo4USNeWFEo38) to move the US$0.99 paid trial from 7 to 10 days, and the in-thread decision card «¿Apruebo estos textos en inglés del sitio para los 10 días?» answered «Sí, aprobados» (card cmsg_01Gr5R4j3t2Yet65UcmhcVhAAU8uUWWRYB3cRWUskSHxU6), which listed these texts: the promo button, the checkout renewal line, the account status, the home pricing line and the legal page now say 10 days instead of the first week.",
+  "additions": [
+    {
+      "path": "app/SpanishCueBrand.tsx",
+      "text": "TRY PRO · US$0.99 FOR 10 DAYS"
+    },
+    {
+      "path": "app/acceso/CheckoutButton.tsx",
+      "text": "US$0.99 for the first 10 days. Then renews automatically at US$19.90/month. Cancel anytime."
+    },
+    {
+      "path": "app/cuenta/SubscriptionManager.tsx",
+      "text": "Trial for US$0.99"
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "10 days for US$0.99: for teachers with an account and no earlier payments on SPANISHCUE, by card or PayPal. You pay US$0.99 today; after 10 days US$19.90 is charged automatically and then every month, unless you cancel first (if you took it before 26 November 2026, the charge comes after 7 days). The offer can be taken until 30 November 2026 at 23:59 (Argentina time)."
+    },
+    {
+      "path": "app/legal/LegalDocument.tsx",
+      "text": "10% off the first month: for signed-in teachers without active PRO, card only. You pay US$17.91 for the first month and then US$19.90/month. It cannot be combined with the US$0.99 10-day offer."
+    },
+    {
+      "path": "app/marketing/MarketingSections.tsx",
+      "text": "10 days for"
+    },
+    {
+      "path": "app/marketing/PromoHeroCta.tsx",
+      "text": "TRY PRO · US$0.99 FOR 10 DAYS"
+    }
+  ]
+}

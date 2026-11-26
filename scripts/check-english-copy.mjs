@@ -104,6 +104,7 @@ export function filterReviewedChanges(findings, reviewed) {
  * exempt an edit or deletion of existing English copy.
  */
 export const APPROVAL_MANIFESTS = [
+  'docs/audits/prueba-10-dias-english-changes-20261126.json',
   'docs/audits/cumplimiento-legal-english-20261126.json',
   'docs/audits/newsletter-popup-english-additions-20261126.json',
   'docs/audits/spanish-verbs-english-additions-20261125.json',
