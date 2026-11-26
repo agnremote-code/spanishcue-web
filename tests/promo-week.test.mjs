@@ -104,7 +104,7 @@ test('Paddle: any other terms, product, amount or a catalog ID is rejected', () 
 });
 
 const live = pp.billingConfig({ PAYPAL_ENV: 'live', PAYPAL_LIVE_CLIENT_ID: 'client', PAYPAL_LIVE_CLIENT_SECRET: 'secret', PAYPAL_LIVE_WEBHOOK_ID: 'hook', PAYPAL_LIVE_PRODUCT_ID: 'PROD-TEST', PAYPAL_LIVE_FOUNDER_PLAN_ID: 'P-LEGACY0000000000' });
-const NEW_PLAN = 'P-NEWPROMO10DAYS000001';
+const NEW_PLAN = 'P-87F77087HH263243MNMEGHGQ';
 const promoPlan = () => ({
   id: NEW_PLAN, name: pp.PAYPAL_PROMO_PLAN_NAME, product_id: 'PROD-TEST', status: 'ACTIVE',
   billing_cycles: [
@@ -161,8 +161,10 @@ test('PayPal Live: new checkouts get the 10-day plan; the original 7-day plan st
   };
   try {
     assert.equal(pp.PAYPAL_LIVE_PROMO_LEGACY_PLAN_ID, 'P-3BW31966S0028752HNL6KR5Y');
+    assert.equal(pp.PAYPAL_LIVE_PROMO_PLAN_ID, NEW_PLAN);
     assert.equal(await pp.ensurePaypalPromoPlan(live), NEW_PLAN);
-    assert.equal(calls.filter(c => c.startsWith('POST')).length, 0);
+    // Pinned: one direct lookup, no listing and no creation.
+    assert.deepEqual(calls, [`GET /v1/billing/plans/${NEW_PLAN}`]);
     const current = await pp.withPaypalPromoPlan(live, NEW_PLAN);
     assert.equal(current.promoPlanId, NEW_PLAN); assert.equal(current.promoPlanDays, 10);
     const legacy = await pp.withPaypalPromoPlan(live, pp.PAYPAL_LIVE_PROMO_LEGACY_PLAN_ID);
