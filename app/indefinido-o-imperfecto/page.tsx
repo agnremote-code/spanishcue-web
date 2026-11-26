@@ -1,4 +1,6 @@
 import { ConsolidatedExercise } from "../material-ele/ConsolidatedExercise";
+import { RewriteSections } from "../material-ele/rewrite-components";
+import { miniAppRewrites } from "../mini-apps/seo-rewrites";
 import Link from "next/link";
 import { Section } from "../growth/components";
 import { eleMetadata } from "../material-ele/components";
@@ -35,6 +37,7 @@ export default function PasadoHub() {
           <MarcadorCards items={marcadores.filter((m) => m.uso === g.uso)} />
         </Section>
       ))}
+      <RewriteSections rewrite={miniAppRewrites.get(PASADO_PATH)} />
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases con marcadores distintos. Si dudas en alguna, abre su página y repasa la regla.">
         <MoodChooser items={mixed} />
       </Section>

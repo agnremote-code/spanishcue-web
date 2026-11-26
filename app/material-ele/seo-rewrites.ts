@@ -605,6 +605,314 @@ const rewrites: Record<string, PageRewrite> = {
       },
     ],
   },
+  // Lote L2a (26/11/2026): briefs 23–27, 36, 37 y 39.
+  "/material-ele/preguntas-de-conversacion": {
+    lote: "L2",
+    title: "Preguntas para clase de conversación en español (A1–C2)",
+    description: "60 preguntas de conversación en español de A1 a C2, con la pregunta de seguimiento y el error que suele aparecer, para clases de adultos.",
+    sections: [
+      {
+        id: "pregunta-seguimiento-error",
+        title: "Cada pregunta, con su seguimiento y el error que provoca",
+        intro: "Dos preguntas por nivel de la lista de abajo. La segunda columna es la que mantiene viva la conversación; la tercera, lo que vas a oír casi seguro.",
+        blocks: [
+          { type: "table", caption: "Preguntas de conversación por nivel con pregunta de seguimiento y error frecuente", head: ["Nivel", "Pregunta", "Pregunta de seguimiento", "Lo que suele fallar", "Cómo reaccionar"], rows: [
+            ["A1", "¿Con quién vives?", "¿Desde cuándo vives con ellos?", "«Vivo con mi novia desde dos años».", "Devuelve la frase bien dicha: «Ah, desde hace dos años». Sin explicar la regla todavía."],
+            ["A1", "¿A qué hora te levantas?", "¿Y los sábados también?", "«Me levanto a siete».", "Señala el reloj y di «a las siete». La hora lleva artículo: a las siete, a la una."],
+            ["A2", "¿Qué hiciste el fin de semana pasado?", "¿Qué fue lo mejor?", "«Era muy divertido» para una fiesta que ya terminó.", "Pregunta «¿y cuándo terminó?»: si tiene final, va «fue»."],
+            ["A2", "¿Cómo era tu escuela cuando eras niño o niña?", "¿Qué profesor recuerdas y por qué?", "«Mi escuela fue grande».", "Es una descripción del pasado: «era grande». Anota los dos pasados en dos columnas."],
+            ["B1", "¿Qué consejo le darías a alguien que quiere vivir en tu país?", "¿Y qué no debería hacer nunca?", "«Le recomiendo que aprende el idioma».", "Recomendar pide subjuntivo: «que aprenda». Pide tres consejos más con la misma estructura."],
+            ["B1", "¿Qué te molesta que hagan las personas en el transporte público?", "¿Alguna vez le dijiste algo a alguien?", "«Me molesta que la gente habla alto».", "Repite la pregunta, que ya trae la forma: «que hagan». El alumno corrige solo."],
+            ["B2", "Si pudieras cambiar una ley de tu país, ¿cuál sería?", "¿Quién saldría perdiendo con ese cambio?", "«Si podría cambiar una ley…»", "Detrás de «si» no va condicional: «si pudiera». Corrígelo siempre, aunque la idea sea buena."],
+            ["B2", "¿Deberían los museos ser gratis?", "¿Y quién pagaría entonces?", "Una opinión sin argumentos: «Creo que sí, porque es bueno».", "Pide dos razones unidas por «además» y una objeción con «sin embargo»."],
+            ["C1", "¿Qué diferencia hay entre ser educado y ser sincero?", "¿Recuerdas una vez en que tuviste que elegir?", "«Depende de la situación», y nada más.", "Pide un caso concreto: en C1 la abstracción sin ejemplo es una forma de no hablar."],
+            ["C1", "¿Qué hace que una disculpa sea creíble?", "¿Y una disculpa que no te creíste?", "«Lo que hace que es creíble…»", "«Hacer que» pide subjuntivo: «que sea». Es la misma forma que trae la pregunta."],
+            ["C2", "¿Qué diferencia hay entre persuadir y manipular?", "¿Dónde pondrías la publicidad?", "Definir con «es cuando…».", "Ofrece el registro de C2: «persuadir consiste en…», «a diferencia de…»."],
+            ["C2", "Defiende una opinión con la que no estás de acuerdo.", "¿Cuál es el punto más débil de lo que acabas de decir?", "Abandonar el papel en la primera objeción.", "Deja que piense y ofrécele una fórmula para ganar tiempo: «Entiendo la objeción, pero…»."],
+          ] },
+        ],
+      },
+      {
+        id: "seguimiento-sin-interrogatorio",
+        title: "Cómo hacer seguimiento sin convertir la clase en un interrogatorio",
+        blocks: [
+          { type: "ul", items: [
+            "**Responde tú también.** Después de dos preguntas, cuenta tu respuesta en treinta segundos: el alumno oye un modelo de su nivel y la clase deja de ser una entrevista.",
+            "**Pregunta por un detalle de lo que dijo,** no por un tema nuevo. «¿Y tu hermana qué opina?» funciona mejor que pasar a la pregunta siguiente de la lista.",
+            "**No corrijas mientras habla.** Anota y vuelve a los errores al final, salvo el que bloquea el sentido.",
+            "**Pide permiso antes de lo personal.** Familia, dinero o salud pueden ser temas incómodos: ofrece siempre otra pregunta para elegir.",
+          ] },
+          { type: "p", text: "Si buscas preguntas en inglés para alumnos principiantes, están en [Spanish conversation questions](/spanish-conversation-questions). Para que las preguntas lleven a una tarea con objetivo, mira los [juegos de conversación](/material-ele/formatos/juegos-de-conversacion) y la secuencia de las [actividades de conversación para adultos](/material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos)." },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/formatos/comprension-auditiva/c1": {
+    lote: "L2",
+    title: "Comprensión auditiva C1 en español: actividades y clases",
+    description: "Comprensión auditiva para C1: ironía, implícitos, registros y acentos, en {n} clases interactivas con escucha y debate al final de cada audio.",
+    h1: "Comprensión auditiva C1: {n} clases para entender lo que no se dice",
+    intro: "Un alumno de C1 ya entiende casi todas las palabras de un audio. Lo que se le escapa es la intención: la ironía, la respuesta que esquiva la pregunta, el cambio de tono cuando alguien pasa de cordial a molesto. Esta página explica cómo trabajar esa capa en clase y reúne las {n} clases con escucha que sirven para C1.",
+    sections: [
+      {
+        id: "que-entiende-c1",
+        title: "Qué se entiende en C1 que no se entendía en B2",
+        blocks: [
+          { type: "p", text: "El MCER describe la escucha de C1 como comprender un discurso extenso aunque no esté bien estructurado y aunque las relaciones entre las ideas solo se den a entender. En la práctica, el salto desde B2 está en tres cosas:" },
+          { type: "ul", items: [
+            "**implícitos:** entender lo que alguien quiere decir sin decirlo (un rechazo cortés, una crítica en forma de pregunta);",
+            "**ironía y humor:** notar que «qué bien» puede significar lo contrario, por la entonación y por el contexto;",
+            "**registro y variedad:** reconocer cuándo alguien cambia de formal a coloquial y de qué zona es su acento, y qué dice eso de la situación.",
+          ] },
+        ],
+      },
+      {
+        id: "lo-que-dijo",
+        title: "La tarea de cada audio: lo que dijo y lo que quiso decir",
+        intro: "Después de la primera escucha, el alumno anota frases que le llamaron la atención. En la segunda, completa esta tabla. Los ejemplos son del tipo de frase que buscas.",
+        blocks: [
+          { type: "table", caption: "Ejemplos de frases con intención implícita y la pista que la delata", head: ["Lo que dijo", "Lo que quiso decir", "La pista"], rows: [
+            ["«Ya, claro, seguro que llega a tiempo».", "No cree que llegue.", "«Ya, claro» delante de una afirmación y la entonación que cae."],
+            ["«No es que no me guste tu propuesta…»", "No le gusta, o no del todo.", "«No es que» + subjuntivo anuncia una objeción."],
+            ["«Bueno, eso habría que verlo».", "No está de acuerdo.", "El condicional impersonal evita decir «yo no creo»."],
+            ["«¿Y si lo dejamos para otro día?»", "No quiere hacerlo hoy, y quizá tampoco otro día.", "Una propuesta en forma de pregunta suaviza el rechazo."],
+            ["«Yo no he dicho eso».", "Quizá lo pensó, pero no lo va a admitir.", "Niega la cita, no el hecho: es una evasiva."],
+            ["«Hombre, tampoco es para tanto».", "Cree que el otro exagera.", "«Tampoco» + «para tanto» minimiza la queja del otro."],
+          ] },
+          { type: "p", text: "Para cerrar, el alumno elige una frase y la dice de dos maneras: con la intención literal y con la implícita. Si tú notas la diferencia sin ver la tabla, la tarea está hecha." },
+        ],
+      },
+      {
+        id: "clases-c1",
+        title: "Cómo usar estas clases con un alumno de C1",
+        blocks: [
+          { type: "p", text: "Casi todas las clases de esta lista son mundos 3D que se usan en varios niveles, como Madrid infectada, El consorcio o Último crucero. Con un alumno de C1, usa el modo Comprensión auditiva del mismo mundo y, después de cada escucha, pide la tarea de arriba en lugar de preguntas de datos. La clase pensada solo para C1 es «La Entrevista que no Salió al Aire»: cinco fragmentos sin editar para detectar evasivas, cambios de registro, ironía y la frase que reinterpreta todo." },
+          { type: "p", text: "Si el alumno se pierde con un acento, mira antes las [variedades del español](/material-ele/cultura/variedades-del-espanol). Para el resto del nivel, tienes el [material ELE C1](/material-ele/c1) y la página general de [comprensión auditiva ELE](/material-ele/comprension-auditiva)." },
+        ],
+      },
+    ],
+    faq: [
+      syntheticVoices,
+      { question: "¿Sirven estas clases para preparar el DELE C1?", answer: "Entrenan lo que más pesa en la comprensión auditiva del C1: entender la intención y la opinión de quien habla, no solo los datos. El formato no es el del examen, porque aquí cada escucha se puede repetir y termina en una conversación. Para acercarte al examen, pon cada audio dos veces seguidas y pide la tarea sin pausas." },
+    ],
+  },
+
+  "/material-ele/perifrasis-verbales": {
+    lote: "L2",
+    title: "Perífrasis verbales ELE: actividades y ejercicios (B1–B2)",
+    description: "Perífrasis por significado: empezar a, volver a, dejar de, seguir y las de obligación, con 5 actividades, 20 frases con soluciones y 7 clases interactivas.",
+    sections: [
+      {
+        id: "linea-de-vida",
+        title: "La línea de vida de una acción, con la perífrasis de cada punto",
+        intro: "Dibuja una línea en la pizarra y marca los momentos de una acción cualquiera, por ejemplo estudiar alemán. Cada punto tiene su perífrasis, y cada perífrasis, su error.",
+        blocks: [
+          { type: "table", caption: "Momentos de una acción con la perífrasis que los expresa y el error frecuente", head: ["Momento", "Perífrasis", "Ejemplo", "Error frecuente"], rows: [
+            ["Antes de empezar", "estar a punto de + infinitivo", "Estaba a punto de apuntarme a un curso.", "«Estaba a punto a apuntarme»: la preposición es «de»."],
+            ["El inicio", "empezar a + infinitivo; ponerse a, si es brusco", "Empecé a estudiar en enero. Un día me puse a repasar a las tres de la mañana.", "«Empecé estudiar», sin «a»."],
+            ["La duración", "llevar + tiempo + gerundio", "Llevo dos años estudiando alemán.", "«Llevo dos años que estudio»."],
+            ["La continuidad", "seguir + gerundio", "Sigo estudiando los sábados.", "«Sigo a estudiar» o «sigo estudiar»."],
+            ["La interrupción", "dejar de + infinitivo", "En verano dejé de ir a clase.", "«Dejé ir a clase», sin «de»."],
+            ["La repetición", "volver a + infinitivo", "En septiembre volví a estudiar.", "«Volví estudiar», sin «a»."],
+            ["El final reciente", "acabar de + infinitivo", "Acabo de aprobar el B1.", "Usarla como «terminar»: «acabé de estudiar alemán» no dice que fue hace un momento."],
+          ] },
+          { type: "p", text: "Con la línea dibujada, el alumno cuenta la vida de una afición suya pasando por todos los puntos. Es la versión larga de la actividad «Antes y ahora, con perífrasis» que tienes más abajo." },
+        ],
+      },
+      {
+        id: "deber-y-deber-de",
+        title: "Deber y deber de: la diferencia que los alumnos de B2 preguntan",
+        blocks: [
+          { type: "p", text: "«Deber + infinitivo» expresa obligación: «Debes descansar más». «Deber de + infinitivo» expresa suposición: «Debe de estar cansado, no ha dormido». La norma acepta «deber» sin «de» también para suponer, pero no recomienda «deber de» para obligar. Así que la regla práctica para el alumno es: si duda, «deber» sin «de» nunca es un error grave." },
+          { type: "p", text: "Para practicar todo esto con corrección, usa el [ejercicio de perífrasis verbales](/material-ele/ejercicio/perifrasis-verbales). Las perífrasis de cambio como «ponerse» o «volverse» están en [verbos de cambio](/material-ele/verbos-de-cambio), y las preposiciones que piden estos verbos, en [verbos con preposición](/verbos-con-preposicion)." },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/conectores": {
+    lote: "L2",
+    title: "Conectores ELE: actividades y ejercicios por nivel",
+    description: "Conectores del discurso por nivel y función (añadir, contrastar, concluir), con 3 actividades de relato y opinión y 20 frases con soluciones explicadas.",
+    sections: [
+      {
+        id: "nivel-funcion",
+        title: "Qué conector esperar en cada nivel, según lo que el alumno quiere hacer",
+        intro: "La tabla es orientativa: marca desde qué nivel conviene pedir cada conector, siguiendo el orden de las clases del catálogo (secuencia en A2, contraste en B1, concesión en B2, reformulación en C1).",
+        blocks: [
+          { type: "table", caption: "Conectores del discurso por función y nivel MCER", head: ["Función", "A2", "B1", "B2", "C1"], rows: [
+            ["Ordenar", "primero, después, luego, al final", "a continuación, por último", "en primer lugar, por un lado… por otro", "para empezar, a su vez"],
+            ["Añadir", "y, también", "además", "incluso, es más", "asimismo, cabe añadir que"],
+            ["Contrastar", "pero", "sin embargo, en cambio, aunque", "a pesar de que, por mucho que", "no obstante, ahora bien"],
+            ["Dar la causa", "porque", "como, ya que", "puesto que, dado que", "debido a que, en vista de que"],
+            ["Sacar la consecuencia", "por eso", "así que, entonces", "por lo tanto, de modo que", "por consiguiente, de ahí que"],
+            ["Aclarar o cerrar", "—", "en resumen", "en definitiva, es decir", "en suma, mejor dicho, a saber"],
+          ] },
+          { type: "p", text: "Úsala al corregir un texto: si un alumno de B2 escribe cinco «pero» seguidos, no hay error gramatical, pero su texto suena a A2. Pídele que cambie dos por conectores de su columna." },
+        ],
+      },
+      {
+        id: "errores-conectores",
+        title: "Cuatro errores con conectores que se corrigen en un minuto",
+        blocks: [
+          { type: "ul", items: [
+            "**«Sin embargo» sin puntuación:** une dos ideas completas y va entre punto y coma, o punto, y coma: «Estudié mucho; sin embargo, no aprobé».",
+            "**«Como» causal al final:** «Nos quedamos en casa como llovía» no funciona. «Como» va al principio: «Como llovía, nos quedamos en casa».",
+            "**«O sea» en un texto formal:** es de la lengua oral. En un correo de trabajo o en el DELE, «es decir».",
+            "**«De ahí que» con indicativo:** pide subjuntivo: «De ahí que nadie se quejara».",
+          ] },
+          { type: "p", text: "Para la práctica escrita, el [ejercicio de conectores](/material-ele/ejercicio/conectores) tiene soluciones explicadas. La progresión completa está en [cómo enseñar los conectores](/material-ele/guia/como-ensenar-los-conectores), y para usarlos hablando, la función [argumentar y debatir](/material-ele/funciones/argumentar-y-debatir)." },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/guia/materiales-para-ensenar-espanol": {
+    lote: "L2",
+    title: "Materiales para enseñar español: guía para profesores (A1–C2)",
+    description: "Qué materiales necesita una clase de español y dónde encontrarlos: fichas, ejercicios, audios, juegos y clases interactivas por nivel, y cómo elegir.",
+    sections: [
+      {
+        id: "cinco-criterios",
+        title: "Cinco criterios para elegir cualquier material, tuyo o ajeno",
+        intro: "Pasa cualquier material por estas cinco preguntas antes de llevarlo a clase. Si falla en dos, adáptalo o busca otro.",
+        blocks: [
+          { type: "table", caption: "Cinco criterios para evaluar un material de español", head: ["Criterio", "La pregunta", "Señal de alerta"], rows: [
+            ["Nivel", "¿La lengua de las instrucciones y de los textos es del nivel del alumno, no solo el tema?", "Un tema de A1 (la familia) con instrucciones de B2. Para comprobarlo, compara con los inventarios del PCIC."],
+            ["Objetivo", "¿Qué podrá hacer el alumno al terminar que antes no podía?", "Si la respuesta es «practicar el subjuntivo», falta el objetivo comunicativo: pedir, aconsejar, quejarse."],
+            ["Tiempo", "¿Cabe en tu clase con tiempo para hablar al final?", "Una ficha de 30 huecos ocupa la clase entera y no deja conversación."],
+            ["Formato", "¿Funciona como lo vas a usar: proyectado, impreso o en pantalla compartida?", "PDF de tres columnas con letra pequeña: en una videollamada no se lee."],
+            ["Licencia", "¿Puedes proyectarlo, imprimirlo para tu grupo o adaptarlo?", "Sin licencia indicada, en principio el autor se reserva los derechos. Las licencias «NC» (no comercial) pueden no cubrir clases que cobras: lee las condiciones."],
+          ] },
+        ],
+      },
+      {
+        id: "recursos-institucionales",
+        title: "Recursos institucionales y cómo usarlos sin perder tiempo",
+        blocks: [
+          { type: "ul", items: [
+            "**Plan curricular del Instituto Cervantes (PCIC):** no es material de clase, sino la lista de qué gramática, funciones y vocabulario corresponden a cada nivel. Úsalo para comprobar el nivel de un material, no para preparar la clase.",
+            "**Marco común europeo (MCER):** sus descriptores dicen qué sabe hacer un alumno en cada nivel. Sirven para escribir el objetivo de una clase en una frase.",
+            "**Modelos de examen DELE:** el Instituto Cervantes publica exámenes de muestra. Son útiles para el último mes antes del examen, no como material de todo el curso.",
+          ] },
+          { type: "p", text: "Para materiales listos, empieza por el [material ELE](/material-ele) por nivel y por tema, las [fichas ELE](/material-ele/fichas) y las [plantillas para profesores](/material-ele/plantillas). Si buscas solo lo que se usa sin pagar, está reunido en [recursos ELE gratis](/material-ele/guia/recursos-ele-gratis)." },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/cultura/fiestas-y-tradiciones/b2": {
+    lote: "L2",
+    description: "Fiestas y tradiciones del mundo hispano para B2: {n} clases interactivas para recorrer hablando, comparar costumbres y argumentar con escuchas por zona.",
+    intro: "En B2 una fiesta deja de ser vocabulario y se vuelve tema de discusión: quién paga una boda, si una tradición molesta a los vecinos, qué costumbre de la familia sorprende a un extranjero. Estas {n} clases llevan al alumno a una boda en el campo, a una asamblea de vecinos, a la mañana después de una fiesta y a un banco de preguntas sobre tradiciones raras, y todas terminan en un debate con frases de valoración.",
+    sections: [
+      {
+        id: "debate-tradiciones",
+        title: "Tarea final: la tradición que conservarías y la que cambiarías",
+        intro: "En B2 no basta con describir una fiesta: el alumno tiene que valorarla y defender su postura. Este debate guiado cierra cualquiera de las cuatro clases.",
+        blocks: [
+          { type: "table", caption: "Pasos del debate sobre tradiciones con frases B2 de valoración", head: ["Paso", "Qué hace el alumno", "Frases de B2"], rows: [
+            ["1. Elegir", "Elige una tradición de su país o de su familia, o una de las clases: las doce uvas, una boda en el campo, el acta de la asamblea que escribe el último en llegar.", "«En mi familia se acostumbra a…», «Por tradición, quien llega último…»"],
+            ["2. Describir sin juzgar", "Explica la tradición a alguien que nunca la vio, sin opinar todavía.", "«Consiste en…», «Se celebra cuando…»"],
+            ["3. Valorar", "Dice qué le parece y por qué, con dos argumentos.", "«Me parece absurdo que + subjuntivo», «Lo que más valoro es que + subjuntivo»"],
+            ["4. Conceder", "Reconoce un argumento del otro lado antes de mantener su postura.", "«Es verdad que…, pero», «Aunque sea una tradición, no justifica que…»"],
+            ["5. Decidir", "La conserva tal cual, la cambia o la elimina, y propone cómo.", "«La mantendría siempre que + subjuntivo», «Habría que cambiarla para que + subjuntivo»"],
+          ] },
+          { type: "p", text: "Un aviso para el paso 2: pide que hable de su familia o de su ciudad, no de «los españoles» o «los mexicanos». Así se evitan los estereotipos y la descripción gana detalles reales." },
+        ],
+      },
+      {
+        id: "clases-b2-tradiciones",
+        title: "De qué tradición sale cada clase",
+        blocks: [
+          { type: "ul", items: [
+            "**La boda:** una boda en una estancia de San Antonio de Areco, del atardecer al amanecer, sin conocer a nadie.",
+            "**El consorcio:** la asamblea de vecinos de un edificio de 1958 en Buenos Aires, donde por tradición el acta la escribe quien llegó último.",
+            "**Objetos perdidos:** el turno de noche después de la Noche de los Faroles, la fiesta más grande de Puerto Alba.",
+            "**Tradiciones que nadie entiende:** fin de año, supersticiones, ritos de paso y tradiciones polémicas, en seis categorías de preguntas.",
+          ] },
+          { type: "p", text: "Para otros niveles, la página de [fiestas y tradiciones](/material-ele/cultura/fiestas-y-tradiciones) enlaza todas las clases del tema. Para el resto del nivel, mira el [material ELE B2](/material-ele/b2)." },
+        ],
+      },
+    ],
+    faq: [
+      { question: "¿Qué gramática de B2 aparece al hablar de tradiciones?", answer: "Sobre todo el subjuntivo para valorar («me parece absurdo que se gaste tanto»), las concesivas para matizar («aunque sea una tradición») y las condicionales para proponer cambios («si dependiera de mí, la cambiaría»). El debate de esta página las pide en ese orden." },
+      { question: "¿Cómo evito que la clase se quede en estereotipos?", answer: "Pide ejemplos de la familia o de la ciudad del alumno, no de su país entero, y pregunta siempre «¿todo el mundo lo hace así?». Las clases ayudan porque cada personaje habla de su propia costumbre, no de la de un país." },
+    ],
+  },
+
+  "/material-ele/b2": {
+    lote: "L2",
+    title: "Material ELE B2: actividades, ejercicios y clases",
+    description: "Material ELE para B2: hipótesis, estilo indirecto y argumentación, con 3 actividades de clase, 8 frases con soluciones y 8 clases interactivas, una gratis.",
+    sections: [
+      {
+        id: "mapa-b2",
+        title: "El mapa del B2: qué tiene que poder hacer el alumno y con qué gramática",
+        intro: "Cada fila une una función comunicativa del B2 con la gramática que necesita y la clase del catálogo que la trabaja.",
+        blocks: [
+          { type: "table", caption: "Funciones comunicativas del B2 con su gramática y su clase", head: ["El alumno tiene que poder…", "Gramática", "Clase"], rows: [
+            ["Hablar de un futuro que no controla", "cuando, en cuanto, hasta que + presente de subjuntivo", "Temporales con subjuntivo para futuro incierto (gratis)"],
+            ["Expresar deseos y valoraciones sobre el pasado", "imperfecto de subjuntivo", "Imperfecto de subjuntivo: deseos y perspectivas del pasado"],
+            ["Negociar con condiciones", "si + imperfecto de subjuntivo, condicional", "Si + imperfecto de subjuntivo: negociar posibilidades"],
+            ["Imaginar otro resultado para algo que ya pasó", "si hubiera + participio, habría + participio", "Condicionales del pasado: imaginar otros resultados"],
+            ["Conceder sin cambiar de postura", "a pesar de que, por mucho que, por más que", "A pesar de que, por mucho que, por más que"],
+            ["Contar lo que dijo otra persona", "correlación de tiempos y estilo indirecto", "Correlación temporal: presente, pasado y futuro"],
+            ["Reconstruir un problema a partir de versiones distintas", "distinguir hechos e inferencias", "Habitación 508 (escucha de seis testimonios)"],
+          ] },
+          { type: "p", text: "Si el alumno domina las tres primeras filas, puede negociar y planear en español. Las tres siguientes son las que lo preparan para debatir y transmitir información, que es lo que más pesa en la prueba oral del DELE B2." },
+        ],
+      },
+      {
+        id: "errores-b2",
+        title: "Dos errores que separan un B1 de un B2",
+        blocks: [
+          { type: "ul", items: [
+            "**«No creo que es»:** las opiniones negadas piden subjuntivo, «no creo que sea». El alumno lo sabe en el ejercicio y lo olvida al debatir: corrígelo siempre en conversación.",
+            "**Estilo indirecto mecánico:** cambiar todos los tiempos por regla. «Me dijo que venía mañana» puede ser correcto si mañana todavía no llegó. Antes de cambiar el tiempo, el alumno decide si el hecho sigue vigente.",
+          ] },
+          { type: "p", text: "Para practicar hablando, usa los [juegos de conversación B2](/material-ele/formatos/juegos-de-conversacion/b2); para ordenar los argumentos, los [conectores ELE](/material-ele/conectores); y para un tema cultural de este nivel, [fiestas y tradiciones B2](/material-ele/cultura/fiestas-y-tradiciones/b2). El estilo indirecto tiene su propia página: [estilo indirecto](/material-ele/estilo-indirecto)." },
+        ],
+      },
+    ],
+  },
+
+  "/material-ele/preposiciones": {
+    lote: "L2",
+    title: "Preposiciones en español: actividades y ejercicios ELE",
+    description: "Preposiciones en tres pasos: lugar y movimiento con objetos, tiempo en bloques y las que pide cada verbo, con 5 actividades y 20 frases con soluciones.",
+    sections: [
+      {
+        id: "mapa-de-movimiento",
+        title: "El mapa de movimiento: a, hacia, hasta, desde y por sobre un plano",
+        intro: "Dibuja un plano sencillo: una estación, una plaza, un río y un puente. Cada preposición de movimiento dibuja una cosa distinta sobre ese plano.",
+        blocks: [
+          { type: "table", caption: "Preposiciones de movimiento con lo que dibujan sobre un plano de ciudad", head: ["Preposición", "Qué dibuja en el plano", "En la ciudad", "Error frecuente"], rows: [
+            ["a", "El punto de llegada.", "Voy a la plaza.", "«Voy en la plaza»: con verbos de movimiento, el destino va con «a»."],
+            ["hacia", "Una flecha: la dirección, sin decir si llegas.", "Camina hacia el río.", "Usarla como «a» cuando sí se llega: «llegué hacia la estación»."],
+            ["hasta", "Una línea que termina en un tope.", "Sigue hasta el puente y para.", "Confundirla con «hacia»: «hasta» dice dónde termina el recorrido."],
+            ["desde", "El punto de partida, a menudo con «hasta».", "Desde la estación hasta la plaza hay diez minutos.", "«De la estación hasta la plaza»: con «hasta», mejor «desde»."],
+            ["por", "El recorrido a través de un lugar, o una zona aproximada.", "Pasa por la plaza. Vive por el centro.", "«Pasa a través la plaza»: «por» basta."],
+            ["en", "El medio de transporte, o un lugar sin movimiento.", "Voy en metro. Estoy en la plaza.", "«Voy en pie»: a pie es la excepción."],
+          ] },
+          { type: "p", text: "Para la actividad, el alumno explica cómo llegar de la estación a un lugar del plano sin nombrar el destino, y tú lo adivinas siguiendo sus preposiciones con el dedo. Si se equivoca de preposición, llegas a otro sitio, y el error se ve." },
+        ],
+      },
+      {
+        id: "errores-de-otra-lengua",
+        title: "Tres errores que vienen de otra lengua",
+        blocks: [
+          { type: "ul", items: [
+            "**«Voy en Madrid»:** en muchas lenguas el mismo verbo sirve para estar y para ir. En español, ir a Madrid, estar en Madrid.",
+            "**«Pienso de ti»:** cada verbo trae su preposición y no se traduce: pensar en, soñar con, depender de. Se aprenden juntos, como una sola palabra.",
+            "**«En el lunes»:** los días de la semana van sin preposición: el lunes, los lunes. Con meses y años sí: en marzo, en 2026.",
+          ] },
+          { type: "p", text: "Para practicar con corrección, usa los [ejercicios de preposiciones](/material-ele/ejercicio/preposiciones) y la lista de [verbos con preposición](/verbos-con-preposicion). Las locuciones de lugar (encima de, al lado de) tienen su página: [preposiciones de lugar](/material-ele/preposiciones-de-lugar). Y si las vas a enseñar por primera vez, lee [cómo enseñar las preposiciones](/material-ele/guia/como-ensenar-las-preposiciones)." },
+        ],
+      },
+    ],
+  },
 };
 
 export const pageRewrites: ReadonlyMap<string, PageRewrite> = new Map(Object.entries(rewrites));

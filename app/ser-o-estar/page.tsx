@@ -1,4 +1,6 @@
 import { ConsolidatedExercise } from "../material-ele/ConsolidatedExercise";
+import { RewriteSections } from "../material-ele/rewrite-components";
+import { miniAppRewrites } from "../mini-apps/seo-rewrites";
 import Link from "next/link";
 import { Section } from "../growth/components";
 import { eleMetadata } from "../material-ele/components";
@@ -37,6 +39,7 @@ export default function SerHub() {
       <Section title="Adjetivos que cambian de significado" intro="El mismo adjetivo dice cosas distintas con ser y con estar.">
         <AdjCards items={adjetivos} />
       </Section>
+      <RewriteSections rewrite={miniAppRewrites.get(SER_PATH)} />
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases de usos y adjetivos distintos. Si dudas en alguna, abre su página y repasa la regla.">
         <ChoiceQuiz items={serMixed()} label="Elige ser o estar" />
       </Section>

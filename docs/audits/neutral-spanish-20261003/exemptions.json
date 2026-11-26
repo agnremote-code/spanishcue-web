@@ -14802,6 +14802,24 @@
       "text": "Me levanté, me vestí y salí.",
       "reason": "Pretérito en primera persona (yo) como ejemplo de acciones sucesivas en la guía del pretérito, no voseo.",
       "category": "neutral-context"
+    },
+    {
+      "path": "app/mini-apps/seo-rewrites.ts",
+      "text": "Me voy por dos semanas. Viví allí tres años.",
+      "reason": "Pretérito en primera persona (yo) como ejemplo de duración con por y para, no voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/mini-apps/seo-rewrites.ts",
+      "text": "«Viví allí para tres años».",
+      "reason": "Pretérito en primera persona (yo) en un error de alumno citado, no voseo.",
+      "category": "neutral-context"
+    },
+    {
+      "path": "app/mini-apps/seo-rewrites.ts",
+      "text": "«Mientras comí, sonó»: la acción que dura es el fondo, en imperfecto.",
+      "reason": "Pretérito en primera persona (yo) en un error de alumno citado sobre indefinido e imperfecto, no voseo.",
+      "category": "neutral-context"
     }
   ]
 }

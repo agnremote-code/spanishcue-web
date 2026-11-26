@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { RewriteSections } from "../material-ele/rewrite-components";
+import { miniAppRewrites } from "../mini-apps/seo-rewrites";
 import { Section } from "../growth/components";
 import { eleMetadata } from "../material-ele/components";
 import { EleNewsletterInline } from "../material-ele/PopularLinks";
@@ -34,6 +36,7 @@ export default function PrepHub() {
           <p className={styles.footnote}><Link className={styles.textLink} href={g.path}>Lista y ejercicio de los verbos con «{g.p}»</Link></p>
         </Section>
       ))}
+      <RewriteSections rewrite={miniAppRewrites.get(PREP_PATH)} />
       <Section id="mezcla" title="Prueba mezclada" intro="Doce frases con verbos distintos. Si dudas en alguna, abre su página.">
         <ChoiceQuiz items={hubQuiz()} label="Elige la preposición" />
       </Section>

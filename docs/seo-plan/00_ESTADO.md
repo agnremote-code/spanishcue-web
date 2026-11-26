@@ -12,7 +12,7 @@ Actualizado: 26/11/2026 (tarde).
 | 6 Producción | lotes de 20 URLs o menos | En curso. L1 hecho: español parte a (#567, 7 páginas de tema y nivel), parte b (#569, 3 guías y fichas) e inglés (#577, 4 guías, texto aprobado por el dueño el 26/11). L2 (21–40) pendiente. |
 | 7 Entidad y schema | 06_SCHEMA/LEEME.md | Hecho, en PR. Una sola entidad por `@id` en todo el sitio, Organization + EducationalOrganization, sameAs con LinkedIn, YouTube y Pinterest. Validado con tests/seo-schema-rendered.test.mjs (18 de 18; validator.schema.org bloqueado desde el contenedor). «spanish cute»: lo del sitio está hecho, falta señal externa (paso 9). |
 | 8 Técnico | 07_TECNICO.md | Hecho, en PR. Rastreo del build: 1.767 URLs del sitemap con 200, canonical propio, sin noindex, títulos y descripciones únicos, 1 H1; hreflang recíproco en 722 páginas. Corregidos 41 enlaces internos a URLs con 301 (145 fichas). IndexNow envía también las URLs que salen del sitemap. CWV sin medir (no hay datos de campo). |
-| 9 KPIs y PR digital | 08_KPIS.md, 09_DIGITAL_PR.md | Pendiente |
+| 9 KPIs y PR digital | 08_KPIS.md, 09_DIGITAL_PR.md | Hecho, en PR. KPIs con línea base de Search Console (28 días al 25/11: 210 clics, 3.310 impresiones, 377 de 1.767 URLs del sitemap con impresiones) y la decisión que dispara cada uno. 15 objetivos de PR digital verificados en su web, con ángulo y página destino; Omega los envía y anota el estado. La página con el dato de la IA de Google (ángulo A) queda por publicar. |
 
 ## Decisiones vigentes
 
