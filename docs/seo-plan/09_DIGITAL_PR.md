@@ -4,7 +4,7 @@ Actualizado: 26/11/2026. Los 15 objetivos se verificaron hoy en su propia web: q
 
 ## Reglas para cualquier envío
 
-- Solo datos verdaderos. «+100 profesores» y «+20 academias» son falsos y no se usan nunca (Ale, 26/11). Lo real: «+10 años» enseñando español (trayectoria de Ale), 247 fichas abiertas con soluciones, clases en mundos 3D con modo conversación y modo comprensión auditiva, conjugador embebible gratis (cuando se publique el PR #554).
+- Solo datos verdaderos. «+100 profesores» y «+20 academias» son falsos y no se usan nunca (Ale, 26/11). Lo real: «+10 años» enseñando español (trayectoria de Ale), 247 fichas abiertas con soluciones, clases en mundos 3D con modo conversación y modo comprensión auditiva, conjugador embebible gratis (PR #554, en producción desde el 26/11, SHA 7ff14923).
 - Nada de enlaces pagos, intercambios ni artículos patrocinados. Si un medio solo acepta contenido no comercial, se escribe un artículo docente sin vender el producto y la marca va solo en la firma.
 - Si el medio pide declarar el uso de IA, se declara. Si lo prohíbe (IH Journal), solo va con un texto escrito por Ale.
 - No se ofrecen las clases gratis ni /material-ele/fichas como «gratis» (regla del 19/11). Las voces son sintéticas: nunca «grabadas».
@@ -17,7 +17,7 @@ Actualizado: 26/11/2026. Los 15 objetivos se verificaron hoy en su propia web: q
 |---|---|---|
 | A | La IA de Google ya contesta las búsquedas de los profes de ELE: vista creada con IA en 37 de 42 búsquedas medidas (sin la de marca) | SERP real de Google capturada el 26/11/2026 desde España (`serp/`, 02_MAPA_DEMANDA_LEEME.md). Muestra chica: 42 búsquedas, un día. Página con el dato, el método y la lista completa: /material-ele/guia/ia-de-google-en-busquedas-de-profes-de-ele. Usar siempre «37 de 42», nunca «38 de 43». |
 | B | Clases de conversación en mundos 3D que se abren en el navegador, con conversación y comprensión auditiva en el mismo mundo | Producto en producción |
-| C | Conjugador gratis que cualquier profe puede insertar en su web | PR #554 (Omega). Solo después de que esté en producción. |
+| C | Conjugador gratis que cualquier profe puede insertar en su web | PR #554 (Omega), en producción desde el 26/11/2026. |
 | D | Cómo armar una clase de conversación de 45 minutos para adultos que no sea una lista de preguntas | Guía /material-ele/guia/actividades-de-conversacion-en-espanol-para-adultos y experiencia de Ale |
 
 ## Los 15 objetivos
@@ -35,7 +35,7 @@ Prioridad: 1 = encaje alto y canal claro; 3 = encaje dudoso o canal débil.
 | 7 | Tribu de Profes (jose-david.com), José David Pérez | Podcast semanal para docentes de España | Sin fecha visible | formulario jose-david.com/contacta/ | A | /material-ele/guia/ia-de-google-en-busquedas-de-profes-de-ele | 2 | pendiente (página publicada con este PR) |
 | 8 | EDUCACIÓN 3.0 | Medio educativo español | Sí | laura.pajuelo@tresceroediciones.com; 600–1.000 palabras; no acepta contenido comercial | D, sin producto | marca en la firma | 2 | pendiente |
 | 9 | The Language Educator (ACTFL) | Revista de ACTFL; secciones Educator Voices y Tech Tip | Sí | subida con usuario de actfl.org (requiere crear cuenta: paso de Ale) | D | / | 2 | necesita cuenta |
-| 10 | Product Hunt | Lanzamientos de productos digitales | [SUPUESTO: reglas no verificadas desde el contenedor] | requiere cuenta | C | /conjugacion | 2 | espera PR #554 |
+| 10 | Product Hunt | Lanzamientos de productos digitales | [SUPUESTO: reglas no verificadas desde el contenedor] | requiere cuenta | C | /conjugacion | 2 | pendiente (#554 ya en producción) |
 | 11 | IH Journal (International House) | Revista de profes de idiomas, enfoque de aula | Sí; el último cierre publicado fue el 31/7 | IHJEditor@ihworld.com; rechaza textos marcados como IA | D | marca en la firma | 3 | solo con texto de Ale |
 | 12 | Ideas para profes (Javier Gaviño, iVoox) | Podcast para docentes en español | Sin verificar (no se vio fecha) | buscar contacto en iVoox | A | /material-ele/guia/ia-de-google-en-busquedas-de-profes-de-ele | 3 | verificar actividad |
 | 13 | Duelo TIC TAC (María García y Jennifer Niño) | Podcast de ELE y tecnología | Último episodio visto en feb. 2025 | ahoraele@gmail.com | B | /online-spanish-teaching-resources | 3 | pendiente; coanfitriona de profe-de-espanol.de, que compite en 16 de nuestras SERP |
@@ -54,7 +54,7 @@ Prioridad: 1 = encaje alto y canal claro; 3 = encaje dudoso o canal débil.
 
 ## Señal de entidad para «SpanishCue»
 
-1. Crédito «Conjugador de verbos de SpanishCue» en cada conjugador insertado (PR #554, Omega).
+1. Crédito «Conjugador de verbos de SpanishCue» en cada conjugador insertado (PR #554, Omega; en producción desde el 26/11).
 2. Ficha propia en Common Sense Education (objetivo 5).
 3. Lanzamiento en Product Hunt (objetivo 10).
 4. sameAs ya publicado en el schema: LinkedIn, YouTube y Pinterest (06_SCHEMA/LEEME.md).
