@@ -88,18 +88,31 @@ atribuible (utm_campaign=homework_free o cuenta con pases). Revisar 2026-12-03 y
 - **Activos subusados.** Conjugador embebible (`/embed/conjugador`) y Homework son los únicos activos que viven fuera
   de spanishcue.com o frente a terceros. Ambos son candidatos a distribución autopropagable.
 
+## Experimento E2 · Primeros pasos + invitar colega para gratis (2026-11-26, rama `claude/omega-activacion`)
+
+- Sin destino explícito, el login/alta lleva a /cuenta (antes «/»): el panel es donde viven alumnos, Homework y clases.
+- /cuenta muestra a profes gratis «Primeros pasos con tus alumnos» (crear alumno, Homework, registrar clase, invitar colega)
+  con cada paso tildado según sus datos reales.
+- El enlace «Invita a un colega» ahora también para profes gratis (pestaña Suscripción + paso en inicio). La regla de
+  pago no cambia: el colega recibe su segundo mes gratis; el mes del profe gratis queda en `referral_rewards` como
+  `queued` y se aplica solo cuando ese profe paga su primera mensualidad (`applyQueuedReward` en app/referrals-server.ts).
+  Eso convierte cada invitación en un motivo más para que el propio profe active PRO.
+
+**Medición.** `SELECT COUNT(*) FROM referral_codes WHERE created_at>=CAST(strftime('%s','2026-11-26') AS INTEGER)`
+(códigos creados por profes que abrieron su panel) y altas con `spanishcue_ref` que terminan en `referrals`.
+Alumnos creados por profes gratis: `SELECT COUNT(DISTINCT owner_id) FROM students WHERE created_at>='2026-11-26'` menos dueño y clienta PRO.
+
 ## Hipótesis descartadas
 
 - (ninguna todavía)
 
 ## Cola de próximos ciclos (ordenada por evidencia × impacto ÷ esfuerzo)
 
-1. Medir E1 (3 y 10 de diciembre). Si nadie crea pases: llevar el alta a /cuenta con un primer paso guiado.
-2. Después del alta, aterrizar en el panel con «crea tu primer alumno» en lugar de «/».
-3. Referidos para profes gratis (hoy solo PRO ve su enlace de invitación).
+1. Medir E1 y E2 (3 y 10 de diciembre).
 4. Investigar demanda de alumnos «tutor cost» → ¿directorio de profes SpanishCue?
 5. Instrumentar origen (utm / source_path) en `users` para conversión por intención y canal.
 
 ## Bitácora
 
-- 2026-11-26 · Ciclo 1: línea base, descubrimiento de la activación, E1 programado.
+- 2026-11-26 · Ciclo 1: línea base, descubrimiento de la activación, E1 programado (PR #548).
+- 2026-11-26 · Ciclo 2: E2 (alta → panel con primeros pasos, invitar colega para gratis).

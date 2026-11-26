@@ -17,7 +17,7 @@ export type PlanSummary = { label: string; detail: string; tone: "owner" | "pro"
 
 const DAY = 86_400_000;
 
-export default function Overview({ lessons, homeworkEnabled, homeworkFree = false, plan }: { lessons: DashLesson[]; homeworkEnabled: boolean; homeworkFree?: boolean; plan: PlanSummary }) {
+export default function Overview({ lessons, homeworkEnabled, homeworkFree = false, plan, inviteReady = false }: { lessons: DashLesson[]; homeworkEnabled: boolean; homeworkFree?: boolean; plan: PlanSummary; inviteReady?: boolean }) {
   const { t, locale } = useDash();
   const byId = useMemo(() => new Map(lessons.map((lesson) => [lesson.id, lesson])), [lessons]);
   const [students, reloadStudents] = useLoad<{ students: Student[] }>("/api/students");
@@ -32,7 +32,24 @@ export default function Overview({ lessons, homeworkEnabled, homeworkFree = fals
   const studentName = (id: string) => students.status === "ready" ? students.data.students.find((s) => s.id === id)?.alias ?? t("history.deletedStudent") : "…";
   const studied7 = (data: { passes: HomeworkPass[] }) => new Set(data.passes.filter((p) => !p.revokedAt && p.summary?.lastActivity && now - new Date(p.summary.lastActivity).getTime() <= 7 * DAY).map((p) => p.learnerId)).size;
 
+  // Free teachers: the only paying customer is the one teacher who works with students and Homework (docs/omega/LOG.md).
+  const hasStudent = students.status === "ready" && students.data.students.length > 0;
+  const hasHomework = passes.status === "ready" && passes.data.passes.length > 0;
+  const hasClass = records.status === "ready" && records.data.records.length > 0;
+  const showSteps = homeworkFree && students.status === "ready" && !(hasStudent && hasHomework && hasClass);
+  const steps: { done: boolean; text: string; href: string }[] = [
+    { done: hasStudent, text: freeHomeworkCopy.stepStudent, href: "/cuenta?tab=alumnos&nuevo=1" },
+    { done: hasHomework, text: freeHomeworkCopy.stepHomework, href: "/cuenta?tab=alumnos" },
+    { done: hasClass, text: freeHomeworkCopy.stepClass, href: "/cuenta?tab=historial&nuevo=1" },
+    ...(inviteReady ? [{ done: false, text: freeHomeworkCopy.stepInvite, href: "/cuenta?tab=suscripcion" }] : []),
+  ];
+
   return <div className="cx-stack">
+    {showSteps && <section className="cx-panel cx-first-steps" aria-labelledby="home-first-steps">
+      <header><h2 id="home-first-steps">{freeHomeworkCopy.stepsTitle}</h2></header>
+      <p className="cx-muted">{freeHomeworkCopy.stepsIntro}</p>
+      <ol className="cx-list">{steps.map((step) => <li key={step.href}><div><strong>{step.done ? "✓ " : ""}{step.text}</strong></div>{!step.done && <Link className="cx-btn is-small" href={step.href}>{t("common.open")}</Link>}</li>)}</ol>
+    </section>}
     <ul className="cx-kpis" aria-label={t("head.inicio")}>
       <li><b>{count(students, (d: { students: Student[] }) => d.students.filter((s) => s.status === "active").length)}</b><span>{t("home.activeStudents")}</span></li>
       <li><b>{count(records, (d: { records: ClassRecord[] }) => d.records.filter((r) => now - new Date(r.startsAt).getTime() <= 30 * DAY && new Date(r.startsAt).getTime() <= now).length)}</b><span>{t("home.classes30")}</span></li>
