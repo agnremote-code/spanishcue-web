@@ -8,8 +8,7 @@ function remember(value: string) {
 }
 
 /** Email → gift grammar class. Shared by the popup and /clase-gratis. */
-export function GiftSignupForm({ source, locale = 'es' }: { source: string; locale?: 'es' | 'en' }) {
-  const es = locale === 'es';
+export function GiftSignupForm({ source }: { source: string }) {
   const [state, setState] = useState<'idle' | 'sending' | 'done'>('idle');
   const [error, setError] = useState('');
   async function submit(event: FormEvent<HTMLFormElement>) {
@@ -23,40 +22,32 @@ export function GiftSignupForm({ source, locale = 'es' }: { source: string; loca
         body: JSON.stringify({ email: data.get('email'), consent: data.get('consent') === 'on', website: data.get('website'), source }),
       });
       const body = await response.json().catch(() => ({})) as { message?: string };
-      if (!response.ok) { setError((es && body.message) || (es ? 'No pudimos guardar tu email. Inténtalo de nuevo.' : 'We could not save your email. Please try again.')); setState('idle'); return; }
+      if (!response.ok) { setError(body.message || 'No pudimos guardar tu email. Inténtalo de nuevo.'); setState('idle'); return; }
       remember('joined');
       setState('done');
     } catch {
-      setError(es ? 'No hay conexión. Inténtalo de nuevo.' : 'No connection. Please try again.'); setState('idle');
+      setError('No hay conexión. Inténtalo de nuevo.'); setState('idle');
     }
   }
   if (state === 'done') return (
     <div className={styles.done} role="status">
-      <p className={styles.lesson}>{es ? '¡Listo! La clase ya está desbloqueada en este navegador. También te la enviamos por email.' : 'Done! The lesson is now unlocked in this browser. We also sent it to your email.'}</p>
-      <a className={styles.open} href={GIFT_LESSON_PATH}>{es ? 'Abrir la clase' : 'Open the lesson'}</a>
+      <p className={styles.lesson}>¡Listo! La clase ya está desbloqueada en este navegador. También te la enviamos por email.</p>
+      <a className={styles.open} href={GIFT_LESSON_PATH}>Abrir la clase</a>
     </div>
   );
   return (
     <form className={styles.form} onSubmit={submit}>
-      <label className={styles.honeypot} aria-hidden="true">{es ? 'Sitio web' : 'Website'}<input name="website" tabIndex={-1} autoComplete="off" /></label>
-      <input className={styles.input} type="email" name="email" required maxLength={254} autoComplete="email" placeholder={es ? 'tu@email.com' : 'you@email.com'} aria-label={es ? 'Tu email' : 'Your email'} />
-      <label className={styles.consent}><input type="checkbox" name="consent" required />{es ? 'Quiero recibir la newsletter de SpanishCue con ideas para mis clases de ELE. Puedo darme de baja cuando quiera.' : 'I want the SpanishCue newsletter with ideas for my Spanish lessons. I can unsubscribe at any time.'}</label>
+      <label className={styles.honeypot} aria-hidden="true">Sitio web<input name="website" tabIndex={-1} autoComplete="off" /></label>
+      <input className={styles.input} type="email" name="email" required maxLength={254} autoComplete="email" placeholder="tu@email.com" aria-label="Tu email" />
+      <label className={styles.consent}><input type="checkbox" name="consent" required />Quiero recibir la newsletter de SpanishCue con ideas para mis clases de ELE. Puedo darme de baja cuando quiera.</label>
       {error && <p className={styles.error} role="alert">{error}</p>}
-      <button className={styles.submit} type="submit" disabled={state === 'sending'}>{state === 'sending' ? (es ? 'Desbloqueando…' : 'Unlocking…') : (es ? 'Desbloquear la clase gratis' : 'Unlock the free lesson')}</button>
+      <button className={styles.submit} type="submit" disabled={state === 'sending'}>{state === 'sending' ? 'Desbloqueando…' : 'Desbloquear la clase gratis'}</button>
     </form>
   );
 }
 
-export function GiftPitch({ heading = 'h2', topic, locale = 'es' }: { heading?: 'h1' | 'h2'; topic?: string; locale?: 'es' | 'en' }) {
+export function GiftPitch({ heading = 'h2', topic }: { heading?: 'h1' | 'h2'; topic?: string }) {
   const Title = heading;
-  if (locale === 'en') return (
-    <div className={styles.copy}>
-      <p className={styles.kicker}>A gift for Spanish teachers</p>
-      <Title className={styles.title}>Unlock a PRO grammar lesson for free</Title>
-      <p className={styles.lesson}>«{GIFT_LESSON_TITLE}» · {GIFT_LESSON_LEVEL}</p>
-      <p className={styles.lead}>The Spanish imperfect: describing how things used to be, past habits and what was going on. A complete lesson to teach live, with explanation, audio, practice and conversation. Leave your email and it opens right away.</p>
-    </div>
-  );
   return (
     <div className={styles.copy}>
       <p className={styles.kicker}>{topic ? `¿Das clases de ${topic}? Regalo para profes de ELE` : 'Regalo para profes de ELE'}</p>
