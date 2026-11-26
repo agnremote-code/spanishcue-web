@@ -93,7 +93,8 @@ test("robots.txt blocks machine endpoints and abusive crawlers only, never a pag
   const everyone = rules.find((rule) => rule.userAgent === "*");
   assert.deepEqual(everyone.disallow, ["/api/"]);
   assert.equal(everyone.allow, "/");
-  assert.equal(everyone.crawlDelay, 10);
+  // Bing reads Crawl-delay: 10 as "extremely slow" and ChatGPT search answers from Bing's index.
+  assert.equal(everyone.crawlDelay, undefined);
   const blocked = rules.find((rule) => Array.isArray(rule.userAgent));
   assert.equal(blocked.disallow, "/");
   for (const bot of ["AhrefsBot", "SemrushBot", "GPTBot", "Bytespider"]) assert.ok(blocked.userAgent.includes(bot), bot);

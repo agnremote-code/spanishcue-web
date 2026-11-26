@@ -4,8 +4,15 @@ import { BLOCKED_CRAWLERS } from "./crawler-policy";
 // Who is blocked, and why, lives in app/crawler-policy.ts (shared with the Worker).
 export { BLOCKED_CRAWLERS };
 
-/** Seconds between requests for the crawlers that honour Crawl-delay (Bing, Yandex, Seznam…). Google ignores it. */
-export const CRAWL_DELAY_SECONDS = 10;
+/*
+ * No Crawl-delay (removed 2026-11-26). Google ignores it, but Bing reads 10 as
+ * "extremely slow": after six weeks Bing had indexed 55 of ~2,000 URLs, and
+ * Bing's index is what ChatGPT search and Copilot answer from. Bingbot is
+ * already exempt from the page limiter and every render goes through the
+ * render gate and edge cache, so Bing's own adaptive pacing is enough. If Bing
+ * ever loads the Worker too hard, throttle it in Bing Webmaster Tools → Crawl
+ * Control instead of putting Crawl-delay back (it overrides that control).
+ */
 
 /**
  * robots.txt only keeps crawlers out of machine endpoints and keeps abusive
@@ -17,7 +24,7 @@ export const CRAWL_DELAY_SECONDS = 10;
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
-      { userAgent: "*", allow: "/", disallow: ["/api/"], crawlDelay: CRAWL_DELAY_SECONDS },
+      { userAgent: "*", allow: "/", disallow: ["/api/"] },
       { userAgent: [...BLOCKED_CRAWLERS], disallow: "/" },
     ],
     sitemap: "https://spanishcue.com/sitemap.xml",
