@@ -30,6 +30,26 @@ export const prunedRedirects: ReadonlyMap<string, string> = new Map([
   ["/material-ele/gramatica/comparativos-y-superlativos", "/material-ele/comparativos-y-superlativos"],
   ["/material-ele/gramatica/comparativos-y-superlativos/a2", "/material-ele/comparativos-y-superlativos"],
   ["/material-ele/gramatica/comparativos-y-superlativos/b2", "/material-ele/comparativos-y-superlativos"],
+  // Lote R2 (26/11/2026): grammar index topics duplicating the Material ELE topic page, with their levels.
+  ["/material-ele/gramatica/conectores", "/material-ele/conectores"],
+  ["/material-ele/gramatica/conectores/a2", "/material-ele/conectores"],
+  ["/material-ele/gramatica/conectores/b1", "/material-ele/conectores"],
+  ["/material-ele/gramatica/conectores/b2", "/material-ele/conectores"],
+  ["/material-ele/gramatica/conectores/c1", "/material-ele/conectores"],
+  ["/material-ele/gramatica/cuantificadores", "/material-ele/cuantificadores"],
+  ["/material-ele/gramatica/cuantificadores/a2", "/material-ele/cuantificadores"],
+  ["/material-ele/gramatica/cuantificadores/b1", "/material-ele/cuantificadores"],
+  ["/material-ele/gramatica/estilo-indirecto", "/material-ele/estilo-indirecto"],
+  ["/material-ele/gramatica/estilo-indirecto/b1", "/material-ele/estilo-indirecto"],
+  ["/material-ele/gramatica/estilo-indirecto/b2", "/material-ele/estilo-indirecto"],
+  ["/material-ele/gramatica/expresiones-de-tiempo", "/material-ele/expresiones-de-tiempo"],
+  ["/material-ele/gramatica/expresiones-de-tiempo/a2", "/material-ele/expresiones-de-tiempo"],
+  ["/material-ele/gramatica/genero-y-numero", "/material-ele/genero-y-numero"],
+  ["/material-ele/gramatica/genero-y-numero/a1", "/material-ele/genero-y-numero"],
+  ["/material-ele/gramatica/genero-y-numero/b1", "/material-ele/genero-y-numero"],
+  ["/material-ele/gramatica/gustar", "/material-ele/gustar"],
+  ["/material-ele/gramatica/imperativo", "/material-ele/imperativo"],
+  ["/material-ele/gramatica/imperativo/a2", "/material-ele/imperativo"],
 ]);
 
 /**
