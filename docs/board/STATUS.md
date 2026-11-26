@@ -98,7 +98,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - **L4, LOW, HYPOTHESIS:** `worker/index.ts:91` allows framing for any raw path starting with `/embed/`; an exact match on `/embed/conjugador` would be safer.
     - **Clean:** the admin newsletter route (owner-only at the worker and in the route, counts only, no emails), Paddle checkout/webhook access (granted only from a completed, matching transaction), founder-status/subscription, `syncFirebaseAccount` `created`, the per-isolate lesson path index (no route turned free), worlds 263/264 (PRO, private chunks and premium audio), and the embed conjugator (escaped output, no identity, strict CSP).
   - **CI and deploy health (VERIFIED, runs API, 243 runs since 11-19 03:00Z):**
-    - main = production = `4c4c05d3` (#542). Production run [45697704581](https://github.com/agnremote-code/spanishcue-web/actions/runs/45697704581) succeeded. The scheduled smoke [45705989659](https://github.com/agnremote-code/spanishcue-web/actions/runs/45705989659) passed (`"passed": true`).
+    - At run start, main = production = `4c4c05d3` (#542). Production run [45697704581](https://github.com/agnremote-code/spanishcue-web/actions/runs/45697704581) succeeded. The scheduled smoke [45705989659](https://github.com/agnremote-code/spanishcue-web/actions/runs/45705989659) passed (`"passed": true`).
     - Deploy Production: 42 success, 7 failure. Deploy Staging: 44 success, 7 failure. Every failure is the known safe overlap refusal ("Enforce a single production deployer" / "Promote verified staging SHA to production"), and later SHAs deployed.
     - CI + Auto Merge: 50 success, 10 failure, 15 cancelled, 34 skipped. All failures are on non-board feature branches (lint, whitespace, regression suite, one merge-lock wait), and those branches merged later.
     - Escucha 3D audio: 18 success, 1 failure (`claude/escucha-3d-objetos-perdidos`, 11-23, later merged).
@@ -108,7 +108,7 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
     - Staging run [45744247316](https://github.com/agnremote-code/spanishcue-web/actions/runs/45744247316) and production run [45744631722](https://github.com/agnremote-code/spanishcue-web/actions/runs/45744631722) both succeeded.
     - "Production smoke" passed (job 139657588285, 02:50:55–02:51:05Z, origin https://spanishcue.com), and the rollback was skipped.
     - main = production = `35fcefe4`. #543 changed a developer script, its test and docs only, so no URL changed and there was nothing more to smoke.
-    - These release lines reach main through the records PR from `claude/board-thursday-records-20261126`.
+    - These release lines reach main through records PR #544 (`claude/board-thursday-records-20261126`), reviewed by a fresh agent as Alejandro: **APPROVE**, every run ID and SHA re-checked against the API; its one wording nit applied.
   - **Owner notified by push** (M1, the 21-day Paddle webhook silence, CI health).
   - **Next action:**
     1. Owner / billing owner: M1 (Founder accounting for the 10% offer) and L1, once billing has no other open PR. Close or decide #360/#283 (W48 item 4(ii)). Paddle delivery-log check (21 days silent).
