@@ -8,7 +8,9 @@ import type { Plugin } from "vite";
 //
 // 1. `dynamic(() => import('X'), { ssr: false })`: vinext's server shim never
 //    calls the loader (it renders `loading` instead), so in SSR the import is
-//    replaced with an empty component. This drops the 3D worlds and three.js.
+//    replaced with an empty component. This drops the 3D worlds and, through
+//    app/*/ClientOnlyGame.tsx, the whole PRO 3D games with their level data
+//    (tests/ssr-client-only-games.test.mjs keeps FREE classes out of it).
 // 2. Imports run only from effects/callbacks of client components (listed
 //    below). Effects never run on the server.
 // 3. Noche abierta's full street data: the server render starts from
