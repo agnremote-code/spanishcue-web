@@ -11,6 +11,7 @@ import { grammarTopicByPath } from '../../growth/grammar-topics';
 import { grammarMetadata } from '../../growth/grammar-metadata';
 import LevelCrossLinks from "../../growth/LevelCrossLinks";
 import styles from "../guides.module.css";
+import { organizationNode } from "../../growth/schema";
 
 type GuidePageProps = {
   params: Promise<{ slug: string }>;
@@ -73,16 +74,8 @@ export default async function GuidePage({ params }: GuidePageProps) {
     mainEntityOfPage: canonical,
     datePublished: guide.publishedAt,
     dateModified: guideModifiedDate(guide),
-    author: {
-      "@type": "Organization",
-      name: "SPANISHCUE",
-      url: "https://spanishcue.com",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "SPANISHCUE",
-      url: "https://spanishcue.com",
-    },
+    author: organizationNode,
+    publisher: organizationNode,
     about: guide.keywords,
   };
 
@@ -90,7 +83,7 @@ export default async function GuidePage({ params }: GuidePageProps) {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "SPANISHCUE", item: "https://spanishcue.com" },
+      { "@type": "ListItem", position: 1, name: "SPANISHCUE", item: "https://spanishcue.com/" },
       { "@type": "ListItem", position: 2, name: "Teaching Guides", item: "https://spanishcue.com/guides" },
       { "@type": "ListItem", position: 3, name: guide.title, item: canonical },
     ],

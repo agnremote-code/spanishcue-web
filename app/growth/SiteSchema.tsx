@@ -11,12 +11,17 @@ import { SITE_NAME, SITE_ORIGIN } from "../seo";
  * the owner actually runs.
  */
 export const BRAND_ALTERNATE_NAMES = ["SpanishCue", "Spanish Cue", "spanishcue", "spanishcue.com"];
-export const BRAND_PROFILES = ["https://www.linkedin.com/company/144023469"];
+export const BRAND_PROFILES = [
+  "https://www.linkedin.com/company/144023469",
+  "https://www.youtube.com/channel/UCCLhj6h2hmjGQZ3XVLyrpUg",
+  "https://www.pinterest.com/spanishcue/",
+];
 
 export default function SiteSchema() {
   const organization = {
     "@context": "https://schema.org",
-    "@type": "Organization",
+    // EducationalOrganization: SPANISHCUE publishes teaching material (lessons, worksheets, guides).
+    "@type": ["Organization", "EducationalOrganization"],
     "@id": `${SITE_ORIGIN}/#organization`,
     name: SITE_NAME,
     alternateName: BRAND_ALTERNATE_NAMES,
