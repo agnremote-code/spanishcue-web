@@ -15,6 +15,15 @@ import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
 import print from "../print.module.css";
 
+/** Topic guides that have an interactive mini-app family: one rule and one quiz per use. */
+const MINI_APPS: Record<string, { href: string; label: string; detail: string }> = {
+  "ser-y-estar": { href: "/ser-o-estar", label: "¿Ser o estar? Ejercicios por uso y por adjetivo", detail: "15 usos y 18 adjetivos que cambian de significado" },
+  "por-y-para": { href: "/por-o-para", label: "¿Por o para? Ejercicios por uso", detail: "15 usos, cada uno con su regla" },
+  "indefinido-e-imperfecto": { href: "/indefinido-o-imperfecto", label: "¿Indefinido o imperfecto? Ejercicios por marcador", detail: "26 marcadores temporales" },
+  subjuntivo: { href: "/indicativo-o-subjuntivo", label: "¿Indicativo o subjuntivo? Ejercicios por expresión", detail: "36 expresiones" },
+  preposiciones: { href: "/verbos-con-preposicion", label: "Verbos con preposición: ejercicios", detail: "48 verbos con su preposición" },
+};
+
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
@@ -93,6 +102,12 @@ export default async function ElePage({ params }: Props) {
             <Section id="ejercicio" title={page.exercise.title} intro={exercisePreview ? `Las primeras ${exercisePreview.items.length} de ${page.exercise.items.length} frases. Las ${page.exercise.items.length}, con corrección automática y ficha en PDF, están en la página del ejercicio.` : undefined}>
               <EleExerciseBlock exercise={exercisePreview ?? page.exercise} />
               {ejercicio ? <p className={print.noPrint}><Link className={styles.textLink} href={ejercicio.path}>Ejercicio de {page.kind === "level" ? `nivel ${page.code}` : page.label.toLowerCase()} {exercisePreview ? "completo" : "en página propia"}, para mandar al alumno: {ejercicio.exercise.items.length} frases con corrección automática y soluciones →</Link></p> : null}
+            </Section>
+          ) : null}
+
+          {MINI_APPS[page.slug] ? (
+            <Section id="practica" title="Práctica interactiva por reglas" intro={`${MINI_APPS[page.slug].detail}, con corrección al instante. Abierto y sin registro.`}>
+              <p><Link className={styles.textLink} href={MINI_APPS[page.slug].href}>{MINI_APPS[page.slug].label} →</Link></p>
             </Section>
           ) : null}
 

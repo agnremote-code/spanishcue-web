@@ -151,6 +151,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path === "/indefinido-o-imperfecto" ||
     path.startsWith("/indefinido-o-imperfecto/") ||
     path === "/ser-o-estar" ||
+    path === "/por-o-para" ||
+    path.startsWith("/por-o-para/") ||
     path.startsWith("/ser-o-estar/") ||
     path.startsWith("/material-ele/") ||
     // Crawler endpoints: identical for every visitor and fetched constantly by
