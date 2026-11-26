@@ -8,11 +8,11 @@ function hash(text: string) {
 }
 
 /** "sentence|correct|wrong[|wrong]" → quiz item; the correct option's position depends on the sentence. */
-export function gapItem(raw: string, why: string): QuizItem {
+export function gapItem(raw: string, why: string, index = 0): QuizItem {
   const [sentence, correct, ...wrong] = raw.split("|");
   const parts = sentence.split("___");
   if (parts.length !== 2 || !parts[0].replace(/[¿¡]/g, "").trim() || !correct || !wrong.length || new Set([correct, ...wrong]).size !== wrong.length + 1) throw new Error(`Bad item: ${raw}`);
-  const answer = hash(sentence) % (wrong.length + 1);
+  const answer = (hash(sentence) + index) % (wrong.length + 1);
   const options = [...wrong];
   options.splice(answer, 0, correct);
   return { before: parts[0], after: parts[1], options, answer, why };
@@ -27,15 +27,16 @@ export type GapPageView = GapPage & { family: GapFamily; path: string; title: st
 export const gapPath = (f: GapFamily, slug: string) => `${f.path}/${slug}`;
 
 export function gapPage(f: GapFamily, p: GapPage): GapPageView {
-  const quiz = p.items.map((raw) => gapItem(raw, why(p)));
+  const quiz = p.items.map((raw, i) => gapItem(raw, why(p), i));
   const examples = quiz.slice(0, 3).map(fill);
   const short = p.name.split(" (")[0];
   const heading = p.name.endsWith("?") ? `${p.name} Ejercicios` : `${p.name}: ejercicios`;
   let title = `${heading} | SpanishCue`;
   if (title.length > 70) title = `${short}: ejercicios con solución | SpanishCue`;
+  const lead = short.endsWith("?") ? short : `${short}:`;
   let description = `${p.rule} Ejercicio de ${quiz.length} frases con corrección al instante.`;
-  if (description.length > 165) description = `${short}: la regla en una frase y un ejercicio de ${quiz.length} frases sobre ${f.topic}, con corrección al instante.`;
-  if (description.length > 165) description = `${short}: la regla y un ejercicio de ${quiz.length} frases con corrección al instante. Para clase o para practicar solo.`;
+  if (description.length > 165) description = `${lead} La regla en una frase y un ejercicio de ${quiz.length} frases sobre ${f.topic}, con corrección al instante.`;
+  if (description.length > 165) description = `${lead} La regla y un ejercicio de ${quiz.length} frases con corrección al instante. Para clase o para practicar solo.`;
   if (description.length < 110) description += " Para clase o para practicar solo.";
   const at = f.pages.indexOf(p);
   const related = [...f.pages.slice(at + 1), ...f.pages.slice(0, at)];

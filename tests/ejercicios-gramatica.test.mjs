@@ -5,7 +5,7 @@ const r=await build({stdin:{contents:'export * from "./app/ejercicios-gramatica/
 const m=await import('data:text/javascript;base64,'+Buffer.from(r.outputFiles[0].text).toString('base64'));
 
 test('every rule page resolves with valid metadata and a well-formed quiz',()=>{
- assert.deepEqual(m.gapFamilies.map(f=>f.pages.length),[6,8,4]);
+ assert.deepEqual(m.gapFamilies.map(f=>f.pages.length),[6,8,4,16]);
  for(const f of m.gapFamilies){
   assert.ok(f.title.length<=78&&f.title.endsWith('| SpanishCue'),f.title);
   assert.equal(new Set(f.pages.map(p=>p.slug)).size,f.pages.length);
@@ -39,6 +39,7 @@ test('neutral Spanish: no first-person preterite in the sentences',()=>{
 test('sitemap and edge cache',()=>{
  const urls=new Set(m.sitemap().map(x=>x.url));
  for(const path of m.gapPaths())assert.ok(urls.has('https://spanishcue.com'+path),path);
- assert.equal(m.gapPaths().length,21);
+ assert.equal(m.gapPaths().length,38);
  assert.ok(m.isEdgeCacheablePath('/ejercicios-de-gustar/doler'));
+ assert.ok(m.isEdgeCacheablePath('/dudas-del-espanol/haber-o-a-ver'));
 });
