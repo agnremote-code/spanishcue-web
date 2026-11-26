@@ -1,0 +1,1319 @@
+{
+  "captured_on": "2026-11-26",
+  "method": "Chrome del propietario (ventana separada de Claude, pestaña de fondo), sesión de Google iniciada, &pws=0 en cada URL. Datos extraídos del DOM de la SERP con JavaScript; capturas del viewport con zoom 0.33 (parte superior e inferior de cada SERP).",
+  "notes": [
+    "El pie de cada SERP indica ubicación física Ulán Bator, Mongolia (IP del equipo). gl= fija el país de resultados, pero la ubicación local no se pudo cambiar; Google indicó que los resultados no están personalizados.",
+    "people_also_ask: solo preguntas visibles sin desplegar. El bloque solo apareció en 'AP spanish practice'.",
+    "ai_overview.link_domains_visible: dominios de enlaces de la vista creada con IA presentes y visibles sin pulsar 'Mostrar más' (incluye las tarjetas de fuentes ya renderizadas).",
+    "organic: resultados web con título, excluyendo vista IA y carruseles de vídeo/imágenes. Varias SERP traen 8 o 9 resultados web en la página 1 aunque se pidió num=10.",
+    "featured_snippet: no se detectó fragmento destacado en ninguna búsqueda.",
+    "'conjugador de verbos' y 'spanish verb conjugator' se reextrajeron a las ~16:44 UTC para incluir el resultado de play.google.com que el primer filtro descartaba; 'por y para ejercicios' se reextrajo tras cargar la vista IA.",
+    "Sin captcha en ninguna búsqueda."
+  ],
+  "results": [
+    {
+      "query": "ser y estar ejercicios",
+      "hl": "es",
+      "gl": "es",
+      "serp_url": "https://www.google.com/search?q=ser+y+estar+ejercicios&hl=es&gl=es&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:39:56.559Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://aprenderespanol.org/verbos/ser-estar.html",
+          "domain": "aprenderespanol.org",
+          "title": "Verbos SER y ESTAR - ejercicios"
+        },
+        {
+          "position": 2,
+          "url": "https://deleahora.com/actividades/ser-vs-estar",
+          "domain": "deleahora.com",
+          "title": "Actividades sobre el ser vs. estar"
+        },
+        {
+          "position": 3,
+          "url": "https://www.spanishunicorn.com/ejercicios-gramatica-espanola-ser-estar/",
+          "domain": "spanishunicorn.com",
+          "title": "Ser o estar: diferencias y ejercicios con soluciones"
+        },
+        {
+          "position": 4,
+          "url": "https://espanol.lingolia.com/es/gramatica/verbos/ser-estar/ejercicios",
+          "domain": "espanol.lingolia.com",
+          "title": "ser y estar – Ejercicio de acceso libre"
+        },
+        {
+          "position": 5,
+          "url": "https://didattica.unibocconi.it/mypage/upload/161251_20160923_100504_8.SERYESTAR.PDF",
+          "domain": "didattica.unibocconi.it",
+          "title": "a) Ser b) Estar"
+        },
+        {
+          "position": 6,
+          "url": "https://arche-ele.com/ser-y-estar-gramatica-cognitiva-ele-diferencia",
+          "domain": "arche-ele.com",
+          "title": "SER Y ESTAR | Diferencia | Gramática Cognitiva"
+        },
+        {
+          "position": 7,
+          "url": "https://wordwall.net/es-es/community/verbo-ser-y-estar",
+          "domain": "wordwall.net",
+          "title": "verbo ser y estar - Recursos didácticos"
+        },
+        {
+          "position": 8,
+          "url": "https://ailespanol.com/es/recursos-didacticos-espanol/tablero-a-jugar-con-ser-y-estar/",
+          "domain": "ailespanol.com",
+          "title": "Ejercicio para practicar el contraste y los usos de ser y estar"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "spanishunicorn.com",
+          "youtube.com",
+          "aprenderespanol.org",
+          "deleahora.com",
+          "espanol.lingolia.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Ser y estar - ejercicios con soluciones",
+        "Ser y estar - ejercicios A1",
+        "Ser y estar ejercicios PDF A1",
+        "Ser y estar ejercicios para niños",
+        "Ser y estar ejercicios B1",
+        "Ser y estar ejercicios A2",
+        "Ser y estar ejercicios avanzados",
+        "Ser y estar ejercicios Wordwall"
+      ],
+      "features": {
+        "videos": true,
+        "images": true,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/01-ser-y-estar-ejercicios_es-es_1.png",
+        "capturas/01-ser-y-estar-ejercicios_es-es_2.png"
+      ]
+    },
+    {
+      "query": "ser vs estar worksheet",
+      "hl": "en",
+      "gl": "us",
+      "serp_url": "https://www.google.com/search?q=ser+vs+estar+worksheet&hl=en&gl=us&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:40:26.842Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://www.teacherspayteachers.com/browse/free?search=ser%20vs%20estar",
+          "domain": "teacherspayteachers.com",
+          "title": "Ser Vs Estar"
+        },
+        {
+          "position": 2,
+          "url": "https://www.bucks.edu/media/bcccmedialibrary/tutoring/documents/writingareahandoutrevision/spanish/The-Verbs-Ser-and-Estar.pdf",
+          "domain": "bucks.edu",
+          "title": "The Verbs “to know”: Ser vs. Estar"
+        },
+        {
+          "position": 3,
+          "url": "https://lingualinkup.com/ser-vs-estar/",
+          "domain": "lingualinkup.com",
+          "title": "Ser vs Estar (Quiz/Worksheet Included)"
+        },
+        {
+          "position": 4,
+          "url": "https://es.pinterest.com/pin/ser-vs-estar-worksheet--8936899257452330/",
+          "domain": "es.pinterest.com",
+          "title": "SER vs. ESTAR worksheet"
+        },
+        {
+          "position": 5,
+          "url": "https://brightsprout.com/worksheet/ser-vs-estar-practice-2",
+          "domain": "brightsprout.com",
+          "title": "Ser vs. Estar Practice - Free Printable"
+        },
+        {
+          "position": 6,
+          "url": "https://www.reddit.com/r/SpanishLearning/comments/1rpycns/ser_v_estar_worksheets_with_answer_keys/",
+          "domain": "reddit.com",
+          "title": "Ser v estar worksheets with answer keys : r/SpanishLearning"
+        },
+        {
+          "position": 7,
+          "url": "https://www.scribd.com/document/49367652/Spanish-1-SER-vs-ESTAR-Final-Packet",
+          "domain": "scribd.com",
+          "title": "Ser vs. Estar Practice Worksheet | PDF | Morphology"
+        },
+        {
+          "position": 8,
+          "url": "https://quizlet.com/37686917/ser-v-estar-worksheet-answers-flash-cards/",
+          "domain": "quizlet.com",
+          "title": "Ser V Estar Worksheet Answers Flashcards"
+        },
+        {
+          "position": 9,
+          "url": "https://vamospanish.com/learn-spanish/worksheets/ser-vs-estar-worksheet/",
+          "domain": "vamospanish.com",
+          "title": "Ser vs Estar Worksheets in Spanish: Printable PDFs"
+        }
+      ],
+      "ai_overview": {
+        "present": false,
+        "link_domains_visible": []
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Ser vs estar worksheet PDF",
+        "Ser vs estar worksheet and answer key PDF",
+        "Ser vs estar worksheet with answers",
+        "Ser vs estar practice",
+        "Ser worksheet pdf",
+        "Ser vs estar quiz",
+        "Ser and estar pdf",
+        "Ser and estar conjugations"
+      ],
+      "features": {
+        "videos": false,
+        "images": true,
+        "featured_snippet": false,
+        "ai_overview": false,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/02-ser-vs-estar-worksheet_en-us_1.png",
+        "capturas/02-ser-vs-estar-worksheet_en-us_2.png"
+      ]
+    },
+    {
+      "query": "preterite vs imperfect practice",
+      "hl": "en",
+      "gl": "us",
+      "serp_url": "https://www.google.com/search?q=preterite+vs+imperfect+practice&hl=en&gl=us&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:40:49.911Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://conjuguemos.com/grammar/229",
+          "domain": "conjuguemos.com",
+          "title": "Preterite vs. Imperfect #1 - Grammar"
+        },
+        {
+          "position": 2,
+          "url": "https://studyspanish.com/grammar/test/pretimp1",
+          "domain": "studyspanish.com",
+          "title": "Preterite vs Imperfect Part I: Quiz #1"
+        },
+        {
+          "position": 3,
+          "url": "https://personal.colby.edu/~bknelson/SLC/pret_imp.html",
+          "domain": "personal.colby.edu",
+          "title": "Spanish Language & Culture | Preterite vs. Imperfect"
+        },
+        {
+          "position": 4,
+          "url": "https://www.spanishspanish.com/assignments/Verbs/3700_verb_imperfect_preterite.html",
+          "domain": "spanishspanish.com",
+          "title": "3700 - QUIZ - imperfect or preterite"
+        },
+        {
+          "position": 5,
+          "url": "https://app.oncoursesystems.com/school/webpage/11182624/1915072",
+          "domain": "app.oncoursesystems.com",
+          "title": "Preterite vs Imperfect EXTRA PRACTICE - OnCourse"
+        },
+        {
+          "position": 6,
+          "url": "https://spanish.yabla.com/lesson-Preterite-vs.-Imperfect-Quiz-2084",
+          "domain": "spanish.yabla.com",
+          "title": "Preterite vs. Imperfect Quiz"
+        },
+        {
+          "position": 7,
+          "url": "https://www.gimkit.com/practice/644fd7b04621150034b64ba6",
+          "domain": "gimkit.com",
+          "title": "Preterite vs. Imperfect"
+        },
+        {
+          "position": 8,
+          "url": "https://studyspanish.com/grammar/test/pretimp2",
+          "domain": "studyspanish.com",
+          "title": "Preterite vs Imperfect Part II: Quiz #1"
+        },
+        {
+          "position": 9,
+          "url": "https://quizlet.com/615492132/preterite-vs-imperfect-sentences-flash-cards/",
+          "domain": "quizlet.com",
+          "title": "Preterite vs. Imperfect sentences Flashcards"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "reddit.com",
+          "youtube.com",
+          "quizlet.com",
+          "spanish.yabla.com",
+          "studyspanish.com",
+          "conjuguemos.com",
+          "learn.bowdoin.edu",
+          "123teachme.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Preterite vs imperfect practice conjuguemos",
+        "Preterite vs imperfect Practice Worksheet",
+        "Preterite and imperfect practice fill in the blank",
+        "Preterite vs imperfect Practice paragraph",
+        "Preterite vs Imperfect practice quizlet",
+        "Preterite vs imperfect conjugations",
+        "Spanish 2 preterite vs imperfect practice",
+        "Preterite vs imperfect Practice PDF"
+      ],
+      "features": {
+        "videos": true,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/03-preterite-vs-imperfect-practice_en-us_1.png",
+        "capturas/03-preterite-vs-imperfect-practice_en-us_2.png"
+      ]
+    },
+    {
+      "query": "subjuntivo ejercicios",
+      "hl": "es",
+      "gl": "es",
+      "serp_url": "https://www.google.com/search?q=subjuntivo+ejercicios&hl=es&gl=es&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:40:56.494Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://deleahora.com/actividades/subjuntivo",
+          "domain": "deleahora.com",
+          "title": "Actividades sobre el subjuntivo"
+        },
+        {
+          "position": 2,
+          "url": "https://www.profedeele.es/actividad/indicativo-y-subjuntivo/",
+          "domain": "profedeele.es",
+          "title": "Indicativo y Subjuntivo: Actividades y juegos para practicar"
+        },
+        {
+          "position": 3,
+          "url": "https://aprenderespanol.org/verbos/subjuntivo-presente.html",
+          "domain": "aprenderespanol.org",
+          "title": "Presente subjuntivo 1"
+        },
+        {
+          "position": 4,
+          "url": "https://rinconespanol.wordpress.com/wp-content/uploads/2016/01/ejercicios-subjuntivo.pdf",
+          "domain": "rinconespanol.wordpress.com",
+          "title": "ejercicios-subjuntivo.pdf"
+        },
+        {
+          "position": 5,
+          "url": "https://www.spanishunicorn.com/category/subjuntivo/",
+          "domain": "spanishunicorn.com",
+          "title": "Subjuntivo Archives"
+        },
+        {
+          "position": 6,
+          "url": "https://www.profe-de-espanol.de/tag/subjuntivo/",
+          "domain": "profe-de-espanol.de",
+          "title": "Subjuntivo en ELE | Recursos gramaticales"
+        },
+        {
+          "position": 7,
+          "url": "https://delicias.deigualaigual.net/wp-content/uploads/Presente_subjuntivo_ejercicios.pdf",
+          "domain": "delicias.deigualaigual.net",
+          "title": "Ejercicios de “Presente de subjuntivo” - D=a= Delicias"
+        },
+        {
+          "position": 8,
+          "url": "https://espanol.lingolia.com/es/gramatica/tiempos-subjuntivo/presente/ejercicios",
+          "domain": "espanol.lingolia.com",
+          "title": "Presente de subjuntivo – Ejercicio de acceso libre"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "profedeele.es",
+          "spanishunicorn.com",
+          "spanishwithvicente.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Ejercicios subjuntivo español pdf",
+        "Presente de subjuntivo -- ejercicios",
+        "Subjuntivo ejercicios B2",
+        "Presente de subjuntivo ejercicios pdf",
+        "Imperfecto de subjuntivo ejercicios",
+        "Subjuntivo ejercicios Wordwall",
+        "Subjuntivo ejercicios dele",
+        "Indicativo o subjuntivo ejercicios pdf"
+      ],
+      "features": {
+        "videos": false,
+        "images": true,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/04-subjuntivo-ejercicios_es-es_1.png",
+        "capturas/04-subjuntivo-ejercicios_es-es_2.png"
+      ]
+    },
+    {
+      "query": "subjunctive practice spanish",
+      "hl": "en",
+      "gl": "us",
+      "serp_url": "https://www.google.com/search?q=subjunctive+practice+spanish&hl=en&gl=us&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:41:19.757Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://conjuguemos.com/verb/129",
+          "domain": "conjuguemos.com",
+          "title": "Present Subjunctive (all verbs) - Verb Conjugation"
+        },
+        {
+          "position": 2,
+          "url": "https://studyspanish.com/verbs/lessons/pressubj",
+          "domain": "studyspanish.com",
+          "title": "The Present Subjunctive | Spanish Verbs"
+        },
+        {
+          "position": 3,
+          "url": "https://www.stolaf.edu/people/hansonr/spanish/subjuntivo/index.htm",
+          "domain": "stolaf.edu",
+          "title": "Self-Study Spanish Verb Quiz--Present Subjunctive"
+        },
+        {
+          "position": 4,
+          "url": "https://quizlet.com/293523596/spanish-subjunctive-practice-flash-cards/",
+          "domain": "quizlet.com",
+          "title": "Spanish Subjunctive Practice Flashcards"
+        },
+        {
+          "position": 5,
+          "url": "https://docmolly.com/conjugate-spanish-subjunctive/",
+          "domain": "docmolly.com",
+          "title": "Conjugate the Spanish Subjunctive with Audio Quiz #1"
+        },
+        {
+          "position": 6,
+          "url": "https://sayzonte.com/spanish-subjunctive-practice/",
+          "domain": "sayzonte.com",
+          "title": "Spanish Subjunctive Practice: 6 Free Exercises"
+        },
+        {
+          "position": 7,
+          "url": "https://studioespanol.com/wp-content/uploads/2025/01/20.-The-present-subjunctive.pdf",
+          "domain": "studioespanol.com",
+          "title": "20.-The-present-subjunctive.pdf"
+        },
+        {
+          "position": 8,
+          "url": "https://cronopiosidiomas.com/activities-to-practice-the-subjunctive-in-spanish/",
+          "domain": "cronopiosidiomas.com",
+          "title": "Activities to Practice the Subjunctive in Spanish"
+        },
+        {
+          "position": 9,
+          "url": "https://personal.colby.edu/~bknelson/SLC/subj6_emotion.html",
+          "domain": "personal.colby.edu",
+          "title": "Present Subjunctive Exercise #6"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "studyspanish.com",
+          "youtube.com",
+          "sayzonte.com",
+          "conjuguemos.com",
+          "quizlet.com",
+          "docmolly.com",
+          "practiquemos.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Spanish subjunctive practice pdf",
+        "Spanish subjunctive practice all tenses",
+        "Spanish subjunctive practice worksheets with answers",
+        "Subjunctive conjugation practice",
+        "Imperfect subjunctive Practice",
+        "Subjunctive Spanish practice sentences",
+        "Spanish subjunctive conjugation",
+        "Subjunctive Spanish irregulars"
+      ],
+      "features": {
+        "videos": true,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/05-subjunctive-practice-spanish_en-us_1.png",
+        "capturas/05-subjunctive-practice-spanish_en-us_2.png"
+      ]
+    },
+    {
+      "query": "conjugador de verbos",
+      "hl": "es",
+      "gl": "es",
+      "serp_url": "https://www.google.com/search?q=conjugador+de+verbos&hl=es&gl=es&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:43:57.953Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://conjugador.reverso.net/conjugacion-espanol.html",
+          "domain": "conjugador.reverso.net",
+          "title": "Conjugación verbo español: futuro, indicativo, subjuntivo ..."
+        },
+        {
+          "position": 2,
+          "url": "https://www.elconjugador.com/esindex.php",
+          "domain": "elconjugador.com",
+          "title": "El Conjugador"
+        },
+        {
+          "position": 3,
+          "url": "https://www.conjugacion.es/",
+          "domain": "conjugacion.es",
+          "title": "Conjugación de verbos en español - Conjugar Verbos"
+        },
+        {
+          "position": 4,
+          "url": "https://www.softcatala.org/conjugador-de-verbs/",
+          "domain": "softcatala.org",
+          "title": "Conjugador de verbs"
+        },
+        {
+          "position": 5,
+          "url": "https://es.calcuworld.com/idiomas/conjugar-verbos-espanol/",
+          "domain": "es.calcuworld.com",
+          "title": "Conjugador de verbos en Español - Calculadoras Online"
+        },
+        {
+          "position": 6,
+          "url": "https://www.wordreference.com/conj/esverbs.aspx?v=conjugar",
+          "domain": "wordreference.com",
+          "title": "Conjugación de conjugar"
+        },
+        {
+          "position": 7,
+          "url": "https://play.google.com/store/apps/details?id=com.ayosoft.conjugacion.verbo.espanol&hl=es",
+          "domain": "play.google.com",
+          "title": "Conjugación de verbos Español - Aplicaciones en ..."
+        },
+        {
+          "position": 8,
+          "url": "https://www.curso-ingles.com/recursos/conjugador",
+          "domain": "curso-ingles.com",
+          "title": "Conjugador de verbos en inglés"
+        },
+        {
+          "position": 9,
+          "url": "https://espanol.lingolia.com/es/gramatica/conjugador",
+          "domain": "espanol.lingolia.com",
+          "title": "Conjugador de verbos en español"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "conjugador.reverso.net",
+          "elconjugador.com",
+          "wordreference.com",
+          "softcatala.org"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Conjugación de verbos inglés",
+        "Conjugar verbos español",
+        "Conjugador de verbos portugués",
+        "Conjugador de verbos en gallego",
+        "Conjugación de verbos en español pdf",
+        "Conjugador de verbos francés",
+        "El Conjugador",
+        "Conjugador de verbos alemán"
+      ],
+      "features": {
+        "videos": false,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/06-conjugador-de-verbos_es-es_1.png",
+        "capturas/06-conjugador-de-verbos_es-es_2.png"
+      ]
+    },
+    {
+      "query": "spanish verb conjugator",
+      "hl": "en",
+      "gl": "us",
+      "serp_url": "https://www.google.com/search?q=spanish+verb+conjugator&hl=en&gl=us&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:44:04.097Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://www.spanishdict.com/conjugation",
+          "domain": "spanishdict.com",
+          "title": "Conjugate Spanish Verbs on SpanishDictionary.com"
+        },
+        {
+          "position": 2,
+          "url": "https://conjugator.reverso.net/conjugation-spanish.html",
+          "domain": "conjugator.reverso.net",
+          "title": "Spanish Conjugation: participle, present, future, preterite"
+        },
+        {
+          "position": 3,
+          "url": "https://apps.apple.com/us/app/spanish-verb-conjugator/id912176975",
+          "domain": "apps.apple.com",
+          "title": "Spanish Verb Conjugator - App Store - Apple"
+        },
+        {
+          "position": 4,
+          "url": "https://espanol.lingolia.com/en/grammar/conjugator",
+          "domain": "espanol.lingolia.com",
+          "title": "Conjugate Spanish verbs"
+        },
+        {
+          "position": 5,
+          "url": "https://play.google.com/store/apps/details?id=com.itipton.spanishverbs&hl=en_US",
+          "domain": "play.google.com",
+          "title": "Spanish Verb Conjugator - Apps on Google Play"
+        },
+        {
+          "position": 6,
+          "url": "https://conjuguemos.com/activities/spanish/verb/1",
+          "domain": "conjuguemos.com",
+          "title": "Spanish Verb Conjugation - All Tenses & Moods"
+        },
+        {
+          "position": 7,
+          "url": "https://ellaverbs.com/spanish-verbs/",
+          "domain": "ellaverbs.com",
+          "title": "Spanish verbs list with conjugation tables"
+        },
+        {
+          "position": 8,
+          "url": "https://cooljugator.com/es",
+          "domain": "cooljugator.com",
+          "title": "Cool Spanish Verb Conjugator | Cooljugator.com"
+        },
+        {
+          "position": 9,
+          "url": "https://sentencelab.app/conjugator",
+          "domain": "sentencelab.app",
+          "title": "Spanish Verb Conjugator - Free Online Tool - Sentence Lab"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "spanishdict.com",
+          "conjugator.reverso.net",
+          "espanol.lingolia.com",
+          "livelingua.com",
+          "tandem.net",
+          "youtube.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Spanish verb conjugation chart",
+        "Free Spanish verb conjugation chart",
+        "Spanish verb conjugation practice",
+        "Spanish verb conjugation chart PDF",
+        "Spanish verb conjugation chart all tenses PDF",
+        "Spanish verb conjugation dictionary",
+        "Spanish verb conjugation website",
+        "Spanish verbs conjugation list"
+      ],
+      "features": {
+        "videos": true,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/07-spanish-verb-conjugator_en-us_1.png",
+        "capturas/07-spanish-verb-conjugator_en-us_2.png"
+      ]
+    },
+    {
+      "query": "DELE A2 modelo de examen",
+      "hl": "es",
+      "gl": "es",
+      "serp_url": "https://www.google.com/search?q=DELE+A2+modelo+de+examen&hl=es&gl=es&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:41:56.257Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://albuquerque.cervantes.es/es/diplomas_espanol/modelo_examen.htm",
+          "domain": "albuquerque.cervantes.es",
+          "title": "Modelos de exámenes y audios DELE"
+        },
+        {
+          "position": 2,
+          "url": "https://blog.tiatula.com/2010/03/modelos-de-examen-dele.html",
+          "domain": "blog.tiatula.com",
+          "title": "Modelos de examen DELE (actualizado 2022)"
+        },
+        {
+          "position": 3,
+          "url": "https://profesoresdeele.org/2020/06/04/examen-dele-a2/",
+          "domain": "profesoresdeele.org",
+          "title": "Examen DELE A2"
+        },
+        {
+          "position": 4,
+          "url": "https://mas.profedeele.es/descarga-160",
+          "domain": "mas.profedeele.es",
+          "title": "DELE A2: Modelo de examen completo"
+        },
+        {
+          "position": 5,
+          "url": "https://pekin.cervantes.es/es/diplomas_espanol/modelos_examen.htm",
+          "domain": "pekin.cervantes.es",
+          "title": "Modelos de examen. Diplomas DELE. ..."
+        },
+        {
+          "position": 6,
+          "url": "https://enclave-ele.net/product/dale-al-dele-a2-nuevos-modelos-de-examen/",
+          "domain": "enclave-ele.net",
+          "title": "¡Dale al DELE! A2: nuevos modelos de examen"
+        },
+        {
+          "position": 7,
+          "url": "https://preparaeldele.com/examen/dele-examen/descargar-modelos-examen-dele-a2/",
+          "domain": "preparaeldele.com",
+          "title": "? Modelos del examen DELE A2 para descargar gratis"
+        },
+        {
+          "position": 8,
+          "url": "https://nyork.cervantes.es/es/examenes_espanol/dele_modelos_examen.htm",
+          "domain": "nyork.cervantes.es",
+          "title": "DELE modelos de exámen"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "albuquerque.cervantes.es",
+          "profesoresdeele.org",
+          "youtube.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Examen DELE A2 PDF Con soluciones",
+        "Modelo de examen DELE A2 PDF",
+        "Examen DELE A2 PDF Con soluciones 2026",
+        "Examen DELE A2 nacionalidad 2026",
+        "Instituto Cervantes examen DELE A2",
+        "Modelo examen DELE A2 audio",
+        "DELE A2 examen cita previa",
+        "Modelo examen DELE A2 2026"
+      ],
+      "features": {
+        "videos": true,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/08-dele-a2-modelo-de-examen_es-es_1.png",
+        "capturas/08-dele-a2-modelo-de-examen_es-es_2.png"
+      ]
+    },
+    {
+      "query": "GCSE spanish revision worksheets",
+      "hl": "en",
+      "gl": "gb",
+      "serp_url": "https://www.google.com/search?q=GCSE+spanish+revision+worksheets&hl=en&gl=gb&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:42:04.359Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://www.tes.com/teaching-resources/gcse-exam-revision/languages/spanish",
+          "domain": "tes.com",
+          "title": "GCSE Spanish revision resources"
+        },
+        {
+          "position": 2,
+          "url": "https://www.revisionlibrary.co.uk/library/gcse-spanish",
+          "domain": "revisionlibrary.co.uk",
+          "title": "GCSE Spanish worksheets - Revision Library"
+        },
+        {
+          "position": 3,
+          "url": "https://www.sjbc.wandsworth.sch.uk/_site/data/files/users/y11-gcse-pdf-files/FEBB4833151CAC65638297397FA0F34A.pdf",
+          "domain": "sjbc.wandsworth.sch.uk",
+          "title": "GCSE Spanish Revision Pack Foundation"
+        },
+        {
+          "position": 4,
+          "url": "https://www.lightbulblanguages.co.uk/resources-sp-ks4-wks.htm",
+          "domain": "lightbulblanguages.co.uk",
+          "title": "Spanish KS4 Worksheets"
+        },
+        {
+          "position": 5,
+          "url": "https://www.pearsonschoolsandfecolleges.co.uk/secondary/subjects/modernlanguages/pearson-edexcel-spanish-gcse/pearson-revise-edexcel-gcse-9-1-spanish-revision-workbook?srsltid=AYCX9vIgxlgE5pyEBWXYVWSGGBQdm_PKaBl9RYZYiUAzgcJByBvth6fq",
+          "domain": "pearsonschoolsandfecolleges.co.uk",
+          "title": "Pearson Revise Edexcel GCSE Spanish Revision Workbook"
+        },
+        {
+          "position": 6,
+          "url": "https://www.twinkl.cz/resources/languages-ks3-ks4/keystage3-ks3-modern-foreign-languages-spanish/keystage3-ks3-modern-foreign-languages-spanish-gcse",
+          "domain": "twinkl.cz",
+          "title": "KS4/GCSE Teaching Resources - Spanish - Twinkl"
+        },
+        {
+          "position": 7,
+          "url": "https://www.rachelhawkes.com/Resources/GCSE/GCSE.php",
+          "domain": "rachelhawkes.com",
+          "title": "Spanish resources for GCSE"
+        },
+        {
+          "position": 8,
+          "url": "https://www.weteachmfl.co.uk/free-resources",
+          "domain": "weteachmfl.co.uk",
+          "title": "We Teach Spanish | Free Resources"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "revisionlibrary.co.uk",
+          "tes.com",
+          "weteachmfl.co.uk",
+          "sjbc.wandsworth.sch.uk",
+          "rachelhawkes.com",
+          "scribd.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Year 7 Spanish worksheets with Answers",
+        "Year 7 spanish revision worksheets",
+        "Spanish worksheets PDF",
+        "Gcse spanish revision tes",
+        "Spanish GCSE tenses Worksheet",
+        "Spanish worksheet year 7",
+        "Gcse spanish reading revision",
+        "A Level Spanish worksheets"
+      ],
+      "features": {
+        "videos": false,
+        "images": true,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/09-gcse-spanish-revision-worksheets_en-gb_1.png",
+        "capturas/09-gcse-spanish-revision-worksheets_en-gb_2.png"
+      ]
+    },
+    {
+      "query": "AP spanish practice",
+      "hl": "en",
+      "gl": "us",
+      "serp_url": "https://www.google.com/search?q=AP+spanish+practice&hl=en&gl=us&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:42:14.272Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://apcentral.collegeboard.org/courses/ap-spanish-language-and-culture/exam/past-exam-questions",
+          "domain": "apcentral.collegeboard.org",
+          "title": "AP Spanish Language and Culture Exam Questions"
+        },
+        {
+          "position": 2,
+          "url": "https://www.varsitytutors.com/learner/subjects/ap-spanish-language-and-culture/practice-tests",
+          "domain": "varsitytutors.com",
+          "title": "Free AP Spanish Language and Culture Practice Tests"
+        },
+        {
+          "position": 3,
+          "url": "https://highschooltestprep.com/ap/spanish-language/",
+          "domain": "highschooltestprep.com",
+          "title": "AP Spanish Language Practice Tests"
+        },
+        {
+          "position": 4,
+          "url": "https://www.quizwhiz.ai/tools/ap-spanish-practice-test/",
+          "domain": "quizwhiz.ai",
+          "title": "AP Spanish Practice Test - Questions & Scores"
+        },
+        {
+          "position": 5,
+          "url": "https://hablame.org/",
+          "domain": "hablame.org",
+          "title": "Spanish Speaking Practice"
+        },
+        {
+          "position": 6,
+          "url": "https://www.targoacademy.com/blog/ap-spanish-practice-test",
+          "domain": "targoacademy.com",
+          "title": "Free AP Spanish Practice Test for the New 2027 Exam"
+        },
+        {
+          "position": 7,
+          "url": "https://www.albert.io/ap-spanish-language",
+          "domain": "albert.io",
+          "title": "AP® Spanish Language Practice Questions & Exam Prep"
+        },
+        {
+          "position": 8,
+          "url": "https://study.com/academy/exam/course/ap-spanish-language-and-culture-exam-prep.html",
+          "domain": "study.com",
+          "title": "Free AP Spanish Language and Culture Practice Test"
+        },
+        {
+          "position": 9,
+          "url": "https://vistahigherlearning.com/ap-spanish-4th-edition.html?srsltid=AYCX9vLixXVhBMc7JXmNTpeafXWnc1A_qXW8HuT79NBVNPtS_x_78uDB",
+          "domain": "vistahigherlearning.com",
+          "title": "For AP® Spanish Language and Culture ©2028"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "apcentral.collegeboard.org",
+          "varsitytutors.com",
+          "highschooltestprep.com",
+          "blog.collegevine.com",
+          "youtube.com"
+        ]
+      },
+      "people_also_ask": [
+        "Is AP Spanish B1 or B2?",
+        "Is AP Spanish lit the hardest AP?",
+        "Can I self study AP Spanish?",
+        "What percent is a 5 on AP Spanish?"
+      ],
+      "related_searches": [
+        "AP Spanish multiple choice practice pdf",
+        "AP Spanish practice Test PDF",
+        "AP Spanish practice MCQ",
+        "AP Spanish audio practice",
+        "AP Spanish frq",
+        "AP Spanish released exams",
+        "AP Spanish score calculator",
+        "Ap spanish essay prompts"
+      ],
+      "features": {
+        "videos": true,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": true
+      },
+      "screenshots": [
+        "capturas/10-ap-spanish-practice_en-us_1.png",
+        "capturas/10-ap-spanish-practice_en-us_2.png"
+      ]
+    },
+    {
+      "query": "spanish heritage learners worksheets",
+      "hl": "en",
+      "gl": "us",
+      "serp_url": "https://www.google.com/search?q=spanish+heritage+learners+worksheets&hl=en&gl=us&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:42:30.961Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://www.teacherspayteachers.com/browse/student-practice/worksheets/holiday/hispanic-heritage-month/free",
+          "domain": "teacherspayteachers.com",
+          "title": "Free Hispanic Heritage Month Worksheets"
+        },
+        {
+          "position": 2,
+          "url": "https://www.education.com/resources/worksheets/?occasion=hispanic-heritage-month",
+          "domain": "education.com",
+          "title": "Hispanic Heritage Month Worksheets"
+        },
+        {
+          "position": 3,
+          "url": "https://profenygaard.com/2021/07/17/17-free-resources-for-teaching-heritage-speakers-class/",
+          "domain": "profenygaard.com",
+          "title": "17+ Free Resources for teaching Heritage Speakers Class"
+        },
+        {
+          "position": 4,
+          "url": "https://www.superteacherworksheets.com/printable-pdf-worksheets/hispanic-heritage-month/69002-Hispanic-Heritage-Patterns",
+          "domain": "superteacherworksheets.com",
+          "title": "Hispanic Heritage Patterns Printable Month Pattern Color ..."
+        },
+        {
+          "position": 5,
+          "url": "https://futuraadventures.com/culture-crafts-project-ideas/",
+          "domain": "futuraadventures.com",
+          "title": "Culture Resources"
+        },
+        {
+          "position": 6,
+          "url": "https://www.hmhco.com/shop/k12/resources-for-heritage-learners-print-only/9780544998971?srsltid=AYCX9vKptoZmQlKPmvYYs4DK3PGBMfkPuyhRTE4WMPRpgsM9WwD54vZA",
+          "domain": "hmhco.com",
+          "title": "Resources for Heritage Learners: Print Only-9780544998971"
+        },
+        {
+          "position": 7,
+          "url": "https://www.k12reader.com/subject/themes/hispanic-heritage-month-themes/",
+          "domain": "k12reader.com",
+          "title": "Hispanic Heritage Month Worksheets | Printable Activities"
+        },
+        {
+          "position": 8,
+          "url": "https://www.teacherspayteachers.com/browse/free?search=heritage%20spanish",
+          "domain": "teacherspayteachers.com",
+          "title": "Heritage Spanish"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "profenygaard.com",
+          "hmhco.com",
+          "lamaestramch.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Hispanic Heritage worksheets pdf",
+        "Hispanic Heritage Month worksheets free",
+        "Hispanic heritage month worksheets kindergarten",
+        "Hispanic heritage month reading comprehension pdf",
+        "Hispanic Heritage Month coloring pages",
+        "Hispanic Heritage Month 2026",
+        "TPT",
+        "Teachers Pay Teachers"
+      ],
+      "features": {
+        "videos": false,
+        "images": true,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/11-spanish-heritage-learners-worksheets_en-us_1.png",
+        "capturas/11-spanish-heritage-learners-worksheets_en-us_2.png"
+      ]
+    },
+    {
+      "query": "emergency spanish sub plans",
+      "hl": "en",
+      "gl": "us",
+      "serp_url": "https://www.google.com/search?q=emergency+spanish+sub+plans&hl=en&gl=us&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:42:34.908Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://misclaseslocas.com/sub-plans-for-spanish-class/?srsltid=AYCX9vLnTAW1T_vomlZndWcFe9O-7W1GmS4ztrBTPSku8tumvO7TrSMt",
+          "domain": "misclaseslocas.com",
+          "title": "Emergency High School Spanish Sub Plans"
+        },
+        {
+          "position": 2,
+          "url": "https://spanishmama.com/easy-ideas-for-emergency-spanish-sub-lesson-plans/",
+          "domain": "spanishmama.com",
+          "title": "Simple Ideas and Help for Emergency Spanish Sub ..."
+        },
+        {
+          "position": 3,
+          "url": "https://www.teacherspayteachers.com/store/srtaestrella-emergency-spanish-sub-plans",
+          "domain": "teacherspayteachers.com",
+          "title": "SrtaEstrella Emergency Spanish Sub Plans"
+        },
+        {
+          "position": 4,
+          "url": "https://srtaspanish.com/2023/09/28/8-easy-to-use-spanish-sub-plans/",
+          "domain": "srtaspanish.com",
+          "title": "8 Easy Spanish Sub Plans: No-Prep Activities for Any Day"
+        },
+        {
+          "position": 5,
+          "url": "https://www.spanishworksheetsandmore.com/free-spanish-emergency-sub-plan/",
+          "domain": "spanishworksheetsandmore.com",
+          "title": "Free Spanish Emergency Sub Plan"
+        },
+        {
+          "position": 6,
+          "url": "https://la-libre-language-learning.myshopify.com/products/emergency-sub-plans?srsltid=AYCX9vKsqIkoKVvY7Wujt_RTg0tevgQ2KV1MFNGY7G_t78cdgZkj7l0T",
+          "domain": "la-libre-language-learning.myshopify.com",
+          "title": "Spanish Emergency Sub Plans"
+        },
+        {
+          "position": 7,
+          "url": "https://calicospanish.com/the-no-stress-spanish-sub-plan-even-if-your-sub-doesnt-speak-spanish/?srsltid=AYCX9vKWl4X9b9QOeKaM5mIZEr64_jm04vjz-hh20DgsD89GUXkJhmKL",
+          "domain": "calicospanish.com",
+          "title": "The No-Stress Spanish Sub Plan (Even If Your Sub Doesn't ..."
+        },
+        {
+          "position": 8,
+          "url": "https://thespanishbrew.com/zero-prep-emergency-spanish-sub-plans-that-save-your-sanity/",
+          "domain": "thespanishbrew.com",
+          "title": "Zero-Prep Emergency Spanish Sub Plans That Save Your ..."
+        },
+        {
+          "position": 9,
+          "url": "https://www.facebook.com/groups/14829186483/posts/10164971575951484/",
+          "domain": "facebook.com",
+          "title": "Emergency sub plans for K-5th grade Spanish classes?"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "thellearningllama.com",
+          "srtaspanish.com",
+          "facebook.com",
+          "youtube.com",
+          "spanishmama.com",
+          "misclaseslocas.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Spanish sub plans pdf",
+        "Emergency sub plans for spanish class",
+        "Elementary Spanish sub plans",
+        "Free Spanish numbers worksheet",
+        "Free printable Spanish numbers",
+        "Spanish mama numbers",
+        "Spanish numbers 1-1000 PDF"
+      ],
+      "features": {
+        "videos": false,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/12-emergency-spanish-sub-plans_en-us_1.png",
+        "capturas/12-emergency-spanish-sub-plans_en-us_2.png"
+      ]
+    },
+    {
+      "query": "por y para ejercicios",
+      "hl": "es",
+      "gl": "es",
+      "serp_url": "https://www.google.com/search?q=por+y+para+ejercicios&hl=es&gl=es&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:43:21.398Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://www.profedeele.es/actividad/preposiciones-por-para/",
+          "domain": "profedeele.es",
+          "title": "¡A Marte con las preposiciones POR y PARA!"
+        },
+        {
+          "position": 2,
+          "url": "https://aprenderespanol.org/gramatica/por-para-preposiciones.html",
+          "domain": "aprenderespanol.org",
+          "title": "Preposiciones por - para. Ejercicios"
+        },
+        {
+          "position": 3,
+          "url": "https://espanol.lingolia.com/es/vocabulario/palabras-confundibles/por-para/ejercicios",
+          "domain": "espanol.lingolia.com",
+          "title": "por/para – Ejercicio de acceso libre"
+        },
+        {
+          "position": 4,
+          "url": "https://www.spanishunicorn.com/por-o-para-ejercicios/",
+          "domain": "spanishunicorn.com",
+          "title": "Por o para: diferencias, ejemplos y ejercicios con soluciones"
+        },
+        {
+          "position": 5,
+          "url": "https://deleahora.com/actividades/gramatica/completa-con-por-o-para",
+          "domain": "deleahora.com",
+          "title": "Completa con 'por' o 'para' | Gramática"
+        },
+        {
+          "position": 6,
+          "url": "https://todoele.net/gramatica/lo-preguntas-con-por-o-para",
+          "domain": "todoele.net",
+          "title": "¿Lo preguntas con \"por\" o \"para\"? | Materiales de gramática"
+        },
+        {
+          "position": 7,
+          "url": "https://www.inmsol.com/es/ejercicios-espanol/ortografia/preposiciones-por-y-para-nivel-b2/",
+          "domain": "inmsol.com",
+          "title": "Preposiciones por y para. Nivel B2 - Ejercicios de español"
+        },
+        {
+          "position": 8,
+          "url": "https://blogdeespanol.com/2019/05/ejercicios-de-por-y-para/",
+          "domain": "blogdeespanol.com",
+          "title": "Ejercicios de por y para: infografía y actividades interactivas"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "profedeele.es",
+          "espanol.lingolia.com",
+          "aprenderespanol.org"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Por y para ejercicios pdf",
+        "Por y para ejercicios con soluciones",
+        "Por y para ejercicios A1",
+        "Por y para ejercicios A2",
+        "Por y para profedeele",
+        "Por y para ejercicios b2",
+        "Por y para dele ahora",
+        "Por y para ejercicios b1"
+      ],
+      "features": {
+        "videos": false,
+        "images": true,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/13-por-y-para-ejercicios_es-es_1.png",
+        "capturas/13-por-y-para-ejercicios_es-es_2.png"
+      ]
+    },
+    {
+      "query": "spanish reading comprehension b1 pdf",
+      "hl": "en",
+      "gl": "gb",
+      "serp_url": "https://www.google.com/search?q=spanish+reading+comprehension+b1+pdf&hl=en&gl=gb&num=10&pws=0",
+      "captured_utc": "2026-11-26T16:42:53.899Z",
+      "captcha": false,
+      "organic": [
+        {
+          "position": 1,
+          "url": "https://www.tes.com/teaching-resource/free-spanish-reading-comprehension-puebla-de-sanabria-b1-a-level-13425480",
+          "domain": "tes.com",
+          "title": "FREE Spanish Reading Comprehension – Puebla de ..."
+        },
+        {
+          "position": 2,
+          "url": "https://www.fabulang.com/en/es/b1",
+          "domain": "fabulang.com",
+          "title": "Free Spanish B1 (Intermediate) Reading Practice Texts"
+        },
+        {
+          "position": 3,
+          "url": "https://www.fluentwithstories.com/stories/es",
+          "domain": "fluentwithstories.com",
+          "title": "Spanish Short Stories for Beginners & Intermediates (A1–B2)"
+        },
+        {
+          "position": 4,
+          "url": "https://www.tes.com/teaching-resource/camino-de-santiago-reading-comprehension-activity-explore-the-pilgrimage-routes-13056045",
+          "domain": "tes.com",
+          "title": "B1 Spanish Reading Comprehension – Camino de Santiago"
+        },
+        {
+          "position": 5,
+          "url": "https://vamospanish.com/learn-spanish/spanish-reading-practice/b1/",
+          "domain": "vamospanish.com",
+          "title": "Spanish reading practice, level B1"
+        },
+        {
+          "position": 6,
+          "url": "https://lingua.com/spanish/reading/",
+          "domain": "lingua.com",
+          "title": "Spanish Reading: Spanish Texts for Beginners"
+        },
+        {
+          "position": 7,
+          "url": "https://www.scribd.com/document/369052871/LEVEL-B1",
+          "domain": "scribd.com",
+          "title": "B1 Spanish Exam Overview and Format | PDF"
+        },
+        {
+          "position": 8,
+          "url": "https://www.lenguia.com/stories/spanish",
+          "domain": "lenguia.com",
+          "title": "366 Spanish Stories for Learning Spanish"
+        },
+        {
+          "position": 9,
+          "url": "https://www.tes.com/teaching-resource/spanish-reading-comprehension-on-internet-freedom-for-quick-classroom-activities-13056108",
+          "domain": "tes.com",
+          "title": "B1 Spanish Reading Comprehension – Internet Freedom"
+        }
+      ],
+      "ai_overview": {
+        "present": true,
+        "link_domains_visible": [
+          "tes.com",
+          "fabulang.com",
+          "vamospanish.com",
+          "fluentwithstories.com"
+        ]
+      },
+      "people_also_ask": [],
+      "related_searches": [
+        "Free Spanish reading passages PDF",
+        "Spanish B1 reading",
+        "Spanish B1 textbook pdf",
+        "B1 Spanish reading practice",
+        "Spanish B1 grammar",
+        "Spanish B1 grammar exercises",
+        "B1 Spanish example",
+        "Spanish text to read"
+      ],
+      "features": {
+        "videos": false,
+        "images": false,
+        "featured_snippet": false,
+        "ai_overview": true,
+        "people_also_ask": false
+      },
+      "screenshots": [
+        "capturas/14-spanish-reading-comprehension-b1-pdf_en-gb_1.png",
+        "capturas/14-spanish-reading-comprehension-b1-pdf_en-gb_2.png"
+      ]
+    }
+  ]
+}
