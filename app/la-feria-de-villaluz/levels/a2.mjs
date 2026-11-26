@@ -684,7 +684,7 @@ export const CIRCLES = {
       'En el rincón de las fotos ayudé a Lorenzo y él me dio su tarjeta.',
     ],
     talk: [
-      '¿Te gusta tomar fotos o salir en las fotos? ¿Por qué?',
+      '¿Prefieres estar detrás de la cámara o delante? ¿Por qué?',
       '¿Tu familia se toma fotos en las fiestas? ¿Quién se pone en el centro?',
       'Coloca a tres compañeros para una foto: «Ponte…», «Siéntate…», «Acércate…».',
       '¿Cuál es la foto más divertida de tu teléfono? ¿Qué hay en ella?',
@@ -784,9 +784,9 @@ export const CIRCLES = {
     talk: [
       '¿Hay una fiesta o una feria importante en tu ciudad? ¿Cómo es?',
       '¿Te gusta bailar? ¿Cuándo bailaste por última vez?',
-      '¿Conoces una historia de amor de tu familia? ¿Cómo empezó?',
+      '¿Cómo se conocieron tus abuelos, tus padres o una pareja que conoces?',
       '¿Qué haces normalmente cuando alguien te invita y no quieres ir?',
-      '¿Cuál fue la mejor noche de tu último año? ¿Qué pasó?',
+      '¿Qué noche de este año te gustaría repetir? ¿Qué pasó?',
     ],
     words: ['el baile', 'la plaza', 'invitar', 'pisar', 'primero / después / luego / al final', 'había / hacía'],
     teacher: 'Es el cierre de las dos rutas. Orden fijo (AC9): reacción a la anécdota de doña Celia → invitación y juego de roles → el fondo y el orden de la historia (dos contrastes) → «Un último aviso» (la comprobación con una persona nueva) → la historia de la noche desde las notas de esta sesión, con la lista de control → una pregunta de transferencia personal. En el último aviso, cuenta el primer intento sin ayuda: es la comprobación de la sesión. Lean las notas de la sesión una vez y escóndanlas (o tápenlas): la historia se cuenta sin leer, con las palabras de orden. La lista de control se marca a mano (el docente o el grupo); la aplicación no evalúa el habla ni la graba. Si no hay tiempo, deja la charla final para la próxima clase. En la ruta de 45 minutos: reacción e invitación rápidas (2 min), juego de roles 2 min, el último aviso 1 min, la historia del grupo 4 min y la pregunta final 1 min.',

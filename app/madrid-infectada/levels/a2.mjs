@@ -302,7 +302,7 @@ export default {
     },
     talk: [
       'Si tú fueras Mercedes, ¿qué criterio usarías para elegir quién sube al tren? Explica por qué te parece el más justo.',
-      '¿Alguna vez tuviste que elegir entre dos personas o dos cosas muy importantes? Cuenta qué elegiste y si estás contento con esa decisión.',
+      '¿Alguna vez tuviste que elegir entre dos personas o dos cosas muy importantes? Cuenta qué elegiste y si hoy piensas que fue una buena decisión.',
     ],
     words: ['la bóveda', 'el panel de salidas', 'la plaza (de un tren)', 'el criterio', 'el sorteo', 'curar'],
   },

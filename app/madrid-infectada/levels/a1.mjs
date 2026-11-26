@@ -163,7 +163,7 @@ export default {
     },
     talk: [
       '¿Cómo es tu mejor amigo o tu mejor amiga?',
-      '¿A quién llamas cuando tienes un problema?',
+      '¿A quién escribes primero cuando tu teléfono tiene poca batería?',
     ],
     words: [b('el andén', 'the platform'), b('la manta', 'the blanket'), b('la batería', 'the battery'), b('la pared', 'the wall'), b('echar de menos', 'to miss'), b('quedarse', 'to stay')],
   },
@@ -344,7 +344,7 @@ export default {
       why: 'Arriaga dice: «Lo sabíamos tres días antes».',
     },
     talk: [
-      '¿Es fácil para ti guardar un secreto? ¿Por qué?',
+      '¿Prefieres saber una verdad triste o no saber nada? ¿Por qué?',
       '¿Qué decisión difícil has tomado este año?',
     ],
     words: [b('el secreto', 'the secret'), b('el Gobierno', 'the Government'), b('la lámpara', 'the lamp'), b('el pánico', 'panic'), b('la decisión', 'the decision'), b('la opción', 'the option')],
@@ -388,7 +388,7 @@ export default {
       why: 'Ochoa dice: «Voy a hacer una copia de la fórmula».',
     },
     talk: [
-      '¿Qué haces cuando estás muy cansado después del trabajo?',
+      '¿Qué haces cuando terminas el trabajo sin energía?',
       '¿Cuál es la mejor noticia de esta semana para ti?',
     ],
     words: [b('el ruido', 'the noise'), b('la medicina', 'the medicine'), b('traer', 'to bring'), b('el microondas', 'the microwave'), b('la copia', 'the copy'), b('frío', 'cold')],
@@ -434,7 +434,7 @@ export default {
       why: 'Remedios dice: «Mi nieta Lucía vive en Toledo. Lleva esta carta».',
     },
     talk: [
-      '¿Desde cuándo vives en tu casa? ¿Te gusta?',
+      '¿Qué parte de tu casa prefieres? ¿Por qué?',
       '¿Escribes cartas o mensajes a tu familia?',
     ],
     words: [b('el puente', 'the bridge'), b('el abrigo', 'the coat'), b('el peligro', 'danger'), b('el favor', 'the favour'), b('la nieta', 'the granddaughter'), b('bonito', 'pretty')],

@@ -584,7 +584,7 @@ export default {
     ],
     talk: [
       '¿Qué importancia le das a tu aspecto físico? ¿Cambiarías tu imagen por completo si fuera necesario?',
-      '¿Hay algún lugar del barrio, como una peluquería o un bar, donde la gente se cuenta su vida? ¿Por qué crees que pasa eso?',
+      '¿Hay algún lugar del barrio, como una peluquería o un bar, donde la gente se cuenta su vida? ¿Por qué crees que la gente se abre allí?',
     ],
     words: ['invitar la casa', 'la estética', 'el tirón', 'la coleta', 'el degradado', 'el orgullo'],
   },
