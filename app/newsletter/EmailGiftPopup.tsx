@@ -21,6 +21,12 @@ function shouldAsk() {
  * scrolled 40 % of the page (after the cookie banner is answered), at most
  * once every two weeks after a close.
  */
+/** English growth pages have no `lang="es"` on their main column; Spanish SEO pages always do. */
+function pageLocale(): 'es' | 'en' {
+  const lang = document.querySelector('main[lang]')?.getAttribute('lang') || document.documentElement.lang || 'es';
+  return lang.toLowerCase().startsWith('en') ? 'en' : 'es';
+}
+
 export default function EmailGiftPopup() {
   const [open, setOpen] = useState(false);
   useEffect(() => {
@@ -53,13 +59,14 @@ export default function EmailGiftPopup() {
     setOpen(false);
   }
   if (!open) return null;
+  const locale = pageLocale();
   return (
     <div className={styles.backdrop} onClick={event => { if (event.target === event.currentTarget) close(); }}>
       <div className={styles.dialog} role="dialog" aria-modal="true" aria-labelledby="sc-gift-title">
-        <button type="button" className={styles.close} onClick={close} aria-label="Cerrar">×</button>
-        <div id="sc-gift-title"><GiftPitch /></div>
+        <button type="button" className={styles.close} onClick={close} aria-label={locale === 'es' ? 'Cerrar' : 'Close'}>×</button>
+        <div id="sc-gift-title"><GiftPitch locale={locale} /></div>
         <img className={styles.mascot} src="/brand/mascot/pointing.webp" alt="" width={120} height={160} loading="lazy" />
-        <GiftSignupForm source={typeof window === 'undefined' ? '/' : window.location.pathname} />
+        <GiftSignupForm locale={locale} source={typeof window === 'undefined' ? '/' : window.location.pathname} />
       </div>
     </div>
   );
