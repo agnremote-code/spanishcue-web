@@ -7,7 +7,7 @@ const PERSON='https://spanishcue.com/equipo#ale';
 
 // SEO plan step 7 (docs/seo-plan/06_SCHEMA/LEEME.md): one page per template. Every JSON-LD block must parse,
 // carry the properties Google requires for its type, and name the brand through the homepage entity's @id.
-const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/datos/que-autocompleta-google-en-gramatica','/spanish-reading-comprehension','/spanish-reading-comprehension/a1','/spanish-grammar-practice','/spanish-grammar-practice/subjunctive','/ap-spanish-language','/ap-spanish-language/argumentative-essay'];
+const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/datos/que-autocompleta-google-en-gramatica','/spanish-reading-comprehension','/spanish-reading-comprehension/a1','/spanish-grammar-practice','/spanish-grammar-practice/subjunctive','/ap-spanish-language','/ap-spanish-language/argumentative-essay','/spanish-sub-plans','/spanish-sub-plans/spanish-2'];
 
 const required={
  BreadcrumbList:n=>n.itemListElement.length>=2&&n.itemListElement.every((it,i)=>it['@type']==='ListItem'&&it.position===i+1&&it.name&&/^https:\/\/spanishcue\.com\//.test(it.item)),
@@ -171,5 +171,21 @@ test('AP Spanish hub and parts are complete, sourced and chained',async()=>{
   assert.match(main.textContent,/What SpanishCue data shows/);assert.match(main.textContent,/If you grew up speaking Spanish at home/);
   assert.ok(main.querySelector(`a[href="${parts[(i+1)%parts.length]}"]`)&&main.querySelector('a[href="/ap-spanish-language"]'),`${p} chain`);
   assert.match(main.textContent,/not affiliated with SpanishCue/);
+ }
+});
+
+// US cluster: sub plans fill 50 minutes with open pages only, end with a self-correcting exit ticket and are chained.
+test('Spanish sub plans are complete, open and chained',async()=>{
+ const doc=async p=>{const r=await fetch(origin+p);assert.equal(r.status,200,p);return new JSDOM(await r.text()).window.document;};
+ const hub=await doc('/spanish-sub-plans');
+ const plans=['spanish-1','spanish-2','spanish-3'].map(p=>`/spanish-sub-plans/${p}`);
+ for(const [i,p] of plans.entries()){
+  assert.ok(hub.querySelector(`main a[href="${p}"]`),`hub links ${p}`);
+  const main=(await doc(p)).querySelector('main');
+  assert.ok(main.textContent.replace(/\s+/g,' ').trim().split(' ').length>=250,p);
+  assert.ok(main.querySelectorAll('#exit-ticket [role="group"]').length>=3,`${p}: exit ticket`);
+  assert.match(main.textContent,/What SpanishCue data shows/);assert.match(main.textContent,/Heritage speakers in the class/);
+  assert.ok(main.querySelector(`a[href="${plans[(i+1)%plans.length]}"]`)&&main.querySelector('a[href="/spanish-sub-plans"]'),`${p} chain`);
+  for(const a of main.querySelectorAll('table a')){const r=await fetch(origin+a.getAttribute('href'),{redirect:'manual'});assert.equal(r.status,200,`${p} → ${a.getAttribute('href')}`);}
  }
 });

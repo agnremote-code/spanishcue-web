@@ -136,6 +136,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path.startsWith("/spanish-reading-comprehension/") ||
     path === "/spanish-grammar-practice" ||
     path.startsWith("/spanish-grammar-practice/") ||
+    path === "/spanish-sub-plans" ||
+    path.startsWith("/spanish-sub-plans/") ||
     path === "/ap-spanish-language" ||
     path.startsWith("/ap-spanish-language/") ||
     path === "/resources" ||
