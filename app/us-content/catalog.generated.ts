@@ -3,6 +3,13 @@ export type UsCatalogEntry = { family: string; slug: string; level: string; them
 export const usCatalog: UsCatalogEntry[] = [
  {
   "family": "verbs",
+  "slug": "conocer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb conocer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "dar",
   "level": "A2",
   "theme": "",
@@ -38,6 +45,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "hablar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb hablar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "hacer",
   "level": "A1",
   "theme": "",
@@ -59,10 +73,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "leer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb leer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "llegar",
   "level": "A1",
   "theme": "",
   "title": "Spanish verb llegar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "llevar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb llevar: practice"
  },
  {
   "family": "verbs",
@@ -105,6 +133,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb tener: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "tomar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb tomar: practice"
  },
  {
   "family": "verbs",

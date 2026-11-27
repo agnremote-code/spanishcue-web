@@ -1,0 +1,278 @@
+{
+ "verb": "tomar",
+ "meaning": "to take, to drink",
+ "level": "A1",
+ "title": "Spanish Verb Tomar Practice: Meanings, Conjugation and Quiz",
+ "description": "Practice the Spanish verb tomar: to take, to drink, to take the bus, present and preterite forms, ten questions that correct themselves and a short reading.",
+ "h1": "Spanish verb tomar: practice",
+ "intro": "Tomar is a regular -ar verb that means to take, to drink and to catch a bus or train. Learn each use, the present and the preterite, and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb tomar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To drink",
+   "example": "Tomo café todas las mañanas.",
+   "meaning": "I drink coffee every morning."
+  },
+  {
+   "use": "To take transport",
+   "example": "Tomamos el metro para ir al centro.",
+   "meaning": "We take the subway downtown."
+  },
+  {
+   "use": "To take, to grab",
+   "example": "Toma una galleta.",
+   "meaning": "Take a cookie."
+  },
+  {
+   "use": "Expressions: tomar una foto, tomar el sol, tomar una decisión",
+   "example": "Tomamos muchas fotos en la playa.",
+   "meaning": "We took lots of photos at the beach."
+  },
+  {
+   "use": "Tomar medicinas",
+   "example": "Toma la pastilla después de comer.",
+   "meaning": "Take the pill after eating."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "tomo"
+  ],
+  [
+   "tú",
+   "tomas"
+  ],
+  [
+   "él / ella / usted",
+   "toma"
+  ],
+  [
+   "nosotros / nosotras",
+   "tomamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "toman"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "tomé"
+  ],
+  [
+   "tú",
+   "tomaste"
+  ],
+  [
+   "él / ella / usted",
+   "tomó"
+  ],
+  [
+   "nosotros / nosotras",
+   "tomamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "tomaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " leche con el desayuno.",
+   "options": [
+    "tomo",
+    "toma",
+    "tomé mañana"
+   ],
+   "answer": 0,
+   "why": "Present yo: tomo."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " el autobús para ir a la escuela?",
+   "options": [
+    "tomas",
+    "tomo",
+    "toman"
+   ],
+   "answer": 0,
+   "why": "Present tú: tomas."
+  },
+  {
+   "before": "Mi abuelo ",
+   "after": " una siesta después de comer.",
+   "options": [
+    "toma",
+    "tome",
+    "tomamos"
+   ],
+   "answer": 0,
+   "why": "Present él: toma."
+  },
+  {
+   "before": "Los turistas ",
+   "after": " fotos de todo.",
+   "options": [
+    "toman",
+    "toma",
+    "tomamos"
+   ],
+   "answer": 0,
+   "why": "Present ellos: toman."
+  },
+  {
+   "before": "En la playa nos gusta ",
+   "after": " el sol.",
+   "options": [
+    "tomar",
+    "tomando",
+    "tomamos"
+   ],
+   "answer": 0,
+   "why": "After gustar, the infinitive: tomar el sol."
+  },
+  {
+   "before": "Es difícil ",
+   "after": " una decisión tan importante.",
+   "options": [
+    "tomar",
+    "hacer de",
+    "dar"
+   ],
+   "answer": 0,
+   "why": "To make a decision: tomar una decisión."
+  },
+  {
+   "before": "Ayer ",
+   "after": " el tren a las siete.",
+   "options": [
+    "tomé",
+    "tome",
+    "tomo ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: tomé."
+  },
+  {
+   "before": "¿",
+   "after": " la medicina anoche?",
+   "options": [
+    "Tomaste",
+    "Tomastes",
+    "Tomabas una vez"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: tomaste."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " la foto más bonita del viaje.",
+   "options": [
+    "tomó",
+    "tomo",
+    "tomaba una vez"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: tomó."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " un taxi porque llovía.",
+   "options": [
+    "tomamos",
+    "tomemos",
+    "tomaron"
+   ],
+   "answer": 0,
+   "why": "Preterite nosotros: tomamos."
+  }
+ ],
+ "reading": {
+  "titleEs": "Un día en Buenos Aires",
+  "paragraphs": [
+   "Ayer, Jessica y su madre pasaron el día en Buenos Aires. Por la mañana tomaron un café con medialunas en una confitería antigua. Después tomaron el subte hasta La Boca, donde tomaron muchas fotos de las casas de colores.",
+   "Al mediodía, la madre tomó una decisión difícil: probar el mate por primera vez. No le gustó mucho, pero se rió. Por la tarde tomaron el sol en un parque y, por la noche, tomaron un taxi de vuelta al hotel, cansadas y felices."
+  ],
+  "comprehension": [
+   {
+    "before": "Por la mañana tomaron un café con ",
+    "after": ".",
+    "options": [
+     "medialunas",
+     "tostadas",
+     "pastel"
+    ],
+    "answer": 0,
+    "why": "With medialunas, Argentine croissants."
+   },
+   {
+    "before": "Fueron a La Boca en ",
+    "after": ".",
+    "options": [
+     "subte",
+     "taxi",
+     "autobús"
+    ],
+    "answer": 0,
+    "why": "By subte, the Buenos Aires subway."
+   },
+   {
+    "before": "La madre probó el mate y ",
+    "after": ".",
+    "options": [
+     "no le gustó mucho",
+     "le encantó",
+     "no quiso probarlo"
+    ],
+    "answer": 0,
+    "why": "She didn't like it much but laughed."
+   },
+   {
+    "before": "Por la noche volvieron al hotel en ",
+    "after": ".",
+    "options": [
+     "taxi",
+     "subte",
+     "bicicleta"
+    ],
+    "answer": 0,
+    "why": "They took a taxi back."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Tomé una decisión de no ir.",
+   "right": "Tomé la decisión de no ir.",
+   "why": "Use the definite article: tomar la decisión de."
+  },
+  {
+   "wrong": "Tomar el autobús a la escuela (meaning drive).",
+   "right": "Ir a la escuela en autobús.",
+   "why": "Both work, but «ir en» is the general way to say by bus."
+  },
+  {
+   "wrong": "Tomamos un examen.",
+   "right": "Hicimos un examen.",
+   "why": "Taking a test is usually hacer un examen (presentar in Mexico)."
+  },
+  {
+   "wrong": "Ella tomo café.",
+   "right": "Ella tomó café.",
+   "why": "Past tense needs the accent: tomó."
+  }
+ ],
+ "heritage": "Heritage speakers know tomar for drinking well. Two written points: the accent in «tomó» and «tomé», and avoiding the English calque «tomar un examen», which many teachers mark wrong; use «hacer» or «presentar un examen».",
+ "teacher": "Have students describe a trip or a weekend with five expressions with tomar: tomar el autobús, tomar fotos, tomar el sol, tomar algo, tomar una decisión.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb tomar». 1 of them asks for conjugation, charts or tenses (conjugation). Two ask for its meaning, so the page lists each meaning with an English equivalent.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
