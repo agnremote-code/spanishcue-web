@@ -283,6 +283,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "easter",
+  "level": "A2",
+  "theme": "easter",
+  "title": "Spanish Easter vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "emotions",
   "level": "A1",
   "theme": "emotions",
@@ -343,6 +350,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "hair",
   "title": "Spanish hair vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "halloween",
+  "level": "A1",
+  "theme": "halloween",
+  "title": "Spanish Halloween vocabulary"
  },
  {
   "family": "vocabulary",
@@ -532,5 +546,12 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "weather",
   "title": "Spanish weather vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "wedding",
+  "level": "A2",
+  "theme": "wedding",
+  "title": "Spanish wedding vocabulary"
  }
 ];

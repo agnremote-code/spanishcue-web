@@ -1,0 +1,368 @@
+{
+ "level": "A1",
+ "theme": "halloween",
+ "themeLabel": "Halloween",
+ "title": "Spanish Halloween Vocabulary: Disfraz, Calabaza and Practice",
+ "description": "Spanish Halloween vocabulary: el disfraz, la calabaza, los dulces, la bruja and ¡Dulce o truco!, with a quiz and an A1 reading about trick-or-treating.",
+ "h1": "Spanish Halloween vocabulary",
+ "titleEs": "El disfraz de Camila",
+ "focus": "ir a + infinitive and the present tense",
+ "intro": "Learn the Spanish words for Halloween: costumes, monsters, decorations and what children say at the door. Practice with instant feedback, then read about a girl who chooses her costume and goes out with her cousins.",
+ "paragraphs": [
+  "Faltan tres días para Halloween y Camila, de ocho años, no sabe de qué disfrazarse. Su prima Sofía va a ser una vampira y su primo Diego va a ser un esqueleto. Camila quiere algo original.",
+  "Su abuela tiene una idea: «¿Por qué no te disfrazas de murciélago?». Juntas hacen las alas con una tela negra vieja y unas orejas de papel. Camila está feliz: su disfraz es único.",
+  "La noche del 31 de octubre, los tres primos salen a pedir dulces por el barrio con la mamá de Sofía. Las casas tienen calabazas, telarañas y velas. En una casa embrujada, un hombre disfrazado de monstruo sale de detrás de la puerta. Diego grita y corre, pero Camila se ríe. Al final de la noche, cada uno tiene una bolsa llena de dulces, y la abuela recibe los chocolates favoritos de Camila como premio por el disfraz."
+ ],
+ "glossary": [
+  [
+   "faltan tres días",
+   "three days to go"
+  ],
+  [
+   "original",
+   "original, different"
+  ],
+  [
+   "las alas",
+   "wings"
+  ],
+  [
+   "la tela",
+   "fabric"
+  ],
+  [
+   "único",
+   "unique"
+  ],
+  [
+   "el barrio",
+   "neighborhood"
+  ],
+  [
+   "gritar",
+   "to scream"
+  ],
+  [
+   "el premio",
+   "prize"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Camila tiene ",
+   "after": ".",
+   "options": [
+    "ocho años",
+    "diez años",
+    "cinco años"
+   ],
+   "answer": 0,
+   "why": "She is eight."
+  },
+  {
+   "before": "Su prima Sofía va a ser ",
+   "after": ".",
+   "options": [
+    "una vampira",
+    "una bruja",
+    "un esqueleto"
+   ],
+   "answer": 0,
+   "why": "A vampire."
+  },
+  {
+   "before": "La idea del disfraz de murciélago es de ",
+   "after": ".",
+   "options": [
+    "la abuela",
+    "Diego",
+    "la maestra"
+   ],
+   "answer": 0,
+   "why": "Her grandmother's idea."
+  },
+  {
+   "before": "Hacen las alas con ",
+   "after": ".",
+   "options": [
+    "una tela negra vieja",
+    "papel blanco",
+    "plástico"
+   ],
+   "answer": 0,
+   "why": "With old black fabric."
+  },
+  {
+   "before": "En la casa embrujada, Diego ",
+   "after": ".",
+   "options": [
+    "grita y corre",
+    "se ríe",
+    "pide más dulces"
+   ],
+   "answer": 0,
+   "why": "He screams and runs."
+  },
+  {
+   "before": "La abuela recibe ",
+   "after": ".",
+   "options": [
+    "los chocolates favoritos de Camila",
+    "una calabaza",
+    "un disfraz"
+   ],
+   "answer": 0,
+   "why": "Camila's favorite chocolates as a prize."
+  }
+ ],
+ "grammar": {
+  "title": "Disfrazarse de: dressing up as",
+  "intro": "Disfrazarse is reflexive and takes de: me disfrazo de bruja, se disfraza de fantasma.",
+  "items": [
+   {
+    "before": "Yo ",
+    "after": " de vampiro este año.",
+    "options": [
+     "me disfrazo",
+     "disfrazo",
+     "me disfraza"
+    ],
+    "answer": 0,
+    "why": "Yo: me disfrazo."
+   },
+   {
+    "before": "¿De qué te vas a disfrazar? —Me voy a disfrazar ",
+    "after": " momia.",
+    "options": [
+     "de",
+     "como",
+     "en"
+    ],
+    "answer": 0,
+    "why": "Disfrazarse de."
+   },
+   {
+    "before": "Mis amigos se ",
+    "after": " de superhéroes.",
+    "options": [
+     "disfrazan",
+     "disfraza",
+     "disfrazamos"
+    ],
+    "answer": 0,
+    "why": "Ellos: se disfrazan."
+   }
+  ]
+ },
+ "speaking": [
+  "¿De qué te disfrazaste el último Halloween?",
+  "¿Qué cosas te dan miedo?",
+  "Describe la casa más decorada de tu barrio."
+ ],
+ "heritage": "In many Spanish-speaking homes in the US, Halloween comes right before Día de Muertos and Día de Todos los Santos. The phrase for trick or treat varies: «¡Dulce o truco!», «¡Truco o trato!» or simply «¡Halloween!» in some countries. Use the one your family knows.",
+ "teacher": "Run a costume parade: each student describes their imaginary costume with Me disfrazo de… and three adjectives, and the class votes for the most original one.",
+ "vocabulary": [
+  {
+   "title": "Costumes and monsters",
+   "words": [
+    [
+     "el disfraz",
+     "costume"
+    ],
+    [
+     "disfrazarse de",
+     "to dress up as"
+    ],
+    [
+     "la bruja",
+     "witch"
+    ],
+    [
+     "el fantasma",
+     "ghost"
+    ],
+    [
+     "el vampiro",
+     "vampire"
+    ],
+    [
+     "el esqueleto",
+     "skeleton"
+    ],
+    [
+     "el monstruo",
+     "monster"
+    ],
+    [
+     "la momia",
+     "mummy"
+    ]
+   ]
+  },
+  {
+   "title": "Decorations",
+   "words": [
+    [
+     "la calabaza",
+     "pumpkin"
+    ],
+    [
+     "la telaraña",
+     "spiderweb"
+    ],
+    [
+     "la araña",
+     "spider"
+    ],
+    [
+     "el murciélago",
+     "bat"
+    ],
+    [
+     "la vela",
+     "candle"
+    ],
+    [
+     "la casa embrujada",
+     "haunted house"
+    ],
+    [
+     "el gato negro",
+     "black cat"
+    ]
+   ]
+  },
+  {
+   "title": "The night",
+   "words": [
+    [
+     "los dulces",
+     "candy"
+    ],
+    [
+     "¡Dulce o truco! / ¡Truco o trato!",
+     "Trick or treat!"
+    ],
+    [
+     "pedir dulces",
+     "to go trick-or-treating"
+    ],
+    [
+     "tener miedo",
+     "to be scared"
+    ],
+    [
+     "dar miedo",
+     "to be scary"
+    ],
+    [
+     "la Noche de Brujas",
+     "Halloween night"
+    ],
+    [
+     "la bolsa",
+     "bag"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Este año voy a disfrazarme de ",
+   "after": "; tengo un sombrero negro y una escoba.",
+   "options": [
+    "bruja",
+    "calabaza",
+    "telaraña"
+   ],
+   "answer": 0,
+   "why": "Black hat and broom: a witch."
+  },
+  {
+   "before": "Los niños tocan la puerta y dicen: «¡Dulce o ",
+   "after": "!»",
+   "options": [
+    "truco",
+    "trato no",
+    "miedo"
+   ],
+   "answer": 0,
+   "why": "Trick or treat: dulce o truco."
+  },
+  {
+   "before": "En octubre ponemos una ",
+   "after": " naranja con una cara en la ventana.",
+   "options": [
+    "calabaza",
+    "momia",
+    "vela"
+   ],
+   "answer": 0,
+   "why": "A carved pumpkin: calabaza."
+  },
+  {
+   "before": "El animal negro que vuela de noche es el ",
+   "after": ".",
+   "options": [
+    "murciélago",
+    "gato",
+    "fantasma"
+   ],
+   "answer": 0,
+   "why": "Bat: murciélago."
+  },
+  {
+   "before": "La araña hace una ",
+   "after": ".",
+   "options": [
+    "telaraña",
+    "bolsa",
+    "casa"
+   ],
+   "answer": 0,
+   "why": "A spider makes a web."
+  },
+  {
+   "before": "Mi hermano pequeño no entra a la casa embrujada porque tiene ",
+   "after": ".",
+   "options": [
+    "miedo",
+    "dulces",
+    "disfraz"
+   ],
+   "answer": 0,
+   "why": "He is scared: tiene miedo."
+  },
+  {
+   "before": "El monstruo blanco que dice «buuu» es un ",
+   "after": ".",
+   "options": [
+    "fantasma",
+    "vampiro",
+    "esqueleto"
+   ],
+   "answer": 0,
+   "why": "A ghost: fantasma."
+  },
+  {
+   "before": "Guardo los dulces en una ",
+   "after": ".",
+   "options": [
+    "bolsa",
+    "araña",
+    "vela"
+   ],
+   "answer": 0,
+   "why": "Candy goes in a bag."
+  }
+ ],
+ "demand": {
+  "query": "spanish halloween vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish halloween vocabulary». One asks what Halloween is called in Spain: most people simply say Halloween, and in several Latin American countries it is also la Noche de Brujas.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

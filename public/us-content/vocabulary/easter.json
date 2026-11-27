@@ -1,0 +1,361 @@
+{
+ "level": "A2",
+ "theme": "easter",
+ "themeLabel": "Easter",
+ "title": "Spanish Easter Vocabulary: Semana Santa and Pascua Words",
+ "description": "Spanish Easter vocabulary: Semana Santa, la Pascua, processions, Easter eggs and typical food, with a quiz and an A2 reading about Holy Week in Antigua, Guatemala.",
+ "h1": "Spanish Easter vocabulary",
+ "titleEs": "Semana Santa en Antigua",
+ "focus": "the preterite and the imperfect in a travel story",
+ "intro": "Learn the Spanish words for Easter and Holy Week: the days, the traditions, the processions and the food. Practice with instant feedback, then read about a student who visits Antigua, Guatemala, during Semana Santa.",
+ "paragraphs": [
+  "El año pasado, durante las vacaciones de Semana Santa, Valeria viajó con su clase de español de una escuela de Atlanta a Antigua, Guatemala. Su profesora quería que los estudiantes conocieran una de las celebraciones más famosas de América Latina.",
+  "El Jueves Santo por la noche, Valeria vio algo increíble: muchas familias trabajaban en la calle hasta la madrugada para hacer alfombras de aserrín de colores, con flores, frutas y dibujos. Una señora le explicó que algunas familias hacen la misma alfombra desde hace generaciones.",
+  "El Viernes Santo, una procesión enorme pasó por encima de las alfombras. Valeria se sorprendió: después de tantas horas de trabajo, las alfombras desaparecían en minutos. La señora le dijo que eso era parte de la tradición: el trabajo es una ofrenda.",
+  "El domingo, la familia que recibía a Valeria preparó una comida especial y le enseñó a hacer molletes, un pan dulce típico de la temporada. Cuando volvió a Atlanta, Valeria hizo una presentación para su clase. Dijo que nunca había visto tanto trabajo, tanto color y tanta paciencia en una sola semana. Sus compañeros le hicieron muchas preguntas, y la profesora ya está planeando el viaje del próximo año."
+ ],
+ "glossary": [
+  [
+   "conocer",
+   "to get to know"
+  ],
+  [
+   "increíble",
+   "amazing"
+  ],
+  [
+   "la madrugada",
+   "early morning hours"
+  ],
+  [
+   "los dibujos",
+   "designs, drawings"
+  ],
+  [
+   "desde hace generaciones",
+   "for generations"
+  ],
+  [
+   "pasar por encima de",
+   "to go over"
+  ],
+  [
+   "desaparecer",
+   "to disappear"
+  ],
+  [
+   "la paciencia",
+   "patience"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Valeria viajó a Antigua con ",
+   "after": ".",
+   "options": [
+    "su clase de español",
+    "su familia",
+    "sus amigos de la universidad"
+   ],
+   "answer": 0,
+   "why": "With her Spanish class."
+  },
+  {
+   "before": "El Jueves Santo, las familias hacían ",
+   "after": ".",
+   "options": [
+    "alfombras de aserrín",
+    "huevos de Pascua",
+    "una fiesta"
+   ],
+   "answer": 0,
+   "why": "Sawdust carpets."
+  },
+  {
+   "before": "Algunas familias hacen la misma alfombra ",
+   "after": ".",
+   "options": [
+    "desde hace generaciones",
+    "por primera vez",
+    "para vender"
+   ],
+   "answer": 0,
+   "why": "For generations."
+  },
+  {
+   "before": "El Viernes Santo, la procesión ",
+   "after": ".",
+   "options": [
+    "pasó por encima de las alfombras",
+    "se canceló",
+    "fue muy pequeña"
+   ],
+   "answer": 0,
+   "why": "It went over the carpets."
+  },
+  {
+   "before": "Según la señora, el trabajo de las alfombras es ",
+   "after": ".",
+   "options": [
+    "una ofrenda",
+    "un negocio",
+    "un concurso"
+   ],
+   "answer": 0,
+   "why": "An offering."
+  },
+  {
+   "before": "El domingo, Valeria aprendió a hacer ",
+   "after": ".",
+   "options": [
+    "molletes",
+    "capirotada",
+    "fanesca"
+   ],
+   "answer": 0,
+   "why": "Molletes, a sweet bread."
+  }
+ ],
+ "grammar": {
+  "title": "Preterite for events, imperfect for the scene",
+  "intro": "In a travel story, the preterite tells what happened (vio, pasó) and the imperfect describes the scene (las familias trabajaban).",
+  "items": [
+   {
+    "before": "Cuando llegamos, las familias ya ",
+    "after": " en la calle.",
+    "options": [
+     "trabajaban",
+     "trabajaron",
+     "trabajan"
+    ],
+    "answer": 0,
+    "why": "Background scene: trabajaban."
+   },
+   {
+    "before": "El viernes, la procesión ",
+    "after": " a las tres de la tarde.",
+    "options": [
+     "salió",
+     "salía siempre",
+     "sale"
+    ],
+    "answer": 0,
+    "why": "A single event: salió."
+   },
+   {
+    "before": "Había mucha gente y todos ",
+    "after": " en silencio.",
+    "options": [
+     "miraban",
+     "miraron una vez",
+     "miran"
+    ],
+    "answer": 0,
+    "why": "Description of the scene: miraban."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cómo celebra tu familia la Pascua o la primavera?",
+  "¿Qué te parece más interesante de las alfombras de Antigua?",
+  "Compara la Semana Santa en un país hispano con la Pascua en los Estados Unidos."
+ ],
+ "heritage": "In many Spanish-speaking families, Semana Santa is more important than Easter Sunday, with special meals without meat on Friday. Words change by country: Pascua or Domingo de Resurrección, capirotada or torrejas. If your family has its own Holy Week dish, write its recipe in Spanish.",
+ "teacher": "Show photos of Holy Week in Seville, Antigua and Mexico and have groups describe what they see. Keep the focus on culture and vocabulary, and let students share their own traditions if they wish.",
+ "vocabulary": [
+  {
+   "title": "The week",
+   "words": [
+    [
+     "la Semana Santa",
+     "Holy Week"
+    ],
+    [
+     "la Pascua / el Domingo de Pascua",
+     "Easter, Easter Sunday"
+    ],
+    [
+     "el Domingo de Ramos",
+     "Palm Sunday"
+    ],
+    [
+     "el Jueves Santo",
+     "Holy Thursday"
+    ],
+    [
+     "el Viernes Santo",
+     "Good Friday"
+    ],
+    [
+     "las vacaciones de Semana Santa",
+     "Easter break"
+    ]
+   ]
+  },
+  {
+   "title": "Traditions",
+   "words": [
+    [
+     "la procesión",
+     "procession"
+    ],
+    [
+     "la alfombra de aserrín",
+     "sawdust carpet"
+    ],
+    [
+     "las flores",
+     "flowers"
+    ],
+    [
+     "la iglesia",
+     "church"
+    ],
+    [
+     "la misa",
+     "mass"
+    ],
+    [
+     "los huevos de Pascua",
+     "Easter eggs"
+    ],
+    [
+     "el conejo de Pascua",
+     "Easter bunny"
+    ],
+    [
+     "buscar huevos",
+     "to hunt for eggs"
+    ]
+   ]
+  },
+  {
+   "title": "Food",
+   "words": [
+    [
+     "la capirotada",
+     "capirotada, bread pudding (Mexico)"
+    ],
+    [
+     "las torrijas",
+     "torrijas, sweet fried bread (Spain)"
+    ],
+    [
+     "la fanesca",
+     "fanesca, grain and fish soup (Ecuador)"
+    ],
+    [
+     "el pescado",
+     "fish"
+    ],
+    [
+     "el chocolate",
+     "chocolate"
+    ],
+    [
+     "el pan dulce",
+     "sweet bread"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La semana antes del Domingo de Pascua se llama ",
+   "after": ".",
+   "options": [
+    "Semana Santa",
+    "Navidad",
+    "Noche de Brujas"
+   ],
+   "answer": 0,
+   "why": "Holy Week: Semana Santa."
+  },
+  {
+   "before": "En Antigua, Guatemala, hacen alfombras de ",
+   "after": " en las calles.",
+   "options": [
+    "aserrín",
+    "nieve",
+    "papel picado"
+   ],
+   "answer": 0,
+   "why": "Sawdust carpets: alfombras de aserrín."
+  },
+  {
+   "before": "El viernes antes de Pascua es el Viernes ",
+   "after": ".",
+   "options": [
+    "Santo",
+    "Ramos",
+    "Pascua"
+   ],
+   "answer": 0,
+   "why": "Good Friday: Viernes Santo."
+  },
+  {
+   "before": "Los niños buscan ",
+   "after": " de chocolate en el jardín.",
+   "options": [
+    "huevos",
+    "ramos",
+    "misas"
+   ],
+   "answer": 0,
+   "why": "Easter eggs: huevos."
+  },
+  {
+   "before": "Muchas personas caminan por las calles en una ",
+   "after": ".",
+   "options": [
+    "procesión",
+    "fanesca",
+    "alfombra"
+   ],
+   "answer": 0,
+   "why": "A procession."
+  },
+  {
+   "before": "En México, un postre típico de Cuaresma es la ",
+   "after": ".",
+   "options": [
+    "capirotada",
+    "fanesca",
+    "torrija"
+   ],
+   "answer": 0,
+   "why": "Capirotada is Mexican bread pudding."
+  },
+  {
+   "before": "En Ecuador preparan una sopa especial llamada ",
+   "after": ".",
+   "options": [
+    "fanesca",
+    "capirotada",
+    "torrija"
+   ],
+   "answer": 0,
+   "why": "Fanesca is Ecuadorian."
+  },
+  {
+   "before": "En los Estados Unidos, el ",
+   "after": " de Pascua trae huevos.",
+   "options": [
+    "conejo",
+    "gato",
+    "pájaro"
+   ],
+   "answer": 0,
+   "why": "The Easter bunny: conejo de Pascua."
+  }
+ ],
+ "demand": {
+  "query": "spanish easter vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 2 searches to people in the United States who typed «spanish easter vocabulary». Both suggestions ask for Easter words; the list covers the religious week and the family traditions, since both are part of Easter in Spanish-speaking countries.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
