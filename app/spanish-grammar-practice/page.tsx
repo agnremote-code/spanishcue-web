@@ -72,7 +72,7 @@ export default function PracticeHubPage() {
               {assetTopics.filter((topic) => topic.group === group.id).map((topic) => (
                 <Link key={topic.slug} className={styles.levelCard} href={topic.path}>
                   <b>{topic.levels}</b>
-                  <span>{topic.h1}</span>
+                  <span>{topic.name}</span>
                   <span>rule table · practice questions · common mistakes</span>
                   <em>Practise now</em>
                 </Link>

@@ -137,6 +137,7 @@ test('grammar practice pages pass the gate', () => {
     assert.ok(!legacySlugs.has(slug), `${slug}: already a bundled topic`);
     assert.match(slug, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
     assert.ok(['contrast', 'forms'].includes(page.theme), `${slug}: hub group`);
+    assert.match(page.h1, /^Spanish .+ practice$/, `${slug}: the hub card name comes from the H1`);
     assert.match(page.level, /^(A1|A2|B1|B2|C1)(–(A2|B1|B2|C1))?$/, `${slug}: level range`);
     assert.ok(page.title.length <= 70 && !titles.has(page.title) && !legacyTitles.has(page.title), `${slug}: title unique and at most 70 characters`);
     titles.add(page.title);
