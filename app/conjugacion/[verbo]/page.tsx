@@ -13,6 +13,7 @@ import cj from "../conjugacion.module.css";
 import { ParticipioReal } from "../../datos/enlaces";
 import { SER_PATH, serPath } from "../../ser-o-estar/data";
 import { CONJUGACION_PATH, PERSONS, TENSE_GROUPS, verbFromParam, verbPage, verbPath, verbSlug, verbos, type Highlight } from "../verbos";
+import { TRAINER_PATH } from "../../practicar-conjugacion/drill";
 
 const SER_LINKS = [["ubicacion", "Ubicación"], ["estado-de-animo", "Estado de ánimo"], ["origen-y-nacionalidad", "Origen y nacionalidad"], ["eventos", "Dónde es un evento"], ["listo", "Ser listo o estar listo"], ["aburrido", "Ser aburrido o estar aburrido"]] as const;
 
@@ -93,6 +94,7 @@ export default async function VerbPage({ params }: Props) {
       </Section>
       <Section id="ejercicio" title={`Ejercicio: conjuga ${verb}`} intro="Doce formas en distintos tiempos, con las irregulares primero. Sirve como repaso rápido en clase o como tarea.">
         <EleExerciseBlock exercise={{ title: `Ejercicio con ${verb}`, instructions: `Escribe la forma correcta de ${verb} en el tiempo y la persona indicados.`, items: page.exercise }} />
+        <p className={styles.sectionIntro}>¿Quieres más? <Link className={styles.textLink} href={`${TRAINER_PATH}?v=${encodeURIComponent(verbSlug(verb))}`}>Practica {verb} en el entrenador de verbos</Link>: corrección al instante y repaso de lo que fallas.</p>
       </Section>
       <ParticipioReal verb={verb} />
       <EleNewsletterInline source={page.path} />

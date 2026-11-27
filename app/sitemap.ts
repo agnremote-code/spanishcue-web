@@ -27,6 +27,7 @@ import { PASADO_PATH, pasadoPath } from "./indefinido-o-imperfecto/data";
 import { marcadores } from "./indefinido-o-imperfecto/marcadores";
 import { SER_PATH, serPath, serSlugs } from "./ser-o-estar/data";
 import { PORPARA_PATH, porParaPath } from "./por-o-para/data";
+import { TRAINER_PATH } from "./practicar-conjugacion/drill";
 import { usosPorPara } from "./por-o-para/usos";
 import { gapPaths } from "./ejercicios-gramatica/data";
 import { lessonCards } from "./growth/lessons";
@@ -95,6 +96,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...plantillas.map((page) => ({ path: page.path, priority: 0.8, changeFrequency: "monthly" as Frequency })),
   { path: INDICE_PATH, priority: 0.8, changeFrequency: "weekly" },
   { path: CONJUGACION_PATH, priority: 0.85, changeFrequency: "monthly" },
+  { path: TRAINER_PATH, priority: 0.85, changeFrequency: "monthly" },
   { path: SPANISH_VERBS_PATH, priority: 0.85, changeFrequency: "monthly" },
   ...verbos.map((verb) => ({ path: verbPathEn(verb), priority: 0.6, changeFrequency: "monthly" as Frequency })),
   { path: IRREGULARES_PATH, priority: 0.8, changeFrequency: "monthly" },

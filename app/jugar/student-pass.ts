@@ -30,7 +30,8 @@ export const isStudentAudioPath = (pathname: string) => pathname.startsWith(`/au
 
 /** Paths where the Worker looks for a pass at all: the hub, its PRO worlds and their audio. */
 export function studentPassScope(pathname: string, lessonId: number | null | undefined) {
-  return pathname === HUB_PATH || isStudentWorldLesson(lessonId) || isStudentAudioPath(pathname);
+  // The verb trainer asks here whether a student's pass opens its PRO tenses.
+  return pathname === HUB_PATH || pathname === "/api/verb-trainer/access" || isStudentWorldLesson(lessonId) || isStudentAudioPath(pathname);
 }
 
 /**

@@ -13,6 +13,7 @@ const popular = [
   { href: "/material-ele/preguntas-de-conversacion", label: "Preguntas de conversación en español por nivel" },
   { href: "/spanish-conversation-questions", label: "Banco de preguntas de conversación de A1 a C2, con glosa en inglés" },
   { href: "/conjugacion", label: "Conjugación de más de 1.200 verbos" },
+  { href: "/practicar-conjugacion", label: "Entrenador de verbos: practicar la conjugación" },
   { href: "/indicativo-o-subjuntivo", label: "¿Indicativo o subjuntivo? Ejercicios por expresión" },
   { href: "/dudas-del-espanol", label: "Dudas del español: haber o a ver, porque o por qué…" },
   { href: "/ejercicios-de-imperativo", label: "Ejercicios del imperativo, con solución" },
