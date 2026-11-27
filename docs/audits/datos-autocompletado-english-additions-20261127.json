@@ -1,0 +1,62 @@
+{
+ "version": 1,
+ "authorization": "Owner approval typed by Ale on the decision card «¿Apruebo los términos de búsqueda en inglés que muestra el informe nuevo de /datos?» (card cmsg_01Gr5R4j3t2Yet65UcmhcVhAFY47PagYaoRGEgD4nxMVMF, option «Sí, publicalo», 2026-11-27T09:06:33Z). Covers the English search terms quoted as data in the report /datos/que-autocompleta-google-en-gramatica.",
+ "additions": [
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "practice"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "quiz"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "worksheet"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "test"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "pdf"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "ib"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "ap"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "gcse"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "free"
+  },
+  {
+   "path": "app/datos/autocompletado.ts",
+   "text": "online"
+  },
+  {
+   "path": "app/datos/que-autocompleta-google-en-gramatica/page.tsx",
+   "text": "pdf"
+  },
+  {
+   "path": "app/datos/que-autocompleta-google-en-gramatica/page.tsx",
+   "text": "interactive"
+  },
+  {
+   "path": "app/datos/que-autocompleta-google-en-gramatica/page.tsx",
+   "text": "worksheet"
+  },
+  {
+   "path": "app/datos/que-autocompleta-google-en-gramatica/page.tsx",
+   "text": "inglés"
+  }
+ ]
+}

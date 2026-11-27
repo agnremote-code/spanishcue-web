@@ -7,7 +7,7 @@ const PERSON='https://spanishcue.com/equipo#ale';
 
 // SEO plan step 7 (docs/seo-plan/06_SCHEMA/LEEME.md): one page per template. Every JSON-LD block must parse,
 // carry the properties Google requires for its type, and name the brand through the homepage entity's @id.
-const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/spanish-reading-comprehension','/spanish-reading-comprehension/a1'];
+const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/datos/que-autocompleta-google-en-gramatica','/spanish-reading-comprehension','/spanish-reading-comprehension/a1'];
 
 const required={
  BreadcrumbList:n=>n.itemListElement.length>=2&&n.itemListElement.every((it,i)=>it['@type']==='ListItem'&&it.position===i+1&&it.name&&/^https:\/\/spanishcue\.com\//.test(it.item)),
@@ -85,6 +85,17 @@ test('the data report states its sample, links its CSV and carries Article, Data
  const hub=nodesOf(new JSDOM(await (await fetch(origin+'/datos')).text()).window.document).find(n=>n['@type']==='DataCatalog');
  assert.ok(hub.dataset.some(x=>x.url==='https://spanishcue.com/datos/errores-preterito-perfecto-a2'));
  assert.ok(hub.dataset.every(x=>x.license&&x.creator));
+});
+
+test('the autocomplete data report states its sample, links its CSV and is listed on /datos',async()=>{
+ const d=new JSDOM(await (await fetch(origin+'/datos/que-autocompleta-google-en-gramatica')).text()).window.document;
+ const lead=d.querySelector('h1').parentElement.textContent.replace(/\s+/g,' ');
+ assert.match(lead,/2876 sugerencias reales de Google para 342 búsquedas/);
+ const types=nodesOf(d).map(n=>n['@type']);for(const t of ['Article','Dataset','FAQPage'])assert.ok(types.includes(t),t);
+ assert.ok(d.querySelectorAll('main [role="group"]').length>=3);
+ const res=await fetch(origin+'/datos/autocompletado-gramatica-2026-11.csv');assert.equal(res.status,200);assert.equal((await res.text()).trim().split('\n').length,30);
+ const hub=new JSDOM(await (await fetch(origin+'/datos')).text()).window.document;
+ assert.ok(hub.querySelector('main a[href="/datos/que-autocompleta-google-en-gramatica"]'));
 });
 
 // Internal links from teaching pages to the data report: figures come from the report data.

@@ -43,3 +43,21 @@ Para informes con porcentajes haría falta guardar también los aciertos (migrac
 ## Cadencia
 
 Martes y viernes se revisa si alguna categoría llegó a 5 alumnos reales; si llegó, se publica su informe. Si no, no se publica nada.
+
+## Informe 2: qué autocompleta Google (27/11/2026)
+
+- URL: /datos/que-autocompleta-google-en-gramatica · CSV agregado: /datos/autocompletado-gramatica-2026-11.csv (solo recuentos, no las sugerencias crudas).
+- Fuente: `docs/seo-plan/fase0/suggest-20261126.csv` (342 búsquedas, 2.876 sugerencias; 40 búsquedas sin sugerencias). Cifras en `app/datos/autocompletado.ts`.
+- Regla de conteo de «palabras dentro»: solo en búsquedas cuya semilla no contenía esa palabra (si no, «pdf» se cuenta solo).
+
+```python
+import csv
+rows=list(csv.DictReader(open('docs/seo-plan/fase0/suggest-20261126.csv',encoding='utf-8')))
+ok=lambda r: r['suggestion'].strip()
+def dentro(lang,kw):
+    base=[r for r in rows if r['hl']==lang and ok(r) and kw not in r['seed'].lower()]
+    return sum(kw in r['suggestion'].lower() for r in base), len(base)
+def por_modificador(lang,mod):
+    seeds={r['seed'] for r in rows if r['hl']==lang and r['seed'].split()[-1]==mod}
+    return sum(1 for r in rows if r['seed'] in seeds and ok(r))
+```

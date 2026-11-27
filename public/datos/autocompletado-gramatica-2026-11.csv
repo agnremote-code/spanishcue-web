@@ -1,0 +1,30 @@
+tipo,idioma,termino,sugerencias,de,consultas_sin_sugerencias
+modificador,es,ejercicios,253,270,0
+modificador,es,pdf,215,270,1
+modificador,es,quiz,185,270,0
+modificador,es,dele,168,270,1
+modificador,es,online,161,270,2
+modificador,es,test,135,270,2
+modificador,es,práctica,80,270,1
+modificador,en,practice,210,270,0
+modificador,en,quiz,191,270,0
+modificador,en,worksheet,158,270,2
+modificador,en,test,134,270,3
+modificador,en,pdf,118,270,2
+modificador,en,ib,77,270,2
+modificador,en,ap,76,270,5
+modificador,en,gcse,73,270,5
+modificador,en,free,68,270,5
+modificador,en,online,48,270,9
+palabra_dentro,es,pdf,100,1252,
+palabra_dentro,es,wordwall,36,1467,
+palabra_dentro,es,quizlet,25,1467,
+palabra_dentro,es,juego,13,1467,
+palabra_dentro,es,interactivo / interactiva,11,1467,
+palabra_dentro,en,pdf,146,1291,
+palabra_dentro,en,worksheet,132,1251,
+palabra_dentro,en,quizlet,65,1409,
+palabra_dentro,en,answers / answer key,29,1409,
+palabra_dentro,en,game,12,1409,
+palabra_dentro,en,interactive,0,1409,
+dele_ahora_en_tema_dele,es,DELE Ahora,76,168,
