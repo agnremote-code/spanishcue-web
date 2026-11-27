@@ -71,6 +71,7 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/spanish-grammar-practice", priority: 0.6, changeFrequency: "monthly" },
   ...["ser-vs-estar", "preterite-vs-imperfect", "subjunctive", "por-vs-para"].map((topic) => ({ path: `/spanish-grammar-practice/${topic}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/datos/errores-preterito-perfecto-a2", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/datos/que-autocompleta-google-en-gramatica", priority: 0.6, changeFrequency: "monthly" },
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },
   { path: "/alternativa-a-profedeele", priority: 0.8, changeFrequency: "monthly" },
   { path: "/clases-de-espanol-listas-para-dar", priority: 0.85, changeFrequency: "monthly" },
