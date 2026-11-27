@@ -1,0 +1,42 @@
+{
+ "version": 1,
+ "authorization": "Owner approval typed by Ale on the decision card «¿Publico tal cual los textos en inglés de las páginas de lectura?» (card cmsg_01Gr5R4j3t2Yet65UcmhcVhAHV56GxMUsfHoFNkyfhpBch, option «Sí, publicalo tal cual», 2026-11-27T04:31:21Z). Covers the English interface of ChoiceQuiz and the English footer link of the reading pages, listed in /mnt/project-files/seo-mision/fase2-lectura-textos-en-ingles.md.",
+ "additions": [
+  {
+   "path": "app/SpanishCueBrand.tsx",
+   "text": "Reading practice"
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": "Choose the right answer"
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": "Correct. "
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": "Not quite: «${option}» does not fit here. "
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": "Show the answer"
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": "${right} of ${answered} correct"
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": " · ${n} to go"
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": "${n} questions: tap the option that fills the gap."
+  },
+  {
+   "path": "app/mini-apps/ChoiceQuiz.tsx",
+   "text": "Start again"
+  }
+ ]
+}

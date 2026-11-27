@@ -66,6 +66,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/about", priority: 0.5, changeFrequency: "monthly" },
   { path: "/equipo", priority: 0.5, changeFrequency: "monthly" },
   { path: "/datos", priority: 0.6, changeFrequency: "weekly" },
+  { path: "/spanish-reading-comprehension", priority: 0.6, changeFrequency: "monthly" },
+  ...["a1", "a2", "b1"].map((level) => ({ path: `/spanish-reading-comprehension/${level}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/datos/errores-preterito-perfecto-a2", priority: 0.6, changeFrequency: "monthly" },
   { path: "/datos/que-autocompleta-google-en-gramatica", priority: 0.6, changeFrequency: "monthly" },
   { path: MATERIAL_ELE_PATH, priority: 0.95, changeFrequency: "weekly" },
