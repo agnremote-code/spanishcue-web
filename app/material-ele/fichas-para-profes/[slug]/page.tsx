@@ -41,7 +41,7 @@ export default async function FichaParaProfesPage({ params }: Props) {
       <>
         <main className={styles.page} lang="es">
           <div className={styles.shell}>
-            <EleTopbar current={MATERIAL_ELE_PATH} />
+            <EleTopbar current={MATERIAL_ELE_PATH} promo={false} />
             {crumbs(`Pack ${level}`, profesPackPath(level))}
             <section className={styles.hero}>
               <p className={styles.eyebrow}><FreeBadge /> Pack {level}</p>
@@ -72,7 +72,7 @@ export default async function FichaParaProfesPage({ params }: Props) {
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <EleTopbar current={MATERIAL_ELE_PATH} />
+          <EleTopbar current={MATERIAL_ELE_PATH} promo={false} />
           {crumbs(page.name, profesPath(page))}
           {printHeader(page.level)}
           <section className={styles.hero}>

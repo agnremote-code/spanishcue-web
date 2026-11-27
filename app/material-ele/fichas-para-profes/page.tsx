@@ -16,7 +16,7 @@ export default function FichasParaProfesPage() {
     <>
       <main className={styles.page} lang="es">
         <div className={styles.shell}>
-          <EleTopbar current={MATERIAL_ELE_PATH} />
+          <EleTopbar current={MATERIAL_ELE_PATH} promo={false} />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Material ELE", href: MATERIAL_ELE_PATH }, { name: "Fichas completas para profes", href: FICHAS_PROFES_PATH }]} />
           <section className={styles.hero}>
             <p className={styles.eyebrow}>Gratis · sin registro · A1–C2</p>
