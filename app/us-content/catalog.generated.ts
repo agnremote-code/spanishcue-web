@@ -10,10 +10,31 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "grammar",
+  "slug": "commands",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish commands practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "conditional",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish conditional practice"
+ },
+ {
+  "family": "grammar",
   "slug": "indirect-object-pronouns",
   "level": "A2–B1",
   "theme": "forms",
   "title": "Spanish indirect object pronouns practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "irregular-verbs",
+  "level": "A1–B1",
+  "theme": "forms",
+  "title": "Spanish irregular verbs practice"
  },
  {
   "family": "grammar",
@@ -31,10 +52,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "grammar",
+  "slug": "present-progressive",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish present progressive practice"
+ },
+ {
+  "family": "grammar",
   "slug": "present-tense",
   "level": "A1",
   "theme": "forms",
   "title": "Spanish present tense practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "sentence-structure",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish sentence structure practice"
  },
  {
   "family": "verbs",
