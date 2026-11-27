@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "baseball",
+ "themeLabel": "Baseball",
+ "title": "Spanish Baseball Vocabulary: Terms, Positions and Practice",
+ "description": "Spanish baseball vocabulary used in the Caribbean and Mexico: positions, plays and terms, with a quiz that corrects itself and an A2 reading from Santo Domingo.",
+ "h1": "Spanish baseball vocabulary",
+ "titleEs": "El sueño de Yamilet",
+ "focus": "the present and ir a + infinitive, baseball words",
+ "intro": "Learn the Spanish baseball terms heard in the Dominican Republic, Venezuela, Cuba and Mexico, practice them with instant feedback, then read about a young shortstop in Santo Domingo.",
+ "paragraphs": [
+  "Yamilet tiene dieciséis años y vive en Santo Domingo, la capital de la República Dominicana. Todos los días, antes de ir a la escuela, entrena en una academia de béisbol cerca del Malecón. Es campocorto y batea con las dos manos.",
+  "En la República Dominicana el béisbol es casi una religión. Los niños juegan en la calle con palos y pelotas de goma, y en invierno las familias llenan los estadios para ver la liga profesional. Muchos jugadores de las Grandes Ligas de Estados Unidos nacieron en este país.",
+  "Yamilet juega en un equipo de chicas. Hace unos años casi no había ligas femeninas, pero ahora hay torneos en varias provincias. Su entrenadora, una ex jugadora de sóftbol, le dice que el talento no basta: hay que estudiar, comer bien y dormir.",
+  "El mes que viene su equipo va a jugar un torneo en Puerto Rico. Yamilet está nerviosa porque va a viajar en avión por primera vez. Su sueño es conseguir una beca para jugar y estudiar en una universidad de Estados Unidos. Su mamá ya le compró un guante nuevo para el viaje y toda la familia va a ir al aeropuerto a despedirla."
+ ],
+ "glossary": [
+  [
+   "el Malecón",
+   "seafront avenue"
+  ],
+  [
+   "con las dos manos",
+   "with both hands (switch hitter)"
+  ],
+  [
+   "la pelota de goma",
+   "rubber ball"
+  ],
+  [
+   "las Grandes Ligas",
+   "Major League Baseball"
+  ],
+  [
+   "no basta",
+   "is not enough"
+  ],
+  [
+   "la beca",
+   "scholarship"
+  ],
+  [
+   "conseguir",
+   "to get"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Yamilet entrena ",
+   "after": ".",
+   "options": [
+    "antes de ir a la escuela",
+    "por la noche",
+    "solo los fines de semana"
+   ],
+   "answer": 0,
+   "why": "She trains every day before school."
+  },
+  {
+   "before": "En la posición de campocorto, Yamilet ",
+   "after": ".",
+   "options": [
+    "batea con las dos manos",
+    "lanza la pelota",
+    "no batea"
+   ],
+   "answer": 0,
+   "why": "The text says she bats with both hands."
+  },
+  {
+   "before": "En invierno las familias dominicanas ",
+   "after": ".",
+   "options": [
+    "van a ver la liga profesional",
+    "juegan al fútbol",
+    "viajan a Estados Unidos"
+   ],
+   "answer": 0,
+   "why": "They fill the stadiums for the pro league."
+  },
+  {
+   "before": "Según la entrenadora, además del talento hay que ",
+   "after": ".",
+   "options": [
+    "estudiar, comer bien y dormir",
+    "tener un bate caro",
+    "jugar todo el día"
+   ],
+   "answer": 0,
+   "why": "Talent is not enough: study, eat well, sleep."
+  },
+  {
+   "before": "El torneo del mes que viene es en ",
+   "after": ".",
+   "options": [
+    "Puerto Rico",
+    "Santo Domingo",
+    "Cuba"
+   ],
+   "answer": 0,
+   "why": "Her team will play in Puerto Rico."
+  },
+  {
+   "before": "El sueño de Yamilet es ",
+   "after": ".",
+   "options": [
+    "una beca en una universidad de Estados Unidos",
+    "ser entrenadora",
+    "vivir en Puerto Rico"
+   ],
+   "answer": 0,
+   "why": "She wants a scholarship to play and study in the US."
+  }
+ ],
+ "grammar": {
+  "title": "Plans with ir a + infinitive",
+  "intro": "To talk about plans, Spanish uses ir a + infinitive: va a jugar, vamos a ganar.",
+  "items": [
+   {
+    "before": "El mes que viene el equipo ",
+    "after": " un torneo.",
+    "options": [
+     "va a jugar",
+     "va jugar",
+     "va a juega"
+    ],
+    "answer": 0,
+    "why": "Ir a + infinitive: va a jugar."
+   },
+   {
+    "before": "Nosotras ",
+    "after": " en avión.",
+    "options": [
+     "vamos a viajar",
+     "vamos viajar",
+     "van a viajar"
+    ],
+    "answer": 0,
+    "why": "Nosotras: vamos a + infinitive."
+   },
+   {
+    "before": "¿Tú ",
+    "after": " el juego del domingo?",
+    "options": [
+     "vas a ver",
+     "va a ver",
+     "vas ver"
+    ],
+    "answer": 0,
+    "why": "Tú: vas a + infinitive."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Te gusta más el béisbol o el fútbol? ¿Por qué?",
+  "Explica las reglas básicas del béisbol en español, con tus palabras.",
+  "¿Qué deporte es importante en tu ciudad o en tu familia?"
+ ],
+ "heritage": "Caribbean families often say «pítcher», «cátcher» and «jonrón», and those words are correct Spanish: the dictionary accepts them. In formal writing you can alternate with «lanzador» and «receptor». Watch the accents: «béisbol», «jonrón», «mánager», «pítcher».",
+ "teacher": "Baseball is a good bridge for students from Dominican, Venezuelan and Cuban families. Ask them to teach the class five terms used at home and compare them with the standard ones.",
+ "vocabulary": [
+  {
+   "title": "The game",
+   "words": [
+    [
+     "el béisbol",
+     "baseball"
+    ],
+    [
+     "el juego",
+     "game"
+    ],
+    [
+     "la entrada",
+     "inning"
+    ],
+    [
+     "la carrera",
+     "run"
+    ],
+    [
+     "el jonrón",
+     "home run"
+    ],
+    [
+     "el ponche",
+     "strikeout"
+    ],
+    [
+     "la base por bolas",
+     "walk"
+    ],
+    [
+     "el estadio",
+     "ballpark"
+    ]
+   ]
+  },
+  {
+   "title": "Positions",
+   "words": [
+    [
+     "el lanzador / el pítcher",
+     "pitcher"
+    ],
+    [
+     "el receptor / el cátcher",
+     "catcher"
+    ],
+    [
+     "el bateador",
+     "batter"
+    ],
+    [
+     "el campocorto",
+     "shortstop"
+    ],
+    [
+     "el jardinero",
+     "outfielder"
+    ],
+    [
+     "la primera base",
+     "first base"
+    ],
+    [
+     "el mánager",
+     "manager"
+    ]
+   ]
+  },
+  {
+   "title": "Equipment and actions",
+   "words": [
+    [
+     "el bate",
+     "bat"
+    ],
+    [
+     "el guante",
+     "glove"
+    ],
+    [
+     "la pelota",
+     "ball"
+    ],
+    [
+     "el casco",
+     "helmet"
+    ],
+    [
+     "batear",
+     "to bat, to hit"
+    ],
+    [
+     "lanzar",
+     "to pitch"
+    ],
+    [
+     "atrapar",
+     "to catch"
+    ],
+    [
+     "robar una base",
+     "to steal a base"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El ",
+   "after": " lanza la pelota desde el montículo.",
+   "options": [
+    "lanzador",
+    "receptor",
+    "jardinero"
+   ],
+   "answer": 0,
+   "why": "The pitcher throws from the mound."
+  },
+  {
+   "before": "Cuando la pelota sale del estadio es un ",
+   "after": ".",
+   "options": [
+    "jonrón",
+    "ponche",
+    "guante"
+   ],
+   "answer": 0,
+   "why": "Out of the park: a home run, jonrón."
+  },
+  {
+   "before": "Un juego de béisbol normalmente tiene nueve ",
+   "after": ".",
+   "options": [
+    "entradas",
+    "carreras",
+    "bases"
+   ],
+   "answer": 0,
+   "why": "Nine innings: entradas."
+  },
+  {
+   "before": "Con tres strikes, el bateador recibe un ",
+   "after": ".",
+   "options": [
+    "ponche",
+    "jonrón",
+    "casco"
+   ],
+   "answer": 0,
+   "why": "Three strikes is a strikeout: ponche."
+  },
+  {
+   "before": "El ",
+   "after": " juega entre la segunda y la tercera base.",
+   "options": [
+    "campocorto",
+    "cátcher",
+    "mánager"
+   ],
+   "answer": 0,
+   "why": "The shortstop plays between second and third."
+  },
+  {
+   "before": "Para protegerse la cabeza, el bateador usa un ",
+   "after": ".",
+   "options": [
+    "casco",
+    "bate",
+    "guante"
+   ],
+   "answer": 0,
+   "why": "Casco: helmet."
+  },
+  {
+   "before": "El corredor corrió muy rápido y logró ",
+   "after": ".",
+   "options": [
+    "robar una base",
+    "lanzar",
+    "batear"
+   ],
+   "answer": 0,
+   "why": "Robar una base: to steal a base."
+  },
+  {
+   "before": "Ganamos el juego cinco ",
+   "after": " a tres.",
+   "options": [
+    "carreras",
+    "entradas",
+    "pelotas"
+   ],
+   "answer": 0,
+   "why": "Baseball scores in runs: carreras."
+  }
+ ],
+ "demand": {
+  "query": "spanish baseball vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish baseball vocabulary». They ask for terms, a glossary and phrases, so the list mixes standard words with the English loans that Caribbean Spanish uses every day.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
