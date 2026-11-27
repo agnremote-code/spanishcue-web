@@ -122,6 +122,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "adjectives",
+  "level": "A1",
+  "theme": "adjectives",
+  "title": "Spanish adjectives vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "airport",
   "level": "A2",
   "theme": "airport",
@@ -388,6 +395,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "idioms",
+  "level": "A2",
+  "theme": "idioms",
+  "title": "Common Spanish idioms"
+ },
+ {
+  "family": "vocabulary",
   "slug": "jobs",
   "level": "A2",
   "theme": "jobs",
@@ -399,6 +413,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "kitchen",
   "title": "Spanish kitchen vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "laundry",
+  "level": "A2",
+  "theme": "laundry",
+  "title": "Spanish laundry vocabulary"
  },
  {
   "family": "vocabulary",
