@@ -17,6 +17,7 @@ import { fillCount, pageRewrites } from "../seo-rewrites";
 import { RewriteSections } from "../rewrite-components";
 import styles from "../../growth/growth.module.css";
 import PrintButton from "../PrintButton";
+import { InformesDelTema } from "../../datos/enlaces";
 import print from "../print.module.css";
 
 /** Topic guides that have an interactive mini-app family: one rule and one quiz per use. */
@@ -135,6 +136,8 @@ export default async function ElePage({ params }: Props) {
           </Section>
 
           <div className={print.noPrint}>
+          <InformesDelTema topic={page.slug} />
+
           <Section id="clases" title="Clases interactivas para continuar" intro={`Las clases GRATIS se abren ya. Las PRO están incluidas en la suscripción de ${PRICE_LABEL}.`}>
             <EleLessonGrid lessons={lessons} />
             <p><Link className={styles.textLink} href={PRICING_PATH}>Desbloquear todas las clases →</Link></p>
