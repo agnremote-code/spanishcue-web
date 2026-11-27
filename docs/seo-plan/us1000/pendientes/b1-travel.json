@@ -1,0 +1,195 @@
+{
+ "level": "B1",
+ "theme": "travel",
+ "themeLabel": "Travel",
+ "title": "Spanish Reading Comprehension B1: Travel (Study Abroad Story)",
+ "description": "A B1 Spanish reading about an American student's semester in Salamanca, with self-correcting questions, a glossary and preterite vs imperfect practice. Free.",
+ "h1": "Spanish reading comprehension B1: travel",
+ "titleEs": "Un semestre en Salamanca",
+ "focus": "study abroad, the preterite and imperfect in narration, expressing feelings",
+ "intro": "An intermediate text about travel: Megan, a university student from Ohio, spends a semester in Salamanca and discovers that her classroom Spanish is not enough at first.",
+ "paragraphs": [
+  "Megan estudiaba español desde la secundaria en Ohio y sacaba muy buenas notas, así que cuando llegó a Salamanca para un semestre en la universidad estaba bastante segura de sí misma. Esa seguridad le duró exactamente un día. En la estación de autobuses, el taxista le habló tan rápido, y con tantas palabras que no conocía, que solo entendió la palabra «maleta».",
+  "Vivía con una familia, los Sánchez, en un piso cerca de la Plaza Mayor. La señora Sánchez cocinaba muchísimo y se preocupaba si Megan no repetía. Las comidas eran a las dos y media y las cenas a las diez, horarios que al principio le parecieron imposibles. Durante las primeras semanas Megan se sentía cansada todo el tiempo, no solo por el horario, sino porque tenía que concentrarse en cada conversación.",
+  "El cambio llegó en octubre, casi por casualidad. Una compañera de clase la invitó a un intercambio de idiomas en un bar: españoles que querían practicar inglés y extranjeros que querían practicar español. Allí conoció a Pablo y a Irene, dos estudiantes de Medicina, que se convirtieron en sus mejores amigos. Con ellos aprendió expresiones que nunca había visto en un libro, como «estar hecho polvo» o «¡qué guay!», y perdió el miedo a equivocarse.",
+  "Cuando volvió a Ohio en diciembre, su profesora notó la diferencia enseguida. Megan hablaba más rápido, usaba el vosotros sin pensarlo y, sobre todo, ya no traducía en su cabeza. «Lo más importante de este viaje no fue la gramática», explicó en una presentación para su clase. «Fue que no pasa nada si no entiendes todo. La gente tiene paciencia si ve que lo intentas.»"
+ ],
+ "glossary": [
+  [
+   "seguro de sí mismo",
+   "self-confident"
+  ],
+  [
+   "la maleta",
+   "suitcase"
+  ],
+  [
+   "repetir (la comida)",
+   "to have a second helping"
+  ],
+  [
+   "por casualidad",
+   "by chance"
+  ],
+  [
+   "el intercambio de idiomas",
+   "language exchange"
+  ],
+  [
+   "estar hecho polvo",
+   "to be exhausted (Spain, informal)"
+  ],
+  [
+   "¡qué guay!",
+   "how cool! (Spain, informal)"
+  ],
+  [
+   "equivocarse",
+   "to make a mistake"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Antes de ir a España, Megan ",
+   "after": ".",
+   "options": [
+    "sacaba muy buenas notas en español",
+    "nunca había estudiado español",
+    "vivía en Salamanca"
+   ],
+   "answer": 0,
+   "why": "She had very good grades in high school Spanish."
+  },
+  {
+   "before": "En la estación, Megan solo entendió ",
+   "after": ".",
+   "options": [
+    "la palabra «maleta»",
+    "el precio del taxi",
+    "el nombre de la calle"
+   ],
+   "answer": 0,
+   "why": "The taxi driver spoke too fast."
+  },
+  {
+   "before": "Megan vivía ",
+   "after": ".",
+   "options": [
+    "con una familia",
+    "sola en un piso",
+    "en una residencia de estudiantes"
+   ],
+   "answer": 0,
+   "why": "With the Sánchez family near the Plaza Mayor."
+  },
+  {
+   "before": "Al principio los horarios de las comidas le parecían ",
+   "after": ".",
+   "options": [
+    "imposibles",
+    "normales",
+    "demasiado temprano"
+   ],
+   "answer": 0,
+   "why": "Lunch at 2:30 and dinner at 10 seemed impossible."
+  },
+  {
+   "before": "Megan estaba cansada porque ",
+   "after": ".",
+   "options": [
+    "tenía que concentrarse en cada conversación",
+    "estudiaba toda la noche",
+    "trabajaba en un bar"
+   ],
+   "answer": 0,
+   "why": "Not only the schedule: every conversation took concentration."
+  },
+  {
+   "before": "En octubre Megan fue a ",
+   "after": ".",
+   "options": [
+    "un intercambio de idiomas",
+    "una fiesta de la universidad",
+    "un viaje a Madrid"
+   ],
+   "answer": 0,
+   "why": "A classmate invited her to a language exchange."
+  },
+  {
+   "before": "Pablo e Irene estudian ",
+   "after": ".",
+   "options": [
+    "Medicina",
+    "Inglés",
+    "Derecho"
+   ],
+   "answer": 0,
+   "why": "Two medical students."
+  },
+  {
+   "before": "Cuando volvió, la profesora notó que Megan ",
+   "after": ".",
+   "options": [
+    "ya no traducía en su cabeza",
+    "hablaba peor",
+    "había olvidado la gramática"
+   ],
+   "answer": 0,
+   "why": "She spoke faster and no longer translated in her head."
+  },
+  {
+   "before": "Para Megan, lo más importante que aprendió fue que ",
+   "after": ".",
+   "options": [
+    "no pasa nada si no entiendes todo",
+    "la gramática es lo principal",
+    "hay que estudiar más vocabulario"
+   ],
+   "answer": 0,
+   "why": "People are patient if they see you are trying."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: narrating the semester",
+  "intro": "The imperfect describes background and how things were; the preterite moves the story forward.",
+  "items": [
+   {
+    "before": "Megan ",
+    "after": " con una familia cerca de la Plaza Mayor.",
+    "options": [
+     "vivía",
+     "vivió un día"
+    ],
+    "answer": 0,
+    "why": "Ongoing situation during the semester: vivía."
+   },
+   {
+    "before": "En octubre una compañera la ",
+    "after": " a un intercambio.",
+    "options": [
+     "invitaba",
+     "invitó"
+    ],
+    "answer": 1,
+    "why": "One event that changes the story: invitó."
+   },
+   {
+    "before": "Las primeras semanas Megan se ",
+    "after": " cansada.",
+    "options": [
+     "sentía",
+     "sintió"
+    ],
+    "answer": 0,
+    "why": "A state that lasted: sentía."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Te gustaría estudiar en otro país? ¿Dónde y por qué?",
+  "Cuenta un momento en que no entendiste a alguien en español. ¿Qué hiciste?",
+  "¿Qué consejo le darías a un estudiante que va a vivir en un país hispanohablante?"
+ ],
+ "heritage": "Heritage speakers abroad often hear that their Spanish «sounds» Mexican, Dominican or Salvadoran, and that is a strength, not a problem. Read the Spain expressions in the text and write the equivalent your family would use for «estar hecho polvo» or «¡qué guay!». In writing, check «sí misma» with an accent on «sí» and «Medicina» capitalised only as a university degree.",
+ "teacher": "Teachers: this story is useful to motivate upper-level students or to prepare a trip. Ask students to find two moments when Megan's feelings change and the verbs that show them. The text also introduces vosotros and Spain slang in context, which is a gentle way to discuss regional variation."
+}

@@ -104,6 +104,8 @@
 .tableWrap th, .tableWrap td { text-align: left; vertical-align: top; padding: 12px 14px; border-bottom: 1px solid var(--g-line); }
 .tableWrap thead th { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--g-muted); }
 .tableWrap tbody tr:last-child th, .tableWrap tbody tr:last-child td { border-bottom: 0; }
+.wordTable table { min-width: 0; }
+.wordTable h3 { padding: 14px 14px 0; margin: 0; }
 .scaffold { display: grid; gap: 2px; margin-bottom: 10px; }
 .scaffold b { font-size: 16px; }
 .scaffold span { font-size: 14px; color: var(--g-muted); }

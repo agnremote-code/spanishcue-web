@@ -1,0 +1,195 @@
+{
+ "level": "B1",
+ "theme": "jobs",
+ "themeLabel": "Jobs",
+ "title": "Spanish Reading Comprehension B1: Jobs (Job Interview Text)",
+ "description": "A B1 Spanish reading about a bilingual job interview at a Miami hospital, with questions that correct themselves, work vocabulary and usted practice. Free.",
+ "h1": "Spanish reading comprehension B1: jobs",
+ "titleEs": "La entrevista de trabajo",
+ "focus": "formal register with usted, the conditional for politeness, work vocabulary",
+ "intro": "An intermediate text about work: Andrés, a nursing graduate, has his first job interview in Spanish and English at a hospital in Miami.",
+ "paragraphs": [
+  "Andrés Pacheco terminó sus estudios de enfermería en mayo y la semana pasada tuvo su primera entrevista de trabajo, en un hospital de Miami. Sus padres llegaron de Nicaragua cuando él tenía tres años, así que creció hablando español en casa e inglés en la escuela. En el anuncio del puesto, el hospital pedía «enfermeros bilingües con buena comunicación con pacientes y familias».",
+  "La entrevista empezó en inglés, con preguntas sobre su formación y sus prácticas en urgencias. Después, la jefa de enfermería, la señora Domínguez, cambió al español sin avisar: «¿Podría contarnos cómo le explicaría un tratamiento a una paciente mayor que está asustada?». Andrés se puso nervioso. En casa hablaba español todos los días, pero nunca había usado palabras médicas en español con alguien desconocido.",
+  "Respiró hondo y respondió despacio. Explicó que primero se presentaría, le preguntaría cómo prefiere que la llamen y usaría palabras sencillas, sin términos técnicos. También comentó que muchas familias latinas quieren participar en las decisiones médicas, y que él siempre intentaría incluir a los hijos o nietos en la conversación si la paciente quería.",
+  "Al final, la señora Domínguez le preguntó qué sueldo esperaba y si tenía alguna pregunta. Andrés quiso saber si el hospital ofrecía cursos de español médico, porque quería mejorar su vocabulario. Ella sonrió y le dijo que sí, y que esa pregunta decía mucho de él. Tres días después recibió un correo: el puesto era suyo. Empieza el lunes en el turno de noche, en la planta de pediatría."
+ ],
+ "glossary": [
+  [
+   "la enfermería",
+   "nursing"
+  ],
+  [
+   "el puesto",
+   "position, job"
+  ],
+  [
+   "la formación",
+   "training, education"
+  ],
+  [
+   "las prácticas",
+   "internship, clinical placement"
+  ],
+  [
+   "urgencias",
+   "emergency room"
+  ],
+  [
+   "la jefa",
+   "the boss (female)"
+  ],
+  [
+   "el sueldo",
+   "salary"
+  ],
+  [
+   "el turno de noche",
+   "night shift"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Andrés estudió ",
+   "after": ".",
+   "options": [
+    "enfermería",
+    "medicina",
+    "idiomas"
+   ],
+   "answer": 0,
+   "why": "He finished nursing school in May."
+  },
+  {
+   "before": "Los padres de Andrés son de ",
+   "after": ".",
+   "options": [
+    "Nicaragua",
+    "Cuba",
+    "Honduras"
+   ],
+   "answer": 0,
+   "why": "They came from Nicaragua when he was three."
+  },
+  {
+   "before": "El hospital buscaba enfermeros ",
+   "after": ".",
+   "options": [
+    "bilingües",
+    "con diez años de experiencia",
+    "para urgencias"
+   ],
+   "answer": 0,
+   "why": "Bilingual nurses who communicate well."
+  },
+  {
+   "before": "La entrevista empezó en ",
+   "after": ".",
+   "options": [
+    "inglés",
+    "español",
+    "los dos idiomas a la vez"
+   ],
+   "answer": 0,
+   "why": "In English; then it switched to Spanish."
+  },
+  {
+   "before": "Andrés se puso nervioso porque ",
+   "after": ".",
+   "options": [
+    "nunca había usado vocabulario médico en español",
+    "no hablaba español",
+    "llegó tarde"
+   ],
+   "answer": 0,
+   "why": "He had never used medical words in Spanish with a stranger."
+  },
+  {
+   "before": "Andrés dijo que primero ",
+   "after": ".",
+   "options": [
+    "se presentaría",
+    "llamaría al médico",
+    "explicaría el tratamiento"
+   ],
+   "answer": 0,
+   "why": "First he would introduce himself."
+  },
+  {
+   "before": "También dijo que intentaría incluir ",
+   "after": ".",
+   "options": [
+    "a la familia en la conversación",
+    "a otros enfermeros",
+    "a un intérprete"
+   ],
+   "answer": 0,
+   "why": "Children or grandchildren, if the patient wanted."
+  },
+  {
+   "before": "Andrés preguntó si el hospital ofrecía ",
+   "after": ".",
+   "options": [
+    "cursos de español médico",
+    "un sueldo más alto",
+    "turnos de día"
+   ],
+   "answer": 0,
+   "why": "Medical Spanish courses."
+  },
+  {
+   "before": "Andrés va a trabajar en ",
+   "after": ".",
+   "options": [
+    "pediatría, en el turno de noche",
+    "urgencias, en el turno de día",
+    "la oficina de la señora Domínguez"
+   ],
+   "answer": 0,
+   "why": "Night shift on the paediatrics floor."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: polite questions and the conditional",
+  "intro": "In formal situations, use usted and the conditional to sound polite.",
+  "items": [
+   {
+    "before": "¿",
+    "after": " contarnos su experiencia?",
+    "options": [
+     "Podría",
+     "Puedes"
+    ],
+    "answer": 0,
+    "why": "Formal and polite: podría (usted)."
+   },
+   {
+    "before": "Primero me ",
+    "after": " a la paciente.",
+    "options": [
+     "presentaría",
+     "presento"
+    ],
+    "answer": 0,
+    "why": "A hypothetical answer: presentaría."
+   },
+   {
+    "before": "¿Qué sueldo ",
+    "after": " usted?",
+    "options": [
+     "espera",
+     "esperas"
+    ],
+    "answer": 0,
+    "why": "Usted takes the third person: espera."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué trabajo te gustaría tener en el futuro? ¿Por qué?",
+  "¿En qué trabajos de tu ciudad se necesita hablar español?",
+  "Prepara tres respuestas formales para una entrevista con «usted» y el condicional."
+ ],
+ "heritage": "Andrés's story is common among heritage speakers: fluent at home, unsure with formal or technical Spanish. Practise the switch: rewrite three things you would say to a friend («¿Qué te pasa?») as you would say them to a patient or a client («¿Qué le pasa?»). Check the accents in «enfermería», «había» and «técnicos», and «hondo» without h.",
+ "teacher": "Teachers: this reading shows students a real career reason to keep studying Spanish, especially in healthcare. Use it before mock interviews: students prepare questions and answers with usted and the conditional, then interview each other. It is particularly meaningful for heritage learners."
+}

@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "house",
+ "themeLabel": "House",
+ "title": "Spanish House Vocabulary: Rooms, Furniture and Practice",
+ "description": "Spanish house vocabulary: rooms, furniture and household items, with a practice quiz that corrects itself and a short A1 reading set in Madrid. No login.",
+ "h1": "Spanish house vocabulary",
+ "titleEs": "Un piso pequeño en Madrid",
+ "focus": "hay vs estar, rooms and furniture, location words",
+ "intro": "Learn the Spanish words for rooms, furniture and household items, practice them in sentences that correct themselves, then visit Marcos's small apartment in Madrid.",
+ "paragraphs": [
+  "Soy Marcos, tengo veinte años y estudio arquitectura en Madrid. Vivo en un piso pequeño con dos amigos, Hugo y Nerea. El piso está en el cuarto piso de un edificio antiguo, en el barrio de Lavapiés. No hay ascensor, así que subimos muchas escaleras todos los días.",
+  "El piso tiene tres dormitorios, una cocina, un baño y un salón. Mi dormitorio es el más pequeño: hay una cama, una mesa y una lámpara, y la ropa está en una caja debajo de la cama. El dormitorio de Nerea tiene un balcón con plantas.",
+  "La cocina está al lado del salón. Es muy pequeña, pero hay una nevera, un horno y una mesa para tres personas. En el salón hay un sofá viejo y una televisión. Los viernes por la noche cocinamos juntos y vemos una película. El piso no es perfecto, pero es barato y está cerca de la universidad."
+ ],
+ "glossary": [
+  [
+   "el piso",
+   "apartment (in Spain); also floor"
+  ],
+  [
+   "el edificio",
+   "the building"
+  ],
+  [
+   "el ascensor",
+   "the elevator"
+  ],
+  [
+   "el dormitorio",
+   "bedroom"
+  ],
+  [
+   "el salón",
+   "living room"
+  ],
+  [
+   "debajo de",
+   "under"
+  ],
+  [
+   "la nevera",
+   "fridge («refrigerador» in many countries)"
+  ],
+  [
+   "barato",
+   "cheap"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Marcos estudia ",
+   "after": ".",
+   "options": [
+    "arquitectura",
+    "medicina",
+    "historia"
+   ],
+   "answer": 0,
+   "why": "«Estudio arquitectura en Madrid.»"
+  },
+  {
+   "before": "Marcos vive con ",
+   "after": " amigos.",
+   "options": [
+    "dos",
+    "tres",
+    "cuatro"
+   ],
+   "answer": 0,
+   "why": "He lives with Hugo and Nerea."
+  },
+  {
+   "before": "En el edificio no hay ",
+   "after": ".",
+   "options": [
+    "ascensor",
+    "escaleras",
+    "balcones"
+   ],
+   "answer": 0,
+   "why": "«No hay ascensor», so they climb the stairs."
+  },
+  {
+   "before": "La ropa de Marcos está ",
+   "after": ".",
+   "options": [
+    "debajo de la cama",
+    "en el balcón",
+    "en el salón"
+   ],
+   "answer": 0,
+   "why": "His clothes are in a box under the bed."
+  },
+  {
+   "before": "El balcón con plantas está en el dormitorio de ",
+   "after": ".",
+   "options": [
+    "Nerea",
+    "Hugo",
+    "Marcos"
+   ],
+   "answer": 0,
+   "why": "«El dormitorio de Nerea tiene un balcón con plantas.»"
+  },
+  {
+   "before": "Los viernes los amigos ",
+   "after": ".",
+   "options": [
+    "cocinan y ven una película",
+    "estudian en la universidad",
+    "visitan a sus padres"
+   ],
+   "answer": 0,
+   "why": "On Friday nights they cook together and watch a film."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: hay or está",
+  "intro": "«Hay» introduces something new; «está» says where a specific thing is.",
+  "items": [
+   {
+    "before": "En el salón ",
+    "after": " un sofá viejo.",
+    "options": [
+     "hay",
+     "está"
+    ],
+    "answer": 0,
+    "why": "A sofa, mentioned for the first time: hay."
+   },
+   {
+    "before": "La cocina ",
+    "after": " al lado del salón.",
+    "options": [
+     "hay",
+     "está"
+    ],
+    "answer": 1,
+    "why": "A specific room and its location: está."
+   },
+   {
+    "before": "El piso ",
+    "after": " cerca de la universidad.",
+    "options": [
+     "hay",
+     "está"
+    ],
+    "answer": 1,
+    "why": "Location of the apartment we already know: está."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuántos dormitorios hay en tu casa?",
+  "Describe tu dormitorio: ¿qué hay y dónde está cada cosa?",
+  "¿Prefieres vivir con amigos o con tu familia? ¿Por qué?"
+ ],
+ "heritage": "Heritage speakers from the Americas may know «apartamento», «cuarto», «sala» and «refrigerador» rather than the Spain words in this text (piso, dormitorio, salón, nevera). Make a two-column list with both versions. Then check the spelling of «ahí», «hay» and «ay», three words that sound alike and are easy to mix up in writing.",
+ "teacher": "Teachers: this text pairs well with a floor-plan activity. Students draw Marcos's apartment from the text, then a partner describes their own home while the other draws it. It also shows students Spain vocabulary next to the Latin American words they may already know.",
+ "vocabulary": [
+  {
+   "title": "Rooms",
+   "words": [
+    [
+     "la cocina",
+     "kitchen"
+    ],
+    [
+     "el baño",
+     "bathroom"
+    ],
+    [
+     "el dormitorio / el cuarto",
+     "bedroom"
+    ],
+    [
+     "la sala / el salón",
+     "living room"
+    ],
+    [
+     "el comedor",
+     "dining room"
+    ],
+    [
+     "el garaje",
+     "garage"
+    ],
+    [
+     "el jardín",
+     "garden, yard"
+    ]
+   ]
+  },
+  {
+   "title": "Furniture",
+   "words": [
+    [
+     "la cama",
+     "bed"
+    ],
+    [
+     "el sofá",
+     "couch"
+    ],
+    [
+     "la mesa",
+     "table"
+    ],
+    [
+     "la silla",
+     "chair"
+    ],
+    [
+     "el armario",
+     "closet, wardrobe"
+    ],
+    [
+     "la estantería",
+     "bookshelf"
+    ],
+    [
+     "el escritorio",
+     "desk"
+    ],
+    [
+     "la lámpara",
+     "lamp"
+    ]
+   ]
+  },
+  {
+   "title": "Household items",
+   "words": [
+    [
+     "la nevera / el refrigerador",
+     "fridge"
+    ],
+    [
+     "la estufa",
+     "stove"
+    ],
+    [
+     "el horno",
+     "oven"
+    ],
+    [
+     "el microondas",
+     "microwave"
+    ],
+    [
+     "la ducha",
+     "shower"
+    ],
+    [
+     "el espejo",
+     "mirror"
+    ],
+    [
+     "la alfombra",
+     "rug"
+    ],
+    [
+     "la llave",
+     "key"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Duermo en la ",
+   "after": ".",
+   "options": [
+    "cama",
+    "silla",
+    "estufa"
+   ],
+   "answer": 0,
+   "why": "You sleep in a bed."
+  },
+  {
+   "before": "Cocinamos la cena en la ",
+   "after": ".",
+   "options": [
+    "cocina",
+    "sala",
+    "ducha"
+   ],
+   "answer": 0,
+   "why": "Cooking happens in the kitchen."
+  },
+  {
+   "before": "La leche está fría en el ",
+   "after": ".",
+   "options": [
+    "refrigerador",
+    "horno",
+    "armario"
+   ],
+   "answer": 0,
+   "why": "The fridge keeps milk cold."
+  },
+  {
+   "before": "Me miro en el ",
+   "after": " antes de salir.",
+   "options": [
+    "espejo",
+    "escritorio",
+    "jardín"
+   ],
+   "answer": 0,
+   "why": "You look at yourself in a mirror."
+  },
+  {
+   "before": "Pongo mis libros en la ",
+   "after": ".",
+   "options": [
+    "estantería",
+    "alfombra",
+    "lámpara"
+   ],
+   "answer": 0,
+   "why": "Books go on a bookshelf."
+  },
+  {
+   "before": "Por la mañana me ducho en el ",
+   "after": ".",
+   "options": [
+    "baño",
+    "comedor",
+    "garaje"
+   ],
+   "answer": 0,
+   "why": "The shower is in the bathroom."
+  },
+  {
+   "before": "Caliento la comida en dos minutos en el ",
+   "after": ".",
+   "options": [
+    "microondas",
+    "sofá",
+    "espejo"
+   ],
+   "answer": 0,
+   "why": "The microwave heats food fast."
+  },
+  {
+   "before": "Abro la puerta con la ",
+   "after": ".",
+   "options": [
+    "llave",
+    "mesa",
+    "silla"
+   ],
+   "answer": 0,
+   "why": "A key opens the door."
+  }
+ ],
+ "demand": {
+  "query": "spanish house vocabulary quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish house vocabulary». 2 of them ask for something to do with the words (quizlet, quiz), not only a list. 1 asks for a PDF. Several suggestions ask for furniture and household items, not only rooms, so the list covers all three.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

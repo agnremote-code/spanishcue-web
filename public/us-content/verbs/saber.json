@@ -1,0 +1,273 @@
+{
+ "verb": "saber",
+ "meaning": "to know (facts, how to)",
+ "level": "A2",
+ "title": "Spanish Verb Saber Practice: Forms, Saber vs Conocer and Quiz",
+ "description": "Practice the Spanish verb saber: present and preterite forms, saber vs conocer, ten questions that correct themselves and a short reading. Free, no login.",
+ "h1": "Spanish verb saber: practice",
+ "intro": "Saber means «to know» a fact or how to do something; conocer means to know a person or a place. Learn the forms of saber, the difference with conocer and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb saber",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Knowing facts and information",
+   "example": "¿Sabes dónde está la biblioteca?",
+   "meaning": "Do you know where the library is?"
+  },
+  {
+   "use": "Knowing how to: saber + infinitive",
+   "example": "Mi hermano sabe tocar el piano.",
+   "meaning": "My brother knows how to play the piano."
+  },
+  {
+   "use": "Knowing by heart",
+   "example": "Me sé la canción de memoria.",
+   "meaning": "I know the song by heart."
+  },
+  {
+   "use": "Found out (preterite)",
+   "example": "Ayer supe que mi prima está embarazada.",
+   "meaning": "Yesterday I found out my cousin is pregnant."
+  },
+  {
+   "use": "Saber vs conocer",
+   "example": "Sé su nombre, pero no la conozco.",
+   "meaning": "I know her name, but I don't know her."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "sé"
+  ],
+  [
+   "tú",
+   "sabes"
+  ],
+  [
+   "él / ella / usted",
+   "sabe"
+  ],
+  [
+   "nosotros / nosotras",
+   "sabemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "saben"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "supe"
+  ],
+  [
+   "tú",
+   "supiste"
+  ],
+  [
+   "él / ella / usted",
+   "supo"
+  ],
+  [
+   "nosotros / nosotras",
+   "supimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "supieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo no ",
+   "after": " la respuesta.",
+   "options": [
+    "sé",
+    "se",
+    "sabo"
+   ],
+   "answer": 0,
+   "why": "Saber with yo: sé, with an accent."
+  },
+  {
+   "before": "¿",
+   "after": " tú nadar?",
+   "options": [
+    "Sabes",
+    "Conoces",
+    "Sabe"
+   ],
+   "answer": 0,
+   "why": "Knowing how to: saber + infinitive."
+  },
+  {
+   "before": "Nosotros no ",
+   "after": " a qué hora empieza la película.",
+   "options": [
+    "sabemos",
+    "conocemos",
+    "saben"
+   ],
+   "answer": 0,
+   "why": "A fact: saber."
+  },
+  {
+   "before": "¿",
+   "after": " a mi primo Andrés?",
+   "options": [
+    "Conoces",
+    "Sabes",
+    "Sabe"
+   ],
+   "answer": 0,
+   "why": "Knowing a person: conocer, with personal a."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " Puerto Rico muy bien.",
+   "options": [
+    "conocen",
+    "saben",
+    "sabemos"
+   ],
+   "answer": 0,
+   "why": "Knowing a place from experience: conocer."
+  },
+  {
+   "before": "Mi abuela ",
+   "after": " hacer las mejores tortillas.",
+   "options": [
+    "sabe",
+    "conoce",
+    "sabes"
+   ],
+   "answer": 0,
+   "why": "Knowing how to do something: sabe."
+  },
+  {
+   "before": "¿Ustedes ",
+   "after": " cuál es la capital de Perú?",
+   "options": [
+    "saben",
+    "conocen",
+    "sabemos"
+   ],
+   "answer": 0,
+   "why": "A fact: saben."
+  },
+  {
+   "before": "Ayer ",
+   "after": " que mi mejor amigo se va a mudar.",
+   "options": [
+    "supe",
+    "sabía",
+    "sé"
+   ],
+   "answer": 0,
+   "why": "Found out, one moment: supe."
+  },
+  {
+   "before": "¿Cuándo ",
+   "after": " tú la noticia?",
+   "options": [
+    "supiste",
+    "sabiste",
+    "sabías"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: supiste."
+  },
+  {
+   "before": "Ellos no ",
+   "after": " qué decir cuando les preguntaron.",
+   "options": [
+    "supieron",
+    "sabieron",
+    "sabían que"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: supieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La nueva vecina",
+  "paragraphs": [
+   "Hace un mes llegó una familia nueva a nuestra calle. Al principio no sabíamos nada de ellos. Mi mamá sabía solo que venían de Honduras, porque lo dijo la señora de la tienda. Un sábado, la hija, Gabriela, tocó nuestra puerta para preguntar si sabíamos dónde había una lavandería.",
+   "Yo no conocía a nadie en la calle de mi edad, así que la acompañé. Así supe que Gabriela sabe hablar tres idiomas: español, inglés y garífuna. También sabe cocinar baleadas, que yo no conocía. Ahora somos amigas, y ella ya conoce el barrio mejor que yo."
+  ],
+  "comprehension": [
+   {
+    "before": "La familia nueva viene de ",
+    "after": ".",
+    "options": [
+     "Honduras",
+     "Guatemala",
+     "México"
+    ],
+    "answer": 0,
+    "why": "From Honduras."
+   },
+   {
+    "before": "Gabriela preguntó dónde había ",
+    "after": ".",
+    "options": [
+     "una lavandería",
+     "una tienda",
+     "una escuela"
+    ],
+    "answer": 0,
+    "why": "A laundromat."
+   },
+   {
+    "before": "Gabriela sabe hablar ",
+    "after": " idiomas.",
+    "options": [
+     "tres",
+     "dos",
+     "cuatro"
+    ],
+    "answer": 0,
+    "why": "Spanish, English and Garifuna."
+   },
+   {
+    "before": "Las baleadas son ",
+    "after": " que la narradora no conocía.",
+    "options": [
+     "una comida",
+     "una canción",
+     "un barrio"
+    ],
+    "answer": 0,
+    "why": "A Honduran dish she did not know."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo sabo.",
+   "right": "Yo sé.",
+   "why": "The yo form of saber is sé, with an accent."
+  },
+  {
+   "wrong": "Sé a María.",
+   "right": "Conozco a María.",
+   "why": "People take conocer, not saber."
+  },
+  {
+   "wrong": "Conozco nadar.",
+   "right": "Sé nadar.",
+   "why": "Skills take saber + infinitive."
+  }
+ ],
+ "heritage": "Heritage speakers sometimes write «se» without the accent: sé (I know) needs it, se (the pronoun) does not. Also watch «supe» and «supieron» with p, and the spoken «sabíanos» for sabíamos. Write five sentences mixing saber and conocer about your neighborhood.",
+ "teacher": "Teachers: the reading gives clear pairs for saber versus conocer. Students sort each example into two columns, then play «¿Sabes…? ¿Conoces…?» in pairs with questions about the school and the city.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb saber». 2 of them ask for conjugation, charts or tenses (conjugation, present tense). Searchers often pair saber with conocer, so the page explains both with examples and questions.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

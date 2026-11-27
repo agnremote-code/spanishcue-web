@@ -1,0 +1,273 @@
+{
+ "verb": "ver",
+ "meaning": "to see, to watch",
+ "level": "A1",
+ "title": "Spanish Verb Ver Practice: Forms, Uses and Quiz with Answers",
+ "description": "Practice the Spanish verb ver: veo, the preterite vi, ver vs mirar, ten questions that correct themselves and a short reading. Free, no login.",
+ "h1": "Spanish verb ver: practice",
+ "intro": "Ver means «to see» and also «to watch» a show or a game. The yo form is veo and the preterite has no accents (vi, vio). Learn its forms, the difference with mirar and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb ver",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To see",
+   "example": "No veo bien sin lentes.",
+   "meaning": "I can't see well without glasses."
+  },
+  {
+   "use": "To watch TV, movies, games",
+   "example": "Vemos una serie todas las noches.",
+   "meaning": "We watch a series every night."
+  },
+  {
+   "use": "To visit or meet someone",
+   "example": "Voy a ver a mi abuela el domingo.",
+   "meaning": "I'm going to see my grandma on Sunday."
+  },
+  {
+   "use": "Expressions: a ver, nos vemos",
+   "example": "¡Nos vemos mañana!",
+   "meaning": "See you tomorrow!"
+  },
+  {
+   "use": "Ver vs mirar",
+   "example": "Miro por la ventana, pero no veo nada.",
+   "meaning": "I look out the window, but I don't see anything."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "veo"
+  ],
+  [
+   "tú",
+   "ves"
+  ],
+  [
+   "él / ella / usted",
+   "ve"
+  ],
+  [
+   "nosotros / nosotras",
+   "vemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "ven"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "vi"
+  ],
+  [
+   "tú",
+   "viste"
+  ],
+  [
+   "él / ella / usted",
+   "vio"
+  ],
+  [
+   "nosotros / nosotras",
+   "vimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "vieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " la tele después de cenar.",
+   "options": [
+    "veo",
+    "vo",
+    "ve"
+   ],
+   "answer": 0,
+   "why": "Ver with yo: veo."
+  },
+  {
+   "before": "¿",
+   "after": " ese pájaro en el árbol?",
+   "options": [
+    "Ves",
+    "Vees",
+    "Ve tú"
+   ],
+   "answer": 0,
+   "why": "Tú: ves."
+  },
+  {
+   "before": "Mi papá ",
+   "after": " todos los partidos de los Dodgers.",
+   "options": [
+    "ve",
+    "vee",
+    "ves"
+   ],
+   "answer": 0,
+   "why": "Él: ve."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " a nuestros primos en verano.",
+   "options": [
+    "vemos",
+    "veemos",
+    "ven"
+   ],
+   "answer": 0,
+   "why": "Nosotros: vemos."
+  },
+  {
+   "before": "¡Adiós! Nos ",
+   "after": " el lunes.",
+   "options": [
+    "vemos",
+    "veamos",
+    "miramos"
+   ],
+   "answer": 0,
+   "why": "The set phrase is nos vemos."
+  },
+  {
+   "before": "",
+   "after": " la pizarra, por favor: ahí está la respuesta.",
+   "options": [
+    "Miren",
+    "Vean a",
+    "Ven la"
+   ],
+   "answer": 0,
+   "why": "Paying attention on purpose: mirar."
+  },
+  {
+   "before": "Ayer ",
+   "after": " una película de terror.",
+   "options": [
+    "vi",
+    "ví",
+    "veí"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: vi, no accent."
+  },
+  {
+   "before": "¿",
+   "after": " el partido anoche?",
+   "options": [
+    "Viste",
+    "Vistes",
+    "Veíste"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: viste."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " a su mejor amiga en el centro comercial.",
+   "options": [
+    "vio",
+    "vió",
+    "veyó"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: vio, no accent."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " las fotos del viaje.",
+   "options": [
+    "vieron",
+    "veyeron",
+    "vimos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: vieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "Noche de cine en casa",
+  "paragraphs": [
+   "Los viernes en mi casa vemos una película todos juntos. Cada semana elige una persona distinta. Mi hermano siempre quiere ver películas de superhéroes, mi mamá prefiere las comedias y mi papá ve cualquier cosa, pero se duerme a los veinte minutos.",
+   "El viernes pasado me tocó a mí. Propuse una película mexicana que vi en clase de español, «Coco». Mi hermano dijo que era para niños, pero al final lo vimos llorar. Mi papá no se durmió y dijo: «A ver cuándo vemos otra así»."
+  ],
+  "comprehension": [
+   {
+    "before": "La familia ve películas los ",
+    "after": ".",
+    "options": [
+     "viernes",
+     "sábados",
+     "domingos"
+    ],
+    "answer": 0,
+    "why": "On Fridays."
+   },
+   {
+    "before": "La mamá prefiere ",
+    "after": ".",
+    "options": [
+     "las comedias",
+     "los superhéroes",
+     "las de terror"
+    ],
+    "answer": 0,
+    "why": "She prefers comedies."
+   },
+   {
+    "before": "El papá normalmente ",
+    "after": ".",
+    "options": [
+     "se duerme",
+     "elige la película",
+     "no ve películas"
+    ],
+    "answer": 0,
+    "why": "He falls asleep after twenty minutes."
+   },
+   {
+    "before": "El viernes pasado, el hermano ",
+    "after": ".",
+    "options": [
+     "lloró",
+     "se durmió",
+     "eligió la película"
+    ],
+    "answer": 0,
+    "why": "They saw him cry at the end."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo vo la tele.",
+   "right": "Yo veo la tele.",
+   "why": "The yo form of ver is veo."
+  },
+  {
+   "wrong": "Ayer ví una película.",
+   "right": "Ayer vi una película.",
+   "why": "Vi and vio have no accent."
+  },
+  {
+   "wrong": "Veo a la televisión.",
+   "right": "Veo la televisión.",
+   "why": "Personal a is only for people: veo a mi abuela, veo la tele."
+  }
+ ],
+ "heritage": "Heritage speakers often write «ví» and «vió» with accents, a spelling that the RAE removed. Also watch b and v: ver, veo and vimos are always with v. Write about the last movie or series your family watched together, using vi, vimos and vieron.",
+ "teacher": "Teachers: the reading opens a quick conversation about family movie nights and Latino films like Coco. Students survey classmates with «¿Qué película viste el fin de semana?» and report with vio. It also practises ver versus mirar.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb ver». 1 of them asks for conjugation, charts or tenses (conjugation). Ver is short and very irregular, so the page puts its forms next to real sentences.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

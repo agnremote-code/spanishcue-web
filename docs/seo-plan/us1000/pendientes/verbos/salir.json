@@ -1,0 +1,273 @@
+{
+ "verb": "salir",
+ "meaning": "to leave, to go out",
+ "level": "A2",
+ "title": "Spanish Verb Salir Practice: Forms, Salir de and Quiz with Answers",
+ "description": "Practice the Spanish verb salir: salgo, the preterite salió, salir de and salir con, ten questions that correct themselves and a short reading. Free.",
+ "h1": "Spanish verb salir: practice",
+ "intro": "Salir means «to leave» or «to go out». The yo form is salgo, and the preposition matters: salir de (leave a place), salir con (go out with). Learn the forms and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb salir",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To leave a place: salir de",
+   "example": "Salgo de casa a las siete.",
+   "meaning": "I leave home at seven."
+  },
+  {
+   "use": "To go out (socially)",
+   "example": "Los viernes salimos con amigos.",
+   "meaning": "On Fridays we go out with friends."
+  },
+  {
+   "use": "To date: salir con",
+   "example": "Mi hermana sale con un chico de Texas.",
+   "meaning": "My sister is dating a guy from Texas."
+  },
+  {
+   "use": "To turn out: salir bien / mal",
+   "example": "El examen me salió muy bien.",
+   "meaning": "The test went very well for me."
+  },
+  {
+   "use": "Departures",
+   "example": "El tren sale a las nueve.",
+   "meaning": "The train leaves at nine."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "salgo"
+  ],
+  [
+   "tú",
+   "sales"
+  ],
+  [
+   "él / ella / usted",
+   "sale"
+  ],
+  [
+   "nosotros / nosotras",
+   "salimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "salen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "salí"
+  ],
+  [
+   "tú",
+   "saliste"
+  ],
+  [
+   "él / ella / usted",
+   "salió"
+  ],
+  [
+   "nosotros / nosotras",
+   "salimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "salieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " de casa a las siete y media.",
+   "options": [
+    "salgo",
+    "salo",
+    "sale"
+   ],
+   "answer": 0,
+   "why": "Salir with yo: salgo."
+  },
+  {
+   "before": "¿A qué hora ",
+   "after": " tú del trabajo?",
+   "options": [
+    "sales",
+    "salis",
+    "sale"
+   ],
+   "answer": 0,
+   "why": "Tú: sales."
+  },
+  {
+   "before": "El autobús ",
+   "after": " cada quince minutos.",
+   "options": [
+    "sale",
+    "sales",
+    "salen"
+   ],
+   "answer": 0,
+   "why": "Departures: sale."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " a cenar los sábados.",
+   "options": [
+    "salimos",
+    "salemos",
+    "salen"
+   ],
+   "answer": 0,
+   "why": "Nosotros: salimos."
+  },
+  {
+   "before": "Mi hermano ",
+   "after": " con una chica de su clase.",
+   "options": [
+    "sale",
+    "sale a",
+    "se sale"
+   ],
+   "answer": 0,
+   "why": "Dating: salir con."
+  },
+  {
+   "before": "Salgo ",
+   "after": " la escuela a las tres.",
+   "options": [
+    "de",
+    "a",
+    "en"
+   ],
+   "answer": 0,
+   "why": "Leaving a place: salir de."
+  },
+  {
+   "before": "¿Cómo te ",
+   "after": " el examen?",
+   "options": [
+    "salió",
+    "salía",
+    "sales"
+   ],
+   "answer": 0,
+   "why": "How it turned out: salió."
+  },
+  {
+   "before": "Ayer mis padres ",
+   "after": " tarde del cine.",
+   "options": [
+    "salieron",
+    "salió",
+    "salen"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: salieron."
+  },
+  {
+   "before": "La película ",
+   "after": " en 2024.",
+   "options": [
+    "salió",
+    "salía",
+    "sale de"
+   ],
+   "answer": 0,
+   "why": "A release date: salió."
+  },
+  {
+   "before": "¿Por qué ",
+   "after": " tú tan temprano de la fiesta?",
+   "options": [
+    "saliste",
+    "salistes",
+    "salió"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: saliste."
+  }
+ ],
+ "reading": {
+  "titleEs": "La primera vez que salió sola",
+  "paragraphs": [
+   "Cuando Mía cumplió quince años, sus padres por fin la dejaron salir sola con sus amigas. El sábado salieron de casa a las cuatro y tomaron el tren al centro de Chicago. El tren salió con retraso, pero nadie se preocupó.",
+   "Fueron a un concierto gratis en el parque y después a comer pizza. A las nueve, Mía recibió un mensaje de su papá: «¿A qué hora sales?». Ella respondió: «Salgo ahora». Todo salió perfecto, y la próxima vez sus padres le van a dar una hora más."
+  ],
+  "comprehension": [
+   {
+    "before": "Mía salió sola por primera vez a los ",
+    "after": " años.",
+    "options": [
+     "quince",
+     "dieciséis",
+     "trece"
+    ],
+    "answer": 0,
+    "why": "When she turned fifteen."
+   },
+   {
+    "before": "Las amigas tomaron el tren a ",
+    "after": ".",
+    "options": [
+     "el centro de Chicago",
+     "un parque fuera de la ciudad",
+     "la casa de una amiga"
+    ],
+    "answer": 0,
+    "why": "Downtown Chicago."
+   },
+   {
+    "before": "Después del concierto fueron a comer ",
+    "after": ".",
+    "options": [
+     "pizza",
+     "tacos",
+     "hamburguesas"
+    ],
+    "answer": 0,
+    "why": "Pizza."
+   },
+   {
+    "before": "La próxima vez los padres le van a dar ",
+    "after": ".",
+    "options": [
+     "una hora más",
+     "dinero",
+     "un teléfono nuevo"
+    ],
+    "answer": 0,
+    "why": "One more hour."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo salo.",
+   "right": "Yo salgo.",
+   "why": "The yo form of salir has g: salgo."
+  },
+  {
+   "wrong": "Salgo la casa.",
+   "right": "Salgo de la casa.",
+   "why": "Leaving a place needs de."
+  },
+  {
+   "wrong": "Mi hermana sale a un chico.",
+   "right": "Mi hermana sale con un chico.",
+   "why": "Dating uses salir con."
+  }
+ ],
+ "heritage": "Heritage speakers usually say salgo naturally, but write «salistes» for saliste and «salimos» without noticing it is the same in present and preterite. Check the accent on salió. Write about the first time you were allowed to go out alone, using salir de and salir con.",
+ "teacher": "Teachers: the reading touches a topic teenagers care about, independence. After reading, students negotiate rules for going out in a role play between a parent and a teen, using salir, salgo and salir con.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb salir». 2 of them ask for conjugation, charts or tenses (conjugation, present tense). The page centers on the uses that change with a preposition: salir de and salir con.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

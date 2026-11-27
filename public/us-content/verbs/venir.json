@@ -1,0 +1,273 @@
+{
+ "verb": "venir",
+ "meaning": "to come",
+ "level": "A2",
+ "title": "Spanish Verb Venir Practice: Forms, Venir vs Ir and Quiz",
+ "description": "Practice the Spanish verb venir: vengo, vienes, the preterite vine, venir vs ir, ten questions that correct themselves and a short reading. Free, no login.",
+ "h1": "Spanish verb venir: practice",
+ "intro": "Venir means «to come»: movement toward where the speaker is. It is irregular (vengo, vienes, vine). Learn its forms, when to use venir or ir and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb venir",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Coming here",
+   "example": "¿Vienes a mi casa esta tarde?",
+   "meaning": "Are you coming to my house this afternoon?"
+  },
+  {
+   "use": "Origin: venir de",
+   "example": "Mis abuelos vienen de Cuba.",
+   "meaning": "My grandparents come from Cuba."
+  },
+  {
+   "use": "How you come: venir en / a pie",
+   "example": "Vengo a la escuela a pie.",
+   "meaning": "I come to school on foot."
+  },
+  {
+   "use": "Next: que viene",
+   "example": "La semana que viene tenemos examen.",
+   "meaning": "Next week we have a test."
+  },
+  {
+   "use": "Venir vs ir",
+   "example": "Ven aquí. / Voy para allá.",
+   "meaning": "Come here. / I'm going over there."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "vengo"
+  ],
+  [
+   "tú",
+   "vienes"
+  ],
+  [
+   "él / ella / usted",
+   "viene"
+  ],
+  [
+   "nosotros / nosotras",
+   "venimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "vienen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "vine"
+  ],
+  [
+   "tú",
+   "viniste"
+  ],
+  [
+   "él / ella / usted",
+   "vino"
+  ],
+  [
+   "nosotros / nosotras",
+   "vinimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "vinieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " a clase en autobús.",
+   "options": [
+    "vengo",
+    "vieno",
+    "viene"
+   ],
+   "answer": 0,
+   "why": "Venir with yo: vengo."
+  },
+  {
+   "before": "¿",
+   "after": " tú a la fiesta el sábado?",
+   "options": [
+    "Vienes",
+    "Venes",
+    "Viene"
+   ],
+   "answer": 0,
+   "why": "Tú: vienes."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " de una familia muy grande.",
+   "options": [
+    "venimos",
+    "vienemos",
+    "vienen"
+   ],
+   "answer": 0,
+   "why": "Nosotros: venimos."
+  },
+  {
+   "before": "Mis primos ",
+   "after": " a visitarnos en Navidad.",
+   "options": [
+    "vienen",
+    "venimos",
+    "viene"
+   ],
+   "answer": 0,
+   "why": "Ellos: vienen."
+  },
+  {
+   "before": "Estoy en casa. ¿Por qué no ",
+   "after": " tú aquí?",
+   "options": [
+    "vienes",
+    "vas",
+    "va"
+   ],
+   "answer": 0,
+   "why": "Toward the speaker: venir."
+  },
+  {
+   "before": "Estoy en casa. Mañana ",
+   "after": " a tu casa.",
+   "options": [
+    "voy",
+    "vengo",
+    "vienes"
+   ],
+   "answer": 0,
+   "why": "Away from where I am now: ir."
+  },
+  {
+   "before": "El año que ",
+   "after": " voy a estudiar en la universidad.",
+   "options": [
+    "viene",
+    "va",
+    "vino"
+   ],
+   "answer": 0,
+   "why": "El año que viene: next year."
+  },
+  {
+   "before": "Ayer mi tía ",
+   "after": " a cenar.",
+   "options": [
+    "vino",
+    "venió",
+    "vinó"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: vino."
+  },
+  {
+   "before": "¿Por qué no ",
+   "after": " tú a clase el viernes?",
+   "options": [
+    "viniste",
+    "veniste",
+    "vinistes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: viniste."
+  },
+  {
+   "before": "Mis amigos ",
+   "after": " a mi cumpleaños.",
+   "options": [
+    "vinieron",
+    "venieron",
+    "vinimos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: vinieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "Llegar a Miami",
+  "paragraphs": [
+   "Andrea vino a Miami desde Caracas cuando tenía nueve años. Vino con su mamá y su hermano en un vuelo de noche. Su papá ya vivía aquí y los esperaba en el aeropuerto con un cartel que decía: «Bienvenidos a casa».",
+   "Hoy Andrea tiene veinte años y estudia en la universidad. Muchos de sus compañeros vienen de otros países: de Colombia, de Nicaragua, de Haití. Cada diciembre, sus abuelos vienen de Venezuela a pasar las fiestas. «Este año que viene», dice Andrea, «quiero ir yo a visitarlos a ellos»."
+  ],
+  "comprehension": [
+   {
+    "before": "Andrea vino a Miami desde ",
+    "after": ".",
+    "options": [
+     "Caracas",
+     "Bogotá",
+     "Managua"
+    ],
+    "answer": 0,
+    "why": "From Caracas."
+   },
+   {
+    "before": "Cuando llegó, Andrea tenía ",
+    "after": " años.",
+    "options": [
+     "nueve",
+     "veinte",
+     "doce"
+    ],
+    "answer": 0,
+    "why": "She was nine."
+   },
+   {
+    "before": "En el aeropuerto los esperaba ",
+    "after": ".",
+    "options": [
+     "su papá",
+     "sus abuelos",
+     "su hermano"
+    ],
+    "answer": 0,
+    "why": "Her father, with a sign."
+   },
+   {
+    "before": "El año que viene Andrea quiere ",
+    "after": ".",
+    "options": [
+     "visitar a sus abuelos",
+     "volver a vivir a Caracas",
+     "estudiar en otro país"
+    ],
+    "answer": 0,
+    "why": "She wants to visit her grandparents."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo vieno.",
+   "right": "Yo vengo.",
+   "why": "The yo form of venir is vengo."
+  },
+  {
+   "wrong": "Él venió.",
+   "right": "Él vino.",
+   "why": "The preterite of venir uses the stem vin-."
+  },
+  {
+   "wrong": "¿Puedo venir a tu casa? (when you are already there)",
+   "right": "¿Puedo ir a tu casa?",
+   "why": "Spanish uses venir only for movement toward where the speaker is."
+  }
+ ],
+ "heritage": "Heritage speakers often say «vinistes» and «venimos» for the past. In writing, the tú preterite is viniste, and the nosotros preterite is vinimos (with i); venimos is the present. Write the story of how someone in your family came to the United States, using vino, vinieron and vinimos.",
+ "teacher": "Teachers: the reading tells an immigration story many students will recognise. Use it for a respectful family-history activity: students interview a relative about where they come from and write a paragraph with venir de. Then contrast venir and ir with the last line of the text.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish verb venir». 3 of them ask for conjugation, charts or tenses (conjugation, present tense, conjugation chart). Venir is irregular in both tenses, so the page shows them together and practices venir against ir.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

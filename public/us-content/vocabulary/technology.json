@@ -1,0 +1,388 @@
+{
+ "level": "A2",
+ "theme": "technology",
+ "themeLabel": "Technology",
+ "title": "Spanish Technology Vocabulary: Devices, Internet and Quiz",
+ "description": "Spanish technology vocabulary: devices, the internet and social media words, with a practice quiz that corrects itself and an A2 reading. Free, no login.",
+ "h1": "Spanish technology vocabulary",
+ "titleEs": "Una semana sin teléfono",
+ "focus": "reflexive and daily-life verbs, technology words, the preterite",
+ "intro": "Learn the Spanish words for devices, the internet and social media, practice with instant feedback, then read how a class in Santo Domingo spends a week without phones.",
+ "paragraphs": [
+  "En febrero, el profesor de ciencias sociales de Valeria propuso un reto a su clase en Santo Domingo, República Dominicana: pasar una semana sin teléfono. Los estudiantes podían usar la computadora para las tareas, pero no podían usar redes sociales ni mensajes. Veintidós de los veintiocho estudiantes aceptaron.",
+  "El lunes fue el día más difícil. Valeria se despertó tarde porque usaba el teléfono como despertador. En el autobús no sabía qué hacer con las manos, así que miró por la ventana y descubrió una panadería nueva en su calle. Su amigo Joel dijo que sentía el teléfono vibrar en el bolsillo, aunque estaba en casa.",
+  "El miércoles las cosas cambiaron. Valeria compró un despertador viejo en el mercado y empezó a leer una novela antes de dormir. Joel jugó al dominó con su abuelo por primera vez en años. Otra compañera, Patricia, escribió cartas a mano a sus primas en Nueva York.",
+  "El viernes, en clase, hablaron de la experiencia. Casi todos dijeron que durmieron mejor y que hablaron más con su familia. Pero también hubo problemas: dos estudiantes no supieron dónde era una fiesta, y Joel se perdió porque no tenía mapa. Al final, el profesor les preguntó si querían repetir el reto. La mayoría votó por un día sin teléfono cada semana, no una semana entera."
+ ],
+ "glossary": [
+  [
+   "el reto",
+   "the challenge"
+  ],
+  [
+   "las redes sociales",
+   "social media"
+  ],
+  [
+   "el despertador",
+   "alarm clock"
+  ],
+  [
+   "la panadería",
+   "bakery"
+  ],
+  [
+   "vibrar",
+   "to vibrate"
+  ],
+  [
+   "el bolsillo",
+   "pocket"
+  ],
+  [
+   "a mano",
+   "by hand"
+  ],
+  [
+   "perderse",
+   "to get lost"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "El reto fue idea de ",
+   "after": ".",
+   "options": [
+    "el profesor de ciencias sociales",
+    "Valeria",
+    "los padres"
+   ],
+   "answer": 0,
+   "why": "The social studies teacher proposed it."
+  },
+  {
+   "before": "Durante el reto los estudiantes podían usar ",
+   "after": ".",
+   "options": [
+    "la computadora para las tareas",
+    "las redes sociales",
+    "los mensajes"
+   ],
+   "answer": 0,
+   "why": "Computers for homework only."
+  },
+  {
+   "before": "Aceptaron el reto ",
+   "after": " estudiantes.",
+   "options": [
+    "veintidós",
+    "veintiocho",
+    "seis"
+   ],
+   "answer": 0,
+   "why": "Twenty-two of twenty-eight."
+  },
+  {
+   "before": "El lunes Valeria se despertó tarde porque ",
+   "after": ".",
+   "options": [
+    "usaba el teléfono como despertador",
+    "estaba enferma",
+    "leyó toda la noche"
+   ],
+   "answer": 0,
+   "why": "Her phone was her alarm clock."
+  },
+  {
+   "before": "En el autobús Valeria descubrió ",
+   "after": ".",
+   "options": [
+    "una panadería nueva",
+    "a un amigo",
+    "un mercado"
+   ],
+   "answer": 0,
+   "why": "A new bakery on her street."
+  },
+  {
+   "before": "Joel jugó al dominó con ",
+   "after": ".",
+   "options": [
+    "su abuelo",
+    "Valeria",
+    "sus primos"
+   ],
+   "answer": 0,
+   "why": "With his grandfather, for the first time in years."
+  },
+  {
+   "before": "Patricia escribió cartas a ",
+   "after": ".",
+   "options": [
+    "sus primas en Nueva York",
+    "su profesor",
+    "Joel"
+   ],
+   "answer": 0,
+   "why": "To her cousins in New York."
+  },
+  {
+   "before": "La mayoría votó por ",
+   "after": ".",
+   "options": [
+    "un día sin teléfono cada semana",
+    "otra semana entera",
+    "no repetir el reto"
+   ],
+   "answer": 0,
+   "why": "One phone-free day a week."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: preterite of irregular verbs",
+  "intro": "Some common verbs change their stem in the preterite: hacer → hizo, poder → pudo, saber → supo, decir → dijo.",
+  "items": [
+   {
+    "before": "Dos estudiantes no ",
+    "after": " dónde era la fiesta.",
+    "options": [
+     "supieron",
+     "sabieron"
+    ],
+    "answer": 0,
+    "why": "Saber → supieron."
+   },
+   {
+    "before": "Joel ",
+    "after": " que sentía el teléfono vibrar.",
+    "options": [
+     "dijo",
+     "decía"
+    ],
+    "answer": 0,
+    "why": "A single statement: dijo."
+   },
+   {
+    "before": "El profesor ",
+    "after": " un reto a la clase.",
+    "options": [
+     "propuso",
+     "proponió"
+    ],
+    "answer": 0,
+    "why": "Proponer follows poner: propuso."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuántas horas al día usas el teléfono?",
+  "¿Podrías pasar una semana sin teléfono? ¿Qué sería lo más difícil?",
+  "¿Qué hace tu familia cuando no usa la tecnología?"
+ ],
+ "heritage": "Technology Spanish mixes in many English words: el celular, el chat, postear, textear. Heritage speakers often use them at home, and that is normal. For school writing, learn the standard alternatives: «enviar un mensaje», «publicar», «la contraseña». Also check «teléfono», «computadora» and «aplicación», three words that are often written without their accents or with a «ph».",
+ "teacher": "Teachers: this reading starts a lively class debate about phones. Students can list the advantages and problems the text mentions in a T-chart, then vote, like Valeria's class, on a phone-free day. The irregular preterites in the text (propuso, supieron, hubo) are worth reviewing afterwards.",
+ "vocabulary": [
+  {
+   "title": "Devices",
+   "words": [
+    [
+     "el teléfono celular / el móvil",
+     "cell phone"
+    ],
+    [
+     "la computadora / el ordenador",
+     "computer"
+    ],
+    [
+     "la computadora portátil",
+     "laptop"
+    ],
+    [
+     "la tableta",
+     "tablet"
+    ],
+    [
+     "la pantalla",
+     "screen"
+    ],
+    [
+     "el teclado",
+     "keyboard"
+    ],
+    [
+     "el ratón",
+     "mouse"
+    ],
+    [
+     "los audífonos / los auriculares",
+     "headphones"
+    ],
+    [
+     "el cargador",
+     "charger"
+    ]
+   ]
+  },
+  {
+   "title": "Internet",
+   "words": [
+    [
+     "la red / internet",
+     "the internet"
+    ],
+    [
+     "la contraseña",
+     "password"
+    ],
+    [
+     "el correo electrónico",
+     "email"
+    ],
+    [
+     "la página web",
+     "website"
+    ],
+    [
+     "descargar",
+     "to download"
+    ],
+    [
+     "subir",
+     "to upload"
+    ],
+    [
+     "buscar",
+     "to search"
+    ]
+   ]
+  },
+  {
+   "title": "Social media",
+   "words": [
+    [
+     "las redes sociales",
+     "social media"
+    ],
+    [
+     "el mensaje",
+     "message"
+    ],
+    [
+     "publicar",
+     "to post"
+    ],
+    [
+     "el seguidor / la seguidora",
+     "follower"
+    ],
+    [
+     "compartir",
+     "to share"
+    ],
+    [
+     "la aplicación",
+     "app"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi teléfono no tiene batería: necesito el ",
+   "after": ".",
+   "options": [
+    "cargador",
+    "teclado",
+    "ratón"
+   ],
+   "answer": 0,
+   "why": "No battery: charger."
+  },
+  {
+   "before": "Escribo en la computadora con el ",
+   "after": ".",
+   "options": [
+    "teclado",
+    "cargador",
+    "seguidor"
+   ],
+   "answer": 0,
+   "why": "Typing: keyboard."
+  },
+  {
+   "before": "Para entrar en mi cuenta necesito la ",
+   "after": ".",
+   "options": [
+    "contraseña",
+    "pantalla",
+    "tableta"
+   ],
+   "answer": 0,
+   "why": "Logging in: password."
+  },
+  {
+   "before": "Escucho música en el autobús con ",
+   "after": ".",
+   "options": [
+    "audífonos",
+    "un teclado",
+    "una contraseña"
+   ],
+   "answer": 0,
+   "why": "Music on the bus: headphones."
+  },
+  {
+   "before": "Voy a ",
+   "after": " una foto de la playa en mis redes.",
+   "options": [
+    "publicar",
+    "descargar",
+    "buscar"
+   ],
+   "answer": 0,
+   "why": "Putting a photo online: publicar."
+  },
+  {
+   "before": "La cantante tiene un millón de ",
+   "after": " en sus redes sociales.",
+   "options": [
+    "seguidores",
+    "cargadores",
+    "teclados"
+   ],
+   "answer": 0,
+   "why": "Followers: seguidores."
+  },
+  {
+   "before": "Esta ",
+   "after": " sirve para aprender idiomas en el teléfono.",
+   "options": [
+    "aplicación",
+    "pantalla",
+    "red"
+   ],
+   "answer": 0,
+   "why": "App: aplicación."
+  },
+  {
+   "before": "Te envío el documento por ",
+   "after": ".",
+   "options": [
+    "correo electrónico",
+    "audífonos",
+    "ratón"
+   ],
+   "answer": 0,
+   "why": "Sending a document: email."
+  }
+ ],
+ "demand": {
+  "query": "spanish technology vocab quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish technology vocabulary». 1 of them asks for something to do with the words (quizlet), not only a list. Technology terms change fast, so the list keeps the words that schools and textbooks use most.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,392 @@
+{
+ "level": "A2",
+ "theme": "music",
+ "themeLabel": "Music",
+ "title": "Spanish Music Vocabulary: Instruments, Styles and Quiz",
+ "description": "Spanish music vocabulary: instruments, Latin music styles and music words, with a practice quiz that corrects itself and an A2 mariachi story. No login.",
+ "h1": "Spanish music vocabulary",
+ "titleEs": "La banda de la escuela",
+ "focus": "comparisons, music words, the preterite of ser and ir",
+ "intro": "Learn the Spanish words for instruments, Latin music styles and making music, practice with instant feedback, then read about a teenager who joins his school mariachi in San Antonio.",
+ "paragraphs": [
+  "Isaac tiene quince años y vive en San Antonio, Texas. Desde pequeño escuchaba a su abuelo cantar rancheras los domingos, pero él prefería el rap y el reguetón. En septiembre, su escuela abrió un mariachi para estudiantes y su mejor amigo, Gael, lo convenció para ir a la primera clase.",
+  "La profesora, la señora Treviño, les explicó que un mariachi tiene violines, trompetas, guitarras y dos instrumentos especiales: la vihuela, que es más pequeña que una guitarra, y el guitarrón, que es mucho más grande. Isaac eligió la vihuela porque es más fácil de llevar en el autobús. Gael eligió la trompeta, que es más difícil de tocar, pero también más fuerte.",
+  "Durante tres meses ensayaron todos los martes y jueves después de clase. Al principio Isaac tocaba muy despacio y le dolían los dedos. Pero poco a poco aprendió las canciones, y en diciembre la profesora le pidió cantar «Cielito lindo» en el concierto de Navidad.",
+  "El día del concierto, Isaac llevaba el traje de charro negro de la escuela y estaba muy nervioso. En la primera fila estaba su abuelo. Cuando Isaac empezó a cantar, el abuelo cantó con él, y después todo el público. Fue el mejor momento del año. Ahora Isaac escucha rap y rancheras, y dice que las dos músicas cuentan historias."
+ ],
+ "glossary": [
+  [
+   "las rancheras",
+   "a traditional Mexican song style"
+  ],
+  [
+   "convencer",
+   "to convince"
+  ],
+  [
+   "la vihuela",
+   "a small five-string guitar used in mariachi"
+  ],
+  [
+   "el guitarrón",
+   "a large bass guitar used in mariachi"
+  ],
+  [
+   "ensayar",
+   "to rehearse"
+  ],
+  [
+   "los dedos",
+   "fingers"
+  ],
+  [
+   "el traje de charro",
+   "the traditional mariachi suit"
+  ],
+  [
+   "la fila",
+   "row"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "De pequeño, Isaac prefería ",
+   "after": ".",
+   "options": [
+    "el rap y el reguetón",
+    "las rancheras",
+    "la música clásica"
+   ],
+   "answer": 0,
+   "why": "His grandfather sang rancheras, but he preferred rap and reggaeton."
+  },
+  {
+   "before": "Isaac fue a la primera clase porque ",
+   "after": ".",
+   "options": [
+    "Gael lo convenció",
+    "su abuelo se lo pidió",
+    "era obligatoria"
+   ],
+   "answer": 0,
+   "why": "His best friend Gael convinced him."
+  },
+  {
+   "before": "La vihuela es ",
+   "after": " que una guitarra.",
+   "options": [
+    "más pequeña",
+    "más grande",
+    "igual de grande"
+   ],
+   "answer": 0,
+   "why": "«Más pequeña que una guitarra.»"
+  },
+  {
+   "before": "Isaac eligió la vihuela porque ",
+   "after": ".",
+   "options": [
+    "es fácil de llevar en el autobús",
+    "es más fuerte",
+    "su abuelo la tocaba"
+   ],
+   "answer": 0,
+   "why": "It is easy to carry on the bus."
+  },
+  {
+   "before": "Gael toca ",
+   "after": ".",
+   "options": [
+    "la trompeta",
+    "el violín",
+    "el guitarrón"
+   ],
+   "answer": 0,
+   "why": "He chose the trumpet."
+  },
+  {
+   "before": "Ensayaban ",
+   "after": ".",
+   "options": [
+    "los martes y jueves",
+    "todos los días",
+    "los domingos"
+   ],
+   "answer": 0,
+   "why": "Tuesdays and Thursdays after class."
+  },
+  {
+   "before": "En el concierto Isaac cantó ",
+   "after": ".",
+   "options": [
+    "«Cielito lindo»",
+    "un rap",
+    "una canción de Navidad en inglés"
+   ],
+   "answer": 0,
+   "why": "The teacher asked him to sing «Cielito lindo»."
+  },
+  {
+   "before": "Cuando Isaac empezó a cantar, ",
+   "after": ".",
+   "options": [
+    "su abuelo cantó con él",
+    "el público se fue",
+    "Gael tocó un solo"
+   ],
+   "answer": 0,
+   "why": "His grandfather sang along, then the whole audience."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: comparisons",
+  "intro": "Más + adjective + que, menos + adjective + que, tan + adjective + como.",
+  "items": [
+   {
+    "before": "El guitarrón es más grande ",
+    "after": " la vihuela.",
+    "options": [
+     "que",
+     "como"
+    ],
+    "answer": 0,
+    "why": "Más… que."
+   },
+   {
+    "before": "La trompeta es ",
+    "after": " difícil que la vihuela.",
+    "options": [
+     "más",
+     "tan"
+    ],
+    "answer": 0,
+    "why": "Más difícil que: a comparison of inequality."
+   },
+   {
+    "before": "Para Isaac, el rap es tan interesante ",
+    "after": " las rancheras.",
+    "options": [
+     "como",
+     "que"
+    ],
+    "answer": 0,
+    "why": "Tan… como."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué música escuchas? ¿Y qué música escuchan en tu familia?",
+  "¿Tocas un instrumento o te gustaría tocar uno?",
+  "Compara dos tipos de música con «más… que» y «tan… como»."
+ ],
+ "heritage": "Many heritage speakers grow up with rancheras, cumbia, salsa or bachata at home. Write about a song your family loves: who sings it, when you hear it and what it is about. Check the spelling of «canción» and «canciones» (the accent disappears in the plural), «violín» with an accent and «trompeta» with m before p.",
+ "teacher": "Teachers: play a short clip of «Cielito lindo» before or after the reading, and ask students to find the three instruments the text compares. The story is set in San Antonio, so it also shows Mexican American culture inside the United States. A good follow-up is a comparison paragraph about two music styles.",
+ "vocabulary": [
+  {
+   "title": "Instruments",
+   "words": [
+    [
+     "la guitarra",
+     "guitar"
+    ],
+    [
+     "el piano",
+     "piano"
+    ],
+    [
+     "el violín",
+     "violin"
+    ],
+    [
+     "la trompeta",
+     "trumpet"
+    ],
+    [
+     "la batería",
+     "drums"
+    ],
+    [
+     "la flauta",
+     "flute"
+    ],
+    [
+     "el bajo",
+     "bass"
+    ],
+    [
+     "las maracas",
+     "maracas"
+    ]
+   ]
+  },
+  {
+   "title": "Styles",
+   "words": [
+    [
+     "el reguetón",
+     "reggaeton"
+    ],
+    [
+     "la salsa",
+     "salsa"
+    ],
+    [
+     "la bachata",
+     "bachata"
+    ],
+    [
+     "la cumbia",
+     "cumbia"
+    ],
+    [
+     "el mariachi",
+     "mariachi"
+    ],
+    [
+     "el tango",
+     "tango"
+    ],
+    [
+     "el flamenco",
+     "flamenco"
+    ]
+   ]
+  },
+  {
+   "title": "Making music",
+   "words": [
+    [
+     "la canción",
+     "song"
+    ],
+    [
+     "la letra",
+     "lyrics"
+    ],
+    [
+     "el cantante / la cantante",
+     "singer"
+    ],
+    [
+     "la banda / el grupo",
+     "band"
+    ],
+    [
+     "el concierto",
+     "concert"
+    ],
+    [
+     "tocar (un instrumento)",
+     "to play (an instrument)"
+    ],
+    [
+     "cantar",
+     "to sing"
+    ],
+    [
+     "ensayar",
+     "to rehearse"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Bad Bunny canta ",
+   "after": ".",
+   "options": [
+    "reguetón",
+    "flamenco",
+    "tango"
+   ],
+   "answer": 0,
+   "why": "Bad Bunny is known for reggaeton and Latin trap."
+  },
+  {
+   "before": "El ",
+   "after": " nació en Buenos Aires y Montevideo.",
+   "options": [
+    "tango",
+    "mariachi",
+    "flamenco"
+   ],
+   "answer": 0,
+   "why": "Tango comes from the Río de la Plata."
+  },
+  {
+   "before": "El ",
+   "after": " es típico del sur de España.",
+   "options": [
+    "flamenco",
+    "reguetón",
+    "mariachi"
+   ],
+   "answer": 0,
+   "why": "Flamenco: Andalusia."
+  },
+  {
+   "before": "Me sé la ",
+   "after": " de la canción de memoria.",
+   "options": [
+    "letra",
+    "batería",
+    "flauta"
+   ],
+   "answer": 0,
+   "why": "Lyrics: letra."
+  },
+  {
+   "before": "Mi hermano ",
+   "after": " la batería en una banda.",
+   "options": [
+    "toca",
+    "juega",
+    "canta"
+   ],
+   "answer": 0,
+   "why": "Instruments take tocar, not jugar."
+  },
+  {
+   "before": "El sábado vamos a un ",
+   "after": " en el estadio.",
+   "options": [
+    "concierto",
+    "violín",
+    "ensayo de piano"
+   ],
+   "answer": 0,
+   "why": "A concert in a stadium."
+  },
+  {
+   "before": "El grupo ",
+   "after": " todos los martes antes del concierto.",
+   "options": [
+    "ensaya",
+    "concierto",
+    "cantante"
+   ],
+   "answer": 0,
+   "why": "They rehearse: ensayar."
+  },
+  {
+   "before": "En la salsa y la cumbia se usan mucho las ",
+   "after": ".",
+   "options": [
+    "maracas",
+    "raquetas",
+    "pantallas"
+   ],
+   "answer": 0,
+   "why": "Maracas are a classic Latin percussion instrument."
+  }
+ ],
+ "demand": {
+  "query": "spanish music vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish music vocabulary». Latin music is one of the suggestions, so the list includes the styles students hear on the radio.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

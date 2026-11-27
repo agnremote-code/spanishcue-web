@@ -1,0 +1,361 @@
+{
+ "level": "A1",
+ "theme": "friends",
+ "themeLabel": "Friends",
+ "title": "Spanish Words for Friends: Describing People, Quiz and Reading",
+ "description": "Spanish words for friends and describing people, with personality adjectives, a practice quiz that corrects itself and a short A1 reading. No login.",
+ "h1": "Spanish words for friends",
+ "titleEs": "Mi mejor amiga",
+ "focus": "ser with descriptive adjectives, likes and personality",
+ "intro": "Learn the Spanish words for friends and for describing what people look like and how they are, practice with instant feedback, then read Martina's description of her best friend.",
+ "paragraphs": [
+  "Me llamo Martina y tengo quince años. Mi mejor amiga se llama Lucía. Somos amigas desde el jardín de infantes, cuando teníamos cuatro años. Las dos vivimos en el mismo barrio de Montevideo y vamos al mismo liceo.",
+  "Lucía y yo somos muy diferentes. Ella es alta, tiene el pelo rizado y negro y los ojos verdes. Yo soy baja, con el pelo corto y castaño. Lucía es muy extrovertida: habla con todo el mundo y siempre tiene un plan. Yo soy más tímida y prefiero estar en casa con un libro.",
+  "Pero también tenemos cosas en común. Las dos somos fanáticas del básquetbol y jugamos en el equipo del liceo. Nos gusta la misma música y cantamos muy mal, pero muy fuerte. Cuando estoy triste, Lucía siempre me escucha y me hace reír. Cuando ella tiene un examen difícil, estudiamos juntas. Para mí, una buena amiga es una persona honesta y paciente, y Lucía es las dos cosas."
+ ],
+ "glossary": [
+  [
+   "el jardín de infantes",
+   "kindergarten"
+  ],
+  [
+   "el barrio",
+   "the neighborhood"
+  ],
+  [
+   "el liceo",
+   "high school (in Uruguay and Chile)"
+  ],
+  [
+   "rizado",
+   "curly"
+  ],
+  [
+   "castaño",
+   "brown (hair)"
+  ],
+  [
+   "tímido",
+   "shy"
+  ],
+  [
+   "en común",
+   "in common"
+  ],
+  [
+   "reír",
+   "to laugh"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Martina y Lucía son amigas desde ",
+   "after": ".",
+   "options": [
+    "los cuatro años",
+    "los quince años",
+    "el año pasado"
+   ],
+   "answer": 0,
+   "why": "Since kindergarten, when they were four."
+  },
+  {
+   "before": "Las dos chicas viven en ",
+   "after": ".",
+   "options": [
+    "Montevideo",
+    "Buenos Aires",
+    "Santiago"
+   ],
+   "answer": 0,
+   "why": "The same neighbourhood of Montevideo."
+  },
+  {
+   "before": "Lucía tiene los ojos ",
+   "after": ".",
+   "options": [
+    "verdes",
+    "negros",
+    "castaños"
+   ],
+   "answer": 0,
+   "why": "Black curly hair and green eyes."
+  },
+  {
+   "before": "Martina es una persona ",
+   "after": ".",
+   "options": [
+    "tímida",
+    "extrovertida",
+    "impaciente"
+   ],
+   "answer": 0,
+   "why": "«Yo soy más tímida.»"
+  },
+  {
+   "before": "Las dos juegan al ",
+   "after": ".",
+   "options": [
+    "básquetbol",
+    "fútbol",
+    "tenis"
+   ],
+   "answer": 0,
+   "why": "They play basketball for the school team."
+  },
+  {
+   "before": "Cuando Lucía tiene un examen difícil, ",
+   "after": ".",
+   "options": [
+    "estudian juntas",
+    "van al cine",
+    "juegan al básquetbol"
+   ],
+   "answer": 0,
+   "why": "«Estudiamos juntas.»"
+  }
+ ],
+ "grammar": {
+  "title": "Practice: ser and adjectives",
+  "intro": "Ser describes personality and appearance; the adjective agrees with the person.",
+  "items": [
+   {
+    "before": "Lucía ",
+    "after": " muy extrovertida.",
+    "options": [
+     "es",
+     "está"
+    ],
+    "answer": 0,
+    "why": "Personality: ser."
+   },
+   {
+    "before": "Martina es ",
+    "after": ".",
+    "options": [
+     "bajo",
+     "baja"
+    ],
+    "answer": 1,
+    "why": "Martina is female: baja."
+   },
+   {
+    "before": "Las dos chicas son ",
+    "after": " del básquetbol.",
+    "options": [
+     "fanáticas",
+     "fanático"
+    ],
+    "answer": 0,
+    "why": "Two girls: feminine plural, fanáticas."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cómo se llama tu mejor amigo o amiga? ¿Cómo es?",
+  "¿Qué cosas tienen en común ustedes?",
+  "Para ti, ¿cómo es un buen amigo?"
+ ],
+ "heritage": "If you speak Spanish at home, you can push this text further: describe a friend in eight sentences, using one physical description, two personality words and one thing you do together. Check the accents in «tímida», «fanáticas» and «básquetbol», and remember that «amiga» and «amigo» change, but «estudiante», «paciente» and «inteligente» do not.",
+ "teacher": "Teachers: this is a natural reading for a «describing people» unit. Students can fill a Venn diagram with what is different and what is the same about Martina and Lucía. Then they describe a famous person with ser and three adjectives while the class guesses who it is.",
+ "vocabulary": [
+  {
+   "title": "Friends",
+   "words": [
+    [
+     "el amigo / la amiga",
+     "friend"
+    ],
+    [
+     "el mejor amigo / la mejor amiga",
+     "best friend"
+    ],
+    [
+     "el compañero / la compañera",
+     "classmate, teammate"
+    ],
+    [
+     "el novio / la novia",
+     "boyfriend / girlfriend"
+    ],
+    [
+     "el vecino / la vecina",
+     "neighbor"
+    ],
+    [
+     "conocer a alguien",
+     "to meet someone"
+    ]
+   ]
+  },
+  {
+   "title": "Appearance",
+   "words": [
+    [
+     "alto / alta",
+     "tall"
+    ],
+    [
+     "bajo / baja",
+     "short"
+    ],
+    [
+     "el pelo rizado",
+     "curly hair"
+    ],
+    [
+     "el pelo liso",
+     "straight hair"
+    ],
+    [
+     "rubio / rubia",
+     "blond"
+    ],
+    [
+     "moreno / morena",
+     "dark-haired, dark-skinned"
+    ],
+    [
+     "los ojos verdes",
+     "green eyes"
+    ]
+   ]
+  },
+  {
+   "title": "Personality",
+   "words": [
+    [
+     "simpático / simpática",
+     "nice"
+    ],
+    [
+     "divertido / divertida",
+     "fun"
+    ],
+    [
+     "tímido / tímida",
+     "shy"
+    ],
+    [
+     "honesto / honesta",
+     "honest"
+    ],
+    [
+     "paciente",
+     "patient"
+    ],
+    [
+     "generoso / generosa",
+     "generous"
+    ],
+    [
+     "trabajador / trabajadora",
+     "hard-working"
+    ],
+    [
+     "perezoso / perezosa",
+     "lazy"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi amiga habla poco con personas nuevas: es ",
+   "after": ".",
+   "options": [
+    "tímida",
+    "divertida",
+    "alta"
+   ],
+   "answer": 0,
+   "why": "Quiet with new people: shy."
+  },
+  {
+   "before": "Pedro siempre comparte sus cosas: es muy ",
+   "after": ".",
+   "options": [
+    "generoso",
+    "perezoso",
+    "bajo"
+   ],
+   "answer": 0,
+   "why": "Sharing: generous."
+  },
+  {
+   "before": "Ana mide un metro ochenta: es ",
+   "after": ".",
+   "options": [
+    "alta",
+    "baja",
+    "rubia"
+   ],
+   "answer": 0,
+   "why": "1.80 m is tall."
+  },
+  {
+   "before": "Mi ",
+   "after": " vive en la casa de al lado.",
+   "options": [
+    "vecino",
+    "compañero de clase",
+    "novio"
+   ],
+   "answer": 0,
+   "why": "Next door: neighbour."
+  },
+  {
+   "before": "Luis no hace nada en casa: es ",
+   "after": ".",
+   "options": [
+    "perezoso",
+    "trabajador",
+    "honesto"
+   ],
+   "answer": 0,
+   "why": "Doing nothing: lazy."
+  },
+  {
+   "before": "Mi hermana tiene el pelo ",
+   "after": ", sin rizos.",
+   "options": [
+    "liso",
+    "rizado",
+    "verde"
+   ],
+   "answer": 0,
+   "why": "No curls: straight."
+  },
+  {
+   "before": "Nunca dice mentiras: es una persona ",
+   "after": ".",
+   "options": [
+    "honesta",
+    "tímida",
+    "morena"
+   ],
+   "answer": 0,
+   "why": "No lies: honest."
+  },
+  {
+   "before": "Ayer en la fiesta ",
+   "after": " a una chica de Colombia.",
+   "options": [
+    "conocí",
+    "conozco",
+    "conocer"
+   ],
+   "answer": 0,
+   "why": "Met for the first time, yesterday: conocí."
+  }
+ ],
+ "demand": {
+  "query": "family and friends spanish vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish friends vocabulary». Searchers pair friends with family, so this page focuses on describing the people close to you.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

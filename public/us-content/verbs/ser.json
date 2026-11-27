@@ -1,0 +1,273 @@
+{
+ "verb": "ser",
+ "meaning": "to be (identity, origin, time, characteristics)",
+ "level": "A1",
+ "title": "Spanish Verb Ser Practice: Forms, Uses and a Self-Correcting Quiz",
+ "description": "Practice the Spanish verb ser: present and preterite forms, when to use it, ten questions that correct themselves and a short reading. Free, no login.",
+ "h1": "Spanish verb ser: practice",
+ "intro": "Ser is the «to be» of identity: who someone is, where they are from, what something is like, what time it is. Learn its forms, see when to use it and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb ser practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Identity and profession",
+   "example": "Soy Ana y soy enfermera.",
+   "meaning": "I am Ana and I am a nurse."
+  },
+  {
+   "use": "Origin and nationality",
+   "example": "Mis abuelos son de Puerto Rico.",
+   "meaning": "My grandparents are from Puerto Rico."
+  },
+  {
+   "use": "Characteristics",
+   "example": "La clase es divertida, pero el examen es difícil.",
+   "meaning": "The class is fun, but the exam is hard."
+  },
+  {
+   "use": "Time and dates",
+   "example": "Son las tres y hoy es martes.",
+   "meaning": "It is three o'clock and today is Tuesday."
+  },
+  {
+   "use": "Where an event takes place",
+   "example": "La fiesta es en casa de Marta.",
+   "meaning": "The party is at Marta's house."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "soy"
+  ],
+  [
+   "tú",
+   "eres"
+  ],
+  [
+   "él / ella / usted",
+   "es"
+  ],
+  [
+   "nosotros / nosotras",
+   "somos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "son"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "fui"
+  ],
+  [
+   "tú",
+   "fuiste"
+  ],
+  [
+   "él / ella / usted",
+   "fue"
+  ],
+  [
+   "nosotros / nosotras",
+   "fuimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "fueron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " estudiante de español.",
+   "options": [
+    "soy",
+    "estoy",
+    "es"
+   ],
+   "answer": 0,
+   "why": "Identity with yo: soy."
+  },
+  {
+   "before": "¿De dónde ",
+   "after": " tú?",
+   "options": [
+    "eres",
+    "estás",
+    "es"
+   ],
+   "answer": 0,
+   "why": "Origin with tú: eres."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " de Chicago.",
+   "options": [
+    "somos",
+    "son",
+    "estamos"
+   ],
+   "answer": 0,
+   "why": "Origin with nosotros: somos."
+  },
+  {
+   "before": "Hoy ",
+   "after": " viernes.",
+   "options": [
+    "es",
+    "está",
+    "son"
+   ],
+   "answer": 0,
+   "why": "Days of the week take ser: es."
+  },
+  {
+   "before": "",
+   "after": " las ocho de la mañana.",
+   "options": [
+    "Son",
+    "Es",
+    "Están"
+   ],
+   "answer": 0,
+   "why": "Plural hours take son; only la una takes es."
+  },
+  {
+   "before": "",
+   "after": " la una y media.",
+   "options": [
+    "Es",
+    "Son",
+    "Está"
+   ],
+   "answer": 0,
+   "why": "One o'clock is singular: es la una."
+  },
+  {
+   "before": "El concierto ",
+   "after": " en el estadio.",
+   "options": [
+    "es",
+    "está",
+    "son"
+   ],
+   "answer": 0,
+   "why": "An event takes place: ser, even though it sounds like location."
+  },
+  {
+   "before": "Mis hermanas ",
+   "after": " muy altas.",
+   "options": [
+    "son",
+    "están",
+    "somos"
+   ],
+   "answer": 0,
+   "why": "A physical characteristic of ellas: son."
+  },
+  {
+   "before": "Ayer la reunión ",
+   "after": " muy larga.",
+   "options": [
+    "fue",
+    "era la",
+    "estuvo en"
+   ],
+   "answer": 0,
+   "why": "A finished event described as a whole: fue."
+  },
+  {
+   "before": "Mi papá ",
+   "after": " profesor durante treinta años.",
+   "options": [
+    "fue",
+    "estuvo",
+    "es"
+   ],
+   "answer": 0,
+   "why": "A completed period of his life: fue."
+  }
+ ],
+ "reading": {
+  "titleEs": "Una foto de familia",
+  "paragraphs": [
+   "Esta es una foto de mi familia. Es del año pasado y es mi foto favorita. El señor alto de la izquierda es mi abuelo Rafael. Es de Ponce, en Puerto Rico, y es muy gracioso. La señora de pelo blanco es mi abuela Nilda; es enfermera y es la persona más paciente del mundo.",
+   "Los chicos del centro somos mi hermano Luis y yo. Luis es mayor que yo y es muy buen estudiante. Yo soy más alta, pero él dice que es más simpático. La foto es de un domingo de diciembre: son las seis de la tarde y la fiesta es en el patio de mis abuelos."
+  ],
+  "comprehension": [
+   {
+    "before": "El abuelo Rafael es de ",
+    "after": ".",
+    "options": [
+     "Ponce",
+     "San Juan",
+     "Miami"
+    ],
+    "answer": 0,
+    "why": "«Es de Ponce, en Puerto Rico.»"
+   },
+   {
+    "before": "La abuela Nilda es ",
+    "after": ".",
+    "options": [
+     "enfermera",
+     "profesora",
+     "médica"
+    ],
+    "answer": 0,
+    "why": "«Es enfermera.»"
+   },
+   {
+    "before": "Luis es ",
+    "after": " que la narradora.",
+    "options": [
+     "mayor",
+     "más alto",
+     "más joven"
+    ],
+    "answer": 0,
+    "why": "«Luis es mayor que yo.»"
+   },
+   {
+    "before": "La fiesta es ",
+    "after": ".",
+    "options": [
+     "en el patio de los abuelos",
+     "en un restaurante",
+     "en la escuela"
+    ],
+    "answer": 0,
+    "why": "«La fiesta es en el patio de mis abuelos.»"
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo soy cansado.",
+   "right": "Yo estoy cansado.",
+   "why": "Tiredness is a state right now, so it takes estar."
+  },
+  {
+   "wrong": "Es a las ocho.",
+   "right": "Es a las ocho / Son las ocho.",
+   "why": "To say what time it is, use son las ocho; «es a las ocho» says when an event happens."
+  },
+  {
+   "wrong": "Soy 16 años.",
+   "right": "Tengo 16 años.",
+   "why": "Age in Spanish uses tener, not ser."
+  }
+ ],
+ "heritage": "Heritage speakers almost never mix up ser in speech, but writing the preterite can be tricky: fui, fue and fuimos have no accent, and «fuistes» with -s is a common spoken form that is wrong in writing (fuiste). Notice also that ser and ir share the same preterite: «fui al cine» (ir) and «fui feliz» (ser). Write three sentences with each.",
+ "teacher": "Teachers: use the reading as a model for a «mi foto de familia» presentation. Students bring or draw a photo and describe it with ser: who, from where, what they are like, what time and where the photo was taken. The contrast with estar is practised on the ser vs estar page linked below.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb ser». 4 of them ask for conjugation, charts or tenses (conjugation, chart, conjugation chart, present tense). 2 ask for practice (practice, quizlet). This page answers the practice part: the forms in a chart, five uses and ten questions that correct themselves.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

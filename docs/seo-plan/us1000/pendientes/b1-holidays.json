@@ -1,0 +1,195 @@
+{
+ "level": "B1",
+ "theme": "holidays",
+ "themeLabel": "Holidays",
+ "title": "Spanish Reading Comprehension B1: Día de Muertos (Text + Quiz)",
+ "description": "A B1 Spanish reading about a family building a Día de Muertos altar in Chicago, with self-correcting questions, a glossary and past-tense practice. Free.",
+ "h1": "Spanish reading comprehension B1: holidays",
+ "titleEs": "La ofrenda de la abuela Chela",
+ "focus": "the present perfect and the imperfect, Día de Muertos traditions",
+ "intro": "An intermediate text about holidays: Renata and her family in Chicago build their first Día de Muertos altar since her grandmother died.",
+ "paragraphs": [
+  "Renata tiene diecisiete años y vive en el barrio de Pilsen, en Chicago, donde muchas familias tienen raíces mexicanas. Este año su familia ha decidido poner una ofrenda de Día de Muertos por primera vez desde que murió su abuela Chela, hace ocho meses. Para Renata no es una fiesta triste, aunque al principio le parecía raro celebrar con alegría a alguien que ya no está.",
+  "Cuando era niña, pasaba los veranos con su abuela en Michoacán. Allí, a finales de octubre, toda la familia limpiaba las tumbas del cementerio y las decoraba con flores de cempasúchil, de un naranja muy intenso. La abuela decía que el olor de esas flores ayudaba a los muertos a encontrar el camino de vuelta a casa. Por la noche del uno de noviembre, la gente se quedaba en el cementerio con velas, comida y música hasta el amanecer.",
+  "En Chicago todo es un poco diferente. No hay cementerio cerca y en noviembre hace un frío terrible, así que la familia ha puesto la ofrenda en la sala. Tiene tres niveles cubiertos con papel picado morado y naranja. En el centro está la foto de la abuela Chela, rodeada de velas, pan de muerto, calaveritas de azúcar con los nombres de la familia y un vaso de agua, porque, según la tradición, los muertos llegan cansados y con sed después del viaje.",
+  "Lo más difícil fue elegir los objetos personales. Al final pusieron su rosario, su delantal de cocina y una taza de chocolate caliente, que tomaba todas las tardes. Renata ha añadido algo nuevo: una lista de canciones de Pedro Infante en su teléfono, porque su abuela las cantaba mientras cocinaba. «No sé si los muertos vuelven de verdad», dice Renata, «pero esta semana he hablado de mi abuela más que en todo el año, y eso ya es una forma de tenerla aquí»."
+ ],
+ "glossary": [
+  [
+   "las raíces",
+   "roots"
+  ],
+  [
+   "la ofrenda",
+   "Day of the Dead altar with offerings"
+  ],
+  [
+   "la tumba",
+   "grave"
+  ],
+  [
+   "el cempasúchil",
+   "Mexican marigold"
+  ],
+  [
+   "el amanecer",
+   "dawn"
+  ],
+  [
+   "el papel picado",
+   "cut tissue-paper banners"
+  ],
+  [
+   "la calaverita de azúcar",
+   "sugar skull"
+  ],
+  [
+   "el delantal",
+   "apron"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia de Renata vive en ",
+   "after": ".",
+   "options": [
+    "Pilsen, Chicago",
+    "Michoacán",
+    "Los Ángeles"
+   ],
+   "answer": 0,
+   "why": "The Pilsen neighbourhood of Chicago."
+  },
+  {
+   "before": "Es la primera ofrenda desde que ",
+   "after": ".",
+   "options": [
+    "murió la abuela Chela",
+    "llegaron a Chicago",
+    "Renata cumplió diecisiete años"
+   ],
+   "answer": 0,
+   "why": "Her grandmother died eight months ago."
+  },
+  {
+   "before": "Al principio a Renata le parecía raro ",
+   "after": ".",
+   "options": [
+    "celebrar con alegría a una persona muerta",
+    "poner flores",
+    "hablar de su abuela"
+   ],
+   "answer": 0,
+   "why": "Celebrating someone who is gone with joy felt strange."
+  },
+  {
+   "before": "Según la abuela, las flores de cempasúchil ",
+   "after": ".",
+   "options": [
+    "ayudan a los muertos a encontrar el camino",
+    "protegen de los malos espíritus",
+    "dan buena suerte"
+   ],
+   "answer": 0,
+   "why": "Their scent guides the dead home."
+  },
+  {
+   "before": "En Michoacán, la noche del uno de noviembre la gente ",
+   "after": ".",
+   "options": [
+    "se quedaba en el cementerio hasta el amanecer",
+    "cenaba en casa",
+    "iba a la iglesia"
+   ],
+   "answer": 0,
+   "why": "They stayed in the cemetery with candles, food and music."
+  },
+  {
+   "before": "En Chicago pusieron la ofrenda en la sala porque ",
+   "after": ".",
+   "options": [
+    "no hay cementerio cerca y hace frío",
+    "es más bonito",
+    "la abuela lo pidió"
+   ],
+   "answer": 0,
+   "why": "No cemetery nearby and terrible cold in November."
+  },
+  {
+   "before": "En la ofrenda hay un vaso de agua porque ",
+   "after": ".",
+   "options": [
+    "los muertos llegan con sed",
+    "es para las flores",
+    "es para los niños"
+   ],
+   "answer": 0,
+   "why": "Tradition says the dead arrive tired and thirsty."
+  },
+  {
+   "before": "Renata añadió ",
+   "after": ".",
+   "options": [
+    "canciones que su abuela cantaba",
+    "una foto de su abuelo",
+    "flores de plástico"
+   ],
+   "answer": 0,
+   "why": "A playlist of Pedro Infante songs."
+  },
+  {
+   "before": "Para Renata, la ofrenda sirve para ",
+   "after": ".",
+   "options": [
+    "hablar más de su abuela",
+    "pedir deseos",
+    "conocer a los vecinos"
+   ],
+   "answer": 0,
+   "why": "She has talked about her grandmother more than all year."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: present perfect or imperfect",
+  "intro": "The present perfect connects the past with now (este año, esta semana); the imperfect describes past habits (cuando era niña).",
+  "items": [
+   {
+    "before": "Este año la familia ",
+    "after": " poner una ofrenda.",
+    "options": [
+     "ha decidido",
+     "decidía"
+    ],
+    "answer": 0,
+    "why": "Este año: present perfect."
+   },
+   {
+    "before": "Cuando era niña, Renata ",
+    "after": " los veranos en Michoacán.",
+    "options": [
+     "pasaba",
+     "ha pasado"
+    ],
+    "answer": 0,
+    "why": "A past habit: imperfect."
+   },
+   {
+    "before": "Esta semana he ",
+    "after": " mucho de mi abuela.",
+    "options": [
+     "hablado",
+     "hablaba"
+    ],
+    "answer": 0,
+    "why": "He + past participle: hablado."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cómo recuerda tu familia a las personas que ya no están?",
+  "¿Qué objetos pondrías en una ofrenda para alguien importante para ti? ¿Por qué?",
+  "Compara el Día de Muertos con Halloween: ¿en qué se parecen y en qué son diferentes?"
+ ],
+ "heritage": "Many heritage speakers have lived this holiday at home. Write about your own family's way of remembering someone, in the past and now, using the imperfect and the present perfect. In writing, check the h in «ha decidido» and «he hablado» (never «a decidido»), the accent in «cempasúchil» and «amanecer» without h.",
+ "teacher": "Teachers: use this text in late October. It presents Día de Muertos through a Mexican American family in the United States, which avoids the «Mexican Halloween» confusion. After reading, students can plan an ofrenda for a historical or fictional figure and justify each object in Spanish."
+}

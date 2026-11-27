@@ -1,0 +1,273 @@
+{
+ "verb": "poner",
+ "meaning": "to put, to place; to turn on",
+ "level": "A2",
+ "title": "Spanish Verb Poner Practice: Forms, Ponerse and Self-Correcting Quiz",
+ "description": "Practice the Spanish verb poner: pongo, the preterite puse, ponerse, ten questions that correct themselves and a short reading. Free, no login.",
+ "h1": "Spanish verb poner: practice",
+ "intro": "Poner means «to put», but it also means to turn on a device, to set the table and, as ponerse, to put on clothes or to become. Learn its forms and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb poner",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To put, to place",
+   "example": "Pongo las llaves en la mesa.",
+   "meaning": "I put the keys on the table."
+  },
+  {
+   "use": "To turn on (TV, music)",
+   "example": "¿Pones música?",
+   "meaning": "Will you put on some music?"
+  },
+  {
+   "use": "To set the table: poner la mesa",
+   "example": "Mi hermano pone la mesa.",
+   "meaning": "My brother sets the table."
+  },
+  {
+   "use": "To put on clothes: ponerse",
+   "example": "Me pongo la chaqueta.",
+   "meaning": "I put on my jacket."
+  },
+  {
+   "use": "To become (emotion): ponerse + adjective",
+   "example": "Se puso nerviosa antes del examen.",
+   "meaning": "She got nervous before the exam."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "pongo"
+  ],
+  [
+   "tú",
+   "pones"
+  ],
+  [
+   "él / ella / usted",
+   "pone"
+  ],
+  [
+   "nosotros / nosotras",
+   "ponemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "ponen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "puse"
+  ],
+  [
+   "tú",
+   "pusiste"
+  ],
+  [
+   "él / ella / usted",
+   "puso"
+  ],
+  [
+   "nosotros / nosotras",
+   "pusimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "pusieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " los libros en la mochila.",
+   "options": [
+    "pongo",
+    "pono",
+    "pone"
+   ],
+   "answer": 0,
+   "why": "Poner with yo: pongo."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " tú las llaves?",
+   "options": [
+    "pones",
+    "ponas",
+    "pone"
+   ],
+   "answer": 0,
+   "why": "Tú: pones."
+  },
+  {
+   "before": "Antes de cenar, nosotros ",
+   "after": " la mesa.",
+   "options": [
+    "ponemos",
+    "pongamos que",
+    "ponen"
+   ],
+   "answer": 0,
+   "why": "Nosotros: ponemos."
+  },
+  {
+   "before": "Hace frío. Me ",
+   "after": " el abrigo.",
+   "options": [
+    "pongo",
+    "pone",
+    "ponen"
+   ],
+   "answer": 0,
+   "why": "Ponerse with yo: me pongo."
+  },
+  {
+   "before": "Mi mamá ",
+   "after": " la radio por la mañana.",
+   "options": [
+    "pone",
+    "pones",
+    "pongo"
+   ],
+   "answer": 0,
+   "why": "Turning on the radio: pone."
+  },
+  {
+   "before": "Cuando habla en público, mi amigo se ",
+   "after": " rojo.",
+   "options": [
+    "pone",
+    "es",
+    "está"
+   ],
+   "answer": 0,
+   "why": "Becoming: ponerse + adjective."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " mi teléfono? No lo encuentro.",
+   "options": [
+    "puse",
+    "pusé",
+    "poní"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: puse, no accent."
+  },
+  {
+   "before": "Ella se ",
+   "after": " muy contenta con la noticia.",
+   "options": [
+    "puso",
+    "pusó",
+    "ponió"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: puso."
+  },
+  {
+   "before": "¿Quién ",
+   "after": " la tele tan alta?",
+   "options": [
+    "puso",
+    "ponió",
+    "pusieron él"
+   ],
+   "answer": 0,
+   "why": "One person turned it on: puso."
+  },
+  {
+   "before": "Los niños se ",
+   "after": " los pijamas y se acostaron.",
+   "options": [
+    "pusieron",
+    "ponieron",
+    "pusimos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: pusieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "Una mañana con prisa",
+  "paragraphs": [
+   "El lunes, Diego se despertó tarde. Se puso los jeans de ayer, se puso una sudadera y salió de su cuarto corriendo. Su mamá ya había puesto el desayuno en la mesa, pero él no tenía tiempo para comer. Puso dos tostadas en una servilleta y las metió en la mochila.",
+   "En el autobús se dio cuenta de un problema: no se había puesto los tenis, sino las pantuflas. Se puso rojo de vergüenza. Su amiga Camila se rio y le dijo: «Tranquilo, nadie mira tus pies». Desde ese día, Diego pone la alarma diez minutos antes."
+  ],
+  "comprehension": [
+   {
+    "before": "Diego se despertó tarde el ",
+    "after": ".",
+    "options": [
+     "lunes",
+     "martes",
+     "domingo"
+    ],
+    "answer": 0,
+    "why": "On Monday."
+   },
+   {
+    "before": "Diego puso en la mochila ",
+    "after": ".",
+    "options": [
+     "dos tostadas",
+     "su teléfono",
+     "sus tenis"
+    ],
+    "answer": 0,
+    "why": "Two pieces of toast in a napkin."
+   },
+   {
+    "before": "En el autobús Diego vio que llevaba ",
+    "after": ".",
+    "options": [
+     "pantuflas",
+     "tenis rojos",
+     "zapatos de su papá"
+    ],
+    "answer": 0,
+    "why": "Slippers instead of sneakers."
+   },
+   {
+    "before": "Ahora Diego pone la alarma ",
+    "after": ".",
+    "options": [
+     "diez minutos antes",
+     "una hora antes",
+     "en el teléfono de su mamá"
+    ],
+    "answer": 0,
+    "why": "Ten minutes earlier."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo pono.",
+   "right": "Yo pongo.",
+   "why": "The yo form of poner has g: pongo."
+  },
+  {
+   "wrong": "Él ponió.",
+   "right": "Él puso.",
+   "why": "The preterite of poner uses the stem pus-."
+  },
+  {
+   "wrong": "Pongo mi chaqueta (to put it on).",
+   "right": "Me pongo la chaqueta.",
+   "why": "Putting on clothes uses ponerse, and Spanish uses la, not mi."
+  }
+ ],
+ "heritage": "Heritage speakers often say «pusistes» or «ponido». In writing, the forms are pusiste and puesto (the participle). Also check that puse and puso have no accent. Write about a morning when everything went wrong, using poner and ponerse at least five times.",
+ "teacher": "Teachers: the reading is a funny morning routine with many uses of poner and ponerse. Ask students to find each one and decide whether it means to put, to put on or to become. Then they write their own morning-disaster story.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb poner». 2 of them ask for conjugation, charts or tenses (conjugation, present tense). The reflexive ponerse is one of the suggestions, so the page practices it next to poner.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

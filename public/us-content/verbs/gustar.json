@@ -1,0 +1,273 @@
+{
+ "verb": "gustar",
+ "meaning": "to like (to please)",
+ "level": "A1",
+ "title": "Spanish Verb Gustar Practice: Gusta vs Gustan, Pronouns and Quiz",
+ "description": "Practice the Spanish verb gustar: gusta or gustan, me, te, le, nos, les, verbs like gustar, ten questions that correct themselves and a reading. No login.",
+ "h1": "Spanish verb gustar: practice",
+ "intro": "Gustar works backwards from English: the thing you like is the subject. Learn when to use gusta or gustan, which pronoun goes first and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb gustar practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "One thing or an infinitive: gusta",
+   "example": "Me gusta el chocolate. Me gusta bailar.",
+   "meaning": "I like chocolate. I like dancing."
+  },
+  {
+   "use": "Several things: gustan",
+   "example": "Me gustan los perros.",
+   "meaning": "I like dogs."
+  },
+  {
+   "use": "Who likes it: me, te, le, nos, les",
+   "example": "A mis padres les gusta el jazz.",
+   "meaning": "My parents like jazz."
+  },
+  {
+   "use": "Clarifying or stressing: a + person",
+   "example": "A ella le gusta el café, pero a mí no.",
+   "meaning": "She likes coffee, but I don't."
+  },
+  {
+   "use": "Verbs like gustar: encantar, interesar, molestar, doler",
+   "example": "Me encanta esta canción.",
+   "meaning": "I love this song."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "me gusta(n)"
+  ],
+  [
+   "tú",
+   "te gusta(n)"
+  ],
+  [
+   "él / ella / usted",
+   "le gusta(n)"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos gusta(n)"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "les gusta(n)"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "me gustó / gustaron"
+  ],
+  [
+   "tú",
+   "te gustó / gustaron"
+  ],
+  [
+   "él / ella / usted",
+   "le gustó / gustaron"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos gustó / gustaron"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "les gustó / gustaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Me ",
+   "after": " la música latina.",
+   "options": [
+    "gusta",
+    "gustan",
+    "gusto"
+   ],
+   "answer": 0,
+   "why": "One thing (la música): gusta."
+  },
+  {
+   "before": "Me ",
+   "after": " los tacos de pescado.",
+   "options": [
+    "gustan",
+    "gusta",
+    "gusto"
+   ],
+   "answer": 0,
+   "why": "Several things: gustan."
+  },
+  {
+   "before": "¿Te ",
+   "after": " jugar al fútbol?",
+   "options": [
+    "gusta",
+    "gustan",
+    "gustas"
+   ],
+   "answer": 0,
+   "why": "An infinitive takes gusta."
+  },
+  {
+   "before": "A mi hermano ",
+   "after": " gustan los videojuegos.",
+   "options": [
+    "le",
+    "lo",
+    "se"
+   ],
+   "answer": 0,
+   "why": "A él: le."
+  },
+  {
+   "before": "A nosotros ",
+   "after": " gusta viajar.",
+   "options": [
+    "nos",
+    "les",
+    "nosotros"
+   ],
+   "answer": 0,
+   "why": "A nosotros: nos."
+  },
+  {
+   "before": "A mis abuelos ",
+   "after": " gusta caminar por la mañana.",
+   "options": [
+    "les",
+    "le",
+    "los"
+   ],
+   "answer": 0,
+   "why": "A ellos: les."
+  },
+  {
+   "before": "A mí no me gusta el café, pero a ",
+   "after": " sí.",
+   "options": [
+    "ella",
+    "le",
+    "la"
+   ],
+   "answer": 0,
+   "why": "After a, use the stressed pronoun: a ella."
+  },
+  {
+   "before": "Me ",
+   "after": " esta película; es la mejor del año.",
+   "options": [
+    "encanta",
+    "encantan",
+    "encanto"
+   ],
+   "answer": 0,
+   "why": "Encantar works like gustar: one film, encanta."
+  },
+  {
+   "before": "¿Les ",
+   "after": " el concierto de anoche?",
+   "options": [
+    "gustó",
+    "gustaron",
+    "gustaba"
+   ],
+   "answer": 0,
+   "why": "One event in the past: gustó."
+  },
+  {
+   "before": "A Marta no le ",
+   "after": " las preguntas del examen.",
+   "options": [
+    "gustaron",
+    "gustó",
+    "gustan"
+   ],
+   "answer": 0,
+   "why": "Several things in the past: gustaron."
+  }
+ ],
+ "reading": {
+  "titleEs": "¿Qué te gusta hacer?",
+  "paragraphs": [
+   "En la primera semana de clase, la profesora Ramírez preguntó a cada estudiante qué le gusta hacer. A Jayden le gustan los deportes, sobre todo el básquetbol, y le encanta ver los partidos de los Lakers. A Sofía no le gustan los deportes: le gusta dibujar y le interesan los cómics japoneses.",
+   "A los gemelos Ruiz les gusta cocinar con su abuela, y les encantan los tamales de Navidad. A mí me gusta la música y me gustan mucho las canciones de los años ochenta. A la profesora le molesta una sola cosa: que miremos el teléfono en clase."
+  ],
+  "comprehension": [
+   {
+    "before": "A Jayden le encanta ver ",
+    "after": ".",
+    "options": [
+     "los partidos de los Lakers",
+     "cómics japoneses",
+     "películas"
+    ],
+    "answer": 0,
+    "why": "Lakers games."
+   },
+   {
+    "before": "A Sofía le gusta ",
+    "after": ".",
+    "options": [
+     "dibujar",
+     "el básquetbol",
+     "cocinar"
+    ],
+    "answer": 0,
+    "why": "She likes drawing."
+   },
+   {
+    "before": "A los gemelos les encantan ",
+    "after": ".",
+    "options": [
+     "los tamales de Navidad",
+     "los deportes",
+     "los cómics"
+    ],
+    "answer": 0,
+    "why": "Christmas tamales."
+   },
+   {
+    "before": "A la profesora le molesta ",
+    "after": ".",
+    "options": [
+     "que miren el teléfono en clase",
+     "la música",
+     "que hablen español"
+    ],
+    "answer": 0,
+    "why": "Phones in class."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo gusto la pizza.",
+   "right": "Me gusta la pizza.",
+   "why": "The thing liked is the subject; the person goes in the pronoun."
+  },
+  {
+   "wrong": "Me gusta los perros.",
+   "right": "Me gustan los perros.",
+   "why": "Plural things take gustan."
+  },
+  {
+   "wrong": "A Juan gusta el fútbol.",
+   "right": "A Juan le gusta el fútbol.",
+   "why": "Even with «a Juan», the pronoun le is still needed."
+  }
+ ],
+ "heritage": "Heritage speakers usually use gustar perfectly. A common written slip is «a mí» without the accent (mí as a pronoun needs it; mi as «my» does not). Another is «les gusta» versus «le gusta» when talking about several people. Write about what each person in your family likes, using le and les correctly.",
+ "teacher": "Teachers: run a class survey based on the reading: each student asks three classmates «¿Qué te gusta hacer?» and reports back with «A Jayden le gusta…». It practises all the pronouns in one activity, and verbs like encantar and molestar.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb gustar». 1 of them asks for conjugation, charts or tenses (conjugation). 1 asks for practice (practice). Gustar does not have a normal chart, so the forms here show the pronoun with gusta and gustan.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

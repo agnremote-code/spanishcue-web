@@ -1,0 +1,195 @@
+{
+ "level": "B1",
+ "theme": "technology",
+ "themeLabel": "Technology",
+ "title": "Spanish Reading Comprehension B1: Technology (Opinion Text)",
+ "description": "A B1 Spanish opinion text about phone bans in schools, with instant-feedback questions, debate vocabulary and practice with opinion phrases. No login.",
+ "h1": "Spanish reading comprehension B1: technology",
+ "titleEs": "¿Deberían prohibir los teléfonos en clase?",
+ "focus": "opinion with creo que and no creo que, the conditional, connectors",
+ "intro": "An intermediate text about technology: a student newspaper in Santiago de Chile publishes three opinions about banning phones in school.",
+ "paragraphs": [
+  "El periódico estudiantil de un liceo de Santiago de Chile preguntó a tres personas si el colegio debería prohibir los teléfonos durante las clases. El tema es actual: varios países ya han limitado su uso en las escuelas, y el liceo va a votar una nueva norma en marzo.",
+  "Florencia, de cuarto medio, está a favor de la prohibición. «Creo que el teléfono es la mayor distracción que tenemos», escribe. «Aunque lo tengas en silencio, sabes que hay mensajes esperando y no te concentras. El año pasado mis notas bajaron, y no fue porque las materias fueran más difíciles. Si guardáramos los teléfonos en un casillero durante el día, hablaríamos más en los recreos y estaríamos más atentos en clase.»",
+  "Matías no está de acuerdo. «No creo que prohibir sea la solución», responde. «El teléfono también es una herramienta: lo usamos para buscar información, para traducir palabras en inglés o para grabar las explicaciones de química. Además, muchos estudiantes viajan solos más de una hora en micro, y sus padres necesitan poder llamarlos. Sería mejor enseñarnos a usarlo bien que quitarlo.»",
+  "Por último, la profesora de lenguaje, Carolina Muñoz, propone un punto medio. «Lo importante no es el aparato, sino cuándo y para qué se usa», explica. «Yo propondría una regla simple: los teléfonos quedan en la mochila, salvo cuando el profesor pida usarlos para una actividad. Así no perdemos sus ventajas, pero tampoco la atención de los alumnos.» El periódico invita a todos los estudiantes a votar antes de fin de mes."
+ ],
+ "glossary": [
+  [
+   "prohibir",
+   "to ban"
+  ],
+  [
+   "la norma",
+   "rule, policy"
+  ],
+  [
+   "estar a favor de",
+   "to be in favor of"
+  ],
+  [
+   "el casillero",
+   "locker"
+  ],
+  [
+   "la herramienta",
+   "tool"
+  ],
+  [
+   "la micro",
+   "city bus (in Chile)"
+  ],
+  [
+   "un punto medio",
+   "a middle ground"
+  ],
+  [
+   "salvo",
+   "except"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "El periódico preguntó si el colegio debería ",
+   "after": ".",
+   "options": [
+    "prohibir los teléfonos en clase",
+    "comprar computadoras",
+    "cambiar el horario"
+   ],
+   "answer": 0,
+   "why": "Whether phones should be banned during lessons."
+  },
+  {
+   "before": "El liceo va a votar la norma en ",
+   "after": ".",
+   "options": [
+    "marzo",
+    "diciembre",
+    "fin de mes"
+   ],
+   "answer": 0,
+   "why": "The school will vote on a new rule in March."
+  },
+  {
+   "before": "Florencia piensa que el teléfono es ",
+   "after": ".",
+   "options": [
+    "la mayor distracción",
+    "una herramienta útil",
+    "necesario para la seguridad"
+   ],
+   "answer": 0,
+   "why": "«La mayor distracción que tenemos.»"
+  },
+  {
+   "before": "Según Florencia, sus notas bajaron porque ",
+   "after": ".",
+   "options": [
+    "el teléfono la distraía",
+    "las materias eran más difíciles",
+    "estaba enferma"
+   ],
+   "answer": 0,
+   "why": "She says it was not the subjects but the distraction."
+  },
+  {
+   "before": "Florencia propone guardar los teléfonos ",
+   "after": ".",
+   "options": [
+    "en un casillero",
+    "en la mochila",
+    "en casa"
+   ],
+   "answer": 0,
+   "why": "In a locker during the day."
+  },
+  {
+   "before": "Matías usa el teléfono para ",
+   "after": ".",
+   "options": [
+    "traducir y grabar explicaciones",
+    "jugar en los recreos",
+    "escuchar música en clase"
+   ],
+   "answer": 0,
+   "why": "To look things up, translate and record explanations."
+  },
+  {
+   "before": "Según Matías, los padres necesitan ",
+   "after": ".",
+   "options": [
+    "poder llamar a sus hijos",
+    "revisar los mensajes",
+    "pagar menos"
+   ],
+   "answer": 0,
+   "why": "Many students travel alone for over an hour."
+  },
+  {
+   "before": "La profesora Muñoz propone que los teléfonos ",
+   "after": ".",
+   "options": [
+    "queden en la mochila salvo para actividades",
+    "se prohíban totalmente",
+    "se usen libremente"
+   ],
+   "answer": 0,
+   "why": "In the backpack, except when the teacher asks to use them."
+  },
+  {
+   "before": "Para la profesora, lo importante es ",
+   "after": ".",
+   "options": [
+    "cuándo y para qué se usa el teléfono",
+    "el precio del aparato",
+    "la opinión de los padres"
+   ],
+   "answer": 0,
+   "why": "«Lo importante no es el aparato, sino cuándo y para qué se usa.»"
+  }
+ ],
+ "grammar": {
+  "title": "Practice: creo que or no creo que",
+  "intro": "Creo que takes the indicative; no creo que takes the subjunctive.",
+  "items": [
+   {
+    "before": "Creo que el teléfono ",
+    "after": " una distracción.",
+    "options": [
+     "es",
+     "sea"
+    ],
+    "answer": 0,
+    "why": "Affirmative belief: indicative."
+   },
+   {
+    "before": "No creo que prohibir ",
+    "after": " la solución.",
+    "options": [
+     "es",
+     "sea"
+    ],
+    "answer": 1,
+    "why": "Negated belief: subjunctive."
+   },
+   {
+    "before": "Si guardáramos los teléfonos, ",
+    "after": " más en los recreos.",
+    "options": [
+     "hablaríamos",
+     "hablamos"
+    ],
+    "answer": 0,
+    "why": "Hypothesis with si + imperfect subjunctive: conditional."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Estás de acuerdo con Florencia, con Matías o con la profesora? ¿Por qué?",
+  "¿Qué regla sobre los teléfonos tiene tu escuela? ¿Funciona?",
+  "Escribe una opinión de cinco frases con «creo que», «no creo que» y «además»."
+ ],
+ "heritage": "Heritage speakers often win oral debates and lose points in written ones. Use this text as a model for formal argument: «estoy a favor de», «no estoy de acuerdo», «por último». Check two forms that fluent speakers often write wrong: «haya» (not «haiga») and «sería» with an accent. Then write your own opinion piece for a school newspaper.",
+ "teacher": "Teachers: this text is ready for a structured debate in Spanish 3. Divide the class into the three positions, let each group find two more arguments, and finish with a vote like the one in the text. It also models the indicative versus subjunctive contrast with creo que and no creo que."
+}

@@ -34,6 +34,7 @@ import { lessonCards } from "./growth/lessons";
 import { RECURSOS_PATH, recursoPathForLesson, resourceLessons, resourcePathForLesson } from "./resource-seo";
 import { canonicalUrl, isSearchPrivatePath, languageAlternates } from "./seo";
 import { teachingGuides } from "./teaching-guides";
+import { usCatalog } from "./us-content/catalog.generated";
 
 type Entry = MetadataRoute.Sitemap[number];
 type Frequency = NonNullable<Entry["changeFrequency"]>;
@@ -69,6 +70,10 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/datos", priority: 0.6, changeFrequency: "weekly" },
   { path: "/spanish-reading-comprehension", priority: 0.6, changeFrequency: "monthly" },
   ...["a1", "a2", "b1"].map((level) => ({ path: `/spanish-reading-comprehension/${level}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
+  { path: "/spanish-vocabulary", priority: 0.6, changeFrequency: "monthly" },
+  ...usCatalog.filter((entry) => entry.family === "vocabulary").map((entry) => ({ path: `/spanish-vocabulary/${entry.slug}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
+  { path: "/spanish-verb-practice", priority: 0.6, changeFrequency: "monthly" },
+  ...usCatalog.filter((entry) => entry.family === "verbs").map((entry) => ({ path: `/spanish-verb-practice/${entry.slug}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/spanish-grammar-practice", priority: 0.6, changeFrequency: "monthly" },
   { path: "/ap-spanish-language", priority: 0.6, changeFrequency: "monthly" },
   { path: "/spanish-sub-plans", priority: 0.6, changeFrequency: "monthly" },

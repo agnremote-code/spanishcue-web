@@ -1,0 +1,377 @@
+{
+ "level": "A1",
+ "theme": "clothing",
+ "themeLabel": "Clothing",
+ "title": "Spanish Clothing Vocabulary: List, Colors and Practice Quiz",
+ "description": "Spanish clothing vocabulary with a list of clothes and colors, a practice quiz that corrects itself and a short A1 reading about getting dressed in Lima. Free.",
+ "h1": "Spanish clothing vocabulary",
+ "titleEs": "¿Qué me pongo hoy?",
+ "focus": "clothes, colours and adjective agreement",
+ "intro": "Learn the Spanish words for clothes, shoes and colours, practice them with instant feedback, then read how Camila chooses an outfit for a family party in Lima.",
+ "paragraphs": [
+  "Hoy es sábado y Camila tiene una fiesta: es el cumpleaños de su abuelo, que cumple ochenta años. La fiesta es en un restaurante del centro de Lima, a las dos de la tarde. Camila abre su armario y no sabe qué ponerse. Tiene mucha ropa, pero casi toda es para el colegio o para hacer deporte.",
+  "Primero se pone unos jeans azules y una camiseta blanca, pero su mamá dice: «Es una fiesta, no un partido de fútbol». Después prueba un vestido rojo, pero es muy corto y un poco viejo. Su hermano Lucas lleva una camisa celeste y pantalones grises; está muy elegante.",
+  "En Lima, en invierno, el cielo está gris y hace un poco de frío. Por fin Camila elige una falda negra, una blusa amarilla y unos zapatos cómodos, porque en la fiesta siempre bailan. También lleva una chaqueta verde de su tía. Su abuelo dice que está muy guapa y que el amarillo es su color favorito."
+ ],
+ "glossary": [
+  [
+   "ponerse",
+   "to put on (clothes)"
+  ],
+  [
+   "el armario",
+   "wardrobe, closet"
+  ],
+  [
+   "la camiseta",
+   "T-shirt («playera» or «polera» in some countries)"
+  ],
+  [
+   "el vestido",
+   "dress"
+  ],
+  [
+   "corto",
+   "short"
+  ],
+  [
+   "celeste",
+   "light blue"
+  ],
+  [
+   "la falda",
+   "skirt («pollera» in some countries)"
+  ],
+  [
+   "cómodo",
+   "comfortable"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La fiesta es el cumpleaños de ",
+   "after": ".",
+   "options": [
+    "su abuelo",
+    "su mamá",
+    "su hermano"
+   ],
+   "answer": 0,
+   "why": "Her grandfather turns eighty."
+  },
+  {
+   "before": "La fiesta empieza a las ",
+   "after": ".",
+   "options": [
+    "dos de la tarde",
+    "ocho de la noche",
+    "once de la mañana"
+   ],
+   "answer": 0,
+   "why": "«A las dos de la tarde.»"
+  },
+  {
+   "before": "La mamá no quiere los jeans porque ",
+   "after": ".",
+   "options": [
+    "es una fiesta",
+    "son viejos",
+    "hace frío"
+   ],
+   "answer": 0,
+   "why": "«Es una fiesta, no un partido de fútbol.»"
+  },
+  {
+   "before": "El vestido rojo es ",
+   "after": ".",
+   "options": [
+    "corto y viejo",
+    "largo y nuevo",
+    "de su tía"
+   ],
+   "answer": 0,
+   "why": "It is too short and a bit old."
+  },
+  {
+   "before": "Camila lleva zapatos cómodos porque ",
+   "after": ".",
+   "options": [
+    "en la fiesta bailan",
+    "llueve",
+    "camina mucho"
+   ],
+   "answer": 0,
+   "why": "They always dance at the party."
+  },
+  {
+   "before": "La chaqueta verde es de ",
+   "after": ".",
+   "options": [
+    "su tía",
+    "su mamá",
+    "Lucas"
+   ],
+   "answer": 0,
+   "why": "«Una chaqueta verde de su tía.»"
+  }
+ ],
+ "grammar": {
+  "title": "Practice: colours that agree",
+  "intro": "Most colours change for feminine and plural; colours ending in -e or a consonant change only for plural.",
+  "items": [
+   {
+    "before": "Camila lleva una falda ",
+    "after": ".",
+    "options": [
+     "negro",
+     "negra"
+    ],
+    "answer": 1,
+    "why": "Falda is feminine: negra."
+   },
+   {
+    "before": "Lucas lleva pantalones ",
+    "after": ".",
+    "options": [
+     "gris",
+     "grises"
+    ],
+    "answer": 1,
+    "why": "Plural noun: grises."
+   },
+   {
+    "before": "La chaqueta es ",
+    "after": ".",
+    "options": [
+     "verde",
+     "verda"
+    ],
+    "answer": 0,
+    "why": "Verde ends in -e: same form for masculine and feminine."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué ropa llevas hoy? Di los colores.",
+  "¿Qué te pones para una fiesta de familia?",
+  "¿Cuál es tu color favorito para la ropa?"
+ ],
+ "heritage": "Heritage speakers may use family words such as «pollera», «playera», «chamarra» or «mahones» for clothes in this text. All are correct in their countries: list the ones you use and match them to the words here. In writing, notice that «pantalón» has an accent that disappears in the plural «pantalones», and that «zapatos» and «blusa» are written with z and s even when they sound the same in your Spanish.",
+ "teacher": "Teachers: use the text with a clothing and colours unit. Students can underline every item of clothing and circle each colour, then check agreement in pairs. As a follow-up, students describe what a classmate is wearing and the class guesses who it is.",
+ "vocabulary": [
+  {
+   "title": "Clothes",
+   "words": [
+    [
+     "la camisa",
+     "shirt"
+    ],
+    [
+     "la camiseta",
+     "T-shirt"
+    ],
+    [
+     "los pantalones",
+     "pants"
+    ],
+    [
+     "los jeans",
+     "jeans"
+    ],
+    [
+     "la falda",
+     "skirt"
+    ],
+    [
+     "el vestido",
+     "dress"
+    ],
+    [
+     "el suéter",
+     "sweater"
+    ],
+    [
+     "la chaqueta",
+     "jacket"
+    ],
+    [
+     "el abrigo",
+     "coat"
+    ]
+   ]
+  },
+  {
+   "title": "Shoes and accessories",
+   "words": [
+    [
+     "los zapatos",
+     "shoes"
+    ],
+    [
+     "las botas",
+     "boots"
+    ],
+    [
+     "las sandalias",
+     "sandals"
+    ],
+    [
+     "los tenis",
+     "sneakers"
+    ],
+    [
+     "el gorro",
+     "hat, beanie"
+    ],
+    [
+     "la gorra",
+     "cap"
+    ],
+    [
+     "la bufanda",
+     "scarf"
+    ],
+    [
+     "los calcetines",
+     "socks"
+    ]
+   ]
+  },
+  {
+   "title": "Colours",
+   "words": [
+    [
+     "rojo",
+     "red"
+    ],
+    [
+     "azul",
+     "blue"
+    ],
+    [
+     "verde",
+     "green"
+    ],
+    [
+     "amarillo",
+     "yellow"
+    ],
+    [
+     "negro",
+     "black"
+    ],
+    [
+     "blanco",
+     "white"
+    ],
+    [
+     "gris",
+     "gray"
+    ],
+    [
+     "morado",
+     "purple"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Cuando hace frío llevo un ",
+   "after": ".",
+   "options": [
+    "abrigo",
+    "vestido corto",
+    "sandalias"
+   ],
+   "answer": 0,
+   "why": "A coat is for cold weather."
+  },
+  {
+   "before": "Antes de los zapatos me pongo los ",
+   "after": ".",
+   "options": [
+    "calcetines",
+    "gorros",
+    "suéteres"
+   ],
+   "answer": 0,
+   "why": "Socks go on before shoes."
+  },
+  {
+   "before": "Para correr uso ",
+   "after": ".",
+   "options": [
+    "tenis",
+    "botas de lluvia",
+    "una falda larga"
+   ],
+   "answer": 0,
+   "why": "Sneakers are for running."
+  },
+  {
+   "before": "En la playa llevo ",
+   "after": ".",
+   "options": [
+    "sandalias",
+    "una bufanda",
+    "un abrigo"
+   ],
+   "answer": 0,
+   "why": "Sandals for the beach."
+  },
+  {
+   "before": "El cielo es ",
+   "after": ".",
+   "options": [
+    "azul",
+    "morado",
+    "negro"
+   ],
+   "answer": 0,
+   "why": "On a clear day the sky is blue."
+  },
+  {
+   "before": "Mezclar azul y rojo da el color ",
+   "after": ".",
+   "options": [
+    "morado",
+    "verde",
+    "gris"
+   ],
+   "answer": 0,
+   "why": "Blue and red make purple."
+  },
+  {
+   "before": "En el cuello, cuando hace frío, llevo una ",
+   "after": ".",
+   "options": [
+    "bufanda",
+    "gorra",
+    "camiseta"
+   ],
+   "answer": 0,
+   "why": "A scarf goes around the neck."
+  },
+  {
+   "before": "Para la boda de mi prima voy a llevar un ",
+   "after": " elegante.",
+   "options": [
+    "vestido",
+    "tenis",
+    "calcetín"
+   ],
+   "answer": 0,
+   "why": "A dress is the formal option here."
+  }
+ ],
+ "demand": {
+  "query": "spanish clothing vocabulary practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish clothing vocabulary». 3 of them ask for something to do with the words (practice, quizlet, quiz), not only a list. Fashion appears in the suggestions too, so the reading also deals with choosing an outfit.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

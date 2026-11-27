@@ -1,0 +1,273 @@
+{
+ "verb": "dar",
+ "meaning": "to give",
+ "level": "A2",
+ "title": "Spanish Verb Dar Practice: Forms, Indirect Objects and Quiz",
+ "description": "Practice the Spanish verb dar: doy, the preterite di, indirect object pronouns and common expressions, ten questions that correct themselves and a reading. Free.",
+ "h1": "Spanish verb dar: practice",
+ "intro": "Dar means «to give». It is short but irregular (doy, di, dio) and almost always goes with an indirect object pronoun: le doy, me dio. Learn its forms and expressions and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb dar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To give something to someone",
+   "example": "Le doy un regalo a mi mamá.",
+   "meaning": "I give my mom a present."
+  },
+  {
+   "use": "Expressions with dar: dar las gracias",
+   "example": "Te doy las gracias por todo.",
+   "meaning": "I thank you for everything."
+  },
+  {
+   "use": "Dar un paseo",
+   "example": "Damos un paseo por el parque.",
+   "meaning": "We take a walk in the park."
+  },
+  {
+   "use": "Dar miedo, dar risa, dar igual",
+   "example": "Las películas de terror me dan miedo.",
+   "meaning": "Horror movies scare me."
+  },
+  {
+   "use": "Darse cuenta de",
+   "example": "No me di cuenta de la hora.",
+   "meaning": "I didn't realize the time."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "doy"
+  ],
+  [
+   "tú",
+   "das"
+  ],
+  [
+   "él / ella / usted",
+   "da"
+  ],
+  [
+   "nosotros / nosotras",
+   "damos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "dan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "di"
+  ],
+  [
+   "tú",
+   "diste"
+  ],
+  [
+   "él / ella / usted",
+   "dio"
+  ],
+  [
+   "nosotros / nosotras",
+   "dimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "dieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo le ",
+   "after": " la tarea al profesor.",
+   "options": [
+    "doy",
+    "do",
+    "da"
+   ],
+   "answer": 0,
+   "why": "Dar with yo: doy."
+  },
+  {
+   "before": "¿Me ",
+   "after": " tu número de teléfono?",
+   "options": [
+    "das",
+    "dás",
+    "da tú"
+   ],
+   "answer": 0,
+   "why": "Tú: das, no accent."
+  },
+  {
+   "before": "Mi abuela siempre nos ",
+   "after": " dinero en Navidad.",
+   "options": [
+    "da",
+    "dan",
+    "doy"
+   ],
+   "answer": 0,
+   "why": "Ella: da."
+  },
+  {
+   "before": "Las arañas me ",
+   "after": " mucho miedo.",
+   "options": [
+    "dan",
+    "da",
+    "doy"
+   ],
+   "answer": 0,
+   "why": "Like gustar: the spiders (plural) give fear, dan."
+  },
+  {
+   "before": "Después de cenar, mis padres ",
+   "after": " un paseo.",
+   "options": [
+    "dan",
+    "dan de",
+    "damos"
+   ],
+   "answer": 0,
+   "why": "Dar un paseo: ellos dan."
+  },
+  {
+   "before": "¿Qué película vemos? Me ",
+   "after": " igual.",
+   "options": [
+    "da",
+    "doy",
+    "dan"
+   ],
+   "answer": 0,
+   "why": "I don't mind: me da igual."
+  },
+  {
+   "before": "Ayer le ",
+   "after": " un abrazo a mi hermano.",
+   "options": [
+    "di",
+    "dí",
+    "dé"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: di, no accent."
+  },
+  {
+   "before": "¿Quién te ",
+   "after": " ese libro?",
+   "options": [
+    "dio",
+    "dió",
+    "dío"
+   ],
+   "answer": 0,
+   "why": "Preterite él: dio, no accent."
+  },
+  {
+   "before": "Nosotros le ",
+   "after": " las gracias al conductor.",
+   "options": [
+    "dimos",
+    "dímos",
+    "damos ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite nosotros: dimos."
+  },
+  {
+   "before": "No me ",
+   "after": " cuenta de que era tan tarde.",
+   "options": [
+    "di",
+    "dio",
+    "dé"
+   ],
+   "answer": 0,
+   "why": "Darse cuenta, yo, preterite: me di cuenta."
+  }
+ ],
+ "reading": {
+  "titleEs": "El intercambio de regalos",
+  "paragraphs": [
+   "En diciembre, la clase de español hizo un intercambio de regalos. Cada estudiante sacó un nombre de una bolsa y tenía que darle un regalo pequeño a esa persona. A Luis le tocó dar un regalo a la profesora, y eso le dio un poco de miedo.",
+   "El último día de clase, todos dieron sus regalos. Luis le dio a la profesora una taza con la frase «Me da igual, lo importante es el café». A ella le dio mucha risa y le dio las gracias en voz alta. Luis se dio cuenta de que había elegido bien."
+  ],
+  "comprehension": [
+   {
+    "before": "Cada estudiante tenía que dar ",
+    "after": ".",
+    "options": [
+     "un regalo pequeño",
+     "dinero",
+     "una tarjeta"
+    ],
+    "answer": 0,
+    "why": "A small present."
+   },
+   {
+    "before": "Luis tenía que darle un regalo a ",
+    "after": ".",
+    "options": [
+     "la profesora",
+     "su mejor amigo",
+     "su hermana"
+    ],
+    "answer": 0,
+    "why": "To the teacher."
+   },
+   {
+    "before": "Luis le dio ",
+    "after": ".",
+    "options": [
+     "una taza",
+     "un libro",
+     "flores"
+    ],
+    "answer": 0,
+    "why": "A mug with a funny phrase."
+   },
+   {
+    "before": "La profesora, al ver el regalo, ",
+    "after": ".",
+    "options": [
+     "se rio y le dio las gracias",
+     "se enojó",
+     "no dijo nada"
+    ],
+    "answer": 0,
+    "why": "It made her laugh and she thanked him."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo do.",
+   "right": "Yo doy.",
+   "why": "The yo form of dar is doy."
+  },
+  {
+   "wrong": "Él dió.",
+   "right": "Él dio.",
+   "why": "Di, dio, dimos and diste never take an accent."
+  },
+  {
+   "wrong": "Doy el libro a ella.",
+   "right": "Le doy el libro.",
+   "why": "Dar usually takes an indirect object pronoun: le."
+  }
+ ],
+ "heritage": "Heritage speakers often write «dió» and «dí» with accents because older textbooks used them. Since 2010 the standard spelling has no accent: dio, di. Also check «distes» (spoken) versus diste (written). Write about a gift you gave or received, using dar three times.",
+ "teacher": "Teachers: run a gift exchange in Spanish, as in the reading, or simulate one with paper slips. Students announce «Le doy… a…» and report afterwards «Me dio…». The expressions dar miedo and dar risa are a nice bonus for describing reactions.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb dar». 3 of them ask for conjugation, charts or tenses (conjugation, present tense, past tense). Dar needs indirect object pronouns, so the practice includes le, me, te and nos.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

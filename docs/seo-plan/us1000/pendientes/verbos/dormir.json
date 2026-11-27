@@ -1,0 +1,273 @@
+{
+ "verb": "dormir",
+ "meaning": "to sleep",
+ "level": "A2",
+ "title": "Spanish Verb Dormir Practice: Forms, Dormirse and Quiz with Answers",
+ "description": "Practice the Spanish verb dormir: o-ue present forms, the preterite durmió, dormir vs dormirse, ten questions that correct themselves and a reading. Free.",
+ "h1": "Spanish verb dormir: practice",
+ "intro": "Dormir means «to sleep»; dormirse means «to fall asleep». It changes o to ue in the present (duermo) and o to u in some preterite forms (durmió). Learn its forms and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb dormir",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To sleep",
+   "example": "Duermo ocho horas cada noche.",
+   "meaning": "I sleep eight hours every night."
+  },
+  {
+   "use": "To fall asleep: dormirse",
+   "example": "Me duermo en el autobús.",
+   "meaning": "I fall asleep on the bus."
+  },
+  {
+   "use": "Taking a nap: dormir la siesta",
+   "example": "Mi abuelo duerme la siesta después de comer.",
+   "meaning": "My grandpa takes a nap after lunch."
+  },
+  {
+   "use": "Sleeping well or badly",
+   "example": "¿Dormiste bien anoche?",
+   "meaning": "Did you sleep well last night?"
+  },
+  {
+   "use": "Stem change in the preterite",
+   "example": "Mi hermanito durmió toda la noche.",
+   "meaning": "My little brother slept all night."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "duermo"
+  ],
+  [
+   "tú",
+   "duermes"
+  ],
+  [
+   "él / ella / usted",
+   "duerme"
+  ],
+  [
+   "nosotros / nosotras",
+   "dormimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "duermen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "dormí"
+  ],
+  [
+   "tú",
+   "dormiste"
+  ],
+  [
+   "él / ella / usted",
+   "durmió"
+  ],
+  [
+   "nosotros / nosotras",
+   "dormimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "durmieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " con la ventana abierta.",
+   "options": [
+    "duermo",
+    "dormo",
+    "duerme"
+   ],
+   "answer": 0,
+   "why": "O changes to ue: duermo."
+  },
+  {
+   "before": "¿Cuántas horas ",
+   "after": " tú?",
+   "options": [
+    "duermes",
+    "dormes",
+    "duerme"
+   ],
+   "answer": 0,
+   "why": "Tú: duermes."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " en una tienda de campaña.",
+   "options": [
+    "dormimos",
+    "duermimos",
+    "duermen"
+   ],
+   "answer": 0,
+   "why": "Nosotros keeps the o: dormimos."
+  },
+  {
+   "before": "Los gatos ",
+   "after": " casi todo el día.",
+   "options": [
+    "duermen",
+    "dormen",
+    "dormimos"
+   ],
+   "answer": 0,
+   "why": "Ellos: duermen."
+  },
+  {
+   "before": "Siempre me ",
+   "after": " cuando veo películas largas.",
+   "options": [
+    "duermo",
+    "dormo",
+    "duerme"
+   ],
+   "answer": 0,
+   "why": "Falling asleep: me duermo."
+  },
+  {
+   "before": "Mi abuela ",
+   "after": " la siesta todos los días.",
+   "options": [
+    "duerme",
+    "dorme",
+    "duermes"
+   ],
+   "answer": 0,
+   "why": "Ella: duerme."
+  },
+  {
+   "before": "Mi hermanito ",
+   "after": " diez horas anoche.",
+   "options": [
+    "durmió",
+    "dormió",
+    "duermió"
+   ],
+   "answer": 0,
+   "why": "Preterite él: o changes to u, durmió."
+  },
+  {
+   "before": "Mis hermanos ",
+   "after": " en el sofá.",
+   "options": [
+    "durmieron",
+    "dormieron",
+    "duermieron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: durmieron."
+  },
+  {
+   "before": "Anoche yo no ",
+   "after": " nada por el calor.",
+   "options": [
+    "dormí",
+    "durmí",
+    "duermí"
+   ],
+   "answer": 0,
+   "why": "Preterite yo keeps the o: dormí."
+  },
+  {
+   "before": "¿",
+   "after": " bien en el hotel?",
+   "options": [
+    "Dormiste",
+    "Durmiste",
+    "Duermiste"
+   ],
+   "answer": 0,
+   "why": "Preterite tú keeps the o: dormiste."
+  }
+ ],
+ "reading": {
+  "titleEs": "La noche del campamento",
+  "paragraphs": [
+   "En octubre, la clase de ciencias fue de campamento a un parque nacional. Dormimos en tiendas de campaña, cuatro estudiantes en cada una. La primera noche hacía mucho frío y casi nadie durmió. A las dos de la mañana por fin me quedé dormido, abrazado a mi mochila.",
+   "La segunda noche fue mejor. El profesor nos dio mantas extra y todos durmieron bien, menos Joshua, que dice que escuchó un oso. Por la mañana descubrimos que el «oso» era un mapache buscando comida. Joshua no durmió, pero ahora tiene la mejor historia del viaje."
+  ],
+  "comprehension": [
+   {
+    "before": "La clase durmió en ",
+    "after": ".",
+    "options": [
+     "tiendas de campaña",
+     "un hotel",
+     "cabañas"
+    ],
+    "answer": 0,
+    "why": "In tents."
+   },
+   {
+    "before": "La primera noche casi nadie durmió por ",
+    "after": ".",
+    "options": [
+     "el frío",
+     "un oso",
+     "la música"
+    ],
+    "answer": 0,
+    "why": "Because it was very cold."
+   },
+   {
+    "before": "La segunda noche el profesor les dio ",
+    "after": ".",
+    "options": [
+     "mantas extra",
+     "chocolate",
+     "linternas"
+    ],
+    "answer": 0,
+    "why": "Extra blankets."
+   },
+   {
+    "before": "El «oso» era ",
+    "after": ".",
+    "options": [
+     "un mapache",
+     "un perro",
+     "el profesor"
+    ],
+    "answer": 0,
+    "why": "A raccoon looking for food."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo dormo.",
+   "right": "Yo duermo.",
+   "why": "Dormir changes o to ue in every present form except nosotros."
+  },
+  {
+   "wrong": "Él dormió.",
+   "right": "Él durmió.",
+   "why": "In the preterite, o changes to u in the él and ellos forms."
+  },
+  {
+   "wrong": "Se durmió ocho horas.",
+   "right": "Durmió ocho horas.",
+   "why": "Dormirse is the moment of falling asleep; for how long someone slept, use dormir."
+  }
+ ],
+ "heritage": "Heritage speakers sometimes say «durmí» or «dormistes». The written forms are dormí and dormiste; only durmió and durmieron change to u. Write about a night you could not sleep, using dormir, dormirse and the preterite.",
+ "teacher": "Teachers: the reading is a camping story that students can retell with time markers. Use it to contrast dormir and dormirse, then survey the class: «¿Cuántas horas dormiste anoche? ¿A qué hora te dormiste?».",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb dormir». 2 of them ask for conjugation, charts or tenses (present tense, conjugation). Dormir changes its stem in two different ways, so the page practices both.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

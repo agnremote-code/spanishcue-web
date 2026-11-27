@@ -1,0 +1,273 @@
+{
+ "verb": "jugar",
+ "meaning": "to play (games and sports)",
+ "level": "A1",
+ "title": "Spanish Verb Jugar Practice: Forms, Jugar vs Tocar and Quiz",
+ "description": "Practice the Spanish verb jugar: u-ue present forms, the preterite jugué, jugar vs tocar, ten questions that correct themselves and a short reading. Free.",
+ "h1": "Spanish verb jugar: practice",
+ "intro": "Jugar means «to play» a game or a sport; instruments use tocar. It is the only verb that changes u to ue (juego, juegas). Learn its forms and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb jugar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Playing sports: jugar al + sport",
+   "example": "Juego al fútbol los sábados.",
+   "meaning": "I play soccer on Saturdays."
+  },
+  {
+   "use": "Playing games",
+   "example": "Mis hermanos juegan videojuegos.",
+   "meaning": "My brothers play video games."
+  },
+  {
+   "use": "Playing (children)",
+   "example": "Los niños juegan en el parque.",
+   "meaning": "The children play in the park."
+  },
+  {
+   "use": "Jugar vs tocar",
+   "example": "Juego al tenis y toco la guitarra.",
+   "meaning": "I play tennis and I play the guitar."
+  },
+  {
+   "use": "Spelling change in the preterite",
+   "example": "Ayer jugué dos partidos.",
+   "meaning": "Yesterday I played two games."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "juego"
+  ],
+  [
+   "tú",
+   "juegas"
+  ],
+  [
+   "él / ella / usted",
+   "juega"
+  ],
+  [
+   "nosotros / nosotras",
+   "jugamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "juegan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "jugué"
+  ],
+  [
+   "tú",
+   "jugaste"
+  ],
+  [
+   "él / ella / usted",
+   "jugó"
+  ],
+  [
+   "nosotros / nosotras",
+   "jugamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "jugaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " al básquetbol con mis amigos.",
+   "options": [
+    "juego",
+    "jugo",
+    "juega"
+   ],
+   "answer": 0,
+   "why": "U changes to ue: juego."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " al ajedrez?",
+   "options": [
+    "juegas",
+    "jugas",
+    "juega"
+   ],
+   "answer": 0,
+   "why": "Tú: juegas."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " al voleibol en la playa.",
+   "options": [
+    "jugamos",
+    "juegamos",
+    "juegan"
+   ],
+   "answer": 0,
+   "why": "Nosotros keeps the u: jugamos."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " la flauta en la banda.",
+   "options": [
+    "toca",
+    "juega",
+    "juega a"
+   ],
+   "answer": 0,
+   "why": "Instruments take tocar."
+  },
+  {
+   "before": "Los niños ",
+   "after": " en el patio.",
+   "options": [
+    "juegan",
+    "jugan",
+    "jugamos"
+   ],
+   "answer": 0,
+   "why": "Ellos: juegan."
+  },
+  {
+   "before": "Mi papá juega ",
+   "after": " béisbol los domingos.",
+   "options": [
+    "al",
+    "el",
+    "a la"
+   ],
+   "answer": 0,
+   "why": "Jugar a + el = jugar al béisbol."
+  },
+  {
+   "before": "Ayer yo ",
+   "after": " tres horas a los videojuegos.",
+   "options": [
+    "jugué",
+    "jugé",
+    "juegué"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: jugué."
+  },
+  {
+   "before": "¿Quién ",
+   "after": " mejor en el partido?",
+   "options": [
+    "jugó",
+    "juegó",
+    "jugo"
+   ],
+   "answer": 0,
+   "why": "Preterite él: jugó."
+  },
+  {
+   "before": "Mis primos y yo ",
+   "after": " a las cartas toda la noche.",
+   "options": [
+    "jugamos",
+    "juegamos",
+    "jugaron"
+   ],
+   "answer": 0,
+   "why": "Preterite nosotros: jugamos."
+  },
+  {
+   "before": "¿",
+   "after": " ustedes el partido del viernes?",
+   "options": [
+    "Jugaron",
+    "Juegaron",
+    "Jugamos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: jugaron."
+  }
+ ],
+ "reading": {
+  "titleEs": "El torneo de ajedrez",
+  "paragraphs": [
+   "Martín juega al ajedrez desde los seis años. Aprendió con su abuelo, que juega todas las tardes en un parque de Los Ángeles con otros señores. Martín también juega al fútbol y toca la batería, pero el ajedrez es su pasión.",
+   "En marzo jugó su primer torneo estatal en Sacramento. Jugó cinco partidas: ganó tres, empató una y perdió una. En la última partida jugó contra una chica de trece años que juega muy rápido. Perdió, pero después jugaron otra partida solo por diversión y se hicieron amigos."
+  ],
+  "comprehension": [
+   {
+    "before": "Martín aprendió a jugar al ajedrez con ",
+    "after": ".",
+    "options": [
+     "su abuelo",
+     "su papá",
+     "un profesor"
+    ],
+    "answer": 0,
+    "why": "With his grandfather."
+   },
+   {
+    "before": "Además del ajedrez, Martín ",
+    "after": ".",
+    "options": [
+     "toca la batería",
+     "toca el piano",
+     "juega al tenis"
+    ],
+    "answer": 0,
+    "why": "He plays soccer and the drums."
+   },
+   {
+    "before": "En el torneo, Martín ganó ",
+    "after": " partidas.",
+    "options": [
+     "tres",
+     "cinco",
+     "una"
+    ],
+    "answer": 0,
+    "why": "Three wins, one draw, one loss."
+   },
+   {
+    "before": "Después de la última partida, Martín y la chica ",
+    "after": ".",
+    "options": [
+     "se hicieron amigos",
+     "no se hablaron",
+     "jugaron al fútbol"
+    ],
+    "answer": 0,
+    "why": "They played for fun and became friends."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Juego la guitarra.",
+   "right": "Toco la guitarra.",
+   "why": "Instruments take tocar; jugar is for games and sports."
+  },
+  {
+   "wrong": "Yo jugo.",
+   "right": "Yo juego.",
+   "why": "Jugar changes u to ue in every present form except nosotros."
+  },
+  {
+   "wrong": "Ayer jugé.",
+   "right": "Ayer jugué.",
+   "why": "Before e, g needs a u: jugué."
+  }
+ ],
+ "heritage": "Heritage speakers sometimes write «jugé» or «jugastes». The written forms are jugué and jugaste. In many countries people say «jugar fútbol» without al; both are heard, but jugar al fútbol is the standard form in textbooks. Write about a game you play with your family, using jugar and tocar.",
+ "teacher": "Teachers: after the reading, students make a class chart of who plays which sport or game and who plays an instrument, practising jugar versus tocar. The preterite in the second paragraph is a model for reporting results of a school game.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb jugar». Jugar is the only verb with a u-ue change, so the page highlights it in the forms and the practice.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

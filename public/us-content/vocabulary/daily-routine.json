@@ -1,0 +1,388 @@
+{
+ "level": "A2",
+ "theme": "daily-routine",
+ "themeLabel": "Daily routine",
+ "title": "Spanish Daily Routine Vocabulary: Reflexive Verbs and Quiz",
+ "description": "Spanish daily routine vocabulary: reflexive verbs, times of day and sequence words, with a practice quiz that corrects itself and an A2 reading. No login.",
+ "h1": "Spanish daily routine vocabulary",
+ "titleEs": "Un día en la vida de una panadera",
+ "focus": "reflexive verbs, telling the time, sequence words",
+ "intro": "Learn the Spanish verbs and expressions for a daily routine, from waking up to going to bed, practice with instant feedback, then read the very early day of a baker in Valencia.",
+ "paragraphs": [
+  "Rocío tiene treinta y cinco años y es panadera en Valencia, España. Su horario es muy diferente al de sus amigos. Se despierta a las tres y media de la mañana, cuando la ciudad está en silencio. Se ducha rápidamente, se pone la ropa de trabajo y se toma un café con leche. A las cuatro ya está en la panadería.",
+  "Primero prepara la masa del pan con harina, agua, sal y levadura. Mientras la masa descansa, hace croissants y magdalenas. A las seis y media llega su ayudante, Iván, y juntos ponen los panes en el horno. La tienda abre a las siete y media, y los primeros clientes son siempre los mismos: un taxista, dos enfermeras del hospital y un señor mayor con su perro.",
+  "A las dos de la tarde Rocío cierra la panadería. Come en casa con su pareja y después se acuesta a dormir la siesta hasta las cinco. Por la tarde hace la compra para el día siguiente, pasea por el río o va al gimnasio. Los martes estudia inglés en una academia.",
+  "Rocío se acuesta a las nueve de la noche, cuando sus vecinos empiezan a cenar. Los domingos no trabaja y se levanta tarde, a las nueve, aunque dice que su cuerpo se despierta solo a las cuatro. «Me encanta mi trabajo», dice, «pero echo de menos salir por la noche con mis amigos»."
+ ],
+ "glossary": [
+  [
+   "la panadera",
+   "baker (female)"
+  ],
+  [
+   "el horario",
+   "schedule"
+  ],
+  [
+   "ducharse",
+   "to take a shower"
+  ],
+  [
+   "la masa",
+   "dough"
+  ],
+  [
+   "la harina",
+   "flour"
+  ],
+  [
+   "la levadura",
+   "yeast"
+  ],
+  [
+   "la magdalena",
+   "small sponge cake, like a muffin"
+  ],
+  [
+   "echar de menos",
+   "to miss (someone or something)"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Rocío se despierta a las ",
+   "after": ".",
+   "options": [
+    "tres y media",
+    "cuatro",
+    "seis y media"
+   ],
+   "answer": 0,
+   "why": "At 3:30 in the morning."
+  },
+  {
+   "before": "Antes de ir a trabajar, Rocío ",
+   "after": ".",
+   "options": [
+    "se ducha y toma un café",
+    "va al gimnasio",
+    "desayuna con su pareja"
+   ],
+   "answer": 0,
+   "why": "She showers, dresses and has a café con leche."
+  },
+  {
+   "before": "Iván llega a la panadería a las ",
+   "after": ".",
+   "options": [
+    "seis y media",
+    "cuatro",
+    "siete y media"
+   ],
+   "answer": 0,
+   "why": "Her assistant arrives at 6:30."
+  },
+  {
+   "before": "La tienda abre a las ",
+   "after": ".",
+   "options": [
+    "siete y media",
+    "seis",
+    "ocho"
+   ],
+   "answer": 0,
+   "why": "At 7:30."
+  },
+  {
+   "before": "Entre los primeros clientes hay ",
+   "after": ".",
+   "options": [
+    "un taxista",
+    "un profesor",
+    "un policía"
+   ],
+   "answer": 0,
+   "why": "A taxi driver, two nurses and an older man with his dog."
+  },
+  {
+   "before": "Después de comer, Rocío ",
+   "after": ".",
+   "options": [
+    "duerme la siesta",
+    "vuelve a la panadería",
+    "estudia inglés"
+   ],
+   "answer": 0,
+   "why": "She naps until five."
+  },
+  {
+   "before": "Rocío estudia inglés ",
+   "after": ".",
+   "options": [
+    "los martes",
+    "los domingos",
+    "todas las tardes"
+   ],
+   "answer": 0,
+   "why": "On Tuesdays at a language school."
+  },
+  {
+   "before": "Rocío echa de menos ",
+   "after": ".",
+   "options": [
+    "salir por la noche con sus amigos",
+    "dormir la siesta",
+    "su antiguo trabajo"
+   ],
+   "answer": 0,
+   "why": "Going out at night with friends."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: reflexive verbs",
+  "intro": "Reflexive verbs carry a pronoun that matches the subject: me, te, se, nos, se.",
+  "items": [
+   {
+    "before": "Rocío ",
+    "after": " despierta a las tres y media.",
+    "options": [
+     "se",
+     "me"
+    ],
+    "answer": 0,
+    "why": "Rocío (ella): se despierta."
+   },
+   {
+    "before": "Yo ",
+    "after": " acuesto a las once.",
+    "options": [
+     "me",
+     "se"
+    ],
+    "answer": 0,
+    "why": "Yo: me acuesto."
+   },
+   {
+    "before": "Los domingos Rocío y su pareja ",
+    "after": " levantan tarde.",
+    "options": [
+     "se",
+     "nos"
+    ],
+    "answer": 0,
+    "why": "Ellos: se levantan."
+   }
+  ]
+ },
+ "speaking": [
+  "¿A qué hora te despiertas y a qué hora te acuestas?",
+  "Describe tu rutina de un día de escuela en cinco pasos.",
+  "¿Te gustaría tener el horario de Rocío? ¿Por qué?"
+ ],
+ "heritage": "Heritage speakers often use reflexive verbs naturally, sometimes more than standard Spanish does («se comió todo el pan», «se murió»). In writing, check the spelling of «se acuesta» (with c, not s) and «se ducha», and the accents in «panadería» and «después». Then write your own routine in the voice of a family member who works early or late.",
+ "teacher": "Teachers: this text works well with a daily-routine unit because the schedule is so unusual. Students can draw a clock and mark Rocío's activities, then compare with their own day. The time expressions (a las tres y media, por la tarde) are useful for a quick listening dictation afterwards.",
+ "vocabulary": [
+  {
+   "title": "Morning",
+   "words": [
+    [
+     "despertarse",
+     "to wake up"
+    ],
+    [
+     "levantarse",
+     "to get up"
+    ],
+    [
+     "ducharse",
+     "to take a shower"
+    ],
+    [
+     "lavarse los dientes",
+     "to brush one's teeth"
+    ],
+    [
+     "peinarse",
+     "to comb one's hair"
+    ],
+    [
+     "vestirse",
+     "to get dressed"
+    ],
+    [
+     "desayunar",
+     "to have breakfast"
+    ]
+   ]
+  },
+  {
+   "title": "Afternoon and evening",
+   "words": [
+    [
+     "ir a la escuela / al trabajo",
+     "to go to school / to work"
+    ],
+    [
+     "almorzar",
+     "to have lunch"
+    ],
+    [
+     "hacer la tarea",
+     "to do homework"
+    ],
+    [
+     "descansar",
+     "to rest"
+    ],
+    [
+     "cenar",
+     "to have dinner"
+    ],
+    [
+     "acostarse",
+     "to go to bed"
+    ],
+    [
+     "dormirse",
+     "to fall asleep"
+    ]
+   ]
+  },
+  {
+   "title": "Time and sequence",
+   "words": [
+    [
+     "por la mañana",
+     "in the morning"
+    ],
+    [
+     "por la tarde",
+     "in the afternoon"
+    ],
+    [
+     "por la noche",
+     "at night"
+    ],
+    [
+     "primero",
+     "first"
+    ],
+    [
+     "después",
+     "after, then"
+    ],
+    [
+     "luego",
+     "later, then"
+    ],
+    [
+     "finalmente",
+     "finally"
+    ],
+    [
+     "todos los días",
+     "every day"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Suena el despertador y me ",
+   "after": ".",
+   "options": [
+    "despierto",
+    "acuesto",
+    "duermo"
+   ],
+   "answer": 0,
+   "why": "The alarm wakes you up: despertarse."
+  },
+  {
+   "before": "Después de comer me ",
+   "after": " los dientes.",
+   "options": [
+    "lavo",
+    "peino",
+    "visto"
+   ],
+   "answer": 0,
+   "why": "Brushing teeth: lavarse los dientes."
+  },
+  {
+   "before": "Primero me ducho y ",
+   "after": " me visto.",
+   "options": [
+    "después",
+    "anoche",
+    "nunca"
+   ],
+   "answer": 0,
+   "why": "Sequence: después."
+  },
+  {
+   "before": "A las diez de la noche me ",
+   "after": " porque estoy cansado.",
+   "options": [
+    "acuesto",
+    "levanto",
+    "despierto"
+   ],
+   "answer": 0,
+   "why": "Bedtime: acostarse."
+  },
+  {
+   "before": "Mi hermana se ",
+   "after": " con el pelo mojado.",
+   "options": [
+    "peina",
+    "duerme",
+    "almuerza"
+   ],
+   "answer": 0,
+   "why": "Combing hair: peinarse."
+  },
+  {
+   "before": "Por la tarde, cuando llego a casa, ",
+   "after": " la tarea.",
+   "options": [
+    "hago",
+    "me ducho",
+    "desayuno"
+   ],
+   "answer": 0,
+   "why": "Hacer la tarea."
+  },
+  {
+   "before": "Leo un libro en la cama y me ",
+   "after": " en diez minutos.",
+   "options": [
+    "duermo",
+    "despierto",
+    "levanto"
+   ],
+   "answer": 0,
+   "why": "Falling asleep: dormirse."
+  },
+  {
+   "before": "No tengo tiempo para ",
+   "after": ": solo tomo un café antes de salir.",
+   "options": [
+    "desayunar",
+    "cenar",
+    "acostarme"
+   ],
+   "answer": 0,
+   "why": "The morning meal: desayunar."
+  }
+ ],
+ "demand": {
+  "query": "spanish daily routine vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish daily routine vocabulary». Morning routine words and a daily routine example are also in the suggestions, so the reading is a full example day.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

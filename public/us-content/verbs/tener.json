@@ -1,0 +1,273 @@
+{
+ "verb": "tener",
+ "meaning": "to have",
+ "level": "A1",
+ "title": "Spanish Verb Tener Practice: Forms, Expressions and Quiz",
+ "description": "Practice the Spanish verb tener: present and preterite forms, tener que and common expressions, ten questions that correct themselves and a reading. Free.",
+ "h1": "Spanish verb tener: practice",
+ "intro": "Tener means «to have», but Spanish also uses it for age, hunger, fear and obligation. Learn the forms, the expressions English speakers get wrong and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb tener practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Possession",
+   "example": "Tengo dos hermanos y un perro.",
+   "meaning": "I have two siblings and a dog."
+  },
+  {
+   "use": "Age",
+   "example": "Mi abuela tiene ochenta años.",
+   "meaning": "My grandmother is eighty."
+  },
+  {
+   "use": "Physical feelings: hambre, sed, frío, calor, sueño",
+   "example": "¿Tienes hambre?",
+   "meaning": "Are you hungry?"
+  },
+  {
+   "use": "Fear, luck, reason, hurry: miedo, suerte, razón, prisa",
+   "example": "Tienes razón, vamos tarde.",
+   "meaning": "You're right, we're late."
+  },
+  {
+   "use": "Obligation: tener que + infinitive",
+   "example": "Tenemos que estudiar para el examen.",
+   "meaning": "We have to study for the test."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "tengo"
+  ],
+  [
+   "tú",
+   "tienes"
+  ],
+  [
+   "él / ella / usted",
+   "tiene"
+  ],
+  [
+   "nosotros / nosotras",
+   "tenemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "tienen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "tuve"
+  ],
+  [
+   "tú",
+   "tuviste"
+  ],
+  [
+   "él / ella / usted",
+   "tuvo"
+  ],
+  [
+   "nosotros / nosotras",
+   "tuvimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "tuvieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " quince años.",
+   "options": [
+    "tengo",
+    "soy",
+    "tiene"
+   ],
+   "answer": 0,
+   "why": "Age takes tener: tengo."
+  },
+  {
+   "before": "¿Cuántos años ",
+   "after": " tu hermano?",
+   "options": [
+    "tiene",
+    "es",
+    "tienes"
+   ],
+   "answer": 0,
+   "why": "Tu hermano is él: tiene."
+  },
+  {
+   "before": "Mis amigos ",
+   "after": " mucha hambre después del partido.",
+   "options": [
+    "tienen",
+    "están",
+    "tenemos"
+   ],
+   "answer": 0,
+   "why": "Hunger takes tener: tienen hambre."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " que hacer la tarea esta noche.",
+   "options": [
+    "tenemos",
+    "tienen",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Obligation: tener que, nosotros tenemos."
+  },
+  {
+   "before": "Cierra la ventana, por favor: ",
+   "after": " frío.",
+   "options": [
+    "tengo",
+    "estoy",
+    "soy"
+   ],
+   "answer": 0,
+   "why": "A person feels cold: tengo frío."
+  },
+  {
+   "before": "¡Qué ",
+   "after": "! Ganaste la lotería.",
+   "options": [
+    "suerte tienes",
+    "suerte eres",
+    "suerte estás"
+   ],
+   "answer": 0,
+   "why": "Luck: tener suerte."
+  },
+  {
+   "before": "Tú ",
+   "after": " razón: el examen es mañana, no hoy.",
+   "options": [
+    "tienes",
+    "eres",
+    "estás"
+   ],
+   "answer": 0,
+   "why": "Being right: tener razón."
+  },
+  {
+   "before": "Mi hermana pequeña ",
+   "after": " miedo de los perros.",
+   "options": [
+    "tiene",
+    "está",
+    "es"
+   ],
+   "answer": 0,
+   "why": "Fear: tener miedo."
+  },
+  {
+   "before": "Ayer ",
+   "after": " un examen muy difícil.",
+   "options": [
+    "tuve",
+    "tenía",
+    "tengo"
+   ],
+   "answer": 0,
+   "why": "A one-time event yesterday: tuve."
+  },
+  {
+   "before": "El año pasado mis padres ",
+   "after": " que trabajar los sábados.",
+   "options": [
+    "tuvieron",
+    "tuvo",
+    "tienen"
+   ],
+   "answer": 0,
+   "why": "Ellos, past period seen as finished: tuvieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "Un sábado complicado",
+  "paragraphs": [
+   "Este sábado tengo muchas cosas que hacer. Primero tengo que llevar a mi hermano Iker, que tiene siete años, a su partido de fútbol. Él siempre tiene prisa y yo siempre tengo sueño, porque los sábados no tengo clase y me gusta dormir.",
+   "Después del partido, Iker y yo tenemos mucha hambre, así que vamos a una taquería. Por la tarde tengo que estudiar: el lunes tengo un examen de química y tengo un poco de miedo. Mi mamá dice que no tengo razón, que tengo buenas notas y que voy a aprobar. Ojalá tenga suerte."
+  ],
+  "comprehension": [
+   {
+    "before": "Iker tiene ",
+    "after": " años.",
+    "options": [
+     "siete",
+     "diez",
+     "cinco"
+    ],
+    "answer": 0,
+    "why": "«Tiene siete años.»"
+   },
+   {
+    "before": "La narradora tiene sueño porque ",
+    "after": ".",
+    "options": [
+     "le gusta dormir los sábados",
+     "estudió toda la noche",
+     "trabaja de noche"
+    ],
+    "answer": 0,
+    "why": "She likes sleeping in on Saturdays."
+   },
+   {
+    "before": "Después del partido van a ",
+    "after": ".",
+    "options": [
+     "una taquería",
+     "casa",
+     "la biblioteca"
+    ],
+    "answer": 0,
+    "why": "They are hungry and go to a taquería."
+   },
+   {
+    "before": "El lunes la narradora tiene ",
+    "after": ".",
+    "options": [
+     "un examen de química",
+     "un partido",
+     "una fiesta"
+    ],
+    "answer": 0,
+    "why": "A chemistry exam."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Soy 15 años.",
+   "right": "Tengo 15 años.",
+   "why": "Age uses tener."
+  },
+  {
+   "wrong": "Estoy hambre.",
+   "right": "Tengo hambre.",
+   "why": "Hunger, thirst, cold, heat and sleepiness use tener + noun."
+  },
+  {
+   "wrong": "Tengo que a estudiar.",
+   "right": "Tengo que estudiar.",
+   "why": "Tener que goes straight to the infinitive, with no «a»."
+  }
+ ],
+ "heritage": "Heritage speakers sometimes write «tuvistes» or «tenemos» spelled «tenémos»: the tú preterite is tuviste, and tenemos has no accent. Remember the v in tuve, tuviste and tuvo, never b. Write a paragraph about a busy day using tener que at least four times.",
+ "teacher": "Teachers: use the reading to collect every tener expression on the board (tener prisa, tener sueño, tener hambre, tener miedo, tener razón, tener suerte). Students then mime one expression and the class guesses it in Spanish, a quick and memorable review.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb tener». 6 of them ask for conjugation, charts or tenses (conjugation, conjugation chart, present tense, past tense, chart, tenses). 1 asks for practice (practice). Searchers who want practice find it here: tener expressions, ten questions and a short story.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "school",
+ "themeLabel": "School",
+ "title": "Spanish School Vocabulary: Supplies, Subjects and Practice",
+ "description": "Spanish school vocabulary: school supplies, subjects and places, with a practice quiz that corrects itself and a short A1 reading set in Quito. Free.",
+ "h1": "Spanish school vocabulary",
+ "titleEs": "Primer día en Quito",
+ "focus": "tener, hay, school subjects and objects",
+ "intro": "Learn the Spanish words for school supplies, subjects and places at school, practice them with instant feedback, then read about Sofía's first day at a new school in Quito.",
+ "paragraphs": [
+  "Me llamo Sofía y hoy es mi primer día en un colegio nuevo. Mi familia vive ahora en Quito, la capital de Ecuador, porque mi mamá tiene un trabajo nuevo aquí. Antes vivíamos en Guayaquil, donde hace mucho calor. En Quito hace frío por la mañana.",
+  "Mi clase está en el segundo piso. Hay veinticuatro estudiantes, una pizarra blanca, un mapa de América del Sur y una ventana muy grande. Desde la ventana veo el volcán Pichincha. Mi profesor se llama señor Vera; es simpático y habla despacio.",
+  "Tengo seis materias: matemáticas, lengua, ciencias, historia, inglés y educación física. Mi materia favorita es ciencias porque hacemos experimentos. No me gusta mucho la historia, porque hay muchas fechas. A las diez y media tenemos el recreo. Una chica, Daniela, comparte su pan conmigo y hablamos de música. Creo que este colegio va a ser bueno."
+ ],
+ "glossary": [
+  [
+   "el colegio",
+   "school"
+  ],
+  [
+   "el piso",
+   "floor (of a building)"
+  ],
+  [
+   "la pizarra",
+   "the board"
+  ],
+  [
+   "la ventana",
+   "the window"
+  ],
+  [
+   "despacio",
+   "slowly"
+  ],
+  [
+   "la materia",
+   "school subject"
+  ],
+  [
+   "el recreo",
+   "break, recess"
+  ],
+  [
+   "compartir",
+   "to share"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Sofía vive ahora en ",
+   "after": ".",
+   "options": [
+    "Quito",
+    "Guayaquil",
+    "Lima"
+   ],
+   "answer": 0,
+   "why": "Her family now lives in Quito, the capital of Ecuador."
+  },
+  {
+   "before": "La familia cambia de ciudad por ",
+   "after": ".",
+   "options": [
+    "el trabajo de la mamá",
+    "el colegio",
+    "el clima"
+   ],
+   "answer": 0,
+   "why": "«Mi mamá tiene un trabajo nuevo aquí.»"
+  },
+  {
+   "before": "En la clase hay ",
+   "after": " estudiantes.",
+   "options": [
+    "veinticuatro",
+    "veinte",
+    "catorce"
+   ],
+   "answer": 0,
+   "why": "«Hay veinticuatro estudiantes.»"
+  },
+  {
+   "before": "Desde la ventana Sofía ve ",
+   "after": ".",
+   "options": [
+    "un volcán",
+    "el mar",
+    "un parque"
+   ],
+   "answer": 0,
+   "why": "She sees the Pichincha volcano."
+  },
+  {
+   "before": "La materia favorita de Sofía es ",
+   "after": ".",
+   "options": [
+    "ciencias",
+    "historia",
+    "inglés"
+   ],
+   "answer": 0,
+   "why": "She likes science because they do experiments."
+  },
+  {
+   "before": "En el recreo Daniela comparte ",
+   "after": " con Sofía.",
+   "options": [
+    "su pan",
+    "su libro",
+    "su música"
+   ],
+   "answer": 0,
+   "why": "«Comparte su pan conmigo.»"
+  }
+ ],
+ "grammar": {
+  "title": "Practice: hay or tiene / tengo",
+  "intro": "«Hay» says that something exists in a place; «tener» says who has it.",
+  "items": [
+   {
+    "before": "En mi clase ",
+    "after": " un mapa grande.",
+    "options": [
+     "hay",
+     "tiene"
+    ],
+    "answer": 0,
+    "why": "Something exists in a place: hay."
+   },
+   {
+    "before": "Yo ",
+    "after": " seis materias este año.",
+    "options": [
+     "hay",
+     "tengo"
+    ],
+    "answer": 1,
+    "why": "The subject is «yo»: tengo."
+   },
+   {
+    "before": "Sofía ",
+    "after": " una amiga nueva.",
+    "options": [
+     "hay",
+     "tiene"
+    ],
+    "answer": 1,
+    "why": "Sofía has a friend: tiene."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuántas materias tienes? ¿Cuál es tu favorita y por qué?",
+  "¿Qué hay en tu clase de español?",
+  "¿Qué haces en el recreo o en el almuerzo?"
+ ],
+ "heritage": "If Spanish is your home language, the challenge here is writing, not understanding. Notice the accents on matemáticas, educación física and día, and the lack of an accent on «examen» in the singular. Many heritage speakers write «escuela» with an extra «s» (excuela) or «colegio» with a j: read the words aloud and spell them. Then write a paragraph about your own first day at a school.",
+ "teacher": "Teachers: use the text at the start of the year or with a school-supplies unit. Students can sketch Sofía's classroom from the second paragraph, then label it with hay. The timetable paragraph sets up a quick survey: «¿Cuál es tu materia favorita?» with tallies on the board.",
+ "vocabulary": [
+  {
+   "title": "School supplies",
+   "words": [
+    [
+     "el lápiz",
+     "pencil"
+    ],
+    [
+     "el bolígrafo / la pluma",
+     "pen"
+    ],
+    [
+     "el cuaderno",
+     "notebook"
+    ],
+    [
+     "el libro",
+     "book"
+    ],
+    [
+     "la mochila",
+     "backpack"
+    ],
+    [
+     "la regla",
+     "ruler"
+    ],
+    [
+     "las tijeras",
+     "scissors"
+    ],
+    [
+     "la calculadora",
+     "calculator"
+    ],
+    [
+     "el borrador",
+     "eraser"
+    ]
+   ]
+  },
+  {
+   "title": "Subjects",
+   "words": [
+    [
+     "las matemáticas",
+     "math"
+    ],
+    [
+     "las ciencias",
+     "science"
+    ],
+    [
+     "la historia",
+     "history"
+    ],
+    [
+     "el inglés",
+     "English"
+    ],
+    [
+     "el arte",
+     "art"
+    ],
+    [
+     "la educación física",
+     "PE"
+    ],
+    [
+     "la música",
+     "music"
+    ]
+   ]
+  },
+  {
+   "title": "Places and people",
+   "words": [
+    [
+     "el aula / la clase",
+     "classroom"
+    ],
+    [
+     "la biblioteca",
+     "library"
+    ],
+    [
+     "el gimnasio",
+     "gym"
+    ],
+    [
+     "la cafetería",
+     "cafeteria"
+    ],
+    [
+     "el recreo",
+     "recess, break"
+    ],
+    [
+     "el director / la directora",
+     "principal"
+    ],
+    [
+     "el uniforme",
+     "school uniform"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Escribo en mi ",
+   "after": " con un lápiz.",
+   "options": [
+    "cuaderno",
+    "mochila",
+    "regla"
+   ],
+   "answer": 0,
+   "why": "You write in a notebook."
+  },
+  {
+   "before": "Si escribo mal con lápiz, uso el ",
+   "after": ".",
+   "options": [
+    "borrador",
+    "bolígrafo",
+    "libro"
+   ],
+   "answer": 0,
+   "why": "An eraser fixes pencil mistakes."
+  },
+  {
+   "before": "Llevo los libros en la ",
+   "after": ".",
+   "options": [
+    "mochila",
+    "calculadora",
+    "biblioteca"
+   ],
+   "answer": 0,
+   "why": "Books go in the backpack."
+  },
+  {
+   "before": "En la clase de ",
+   "after": " estudiamos los números.",
+   "options": [
+    "matemáticas",
+    "historia",
+    "arte"
+   ],
+   "answer": 0,
+   "why": "Numbers: math class."
+  },
+  {
+   "before": "Para cortar papel necesito ",
+   "after": ".",
+   "options": [
+    "tijeras",
+    "una regla",
+    "un borrador"
+   ],
+   "answer": 0,
+   "why": "Scissors cut paper."
+  },
+  {
+   "before": "Leo libros en silencio en la ",
+   "after": ".",
+   "options": [
+    "biblioteca",
+    "cafetería",
+    "educación física"
+   ],
+   "answer": 0,
+   "why": "Quiet reading happens in the library."
+  },
+  {
+   "before": "Corremos y jugamos al básquetbol en el ",
+   "after": ".",
+   "options": [
+    "gimnasio",
+    "aula",
+    "cuaderno"
+   ],
+   "answer": 0,
+   "why": "The gym is for sport."
+  },
+  {
+   "before": "La persona que dirige la escuela es la ",
+   "after": ".",
+   "options": [
+    "directora",
+    "estudiante",
+    "bibliotecaria"
+   ],
+   "answer": 0,
+   "why": "The principal: el director or la directora."
+  }
+ ],
+ "demand": {
+  "query": "spanish school vocabulary quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish school vocabulary». 2 of them ask for something to do with the words (worksheet, quizlet), not only a list. One suggestion asks specifically for school supplies and another for the school uniform, so both are in the list.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

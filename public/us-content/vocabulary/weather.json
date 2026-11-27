@@ -1,0 +1,357 @@
+{
+ "level": "A1",
+ "theme": "weather",
+ "themeLabel": "Weather",
+ "title": "Spanish Weather Vocabulary: List, Practice and Reading",
+ "description": "Spanish weather vocabulary with hace, está and hay expressions, seasons, a practice quiz that corrects itself and a short A1 reading. Free, no login.",
+ "h1": "Spanish weather vocabulary",
+ "titleEs": "Dos ciudades, dos climas",
+ "focus": "weather expressions with hace, está and hay; seasons",
+ "intro": "Learn how to talk about the weather in Spanish with hace, está and hay, the seasons and key words, then read two cousins compare winter in Santiago with summer in Miami.",
+ "paragraphs": [
+  "Ignacio vive en Santiago de Chile y su prima Paula vive en Miami, en Estados Unidos. Todos los domingos hablan por videollamada. Hoy es el quince de julio y los dos primos hablan del tiempo.",
+  "En Santiago es invierno. Hace frío por la mañana, más o menos cinco grados, y el cielo está nublado. A veces llueve y en las montañas hay nieve. Ignacio lleva un abrigo, una bufanda y un gorro de lana. Le gusta el invierno porque los fines de semana va a esquiar con su papá.",
+  "En Miami es verano. Hace mucho calor, treinta y dos grados, y hay mucha humedad. Por la tarde casi siempre hay tormenta, con lluvia fuerte durante una hora, y después sale el sol otra vez. Paula lleva pantalones cortos y sandalias, y va a la playa con sus amigas. Ignacio dice: «¡Qué suerte!». Paula responde: «En diciembre, cuando aquí hace fresco, tú vas a tener calor»."
+ ],
+ "glossary": [
+  [
+   "el tiempo",
+   "the weather (also: time)"
+  ],
+  [
+   "nublado",
+   "cloudy"
+  ],
+  [
+   "llover / llueve",
+   "to rain / it rains"
+  ],
+  [
+   "la nieve",
+   "snow"
+  ],
+  [
+   "el abrigo",
+   "the coat"
+  ],
+  [
+   "la bufanda",
+   "the scarf"
+  ],
+  [
+   "la humedad",
+   "humidity"
+  ],
+  [
+   "la tormenta",
+   "storm"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Ignacio vive en ",
+   "after": ".",
+   "options": [
+    "Santiago de Chile",
+    "Miami",
+    "Lima"
+   ],
+   "answer": 0,
+   "why": "Paula is the one in Miami."
+  },
+  {
+   "before": "En julio, en Santiago es ",
+   "after": ".",
+   "options": [
+    "invierno",
+    "verano",
+    "primavera"
+   ],
+   "answer": 0,
+   "why": "July is winter in Chile."
+  },
+  {
+   "before": "Por la mañana en Santiago hay más o menos ",
+   "after": " grados.",
+   "options": [
+    "cinco",
+    "quince",
+    "treinta y dos"
+   ],
+   "answer": 0,
+   "why": "«Más o menos cinco grados.»"
+  },
+  {
+   "before": "A Ignacio le gusta el invierno porque ",
+   "after": ".",
+   "options": [
+    "va a esquiar",
+    "va a la playa",
+    "no tiene clases"
+   ],
+   "answer": 0,
+   "why": "He goes skiing with his father."
+  },
+  {
+   "before": "En Miami, por la tarde, casi siempre hay ",
+   "after": ".",
+   "options": [
+    "tormenta",
+    "nieve",
+    "viento frío"
+   ],
+   "answer": 0,
+   "why": "A strong afternoon storm for about an hour."
+  },
+  {
+   "before": "En diciembre, en Santiago ",
+   "after": ".",
+   "options": [
+    "hace calor",
+    "hace frío",
+    "nieva"
+   ],
+   "answer": 0,
+   "why": "Paula says Ignacio will be hot in December: summer in Chile."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: hace, está or hay",
+  "intro": "Hace + calor, frío, sol, viento; está + nublado, despejado; hay + nieve, tormenta, humedad.",
+  "items": [
+   {
+    "before": "Hoy ",
+    "after": " mucho calor en Miami.",
+    "options": [
+     "hace",
+     "está"
+    ],
+    "answer": 0,
+    "why": "Hace calor."
+   },
+   {
+    "before": "En Santiago el cielo ",
+    "after": " nublado.",
+    "options": [
+     "hace",
+     "está"
+    ],
+    "answer": 1,
+    "why": "Está nublado."
+   },
+   {
+    "before": "En las montañas ",
+    "after": " nieve.",
+    "options": [
+     "hay",
+     "hace"
+    ],
+    "answer": 0,
+    "why": "Hay nieve: there is snow."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué tiempo hace hoy en tu ciudad?",
+  "¿Cuál es tu estación favorita y por qué?",
+  "¿Qué ropa llevas cuando hace frío?"
+ ],
+ "heritage": "Heritage speakers who learned Spanish in the United States sometimes translate «it is cold» as «es frío». In Spanish the weather uses «hace frío», and a person «tiene frío». Write three sentences that use each one correctly. Also check «llueve» with double l and «nieve» with v, two words that often appear misspelled in student writing.",
+ "teacher": "Teachers: this text fits a weather unit and gives a natural reason to talk about the southern hemisphere. Put a world map on the board and ask students to mark both cities and the season in each one. The final line invites a pair task: each student plays one cousin and describes today's weather.",
+ "vocabulary": [
+  {
+   "title": "With hace",
+   "words": [
+    [
+     "hace calor",
+     "it's hot"
+    ],
+    [
+     "hace frío",
+     "it's cold"
+    ],
+    [
+     "hace sol",
+     "it's sunny"
+    ],
+    [
+     "hace viento",
+     "it's windy"
+    ],
+    [
+     "hace fresco",
+     "it's cool"
+    ],
+    [
+     "hace buen tiempo",
+     "the weather is nice"
+    ],
+    [
+     "hace mal tiempo",
+     "the weather is bad"
+    ]
+   ]
+  },
+  {
+   "title": "With está, hay and verbs",
+   "words": [
+    [
+     "está nublado",
+     "it's cloudy"
+    ],
+    [
+     "está despejado",
+     "it's clear"
+    ],
+    [
+     "hay niebla",
+     "it's foggy"
+    ],
+    [
+     "hay tormenta",
+     "there's a storm"
+    ],
+    [
+     "llueve / está lloviendo",
+     "it rains / it's raining"
+    ],
+    [
+     "nieva / está nevando",
+     "it snows / it's snowing"
+    ],
+    [
+     "los grados",
+     "degrees"
+    ]
+   ]
+  },
+  {
+   "title": "Seasons",
+   "words": [
+    [
+     "la primavera",
+     "spring"
+    ],
+    [
+     "el verano",
+     "summer"
+    ],
+    [
+     "el otoño",
+     "fall"
+    ],
+    [
+     "el invierno",
+     "winter"
+    ],
+    [
+     "el clima",
+     "climate"
+    ],
+    [
+     "el pronóstico",
+     "forecast"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Necesito un paraguas porque ",
+   "after": ".",
+   "options": [
+    "llueve",
+    "hace sol",
+    "hace calor"
+   ],
+   "answer": 0,
+   "why": "An umbrella: it's raining."
+  },
+  {
+   "before": "En el verano de Texas ",
+   "after": " mucho calor.",
+   "options": [
+    "hace",
+    "está",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Heat takes hace."
+  },
+  {
+   "before": "No veo el sol: el cielo ",
+   "after": " nublado.",
+   "options": [
+    "está",
+    "hace",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Cloudy takes está."
+  },
+  {
+   "before": "No vemos los coches por la mañana porque hay ",
+   "after": ".",
+   "options": [
+    "niebla",
+    "sol",
+    "calor"
+   ],
+   "answer": 0,
+   "why": "Fog makes it hard to see."
+  },
+  {
+   "before": "Las hojas de los árboles caen en ",
+   "after": ".",
+   "options": [
+    "otoño",
+    "primavera",
+    "verano"
+   ],
+   "answer": 0,
+   "why": "Leaves fall in autumn."
+  },
+  {
+   "before": "Las flores salen en ",
+   "after": ".",
+   "options": [
+    "primavera",
+    "invierno",
+    "otoño"
+   ],
+   "answer": 0,
+   "why": "Flowers bloom in spring."
+  },
+  {
+   "before": "Según el ",
+   "after": ", mañana va a llover.",
+   "options": [
+    "pronóstico",
+    "clima",
+    "invierno"
+   ],
+   "answer": 0,
+   "why": "The forecast tells you about tomorrow."
+  },
+  {
+   "before": "Hace mucho viento y la gorra se me ",
+   "after": ".",
+   "options": [
+    "vuela",
+    "llueve",
+    "nieva"
+   ],
+   "answer": 0,
+   "why": "Wind blows your cap away: volar."
+  }
+ ],
+ "demand": {
+  "query": "spanish weather vocabulary quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish weather vocabulary». 2 of them ask for something to do with the words (quizlet, quiz), not only a list. 1 asks for a PDF. Climate is also in the suggestions, so the reading compares two climates, not just one day's weather.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

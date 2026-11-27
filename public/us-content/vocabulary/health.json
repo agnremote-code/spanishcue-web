@@ -1,0 +1,396 @@
+{
+ "level": "A2",
+ "theme": "health",
+ "themeLabel": "Health",
+ "title": "Spanish Health Vocabulary: Body, Illnesses and Doctor Quiz",
+ "description": "Spanish health vocabulary: body parts, illnesses and words for the doctor, with a practice quiz that corrects itself and an A2 reading. No login.",
+ "h1": "Spanish health vocabulary",
+ "titleEs": "En la consulta del médico",
+ "focus": "doler and body parts, giving advice with tener que and deber",
+ "intro": "Learn the Spanish words for the body, common illnesses and a visit to the doctor, practice with instant feedback, then read about Daniel's visit to a clinic in Costa Rica.",
+ "paragraphs": [
+  "Daniel tiene diecisiete años y vive en San José, Costa Rica. El lunes por la mañana se despertó con un dolor de garganta muy fuerte. También le dolía la cabeza y tenía frío, aunque en San José no hace frío en marzo. Ese día tenía un examen de química, pero su mamá le dijo: «Hoy no vas al colegio, vamos al médico».",
+  "En la clínica esperaron media hora. La doctora Solís le preguntó a Daniel qué le pasaba. Él le explicó que le dolían la garganta y la cabeza, que estaba muy cansado y que no tenía hambre. La doctora le tomó la temperatura: treinta y ocho grados y medio. Después le miró la garganta y le escuchó los pulmones.",
+  "«Tienes una infección de garganta», dijo la doctora. «No es grave, pero tienes que tomar este antibiótico cada ocho horas durante siete días. Debes beber mucha agua y descansar. No debes ir al colegio hasta el jueves.» Daniel preguntó por su examen, y la doctora sonrió: «Te voy a dar una nota para tu profesor».",
+  "Daniel pasó tres días en la cama. Su hermana le preparó sopa de pollo y le trajo los apuntes de clase. El jueves ya se sentía mucho mejor. El viernes hizo el examen de química y sacó un ocho. Ahora siempre lleva una chaqueta cuando llueve por la tarde."
+ ],
+ "glossary": [
+  [
+   "la garganta",
+   "throat"
+  ],
+  [
+   "doler",
+   "to hurt (me duele, le dolían)"
+  ],
+  [
+   "la consulta / la clínica",
+   "doctor's office / clinic"
+  ],
+  [
+   "los pulmones",
+   "lungs"
+  ],
+  [
+   "grave",
+   "serious"
+  ],
+  [
+   "descansar",
+   "to rest"
+  ],
+  [
+   "los apuntes",
+   "class notes"
+  ],
+  [
+   "sacar un ocho",
+   "to get an eight (a grade out of ten)"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Daniel se despertó con dolor de ",
+   "after": ".",
+   "options": [
+    "garganta",
+    "estómago",
+    "espalda"
+   ],
+   "answer": 0,
+   "why": "A very strong sore throat."
+  },
+  {
+   "before": "Ese lunes Daniel tenía un examen de ",
+   "after": ".",
+   "options": [
+    "química",
+    "historia",
+    "matemáticas"
+   ],
+   "answer": 0,
+   "why": "A chemistry exam."
+  },
+  {
+   "before": "En la clínica esperaron ",
+   "after": ".",
+   "options": [
+    "media hora",
+    "dos horas",
+    "cinco minutos"
+   ],
+   "answer": 0,
+   "why": "Half an hour."
+  },
+  {
+   "before": "Daniel tenía una temperatura de ",
+   "after": " grados.",
+   "options": [
+    "38,5",
+    "37",
+    "40"
+   ],
+   "answer": 0,
+   "why": "Thirty-eight and a half degrees."
+  },
+  {
+   "before": "Según la doctora, Daniel tiene ",
+   "after": ".",
+   "options": [
+    "una infección de garganta",
+    "gripe",
+    "una alergia"
+   ],
+   "answer": 0,
+   "why": "A throat infection, not serious."
+  },
+  {
+   "before": "Tiene que tomar el antibiótico ",
+   "after": ".",
+   "options": [
+    "cada ocho horas",
+    "una vez al día",
+    "cada dos horas"
+   ],
+   "answer": 0,
+   "why": "Every eight hours for seven days."
+  },
+  {
+   "before": "Su hermana le trajo ",
+   "after": ".",
+   "options": [
+    "los apuntes de clase",
+    "el antibiótico",
+    "una chaqueta"
+   ],
+   "answer": 0,
+   "why": "Soup and his class notes."
+  },
+  {
+   "before": "En el examen de química Daniel sacó ",
+   "after": ".",
+   "options": [
+    "un ocho",
+    "un diez",
+    "un cinco"
+   ],
+   "answer": 0,
+   "why": "He got an eight on Friday."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: me duele or me duelen",
+  "intro": "Doler works like gustar: duele with one body part, duelen with two or more.",
+  "items": [
+   {
+    "before": "A Daniel le ",
+    "after": " la garganta.",
+    "options": [
+     "duele",
+     "duelen"
+    ],
+    "answer": 0,
+    "why": "One part (la garganta): duele."
+   },
+   {
+    "before": "Me ",
+    "after": " los pies después del partido.",
+    "options": [
+     "duele",
+     "duelen"
+    ],
+    "answer": 1,
+    "why": "Two feet: duelen."
+   },
+   {
+    "before": "¿Te ",
+    "after": " la cabeza?",
+    "options": [
+     "duele",
+     "duelen"
+    ],
+    "answer": 0,
+    "why": "La cabeza: duele."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué haces cuando te duele la garganta?",
+  "Da tres consejos para estar sano con «tienes que» o «debes».",
+  "¿Cómo es una visita al médico en tu país?"
+ ],
+ "heritage": "Heritage speakers often say «me duele mi cabeza» in conversation, following English. In standard Spanish the body part takes the article: «me duele la cabeza». Rewrite three sentences about a time you were sick using this pattern. Also check the spelling of «garganta», «estómago» (with accent) and «tos», and the h in «hospital» and «hierro».",
+ "teacher": "Teachers: this reading fits a health unit and gives a model doctor-patient dialogue for a role play. Students can underline every piece of advice the doctor gives and sort it into «tienes que» and «debes». The detail about the note for the teacher opens a short discussion about school rules for sick days.",
+ "vocabulary": [
+  {
+   "title": "The body",
+   "words": [
+    [
+     "la cabeza",
+     "head"
+    ],
+    [
+     "la garganta",
+     "throat"
+    ],
+    [
+     "el estómago",
+     "stomach"
+    ],
+    [
+     "la espalda",
+     "back"
+    ],
+    [
+     "el brazo",
+     "arm"
+    ],
+    [
+     "la pierna",
+     "leg"
+    ],
+    [
+     "el pie",
+     "foot"
+    ],
+    [
+     "los ojos",
+     "eyes"
+    ],
+    [
+     "el corazón",
+     "heart"
+    ]
+   ]
+  },
+  {
+   "title": "Symptoms and illnesses",
+   "words": [
+    [
+     "la fiebre",
+     "fever"
+    ],
+    [
+     "la tos",
+     "cough"
+    ],
+    [
+     "el resfriado",
+     "cold"
+    ],
+    [
+     "la gripe",
+     "flu"
+    ],
+    [
+     "la alergia",
+     "allergy"
+    ],
+    [
+     "estar mareado / mareada",
+     "to be dizzy"
+    ],
+    [
+     "me duele…",
+     "my … hurts"
+    ]
+   ]
+  },
+  {
+   "title": "At the doctor",
+   "words": [
+    [
+     "la cita",
+     "appointment"
+    ],
+    [
+     "el médico / la médica",
+     "doctor"
+    ],
+    [
+     "el enfermero / la enfermera",
+     "nurse"
+    ],
+    [
+     "la receta",
+     "prescription"
+    ],
+    [
+     "la pastilla",
+     "pill"
+    ],
+    [
+     "el jarabe",
+     "syrup"
+    ],
+    [
+     "la farmacia",
+     "pharmacy"
+    ],
+    [
+     "el seguro médico",
+     "health insurance"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Tengo treinta y nueve grados: tengo ",
+   "after": ".",
+   "options": [
+    "fiebre",
+    "tos",
+    "alergia"
+   ],
+   "answer": 0,
+   "why": "39 °C: fever."
+  },
+  {
+   "before": "Mi hermano comió demasiado y le duele el ",
+   "after": ".",
+   "options": [
+    "estómago",
+    "pie",
+    "brazo"
+   ],
+   "answer": 0,
+   "why": "Too much food: stomach ache."
+  },
+  {
+   "before": "Ana corrió una maratón y le duelen las ",
+   "after": ".",
+   "options": [
+    "piernas",
+    "orejas",
+    "manos"
+   ],
+   "answer": 0,
+   "why": "After a marathon: legs."
+  },
+  {
+   "before": "Tengo ",
+   "after": " a las tres para ver a la doctora.",
+   "options": [
+    "una cita",
+    "una receta",
+    "un jarabe"
+   ],
+   "answer": 0,
+   "why": "An appointment: cita."
+  },
+  {
+   "before": "En primavera estornudo mucho por la ",
+   "after": ".",
+   "options": [
+    "alergia",
+    "gripe",
+    "espalda"
+   ],
+   "answer": 0,
+   "why": "Spring sneezing: allergies."
+  },
+  {
+   "before": "La médica me da una ",
+   "after": " para comprar el medicamento.",
+   "options": [
+    "receta",
+    "fiebre",
+    "cita"
+   ],
+   "answer": 0,
+   "why": "A prescription: receta."
+  },
+  {
+   "before": "Para la tos, tomo un ",
+   "after": " dos veces al día.",
+   "options": [
+    "jarabe",
+    "pie",
+    "seguro"
+   ],
+   "answer": 0,
+   "why": "Cough syrup: jarabe."
+  },
+  {
+   "before": "El ",
+   "after": " bombea la sangre.",
+   "options": [
+    "corazón",
+    "estómago",
+    "ojo"
+   ],
+   "answer": 0,
+   "why": "The heart pumps blood."
+  }
+ ],
+ "demand": {
+  "query": "spanish health vocabulary quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish health vocabulary». 1 of them asks for something to do with the words (quizlet), not only a list. Several of them ask for medical vocabulary and illnesses, so the list goes past body parts to symptoms and treatment.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
