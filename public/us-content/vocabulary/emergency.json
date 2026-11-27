@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "emergency",
+ "themeLabel": "Emergency",
+ "title": "Spanish Emergency Vocabulary: Words and Phrases to Get Help",
+ "description": "Spanish emergency words and phrases: ¡Ayuda!, llame al 911, la ambulancia, los bomberos and how to describe what happened, with a quiz and an A2 reading.",
+ "h1": "Spanish emergency vocabulary",
+ "titleEs": "La alarma de la madrugada",
+ "focus": "the preterite and commands in an emergency",
+ "intro": "Learn the Spanish words and phrases to ask for help in an emergency, call 911, describe what happened and understand the questions you will hear. Practice with instant feedback, then read about a fire alarm in an apartment building.",
+ "paragraphs": [
+  "A las tres de la madrugada, sonó la alarma de incendios en el edificio de la señora Ortega, en el Bronx. Ella se despertó asustada y olió humo. Su nieto Javier, de diecisiete años, que vive con ella, la ayudó a ponerse los zapatos y un abrigo.",
+  "En el pasillo había mucho humo. Javier recordó lo que aprendió en la escuela: no usar el ascensor y bajar por la escalera de emergencia. Agarró la mano de su abuela y bajaron despacio los cinco pisos. Mientras bajaban, Javier llamó al 911.",
+  "La operadora le preguntó la dirección, cuántas personas había en el apartamento y si alguien estaba herido. Javier contestó con calma y le dijo que su abuela prefería hablar en español. La operadora conectó a un intérprete, y la señora Ortega explicó que una vecina del cuarto piso vivía sola y usaba silla de ruedas.",
+  "Los bomberos llegaron en cinco minutos. Subieron al cuarto piso y ayudaron a la vecina a salir. El fuego empezó en una cocina, pero no se extendió. Nadie resultó herido. Al día siguiente, la vecina le llevó a la señora Ortega un pastel para darle las gracias, y Javier recibió una carta de los bomberos por actuar con tanta calma."
+ ],
+ "glossary": [
+  [
+   "la madrugada",
+   "early morning"
+  ],
+  [
+   "asustado / asustada",
+   "frightened"
+  ],
+  [
+   "oler humo",
+   "to smell smoke"
+  ],
+  [
+   "el pasillo",
+   "hallway"
+  ],
+  [
+   "el ascensor",
+   "elevator"
+  ],
+  [
+   "los pisos",
+   "floors"
+  ],
+  [
+   "la silla de ruedas",
+   "wheelchair"
+  ],
+  [
+   "extenderse",
+   "to spread"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La alarma sonó a las ",
+   "after": ".",
+   "options": [
+    "tres de la madrugada",
+    "tres de la tarde",
+    "diez de la noche"
+   ],
+   "answer": 0,
+   "why": "At three in the morning."
+  },
+  {
+   "before": "Javier no usó el ascensor porque ",
+   "after": ".",
+   "options": [
+    "lo aprendió en la escuela",
+    "estaba roto",
+    "no había"
+   ],
+   "answer": 0,
+   "why": "He learned in school not to use it in a fire."
+  },
+  {
+   "before": "Bajaron ",
+   "after": ".",
+   "options": [
+    "cinco pisos por la escalera",
+    "en el ascensor",
+    "por la ventana"
+   ],
+   "answer": 0,
+   "why": "Five floors by the stairs."
+  },
+  {
+   "before": "La operadora conectó a un intérprete porque ",
+   "after": ".",
+   "options": [
+    "la abuela prefería hablar en español",
+    "Javier no sabía inglés",
+    "había mucho ruido"
+   ],
+   "answer": 0,
+   "why": "Grandma preferred Spanish."
+  },
+  {
+   "before": "La vecina del cuarto piso ",
+   "after": ".",
+   "options": [
+    "usaba silla de ruedas",
+    "era bombera",
+    "no estaba en casa"
+   ],
+   "answer": 0,
+   "why": "She used a wheelchair."
+  },
+  {
+   "before": "El fuego empezó en ",
+   "after": ".",
+   "options": [
+    "una cocina",
+    "el ascensor",
+    "el sótano"
+   ],
+   "answer": 0,
+   "why": "In a kitchen."
+  }
+ ],
+ "grammar": {
+  "title": "Commands you hear in an emergency",
+  "intro": "Emergency instructions use usted or ustedes commands: mantenga la calma, no cuelgue, salgan del edificio.",
+  "items": [
+   {
+    "before": "Señora, ",
+    "after": " la calma, por favor.",
+    "options": [
+     "mantenga",
+     "mantiene",
+     "mantener"
+    ],
+    "answer": 0,
+    "why": "Usted command: mantenga."
+   },
+   {
+    "before": "¡Todos, ",
+    "after": " del edificio ahora!",
+    "options": [
+     "salgan",
+     "salen",
+     "salir"
+    ],
+    "answer": 0,
+    "why": "Ustedes command: salgan."
+   },
+   {
+    "before": "No ",
+    "after": " el teléfono; la ayuda está en camino.",
+    "options": [
+     "cuelgue",
+     "cuelga",
+     "colgar"
+    ],
+    "answer": 0,
+    "why": "Negative usted command: no cuelgue."
+   }
+  ]
+ },
+ "speaking": [
+  "Practica una llamada al 911: di tu nombre, tu dirección y qué pasó.",
+  "¿Qué harías si hay un incendio en tu casa?",
+  "¿Qué hay en un botiquín de primeros auxilios?"
+ ],
+ "heritage": "Heritage speakers often interpret for relatives in emergencies. You can ask 911 for a Spanish interpreter, and it is useful for every family member to know how to say the home address clearly in both languages. Practice saying it aloud, including the apartment number.",
+ "teacher": "Run a role play of a 911 call with clear roles (caller, operator, interpreter). Keep scenarios mild, like a fall or a kitchen fire, and practice the address and usted commands.",
+ "vocabulary": [
+  {
+   "title": "Calling for help",
+   "words": [
+    [
+     "¡Ayuda! / ¡Socorro!",
+     "Help!"
+    ],
+    [
+     "llamar al 911",
+     "to call 911"
+    ],
+    [
+     "la emergencia",
+     "emergency"
+    ],
+    [
+     "la ambulancia",
+     "ambulance"
+    ],
+    [
+     "los bomberos",
+     "firefighters"
+    ],
+    [
+     "la policía",
+     "police"
+    ],
+    [
+     "¿Habla español?",
+     "Do you speak Spanish?"
+    ],
+    [
+     "Necesito un intérprete.",
+     "I need an interpreter."
+    ]
+   ]
+  },
+  {
+   "title": "What happened",
+   "words": [
+    [
+     "el accidente",
+     "accident"
+    ],
+    [
+     "el incendio / el fuego",
+     "fire"
+    ],
+    [
+     "herido / herida",
+     "injured"
+    ],
+    [
+     "inconsciente",
+     "unconscious"
+    ],
+    [
+     "no puede respirar",
+     "he / she can't breathe"
+    ],
+    [
+     "sangrar",
+     "to bleed"
+    ],
+    [
+     "caerse",
+     "to fall"
+    ],
+    [
+     "robar",
+     "to steal, rob"
+    ]
+   ]
+  },
+  {
+   "title": "Where and instructions",
+   "words": [
+    [
+     "la dirección",
+     "address"
+    ],
+    [
+     "¿Dónde está?",
+     "Where are you?"
+    ],
+    [
+     "la salida de emergencia",
+     "emergency exit"
+    ],
+    [
+     "¡Salgan del edificio!",
+     "Get out of the building!"
+    ],
+    [
+     "mantenga la calma",
+     "stay calm"
+    ],
+    [
+     "no cuelgue",
+     "don't hang up"
+    ],
+    [
+     "el botiquín",
+     "first-aid kit"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "En los Estados Unidos, el número de emergencias es el ",
+   "after": ".",
+   "options": [
+    "911",
+    "112",
+    "411"
+   ],
+   "answer": 0,
+   "why": "In the US: 911."
+  },
+  {
+   "before": "Hay fuego en la cocina; llamo a los ",
+   "after": ".",
+   "options": [
+    "bomberos",
+    "policías del tráfico",
+    "meseros"
+   ],
+   "answer": 0,
+   "why": "Fire: firefighters, bomberos."
+  },
+  {
+   "before": "Mi abuelo se cayó y está ",
+   "after": "; no abre los ojos.",
+   "options": [
+    "inconsciente",
+    "herido leve",
+    "contento"
+   ],
+   "answer": 0,
+   "why": "Not opening his eyes: inconsciente."
+  },
+  {
+   "before": "Durante un incendio, busca la salida de ",
+   "after": ".",
+   "options": [
+    "emergencia",
+    "ambulancia",
+    "dirección"
+   ],
+   "answer": 0,
+   "why": "Emergency exit: salida de emergencia."
+  },
+  {
+   "before": "La operadora dice: «No ",
+   "after": "; la ambulancia está en camino».",
+   "options": [
+    "cuelgue",
+    "corra",
+    "salga"
+   ],
+   "answer": 0,
+   "why": "Don't hang up: no cuelgue."
+  },
+  {
+   "before": "Si no hablas inglés, puedes decir: «Necesito un ",
+   "after": "».",
+   "options": [
+    "intérprete",
+    "botiquín",
+    "bombero"
+   ],
+   "answer": 0,
+   "why": "Ask for an interpreter."
+  },
+  {
+   "before": "Para curar una herida pequeña uso el ",
+   "after": ".",
+   "options": [
+    "botiquín",
+    "incendio",
+    "911"
+   ],
+   "answer": 0,
+   "why": "First-aid kit: botiquín."
+  },
+  {
+   "before": "La operadora pregunta: «¿Cuál es su ",
+   "after": "?» para enviar ayuda.",
+   "options": [
+    "dirección",
+    "emergencia",
+    "salida"
+   ],
+   "answer": 0,
+   "why": "Your address, so help can find you."
+  }
+ ],
+ "demand": {
+  "query": "spanish emergency words",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish emergency vocabulary». One asks about emergency numbers in Spain: it is 112, the European emergency number. In the United States, Spanish-speaking callers dial 911 and can ask for an interpreter.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

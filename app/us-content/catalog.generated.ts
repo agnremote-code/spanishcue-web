@@ -283,6 +283,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "directions",
+  "level": "A1",
+  "theme": "directions",
+  "title": "Spanish directions vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "drinks",
   "level": "A1",
   "theme": "drinks",
@@ -294,6 +301,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "easter",
   "title": "Spanish Easter vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "emergency",
+  "level": "A2",
+  "theme": "emergency",
+  "title": "Spanish emergency vocabulary"
  },
  {
   "family": "vocabulary",
@@ -399,6 +413,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "idioms",
   "title": "Common Spanish idioms"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "interview",
+  "level": "A2",
+  "theme": "interview",
+  "title": "Spanish job interview vocabulary"
  },
  {
   "family": "vocabulary",
