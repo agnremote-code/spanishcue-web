@@ -5,9 +5,10 @@ import { collectionPageSchema, faqPageSchema } from "../growth/schema";
 import { canonicalUrl } from "../seo";
 import { READING_PATH } from "../spanish-reading-comprehension/data";
 import { AUTOCOMPLETE_REPORT, PRACTICE_PATH, practiceTopics } from "./data";
+import { allTopics, assetTopics } from "./topics";
 import styles from "../growth/growth.module.css";
 
-const title = "Spanish Grammar Practice Online: 10 Topics Checked as You Answer";
+const title = `Spanish Grammar Practice Online: ${allTopics.length} Topics Checked as You Answer`;
 const description = "Free Spanish grammar practice that corrects as you answer: ser vs estar, preterite vs imperfect, the subjunctive, por vs para and the main tenses, each with the rule in one table, 8 questions and a note for heritage speakers. No login.";
 
 export const metadata: Metadata = {
@@ -43,7 +44,7 @@ export default function PracticeHubPage() {
     <>
       <main className={styles.page} lang="en">
         <div className={styles.shell}>
-          <JsonLd data={collectionPageSchema({ pathname: PRACTICE_PATH, name: title, description, inLanguage: "en", items: practiceTopics.map((topic) => ({ name: topic.title, href: topic.path })) })} />
+          <JsonLd data={collectionPageSchema({ pathname: PRACTICE_PATH, name: title, description, inLanguage: "en", items: [...practiceTopics.map((topic) => ({ name: topic.title, href: topic.path })), ...assetTopics.map((topic) => ({ name: topic.h1, href: topic.path }))] })} />
           <JsonLd data={faqPageSchema(faq, "en")} />
           <GrowthTopbar />
           <Breadcrumbs items={[{ name: "SpanishCue", href: "/" }, { name: "Spanish grammar practice", href: PRACTICE_PATH }]} />
@@ -52,7 +53,7 @@ export default function PracticeHubPage() {
             <h1 className={styles.title}>Spanish grammar practice, checked as you answer</h1>
             <p className={styles.lead}>
               Pick a topic: the four contrasts that cause most doubts in Spanish class, or one tense or structure at a time. Each page gives
-              you the rule in one table, eight sentences that correct the moment you tap, and the mistakes learners make most. Free, no
+              you the rule in one table, at least eight sentences that correct the moment you tap, and the mistakes learners make most. Free, no
               login.
             </p>
           </section>
@@ -65,6 +66,14 @@ export default function PracticeHubPage() {
                   <b>{topic.levels}</b>
                   <span>{topic.name}</span>
                   <span>{topic.rules.length} rules · {topic.quiz.length} questions · common mistakes</span>
+                  <em>Practise now</em>
+                </Link>
+              ))}
+              {assetTopics.filter((topic) => topic.group === group.id).map((topic) => (
+                <Link key={topic.slug} className={styles.levelCard} href={topic.path}>
+                  <b>{topic.levels}</b>
+                  <span>{topic.h1}</span>
+                  <span>rule table · practice questions · common mistakes</span>
                   <em>Practise now</em>
                 </Link>
               ))}

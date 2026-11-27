@@ -139,8 +139,19 @@ test('grammar practice hub and topics are complete and chained',async()=>{
  const doc=async p=>{const r=await fetch(origin+p);assert.equal(r.status,200,p);return new JSDOM(await r.text()).window.document;};
  const hub=await doc('/spanish-grammar-practice');
  const topics=['ser-vs-estar','preterite-vs-imperfect','subjunctive','por-vs-para','preterite','imperfect','present-perfect','future-tense','reflexive-verbs','direct-object-pronouns'].map(t=>`/spanish-grammar-practice/${t}`);
- for(const t of topics)assert.ok(hub.querySelector(`main a[href="${t}"]`),`hub links ${t}`);
+ const {usCatalog}=await import('../app/us-content/catalog.generated.ts').catch(async()=>{const src=(await import('node:fs')).readFileSync(new URL('../app/us-content/catalog.generated.ts',import.meta.url),'utf8');return {usCatalog:JSON.parse(src.slice(src.indexOf('[] = ')+5).replace(/;\s*$/,''))};});
+ const chain=[...topics,...usCatalog.filter(e=>e.family==='grammar').map(e=>`/spanish-grammar-practice/${e.slug}`)];
+ for(const t of chain)assert.ok(hub.querySelector(`main a[href="${t}"]`),`hub links ${t}`);
  assert.ok(nodesOf(hub).some(n=>n['@type']==='CollectionPage'));
+ for(const t of chain.slice(topics.length)){
+  const d=await doc(t);const main=d.querySelector('main');
+  assert.ok(main.querySelectorAll('[role="group"]').length>=10,`${t}: questions`);
+  assert.match(main.textContent,/What SpanishCue data shows/);assert.match(main.textContent,/Use it in class/);
+  assert.ok(main.querySelector('a[href="/spanish-grammar-practice"]'),`${t} links back to the hub`);
+  assert.ok(main.querySelector(`a[href="${chain[(chain.indexOf(t)+1)%chain.length]}"]`),`${t} links the next topic`);
+  const types=nodesOf(d).map(n=>n['@type']);assert.ok(types.includes('LearningResource')&&types.includes('FAQPage'),t);
+ }
+ assert.equal((await fetch(origin+'/spanish-grammar-practice/not-a-topic')).status,404);
  for(const [i,t] of topics.entries()){
   const d=await doc(t);const main=d.querySelector('main');
   const words=main.textContent.replace(/\s+/g,' ').trim().split(' ').length;
@@ -148,7 +159,7 @@ test('grammar practice hub and topics are complete and chained',async()=>{
   assert.ok(main.querySelectorAll('[role="group"]').length>=8,`${t}: questions`);
   assert.match(main.textContent,/What SpanishCue data shows/);assert.match(main.textContent,/If you grew up speaking Spanish at home/);
   assert.ok(main.querySelector('a[href="/spanish-grammar-practice"]'),`${t} links back to the hub`);
-  assert.ok(main.querySelector(`a[href="${topics[(i+1)%topics.length]}"]`),`${t} links the next topic`);
+  assert.ok(main.querySelector(`a[href="${chain[(chain.indexOf(t)+1)%chain.length]}"]`),`${t} links the next topic`);
   assert.ok(main.querySelector('a[href="/datos/que-autocompleta-google-en-gramatica"]'),`${t} cites its source`);
   const types=nodesOf(d).map(n=>n['@type']);assert.ok(types.includes('LearningResource')&&types.includes('FAQPage'),t);
   for(const li of [...main.querySelectorAll('li')].filter(li=>li.textContent.startsWith('For teachers'))){const href=li.querySelector('a').getAttribute('href');const r=await fetch(origin+href,{redirect:'manual'});assert.equal(r.status,200,`${t} → ${href}`);}

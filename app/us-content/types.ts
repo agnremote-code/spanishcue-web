@@ -63,3 +63,27 @@ export type UsVerbPage = {
   teacher: string;
   figure: { text: string; source: string };
 };
+
+/**
+ * A grammar practice topic (family «grammar»), stored in public/us-content/grammar/<slug>.json and served
+ * at /spanish-grammar-practice/<slug> next to the ten original topics in app/spanish-grammar-practice/data.ts.
+ * `theme` is the hub group and `level` the CEFR range shown on the page.
+ */
+export type UsGrammarPage = {
+  theme: "contrast" | "forms";
+  level: string;
+  name: string;
+  title: string;
+  description: string;
+  h1: string;
+  answer: string;
+  demand: UsDemand;
+  rulesCaption: string;
+  rules: { use: string; example: string; meaning: string }[];
+  quiz: QuizItem[];
+  mistakes: string[];
+  figure: { text: string; source: string };
+  heritage: string;
+  teacher: string;
+  faq: { question: string; answer: string }[];
+};

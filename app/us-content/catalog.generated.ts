@@ -2,6 +2,41 @@
 export type UsCatalogEntry = { family: string; slug: string; level: string; theme: string; title: string };
 export const usCatalog: UsCatalogEntry[] = [
  {
+  "family": "grammar",
+  "slug": "articles",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish articles practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "indirect-object-pronouns",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish indirect object pronouns practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "possessive-adjectives",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish possessive adjectives practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "prepositions",
+  "level": "A1–B1",
+  "theme": "forms",
+  "title": "Spanish prepositions practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "present-tense",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish present tense practice"
+ },
+ {
   "family": "verbs",
   "slug": "dar",
   "level": "A2",
