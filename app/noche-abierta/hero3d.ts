@@ -49,6 +49,8 @@ export type Hero = {
   headYaw: number;
   /** Slow weight shift between the legs while standing, -1..1. */
   shift: number;
+  /** Set when a real body (the 3D mascot) follows this hero: copies the pose onto it, once per frame. */
+  real?: () => void;
 };
 export type HeroMode = 'move' | 'talk' | 'seated';
 

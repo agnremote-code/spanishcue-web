@@ -6,6 +6,7 @@
 // the activity opens where it happens. The museum and the bar are rooms you
 // walk around in; the plaza is full of people you can talk to.
 import { enableRealPeople } from '../mundo-real/persona';
+import { attachMascot } from '../mundo-real/mascota';
 import * as THREE from 'three';
 import { useCallback, useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent, type PointerEvent as ReactPointerEvent } from 'react';
 import { LOCATIONS, type Level, type Phase, type WorldOutcome } from './engine.mjs';
@@ -192,6 +193,8 @@ export default function World3D(props: WorldProps) {
 
     const hero = createHero(!low);
     scene.add(hero.root);
+    // The official mascot (rigged GLB) takes over the drawn hero as soon as it arrives; ?mascota=0 keeps the drawn one.
+    if (new URLSearchParams(window.location.search).get('mascota') !== '0') void attachMascot(hero, !low).catch(error => console.warn('mascota', error));
     const boxes: Box[] = colliders(castSizes());
     const taxiBox = boxes.find(item => item.vehicle === 'taxi')!;
     const crowd = createStreetCrowd(scene, city.night, { low, boxes });
@@ -1104,6 +1107,7 @@ export default function World3D(props: WorldProps) {
         setPrompt(t ? { id: t.id, key: t.key, verb: t.verb, name: isStreetSpot(t) || isDriveSpot(t) ? t.name : 'exit' in t ? 'Volver a la calle' : activity ?? names[t.location] ?? t.location } : null);
       }
       animateHero(hero, dt, walking || sim.mode === 'busy' ? sim.player.speed : 0, sim.turn, hero.seated ? 'seated' : sim.mode === 'scene' || sim.mode === 'street' ? 'talk' : 'move', reduced());
+      hero.real?.();
 
       // Camera per mode.
       if (sim.mode === 'intro') {
