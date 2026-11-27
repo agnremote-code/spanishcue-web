@@ -5,6 +5,7 @@ import { Breadcrumbs, GrowthFooter, GrowthTopbar, JsonLd, Section } from "../../
 import { learningResourceSchema } from "../../growth/schema";
 import ChoiceQuiz from "../../mini-apps/ChoiceQuiz";
 import { canonicalUrl } from "../../seo";
+import { usCatalog } from "../../us-content/catalog.generated";
 import { READING_PATH, readingBySlug, readingTexts, wordCount } from "../data";
 import styles from "../../growth/growth.module.css";
 
@@ -32,6 +33,7 @@ export default async function ReadingTextPage({ params }: Props) {
   const index = readingTexts.indexOf(text);
   const next = readingTexts[index + 1];
   const words = wordCount(text);
+  const topics = usCatalog.filter((entry) => entry.family === "reading" && entry.level === text.level);
   return (
     <>
       <main className={styles.page} lang="en">
@@ -82,6 +84,14 @@ export default async function ReadingTextPage({ params }: Props) {
           <Section title="If you grew up speaking Spanish at home">
             <div className={styles.prose}><p>{text.heritage}</p></div>
           </Section>
+
+          {topics.length ? (
+            <Section title={`More ${text.level} texts by topic`} intro="Each one has its own text, questions that correct themselves and a speaking task.">
+              <div className={styles.prose}>
+                <ul>{topics.map((topic) => <li key={topic.slug}><Link className={styles.textLink} href={`${READING_PATH}/${topic.slug.replace("-", "/")}`}>{topic.title}</Link></li>)}</ul>
+              </div>
+            </Section>
+          ) : null}
 
           <Section title="Keep going">
             <div className={styles.prose}>
