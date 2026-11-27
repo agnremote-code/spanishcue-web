@@ -7,7 +7,7 @@ const PERSON='https://spanishcue.com/equipo#ale';
 
 // SEO plan step 7 (docs/seo-plan/06_SCHEMA/LEEME.md): one page per template. Every JSON-LD block must parse,
 // carry the properties Google requires for its type, and name the brand through the homepage entity's @id.
-const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/spanish-reading-comprehension','/spanish-reading-comprehension/a1'];
+const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/spanish-reading-comprehension','/spanish-reading-comprehension/a1','/spanish-grammar-practice','/spanish-grammar-practice/subjunctive'];
 
 const required={
  BreadcrumbList:n=>n.itemListElement.length>=2&&n.itemListElement.every((it,i)=>it['@type']==='ListItem'&&it.position===i+1&&it.name&&/^https:\/\/spanishcue\.com\//.test(it.item)),
@@ -103,5 +103,25 @@ test('reading comprehension hub and spokes are complete and chained',async()=>{
   assert.ok(main.querySelector('a[href="/spanish-reading-comprehension"]'),`${s} links back to the hub`);
   if(spokes[i+1])assert.ok(main.querySelector(`a[href="${spokes[i+1]}"]`),`${s} links the next spoke`);
   assert.ok(nodesOf(d).some(n=>n['@type']==='LearningResource'&&n.educationalLevel));
+ }
+});
+
+// Mission phase 2, English practice cluster: each topic has its own rule table, at least eight checked questions, a real figure, a heritage block, and links hub → topic → next topic → hub.
+test('grammar practice hub and topics are complete and chained',async()=>{
+ const doc=async p=>{const r=await fetch(origin+p);assert.equal(r.status,200,p);return new JSDOM(await r.text()).window.document;};
+ const hub=await doc('/spanish-grammar-practice');
+ const topics=['ser-vs-estar','preterite-vs-imperfect','subjunctive','por-vs-para'].map(t=>`/spanish-grammar-practice/${t}`);
+ for(const t of topics)assert.ok(hub.querySelector(`main a[href="${t}"]`),`hub links ${t}`);
+ assert.ok(nodesOf(hub).some(n=>n['@type']==='CollectionPage'));
+ for(const [i,t] of topics.entries()){
+  const d=await doc(t);const main=d.querySelector('main');
+  const words=main.textContent.replace(/\s+/g,' ').trim().split(' ').length;
+  assert.ok(words>=250,`${t}: ${words} words`);
+  assert.ok(main.querySelectorAll('[role="group"]').length>=8,`${t}: questions`);
+  assert.match(main.textContent,/What SpanishCue data shows/);assert.match(main.textContent,/If you grew up speaking Spanish at home/);
+  assert.ok(main.querySelector('a[href="/spanish-grammar-practice"]'),`${t} links back to the hub`);
+  assert.ok(main.querySelector(`a[href="${topics[(i+1)%topics.length]}"]`),`${t} links the next topic`);
+  assert.ok(main.querySelector('a[href="/datos/que-autocompleta-google-en-gramatica"]'),`${t} cites its source`);
+  const types=nodesOf(d).map(n=>n['@type']);assert.ok(types.includes('LearningResource')&&types.includes('FAQPage'),t);
  }
 });
