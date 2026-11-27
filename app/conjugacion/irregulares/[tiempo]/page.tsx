@@ -7,6 +7,7 @@ import { EleNewsletterInline } from "../../../material-ele/PopularLinks";
 import styles from "../../../growth/growth.module.css";
 import { ConjugacionFrame, VerbSearch } from "../../components";
 import cj from "../../conjugacion.module.css";
+import { ParticipiosReales } from "../../../datos/enlaces";
 import { IRREGULARES_PATH, irregularRows, tiempoBySlug, tiempoExercise, tiempoPages, type IrregularRow } from "../../tiempos";
 import { verbPath } from "../../verbos";
 import { MODO_PATH, modoPath } from "../../../indicativo-o-subjuntivo/data";
@@ -87,6 +88,7 @@ export default async function TiempoPage({ params }: Props) {
           </ul>
         </Section>
       ) : null}
+      {page.slug === "participios" ? <ParticipiosReales /> : null}
       <EleNewsletterInline source={page.path} />
       <Section title="Otros tiempos">
         <ul className={cj.verbList}>
