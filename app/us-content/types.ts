@@ -4,7 +4,7 @@ import type { QuizItem } from "../mini-apps/ChoiceQuiz";
 export type UsDemand = { query: string; source: string; date: string };
 
 /**
- * A graded reading by level and theme (family «reading»), stored in
+ * A graded reading by level and theme, stored in
  * public/us-content/reading/<level>-<theme>.json. tests/us-content-quality.test.mjs
  * enforces the gate: 300+ own words, 8+ distinct questions, a figure, a heritage
  * block and under 30 % shared 5-word sequences with any other reading.
@@ -28,4 +28,14 @@ export type UsReadingPage = {
   figure: { text: string; source: string; href?: string };
   heritage: string;
   teacher: string;
+};
+
+/**
+ * A vocabulary page by theme (family «vocabulary»), stored in public/us-content/vocabulary/<theme>.json:
+ * a word list by group and a vocabulary quiz on top of a graded reading that uses the words.
+ */
+export type UsVocabularyPage = UsReadingPage & {
+  level: "A1" | "A2";
+  vocabulary: { title: string; words: [string, string][] }[];
+  vocabQuiz: QuizItem[];
 };

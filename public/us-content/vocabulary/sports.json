@@ -1,0 +1,392 @@
+{
+ "level": "A2",
+ "theme": "sports",
+ "themeLabel": "Sports",
+ "title": "Spanish Sports Vocabulary: Sports, Places and Practice Quiz",
+ "description": "Spanish sports vocabulary: sports, equipment, places and game words, with a practice quiz that corrects itself and an A2 soccer story. No login.",
+ "h1": "Spanish sports vocabulary",
+ "titleEs": "El partido más importante",
+ "focus": "preterite and imperfect in a sports story, sports vocabulary",
+ "intro": "Learn the Spanish words for sports, places and game actions, practise them with instant feedback, then read about a girls' soccer final in Guadalajara.",
+ "paragraphs": [
+  "Ximena juega al fútbol desde los ocho años. Ahora tiene catorce y es la portera del equipo de su secundaria en Guadalajara, México. El año pasado su equipo llegó por primera vez a la final del torneo de la ciudad. El partido era un domingo a las cuatro, en un estadio pequeño cerca del centro.",
+  "Ese día llovía mucho y el campo estaba lleno de agua. Las jugadoras del otro equipo eran más altas y más rápidas, y en el minuto diez marcaron el primer gol. Ximena estaba triste y nerviosa, pero su entrenadora, la profesora Ibarra, le gritó desde la banda: «¡Tranquila, todavía falta mucho!».",
+  "En el segundo tiempo, el equipo de Ximena jugó mucho mejor. Su amiga Renata metió un gol de cabeza en el minuto sesenta y el partido terminó uno a uno. Entonces hubo penales. Ximena paró dos, y Renata marcó el último. ¡Ganaron el torneo!",
+  "Después del partido, las jugadoras bailaron bajo la lluvia y los padres aplaudieron desde las gradas. Esa noche todo el equipo cenó tacos en casa de Renata. Ximena todavía guarda la medalla en su cuarto, junto a una foto de todas las chicas mojadas y felices."
+ ],
+ "glossary": [
+  [
+   "la portera",
+   "goalkeeper (female)"
+  ],
+  [
+   "el torneo",
+   "tournament"
+  ],
+  [
+   "marcar / meter un gol",
+   "to score a goal"
+  ],
+  [
+   "la entrenadora",
+   "the coach (female)"
+  ],
+  [
+   "la banda",
+   "the sideline"
+  ],
+  [
+   "los penales",
+   "penalty shoot-out («penaltis» in Spain)"
+  ],
+  [
+   "parar",
+   "to stop, to save"
+  ],
+  [
+   "las gradas",
+   "the stands"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Ximena juega en la posición de ",
+   "after": ".",
+   "options": [
+    "portera",
+    "delantera",
+    "defensa"
+   ],
+   "answer": 0,
+   "why": "«Es la portera del equipo.»"
+  },
+  {
+   "before": "El partido fue ",
+   "after": ".",
+   "options": [
+    "un domingo a las cuatro",
+    "un sábado por la mañana",
+    "un viernes por la noche"
+   ],
+   "answer": 0,
+   "why": "Sunday at four."
+  },
+  {
+   "before": "Ese día ",
+   "after": ".",
+   "options": [
+    "llovía mucho",
+    "hacía mucho sol",
+    "hacía frío y viento"
+   ],
+   "answer": 0,
+   "why": "It was raining hard and the field was full of water."
+  },
+  {
+   "before": "El primer gol del partido fue del ",
+   "after": ".",
+   "options": [
+    "otro equipo",
+    "equipo de Ximena",
+    "equipo de Renata"
+   ],
+   "answer": 0,
+   "why": "The other team scored in the tenth minute."
+  },
+  {
+   "before": "Renata marcó un gol ",
+   "after": ".",
+   "options": [
+    "de cabeza",
+    "de penal en el primer tiempo",
+    "en el minuto diez"
+   ],
+   "answer": 0,
+   "why": "A header in the sixtieth minute."
+  },
+  {
+   "before": "En los penales, Ximena ",
+   "after": ".",
+   "options": [
+    "paró dos",
+    "marcó el último",
+    "no paró ninguno"
+   ],
+   "answer": 0,
+   "why": "She saved two; Renata scored the last one."
+  },
+  {
+   "before": "Después del partido, el equipo cenó ",
+   "after": ".",
+   "options": [
+    "tacos en casa de Renata",
+    "en el estadio",
+    "en un restaurante del centro"
+   ],
+   "answer": 0,
+   "why": "Tacos at Renata's house."
+  },
+  {
+   "before": "Ximena guarda la medalla ",
+   "after": ".",
+   "options": [
+    "en su cuarto",
+    "en la escuela",
+    "en casa de Renata"
+   ],
+   "answer": 0,
+   "why": "In her room, next to a team photo."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: background or event",
+  "intro": "The imperfect describes the scene (weather, feelings); the preterite tells what happened.",
+  "items": [
+   {
+    "before": "Ese día ",
+    "after": " mucho.",
+    "options": [
+     "llovió",
+     "llovía"
+    ],
+    "answer": 1,
+    "why": "Weather as background: llovía."
+   },
+   {
+    "before": "En el minuto diez el otro equipo ",
+    "after": " un gol.",
+    "options": [
+     "marcó",
+     "marcaba"
+    ],
+    "answer": 0,
+    "why": "A single event: marcó."
+   },
+   {
+    "before": "Ximena ",
+    "after": " nerviosa al principio.",
+    "options": [
+     "estuvo",
+     "estaba"
+    ],
+    "answer": 1,
+    "why": "A feeling at that moment, as description: estaba."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué deporte practicas o te gusta ver?",
+  "Cuenta un partido o una competencia importante para ti.",
+  "¿Es más importante ganar o jugar bien? ¿Por qué?"
+ ],
+ "heritage": "For heritage speakers, sports Spanish varies a lot by country: penales or penaltis, portera or arquera, cancha or campo. Write the words your family uses. In writing, check «portera» and «árbitro» (with accent), «gol» and «goles», and the g/j in «jugadora», a word that is often written with a g by mistake.",
+ "teacher": "Teachers: this story works in a sports unit and is a clear model of preterite versus imperfect. Ask students to highlight background verbs in one colour and events in another. Then they write a short report of a real game for the school newspaper.",
+ "vocabulary": [
+  {
+   "title": "Sports",
+   "words": [
+    [
+     "el fútbol",
+     "soccer"
+    ],
+    [
+     "el fútbol americano",
+     "football"
+    ],
+    [
+     "el béisbol",
+     "baseball"
+    ],
+    [
+     "el básquetbol / el baloncesto",
+     "basketball"
+    ],
+    [
+     "el voleibol",
+     "volleyball"
+    ],
+    [
+     "el tenis",
+     "tennis"
+    ],
+    [
+     "la natación",
+     "swimming"
+    ],
+    [
+     "el atletismo",
+     "track and field"
+    ]
+   ]
+  },
+  {
+   "title": "Places and equipment",
+   "words": [
+    [
+     "el estadio",
+     "stadium"
+    ],
+    [
+     "la cancha",
+     "court, field"
+    ],
+    [
+     "la piscina / la alberca",
+     "swimming pool"
+    ],
+    [
+     "la pelota / el balón",
+     "ball"
+    ],
+    [
+     "la raqueta",
+     "racket"
+    ],
+    [
+     "el casco",
+     "helmet"
+    ],
+    [
+     "el uniforme",
+     "uniform"
+    ]
+   ]
+  },
+  {
+   "title": "Game words",
+   "words": [
+    [
+     "el equipo",
+     "team"
+    ],
+    [
+     "el jugador / la jugadora",
+     "player"
+    ],
+    [
+     "el entrenador / la entrenadora",
+     "coach"
+    ],
+    [
+     "el árbitro",
+     "referee"
+    ],
+    [
+     "ganar",
+     "to win"
+    ],
+    [
+     "perder",
+     "to lose"
+    ],
+    [
+     "empatar",
+     "to tie"
+    ],
+    [
+     "marcar un gol",
+     "to score a goal"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "En el ",
+   "after": " se usa un bate y una pelota pequeña.",
+   "options": [
+    "béisbol",
+    "fútbol",
+    "voleibol"
+   ],
+   "answer": 0,
+   "why": "Bat and small ball: baseball."
+  },
+  {
+   "before": "Nado todos los días en la ",
+   "after": ".",
+   "options": [
+    "piscina",
+    "cancha de tenis",
+    "raqueta"
+   ],
+   "answer": 0,
+   "why": "Swimming: pool."
+  },
+  {
+   "before": "Para jugar al tenis necesito una ",
+   "after": ".",
+   "options": [
+    "raqueta",
+    "casco",
+    "piscina"
+   ],
+   "answer": 0,
+   "why": "Tennis takes a racket."
+  },
+  {
+   "before": "El ",
+   "after": " decide si es falta.",
+   "options": [
+    "árbitro",
+    "entrenador",
+    "estadio"
+   ],
+   "answer": 0,
+   "why": "The referee decides fouls."
+  },
+  {
+   "before": "El partido terminó dos a dos: los equipos ",
+   "after": ".",
+   "options": [
+    "empataron",
+    "ganaron",
+    "perdieron"
+   ],
+   "answer": 0,
+   "why": "2–2 is a tie: empatar."
+  },
+  {
+   "before": "En el fútbol americano los jugadores llevan ",
+   "after": ".",
+   "options": [
+    "casco",
+    "raqueta",
+    "sandalias"
+   ],
+   "answer": 0,
+   "why": "Helmets in American football."
+  },
+  {
+   "before": "Mi ",
+   "after": " tiene once jugadores.",
+   "options": [
+    "equipo",
+    "árbitro",
+    "balón"
+   ],
+   "answer": 0,
+   "why": "A soccer team has eleven players."
+  },
+  {
+   "before": "Corremos cien metros en la competencia de ",
+   "after": ".",
+   "options": [
+    "atletismo",
+    "natación",
+    "béisbol"
+   ],
+   "answer": 0,
+   "why": "The 100 m sprint is track and field."
+  }
+ ],
+ "demand": {
+  "query": "spanish sports vocabulary quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish sports vocabulary». 1 of them ask for something to do with the words (quizlet), not only a list. All of them ask for words and lists, so the story below shows the words inside a real match.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

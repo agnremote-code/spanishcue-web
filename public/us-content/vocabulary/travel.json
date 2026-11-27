@@ -1,0 +1,392 @@
+{
+ "level": "A2",
+ "theme": "travel",
+ "themeLabel": "Travel",
+ "title": "Spanish Travel Vocabulary: Airport, Hotel and Practice Quiz",
+ "description": "Spanish travel vocabulary for the airport, the hotel and getting around, with a practice quiz that corrects itself and an A2 reading about Peru. Free.",
+ "h1": "Spanish travel vocabulary",
+ "titleEs": "Un viaje en tren a Cusco",
+ "focus": "preterite of regular and common irregular verbs, travel words",
+ "intro": "Learn the Spanish words you need at the airport, at the hotel and on the road, practise them with instant feedback, then read about a train trip to Cusco that goes wrong.",
+ "paragraphs": [
+  "El verano pasado, Elena y su hermano Rubén viajaron a Perú por primera vez. Llegaron a Lima un martes por la noche y al día siguiente tomaron un avión a Cusco, una ciudad que está a más de tres mil metros de altura. El primer día Elena tuvo dolor de cabeza por la altura, así que descansaron en el hotel y bebieron mucho té de coca, como les recomendó la recepcionista.",
+  "El jueves fueron en autobús al Valle Sagrado y visitaron el mercado de Pisac, donde Rubén compró un poncho rojo para su madre. Por la tarde llegaron a Ollantaytambo, un pueblo pequeño con calles de piedra. Allí tenían que tomar el tren a Aguas Calientes para visitar Machu Picchu al día siguiente.",
+  "Pero hubo un problema: por la lluvia, el tren de las seis salió con dos horas de retraso. Elena y Rubén esperaron en la estación con otros viajeros, una pareja de Argentina y un grupo de estudiantes de Canadá. Compartieron galletas, jugaron a las cartas y hablaron de sus países. Cuando por fin subieron al tren, ya era de noche y no vieron el paisaje.",
+  "El sábado, muy temprano, subieron a Machu Picchu. Las nubes cubrían las montañas, pero a las ocho salió el sol y Elena sacó la foto más bonita del viaje. Rubén dijo que el retraso del tren fue lo mejor, porque conocieron a gente muy simpática."
+ ],
+ "glossary": [
+  [
+   "la altura",
+   "altitude"
+  ],
+  [
+   "el dolor de cabeza",
+   "headache"
+  ],
+  [
+   "descansar",
+   "to rest"
+  ],
+  [
+   "el retraso",
+   "delay"
+  ],
+  [
+   "la estación",
+   "the station"
+  ],
+  [
+   "los viajeros",
+   "travelers"
+  ],
+  [
+   "el paisaje",
+   "the landscape, the view"
+  ],
+  [
+   "las nubes",
+   "clouds"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Elena y Rubén llegaron primero a ",
+   "after": ".",
+   "options": [
+    "Lima",
+    "Cusco",
+    "Aguas Calientes"
+   ],
+   "answer": 0,
+   "why": "They landed in Lima on a Tuesday night."
+  },
+  {
+   "before": "El primer día en Cusco, Elena tuvo ",
+   "after": ".",
+   "options": [
+    "dolor de cabeza",
+    "fiebre",
+    "frío"
+   ],
+   "answer": 0,
+   "why": "A headache because of the altitude."
+  },
+  {
+   "before": "En el mercado de Pisac, Rubén compró ",
+   "after": ".",
+   "options": [
+    "un poncho",
+    "un sombrero",
+    "galletas"
+   ],
+   "answer": 0,
+   "why": "A red poncho for their mother."
+  },
+  {
+   "before": "El tren salió tarde por ",
+   "after": ".",
+   "options": [
+    "la lluvia",
+    "un accidente",
+    "la nieve"
+   ],
+   "answer": 0,
+   "why": "Because of the rain, two hours late."
+  },
+  {
+   "before": "En la estación esperaron con ",
+   "after": ".",
+   "options": [
+    "una pareja argentina y estudiantes canadienses",
+    "su madre",
+    "la recepcionista"
+   ],
+   "answer": 0,
+   "why": "An Argentine couple and a group of Canadian students."
+  },
+  {
+   "before": "En el tren no vieron el paisaje porque ",
+   "after": ".",
+   "options": [
+    "ya era de noche",
+    "había nubes",
+    "estaban dormidos"
+   ],
+   "answer": 0,
+   "why": "It was already dark when they got on."
+  },
+  {
+   "before": "Elena sacó su mejor foto cuando ",
+   "after": ".",
+   "options": [
+    "salió el sol",
+    "llegó al hotel",
+    "subió al tren"
+   ],
+   "answer": 0,
+   "why": "At eight the sun came out."
+  },
+  {
+   "before": "Para Rubén, lo mejor del viaje fue ",
+   "after": ".",
+   "options": [
+    "el retraso del tren",
+    "el poncho",
+    "el hotel"
+   ],
+   "answer": 0,
+   "why": "Because they met very nice people."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: the preterite on a trip",
+  "intro": "Completed actions in the past use the preterite. Watch the irregular forms tuvo, fue, hubo and dijo.",
+  "items": [
+   {
+    "before": "Elena ",
+    "after": " dolor de cabeza el primer día.",
+    "options": [
+     "tuvo",
+     "tenía"
+    ],
+    "answer": 0,
+    "why": "A completed event on a specific day: tuvo."
+   },
+   {
+    "before": "El jueves ellos ",
+    "after": " al Valle Sagrado.",
+    "options": [
+     "fueron",
+     "iban"
+    ],
+    "answer": 0,
+    "why": "A completed trip on Thursday: fueron."
+   },
+   {
+    "before": "Por la lluvia ",
+    "after": " un problema con el tren.",
+    "options": [
+     "hubo",
+     "hay"
+    ],
+    "answer": 0,
+    "why": "Past event: hubo (preterite of hay)."
+   }
+  ]
+ },
+ "speaking": [
+  "Cuenta un viaje que hiciste: ¿adónde fuiste, con quién y qué pasó?",
+  "¿Qué haces cuando un tren o un avión sale con retraso?",
+  "¿Qué lugar de América Latina te gustaría visitar y por qué?"
+ ],
+ "heritage": "Heritage speakers usually choose the preterite correctly by ear; the difficulty is spelling. In this text, check «tuvo» with v, «hubo» with h and b, and the accents in «salió», «compró» and «sacó». A common written mistake is «fuistes» for «fuiste»: in the preterite the tú form never ends in -s. Write a short paragraph about a family trip using six preterite verbs.",
+ "teacher": "Teachers: this text is a strong reading for a travel unit in Spanish 2. Before reading, show Cusco and Machu Picchu on a map and ask what problems a traveller can have. After the questions, students retell the trip in order using primero, después and al final, and you can contrast the imperfect «cubrían» with the preterite «salió».",
+ "vocabulary": [
+  {
+   "title": "At the airport",
+   "words": [
+    [
+     "el aeropuerto",
+     "airport"
+    ],
+    [
+     "el vuelo",
+     "flight"
+    ],
+    [
+     "el pasaporte",
+     "passport"
+    ],
+    [
+     "la maleta",
+     "suitcase"
+    ],
+    [
+     "el equipaje de mano",
+     "carry-on"
+    ],
+    [
+     "la tarjeta de embarque",
+     "boarding pass"
+    ],
+    [
+     "la puerta de embarque",
+     "gate"
+    ],
+    [
+     "aterrizar",
+     "to land"
+    ],
+    [
+     "despegar",
+     "to take off"
+    ]
+   ]
+  },
+  {
+   "title": "At the hotel",
+   "words": [
+    [
+     "la reserva",
+     "reservation"
+    ],
+    [
+     "la habitación doble",
+     "double room"
+    ],
+    [
+     "la recepción",
+     "front desk"
+    ],
+    [
+     "la llave",
+     "key"
+    ],
+    [
+     "el desayuno incluido",
+     "breakfast included"
+    ],
+    [
+     "el ascensor",
+     "elevator"
+    ]
+   ]
+  },
+  {
+   "title": "Getting around",
+   "words": [
+    [
+     "el billete / el boleto",
+     "ticket"
+    ],
+    [
+     "de ida y vuelta",
+     "round trip"
+    ],
+    [
+     "el tren",
+     "train"
+    ],
+    [
+     "el andén",
+     "platform"
+    ],
+    [
+     "el retraso",
+     "delay"
+    ],
+    [
+     "el mapa",
+     "map"
+    ],
+    [
+     "el turista",
+     "tourist"
+    ],
+    [
+     "la oficina de turismo",
+     "tourist office"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para viajar a otro país necesito el ",
+   "after": ".",
+   "options": [
+    "pasaporte",
+    "andén",
+    "ascensor"
+   ],
+   "answer": 0,
+   "why": "Abroad you need a passport."
+  },
+  {
+   "before": "El avión va a ",
+   "after": " a las diez: ponte el cinturón.",
+   "options": [
+    "despegar",
+    "aterrizar en la maleta",
+    "reservar"
+   ],
+   "answer": 0,
+   "why": "Seatbelts before take-off: despegar."
+  },
+  {
+   "before": "Muestro la tarjeta de ",
+   "after": " antes de subir al avión.",
+   "options": [
+    "embarque",
+    "crédito",
+    "turismo"
+   ],
+   "answer": 0,
+   "why": "Boarding pass: tarjeta de embarque."
+  },
+  {
+   "before": "Quiero volver el domingo: un billete de ",
+   "after": ", por favor.",
+   "options": [
+    "ida y vuelta",
+    "embarque",
+    "mano"
+   ],
+   "answer": 0,
+   "why": "Return ticket: ida y vuelta."
+  },
+  {
+   "before": "El tren sale del ",
+   "after": " número tres.",
+   "options": [
+    "andén",
+    "vuelo",
+    "pasaporte"
+   ],
+   "answer": 0,
+   "why": "Trains leave from a platform."
+  },
+  {
+   "before": "Tengo una ",
+   "after": " para dos noches a nombre de García.",
+   "options": [
+    "reserva",
+    "maleta",
+    "puerta"
+   ],
+   "answer": 0,
+   "why": "A booking: reserva."
+  },
+  {
+   "before": "El vuelo llega tarde: tiene una hora de ",
+   "after": ".",
+   "options": [
+    "retraso",
+    "recepción",
+    "desayuno"
+   ],
+   "answer": 0,
+   "why": "Late: delay."
+  },
+  {
+   "before": "Pido un mapa gratis en la ",
+   "after": ".",
+   "options": [
+    "oficina de turismo",
+    "puerta de embarque",
+    "habitación doble"
+   ],
+   "answer": 0,
+   "why": "Free maps: tourist office."
+  }
+ ],
+ "demand": {
+  "query": "spanish travel vocabulary quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish travel vocabulary». 3 of them ask for something to do with the words (worksheets, quizlet, quiz), not only a list. 1 ask for a PDF. Tourism vocabulary also appears, so the reading follows two tourists through a real itinerary.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

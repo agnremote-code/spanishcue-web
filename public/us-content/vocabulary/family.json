@@ -1,0 +1,373 @@
+{
+ "level": "A1",
+ "theme": "family",
+ "themeLabel": "Family",
+ "title": "Spanish Family Vocabulary: Word List, Practice and Reading",
+ "description": "Spanish family vocabulary with a list of family members, a practice quiz that corrects itself and a short A1 reading about a family in Bogotá. No login.",
+ "h1": "Spanish family vocabulary",
+ "titleEs": "La familia de Diego",
+ "focus": "possessives, family words, ser and tener",
+ "intro": "Learn the Spanish words for family members and relationships, test yourself with sentences that correct themselves, then meet Diego and his family in Bogotá.",
+ "paragraphs": [
+  "Hola, soy Diego. Tengo doce años y vivo en Bogotá, Colombia, con mi familia. En mi casa somos cinco: mi papá, mi mamá, mi hermana mayor, mi abuela y yo. También tenemos un perro, que se llama Tinto, como el café.",
+  "Mi papá se llama Andrés y es conductor de bus. Es alto y muy divertido. Mi mamá, Lorena, es profesora de matemáticas en un colegio. Mi hermana Valentina tiene dieciséis años; es inteligente pero un poco seria. Mi abuela Rosa tiene setenta y cuatro años y cocina el mejor ajiaco de Colombia.",
+  "Los domingos visitamos a mis tíos en Chía, cerca de Bogotá. Mis tíos tienen dos hijos, Samuel y Mariana. Son mis primos y son mis mejores amigos. Su casa tiene un jardín grande y jugamos al fútbol toda la tarde. Mi abuela dice que nuestra familia es pequeña, pero yo creo que es perfecta."
+ ],
+ "glossary": [
+  [
+   "mayor",
+   "older"
+  ],
+  [
+   "el perro",
+   "the dog"
+  ],
+  [
+   "el tinto",
+   "black coffee (in Colombia)"
+  ],
+  [
+   "el conductor",
+   "the driver"
+  ],
+  [
+   "el colegio",
+   "school"
+  ],
+  [
+   "el ajiaco",
+   "a Colombian chicken and potato soup"
+  ],
+  [
+   "los tíos",
+   "aunt and uncle, or uncles"
+  ],
+  [
+   "los primos",
+   "cousins"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Diego vive en ",
+   "after": ".",
+   "options": [
+    "Bogotá",
+    "Chía",
+    "Medellín"
+   ],
+   "answer": 0,
+   "why": "«Vivo en Bogotá, Colombia.»"
+  },
+  {
+   "before": "En la casa de Diego viven ",
+   "after": " personas.",
+   "options": [
+    "cinco",
+    "cuatro",
+    "seis"
+   ],
+   "answer": 0,
+   "why": "«En mi casa somos cinco.» The dog is not counted."
+  },
+  {
+   "before": "Tinto es ",
+   "after": " de la familia.",
+   "options": [
+    "el perro",
+    "el gato",
+    "el primo"
+   ],
+   "answer": 0,
+   "why": "Tinto is the dog, named after Colombian black coffee."
+  },
+  {
+   "before": "La mamá de Diego es ",
+   "after": ".",
+   "options": [
+    "profesora",
+    "conductora",
+    "cocinera"
+   ],
+   "answer": 0,
+   "why": "Lorena teaches maths at a school."
+  },
+  {
+   "before": "Valentina es la ",
+   "after": " de Diego.",
+   "options": [
+    "hermana",
+    "prima",
+    "tía"
+   ],
+   "answer": 0,
+   "why": "«Mi hermana Valentina tiene dieciséis años.»"
+  },
+  {
+   "before": "Los domingos la familia visita a ",
+   "after": ".",
+   "options": [
+    "los tíos",
+    "la abuela",
+    "los vecinos"
+   ],
+   "answer": 0,
+   "why": "On Sundays they visit the aunt and uncle in Chía."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: mi, mis, su, sus, nuestra",
+  "intro": "The possessive agrees with the thing owned, not with the owner.",
+  "items": [
+   {
+    "before": "",
+    "after": " primos son Samuel y Mariana.",
+    "options": [
+     "Mi",
+     "Mis"
+    ],
+    "answer": 1,
+    "why": "Primos is plural: mis."
+   },
+   {
+    "before": "Los tíos tienen un jardín. ",
+    "after": " jardín es grande.",
+    "options": [
+     "Su",
+     "Sus"
+    ],
+    "answer": 0,
+    "why": "Jardín is singular: su, even with two owners."
+   },
+   {
+    "before": "Diego y su familia: «",
+    "after": " familia es pequeña».",
+    "options": [
+     "Nuestro",
+     "Nuestra"
+    ],
+    "answer": 1,
+    "why": "Familia is feminine: nuestra."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuántas personas hay en tu familia?",
+  "Describe a una persona de tu familia: ¿cómo se llama, cuántos años tiene y cómo es?",
+  "¿Qué hace tu familia los domingos?"
+ ],
+ "heritage": "Heritage speakers often say these words with ease but write them less often. Check three things: hermano and hijo start with a silent h; abuela is written with b; and the plural of papá is papás, with the accent kept. Then add two family words that the text does not use, such as suegra, cuñado or padrino, and explain who they are in Spanish.",
+ "teacher": "Teachers: this text works as the reading for a family unit or a «mi familia» presentation. Students can draw Diego's family tree from the text before they answer, which checks comprehension without English. Follow up with the possessive practice and ask them to present their own family with mi, mis and nuestro.",
+ "vocabulary": [
+  {
+   "title": "Close family",
+   "words": [
+    [
+     "la madre / la mamá",
+     "mother / mom"
+    ],
+    [
+     "el padre / el papá",
+     "father / dad"
+    ],
+    [
+     "los padres",
+     "parents"
+    ],
+    [
+     "el hermano",
+     "brother"
+    ],
+    [
+     "la hermana",
+     "sister"
+    ],
+    [
+     "el hijo",
+     "son"
+    ],
+    [
+     "la hija",
+     "daughter"
+    ],
+    [
+     "el esposo",
+     "husband"
+    ],
+    [
+     "la esposa",
+     "wife"
+    ]
+   ]
+  },
+  {
+   "title": "Extended family",
+   "words": [
+    [
+     "el abuelo",
+     "grandfather"
+    ],
+    [
+     "la abuela",
+     "grandmother"
+    ],
+    [
+     "el tío",
+     "uncle"
+    ],
+    [
+     "la tía",
+     "aunt"
+    ],
+    [
+     "el primo",
+     "cousin (male)"
+    ],
+    [
+     "la prima",
+     "cousin (female)"
+    ],
+    [
+     "el sobrino",
+     "nephew"
+    ],
+    [
+     "la sobrina",
+     "niece"
+    ],
+    [
+     "el nieto",
+     "grandson"
+    ]
+   ]
+  },
+  {
+   "title": "Relationships",
+   "words": [
+    [
+     "el suegro / la suegra",
+     "father-in-law / mother-in-law"
+    ],
+    [
+     "el cuñado / la cuñada",
+     "brother-in-law / sister-in-law"
+    ],
+    [
+     "el padrastro",
+     "stepfather"
+    ],
+    [
+     "la madrastra",
+     "stepmother"
+    ],
+    [
+     "el medio hermano",
+     "half brother"
+    ],
+    [
+     "el padrino / la madrina",
+     "godfather / godmother"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La madre de mi madre es mi ",
+   "after": ".",
+   "options": [
+    "abuela",
+    "tía",
+    "prima"
+   ],
+   "answer": 0,
+   "why": "Your mother's mother: abuela."
+  },
+  {
+   "before": "El hermano de mi padre es mi ",
+   "after": ".",
+   "options": [
+    "tío",
+    "primo",
+    "sobrino"
+   ],
+   "answer": 0,
+   "why": "Your father's brother: tío."
+  },
+  {
+   "before": "Los hijos de mis tíos son mis ",
+   "after": ".",
+   "options": [
+    "primos",
+    "nietos",
+    "hermanos"
+   ],
+   "answer": 0,
+   "why": "Your aunt and uncle's children: primos."
+  },
+  {
+   "before": "Soy la hija de tu hermano: soy tu ",
+   "after": ".",
+   "options": [
+    "sobrina",
+    "prima",
+    "nieta"
+   ],
+   "answer": 0,
+   "why": "Your brother's daughter: sobrina."
+  },
+  {
+   "before": "La madre de mi esposa es mi ",
+   "after": ".",
+   "options": [
+    "suegra",
+    "cuñada",
+    "madrina"
+   ],
+   "answer": 0,
+   "why": "Your wife's mother: suegra."
+  },
+  {
+   "before": "Mis abuelos tienen cinco ",
+   "after": ": mi hermano, mis tres primos y yo.",
+   "options": [
+    "nietos",
+    "hijos",
+    "sobrinos"
+   ],
+   "answer": 0,
+   "why": "To grandparents, we are nietos."
+  },
+  {
+   "before": "El nuevo esposo de mi madre es mi ",
+   "after": ".",
+   "options": [
+    "padrastro",
+    "padrino",
+    "suegro"
+   ],
+   "answer": 0,
+   "why": "Your mother's new husband: padrastro."
+  },
+  {
+   "before": "La hermana de mi esposo es mi ",
+   "after": ".",
+   "options": [
+    "cuñada",
+    "suegra",
+    "tía"
+   ],
+   "answer": 0,
+   "why": "Your husband's sister: cuñada."
+  }
+ ],
+ "demand": {
+  "query": "spanish family vocabulary practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish family vocabulary». 3 of them ask for something to do with the words (quizlet, quiz, practice), not only a list. 1 ask for a PDF. Two of the suggestions ask for family relationships and family members, so the list goes beyond parents and siblings.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,396 @@
+{
+ "level": "A2",
+ "theme": "jobs",
+ "themeLabel": "Jobs",
+ "title": "Spanish Jobs Vocabulary: Professions, Workplaces and Quiz",
+ "description": "Spanish jobs vocabulary: professions, workplaces and work words, with a practice quiz that corrects itself and an A2 reading set in Los Angeles. Free.",
+ "h1": "Spanish jobs vocabulary",
+ "titleEs": "Trabajos de verano",
+ "focus": "jobs and workplaces, the present and the near future with ir a",
+ "intro": "Learn the Spanish names of jobs, the places where people work and key work words, practise with instant feedback, then read about three bilingual teenagers' summer jobs in Los Angeles.",
+ "paragraphs": [
+  "Andrea, Kevin y Yesenia tienen dieciséis años y estudian en la misma escuela secundaria en Los Ángeles. Este verano los tres tienen trabajo por primera vez. Hablan inglés en la escuela y español en casa, y en sus trabajos usan los dos idiomas todos los días.",
+  "Andrea trabaja en una heladería en Santa Mónica, cerca de la playa. Sirve helados de lunes a viernes, de doce a seis. Muchos turistas le hablan en español y ella les explica los sabores. El trabajo es divertido, pero cuando hace calor hay mucha gente y termina muy cansada. Andrea va a ahorrar su dinero para comprar una computadora para la universidad.",
+  "Kevin ayuda a su tío, que tiene un taller de bicicletas en el Este de Los Ángeles. Kevin limpia las bicicletas, cambia ruedas y atiende el teléfono. Le encanta porque aprende a reparar cosas con las manos. Con su dinero, Kevin va a comprar una bicicleta eléctrica para ir a la escuela.",
+  "Yesenia trabaja como voluntaria en una biblioteca pública tres mañanas por semana y, por la tarde, cuida a dos niños de su vecina. En la biblioteca lee cuentos en español a los niños pequeños. No gana mucho, pero dice que va a estudiar para ser maestra. «Este verano estoy aprendiendo mucho sobre mi futuro», explica."
+ ],
+ "glossary": [
+  [
+   "la heladería",
+   "ice cream shop"
+  ],
+  [
+   "los sabores",
+   "flavors"
+  ],
+  [
+   "ahorrar",
+   "to save (money)"
+  ],
+  [
+   "el taller",
+   "repair shop, workshop"
+  ],
+  [
+   "las ruedas",
+   "wheels, tires"
+  ],
+  [
+   "atender el teléfono",
+   "to answer the phone"
+  ],
+  [
+   "la voluntaria",
+   "volunteer"
+  ],
+  [
+   "cuidar",
+   "to look after"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Los tres amigos viven en ",
+   "after": ".",
+   "options": [
+    "Los Ángeles",
+    "San Diego",
+    "Santa Mónica"
+   ],
+   "answer": 0,
+   "why": "They go to the same high school in Los Angeles."
+  },
+  {
+   "before": "En sus trabajos hablan ",
+   "after": ".",
+   "options": [
+    "inglés y español",
+    "solo inglés",
+    "solo español"
+   ],
+   "answer": 0,
+   "why": "They use both languages every day."
+  },
+  {
+   "before": "Andrea trabaja en ",
+   "after": ".",
+   "options": [
+    "una heladería",
+    "una biblioteca",
+    "un taller"
+   ],
+   "answer": 0,
+   "why": "An ice cream shop near the beach."
+  },
+  {
+   "before": "Andrea va a usar su dinero para ",
+   "after": ".",
+   "options": [
+    "comprar una computadora",
+    "viajar",
+    "comprar una bicicleta"
+   ],
+   "answer": 0,
+   "why": "A computer for university."
+  },
+  {
+   "before": "El taller de bicicletas es de ",
+   "after": ".",
+   "options": [
+    "el tío de Kevin",
+    "Kevin",
+    "la vecina de Yesenia"
+   ],
+   "answer": 0,
+   "why": "Kevin helps his uncle."
+  },
+  {
+   "before": "A Kevin le gusta su trabajo porque ",
+   "after": ".",
+   "options": [
+    "aprende a reparar cosas",
+    "gana mucho dinero",
+    "trabaja poco"
+   ],
+   "answer": 0,
+   "why": "He learns to fix things with his hands."
+  },
+  {
+   "before": "En la biblioteca Yesenia ",
+   "after": ".",
+   "options": [
+    "lee cuentos en español",
+    "vende libros",
+    "limpia las mesas"
+   ],
+   "answer": 0,
+   "why": "She reads stories in Spanish to young children."
+  },
+  {
+   "before": "Yesenia quiere ser ",
+   "after": ".",
+   "options": [
+    "maestra",
+    "bibliotecaria",
+    "doctora"
+   ],
+   "answer": 0,
+   "why": "«Va a estudiar para ser maestra.»"
+  }
+ ],
+ "grammar": {
+  "title": "Practice: plans with ir a + infinitive",
+  "intro": "Ir a + infinitive talks about plans. Conjugate ir: voy, vas, va, vamos, van.",
+  "items": [
+   {
+    "before": "Andrea ",
+    "after": " a ahorrar su dinero.",
+    "options": [
+     "va",
+     "van"
+    ],
+    "answer": 0,
+    "why": "Andrea (ella): va."
+   },
+   {
+    "before": "Kevin y yo ",
+    "after": " a comprar bicicletas.",
+    "options": [
+     "vamos",
+     "van"
+    ],
+    "answer": 0,
+    "why": "Kevin y yo = nosotros: vamos."
+   },
+   {
+    "before": "¿Qué ",
+    "after": " a hacer tú este verano?",
+    "options": [
+     "vas",
+     "va"
+    ],
+    "answer": 0,
+    "why": "Tú: vas."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Tienes un trabajo o te gustaría tener uno? ¿Dónde?",
+  "¿Qué vas a hacer el próximo verano?",
+  "¿En qué trabajos es útil hablar español en tu ciudad?"
+ ],
+ "heritage": "This text describes students like many heritage speakers in the United States: bilingual at work and at home. Write about a job where you or someone in your family uses Spanish. Check the written forms that often cause trouble: «trabajo» with j, «ahorrar» with h and double r, «biblioteca» with b and «voluntaria» with v.",
+ "teacher": "Teachers: this reading connects Spanish to real jobs in US cities, a good argument for students who ask why they study the language. After reading, students interview each other about their plans for the summer with ir a, and the class makes a list of local jobs where Spanish helps.",
+ "vocabulary": [
+  {
+   "title": "Professions",
+   "words": [
+    [
+     "el médico / la médica",
+     "doctor"
+    ],
+    [
+     "el enfermero / la enfermera",
+     "nurse"
+    ],
+    [
+     "el maestro / la maestra",
+     "teacher"
+    ],
+    [
+     "el abogado / la abogada",
+     "lawyer"
+    ],
+    [
+     "el ingeniero / la ingeniera",
+     "engineer"
+    ],
+    [
+     "el policía / la policía",
+     "police officer"
+    ],
+    [
+     "el bombero / la bombera",
+     "firefighter"
+    ],
+    [
+     "el cocinero / la cocinera",
+     "cook"
+    ],
+    [
+     "el mecánico / la mecánica",
+     "mechanic"
+    ]
+   ]
+  },
+  {
+   "title": "Workplaces",
+   "words": [
+    [
+     "la oficina",
+     "office"
+    ],
+    [
+     "la fábrica",
+     "factory"
+    ],
+    [
+     "el hospital",
+     "hospital"
+    ],
+    [
+     "la tienda",
+     "store"
+    ],
+    [
+     "el taller",
+     "repair shop"
+    ],
+    [
+     "la granja",
+     "farm"
+    ],
+    [
+     "el restaurante",
+     "restaurant"
+    ]
+   ]
+  },
+  {
+   "title": "Work words",
+   "words": [
+    [
+     "el trabajo",
+     "job, work"
+    ],
+    [
+     "el sueldo",
+     "salary"
+    ],
+    [
+     "el jefe / la jefa",
+     "boss"
+    ],
+    [
+     "el horario",
+     "schedule"
+    ],
+    [
+     "a tiempo completo",
+     "full-time"
+    ],
+    [
+     "a tiempo parcial",
+     "part-time"
+    ],
+    [
+     "la entrevista",
+     "interview"
+    ],
+    [
+     "el currículum",
+     "résumé"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La ",
+   "after": " apaga incendios.",
+   "options": [
+    "bombera",
+    "abogada",
+    "cocinera"
+   ],
+   "answer": 0,
+   "why": "Firefighters put out fires."
+  },
+  {
+   "before": "El ",
+   "after": " repara coches en su taller.",
+   "options": [
+    "mecánico",
+    "maestro",
+    "médico"
+   ],
+   "answer": 0,
+   "why": "Mechanics fix cars."
+  },
+  {
+   "before": "Mi tía defiende a personas en los tribunales: es ",
+   "after": ".",
+   "options": [
+    "abogada",
+    "ingeniera",
+    "enfermera"
+   ],
+   "answer": 0,
+   "why": "Defending people in court: lawyer."
+  },
+  {
+   "before": "Trabajo veinte horas por semana: es un trabajo a tiempo ",
+   "after": ".",
+   "options": [
+    "parcial",
+    "completo",
+    "libre"
+   ],
+   "answer": 0,
+   "why": "Twenty hours: part-time."
+  },
+  {
+   "before": "Antes de la entrevista envío mi ",
+   "after": ".",
+   "options": [
+    "currículum",
+    "sueldo",
+    "horario"
+   ],
+   "answer": 0,
+   "why": "You send a résumé first."
+  },
+  {
+   "before": "Los coches se fabrican en una ",
+   "after": ".",
+   "options": [
+    "fábrica",
+    "oficina",
+    "granja"
+   ],
+   "answer": 0,
+   "why": "Factories make cars."
+  },
+  {
+   "before": "El ",
+   "after": " de un trabajo es el dinero que recibes cada mes.",
+   "options": [
+    "sueldo",
+    "jefe",
+    "taller"
+   ],
+   "answer": 0,
+   "why": "Salary: sueldo."
+  },
+  {
+   "before": "La ",
+   "after": " prepara la comida en el restaurante.",
+   "options": [
+    "cocinera",
+    "policía",
+    "jefa de enfermería"
+   ],
+   "answer": 0,
+   "why": "The cook prepares food."
+  }
+ ],
+ "demand": {
+  "query": "spanish jobs vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish jobs vocabulary». The suggestions pair jobs with professions, so the list covers both everyday jobs and careers.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

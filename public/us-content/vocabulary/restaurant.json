@@ -1,0 +1,380 @@
+{
+ "level": "A2",
+ "theme": "restaurant",
+ "themeLabel": "Restaurant",
+ "title": "Spanish Restaurant Vocabulary: Ordering, Menu and Quiz",
+ "description": "Spanish restaurant vocabulary: the menu, ordering and paying, with a practice quiz that corrects itself and an A2 reading set in Buenos Aires. Free.",
+ "h1": "Spanish restaurant vocabulary",
+ "titleEs": "Una mesa para cuatro",
+ "focus": "ordering food, quisiera and me gustaría, restaurant phrases",
+ "intro": "Learn the Spanish words and phrases for ordering at a restaurant, practise with instant feedback, then read about a birthday dinner in Buenos Aires where the order gets complicated.",
+ "paragraphs": [
+  "El sábado pasado, la familia Gómez fue a cenar a una parrilla en el barrio de San Telmo, en Buenos Aires. Celebraban los setenta años de la abuela Marta. Reservaron una mesa para cuatro a las nueve y media, una hora normal para cenar en Argentina.",
+  "El camarero les trajo la carta y una canasta de pan. La abuela quería algo ligero y pidió una ensalada mixta y pescado a la plancha. El papá, Horacio, pidió un bife de chorizo con papas fritas. La mamá preguntó: «¿Qué nos recomienda?». El camarero respondió que las empanadas de la casa eran las mejores del barrio, así que pidió seis para compartir.",
+  "El problema fue Bruno, el nieto de doce años. Bruno es vegetariano desde hace un año y en la carta casi todo tenía carne. Al final el camarero habló con el cocinero y le prepararon unos ravioles de verdura con salsa de queso. Bruno dijo que estaban riquísimos.",
+  "De postre, el restaurante les regaló un flan con dulce de leche y una vela para la abuela. Todos cantaron «Feliz cumpleaños» y otras mesas aplaudieron. Cuando pidieron la cuenta eran casi las doce. Horacio pagó con tarjeta y dejó una propina del diez por ciento, porque el servicio fue excelente."
+ ],
+ "glossary": [
+  [
+   "la parrilla",
+   "steakhouse, grill"
+  ],
+  [
+   "reservar",
+   "to book"
+  ],
+  [
+   "el camarero",
+   "waiter («mozo» in Argentina, «mesero» in Mexico)"
+  ],
+  [
+   "la carta",
+   "the menu"
+  ],
+  [
+   "ligero",
+   "light"
+  ],
+  [
+   "a la plancha",
+   "grilled"
+  ],
+  [
+   "el postre",
+   "dessert"
+  ],
+  [
+   "la propina",
+   "the tip"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia celebraba ",
+   "after": ".",
+   "options": [
+    "el cumpleaños de la abuela",
+    "un aniversario",
+    "el fin de curso de Bruno"
+   ],
+   "answer": 0,
+   "why": "Grandmother Marta's seventieth birthday."
+  },
+  {
+   "before": "Reservaron la mesa para las ",
+   "after": ".",
+   "options": [
+    "nueve y media",
+    "siete",
+    "doce"
+   ],
+   "answer": 0,
+   "why": "Half past nine, a normal dinner time in Argentina."
+  },
+  {
+   "before": "La abuela pidió ",
+   "after": ".",
+   "options": [
+    "ensalada y pescado",
+    "bife con papas fritas",
+    "empanadas"
+   ],
+   "answer": 0,
+   "why": "Something light: salad and grilled fish."
+  },
+  {
+   "before": "El camarero recomendó ",
+   "after": ".",
+   "options": [
+    "las empanadas",
+    "el pescado",
+    "los ravioles"
+   ],
+   "answer": 0,
+   "why": "The house empanadas."
+  },
+  {
+   "before": "Bruno tuvo un problema porque ",
+   "after": ".",
+   "options": [
+    "es vegetariano",
+    "no tenía hambre",
+    "no le gusta el pan"
+   ],
+   "answer": 0,
+   "why": "Almost everything on the menu had meat."
+  },
+  {
+   "before": "Para Bruno prepararon ",
+   "after": ".",
+   "options": [
+    "ravioles de verdura",
+    "una ensalada",
+    "empanadas de queso"
+   ],
+   "answer": 0,
+   "why": "Vegetable ravioli with cheese sauce."
+  },
+  {
+   "before": "El restaurante les regaló ",
+   "after": ".",
+   "options": [
+    "el postre",
+    "la cena de la abuela",
+    "las bebidas"
+   ],
+   "answer": 0,
+   "why": "A flan with dulce de leche and a candle."
+  },
+  {
+   "before": "Horacio dejó una propina porque ",
+   "after": ".",
+   "options": [
+    "el servicio fue excelente",
+    "era obligatorio",
+    "era el cumpleaños"
+   ],
+   "answer": 0,
+   "why": "Ten percent because the service was excellent."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: polite ways to order",
+  "intro": "To order politely, use quisiera, me gustaría or ¿me trae…?",
+  "items": [
+   {
+    "before": "",
+    "after": " una mesa para cuatro, por favor.",
+    "options": [
+     "Quisiera",
+     "Quiero que"
+    ],
+    "answer": 0,
+    "why": "Quisiera + noun is the polite request."
+   },
+   {
+    "before": "¿Me ",
+    "after": " la cuenta, por favor?",
+    "options": [
+     "trae",
+     "traigo"
+    ],
+    "answer": 0,
+    "why": "Asking the waiter (usted): ¿me trae…?"
+   },
+   {
+    "before": "Me ",
+    "after": " probar las empanadas.",
+    "options": [
+     "gustaría",
+     "gusto"
+    ],
+    "answer": 0,
+    "why": "Me gustaría + infinitive."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuál es tu restaurante favorito y qué pides allí?",
+  "¿A qué hora cenas normalmente? ¿Es temprano o tarde?",
+  "Escribe un diálogo corto entre un camarero y un cliente."
+ ],
+ "heritage": "Heritage speakers may know different restaurant words: mozo, mesero, garzón; cuenta or adición; papas or patatas. Write which ones your family uses. In writing, practise the usted forms you hear in restaurants: «¿Qué desea?», «¿Me trae…?», «Aquí tiene». Many fluent speakers mix tú and usted in writing; keep one form in each dialogue.",
+ "teacher": "Teachers: this text is a good base for a restaurant role play. Print or project a simple menu with Argentine dishes, and let students order as the Gómez family did, including the vegetarian request. It also shows the late dinner time in Argentina, a cultural detail students remember.",
+ "vocabulary": [
+  {
+   "title": "The menu",
+   "words": [
+    [
+     "la carta / el menú",
+     "menu"
+    ],
+    [
+     "la entrada",
+     "appetizer"
+    ],
+    [
+     "el plato principal",
+     "main course"
+    ],
+    [
+     "el postre",
+     "dessert"
+    ],
+    [
+     "la bebida",
+     "drink"
+    ],
+    [
+     "vegetariano / vegetariana",
+     "vegetarian"
+    ],
+    [
+     "a la plancha",
+     "grilled"
+    ],
+    [
+     "frito / frita",
+     "fried"
+    ]
+   ]
+  },
+  {
+   "title": "Ordering",
+   "words": [
+    [
+     "el mesero / el camarero",
+     "waiter"
+    ],
+    [
+     "pedir",
+     "to order"
+    ],
+    [
+     "¿Qué me recomienda?",
+     "What do you recommend?"
+    ],
+    [
+     "Para mí, …",
+     "For me, …"
+    ],
+    [
+     "Quisiera…",
+     "I would like…"
+    ],
+    [
+     "sin…",
+     "without…"
+    ],
+    [
+     "la mesa para dos",
+     "table for two"
+    ]
+   ]
+  },
+  {
+   "title": "Paying",
+   "words": [
+    [
+     "la cuenta",
+     "the check"
+    ],
+    [
+     "la propina",
+     "tip"
+    ],
+    [
+     "pagar en efectivo",
+     "to pay cash"
+    ],
+    [
+     "pagar con tarjeta",
+     "to pay by card"
+    ],
+    [
+     "¿Está incluido el servicio?",
+     "Is service included?"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Antes del plato principal pido una ",
+   "after": ": sopa.",
+   "options": [
+    "entrada",
+    "cuenta",
+    "propina"
+   ],
+   "answer": 0,
+   "why": "Starter: entrada."
+  },
+  {
+   "before": "Después de comer, de ",
+   "after": " quiero un flan.",
+   "options": [
+    "postre",
+    "entrada",
+    "bebida"
+   ],
+   "answer": 0,
+   "why": "Flan for dessert."
+  },
+  {
+   "before": "No como carne: ¿tiene platos ",
+   "after": "?",
+   "options": [
+    "vegetarianos",
+    "fritos",
+    "a la plancha"
+   ],
+   "answer": 0,
+   "why": "No meat: vegetarian."
+  },
+  {
+   "before": "Disculpe, ¿nos trae la ",
+   "after": ", por favor? Ya terminamos.",
+   "options": [
+    "cuenta",
+    "carta",
+    "entrada"
+   ],
+   "answer": 0,
+   "why": "To pay: la cuenta."
+  },
+  {
+   "before": "El servicio fue excelente: dejamos una buena ",
+   "after": ".",
+   "options": [
+    "propina",
+    "carta",
+    "mesa"
+   ],
+   "answer": 0,
+   "why": "Good service: tip."
+  },
+  {
+   "before": "No sé qué pedir. ¿Qué me ",
+   "after": "?",
+   "options": [
+    "recomienda",
+    "recomiendo",
+    "recomendar"
+   ],
+   "answer": 0,
+   "why": "Asking the waiter (usted): recomienda."
+  },
+  {
+   "before": "Quisiera una hamburguesa ",
+   "after": " cebolla, por favor.",
+   "options": [
+    "sin",
+    "con la cuenta",
+    "para"
+   ],
+   "answer": 0,
+   "why": "Without onion: sin."
+  },
+  {
+   "before": "El pescado no es frito: es a la ",
+   "after": ".",
+   "options": [
+    "plancha",
+    "cuenta",
+    "carta"
+   ],
+   "answer": 0,
+   "why": "Grilled: a la plancha."
+  }
+ ],
+ "demand": {
+  "query": "spanish food vocabulary practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish restaurant vocabulary». 1 ask for a PDF. Most of the other suggestions are about food words in general, so this page focuses on ordering, the menu and paying.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

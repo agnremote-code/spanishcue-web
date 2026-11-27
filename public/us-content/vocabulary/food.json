@@ -1,0 +1,377 @@
+{
+ "level": "A1",
+ "theme": "food",
+ "themeLabel": "Food",
+ "title": "Spanish Food Vocabulary: List, Practice Quiz and Reading (A1)",
+ "description": "Spanish food vocabulary with a word list by group, a practice quiz that corrects itself and a short reading set in a Mexican market. Free, no login.",
+ "h1": "Spanish food vocabulary",
+ "titleEs": "El mercado de Teresa",
+ "focus": "gustar, food words, the present tense",
+ "intro": "Learn the Spanish words for fruit, meals and drinks, practise them in sentences that correct themselves, then read how Teresa sells fruit at a market in Oaxaca.",
+ "paragraphs": [
+  "Me llamo Teresa y tengo un puesto de fruta en el mercado de Oaxaca, en México. Abro el puesto a las siete de la mañana, de lunes a sábado. Vendo mangos, papayas, plátanos, naranjas y piñas. En la mesa también hay limones verdes y aguacates grandes.",
+  "Mis clientes son muy diferentes. Don Ramón compra tres naranjas todos los días porque le gusta el jugo natural. La señora Elena prefiere la papaya con limón. Los niños de la escuela compran mangos con chile y sal: les gustan mucho, pero a mí no me gusta el chile en la fruta.",
+  "A mediodía como en el mercado con mi hija Carmen. Comemos tlayudas, que son tortillas grandes con frijoles, queso y carne. Carmen bebe agua de jamaica y yo bebo café. Por la tarde el mercado está tranquilo y preparo la fruta para el día siguiente. Me gusta mi trabajo porque hablo con muchas personas."
+ ],
+ "glossary": [
+  [
+   "un puesto",
+   "a stall"
+  ],
+  [
+   "vender",
+   "to sell"
+  ],
+  [
+   "el plátano",
+   "banana (also «banana» or «guineo» in some countries)"
+  ],
+  [
+   "el aguacate",
+   "avocado"
+  ],
+  [
+   "el jugo",
+   "juice («zumo» in Spain)"
+  ],
+  [
+   "la tlayuda",
+   "a large Oaxacan tortilla with toppings"
+  ],
+  [
+   "el agua de jamaica",
+   "a cold hibiscus drink"
+  ],
+  [
+   "tranquilo",
+   "quiet, calm"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Teresa vende ",
+   "after": " en el mercado.",
+   "options": [
+    "fruta",
+    "pan",
+    "ropa"
+   ],
+   "answer": 0,
+   "why": "«Tengo un puesto de fruta»: she sells fruit."
+  },
+  {
+   "before": "El puesto abre a las ",
+   "after": " de la mañana.",
+   "options": [
+    "siete",
+    "nueve",
+    "seis"
+   ],
+   "answer": 0,
+   "why": "«Abro el puesto a las siete de la mañana.»"
+  },
+  {
+   "before": "Don Ramón compra naranjas porque le gusta ",
+   "after": ".",
+   "options": [
+    "el jugo natural",
+    "la papaya",
+    "el chile"
+   ],
+   "answer": 0,
+   "why": "He buys three oranges a day because he likes fresh juice."
+  },
+  {
+   "before": "Los niños comen los mangos con ",
+   "after": ".",
+   "options": [
+    "chile y sal",
+    "limón y azúcar",
+    "queso"
+   ],
+   "answer": 0,
+   "why": "«Compran mangos con chile y sal.»"
+  },
+  {
+   "before": "A mediodía Teresa come con ",
+   "after": ".",
+   "options": [
+    "su hija",
+    "don Ramón",
+    "la señora Elena"
+   ],
+   "answer": 0,
+   "why": "She eats lunch at the market with her daughter Carmen."
+  },
+  {
+   "before": "Carmen bebe ",
+   "after": ".",
+   "options": [
+    "agua de jamaica",
+    "café",
+    "jugo de naranja"
+   ],
+   "answer": 0,
+   "why": "Carmen drinks hibiscus water; Teresa drinks coffee."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: gustar with one thing or many",
+  "intro": "Use «gusta» with one thing or a verb, «gustan» with several things.",
+  "items": [
+   {
+    "before": "A Carmen le ",
+    "after": " el agua de jamaica.",
+    "options": [
+     "gusta",
+     "gustan"
+    ],
+    "answer": 0,
+    "why": "One thing (el agua): gusta."
+   },
+   {
+    "before": "A los niños les ",
+    "after": " los mangos con chile.",
+    "options": [
+     "gusta",
+     "gustan"
+    ],
+    "answer": 1,
+    "why": "Several things (los mangos): gustan."
+   },
+   {
+    "before": "A Teresa le ",
+    "after": " hablar con sus clientes.",
+    "options": [
+     "gusta",
+     "gustan"
+    ],
+    "answer": 0,
+    "why": "A verb (hablar) always takes gusta."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué fruta te gusta? ¿Y qué fruta no te gusta?",
+  "¿Qué comes a mediodía normalmente?",
+  "Describe un mercado o una tienda de comida de tu ciudad en tres frases."
+ ],
+ "heritage": "If you grew up speaking Spanish at home, you probably understood every line. Use the text to check spelling: plátano and limón carry a written accent, aguacate and jugo do not. Watch b and v in «bebe», «verde» and «vendo», and remember the silent h in «hay». Then write five sentences about the food your family cooks, naming the country it comes from.",
+ "teacher": "Teachers: use this text for a food unit in Spanish 1. Ask students to list every food word before they answer, then compare who likes which fruit with «le gusta / les gustan». The market vocabulary (puesto, vender, comprar) also prepares a role play between a seller and a customer.",
+ "vocabulary": [
+  {
+   "title": "Fruit and vegetables",
+   "words": [
+    [
+     "la manzana",
+     "apple"
+    ],
+    [
+     "la naranja",
+     "orange"
+    ],
+    [
+     "el plátano",
+     "banana"
+    ],
+    [
+     "la fresa",
+     "strawberry"
+    ],
+    [
+     "la piña",
+     "pineapple"
+    ],
+    [
+     "los tomates",
+     "tomatoes"
+    ],
+    [
+     "la lechuga",
+     "lettuce"
+    ],
+    [
+     "la cebolla",
+     "onion"
+    ],
+    [
+     "la papa / la patata",
+     "potato"
+    ]
+   ]
+  },
+  {
+   "title": "Meals and dishes",
+   "words": [
+    [
+     "el desayuno",
+     "breakfast"
+    ],
+    [
+     "el almuerzo",
+     "lunch"
+    ],
+    [
+     "la cena",
+     "dinner"
+    ],
+    [
+     "el pollo",
+     "chicken"
+    ],
+    [
+     "el pescado",
+     "fish"
+    ],
+    [
+     "el arroz",
+     "rice"
+    ],
+    [
+     "los frijoles",
+     "beans"
+    ],
+    [
+     "el queso",
+     "cheese"
+    ],
+    [
+     "el huevo",
+     "egg"
+    ]
+   ]
+  },
+  {
+   "title": "Drinks and sweet things",
+   "words": [
+    [
+     "el agua",
+     "water"
+    ],
+    [
+     "la leche",
+     "milk"
+    ],
+    [
+     "el jugo",
+     "juice"
+    ],
+    [
+     "el café",
+     "coffee"
+    ],
+    [
+     "el pan",
+     "bread"
+    ],
+    [
+     "el pastel",
+     "cake"
+    ],
+    [
+     "el helado",
+     "ice cream"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Por la mañana tomo el ",
+   "after": ": cereal con leche.",
+   "options": [
+    "desayuno",
+    "almuerzo",
+    "cena"
+   ],
+   "answer": 0,
+   "why": "The morning meal is el desayuno."
+  },
+  {
+   "before": "La ",
+   "after": " es una fruta roja y pequeña.",
+   "options": [
+    "fresa",
+    "piña",
+    "naranja"
+   ],
+   "answer": 0,
+   "why": "Strawberry: small and red."
+  },
+  {
+   "before": "Para una ensalada necesito ",
+   "after": " y tomates.",
+   "options": [
+    "lechuga",
+    "helado",
+    "café"
+   ],
+   "answer": 0,
+   "why": "Lettuce goes in a salad."
+  },
+  {
+   "before": "En México, los ",
+   "after": " son muy comunes con el arroz.",
+   "options": [
+    "frijoles",
+    "pasteles",
+    "jugos"
+   ],
+   "answer": 0,
+   "why": "Beans and rice are a classic pair."
+  },
+  {
+   "before": "El ",
+   "after": " es frío y dulce.",
+   "options": [
+    "helado",
+    "pescado",
+    "queso"
+   ],
+   "answer": 0,
+   "why": "Ice cream: cold and sweet."
+  },
+  {
+   "before": "La gallina pone ",
+   "after": ".",
+   "options": [
+    "huevos",
+    "manzanas",
+    "papas"
+   ],
+   "answer": 0,
+   "why": "Hens lay eggs."
+  },
+  {
+   "before": "Para el sándwich necesito ",
+   "after": " y queso.",
+   "options": [
+    "pan",
+    "agua",
+    "leche"
+   ],
+   "answer": 0,
+   "why": "A sandwich starts with bread."
+  },
+  {
+   "before": "No como carne, pero sí como ",
+   "after": ".",
+   "options": [
+    "pescado",
+    "pollo",
+    "jamón"
+   ],
+   "answer": 0,
+   "why": "Pollo and jamón are meat; many people who eat no meat still eat fish."
+  }
+ ],
+ "demand": {
+  "query": "spanish food vocabulary practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish food vocabulary». 6 of them ask for something to do with the words (practice, quiz, quizlet, activities, worksheet, games), not only a list. 2 ask for a PDF. The quiz and the reading below are that practice, with the answer explained each time.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

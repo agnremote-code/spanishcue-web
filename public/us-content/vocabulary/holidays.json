@@ -1,0 +1,380 @@
+{
+ "level": "A2",
+ "theme": "holidays",
+ "themeLabel": "Holidays",
+ "title": "Spanish Holiday Vocabulary: Celebrations, Words and Quiz",
+ "description": "Spanish holiday vocabulary for Christmas, New Year and other celebrations, with a practice quiz that corrects itself and an A2 reading. Free, no login.",
+ "h1": "Spanish holiday vocabulary",
+ "titleEs": "La Navidad de los Ortega",
+ "focus": "holiday traditions, the imperfect for habits, time expressions",
+ "intro": "Learn the Spanish words for holidays and celebrations across the Spanish-speaking world, practise them with instant feedback, then read how a Venezuelan family in Houston celebrates Christmas.",
+ "paragraphs": [
+  "Luis Ortega tiene cuarenta años y vive en Houston, Texas, desde hace diez años. Cuando era niño, vivía en Maracaibo, Venezuela, y para él la Navidad era la mejor época del año. En diciembre toda la familia se reunía en la casa de su abuela, una casa grande con un patio lleno de plantas.",
+  "Las mujeres y los hombres de la familia preparaban hallacas juntos durante todo un día. Las hallacas son una masa de maíz con carne, aceitunas y pasas, envuelta en hojas de plátano. Luis y sus primos limpiaban las hojas y siempre se comían las pasas a escondidas. Por la noche, los vecinos cantaban gaitas, la música típica de la Navidad en Maracaibo.",
+  "El veinticuatro de diciembre cenaban a medianoche y después abrían los regalos. Los niños no dormían hasta las tres o las cuatro de la mañana. El treinta y uno, la abuela comía doce uvas con las doce campanadas y pedía un deseo con cada una.",
+  "Ahora, en Houston, Luis celebra la Navidad con su esposa y sus dos hijas. Todos los años prepara hallacas con otras familias venezolanas del barrio. No es igual, dice, porque en Texas hace frío en diciembre y su abuela ya no está. Pero sus hijas cantan gaitas y también se comen las pasas a escondidas."
+ ],
+ "glossary": [
+  [
+   "la época",
+   "time of year, period"
+  ],
+  [
+   "reunirse",
+   "to get together"
+  ],
+  [
+   "la hallaca",
+   "Venezuelan Christmas dish of corn dough wrapped in plantain leaves"
+  ],
+  [
+   "las pasas",
+   "raisins"
+  ],
+  [
+   "a escondidas",
+   "secretly"
+  ],
+  [
+   "la gaita",
+   "a Christmas music genre from Zulia, Venezuela"
+  ],
+  [
+   "las campanadas",
+   "the bell chimes (at midnight)"
+  ],
+  [
+   "un deseo",
+   "a wish"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Luis vive en Houston desde hace ",
+   "after": ".",
+   "options": [
+    "diez años",
+    "cuarenta años",
+    "dos años"
+   ],
+   "answer": 0,
+   "why": "«Desde hace diez años.»"
+  },
+  {
+   "before": "De niño, la familia celebraba en casa de ",
+   "after": ".",
+   "options": [
+    "la abuela",
+    "los tíos",
+    "los vecinos"
+   ],
+   "answer": 0,
+   "why": "His grandmother's big house with a patio."
+  },
+  {
+   "before": "Las hallacas se envuelven en ",
+   "after": ".",
+   "options": [
+    "hojas de plátano",
+    "papel",
+    "hojas de maíz"
+   ],
+   "answer": 0,
+   "why": "Corn dough wrapped in plantain leaves."
+  },
+  {
+   "before": "Luis y sus primos se comían ",
+   "after": " a escondidas.",
+   "options": [
+    "las pasas",
+    "las aceitunas",
+    "las uvas"
+   ],
+   "answer": 0,
+   "why": "They secretly ate the raisins."
+  },
+  {
+   "before": "Las gaitas son ",
+   "after": ".",
+   "options": [
+    "música típica de Navidad",
+    "un plato típico",
+    "un tipo de regalo"
+   ],
+   "answer": 0,
+   "why": "The Christmas music of Maracaibo."
+  },
+  {
+   "before": "El veinticuatro de diciembre abrían los regalos ",
+   "after": ".",
+   "options": [
+    "después de la cena",
+    "por la mañana",
+    "el día siguiente"
+   ],
+   "answer": 0,
+   "why": "They had dinner at midnight and then opened presents."
+  },
+  {
+   "before": "La abuela comía doce uvas ",
+   "after": ".",
+   "options": [
+    "el treinta y uno",
+    "el veinticuatro",
+    "el seis de enero"
+   ],
+   "answer": 0,
+   "why": "On December 31st, with the twelve chimes."
+  },
+  {
+   "before": "Para Luis, la Navidad en Houston no es igual porque ",
+   "after": ".",
+   "options": [
+    "hace frío y su abuela ya no está",
+    "no hay hallacas",
+    "sus hijas no cantan"
+   ],
+   "answer": 0,
+   "why": "Cold weather and his grandmother is no longer there."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: what they used to do",
+  "intro": "Repeated habits in the past use the imperfect: -aba for -ar verbs, -ía for -er and -ir verbs.",
+  "items": [
+   {
+    "before": "Cada diciembre la familia se ",
+    "after": " en casa de la abuela.",
+    "options": [
+     "reunía",
+     "reunió"
+    ],
+    "answer": 0,
+    "why": "A yearly habit: reunía."
+   },
+   {
+    "before": "Los niños no ",
+    "after": " hasta las tres de la mañana.",
+    "options": [
+     "dormían",
+     "durmieron"
+    ],
+    "answer": 0,
+    "why": "What usually happened: dormían."
+   },
+   {
+    "before": "Los vecinos ",
+    "after": " gaitas por la noche.",
+    "options": [
+     "cantaban",
+     "cantaron"
+    ],
+    "answer": 0,
+    "why": "A repeated custom: cantaban."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué fiesta es la más importante en tu familia?",
+  "¿Qué comida especial preparan para esa fiesta?",
+  "¿Qué hacías en esa fiesta cuando eras pequeño o pequeña?"
+ ],
+ "heritage": "Many heritage speakers have their own holiday words: hallacas, tamales, pasteles, nacatamales. Write a paragraph about your family's holiday food and explain it in Spanish for someone who does not know it. Check the imperfect endings in writing: -aba always with b (cantaba, preparaba), -ía always with an accent (comía, tenía).",
+ "teacher": "Teachers: use this reading in December or in a celebrations unit. It shows a Latino family in Texas, which connects the culture to students' own communities. Ask students to compare Luis's childhood traditions with his life now in a two-column chart, using the imperfect for the past and the present for now.",
+ "vocabulary": [
+  {
+   "title": "Holidays",
+   "words": [
+    [
+     "la Navidad",
+     "Christmas"
+    ],
+    [
+     "la Nochebuena",
+     "Christmas Eve"
+    ],
+    [
+     "el Año Nuevo",
+     "New Year"
+    ],
+    [
+     "la Nochevieja",
+     "New Year's Eve"
+    ],
+    [
+     "el Día de Reyes",
+     "Three Kings' Day (January 6)"
+    ],
+    [
+     "el Día de Muertos",
+     "Day of the Dead"
+    ],
+    [
+     "la Semana Santa",
+     "Holy Week"
+    ],
+    [
+     "el Día de Acción de Gracias",
+     "Thanksgiving"
+    ]
+   ]
+  },
+  {
+   "title": "Celebrating",
+   "words": [
+    [
+     "celebrar",
+     "to celebrate"
+    ],
+    [
+     "el regalo",
+     "present, gift"
+    ],
+    [
+     "la fiesta",
+     "party"
+    ],
+    [
+     "los fuegos artificiales",
+     "fireworks"
+    ],
+    [
+     "la tradición",
+     "tradition"
+    ],
+    [
+     "brindar",
+     "to make a toast"
+    ],
+    [
+     "las uvas de la suerte",
+     "the twelve lucky grapes"
+    ]
+   ]
+  },
+  {
+   "title": "Wishes",
+   "words": [
+    [
+     "¡Feliz Navidad!",
+     "Merry Christmas!"
+    ],
+    [
+     "¡Feliz Año Nuevo!",
+     "Happy New Year!"
+    ],
+    [
+     "¡Felices fiestas!",
+     "Happy holidays!"
+    ],
+    [
+     "¡Feliz cumpleaños!",
+     "Happy birthday!"
+    ],
+    [
+     "pedir un deseo",
+     "to make a wish"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El veinticuatro de diciembre por la noche es la ",
+   "after": ".",
+   "options": [
+    "Nochebuena",
+    "Nochevieja",
+    "Semana Santa"
+   ],
+   "answer": 0,
+   "why": "December 24th at night: Nochebuena."
+  },
+  {
+   "before": "El treinta y uno de diciembre es la ",
+   "after": ".",
+   "options": [
+    "Nochevieja",
+    "Navidad",
+    "Día de Reyes"
+   ],
+   "answer": 0,
+   "why": "December 31st: Nochevieja."
+  },
+  {
+   "before": "En muchos países los niños reciben regalos el seis de enero, el Día de ",
+   "after": ".",
+   "options": [
+    "Reyes",
+    "Muertos",
+    "Acción de Gracias"
+   ],
+   "answer": 0,
+   "why": "January 6th: Three Kings' Day."
+  },
+  {
+   "before": "A medianoche del Año Nuevo vemos los ",
+   "after": " en el cielo.",
+   "options": [
+    "fuegos artificiales",
+    "regalos",
+    "deseos"
+   ],
+   "answer": 0,
+   "why": "Fireworks light up the sky."
+  },
+  {
+   "before": "Levantamos las copas para ",
+   "after": " por el año nuevo.",
+   "options": [
+    "brindar",
+    "celebrar un regalo",
+    "pedir"
+   ],
+   "answer": 0,
+   "why": "Raising glasses: to toast."
+  },
+  {
+   "before": "En Estados Unidos se come pavo el Día de ",
+   "after": ".",
+   "options": [
+    "Acción de Gracias",
+    "Reyes",
+    "Muertos"
+   ],
+   "answer": 0,
+   "why": "Turkey on Thanksgiving."
+  },
+  {
+   "before": "Antes de soplar las velas, ",
+   "after": " un deseo.",
+   "options": [
+    "pido",
+    "doy",
+    "brindo"
+   ],
+   "answer": 0,
+   "why": "Pedir un deseo: make a wish."
+  },
+  {
+   "before": "El dos de noviembre, en México, se celebra el Día de ",
+   "after": ".",
+   "options": [
+    "Muertos",
+    "Reyes",
+    "Año Nuevo"
+   ],
+   "answer": 0,
+   "why": "November 2nd: Day of the Dead."
+  }
+ ],
+ "demand": {
+  "query": "spanish holiday vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish holidays vocabulary». Holiday words make most sense inside traditions, which is why the reading follows a real family custom.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

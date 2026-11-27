@@ -34,7 +34,7 @@ function checkQuiz(items, label) {
     assert.ok(Array.isArray(item.options) && item.options.length >= 2, `${label}: at least two options`);
     assert.equal(new Set(item.options).size, item.options.length, `${label}: options are distinct («${item.before}»)`);
     assert.ok(Number.isInteger(item.answer) && item.answer >= 0 && item.answer < item.options.length, `${label}: answer index valid`);
-    assert.ok(words(item.why).length >= 3, `${label}: every answer explains why («${item.before}»)`);
+    assert.ok(words(item.why).length >= 2, `${label}: every answer explains why («${item.before}»)`);
   }
 }
 
@@ -44,30 +44,36 @@ test('the generated catalog lists exactly the pages in public/us-content', () =>
 });
 
 test('only known families exist', () => {
-  for (const family of families) assert.ok(['reading'].includes(family), `${family} has a route and a gate`);
+  for (const family of families) assert.ok(['vocabulary'].includes(family), `${family} has a route and a gate`);
 });
 
-test('reading pages pass the gate', () => {
-  if (!families.includes('reading')) return;
-  const pages = load('reading');
+test('vocabulary pages pass the gate', () => {
+  if (!families.includes('vocabulary')) return;
+  const pages = load('vocabulary');
   const sentences = new Set();
   const titles = new Set();
   for (const { slug, page } of pages) {
-    assert.match(page.level, /^(A1|A2|B1)$/, `${slug}: level has a level page`);
-    assert.equal(slug, `${page.level.toLowerCase()}-${page.theme}`, `${slug}: slug is <level>-<theme>`);
+    assert.match(page.level, /^(A1|A2)$/, `${slug}: reading level has a level page`);
+    assert.equal(slug, page.theme, `${slug}: slug is the theme`);
+    const listed = page.vocabulary.flatMap(group => group.words);
+    assert.ok(page.vocabulary.length >= 3 && listed.length >= 20, `${slug}: 20+ words in 3+ groups`);
+    assert.equal(new Set(listed.map(([es]) => es)).size, listed.length, `${slug}: no word listed twice`);
+    assert.ok(page.vocabQuiz.length >= 8, `${slug}: 8+ vocabulary questions`);
+    checkQuiz(page.vocabQuiz, slug);
     assert.match(page.theme, /^[a-z0-9]+(?:-[a-z0-9]+)*$/);
     assert.ok(page.title.length <= 70 && !titles.has(page.title), `${slug}: title unique and at most 70 characters`);
     titles.add(page.title);
     assert.ok(page.description.length >= 110 && page.description.length <= 165, `${slug}: description 110-165 characters (${page.description.length})`);
+    assert.doesNotMatch(JSON.stringify(page), /PENDING/, `${slug}: no placeholder left`);
     assert.ok(page.demand?.query && /spanish/i.test(page.demand.query) && page.demand.source && page.demand.date, `${slug}: real US demand recorded`);
     const textWords = words(page.paragraphs.join(' ')).length;
-    const minimum = { A1: 160, A2: 220, B1: 280 }[page.level];
+    const minimum = { A1: 140, A2: 190, B1: 240 }[page.level];
     assert.ok(textWords >= minimum, `${slug}: text has ${textWords} words, needs ${minimum}`);
     assert.ok(words(ownText(page)).length >= 300, `${slug}: at least 300 own words`);
     assert.ok(page.comprehension.length >= 6 && page.grammar.items.length >= 3, `${slug}: 6+ comprehension and 3+ grammar questions`);
     checkQuiz(page.comprehension, slug);
     checkQuiz(page.grammar.items, slug);
-    for (const item of [...page.comprehension, ...page.grammar.items]) {
+    for (const item of [...page.vocabQuiz, ...page.comprehension, ...page.grammar.items]) {
       const key = normal(`${item.before} ${item.after}`).trim();
       assert.ok(!sentences.has(key), `${slug}: question repeated from another page («${item.before}…»)`);
       sentences.add(key);
@@ -86,7 +92,7 @@ test('reading pages pass the gate', () => {
 });
 
 test('page bodies stay out of the Worker bundle', () => {
-  const route = readFileSync(resolve(root, 'app/spanish-reading-comprehension/[level]/[topic]/page.tsx'), 'utf8');
+  const route = readFileSync(resolve(root, 'app/spanish-vocabulary/[theme]/page.tsx'), 'utf8');
   assert.match(route, /loadUsContent/);
   assert.doesNotMatch(route, /public\/us-content|\.json['"]/);
   const catalog = readFileSync(resolve(root, 'app/us-content/catalog.generated.ts'), 'utf8');

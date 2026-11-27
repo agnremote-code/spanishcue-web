@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "city",
+ "themeLabel": "City",
+ "title": "Spanish City Vocabulary: Places in Town, Directions and Quiz",
+ "description": "Spanish city vocabulary: places in town and location words, with a practice quiz that corrects itself and a short A1 reading set in Old San Juan. Free.",
+ "h1": "Spanish city vocabulary",
+ "titleEs": "Un paseo por el Viejo San Juan",
+ "focus": "estar for location, places in a city, prepositions",
+ "intro": "Learn the Spanish words for places in a city and how to say where they are, practise with instant feedback, then follow a walking tour through Old San Juan, Puerto Rico.",
+ "paragraphs": [
+  "Me llamo Gabriel y soy guía turístico en San Juan, Puerto Rico. Todos los días camino con grupos de visitantes por el Viejo San Juan, la parte más antigua de la ciudad. Las calles son estrechas, de piedra azul, y las casas son de muchos colores: rosa, amarillo, verde y naranja.",
+  "El paseo empieza en la plaza de Armas. En la plaza hay una fuente, árboles y muchas palomas. Al lado de la plaza está el ayuntamiento, un edificio blanco. Después caminamos por la calle Fortaleza hasta la catedral, que está enfrente de un pequeño hotel. Cerca de la catedral hay una heladería muy famosa: siempre paramos allí.",
+  "Al final del paseo llegamos al castillo San Felipe del Morro, que está junto al mar. Es muy grande y tiene más de cuatrocientos años. Los visitantes sacan muchas fotos y vuelan cometas en el césped. A mí me encanta mi trabajo, pero en agosto hace mucho calor y bebo mucha agua."
+ ],
+ "glossary": [
+  [
+   "el guía turístico",
+   "tour guide"
+  ],
+  [
+   "estrecho",
+   "narrow"
+  ],
+  [
+   "la piedra",
+   "stone"
+  ],
+  [
+   "la fuente",
+   "fountain"
+  ],
+  [
+   "el ayuntamiento",
+   "city hall («la alcaldía» in many countries)"
+  ],
+  [
+   "enfrente de",
+   "across from"
+  ],
+  [
+   "la heladería",
+   "ice cream shop"
+  ],
+  [
+   "la cometa",
+   "kite («chiringa» in Puerto Rico)"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Gabriel trabaja como ",
+   "after": ".",
+   "options": [
+    "guía turístico",
+    "profesor",
+    "camarero"
+   ],
+   "answer": 0,
+   "why": "«Soy guía turístico en San Juan.»"
+  },
+  {
+   "before": "Las calles del Viejo San Juan son ",
+   "after": ".",
+   "options": [
+    "estrechas y de piedra azul",
+    "anchas y modernas",
+    "de tierra"
+   ],
+   "answer": 0,
+   "why": "Narrow streets of blue stone."
+  },
+  {
+   "before": "El paseo empieza en ",
+   "after": ".",
+   "options": [
+    "la plaza de Armas",
+    "el castillo",
+    "la catedral"
+   ],
+   "answer": 0,
+   "why": "It starts in the plaza de Armas."
+  },
+  {
+   "before": "La catedral está enfrente de ",
+   "after": ".",
+   "options": [
+    "un hotel",
+    "la heladería",
+    "el ayuntamiento"
+   ],
+   "answer": 0,
+   "why": "«Está enfrente de un pequeño hotel.»"
+  },
+  {
+   "before": "Cerca de la catedral el grupo para en ",
+   "after": ".",
+   "options": [
+    "una heladería",
+    "un museo",
+    "un restaurante"
+   ],
+   "answer": 0,
+   "why": "A famous ice cream shop."
+  },
+  {
+   "before": "El castillo San Felipe del Morro está ",
+   "after": ".",
+   "options": [
+    "junto al mar",
+    "en la plaza",
+    "al lado de la catedral"
+   ],
+   "answer": 0,
+   "why": "«Está junto al mar.»"
+  }
+ ],
+ "grammar": {
+  "title": "Practice: where things are",
+  "intro": "Use estar with location words: al lado de, enfrente de, cerca de, junto a.",
+  "items": [
+   {
+    "before": "El ayuntamiento está ",
+    "after": " la plaza.",
+    "options": [
+     "al lado de",
+     "al lado"
+    ],
+    "answer": 0,
+    "why": "Al lado needs «de» before the place."
+   },
+   {
+    "before": "La heladería ",
+    "after": " cerca de la catedral.",
+    "options": [
+     "es",
+     "está"
+    ],
+    "answer": 1,
+    "why": "Location: está."
+   },
+   {
+    "before": "El castillo está junto ",
+    "after": " mar.",
+    "options": [
+     "al",
+     "del"
+    ],
+    "answer": 0,
+    "why": "Junto a + el = junto al."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué hay en el centro de tu ciudad?",
+  "Explica cómo llegar de tu casa a la escuela con dos o tres frases.",
+  "¿Qué lugar de tu ciudad recomiendas a un visitante?"
+ ],
+ "heritage": "Puerto Rican Spanish is the home language of many students in the United States. If it is yours, compare the text with what you say at home: «chiringa» for kite, «guagua» for bus, «zafacón» for trash can. In writing, three words in the text need a written accent: «turístico», «árboles» and «césped». Find them, then write the name of a street or square in your family's town and describe what is next to it.",
+ "teacher": "Teachers: use the text with a «la ciudad» unit and a simple map. Students trace Gabriel's route as they read, then write directions between two places with estar and location words. It is also a good moment to show that Puerto Rico is part of the United States and Spanish-speaking.",
+ "vocabulary": [
+  {
+   "title": "Places in town",
+   "words": [
+    [
+     "el banco",
+     "bank"
+    ],
+    [
+     "el supermercado",
+     "supermarket"
+    ],
+    [
+     "la farmacia",
+     "pharmacy"
+    ],
+    [
+     "el hospital",
+     "hospital"
+    ],
+    [
+     "la iglesia",
+     "church"
+    ],
+    [
+     "el museo",
+     "museum"
+    ],
+    [
+     "el parque",
+     "park"
+    ],
+    [
+     "la plaza",
+     "square"
+    ],
+    [
+     "el cine",
+     "movie theater"
+    ]
+   ]
+  },
+  {
+   "title": "Getting around",
+   "words": [
+    [
+     "la calle",
+     "street"
+    ],
+    [
+     "la esquina",
+     "corner"
+    ],
+    [
+     "el semáforo",
+     "traffic light"
+    ],
+    [
+     "la parada de autobús",
+     "bus stop"
+    ],
+    [
+     "la estación",
+     "station"
+    ],
+    [
+     "el puente",
+     "bridge"
+    ]
+   ]
+  },
+  {
+   "title": "Where things are",
+   "words": [
+    [
+     "cerca de",
+     "near"
+    ],
+    [
+     "lejos de",
+     "far from"
+    ],
+    [
+     "al lado de",
+     "next to"
+    ],
+    [
+     "enfrente de",
+     "across from"
+    ],
+    [
+     "detrás de",
+     "behind"
+    ],
+    [
+     "entre",
+     "between"
+    ],
+    [
+     "a la derecha",
+     "on the right"
+    ],
+    [
+     "a la izquierda",
+     "on the left"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Compro medicinas en la ",
+   "after": ".",
+   "options": [
+    "farmacia",
+    "plaza",
+    "estación"
+   ],
+   "answer": 0,
+   "why": "Medicine: pharmacy."
+  },
+  {
+   "before": "Veo películas en el ",
+   "after": ".",
+   "options": [
+    "cine",
+    "banco",
+    "puente"
+   ],
+   "answer": 0,
+   "why": "Films: movie theater."
+  },
+  {
+   "before": "Espero el autobús en la ",
+   "after": ".",
+   "options": [
+    "parada",
+    "iglesia",
+    "esquina del museo"
+   ],
+   "answer": 0,
+   "why": "The bus stop."
+  },
+  {
+   "before": "Cuando el ",
+   "after": " está en rojo, los coches paran.",
+   "options": [
+    "semáforo",
+    "parque",
+    "supermercado"
+   ],
+   "answer": 0,
+   "why": "Red traffic light: stop."
+  },
+  {
+   "before": "El banco está ",
+   "after": " la farmacia y el cine: en el medio.",
+   "options": [
+    "entre",
+    "lejos de",
+    "detrás de"
+   ],
+   "answer": 0,
+   "why": "In the middle: entre."
+  },
+  {
+   "before": "Cruzamos el río por el ",
+   "after": ".",
+   "options": [
+    "puente",
+    "museo",
+    "hospital"
+   ],
+   "answer": 0,
+   "why": "A bridge crosses a river."
+  },
+  {
+   "before": "Mi casa está a cinco minutos, muy ",
+   "after": " la escuela.",
+   "options": [
+    "cerca de",
+    "lejos de",
+    "enfrente"
+   ],
+   "answer": 0,
+   "why": "Five minutes away: near."
+  },
+  {
+   "before": "Vemos cuadros famosos en el ",
+   "after": ".",
+   "options": [
+    "museo",
+    "semáforo",
+    "banco"
+   ],
+   "answer": 0,
+   "why": "Paintings: museum."
+  }
+ ],
+ "demand": {
+  "query": "spanish city vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish city vocabulary». One of them is about location words, so the list includes cerca de, enfrente de and al lado de next to the places.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

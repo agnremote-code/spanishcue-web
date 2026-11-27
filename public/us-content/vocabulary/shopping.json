@@ -1,0 +1,365 @@
+{
+ "level": "A1",
+ "theme": "shopping",
+ "themeLabel": "Shopping",
+ "title": "Spanish Shopping Vocabulary: Stores, Prices and Dialogue",
+ "description": "Spanish shopping vocabulary: stores, prices and useful phrases, with a practice quiz that corrects itself and a short A1 reading set in Panama. Free.",
+ "h1": "Spanish shopping vocabulary",
+ "titleEs": "De compras en el supermercado",
+ "focus": "numbers and prices, cuesta and cuestan, shopping words",
+ "intro": "Learn the Spanish words for stores, money and shopping phrases, practise them with instant feedback, then follow a father and son on a supermarket trip in Panama City.",
+ "paragraphs": [
+  "Es sábado por la mañana en la Ciudad de Panamá. Andrés y su hijo Mateo van al supermercado con una lista. En Panamá usan el dólar de Estados Unidos, y hoy tienen treinta dólares para la comida de la semana.",
+  "Primero compran arroz, porque en su casa comen arroz todos los días. Una bolsa grande cuesta cuatro dólares. Después compran un pollo, que cuesta seis dólares, y una docena de huevos por tres dólares. Mateo quiere galletas de chocolate, pero su papá dice: «No están en la lista».",
+  "En la sección de frutas y verduras compran plátanos, tomates, cebollas y una piña. Las cebollas cuestan un dólar el kilo. En la caja, la cajera dice el total: veintiocho dólares con cincuenta centavos. Andrés paga con dos billetes de veinte y recibe once dólares con cincuenta de cambio. «Papá, ¿ahora sí puedo comprar las galletas?», pregunta Mateo. Andrés sonríe y compra un paquete pequeño."
+ ],
+ "glossary": [
+  [
+   "la lista",
+   "the shopping list"
+  ],
+  [
+   "el arroz",
+   "rice"
+  ],
+  [
+   "la bolsa",
+   "bag"
+  ],
+  [
+   "una docena",
+   "a dozen"
+  ],
+  [
+   "las galletas",
+   "cookies"
+  ],
+  [
+   "la cebolla",
+   "onion"
+  ],
+  [
+   "la caja / la cajera",
+   "checkout / cashier"
+  ],
+  [
+   "el cambio",
+   "change (money)"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "En Panamá usan ",
+   "after": ".",
+   "options": [
+    "el dólar",
+    "el peso",
+    "el euro"
+   ],
+   "answer": 0,
+   "why": "They use the US dollar."
+  },
+  {
+   "before": "Para la comida de la semana tienen ",
+   "after": " dólares.",
+   "options": [
+    "treinta",
+    "veinte",
+    "cuarenta"
+   ],
+   "answer": 0,
+   "why": "A thirty-dollar budget."
+  },
+  {
+   "before": "Compran arroz porque ",
+   "after": ".",
+   "options": [
+    "lo comen todos los días",
+    "está barato",
+    "Mateo lo quiere"
+   ],
+   "answer": 0,
+   "why": "They eat rice every day at home."
+  },
+  {
+   "before": "El pollo cuesta ",
+   "after": " dólares.",
+   "options": [
+    "seis",
+    "cuatro",
+    "tres"
+   ],
+   "answer": 0,
+   "why": "«Un pollo, que cuesta seis dólares.»"
+  },
+  {
+   "before": "El total es ",
+   "after": ".",
+   "options": [
+    "28,50 dólares",
+    "30 dólares",
+    "11,50 dólares"
+   ],
+   "answer": 0,
+   "why": "Twenty-eight dollars and fifty cents."
+  },
+  {
+   "before": "Al final, Andrés ",
+   "after": ".",
+   "options": [
+    "compra un paquete pequeño de galletas",
+    "no compra galletas",
+    "compra dos paquetes de galletas"
+   ],
+   "answer": 0,
+   "why": "He smiles and buys a small packet."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: cuesta or cuestan",
+  "intro": "Cuesta for one thing, cuestan for several things.",
+  "items": [
+   {
+    "before": "Una bolsa de arroz ",
+    "after": " cuatro dólares.",
+    "options": [
+     "cuesta",
+     "cuestan"
+    ],
+    "answer": 0,
+    "why": "One bag: cuesta."
+   },
+   {
+    "before": "Las cebollas ",
+    "after": " un dólar el kilo.",
+    "options": [
+     "cuesta",
+     "cuestan"
+    ],
+    "answer": 1,
+    "why": "Several onions: cuestan."
+   },
+   {
+    "before": "¿Cuánto ",
+    "after": " los huevos?",
+    "options": [
+     "cuesta",
+     "cuestan"
+    ],
+    "answer": 1,
+    "why": "Los huevos is plural: cuestan."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué compras normalmente en el supermercado?",
+  "¿Cuánto cuesta tu comida favorita?",
+  "Escribe una lista de compras para una fiesta con cinco cosas y sus precios."
+ ],
+ "heritage": "Heritage speakers often know prices and numbers but write them less often. Write these numbers in words: 28,50; 15; 99; 100. Check «veintiocho» as one word, «cincuenta» with c, and «cien» for exactly one hundred. Notice also that Panama uses a comma or a point for cents depending on the shop, just like many families do.",
+ "teacher": "Teachers: this text sets up a supermarket role play with a budget. Give each pair thirty dollars of paper money and a price list, and ask them to buy food for a week while one student plays the cashier. The numbers in the text are realistic, so students can also check the cashier's maths.",
+ "vocabulary": [
+  {
+   "title": "Stores",
+   "words": [
+    [
+     "la tienda",
+     "store"
+    ],
+    [
+     "el supermercado",
+     "supermarket"
+    ],
+    [
+     "la panadería",
+     "bakery"
+    ],
+    [
+     "la zapatería",
+     "shoe store"
+    ],
+    [
+     "la librería",
+     "bookstore"
+    ],
+    [
+     "el centro comercial",
+     "mall"
+    ],
+    [
+     "el mercado",
+     "market"
+    ]
+   ]
+  },
+  {
+   "title": "Money",
+   "words": [
+    [
+     "el precio",
+     "price"
+    ],
+    [
+     "barato / barata",
+     "cheap"
+    ],
+    [
+     "caro / cara",
+     "expensive"
+    ],
+    [
+     "el dinero",
+     "money"
+    ],
+    [
+     "el billete",
+     "bill (paper money)"
+    ],
+    [
+     "la moneda",
+     "coin"
+    ],
+    [
+     "la tarjeta",
+     "card"
+    ],
+    [
+     "el cambio",
+     "change"
+    ],
+    [
+     "la oferta",
+     "sale, special offer"
+    ]
+   ]
+  },
+  {
+   "title": "Useful phrases",
+   "words": [
+    [
+     "¿Cuánto cuesta?",
+     "How much is it?"
+    ],
+    [
+     "¿Cuánto cuestan?",
+     "How much are they?"
+    ],
+    [
+     "Quisiera…",
+     "I would like…"
+    ],
+    [
+     "¿Tiene otra talla?",
+     "Do you have another size?"
+    ],
+    [
+     "Me lo llevo.",
+     "I'll take it."
+    ],
+    [
+     "¿Puedo pagar con tarjeta?",
+     "Can I pay by card?"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Compro pan fresco en la ",
+   "after": ".",
+   "options": [
+    "panadería",
+    "zapatería",
+    "librería"
+   ],
+   "answer": 0,
+   "why": "Bread: bakery."
+  },
+  {
+   "before": "Los libros se compran en la ",
+   "after": ".",
+   "options": [
+    "librería",
+    "biblioteca",
+    "panadería"
+   ],
+   "answer": 0,
+   "why": "Bookstore is librería; a biblioteca lends books."
+  },
+  {
+   "before": "Cien dólares por una camiseta: ¡es muy ",
+   "after": "!",
+   "options": [
+    "cara",
+    "barata",
+    "nueva"
+   ],
+   "answer": 0,
+   "why": "Expensive: cara."
+  },
+  {
+   "before": "Hoy los zapatos están en ",
+   "after": ": cuestan la mitad.",
+   "options": [
+    "oferta",
+    "cambio",
+    "moneda"
+   ],
+   "answer": 0,
+   "why": "Half price: on sale."
+  },
+  {
+   "before": "La camisa es pequeña. ¿Tiene otra ",
+   "after": "?",
+   "options": [
+    "talla",
+    "tarjeta",
+    "tienda"
+   ],
+   "answer": 0,
+   "why": "Size: talla."
+  },
+  {
+   "before": "Pago con un billete de veinte y la cajera me da el ",
+   "after": ".",
+   "options": [
+    "cambio",
+    "precio",
+    "mercado"
+   ],
+   "answer": 0,
+   "why": "Change: el cambio."
+  },
+  {
+   "before": "No tengo efectivo. ¿Puedo pagar con ",
+   "after": "?",
+   "options": [
+    "tarjeta",
+    "moneda",
+    "oferta"
+   ],
+   "answer": 0,
+   "why": "No cash: card."
+  },
+  {
+   "before": "Me gusta mucho el suéter. Me lo ",
+   "after": ".",
+   "options": [
+    "llevo",
+    "cuesto",
+    "compra"
+   ],
+   "answer": 0,
+   "why": "Me lo llevo: I'll take it."
+  }
+ ],
+ "demand": {
+  "query": "spanish shopping vocabulary quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish shopping vocabulary». 1 of them ask for something to do with the words (quizlet), not only a list. One of them asks for a shopping dialogue, so the list includes the phrases you need at the checkout.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

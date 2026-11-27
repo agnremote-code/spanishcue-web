@@ -1,0 +1,388 @@
+{
+ "level": "A2",
+ "theme": "environment",
+ "themeLabel": "Environment",
+ "title": "Spanish Environment Vocabulary: Climate, Recycling and Quiz",
+ "description": "Spanish environment vocabulary: nature, climate and recycling words, with a practice quiz that corrects itself and an A2 reading set in Colombia. Free.",
+ "h1": "Spanish environment vocabulary",
+ "titleEs": "El reto del plástico",
+ "focus": "the environment, commands with tú, should and must",
+ "intro": "Learn the Spanish words for nature, climate and caring for the environment, practise with instant feedback, then read about a school campaign against plastic in Cartagena.",
+ "paragraphs": [
+  "Un sábado de agosto, Mariana y sus compañeros de noveno grado fueron a la playa de La Boquilla, cerca de Cartagena, Colombia. Querían nadar y jugar al voleibol, pero encontraron la arena llena de botellas, bolsas y pajitas de plástico. Mariana sacó fotos con su teléfono y ese lunes las mostró en clase.",
+  "La profesora de biología, la señora Herrera, les explicó que el plástico tarda cientos de años en desaparecer y que muchos animales del mar lo comen. Los estudiantes decidieron hacer una campaña en la escuela. La llamaron «El reto del plástico» y escribieron consejos en carteles: «Trae tu propia botella», «Di no a las pajitas», «Usa bolsas de tela».",
+  "Durante un mes, la cafetería de la escuela dejó de vender agua en botellas de plástico y puso una fuente de agua potable. Los estudiantes organizaron una limpieza de la playa con sus familias y recogieron ciento cuarenta kilos de basura en una mañana. Un periódico local publicó una foto del grupo.",
+  "No todo fue fácil. Algunos estudiantes se quejaron porque no podían comprar refrescos, y la fuente se rompió una semana. Pero al final del mes la escuela usaba la mitad del plástico de antes. Ahora otras dos escuelas de Cartagena quieren hacer el mismo reto, y Mariana va a explicarles cómo empezar."
+ ],
+ "glossary": [
+  [
+   "la arena",
+   "sand"
+  ],
+  [
+   "la pajita",
+   "drinking straw («popote» in Mexico, «pitillo» in Colombia)"
+  ],
+  [
+   "tardar",
+   "to take (time)"
+  ],
+  [
+   "el cartel",
+   "poster"
+  ],
+  [
+   "la tela",
+   "cloth, fabric"
+  ],
+  [
+   "el agua potable",
+   "drinking water"
+  ],
+  [
+   "recoger",
+   "to pick up"
+  ],
+  [
+   "quejarse",
+   "to complain"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Los estudiantes fueron a la playa para ",
+   "after": ".",
+   "options": [
+    "nadar y jugar al voleibol",
+    "limpiarla",
+    "sacar fotos"
+   ],
+   "answer": 0,
+   "why": "They wanted to swim and play volleyball."
+  },
+  {
+   "before": "En la arena encontraron ",
+   "after": ".",
+   "options": [
+    "plástico",
+    "animales muertos",
+    "conchas"
+   ],
+   "answer": 0,
+   "why": "Bottles, bags and plastic straws."
+  },
+  {
+   "before": "Mariana mostró las fotos ",
+   "after": ".",
+   "options": [
+    "en clase el lunes",
+    "en el periódico",
+    "en redes sociales"
+   ],
+   "answer": 0,
+   "why": "She showed them in class on Monday."
+  },
+  {
+   "before": "Según la profesora, el plástico ",
+   "after": ".",
+   "options": [
+    "tarda cientos de años en desaparecer",
+    "desaparece en un año",
+    "es bueno para los animales"
+   ],
+   "answer": 0,
+   "why": "It takes hundreds of years to break down."
+  },
+  {
+   "before": "La cafetería ",
+   "after": ".",
+   "options": [
+    "dejó de vender agua en botellas de plástico",
+    "cerró un mes",
+    "vendió más refrescos"
+   ],
+   "answer": 0,
+   "why": "It stopped selling bottled water and installed a fountain."
+  },
+  {
+   "before": "En la limpieza de la playa recogieron ",
+   "after": " kilos de basura.",
+   "options": [
+    "ciento cuarenta",
+    "catorce",
+    "cuarenta"
+   ],
+   "answer": 0,
+   "why": "140 kilos in one morning."
+  },
+  {
+   "before": "Algunos estudiantes se quejaron porque ",
+   "after": ".",
+   "options": [
+    "no podían comprar refrescos",
+    "la playa estaba lejos",
+    "no les gustaba la profesora"
+   ],
+   "answer": 0,
+   "why": "They could not buy soft drinks."
+  },
+  {
+   "before": "Al final del mes la escuela usaba ",
+   "after": ".",
+   "options": [
+    "la mitad del plástico",
+    "el doble de plástico",
+    "nada de plástico"
+   ],
+   "answer": 0,
+   "why": "Half the plastic it used before."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: tú commands on posters",
+  "intro": "Affirmative tú commands usually look like the él/ella present: usa, recicla. Some are irregular: di, pon, trae.",
+  "items": [
+   {
+    "before": "",
+    "after": " tu propia botella a la escuela.",
+    "options": [
+     "Trae",
+     "Traes"
+    ],
+    "answer": 0,
+    "why": "Command: trae."
+   },
+   {
+    "before": "",
+    "after": " no a las pajitas de plástico.",
+    "options": [
+     "Di",
+     "Dice"
+    ],
+    "answer": 0,
+    "why": "Decir has the irregular command di."
+   },
+   {
+    "before": "",
+    "after": " bolsas de tela en el supermercado.",
+    "options": [
+     "Usa",
+     "Usas"
+    ],
+    "answer": 0,
+    "why": "Command: usa, without -s."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué haces tú para usar menos plástico?",
+  "Escribe tres consejos para un cartel de tu escuela con mandatos de tú.",
+  "¿Hay un problema de medio ambiente en tu ciudad? ¿Cuál?"
+ ],
+ "heritage": "Heritage speakers know many words for a drinking straw: pajita, popote, pitillo, sorbete, bombilla. Ask your family which one they use and where it comes from. In writing, check the spelling of «reciclar» (c, not s), «basura» with b and «medio ambiente» as two words, a phrase students often write as one.",
+ "teacher": "Teachers: use this text in an environment unit or around Earth Day. After reading, students design their own poster for the school with three tú commands, exactly like the students in Cartagena. The numbers in the text (140 kilos, half the plastic) also give a short speaking task about results.",
+ "vocabulary": [
+  {
+   "title": "Nature",
+   "words": [
+    [
+     "el medio ambiente",
+     "the environment"
+    ],
+    [
+     "la naturaleza",
+     "nature"
+    ],
+    [
+     "el bosque",
+     "forest"
+    ],
+    [
+     "el río",
+     "river"
+    ],
+    [
+     "el mar",
+     "sea"
+    ],
+    [
+     "la playa",
+     "beach"
+    ],
+    [
+     "los animales en peligro de extinción",
+     "endangered animals"
+    ]
+   ]
+  },
+  {
+   "title": "Problems",
+   "words": [
+    [
+     "la contaminación",
+     "pollution"
+    ],
+    [
+     "el cambio climático",
+     "climate change"
+    ],
+    [
+     "la basura",
+     "trash"
+    ],
+    [
+     "el plástico",
+     "plastic"
+    ],
+    [
+     "la sequía",
+     "drought"
+    ],
+    [
+     "los incendios forestales",
+     "wildfires"
+    ],
+    [
+     "la deforestación",
+     "deforestation"
+    ]
+   ]
+  },
+  {
+   "title": "Solutions",
+   "words": [
+    [
+     "reciclar",
+     "to recycle"
+    ],
+    [
+     "reducir",
+     "to reduce"
+    ],
+    [
+     "reutilizar",
+     "to reuse"
+    ],
+    [
+     "ahorrar agua / energía",
+     "to save water / energy"
+    ],
+    [
+     "la energía solar",
+     "solar energy"
+    ],
+    [
+     "el transporte público",
+     "public transportation"
+    ],
+    [
+     "plantar árboles",
+     "to plant trees"
+    ],
+    [
+     "proteger",
+     "to protect"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Pongo las botellas en el contenedor para ",
+   "after": ".",
+   "options": [
+    "reciclar",
+    "contaminar",
+    "plantar"
+   ],
+   "answer": 0,
+   "why": "Bottles in the bin: recycle."
+  },
+  {
+   "before": "Cuando no llueve en muchos meses, hay ",
+   "after": ".",
+   "options": [
+    "sequía",
+    "contaminación",
+    "energía solar"
+   ],
+   "answer": 0,
+   "why": "No rain for months: drought."
+  },
+  {
+   "before": "Los paneles en el techo producen ",
+   "after": ".",
+   "options": [
+    "energía solar",
+    "basura",
+    "deforestación"
+   ],
+   "answer": 0,
+   "why": "Panels on the roof: solar energy."
+  },
+  {
+   "before": "Cortar muchos árboles causa la ",
+   "after": ".",
+   "options": [
+    "deforestación",
+    "sequía del mar",
+    "energía"
+   ],
+   "answer": 0,
+   "why": "Cutting trees: deforestation."
+  },
+  {
+   "before": "Cierro el grifo mientras me lavo los dientes para ",
+   "after": " agua.",
+   "options": [
+    "ahorrar",
+    "gastar",
+    "reciclar"
+   ],
+   "answer": 0,
+   "why": "Saving water: ahorrar."
+  },
+  {
+   "before": "Voy al trabajo en ",
+   "after": " para no usar el coche.",
+   "options": [
+    "transporte público",
+    "un incendio",
+    "el bosque"
+   ],
+   "answer": 0,
+   "why": "Public transport instead of a car."
+  },
+  {
+   "before": "El oso polar es un animal en peligro de ",
+   "after": ".",
+   "options": [
+    "extinción",
+    "reciclaje",
+    "contaminación"
+   ],
+   "answer": 0,
+   "why": "Endangered: en peligro de extinción."
+  },
+  {
+   "before": "El humo de las fábricas causa ",
+   "after": " en el aire.",
+   "options": [
+    "contaminación",
+    "reutilización",
+    "naturaleza"
+   ],
+   "answer": 0,
+   "why": "Factory smoke: air pollution."
+  }
+ ],
+ "demand": {
+  "query": "spanish environment vocab quizlet",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish environment vocabulary». 1 of them ask for something to do with the words (quizlet), not only a list. Climate vocabulary appears next to it, so the list covers climate change as well as recycling.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

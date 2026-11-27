@@ -1,0 +1,195 @@
+{
+ "level": "B1",
+ "theme": "health",
+ "themeLabel": "Health",
+ "title": "Spanish Reading Comprehension B1: Health and Sleep",
+ "description": "A B1 Spanish reading about teenagers and sleep, with instant-feedback questions, health vocabulary and practice with es importante que + subjunctive. No login.",
+ "h1": "Spanish reading comprehension B1: health",
+ "titleEs": "Dormir menos de lo que necesitamos",
+ "focus": "giving advice with es importante que and the subjunctive, health vocabulary",
+ "intro": "An intermediate text about health: a school counsellor in Monterrey writes an article about why teenagers sleep too little and what they can do about it.",
+ "paragraphs": [
+  "Gabriela Leal es orientadora en una preparatoria de Monterrey, México. Cada año, cuando empiezan los exámenes, ve en su oficina a estudiantes con dolor de cabeza, mal humor y problemas para concentrarse. Este año ha decidido escribir un artículo para el boletín de la escuela sobre una causa que casi nadie menciona: el sueño.",
+  "Según explica, los adolescentes necesitan dormir entre ocho y diez horas cada noche, pero muchos duermen seis o menos. No es solo una cuestión de disciplina. En la adolescencia, el cuerpo empieza a producir melatonina, la hormona del sueño, más tarde que en la infancia, así que es normal no tener sueño a las diez de la noche. El problema es que las clases empiezan a las siete de la mañana.",
+  "A esto se suman las pantallas. La luz del teléfono retrasa todavía más el sueño, y las notificaciones interrumpen el descanso. En una encuesta que la orientadora hizo en la escuela, siete de cada diez estudiantes dijeron que usan el teléfono en la cama, y la mitad reconoció que a veces se despierta para revisar mensajes.",
+  "Gabriela no quiere dar sermones, sino consejos prácticos. Recomienda que los estudiantes dejen el teléfono fuera del cuarto, que intenten acostarse a la misma hora también los fines de semana y que no tomen bebidas con cafeína después de las cinco de la tarde. «Es importante que entiendan que dormir no es perder el tiempo», escribe. «Mientras duermen, el cerebro ordena lo que han estudiado. Una noche completa de sueño antes de un examen vale más que tres horas de estudio a medianoche.»"
+ ],
+ "glossary": [
+  [
+   "la orientadora",
+   "school counselor (female)"
+  ],
+  [
+   "la preparatoria",
+   "high school (in Mexico)"
+  ],
+  [
+   "el mal humor",
+   "bad mood"
+  ],
+  [
+   "el boletín",
+   "newsletter"
+  ],
+  [
+   "la pantalla",
+   "screen"
+  ],
+  [
+   "retrasar",
+   "to delay"
+  ],
+  [
+   "la encuesta",
+   "survey"
+  ],
+  [
+   "dar sermones",
+   "to lecture, to preach"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Gabriela trabaja como ",
+   "after": ".",
+   "options": [
+    "orientadora",
+    "médica",
+    "profesora de biología"
+   ],
+   "answer": 0,
+   "why": "She is a school counsellor."
+  },
+  {
+   "before": "Gabriela escribió el artículo sobre ",
+   "after": ".",
+   "options": [
+    "el sueño",
+    "los exámenes",
+    "la alimentación"
+   ],
+   "answer": 0,
+   "why": "A cause almost nobody mentions: sleep."
+  },
+  {
+   "before": "Los adolescentes necesitan dormir ",
+   "after": ".",
+   "options": [
+    "entre ocho y diez horas",
+    "seis horas",
+    "doce horas"
+   ],
+   "answer": 0,
+   "why": "Between eight and ten hours a night."
+  },
+  {
+   "before": "Según el texto, en la adolescencia la melatonina ",
+   "after": ".",
+   "options": [
+    "se produce más tarde",
+    "desaparece",
+    "se produce más temprano"
+   ],
+   "answer": 0,
+   "why": "The body produces it later than in childhood."
+  },
+  {
+   "before": "El problema principal es que las clases ",
+   "after": ".",
+   "options": [
+    "empiezan a las siete",
+    "terminan muy tarde",
+    "son muy largas"
+   ],
+   "answer": 0,
+   "why": "Classes start at seven in the morning."
+  },
+  {
+   "before": "En la encuesta, ",
+   "after": " usan el teléfono en la cama.",
+   "options": [
+    "siete de cada diez estudiantes",
+    "la mitad de los profesores",
+    "todos los estudiantes"
+   ],
+   "answer": 0,
+   "why": "Seven out of ten students."
+  },
+  {
+   "before": "Gabriela recomienda no tomar cafeína ",
+   "after": ".",
+   "options": [
+    "después de las cinco de la tarde",
+    "por la mañana",
+    "antes de un examen"
+   ],
+   "answer": 0,
+   "why": "Not after 5 p.m."
+  },
+  {
+   "before": "También recomienda acostarse a la misma hora ",
+   "after": ".",
+   "options": [
+    "los fines de semana también",
+    "solo antes de los exámenes",
+    "solo de lunes a viernes"
+   ],
+   "answer": 0,
+   "why": "Including weekends."
+  },
+  {
+   "before": "Según Gabriela, mientras dormimos el cerebro ",
+   "after": ".",
+   "options": [
+    "ordena lo que hemos estudiado",
+    "olvida lo que hemos estudiado",
+    "descansa completamente"
+   ],
+   "answer": 0,
+   "why": "It organises what we have studied."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: advice with the subjunctive",
+  "intro": "Recomendar que, es importante que and aconsejar que are followed by the subjunctive.",
+  "items": [
+   {
+    "before": "Recomienda que los estudiantes ",
+    "after": " el teléfono fuera del cuarto.",
+    "options": [
+     "dejan",
+     "dejen"
+    ],
+    "answer": 1,
+    "why": "Recomendar que + subjunctive: dejen."
+   },
+   {
+    "before": "Es importante que ",
+    "after": " a la misma hora.",
+    "options": [
+     "te acuestes",
+     "te acuestas"
+    ],
+    "answer": 0,
+    "why": "Es importante que + subjunctive."
+   },
+   {
+    "before": "Sé que muchos estudiantes ",
+    "after": " poco.",
+    "options": [
+     "duermen",
+     "duerman"
+    ],
+    "answer": 0,
+    "why": "Saber que states a fact: indicative."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuántas horas duermes normalmente? ¿Es suficiente?",
+  "¿Qué consejo del texto te parece más fácil de seguir? ¿Y el más difícil?",
+  "Escribe tres consejos para un compañero que tiene sueño en clase, con «te recomiendo que…»."
+ ],
+ "heritage": "Heritage speakers often use the subjunctive correctly in speech but hesitate in writing. Use the counsellor's advice as a model and write a short message to a younger cousin with five recommendations. Check the spelling of «adolescencia» (sc), «hormona» with h, and «cafeína» with an accent on the í.",
+ "teacher": "Teachers: this reading fits a health or wellness unit and is relevant to students' own lives. Ask students to collect sleep data in class anonymously and compare it with the counsellor's survey. Then they write advice with recommend que + subjunctive, the structure the text models."
+}

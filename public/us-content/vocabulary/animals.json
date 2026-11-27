@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "animals",
+ "themeLabel": "Animals",
+ "title": "Spanish Animals Vocabulary: Word List, Quiz and Farm Reading",
+ "description": "Spanish animals vocabulary with a list of pets, farm and wild animals, a practice quiz that corrects itself and a short A1 reading set in Uruguay. No login.",
+ "h1": "Spanish animals vocabulary",
+ "titleEs": "La granja de los Pereira",
+ "focus": "animals, plurals and articles, the present tense",
+ "intro": "Learn the Spanish names of pets, farm animals and wild animals, practise them with instant feedback, then read about Joaquín's summer on his grandparents' farm in Uruguay.",
+ "paragraphs": [
+  "Joaquín tiene once años y vive en Montevideo, la capital de Uruguay. En enero, cuando no hay clases, va a la granja de sus abuelos, los Pereira. La granja está en el campo, a tres horas de la ciudad en autobús, y no tiene internet ni televisión.",
+  "En la granja hay muchos animales: dos caballos, una vaca, diez gallinas, tres cerdos y un gato negro que duerme todo el día. Los caballos se llaman Trueno y Canela. Trueno es grande y rápido; Canela es vieja y muy tranquila. La vaca da leche todas las mañanas.",
+  "Joaquín se levanta temprano con su abuelo. Primero dan comida a las gallinas y buscan los huevos. Después limpian la casa de los cerdos, que es el trabajo menos divertido. Por la tarde Joaquín monta a Canela con su abuela. Por la noche escuchan la radio, juegan a las cartas y miran las estrellas. Para Joaquín, enero es el mejor mes del año."
+ ],
+ "glossary": [
+  [
+   "la granja",
+   "the farm"
+  ],
+  [
+   "el campo",
+   "the countryside"
+  ],
+  [
+   "el caballo",
+   "the horse"
+  ],
+  [
+   "la vaca",
+   "the cow"
+  ],
+  [
+   "la gallina",
+   "the hen"
+  ],
+  [
+   "el cerdo",
+   "the pig («chancho» in many countries)"
+  ],
+  [
+   "el huevo",
+   "the egg"
+  ],
+  [
+   "montar",
+   "to ride (a horse)"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Joaquín vive en ",
+   "after": ".",
+   "options": [
+    "Montevideo",
+    "el campo",
+    "Buenos Aires"
+   ],
+   "answer": 0,
+   "why": "«Vive en Montevideo, la capital de Uruguay.»"
+  },
+  {
+   "before": "Joaquín va a la granja en ",
+   "after": ".",
+   "options": [
+    "enero",
+    "julio",
+    "diciembre"
+   ],
+   "answer": 0,
+   "why": "In January, when there is no school (summer in Uruguay)."
+  },
+  {
+   "before": "En la granja hay ",
+   "after": " gallinas.",
+   "options": [
+    "diez",
+    "dos",
+    "tres"
+   ],
+   "answer": 0,
+   "why": "The text says «diez gallinas»."
+  },
+  {
+   "before": "Canela es ",
+   "after": ".",
+   "options": [
+    "vieja y tranquila",
+    "grande y rápida",
+    "negra y dormilona"
+   ],
+   "answer": 0,
+   "why": "Canela is old and very calm; Trueno is the fast one."
+  },
+  {
+   "before": "El trabajo menos divertido es ",
+   "after": ".",
+   "options": [
+    "limpiar la casa de los cerdos",
+    "buscar los huevos",
+    "montar a caballo"
+   ],
+   "answer": 0,
+   "why": "Cleaning the pigs' shed is the least fun job."
+  },
+  {
+   "before": "Por la noche la familia ",
+   "after": ".",
+   "options": [
+    "escucha la radio y juega a las cartas",
+    "mira la televisión",
+    "usa internet"
+   ],
+   "answer": 0,
+   "why": "There is no TV or internet: radio, cards and stars."
+  }
+ ],
+ "grammar": {
+  "title": "Practice: one animal or many",
+  "intro": "Nouns ending in a vowel add -s; nouns ending in a consonant add -es. The article changes too.",
+  "items": [
+   {
+    "before": "En la granja hay tres ",
+    "after": ".",
+    "options": [
+     "cerdo",
+     "cerdos"
+    ],
+    "answer": 1,
+    "why": "Three of them: cerdos."
+   },
+   {
+    "before": "",
+    "after": " caballos se llaman Trueno y Canela.",
+    "options": [
+     "Los",
+     "Las"
+    ],
+    "answer": 0,
+    "why": "Caballo is masculine: los caballos."
+   },
+   {
+    "before": "Los abuelos tienen diez ",
+    "after": ".",
+    "options": [
+     "gallinas",
+     "gallinaes"
+    ],
+    "answer": 0,
+    "why": "Gallina ends in a vowel: add -s."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué animales hay en la granja? ¿Cuál es tu favorito?",
+  "¿Tienes una mascota? ¿Cómo se llama y cómo es?",
+  "¿Te gusta el campo o prefieres la ciudad?"
+ ],
+ "heritage": "Heritage speakers may know these animals by family words: «chancho», «puerco» or «marrano» for cerdo, «guajolote» or «chompipe» for pavo. Share the words your family uses. In writing, check the h in «huevo» and «hay», the v in «vaca» and «caballo» with b and double l, which many fluent speakers mix up.",
+ "teacher": "Teachers: read the text before a farm or pets lesson. Students can make a table with each animal, the number and one adjective from the text. Point out that January is summer in Uruguay, a quick culture note that surprises students in the United States.",
+ "vocabulary": [
+  {
+   "title": "Pets",
+   "words": [
+    [
+     "el perro",
+     "dog"
+    ],
+    [
+     "el gato",
+     "cat"
+    ],
+    [
+     "el pez",
+     "fish (alive)"
+    ],
+    [
+     "el pájaro",
+     "bird"
+    ],
+    [
+     "el conejo",
+     "rabbit"
+    ],
+    [
+     "el hámster",
+     "hamster"
+    ],
+    [
+     "la tortuga",
+     "turtle"
+    ]
+   ]
+  },
+  {
+   "title": "Farm animals",
+   "words": [
+    [
+     "la vaca",
+     "cow"
+    ],
+    [
+     "el caballo",
+     "horse"
+    ],
+    [
+     "el cerdo",
+     "pig"
+    ],
+    [
+     "la gallina",
+     "hen"
+    ],
+    [
+     "el gallo",
+     "rooster"
+    ],
+    [
+     "la oveja",
+     "sheep"
+    ],
+    [
+     "la cabra",
+     "goat"
+    ],
+    [
+     "el pato",
+     "duck"
+    ]
+   ]
+  },
+  {
+   "title": "Wild animals",
+   "words": [
+    [
+     "el león",
+     "lion"
+    ],
+    [
+     "el tigre",
+     "tiger"
+    ],
+    [
+     "el elefante",
+     "elephant"
+    ],
+    [
+     "el mono",
+     "monkey"
+    ],
+    [
+     "la jirafa",
+     "giraffe"
+    ],
+    [
+     "el oso",
+     "bear"
+    ],
+    [
+     "la serpiente",
+     "snake"
+    ],
+    [
+     "el lobo",
+     "wolf"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El ",
+   "after": " dice «guau».",
+   "options": [
+    "perro",
+    "gato",
+    "pato"
+   ],
+   "answer": 0,
+   "why": "Dogs say «guau» in Spanish."
+  },
+  {
+   "before": "La ",
+   "after": " nos da leche.",
+   "options": [
+    "vaca",
+    "oveja",
+    "jirafa"
+   ],
+   "answer": 0,
+   "why": "Cows give milk."
+  },
+  {
+   "before": "La lana viene de la ",
+   "after": ".",
+   "options": [
+    "oveja",
+    "gallina",
+    "tortuga"
+   ],
+   "answer": 0,
+   "why": "Wool comes from sheep."
+  },
+  {
+   "before": "El ",
+   "after": " canta por la mañana en la granja.",
+   "options": [
+    "gallo",
+    "lobo",
+    "conejo"
+   ],
+   "answer": 0,
+   "why": "The rooster crows in the morning."
+  },
+  {
+   "before": "La ",
+   "after": " tiene el cuello muy largo.",
+   "options": [
+    "jirafa",
+    "serpiente",
+    "cabra"
+   ],
+   "answer": 0,
+   "why": "The giraffe has a long neck."
+  },
+  {
+   "before": "El ",
+   "after": " vive en el agua.",
+   "options": [
+    "pez",
+    "caballo",
+    "oso"
+   ],
+   "answer": 0,
+   "why": "A fish lives in water."
+  },
+  {
+   "before": "El ",
+   "after": " es el animal más grande de la lista.",
+   "options": [
+    "elefante",
+    "mono",
+    "hámster"
+   ],
+   "answer": 0,
+   "why": "Elephants are the biggest here."
+  },
+  {
+   "before": "La ",
+   "after": " camina muy despacio y vive muchos años.",
+   "options": [
+    "tortuga",
+    "liebre",
+    "cabra"
+   ],
+   "answer": 0,
+   "why": "Turtles are slow and long-lived."
+  }
+ ],
+ "demand": {
+  "query": "spanish animals vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish animals vocabulary». All three are about lists and words, so this page adds what a list cannot: a quiz and a story that uses the words.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
