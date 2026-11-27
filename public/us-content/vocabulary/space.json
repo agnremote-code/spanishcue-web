@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "space",
+ "themeLabel": "Space",
+ "title": "Spanish Space Vocabulary: Planets, Stars and Practice",
+ "description": "Spanish space vocabulary: el sistema solar, los planetas, la Luna, el cohete and el astronauta, with a quiz and an A2 reading about a space center visit.",
+ "h1": "Spanish space vocabulary",
+ "titleEs": "Un día en el centro espacial",
+ "focus": "the preterite and numbers in facts",
+ "intro": "Learn the Spanish words for space: the solar system and the planets, the sky at night and space travel. Practice with instant feedback, then read about a student who visits a space center and learns about Hispanic astronauts.",
+ "paragraphs": [
+  "El mes pasado, la clase de ciencias de Diego fue de excursión a un centro espacial en Houston. Diego, de trece años, quiere ser astronauta desde que tenía cinco. En el autobús, no paraba de hacer preguntas a su maestra.",
+  "En el centro vieron un cohete enorme, acostado en un edificio, y entraron en una copia de la estación espacial. Una guía les explicó cómo viven los astronautas: duermen en sacos atados a la pared, beben agua con pajillas especiales y hacen ejercicio dos horas al día porque en el espacio los músculos se debilitan.",
+  "Después, la guía les habló de astronautas hispanos. Les contó que Ellen Ochoa fue la primera mujer hispana en viajar al espacio, en 1993, y que después dirigió el Centro Espacial Johnson. También mencionó a Franklin Chang Díaz, nacido en Costa Rica, que viajó al espacio siete veces.",
+  "Al final, cada estudiante se puso un casco de astronauta para una foto. Diego le preguntó a la guía qué tenía que estudiar para ser astronauta. Ella le dijo: «Ciencias, matemáticas, mucho ejercicio y nunca dejar de preguntar». Diego sonrió: lo último ya lo hace muy bien."
+ ],
+ "glossary": [
+  [
+   "ir de excursión",
+   "to go on a field trip"
+  ],
+  [
+   "no parar de",
+   "to keep on"
+  ],
+  [
+   "acostado",
+   "lying down"
+  ],
+  [
+   "atado / atada",
+   "tied"
+  ],
+  [
+   "la pajilla",
+   "straw"
+  ],
+  [
+   "debilitarse",
+   "to get weak"
+  ],
+  [
+   "dirigir",
+   "to direct, run"
+  ],
+  [
+   "el casco",
+   "helmet"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Diego fue al centro espacial con ",
+   "after": ".",
+   "options": [
+    "su clase de ciencias",
+    "su familia",
+    "sus amigos"
+   ],
+   "answer": 0,
+   "why": "With his science class."
+  },
+  {
+   "before": "Diego quiere ser astronauta desde ",
+   "after": ".",
+   "options": [
+    "los cinco años",
+    "el mes pasado",
+    "los trece años"
+   ],
+   "answer": 0,
+   "why": "Since he was five."
+  },
+  {
+   "before": "Los astronautas hacen ejercicio porque ",
+   "after": ".",
+   "options": [
+    "los músculos se debilitan",
+    "tienen frío",
+    "están aburridos"
+   ],
+   "answer": 0,
+   "why": "Muscles get weak in space."
+  },
+  {
+   "before": "Ellen Ochoa fue la primera mujer hispana en ",
+   "after": ".",
+   "options": [
+    "viajar al espacio",
+    "pisar la Luna",
+    "construir un cohete"
+   ],
+   "answer": 0,
+   "why": "The first Hispanic woman in space."
+  },
+  {
+   "before": "Franklin Chang Díaz nació en ",
+   "after": ".",
+   "options": [
+    "Costa Rica",
+    "México",
+    "Houston"
+   ],
+   "answer": 0,
+   "why": "In Costa Rica."
+  },
+  {
+   "before": "Según la guía, para ser astronauta hay que ",
+   "after": ".",
+   "options": [
+    "estudiar ciencias y matemáticas",
+    "vivir en Houston",
+    "hablar ruso"
+   ],
+   "answer": 0,
+   "why": "Science, math, exercise and curiosity."
+  }
+ ],
+ "grammar": {
+  "title": "Ser + profession: quiero ser astronauta",
+  "intro": "To talk about a profession, use ser without an article: quiero ser astronauta, es ingeniera.",
+  "items": [
+   {
+    "before": "Mi tía ",
+    "after": " ingeniera en la NASA.",
+    "options": [
+     "es",
+     "está",
+     "es una la"
+    ],
+    "answer": 0,
+    "why": "Profession: ser, no article."
+   },
+   {
+    "before": "De niño, yo quería ",
+    "after": " astronauta.",
+    "options": [
+     "ser",
+     "estar",
+     "hacer"
+    ],
+    "answer": 0,
+    "why": "Querer ser + profession."
+   },
+   {
+    "before": "Ellen Ochoa ",
+    "after": " astronauta y directora.",
+    "options": [
+     "fue",
+     "estuvo",
+     "era una"
+    ],
+    "answer": 0,
+    "why": "Completed career: fue."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Te gustaría viajar al espacio? ¿Por qué?",
+  "¿Qué planeta te parece más interesante?",
+  "Explica cómo vive un astronauta en la estación espacial."
+ ],
+ "heritage": "Space vocabulary is almost the same in English and Spanish, but watch the capital letters: la Tierra, la Luna and el Sol take capitals when they mean our planet, moon and star. Hispanic astronauts like Ellen Ochoa and Franklin Chang Díaz are good topics for a bilingual presentation.",
+ "teacher": "Ask groups to prepare a one-minute «space news» report in Spanish about a planet or an astronaut, with three facts and two vocabulary words from the list.",
+ "vocabulary": [
+  {
+   "title": "The solar system",
+   "words": [
+    [
+     "el espacio",
+     "space"
+    ],
+    [
+     "el sistema solar",
+     "solar system"
+    ],
+    [
+     "el Sol",
+     "the Sun"
+    ],
+    [
+     "la Tierra",
+     "Earth"
+    ],
+    [
+     "la Luna",
+     "the Moon"
+    ],
+    [
+     "Marte",
+     "Mars"
+    ],
+    [
+     "Júpiter",
+     "Jupiter"
+    ],
+    [
+     "Saturno y sus anillos",
+     "Saturn and its rings"
+    ]
+   ]
+  },
+  {
+   "title": "The sky",
+   "words": [
+    [
+     "la estrella",
+     "star"
+    ],
+    [
+     "el planeta",
+     "planet"
+    ],
+    [
+     "la galaxia",
+     "galaxy"
+    ],
+    [
+     "el cometa",
+     "comet"
+    ],
+    [
+     "la órbita",
+     "orbit"
+    ],
+    [
+     "el eclipse",
+     "eclipse"
+    ],
+    [
+     "la Vía Láctea",
+     "the Milky Way"
+    ],
+    [
+     "el telescopio",
+     "telescope"
+    ]
+   ]
+  },
+  {
+   "title": "Space travel",
+   "words": [
+    [
+     "el astronauta / la astronauta",
+     "astronaut"
+    ],
+    [
+     "el cohete",
+     "rocket"
+    ],
+    [
+     "la nave espacial",
+     "spaceship"
+    ],
+    [
+     "la estación espacial",
+     "space station"
+    ],
+    [
+     "el traje espacial",
+     "space suit"
+    ],
+    [
+     "despegar",
+     "to take off, launch"
+    ],
+    [
+     "aterrizar",
+     "to land"
+    ],
+    [
+     "la gravedad",
+     "gravity"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Vivimos en el planeta ",
+   "after": ".",
+   "options": [
+    "Tierra",
+    "Marte",
+    "Sol"
+   ],
+   "answer": 0,
+   "why": "Our planet: la Tierra."
+  },
+  {
+   "before": "El planeta rojo es ",
+   "after": ".",
+   "options": [
+    "Marte",
+    "Saturno",
+    "Júpiter"
+   ],
+   "answer": 0,
+   "why": "The red planet: Marte."
+  },
+  {
+   "before": "El planeta con anillos más famoso es ",
+   "after": ".",
+   "options": [
+    "Saturno",
+    "Marte",
+    "la Luna"
+   ],
+   "answer": 0,
+   "why": "Saturn's rings."
+  },
+  {
+   "before": "Para ver las estrellas de cerca usamos un ",
+   "after": ".",
+   "options": [
+    "telescopio",
+    "cohete",
+    "traje"
+   ],
+   "answer": 0,
+   "why": "A telescope."
+  },
+  {
+   "before": "Los astronautas viajan al espacio en un ",
+   "after": ".",
+   "options": [
+    "cohete",
+    "cometa",
+    "eclipse"
+   ],
+   "answer": 0,
+   "why": "A rocket."
+  },
+  {
+   "before": "Cuando la Luna tapa el Sol, hay un ",
+   "after": ".",
+   "options": [
+    "eclipse",
+    "cometa",
+    "planeta"
+   ],
+   "answer": 0,
+   "why": "A solar eclipse."
+  },
+  {
+   "before": "En el espacio no hay mucha ",
+   "after": ", por eso los astronautas flotan.",
+   "options": [
+    "gravedad",
+    "galaxia",
+    "órbita"
+   ],
+   "answer": 0,
+   "why": "Little gravity makes them float."
+  },
+  {
+   "before": "Nuestra galaxia se llama la Vía ",
+   "after": ".",
+   "options": [
+    "Láctea",
+    "Solar",
+    "Espacial"
+   ],
+   "answer": 0,
+   "why": "The Milky Way: la Vía Láctea."
+  }
+ ],
+ "demand": {
+  "query": "spanish space vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 2 searches to people in the United States who typed «spanish space vocabulary». Both suggestions ask for space words, so the list covers astronomy and space travel, with planet names that are almost the same in English.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

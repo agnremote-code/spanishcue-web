@@ -255,6 +255,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "connectors",
+  "level": "A2",
+  "theme": "connectors",
+  "title": "Spanish connectors: linking words"
+ },
+ {
+  "family": "vocabulary",
   "slug": "construction",
   "level": "A2",
   "theme": "construction",
@@ -329,6 +336,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "family",
   "title": "Spanish family vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "farm",
+  "level": "A1",
+  "theme": "farm",
+  "title": "Spanish farm vocabulary"
  },
  {
   "family": "vocabulary",
@@ -553,6 +567,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "soccer",
   "title": "Spanish soccer vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "space",
+  "level": "A2",
+  "theme": "space",
+  "title": "Spanish space vocabulary"
  },
  {
   "family": "vocabulary",
