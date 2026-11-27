@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "phone",
+ "themeLabel": "Phone",
+ "title": "Spanish Phone Vocabulary: Calls, Texts and Phone Phrases",
+ "description": "Spanish phone vocabulary and phone phrases: llamar, colgar, el mensaje, la batería and ¿De parte de quién?, with a quiz and an A2 reading about a lost phone.",
+ "h1": "Spanish phone vocabulary",
+ "titleEs": "El celular perdido",
+ "focus": "phone phrases and the preterite in a short story",
+ "intro": "Learn the Spanish words for phones: the device, calls and texts, and the set phrases people say when they answer or end a call. Practice with instant feedback, then read about a student who loses her phone and gets it back with a phone call.",
+ "paragraphs": [
+  "El viernes por la tarde, Camila salió de la biblioteca con prisa porque iba a perder el autobús. Cuando llegó a casa, buscó su celular en la mochila. No estaba. Buscó en los bolsillos, en la chaqueta y otra vez en la mochila. Nada.",
+  "Su hermano mayor, Andrés, le prestó su teléfono. Camila marcó su propio número. Sonó una vez, dos veces, tres veces… y alguien contestó:",
+  "—¿Bueno?",
+  "—Hola, buenas tardes. Habla Camila. Ese es mi celular. ¿Dónde lo encontró?",
+  "—Hola, Camila. Me llamo Rosa, trabajo en la biblioteca. Tu teléfono estaba en una mesa del segundo piso. Tiene una funda morada con estrellas, ¿verdad?",
+  "—¡Sí, es el mío! ¿Me puede repetir a qué hora cierra la biblioteca?",
+  "—A las ocho. Lo guardo en la recepción. Pregunta por Rosa.",
+  "Andrés llevó a Camila en carro. En la recepción, Rosa le dio el celular, con el 5 % de batería y catorce mensajes de su mejor amiga. Camila le dio las gracias muchas veces y le escribió una nota de agradecimiento al día siguiente. Esa noche, cambió el fondo de pantalla: escribió su nombre y el número de su hermano, por si acaso."
+ ],
+ "glossary": [
+  [
+   "con prisa",
+   "in a hurry"
+  ],
+  [
+   "perder el autobús",
+   "to miss the bus"
+  ],
+  [
+   "el bolsillo",
+   "pocket"
+  ],
+  [
+   "prestar",
+   "to lend"
+  ],
+  [
+   "propio / propia",
+   "own"
+  ],
+  [
+   "guardar",
+   "to keep, put away"
+  ],
+  [
+   "el fondo de pantalla",
+   "wallpaper, lock screen"
+  ],
+  [
+   "por si acaso",
+   "just in case"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Camila salió de la biblioteca con prisa porque ",
+   "after": ".",
+   "options": [
+    "iba a perder el autobús",
+    "estaba enferma",
+    "tenía hambre"
+   ],
+   "answer": 0,
+   "why": "She was about to miss the bus."
+  },
+  {
+   "before": "Camila llamó a su celular con el teléfono de ",
+   "after": ".",
+   "options": [
+    "su hermano",
+    "Rosa",
+    "su mejor amiga"
+   ],
+   "answer": 0,
+   "why": "Her brother's phone."
+  },
+  {
+   "before": "Rosa contestó la llamada diciendo «",
+   "after": "».",
+   "options": [
+    "¿Bueno?",
+    "¿Diga?",
+    "¿Aló?"
+   ],
+   "answer": 0,
+   "why": "She said ¿Bueno?"
+  },
+  {
+   "before": "El celular estaba ",
+   "after": ".",
+   "options": [
+    "en una mesa del segundo piso",
+    "en el autobús",
+    "en la recepción desde el principio"
+   ],
+   "answer": 0,
+   "why": "On a table on the second floor."
+  },
+  {
+   "before": "La funda del celular es ",
+   "after": ".",
+   "options": [
+    "morada con estrellas",
+    "roja con flores",
+    "negra"
+   ],
+   "answer": 0,
+   "why": "Purple with stars."
+  },
+  {
+   "before": "Esa noche, Camila puso en la pantalla ",
+   "after": ".",
+   "options": [
+    "su nombre y el número de su hermano",
+    "una foto de Rosa",
+    "la contraseña"
+   ],
+   "answer": 0,
+   "why": "Her name and her brother's number."
+  }
+ ],
+ "grammar": {
+  "title": "Usted on the phone",
+  "intro": "When you call a stranger or a business, use usted: ¿Me puede repetir?, ¿Puede llamar más tarde?, not the tú forms.",
+  "items": [
+   {
+    "before": "Perdón, señora, ¿me ",
+    "after": " repetir su nombre?",
+    "options": [
+     "puede",
+     "puedes",
+     "pueden"
+    ],
+    "answer": 0,
+    "why": "Usted: puede."
+   },
+   {
+    "before": "Buenas tardes, ¿",
+    "after": " hablar con la doctora Ruiz?",
+    "options": [
+     "podría",
+     "podrías",
+     "podrían"
+    ],
+    "answer": 0,
+    "why": "Polite usted: podría."
+   },
+   {
+    "before": "Señor, ¿",
+    "after": " dejar un mensaje?",
+    "options": [
+     "quiere",
+     "quieres",
+     "quieren"
+    ],
+    "answer": 0,
+    "why": "Usted: quiere."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuántas horas al día usas el celular?",
+  "Representa una llamada: llamas a un restaurante para reservar una mesa.",
+  "¿Prefieres llamar, mandar mensajes de texto o hacer videollamadas? ¿Por qué?"
+ ],
+ "heritage": "How people answer the phone changes by country: ¿Bueno? in Mexico, ¿Aló? in much of South America, ¿Diga? or ¿Sí? in Spain. Many heritage speakers say «textear» at home; in formal writing use «mandar un mensaje de texto».",
+ "teacher": "Pair students for a role-play: one calls an office to ask for a person who is not there, and the other answers with usted, takes a message and reads it back.",
+ "vocabulary": [
+  {
+   "title": "The phone",
+   "words": [
+    [
+     "el teléfono / el celular",
+     "phone / cell phone"
+    ],
+    [
+     "la pantalla",
+     "screen"
+    ],
+    [
+     "la batería",
+     "battery"
+    ],
+    [
+     "el cargador",
+     "charger"
+    ],
+    [
+     "la funda",
+     "phone case"
+    ],
+    [
+     "la aplicación",
+     "app"
+    ],
+    [
+     "la señal",
+     "signal"
+    ],
+    [
+     "la contraseña",
+     "password"
+    ]
+   ]
+  },
+  {
+   "title": "Calls and messages",
+   "words": [
+    [
+     "llamar",
+     "to call"
+    ],
+    [
+     "contestar",
+     "to answer"
+    ],
+    [
+     "colgar",
+     "to hang up"
+    ],
+    [
+     "marcar",
+     "to dial"
+    ],
+    [
+     "el mensaje de texto",
+     "text message"
+    ],
+    [
+     "el buzón de voz",
+     "voicemail"
+    ],
+    [
+     "la videollamada",
+     "video call"
+    ],
+    [
+     "cargar",
+     "to charge"
+    ]
+   ]
+  },
+  {
+   "title": "Phrases on a call",
+   "words": [
+    [
+     "¿Bueno? / ¿Aló? / ¿Diga?",
+     "Hello? (answering)"
+    ],
+    [
+     "¿De parte de quién?",
+     "Who's calling?"
+    ],
+    [
+     "Habla…",
+     "This is…"
+    ],
+    [
+     "Un momento, por favor",
+     "One moment, please"
+    ],
+    [
+     "Se cortó la llamada",
+     "The call dropped"
+    ],
+    [
+     "¿Me puede repetir?",
+     "Can you repeat that?"
+    ],
+    [
+     "Te llamo luego",
+     "I'll call you later"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi celular tiene solo el 2 % de batería; necesito el ",
+   "after": ".",
+   "options": [
+    "cargador",
+    "buzón",
+    "mensaje"
+   ],
+   "answer": 0,
+   "why": "A charger for low battery."
+  },
+  {
+   "before": "Se me cayó el teléfono y se rompió la ",
+   "after": ".",
+   "options": [
+    "pantalla",
+    "señal",
+    "contraseña"
+   ],
+   "answer": 0,
+   "why": "The screen broke."
+  },
+  {
+   "before": "Cuando suena el teléfono en México, muchos contestan: «¿",
+   "after": "?».",
+   "options": [
+    "Bueno",
+    "Adiós",
+    "Gracias"
+   ],
+   "answer": 0,
+   "why": "¿Bueno? answers a call in Mexico."
+  },
+  {
+   "before": "Mi abuela no contestó, así que le dejé un mensaje en el ",
+   "after": ".",
+   "options": [
+    "buzón de voz",
+    "cargador",
+    "estuche"
+   ],
+   "answer": 0,
+   "why": "Leave it in voicemail."
+  },
+  {
+   "before": "En el sótano no hay ",
+   "after": " y no puedo llamar.",
+   "options": [
+    "señal",
+    "pantalla",
+    "funda"
+   ],
+   "answer": 0,
+   "why": "No signal underground."
+  },
+  {
+   "before": "Para ver a mis primos en Colombia, hacemos una ",
+   "after": ".",
+   "options": [
+    "videollamada",
+    "contraseña",
+    "batería"
+   ],
+   "answer": 0,
+   "why": "A video call shows faces."
+  },
+  {
+   "before": "Después de hablar, ",
+   "after": " el teléfono.",
+   "options": [
+    "cuelgo",
+    "marco",
+    "cargo"
+   ],
+   "answer": 0,
+   "why": "Hang up: colgar."
+  },
+  {
+   "before": "—¿De parte de ",
+   "after": "? —De Laura.",
+   "options": [
+    "quién",
+    "qué",
+    "dónde"
+   ],
+   "answer": 0,
+   "why": "Who's calling?"
+  }
+ ],
+ "demand": {
+  "query": "spanish phone vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish phone vocabulary». One asks for phone phrases, so the list includes what people say on a call: ¿Bueno?, ¿Aló?, ¿De parte de quién? and ¿Me puede repetir?",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

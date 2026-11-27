@@ -1,0 +1,368 @@
+{
+ "level": "A1",
+ "theme": "hobbies",
+ "themeLabel": "Hobbies",
+ "title": "Spanish Hobbies Vocabulary: Free Time Activities with Practice",
+ "description": "Spanish hobbies vocabulary: leer, dibujar, jugar videojuegos, tocar la guitarra and ir de pesca, with a quiz and an A1 reading about three teens' weekends.",
+ "h1": "Spanish hobbies vocabulary",
+ "titleEs": "¿Qué haces el fin de semana?",
+ "focus": "me gusta + infinitive and the present tense",
+ "intro": "Learn the Spanish words for hobbies and free time: hobbies at home, outdoor activities and the verbs that go with them. Practice with instant feedback, then read about three teenagers who explain what they do on weekends.",
+ "paragraphs": [
+  "Me llamo Sofía y tengo catorce años. En mi tiempo libre, me encanta dibujar. Los sábados por la mañana dibujo en el parque con mi cuaderno. Por la tarde, a veces pinto con acuarelas en mi cuarto. Mis amigos dicen que dibujo muy bien, pero yo quiero aprender más.",
+  "Yo soy Mateo. Mi pasatiempo favorito es jugar al básquetbol, pero también me gusta jugar videojuegos con mi primo. Los domingos montamos en bicicleta por el barrio. No me gusta mucho leer, pero mi mamá dice que es importante. Por eso, leo cómics antes de dormir.",
+  "Me llamo Valentina. Prefiero las actividades tranquilas: leo novelas, escucho música y toco la guitarra. Mi papá y yo vamos de pesca a un lago cerca de la ciudad dos veces al mes. Casi nunca pescamos nada, pero hablamos mucho y comemos sándwiches. Para mí, eso es lo mejor del fin de semana."
+ ],
+ "glossary": [
+  [
+   "el cuaderno",
+   "notebook, sketchbook"
+  ],
+  [
+   "las acuarelas",
+   "watercolors"
+  ],
+  [
+   "el barrio",
+   "neighborhood"
+  ],
+  [
+   "tranquilo / tranquila",
+   "calm, quiet"
+  ],
+  [
+   "la novela",
+   "novel"
+  ],
+  [
+   "dos veces al mes",
+   "twice a month"
+  ],
+  [
+   "pescar",
+   "to catch fish"
+  ],
+  [
+   "lo mejor",
+   "the best part"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Sofía dibuja en el parque ",
+   "after": ".",
+   "options": [
+    "los sábados por la mañana",
+    "los domingos",
+    "todos los días"
+   ],
+   "answer": 0,
+   "why": "On Saturday mornings."
+  },
+  {
+   "before": "Por la tarde, Sofía a veces ",
+   "after": ".",
+   "options": [
+    "pinta con acuarelas",
+    "juega videojuegos",
+    "va de pesca"
+   ],
+   "answer": 0,
+   "why": "She paints with watercolors."
+  },
+  {
+   "before": "Mateo juega videojuegos con ",
+   "after": ".",
+   "options": [
+    "su primo",
+    "su papá",
+    "Sofía"
+   ],
+   "answer": 0,
+   "why": "With his cousin."
+  },
+  {
+   "before": "A Mateo no le gusta mucho ",
+   "after": ".",
+   "options": [
+    "leer",
+    "montar en bicicleta",
+    "el básquetbol"
+   ],
+   "answer": 0,
+   "why": "He doesn't like reading much."
+  },
+  {
+   "before": "Valentina va de pesca con ",
+   "after": ".",
+   "options": [
+    "su papá",
+    "su mamá",
+    "su primo"
+   ],
+   "answer": 0,
+   "why": "With her dad."
+  },
+  {
+   "before": "Para Valentina, lo mejor de pescar es ",
+   "after": ".",
+   "options": [
+    "hablar con su papá",
+    "pescar muchos peces",
+    "ver el lago"
+   ],
+   "answer": 0,
+   "why": "Talking with her dad."
+  }
+ ],
+ "grammar": {
+  "title": "Me gusta + infinitive",
+  "intro": "To say what you like doing, use me gusta or me encanta followed by a verb in the infinitive: me gusta leer, me encanta nadar.",
+  "items": [
+   {
+    "before": "Me ",
+    "after": " patinar en el parque.",
+    "options": [
+     "gusta",
+     "gustan",
+     "gusto"
+    ],
+    "answer": 0,
+    "why": "Gusta + one activity."
+   },
+   {
+    "before": "A mi papá le encanta ",
+    "after": ".",
+    "options": [
+     "cocinar",
+     "cocina",
+     "cocinando"
+    ],
+    "answer": 0,
+    "why": "Infinitive after encanta."
+   },
+   {
+    "before": "¿Te gusta ",
+    "after": " fotos?",
+    "options": [
+     "sacar",
+     "sacas",
+     "sacando"
+    ],
+    "answer": 0,
+    "why": "Infinitive after gusta."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué haces en tu tiempo libre?",
+  "¿Prefieres los pasatiempos en casa o al aire libre? ¿Por qué?",
+  "Describe tu fin de semana perfecto."
+ ],
+ "heritage": "Heritage speakers often say «jugar fútbol» and «jugar al fútbol»; both are correct and widely used. Watch the difference between jugar (games and sports) and tocar (instruments): in Spanish you never «juegas» the guitar, you «tocas» la guitarra.",
+ "teacher": "Run a «find someone who» survey: each student asks classmates ¿Te gusta…? with six hobbies from the list and reports two results with a él or ella sentence.",
+ "vocabulary": [
+  {
+   "title": "At home",
+   "words": [
+    [
+     "leer",
+     "to read"
+    ],
+    [
+     "dibujar",
+     "to draw"
+    ],
+    [
+     "pintar",
+     "to paint"
+    ],
+    [
+     "cocinar",
+     "to cook"
+    ],
+    [
+     "jugar videojuegos",
+     "to play video games"
+    ],
+    [
+     "ver series",
+     "to watch series"
+    ],
+    [
+     "escuchar música",
+     "to listen to music"
+    ],
+    [
+     "tocar la guitarra",
+     "to play the guitar"
+    ]
+   ]
+  },
+  {
+   "title": "Outside",
+   "words": [
+    [
+     "montar en bicicleta",
+     "to ride a bike"
+    ],
+    [
+     "nadar",
+     "to swim"
+    ],
+    [
+     "ir de pesca",
+     "to go fishing"
+    ],
+    [
+     "hacer senderismo",
+     "to go hiking"
+    ],
+    [
+     "patinar",
+     "to skate"
+    ],
+    [
+     "sacar fotos",
+     "to take photos"
+    ],
+    [
+     "ir al cine",
+     "to go to the movies"
+    ]
+   ]
+  },
+  {
+   "title": "Talking about it",
+   "words": [
+    [
+     "el tiempo libre",
+     "free time"
+    ],
+    [
+     "el pasatiempo",
+     "hobby, pastime"
+    ],
+    [
+     "el fin de semana",
+     "weekend"
+    ],
+    [
+     "me gusta / me encanta",
+     "I like / I love"
+    ],
+    [
+     "prefiero",
+     "I prefer"
+    ],
+    [
+     "a menudo",
+     "often"
+    ],
+    [
+     "nunca",
+     "never"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para ",
+   "after": " necesito un lápiz y papel.",
+   "options": [
+    "dibujar",
+    "nadar",
+    "patinar"
+   ],
+   "answer": 0,
+   "why": "Drawing needs a pencil."
+  },
+  {
+   "before": "Mi abuelo va al lago para ",
+   "after": ".",
+   "options": [
+    "ir de pesca",
+    "ver series",
+    "tocar la guitarra"
+   ],
+   "answer": 0,
+   "why": "Fishing at the lake."
+  },
+  {
+   "before": "En mi tiempo libre, ",
+   "after": " videojuegos con mis amigos.",
+   "options": [
+    "juego",
+    "toco",
+    "hago"
+   ],
+   "answer": 0,
+   "why": "Jugar for games."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " el piano muy bien.",
+   "options": [
+    "toca",
+    "juega",
+    "hace"
+   ],
+   "answer": 0,
+   "why": "Tocar for instruments."
+  },
+  {
+   "before": "Los domingos hacemos ",
+   "after": " en las montañas.",
+   "options": [
+    "senderismo",
+    "pesca",
+    "cine"
+   ],
+   "answer": 0,
+   "why": "Hiking: hacer senderismo."
+  },
+  {
+   "before": "Tengo una cámara nueva y me encanta sacar ",
+   "after": ".",
+   "options": [
+    "fotos",
+    "series",
+    "libros"
+   ],
+   "answer": 0,
+   "why": "To take photos: sacar fotos."
+  },
+  {
+   "before": "Mi ",
+   "after": " favorito es cocinar postres.",
+   "options": [
+    "pasatiempo",
+    "fin de semana",
+    "tiempo"
+   ],
+   "answer": 0,
+   "why": "Hobby: el pasatiempo."
+  },
+  {
+   "before": "No me gusta el agua fría, así que ",
+   "after": " nado en el mar.",
+   "options": [
+    "nunca",
+    "a menudo",
+    "siempre"
+   ],
+   "answer": 0,
+   "why": "Never: nunca."
+  }
+ ],
+ "demand": {
+  "query": "spanish hobbies vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish hobbies vocabulary». One suggestion is the question «what hobbies do you have in spanish», so the page includes the answer pattern: en mi tiempo libre, me gusta…",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

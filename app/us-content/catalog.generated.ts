@@ -402,6 +402,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "hobbies",
+  "level": "A1",
+  "theme": "hobbies",
+  "title": "Spanish hobbies vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "holidays",
   "level": "A2",
   "theme": "holidays",
@@ -525,6 +532,20 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "pharmacy",
   "title": "Spanish pharmacy vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "phone",
+  "level": "A2",
+  "theme": "phone",
+  "title": "Spanish phone vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "physical-description",
+  "level": "A1",
+  "theme": "physical-description",
+  "title": "Spanish physical description vocabulary"
  },
  {
   "family": "vocabulary",
