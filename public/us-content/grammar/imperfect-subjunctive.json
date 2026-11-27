@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "B1–B2",
+ "name": "imperfect subjunctive",
+ "title": "Spanish Imperfect Subjunctive Practice: Si Clauses and Quiz",
+ "description": "Practice the Spanish imperfect subjunctive: forms from the preterite, hablara, tuviera, si clauses and ojalá, with a rule table and 10 sentences checked as you tap.",
+ "h1": "Spanish imperfect subjunctive practice",
+ "answer": "To form the imperfect subjunctive, take the ellos form of the preterite, drop -ron and add -ra, -ras, -ra, -ramos, -ran: hablaron → hablara, tuvieron → tuviera, fueron → fuera. Nosotros takes an accent: habláramos. Use it after a past trigger (quería que vinieras), in si clauses with the conditional and after ojalá for unlikely wishes.",
+ "demand": {
+  "query": "spanish imperfect subjunctive practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Imperfect subjunctive forms and uses",
+ "rules": [
+  {
+   "use": "Form: ellos preterite − ron + ending",
+   "example": "hablaron → hablara, comieron → comiera",
+   "meaning": "-ra, -ras, -ra, -ramos, -ran"
+  },
+  {
+   "use": "Irregular preterites carry over",
+   "example": "tuvieron → tuviera, hicieron → hiciera, dijeron → dijera",
+   "meaning": "same stem"
+  },
+  {
+   "use": "Past trigger + que",
+   "example": "Mi mamá quería que estudiara.",
+   "meaning": "wish, emotion, doubt in the past"
+  },
+  {
+   "use": "Hypothetical si clause",
+   "example": "Si tuviera tiempo, viajaría.",
+   "meaning": "si + imperfect subjunctive, conditional"
+  },
+  {
+   "use": "Unlikely wish",
+   "example": "Ojalá fuera viernes.",
+   "meaning": "ojalá + imperfect subjunctive"
+  },
+  {
+   "use": "Como si (as if)",
+   "example": "Habla como si fuera el jefe.",
+   "meaning": "always imperfect subjunctive"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Si ",
+   "after": " más dinero, compraría una casa.",
+   "options": [
+    "tuviera",
+    "tendría"
+   ],
+   "answer": 0,
+   "why": "After si in a hypothetical: imperfect subjunctive."
+  },
+  {
+   "before": "La profesora quería que nosotros ",
+   "after": " más.",
+   "options": [
+    "leyéramos",
+    "leeríamos"
+   ],
+   "answer": 0,
+   "why": "Past wish + que: subjunctive, leyéramos with accent."
+  },
+  {
+   "before": "Ojalá ",
+   "after": " sol mañana, pero dicen que va a llover.",
+   "options": [
+    "hiciera",
+    "hacía"
+   ],
+   "answer": 0,
+   "why": "Unlikely wish: ojalá + imperfect subjunctive."
+  },
+  {
+   "before": "Me pidió que le ",
+   "after": " la verdad.",
+   "options": [
+    "dijera",
+    "decía"
+   ],
+   "answer": 0,
+   "why": "Pedir que in the past: dijera, from dijeron."
+  },
+  {
+   "before": "Habla como si ",
+   "after": " todo.",
+   "options": [
+    "supiera",
+    "sabe"
+   ],
+   "answer": 0,
+   "why": "Como si always takes the imperfect subjunctive."
+  },
+  {
+   "before": "Si yo ",
+   "after": " tú, aceptaría el trabajo.",
+   "options": [
+    "fuera",
+    "era"
+   ],
+   "answer": 0,
+   "why": "Si yo fuera tú: the classic hypothetical."
+  },
+  {
+   "before": "Era importante que todos ",
+   "after": " a tiempo.",
+   "options": [
+    "llegaran",
+    "llegarían"
+   ],
+   "answer": 0,
+   "why": "Impersonal expression in the past: llegaran."
+  },
+  {
+   "before": "No creía que ellos ",
+   "after": " ganar.",
+   "options": [
+    "pudieran",
+    "podían"
+   ],
+   "answer": 0,
+   "why": "Doubt in the past: pudieran."
+  },
+  {
+   "before": "Mis padres se alegraron de que yo ",
+   "after": " a casa.",
+   "options": [
+    "volviera",
+    "volví"
+   ],
+   "answer": 0,
+   "why": "Emotion in the past: volviera."
+  },
+  {
+   "before": "Si nosotros ",
+   "after": " juntos, terminaríamos antes.",
+   "options": [
+    "trabajáramos",
+    "trabajaramos"
+   ],
+   "answer": 0,
+   "why": "Nosotros form needs the accent: trabajáramos."
+  }
+ ],
+ "mistakes": [
+  "Using the conditional after si: «si tendría tiempo» should be «si tuviera tiempo».",
+  "Building from the infinitive: «tenera» should be «tuviera»; always start from the ellos preterite.",
+  "Forgetting the nosotros accent: «fueramos» should be «fuéramos».",
+  "Using the present subjunctive after a past trigger: «quería que vengas» should be «quería que vinieras».",
+  "Mixing the -se and -ra endings in one sentence: both are correct (hablara, hablase), but -ra is far more common in the Americas."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish imperfect subjunctive practice». 2 ask for a worksheet or a PDF (imperfect subjunctive spanish practice pdf; imperfect subjunctive spanish practice worksheet). 1 asks for a quiz or exercises (spanish imperfect subjunctive quiz). One suggestion pairs it with the conditional, which is why the si clause appears in the table and in four questions.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often use the imperfect subjunctive naturally («si fuera rico»), but in some regions you will also hear the conditional in both halves («si tendría, compraría»). For writing and the AP exam, use si + imperfect subjunctive. Also check the accent in the nosotros form.",
+ "teacher": "Run «¿Qué harías si…?» chains: one student finishes a sentence with a conditional and the next one turns it into a new si clause. Si ganara la lotería, viajaría; si viajara, iría a Japón…",
+ "faq": [
+  {
+   "question": "How do you form the imperfect subjunctive?",
+   "answer": "Start from the ellos form of the preterite, remove -ron and add -ra, -ras, -ra, -ramos, -ran. Every irregularity of the preterite carries over: pidieron → pidiera, durmieron → durmiera, fueron → fuera."
+  },
+  {
+   "question": "What is the difference between -ra and -se?",
+   "answer": "Hablara and hablase mean the same and both are correct. The -ra form is much more common in Latin America and in US Spanish; -se is more frequent in Spain and in literature."
+  },
+  {
+   "question": "When do I use the imperfect subjunctive instead of the present subjunctive?",
+   "answer": "When the trigger is in the past or the conditional (quería que, me pidió que, sería bueno que) and in hypothetical si clauses. With a present trigger, use the present subjunctive: quiero que vengas."
+  }
+ ]
+}

@@ -3,6 +3,13 @@ export type UsCatalogEntry = { family: string; slug: string; level: string; them
 export const usCatalog: UsCatalogEntry[] = [
  {
   "family": "grammar",
+  "slug": "adverbs",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish adverbs practice"
+ },
+ {
+  "family": "grammar",
   "slug": "articles",
   "level": "A1–A2",
   "theme": "forms",
@@ -21,6 +28,20 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2–B1",
   "theme": "forms",
   "title": "Spanish conditional practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "demonstrative-adjectives",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish demonstrative adjectives practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "imperfect-subjunctive",
+  "level": "B1–B2",
+  "theme": "forms",
+  "title": "Spanish imperfect subjunctive practice"
  },
  {
   "family": "grammar",
@@ -66,10 +87,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "grammar",
+  "slug": "question-words",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish question words practice"
+ },
+ {
+  "family": "grammar",
   "slug": "sentence-structure",
   "level": "A1–A2",
   "theme": "forms",
   "title": "Spanish sentence structure practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "stem-changing-verbs",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish stem-changing verbs practice"
  },
  {
   "family": "verbs",
