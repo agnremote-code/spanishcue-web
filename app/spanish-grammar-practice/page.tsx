@@ -75,7 +75,7 @@ export default function PracticeHubPage() {
           <Section title="Why practice on screen instead of a PDF">
             <div className={styles.prose}>
               <p>
-                We collected Google's English autocomplete for 198 Spanish grammar searches on 26 November 2026. When the search did not
+                We collected Google&apos;s English autocomplete for 198 Spanish grammar searches on 26 November 2026. When the search did not
                 already include the word, Google suggested «pdf» 146 times and «worksheet» 132 times, while «interactive» did not appear once
                 in 1409 suggestions. People want to practise, but what they are offered is mostly a sheet to print. A sentence that corrects itself as soon as you answer tells you at once whether you
                 understood the rule, and why.
