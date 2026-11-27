@@ -7,8 +7,8 @@ import { READING_PATH } from "../spanish-reading-comprehension/data";
 import { AUTOCOMPLETE_REPORT, PRACTICE_PATH, practiceTopics } from "./data";
 import styles from "../growth/growth.module.css";
 
-const title = "Spanish Grammar Practice Online: Ser vs Estar, Preterite vs Imperfect, Subjunctive, Por vs Para";
-const description = "Free Spanish grammar practice that corrects as you answer: the four contrasts learners ask about most, each with the rule in one table, 8 questions, common mistakes and a note for heritage speakers. No login.";
+const title = "Spanish Grammar Practice Online: 10 Topics Checked as You Answer";
+const description = "Free Spanish grammar practice that corrects as you answer: ser vs estar, preterite vs imperfect, the subjunctive, por vs para and the main tenses, each with the rule in one table, 8 questions and a note for heritage speakers. No login.";
 
 export const metadata: Metadata = {
   title,
@@ -25,13 +25,18 @@ const faq = [
   },
   {
     question: "Which topic should I start with?",
-    answer: "Ser vs estar comes first (A1–B1). Then preterite vs imperfect and por vs para (A2–B1). The present subjunctive is B1–B2: start it once you can tell a story in the past.",
+    answer: "At A1–A2, start with ser vs estar, reflexive verbs and the preterite and imperfect forms. Then move to preterite vs imperfect, por vs para, the present perfect, the future and object pronouns. The present subjunctive is B1–B2: start it once you can tell a story in the past.",
   },
   {
     question: "Can teachers use these pages in class?",
     answer: "Yes. Share the link as a warm-up or as homework: students check their own answers on a phone or a computer. Each topic links to a teacher guide with class activities.",
   },
 ];
+
+const groups = [
+  { id: "contrast", title: "Contrasts", intro: "Two forms that English often translates the same way. Each page shows when to use which." },
+  { id: "forms", title: "Tenses and forms", intro: "One tense or structure at a time: how to form it, the irregular verbs and where the pronouns go." },
+] as const;
 
 export default function PracticeHubPage() {
   return (
@@ -46,15 +51,16 @@ export default function PracticeHubPage() {
             <p className={styles.eyebrow}>Spanish grammar practice</p>
             <h1 className={styles.title}>Spanish grammar practice, checked as you answer</h1>
             <p className={styles.lead}>
-              Four contrasts cause most of the doubts in Spanish class: ser or estar, preterite or imperfect, indicative or subjunctive, por
-              or para. Each page gives you the rule in one table, eight sentences that correct the moment you tap, and the mistakes learners
-              make most. Free, no login.
+              Pick a topic: the four contrasts that cause most doubts in Spanish class, or one tense or structure at a time. Each page gives
+              you the rule in one table, eight sentences that correct the moment you tap, and the mistakes learners make most. Free, no
+              login.
             </p>
           </section>
 
-          <Section title="Choose a topic">
+          {groups.map((group) => (
+          <Section key={group.id} title={group.title} intro={group.intro}>
             <div className={styles.cardGrid}>
-              {practiceTopics.map((topic) => (
+              {practiceTopics.filter((topic) => topic.group === group.id).map((topic) => (
                 <Link key={topic.slug} className={styles.levelCard} href={topic.path}>
                   <b>{topic.levels}</b>
                   <span>{topic.name}</span>
@@ -64,6 +70,7 @@ export default function PracticeHubPage() {
               ))}
             </div>
           </Section>
+          ))}
 
           <Section title="Why practice on screen instead of a PDF">
             <div className={styles.prose}>

@@ -138,7 +138,7 @@ test('reading comprehension hub and spokes are complete and chained',async()=>{
 test('grammar practice hub and topics are complete and chained',async()=>{
  const doc=async p=>{const r=await fetch(origin+p);assert.equal(r.status,200,p);return new JSDOM(await r.text()).window.document;};
  const hub=await doc('/spanish-grammar-practice');
- const topics=['ser-vs-estar','preterite-vs-imperfect','subjunctive','por-vs-para'].map(t=>`/spanish-grammar-practice/${t}`);
+ const topics=['ser-vs-estar','preterite-vs-imperfect','subjunctive','por-vs-para','preterite','imperfect','present-perfect','future-tense','reflexive-verbs','direct-object-pronouns'].map(t=>`/spanish-grammar-practice/${t}`);
  for(const t of topics)assert.ok(hub.querySelector(`main a[href="${t}"]`),`hub links ${t}`);
  assert.ok(nodesOf(hub).some(n=>n['@type']==='CollectionPage'));
  for(const [i,t] of topics.entries()){
@@ -151,5 +151,6 @@ test('grammar practice hub and topics are complete and chained',async()=>{
   assert.ok(main.querySelector(`a[href="${topics[(i+1)%topics.length]}"]`),`${t} links the next topic`);
   assert.ok(main.querySelector('a[href="/datos/que-autocompleta-google-en-gramatica"]'),`${t} cites its source`);
   const types=nodesOf(d).map(n=>n['@type']);assert.ok(types.includes('LearningResource')&&types.includes('FAQPage'),t);
+  for(const li of [...main.querySelectorAll('li')].filter(li=>li.textContent.startsWith('For teachers'))){const href=li.querySelector('a').getAttribute('href');const r=await fetch(origin+href,{redirect:'manual'});assert.equal(r.status,200,`${t} → ${href}`);}
  }
 });
