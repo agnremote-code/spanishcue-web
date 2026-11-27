@@ -1,0 +1,365 @@
+{
+ "level": "A2",
+ "theme": "thanksgiving",
+ "themeLabel": "Thanksgiving",
+ "title": "Spanish Thanksgiving Vocabulary: Words, Food and Activities",
+ "description": "Spanish Thanksgiving vocabulary: food, traditions and ways to give thanks, with a quiz that corrects itself and an A2 reading about a bilingual family dinner.",
+ "h1": "Spanish Thanksgiving vocabulary",
+ "titleEs": "Pavo con mole",
+ "focus": "the present, comparisons, gratitude expressions",
+ "intro": "Learn the Spanish words for Thanksgiving food, traditions and gratitude, practice them with instant feedback, then read how a Mexican American family mixes two kitchens at one table.",
+ "paragraphs": [
+  "Cada noviembre, la familia Castillo celebra el Día de Acción de Gracias en San Antonio, Texas. La abuela Lupe llegó de Michoacán hace treinta años y al principio no entendía la fiesta. «¿Por qué tanto pavo?», preguntaba.",
+  "Con los años, la familia creó su propia versión. Hay pavo, claro, pero la abuela lo sirve con mole poblano en lugar de salsa de arándanos. Al lado del puré de papas hay arroz rojo y tortillas hechas a mano. El postre es pastel de calabaza y también arroz con leche.",
+  "Antes de comer, todos se toman de las manos y cada persona dice algo por lo que está agradecida. Los niños dan gracias por sus amigos y por los videojuegos; los adultos, por la salud y el trabajo. La abuela siempre dice lo mismo: «Doy gracias porque mis nietos hablan español».",
+  "Después de la cena, los hombres lavan los platos, una regla nueva de la tía Rocío. Luego la familia mira fútbol americano y algunos se duermen en el sofá. Al día siguiente, comen tacos de pavo con las sobras, que según los primos son mejores que la cena. Nadie se queja: la fiesta sigue un día más."
+ ],
+ "glossary": [
+  [
+   "al principio",
+   "at first"
+  ],
+  [
+   "el mole poblano",
+   "a dark chili and chocolate sauce"
+  ],
+  [
+   "en lugar de",
+   "instead of"
+  ],
+  [
+   "hechas a mano",
+   "handmade"
+  ],
+  [
+   "tomarse de las manos",
+   "to hold hands"
+  ],
+  [
+   "la regla",
+   "rule"
+  ],
+  [
+   "según",
+   "according to"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La abuela Lupe llegó de Michoacán hace ",
+   "after": ".",
+   "options": [
+    "treinta años",
+    "tres años",
+    "diez años"
+   ],
+   "answer": 0,
+   "why": "She arrived thirty years ago."
+  },
+  {
+   "before": "Al principio, la abuela ",
+   "after": ".",
+   "options": [
+    "no entendía la fiesta",
+    "cocinaba el pavo",
+    "odiaba el pavo"
+   ],
+   "answer": 0,
+   "why": "At first she did not understand the holiday."
+  },
+  {
+   "before": "La abuela sirve el pavo con ",
+   "after": ".",
+   "options": [
+    "mole poblano",
+    "salsa de arándanos",
+    "relleno"
+   ],
+   "answer": 0,
+   "why": "She serves it with mole instead of cranberry sauce."
+  },
+  {
+   "before": "Antes de comer, cada persona ",
+   "after": ".",
+   "options": [
+    "dice por qué está agradecida",
+    "canta una canción",
+    "abre un regalo"
+   ],
+   "answer": 0,
+   "why": "Each person says what they are grateful for."
+  },
+  {
+   "before": "La regla de la tía Rocío es que ",
+   "after": ".",
+   "options": [
+    "los hombres lavan los platos",
+    "los niños no ven la tele",
+    "nadie duerme en el sofá"
+   ],
+   "answer": 0,
+   "why": "The men wash the dishes."
+  },
+  {
+   "before": "Al día siguiente comen ",
+   "after": ".",
+   "options": [
+    "tacos de pavo",
+    "pizza",
+    "mole con arroz"
+   ],
+   "answer": 0,
+   "why": "Turkey tacos with the leftovers."
+  }
+ ],
+ "grammar": {
+  "title": "Giving thanks: dar gracias por + noun or infinitive",
+  "intro": "Use por after gracias: doy gracias por mi familia, gracias por venir.",
+  "items": [
+   {
+    "before": "Doy gracias ",
+    "after": " mi familia.",
+    "options": [
+     "por",
+     "para",
+     "a"
+    ],
+    "answer": 0,
+    "why": "Gratitude for something: gracias por."
+   },
+   {
+    "before": "Gracias por ",
+    "after": " a la cena.",
+    "options": [
+     "venir",
+     "vienes",
+     "viniste"
+    ],
+    "answer": 0,
+    "why": "After por, use the infinitive: venir."
+   },
+   {
+    "before": "Estoy agradecida ",
+    "after": " tu ayuda.",
+    "options": [
+     "por",
+     "de que",
+     "con"
+    ],
+    "answer": 0,
+    "why": "Agradecido por + noun."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Celebras el Día de Acción de Gracias? ¿Qué comes?",
+  "Di tres cosas por las que estás agradecido o agradecida este año.",
+  "¿Qué comida de tu familia pondrías en una cena de Acción de Gracias?"
+ ],
+ "heritage": "Many Latino families in the United States call the holiday «Thanksgiving» at home, and that is fine. In writing, use «el Día de Acción de Gracias», with capitals on the main words. Watch «gracias por» (never «gracias para») and the accent in «Acción».",
+ "teacher": "Have each student bring one dish from their family's table and explain it in three sentences. A class menu mixing traditions makes the vocabulary personal.",
+ "vocabulary": [
+  {
+   "title": "The holiday",
+   "words": [
+    [
+     "el Día de Acción de Gracias",
+     "Thanksgiving Day"
+    ],
+    [
+     "dar gracias",
+     "to give thanks"
+    ],
+    [
+     "agradecido / agradecida",
+     "grateful"
+    ],
+    [
+     "la gratitud",
+     "gratitude"
+    ],
+    [
+     "el desfile",
+     "parade"
+    ],
+    [
+     "el feriado",
+     "public holiday"
+    ],
+    [
+     "el puente",
+     "long weekend"
+    ]
+   ]
+  },
+  {
+   "title": "The dinner",
+   "words": [
+    [
+     "el pavo",
+     "turkey"
+    ],
+    [
+     "el relleno",
+     "stuffing"
+    ],
+    [
+     "el puré de papas",
+     "mashed potatoes"
+    ],
+    [
+     "la salsa de arándanos",
+     "cranberry sauce"
+    ],
+    [
+     "la calabaza",
+     "pumpkin"
+    ],
+    [
+     "el pastel de calabaza",
+     "pumpkin pie"
+    ],
+    [
+     "el maíz",
+     "corn"
+    ],
+    [
+     "las sobras",
+     "leftovers"
+    ]
+   ]
+  },
+  {
+   "title": "Around the table",
+   "words": [
+    [
+     "los invitados",
+     "guests"
+    ],
+    [
+     "poner la mesa",
+     "to set the table"
+    ],
+    [
+     "trinchar",
+     "to carve"
+    ],
+    [
+     "brindar",
+     "to make a toast"
+    ],
+    [
+     "compartir",
+     "to share"
+    ],
+    [
+     "el anfitrión / la anfitriona",
+     "host"
+    ],
+    [
+     "estar lleno / llena",
+     "to be full"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El plato principal de la cena suele ser el ",
+   "after": ".",
+   "options": [
+    "pavo",
+    "relleno",
+    "maíz"
+   ],
+   "answer": 0,
+   "why": "The centerpiece is the turkey."
+  },
+  {
+   "before": "El postre más típico es el pastel de ",
+   "after": ".",
+   "options": [
+    "calabaza",
+    "arándanos",
+    "papa"
+   ],
+   "answer": 0,
+   "why": "Pumpkin pie: pastel de calabaza."
+  },
+  {
+   "before": "Antes de cenar, cada persona dice por qué está ",
+   "after": ".",
+   "options": [
+    "agradecida",
+    "llena",
+    "invitada"
+   ],
+   "answer": 0,
+   "why": "Agradecido: grateful."
+  },
+  {
+   "before": "Al día siguiente comemos las ",
+   "after": " de la cena.",
+   "options": [
+    "sobras",
+    "invitadas",
+    "gracias"
+   ],
+   "answer": 0,
+   "why": "Sobras: leftovers."
+  },
+  {
+   "before": "Mi abuelo ",
+   "after": " el pavo con un cuchillo grande.",
+   "options": [
+    "trincha",
+    "brinda",
+    "comparte"
+   ],
+   "answer": 0,
+   "why": "Trinchar: to carve meat."
+  },
+  {
+   "before": "Los niños ayudan a ",
+   "after": " antes de que lleguen los invitados.",
+   "options": [
+    "poner la mesa",
+    "trinchar el pavo",
+    "ver el desfile"
+   ],
+   "answer": 0,
+   "why": "Setting the table is a classic kids' job."
+  },
+  {
+   "before": "En Nueva York hay un ",
+   "after": " enorme con globos gigantes.",
+   "options": [
+    "desfile",
+    "relleno",
+    "feriado"
+   ],
+   "answer": 0,
+   "why": "The parade with giant balloons."
+  },
+  {
+   "before": "Comimos tanto que estamos muy ",
+   "after": ".",
+   "options": [
+    "llenos",
+    "agradecidos",
+    "anfitriones"
+   ],
+   "answer": 0,
+   "why": "After a big meal: llenos."
+  }
+ ],
+ "demand": {
+  "query": "spanish thanksgiving vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish thanksgiving vocabulary». 1 of them asks for something to do with the words (activities). One asks for activities and one for food ideas, so the page has the dinner vocabulary and a reading you can use in class the week before the holiday.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

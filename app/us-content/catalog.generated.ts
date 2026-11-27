@@ -122,6 +122,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "airport",
+  "level": "A2",
+  "theme": "airport",
+  "title": "Spanish airport vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "animals",
   "level": "A1",
   "theme": "animals",
@@ -161,6 +168,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "daily-routine",
   "title": "Spanish daily routine vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "emotions",
+  "level": "A1",
+  "theme": "emotions",
+  "title": "Spanish emotions vocabulary: feelings"
  },
  {
   "family": "vocabulary",
@@ -287,6 +301,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "technology",
   "title": "Spanish technology vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "thanksgiving",
+  "level": "A2",
+  "theme": "thanksgiving",
+  "title": "Spanish Thanksgiving vocabulary"
  },
  {
   "family": "vocabulary",
