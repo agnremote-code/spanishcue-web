@@ -1,0 +1,278 @@
+{
+ "verb": "volver",
+ "meaning": "to return, to come back, to do again",
+ "level": "A2",
+ "title": "Spanish Verb Volver Practice: Conjugation, Volver a and Quiz",
+ "description": "Practice the Spanish verb volver: the o to ue stem change, volver a + infinitive for doing something again, volverse, ten questions and a short reading.",
+ "h1": "Spanish verb volver: practice",
+ "intro": "Volver means to return (vuelvo a casa) and, with a + infinitive, to do something again (volví a llamar). It changes o to ue in the present. Learn the forms and the uses, then practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb volver",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To return, to come back",
+   "example": "Vuelvo a las cinco.",
+   "meaning": "I'll be back at five."
+  },
+  {
+   "use": "To do again: volver a + infinitive",
+   "example": "Volví a leer el capítulo.",
+   "meaning": "I read the chapter again."
+  },
+  {
+   "use": "Volverse: to become (sudden change)",
+   "example": "Se volvió muy famoso.",
+   "meaning": "He became very famous."
+  },
+  {
+   "use": "Volverse loco",
+   "example": "Este tráfico me vuelve loca.",
+   "meaning": "This traffic drives me crazy."
+  },
+  {
+   "use": "Related: devolver (to give back)",
+   "example": "Tengo que devolver el libro.",
+   "meaning": "I have to return the book."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "vuelvo"
+  ],
+  [
+   "tú",
+   "vuelves"
+  ],
+  [
+   "él / ella / usted",
+   "vuelve"
+  ],
+  [
+   "nosotros / nosotras",
+   "volvemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "vuelven"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "volví"
+  ],
+  [
+   "tú",
+   "volviste"
+  ],
+  [
+   "él / ella / usted",
+   "volvió"
+  ],
+  [
+   "nosotros / nosotras",
+   "volvimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "volvieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " a casa a las seis.",
+   "options": [
+    "vuelvo",
+    "volvo",
+    "vuelve"
+   ],
+   "answer": 0,
+   "why": "Stem change o to ue: vuelvo."
+  },
+  {
+   "before": "¿Cuándo ",
+   "after": " de tus vacaciones?",
+   "options": [
+    "vuelves",
+    "volves",
+    "vuelve"
+   ],
+   "answer": 0,
+   "why": "Tú: vuelves."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " al restaurante cada viernes.",
+   "options": [
+    "volvemos",
+    "vuelvemos",
+    "vuelven"
+   ],
+   "answer": 0,
+   "why": "No stem change with nosotros: volvemos."
+  },
+  {
+   "before": "Las golondrinas ",
+   "after": " cada primavera.",
+   "options": [
+    "vuelven",
+    "vuelve",
+    "volven"
+   ],
+   "answer": 0,
+   "why": "Ellas: vuelven."
+  },
+  {
+   "before": "No escuché bien, así que volví ",
+   "after": " preguntar.",
+   "options": [
+    "a",
+    "de",
+    "en"
+   ],
+   "answer": 0,
+   "why": "Volver a + infinitive: to do again."
+  },
+  {
+   "before": "Anoche ",
+   "after": " tarde del trabajo.",
+   "options": [
+    "volví",
+    "vuelví",
+    "volvía"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: volví, no stem change."
+  },
+  {
+   "before": "¿A qué hora ",
+   "after": " de la escuela ayer?",
+   "options": [
+    "volviste",
+    "vuelviste",
+    "volvistes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: volviste."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " de México con regalos.",
+   "options": [
+    "volvió",
+    "vuelvió",
+    "volvio"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: volvió, with accent."
+  },
+  {
+   "before": "Los estudiantes ",
+   "after": " a clase después del recreo.",
+   "options": [
+    "volvieron",
+    "vuelvieron",
+    "volvió"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: volvieron."
+  },
+  {
+   "before": "Con el éxito, el cantante se ",
+   "after": " arrogante.",
+   "options": [
+    "volvió",
+    "vuelve a",
+    "volvía a"
+   ],
+   "answer": 0,
+   "why": "Volverse for a change in character."
+  }
+ ],
+ "reading": {
+  "titleEs": "Volver a Puerto Rico",
+  "paragraphs": [
+   "Después del huracán, la familia de Natalia se mudó de Puerto Rico a Orlando. Ella tenía diez años. Durante mucho tiempo, cada noche le preguntaba a su papá: «¿Cuándo volvemos a casa?». Él siempre contestaba: «Pronto».",
+   "Ocho años después, Natalia volvió sola a Ponce para conocer a sus primos otra vez. La casa de sus abuelos estaba reconstruida, y el árbol de mangó seguía en el patio. Ahora estudia en Florida, pero vuelve a la isla cada verano, y dice que tiene dos casas."
+  ],
+  "comprehension": [
+   {
+    "before": "La familia de Natalia se mudó a ",
+    "after": ".",
+    "options": [
+     "Orlando",
+     "Ponce",
+     "Nueva York"
+    ],
+    "answer": 0,
+    "why": "They moved to Orlando."
+   },
+   {
+    "before": "Cuando se mudó, Natalia tenía ",
+    "after": ".",
+    "options": [
+     "diez años",
+     "ocho años",
+     "dieciocho años"
+    ],
+    "answer": 0,
+    "why": "She was ten."
+   },
+   {
+    "before": "Natalia volvió a Ponce para ",
+    "after": ".",
+    "options": [
+     "ver a sus primos",
+     "buscar trabajo",
+     "vender la casa"
+    ],
+    "answer": 0,
+    "why": "To meet her cousins again."
+   },
+   {
+    "before": "Ahora Natalia vuelve a la isla ",
+    "after": ".",
+    "options": [
+     "cada verano",
+     "cada mes",
+     "nunca"
+    ],
+    "answer": 0,
+    "why": "Every summer."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo volvo mañana.",
+   "right": "Yo vuelvo mañana.",
+   "why": "Stem change o to ue in yo: vuelvo."
+  },
+  {
+   "wrong": "Nosotros vuelvemos tarde.",
+   "right": "Nosotros volvemos tarde.",
+   "why": "No stem change in nosotros."
+  },
+  {
+   "wrong": "Ayer vuelví a casa.",
+   "right": "Ayer volví a casa.",
+   "why": "The preterite has no stem change."
+  },
+  {
+   "wrong": "Volví el libro a la biblioteca.",
+   "right": "Devolví el libro a la biblioteca.",
+   "why": "To give something back is devolver."
+  }
+ ],
+ "heritage": "Heritage speakers in the US sometimes use «regresar» more than «volver»; both are correct. A common English influence is «volver para atrás», a calque of «go back»; «volver» already means to go back, so «para atrás» can go.",
+ "teacher": "Ask students about places they want to go back to and why, with Quiero volver a… Then practice volver a + infinitive with things they would like to do again.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb volver». 1 of them asks for conjugation, charts or tenses (conjugation). One suggestion asks for the conjugation chart, so the full present and preterite are on this page.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

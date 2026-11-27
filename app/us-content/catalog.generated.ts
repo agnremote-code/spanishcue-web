@@ -3,6 +3,13 @@ export type UsCatalogEntry = { family: string; slug: string; level: string; them
 export const usCatalog: UsCatalogEntry[] = [
  {
   "family": "verbs",
+  "slug": "caer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb caer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "conocer",
   "level": "A1",
   "theme": "",
@@ -21,6 +28,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb dar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "deber",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb deber: practice"
  },
  {
   "family": "verbs",
@@ -143,6 +157,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "quedar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb quedar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "querer",
   "level": "A1",
   "theme": "",
@@ -178,6 +199,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "traer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb traer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "venir",
   "level": "A2",
   "theme": "",
@@ -189,6 +217,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb ver: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "volver",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb volver: practice"
  },
  {
   "family": "vocabulary",
