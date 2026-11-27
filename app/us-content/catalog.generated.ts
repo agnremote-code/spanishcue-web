@@ -171,10 +171,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "beach",
+  "level": "A1",
+  "theme": "beach",
+  "title": "Spanish beach vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "bedroom",
   "level": "A1",
   "theme": "bedroom",
   "title": "Spanish bedroom vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "body-parts",
+  "level": "A1",
+  "theme": "body-parts",
+  "title": "Spanish body parts vocabulary"
  },
  {
   "family": "vocabulary",
@@ -189,6 +203,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "business",
   "title": "Spanish business vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "camping",
+  "level": "A2",
+  "theme": "camping",
+  "title": "Spanish camping vocabulary"
  },
  {
   "family": "vocabulary",
