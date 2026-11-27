@@ -64,3 +64,4 @@
   .giftLayout { grid-template-columns: 1fr; }
   .preview { max-width: 640px; }
 }
+.promo { display: inline-flex; justify-content: center; padding: 11px 16px; border-radius: 12px; background: #ffc936; color: #06152f; font-weight: 900; text-decoration: none; }

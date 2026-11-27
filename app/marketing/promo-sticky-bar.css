@@ -1,0 +1,18 @@
+.promo-sticky-bar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; display: flex; align-items: center; justify-content: center;
+  gap: 10px 18px; padding: 10px 48px 10px 16px; padding-bottom: calc(10px + env(safe-area-inset-bottom));
+  background: #06152f; color: #fff; box-shadow: 0 -8px 24px rgba(6, 21, 47, .25); font-size: 14px; line-height: 1.35;
+}
+.promo-sticky-bar p { margin: 0; display: flex; flex-wrap: wrap; gap: 2px 10px; align-items: baseline; }
+.promo-sticky-bar p b { font-size: 15px; font-weight: 900; color: #ffc936; }
+.promo-sticky-bar p span { opacity: .9; }
+.promo-sticky-bar a {
+  flex: none; padding: 10px 16px; border-radius: 12px; background: #ffc936; color: #06152f; font-weight: 900;
+  text-decoration: none; white-space: nowrap;
+}
+.promo-sticky-bar button {
+  position: absolute; right: 8px; top: 50%; transform: translateY(-50%); width: 32px; height: 32px; border: 0;
+  background: none; color: #fff; font-size: 22px; line-height: 1; cursor: pointer; opacity: .75;
+}
+@media (max-width: 640px) { .promo-sticky-bar p span { display: none; } .promo-sticky-bar { justify-content: space-between; } }
+@media print { .promo-sticky-bar { display: none !important; } }

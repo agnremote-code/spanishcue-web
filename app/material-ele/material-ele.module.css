@@ -55,3 +55,17 @@
 .preview video { display: block; width: 100%; max-width: 720px; height: auto; border-radius: 14px; background: #06152f; margin: 0 auto; }
 .preview figcaption { margin: 10px 0 0; font-size: 14px; color: var(--g-muted); text-align: center; }
 @media print { .exerciseActions, .exerciseFeedback { display: none !important; } .exerciseSentence input { border: 0; border-bottom: 1px solid #06152f; border-radius: 0; background: none; } }
+.promoRibbon {
+  margin: 0 0 12px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 6px 14px;
+  padding: 9px 14px; border-radius: 12px; background: #06152f; color: #fff; font-size: 14px; text-align: center;
+}
+.promoRibbon b { color: #ffc936; }
+.promoRibbon a { padding: 6px 12px; border-radius: 10px; background: #ffc936; color: #06152f; font-weight: 900; text-decoration: none; white-space: nowrap; }
+.gridPromo { margin: 18px 0 0; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; padding: 14px 18px; border-radius: 16px; background: #fff8e1; border: 1px solid #ffe08a; }
+.gridPromo span { flex: 1 1 260px; font-weight: 600; }
+.gridPromo small { flex-basis: 100%; color: var(--g-muted); }
+.exerciseCta { margin-top: 16px; padding: 14px 18px; border-radius: 16px; background: #fff8e1; border: 1px solid #ffe08a; display: grid; gap: 10px; justify-items: start; }
+.exerciseCta p { margin: 0; }
+.exerciseCta a { display: inline-flex; padding: 11px 16px; border-radius: 12px; background: #ffc936; color: #06152f; font-weight: 900; text-decoration: none; }
+.exerciseCta small { color: var(--g-muted); }
+@media print { .promoRibbon, .gridPromo, .exerciseCta { display: none !important; } }

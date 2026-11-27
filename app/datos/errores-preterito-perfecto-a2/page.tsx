@@ -135,7 +135,7 @@ export default function ErroresPreteritoPerfectoPage() {
             </div>
           </Section>
 
-          <Section title="Los participios que salieron mal" intro="Todas las formas equivocadas que escribieron los alumnos, también en el segundo o tercer intento.">
+          <Section id="participios" title="Los participios que salieron mal" intro="Todas las formas equivocadas que escribieron los alumnos, también en el segundo o tercer intento.">
             <div className={`${styles.panel} ${styles.tableWrap}`}>
               <table>
                 <caption>Participios escritos por los alumnos y forma correcta</caption>
