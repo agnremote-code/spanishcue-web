@@ -78,6 +78,8 @@ export function isEnglishDefaultPath(pathname: string): boolean {
     path === "/lp" ||
     path.startsWith("/lp/") ||
     path.startsWith("/spanish-") ||
+    path === "/ap-spanish-language" ||
+    path.startsWith("/ap-spanish-language/") ||
     path === "/online-spanish-teaching-resources" ||
     path === "/free-spanish-lesson"
   );
@@ -134,6 +136,8 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path.startsWith("/spanish-reading-comprehension/") ||
     path === "/spanish-grammar-practice" ||
     path.startsWith("/spanish-grammar-practice/") ||
+    path === "/ap-spanish-language" ||
+    path.startsWith("/ap-spanish-language/") ||
     path === "/resources" ||
     path.startsWith("/resources/") ||
     path === "/recursos" ||

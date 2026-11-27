@@ -69,6 +69,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   { path: "/spanish-reading-comprehension", priority: 0.6, changeFrequency: "monthly" },
   ...["a1", "a2", "b1"].map((level) => ({ path: `/spanish-reading-comprehension/${level}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/spanish-grammar-practice", priority: 0.6, changeFrequency: "monthly" },
+  { path: "/ap-spanish-language", priority: 0.6, changeFrequency: "monthly" },
+  ...["argumentative-essay", "project-presentation", "listening-and-reading"].map((part) => ({ path: `/ap-spanish-language/${part}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   ...["ser-vs-estar", "preterite-vs-imperfect", "subjunctive", "por-vs-para", "preterite", "imperfect", "present-perfect", "future-tense", "reflexive-verbs", "direct-object-pronouns"].map((topic) => ({ path: `/spanish-grammar-practice/${topic}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/datos/errores-preterito-perfecto-a2", priority: 0.6, changeFrequency: "monthly" },
   { path: "/datos/que-autocompleta-google-en-gramatica", priority: 0.6, changeFrequency: "monthly" },
