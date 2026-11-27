@@ -2,6 +2,48 @@
 export type UsCatalogEntry = { family: string; slug: string; level: string; theme: string; title: string };
 export const usCatalog: UsCatalogEntry[] = [
  {
+  "family": "ap",
+  "slug": "art-and-creativity",
+  "level": "B1",
+  "theme": "unit-3",
+  "title": "AP Spanish Art and Creativity (Unit 3)"
+ },
+ {
+  "family": "ap",
+  "slug": "contemporary-life",
+  "level": "B1",
+  "theme": "unit-5",
+  "title": "AP Spanish Contemporary Life (Unit 5)"
+ },
+ {
+  "family": "ap",
+  "slug": "families-and-communities",
+  "level": "B1",
+  "theme": "unit-1",
+  "title": "AP Spanish Families and Communities (Unit 1)"
+ },
+ {
+  "family": "ap",
+  "slug": "global-contexts",
+  "level": "B2",
+  "theme": "unit-6",
+  "title": "AP Spanish Global Contexts (Unit 6)"
+ },
+ {
+  "family": "ap",
+  "slug": "language-and-culture",
+  "level": "B1",
+  "theme": "unit-2",
+  "title": "AP Spanish Language and Culture (Unit 2)"
+ },
+ {
+  "family": "ap",
+  "slug": "science-and-technology",
+  "level": "B1",
+  "theme": "unit-4",
+  "title": "AP Spanish Science and Technology (Unit 4)"
+ },
+ {
   "family": "verbs",
   "slug": "dar",
   "level": "A2",

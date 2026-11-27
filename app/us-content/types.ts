@@ -63,3 +63,32 @@ export type UsVerbPage = {
   teacher: string;
   figure: { text: string; source: string };
 };
+
+/**
+ * An AP Spanish Language and Culture unit page (family «ap»), stored in public/us-content/ap/<slug>.json and
+ * served at /ap-spanish-language/themes/<slug>: one page per unit of the course framework effective fall 2026.
+ * Official facts (unit names, recommended contexts, exam format) carry the College Board page they came from;
+ * everything else (vocabulary, reading, prompts) is SpanishCue's own.
+ */
+export type UsApPage = {
+  /** "unit-1" … "unit-6"; orders the hub. */
+  theme: string;
+  unitName: string;
+  level: "B1" | "B2";
+  title: string;
+  description: string;
+  h1: string;
+  intro: string;
+  demand: UsDemand;
+  overview: { heading: string; paragraphs: string[] };
+  /** Recommended instructional contexts quoted from the course framework; empty when we could not read them. */
+  contexts: string[];
+  vocabulary: { title: string; words: [string, string][] }[];
+  vocabQuiz: QuizItem[];
+  reading: { titleEs: string; intro: string; paragraphs: string[]; comprehension: QuizItem[] };
+  essay: { prompt: string; sideA: string; sideB: string; outline: string[]; phrases: [string, string][] };
+  speaking: string[];
+  heritage: string;
+  teacher: string;
+  figure: { text: string; source: string };
+};
