@@ -150,6 +150,20 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "bathroom",
+  "level": "A1",
+  "theme": "bathroom",
+  "title": "Spanish bathroom vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "bedroom",
+  "level": "A1",
+  "theme": "bedroom",
+  "title": "Spanish bedroom vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "business",
   "level": "A2",
   "theme": "business",
@@ -301,6 +315,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "personality",
   "title": "Spanish personality vocabulary: adjectives"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "pharmacy",
+  "level": "A2",
+  "theme": "pharmacy",
+  "title": "Spanish pharmacy vocabulary"
  },
  {
   "family": "vocabulary",
