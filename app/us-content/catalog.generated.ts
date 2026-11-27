@@ -38,6 +38,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "grammar",
+  "slug": "comparatives-and-superlatives",
+  "level": "A2–B1",
+  "theme": "contrast",
+  "title": "Spanish comparatives and superlatives practice"
+ },
+ {
+  "family": "grammar",
   "slug": "conditional",
   "level": "A2–B1",
   "theme": "forms",
@@ -87,6 +94,20 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "grammar",
+  "slug": "passive-voice",
+  "level": "B1–B2",
+  "theme": "contrast",
+  "title": "Spanish passive voice practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "pluperfect",
+  "level": "B1",
+  "theme": "forms",
+  "title": "Spanish pluperfect practice"
+ },
+ {
+  "family": "grammar",
   "slug": "possessive-adjectives",
   "level": "A1–A2",
   "theme": "forms",
@@ -115,6 +136,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "grammar",
+  "slug": "punctuation",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish punctuation practice"
+ },
+ {
+  "family": "grammar",
   "slug": "question-words",
   "level": "A1",
   "theme": "forms",
@@ -122,10 +150,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "grammar",
+  "slug": "relative-pronouns",
+  "level": "B1–B2",
+  "theme": "forms",
+  "title": "Spanish relative pronouns practice"
+ },
+ {
+  "family": "grammar",
   "slug": "sentence-structure",
   "level": "A1–A2",
   "theme": "forms",
   "title": "Spanish sentence structure practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "spelling",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish spelling practice"
  },
  {
   "family": "grammar",
