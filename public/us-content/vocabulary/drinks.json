@@ -1,0 +1,371 @@
+{
+ "level": "A1",
+ "theme": "drinks",
+ "themeLabel": "Drinks",
+ "title": "Spanish Drinks Vocabulary: Bebidas with Practice and Quiz",
+ "description": "Spanish drinks vocabulary: agua, jugo, refresco, horchata, agua de jamaica and café, with a self-correcting quiz and an A1 reading at a taquería.",
+ "h1": "Spanish drinks vocabulary",
+ "titleEs": "En la taquería",
+ "focus": "ordering politely with quiero and me da",
+ "intro": "Learn the Spanish words for everyday drinks and popular Latin American ones like horchata, agua de jamaica and atole, and how to order them. Practice with instant feedback, then read about ordering drinks at a taquería.",
+ "paragraphs": [
+  "Es viernes por la noche y Lucía va con sus amigos Óscar y Daniela a una taquería de Houston. Hace calor y todos tienen sed. El mesero llega con la carta y pregunta: «¿Qué van a tomar?».",
+  "Lucía quiere probar algo nuevo. «¿Qué es el agua de jamaica?», pregunta. El mesero explica que es una bebida fría de flores de jamaica, un poco ácida y muy refrescante. Lucía pide una grande. Óscar toma una horchata, como siempre, y Daniela quiere un refresco de limón con mucho hielo.",
+  "Cuando llegan las bebidas, Lucía prueba el agua de jamaica. Le encanta. Óscar le da un poco de horchata y ella dice que también le gusta, pero prefiere la jamaica. Al final, el mesero les ofrece un café, pero ya es tarde y nadie quiere café. Lucía decide que la próxima vez va a probar el agua de tamarindo."
+ ],
+ "glossary": [
+  [
+   "la carta",
+   "menu"
+  ],
+  [
+   "probar",
+   "to try"
+  ],
+  [
+   "ácido / ácida",
+   "sour, tart"
+  ],
+  [
+   "refrescante",
+   "refreshing"
+  ],
+  [
+   "pedir",
+   "to order"
+  ],
+  [
+   "como siempre",
+   "as always"
+  ],
+  [
+   "prefiere",
+   "she prefers"
+  ],
+  [
+   "ofrecer",
+   "to offer"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Lucía y sus amigos van a una ",
+   "after": ".",
+   "options": [
+    "taquería",
+    "cafetería",
+    "panadería"
+   ],
+   "answer": 0,
+   "why": "A taquería in Houston."
+  },
+  {
+   "before": "Todos tienen sed porque ",
+   "after": ".",
+   "options": [
+    "hace calor",
+    "comieron mucho",
+    "corrieron"
+   ],
+   "answer": 0,
+   "why": "It is hot."
+  },
+  {
+   "before": "El agua de jamaica es una bebida ",
+   "after": ".",
+   "options": [
+    "fría de flores",
+    "caliente de maíz",
+    "de arroz"
+   ],
+   "answer": 0,
+   "why": "A cold drink made from flowers."
+  },
+  {
+   "before": "Óscar toma ",
+   "after": ".",
+   "options": [
+    "una horchata",
+    "un café",
+    "un refresco"
+   ],
+   "answer": 0,
+   "why": "Horchata, as always."
+  },
+  {
+   "before": "Daniela quiere su refresco con ",
+   "after": ".",
+   "options": [
+    "mucho hielo",
+    "leche",
+    "sal"
+   ],
+   "answer": 0,
+   "why": "With lots of ice."
+  },
+  {
+   "before": "Al final, nadie quiere café porque ",
+   "after": ".",
+   "options": [
+    "ya es tarde",
+    "es muy caro",
+    "no hay"
+   ],
+   "answer": 0,
+   "why": "It is already late."
+  }
+ ],
+ "grammar": {
+  "title": "Tomar: to drink and to have",
+  "intro": "Spanish often uses tomar for drinks: ¿Qué vas a tomar? Tomo un café. Beber also works.",
+  "items": [
+   {
+    "before": "Yo siempre ",
+    "after": " agua con la comida.",
+    "options": [
+     "tomo",
+     "toma",
+     "tomas"
+    ],
+    "answer": 0,
+    "why": "Yo: tomo."
+   },
+   {
+    "before": "¿Qué van a ",
+    "after": " ustedes?",
+    "options": [
+     "tomar",
+     "toman",
+     "tomando"
+    ],
+    "answer": 0,
+    "why": "Ir a + infinitive: tomar."
+   },
+   {
+    "before": "Mis padres ",
+    "after": " café por la mañana.",
+    "options": [
+     "toman",
+     "toma",
+     "tomamos"
+    ],
+    "answer": 0,
+    "why": "Ellos: toman."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué bebidas tomas en el desayuno y en la cena?",
+  "¿Has probado horchata o agua de jamaica? ¿Te gustan?",
+  "Pide una bebida a tu compañero como en un restaurante."
+ ],
+ "heritage": "Drink names vary: jugo (Latin America) or zumo (Spain), refresco, soda or gaseosa, licuado or batido. Many families make aguas frescas at home; writing down the recipe in Spanish, with quantities, is a good way to practice.",
+ "teacher": "Make a class menu of aguas frescas with prices and run a café role play. Students order with Quiero… or Me da…, por favor, and the waiter repeats the order.",
+ "vocabulary": [
+  {
+   "title": "Everyday drinks",
+   "words": [
+    [
+     "el agua",
+     "water"
+    ],
+    [
+     "el agua con gas / sin gas",
+     "sparkling / still water"
+    ],
+    [
+     "el jugo",
+     "juice"
+    ],
+    [
+     "el refresco",
+     "soda"
+    ],
+    [
+     "la leche",
+     "milk"
+    ],
+    [
+     "el café",
+     "coffee"
+    ],
+    [
+     "el té",
+     "tea"
+    ],
+    [
+     "la limonada",
+     "lemonade"
+    ]
+   ]
+  },
+  {
+   "title": "Typical drinks",
+   "words": [
+    [
+     "la horchata",
+     "horchata, rice and cinnamon drink"
+    ],
+    [
+     "el agua de jamaica",
+     "hibiscus water"
+    ],
+    [
+     "el agua de tamarindo",
+     "tamarind water"
+    ],
+    [
+     "el atole",
+     "atole, warm corn drink"
+    ],
+    [
+     "el champurrado",
+     "chocolate atole"
+    ],
+    [
+     "el mate",
+     "mate tea (Argentina, Uruguay)"
+    ],
+    [
+     "el licuado / el batido",
+     "smoothie, milkshake"
+    ]
+   ]
+  },
+  {
+   "title": "Ordering",
+   "words": [
+    [
+     "la bebida",
+     "drink"
+    ],
+    [
+     "tomar",
+     "to drink, to have"
+    ],
+    [
+     "¿Qué vas a tomar?",
+     "What are you having?"
+    ],
+    [
+     "un vaso de",
+     "a glass of"
+    ],
+    [
+     "una taza de",
+     "a cup of"
+    ],
+    [
+     "con hielo / sin hielo",
+     "with / without ice"
+    ],
+    [
+     "frío / caliente",
+     "cold / hot"
+    ],
+    [
+     "tengo sed",
+     "I'm thirsty"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Hace mucho calor y ",
+   "after": " sed.",
+   "options": [
+    "tengo",
+    "soy",
+    "estoy"
+   ],
+   "answer": 0,
+   "why": "Thirsty: tener sed."
+  },
+  {
+   "before": "La bebida blanca de arroz y canela es la ",
+   "after": ".",
+   "options": [
+    "horchata",
+    "jamaica",
+    "limonada"
+   ],
+   "answer": 0,
+   "why": "Horchata: rice and cinnamon."
+  },
+  {
+   "before": "Por la mañana tomo una ",
+   "after": " de café.",
+   "options": [
+    "taza",
+    "libra",
+    "botella de pan"
+   ],
+   "answer": 0,
+   "why": "A cup of coffee: una taza."
+  },
+  {
+   "before": "El agua de ",
+   "after": " es roja y se hace con flores.",
+   "options": [
+    "jamaica",
+    "tamarindo",
+    "horchata"
+   ],
+   "answer": 0,
+   "why": "Hibiscus water: agua de jamaica."
+  },
+  {
+   "before": "En invierno mi abuela prepara ",
+   "after": ", una bebida caliente de maíz.",
+   "options": [
+    "atole",
+    "refresco",
+    "limonada"
+   ],
+   "answer": 0,
+   "why": "Atole is a warm corn drink."
+  },
+  {
+   "before": "Coca-Cola y Sprite son ",
+   "after": ".",
+   "options": [
+    "refrescos",
+    "jugos",
+    "licuados"
+   ],
+   "answer": 0,
+   "why": "Sodas: refrescos."
+  },
+  {
+   "before": "Quiero un vaso de agua ",
+   "after": " hielo, por favor; está muy fría.",
+   "options": [
+    "sin",
+    "con"
+   ],
+   "answer": 0,
+   "why": "Without ice: sin hielo."
+  },
+  {
+   "before": "En Argentina y Uruguay mucha gente toma ",
+   "after": ".",
+   "options": [
+    "mate",
+    "atole",
+    "champurrado"
+   ],
+   "answer": 0,
+   "why": "Mate is typical there."
+  }
+ ],
+ "demand": {
+  "query": "spanish drinks vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish drinks vocabulary». One asks what some Spanish drinks are, so the list adds typical non-alcoholic drinks from Mexico, the Caribbean and South America.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

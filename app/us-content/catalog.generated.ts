@@ -220,6 +220,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "colors",
+  "level": "A1",
+  "theme": "colors",
+  "title": "Spanish colors vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "construction",
   "level": "A2",
   "theme": "construction",
@@ -245,6 +252,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "day-of-the-dead",
   "title": "Spanish Day of the Dead vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "drinks",
+  "level": "A1",
+  "theme": "drinks",
+  "title": "Spanish drinks vocabulary"
  },
  {
   "family": "vocabulary",
@@ -280,6 +294,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "friends",
   "title": "Spanish words for friends"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "fruits",
+  "level": "A1",
+  "theme": "fruits",
+  "title": "Spanish fruits and vegetables vocabulary"
  },
  {
   "family": "vocabulary",

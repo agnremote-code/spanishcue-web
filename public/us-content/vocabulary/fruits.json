@@ -1,0 +1,373 @@
+{
+ "level": "A1",
+ "theme": "fruits",
+ "themeLabel": "Fruits and vegetables",
+ "title": "Spanish Fruits and Vegetables Vocabulary with Practice",
+ "description": "Spanish fruits and vegetables: manzana, plátano, fresa, zanahoria, papa and aguacate, with a self-correcting quiz and an A1 reading at a farmers market.",
+ "h1": "Spanish fruits and vegetables vocabulary",
+ "titleEs": "Sábado en el mercado",
+ "focus": "the present tense and quantities",
+ "intro": "Learn the Spanish words for common fruits and vegetables, including the ones with different names by country, and how to buy them by the pound. Practice with instant feedback, then read about a Saturday at a farmers market.",
+ "paragraphs": [
+  "Todos los sábados, Carmen y su hijo Mateo van al mercado de agricultores de su barrio en Sacramento. Hay muchos puestos con frutas y verduras frescas. Mateo lleva la lista y Carmen lleva las bolsas.",
+  "Primero compran fresas. «¿A cómo está la libra?», pregunta Carmen. «A cuatro dólares», dice el señor del puesto. Compran dos libras. Después compran zanahorias, cebollas, una lechuga y tomates para la ensalada.",
+  "Mateo quiere una piña, pero no está madura. El señor le da una sandía pequeña para probar: es muy dulce. Al final compran tres aguacates para hacer guacamole. En casa, Mateo lava las frutas y Carmen prepara la comida. «El mercado es mejor que el supermercado», dice Mateo, «porque puedo probar todo». Carmen está de acuerdo: las frutas del mercado son más frescas y el señor del puesto ya los conoce. El próximo sábado van a comprar uvas y mangos."
+ ],
+ "glossary": [
+  [
+   "el mercado de agricultores",
+   "farmers market"
+  ],
+  [
+   "las verduras",
+   "vegetables"
+  ],
+  [
+   "la lista",
+   "shopping list"
+  ],
+  [
+   "las bolsas",
+   "bags"
+  ],
+  [
+   "comprar",
+   "to buy"
+  ],
+  [
+   "probar",
+   "to taste, try"
+  ],
+  [
+   "lavar",
+   "to wash"
+  ],
+  [
+   "mejor que",
+   "better than"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Carmen y Mateo van al mercado ",
+   "after": ".",
+   "options": [
+    "los sábados",
+    "los lunes",
+    "todos los días"
+   ],
+   "answer": 0,
+   "why": "Every Saturday."
+  },
+  {
+   "before": "Mateo lleva ",
+   "after": ".",
+   "options": [
+    "la lista",
+    "las bolsas",
+    "el dinero"
+   ],
+   "answer": 0,
+   "why": "He carries the list."
+  },
+  {
+   "before": "La libra de fresas cuesta ",
+   "after": ".",
+   "options": [
+    "cuatro dólares",
+    "dos dólares",
+    "diez dólares"
+   ],
+   "answer": 0,
+   "why": "Four dollars a pound."
+  },
+  {
+   "before": "No compran la piña porque ",
+   "after": ".",
+   "options": [
+    "no está madura",
+    "es muy cara",
+    "no hay"
+   ],
+   "answer": 0,
+   "why": "It is not ripe."
+  },
+  {
+   "before": "Compran aguacates para hacer ",
+   "after": ".",
+   "options": [
+    "guacamole",
+    "jugo",
+    "pastel"
+   ],
+   "answer": 0,
+   "why": "To make guacamole."
+  },
+  {
+   "before": "A Mateo le gusta el mercado porque ",
+   "after": ".",
+   "options": [
+    "puede probar todo",
+    "está cerca",
+    "es barato"
+   ],
+   "answer": 0,
+   "why": "He can taste everything."
+  }
+ ],
+ "grammar": {
+  "title": "Gender of fruits and vegetables",
+  "intro": "Most fruits ending in -a are feminine (la manzana) and in -o masculine (el mango). Learn limón, maíz and aguacate with el.",
+  "items": [
+   {
+    "before": "Me gusta ",
+    "after": " piña con chile.",
+    "options": [
+     "la",
+     "el"
+    ],
+    "answer": 0,
+    "why": "Piña is feminine: la piña."
+   },
+   {
+    "before": "",
+    "after": " limón es muy ácido.",
+    "options": [
+     "El",
+     "La"
+    ],
+    "answer": 0,
+    "why": "Limón is masculine: el limón."
+   },
+   {
+    "before": "Compramos ",
+    "after": " uvas para la fiesta.",
+    "options": [
+     "unas",
+     "unos"
+    ],
+    "answer": 0,
+    "why": "Uvas is feminine plural: unas."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuál es tu fruta favorita y cuál no te gusta?",
+  "¿Qué verduras pones en una ensalada?",
+  "Describe una fruta sin decir el nombre; tu compañero adivina."
+ ],
+ "heritage": "Fruit names change a lot by country: banana, plátano, guineo; fresa or frutilla; papaya or fruta bomba; aguacate or palta; maíz or elote; frijoles or porotos. If your family uses one, keep it, and learn the others to understand menus and recipes from other countries.",
+ "teacher": "Bring pictures of a market stall and run a role play: one student sells and the other buys by the pound with ¿A cómo está…? and Deme dos libras de…",
+ "vocabulary": [
+  {
+   "title": "Fruits",
+   "words": [
+    [
+     "la manzana",
+     "apple"
+    ],
+    [
+     "el plátano / la banana",
+     "banana"
+    ],
+    [
+     "la naranja",
+     "orange"
+    ],
+    [
+     "la fresa",
+     "strawberry"
+    ],
+    [
+     "las uvas",
+     "grapes"
+    ],
+    [
+     "la piña",
+     "pineapple"
+    ],
+    [
+     "el mango",
+     "mango"
+    ],
+    [
+     "la sandía",
+     "watermelon"
+    ],
+    [
+     "el limón",
+     "lemon, lime"
+    ]
+   ]
+  },
+  {
+   "title": "Vegetables",
+   "words": [
+    [
+     "la zanahoria",
+     "carrot"
+    ],
+    [
+     "la papa",
+     "potato"
+    ],
+    [
+     "la cebolla",
+     "onion"
+    ],
+    [
+     "la lechuga",
+     "lettuce"
+    ],
+    [
+     "los tomates",
+     "tomatoes"
+    ],
+    [
+     "el brócoli",
+     "broccoli"
+    ],
+    [
+     "el maíz / el elote",
+     "corn"
+    ],
+    [
+     "el aguacate",
+     "avocado"
+    ],
+    [
+     "el chile",
+     "chili pepper"
+    ]
+   ]
+  },
+  {
+   "title": "At the market",
+   "words": [
+    [
+     "la libra",
+     "pound"
+    ],
+    [
+     "maduro / madura",
+     "ripe"
+    ],
+    [
+     "fresco / fresca",
+     "fresh"
+    ],
+    [
+     "dulce",
+     "sweet"
+    ],
+    [
+     "¿A cómo está…?",
+     "How much is…?"
+    ],
+    [
+     "el puesto",
+     "stand, stall"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La fruta roja, pequeña y dulce que crece en primavera es la ",
+   "after": ".",
+   "options": [
+    "fresa",
+    "papa",
+    "cebolla"
+   ],
+   "answer": 0,
+   "why": "Strawberry: fresa."
+  },
+  {
+   "before": "Para hacer guacamole necesito ",
+   "after": ".",
+   "options": [
+    "aguacates",
+    "uvas",
+    "fresas"
+   ],
+   "answer": 0,
+   "why": "Guacamole is made with avocados."
+  },
+  {
+   "before": "La fruta grande, verde por fuera y roja por dentro es la ",
+   "after": ".",
+   "options": [
+    "sandía",
+    "piña",
+    "naranja"
+   ],
+   "answer": 0,
+   "why": "Watermelon: sandía."
+  },
+  {
+   "before": "Los conejos comen ",
+   "after": ".",
+   "options": [
+    "zanahorias",
+    "piñas",
+    "limones"
+   ],
+   "answer": 0,
+   "why": "Rabbits and carrots: zanahorias."
+  },
+  {
+   "before": "Las papas fritas se hacen con ",
+   "after": ".",
+   "options": [
+    "papas",
+    "manzanas",
+    "lechugas"
+   ],
+   "answer": 0,
+   "why": "French fries come from potatoes."
+  },
+  {
+   "before": "La fruta amarilla y larga es el ",
+   "after": ".",
+   "options": [
+    "plátano",
+    "mango",
+    "limón"
+   ],
+   "answer": 0,
+   "why": "Banana: plátano (or banana)."
+  },
+  {
+   "before": "Este mango no está verde; está ",
+   "after": ".",
+   "options": [
+    "maduro",
+    "fresco",
+    "dulce no"
+   ],
+   "answer": 0,
+   "why": "Ready to eat: maduro."
+  },
+  {
+   "before": "En el mercado preguntas el precio: «¿A cómo está la ",
+   "after": " de fresas?»",
+   "options": [
+    "libra",
+    "puesto",
+    "fruta"
+   ],
+   "answer": 0,
+   "why": "Price per pound: la libra."
+  }
+ ],
+ "demand": {
+  "query": "spanish fruits vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish fruits vocabulary». Two of them ask for fruits and vegetables together, so both are on this page.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

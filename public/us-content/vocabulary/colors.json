@@ -1,0 +1,364 @@
+{
+ "level": "A1",
+ "theme": "colors",
+ "themeLabel": "Colors",
+ "title": "Spanish Colors Vocabulary: Los Colores with Practice",
+ "description": "Spanish colors vocabulary: rojo, azul, verde, amarillo, morado, claro and oscuro, with agreement, a self-correcting quiz and an A1 reading about painting a room.",
+ "h1": "Spanish colors vocabulary",
+ "titleEs": "Un cuarto nuevo",
+ "focus": "color agreement and describing objects",
+ "intro": "Learn the colors in Spanish, how they agree with the noun (un carro rojo, una casa roja) and how to say light and dark. Practice with instant feedback, then read about a family choosing colors for a bedroom.",
+ "paragraphs": [
+  "Valeria tiene diez años y su familia se muda a una casa nueva en Denver. Por primera vez, Valeria tiene su propio cuarto y puede elegir los colores. Su papá trae muchas muestras de pintura de la tienda.",
+  "Valeria mira todos los colores. Quiere las paredes moradas, pero su papá dice que el morado oscuro es muy fuerte. Al final, eligen un morado claro, casi lila. Para la puerta eligen blanco, y para el techo un azul muy claro, como el cielo.",
+  "El sábado pintan juntos. Valeria tiene pintura en las manos, en la cara y en el pelo castaño. Después ponen una cama con una cobija amarilla, una lámpara verde y una alfombra de colores. «Mi cuarto parece un arcoíris», dice Valeria, muy contenta. Por la noche, su mamá entra al cuarto y dice que le encanta el color lila. Valeria quiere invitar a sus amigas el domingo para mostrarles su cuarto nuevo."
+ ],
+ "glossary": [
+  [
+   "mudarse",
+   "to move (house)"
+  ],
+  [
+   "propio",
+   "own"
+  ],
+  [
+   "la muestra de pintura",
+   "paint sample"
+  ],
+  [
+   "las paredes",
+   "walls"
+  ],
+  [
+   "fuerte",
+   "strong, intense"
+  ],
+  [
+   "el techo",
+   "ceiling"
+  ],
+  [
+   "la cobija",
+   "blanket"
+  ],
+  [
+   "el arcoíris",
+   "rainbow"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Valeria tiene ",
+   "after": ".",
+   "options": [
+    "diez años",
+    "quince años",
+    "seis años"
+   ],
+   "answer": 0,
+   "why": "She is ten."
+  },
+  {
+   "before": "La familia se muda a ",
+   "after": ".",
+   "options": [
+    "Denver",
+    "Dallas",
+    "Miami"
+   ],
+   "answer": 0,
+   "why": "To Denver."
+  },
+  {
+   "before": "El papá dice que el morado oscuro es ",
+   "after": ".",
+   "options": [
+    "muy fuerte",
+    "muy caro",
+    "feo"
+   ],
+   "answer": 0,
+   "why": "Too strong."
+  },
+  {
+   "before": "Para el techo eligen ",
+   "after": ".",
+   "options": [
+    "un azul muy claro",
+    "blanco",
+    "morado"
+   ],
+   "answer": 0,
+   "why": "A very light blue."
+  },
+  {
+   "before": "La cobija de la cama es ",
+   "after": ".",
+   "options": [
+    "amarilla",
+    "verde",
+    "morada"
+   ],
+   "answer": 0,
+   "why": "The blanket is yellow."
+  },
+  {
+   "before": "Valeria dice que su cuarto parece ",
+   "after": ".",
+   "options": [
+    "un arcoíris",
+    "el cielo",
+    "una tienda"
+   ],
+   "answer": 0,
+   "why": "A rainbow."
+  }
+ ],
+ "grammar": {
+  "title": "Colors agree like adjectives",
+  "intro": "Colors in -o change for gender and number (rojo, roja, rojos, rojas). Colors in -e or a consonant change only for number (verde, verdes; azul, azules).",
+  "items": [
+   {
+    "before": "Tengo una mochila ",
+    "after": ".",
+    "options": [
+     "negra",
+     "negro",
+     "negros"
+    ],
+    "answer": 0,
+    "why": "Mochila is feminine: negra."
+   },
+   {
+    "before": "Mis zapatos son ",
+    "after": ".",
+    "options": [
+     "grises",
+     "gris",
+     "grisos"
+    ],
+    "answer": 0,
+    "why": "Gris in the plural: grises."
+   },
+   {
+    "before": "Las flores son ",
+    "after": ".",
+    "options": [
+     "amarillas",
+     "amarillos",
+     "amarilla"
+    ],
+    "answer": 0,
+    "why": "Feminine plural: amarillas."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cuál es tu color favorito? ¿Por qué?",
+  "Describe la ropa de un compañero con colores.",
+  "¿De qué color es tu cuarto? ¿Qué colores te gustaría?"
+ ],
+ "heritage": "Some colors change by country: café or marrón (brown), rosado or rosa, anaranjado or naranja, and morado or púrpura. Colors named after things (naranja, rosa, lila) often stay the same in the plural in everyday speech: camisas naranja.",
+ "teacher": "Play «Veo, veo» with colors: one student says Veo, veo una cosa de color verde and the others guess. Then students describe their clothes using agreement.",
+ "vocabulary": [
+  {
+   "title": "Basic colors",
+   "words": [
+    [
+     "rojo / roja",
+     "red"
+    ],
+    [
+     "azul",
+     "blue"
+    ],
+    [
+     "amarillo / amarilla",
+     "yellow"
+    ],
+    [
+     "verde",
+     "green"
+    ],
+    [
+     "negro / negra",
+     "black"
+    ],
+    [
+     "blanco / blanca",
+     "white"
+    ],
+    [
+     "gris",
+     "gray"
+    ],
+    [
+     "café / marrón",
+     "brown"
+    ]
+   ]
+  },
+  {
+   "title": "More colors",
+   "words": [
+    [
+     "anaranjado / naranja",
+     "orange"
+    ],
+    [
+     "morado / morada",
+     "purple"
+    ],
+    [
+     "rosado / rosa",
+     "pink"
+    ],
+    [
+     "dorado / dorada",
+     "gold"
+    ],
+    [
+     "plateado / plateada",
+     "silver"
+    ],
+    [
+     "claro",
+     "light"
+    ],
+    [
+     "oscuro",
+     "dark"
+    ],
+    [
+     "de colores",
+     "colorful"
+    ]
+   ]
+  },
+  {
+   "title": "Hair color",
+   "words": [
+    [
+     "rubio / rubia",
+     "blond"
+    ],
+    [
+     "castaño / castaña",
+     "brown-haired"
+    ],
+    [
+     "pelirrojo / pelirroja",
+     "redheaded"
+    ],
+    [
+     "moreno / morena",
+     "dark-haired"
+    ],
+    [
+     "canoso / canosa",
+     "gray-haired"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El cielo está ",
+   "after": " hoy; no hay nubes.",
+   "options": [
+    "azul",
+    "verde",
+    "negro"
+   ],
+   "answer": 0,
+   "why": "A clear sky: azul."
+  },
+  {
+   "before": "Las fresas son ",
+   "after": ".",
+   "options": [
+    "rojas",
+    "rojos",
+    "azules"
+   ],
+   "answer": 0,
+   "why": "Fresas is feminine plural: rojas."
+  },
+  {
+   "before": "La hierba es ",
+   "after": ".",
+   "options": [
+    "verde",
+    "morada",
+    "gris"
+   ],
+   "answer": 0,
+   "why": "Grass: verde."
+  },
+  {
+   "before": "Mezclas rojo y azul y tienes ",
+   "after": ".",
+   "options": [
+    "morado",
+    "anaranjado",
+    "rosado"
+   ],
+   "answer": 0,
+   "why": "Red and blue make purple."
+  },
+  {
+   "before": "Mi abuelo tiene el pelo blanco; es ",
+   "after": ".",
+   "options": [
+    "canoso",
+    "rubio",
+    "pelirrojo"
+   ],
+   "answer": 0,
+   "why": "Gray or white hair: canoso."
+  },
+  {
+   "before": "No es azul claro; es azul ",
+   "after": ".",
+   "options": [
+    "oscuro",
+    "dorado",
+    "claro"
+   ],
+   "answer": 0,
+   "why": "The opposite of claro: oscuro."
+  },
+  {
+   "before": "Tengo dos camisas ",
+   "after": ".",
+   "options": [
+    "blancas",
+    "blanco",
+    "blanca"
+   ],
+   "answer": 0,
+   "why": "Camisas is feminine plural: blancas."
+  },
+  {
+   "before": "La medalla del primer lugar es ",
+   "after": ".",
+   "options": [
+    "dorada",
+    "plateada",
+    "gris"
+   ],
+   "answer": 0,
+   "why": "First place: gold, dorada."
+  }
+ ],
+ "demand": {
+  "query": "spanish colors vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish colors vocabulary». One suggestion asks for hair color vocabulary, so the list includes rubio, castaño, pelirrojo and canoso.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
