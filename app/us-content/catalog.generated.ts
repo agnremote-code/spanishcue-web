@@ -227,6 +227,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "dance",
+  "level": "A2",
+  "theme": "dance",
+  "title": "Spanish dance vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "emotions",
   "level": "A1",
   "theme": "emotions",
@@ -346,6 +353,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "party",
+  "level": "A1",
+  "theme": "party",
+  "title": "Spanish party vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "personality",
   "level": "A1",
   "theme": "personality",
@@ -357,6 +371,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "pharmacy",
   "title": "Spanish pharmacy vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "real-estate",
+  "level": "A2",
+  "theme": "real-estate",
+  "title": "Spanish real estate vocabulary"
  },
  {
   "family": "vocabulary",
