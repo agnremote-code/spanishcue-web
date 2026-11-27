@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "love",
+ "themeLabel": "Love",
+ "title": "Spanish Love Vocabulary: Romantic Words, Phrases and Quiz",
+ "description": "Spanish love vocabulary: relationships, feelings and romantic phrases, with a self-correcting quiz and an A2 reading about a long-distance couple.",
+ "h1": "Spanish love vocabulary",
+ "titleEs": "Amor a distancia",
+ "focus": "the present perfect and expressing feelings",
+ "intro": "Learn the Spanish words for relationships, feelings and romantic phrases, from te quiero to te amo, practice them with instant feedback, then read about a couple separated by two countries.",
+ "paragraphs": [
+  "Lucía es de Guadalajara, México, y Ethan es de Portland, Oregón. Se conocieron hace dos años en un programa de verano en Costa Rica. Al principio solo eran amigos, pero el último día del programa, Ethan le confesó que estaba enamorado de ella.",
+  "Desde entonces tienen una relación a distancia. Hablan por videollamada casi todas las noches y se escriben mensajes durante el día. Ethan ha aprendido mucho español para hablar con la familia de Lucía, y ella ha mejorado su inglés.",
+  "No siempre es fácil. A veces los horarios no coinciden, y cuando uno está triste el otro no puede darle un abrazo. También han tenido discusiones por celos, sobre todo al principio. Pero los dos dicen que la confianza es lo más importante.",
+  "Este diciembre, Ethan va a pasar la Navidad en Guadalajara por primera vez. Está nervioso porque va a conocer a toda la familia, incluidos los abuelos. Lucía le ha enseñado una frase para impresionar a la abuela: «Mucho gusto, señora. Su nieta es lo mejor que me ha pasado». Él la practica todos los días frente al espejo, y cada vez la dice con mejor acento."
+ ],
+ "glossary": [
+  [
+   "conocerse",
+   "to meet (each other)"
+  ],
+  [
+   "confesar",
+   "to confess"
+  ],
+  [
+   "a distancia",
+   "long-distance"
+  ],
+  [
+   "la videollamada",
+   "video call"
+  ],
+  [
+   "coincidir",
+   "to match up"
+  ],
+  [
+   "la confianza",
+   "trust"
+  ],
+  [
+   "impresionar",
+   "to impress"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Lucía y Ethan se conocieron en ",
+   "after": ".",
+   "options": [
+    "un programa de verano en Costa Rica",
+    "Guadalajara",
+    "la universidad"
+   ],
+   "answer": 0,
+   "why": "At a summer program in Costa Rica."
+  },
+  {
+   "before": "Ethan le confesó que estaba enamorado ",
+   "after": ".",
+   "options": [
+    "el último día del programa",
+    "el primer día",
+    "por mensaje"
+   ],
+   "answer": 0,
+   "why": "On the last day of the program."
+  },
+  {
+   "before": "Hablan por videollamada ",
+   "after": ".",
+   "options": [
+    "casi todas las noches",
+    "una vez al mes",
+    "los domingos"
+   ],
+   "answer": 0,
+   "why": "Almost every night."
+  },
+  {
+   "before": "Ethan ha aprendido español para ",
+   "after": ".",
+   "options": [
+    "hablar con la familia de Lucía",
+    "trabajar en México",
+    "un examen"
+   ],
+   "answer": 0,
+   "why": "To talk with her family."
+  },
+  {
+   "before": "Para los dos, lo más importante es ",
+   "after": ".",
+   "options": [
+    "la confianza",
+    "el dinero",
+    "los regalos"
+   ],
+   "answer": 0,
+   "why": "Both say trust matters most."
+  },
+  {
+   "before": "En diciembre, Ethan va a ",
+   "after": ".",
+   "options": [
+    "pasar la Navidad en Guadalajara",
+    "mudarse a México",
+    "casarse"
+   ],
+   "answer": 0,
+   "why": "Spend Christmas in Guadalajara."
+  }
+ ],
+ "grammar": {
+  "title": "Te quiero or te amo?",
+  "intro": "Te quiero is warm and common with family, friends and partners. Te amo is deeper and more serious, mostly between partners.",
+  "items": [
+   {
+    "before": "A tu mejor amiga le dices: «Te ",
+    "after": " mucho».",
+    "options": [
+     "quiero",
+     "amo",
+     "enamoro"
+    ],
+    "answer": 0,
+    "why": "With friends, te quiero."
+   },
+   {
+    "before": "En su boda, él le dice: «Te ",
+    "after": " para siempre».",
+    "options": [
+     "amo",
+     "gustas",
+     "extrañas"
+    ],
+    "answer": 0,
+    "why": "A deep, serious declaration: te amo."
+   },
+   {
+    "before": "Al principio de una relación, es normal decir: «Me ",
+    "after": " mucho».",
+    "options": [
+     "gustas",
+     "amas",
+     "quieres a ti"
+    ],
+    "answer": 0,
+    "why": "Early on: me gustas."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cómo se conocieron dos personas de tu familia?",
+  "¿Crees que una relación a distancia puede funcionar? ¿Por qué?",
+  "¿Qué es más importante en una pareja: la confianza, el humor o los intereses comunes?"
+ ],
+ "heritage": "Heritage speakers often know the warm forms from home: «mi amor», «mi vida», «mi cielo», even for children. In class, the key contrast is «te quiero» vs «te amo», and spelling: «conmigo» is one word, and «extrañar» is used in the Americas while «echar de menos» is common in Spain.",
+ "teacher": "For Valentine's Day, have students write a short, school-appropriate friendship card in Spanish using te quiero, gracias por and a nickname from the list.",
+ "vocabulary": [
+  {
+   "title": "Relationships",
+   "words": [
+    [
+     "el amor",
+     "love"
+    ],
+    [
+     "el novio / la novia",
+     "boyfriend / girlfriend"
+    ],
+    [
+     "la pareja",
+     "partner, couple"
+    ],
+    [
+     "la cita",
+     "date"
+    ],
+    [
+     "enamorarse de",
+     "to fall in love with"
+    ],
+    [
+     "estar enamorado / enamorada",
+     "to be in love"
+    ],
+    [
+     "casarse con",
+     "to marry"
+    ],
+    [
+     "romper con",
+     "to break up with"
+    ]
+   ]
+  },
+  {
+   "title": "Feelings",
+   "words": [
+    [
+     "querer",
+     "to love, care for"
+    ],
+    [
+     "amar",
+     "to love (deeply)"
+    ],
+    [
+     "extrañar",
+     "to miss"
+    ],
+    [
+     "los celos",
+     "jealousy"
+    ],
+    [
+     "el cariño",
+     "affection"
+    ],
+    [
+     "el corazón",
+     "heart"
+    ],
+    [
+     "el beso",
+     "kiss"
+    ],
+    [
+     "el abrazo",
+     "hug"
+    ]
+   ]
+  },
+  {
+   "title": "Romantic phrases",
+   "words": [
+    [
+     "Te quiero",
+     "I love you (everyday)"
+    ],
+    [
+     "Te amo",
+     "I love you (intense)"
+    ],
+    [
+     "Me gustas mucho",
+     "I really like you"
+    ],
+    [
+     "Te extraño",
+     "I miss you"
+    ],
+    [
+     "mi amor",
+     "my love"
+    ],
+    [
+     "cariño",
+     "sweetheart"
+    ],
+    [
+     "¿Quieres salir conmigo?",
+     "Do you want to go out with me?"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mañana tengo una ",
+   "after": " con Laura en un café.",
+   "options": [
+    "cita",
+    "pareja",
+    "boda"
+   ],
+   "answer": 0,
+   "why": "A date: cita."
+  },
+  {
+   "before": "Vive lejos y la ",
+   "after": " mucho.",
+   "options": [
+    "extraña",
+    "rompe",
+    "casa"
+   ],
+   "answer": 0,
+   "why": "Missing someone far away: extrañar."
+  },
+  {
+   "before": "Después de cinco años juntos, decidieron ",
+   "after": ".",
+   "options": [
+    "casarse",
+    "romper los celos",
+    "enamorar"
+   ],
+   "answer": 0,
+   "why": "Five years together, then marriage: casarse."
+  },
+  {
+   "before": "A tus padres y a tus amigos les dices «te ",
+   "after": "».",
+   "options": [
+    "quiero",
+    "amo con pasión",
+    "gustas"
+   ],
+   "answer": 0,
+   "why": "Te quiero works for family and friends."
+  },
+  {
+   "before": "Cuando lo vi por primera vez, me ",
+   "after": " de él.",
+   "options": [
+    "enamoré",
+    "casé",
+    "quedé"
+   ],
+   "answer": 0,
+   "why": "Falling in love: enamorarse de."
+  },
+  {
+   "before": "Ella le dio un ",
+   "after": " en la mejilla.",
+   "options": [
+    "beso",
+    "abrazo de la mano",
+    "corazón"
+   ],
+   "answer": 0,
+   "why": "A kiss on the cheek."
+  },
+  {
+   "before": "Los ",
+   "after": " pueden destruir una relación.",
+   "options": [
+    "celos",
+    "cariños",
+    "besos"
+   ],
+   "answer": 0,
+   "why": "Jealousy: los celos."
+  },
+  {
+   "before": "¿Quieres salir ",
+   "after": "?",
+   "options": [
+    "conmigo",
+    "con mí",
+    "con yo"
+   ],
+   "answer": 0,
+   "why": "With me: conmigo."
+  }
+ ],
+ "demand": {
+  "query": "spanish love vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish love vocabulary». They ask for love words, so the list explains the difference between te quiero and te amo and the nicknames couples use.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -325,10 +325,31 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "legal",
+  "level": "A2",
+  "theme": "legal",
+  "title": "Spanish legal vocabulary: basic terms"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "love",
+  "level": "A2",
+  "theme": "love",
+  "title": "Spanish love vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "math",
   "level": "A2",
   "theme": "math",
   "title": "Spanish math vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "mental-health",
+  "level": "A2",
+  "theme": "mental-health",
+  "title": "Spanish mental health vocabulary"
  },
  {
   "family": "vocabulary",
