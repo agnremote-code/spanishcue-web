@@ -120,10 +120,10 @@
    "after": " ir al concierto, pero tiene que trabajar.",
    "options": [
     "querría",
-    "quería ir mañana"
+    "querería"
    ],
    "answer": 0,
-   "why": "Querer in the conditional: querría, with double r."
+   "why": "Querer drops the e in the conditional: querría, with double r."
   },
   {
    "before": "Sin teléfono, no ",
@@ -140,10 +140,10 @@
    "after": " más feliz en otra ciudad, ¿no crees?",
    "options": [
     "serías",
-    "serás ayer"
+    "sería"
    ],
    "answer": 0,
-   "why": "Ser is regular in the conditional: serías."
+   "why": "Tú form of the conditional: serías; sería is yo or él."
   }
  ],
  "mistakes": [

@@ -50,10 +50,10 @@
    "after": ".",
    "options": [
     "negro",
-    "negro un"
+    "negra"
    ],
    "answer": 0,
-   "why": "Most adjectives go after the noun."
+   "why": "The adjective goes after the noun and agrees with perro: negro."
   },
   {
    "before": "Mi mamá ",
@@ -110,20 +110,20 @@
    "after": " nada en el refrigerador.",
    "options": [
     "hay",
-    "hay algo no"
+    "está"
    ],
    "answer": 0,
-   "why": "Spanish uses double negatives: no hay nada."
+   "why": "Existence takes hay, and Spanish uses a double negative: no hay nada."
   },
   {
    "before": "Ayer ",
    "after": " vi en el centro comercial.",
    "options": [
     "te",
-    "a ti te vi"
+    "ti"
    ],
    "answer": 0,
-   "why": "Pronoun before the verb: te vi."
+   "why": "The object pronoun before the verb is te; ti only goes after a preposition."
   },
   {
    "before": "Es ",
