@@ -374,6 +374,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "geography",
+  "level": "A2",
+  "theme": "geography",
+  "title": "Spanish geography vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "greetings",
   "level": "A1",
   "theme": "greetings",
@@ -626,6 +633,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "supermarket",
+  "level": "A1",
+  "theme": "supermarket",
+  "title": "Spanish supermarket vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "technology",
   "level": "A2",
   "theme": "technology",
@@ -637,6 +651,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "thanksgiving",
   "title": "Spanish Thanksgiving vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "transportation",
+  "level": "A1",
+  "theme": "transportation",
+  "title": "Spanish transportation vocabulary"
  },
  {
   "family": "vocabulary",
