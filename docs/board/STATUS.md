@@ -1,6 +1,6 @@
 # Board STATUS: the single source of truth for the next run
 
-_Last updated: 2026-11-26 by the Thursday reliability routine (scheduled cloud run; Sofia and Alejandro convened as fresh subagents; see "Current work")._
+_Last updated: 2026-11-27 by the Friday 3D + assessment routine (scheduled cloud run; Alejandro convened twice as fresh subagents, once for the assessment and once for G4; see "Current work")._
 
 ## Owner decisions in force
 | Date | Decision |
@@ -83,6 +83,30 @@ All five run on `claude-opus-5-5`, follow [ROUTINES.md](ROUTINES.md), and each i
 - Session 0 (lesson test) took 55 messages, about 15 of them caused by crossed messages over circle 6. That led to the lock rule.
 
 ## Current work and next action
+- **2026-11-27 (Friday 3D + assessment routine): PR from branch `claude/friday-assessment-20261127`** (base main `db25cc2a`). Run-start marker pushed at 02:11Z (W48 item 0). Thu 11-26 left its marker (#543/#544). Subscription usage: **UNKNOWN**.
+  - **R5 still open (VERIFIED, open-PR list at 02:12Z):** Codex #209 and board draft #282 both still hold `.github/workflows/**`. So «El taller de la greda» (#510) still cannot reach a VALID STT run and was **not touched**. B1, B4 and B5 are also still open.
+  - **New (VERIFIED, merge list):** non-board #529 (11-25 04:52Z) regenerated every escucha-3d clip with es-MX Dalia/Jorge (`scripts/generate-escucha-3d-audio.py` `VERSION = 3`). That was after the Taller build head `8a17cfa1`. #510 has not merged main since, so its clips are the old voices, and any evidence on them is void. BOARD-DECISION-006 §2.1 (Emma/Florian) is out of date and needs re-checking (W49 item 3).
+  - **Unit: gated repair, «Madrid infectada»** (W48 item 7, the leak-repair queue; reported as a **repair**). Code commit `36a6b16b`, NB1 in a later commit.
+    - The kit `disposeGroup` InstancedMesh gap was checked first and has **no live effect**. No world that relies on the kit's `disposeGroup` builds an InstancedMesh without its own local free (grep over the kit3d importers). So it was not counted as a unit.
+    - Fixed (1): the replayed finale boat was only detached (11-11 review NB4). `disposeBoat()` now frees its geometries and the flag's own material. The shared `solid()` materials stay alive.
+    - Fixed (2): Madrid had no `webglcontextlost` handler, so a lost context froze the world. The handler now stops the loop and calls `onFail` (the 2D map). Cleanup removes the listener before its own `forceContextLoss()`.
+    - Tests: two new regression tests in `tests/madrid-infectada-gpu.test.mjs`. Both fail on main's `World3D.tsx`.
+    - LQG file: [madrid-infectada-repair-boat-context-20261127.md](../audits/madrid-infectada-repair-boat-context-20261127.md).
+    - **G4:** a fresh agent as Alejandro, in its own worktree: **APPROVE**, 0 blockers. It re-ran fail-on-main and 5 mutations. NB1 was applied: test 3 now asserts that nothing is drawn after the loss, and a handler without the `disposed` set fails it. NB2–NB4 were accepted with no change.
+    - **Browser (SwiftShader, `qa-feria-browser.mjs --madrid-gpu`):** 5/6 on the branch. The unmount checks pass, `failed: false` (the forced loss on unmount does not trigger the fallback), and the remount is non-blank.
+    - The one failure is the 1280 px Metro-trip guard, with textures 84 → 85. **It reproduced twice on main's code**, so this change did not cause it. It is a harness flake to look at.
+  - **Checks (local, Linux):** full `npm test` at `36a6b16b` (+ the docs-only facts sheet): exit 0, **2,053 pass, 0 fail** (pinned baselines fetched, `SPANISHCUE_TEST_WORKER_TIMEOUT_MS=180000`). An earlier run was contaminated: the facilitator swapped in main's files for the browser comparison while it ran. It was discarded and re-run. After NB1 (test file only), the Madrid GPU tests passed 3/3. eslint on the changed files: clean. `tsc`: only the 3 errors already on main. `git diff --check`: clean.
+  - **W48 assessment:** [assessments/2026-W48.md](assessments/2026-W48.md). Alejandro wrote it as a fresh agent from the facts sheet [evidence/2026-11-27-w48-facts.md](evidence/2026-11-27-w48-facts.md).
+    - Search Console (data through 11-24), 28 days 10-28..11-24: **210 clicks / 3,212 impressions / position 12.32**. W47 full week: 86 / 1,498. /material-ele: 153 clicks, weighted position 10.1. Indexed count UNKNOWN (R1).
+    - Fifth week with no new board world.
+    - Ungated featured multi-level worlds: 9 → **11** (#514 Objetos perdidos, #515 Lluvia de estrellas).
+    - Item 6 (the non-board A1 sample and the lint scope) was **missed**.
+  - **Board:** Alejandro, twice, as separate fresh subagents: one wrote the assessment, the other did the G4 review. Sofia and Martin were not convened, because no content changed and the build was a small repair. No inter-executive messages, so no transcript.
+  - **Release:** recorded after the merge (records PR).
+  - **Next action:** the W49 plan in [assessments/2026-W48.md §6](assessments/2026-W48.md):
+    1. Mon 11-30: the ranked owner requests (R5 first), and the Taller refresh (merge main for the new voices, B1, CPIO, G4 delta).
+    2. Wed: the BOARD-DECISION-006 §2 re-check and item 6 (owed).
+    3. The STT gate only once R5 clears.
 - **2026-11-26 (Thursday reliability routine): PR #543** (branch `claude/board-thursday-2026-11-26`, base main `4c4c05d3`). Run-start marker pushed at 02:05Z (W48 item 0). Wed 11-25 left its marker (records PR from `claude/wednesday-3d-20261125`). Subscription usage: **UNKNOWN**.
   - **Board:** two fresh subagents. Sofia did the read-only audit of every backend surface changed since `08a49e05` (the last Thursday review). Alejandro did the independent code review of the fix (**APPROVE**, 0 blockers; NB2 and NB3 applied, NB1 applied as well). Martin was not convened, because no content changed. The executives did not message each other; the facilitator only briefed them and read their reports. There were no inter-executive messages, so there is no transcript.
   - **Fixed in #543 (VERIFIED defect, from the 11-23 run):** `scripts/check-escucha-3d.mjs` with a lower-case level (`taller b1`) checked no file and still printed OK. Unknown games or levels also printed OK. Now the level and game ignore case, an unknown game or level exits 1, and the OK line says how many files were checked. The regression test is in `tests/escucha-3d.test.mjs`: it fails against main's script, and a mutation that drops only the case normalisation fails it too. The Taller runs on 11-23 and 11-25 were recorded with upper-case `B1`, so they did check the file; any run recorded with a lower-case level proved nothing.

@@ -558,7 +558,23 @@ export function boat() {
   g.add(box(4.6, 0.08, 1.2, solid('#7a5a3a', 0.9), 0, 0.15, 0, false));
   g.add(cylinder(0.05, 0.05, 2.6, solid('#dddddd'), 0.8, 1.4, 0, 6));
   const flag = new THREE.Mesh(new THREE.PlaneGeometry(0.8, 0.5), new THREE.MeshStandardMaterial({ color: '#f2f2ee', side: THREE.DoubleSide })); flag.position.set(1.2, 2.4, 0); g.add(flag);
+  flag.userData.ownMaterial = true;
   return g;
+}
+
+/**
+ * Frees a boat made by `boat()` (2026-11-27 repair): its geometries and the flag's own
+ * material. The hull, deck and mast use the shared `solid()` cache that the city also
+ * draws with, so those materials stay alive.
+ */
+export function disposeBoat(g: THREE.Group) {
+  g.traverse(o => {
+    const mesh = o as THREE.Mesh;
+    if (!mesh.isMesh) return;
+    mesh.geometry.dispose();
+    if (o.userData.ownMaterial) (mesh.material as THREE.Material).dispose();
+  });
+  g.removeFromParent();
 }
 
 // ------------------------------------------------------------------ landmarks
