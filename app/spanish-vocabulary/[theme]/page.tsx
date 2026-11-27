@@ -59,17 +59,16 @@ export default async function VocabularyThemePage({ params }: Props) {
           </section>
 
           <Section title="Word list">
-            <div className={styles.cardGrid}>
-              {page.vocabulary.map((group) => (
-                <div key={group.title} className={`${styles.panel} ${styles.tableWrap}`}>
-                  <table>
-                    <caption>{group.title}</caption>
-                    <thead><tr><th scope="col">Spanish</th><th scope="col">English</th></tr></thead>
-                    <tbody>{group.words.map(([es, en]) => <tr key={es}><th scope="row" lang="es">{es}</th><td>{en}</td></tr>)}</tbody>
-                  </table>
-                </div>
-              ))}
-            </div>
+            {page.vocabulary.map((group) => (
+              <div key={group.title} className={`${styles.panel} ${styles.tableWrap} ${styles.wordTable}`}>
+                <h3>{group.title}</h3>
+                <table>
+                  <caption>{group.title}</caption>
+                  <thead><tr><th scope="col">Spanish</th><th scope="col">English</th></tr></thead>
+                  <tbody>{group.words.map(([es, en]) => <tr key={es}><th scope="row" lang="es">{es}</th><td>{en}</td></tr>)}</tbody>
+                </table>
+              </div>
+            ))}
           </Section>
 
           <Section title="Practice quiz" intro="Tap the word that completes each sentence. The answer and the reason appear at once.">
@@ -87,7 +86,7 @@ export default async function VocabularyThemePage({ params }: Props) {
           </Section>
 
           <Section title="Words from the text">
-            <div className={`${styles.panel} ${styles.tableWrap}`}>
+            <div className={`${styles.panel} ${styles.tableWrap} ${styles.wordTable}`}>
               <table>
                 <caption>New words in «{page.titleEs}» with their meaning in English</caption>
                 <thead><tr><th scope="col">Spanish</th><th scope="col">English</th></tr></thead>
