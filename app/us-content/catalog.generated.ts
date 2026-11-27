@@ -157,6 +157,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "basketball",
+  "level": "A2",
+  "theme": "basketball",
+  "title": "Spanish basketball vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "bathroom",
   "level": "A1",
   "theme": "bathroom",
@@ -325,6 +332,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "nature",
+  "level": "A1",
+  "theme": "nature",
+  "title": "Spanish nature vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "numbers",
   "level": "A1",
   "theme": "numbers",
@@ -357,6 +371,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "school",
   "title": "Spanish school vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "science",
+  "level": "A2",
+  "theme": "science",
+  "title": "Spanish science vocabulary"
  },
  {
   "family": "vocabulary",
