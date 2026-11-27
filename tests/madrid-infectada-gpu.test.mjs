@@ -38,7 +38,7 @@ class Renderer {
   setPixelRatio() {} getPixelRatio() { return 1; } setSize() {}
   getSize(v) { return v.set(1024, 768); } getDrawingBufferSize(v) { return v.set(1024, 768); }
   getRenderTarget() { return null; } setRenderTarget() {} getClearColor(c) { return c; } getClearAlpha() { return 1; }
-  setClearColor() {} setClearAlpha() {} clear() {} render(scene) { if (scene?.isScene) shadowMaps(scene); } getContext() { return { getParameter: () => 0 }; }
+  setClearColor() {} setClearAlpha() {} clear() {} render(scene) { this.renders = (this.renders || 0) + 1; if (scene?.isScene) shadowMaps(scene); } getContext() { return { getParameter: () => 0 }; }
   dispose() {} forceContextLoss() { this.lost++; }
 }
 
@@ -133,6 +133,9 @@ test('Madrid infectada falls back to 2D when the WebGL context is lost, and stop
   canvas.dispatchEvent(lost);
   assert.equal(lost.defaultPrevented, true, 'the loss is claimed so the browser may restore the context');
   assert.equal(fails.n, 1, 'the game is told to switch to the 2D map');
+  const drawn = renderers.at(-1).renders;
+  await t.advance(10);
+  assert.equal(renderers.at(-1).renders, drawn, 'nothing is drawn after the loss (review NB1)');
   canvas.dispatchEvent(new window.Event('webglcontextlost', { cancelable: true }));
   assert.equal(fails.n, 1, 'a second loss event does not report twice');
   await t.stop();
