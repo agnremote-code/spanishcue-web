@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { SpanishCueFooter } from "../SpanishCueBrand";
 import EmailGiftPopup from "../newsletter/EmailGiftPopup";
+import PromoStickyBar from "../marketing/PromoStickyBar";
 import { CONVERSATION_HUB_PATH, CONVERSATION_QUESTIONS_PATH, conversationLevels, type ConversationLevel } from "./conversation-levels";
 import type { LessonCardData } from "./lessons";
 import { breadcrumbSchema, serializeJsonLd, type BreadcrumbItem } from "./schema";
@@ -135,6 +136,7 @@ export function GrowthFooter({ emailGift = true }: { emailGift?: boolean } = {})
     <div className={styles.footerWrap}>
       <SpanishCueFooter />
       {emailGift && <EmailGiftPopup />}
+      <PromoStickyBar />
     </div>
   );
 }

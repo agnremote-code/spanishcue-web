@@ -74,8 +74,16 @@ const topLinks = [
   { href: "/para-profesores", label: "Para profesores" },
 ];
 
-export function EleTopbar({ current }: { current?: string }) {
+/** `promo={false}` keeps the bar free of offers: the social twin of the free worksheets uses it. */
+export function EleTopbar({ current, promo = true }: { current?: string; promo?: boolean }) {
   return (
+    <>
+    {promo && promoWeekActive() ? (
+      <p className={ele.promoRibbon}>
+        <span><b>Oferta para profes nuevos:</b> todas las clases de SpanishCue PRO, 10 días por US$0,99.</span>
+        <Link href={PRICING_PATH}>Probar ahora →</Link>
+      </p>
+    ) : null}
     <header className={styles.topbar}>
       <Link className={styles.brand} href="/" aria-label="Inicio de SpanishCue">SPANISHCUE</Link>
       <nav className={styles.topnav} aria-label="Material ELE">
@@ -85,6 +93,7 @@ export function EleTopbar({ current }: { current?: string }) {
         <Link className={ele.navCta} href={PRICING_PATH}>{promoWeekActive() ? "Probar PRO US$0,99" : "Suscribirse"}</Link>
       </nav>
     </header>
+    </>
   );
 }
 
@@ -98,7 +107,9 @@ export function eleLessonCards(ids: readonly number[]): LessonCardData[] {
 /** `compact` drops the card blurb: pages whose own copy already describes each class for this level use it, so the shared multi-level blurbs do not repeat across every level page. */
 export function EleLessonGrid({ lessons, compact = false }: { lessons: LessonCardData[]; compact?: boolean }) {
   if (!lessons.length) return null;
+  const proCount = lessons.filter((lesson) => !lesson.free).length;
   return (
+    <>
     <div className={styles.lessonGrid}>
       {lessons.map((lesson) => (
         <Link className={styles.lessonCard} href={lesson.href} key={lesson.id}>
@@ -114,6 +125,14 @@ export function EleLessonGrid({ lessons, compact = false }: { lessons: LessonCar
         </Link>
       ))}
     </div>
+    {proCount && promoWeekActive() ? (
+      <p className={ele.gridPromo}>
+        <span>{proCount === 1 ? "La clase PRO se abre" : `Las ${proCount} clases PRO se abren`} con la suscripción, junto con el resto de la biblioteca.</span>
+        <Link className={ele.buyButton} href={PRICING_PATH}>{PROMO_LABEL} →</Link>
+        <small>{PROMO_NOTE}</small>
+      </p>
+    ) : null}
+    </>
   );
 }
 

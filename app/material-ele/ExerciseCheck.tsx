@@ -3,6 +3,8 @@
 import { useState } from "react";
 import ele from "./material-ele.module.css";
 import { acceptedAnswers, gradeAnswer, type Grade } from "./exercise-answers";
+import { promoWeekActive } from "../promo-config";
+import { trackMarketingEvent } from "../marketing/analytics";
 
 type Item = { q: string; a: string };
 
@@ -18,7 +20,8 @@ const feedback: Record<Exclude<Grade, "empty">, string> = {
  * JavaScript, in print and for search engines; the inputs and the score are the
  * enhancement. A sentence with no gap stays a plain «open to see the answer» item.
  */
-export default function ExerciseCheck({ items }: { items: Item[] }) {
+/** `cta={false}` leaves out the offer shown after checking (English pages reuse the exercise). */
+export default function ExerciseCheck({ items, cta = true }: { items: Item[]; cta?: boolean }) {
   const [values, setValues] = useState<Record<string, string>>({});
   const [checked, setChecked] = useState(false);
   const gapped = items.filter((item) => item.q.includes("___"));
@@ -72,6 +75,15 @@ export default function ExerciseCheck({ items }: { items: Item[] }) {
           <button type="button" onClick={reset}>Empezar de nuevo</button>
           {checked ? <p role="status"><strong>{right} de {gapped.length}</strong> correctas.{right === gapped.length ? " ¡Todo bien!" : " Corrige las marcadas y vuelve a comprobar."}</p> : null}
         </div>
+      ) : null}
+      {cta && checked && gapped.length ? (
+        <aside className={ele.exerciseCta} aria-label="SpanishCue PRO">
+          <p><strong>¿Das clases de español?</strong> Este ejercicio es una muestra: la clase completa, lista para compartir en pantalla, con teoría, audio, práctica y conversación, está en SpanishCue PRO.</p>
+          <a href="/pricing" onClick={() => trackMarketingEvent("cta_click", { placement: "exercise_checked", cta_type: "buy", destination: "/pricing" })}>
+            {promoWeekActive() ? "Probar PRO · US$0,99 los primeros 10 días →" : "Ver SpanishCue PRO · US$19,90 al mes →"}
+          </a>
+          {promoWeekActive() ? <small>Luego US$19,90 al mes · Cancelas cuando quieras</small> : null}
+        </aside>
       ) : null}
     </form>
   );
