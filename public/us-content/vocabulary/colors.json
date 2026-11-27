@@ -308,15 +308,15 @@
    "why": "Red and blue make purple."
   },
   {
-   "before": "Mi abuelo tiene el pelo blanco; es ",
+   "before": "Mi abuela tiene el pelo blanco desde joven; es ",
    "after": ".",
    "options": [
-    "canoso",
-    "rubio",
-    "pelirrojo"
+    "canosa",
+    "rubia",
+    "pelirroja"
    ],
    "answer": 0,
-   "why": "Gray or white hair: canoso."
+   "why": "Gray or white hair: canosa."
   },
   {
    "before": "No es azul claro; es azul ",
