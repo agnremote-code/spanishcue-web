@@ -9,6 +9,14 @@ export type Informe = { path: string; title: string; summary: string; source: st
 
 export const informes: Informe[] = [
   {
+    path: "/datos/que-autocompleta-google-en-gramatica",
+    title: "Qué autocompleta Google cuando buscas gramática del español",
+    summary: "2876 sugerencias de Google: «pdf» salió 100 veces en español e «interactivo», 11; en inglés, «interactive» ninguna.",
+    source: "342 búsquedas de 18 temas en español y 18 en inglés, 26 de noviembre de 2026.",
+    published: "2026-11-27",
+    dataset: true,
+  },
+  {
     path: "/datos/errores-preterito-perfecto-a2",
     title: "Errores reales con el pretérito perfecto en A2",
     summary: "43 errores de 6 alumnos de A2: participios como «escribido» o «rompido», el auxiliar en la persona equivocada y «han salidos».",
