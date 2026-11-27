@@ -5,7 +5,7 @@ import test from 'node:test';
 import { readFileSync } from 'node:fs';
 import { build } from 'esbuild';
 
-const r = await build({ stdin: { contents: 'export * from "./app/practicar-conjugacion/drill.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {isEdgeCacheablePath} from "./app/seo.ts";', resolveDir: process.cwd() }, bundle: true, write: false, platform: 'node', format: 'esm', logLevel: 'error' });
+const r = await build({ stdin: { contents: 'export * from "./app/practicar-conjugacion/drill.ts"; export {default as sitemap} from "./app/sitemap.ts"; export {isEdgeCacheablePath, languageAlternates} from "./app/seo.ts"; export {TRAINER_COPY, VERB_GLOSS} from "./app/practicar-conjugacion/copy.ts";', resolveDir: process.cwd() }, bundle: true, write: false, platform: 'node', format: 'esm', logLevel: 'error' });
 const m = await import('data:text/javascript;base64,' + Buffer.from(r.outputFiles[0].text).toString('base64'));
 const read = (path) => readFileSync(path, 'utf8');
 const card = (verb, tense, person) => ({ verb, tense, person });
@@ -114,5 +114,22 @@ test('page is public, indexed, cached and linked; PRO comes only from server hea
   assert.match(trainer, /allowedSettings\(start, false\)/, 'starts FREE until the server answers');
   assert.doesNotMatch(trainer, /\(\?<[=!]/, 'no regex lookbehind (Safari)');
   assert.match(read('app/conjugacion/page.tsx'), /TRAINER_PATH/);
-  assert.match(read('app/jugar/StudentHub.tsx'), /href="\/practicar-conjugacion"/);
+  assert.match(read("app/jugar/StudentHub.tsx"), /"\/practicar-conjugacion"/);
+});
+
+test('English twin: same trainer, full English copy, glosses for every free verb, hreflang pair', () => {
+  const { es, en } = m.TRAINER_COPY;
+  for (const key of Object.keys(es)) assert.ok(key in en, `missing English copy: ${key}`);
+  for (const tense of m.DRILL_TENSES) assert.ok(en.tense[tense.key]?.label, `English tense name: ${tense.key}`);
+  for (const set of m.VERB_SETS) assert.ok(en.sets[set.key]?.label, `English set name: ${set.key}`);
+  for (const verb of m.FREE_VERBS) assert.ok(m.VERB_GLOSS[verb], `gloss for ${verb}`);
+  const urls = m.sitemap().map((entry) => entry.url);
+  assert.ok(urls.some((url) => url.endsWith('/spanish-conjugation-practice')));
+  assert.equal(m.isEdgeCacheablePath('/spanish-conjugation-practice'), true);
+  assert.deepEqual(m.languageAlternates('/spanish-conjugation-practice'), m.languageAlternates('/practicar-conjugacion'));
+  assert.match(m.languageAlternates('/practicar-conjugacion').en, /\/spanish-conjugation-practice$/);
+  assert.match(read('app/spanish-conjugation-practice/page.tsx'), /<VerbTrainer locale="en" \/>/);
+  assert.match(read('app/spanish-verbs/page.tsx'), /TRAINER_PATH_EN/);
+  assert.equal(m.formatCount(1258, ','), '1,258');
+  assert.equal(m.formatCount(1258), '1.258');
 });

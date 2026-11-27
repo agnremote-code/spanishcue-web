@@ -5,6 +5,7 @@ import cj from "../conjugacion/conjugacion.module.css";
 import { CONJUGACION_PATH, TOP_VERBS, isIrregular, verbos } from "../conjugacion/verbos";
 import { SPANISH_VERBS_PATH, verbPathEn } from "../conjugacion/verbos-en";
 import { VerbLinksEn, VerbSearchEn, VerbsFrame, verbsMetadata } from "./frame";
+import { TRAINER_PATH_EN } from "../practicar-conjugacion/drill";
 
 const title = "Spanish Verb Conjugation: 1,200+ Verbs in Every Tense | SpanishCue";
 const description = "Full conjugation tables for more than 1,200 Spanish verbs, with irregular forms highlighted, clear notes on each pattern and a self-checking quiz for every verb.";
@@ -41,6 +42,9 @@ export default function SpanishVerbsHub() {
             <VerbLinksEn verbs={verbos.filter((verb) => letterOf(verb) === letter)} href={verbPathEn} />
           </div>
         ))}
+      </Section>
+      <Section title="Practice conjugation">
+        <p className={styles.sectionIntro}>Pick tenses and verbs and type each form, with instant feedback: <Link className={styles.textLink} href={TRAINER_PATH_EN}>free Spanish verb trainer</Link>.</p>
       </Section>
       <Section title="In Spanish">
         <p className={styles.sectionIntro}><Link className={styles.textLink} href={CONJUGACION_PATH} hrefLang="es">Conjugación de verbos en español</Link>: the same tables with notes in Spanish, plus lists of irregular verbs by tense.</p>

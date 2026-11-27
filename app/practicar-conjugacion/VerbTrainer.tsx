@@ -1,11 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
-import { verbPath } from "../conjugacion/verbos";
+import { verbPath, verbSlug } from "../conjugacion/verbos";
+import { TRAINER_COPY, VERB_GLOSS, type TrainerCopy, type TrainerLocale } from "./copy";
 import { promoWeekActive } from "../promo-config";
 import {
-  DEFAULT_SETTINGS, DRILL_TENSES, FREE_LIST_LIMIT, MOOD_LABEL, ROUND_LENGTHS, TENSE_BY_KEY, TRAINER_ACCESS_PATH,
-  TRAINER_PATH, TRAINER_STORAGE_KEY, VERB_SETS, allowedSettings, answerPrefix, cardKey, checkAnswer, diffMarks,
+  DEFAULT_SETTINGS, DRILL_TENSES, FREE_LIST_LIMIT, ROUND_LENGTHS, TENSE_BY_KEY, TRAINER_ACCESS_PATH,
+  TRAINER_PATH, TRAINER_PATH_EN, TRAINER_STORAGE_KEY, VERB_SETS, VERB_TOTAL, formatCount, allowedSettings, answerPrefix, cardKey, checkAnswer, diffMarks,
   dueCards, emptyMemory, nextCard, parseMemory, parseVerbList, personLabel, poolOf, remember, settingsFromQuery,
   shareQuery, statsOf, tenseRow, verbsForSet, type Card, type Memory, type Mood, type Result, type Settings,
 } from "./drill";
@@ -36,7 +37,14 @@ function saveMemory(memory: Memory) {
   try { window.localStorage.setItem(TRAINER_STORAGE_KEY, JSON.stringify(memory)); } catch { /* private mode: progress lives for this visit only */ }
 }
 
-export default function VerbTrainer() {
+/** Tense and set names in the interface language. */
+const tenseName = (t: TrainerCopy, key: TenseKey) => t.tense?.[key] ?? TENSE_BY_KEY.get(key)!;
+const setName = (t: TrainerCopy, key: Settings["set"]) => t.sets?.[key] ?? VERB_SETS.find((set) => set.key === key)!;
+
+export default function VerbTrainer({ locale = "es" }: { locale?: TrainerLocale }) {
+  const t = TRAINER_COPY[locale];
+  const en = locale === "en";
+  const verbHref = (verb: string) => (en ? `/spanish-verbs/${encodeURIComponent(verbSlug(verb))}` : verbPath(verb));
   const [pro, setPro] = useState(false);
   const [via, setVia] = useState<"pro" | "pase" | "free">("free");
   const [memory, setMemory] = useState<Memory>(emptyMemory);
@@ -79,7 +87,7 @@ export default function VerbTrainer() {
           if (!alive || !data?.pro) {
             if (alive && fromQuery) {
               const { removed } = allowedSettings(fromQuery, false);
-              if (removed.length) setNotice(`Este enlace incluye ${removed.map((key) => TENSE_BY_KEY.get(key)?.short).join(", ")}: son tiempos de SpanishCue PRO. Practica el resto gratis.`);
+              if (removed.length) setNotice(t.linkRemoved(removed.map((key) => tenseName(t, key).short).join(", ")));
             }
             return;
           }
@@ -92,7 +100,7 @@ export default function VerbTrainer() {
     let alive = true;
     init();
     return () => { alive = false; };
-  }, []);
+  }, [t]);
 
   useEffect(() => () => window.clearTimeout(advanceTimer.current), []);
 
@@ -110,7 +118,7 @@ export default function VerbTrainer() {
 
   const toggleTense = (key: TenseKey) => {
     const tense = TENSE_BY_KEY.get(key);
-    if (tense?.pro && !pro) { setLockedHint(tense.label); return; }
+    if (tense?.pro && !pro) { setLockedHint(tenseName(t, key).label); return; }
     setSettings((current) => {
       const has = current.tenses.includes(key);
       const tenses = has ? current.tenses.filter((item) => item !== key) : [...current.tenses, key];
@@ -120,7 +128,7 @@ export default function VerbTrainer() {
 
   const chooseSet = (key: Settings["set"]) => {
     const set = VERB_SETS.find((item) => item.key === key);
-    if (set?.pro && !pro) { setLockedHint(set.label); return; }
+    if (set?.pro && !pro) { setLockedHint(setName(t, key).label); return; }
     updateSettings({ set: key });
   };
 
@@ -145,11 +153,11 @@ export default function VerbTrainer() {
     let active = settings;
     if (settings.set === "lista") {
       const limited = pro ? parsedList.verbs : parsedList.verbs.slice(0, FREE_LIST_LIMIT);
-      if (!limited.length) { setNotice("Escribe al menos un verbo de tu lista (por ejemplo: tener, pedir, dormir)."); return; }
+      if (!limited.length) { setNotice(t.emptyList); return; }
       active = { ...settings, list: limited };
       setSettings(active);
     }
-    if (!cards && !verbsForSet(active.set, active.list).length) { setNotice("No hay verbos para practicar con esta elección."); return; }
+    if (!cards && !verbsForSet(active.set, active.list).length) { setNotice(t.emptyPool); return; }
     setNotice("");
     setLockedHint("");
     queue.current = cards ? shuffle(cards) : null;
@@ -219,8 +227,8 @@ export default function VerbTrainer() {
   };
 
   const copyLink = async () => {
-    const url = `${window.location.origin}${TRAINER_PATH}?${shareQuery(settings.set === "lista" ? { ...settings, list: parsedList.verbs } : settings)}`;
-    try { await navigator.clipboard.writeText(url); setCopied(true); window.setTimeout(() => setCopied(false), 2200); } catch { window.prompt("Copia este enlace:", url); }
+    const url = `${window.location.origin}${en ? TRAINER_PATH_EN : TRAINER_PATH}?${shareQuery(settings.set === "lista" ? { ...settings, list: parsedList.verbs } : settings)}`;
+    try { await navigator.clipboard.writeText(url); setCopied(true); window.setTimeout(() => setCopied(false), 2200); } catch { window.prompt(t.copyPrompt, url); }
   };
 
   const tense = card ? TENSE_BY_KEY.get(card.tense) : null;
@@ -232,21 +240,21 @@ export default function VerbTrainer() {
       {screen === "setup" && (
         <div className="vt-setup">
           <section className="vt-panel vt-choose" aria-labelledby="vt-choose-title">
-            <h2 id="vt-choose-title" className="vt-h">¿Qué quieres practicar?</h2>
+            <h2 id="vt-choose-title" className="vt-h">{t.choose}</h2>
             {notice && <p className="vt-notice" role="status">{notice}</p>}
 
-            <p className="vt-label">Tiempos verbales</p>
+            <p className="vt-label">{t.tenses}</p>
             <div className="vt-moods">
               {MOODS.map((mood) => (
                 <div className="vt-mood" key={mood} data-mood={mood}>
-                  <span className="vt-mood-name">{MOOD_LABEL[mood]}</span>
+                  <span className="vt-mood-name">{t.moods[mood]}</span>
                   <div className="vt-chips">
                     {DRILL_TENSES.filter((item) => item.mood === mood).map((item) => {
                       const on = settings.tenses.includes(item.key);
                       const locked = item.pro && !pro;
                       return (
                         <button type="button" key={item.key} className="vt-chip" aria-pressed={on} data-locked={locked || undefined} onClick={() => toggleTense(item.key)}>
-                          {locked && <span aria-hidden="true" className="vt-lock">🔒</span>}{item.short}
+                          {locked && <span aria-hidden="true" className="vt-lock">🔒</span>}{tenseName(t, item.key).short}
                           {locked && <span className="vt-sr"> (PRO)</span>}
                         </button>
                       );
@@ -256,36 +264,36 @@ export default function VerbTrainer() {
               ))}
             </div>
 
-            <p className="vt-label">Verbos</p>
-            <div className="vt-sets" role="radiogroup" aria-label="Verbos">
+            <p className="vt-label">{t.verbs}</p>
+            <div className="vt-sets" role="radiogroup" aria-label={t.verbs}>
               {VERB_SETS.map((set) => {
                 const locked = set.pro && !pro;
                 return (
                   <button type="button" role="radio" aria-checked={settings.set === set.key} key={set.key} className="vt-set" data-locked={locked || undefined} onClick={() => chooseSet(set.key)}>
-                    <b>{locked && <span aria-hidden="true" className="vt-lock">🔒</span>}{set.label}</b>
-                    <small>{set.hint}</small>
+                    <b>{locked && <span aria-hidden="true" className="vt-lock">🔒</span>}{setName(t, set.key).label}{set.key === "todos" && en ? ` (${formatCount(VERB_TOTAL, ",")})` : ""}</b>
+                    <small>{setName(t, set.key).hint}</small>
                   </button>
                 );
               })}
             </div>
             {settings.set === "lista" && (
               <div className="vt-list">
-                <label htmlFor="vt-list-input" className="vt-sr">Tu lista de verbos</label>
-                <textarea id="vt-list-input" rows={2} lang="es" spellCheck={false} autoCapitalize="off" placeholder="tener, pedir, dormir, conducir…" value={listText} onChange={(event) => setListText(event.target.value)} />
+                <label htmlFor="vt-list-input" className="vt-sr">{t.listLabel}</label>
+                <textarea id="vt-list-input" rows={2} lang="es" spellCheck={false} autoCapitalize="off" placeholder={t.listPlaceholder} value={listText} onChange={(event) => setListText(event.target.value)} />
                 <small>
-                  {parsedList.verbs.length} {parsedList.verbs.length === 1 ? "verbo" : "verbos"}
-                  {!pro && parsedList.verbs.length > FREE_LIST_LIMIT && ` · gratis se practican los primeros ${FREE_LIST_LIMIT}`}
-                  {parsedList.unknown.length > 0 && ` · no reconocidos: ${parsedList.unknown.slice(0, 5).join(", ")}`}
+                  {t.verbCount(parsedList.verbs.length)}
+                  {!pro && parsedList.verbs.length > FREE_LIST_LIMIT && t.freeListCap(FREE_LIST_LIMIT)}
+                  {parsedList.unknown.length > 0 && t.unknown(parsedList.unknown.slice(0, 5).join(", "))}
                 </small>
               </div>
             )}
 
-            {lockedHint && <ProNote what={lockedHint} onClose={() => setLockedHint("")} />}
+            {lockedHint && <ProNote t={t} what={lockedHint} onClose={() => setLockedHint("")} />}
 
             <div className="vt-options">
-              <label className="vt-switch"><input type="checkbox" checked={settings.vosotros} onChange={(event) => updateSettings({ vosotros: event.target.checked })} /> <span>Incluir vosotros</span></label>
-              <label className="vt-switch"><input type="checkbox" checked={settings.strictAccents} onChange={(event) => updateSettings({ strictAccents: event.target.checked })} /> <span>Las tildes cuentan</span></label>
-              <div className="vt-length" role="radiogroup" aria-label="Preguntas por ronda">
+              <label className="vt-switch"><input type="checkbox" checked={settings.vosotros} onChange={(event) => updateSettings({ vosotros: event.target.checked })} /> <span>{t.vosotros}</span></label>
+              <label className="vt-switch"><input type="checkbox" checked={settings.strictAccents} onChange={(event) => updateSettings({ strictAccents: event.target.checked })} /> <span>{t.strict}</span></label>
+              <div className="vt-length" role="radiogroup" aria-label={t.roundLength}>
                 {ROUND_LENGTHS.map((length) => (
                   <button type="button" role="radio" aria-checked={settings.length === length} key={length} onClick={() => updateSettings({ length })}>{length || "∞"}</button>
                 ))}
@@ -293,50 +301,51 @@ export default function VerbTrainer() {
             </div>
 
             <div className="vt-actions">
-              <button type="button" className="vt-primary" onClick={() => start()}>Empezar</button>
-              {dueHere > 0 && <span className="vt-due">{dueHere} para repasar hoy</span>}
-              <button type="button" className="vt-ghost" onClick={copyLink}>{copied ? "Enlace copiado ✓" : "Copiar enlace para tus alumnos"}</button>
+              <button type="button" className="vt-primary" onClick={() => start()}>{t.start}</button>
+              {dueHere > 0 && <span className="vt-due">{t.due(dueHere)}</span>}
+              <button type="button" className="vt-ghost" onClick={copyLink}>{copied ? t.copied : t.copyLink}</button>
             </div>
-            {pro && <p className="vt-pro-on">{via === "pase" ? "Tu pase de alumno abre todos los tiempos y verbos." : "SpanishCue PRO: todos los tiempos y los verbos abiertos."}</p>}
+            {pro && <p className="vt-pro-on">{via === "pase" ? t.passOn : t.proOn}</p>}
           </section>
 
-          <StatsPanel stats={stats} best={memory.best} />
+          <StatsPanel t={t} stats={stats} best={memory.best} verbHref={verbHref} tenseShort={(key) => tenseName(t, key).short} />
         </div>
       )}
 
       {screen === "drill" && card && tense && (
-        <section className="vt-panel vt-drill" aria-label="Práctica">
+        <section className="vt-panel vt-drill" aria-label={t.practice}>
           <div className="vt-drill-top">
-            <button type="button" className="vt-link" onClick={finish}>← Terminar</button>
+            <button type="button" className="vt-link" onClick={finish}>{t.finish}</button>
             <div className="vt-meter" aria-hidden={!limit}>
               {limit ? <i style={{ width: `${progress}%` }} /> : null}
             </div>
             <span className="vt-count">{limit ? `${Math.min(round.done + (result ? 0 : 1), limit)} / ${limit}` : round.done}</span>
-            {round.combo >= 3 && <span className="vt-combo" aria-label={`${round.combo} seguidas`}>🔥 {round.combo}</span>}
+            {round.combo >= 3 && <span className="vt-combo" aria-label={t.inARow(round.combo)}>🔥 {round.combo}</span>}
           </div>
 
           <form className="vt-card" data-mood={tense.mood} data-verdict={result?.verdict} onSubmit={submit}>
-            <span className="vt-tense">{tense.label}</span>
+            <span className="vt-tense">{tenseName(t, card.tense).label}</span>
             <p className="vt-verb" lang="es">{card.verb}</p>
+            {en && VERB_GLOSS[card.verb] && <p className="vt-gloss">{VERB_GLOSS[card.verb]}</p>}
             <p className="vt-person" lang="es">{personLabel(card.tense, card.person)}</p>
             <div className="vt-answer">
               {answerPrefix(card.tense) && <span className="vt-prefix" lang="es">{answerPrefix(card.tense)}</span>}
               <input
                 ref={input} value={typed} onChange={(event) => !result && setTyped(event.target.value)} readOnly={Boolean(result)}
-                aria-label={`${card.verb}, ${tense.label}, ${personLabel(card.tense, card.person)}`}
-                lang="es" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false} enterKeyHint="go" placeholder="Escribe la forma" size={8}
+                aria-label={`${card.verb}, ${tenseName(t, card.tense).label}, ${personLabel(card.tense, card.person)}`}
+                lang="es" autoComplete="off" autoCorrect="off" autoCapitalize="off" spellCheck={false} enterKeyHint="go" placeholder={t.placeholder} size={8}
               />
             </div>
-            <div className="vt-keys" aria-label="Letras especiales">
+            <div className="vt-keys" aria-label={t.specialKeys}>
               {ACCENT_KEYS.map((letter) => <button type="button" key={letter} tabIndex={-1} onMouseDown={(event) => event.preventDefault()} onClick={() => insertAccent(letter)} disabled={Boolean(result)}>{letter}</button>)}
             </div>
 
             <div className="vt-feedback" aria-live="polite">
-              {result?.verdict === "correct" && <p className="vt-ok">¡Bien!</p>}
+              {result?.verdict === "correct" && <p className="vt-ok">{t.great}</p>}
               {result && result.verdict !== "correct" && (
                 <>
                   <p className="vt-bad">
-                    {result.verdict === "accent" ? (result.counted ? "Bien, pero ojo con la tilde:" : "Casi: falta o sobra una tilde.") : typed.trim() ? "No es así." : "La respuesta es:"}
+                    {result.verdict === "accent" ? (result.counted ? t.accentOk : t.accentBad) : typed.trim() ? t.wrong : t.answerIs}
                   </p>
                   <p className="vt-expected" lang="es">
                     {answerPrefix(card.tense) && `${answerPrefix(card.tense)} `}
@@ -349,14 +358,14 @@ export default function VerbTrainer() {
                       ))}
                     </tbody>
                   </table>
-                  <a className="vt-link" href={verbPath(card.verb)} target="_blank" rel="noopener">Ver toda la conjugación de {card.verb} ↗</a>
+                  <a className="vt-link" href={verbHref(card.verb)} target="_blank" rel="noopener">{t.seeVerb(card.verb)}</a>
                 </>
               )}
             </div>
 
             <div className="vt-card-actions">
-              {!result && <button type="button" className="vt-ghost" onClick={() => submit(undefined, true)}>No lo sé</button>}
-              <button type="submit" className="vt-primary">{result ? (result.verdict === "correct" ? "Siguiente" : "Seguir ↵") : "Comprobar"}</button>
+              {!result && <button type="button" className="vt-ghost" onClick={() => submit(undefined, true)}>{t.dontKnow}</button>}
+              <button type="submit" className="vt-primary">{result ? (result.verdict === "correct" ? t.next : t.continue) : t.check}</button>
             </div>
           </form>
         </section>
@@ -364,20 +373,20 @@ export default function VerbTrainer() {
 
       {screen === "summary" && (
         <section className="vt-panel vt-summary" aria-labelledby="vt-summary-title">
-          <h2 id="vt-summary-title" className="vt-h">{round.done ? (round.right / round.done >= 0.9 ? "¡Ronda impecable!" : round.right / round.done >= 0.6 ? "¡Buena ronda!" : "Ronda terminada") : "Ronda terminada"}</h2>
+          <h2 id="vt-summary-title" className="vt-h">{round.done ? (round.right / round.done >= 0.9 ? t.flawless : round.right / round.done >= 0.6 ? t.goodRound : t.roundDone) : t.roundDone}</h2>
           <div className="vt-score">
-            <div><b>{round.done ? Math.round((round.right / round.done) * 100) : 0}%</b><span>aciertos</span></div>
-            <div><b>{round.right}/{round.done}</b><span>respuestas</span></div>
-            <div><b>{round.bestCombo}</b><span>mejor racha</span></div>
-            <div><b>{elapsed < 60 ? `${elapsed} s` : `${Math.round(elapsed / 60)} min`}</b><span>tiempo</span></div>
+            <div><b>{round.done ? Math.round((round.right / round.done) * 100) : 0}%</b><span>{t.correct}</span></div>
+            <div><b>{round.right}/{round.done}</b><span>{t.answers}</span></div>
+            <div><b>{round.bestCombo}</b><span>{t.bestStreak}</span></div>
+            <div><b>{elapsed < 60 ? `${elapsed} s` : `${Math.round(elapsed / 60)} min`}</b><span>{t.time}</span></div>
           </div>
           {round.misses.length > 0 && (
             <>
-              <h3 className="vt-h3">Para repasar</h3>
+              <h3 className="vt-h3">{t.toReview}</h3>
               <ul className="vt-misses">
                 {round.misses.slice(0, 12).map((miss, index) => (
                   <li key={index}>
-                    <span>{miss.card.verb} · {TENSE_BY_KEY.get(miss.card.tense)?.short} · {personLabel(miss.card.tense, miss.card.person)}</span>
+                    <span>{miss.card.verb} · {tenseName(t, miss.card.tense).short} · {personLabel(miss.card.tense, miss.card.person)}</span>
                     <b lang="es">{answerPrefix(miss.card.tense) && `${answerPrefix(miss.card.tense)} `}{miss.expected}</b>
                     {miss.typed && <s lang="es">{miss.typed}</s>}
                   </li>
@@ -386,60 +395,58 @@ export default function VerbTrainer() {
             </>
           )}
           <div className="vt-actions">
-            {round.misses.length > 0 && <button type="button" className="vt-primary" onClick={() => start(round.misses.map((miss) => miss.card).filter((item, index, all) => all.findIndex((other) => cardKey(other) === cardKey(item)) === index))}>Repasar mis errores</button>}
-            <button type="button" className={round.misses.length ? "vt-ghost" : "vt-primary"} onClick={() => start()}>Otra ronda</button>
-            <button type="button" className="vt-link" onClick={() => setScreen("setup")}>Cambiar tiempos o verbos</button>
+            {round.misses.length > 0 && <button type="button" className="vt-primary" onClick={() => start(round.misses.map((miss) => miss.card).filter((item, index, all) => all.findIndex((other) => cardKey(other) === cardKey(item)) === index))}>{t.reviewMistakes}</button>}
+            <button type="button" className={round.misses.length ? "vt-ghost" : "vt-primary"} onClick={() => start()}>{t.anotherRound}</button>
+            <button type="button" className="vt-link" onClick={() => setScreen("setup")}>{t.changeChoice}</button>
           </div>
-          {!pro && <ProNote />}
+          {!pro && <ProNote t={t} />}
         </section>
       )}
     </div>
   );
 }
 
-function ProNote({ what, onClose }: { what?: string; onClose?: () => void }) {
+function ProNote({ t, what, onClose }: { t: TrainerCopy; what?: string; onClose?: () => void }) {
   const promo = promoWeekActive();
   return (
     <aside className="vt-pro" aria-label="SpanishCue PRO">
-      {onClose && <button type="button" className="vt-pro-close" onClick={onClose} aria-label="Cerrar">×</button>}
+      {onClose && <button type="button" className="vt-pro-close" onClick={onClose} aria-label={t.close}>×</button>}
       <p className="vt-pro-kicker">SpanishCue PRO</p>
-      <p className="vt-pro-title">{what ? `${what} es parte de PRO` : "Practica el subjuntivo, el imperativo y más de 1.200 verbos"}</p>
-      <ul>
-        <li>Los 15 tiempos: subjuntivo, imperativo y todos los compuestos</li>
-        <li>Todos los verbos del diccionario y listas sin límite</li>
-        <li>Además, toda la biblioteca de clases listas para dar</li>
-      </ul>
+      <p className="vt-pro-title">{what ? t.proLocked(what) : t.proTitle}</p>
+      <ul>{t.proPoints.map((point) => <li key={point}>{point}</li>)}</ul>
       <div className="vt-pro-cta">
-        <a className="vt-primary" href="/pricing?from=entrenador-verbos">{promo ? "Probar PRO 10 días por US$0,99" : "Ver SpanishCue PRO"}</a>
-        <span>{promo ? "Después US$19,90/mes. Cancela cuando quieras." : "US$19,90/mes. Cancela cuando quieras."}</span>
+        <a className="vt-primary" href="/pricing?from=entrenador-verbos">{promo ? t.proPromo : t.proSee}</a>
+        <span>{promo ? t.proPromoThen : t.proPrice}</span>
       </div>
-      <p className="vt-pro-student">¿Eres alumno? Si tu profe tiene SpanishCue PRO, abre su enlace de alumno y aquí tendrás todo abierto.</p>
+      <p className="vt-pro-student">{t.proStudent}</p>
     </aside>
   );
 }
 
-function StatsPanel({ stats, best }: { stats: ReturnType<typeof statsOf>; best: number }) {
+function StatsPanel({ t, stats, best, verbHref, tenseShort }: {
+  t: TrainerCopy; stats: ReturnType<typeof statsOf>; best: number; verbHref: (verb: string) => string; tenseShort: (key: TenseKey) => string;
+}) {
   return (
     <section className="vt-panel vt-stats" aria-labelledby="vt-stats-title">
-      <h2 id="vt-stats-title" className="vt-h">Tu progreso</h2>
+      <h2 id="vt-stats-title" className="vt-h">{t.progress}</h2>
       {stats.answered === 0 ? (
-        <p className="vt-empty">Aquí verás tus aciertos, tu racha de días y los verbos que más te cuestan. Se guarda en este navegador, sin cuenta.</p>
+        <p className="vt-empty">{t.progressEmpty}</p>
       ) : (
         <>
           <div className="vt-tiles">
-            <div><b>{stats.streak}</b><span>{stats.streak === 1 ? "día seguido" : "días seguidos"}</span></div>
-            <div><b>{stats.accuracy}%</b><span>aciertos</span></div>
-            <div><b>{stats.answered}</b><span>respuestas</span></div>
-            <div><b>{stats.mastered}</b><span>formas dominadas</span></div>
+            <div><b>{stats.streak}</b><span>{t.streakDays(stats.streak)}</span></div>
+            <div><b>{stats.accuracy}%</b><span>{t.correct}</span></div>
+            <div><b>{stats.answered}</b><span>{t.answers}</span></div>
+            <div><b>{stats.mastered}</b><span>{t.mastered}</span></div>
           </div>
-          <p className="vt-today">Hoy: {stats.today} {stats.today === 1 ? "respuesta" : "respuestas"} · Mejor racha: {best} · Para repasar: {stats.due}</p>
+          <p className="vt-today">{t.today(stats.today, best, stats.due)}</p>
           {stats.tenses.length > 0 && (
             <ul className="vt-bars">
               {stats.tenses.map((tense) => {
                 const pct = Math.round((tense.right / tense.total) * 100);
                 return (
                   <li key={tense.key}>
-                    <span>{tense.label}</span>
+                    <span>{tenseShort(tense.key)}</span>
                     <i aria-hidden="true"><em style={{ width: `${pct}%` }} data-low={pct < 60 || undefined} /></i>
                     <b>{pct}%</b>
                   </li>
@@ -448,8 +455,8 @@ function StatsPanel({ stats, best }: { stats: ReturnType<typeof statsOf>; best: 
             </ul>
           )}
           {stats.weakVerbs.length > 0 && (
-            <p className="vt-weak">Te cuestan: {stats.weakVerbs.map((item, index) => (
-              <span key={item.verb}>{index > 0 && ", "}<a href={verbPath(item.verb)}>{item.verb}</a></span>
+            <p className="vt-weak">{t.tough} {stats.weakVerbs.map((item, index) => (
+              <span key={item.verb}>{index > 0 && ", "}<a href={verbHref(item.verb)}>{item.verb}</a></span>
             ))}</p>
           )}
         </>
