@@ -59,7 +59,7 @@ const es = {
   changeChoice: "Cambiar tiempos o verbos",
   progress: "Tu progreso",
   progressEmpty: "Aquí verás tus aciertos, tu racha de días y los verbos que más te cuestan. Se guarda en este navegador, sin cuenta.",
-  streakDays: (n: number) => (n === 1 ? "día seguido" : "días seguidos"),
+  streakDays: (n: number): string => (n === 1 ? "día seguido" : "días seguidos"),
   mastered: "formas dominadas",
   today: (n: number, best: number, due: number) => `Hoy: ${n} ${n === 1 ? "respuesta" : "respuestas"} · Mejor racha: ${best} · Para repasar: ${due}`,
   tough: "Te cuestan:",
