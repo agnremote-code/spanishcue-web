@@ -95,10 +95,9 @@ export default async function ApUnitPage({ params }: Props) {
           <Section title="Argumentative essay practice" intro="On the exam the essay uses print and audio sources with different points of view. Practice taking a side with this prompt.">
             <div className={styles.panel}>
               <p lang="es"><b>{page.essay.prompt}</b></p>
-              <ul>
-                <li><span lang="es">{page.essay.sideA}</span></li>
-                <li><span lang="es">{page.essay.sideB}</span></li>
-              </ul>
+              <p><b>Side A:</b> <span lang="es">{page.essay.sideA}</span></p>
+              <p><b>Side B:</b> <span lang="es">{page.essay.sideB}</span></p>
+              <h3>A plan in {page.essay.outline.length} paragraphs</h3>
               <ol>{page.essay.outline.map((step) => <li key={step}>{step}</li>)}</ol>
             </div>
             <div className={`${styles.panel} ${styles.tableWrap} ${styles.wordTable}`}>
@@ -112,7 +111,7 @@ export default async function ApUnitPage({ params }: Props) {
 
           <Section title="Answer out loud" intro="In the Project Q&A you hear four questions and have about 40 seconds for each answer. Time yourself with these.">
             <div className={styles.panel}>
-              <ol lang="es">{page.speaking.map((question) => <li key={question}>{question}</li>)}</ol>
+              <ol lang="es">{page.speaking.map((question, index) => <li key={question}><b>{index + 1}.</b> {question}</li>)}</ol>
             </div>
           </Section>
 
