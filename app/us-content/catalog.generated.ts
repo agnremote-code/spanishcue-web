@@ -206,6 +206,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "hotel",
+  "level": "A2",
+  "theme": "hotel",
+  "title": "Spanish hotel vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "house",
   "level": "A1",
   "theme": "house",
@@ -220,10 +227,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "kitchen",
+  "level": "A1",
+  "theme": "kitchen",
+  "title": "Spanish kitchen vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "music",
   "level": "A2",
   "theme": "music",
   "title": "Spanish music vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "personality",
+  "level": "A1",
+  "theme": "personality",
+  "title": "Spanish personality vocabulary: adjectives"
  },
  {
   "family": "vocabulary",
