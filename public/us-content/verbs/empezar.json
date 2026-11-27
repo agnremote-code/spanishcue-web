@@ -1,0 +1,278 @@
+{
+ "verb": "empezar",
+ "meaning": "to begin, to start",
+ "level": "A2",
+ "title": "Spanish Verb Empezar Practice: Conjugation, Stem Change and Quiz",
+ "description": "Practice the Spanish verb empezar: the e to ie stem change, empecé in the preterite, empezar a + infinitive, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb empezar: practice",
+ "intro": "Empezar is a stem-changing verb (empiezo, empiezas) with a spelling change in the preterite yo form (empecé). Learn the forms, empezar a + infinitive and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb empezar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To begin",
+   "example": "La clase empieza a las ocho.",
+   "meaning": "Class starts at eight."
+  },
+  {
+   "use": "To start doing something: empezar a + infinitive",
+   "example": "Empecé a estudiar español el año pasado.",
+   "meaning": "I started studying Spanish last year."
+  },
+  {
+   "use": "To start something",
+   "example": "Empezamos el proyecto hoy.",
+   "meaning": "We're starting the project today."
+  },
+  {
+   "use": "Para empezar",
+   "example": "Para empezar, abran el libro.",
+   "meaning": "To begin with, open your books."
+  },
+  {
+   "use": "Synonym: comenzar",
+   "example": "La película comienza tarde.",
+   "meaning": "The movie starts late."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "empiezo"
+  ],
+  [
+   "tú",
+   "empiezas"
+  ],
+  [
+   "él / ella / usted",
+   "empieza"
+  ],
+  [
+   "nosotros / nosotras",
+   "empezamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "empiezan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "empecé"
+  ],
+  [
+   "tú",
+   "empezaste"
+  ],
+  [
+   "él / ella / usted",
+   "empezó"
+  ],
+  [
+   "nosotros / nosotras",
+   "empezamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "empezaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " a trabajar a las nueve.",
+   "options": [
+    "empiezo",
+    "empezo",
+    "empieza"
+   ],
+   "answer": 0,
+   "why": "Stem change e to ie: empiezo."
+  },
+  {
+   "before": "¿A qué hora ",
+   "after": " tu clase de química?",
+   "options": [
+    "empieza",
+    "empeza",
+    "empiezan"
+   ],
+   "answer": 0,
+   "why": "La clase: empieza."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " las vacaciones el viernes.",
+   "options": [
+    "empezamos",
+    "empiezamos",
+    "empiezan"
+   ],
+   "answer": 0,
+   "why": "No stem change with nosotros: empezamos."
+  },
+  {
+   "before": "Las tiendas ",
+   "after": " a abrir a las diez.",
+   "options": [
+    "empiezan",
+    "empezan",
+    "empieza"
+   ],
+   "answer": 0,
+   "why": "Ellas: empiezan."
+  },
+  {
+   "before": "Mi hermano empezó ",
+   "after": " tocar la guitarra.",
+   "options": [
+    "a",
+    "de",
+    "en"
+   ],
+   "answer": 0,
+   "why": "Empezar a + infinitive."
+  },
+  {
+   "before": "Ayer ",
+   "after": " a leer un libro nuevo.",
+   "options": [
+    "empecé",
+    "empezé",
+    "empiecé"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: z becomes c before e, empecé."
+  },
+  {
+   "before": "¿Cuándo ",
+   "after": " a trabajar aquí?",
+   "options": [
+    "empezaste",
+    "empiezaste",
+    "empecaste"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: empezaste, no stem change."
+  },
+  {
+   "before": "La tormenta ",
+   "after": " a medianoche.",
+   "options": [
+    "empezó",
+    "empiezó",
+    "empezo"
+   ],
+   "answer": 0,
+   "why": "Preterite: empezó, accent on the o."
+  },
+  {
+   "before": "Mis amigos ",
+   "after": " la universidad en agosto.",
+   "options": [
+    "empezaron",
+    "empiezaron",
+    "empecieron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: empezaron."
+  },
+  {
+   "before": "Para ",
+   "after": ", vamos a repasar los verbos.",
+   "options": [
+    "empezar",
+    "empezando",
+    "empiezo"
+   ],
+   "answer": 0,
+   "why": "Fixed phrase: para empezar."
+  }
+ ],
+ "reading": {
+  "titleEs": "Empezar de nuevo",
+  "paragraphs": [
+   "A los cuarenta y dos años, Gloria decidió empezar la universidad. Había dejado la escuela a los dieciséis para trabajar, y siempre pensaba que ya era tarde. Su hija le dijo: «Mamá, nunca es tarde para empezar».",
+   "Empezó con una clase nocturna de inglés en un colegio comunitario de Los Ángeles. Al principio le costó mucho, pero no faltó ni un día. Dos años después empezó la carrera de enfermería. Hoy trabaja en un hospital y dice que su vida empezó de verdad a los cuarenta y dos."
+  ],
+  "comprehension": [
+   {
+    "before": "Gloria empezó la universidad a los ",
+    "after": ".",
+    "options": [
+     "cuarenta y dos años",
+     "dieciséis años",
+     "veinte años"
+    ],
+    "answer": 0,
+    "why": "At forty-two."
+   },
+   {
+    "before": "Había dejado la escuela para ",
+    "after": ".",
+    "options": [
+     "trabajar",
+     "viajar",
+     "cuidar a su hija"
+    ],
+    "answer": 0,
+    "why": "To work."
+   },
+   {
+    "before": "Primero empezó con una clase de ",
+    "after": ".",
+    "options": [
+     "inglés",
+     "enfermería",
+     "matemáticas"
+    ],
+    "answer": 0,
+    "why": "A night English class."
+   },
+   {
+    "before": "Hoy Gloria trabaja ",
+    "after": ".",
+    "options": [
+     "en un hospital",
+     "en una escuela",
+     "en un restaurante"
+    ],
+    "answer": 0,
+    "why": "In a hospital, as a nurse."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo empezo a las ocho.",
+   "right": "Yo empiezo a las ocho.",
+   "why": "Stem change e to ie in yo, tú, él and ellos."
+  },
+  {
+   "wrong": "Ayer empezé el libro.",
+   "right": "Ayer empecé el libro.",
+   "why": "Before e, z becomes c: empecé."
+  },
+  {
+   "wrong": "Empecé estudiar.",
+   "right": "Empecé a estudiar.",
+   "why": "Empezar takes a before an infinitive."
+  },
+  {
+   "wrong": "Nosotros empiezamos.",
+   "right": "Nosotros empezamos.",
+   "why": "No stem change in nosotros."
+  }
+ ],
+ "heritage": "Heritage speakers usually say empiezo correctly; the writing traps are «empecé» (c, not z) and «empezó» (accent). «Comenzar» works exactly the same way: comienzo, comencé. Spelling, not speech, is where these students lose points on written exams.",
+ "teacher": "Pair empezar with a timeline: students write when they started school, a hobby and learning Spanish using empecé a, then ask a partner when they started each one.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish verb empezar». 1 of them asks for conjugation, charts or tenses (conjugation). Two suggestions name comenzar and pensar, verbs with the same e to ie pattern, so the page points out comenzar as a synonym.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

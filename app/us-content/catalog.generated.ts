@@ -10,6 +10,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "creer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb creer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "dar",
   "level": "A2",
   "theme": "",
@@ -21,6 +28,20 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb decir: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "empezar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb empezar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "encontrar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb encontrar: practice"
  },
  {
   "family": "verbs",
@@ -80,6 +101,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "llamar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb llamar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "llegar",
   "level": "A1",
   "theme": "",
@@ -91,6 +119,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb llevar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "pensar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb pensar: practice"
  },
  {
   "family": "verbs",
