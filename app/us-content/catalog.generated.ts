@@ -10,6 +10,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "cerrar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb cerrar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "comprar",
   "level": "A1",
   "theme": "",
@@ -59,6 +66,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "dejar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb dejar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "empezar",
   "level": "A2",
   "theme": "",
@@ -77,6 +91,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb estar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "estudiar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb estudiar: practice"
  },
  {
   "family": "verbs",
@@ -164,6 +185,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "pasar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb pasar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "pensar",
   "level": "A2",
   "theme": "",
@@ -224,6 +252,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb tomar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "trabajar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb trabajar: practice"
  },
  {
   "family": "verbs",

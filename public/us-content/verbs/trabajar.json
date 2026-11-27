@@ -1,0 +1,278 @@
+{
+ "verb": "trabajar",
+ "meaning": "to work",
+ "level": "A1",
+ "title": "Spanish Verb Trabajar Practice: Conjugation Chart, Uses and Quiz",
+ "description": "Practice the Spanish verb trabajar: the regular -ar chart in present and preterite, trabajar de and trabajar en, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb trabajar: practice",
+ "intro": "Trabajar is a regular -ar verb and a perfect model for the whole group. Learn the present and preterite chart, how to say where and as what you work, and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb trabajar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To work",
+   "example": "Trabajo de lunes a viernes.",
+   "meaning": "I work Monday to Friday."
+  },
+  {
+   "use": "Workplace: trabajar en",
+   "example": "Mi mamá trabaja en un hospital.",
+   "meaning": "My mom works at a hospital."
+  },
+  {
+   "use": "Job title: trabajar de / como",
+   "example": "Mi tío trabaja de mesero.",
+   "meaning": "My uncle works as a waiter."
+  },
+  {
+   "use": "Working on something: trabajar en",
+   "example": "Estamos trabajando en un proyecto.",
+   "meaning": "We're working on a project."
+  },
+  {
+   "use": "Machines: funcionar, not trabajar",
+   "example": "La impresora no funciona.",
+   "meaning": "The printer doesn't work."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "trabajo"
+  ],
+  [
+   "tú",
+   "trabajas"
+  ],
+  [
+   "él / ella / usted",
+   "trabaja"
+  ],
+  [
+   "nosotros / nosotras",
+   "trabajamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "trabajan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "trabajé"
+  ],
+  [
+   "tú",
+   "trabajaste"
+  ],
+  [
+   "él / ella / usted",
+   "trabajó"
+  ],
+  [
+   "nosotros / nosotras",
+   "trabajamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "trabajaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Los fines de semana yo ",
+   "after": " en una tienda.",
+   "options": [
+    "trabajo",
+    "trabaja",
+    "trabajas"
+   ],
+   "answer": 0,
+   "why": "Present yo: trabajo."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " tu papá?",
+   "options": [
+    "trabaja",
+    "trabajas",
+    "trabajan"
+   ],
+   "answer": 0,
+   "why": "Tu papá: trabaja."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " por la mañana o por la tarde?",
+   "options": [
+    "trabajas",
+    "trabaja",
+    "trabajan"
+   ],
+   "answer": 0,
+   "why": "Tú: trabajas."
+  },
+  {
+   "before": "Mi prima trabaja ",
+   "after": " enfermera.",
+   "options": [
+    "de",
+    "en",
+    "por"
+   ],
+   "answer": 0,
+   "why": "Job title: trabajar de (or como)."
+  },
+  {
+   "before": "Mis vecinos ",
+   "after": " en una fábrica de muebles.",
+   "options": [
+    "trabajan",
+    "trabaja",
+    "trabajamos"
+   ],
+   "answer": 0,
+   "why": "Ellos: trabajan."
+  },
+  {
+   "before": "El verano pasado ",
+   "after": " en un campamento.",
+   "options": [
+    "trabajé",
+    "trabaje",
+    "trabajó"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: trabajé, with accent."
+  },
+  {
+   "before": "¿Cuántas horas ",
+   "after": " ayer?",
+   "options": [
+    "trabajaste",
+    "trabajastes",
+    "trabajas ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: trabajaste, no final s."
+  },
+  {
+   "before": "Mi abuelo ",
+   "after": " cuarenta años en el campo.",
+   "options": [
+    "trabajó",
+    "trabajo",
+    "trabajé"
+   ],
+   "answer": 0,
+   "why": "Preterite él: trabajó, a finished period."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " juntos en el proyecto de ciencias.",
+   "options": [
+    "trabajamos",
+    "trabajaron",
+    "trabajó"
+   ],
+   "answer": 0,
+   "why": "Nosotros: trabajamos."
+  },
+  {
+   "before": "Mi computadora no ",
+   "after": ". Necesito ayuda.",
+   "options": [
+    "funciona",
+    "trabaja bien yo",
+    "trabajo"
+   ],
+   "answer": 0,
+   "why": "Machines funcionan; people trabajan."
+  }
+ ],
+ "reading": {
+  "titleEs": "Dos trabajos y un sueño",
+  "paragraphs": [
+   "Rosa trabaja de cajera en un supermercado por la mañana y limpia oficinas por la noche. Llegó a Atlanta hace seis años desde Honduras. Trabaja mucho porque quiere abrir su propio negocio: una pupusería.",
+   "El año pasado trabajó todos los fines de semana vendiendo pupusas en el mercado. Sus clientes le pidieron más y más. Este mes, por fin, firmó el contrato de un local pequeño. Ahora trabaja más que nunca, pero dice que trabajar para su sueño no cansa igual."
+  ],
+  "comprehension": [
+   {
+    "before": "Por la mañana, Rosa trabaja ",
+    "after": ".",
+    "options": [
+     "de cajera",
+     "en una oficina",
+     "en un restaurante"
+    ],
+    "answer": 0,
+    "why": "She is a cashier at a supermarket."
+   },
+   {
+    "before": "Rosa es de ",
+    "after": ".",
+    "options": [
+     "Honduras",
+     "El Salvador",
+     "Atlanta"
+    ],
+    "answer": 0,
+    "why": "She came from Honduras."
+   },
+   {
+    "before": "Rosa quiere abrir ",
+    "after": ".",
+    "options": [
+     "una pupusería",
+     "un supermercado",
+     "una oficina"
+    ],
+    "answer": 0,
+    "why": "Her dream is a pupusa restaurant."
+   },
+   {
+    "before": "El año pasado, Rosa vendió pupusas ",
+    "after": ".",
+    "options": [
+     "en el mercado",
+     "por internet",
+     "en su casa"
+    ],
+    "answer": 0,
+    "why": "At the market on weekends."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Trabajo como un mesero.",
+   "right": "Trabajo como mesero.",
+   "why": "No article before a job after como or de."
+  },
+  {
+   "wrong": "Mi carro no trabaja.",
+   "right": "Mi carro no funciona.",
+   "why": "For machines, use funcionar."
+  },
+  {
+   "wrong": "Ayer trabaje mucho.",
+   "right": "Ayer trabajé mucho.",
+   "why": "Preterite yo needs the accent: trabajé."
+  },
+  {
+   "wrong": "Trabajo por Amazon.",
+   "right": "Trabajo para Amazon.",
+   "why": "Your employer takes para."
+  }
+ ],
+ "heritage": "Heritage speakers in the US often say «la máquina no trabaja», a calque of «it doesn't work». The standard form is «no funciona». Also common is «trabajar para atrás» or «trabajar overtime»; in writing, use «trabajar horas extra».",
+ "teacher": "Students interview each other about family jobs with ¿Dónde trabaja tu…? and ¿De qué trabaja? and then report one interesting job to the class.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb trabajar». One asks for a conjugation chart, so the full regular chart is here as a model.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
