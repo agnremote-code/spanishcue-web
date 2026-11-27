@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "chores",
+ "themeLabel": "Chores",
+ "title": "Spanish Chores Vocabulary: Household Chores with Practice",
+ "description": "Spanish chores vocabulary: barrer, lavar los platos, sacar la basura, hacer la cama and pasar la aspiradora, with a quiz and an A1 reading about a chore chart.",
+ "h1": "Spanish chores vocabulary",
+ "titleEs": "La tabla de quehaceres",
+ "focus": "tener que + infinitive and days of the week",
+ "intro": "Learn the Spanish words for household chores: cleaning jobs, kitchen jobs and the things you use to clean. Practice with instant feedback, then read about a family that makes a chore chart on the fridge.",
+ "paragraphs": [
+  "En la casa de la familia Morales, en San Antonio, siempre había problemas con los quehaceres. Nadie quería lavar los platos y la basura se quedaba en la cocina. Un domingo, la mamá dibujó una tabla grande y la puso en el refrigerador.",
+  "Ahora cada persona tiene que hacer sus quehaceres. Lucía, de doce años, tiene que lavar los platos los lunes, miércoles y viernes. Su hermano Daniel, de diez años, tiene que sacar la basura y poner la mesa. El papá pasa la aspiradora los sábados y plancha las camisas. La mamá limpia el baño y dobla la ropa.",
+  "Todos tienen que hacer la cama cada mañana, incluso el papá. Cuando alguien termina un quehacer, pone una estrella en la tabla. Si los niños tienen veinte estrellas al final del mes, la familia va al cine.",
+  "Al principio, Daniel se quejaba mucho. Ahora le gusta la tabla porque compite con su hermana. Este mes, ya tiene dieciocho estrellas."
+ ],
+ "glossary": [
+  [
+   "se quedaba",
+   "stayed, was left"
+  ],
+  [
+   "la tabla",
+   "chart"
+  ],
+  [
+   "el refrigerador",
+   "fridge"
+  ],
+  [
+   "incluso",
+   "even"
+  ],
+  [
+   "terminar",
+   "to finish"
+  ],
+  [
+   "al final del mes",
+   "at the end of the month"
+  ],
+  [
+   "quejarse",
+   "to complain"
+  ],
+  [
+   "competir con",
+   "to compete with"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La mamá puso la tabla en ",
+   "after": ".",
+   "options": [
+    "el refrigerador",
+    "la puerta del baño",
+    "la mesa"
+   ],
+   "answer": 0,
+   "why": "On the fridge."
+  },
+  {
+   "before": "Lucía tiene que ",
+   "after": " tres días a la semana.",
+   "options": [
+    "lavar los platos",
+    "sacar la basura",
+    "planchar"
+   ],
+   "answer": 0,
+   "why": "She washes the dishes."
+  },
+  {
+   "before": "Daniel tiene que sacar la basura y ",
+   "after": ".",
+   "options": [
+    "poner la mesa",
+    "limpiar el baño",
+    "doblar la ropa"
+   ],
+   "answer": 0,
+   "why": "He also sets the table."
+  },
+  {
+   "before": "El papá pasa la aspiradora ",
+   "after": ".",
+   "options": [
+    "los sábados",
+    "los lunes",
+    "todos los días"
+   ],
+   "answer": 0,
+   "why": "On Saturdays."
+  },
+  {
+   "before": "Con veinte estrellas, la familia ",
+   "after": ".",
+   "options": [
+    "va al cine",
+    "compra un perro",
+    "come pizza"
+   ],
+   "answer": 0,
+   "why": "They go to the movies."
+  },
+  {
+   "before": "Ahora a Daniel le gusta la tabla porque ",
+   "after": ".",
+   "options": [
+    "compite con su hermana",
+    "no hace quehaceres",
+    "es muy bonita"
+   ],
+   "answer": 0,
+   "why": "He competes with his sister."
+  }
+ ],
+ "grammar": {
+  "title": "Tener que + infinitive",
+  "intro": "To say what someone has to do, use tener que and a verb in the infinitive: tengo que barrer, tienes que lavar los platos.",
+  "items": [
+   {
+    "before": "Hoy yo ",
+    "after": " que limpiar mi cuarto.",
+    "options": [
+     "tengo",
+     "tiene",
+     "tienes"
+    ],
+    "answer": 0,
+    "why": "Yo: tengo que."
+   },
+   {
+    "before": "Mis hermanos tienen que ",
+    "after": " la basura.",
+    "options": [
+     "sacar",
+     "sacan",
+     "sacando"
+    ],
+    "answer": 0,
+    "why": "Infinitive after tener que."
+   },
+   {
+    "before": "¿Tú ",
+    "after": " que planchar tu camisa?",
+    "options": [
+     "tienes",
+     "tengo",
+     "tienen"
+    ],
+    "answer": 0,
+    "why": "Tú: tienes que."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué quehaceres haces en casa?",
+  "¿Cuál es el quehacer que más odias? ¿Por qué?",
+  "Organiza los quehaceres de tu casa para una semana."
+ ],
+ "heritage": "Words for chores change by region: trapear is common in Mexico and the US, while Spain says fregar el suelo, and Argentina says pasar el trapo. Many heritage speakers say «mapear»; in formal Spanish, use trapear or fregar.",
+ "teacher": "Ask each group to make a chore chart for a fictional family, then present it with tener que sentences while the class asks who does the most work.",
+ "vocabulary": [
+  {
+   "title": "Cleaning the house",
+   "words": [
+    [
+     "barrer",
+     "to sweep"
+    ],
+    [
+     "trapear",
+     "to mop"
+    ],
+    [
+     "pasar la aspiradora",
+     "to vacuum"
+    ],
+    [
+     "quitar el polvo",
+     "to dust"
+    ],
+    [
+     "hacer la cama",
+     "to make the bed"
+    ],
+    [
+     "ordenar el cuarto",
+     "to tidy the room"
+    ],
+    [
+     "limpiar el baño",
+     "to clean the bathroom"
+    ]
+   ]
+  },
+  {
+   "title": "Kitchen and laundry",
+   "words": [
+    [
+     "lavar los platos",
+     "to wash the dishes"
+    ],
+    [
+     "secar",
+     "to dry"
+    ],
+    [
+     "poner la mesa",
+     "to set the table"
+    ],
+    [
+     "quitar la mesa",
+     "to clear the table"
+    ],
+    [
+     "sacar la basura",
+     "to take out the trash"
+    ],
+    [
+     "doblar la ropa",
+     "to fold clothes"
+    ],
+    [
+     "planchar",
+     "to iron"
+    ]
+   ]
+  },
+  {
+   "title": "Things you use",
+   "words": [
+    [
+     "la escoba",
+     "broom"
+    ],
+    [
+     "el trapeador",
+     "mop"
+    ],
+    [
+     "la aspiradora",
+     "vacuum cleaner"
+    ],
+    [
+     "el trapo",
+     "cloth, rag"
+    ],
+    [
+     "la esponja",
+     "sponge"
+    ],
+    [
+     "el jabón",
+     "soap"
+    ],
+    [
+     "la bolsa de basura",
+     "trash bag"
+    ],
+    [
+     "los quehaceres",
+     "chores"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Después de cenar, mi hermano ",
+   "after": " los platos.",
+   "options": [
+    "lava",
+    "barre",
+    "dobla"
+   ],
+   "answer": 0,
+   "why": "Washing the dishes."
+  },
+  {
+   "before": "Los martes, mi papá saca la ",
+   "after": " a la calle.",
+   "options": [
+    "basura",
+    "escoba",
+    "cama"
+   ],
+   "answer": 0,
+   "why": "Taking out the trash."
+  },
+  {
+   "before": "Para barrer el piso, necesito la ",
+   "after": ".",
+   "options": [
+    "escoba",
+    "esponja",
+    "plancha"
+   ],
+   "answer": 0,
+   "why": "A broom for sweeping."
+  },
+  {
+   "before": "Antes de comer, yo pongo la ",
+   "after": ".",
+   "options": [
+    "mesa",
+    "ropa",
+    "basura"
+   ],
+   "answer": 0,
+   "why": "Setting the table."
+  },
+  {
+   "before": "Cada mañana hago la ",
+   "after": " antes de ir a la escuela.",
+   "options": [
+    "cama",
+    "aspiradora",
+    "mesa"
+   ],
+   "answer": 0,
+   "why": "Making the bed."
+  },
+  {
+   "before": "Hay mucho polvo en los muebles; voy a ",
+   "after": " el polvo.",
+   "options": [
+    "quitar",
+    "lavar",
+    "planchar"
+   ],
+   "answer": 0,
+   "why": "To dust: quitar el polvo."
+  },
+  {
+   "before": "La alfombra está sucia; mi mamá pasa la ",
+   "after": ".",
+   "options": [
+    "aspiradora",
+    "escoba",
+    "esponja"
+   ],
+   "answer": 0,
+   "why": "Vacuuming the rug."
+  },
+  {
+   "before": "Saco la ropa de la secadora y la ",
+   "after": ".",
+   "options": [
+    "doblo",
+    "barro",
+    "trapeo"
+   ],
+   "answer": 0,
+   "why": "Folding the laundry."
+  }
+ ],
+ "demand": {
+  "query": "spanish chores vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 2 searches to people in the United States who typed «spanish chores vocabulary». The other suggestion asks for housekeeping vocabulary, so the list adds the cleaning things you need: la escoba, la aspiradora and el trapo.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

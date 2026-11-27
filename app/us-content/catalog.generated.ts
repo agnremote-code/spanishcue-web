@@ -227,6 +227,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "chores",
+  "level": "A1",
+  "theme": "chores",
+  "title": "Spanish chores vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "christmas",
   "level": "A1",
   "theme": "christmas",
@@ -493,6 +500,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "movies",
+  "level": "A2",
+  "theme": "movies",
+  "title": "Spanish movie vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "music",
   "level": "A2",
   "theme": "music",
@@ -525,6 +539,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "personality",
   "title": "Spanish personality vocabulary: adjectives"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "pets",
+  "level": "A1",
+  "theme": "pets",
+  "title": "Spanish pet vocabulary"
  },
  {
   "family": "vocabulary",

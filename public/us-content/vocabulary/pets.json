@@ -1,0 +1,372 @@
+{
+ "level": "A1",
+ "theme": "pets",
+ "themeLabel": "Pets",
+ "title": "Spanish Pets Vocabulary: Pet Words and Pet Care with Practice",
+ "description": "Spanish pet vocabulary: el perro, el gato, el pez, la jaula and dar de comer, with words for pet care, a quiz and an A1 reading about adopting a shelter dog.",
+ "h1": "Spanish pet vocabulary",
+ "titleEs": "Bienvenido a casa, Canelo",
+ "focus": "possessive adjectives and the present tense",
+ "intro": "Learn the Spanish words for pets: the animals people keep at home, what they need and how to take care of them. Practice with instant feedback, then read about a family that adopts a dog from an animal shelter.",
+ "paragraphs": [
+  "Rosa y su familia viven en Phoenix. Hace un mes, fueron a un refugio de animales para adoptar un perro. Había muchos perros: grandes, pequeños, viejos y jóvenes. Un perro marrón y tranquilo se acercó a Rosa y le dio la pata. La familia decidió adoptarlo y lo llamaron Canelo, por su color.",
+  "Ahora todos ayudan con Canelo. Rosa le da de comer por la mañana y por la noche. Su hermano Pablo lo pasea después de la escuela con su correa roja. Los domingos, su papá lo baña en el patio, y a Canelo no le gusta nada el agua.",
+  "Canelo tiene su cama en la sala, pero por la noche siempre duerme en el cuarto de Rosa. Su juguete favorito es una pelota vieja. El gato de la vecina mira a Canelo desde la ventana todos los días. Rosa dice que pronto van a ser amigos."
+ ],
+ "glossary": [
+  [
+   "hace un mes",
+   "a month ago"
+  ],
+  [
+   "acercarse",
+   "to come close"
+  ],
+  [
+   "dar la pata",
+   "to give a paw"
+  ],
+  [
+   "decidir",
+   "to decide"
+  ],
+  [
+   "canela",
+   "cinnamon"
+  ],
+  [
+   "no le gusta nada",
+   "he doesn't like it at all"
+  ],
+  [
+   "la vecina",
+   "neighbor (female)"
+  ],
+  [
+   "pronto",
+   "soon"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia adoptó a Canelo en ",
+   "after": ".",
+   "options": [
+    "un refugio de animales",
+    "una tienda de mascotas",
+    "la casa de la vecina"
+   ],
+   "answer": 0,
+   "why": "At an animal shelter."
+  },
+  {
+   "before": "Lo llamaron Canelo por ",
+   "after": ".",
+   "options": [
+    "su color",
+    "su tamaño",
+    "su juguete"
+   ],
+   "answer": 0,
+   "why": "Because of his color."
+  },
+  {
+   "before": "Pablo pasea a Canelo ",
+   "after": ".",
+   "options": [
+    "después de la escuela",
+    "por la mañana",
+    "los domingos"
+   ],
+   "answer": 0,
+   "why": "After school."
+  },
+  {
+   "before": "A Canelo no le gusta ",
+   "after": ".",
+   "options": [
+    "el agua",
+    "la pelota",
+    "Rosa"
+   ],
+   "answer": 0,
+   "why": "He hates water."
+  },
+  {
+   "before": "Por la noche, Canelo duerme ",
+   "after": ".",
+   "options": [
+    "en el cuarto de Rosa",
+    "en la sala",
+    "en el patio"
+   ],
+   "answer": 0,
+   "why": "In Rosa's room."
+  },
+  {
+   "before": "El gato de la vecina mira a Canelo desde ",
+   "after": ".",
+   "options": [
+    "la ventana",
+    "el patio",
+    "la puerta"
+   ],
+   "answer": 0,
+   "why": "From the window."
+  }
+ ],
+ "grammar": {
+  "title": "Possessive adjectives: mi, tu, su",
+  "intro": "Use mi, tu and su before a noun to say whose it is, and add -s for plural nouns: mi perro, mis gatos, su correa.",
+  "items": [
+   {
+    "before": "Rosa lleva a ",
+    "after": " perro al parque.",
+    "options": [
+     "su",
+     "sus",
+     "mi"
+    ],
+    "answer": 0,
+    "why": "Her dog: su perro."
+   },
+   {
+    "before": "¿Cómo se llaman ",
+    "after": " gatos?",
+    "options": [
+     "tus",
+     "tu",
+     "su"
+    ],
+    "answer": 0,
+    "why": "Plural: tus gatos."
+   },
+   {
+    "before": "Yo limpio la pecera de ",
+    "after": " peces.",
+    "options": [
+     "mis",
+     "mi",
+     "tus"
+    ],
+    "answer": 0,
+    "why": "Plural after yo: mis."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Tienes una mascota? ¿Cómo es?",
+  "¿Qué mascota prefieres: un perro, un gato o un pez? ¿Por qué?",
+  "Explica cómo cuidar a una mascota."
+ ],
+ "heritage": "Many families say «perrito» and «gatito» for any pet, big or small; the diminutive shows love, not size. Watch el pez (a live fish) and el pescado (fish as food): you have un pez en la pecera, but comes pescado.",
+ "teacher": "Have students design an adoption poster in Spanish for a shelter animal, with its name, a three-line description and what it needs, then vote on the best poster.",
+ "vocabulary": [
+  {
+   "title": "Pets",
+   "words": [
+    [
+     "el perro / la perra",
+     "dog"
+    ],
+    [
+     "el gato / la gata",
+     "cat"
+    ],
+    [
+     "el pez",
+     "fish"
+    ],
+    [
+     "el pájaro",
+     "bird"
+    ],
+    [
+     "el conejo",
+     "rabbit"
+    ],
+    [
+     "el hámster",
+     "hamster"
+    ],
+    [
+     "la tortuga",
+     "turtle"
+    ],
+    [
+     "la mascota",
+     "pet"
+    ]
+   ]
+  },
+  {
+   "title": "What they need",
+   "words": [
+    [
+     "la correa",
+     "leash"
+    ],
+    [
+     "el collar",
+     "collar"
+    ],
+    [
+     "la jaula",
+     "cage"
+    ],
+    [
+     "la pecera",
+     "fish tank"
+    ],
+    [
+     "la cama",
+     "bed"
+    ],
+    [
+     "el plato de comida",
+     "food bowl"
+    ],
+    [
+     "el juguete",
+     "toy"
+    ],
+    [
+     "el veterinario / la veterinaria",
+     "vet"
+    ]
+   ]
+  },
+  {
+   "title": "Taking care",
+   "words": [
+    [
+     "dar de comer",
+     "to feed"
+    ],
+    [
+     "pasear al perro",
+     "to walk the dog"
+    ],
+    [
+     "bañar",
+     "to bathe"
+    ],
+    [
+     "cepillar",
+     "to brush"
+    ],
+    [
+     "jugar con",
+     "to play with"
+    ],
+    [
+     "adoptar",
+     "to adopt"
+    ],
+    [
+     "el refugio de animales",
+     "animal shelter"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi gato duerme en su ",
+   "after": " al lado de la ventana.",
+   "options": [
+    "cama",
+    "pecera",
+    "jaula"
+   ],
+   "answer": 0,
+   "why": "A cat sleeps in its bed."
+  },
+  {
+   "before": "Mi pez vive en una ",
+   "after": ".",
+   "options": [
+    "pecera",
+    "correa",
+    "cama"
+   ],
+   "answer": 0,
+   "why": "A fish tank."
+  },
+  {
+   "before": "Para pasear al perro, necesito la ",
+   "after": ".",
+   "options": [
+    "correa",
+    "pecera",
+    "jaula"
+   ],
+   "answer": 0,
+   "why": "A leash for walks."
+  },
+  {
+   "before": "Mi pájaro canta en su ",
+   "after": ".",
+   "options": [
+    "jaula",
+    "pecera",
+    "correa"
+   ],
+   "answer": 0,
+   "why": "A bird cage."
+  },
+  {
+   "before": "Mi perro está enfermo; lo llevo al ",
+   "after": ".",
+   "options": [
+    "veterinario",
+    "refugio",
+    "collar"
+   ],
+   "answer": 0,
+   "why": "To the vet."
+  },
+  {
+   "before": "Mi ",
+   "after": " come zanahorias y tiene orejas largas.",
+   "options": [
+    "conejo",
+    "pez",
+    "pájaro"
+   ],
+   "answer": 0,
+   "why": "Rabbits have long ears."
+  },
+  {
+   "before": "Por la mañana, le doy de ",
+   "after": " al gato.",
+   "options": [
+    "comer",
+    "pasear",
+    "bañar"
+   ],
+   "answer": 0,
+   "why": "To feed: dar de comer."
+  },
+  {
+   "before": "No compramos a Max; lo ",
+   "after": " en un refugio.",
+   "options": [
+    "adoptamos",
+    "bañamos",
+    "cepillamos"
+   ],
+   "answer": 0,
+   "why": "To adopt: adoptar."
+  }
+ ],
+ "demand": {
+  "query": "spanish pet vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish pets vocabulary». One asks for dog words, so the list includes pet care actions like pasear al perro and the things a dog needs: la correa and el plato de comida.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
