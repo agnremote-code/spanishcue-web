@@ -1,0 +1,273 @@
+{
+ "verb": "poder",
+ "meaning": "can, to be able to",
+ "level": "A1",
+ "title": "Spanish Verb Poder Practice: Forms, Uses and Quiz with Answers",
+ "description": "Practice the Spanish verb poder: o-ue present forms, the preterite, asking permission, ten questions that correct themselves and a short reading. Free.",
+ "h1": "Spanish verb poder: practice",
+ "intro": "Poder means «can» or «to be able to». It changes o to ue in the present and is always followed by an infinitive. Learn its forms, see how to ask for permission and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb poder",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Ability",
+   "example": "Puedo nadar un kilómetro.",
+   "meaning": "I can swim a kilometer."
+  },
+  {
+   "use": "Permission",
+   "example": "¿Puedo ir al baño?",
+   "meaning": "May I go to the bathroom?"
+  },
+  {
+   "use": "Polite requests",
+   "example": "¿Puedes cerrar la ventana, por favor?",
+   "meaning": "Can you close the window, please?"
+  },
+  {
+   "use": "Possibility",
+   "example": "Puede llover esta tarde.",
+   "meaning": "It may rain this afternoon."
+  },
+  {
+   "use": "Managed to (preterite)",
+   "example": "Por fin pude terminar el proyecto.",
+   "meaning": "I finally managed to finish the project."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "puedo"
+  ],
+  [
+   "tú",
+   "puedes"
+  ],
+  [
+   "él / ella / usted",
+   "puede"
+  ],
+  [
+   "nosotros / nosotras",
+   "podemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "pueden"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "pude"
+  ],
+  [
+   "tú",
+   "pudiste"
+  ],
+  [
+   "él / ella / usted",
+   "pudo"
+  ],
+  [
+   "nosotros / nosotras",
+   "pudimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "pudieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo no ",
+   "after": " ir a la fiesta el sábado.",
+   "options": [
+    "puedo",
+    "podo",
+    "puede"
+   ],
+   "answer": 0,
+   "why": "O changes to ue: puedo."
+  },
+  {
+   "before": "¿",
+   "after": " ayudarme con la tarea?",
+   "options": [
+    "Puedes",
+    "Podes",
+    "Puede tú"
+   ],
+   "answer": 0,
+   "why": "Tú form: puedes."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " estudiar juntos mañana.",
+   "options": [
+    "podemos",
+    "puedemos",
+    "pueden"
+   ],
+   "answer": 0,
+   "why": "Nosotros keeps the o: podemos."
+  },
+  {
+   "before": "Mis padres no ",
+   "after": " venir a la reunión.",
+   "options": [
+    "pueden",
+    "podemos",
+    "puede"
+   ],
+   "answer": 0,
+   "why": "Ellos: pueden."
+  },
+  {
+   "before": "¿",
+   "after": " ir al baño, por favor?",
+   "options": [
+    "Puedo",
+    "Podo",
+    "Puedes yo"
+   ],
+   "answer": 0,
+   "why": "Asking permission: ¿Puedo…?"
+  },
+  {
+   "before": "Mi abuelo ",
+   "after": " hablar tres idiomas.",
+   "options": [
+    "puede",
+    "puedes",
+    "pode"
+   ],
+   "answer": 0,
+   "why": "Él: puede."
+  },
+  {
+   "before": "No puedo ",
+   "after": " porque tengo mucho trabajo.",
+   "options": [
+    "salir",
+    "salgo",
+    "saliendo"
+   ],
+   "answer": 0,
+   "why": "Poder + infinitive."
+  },
+  {
+   "before": "Ayer no ",
+   "after": " dormir por el ruido.",
+   "options": [
+    "pude",
+    "podí",
+    "puedo"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: pude."
+  },
+  {
+   "before": "¿",
+   "after": " ustedes encontrar el hotel sin problemas?",
+   "options": [
+    "Pudieron",
+    "Podieron",
+    "Pueden"
+   ],
+   "answer": 0,
+   "why": "Ellos/ustedes preterite: pudieron."
+  },
+  {
+   "before": "Mi hermana por fin ",
+   "after": " aprobar el examen de manejo.",
+   "options": [
+    "pudo",
+    "podió",
+    "puede"
+   ],
+   "answer": 0,
+   "why": "She managed to: pudo."
+  }
+ ],
+ "reading": {
+  "titleEs": "La licencia de manejar",
+  "paragraphs": [
+   "Valeria tiene dieciséis años y quiere la licencia de manejar. En su estado, los jóvenes pueden sacar la licencia a los dieciséis, pero primero tienen que aprobar un examen escrito y un examen práctico. Valeria puede contestar todas las preguntas del libro, pero estacionar es otra historia.",
+   "La primera vez que hizo el examen práctico, no pudo estacionar en paralelo y no aprobó. Su papá le dijo: «Si practicas todos los días, vas a poder». Durante un mes practicaron en el estacionamiento del supermercado. La semana pasada Valeria por fin pudo aprobar. Ahora puede llevar a su hermano a la escuela."
+  ],
+  "comprehension": [
+   {
+    "before": "En el estado de Valeria se puede sacar la licencia a los ",
+    "after": " años.",
+    "options": [
+     "dieciséis",
+     "dieciocho",
+     "quince"
+    ],
+    "answer": 0,
+    "why": "At sixteen."
+   },
+   {
+    "before": "La primera vez Valeria no pudo ",
+    "after": ".",
+    "options": [
+     "estacionar en paralelo",
+     "contestar las preguntas",
+     "encender el coche"
+    ],
+    "answer": 0,
+    "why": "She could not parallel park."
+   },
+   {
+    "before": "Practicaron en ",
+    "after": ".",
+    "options": [
+     "el estacionamiento del supermercado",
+     "la escuela",
+     "la autopista"
+    ],
+    "answer": 0,
+    "why": "In the supermarket parking lot."
+   },
+   {
+    "before": "Ahora Valeria puede ",
+    "after": ".",
+    "options": [
+     "llevar a su hermano a la escuela",
+     "manejar de noche sola",
+     "comprar un coche"
+    ],
+    "answer": 0,
+    "why": "She can drive her brother to school."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo podo ir.",
+   "right": "Yo puedo ir.",
+   "why": "Poder changes o to ue in every present form except nosotros."
+  },
+  {
+   "wrong": "Puedo a nadar.",
+   "right": "Puedo nadar.",
+   "why": "Poder goes directly to the infinitive, with no a."
+  },
+  {
+   "wrong": "Puedes tú ayudarme? (word for word)",
+   "right": "¿Me puedes ayudar? / ¿Puedes ayudarme?",
+   "why": "Spanish usually leaves out tú and puts the pronoun before poder or after the infinitive."
+  }
+ ],
+ "heritage": "Many heritage speakers say «podemos» and «pudimos» naturally; in writing, watch out for «puedemos», which is not standard. Also check «pude» and «pudo» without accents. Write a short paragraph about something you could not do at first and later managed to do, with the preterite of poder.",
+ "teacher": "Teachers: the reading connects with a real teen milestone in the United States, the driver's license. Use it to practise ability and permission: students make a list of what teenagers can and cannot do at 16 in their state, using puede and no puede.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb poder». 3 of them ask for conjugation, charts or tenses (conjugation, present tense, past tense). The page focuses on use: permission, ability and possibility, with the forms in a chart.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

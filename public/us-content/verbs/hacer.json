@@ -1,0 +1,273 @@
+{
+ "verb": "hacer",
+ "meaning": "to do, to make",
+ "level": "A1",
+ "title": "Spanish Verb Hacer Practice: Forms, Weather and Time Uses",
+ "description": "Practice the Spanish verb hacer: present and preterite forms, weather and time expressions, ten questions that correct themselves and a short reading. No login.",
+ "h1": "Spanish verb hacer: practice",
+ "intro": "Hacer means «to do» and «to make», and it also talks about the weather and how long ago something happened. Learn the forms, see the uses and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb hacer",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To do",
+   "example": "¿Qué haces los domingos?",
+   "meaning": "What do you do on Sundays?"
+  },
+  {
+   "use": "To make",
+   "example": "Mi abuela hace tamales en diciembre.",
+   "meaning": "My grandmother makes tamales in December."
+  },
+  {
+   "use": "Weather: hace calor, frío, sol, viento",
+   "example": "Hoy hace mucho viento.",
+   "meaning": "It's very windy today."
+  },
+  {
+   "use": "Time ago: hace + time",
+   "example": "Llegué hace dos años.",
+   "meaning": "I arrived two years ago."
+  },
+  {
+   "use": "Common expressions: hacer la tarea, hacer ejercicio, hacer una pregunta",
+   "example": "Hago ejercicio tres veces por semana.",
+   "meaning": "I exercise three times a week."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "hago"
+  ],
+  [
+   "tú",
+   "haces"
+  ],
+  [
+   "él / ella / usted",
+   "hace"
+  ],
+  [
+   "nosotros / nosotras",
+   "hacemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "hacen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "hice"
+  ],
+  [
+   "tú",
+   "hiciste"
+  ],
+  [
+   "él / ella / usted",
+   "hizo"
+  ],
+  [
+   "nosotros / nosotras",
+   "hicimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "hicieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " la tarea después de cenar.",
+   "options": [
+    "hago",
+    "hace",
+    "haces"
+   ],
+   "answer": 0,
+   "why": "Hacer with yo is irregular: hago."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " tú los fines de semana?",
+   "options": [
+    "haces",
+    "hace",
+    "hago"
+   ],
+   "answer": 0,
+   "why": "Tú: haces."
+  },
+  {
+   "before": "En Arizona ",
+   "after": " mucho calor en julio.",
+   "options": [
+    "hace",
+    "es",
+    "está"
+   ],
+   "answer": 0,
+   "why": "Weather: hace calor."
+  },
+  {
+   "before": "Mis amigos y yo ",
+   "after": " ejercicio en el parque.",
+   "options": [
+    "hacemos",
+    "hacen",
+    "hago"
+   ],
+   "answer": 0,
+   "why": "Nosotros: hacemos."
+  },
+  {
+   "before": "Vivo en Texas desde ",
+   "after": " cinco años.",
+   "options": [
+    "hace",
+    "hay",
+    "hizo"
+   ],
+   "answer": 0,
+   "why": "Time ago or since: hace + time."
+  },
+  {
+   "before": "¿Puedo ",
+   "after": " una pregunta?",
+   "options": [
+    "hacer",
+    "preguntar",
+    "pedir"
+   ],
+   "answer": 0,
+   "why": "The expression is hacer una pregunta."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " la cena juntos.",
+   "options": [
+    "hacen",
+    "hacemos",
+    "hace"
+   ],
+   "answer": 0,
+   "why": "Ellos: hacen."
+  },
+  {
+   "before": "Ayer yo no ",
+   "after": " nada interesante.",
+   "options": [
+    "hice",
+    "hizo",
+    "hacía"
+   ],
+   "answer": 0,
+   "why": "Preterite with yo: hice."
+  },
+  {
+   "before": "¿Quién ",
+   "after": " este pastel? ¡Está riquísimo!",
+   "options": [
+    "hizo",
+    "hició",
+    "hice"
+   ],
+   "answer": 0,
+   "why": "Él/ella preterite: hizo, with z."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " ustedes el verano pasado?",
+   "options": [
+    "hicieron",
+    "hacieron",
+    "hizo"
+   ],
+   "answer": 0,
+   "why": "Ellos/ustedes preterite: hicieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La receta de la abuela",
+  "paragraphs": [
+   "Hace tres años, mi abuela me enseñó a hacer pupusas, el plato más famoso de El Salvador. Primero hacemos la masa con harina de maíz y agua. Después hacemos bolitas, ponemos queso o frijoles dentro y las aplastamos con las manos.",
+   "Mi abuela hace las pupusas perfectas y redondas; las mías tienen formas raras. El sábado pasado hice veinte para la fiesta de mi primo y todos dijeron que estaban buenísimas. Cuando hace frío, no hay nada mejor que una pupusa caliente con curtido."
+  ],
+  "comprehension": [
+   {
+    "before": "La abuela le enseñó a hacer pupusas hace ",
+    "after": ".",
+    "options": [
+     "tres años",
+     "dos semanas",
+     "diez años"
+    ],
+    "answer": 0,
+    "why": "«Hace tres años.»"
+   },
+   {
+    "before": "Las pupusas son de ",
+    "after": ".",
+    "options": [
+     "El Salvador",
+     "México",
+     "Guatemala"
+    ],
+    "answer": 0,
+    "why": "The most famous dish of El Salvador."
+   },
+   {
+    "before": "La masa se hace con ",
+    "after": ".",
+    "options": [
+     "harina de maíz y agua",
+     "harina de trigo y leche",
+     "arroz"
+    ],
+    "answer": 0,
+    "why": "Corn flour and water."
+   },
+   {
+    "before": "El sábado pasado el narrador hizo ",
+    "after": " pupusas.",
+    "options": [
+     "veinte",
+     "tres",
+     "diez"
+    ],
+    "answer": 0,
+    "why": "«Hice veinte para la fiesta.»"
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Es calor hoy.",
+   "right": "Hace calor hoy.",
+   "why": "Weather expressions with calor, frío, sol and viento use hacer."
+  },
+  {
+   "wrong": "Hací la tarea.",
+   "right": "Hice la tarea.",
+   "why": "The preterite stem of hacer is hic-, and the él form is hizo."
+  },
+  {
+   "wrong": "Hace dos años que llegué = Llegué dos años hace.",
+   "right": "Llegué hace dos años.",
+   "why": "In Spanish, hace goes before the time: hace dos años."
+  }
+ ],
+ "heritage": "Heritage speakers often write «hize» or «hiso» for the preterite. The written forms are hice (with c) and hizo (with z). Also remember the silent h in every form of hacer. Write the recipe of a dish your family makes, using hacer at least six times.",
+ "teacher": "Teachers: the reading is a family recipe, so it invites students to share their own. Students write five steps of a recipe with hacer and present them. You can also use the first line to practise «hace + time» with personal questions: ¿Hace cuánto tiempo vives aquí?",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb hacer». 4 of them ask for conjugation, charts or tenses (conjugation, conjugation chart, present tense, past tense). Many searchers ask for the past tense, so the preterite chart is next to the present.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

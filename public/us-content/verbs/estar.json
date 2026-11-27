@@ -1,0 +1,273 @@
+{
+ "verb": "estar",
+ "meaning": "to be (location, states, ongoing actions)",
+ "level": "A1",
+ "title": "Spanish Verb Estar Practice: Forms, Uses and Quiz with Answers",
+ "description": "Practice the Spanish verb estar: present and preterite forms, its uses, ten self-correcting questions and a short reading with comprehension questions. No login.",
+ "h1": "Spanish verb estar: practice",
+ "intro": "Estar is the «to be» of where things are and how they are right now: location, feelings, temporary states and actions in progress. Learn its forms, see each use with an example and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb estar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Location of people and things",
+   "example": "Mi casa está cerca del parque.",
+   "meaning": "My house is near the park."
+  },
+  {
+   "use": "Feelings and moods",
+   "example": "Hoy estoy muy contento.",
+   "meaning": "Today I am very happy."
+  },
+  {
+   "use": "Temporary states",
+   "example": "La sopa está fría.",
+   "meaning": "The soup is cold."
+  },
+  {
+   "use": "Actions in progress (estar + -ando / -iendo)",
+   "example": "Mis padres están cocinando.",
+   "meaning": "My parents are cooking."
+  },
+  {
+   "use": "Health",
+   "example": "¿Cómo estás? Estoy enfermo.",
+   "meaning": "How are you? I'm sick."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "estoy"
+  ],
+  [
+   "tú",
+   "estás"
+  ],
+  [
+   "él / ella / usted",
+   "está"
+  ],
+  [
+   "nosotros / nosotras",
+   "estamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "están"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "estuve"
+  ],
+  [
+   "tú",
+   "estuviste"
+  ],
+  [
+   "él / ella / usted",
+   "estuvo"
+  ],
+  [
+   "nosotros / nosotras",
+   "estuvimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "estuvieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "¿Dónde ",
+   "after": " el baño?",
+   "options": [
+    "está",
+    "es",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Location of a specific thing: está."
+  },
+  {
+   "before": "Yo ",
+   "after": " nervioso antes del examen.",
+   "options": [
+    "estoy",
+    "soy",
+    "está"
+   ],
+   "answer": 0,
+   "why": "A feeling at a moment: estoy."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " en la biblioteca ahora.",
+   "options": [
+    "estamos",
+    "somos",
+    "están"
+   ],
+   "answer": 0,
+   "why": "Location with nosotros: estamos."
+  },
+  {
+   "before": "Los estudiantes ",
+   "after": " leyendo en silencio.",
+   "options": [
+    "están",
+    "son",
+    "estamos"
+   ],
+   "answer": 0,
+   "why": "Action in progress with ellos: están + -iendo."
+  },
+  {
+   "before": "¿Cómo ",
+   "after": " tú hoy?",
+   "options": [
+    "estás",
+    "eres",
+    "está"
+   ],
+   "answer": 0,
+   "why": "How someone is today: estás."
+  },
+  {
+   "before": "El café ",
+   "after": " muy caliente; espera un poco.",
+   "options": [
+    "está",
+    "es",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "A temporary state of the coffee: está."
+  },
+  {
+   "before": "Madrid ",
+   "after": " en el centro de España.",
+   "options": [
+    "está",
+    "es",
+    "son"
+   ],
+   "answer": 0,
+   "why": "Geographical location also takes estar."
+  },
+  {
+   "before": "La puerta ",
+   "after": " abierta.",
+   "options": [
+    "está",
+    "es",
+    "son"
+   ],
+   "answer": 0,
+   "why": "The result of an action (open) is a state: está."
+  },
+  {
+   "before": "Ayer ",
+   "after": " en casa todo el día.",
+   "options": [
+    "estuve",
+    "estaba",
+    "fui"
+   ],
+   "answer": 0,
+   "why": "A closed period (todo el día, ayer): estuve."
+  },
+  {
+   "before": "El verano pasado mis primos ",
+   "after": " dos semanas en México.",
+   "options": [
+    "estuvieron",
+    "estaban",
+    "fueron estando"
+   ],
+   "answer": 0,
+   "why": "A completed stay with a set length: estuvieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "Un mensaje desde el aeropuerto",
+  "paragraphs": [
+   "¡Hola, mamá! Ya estoy en el aeropuerto de Dallas. Estoy un poco cansada porque el primer vuelo salió muy temprano, pero estoy bien. Ahora estoy sentada en un café cerca de la puerta 12. El aeropuerto está lleno de gente porque mañana es Acción de Gracias.",
+   "Mi próximo vuelo está retrasado una hora. Carlos está conmigo y está comiendo una hamburguesa enorme. Te llamo cuando estemos en Phoenix. ¿Papá está en casa o todavía está en el trabajo? Dile que su regalo está en mi maleta y que está muy bien envuelto."
+  ],
+  "comprehension": [
+   {
+    "before": "La chica está en el aeropuerto de ",
+    "after": ".",
+    "options": [
+     "Dallas",
+     "Phoenix",
+     "Houston"
+    ],
+    "answer": 0,
+    "why": "«Ya estoy en el aeropuerto de Dallas.»"
+   },
+   {
+    "before": "Ella está cansada porque ",
+    "after": ".",
+    "options": [
+     "su primer vuelo salió temprano",
+     "no durmió en el avión",
+     "trabajó mucho"
+    ],
+    "answer": 0,
+    "why": "The first flight left very early."
+   },
+   {
+    "before": "El aeropuerto está lleno porque ",
+    "after": ".",
+    "options": [
+     "mañana es Acción de Gracias",
+     "hay una tormenta",
+     "los vuelos están cancelados"
+    ],
+    "answer": 0,
+    "why": "Thanksgiving is tomorrow."
+   },
+   {
+    "before": "El regalo de papá está ",
+    "after": ".",
+    "options": [
+     "en la maleta",
+     "en el café",
+     "en casa"
+    ],
+    "answer": 0,
+    "why": "«Su regalo está en mi maleta.»"
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "La fiesta está en mi casa.",
+   "right": "La fiesta es en mi casa.",
+   "why": "Where an event happens takes ser, not estar."
+  },
+  {
+   "wrong": "Estoy aburrido = I am boring.",
+   "right": "Estoy aburrido = I am bored; soy aburrido = I am boring.",
+   "why": "Some adjectives change meaning with ser and estar."
+  },
+  {
+   "wrong": "Hay el libro en la mesa.",
+   "right": "El libro está en la mesa.",
+   "why": "Use hay for something new or indefinite and está for a specific thing."
+  }
+ ],
+ "heritage": "If you speak Spanish at home, you probably use estar correctly every day. In writing, check the accents: estás, está and están all need one, and estoy does not. Many fluent speakers also write «estábamos» without its accent. Rewrite the airport message as if you were the mother answering, using estar at least eight times.",
+ "teacher": "Teachers: the reading is a text message, a format students write every day. Ask them to underline each estar and say which use it shows (location, feeling, state, action in progress). Then they write their own message from a place they are in right now.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb estar». 5 of them ask for conjugation, charts or tenses (conjugation, conjugation chart, past tense, present tense, chart). This page adds practice to the forms: five uses, ten questions and a short text full of estar.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

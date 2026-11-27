@@ -1,0 +1,273 @@
+{
+ "verb": "haber",
+ "meaning": "there is / there are; to have (auxiliary)",
+ "level": "A2",
+ "title": "Spanish Verb Haber Practice: Hay, Había, Haber vs Tener Quiz",
+ "description": "Practice the Spanish verb haber: hay and había, the present perfect, haber vs tener, ten questions that correct themselves and a short reading. Free.",
+ "h1": "Spanish verb haber: practice",
+ "intro": "Haber has two jobs: hay («there is, there are») and the helper verb of the perfect tenses (he comido). Learn its forms, the difference with tener and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb haber",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "There is / there are: hay",
+   "example": "Hay veinte estudiantes en la clase.",
+   "meaning": "There are twenty students in the class."
+  },
+  {
+   "use": "There was / there were: había and hubo",
+   "example": "Había mucha gente en el concierto.",
+   "meaning": "There were a lot of people at the concert."
+  },
+  {
+   "use": "Present perfect: he, has, ha… + participle",
+   "example": "¿Has visto la película?",
+   "meaning": "Have you seen the movie?"
+  },
+  {
+   "use": "Obligation in general: hay que + infinitive",
+   "example": "Hay que llegar temprano.",
+   "meaning": "You have to arrive early."
+  },
+  {
+   "use": "Haber vs tener",
+   "example": "Tengo un coche. / He comprado un coche.",
+   "meaning": "I have a car. / I have bought a car."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "he"
+  ],
+  [
+   "tú",
+   "has"
+  ],
+  [
+   "él / ella / usted",
+   "ha (hay)"
+  ],
+  [
+   "nosotros / nosotras",
+   "hemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "han"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "hube"
+  ],
+  [
+   "tú",
+   "hubiste"
+  ],
+  [
+   "él / ella / usted",
+   "hubo"
+  ],
+  [
+   "nosotros / nosotras",
+   "hubimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "hubieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "En mi escuela ",
+   "after": " una piscina.",
+   "options": [
+    "hay",
+    "es",
+    "tiene"
+   ],
+   "answer": 0,
+   "why": "Existence: hay."
+  },
+  {
+   "before": "",
+   "after": " muchos estudiantes en la cafetería.",
+   "options": [
+    "Hay",
+    "Hayn",
+    "Están"
+   ],
+   "answer": 0,
+   "why": "Hay never changes for plural."
+  },
+  {
+   "before": "Ayer ",
+   "after": " un accidente en la autopista.",
+   "options": [
+    "hubo",
+    "había",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "A single event in the past: hubo."
+  },
+  {
+   "before": "Cuando era niño, ",
+   "after": " un parque cerca de mi casa.",
+   "options": [
+    "había",
+    "hubo",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Description of the past: había."
+  },
+  {
+   "before": "Yo nunca ",
+   "after": " visitado México.",
+   "options": [
+    "he",
+    "ha",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Present perfect yo: he."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " terminado la tarea?",
+   "options": [
+    "has",
+    "ha",
+    "as"
+   ],
+   "answer": 0,
+   "why": "Present perfect tú: has, with h."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " viajado a España dos veces.",
+   "options": [
+    "han",
+    "hemos",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Ellos: han."
+  },
+  {
+   "before": "",
+   "after": " que estudiar para aprobar.",
+   "options": [
+    "Hay",
+    "Tiene",
+    "Es"
+   ],
+   "answer": 0,
+   "why": "General obligation: hay que."
+  },
+  {
+   "before": "Yo ",
+   "after": " dos hermanos.",
+   "options": [
+    "tengo",
+    "he",
+    "hay"
+   ],
+   "answer": 0,
+   "why": "Possession is tener, never haber."
+  },
+  {
+   "before": "En la fiesta ",
+   "after": " muchas personas.",
+   "options": [
+    "había",
+    "habían",
+    "hubieron"
+   ],
+   "answer": 0,
+   "why": "Existential haber stays singular: había."
+  }
+ ],
+ "reading": {
+  "titleEs": "Mi pueblo antes y ahora",
+  "paragraphs": [
+   "Mi abuela creció en un pueblo pequeño de Jalisco. Dice que cuando era niña no había internet ni televisión en su casa, y que solo había una tienda en todo el pueblo. Tampoco había escuela secundaria, así que muchos jóvenes tenían que ir a la ciudad.",
+   "El verano pasado fuimos a visitar el pueblo con ella. Ahora hay dos escuelas, hay un hospital pequeño y hay internet en la plaza. Mi abuela dice que el pueblo ha cambiado mucho, pero que todavía hay algo igual: los domingos hay música en la plaza y todos bailan."
+  ],
+  "comprehension": [
+   {
+    "before": "La abuela creció en un pueblo de ",
+    "after": ".",
+    "options": [
+     "Jalisco",
+     "Oaxaca",
+     "Sonora"
+    ],
+    "answer": 0,
+    "why": "A small town in Jalisco."
+   },
+   {
+    "before": "Cuando la abuela era niña había ",
+    "after": " tienda en el pueblo.",
+    "options": [
+     "una sola",
+     "dos",
+     "ninguna"
+    ],
+    "answer": 0,
+    "why": "Only one shop."
+   },
+   {
+    "before": "Ahora en el pueblo hay ",
+    "after": ".",
+    "options": [
+     "un hospital pequeño",
+     "un aeropuerto",
+     "una universidad"
+    ],
+    "answer": 0,
+    "why": "Two schools, a small hospital and internet."
+   },
+   {
+    "before": "Lo que no ha cambiado es ",
+    "after": ".",
+    "options": [
+     "la música en la plaza los domingos",
+     "la tienda",
+     "la escuela"
+    ],
+    "answer": 0,
+    "why": "Sunday music in the square."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Habían muchas personas.",
+   "right": "Había muchas personas.",
+   "why": "When haber means «there was / there were», it stays singular."
+  },
+  {
+   "wrong": "Tengo comido.",
+   "right": "He comido.",
+   "why": "The perfect tenses use haber, not tener."
+  },
+  {
+   "wrong": "A visto la película.",
+   "right": "Ha visto la película.",
+   "why": "Ha (from haber) has an h; «a» is a preposition."
+  }
+ ],
+ "heritage": "Heritage speakers often say «habían muchas personas» or «hubieron problemas». In standard written Spanish these stay singular: había, hubo. The other big written trap is h: ha, has, he and hemos always carry it, while «a» and «ay» do not, and «haiga» is written haya. Write about your family's town or neighborhood before and now, with había and hay.",
+ "teacher": "Teachers: the reading is a «then and now» description, perfect for comparing había and hay. Students interview a family member about their town or neighborhood in the past and write a short then-and-now paragraph. Advanced students can add the present perfect: ha cambiado.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb haber». 3 of them ask for conjugation, charts or tenses (conjugation, conjugation chart, in different tenses). One of them compares haber with tener, so this page explains the difference with examples.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

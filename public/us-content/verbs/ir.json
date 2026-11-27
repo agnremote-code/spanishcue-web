@@ -1,0 +1,273 @@
+{
+ "verb": "ir",
+ "meaning": "to go",
+ "level": "A1",
+ "title": "Spanish Verb Ir Practice: Forms, Ir a + Infinitive and Quiz",
+ "description": "Practice the Spanish verb ir: present and preterite forms, ir a for future plans, ten questions that correct themselves and a short reading. Free, no login.",
+ "h1": "Spanish verb ir: practice",
+ "intro": "Ir means «to go» and it is completely irregular. It also builds the most useful future in Spanish: ir a + infinitive. Learn the forms, see the uses and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb ir",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Going somewhere: ir a + place",
+   "example": "Voy a la escuela en autobús.",
+   "meaning": "I go to school by bus."
+  },
+  {
+   "use": "Future plans: ir a + infinitive",
+   "example": "Vamos a ver una película esta noche.",
+   "meaning": "We are going to watch a movie tonight."
+  },
+  {
+   "use": "How you travel: ir en + transport",
+   "example": "Mi padre va al trabajo en tren.",
+   "meaning": "My dad goes to work by train."
+  },
+  {
+   "use": "Invitations and suggestions: vamos a…",
+   "example": "¡Vamos a la playa!",
+   "meaning": "Let's go to the beach!"
+  },
+  {
+   "use": "Past trips (preterite)",
+   "example": "El verano pasado fuimos a Cancún.",
+   "meaning": "Last summer we went to Cancún."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "voy"
+  ],
+  [
+   "tú",
+   "vas"
+  ],
+  [
+   "él / ella / usted",
+   "va"
+  ],
+  [
+   "nosotros / nosotras",
+   "vamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "van"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "fui"
+  ],
+  [
+   "tú",
+   "fuiste"
+  ],
+  [
+   "él / ella / usted",
+   "fue"
+  ],
+  [
+   "nosotros / nosotras",
+   "fuimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "fueron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " al gimnasio los lunes.",
+   "options": [
+    "voy",
+    "vas",
+    "va"
+   ],
+   "answer": 0,
+   "why": "Ir with yo: voy."
+  },
+  {
+   "before": "¿Adónde ",
+   "after": " tú después de clase?",
+   "options": [
+    "vas",
+    "va",
+    "vamos"
+   ],
+   "answer": 0,
+   "why": "Ir with tú: vas."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " a trabajar en coche.",
+   "options": [
+    "van",
+    "vamos",
+    "va"
+   ],
+   "answer": 0,
+   "why": "Ellos: van."
+  },
+  {
+   "before": "Esta noche nosotros ",
+   "after": " a cenar pizza.",
+   "options": [
+    "vamos",
+    "van",
+    "voy"
+   ],
+   "answer": 0,
+   "why": "A plan with nosotros: vamos a + infinitive."
+  },
+  {
+   "before": "Voy ",
+   "after": " la biblioteca.",
+   "options": [
+    "a",
+    "en",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Destination takes a."
+  },
+  {
+   "before": "Ana va ",
+   "after": " la escuela en bicicleta.",
+   "options": [
+    "a",
+    "al",
+    "en"
+   ],
+   "answer": 0,
+   "why": "A + la stays a la; only a + el becomes al."
+  },
+  {
+   "before": "¿Vas ",
+   "after": " cine el sábado?",
+   "options": [
+    "al",
+    "a el",
+    "en el"
+   ],
+   "answer": 0,
+   "why": "A + el contracts to al."
+  },
+  {
+   "before": "Mi hermano va a ",
+   "after": " un libro.",
+   "options": [
+    "leer",
+    "lee",
+    "leyendo"
+   ],
+   "answer": 0,
+   "why": "Ir a + infinitive: leer."
+  },
+  {
+   "before": "Ayer yo ",
+   "after": " al médico.",
+   "options": [
+    "fui",
+    "iba",
+    "voy"
+   ],
+   "answer": 0,
+   "why": "A single trip yesterday: fui."
+  },
+  {
+   "before": "¿Ustedes ",
+   "after": " a la fiesta de Marta el viernes pasado?",
+   "options": [
+    "fueron",
+    "iban",
+    "van"
+   ],
+   "answer": 0,
+   "why": "A completed event: fueron."
+  }
+ ],
+ "reading": {
+  "titleEs": "Planes para el fin de semana",
+  "paragraphs": [
+   "El viernes por la tarde, Daniela y sus amigos hablan de sus planes. Daniela va a ir al partido de béisbol con su papá, porque juegan los Astros. Su amigo Óscar no va a salir: va a quedarse en casa y va a terminar un proyecto de historia.",
+   "Las gemelas, Sara y Lucía, van al centro comercial el sábado por la mañana y después van a comer con su abuela. «¿Y el domingo?», pregunta Daniela. «Vamos todos a la playa», dice Óscar. «El domingo pasado fuimos al lago y fue muy aburrido.»"
+  ],
+  "comprehension": [
+   {
+    "before": "Daniela va al partido con ",
+    "after": ".",
+    "options": [
+     "su papá",
+     "Óscar",
+     "las gemelas"
+    ],
+    "answer": 0,
+    "why": "With her dad, to see the Astros."
+   },
+   {
+    "before": "Óscar va a terminar ",
+    "after": ".",
+    "options": [
+     "un proyecto de historia",
+     "un libro",
+     "un partido"
+    ],
+    "answer": 0,
+    "why": "A history project."
+   },
+   {
+    "before": "Sara y Lucía van a comer con ",
+    "after": ".",
+    "options": [
+     "su abuela",
+     "Daniela",
+     "su papá"
+    ],
+    "answer": 0,
+    "why": "With their grandmother."
+   },
+   {
+    "before": "El domingo pasado los amigos fueron ",
+    "after": ".",
+    "options": [
+     "al lago",
+     "a la playa",
+     "al centro comercial"
+    ],
+    "answer": 0,
+    "why": "«El domingo pasado fuimos al lago.»"
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Voy a el parque.",
+   "right": "Voy al parque.",
+   "why": "A + el always contracts to al."
+  },
+  {
+   "wrong": "Mañana voy a como.",
+   "right": "Mañana voy a comer.",
+   "why": "Ir a is followed by the infinitive."
+  },
+  {
+   "wrong": "Voy en la escuela.",
+   "right": "Voy a la escuela.",
+   "why": "Destination takes a; en is for the means of transport (en autobús)."
+  }
+ ],
+ "heritage": "For heritage speakers, the challenge with ir is spelling. Write «vamos» and «van» with v, and «iba» and «íbamos» (imperfect) with b; «íbamos» also needs an accent. «Fuistes» is common in speech but the written form is fuiste. Write about a family trip using fui, fuimos and fueron.",
+ "teacher": "Teachers: ir a + infinitive gives students a future tense on day one. After the reading, students write three plans for the weekend and then interview each other with «¿Qué vas a hacer el sábado?». The reading also models the contraction al.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb ir». 5 of them ask for conjugation, charts or tenses (conjugation, conjugation chart, in the future tense, past tense, present tense). 1 asks for practice (to go worksheet pdf). Several of them ask about the future and the past of ir, so the forms chart shows both the present and the preterite, and ir a + infinitive.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

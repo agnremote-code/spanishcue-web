@@ -1,0 +1,273 @@
+{
+ "verb": "querer",
+ "meaning": "to want, to love",
+ "level": "A1",
+ "title": "Spanish Verb Querer Practice: Forms, Uses and Self-Correcting Quiz",
+ "description": "Practice the Spanish verb querer: e-ie present forms, the preterite, wanting and loving, ten questions that correct themselves and a short reading. Free.",
+ "h1": "Spanish verb querer: practice",
+ "intro": "Querer means «to want» and, with people, «to love». It changes e to ie in the present. Learn its forms, the difference between querer and amar, and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb querer",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Wanting things",
+   "example": "Quiero un café, por favor.",
+   "meaning": "I want a coffee, please."
+  },
+  {
+   "use": "Wanting to do something: querer + infinitive",
+   "example": "Queremos viajar a Colombia.",
+   "meaning": "We want to travel to Colombia."
+  },
+  {
+   "use": "Loving people",
+   "example": "Te quiero mucho, abuela.",
+   "meaning": "I love you a lot, Grandma."
+  },
+  {
+   "use": "Wanting someone else to do something: querer que + subjunctive",
+   "example": "Mi mamá quiere que estudie más.",
+   "meaning": "My mom wants me to study more."
+  },
+  {
+   "use": "Refused (no querer in the preterite)",
+   "example": "No quiso venir a la fiesta.",
+   "meaning": "He refused to come to the party."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "quiero"
+  ],
+  [
+   "tú",
+   "quieres"
+  ],
+  [
+   "él / ella / usted",
+   "quiere"
+  ],
+  [
+   "nosotros / nosotras",
+   "queremos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "quieren"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "quise"
+  ],
+  [
+   "tú",
+   "quisiste"
+  ],
+  [
+   "él / ella / usted",
+   "quiso"
+  ],
+  [
+   "nosotros / nosotras",
+   "quisimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "quisieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " aprender a tocar la guitarra.",
+   "options": [
+    "quiero",
+    "quero",
+    "quiere"
+   ],
+   "answer": 0,
+   "why": "E changes to ie: quiero."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " tú para tu cumpleaños?",
+   "options": [
+    "quieres",
+    "queres",
+    "quiere"
+   ],
+   "answer": 0,
+   "why": "Tú: quieres."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " ir a la playa.",
+   "options": [
+    "queremos",
+    "quieremos",
+    "quieren"
+   ],
+   "answer": 0,
+   "why": "Nosotros keeps the e: queremos."
+  },
+  {
+   "before": "Mis hermanos ",
+   "after": " jugar videojuegos todo el día.",
+   "options": [
+    "quieren",
+    "queremos",
+    "quiere"
+   ],
+   "answer": 0,
+   "why": "Ellos: quieren."
+  },
+  {
+   "before": "Te ",
+   "after": " mucho, mamá.",
+   "options": [
+    "quiero",
+    "gusto",
+    "amo a"
+   ],
+   "answer": 0,
+   "why": "Love for family and friends: te quiero."
+  },
+  {
+   "before": "Mi profesora quiere que nosotros ",
+   "after": " más.",
+   "options": [
+    "leamos",
+    "leemos",
+    "leer"
+   ],
+   "answer": 0,
+   "why": "Querer que + another person takes the subjunctive: leamos."
+  },
+  {
+   "before": "Quiero ",
+   "after": " una pizza esta noche.",
+   "options": [
+    "comer",
+    "como",
+    "comiendo"
+   ],
+   "answer": 0,
+   "why": "Querer + infinitive."
+  },
+  {
+   "before": "El niño no ",
+   "after": " comer las verduras.",
+   "options": [
+    "quiso",
+    "quería que",
+    "quise"
+   ],
+   "answer": 0,
+   "why": "No quiso: he refused, one time."
+  },
+  {
+   "before": "Yo ",
+   "after": " llamarte, pero no tenía batería.",
+   "options": [
+    "quise",
+    "quisó",
+    "quiero"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: quise."
+  },
+  {
+   "before": "¿Por qué no ",
+   "after": " ustedes venir?",
+   "options": [
+    "quisieron",
+    "querieron",
+    "quisieran"
+   ],
+   "answer": 0,
+   "why": "Ellos/ustedes preterite: quisieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "El regalo perfecto",
+  "paragraphs": [
+   "Faltan dos semanas para el cumpleaños de mi mamá y mi hermano y yo queremos darle algo especial. Mi hermano quiere comprarle un teléfono nuevo, pero yo no quiero gastar tanto dinero. Además, mi mamá siempre dice que no quiere cosas caras: quiere pasar tiempo con nosotros.",
+   "Al final decidimos hacer un álbum con fotos de la familia. Le pedimos a mi papá las fotos viejas, pero al principio no quiso dárnoslas porque quería que fuera una sorpresa para él también. Cuando mi mamá abrió el regalo, lloró y dijo: «Los quiero muchísimo»."
+  ],
+  "comprehension": [
+   {
+    "before": "El hermano quiere comprar ",
+    "after": ".",
+    "options": [
+     "un teléfono nuevo",
+     "un álbum",
+     "flores"
+    ],
+    "answer": 0,
+    "why": "A new phone."
+   },
+   {
+    "before": "La mamá dice que quiere ",
+    "after": ".",
+    "options": [
+     "pasar tiempo con sus hijos",
+     "cosas caras",
+     "viajar"
+    ],
+    "answer": 0,
+    "why": "She wants to spend time with them."
+   },
+   {
+    "before": "Al final le regalan ",
+    "after": ".",
+    "options": [
+     "un álbum de fotos",
+     "un teléfono",
+     "una cena"
+    ],
+    "answer": 0,
+    "why": "A family photo album."
+   },
+   {
+    "before": "Al principio el papá no quiso ",
+    "after": ".",
+    "options": [
+     "darles las fotos viejas",
+     "ir a la fiesta",
+     "ver el regalo"
+    ],
+    "answer": 0,
+    "why": "He did not want to give them the old photos."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Quiero que tú vienes.",
+   "right": "Quiero que vengas.",
+   "why": "Querer que + a different subject takes the subjunctive."
+  },
+  {
+   "wrong": "Yo quero un taco.",
+   "right": "Yo quiero un taco.",
+   "why": "Querer changes e to ie in every present form except nosotros."
+  },
+  {
+   "wrong": "Te amo (to a friend).",
+   "right": "Te quiero.",
+   "why": "Amar is very intense; te quiero is the normal way to say «I love you» to family and friends."
+  }
+ ],
+ "heritage": "Heritage speakers often know te quiero and te amo by feeling. In writing, check «quiso» and «quise» with s, not z, and remember that «quisistes» is a spoken form: the written tú preterite is quisiste. Write a short message to someone you love using querer three different ways.",
+ "teacher": "Teachers: the reading invites a quick discussion about gifts. Students write what they want for their birthday and what a family member wants, with querer + noun and querer + infinitive. Advanced classes can add querer que + subjunctive.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish verb querer». 4 of them ask for conjugation, charts or tenses (conjugation, present tense, past tense, conjugation chart). This page adds what a conjugation chart leaves out: when querer means love, and querer que + subjunctive.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

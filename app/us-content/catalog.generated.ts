@@ -2,6 +2,125 @@
 export type UsCatalogEntry = { family: string; slug: string; level: string; theme: string; title: string };
 export const usCatalog: UsCatalogEntry[] = [
  {
+  "family": "verbs",
+  "slug": "dar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb dar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "decir",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb decir: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "estar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb estar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "gustar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb gustar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "haber",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb haber: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "hacer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb hacer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "ir",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb ir: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "jugar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb jugar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "llegar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb llegar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "poder",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb poder: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "poner",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb poner: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "querer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb querer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "saber",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb saber: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "ser",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb ser: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "tener",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb tener: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "venir",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb venir: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "ver",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb ver: practice"
+ },
+ {
   "family": "vocabulary",
   "slug": "animals",
   "level": "A1",

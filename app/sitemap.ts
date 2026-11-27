@@ -71,6 +71,8 @@ const curatedRoutes: { path: string; priority: number; changeFrequency: Frequenc
   ...["a1", "a2", "b1"].map((level) => ({ path: `/spanish-reading-comprehension/${level}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/spanish-vocabulary", priority: 0.6, changeFrequency: "monthly" },
   ...usCatalog.filter((entry) => entry.family === "vocabulary").map((entry) => ({ path: `/spanish-vocabulary/${entry.slug}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
+  { path: "/spanish-verb-practice", priority: 0.6, changeFrequency: "monthly" },
+  ...usCatalog.filter((entry) => entry.family === "verbs").map((entry) => ({ path: `/spanish-verb-practice/${entry.slug}`, priority: 0.5, changeFrequency: "monthly" as Frequency })),
   { path: "/spanish-grammar-practice", priority: 0.6, changeFrequency: "monthly" },
   { path: "/ap-spanish-language", priority: 0.6, changeFrequency: "monthly" },
   { path: "/spanish-sub-plans", priority: 0.6, changeFrequency: "monthly" },

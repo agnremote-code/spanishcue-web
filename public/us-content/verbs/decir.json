@@ -1,0 +1,273 @@
+{
+ "verb": "decir",
+ "meaning": "to say, to tell",
+ "level": "A2",
+ "title": "Spanish Verb Decir Practice: Forms, Reported Speech and Quiz",
+ "description": "Practice the Spanish verb decir: irregular present and preterite forms, reporting what people say, ten questions that correct themselves and a reading. Free.",
+ "h1": "Spanish verb decir: practice",
+ "intro": "Decir means «to say» or «to tell». It is irregular in the present (digo, dices) and the preterite (dije, dijo). Learn its forms, see how to report what someone said and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb decir",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Saying something",
+   "example": "Siempre digo la verdad.",
+   "meaning": "I always tell the truth."
+  },
+  {
+   "use": "Telling someone: decir + indirect object",
+   "example": "Le dije a mi profesor que estaba enfermo.",
+   "meaning": "I told my teacher I was sick."
+  },
+  {
+   "use": "Reporting speech: dice que…",
+   "example": "Mi mamá dice que la cena está lista.",
+   "meaning": "My mom says dinner is ready."
+  },
+  {
+   "use": "Asking how to say something",
+   "example": "¿Cómo se dice «homework» en español?",
+   "meaning": "How do you say «homework» in Spanish?"
+  },
+  {
+   "use": "Telling someone to do something: decir que + subjunctive",
+   "example": "Nos dice que estudiemos.",
+   "meaning": "She tells us to study."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "digo"
+  ],
+  [
+   "tú",
+   "dices"
+  ],
+  [
+   "él / ella / usted",
+   "dice"
+  ],
+  [
+   "nosotros / nosotras",
+   "decimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "dicen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "dije"
+  ],
+  [
+   "tú",
+   "dijiste"
+  ],
+  [
+   "él / ella / usted",
+   "dijo"
+  ],
+  [
+   "nosotros / nosotras",
+   "dijimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "dijeron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo siempre ",
+   "after": " «gracias».",
+   "options": [
+    "digo",
+    "dico",
+    "dice"
+   ],
+   "answer": 0,
+   "why": "Decir with yo: digo."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " tú?",
+   "options": [
+    "dices",
+    "dicis",
+    "dice"
+   ],
+   "answer": 0,
+   "why": "Tú: dices."
+  },
+  {
+   "before": "El profesor ",
+   "after": " que el examen es el lunes.",
+   "options": [
+    "dice",
+    "dece",
+    "dices"
+   ],
+   "answer": 0,
+   "why": "Él: dice."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " la verdad.",
+   "options": [
+    "decimos",
+    "dicimos",
+    "dicen"
+   ],
+   "answer": 0,
+   "why": "Nosotros: decimos, with e."
+  },
+  {
+   "before": "¿Cómo se ",
+   "after": " «library» en español?",
+   "options": [
+    "dice",
+    "dicen",
+    "habla"
+   ],
+   "answer": 0,
+   "why": "The set phrase is ¿Cómo se dice…?"
+  },
+  {
+   "before": "",
+   "after": " dije a mi hermana que la quería.",
+   "options": [
+    "Le",
+    "La",
+    "Lo"
+   ],
+   "answer": 0,
+   "why": "Decir algo a alguien: indirect object le."
+  },
+  {
+   "before": "Ayer mi amigo me ",
+   "after": " un secreto.",
+   "options": [
+    "dijo",
+    "dició",
+    "decía"
+   ],
+   "answer": 0,
+   "why": "Preterite él: dijo."
+  },
+  {
+   "before": "Yo te ",
+   "after": " que no era buena idea.",
+   "options": [
+    "dije",
+    "decié",
+    "dijí"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: dije, no accent."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " que podía ir al concierto.",
+   "options": [
+    "dijeron",
+    "dijieron",
+    "decieron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: dijeron, without i after j."
+  },
+  {
+   "before": "La entrenadora nos dice que ",
+   "after": " más rápido.",
+   "options": [
+    "corramos",
+    "corremos",
+    "correr"
+   ],
+   "answer": 0,
+   "why": "An instruction with decir que: subjunctive."
+  }
+ ],
+ "reading": {
+  "titleEs": "El teléfono descompuesto",
+  "paragraphs": [
+   "En la clase de español jugamos al teléfono descompuesto. La profesora le dijo una frase al oído a Brandon: «Mi perro come pizza los martes». Brandon se la dijo a Kayla, pero Kayla dice que no la escuchó bien.",
+   "Cuando llegó al último estudiante, Marcos dijo en voz alta: «Mi primo compra pizza los martes». Todos se rieron. La profesora nos dijo que el juego enseña algo importante: cuando repetimos lo que otros dicen, a veces cambiamos las palabras. Después nos pidió escribir qué dijo cada persona."
+  ],
+  "comprehension": [
+   {
+    "before": "La frase original era: «Mi perro ",
+    "after": " pizza los martes».",
+    "options": [
+     "come",
+     "compra",
+     "hace"
+    ],
+    "answer": 0,
+    "why": "«Mi perro come pizza los martes.»"
+   },
+   {
+    "before": "La profesora le dijo la frase primero a ",
+    "after": ".",
+    "options": [
+     "Brandon",
+     "Kayla",
+     "Marcos"
+    ],
+    "answer": 0,
+    "why": "To Brandon."
+   },
+   {
+    "before": "Marcos dijo que su ",
+    "after": " compra pizza.",
+    "options": [
+     "primo",
+     "perro",
+     "profesor"
+    ],
+    "answer": 0,
+    "why": "«Mi primo compra pizza los martes.»"
+   },
+   {
+    "before": "Según la profesora, el juego enseña que ",
+    "after": ".",
+    "options": [
+     "cambiamos las palabras al repetir",
+     "la pizza es buena",
+     "hay que hablar rápido"
+    ],
+    "answer": 0,
+    "why": "When we repeat what others say, we change words."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo dico.",
+   "right": "Yo digo.",
+   "why": "The yo form of decir is digo, with g."
+  },
+  {
+   "wrong": "Ellos dijieron.",
+   "right": "Ellos dijeron.",
+   "why": "After j, the preterite ending is -eron, not -ieron."
+  },
+  {
+   "wrong": "Dije a ella.",
+   "right": "Le dije.",
+   "why": "Spanish uses the indirect object pronoun le with decir."
+  }
+ ],
+ "heritage": "Heritage speakers often say «dijieron» or «dijistes» in speech. The written forms are dijeron and dijiste. Also, «decir» is written with c and the preterite with j: dije, dijo. Write what three people in your family said today, using dijo, dijeron and dice que.",
+ "teacher": "Teachers: play the telephone game from the reading in class, then ask students to report what each person said with dijo que. It is a natural way to practise the preterite of decir and simple reported speech.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb decir». 4 of them ask for conjugation, charts or tenses (conjugation, present tense, past tense, conjugation chart). Decir is irregular in both tenses, so the page puts the two charts side by side with practice for each.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

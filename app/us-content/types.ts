@@ -39,3 +39,27 @@ export type UsVocabularyPage = UsReadingPage & {
   vocabulary: { title: string; words: [string, string][] }[];
   vocabQuiz: QuizItem[];
 };
+
+/**
+ * A practice page for one high-frequency verb (family «verbs»), stored in public/us-content/verbs/<verb>.json:
+ * uses with examples, present and preterite forms, a 10-question quiz, a short reading and common mistakes.
+ */
+export type UsVerbPage = {
+  verb: string;
+  meaning: string;
+  level: "A1" | "A2";
+  title: string;
+  description: string;
+  h1: string;
+  intro: string;
+  demand: UsDemand;
+  uses: { use: string; example: string; meaning: string }[];
+  present: [string, string][];
+  preterite: [string, string][];
+  quiz: QuizItem[];
+  reading: { titleEs: string; paragraphs: string[]; comprehension: QuizItem[] };
+  mistakes: { wrong: string; right: string; why: string }[];
+  heritage: string;
+  teacher: string;
+  figure: { text: string; source: string };
+};

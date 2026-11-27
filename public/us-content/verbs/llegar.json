@@ -1,0 +1,273 @@
+{
+ "verb": "llegar",
+ "meaning": "to arrive",
+ "level": "A1",
+ "title": "Spanish Verb Llegar Practice: Forms, Llegar a and Self-Correcting Quiz",
+ "description": "Practice the Spanish verb llegar: regular present forms, the preterite llegué, llegar a and llegar tarde, ten questions that correct themselves and a reading. Free.",
+ "h1": "Spanish verb llegar: practice",
+ "intro": "Llegar means «to arrive». It is regular in the present, but its yo preterite changes spelling: llegué. Learn its forms, the preposition it takes and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb llegar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To arrive somewhere: llegar a",
+   "example": "Llegamos a Nueva York a las diez.",
+   "meaning": "We arrived in New York at ten."
+  },
+  {
+   "use": "Arriving home: llegar a casa",
+   "example": "Llego a casa a las cuatro.",
+   "meaning": "I get home at four."
+  },
+  {
+   "use": "Being late or early: llegar tarde / temprano",
+   "example": "Siempre llegas tarde.",
+   "meaning": "You're always late."
+  },
+  {
+   "use": "To reach a goal: llegar a ser",
+   "example": "Quiere llegar a ser médica.",
+   "meaning": "She wants to become a doctor."
+  },
+  {
+   "use": "Spelling change in the preterite",
+   "example": "Ayer llegué a las ocho.",
+   "meaning": "Yesterday I arrived at eight."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "llego"
+  ],
+  [
+   "tú",
+   "llegas"
+  ],
+  [
+   "él / ella / usted",
+   "llega"
+  ],
+  [
+   "nosotros / nosotras",
+   "llegamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "llegan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "llegué"
+  ],
+  [
+   "tú",
+   "llegaste"
+  ],
+  [
+   "él / ella / usted",
+   "llegó"
+  ],
+  [
+   "nosotros / nosotras",
+   "llegamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "llegaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " a la escuela a las siete y media.",
+   "options": [
+    "llego",
+    "llega",
+    "llegué ahora"
+   ],
+   "answer": 0,
+   "why": "Present yo: llego."
+  },
+  {
+   "before": "¿A qué hora ",
+   "after": " tú a casa?",
+   "options": [
+    "llegas",
+    "llegues",
+    "llega"
+   ],
+   "answer": 0,
+   "why": "Tú: llegas."
+  },
+  {
+   "before": "El avión llega ",
+   "after": " Los Ángeles a las tres.",
+   "options": [
+    "a",
+    "en",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Arriving at a place: llegar a."
+  },
+  {
+   "before": "Nosotros siempre ",
+   "after": " temprano.",
+   "options": [
+    "llegamos",
+    "llegemos",
+    "llegan"
+   ],
+   "answer": 0,
+   "why": "Nosotros: llegamos."
+  },
+  {
+   "before": "Mis amigos ",
+   "after": " tarde a la fiesta.",
+   "options": [
+    "llegan",
+    "llegamos",
+    "llega"
+   ],
+   "answer": 0,
+   "why": "Ellos: llegan."
+  },
+  {
+   "before": "Ayer yo ",
+   "after": " tarde al trabajo.",
+   "options": [
+    "llegué",
+    "llegé",
+    "llegue"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: llegué, with u to keep the hard g."
+  },
+  {
+   "before": "¿Cuándo ",
+   "after": " tus abuelos de Guatemala?",
+   "options": [
+    "llegaron",
+    "llegieron",
+    "llegó"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: llegaron."
+  },
+  {
+   "before": "El paquete ",
+   "after": " esta mañana.",
+   "options": [
+    "llegó",
+    "llego",
+    "llegué"
+   ],
+   "answer": 0,
+   "why": "Preterite él: llegó, with an accent."
+  },
+  {
+   "before": "Mi hermana quiere llegar a ",
+   "after": " ingeniera.",
+   "options": [
+    "ser",
+    "estar",
+    "es"
+   ],
+   "answer": 0,
+   "why": "Llegar a ser: to become."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " al estadio justo a tiempo ayer.",
+   "options": [
+    "llegamos",
+    "llegámos",
+    "llegemos"
+   ],
+   "answer": 0,
+   "why": "Preterite nosotros: llegamos, same as the present."
+  }
+ ],
+ "reading": {
+  "titleEs": "Llegar tarde a la entrevista",
+  "paragraphs": [
+   "Ayer Rodrigo tenía una entrevista de trabajo a las nueve en el centro de Houston. Salió de casa a las ocho, pero había un accidente en la autopista y el tráfico no se movía. A las nueve menos diez llamó a la oficina: «Lo siento, voy a llegar tarde».",
+   "Llegó a las nueve y veinte, nervioso y sin aliento. La entrevistadora sonrió: «No se preocupe, yo también llegué tarde hoy por el mismo accidente». La entrevista salió bien, y Rodrigo empieza a trabajar el lunes. Esta vez va a salir de casa una hora antes."
+  ],
+  "comprehension": [
+   {
+    "before": "La entrevista era a las ",
+    "after": ".",
+    "options": [
+     "nueve",
+     "ocho",
+     "diez"
+    ],
+    "answer": 0,
+    "why": "At nine."
+   },
+   {
+    "before": "Rodrigo llegó tarde por ",
+    "after": ".",
+    "options": [
+     "un accidente en la autopista",
+     "el autobús",
+     "su despertador"
+    ],
+    "answer": 0,
+    "why": "An accident on the highway."
+   },
+   {
+    "before": "Rodrigo llegó a las ",
+    "after": ".",
+    "options": [
+     "nueve y veinte",
+     "nueve menos diez",
+     "ocho"
+    ],
+    "answer": 0,
+    "why": "At 9:20."
+   },
+   {
+    "before": "La entrevistadora también ",
+    "after": ".",
+    "options": [
+     "llegó tarde",
+     "se enojó",
+     "canceló la entrevista"
+    ],
+    "answer": 0,
+    "why": "She was late because of the same accident."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Ayer llegé a las ocho.",
+   "right": "Ayer llegué a las ocho.",
+   "why": "Before e, g needs a u to keep its sound: llegué."
+  },
+  {
+   "wrong": "Llegué en Chicago.",
+   "right": "Llegué a Chicago.",
+   "why": "Llegar takes a for the destination."
+  },
+  {
+   "wrong": "Llego a casa ahora (meaning «I'm arriving right now»).",
+   "right": "Estoy llegando a casa.",
+   "why": "For something happening right now, use estar + llegando."
+  }
+ ],
+ "heritage": "Heritage speakers often write «llegé» or «llege». The written yo preterite is llegué, with u and an accent. «Llegastes» is a spoken form; the written tú preterite is llegaste. Write about a time you arrived late somewhere, using llegué, llegaste and llegó.",
+ "teacher": "Teachers: the reading is a short story with a twist, good for retelling. Students tell what happened hour by hour, using llegar a, llegar tarde and the preterite. It also practises the spelling change in llegué.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb llegar». 1 of them asks for conjugation, charts or tenses (conjugation). The page shows the one spelling change in the chart, llegué, and practices it.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

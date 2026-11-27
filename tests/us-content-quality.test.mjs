@@ -44,7 +44,7 @@ test('the generated catalog lists exactly the pages in public/us-content', () =>
 });
 
 test('only known families exist', () => {
-  for (const family of families) assert.ok(['vocabulary'].includes(family), `${family} has a route and a gate`);
+  for (const family of families) assert.ok(['vocabulary', 'verbs'].includes(family), `${family} has a route and a gate`);
 });
 
 test('vocabulary pages pass the gate', () => {
@@ -91,10 +91,45 @@ test('vocabulary pages pass the gate', () => {
   }
 });
 
+test('verb pages pass the gate', () => {
+  if (!families.includes('verbs')) return;
+  const pages = load('verbs');
+  const sentences = new Set();
+  for (const { slug, page } of pages) {
+    assert.doesNotMatch(JSON.stringify(page), /PENDING/, `${slug}: no placeholder left`);
+    assert.equal(slug, page.verb, `${slug}: slug is the verb`);
+    assert.match(page.level, /^(A1|A2)$/);
+    assert.ok(page.title.length <= 70, `${slug}: title at most 70 characters`);
+    assert.ok(page.description.length >= 110 && page.description.length <= 165, `${slug}: description 110-165 characters (${page.description.length})`);
+    assert.ok(page.demand?.query?.startsWith(`spanish verb ${page.verb}`) && page.demand.source && page.demand.date, `${slug}: real US demand recorded`);
+    assert.equal(page.present.length, 5, `${slug}: present forms`);
+    assert.equal(page.preterite.length, 5, `${slug}: preterite forms`);
+    assert.ok(page.uses.length >= 4 && page.mistakes.length >= 3, `${slug}: uses and mistakes`);
+    assert.ok(page.quiz.length >= 10 && page.reading.comprehension.length >= 4, `${slug}: 10 practice + 4 reading questions`);
+    checkQuiz(page.quiz, slug);
+    checkQuiz(page.reading.comprehension, slug);
+    for (const item of [...page.quiz, ...page.reading.comprehension]) {
+      const key = normal(`${item.before} ${item.after}`).trim();
+      assert.ok(!sentences.has(key), `${slug}: question repeated from another page («${item.before}…»)`);
+      sentences.add(key);
+    }
+    assert.ok(words(page.reading.paragraphs.join(' ')).length >= 80, `${slug}: reading length`);
+    assert.ok(words(strings({ ...page, demand: undefined }).join(' ')).length >= 300, `${slug}: at least 300 own words`);
+    assert.ok(words(page.heritage).length >= 30 && words(page.teacher).length >= 15 && words(page.figure.text).length >= 15, `${slug}: heritage, teacher note and figure`);
+  }
+  const sets = pages.map(({ slug, page }) => ({ slug, set: shingles(strings({ ...page, demand: undefined, present: undefined, preterite: undefined }).join(' ')) }));
+  for (let i = 0; i < sets.length; i += 1) for (let j = i + 1; j < sets.length; j += 1) {
+    const score = jaccard(sets[i].set, sets[j].set);
+    assert.ok(score < 0.3, `${sets[i].slug} and ${sets[j].slug} share ${(score * 100).toFixed(0)} % of their 5-word sequences`);
+  }
+});
+
 test('page bodies stay out of the Worker bundle', () => {
-  const route = readFileSync(resolve(root, 'app/spanish-vocabulary/[theme]/page.tsx'), 'utf8');
-  assert.match(route, /loadUsContent/);
-  assert.doesNotMatch(route, /public\/us-content|\.json['"]/);
+  for (const file of ['app/spanish-vocabulary/[theme]/page.tsx', 'app/spanish-verb-practice/[verb]/page.tsx']) {
+    const route = readFileSync(resolve(root, file), 'utf8');
+    assert.match(route, /loadUsContent/);
+    assert.doesNotMatch(route, /public\/us-content|\.json['"]/);
+  }
   const catalog = readFileSync(resolve(root, 'app/us-content/catalog.generated.ts'), 'utf8');
   assert.ok(Buffer.byteLength(catalog) < 400 * 1024, 'catalog stays small');
 });

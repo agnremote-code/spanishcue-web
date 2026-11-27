@@ -1,0 +1,273 @@
+{
+ "verb": "pedir",
+ "meaning": "to ask for, to order",
+ "level": "A2",
+ "title": "Spanish Verb Pedir Practice: Forms, Pedir vs Preguntar and Quiz",
+ "description": "Practice the Spanish verb pedir: e-i present forms, the preterite pidió, pedir vs preguntar, ten questions that correct themselves and a reading. Free.",
+ "h1": "Spanish verb pedir: practice",
+ "intro": "Pedir means «to ask for» or «to order» something; preguntar means to ask a question. Pedir changes e to i (pido, pidió). Learn its forms and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb pedir",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To ask for something",
+   "example": "Le pido ayuda a mi profesor.",
+   "meaning": "I ask my teacher for help."
+  },
+  {
+   "use": "To order food",
+   "example": "¿Qué vas a pedir?",
+   "meaning": "What are you going to order?"
+  },
+  {
+   "use": "To ask someone to do something: pedir que + subjunctive",
+   "example": "Mi mamá me pide que limpie mi cuarto.",
+   "meaning": "My mom asks me to clean my room."
+  },
+  {
+   "use": "To borrow: pedir prestado",
+   "example": "Te pido prestado un lápiz.",
+   "meaning": "Can I borrow a pencil?"
+  },
+  {
+   "use": "Pedir vs preguntar",
+   "example": "Le pregunto la hora y le pido un favor.",
+   "meaning": "I ask him the time and ask him for a favor."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "pido"
+  ],
+  [
+   "tú",
+   "pides"
+  ],
+  [
+   "él / ella / usted",
+   "pide"
+  ],
+  [
+   "nosotros / nosotras",
+   "pedimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "piden"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "pedí"
+  ],
+  [
+   "tú",
+   "pediste"
+  ],
+  [
+   "él / ella / usted",
+   "pidió"
+  ],
+  [
+   "nosotros / nosotras",
+   "pedimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "pidieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo siempre ",
+   "after": " tacos al pastor.",
+   "options": [
+    "pido",
+    "pedo",
+    "pide"
+   ],
+   "answer": 0,
+   "why": "E changes to i: pido."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " tú para tu cumpleaños?",
+   "options": [
+    "pides",
+    "pedes",
+    "pide"
+   ],
+   "answer": 0,
+   "why": "Tú: pides."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " una pizza grande.",
+   "options": [
+    "pedimos",
+    "pidimos",
+    "piden"
+   ],
+   "answer": 0,
+   "why": "Nosotros keeps the e: pedimos."
+  },
+  {
+   "before": "Mis padres me ",
+   "after": " que llegue temprano.",
+   "options": [
+    "piden",
+    "preguntan",
+    "pedimos"
+   ],
+   "answer": 0,
+   "why": "Asking someone to do something: pedir que."
+  },
+  {
+   "before": "Le ",
+   "after": " a la profesora si hay examen.",
+   "options": [
+    "pregunto",
+    "pido",
+    "pide"
+   ],
+   "answer": 0,
+   "why": "A question for information: preguntar."
+  },
+  {
+   "before": "Le ",
+   "after": " a mi amigo diez dólares.",
+   "options": [
+    "pido",
+    "pregunto",
+    "pide a"
+   ],
+   "answer": 0,
+   "why": "Asking for something: pedir."
+  },
+  {
+   "before": "Ayer mi hermano ",
+   "after": " una hamburguesa doble.",
+   "options": [
+    "pidió",
+    "pedió",
+    "pidio"
+   ],
+   "answer": 0,
+   "why": "Preterite él: pidió, e to i."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " ustedes en el restaurante?",
+   "options": [
+    "pidieron",
+    "pedieron",
+    "pidimos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: pidieron."
+  },
+  {
+   "before": "¿Me ",
+   "after": " prestado tu cargador?",
+   "options": [
+    "dejas",
+    "pides",
+    "preguntas"
+   ],
+   "answer": 0,
+   "why": "Lending is dejar or prestar; pedir prestado is what the borrower does."
+  },
+  {
+   "before": "Te pido que me ",
+   "after": " con la tarea.",
+   "options": [
+    "ayudes",
+    "ayudas",
+    "ayudar"
+   ],
+   "answer": 0,
+   "why": "Pedir que + subjunctive: ayudes."
+  }
+ ],
+ "reading": {
+  "titleEs": "Pedir en el food truck",
+  "paragraphs": [
+   "Cada viernes, después del trabajo, Lupe y sus compañeros van al food truck de don Memo, en Austin. Lupe siempre pide lo mismo: dos tacos de carnitas y un agua de horchata. Su compañero Kevin nunca sabe qué pedir y le pregunta a don Memo qué recomienda.",
+   "El viernes pasado, Kevin pidió algo nuevo: una gringa, que es una tortilla de harina con carne y queso. Le gustó tanto que pidió otra. Al final le pidió a don Memo la receta, pero él solo se rio: «Eso no se pide, eso se aprende viniendo cada viernes»."
+  ],
+  "comprehension": [
+   {
+    "before": "Lupe siempre pide ",
+    "after": ".",
+    "options": [
+     "tacos de carnitas",
+     "una gringa",
+     "una pizza"
+    ],
+    "answer": 0,
+    "why": "Two carnitas tacos and horchata."
+   },
+   {
+    "before": "Kevin le pregunta a don Memo ",
+    "after": ".",
+    "options": [
+     "qué recomienda",
+     "cuánto cuesta",
+     "la hora"
+    ],
+    "answer": 0,
+    "why": "What he recommends."
+   },
+   {
+    "before": "Una gringa es ",
+    "after": ".",
+    "options": [
+     "una tortilla de harina con carne y queso",
+     "un postre",
+     "una bebida"
+    ],
+    "answer": 0,
+    "why": "A flour tortilla with meat and cheese."
+   },
+   {
+    "before": "Al final Kevin le pidió a don Memo ",
+    "after": ".",
+    "options": [
+     "la receta",
+     "un descuento",
+     "otra horchata"
+    ],
+    "answer": 0,
+    "why": "The recipe."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Pido una pregunta.",
+   "right": "Hago una pregunta. / Pregunto.",
+   "why": "Pedir is for things or favors; questions use preguntar or hacer una pregunta."
+  },
+  {
+   "wrong": "Él pedió.",
+   "right": "Él pidió.",
+   "why": "In the preterite, e changes to i in the él and ellos forms."
+  },
+  {
+   "wrong": "Pido a mi mamá dinero.",
+   "right": "Le pido dinero a mi mamá.",
+   "why": "Pedir usually goes with the indirect object pronoun le."
+  }
+ ],
+ "heritage": "Heritage speakers sometimes say «pidí» or «pidimos» in the past. The written forms are pedí and pedimos (with e); only pidió and pidieron change to i. Write about a time you ordered food somewhere new, using pedir and preguntar.",
+ "teacher": "Teachers: set up the food truck from the reading in class with a simple menu. Students order with pido and quisiera, ask questions with preguntar, and report afterwards what each classmate pidió.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish verb pedir». 1 of them asks for conjugation, charts or tenses (conjugation). Searchers mix up pedir and preferir and preguntar, so the page practices the difference.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
