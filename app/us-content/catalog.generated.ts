@@ -178,6 +178,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "breakfast",
+  "level": "A1",
+  "theme": "breakfast",
+  "title": "Spanish breakfast vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "business",
   "level": "A2",
   "theme": "business",
@@ -234,6 +241,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "day-of-the-dead",
+  "level": "A2",
+  "theme": "day-of-the-dead",
+  "title": "Spanish Day of the Dead vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "emotions",
   "level": "A1",
   "theme": "emotions",
@@ -266,6 +280,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "friends",
   "title": "Spanish words for friends"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "greetings",
+  "level": "A1",
+  "theme": "greetings",
+  "title": "Spanish greetings vocabulary"
  },
  {
   "family": "vocabulary",

@@ -1,0 +1,364 @@
+{
+ "level": "A1",
+ "theme": "greetings",
+ "themeLabel": "Greetings",
+ "title": "Spanish Greetings Vocabulary: Hello, Goodbye and Practice",
+ "description": "Spanish greetings and goodbyes: hola, buenos días, mucho gusto, hasta luego, tú or usted, with a self-correcting quiz and an A1 reading about a first day at work.",
+ "h1": "Spanish greetings vocabulary",
+ "titleEs": "El primer día en la clínica",
+ "focus": "greetings with tú and usted",
+ "intro": "Learn how to greet people and say goodbye in Spanish, formally and informally, how to introduce yourself and how to answer ¿Cómo estás? Practice with instant feedback, then read about a first day at a new job.",
+ "paragraphs": [
+  "Hoy es el primer día de Sofía en una clínica de Phoenix. Llega a las ocho menos cuarto y saluda a la recepcionista: «Buenos días». La recepcionista sonríe: «Buenos días. ¿Usted es Sofía? Bienvenida». Sofía responde: «Sí, me llamo Sofía Ramos. Mucho gusto».",
+  "Después llega la doctora Méndez. Sofía le dice: «Buenos días, doctora. ¿Cómo está usted?». La doctora contesta: «Muy bien, gracias. Te presento a Javier, tu compañero». Javier le da la mano: «Hola, Sofía. Encantado». «Igualmente», dice ella.",
+  "A mediodía, Javier le pregunta: «¿Qué tal tu primer día?». Sofía dice: «Bien, un poco nerviosa, pero bien». A las cinco, Sofía se despide de todos: «Hasta mañana. Que les vaya bien». La recepcionista le dice: «Nos vemos, Sofía». En el autobús, Sofía piensa en su día. Todos fueron amables con ella. Mañana va a saludar a todos por su nombre."
+ ],
+ "glossary": [
+  [
+   "saludar",
+   "to greet"
+  ],
+  [
+   "sonreír",
+   "to smile"
+  ],
+  [
+   "responder",
+   "to answer"
+  ],
+  [
+   "dar la mano",
+   "to shake hands"
+  ],
+  [
+   "el compañero",
+   "coworker"
+  ],
+  [
+   "nervioso / nerviosa",
+   "nervous"
+  ],
+  [
+   "despedirse",
+   "to say goodbye"
+  ],
+  [
+   "a mediodía",
+   "at noon"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Sofía trabaja en una ",
+   "after": ".",
+   "options": [
+    "clínica",
+    "escuela",
+    "tienda"
+   ],
+   "answer": 0,
+   "why": "In a clinic in Phoenix."
+  },
+  {
+   "before": "Sofía llega a las ",
+   "after": ".",
+   "options": [
+    "ocho menos cuarto",
+    "nueve",
+    "cinco"
+   ],
+   "answer": 0,
+   "why": "At a quarter to eight."
+  },
+  {
+   "before": "A la doctora, Sofía le habla de ",
+   "after": ".",
+   "options": [
+    "usted",
+    "tú",
+    "ustedes"
+   ],
+   "answer": 0,
+   "why": "She uses the formal usted with the doctor."
+  },
+  {
+   "before": "Javier es el ",
+   "after": " de Sofía.",
+   "options": [
+    "compañero",
+    "jefe",
+    "paciente"
+   ],
+   "answer": 0,
+   "why": "Her coworker."
+  },
+  {
+   "before": "A mediodía, Sofía se siente ",
+   "after": ".",
+   "options": [
+    "un poco nerviosa",
+    "muy cansada",
+    "enferma"
+   ],
+   "answer": 0,
+   "why": "A little nervous, but fine."
+  },
+  {
+   "before": "A las cinco, Sofía dice: «",
+   "after": "».",
+   "options": [
+    "Hasta mañana",
+    "Buenos días",
+    "Mucho gusto"
+   ],
+   "answer": 0,
+   "why": "She leaves: hasta mañana."
+  }
+ ],
+ "grammar": {
+  "title": "Tú or usted in greetings",
+  "intro": "With friends and young people, use tú (¿cómo estás?); with older people, bosses and strangers, usted (¿cómo está?).",
+  "items": [
+   {
+    "before": "Señor García, ¿cómo ",
+    "after": "?",
+    "options": [
+     "está",
+     "estás",
+     "estoy"
+    ],
+    "answer": 0,
+    "why": "Formal usted: está."
+   },
+   {
+    "before": "Hola, Ana, ¿qué tal ",
+    "after": " fin de semana?",
+    "options": [
+     "tu",
+     "su usted",
+     "tus"
+    ],
+    "answer": 0,
+    "why": "With a friend: tu fin de semana."
+   },
+   {
+    "before": "Doctora, le ",
+    "after": " a mi madre.",
+    "options": [
+     "presento",
+     "presentas",
+     "presentan"
+    ],
+    "answer": 0,
+    "why": "Yo le presento: let me introduce."
+   }
+  ]
+ },
+ "speaking": [
+  "Saluda a tu profesor y a un compañero: ¿qué cambia?",
+  "Preséntate: tu nombre, de dónde eres y qué te gusta.",
+  "¿Cómo se saluda en tu familia: con un beso, la mano o un abrazo?"
+ ],
+ "heritage": "Heritage speakers usually greet naturally but may use tú with everyone. In formal settings (a job interview, an office, older people you don't know), switch to usted: «¿Cómo está?», «Mucho gusto, señora». Also note that a woman says «encantada» and a man «encantado».",
+ "teacher": "Have students walk around and greet five classmates, then switch roles: half are bosses or older neighbors and must be greeted with usted. Finish with goodbyes.",
+ "vocabulary": [
+  {
+   "title": "Hello",
+   "words": [
+    [
+     "hola",
+     "hi, hello"
+    ],
+    [
+     "buenos días",
+     "good morning"
+    ],
+    [
+     "buenas tardes",
+     "good afternoon"
+    ],
+    [
+     "buenas noches",
+     "good evening, good night"
+    ],
+    [
+     "¿Qué tal?",
+     "How's it going?"
+    ],
+    [
+     "¿Cómo estás?",
+     "How are you? (tú)"
+    ],
+    [
+     "¿Cómo está usted?",
+     "How are you? (formal)"
+    ]
+   ]
+  },
+  {
+   "title": "Meeting someone",
+   "words": [
+    [
+     "me llamo…",
+     "my name is…"
+    ],
+    [
+     "mucho gusto",
+     "nice to meet you"
+    ],
+    [
+     "encantado / encantada",
+     "pleased to meet you"
+    ],
+    [
+     "igualmente",
+     "likewise"
+    ],
+    [
+     "le presento a…",
+     "let me introduce… (formal)"
+    ],
+    [
+     "te presento a…",
+     "let me introduce… (tú)"
+    ],
+    [
+     "bienvenido / bienvenida",
+     "welcome"
+    ]
+   ]
+  },
+  {
+   "title": "Goodbye and answers",
+   "words": [
+    [
+     "adiós",
+     "goodbye"
+    ],
+    [
+     "hasta luego",
+     "see you later"
+    ],
+    [
+     "hasta mañana",
+     "see you tomorrow"
+    ],
+    [
+     "nos vemos",
+     "see you"
+    ],
+    [
+     "que te vaya bien",
+     "take care, have a good one"
+    ],
+    [
+     "bien, gracias, ¿y tú?",
+     "fine, thanks, and you?"
+    ],
+    [
+     "más o menos",
+     "so-so"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Son las nueve de la mañana. Llegas a la escuela y dices: «Buenos ",
+   "after": "».",
+   "options": [
+    "días",
+    "tardes",
+    "noches"
+   ],
+   "answer": 0,
+   "why": "In the morning: buenos días."
+  },
+  {
+   "before": "Conoces a una persona nueva y dices: «Mucho ",
+   "after": "».",
+   "options": [
+    "gusto",
+    "tal",
+    "luego"
+   ],
+   "answer": 0,
+   "why": "Nice to meet you: mucho gusto."
+  },
+  {
+   "before": "—Mucho gusto. —",
+   "after": ".",
+   "options": [
+    "Igualmente",
+    "Adiós",
+    "Buenas noches"
+   ],
+   "answer": 0,
+   "why": "Likewise: igualmente."
+  },
+  {
+   "before": "Para saludar a tu profesora con respeto preguntas: «¿Cómo ",
+   "after": " usted?»",
+   "options": [
+    "está",
+    "estás",
+    "están"
+   ],
+   "answer": 0,
+   "why": "Formal: ¿cómo está usted?"
+  },
+  {
+   "before": "Te vas de la fiesta y vas a ver a tus amigos mañana: «Hasta ",
+   "after": "».",
+   "options": [
+    "mañana",
+    "luego no",
+    "días"
+   ],
+   "answer": 0,
+   "why": "See you tomorrow: hasta mañana."
+  },
+  {
+   "before": "—¿Cómo estás? —Bien, gracias, ¿y ",
+   "after": "?",
+   "options": [
+    "tú",
+    "usted es",
+    "él"
+   ],
+   "answer": 0,
+   "why": "Answering a friend: ¿y tú?"
+  },
+  {
+   "before": "Una mujer dice al conocerte: «",
+   "after": "».",
+   "options": [
+    "Encantada",
+    "Encantado",
+    "Encantados"
+   ],
+   "answer": 0,
+   "why": "A woman says encantada."
+  },
+  {
+   "before": "Al llegar a tu nueva escuela, el director te dice: «¡",
+   "after": " a la escuela!»",
+   "options": [
+    "Bienvenido",
+    "Adiós",
+    "Hasta luego"
+   ],
+   "answer": 0,
+   "why": "Welcome: bienvenido."
+  }
+ ],
+ "demand": {
+  "query": "spanish greetings vocabulary list",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish greetings vocabulary». Most of them ask for a list of greetings and goodbyes, so both are grouped here, with the formal and informal options side by side.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

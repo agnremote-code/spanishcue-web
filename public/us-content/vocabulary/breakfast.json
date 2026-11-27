@@ -1,0 +1,364 @@
+{
+ "level": "A1",
+ "theme": "breakfast",
+ "themeLabel": "Breakfast",
+ "title": "Spanish Breakfast Vocabulary: Desayuno Words with Practice",
+ "description": "Spanish breakfast words: huevos, pan tostado, café con leche and Latin American breakfasts, with a self-correcting quiz and an A1 reading about a Sunday breakfast.",
+ "h1": "Spanish breakfast vocabulary",
+ "titleEs": "El desayuno del domingo",
+ "focus": "the present tense to describe routines",
+ "intro": "Learn the Spanish words for breakfast food and drinks, from eggs and toast to chilaquiles and arepas, and how to say what you have in the morning. Practice them with instant feedback, then read about a family's Sunday breakfast.",
+ "paragraphs": [
+  "De lunes a viernes, Andrés y su familia desayunan rápido en su casa de Nueva York: cereal con leche, un yogur o pan tostado con mantequilla. Su mamá toma café con leche de pie, porque siempre tiene prisa.",
+  "Pero los domingos todo es diferente. El papá de Andrés es dominicano y prepara mangú con huevos fritos y salami. La mamá es de México y hace chilaquiles verdes con crema y queso. Andrés pone la mesa y prepara el jugo de naranja.",
+  "Nadie tiene prisa. Desayunan juntos a las diez, hablan de la semana y escuchan música. Andrés siempre dice que el domingo tiene dos desayunos, uno dominicano y uno mexicano, y que por eso es su día favorito. A veces sus abuelos vienen también, y entonces la mesa es todavía más grande y más ruidosa. Su abuela siempre trae pan dulce de una panadería del barrio."
+ ],
+ "glossary": [
+  [
+   "rápido",
+   "quickly"
+  ],
+  [
+   "de pie",
+   "standing up"
+  ],
+  [
+   "tener prisa",
+   "to be in a hurry"
+  ],
+  [
+   "frito",
+   "fried"
+  ],
+  [
+   "poner la mesa",
+   "to set the table"
+  ],
+  [
+   "juntos",
+   "together"
+  ],
+  [
+   "la semana",
+   "the week"
+  ],
+  [
+   "favorito",
+   "favorite"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "De lunes a viernes, la familia desayuna ",
+   "after": ".",
+   "options": [
+    "rápido",
+    "a las diez",
+    "en un restaurante"
+   ],
+   "answer": 0,
+   "why": "Quickly on weekdays."
+  },
+  {
+   "before": "La mamá toma café ",
+   "after": ".",
+   "options": [
+    "de pie",
+    "en la cama",
+    "en el carro"
+   ],
+   "answer": 0,
+   "why": "Standing up, in a hurry."
+  },
+  {
+   "before": "El papá de Andrés es ",
+   "after": ".",
+   "options": [
+    "dominicano",
+    "mexicano",
+    "venezolano"
+   ],
+   "answer": 0,
+   "why": "He is Dominican."
+  },
+  {
+   "before": "La mamá prepara ",
+   "after": ".",
+   "options": [
+    "chilaquiles verdes",
+    "arepas",
+    "panqueques"
+   ],
+   "answer": 0,
+   "why": "Green chilaquiles."
+  },
+  {
+   "before": "Andrés prepara ",
+   "after": ".",
+   "options": [
+    "el jugo de naranja",
+    "el mangú",
+    "el café"
+   ],
+   "answer": 0,
+   "why": "He makes the orange juice."
+  },
+  {
+   "before": "El domingo es el día favorito de Andrés porque ",
+   "after": ".",
+   "options": [
+    "tiene dos desayunos",
+    "no hay escuela",
+    "va al parque"
+   ],
+   "answer": 0,
+   "why": "Two breakfasts, Dominican and Mexican."
+  }
+ ],
+ "grammar": {
+  "title": "Desayunar: talking about what you eat",
+  "intro": "Desayunar is a regular -ar verb: desayuno, desayunas, desayuna, desayunamos, desayunan.",
+  "items": [
+   {
+    "before": "Yo ",
+    "after": " a las siete.",
+    "options": [
+     "desayuno",
+     "desayuna",
+     "desayunas"
+    ],
+    "answer": 0,
+    "why": "Yo: desayuno."
+   },
+   {
+    "before": "¿Qué ",
+    "after": " tú normalmente?",
+    "options": [
+     "desayunas",
+     "desayuno",
+     "desayunan"
+    ],
+    "answer": 0,
+    "why": "Tú: desayunas."
+   },
+   {
+    "before": "Mis hermanos ",
+    "after": " cereal todos los días.",
+    "options": [
+     "desayunan",
+     "desayuna",
+     "desayunamos"
+    ],
+    "answer": 0,
+    "why": "Ellos: desayunan."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué desayunas normalmente entre semana?",
+  "¿Cuál es tu desayuno favorito del fin de semana?",
+  "¿Conoces un desayuno típico de otro país hispano?"
+ ],
+ "heritage": "Breakfast words change by country: jugo (Latin America) and zumo (Spain), panqueques or hot cakes, tocino or bacón. If your family uses a regional word, keep it, and learn the others so you understand menus everywhere.",
+ "teacher": "Ask students to design a breakfast menu for a café with prices in dollars, then order from a partner's menu with Quiero… y para beber…",
+ "vocabulary": [
+  {
+   "title": "Food",
+   "words": [
+    [
+     "los huevos",
+     "eggs"
+    ],
+    [
+     "los huevos revueltos",
+     "scrambled eggs"
+    ],
+    [
+     "el pan tostado",
+     "toast"
+    ],
+    [
+     "la mantequilla",
+     "butter"
+    ],
+    [
+     "la mermelada",
+     "jam"
+    ],
+    [
+     "el cereal",
+     "cereal"
+    ],
+    [
+     "el yogur",
+     "yogurt"
+    ],
+    [
+     "los panqueques",
+     "pancakes"
+    ],
+    [
+     "el tocino",
+     "bacon"
+    ]
+   ]
+  },
+  {
+   "title": "Drinks",
+   "words": [
+    [
+     "el café con leche",
+     "coffee with milk"
+    ],
+    [
+     "el jugo de naranja",
+     "orange juice"
+    ],
+    [
+     "el té",
+     "tea"
+    ],
+    [
+     "la leche",
+     "milk"
+    ],
+    [
+     "el chocolate caliente",
+     "hot chocolate"
+    ]
+   ]
+  },
+  {
+   "title": "Typical breakfasts",
+   "words": [
+    [
+     "los chilaquiles",
+     "chilaquiles (Mexico)"
+    ],
+    [
+     "los huevos rancheros",
+     "ranch-style eggs"
+    ],
+    [
+     "las arepas",
+     "arepas (Venezuela, Colombia)"
+    ],
+    [
+     "el mangú",
+     "mangú, mashed plantains (Dominican Republic)"
+    ],
+    [
+     "la tostada con aceite de oliva",
+     "toast with olive oil (Spain)"
+    ],
+    [
+     "desayunar",
+     "to have breakfast"
+    ],
+    [
+     "el desayuno",
+     "breakfast"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Por la mañana, antes de la escuela, yo ",
+   "after": ".",
+   "options": [
+    "desayuno",
+    "almuerzo",
+    "ceno"
+   ],
+   "answer": 0,
+   "why": "The morning meal: desayunar."
+  },
+  {
+   "before": "Me gusta el pan tostado con ",
+   "after": " y mermelada.",
+   "options": [
+    "mantequilla",
+    "tocino",
+    "jugo"
+   ],
+   "answer": 0,
+   "why": "Toast with butter and jam."
+  },
+  {
+   "before": "Mi papá toma café con ",
+   "after": " todos los días.",
+   "options": [
+    "leche",
+    "huevos",
+    "cereal"
+   ],
+   "answer": 0,
+   "why": "Café con leche."
+  },
+  {
+   "before": "Los huevos mezclados en la sartén son huevos ",
+   "after": ".",
+   "options": [
+    "revueltos",
+    "rancheros",
+    "tostados"
+   ],
+   "answer": 0,
+   "why": "Scrambled: revueltos."
+  },
+  {
+   "before": "En Venezuela y Colombia, un desayuno típico son las ",
+   "after": ".",
+   "options": [
+    "arepas",
+    "panqueques",
+    "tostadas francesas"
+   ],
+   "answer": 0,
+   "why": "Arepas are typical there."
+  },
+  {
+   "before": "Para beber, quiero un jugo de ",
+   "after": ".",
+   "options": [
+    "naranja",
+    "tocino",
+    "yogur"
+   ],
+   "answer": 0,
+   "why": "Orange juice."
+  },
+  {
+   "before": "Los chilaquiles son un desayuno típico de ",
+   "after": ".",
+   "options": [
+    "México",
+    "España",
+    "Argentina"
+   ],
+   "answer": 0,
+   "why": "Chilaquiles are Mexican."
+  },
+  {
+   "before": "El mangú, de plátano verde, es típico de ",
+   "after": ".",
+   "options": [
+    "la República Dominicana",
+    "Chile",
+    "Uruguay"
+   ],
+   "answer": 0,
+   "why": "Mangú is Dominican."
+  }
+ ],
+ "demand": {
+  "query": "spanish breakfast vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish breakfast vocabulary». Two ask what a Spanish breakfast is, so the list adds typical breakfasts from Spain, Mexico and the Caribbean next to the basics.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

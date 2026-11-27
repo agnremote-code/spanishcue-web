@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "day-of-the-dead",
+ "themeLabel": "Day of the Dead",
+ "title": "Spanish Day of the Dead Vocabulary: Ofrenda, Altar and Practice",
+ "description": "Day of the Dead vocabulary in Spanish: the ofrenda, pan de muerto, cempasúchil and calaveras, with a self-correcting quiz and an A2 reading about a family altar.",
+ "h1": "Spanish Day of the Dead vocabulary",
+ "titleEs": "La ofrenda de la abuela Rosa",
+ "focus": "the present tense for traditions and the imperfect for memories",
+ "intro": "Learn the Spanish words for Día de Muertos: the altar and what goes on it, the food, the flowers and the verbs for remembering. Practice them with instant feedback, then read how a family in San Antonio builds its ofrenda.",
+ "paragraphs": [
+  "Cada año, a finales de octubre, la familia Treviño prepara una ofrenda en la sala de su casa en San Antonio. Este año es especial: es el primer Día de Muertos sin la abuela Rosa, que murió en marzo. Su nieta Ximena, de quince años, ayuda a su mamá por primera vez.",
+  "Primero ponen una mesa con tres niveles y la cubren con un mantel blanco. Arriba colocan la foto de la abuela y una cruz. Después ponen veladoras, un vaso de agua, un poco de sal y papel picado morado y naranja. El papá trae un ramo grande de cempasúchil y hace un camino de pétalos desde la puerta hasta el altar.",
+  "Luego viene la comida. La abuela Rosa preparaba el mejor mole de la familia, así que la tía Lupe cocina la receta de la abuela. También ponen pan de muerto, calaveras de azúcar con los nombres de todos y una taza de chocolate caliente, porque la abuela tomaba chocolate cada noche.",
+  "El 2 de noviembre, la familia visita el cementerio y limpia la tumba. Por la noche, todos se sientan frente a la ofrenda y cuentan anécdotas. Ximena recuerda que su abuela le cantaba canciones de Monterrey. Sus primos se ríen, la mamá llora un poco y Ximena entiende algo nuevo: la ofrenda no es triste, es una forma de seguir juntos."
+ ],
+ "glossary": [
+  [
+   "a finales de",
+   "at the end of"
+  ],
+  [
+   "el nivel",
+   "level, tier"
+  ],
+  [
+   "el mantel",
+   "tablecloth"
+  ],
+  [
+   "colocar",
+   "to place"
+  ],
+  [
+   "el ramo",
+   "bunch, bouquet"
+  ],
+  [
+   "el camino",
+   "path"
+  ],
+  [
+   "limpiar",
+   "to clean"
+  ],
+  [
+   "seguir juntos",
+   "to stay together"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia Treviño vive en ",
+   "after": ".",
+   "options": [
+    "San Antonio",
+    "Monterrey",
+    "Los Ángeles"
+   ],
+   "answer": 0,
+   "why": "In San Antonio."
+  },
+  {
+   "before": "Este año es especial porque ",
+   "after": ".",
+   "options": [
+    "es el primero sin la abuela Rosa",
+    "Ximena cumple quince años",
+    "viajan a México"
+   ],
+   "answer": 0,
+   "why": "The first Day of the Dead without grandma Rosa."
+  },
+  {
+   "before": "El papá hace un camino de pétalos desde ",
+   "after": ".",
+   "options": [
+    "la puerta hasta el altar",
+    "la cocina hasta el patio",
+    "el cementerio hasta la casa"
+   ],
+   "answer": 0,
+   "why": "From the door to the altar."
+  },
+  {
+   "before": "La tía Lupe cocina ",
+   "after": ".",
+   "options": [
+    "el mole de la abuela",
+    "tamales nuevos",
+    "pan de muerto"
+   ],
+   "answer": 0,
+   "why": "Grandma's mole recipe."
+  },
+  {
+   "before": "Ponen chocolate caliente porque ",
+   "after": ".",
+   "options": [
+    "la abuela lo tomaba cada noche",
+    "a Ximena le encanta",
+    "es la tradición de Texas"
+   ],
+   "answer": 0,
+   "why": "Grandma drank it every night."
+  },
+  {
+   "before": "Al final, Ximena entiende que la ofrenda ",
+   "after": ".",
+   "options": [
+    "es una forma de seguir juntos",
+    "es muy triste",
+    "es solo decoración"
+   ],
+   "answer": 0,
+   "why": "It is a way to stay together."
+  }
+ ],
+ "grammar": {
+  "title": "Imperfect for memories of a person",
+  "intro": "To remember what someone used to do, Spanish uses the imperfect: la abuela preparaba mole.",
+  "items": [
+   {
+    "before": "Mi abuelo ",
+    "after": " el periódico todas las mañanas.",
+    "options": [
+     "leía",
+     "leyó",
+     "lee"
+    ],
+    "answer": 0,
+    "why": "A past habit: leía."
+   },
+   {
+    "before": "La abuela nos ",
+    "after": " canciones antes de dormir.",
+    "options": [
+     "cantaba",
+     "cantó una vez",
+     "canta"
+    ],
+    "answer": 0,
+    "why": "A repeated past action: cantaba."
+   },
+   {
+    "before": "Cuando yo era niña, mis tíos ",
+    "after": " en Monterrey.",
+    "options": [
+     "vivían",
+     "vivieron",
+     "viven"
+    ],
+    "answer": 0,
+    "why": "Background in the past: vivían."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué pondrías en una ofrenda para alguien importante para ti?",
+  "¿Qué tradiciones tiene tu familia para recordar a alguien?",
+  "Compara el Día de Muertos con Halloween: ¿en qué se parecen y en qué no?"
+ ],
+ "heritage": "If your family celebrates Día de Muertos, you probably know many of these words already, maybe with regional names: cempasúchil is also cempoal or flor de muerto, and the cemetery is often el panteón in Mexico. Writing the words of your own family altar is a good way to keep them.",
+ "teacher": "Day of the Dead is a living tradition for many students, so invite them to share only what they want. A small class ofrenda for a famous person, labeled in Spanish, is a respectful way to use the vocabulary.",
+ "vocabulary": [
+  {
+   "title": "The altar",
+   "words": [
+    [
+     "la ofrenda",
+     "offering, altar"
+    ],
+    [
+     "el altar",
+     "altar"
+    ],
+    [
+     "la foto del difunto",
+     "photo of the deceased"
+    ],
+    [
+     "la veladora / la vela",
+     "candle"
+    ],
+    [
+     "el papel picado",
+     "cut tissue-paper banners"
+    ],
+    [
+     "el incienso / el copal",
+     "incense, copal resin"
+    ],
+    [
+     "la cruz",
+     "cross"
+    ],
+    [
+     "el agua y la sal",
+     "water and salt"
+    ]
+   ]
+  },
+  {
+   "title": "Food and flowers",
+   "words": [
+    [
+     "el pan de muerto",
+     "bread of the dead"
+    ],
+    [
+     "la calavera de azúcar",
+     "sugar skull"
+    ],
+    [
+     "el cempasúchil",
+     "marigold"
+    ],
+    [
+     "los pétalos",
+     "petals"
+    ],
+    [
+     "el mole",
+     "mole sauce"
+    ],
+    [
+     "los tamales",
+     "tamales"
+    ],
+    [
+     "el chocolate caliente",
+     "hot chocolate"
+    ],
+    [
+     "la fruta de temporada",
+     "seasonal fruit"
+    ]
+   ]
+  },
+  {
+   "title": "People and actions",
+   "words": [
+    [
+     "los difuntos / los muertos",
+     "the deceased"
+    ],
+    [
+     "los antepasados",
+     "ancestors"
+    ],
+    [
+     "la Catrina",
+     "La Catrina, the elegant skeleton"
+    ],
+    [
+     "el cementerio / el panteón",
+     "cemetery"
+    ],
+    [
+     "recordar",
+     "to remember"
+    ],
+    [
+     "honrar",
+     "to honor"
+    ],
+    [
+     "visitar la tumba",
+     "to visit the grave"
+    ],
+    [
+     "contar anécdotas",
+     "to tell stories"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La mesa decorada con fotos, velas y comida para los difuntos es la ",
+   "after": ".",
+   "options": [
+    "ofrenda",
+    "calavera",
+    "veladora"
+   ],
+   "answer": 0,
+   "why": "The altar with offerings: la ofrenda."
+  },
+  {
+   "before": "La flor naranja del Día de Muertos es el ",
+   "after": ".",
+   "options": [
+    "cempasúchil",
+    "papel picado",
+    "copal"
+   ],
+   "answer": 0,
+   "why": "Marigold: cempasúchil."
+  },
+  {
+   "before": "El pan dulce típico de estas fechas es el pan de ",
+   "after": ".",
+   "options": [
+    "muerto",
+    "azúcar",
+    "tumba"
+   ],
+   "answer": 0,
+   "why": "Pan de muerto."
+  },
+  {
+   "before": "Las banderitas de papel de colores se llaman papel ",
+   "after": ".",
+   "options": [
+    "picado",
+    "cortado",
+    "pintado"
+   ],
+   "answer": 0,
+   "why": "Papel picado."
+  },
+  {
+   "before": "En la ofrenda ponemos una ",
+   "after": " encendida para guiar a las almas.",
+   "options": [
+    "veladora",
+    "Catrina",
+    "tumba"
+   ],
+   "answer": 0,
+   "why": "A lit candle: veladora."
+  },
+  {
+   "before": "El esqueleto elegante con sombrero se llama la ",
+   "after": ".",
+   "options": [
+    "Catrina",
+    "ofrenda",
+    "cruz"
+   ],
+   "answer": 0,
+   "why": "La Catrina."
+  },
+  {
+   "before": "El 2 de noviembre muchas familias van al ",
+   "after": ".",
+   "options": [
+    "cementerio",
+    "altar",
+    "mole"
+   ],
+   "answer": 0,
+   "why": "To the cemetery to visit graves."
+  },
+  {
+   "before": "Las familias cuentan anécdotas para ",
+   "after": " a sus seres queridos.",
+   "options": [
+    "recordar",
+    "olvidar",
+    "visitar"
+   ],
+   "answer": 0,
+   "why": "To remember loved ones."
+  }
+ ],
+ "demand": {
+  "query": "spanish day of the dead words",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish day of the dead vocabulary». Several ask for vocabulary words and quotes, so the list groups the words by what you see on an altar and what people do.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
