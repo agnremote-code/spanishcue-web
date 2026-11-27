@@ -226,3 +226,15 @@ a.jg-card:hover, a.jg-card:focus-visible { transform: translateY(-4px); box-shad
   .jg-card, .jg-primary { transition: none; }
   a.jg-card:hover, .jg-primary:hover { transform: none; }
 }
+
+/* Entrenador de verbos (/practicar-conjugacion): a paper strip between the hero and the worlds. */
+.jg-trainer {
+  display: flex; align-items: center; gap: 16px; max-width: 1180px; margin: 0 auto 8px; padding: 14px 20px;
+  border-radius: 18px; background: var(--jg-paper); color: var(--jg-ink) !important; text-decoration: none;
+  box-shadow: 0 14px 30px -18px rgba(0, 0, 0, .6); transition: transform .15s;
+}
+.jg-trainer:hover { transform: translateY(-2px); }
+.jg-trainer-mark { flex: none; padding: 8px 12px; border-radius: 12px; background: #2f74d9; color: #fff; font-family: Georgia, serif; font-size: 20px; font-style: italic; }
+.jg-trainer b { display: block; font-family: Georgia, serif; font-size: 19px; }
+.jg-trainer small { display: block; margin-top: 2px; color: #5c6a80; font-size: 14px; line-height: 1.4; }
+.jg-trainer i { margin-left: auto; font-size: 22px; font-style: normal; }
