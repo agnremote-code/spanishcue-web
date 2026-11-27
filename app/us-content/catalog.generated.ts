@@ -136,6 +136,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "art",
+  "level": "A2",
+  "theme": "art",
+  "title": "Spanish art vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "baseball",
   "level": "A2",
   "theme": "baseball",
@@ -269,10 +276,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "math",
+  "level": "A2",
+  "theme": "math",
+  "title": "Spanish math vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "music",
   "level": "A2",
   "theme": "music",
   "title": "Spanish music vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "numbers",
+  "level": "A1",
+  "theme": "numbers",
+  "title": "Spanish numbers vocabulary: 0 to 100"
  },
  {
   "family": "vocabulary",

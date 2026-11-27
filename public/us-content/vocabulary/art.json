@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "art",
+ "themeLabel": "Art",
+ "title": "Spanish Art Vocabulary: Terms, Materials and Practice Quiz",
+ "description": "Spanish art vocabulary: materials, techniques and words to describe a painting, with a quiz that corrects itself and an A2 reading about a visit to a museum.",
+ "h1": "Spanish art vocabulary",
+ "titleEs": "Frida en el museo",
+ "focus": "describing with hay, estar and the present",
+ "intro": "Learn the Spanish words for art materials, techniques and how to describe a painting, practice them with instant feedback, then follow a class trip to see Frida Kahlo's work.",
+ "paragraphs": [
+  "La clase de español de la señora Ortiz, en Phoenix, visitó una exposición de Frida Kahlo en un museo de la ciudad. Antes del viaje, los estudiantes leyeron sobre su vida: tuvo un accidente grave a los dieciocho años y empezó a pintar en la cama, con un espejo en el techo.",
+  "En la primera sala había varios autorretratos. Frida aparece seria, con las cejas juntas y flores en el pelo. En muchos cuadros hay animales: monos, loros y un perro sin pelo. La guía explicó que muchos de esos animales eran sus mascotas de verdad.",
+  "El cuadro favorito de Daniela fue uno con dos Fridas sentadas juntas, tomadas de la mano. Una lleva un vestido blanco europeo y la otra, ropa tradicional mexicana. «Para mí representa sus dos identidades», dijo Daniela, cuya familia es de Sonora y de Arizona al mismo tiempo.",
+  "Al final, cada estudiante tuvo que describir una obra en español. Marcos eligió una fotografía grande de la casa de Frida, con colores vivos. «En primer plano hay una casa azul, al fondo hay cactus y el cielo está muy claro», explicó. La señora Ortiz sonrió: era la Casa Azul, donde Frida nació."
+ ],
+ "glossary": [
+  [
+   "grave",
+   "serious"
+  ],
+  [
+   "las cejas",
+   "eyebrows"
+  ],
+  [
+   "el mono",
+   "monkey"
+  ],
+  [
+   "el loro",
+   "parrot"
+  ],
+  [
+   "la guía",
+   "tour guide"
+  ],
+  [
+   "tomadas de la mano",
+   "holding hands"
+  ],
+  [
+   "cuya",
+   "whose"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La clase visitó una exposición de ",
+   "after": ".",
+   "options": [
+    "Frida Kahlo",
+    "Diego Rivera",
+    "Botero"
+   ],
+   "answer": 0,
+   "why": "A Frida Kahlo exhibition."
+  },
+  {
+   "before": "Frida empezó a pintar ",
+   "after": ".",
+   "options": [
+    "en la cama, después de un accidente",
+    "en la escuela",
+    "en Europa"
+   ],
+   "answer": 0,
+   "why": "After a serious accident, in bed with a mirror."
+  },
+  {
+   "before": "En muchos cuadros de Frida hay ",
+   "after": ".",
+   "options": [
+    "animales",
+    "coches",
+    "edificios"
+   ],
+   "answer": 0,
+   "why": "Monkeys, parrots and a hairless dog."
+  },
+  {
+   "before": "En el cuadro favorito de Daniela hay ",
+   "after": ".",
+   "options": [
+    "dos Fridas sentadas juntas",
+    "un paisaje",
+    "un perro"
+   ],
+   "answer": 0,
+   "why": "Two Fridas sitting together."
+  },
+  {
+   "before": "Para Daniela, el cuadro representa ",
+   "after": ".",
+   "options": [
+    "dos identidades",
+    "la tristeza",
+    "un viaje"
+   ],
+   "answer": 0,
+   "why": "She sees two identities in it."
+  },
+  {
+   "before": "En la fotografía que describe Marcos, al fondo hay ",
+   "after": ".",
+   "options": [
+    "cactus",
+    "una casa azul",
+    "un río"
+   ],
+   "answer": 0,
+   "why": "Cactus in the background; the house is in the foreground."
+  }
+ ],
+ "grammar": {
+  "title": "Describing a picture: hay vs estar",
+  "intro": "Use hay to say what there is (hay una casa) and estar to say where a specific thing is (la casa está al fondo).",
+  "items": [
+   {
+    "before": "En el cuadro ",
+    "after": " tres flores rojas.",
+    "options": [
+     "hay",
+     "están",
+     "es"
+    ],
+    "answer": 0,
+    "why": "What there is: hay."
+   },
+   {
+    "before": "La mujer ",
+    "after": " en primer plano.",
+    "options": [
+     "está",
+     "hay",
+     "es"
+    ],
+    "answer": 0,
+    "why": "Where a specific person is: está."
+   },
+   {
+    "before": "Al fondo ",
+    "after": " unas montañas.",
+    "options": [
+     "hay",
+     "están",
+     "son"
+    ],
+    "answer": 0,
+    "why": "Introducing new things: hay."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe tu cuadro o foto favorita: qué hay y dónde está cada cosa.",
+  "¿Te gusta más pintar, dibujar o ver arte? ¿Por qué?",
+  "¿Qué artista hispano conoces? ¿Cómo es su obra?"
+ ],
+ "heritage": "If you grew up with murals, papel picado or family altars, you already have examples to talk about. In writing, keep «la pintura» (the paint or the art form) and «el cuadro» (a framed painting) apart, and note the accents in «acuarela» (none), «exposición» and «símbolo».",
+ "teacher": "Project a painting by a Hispanic artist and have pairs describe it with hay, estar, en primer plano and al fondo while the other draws it without seeing it.",
+ "vocabulary": [
+  {
+   "title": "Materials and techniques",
+   "words": [
+    [
+     "el pincel",
+     "paintbrush"
+    ],
+    [
+     "la pintura",
+     "paint, painting"
+    ],
+    [
+     "el lienzo",
+     "canvas"
+    ],
+    [
+     "la acuarela",
+     "watercolor"
+    ],
+    [
+     "el óleo",
+     "oil paint"
+    ],
+    [
+     "el lápiz de color",
+     "colored pencil"
+    ],
+    [
+     "la escultura",
+     "sculpture"
+    ],
+    [
+     "el dibujo",
+     "drawing"
+    ]
+   ]
+  },
+  {
+   "title": "In the museum",
+   "words": [
+    [
+     "el museo",
+     "museum"
+    ],
+    [
+     "la exposición",
+     "exhibition"
+    ],
+    [
+     "la obra",
+     "work (of art)"
+    ],
+    [
+     "el cuadro",
+     "painting (framed)"
+    ],
+    [
+     "el autorretrato",
+     "self-portrait"
+    ],
+    [
+     "el paisaje",
+     "landscape"
+    ],
+    [
+     "el retrato",
+     "portrait"
+    ],
+    [
+     "la sala",
+     "gallery room"
+    ]
+   ]
+  },
+  {
+   "title": "Describing a work",
+   "words": [
+    [
+     "en primer plano",
+     "in the foreground"
+    ],
+    [
+     "al fondo",
+     "in the background"
+    ],
+    [
+     "los colores vivos",
+     "bright colors"
+    ],
+    [
+     "los colores oscuros",
+     "dark colors"
+    ],
+    [
+     "representar",
+     "to represent"
+    ],
+    [
+     "expresar",
+     "to express"
+    ],
+    [
+     "me llama la atención",
+     "it catches my attention"
+    ],
+    [
+     "el símbolo",
+     "symbol"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Pinto con un ",
+   "after": " y acuarelas.",
+   "options": [
+    "pincel",
+    "lienzo",
+    "museo"
+   ],
+   "answer": 0,
+   "why": "You paint with a brush: pincel."
+  },
+  {
+   "before": "Un cuadro de una persona que se pinta a sí misma es un ",
+   "after": ".",
+   "options": [
+    "autorretrato",
+    "paisaje",
+    "dibujo"
+   ],
+   "answer": 0,
+   "why": "Painting yourself: autorretrato."
+  },
+  {
+   "before": "Un cuadro de montañas y ríos es un ",
+   "after": ".",
+   "options": [
+    "paisaje",
+    "retrato",
+    "pincel"
+   ],
+   "answer": 0,
+   "why": "Mountains and rivers: paisaje."
+  },
+  {
+   "before": "La ",
+   "after": " de Botero está en el parque: es una figura de bronce.",
+   "options": [
+    "escultura",
+    "acuarela",
+    "sala"
+   ],
+   "answer": 0,
+   "why": "A bronze figure is a sculpture."
+  },
+  {
+   "before": "En el centro del cuadro, ",
+   "after": ", hay una mujer con flores.",
+   "options": [
+    "en primer plano",
+    "al fondo",
+    "en la sala"
+   ],
+   "answer": 0,
+   "why": "The front of the picture: en primer plano."
+  },
+  {
+   "before": "El museo tiene una ",
+   "after": " nueva de arte mexicano.",
+   "options": [
+    "exposición",
+    "pintura",
+    "lienzo"
+   ],
+   "answer": 0,
+   "why": "A temporary show: exposición."
+  },
+  {
+   "before": "El rojo y el amarillo son colores ",
+   "after": ".",
+   "options": [
+    "vivos",
+    "oscuros",
+    "tristes"
+   ],
+   "answer": 0,
+   "why": "Bright colors: colores vivos."
+  },
+  {
+   "before": "Lo que más me ",
+   "after": " es la mirada de la mujer.",
+   "options": [
+    "llama la atención",
+    "representa",
+    "dibuja"
+   ],
+   "answer": 0,
+   "why": "Me llama la atención: it catches my attention."
+  }
+ ],
+ "demand": {
+  "query": "spanish art vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish art vocabulary». 1 of them asks for something to do with the words (vocabulary quizlet). They ask for art terms and words related to art, so the list covers the studio, the museum and the language of describing a work.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

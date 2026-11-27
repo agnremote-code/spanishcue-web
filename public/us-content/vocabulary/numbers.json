@@ -1,0 +1,425 @@
+{
+ "level": "A1",
+ "theme": "numbers",
+ "themeLabel": "Numbers",
+ "title": "Spanish Numbers Vocabulary 0–100: Words, Spelling and Quiz",
+ "description": "Spanish numbers from 0 to 100 and beyond, with spelling rules, a practice quiz that corrects itself and a short A1 reading set at a market in Mexico City.",
+ "h1": "Spanish numbers vocabulary: 0 to 100",
+ "titleEs": "De compras en el mercado",
+ "focus": "numbers, prices and ¿cuánto cuesta?",
+ "intro": "Learn the Spanish numbers from 0 to 100 and the big round numbers, the spelling rules that trip learners up, practice with instant feedback, then go shopping at a market in Mexico City.",
+ "paragraphs": [
+  "Es sábado y Lucas, de Chicago, está de visita en la Ciudad de México con su tía Pilar. Van al mercado de Coyoacán para comprar fruta y comer algo. Hay muchos puestos de colores.",
+  "Primero compran mangos. «¿Cuánto cuestan?», pregunta la tía. «Cuarenta pesos el kilo», dice el vendedor. Compran dos kilos y pagan ochenta pesos. Después compran tres aguacates por treinta y cinco pesos.",
+  "Luego buscan algo para comer. En un puesto venden quesadillas a veinticinco pesos cada una. Lucas tiene mucha hambre y pide tres. Su tía pide dos. En total son ciento veinticinco pesos.",
+  "Al final, Lucas ve una camiseta de fútbol. Cuesta trescientos pesos, pero él solo tiene doscientos cincuenta. La tía le enseña a negociar con amabilidad. Al final, el vendedor la deja en doscientos cincuenta y Lucas está feliz con su nueva camiseta verde."
+ ],
+ "glossary": [
+  [
+   "estar de visita",
+   "to be visiting"
+  ],
+  [
+   "el puesto",
+   "stall"
+  ],
+  [
+   "el kilo",
+   "kilogram"
+  ],
+  [
+   "el vendedor",
+   "seller"
+  ],
+  [
+   "cada una",
+   "each"
+  ],
+  [
+   "en total",
+   "in total"
+  ],
+  [
+   "negociar",
+   "to bargain"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Lucas y su tía van al mercado ",
+   "after": ".",
+   "options": [
+    "el sábado",
+    "el lunes",
+    "el domingo"
+   ],
+   "answer": 0,
+   "why": "It is Saturday."
+  },
+  {
+   "before": "El kilo de mangos cuesta ",
+   "after": " pesos.",
+   "options": [
+    "cuarenta",
+    "catorce",
+    "cuatrocientos"
+   ],
+   "answer": 0,
+   "why": "Forty pesos per kilo."
+  },
+  {
+   "before": "Por dos kilos de mangos pagan ",
+   "after": " pesos.",
+   "options": [
+    "ochenta",
+    "cuarenta",
+    "dieciocho"
+   ],
+   "answer": 0,
+   "why": "2 × 40 = 80."
+  },
+  {
+   "before": "Cada quesadilla cuesta ",
+   "after": " pesos.",
+   "options": [
+    "veinticinco",
+    "veinte",
+    "treinta y cinco"
+   ],
+   "answer": 0,
+   "why": "Twenty-five pesos each."
+  },
+  {
+   "before": "Por las cinco quesadillas pagan ",
+   "after": " pesos.",
+   "options": [
+    "ciento veinticinco",
+    "cien",
+    "ciento cincuenta"
+   ],
+   "answer": 0,
+   "why": "5 × 25 = 125."
+  },
+  {
+   "before": "Al final, Lucas paga por la camiseta ",
+   "after": " pesos.",
+   "options": [
+    "doscientos cincuenta",
+    "trescientos",
+    "doscientos"
+   ],
+   "answer": 0,
+   "why": "The seller lets it go for 250."
+  }
+ ],
+ "grammar": {
+  "title": "Cien or ciento?",
+  "intro": "Use cien for exactly 100 and before mil (cien mil). Use ciento for 101 to 199: ciento cinco.",
+  "items": [
+   {
+    "before": "La camiseta cuesta ",
+    "after": " pesos.",
+    "options": [
+     "cien",
+     "ciento",
+     "cientos"
+    ],
+    "answer": 0,
+    "why": "Exactly 100: cien."
+   },
+   {
+    "before": "Pagamos ",
+    "after": " veinte pesos.",
+    "options": [
+     "ciento",
+     "cien",
+     "cientos"
+    ],
+    "answer": 0,
+    "why": "120: ciento veinte."
+   },
+   {
+    "before": "La ciudad tiene ",
+    "after": " mil habitantes.",
+    "options": [
+     "cien",
+     "ciento",
+     "cientos"
+    ],
+    "answer": 0,
+    "why": "Before mil: cien mil."
+   }
+  ]
+ },
+ "speaking": [
+  "Di tu número de teléfono en español, de dos en dos.",
+  "¿Cuántos años tienen las personas de tu familia?",
+  "Haz el diálogo: compras fruta en un mercado y preguntas los precios."
+ ],
+ "heritage": "Heritage speakers usually count fluently but spell numbers less often. The traps in writing are «dieciséis», «veintidós», «veintitrés» and «veintiséis» (all one word, with an accent), «quinientos», «setecientos» and «novecientos». Phone numbers are often read in pairs: 55 24 18 = cincuenta y cinco, veinticuatro, dieciocho.",
+ "teacher": "Play a quick market game: give each student a price list and play money. Pairs buy and sell using ¿cuánto cuesta? and full numbers.",
+ "vocabulary": [
+  {
+   "title": "0 to 15",
+   "words": [
+    [
+     "cero",
+     "0"
+    ],
+    [
+     "uno",
+     "1"
+    ],
+    [
+     "dos",
+     "2"
+    ],
+    [
+     "tres",
+     "3"
+    ],
+    [
+     "cuatro",
+     "4"
+    ],
+    [
+     "cinco",
+     "5"
+    ],
+    [
+     "seis",
+     "6"
+    ],
+    [
+     "siete",
+     "7"
+    ],
+    [
+     "ocho",
+     "8"
+    ],
+    [
+     "nueve",
+     "9"
+    ],
+    [
+     "diez",
+     "10"
+    ],
+    [
+     "once",
+     "11"
+    ],
+    [
+     "doce",
+     "12"
+    ],
+    [
+     "trece",
+     "13"
+    ],
+    [
+     "catorce",
+     "14"
+    ],
+    [
+     "quince",
+     "15"
+    ]
+   ]
+  },
+  {
+   "title": "16 to 30",
+   "words": [
+    [
+     "dieciséis",
+     "16"
+    ],
+    [
+     "diecisiete",
+     "17"
+    ],
+    [
+     "dieciocho",
+     "18"
+    ],
+    [
+     "diecinueve",
+     "19"
+    ],
+    [
+     "veinte",
+     "20"
+    ],
+    [
+     "veintiuno",
+     "21"
+    ],
+    [
+     "veintidós",
+     "22"
+    ],
+    [
+     "veintitrés",
+     "23"
+    ],
+    [
+     "treinta",
+     "30"
+    ],
+    [
+     "treinta y uno",
+     "31"
+    ]
+   ]
+  },
+  {
+   "title": "Tens and hundreds",
+   "words": [
+    [
+     "cuarenta",
+     "40"
+    ],
+    [
+     "cincuenta",
+     "50"
+    ],
+    [
+     "sesenta",
+     "60"
+    ],
+    [
+     "setenta",
+     "70"
+    ],
+    [
+     "ochenta",
+     "80"
+    ],
+    [
+     "noventa",
+     "90"
+    ],
+    [
+     "cien",
+     "100"
+    ],
+    [
+     "ciento uno",
+     "101"
+    ],
+    [
+     "doscientos",
+     "200"
+    ],
+    [
+     "quinientos",
+     "500"
+    ],
+    [
+     "mil",
+     "1,000"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Una semana tiene ",
+   "after": " días.",
+   "options": [
+    "siete",
+    "seis",
+    "diez"
+   ],
+   "answer": 0,
+   "why": "A week has seven days."
+  },
+  {
+   "before": "Un año tiene ",
+   "after": " meses.",
+   "options": [
+    "doce",
+    "once",
+    "trece"
+   ],
+   "answer": 0,
+   "why": "Twelve months: doce."
+  },
+  {
+   "before": "Quince más cinco son ",
+   "after": ".",
+   "options": [
+    "veinte",
+    "veinticinco",
+    "diez"
+   ],
+   "answer": 0,
+   "why": "15 + 5 = 20."
+  },
+  {
+   "before": "El número 16 se escribe ",
+   "after": ".",
+   "options": [
+    "dieciséis",
+    "diez y seis",
+    "dieziséis"
+   ],
+   "answer": 0,
+   "why": "16 is one word with an accent: dieciséis."
+  },
+  {
+   "before": "El número 22 se escribe ",
+   "after": ".",
+   "options": [
+    "veintidós",
+    "veinte y dos",
+    "ventidós"
+   ],
+   "answer": 0,
+   "why": "21 to 29 are one word: veintidós."
+  },
+  {
+   "before": "El número 35 se escribe ",
+   "after": ".",
+   "options": [
+    "treinta y cinco",
+    "treintaicinco",
+    "trentaicinco"
+   ],
+   "answer": 0,
+   "why": "From 31 on, use y: treinta y cinco."
+  },
+  {
+   "before": "Exactamente 100 es ",
+   "after": ".",
+   "options": [
+    "cien",
+    "ciento",
+    "cientos"
+   ],
+   "answer": 0,
+   "why": "Exactly 100: cien."
+  },
+  {
+   "before": "El número 500 es ",
+   "after": ".",
+   "options": [
+    "quinientos",
+    "cincocientos",
+    "cinco cientos"
+   ],
+   "answer": 0,
+   "why": "500 is irregular: quinientos."
+  }
+ ],
+ "demand": {
+  "query": "spanish numbers vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish numbers vocabulary». Two ask specifically for 0–100 and 1–100, and one for 0–20, so the list covers those ranges and the patterns behind them.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
