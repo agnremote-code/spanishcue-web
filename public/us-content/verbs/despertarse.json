@@ -1,0 +1,278 @@
+{
+ "verb": "despertarse",
+ "meaning": "to wake up",
+ "level": "A2",
+ "title": "Spanish Verb Despertarse Practice: Stem Change, Reflexive and Quiz",
+ "description": "Practice the Spanish verb despertarse: me despierto with the e to ie stem change, the preterite me desperté, despertar vs despertarse, ten questions and a reading.",
+ "h1": "Spanish verb despertarse: practice",
+ "intro": "Despertarse means to wake up. It is reflexive (me despierto) and stem-changing: e becomes ie in the present, but not in nosotros or the preterite. Without the pronoun, despertar means to wake someone up. Practice both with feedback.",
+ "demand": {
+  "query": "spanish verb despertarse",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To wake up",
+   "example": "Me despierto a las seis y media.",
+   "meaning": "I wake up at six thirty."
+  },
+  {
+   "use": "Despertar: to wake someone",
+   "example": "El perro me despierta todas las mañanas.",
+   "meaning": "The dog wakes me up every morning."
+  },
+  {
+   "use": "Despertarse vs levantarse",
+   "example": "Me despierto a las seis, pero me levanto a las siete.",
+   "meaning": "I wake up at six, but I get up at seven."
+  },
+  {
+   "use": "The alarm clock: el despertador",
+   "example": "El despertador sonó a las cinco.",
+   "meaning": "The alarm clock went off at five."
+  },
+  {
+   "use": "Waking up in the night",
+   "example": "A veces me despierto a las tres.",
+   "meaning": "Sometimes I wake up at three."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "me despierto"
+  ],
+  [
+   "tú",
+   "te despiertas"
+  ],
+  [
+   "él / ella / usted",
+   "se despierta"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos despertamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se despiertan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "me desperté"
+  ],
+  [
+   "tú",
+   "te despertaste"
+  ],
+  [
+   "él / ella / usted",
+   "se despertó"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos despertamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se despertaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Normalmente me ",
+   "after": " sin despertador.",
+   "options": [
+    "despierto",
+    "desperto",
+    "despierta"
+   ],
+   "answer": 0,
+   "why": "Stem change e to ie: me despierto."
+  },
+  {
+   "before": "¿Te ",
+   "after": " fácilmente por la mañana?",
+   "options": [
+    "despiertas",
+    "despertas",
+    "despierta"
+   ],
+   "answer": 0,
+   "why": "Tú: te despiertas."
+  },
+  {
+   "before": "En el campamento nos ",
+   "after": " con el sol.",
+   "options": [
+    "despertamos",
+    "despiertamos",
+    "despiertan"
+   ],
+   "answer": 0,
+   "why": "No stem change in nosotros: nos despertamos."
+  },
+  {
+   "before": "Los gallos ",
+   "after": " a todo el pueblo.",
+   "options": [
+    "despiertan",
+    "se despiertan",
+    "despertan"
+   ],
+   "answer": 0,
+   "why": "Waking others: despertar, not reflexive."
+  },
+  {
+   "before": "Mi abuela se ",
+   "after": " antes del amanecer.",
+   "options": [
+    "despierta",
+    "desperta",
+    "despiertan"
+   ],
+   "answer": 0,
+   "why": "Ella: se despierta."
+  },
+  {
+   "before": "Hoy me ",
+   "after": " a las nueve y llegué tarde a clase.",
+   "options": [
+    "desperté",
+    "despierté",
+    "desperte"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: me desperté, no stem change."
+  },
+  {
+   "before": "¿A qué hora te ",
+   "after": " el domingo?",
+   "options": [
+    "despertaste",
+    "despiertaste",
+    "despertastes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: te despertaste."
+  },
+  {
+   "before": "El perro de los vecinos me ",
+   "after": " a las cuatro.",
+   "options": [
+    "despertó",
+    "despiertó",
+    "desperté"
+   ],
+   "answer": 0,
+   "why": "Preterite: despertó, someone woke me."
+  },
+  {
+   "before": "Los niños se ",
+   "after": " con el ruido de la tormenta.",
+   "options": [
+    "despertaron",
+    "despiertaron",
+    "despertó"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: se despertaron."
+  },
+  {
+   "before": "Por favor, ¿puedes ",
+   "after": " a las siete?",
+   "options": [
+    "despertarme",
+    "me despertar",
+    "despiertarme"
+   ],
+   "answer": 0,
+   "why": "Infinitive with the pronoun attached: despertarme."
+  }
+ ],
+ "reading": {
+  "titleEs": "Despertarse en otro horario",
+  "paragraphs": [
+   "Cuando Gabriel empezó a trabajar de enfermero en el turno de noche en Miami, todo cambió. Se acostaba a las nueve de la mañana y se despertaba a las cuatro de la tarde. Al principio se despertaba varias veces con el ruido de la calle.",
+   "Su compañera de trabajo, Yolanda, le dio tres consejos: cortinas oscuras, tapones para los oídos y la misma hora todos los días. Después de dos semanas, Gabriel ya se despertaba sin alarma. Ahora dice que lo más difícil es despertarse los días libres, cuando la ciudad funciona al revés que él."
+  ],
+  "comprehension": [
+   {
+    "before": "Gabriel trabaja de enfermero ",
+    "after": ".",
+    "options": [
+     "en el turno de noche",
+     "por la mañana",
+     "los fines de semana"
+    ],
+    "answer": 0,
+    "why": "He works the night shift."
+   },
+   {
+    "before": "Al principio, Gabriel se despertaba por ",
+    "after": ".",
+    "options": [
+     "el ruido de la calle",
+     "el despertador",
+     "su perro"
+    ],
+    "answer": 0,
+    "why": "Street noise woke him up."
+   },
+   {
+    "before": "Uno de los consejos de Yolanda fue usar ",
+    "after": ".",
+    "options": [
+     "cortinas oscuras",
+     "más café",
+     "música fuerte"
+    ],
+    "answer": 0,
+    "why": "Dark curtains, earplugs and a fixed schedule."
+   },
+   {
+    "before": "Ahora, lo más difícil para Gabriel es ",
+    "after": ".",
+    "options": [
+     "despertarse los días libres",
+     "dormir de día",
+     "trabajar con Yolanda"
+    ],
+    "answer": 0,
+    "why": "Waking up on his days off."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Me desperto a las seis.",
+   "right": "Me despierto a las seis.",
+   "why": "Stem change e to ie in the present: despierto."
+  },
+  {
+   "wrong": "Nos despiertamos tarde.",
+   "right": "Nos despertamos tarde.",
+   "why": "No stem change in nosotros."
+  },
+  {
+   "wrong": "Ayer me despierté temprano.",
+   "right": "Ayer me desperté temprano.",
+   "why": "The preterite has no stem change."
+  },
+  {
+   "wrong": "Me despierto a mi hermano.",
+   "right": "Despierto a mi hermano.",
+   "why": "Waking someone else is not reflexive."
+  }
+ ],
+ "heritage": "Heritage speakers often say «me levanté» for both waking and getting up. That is common in speech, but the two verbs are different: «despertarse» is opening your eyes, «levantarse» is getting out of bed. Watch the stem change only in the present.",
+ "teacher": "Ask students to describe the worst way to wake up (una alarma, un perro, un hermano) with Me despierta… and then tell a real story with Un día me desperté…",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish verb despertarse». One suggestion asks for despertar without the pronoun, so both forms are shown here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

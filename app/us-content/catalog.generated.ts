@@ -3,6 +3,13 @@ export type UsCatalogEntry = { family: string; slug: string; level: string; them
 export const usCatalog: UsCatalogEntry[] = [
  {
   "family": "verbs",
+  "slug": "acostarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb acostarse: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "caer",
   "level": "A2",
   "theme": "",
@@ -70,6 +77,20 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb dejar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "despertarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb despertarse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "ducharse",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb ducharse: practice"
  },
  {
   "family": "verbs",
@@ -157,6 +178,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "levantarse",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb levantarse: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "llamar",
   "level": "A1",
   "theme": "",
@@ -231,6 +259,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb saber: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "sentarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb sentarse: practice"
  },
  {
   "family": "verbs",

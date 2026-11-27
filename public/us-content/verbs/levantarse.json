@@ -1,0 +1,278 @@
+{
+ "verb": "levantarse",
+ "meaning": "to get up",
+ "level": "A1",
+ "title": "Spanish Verb Levantarse Practice: Reflexive Conjugation and Quiz",
+ "description": "Practice the Spanish reflexive verb levantarse: me levanto, te levantas, the preterite, levantar vs levantarse, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb levantarse: practice",
+ "intro": "Levantarse means to get up, and it always needs a reflexive pronoun: me levanto, te levantas. Without the pronoun, levantar means to lift something. Learn both and practice the reflexive forms with instant feedback.",
+ "demand": {
+  "query": "spanish verb levantarse",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To get up (out of bed)",
+   "example": "Me levanto a las seis.",
+   "meaning": "I get up at six."
+  },
+  {
+   "use": "To stand up",
+   "example": "Los estudiantes se levantan cuando entra la directora.",
+   "meaning": "The students stand up when the principal comes in."
+  },
+  {
+   "use": "Levantar: to lift something",
+   "example": "Levanto pesas en el gimnasio.",
+   "meaning": "I lift weights at the gym."
+  },
+  {
+   "use": "To raise your hand",
+   "example": "Levanta la mano si sabes la respuesta.",
+   "meaning": "Raise your hand if you know the answer."
+  },
+  {
+   "use": "With infinitives: pronoun at the end",
+   "example": "Tengo que levantarme temprano.",
+   "meaning": "I have to get up early."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "me levanto"
+  ],
+  [
+   "tú",
+   "te levantas"
+  ],
+  [
+   "él / ella / usted",
+   "se levanta"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos levantamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se levantan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "me levanté"
+  ],
+  [
+   "tú",
+   "te levantaste"
+  ],
+  [
+   "él / ella / usted",
+   "se levantó"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos levantamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se levantaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Los lunes ",
+   "after": " a las cinco y media.",
+   "options": [
+    "me levanto",
+    "levanto",
+    "se levanto"
+   ],
+   "answer": 0,
+   "why": "Yo needs me: me levanto."
+  },
+  {
+   "before": "¿A qué hora te ",
+   "after": " los sábados?",
+   "options": [
+    "levantas",
+    "levanta",
+    "levantan"
+   ],
+   "answer": 0,
+   "why": "Tú: te levantas."
+  },
+  {
+   "before": "Mi papá se ",
+   "after": " antes que todos.",
+   "options": [
+    "levanta",
+    "levantan",
+    "levanto"
+   ],
+   "answer": 0,
+   "why": "Él: se levanta."
+  },
+  {
+   "before": "Nosotros nos ",
+   "after": " tarde en vacaciones.",
+   "options": [
+    "levantamos",
+    "levantan",
+    "levanta"
+   ],
+   "answer": 0,
+   "why": "Nosotros: nos levantamos."
+  },
+  {
+   "before": "Mi hermano ",
+   "after": " pesas tres veces por semana.",
+   "options": [
+    "levanta",
+    "se levanta",
+    "levantan"
+   ],
+   "answer": 0,
+   "why": "Lifting something: levantar, not reflexive."
+  },
+  {
+   "before": "Esta mañana me ",
+   "after": " con dolor de cabeza.",
+   "options": [
+    "levanté",
+    "levante",
+    "levantó"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: me levanté."
+  },
+  {
+   "before": "¿Por qué te ",
+   "after": " tan temprano ayer?",
+   "options": [
+    "levantaste",
+    "levantastes",
+    "levantas"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: te levantaste."
+  },
+  {
+   "before": "Cuando terminó el concierto, el público se ",
+   "after": " a aplaudir.",
+   "options": [
+    "levantó",
+    "levanto",
+    "levantaron yo"
+   ],
+   "answer": 0,
+   "why": "El público (singular): se levantó."
+  },
+  {
+   "before": "Mañana tengo que ",
+   "after": " a las cuatro para ir al aeropuerto.",
+   "options": [
+    "levantarme",
+    "me levantar",
+    "levantarse yo"
+   ],
+   "answer": 0,
+   "why": "With an infinitive, the pronoun goes at the end: levantarme."
+  },
+  {
+   "before": "Los niños se ",
+   "after": " cuando oyeron el camión de los helados.",
+   "options": [
+    "levantaron",
+    "levantó",
+    "levantamos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: se levantaron."
+  }
+ ],
+ "reading": {
+  "titleEs": "El panadero que se levanta de noche",
+  "paragraphs": [
+   "Don Felipe tiene una panadería en El Paso. Se levanta a las tres de la mañana, cuando la ciudad todavía duerme. Prepara la masa, enciende el horno y a las seis ya huele a conchas y bolillos en toda la calle.",
+   "Su hijo Andrés trabaja en una oficina y se levanta a las siete. Un día le preguntó: «Papá, ¿no te cansas de levantarte de noche?». Don Felipe le contestó: «Me levanto de noche para que tú y tus vecinos tengan pan caliente al desayunar». Ese sábado, Andrés se levantó a las tres para ayudarlo."
+  ],
+  "comprehension": [
+   {
+    "before": "La panadería de don Felipe está en ",
+    "after": ".",
+    "options": [
+     "El Paso",
+     "San Diego",
+     "Phoenix"
+    ],
+    "answer": 0,
+    "why": "His bakery is in El Paso."
+   },
+   {
+    "before": "Don Felipe se levanta ",
+    "after": ".",
+    "options": [
+     "a las tres de la mañana",
+     "a las siete",
+     "a las seis"
+    ],
+    "answer": 0,
+    "why": "At three in the morning."
+   },
+   {
+    "before": "Andrés trabaja ",
+    "after": ".",
+    "options": [
+     "en una oficina",
+     "en la panadería",
+     "en un hospital"
+    ],
+    "answer": 0,
+    "why": "In an office."
+   },
+   {
+    "before": "El sábado, Andrés ",
+    "after": ".",
+    "options": [
+     "ayudó a su papá",
+     "durmió hasta tarde",
+     "abrió su propia panadería"
+    ],
+    "answer": 0,
+    "why": "He got up at three to help."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Levanto a las siete.",
+   "right": "Me levanto a las siete.",
+   "why": "Getting up needs the reflexive pronoun."
+  },
+  {
+   "wrong": "Me levanto pesas.",
+   "right": "Levanto pesas.",
+   "why": "Lifting something is not reflexive."
+  },
+  {
+   "wrong": "Tengo que me levantar.",
+   "right": "Tengo que levantarme.",
+   "why": "The pronoun goes before the conjugated verb or attached to the infinitive."
+  },
+  {
+   "wrong": "Ayer me levante tarde.",
+   "right": "Ayer me levanté tarde.",
+   "why": "Preterite yo needs the accent: levanté."
+  }
+ ],
+ "heritage": "Heritage speakers usually use levantarse naturally. A common US influence is «levantarse para arriba», which repeats the idea; «levantarse» already means to get up. In writing, remember the accent in «me levanté» and «se levantó».",
+ "teacher": "Students draw a clock for each step of their morning and say Me levanto a las… Then compare who gets up first in the class and report with the third person.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish verb levantarse». Three ask for reflexive conjugation, so the pronoun and its position are drilled here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

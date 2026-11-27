@@ -1,0 +1,278 @@
+{
+ "verb": "acostarse",
+ "meaning": "to go to bed, to lie down",
+ "level": "A2",
+ "title": "Spanish Verb Acostarse Practice: Stem Change, Reflexive and Quiz",
+ "description": "Practice the Spanish verb acostarse: me acuesto with the o to ue stem change, the preterite me acosté, acostar vs acostarse, ten questions and a reading.",
+ "h1": "Spanish verb acostarse: practice",
+ "intro": "Acostarse means to go to bed. It is reflexive (me acuesto) and stem-changing: o becomes ue in the present, but not in nosotros or the preterite. Without the pronoun, acostar means to put someone to bed. Practice it with feedback.",
+ "demand": {
+  "query": "spanish verb acostarse",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To go to bed",
+   "example": "Me acuesto a las diez.",
+   "meaning": "I go to bed at ten."
+  },
+  {
+   "use": "To lie down",
+   "example": "Me duele la espalda; voy a acostarme un rato.",
+   "meaning": "My back hurts; I'm going to lie down for a while."
+  },
+  {
+   "use": "Acostar: to put someone to bed",
+   "example": "Mi mamá acuesta a mi hermanito.",
+   "meaning": "My mom puts my little brother to bed."
+  },
+  {
+   "use": "Acostarse tarde / temprano",
+   "example": "Los viernes nos acostamos tarde.",
+   "meaning": "On Fridays we go to bed late."
+  },
+  {
+   "use": "Acostarse vs dormirse",
+   "example": "Me acuesto a las diez, pero me duermo a las once.",
+   "meaning": "I go to bed at ten, but I fall asleep at eleven."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "me acuesto"
+  ],
+  [
+   "tú",
+   "te acuestas"
+  ],
+  [
+   "él / ella / usted",
+   "se acuesta"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos acostamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se acuestan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "me acosté"
+  ],
+  [
+   "tú",
+   "te acostaste"
+  ],
+  [
+   "él / ella / usted",
+   "se acostó"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos acostamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se acostaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Entre semana me ",
+   "after": " a las diez y media.",
+   "options": [
+    "acuesto",
+    "acosto",
+    "acuesta"
+   ],
+   "answer": 0,
+   "why": "Stem change o to ue: me acuesto."
+  },
+  {
+   "before": "¿A qué hora te ",
+   "after": " los viernes?",
+   "options": [
+    "acuestas",
+    "acostas",
+    "acuesta"
+   ],
+   "answer": 0,
+   "why": "Tú: te acuestas."
+  },
+  {
+   "before": "Nosotros nos ",
+   "after": " temprano antes de un partido.",
+   "options": [
+    "acostamos",
+    "acuestamos",
+    "acuestan"
+   ],
+   "answer": 0,
+   "why": "No stem change in nosotros: nos acostamos."
+  },
+  {
+   "before": "Mis abuelos se ",
+   "after": " después de las noticias.",
+   "options": [
+    "acuestan",
+    "acostan",
+    "acuesta"
+   ],
+   "answer": 0,
+   "why": "Ellos: se acuestan."
+  },
+  {
+   "before": "La niñera ",
+   "after": " a los niños a las ocho.",
+   "options": [
+    "acuesta",
+    "se acuesta",
+    "acuestan"
+   ],
+   "answer": 0,
+   "why": "Putting others to bed: acostar, not reflexive."
+  },
+  {
+   "before": "Anoche me ",
+   "after": " muy tarde por el examen.",
+   "options": [
+    "acosté",
+    "acuesté",
+    "acoste"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: me acosté, no stem change."
+  },
+  {
+   "before": "¿Te ",
+   "after": " temprano el domingo?",
+   "options": [
+    "acostaste",
+    "acuestaste",
+    "acostastes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: te acostaste."
+  },
+  {
+   "before": "Mi hermana se ",
+   "after": " en el sofá a ver una película.",
+   "options": [
+    "acostó",
+    "acuestó",
+    "acosto"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: se acostó."
+  },
+  {
+   "before": "Si estás mareado, debes ",
+   "after": " un momento.",
+   "options": [
+    "acostarte",
+    "te acostar",
+    "acuestarte"
+   ],
+   "answer": 0,
+   "why": "Infinitive with the pronoun attached: acostarte."
+  },
+  {
+   "before": "Mis primos se ",
+   "after": " a las dos de la mañana después de la boda.",
+   "options": [
+    "acostaron",
+    "acuestaron",
+    "acostó"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: se acostaron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La hora de acostarse",
+  "paragraphs": [
+   "En la casa de los Herrera, en Phoenix, hay una regla: los niños se acuestan a las nueve. Pero Martina, de once años, siempre tiene una excusa: un vaso de agua, una pregunta urgente, un libro que necesita terminar.",
+   "Una noche, sus padres se acostaron temprano porque estaban agotados. Martina se quedó sola en la sala, feliz. Pero a los veinte minutos la casa estaba demasiado silenciosa y un poco oscura. A las nueve y media, sin que nadie se lo dijera, se acostó y apagó la luz."
+  ],
+  "comprehension": [
+   {
+    "before": "En la casa de los Herrera, los niños se acuestan ",
+    "after": ".",
+    "options": [
+     "a las nueve",
+     "a las diez",
+     "a medianoche"
+    ],
+    "answer": 0,
+    "why": "The rule is nine o'clock."
+   },
+   {
+    "before": "Martina tiene ",
+    "after": ".",
+    "options": [
+     "once años",
+     "nueve años",
+     "veinte años"
+    ],
+    "answer": 0,
+    "why": "She is eleven."
+   },
+   {
+    "before": "Esa noche, los padres se acostaron temprano porque ",
+    "after": ".",
+    "options": [
+     "estaban agotados",
+     "estaban enfermos",
+     "querían ver una película"
+    ],
+    "answer": 0,
+    "why": "They were exhausted."
+   },
+   {
+    "before": "Al final, Martina se acostó porque ",
+    "after": ".",
+    "options": [
+     "la casa estaba demasiado silenciosa",
+     "su mamá la llamó",
+     "terminó el libro"
+    ],
+    "answer": 0,
+    "why": "The house was too quiet and dark."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Me acosto a las diez.",
+   "right": "Me acuesto a las diez.",
+   "why": "Stem change o to ue in the present: acuesto."
+  },
+  {
+   "wrong": "Nos acuestamos tarde.",
+   "right": "Nos acostamos tarde.",
+   "why": "No stem change in nosotros."
+  },
+  {
+   "wrong": "Anoche me acuesté tarde.",
+   "right": "Anoche me acosté tarde.",
+   "why": "The preterite has no stem change."
+  },
+  {
+   "wrong": "Me acuesto a dormir en el sofá.",
+   "right": "Me acuesto en el sofá.",
+   "why": "Acostarse already includes the idea of lying down."
+  }
+ ],
+ "heritage": "Heritage speakers in the US sometimes say «me acosté a dormir», which is common and understood. In writing, the key points are the stem change only in the present (acuesto, but acosté) and the accent in «me acosté».",
+ "teacher": "Run a class survey: ¿A qué hora te acuestas entre semana? ¿Y el fin de semana? Students graph the results and report who goes to bed latest.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb acostarse». Suggestions list other routine verbs (levantarse, despertarse, dormirse), so acostarse is contrasted with dormirse here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
