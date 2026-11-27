@@ -143,6 +143,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "bank",
+  "level": "A2",
+  "theme": "bank",
+  "title": "Spanish bank vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "baseball",
   "level": "A2",
   "theme": "baseball",
@@ -168,6 +175,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "business",
   "title": "Spanish business vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "car",
+  "level": "A2",
+  "theme": "car",
+  "title": "Spanish car vocabulary"
  },
  {
   "family": "vocabulary",
@@ -238,6 +252,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "friends",
   "title": "Spanish words for friends"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "gym",
+  "level": "A2",
+  "theme": "gym",
+  "title": "Spanish gym vocabulary"
  },
  {
   "family": "vocabulary",
