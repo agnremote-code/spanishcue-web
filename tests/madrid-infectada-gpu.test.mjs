@@ -48,7 +48,7 @@ const m = { exports: {} };
 new Function('require', 'module', 'exports', compiled.outputFiles[0].text)(name =>
   name === 'three' ? { ...THREE, WebGLRenderer: Renderer } : require(name), m, m.exports);
 
-async function mount() {
+async function mount(extra = {}) {
   const dom = new JSDOM('<main><div id="root"></div></main>', { url: 'https://fixture.invalid/madrid-infectada', pretendToBeVisual: true });
   for (const k of ['window', 'document', 'HTMLElement', 'localStorage', 'KeyboardEvent']) globalThis[k] = dom.window[k];
   window.matchMedia = () => ({ matches: false }); // desktop quality: composer, bloom and shadows
@@ -60,12 +60,12 @@ async function mount() {
   const none = () => {};
   const seen = { zone: null, metro: 0 };
   let props = { level: 'b1', start: 'sol', go: { zone: 'sol', n: 0 }, target: null, intro: false, finale: false, spotOpen: null, done: [], paused: false, inset: { right: 0, bottom: 0 }, act: 0, fire: 0,
-    onIntroEnd: none, onFinaleEnd: none, onNear: none, onSpot: none, onVax: none, onEvent: e => { if (e === 'metro') seen.metro++; }, onPose: p => { seen.zone = p.zone; }, onFail: () => assert.fail('GPU fixture failed') };
+    onIntroEnd: none, onFinaleEnd: none, onNear: none, onSpot: none, onVax: none, onEvent: e => { if (e === 'metro') seen.metro++; }, onPose: p => { seen.zone = p.zone; }, onFail: () => assert.fail('GPU fixture failed'), ...extra };
   const root = createRoot(document.getElementById('root'));
   const render = async more => { props = { ...props, ...more }; await act(() => root.render(React.createElement(m.exports.default, props))); };
   const advance = async (n = 20) => act(() => { for (let i = 0; i < n; i++) { time += 16; const pending = [...frames.values()]; frames.clear(); for (const f of pending) f(time); } });
   await render({});
-  return { seen, advance, async go(zone) { await render({ go: { zone, n: props.go.n + 1 } }); await advance(120); }, async stop() { await act(() => root.unmount()); dom.window.close(); } };
+  return { seen, advance, render, async go(zone) { await render({ go: { zone, n: props.go.n + 1 } }); await advance(120); }, async stop() { await act(() => root.unmount()); dom.window.close(); } };
 }
 
 test('Madrid infectada frees the GPU on unmount after a Metro trip: instance buffers, bloom pass, shadow map and the context (2026-11-11 repair)', async () => {
@@ -93,4 +93,49 @@ test('Madrid infectada frees the GPU on unmount after a Metro trip: instance buf
   } finally {
     THREE.InstancedMesh.prototype.dispose = instDispose; UnrealBloomPass.prototype.dispose = bloomDispose;
   }
+});
+
+// Gated repair 2026-11-27 (docs/audits/madrid-infectada-repair-boat-context-20261127.md), the two
+// follow-ups of the 11-11 repair: the replayed finale boat was only detached (review NB4), and a lost
+// WebGL context froze the world instead of falling back to the 2D map.
+test('Madrid infectada frees the finale boat when the finale ends, without freeing the shared city materials (2026-11-27 repair)', async () => {
+  const geoDispose = THREE.BufferGeometry.prototype.dispose, matDispose = THREE.Material.prototype.dispose;
+  const count = { geo: 0, mat: [] };
+  THREE.BufferGeometry.prototype.dispose = function () { count.geo++; return geoDispose.call(this); };
+  THREE.Material.prototype.dispose = function () { count.mat.push(this); return matDispose.call(this); };
+  try {
+    const boats = { n: 0 };
+    const t = await mount({ onEvent: e => { if (e === 'boat') boats.n++; } });
+    await t.advance(10);
+    for (let round = 1; round <= 2; round++) {
+      await t.render({ finale: true });
+      await t.advance(30);
+      assert.equal(boats.n, round, `the boat sails in finale ${round}`);
+      count.geo = 0; count.mat = [];
+      await t.render({ finale: false });
+      await t.advance(5);
+      assert.ok(count.geo >= 4, `the boat's hull, deck, mast and flag geometries are freed (freed ${count.geo})`);
+      assert.equal(count.mat.length, 1, `only the flag's own material is freed, not the shared hull/deck/mast materials (freed ${count.mat.length})`);
+      assert.equal(count.mat[0].side, THREE.DoubleSide, 'the freed material is the flag');
+    }
+    await t.stop();
+  } finally {
+    THREE.BufferGeometry.prototype.dispose = geoDispose; THREE.Material.prototype.dispose = matDispose;
+  }
+});
+
+test('Madrid infectada falls back to 2D when the WebGL context is lost, and stops drawing (2026-11-27 repair)', async () => {
+  const fails = { n: 0 };
+  const t = await mount({ onFail: () => { fails.n++; } });
+  await t.advance(10);
+  const canvas = renderers.at(-1).domElement;
+  const lost = new window.Event('webglcontextlost', { cancelable: true });
+  canvas.dispatchEvent(lost);
+  assert.equal(lost.defaultPrevented, true, 'the loss is claimed so the browser may restore the context');
+  assert.equal(fails.n, 1, 'the game is told to switch to the 2D map');
+  canvas.dispatchEvent(new window.Event('webglcontextlost', { cancelable: true }));
+  assert.equal(fails.n, 1, 'a second loss event does not report twice');
+  await t.stop();
+  canvas.dispatchEvent(new window.Event('webglcontextlost', { cancelable: true }));
+  assert.equal(fails.n, 1, 'after unmount (which forces the loss itself) nothing is reported');
 });

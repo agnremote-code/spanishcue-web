@@ -28,7 +28,7 @@ import { animatePerson, setMood, setPose } from '../noche-abierta/people3d';
 import { createBumpClock, pushOut } from '../escucha-3d/bump.mjs';
 import { insultFor, shout } from '../escucha-3d/shout';
 import { canvas, createBubbles, disposeGroup, keepPeopleClear, makeWalker, spotRing, stepWalker, type Box, type Light, type Talker, type Walker } from '../mundo-3d/kit3d';
-import { boat as boatModel, buildZone, helicopter, zombieLook, type Zone3D } from './madrid3d';
+import { boat as boatModel, buildZone, disposeBoat, helicopter, zombieLook, type Zone3D } from './madrid3d';
 import { buildCity, type City3D } from './city3d';
 import { CITY_BOUNDS, ENCOUNTERS, METRO_EXITS, arrivalOf, encounterSpot, feederSpots, toWorld, turnOf, whereIs, zombieGround } from './city.mjs';
 import { createCharlas, onFreeGround } from '../charlas-3d/charlas3d';
@@ -404,6 +404,10 @@ export default function World3D(props: WorldProps) {
     el.addEventListener('pointerdown', onDown); el.addEventListener('pointermove', onMove);
     el.addEventListener('pointerup', onUp); el.addEventListener('pointercancel', onUp);
     el.addEventListener('wheel', onWheel, { passive: false });
+    // 2026-11-27 repair: a lost context (GPU reset, driver, memory pressure) used to freeze the
+    // world on its last frame. Stop drawing and fall back to the 2D map, as Bosque and Feria do.
+    const onContextLost = (event: Event) => { event.preventDefault(); if (disposed) return; disposed = true; cancelAnimationFrame(frame); live.current.onFail(); };
+    el.addEventListener('webglcontextlost', onContextLost);
 
     let baseFov = 58, W = 1, H = 1;
     const resize = () => {
@@ -811,7 +815,8 @@ export default function World3D(props: WorldProps) {
       }
       if (!p.finale && finaleT !== -1) {
         // Back on the pier after the ending (or when the finale is replayed later).
-        if (finaleBoat) { finaleBoat.removeFromParent(); finaleBoat = null; }
+        // 2026-11-27 repair: free the boat's geometries and flag, not only detach them, so each replay starts clean.
+        if (finaleBoat) { disposeBoat(finaleBoat); finaleBoat = null; }
         finaleT = -1; setLight(city.moodOf('rio'));
         const pier = rio(22, 17.6);
         setPlayer(pier.x, pier.z, Math.PI + rioTurn);
@@ -910,6 +915,7 @@ export default function World3D(props: WorldProps) {
       window.removeEventListener('keydown', onKeyDown); window.removeEventListener('keyup', onKeyUp); window.removeEventListener('blur', onBlur);
       el.removeEventListener('pointerdown', onDown); el.removeEventListener('pointermove', onMove);
       el.removeEventListener('pointerup', onUp); el.removeEventListener('pointercancel', onUp); el.removeEventListener('wheel', onWheel);
+      el.removeEventListener('webglcontextlost', onContextLost); // before forceContextLoss below, which fires it
       // 2026-11-11 repair: the station, then the scene (the city's tree instance buffers first,
       // which disposeGroup does not free), the particle stock that lives outside the scene,
       // the bloom passes' own render targets (composer.dispose() frees only its two), the
