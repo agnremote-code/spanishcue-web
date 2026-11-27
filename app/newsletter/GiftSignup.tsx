@@ -1,6 +1,7 @@
 'use client';
 import { useState, type FormEvent } from 'react';
 import { GIFT_LESSON_LEVEL, GIFT_LESSON_PATH, GIFT_LESSON_PITCH, GIFT_LESSON_TITLE, GIFT_POPUP_STORAGE_KEY } from './gift';
+import { promoWeekActive } from '../promo-config';
 import styles from './newsletter.module.css';
 
 function remember(value: string) {
@@ -34,6 +35,7 @@ export function GiftSignupForm({ source, locale = 'es' }: { source: string; loca
     <div className={styles.done} role="status">
       <p className={styles.lesson}>{es ? '¡Listo! La clase ya está desbloqueada en este navegador. También te la enviamos por email.' : 'Done! The lesson is now unlocked in this browser. We also sent it to your email.'}</p>
       <a className={styles.open} href={GIFT_LESSON_PATH}>{es ? 'Abrir la clase' : 'Open the lesson'}</a>
+      {es && promoWeekActive() ? <a className={styles.promo} href="/pricing">¿Quieres todas las clases? 10 días de PRO por US$0,99 →</a> : null}
     </div>
   );
   return (

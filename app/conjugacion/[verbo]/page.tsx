@@ -10,6 +10,7 @@ import { EleNewsletterInline } from "../../material-ele/PopularLinks";
 import EmbedSnippet from "../../material-ele/EmbedSnippet";
 import { tiempoPages } from "../tiempos";
 import cj from "../conjugacion.module.css";
+import { ParticipioReal } from "../../datos/enlaces";
 import { SER_PATH, serPath } from "../../ser-o-estar/data";
 import { CONJUGACION_PATH, PERSONS, TENSE_GROUPS, verbFromParam, verbPage, verbPath, verbSlug, verbos, type Highlight } from "../verbos";
 
@@ -93,6 +94,7 @@ export default async function VerbPage({ params }: Props) {
       <Section id="ejercicio" title={`Ejercicio: conjuga ${verb}`} intro="Doce formas en distintos tiempos, con las irregulares primero. Sirve como repaso rápido en clase o como tarea.">
         <EleExerciseBlock exercise={{ title: `Ejercicio con ${verb}`, instructions: `Escribe la forma correcta de ${verb} en el tiempo y la persona indicados.`, items: page.exercise }} />
       </Section>
+      <ParticipioReal verb={verb} />
       <EleNewsletterInline source={page.path} />
       {verb === "ser" || verb === "estar" ? (
         <Section title="¿Ser o estar?" intro="Cada uso y cada adjetivo que cambia de significado tiene su regla y un ejercicio.">

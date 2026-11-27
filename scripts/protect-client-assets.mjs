@@ -81,6 +81,8 @@ const publicRoots = new Set([
   "app/immersive/ProDiscovery.tsx",
   // Free-version bar above every browsing page for non-PRO visitors: copy and a /pricing link only.
   "app/marketing/FreeVersionBar.tsx",
+  // Fixed offer bar at the bottom of the public SEO pages: copy and a /pricing link only.
+  "app/marketing/PromoStickyBar.tsx",
   // Material ELE share card (copy HTML / link) on public topic and activity pages.
   "app/material-ele/ShareSnippet.tsx",
   "app/immersive/PremiumPanel.tsx",

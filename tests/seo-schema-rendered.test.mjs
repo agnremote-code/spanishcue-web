@@ -98,6 +98,23 @@ test('the autocomplete data report states its sample, links its CSV and is liste
  assert.ok(hub.querySelector('main a[href="/datos/que-autocompleta-google-en-gramatica"]'));
 });
 
+// Internal links from teaching pages to the data report: figures come from the report data.
+test('teaching pages link the pretérito perfecto report with the real wrong participles',async()=>{
+ const doc=async p=>{const r=await fetch(origin+p);assert.equal(r.status,200,p);return new JSDOM(await r.text()).window.document;};
+ const report='/datos/errores-preterito-perfecto-a2';
+ const guide=await doc('/material-ele/preterito-perfecto');
+ assert.ok(guide.querySelector(`#datos a[href="${report}"]`),'guide links the report');
+ const escribir=await doc('/conjugacion/escribir');
+ const section=escribir.querySelector('#participio-real');
+ assert.ok(section,'escribir shows real errors');
+ assert.match(section.textContent,/«escribito» y «escribido» en lugar de «escrito»/);
+ assert.ok(section.querySelector(`a[href="${report}#participios"]`));
+ assert.equal((await doc('/conjugacion/hablar')).querySelector('#participio-real'),null);
+ const list=await doc('/conjugacion/irregulares/participios');
+ assert.ok(list.querySelectorAll('#participios-reales tbody tr').length>=9);
+ assert.ok((await doc(report)).querySelector('#participios'));
+});
+
 // Mission phase 2: reading spokes carry their own text, at least three instant-feedback questions, a real figure, a heritage block, and link hub → spoke → next spoke → hub.
 test('reading comprehension hub and spokes are complete and chained',async()=>{
  const doc=async p=>new JSDOM(await (await fetch(origin+p)).text()).window.document;

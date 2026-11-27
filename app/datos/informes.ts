@@ -5,7 +5,7 @@
  */
 export const DATOS_PATH = "/datos";
 
-export type Informe = { path: string; title: string; summary: string; source: string; published: string; /** True when the report page publishes a Dataset (table + CSV). */ dataset: boolean };
+export type Informe = { path: string; title: string; summary: string; source: string; published: string; /** True when the report page publishes a Dataset (table + CSV). */ dataset: boolean; /** /material-ele topic slugs whose guide links to this report. */ topics?: string[] };
 
 export const informes: Informe[] = [
   {
@@ -23,6 +23,7 @@ export const informes: Informe[] = [
     source: "Respuestas equivocadas en las tareas de Autoestudio A2, del 12 al 25 de noviembre de 2026.",
     published: "2026-11-26",
     dataset: true,
+    topics: ["preterito-perfecto", "preterito-pluscuamperfecto"],
   },
   {
     path: "/material-ele/guia/ia-de-google-en-busquedas-de-profes-de-ele",
@@ -33,3 +34,7 @@ export const informes: Informe[] = [
     dataset: false,
   },
 ];
+
+export function informesForTopic(slug: string): Informe[] {
+  return informes.filter((informe) => informe.topics?.includes(slug));
+}

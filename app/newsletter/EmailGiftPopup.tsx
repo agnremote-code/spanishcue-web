@@ -17,9 +17,10 @@ function shouldAsk() {
 
 /**
  * Email capture on public SEO pages. Runs only in the browser, so edge-cached
- * HTML stays identical for everyone. Opens after 25 s or once the reader has
- * scrolled 40 % of the page (after the cookie banner is answered), at most
- * once every two weeks after a close.
+ * HTML stays identical for everyone. Opens after 15 s, once the reader has
+ * scrolled 40 % of the page, or when the pointer leaves through the top of the
+ * window on a desktop (exit intent, not before 4 s), always after the cookie
+ * banner is answered and at most once every two weeks after a close.
  */
 /** English growth pages have no `lang="es"` on their main column; Spanish SEO pages always do. */
 function pageLocale(): 'es' | 'en' {
@@ -43,9 +44,12 @@ export default function EmailGiftPopup() {
       const max = document.documentElement.scrollHeight - window.innerHeight;
       if (max > 0 && window.scrollY / max >= .4) show();
     };
-    const timer = window.setTimeout(show, 25000);
+    const started = Date.now();
+    const onLeave = (event: MouseEvent) => { if (!event.relatedTarget && event.clientY <= 0 && Date.now() - started > 4000) show(); };
+    const timer = window.setTimeout(show, 15000);
     window.addEventListener('scroll', onScroll, { passive: true });
-    function cleanup() { window.clearTimeout(timer); window.removeEventListener('scroll', onScroll); }
+    document.addEventListener('mouseout', onLeave);
+    function cleanup() { window.clearTimeout(timer); window.removeEventListener('scroll', onScroll); document.removeEventListener('mouseout', onLeave); }
     return () => { cleanup(); window.clearTimeout(waiting); };
   }, []);
   useEffect(() => {
