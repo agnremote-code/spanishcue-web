@@ -8,6 +8,7 @@ import cj from "../../conjugacion/conjugacion.module.css";
 import { PERSONS, verbFromParam, verbPath, verbSlug, verbos } from "../../conjugacion/verbos";
 import { SPANISH_VERBS_PATH, TENSE_GROUPS_EN, verbPageEn, verbPathEn } from "../../conjugacion/verbos-en";
 import { VerbLinksEn, VerbSearchEn, VerbsFrame, verbsMetadata } from "../frame";
+import { TRAINER_PATH_EN } from "../../practicar-conjugacion/drill";
 
 type Props = { params: Promise<{ verb: string }> };
 
@@ -79,6 +80,7 @@ export default async function SpanishVerbPage({ params }: Props) {
       </Section>
       <Section id="quiz" title={`Quiz: conjugate ${verb}`} intro="Twelve forms across the main tenses, irregular ones first. Type each answer and check them all at once.">
         <ExerciseCheck items={page.exercise} cta={false} />
+        <p className={styles.sectionIntro}>Want more practice? <Link className={styles.textLink} href={`${TRAINER_PATH_EN}?v=${encodeURIComponent(verbSlug(verb))}`}>Practice {verb} in the verb trainer</Link>: instant feedback and review of what you miss.</p>
       </Section>
       {page.related.length ? (
         <Section title={`Verbs conjugated like ${verb}`} intro={`Same pattern: ${page.model}. Practising them together fixes the pattern.`}>

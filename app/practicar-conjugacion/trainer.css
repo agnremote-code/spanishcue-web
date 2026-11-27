@@ -220,3 +220,4 @@
   .vt-actions .vt-primary { flex: 1; }
   .vt-keys button { width: 36px; height: 38px; }
 }
+.vt-gloss { margin: -2px 0 0; color: var(--vt-muted); font-size: 15px; font-style: italic; }

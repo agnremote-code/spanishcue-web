@@ -12,6 +12,8 @@ import type { Forms, TenseKey } from "../conjugacion/engine";
 import { IMPERSONAL, TOP_VERBS, conjugateVerb, isIrregular, verbFromParam, verbos } from "../conjugacion/verbos";
 
 export const TRAINER_PATH = "/practicar-conjugacion";
+/** English twin (app/spanish-conjugation-practice): same trainer, English interface. */
+export const TRAINER_PATH_EN = "/spanish-conjugation-practice";
 export const TRAINER_ACCESS_PATH = "/api/verb-trainer/access";
 export const TRAINER_STORAGE_KEY = "spanishcue:entrenador-verbos:v1";
 
@@ -57,8 +59,9 @@ vender pagar preguntar responder contestar escuchar enseñar mostrar contar cost
 lavar preferir repetir servir morir nacer caer construir conducir traducir elegir recibir subir decidir olvidar ganar
 visitar mandar mover`.trim().split(/\s+/))].filter((verb) => known.has(verb));
 
-/** 1258 → «1.258» (Intl does not group four-digit numbers in Spanish). */
-export const formatCount = (value: number) => String(value).replace(/\B(?=(\d{3})+$)/g, ".");
+/** 1258 → «1.258» (Intl does not group four-digit numbers in Spanish); English passes ",". */
+export const formatCount = (value: number, separator = ".") => String(value).replace(/\B(?=(\d{3})+$)/g, separator);
+export const VERB_TOTAL = verbos.length;
 
 export type VerbSetKey = "top" | "frecuentes" | "irregulares" | "regulares" | "todos" | "lista";
 export type VerbSet = { key: VerbSetKey; label: string; hint: string; pro: boolean };

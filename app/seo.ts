@@ -59,6 +59,7 @@ export function languageAlternates(pathname: string): Record<string, string> | u
 /** Verb conjugation pages exist in both languages (/conjugacion/tener ↔ /spanish-verbs/tener). */
 function verbLanguagePair(path: string): { es: string; en: string } | undefined {
   if (path === "/conjugacion" || path === "/spanish-verbs") return { es: "/conjugacion", en: "/spanish-verbs" };
+  if (path === "/practicar-conjugacion" || path === "/spanish-conjugation-practice") return { es: "/practicar-conjugacion", en: "/spanish-conjugation-practice" };
   const match = /^\/(?:conjugacion|spanish-verbs)\/([^/]+)$/.exec(path);
   if (!match || match[1] === "irregulares") return undefined;
   return { es: `/conjugacion/${match[1]}`, en: `/spanish-verbs/${match[1]}` };
@@ -157,6 +158,7 @@ export function isEdgeCacheablePath(pathname: string): boolean {
     path === "/material-ele" ||
     path === "/conjugacion" ||
     path === "/practicar-conjugacion" ||
+    path === "/spanish-conjugation-practice" ||
     path === "/spanish-verbs" ||
     path.startsWith("/spanish-verbs/") ||
     path.startsWith("/conjugacion/") ||
