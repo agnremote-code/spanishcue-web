@@ -70,6 +70,9 @@ const publicRoots = new Set([
   "app/indicativo-o-subjuntivo/MoodChooser.tsx",
   // Shared multiple-choice quiz of the public mini-app families.
   "app/mini-apps/ChoiceQuiz.tsx",
+  // Entrenador de verbos (/practicar-conjugacion): the public conjugation engine
+  // and its verb list (already on every /conjugacion page); PRO only unlocks options.
+  "app/practicar-conjugacion/VerbTrainer.tsx",
   // Copy button of the embeddable conjugator page (public, no account data).
   "app/material-ele/EmbedSnippet.tsx",
   "app/newsletter/GiftSignup.tsx",

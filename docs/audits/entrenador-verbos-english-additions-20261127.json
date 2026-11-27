@@ -1,0 +1,470 @@
+{
+ "version": 1,
+ "authorization": "Ale approved this exact English copy on 2026-11-27 by choosing «Aprobados, publicalo» on the decision card «¿Aprobás los textos en inglés del entrenador para EE. UU.?» (cmsg_01Gr5R4j3t2Yet65UcmhcVhAKcXGYMBrguL5rGhZauLrsJ) in thread cmsg_01Gr5R4j3t2Yet65UcmhcVhA327bQEwgCc76cpo4CGqRrn; text reviewed in /mnt/project-files/entrenador-verbos/textos-ingles.md. English twin of the Entrenador de verbos at /spanish-conjugation-practice.",
+ "additions": [
+  {
+   "path": "app/jugar/StudentHub.tsx",
+   "text": "Verb trainer"
+  },
+  {
+   "path": "app/jugar/StudentHub.tsx",
+   "text": "Five minutes a day: pick tenses, type each form and review what you miss."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "What do you want to practice?"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Tenses"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Verbs"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Your verb list"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "tener, pedir, dormir, conducir…"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "${n} ${n === 1 ? \"verb\" : \"verbs\"}"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "verb"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "verbs"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": " · the free trainer uses the first ${n}"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": " · not recognized: ${words}"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Include vosotros"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Accents count"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Questions per round"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Start"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "${n} to review today"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Copy a link for your students"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Link copied ✓"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Copy this link:"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "SpanishCue PRO: every tense and verb unlocked."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Your student pass unlocks every tense and verb."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Type at least one verb in your list (for example: tener, pedir, dormir)."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "There are no verbs to practice with this choice."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "This link includes ${tenses}: those tenses are part of SpanishCue PRO. Practice the rest for free."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Practice"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "← Finish"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "${n} in a row"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Type the form"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Special letters"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Great!"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Right, but watch the accent:"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Almost: an accent is missing or extra."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Not quite."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "The answer is:"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "See the full conjugation of ${verb} ↗"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "I don't know"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Check"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Next"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Continue ↵"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Flawless round!"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Nice round!"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Round complete"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "correct"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "answers"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "best streak"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "time"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "To review"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Review my mistakes"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Another round"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Change tenses or verbs"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Your progress"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Your correct answers, daily streak and toughest verbs show up here. Saved in this browser, no account needed."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "day streak"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "forms mastered"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Today: ${n} ${n === 1 ? \"answer\" : \"answers\"} · Best streak: ${best} · To review: ${due}"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "answer"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "answers"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Toughest verbs:"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Close"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "${what} is part of PRO"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Practice the subjunctive, commands and 1,200+ verbs"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "All 15 tenses: subjunctive, commands and every compound tense"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Every verb in the dictionary and unlimited lists"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Plus the full library of ready-to-teach lessons"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Try PRO for 10 days for US$0.99"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Then US$19.90/month. Cancel anytime."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "See SpanishCue PRO"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "US$19.90/month. Cancel anytime."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Are you a student? If your teacher has SpanishCue PRO, open their student link and everything here unlocks."
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Indicative"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Compound tenses"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Subjunctive"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Commands"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Present"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Present"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Preterite"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Preterite"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Imperfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Imperfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Future"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Future"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Conditional"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Conditional"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Present perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Present perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Past perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Past perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Future perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Future perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Conditional perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Cond. perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Present subjunctive"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Subj. present"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Imperfect subjunctive"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Subj. imperfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Present perfect subjunctive"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Subj. perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Past perfect subjunctive"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Subj. past perfect"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Affirmative commands"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Commands"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Negative commands"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Negative commands"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "The 30 essentials"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "ser, estar, tener, ir, hacer…"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "The 100 most common"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Everything that comes up from A1 to B1"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Irregulars only"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "The irregulars among the 100 most common"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Regulars only"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "To lock in the endings"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "All verbs"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "SpanishCue's full verb dictionary"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "My list"
+  },
+  {
+   "path": "app/practicar-conjugacion/copy.ts",
+   "text": "Type the verbs you want to practice"
+  }
+ ]
+}

@@ -223,6 +223,14 @@ export default function StudentHub({ cards, locale, signedIn, fullAccess, studen
         </p>
       ) : null}
 
+      <a className="jg-trainer" href={locale === "es" ? "/practicar-conjugacion" : "/spanish-conjugation-practice"}>
+        <span className="jg-trainer-mark" aria-hidden="true">tengo</span>
+        {locale === "es"
+          ? <span><b>Entrenador de verbos</b><small>Cinco minutos al día: eliges tiempos, escribes cada forma y repasas lo que fallas.</small></span>
+          : <span><b>Verb trainer</b><small>Five minutes a day: pick tenses, type each form and review what you miss.</small></span>}
+        <i aria-hidden="true">→</i>
+      </a>
+
       <section className="jg-section" aria-labelledby="jg-open-title">
         <div className="jg-section-head">
           <h2 id="jg-open-title">{t.openTitle}</h2>

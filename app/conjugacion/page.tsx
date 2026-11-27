@@ -6,6 +6,7 @@ import { ConjugacionFrame, VerbLinks, VerbSearch } from "./components";
 import cj from "./conjugacion.module.css";
 import { CONJUGACION_PATH, TOP_VERBS, isIrregular, modelGroups, verbPath, verbos } from "./verbos";
 import { IRREGULARES_PATH, tiempoPages } from "./tiempos";
+import { TRAINER_PATH } from "../practicar-conjugacion/drill";
 
 const title = "Conjugación de verbos en español: más de 1.200 verbos | SpanishCue";
 const description = `Conjugación completa de más de 1.200 verbos en español, con las formas irregulares marcadas, notas para enseñarlos y un ejercicio corregido en cada verbo.`;
@@ -63,6 +64,9 @@ export default function ConjugacionHub() {
             <VerbLinks verbs={verbos.filter((verb) => letterOf(verb) === letter)} href={verbPath} />
           </div>
         ))}
+      </Section>
+      <Section title="Practica la conjugación">
+        <p className={styles.sectionIntro}>Elige tiempos y verbos y escribe cada forma, con corrección al instante y repaso de lo que fallas: <Link className={styles.textLink} href={TRAINER_PATH}>entrenador de verbos gratis</Link>.</p>
       </Section>
       <Section title="Conjugador gratis para tu web">
         <p className={styles.sectionIntro}>¿Tienes blog, web de academia o curso en Moodle? <Link className={styles.textLink} href="/material-ele/conjugador-para-tu-web">Inserta este conjugador gratis</Link>: sin registro, sin cookies, con los irregulares marcados.</p>
