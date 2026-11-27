@@ -10,10 +10,24 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "comprar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb comprar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "conocer",
   "level": "A1",
   "theme": "",
   "title": "Spanish verb conocer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "contar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb contar: practice"
  },
  {
   "family": "verbs",
@@ -108,6 +122,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "lavar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb lavar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "leer",
   "level": "A1",
   "theme": "",
@@ -133,6 +154,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb llevar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "mirar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb mirar: practice"
  },
  {
   "family": "verbs",
@@ -217,6 +245,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb ver: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "viajar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb viajar: practice"
  },
  {
   "family": "verbs",

@@ -1,0 +1,278 @@
+{
+ "verb": "contar",
+ "meaning": "to count, to tell",
+ "level": "A2",
+ "title": "Spanish Verb Contar Practice: Count, Tell a Story and Quiz",
+ "description": "Practice the Spanish verb contar: to count and to tell, the o to ue stem change, contar con for relying on someone, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb contar: practice",
+ "intro": "Contar means to count (cuento hasta diez) and to tell (te cuento un secreto). It changes o to ue in the present, and contar con means to count on someone. Learn the forms and practice with feedback on every answer.",
+ "demand": {
+  "query": "spanish verb contar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To count",
+   "example": "El niño cuenta hasta cien.",
+   "meaning": "The boy counts to a hundred."
+  },
+  {
+   "use": "To tell a story or news",
+   "example": "Mi abuelo cuenta historias de su pueblo.",
+   "meaning": "My grandfather tells stories about his town."
+  },
+  {
+   "use": "Contar con: to rely on",
+   "example": "Puedes contar conmigo.",
+   "meaning": "You can count on me."
+  },
+  {
+   "use": "¿Qué me cuentas?: what's new?",
+   "example": "¡Hola! ¿Qué me cuentas?",
+   "meaning": "Hi! What's new?"
+  },
+  {
+   "use": "To matter: no cuenta",
+   "example": "Ese intento no cuenta.",
+   "meaning": "That try doesn't count."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "cuento"
+  ],
+  [
+   "tú",
+   "cuentas"
+  ],
+  [
+   "él / ella / usted",
+   "cuenta"
+  ],
+  [
+   "nosotros / nosotras",
+   "contamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "cuentan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "conté"
+  ],
+  [
+   "tú",
+   "contaste"
+  ],
+  [
+   "él / ella / usted",
+   "contó"
+  ],
+  [
+   "nosotros / nosotras",
+   "contamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "contaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Antes de dormir, le ",
+   "after": " un cuento a mi hija.",
+   "options": [
+    "cuento",
+    "conto",
+    "cuenta"
+   ],
+   "answer": 0,
+   "why": "Stem change o to ue: cuento."
+  },
+  {
+   "before": "¿Me ",
+   "after": " qué pasó en la reunión?",
+   "options": [
+    "cuentas",
+    "contas",
+    "cuentes"
+   ],
+   "answer": 0,
+   "why": "Tú: cuentas."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " los días que faltan para el viaje.",
+   "options": [
+    "contamos",
+    "cuentamos",
+    "cuentan"
+   ],
+   "answer": 0,
+   "why": "No stem change in nosotros: contamos."
+  },
+  {
+   "before": "Mis amigos siempre ",
+   "after": " chistes malos.",
+   "options": [
+    "cuentan",
+    "contan",
+    "cuenta"
+   ],
+   "answer": 0,
+   "why": "Ellos: cuentan."
+  },
+  {
+   "before": "Si necesitas ayuda, puedes contar ",
+   "after": " nosotros.",
+   "options": [
+    "con",
+    "en",
+    "a"
+   ],
+   "answer": 0,
+   "why": "Contar con: to count on."
+  },
+  {
+   "before": "Ayer les ",
+   "after": " la noticia a mis padres.",
+   "options": [
+    "conté",
+    "cuenté",
+    "conte"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: conté, no stem change."
+  },
+  {
+   "before": "¿Quién te ",
+   "after": " ese secreto?",
+   "options": [
+    "contó",
+    "cuentó",
+    "conto"
+   ],
+   "answer": 0,
+   "why": "Preterite él: contó, with accent."
+  },
+  {
+   "before": "¿Por qué no me ",
+   "after": " la verdad?",
+   "options": [
+    "contaste",
+    "contastes",
+    "cuentaste"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: contaste."
+  },
+  {
+   "before": "Los niños ",
+   "after": " las estrellas desde la ventana.",
+   "options": [
+    "contaron",
+    "cuentaron",
+    "contó"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: contaron."
+  },
+  {
+   "before": "El árbitro dijo que el gol no ",
+   "after": ".",
+   "options": [
+    "cuenta",
+    "cuento",
+    "cuentan"
+   ],
+   "answer": 0,
+   "why": "No cuenta: it doesn't count."
+  }
+ ],
+ "reading": {
+  "titleEs": "Las historias del abuelo",
+  "paragraphs": [
+   "Todos los domingos, el abuelo Julián cuenta historias de su pueblo en Guatemala: el volcán, el mercado de los jueves y el día que un burro entró a la iglesia. Sus nietos, que nacieron en Texas, siempre le piden: «¡Cuéntanos otra!».",
+   "Un domingo, su nieta Camila le contó algo a él: tenía que hacer un proyecto de historia familiar. Durante un mes, grabó cada historia y contó los lugares en un mapa. La maestra la felicitó, y el abuelo dijo que nunca pensaba que sus cuentos iban a terminar en una escuela."
+  ],
+  "comprehension": [
+   {
+    "before": "El abuelo Julián es de ",
+    "after": ".",
+    "options": [
+     "Guatemala",
+     "Texas",
+     "Honduras"
+    ],
+    "answer": 0,
+    "why": "His town is in Guatemala."
+   },
+   {
+    "before": "Una historia famosa es la del burro que ",
+    "after": ".",
+    "options": [
+     "entró a la iglesia",
+     "subió al volcán",
+     "vendía en el mercado"
+    ],
+    "answer": 0,
+    "why": "A donkey walked into the church."
+   },
+   {
+    "before": "Camila tenía que hacer un proyecto de ",
+    "after": ".",
+    "options": [
+     "historia familiar",
+     "ciencias",
+     "matemáticas"
+    ],
+    "answer": 0,
+    "why": "A family history project."
+   },
+   {
+    "before": "Para el proyecto, Camila ",
+    "after": ".",
+    "options": [
+     "grabó las historias",
+     "viajó a Guatemala",
+     "escribió un poema"
+    ],
+    "answer": 0,
+    "why": "She recorded every story."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo conto hasta diez.",
+   "right": "Yo cuento hasta diez.",
+   "why": "Stem change o to ue in yo: cuento."
+  },
+  {
+   "wrong": "Nosotros cuentamos el dinero.",
+   "right": "Nosotros contamos el dinero.",
+   "why": "No stem change in nosotros."
+  },
+  {
+   "wrong": "Puedes contar en mí.",
+   "right": "Puedes contar conmigo.",
+   "why": "To rely on someone is contar con."
+  },
+  {
+   "wrong": "Ayer cuenté la historia.",
+   "right": "Ayer conté la historia.",
+   "why": "The preterite has no stem change."
+  }
+ ],
+ "heritage": "Heritage speakers usually know «¿Qué me cuentas?» and «cuéntame» from home. In writing, check the accent in «cuéntame» and «contó», and use «contar con» rather than the English-shaped «contar en» for relying on someone.",
+ "teacher": "Have pairs tell a short family anecdote with Te cuento que… and then report their partner's story to the class with Me contó que…",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb contar». 1 of them asks for conjugation, charts or tenses (conjugation). Suggestions mix contar with encontrar and recordar, verbs with the same o to ue change.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
