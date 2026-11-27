@@ -3,6 +3,20 @@ export type UsCatalogEntry = { family: string; slug: string; level: string; them
 export const usCatalog: UsCatalogEntry[] = [
  {
   "family": "grammar",
+  "slug": "accent-marks",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish accent marks practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "adjective-agreement",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish adjective agreement practice"
+ },
+ {
+  "family": "grammar",
   "slug": "adverbs",
   "level": "A2–B1",
   "theme": "forms",
@@ -35,6 +49,20 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1–A2",
   "theme": "forms",
   "title": "Spanish demonstrative adjectives practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "double-object-pronouns",
+  "level": "B1",
+  "theme": "forms",
+  "title": "Spanish double object pronouns practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "gender-of-nouns",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish gender of nouns practice"
  },
  {
   "family": "grammar",
@@ -105,6 +133,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1–A2",
   "theme": "forms",
   "title": "Spanish stem-changing verbs practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "telling-time",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish telling time practice"
  },
  {
   "family": "verbs",

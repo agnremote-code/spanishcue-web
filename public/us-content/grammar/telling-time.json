@@ -1,0 +1,181 @@
+{
+ "theme": "forms",
+ "level": "A1",
+ "name": "telling time",
+ "title": "Spanish Telling Time Practice: ¿Qué Hora Es? with a Quiz",
+ "description": "Practice telling time in Spanish: es la una, son las dos, y media, menos cuarto, de la mañana and a las, with a rule table and 10 sentences checked as you tap.",
+ "h1": "Spanish telling time practice",
+ "answer": "To tell time in Spanish, use ser with la or las: es la una (one o'clock, singular) and son las dos, son las tres (plural). Add minutes with y (son las cuatro y diez) and subtract them with menos (son las cinco menos cuarto). Y cuarto is a quarter past, y media is half past. To say at what time something happens, use a la or a las.",
+ "demand": {
+  "query": "spanish telling time practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "How to tell time in Spanish",
+ "rules": [
+  {
+   "use": "One o'clock: singular",
+   "example": "Es la una. Es la una y media.",
+   "meaning": "es la"
+  },
+  {
+   "use": "Other hours: plural",
+   "example": "Son las tres. Son las diez y cinco.",
+   "meaning": "son las"
+  },
+  {
+   "use": "Quarter past, half past",
+   "example": "Son las seis y cuarto. Son las seis y media.",
+   "meaning": "y cuarto / y media"
+  },
+  {
+   "use": "Minutes before the hour",
+   "example": "Son las ocho menos diez.",
+   "meaning": "menos"
+  },
+  {
+   "use": "At what time",
+   "example": "La clase empieza a las nueve.",
+   "meaning": "a la / a las"
+  },
+  {
+   "use": "Part of the day",
+   "example": "a las siete de la mañana, de la tarde, de la noche",
+   "meaning": "de la mañana / tarde / noche"
+  },
+  {
+   "use": "Noon and midnight",
+   "example": "Es mediodía. Es medianoche.",
+   "meaning": "mediodía / medianoche"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "",
+   "after": " la una y veinte.",
+   "options": [
+    "Es",
+    "Son"
+   ],
+   "answer": 0,
+   "why": "One o'clock is singular: es la una."
+  },
+  {
+   "before": "Son ",
+   "after": " cuatro en punto.",
+   "options": [
+    "las",
+    "la"
+   ],
+   "answer": 0,
+   "why": "Hours other than one are plural: las cuatro."
+  },
+  {
+   "before": "Son las siete y ",
+   "after": " (7:30).",
+   "options": [
+    "media",
+    "medio"
+   ],
+   "answer": 0,
+   "why": "Half past: y media."
+  },
+  {
+   "before": "Son las nueve ",
+   "after": " cuarto (8:45).",
+   "options": [
+    "menos",
+    "y"
+   ],
+   "answer": 0,
+   "why": "A quarter to nine: las nueve menos cuarto."
+  },
+  {
+   "before": "El partido empieza ",
+   "after": " las ocho.",
+   "options": [
+    "a",
+    "en"
+   ],
+   "answer": 0,
+   "why": "At what time: a las."
+  },
+  {
+   "before": "Me levanto a las seis de la ",
+   "after": ".",
+   "options": [
+    "mañana",
+    "noche"
+   ],
+   "answer": 0,
+   "why": "Six in the morning: de la mañana."
+  },
+  {
+   "before": "—¿",
+   "after": " hora es? —Son las tres.",
+   "options": [
+    "Qué",
+    "Cuál"
+   ],
+   "answer": 0,
+   "why": "The question is ¿Qué hora es?"
+  },
+  {
+   "before": "La tienda cierra a las diez de la ",
+   "after": " (10 p.m.).",
+   "options": [
+    "noche",
+    "tarde"
+   ],
+   "answer": 0,
+   "why": "Ten at night: de la noche."
+  },
+  {
+   "before": "Son las dos y ",
+   "after": " (2:15).",
+   "options": [
+    "cuarto",
+    "quince minutos y"
+   ],
+   "answer": 0,
+   "why": "A quarter past: y cuarto (y quince also works)."
+  },
+  {
+   "before": "Almorzamos a las doce, al ",
+   "after": ".",
+   "options": [
+    "mediodía",
+    "medianoche"
+   ],
+   "answer": 0,
+   "why": "Twelve noon: mediodía."
+  }
+ ],
+ "mistakes": [
+  "Using son with one o'clock: «son la una» should be «es la una».",
+  "Forgetting the article: «son tres» should be «son las tres».",
+  "Saying «la una y treinta minutos» in everyday speech: Spanish usually says y media.",
+  "Using en for at what time: «en las ocho» should be «a las ocho».",
+  "Mixing de and por: de la mañana goes with a specific hour (a las ocho de la mañana); por la mañana means in the morning in general."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish telling time practice». 2 ask for a worksheet or a PDF (telling time in spanish practice pdf; telling time in spanish practice worksheets). 3 ask for a quiz or exercises (telling time in spanish practice quizlet; telling time in spanish practice games; telling time in spanish games). Games, Quizlet and worksheets all appear in the suggestions; this page keeps the rules short and checks each answer at once.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers in the US often read the time digitally (son las cuatro cuarenta y cinco) or use English for the time in mixed conversation. Both are fine, but classroom and exam Spanish expect the forms with y and menos too: son las cinco menos cuarto.",
+ "teacher": "Give pairs a daily schedule with blank clocks. One student asks ¿A qué hora…? and the other draws the hands, then they swap roles with their own real schedules.",
+ "faq": [
+  {
+   "question": "Why is it es la una but son las dos?",
+   "answer": "Una is singular, so the verb is singular: es la una. Every other hour is plural (las dos, las tres), so the verb is son. The same applies with minutes: es la una y diez, son las dos y diez."
+  },
+  {
+   "question": "How do you say a.m. and p.m. in Spanish?",
+   "answer": "Add de la mañana, de la tarde or de la noche after the hour: a las ocho de la mañana, a las tres de la tarde, a las diez de la noche. Schedules and transport often use the 24-hour clock: las 15:00."
+  },
+  {
+   "question": "Is it better to say menos cuarto or cuarenta y cinco?",
+   "answer": "Both are understood everywhere. Menos (son las nueve menos cuarto) is the traditional form taught in class; reading the digital time (son las ocho y cuarenta y cinco) is very common in Latin America and the US."
+  }
+ ]
+}
