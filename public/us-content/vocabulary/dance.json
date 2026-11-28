@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "dance",
+ "themeLabel": "Dance",
+ "title": "Spanish Dance Vocabulary: Salsa, Flamenco and Dance Terms",
+ "description": "Spanish dance vocabulary: steps, styles like salsa and flamenco, and how to talk about dancing, with a self-correcting quiz and an A2 reading about a dance class.",
+ "h1": "Spanish dance vocabulary",
+ "titleEs": "Mi primera clase de salsa",
+ "focus": "the preterite, sequence and feelings",
+ "intro": "Learn the Spanish words for dance steps, styles and the people on the dance floor, practice them with instant feedback, then join a salsa class for beginners in New York.",
+ "paragraphs": [
+  "Kevin tiene veinte años, estudia en una universidad de Nueva York y nunca había bailado. Su novia, Daniela, es puertorriqueña y baila salsa desde niña. Para su cumpleaños, ella le regaló un mes de clases para principiantes en un estudio del Bronx.",
+  "La primera noche, Kevin llegó nervioso. Había unas veinte personas de todas las edades. La profesora, Marisa, empezó con lo más básico: contar los tiempos. «Uno, dos, tres, pausa; cinco, seis, siete, pausa». Todos practicaron el paso básico frente al espejo, sin pareja.",
+  "Después, la profesora formó parejas. Kevin bailó con una señora de setenta años, doña Nilda, que bailaba muchísimo mejor que él. Cuando él se equivocaba, ella se reía y le decía: «No mires los pies, escucha la música». Kevin le pisó el pie dos veces y se puso rojo.",
+  "Al final de la clase, Marisa enseñó un giro sencillo. Kevin todavía no tenía ritmo, pero se divirtió mucho toda la noche. Cuando llegó a casa, le dijo a Daniela: «Dame tres semanas. En la boda de tu prima, bailamos». Ella todavía no sabe si creerle, pero ya le compró unos zapatos de baile para practicar en casa."
+ ],
+ "glossary": [
+  [
+   "nunca había bailado",
+   "had never danced"
+  ],
+  [
+   "desde niña",
+   "since she was a girl"
+  ],
+  [
+   "el principiante",
+   "beginner"
+  ],
+  [
+   "todas las edades",
+   "all ages"
+  ],
+  [
+   "equivocarse",
+   "to make a mistake"
+  ],
+  [
+   "ponerse rojo",
+   "to blush"
+  ],
+  [
+   "divertirse",
+   "to have fun"
+  ],
+  [
+   "la boda",
+   "wedding"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Antes de la clase, Kevin ",
+   "after": ".",
+   "options": [
+    "nunca había bailado",
+    "bailaba tango",
+    "era profesor"
+   ],
+   "answer": 0,
+   "why": "He had never danced."
+  },
+  {
+   "before": "Las clases fueron un regalo de ",
+   "after": ".",
+   "options": [
+    "su novia",
+    "su madre",
+    "la universidad"
+   ],
+   "answer": 0,
+   "why": "Daniela gave him the classes."
+  },
+  {
+   "before": "Lo primero que enseñó la profesora fue ",
+   "after": ".",
+   "options": [
+    "contar los tiempos",
+    "un giro",
+    "a bailar en pareja"
+   ],
+   "answer": 0,
+   "why": "Counting the beats."
+  },
+  {
+   "before": "Kevin bailó en pareja con ",
+   "after": ".",
+   "options": [
+    "una señora de setenta años",
+    "Daniela",
+    "la profesora"
+   ],
+   "answer": 0,
+   "why": "With doña Nilda, seventy years old."
+  },
+  {
+   "before": "Doña Nilda le dijo que ",
+   "after": ".",
+   "options": [
+    "escuchara la música y no mirara los pies",
+    "contara más rápido",
+    "se fuera a casa"
+   ],
+   "answer": 0,
+   "why": "Listen to the music, don't look at your feet."
+  },
+  {
+   "before": "Kevin quiere bailar bien para ",
+   "after": ".",
+   "options": [
+    "la boda de la prima de Daniela",
+    "un concurso",
+    "su cumpleaños"
+   ],
+   "answer": 0,
+   "why": "His girlfriend's cousin's wedding."
+  }
+ ],
+ "grammar": {
+  "title": "Preterite of regular -ar verbs",
+  "intro": "Most dance verbs are -ar verbs: bailé, bailaste, bailó, bailamos, bailaron.",
+  "items": [
+   {
+    "before": "Anoche nosotros ",
+    "after": " salsa hasta las once.",
+    "options": [
+     "bailamos",
+     "bailemos",
+     "bailaron"
+    ],
+    "answer": 0,
+    "why": "Preterite nosotros: bailamos."
+   },
+   {
+    "before": "Kevin le ",
+    "after": " el pie a su pareja.",
+    "options": [
+     "pisó",
+     "pisa",
+     "pisaba"
+    ],
+    "answer": 0,
+    "why": "One completed action: pisó."
+   },
+   {
+    "before": "¿Tú ",
+    "after": " en la boda de tu prima?",
+    "options": [
+     "bailaste",
+     "bailastes",
+     "bailó"
+    ],
+    "answer": 0,
+    "why": "Preterite tú: bailaste, never bailastes."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Te gusta bailar? ¿Qué tipo de música bailas?",
+  "Cuenta la primera vez que bailaste en una fiesta.",
+  "¿Qué baile hispano te gustaría aprender y por qué?"
+ ],
+ "heritage": "Many heritage speakers grow up dancing at family parties without ever naming the steps. You can bring that knowledge to class. In writing, watch «bailarín» (accent) but «bailarina» (no accent), and the preterite «bailaste» (no final s).",
+ "teacher": "Play thirty seconds each of salsa, cumbia, bachata and tango and ask students to identify the style and the country. Then they describe one in three sentences.",
+ "vocabulary": [
+  {
+   "title": "Styles and origins",
+   "words": [
+    [
+     "la salsa",
+     "salsa (Cuba, Puerto Rico, New York)"
+    ],
+    [
+     "el flamenco",
+     "flamenco (Andalusia, Spain)"
+    ],
+    [
+     "la cumbia",
+     "cumbia (Colombia)"
+    ],
+    [
+     "el tango",
+     "tango (Argentina, Uruguay)"
+    ],
+    [
+     "la bachata",
+     "bachata (Dominican Republic)"
+    ],
+    [
+     "el merengue",
+     "merengue (Dominican Republic)"
+    ],
+    [
+     "el baile folclórico",
+     "folk dance"
+    ]
+   ]
+  },
+  {
+   "title": "On the dance floor",
+   "words": [
+    [
+     "bailar",
+     "to dance"
+    ],
+    [
+     "el baile",
+     "dance"
+    ],
+    [
+     "el bailarín / la bailarina",
+     "dancer"
+    ],
+    [
+     "la pareja",
+     "partner, couple"
+    ],
+    [
+     "la pista de baile",
+     "dance floor"
+    ],
+    [
+     "el paso",
+     "step"
+    ],
+    [
+     "el ritmo",
+     "rhythm"
+    ],
+    [
+     "el giro / la vuelta",
+     "turn, spin"
+    ]
+   ]
+  },
+  {
+   "title": "Learning to dance",
+   "words": [
+    [
+     "la clase de baile",
+     "dance class"
+    ],
+    [
+     "guiar / llevar",
+     "to lead"
+    ],
+    [
+     "seguir",
+     "to follow"
+    ],
+    [
+     "contar los tiempos",
+     "to count the beats"
+    ],
+    [
+     "pisar",
+     "to step on"
+    ],
+    [
+     "el zapateado",
+     "foot-stamping (flamenco)"
+    ],
+    [
+     "tener buen oído",
+     "to have a good ear"
+    ],
+    [
+     "¿Bailamos?",
+     "Shall we dance?"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El ",
+   "after": " nació en Andalucía, en el sur de España.",
+   "options": [
+    "flamenco",
+    "tango",
+    "merengue"
+   ],
+   "answer": 0,
+   "why": "Flamenco comes from Andalusia."
+  },
+  {
+   "before": "El tango es típico de Argentina y ",
+   "after": ".",
+   "options": [
+    "Uruguay",
+    "Cuba",
+    "México"
+   ],
+   "answer": 0,
+   "why": "Tango: Buenos Aires and Montevideo."
+  },
+  {
+   "before": "La bachata y el merengue vienen de la ",
+   "after": ".",
+   "options": [
+    "República Dominicana",
+    "Argentina",
+    "España"
+   ],
+   "answer": 0,
+   "why": "Both are Dominican."
+  },
+  {
+   "before": "En la salsa, uno ",
+   "after": " y el otro sigue.",
+   "options": [
+    "guía",
+    "pisa",
+    "cuenta"
+   ],
+   "answer": 0,
+   "why": "One partner leads: guiar or llevar."
+  },
+  {
+   "before": "Perdón, te ",
+   "after": " el pie.",
+   "options": [
+    "pisé",
+    "guié",
+    "conté"
+   ],
+   "answer": 0,
+   "why": "Stepping on a foot: pisar."
+  },
+  {
+   "before": "Hay mucha gente bailando en la ",
+   "after": ".",
+   "options": [
+    "pista de baile",
+    "pareja",
+    "clase de oído"
+   ],
+   "answer": 0,
+   "why": "The dance floor: pista de baile."
+  },
+  {
+   "before": "Para aprender, el profesor nos enseña a ",
+   "after": ": uno, dos, tres…",
+   "options": [
+    "contar los tiempos",
+    "dar giros",
+    "tener pareja"
+   ],
+   "answer": 0,
+   "why": "Counting the beats."
+  },
+  {
+   "before": "En el flamenco, el ",
+   "after": " es el sonido de los pies contra el suelo.",
+   "options": [
+    "zapateado",
+    "giro",
+    "ritmo lento"
+   ],
+   "answer": 0,
+   "why": "Zapateado: rhythmic foot-stamping."
+  }
+ ],
+ "demand": {
+  "query": "spanish dance vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish dance vocabulary». Two ask about salsa and flamenco vocabulary and two ask what the traditional dances are, so the list names the main styles and where they come from.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

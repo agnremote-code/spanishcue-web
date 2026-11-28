@@ -1,0 +1,278 @@
+{
+ "verb": "creer",
+ "meaning": "to believe, to think",
+ "level": "A2",
+ "title": "Spanish Verb Creer Practice: Conjugation, Creyó and Quiz",
+ "description": "Practice the Spanish verb creer: present tense, the preterite creyó and creyeron, creer que and creer en, ten self-correcting questions and a short reading.",
+ "h1": "Spanish verb creer: practice",
+ "intro": "Creer is regular in the present, but in the preterite the i becomes y between vowels: creyó, creyeron. Learn creer que, creer en and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb creer",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To believe, to think: creer que",
+   "example": "Creo que va a llover.",
+   "meaning": "I think it's going to rain."
+  },
+  {
+   "use": "To believe in: creer en",
+   "example": "Creo en la gente.",
+   "meaning": "I believe in people."
+  },
+  {
+   "use": "To believe someone",
+   "example": "No te creo.",
+   "meaning": "I don't believe you."
+  },
+  {
+   "use": "Creo que sí / creo que no",
+   "example": "¿Viene Ana? Creo que sí.",
+   "meaning": "Is Ana coming? I think so."
+  },
+  {
+   "use": "¡Ya lo creo!",
+   "example": "¿Te gustó? ¡Ya lo creo!",
+   "meaning": "Did you like it? You bet!"
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "creo"
+  ],
+  [
+   "tú",
+   "crees"
+  ],
+  [
+   "él / ella / usted",
+   "cree"
+  ],
+  [
+   "nosotros / nosotras",
+   "creemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "creen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "creí"
+  ],
+  [
+   "tú",
+   "creíste"
+  ],
+  [
+   "él / ella / usted",
+   "creyó"
+  ],
+  [
+   "nosotros / nosotras",
+   "creímos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "creyeron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " que tienes razón.",
+   "options": [
+    "creo",
+    "cree",
+    "creí mañana"
+   ],
+   "answer": 0,
+   "why": "Present yo: creo."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " en los fantasmas?",
+   "options": [
+    "crees",
+    "creyes",
+    "cres"
+   ],
+   "answer": 0,
+   "why": "Present tú: crees."
+  },
+  {
+   "before": "Mi abuela ",
+   "after": " en los remedios caseros.",
+   "options": [
+    "cree",
+    "crea",
+    "cre"
+   ],
+   "answer": 0,
+   "why": "Present ella: cree, two e's."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " que es buena idea.",
+   "options": [
+    "creemos",
+    "creímos mañana",
+    "cremos"
+   ],
+   "answer": 0,
+   "why": "Present nosotros: creemos."
+  },
+  {
+   "before": "¿Crees ",
+   "after": " los extraterrestres?",
+   "options": [
+    "en",
+    "a",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Believing in something: creer en."
+  },
+  {
+   "before": "—¿Lloverá mañana? —Creo que ",
+   "after": ".",
+   "options": [
+    "sí",
+    "si",
+    "es"
+   ],
+   "answer": 0,
+   "why": "I think so: creo que sí, with an accent."
+  },
+  {
+   "before": "Al principio no te ",
+   "after": ".",
+   "options": [
+    "creí",
+    "crei",
+    "creyí"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: creí, with an accent."
+  },
+  {
+   "before": "Mi mamá no ",
+   "after": " mi excusa.",
+   "options": [
+    "creyó",
+    "creió",
+    "creó"
+   ],
+   "answer": 0,
+   "why": "Between vowels i becomes y: creyó."
+  },
+  {
+   "before": "Los niños ",
+   "after": " la historia del monstruo.",
+   "options": [
+    "creyeron",
+    "creieron",
+    "creeron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: creyeron."
+  },
+  {
+   "before": "¿",
+   "after": " lo que te dijo?",
+   "options": [
+    "Creíste",
+    "Creiste",
+    "Creyiste"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: creíste."
+  }
+ ],
+ "reading": {
+  "titleEs": "La noticia falsa",
+  "paragraphs": [
+   "La semana pasada, una noticia llegó al grupo de mensajes de la familia de Rocío: «Mañana no hay clases en todo el estado por una tormenta». Su tío la creyó y la compartió. Sus primos también la creyeron y apagaron las alarmas.",
+   "Rocío no la creyó. Buscó en la página oficial del distrito escolar y no encontró nada. Escribió en el grupo: «Creo que es falsa». Al día siguiente hubo clases normales y los primos llegaron tarde. Desde entonces, la familia cree un poco más en Rocío y un poco menos en los mensajes reenviados."
+  ],
+  "comprehension": [
+   {
+    "before": "La noticia decía que no había clases por ",
+    "after": ".",
+    "options": [
+     "una tormenta",
+     "una fiesta",
+     "una huelga"
+    ],
+    "answer": 0,
+    "why": "Because of a storm."
+   },
+   {
+    "before": "El tío de Rocío ",
+    "after": ".",
+    "options": [
+     "creyó la noticia y la compartió",
+     "no la creyó",
+     "llamó a la escuela"
+    ],
+    "answer": 0,
+    "why": "He believed it and shared it."
+   },
+   {
+    "before": "Rocío buscó en ",
+    "after": ".",
+    "options": [
+     "la página oficial del distrito",
+     "la televisión",
+     "otro grupo"
+    ],
+    "answer": 0,
+    "why": "The district's official page."
+   },
+   {
+    "before": "Al día siguiente, los primos ",
+    "after": ".",
+    "options": [
+     "llegaron tarde a clase",
+     "no fueron",
+     "llegaron temprano"
+    ],
+    "answer": 0,
+    "why": "There were classes and they arrived late."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Él creió la historia.",
+   "right": "Él creyó la historia.",
+   "why": "Between vowels the i becomes y: creyó."
+  },
+  {
+   "wrong": "Creo que si.",
+   "right": "Creo que sí.",
+   "why": "Sí meaning yes needs an accent."
+  },
+  {
+   "wrong": "Creo a Dios.",
+   "right": "Creo en Dios.",
+   "why": "Believing in something or someone: creer en."
+  },
+  {
+   "wrong": "No creo que es verdad.",
+   "right": "No creo que sea verdad.",
+   "why": "No creer que is followed by the subjunctive."
+  }
+ ],
+ "heritage": "Heritage speakers often say «creyó» naturally but may write «creió» or «creó» (which is a different verb, crear, to create). Note also the accents in «creí», «creíste», «creímos» and «sí».",
+ "teacher": "Show three headlines, one false, and ask students to say «Creo que es verdad / No creo que sea verdad» with a reason. It brings in the subjunctive naturally.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish verb creer». 1 of them asks for conjugation, charts or tenses (conjugation). One asks what creer means, so the page shows the difference between creer que and creer en.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

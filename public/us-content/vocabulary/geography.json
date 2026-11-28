@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "geography",
+ "themeLabel": "Geography",
+ "title": "Spanish Geography Vocabulary: Landforms, Countries, Maps",
+ "description": "Spanish geography vocabulary and terms: la montaña, el río, la selva, el desierto and la capital, with a quiz and an A2 reading on a geography bee.",
+ "h1": "Spanish geography vocabulary",
+ "titleEs": "El concurso de geografía",
+ "focus": "estar and quedar for location, and superlatives",
+ "intro": "Learn the Spanish words for geography: landforms and bodies of water, maps and directions, and the words for countries and capitals. Practice with instant feedback, then read about a student who studies for a Spanish-language geography bee.",
+ "paragraphs": [
+  "Isabel tiene quince años y vive en Albuquerque. En marzo, su escuela organiza un concurso de geografía en español para los estudiantes de la clase de herencia. El premio es una tarjeta de regalo para la librería y una foto en el periódico de la escuela.",
+  "Isabel estudia todas las noches con un mapa de Latinoamérica en la pared de su cuarto. Su abuela, que es de Bolivia, la ayuda. «Bolivia no tiene costa», le explica, «pero tiene el lago Titicaca, en la frontera con Perú. Es uno de los lagos navegables más altos del mundo.» Isabel también aprende que Ecuador tiene cuatro regiones: la costa, la sierra, la selva y las islas Galápagos.",
+  "El día del concurso, la primera pregunta es fácil: «¿Cuál es la capital de Colombia?». Isabel contesta: «Bogotá». Después las preguntas son más difíciles. «¿Qué río forma parte de la frontera entre México y Estados Unidos?». Isabel sonríe, porque lo ve desde la carretera cuando visita a sus primos en El Paso: «El río Bravo, o río Grande».",
+  "Al final, Isabel queda en segundo lugar. No gana el premio, pero su abuela está muy orgullosa y ya le está preparando preguntas sobre Centroamérica para el próximo año."
+ ],
+ "glossary": [
+  [
+   "el concurso",
+   "contest, bee"
+  ],
+  [
+   "la clase de herencia",
+   "heritage class"
+  ],
+  [
+   "la tarjeta de regalo",
+   "gift card"
+  ],
+  [
+   "navegable",
+   "navigable (for boats)"
+  ],
+  [
+   "la sierra",
+   "highlands, mountains"
+  ],
+  [
+   "formar parte de",
+   "to be part of"
+  ],
+  [
+   "quedar en segundo lugar",
+   "to come in second"
+  ],
+  [
+   "orgulloso / orgullosa",
+   "proud"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "El premio del concurso es ",
+   "after": ".",
+   "options": [
+    "una tarjeta de regalo y una foto",
+    "un viaje a Bolivia",
+    "un mapa"
+   ],
+   "answer": 0,
+   "why": "A gift card and a photo."
+  },
+  {
+   "before": "La abuela de Isabel es de ",
+   "after": ".",
+   "options": [
+    "Bolivia",
+    "Perú",
+    "Ecuador"
+   ],
+   "answer": 0,
+   "why": "She is from Bolivia."
+  },
+  {
+   "before": "Según la abuela, Bolivia no tiene ",
+   "after": ".",
+   "options": [
+    "costa",
+    "lagos",
+    "montañas"
+   ],
+   "answer": 0,
+   "why": "Bolivia is landlocked."
+  },
+  {
+   "before": "Ecuador tiene ",
+   "after": " regiones.",
+   "options": [
+    "cuatro",
+    "tres",
+    "dos"
+   ],
+   "answer": 0,
+   "why": "Four regions."
+  },
+  {
+   "before": "Isabel conoce el río Bravo porque ",
+   "after": ".",
+   "options": [
+    "lo ve cuando visita El Paso",
+    "lo estudió en un libro",
+    "su abuela vive allí"
+   ],
+   "answer": 0,
+   "why": "She sees it on the road to El Paso."
+  },
+  {
+   "before": "En el concurso, Isabel queda ",
+   "after": ".",
+   "options": [
+    "en segundo lugar",
+    "en primer lugar",
+    "en último lugar"
+   ],
+   "answer": 0,
+   "why": "She comes in second."
+  }
+ ],
+ "grammar": {
+  "title": "Estar and quedar for location",
+  "intro": "To say where a place is, use estar or quedar, never ser: Lima está en Perú, ¿Dónde queda Quito? Use ser for what a place is: Lima es la capital.",
+  "items": [
+   {
+    "before": "El lago Titicaca ",
+    "after": " entre Bolivia y Perú.",
+    "options": [
+     "está",
+     "es",
+     "son"
+    ],
+    "answer": 0,
+    "why": "Location: estar."
+   },
+   {
+    "before": "¿Dónde ",
+    "after": " las islas Galápagos?",
+    "options": [
+     "quedan",
+     "son",
+     "es"
+    ],
+    "answer": 0,
+    "why": "Location: quedar."
+   },
+   {
+    "before": "Bogotá ",
+    "after": " la capital de Colombia.",
+    "options": [
+     "es",
+     "está",
+     "queda"
+    ],
+    "answer": 0,
+    "why": "Identity: ser."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe la geografía de tu estado o de tu país.",
+  "¿Qué lugar de Latinoamérica te gustaría visitar? ¿Qué hay allí?",
+  "Prepara tres preguntas para un concurso de geografía."
+ ],
+ "heritage": "Mexicans call the border river el río Bravo, while people in the US say Rio Grande; both name the same river. Country names in Spanish often take accents (México, Perú, Panamá), and Estados Unidos can appear with or without los.",
+ "teacher": "Hold a mini geography bee: teams write five questions with es, está or queda, then take turns asking them while the other team answers in full Spanish sentences.",
+ "vocabulary": [
+  {
+   "title": "Land",
+   "words": [
+    [
+     "la montaña",
+     "mountain"
+    ],
+    [
+     "la cordillera",
+     "mountain range"
+    ],
+    [
+     "el volcán",
+     "volcano"
+    ],
+    [
+     "el valle",
+     "valley"
+    ],
+    [
+     "el desierto",
+     "desert"
+    ],
+    [
+     "la selva",
+     "rainforest, jungle"
+    ],
+    [
+     "la isla",
+     "island"
+    ],
+    [
+     "la península",
+     "peninsula"
+    ]
+   ]
+  },
+  {
+   "title": "Water",
+   "words": [
+    [
+     "el río",
+     "river"
+    ],
+    [
+     "el lago",
+     "lake"
+    ],
+    [
+     "el mar",
+     "sea"
+    ],
+    [
+     "el océano",
+     "ocean"
+    ],
+    [
+     "la costa",
+     "coast"
+    ],
+    [
+     "la bahía",
+     "bay"
+    ],
+    [
+     "la cascada",
+     "waterfall"
+    ]
+   ]
+  },
+  {
+   "title": "Maps and countries",
+   "words": [
+    [
+     "el mapa",
+     "map"
+    ],
+    [
+     "el país",
+     "country"
+    ],
+    [
+     "la capital",
+     "capital"
+    ],
+    [
+     "la frontera",
+     "border"
+    ],
+    [
+     "el continente",
+     "continent"
+    ],
+    [
+     "norte / sur / este / oeste",
+     "north / south / east / west"
+    ],
+    [
+     "quedar",
+     "to be located"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Los Andes son una ",
+   "after": " muy larga.",
+   "options": [
+    "cordillera",
+    "bahía",
+    "península"
+   ],
+   "answer": 0,
+   "why": "The Andes are a mountain range."
+  },
+  {
+   "before": "El Amazonas es un ",
+   "after": " enorme de Sudamérica.",
+   "options": [
+    "río",
+    "desierto",
+    "volcán"
+   ],
+   "answer": 0,
+   "why": "The Amazon is a river."
+  },
+  {
+   "before": "Puerto Rico es una ",
+   "after": " del Caribe.",
+   "options": [
+    "isla",
+    "cordillera",
+    "selva"
+   ],
+   "answer": 0,
+   "why": "Puerto Rico is an island."
+  },
+  {
+   "before": "En el ",
+   "after": " de Atacama casi nunca llueve.",
+   "options": [
+    "desierto",
+    "lago",
+    "valle"
+   ],
+   "answer": 0,
+   "why": "The Atacama Desert is dry."
+  },
+  {
+   "before": "El Popocatépetl es un ",
+   "after": " cerca de la Ciudad de México.",
+   "options": [
+    "volcán",
+    "río",
+    "mar"
+   ],
+   "answer": 0,
+   "why": "Popocatépetl is a volcano."
+  },
+  {
+   "before": "El Ángel es la ",
+   "after": " más alta del mundo y está en Venezuela.",
+   "options": [
+    "cascada",
+    "isla",
+    "costa"
+   ],
+   "answer": 0,
+   "why": "Angel Falls is a waterfall."
+  },
+  {
+   "before": "La ",
+   "after": " de Chile es Santiago.",
+   "options": [
+    "capital",
+    "frontera",
+    "costa"
+   ],
+   "answer": 0,
+   "why": "Santiago is the capital."
+  },
+  {
+   "before": "México está al ",
+   "after": " de Estados Unidos.",
+   "options": [
+    "sur",
+    "norte",
+    "este"
+   ],
+   "answer": 0,
+   "why": "Mexico lies to the south."
+  }
+ ],
+ "demand": {
+  "query": "spanish geography vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish geography vocabulary». Other suggestions ask for geography terms and countries and capitals, so the list includes el país, la capital and the four directions.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

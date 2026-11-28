@@ -1,0 +1,358 @@
+{
+ "theme": "unit-2",
+ "unitName": "Language and Culture",
+ "level": "B1",
+ "title": "AP Spanish Language and Culture Unit 2: Vocabulary and Practice",
+ "description": "AP Spanish Unit 2, Language and Culture: vocabulary on dialects, Spanglish and traditions, an original reading, an essay prompt and Q&A questions.",
+ "h1": "AP Spanish Language and Culture (Unit 2)",
+ "intro": "Unit 2 looks at the language itself: how Spanish changes from one country to another, what happens when it meets English, and how customs travel with it. You get the vocabulary, an original text about a bilingual family dinner, an essay prompt and four questions to answer aloud.",
+ "demand": {
+  "query": "ap spanish themes and subthemes",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "overview": {
+  "heading": "What Unit 2 covers",
+  "paragraphs": [
+   "Language and Culture asks what a language carries with it. Spanish is spoken on four continents, and the same object can have three names: a bus is a «camión» in Mexico, a «guagua» in Cuba and a «colectivo» in Argentina. The unit uses those differences to talk about identity, migration and the celebrations that keep a community together far from home.",
+   "This is also the unit where the course description introduces a shorter version of the argumentative essay, built on just two sources. If you practice one skill here, practice using both sources in every paragraph instead of summarizing them one after the other."
+  ]
+ },
+ "contexts": [
+  "Customs and Celebrations",
+  "Linguistics",
+  "Spanish in the World"
+ ],
+ "vocabulary": [
+  {
+   "title": "Talking about language",
+   "words": [
+    [
+     "la lengua materna",
+     "native language"
+    ],
+    [
+     "el bilingüismo",
+     "bilingualism"
+    ],
+    [
+     "el dialecto",
+     "dialect"
+    ],
+    [
+     "el acento",
+     "accent"
+    ],
+    [
+     "el préstamo lingüístico",
+     "loanword"
+    ],
+    [
+     "el spanglish",
+     "Spanglish"
+    ],
+    [
+     "alternar idiomas",
+     "to switch languages"
+    ],
+    [
+     "la variedad",
+     "variety (of a language)"
+    ],
+    [
+     "el hablante de herencia",
+     "heritage speaker"
+    ]
+   ]
+  },
+  {
+   "title": "Identity",
+   "words": [
+    [
+     "la identidad",
+     "identity"
+    ],
+    [
+     "las raíces",
+     "roots"
+    ],
+    [
+     "sentirse orgulloso de",
+     "to feel proud of"
+    ],
+    [
+     "la asimilación",
+     "assimilation"
+    ],
+    [
+     "conservar",
+     "to preserve"
+    ],
+    [
+     "la diáspora",
+     "diaspora"
+    ],
+    [
+     "el estereotipo",
+     "stereotype"
+    ]
+   ]
+  },
+  {
+   "title": "Customs and celebrations",
+   "words": [
+    [
+     "la costumbre",
+     "custom"
+    ],
+    [
+     "la tradición oral",
+     "oral tradition"
+    ],
+    [
+     "el Día de Muertos",
+     "Day of the Dead"
+    ],
+    [
+     "la ofrenda",
+     "altar offering"
+    ],
+    [
+     "el desfile",
+     "parade"
+    ],
+    [
+     "la herencia cultural",
+     "cultural heritage"
+    ],
+    [
+     "transmitir",
+     "to pass on"
+    ],
+    [
+     "festejar",
+     "to celebrate"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi ",
+   "after": " es el español, pero en la escuela casi siempre hablo inglés.",
+   "options": [
+    "lengua materna",
+    "ofrenda",
+    "diáspora"
+   ],
+   "answer": 0,
+   "why": "Lengua materna is the first language you learned at home."
+  },
+  {
+   "before": "«Parquear» en lugar de «estacionar» es un ",
+   "after": " del inglés.",
+   "options": [
+    "préstamo lingüístico",
+    "desfile",
+    "estereotipo"
+   ],
+   "answer": 0,
+   "why": "A préstamo lingüístico is a word borrowed from another language."
+  },
+  {
+   "before": "Cuando mi tía habla, ",
+   "after": " sin darse cuenta: empieza en español y termina en inglés.",
+   "options": [
+    "alterna idiomas",
+    "festeja",
+    "conserva"
+   ],
+   "answer": 0,
+   "why": "Alternar idiomas is switching from one language to another in the same conversation."
+  },
+  {
+   "before": "Los abuelos quieren ",
+   "after": " las recetas de la familia a los nietos.",
+   "options": [
+    "transmitir",
+    "parquear",
+    "asimilar"
+   ],
+   "answer": 0,
+   "why": "Transmitir means to pass something on to the next generation."
+  },
+  {
+   "before": "Pensar que todos los latinos comen picante es un ",
+   "after": ".",
+   "options": [
+    "estereotipo",
+    "acento",
+    "dialecto"
+   ],
+   "answer": 0,
+   "why": "An estereotipo is an oversimplified idea about a group."
+  },
+  {
+   "before": "En noviembre la familia pone una ",
+   "after": " con fotos y pan de muerto.",
+   "options": [
+    "ofrenda",
+    "variedad",
+    "raíz"
+   ],
+   "answer": 0,
+   "why": "The ofrenda is the altar with photos and food for the Day of the Dead."
+  },
+  {
+   "before": "La comunidad puertorriqueña de Nueva York forma parte de la ",
+   "after": ".",
+   "options": [
+    "diáspora",
+    "tradición oral",
+    "asimilación"
+   ],
+   "answer": 0,
+   "why": "Diáspora is a community living away from its country of origin."
+  },
+  {
+   "before": "Su ",
+   "after": " revela que creció en el Caribe: no pronuncia la «s» final.",
+   "options": [
+    "acento",
+    "costumbre",
+    "desfile"
+   ],
+   "answer": 0,
+   "why": "Acento is the way someone pronounces a language."
+  }
+ ],
+ "reading": {
+  "titleEs": "La cena de los tres idiomas",
+  "intro": "An original text written for this page, at about B1. The family is fictional; the debate is a real one.",
+  "paragraphs": [
+   "Los viernes, la familia Herrera cena junta en su casa de Houston. En la mesa se oyen tres idiomas, aunque oficialmente son dos. La abuela Carmen, que llegó de Guatemala hace cuarenta años, habla solo español. Los nietos, Daniel y Sofía, hablan inglés entre ellos. Y los padres mezclan los dos en la misma frase: «Pásame la salsa, please, que se está enfriando».",
+   "Una noche, Sofía, que estudia AP Spanish, anunció que su profesora les había pedido un ensayo sobre el spanglish. «¿Es un idioma o es español mal hablado?», preguntó. La abuela respondió enseguida que era una falta de respeto a la lengua. Para ella, mezclar significaba que los jóvenes estaban perdiendo sus raíces.",
+   "El padre no estuvo de acuerdo. Explicó que en su trabajo usa el inglés para los números y el español para los chistes, y que eso no lo hace menos guatemalteco. Además, recordó que el español mismo está lleno de palabras prestadas: «almohada» y «azúcar» vienen del árabe, y «chocolate» y «aguacate» del náhuatl. «Las lenguas siempre se mezclan cuando la gente convive», dijo.",
+   "Daniel, el menor, confesó algo que nadie esperaba: que a veces le da vergüenza hablar español fuera de casa porque sus amigos se ríen de su acento. La conversación cambió de tono. La abuela le pidió que le contara más y, por primera vez, le habló en inglés, con dificultad, para que él entendiera que equivocarse no es grave.",
+   "Sofía escribió su ensayo esa misma noche. Concluyó que el spanglish no reemplaza al español, sino que muestra a una comunidad que vive entre dos mundos. Pero añadió una idea de su abuela: si nadie enseña el español completo, la mezcla puede convertirse en el único idioma que quede."
+  ],
+  "comprehension": [
+   {
+    "before": "La abuela Carmen habla ",
+    "after": ".",
+    "options": [
+     "solo español",
+     "solo inglés",
+     "español e inglés"
+    ],
+    "answer": 0,
+    "why": "The text says she speaks only Spanish."
+   },
+   {
+    "before": "Para la abuela, mezclar idiomas significaba que los jóvenes ",
+    "after": ".",
+    "options": [
+     "estaban perdiendo sus raíces",
+     "eran más inteligentes",
+     "estudiaban mucho"
+    ],
+    "answer": 0,
+    "why": "She thought mixing meant young people were losing their roots."
+   },
+   {
+    "before": "El padre usa el español en el trabajo para ",
+    "after": ".",
+    "options": [
+     "los chistes",
+     "los números",
+     "los correos"
+    ],
+    "answer": 0,
+    "why": "He uses English for numbers and Spanish for jokes."
+   },
+   {
+    "before": "Según el padre, «almohada» y «azúcar» demuestran que ",
+    "after": ".",
+    "options": [
+     "las lenguas siempre se mezclan",
+     "el árabe es difícil",
+     "el español es puro"
+    ],
+    "answer": 0,
+    "why": "His point is that Spanish itself borrowed many words."
+   },
+   {
+    "before": "Daniel siente vergüenza porque sus amigos ",
+    "after": ".",
+    "options": [
+     "se ríen de su acento",
+     "no hablan español",
+     "no lo invitan"
+    ],
+    "answer": 0,
+    "why": "He says his friends laugh at his accent."
+   },
+   {
+    "before": "En su conclusión, Sofía advierte que si nadie enseña el español completo, ",
+    "after": ".",
+    "options": [
+     "la mezcla puede ser lo único que quede",
+     "el inglés desaparecerá",
+     "la abuela se enojará"
+    ],
+    "answer": 0,
+    "why": "She adds her grandmother's warning about the full language being lost."
+   }
+  ]
+ },
+ "essay": {
+  "prompt": "¿Deben las escuelas públicas de Estados Unidos ofrecer clases en español a los hijos de familias hispanohablantes?",
+  "sideA": "Sí: conservar la lengua materna ayuda al aprendizaje, a la identidad y a la relación con la familia.",
+  "sideB": "No: la escuela debe concentrarse en el inglés, que es la lengua que abre las puertas del trabajo y la universidad.",
+  "outline": [
+   "Introduction: one sentence on who the students are and one sentence with your position.",
+   "Paragraph 2: identity and family; use the source that talks about heritage speakers.",
+   "Paragraph 3: school results or jobs; bring in the second source and connect it to the first.",
+   "Paragraph 4: acknowledge the strongest point of the other side, then answer it.",
+   "Conclusion: return to the students you described at the start."
+  ],
+  "phrases": [
+   [
+    "A mi juicio,…",
+    "In my judgment,…"
+   ],
+   [
+    "Ambas fuentes coinciden en que…",
+    "Both sources agree that…"
+   ],
+   [
+    "Mientras que la fuente 1…, la fuente 2…",
+    "While source 1…, source 2…"
+   ],
+   [
+    "No cabe duda de que…",
+    "There is no doubt that…"
+   ],
+   [
+    "Aunque + subjuntivo,…",
+    "Even if…,…"
+   ],
+   [
+    "Por consiguiente,…",
+    "Consequently,…"
+   ]
+  ]
+ },
+ "speaking": [
+  "¿Qué idioma usas con tu familia y cuál con tus amigos? ¿Por qué?",
+  "Describe una celebración de un país hispanohablante y explica qué significa para la comunidad.",
+  "¿Crees que el spanglish es algo positivo o negativo? Justifica tu opinión.",
+  "¿Qué palabra del español de tu región o de tu familia te parece única?"
+ ],
+ "heritage": "Heritage speakers can write a strong essay here because the topic is their life. Two cautions: use the written forms in the essay («estacionar», «almorzar», «la computadora» is fine) and avoid calques such as «hacer sentido» (use «tener sentido») or «aplicar a la universidad» (use «solicitar ingreso»). Your accent is never the problem; spelling and register are.",
+ "teacher": "Ask students to collect five words their families use that a textbook would call regional, then classify them by country. It turns the Linguistics context into a short presentation.",
+ "figure": {
+  "text": "Searchers in the United States do not type «ap spanish language and culture unit 2». On 27 November 2026, the seed «ap spanish themes» brought suggestions such as «ap spanish themes and subthemes», «ap spanish themes 2026» and «6 ap spanish themes»: people want the list and what goes inside each theme.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

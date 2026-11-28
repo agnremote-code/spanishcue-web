@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "sentence structure",
+ "title": "Spanish Sentence Structure Practice: Word Order and Quiz",
+ "description": "Practice Spanish sentence structure: word order, adjectives after nouns, no and pronouns before the verb, questions and dropped subjects, with 10 quiz sentences.",
+ "h1": "Spanish sentence structure practice",
+ "answer": "A basic Spanish sentence follows subject, verb, object, like English: María compra fruta. But adjectives usually go after the noun (una casa blanca), no and object pronouns go before the conjugated verb (no lo sé), the subject is often dropped (hablo inglés) and questions can keep the same order with question marks at both ends.",
+ "demand": {
+  "query": "spanish sentence structure practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Basic Spanish word order",
+ "rules": [
+  {
+   "use": "Subject + verb + object",
+   "example": "Mi hermano juega fútbol.",
+   "meaning": "S + V + O"
+  },
+  {
+   "use": "Adjective after the noun",
+   "example": "un carro rojo, una película aburrida",
+   "meaning": "noun + adjective"
+  },
+  {
+   "use": "No before the verb",
+   "example": "No tengo tiempo.",
+   "meaning": "no + verb"
+  },
+  {
+   "use": "Pronouns before the conjugated verb",
+   "example": "Te llamo mañana. Lo compré ayer.",
+   "meaning": "pronoun + verb"
+  },
+  {
+   "use": "Subject can be dropped",
+   "example": "Vivimos en Ohio.",
+   "meaning": "verb ending shows the person"
+  },
+  {
+   "use": "Questions",
+   "example": "¿Dónde vives? ¿Tu hermana trabaja aquí?",
+   "meaning": "¿ … ?"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Tengo un perro ",
+   "after": ".",
+   "options": [
+    "negro",
+    "negra"
+   ],
+   "answer": 0,
+   "why": "The adjective goes after the noun and agrees with perro: negro."
+  },
+  {
+   "before": "Mi mamá ",
+   "after": " cocina los domingos; ese día descansa.",
+   "options": [
+    "no",
+    "nada"
+   ],
+   "answer": 0,
+   "why": "To make a sentence negative, put no before the verb: no cocina."
+  },
+  {
+   "before": "—¿Conoces a Laura? —Sí, ",
+   "after": " conozco.",
+   "options": [
+    "la",
+    "conozco la"
+   ],
+   "answer": 0,
+   "why": "The object pronoun goes before the conjugated verb."
+  },
+  {
+   "before": "",
+   "after": " estudiamos en la misma escuela.",
+   "options": [
+    "Ø (no subject needed)",
+    "Nos"
+   ],
+   "answer": 0,
+   "why": "The ending -amos already shows nosotros; the subject can be dropped."
+  },
+  {
+   "before": "¿",
+   "after": " vives?",
+   "options": [
+    "Dónde",
+    "Donde"
+   ],
+   "answer": 0,
+   "why": "Question words take an accent: dónde."
+  },
+  {
+   "before": "Mi profesora es una persona muy ",
+   "after": ".",
+   "options": [
+    "simpática",
+    "simpático"
+   ],
+   "answer": 0,
+   "why": "The adjective agrees with persona: simpática."
+  },
+  {
+   "before": "No ",
+   "after": " nada en el refrigerador.",
+   "options": [
+    "hay",
+    "está"
+   ],
+   "answer": 0,
+   "why": "Existence takes hay, and Spanish uses a double negative: no hay nada."
+  },
+  {
+   "before": "Ayer ",
+   "after": " vi en el centro comercial.",
+   "options": [
+    "te",
+    "ti"
+   ],
+   "answer": 0,
+   "why": "The object pronoun before the verb is te; ti only goes after a preposition."
+  },
+  {
+   "before": "Es ",
+   "after": " gran amigo; siempre me ayuda.",
+   "options": [
+    "un",
+    "una"
+   ],
+   "answer": 0,
+   "why": "Gran goes before the noun and means great: un gran amigo."
+  },
+  {
+   "before": "¿Tu hermano ",
+   "after": " en Nueva York?",
+   "options": [
+    "trabaja",
+    "trabajar"
+   ],
+   "answer": 0,
+   "why": "Spanish questions need no helper verb like do: just conjugate the verb, trabaja."
+  }
+ ],
+ "mistakes": [
+  "Putting adjectives before the noun by English habit: «un rojo carro» should be «un carro rojo».",
+  "Placing no after the verb: «tengo no tiempo» should be «no tengo tiempo».",
+  "Putting the pronoun after a conjugated verb: «compré lo» should be «lo compré».",
+  "Repeating the subject in every sentence: «yo vivo en Texas, yo trabajo, yo estudio» sounds heavy; the verb ending is enough.",
+  "Forgetting the opening question mark: Spanish writes ¿ at the start of questions and ¡ at the start of exclamations."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish sentence structure practice». 3 ask for a worksheet or a PDF (spanish sentence structure worksheets pdf; spanish sentence structure worksheet; beginner spanish sentence structure worksheets). 2 ask for a quiz or exercises (spanish sentence structure quiz; spanish sentence structure exercises). Worksheets and sentence construction both appear in the suggestions, so the questions here build one sentence at a time.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually have natural word order. In writing, two things are worth checking: the opening ¿ and ¡, often skipped on phones, and the English order «el más grande problema» instead of «el problema más grande».",
+ "teacher": "Give groups word cards for one sentence each and let them build it on the desk. Then they change one element (add no, a pronoun or a question) and read the new sentence aloud.",
+ "faq": [
+  {
+   "question": "Is Spanish word order the same as English?",
+   "answer": "The basic order is the same (subject, verb, object), but Spanish is more flexible. Adjectives usually follow the noun, pronouns go before the conjugated verb and the subject can move or disappear."
+  },
+  {
+   "question": "Why can Spanish drop the subject?",
+   "answer": "The verb ending shows who acts: hablo can only be yo, hablamos can only be nosotros. Speakers add the subject for contrast or emphasis: yo trabajo, pero tú no."
+  },
+  {
+   "question": "Do adjectives ever go before the noun?",
+   "answer": "Yes, some do, and a few change meaning: un gran hombre (a great man) and un hombre grande (a big man); mi viejo amigo (old friend) and un amigo viejo (elderly friend). Numbers and words like mucho and poco also go first."
+  }
+ ]
+}

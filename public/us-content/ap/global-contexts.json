@@ -1,0 +1,354 @@
+{
+ "theme": "unit-6",
+ "unitName": "Global Contexts",
+ "level": "B2",
+ "title": "AP Spanish Global Contexts (Unit 6): Vocabulary, Reading, Essay",
+ "description": "AP Spanish Unit 6, Global Contexts: vocabulary on climate, migration and human rights, an original B2 reading, an essay prompt and Q&A practice.",
+ "h1": "AP Spanish Global Contexts (Unit 6)",
+ "intro": "Unit 6 closes the course with problems no country solves alone: climate, water, migration, poverty and rights. Here is the vocabulary to argue about them, an original text about a town that catches water from the fog, an essay prompt and four questions to answer aloud.",
+ "demand": {
+  "query": "global challenges ap spanish",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "overview": {
+  "heading": "What Unit 6 covers",
+  "paragraphs": [
+   "Global Contexts is the last unit of the course framework effective fall 2026. Students who search for the old theme «Global Challenges» will find much of the same ground here: the environment, migration, economic inequality and how countries cooperate.",
+   "We could not read this unit's list of recommended contexts in full, so we do not reproduce it; check it in the course description linked below. The vocabulary and the prompts on this page are our own choice of topics that fit the unit."
+  ]
+ },
+ "contexts": [],
+ "vocabulary": [
+  {
+   "title": "Environment",
+   "words": [
+    [
+     "el cambio climático",
+     "climate change"
+    ],
+    [
+     "la sequía",
+     "drought"
+    ],
+    [
+     "la escasez de agua",
+     "water shortage"
+    ],
+    [
+     "la huella de carbono",
+     "carbon footprint"
+    ],
+    [
+     "las energías renovables",
+     "renewable energy"
+    ],
+    [
+     "el reciclaje",
+     "recycling"
+    ],
+    [
+     "la deforestación",
+     "deforestation"
+    ],
+    [
+     "sostenible",
+     "sustainable"
+    ]
+   ]
+  },
+  {
+   "title": "Migration and rights",
+   "words": [
+    [
+     "los derechos humanos",
+     "human rights"
+    ],
+    [
+     "el refugiado",
+     "refugee"
+    ],
+    [
+     "emigrar",
+     "to emigrate"
+    ],
+    [
+     "la frontera",
+     "border"
+    ],
+    [
+     "la desigualdad",
+     "inequality"
+    ],
+    [
+     "la pobreza",
+     "poverty"
+    ],
+    [
+     "la integración",
+     "integration"
+    ],
+    [
+     "acoger",
+     "to take in, welcome"
+    ]
+   ]
+  },
+  {
+   "title": "Cooperation",
+   "words": [
+    [
+     "el acuerdo internacional",
+     "international agreement"
+    ],
+    [
+     "la ayuda humanitaria",
+     "humanitarian aid"
+    ],
+    [
+     "la organización sin fines de lucro",
+     "nonprofit"
+    ],
+    [
+     "la conciencia social",
+     "social awareness"
+    ],
+    [
+     "comprometerse",
+     "to commit"
+    ],
+    [
+     "a largo plazo",
+     "in the long term"
+    ],
+    [
+     "la responsabilidad compartida",
+     "shared responsibility"
+    ],
+    [
+     "tomar medidas",
+     "to take action"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Hace dos años que no llueve y la ",
+   "after": " afecta a toda la región.",
+   "options": [
+    "sequía",
+    "frontera",
+    "integración"
+   ],
+   "answer": 0,
+   "why": "Sequía is a long period without rain."
+  },
+  {
+   "before": "Ir en bicicleta en lugar de en carro reduce tu ",
+   "after": ".",
+   "options": [
+    "huella de carbono",
+    "pobreza",
+    "ayuda humanitaria"
+   ],
+   "answer": 0,
+   "why": "Huella de carbono is the greenhouse gas your activities produce."
+  },
+  {
+   "before": "Los paneles solares son un ejemplo de ",
+   "after": ".",
+   "options": [
+    "energías renovables",
+    "deforestación",
+    "desigualdad"
+   ],
+   "answer": 0,
+   "why": "Solar power is a renewable energy."
+  },
+  {
+   "before": "Huyó de la guerra y pidió asilo como ",
+   "after": ".",
+   "options": [
+    "refugiado",
+    "reciclaje",
+    "acuerdo"
+   ],
+   "answer": 0,
+   "why": "A refugiado flees danger and asks for protection."
+  },
+  {
+   "before": "El pueblo decidió ",
+   "after": " a las familias que llegaron después del huracán.",
+   "options": [
+    "acoger",
+    "emigrar",
+    "deforestar"
+   ],
+   "answer": 0,
+   "why": "Acoger is to take people in and welcome them."
+  },
+  {
+   "before": "La tala de árboles en la Amazonía es un caso grave de ",
+   "after": ".",
+   "options": [
+    "deforestación",
+    "integración",
+    "conciencia social"
+   ],
+   "answer": 0,
+   "why": "Deforestación is cutting down forests."
+  },
+  {
+   "before": "Para frenar el cambio climático, los gobiernos deben ",
+   "after": " ya.",
+   "options": [
+    "tomar medidas",
+    "emigrar",
+    "acoger"
+   ],
+   "answer": 0,
+   "why": "Tomar medidas is to take action."
+  },
+  {
+   "before": "Los efectos de esta ley solo se verán ",
+   "after": ".",
+   "options": [
+    "a largo plazo",
+    "sostenible",
+    "sin fines de lucro"
+   ],
+   "answer": 0,
+   "why": "A largo plazo means in the long term."
+  }
+ ],
+ "reading": {
+  "titleEs": "El pueblo que bebe niebla",
+  "intro": "An original text written for this page, at about B2. The town is fictional; fog catchers are a real technique used in parts of northern Chile.",
+  "paragraphs": [
+   "En la costa del desierto de Atacama casi nunca llueve, pero muchas mañanas una niebla espesa, que los chilenos llaman camanchaca, sube desde el mar y cubre los cerros. Durante generaciones, los habitantes de Punta Seca, un pequeño pueblo de pescadores, vieron pasar esa nube sin poder aprovecharla. El agua llegaba en camiones cisterna dos veces por semana y, cuando el camión se retrasaba, las familias racionaban hasta la última gota.",
+   "Todo cambió cuando un grupo de estudiantes del liceo local investigó, para un proyecto de ciencias, una técnica que ya se había probado en otras zonas del norte del país: los atrapanieblas. Se trata de grandes mallas verticales colocadas en lo alto de los cerros. Las gotas de la niebla quedan atrapadas en la malla, se juntan y bajan por una canaleta hasta un depósito.",
+   "Construir los primeros paneles no fue sencillo. Hubo que convencer a la municipalidad, conseguir materiales y subirlos a pie por senderos de tierra. Una organización sin fines de lucro aportó parte del dinero y los pescadores pusieron el trabajo. Hoy, en los días de más niebla, el sistema produce agua suficiente para regar un huerto comunitario y abastecer una pequeña fábrica de cerveza artesanal que da empleo a seis personas.",
+   "Los atrapanieblas no son una solución mágica. Dependen del clima, requieren mantenimiento constante y no producen agua potable para todo el pueblo. Algunos vecinos temen que las autoridades usen el proyecto como excusa para no invertir en una red de agua permanente. «Celebramos lo que hicimos, pero el derecho al agua no puede depender de la niebla», dice una de las fundadoras.",
+   "Aun así, la experiencia de Punta Seca dejó algo que va más allá de los litros: una comunidad que pasó de esperar el camión a buscar soluciones. Los estudiantes que empezaron el proyecto ahora lo explican en otras escuelas, convencidos de que los problemas globales también se enfrentan desde lo local."
+  ],
+  "comprehension": [
+   {
+    "before": "Antes del proyecto, el agua llegaba a Punta Seca ",
+    "after": ".",
+    "options": [
+     "en camiones cisterna",
+     "por una red permanente",
+     "con la lluvia"
+    ],
+    "answer": 0,
+    "why": "Tanker trucks came twice a week."
+   },
+   {
+    "before": "La idea de los atrapanieblas surgió de ",
+    "after": ".",
+    "options": [
+     "un proyecto de ciencias del liceo",
+     "el gobierno nacional",
+     "una empresa de cerveza"
+    ],
+    "answer": 0,
+    "why": "Students researched it for a science project."
+   },
+   {
+    "before": "Los atrapanieblas funcionan porque las gotas de niebla ",
+    "after": ".",
+    "options": [
+     "quedan atrapadas en una malla",
+     "se evaporan",
+     "caen del cielo como lluvia"
+    ],
+    "answer": 0,
+    "why": "The droplets get caught in the mesh and drain down."
+   },
+   {
+    "before": "Hoy el agua de la niebla sirve para ",
+    "after": ".",
+    "options": [
+     "un huerto y una pequeña fábrica",
+     "todo el pueblo",
+     "exportar"
+    ],
+    "answer": 0,
+    "why": "It waters a community garden and supplies a small brewery."
+   },
+   {
+    "before": "Algunos vecinos temen que las autoridades ",
+    "after": ".",
+    "options": [
+     "no inviertan en una red de agua",
+     "cierren el proyecto",
+     "suban los impuestos"
+    ],
+    "answer": 0,
+    "why": "They fear the project becomes an excuse not to build permanent water service."
+   },
+   {
+    "before": "La idea final del texto es que los problemas globales ",
+    "after": ".",
+    "options": [
+     "también se enfrentan desde lo local",
+     "no tienen solución",
+     "son responsabilidad de otros"
+    ],
+    "answer": 0,
+    "why": "The last sentence says global problems can also be tackled locally."
+   }
+  ]
+ },
+ "essay": {
+  "prompt": "Frente al cambio climático, ¿qué es más eficaz: los cambios de hábitos de cada persona o las leyes de los gobiernos?",
+  "sideA": "Los hábitos individuales: si millones de personas consumen menos y reciclan, el impacto es enorme y no depende de la política.",
+  "sideB": "Las leyes: las grandes empresas y los países producen la mayor parte de las emisiones, y solo las normas los obligan a cambiar.",
+  "outline": [
+   "Introduction: frame the problem with one concrete effect (a drought, a flood) and take a side.",
+   "Paragraph 2: your main argument with figures from the chart; explain what the numbers mean, do not just copy them.",
+   "Paragraph 3: a second argument from the print article, linked to the first with a connector.",
+   "Paragraph 4: the audio source's opposing view, summarized fairly, and your rebuttal.",
+   "Conclusion: what should happen first, and who must act."
+  ],
+  "phrases": [
+   [
+    "Ante este panorama,…",
+    "Given this situation,…"
+   ],
+   [
+    "Conviene señalar que…",
+    "It should be pointed out that…"
+   ],
+   [
+    "De acuerdo con los datos,…",
+    "According to the data,…"
+   ],
+   [
+    "Lejos de + infinitivo,…",
+    "Far from…"
+   ],
+   [
+    "Es urgente que + subjuntivo",
+    "It is urgent that…"
+   ],
+   [
+    "En última instancia,…",
+    "Ultimately,…"
+   ]
+  ]
+ },
+ "speaking": [
+  "¿Qué problema global te preocupa más y por qué?",
+  "¿Qué haces tú para cuidar el medio ambiente?",
+  "¿Cómo debería tu comunidad recibir a las familias que llegan de otros países?",
+  "¿Crees que los jóvenes pueden cambiar algo en el mundo? Da un ejemplo."
+ ],
+ "heritage": "Migration is often personal for heritage speakers, and that experience can make the Q&A vivid. In the essay, keep the tone argumentative rather than autobiographical, and check the false friends of this unit: «la ayuda» (help), not «el soporte»; «actualmente» means currently, not actually; «realizar» means to carry out, not to realize.",
+ "teacher": "Give each group a different global problem and one local example from a Spanish-speaking country. Their two-minute presentations practice exactly the move this unit rewards: global issue, local response.",
+ "figure": {
+  "text": "On 27 November 2026, the only suggestion Google showed people in the United States for «ap spanish global challenges» was «global challenges ap spanish». Global Challenges is a theme name from the previous course; the framework effective fall 2026 ends with this unit, Global Contexts.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

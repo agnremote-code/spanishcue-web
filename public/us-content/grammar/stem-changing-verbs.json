@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "stem-changing verbs",
+ "title": "Spanish Stem-Changing Verbs Practice: E→IE, O→UE, E→I Quiz",
+ "description": "Practice Spanish stem-changing verbs: e to ie, o to ue, e to i, the boot pattern, jugar and -ir preterite changes, with 10 sentences checked as you tap.",
+ "h1": "Spanish stem-changing verbs practice",
+ "answer": "Stem-changing verbs change the last vowel of the stem in the present when it is stressed: querer → quiero, poder → puedo, pedir → pido. The change happens in yo, tú, él and ellos but not in nosotros, so the forms make a boot shape in a chart. Jugar changes u to ue. Only -ir verbs keep a change in the preterite: pidió, durmieron.",
+ "demand": {
+  "query": "spanish stem changing verbs practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Stem-changing patterns in the present",
+ "rules": [
+  {
+   "use": "e → ie",
+   "example": "querer: quiero, quieres, quiere, queremos, quieren",
+   "meaning": "pensar, empezar, cerrar, preferir"
+  },
+  {
+   "use": "o → ue",
+   "example": "poder: puedo, puedes, puede, podemos, pueden",
+   "meaning": "dormir, volver, encontrar, almorzar"
+  },
+  {
+   "use": "e → i (-ir verbs only)",
+   "example": "pedir: pido, pides, pide, pedimos, piden",
+   "meaning": "servir, repetir, seguir, vestirse"
+  },
+  {
+   "use": "u → ue: only jugar",
+   "example": "juego, juegas, juega, jugamos, juegan",
+   "meaning": "jugar"
+  },
+  {
+   "use": "No change in nosotros",
+   "example": "queremos, podemos, pedimos",
+   "meaning": "the boot pattern"
+  },
+  {
+   "use": "-ir verbs in the preterite (él, ellos)",
+   "example": "pidió, pidieron; durmió, durmieron",
+   "meaning": "e → i, o → u"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " ir a la playa este fin de semana.",
+   "options": [
+    "quiero",
+    "quero"
+   ],
+   "answer": 0,
+   "why": "e → ie: quiero."
+  },
+  {
+   "before": "¿",
+   "after": " ayudarme con la tarea?",
+   "options": [
+    "Puedes",
+    "Podes"
+   ],
+   "answer": 0,
+   "why": "o → ue: puedes."
+  },
+  {
+   "before": "En el restaurante, mi papá siempre ",
+   "after": " pescado.",
+   "options": [
+    "pide",
+    "pede"
+   ],
+   "answer": 0,
+   "why": "e → i: pide."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " a las doce en la cafetería.",
+   "options": [
+    "almorzamos",
+    "almuerzamos"
+   ],
+   "answer": 0,
+   "why": "No change in nosotros: almorzamos."
+  },
+  {
+   "before": "Los niños ",
+   "after": " fútbol en el patio.",
+   "options": [
+    "juegan",
+    "jugan"
+   ],
+   "answer": 0,
+   "why": "Jugar changes u to ue: juegan."
+  },
+  {
+   "before": "¿A qué hora ",
+   "after": " la clase de arte?",
+   "options": [
+    "empieza",
+    "empeza"
+   ],
+   "answer": 0,
+   "why": "e → ie: empieza."
+  },
+  {
+   "before": "Mis hermanos ",
+   "after": " ocho horas cada noche.",
+   "options": [
+    "duermen",
+    "dormen"
+   ],
+   "answer": 0,
+   "why": "o → ue: duermen."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " estudiar juntos los sábados.",
+   "options": [
+    "preferimos",
+    "prefierimos"
+   ],
+   "answer": 0,
+   "why": "Nosotros keeps the infinitive stem: preferimos."
+  },
+  {
+   "before": "Anoche mi hermano ",
+   "after": " muy mal por la tormenta.",
+   "options": [
+    "durmió",
+    "dormió"
+   ],
+   "answer": 0,
+   "why": "-ir verbs change o to u in the preterite él form: durmió."
+  },
+  {
+   "before": "Los clientes ",
+   "after": " más café.",
+   "options": [
+    "pidieron",
+    "pedieron"
+   ],
+   "answer": 0,
+   "why": "-ir verbs change e to i in the preterite ellos form: pidieron."
+  }
+ ],
+ "mistakes": [
+  "Changing the stem in nosotros: «queremos», «podemos» and «pedimos» keep the infinitive vowel.",
+  "Forgetting the change: «yo podo» should be «yo puedo», «ella quere» should be «ella quiere».",
+  "Changing -ar and -er verbs in the preterite: «pensó» and «volvió» are regular; only -ir verbs change there.",
+  "Using o → ue for jugar's spelling: it is juego, with u → ue, not «joego».",
+  "Changing the wrong vowel in long verbs: preferir becomes prefiero (the second e), not «priefero»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish stem changing verbs practice». 2 ask for a quiz or exercises (spanish stem changing verbs quiz; spanish stem changing verbs exercises). One suggestion asks for preterite stem-changing verbs, so the -ir changes in the preterite have their own row and two questions.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually conjugate these verbs by ear. In some families you will hear «pidió» and «pedió», or «sirvieron» and «servieron»; written Spanish uses the stem-changed forms pidió and sirvieron. Also note that nosotros keeps the original vowel: podemos, never «puedemos».",
+ "teacher": "Draw a boot on the board around the yo, tú, él and ellos forms and leave nosotros outside. Teams race to fill the boot for verbs called out by the teacher, then say one true sentence with each.",
+ "faq": [
+  {
+   "question": "What is a boot verb?",
+   "answer": "A stem-changing verb, named for the shape its changed forms make in a conjugation chart: yo, tú, él and ellos change and form a boot, while nosotros (and vosotros) stay outside it."
+  },
+  {
+   "question": "Do stem changes happen in every tense?",
+   "answer": "No. In the present, they happen when the stem is stressed. In the preterite, only -ir verbs change, and only in the él and ellos forms (pidió, durmieron). -ar and -er verbs have a regular preterite."
+  },
+  {
+   "question": "How do I know if a verb changes its stem?",
+   "answer": "You cannot tell from the infinitive: pensar changes (pienso) but pasar does not (paso). Dictionaries usually show it as pensar (ie) or dormir (ue, u). Learn the most frequent ones as a group."
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "bank",
+ "themeLabel": "Bank",
+ "title": "Spanish Bank Vocabulary: Accounts, Cards and Banking Phrases",
+ "description": "Spanish bank and banking vocabulary: accounts, cards, transfers and phrases for the teller, with a quiz that corrects itself and an A2 reading about a first account.",
+ "h1": "Spanish bank vocabulary",
+ "titleEs": "La primera cuenta de Mateo",
+ "focus": "usted in formal requests, money words",
+ "intro": "Learn the Spanish words for accounts, cards, payments and transfers and the phrases you need at a bank, practice them with instant feedback, then read how Mateo opens his first account in Phoenix.",
+ "paragraphs": [
+  "Mateo tiene dieciséis años y acaba de conseguir su primer trabajo en un restaurante de Phoenix, Arizona. Le pagan cada dos semanas y su jefe le pide un número de cuenta para depositar el sueldo. Mateo nunca tuvo una cuenta, así que va al banco con su mamá.",
+  "En la sucursal, una cajera los atiende en español. «Buenas tardes. Quisiera abrir una cuenta», dice Mateo. La cajera le explica que, como es menor de edad, su mamá tiene que ser titular de la cuenta con él. Les pide una identificación a los dos y un comprobante de domicilio.",
+  "Mateo abre una cuenta corriente para el sueldo y una cuenta de ahorros. La cajera le recomienda pasar una parte de cada pago a los ahorros automáticamente. También le explica las comisiones: si usa cajeros de otros bancos, paga tres dólares.",
+  "Una semana después le llega la tarjeta de débito por correo. Mateo crea su PIN, descarga la aplicación del banco y revisa su saldo cada día. Su plan es ahorrar durante un año para comprarse una computadora para la universidad. Su mamá está tranquila: por fin su hijo aprende a manejar su dinero."
+ ],
+ "glossary": [
+  [
+   "el sueldo",
+   "salary, pay"
+  ],
+  [
+   "cada dos semanas",
+   "every two weeks"
+  ],
+  [
+   "menor de edad",
+   "minor (under 18)"
+  ],
+  [
+   "el titular",
+   "account holder"
+  ],
+  [
+   "el comprobante de domicilio",
+   "proof of address"
+  ],
+  [
+   "descargar",
+   "to download"
+  ],
+  [
+   "manejar dinero",
+   "to manage money"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Mateo necesita una cuenta porque ",
+   "after": ".",
+   "options": [
+    "su jefe quiere depositar el sueldo",
+    "quiere un préstamo",
+    "va a viajar"
+   ],
+   "answer": 0,
+   "why": "His boss needs an account number for his pay."
+  },
+  {
+   "before": "Su mamá tiene que ser titular porque Mateo ",
+   "after": ".",
+   "options": [
+    "es menor de edad",
+    "no tiene trabajo",
+    "no habla inglés"
+   ],
+   "answer": 0,
+   "why": "He is under 18."
+  },
+  {
+   "before": "La cajera les pide una identificación y ",
+   "after": ".",
+   "options": [
+    "un comprobante de domicilio",
+    "un cheque",
+    "dinero en efectivo"
+   ],
+   "answer": 0,
+   "why": "Proof of address too."
+  },
+  {
+   "before": "La cajera le recomienda ",
+   "after": ".",
+   "options": [
+    "pasar una parte de cada pago a los ahorros",
+    "usar la tarjeta de crédito",
+    "sacar todo en efectivo"
+   ],
+   "answer": 0,
+   "why": "Automatic savings from each paycheck."
+  },
+  {
+   "before": "Si usa cajeros de otros bancos, Mateo ",
+   "after": ".",
+   "options": [
+    "paga tres dólares",
+    "no paga nada",
+    "recibe intereses"
+   ],
+   "answer": 0,
+   "why": "A three-dollar fee."
+  },
+  {
+   "before": "Mateo ahorra para comprar ",
+   "after": ".",
+   "options": [
+    "una computadora",
+    "un carro",
+    "un teléfono"
+   ],
+   "answer": 0,
+   "why": "A computer for college."
+  }
+ ],
+ "grammar": {
+  "title": "Polite requests: quisiera + infinitive",
+  "intro": "Quisiera is softer than quiero. Use it at a bank or any formal counter.",
+  "items": [
+   {
+    "before": "",
+    "after": " abrir una cuenta de ahorros.",
+    "options": [
+     "Quisiera",
+     "Quiero que",
+     "Quisiste"
+    ],
+    "answer": 0,
+    "why": "Polite request: quisiera + infinitive."
+   },
+   {
+    "before": "Quisiera ",
+    "after": " cien dólares, por favor.",
+    "options": [
+     "retirar",
+     "retiro",
+     "retiré"
+    ],
+    "answer": 0,
+    "why": "After quisiera comes the infinitive."
+   },
+   {
+    "before": "¿Me ",
+    "after": " ayudar con una transferencia?",
+    "options": [
+     "podría",
+     "podrías tú",
+     "pude"
+    ],
+    "answer": 0,
+    "why": "With staff, use usted: podría."
+   }
+  ]
+ },
+ "speaking": [
+  "Haz el diálogo: abres una cuenta en un banco y haces dos preguntas.",
+  "¿Es buena idea que los jóvenes tengan una cuenta de banco? ¿Por qué?",
+  "¿Cómo ahorras dinero tú?"
+ ],
+ "heritage": "Banking is often where heritage speakers help parents with paperwork. Use the standard terms in writing: «la cuenta corriente» or «la cuenta de cheques» (Mexico), «retirar dinero», «depositar». Avoid calques such as «aplicar para una tarjeta» (solicitar una tarjeta).",
+ "teacher": "Give students a fake budget for a month and have them explain in Spanish how much they would deposit, save and spend, using the vocabulary.",
+ "vocabulary": [
+  {
+   "title": "Accounts and cards",
+   "words": [
+    [
+     "el banco",
+     "bank"
+    ],
+    [
+     "la cuenta corriente",
+     "checking account"
+    ],
+    [
+     "la cuenta de ahorros",
+     "savings account"
+    ],
+    [
+     "la tarjeta de débito",
+     "debit card"
+    ],
+    [
+     "la tarjeta de crédito",
+     "credit card"
+    ],
+    [
+     "el cajero automático",
+     "ATM"
+    ],
+    [
+     "el saldo",
+     "balance"
+    ],
+    [
+     "el número de cuenta",
+     "account number"
+    ]
+   ]
+  },
+  {
+   "title": "Moving money",
+   "words": [
+    [
+     "depositar",
+     "to deposit"
+    ],
+    [
+     "retirar / sacar dinero",
+     "to withdraw"
+    ],
+    [
+     "la transferencia",
+     "transfer"
+    ],
+    [
+     "el cheque",
+     "check"
+    ],
+    [
+     "pagar en efectivo",
+     "to pay cash"
+    ],
+    [
+     "el recibo",
+     "receipt"
+    ],
+    [
+     "los intereses",
+     "interest"
+    ],
+    [
+     "la comisión",
+     "fee"
+    ]
+   ]
+  },
+  {
+   "title": "At the branch",
+   "words": [
+    [
+     "el cajero / la cajera",
+     "bank teller"
+    ],
+    [
+     "la sucursal",
+     "branch"
+    ],
+    [
+     "abrir una cuenta",
+     "to open an account"
+    ],
+    [
+     "la identificación",
+     "ID"
+    ],
+    [
+     "firmar",
+     "to sign"
+    ],
+    [
+     "la contraseña / el PIN",
+     "password / PIN"
+    ],
+    [
+     "Quisiera abrir una cuenta",
+     "I'd like to open an account"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para guardar dinero y ganar intereses, abro una cuenta de ",
+   "after": ".",
+   "options": [
+    "ahorros",
+    "débito",
+    "recibo"
+   ],
+   "answer": 0,
+   "why": "Savings account: cuenta de ahorros."
+  },
+  {
+   "before": "Saco dinero del ",
+   "after": " con mi tarjeta.",
+   "options": [
+    "cajero automático",
+    "saldo",
+    "cheque"
+   ],
+   "answer": 0,
+   "why": "Cash comes out of the ATM."
+  },
+  {
+   "before": "Antes de comprar, reviso mi ",
+   "after": " en la aplicación.",
+   "options": [
+    "saldo",
+    "firma",
+    "sucursal"
+   ],
+   "answer": 0,
+   "why": "Balance: saldo."
+  },
+  {
+   "before": "Le envié el dinero a mi tía con una ",
+   "after": ".",
+   "options": [
+    "transferencia",
+    "comisión",
+    "identificación"
+   ],
+   "answer": 0,
+   "why": "Sending money electronically: transferencia."
+  },
+  {
+   "before": "El banco cobra una ",
+   "after": " de tres dólares por usar otro cajero.",
+   "options": [
+    "comisión",
+    "cuenta",
+    "contraseña"
+   ],
+   "answer": 0,
+   "why": "A fee: comisión."
+  },
+  {
+   "before": "Para abrir la cuenta, la cajera me pide una ",
+   "after": ".",
+   "options": [
+    "identificación",
+    "transferencia",
+    "tarjeta de crédito"
+   ],
+   "answer": 0,
+   "why": "To open an account you need ID."
+  },
+  {
+   "before": "No compartas tu ",
+   "after": " con nadie.",
+   "options": [
+    "PIN",
+    "recibo",
+    "banco"
+   ],
+   "answer": 0,
+   "why": "Your PIN is secret."
+  },
+  {
+   "before": "Pagué en ",
+   "after": ": no usé tarjeta.",
+   "options": [
+    "efectivo",
+    "cheque de ahorros",
+    "saldo"
+   ],
+   "answer": 0,
+   "why": "Cash: efectivo."
+  }
+ ],
+ "demand": {
+  "query": "spanish bank vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish bank vocabulary». They ask for banking terminology and words, so the list covers the branch, the app and the money itself.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

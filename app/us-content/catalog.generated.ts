@@ -2,11 +2,291 @@
 export type UsCatalogEntry = { family: string; slug: string; level: string; theme: string; title: string };
 export const usCatalog: UsCatalogEntry[] = [
  {
+  "family": "ap",
+  "slug": "art-and-creativity",
+  "level": "B1",
+  "theme": "unit-3",
+  "title": "AP Spanish Art and Creativity (Unit 3)"
+ },
+ {
+  "family": "ap",
+  "slug": "contemporary-life",
+  "level": "B1",
+  "theme": "unit-5",
+  "title": "AP Spanish Contemporary Life (Unit 5)"
+ },
+ {
+  "family": "ap",
+  "slug": "families-and-communities",
+  "level": "B1",
+  "theme": "unit-1",
+  "title": "AP Spanish Families and Communities (Unit 1)"
+ },
+ {
+  "family": "ap",
+  "slug": "global-contexts",
+  "level": "B2",
+  "theme": "unit-6",
+  "title": "AP Spanish Global Contexts (Unit 6)"
+ },
+ {
+  "family": "ap",
+  "slug": "language-and-culture",
+  "level": "B1",
+  "theme": "unit-2",
+  "title": "AP Spanish Language and Culture (Unit 2)"
+ },
+ {
+  "family": "ap",
+  "slug": "science-and-technology",
+  "level": "B1",
+  "theme": "unit-4",
+  "title": "AP Spanish Science and Technology (Unit 4)"
+ },
+ {
+  "family": "grammar",
+  "slug": "accent-marks",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish accent marks practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "adjective-agreement",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish adjective agreement practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "adverbs",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish adverbs practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "articles",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish articles practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "commands",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish commands practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "comparatives-and-superlatives",
+  "level": "A2–B1",
+  "theme": "contrast",
+  "title": "Spanish comparatives and superlatives practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "conditional",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish conditional practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "demonstrative-adjectives",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish demonstrative adjectives practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "double-object-pronouns",
+  "level": "B1",
+  "theme": "forms",
+  "title": "Spanish double object pronouns practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "gender-of-nouns",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish gender of nouns practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "imperfect-subjunctive",
+  "level": "B1–B2",
+  "theme": "forms",
+  "title": "Spanish imperfect subjunctive practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "indirect-object-pronouns",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish indirect object pronouns practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "irregular-verbs",
+  "level": "A1–B1",
+  "theme": "forms",
+  "title": "Spanish irregular verbs practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "passive-voice",
+  "level": "B1–B2",
+  "theme": "contrast",
+  "title": "Spanish passive voice practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "pluperfect",
+  "level": "B1",
+  "theme": "forms",
+  "title": "Spanish pluperfect practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "possessive-adjectives",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish possessive adjectives practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "prepositions",
+  "level": "A1–B1",
+  "theme": "forms",
+  "title": "Spanish prepositions practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "present-progressive",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish present progressive practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "present-tense",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish present tense practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "punctuation",
+  "level": "A2–B1",
+  "theme": "forms",
+  "title": "Spanish punctuation practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "question-words",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish question words practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "relative-pronouns",
+  "level": "B1–B2",
+  "theme": "forms",
+  "title": "Spanish relative pronouns practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "sentence-structure",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish sentence structure practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "spelling",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish spelling practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "stem-changing-verbs",
+  "level": "A1–A2",
+  "theme": "forms",
+  "title": "Spanish stem-changing verbs practice"
+ },
+ {
+  "family": "grammar",
+  "slug": "telling-time",
+  "level": "A1",
+  "theme": "forms",
+  "title": "Spanish telling time practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "acostarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb acostarse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "caer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb caer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "cerrar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb cerrar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "comprar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb comprar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "conocer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb conocer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "contar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb contar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "creer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb creer: practice"
+ },
+ {
   "family": "verbs",
   "slug": "dar",
   "level": "A2",
   "theme": "",
   "title": "Spanish verb dar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "deber",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb deber: practice"
  },
  {
   "family": "verbs",
@@ -17,10 +297,52 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "dejar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb dejar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "despertarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb despertarse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "ducharse",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb ducharse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "empezar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb empezar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "encontrar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb encontrar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "estar",
   "level": "A1",
   "theme": "",
   "title": "Spanish verb estar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "estudiar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb estudiar: practice"
  },
  {
   "family": "verbs",
@@ -35,6 +357,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb haber: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "hablar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb hablar: practice"
  },
  {
   "family": "verbs",
@@ -59,10 +388,66 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "lavar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb lavar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "leer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb leer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "levantarse",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb levantarse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "llamar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb llamar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "llegar",
   "level": "A1",
   "theme": "",
   "title": "Spanish verb llegar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "llevar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb llevar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "mirar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb mirar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "pasar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb pasar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "pensar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb pensar: practice"
  },
  {
   "family": "verbs",
@@ -80,6 +465,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "quedar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb quedar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "querer",
   "level": "A1",
   "theme": "",
@@ -91,6 +483,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb saber: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "sentarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb sentarse: practice"
  },
  {
   "family": "verbs",
@@ -108,6 +507,27 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "tomar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb tomar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "trabajar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb trabajar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "traer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb traer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "venir",
   "level": "A2",
   "theme": "",
@@ -121,11 +541,137 @@ export const usCatalog: UsCatalogEntry[] = [
   "title": "Spanish verb ver: practice"
  },
  {
+  "family": "verbs",
+  "slug": "viajar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb viajar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "volver",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb volver: practice"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "adjectives",
+  "level": "A1",
+  "theme": "adjectives",
+  "title": "Spanish adjectives vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "airport",
+  "level": "A2",
+  "theme": "airport",
+  "title": "Spanish airport vocabulary"
+ },
+ {
   "family": "vocabulary",
   "slug": "animals",
   "level": "A1",
   "theme": "animals",
   "title": "Spanish animals vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "art",
+  "level": "A2",
+  "theme": "art",
+  "title": "Spanish art vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "bank",
+  "level": "A2",
+  "theme": "bank",
+  "title": "Spanish bank vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "baseball",
+  "level": "A2",
+  "theme": "baseball",
+  "title": "Spanish baseball vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "basketball",
+  "level": "A2",
+  "theme": "basketball",
+  "title": "Spanish basketball vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "bathroom",
+  "level": "A1",
+  "theme": "bathroom",
+  "title": "Spanish bathroom vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "beach",
+  "level": "A1",
+  "theme": "beach",
+  "title": "Spanish beach vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "bedroom",
+  "level": "A1",
+  "theme": "bedroom",
+  "title": "Spanish bedroom vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "body-parts",
+  "level": "A1",
+  "theme": "body-parts",
+  "title": "Spanish body parts vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "breakfast",
+  "level": "A1",
+  "theme": "breakfast",
+  "title": "Spanish breakfast vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "business",
+  "level": "A2",
+  "theme": "business",
+  "title": "Spanish business vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "camping",
+  "level": "A2",
+  "theme": "camping",
+  "title": "Spanish camping vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "car",
+  "level": "A2",
+  "theme": "car",
+  "title": "Spanish car vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "chores",
+  "level": "A1",
+  "theme": "chores",
+  "title": "Spanish chores vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "christmas",
+  "level": "A1",
+  "theme": "christmas",
+  "title": "Spanish christmas vocabulary"
  },
  {
   "family": "vocabulary",
@@ -143,10 +689,80 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "colors",
+  "level": "A1",
+  "theme": "colors",
+  "title": "Spanish colors vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "connectors",
+  "level": "A2",
+  "theme": "connectors",
+  "title": "Spanish connectors: linking words"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "construction",
+  "level": "A2",
+  "theme": "construction",
+  "title": "Spanish construction vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "daily-routine",
   "level": "A2",
   "theme": "daily-routine",
   "title": "Spanish daily routine vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "dance",
+  "level": "A2",
+  "theme": "dance",
+  "title": "Spanish dance vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "day-of-the-dead",
+  "level": "A2",
+  "theme": "day-of-the-dead",
+  "title": "Spanish Day of the Dead vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "directions",
+  "level": "A1",
+  "theme": "directions",
+  "title": "Spanish directions vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "drinks",
+  "level": "A1",
+  "theme": "drinks",
+  "title": "Spanish drinks vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "easter",
+  "level": "A2",
+  "theme": "easter",
+  "title": "Spanish Easter vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "emergency",
+  "level": "A2",
+  "theme": "emergency",
+  "title": "Spanish emergency vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "emotions",
+  "level": "A1",
+  "theme": "emotions",
+  "title": "Spanish emotions vocabulary: feelings"
  },
  {
   "family": "vocabulary",
@@ -164,6 +780,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "farm",
+  "level": "A1",
+  "theme": "farm",
+  "title": "Spanish farm vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "food",
   "level": "A1",
   "theme": "food",
@@ -178,10 +801,59 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "fruits",
+  "level": "A1",
+  "theme": "fruits",
+  "title": "Spanish fruits and vegetables vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "geography",
+  "level": "A2",
+  "theme": "geography",
+  "title": "Spanish geography vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "greetings",
+  "level": "A1",
+  "theme": "greetings",
+  "title": "Spanish greetings vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "gym",
+  "level": "A2",
+  "theme": "gym",
+  "title": "Spanish gym vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "hair",
+  "level": "A2",
+  "theme": "hair",
+  "title": "Spanish hair vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "halloween",
+  "level": "A1",
+  "theme": "halloween",
+  "title": "Spanish Halloween vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "health",
   "level": "A2",
   "theme": "health",
   "title": "Spanish health vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "hobbies",
+  "level": "A1",
+  "theme": "hobbies",
+  "title": "Spanish hobbies vocabulary"
  },
  {
   "family": "vocabulary",
@@ -192,10 +864,31 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "hotel",
+  "level": "A2",
+  "theme": "hotel",
+  "title": "Spanish hotel vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "house",
   "level": "A1",
   "theme": "house",
   "title": "Spanish house vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "idioms",
+  "level": "A2",
+  "theme": "idioms",
+  "title": "Common Spanish idioms"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "interview",
+  "level": "A2",
+  "theme": "interview",
+  "title": "Spanish job interview vocabulary"
  },
  {
   "family": "vocabulary",
@@ -206,10 +899,122 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "kitchen",
+  "level": "A1",
+  "theme": "kitchen",
+  "title": "Spanish kitchen vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "laundry",
+  "level": "A2",
+  "theme": "laundry",
+  "title": "Spanish laundry vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "legal",
+  "level": "A2",
+  "theme": "legal",
+  "title": "Spanish legal vocabulary: basic terms"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "love",
+  "level": "A2",
+  "theme": "love",
+  "title": "Spanish love vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "math",
+  "level": "A2",
+  "theme": "math",
+  "title": "Spanish math vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "mental-health",
+  "level": "A2",
+  "theme": "mental-health",
+  "title": "Spanish mental health vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "movies",
+  "level": "A2",
+  "theme": "movies",
+  "title": "Spanish movie vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "music",
   "level": "A2",
   "theme": "music",
   "title": "Spanish music vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "nature",
+  "level": "A1",
+  "theme": "nature",
+  "title": "Spanish nature vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "numbers",
+  "level": "A1",
+  "theme": "numbers",
+  "title": "Spanish numbers vocabulary: 0 to 100"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "party",
+  "level": "A1",
+  "theme": "party",
+  "title": "Spanish party vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "personality",
+  "level": "A1",
+  "theme": "personality",
+  "title": "Spanish personality vocabulary: adjectives"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "pets",
+  "level": "A1",
+  "theme": "pets",
+  "title": "Spanish pet vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "pharmacy",
+  "level": "A2",
+  "theme": "pharmacy",
+  "title": "Spanish pharmacy vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "phone",
+  "level": "A2",
+  "theme": "phone",
+  "title": "Spanish phone vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "physical-description",
+  "level": "A1",
+  "theme": "physical-description",
+  "title": "Spanish physical description vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "real-estate",
+  "level": "A2",
+  "theme": "real-estate",
+  "title": "Spanish real estate vocabulary"
  },
  {
   "family": "vocabulary",
@@ -227,10 +1032,31 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "science",
+  "level": "A2",
+  "theme": "science",
+  "title": "Spanish science vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "shopping",
   "level": "A1",
   "theme": "shopping",
   "title": "Spanish shopping vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "soccer",
+  "level": "A2",
+  "theme": "soccer",
+  "title": "Spanish soccer vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "space",
+  "level": "A2",
+  "theme": "space",
+  "title": "Spanish space vocabulary"
  },
  {
   "family": "vocabulary",
@@ -241,10 +1067,31 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "vocabulary",
+  "slug": "supermarket",
+  "level": "A1",
+  "theme": "supermarket",
+  "title": "Spanish supermarket vocabulary"
+ },
+ {
+  "family": "vocabulary",
   "slug": "technology",
   "level": "A2",
   "theme": "technology",
   "title": "Spanish technology vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "thanksgiving",
+  "level": "A2",
+  "theme": "thanksgiving",
+  "title": "Spanish Thanksgiving vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "transportation",
+  "level": "A1",
+  "theme": "transportation",
+  "title": "Spanish transportation vocabulary"
  },
  {
   "family": "vocabulary",
@@ -259,5 +1106,12 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "weather",
   "title": "Spanish weather vocabulary"
+ },
+ {
+  "family": "vocabulary",
+  "slug": "wedding",
+  "level": "A2",
+  "theme": "wedding",
+  "title": "Spanish wedding vocabulary"
  }
 ];

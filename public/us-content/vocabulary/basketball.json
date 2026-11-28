@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "basketball",
+ "themeLabel": "Basketball",
+ "title": "Spanish Basketball Vocabulary: Terms, Plays and Practice",
+ "description": "Spanish basketball vocabulary: positions, plays and court terms, with a practice quiz that corrects itself and an A2 reading about a team in Puerto Rico. No login.",
+ "h1": "Spanish basketball vocabulary",
+ "titleEs": "Las Gigantes de Carolina",
+ "focus": "the preterite and imperfect in a game story",
+ "intro": "Learn the Spanish basketball terms for the court, positions and plays, practice them with instant feedback, then read about a youth team chasing a title in Puerto Rico.",
+ "paragraphs": [
+  "En Carolina, Puerto Rico, el baloncesto es tan popular como el béisbol. Las Gigantes, un equipo de chicas de dieciséis años, llegaron este año a la final del torneo de la isla por primera vez.",
+  "El partido fue en una cancha llena de familias con banderas y tambores. En el primer cuarto, las rivales de Ponce encestaron cuatro triples seguidos y las Gigantes perdían por doce puntos. La entrenadora pidió tiempo y les habló con calma.",
+  "En el segundo tiempo, la base, Yarelis, empezó a driblar más rápido y a pasar el balón a la pívot, Keila, que tomaba todos los rebotes. Poco a poco, el marcador cambió. Faltando diez segundos, el partido estaba empatado.",
+  "Yarelis recibió una falta y fue a la línea de tiros libres. La cancha quedó en silencio. Falló el primero. Respiró y encestó el segundo. Las Gigantes ganaron por un punto y las familias invadieron la cancha. Esa noche, en el barrio, la celebración duró hasta tarde, con música y comida en la calle. Al día siguiente, el periódico local publicó una foto de Yarelis con el trofeo y el título «Las Gigantes, campeonas de la isla»."
+ ],
+ "glossary": [
+  [
+   "tan popular como",
+   "as popular as"
+  ],
+  [
+   "los tambores",
+   "drums"
+  ],
+  [
+   "los triples",
+   "three-pointers"
+  ],
+  [
+   "seguidos",
+   "in a row"
+  ],
+  [
+   "pedir tiempo",
+   "to call a time-out"
+  ],
+  [
+   "faltando diez segundos",
+   "with ten seconds left"
+  ],
+  [
+   "fallar",
+   "to miss"
+  ],
+  [
+   "invadir",
+   "to rush onto"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "En Carolina, el baloncesto es tan popular como ",
+   "after": ".",
+   "options": [
+    "el béisbol",
+    "el fútbol",
+    "el tenis"
+   ],
+   "answer": 0,
+   "why": "As popular as baseball."
+  },
+  {
+   "before": "Las Gigantes llegaron a la final ",
+   "after": ".",
+   "options": [
+    "por primera vez",
+    "por quinta vez",
+    "sin jugar"
+   ],
+   "answer": 0,
+   "why": "For the first time."
+  },
+  {
+   "before": "En el primer cuarto, las Gigantes ",
+   "after": ".",
+   "options": [
+    "perdían por doce puntos",
+    "ganaban fácilmente",
+    "estaban empatadas"
+   ],
+   "answer": 0,
+   "why": "They were down by twelve."
+  },
+  {
+   "before": "Keila, la pívot, ",
+   "after": ".",
+   "options": [
+    "tomaba todos los rebotes",
+    "tiraba triples",
+    "estaba en la banca"
+   ],
+   "answer": 0,
+   "why": "She grabbed every rebound."
+  },
+  {
+   "before": "En los tiros libres, Yarelis ",
+   "after": ".",
+   "options": [
+    "falló el primero y encestó el segundo",
+    "encestó los dos",
+    "falló los dos"
+   ],
+   "answer": 0,
+   "why": "Missed the first, made the second."
+  },
+  {
+   "before": "Las Gigantes ganaron ",
+   "after": ".",
+   "options": [
+    "por un punto",
+    "por doce puntos",
+    "en la prórroga"
+   ],
+   "answer": 0,
+   "why": "By one point."
+  }
+ ],
+ "grammar": {
+  "title": "Preterite vs imperfect in sports stories",
+  "intro": "Imperfect for what was going on (perdían, tomaba); preterite for single events (encestó, ganaron).",
+  "items": [
+   {
+    "before": "Al final del primer cuarto, el equipo ",
+    "after": " por doce.",
+    "options": [
+     "perdía",
+     "perdió por",
+     "pierde"
+    ],
+    "answer": 0,
+    "why": "The ongoing situation: imperfect perdía."
+   },
+   {
+    "before": "En el último segundo, Yarelis ",
+    "after": " el tiro libre.",
+    "options": [
+     "encestó",
+     "encestaba",
+     "enceste"
+    ],
+    "answer": 0,
+    "why": "A single event: preterite encestó."
+   },
+   {
+    "before": "Mientras Keila ",
+    "after": " los rebotes, el marcador cambiaba.",
+    "options": [
+     "tomaba",
+     "tomó",
+     "toma"
+    ],
+    "answer": 0,
+    "why": "Two ongoing actions with mientras: imperfect."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Juegas o miras baloncesto? ¿Qué equipo o jugador te gusta?",
+  "Narra los últimos diez segundos de un partido emocionante.",
+  "¿Qué deporte es más popular en tu escuela? ¿Por qué?"
+ ],
+ "heritage": "Basketball words change by country: «baloncesto» in Spain, «básquetbol» or «básquet» in much of Latin America; «la canasta», «el aro» or «el cesto». Puerto Rican commentators use many English terms. In writing, keep the accents in «básquetbol», «pívot» and «rebote» (none).",
+ "teacher": "Show thirty seconds of a game in Spanish and have students note every term they hear, then narrate a play using the preterite and imperfect.",
+ "vocabulary": [
+  {
+   "title": "The court",
+   "words": [
+    [
+     "el baloncesto / el básquetbol",
+     "basketball"
+    ],
+    [
+     "la cancha",
+     "court"
+    ],
+    [
+     "la canasta / el aro",
+     "basket, hoop"
+    ],
+    [
+     "el tablero",
+     "backboard"
+    ],
+    [
+     "la línea de tres puntos",
+     "three-point line"
+    ],
+    [
+     "el tiro libre",
+     "free throw"
+    ],
+    [
+     "el marcador",
+     "scoreboard"
+    ],
+    [
+     "el cuarto",
+     "quarter"
+    ]
+   ]
+  },
+  {
+   "title": "Players and roles",
+   "words": [
+    [
+     "el base",
+     "point guard"
+    ],
+    [
+     "el escolta",
+     "shooting guard"
+    ],
+    [
+     "el alero",
+     "small forward"
+    ],
+    [
+     "el ala-pívot",
+     "power forward"
+    ],
+    [
+     "el pívot",
+     "center"
+    ],
+    [
+     "el banquillo / la banca",
+     "bench"
+    ],
+    [
+     "el equipo",
+     "team"
+    ]
+   ]
+  },
+  {
+   "title": "Plays",
+   "words": [
+    [
+     "encestar",
+     "to score a basket"
+    ],
+    [
+     "driblar / botar el balón",
+     "to dribble"
+    ],
+    [
+     "pasar",
+     "to pass"
+    ],
+    [
+     "el rebote",
+     "rebound"
+    ],
+    [
+     "la clavada / el mate",
+     "dunk"
+    ],
+    [
+     "el tapón / el bloqueo",
+     "block"
+    ],
+    [
+     "la falta personal",
+     "personal foul"
+    ],
+    [
+     "la prórroga / el tiempo extra",
+     "overtime"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El jugador que organiza el juego y pasa mucho es el ",
+   "after": ".",
+   "options": [
+    "base",
+    "pívot",
+    "marcador"
+   ],
+   "answer": 0,
+   "why": "The point guard runs the offense."
+  },
+  {
+   "before": "Un tiro desde detrás de la línea vale ",
+   "after": " puntos.",
+   "options": [
+    "tres",
+    "dos",
+    "uno"
+   ],
+   "answer": 0,
+   "why": "Beyond the arc: three points."
+  },
+  {
+   "before": "Después de una falta, el jugador tira dos ",
+   "after": ".",
+   "options": [
+    "tiros libres",
+    "rebotes",
+    "tapones"
+   ],
+   "answer": 0,
+   "why": "Fouls give free throws."
+  },
+  {
+   "before": "El balón rebota en el aro y él toma el ",
+   "after": ".",
+   "options": [
+    "rebote",
+    "tablero",
+    "cuarto"
+   ],
+   "answer": 0,
+   "why": "Grabbing a missed shot: rebound."
+  },
+  {
+   "before": "Saltó muy alto y metió el balón con fuerza: fue una ",
+   "after": ".",
+   "options": [
+    "clavada",
+    "falta",
+    "canasta vacía"
+   ],
+   "answer": 0,
+   "why": "A dunk: clavada or mate."
+  },
+  {
+   "before": "El partido empató y jugaron una ",
+   "after": ".",
+   "options": [
+    "prórroga",
+    "línea",
+    "banca"
+   ],
+   "answer": 0,
+   "why": "Overtime after a tie."
+  },
+  {
+   "before": "Un partido profesional tiene cuatro ",
+   "after": ".",
+   "options": [
+    "cuartos",
+    "tableros",
+    "aros"
+   ],
+   "answer": 0,
+   "why": "Four quarters."
+  },
+  {
+   "before": "El jugador más alto suele jugar de ",
+   "after": ".",
+   "options": [
+    "pívot",
+    "base",
+    "escolta"
+   ],
+   "answer": 0,
+   "why": "The tallest player is usually the center."
+  }
+ ],
+ "demand": {
+  "query": "spanish basketball vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish basketball vocabulary». They ask for terms and words, so the list sticks to what you hear on a real court and in Spanish-language broadcasts.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

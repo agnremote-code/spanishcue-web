@@ -7,7 +7,7 @@ const PERSON='https://spanishcue.com/equipo#ale';
 
 // SEO plan step 7 (docs/seo-plan/06_SCHEMA/LEEME.md): one page per template. Every JSON-LD block must parse,
 // carry the properties Google requires for its type, and name the brand through the homepage entity's @id.
-const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/datos/que-autocompleta-google-en-gramatica','/spanish-reading-comprehension','/spanish-reading-comprehension/a1','/spanish-grammar-practice','/spanish-grammar-practice/subjunctive','/ap-spanish-language','/ap-spanish-language/argumentative-essay','/spanish-sub-plans','/spanish-sub-plans/spanish-2','/spanish-vocabulary','/spanish-vocabulary/food','/spanish-verb-practice','/spanish-verb-practice/tener'];
+const paths=['/','/material-ele','/material-ele/futuro','/material-ele/formatos/comprension-auditiva/a1','/material-ele/guia/ejercicios-ele-con-soluciones','/material-ele/ficha/indefinido-e-imperfecto','/material-ele/actividad/quien-es-quien','/guides/spanish-subjunctive-lesson-plan','/guides/assess-spanish-student-level-online','/resources/spanish-conversation-activity-a0-b1-estados-unidos','/recursos/actividad-de-conversacion-a0-b1-estados-unidos','/spanish-grammar-lessons','/ser-o-estar','/dudas-del-espanol/haber-o-a-ver','/conjugacion','/gramatica/indefinido-e-imperfecto','/about','/equipo','/material-ele/a1','/datos','/datos/errores-preterito-perfecto-a2','/datos/que-autocompleta-google-en-gramatica','/spanish-reading-comprehension','/spanish-reading-comprehension/a1','/spanish-grammar-practice','/spanish-grammar-practice/subjunctive','/ap-spanish-language','/ap-spanish-language/argumentative-essay','/spanish-sub-plans','/spanish-sub-plans/spanish-2','/spanish-vocabulary','/spanish-vocabulary/food','/spanish-verb-practice','/spanish-verb-practice/tener','/ap-spanish-language/themes','/ap-spanish-language/themes/families-and-communities'];
 
 const required={
  BreadcrumbList:n=>n.itemListElement.length>=2&&n.itemListElement.every((it,i)=>it['@type']==='ListItem'&&it.position===i+1&&it.name&&/^https:\/\/spanishcue\.com\//.test(it.item)),
@@ -139,8 +139,19 @@ test('grammar practice hub and topics are complete and chained',async()=>{
  const doc=async p=>{const r=await fetch(origin+p);assert.equal(r.status,200,p);return new JSDOM(await r.text()).window.document;};
  const hub=await doc('/spanish-grammar-practice');
  const topics=['ser-vs-estar','preterite-vs-imperfect','subjunctive','por-vs-para','preterite','imperfect','present-perfect','future-tense','reflexive-verbs','direct-object-pronouns'].map(t=>`/spanish-grammar-practice/${t}`);
- for(const t of topics)assert.ok(hub.querySelector(`main a[href="${t}"]`),`hub links ${t}`);
+ const {usCatalog}=await import('../app/us-content/catalog.generated.ts').catch(async()=>{const src=(await import('node:fs')).readFileSync(new URL('../app/us-content/catalog.generated.ts',import.meta.url),'utf8');return {usCatalog:JSON.parse(src.slice(src.indexOf('[] = ')+5).replace(/;\s*$/,''))};});
+ const chain=[...topics,...usCatalog.filter(e=>e.family==='grammar').map(e=>`/spanish-grammar-practice/${e.slug}`)];
+ for(const t of chain)assert.ok(hub.querySelector(`main a[href="${t}"]`),`hub links ${t}`);
  assert.ok(nodesOf(hub).some(n=>n['@type']==='CollectionPage'));
+ for(const t of chain.slice(topics.length)){
+  const d=await doc(t);const main=d.querySelector('main');
+  assert.ok(main.querySelectorAll('[role="group"]').length>=10,`${t}: questions`);
+  assert.match(main.textContent,/What SpanishCue data shows/);assert.match(main.textContent,/Use it in class/);
+  assert.ok(main.querySelector('a[href="/spanish-grammar-practice"]'),`${t} links back to the hub`);
+  assert.ok(main.querySelector(`a[href="${chain[(chain.indexOf(t)+1)%chain.length]}"]`),`${t} links the next topic`);
+  const types=nodesOf(d).map(n=>n['@type']);assert.ok(types.includes('LearningResource')&&types.includes('FAQPage'),t);
+ }
+ assert.equal((await fetch(origin+'/spanish-grammar-practice/not-a-topic')).status,404);
  for(const [i,t] of topics.entries()){
   const d=await doc(t);const main=d.querySelector('main');
   const words=main.textContent.replace(/\s+/g,' ').trim().split(' ').length;
@@ -148,7 +159,7 @@ test('grammar practice hub and topics are complete and chained',async()=>{
   assert.ok(main.querySelectorAll('[role="group"]').length>=8,`${t}: questions`);
   assert.match(main.textContent,/What SpanishCue data shows/);assert.match(main.textContent,/If you grew up speaking Spanish at home/);
   assert.ok(main.querySelector('a[href="/spanish-grammar-practice"]'),`${t} links back to the hub`);
-  assert.ok(main.querySelector(`a[href="${topics[(i+1)%topics.length]}"]`),`${t} links the next topic`);
+  assert.ok(main.querySelector(`a[href="${chain[(chain.indexOf(t)+1)%chain.length]}"]`),`${t} links the next topic`);
   assert.ok(main.querySelector('a[href="/datos/que-autocompleta-google-en-gramatica"]'),`${t} cites its source`);
   const types=nodesOf(d).map(n=>n['@type']);assert.ok(types.includes('LearningResource')&&types.includes('FAQPage'),t);
   for(const li of [...main.querySelectorAll('li')].filter(li=>li.textContent.startsWith('For teachers'))){const href=li.querySelector('a').getAttribute('href');const r=await fetch(origin+href,{redirect:'manual'});assert.equal(r.status,200,`${t} → ${href}`);}
@@ -225,4 +236,24 @@ test('Spanish verb practice pages render from assets and are chained',async()=>{
   assert.ok(main.querySelector(`a[href="${verbs[(i+1)%verbs.length]}"]`)&&main.querySelector('a[href="/spanish-verb-practice"]'),`${p} chain`);
  }
  assert.equal((await fetch(origin+'/spanish-verb-practice/not-a-verb')).status,404);
+});
+
+test('AP Spanish unit pages render from assets, link back to the AP guide and are chained',async()=>{
+ const src=(await import('node:fs')).readFileSync(new URL('../app/us-content/catalog.generated.ts',import.meta.url),'utf8');
+ const usCatalog=JSON.parse(src.slice(src.indexOf('[] = ')+5).replace(/;\s*$/,''));
+ const units=usCatalog.filter(e=>e.family==='ap').sort((a,b)=>a.theme.localeCompare(b.theme)).map(e=>`/ap-spanish-language/themes/${e.slug}`);
+ assert.ok(units.length>=6);
+ const doc=async p=>{const r=await fetch(origin+p);assert.equal(r.status,200,p);return new JSDOM(await r.text()).window.document;};
+ const hub=await doc('/ap-spanish-language/themes');
+ assert.ok((await doc('/ap-spanish-language')).querySelector('main a[href="/ap-spanish-language/themes"]'),'AP guide links the themes hub');
+ assert.equal((await doc('/ap-spanish-language/argumentative-essay')).querySelector('h1')?.textContent,'AP Spanish argumentative essay practice','existing AP parts still render');
+ for(const [i,p] of units.entries()){
+  assert.ok(hub.querySelector(`main a[href="${p}"]`),`hub links ${p}`);
+  const page=await doc(p);const main=page.querySelector('main');
+  assert.ok(main.querySelectorAll('[role="group"]').length>=14,`${p}: questions rendered`);
+  assert.ok(main.querySelectorAll('table tbody tr').length>=30,`${p}: vocabulary and phrases rendered`);
+  assert.equal(page.documentElement.lang,'en',`${p}: English chrome`);
+  assert.ok(main.querySelector(`a[href="${units[(i+1)%units.length]}"]`)&&main.querySelector('a[href="/ap-spanish-language/themes"]')&&main.querySelector('a[href="/ap-spanish-language/argumentative-essay"]'),`${p} chain`);
+ }
+ assert.equal((await fetch(origin+'/ap-spanish-language/themes/not-a-unit')).status,404);
 });

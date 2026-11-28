@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A2–B1",
+ "name": "indirect object pronouns",
+ "title": "Spanish Indirect Object Pronouns Practice: Me, Te, Le, Nos, Les",
+ "description": "Practice Spanish indirect object pronouns: me, te, le, nos, les, where they go, le with a + person, verbs like dar and decir, and 10 sentences checked as you tap.",
+ "h1": "Spanish indirect object pronouns practice",
+ "answer": "Indirect object pronouns say to whom or for whom something happens: me, te, le, nos, les. They go before a conjugated verb (le escribo) or attached to an infinitive, a gerund or an affirmative command (quiero escribirle, dime). Spanish usually keeps le or les even when a + the person appears: le doy el libro a Marta.",
+ "demand": {
+  "query": "spanish indirect object pronouns practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Indirect object pronouns and where they go",
+ "rules": [
+  {
+   "use": "To or for me / you (tú)",
+   "example": "Me compras pan. Te escribo mañana.",
+   "meaning": "me / te"
+  },
+  {
+   "use": "To him, her, you (usted)",
+   "example": "Le doy el regalo a mi madre.",
+   "meaning": "le"
+  },
+  {
+   "use": "To us",
+   "example": "Nos explica la tarea.",
+   "meaning": "nos"
+  },
+  {
+   "use": "To them, you all (ustedes)",
+   "example": "Les digo la verdad a mis padres.",
+   "meaning": "les"
+  },
+  {
+   "use": "Before a conjugated verb",
+   "example": "Le mando un mensaje.",
+   "meaning": "pronoun + verb"
+  },
+  {
+   "use": "Attached to infinitive, gerund or command",
+   "example": "Voy a mandarle un mensaje. Dime.",
+   "meaning": "verb + pronoun"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Mi abuela ",
+   "after": " cuenta historias a mis primos.",
+   "options": [
+    "les",
+    "le"
+   ],
+   "answer": 0,
+   "why": "A mis primos is plural: les."
+  },
+  {
+   "before": "¿",
+   "after": " prestas tu calculadora? La mía no funciona.",
+   "options": [
+    "Me",
+    "Te"
+   ],
+   "answer": 0,
+   "why": "You lend it to me: me."
+  },
+  {
+   "before": "La profesora ",
+   "after": " explicó el problema a Daniel.",
+   "options": [
+    "le",
+    "lo"
+   ],
+   "answer": 0,
+   "why": "To Daniel is the indirect object: le, not lo."
+  },
+  {
+   "before": "Nuestros padres ",
+   "after": " dan dinero los viernes.",
+   "options": [
+    "nos",
+    "les"
+   ],
+   "answer": 0,
+   "why": "To us: nos."
+  },
+  {
+   "before": "Voy a escribir",
+   "after": " una carta a mi novia.",
+   "options": [
+    "le",
+    "la"
+   ],
+   "answer": 0,
+   "why": "Attached to the infinitive and indirect: escribirle."
+  },
+  {
+   "before": "—¿Qué ",
+   "after": " regalaste a tu hermano? —Un libro.",
+   "options": [
+    "le",
+    "lo"
+   ],
+   "answer": 0,
+   "why": "To your brother: le."
+  },
+  {
+   "before": "",
+   "after": " digo a ustedes que la tienda cierra a las nueve.",
+   "options": [
+    "Les",
+    "Los"
+   ],
+   "answer": 0,
+   "why": "To ustedes, indirect: les."
+  },
+  {
+   "before": "Por favor, di",
+   "after": " la verdad.",
+   "options": [
+    "me",
+    "mí"
+   ],
+   "answer": 0,
+   "why": "Attached to an affirmative command: dime."
+  },
+  {
+   "before": "A mi hermana ",
+   "after": " encantan los gatos.",
+   "options": [
+    "le",
+    "la"
+   ],
+   "answer": 0,
+   "why": "Gustar-type verbs take indirect pronouns: le encantan."
+  },
+  {
+   "before": "Estoy preparándo",
+   "after": " la cena a mis hijos.",
+   "options": [
+    "les",
+    "los"
+   ],
+   "answer": 0,
+   "why": "For my children, indirect: preparándoles."
+  }
+ ],
+ "mistakes": [
+  "Using lo or la for the person who receives: «lo di el libro» should be «le di el libro».",
+  "Leaving out le when a + person is there: «doy el regalo a Ana» is understood, but «le doy el regalo a Ana» is the normal Spanish.",
+  "Putting the pronoun between the verbs: «voy a le escribir» should be «le voy a escribir» or «voy a escribirle».",
+  "Writing les for the thing: «les compré» means I bought (something) for them; the thing needs its own word or pronoun.",
+  "Using le for a plural person: «le digo a mis padres» is common in speech, but «les digo a mis padres» is the standard."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish indirect object pronouns practice». 2 ask for a worksheet or a PDF (indirect object pronouns spanish practice pdf; indirect object pronouns spanish practice worksheet). 6 ask for a quiz or exercises (spanish indirect object pronouns quiz; spanish indirect object pronouns exercises; indirect object pronouns spanish practice quizlet; indirect object pronouns spanish practice games; spanish direct and indirect object pronouns quiz; spanish direct and indirect object pronouns exercises). Several suggestions mix direct and indirect pronouns, so each question here explains why it is indirect; direct object pronouns have their own page.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Many heritage speakers say «le dije a mis papás», with singular le for a plural, because it is very common in speech across Latin America. It is understood everywhere, but formal writing and exams expect les. Also check the accent when you add a pronoun to a gerund: preparándoles.",
+ "teacher": "Run a quick gift exchange with paper slips: each student says ¿Qué le das a Kevin? Le doy un libro. Then report the whole group with les: Les damos regalos a todos.",
+ "faq": [
+  {
+   "question": "What is the difference between le and lo?",
+   "answer": "Le is indirect: the person who receives something (le doy el libro). Lo is direct: the thing or person that receives the action directly (lo veo, lo compro). If you can add «to» or «for» in English, it is usually le."
+  },
+  {
+   "question": "Why do Spanish speakers say le and a + person together?",
+   "answer": "It is called pronoun doubling. With indirect objects, Spanish normally keeps the pronoun even when the person is named: le escribo a mi madre. It sounds incomplete without le."
+  },
+  {
+   "question": "Where does the pronoun go with two verbs?",
+   "answer": "Before the conjugated verb or attached to the infinitive or gerund, never in the middle: le voy a llamar or voy a llamarle; les estoy hablando or estoy hablándoles."
+  }
+ ]
+}

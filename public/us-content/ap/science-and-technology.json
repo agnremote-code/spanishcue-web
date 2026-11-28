@@ -1,0 +1,359 @@
+{
+ "theme": "unit-4",
+ "unitName": "Science and Technology",
+ "level": "B1",
+ "title": "AP Spanish Science and Technology Vocab, Reading and Essay",
+ "description": "AP Spanish Unit 4, Science and Technology: vocabulary on AI, privacy and health, an original reading, an essay prompt with two sides and Q&A practice.",
+ "h1": "AP Spanish Science and Technology (Unit 4)",
+ "intro": "Unit 4 asks what science and technology change in daily life, for better and for worse. Here is the vocabulary to argue about it, an original text about a class that tried writing with artificial intelligence, an essay prompt and four questions to answer aloud.",
+ "demand": {
+  "query": "ap spanish science and technology vocab",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "overview": {
+  "heading": "What Unit 4 covers",
+  "paragraphs": [
+   "Science and Technology covers inventions and their effects: phones and social media, medicine, artificial intelligence, the environment. The course description also uses this unit to introduce the scoring guidelines for the argumentative essay, so it is a good place to start timing full essays.",
+   "Technology topics are easy to argue in two directions, which is exactly what the essay needs. For every advantage you name, have the cost ready: speed and dependence, connection and privacy, access and inequality."
+  ]
+ },
+ "contexts": [
+  "Innovations and Emerging Technologies",
+  "Personal Technology and Communication",
+  "Science in Everyday Life",
+  "Societal Impacts of Science and Technology"
+ ],
+ "vocabulary": [
+  {
+   "title": "Innovation",
+   "words": [
+    [
+     "la inteligencia artificial",
+     "artificial intelligence"
+    ],
+    [
+     "el avance",
+     "breakthrough, advance"
+    ],
+    [
+     "el algoritmo",
+     "algorithm"
+    ],
+    [
+     "la herramienta",
+     "tool"
+    ],
+    [
+     "automatizar",
+     "to automate"
+    ],
+    [
+     "el invento",
+     "invention"
+    ],
+    [
+     "la investigación",
+     "research"
+    ],
+    [
+     "desarrollar",
+     "to develop"
+    ]
+   ]
+  },
+  {
+   "title": "Everyday tech",
+   "words": [
+    [
+     "las redes sociales",
+     "social media"
+    ],
+    [
+     "la privacidad",
+     "privacy"
+    ],
+    [
+     "los datos personales",
+     "personal data"
+    ],
+    [
+     "la pantalla",
+     "screen"
+    ],
+    [
+     "estar conectado",
+     "to be online"
+    ],
+    [
+     "la desinformación",
+     "misinformation"
+    ],
+    [
+     "la brecha digital",
+     "digital divide"
+    ],
+    [
+     "descargar",
+     "to download"
+    ]
+   ]
+  },
+  {
+   "title": "Effects on society",
+   "words": [
+    [
+     "la dependencia",
+     "dependence"
+    ],
+    [
+     "el puesto de trabajo",
+     "job"
+    ],
+    [
+     "la ética",
+     "ethics"
+    ],
+    [
+     "los riesgos",
+     "risks"
+    ],
+    [
+     "los beneficios",
+     "benefits"
+    ],
+    [
+     "regular",
+     "to regulate"
+    ],
+    [
+     "el bienestar",
+     "well-being"
+    ],
+    [
+     "plagiar",
+     "to plagiarize"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El nuevo programa puede ",
+   "after": " tareas que antes hacían tres empleados.",
+   "options": [
+    "automatizar",
+    "descargar",
+    "plagiar"
+   ],
+   "answer": 0,
+   "why": "Automatizar is to make a task run without people doing it."
+  },
+  {
+   "before": "Antes de aceptar la aplicación, lee qué hará con tus ",
+   "after": ".",
+   "options": [
+    "datos personales",
+    "inventos",
+    "beneficios"
+   ],
+   "answer": 0,
+   "why": "Apps collect datos personales: your name, location, habits."
+  },
+  {
+   "before": "En zonas rurales sin internet se nota la ",
+   "after": ".",
+   "options": [
+    "brecha digital",
+    "inteligencia artificial",
+    "privacidad"
+   ],
+   "answer": 0,
+   "why": "Brecha digital is the gap between people with and without access to technology."
+  },
+  {
+   "before": "Ese video falso es un ejemplo de ",
+   "after": ": parece real, pero no lo es.",
+   "options": [
+    "desinformación",
+    "investigación",
+    "herramienta"
+   ],
+   "answer": 0,
+   "why": "Desinformación is false or misleading information."
+  },
+  {
+   "before": "Copiar un texto y presentarlo como propio es ",
+   "after": ".",
+   "options": [
+    "plagiar",
+    "regular",
+    "desarrollar"
+   ],
+   "answer": 0,
+   "why": "Plagiar is presenting someone else's work as yours."
+  },
+  {
+   "before": "La red social decide qué ves gracias a un ",
+   "after": ".",
+   "options": [
+    "algoritmo",
+    "puesto de trabajo",
+    "bienestar"
+   ],
+   "answer": 0,
+   "why": "An algoritmo is the set of rules a program follows to choose content."
+  },
+  {
+   "before": "Muchos gobiernos quieren ",
+   "after": " el uso de la inteligencia artificial.",
+   "options": [
+    "regular",
+    "descargar",
+    "automatizar"
+   ],
+   "answer": 0,
+   "why": "Regular means to set rules for something."
+  },
+  {
+   "before": "Pasar diez horas frente a la ",
+   "after": " afecta al sueño.",
+   "options": [
+    "pantalla",
+    "ética",
+    "dependencia"
+   ],
+   "answer": 0,
+   "why": "La pantalla is the screen of a phone or computer."
+  }
+ ],
+ "reading": {
+  "titleEs": "La semana en que la máquina hizo la tarea",
+  "intro": "An original text written for this page, at about B1. The school and the people are fictional.",
+  "paragraphs": [
+   "En una escuela secundaria de Valparaíso, el profesor de historia Matías Rojas hizo un experimento con sus alumnos de último año. Durante una semana podían usar inteligencia artificial para todas las tareas, con una sola condición: tenían que entregar también la conversación completa con la herramienta.",
+   "Los primeros días fueron una fiesta. Los ensayos llegaban a tiempo, sin faltas de ortografía y con párrafos bien organizados. Algunos estudiantes terminaron en veinte minutos trabajos que antes les llevaban una tarde entera. «Por fin la tecnología trabaja para nosotros», escribió uno en el grupo de la clase.",
+   "El jueves, el profesor organizó un debate oral sobre los mismos temas, sin computadoras. El resultado sorprendió a todos. Muchos no podían explicar con sus palabras lo que habían entregado por escrito. Una alumna admitió que había leído su propio ensayo solo una vez, por encima. Otros, en cambio, defendieron sus ideas con seguridad: eran los que habían discutido con la máquina, le habían pedido ejemplos y habían corregido sus errores.",
+   "Al revisar las conversaciones, Rojas encontró la diferencia. Quienes usaron la herramienta como un compañero de estudio hicieron preguntas, pidieron fuentes y cambiaron el texto. Quienes la usaron como un atajo copiaron la primera respuesta. Además, detectó tres datos históricos inventados que nadie había comprobado.",
+   "La escuela no prohibió la inteligencia artificial después del experimento, pero cambió las reglas. Ahora cada trabajo escrito va acompañado de una breve defensa oral, y los alumnos deben señalar qué partes escribieron ellos. Para el profesor, la lección fue clara: la tecnología no piensa por nosotros; solo nos muestra si estamos pensando."
+  ],
+  "comprehension": [
+   {
+    "before": "La condición del experimento era que los alumnos ",
+    "after": ".",
+    "options": [
+     "entregaran la conversación con la herramienta",
+     "no usaran computadoras",
+     "trabajaran en grupo"
+    ],
+    "answer": 0,
+    "why": "They had to hand in the full conversation with the AI tool."
+   },
+   {
+    "before": "Durante los primeros días, los ensayos llegaron ",
+    "after": ".",
+    "options": [
+     "a tiempo y sin faltas",
+     "tarde",
+     "incompletos"
+    ],
+    "answer": 0,
+    "why": "The text says they arrived on time, without spelling mistakes."
+   },
+   {
+    "before": "En el debate oral, muchos estudiantes ",
+    "after": ".",
+    "options": [
+     "no podían explicar lo que habían entregado",
+     "ganaron fácilmente",
+     "no asistieron"
+    ],
+    "answer": 0,
+    "why": "Many could not explain in their own words what they had submitted."
+   },
+   {
+    "before": "Los estudiantes que defendieron bien sus ideas habían ",
+    "after": ".",
+    "options": [
+     "discutido con la máquina y corregido errores",
+     "copiado la primera respuesta",
+     "estudiado de memoria"
+    ],
+    "answer": 0,
+    "why": "They used the tool as a study partner, not a shortcut."
+   },
+   {
+    "before": "Al revisar las conversaciones, el profesor encontró ",
+    "after": ".",
+    "options": [
+     "datos históricos inventados",
+     "virus informáticos",
+     "mensajes de los padres"
+    ],
+    "answer": 0,
+    "why": "He found three invented historical facts nobody had checked."
+   },
+   {
+    "before": "Después del experimento, la escuela decidió ",
+    "after": ".",
+    "options": [
+     "añadir una defensa oral a cada trabajo",
+     "prohibir la inteligencia artificial",
+     "eliminar las tareas"
+    ],
+    "answer": 0,
+    "why": "Each written assignment now comes with a short oral defense."
+   }
+  ]
+ },
+ "essay": {
+  "prompt": "¿Deben las escuelas permitir que los estudiantes usen inteligencia artificial para hacer sus tareas?",
+  "sideA": "Sí: es una herramienta que usarán en la universidad y en el trabajo, y aprender a usarla bien es parte de la educación.",
+  "sideB": "No: si la máquina escribe por ellos, los estudiantes no desarrollan su capacidad de pensar ni de escribir.",
+  "outline": [
+   "Introduction: describe in one sentence how common the tools already are, then give your position.",
+   "Paragraph 2: learning; use the source that measures what students remember or understand.",
+   "Paragraph 3: preparation for the future; use the audio source and connect it to paragraph 2.",
+   "Paragraph 4: propose the rule you would set (for example, an oral defense) and why it answers the other side.",
+   "Conclusion: repeat the position briefly and name who benefits from your rule."
+  ],
+  "phrases": [
+   [
+    "En primer lugar,…",
+    "First of all,…"
+   ],
+   [
+    "Además de + infinitivo,…",
+    "In addition to…"
+   ],
+   [
+    "Los datos de la fuente 1 indican que…",
+    "The data in source 1 show that…"
+   ],
+   [
+    "No obstante,…",
+    "Nevertheless,…"
+   ],
+   [
+    "Es preocupante que + subjuntivo",
+    "It is worrying that…"
+   ],
+   [
+    "En resumen,…",
+    "In short,…"
+   ]
+  ]
+ },
+ "speaking": [
+  "¿Qué aplicación usas más cada día y qué harías sin ella?",
+  "¿Crees que la inteligencia artificial va a eliminar trabajos o a crear trabajos nuevos?",
+  "¿Cómo proteges tu privacidad en internet?",
+  "Describe un avance científico que haya mejorado la vida de tu familia."
+ ],
+ "heritage": "Technology Spanish is full of English, and in conversation that is normal. In the essay, prefer the standard words: «descargar» (not «downloadear»), «el correo electrónico» or «el mensaje», «la aplicación». Also note that «la red» and «las redes sociales» are feminine, and that «la computadora» is the usual word in the Americas.",
+ "teacher": "Run the experiment from the reading on a small scale: one paragraph written with an AI tool, then a two-minute oral defense. Students quickly see why the exam rewards their own reasoning.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested «ap spanish science and technology vocab», «what is ap spanish» and «ap spanish transition words» to people in the United States who typed «ap spanish science and technology». Vocabulary and connectors are what they want, so both are on this page.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "verb": "llamar",
+ "meaning": "to call",
+ "level": "A1",
+ "title": "Spanish Verb Llamar and Llamarse Practice: Forms and Quiz",
+ "description": "Practice the Spanish verbs llamar and llamarse: to call, me llamo, present and preterite forms, ten questions that correct themselves and a short reading.",
+ "h1": "Spanish verb llamar: practice",
+ "intro": "Llamar means to call, and llamarse (with a reflexive pronoun) is how Spanish gives names: me llamo Ana. Learn both, the present and the preterite, and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb llamar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To call by phone",
+   "example": "Te llamo esta noche.",
+   "meaning": "I'll call you tonight."
+  },
+  {
+   "use": "Names: llamarse",
+   "example": "Me llamo Daniel. ¿Cómo te llamas?",
+   "meaning": "My name is Daniel. What's your name?"
+  },
+  {
+   "use": "To call someone over",
+   "example": "La maestra llama a los estudiantes.",
+   "meaning": "The teacher calls the students."
+  },
+  {
+   "use": "Llamar la atención",
+   "example": "Ese cuadro me llama la atención.",
+   "meaning": "That painting catches my eye."
+  },
+  {
+   "use": "To knock or ring: llamar a la puerta",
+   "example": "Alguien llama a la puerta.",
+   "meaning": "Someone is knocking at the door."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "llamo"
+  ],
+  [
+   "tú",
+   "llamas"
+  ],
+  [
+   "él / ella / usted",
+   "llama"
+  ],
+  [
+   "nosotros / nosotras",
+   "llamamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "llaman"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "llamé"
+  ],
+  [
+   "tú",
+   "llamaste"
+  ],
+  [
+   "él / ella / usted",
+   "llamó"
+  ],
+  [
+   "nosotros / nosotras",
+   "llamamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "llamaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Hola, me ",
+   "after": " Sofía.",
+   "options": [
+    "llamo",
+    "llama",
+    "llamas"
+   ],
+   "answer": 0,
+   "why": "Giving your name: me llamo."
+  },
+  {
+   "before": "¿Cómo se ",
+   "after": " tu perro?",
+   "options": [
+    "llama",
+    "llaman",
+    "llamo"
+   ],
+   "answer": 0,
+   "why": "The dog's name: se llama."
+  },
+  {
+   "before": "Mis primos se ",
+   "after": " Diego y Javier.",
+   "options": [
+    "llaman",
+    "llama",
+    "llamamos"
+   ],
+   "answer": 0,
+   "why": "Plural: se llaman."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " a tu abuela los domingos?",
+   "options": [
+    "llamas",
+    "te llamas",
+    "llama"
+   ],
+   "answer": 0,
+   "why": "Calling someone: llamas, no reflexive."
+  },
+  {
+   "before": "Alguien ",
+   "after": " a la puerta. ¿Abres tú?",
+   "options": [
+    "llama",
+    "se llama",
+    "llaman a"
+   ],
+   "answer": 0,
+   "why": "Knocking: llamar a la puerta."
+  },
+  {
+   "before": "Su forma de vestir llama la ",
+   "after": ".",
+   "options": [
+    "atención",
+    "puerta",
+    "nombre"
+   ],
+   "answer": 0,
+   "why": "Llamar la atención: to attract attention."
+  },
+  {
+   "before": "Ayer te ",
+   "after": " tres veces, pero no contestaste.",
+   "options": [
+    "llamé",
+    "llame",
+    "llamo ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: llamé."
+  },
+  {
+   "before": "¿Por qué no me ",
+   "after": " anoche?",
+   "options": [
+    "llamaste",
+    "llamastes",
+    "llamas ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: llamaste."
+  },
+  {
+   "before": "La doctora ",
+   "after": " para confirmar la cita.",
+   "options": [
+    "llamó",
+    "llamo",
+    "llamaba una vez"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: llamó."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " a la policía cuando vieron el accidente.",
+   "options": [
+    "llamaron",
+    "llamamos",
+    "se llamaron"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: llamaron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La llamada equivocada",
+  "paragraphs": [
+   "Un sábado por la mañana, el teléfono de Andrés sonó. Una señora mayor dijo: «Hola, mi amor, soy tu abuela». Andrés le explicó con amabilidad que se llamaba Andrés y que su abuela vivía en Ecuador. La señora se rió: había llamado a un número equivocado.",
+   "Pero no colgaron. Hablaron diez minutos sobre el clima, las recetas y los nietos. Desde ese día, la señora Elvira llama a Andrés cada sábado, y él la llama a ella cuando hace sopa de quinua. Dice que ahora tiene dos abuelas."
+  ],
+  "comprehension": [
+   {
+    "before": "La señora mayor pensaba que Andrés era ",
+    "after": ".",
+    "options": [
+     "su nieto",
+     "su hijo",
+     "su médico"
+    ],
+    "answer": 0,
+    "why": "She thought he was her grandson."
+   },
+   {
+    "before": "La abuela de Andrés vive en ",
+    "after": ".",
+    "options": [
+     "Ecuador",
+     "México",
+     "Miami"
+    ],
+    "answer": 0,
+    "why": "In Ecuador."
+   },
+   {
+    "before": "Después de la llamada equivocada, ",
+    "after": ".",
+    "options": [
+     "hablaron diez minutos",
+     "colgaron enseguida",
+     "se enojaron"
+    ],
+    "answer": 0,
+    "why": "They talked for ten minutes."
+   },
+   {
+    "before": "Ahora la señora Elvira llama a Andrés ",
+    "after": ".",
+    "options": [
+     "cada sábado",
+     "todos los días",
+     "una vez al año"
+    ],
+    "answer": 0,
+    "why": "Every Saturday."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Mi nombre es llamo Ana.",
+   "right": "Me llamo Ana.",
+   "why": "Use me llamo or mi nombre es, not both."
+  },
+  {
+   "wrong": "Yo llamo Ana.",
+   "right": "Me llamo Ana.",
+   "why": "Names need the reflexive pronoun: me llamo."
+  },
+  {
+   "wrong": "Llamé mi madre.",
+   "right": "Llamé a mi madre.",
+   "why": "Before a person, use the personal a."
+  },
+  {
+   "wrong": "Te llamo atrás.",
+   "right": "Te devuelvo la llamada.",
+   "why": "«Call back» is devolver la llamada, not llamar atrás."
+  }
+ ],
+ "heritage": "Heritage speakers in the US sometimes say «te llamo pa'trás», a calque of «I'll call you back». In writing, use «te devuelvo la llamada» or «te vuelvo a llamar». Also keep the accent in «llamé» and «llamó».",
+ "teacher": "Open class with a name chain: each student says «Me llamo… y él/ella se llama…» for the person before them. It drills llamarse and the third person.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish verb llamar». 1 of them asks for conjugation, charts or tenses (conjugation). Two ask for llamarse, so both the call and the name uses are on this page.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

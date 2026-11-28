@@ -1,0 +1,278 @@
+{
+ "verb": "deber",
+ "meaning": "must, should, to owe",
+ "level": "A2",
+ "title": "Spanish Verb Deber Practice: Should, Must and Owe with a Quiz",
+ "description": "Practice the Spanish verb deber: should and must with an infinitive, to owe money, debería for advice, present and preterite forms and ten questions.",
+ "h1": "Spanish verb deber: practice",
+ "intro": "Deber + infinitive gives obligation or advice (debes descansar), and deber alone means to owe (te debo cinco dólares). Debería softens advice. Learn the forms and the uses, then practice with feedback on every answer.",
+ "demand": {
+  "query": "spanish verb deber",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Obligation: deber + infinitive",
+   "example": "Debes terminar la tarea antes de cenar.",
+   "meaning": "You must finish your homework before dinner."
+  },
+  {
+   "use": "Softer advice: debería",
+   "example": "Deberías dormir más.",
+   "meaning": "You should sleep more."
+  },
+  {
+   "use": "To owe",
+   "example": "Te debo veinte dólares.",
+   "meaning": "I owe you twenty dollars."
+  },
+  {
+   "use": "Probability: deber de + infinitive",
+   "example": "Deben de ser las ocho.",
+   "meaning": "It must be about eight."
+  },
+  {
+   "use": "Noun: el deber",
+   "example": "Votar es un deber ciudadano.",
+   "meaning": "Voting is a civic duty."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "debo"
+  ],
+  [
+   "tú",
+   "debes"
+  ],
+  [
+   "él / ella / usted",
+   "debe"
+  ],
+  [
+   "nosotros / nosotras",
+   "debemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "deben"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "debí"
+  ],
+  [
+   "tú",
+   "debiste"
+  ],
+  [
+   "él / ella / usted",
+   "debió"
+  ],
+  [
+   "nosotros / nosotras",
+   "debimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "debieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " llamar a mi mamá esta noche.",
+   "options": [
+    "debo",
+    "debe",
+    "debes"
+   ],
+   "answer": 0,
+   "why": "Yo: debo + infinitive."
+  },
+  {
+   "before": "Los estudiantes ",
+   "after": " llegar a las ocho.",
+   "options": [
+    "deben",
+    "debe",
+    "debemos"
+   ],
+   "answer": 0,
+   "why": "Ellos: deben."
+  },
+  {
+   "before": "Tienes fiebre. ",
+   "after": " ir al médico.",
+   "options": [
+    "Deberías",
+    "Debería",
+    "Deben"
+   ],
+   "answer": 0,
+   "why": "Advice to tú: deberías, the softer form."
+  },
+  {
+   "before": "Mi hermano le ",
+   "after": " cien dólares a su amigo.",
+   "options": [
+    "debe",
+    "debo",
+    "deben"
+   ],
+   "answer": 0,
+   "why": "Owing money: él debe."
+  },
+  {
+   "before": "Nosotros no ",
+   "after": " usar el teléfono en el examen.",
+   "options": [
+    "debemos",
+    "deben",
+    "debo"
+   ],
+   "answer": 0,
+   "why": "Nosotros: debemos."
+  },
+  {
+   "before": "Debes ",
+   "after": " más agua cuando hace calor.",
+   "options": [
+    "tomar",
+    "tomas",
+    "a tomar"
+   ],
+   "answer": 0,
+   "why": "Deber goes directly with the infinitive, no preposition."
+  },
+  {
+   "before": "Ayer ",
+   "after": " estudiar más para la prueba.",
+   "options": [
+    "debí",
+    "debía mañana",
+    "debo"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: debí, a missed obligation."
+  },
+  {
+   "before": "¿Cuánto le ",
+   "after": " al mecánico la semana pasada?",
+   "options": [
+    "debiste",
+    "debistes",
+    "debes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: debiste, no final s."
+  },
+  {
+   "before": "El equipo ",
+   "after": " jugar mejor en el segundo tiempo.",
+   "options": [
+    "debió",
+    "debio",
+    "debieron"
+   ],
+   "answer": 0,
+   "why": "Preterite el equipo: debió, with accent."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " vender el carro el año pasado.",
+   "options": [
+    "debieron",
+    "debió",
+    "debimos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: debieron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La deuda de don Ramón",
+  "paragraphs": [
+   "Hace treinta años, don Ramón llegó a Chicago sin dinero. El dueño de una panadería, el señor Ortiz, le dio trabajo y le prestó doscientos dólares. «Me los debes cuando puedas», le dijo. Don Ramón siempre pensaba: «Debo devolver ese dinero».",
+   "El año pasado, ya jubilado, don Ramón buscó al señor Ortiz, pero la panadería había cerrado. Encontró a su nieta, que ahora tiene un café. Le dio un sobre con doscientos dólares y una carta: «No le debo solo dinero a su abuelo. Le debo mi vida aquí»."
+  ],
+  "comprehension": [
+   {
+    "before": "Don Ramón llegó a Chicago ",
+    "after": ".",
+    "options": [
+     "sin dinero",
+     "con mucho dinero",
+     "con su familia"
+    ],
+    "answer": 0,
+    "why": "The text says he arrived with no money."
+   },
+   {
+    "before": "El señor Ortiz tenía ",
+    "after": ".",
+    "options": [
+     "una panadería",
+     "un café",
+     "un taller"
+    ],
+    "answer": 0,
+    "why": "He owned a bakery."
+   },
+   {
+    "before": "El préstamo fue de ",
+    "after": ".",
+    "options": [
+     "doscientos dólares",
+     "veinte dólares",
+     "dos mil dólares"
+    ],
+    "answer": 0,
+    "why": "Two hundred dollars."
+   },
+   {
+    "before": "Al final, don Ramón le dio el sobre ",
+    "after": ".",
+    "options": [
+     "a la nieta del señor Ortiz",
+     "al señor Ortiz",
+     "a su hijo"
+    ],
+    "answer": 0,
+    "why": "The bakery had closed, so he gave it to the granddaughter."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Debo a estudiar.",
+   "right": "Debo estudiar.",
+   "why": "Deber takes the infinitive directly, with no a."
+  },
+  {
+   "wrong": "Tú debes que descansar.",
+   "right": "Tú debes descansar.",
+   "why": "Deber never takes que; that is tener que."
+  },
+  {
+   "wrong": "Yo debería estudiaba.",
+   "right": "Yo debería estudiar.",
+   "why": "After debería, use the infinitive."
+  },
+  {
+   "wrong": "Le debo a mi amigo veinte.",
+   "right": "Le debo veinte dólares a mi amigo.",
+   "why": "Name what you owe: veinte dólares."
+  }
+ ],
+ "heritage": "Heritage speakers usually use deber correctly in speech but mix it with tener que in writing (debo que). Also note that formal Spanish distinguishes deber (obligation) from deber de (probability), while everyday speech in the US and Latin America often uses both for either meaning.",
+ "teacher": "Give students problems on cards (Me duele la cabeza, No tengo dinero) and have partners answer with Deberías… Then switch to debo for their own week.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish verb deber». Two ask about debería, the softer form, so advice has its own use and question here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

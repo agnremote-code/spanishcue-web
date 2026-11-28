@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "B1–B2",
+ "name": "relative pronouns",
+ "title": "Spanish Relative Pronouns Practice: Que, Quien, Lo Que, Donde",
+ "description": "Practice Spanish relative pronouns: que, quien, el que, lo que, cuyo and donde, with prepositions and commas, a rule table and 10 sentences checked as you tap.",
+ "h1": "Spanish relative pronouns practice",
+ "answer": "Que is the most common Spanish relative pronoun and works for people and things: el libro que leo, la chica que vino. After a preposition, use el que, la que, los que or las que (la casa en la que vivo), or quien for people (el chico con quien hablé). Lo que means what or which for an idea, cuyo means whose and donde refers to places.",
+ "demand": {
+  "query": "spanish relative pronouns practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Spanish relative pronouns and when to use them",
+ "rules": [
+  {
+   "use": "People and things, no preposition",
+   "example": "El chico que conocí es de Lima.",
+   "meaning": "que"
+  },
+  {
+   "use": "After a preposition",
+   "example": "La ciudad en la que nací es pequeña.",
+   "meaning": "el que / la que / los que / las que"
+  },
+  {
+   "use": "People, after a preposition or between commas",
+   "example": "La profesora con quien hablé es nueva.",
+   "meaning": "quien / quienes"
+  },
+  {
+   "use": "An idea or a whole sentence",
+   "example": "No entiendo lo que dices.",
+   "meaning": "lo que"
+  },
+  {
+   "use": "Whose (agrees with the thing owned)",
+   "example": "El autor cuya novela leí vive aquí.",
+   "meaning": "cuyo / cuya / cuyos / cuyas"
+  },
+  {
+   "use": "Places",
+   "example": "Es el café donde nos conocimos.",
+   "meaning": "donde / en el que"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "La película ",
+   "after": " vimos ayer era muy larga.",
+   "options": [
+    "que",
+    "quien"
+   ],
+   "answer": 0,
+   "why": "For things without a preposition: que."
+  },
+  {
+   "before": "El chico con ",
+   "after": " salgo se llama Luis.",
+   "options": [
+    "quien",
+    "que"
+   ],
+   "answer": 0,
+   "why": "After a preposition, a person takes quien (or el que)."
+  },
+  {
+   "before": "No entiendo ",
+   "after": " quieres decir.",
+   "options": [
+    "lo que",
+    "que"
+   ],
+   "answer": 0,
+   "why": "What (an idea): lo que."
+  },
+  {
+   "before": "La casa en ",
+   "after": " vivíamos tenía un jardín.",
+   "options": [
+    "la que",
+    "que la"
+   ],
+   "answer": 0,
+   "why": "After en with a feminine noun: la que."
+  },
+  {
+   "before": "El restaurante ",
+   "after": " cenamos era mexicano.",
+   "options": [
+    "donde",
+    "cuando"
+   ],
+   "answer": 0,
+   "why": "A place: donde."
+  },
+  {
+   "before": "La escritora ",
+   "after": " libros leímos visitó la escuela.",
+   "options": [
+    "cuyos",
+    "cuya"
+   ],
+   "answer": 0,
+   "why": "Cuyo agrees with libros: cuyos."
+  },
+  {
+   "before": "Mis primos, ",
+   "after": " viven en Chicago, vienen en diciembre.",
+   "options": [
+    "que",
+    "lo que"
+   ],
+   "answer": 0,
+   "why": "Que also works between commas for people."
+  },
+  {
+   "before": "Llegó tarde, ",
+   "after": " molestó al profesor.",
+   "options": [
+    "lo que",
+    "que"
+   ],
+   "answer": 0,
+   "why": "Referring to the whole previous idea: lo que."
+  },
+  {
+   "before": "Los amigos ",
+   "after": " te hablé llegan hoy.",
+   "options": [
+    "de los que",
+    "que"
+   ],
+   "answer": 0,
+   "why": "Hablar de: the preposition must come before the relative, de los que."
+  },
+  {
+   "before": "Ella es la persona ",
+   "after": " más admiro.",
+   "options": [
+    "a quien",
+    "quien"
+   ],
+   "answer": 0,
+   "why": "Admirar a una persona: the personal a stays, a quien."
+  }
+ ],
+ "mistakes": [
+  "Leaving the preposition at the end like English: «la chica que hablé con» should be «la chica con la que hablé».",
+  "Using quien without a preposition or commas: «el chico quien vino» should be «el chico que vino».",
+  "Using que for an idea: «no sé que quieres» should be «no sé lo que quieres» or «no sé qué quieres».",
+  "Making cuyo agree with the owner: «la mujer cuyo hijos» should be «la mujer cuyos hijos».",
+  "Dropping que like English «the book I read»: Spanish always needs it, el libro que leí."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish relative pronouns practice». 2 ask for a quiz or exercises (spanish relative pronouns quiz; spanish relative pronouns exercises). One suggestion asks what a relative pronoun is, so the table starts with the basic case and builds up to cuyo.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often avoid cuyo in speech and say «el señor que su hijo trabaja aquí». That is common across Spanish, but formal writing prefers «el señor cuyo hijo trabaja aquí». Also check that the preposition comes before the relative, never at the end of the sentence.",
+ "teacher": "Play a definition game: students describe an object or a person with a relative clause (Es una cosa que usas para…, Es la persona con quien…) and the class guesses.",
+ "faq": [
+  {
+   "question": "What is a relative pronoun in Spanish?",
+   "answer": "A word that joins two sentences by referring back to a noun: Tengo un amigo. El amigo vive en Perú → Tengo un amigo que vive en Perú. The most common is que."
+  },
+  {
+   "question": "When do I use quien instead of que?",
+   "answer": "Use quien for people after a preposition (con quien, para quien) or between commas. Without a preposition, que is the normal choice: la chica que conocí, not la chica quien conocí."
+  },
+  {
+   "question": "Is lo que the same as qué?",
+   "answer": "No. Lo que is relative (no sé lo que pasó, what happened) and qué is a question word (no sé qué pasó). Both are possible in indirect questions, but only lo que works at the start of a statement: Lo que necesito es tiempo."
+  }
+ ]
+}

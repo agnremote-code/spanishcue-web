@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "possessive adjectives",
+ "title": "Spanish Possessive Adjectives Practice: Mi, Tu, Su, Nuestro Quiz",
+ "description": "Practice Spanish possessive adjectives and pronouns: mi, tu, su, nuestro, mío, tuyo, el suyo, with a rule table, 10 sentences checked as you tap and mistakes.",
+ "h1": "Spanish possessive adjectives practice",
+ "answer": "Spanish possessives agree with the thing owned, not with the owner: mi libro, mis libros; nuestra casa, nuestros carros. Su and sus can mean his, her, its, their or your (usted, ustedes). After the noun or alone, Spanish uses the long forms: un amigo mío, el mío, la tuya.",
+ "demand": {
+  "query": "spanish possessive adjectives practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Short and long possessives in Spanish",
+ "rules": [
+  {
+   "use": "My",
+   "example": "mi casa, mis hermanos",
+   "meaning": "mi / mis"
+  },
+  {
+   "use": "Your (tú)",
+   "example": "tu mochila, tus zapatos",
+   "meaning": "tu / tus"
+  },
+  {
+   "use": "His, her, its, their, your (usted, ustedes)",
+   "example": "su carro, sus padres",
+   "meaning": "su / sus"
+  },
+  {
+   "use": "Our: agrees in gender and number",
+   "example": "nuestro barrio, nuestras clases",
+   "meaning": "nuestro / nuestra / nuestros / nuestras"
+  },
+  {
+   "use": "After the noun",
+   "example": "un primo mío, una amiga tuya",
+   "meaning": "mío, tuyo, suyo, nuestro"
+  },
+  {
+   "use": "Standing alone (pronoun)",
+   "example": "Tu casa es grande; la mía es pequeña.",
+   "meaning": "el mío, la tuya, los suyos"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "",
+   "after": " hermanos viven en Texas.",
+   "options": [
+    "Mis",
+    "Mi"
+   ],
+   "answer": 0,
+   "why": "Hermanos is plural, so mis."
+  },
+  {
+   "before": "¿Dónde está ",
+   "after": " teléfono, Ana?",
+   "options": [
+    "tu",
+    "tú"
+   ],
+   "answer": 0,
+   "why": "Possessive tu has no accent; tú with accent is the pronoun."
+  },
+  {
+   "before": "Los Gómez venden ",
+   "after": " casa.",
+   "options": [
+    "su",
+    "sus"
+   ],
+   "answer": 0,
+   "why": "One house owned by several people: su, agreeing with casa."
+  },
+  {
+   "before": "Nosotros amamos ",
+   "after": " ciudad.",
+   "options": [
+    "nuestra",
+    "nuestro"
+   ],
+   "answer": 0,
+   "why": "Ciudad is feminine: nuestra."
+  },
+  {
+   "before": "Profesora, ¿es este ",
+   "after": " libro?",
+   "options": [
+    "su",
+    "tu"
+   ],
+   "answer": 0,
+   "why": "Formal usted takes su."
+  },
+  {
+   "before": "Esa mochila no es mía; es ",
+   "after": ".",
+   "options": [
+    "tuya",
+    "tu"
+   ],
+   "answer": 0,
+   "why": "Alone after ser, use the long form: tuya."
+  },
+  {
+   "before": "Un amigo ",
+   "after": " trabaja en la NASA.",
+   "options": [
+    "mío",
+    "mi"
+   ],
+   "answer": 0,
+   "why": "After the noun: un amigo mío."
+  },
+  {
+   "before": "Mi carro es rojo. ¿De qué color es ",
+   "after": "?",
+   "options": [
+    "el tuyo",
+    "tu"
+   ],
+   "answer": 0,
+   "why": "Replacing the noun: el tuyo."
+  },
+  {
+   "before": "",
+   "after": " abuelos llegan mañana de Honduras.",
+   "options": [
+    "Nuestros",
+    "Nuestro"
+   ],
+   "answer": 0,
+   "why": "Abuelos is masculine plural: nuestros."
+  },
+  {
+   "before": "Me duele ",
+   "after": " cabeza.",
+   "options": [
+    "la",
+    "mi"
+   ],
+   "answer": 0,
+   "why": "With body parts and a pronoun like me, Spanish uses the article: me duele la cabeza."
+  }
+ ],
+ "mistakes": [
+  "Matching the owner instead of the thing: «su hermanos» should be «sus hermanos», even if one person owns them.",
+  "Writing tú (pronoun) for tu (your): «tú libro» should be «tu libro».",
+  "Using possessives with body parts: «me lavo mis manos» should be «me lavo las manos».",
+  "Leaving su ambiguous: when it is unclear whose, use de + owner: el carro de él, la casa de ellos.",
+  "Forgetting that nuestro changes for gender: «nuestro escuela» should be «nuestra escuela»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish possessive adjectives practice». 3 ask for a worksheet or a PDF (spanish possessive adjectives practice pdf; spanish possessive adjectives worksheet; spanish possessive adjectives worksheet pdf). 2 ask for a quiz or exercises (spanish possessive adjectives quiz; spanish possessive adjectives exercises). Possessive pronouns also appear in the suggestions, so the long forms (mío, tuyo, el suyo) are part of this practice.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often say «la casa de ella» instead of «su casa» to avoid ambiguity, which is perfectly correct. In writing, check the accent difference between tu (your) and tú (you), and avoid the English pattern with body parts: «me corté el dedo», not «mi dedo».",
+ "teacher": "Collect one object from each student in a box. Pull them out one by one: ¿Es tu lápiz? No, no es mío; es de Ana, es suyo. It drills the short and long forms in real use.",
+ "faq": [
+  {
+   "question": "Does su mean his or her?",
+   "answer": "Both, and also its, their and your (usted, ustedes). Context usually makes it clear. When it does not, use de + the owner: la mochila de ella, el carro de ustedes."
+  },
+  {
+   "question": "What is the difference between mi and mío?",
+   "answer": "Mi goes before the noun (mi amigo). Mío goes after the noun (un amigo mío) or replaces it with an article (el mío). Both agree with the thing owned: mis amigas, unas amigas mías, las mías."
+  },
+  {
+   "question": "Why don't Spanish speakers say «my hand» for body parts?",
+   "answer": "With body parts and clothing, Spanish usually uses the article and lets a pronoun show the owner: me duele la cabeza, se puso el abrigo. The possessive sounds like English and is unusual."
+  }
+ ]
+}

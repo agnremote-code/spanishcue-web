@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "construction",
+ "themeLabel": "Construction",
+ "title": "Spanish Construction Vocabulary: Tools, Materials and Safety",
+ "description": "Spanish construction vocabulary for job sites: tools, materials, safety and instructions, with a quiz that corrects itself and an A2 reading about a crew in Texas.",
+ "h1": "Spanish construction vocabulary",
+ "titleEs": "La primera semana de Óscar",
+ "focus": "commands (tú) and safety instructions",
+ "intro": "Learn the Spanish words for tools, materials, safety gear and job-site instructions, practice them with instant feedback, then read about a bilingual foreman's first week on a site in Dallas.",
+ "paragraphs": [
+  "Óscar tiene veintiocho años y acaba de empezar como capataz en una obra de Dallas, Texas. El equipo construye un edificio de apartamentos de cuatro pisos. La mitad de los trabajadores habla solo español y la otra mitad, solo inglés. Óscar habla los dos, así que también hace de intérprete.",
+  "Cada mañana, a las siete, reúne al equipo para explicar el plan del día y las reglas de seguridad. «Pónganse el casco y las gafas. Si suben al tercer piso, usen el arnés». Algunos trabajadores con experiencia piensan que no es necesario, pero Óscar insiste.",
+  "El miércoles, un joven de diecinueve años, Kevin, sube a una escalera sin que nadie la sostenga. Óscar le grita: «¡Cuidado! Baja despacio». Kevin baja, un poco avergonzado. Diez minutos después, el viento mueve la escalera y la tira al suelo. Nadie dice nada, pero todos entienden.",
+  "El viernes, Óscar hace una lista bilingüe de herramientas y la pega en la pared del contenedor: martillo / hammer, taladro / drill, nivel / level. Los trabajadores la usan para aprender palabras del otro idioma. Al final de la semana, Kevin le pide que le enseñe más español."
+ ],
+ "glossary": [
+  [
+   "la obra",
+   "construction site"
+  ],
+  [
+   "acabar de + infinitive",
+   "to have just"
+  ],
+  [
+   "hacer de intérprete",
+   "to act as interpreter"
+  ],
+  [
+   "reunir",
+   "to gather"
+  ],
+  [
+   "sostener",
+   "to hold"
+  ],
+  [
+   "tirar al suelo",
+   "to knock down"
+  ],
+  [
+   "pegar",
+   "to stick, post"
+  ],
+  [
+   "el contenedor",
+   "site trailer, container"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Óscar también hace de intérprete porque ",
+   "after": ".",
+   "options": [
+    "habla español e inglés",
+    "es el jefe",
+    "estudió idiomas"
+   ],
+   "answer": 0,
+   "why": "He speaks both languages."
+  },
+  {
+   "before": "El equipo construye ",
+   "after": ".",
+   "options": [
+    "un edificio de apartamentos",
+    "una casa",
+    "un puente"
+   ],
+   "answer": 0,
+   "why": "A four-story apartment building."
+  },
+  {
+   "before": "Cada mañana Óscar explica el plan y ",
+   "after": ".",
+   "options": [
+    "las reglas de seguridad",
+    "los salarios",
+    "el menú del almuerzo"
+   ],
+   "answer": 0,
+   "why": "The day's plan and the safety rules."
+  },
+  {
+   "before": "Kevin sube a una escalera ",
+   "after": ".",
+   "options": [
+    "sin que nadie la sostenga",
+    "con arnés",
+    "con Óscar"
+   ],
+   "answer": 0,
+   "why": "Nobody was holding the ladder."
+  },
+  {
+   "before": "Después de que Kevin baja, ",
+   "after": ".",
+   "options": [
+    "el viento tira la escalera",
+    "Óscar lo despide",
+    "llueve"
+   ],
+   "answer": 0,
+   "why": "The wind knocks the ladder down."
+  },
+  {
+   "before": "La lista que Óscar pega en la pared es ",
+   "after": ".",
+   "options": [
+    "bilingüe",
+    "solo en inglés",
+    "de horarios"
+   ],
+   "answer": 0,
+   "why": "A bilingual tool list."
+  }
+ ],
+ "grammar": {
+  "title": "Commands for instructions",
+  "intro": "On a site you give instructions with commands: ponte el casco (tú), pónganse el casco (ustedes).",
+  "items": [
+   {
+    "before": "Kevin, ",
+    "after": " despacio.",
+    "options": [
+     "baja",
+     "bajas",
+     "bajar"
+    ],
+    "answer": 0,
+    "why": "Tú command of bajar: baja."
+   },
+   {
+    "before": "Muchachos, ",
+    "after": " las gafas de seguridad.",
+    "options": [
+     "usen",
+     "usan",
+     "usar"
+    ],
+    "answer": 0,
+    "why": "Ustedes command of usar: usen."
+   },
+   {
+    "before": "Por favor, ",
+    "after": " la escalera mientras subo.",
+    "options": [
+     "sostén",
+     "sostienes",
+     "sostener"
+    ],
+    "answer": 0,
+    "why": "Tú command of sostener: sostén."
+   }
+  ]
+ },
+ "speaking": [
+  "Explica cómo usar una herramienta que conoces, paso a paso.",
+  "Da tres instrucciones de seguridad para una obra.",
+  "¿Por qué es importante hablar dos idiomas en algunos trabajos?"
+ ],
+ "heritage": "Many heritage speakers learned job-site Spanish from parents or relatives in construction, often with words like «el rufo» (roof) or «la troca» (truck). They are understood across the US, but in school writing use «el techo» and «la camioneta». Watch accents in «capataz» (none) and «arnés».",
+ "teacher": "This page works for adult classes too. Have learners label real objects or photos of tools, then give each other safety instructions with commands.",
+ "vocabulary": [
+  {
+   "title": "Tools",
+   "words": [
+    [
+     "el martillo",
+     "hammer"
+    ],
+    [
+     "el taladro",
+     "drill"
+    ],
+    [
+     "el destornillador",
+     "screwdriver"
+    ],
+    [
+     "la sierra",
+     "saw"
+    ],
+    [
+     "la cinta métrica",
+     "tape measure"
+    ],
+    [
+     "el nivel",
+     "level"
+    ],
+    [
+     "la escalera",
+     "ladder"
+    ],
+    [
+     "la carretilla",
+     "wheelbarrow"
+    ]
+   ]
+  },
+  {
+   "title": "Materials",
+   "words": [
+    [
+     "el cemento",
+     "cement"
+    ],
+    [
+     "el concreto / el hormigón",
+     "concrete"
+    ],
+    [
+     "el ladrillo",
+     "brick"
+    ],
+    [
+     "la madera",
+     "wood, lumber"
+    ],
+    [
+     "los clavos",
+     "nails"
+    ],
+    [
+     "los tornillos",
+     "screws"
+    ],
+    [
+     "el yeso",
+     "drywall, plaster"
+    ],
+    [
+     "la varilla",
+     "rebar"
+    ]
+   ]
+  },
+  {
+   "title": "Safety and instructions",
+   "words": [
+    [
+     "el casco",
+     "hard hat"
+    ],
+    [
+     "los guantes",
+     "gloves"
+    ],
+    [
+     "las gafas de seguridad",
+     "safety glasses"
+    ],
+    [
+     "el arnés",
+     "harness"
+    ],
+    [
+     "¡Cuidado!",
+     "Watch out!"
+    ],
+    [
+     "medir",
+     "to measure"
+    ],
+    [
+     "cargar",
+     "to carry, load"
+    ],
+    [
+     "el capataz",
+     "foreman"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para clavar un clavo uso el ",
+   "after": ".",
+   "options": [
+    "martillo",
+    "nivel",
+    "taladro"
+   ],
+   "answer": 0,
+   "why": "Hammer and nails go together."
+  },
+  {
+   "before": "Antes de cortar la madera, hay que ",
+   "after": "la con la cinta métrica.",
+   "options": [
+    "medir",
+    "cargar",
+    "clavar"
+   ],
+   "answer": 0,
+   "why": "Measure first: medir."
+  },
+  {
+   "before": "Para subir al techo necesito una ",
+   "after": ".",
+   "options": [
+    "escalera",
+    "sierra",
+    "carretilla"
+   ],
+   "answer": 0,
+   "why": "A ladder gets you up."
+  },
+  {
+   "before": "En la obra, el ",
+   "after": " protege la cabeza.",
+   "options": [
+    "casco",
+    "arnés",
+    "yeso"
+   ],
+   "answer": 0,
+   "why": "The hard hat protects your head."
+  },
+  {
+   "before": "Si trabajas en altura, debes usar un ",
+   "after": ".",
+   "options": [
+    "arnés",
+    "ladrillo",
+    "destornillador"
+   ],
+   "answer": 0,
+   "why": "Working at height needs a harness."
+  },
+  {
+   "before": "Llevamos la arena en la ",
+   "after": ".",
+   "options": [
+    "carretilla",
+    "cinta métrica",
+    "varilla"
+   ],
+   "answer": 0,
+   "why": "Wheelbarrow: carretilla."
+  },
+  {
+   "before": "La pared está torcida: revisa con el ",
+   "after": ".",
+   "options": [
+    "nivel",
+    "martillo",
+    "casco"
+   ],
+   "answer": 0,
+   "why": "A level checks if something is straight."
+  },
+  {
+   "before": "El ",
+   "after": " organiza el trabajo del equipo cada mañana.",
+   "options": [
+    "capataz",
+    "tornillo",
+    "concreto"
+   ],
+   "answer": 0,
+   "why": "The foreman runs the crew."
+  }
+ ],
+ "demand": {
+  "query": "spanish construction vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish construction vocabulary». Several ask for a words list, a dictionary or terms, so the list is grouped the way a job site works: tools, materials, safety and instructions.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

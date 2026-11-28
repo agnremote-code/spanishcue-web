@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "hotel",
+ "themeLabel": "Hotel",
+ "title": "Spanish Hotel Vocabulary and Phrases: Check-in Practice",
+ "description": "Spanish hotel vocabulary and check-in phrases, with a practice quiz that corrects itself and an A2 reading about a hotel problem in Cartagena. Free, no login.",
+ "h1": "Spanish hotel vocabulary",
+ "titleEs": "Una noche sin aire en Cartagena",
+ "focus": "polite requests with ¿me puede…?, the preterite",
+ "intro": "Learn the Spanish words and phrases for booking a room, checking in and asking for help at a hotel, practice them with instant feedback, then read how a family solves a problem in Cartagena.",
+ "paragraphs": [
+  "La familia Morales viajó desde Houston a Cartagena, Colombia, para las vacaciones de verano. Llegaron al hotel a las diez de la noche, cansados y con mucho calor. En la recepción, el padre dijo: «Buenas noches, tenemos una reserva a nombre de Morales, una habitación doble con vista al mar».",
+  "El recepcionista revisó la computadora, les pidió los pasaportes y una tarjeta de crédito, y les dio dos tarjetas para la puerta. La habitación estaba en el octavo piso. Desde el balcón se veía la ciudad amurallada iluminada.",
+  "El problema empezó media hora después: el aire acondicionado no funcionaba. Hacía treinta grados y nadie podía dormir. La hija mayor, Andrea, que estudia español en la escuela, llamó a recepción: «Buenas noches. Disculpe, el aire acondicionado no funciona. ¿Me puede mandar a alguien, por favor?».",
+  "Un técnico subió en diez minutos, pero no pudo arreglarlo. Entonces el hotel les ofreció otra habitación en el mismo piso y, para disculparse, el desayuno gratis al día siguiente. Andrea estaba muy orgullosa de sí misma: fue la primera vez que resolvió un problema real en español. Esa noche, por fin, toda la familia durmió bien."
+ ],
+ "glossary": [
+  [
+   "cansados",
+   "tired"
+  ],
+  [
+   "revisar",
+   "to check"
+  ],
+  [
+   "la ciudad amurallada",
+   "the walled city"
+  ],
+  [
+   "iluminada",
+   "lit up"
+  ],
+  [
+   "disculpe",
+   "excuse me (formal)"
+  ],
+  [
+   "mandar",
+   "to send"
+  ],
+  [
+   "arreglar",
+   "to fix"
+  ],
+  [
+   "orgullosa",
+   "proud"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia Morales llegó al hotel ",
+   "after": ".",
+   "options": [
+    "a las diez de la noche",
+    "por la mañana",
+    "al mediodía"
+   ],
+   "answer": 0,
+   "why": "They arrived at ten at night."
+  },
+  {
+   "before": "Reservaron una habitación ",
+   "after": ".",
+   "options": [
+    "doble con vista al mar",
+    "sencilla",
+    "sin ventanas"
+   ],
+   "answer": 0,
+   "why": "Double room with an ocean view."
+  },
+  {
+   "before": "El recepcionista les pidió ",
+   "after": ".",
+   "options": [
+    "los pasaportes y una tarjeta de crédito",
+    "dinero en efectivo",
+    "una carta"
+   ],
+   "answer": 0,
+   "why": "He asked for passports and a credit card."
+  },
+  {
+   "before": "El problema de la habitación era ",
+   "after": ".",
+   "options": [
+    "el aire acondicionado",
+    "el wifi",
+    "la ducha"
+   ],
+   "answer": 0,
+   "why": "The air conditioning didn't work."
+  },
+  {
+   "before": "Andrea llamó a recepción porque ",
+   "after": ".",
+   "options": [
+    "estudia español",
+    "es la menor",
+    "trabaja en el hotel"
+   ],
+   "answer": 0,
+   "why": "She studies Spanish at school."
+  },
+  {
+   "before": "Para disculparse, el hotel les dio ",
+   "after": ".",
+   "options": [
+    "el desayuno gratis",
+    "una noche gratis",
+    "un taxi"
+   ],
+   "answer": 0,
+   "why": "Free breakfast the next day, plus a new room."
+  }
+ ],
+ "grammar": {
+  "title": "Polite requests: ¿Me puede + infinitive?",
+  "intro": "With hotel staff, use usted: ¿Me puede dar…?, ¿Nos puede traer…?",
+  "items": [
+   {
+    "before": "¿Me ",
+    "after": " dar otra almohada, por favor?",
+    "options": [
+     "puede",
+     "puedes",
+     "pueden"
+    ],
+    "answer": 0,
+    "why": "With staff, usted: ¿me puede…?"
+   },
+   {
+    "before": "¿Nos puede ",
+    "after": " un taxi para mañana?",
+    "options": [
+     "llamar",
+     "llama",
+     "llamamos"
+    ],
+    "answer": 0,
+    "why": "After puede comes the infinitive: llamar."
+   },
+   {
+    "before": "",
+    "after": ", ¿dónde está el ascensor?",
+    "options": [
+     "Disculpe",
+     "Disculpa",
+     "Disculpen tú"
+    ],
+    "answer": 0,
+    "why": "Formal excuse me to one person: disculpe."
+   }
+  ]
+ },
+ "speaking": [
+  "Haz el diálogo de llegada a un hotel: saluda, da tu nombre y pregunta por el desayuno.",
+  "Llama a recepción para quejarte de un problema en tu habitación.",
+  "¿Prefieres un hotel grande o una casa pequeña cuando viajas? ¿Por qué?"
+ ],
+ "heritage": "If you speak Spanish with family, you may use «tú» with everyone. In a hotel, switch to «usted»: «¿Me puede ayudar?», «Disculpe». Also note that «piso» means floor (level) in a building, and «la habitación» or «el cuarto» is the room.",
+ "teacher": "Run a role play: one student is the receptionist with a list of problems, the other is the guest. Swap after three minutes and repeat with a new problem.",
+ "vocabulary": [
+  {
+   "title": "Booking and check-in",
+   "words": [
+    [
+     "la reserva",
+     "reservation"
+    ],
+    [
+     "reservar",
+     "to book"
+    ],
+    [
+     "la recepción",
+     "front desk"
+    ],
+    [
+     "el recepcionista",
+     "receptionist"
+    ],
+    [
+     "registrarse",
+     "to check in"
+    ],
+    [
+     "la salida",
+     "check-out"
+    ],
+    [
+     "el pasaporte",
+     "passport"
+    ],
+    [
+     "la tarjeta de crédito",
+     "credit card"
+    ]
+   ]
+  },
+  {
+   "title": "The room",
+   "words": [
+    [
+     "la habitación sencilla",
+     "single room"
+    ],
+    [
+     "la habitación doble",
+     "double room"
+    ],
+    [
+     "la llave / la tarjeta",
+     "key / key card"
+    ],
+    [
+     "el aire acondicionado",
+     "air conditioning"
+    ],
+    [
+     "la toalla",
+     "towel"
+    ],
+    [
+     "la almohada",
+     "pillow"
+    ],
+    [
+     "la vista al mar",
+     "ocean view"
+    ],
+    [
+     "el piso",
+     "floor (level)"
+    ]
+   ]
+  },
+  {
+   "title": "Useful phrases",
+   "words": [
+    [
+     "Tengo una reserva a nombre de…",
+     "I have a reservation under…"
+    ],
+    [
+     "¿A qué hora es el desayuno?",
+     "What time is breakfast?"
+    ],
+    [
+     "¿Está incluido el desayuno?",
+     "Is breakfast included?"
+    ],
+    [
+     "¿Me puede dar otra toalla?",
+     "Can you give me another towel?"
+    ],
+    [
+     "No funciona…",
+     "… doesn't work"
+    ],
+    [
+     "¿Cuál es la contraseña del wifi?",
+     "What's the wifi password?"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para una persona, pido una habitación ",
+   "after": ".",
+   "options": [
+    "sencilla",
+    "doble",
+    "con vista"
+   ],
+   "answer": 0,
+   "why": "One person: habitación sencilla."
+  },
+  {
+   "before": "Al llegar al hotel, voy a la ",
+   "after": ".",
+   "options": [
+    "recepción",
+    "salida",
+    "almohada"
+   ],
+   "answer": 0,
+   "why": "You check in at the front desk."
+  },
+  {
+   "before": "«Tengo una ",
+   "after": " a nombre de Gómez».",
+   "options": [
+    "reserva",
+    "toalla",
+    "llave"
+   ],
+   "answer": 0,
+   "why": "Reserva: the booking."
+  },
+  {
+   "before": "Hace mucho calor y no funciona el ",
+   "after": ".",
+   "options": [
+    "aire acondicionado",
+    "pasaporte",
+    "piso"
+   ],
+   "answer": 0,
+   "why": "Heat: you need the air conditioning."
+  },
+  {
+   "before": "Nuestra habitación está en el quinto ",
+   "after": ".",
+   "options": [
+    "piso",
+    "plato",
+    "salón"
+   ],
+   "answer": 0,
+   "why": "Piso here means floor, level."
+  },
+  {
+   "before": "Para abrir la puerta uso la ",
+   "after": ".",
+   "options": [
+    "tarjeta",
+    "almohada",
+    "salida"
+   ],
+   "answer": 0,
+   "why": "Key card: tarjeta."
+  },
+  {
+   "before": "La ",
+   "after": " es a las once: hay que dejar la habitación antes.",
+   "options": [
+    "salida",
+    "reserva",
+    "recepción"
+   ],
+   "answer": 0,
+   "why": "Salida is check-out time."
+  },
+  {
+   "before": "¿Cuál es la ",
+   "after": " del wifi?",
+   "options": [
+    "contraseña",
+    "llave",
+    "habitación"
+   ],
+   "answer": 0,
+   "why": "Contraseña: password."
+  }
+ ],
+ "demand": {
+  "query": "spanish hotel vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish hotel vocabulary». 1 of them asks for something to do with the words (vocabulary quizlet). Two ask for hotel phrases and check-in, so the page includes full sentences you can say at the front desk.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "verb": "hablar",
+ "meaning": "to speak, to talk",
+ "level": "A1",
+ "title": "Spanish Verb Hablar Practice: Conjugation, Uses and Quiz",
+ "description": "Practice the Spanish verb hablar: present and preterite conjugation, hablar con vs hablar de, ten questions that correct themselves and a reading. Free.",
+ "h1": "Spanish verb hablar: practice",
+ "intro": "Hablar is the model regular -ar verb: learn it well and you can conjugate hundreds of others. Here are its uses, the present and the preterite, the prepositions that go with it and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb hablar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To speak a language",
+   "example": "Hablo inglés y un poco de español.",
+   "meaning": "I speak English and a little Spanish."
+  },
+  {
+   "use": "To talk with someone: hablar con",
+   "example": "Hablamos con la profesora después de clase.",
+   "meaning": "We talked with the teacher after class."
+  },
+  {
+   "use": "To talk about something: hablar de",
+   "example": "Siempre hablan de fútbol.",
+   "meaning": "They always talk about soccer."
+  },
+  {
+   "use": "On the phone",
+   "example": "¿Quién habla?",
+   "meaning": "Who's speaking?"
+  },
+  {
+   "use": "Hablar en serio / en broma",
+   "example": "¿Hablas en serio?",
+   "meaning": "Are you serious?"
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "hablo"
+  ],
+  [
+   "tú",
+   "hablas"
+  ],
+  [
+   "él / ella / usted",
+   "habla"
+  ],
+  [
+   "nosotros / nosotras",
+   "hablamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "hablan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "hablé"
+  ],
+  [
+   "tú",
+   "hablaste"
+  ],
+  [
+   "él / ella / usted",
+   "habló"
+  ],
+  [
+   "nosotros / nosotras",
+   "hablamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "hablaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " español con mis abuelos.",
+   "options": [
+    "hablo",
+    "habla",
+    "hablé ayer"
+   ],
+   "answer": 0,
+   "why": "Present yo: hablo."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " francés?",
+   "options": [
+    "hablas",
+    "hablan",
+    "habla"
+   ],
+   "answer": 0,
+   "why": "Present tú: hablas."
+  },
+  {
+   "before": "Mi profesor ",
+   "after": " muy rápido.",
+   "options": [
+    "habla",
+    "hablo",
+    "hablan"
+   ],
+   "answer": 0,
+   "why": "Present él: habla."
+  },
+  {
+   "before": "Mis padres ",
+   "after": " tres idiomas.",
+   "options": [
+    "hablan",
+    "habla",
+    "hablamos"
+   ],
+   "answer": 0,
+   "why": "Present ellos: hablan."
+  },
+  {
+   "before": "Necesito hablar ",
+   "after": " el director.",
+   "options": [
+    "con",
+    "a",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Talking with someone: hablar con."
+  },
+  {
+   "before": "Anoche hablamos ",
+   "after": " la película.",
+   "options": [
+    "de",
+    "con",
+    "en"
+   ],
+   "answer": 0,
+   "why": "Talking about something: hablar de."
+  },
+  {
+   "before": "Ayer ",
+   "after": " con mi mejor amiga por teléfono.",
+   "options": [
+    "hablé",
+    "hable",
+    "hablo ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: hablé, with an accent."
+  },
+  {
+   "before": "¿",
+   "after": " con tu mamá anoche?",
+   "options": [
+    "Hablaste",
+    "Hablastes",
+    "Hablaba tú"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: hablaste, never hablastes."
+  },
+  {
+   "before": "El presidente ",
+   "after": " en la televisión el lunes.",
+   "options": [
+    "habló",
+    "hablo",
+    "hablaba ayer a las ocho"
+   ],
+   "answer": 0,
+   "why": "Preterite él: habló, accent on the o."
+  },
+  {
+   "before": "Los estudiantes ",
+   "after": " con el autor después de la charla.",
+   "options": [
+    "hablaron",
+    "hablamos",
+    "hablaran"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: hablaron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La chica que hablaba con todos",
+  "paragraphs": [
+   "Valeria trabaja en la recepción de un hospital en Miami. Habla español, inglés y un poco de portugués, así que habla con pacientes de todo el mundo. Por la mañana habla con familias de Cuba y Venezuela; por la tarde, con turistas de Brasil.",
+   "El lunes pasado, un señor mayor llegó muy nervioso y solo hablaba criollo haitiano. Valeria no entendía nada. Entonces habló con una enfermera de Haití, que tradujo todo. Después, el señor le dio las gracias a Valeria con un gesto y una sonrisa. Ese día, ella decidió aprender criollo."
+  ],
+  "comprehension": [
+   {
+    "before": "Valeria trabaja en ",
+    "after": ".",
+    "options": [
+     "un hospital",
+     "una escuela",
+     "un hotel"
+    ],
+    "answer": 0,
+    "why": "She works at a hospital reception."
+   },
+   {
+    "before": "Por la tarde habla con ",
+    "after": ".",
+    "options": [
+     "turistas de Brasil",
+     "familias de Cuba",
+     "médicos"
+    ],
+    "answer": 0,
+    "why": "Afternoons: tourists from Brazil."
+   },
+   {
+    "before": "El señor mayor solo hablaba ",
+    "after": ".",
+    "options": [
+     "criollo haitiano",
+     "portugués",
+     "inglés"
+    ],
+    "answer": 0,
+    "why": "He only spoke Haitian Creole."
+   },
+   {
+    "before": "Al final, Valeria decidió ",
+    "after": ".",
+    "options": [
+     "aprender criollo",
+     "cambiar de trabajo",
+     "hablar menos"
+    ],
+    "answer": 0,
+    "why": "She decided to learn Creole."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Hablo a mi madre.",
+   "right": "Hablo con mi madre.",
+   "why": "With a person, Spanish uses hablar con."
+  },
+  {
+   "wrong": "Hablamos acerca la clase.",
+   "right": "Hablamos de la clase.",
+   "why": "About something: hablar de (or acerca de)."
+  },
+  {
+   "wrong": "Ayer hable con él.",
+   "right": "Ayer hablé con él.",
+   "why": "Without the accent, hable is the subjunctive; the preterite needs hablé."
+  },
+  {
+   "wrong": "Hablo español muy bueno.",
+   "right": "Hablo español muy bien.",
+   "why": "After hablar, use the adverb bien, not the adjective bueno."
+  }
+ ],
+ "heritage": "Heritage speakers often say «hablastes» in the preterite; in writing it is «hablaste». Also watch the accents that change meaning: «hablo» (I speak), «habló» (he spoke), «hable» (subjunctive), «hablé» (I spoke).",
+ "teacher": "Have students interview each other with ¿Qué idiomas hablas? ¿Con quién hablas español? and report back in the third person.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb hablar». 2 of them ask for conjugation, charts or tenses (conjugation, present tense). Since hablar is the model for regular -ar verbs, the forms on this page work for hundreds of other verbs too.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,278 @@
+{
+ "verb": "cerrar",
+ "meaning": "to close, to shut",
+ "level": "A2",
+ "title": "Spanish Verb Cerrar Practice: E to IE Stem Change and Quiz",
+ "description": "Practice the Spanish verb cerrar: the e to ie stem change in the present, a regular preterite, cerrar con llave, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb cerrar: practice",
+ "intro": "Cerrar is a stem-changing verb (cierro, cierras) with a regular preterite (cerré). It is a classic model for the e to ie group. Learn the forms and uses, then practice with feedback on every answer.",
+ "demand": {
+  "query": "spanish verb cerrar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To close",
+   "example": "Cierra la puerta, por favor.",
+   "meaning": "Close the door, please."
+  },
+  {
+   "use": "Businesses closing",
+   "example": "El banco cierra a las cinco.",
+   "meaning": "The bank closes at five."
+  },
+  {
+   "use": "To lock: cerrar con llave",
+   "example": "Siempre cierro con llave.",
+   "meaning": "I always lock the door."
+  },
+  {
+   "use": "Eyes and mouth",
+   "example": "Cierra los ojos y escucha.",
+   "meaning": "Close your eyes and listen."
+  },
+  {
+   "use": "To close down for good",
+   "example": "La fábrica cerró en 2010.",
+   "meaning": "The factory closed in 2010."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "cierro"
+  ],
+  [
+   "tú",
+   "cierras"
+  ],
+  [
+   "él / ella / usted",
+   "cierra"
+  ],
+  [
+   "nosotros / nosotras",
+   "cerramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "cierran"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "cerré"
+  ],
+  [
+   "tú",
+   "cerraste"
+  ],
+  [
+   "él / ella / usted",
+   "cerró"
+  ],
+  [
+   "nosotros / nosotras",
+   "cerramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "cerraron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo siempre ",
+   "after": " las ventanas cuando llueve.",
+   "options": [
+    "cierro",
+    "cerro",
+    "cierra"
+   ],
+   "answer": 0,
+   "why": "Stem change e to ie: cierro."
+  },
+  {
+   "before": "¿A qué hora ",
+   "after": " la farmacia los domingos?",
+   "options": [
+    "cierra",
+    "cera",
+    "cierran"
+   ],
+   "answer": 0,
+   "why": "La farmacia: cierra."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " la tienda a las nueve.",
+   "options": [
+    "cerramos",
+    "cierramos",
+    "cierran"
+   ],
+   "answer": 0,
+   "why": "No stem change in nosotros: cerramos."
+  },
+  {
+   "before": "Los niños ",
+   "after": " los ojos para dormir.",
+   "options": [
+    "cierran",
+    "cerran",
+    "cierra"
+   ],
+   "answer": 0,
+   "why": "Ellos: cierran."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " la puerta con llave por la noche?",
+   "options": [
+    "cierras",
+    "cerras",
+    "cierra"
+   ],
+   "answer": 0,
+   "why": "Tú: cierras."
+  },
+  {
+   "before": "Anoche no ",
+   "after": " la ventana y entró un mosquito.",
+   "options": [
+    "cerré",
+    "cierré",
+    "cerre"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: cerré, no stem change."
+  },
+  {
+   "before": "¿Quién ",
+   "after": " la puerta del carro?",
+   "options": [
+    "cerró",
+    "cierró",
+    "cerro"
+   ],
+   "answer": 0,
+   "why": "Preterite: cerró, with accent."
+  },
+  {
+   "before": "¿Por qué ",
+   "after": " la computadora sin guardar?",
+   "options": [
+    "cerraste",
+    "cierraste",
+    "cerrastes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: cerraste."
+  },
+  {
+   "before": "Muchas tiendas ",
+   "after": " durante la pandemia.",
+   "options": [
+    "cerraron",
+    "cierraron",
+    "cerró"
+   ],
+   "answer": 0,
+   "why": "Preterite ellas: cerraron."
+  },
+  {
+   "before": "Cuando salgo, cierro la casa ",
+   "after": " llave.",
+   "options": [
+    "con",
+    "de",
+    "a"
+   ],
+   "answer": 0,
+   "why": "To lock: cerrar con llave."
+  }
+ ],
+ "reading": {
+  "titleEs": "La tienda que no cerró",
+  "paragraphs": [
+   "Durante cuarenta años, la familia Morales tuvo una pequeña tienda de discos en Albuquerque. Cuando llegó la música por internet, muchas tiendas como la suya cerraron. Don Ernesto pensó en cerrar también: casi nadie compraba discos.",
+   "Pero su nieta Paola tuvo una idea: abrir los viernes por la noche con música en vivo. Los jóvenes empezaron a venir a escuchar bandas locales y a comprar vinilos. Hoy la tienda cierra más tarde que nunca, y don Ernesto dice que cerrar habría sido el error de su vida."
+  ],
+  "comprehension": [
+   {
+    "before": "La tienda de la familia Morales vende ",
+    "after": ".",
+    "options": [
+     "discos",
+     "libros",
+     "ropa"
+    ],
+    "answer": 0,
+    "why": "It is a record store."
+   },
+   {
+    "before": "Muchas tiendas como la suya cerraron por ",
+    "after": ".",
+    "options": [
+     "la música por internet",
+     "un incendio",
+     "el clima"
+    ],
+    "answer": 0,
+    "why": "Because of music on the internet."
+   },
+   {
+    "before": "La idea de Paola fue ",
+    "after": ".",
+    "options": [
+     "música en vivo los viernes",
+     "vender por internet",
+     "cerrar los lunes"
+    ],
+    "answer": 0,
+    "why": "Live music on Friday nights."
+   },
+   {
+    "before": "Ahora la tienda cierra ",
+    "after": ".",
+    "options": [
+     "más tarde que nunca",
+     "a las cinco",
+     "los viernes"
+    ],
+    "answer": 0,
+    "why": "It closes later than ever."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo cerro la puerta.",
+   "right": "Yo cierro la puerta.",
+   "why": "Stem change e to ie in yo: cierro."
+  },
+  {
+   "wrong": "Nosotros cierramos a las seis.",
+   "right": "Nosotros cerramos a las seis.",
+   "why": "No stem change in nosotros."
+  },
+  {
+   "wrong": "Ayer cierré la ventana.",
+   "right": "Ayer cerré la ventana.",
+   "why": "The preterite has no stem change."
+  },
+  {
+   "wrong": "Cierra la luz.",
+   "right": "Apaga la luz.",
+   "why": "Lights are turned off with apagar."
+  }
+ ],
+ "heritage": "Heritage speakers in some US communities say «cerrar la luz» or «cerrar la tele», a usage heard in parts of Latin America. In standard writing, use «apagar» for lights and devices, and keep «cerrar» for doors, windows and businesses.",
+ "teacher": "Play a quick command game: one student gives orders (Cierra el libro, Cierra los ojos) and the class acts them out, then everyone says what they closed with cerré.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb cerrar». Suggestions list other stem-changers (jugar, almorzar, preferir), so cerrar is shown as the e to ie model.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

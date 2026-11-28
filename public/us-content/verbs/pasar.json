@@ -1,0 +1,278 @@
+{
+ "verb": "pasar",
+ "meaning": "to pass, to happen, to spend time",
+ "level": "A2",
+ "title": "Spanish Verb Pasar Practice: Happen, Spend Time, Pass and Quiz",
+ "description": "Practice the Spanish verb pasar: to happen, to spend time, to pass and to come in, with ¿qué pasó?, present and preterite forms, ten questions and a reading.",
+ "h1": "Spanish verb pasar: practice",
+ "intro": "Pasar is a regular -ar verb with many meanings: something happens (¿qué pasa?), you spend time (paso el verano allí), you pass by or pass something, or you come in (pasa, pasa). Learn them and practice with feedback.",
+ "demand": {
+  "query": "spanish verb pasar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To happen: ¿qué pasa?",
+   "example": "¿Qué pasó en la fiesta?",
+   "meaning": "What happened at the party?"
+  },
+  {
+   "use": "To spend time",
+   "example": "Pasamos el verano en la playa.",
+   "meaning": "We spent the summer at the beach."
+  },
+  {
+   "use": "To pass by: pasar por",
+   "example": "Paso por tu casa a las cinco.",
+   "meaning": "I'll stop by your house at five."
+  },
+  {
+   "use": "To hand over",
+   "example": "¿Me pasas la sal?",
+   "meaning": "Can you pass me the salt?"
+  },
+  {
+   "use": "Come in: pasa / pase",
+   "example": "¡Pase, por favor!",
+   "meaning": "Come in, please!"
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "paso"
+  ],
+  [
+   "tú",
+   "pasas"
+  ],
+  [
+   "él / ella / usted",
+   "pasa"
+  ],
+  [
+   "nosotros / nosotras",
+   "pasamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "pasan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "pasé"
+  ],
+  [
+   "tú",
+   "pasaste"
+  ],
+  [
+   "él / ella / usted",
+   "pasó"
+  ],
+  [
+   "nosotros / nosotras",
+   "pasamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "pasaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "¿Qué ",
+   "after": "? Te veo triste.",
+   "options": [
+    "pasa",
+    "pasas",
+    "paso"
+   ],
+   "answer": 0,
+   "why": "Something happening: ¿qué pasa?"
+  },
+  {
+   "before": "Yo ",
+   "after": " por la panadería cada mañana.",
+   "options": [
+    "paso",
+    "pasa",
+    "pasé mañana"
+   ],
+   "answer": 0,
+   "why": "Present yo: paso por, to pass by."
+  },
+  {
+   "before": "¿Me ",
+   "after": " el control remoto?",
+   "options": [
+    "pasas",
+    "pasa tú",
+    "pasan"
+   ],
+   "answer": 0,
+   "why": "Handing over: ¿me pasas…?"
+  },
+  {
+   "before": "Los días ",
+   "after": " muy rápido en vacaciones.",
+   "options": [
+    "pasan",
+    "pasa",
+    "pasamos"
+   ],
+   "answer": 0,
+   "why": "Los días: pasan."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " los domingos con los abuelos.",
+   "options": [
+    "pasamos",
+    "pasan",
+    "pasa"
+   ],
+   "answer": 0,
+   "why": "Spending time: pasamos."
+  },
+  {
+   "before": "¿Qué te ",
+   "after": " en la pierna?",
+   "options": [
+    "pasó",
+    "paso",
+    "pasé"
+   ],
+   "answer": 0,
+   "why": "Preterite: ¿qué te pasó?, with accent."
+  },
+  {
+   "before": "Ayer ",
+   "after": " la tarde en el museo.",
+   "options": [
+    "pasé",
+    "pase",
+    "pasó"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: pasé la tarde."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " la Navidad el año pasado?",
+   "options": [
+    "pasaste",
+    "pasastes",
+    "pasas"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: pasaste."
+  },
+  {
+   "before": "Mis tíos ",
+   "after": " tres semanas en Guatemala.",
+   "options": [
+    "pasaron",
+    "pasó",
+    "pasamos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: pasaron."
+  },
+  {
+   "before": "—Toc, toc. —¡",
+   "after": ", la puerta está abierta!",
+   "options": [
+    "Pasa",
+    "Paso",
+    "Pasas"
+   ],
+   "answer": 0,
+   "why": "Inviting someone in: pasa."
+  }
+ ],
+ "reading": {
+  "titleEs": "¿Qué pasó con el pastel?",
+  "paragraphs": [
+   "Era el cumpleaños de la abuela y la familia pasó toda la mañana preparando la fiesta. La tía Marisol hizo un pastel de tres leches y lo dejó en la mesa del patio. Cuando llegó la hora del pastel, la mesa estaba vacía. «¿Qué pasó?», preguntó todo el mundo.",
+   "Nadie sabía qué había pasado. Entonces el primo Leo pasó junto al garaje y oyó ruidos: el perro, Canelo, tenía la cara blanca de crema. Todos se rieron, compraron otro pastel y la abuela dijo que fue el cumpleaños más divertido que pasó en años."
+  ],
+  "comprehension": [
+   {
+    "before": "La tía Marisol hizo un pastel de ",
+    "after": ".",
+    "options": [
+     "tres leches",
+     "chocolate",
+     "fresa"
+    ],
+    "answer": 0,
+    "why": "A tres leches cake."
+   },
+   {
+    "before": "La tía dejó el pastel ",
+    "after": ".",
+    "options": [
+     "en la mesa del patio",
+     "en la cocina",
+     "en el garaje"
+    ],
+    "answer": 0,
+    "why": "On the patio table."
+   },
+   {
+    "before": "El que se comió el pastel fue ",
+    "after": ".",
+    "options": [
+     "el perro",
+     "el primo Leo",
+     "la abuela"
+    ],
+    "answer": 0,
+    "why": "Canelo, the dog."
+   },
+   {
+    "before": "Al final, la familia ",
+    "after": ".",
+    "options": [
+     "compró otro pastel",
+     "canceló la fiesta",
+     "se enojó con Leo"
+    ],
+    "answer": 0,
+    "why": "They bought another cake."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "¿Qué pasó a ti?",
+   "right": "¿Qué te pasó?",
+   "why": "Use the pronoun te with pasar for things that happen to you."
+  },
+  {
+   "wrong": "Pasé un buen tiempo.",
+   "right": "Lo pasé bien.",
+   "why": "«Have a good time» is pasarlo bien, not pasar un buen tiempo."
+  },
+  {
+   "wrong": "Ayer pase por tu casa.",
+   "right": "Ayer pasé por tu casa.",
+   "why": "Preterite yo needs the accent: pasé."
+  },
+  {
+   "wrong": "Pasé el examen de manejo.",
+   "right": "Aprobé el examen de manejo.",
+   "why": "In standard Spanish, you aprobar a test."
+  }
+ ],
+ "heritage": "Heritage speakers in the US often say «pasar el examen», influenced by English «pass the test». It is widely understood, but formal Spanish prefers «aprobar el examen». Another common calque is «pasar un buen tiempo»; say «pasarlo bien».",
+ "teacher": "Show photos of odd situations and ask ¿Qué pasó aquí? Students invent the story in the preterite and then vote for the funniest one.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb pasar». Suggestions pair pasar with ir, so movement uses like pasar por are included here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

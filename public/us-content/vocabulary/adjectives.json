@@ -1,0 +1,360 @@
+{
+ "level": "A1",
+ "theme": "adjectives",
+ "themeLabel": "Adjectives",
+ "title": "Spanish Adjectives Vocabulary: Common Adjectives List",
+ "description": "A list of common Spanish adjectives for things and places: grande, nuevo, caro, cómodo, ruidoso and their opposites, with a self-correcting quiz and an A1 reading.",
+ "h1": "Spanish adjectives vocabulary",
+ "titleEs": "Dos apartamentos",
+ "focus": "adjective agreement and comparisons",
+ "intro": "Learn common Spanish adjectives to describe things, places and situations, in pairs of opposites, and remember that they agree with the noun. Practice with instant feedback, then read about two apartments and the choice between them.",
+ "paragraphs": [
+  "Diana y su hermano Pablo buscan un apartamento en Austin. Hoy visitan dos. El primero está en el centro. Es moderno, claro y muy bonito, pero es pequeño y caro. Además, la calle es ruidosa porque hay muchos bares.",
+  "El segundo apartamento está lejos del centro, en un barrio tranquilo. Es viejo, pero es grande y barato. La cocina es antigua y un poco oscura, pero las habitaciones son anchas y cómodas. Hay un parque cerca y el autobús para en la esquina.",
+  "Diana prefiere el primero porque trabaja en el centro. Pablo prefiere el segundo porque quiere un cuarto grande para su guitarra. Al final, deciden el segundo: es más barato y con el dinero que ahorran pueden comprar una bicicleta para Diana. «El viaje es más largo», dice ella, «pero también es más divertido». Pablo está de acuerdo y ya piensa en el color de las paredes."
+ ],
+ "glossary": [
+  [
+   "buscar",
+   "to look for"
+  ],
+  [
+   "el centro",
+   "downtown"
+  ],
+  [
+   "además",
+   "besides"
+  ],
+  [
+   "el barrio",
+   "neighborhood"
+  ],
+  [
+   "las habitaciones",
+   "rooms, bedrooms"
+  ],
+  [
+   "la esquina",
+   "corner"
+  ],
+  [
+   "ahorrar",
+   "to save (money)"
+  ],
+  [
+   "el viaje",
+   "trip, commute"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Diana y Pablo buscan un apartamento en ",
+   "after": ".",
+   "options": [
+    "Austin",
+    "Dallas",
+    "El Paso"
+   ],
+   "answer": 0,
+   "why": "In Austin."
+  },
+  {
+   "before": "El primer apartamento es ",
+   "after": ".",
+   "options": [
+    "pequeño y caro",
+    "grande y barato",
+    "viejo y oscuro"
+   ],
+   "answer": 0,
+   "why": "Small and expensive."
+  },
+  {
+   "before": "La calle del primero es ruidosa porque ",
+   "after": ".",
+   "options": [
+    "hay muchos bares",
+    "hay una escuela",
+    "hay obras"
+   ],
+   "answer": 0,
+   "why": "There are lots of bars."
+  },
+  {
+   "before": "El segundo apartamento está en un barrio ",
+   "after": ".",
+   "options": [
+    "tranquilo",
+    "ruidoso",
+    "caro"
+   ],
+   "answer": 0,
+   "why": "A quiet neighborhood."
+  },
+  {
+   "before": "Pablo quiere un cuarto grande para ",
+   "after": ".",
+   "options": [
+    "su guitarra",
+    "sus libros",
+    "su perro"
+   ],
+   "answer": 0,
+   "why": "For his guitar."
+  },
+  {
+   "before": "Con el dinero que ahorran, compran ",
+   "after": ".",
+   "options": [
+    "una bicicleta",
+    "un sofá",
+    "una guitarra"
+   ],
+   "answer": 0,
+   "why": "A bicycle for Diana."
+  }
+ ],
+ "grammar": {
+  "title": "Adjectives agree with the noun",
+  "intro": "Adjectives in -o change for gender and number (nuevo, nueva, nuevos, nuevas). Adjectives in -e or a consonant only change for number (grande, grandes; fácil, fáciles).",
+  "items": [
+   {
+    "before": "Las habitaciones son ",
+    "after": ".",
+    "options": [
+     "cómodas",
+     "cómodos",
+     "cómoda"
+    ],
+    "answer": 0,
+    "why": "Feminine plural: cómodas."
+   },
+   {
+    "before": "Es un barrio muy ",
+    "after": ".",
+    "options": [
+     "tranquilo",
+     "tranquila",
+     "tranquilos"
+    ],
+    "answer": 0,
+    "why": "Masculine singular: tranquilo."
+   },
+   {
+    "before": "Los exámenes fueron ",
+    "after": ".",
+    "options": [
+     "difíciles",
+     "difícil",
+     "difíciles son"
+    ],
+    "answer": 0,
+    "why": "Plural of difícil: difíciles."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe tu casa o tu apartamento con cinco adjetivos.",
+  "¿Prefieres vivir en un lugar ruidoso y cerca, o tranquilo y lejos?",
+  "Describe un objeto de tu mochila; tu compañero adivina qué es."
+ ],
+ "heritage": "Heritage speakers usually use adjectives naturally; the points to check in writing are agreement with tricky nouns (el agua fría, el problema difícil, la mano sucia) and accents on fácil, difícil, cómodo and rápido. Some adjectives change meaning by position: un viejo amigo (an old friend) and un amigo viejo (an elderly friend).",
+ "teacher": "Give pairs two photos of houses or cities and ask them to write five sentences comparing them with opposite adjectives. Then each pair reads one sentence and the class guesses which photo it describes.",
+ "vocabulary": [
+  {
+   "title": "Size and age",
+   "words": [
+    [
+     "grande / pequeño",
+     "big / small"
+    ],
+    [
+     "largo / corto",
+     "long / short"
+    ],
+    [
+     "alto / bajo",
+     "tall, high / short, low"
+    ],
+    [
+     "nuevo / viejo",
+     "new / old"
+    ],
+    [
+     "moderno / antiguo",
+     "modern / old-fashioned, ancient"
+    ],
+    [
+     "ancho / estrecho",
+     "wide / narrow"
+    ]
+   ]
+  },
+  {
+   "title": "Quality",
+   "words": [
+    [
+     "bueno / malo",
+     "good / bad"
+    ],
+    [
+     "bonito / feo",
+     "pretty / ugly"
+    ],
+    [
+     "caro / barato",
+     "expensive / cheap"
+    ],
+    [
+     "fácil / difícil",
+     "easy / difficult"
+    ],
+    [
+     "cómodo / incómodo",
+     "comfortable / uncomfortable"
+    ],
+    [
+     "limpio / sucio",
+     "clean / dirty"
+    ]
+   ]
+  },
+  {
+   "title": "Places and situations",
+   "words": [
+    [
+     "ruidoso / tranquilo",
+     "noisy / quiet"
+    ],
+    [
+     "lleno / vacío",
+     "full / empty"
+    ],
+    [
+     "cerca / lejos",
+     "near / far"
+    ],
+    [
+     "claro / oscuro",
+     "bright / dark"
+    ],
+    [
+     "caliente / frío",
+     "hot / cold"
+    ],
+    [
+     "rápido / lento",
+     "fast / slow"
+    ],
+    [
+     "seguro / peligroso",
+     "safe / dangerous"
+    ],
+    [
+     "abierto / cerrado",
+     "open / closed"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi computadora tiene diez años; es muy ",
+   "after": ".",
+   "options": [
+    "vieja",
+    "nueva",
+    "moderna"
+   ],
+   "answer": 0,
+   "why": "Ten years old: vieja."
+  },
+  {
+   "before": "Este sofá es muy ",
+   "after": "; me quedo dormido en él.",
+   "options": [
+    "cómodo",
+    "incómodo",
+    "estrecho"
+   ],
+   "answer": 0,
+   "why": "You fall asleep on it: cómodo."
+  },
+  {
+   "before": "La calle tiene muchos carros y bocinas; es muy ",
+   "after": ".",
+   "options": [
+    "ruidosa",
+    "tranquila",
+    "vacía"
+   ],
+   "answer": 0,
+   "why": "Lots of traffic and horns: ruidosa."
+  },
+  {
+   "before": "No compro esos zapatos; son demasiado ",
+   "after": ".",
+   "options": [
+    "caros",
+    "baratos",
+    "bonitos"
+   ],
+   "answer": 0,
+   "why": "Too expensive: caros."
+  },
+  {
+   "before": "El cine no tiene gente; está ",
+   "after": ".",
+   "options": [
+    "vacío",
+    "lleno",
+    "sucio"
+   ],
+   "answer": 0,
+   "why": "No people: vacío."
+  },
+  {
+   "before": "El tren bala es muy ",
+   "after": ".",
+   "options": [
+    "rápido",
+    "lento",
+    "corto"
+   ],
+   "answer": 0,
+   "why": "A bullet train is fast."
+  },
+  {
+   "before": "La cocina está ",
+   "after": "; hay platos en todas partes.",
+   "options": [
+    "sucia",
+    "limpia",
+    "clara"
+   ],
+   "answer": 0,
+   "why": "Dishes everywhere: sucia."
+  },
+  {
+   "before": "El problema de matemáticas fue ",
+   "after": "; lo terminé en un minuto.",
+   "options": [
+    "fácil",
+    "difícil",
+    "largo"
+   ],
+   "answer": 0,
+   "why": "Solved in a minute: fácil."
+  }
+ ],
+ "demand": {
+  "query": "spanish adjectives vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish adjectives vocabulary». Several ask for a list of adjectives, so the words come in pairs of opposites, which is the easiest way to remember them; adjectives for people are on the personality page.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

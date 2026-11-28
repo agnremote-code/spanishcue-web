@@ -76,6 +76,16 @@ export default function ApHubPage() {
             </div>
           </Section>
 
+          <Section title="The six units of the course">
+            <div className={styles.prose}>
+              <p>
+                For vocabulary, readings and essay prompts on each unit (Families and Communities, Language and Culture, Art and
+                Creativity, Science and Technology, Contemporary Life and Global Contexts), see{" "}
+                <Link className={styles.textLink} href={`${AP_PATH}/themes`}>AP Spanish themes: the six units</Link>.
+              </p>
+            </div>
+          </Section>
+
           <Section title="What SpanishCue data shows">
             <div className={styles.panel}>
               <p>

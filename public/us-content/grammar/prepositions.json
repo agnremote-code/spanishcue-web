@@ -1,0 +1,181 @@
+{
+ "theme": "forms",
+ "level": "A1–B1",
+ "name": "prepositions",
+ "title": "Spanish Prepositions Practice: A, En, De, Con, Por, Para Quiz",
+ "description": "Practice Spanish prepositions: a, en, de, con, sin, desde, hasta and prepositions of place, with a rule table, 10 checked sentences and the mistakes learners make.",
+ "h1": "Spanish prepositions practice",
+ "answer": "Spanish uses a for movement toward a place and for people as direct objects, en for being inside or on a place, de for origin, possession and material, and con and sin for with and without. Prepositions of place combine a word with de: encima de, debajo de, al lado de, cerca de. Por and para have their own page.",
+ "demand": {
+  "query": "spanish prepositions practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "The most common Spanish prepositions",
+ "rules": [
+  {
+   "use": "Movement toward a place",
+   "example": "Voy a la escuela.",
+   "meaning": "a"
+  },
+  {
+   "use": "A person as direct object (personal a)",
+   "example": "Veo a mi abuela.",
+   "meaning": "a"
+  },
+  {
+   "use": "Being in or on a place",
+   "example": "Estoy en casa. El libro está en la mesa.",
+   "meaning": "en"
+  },
+  {
+   "use": "Origin, possession, material",
+   "example": "Soy de Ohio. Es el carro de Ana. Una mesa de madera.",
+   "meaning": "de"
+  },
+  {
+   "use": "Company or absence",
+   "example": "Café con leche, té sin azúcar.",
+   "meaning": "con / sin"
+  },
+  {
+   "use": "Place with de",
+   "example": "El gato está debajo de la cama.",
+   "meaning": "encima de, debajo de, al lado de, cerca de, lejos de"
+  },
+  {
+   "use": "From… to…",
+   "example": "Trabajo desde las nueve hasta las cinco.",
+   "meaning": "desde… hasta / de… a"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Mañana voy ",
+   "after": " Chicago en avión.",
+   "options": [
+    "a",
+    "en"
+   ],
+   "answer": 0,
+   "why": "Movement toward a place: a."
+  },
+  {
+   "before": "Mis padres están ",
+   "after": " casa ahora.",
+   "options": [
+    "en",
+    "a"
+   ],
+   "answer": 0,
+   "why": "Being in a place: en."
+  },
+  {
+   "before": "Esta camisa es ",
+   "after": " algodón.",
+   "options": [
+    "de",
+    "con"
+   ],
+   "answer": 0,
+   "why": "Material: de."
+  },
+  {
+   "before": "Visito ",
+   "after": " mis abuelos cada domingo.",
+   "options": [
+    "a",
+    "Ø (nothing)"
+   ],
+   "answer": 0,
+   "why": "People as direct objects take the personal a."
+  },
+  {
+   "before": "Las llaves están ",
+   "after": " la mesa, abajo, en el piso.",
+   "options": [
+    "debajo de",
+    "encima de"
+   ],
+   "answer": 0,
+   "why": "Under: debajo de."
+  },
+  {
+   "before": "Quiero un sándwich ",
+   "after": " cebolla, por favor; no me gusta.",
+   "options": [
+    "sin",
+    "con"
+   ],
+   "answer": 0,
+   "why": "Without: sin."
+  },
+  {
+   "before": "La farmacia está al lado ",
+   "after": " banco.",
+   "options": [
+    "del",
+    "de el"
+   ],
+   "answer": 0,
+   "why": "Al lado de + el contracts: al lado del."
+  },
+  {
+   "before": "La tienda abre ",
+   "after": " las ocho hasta las seis.",
+   "options": [
+    "desde",
+    "en"
+   ],
+   "answer": 0,
+   "why": "From… to…: desde… hasta."
+  },
+  {
+   "before": "Mi amiga es ",
+   "after": " Puerto Rico.",
+   "options": [
+    "de",
+    "en"
+   ],
+   "answer": 0,
+   "why": "Origin: ser de."
+  },
+  {
+   "before": "Pienso mucho ",
+   "after": " mi familia cuando viajo.",
+   "options": [
+    "en",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Pensar en: to think about someone."
+  }
+ ],
+ "mistakes": [
+  "Forgetting the personal a: «veo mi hermano» should be «veo a mi hermano».",
+  "Using en for movement: «voy en la tienda» should be «voy a la tienda»; en is for being there.",
+  "Translating «think about» as «pensar sobre» in everyday speech: the usual verb is pensar en.",
+  "Dropping de in place expressions: «cerca la escuela» should be «cerca de la escuela».",
+  "Translating «depend on» as «depender en»: the Spanish is depender de."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish prepositions practice». 1 asks for a worksheet or a PDF (spanish prepositions exercises pdf). 4 ask for a quiz or exercises (spanish prepositions quiz; spanish prepositions exercises; spanish prepositions exercises pdf; spanish prepositions practice quiz). Prepositions of place appear among the suggestions, so the table includes encima de, debajo de and al lado de.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers usually know prepositions by ear, but English shows up in a few verbs: «depender en» (depender de), «enamorado con» (enamorado de) and «soñar con» used correctly next to «pensar sobre» for pensar en. In writing, check the personal a, which is easy to skip in fast speech.",
+ "teacher": "Hide a small object in the classroom and let students find it by asking ¿Está debajo de la mesa? ¿Está cerca de la puerta? Then they hide it and describe the place to a partner.",
+ "faq": [
+  {
+   "question": "What is the personal a?",
+   "answer": "Spanish puts a before a person (or a pet) that receives the action: Veo a Marta. Llamo a mi perro. It has no English translation. It does not go before things (veo la casa) and is usually left out after tener (tengo dos hermanos)."
+  },
+  {
+   "question": "Is it en or a with places?",
+   "answer": "Use a with movement verbs like ir, llegar and viajar (voy a Miami) and en to say where something or someone is (vivo en Miami). Llegar is the classic trap: llego a casa, never llego en casa."
+  },
+  {
+   "question": "Where are por and para?",
+   "answer": "They need a page of their own: por vs para practice covers cause, means, duration and exchange against goal, destination, deadline and recipient."
+  }
+ ]
+}

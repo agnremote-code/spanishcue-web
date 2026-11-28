@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A1–A2",
+ "name": "present progressive",
+ "title": "Spanish Present Progressive Practice: Estar + -ando, -iendo Quiz",
+ "description": "Practice the Spanish present progressive: estar + -ando or -iendo, gerunds like leyendo and durmiendo, pronouns and when not to use it, with 10 quiz sentences.",
+ "h1": "Spanish present progressive practice",
+ "answer": "The Spanish present progressive is estar in the present plus a gerund: estoy hablando, estás comiendo, están escribiendo. -ar verbs take -ando and -er and -ir verbs take -iendo. Use it for actions in progress right now. Unlike English, Spanish does not use it for future plans: «I'm leaving tomorrow» is «salgo mañana».",
+ "demand": {
+  "query": "spanish present progressive practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Forming and using the present progressive",
+ "rules": [
+  {
+   "use": "estar + -ar verb",
+   "example": "Estoy hablando por teléfono.",
+   "meaning": "-ando"
+  },
+  {
+   "use": "estar + -er / -ir verb",
+   "example": "Estamos comiendo. Están escribiendo.",
+   "meaning": "-iendo"
+  },
+  {
+   "use": "Vowel before -iendo becomes y",
+   "example": "leer → leyendo, oír → oyendo, traer → trayendo",
+   "meaning": "-yendo"
+  },
+  {
+   "use": "Stem change in -ir verbs",
+   "example": "dormir → durmiendo, pedir → pidiendo, decir → diciendo",
+   "meaning": "o → u, e → i"
+  },
+  {
+   "use": "Pronouns",
+   "example": "Lo estoy haciendo. Estoy haciéndolo.",
+   "meaning": "before estar or attached, with accent"
+  },
+  {
+   "use": "Not for future plans",
+   "example": "Mañana trabajo. Voy a trabajar.",
+   "meaning": "present or ir a"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Ahora mismo, yo ",
+   "after": " la cena.",
+   "options": [
+    "estoy preparando",
+    "estoy preparo"
+   ],
+   "answer": 0,
+   "why": "Estar + gerund: estoy preparando."
+  },
+  {
+   "before": "Los niños están ",
+   "after": " en el parque.",
+   "options": [
+    "jugando",
+    "jugiendo"
+   ],
+   "answer": 0,
+   "why": "-ar verb: jugando."
+  },
+  {
+   "before": "¿Qué estás ",
+   "after": "?",
+   "options": [
+    "leyendo",
+    "leiendo"
+   ],
+   "answer": 0,
+   "why": "Leer: the i becomes y, leyendo."
+  },
+  {
+   "before": "Silencio, el abuelo está ",
+   "after": " en el sofá.",
+   "options": [
+    "durmiendo",
+    "dormiendo"
+   ],
+   "answer": 0,
+   "why": "Dormir changes o to u in the gerund: durmiendo."
+  },
+  {
+   "before": "Mi hermana está ",
+   "after": " un correo a su jefe.",
+   "options": [
+    "escribiendo",
+    "escribando"
+   ],
+   "answer": 0,
+   "why": "-ir verb: escribiendo."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " viendo una serie nueva.",
+   "options": [
+    "estamos",
+    "somos"
+   ],
+   "answer": 0,
+   "why": "The progressive always uses estar."
+  },
+  {
+   "before": "El camarero está ",
+   "after": " la cuenta.",
+   "options": [
+    "trayendo",
+    "trajendo"
+   ],
+   "answer": 0,
+   "why": "Traer: trayendo."
+  },
+  {
+   "before": "—¿Haces la tarea? —Sí, estoy haciéndo",
+   "after": ".",
+   "options": [
+    "la",
+    "le"
+   ],
+   "answer": 0,
+   "why": "Direct object la attached, with an accent on the gerund."
+  },
+  {
+   "before": "¿Qué me estás ",
+   "after": "? No te oigo.",
+   "options": [
+    "diciendo",
+    "deciendo"
+   ],
+   "answer": 0,
+   "why": "Decir: diciendo, e becomes i."
+  },
+  {
+   "before": "Mañana ",
+   "after": " a Houston en avión.",
+   "options": [
+    "viajo",
+    "estoy viajando"
+   ],
+   "answer": 0,
+   "why": "Future plans take the present or ir a, not the progressive."
+  }
+ ],
+ "mistakes": [
+  "Using ser instead of estar: «soy comiendo» should be «estoy comiendo».",
+  "Forgetting the y in some gerunds: «leiendo» and «creiendo» should be «leyendo» and «creyendo».",
+  "Using the progressive for the future: «estoy saliendo mañana» should be «salgo mañana» or «voy a salir mañana».",
+  "Missing the accent when a pronoun is attached: «estoy haciendolo» should be «estoy haciéndolo».",
+  "Overusing it for states: «estoy teniendo un carro» should be «tengo un carro»."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish present progressive practice». 1 asks for a worksheet or a PDF (spanish present progressive practice pdf). 2 ask for a quiz or exercises (spanish present progressive quiz; spanish present progressive exercises). Some suggestions ask about the present participle and the present continuous, which in Spanish teaching means the gerund and the progressive covered here.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers in the US sometimes use the progressive for the future or for states, under English influence: «estoy teniendo problemas» is common and understood, but «tengo problemas» is more natural in Spanish. Also check the accent when you attach pronouns: diciéndome.",
+ "teacher": "Show a busy picture (a park, a kitchen, a street) and have students say what each person is doing with está + gerund. Then a partner guesses who they are describing.",
+ "faq": [
+  {
+   "question": "How do you form the gerund in Spanish?",
+   "answer": "Drop -ar and add -ando (hablando), drop -er or -ir and add -iendo (comiendo, viviendo). When the stem ends in a vowel, -iendo becomes -yendo (leyendo), and -ir verbs with a stem change show it (durmiendo, pidiendo)."
+  },
+  {
+   "question": "When should I use the progressive and when the simple present?",
+   "answer": "Use the progressive to stress that something is happening right now. The simple present also covers the present moment (¿Qué haces?), and it is the only option for habits and future plans."
+  },
+  {
+   "question": "Can I use other verbs instead of estar?",
+   "answer": "Yes, at higher levels: seguir + gerund (sigo estudiando, I'm still studying), llevar + time + gerund (llevo un año trabajando aquí) and ir + gerund (va mejorando, it's gradually improving)."
+  }
+ ]
+}

@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "laundry",
+ "themeLabel": "Laundry",
+ "title": "Spanish Laundry Vocabulary: Washer, Dryer and Practice",
+ "description": "Spanish laundry vocabulary: la lavadora, la secadora, el detergente, doblar and planchar, with a quiz and an A2 reading about a first week at college.",
+ "h1": "Spanish laundry vocabulary",
+ "titleEs": "La primera semana en la universidad",
+ "focus": "the preterite for a sequence of actions",
+ "intro": "Learn the Spanish words for doing laundry: the machines, the products, the clothes and the verbs from washing to folding. Practice with instant feedback, then read how a college student does laundry alone for the first time.",
+ "paragraphs": [
+  "Nicolás empezó la universidad en Arizona en agosto. En casa, su mamá siempre lavaba la ropa, así que él nunca había usado una lavadora. Al final de la primera semana, el cesto estaba lleno de ropa sucia y no tenía calcetines limpios.",
+  "El domingo bajó a la lavandería del edificio con su cesto, detergente y muchas monedas. No separó la ropa: puso todo junto en una lavadora, con agua caliente, incluida una camiseta roja nueva. Cuando la máquina terminó, sus camisas blancas estaban rosadas y su suéter favorito se había encogido.",
+  "Una estudiante de último año, Ximena, lo vio con cara de desesperación y le explicó lo básico: separar la ropa blanca de la de color, usar agua fría para casi todo y leer las etiquetas. También le enseñó a doblar las camisetas para que no se arrugaran.",
+  "Nicolás llamó a su mamá esa noche. Ella se rió cuando él le contó lo de las camisas rosadas. Desde entonces, Nicolás lava su ropa cada domingo, la separa con cuidado y ya no tiene sorpresas. Bueno, casi: la semana pasada olvidó un pañuelo de papel en el bolsillo de unos jeans."
+ ],
+ "glossary": [
+  [
+   "el edificio",
+   "building"
+  ],
+  [
+   "incluido / incluida",
+   "including"
+  ],
+  [
+   "de último año",
+   "senior"
+  ],
+  [
+   "la desesperación",
+   "despair"
+  ],
+  [
+   "lo básico",
+   "the basics"
+  ],
+  [
+   "las etiquetas",
+   "labels"
+  ],
+  [
+   "arrugarse",
+   "to wrinkle"
+  ],
+  [
+   "el pañuelo de papel",
+   "tissue"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Nicolás nunca había usado una lavadora porque ",
+   "after": ".",
+   "options": [
+    "su mamá lavaba la ropa en casa",
+    "no tenía dinero",
+    "vivía en un hotel"
+   ],
+   "answer": 0,
+   "why": "His mother always did the laundry."
+  },
+  {
+   "before": "Al final de la primera semana, no tenía ",
+   "after": ".",
+   "options": [
+    "calcetines limpios",
+    "monedas",
+    "detergente"
+   ],
+   "answer": 0,
+   "why": "No clean socks."
+  },
+  {
+   "before": "Las camisas blancas quedaron rosadas por ",
+   "after": ".",
+   "options": [
+    "una camiseta roja nueva",
+    "el cloro",
+    "la secadora"
+   ],
+   "answer": 0,
+   "why": "A new red T-shirt in the same load."
+  },
+  {
+   "before": "Ximena le dijo que use agua ",
+   "after": " para casi todo.",
+   "options": [
+    "fría",
+    "caliente",
+    "con cloro"
+   ],
+   "answer": 0,
+   "why": "Cold water for almost everything."
+  },
+  {
+   "before": "Cuando Nicolás le contó todo, su mamá ",
+   "after": ".",
+   "options": [
+    "se rió",
+    "se enojó",
+    "fue a Arizona"
+   ],
+   "answer": 0,
+   "why": "She laughed."
+  },
+  {
+   "before": "La semana pasada, Nicolás olvidó ",
+   "after": " en un bolsillo.",
+   "options": [
+    "un pañuelo de papel",
+    "su teléfono",
+    "unas monedas"
+   ],
+   "answer": 0,
+   "why": "A tissue in his jeans pocket."
+  }
+ ],
+ "grammar": {
+  "title": "Se encogió, se arrugó: things that happen to the clothes",
+  "intro": "Changes that happen to clothes use a reflexive verb: el suéter se encogió, las camisas se arrugaron.",
+  "items": [
+   {
+    "before": "Mis jeans se ",
+    "after": " en la secadora.",
+    "options": [
+     "encogieron",
+     "encogió",
+     "encogimos"
+    ],
+    "answer": 0,
+    "why": "Plural subject: se encogieron."
+   },
+   {
+    "before": "La camisa se ",
+    "after": " porque no la colgué.",
+    "options": [
+     "arrugó",
+     "arrugaron",
+     "arrugué"
+    ],
+    "answer": 0,
+    "why": "Singular subject: se arrugó."
+   },
+   {
+    "before": "Los colores se ",
+    "after": " con el agua caliente.",
+    "options": [
+     "destiñeron",
+     "destiñó",
+     "desteñimos"
+    ],
+    "answer": 0,
+    "why": "Plural: se destiñeron."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Quién lava la ropa en tu casa? ¿Cada cuánto?",
+  "Explica a un compañero cómo lavar la ropa, paso a paso.",
+  "Cuenta un desastre con la ropa que te pasó a ti o a alguien que conoces."
+ ],
+ "heritage": "Laundry words vary: lavadora, lavarropas (Argentina) or máquina de lavar; secadora; cloro, blanqueador or lejía (Spain); tendedero or cordel. In US Spanish you will also hear «el laundry» for the laundromat, which is common in speech; in writing, use «la lavandería».",
+ "teacher": "Bring clothing labels (or photos of them) and have students explain the symbols in Spanish: lavar con agua fría, no usar secadora, planchar a baja temperatura.",
+ "vocabulary": [
+  {
+   "title": "Machines and places",
+   "words": [
+    [
+     "la lavadora",
+     "washing machine"
+    ],
+    [
+     "la secadora",
+     "dryer"
+    ],
+    [
+     "la lavandería",
+     "laundromat, laundry room"
+    ],
+    [
+     "el cesto de la ropa",
+     "laundry basket"
+    ],
+    [
+     "el tendedero",
+     "clothesline, drying rack"
+    ],
+    [
+     "la plancha",
+     "iron"
+    ],
+    [
+     "las monedas",
+     "coins (quarters)"
+    ]
+   ]
+  },
+  {
+   "title": "Products and clothes",
+   "words": [
+    [
+     "el detergente",
+     "detergent"
+    ],
+    [
+     "el suavizante",
+     "fabric softener"
+    ],
+    [
+     "el blanqueador / el cloro",
+     "bleach"
+    ],
+    [
+     "la ropa sucia",
+     "dirty clothes"
+    ],
+    [
+     "la ropa limpia",
+     "clean clothes"
+    ],
+    [
+     "la ropa blanca / de color",
+     "whites / colors"
+    ],
+    [
+     "la mancha",
+     "stain"
+    ]
+   ]
+  },
+  {
+   "title": "Actions",
+   "words": [
+    [
+     "lavar la ropa",
+     "to do the laundry"
+    ],
+    [
+     "separar la ropa",
+     "to sort the clothes"
+    ],
+    [
+     "secar",
+     "to dry"
+    ],
+    [
+     "colgar",
+     "to hang"
+    ],
+    [
+     "doblar",
+     "to fold"
+    ],
+    [
+     "planchar",
+     "to iron"
+    ],
+    [
+     "encogerse",
+     "to shrink"
+    ],
+    [
+     "desteñir",
+     "to run (colors)"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Pongo la ropa sucia en la ",
+   "after": " con detergente.",
+   "options": [
+    "lavadora",
+    "secadora",
+    "plancha"
+   ],
+   "answer": 0,
+   "why": "Washing machine: lavadora."
+  },
+  {
+   "before": "Después de lavar, la ropa va a la ",
+   "after": ".",
+   "options": [
+    "secadora",
+    "mancha",
+    "suavizante"
+   ],
+   "answer": 0,
+   "why": "Then the dryer: secadora."
+  },
+  {
+   "before": "Antes de lavar, hay que ",
+   "after": " la ropa blanca y la de color.",
+   "options": [
+    "separar",
+    "planchar",
+    "doblar"
+   ],
+   "answer": 0,
+   "why": "Sort first: separar."
+  },
+  {
+   "before": "Mi camisa tiene una ",
+   "after": " de salsa de chile.",
+   "options": [
+    "mancha",
+    "plancha",
+    "moneda"
+   ],
+   "answer": 0,
+   "why": "A stain: mancha."
+  },
+  {
+   "before": "Lavé el suéter con agua caliente y se ",
+   "after": ": ahora es de talla infantil.",
+   "options": [
+    "encogió",
+    "planchó",
+    "dobló"
+   ],
+   "answer": 0,
+   "why": "It shrank: se encogió."
+  },
+  {
+   "before": "Para quitar las arrugas de la camisa, uso la ",
+   "after": ".",
+   "options": [
+    "plancha",
+    "lavadora",
+    "secadora"
+   ],
+   "answer": 0,
+   "why": "To remove wrinkles: an iron."
+  },
+  {
+   "before": "La camiseta roja ",
+   "after": " y ahora mis calcetines blancos son rosados.",
+   "options": [
+    "destiñó",
+    "se secó",
+    "se dobló"
+   ],
+   "answer": 0,
+   "why": "Colors ran: destiñó."
+  },
+  {
+   "before": "Para que la ropa sea suave, uso ",
+   "after": ".",
+   "options": [
+    "suavizante",
+    "cloro",
+    "monedas"
+   ],
+   "answer": 0,
+   "why": "Fabric softener makes clothes soft."
+  }
+ ],
+ "demand": {
+  "query": "spanish laundry words",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish laundry vocabulary». Several ask for laundry words and vocabulary, so the list covers the machines, the products and the actions in order.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

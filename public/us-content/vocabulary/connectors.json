@@ -1,0 +1,361 @@
+{
+ "level": "A2",
+ "theme": "connectors",
+ "themeLabel": "Connectors",
+ "title": "Spanish Connectors List: Linking Words with Examples",
+ "description": "A list of common Spanish connectors: además, sin embargo, por eso, aunque, primero, luego and finalmente, with a self-correcting quiz and an A2 reading.",
+ "h1": "Spanish connectors: linking words",
+ "titleEs": "Mi ensayo sobre las redes sociales",
+ "focus": "connectors in an opinion essay",
+ "intro": "Learn common Spanish connectors to add ideas, contrast them, give reasons and order a story, so your sentences sound connected instead of short and separate. Practice with instant feedback, then read a student's essay full of them.",
+ "paragraphs": [
+  "Mi profesora de español nos pidió un ensayo corto sobre las redes sociales. Primero, quiero decir que uso las redes sociales todos los días, como casi todos mis amigos. Por un lado, son muy útiles: puedo hablar con mis primos de Guatemala y, además, aprendo cosas nuevas con videos cortos.",
+  "Por otro lado, las redes sociales también tienen problemas. Por ejemplo, a veces paso dos horas mirando videos y no hago la tarea. Además, muchas personas solo muestran la parte bonita de su vida, así que es fácil compararse y sentirse mal. Mi hermana, en cambio, no tiene redes sociales y dice que duerme mejor.",
+  "Aunque me gustan mucho, creo que necesito usarlas menos. Por eso, desde la semana pasada, tengo una regla: no uso el teléfono después de las nueve de la noche. Al principio fue difícil; sin embargo, ahora leo antes de dormir y me siento más tranquila. Mi mamá también usa esta regla.",
+  "En conclusión, las redes sociales no son buenas ni malas. Todo depende de cómo las usamos. Por lo tanto, creo que lo importante es encontrar un equilibrio, es decir, usarlas para conectar con otros sin olvidar la vida real."
+ ],
+ "glossary": [
+  [
+   "el ensayo",
+   "essay"
+  ],
+  [
+   "las redes sociales",
+   "social media"
+  ],
+  [
+   "útil",
+   "useful"
+  ],
+  [
+   "mostrar",
+   "to show"
+  ],
+  [
+   "compararse",
+   "to compare oneself"
+  ],
+  [
+   "la regla",
+   "rule"
+  ],
+  [
+   "al principio",
+   "at first"
+  ],
+  [
+   "el equilibrio",
+   "balance"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La autora usa las redes sociales para hablar con ",
+   "after": ".",
+   "options": [
+    "sus primos de Guatemala",
+    "su profesora",
+    "su hermana"
+   ],
+   "answer": 0,
+   "why": "With her cousins in Guatemala."
+  },
+  {
+   "before": "Un problema de las redes es que ",
+   "after": ".",
+   "options": [
+    "a veces no hace la tarea",
+    "son muy caras",
+    "no tienen videos"
+   ],
+   "answer": 0,
+   "why": "She sometimes skips homework."
+  },
+  {
+   "before": "La hermana de la autora ",
+   "after": ".",
+   "options": [
+    "no tiene redes sociales",
+    "usa muchas redes",
+    "es profesora"
+   ],
+   "answer": 0,
+   "why": "She has no social media."
+  },
+  {
+   "before": "Su nueva regla es no usar el teléfono ",
+   "after": ".",
+   "options": [
+    "después de las nueve",
+    "en la escuela",
+    "los domingos"
+   ],
+   "answer": 0,
+   "why": "After nine at night."
+  },
+  {
+   "before": "Ahora, antes de dormir, la autora ",
+   "after": ".",
+   "options": [
+    "lee",
+    "mira videos",
+    "habla por teléfono"
+   ],
+   "answer": 0,
+   "why": "She reads."
+  },
+  {
+   "before": "En conclusión, la autora piensa que lo importante es ",
+   "after": ".",
+   "options": [
+    "encontrar un equilibrio",
+    "dejar las redes",
+    "usar más redes"
+   ],
+   "answer": 0,
+   "why": "Finding a balance."
+  }
+ ],
+ "grammar": {
+  "title": "Porque, como and por eso",
+  "intro": "Porque gives the cause after the main idea; como gives it at the start; por eso introduces the result.",
+  "items": [
+   {
+    "before": "No fui a la fiesta ",
+    "after": " estaba cansado.",
+    "options": [
+     "porque",
+     "como",
+     "por eso"
+    ],
+    "answer": 0,
+    "why": "Cause after the main idea: porque."
+   },
+   {
+    "before": "",
+    "after": " estaba cansado, no fui a la fiesta.",
+    "options": [
+     "Como",
+     "Porque",
+     "Por eso"
+    ],
+    "answer": 0,
+    "why": "Cause at the start: como."
+   },
+   {
+    "before": "Estaba cansado; ",
+    "after": " no fui a la fiesta.",
+    "options": [
+     "por eso",
+     "como",
+     "porque"
+    ],
+    "answer": 0,
+    "why": "Result: por eso."
+   }
+  ]
+ },
+ "speaking": [
+  "Da tu opinión sobre las redes sociales con tres conectores.",
+  "Explica una receta con primero, luego y finalmente.",
+  "Describe a dos personas de tu familia con «en cambio»."
+ ],
+ "heritage": "Heritage speakers often speak fluently but write in short sentences joined only by y and pero. Adding connectors like sin embargo, por lo tanto and es decir makes writing sound more academic, which matters on exams like AP Spanish. Avoid «so» and «like» from English in writing: use «así que» and «como».",
+ "teacher": "Give students ten short sentences on cards and a set of connector cards. In groups, they join the sentences into a paragraph and read it aloud; the group with the most natural paragraph wins.",
+ "vocabulary": [
+  {
+   "title": "Adding and ordering",
+   "words": [
+    [
+     "además",
+     "besides, also"
+    ],
+    [
+     "también",
+     "also"
+    ],
+    [
+     "primero",
+     "first"
+    ],
+    [
+     "luego / después",
+     "then, after that"
+    ],
+    [
+     "finalmente / por último",
+     "finally"
+    ],
+    [
+     "por ejemplo",
+     "for example"
+    ],
+    [
+     "es decir",
+     "that is"
+    ]
+   ]
+  },
+  {
+   "title": "Contrast",
+   "words": [
+    [
+     "pero",
+     "but"
+    ],
+    [
+     "sin embargo",
+     "however"
+    ],
+    [
+     "aunque",
+     "although"
+    ],
+    [
+     "en cambio",
+     "on the other hand"
+    ],
+    [
+     "a pesar de",
+     "despite"
+    ],
+    [
+     "por un lado… por otro lado",
+     "on one hand… on the other"
+    ]
+   ]
+  },
+  {
+   "title": "Cause and result",
+   "words": [
+    [
+     "porque",
+     "because"
+    ],
+    [
+     "como",
+     "since, as"
+    ],
+    [
+     "por eso",
+     "that's why"
+    ],
+    [
+     "así que",
+     "so"
+    ],
+    [
+     "por lo tanto",
+     "therefore"
+    ],
+    [
+     "ya que",
+     "since"
+    ],
+    [
+     "en conclusión",
+     "in conclusion"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Me gusta el fútbol; ",
+   "after": ", no juego muy bien.",
+   "options": [
+    "sin embargo",
+    "por eso",
+    "además"
+   ],
+   "answer": 0,
+   "why": "Contrast: sin embargo."
+  },
+  {
+   "before": "Estaba enfermo; ",
+   "after": " no fui a clase.",
+   "options": [
+    "por eso",
+    "aunque",
+    "en cambio"
+   ],
+   "answer": 0,
+   "why": "Result: por eso."
+  },
+  {
+   "before": "",
+   "after": " llovía, salimos a caminar.",
+   "options": [
+    "Aunque",
+    "Porque",
+    "Además"
+   ],
+   "answer": 0,
+   "why": "Although: aunque."
+  },
+  {
+   "before": "Mi hermano es muy tímido; yo, ",
+   "after": ", hablo con todo el mundo.",
+   "options": [
+    "en cambio",
+    "por lo tanto",
+    "es decir"
+   ],
+   "answer": 0,
+   "why": "Contrast between two people: en cambio."
+  },
+  {
+   "before": "",
+   "after": ", lávate las manos; luego, corta las verduras.",
+   "options": [
+    "Primero",
+    "Finalmente",
+    "Sin embargo"
+   ],
+   "answer": 0,
+   "why": "The first step: primero."
+  },
+  {
+   "before": "La casa es grande y, ",
+   "after": ", tiene un jardín.",
+   "options": [
+    "además",
+    "aunque",
+    "en cambio"
+   ],
+   "answer": 0,
+   "why": "Adding: además."
+  },
+  {
+   "before": "No tengo dinero, ",
+   "after": " no voy al concierto.",
+   "options": [
+    "así que",
+    "aunque",
+    "además"
+   ],
+   "answer": 0,
+   "why": "So: así que."
+  },
+  {
+   "before": "",
+   "after": " no tenía tiempo, preparé la cena rápido.",
+   "options": [
+    "Como",
+    "Aunque",
+    "Por ejemplo"
+   ],
+   "answer": 0,
+   "why": "Cause at the start of the sentence: como."
+  }
+ ],
+ "demand": {
+  "query": "spanish connectors words",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish connectors vocabulary». Several ask for a list of connectors and for sentence connectors, so the list groups them by what they do in a sentence.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

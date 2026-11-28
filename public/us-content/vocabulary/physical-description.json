@@ -1,0 +1,371 @@
+{
+ "level": "A1",
+ "theme": "physical-description",
+ "themeLabel": "Physical description",
+ "title": "Spanish Physical Description Vocabulary: Describe People",
+ "description": "Spanish physical description vocabulary: alto, bajo, el pelo rizado, los ojos verdes and las pecas, with a quiz and an A1 reading about a lost-kid search.",
+ "h1": "Spanish physical description vocabulary",
+ "titleEs": "¿Dónde está Leo?",
+ "focus": "ser, tener and llevar to describe people",
+ "intro": "Learn the Spanish words to describe how someone looks: height and build, hair and eyes, and details like glasses or freckles. Practice with instant feedback, then read how a family describes a lost child at an amusement park.",
+ "paragraphs": [
+  "El sábado, la familia Ramírez fue a un parque de diversiones en Orlando. Después de la montaña rusa, Leo, el hijo menor, no estaba. Su mamá corrió a hablar con un guardia de seguridad.",
+  "—¿Cómo es su hijo? —preguntó el guardia.",
+  "—Tiene seis años. Es bajo y delgado. Tiene el pelo castaño, corto y un poco rizado, y los ojos marrones. Tiene pecas en la cara y le falta un diente. Lleva gafas azules, una camiseta roja y una gorra de dinosaurio.",
+  "El guardia habló por la radio. Cinco minutos después, otra guardia llegó con un niño de la mano: bajo, con gafas azules y una gorra de dinosaurio. Era Leo. Estaba tranquilo y comía un helado.",
+  "—¡Leo! ¿Dónde estabas? —dijo su papá.",
+  "—Estaba mirando los dinosaurios —contestó Leo con una gran sonrisa—. Pero la señora me encontró muy rápido. ¡Dice que soy fácil de describir!"
+ ],
+ "glossary": [
+  [
+   "el parque de diversiones",
+   "amusement park"
+  ],
+  [
+   "la montaña rusa",
+   "roller coaster"
+  ],
+  [
+   "el guardia / la guardia",
+   "guard"
+  ],
+  [
+   "castaño",
+   "brown (hair)"
+  ],
+  [
+   "le falta un diente",
+   "he is missing a tooth"
+  ],
+  [
+   "la gorra",
+   "cap"
+  ],
+  [
+   "de la mano",
+   "by the hand"
+  ],
+  [
+   "fácil de describir",
+   "easy to describe"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Leo se perdió después de ",
+   "after": ".",
+   "options": [
+    "la montaña rusa",
+    "comer un helado",
+    "ver a un guardia"
+   ],
+   "answer": 0,
+   "why": "After the roller coaster."
+  },
+  {
+   "before": "Leo tiene ",
+   "after": " años.",
+   "options": [
+    "seis",
+    "cinco",
+    "siete"
+   ],
+   "answer": 0,
+   "why": "He is six."
+  },
+  {
+   "before": "Leo tiene el pelo ",
+   "after": ".",
+   "options": [
+    "castaño y un poco rizado",
+    "rubio y largo",
+    "rojo y liso"
+   ],
+   "answer": 0,
+   "why": "Brown and a bit curly."
+  },
+  {
+   "before": "En la cara, Leo tiene ",
+   "after": ".",
+   "options": [
+    "pecas",
+    "barba",
+    "bigote"
+   ],
+   "answer": 0,
+   "why": "He has freckles."
+  },
+  {
+   "before": "Cuando lo encontraron, Leo ",
+   "after": ".",
+   "options": [
+    "comía un helado",
+    "lloraba mucho",
+    "dormía"
+   ],
+   "answer": 0,
+   "why": "He was eating ice cream."
+  },
+  {
+   "before": "Leo estaba mirando ",
+   "after": ".",
+   "options": [
+    "los dinosaurios",
+    "la montaña rusa",
+    "a su mamá"
+   ],
+   "answer": 0,
+   "why": "He was looking at dinosaurs."
+  }
+ ],
+ "grammar": {
+  "title": "Ser, tener and llevar for descriptions",
+  "intro": "Use ser for what someone is like (es alto), tener for body features (tiene los ojos verdes) and llevar for what someone wears (lleva gafas).",
+  "items": [
+   {
+    "before": "Mi tía ",
+    "after": " alta y delgada.",
+    "options": [
+     "es",
+     "tiene",
+     "lleva"
+    ],
+    "answer": 0,
+    "why": "Ser for build."
+   },
+   {
+    "before": "Mi profesor ",
+    "after": " el pelo corto y barba.",
+    "options": [
+     "tiene",
+     "es",
+     "lleva"
+    ],
+    "answer": 0,
+    "why": "Tener for features."
+   },
+   {
+    "before": "Hoy Marta ",
+    "after": " un vestido amarillo.",
+    "options": [
+     "lleva",
+     "es",
+     "tiene"
+    ],
+    "answer": 0,
+    "why": "Llevar for clothes."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe a una persona de tu familia: ¿cómo es?",
+  "Describe a un compañero de clase sin decir su nombre. Los otros adivinan.",
+  "¿Cómo es tu personaje famoso favorito?"
+ ],
+ "heritage": "Many heritage speakers say «lentes» or «anteojos» instead of gafas, and «güero» or «rubio» for blond; all are correct in different countries. Spanish puts the article before body parts: tiene los ojos verdes, not «tiene verdes ojos».",
+ "teacher": "Play «¿Quién es?»: one student describes a famous person in three sentences with ser, tener and llevar, and the class guesses after each sentence.",
+ "vocabulary": [
+  {
+   "title": "Size and build",
+   "words": [
+    [
+     "alto / alta",
+     "tall"
+    ],
+    [
+     "bajo / baja",
+     "short"
+    ],
+    [
+     "de estatura mediana",
+     "of medium height"
+    ],
+    [
+     "delgado / delgada",
+     "slim"
+    ],
+    [
+     "fuerte",
+     "strong"
+    ],
+    [
+     "joven",
+     "young"
+    ],
+    [
+     "mayor",
+     "older"
+    ]
+   ]
+  },
+  {
+   "title": "Hair",
+   "words": [
+    [
+     "el pelo",
+     "hair"
+    ],
+    [
+     "rubio / rubia",
+     "blond"
+    ],
+    [
+     "moreno / morena",
+     "dark-haired"
+    ],
+    [
+     "pelirrojo / pelirroja",
+     "red-haired"
+    ],
+    [
+     "liso",
+     "straight"
+    ],
+    [
+     "rizado",
+     "curly"
+    ],
+    [
+     "largo / corto",
+     "long / short"
+    ],
+    [
+     "calvo / calva",
+     "bald"
+    ]
+   ]
+  },
+  {
+   "title": "Face and details",
+   "words": [
+    [
+     "los ojos",
+     "eyes"
+    ],
+    [
+     "azules / verdes / marrones",
+     "blue / green / brown"
+    ],
+    [
+     "las gafas",
+     "glasses"
+    ],
+    [
+     "las pecas",
+     "freckles"
+    ],
+    [
+     "la barba",
+     "beard"
+    ],
+    [
+     "el bigote",
+     "mustache"
+    ],
+    [
+     "la sonrisa",
+     "smile"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi primo mide casi dos metros: es muy ",
+   "after": ".",
+   "options": [
+    "alto",
+    "bajo",
+    "calvo"
+   ],
+   "answer": 0,
+   "why": "Almost two meters: tall."
+  },
+  {
+   "before": "Mi abuelo no tiene pelo: es ",
+   "after": ".",
+   "options": [
+    "calvo",
+    "rubio",
+    "rizado"
+   ],
+   "answer": 0,
+   "why": "No hair: calvo."
+  },
+  {
+   "before": "Ana tiene el pelo rojo: es ",
+   "after": ".",
+   "options": [
+    "pelirroja",
+    "morena",
+    "rubia"
+   ],
+   "answer": 0,
+   "why": "Red hair: pelirroja."
+  },
+  {
+   "before": "Mi papá tiene ",
+   "after": " y bigote.",
+   "options": [
+    "barba",
+    "pecas",
+    "gafas"
+   ],
+   "answer": 0,
+   "why": "Beard and mustache."
+  },
+  {
+   "before": "No veo bien sin mis ",
+   "after": ".",
+   "options": [
+    "gafas",
+    "pecas",
+    "ojos"
+   ],
+   "answer": 0,
+   "why": "Glasses help you see."
+  },
+  {
+   "before": "Mi hermana tiene el pelo ",
+   "after": ", como Shakira.",
+   "options": [
+    "rizado",
+    "calvo",
+    "bajo"
+   ],
+   "answer": 0,
+   "why": "Curly hair: rizado."
+  },
+  {
+   "before": "Tiene muchas ",
+   "after": " en la nariz por el sol.",
+   "options": [
+    "pecas",
+    "barbas",
+    "sonrisas"
+   ],
+   "answer": 0,
+   "why": "Freckles from the sun."
+  },
+  {
+   "before": "Tiene los ojos ",
+   "after": ", como el cielo.",
+   "options": [
+    "azules",
+    "marrones",
+    "rubios"
+   ],
+   "answer": 0,
+   "why": "Sky-colored: blue."
+  }
+ ],
+ "demand": {
+  "query": "spanish physical description words",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 2 searches to people in the United States who typed «spanish physical description vocabulary». Both suggestions ask for words to describe people, so the list follows the order Spanish speakers use: size first, then hair, then eyes and details.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

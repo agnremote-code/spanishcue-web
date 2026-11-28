@@ -1,0 +1,365 @@
+{
+ "level": "A1",
+ "theme": "emotions",
+ "themeLabel": "Emotions",
+ "title": "Spanish Emotions Vocabulary: Feelings List and Practice Quiz",
+ "description": "Spanish emotions and feelings vocabulary with estar + adjective, a practice quiz that corrects itself and a short A1 reading about a first day at a new job.",
+ "h1": "Spanish emotions vocabulary: feelings",
+ "titleEs": "El primer día de Diego",
+ "focus": "estar + emotion, ponerse, the present tense",
+ "intro": "Learn the Spanish words for emotions and feelings, see why they go with estar, practice with instant feedback, then follow Diego through a nervous first day at work.",
+ "paragraphs": [
+  "Hoy es el primer día de Diego en su nuevo trabajo en una tienda de Chicago. Se despierta a las seis y está nervioso. No desayuna mucho porque tiene el estómago cerrado.",
+  "Cuando llega a la tienda, su jefa, la señora Paredes, lo saluda con una sonrisa. Diego se siente más tranquilo. Pero luego ve la caja registradora y se pone nervioso otra vez: nunca usó una.",
+  "Por la mañana se equivoca dos veces con el cambio y está avergonzado. Una compañera, Leticia, le explica todo con paciencia. Diego está sorprendido: todos son muy amables y nadie se enoja con él.",
+  "A la hora del almuerzo, Diego ya se ríe con sus compañeros. Por la tarde atiende a diez clientes sin errores. Cuando vuelve a casa está cansado, pero muy contento y orgulloso de sí mismo. Ya quiere volver mañana."
+ ],
+ "glossary": [
+  [
+   "tener el estómago cerrado",
+   "to have no appetite (from nerves)"
+  ],
+  [
+   "la jefa",
+   "the boss"
+  ],
+  [
+   "la caja registradora",
+   "cash register"
+  ],
+  [
+   "ponerse nervioso",
+   "to get nervous"
+  ],
+  [
+   "equivocarse",
+   "to make a mistake"
+  ],
+  [
+   "el cambio",
+   "change (money)"
+  ],
+  [
+   "atender",
+   "to serve (customers)"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Por la mañana Diego está ",
+   "after": ".",
+   "options": [
+    "nervioso",
+    "aburrido",
+    "enojado"
+   ],
+   "answer": 0,
+   "why": "He wakes up nervous."
+  },
+  {
+   "before": "Diego no desayuna mucho porque ",
+   "after": ".",
+   "options": [
+    "tiene el estómago cerrado",
+    "no hay comida",
+    "llega tarde"
+   ],
+   "answer": 0,
+   "why": "Nerves take his appetite."
+  },
+  {
+   "before": "Se pone nervioso otra vez cuando ve ",
+   "after": ".",
+   "options": [
+    "la caja registradora",
+    "a su jefa",
+    "a los clientes"
+   ],
+   "answer": 0,
+   "why": "He has never used a cash register."
+  },
+  {
+   "before": "Diego está avergonzado porque ",
+   "after": ".",
+   "options": [
+    "se equivoca con el cambio",
+    "llega tarde",
+    "no saluda"
+   ],
+   "answer": 0,
+   "why": "He makes two mistakes with change."
+  },
+  {
+   "before": "Leticia le explica todo ",
+   "after": ".",
+   "options": [
+    "con paciencia",
+    "de mal humor",
+    "en inglés"
+   ],
+   "answer": 0,
+   "why": "She explains patiently."
+  },
+  {
+   "before": "Al final del día, Diego está cansado pero ",
+   "after": ".",
+   "options": [
+    "contento y orgulloso",
+    "triste",
+    "preocupado"
+   ],
+   "answer": 0,
+   "why": "Tired, but happy and proud."
+  }
+ ],
+ "grammar": {
+  "title": "Estar for emotions, tener for fear and shame",
+  "intro": "Emotions describe a state, so they use estar: estoy nervioso. A few use tener: tengo miedo, tengo vergüenza.",
+  "items": [
+   {
+    "before": "Hoy mis amigos ",
+    "after": " muy emocionados.",
+    "options": [
+     "están",
+     "son",
+     "tienen"
+    ],
+    "answer": 0,
+    "why": "A current feeling: estar."
+   },
+   {
+    "before": "¿Por qué ",
+    "after": " triste, Ana?",
+    "options": [
+     "estás",
+     "eres",
+     "tienes"
+    ],
+    "answer": 0,
+    "why": "Asking about a feeling now: estás."
+   },
+   {
+    "before": "Yo ",
+    "after": " vergüenza de cantar en público.",
+    "options": [
+     "tengo",
+     "estoy",
+     "soy"
+    ],
+    "answer": 0,
+    "why": "Vergüenza goes with tener."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cómo te sientes hoy? Explica por qué.",
+  "Describe un día en que estuviste muy nervioso o nerviosa.",
+  "¿Qué haces cuando estás triste o preocupado?"
+ ],
+ "heritage": "Heritage speakers often use these words fluently in speech. In writing, check «estar» vs «ser»: «estoy aburrido» (I'm bored) is not the same as «soy aburrido» (I'm boring). Also note «enojado» is standard in the Americas and «enfadado» in Spain.",
+ "teacher": "Start class with an emotions check-in: each student says «Hoy estoy… porque…». It takes two minutes and practices estar, agreement and porque every day.",
+ "vocabulary": [
+  {
+   "title": "How you feel (estar + adjective)",
+   "words": [
+    [
+     "feliz / contento",
+     "happy"
+    ],
+    [
+     "triste",
+     "sad"
+    ],
+    [
+     "enojado / enojada",
+     "angry"
+    ],
+    [
+     "nervioso / nerviosa",
+     "nervous"
+    ],
+    [
+     "cansado / cansada",
+     "tired"
+    ],
+    [
+     "preocupado / preocupada",
+     "worried"
+    ],
+    [
+     "tranquilo / tranquila",
+     "calm"
+    ],
+    [
+     "emocionado / emocionada",
+     "excited"
+    ]
+   ]
+  },
+  {
+   "title": "More feelings",
+   "words": [
+    [
+     "asustado / asustada",
+     "scared"
+    ],
+    [
+     "aburrido / aburrida",
+     "bored"
+    ],
+    [
+     "sorprendido / sorprendida",
+     "surprised"
+    ],
+    [
+     "orgulloso / orgullosa",
+     "proud"
+    ],
+    [
+     "avergonzado / avergonzada",
+     "embarrassed"
+    ],
+    [
+     "celoso / celosa",
+     "jealous"
+    ],
+    [
+     "confundido / confundida",
+     "confused"
+    ]
+   ]
+  },
+  {
+   "title": "Verbs and expressions",
+   "words": [
+    [
+     "tener miedo",
+     "to be afraid"
+    ],
+    [
+     "tener vergüenza",
+     "to be ashamed"
+    ],
+    [
+     "sentirse",
+     "to feel"
+    ],
+    [
+     "llorar",
+     "to cry"
+    ],
+    [
+     "reírse",
+     "to laugh"
+    ],
+    [
+     "extrañar",
+     "to miss (someone)"
+    ],
+    [
+     "estar de buen humor",
+     "to be in a good mood"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Hoy es mi cumpleaños y estoy muy ",
+   "after": ".",
+   "options": [
+    "contenta",
+    "triste",
+    "aburrida"
+   ],
+   "answer": 0,
+   "why": "A birthday: contento, contenta."
+  },
+  {
+   "before": "Mi perro se perdió y estoy ",
+   "after": ".",
+   "options": [
+    "preocupado",
+    "orgulloso",
+    "emocionado"
+   ],
+   "answer": 0,
+   "why": "A lost dog makes you worried."
+  },
+  {
+   "before": "Trabajé diez horas. Estoy muy ",
+   "after": ".",
+   "options": [
+    "cansada",
+    "celosa",
+    "sorprendida"
+   ],
+   "answer": 0,
+   "why": "After ten hours: cansada."
+  },
+  {
+   "before": "No entiendo la explicación: estoy ",
+   "after": ".",
+   "options": [
+    "confundido",
+    "tranquilo",
+    "feliz"
+   ],
+   "answer": 0,
+   "why": "Not understanding: confundido."
+  },
+  {
+   "before": "Mi hermanito ",
+   "after": " de la oscuridad.",
+   "options": [
+    "tiene miedo",
+    "está miedo",
+    "es miedo"
+   ],
+   "answer": 0,
+   "why": "Fear uses tener: tener miedo."
+  },
+  {
+   "before": "Mi mamá está ",
+   "after": " porque saqué una A en el examen.",
+   "options": [
+    "orgullosa",
+    "enojada",
+    "asustada"
+   ],
+   "answer": 0,
+   "why": "A good grade makes a parent proud."
+  },
+  {
+   "before": "Vivo lejos y ",
+   "after": " mucho a mis abuelos.",
+   "options": [
+    "extraño",
+    "lloro",
+    "río"
+   ],
+   "answer": 0,
+   "why": "Extrañar a alguien: to miss someone."
+  },
+  {
+   "before": "No hay nada que hacer y estoy ",
+   "after": ".",
+   "options": [
+    "aburrido",
+    "nervioso",
+    "orgulloso"
+   ],
+   "answer": 0,
+   "why": "Nothing to do: aburrido."
+  }
+ ],
+ "demand": {
+  "query": "spanish emotions vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish emotions vocabulary». Two of them ask for feelings and basic emotions, so the list starts with the everyday ones and adds the verbs that express them.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

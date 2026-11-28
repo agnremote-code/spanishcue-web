@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "body-parts",
+ "themeLabel": "Body parts",
+ "title": "Spanish Body Parts Vocabulary: Head to Toe with Practice",
+ "description": "Spanish body parts vocabulary from la cabeza to los pies, the face and the hands, with a self-correcting quiz and an A1 reading about a dance class.",
+ "h1": "Spanish body parts vocabulary",
+ "titleEs": "La clase de baile",
+ "focus": "commands and body parts with the article",
+ "intro": "Learn the parts of the body in Spanish, from head to toe, the face and the hands, and why Spanish says levanta la mano and not «your hand». Practice with instant feedback, then read about a very active dance class.",
+ "paragraphs": [
+  "Los martes, Gabriela va a una clase de baile latino en un centro comunitario de Miami. La profesora, Yesenia, es de Cuba y tiene mucha energía. Antes de bailar, todos hacen ejercicios para calentar el cuerpo.",
+  "«Primero, la cabeza», dice Yesenia. «Muevan la cabeza a la derecha y a la izquierda. Ahora los hombros: arriba y abajo. Levanten los brazos. Toquen los pies con las manos, sin doblar las rodillas». Gabriela no puede tocar los pies; solo llega a las rodillas.",
+  "Después bailan salsa. Yesenia explica: «Las caderas se mueven, la espalda está derecha y los pies siguen la música». Al final de la clase, a Gabriela le duelen las piernas, pero está feliz. «La próxima semana», dice, «voy a tocar los pies con las manos». Yesenia se ríe y le dice que con práctica todo es posible. Gabriela ya quiere que llegue el martes."
+ ],
+ "glossary": [
+  [
+   "el centro comunitario",
+   "community center"
+  ],
+  [
+   "calentar",
+   "to warm up"
+  ],
+  [
+   "mover",
+   "to move"
+  ],
+  [
+   "a la derecha / a la izquierda",
+   "to the right / to the left"
+  ],
+  [
+   "tocar",
+   "to touch"
+  ],
+  [
+   "doblar",
+   "to bend"
+  ],
+  [
+   "derecho / derecha",
+   "straight"
+  ],
+  [
+   "me duelen",
+   "they hurt (me)"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La clase de baile es ",
+   "after": ".",
+   "options": [
+    "los martes",
+    "los sábados",
+    "todos los días"
+   ],
+   "answer": 0,
+   "why": "On Tuesdays."
+  },
+  {
+   "before": "La profesora es de ",
+   "after": ".",
+   "options": [
+    "Cuba",
+    "Puerto Rico",
+    "México"
+   ],
+   "answer": 0,
+   "why": "Yesenia is from Cuba."
+  },
+  {
+   "before": "Antes de bailar, hacen ejercicios para ",
+   "after": ".",
+   "options": [
+    "calentar el cuerpo",
+    "descansar",
+    "cantar"
+   ],
+   "answer": 0,
+   "why": "To warm up."
+  },
+  {
+   "before": "Gabriela no puede tocar los pies; solo llega a ",
+   "after": ".",
+   "options": [
+    "las rodillas",
+    "los tobillos",
+    "la cadera"
+   ],
+   "answer": 0,
+   "why": "Only to her knees."
+  },
+  {
+   "before": "En la salsa, la espalda está ",
+   "after": ".",
+   "options": [
+    "derecha",
+    "doblada",
+    "cansada"
+   ],
+   "answer": 0,
+   "why": "The back stays straight."
+  },
+  {
+   "before": "Al final, a Gabriela le duelen ",
+   "after": ".",
+   "options": [
+    "las piernas",
+    "los ojos",
+    "las manos"
+   ],
+   "answer": 0,
+   "why": "Her legs hurt."
+  }
+ ],
+ "grammar": {
+  "title": "Body parts take the article, not the possessive",
+  "intro": "Spanish says levanta la mano, me duele la cabeza: the article, not mi or tu.",
+  "items": [
+   {
+    "before": "Levanten ",
+    "after": " brazos, por favor.",
+    "options": [
+     "los",
+     "sus"
+    ],
+    "answer": 0,
+    "why": "With body parts, the article: los brazos."
+   },
+   {
+    "before": "Me lavo ",
+    "after": " cara con agua fría.",
+    "options": [
+     "la",
+     "mi"
+    ],
+    "answer": 0,
+    "why": "Me lavo la cara, not mi cara."
+   },
+   {
+    "before": "A mi papá le duele ",
+    "after": " espalda.",
+    "options": [
+     "la",
+     "su"
+    ],
+    "answer": 0,
+    "why": "Le duele la espalda."
+   }
+  ]
+ },
+ "speaking": [
+  "Da instrucciones a un compañero: «Toca la nariz, levanta el brazo».",
+  "¿Qué parte del cuerpo usas más en tu deporte favorito?",
+  "Describe a un personaje famoso: ojos, pelo, cara."
+ ],
+ "heritage": "Some body words change by country or register: el pelo or el cabello, la panza or el estómago, las orejas (outer ear) and los oídos (inner ear). In writing, use the article with body parts, as in «me duele la cabeza», instead of the English-style «mi cabeza».",
+ "teacher": "Play «Simón dice» with body parts: Simón dice: tóquense la nariz. Then let students lead the game, using ustedes commands for the class.",
+ "vocabulary": [
+  {
+   "title": "Head and face",
+   "words": [
+    [
+     "la cabeza",
+     "head"
+    ],
+    [
+     "la cara",
+     "face"
+    ],
+    [
+     "el pelo",
+     "hair"
+    ],
+    [
+     "los ojos",
+     "eyes"
+    ],
+    [
+     "la nariz",
+     "nose"
+    ],
+    [
+     "la boca",
+     "mouth"
+    ],
+    [
+     "las orejas",
+     "ears"
+    ],
+    [
+     "los dientes",
+     "teeth"
+    ],
+    [
+     "el cuello",
+     "neck"
+    ]
+   ]
+  },
+  {
+   "title": "Body",
+   "words": [
+    [
+     "los hombros",
+     "shoulders"
+    ],
+    [
+     "el pecho",
+     "chest"
+    ],
+    [
+     "la espalda",
+     "back"
+    ],
+    [
+     "el estómago",
+     "stomach"
+    ],
+    [
+     "los brazos",
+     "arms"
+    ],
+    [
+     "los codos",
+     "elbows"
+    ],
+    [
+     "las manos",
+     "hands"
+    ],
+    [
+     "los dedos",
+     "fingers"
+    ]
+   ]
+  },
+  {
+   "title": "Legs and feet",
+   "words": [
+    [
+     "las piernas",
+     "legs"
+    ],
+    [
+     "las rodillas",
+     "knees"
+    ],
+    [
+     "los tobillos",
+     "ankles"
+    ],
+    [
+     "los pies",
+     "feet"
+    ],
+    [
+     "los dedos del pie",
+     "toes"
+    ],
+    [
+     "la cadera",
+     "hip"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Veo con los ",
+   "after": ".",
+   "options": [
+    "ojos",
+    "pies",
+    "codos"
+   ],
+   "answer": 0,
+   "why": "We see with our eyes."
+  },
+  {
+   "before": "Escucho música con las ",
+   "after": ".",
+   "options": [
+    "orejas",
+    "rodillas",
+    "manos"
+   ],
+   "answer": 0,
+   "why": "We hear with our ears (oídos inside)."
+  },
+  {
+   "before": "Tengo diez ",
+   "after": " en las manos.",
+   "options": [
+    "dedos",
+    "dientes",
+    "tobillos"
+   ],
+   "answer": 0,
+   "why": "Ten fingers: dedos."
+  },
+  {
+   "before": "Me cepillo los ",
+   "after": " después de comer.",
+   "options": [
+    "dientes",
+    "hombros",
+    "codos"
+   ],
+   "answer": 0,
+   "why": "We brush our teeth."
+  },
+  {
+   "before": "Huelo las flores con la ",
+   "after": ".",
+   "options": [
+    "nariz",
+    "boca",
+    "espalda"
+   ],
+   "answer": 0,
+   "why": "We smell with the nose."
+  },
+  {
+   "before": "Llevo la mochila en la ",
+   "after": ".",
+   "options": [
+    "espalda",
+    "cabeza",
+    "rodilla"
+   ],
+   "answer": 0,
+   "why": "A backpack goes on your back."
+  },
+  {
+   "before": "Para correr uso las ",
+   "after": ".",
+   "options": [
+    "piernas",
+    "orejas",
+    "manos"
+   ],
+   "answer": 0,
+   "why": "We run with our legs."
+  },
+  {
+   "before": "El zapato va en el ",
+   "after": ".",
+   "options": [
+    "pie",
+    "brazo",
+    "cuello"
+   ],
+   "answer": 0,
+   "why": "Shoes go on feet."
+  }
+ ],
+ "demand": {
+  "query": "spanish body parts vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish body parts vocabulary». One asks for body parts in English and Spanish, so every word has its English meaning next to it.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

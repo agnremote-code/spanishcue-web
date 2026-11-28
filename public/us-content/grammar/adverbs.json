@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A2–B1",
+ "name": "adverbs",
+ "title": "Spanish Adverbs Practice: -mente, Frequency and Place Quiz",
+ "description": "Practice Spanish adverbs: -mente adverbs, frequency (siempre, nunca), place, time and bien vs bueno, with a rule table and 10 checked sentences.",
+ "h1": "Spanish adverbs practice",
+ "answer": "Many Spanish adverbs add -mente to the feminine form of the adjective: lento → lentamente, rápido → rápidamente, fácil → fácilmente. Common adverbs have their own form: bien, mal, siempre, nunca, aquí, allí, ya, todavía. Adverbs of frequency usually go before or right after the verb, and nunca before the verb needs no extra no.",
+ "demand": {
+  "query": "spanish adverbs practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "Main kinds of Spanish adverbs",
+ "rules": [
+  {
+   "use": "Manner: feminine adjective + -mente",
+   "example": "rápidamente, tranquilamente, fácilmente",
+   "meaning": "-mente"
+  },
+  {
+   "use": "Accent stays from the adjective",
+   "example": "rápido → rápidamente, fácil → fácilmente",
+   "meaning": "keep the accent"
+  },
+  {
+   "use": "Two in a row: -mente only on the last",
+   "example": "Habló clara y lentamente.",
+   "meaning": "clara y lentamente"
+  },
+  {
+   "use": "Frequency",
+   "example": "siempre, a menudo, a veces, casi nunca, nunca",
+   "meaning": "before or after the verb"
+  },
+  {
+   "use": "Place and time",
+   "example": "aquí, allí, cerca, lejos; ya, todavía, pronto, tarde",
+   "meaning": "simple adverbs"
+  },
+  {
+   "use": "Bien and mal (not bueno, malo)",
+   "example": "Cocinas muy bien.",
+   "meaning": "bien / mal"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Mi abuelo maneja muy ",
+   "after": ".",
+   "options": [
+    "lentamente",
+    "lentomente"
+   ],
+   "answer": 0,
+   "why": "-mente goes on the feminine form: lenta → lentamente."
+  },
+  {
+   "before": "Hablas español muy ",
+   "after": ".",
+   "options": [
+    "bien",
+    "bueno"
+   ],
+   "answer": 0,
+   "why": "To modify a verb, use the adverb bien, not the adjective bueno."
+  },
+  {
+   "before": "Ella resolvió el problema ",
+   "after": ".",
+   "options": [
+    "fácilmente",
+    "facilmente"
+   ],
+   "answer": 0,
+   "why": "The adjective fácil keeps its accent: fácilmente."
+  },
+  {
+   "before": "",
+   "after": " llego tarde; soy muy puntual.",
+   "options": [
+    "Nunca",
+    "No nunca"
+   ],
+   "answer": 0,
+   "why": "Nunca before the verb works alone."
+  },
+  {
+   "before": "No me gusta ",
+   "after": " el café sin azúcar.",
+   "options": [
+    "nada",
+    "algo"
+   ],
+   "answer": 0,
+   "why": "After no + verb, Spanish uses nada, not algo: no me gusta nada."
+  },
+  {
+   "before": "¿Ya terminaste la tarea? —No, ",
+   "after": " no.",
+   "options": [
+    "todavía",
+    "ya"
+   ],
+   "answer": 0,
+   "why": "Not yet: todavía no."
+  },
+  {
+   "before": "El profesor explicó la lección clara y ",
+   "after": ".",
+   "options": [
+    "lentamente",
+    "lenta"
+   ],
+   "answer": 0,
+   "why": "With two adverbs, only the last takes -mente."
+  },
+  {
+   "before": "Vivimos muy ",
+   "after": " de la escuela; vamos caminando.",
+   "options": [
+    "cerca",
+    "cercamente"
+   ],
+   "answer": 0,
+   "why": "Place adverbs like cerca have no -mente."
+  },
+  {
+   "before": "Mi hermana ",
+   "after": " va al gimnasio: dos o tres veces por semana.",
+   "options": [
+    "a menudo",
+    "nunca"
+   ],
+   "answer": 0,
+   "why": "Two or three times a week is often: a menudo."
+  },
+  {
+   "before": "Mi hijo ",
+   "after": " come verduras; solo le gusta la pizza.",
+   "options": [
+    "casi nunca",
+    "siempre"
+   ],
+   "answer": 0,
+   "why": "Only liking pizza means almost never: casi nunca."
+  }
+ ],
+ "mistakes": [
+  "Adding -mente to the masculine form: «rápidomente» should be «rápidamente».",
+  "Using bueno instead of bien: «cantas bueno» should be «cantas bien».",
+  "Adding no before nunca at the start: «no nunca como carne» should be «nunca como carne» or «no como carne nunca».",
+  "Putting -mente on both adverbs: «clara y lentamente» is the natural form, not «claramente y lentamente».",
+  "Dropping the accent: fácilmente, rápidamente and últimamente keep the accent of the adjective."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish adverbs practice». 2 ask for a quiz or exercises (spanish adverbs quiz; spanish adverbs exercises). Adverbs of frequency appear among the suggestions, so siempre, a menudo, a veces and nunca each get practice here.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often use short adverbs like rápido and fuerte without -mente (habla rápido), which is normal Spanish. In writing, check the accent on -mente adverbs that come from accented adjectives (fácilmente) and avoid the English «más mejor»: mejor already means better.",
+ "teacher": "Students write their weekly routine with one frequency adverb per line (siempre, a menudo, a veces, nunca) and then find a classmate who matches three of their lines.",
+ "faq": [
+  {
+   "question": "How do you form adverbs with -mente?",
+   "answer": "Take the feminine singular of the adjective and add -mente: lenta → lentamente, feliz → felizmente. Adjectives that do not change for gender just add it: fácil → fácilmente, triste → tristemente."
+  },
+  {
+   "question": "Where do adverbs of frequency go?",
+   "answer": "Usually before the verb (siempre llego temprano) or at the end of the sentence (llego temprano siempre). Nunca and casi nunca before the verb need no extra no."
+  },
+  {
+   "question": "Is it bien or bueno?",
+   "answer": "Bien is an adverb and describes how something is done (cocinas bien). Bueno is an adjective and describes a noun (una comida buena). With estar, bien describes how someone is: estoy bien."
+  }
+ ]
+}

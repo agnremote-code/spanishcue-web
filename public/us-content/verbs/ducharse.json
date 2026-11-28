@@ -1,0 +1,278 @@
+{
+ "verb": "ducharse",
+ "meaning": "to take a shower",
+ "level": "A1",
+ "title": "Spanish Verb Ducharse Practice: Reflexive Forms and Quiz",
+ "description": "Practice the Spanish reflexive verb ducharse: me ducho, te duchas, the preterite me duché, ducharse vs bañarse, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb ducharse: practice",
+ "intro": "Ducharse means to take a shower. It is a regular -ar verb that always needs the reflexive pronoun: me ducho, nos duchamos. Learn the present and the preterite, the difference with bañarse and practice with feedback.",
+ "demand": {
+  "query": "spanish verb ducharse",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To take a shower",
+   "example": "Me ducho por la mañana.",
+   "meaning": "I shower in the morning."
+  },
+  {
+   "use": "Pronoun before the verb",
+   "example": "¿Te duchas antes o después de correr?",
+   "meaning": "Do you shower before or after running?"
+  },
+  {
+   "use": "Pronoun attached to the infinitive",
+   "example": "Voy a ducharme rápido.",
+   "meaning": "I'm going to take a quick shower."
+  },
+  {
+   "use": "Ducharse vs bañarse",
+   "example": "Prefiero ducharme; mi hermano prefiere bañarse.",
+   "meaning": "I prefer showers; my brother prefers baths."
+  },
+  {
+   "use": "Noun: la ducha",
+   "example": "La ducha está fría.",
+   "meaning": "The shower is cold."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "me ducho"
+  ],
+  [
+   "tú",
+   "te duchas"
+  ],
+  [
+   "él / ella / usted",
+   "se ducha"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos duchamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se duchan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "me duché"
+  ],
+  [
+   "tú",
+   "te duchaste"
+  ],
+  [
+   "él / ella / usted",
+   "se duchó"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos duchamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se ducharon"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo me ",
+   "after": " todos los días antes de ir a la escuela.",
+   "options": [
+    "ducho",
+    "ducha",
+    "duchas"
+   ],
+   "answer": 0,
+   "why": "Yo: me ducho."
+  },
+  {
+   "before": "¿Tú te ",
+   "after": " con agua caliente o fría?",
+   "options": [
+    "duchas",
+    "ducha",
+    "duchan"
+   ],
+   "answer": 0,
+   "why": "Tú: te duchas."
+  },
+  {
+   "before": "Mi papá se ",
+   "after": " en cinco minutos.",
+   "options": [
+    "ducha",
+    "duchan",
+    "ducho"
+   ],
+   "answer": 0,
+   "why": "Él: se ducha."
+  },
+  {
+   "before": "Después del partido, los jugadores se ",
+   "after": ".",
+   "options": [
+    "duchan",
+    "ducha",
+    "duchamos"
+   ],
+   "answer": 0,
+   "why": "Ellos: se duchan."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " por la noche.",
+   "options": [
+    "nos duchamos",
+    "duchamos",
+    "se duchamos"
+   ],
+   "answer": 0,
+   "why": "Nosotros needs nos: nos duchamos."
+  },
+  {
+   "before": "Esta mañana no me ",
+   "after": " porque no había agua caliente.",
+   "options": [
+    "duché",
+    "duche",
+    "duchó"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: me duché."
+  },
+  {
+   "before": "¿Ya te ",
+   "after": "? La cena está lista.",
+   "options": [
+    "duchaste",
+    "duchastes",
+    "duchas ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: te duchaste."
+  },
+  {
+   "before": "Mi hermana se ",
+   "after": " y salió corriendo.",
+   "options": [
+    "duchó",
+    "ducho",
+    "duché"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: se duchó."
+  },
+  {
+   "before": "Después de la playa, todos se ",
+   "after": " en el hotel.",
+   "options": [
+    "ducharon",
+    "duchó",
+    "duchamos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: se ducharon."
+  },
+  {
+   "before": "Necesito ",
+   "after": " antes de la entrevista.",
+   "options": [
+    "ducharme",
+    "me duchar",
+    "duchar"
+   ],
+   "answer": 0,
+   "why": "With an infinitive, attach the pronoun: ducharme."
+  }
+ ],
+ "reading": {
+  "titleEs": "Cinco minutos de ducha",
+  "paragraphs": [
+   "En California hubo una sequía muy larga, y en la escuela de Isabel hicieron un concurso: ¿qué familia ahorra más agua en un mes? Isabel descubrió que su hermano mayor se duchaba veinte minutos cada mañana, cantando canciones completas.",
+   "La familia hizo un plan: cada persona se ducha en cinco minutos, con una alarma en el teléfono. Su hermano protestó, pero luego encontró una solución: se duchaba con una sola canción corta. Al final del mes ganaron el segundo lugar, y el hermano siguió con su canción de cinco minutos."
+  ],
+  "comprehension": [
+   {
+    "before": "El concurso era para ",
+    "after": ".",
+    "options": [
+     "ahorrar agua",
+     "cantar mejor",
+     "limpiar la escuela"
+    ],
+    "answer": 0,
+    "why": "To save water during the drought."
+   },
+   {
+    "before": "Al principio, el hermano de Isabel se duchaba ",
+    "after": ".",
+    "options": [
+     "veinte minutos",
+     "cinco minutos",
+     "una hora"
+    ],
+    "answer": 0,
+    "why": "Twenty minutes, singing."
+   },
+   {
+    "before": "Según el plan, cada persona se ducha en ",
+    "after": ".",
+    "options": [
+     "cinco minutos",
+     "diez minutos",
+     "dos minutos"
+    ],
+    "answer": 0,
+    "why": "Five minutes with an alarm."
+   },
+   {
+    "before": "La familia de Isabel quedó en ",
+    "after": ".",
+    "options": [
+     "segundo lugar",
+     "primer lugar",
+     "último lugar"
+    ],
+    "answer": 0,
+    "why": "They won second place."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Ducho a las siete.",
+   "right": "Me ducho a las siete.",
+   "why": "Ducharse needs the reflexive pronoun."
+  },
+  {
+   "wrong": "Voy a me duchar.",
+   "right": "Voy a ducharme.",
+   "why": "Attach the pronoun to the infinitive, or put it before voy: me voy a duchar."
+  },
+  {
+   "wrong": "Ayer me duche.",
+   "right": "Ayer me duché.",
+   "why": "Preterite yo needs the accent: duché."
+  },
+  {
+   "wrong": "Tomo una ducha cada día.",
+   "right": "Me ducho cada día.",
+   "why": "«Tomar una ducha» is understood, but ducharse is more natural."
+  }
+ ],
+ "heritage": "Heritage speakers in the US often say «bañarse» for any kind of wash, shower included, which is normal in Mexico and Central America. «Ducharse» is more specific. «Tomar un shower» is a code-switch; in writing, use «ducharse» or «darse un baño».",
+ "teacher": "Students compare routines in pairs: ¿Te duchas por la mañana o por la noche? ¿Cuánto tiempo? Then the class estimates how much water the group uses in a week.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish verb ducharse». Suggestions pair ducharse with lavarse and cepillarse, so the page treats it as part of the reflexive routine group.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

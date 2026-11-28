@@ -1,0 +1,176 @@
+{
+ "theme": "forms",
+ "level": "A2–B1",
+ "name": "accent marks",
+ "title": "Spanish Accent Marks Practice: When to Write a Tilde, with a Quiz",
+ "description": "Practice Spanish accent marks: stress rules, words ending in a vowel, n or s, question words, tú vs tu, sí vs si and accents on verbs, with 10 checked sentences.",
+ "h1": "Spanish accent marks practice",
+ "answer": "Spanish writes an accent mark when a word breaks the stress rules. Words ending in a vowel, n or s are naturally stressed on the second-to-last syllable (casa, hablan); words ending in another consonant are stressed on the last (papel, ciudad). If the stress falls elsewhere, write the accent: café, lápiz, música. Accents also separate pairs like tú and tu, sí and si.",
+ "demand": {
+  "query": "spanish accent marks practice",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "rulesCaption": "When Spanish words take an accent mark",
+ "rules": [
+  {
+   "use": "Stress on the last syllable, ending in vowel, n or s",
+   "example": "café, canción, después",
+   "meaning": "accent"
+  },
+  {
+   "use": "Stress on the second-to-last, ending in another consonant",
+   "example": "lápiz, árbol, fácil",
+   "meaning": "accent"
+  },
+  {
+   "use": "Stress three syllables from the end or earlier",
+   "example": "música, teléfono, rápidamente",
+   "meaning": "always accent"
+  },
+  {
+   "use": "Question and exclamation words",
+   "example": "¿Qué? ¿Dónde? ¡Cómo llueve!",
+   "meaning": "accent"
+  },
+  {
+   "use": "Pairs that differ by accent",
+   "example": "tú / tu, él / el, sí / si, mí / mi, sé / se, más / mas",
+   "meaning": "accent marks the stressed word"
+  },
+  {
+   "use": "Weak vowel stressed next to a strong one",
+   "example": "día, país, río, oído",
+   "meaning": "accent breaks the diphthong"
+  }
+ ],
+ "quiz": [
+  {
+   "before": "Mi ",
+   "after": " favorito es el violín.",
+   "options": [
+    "instrumento",
+    "instruménto"
+   ],
+   "answer": 0,
+   "why": "Ends in a vowel, stress on the second-to-last: no accent."
+  },
+  {
+   "before": "Me encanta la ",
+   "after": " de Bad Bunny.",
+   "options": [
+    "música",
+    "musica"
+   ],
+   "answer": 0,
+   "why": "Stress three from the end: always an accent."
+  },
+  {
+   "before": "Necesito un ",
+   "after": " para escribir.",
+   "options": [
+    "lápiz",
+    "lapiz"
+   ],
+   "answer": 0,
+   "why": "Ends in z, stress on the second-to-last: accent."
+  },
+  {
+   "before": "¿",
+   "after": " vienes a la fiesta?",
+   "options": [
+    "Tú",
+    "Tu"
+   ],
+   "answer": 0,
+   "why": "The pronoun you is tú, with accent."
+  },
+  {
+   "before": "Esta es ",
+   "after": " mochila.",
+   "options": [
+    "tu",
+    "tú"
+   ],
+   "answer": 0,
+   "why": "Your (possessive) is tu, no accent."
+  },
+  {
+   "before": "—¿Quieres café? —",
+   "after": ", gracias.",
+   "options": [
+    "Sí",
+    "Si"
+   ],
+   "answer": 0,
+   "why": "Yes is sí, with accent; si means if."
+  },
+  {
+   "before": "Mi papá trabaja en una ",
+   "after": " de carros.",
+   "options": [
+    "fábrica",
+    "fabrica"
+   ],
+   "answer": 0,
+   "why": "The noun is fábrica (stress three from the end); fabrica is the verb."
+  },
+  {
+   "before": "Ayer mi hermana ",
+   "after": " a Texas.",
+   "options": [
+    "viajó",
+    "viajo"
+   ],
+   "answer": 0,
+   "why": "Preterite él: viajó, stress on the last syllable, ending in a vowel."
+  },
+  {
+   "before": "Mis abuelos viven en otro ",
+   "after": ".",
+   "options": [
+    "país",
+    "pais"
+   ],
+   "answer": 0,
+   "why": "The stressed i next to a: país, accent breaks the diphthong."
+  },
+  {
+   "before": "Este regalo es para ",
+   "after": ".",
+   "options": [
+    "mí",
+    "mi"
+   ],
+   "answer": 0,
+   "why": "After a preposition, the pronoun is mí, with accent."
+  }
+ ],
+ "mistakes": [
+  "Writing accents on every long word: «exámen» should be «examen» (ends in n, stress on the second-to-last), but the plural is «exámenes».",
+  "Dropping accents that change meaning: «hablo» (I speak) and «habló» (he spoke) are different verbs.",
+  "Confusing tu and tú, el and él, mi and mí: the stressed pronoun takes the accent.",
+  "Forgetting accents in indirect questions: «no sé dónde vive», «pregunta qué hora es».",
+  "Accenting one-syllable words without a pair: fue, dio, vio and ti never take an accent."
+ ],
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish accent marks practice». 2 ask for a quiz or exercises (spanish accent marks quiz; spanish accent mark practice quiz). All four suggestions ask for practice, a quiz or an explanation, so the table explains the rule and the questions test it.",
+  "source": "Google autocomplete in English (United States), captured by SpanishCue on 27 November 2026"
+ },
+ "heritage": "Heritage speakers often know where the stress falls but were never taught to write accents. Start with the high-frequency cases: preterite forms (habló, comió), question words (qué, cómo), and pairs like tú and tu. Reading your text aloud while checking each stressed syllable fixes most errors.",
+ "teacher": "Dictate ten words and have students mark only the stressed syllable first. Then they decide with the table which ones need a written accent and compare with a partner.",
+ "faq": [
+  {
+   "question": "How do I know if a Spanish word needs an accent?",
+   "answer": "Find the stressed syllable. If the word ends in a vowel, n or s and the stress is on the last syllable (canción), it needs an accent. If it ends in another consonant and the stress is on the second-to-last (árbol), it needs one. Stress three syllables from the end always needs one (sábado)."
+  },
+  {
+   "question": "Why do some words lose or gain an accent in the plural?",
+   "answer": "Adding a syllable can move the word into another rule: canción → canciones loses it, examen → exámenes gains it. The stress stays on the same vowel; only the rule changes."
+  },
+  {
+   "question": "Do capital letters need accents?",
+   "answer": "Yes. The Real Academia Española says capitals keep their accents: Álvaro, ÉXITO. Leaving them out is a typing habit, not a rule."
+  }
+ ]
+}

@@ -1,0 +1,278 @@
+{
+ "verb": "viajar",
+ "meaning": "to travel",
+ "level": "A1",
+ "title": "Spanish Verb Viajar Practice: Conjugation, Travel Phrases and Quiz",
+ "description": "Practice the Spanish verb viajar: regular -ar forms in the present and preterite, viajar en and viajar a, travel phrases, ten quiz questions and a reading.",
+ "h1": "Spanish verb viajar: practice",
+ "intro": "Viajar is a regular -ar verb. The prepositions matter: viajar a a place, viajar en a means of transport, viajar por a region. Learn the forms and the prepositions, then practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb viajar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To travel to: viajar a",
+   "example": "Viajo a México en diciembre.",
+   "meaning": "I'm traveling to Mexico in December."
+  },
+  {
+   "use": "Means of transport: viajar en",
+   "example": "Viajamos en tren.",
+   "meaning": "We travel by train."
+  },
+  {
+   "use": "Around a region: viajar por",
+   "example": "Quiero viajar por Sudamérica.",
+   "meaning": "I want to travel around South America."
+  },
+  {
+   "use": "Business trips",
+   "example": "Mi papá viaja mucho por trabajo.",
+   "meaning": "My dad travels a lot for work."
+  },
+  {
+   "use": "Noun: el viaje",
+   "example": "¡Buen viaje!",
+   "meaning": "Have a good trip!"
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "viajo"
+  ],
+  [
+   "tú",
+   "viajas"
+  ],
+  [
+   "él / ella / usted",
+   "viaja"
+  ],
+  [
+   "nosotros / nosotras",
+   "viajamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "viajan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "viajé"
+  ],
+  [
+   "tú",
+   "viajaste"
+  ],
+  [
+   "él / ella / usted",
+   "viajó"
+  ],
+  [
+   "nosotros / nosotras",
+   "viajamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "viajaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Cada verano, yo ",
+   "after": " a Colombia.",
+   "options": [
+    "viajo",
+    "viaja",
+    "viajé mañana"
+   ],
+   "answer": 0,
+   "why": "Present yo: viajo."
+  },
+  {
+   "before": "¿Tú ",
+   "after": " solo o con tu familia?",
+   "options": [
+    "viajas",
+    "viajan",
+    "viaja"
+   ],
+   "answer": 0,
+   "why": "Tú: viajas."
+  },
+  {
+   "before": "Mi tía ",
+   "after": " en avión porque vive lejos.",
+   "options": [
+    "viaja",
+    "viajan",
+    "viajo"
+   ],
+   "answer": 0,
+   "why": "Ella: viaja."
+  },
+  {
+   "before": "Nosotros viajamos ",
+   "after": " autobús a la playa.",
+   "options": [
+    "en",
+    "a",
+    "por"
+   ],
+   "answer": 0,
+   "why": "Transport: viajar en."
+  },
+  {
+   "before": "Los estudiantes viajan ",
+   "after": " Washington en abril.",
+   "options": [
+    "a",
+    "en",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Destination: viajar a."
+  },
+  {
+   "before": "El año pasado ",
+   "after": " por toda España.",
+   "options": [
+    "viajé",
+    "viaje",
+    "viajó yo"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: viajé, with accent."
+  },
+  {
+   "before": "¿Cuándo ",
+   "after": " a Japón?",
+   "options": [
+    "viajaste",
+    "viajastes",
+    "viajas ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: viajaste."
+  },
+  {
+   "before": "Mi abuela ",
+   "after": " en barco a Cuba en 1960.",
+   "options": [
+    "viajó",
+    "viajo",
+    "viajé"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: viajó."
+  },
+  {
+   "before": "Mis amigos ",
+   "after": " sin maletas, solo con mochilas.",
+   "options": [
+    "viajaron",
+    "viajamos",
+    "viajó"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: viajaron."
+  },
+  {
+   "before": "Ellos quieren viajar ",
+   "after": " Centroamérica en tren.",
+   "options": [
+    "por",
+    "en",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Around a region: viajar por."
+  }
+ ],
+ "reading": {
+  "titleEs": "El viaje en tren",
+  "paragraphs": [
+   "Lucía siempre viajaba en avión para visitar a su familia en Chicago. Pero este año decidió viajar en tren desde Los Ángeles. Su madre pensaba que era una locura: más de dos días sentada en un vagón.",
+   "Lucía viajó por desiertos, montañas y pueblos pequeños. En el tren conoció a una pareja de Guadalajara que viajaba a ver a su primer nieto. Comieron juntos y jugaron cartas. Al llegar, Lucía le dijo a su madre: «El viaje fue mejor que el destino»."
+  ],
+  "comprehension": [
+   {
+    "before": "Antes, Lucía viajaba ",
+    "after": ".",
+    "options": [
+     "en avión",
+     "en tren",
+     "en carro"
+    ],
+    "answer": 0,
+    "why": "She used to fly."
+   },
+   {
+    "before": "Este año, Lucía viajó desde ",
+    "after": ".",
+    "options": [
+     "Los Ángeles",
+     "Chicago",
+     "Guadalajara"
+    ],
+    "answer": 0,
+    "why": "She left from Los Angeles."
+   },
+   {
+    "before": "Su madre pensaba que el viaje en tren era ",
+    "after": ".",
+    "options": [
+     "una locura",
+     "muy barato",
+     "muy rápido"
+    ],
+    "answer": 0,
+    "why": "She thought it was crazy."
+   },
+   {
+    "before": "La pareja de Guadalajara viajaba para ",
+    "after": ".",
+    "options": [
+     "ver a su nieto",
+     "buscar trabajo",
+     "visitar el desierto"
+    ],
+    "answer": 0,
+    "why": "To meet their first grandchild."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Viajo en México.",
+   "right": "Viajo a México.",
+   "why": "The destination takes a."
+  },
+  {
+   "wrong": "Viajamos por tren.",
+   "right": "Viajamos en tren.",
+   "why": "Means of transport takes en."
+  },
+  {
+   "wrong": "Ayer viaje a Texas.",
+   "right": "Ayer viajé a Texas.",
+   "why": "Preterite yo needs the accent: viajé."
+  },
+  {
+   "wrong": "Hicimos un viajar.",
+   "right": "Hicimos un viaje.",
+   "why": "The noun is el viaje; viajar is the verb."
+  }
+ ],
+ "heritage": "Heritage speakers often use «viajar» and «ir» interchangeably. In formal writing, check the prepositions (a for destination, en for transport) and the accents in «viajé» and «viajó». «Tomar un viaje» is an English calque; say «hacer un viaje».",
+ "teacher": "Have each student plan a dream trip with viajar a, en and por, then tell a real past trip with the preterite. Classmates ask one follow-up question each.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish verb viajar». 1 of them asks for conjugation, charts or tenses (conjugation). Some suggestions ask what viajar means in English, so the meaning and the noun viaje are both here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

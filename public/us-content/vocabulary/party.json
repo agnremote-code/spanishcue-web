@@ -1,0 +1,369 @@
+{
+ "level": "A1",
+ "theme": "party",
+ "themeLabel": "Party",
+ "title": "Spanish Party Vocabulary: Words and Phrases for Celebrations",
+ "description": "Spanish party vocabulary: decorations, food, invitations and party phrases, with a practice quiz that corrects itself and a short A1 reading about a surprise party.",
+ "h1": "Spanish party vocabulary",
+ "titleEs": "Una fiesta sorpresa para la abuela",
+ "focus": "ir a + infinitive, party words",
+ "intro": "Learn the Spanish words for planning a party, the food and decorations, and the phrases people say, practice them with instant feedback, then help plan a surprise party in Los Angeles.",
+ "paragraphs": [
+  "La abuela Teresa va a cumplir ochenta años el sábado. Sus nietos, que viven en Los Ángeles, quieren organizar una fiesta sorpresa. Ella no sabe nada.",
+  "Paola, la nieta mayor, manda las invitaciones por mensaje a toda la familia. Su hermano Andrés va a comprar los globos y las velas. La tía Gloria va a preparar tamales y un pastel de tres leches, el favorito de la abuela.",
+  "El sábado, a las seis, todos esperan en silencio en la casa de Paola. Andrés trae a la abuela con una excusa: «Vamos a ver unas fotos». Cuando ella abre la puerta, todos gritan: «¡Sorpresa!». La abuela se lleva las manos a la cara y empieza a llorar de alegría.",
+  "Después cantan «Las mañanitas», la abuela sopla las velas y todos bailan. Ella dice que es el mejor cumpleaños de sus ochenta años."
+ ],
+ "glossary": [
+  [
+   "cumplir años",
+   "to turn (an age)"
+  ],
+  [
+   "no sabe nada",
+   "doesn't know anything"
+  ],
+  [
+   "el mensaje",
+   "text message"
+  ],
+  [
+   "el tres leches",
+   "three-milk cake"
+  ],
+  [
+   "la excusa",
+   "excuse"
+  ],
+  [
+   "llevarse las manos a la cara",
+   "to put her hands to her face"
+  ],
+  [
+   "soplar",
+   "to blow out"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La abuela Teresa va a cumplir ",
+   "after": " años.",
+   "options": [
+    "ochenta",
+    "setenta",
+    "noventa"
+   ],
+   "answer": 0,
+   "why": "She is turning eighty."
+  },
+  {
+   "before": "Paola manda las invitaciones ",
+   "after": ".",
+   "options": [
+    "por mensaje",
+    "por correo",
+    "en papel"
+   ],
+   "answer": 0,
+   "why": "By text message."
+  },
+  {
+   "before": "Andrés va a comprar ",
+   "after": ".",
+   "options": [
+    "los globos y las velas",
+    "el pastel",
+    "los tamales"
+   ],
+   "answer": 0,
+   "why": "Balloons and candles."
+  },
+  {
+   "before": "El pastel favorito de la abuela es el de ",
+   "after": ".",
+   "options": [
+    "tres leches",
+    "chocolate",
+    "fresa"
+   ],
+   "answer": 0,
+   "why": "Tres leches cake."
+  },
+  {
+   "before": "Andrés trae a la abuela diciendo que van a ",
+   "after": ".",
+   "options": [
+    "ver unas fotos",
+    "cenar",
+    "ir al cine"
+   ],
+   "answer": 0,
+   "why": "His excuse: looking at photos."
+  },
+  {
+   "before": "Cuando todos gritan «¡Sorpresa!», la abuela ",
+   "after": ".",
+   "options": [
+    "llora de alegría",
+    "se enoja",
+    "se va"
+   ],
+   "answer": 0,
+   "why": "She cries with joy."
+  }
+ ],
+ "grammar": {
+  "title": "Plans: ir a + infinitive",
+  "intro": "To say what someone is going to do: voy a comprar, va a preparar, vamos a bailar.",
+  "items": [
+   {
+    "before": "La tía ",
+    "after": " a preparar los tamales.",
+    "options": [
+     "va",
+     "vas",
+     "van"
+    ],
+    "answer": 0,
+    "why": "Ella: va a + infinitive."
+   },
+   {
+    "before": "Nosotros vamos a ",
+    "after": " la casa con globos.",
+    "options": [
+     "decorar",
+     "decoramos",
+     "decorando"
+    ],
+    "answer": 0,
+    "why": "After vamos a, the infinitive."
+   },
+   {
+    "before": "¿Tú ",
+    "after": " a venir a la fiesta?",
+    "options": [
+     "vas",
+     "va",
+     "voy"
+    ],
+    "answer": 0,
+    "why": "Tú: vas a + infinitive."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Cómo celebras tu cumpleaños?",
+  "Planea una fiesta: qué comida, qué música y a quién vas a invitar.",
+  "Describe la mejor fiesta en la que has estado."
+ ],
+ "heritage": "If your family sings «Las mañanitas» or breaks a piñata at birthdays, use those examples in class. In writing, «cumpleaños» is the same in singular and plural («el cumpleaños», «los cumpleaños»), and «pastel», «torta» and «queque» all mean cake depending on the country.",
+ "teacher": "Have groups plan a class party in Spanish: they write the invitation, the shopping list and the schedule with ir a + infinitive.",
+ "vocabulary": [
+  {
+   "title": "Planning",
+   "words": [
+    [
+     "la fiesta",
+     "party"
+    ],
+    [
+     "la invitación",
+     "invitation"
+    ],
+    [
+     "invitar",
+     "to invite"
+    ],
+    [
+     "el invitado / la invitada",
+     "guest"
+    ],
+    [
+     "la fiesta sorpresa",
+     "surprise party"
+    ],
+    [
+     "organizar",
+     "to organize"
+    ],
+    [
+     "celebrar",
+     "to celebrate"
+    ],
+    [
+     "el cumpleaños",
+     "birthday"
+    ]
+   ]
+  },
+  {
+   "title": "Food and decorations",
+   "words": [
+    [
+     "el pastel / la torta",
+     "cake"
+    ],
+    [
+     "las velas",
+     "candles"
+    ],
+    [
+     "los globos",
+     "balloons"
+    ],
+    [
+     "la piñata",
+     "piñata"
+    ],
+    [
+     "los dulces",
+     "candy"
+    ],
+    [
+     "los refrescos",
+     "soft drinks"
+    ],
+    [
+     "la música",
+     "music"
+    ],
+    [
+     "el regalo",
+     "present"
+    ]
+   ]
+  },
+  {
+   "title": "Party phrases",
+   "words": [
+    [
+     "¡Feliz cumpleaños!",
+     "Happy birthday!"
+    ],
+    [
+     "¡Sorpresa!",
+     "Surprise!"
+    ],
+    [
+     "¡Salud!",
+     "Cheers!"
+    ],
+    [
+     "¡Que cumplas muchos más!",
+     "Many happy returns!"
+    ],
+    [
+     "¿Quieres bailar?",
+     "Do you want to dance?"
+    ],
+    [
+     "Gracias por venir",
+     "Thanks for coming"
+    ],
+    [
+     "¡Qué buena fiesta!",
+     "What a great party!"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "En el pastel ponemos quince ",
+   "after": ".",
+   "options": [
+    "velas",
+    "globos",
+    "piñatas"
+   ],
+   "answer": 0,
+   "why": "Candles go on the cake."
+  },
+  {
+   "before": "Los niños rompen la ",
+   "after": " y caen dulces.",
+   "options": [
+    "piñata",
+    "invitación",
+    "vela"
+   ],
+   "answer": 0,
+   "why": "A piñata breaks and candy falls out."
+  },
+  {
+   "before": "Mandamos una ",
+   "after": " a todos los amigos.",
+   "options": [
+    "invitación",
+    "sorpresa",
+    "torta"
+   ],
+   "answer": 0,
+   "why": "You send an invitation."
+  },
+  {
+   "before": "Cuando entra Ana, todos gritan: «¡",
+   "after": "!»",
+   "options": [
+    "Sorpresa",
+    "Salud",
+    "Gracias"
+   ],
+   "answer": 0,
+   "why": "A surprise party: ¡Sorpresa!"
+  },
+  {
+   "before": "Antes de beber, levantamos los vasos y decimos: «¡",
+   "after": "!»",
+   "options": [
+    "Salud",
+    "Feliz cumpleaños",
+    "Sorpresa"
+   ],
+   "answer": 0,
+   "why": "A toast: ¡Salud!"
+  },
+  {
+   "before": "La casa está decorada con ",
+   "after": " de colores.",
+   "options": [
+    "globos",
+    "refrescos",
+    "invitados"
+   ],
+   "answer": 0,
+   "why": "Balloons decorate the room."
+  },
+  {
+   "before": "Al final, la cumpleañera dice: «Gracias por ",
+   "after": "».",
+   "options": [
+    "venir",
+    "comer",
+    "invitar"
+   ],
+   "answer": 0,
+   "why": "Gracias por venir: thanks for coming."
+  },
+  {
+   "before": "Hay cuarenta ",
+   "after": " en la fiesta.",
+   "options": [
+    "invitados",
+    "regalos de vela",
+    "pasteles"
+   ],
+   "answer": 0,
+   "why": "Guests: invitados."
+  }
+ ],
+ "demand": {
+  "query": "spanish party vocab",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish party vocabulary». One asks for party phrases, so the list ends with what people actually say at a celebration.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,361 @@
+{
+ "theme": "unit-3",
+ "unitName": "Art and Creativity",
+ "level": "B1",
+ "title": "AP Spanish Art and Creativity (Unit 3): Vocabulary and Practice",
+ "description": "AP Spanish Unit 3, Art and Creativity: vocabulary for art and music, an original reading, an essay prompt and Q&A questions. The 2026-27 project uses music.",
+ "h1": "AP Spanish Art and Creativity (Unit 3)",
+ "intro": "Unit 3 is about how people create: painting, architecture, fashion, literature and music. It matters twice this year, because the 2026-27 course project comes from this unit. Below are the vocabulary, an original text about a youth band, an essay prompt and four questions to answer aloud.",
+ "demand": {
+  "query": "ap spanish beauty and aesthetics",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127.csv",
+  "date": "2026-11-27"
+ },
+ "overview": {
+  "heading": "What Unit 3 covers",
+  "paragraphs": [
+   "Art and Creativity asks what makes something beautiful, who decides, and what art does for a community. Beauty and Aesthetics, a theme name many students still search for, is now one of the recommended contexts of this unit.",
+   "College Board says the 2026-27 course project is drawn from this unit and uses music as its lens. The project packet comes out in January of the exam year, so the vocabulary below includes a group of music words you can reuse in the Project Presentation and the Q&A."
+  ]
+ },
+ "contexts": [
+  "Architecture",
+  "Artistic Heritage",
+  "Beauty and Aesthetics",
+  "Fashion and Design",
+  "Literature",
+  "Visual and Performing Arts"
+ ],
+ "vocabulary": [
+  {
+   "title": "Art and beauty",
+   "words": [
+    [
+     "la obra de arte",
+     "work of art"
+    ],
+    [
+     "el mural",
+     "mural"
+    ],
+    [
+     "la estética",
+     "aesthetics"
+    ],
+    [
+     "el canon de belleza",
+     "beauty standard"
+    ],
+    [
+     "la vanguardia",
+     "avant-garde"
+    ],
+    [
+     "el patrimonio artístico",
+     "artistic heritage"
+    ],
+    [
+     "la artesanía",
+     "handicrafts"
+    ],
+    [
+     "inspirarse en",
+     "to be inspired by"
+    ]
+   ]
+  },
+  {
+   "title": "Music",
+   "words": [
+    [
+     "el ritmo",
+     "rhythm"
+    ],
+    [
+     "la letra",
+     "lyrics"
+    ],
+    [
+     "el género musical",
+     "music genre"
+    ],
+    [
+     "la fusión",
+     "fusion"
+    ],
+    [
+     "el instrumento de viento",
+     "wind instrument"
+    ],
+    [
+     "la gira",
+     "tour"
+    ],
+    [
+     "componer",
+     "to compose"
+    ],
+    [
+     "grabar un disco",
+     "to record an album"
+    ],
+    [
+     "el público",
+     "audience"
+    ]
+   ]
+  },
+  {
+   "title": "Opinion and critique",
+   "words": [
+    [
+     "conmover",
+     "to move (emotionally)"
+    ],
+    [
+     "provocar",
+     "to provoke"
+    ],
+    [
+     "la crítica",
+     "review, criticism"
+    ],
+    [
+     "lo comercial",
+     "commercial (music, art)"
+    ],
+    [
+     "auténtico",
+     "authentic"
+    ],
+    [
+     "la apropiación cultural",
+     "cultural appropriation"
+    ],
+    [
+     "valorar",
+     "to value"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Diego Rivera pintó un ",
+   "after": " enorme en una pared del Palacio Nacional.",
+   "options": [
+    "mural",
+    "ritmo",
+    "público"
+   ],
+   "answer": 0,
+   "why": "A mural is a painting made directly on a wall."
+  },
+  {
+   "before": "La canción tiene buena música, pero la ",
+   "after": " no dice nada interesante.",
+   "options": [
+    "letra",
+    "gira",
+    "artesanía"
+   ],
+   "answer": 0,
+   "why": "La letra is the words of a song."
+  },
+  {
+   "before": "La banda mezcla cumbia con música electrónica: es una ",
+   "after": ".",
+   "options": [
+    "fusión",
+    "crítica",
+    "vanguardia"
+   ],
+   "answer": 0,
+   "why": "Fusión is a mix of two or more genres."
+  },
+  {
+   "before": "Las revistas imponen un ",
+   "after": " que casi nadie puede alcanzar.",
+   "options": [
+    "canon de belleza",
+    "instrumento de viento",
+    "disco"
+   ],
+   "answer": 0,
+   "why": "Canon de belleza is a standard of beauty set by society or the media."
+  },
+  {
+   "before": "La quena es un ",
+   "after": " típico de los Andes.",
+   "options": [
+    "instrumento de viento",
+    "género musical",
+    "mural"
+   ],
+   "answer": 0,
+   "why": "The quena is a flute, so it is a wind instrument."
+  },
+  {
+   "before": "Algunos critican a la diseñadora por ",
+   "after": " al copiar bordados indígenas sin dar crédito.",
+   "options": [
+    "apropiación cultural",
+    "patrimonio artístico",
+    "estética"
+   ],
+   "answer": 0,
+   "why": "Apropiación cultural is using another culture's elements without credit or respect."
+  },
+  {
+   "before": "Su música me ",
+   "after": " tanto que lloré en el concierto.",
+   "options": [
+    "conmovió",
+    "compuso",
+    "grabó"
+   ],
+   "answer": 0,
+   "why": "Conmover is to move someone emotionally."
+  },
+  {
+   "before": "El grupo saldrá de ",
+   "after": " por diez ciudades de Sudamérica.",
+   "options": [
+    "gira",
+    "letra",
+    "crítica"
+   ],
+   "answer": 0,
+   "why": "Salir de gira is to go on tour."
+  }
+ ],
+ "reading": {
+  "titleEs": "Una quena en el estudio de grabación",
+  "intro": "An original text written for this page, at about B1. The band is fictional.",
+  "paragraphs": [
+   "En un barrio de Lima, cinco estudiantes de secundaria formaron una banda que nadie sabía cómo clasificar. Valeria toca la quena que le regaló su abuelo, un músico de Cusco. Andrés programa ritmos electrónicos en una computadora vieja. Los demás tocan el cajón, el bajo y la guitarra. Llamaron al grupo «Altura» porque, según ellos, su música viene de las montañas pero vive en la ciudad.",
+   "Al principio ensayaban en la azotea de un edificio y subían videos a internet. Las reacciones fueron mezcladas. Muchos jóvenes celebraron que alguien de su edad tocara instrumentos andinos sin vergüenza. Otros, en cambio, los acusaron de convertir una tradición sagrada en música para bailar. Un comentario se repetía: «Eso no es auténtico».",
+   "La pregunta les dolió, pero también los hizo pensar. Valeria visitó a su abuelo para preguntarle qué opinaba. Él se rió y le contó que en los años setenta lo criticaban por tocar la quena con guitarras eléctricas. «Toda la música que hoy llamamos tradicional fue nueva alguna vez», le dijo. Lo importante, según él, era conocer el origen de cada melodía y respetarlo.",
+   "Desde entonces, la banda presenta cada canción explicando de dónde viene: un huayno de Ayacucho, una danza de carnaval, un canto de cosecha. En sus conciertos el público baila, pero también aprende. El año pasado ganaron un concurso de música joven y grabaron su primer disco con apoyo de una biblioteca municipal.",
+   "Ahora una empresa quiere usar una de sus canciones en un anuncio de refrescos y les ofrece bastante dinero. La banda está dividida. Andrés cree que es la oportunidad de llegar a más gente. Valeria teme que la canción pierda su significado si se asocia con una marca. Todavía no han decidido."
+  ],
+  "comprehension": [
+   {
+    "before": "Valeria toca una quena que ",
+    "after": ".",
+    "options": [
+     "le regaló su abuelo",
+     "compró en Lima",
+     "le prestó Andrés"
+    ],
+    "answer": 0,
+    "why": "Her grandfather, a musician from Cusco, gave it to her."
+   },
+   {
+    "before": "El grupo se llama «Altura» porque su música ",
+    "after": ".",
+    "options": [
+     "viene de las montañas pero vive en la ciudad",
+     "se toca en azoteas",
+     "es muy alta"
+    ],
+    "answer": 0,
+    "why": "That is the explanation the band gives for the name."
+   },
+   {
+    "before": "Algunos críticos acusaron a la banda de ",
+    "after": ".",
+    "options": [
+     "convertir una tradición sagrada en música para bailar",
+     "copiar a otra banda",
+     "cantar en inglés"
+    ],
+    "answer": 0,
+    "why": "The criticism was about turning a sacred tradition into dance music."
+   },
+   {
+    "before": "Según el abuelo, toda la música tradicional ",
+    "after": ".",
+    "options": [
+     "fue nueva alguna vez",
+     "es sagrada",
+     "es de Cusco"
+    ],
+    "answer": 0,
+    "why": "His point: what we call traditional was once new."
+   },
+   {
+    "before": "Después de la conversación con el abuelo, la banda ",
+    "after": ".",
+    "options": [
+     "explica el origen de cada canción",
+     "deja la quena",
+     "sube menos videos"
+    ],
+    "answer": 0,
+    "why": "They now present each song with its origin."
+   },
+   {
+    "before": "Valeria no quiere vender la canción porque teme que ",
+    "after": ".",
+    "options": [
+     "pierda su significado",
+     "no paguen",
+     "Andrés se vaya"
+    ],
+    "answer": 0,
+    "why": "She fears the song would lose its meaning if tied to a brand."
+   }
+  ]
+ },
+ "essay": {
+  "prompt": "¿Deberían los artistas jóvenes aceptar que sus canciones se usen en publicidad?",
+  "sideA": "Sí: la publicidad paga, da visibilidad y permite seguir creando sin depender de nadie.",
+  "sideB": "No: cuando una canción se asocia con una marca pierde parte de su significado y de su autenticidad.",
+  "outline": [
+   "Introduction: present the dilemma with a concrete example and give your answer.",
+   "Paragraph 2: money and independence; cite the source with data on how musicians earn a living.",
+   "Paragraph 3: meaning and authenticity; cite the audio interview and quote one short phrase.",
+   "Paragraph 4: propose a condition (for example, only if the artist approves the ad) and explain why it balances both sides.",
+   "Conclusion: what this decision says about art and community."
+  ],
+  "phrases": [
+   [
+    "Desde mi punto de vista,…",
+    "From my point of view,…"
+   ],
+   [
+    "Resulta evidente que…",
+    "It is clear that…"
+   ],
+   [
+    "Sin embargo,…",
+    "However,…"
+   ],
+   [
+    "A pesar de que + indicativo,…",
+    "Despite the fact that…"
+   ],
+   [
+    "Siempre y cuando + subjuntivo",
+    "As long as…"
+   ],
+   [
+    "Para concluir,…",
+    "To conclude,…"
+   ]
+  ]
+ },
+ "speaking": [
+  "¿Qué canción en español te gusta y qué te hace sentir?",
+  "¿Crees que la música tradicional debe cambiar con el tiempo o conservarse igual?",
+  "Describe una obra de arte de un país hispanohablante que te haya impresionado.",
+  "¿Qué papel tiene la música en las celebraciones de tu comunidad?"
+ ],
+ "heritage": "If you grew up with música regional, salsa, bachata or reggaetón at home, you already have examples for the project. Turn that knowledge into exam Spanish: name the genre, the region it comes from and one artist, and use precise verbs such as «componer», «interpretar» and «grabar» instead of «hacer música».",
+ "teacher": "Since the 2026-27 project uses music as its lens, let students bring one song in Spanish each and present its origin in ninety seconds. It rehearses the Project Presentation format early.",
+ "figure": {
+  "text": "On 27 November 2026, the only suggestion Google showed people in the United States for «ap spanish beauty and aesthetics» was the phrase itself. That is a theme name from the previous course; in the framework effective fall 2026 it lives on as a context inside this unit.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

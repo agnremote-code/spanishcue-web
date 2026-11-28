@@ -1,0 +1,278 @@
+{
+ "verb": "quedar",
+ "meaning": "to stay, to remain, to be left, to fit",
+ "level": "A2",
+ "title": "Spanish Verb Quedar and Quedarse Practice: Meanings and Quiz",
+ "description": "Practice the Spanish verbs quedar and quedarse: to stay, to be left, to fit and to meet up, with present and preterite forms, ten questions and a reading.",
+ "h1": "Spanish verb quedar: practice",
+ "intro": "Quedar has several everyday meanings: something is left (queda leche), clothes fit (te queda bien), and with a pronoun, quedarse means to stay. Learn the forms and the meanings, then practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb quedar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "Quedarse: to stay",
+   "example": "Hoy me quedo en casa.",
+   "meaning": "I'm staying home today."
+  },
+  {
+   "use": "To be left, to remain",
+   "example": "Solo queda un pedazo de pizza.",
+   "meaning": "There's only one slice of pizza left."
+  },
+  {
+   "use": "To fit or suit: quedar bien / mal",
+   "example": "Esa camisa te queda muy bien.",
+   "meaning": "That shirt looks great on you."
+  },
+  {
+   "use": "To arrange to meet: quedar con",
+   "example": "Quedé con Marta a las seis.",
+   "meaning": "I arranged to meet Marta at six."
+  },
+  {
+   "use": "Location: quedar en",
+   "example": "La biblioteca queda cerca del parque.",
+   "meaning": "The library is near the park."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "quedo"
+  ],
+  [
+   "tú",
+   "quedas"
+  ],
+  [
+   "él / ella / usted",
+   "queda"
+  ],
+  [
+   "nosotros / nosotras",
+   "quedamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "quedan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "quedé"
+  ],
+  [
+   "tú",
+   "quedaste"
+  ],
+  [
+   "él / ella / usted",
+   "quedó"
+  ],
+  [
+   "nosotros / nosotras",
+   "quedamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "quedaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Este fin de semana me ",
+   "after": " en casa porque llueve.",
+   "options": [
+    "quedo",
+    "queda",
+    "quedan"
+   ],
+   "answer": 0,
+   "why": "Yo me quedo: reflexive quedarse for staying."
+  },
+  {
+   "before": "¿Cuántos días te ",
+   "after": " en Puerto Rico?",
+   "options": [
+    "quedas",
+    "quedan",
+    "queda"
+   ],
+   "answer": 0,
+   "why": "Tú te quedas."
+  },
+  {
+   "before": "No ",
+   "after": " huevos en el refrigerador.",
+   "options": [
+    "quedan",
+    "queda",
+    "quedamos"
+   ],
+   "answer": 0,
+   "why": "Plural subject huevos: quedan."
+  },
+  {
+   "before": "Esos zapatos te ",
+   "after": " grandes.",
+   "options": [
+    "quedan",
+    "queda",
+    "quedas"
+   ],
+   "answer": 0,
+   "why": "The shoes are the subject: quedan."
+  },
+  {
+   "before": "La farmacia ",
+   "after": " en la esquina.",
+   "options": [
+    "queda",
+    "se queda",
+    "quedan"
+   ],
+   "answer": 0,
+   "why": "Location: la farmacia queda en."
+  },
+  {
+   "before": "Anoche nos ",
+   "after": " en un hotel junto al aeropuerto.",
+   "options": [
+    "quedamos",
+    "quedaron",
+    "quedé"
+   ],
+   "answer": 0,
+   "why": "Preterite nosotros: nos quedamos."
+  },
+  {
+   "before": "Mi primo se ",
+   "after": " dormido en el sofá.",
+   "options": [
+    "quedó",
+    "quedo",
+    "quedé"
+   ],
+   "answer": 0,
+   "why": "Preterite él: se quedó, with the accent."
+  },
+  {
+   "before": "¿Por qué no te ",
+   "after": " a la fiesta?",
+   "options": [
+    "quedaste",
+    "quedastes",
+    "quedabas una vez"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: quedaste, without a final s."
+  },
+  {
+   "before": "Después del examen, solo nos ",
+   "after": " diez minutos.",
+   "options": [
+    "quedaron",
+    "quedó",
+    "quedamos de"
+   ],
+   "answer": 0,
+   "why": "Diez minutos is plural: quedaron."
+  },
+  {
+   "before": "Ayer ",
+   "after": " con mis amigas para estudiar.",
+   "options": [
+    "quedé",
+    "me quedé con",
+    "quedo"
+   ],
+   "answer": 0,
+   "why": "Quedar con: to arrange to meet someone."
+  }
+ ],
+ "reading": {
+  "titleEs": "El vestido que no quedaba",
+  "paragraphs": [
+   "Faltaba una semana para la quinceañera de Valeria, y el vestido no le quedaba bien: le quedaba largo y apretado. La modista del barrio, doña Rosa, dijo que no quedaba tiempo para hacer uno nuevo, pero que podía arreglarlo.",
+   "Valeria se quedó tres tardes en el taller viendo trabajar a doña Rosa. Aprendió a tomar medidas y a coser un dobladillo. El día de la fiesta, el vestido le quedó perfecto, y Valeria ya tiene un plan: quedarse los sábados en el taller para aprender el oficio."
+  ],
+  "comprehension": [
+   {
+    "before": "Al principio, el vestido le quedaba ",
+    "after": ".",
+    "options": [
+     "largo y apretado",
+     "corto y ancho",
+     "perfecto"
+    ],
+    "answer": 0,
+    "why": "The text says it was long and tight."
+   },
+   {
+    "before": "Doña Rosa trabaja como ",
+    "after": ".",
+    "options": [
+     "modista",
+     "maestra",
+     "cocinera"
+    ],
+    "answer": 0,
+    "why": "She is the neighborhood dressmaker."
+   },
+   {
+    "before": "Valeria pasó tres tardes ",
+    "after": ".",
+    "options": [
+     "en el taller",
+     "en la escuela",
+     "en el centro comercial"
+    ],
+    "answer": 0,
+    "why": "She stayed at the workshop."
+   },
+   {
+    "before": "Ahora Valeria quiere ",
+    "after": ".",
+    "options": [
+     "aprender a coser",
+     "comprar otro vestido",
+     "cambiar de fiesta"
+    ],
+    "answer": 0,
+    "why": "She plans to learn the trade on Saturdays."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo quedo en casa hoy.",
+   "right": "Yo me quedo en casa hoy.",
+   "why": "To stay is quedarse, so it needs the pronoun."
+  },
+  {
+   "wrong": "La camisa me queda bueno.",
+   "right": "La camisa me queda bien.",
+   "why": "With quedar for fit, use the adverb bien, not bueno."
+  },
+  {
+   "wrong": "Me quedan la pizza.",
+   "right": "Me queda la pizza.",
+   "why": "Quedar agrees with what is left: one pizza, queda."
+  },
+  {
+   "wrong": "Quedé en Marta a las seis.",
+   "right": "Quedé con Marta a las seis.",
+   "why": "To meet someone is quedar con."
+  }
+ ],
+ "heritage": "Heritage speakers often use quedar naturally for location and fit. The point to check in writing is the reflexive: «me quedé en casa» for staying, and «quedé con» for plans. In the US you may also hear «quedar» for «to be left over» in money: «me quedan veinte dólares».",
+ "teacher": "Run a short role play in a clothing store: one student tries on items and the other says ¿Cómo te queda? Then switch to a hotel desk with ¿Cuántas noches se queda?",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb quedar». Two ask for quedarse, so the reflexive meaning gets its own uses and questions here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
