@@ -2,7 +2,7 @@
 // Short-video factory: script → native voices (Edge TTS) → 1080x1920 MP4 with captions,
 // a 3D-class background clip and the free page URL on screen.
 //
-//   node scripts/shorts/build.mjs --out <dir> --clips <dir with 3D clips> [--only id,id] [--limit n]
+//   node scripts/shorts/build.mjs --series ser-estar|por-para --out <dir> --clips <dir with 3D clips> [--only id,id] [--limit n]
 //
 // Needs: ffmpeg, `edge-tts` (pip), Playwright with Chromium. Writes <out>/<id>.mp4 and <out>/manifest.json
 // (title, description with UTM link, tags) for the uploader.
@@ -12,6 +12,9 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createRequire } from "node:module";
 import { serEstarShorts } from "./ser-estar.mjs";
+import { porParaShorts } from "./por-para.mjs";
+
+const SERIES = { "ser-estar": serEstarShorts, "por-para": porParaShorts };
 
 const here = dirname(fileURLToPath(import.meta.url));
 const repo = resolve(here, "../..");
@@ -67,16 +70,18 @@ function cards(s) {
   const top = `<div class="top">SPANISH IN 30 SECONDS</div>`;
   const brand = `<div class="brand">SPANISHCUE</div>`;
   const mascot = `<img class="mascot" src="data:image/webp;base64,${readFileSync(join(repo, "public/brand/mascot/pointing.webp")).toString("base64")}">`;
-  const q = s.quiz.ex;
-  const opts = (reveal) => `<div class="opts"><div class="${reveal && q.verb === "ser" ? "ok" : ""}">SER</div><div class="${reveal && q.verb === "estar" ? "ok" : ""}">ESTAR</div></div>`;
-  return {
-    hook: `${top}<div class="card" style="text-align:center"><div class="big">${esc(s.hook.big[0])}</div><div class="vs">≠</div><div class="big">${esc(s.hook.big[1])}</div></div>${brand}`,
-    ser: `${top}<div class="card"><span class="tag ser">SER</span><div class="eq">${esc(s.hook.big[0].split(" ")[1])} = <em>${esc(s.ser.gloss)}</em></div><div class="ex">${mark(s.ser.ex.full, s.ser.ex.form)}</div></div>${brand}`,
-    estar: `${top}<div class="card"><span class="tag estar">ESTAR</span><div class="eq">${esc(s.hook.big[1].split(" ")[1])} = <em>${esc(s.estar.gloss)}</em></div><div class="ex">${mark(s.estar.ex.full, s.estar.ex.form)}</div></div>${brand}`,
-    quiz: `${top}<div class="card"><span class="tag q">YOUR TURN</span><div class="gap">${esc(q.gap).replace("___", '<span class="blank"></span>')}</div>${opts(false)}</div>${brand}`,
-    answer: `${top}<div class="card"><span class="tag q">ANSWER</span><div class="gap">${mark(q.full, q.form)}</div>${opts(true)}</div>${brand}`,
-    cta: `${top}<div class="card" style="right:70px"><div class="small">Free practice quiz</div><div class="url">spanishcue.com<br>${esc(s.path)}</div><div class="small">Teachers: ready-made Spanish classes</div></div>${mascot}${brand}`,
+  const q = s.quiz;
+  const opts = (reveal) => `<div class="opts">${q.options.map((o, i) => `<div class="${reveal && i === q.answer ? "ok" : ""}">${esc(o)}</div>`).join("")}</div>`;
+  const out = {
+    hook: `${top}<div class="card" style="text-align:center"><div class="big">${esc(s.hook.lines[0])}</div><div class="vs">${esc(s.hook.sep)}</div><div class="big">${esc(s.hook.lines[1])}</div></div>${brand}`,
   };
+  s.teach.forEach((t, i) => {
+    out[`teach${i}`] = `${top}<div class="card"><span class="tag ${t.tagClass}">${esc(t.tag)}</span><div class="eq">${esc(t.eq[0])} = <em>${esc(t.eq[1])}</em></div><div class="ex">${mark(t.ex.full, t.ex.form)}</div></div>${brand}`;
+  });
+  out.quiz = `${top}<div class="card"><span class="tag q">YOUR TURN</span><div class="gap">${esc(q.gap).replace("___", '<span class="blank"></span>')}</div>${opts(false)}</div>${brand}`;
+  out.answer = `${top}<div class="card"><span class="tag q">ANSWER</span><div class="gap">${mark(q.full, q.form)}</div>${opts(true)}</div>${brand}`;
+  out.cta = `${top}<div class="card" style="right:70px"><div class="small">Free practice quiz</div><div class="url">spanishcue.com<br>${esc(s.path)}</div><div class="small">Teachers: ready-made Spanish classes</div></div>${mascot}${brand}`;
+  return out;
 }
 
 async function renderPngs(page, s, dir) {
@@ -91,13 +96,11 @@ async function renderPngs(page, s, dir) {
 /** Scenes: [card, [[text, voice], ...], minimum seconds on screen]. Only native Spanish voices speak
  *  (Ale rejected English/American TTS voices); English lives on screen. */
 function scenes(s) {
-  const qv = s.quiz.ex.voice || "f";
   return [
     ["hook", [[s.hook.say, "f"]], 2.6],
-    ["ser", [[s.ser.ex.full, s.ser.ex.voice || "f"]], 5.2],
-    ["estar", [[s.estar.ex.full, s.estar.ex.voice || "m"]], 5.2],
+    ...s.teach.map((t, i) => [`teach${i}`, [[t.ex.full, t.ex.voice || (i % 2 ? "m" : "f")]], 5.2]),
     ["quiz", [[s.quiz.say, "m"]], 4.2],
-    ["answer", [["__ding__", null], [s.quiz.ex.full, qv]], 4.2],
+    ["answer", [["__ding__", null], [s.quiz.full, s.quiz.voice || "f"]], 4.2],
     ["cta", [[s.cta.say, "m"]], 4.0],
   ];
 }
@@ -141,23 +144,23 @@ function buildOne(s, clip) {
 
 function meta(s) {
   const utm = `https://spanishcue.com${s.path}?utm_source=youtube&utm_medium=shorts&utm_campaign=shorts-${s.series}&utm_content=${s.id}`;
-  const a = s.hook.big[0].split(" ")[1];
   return {
     id: s.id,
     title: s.title,
     description: [
-      `SER ${a} = ${s.ser.gloss}. ESTAR ${a} = ${s.estar.gloss}.`,
-      `${s.ser.ex.full}\n${s.estar.ex.full}`,
+      ...s.meta.lines,
       `Free practice quiz: ${utm}`,
       `Spanish teachers: ready-to-teach classes at https://spanishcue.com/?utm_source=youtube&utm_medium=shorts&utm_campaign=shorts-${s.series}`,
-      `#spanish #learnspanish #serVsEstar #spanishgrammar #español #shorts`,
+      s.meta.hashtags,
     ].join("\n\n"),
-    tags: ["learn spanish", "ser vs estar", `ser ${a}`, `estar ${a}`, "spanish grammar", "spanish lesson", "español"],
+    tags: s.meta.tags,
     link: utm,
   };
 }
 
-const all = serEstarShorts(repo);
+const series = String(args.series || "ser-estar");
+if (!SERIES[series]) throw new Error(`--series must be one of ${Object.keys(SERIES).join(", ")}`);
+const all = SERIES[series](repo);
 const only = args.only ? String(args.only).split(",") : null;
 const list = all.filter((s) => !only || only.includes(s.id)).slice(0, args.limit ? Number(args.limit) : undefined);
 const clips = CLIPS ? readdirSync(CLIPS).filter((f) => f.endsWith(".mp4")).sort().map((f) => join(CLIPS, f)) : [];

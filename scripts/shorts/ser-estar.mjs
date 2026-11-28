@@ -65,17 +65,25 @@ export function serEstarShorts(repoRoot) {
     const quiz = filled.find((f) => f !== serEx && f !== estarEx && notYo(f)) || filled.find((f) => f !== serEx && f !== estarEx);
     const [gSer, gEstar] = GLOSS[a.adj];
     const path = `/ser-o-estar/${a.slug}`;
+    const q = quiz;
     return {
       id: `ser-estar-${a.slug}`,
       series: "ser-estar",
       index: i,
       path,
       title: `SER ${a.adj} vs ESTAR ${a.adj} | Spanish in 30 seconds`,
-      hook: { big: [`SER ${a.adj}`, `ESTAR ${a.adj}`], say: `¿Ser ${a.adj} o estar ${a.adj}?` },
-      ser: { gloss: gSer, ex: serEx, say: `With ser, ${a.adj} means: ${gSer.replace(/\(.*?\)/g, "").trim()}.` },
-      estar: { gloss: gEstar, ex: estarEx, say: `With estar, it means: ${gEstar.replace(/\(.*?\)/g, "").trim()}.` },
-      quiz: { ex: quiz, say: "¿Ser o estar?" },
-      cta: { say: "Practica gratis en SpanishCue.", url: `spanishcue.com${path}` },
+      hook: { lines: [`SER ${a.adj}`, `ESTAR ${a.adj}`], sep: "≠", say: `¿Ser ${a.adj} o estar ${a.adj}?` },
+      teach: [
+        { tag: "SER", tagClass: "ser", eq: [a.adj, gSer], ex: serEx },
+        { tag: "ESTAR", tagClass: "estar", eq: [a.adj, gEstar], ex: estarEx },
+      ],
+      quiz: { gap: q.gap, options: ["SER", "ESTAR"], answer: q.verb === "ser" ? 0 : 1, full: q.full, form: q.form, voice: q.voice, say: "¿Ser o estar?" },
+      cta: { say: "Practica gratis en SpanishCue." },
+      meta: {
+        lines: [`SER ${a.adj} = ${gSer}. ESTAR ${a.adj} = ${gEstar}.`, `${serEx.full}\n${estarEx.full}`],
+        hashtags: "#spanish #learnspanish #serVsEstar #spanishgrammar #español #shorts",
+        tags: ["learn spanish", "ser vs estar", `ser ${a.adj}`, `estar ${a.adj}`, "spanish grammar", "spanish lesson", "español"],
+      },
     };
   });
 }

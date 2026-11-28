@@ -6,10 +6,11 @@ with that page's URL on screen and a UTM link in the description.
 ```
 pip install edge-tts
 TTS_CA_BUNDLE=/root/.ccr/ca-bundle.crt \   # only behind the cloud container's TLS proxy
-node scripts/shorts/build.mjs --out build/shorts --clips <dir of 1920x1080 3D-class clips> [--only id,id]
+node scripts/shorts/build.mjs --series ser-estar --out build/shorts --clips <dir of 1920x1080 3D-class clips> [--only id,id]
 ```
 
-- Series: `ser-estar.mjs` (18 adjectives that change meaning, sentences from `app/ser-o-estar/contenido.ts`).
+- Series (`--series`): `ser-estar` (18 adjectives that change meaning, from `app/ser-o-estar/contenido.ts`) and
+  `por-para` (15 uses, from `app/por-o-para/usos.ts`).
   Add a series as another module that returns the same shape and register it in `build.mjs`.
 - Voices: only native Edge voices, es-MX Dalia (female) and Jorge (male); voice gender follows the
   sentence. No English TTS: English is on-screen text only.
