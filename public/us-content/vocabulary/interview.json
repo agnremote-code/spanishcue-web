@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "interview",
+ "themeLabel": "Job interview",
+ "title": "Spanish Job Interview Vocabulary: Questions and Answers",
+ "description": "Spanish job interview vocabulary: la entrevista, el currículum, la experiencia and common questions, with a quiz and an A2 reading about a bilingual job interview.",
+ "h1": "Spanish job interview vocabulary",
+ "titleEs": "Una entrevista en el banco",
+ "focus": "usted forms and talking about experience with the preterite",
+ "intro": "Learn the Spanish words and questions for a job interview: the documents, your experience and skills, and the polite usted forms interviewers use. Practice with instant feedback, then read about an interview for a bilingual job at a bank.",
+ "paragraphs": [
+  "Karla tiene veintidós años y acaba de terminar la universidad en Houston. Ayer tuvo su primera entrevista de trabajo para un puesto de cajera bilingüe en un banco. Se preparó mucho: practicó las respuestas con su hermana y llevó dos copias de su currículum.",
+  "La entrevistadora, la señora Delgado, la saludó en inglés y luego le dijo: «Ahora vamos a hablar en español. Hábleme de usted». Karla explicó que estudió administración y que trabajó tres años en una tienda de ropa, donde atendía a clientes en inglés y en español todos los días.",
+  "Después, la señora Delgado le preguntó por sus puntos fuertes y débiles. Karla dijo que es responsable, puntual y que le gusta trabajar en equipo. Como punto débil, dijo que a veces es demasiado perfeccionista, pero que está aprendiendo a organizar mejor su tiempo.",
+  "Al final, Karla hizo dos preguntas sobre el horario y los beneficios. La señora Delgado sonrió y le dijo que pocos candidatos hacían preguntas. «¿Cuándo puede empezar?», le preguntó. Karla no lo podía creer. Esta mañana recibió un correo: el puesto es suyo y empieza en dos semanas. Lo primero que hizo fue llamar a su hermana para darle las gracias."
+ ],
+ "glossary": [
+  [
+   "acabar de",
+   "to have just"
+  ],
+  [
+   "prepararse",
+   "to get ready"
+  ],
+  [
+   "las copias",
+   "copies"
+  ],
+  [
+   "la administración",
+   "business administration"
+  ],
+  [
+   "atender a clientes",
+   "to serve customers"
+  ],
+  [
+   "perfeccionista",
+   "perfectionist"
+  ],
+  [
+   "organizar",
+   "to organize"
+  ],
+  [
+   "suyo / suya",
+   "hers, yours"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Karla tuvo una entrevista para un puesto de ",
+   "after": ".",
+   "options": [
+    "cajera bilingüe",
+    "maestra",
+    "gerente"
+   ],
+   "answer": 0,
+   "why": "Bilingual teller."
+  },
+  {
+   "before": "Para prepararse, Karla ",
+   "after": ".",
+   "options": [
+    "practicó con su hermana",
+    "no hizo nada",
+    "llamó al banco"
+   ],
+   "answer": 0,
+   "why": "She practiced with her sister."
+  },
+  {
+   "before": "Karla trabajó tres años en ",
+   "after": ".",
+   "options": [
+    "una tienda de ropa",
+    "otro banco",
+    "un restaurante"
+   ],
+   "answer": 0,
+   "why": "In a clothing store."
+  },
+  {
+   "before": "Como punto débil, Karla dijo que ",
+   "after": ".",
+   "options": [
+    "es demasiado perfeccionista",
+    "llega tarde",
+    "no habla inglés"
+   ],
+   "answer": 0,
+   "why": "She is too much of a perfectionist."
+  },
+  {
+   "before": "La entrevistadora sonrió porque Karla ",
+   "after": ".",
+   "options": [
+    "hizo preguntas",
+    "llegó temprano",
+    "habló en inglés"
+   ],
+   "answer": 0,
+   "why": "Few candidates ask questions."
+  },
+  {
+   "before": "Karla empieza a trabajar ",
+   "after": ".",
+   "options": [
+    "en dos semanas",
+    "mañana",
+    "el próximo año"
+   ],
+   "answer": 0,
+   "why": "In two weeks."
+  }
+ ],
+ "grammar": {
+  "title": "Usted in a job interview",
+  "intro": "Interviews use usted: ¿Cuál es su experiencia? Hábleme de usted. Answer politely and keep usted with the interviewer.",
+  "items": [
+   {
+    "before": "¿Por qué ",
+    "after": " trabajar con nosotros?",
+    "options": [
+     "quiere",
+     "quieres",
+     "quiero"
+    ],
+    "answer": 0,
+    "why": "Usted form: quiere."
+   },
+   {
+    "before": "Muchas gracias por ",
+    "after": " tiempo.",
+    "options": [
+     "su",
+     "tu",
+     "sus"
+    ],
+    "answer": 0,
+    "why": "Polite possessive: su tiempo."
+   },
+   {
+    "before": "—¿Tiene preguntas? —Sí, ¿me ",
+    "after": " explicar el horario?",
+    "options": [
+     "puede",
+     "puedes",
+     "pueden"
+    ],
+    "answer": 0,
+    "why": "Asking the interviewer: ¿me puede…?"
+   }
+  ]
+ },
+ "speaking": [
+  "Responde: «Hábleme de usted» en un minuto.",
+  "¿Cuáles son tus puntos fuertes y débiles?",
+  "Haz dos preguntas que te gustaría hacer en una entrevista."
+ ],
+ "heritage": "Heritage speakers often have the best asset for bilingual jobs: real fluency. Interviews may still test formal Spanish, so practice usted forms, job titles and words like «currículum», «experiencia laboral» and «atención al cliente». Avoid code-switching in the interview unless the interviewer does it first.",
+ "teacher": "Run mock interviews in pairs with a job ad in Spanish. The interviewer uses a list of usted questions, and the candidate answers with the preterite to talk about past experience.",
+ "vocabulary": [
+  {
+   "title": "Documents and process",
+   "words": [
+    [
+     "la entrevista de trabajo",
+     "job interview"
+    ],
+    [
+     "el currículum / el CV",
+     "résumé"
+    ],
+    [
+     "la carta de presentación",
+     "cover letter"
+    ],
+    [
+     "el puesto",
+     "position, job"
+    ],
+    [
+     "el entrevistador / la entrevistadora",
+     "interviewer"
+    ],
+    [
+     "el candidato / la candidata",
+     "candidate"
+    ],
+    [
+     "las referencias",
+     "references"
+    ],
+    [
+     "el horario",
+     "schedule"
+    ]
+   ]
+  },
+  {
+   "title": "Experience and skills",
+   "words": [
+    [
+     "la experiencia",
+     "experience"
+    ],
+    [
+     "las habilidades",
+     "skills"
+    ],
+    [
+     "bilingüe",
+     "bilingual"
+    ],
+    [
+     "trabajar en equipo",
+     "to work in a team"
+    ],
+    [
+     "responsable",
+     "responsible"
+    ],
+    [
+     "puntual",
+     "punctual"
+    ],
+    [
+     "los puntos fuertes / débiles",
+     "strengths / weaknesses"
+    ],
+    [
+     "el título",
+     "degree, diploma"
+    ]
+   ]
+  },
+  {
+   "title": "Questions and answers",
+   "words": [
+    [
+     "¿Por qué quiere este puesto?",
+     "Why do you want this job?"
+    ],
+    [
+     "¿Cuál es su experiencia?",
+     "What is your experience?"
+    ],
+    [
+     "Hábleme de usted.",
+     "Tell me about yourself."
+    ],
+    [
+     "¿Cuándo puede empezar?",
+     "When can you start?"
+    ],
+    [
+     "el sueldo / el salario",
+     "salary, pay"
+    ],
+    [
+     "los beneficios",
+     "benefits"
+    ],
+    [
+     "Gracias por su tiempo.",
+     "Thank you for your time."
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Antes de la entrevista, mando mi ",
+   "after": " por correo electrónico.",
+   "options": [
+    "currículum",
+    "sueldo",
+    "puesto"
+   ],
+   "answer": 0,
+   "why": "You send your résumé: currículum."
+  },
+  {
+   "before": "Hablo inglés y español: soy ",
+   "after": ".",
+   "options": [
+    "bilingüe",
+    "puntual",
+    "candidato"
+   ],
+   "answer": 0,
+   "why": "Two languages: bilingüe."
+  },
+  {
+   "before": "La persona que hace las preguntas es la ",
+   "after": ".",
+   "options": [
+    "entrevistadora",
+    "candidata",
+    "referencia"
+   ],
+   "answer": 0,
+   "why": "The interviewer asks the questions."
+  },
+  {
+   "before": "El dinero que recibo cada mes por mi trabajo es el ",
+   "after": ".",
+   "options": [
+    "sueldo",
+    "título",
+    "horario"
+   ],
+   "answer": 0,
+   "why": "Salary: sueldo."
+  },
+  {
+   "before": "Siempre llego a tiempo; soy muy ",
+   "after": ".",
+   "options": [
+    "puntual",
+    "débil",
+    "bilingüe"
+   ],
+   "answer": 0,
+   "why": "Always on time: puntual."
+  },
+  {
+   "before": "Trabajé dos años en un restaurante; tengo ",
+   "after": " con clientes.",
+   "options": [
+    "experiencia",
+    "beneficios",
+    "carta"
+   ],
+   "answer": 0,
+   "why": "Two years: experiencia."
+  },
+  {
+   "before": "—¿Cuándo puede ",
+   "after": "? —El lunes próximo.",
+   "options": [
+    "empezar",
+    "trabajar en equipo",
+    "mandar"
+   ],
+   "answer": 0,
+   "why": "When can you start?"
+  },
+  {
+   "before": "El seguro médico y las vacaciones pagadas son ",
+   "after": ".",
+   "options": [
+    "beneficios",
+    "habilidades",
+    "puestos"
+   ],
+   "answer": 0,
+   "why": "Health insurance and paid time off: benefits."
+  }
+ ],
+ "demand": {
+  "query": "spanish interview vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish interview vocabulary». One suggestion asks for interview vocabulary in Spanish and two for English, a sign that many searchers prepare interviews in both languages; this page covers the Spanish side.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

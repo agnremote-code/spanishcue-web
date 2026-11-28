@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "real-estate",
+ "themeLabel": "Real estate",
+ "title": "Spanish Real Estate Vocabulary: Buying, Renting and Terms",
+ "description": "Spanish real estate vocabulary: buying, renting, mortgages and describing a home, with a quiz that corrects itself and an A2 reading about a family's first house.",
+ "h1": "Spanish real estate vocabulary",
+ "titleEs": "La primera casa de los Villarreal",
+ "focus": "the preterite, money and paperwork",
+ "intro": "Learn the Spanish words for buying and renting a home, the paperwork and how to describe a property, practice them with instant feedback, then follow a family buying their first house in Texas.",
+ "paragraphs": [
+  "Durante diez años, Rosa y Marco Villarreal alquilaron un apartamento pequeño en San Antonio, Texas. Pagaban mil doscientos dólares de renta cada mes y siempre pensaban lo mismo: «Con este dinero podríamos pagar una casa propia».",
+  "Hace dos años empezaron a ahorrar para el pago inicial. Rosa hizo horas extra en el hospital y Marco vendió su camioneta vieja. También fueron a un taller gratuito, en español, donde aprendieron qué es una hipoteca, cómo funciona la tasa de interés y qué documentos pide el banco.",
+  "Con la ayuda de una agente inmobiliaria bilingüe, visitaron más de quince casas. Algunas eran demasiado caras para ellos; otras estaban en malas condiciones. Por fin encontraron una casa de tres recámaras con un patio grande, en un vecindario tranquilo cerca de la escuela de sus hijos.",
+  "El día del cierre, firmaron tantos documentos que a Marco le dolía la mano. La agente les entregó las llaves y sus hijos corrieron al patio. Esa noche cenaron pizza sentados en el suelo, porque los muebles todavía no habían llegado. Rosa dice que fue la mejor cena de su vida, y Marco está totalmente de acuerdo con ella."
+ ],
+ "glossary": [
+  [
+   "propio / propia",
+   "your own"
+  ],
+  [
+   "las horas extra",
+   "overtime"
+  ],
+  [
+   "el taller gratuito",
+   "free workshop"
+  ],
+  [
+   "los documentos",
+   "documents"
+  ],
+  [
+   "en malas condiciones",
+   "in bad shape"
+  ],
+  [
+   "entregar",
+   "to hand over"
+  ],
+  [
+   "los muebles",
+   "furniture"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Los Villarreal alquilaron un apartamento durante ",
+   "after": ".",
+   "options": [
+    "diez años",
+    "dos años",
+    "quince años"
+   ],
+   "answer": 0,
+   "why": "Ten years."
+  },
+  {
+   "before": "Pagaban de renta ",
+   "after": " dólares al mes.",
+   "options": [
+    "mil doscientos",
+    "doscientos",
+    "dos mil"
+   ],
+   "answer": 0,
+   "why": "1,200 dollars."
+  },
+  {
+   "before": "Para ahorrar, Marco ",
+   "after": ".",
+   "options": [
+    "vendió su camioneta",
+    "hizo horas extra",
+    "pidió un préstamo"
+   ],
+   "answer": 0,
+   "why": "He sold his old truck; Rosa worked overtime."
+  },
+  {
+   "before": "En el taller gratuito aprendieron ",
+   "after": ".",
+   "options": [
+    "qué es una hipoteca",
+    "a construir casas",
+    "inglés"
+   ],
+   "answer": 0,
+   "why": "What a mortgage is and how it works."
+  },
+  {
+   "before": "La casa que compraron tiene ",
+   "after": ".",
+   "options": [
+    "tres recámaras y un patio grande",
+    "dos pisos",
+    "piscina"
+   ],
+   "answer": 0,
+   "why": "Three bedrooms and a big backyard."
+  },
+  {
+   "before": "La primera noche cenaron en el suelo porque ",
+   "after": ".",
+   "options": [
+    "los muebles no habían llegado",
+    "no tenían mesa en el patio",
+    "querían un picnic"
+   ],
+   "answer": 0,
+   "why": "The furniture had not arrived yet."
+  }
+ ],
+ "grammar": {
+  "title": "Conditional for wishes and possibilities",
+  "intro": "The conditional says what would happen: podríamos pagar, compraríamos una casa.",
+  "items": [
+   {
+    "before": "Con más dinero, nosotros ",
+    "after": " una casa.",
+    "options": [
+     "compraríamos",
+     "compramos",
+     "compraremos"
+    ],
+    "answer": 0,
+    "why": "Would buy: compraríamos."
+   },
+   {
+    "before": "¿",
+    "after": " vivir en una casa con patio?",
+    "options": [
+     "Te gustaría",
+     "Te gusta que",
+     "Te gustó"
+    ],
+    "answer": 0,
+    "why": "Would you like: ¿te gustaría?"
+   },
+   {
+    "before": "Con esa renta, ellos ",
+    "after": " pagar una hipoteca.",
+    "options": [
+     "podrían",
+     "pueden que",
+     "pudieron"
+    ],
+    "answer": 0,
+    "why": "Could (possibility): podrían."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe la casa o el apartamento donde vives.",
+  "¿Es mejor comprar o rentar? Da dos razones.",
+  "Haz el diálogo: llamas por un anuncio de «se renta» y haces tres preguntas."
+ ],
+ "heritage": "Many heritage speakers help their parents with leases or home purchases. Words vary: «rentar» and «la renta» are standard in Mexico and the US, «alquilar» in Spain and much of South America; «el enganche» is the Mexican word for the down payment. Watch the accent in «inmobiliaria» (none) and «depósito».",
+ "teacher": "Bring real «se renta» ads in Spanish (or write your own). Students compare two properties and decide which one a given family should rent, giving reasons.",
+ "vocabulary": [
+  {
+   "title": "Buying and renting",
+   "words": [
+    [
+     "la vivienda",
+     "housing, home"
+    ],
+    [
+     "comprar una casa",
+     "to buy a house"
+    ],
+    [
+     "alquilar / rentar",
+     "to rent"
+    ],
+    [
+     "el alquiler / la renta",
+     "rent"
+    ],
+    [
+     "el inquilino / la inquilina",
+     "tenant"
+    ],
+    [
+     "el propietario / el dueño",
+     "owner, landlord"
+    ],
+    [
+     "el agente inmobiliario",
+     "real estate agent"
+    ],
+    [
+     "la inmobiliaria",
+     "real estate agency"
+    ]
+   ]
+  },
+  {
+   "title": "Money and paperwork",
+   "words": [
+    [
+     "la hipoteca",
+     "mortgage"
+    ],
+    [
+     "el pago inicial / el enganche",
+     "down payment"
+    ],
+    [
+     "el contrato de arrendamiento",
+     "lease"
+    ],
+    [
+     "el depósito",
+     "security deposit"
+    ],
+    [
+     "la tasa de interés",
+     "interest rate"
+    ],
+    [
+     "los impuestos sobre la propiedad",
+     "property taxes"
+    ],
+    [
+     "el cierre",
+     "closing"
+    ],
+    [
+     "firmar",
+     "to sign"
+    ]
+   ]
+  },
+  {
+   "title": "Describing a property",
+   "words": [
+    [
+     "los metros / los pies cuadrados",
+     "square meters / feet"
+    ],
+    [
+     "la recámara / el dormitorio",
+     "bedroom"
+    ],
+    [
+     "el patio",
+     "backyard, patio"
+    ],
+    [
+     "el vecindario",
+     "neighborhood"
+    ],
+    [
+     "amueblado",
+     "furnished"
+    ],
+    [
+     "a estrenar",
+     "brand new"
+    ],
+    [
+     "en venta",
+     "for sale"
+    ],
+    [
+     "se renta",
+     "for rent"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para comprar la casa, pidieron una ",
+   "after": " al banco.",
+   "options": [
+    "hipoteca",
+    "renta",
+    "recámara"
+   ],
+   "answer": 0,
+   "why": "A home loan: hipoteca."
+  },
+  {
+   "before": "Pagamos la ",
+   "after": " del apartamento el primer día del mes.",
+   "options": [
+    "renta",
+    "hipoteca de venta",
+    "inmobiliaria"
+   ],
+   "answer": 0,
+   "why": "Monthly rent: la renta or el alquiler."
+  },
+  {
+   "before": "La persona que alquila un apartamento es el ",
+   "after": ".",
+   "options": [
+    "inquilino",
+    "propietario",
+    "agente"
+   ],
+   "answer": 0,
+   "why": "The tenant: inquilino."
+  },
+  {
+   "before": "El ",
+   "after": " nos mostró cinco casas en un día.",
+   "options": [
+    "agente inmobiliario",
+    "depósito",
+    "cierre"
+   ],
+   "answer": 0,
+   "why": "The real estate agent shows houses."
+  },
+  {
+   "before": "Antes de mudarnos, pagamos un ",
+   "after": " de un mes.",
+   "options": [
+    "depósito",
+    "patio",
+    "vecindario"
+   ],
+   "answer": 0,
+   "why": "Security deposit: depósito."
+  },
+  {
+   "before": "El apartamento viene con sofá y cama: está ",
+   "after": ".",
+   "options": [
+    "amueblado",
+    "en venta",
+    "a estrenar"
+   ],
+   "answer": 0,
+   "why": "With furniture: amueblado."
+  },
+  {
+   "before": "La casa tiene tres ",
+   "after": " y dos baños.",
+   "options": [
+    "recámaras",
+    "hipotecas",
+    "inquilinas"
+   ],
+   "answer": 0,
+   "why": "Bedrooms: recámaras (Mexico) or dormitorios."
+  },
+  {
+   "before": "Si la tasa de ",
+   "after": " es baja, la hipoteca cuesta menos.",
+   "options": [
+    "interés",
+    "patio",
+    "cierre"
+   ],
+   "answer": 0,
+   "why": "Interest rate: tasa de interés."
+  }
+ ],
+ "demand": {
+  "query": "spanish real estate vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish real estate vocabulary». Several ask for terms and an English-Spanish dictionary, so each word comes with its English equivalent and the reading shows them in a real purchase.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

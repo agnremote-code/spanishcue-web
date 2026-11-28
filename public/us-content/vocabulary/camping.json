@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "camping",
+ "themeLabel": "Camping",
+ "title": "Spanish Camping Vocabulary: Tent, Campfire and Practice",
+ "description": "Spanish camping vocabulary: la tienda de campaña, la fogata, el saco de dormir and the trail, with a quiz and an A2 reading about a night in a national park.",
+ "h1": "Spanish camping vocabulary",
+ "titleEs": "Una noche en Yosemite",
+ "focus": "the preterite to tell a trip",
+ "intro": "Learn the Spanish words for camping: the gear, the campsite and the nature around it, plus useful verbs like acampar and armar la tienda. Practice with instant feedback, then read about a family's first night camping in a national park.",
+ "paragraphs": [
+  "El verano pasado, la familia Ríos fue a acampar por primera vez al Parque Nacional Yosemite, en California. Llegaron al campamento un viernes por la tarde. El papá, Héctor, quería armar la tienda de campaña solo, pero no leyó las instrucciones y tardó una hora. Al final, su hija Paula lo ayudó y la armaron en diez minutos.",
+  "Después, un guardabosques les explicó las reglas del parque: no dejar comida fuera de la caja de metal, porque en Yosemite hay osos, y hacer la fogata solo en el lugar indicado. Paula y su hermano Nico fueron a buscar leña mientras su mamá preparaba la cena.",
+  "Esa noche cenaron frente a la fogata: salchichas, frijoles y malvaviscos tostados. Luego apagaron las linternas y vieron las estrellas. Nico nunca había visto tantas. A medianoche, escucharon un ruido cerca de la tienda. Todos se quedaron en silencio. Héctor salió con la linterna: era solo un mapache buscando comida.",
+  "El sábado caminaron por un sendero hasta una cascada. Estaban cansados, pero muy contentos. En el carro, de regreso a casa, Paula preguntó: «¿Cuándo volvemos?». Su papá respondió que el próximo verano, y que esta vez iba a leer las instrucciones."
+ ],
+ "glossary": [
+  [
+   "por primera vez",
+   "for the first time"
+  ],
+  [
+   "tardar",
+   "to take (time)"
+  ],
+  [
+   "las reglas",
+   "rules"
+  ],
+  [
+   "los osos",
+   "bears"
+  ],
+  [
+   "el lugar indicado",
+   "designated place"
+  ],
+  [
+   "los malvaviscos",
+   "marshmallows"
+  ],
+  [
+   "el mapache",
+   "raccoon"
+  ],
+  [
+   "la cascada",
+   "waterfall"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia Ríos fue a acampar a ",
+   "after": ".",
+   "options": [
+    "Yosemite",
+    "Yellowstone",
+    "un lago de Texas"
+   ],
+   "answer": 0,
+   "why": "To Yosemite National Park."
+  },
+  {
+   "before": "Héctor tardó una hora en armar la tienda porque ",
+   "after": ".",
+   "options": [
+    "no leyó las instrucciones",
+    "llovía mucho",
+    "no tenía la tienda"
+   ],
+   "answer": 0,
+   "why": "He did not read the instructions."
+  },
+  {
+   "before": "El guardabosques dijo que no deben dejar comida fuera porque ",
+   "after": ".",
+   "options": [
+    "hay osos",
+    "hace frío",
+    "está prohibido cocinar"
+   ],
+   "answer": 0,
+   "why": "There are bears in Yosemite."
+  },
+  {
+   "before": "Paula y Nico fueron a buscar ",
+   "after": ".",
+   "options": [
+    "leña",
+    "agua",
+    "al guardabosques"
+   ],
+   "answer": 0,
+   "why": "They went for firewood."
+  },
+  {
+   "before": "El ruido de la medianoche era ",
+   "after": ".",
+   "options": [
+    "un mapache",
+    "un oso",
+    "el viento"
+   ],
+   "answer": 0,
+   "why": "Just a raccoon."
+  },
+  {
+   "before": "El sábado caminaron hasta ",
+   "after": ".",
+   "options": [
+    "una cascada",
+    "el lago",
+    "el pueblo"
+   ],
+   "answer": 0,
+   "why": "To a waterfall."
+  }
+ ],
+ "grammar": {
+  "title": "Preterite for the events of a trip",
+  "intro": "To tell what happened on a trip, one event after another, use the preterite: llegaron, armaron, vieron.",
+  "items": [
+   {
+    "before": "El viernes ",
+    "after": " al campamento muy tarde.",
+    "options": [
+     "llegamos",
+     "llegábamos siempre",
+     "llegaremos"
+    ],
+    "answer": 0,
+    "why": "A single past event: llegamos."
+   },
+   {
+    "before": "Esa noche, Nico ",
+    "after": " las estrellas por primera vez.",
+    "options": [
+     "vio",
+     "veía",
+     "ve"
+    ],
+    "answer": 0,
+    "why": "A completed event: vio."
+   },
+   {
+    "before": "Ellos ",
+    "after": " por un sendero de seis millas.",
+    "options": [
+     "caminaron",
+     "caminaban siempre",
+     "caminan"
+    ],
+    "answer": 0,
+    "why": "Ellos: caminaron."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Has ido a acampar? Cuenta cómo fue.",
+  "¿Qué cosas llevarías para un fin de semana en el bosque?",
+  "¿Prefieres un hotel o una tienda de campaña? ¿Por qué?"
+ ],
+ "heritage": "Camping words change by region: tienda de campaña (Spain, many countries) or casa de campaña (Mexico), saco or bolsa de dormir, fósforos or cerillos, hielera or nevera portátil. In the US you will also hear «hacer camping» or «ir de camping», which are common and understood.",
+ "teacher": "Give groups a list of twenty items and a budget of ten. They choose what to take on a camping trip and explain in Spanish why, using porque and necesitamos.",
+ "vocabulary": [
+  {
+   "title": "Gear",
+   "words": [
+    [
+     "la tienda de campaña / la casa de campaña",
+     "tent"
+    ],
+    [
+     "el saco de dormir / la bolsa de dormir",
+     "sleeping bag"
+    ],
+    [
+     "la linterna",
+     "flashlight"
+    ],
+    [
+     "la mochila",
+     "backpack"
+    ],
+    [
+     "el repelente de insectos",
+     "bug spray"
+    ],
+    [
+     "la hielera",
+     "cooler"
+    ],
+    [
+     "los fósforos / los cerillos",
+     "matches"
+    ],
+    [
+     "el mapa",
+     "map"
+    ]
+   ]
+  },
+  {
+   "title": "The campsite",
+   "words": [
+    [
+     "el campamento / el camping",
+     "campsite, campground"
+    ],
+    [
+     "la fogata",
+     "campfire"
+    ],
+    [
+     "la leña",
+     "firewood"
+    ],
+    [
+     "el sendero",
+     "trail"
+    ],
+    [
+     "el lago",
+     "lake"
+    ],
+    [
+     "el bosque",
+     "forest"
+    ],
+    [
+     "el guardabosques",
+     "park ranger"
+    ],
+    [
+     "el parque nacional",
+     "national park"
+    ]
+   ]
+  },
+  {
+   "title": "Actions",
+   "words": [
+    [
+     "acampar",
+     "to camp"
+    ],
+    [
+     "armar la tienda",
+     "to put up the tent"
+    ],
+    [
+     "hacer una fogata",
+     "to make a campfire"
+    ],
+    [
+     "caminar por el sendero",
+     "to hike the trail"
+    ],
+    [
+     "pescar",
+     "to fish"
+    ],
+    [
+     "ver las estrellas",
+     "to look at the stars"
+    ],
+    [
+     "pasar la noche",
+     "to spend the night"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para dormir en el bosque, primero hay que armar la ",
+   "after": ".",
+   "options": [
+    "tienda de campaña",
+    "hielera",
+    "linterna"
+   ],
+   "answer": 0,
+   "why": "Put up the tent: armar la tienda."
+  },
+  {
+   "before": "Por la noche, para ver en la oscuridad, uso una ",
+   "after": ".",
+   "options": [
+    "linterna",
+    "leña",
+    "fogata"
+   ],
+   "answer": 0,
+   "why": "To see in the dark: linterna."
+  },
+  {
+   "before": "Ponemos las bebidas frías en la ",
+   "after": ".",
+   "options": [
+    "hielera",
+    "mochila",
+    "tienda"
+   ],
+   "answer": 0,
+   "why": "Cold drinks go in the cooler."
+  },
+  {
+   "before": "Para hacer una fogata necesitamos ",
+   "after": ".",
+   "options": [
+    "leña",
+    "repelente",
+    "un mapa"
+   ],
+   "answer": 0,
+   "why": "Firewood for a campfire."
+  },
+  {
+   "before": "La persona que cuida el parque es el ",
+   "after": ".",
+   "options": [
+    "guardabosques",
+    "sendero",
+    "campamento"
+   ],
+   "answer": 0,
+   "why": "A park ranger."
+  },
+  {
+   "before": "Hay muchos mosquitos; necesito ",
+   "after": ".",
+   "options": [
+    "repelente de insectos",
+    "un saco de dormir",
+    "fósforos"
+   ],
+   "answer": 0,
+   "why": "Bug spray for mosquitoes."
+  },
+  {
+   "before": "Caminamos tres horas por el ",
+   "after": " hasta el lago.",
+   "options": [
+    "sendero",
+    "fogata",
+    "saco"
+   ],
+   "answer": 0,
+   "why": "Hiking a trail: sendero."
+  },
+  {
+   "before": "Duermo dentro de un ",
+   "after": " porque hace frío.",
+   "options": [
+    "saco de dormir",
+    "lago",
+    "bosque"
+   ],
+   "answer": 0,
+   "why": "A sleeping bag keeps you warm."
+  }
+ ],
+ "demand": {
+  "query": "spanish camping vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish camping vocabulary». One asks for the Spanish word for camping itself: acampar is the verb, el camping or el campamento the place.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

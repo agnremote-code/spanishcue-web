@@ -1,0 +1,368 @@
+{
+ "level": "A1",
+ "theme": "directions",
+ "themeLabel": "Directions",
+ "title": "Spanish Directions Vocabulary: Asking for Directions",
+ "description": "Spanish directions vocabulary: a la derecha, a la izquierda, todo recto, la cuadra, cerca and lejos, with a quiz and an A1 reading about finding a museum.",
+ "h1": "Spanish directions vocabulary",
+ "titleEs": "¿Dónde está el museo?",
+ "focus": "usted commands to give directions",
+ "intro": "Learn how to ask for and give directions in Spanish: left and right, straight ahead, blocks and corners, and words of location like al lado de and enfrente de. Practice with instant feedback, then read about two tourists looking for a museum.",
+ "paragraphs": [
+  "Mía y su amiga Jade están de vacaciones en San Juan, Puerto Rico. Quieren visitar un museo de arte, pero su teléfono no tiene batería. Mía ve a una señora en la esquina y le pregunta: «Perdón, señora, ¿cómo llegamos al museo de arte?».",
+  "La señora sonríe y explica: «Sigan todo recto por esta calle tres cuadras. En el semáforo, doblen a la derecha. Caminen una cuadra más y crucen la avenida. El museo está enfrente de un parque pequeño, al lado de una cafetería». Jade repite las instrucciones en voz baja para no olvidarlas.",
+  "Las chicas caminan tres cuadras y doblan en el semáforo. Pero después se confunden y doblan a la izquierda en vez de seguir. Un señor que vende helados les dice que el museo está detrás de ellas. Por fin lo encuentran, enfrente del parque. Antes de entrar, compran un helado al señor para darle las gracias."
+ ],
+ "glossary": [
+  [
+   "estar de vacaciones",
+   "to be on vacation"
+  ],
+  [
+   "la batería",
+   "battery"
+  ],
+  [
+   "explicar",
+   "to explain"
+  ],
+  [
+   "repetir",
+   "to repeat"
+  ],
+  [
+   "en voz baja",
+   "quietly"
+  ],
+  [
+   "confundirse",
+   "to get confused"
+  ],
+  [
+   "en vez de",
+   "instead of"
+  ],
+  [
+   "por fin",
+   "finally"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Mía y Jade están de vacaciones en ",
+   "after": ".",
+   "options": [
+    "San Juan",
+    "Miami",
+    "Madrid"
+   ],
+   "answer": 0,
+   "why": "In San Juan, Puerto Rico."
+  },
+  {
+   "before": "No usan el teléfono porque ",
+   "after": ".",
+   "options": [
+    "no tiene batería",
+    "no tiene mapa",
+    "está roto"
+   ],
+   "answer": 0,
+   "why": "The phone has no battery."
+  },
+  {
+   "before": "Según la señora, primero tienen que seguir recto ",
+   "after": ".",
+   "options": [
+    "tres cuadras",
+    "una cuadra",
+    "diez minutos"
+   ],
+   "answer": 0,
+   "why": "Three blocks."
+  },
+  {
+   "before": "El museo está al lado de ",
+   "after": ".",
+   "options": [
+    "una cafetería",
+    "un banco",
+    "una escuela"
+   ],
+   "answer": 0,
+   "why": "Next to a café."
+  },
+  {
+   "before": "Las chicas se confunden y doblan a ",
+   "after": ".",
+   "options": [
+    "la izquierda",
+    "la derecha",
+    "ningún lado"
+   ],
+   "answer": 0,
+   "why": "They turn left by mistake."
+  },
+  {
+   "before": "Para dar las gracias, compran ",
+   "after": ".",
+   "options": [
+    "un helado",
+    "un mapa",
+    "un café"
+   ],
+   "answer": 0,
+   "why": "An ice cream from the vendor."
+  }
+ ],
+ "grammar": {
+  "title": "Commands for directions",
+  "intro": "Directions use usted or ustedes commands: siga, doble, cruce (usted); sigan, doblen, crucen (ustedes).",
+  "items": [
+   {
+    "before": "Señor, ",
+    "after": " a la izquierda en la segunda calle.",
+    "options": [
+     "doble",
+     "dobla",
+     "doblar"
+    ],
+    "answer": 0,
+    "why": "Usted command: doble."
+   },
+   {
+    "before": "Chicas, ",
+    "after": " la avenida con cuidado.",
+    "options": [
+     "crucen",
+     "cruzan",
+     "cruzar"
+    ],
+    "answer": 0,
+    "why": "Ustedes command: crucen."
+   },
+   {
+    "before": "",
+    "after": " todo recto hasta el semáforo, por favor.",
+    "options": [
+     "Siga",
+     "Sigue usted",
+     "Seguir"
+    ],
+    "answer": 0,
+    "why": "Usted command: siga."
+   }
+  ]
+ },
+ "speaking": [
+  "Explica a un compañero cómo llegar de la escuela a tu casa.",
+  "Describe dónde está tu restaurante favorito.",
+  "Pregunta por un lugar de tu ciudad usando «¿Cómo llego a…?»"
+ ],
+ "heritage": "Direction words vary by country: cuadra (Latin America) or manzana (Spain) for a block, todo recto (Spain) or derecho (Latin America) for straight ahead, and doblar, girar or voltear for turn. Derecho also means right in «a la derecha», so listen for the article.",
+ "teacher": "Draw a simple town map on the board. One student gives directions with usted commands from a starting point, and the class follows with a finger and says where they arrive.",
+ "vocabulary": [
+  {
+   "title": "Directions",
+   "words": [
+    [
+     "a la derecha",
+     "to the right"
+    ],
+    [
+     "a la izquierda",
+     "to the left"
+    ],
+    [
+     "todo recto / derecho",
+     "straight ahead"
+    ],
+    [
+     "doblar / girar",
+     "to turn"
+    ],
+    [
+     "seguir",
+     "to keep going"
+    ],
+    [
+     "cruzar",
+     "to cross"
+    ],
+    [
+     "la cuadra / la manzana",
+     "block"
+    ],
+    [
+     "la esquina",
+     "corner"
+    ]
+   ]
+  },
+  {
+   "title": "Location",
+   "words": [
+    [
+     "cerca de",
+     "near"
+    ],
+    [
+     "lejos de",
+     "far from"
+    ],
+    [
+     "al lado de",
+     "next to"
+    ],
+    [
+     "enfrente de",
+     "across from, in front of"
+    ],
+    [
+     "detrás de",
+     "behind"
+    ],
+    [
+     "entre",
+     "between"
+    ],
+    [
+     "al final de",
+     "at the end of"
+    ]
+   ]
+  },
+  {
+   "title": "Asking",
+   "words": [
+    [
+     "Perdón, ¿dónde está…?",
+     "Excuse me, where is…?"
+    ],
+    [
+     "¿Cómo llego a…?",
+     "How do I get to…?"
+    ],
+    [
+     "¿Está lejos?",
+     "Is it far?"
+    ],
+    [
+     "el semáforo",
+     "traffic light"
+    ],
+    [
+     "la calle",
+     "street"
+    ],
+    [
+     "la avenida",
+     "avenue"
+    ],
+    [
+     "el mapa",
+     "map"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para preguntar el camino digo: «Perdón, ¿cómo ",
+   "after": " al museo?»",
+   "options": [
+    "llego",
+    "llegas",
+    "llega usted es"
+   ],
+   "answer": 0,
+   "why": "How do I get to…?: ¿cómo llego a…?"
+  },
+  {
+   "before": "No doble; siga todo ",
+   "after": ".",
+   "options": [
+    "recto",
+    "izquierda",
+    "cuadra"
+   ],
+   "answer": 0,
+   "why": "Straight ahead: todo recto."
+  },
+  {
+   "before": "El banco está ",
+   "after": " la farmacia y el café.",
+   "options": [
+    "entre",
+    "detrás",
+    "lejos"
+   ],
+   "answer": 0,
+   "why": "Between two places: entre."
+  },
+  {
+   "before": "Camine dos ",
+   "after": " y doble a la derecha.",
+   "options": [
+    "cuadras",
+    "esquinas",
+    "semáforos rojos"
+   ],
+   "answer": 0,
+   "why": "Two blocks: cuadras."
+  },
+  {
+   "before": "La escuela está ",
+   "after": " del parque; solo cruzas la calle.",
+   "options": [
+    "enfrente",
+    "lejos",
+    "al final"
+   ],
+   "answer": 0,
+   "why": "Across the street: enfrente."
+  },
+  {
+   "before": "En el ",
+   "after": " rojo, los carros paran.",
+   "options": [
+    "semáforo",
+    "mapa",
+    "lado"
+   ],
+   "answer": 0,
+   "why": "Traffic light: semáforo."
+  },
+  {
+   "before": "—¿Está lejos? —No, está muy ",
+   "after": ", a cinco minutos.",
+   "options": [
+    "cerca",
+    "lejos",
+    "detrás"
+   ],
+   "answer": 0,
+   "why": "Five minutes away: cerca."
+  },
+  {
+   "before": "Doble a la ",
+   "after": " en la esquina; el hotel está allí, a su izquierda.",
+   "options": [
+    "izquierda",
+    "derecha",
+    "recta"
+   ],
+   "answer": 0,
+   "why": "The hotel is on the left, so turn left."
+  }
+ ],
+ "demand": {
+  "query": "spanish directions vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 5 searches to people in the United States who typed «spanish directions vocabulary». One asks for location vocabulary, so the list adds words like al lado de, enfrente de and entre next to the directions.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

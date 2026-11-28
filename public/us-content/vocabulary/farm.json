@@ -1,0 +1,368 @@
+{
+ "level": "A1",
+ "theme": "farm",
+ "themeLabel": "Farm",
+ "title": "Spanish Farm Vocabulary: Farm Animals and Work with Practice",
+ "description": "Spanish farm vocabulary: la granja, la vaca, la gallina, el tractor and ordeñar, with a quiz and an A1 reading about a weekend on a family dairy farm.",
+ "h1": "Spanish farm vocabulary",
+ "titleEs": "Un fin de semana en la granja",
+ "focus": "the present tense and daily routines",
+ "intro": "Learn the Spanish words for the farm: the animals, the buildings and machines, and the daily work. Practice with instant feedback, then read about a girl who spends a weekend on her uncle's dairy farm in Wisconsin.",
+ "paragraphs": [
+  "Lucía vive en Chicago, pero este fin de semana visita la granja de su tío Ramón en Wisconsin. Su tío tiene cuarenta vacas, dos caballos, gallinas y un perro que se llama Tractor, como la máquina.",
+  "En la granja, el día empieza muy temprano. A las cinco de la mañana, el tío Ramón y Lucía van al establo. Primero ordeñan las vacas con una máquina. Después dan de comer a los animales: heno para las vacas y los caballos, y maíz para las gallinas. Lucía recoge los huevos con mucho cuidado.",
+  "Por la tarde, el tío maneja el tractor en el campo y Lucía va con él. Ella toma un vaso de leche fresca y dice que es la mejor leche del mundo. El domingo, cuando sus padres llegan por ella, Lucía no quiere irse. «¿Puedo volver en el verano?», pregunta. Su tío dice que sí, y que en el verano va a ayudar con la cosecha."
+ ],
+ "glossary": [
+  [
+   "temprano",
+   "early"
+  ],
+  [
+   "la máquina",
+   "machine"
+  ],
+  [
+   "con cuidado",
+   "carefully"
+  ],
+  [
+   "manejar",
+   "to drive"
+  ],
+  [
+   "el mundo",
+   "world"
+  ],
+  [
+   "llegar por",
+   "to come for, pick up"
+  ],
+  [
+   "irse",
+   "to leave"
+  ],
+  [
+   "volver",
+   "to come back"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La granja del tío Ramón está en ",
+   "after": ".",
+   "options": [
+    "Wisconsin",
+    "Chicago",
+    "Texas"
+   ],
+   "answer": 0,
+   "why": "In Wisconsin."
+  },
+  {
+   "before": "El perro se llama ",
+   "after": ".",
+   "options": [
+    "Tractor",
+    "Gallo",
+    "Ramón"
+   ],
+   "answer": 0,
+   "why": "Tractor, like the machine."
+  },
+  {
+   "before": "El día empieza a las ",
+   "after": ".",
+   "options": [
+    "cinco de la mañana",
+    "ocho",
+    "diez"
+   ],
+   "answer": 0,
+   "why": "At five in the morning."
+  },
+  {
+   "before": "Ordeñan las vacas con ",
+   "after": ".",
+   "options": [
+    "una máquina",
+    "las manos",
+    "el tractor"
+   ],
+   "answer": 0,
+   "why": "With a machine."
+  },
+  {
+   "before": "Las gallinas comen ",
+   "after": ".",
+   "options": [
+    "maíz",
+    "heno",
+    "leche"
+   ],
+   "answer": 0,
+   "why": "They eat corn."
+  },
+  {
+   "before": "En el verano, Lucía va a ayudar con ",
+   "after": ".",
+   "options": [
+    "la cosecha",
+    "las vacas nuevas",
+    "el perro"
+   ],
+   "answer": 0,
+   "why": "With the harvest."
+  }
+ ],
+ "grammar": {
+  "title": "Dar de comer and the personal a",
+  "intro": "Dar de comer means to feed: le doy de comer al perro. With animals you care for, Spanish often uses the personal a.",
+  "items": [
+   {
+    "before": "Yo ",
+    "after": " de comer a las gallinas.",
+    "options": [
+     "doy",
+     "da",
+     "das"
+    ],
+    "answer": 0,
+    "why": "Yo: doy."
+   },
+   {
+    "before": "Mi tío alimenta ",
+    "after": " los caballos cada mañana.",
+    "options": [
+     "a",
+     "en",
+     "de"
+    ],
+    "answer": 0,
+    "why": "Personal a with animals you care for."
+   },
+   {
+    "before": "Nosotros ",
+    "after": " de comer al perro por la noche.",
+    "options": [
+     "damos",
+     "dan",
+     "doy"
+    ],
+    "answer": 0,
+    "why": "Nosotros: damos."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Has visitado una granja? ¿Qué animales viste?",
+  "¿Qué trabajo de la granja te gustaría hacer y cuál no?",
+  "Imita el sonido de un animal; tu compañero dice cuál es en español."
+ ],
+ "heritage": "Many heritage speakers have relatives who work on farms, ranches or dairies in the US or in Latin America. Words change by region: granja or rancho, cerdo, puerco or chancho, granero or troje. Asking a relative about their work in Spanish is a great way to learn the real vocabulary.",
+ "teacher": "Use the reading to build a farm schedule on the board with times and verbs. Then students write the schedule of a different farm animal from its point of view.",
+ "vocabulary": [
+  {
+   "title": "Animals",
+   "words": [
+    [
+     "la vaca",
+     "cow"
+    ],
+    [
+     "el toro",
+     "bull"
+    ],
+    [
+     "el caballo",
+     "horse"
+    ],
+    [
+     "el cerdo",
+     "pig"
+    ],
+    [
+     "la gallina",
+     "hen"
+    ],
+    [
+     "el gallo",
+     "rooster"
+    ],
+    [
+     "la oveja",
+     "sheep"
+    ],
+    [
+     "la cabra",
+     "goat"
+    ]
+   ]
+  },
+  {
+   "title": "Places and things",
+   "words": [
+    [
+     "la granja",
+     "farm"
+    ],
+    [
+     "el granero",
+     "barn"
+    ],
+    [
+     "el establo",
+     "stable, cowshed"
+    ],
+    [
+     "el campo",
+     "field, countryside"
+    ],
+    [
+     "el tractor",
+     "tractor"
+    ],
+    [
+     "la cerca",
+     "fence"
+    ],
+    [
+     "el heno",
+     "hay"
+    ]
+   ]
+  },
+  {
+   "title": "Farm work",
+   "words": [
+    [
+     "el granjero / la granjera",
+     "farmer"
+    ],
+    [
+     "ordeñar",
+     "to milk"
+    ],
+    [
+     "dar de comer",
+     "to feed"
+    ],
+    [
+     "recoger los huevos",
+     "to collect eggs"
+    ],
+    [
+     "sembrar",
+     "to plant, sow"
+    ],
+    [
+     "la cosecha",
+     "harvest"
+    ],
+    [
+     "la leche fresca",
+     "fresh milk"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La vaca nos da ",
+   "after": ".",
+   "options": [
+    "leche",
+    "huevos",
+    "lana"
+   ],
+   "answer": 0,
+   "why": "Cows give milk."
+  },
+  {
+   "before": "El animal que canta por la mañana es el ",
+   "after": ".",
+   "options": [
+    "gallo",
+    "cerdo",
+    "caballo"
+   ],
+   "answer": 0,
+   "why": "The rooster crows."
+  },
+  {
+   "before": "Las gallinas ponen ",
+   "after": ".",
+   "options": [
+    "huevos",
+    "leche",
+    "heno"
+   ],
+   "answer": 0,
+   "why": "Hens lay eggs."
+  },
+  {
+   "before": "El granjero trabaja en el campo con el ",
+   "after": ".",
+   "options": [
+    "tractor",
+    "establo",
+    "gallo"
+   ],
+   "answer": 0,
+   "why": "With the tractor."
+  },
+  {
+   "before": "Por la mañana, hay que ",
+   "after": " las vacas.",
+   "options": [
+    "ordeñar",
+    "sembrar",
+    "recoger"
+   ],
+   "answer": 0,
+   "why": "Milking cows: ordeñar."
+  },
+  {
+   "before": "Los caballos comen ",
+   "after": ".",
+   "options": [
+    "heno",
+    "huevos",
+    "leche"
+   ],
+   "answer": 0,
+   "why": "Horses eat hay."
+  },
+  {
+   "before": "Con la lana de la ",
+   "after": " hacemos suéteres.",
+   "options": [
+    "oveja",
+    "gallina",
+    "vaca"
+   ],
+   "answer": 0,
+   "why": "Sheep give wool for sweaters."
+  },
+  {
+   "before": "Guardamos el heno y las herramientas en el ",
+   "after": ".",
+   "options": [
+    "granero",
+    "campo",
+    "gallinero"
+   ],
+   "answer": 0,
+   "why": "In the barn: granero."
+  }
+ ],
+ "demand": {
+  "query": "spanish farm vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 3 searches to people in the United States who typed «spanish farm vocabulary». One asks for dairy farm vocabulary, so the list includes ordeñar, la leche and el establo.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "wedding",
+ "themeLabel": "Wedding",
+ "title": "Spanish Wedding Vocabulary: La Boda, Novios and Practice",
+ "description": "Spanish wedding vocabulary: la boda, los novios, los padrinos, las arras, el lazo and the reception, with a quiz and an A2 reading about a family wedding.",
+ "h1": "Spanish wedding vocabulary",
+ "titleEs": "La boda de mi prima",
+ "focus": "the preterite to tell a celebration",
+ "intro": "Learn the Spanish words for a wedding: the people, the ceremony, Hispanic traditions like las arras and el lazo, and the party. Practice with instant feedback, then read about a cousin's wedding in Los Angeles.",
+ "paragraphs": [
+  "El sábado pasado, mi prima Andrea se casó con su novio, Kevin, en una iglesia de Los Ángeles. Andrea es mexicoamericana y Kevin es de Ohio, así que la boda tuvo tradiciones de las dos familias. Kevin aprendió a decir «sí, acepto» en español, y lo dijo muy bien.",
+  "Durante la ceremonia, los padrinos de arras le dieron al novio trece monedas, y él se las entregó a Andrea como símbolo de que van a compartir todo. Después, otros padrinos pusieron el lazo, un rosario grande, sobre los hombros de los dos. Los padres de Kevin no conocían estas tradiciones y les parecieron muy bonitas.",
+  "La recepción fue en un salón con mariachi y un DJ. Hubo un brindis del hermano de Kevin, en inglés, y otro de mi abuelo, en español. Mi abuelo terminó con «¡Vivan los novios!» y todos gritaron con él. Luego los novios bailaron su primer baile y después bailamos todos: cumbia, country y la víbora de la mar.",
+  "A medianoche, los novios cortaron el pastel de bodas. Andrea tiró el ramo y lo agarró mi hermana, que se puso roja. Al día siguiente, Andrea y Kevin salieron de luna de miel a Puerto Vallarta. Mi abuela dijo que fue la boda más bonita de la familia, aunque dice eso en todas las bodas."
+ ],
+ "glossary": [
+  [
+   "mexicoamericana",
+   "Mexican American"
+  ],
+  [
+   "entregar",
+   "to hand over"
+  ],
+  [
+   "el símbolo",
+   "symbol"
+  ],
+  [
+   "compartir",
+   "to share"
+  ],
+  [
+   "el rosario",
+   "rosary"
+  ],
+  [
+   "el salón",
+   "hall"
+  ],
+  [
+   "agarrar",
+   "to catch, grab"
+  ],
+  [
+   "ponerse rojo / roja",
+   "to blush"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Andrea se casó en ",
+   "after": ".",
+   "options": [
+    "Los Ángeles",
+    "Ohio",
+    "Puerto Vallarta"
+   ],
+   "answer": 0,
+   "why": "In Los Angeles."
+  },
+  {
+   "before": "Kevin aprendió a decir ",
+   "after": " en español.",
+   "options": [
+    "«sí, acepto»",
+    "«¡Vivan los novios!»",
+    "«buenas noches»"
+   ],
+   "answer": 0,
+   "why": "«Sí, acepto»."
+  },
+  {
+   "before": "Las trece monedas son un símbolo de ",
+   "after": ".",
+   "options": [
+    "compartir todo",
+    "buena suerte en el dinero",
+    "los trece invitados"
+   ],
+   "answer": 0,
+   "why": "That they will share everything."
+  },
+  {
+   "before": "El lazo se pone sobre ",
+   "after": ".",
+   "options": [
+    "los hombros de los novios",
+    "la mesa",
+    "el pastel"
+   ],
+   "answer": 0,
+   "why": "Over the couple's shoulders."
+  },
+  {
+   "before": "En la recepción hubo ",
+   "after": ".",
+   "options": [
+    "mariachi y un DJ",
+    "solo música clásica",
+    "una banda de rock"
+   ],
+   "answer": 0,
+   "why": "Mariachi and a DJ."
+  },
+  {
+   "before": "El ramo lo agarró ",
+   "after": ".",
+   "options": [
+    "la hermana del narrador",
+    "la abuela",
+    "la madre de Kevin"
+   ],
+   "answer": 0,
+   "why": "The narrator's sister."
+  }
+ ],
+ "grammar": {
+  "title": "Casarse con: marrying someone",
+  "intro": "Casarse is reflexive and takes con: Andrea se casó con Kevin.",
+  "items": [
+   {
+    "before": "Mis padres se casaron ",
+    "after": " 1998.",
+    "options": [
+     "en",
+     "con",
+     "de"
+    ],
+    "answer": 0,
+    "why": "A year takes en: en 1998."
+   },
+   {
+    "before": "Mi hermana se va a casar ",
+    "after": " un chico de Texas.",
+    "options": [
+     "con",
+     "a",
+     "de"
+    ],
+    "answer": 0,
+    "why": "Casarse con."
+   },
+   {
+    "before": "¿Cuándo ",
+    "after": " tus abuelos?",
+    "options": [
+     "se casaron",
+     "casaron",
+     "se casó"
+    ],
+    "answer": 0,
+    "why": "Ellos se casaron, reflexive."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Has ido a una boda? ¿Cómo fue?",
+  "¿Qué tradición de boda te parece más bonita?",
+  "Describe tu boda ideal: dónde, con qué música y con cuántos invitados."
+ ],
+ "heritage": "If your family is from Mexico or Central America, you may know las arras, el lazo and the padrinos de velación, of anillos or of pastel. Each padrino helps with something, which is a beautiful way to share the cost and the honor. These words are worth writing down with the names of your own family's padrinos.",
+ "teacher": "Plan a class wedding as a role play: assign roles (novios, padrinos, invitados, juez) and have students prepare a short brindis in Spanish with the preterite and good wishes.",
+ "vocabulary": [
+  {
+   "title": "People",
+   "words": [
+    [
+     "los novios",
+     "the bride and groom, the couple"
+    ],
+    [
+     "la novia",
+     "bride"
+    ],
+    [
+     "el novio",
+     "groom"
+    ],
+    [
+     "los padrinos",
+     "sponsors, godparents of the wedding"
+    ],
+    [
+     "la dama de honor",
+     "bridesmaid"
+    ],
+    [
+     "los invitados",
+     "guests"
+    ],
+    [
+     "el sacerdote / el juez",
+     "priest / judge"
+    ]
+   ]
+  },
+  {
+   "title": "The ceremony",
+   "words": [
+    [
+     "la boda",
+     "wedding"
+    ],
+    [
+     "casarse con",
+     "to marry"
+    ],
+    [
+     "el anillo",
+     "ring"
+    ],
+    [
+     "el vestido de novia",
+     "wedding dress"
+    ],
+    [
+     "el ramo",
+     "bouquet"
+    ],
+    [
+     "las arras",
+     "the thirteen wedding coins"
+    ],
+    [
+     "el lazo",
+     "the wedding lasso"
+    ],
+    [
+     "el sí, acepto",
+     "I do"
+    ]
+   ]
+  },
+  {
+   "title": "The party",
+   "words": [
+    [
+     "la recepción / el banquete",
+     "reception"
+    ],
+    [
+     "el pastel de bodas",
+     "wedding cake"
+    ],
+    [
+     "el brindis",
+     "toast"
+    ],
+    [
+     "el primer baile",
+     "first dance"
+    ],
+    [
+     "la luna de miel",
+     "honeymoon"
+    ],
+    [
+     "¡Vivan los novios!",
+     "Long live the couple!"
+    ],
+    [
+     "felicitar",
+     "to congratulate"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La mujer que se casa es la ",
+   "after": ".",
+   "options": [
+    "novia",
+    "madrina",
+    "invitada"
+   ],
+   "answer": 0,
+   "why": "The bride: la novia."
+  },
+  {
+   "before": "Los novios intercambian ",
+   "after": " durante la ceremonia.",
+   "options": [
+    "anillos",
+    "pasteles",
+    "brindis"
+   ],
+   "answer": 0,
+   "why": "They exchange rings."
+  },
+  {
+   "before": "En muchas bodas hispanas, el novio le da a la novia trece monedas: las ",
+   "after": ".",
+   "options": [
+    "arras",
+    "luna de miel",
+    "damas"
+   ],
+   "answer": 0,
+   "why": "Thirteen coins: las arras."
+  },
+  {
+   "before": "Después de la ceremonia, hay una fiesta: la ",
+   "after": ".",
+   "options": [
+    "recepción",
+    "misa",
+    "luna de miel"
+   ],
+   "answer": 0,
+   "why": "The reception."
+  },
+  {
+   "before": "El viaje de los novios después de la boda es la luna de ",
+   "after": ".",
+   "options": [
+    "miel",
+    "plata",
+    "boda"
+   ],
+   "answer": 0,
+   "why": "Honeymoon: luna de miel."
+  },
+  {
+   "before": "Antes de cenar, el padrino levanta la copa y hace un ",
+   "after": ".",
+   "options": [
+    "brindis",
+    "ramo",
+    "lazo"
+   ],
+   "answer": 0,
+   "why": "A toast: un brindis."
+  },
+  {
+   "before": "La novia tira el ",
+   "after": " de flores y las invitadas intentan agarrarlo.",
+   "options": [
+    "ramo",
+    "anillo",
+    "pastel"
+   ],
+   "answer": 0,
+   "why": "The bouquet: el ramo."
+  },
+  {
+   "before": "Las personas que acompañan y apoyan a los novios son los ",
+   "after": ".",
+   "options": [
+    "padrinos",
+    "sacerdotes",
+    "meseros"
+   ],
+   "answer": 0,
+   "why": "Sponsors: padrinos."
+  }
+ ],
+ "demand": {
+  "query": "spanish wedding vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 2 searches to people in the United States who typed «spanish wedding vocabulary». Both suggestions ask for wedding words, so the list includes the traditions that make Hispanic weddings different from other US weddings.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

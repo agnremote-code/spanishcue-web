@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "pharmacy",
+ "themeLabel": "Pharmacy",
+ "title": "Spanish Pharmacy Vocabulary: Medicines, Symptoms and Phrases",
+ "description": "Spanish pharmacy vocabulary: medicines, symptoms and what to ask the pharmacist, with a quiz that corrects itself and an A2 reading set in a Madrid pharmacy.",
+ "h1": "Spanish pharmacy vocabulary",
+ "titleEs": "Resfriado en Madrid",
+ "focus": "symptoms with doler and tener, instructions",
+ "intro": "Learn the Spanish words for medicines and symptoms and the phrases to ask a pharmacist for help, practice them with instant feedback, then read about a student with a bad cold in Madrid.",
+ "paragraphs": [
+  "Jordan es un estudiante de Seattle que pasa un semestre en Madrid. En noviembre empieza a hacer frío y, después de un fin de semana de lluvia, se despierta con dolor de garganta, tos y un poco de fiebre.",
+  "Su compañera de piso, Lucía, le dice que no necesita ir al médico por un resfriado: en España, los farmacéuticos dan muchos consejos. Jordan busca una farmacia con la cruz verde iluminada y entra un poco nervioso.",
+  "«Buenos días. ¿Tiene algo para el dolor de garganta y la tos?», pregunta. La farmacéutica le hace varias preguntas: cuántos días lleva enfermo, si tiene fiebre alta y si es alérgico a algún medicamento. Jordan explica que no tiene alergias.",
+  "La farmacéutica le da un jarabe para la tos y unas pastillas para la garganta. «Tome el jarabe cada ocho horas, después de comer. Y beba mucha agua», le explica. Si la fiebre sube o no mejora en tres días, debe ir al médico. Jordan paga, da las gracias y vuelve a casa. Esa tarde Lucía le prepara una sopa de pollo y Jordan se acuesta temprano. Dos días después ya se siente mucho mejor."
+ ],
+ "glossary": [
+  [
+   "el semestre",
+   "semester"
+  ],
+  [
+   "el compañero de piso",
+   "roommate (Spain)"
+  ],
+  [
+   "el consejo",
+   "advice"
+  ],
+  [
+   "la cruz verde",
+   "green cross (pharmacy sign)"
+  ],
+  [
+   "llevar enfermo",
+   "to have been sick for"
+  ],
+  [
+   "mejorar",
+   "to get better"
+  ],
+  [
+   "acostarse",
+   "to go to bed"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Jordan pasa un semestre en ",
+   "after": ".",
+   "options": [
+    "Madrid",
+    "Seattle",
+    "Barcelona"
+   ],
+   "answer": 0,
+   "why": "He spends a semester in Madrid."
+  },
+  {
+   "before": "Sus síntomas son ",
+   "after": ".",
+   "options": [
+    "dolor de garganta, tos y un poco de fiebre",
+    "dolor de estómago",
+    "una alergia en la piel"
+   ],
+   "answer": 0,
+   "why": "Sore throat, cough and a slight fever."
+  },
+  {
+   "before": "Según Lucía, para un resfriado ",
+   "after": ".",
+   "options": [
+    "los farmacéuticos dan muchos consejos",
+    "hay que ir al hospital",
+    "no hay que hacer nada"
+   ],
+   "answer": 0,
+   "why": "Pharmacists give a lot of advice in Spain."
+  },
+  {
+   "before": "Las farmacias en España tienen ",
+   "after": ".",
+   "options": [
+    "una cruz verde iluminada",
+    "una estrella azul",
+    "una bandera"
+   ],
+   "answer": 0,
+   "why": "The lit green cross."
+  },
+  {
+   "before": "Jordan debe tomar el jarabe ",
+   "after": ".",
+   "options": [
+    "cada ocho horas, después de comer",
+    "una vez al día",
+    "antes de dormir"
+   ],
+   "answer": 0,
+   "why": "Every eight hours, after eating."
+  },
+  {
+   "before": "Debe ir al médico si ",
+   "after": ".",
+   "options": [
+    "la fiebre sube o no mejora en tres días",
+    "la tos para",
+    "termina el jarabe"
+   ],
+   "answer": 0,
+   "why": "If the fever rises or no improvement in three days."
+  }
+ ],
+ "grammar": {
+  "title": "Me duele / me duelen",
+  "intro": "Doler works like gustar: me duele la cabeza (singular), me duelen los pies (plural).",
+  "items": [
+   {
+    "before": "Me ",
+    "after": " la garganta.",
+    "options": [
+     "duele",
+     "duelen",
+     "dolor"
+    ],
+    "answer": 0,
+    "why": "Singular thing: duele."
+   },
+   {
+    "before": "A mi papá le ",
+    "after": " los ojos.",
+    "options": [
+     "duelen",
+     "duele",
+     "duelo"
+    ],
+    "answer": 0,
+    "why": "Plural thing: duelen."
+   },
+   {
+    "before": "¿Te ",
+    "after": " el estómago?",
+    "options": [
+     "duele",
+     "dueles",
+     "duelen"
+    ],
+    "answer": 0,
+    "why": "El estómago is singular: duele."
+   }
+  ]
+ },
+ "speaking": [
+  "Haz el diálogo: estás en una farmacia y explicas tus síntomas.",
+  "¿Qué haces tú cuando tienes un resfriado?",
+  "Compara las farmacias de tu país con las de España según el texto."
+ ],
+ "heritage": "If you interpret for relatives at the pharmacy, precision matters: «la receta» is the prescription, «la dosis» the dose, «en ayunas» on an empty stomach. Avoid «prescripción» in everyday speech and remember «farmacéutico» has an accent.",
+ "teacher": "Give each student a symptom card and set up a pharmacy counter. Customers describe the symptom; the pharmacist recommends something and gives instructions with cada and después de.",
+ "vocabulary": [
+  {
+   "title": "Medicines",
+   "words": [
+    [
+     "la farmacia",
+     "pharmacy"
+    ],
+    [
+     "el farmacéutico / la farmacéutica",
+     "pharmacist"
+    ],
+    [
+     "la receta",
+     "prescription"
+    ],
+    [
+     "la pastilla",
+     "pill"
+    ],
+    [
+     "el jarabe",
+     "syrup"
+    ],
+    [
+     "la crema",
+     "cream"
+    ],
+    [
+     "las gotas",
+     "drops"
+    ],
+    [
+     "el analgésico",
+     "painkiller"
+    ]
+   ]
+  },
+  {
+   "title": "Symptoms",
+   "words": [
+    [
+     "el dolor de cabeza",
+     "headache"
+    ],
+    [
+     "el dolor de garganta",
+     "sore throat"
+    ],
+    [
+     "la fiebre",
+     "fever"
+    ],
+    [
+     "la tos",
+     "cough"
+    ],
+    [
+     "el resfriado",
+     "cold"
+    ],
+    [
+     "la alergia",
+     "allergy"
+    ],
+    [
+     "estar mareado",
+     "to be dizzy"
+    ],
+    [
+     "la picadura",
+     "insect bite"
+    ]
+   ]
+  },
+  {
+   "title": "At the counter",
+   "words": [
+    [
+     "¿Tiene algo para…?",
+     "Do you have something for…?"
+    ],
+    [
+     "¿Necesito receta?",
+     "Do I need a prescription?"
+    ],
+    [
+     "¿Cada cuántas horas?",
+     "How often (every how many hours)?"
+    ],
+    [
+     "antes de comer",
+     "before meals"
+    ],
+    [
+     "después de comer",
+     "after meals"
+    ],
+    [
+     "los efectos secundarios",
+     "side effects"
+    ],
+    [
+     "Soy alérgico a…",
+     "I'm allergic to…"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para la tos, el farmacéutico me da un ",
+   "after": ".",
+   "options": [
+    "jarabe",
+    "picadura",
+    "receta"
+   ],
+   "answer": 0,
+   "why": "Cough: a syrup."
+  },
+  {
+   "before": "Tengo 39 grados: tengo ",
+   "after": ".",
+   "options": [
+    "fiebre",
+    "alergia",
+    "tos"
+   ],
+   "answer": 0,
+   "why": "A high temperature: fiebre."
+  },
+  {
+   "before": "Algunos medicamentos solo se venden con ",
+   "after": ".",
+   "options": [
+    "receta",
+    "crema",
+    "gotas"
+   ],
+   "answer": 0,
+   "why": "Some medicines require a prescription."
+  },
+  {
+   "before": "Me duele mucho la cabeza. ¿Tiene un ",
+   "after": "?",
+   "options": [
+    "analgésico",
+    "jarabe para la piel",
+    "resfriado"
+   ],
+   "answer": 0,
+   "why": "For pain: a painkiller."
+  },
+  {
+   "before": "Un mosquito me picó y tengo una ",
+   "after": ".",
+   "options": [
+    "picadura",
+    "receta",
+    "pastilla"
+   ],
+   "answer": 0,
+   "why": "Insect bite: picadura."
+  },
+  {
+   "before": "Tome una pastilla ",
+   "after": " ocho horas.",
+   "options": [
+    "cada",
+    "todos",
+    "por"
+   ],
+   "answer": 0,
+   "why": "Every eight hours: cada ocho horas."
+  },
+  {
+   "before": "No puedo tomar penicilina: soy ",
+   "after": ".",
+   "options": [
+    "alérgico",
+    "mareado",
+    "farmacéutico"
+   ],
+   "answer": 0,
+   "why": "Allergic: alérgico."
+  },
+  {
+   "before": "Para los ojos rojos, uso unas ",
+   "after": ".",
+   "options": [
+    "gotas",
+    "pastillas",
+    "cremas para la tos"
+   ],
+   "answer": 0,
+   "why": "Eye drops: gotas."
+  }
+ ],
+ "demand": {
+  "query": "spanish pharmacy vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 4 searches to people in the United States who typed «spanish pharmacy vocabulary». One asks for pharmacy phrases, so the list ends with sentences you can say at the counter.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

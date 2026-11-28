@@ -1,0 +1,364 @@
+{
+ "level": "A1",
+ "theme": "beach",
+ "themeLabel": "Beach",
+ "title": "Spanish Beach Vocabulary: La Playa Words with Practice",
+ "description": "Spanish beach vocabulary: la arena, las olas, el traje de baño, la sombrilla and el protector solar, with a quiz and an A1 reading about a day at the beach.",
+ "h1": "Spanish beach vocabulary",
+ "titleEs": "Domingo en Luquillo",
+ "focus": "the present tense and ir a + infinitive",
+ "intro": "Learn the Spanish words for a day at the beach: the sea and the sand, what you bring and what you do there. Practice with instant feedback, then read about a family's Sunday at the beach in Puerto Rico.",
+ "paragraphs": [
+  "Es domingo y la familia Colón va a la playa de Luquillo, en Puerto Rico. Llegan a las diez de la mañana. Hace sol y el mar está tranquilo. La mamá abre la sombrilla y el papá pone las toallas en la arena.",
+  "Los niños, Ana y Luis, quieren nadar enseguida, pero primero su mamá les pone protector solar. Luis nada cerca de la orilla y Ana hace un castillo de arena con su balde y su pala. Después, los dos buscan conchas y encuentran una muy grande y rosada.",
+  "A mediodía comen sándwiches y frutas debajo de la sombrilla. Por la tarde, el papá enseña a Luis a bucear con unos lentes especiales, y ven peces de colores. A las cinco, todos están cansados. Ana guarda la concha rosada en su mochila. «El próximo domingo vamos a volver», dice el papá."
+ ],
+ "glossary": [
+  [
+   "tranquilo",
+   "calm"
+  ],
+  [
+   "enseguida",
+   "right away"
+  ],
+  [
+   "cerca de",
+   "near"
+  ],
+  [
+   "la orilla",
+   "shore"
+  ],
+  [
+   "encontrar",
+   "to find"
+  ],
+  [
+   "debajo de",
+   "under"
+  ],
+  [
+   "enseñar",
+   "to teach"
+  ],
+  [
+   "guardar",
+   "to keep, put away"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia Colón va a una playa de ",
+   "after": ".",
+   "options": [
+    "Puerto Rico",
+    "Florida",
+    "México"
+   ],
+   "answer": 0,
+   "why": "Luquillo, in Puerto Rico."
+  },
+  {
+   "before": "Llegan a la playa a ",
+   "after": ".",
+   "options": [
+    "las diez de la mañana",
+    "las cinco",
+    "mediodía"
+   ],
+   "answer": 0,
+   "why": "At ten in the morning."
+  },
+  {
+   "before": "Antes de nadar, la mamá ",
+   "after": ".",
+   "options": [
+    "les pone protector solar",
+    "abre la hielera",
+    "compra helado"
+   ],
+   "answer": 0,
+   "why": "She puts sunscreen on them."
+  },
+  {
+   "before": "Ana hace ",
+   "after": ".",
+   "options": [
+    "un castillo de arena",
+    "surf",
+    "una fogata"
+   ],
+   "answer": 0,
+   "why": "A sandcastle."
+  },
+  {
+   "before": "Por la tarde, Luis y su papá ven ",
+   "after": ".",
+   "options": [
+    "peces de colores",
+    "un barco",
+    "delfines"
+   ],
+   "answer": 0,
+   "why": "Colorful fish."
+  },
+  {
+   "before": "Ana guarda en su mochila ",
+   "after": ".",
+   "options": [
+    "una concha rosada",
+    "una toalla",
+    "arena"
+   ],
+   "answer": 0,
+   "why": "A big pink seashell."
+  }
+ ],
+ "grammar": {
+  "title": "Ir a + infinitive for plans",
+  "intro": "Ir a + infinitive talks about plans: vamos a volver, voy a nadar.",
+  "items": [
+   {
+    "before": "Mañana ",
+    "after": " a ir a la playa.",
+    "options": [
+     "vamos",
+     "vamos a",
+     "van a nosotros"
+    ],
+    "answer": 0,
+    "why": "Nosotros: vamos a ir."
+   },
+   {
+    "before": "¿Tú vas a ",
+    "after": " en el mar?",
+    "options": [
+     "nadar",
+     "nadas",
+     "nadando"
+    ],
+    "answer": 0,
+    "why": "Ir a + infinitive: nadar."
+   },
+   {
+    "before": "Mis primos van ",
+    "after": " surfear el sábado.",
+    "options": [
+     "a",
+     "de",
+     "en"
+    ],
+    "answer": 0,
+    "why": "Ir a + infinitive needs a."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Qué llevas a la playa?",
+  "¿Prefieres la playa o la montaña? ¿Por qué?",
+  "Describe tu día perfecto en la playa."
+ ],
+ "heritage": "Beach words vary by country: traje de baño, bañador or vestido de baño; chanclas, chancletas or sandalias; bloqueador or protector solar; lentes or gafas de sol. In Puerto Rico you may also hear «ir a la playa» used for any trip to the coast.",
+ "teacher": "Students pack a beach bag in pairs from a list of pictures, saying what they bring and why. Then they plan a beach day with ir a + infinitive.",
+ "vocabulary": [
+  {
+   "title": "The place",
+   "words": [
+    [
+     "la playa",
+     "beach"
+    ],
+    [
+     "el mar",
+     "sea"
+    ],
+    [
+     "la arena",
+     "sand"
+    ],
+    [
+     "las olas",
+     "waves"
+    ],
+    [
+     "el sol",
+     "sun"
+    ],
+    [
+     "las conchas",
+     "seashells"
+    ],
+    [
+     "el salvavidas",
+     "lifeguard"
+    ]
+   ]
+  },
+  {
+   "title": "Things to bring",
+   "words": [
+    [
+     "el traje de baño",
+     "swimsuit"
+    ],
+    [
+     "la toalla",
+     "towel"
+    ],
+    [
+     "la sombrilla",
+     "beach umbrella"
+    ],
+    [
+     "el protector solar / el bloqueador",
+     "sunscreen"
+    ],
+    [
+     "las gafas de sol / los lentes de sol",
+     "sunglasses"
+    ],
+    [
+     "las sandalias / las chanclas",
+     "sandals, flip-flops"
+    ],
+    [
+     "el balde y la pala",
+     "bucket and shovel"
+    ]
+   ]
+  },
+  {
+   "title": "Activities",
+   "words": [
+    [
+     "nadar",
+     "to swim"
+    ],
+    [
+     "tomar el sol",
+     "to sunbathe"
+    ],
+    [
+     "hacer un castillo de arena",
+     "to build a sandcastle"
+    ],
+    [
+     "bucear",
+     "to snorkel, to dive"
+    ],
+    [
+     "surfear",
+     "to surf"
+    ],
+    [
+     "caminar por la orilla",
+     "to walk along the shore"
+    ],
+    [
+     "quemarse",
+     "to get sunburned"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Antes de tomar el sol, me pongo ",
+   "after": ".",
+   "options": [
+    "protector solar",
+    "una toalla",
+    "conchas"
+   ],
+   "answer": 0,
+   "why": "Sunscreen first."
+  },
+  {
+   "before": "Los niños hacen un castillo de ",
+   "after": ".",
+   "options": [
+    "arena",
+    "agua",
+    "sol"
+   ],
+   "answer": 0,
+   "why": "A sandcastle: castillo de arena."
+  },
+  {
+   "before": "Hoy el mar tiene olas muy grandes; es perfecto para ",
+   "after": ".",
+   "options": [
+    "surfear",
+    "dormir",
+    "leer"
+   ],
+   "answer": 0,
+   "why": "Big waves are good for surfing."
+  },
+  {
+   "before": "Para nadar me pongo el ",
+   "after": ".",
+   "options": [
+    "traje de baño",
+    "abrigo",
+    "salvavidas"
+   ],
+   "answer": 0,
+   "why": "Swimsuit: traje de baño."
+  },
+  {
+   "before": "La persona que cuida a los nadadores es el ",
+   "after": ".",
+   "options": [
+    "salvavidas",
+    "surfista",
+    "sol"
+   ],
+   "answer": 0,
+   "why": "Lifeguard: salvavidas."
+  },
+  {
+   "before": "Para tener sombra, abrimos la ",
+   "after": ".",
+   "options": [
+    "sombrilla",
+    "toalla",
+    "pala"
+   ],
+   "answer": 0,
+   "why": "A beach umbrella gives shade."
+  },
+  {
+   "before": "Después de nadar, me seco con la ",
+   "after": ".",
+   "options": [
+    "toalla",
+    "arena",
+    "ola"
+   ],
+   "answer": 0,
+   "why": "We dry off with a towel."
+  },
+  {
+   "before": "No usé protector solar y ",
+   "after": ".",
+   "options": [
+    "me quemé",
+    "me bañé",
+    "me sequé"
+   ],
+   "answer": 0,
+   "why": "No sunscreen: sunburn, me quemé."
+  }
+ ],
+ "demand": {
+  "query": "spanish beach vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 2 searches to people in the United States who typed «spanish beach vocabulary». Both suggestions ask for beach words, so the list groups them by place, things to bring and activities.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

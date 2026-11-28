@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "car",
+ "themeLabel": "Car",
+ "title": "Spanish Car Vocabulary: Parts, Driving and the Mechanic",
+ "description": "Spanish car vocabulary: car parts, driving verbs and what to say at the mechanic, with a quiz that corrects itself and an A2 reading about a road trip breakdown.",
+ "h1": "Spanish car vocabulary",
+ "titleEs": "Un ruido raro en la carretera",
+ "focus": "the preterite and imperfect in a story",
+ "intro": "Learn the Spanish words for car parts, driving and the repair shop, practice them with instant feedback, then ride along on a family road trip that ends at a mechanic in New Mexico.",
+ "paragraphs": [
+  "El verano pasado, la familia Herrera viajó en carro desde Denver hasta Albuquerque para visitar a unos primos. El papá manejaba, la mamá elegía la música y los dos hijos miraban el paisaje del desierto por la ventana.",
+  "Después de tres horas en la autopista, el carro empezó a hacer un ruido raro. Primero era un sonido suave; luego, cada vez más fuerte. El papá redujo la velocidad y paró en el arcén. Cuando bajaron, vieron que una llanta estaba ponchada.",
+  "El papá intentó cambiar la llanta, pero la de repuesto también tenía poco aire. Entonces llamaron a una grúa. Esperaron una hora bajo el sol, con agua y galletas, hasta que por fin llegó un camión grande que llevó el carro a un taller mecánico en un pueblo pequeño.",
+  "El mecánico, don Rubén, habló con ellos en español. Revisó las llantas, los frenos y el aceite, y les explicó que una llanta estaba muy gastada. En dos horas el carro estaba listo. Antes de irse, don Rubén les recomendó un restaurante de enchiladas con chile verde. Los hijos dicen que esa parada inesperada fue lo mejor de todo el viaje."
+ ],
+ "glossary": [
+  [
+   "el paisaje",
+   "landscape"
+  ],
+  [
+   "reducir la velocidad",
+   "to slow down"
+  ],
+  [
+   "el arcén / el acotamiento",
+   "shoulder (of the road)"
+  ],
+  [
+   "la llanta de repuesto",
+   "spare tire"
+  ],
+  [
+   "gastado",
+   "worn out"
+  ],
+  [
+   "listo",
+   "ready"
+  ],
+  [
+   "la parada",
+   "stop"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La familia viajaba de Denver a ",
+   "after": ".",
+   "options": [
+    "Albuquerque",
+    "Phoenix",
+    "El Paso"
+   ],
+   "answer": 0,
+   "why": "To Albuquerque to visit cousins."
+  },
+  {
+   "before": "Mientras el papá manejaba, la mamá ",
+   "after": ".",
+   "options": [
+    "elegía la música",
+    "dormía",
+    "leía un mapa"
+   ],
+   "answer": 0,
+   "why": "Mom picked the music."
+  },
+  {
+   "before": "El problema del carro era ",
+   "after": ".",
+   "options": [
+    "una llanta ponchada",
+    "la batería",
+    "el motor"
+   ],
+   "answer": 0,
+   "why": "A flat tire."
+  },
+  {
+   "before": "No pudieron usar la llanta de repuesto porque ",
+   "after": ".",
+   "options": [
+    "tenía poco aire",
+    "no la tenían",
+    "era muy pequeña"
+   ],
+   "answer": 0,
+   "why": "The spare was low on air too."
+  },
+  {
+   "before": "Don Rubén revisó las llantas, los frenos y ",
+   "after": ".",
+   "options": [
+    "el aceite",
+    "la radio",
+    "el parabrisas"
+   ],
+   "answer": 0,
+   "why": "Tires, brakes and oil."
+  },
+  {
+   "before": "Para los hijos, lo mejor del viaje fue ",
+   "after": ".",
+   "options": [
+    "el restaurante de enchiladas",
+    "la autopista",
+    "la grúa"
+   ],
+   "answer": 0,
+   "why": "The enchilada stop."
+  }
+ ],
+ "grammar": {
+  "title": "Imperfect for the scene, preterite for what happened",
+  "intro": "In a story, the imperfect sets the scene (manejaba, miraban) and the preterite moves the action (empezó, paró).",
+  "items": [
+   {
+    "before": "El papá ",
+    "after": " cuando escuchamos el ruido.",
+    "options": [
+     "manejaba",
+     "manejó",
+     "maneja"
+    ],
+    "answer": 0,
+    "why": "Background action in progress: imperfect."
+   },
+   {
+    "before": "De repente, el carro ",
+    "after": " a hacer un ruido.",
+    "options": [
+     "empezó",
+     "empezaba",
+     "empieza"
+    ],
+    "answer": 0,
+    "why": "A sudden event: preterite."
+   },
+   {
+    "before": "Hacía calor y los niños ",
+    "after": " cansados.",
+    "options": [
+     "estaban",
+     "estuvieron",
+     "están"
+    ],
+    "answer": 0,
+    "why": "Description of the scene: imperfect."
+   }
+  ]
+ },
+ "speaking": [
+  "Cuenta un viaje en carro que hiciste, con un problema y su solución.",
+  "¿Te gustaría manejar? ¿Qué carro te gustaría tener?",
+  "Explica a un mecánico, en español, un problema de tu carro."
+ ],
+ "heritage": "Car Spanish in the US has many English loans: «la troca», «parquear», «el mofle». They are widely understood, but in school writing use «la camioneta», «estacionar» and «el silenciador». Regional pairs to know: «llanta ponchada» (Mexico) and «rueda pinchada» (Spain).",
+ "teacher": "Show a labeled diagram of a car, then remove the labels and have students name each part. Finish with a role play at the repair shop.",
+ "vocabulary": [
+  {
+   "title": "Car parts",
+   "words": [
+    [
+     "el carro / el coche",
+     "car"
+    ],
+    [
+     "el volante",
+     "steering wheel"
+    ],
+    [
+     "el motor",
+     "engine"
+    ],
+    [
+     "la llanta / la rueda",
+     "tire"
+    ],
+    [
+     "los frenos",
+     "brakes"
+    ],
+    [
+     "el parabrisas",
+     "windshield"
+    ],
+    [
+     "el cinturón de seguridad",
+     "seat belt"
+    ],
+    [
+     "el tanque de gasolina",
+     "gas tank"
+    ]
+   ]
+  },
+  {
+   "title": "Driving",
+   "words": [
+    [
+     "manejar / conducir",
+     "to drive"
+    ],
+    [
+     "la licencia de manejar",
+     "driver's license"
+    ],
+    [
+     "el semáforo",
+     "traffic light"
+    ],
+    [
+     "la autopista",
+     "highway"
+    ],
+    [
+     "estacionar",
+     "to park"
+    ],
+    [
+     "frenar",
+     "to brake"
+    ],
+    [
+     "acelerar",
+     "to speed up"
+    ],
+    [
+     "la multa",
+     "ticket, fine"
+    ]
+   ]
+  },
+  {
+   "title": "Problems and repairs",
+   "words": [
+    [
+     "el taller mecánico",
+     "repair shop"
+    ],
+    [
+     "el mecánico",
+     "mechanic"
+    ],
+    [
+     "la llanta ponchada / pinchada",
+     "flat tire"
+    ],
+    [
+     "la batería descargada",
+     "dead battery"
+    ],
+    [
+     "hace un ruido raro",
+     "it makes a strange noise"
+    ],
+    [
+     "revisar el aceite",
+     "to check the oil"
+    ],
+    [
+     "la grúa",
+     "tow truck"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Antes de manejar, me pongo el ",
+   "after": ".",
+   "options": [
+    "cinturón de seguridad",
+    "parabrisas",
+    "semáforo"
+   ],
+   "answer": 0,
+   "why": "Buckle up first."
+  },
+  {
+   "before": "El semáforo está en rojo: tengo que ",
+   "after": ".",
+   "options": [
+    "frenar",
+    "acelerar",
+    "estacionar en la autopista"
+   ],
+   "answer": 0,
+   "why": "Red light: brake."
+  },
+  {
+   "before": "Manejé demasiado rápido y me pusieron una ",
+   "after": ".",
+   "options": [
+    "multa",
+    "llanta",
+    "grúa"
+   ],
+   "answer": 0,
+   "why": "Speeding gets you a ticket."
+  },
+  {
+   "before": "No hay aire en la rueda: tengo una ",
+   "after": ".",
+   "options": [
+    "llanta ponchada",
+    "batería descargada",
+    "licencia"
+   ],
+   "answer": 0,
+   "why": "No air: a flat tire."
+  },
+  {
+   "before": "El carro no arranca porque la ",
+   "after": " está descargada.",
+   "options": [
+    "batería",
+    "llanta",
+    "autopista"
+   ],
+   "answer": 0,
+   "why": "A dead battery stops the engine starting."
+  },
+  {
+   "before": "Para manejar legalmente necesitas una ",
+   "after": ".",
+   "options": [
+    "licencia de manejar",
+    "multa",
+    "grúa"
+   ],
+   "answer": 0,
+   "why": "You need a driver's license."
+  },
+  {
+   "before": "Llevamos el carro al ",
+   "after": " porque hace un ruido raro.",
+   "options": [
+    "taller mecánico",
+    "semáforo",
+    "parabrisas"
+   ],
+   "answer": 0,
+   "why": "Repairs happen at the shop."
+  },
+  {
+   "before": "Llueve mucho y no veo bien por el ",
+   "after": ".",
+   "options": [
+    "parabrisas",
+    "volante",
+    "tanque"
+   ],
+   "answer": 0,
+   "why": "You look through the windshield."
+  }
+ ],
+ "demand": {
+  "query": "spanish car vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish car vocabulary». One asks for automotive Spanish, so the list adds the parts and problems you would need to explain at a repair shop.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

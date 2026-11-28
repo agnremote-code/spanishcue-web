@@ -1,0 +1,377 @@
+{
+ "level": "A2",
+ "theme": "math",
+ "themeLabel": "Math",
+ "title": "Spanish Math Vocabulary: Operations, Shapes and Practice",
+ "description": "Spanish math vocabulary: operations, fractions, shapes and word problems, with a quiz that corrects itself and an A2 reading about a bilingual math class. Free.",
+ "h1": "Spanish math vocabulary",
+ "titleEs": "Matemáticas en dos idiomas",
+ "focus": "numbers, operations and the present tense",
+ "intro": "Learn the Spanish words for operations, fractions, shapes and word problems, practice them with instant feedback, then sit in on a bilingual math class in El Paso.",
+ "paragraphs": [
+  "En una escuela secundaria de El Paso, Texas, el profesor Armando Ruiz enseña matemáticas en inglés y en español. Muchos de sus estudiantes llegaron hace poco de Chihuahua y todavía están aprendiendo inglés, pero ya saben mucha matemática.",
+  "Hoy la clase estudia el área y el perímetro. El profesor dibuja un rectángulo en la pizarra: mide ocho metros de largo y cinco de ancho. «Para el perímetro, sumamos los cuatro lados: ocho más cinco más ocho más cinco. ¿Cuánto es?». «¡Veintiséis!», grita Ana. «Muy bien. Y para el área, multiplicamos el largo por el ancho».",
+  "Algunos estudiantes escriben los números de una manera diferente. Jesús, por ejemplo, usa una coma para los decimales, como en México: 3,5 en lugar de 3.5. El profesor no lo corrige; explica que en muchos países se escribe así y que en Estados Unidos se usa el punto.",
+  "Al final, resuelven un problema real: la escuela quiere poner pasto en el campo de fútbol, que es un rectángulo de cien metros por sesenta. ¿Cuántos metros cuadrados de pasto necesitan? Los estudiantes trabajan en grupos, en los dos idiomas, y todos llegan al mismo resultado: seis mil metros cuadrados."
+ ],
+ "glossary": [
+  [
+   "hace poco",
+   "recently"
+  ],
+  [
+   "la pizarra",
+   "board"
+  ],
+  [
+   "de largo",
+   "long (length)"
+  ],
+  [
+   "de ancho",
+   "wide (width)"
+  ],
+  [
+   "la coma",
+   "comma"
+  ],
+  [
+   "el punto",
+   "period, point"
+  ],
+  [
+   "el pasto",
+   "grass"
+  ],
+  [
+   "los metros cuadrados",
+   "square meters"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "El profesor Ruiz enseña matemáticas ",
+   "after": ".",
+   "options": [
+    "en inglés y en español",
+    "solo en español",
+    "solo en inglés"
+   ],
+   "answer": 0,
+   "why": "He teaches in both languages."
+  },
+  {
+   "before": "Hoy la clase estudia ",
+   "after": ".",
+   "options": [
+    "el área y el perímetro",
+    "las fracciones",
+    "las ecuaciones"
+   ],
+   "answer": 0,
+   "why": "Area and perimeter."
+  },
+  {
+   "before": "El perímetro del rectángulo de la pizarra es ",
+   "after": ".",
+   "options": [
+    "veintiséis metros",
+    "cuarenta metros",
+    "trece metros"
+   ],
+   "answer": 0,
+   "why": "8 + 5 + 8 + 5 = 26."
+  },
+  {
+   "before": "Para calcular el área, ",
+   "after": ".",
+   "options": [
+    "multiplican el largo por el ancho",
+    "suman los lados",
+    "dividen entre dos"
+   ],
+   "answer": 0,
+   "why": "Area = length × width."
+  },
+  {
+   "before": "Jesús usa una coma para los decimales porque ",
+   "after": ".",
+   "options": [
+    "así se escribe en México",
+    "no sabe matemáticas",
+    "el profesor lo pide"
+   ],
+   "answer": 0,
+   "why": "That is how decimals are written in Mexico."
+  },
+  {
+   "before": "El campo de fútbol necesita ",
+   "after": ".",
+   "options": [
+    "seis mil metros cuadrados de pasto",
+    "ciento sesenta metros",
+    "seiscientos metros"
+   ],
+   "answer": 0,
+   "why": "100 × 60 = 6,000 square meters."
+  }
+ ],
+ "grammar": {
+  "title": "Reading operations aloud",
+  "intro": "In Spanish: más (+), menos (−), por (×), entre or dividido entre (÷), es igual a or son (=).",
+  "items": [
+   {
+    "before": "Seis ",
+    "after": " siete son cuarenta y dos.",
+    "options": [
+     "por",
+     "más",
+     "entre"
+    ],
+    "answer": 0,
+    "why": "6 × 7 = 42: por."
+   },
+   {
+    "before": "Quince ",
+    "after": " tres es igual a cinco.",
+    "options": [
+     "entre",
+     "por",
+     "menos"
+    ],
+    "answer": 0,
+    "why": "15 ÷ 3 = 5: entre."
+   },
+   {
+    "before": "Nueve menos dos ",
+    "after": " siete.",
+    "options": [
+     "son",
+     "están",
+     "tienen"
+    ],
+    "answer": 0,
+    "why": "Results can use son: nueve menos dos son siete."
+   }
+  ]
+ },
+ "speaking": [
+  "Lee en voz alta tres operaciones y su resultado.",
+  "Explica en español cómo calcular el perímetro de tu salón de clase.",
+  "¿Te gustan las matemáticas? ¿Qué parte te parece más fácil o más difícil?"
+ ],
+ "heritage": "If you studied math in Latin America before moving to the US, you may write decimals with a comma and use a different division symbol. Both are correct where you learned them; in US schools use the point. In Spanish, say «el área» (feminine noun with el) and «las áreas».",
+ "teacher": "Give students word problems in Spanish about their own school (the cafeteria, the gym). Calculating something real makes the vocabulary stick.",
+ "vocabulary": [
+  {
+   "title": "Operations",
+   "words": [
+    [
+     "sumar",
+     "to add"
+    ],
+    [
+     "restar",
+     "to subtract"
+    ],
+    [
+     "multiplicar",
+     "to multiply"
+    ],
+    [
+     "dividir",
+     "to divide"
+    ],
+    [
+     "más",
+     "plus"
+    ],
+    [
+     "menos",
+     "minus"
+    ],
+    [
+     "por",
+     "times"
+    ],
+    [
+     "es igual a",
+     "equals"
+    ]
+   ]
+  },
+  {
+   "title": "Numbers and fractions",
+   "words": [
+    [
+     "el número par",
+     "even number"
+    ],
+    [
+     "el número impar",
+     "odd number"
+    ],
+    [
+     "la mitad",
+     "half"
+    ],
+    [
+     "un tercio",
+     "one third"
+    ],
+    [
+     "un cuarto",
+     "one quarter"
+    ],
+    [
+     "el porcentaje",
+     "percentage"
+    ],
+    [
+     "el decimal",
+     "decimal"
+    ],
+    [
+     "el resultado",
+     "result, answer"
+    ]
+   ]
+  },
+  {
+   "title": "Shapes and problems",
+   "words": [
+    [
+     "el triángulo",
+     "triangle"
+    ],
+    [
+     "el cuadrado",
+     "square"
+    ],
+    [
+     "el círculo",
+     "circle"
+    ],
+    [
+     "el rectángulo",
+     "rectangle"
+    ],
+    [
+     "el área",
+     "area"
+    ],
+    [
+     "el perímetro",
+     "perimeter"
+    ],
+    [
+     "la ecuación",
+     "equation"
+    ],
+    [
+     "el problema",
+     "word problem"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Cinco ",
+   "after": " tres es igual a ocho.",
+   "options": [
+    "más",
+    "menos",
+    "por"
+   ],
+   "answer": 0,
+   "why": "5 + 3 = 8: más."
+  },
+  {
+   "before": "Diez menos cuatro ",
+   "after": " seis.",
+   "options": [
+    "es igual a",
+    "multiplica",
+    "divide"
+   ],
+   "answer": 0,
+   "why": "Equals: es igual a."
+  },
+  {
+   "before": "Si ",
+   "after": " veinte entre cuatro, el resultado es cinco.",
+   "options": [
+    "divides",
+    "sumas",
+    "multiplicas"
+   ],
+   "answer": 0,
+   "why": "20 ÷ 4 = 5: dividir."
+  },
+  {
+   "before": "El siete es un número ",
+   "after": ".",
+   "options": [
+    "impar",
+    "par",
+    "decimal"
+   ],
+   "answer": 0,
+   "why": "Seven cannot be divided by two: impar."
+  },
+  {
+   "before": "La ",
+   "after": " de diez es cinco.",
+   "options": [
+    "mitad",
+    "tercio",
+    "ecuación"
+   ],
+   "answer": 0,
+   "why": "Half of ten: la mitad."
+  },
+  {
+   "before": "Un ",
+   "after": " tiene tres lados.",
+   "options": [
+    "triángulo",
+    "cuadrado",
+    "círculo"
+   ],
+   "answer": 0,
+   "why": "Three sides: triangle."
+  },
+  {
+   "before": "Para calcular el ",
+   "after": " sumas todos los lados.",
+   "options": [
+    "perímetro",
+    "área",
+    "porcentaje"
+   ],
+   "answer": 0,
+   "why": "Perimeter: the sum of the sides."
+  },
+  {
+   "before": "El cincuenta ",
+   "after": " de cien es cincuenta.",
+   "options": [
+    "por ciento",
+    "por mitad",
+    "más"
+   ],
+   "answer": 0,
+   "why": "Percentages: por ciento."
+  }
+ ],
+ "demand": {
+  "query": "spanish math vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish math vocabulary». One asks for an English-Spanish list, so every term below has its English equivalent, and the reading shows the words used in a real class.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

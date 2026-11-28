@@ -1,0 +1,373 @@
+{
+ "level": "A1",
+ "theme": "kitchen",
+ "themeLabel": "Kitchen",
+ "title": "Spanish Kitchen Vocabulary: Utensils, Appliances and Practice",
+ "description": "Spanish kitchen vocabulary: utensils, appliances and cooking verbs, with a practice quiz that corrects itself and a short A1 reading set in a Lima kitchen.",
+ "h1": "Spanish kitchen vocabulary",
+ "titleEs": "Ceviche con la abuela Rosa",
+ "focus": "the present tense of cooking verbs, kitchen words",
+ "intro": "Learn the Spanish words for kitchen utensils, appliances and cooking verbs, practice them with instant feedback, then cook along with Rosa and her grandson in Lima.",
+ "paragraphs": [
+  "Los domingos, Bruno visita a su abuela Rosa en Lima, Perú. Juntos preparan ceviche, el plato más famoso del país. La cocina de la abuela es pequeña, pero tiene todo: una mesa, una estufa vieja y un refrigerador lleno de limones.",
+  "Primero, Bruno lava el pescado fresco en el fregadero. La abuela lo corta en cubos con un cuchillo muy afilado sobre la tabla de cortar. Después, Bruno corta la cebolla roja en tiras finas y llora un poco.",
+  "Luego exprimen muchos limones en un recipiente y mezclan el jugo con sal, ají y el pescado. La abuela dice que el ceviche no se cocina en la estufa: el limón «cocina» el pescado en pocos minutos.",
+  "Mientras esperan, hierven camotes y choclo en una olla. Sirven el ceviche en platos hondos con el camote y el choclo al lado. Al final, Bruno lava los platos y la abuela prepara una taza de té."
+ ],
+ "glossary": [
+  [
+   "afilado",
+   "sharp"
+  ],
+  [
+   "en cubos",
+   "in cubes"
+  ],
+  [
+   "en tiras finas",
+   "in thin strips"
+  ],
+  [
+   "exprimir",
+   "to squeeze"
+  ],
+  [
+   "el ají",
+   "chili pepper"
+  ],
+  [
+   "el camote",
+   "sweet potato"
+  ],
+  [
+   "el choclo",
+   "corn on the cob (Andes)"
+  ],
+  [
+   "hondo",
+   "deep"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Bruno cocina con su abuela ",
+   "after": ".",
+   "options": [
+    "los domingos",
+    "todos los días",
+    "los viernes"
+   ],
+   "answer": 0,
+   "why": "He visits on Sundays."
+  },
+  {
+   "before": "El refrigerador de la abuela está lleno de ",
+   "after": ".",
+   "options": [
+    "limones",
+    "pescado",
+    "helado"
+   ],
+   "answer": 0,
+   "why": "It is full of limes."
+  },
+  {
+   "before": "Bruno llora un poco porque ",
+   "after": ".",
+   "options": [
+    "corta la cebolla",
+    "se corta el dedo",
+    "no le gusta el pescado"
+   ],
+   "answer": 0,
+   "why": "Cutting onion makes him cry."
+  },
+  {
+   "before": "Según la abuela, el pescado del ceviche se «cocina» con ",
+   "after": ".",
+   "options": [
+    "el limón",
+    "la estufa",
+    "el horno"
+   ],
+   "answer": 0,
+   "why": "The lime juice «cooks» the fish."
+  },
+  {
+   "before": "En la olla hierven ",
+   "after": ".",
+   "options": [
+    "camotes y choclo",
+    "el pescado",
+    "los limones"
+   ],
+   "answer": 0,
+   "why": "Sweet potatoes and corn boil in the pot."
+  },
+  {
+   "before": "Al final, la abuela prepara ",
+   "after": ".",
+   "options": [
+    "una taza de té",
+    "un pastel",
+    "más ceviche"
+   ],
+   "answer": 0,
+   "why": "She makes a cup of tea."
+  }
+ ],
+ "grammar": {
+  "title": "Sequence words in a recipe",
+  "intro": "Recipes use primero, después, luego and al final to order the steps.",
+  "items": [
+   {
+    "before": "",
+    "after": ", lava las verduras. Después, córtalas.",
+    "options": [
+     "Primero",
+     "Al final",
+     "Luego de"
+    ],
+    "answer": 0,
+    "why": "The first step starts with primero."
+   },
+   {
+    "before": "Corta la cebolla y ",
+    "after": " mezcla todo con el limón.",
+    "options": [
+     "luego",
+     "primero",
+     "antes"
+    ],
+    "answer": 0,
+    "why": "Luego introduces the next step."
+   },
+   {
+    "before": "",
+    "after": ", sirve el plato con camote.",
+    "options": [
+     "Al final",
+     "Primero",
+     "Antes de"
+    ],
+    "answer": 0,
+    "why": "The last step: al final."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Quién cocina en tu casa? ¿Qué plato prepara mejor?",
+  "Explica una receta sencilla con primero, luego y al final.",
+  "¿Qué hay en tu cocina? Describe tres objetos y para qué sirven."
+ ],
+ "heritage": "Kitchen words change a lot by country: «estufa» or «cocina», «refrigerador», «nevera» or «heladera», «sartén» (feminine in most places). Keep your family's word, and learn one alternative so you understand recipes from other countries. Note the accent in «sartén» and the spelling of «freír».",
+ "teacher": "Ask students to film or write a one-minute recipe from home using sequence words. It recycles the vocabulary and the present tense in a real task.",
+ "vocabulary": [
+  {
+   "title": "Utensils",
+   "words": [
+    [
+     "el cuchillo",
+     "knife"
+    ],
+    [
+     "el tenedor",
+     "fork"
+    ],
+    [
+     "la cuchara",
+     "spoon"
+    ],
+    [
+     "la olla",
+     "pot"
+    ],
+    [
+     "la sartén",
+     "frying pan"
+    ],
+    [
+     "la tabla de cortar",
+     "cutting board"
+    ],
+    [
+     "el plato",
+     "plate"
+    ],
+    [
+     "el vaso",
+     "glass"
+    ],
+    [
+     "la taza",
+     "cup, mug"
+    ]
+   ]
+  },
+  {
+   "title": "Appliances and places",
+   "words": [
+    [
+     "la estufa",
+     "stove"
+    ],
+    [
+     "el horno",
+     "oven"
+    ],
+    [
+     "la licuadora",
+     "blender"
+    ],
+    [
+     "el lavaplatos",
+     "dishwasher"
+    ],
+    [
+     "el fregadero",
+     "kitchen sink"
+    ],
+    [
+     "el refrigerador",
+     "refrigerator"
+    ],
+    [
+     "el gabinete",
+     "cabinet"
+    ]
+   ]
+  },
+  {
+   "title": "Cooking verbs",
+   "words": [
+    [
+     "cortar",
+     "to cut"
+    ],
+    [
+     "pelar",
+     "to peel"
+    ],
+    [
+     "hervir",
+     "to boil"
+    ],
+    [
+     "freír",
+     "to fry"
+    ],
+    [
+     "mezclar",
+     "to mix"
+    ],
+    [
+     "hornear",
+     "to bake"
+    ],
+    [
+     "lavar los platos",
+     "to wash the dishes"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Para la sopa necesito una ",
+   "after": " grande.",
+   "options": [
+    "olla",
+    "taza",
+    "cuchara"
+   ],
+   "answer": 0,
+   "why": "Soup is cooked in a pot: la olla."
+  },
+  {
+   "before": "Corto las verduras con un ",
+   "after": ".",
+   "options": [
+    "cuchillo",
+    "vaso",
+    "horno"
+   ],
+   "answer": 0,
+   "why": "You cut with a knife."
+  },
+  {
+   "before": "Hago un jugo de fresa en la ",
+   "after": ".",
+   "options": [
+    "licuadora",
+    "sartén",
+    "tabla"
+   ],
+   "answer": 0,
+   "why": "A blender makes juice and smoothies."
+  },
+  {
+   "before": "Los huevos fritos se hacen en la ",
+   "after": ".",
+   "options": [
+    "sartén",
+    "licuadora",
+    "olla de presión"
+   ],
+   "answer": 0,
+   "why": "Frying is done in a frying pan."
+  },
+  {
+   "before": "Antes de comer una papa cocida, hay que ",
+   "after": "la.",
+   "options": [
+    "pelar",
+    "hornear",
+    "mezclar"
+   ],
+   "answer": 0,
+   "why": "Pelar is to take the skin off."
+  },
+  {
+   "before": "El pastel está en el ",
+   "after": " a 180 grados.",
+   "options": [
+    "horno",
+    "fregadero",
+    "refrigerador"
+   ],
+   "answer": 0,
+   "why": "Cakes bake in the oven."
+  },
+  {
+   "before": "Después de cenar, mi hermano ",
+   "after": ".",
+   "options": [
+    "lava los platos",
+    "hierve el agua",
+    "pela la estufa"
+   ],
+   "answer": 0,
+   "why": "After dinner someone washes the dishes."
+  },
+  {
+   "before": "Tomo café en una ",
+   "after": ".",
+   "options": [
+    "taza",
+    "olla",
+    "sartén"
+   ],
+   "answer": 0,
+   "why": "Coffee goes in a cup or mug."
+  }
+ ],
+ "demand": {
+  "query": "spanish kitchen vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish kitchen vocabulary». 1 of them asks for something to do with the words (vocabulary quizlet). One asks for cooking vocabulary and one for Mexican Spanish, so the list adds cooking verbs and the regional words you will hear most.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

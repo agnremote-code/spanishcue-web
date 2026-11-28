@@ -1,0 +1,369 @@
+{
+ "level": "A2",
+ "theme": "soccer",
+ "themeLabel": "Soccer",
+ "title": "Spanish Soccer Vocabulary: Terms, Phrases and Practice Quiz",
+ "description": "Spanish soccer vocabulary: positions, plays and phrases fans shout, with a quiz that corrects itself and an A2 match report from Buenos Aires. No login.",
+ "h1": "Spanish soccer vocabulary",
+ "titleEs": "La final del barrio",
+ "focus": "the preterite for events, soccer words",
+ "intro": "Learn the Spanish soccer terms for positions, plays and the phrases fans use, practice them with instant feedback, then read a short report of a youth final in Buenos Aires.",
+ "paragraphs": [
+  "El sábado pasado se jugó la final del torneo juvenil de La Boca, en Buenos Aires. Se enfrentaron dos equipos de chicas de quince años: Las Leonas y Estrella del Sur. Cientos de vecinos llenaron las gradas de la pequeña cancha del club.",
+  "El primer tiempo fue muy parejo. Las dos defensas jugaron bien y las porteras atajaron varios tiros peligrosos. A los treinta minutos, la árbitra cobró una falta a favor de Estrella del Sur, pero el tiro libre pegó en el palo.",
+  "En el segundo tiempo, Camila Duarte, la delantera de Las Leonas, recibió un pase largo de su capitana, esquivó a dos defensas y marcó un golazo desde fuera del área. El público gritó tanto que se oyó en toda la calle.",
+  "Estrella del Sur no se rindió. En el tiempo de descuento consiguió un penal y empató el partido. La final se decidió por penales. Las Leonas ganaron cuatro a tres y la portera, Julia Ortiz, fue la figura del partido. Al final, las dos entrenadoras se abrazaron en el centro de la cancha. Esa noche, el barrio entero celebró con música y empanadas en la puerta del club."
+ ],
+ "glossary": [
+  [
+   "se enfrentaron",
+   "faced each other"
+  ],
+  [
+   "las gradas",
+   "stands, bleachers"
+  ],
+  [
+   "parejo",
+   "even"
+  ],
+  [
+   "atajar",
+   "to save (a shot)"
+  ],
+  [
+   "el tiro libre",
+   "free kick"
+  ],
+  [
+   "el palo",
+   "goalpost"
+  ],
+  [
+   "esquivar",
+   "to dodge"
+  ],
+  [
+   "rendirse",
+   "to give up"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "La final la jugaron dos equipos de ",
+   "after": ".",
+   "options": [
+    "chicas de quince años",
+    "jugadores profesionales",
+    "niños de diez años"
+   ],
+   "answer": 0,
+   "why": "Both teams were fifteen-year-old girls."
+  },
+  {
+   "before": "A los treinta minutos, el tiro libre ",
+   "after": ".",
+   "options": [
+    "pegó en el palo",
+    "fue gol",
+    "salió por arriba"
+   ],
+   "answer": 0,
+   "why": "The free kick hit the post."
+  },
+  {
+   "before": "Camila Duarte juega de ",
+   "after": ".",
+   "options": [
+    "delantera",
+    "portera",
+    "defensa"
+   ],
+   "answer": 0,
+   "why": "She is Las Leonas' forward."
+  },
+  {
+   "before": "Estrella del Sur empató ",
+   "after": ".",
+   "options": [
+    "con un penal en el tiempo de descuento",
+    "en el primer tiempo",
+    "con un golazo de cabeza"
+   ],
+   "answer": 0,
+   "why": "They tied with a penalty in stoppage time."
+  },
+  {
+   "before": "La final terminó ",
+   "after": ".",
+   "options": [
+    "en penales",
+    "cero a cero",
+    "con un gol de oro"
+   ],
+   "answer": 0,
+   "why": "It was decided by penalty kicks."
+  },
+  {
+   "before": "La figura del partido fue ",
+   "after": ".",
+   "options": [
+    "la portera Julia Ortiz",
+    "la árbitra",
+    "Camila Duarte"
+   ],
+   "answer": 0,
+   "why": "The goalkeeper was player of the match."
+  }
+ ],
+ "grammar": {
+  "title": "Preterite for what happened in the game",
+  "intro": "A match report tells completed events, so it uses the preterite: marcó, empató, ganaron.",
+  "items": [
+   {
+    "before": "Ayer Camila ",
+    "after": " dos goles.",
+    "options": [
+     "marcó",
+     "marcaba",
+     "marca"
+    ],
+    "answer": 0,
+    "why": "A completed event yesterday: preterite marcó."
+   },
+   {
+    "before": "Las Leonas ",
+    "after": " la final por penales.",
+    "options": [
+     "ganaron",
+     "ganaban",
+     "ganan"
+    ],
+    "answer": 0,
+    "why": "One finished result: ganaron."
+   },
+   {
+    "before": "En el minuto noventa, la árbitra ",
+    "after": " un penal.",
+    "options": [
+     "cobró",
+     "cobraba",
+     "cobra"
+    ],
+    "answer": 0,
+    "why": "A single moment in the match: cobró."
+   }
+  ]
+ },
+ "speaking": [
+  "¿Juegas o miras fútbol? ¿Qué equipo te gusta?",
+  "Cuenta el mejor partido que viste, en pasado.",
+  "¿Por qué crees que el fútbol es tan importante en América Latina?"
+ ],
+ "heritage": "Many heritage speakers learned soccer Spanish from TV commentators, which is a great base. For school writing, use the standard terms: «el portero» or «el arquero» (not «el goalie»), «el partido» (not «el game») and «marcar un gol». Words vary by country: «cancha» in Latin America, «campo» in Spain.",
+ "teacher": "Play two minutes of a match commentary in Spanish and ask students to list every word from the page they hear. Then they narrate a goal in the preterite.",
+ "vocabulary": [
+  {
+   "title": "The game and the field",
+   "words": [
+    [
+     "el fútbol",
+     "soccer"
+    ],
+    [
+     "el partido",
+     "match, game"
+    ],
+    [
+     "la cancha",
+     "field, pitch"
+    ],
+    [
+     "el arco / la portería",
+     "goal (the frame)"
+    ],
+    [
+     "el gol",
+     "goal (the score)"
+    ],
+    [
+     "el balón",
+     "ball"
+    ],
+    [
+     "el árbitro",
+     "referee"
+    ],
+    [
+     "el tiempo de descuento",
+     "stoppage time"
+    ]
+   ]
+  },
+  {
+   "title": "Players",
+   "words": [
+    [
+     "el portero / el arquero",
+     "goalkeeper"
+    ],
+    [
+     "el defensa",
+     "defender"
+    ],
+    [
+     "el centrocampista / el mediocampista",
+     "midfielder"
+    ],
+    [
+     "el delantero",
+     "forward"
+    ],
+    [
+     "el capitán",
+     "captain"
+    ],
+    [
+     "el suplente",
+     "substitute"
+    ],
+    [
+     "el entrenador / el técnico",
+     "coach"
+    ]
+   ]
+  },
+  {
+   "title": "Plays and phrases",
+   "words": [
+    [
+     "marcar un gol",
+     "to score a goal"
+    ],
+    [
+     "el penal / el penalti",
+     "penalty kick"
+    ],
+    [
+     "la falta",
+     "foul"
+    ],
+    [
+     "la tarjeta amarilla",
+     "yellow card"
+    ],
+    [
+     "el fuera de juego",
+     "offside"
+    ],
+    [
+     "el empate",
+     "tie, draw"
+    ],
+    [
+     "¡Golazo!",
+     "What a goal!"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "El ",
+   "after": " es el único jugador que puede tocar el balón con las manos.",
+   "options": [
+    "portero",
+    "delantero",
+    "defensa"
+   ],
+   "answer": 0,
+   "why": "Only the goalkeeper may use hands."
+  },
+  {
+   "before": "El ",
+   "after": " saca una tarjeta amarilla.",
+   "options": [
+    "árbitro",
+    "capitán",
+    "suplente"
+   ],
+   "answer": 0,
+   "why": "The referee shows cards."
+  },
+  {
+   "before": "El partido terminó dos a dos: fue un ",
+   "after": ".",
+   "options": [
+    "empate",
+    "penal",
+    "golazo"
+   ],
+   "answer": 0,
+   "why": "Two to two is a tie: empate."
+  },
+  {
+   "before": "El delantero estaba detrás del último defensa: ",
+   "after": ".",
+   "options": [
+    "fuera de juego",
+    "tiempo de descuento",
+    "falta"
+   ],
+   "answer": 0,
+   "why": "That position is offside."
+  },
+  {
+   "before": "Después de una falta dentro del área, hay ",
+   "after": ".",
+   "options": [
+    "penal",
+    "empate",
+    "suplente"
+   ],
+   "answer": 0,
+   "why": "A foul in the box gives a penalty kick."
+  },
+  {
+   "before": "El ",
+   "after": " decide quién juega y quién se queda en el banco.",
+   "options": [
+    "entrenador",
+    "arquero",
+    "balón"
+   ],
+   "answer": 0,
+   "why": "The coach picks the lineup."
+  },
+  {
+   "before": "Un gol espectacular desde lejos es un ",
+   "after": ".",
+   "options": [
+    "golazo",
+    "partido",
+    "arco"
+   ],
+   "answer": 0,
+   "why": "Golazo: a great goal."
+  },
+  {
+   "before": "Los jugadores entrenan en la ",
+   "after": " todas las tardes.",
+   "options": [
+    "cancha",
+    "tarjeta",
+    "falta"
+   ],
+   "answer": 0,
+   "why": "Cancha: the field."
+  }
+ ],
+ "demand": {
+  "query": "spanish soccer vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish soccer vocabulary». Several ask for terms and phrases and one for slang, so the list includes what commentators and fans actually say.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

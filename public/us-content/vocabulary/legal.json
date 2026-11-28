@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "legal",
+ "themeLabel": "Legal",
+ "title": "Spanish Legal Vocabulary: Basic Legal Terms with Practice",
+ "description": "Basic Spanish legal vocabulary: court, lawyers, contracts and rights, with a quiz that corrects itself and an A2 reading about a small-claims case. Not legal advice.",
+ "h1": "Spanish legal vocabulary: basic terms",
+ "titleEs": "El depósito de Gabriela",
+ "focus": "the preterite and legal words in context",
+ "intro": "Learn basic Spanish legal terms for the courtroom, lawyers, documents and rights, practice them with instant feedback, then follow a tenant's small-claims case in Chicago. This page teaches language, not law.",
+ "paragraphs": [
+  "Gabriela alquiló un apartamento en Chicago durante dos años. Cuando se mudó, dejó todo limpio y tomó fotos de cada habitación. Al firmar el contrato, había pagado un depósito de mil dólares. Pero el dueño no se lo devolvió: dijo que las paredes estaban sucias.",
+  "Gabriela le escribió dos cartas y no recibió respuesta. Entonces una vecina le habló de la corte de reclamos menores, donde se resuelven casos de poco dinero sin necesidad de abogado. Gabriela llenó la demanda en línea y pagó una pequeña tarifa.",
+  "Antes de la audiencia, organizó sus pruebas: el contrato, las fotos con fecha, los recibos del depósito y las cartas al dueño. Como prefería hablar en español, pidió un intérprete a la corte, y el día de la audiencia una intérprete la acompañó.",
+  "En la audiencia, el dueño no presentó pruebas de los daños. La jueza miró las fotos, escuchó a los dos y decidió a favor de Gabriela: el dueño tenía que devolver el depósito. Al salir, Gabriela le agradeció a la intérprete. «Sin usted no habría podido explicarme bien», le dijo. Dos semanas después, recibió un cheque por el valor completo del depósito."
+ ],
+ "glossary": [
+  [
+   "mudarse",
+   "to move out"
+  ],
+  [
+   "devolver",
+   "to return, give back"
+  ],
+  [
+   "la corte de reclamos menores",
+   "small claims court"
+  ],
+  [
+   "en línea",
+   "online"
+  ],
+  [
+   "la tarifa",
+   "fee"
+  ],
+  [
+   "con fecha",
+   "dated"
+  ],
+  [
+   "los daños",
+   "damage"
+  ],
+  [
+   "a favor de",
+   "in favor of"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "El dueño no le devolvió el depósito porque dijo que ",
+   "after": ".",
+   "options": [
+    "las paredes estaban sucias",
+    "no pagó la renta",
+    "rompió una ventana"
+   ],
+   "answer": 0,
+   "why": "He claimed the walls were dirty."
+  },
+  {
+   "before": "Antes de ir a la corte, Gabriela ",
+   "after": ".",
+   "options": [
+    "le escribió dos cartas al dueño",
+    "llamó a la policía",
+    "contrató a un abogado"
+   ],
+   "answer": 0,
+   "why": "She wrote two letters first."
+  },
+  {
+   "before": "En la corte de reclamos menores ",
+   "after": ".",
+   "options": [
+    "se resuelven casos de poco dinero",
+    "hay jurado siempre",
+    "solo hablan abogados"
+   ],
+   "answer": 0,
+   "why": "Small cases, often without a lawyer."
+  },
+  {
+   "before": "Entre sus pruebas había ",
+   "after": ".",
+   "options": [
+    "fotos con fecha",
+    "un video del dueño",
+    "testigos famosos"
+   ],
+   "answer": 0,
+   "why": "Dated photos, the lease, receipts, letters."
+  },
+  {
+   "before": "Gabriela pidió ",
+   "after": ".",
+   "options": [
+    "un intérprete",
+    "otro juez",
+    "más tiempo"
+   ],
+   "answer": 0,
+   "why": "She asked for an interpreter."
+  },
+  {
+   "before": "La jueza decidió que ",
+   "after": ".",
+   "options": [
+    "el dueño tenía que devolver el depósito",
+    "Gabriela tenía que pagar",
+    "había que hacer un juicio"
+   ],
+   "answer": 0,
+   "why": "The landlord must return the deposit."
+  }
+ ],
+ "grammar": {
+  "title": "Past perfect for what happened earlier",
+  "intro": "Había + participle tells what had happened before another past event: había pagado un depósito.",
+  "items": [
+   {
+    "before": "Cuando se mudó, ya ",
+    "after": " el apartamento.",
+    "options": [
+     "había limpiado",
+     "limpia",
+     "habrá limpiado"
+    ],
+    "answer": 0,
+    "why": "Before moving out: había limpiado."
+   },
+   {
+    "before": "El dueño dijo que ella no ",
+    "after": " las paredes.",
+    "options": [
+     "había pintado",
+     "pinta",
+     "pintará"
+    ],
+    "answer": 0,
+    "why": "Reported earlier action: había pintado."
+   },
+   {
+    "before": "Nosotros ",
+    "after": " el contrato antes de entrar.",
+    "options": [
+     "habíamos firmado",
+     "firmamos mañana",
+     "hemos firmar"
+    ],
+    "answer": 0,
+    "why": "Habíamos + participle."
+   }
+  ]
+ },
+ "speaking": [
+  "Explica con tus palabras qué hizo Gabriela, paso a paso.",
+  "¿Por qué es importante tener un intérprete en la corte?",
+  "¿Qué documentos guardarías tú al alquilar un apartamento?"
+ ],
+ "heritage": "Heritage speakers are often asked to interpret for family in legal situations. This page helps with words, but courts and agencies have trained interpreters for a reason, so ask for one. In writing, note «abogado» (not «licenciado» outside Mexico), «la corte» or «el tribunal», and «demanda» means lawsuit, not demand.",
+ "teacher": "Use the reading for a mock small-claims hearing: one student is the judge, two are the parties and one is the interpreter. Keep the focus on language, not legal advice.",
+ "vocabulary": [
+  {
+   "title": "People and places",
+   "words": [
+    [
+     "el abogado / la abogada",
+     "lawyer, attorney"
+    ],
+    [
+     "el juez / la jueza",
+     "judge"
+    ],
+    [
+     "el tribunal / la corte",
+     "court"
+    ],
+    [
+     "el demandante",
+     "plaintiff"
+    ],
+    [
+     "el demandado",
+     "defendant"
+    ],
+    [
+     "el testigo / la testigo",
+     "witness"
+    ],
+    [
+     "el intérprete",
+     "interpreter"
+    ],
+    [
+     "el jurado",
+     "jury"
+    ]
+   ]
+  },
+  {
+   "title": "Documents and process",
+   "words": [
+    [
+     "la demanda",
+     "lawsuit, complaint"
+    ],
+    [
+     "demandar",
+     "to sue"
+    ],
+    [
+     "el contrato",
+     "contract"
+    ],
+    [
+     "la prueba",
+     "evidence"
+    ],
+    [
+     "la audiencia",
+     "hearing"
+    ],
+    [
+     "el juicio",
+     "trial"
+    ],
+    [
+     "la sentencia / el fallo",
+     "ruling, judgment"
+    ],
+    [
+     "la multa",
+     "fine"
+    ]
+   ]
+  },
+  {
+   "title": "Rights and actions",
+   "words": [
+    [
+     "los derechos",
+     "rights"
+    ],
+    [
+     "el derecho a un abogado",
+     "the right to an attorney"
+    ],
+    [
+     "guardar silencio",
+     "to remain silent"
+    ],
+    [
+     "declarar",
+     "to testify"
+    ],
+    [
+     "jurar",
+     "to swear (an oath)"
+    ],
+    [
+     "firmar",
+     "to sign"
+    ],
+    [
+     "apelar",
+     "to appeal"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "La persona que decide el caso en la corte es el ",
+   "after": ".",
+   "options": [
+    "juez",
+    "testigo",
+    "demandado"
+   ],
+   "answer": 0,
+   "why": "The judge decides: juez."
+  },
+  {
+   "before": "La persona que vio lo que pasó y habla en el juicio es un ",
+   "after": ".",
+   "options": [
+    "testigo",
+    "jurado",
+    "contrato"
+   ],
+   "answer": 0,
+   "why": "A witness: testigo."
+  },
+  {
+   "before": "Si no hablas inglés, tienes derecho a un ",
+   "after": ".",
+   "options": [
+    "intérprete",
+    "fallo",
+    "demandante"
+   ],
+   "answer": 0,
+   "why": "You may have the right to an interpreter in court."
+  },
+  {
+   "before": "Las fotos y los recibos son ",
+   "after": " para el caso.",
+   "options": [
+    "pruebas",
+    "multas",
+    "sentencias"
+   ],
+   "answer": 0,
+   "why": "Photos and receipts: evidence, pruebas."
+  },
+  {
+   "before": "La persona que pone la demanda es el ",
+   "after": ".",
+   "options": [
+    "demandante",
+    "demandado",
+    "juez"
+   ],
+   "answer": 0,
+   "why": "The one who sues: demandante."
+  },
+  {
+   "before": "Antes de declarar, el testigo tiene que ",
+   "after": " decir la verdad.",
+   "options": [
+    "jurar",
+    "apelar",
+    "demandar"
+   ],
+   "answer": 0,
+   "why": "Witnesses swear to tell the truth."
+  },
+  {
+   "before": "No estoy de acuerdo con la sentencia: voy a ",
+   "after": ".",
+   "options": [
+    "apelar",
+    "firmar",
+    "jurar"
+   ],
+   "answer": 0,
+   "why": "To challenge a ruling: apelar."
+  },
+  {
+   "before": "Lee bien el ",
+   "after": " antes de firmarlo.",
+   "options": [
+    "contrato",
+    "tribunal",
+    "jurado"
+   ],
+   "answer": 0,
+   "why": "Read a contract before signing it."
+  }
+ ],
+ "demand": {
+  "query": "spanish legal vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish legal vocabulary». Most of them ask for terms, a glossary or a dictionary. This page is a starting point for learners; professional interpreters need a full legal glossary and training.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,365 @@
+{
+ "level": "A1",
+ "theme": "personality",
+ "themeLabel": "Personality",
+ "title": "Spanish Personality Adjectives: Vocabulary List and Practice",
+ "description": "Spanish personality adjectives: a list of traits with opposites, a practice quiz that corrects itself and a short A1 reading about two very different twins. Free.",
+ "h1": "Spanish personality vocabulary: adjectives",
+ "titleEs": "Gemelas, pero diferentes",
+ "focus": "ser + adjective, agreement, pero",
+ "intro": "Learn the Spanish adjectives for personality traits, many in pairs of opposites, practice them with instant feedback, then meet twins from Miami who are nothing alike.",
+ "paragraphs": [
+  "Lucía y Marta son gemelas. Tienen catorce años y viven en Miami. Físicamente son iguales: las dos son altas y tienen el pelo negro y rizado. Pero su personalidad es muy diferente.",
+  "Lucía es extrovertida y habladora. Le encanta conocer gente nueva y siempre organiza las fiestas de la familia. Es divertida, pero también un poco impaciente: no le gusta esperar.",
+  "Marta es más tímida y tranquila. Prefiere leer o dibujar en su cuarto. Es muy creativa y paciente, y ayuda a su hermana con la tarea de matemáticas. Su cuarto está siempre ordenado; el de Lucía, no.",
+  "Su mamá dice que las dos son generosas y honestas, y que se complementan. Cuando Lucía está nerviosa, Marta la calma. Cuando Marta tiene miedo de hablar en público, Lucía la ayuda a ser valiente. Así, cada una aprende algo de la otra todos los días."
+ ],
+ "glossary": [
+  [
+   "las gemelas",
+   "twin sisters"
+  ],
+  [
+   "físicamente",
+   "physically"
+  ],
+  [
+   "rizado",
+   "curly"
+  ],
+  [
+   "le encanta",
+   "she loves"
+  ],
+  [
+   "dibujar",
+   "to draw"
+  ],
+  [
+   "se complementan",
+   "they complement each other"
+  ],
+  [
+   "tener miedo",
+   "to be afraid"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Lucía y Marta tienen ",
+   "after": ".",
+   "options": [
+    "catorce años",
+    "doce años",
+    "dieciséis años"
+   ],
+   "answer": 0,
+   "why": "They are fourteen."
+  },
+  {
+   "before": "Físicamente, las gemelas ",
+   "after": ".",
+   "options": [
+    "son iguales",
+    "son muy diferentes",
+    "son bajas"
+   ],
+   "answer": 0,
+   "why": "Physically they look the same."
+  },
+  {
+   "before": "La gemela que organiza las fiestas es ",
+   "after": ".",
+   "options": [
+    "Lucía",
+    "Marta",
+    "su mamá"
+   ],
+   "answer": 0,
+   "why": "Lucía, the outgoing one."
+  },
+  {
+   "before": "Marta prefiere ",
+   "after": ".",
+   "options": [
+    "leer o dibujar",
+    "ir a fiestas",
+    "hacer deporte"
+   ],
+   "answer": 0,
+   "why": "She prefers reading or drawing."
+  },
+  {
+   "before": "El cuarto ordenado es el de ",
+   "after": ".",
+   "options": [
+    "Marta",
+    "Lucía",
+    "las dos"
+   ],
+   "answer": 0,
+   "why": "Marta's room is always tidy."
+  },
+  {
+   "before": "Según su mamá, las dos son ",
+   "after": ".",
+   "options": [
+    "generosas y honestas",
+    "tímidas",
+    "perezosas"
+   ],
+   "answer": 0,
+   "why": "Both are generous and honest."
+  }
+ ],
+ "grammar": {
+  "title": "Adjective agreement with ser",
+  "intro": "Adjectives ending in -o change to -a for feminine and add -s for plural. Adjectives in -e or -ista only add -s.",
+  "items": [
+   {
+    "before": "Marta es muy ",
+    "after": ".",
+    "options": [
+     "creativa",
+     "creativo",
+     "creativas"
+    ],
+    "answer": 0,
+    "why": "Marta is feminine singular: creativa."
+   },
+   {
+    "before": "Los hermanos de Juan son ",
+    "after": ".",
+    "options": [
+     "trabajadores",
+     "trabajador",
+     "trabajadoras"
+    ],
+    "answer": 0,
+    "why": "Masculine plural of trabajador: trabajadores."
+   },
+   {
+    "before": "Mis tías son muy ",
+    "after": ".",
+    "options": [
+     "amables",
+     "amablas",
+     "amable"
+    ],
+    "answer": 0,
+    "why": "Adjectives in -e only add -s: amables."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe tu personalidad con tres adjetivos y un ejemplo.",
+  "¿Cómo es tu mejor amigo o amiga?",
+  "¿Qué cualidad es más importante en un amigo? ¿Por qué?"
+ ],
+ "heritage": "Many heritage speakers use these adjectives naturally but slip on spelling and agreement in writing. Check accents in «simpático», «antipático», «tímido» and «egoísta», and remember that «egoísta» and «optimista» end in -a for boys too: «él es egoísta».",
+ "teacher": "Have students write a short anonymous description of a classmate's personality (positive traits only). The class guesses who it is, which recycles agreement naturally.",
+ "vocabulary": [
+  {
+   "title": "Positive traits",
+   "words": [
+    [
+     "simpático / simpática",
+     "nice, friendly"
+    ],
+    [
+     "amable",
+     "kind"
+    ],
+    [
+     "generoso / generosa",
+     "generous"
+    ],
+    [
+     "trabajador / trabajadora",
+     "hardworking"
+    ],
+    [
+     "divertido / divertida",
+     "fun"
+    ],
+    [
+     "paciente",
+     "patient"
+    ],
+    [
+     "honesto / honesta",
+     "honest"
+    ],
+    [
+     "valiente",
+     "brave"
+    ]
+   ]
+  },
+  {
+   "title": "Negative traits",
+   "words": [
+    [
+     "antipático / antipática",
+     "unfriendly"
+    ],
+    [
+     "perezoso / perezosa",
+     "lazy"
+    ],
+    [
+     "egoísta",
+     "selfish"
+    ],
+    [
+     "impaciente",
+     "impatient"
+    ],
+    [
+     "aburrido / aburrida",
+     "boring"
+    ],
+    [
+     "terco / terca",
+     "stubborn"
+    ],
+    [
+     "mentiroso / mentirosa",
+     "liar, dishonest"
+    ]
+   ]
+  },
+  {
+   "title": "It depends",
+   "words": [
+    [
+     "tímido / tímida",
+     "shy"
+    ],
+    [
+     "extrovertido / extrovertida",
+     "outgoing"
+    ],
+    [
+     "serio / seria",
+     "serious"
+    ],
+    [
+     "hablador / habladora",
+     "talkative"
+    ],
+    [
+     "tranquilo / tranquila",
+     "calm"
+    ],
+    [
+     "creativo / creativa",
+     "creative"
+    ],
+    [
+     "ordenado / ordenada",
+     "tidy"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi hermana siempre ayuda a todos: es muy ",
+   "after": ".",
+   "options": [
+    "amable",
+    "egoísta",
+    "perezosa"
+   ],
+   "answer": 0,
+   "why": "Someone who helps everyone is amable."
+  },
+  {
+   "before": "Lo contrario de trabajador es ",
+   "after": ".",
+   "options": [
+    "perezoso",
+    "paciente",
+    "valiente"
+   ],
+   "answer": 0,
+   "why": "Hardworking vs lazy: trabajador / perezoso."
+  },
+  {
+   "before": "Mi primo no habla con nadie en las fiestas: es ",
+   "after": ".",
+   "options": [
+    "tímido",
+    "hablador",
+    "extrovertido"
+   ],
+   "answer": 0,
+   "why": "Not talking at parties: tímido."
+  },
+  {
+   "before": "Ana nunca comparte sus cosas. Es ",
+   "after": ".",
+   "options": [
+    "egoísta",
+    "generosa",
+    "simpática"
+   ],
+   "answer": 0,
+   "why": "Not sharing: egoísta."
+  },
+  {
+   "before": "Pablo no cambia de opinión nunca: es muy ",
+   "after": ".",
+   "options": [
+    "terco",
+    "tranquilo",
+    "creativo"
+   ],
+   "answer": 0,
+   "why": "Never changing your mind: terco."
+  },
+  {
+   "before": "Mis amigas son muy ",
+   "after": ": siempre nos reímos con ellas.",
+   "options": [
+    "divertidas",
+    "aburridas",
+    "serias"
+   ],
+   "answer": 0,
+   "why": "Feminine plural: divertidas."
+  },
+  {
+   "before": "Mi papá espera sin enojarse: es ",
+   "after": ".",
+   "options": [
+    "paciente",
+    "impaciente",
+    "mentiroso"
+   ],
+   "answer": 0,
+   "why": "Waiting calmly: paciente."
+  },
+  {
+   "before": "Su cuarto siempre está perfecto: es muy ",
+   "after": ".",
+   "options": [
+    "ordenado",
+    "hablador",
+    "valiente"
+   ],
+   "answer": 0,
+   "why": "A perfect room: ordenado."
+  }
+ ],
+ "demand": {
+  "query": "spanish personality vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 9 searches to people in the United States who typed «spanish personality vocabulary». Most of them ask for personality adjectives and traits, so the list is organized as adjectives with their opposites.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

@@ -1,0 +1,373 @@
+{
+ "level": "A2",
+ "theme": "hair",
+ "themeLabel": "Hair",
+ "title": "Spanish Hair Vocabulary: Haircut, Colors and Salon Phrases",
+ "description": "Spanish hair vocabulary: describing hair, colors and what to say at the hairdresser, with a quiz that corrects itself and an A2 reading set in a salon.",
+ "h1": "Spanish hair vocabulary",
+ "titleEs": "Un corte para la graduación",
+ "focus": "describing with tener and ser, polite requests",
+ "intro": "Learn the Spanish words to describe hair, name colors and styles and ask for the haircut you want, practice them with instant feedback, then sit in the chair at Marisol's salon in Los Angeles.",
+ "paragraphs": [
+  "Marisol tiene una peluquería pequeña en el este de Los Ángeles. Casi todos sus clientes hablan español, y muchos son familias que van juntas los sábados. Hoy entra Valeria, de diecisiete años, con su mamá, que es clienta de Marisol desde hace muchos años.",
+  "Valeria tiene el pelo muy largo, castaño y ondulado. La semana que viene es su graduación y quiere un cambio, pero tiene miedo. «Quiero algo diferente, pero no muy corto», le explica a Marisol.",
+  "Marisol le muestra fotos en el celular. Le propone un corte hasta los hombros, con capas, y un poco de color en las puntas, un castaño más claro. La mamá no está segura: «¿Y si después no te gusta?». Marisol sonríe: «El pelo crece, señora».",
+  "Primero le lava el pelo, después corta con cuidado y por último pone el tinte en las puntas. Una hora y media más tarde, Valeria se mira en el espejo grande de la pared y no dice nada. Luego, poco a poco, empieza a sonreír. «¡Me encanta!». La mamá saca el celular y le toma diez fotos. Marisol, contenta, ya piensa en el peinado del día de la graduación."
+ ],
+ "glossary": [
+  [
+   "el este de Los Ángeles",
+   "East Los Angeles"
+  ],
+  [
+   "el cambio",
+   "change"
+  ],
+  [
+   "hasta los hombros",
+   "shoulder length"
+  ],
+  [
+   "claro",
+   "light (color)"
+  ],
+  [
+   "crecer",
+   "to grow"
+  ],
+  [
+   "con cuidado",
+   "carefully"
+  ],
+  [
+   "el peinado",
+   "hairstyle"
+  ]
+ ],
+ "comprehension": [
+  {
+   "before": "Muchos clientes de Marisol van a la peluquería ",
+   "after": ".",
+   "options": [
+    "en familia los sábados",
+    "solos por la noche",
+    "una vez al año"
+   ],
+   "answer": 0,
+   "why": "Families come together on Saturdays."
+  },
+  {
+   "before": "Antes del corte, Valeria tiene el pelo ",
+   "after": ".",
+   "options": [
+    "largo, castaño y ondulado",
+    "corto y rubio",
+    "negro y lacio"
+   ],
+   "answer": 0,
+   "why": "Long, brown and wavy."
+  },
+  {
+   "before": "Valeria quiere un cambio porque ",
+   "after": ".",
+   "options": [
+    "es su graduación",
+    "es su cumpleaños",
+    "empieza un trabajo"
+   ],
+   "answer": 0,
+   "why": "Her graduation is next week."
+  },
+  {
+   "before": "Marisol le propone un corte ",
+   "after": ".",
+   "options": [
+    "hasta los hombros, con capas",
+    "muy corto",
+    "con flequillo"
+   ],
+   "answer": 0,
+   "why": "Shoulder length with layers."
+  },
+  {
+   "before": "La mamá tiene dudas porque ",
+   "after": ".",
+   "options": [
+    "teme que no le guste",
+    "es muy caro",
+    "no hay tiempo"
+   ],
+   "answer": 0,
+   "why": "She worries Valeria won't like it."
+  },
+  {
+   "before": "Al final, Valeria ",
+   "after": ".",
+   "options": [
+    "está encantada",
+    "llora",
+    "quiere otro color"
+   ],
+   "answer": 0,
+   "why": "She loves it: ¡Me encanta!"
+  }
+ ],
+ "grammar": {
+  "title": "Describing hair: tener el pelo + adjective",
+  "intro": "Spanish says tener el pelo largo (to have long hair). The adjective agrees with pelo, so it is masculine.",
+  "items": [
+   {
+    "before": "Mi madre tiene el pelo ",
+    "after": ".",
+    "options": [
+     "rizado",
+     "rizada",
+     "rizados"
+    ],
+    "answer": 0,
+    "why": "The adjective agrees with pelo (masculine singular)."
+   },
+   {
+    "before": "Ana ",
+    "after": " el pelo corto y negro.",
+    "options": [
+     "tiene",
+     "es",
+     "está"
+    ],
+    "answer": 0,
+    "why": "Describing hair: tener el pelo…"
+   },
+   {
+    "before": "Mis primos son ",
+    "after": ".",
+    "options": [
+     "rubios",
+     "rubio",
+     "rubias"
+    ],
+    "answer": 0,
+    "why": "With ser, the adjective agrees with the people: rubios."
+   }
+  ]
+ },
+ "speaking": [
+  "Describe tu pelo y el de una persona de tu familia.",
+  "Haz el diálogo: estás en la peluquería y explicas qué corte quieres.",
+  "¿Te cambiarías el color del pelo? ¿Por qué sí o por qué no?"
+ ],
+ "heritage": "Hair words change by country: «chino» means curly in Mexico, «crespo» in Colombia; bangs are «fleco» in Mexico and «flequillo» in Spain. Use your family's word and know the alternatives. In writing, remember that «el cabello» is more formal than «el pelo».",
+ "teacher": "Show photos of famous Hispanic artists and have students describe each one's hair. Then they describe a classmate for the others to guess.",
+ "vocabulary": [
+  {
+   "title": "Describing hair",
+   "words": [
+    [
+     "el pelo / el cabello",
+     "hair"
+    ],
+    [
+     "lacio / liso",
+     "straight"
+    ],
+    [
+     "rizado / chino",
+     "curly"
+    ],
+    [
+     "ondulado",
+     "wavy"
+    ],
+    [
+     "largo",
+     "long"
+    ],
+    [
+     "corto",
+     "short"
+    ],
+    [
+     "canoso",
+     "gray-haired"
+    ],
+    [
+     "calvo",
+     "bald"
+    ]
+   ]
+  },
+  {
+   "title": "Color and style",
+   "words": [
+    [
+     "rubio",
+     "blond"
+    ],
+    [
+     "castaño",
+     "brown"
+    ],
+    [
+     "pelirrojo",
+     "redhead"
+    ],
+    [
+     "moreno / de pelo negro",
+     "dark-haired"
+    ],
+    [
+     "el flequillo / el fleco",
+     "bangs"
+    ],
+    [
+     "la cola de caballo",
+     "ponytail"
+    ],
+    [
+     "la trenza",
+     "braid"
+    ],
+    [
+     "el tinte",
+     "hair dye"
+    ]
+   ]
+  },
+  {
+   "title": "At the hairdresser",
+   "words": [
+    [
+     "la peluquería",
+     "hair salon"
+    ],
+    [
+     "el peluquero / la peluquera",
+     "hairdresser"
+    ],
+    [
+     "el barbero",
+     "barber"
+    ],
+    [
+     "cortarse el pelo",
+     "to get a haircut"
+    ],
+    [
+     "las puntas",
+     "the ends"
+    ],
+    [
+     "las capas",
+     "layers"
+    ],
+    [
+     "lavar y secar",
+     "to wash and blow-dry"
+    ],
+    [
+     "Solo un poco, por favor",
+     "Just a little, please"
+    ]
+   ]
+  }
+ ],
+ "vocabQuiz": [
+  {
+   "before": "Mi pelo no tiene rizos: es completamente ",
+   "after": ".",
+   "options": [
+    "lacio",
+    "rizado",
+    "canoso"
+   ],
+   "answer": 0,
+   "why": "No curls at all: lacio or liso."
+  },
+  {
+   "before": "Mi abuelo tiene el pelo blanco: es ",
+   "after": ".",
+   "options": [
+    "canoso",
+    "pelirrojo",
+    "rubio"
+   ],
+   "answer": 0,
+   "why": "White or gray hair: canoso."
+  },
+  {
+   "before": "Para jugar al fútbol me hago una ",
+   "after": ".",
+   "options": [
+    "cola de caballo",
+    "peluquería",
+    "tinte"
+   ],
+   "answer": 0,
+   "why": "Tying hair back: cola de caballo."
+  },
+  {
+   "before": "Quiero cortarme solo las ",
+   "after": ", no mucho.",
+   "options": [
+    "puntas",
+    "capas",
+    "trenzas"
+   ],
+   "answer": 0,
+   "why": "Just trim the ends: las puntas."
+  },
+  {
+   "before": "El ",
+   "after": " corta el pelo y la barba a los hombres.",
+   "options": [
+    "barbero",
+    "tinte",
+    "flequillo"
+   ],
+   "answer": 0,
+   "why": "A barber cuts men's hair and beards."
+  },
+  {
+   "before": "Ella tiene el pelo rojo: es ",
+   "after": ".",
+   "options": [
+    "pelirroja",
+    "morena",
+    "castaña"
+   ],
+   "answer": 0,
+   "why": "Red hair: pelirroja."
+  },
+  {
+   "before": "Me compré un ",
+   "after": " para cambiar el color.",
+   "options": [
+    "tinte",
+    "barbero",
+    "rizo"
+   ],
+   "answer": 0,
+   "why": "Hair dye: tinte."
+  },
+  {
+   "before": "Mi hermana lleva una ",
+   "after": " larga en la espalda.",
+   "options": [
+    "trenza",
+    "puntas",
+    "peluquería"
+   ],
+   "answer": 0,
+   "why": "A braid: trenza."
+  }
+ ],
+ "demand": {
+  "query": "spanish hair vocabulary",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 7 searches to people in the United States who typed «spanish hair vocabulary». They ask for haircut and hairdresser vocabulary, hair color and how to describe hair, so the page covers all four.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
