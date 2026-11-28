@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "authorization": "Owner approval on 2026-11-28 in the conversion thread cmsg_01Gr5R4j3t2Yet65UcmhcVhA8Kr8Tx8aRsnfTdEMkbVEL2: the owner chose «Sí, publicalo en inglés» on decision card cmsg_01Gr5R4j3t2Yet65UcmhcVhAKcFayCiXsex7BZELCfstJw («Aprobar los CTA de US$0,99 en inglés para las páginas de EE. UU.»). The US$0.99 promo ribbon, the fixed offer bar and the offer after a checked exercise show English on the English SEO pages. No end date is shown. This manifest approves only the exact English literals listed below; it cannot exempt any edit or deletion of existing English copy.",
+  "additions": [
+    { "path": "app/marketing/PromoStickyBar.tsx", "text": "SpanishCue PRO: 10 days for US$0.99" },
+    { "path": "app/marketing/PromoStickyBar.tsx", "text": "Every lesson ready to teach" },
+    { "path": "app/marketing/PromoStickyBar.tsx", "text": "Every lesson, every level. Then US$19.90/month · Cancel anytime." },
+    { "path": "app/marketing/PromoStickyBar.tsx", "text": "Grammar, conversation and listening from A1 to C2 for US$19.90/month." },
+    { "path": "app/marketing/PromoStickyBar.tsx", "text": "Try it for US$0.99 →" },
+    { "path": "app/marketing/PromoStickyBar.tsx", "text": "See plans →" },
+    { "path": "app/marketing/PromoStickyBar.tsx", "text": "Close" },
+    { "path": "app/material-ele/ExerciseCheck.tsx", "text": "Do you teach Spanish?" },
+    { "path": "app/material-ele/ExerciseCheck.tsx", "text": "This exercise is a sample: the full lesson, ready to share on screen, with explanation, audio, practice and conversation, is in SpanishCue PRO." },
+    { "path": "app/material-ele/ExerciseCheck.tsx", "text": "Try PRO · US$0.99 for the first 10 days →" },
+    { "path": "app/material-ele/ExerciseCheck.tsx", "text": "See SpanishCue PRO · US$19.90/month →" },
+    { "path": "app/material-ele/ExerciseCheck.tsx", "text": "Then US$19.90/month · Cancel anytime" }
+  ]
+}

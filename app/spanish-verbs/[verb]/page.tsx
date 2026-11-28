@@ -79,7 +79,7 @@ export default async function SpanishVerbPage({ params }: Props) {
         <p className={styles.footnote}>Vosotros is used in Spain; Latin America uses ustedes for the plural «you».</p>
       </Section>
       <Section id="quiz" title={`Quiz: conjugate ${verb}`} intro="Twelve forms across the main tenses, irregular ones first. Type each answer and check them all at once.">
-        <ExerciseCheck items={page.exercise} cta={false} />
+        <ExerciseCheck items={page.exercise} locale="en" />
         <p className={styles.sectionIntro}>Want more practice? <Link className={styles.textLink} href={`${TRAINER_PATH_EN}?v=${encodeURIComponent(verbSlug(verb))}`}>Practice {verb} in the verb trainer</Link>: instant feedback and review of what you miss.</p>
       </Section>
       {page.related.length ? (

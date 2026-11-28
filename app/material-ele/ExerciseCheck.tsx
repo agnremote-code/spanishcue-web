@@ -20,8 +20,9 @@ const feedback: Record<Exclude<Grade, "empty">, string> = {
  * JavaScript, in print and for search engines; the inputs and the score are the
  * enhancement. A sentence with no gap stays a plain «open to see the answer» item.
  */
-/** `cta={false}` leaves out the offer shown after checking (English pages reuse the exercise). */
-export default function ExerciseCheck({ items, cta = true }: { items: Item[]; cta?: boolean }) {
+/** `cta={false}` leaves out the offer shown after checking; `locale="en"` shows it in English on the English pages that reuse the exercise. */
+export default function ExerciseCheck({ items, cta = true, locale = "es" }: { items: Item[]; cta?: boolean; locale?: "es" | "en" }) {
+  const es = locale === "es";
   const [values, setValues] = useState<Record<string, string>>({});
   const [checked, setChecked] = useState(false);
   const gapped = items.filter((item) => item.q.includes("___"));
@@ -78,11 +79,15 @@ export default function ExerciseCheck({ items, cta = true }: { items: Item[]; ct
       ) : null}
       {cta && checked && gapped.length ? (
         <aside className={ele.exerciseCta} aria-label="SpanishCue PRO">
-          <p><strong>¿Das clases de español?</strong> Este ejercicio es una muestra: la clase completa, lista para compartir en pantalla, con teoría, audio, práctica y conversación, está en SpanishCue PRO.</p>
-          <a href="/pricing" onClick={() => trackMarketingEvent("cta_click", { placement: "exercise_checked", cta_type: "buy", destination: "/pricing" })}>
-            {promoWeekActive() ? "Probar PRO · US$0,99 los primeros 10 días →" : "Ver SpanishCue PRO · US$19,90 al mes →"}
+          {es
+            ? <p><strong>¿Das clases de español?</strong> Este ejercicio es una muestra: la clase completa, lista para compartir en pantalla, con teoría, audio, práctica y conversación, está en SpanishCue PRO.</p>
+            : <p><strong>Do you teach Spanish?</strong> This exercise is a sample: the full lesson, ready to share on screen, with explanation, audio, practice and conversation, is in SpanishCue PRO.</p>}
+          <a href="/pricing" onClick={() => trackMarketingEvent("cta_click", { placement: es ? "exercise_checked" : "exercise_checked_en", cta_type: "buy", destination: "/pricing" })}>
+            {promoWeekActive()
+              ? (es ? "Probar PRO · US$0,99 los primeros 10 días →" : "Try PRO · US$0.99 for the first 10 days →")
+              : (es ? "Ver SpanishCue PRO · US$19,90 al mes →" : "See SpanishCue PRO · US$19.90/month →")}
           </a>
-          {promoWeekActive() ? <small>Luego US$19,90 al mes · Cancelas cuando quieras</small> : null}
+          {promoWeekActive() ? <small>{es ? "Luego US$19,90 al mes · Cancelas cuando quieras" : "Then US$19.90/month · Cancel anytime"}</small> : null}
         </aside>
       ) : null}
     </form>
