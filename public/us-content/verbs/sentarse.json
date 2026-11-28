@@ -1,0 +1,278 @@
+{
+ "verb": "sentarse",
+ "meaning": "to sit down",
+ "level": "A2",
+ "title": "Spanish Verb Sentarse Practice: Siéntate, Stem Change and Quiz",
+ "description": "Practice the Spanish verb sentarse: me siento with the e to ie stem change, siéntate and siéntense, the preterite me senté, ten questions and a reading.",
+ "h1": "Spanish verb sentarse: practice",
+ "intro": "Sentarse means to sit down. It is reflexive (me siento) and stem-changing (e to ie) in the present. It is also used constantly in commands: siéntate, siéntense. Learn the forms, the commands and practice with feedback.",
+ "demand": {
+  "query": "spanish verb sentarse",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To sit down",
+   "example": "Me siento al lado de la ventana.",
+   "meaning": "I sit next to the window."
+  },
+  {
+   "use": "Commands: siéntate / siéntense",
+   "example": "Siéntense, por favor. Vamos a empezar.",
+   "meaning": "Please sit down. We're going to start."
+  },
+  {
+   "use": "Sentar: to seat someone",
+   "example": "El mesero nos sentó cerca de la cocina.",
+   "meaning": "The waiter seated us near the kitchen."
+  },
+  {
+   "use": "Sentarse a la mesa",
+   "example": "Nos sentamos a la mesa a las siete.",
+   "meaning": "We sit down at the table at seven."
+  },
+  {
+   "use": "Estar sentado: to be sitting",
+   "example": "Estoy sentado en la primera fila.",
+   "meaning": "I'm sitting in the front row."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "me siento"
+  ],
+  [
+   "tú",
+   "te sientas"
+  ],
+  [
+   "él / ella / usted",
+   "se sienta"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos sentamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se sientan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "me senté"
+  ],
+  [
+   "tú",
+   "te sentaste"
+  ],
+  [
+   "él / ella / usted",
+   "se sentó"
+  ],
+  [
+   "nosotros / nosotras",
+   "nos sentamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "se sentaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "En clase, siempre me ",
+   "after": " en la primera fila.",
+   "options": [
+    "siento",
+    "sento",
+    "sienta"
+   ],
+   "answer": 0,
+   "why": "Stem change e to ie: me siento."
+  },
+  {
+   "before": "¿Dónde te ",
+   "after": " en el autobús?",
+   "options": [
+    "sientas",
+    "sentas",
+    "sienta"
+   ],
+   "answer": 0,
+   "why": "Tú: te sientas."
+  },
+  {
+   "before": "Nosotros nos ",
+   "after": " juntos en el comedor.",
+   "options": [
+    "sentamos",
+    "sientamos",
+    "sientan"
+   ],
+   "answer": 0,
+   "why": "No stem change in nosotros: nos sentamos."
+  },
+  {
+   "before": "Los invitados se ",
+   "after": " alrededor de la mesa.",
+   "options": [
+    "sientan",
+    "sentan",
+    "sienta"
+   ],
+   "answer": 0,
+   "why": "Ellos: se sientan."
+  },
+  {
+   "before": "Profesora, ¿puedo ",
+   "after": " aquí?",
+   "options": [
+    "sentarme",
+    "me sentar",
+    "sientarme"
+   ],
+   "answer": 0,
+   "why": "Infinitive with the pronoun attached: sentarme."
+  },
+  {
+   "before": "Ayer me ",
+   "after": " junto a una actriz famosa en el avión.",
+   "options": [
+    "senté",
+    "sienté",
+    "sente"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: me senté, no stem change."
+  },
+  {
+   "before": "¿Por qué no te ",
+   "after": " con nosotros en la reunión?",
+   "options": [
+    "sentaste",
+    "sientaste",
+    "sentastes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: te sentaste."
+  },
+  {
+   "before": "El presidente se ",
+   "after": " y empezó a hablar.",
+   "options": [
+    "sentó",
+    "sientó",
+    "sento"
+   ],
+   "answer": 0,
+   "why": "Preterite él: se sentó."
+  },
+  {
+   "before": "Chicos, ",
+   "after": ", por favor. La película va a empezar.",
+   "options": [
+    "siéntense",
+    "siéntate",
+    "sentados"
+   ],
+   "answer": 0,
+   "why": "Command to a group: siéntense."
+  },
+  {
+   "before": "La anfitriona nos ",
+   "after": " en una mesa junto a la ventana.",
+   "options": [
+    "sentó",
+    "se sentó",
+    "sentamos"
+   ],
+   "answer": 0,
+   "why": "Seating others: sentar, not reflexive."
+  }
+ ],
+ "reading": {
+  "titleEs": "El asiento de la abuela",
+  "paragraphs": [
+   "En la casa de los Rivera, en San Juan, hay una silla de madera junto a la ventana. Es la silla de la abuela Carmen. Nadie se sienta allí; cuando llegan visitas, todos lo saben sin que nadie lo diga.",
+   "Un domingo, un amigo nuevo de la familia llegó y se sentó en la silla. Hubo un silencio. Pero la abuela solo sonrió y le dijo: «Siéntate, siéntate, que esa silla es para la gente que viene a contar historias». Él le contó cómo llegó a la isla, y desde ese día siempre se sienta allí cuando la visita."
+  ],
+  "comprehension": [
+   {
+    "before": "La silla de la abuela está ",
+    "after": ".",
+    "options": [
+     "junto a la ventana",
+     "en la cocina",
+     "en el patio"
+    ],
+    "answer": 0,
+    "why": "Next to the window."
+   },
+   {
+    "before": "Normalmente, en esa silla ",
+    "after": ".",
+    "options": [
+     "no se sienta nadie",
+     "se sientan los niños",
+     "se sienta el abuelo"
+    ],
+    "answer": 0,
+    "why": "Nobody sits there."
+   },
+   {
+    "before": "Cuando el amigo se sentó, la abuela ",
+    "after": ".",
+    "options": [
+     "sonrió",
+     "se enojó",
+     "salió de la sala"
+    ],
+    "answer": 0,
+    "why": "She just smiled."
+   },
+   {
+    "before": "Según la abuela, la silla es para la gente que ",
+    "after": ".",
+    "options": [
+     "cuenta historias",
+     "llega temprano",
+     "trae comida"
+    ],
+    "answer": 0,
+    "why": "For people who tell stories."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Me sento aquí.",
+   "right": "Me siento aquí.",
+   "why": "Stem change e to ie in the present: siento."
+  },
+  {
+   "wrong": "Nos sientamos juntos.",
+   "right": "Nos sentamos juntos.",
+   "why": "No stem change in nosotros."
+  },
+  {
+   "wrong": "Ayer me sienté al frente.",
+   "right": "Ayer me senté al frente.",
+   "why": "The preterite has no stem change."
+  },
+  {
+   "wrong": "Siéntate abajo.",
+   "right": "Siéntate.",
+   "why": "«Sit down» is just siéntate; abajo is an English calque."
+  }
+ ],
+ "heritage": "Heritage speakers usually say «siéntate» perfectly at home. Two writing points: «me siento» is both «I sit down» (sentarse) and «I feel» (sentirse), so context decides; and «siéntate para abajo» copies English, so «siéntate» is enough.",
+ "teacher": "Play Simon says with sentarse and levantarse: Siéntense, Levántense, Siéntate tú. Then have students describe where everyone is sitting with Está sentado al lado de…",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 8 searches to people in the United States who typed «spanish verb sentarse». One asks whether sentarse is reflexive, so the reflexive and non-reflexive uses are compared here.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

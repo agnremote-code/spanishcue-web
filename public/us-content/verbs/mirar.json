@@ -1,0 +1,278 @@
+{
+ "verb": "mirar",
+ "meaning": "to look at, to watch",
+ "level": "A1",
+ "title": "Spanish Verb Mirar Practice: Mirar vs Ver, Forms and Quiz",
+ "description": "Practice the Spanish verb mirar: to look at and to watch, mirar vs ver, mirarse in the mirror, present and preterite forms, ten questions and a reading.",
+ "h1": "Spanish verb mirar: practice",
+ "intro": "Mirar means to look at or to watch on purpose, while ver means to see. Mirar is a regular -ar verb in the present and the preterite. Learn the difference with ver and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb mirar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To look at",
+   "example": "Mira esa casa tan bonita.",
+   "meaning": "Look at that beautiful house."
+  },
+  {
+   "use": "To watch",
+   "example": "Miramos el partido en la sala.",
+   "meaning": "We're watching the game in the living room."
+  },
+  {
+   "use": "Mirarse: to look at yourself",
+   "example": "Se mira en el espejo.",
+   "meaning": "She looks at herself in the mirror."
+  },
+  {
+   "use": "Attention: ¡Mira!",
+   "example": "¡Mira! Está nevando.",
+   "meaning": "Look! It's snowing."
+  },
+  {
+   "use": "Mirar vs ver",
+   "example": "Miro por la ventana, pero no veo nada.",
+   "meaning": "I look out the window, but I don't see anything."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "miro"
+  ],
+  [
+   "tú",
+   "miras"
+  ],
+  [
+   "él / ella / usted",
+   "mira"
+  ],
+  [
+   "nosotros / nosotras",
+   "miramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "miran"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "miré"
+  ],
+  [
+   "tú",
+   "miraste"
+  ],
+  [
+   "él / ella / usted",
+   "miró"
+  ],
+  [
+   "nosotros / nosotras",
+   "miramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "miraron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " las noticias por la mañana.",
+   "options": [
+    "miro",
+    "mira",
+    "miras"
+   ],
+   "answer": 0,
+   "why": "Present yo: miro."
+  },
+  {
+   "before": "¿Por qué me ",
+   "after": " así?",
+   "options": [
+    "miras",
+    "miran",
+    "mira"
+   ],
+   "answer": 0,
+   "why": "Tú: miras."
+  },
+  {
+   "before": "El gato ",
+   "after": " los pájaros por la ventana.",
+   "options": [
+    "mira",
+    "miran",
+    "miro"
+   ],
+   "answer": 0,
+   "why": "El gato: mira."
+  },
+  {
+   "before": "Los turistas ",
+   "after": " el mapa.",
+   "options": [
+    "miran",
+    "mira",
+    "miramos"
+   ],
+   "answer": 0,
+   "why": "Ellos: miran."
+  },
+  {
+   "before": "Ella se ",
+   "after": " en el espejo antes de salir.",
+   "options": [
+    "mira",
+    "ve a",
+    "miran"
+   ],
+   "answer": 0,
+   "why": "Mirarse en el espejo."
+  },
+  {
+   "before": "El sábado ",
+   "after": " una película de terror en casa.",
+   "options": [
+    "miré",
+    "mire",
+    "miró"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: miré, with accent."
+  },
+  {
+   "before": "¿",
+   "after": " el eclipse anoche?",
+   "options": [
+    "Miraste",
+    "Mirastes",
+    "Miras ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: miraste."
+  },
+  {
+   "before": "El profesor ",
+   "after": " el reloj y terminó la clase.",
+   "options": [
+    "miró",
+    "miro",
+    "miré"
+   ],
+   "answer": 0,
+   "why": "Preterite él: miró."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " las estrellas toda la noche.",
+   "options": [
+    "miramos",
+    "miraron",
+    "miré"
+   ],
+   "answer": 0,
+   "why": "Nosotros: miramos, same form in both tenses."
+  },
+  {
+   "before": "Miré por todas partes, pero no ",
+   "after": " mis llaves.",
+   "options": [
+    "vi",
+    "miré",
+    "miro"
+   ],
+   "answer": 0,
+   "why": "Looking is mirar, seeing (finding) is ver."
+  }
+ ],
+ "reading": {
+  "titleEs": "La ventana de enfrente",
+  "paragraphs": [
+   "Desde su apartamento en Nueva York, la señora Inés mira por la ventana todas las tardes. Mira a los niños que juegan, al vendedor de frutas y a un joven que toca el violín en la escalera de incendios del edificio de enfrente.",
+   "Un día, el joven miró hacia su ventana y la saludó. Al día siguiente, la señora Inés colgó un cartel: «Gracias por la música». Desde entonces, él toca una canción especial a las seis, y los vecinos se asoman a mirar y a escuchar."
+  ],
+  "comprehension": [
+   {
+    "before": "La señora Inés vive en ",
+    "after": ".",
+    "options": [
+     "Nueva York",
+     "Miami",
+     "Chicago"
+    ],
+    "answer": 0,
+    "why": "In a New York apartment."
+   },
+   {
+    "before": "El joven toca el violín ",
+    "after": ".",
+    "options": [
+     "en la escalera de incendios",
+     "en el parque",
+     "en el metro"
+    ],
+    "answer": 0,
+    "why": "On the fire escape across the street."
+   },
+   {
+    "before": "La señora Inés colgó un cartel para ",
+    "after": ".",
+    "options": [
+     "dar las gracias",
+     "pedir silencio",
+     "vender frutas"
+    ],
+    "answer": 0,
+    "why": "To thank him for the music."
+   },
+   {
+    "before": "Ahora, a las seis, el joven ",
+    "after": ".",
+    "options": [
+     "toca una canción especial",
+     "se muda",
+     "vende frutas"
+    ],
+    "answer": 0,
+    "why": "He plays a special song at six."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Miro a la televisión.",
+   "right": "Miro la televisión.",
+   "why": "No personal a before things."
+  },
+  {
+   "wrong": "Miré mi amigo en la calle.",
+   "right": "Vi a mi amigo en la calle.",
+   "why": "Seeing someone by chance is ver, and people take a."
+  },
+  {
+   "wrong": "Ayer mire un partido.",
+   "right": "Ayer miré un partido.",
+   "why": "Preterite yo needs the accent: miré."
+  },
+  {
+   "wrong": "Mírate en el espejo a ti.",
+   "right": "Mírate en el espejo.",
+   "why": "Mírate already includes the pronoun; a ti is not needed."
+  }
+ ],
+ "heritage": "Many US heritage speakers prefer «ver» for TV and films (ver una película) and use «mirar» for looking at something specific. Both are correct for TV. Pay attention to the personal a: «miro a mi hermano», but «miro la televisión».",
+ "teacher": "Show a busy picture for twenty seconds, hide it and ask ¿Qué viste? Then show it again and students say what they look at first with Primero miro…",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb mirar». 1 of them asks for conjugation, charts or tenses (conjugation). Suggestions pair mirar with ver, so the page explains when each one fits.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

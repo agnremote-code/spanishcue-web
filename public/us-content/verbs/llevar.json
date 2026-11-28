@@ -1,0 +1,278 @@
+{
+ "verb": "llevar",
+ "meaning": "to carry, to take, to wear",
+ "level": "A1",
+ "title": "Spanish Verb Llevar Practice: Meanings, Conjugation and Quiz",
+ "description": "Practice the Spanish verb llevar: to carry, to take, to wear and to spend time, present and preterite forms, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb llevar: practice",
+ "intro": "Llevar is a regular -ar verb with many meanings: to carry, to take someone somewhere, to wear clothes and to have been doing something for a time. Learn each use and practice with questions that explain every answer.",
+ "demand": {
+  "query": "spanish verb llevar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To carry",
+   "example": "Llevo los libros en la mochila.",
+   "meaning": "I carry my books in my backpack."
+  },
+  {
+   "use": "To take someone or something somewhere",
+   "example": "Mi papá me lleva a la escuela.",
+   "meaning": "My dad takes me to school."
+  },
+  {
+   "use": "To wear",
+   "example": "Hoy llevas una camisa muy bonita.",
+   "meaning": "You're wearing a very nice shirt today."
+  },
+  {
+   "use": "Time doing something: llevar + time",
+   "example": "Llevo dos años en esta ciudad.",
+   "meaning": "I've been in this city for two years."
+  },
+  {
+   "use": "Llevarse bien / mal",
+   "example": "Me llevo bien con mi hermano.",
+   "meaning": "I get along well with my brother."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "llevo"
+  ],
+  [
+   "tú",
+   "llevas"
+  ],
+  [
+   "él / ella / usted",
+   "lleva"
+  ],
+  [
+   "nosotros / nosotras",
+   "llevamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "llevan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "llevé"
+  ],
+  [
+   "tú",
+   "llevaste"
+  ],
+  [
+   "él / ella / usted",
+   "llevó"
+  ],
+  [
+   "nosotros / nosotras",
+   "llevamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "llevaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " una botella de agua en la mochila.",
+   "options": [
+    "llevo",
+    "lleva",
+    "llevé mañana"
+   ],
+   "answer": 0,
+   "why": "Present yo: llevo."
+  },
+  {
+   "before": "¿Por qué ",
+   "after": " paraguas? No llueve.",
+   "options": [
+    "llevas",
+    "lleva tú",
+    "llevan"
+   ],
+   "answer": 0,
+   "why": "Present tú: llevas."
+  },
+  {
+   "before": "La novia ",
+   "after": " un vestido blanco.",
+   "options": [
+    "lleva",
+    "lleve",
+    "llevan"
+   ],
+   "answer": 0,
+   "why": "To wear: lleva."
+  },
+  {
+   "before": "Mi hermana y yo nos ",
+   "after": " muy bien.",
+   "options": [
+    "llevamos",
+    "llevan",
+    "llevo"
+   ],
+   "answer": 0,
+   "why": "Getting along: llevarse bien."
+  },
+  {
+   "before": "",
+   "after": " tres horas esperando el autobús.",
+   "options": [
+    "Llevamos",
+    "Somos",
+    "Tenemos de"
+   ],
+   "answer": 0,
+   "why": "Time spent doing something: llevar + time."
+  },
+  {
+   "before": "¿Me ",
+   "after": " al aeropuerto mañana, por favor?",
+   "options": [
+    "llevas",
+    "traes de",
+    "vas"
+   ],
+   "answer": 0,
+   "why": "Taking someone somewhere: llevar."
+  },
+  {
+   "before": "Ayer ",
+   "after": " a mi perro al veterinario.",
+   "options": [
+    "llevé",
+    "llevo ayer",
+    "lleve"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: llevé."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " a la fiesta de anoche?",
+   "options": [
+    "llevaste",
+    "llevastes",
+    "llevas ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: llevaste."
+  },
+  {
+   "before": "El taxi nos ",
+   "after": " al hotel en veinte minutos.",
+   "options": [
+    "llevó",
+    "llevo",
+    "llevaba ayer una vez"
+   ],
+   "answer": 0,
+   "why": "One completed trip: llevó."
+  },
+  {
+   "before": "Mis tíos ",
+   "after": " tamales a la cena de Navidad.",
+   "options": [
+    "llevaron",
+    "llevamos",
+    "llevan ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: llevaron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La mochila de Emilia",
+  "paragraphs": [
+   "Emilia tiene once años y lleva una mochila enorme a la escuela. Lleva libros, cuadernos, su almuerzo, una botella de agua y, a veces, su flauta para la clase de música. Su mamá dice que lleva la casa entera en la espalda.",
+   "Un día, la maestra pesó las mochilas de todos los estudiantes. La de Emilia pesaba siete kilos. La maestra les explicó que una mochila no debe pesar más del diez por ciento de su peso. Desde entonces, Emilia lleva solo lo necesario y deja algunos libros en el casillero."
+  ],
+  "comprehension": [
+   {
+    "before": "Emilia lleva a la escuela ",
+    "after": ".",
+    "options": [
+     "una mochila enorme",
+     "una bolsa pequeña",
+     "nada"
+    ],
+    "answer": 0,
+    "why": "A huge backpack."
+   },
+   {
+    "before": "Su mamá dice que Emilia lleva ",
+    "after": ".",
+    "options": [
+     "la casa entera en la espalda",
+     "poca comida",
+     "muchos juguetes"
+    ],
+    "answer": 0,
+    "why": "The whole house on her back."
+   },
+   {
+    "before": "La mochila de Emilia pesaba ",
+    "after": ".",
+    "options": [
+     "siete kilos",
+     "dos kilos",
+     "diez kilos"
+    ],
+    "answer": 0,
+    "why": "Seven kilos."
+   },
+   {
+    "before": "Desde entonces, Emilia ",
+    "after": ".",
+    "options": [
+     "lleva solo lo necesario",
+     "no lleva mochila",
+     "lleva más libros"
+    ],
+    "answer": 0,
+    "why": "She only carries what she needs."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Llevo dos años que vivo aquí.",
+   "right": "Llevo dos años viviendo aquí.",
+   "why": "Llevar + time + gerund."
+  },
+  {
+   "wrong": "Traigo a mi hermano a la escuela (from home).",
+   "right": "Llevo a mi hermano a la escuela.",
+   "why": "Llevar is toward a place away from the speaker; traer is toward the speaker."
+  },
+  {
+   "wrong": "Ella está llevando jeans hoy.",
+   "right": "Ella lleva jeans hoy.",
+   "why": "For clothes, the simple present is more natural."
+  },
+  {
+   "wrong": "Ayer lleve la comida.",
+   "right": "Ayer llevé la comida.",
+   "why": "The preterite yo needs an accent: llevé."
+  }
+ ],
+ "heritage": "Many heritage speakers use llevar for wearing and carrying naturally. Watch two things in writing: «llevé» needs an accent, and the llevar/traer distinction, which depends on where the speaker is: «¿Me lo traes?» (bring it here) vs «Te lo llevo» (I'll take it to you).",
+ "teacher": "Ask students to describe what three classmates are wearing today with lleva, then what they carry in their backpacks.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish verb llevar». 1 of them asks for conjugation, charts or tenses (conjugation). Two ask for its meaning, so each use comes with an English equivalent.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

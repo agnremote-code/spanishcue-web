@@ -1,0 +1,278 @@
+{
+ "verb": "conocer",
+ "meaning": "to know (people, places), to meet",
+ "level": "A1",
+ "title": "Spanish Verb Conocer Practice: Conjugation, Saber vs Conocer",
+ "description": "Practice the Spanish verb conocer: conozco, the preterite meaning met, conocer vs saber, ten questions that correct themselves and a short reading. Free.",
+ "h1": "Spanish verb conocer: practice",
+ "intro": "Conocer means to know a person or a place, and in the preterite it means to meet for the first time. The yo form is conozco. Learn its forms, the difference with saber and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb conocer",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To know a person",
+   "example": "Conozco a tu hermano.",
+   "meaning": "I know your brother."
+  },
+  {
+   "use": "To know a place",
+   "example": "¿Conoces Puerto Rico?",
+   "meaning": "Have you been to Puerto Rico?"
+  },
+  {
+   "use": "To meet for the first time (preterite)",
+   "example": "Conocí a mi novia en la universidad.",
+   "meaning": "I met my girlfriend in college."
+  },
+  {
+   "use": "To be familiar with something",
+   "example": "Conocemos bien esta canción.",
+   "meaning": "We know this song well."
+  },
+  {
+   "use": "Conocer vs saber",
+   "example": "Sé su nombre, pero no lo conozco.",
+   "meaning": "I know his name, but I don't know him."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "conozco"
+  ],
+  [
+   "tú",
+   "conoces"
+  ],
+  [
+   "él / ella / usted",
+   "conoce"
+  ],
+  [
+   "nosotros / nosotras",
+   "conocemos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "conocen"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "conocí"
+  ],
+  [
+   "tú",
+   "conociste"
+  ],
+  [
+   "él / ella / usted",
+   "conoció"
+  ],
+  [
+   "nosotros / nosotras",
+   "conocimos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "conocieron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo no ",
+   "after": " a nadie en esta fiesta.",
+   "options": [
+    "conozco",
+    "conoco",
+    "conozo"
+   ],
+   "answer": 0,
+   "why": "The yo form is irregular: conozco."
+  },
+  {
+   "before": "¿",
+   "after": " Madrid?",
+   "options": [
+    "Conoces",
+    "Sabes",
+    "Conozcas"
+   ],
+   "answer": 0,
+   "why": "Knowing a place: conocer."
+  },
+  {
+   "before": "Mi mamá ",
+   "after": " a todos los vecinos.",
+   "options": [
+    "conoce",
+    "sabe",
+    "conoze"
+   ],
+   "answer": 0,
+   "why": "Knowing people: conoce."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " un restaurante muy bueno.",
+   "options": [
+    "conocemos",
+    "sabemos",
+    "conozcamos"
+   ],
+   "answer": 0,
+   "why": "Being familiar with a place: conocemos."
+  },
+  {
+   "before": "Yo ",
+   "after": " cocinar arroz.",
+   "options": [
+    "sé",
+    "conozco",
+    "conoce"
+   ],
+   "answer": 0,
+   "why": "Knowing how to do something: saber."
+  },
+  {
+   "before": "¿Conoces ",
+   "after": " la nueva profesora?",
+   "options": [
+    "a",
+    "con",
+    "de"
+   ],
+   "answer": 0,
+   "why": "With a person, add the personal a."
+  },
+  {
+   "before": "Mis padres se ",
+   "after": " en una boda.",
+   "options": [
+    "conocieron",
+    "conocían",
+    "sabieron"
+   ],
+   "answer": 0,
+   "why": "Met for the first time: preterite conocieron."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " a tu mejor amigo?",
+   "options": [
+    "conociste",
+    "conocías",
+    "supiste"
+   ],
+   "answer": 0,
+   "why": "When you met someone: preterite conociste."
+  },
+  {
+   "before": "Ana ",
+   "after": " a su ídolo en un concierto.",
+   "options": [
+    "conoció",
+    "conocía",
+    "conoce ayer"
+   ],
+   "answer": 0,
+   "why": "A single event, met: conoció."
+  },
+  {
+   "before": "El verano pasado ",
+   "after": " México por primera vez.",
+   "options": [
+    "conocimos",
+    "conocemos",
+    "sabimos"
+   ],
+   "answer": 0,
+   "why": "First visit in the past: conocimos."
+  }
+ ],
+ "reading": {
+  "titleEs": "Cómo se conocieron mis abuelos",
+  "paragraphs": [
+   "Mi abuela Carmen siempre cuenta la misma historia. En 1975 trabajaba en una panadería de Ponce, Puerto Rico. Conocía a todos los clientes por su nombre, menos a uno: un muchacho tímido que compraba pan todos los días y nunca hablaba.",
+   "Un día, el muchacho dejó una nota con el dinero. Decía: «Me llamo Luis. ¿Quieres conocer el mejor lugar para ver el atardecer?». Mi abuela no sabía si ir, pero fue. Así conoció a mi abuelo. Cincuenta años después, todavía van juntos a ver el atardecer."
+  ],
+  "comprehension": [
+   {
+    "before": "En 1975, la abuela Carmen trabajaba en ",
+    "after": ".",
+    "options": [
+     "una panadería",
+     "un banco",
+     "una escuela"
+    ],
+    "answer": 0,
+    "why": "In a bakery in Ponce."
+   },
+   {
+    "before": "Conocía a todos los clientes menos ",
+    "after": ".",
+    "options": [
+     "a un muchacho tímido",
+     "a su jefe",
+     "a los niños"
+    ],
+    "answer": 0,
+    "why": "Except a shy young man."
+   },
+   {
+    "before": "En la nota, Luis la invitó a ",
+    "after": ".",
+    "options": [
+     "ver el atardecer",
+     "cenar",
+     "bailar"
+    ],
+    "answer": 0,
+    "why": "To see the best sunset spot."
+   },
+   {
+    "before": "Hoy, los abuelos todavía ",
+    "after": ".",
+    "options": [
+     "van juntos a ver el atardecer",
+     "trabajan en la panadería",
+     "viven separados"
+    ],
+    "answer": 0,
+    "why": "Fifty years later they still go."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo conoco a Pedro.",
+   "right": "Yo conozco a Pedro.",
+   "why": "The yo form adds z: conozco."
+  },
+  {
+   "wrong": "Conozco Pedro.",
+   "right": "Conozco a Pedro.",
+   "why": "Before a person, use the personal a."
+  },
+  {
+   "wrong": "Conozco nadar.",
+   "right": "Sé nadar.",
+   "why": "Knowing how to do something is saber."
+  },
+  {
+   "wrong": "Lo conocía ayer en la fiesta.",
+   "right": "Lo conocí ayer en la fiesta.",
+   "why": "Meeting someone is a single event: preterite."
+  }
+ ],
+ "heritage": "Heritage speakers handle conocer vs saber by ear. The written traps are conozco (z) and the personal a, which is easy to drop in quick writing. Remember that «conocí a» in the preterite tells the moment you met someone.",
+ "teacher": "Have students write three sentences about people and places they know (conozco), three skills (sé) and one sentence about when they met their best friend (conocí).",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb conocer». 2 of them ask for conjugation, charts or tenses (conjugation, present tense). Several suggestions pair conocer with saber, hacer and ver, so the page contrasts conocer and saber directly.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

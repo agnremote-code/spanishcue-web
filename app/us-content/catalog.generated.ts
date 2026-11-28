@@ -45,10 +45,66 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "acostarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb acostarse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "caer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb caer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "cerrar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb cerrar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "comprar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb comprar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "conocer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb conocer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "contar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb contar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "creer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb creer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "dar",
   "level": "A2",
   "theme": "",
   "title": "Spanish verb dar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "deber",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb deber: practice"
  },
  {
   "family": "verbs",
@@ -59,10 +115,52 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "dejar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb dejar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "despertarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb despertarse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "ducharse",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb ducharse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "empezar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb empezar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "encontrar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb encontrar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "estar",
   "level": "A1",
   "theme": "",
   "title": "Spanish verb estar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "estudiar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb estudiar: practice"
  },
  {
   "family": "verbs",
@@ -77,6 +175,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb haber: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "hablar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb hablar: practice"
  },
  {
   "family": "verbs",
@@ -101,10 +206,66 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "lavar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb lavar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "leer",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb leer: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "levantarse",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb levantarse: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "llamar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb llamar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "llegar",
   "level": "A1",
   "theme": "",
   "title": "Spanish verb llegar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "llevar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb llevar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "mirar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb mirar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "pasar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb pasar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "pensar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb pensar: practice"
  },
  {
   "family": "verbs",
@@ -122,6 +283,13 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "quedar",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb quedar: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "querer",
   "level": "A1",
   "theme": "",
@@ -133,6 +301,13 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A2",
   "theme": "",
   "title": "Spanish verb saber: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "sentarse",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb sentarse: practice"
  },
  {
   "family": "verbs",
@@ -150,6 +325,27 @@ export const usCatalog: UsCatalogEntry[] = [
  },
  {
   "family": "verbs",
+  "slug": "tomar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb tomar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "trabajar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb trabajar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "traer",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb traer: practice"
+ },
+ {
+  "family": "verbs",
   "slug": "venir",
   "level": "A2",
   "theme": "",
@@ -161,6 +357,20 @@ export const usCatalog: UsCatalogEntry[] = [
   "level": "A1",
   "theme": "",
   "title": "Spanish verb ver: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "viajar",
+  "level": "A1",
+  "theme": "",
+  "title": "Spanish verb viajar: practice"
+ },
+ {
+  "family": "verbs",
+  "slug": "volver",
+  "level": "A2",
+  "theme": "",
+  "title": "Spanish verb volver: practice"
  },
  {
   "family": "vocabulary",

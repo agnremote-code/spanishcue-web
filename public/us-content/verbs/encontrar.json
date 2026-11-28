@@ -1,0 +1,278 @@
+{
+ "verb": "encontrar",
+ "meaning": "to find, to meet",
+ "level": "A2",
+ "title": "Spanish Verb Encontrar Practice: Stem Change, Encontrarse, Quiz",
+ "description": "Practice the Spanish verb encontrar: the o to ue stem change, encontrarse con, present and preterite forms, ten self-correcting questions and a reading.",
+ "h1": "Spanish verb encontrar: practice",
+ "intro": "Encontrar is a stem-changing verb (encuentro, encuentras) that means to find. With a reflexive pronoun, encontrarse means to run into someone or to feel. Learn the forms and practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb encontrar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To find",
+   "example": "No encuentro mis llaves.",
+   "meaning": "I can't find my keys."
+  },
+  {
+   "use": "To run into: encontrarse con",
+   "example": "Me encontré con mi profesora en el súper.",
+   "meaning": "I ran into my teacher at the supermarket."
+  },
+  {
+   "use": "To be located: encontrarse",
+   "example": "El museo se encuentra en el centro.",
+   "meaning": "The museum is located downtown."
+  },
+  {
+   "use": "To feel: encontrarse bien/mal",
+   "example": "¿Cómo te encuentras hoy?",
+   "meaning": "How are you feeling today?"
+  },
+  {
+   "use": "To find something + adjective",
+   "example": "Encuentro la clase muy interesante.",
+   "meaning": "I find the class very interesting."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "encuentro"
+  ],
+  [
+   "tú",
+   "encuentras"
+  ],
+  [
+   "él / ella / usted",
+   "encuentra"
+  ],
+  [
+   "nosotros / nosotras",
+   "encontramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "encuentran"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "encontré"
+  ],
+  [
+   "tú",
+   "encontraste"
+  ],
+  [
+   "él / ella / usted",
+   "encontró"
+  ],
+  [
+   "nosotros / nosotras",
+   "encontramos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "encontraron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Nunca ",
+   "after": " estacionamiento en el centro.",
+   "options": [
+    "encuentro",
+    "encontro",
+    "encuentra"
+   ],
+   "answer": 0,
+   "why": "Stem change o to ue: encuentro."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " ropa barata?",
+   "options": [
+    "encuentras",
+    "encontras",
+    "encuentra tú"
+   ],
+   "answer": 0,
+   "why": "Tú: encuentras."
+  },
+  {
+   "before": "Nosotros siempre ",
+   "after": " algo interesante en el mercado.",
+   "options": [
+    "encontramos",
+    "encuentramos",
+    "encuentran"
+   ],
+   "answer": 0,
+   "why": "No stem change in nosotros: encontramos."
+  },
+  {
+   "before": "Los arqueólogos ",
+   "after": " objetos antiguos aquí.",
+   "options": [
+    "encuentran",
+    "encontran",
+    "encuentramos"
+   ],
+   "answer": 0,
+   "why": "Ellos: encuentran."
+  },
+  {
+   "before": "La biblioteca se ",
+   "after": " al lado del parque.",
+   "options": [
+    "encuentra",
+    "encuentran",
+    "encontra"
+   ],
+   "answer": 0,
+   "why": "Location: se encuentra."
+  },
+  {
+   "before": "Ayer me encontré ",
+   "after": " un viejo amigo.",
+   "options": [
+    "con",
+    "a",
+    "de"
+   ],
+   "answer": 0,
+   "why": "Running into someone: encontrarse con."
+  },
+  {
+   "before": "Por fin ",
+   "after": " mi teléfono debajo del sofá.",
+   "options": [
+    "encontré",
+    "encuentré",
+    "encontre"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: encontré, no stem change."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " ese perro tan bonito?",
+   "options": [
+    "encontraste",
+    "encuentraste",
+    "encontrastes"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: encontraste."
+  },
+  {
+   "before": "La policía ",
+   "after": " el carro robado.",
+   "options": [
+    "encontró",
+    "encuentró",
+    "encontro"
+   ],
+   "answer": 0,
+   "why": "Preterite: encontró."
+  },
+  {
+   "before": "Mis tíos ",
+   "after": " una casa en Texas.",
+   "options": [
+    "encontraron",
+    "encuentraron",
+    "encontramos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: encontraron."
+  }
+ ],
+ "reading": {
+  "titleEs": "La cartera perdida",
+  "paragraphs": [
+   "Un martes por la tarde, Samuel encontró una cartera en un banco del parque. Dentro había dinero, tarjetas y una foto de una niña. No encontró ningún número de teléfono, pero sí una identificación con una dirección.",
+   "Samuel fue a la dirección, pero no encontró a nadie en casa. Dejó una nota. Esa noche, una mujer lo llamó llorando de alegría: en la cartera estaba la única foto que tenía de su hija cuando era pequeña. Al día siguiente se encontraron en el mismo parque, y ella le regaló un pastel casero."
+  ],
+  "comprehension": [
+   {
+    "before": "Samuel encontró la cartera ",
+    "after": ".",
+    "options": [
+     "en un banco del parque",
+     "en el autobús",
+     "en la escuela"
+    ],
+    "answer": 0,
+    "why": "On a park bench."
+   },
+   {
+    "before": "Dentro de la cartera había ",
+    "after": ".",
+    "options": [
+     "dinero, tarjetas y una foto",
+     "solo dinero",
+     "llaves"
+    ],
+    "answer": 0,
+    "why": "Money, cards and a photo."
+   },
+   {
+    "before": "Cuando Samuel fue a la dirección, ",
+    "after": ".",
+    "options": [
+     "no encontró a nadie",
+     "la mujer abrió",
+     "la casa estaba vacía"
+    ],
+    "answer": 0,
+    "why": "Nobody was home; he left a note."
+   },
+   {
+    "before": "Para la mujer, lo más importante era ",
+    "after": ".",
+    "options": [
+     "la foto de su hija",
+     "el dinero",
+     "las tarjetas"
+    ],
+    "answer": 0,
+    "why": "Her only baby photo of her daughter."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo encontro las llaves.",
+   "right": "Yo encuentro las llaves.",
+   "why": "Stem change o to ue: encuentro."
+  },
+  {
+   "wrong": "Me encontré a Juan en la calle (meaning ran into).",
+   "right": "Me encontré con Juan en la calle.",
+   "why": "Running into someone usually takes con."
+  },
+  {
+   "wrong": "Nosotros encuentramos la casa.",
+   "right": "Nosotros encontramos la casa.",
+   "why": "No stem change in nosotros: the stress falls on the ending."
+  },
+  {
+   "wrong": "Ayer encontre la respuesta.",
+   "right": "Ayer encontré la respuesta.",
+   "why": "Preterite yo needs an accent: encontré."
+  }
+ ],
+ "heritage": "Heritage speakers usually say encuentro naturally. In writing, watch the accent in «encontré» and «encontró», and remember that «encontrar» means to find, while «conocer» is to meet someone for the first time.",
+ "teacher": "Hide objects around the classroom and have students report what they found: «Encontré un lápiz debajo de la mesa». It drills the preterite and location words.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb encontrar». One suggestion asks for encontrarse, so the reflexive uses are included.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

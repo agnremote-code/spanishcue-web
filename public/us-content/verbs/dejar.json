@@ -1,0 +1,278 @@
+{
+ "verb": "dejar",
+ "meaning": "to leave, to let, to quit",
+ "level": "A2",
+ "title": "Spanish Verb Dejar Practice: Leave, Let, Quit and Quiz",
+ "description": "Practice the Spanish verb dejar: to leave something, to let someone, dejar de for quitting, present and preterite forms, ten questions and a reading.",
+ "h1": "Spanish verb dejar: practice",
+ "intro": "Dejar is a regular -ar verb with three key meanings: to leave something somewhere (dejé las llaves), to let or allow (déjame ver) and, with de + infinitive, to stop doing something (dejé de fumar). Practice them all with feedback.",
+ "demand": {
+  "query": "spanish verb dejar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To leave something",
+   "example": "Dejé mi mochila en el carro.",
+   "meaning": "I left my backpack in the car."
+  },
+  {
+   "use": "To let, allow",
+   "example": "Mis padres me dejan salir los viernes.",
+   "meaning": "My parents let me go out on Fridays."
+  },
+  {
+   "use": "To stop: dejar de + infinitive",
+   "example": "Mi abuelo dejó de fumar.",
+   "meaning": "My grandfather quit smoking."
+  },
+  {
+   "use": "To leave someone (relationships)",
+   "example": "Ella dejó a su novio.",
+   "meaning": "She left her boyfriend."
+  },
+  {
+   "use": "Leave it to me: déjamelo",
+   "example": "Déjamelo a mí.",
+   "meaning": "Leave it to me."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "dejo"
+  ],
+  [
+   "tú",
+   "dejas"
+  ],
+  [
+   "él / ella / usted",
+   "deja"
+  ],
+  [
+   "nosotros / nosotras",
+   "dejamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "dejan"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "dejé"
+  ],
+  [
+   "tú",
+   "dejaste"
+  ],
+  [
+   "él / ella / usted",
+   "dejó"
+  ],
+  [
+   "nosotros / nosotras",
+   "dejamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "dejaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Siempre ",
+   "after": " las llaves en la mesa de la entrada.",
+   "options": [
+    "dejo",
+    "deja",
+    "dejas"
+   ],
+   "answer": 0,
+   "why": "Present yo: dejo."
+  },
+  {
+   "before": "¿Tus padres te ",
+   "after": " ir a conciertos?",
+   "options": [
+    "dejan",
+    "deja",
+    "dejas"
+   ],
+   "answer": 0,
+   "why": "Ellos te dejan: allowing."
+  },
+  {
+   "before": "Mi hermana no me ",
+   "after": " usar su computadora.",
+   "options": [
+    "deja",
+    "dejan",
+    "dejo"
+   ],
+   "answer": 0,
+   "why": "Ella: deja."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " propina en los restaurantes.",
+   "options": [
+    "dejamos",
+    "dejan",
+    "deja"
+   ],
+   "answer": 0,
+   "why": "Leaving a tip: dejamos propina."
+  },
+  {
+   "before": "Quiero dejar ",
+   "after": " comer tanta azúcar.",
+   "options": [
+    "de",
+    "a",
+    "que"
+   ],
+   "answer": 0,
+   "why": "To stop doing: dejar de + infinitive."
+  },
+  {
+   "before": "Ayer ",
+   "after": " el teléfono en el autobús.",
+   "options": [
+    "dejé",
+    "deje",
+    "dejó"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: dejé, with accent."
+  },
+  {
+   "before": "¿Dónde ",
+   "after": " mi chaqueta?",
+   "options": [
+    "dejaste",
+    "dejastes",
+    "dejas ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: dejaste."
+  },
+  {
+   "before": "Mi tío ",
+   "after": " de trabajar a los sesenta años.",
+   "options": [
+    "dejó",
+    "dejo",
+    "dejé"
+   ],
+   "answer": 0,
+   "why": "Preterite él: dejó de trabajar."
+  },
+  {
+   "before": "Los turistas ",
+   "after": " basura en la playa.",
+   "options": [
+    "dejaron",
+    "dejó",
+    "dejamos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: dejaron."
+  },
+  {
+   "before": "¡",
+   "after": " en paz al gato!",
+   "options": [
+    "Deja",
+    "Dejas",
+    "Dejo"
+   ],
+   "answer": 0,
+   "why": "Command: deja en paz, leave alone."
+  }
+ ],
+ "reading": {
+  "titleEs": "Dejar el teléfono",
+  "paragraphs": [
+   "Cuando Sebastián cumplió dieciséis años, pasaba siete horas al día con el teléfono. Su mamá no le dejaba usarlo en la mesa, pero él lo dejaba debajo de la servilleta. Un día, su abuela le propuso un reto: dejar el teléfono un mes entero.",
+   "Sebastián aceptó por cien dólares. La primera semana fue terrible. Pero poco a poco dejó de pensar en las notificaciones, volvió a tocar la guitarra y empezó a correr. Al final del mes, la abuela le dio el dinero, y él lo usó para comprar cuerdas nuevas."
+  ],
+  "comprehension": [
+   {
+    "before": "Sebastián pasaba con el teléfono ",
+    "after": ".",
+    "options": [
+     "siete horas al día",
+     "una hora al día",
+     "todo el fin de semana"
+    ],
+    "answer": 0,
+    "why": "Seven hours a day."
+   },
+   {
+    "before": "En la mesa, él dejaba el teléfono ",
+    "after": ".",
+    "options": [
+     "debajo de la servilleta",
+     "en su cuarto",
+     "en la cocina"
+    ],
+    "answer": 0,
+    "why": "Under his napkin."
+   },
+   {
+    "before": "El reto de la abuela era ",
+    "after": ".",
+    "options": [
+     "dejar el teléfono un mes",
+     "leer un libro",
+     "aprender a cocinar"
+    ],
+    "answer": 0,
+    "why": "No phone for a month."
+   },
+   {
+    "before": "Con el dinero, Sebastián compró ",
+    "after": ".",
+    "options": [
+     "cuerdas para la guitarra",
+     "un teléfono nuevo",
+     "zapatos para correr"
+    ],
+    "answer": 0,
+    "why": "New guitar strings."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Dejé fumar.",
+   "right": "Dejé de fumar.",
+   "why": "To quit doing something is dejar de + infinitive."
+  },
+  {
+   "wrong": "Mis padres me dejan a salir.",
+   "right": "Mis padres me dejan salir.",
+   "why": "Dejar (allow) takes the infinitive directly."
+  },
+  {
+   "wrong": "Ayer deje la mochila.",
+   "right": "Ayer dejé la mochila.",
+   "why": "Preterite yo needs the accent: dejé."
+  },
+  {
+   "wrong": "Mi hermano dejó la escuela a las tres para ir al médico.",
+   "right": "Mi hermano salió de la escuela a las tres para ir al médico.",
+   "why": "Leaving a place is usually salir de; dejar la escuela means dropping out."
+  }
+ ],
+ "heritage": "Heritage speakers often know «déjame» and «deja de molestar» from home. A common US calque is «dejar saber» for «let someone know»; the standard Spanish is «avisar» or «hacer saber»: «Te aviso mañana».",
+ "teacher": "Have students list three habits they want to quit with Quiero dejar de… and one they already quit with Dejé de…, then compare in small groups.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 6 searches to people in the United States who typed «spanish verb dejar». Two ask what dejar means, so its three main meanings each get a use and questions.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}

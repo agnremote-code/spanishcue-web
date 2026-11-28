@@ -1,0 +1,278 @@
+{
+ "verb": "estudiar",
+ "meaning": "to study",
+ "level": "A1",
+ "title": "Spanish Verb Estudiar Practice: Regular Chart, School Talk and Quiz",
+ "description": "Practice the Spanish verb estudiar: the regular -ar chart, estudiar para un examen, studying a career, ten questions with explanations and a short reading.",
+ "h1": "Spanish verb estudiar: practice",
+ "intro": "Estudiar is a regular -ar verb you will use every day in class. Learn the present and preterite forms, studying for a test and studying a career, then practice with instant feedback.",
+ "demand": {
+  "query": "spanish verb estudiar",
+  "source": "Google autocomplete for US searchers (hl=en, gl=us), docs/seo-plan/us1000/suggest-us-20261127b.csv",
+  "date": "2026-11-27"
+ },
+ "uses": [
+  {
+   "use": "To study",
+   "example": "Estudio en la biblioteca.",
+   "meaning": "I study at the library."
+  },
+  {
+   "use": "For a test: estudiar para",
+   "example": "Estudiamos para el examen de historia.",
+   "meaning": "We're studying for the history test."
+  },
+  {
+   "use": "A degree or career",
+   "example": "Mi hermana estudia medicina.",
+   "meaning": "My sister is studying medicine."
+  },
+  {
+   "use": "To be a student",
+   "example": "No trabajo, solo estudio.",
+   "meaning": "I don't work, I only study."
+  },
+  {
+   "use": "Related noun: el estudiante, los estudios",
+   "example": "Terminó sus estudios en mayo.",
+   "meaning": "She finished her studies in May."
+  }
+ ],
+ "present": [
+  [
+   "yo",
+   "estudio"
+  ],
+  [
+   "tú",
+   "estudias"
+  ],
+  [
+   "él / ella / usted",
+   "estudia"
+  ],
+  [
+   "nosotros / nosotras",
+   "estudiamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "estudian"
+  ]
+ ],
+ "preterite": [
+  [
+   "yo",
+   "estudié"
+  ],
+  [
+   "tú",
+   "estudiaste"
+  ],
+  [
+   "él / ella / usted",
+   "estudió"
+  ],
+  [
+   "nosotros / nosotras",
+   "estudiamos"
+  ],
+  [
+   "ellos / ellas / ustedes",
+   "estudiaron"
+  ]
+ ],
+ "quiz": [
+  {
+   "before": "Yo ",
+   "after": " español los martes y jueves.",
+   "options": [
+    "estudio",
+    "estudia",
+    "estudías"
+   ],
+   "answer": 0,
+   "why": "Present yo: estudio, no accent."
+  },
+  {
+   "before": "¿Qué ",
+   "after": " en la universidad?",
+   "options": [
+    "estudias",
+    "estudia tú",
+    "estudian"
+   ],
+   "answer": 0,
+   "why": "Tú: estudias."
+  },
+  {
+   "before": "Mi mejor amigo ",
+   "after": " para ser ingeniero.",
+   "options": [
+    "estudia",
+    "estudian",
+    "estudio"
+   ],
+   "answer": 0,
+   "why": "Él: estudia."
+  },
+  {
+   "before": "Esta noche estudiamos ",
+   "after": " el examen de química.",
+   "options": [
+    "para",
+    "por",
+    "en"
+   ],
+   "answer": 0,
+   "why": "For a test: estudiar para."
+  },
+  {
+   "before": "Las gemelas ",
+   "after": " en la misma escuela.",
+   "options": [
+    "estudian",
+    "estudia",
+    "estudiamos"
+   ],
+   "answer": 0,
+   "why": "Ellas: estudian."
+  },
+  {
+   "before": "Anoche ",
+   "after": " hasta las once.",
+   "options": [
+    "estudié",
+    "estudie",
+    "estudió"
+   ],
+   "answer": 0,
+   "why": "Preterite yo: estudié."
+  },
+  {
+   "before": "¿",
+   "after": " para la prueba de vocabulario?",
+   "options": [
+    "Estudiaste",
+    "Estudiastes",
+    "Estudias ayer"
+   ],
+   "answer": 0,
+   "why": "Preterite tú: estudiaste."
+  },
+  {
+   "before": "Mi mamá ",
+   "after": " enfermería en Puerto Rico.",
+   "options": [
+    "estudió",
+    "estudio",
+    "estudié"
+   ],
+   "answer": 0,
+   "why": "Preterite ella: estudió."
+  },
+  {
+   "before": "Ellos ",
+   "after": " juntos toda la semana.",
+   "options": [
+    "estudiaron",
+    "estudió",
+    "estudiamos"
+   ],
+   "answer": 0,
+   "why": "Preterite ellos: estudiaron."
+  },
+  {
+   "before": "Nosotros ",
+   "after": " en grupo antes del examen final.",
+   "options": [
+    "estudiamos",
+    "estudian",
+    "estudió"
+   ],
+   "answer": 0,
+   "why": "Nosotros: estudiamos."
+  }
+ ],
+ "reading": {
+  "titleEs": "El grupo de estudio",
+  "paragraphs": [
+   "Antes del examen final de biología, cuatro estudiantes de una escuela de San Antonio decidieron estudiar juntos. Cada uno estudiaba de forma diferente: Ana hacía tarjetas, Marco dibujaba diagramas, Lupita grababa audios y Kevin explicaba en voz alta.",
+   "Estudiaron tres tardes en la biblioteca. Al principio hablaban más de lo que estudiaban, pero luego cada uno enseñó su método a los demás. Todos aprobaron el examen, y ahora el grupo estudia junto cada semana. Kevin dice que explicar a otros es la mejor forma de estudiar."
+  ],
+  "comprehension": [
+   {
+    "before": "Los estudiantes estudiaban para un examen de ",
+    "after": ".",
+    "options": [
+     "biología",
+     "historia",
+     "español"
+    ],
+    "answer": 0,
+    "why": "A biology final."
+   },
+   {
+    "before": "Ana estudiaba con ",
+    "after": ".",
+    "options": [
+     "tarjetas",
+     "audios",
+     "diagramas"
+    ],
+    "answer": 0,
+    "why": "She made flashcards."
+   },
+   {
+    "before": "El grupo estudió en ",
+    "after": ".",
+    "options": [
+     "la biblioteca",
+     "la casa de Kevin",
+     "un café"
+    ],
+    "answer": 0,
+    "why": "Three afternoons at the library."
+   },
+   {
+    "before": "Después del examen, el grupo ",
+    "after": ".",
+    "options": [
+     "estudia junto cada semana",
+     "se separó",
+     "cambió de escuela"
+    ],
+    "answer": 0,
+    "why": "They now study together weekly."
+   }
+  ]
+ },
+ "mistakes": [
+  {
+   "wrong": "Yo estudío mucho.",
+   "right": "Yo estudio mucho.",
+   "why": "No accent in estudio; the stress is on tu."
+  },
+  {
+   "wrong": "Estudio por el examen.",
+   "right": "Estudio para el examen.",
+   "why": "The goal (a test) takes para."
+  },
+  {
+   "wrong": "Ayer estudie dos horas.",
+   "right": "Ayer estudié dos horas.",
+   "why": "Preterite yo needs the accent: estudié."
+  },
+  {
+   "wrong": "Estudio a la universidad.",
+   "right": "Estudio en la universidad.",
+   "why": "The place where you study takes en."
+  }
+ ],
+ "heritage": "Heritage speakers usually speak estudiar fluently; the writing points are the accents in «estudié» and «estudió», and «para» for exams. In some US communities you may hear «estudiar para» a career (estudia para doctor), which is common and correct.",
+ "teacher": "Give students a weekly planner: they write when and what they study with Estudio… and compare with a partner, then report last weekend with estudié.",
+ "figure": {
+  "text": "On 27 November 2026, Google suggested 10 searches to people in the United States who typed «spanish verb estudiar». Suggestions compare estudiar with hablar and bailar, the same regular -ar pattern.",
+  "source": "SpanishCue capture of Google autocomplete, United States, 27 November 2026"
+ }
+}
