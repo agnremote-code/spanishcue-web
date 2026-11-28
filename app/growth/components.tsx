@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { SpanishCueFooter } from "../SpanishCueBrand";
 import EmailGiftPopup from "../newsletter/EmailGiftPopup";
 import PromoStickyBar from "../marketing/PromoStickyBar";
+import { promoWeekActive } from "../promo-config";
 import { CONVERSATION_HUB_PATH, CONVERSATION_QUESTIONS_PATH, conversationLevels, type ConversationLevel } from "./conversation-levels";
 import type { LessonCardData } from "./lessons";
 import { breadcrumbSchema, serializeJsonLd, type BreadcrumbItem } from "./schema";
@@ -26,6 +27,13 @@ const topLinks: { href: string; label: string }[] = [
 
 export function GrowthTopbar({ current }: { current?: string }) {
   return (
+    <>
+    {promoWeekActive() ? (
+      <p className={styles.promoRibbon}>
+        <span><b>For Spanish teachers:</b> every SpanishCue PRO lesson, 10 days for US$0.99.</span>
+        <Link href="/pricing">Try it now →</Link>
+      </p>
+    ) : null}
     <header className={styles.topbar}>
       <Link className={styles.brand} href="/" aria-label="SPANISHCUE home">SPANISHCUE</Link>
       <nav className={styles.topnav} aria-label="Teacher resources navigation">
@@ -34,6 +42,7 @@ export function GrowthTopbar({ current }: { current?: string }) {
         ))}
       </nav>
     </header>
+    </>
   );
 }
 
